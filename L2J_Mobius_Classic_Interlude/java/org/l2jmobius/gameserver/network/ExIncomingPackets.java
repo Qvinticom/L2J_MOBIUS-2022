@@ -79,8 +79,6 @@ import org.l2jmobius.gameserver.network.clientpackets.primeshop.RequestBRPresent
 import org.l2jmobius.gameserver.network.clientpackets.primeshop.RequestBRProductInfo;
 import org.l2jmobius.gameserver.network.clientpackets.primeshop.RequestBRProductList;
 import org.l2jmobius.gameserver.network.clientpackets.primeshop.RequestBRRecentProductList;
-import org.l2jmobius.gameserver.network.clientpackets.raidbossinfo.RequestRaidBossSpawnInfo;
-import org.l2jmobius.gameserver.network.clientpackets.raidbossinfo.RequestRaidServerInfo;
 import org.l2jmobius.gameserver.network.clientpackets.sayune.RequestFlyMove;
 import org.l2jmobius.gameserver.network.clientpackets.sayune.RequestFlyMoveStart;
 import org.l2jmobius.gameserver.network.clientpackets.shuttle.CannotMoveAnymoreInShuttle;
@@ -381,8 +379,8 @@ public enum ExIncomingPackets implements IIncomingPackets<GameClient>
 	REQUEST_QUEUE_TICKET_LOGIN(0x126, null, ConnectionState.IN_GAME),
 	REQUEST_BLOCK_MEMO_INFO(0x127, null, ConnectionState.IN_GAME),
 	REQUEST_TRY_EN_SOUL_EXTRACTION(0x128, RequestTryEnSoulExtraction::new, ConnectionState.IN_GAME),
-	REQUEST_RAIDBOSS_SPAWN_INFO(0x129, RequestRaidBossSpawnInfo::new, ConnectionState.IN_GAME),
-	REQUEST_RAID_SERVER_INFO(0x12A, RequestRaidServerInfo::new, ConnectionState.IN_GAME),
+	REQUEST_RAIDBOSS_SPAWN_INFO(0x129, null, ConnectionState.IN_GAME),
+	REQUEST_RAID_SERVER_INFO(0x12A, null, ConnectionState.IN_GAME),
 	REQUEST_SHOW_AGIT_SIEGE_INFO(0x12B, null, ConnectionState.IN_GAME),
 	REQUEST_ITEM_AUCTION_STATUS(0x12C, null, ConnectionState.IN_GAME),
 	REQUEST_MONSTER_BOOK_OPEN(0x12D, null, ConnectionState.IN_GAME),

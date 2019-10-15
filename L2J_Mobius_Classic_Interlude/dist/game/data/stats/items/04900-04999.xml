@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="4900" name="Staff of Evil Spirits" additionalName="Empower" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. M. Atk. + 100. -->
+	<item id="4900" name="Staff of Evil Spirits" additionalName="Magic Focus" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_staff_of_evil_sprit_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1746" />
+		<set name="crystal_count" val="180" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="930" />
@@ -32,15 +32,15 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="4901" name="Staff of Evil Spirits" additionalName="Acumen" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
+	<item id="4901" name="Staff of Evil Spirits" additionalName="Blessed Body" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_staff_of_evil_sprit_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1746" />
+		<set name="crystal_count" val="180" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="930" />
@@ -64,15 +64,15 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="4902" name="Staff of Evil Spirits" additionalName="Magic Regeneration" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 14%. -->
+	<item id="4902" name="Staff of Evil Spirits" additionalName="Magic Poison" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_staff_of_evil_sprit_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1746" />
+		<set name="crystal_count" val="180" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="930" />
@@ -89,6 +89,96 @@
 		<stats>
 			<stat type="pAtk">189</stat>
 			<stat type="mAtk">145</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="4903" name="Dasparion's Staff" type="Weapon">
+		<set name="icon" val="icon.weapon_dasparions_staff_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;46;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="751" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="920" />
+		<set name="price" val="18300000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
+		<set name="isAppearanceable" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<stats>
+			<stat type="pAtk">207</stat>
+			<stat type="mAtk">143</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="4904" name="Dasparion's Staff" type="Weapon">
+		<set name="icon" val="icon.weapon_dasparions_staff_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;46;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="751" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="920" />
+		<set name="price" val="18300000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="1164" level="14" type_chance="4" type="ON_MAGIC_SKILL" /> <!-- Curse Weakness -->
+		</skills>
+		<stats>
+			<stat type="pAtk">207</stat>
+			<stat type="mAtk">143</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="4905" name="Dasparion's Staff" type="Weapon">
+		<set name="icon" val="icon.weapon_dasparions_staff_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;46;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="751" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="920" />
+		<set name="price" val="18300000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="1222" level="10" type_chance="4" type="ON_MAGIC_SKILL" /> <!-- Curse Chaos -->
+		</skills>
+		<stats>
+			<stat type="pAtk">207</stat>
+			<stat type="mAtk">143</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="accCombat">8</stat>
 			<stat type="pAtkSpd">325</stat>
@@ -621,7 +711,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="4952" name="Recipe: Avadon Circlet (60%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for a Sealed Avadon Circlet. Requires Create Item - Skill Lv. 6. The success rate is 60%. -->
+		<!-- For Dwarves only. Recipe for an Avadon Circlet. Requires Create Item - Skill Lv. 6. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -761,7 +851,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="4962" name="Recipe: Zubei's Helmet (60%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for a Sealed Zubei's Helmet. Requires Create Item - Skill Lv. 6. The success rate is 60%. -->
+		<!-- For Dwarves only. Recipe for a Zubei's Helmet. Requires Create Item - Skill Lv. 6. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1153,7 +1243,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="4990" name="Recipe: Blue Wolf Helmet (60%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for a Sealed Blue Wolf Helmet. Requires Create Item - Skill Lv. 7. The success rate is 60%. -->
+		<!-- For Dwarves only. Recipe for a Blue Wolf Helmet. Requires Create Item - Skill Lv. 7. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1167,7 +1257,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="4991" name="Recipe: Doom Helmet (60%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for a Sealed Doom Helmet. Requires Create Item - Skill Lv. 7. The success rate is 60%. -->
+		<!-- For Dwarves only. Recipe for a Doom Helmet. Requires Create Item - Skill Lv. 7. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />

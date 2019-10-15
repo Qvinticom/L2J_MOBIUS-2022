@@ -28,11 +28,11 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  */
 public class GiveXp extends AbstractEffect
 {
-	private final int _xp;
+	private final long _xp;
 	
 	public GiveXp(StatsSet params)
 	{
-		_xp = params.getInt("xp", 0);
+		_xp = params.getLong("xp", 0);
 	}
 	
 	@Override

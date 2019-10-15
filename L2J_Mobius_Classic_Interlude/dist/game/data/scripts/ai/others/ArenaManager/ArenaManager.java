@@ -32,8 +32,12 @@ import ai.AbstractNpcAI;
  */
 public class ArenaManager extends AbstractNpcAI
 {
-	// NPC
-	private static final int ARENA_MANAGER = 31226;
+	// NPCs
+	private static final int[] ARENA_MANAGER =
+	{
+		31225, // Arena Director (MDT)
+		31226, // Arena Manager (Coliseum)
+	};
 	// Skills
 	private static final SkillHolder[] BUFFS =
 	{

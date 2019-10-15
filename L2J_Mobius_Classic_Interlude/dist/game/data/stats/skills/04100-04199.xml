@@ -173,6 +173,7 @@
 		</effects>
 	</skill>
 	<skill id="4103" toLevel="2" name="Ultimate Evasion">
+		<!-- Evasion is increased for a certain time. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -349,7 +350,7 @@
 		</effects>
 	</skill>
 	<skill id="4106" toLevel="1" name="Antharas Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill4106</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -374,6 +375,41 @@
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>28600</power>
+			</effect>
+			<effect name="BlockActions" />
+		</effects>
+	</skill>
+	<skill id="4107" toLevel="1" name="Antharas Stun">
+		<!-- Momentarily immobile due to the Stun effect. -->
+		<icon>icon.skill4107</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>9</abnormalTime>
+		<abnormalType>FLY_AWAY</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<affectRange>1500</affectRange>
+		<coolTime>3000</coolTime>
+		<effectPoint>-100</effectPoint>
+		<attributeType>FIRE</attributeType>
+		<attributeValue>180</attributeValue>
+		<fanRange>0;180;1500;400</fanRange>
+		<hitTime>3000</hitTime>
+		<isDebuff>true</isDebuff>
+		<magicLvl>99</magicLvl>
+		<operateType>A2</operateType>
+		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>1.5</hitCancelTime>
+		<trait>SHOCK</trait>
+		<targetType>SELF</targetType>
+		<affectScope>SQUARE_PB</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>28600</power>
+			</effect>
+			<effect name="FlyAway">
+				<radius>600</radius>
 			</effect>
 			<effect name="BlockActions" />
 		</effects>
@@ -838,7 +874,7 @@
 		</effects>
 	</skill>
 	<skill id="4120" toLevel="12" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0101</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -923,7 +959,9 @@
 					<value level="12">2617</value>
 				</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="4121" toLevel="12" name="Summoned Monster Magic Protection">
@@ -1217,7 +1255,9 @@
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="4132" toLevel="1" name="Spear Attack">
@@ -1820,7 +1860,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4145" toLevel="3" name="P. Atk. Decrease">
+	<skill id="4145" toLevel="3" name="Decrease P. Atk.">
 		<!-- P. Atk. decreases momentarily. Effect $s1. -->
 		<icon>icon.skill4037</icon>
 		<abnormalLvl>
@@ -1905,7 +1945,7 @@
 		</effects>
 	</skill>
 	<skill id="4148" toLevel="12" name="Poison">
-		<!-- HP cut due to Poison. $s1 power. -->
+		<!-- Poisons a target, momentarily decreasing HP. Effect $s1. -->
 		<icon>icon.skill4036</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -2102,7 +2142,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4151" toLevel="12" name="Dagger Storm">
+	<skill id="4151" toLevel="12" name="(Wind Strike)">
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -2162,7 +2202,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4152" toLevel="12" name="Drain HP">
+	<skill id="4152" toLevel="12" name="Drain Energy">
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -2843,7 +2883,7 @@
 		</effects>
 	</skill>
 	<skill id="4164" toLevel="18" name="Paralysis">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Body is rigid with paralysis. -->
 		<icon>icon.skill1170</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -2981,7 +3021,7 @@
 		</effects>
 	</skill>
 	<skill id="4166" toLevel="18" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0279</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -3019,7 +3059,9 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="4167" toLevel="1" name="Curse of Fairy Mimyu">
@@ -3108,7 +3150,7 @@
 		</effects>
 	</skill>
 	<skill id="4169" toLevel="12" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -3185,7 +3227,9 @@
 					<value level="12">16398</value>
 				</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="4170" toLevel="12" name="Mortal Blow">
@@ -3304,7 +3348,7 @@
 		</effects>
 	</skill>
 	<skill id="4172" toLevel="12" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -3355,11 +3399,13 @@
 			<effect name="PhysicalAttack">
 				<power>0</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="4173" toLevel="12" name="Might">
-		<!-- Increases P. Atk. -->
+		<!-- P. Atk. is increased. -->
 		<icon>icon.skill1068</icon>
 		<abnormalLvl>99</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -3400,7 +3446,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
-		<targetType>SELF</targetType>
+		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="PAtk">
@@ -3410,7 +3456,7 @@
 		</effects>
 	</skill>
 	<skill id="4174" toLevel="12" name="Shield">
-		<!-- Increases P. Def. -->
+		<!-- P. Def. is increased. -->
 		<icon>icon.skill1040</icon>
 		<abnormalLvl>99</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -3461,7 +3507,7 @@
 		</effects>
 	</skill>
 	<skill id="4175" toLevel="12" name="Haste">
-		<!-- Increases Atk. Spd. -->
+		<!-- Atk. Spd. is increased. -->
 		<icon>icon.skill1086</icon>
 		<abnormalLvl>99</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -3720,7 +3766,7 @@
 		</effects>
 	</skill>
 	<skill id="4180" toLevel="12" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -3797,7 +3843,9 @@
 					<value level="12">16398</value>
 				</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="4181" toLevel="12" name="Mortal Blow">
@@ -3859,7 +3907,7 @@
 		</effects>
 	</skill>
 	<skill id="4182" toLevel="12" name="Poison">
-		<!-- HP cut due to Poison. $s1 power. -->
+		<!-- HP decreases from poison momentarily. Effect $s1. -->
 		<icon>icon.skill1168</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -3939,7 +3987,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4183" toLevel="12" name="P. Atk. Decrease">
+	<skill id="4183" toLevel="12" name="Decrease P. Atk.">
 		<!-- P. Atk. decreases momentarily. Effect $s1. -->
 		<icon>icon.skill1164</icon>
 		<abnormalLvl>
@@ -4157,11 +4205,13 @@
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="4186" toLevel="12" name="Hold">
-		<!-- Inflicted with Hold and unable to move. -->
+		<!-- Inflicted with hold and unable to move momentarily. -->
 		<icon>icon.skill1201</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -4444,11 +4494,13 @@
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="4190" toLevel="12" name="Decrease MP">
-		<!-- MP decreases. Effect $s1. -->
+		<!-- Decreases the target's usable amount of MP. Effect $s1. -->
 		<icon>icon.skill1102</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -4526,7 +4578,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4191" toLevel="12" name="Dagger Storm">
+	<skill id="4191" toLevel="12" name="(Wind Strike)">
 		<castRange>750</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1250</effectRange>
@@ -4643,7 +4695,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4193" toLevel="12" name="Drain Energy">
+	<skill id="4193" toLevel="12" name="Life Drain">
 		<castRange>750</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1250</effectRange>
@@ -4886,7 +4938,7 @@
 		</effects>
 	</skill>
 	<skill id="4197" toLevel="12" name="Hold">
-		<!-- Inflicted with Hold and unable to move. -->
+		<!-- Inflicted with hold and unable to move momentarily. -->
 		<icon>icon.skill1201</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -4952,7 +5004,7 @@
 		</effects>
 	</skill>
 	<skill id="4198" toLevel="12" name="Poison">
-		<!-- HP cut due to Poison. $s1 power. -->
+		<!-- Poisons a target, momentarily decreasing HP. Effect $s1. -->
 		<icon>icon.skill1168</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -5032,7 +5084,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4199" toLevel="12" name="P. Atk. Decrease">
+	<skill id="4199" toLevel="12" name="Decrease P. Atk.">
 		<!-- P. Atk. decreases momentarily. Effect $s1. -->
 		<icon>icon.skill1164</icon>
 		<abnormalLvl>

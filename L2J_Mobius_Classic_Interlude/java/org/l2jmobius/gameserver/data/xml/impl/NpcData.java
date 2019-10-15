@@ -48,6 +48,8 @@ import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.holders.DropHolder;
+import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.type.CrystalType;
 import org.l2jmobius.gameserver.model.skills.Skill;
 
 /**
@@ -450,12 +452,20 @@ public class NpcData implements IXmlReader
 												{
 													final double chance = parseDouble(drop_attrs, "chance");
 													final DropHolder dropItem = new DropHolder(dropType, parseInteger(drop_attrs, "id"), parseLong(drop_attrs, "min"), parseLong(drop_attrs, "max"), dropType == DropType.LUCKY ? chance / 100 : chance);
-													if (ItemTable.getInstance().getTemplate(parseInteger(drop_attrs, "id")) == null)
+													final Item item = ItemTable.getInstance().getTemplate(parseInteger(drop_attrs, "id"));
+													if (item == null)
 													{
 														LOGGER.warning("DropListItem: Could not find item with id " + parseInteger(drop_attrs, "id") + ".");
 													}
 													else
 													{
+														// Max equipable item grade configuration.
+														final int itemCrystalId = item.getCrystalType().getId();
+														if ((itemCrystalId > Config.MAX_EQUIPABLE_ITEM_GRADE.getId()) && (itemCrystalId < CrystalType.EVENT.getId()))
+														{
+															continue;
+														}
+														
 														dropLists.add(dropItem);
 													}
 												}

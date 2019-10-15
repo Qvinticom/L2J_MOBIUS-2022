@@ -427,7 +427,7 @@
 		</effects>
 	</skill>
 	<skill id="4704" toLevel="13" name="Cure of Seraphim">
-		<!-- Seraphim the Unicorn's cure magic. Removes Sleep, Hold, Stun, Silence and Paralysis debuffs from party members. -->
+		<!-- Curse-nullifying magic used by Seraphim the unicorn. It nullifies Sleep/Hold/Stun/Silence/Paralyze debuff cast on your party member. -->
 		<affectRange>1000</affectRange>
 		<effectPoint>
 			<value level="1">541</value>
@@ -884,14 +884,14 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4708" toLevel="14" name="Cursed Strike">
-		<!-- Cursed Man inflicts the curse to inflict damage and stun target simultaneously. Power $s1 -->
+	<skill id="4708" toLevel="17" name="Cursed Strike">
+		<!-- Debuff attack used by Cursed Man. Deals damage and shock simultaneously. Inflicts Stun on the enemy momentarily. $s1 power. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
-		<activateRate>50</activateRate>
+		<activateRate>80</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>40</castRange>
 		<effectPoint>
@@ -909,6 +909,9 @@
 			<value level="12">-342</value>
 			<value level="13">-342</value>
 			<value level="14">-342</value>
+			<value level="15">-342</value>
+			<value level="16">-342</value>
+			<value level="17">-342</value>
 		</effectPoint>
 		<effectRange>200</effectRange>
 		<hitTime>2000</hitTime>
@@ -929,6 +932,9 @@
 			<value level="12">90</value>
 			<value level="13">95</value>
 			<value level="14">99</value>
+			<value level="15">101</value>
+			<value level="16">103</value>
+			<value level="17">105</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">58</value>
@@ -945,6 +951,9 @@
 			<value level="12">80</value>
 			<value level="13">80</value>
 			<value level="14">80</value>
+			<value level="15">80</value>
+			<value level="16">80</value>
+			<value level="17">80</value>
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
@@ -969,13 +978,18 @@
 					<value level="12">6593</value>
 					<value level="13">7004</value>
 					<value level="14">7443</value>
+					<value level="15">7863</value>
+					<value level="16">8288</value>
+					<value level="17">8713</value>
 				</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
-	<skill id="4709" toLevel="14" name="Cursed Blow">
-		<!-- Cursed Man's attack that unleashes immense damage upon a targeted enemy. Power $s1 -->
+	<skill id="4709" toLevel="17" name="Cursed Blow">
+		<!-- Cursed Man's attack that unleashes immense damage upon a targeted enemy. Power $s1. -->
 		<castRange>40</castRange>
 		<effectPoint>
 			<value level="1">-279</value>
@@ -992,6 +1006,9 @@
 			<value level="12">-342</value>
 			<value level="13">-342</value>
 			<value level="14">-342</value>
+			<value level="15">-342</value>
+			<value level="16">-342</value>
+			<value level="17">-342</value>
 		</effectPoint>
 		<effectRange>200</effectRange>
 		<hitTime>2000</hitTime>
@@ -1010,6 +1027,9 @@
 			<value level="12">90</value>
 			<value level="13">95</value>
 			<value level="14">99</value>
+			<value level="15">101</value>
+			<value level="16">103</value>
+			<value level="17">105</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">58</value>
@@ -1026,6 +1046,9 @@
 			<value level="12">80</value>
 			<value level="13">80</value>
 			<value level="14">80</value>
+			<value level="15">80</value>
+			<value level="16">80</value>
+			<value level="17">80</value>
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>10000</reuseDelay>
@@ -1049,6 +1072,9 @@
 					<value level="12">8918</value>
 					<value level="13">9101</value>
 					<value level="14">9283</value>
+					<value level="15">9465</value>
+					<value level="16">9648</value>
+					<value level="17">9830</value>
 				</power>
 				<criticalChance>10</criticalChance>
 				<chanceBoost>200</chanceBoost>
@@ -1056,7 +1082,7 @@
 		</effects>
 	</skill>
 	<skill id="4710" toLevel="12" name="Wild Stun">
-		<!-- Debuff attack used by Hatchling of Wind/Strider. Inflicts damage and stun simultaneously. Power $s1 -->
+		<!-- Debuff attack used by Windy Hatchling/Strider. Deals damage and shock simultaneously. Inflicts Stun on the enemy momentarily. $s1 power. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -1135,7 +1161,9 @@
 					<value level="12">864</value>
 				</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="4711" toLevel="12" name="Wild Defense">
@@ -1803,7 +1831,7 @@
 		</effects>
 	</skill>
 	<skill id="4724" toLevel="12" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -1880,11 +1908,13 @@
 					<value level="12">16398</value>
 				</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="4725" toLevel="12" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -1961,11 +1991,13 @@
 					<value level="12">14430</value>
 				</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="4726" toLevel="12" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -2042,11 +2074,13 @@
 					<value level="12">7675</value>
 				</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="4727" toLevel="12" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -2123,11 +2157,13 @@
 					<value level="12">7215</value>
 				</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="4728" toLevel="12" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -2204,7 +2240,9 @@
 					<value level="12">6756</value>
 				</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="4729" toLevel="12" name="Mortal Blow">
@@ -3068,7 +3106,7 @@
 		</effects>
 	</skill>
 	<skill id="4744" toLevel="12" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -3145,11 +3183,13 @@
 					<value level="12">16398</value>
 				</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="4745" toLevel="12" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -3226,11 +3266,13 @@
 					<value level="12">14430</value>
 				</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="4746" toLevel="12" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -3307,11 +3349,13 @@
 					<value level="12">7675</value>
 				</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="4747" toLevel="12" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -3388,11 +3432,13 @@
 					<value level="12">7215</value>
 				</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="4748" toLevel="12" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -3469,7 +3515,9 @@
 					<value level="12">6756</value>
 				</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="4749" toLevel="12" name="Mortal Blow">
@@ -4043,7 +4091,7 @@
 		</effects>
 	</skill>
 	<skill id="4759" toLevel="12" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0101</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -4119,11 +4167,13 @@
 					<value level="12">47895</value>
 				</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="4760" toLevel="12" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0101</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -4199,11 +4249,13 @@
 					<value level="12">42148</value>
 				</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="4761" toLevel="12" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0101</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -4279,11 +4331,13 @@
 					<value level="12">22415</value>
 				</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="4762" toLevel="12" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0101</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -4359,11 +4413,13 @@
 					<value level="12">21074</value>
 				</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="4763" toLevel="12" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0101</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -4439,7 +4495,9 @@
 					<value level="12">19733</value>
 				</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="4764" toLevel="12" name="Power Shot">
@@ -4723,7 +4781,7 @@
 		</effects>
 	</skill>
 	<skill id="4769" toLevel="12" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0101</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -4799,11 +4857,13 @@
 					<value level="12">47895</value>
 				</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="4770" toLevel="12" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0101</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -4879,11 +4939,13 @@
 					<value level="12">42148</value>
 				</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="4771" toLevel="12" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0101</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -4959,11 +5021,13 @@
 					<value level="12">22415</value>
 				</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="4772" toLevel="12" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0101</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -5039,11 +5103,13 @@
 					<value level="12">21074</value>
 				</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="4773" toLevel="12" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0101</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -5119,7 +5185,9 @@
 					<value level="12">19733</value>
 				</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="4774" toLevel="12" name="Spear Attack">

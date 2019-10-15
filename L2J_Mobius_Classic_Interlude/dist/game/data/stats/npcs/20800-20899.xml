@@ -14,17 +14,19 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<acquire exp="5916" sp="424" /> <!-- Need confirm retail values -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1795" hpRegen="11" mp="665" mpRegen="2.1" />
-			<attack physical="237.9049909" magical="178.7041" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="205.299259" magical="136.5719" />
+		<acquire exp="5916" sp="424" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="1276.53628" hpRegen="5.5" mp="665.0" mpRegen="2.1" />
+			<attack physical="261.69549" magical="178.7041" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="186.63569" magical="124.264149144103" />
+			<attribute>
+				<defence fire="20" water="20" wind="-5" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="70" />
 				<run ground="174" />
 			</speed>
 			<hitTime>410</hitTime>
-			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
@@ -88,17 +90,19 @@
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<equipment rhand="302" /> <!-- Body Slasher -->
-		<acquire exp="7133" sp="521" /> <!-- Need confirm retail values -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1862" hpRegen="11" mp="692" mpRegen="2.1" />
-			<attack physical="292.6274249" magical="188.35412" random="30" critical="4" accuracy="4.75" attackSpeed="216" type="SWORD" range="80" distance="80" width="120" />
-			<defence physical="210.240833" magical="139.8592" />
+		<acquire exp="7133" sp="521" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="1324.01623" hpRegen="5.5" mp="692.4" mpRegen="2.1" />
+			<attack physical="275.82705" magical="188.35412" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="191.12803" magical="127.255200286259" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="80" />
 				<run ground="174" />
 			</speed>
 			<hitTime>450</hitTime>
-			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
@@ -167,17 +171,19 @@
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<equipment rhand="192" /> <!-- Crystal Staff -->
-		<acquire exp="7261" sp="536" /> <!-- Need confirm retail values -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1929" hpRegen="11" mp="720" mpRegen="2.1" />
-			<attack physical="319.490468" magical="198.33688" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="151.1941518" magical="143.17771" evasion="10" />
+		<acquire exp="7261" sp="536" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="1372.18568" hpRegen="5.5" mp="720.0" mpRegen="2.1" />
+			<attack physical="290.44588" magical="198.33688" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="195.66302" magical="130.274648808072" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="80" />
 				<run ground="174" />
 			</speed>
 			<hitTime>450</hitTime>
-			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
@@ -243,17 +249,20 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="14218" sp="1072" /> <!-- Need confirm retail values -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1998" hpRegen="16.5" mp="747" mpRegen="2.1" />
-			<attack physical="369.7143626" magical="208.6504" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="165.486314" magical="146.5258" />
+		<acquire exp="14218" sp="1072" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="1421.00103" hpRegen="5.5" mp="747.8" mpRegen="2.1" />
+			<attack physical="305.54906" magical="208.6504" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="200.23844" magical="133.321011603844" />
+			<attribute>
+				<attack type="DARK" value="20" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="-32" dark="53" />
+			</attribute>
 			<speed>
 				<walk ground="80" />
 				<run ground="174" />
 			</speed>
 			<hitTime>560</hitTime>
-			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
@@ -1928,7 +1937,6 @@
 				<item id="1871" min="9" max="27" chance="5.082" /> <!-- Charcoal -->
 				<item id="1895" min="3" max="9" chance="3.755" /> <!-- Metallic Fiber -->
 				<item id="1876" min="4" max="12" chance="2.195" /> <!-- Mithril Ore -->
-				<item id="90012" min="1" max="1" chance="0.075" /> <!-- Common Life Stone -->
 			</drop>
 			<spoil>
 				<item id="4975" min="1" max="1" chance="35.38" /> <!-- Recipe: Black Ore Necklace (70%) -->
@@ -1953,6 +1961,7 @@
 		</parameters>
 		<race>DIVINE</race>
 		<sex>MALE</sex>
+		<equipment rhand="147" /> <!-- rhand: Tear of Darkness -->
 		<acquire exp="84601" sp="2538" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1204.258852" hpRegen="7.5" mp="1190.325" mpRegen="2.7" />
@@ -3485,17 +3494,19 @@
 		</parameters>
 		<race>BUG</race>
 		<sex>MALE</sex>
-		<acquire exp="4638" sp="304" /> <!-- Need confirm retail values -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1418" hpRegen="11" mp="504" mpRegen="2.1" />
-			<attack physical="170.1079818" magical="127.77787" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="176.759022" magical="117.58598" />
+		<acquire exp="4638" sp="304" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="1008.23781" hpRegen="5.5" mp="504.8" mpRegen="2.1" />
+			<attack physical="187.11878" magical="127.77787" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="160.69002" magical="106.989225133249" />
+			<attribute>
+				<defence fire="-5" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="174" />
 			</speed>
 			<hitTime>60</hitTime>
-			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
@@ -3958,6 +3969,7 @@
 		</parameters>
 		<race>DIVINE</race>
 		<sex>MALE</sex>
+		<equipment rhand="147" /> <!-- rhand: Tear of Darkness -->
 		<acquire exp="9779" sp="970" /> <!-- Need confirm retail values -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="3438" hpRegen="7.5" mp="1345" mpRegen="2.7" />
@@ -4128,7 +4140,6 @@
 				<item id="4044" min="1" max="1" chance="5.183" /> <!-- Thons -->
 				<item id="1865" min="18" max="54" chance="4.253" /> <!-- Varnish -->
 				<item id="1864" min="50" max="150" chance="3.041" /> <!-- Stem -->
-				<item id="90012" min="1" max="1" chance="0.3" /> <!-- Common Life Stone -->
 			</drop>
 			<spoil>
 				<item id="4984" min="1" max="1" chance="23.66" /> <!-- Recipe: Blue Wolf Leather Armor (60%) -->
@@ -4200,7 +4211,6 @@
 				<item id="1895" min="3" max="9" chance="5.679" /> <!-- Metallic Fiber -->
 				<item id="4044" min="1" max="1" chance="4.608" /> <!-- Thons -->
 				<item id="1864" min="32" max="96" chance="4.361" /> <!-- Stem -->
-				<item id="90012" min="1" max="1" chance="0.3" /> <!-- Common Life Stone -->
 				<item id="5161" min="1" max="1" chance="0.075" /> <!-- Recipe: Spiritshot Compressed Package (A-grade) -->
 				<item id="3035" min="1" max="1" chance="0.075" /> <!-- Recipe: Spiritshot (A-grade) -->
 			</drop>

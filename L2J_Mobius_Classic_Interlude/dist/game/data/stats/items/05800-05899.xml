@@ -11,8 +11,8 @@
 		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="1380" />
 		<set name="price" val="1226000" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<set name="isAppearanceable" val="true" />
@@ -26,7 +26,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5801" name="Dusk" type="Weapon">
+	<item id="5801" name="For NPC (Dusk)" type="Weapon">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -37,8 +37,8 @@
 		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="1380" />
 		<set name="price" val="1226000" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<set name="isAppearanceable" val="true" />
@@ -52,7 +52,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5802" name="Dawn" type="Weapon">
+	<item id="5802" name="For NPC (Dawn)" type="Weapon">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -63,8 +63,8 @@
 		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="1380" />
 		<set name="price" val="1226000" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<set name="isAppearanceable" val="true" />
@@ -138,8 +138,48 @@
 			<skill id="2168" level="4" /> <!-- Lucky Charm -->
 		</skills>
 	</item>
+	<item id="5806" name="Lucky Charm (A-grade)" type="EtcItem">
+		<!-- Bestows blessing on its owner such that when the owner dies during a boss/raid war, his/her abilities will not be diminished. This item can only be used on self by characters level 61 - 75. -->
+		<set name="icon" val="icon.etc_charm_of_luck_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="price" val="96000" />
+		<set name="reuse_delay" val="10000" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="2168" level="5" /> <!-- Lucky Charm -->
+		</skills>
+	</item>
+	<item id="5807" name="Lucky Charm (S-grade)" type="EtcItem">
+		<!-- Bestows blessing on its owner such that when the owner dies during a boss/raid war, his/her abilities will not be diminished. This item can only be used on self by a character whose level is 76 or higher. -->
+		<set name="icon" val="icon.etc_charm_of_luck_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="price" val="160000" />
+		<set name="reuse_delay" val="10000" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="2168" level="6" /> <!-- Lucky Charm -->
+		</skills>
+	</item>
 	<item id="5808" name="Party Mask" type="Armor">
-		<!-- A fashion item used to display a unique appearance. -->
+		<!-- Fashion item used to display a unique appearance. Used as ingredient for quest: One Who Faces the Limit. -->
 		<set name="icon" val="icon.etc_party_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -172,7 +212,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="5811" name="Spellbook: Mass Slow" type="EtcItem">
-		<!-- Spellbook needed to learn Mass Slow. Used by Necromancers. Required level: 61 -->
+		<!-- Spellbook needed to learn Mass Slow. Used by Necromancers. Required level: 62 -->
 		<set name="icon" val="icon.etc_spell_books_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -222,7 +262,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="5816" name="Spellbook: Advanced Block" type="EtcItem">
-		<!-- Spellbook needed to learn Advanced Block. Used by Elven Elders. Required level: 42 -->
+		<!-- Spellbook needed to learn Advanced Block. Used by Elven Elders. Required level: 58 -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -232,7 +272,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="5817" name="Chrono Campana" type="Weapon">
-		<!-- Chronicle III Souvenir! Cannot be dropped. -->
+		<!-- Chronicle III Souvenir!!! -->
 		<set name="icon" val="icon.weapon_chrono_campana_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -256,13 +296,413 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
+	<item id="5818" name="Alternative Dark Coda" type="EtcItem">
+		<!-- Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_coda_i08" />
+		<set name="etcitem_type" val="CROP" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="2" />
+		<set name="price" val="50" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5819" name="Alternative Red Coda" type="EtcItem">
+		<!-- Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_coda_i03" />
+		<set name="etcitem_type" val="CROP" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="2" />
+		<set name="price" val="50" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5820" name="Alternative Chilly Coda" type="EtcItem">
+		<!-- Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_coda_i00" />
+		<set name="etcitem_type" val="CROP" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="2" />
+		<set name="price" val="50" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5821" name="Alternative Blue Coda" type="EtcItem">
+		<!-- Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_coda_i02" />
+		<set name="etcitem_type" val="CROP" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="2" />
+		<set name="price" val="100" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5822" name="Alternative Golden Coda" type="EtcItem">
+		<!-- Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_coda_i04" />
+		<set name="etcitem_type" val="CROP" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="2" />
+		<set name="price" val="200" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5823" name="Alternative Lute Coda" type="EtcItem">
+		<!-- Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_coda_i06" />
+		<set name="etcitem_type" val="CROP" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="2" />
+		<set name="price" val="300" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5824" name="Alternative Desert Coda" type="EtcItem">
+		<!-- Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_coda_i05" />
+		<set name="etcitem_type" val="CROP" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="2" />
+		<set name="price" val="200" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5825" name="Alternative Red Cobol" type="EtcItem">
+		<!-- Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_cobol_i03" />
+		<set name="etcitem_type" val="CROP" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="2" />
+		<set name="price" val="200" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5826" name="Alternative Chilly Cobol" type="EtcItem">
+		<!-- Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_cobol_i00" />
+		<set name="etcitem_type" val="CROP" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="2" />
+		<set name="price" val="250" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5827" name="Alternative Blue Cobol" type="EtcItem">
+		<!-- Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_cobol_i02" />
+		<set name="etcitem_type" val="CROP" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="2" />
+		<set name="price" val="500" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5828" name="Alternative Thorn Cobol" type="EtcItem">
+		<!-- Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_cobol_i07" />
+		<set name="etcitem_type" val="CROP" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="2" />
+		<set name="price" val="500" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5829" name="Alternative Golden Cobol" type="EtcItem">
+		<!-- Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_cobol_i04" />
+		<set name="etcitem_type" val="CROP" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="2" />
+		<set name="price" val="500" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5830" name="Alternative Great Cobol" type="EtcItem">
+		<!-- Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_cobol_i09" />
+		<set name="etcitem_type" val="CROP" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="2" />
+		<set name="price" val="500" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5831" name="Alternative Red Codran" type="EtcItem">
+		<!-- Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_codran_i03" />
+		<set name="etcitem_type" val="CROP" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="2" />
+		<set name="price" val="400" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5832" name="Alternative Sea Codran" type="EtcItem">
+		<!-- Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_codran_i06" />
+		<set name="etcitem_type" val="CROP" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="2" />
+		<set name="price" val="500" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5833" name="Alternative Chilly Codran" type="EtcItem">
+		<!-- Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_codran_i00" />
+		<set name="etcitem_type" val="CROP" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="2" />
+		<set name="price" val="400" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5834" name="Alternative Blue Codran" type="EtcItem">
+		<!-- Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_codran_i02" />
+		<set name="etcitem_type" val="CROP" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="2" />
+		<set name="price" val="500" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5835" name="Alternative Twin Codran" type="EtcItem">
+		<!-- Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_codran_i07" />
+		<set name="etcitem_type" val="CROP" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="2" />
+		<set name="price" val="500" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5836" name="Alternative Great Codran" type="EtcItem">
+		<!-- Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_codran_i09" />
+		<set name="etcitem_type" val="CROP" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="2" />
+		<set name="price" val="750" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5837" name="Alternative Desert Codran" type="EtcItem">
+		<!-- Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_codran_i05" />
+		<set name="etcitem_type" val="CROP" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="2" />
+		<set name="price" val="1000" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5838" name="Mature Alternative Dark Coda" type="EtcItem">
+		<!-- Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_coda_i08" />
+		<set name="etcitem_type" val="MATURECROP" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="50" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5839" name="Mature Alternative Red Coda" type="EtcItem">
+		<!-- Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_coda_i03" />
+		<set name="etcitem_type" val="MATURECROP" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="50" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5840" name="Mature Alternative Chilly Coda" type="EtcItem">
+		<!-- Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_coda_i00" />
+		<set name="etcitem_type" val="MATURECROP" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="50" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5841" name="Mature Alternative Blue Coda" type="EtcItem">
+		<!-- Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_coda_i02" />
+		<set name="etcitem_type" val="MATURECROP" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="100" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5842" name="Mature Alternative Golden Coda" type="EtcItem">
+		<!-- Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_coda_i04" />
+		<set name="etcitem_type" val="MATURECROP" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="200" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5843" name="Mature Alternative Lute Coda" type="EtcItem">
+		<!-- Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_coda_i06" />
+		<set name="etcitem_type" val="MATURECROP" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="300" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5844" name="Mature Alternative Desert Coda" type="EtcItem">
+		<!-- Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_coda_i05" />
+		<set name="etcitem_type" val="MATURECROP" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="200" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5845" name="Mature Alternative Red Cobol" type="EtcItem">
+		<!-- Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_cobol_i03" />
+		<set name="etcitem_type" val="MATURECROP" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="200" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5846" name="Mature Alternative Chilly Cobol" type="EtcItem">
+		<!-- Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_cobol_i00" />
+		<set name="etcitem_type" val="MATURECROP" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="250" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5847" name="Mature Alternative Blue Cobol" type="EtcItem">
+		<!-- Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_cobol_i02" />
+		<set name="etcitem_type" val="MATURECROP" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="500" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5848" name="Mature Alternative Thorn Cobol" type="EtcItem">
+		<!-- Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_cobol_i07" />
+		<set name="etcitem_type" val="MATURECROP" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="500" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5849" name="Mature Alternative Golden Cobol" type="EtcItem">
+		<!-- Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_cobol_i04" />
+		<set name="etcitem_type" val="MATURECROP" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="500" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5850" name="Mature Alternative Great Cobol" type="EtcItem">
+		<!-- Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_cobol_i09" />
+		<set name="etcitem_type" val="MATURECROP" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="500" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5851" name="Mature Alternative Red Codran" type="EtcItem">
+		<!-- Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_codran_i03" />
+		<set name="etcitem_type" val="MATURECROP" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="400" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5852" name="Mature Alternative Sea Codran" type="EtcItem">
+		<!-- Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_codran_i06" />
+		<set name="etcitem_type" val="MATURECROP" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="500" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5853" name="Mature Alternative Chilly Codran" type="EtcItem">
+		<!-- Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_codran_i00" />
+		<set name="etcitem_type" val="MATURECROP" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="400" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5854" name="Mature Alternative Blue Codran" type="EtcItem">
+		<!-- Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_codran_i02" />
+		<set name="etcitem_type" val="MATURECROP" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="500" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5855" name="Mature Alternative Twin Codran" type="EtcItem">
+		<!-- Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_codran_i07" />
+		<set name="etcitem_type" val="MATURECROP" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="500" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5856" name="Mature Alternative Great Codran" type="EtcItem">
+		<!-- Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_codran_i09" />
+		<set name="etcitem_type" val="MATURECROP" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="750" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="5857" name="Mature Alternative Desert Codran" type="EtcItem">
+		<!-- Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_codran_i05" />
+		<set name="etcitem_type" val="MATURECROP" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="1000" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
 	<item id="5858" name="Blessed Scroll of Escape: Clan Hall" type="EtcItem">
 		<!-- Magical scroll that transports you to your clan hall. If you don't belong to a clan that possesses a clan hall, this scroll will have no effect. -->
 		<set name="icon" val="icon.etc_scroll_of_return_agit_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
+		<set name="weight" val="10" />
 		<set name="price" val="100000" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
@@ -281,7 +721,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
+		<set name="weight" val="10" />
 		<set name="price" val="80000" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
@@ -343,7 +783,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="5863" name="Alligator Tooth" type="EtcItem">
-		<!-- Sharp tooth of the Alligator. Take it to Morita on the shore of Alligator Island. -->
+		<!-- Sharp canine tooth of the Alligator. Bring this to the warehouse keeper of Heine. -->
 		<set name="icon" val="icon.etc_fang_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -374,8 +814,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5865" name="Zoogenous Spores" type="EtcItem">
-		<!-- Spore sample collected from a Spore Zombie from the Sea of Spores. It is used as research material by Magister Gauen of the Ivory Tower. -->
+	<item id="5865" name="Carnivore Spores" type="EtcItem">
+		<!-- Tissue sample collected from a spore zombie from the Sea of Spores. It is used as research material by Magister Gauen of the Ivory Tower. -->
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -390,7 +830,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5866" name="Phytogenic Spores" type="EtcItem">
+	<item id="5866" name="Herbivorous Spores" type="EtcItem">
 		<!-- Spore sample collected from a rotting tree from the Sea of Spores. It is used as research material by Magister Gauen of the Ivory Tower. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="immediate_effect" val="true" />
@@ -423,7 +863,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="5868" name="Snake Scale" type="EtcItem">
-		<!-- Snake scale from the bodies of Palibati and Trives. Take it to Priest Ruvard in Aden. -->
+		<!-- Snake scale from the bodies of Palibati and Trives. Take it to Grand Master Oltran of Town of Aden. -->
 		<set name="icon" val="icon.etc_scale_of_medusa_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -486,8 +926,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5872" name="Supplies" type="EtcItem">
-		<!-- Supply items of Taik Orcs. Take them to Priest Ruvard and he will reward you. -->
+	<item id="5872" name="Supply Items" type="EtcItem">
+		<!-- Supply items for Taik Orcs. Take it to Guard Coleman and he will give you a reward. -->
 		<set name="icon" val="icon.etc_squares_wood_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -646,7 +1086,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5882" name="Fire Crystal" type="EtcItem">
+	<item id="5882" name="Flare Shard" type="EtcItem">
 		<!-- Flare shard obtained from the Forgotten Temple. Take it to Magister Nell of Gludin Village. -->
 		<set name="icon" val="icon.etc_echo_crystal_i00" />
 		<set name="immediate_effect" val="true" />
@@ -662,7 +1102,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5883" name="Ice Shard" type="EtcItem">
+	<item id="5883" name="Freezing Shard" type="EtcItem">
 		<!-- Water Crystal obtained from the Forgotten Temple. Take it to Magister Nell of Gludin Village. -->
 		<set name="icon" val="icon.etc_echo_crystal_i01" />
 		<set name="immediate_effect" val="true" />
@@ -679,7 +1119,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="5884" name="Cave Beast Tooth" type="EtcItem">
-		<!-- Ingredient used by Orc Shamans during a ritual. Take it to Priest Vanutu. -->
+		<!-- Ingredient used by Orc Shamans during a ritual. Take it to Priest Manakia. -->
 		<set name="icon" val="icon.etc_fang_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -695,7 +1135,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="5885" name="Death Wave Light" type="EtcItem">
-		<!-- Ingredient used by Orc Shamans during a ritual. Take it to Priest Vanutu. -->
+		<!-- Ingredient used by Orc Shamans during their ritual. Take it to Priest Manakia. -->
 		<set name="icon" val="icon.etc_crystal_ball_green_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -743,7 +1183,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="5888" name="Karik Horn" type="EtcItem">
-		<!-- Ingredient used by Orc Shamans during a ritual. Take it to Priest Vanutu. -->
+		<!-- Ingredient used by Orc Shamans during a ritual. Take it to Priest Manakia. -->
 		<set name="icon" val="icon.etc_horn_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -758,9 +1198,9 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5889" name="Limal Karinness Blood" type="EtcItem">
-		<!-- Ingredient used by Orc Shamans during a ritual. Take it to Priest Vanutu. -->
-		<set name="icon" val="icon.etc_reagent_red_i00" />
+	<item id="5889" name="Cave Howler Skull" type="EtcItem">
+		<!-- Ingredient used by Orc Shamans during a ritual. Take it to Priest Manakia. -->
+		<set name="icon" val="icon.etc_skull_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_tradable" val="false" />

@@ -19,7 +19,7 @@
 		<effectPoint>100</effectPoint>
 		<isMagic>1</isMagic>
 	</skill>
-	<skill id="16202" toLevel="4" name="Fatal Strike">
+	<skill id="16202" toLevel="5" name="Fatal Strike">
 		<operateType>A1</operateType>
 		<mpConsume>1</mpConsume>
 		<castRange>40</castRange>
@@ -45,20 +45,26 @@
 		<effectPoint>-100</effectPoint>
 		<reuseDelay>5000</reuseDelay>
 	</skill>
-	<skill id="16205" toLevel="4" name="Burst Shot">
+	<skill id="16205" toLevel="5" name="Burst Shot">
 		<operateType>A1</operateType>
 		<mpConsume>1</mpConsume>
-		<castRange>500</castRange>
+		<castRange>900</castRange>
 		<hitTime>2000</hitTime>
-		<effectPoint>
-			<value level="1">-150</value>
-			<value level="2">-200</value>
-			<value level="3">-100</value>
-			<value level="4">-100</value>
-		</effectPoint>
+		<effectPoint>-100</effectPoint>
 		<coolTime>1000</coolTime>
+		<basicProperty>PHYSICAL</basicProperty>
+		<effectRange>400</effectRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<nextAction>ATTACK</nextAction>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>28833</power> <!-- Fix: Retail Missed -->
+				<overHit>true</overHit>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="16206" toLevel="4" name="Divine Spike">
+	<skill id="16206" toLevel="4" name="Holy Spike">
 		<operateType>A1</operateType>
 		<mpConsume>1</mpConsume>
 		<castRange>900</castRange>
@@ -71,20 +77,56 @@
 			<value level="4">-115</value>
 		</effectPoint>
 		<isMagic>1</isMagic>
+		<affectRange>200</affectRange>
+		<effectRange>1000</effectRange>
+		<attributeType>HOLY</attributeType>
+		<attributeValue>300</attributeValue>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<nextAction>ATTACK</nextAction>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">518</value>
+					<value level="2">529</value>
+					<value level="3">541</value>
+					<value level="4">553</value>
+				</power>
+				<overHit>true</overHit>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16207" toLevel="4" name="Dark Spike">
 		<operateType>A1</operateType>
 		<mpConsume>1</mpConsume>
-		<castRange>600</castRange>
+		<castRange>900</castRange>
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>
-			<value level="1">-150</value>
-			<value level="2">-200</value>
+			<value level="1">-100</value>
+			<value level="2">-105</value>
 			<value level="3">-110</value>
 			<value level="4">-115</value>
 		</effectPoint>
 		<isMagic>1</isMagic>
+		<affectRange>200</affectRange>
+		<effectRange>1000</effectRange>
+		<attributeType>DARK</attributeType>
+		<attributeValue>300</attributeValue>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<nextAction>ATTACK</nextAction>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">518</value>
+					<value level="2">529</value>
+					<value level="3">541</value>
+					<value level="4">553</value>
+				</power>
+				<overHit>true</overHit>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16208" toLevel="4" name="Fire Spike">
 		<operateType>A1</operateType>
@@ -99,6 +141,24 @@
 			<value level="4">-115</value>
 		</effectPoint>
 		<isMagic>1</isMagic>
+		<affectRange>200</affectRange>
+		<effectRange>1000</effectRange>
+		<attributeType>FIRE</attributeType>
+		<attributeValue>300</attributeValue>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<nextAction>ATTACK</nextAction>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">518</value>
+					<value level="2">529</value>
+					<value level="3">541</value>
+					<value level="4">553</value>
+				</power>
+				<overHit>true</overHit>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16209" toLevel="4" name="Water Spike">
 		<operateType>A1</operateType>
@@ -113,8 +173,26 @@
 			<value level="4">-115</value>
 		</effectPoint>
 		<isMagic>1</isMagic>
+		<affectRange>200</affectRange>
+		<effectRange>1000</effectRange>
+		<attributeType>WATER</attributeType>
+		<attributeValue>300</attributeValue>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<nextAction>ATTACK</nextAction>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">518</value>
+					<value level="2">529</value>
+					<value level="3">541</value>
+					<value level="4">553</value>
+				</power>
+				<overHit>true</overHit>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="16210" toLevel="4" name="Wind Spike">
+	<skill id="16210" toLevel="5" name="Wind Spike">
 		<operateType>A1</operateType>
 		<mpConsume>1</mpConsume>
 		<castRange>900</castRange>
@@ -125,8 +203,28 @@
 			<value level="2">-105</value>
 			<value level="3">-110</value>
 			<value level="4">-115</value>
+			<value level="5">-115</value>
+			<value level="6">-115</value>
 		</effectPoint>
 		<isMagic>1</isMagic>
+		<affectRange>200</affectRange>
+		<effectRange>1000</effectRange>
+		<attributeType>WIND</attributeType>
+		<attributeValue>300</attributeValue>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<nextAction>ATTACK</nextAction>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">518</value>
+					<value level="2">529</value>
+					<value level="3">541</value>
+					<value level="4">553</value>
+				</power>
+				<overHit>true</overHit>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16211" toLevel="4" name="Earth Spike">
 		<operateType>A1</operateType>
@@ -141,8 +239,26 @@
 			<value level="4">-115</value>
 		</effectPoint>
 		<isMagic>1</isMagic>
+		<affectRange>200</affectRange>
+		<effectRange>1000</effectRange>
+		<attributeType>EARTH</attributeType>
+		<attributeValue>300</attributeValue>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<nextAction>ATTACK</nextAction>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">518</value>
+					<value level="2">529</value>
+					<value level="3">541</value>
+					<value level="4">553</value>
+				</power>
+				<overHit>true</overHit>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="16212" toLevel="4" name="Divine Buster">
+	<skill id="16212" toLevel="4" name="Holy Buster">
 		<operateType>A1</operateType>
 		<mpConsume>1</mpConsume>
 		<hitTime>2000</hitTime>
@@ -150,6 +266,24 @@
 		<reuseDelay>3000</reuseDelay>
 		<effectPoint>-700</effectPoint>
 		<isMagic>1</isMagic>
+		<affectRange>200</affectRange>
+		<effectRange>1000</effectRange>
+		<attributeType>HOLY</attributeType>
+		<attributeValue>300</attributeValue>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<nextAction>ATTACK</nextAction>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">518</value>
+					<value level="2">529</value>
+					<value level="3">541</value>
+					<value level="4">553</value>
+				</power>
+				<overHit>true</overHit>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16213" toLevel="4" name="Dark Buster">
 		<operateType>A1</operateType>
@@ -157,13 +291,26 @@
 		<hitTime>2000</hitTime>
 		<coolTime>800</coolTime>
 		<reuseDelay>3000</reuseDelay>
-		<effectPoint>
-			<value level="1">-300</value>
-			<value level="2">-400</value>
-			<value level="3">-700</value>
-			<value level="4">-700</value>
-		</effectPoint>
+		<effectPoint>-700</effectPoint>
 		<isMagic>1</isMagic>
+		<affectRange>200</affectRange>
+		<effectRange>1000</effectRange>
+		<attributeType>DARK</attributeType>
+		<attributeValue>300</attributeValue>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<nextAction>ATTACK</nextAction>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">518</value>
+					<value level="2">529</value>
+					<value level="3">541</value>
+					<value level="4">553</value>
+				</power>
+				<overHit>true</overHit>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16214" toLevel="4" name="Fire Buster">
 		<operateType>A1</operateType>
@@ -173,6 +320,24 @@
 		<reuseDelay>3000</reuseDelay>
 		<effectPoint>-700</effectPoint>
 		<isMagic>1</isMagic>
+		<affectRange>200</affectRange>
+		<effectRange>1000</effectRange>
+		<attributeType>FIRE</attributeType>
+		<attributeValue>300</attributeValue>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<nextAction>ATTACK</nextAction>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">518</value>
+					<value level="2">529</value>
+					<value level="3">541</value>
+					<value level="4">553</value>
+				</power>
+				<overHit>true</overHit>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16215" toLevel="4" name="Water Buster">
 		<operateType>A1</operateType>
@@ -182,8 +347,26 @@
 		<reuseDelay>3000</reuseDelay>
 		<effectPoint>-700</effectPoint>
 		<isMagic>1</isMagic>
+		<affectRange>200</affectRange>
+		<effectRange>1000</effectRange>
+		<attributeType>WATER</attributeType>
+		<attributeValue>300</attributeValue>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<nextAction>ATTACK</nextAction>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">518</value>
+					<value level="2">529</value>
+					<value level="3">541</value>
+					<value level="4">553</value>
+				</power>
+				<overHit>true</overHit>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="16216" toLevel="4" name="Wind Buster">
+	<skill id="16216" toLevel="5" name="Wind Buster">
 		<operateType>A1</operateType>
 		<mpConsume>1</mpConsume>
 		<hitTime>2000</hitTime>
@@ -191,6 +374,24 @@
 		<reuseDelay>3000</reuseDelay>
 		<effectPoint>-700</effectPoint>
 		<isMagic>1</isMagic>
+		<affectRange>200</affectRange>
+		<effectRange>1000</effectRange>
+		<attributeType>WIND</attributeType>
+		<attributeValue>300</attributeValue>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<nextAction>ATTACK</nextAction>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">518</value>
+					<value level="2">529</value>
+					<value level="3">541</value>
+					<value level="4">553</value>
+				</power>
+				<overHit>true</overHit>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16217" toLevel="4" name="Earth Buster">
 		<operateType>A1</operateType>
@@ -200,6 +401,24 @@
 		<reuseDelay>3000</reuseDelay>
 		<effectPoint>-700</effectPoint>
 		<isMagic>1</isMagic>
+		<affectRange>200</affectRange>
+		<effectRange>1000</effectRange>
+		<attributeType>EARTH</attributeType>
+		<attributeValue>300</attributeValue>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<nextAction>ATTACK</nextAction>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">518</value>
+					<value level="2">529</value>
+					<value level="3">541</value>
+					<value level="4">553</value>
+				</power>
+				<overHit>true</overHit>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16218" toLevel="4" name="Holy Blast">
 		<operateType>A1</operateType>
@@ -241,7 +460,7 @@
 		<effectPoint>-700</effectPoint>
 		<isMagic>1</isMagic>
 	</skill>
-	<skill id="16222" toLevel="4" name="Wind Blast">
+	<skill id="16222" toLevel="5" name="Wind Blast">
 		<operateType>A1</operateType>
 		<mpConsume>1</mpConsume>
 		<castRange>900</castRange>
@@ -251,7 +470,7 @@
 		<effectPoint>-700</effectPoint>
 		<isMagic>1</isMagic>
 	</skill>
-	<skill id="16223" toLevel="4" name="Earth Blast">
+	<skill id="16223" toLevel="5" name="Earth Blast">
 		<operateType>A1</operateType>
 		<mpConsume>1</mpConsume>
 		<castRange>900</castRange>
@@ -262,7 +481,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="16224" toLevel="4" name="Mass Poison">
-		<!-- HP cut due to Poison. $s1 power. -->
+		<!-- Poisons a target, momentarily decreasing HP. Effect $s1. -->
 		<icon>icon.skill4035</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -304,7 +523,7 @@
 		<effectPoint>83</effectPoint>
 		<isMagic>1</isMagic>
 	</skill>
-	<skill id="16228" toLevel="4" name="Wide Stun">
+	<skill id="16228" toLevel="5" name="Wide Stun">
 		<!-- Attacks nearby enemies and stuns them for $s1. -->
 		<icon>icon.skill10265</icon>
 		<operateType>A2</operateType>
@@ -344,7 +563,7 @@
 		<abnormalTime>10</abnormalTime>
 		<isDebuff>true</isDebuff>
 	</skill>
-	<skill id="16231" toLevel="4" name="Mass Airbind">
+	<skill id="16231" toLevel="5" name="Mass Airbind">
 		<!-- Throws nearby enemies into the air and binds them for $s1. -->
 		<icon>icon.skill11052</icon>
 		<operateType>A2</operateType>
@@ -358,8 +577,19 @@
 		<abnormalTime>10</abnormalTime>
 		<isDebuff>true</isDebuff>
 	</skill>
-	<skill id="16233" toLevel="4" name="Mass Fear">
-		<!-- Afflicted with Fear and moving against own will momentarily. -->
+	<skill id="16232" toLevel="4" name="Mass Chain Smash">
+		<!-- Pulls nearby enemies to you. -->
+		<icon>icon.skill10015</icon>
+		<operateType>A2</operateType>
+		<mpConsume>1</mpConsume>
+		<hitTime>2000</hitTime>
+		<coolTime>800</coolTime>
+		<reuseDelay>30000</reuseDelay>
+		<effectPoint>-700</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="16233" toLevel="5" name="Mass Fear">
+		<!-- Inflicted with Fear and moving against own will momentarily. -->
 		<icon>icon.skill1092</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -369,6 +599,25 @@
 		<reuseDelay>10000</reuseDelay>
 		<isMagic>1</isMagic>
 		<effectPoint>-700</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="16234" toLevel="3" name="Raid Blessing">
+		<!-- While effect lasts, Raid Point acquisition + $s1. -->
+		<icon>icon.etc_i.etc_rp_point_i00</icon>
+		<operateType>A2</operateType>
+		<mpConsume>1</mpConsume>
+		<castRange>40</castRange>
+		<effectPoint>100</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="16235" toLevel="1" name="Raid Blessing">
+		<!-- No longer able to receive Raid Blessing. -->
+		<icon>icon.etc_i.etc_rp_point_i00</icon>
+		<operateType>A2</operateType>
+		<mpConsume>1</mpConsume>
+		<castRange>40</castRange>
+		<isMagic>1</isMagic>
+		<effectPoint>-100</effectPoint>
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16236" toLevel="1" name="88Lv. Raid Boss">
@@ -466,187 +715,187 @@
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16255" toLevel="1" name="Raid Boss (Lv. 93)">
+	<skill id="16255" toLevel="1" name="93Lv. Raid Boss">
 		<!-- Tarstan was a sculpture in Orbis Temple, among the many that stylized male beauty. Ekidna, the disciple who symbolizes Shilen's masculine beauty, enslaved Tarstan and set him loose in Fairy Settlement, where he had snuck in under the guise of a beautiful Elf. Now a cursed puppet with glowing red eyes shedding tears of blood, Tarstan is a part of the magic circle of monsters, creating havoc in Magmeld. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16256" toLevel="1" name="Raid Boss (Lv. 93)">
+	<skill id="16256" toLevel="1" name="93Lv. Raid Boss">
 		<!-- Abelsnif was a sculpture in Orbis Temple, among the many that stylized male beauty. Ekidna, the disciple who symbolizes Shilen's masculine beauty, enslaved Abelsnif and set him loose in Fairy Settlement, where he had snuck in under the guise of a beautiful Elf. Now a cursed puppet with glowing red eyes shedding tears of blood, Abelsnif is a part of the magic circle of monsters, creating havoc in Magmeld. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16257" toLevel="1" name="Raid Boss (Lv. 93)">
+	<skill id="16257" toLevel="1" name="93Lv. Raid Boss">
 		<!-- Kimesis was a sculpture in Orbis Temple, among the many that stylized male beauty. Ekidna, the disciple who symbolizes Shilen's masculine beauty, enslaved Kimesis and set him loose in Fairy Settlement, where he had snuck in under the guise of a beautiful Elf. Now a cursed puppet with glowing red eyes shedding tears of blood, Kimesis is a part of the magic circle of monsters, creating havoc in Magmeld. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16258" toLevel="1" name="Raid Boss (Lv. 93)">
+	<skill id="16258" toLevel="1" name="93Lv. Raid Boss">
 		<!-- Kathargon was a sculpture in Orbis Temple, among the many that stylized male beauty. Ekidna, the disciple who symbolizes Shilen's masculine beauty, enslaved Kathargon and set him loose in Fairy Settlement, where he had snuck in under the guise of a beautiful Elf. Now a cursed puppet with glowing red eyes shedding tears of blood, Kathargon is a part of the magic circle of monsters, creating havoc in Magmeld. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16259" toLevel="1" name="Raid Boss (Lv. 93)">
+	<skill id="16259" toLevel="1" name="93Lv. Raid Boss">
 		<!-- Pantasaus was a sculpture in Orbis Temple when Ekidna, the disciple who symbolizes Shilen's masculine beauty, mistook her for a sculpture of male beauty and set her loose in Fairy Settlement, where he had snuck in under the guise of a beautiful Elf. Now a cursed puppet with glowing red eyes shedding tears of blood, Pantasaus is a part of the magic circle of monsters, creating havoc in Magmeld. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16260" toLevel="1" name="Raid Boss (Lv. 93)">
+	<skill id="16260" toLevel="1" name="93Lv. Raid Boss">
 		<!-- Ixignon was a sculpture in Orbis Temple, among the many that stylized male beauty. Ekidna, the disciple who symbolizes Shilen's masculine beauty, enslaved Ixignon and set him loose in Fairy Settlement, where he had snuck in under the guise of a beautiful Elf. Now a cursed puppet with glowing red eyes shedding tears of blood, Ixignon is a part of the magic circle of monsters, creating havoc in Magmeld. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16261" toLevel="1" name="Raid Boss (Lv. 93)">
+	<skill id="16261" toLevel="1" name="93Lv. Raid Boss">
 		<!-- A clone of Harp created by Embryo, whom Disciple Nemis tricked under the guise of Etis van Etina. With Nemis bestowing the power of darkness from the sidelines, the clone is more powerful than Harp. It is currently partaking in the monster magic circle with members of Embryo and their other creations. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16262" toLevel="1" name="Raid Boss (Lv. 93)">
+	<skill id="16262" toLevel="1" name="93Lv. Raid Boss">
 		<!-- A clone of Isadora created by Embryo, whom Disciple Nemis tricked under the guise of Etis van Etina. With Nemis bestowing the power of darkness from the sidelines, the clone is more powerful than Isadora. It is currently partaking in the monster magic circle with members of Embryo and their other creations. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16263" toLevel="1" name="Raid Boss (Lv. 93)">
+	<skill id="16263" toLevel="1" name="93Lv. Raid Boss">
 		<!-- A clone of Maliss created by Embryo, whom Disciple Nemis tricked under the guise of Etis van Etina. With Nemis bestowing the power of darkness from the sidelines, the clone is more powerful than Maliss. It is currently partaking in the monster magic circle with members of Embryo and their other creations. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16264" toLevel="1" name="Raid Boss (Lv. 93)">
+	<skill id="16264" toLevel="1" name="93Lv. Raid Boss">
 		<!-- A weapon for the Embryo, Garron was tricked by Disciple Nemis, then disguised as Etis van Etina, into believing that the dying Mother Tree is the key to unlocking the power of the Seal of Punishment. Along with other clones created by Embryo, Garron now partakes in the monster magic circle. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16265" toLevel="1" name="Raid Boss (Lv. 93)">
+	<skill id="16265" toLevel="1" name="93Lv. Raid Boss">
 		<!-- A weapon for the Embryo, Nigel was tricked by Disciple Nemis, then disguised as Etis van Etina, into believing that the dying Mother Tree is the key to unlocking the power of the Seal of Punishment. Along with other clones created by Embryo, Nigel now partakes in the monster magic circle. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16266" toLevel="1" name="Raid Boss (Lv. 93)">
+	<skill id="16266" toLevel="1" name="93Lv. Raid Boss">
 		<!-- A weapon for the Embryo, Dabos was tricked by Disciple Nemis, then disguised as Etis van Etina, into believing that the dying Mother Tree is the key to unlocking the power of the Seal of Punishment. Along with other clones created by Embryo, Dabos now partakes in the monster magic circle. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16267" toLevel="1" name="Raid Boss (Lv. 93)">
+	<skill id="16267" toLevel="1" name="93Lv. Raid Boss">
 		<!-- One of the 3 Hell Weapons created by the 5 Hell Lords of Avarice, Wind Cassius is a voracious eater of souls, regardless of alliance. Though originally of no color or attribute, it absorbed a part of Lindvior's soul and was reborn with the power of wind. Wind Cassius can be summoned through Apparition Stones made of fake souls. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16268" toLevel="1" name="Raid Boss (Lv. 94)">
+	<skill id="16268" toLevel="1" name="94Lv. Raid Boss">
 		<!-- An enhanced monster created by Disciple Lavidos using Enhanced Mahum, Radium was sent to the Garden of Beasts with 4 Tayga bosses to take a part in the monster magic circle. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16269" toLevel="1" name="Raid Boss (Lv. 94)">
+	<skill id="16269" toLevel="1" name="94Lv. Raid Boss">
 		<!-- A race of enhanced monsters created by DIsciple Lavidos using Kel Mahum, axe-wielding Typheron is one of the 4 bosses of the Tayga, and takes a part in the monster magic circle with the other Tayga bosses and Enhanced Mahum. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16270" toLevel="1" name="Raid Boss (Lv. 94)">
+	<skill id="16270" toLevel="1" name="94Lv. Raid Boss">
 		<!-- A race of enhanced monsters created by DIsciple Lavidos using Kel Mahum, staff-wielding Timarga is one of the 4 bosses of the Tayga, and takes a part in the monster magic circle with the other Tayga bosses and Enhanced Mahum. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16271" toLevel="1" name="Raid Boss (Lv. 94)">
+	<skill id="16271" toLevel="1" name="94Lv. Raid Boss">
 		<!-- A race of enhanced monsters created by DIsciple Lavidos using Kel Mahum, sword-wielding Tycepton is one of the 4 bosses of the Tayga, and takes a part in the monster magic circle with the other Tayga bosses and Enhanced Mahum. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16272" toLevel="1" name="Raid Boss (Lv. 94)">
+	<skill id="16272" toLevel="1" name="94Lv. Raid Boss">
 		<!-- A race of enhanced monsters created by DIsciple Lavidos using Kel Mahum, staff-wielding Tiverga is one of the 4 bosses of the Tayga, and takes a part in the monster magic circle with the other Tayga bosses and Enhanced Mahum. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16273" toLevel="1" name="Raid Boss (Lv. 94)">
+	<skill id="16273" toLevel="1" name="94Lv. Raid Boss">
 		<!-- An enhanced monster created by Disciple Lavidos using Enhanced Mahum, Supercium was sent to the Garden of Beasts with 4 Tayga bosses to take a part in the monster magic circle. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16274" toLevel="1" name="Raid Boss (Lv. 97)">
+	<skill id="16274" toLevel="1" name="97Lv. Raid Boss">
 		<!-- Garamor sent Gariott the herald to keep an eye on Cruma Marshlands, a point belonging to the magic circle of monsters. Gariott, who has a giant tail, has been helping Garamor's minions find bodies to inhabit. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16275" toLevel="1" name="Raid Boss (Lv. 97)">
+	<skill id="16275" toLevel="1" name="97Lv. Raid Boss">
 		<!-- A mechanical minion for Shilen's Disciple Garamor, Varvacion has landed in the material world by devouring the resentful soul and stealing the body of a peasant revolutionary in Dion. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16276" toLevel="1" name="Raid Boss (Lv. 97)">
+	<skill id="16276" toLevel="1" name="97Lv. Raid Boss">
 		<!-- A mechanical minion for Shilen's Disciple Garamor, Varmoni has landed in the material world by devouring the resentful soul and stealing the body of a peasant revolutionary in Dion. Varmoni has a dedicated circle of android minions. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16277" toLevel="1" name="Raid Boss (Lv. 97)">
+	<skill id="16277" toLevel="1" name="97Lv. Raid Boss">
 		<!-- A mechanical minion for Shilen's Disciple Garamor, Varvinos has landed in the material world by devouring the resentful soul and stealing the body of a peasant revolutionary in Dion. Varvinos can command a large number of minions. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16278" toLevel="1" name="Raid Boss (Lv. 97)">
+	<skill id="16278" toLevel="1" name="97Lv. Raid Boss">
 		<!-- A mechanical minion for Shilen's Disciple Garamor, Varmonia has landed in the material world by devouring the resentful soul and stealing the body of a peasant revolutionary in Dion. Varmonia can command a large number of minions. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16279" toLevel="1" name="Raid Boss (Lv. 97)">
+	<skill id="16279" toLevel="1" name="97Lv. Raid Boss">
 		<!-- A mechanical minion for Shilen's Disciple Garamor, Varkaron has landed in the material world by devouring the resentful soul and stealing the body of a peasant revolutionary in Dion. Varkaron can command an infinite number of minions. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16280" toLevel="1" name="Raid Boss (Lv. 97)">
+	<skill id="16280" toLevel="1" name="97Lv. Raid Boss">
 		<!-- Having found the hidden Lachik Dwelling, Disciple Lavidos gained hold of the minds of some of the Lachikios, and turned them into Magikus. The Magikus now stand with the Centaur created by Lavidos at the reed fields, playing a part in the magic circle made of monsters. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16281" toLevel="1" name="Raid Boss (Lv. 97)">
+	<skill id="16281" toLevel="1" name="97Lv. Raid Boss">
 		<!-- Kerfaus was one of the 4 Centaurs created by Disciple Lavidos to be named as bosses of the new race. With other creatures controlled by Lavidos, Kerfaus takes a part in the monster magic circle. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16282" toLevel="1" name="Raid Boss (Lv. 97)">
+	<skill id="16282" toLevel="1" name="97Lv. Raid Boss">
 		<!-- Milinaus was one of the 4 Centaurs created by Disciple Lavidos to be named as bosses of the new race. With other creatures controlled by Lavidos, Milinaus takes a part in the monster magic circle. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16283" toLevel="1" name="Raid Boss (Lv. 97)">
+	<skill id="16283" toLevel="1" name="97Lv. Raid Boss">
 		<!-- Sarkaus was one of the 4 Centaurs created by Disciple Lavidos to be named as bosses of the new race. With other creatures controlled by Lavidos, Sarkaus takes a part in the monster magic circle. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16284" toLevel="1" name="Raid Boss (Lv. 97)">
+	<skill id="16284" toLevel="1" name="97Lv. Raid Boss">
 		<!-- Shimeus was one of the 4 Centaurs created by Disciple Lavidos to be named as bosses of the new race. With other creatures controlled by Lavidos, Shimeus takes a part in the monster magic circle. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16285" toLevel="1" name="Raid Boss (Lv. 97)">
+	<skill id="16285" toLevel="1" name="97Lv. Raid Boss">
 		<!-- Having found the hidden Lachik Dwelling, Disciple Lavidos gained hold of the minds of some of the Lachikios, and turned them into Kinigos. The Kinigos now stand with the Centaur created by Lavidos at the reed fields, playing a part in the magic circle made of monsters. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16286" toLevel="1" name="Raid Boss (Lv. 97)">
+	<skill id="16286" toLevel="1" name="97Lv. Raid Boss">
 		<!-- Zetahl is one of the Half-Devil Avataria given from Triol, who was impressed with Shilen's Disciples' success in controlling some of the proud Amden Orcs. Zetahl resides in an area between the Brekka Orc Hideout and Gorgon Garden, and play a part in creating the monster magic circle. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16287" toLevel="1" name="Raid Boss (Lv. 97)">
+	<skill id="16287" toLevel="1" name="97Lv. Raid Boss">
 		<!-- Tabris is one of the Half-Devil Avataria given from Triol, who was impressed with Shilen's Disciples' success in controlling some of the proud Amden Orcs. Tabris resides in an area between the Brekka Orc Hideout and Gorgon Garden, and play a part in creating the monster magic circle. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16288" toLevel="1" name="Raid Boss (Lv. 97)">
+	<skill id="16288" toLevel="1" name="97Lv. Raid Boss">
 		<!-- Stelos is one of the Half-Devil Avataria given from Triol, who was impressed with Shilen's Disciples' success in controlling some of the proud Amden Orcs. Stelos resides in an area between the Brekka Orc Hideout and Gorgon Garden, and play a part in creating the monster magic circle. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16289" toLevel="1" name="Raid Boss (Lv. 97)">
+	<skill id="16289" toLevel="1" name="97Lv. Raid Boss">
 		<!-- Ravolas is one of the Half-Devil Avataria given from Triol, who was impressed with Shilen's Disciples' success in controlling some of the proud Amden Orcs. Ravolas resides in an area between the Brekka Orc Hideout and Gorgon Garden, and play a part in creating the monster magic circle. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16290" toLevel="1" name="Raid Boss (Lv. 97)">
+	<skill id="16290" toLevel="1" name="97Lv. Raid Boss">
 		<!-- Stelo Soma is one of the Half-Devil Avataria given from Triol, who was impressed with Shilen's Disciples' success in controlling some of the proud Amden Orcs. Stelo Soma resides in an area between the Brekka Orc Hideout and Gorgon Garden, and play a part in creating the monster magic circle. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16291" toLevel="1" name="Raid Boss (Lv. 97)">
+	<skill id="16291" toLevel="1" name="97Lv. Raid Boss">
 		<!-- Dephracor is one of the Half-Devil Avataria given from Triol, who was impressed with Shilen's Disciples' success in controlling some of the proud Amden Orcs. Dephracor resides in an area between the Brekka Orc Hideout and Gorgon Garden, and play a part in creating the monster magic circle. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>

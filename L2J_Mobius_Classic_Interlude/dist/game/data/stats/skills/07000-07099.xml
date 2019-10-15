@@ -460,7 +460,7 @@
 		<!--
 		<effects>
 			<effect name="Summon">
-				<npcId>20169</npcId> Skeleton Royal Guard
+				<npcId>20169</npcId>
 				<lifeTime>1200</lifeTime>
 			</effect>
 		</effects> -->
@@ -836,7 +836,7 @@
 		</effects>
 	</skill>
 	<skill id="7053" toLevel="1" name="Master's Blessing - Vampiric Rage">
-		<!-- The GM is always by your side. For 1 hour with a certain probability recovers as HP 9% of the P. melee damage inflicted. -->
+		<!-- The GM is always by your side. For 1 hour, 9% of the physical damage inflicted on the enemy is recovered as HP with a certain probability. -->
 		<icon>icon.skill1268</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -1083,7 +1083,7 @@
 		</effects>
 	</skill>
 	<skill id="7061" toLevel="1" name="Master's Blessing - Prophecy of Water">
-		<!-- The GM is always by your side. For 1 hour MP Recovery Bonus +10%, M. Atk. +10%, M. Def. +10%, Casting Spd. +5%, Debuff Resistance +10%. Skill MP Consumption -3%. -->
+		<!-- The GM is always by your side. For 1 hour, receives help from a great spirit to increase the chance of prominent damage occurring through magic damage by 2, MP recovery bonus by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Debuff Resistance by 10%. Decreases Speed by 20% and MP consumption for skill use by 5%. -->
 		<icon>icon.skill1355</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -1103,6 +1103,13 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
+			<effect name="DispelBySlotProbability">
+				<dispel>BUFF_SPECIAL_ATTACK;BUFF_SPECIAL_CRITICAL;BUFF_SPECIAL_CONDITION;BUFF_SPECIAL_MOVE;BUFF_SPECIAL_CLASS</dispel>
+				<rate>100</rate>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>BUFF_SPECIAL_ATTACK;BUFF_SPECIAL_CRITICAL;BUFF_SPECIAL_CONDITION;BUFF_SPECIAL_MOVE;BUFF_SPECIAL_CLASS</slot>
+			</effect>
 			<effect name="PAtk">
 				<amount>10</amount>
 				<mode>PER</mode>
@@ -1161,7 +1168,7 @@
 		</effects>
 	</skill>
 	<skill id="7062" toLevel="1" name="Master's Blessing - Prophecy of Fire">
-		<!-- The GM is always by your side. For 1 hour, Max HP +10%, HP Recovery Bonus +10%, P. Atk. +10%, P. Def. +10%, Atk. Spd. +5%, Debuff Resistance +10%. Cannot be stacked with Prophecy-type buffs. -->
+		<!-- The GM is always by your side. For 1 hour, receives help from a great spirit to increase Max MP by 20%, HP recovery bonus by 20%, the chance of prominent damage occurring through magic damage by 2, the power of critical attacks by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Debuff Resistance by 10%. Decreases Speed by 20%. -->
 		<icon>icon.skill1356</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -1180,6 +1187,13 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
+			<effect name="DispelBySlotProbability">
+				<dispel>BUFF_SPECIAL_ATTACK;BUFF_SPECIAL_CRITICAL;BUFF_SPECIAL_CONDITION;BUFF_SPECIAL_MOVE;BUFF_SPECIAL_CLASS</dispel>
+				<rate>100</rate>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>BUFF_SPECIAL_ATTACK;BUFF_SPECIAL_CRITICAL;BUFF_SPECIAL_CONDITION;BUFF_SPECIAL_MOVE;BUFF_SPECIAL_CLASS</slot>
+			</effect>
 			<effect name="PAtk">
 				<amount>10</amount>
 				<mode>PER</mode>
@@ -1235,7 +1249,7 @@
 		</effects>
 	</skill>
 	<skill id="7063" toLevel="1" name="Master's Blessing - Prophecy of Wind">
-		<!-- The GM is always by your side. For 1 hour Evasion +3, Accuracy +3, P. Critical Rate +10%, Critical Damage +15%, Speed +10%, Debuff Resistance +10%. -->
+		<!-- The GM is always by your side. For 1 hour, receives help from a great spirit to increase Max HP by 20%, rate of critical attack by 20%, rate of Prominent Damage through magic damage by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Debuff Resistance by 10%. Decreases Speed by 20%. Bestows the ability to recover as HP 5% of the physical damage inflicted on the enemy with a certain probability. -->
 		<icon>icon.skill1357</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -1254,6 +1268,13 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
+			<effect name="DispelBySlotProbability">
+				<dispel>BUFF_SPECIAL_ATTACK;BUFF_SPECIAL_CRITICAL;BUFF_SPECIAL_CONDITION;BUFF_SPECIAL_MOVE;BUFF_SPECIAL_CLASS</dispel>
+				<rate>100</rate>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>BUFF_SPECIAL_ATTACK;BUFF_SPECIAL_CRITICAL;BUFF_SPECIAL_CONDITION;BUFF_SPECIAL_MOVE;BUFF_SPECIAL_CLASS</slot>
+			</effect>
 			<effect name="VampiricAttack">
 				<amount>5</amount>
 				<chance>30</chance>
@@ -1305,7 +1326,7 @@
 		</effects>
 	</skill>
 	<skill id="7064" toLevel="1" name="Master's Blessing - Chant of Victory">
-		<!-- The GM is always by your side. For 1 hour HP / MP Recovery Bonus +20%, Accuracy +4, Evasion +4, P. /M. Atk. +15%, Casting / Atk. Spd. +10%, P. / M. Critical Rate +15%, P. / M. Critical Damage +15%. -->
+		<!-- The GM is always by your side. Recovers HP by 20%, and for 1 hour, receives help from a great spirit to increase Max HP by 20%, the chance of prominent damage occurring through magic damage by 2, the rate of critical attack by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, Debuff Resistance by 10%, and Accuracy by 4. -->
 		<icon>icon.skill1363</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -1324,6 +1345,13 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
+			<effect name="DispelBySlotProbability">
+				<dispel>BUFF_SPECIAL_ATTACK;BUFF_SPECIAL_CRITICAL;BUFF_SPECIAL_CONDITION;BUFF_SPECIAL_MOVE;BUFF_SPECIAL_CLASS</dispel>
+				<rate>100</rate>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>BUFF_SPECIAL_ATTACK;BUFF_SPECIAL_CRITICAL;BUFF_SPECIAL_CONDITION;BUFF_SPECIAL_MOVE;BUFF_SPECIAL_CLASS</slot>
+			</effect>
 			<effect name="MaxHp">
 				<amount>20</amount>
 				<mode>PER</mode>
@@ -1423,7 +1451,7 @@
 		</targetConditions>
 		<effects>
 			<effect name="BlockActions">
-				<allowedSkills>35016</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
@@ -1519,6 +1547,48 @@
 			</condition>
 		</targetConditions>
 	</skill>
+	<skill id="7072" toLevel="1" name="Test - Basic Trap">
+		<!-- Summons trap. -->
+		<hitTime>3000</hitTime>
+		<magicLvl>20</magicLvl>
+		<mpConsume>40</mpConsume>
+		<mpInitialConsume>10</mpInitialConsume>
+		<operateType>A1</operateType>
+		<reuseDelay>30000</reuseDelay>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="SummonTrap">
+				<npcId>30048</npcId> <!-- Darin -->
+			</effect>
+		</effects>
+	</skill>
+	<skill id="7073" toLevel="1" name="Test - Find Trap">
+		<!-- Locates trap. -->
+		<hitTime>1000</hitTime>
+		<magicLvl>20</magicLvl>
+		<operateType>A1</operateType>
+		<mpConsume>50</mpConsume>
+		<reuseDelay>30000</reuseDelay>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<affectRange>400</affectRange>
+		<targetType>SELF</targetType>
+		<affectScope>RANGE</affectScope>
+	</skill>
+	<skill id="7074" toLevel="1" name="Test - Cancel Trap">
+		<!-- Cancels trap. -->
+		<hitTime>4000</hitTime>
+		<magicLvl>20</magicLvl>
+		<operateType>A1</operateType>
+		<mpConsume>50</mpConsume>
+		<reuseDelay>30000</reuseDelay>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>600</effectRange>
+		<castRange>400</castRange>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
 	<skill id="7075" toLevel="1" name="Test - Distance DD">
 		<!-- Magic damage changes by distance. -->
 		<effectPoint>-1</effectPoint>
@@ -1576,6 +1646,44 @@
 		<trait>SHOCK</trait>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="7078" toLevel="1" name="Test - Blink">
+		<!-- Stun -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>2</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<activateRate>80</activateRate>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>200</affectRange>
+		<basicProperty>PHYSICAL</basicProperty>
+		<coolTime>200</coolTime>
+		<hitTime>300</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLvl>75</magicLvl>
+		<mpConsume>50</mpConsume>
+		<mpInitialConsume>50</mpInitialConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>5000</reuseDelay>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<trait>SHOCK</trait>
+		<targetType>SELF</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
+		</effects>
+		<selfEffects>
+			<effect name="Blink">
+				<!-- Teleport to Back -->
+				<angle>0</angle>
+				<range>400</range>
+			</effect>
+		</selfEffects>
 	</skill>
 	<skill id="7079" toLevel="1" name="Test - Party Damage Absorb">
 		<!-- Transfers party damage to tanker. -->
@@ -1683,7 +1791,7 @@
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
-	<skill id="7085" toLevel="1" name="Self-Destruct Explosion">
+	<skill id="7085" toLevel="1" name="Self-Destruct Explosion_test">
 		<effectPoint>-100</effectPoint>
 		<hitTime>1000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->

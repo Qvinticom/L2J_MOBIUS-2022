@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="2800" name="Escort Jax" type="EtcItem">
-		<!-- Diary that bodyguard Jax has given, saying that it will aid in the search for Solt's and Makel's maps. -->
+	<item id="2800" name="Jax' Diary" type="EtcItem">
+		<!-- Diary that bodyguard Jax Has given, saying that it will aid in the search for Solt's and Makel's maps. -->
 		<set name="icon" val="icon.etc_spellbook_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -16,7 +16,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2801" name="Torn Map Piece" type="EtcItem">
+	<item id="2801" name="1st Torn Map Piece" type="EtcItem">
 		<!-- Piece of the map that belonged to the former lord's guard Solt. Gather 4 of these. -->
 		<set name="icon" val="icon.etc_map_piece_yellow_i00" />
 		<set name="immediate_effect" val="true" />
@@ -32,7 +32,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2802" name="Torn Map Piece" type="EtcItem">
+	<item id="2802" name="2nd Torn Map Piece" type="EtcItem">
 		<!-- Piece of the map that belonged to the former lord's guard Makel. Gather 4 of these. -->
 		<set name="icon" val="icon.etc_map_piece_yellow_i00" />
 		<set name="immediate_effect" val="true" />
@@ -113,7 +113,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2807" name="Gold Bar" type="EtcItem">
-		<!-- Gold bar engraved with Duke Ashton's seal. Take this to Captain Alex. -->
+		<!-- Gold bar engraved with Duke Ashton's seal. Take this to Alex. -->
 		<set name="icon" val="icon.etc_lump_yellow_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -129,7 +129,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2808" name="Alex's Recommend" type="EtcItem">
-		<!-- Recommendation written by Captain Alex. Take this to Master Luther of the Warrior Guild of Hunters Village. -->
+		<!-- Recommendation written by Alex. Take this to Master Luther. -->
 		<set name="icon" val="icon.etc_letter_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -145,7 +145,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2809" name="Mark of Searcher" type="EtcItem">
-		<!-- Mark given to those who have passed the Trial of the Searcher. Class transfer related item. -->
+		<!-- Mark given to those who have passed the Trial of the Searcher. Occupation change related item. -->
 		<set name="icon" val="icon.etc_badge_gold_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -177,7 +177,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2811" name="Kristina's Letter" type="EtcItem">
-		<!-- Letter given by Saint Kristina. Deliver this to Master Sorius of the Warrior Guild of Gludio. -->
+		<!-- Letter given by Saint Kristina. Deliver this to Master Sorius. -->
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -257,7 +257,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2816" name="1st Secret Letter" type="EtcItem">
-		<!-- The documents of Leto Lizardmen from the Plains of the Lizardmen. Gather all of the letters and deliver them to Saint Kristina. -->
+		<!-- The documents of Leto Lizardmen. Gather all of the letters and deliver them to Saint Kristina. -->
 		<set name="icon" val="icon.etc_scroll_gray_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -273,7 +273,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2817" name="2nd Secret Letter" type="EtcItem">
-		<!-- The documents of Leto Lizardmen from the Plains of the Lizardmen. Gather all of the letters and deliver them to Saint Kristina. -->
+		<!-- The documents of Leto Lizardmen. Gather all of the letters and deliver them to Saint Kristina. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -289,7 +289,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2818" name="3rd Secret Letter" type="EtcItem">
-		<!-- The documents of Leto Lizardmen from the Plains of the Lizardmen. Gather all of the letters and deliver them to Saint Kristina. -->
+		<!-- The documents of Leto Lizardmen. Gather all of the letters and deliver them to Saint Kristina. -->
 		<set name="icon" val="icon.weapon_scroll_of_wisdom_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -305,7 +305,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2819" name="4th Secret Letter" type="EtcItem">
-		<!-- The documents of Leto Lizardmen from the Plains of the Lizardmen. Gather all of the letters and deliver them to Saint Kristina. -->
+		<!-- The documents of Leto Lizardmen. Gather all of the letters and deliver them to Saint Kristina. -->
 		<set name="icon" val="icon.weapon_scroll_of_wisdom_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -321,7 +321,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2820" name="Mark of Healer" type="EtcItem">
-		<!-- Mark given to those who have passed the Test of the Healer. Class transfer related item. -->
+		<!-- Mark given to those who have passed the Test of the Healer. Occupation change related item. -->
 		<set name="icon" val="icon.etc_jewel_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -337,7 +337,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2821" name="Mark of Reformer" type="EtcItem">
-		<!-- Mark given to those who have passed the Trial of the Reformer. Class transfer related item. -->
+		<!-- Mark given to those who have passed the Trial of the Reformer. Occupation change related item. -->
 		<set name="icon" val="icon.etc_jewel_gold_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -400,7 +400,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2825" name="Sla's Letter" type="EtcItem">
+	<item id="2825" name="Letter of Greetings" type="EtcItem">
 		<!-- Letter sent by Sla to her disciples. Go to the Orc Village, Dwarven Village, and Talking Island in this order. -->
 		<set name="icon" val="icon.etc_piece_of_paper_gray_i00" />
 		<set name="immediate_effect" val="true" />
@@ -433,7 +433,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2827" name="Katari's Letter" type="EtcItem">
-		<!-- Katari's reply letter to Sla. Collect 3 reply letters from Sla's disciples and deliver them to Prophet Sla at the Plains of Dion. -->
+		<!-- Katari's reply letter to Sla. Collect 3 reply letters from Sla's disciples and deliver them to Sla. -->
 		<set name="icon" val="icon.etc_letter_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -449,7 +449,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2828" name="Nyakuri's Letter" type="EtcItem">
-		<!-- Nyakuri's letter to Sla. Collect three reply letters from Sla's disciples and deliver them to Prophet Sla at the Plains of Dion. -->
+		<!-- Nyakuri's reply letter to Sla. Collect 3 reply letters from Sla's disciples and deliver them to Sla. -->
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -465,7 +465,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2829" name="Undead List" type="EtcItem">
-		<!-- Slay Skeleton Archer, Skeleton Lord, Skeleton Marksman, Misery Skeleton, and Silent Horror at the Elven Ruins and collect their Bone Fragments. -->
+		<!-- Skeleton Archer, Skeleton Lord, Skeleton Marksman, Misery Skeleton, and Silent Horror. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -544,8 +544,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2834" name="Silent Horror's Bone Fragment" type="EtcItem">
-		<!-- Silent Horror's Bone Fragment. Take this, along with the rest of the undead bone fragments, to Ramus who can be found on the southern side of Talking Island's Elven Ruins. -->
+	<item id="2834" name="Bone Fragment" type="EtcItem">
+		<!-- Bone pieces of a Silent Horror. Take this, along with the rest of the undead bone fragments, to Ramus. -->
 		<set name="icon" val="icon.etc_rib_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -560,8 +560,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2835" name="Skeleton Lord's Bone Fragment" type="EtcItem">
-		<!-- Skeleton Lord's Bone Fragment. Take this, along with the rest of the undead bone fragments, to Ramus who can be found on the southern side of Talking Island's Elven Ruins. -->
+	<item id="2835" name="Bone Fragment" type="EtcItem">
+		<!-- Bone fragment of a Skeleton Lord. Take this, along with the rest of the undead bone fragments, to Ramus. -->
 		<set name="icon" val="icon.etc_piece_bone_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -576,8 +576,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2836" name="Skeleton Marksman's Bone Fragment" type="EtcItem">
-		<!-- Skeleton Marksman's Bone Fragment. Take this, along with the rest of the undead bone fragments, to Ramus who can be found on the southern side of Talking Island's Elven Ruins. -->
+	<item id="2836" name="Bone Fragment" type="EtcItem">
+		<!-- Bone fragment of a Skeleton Marksman. Take this, along with the rest of the undead bone fragments, to Ramus. -->
 		<set name="icon" val="icon.etc_molar_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -592,8 +592,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2837" name="Misery Skeleton's Bone Fragment" type="EtcItem">
-		<!-- Misery Skeleton's Bone Fragment. Take this, along with the rest of the undead bone fragments, to Ramus who can be found on the southern side of Talking Island's Elven Ruins. -->
+	<item id="2837" name="Bone Fragment" type="EtcItem">
+		<!-- Bone fragment from a Misery Skeleton. Take it along with other bone fragments of the undead to Ramus. -->
 		<set name="icon" val="icon.etc_molar_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -608,8 +608,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2838" name="Skeleton Archer's Bone Fragment" type="EtcItem">
-		<!-- Skeleton Archer's Bone Fragment. Take this, along with the rest of the undead bone fragments, to Ramus who can be found on the southern side of Talking Island's Elven Ruins. -->
+	<item id="2838" name="Bone Fragment" type="EtcItem">
+		<!-- Bone fragment of a Skeleton Archer. Take this, along with the rest of the undead bone fragments, to Ramus. -->
 		<set name="icon" val="icon.etc_rib_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -641,7 +641,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2840" name="Mark of Magus" type="EtcItem">
-		<!-- Mark given to those who have passed the Trial of the Magus. Item for class transfer. -->
+		<!-- Mark given to those who have passed the Trial of the Magus. Item for occupational change. -->
 		<set name="icon" val="icon.etc_mark_yellow_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -657,7 +657,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2841" name="Rukal's Letter" type="EtcItem">
-		<!-- Letter sent by Bard Rukal to Parina of the Temple of Einhasad in Dion. -->
+		<!-- Letter sent by Bard Rukal to Parina of the Village of Gludin. -->
 		<set name="icon" val="icon.etc_letter_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -705,7 +705,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2844" name="1st Golden Seed" type="EtcItem">
-		<!-- The seed of the singing flower, which absorbs blood in order to bloom. Gather 3 of these and take them to Bard Rukal at the Temple of Einhasad in Dion. -->
+		<!-- The seed of the singing flower, which absorbs blood in order to bloom. Gather 3 of these and take them to Bard Rukal. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -720,8 +720,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2845" name="1st Golden Seed" type="EtcItem">
-		<!-- The seed of the singing flower, which absorbs blood in order to bloom. Gather 3 of these and take them to Bard Rukal at the Temple of Einhasad in Dion. -->
+	<item id="2845" name="2nd Golden Seed" type="EtcItem">
+		<!-- The seed of the singing flower, which absorbs blood in order to bloom. Gather 3 of these and take them to Bard Rukal. -->
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -736,8 +736,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2846" name="1st Golden Seed" type="EtcItem">
-		<!-- The seed of the singing flower, which absorbs blood in order to bloom. Gather 3 of these and take them to Bard Rukal at the Temple of Einhasad in Dion. -->
+	<item id="2846" name="3rd Golden Seed" type="EtcItem">
+		<!-- The seed of the singing flower, which absorbs blood in order to bloom. Gather 3 of these and take them to Bard Rukal. -->
 		<set name="icon" val="icon.etc_pouch_brown_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -753,7 +753,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2847" name="Score of Elements" type="EtcItem">
-		<!-- Music score sheet given by Bard Rukal at the Temple of Einhasad in Dion. Take this and find the Elemental tones. -->
+		<!-- Music score sheet given by Bard Rukal. Take this and find the 4 Elemental tones. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -769,7 +769,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2848" name="Dazzling Drop" type="EtcItem">
-		<!-- Dazzling, tear-shaped jewel. Gather 20 of these and take them to the Water Undine on the outskirts of Fellmere Lake. -->
+		<!-- Dazzling, tear-shaped jewel. Gather 20 of these and take them to the Water Undine. -->
 		<set name="icon" val="icon.etc_crystal_ball_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -785,7 +785,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2849" name="Flame Crystal" type="EtcItem">
-		<!-- Crystal obtained from the ghost fire. Gather 5 of these and take them to the Flame Salamander who can be found at the southern part of the Ruins of Despair -->
+		<!-- Crystal obtained from the ghost fire. Gather 5 of these and take them to the Flame Salamander. -->
 		<set name="icon" val="icon.etc_gem_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -801,7 +801,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2850" name="Harpy's Feather" type="EtcItem">
-		<!-- The Feather of a slain Harpy. Gather 20 of these and take them to the Wind Sylph who can be found at the southern exit from the Wastelands. -->
+		<!-- The feather of a slain harpy. Gather 20 of these and take them to the Wind Sylph. -->
 		<set name="icon" val="icon.etc_feather_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -817,7 +817,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2851" name="Wyrm's Wingbone" type="EtcItem">
-		<!-- Wyrm's Wingbone obtained in the Gorgon Flower Garden. Gather 10 of these and take them to the Wind Sylph who can be found at the northern exit from the Wastelands. -->
+		<!-- The wingbone of a slain Wyrm. Gather 10 of these and take them to the Wind Sylph. -->
 		<set name="icon" val="icon.etc_piece_bone_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -833,7 +833,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2852" name="Windsus Mane" type="EtcItem">
-		<!-- The mane of a slain Windsus. Gather 10 of these and take them to the Wind Sylph who can be found at the northern exit from the Wastelands. -->
+		<!-- The mane of a slain Windsus. Gather 10 of these and take them to the Wind Sylph. -->
 		<set name="icon" val="icon.etc_mane_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -849,7 +849,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2853" name="Reinforced Monster Eye Shell" type="EtcItem">
-		<!-- The skin of a slain enchanted eye. Gather 10 of these and take them to the Earth Snake who can be found on the outskirts of the Ruins of Despair. -->
+		<!-- The skin of a slain enchanted eye. Gather 10 of these and take them to the Earth Snake. -->
 		<set name="icon" val="icon.etc_bark_gold_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -865,7 +865,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2854" name="Reinforced Stone Golem Powder" type="EtcItem">
-		<!-- Stone powder obtained after slaying a Reinforced Stone Golem. Gather 10 of these and take them to the Earth Snake who can be found on the outskirts of the Ruins of Despair. -->
+		<!-- Stone powder obtained after slaying a Reinforced Stone Golem. Gather 10 of these and take them to the Earth Snake. -->
 		<set name="icon" val="icon.etc_powder_gray_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -881,7 +881,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2855" name="Reinforced Steel Golem Shard" type="EtcItem">
-		<!-- Fragment of a destroyed Reinforced Steel Golem. Gather 10 of these and take them to the Earth Snake who can be found on the outskirts of the Ruins of Despair. -->
+		<!-- Fragment of a destroyed Reinforced Steel Golem. Gather 10 of these and take them to the Earth Snake. -->
 		<set name="icon" val="icon.etc_stone_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -897,7 +897,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2856" name="Tone of Water" type="EtcItem">
-		<!-- One of the notes that comprise the beautiful melody of the four elements. Take this to Bard Rukal at the Temple of Einhasad in the Town of Dion. -->
+		<!-- One of the notes that comprise the beautiful melody of the four elements. Take this to Bard Rukal in the Town of Dion. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -913,7 +913,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2857" name="Tone of Fire" type="EtcItem">
-		<!-- One of the notes that comprise the beautiful melody of the four elements. Take this to Bard Rukal at the Temple of Einhasad in the Town of Dion. -->
+		<!-- One of the notes that comprise the beautiful melody of the four elements. Take this to Bard Rukal in the Town of Dion. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -929,7 +929,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2858" name="Tone of Wind" type="EtcItem">
-		<!-- One of the notes that comprise the beautiful melody of the four elements. Take this to Bard Rukal at the Temple of Einhasad in the Town of Dion. -->
+		<!-- One of the notes that comprise the beautiful melody of the four elements. Take this to Bard Rukal in the Town of Dion. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -945,7 +945,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2859" name="Tone of Earth" type="EtcItem">
-		<!-- One of the notes that comprise the beautiful melody of the four elements. Take this to Bard Rukal at the Temple of Einhasad in the Town of Dion. -->
+		<!-- One of the notes that comprise the beautiful melody of the four elements. Take this to Bard Rukal in the Town of Dion. -->
 		<set name="icon" val="icon.etc_scroll_of_resurrection_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -961,7 +961,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2860" name="Salamander Charm" type="EtcItem">
-		<!-- Charm of agreement given by the Flame Salamander. It promises to give the Tone of Fire in return for 5 Flame Crystals after you kill Ghost Fire in Ivory Tower Crater. -->
+		<!-- Charm of agreement given by the Flame Salamander. It promises to give the tone of fire in return for 5 flame crystals. -->
 		<set name="icon" val="icon.etc_piece_of_cloth_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -977,7 +977,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2861" name="Sylph Charm" type="EtcItem">
-		<!-- Charm of agreement given by the Wind Sylph. It promises to give the Tone of Wind if you slay Harpies and Wyrms in the Gorgon Flower Garden and collect 20 Harpy's Feathers and 10 Wyrm's Wingbones. As well as 10 Windsus Manes that can be obtained in Death Pass. -->
+		<!-- Charm of agreement given by the Wind Sylph. It promises to give the tone of wind in return for materials gathered from the harpy, Wyrm, and Windsus. -->
 		<set name="icon" val="icon.etc_piece_of_cloth_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -993,7 +993,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2862" name="Undine Charm" type="EtcItem">
-		<!-- Charm of agreement given by the Water Undine. It promises to give the Tone of Water in return for 20 Dazzling Drops if you slay Toad Lord and Stakato Drone in Cruma Marshlands and collect 20 Dazzling Drops. -->
+		<!-- Charm of agreement given by the Water Undine. It promises to give the tone of water in return for 20 dazzling drops. -->
 		<set name="icon" val="icon.etc_piece_of_cloth_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1009,7 +1009,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2863" name="Snake Amulet" type="EtcItem">
-		<!-- Charm of agreement given by the Earth Snake. It promises to give the Tone of Earth in return for collecting the materials it needs by slaying Reinforced Stone Golem, Reinforced Steel Golem and Reinforced Monster Eye in Ivory Tower Crater. -->
+		<!-- Charm of agreement given by the Earth Snake. It promises to give the tone of earth in return for slaying the Reinforced Monsters in the surroundings of the Ivory Tower. -->
 		<set name="icon" val="icon.etc_piece_of_cloth_green_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1025,7 +1025,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2864" name="Recommendation of Balanki" type="EtcItem">
-		<!-- Recommendation given by Balanki. Gather all 3 recommendations and visit Lockirin at the Hall of Elders in the Dwarven Village. -->
+		<!-- Recommendation given by Silver Scale's Balanki. Gather all 3 recommendations and visit Lockirin of the Iron Gate. -->
 		<set name="icon" val="icon.etc_letter_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1041,7 +1041,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2865" name="Recommendation of Filaur" type="EtcItem">
-		<!-- Recommendation given by Filaur. Gather all 3 recommendations and visit Lockirin at the Hall of Elders in the Dwarven Village. -->
+		<!-- Recommendation given by Filaur of the Grey Pillar. Gather all 3 recommendations and seek out Lockirin of the Iron Gate. -->
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1057,7 +1057,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2866" name="Recommendation of Arin" type="EtcItem">
-		<!-- Recommendation given by Arin. Gather all 3 recommendations and visit Lockirin at the Hall of Elders in the Dwarven Village. -->
+		<!-- Recommendation given by Black Anvil's Arin. Gather all 3 recommendations and go to Lockirin of the Iron Gate. -->
 		<set name="icon" val="icon.etc_letter_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1073,7 +1073,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2867" name="Mark of Maestro" type="EtcItem">
-		<!-- Mark given to those who have passed the Trial of the Maestro. Class transfer related item. -->
+		<!-- Mark given to those who have passed the Trial of the Maestro. Occupation change related item. -->
 		<set name="icon" val="icon.etc_badge_silver_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1089,7 +1089,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2868" name="Letter of Solder Detachment" type="EtcItem">
-		<!-- Letter from Chief Croto that promises to send soldiers. Deliver this to Lockirin at the Hall of Elders in the Dwarven Village. -->
+		<!-- Letter from Captain Croto that promises to send soldiers. Deliver this to Lockirin of the Iron Gate. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1105,7 +1105,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2869" name="Paint of Kamuru" type="EtcItem">
-		<!-- Painting of Kamuru. Go to the Cave of Trials on Immortal Plateau to seek him out. -->
+		<!-- Painting of Kamuru. Go to the Cave of Trials in the orc kingdom to seek him out. -->
 		<set name="icon" val="icon.etc_scroll_gray_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1121,7 +1121,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2870" name="Kamuru's Necklace" type="EtcItem">
-		<!-- Necklace worn by Kamuru. Deliver this to Captain Croto in the Dwarven Village. -->
+		<!-- Necklace worn by Kamuru. Deliver this to Captain Croto. -->
 		<set name="icon" val="icon.accessary_necklace_of_darkness_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1152,8 +1152,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2872" name="Teleport" type="EtcItem">
-		<!-- Teleport device given by Master Toma. Deliver this to Arin at the Hall of Elders in the Dwarven Village. -->
+	<item id="2872" name="Teleport Device" type="EtcItem">
+		<!-- Teleport device given by Master Toma. Deliver this to Black Anvil's Arin. -->
 		<set name="icon" val="icon.etc_squares_gray_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1170,7 +1170,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2873" name="Architecture of Cruma" type="EtcItem">
-		<!-- Simple explanation of Cruman architecture. Take this to Researcher Lorain who can be found at the entrance of the Cruma Tower. -->
+		<!-- Simple explanation of Cruman architecture. Take this to the research team stationed at the entrance of the Cruma Tower. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1186,7 +1186,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2874" name="Report of Cruma" type="EtcItem">
-		<!-- Report recording the results of investigations made by the Cruma research team. Deliver this to Filaur at the Hall of Elders in the Dwarven Village. -->
+		<!-- Report recording the results of investigations made by the Cruma research team. Deliver this to Eldar Filaur. -->
 		<set name="icon" val="icon.etc_scroll_gray_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1202,7 +1202,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2875" name="Antidote Ingredients List" type="EtcItem">
-		<!-- Gather 10 Weird Wasp Needles, 10 Marsh Spider Webs, and 10 Leech Blood Vials and deliver them to Researcher Lorain on the outskirts of Cruma Tower. -->
+		<!-- Gather 10 Weird Wasp needles, 10 marsh spider webs, and 10 leech bloods and deliver them to Researcher Lorain. -->
 		<set name="icon" val="icon.etc_piece_of_paper_gray_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1218,7 +1218,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2876" name="Weird Wasp Needle" type="EtcItem">
-		<!-- Collect 10 of these and deliver them, along with everything else, to Researcher Lorain who can be found on the outskirts of Cruma Tower. -->
+		<!-- Gather 10 of these and deliver them along with the other ingredients to Researcher Lorain. -->
 		<set name="icon" val="icon.etc_horn_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1234,7 +1234,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2877" name="Marsh Spider's Web" type="EtcItem">
-		<!-- Collect 10 of these and deliver them, along with everything else, to Researcher Lorain who can be found on the outskirts of Cruma Tower. -->
+		<!-- Gather 10 of these and deliver them along with the other ingredients to Researcher Lorain. -->
 		<set name="icon" val="icon.etc_skein_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1249,8 +1249,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2878" name="Leech Blood Vial" type="EtcItem">
-		<!-- Collect 10 of these and deliver them, along with everything else, to Researcher Lorain who can be found on the outskirts of Cruma Tower. -->
+	<item id="2878" name="Leech Blood" type="EtcItem">
+		<!-- Gather 10 of these and deliver them along with the other ingredients to Researcher Lorain. -->
 		<set name="icon" val="icon.etc_reagent_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1266,7 +1266,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2879" name="Mark of Warspirit" type="EtcItem">
-		<!-- Mark given to those who have passed the Test of the War Spirit. Item for class transfer. -->
+		<!-- Mark given to those who have passed the Test of the War Spirit. Item for occupational change. -->
 		<set name="icon" val="icon.etc_jewel_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1282,7 +1282,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2880" name="Vendetta Totem" type="EtcItem">
-		<!-- Totem granted to those Orcs who a ready to punish the traitors of orcish people. Take this totem to destroy Tamlin Orcs. -->
+		<!-- Totem given to the Orcs who seek to punish betrayers of their race. Take this and hunt the Tamlin Orcs. -->
 		<set name="icon" val="icon.etc_orcish_talisman_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1313,8 +1313,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2882" name="Warcryer Totem" type="EtcItem">
-		<!-- Totem used during the Test of the War Spirit. Take this to the Ancestor Martankus in the Cave of Trials. -->
+	<item id="2882" name="Warspirit Totem" type="EtcItem">
+		<!-- Totem used in the Ritual of the War Spirit. Take this to Ancestor Martankus in the Cave of Trials. -->
 		<set name="icon" val="icon.accessary_another_worlds_necklace_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1346,7 +1346,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2884" name="Porta's Eye" type="EtcItem">
-		<!-- Jewel pried from the Porta's Eye. Gather 10 of these and take them to Shadow Orim in Death Pass. -->
+		<!-- Jewel pried from the porta's eye. Gather 10 of these and take them to Orim of the Shadow. -->
 		<set name="icon" val="icon.etc_eyeball_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1362,7 +1362,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2885" name="Excuro's Scale" type="EtcItem">
-		<!-- Excuro's Scale. Gather 10 of these and take them to Shadow Orim in Death Pass. -->
+		<!-- The scales of an excuro. Gather 10 of these and take them to Orim of the Shadow. -->
 		<set name="icon" val="icon.etc_parasite_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1378,7 +1378,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2886" name="Mordeo's Talon" type="EtcItem">
-		<!-- The talons of a Mordeo. Gather 10 of these and take them to Shadow Orim in Death Pass. -->
+		<!-- The talons of a Mordeo. Gather 10 of these and take them to Orim of the Shadow. -->
 		<set name="icon" val="icon.etc_claw_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1394,7 +1394,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2887" name="Braki's Remains" type="EtcItem">
-		<!-- The remains of Braki, an ancient Orc hero. Take this, along with the additional 3 remains, to Seer Somak in Dion. -->
+		<!-- The remains of Braki, an ancient Orc hero. Take this, along with the additional 3 remains, to Seer Somak. -->
 		<set name="icon" val="icon.etc_ashes_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1410,7 +1410,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2888" name="Pekiron's Totem" type="EtcItem">
-		<!-- Guardian totem received from Seer Pekiron. Take this and go to the Leto Lizardman Shamans and Chiefs on the Plains of the Lizardmen to recover Tonar's remains. -->
+		<!-- Guardian totem received from Seer Pekiron. Take this and go to the Leto lizardman shamans and chiefs to recover Tonar's remains. -->
 		<set name="icon" val="icon.etc_totem_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1426,7 +1426,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2889" name="Tonar's Skull" type="EtcItem">
-		<!-- The skull of Tonar, an ancient Orc hero. Take this, along with the additional remains, to Seer Pekiron in Dion. -->
+		<!-- The skull of Tonar, an ancient Orc hero. Take this, along with the additional 4 remains, to Seer Pekiron. -->
 		<set name="icon" val="icon.etc_skull_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1442,7 +1442,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2890" name="Tonar's Rib Bone" type="EtcItem">
-		<!-- The rib bones of Tonar, an ancient Orc hero. Take this, along with the additional remains, to Seer Pekiron in Dion. -->
+		<!-- The rib bones of Tonar, an ancient Orc hero. Take this, along with the additional 4 remains, to Seer Pekiron. -->
 		<set name="icon" val="icon.etc_rib_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1458,7 +1458,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2891" name="Tonar's Spine" type="EtcItem">
-		<!-- The spine of Tonar, an ancient Orc hero. Take this, along with the additional remains, to Seer Pekiron in Dion. -->
+		<!-- The spine bones of Tonar, an ancient Orc hero. Take this, along with the additional 4 remains, to Seer Pekiron. -->
 		<set name="icon" val="icon.etc_ginseng_gray_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1474,7 +1474,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2892" name="Tonar's Arm Bone" type="EtcItem">
-		<!-- The arm bones of Tonar, an ancient Orc hero. Take this, along with the additional remains, to Seer Pekiron in Oren. -->
+		<!-- The arm bones of Tonar, an ancient Orc hero. Take this, along with the additional 4 remains, to Seer Pekiron. -->
 		<set name="icon" val="icon.etc_piece_bone_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1490,7 +1490,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2893" name="Tonar's Thigh Bone" type="EtcItem">
-		<!-- The thigh bones of Tonar, an ancient Orc hero. Take this, along with the additional remains, to Seer Pekiron in Oren. -->
+		<!-- The thigh bones of Tonar, an ancient Orc hero. Take this, along with the additional 4 remains, to Seer Pekiron. -->
 		<set name="icon" val="icon.etc_piece_bone_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1506,7 +1506,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2894" name="Tonar's Remains" type="EtcItem">
-		<!-- The remains of Tonar, an ancient Orc hero. Take this, along with the other 3 heroes' remains, to Seer Somak in Dion. -->
+		<!-- The remains of Tonar, an ancient Orc hero. Take this, along with the other 3 heroes' remains, to Seer Somak. -->
 		<set name="icon" val="icon.etc_ashes_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1538,7 +1538,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2896" name="Hermodt's Skull" type="EtcItem">
-		<!-- The skull of Hermodt, an ancient Orc hero. Take this, along with the additional remains, to Priest Manakia of the Orc Guild in Giran. -->
+		<!-- The skull of Hermodt, an ancient Orc hero. Take this, along with the additional 4 remains, to Priest Manakia. -->
 		<set name="icon" val="icon.etc_skull_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1554,7 +1554,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2897" name="Hermodt's Rib Bone" type="EtcItem">
-		<!-- The rib bones of Hermodt, an ancient Orc hero. Take this, along with the additional remains, to Priest Manakia of the Orc Guild in Giran. -->
+		<!-- The rib bones of Hermodt, an ancient Orc hero. Take this, along with the additional 4 remains, to Priest Manakia. -->
 		<set name="icon" val="icon.etc_rib_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1570,7 +1570,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2898" name="Hermodt's Spine" type="EtcItem">
-		<!-- The spine of Hermodt, an ancient Orc hero. Take this, along with the additional remains, to Priest Manakia of the Orc Guild in Giran. -->
+		<!-- The spine bones of Hermodt, an ancient Orc hero. Take this, along with the additional 4 remains, to Priest Manakia. -->
 		<set name="icon" val="icon.etc_ginseng_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1586,7 +1586,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2899" name="Hermodt's Arm Bone" type="EtcItem">
-		<!-- The arm bones of Hermodt, an ancient Orc hero. Take this, along with the additional remains, to Priest Manakia of the Orc Guild in Giran. -->
+		<!-- The arm bones of Hermodt, an ancient Orc hero. Take this, along with the additional 4 remains, to Priest Manakia. -->
 		<set name="icon" val="icon.etc_piece_bone_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />

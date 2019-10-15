@@ -151,7 +151,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1415" name="Spellbook: Dryad Root" type="EtcItem">
-		<!-- Spellbook needed to learn Dryard Root. Used by Clerics, Oracles and Shillien Oracles. Required level: 23 -->
+		<!-- Spellbook needed to learn Dryard Root. Used by Clerics, Oracles and Shillien Oracles. Required level: 25 -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -191,7 +191,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1419" name="Proof of Blood" type="EtcItem">
-		<!-- Item needed to upgrade a clan to level 5. -->
+		<!-- Item needed to upgrade a clan to level 3. Only the Clan Leader may use it. -->
 		<set name="icon" val="icon.etc_broken_crystal_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -534,8 +534,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1441" name="Monster Eye's Meat" type="EtcItem">
-		<!-- The meat of monster eye, ready to cook. One of the five ingredients needed for Jonas' cooking. -->
+	<item id="1441" name="Monster Eye Meat" type="EtcItem">
+		<!-- The dead body of a monster eye, ready to cook. One of the five ingredients needed for Jonas' cooking. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -566,7 +566,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1443" name="Jonas' 1st Steak Dish" type="EtcItem">
+	<item id="1443" name="Jonas' 2nd Steak Dish" type="EtcItem">
 		<!-- Plate that contains Jonas' monster eye steak. Take this to Magister Mirien. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="immediate_effect" val="true" />
@@ -582,7 +582,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1444" name="Jonas' 1st Steak Dish" type="EtcItem">
+	<item id="1444" name="Jonas' 3rd Steak Dish" type="EtcItem">
 		<!-- Plate that contains Jonas' monster eye steak. Take this to Magister Mirien. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="immediate_effect" val="true" />
@@ -598,7 +598,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1445" name="Jonas' 1st Steak Dish" type="EtcItem">
+	<item id="1445" name="Jonas' 4th Steak Dish" type="EtcItem">
 		<!-- Plate that contains Jonas' monster eye steak. Take this to Magister Mirien. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="immediate_effect" val="true" />
@@ -614,7 +614,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1446" name="Jonas' 1st Steak Dish" type="EtcItem">
+	<item id="1446" name="Jonas' 5th Steak Dish" type="EtcItem">
 		<!-- Plate that contains Jonas' monster eye steak. Take this to Magister Mirien. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="immediate_effect" val="true" />
@@ -633,6 +633,70 @@
 	<item id="1447" name="Mirien's Review" type="EtcItem">
 		<!-- Letter from Magister Mirien about the taste of Jonas' dish. Take this to Jonas. -->
 		<set name="icon" val="icon.etc_letter_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1448" name="Mirien's Review" type="EtcItem">
+		<!-- Letter from Magister Mirien about the taste of Jonas' dish. Take this to Jonas. -->
+		<set name="icon" val="icon.item_normal129" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1449" name="Mirien's Review" type="EtcItem">
+		<!-- Letter from Magister Mirien about the taste of Jonas' dish. Take this to Jonas. -->
+		<set name="icon" val="icon.item_normal129" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1450" name="Mirien's Review" type="EtcItem">
+		<!-- Letter from Magister Mirien about the taste of Jonas' dish. Take this to Jonas. -->
+		<set name="icon" val="icon.item_normal129" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1451" name="Mirien's Review" type="EtcItem">
+		<!-- Letter from Magister Mirien about the taste of Jonas' dish. Take this to Jonas. -->
+		<set name="icon" val="icon.item_normal129" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -786,6 +850,17 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="CRYSTAL" />
 	</item>
+	<item id="1462" name="Crystal (S-grade)" type="EtcItem">
+		<!-- Crystal of S-grade. -->
+		<set name="icon" val="icon.etc_crystal_gold_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="15000" />
+		<set name="is_stackable" val="true" />
+		<set name="crystal_type" val="S" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="CRYSTAL" />
+	</item>
 	<item id="1463" name="Soulshot (D-grade)" type="EtcItem">
 		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing power of attack. Used with a D-grade weapon. -->
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
@@ -841,7 +916,7 @@
 		</skills>
 	</item>
 	<item id="1466" name="Soulshot (A-grade)" type="EtcItem">
-		<!-- The power of a Soulshot is bestowed upon a weapon, temporarily increasing the power of attack. Used with A-grade weapons. -->
+		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing power of attack. Used with an A-grade weapon. -->
 		<set name="icon" val="icon.etc_spirit_bullet_silver_i00" />
 		<set name="default_action" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -858,6 +933,54 @@
 			<skill id="2153" level="1" /> <!-- Soulshot (A-grade) -->
 		</skills>
 	</item>
+	<item id="1467" name="Soulshot (S-grade)" type="EtcItem">
+		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing power of attack. Used with an S-grade weapon. -->
+		<set name="icon" val="icon.etc_spirit_bullet_gold_i00" />
+		<set name="default_action" val="SOULSHOT" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="100" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="SoulShots" />
+		<set name="crystal_type" val="S" />
+		<set name="enchant_enabled" val="1" />
+		<set name="etcitem_type" val="SOULSHOT" />
+		<set name="commissionItemType" val="SOULSHOT" />
+		<skills>
+			<skill id="2154" level="1" /> <!-- Soulshot (S-grade) -->
+		</skills>
+	</item>
+	<item id="1468" name="Gludin Panacen" type="EtcItem">
+		<!-- Medicated herb from Gludio. Purchase at the Castle Gludio. -->
+		<set name="icon" val="icon.etc_reagent_gold_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="crystal_type" val="S" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1469" name="Gludin Vermouth" type="EtcItem">
+		<!-- Medicated wine from Gludio. Purchase at the Castle Gludio. -->
+		<set name="icon" val="icon.etc_fruit_green_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="crystal_type" val="S" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1470" name="Artemeter" type="EtcItem">
+		<!-- Medicated herb from Gludio. Purchase at the Castle Gludio. -->
+		<set name="icon" val="icon.etc_leaf_green_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="crystal_type" val="S" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
 	<item id="1471" name="Silenos Blowgun" type="Weapon">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -870,8 +993,8 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="300" />
 		<set name="price" val="81800" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
 		<set name="commissionItemType" val="DAGGER" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="1" />
@@ -897,8 +1020,8 @@
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="300" />
 		<set name="price" val="81800" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="SPEAR" />
 		<set name="isAppearanceable" val="true" />
@@ -948,7 +1071,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1475" name="Black Soulstone" type="EtcItem">
-		<!-- Black soulstone pulled out of the heart of a Rakeclaw Imp. Collect these to take to Atuba Chief Varkees. -->
+		<!-- Black soulstone pulled out of the heart of a rakeclaw imp. Collect these to take to Atuba Chief Varkees. -->
 		<set name="icon" val="icon.etc_bead_gold_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -964,7 +1087,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1476" name="Red Soulstone" type="EtcItem">
-		<!-- Red soulstone pulled out of the heart of a Rakeclaw Imp. Collect these to take to Atuba Chief Varkees. -->
+		<!-- Red soulstone pulled out of the heart of a rakeclaw imp. Collect these to take to Atuba Chief Varkees. -->
 		<set name="icon" val="icon.etc_crystal_ball_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1012,7 +1135,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1479" name="Varangka's Parasite" type="EtcItem">
-		<!-- Evil parasite that can summon Varangka's Tracker. -->
+		<!-- Evil parasite that summons Varangka's trackers. -->
 		<set name="icon" val="icon.etc_totem_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1235,7 +1358,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1493" name="Tarantula's Spider Silk" type="EtcItem">
+	<item id="1493" name="Tarantula Spider Silk" type="EtcItem">
 		<!-- The spider silk that makes when making their nests. Collect these and take them to Trader Mion. -->
 		<set name="icon" val="icon.etc_skein_white_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1300,7 +1423,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1497" name="Necklace of Flame" type="EtcItem">
-		<!-- The Necklace of Flame given to you by Vulkus. Hand this to Pa'agrio Lord Kakai, king of the Orcs. -->
+		<!-- The necklace of flame given by Vulkus. Hand this to Kakai, the Lord of Flame, king of the Orcs. -->
 		<set name="icon" val="icon.item_normal142" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />

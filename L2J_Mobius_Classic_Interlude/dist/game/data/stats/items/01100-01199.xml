@@ -133,6 +133,66 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
+	<item id="1108" name="Arbon's Letter" type="EtcItem">
+		<set name="icon" val="icon.item_normal20" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1109" name="Roien's Letter" type="EtcItem">
+		<set name="icon" val="icon.item_normal20" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1110" name="Bone Fragment" type="EtcItem">
+		<set name="icon" val="icon.item_normal05" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="1111" name="_" type="EtcItem">
+		<set name="icon" val="icon.item_normal49" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
 	<item id="1112" name="Leaf of the Mother Tree" type="EtcItem">
 		<set name="icon" val="icon.etc_leaf_green_i00" />
 		<set name="immediate_effect" val="true" />
@@ -262,7 +322,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="64" />
+		<set name="crystal_count" val="7" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1600" />
@@ -307,7 +367,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="60" />
+		<set name="crystal_count" val="7" />
 		<set name="crystal_type" val="D" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1300" />
@@ -324,7 +384,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="135" />
+		<set name="crystal_count" val="15" />
 		<set name="crystal_type" val="D" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1250" />
@@ -341,7 +401,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="177" />
+		<set name="crystal_count" val="19" />
 		<set name="crystal_type" val="D" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1240" />
@@ -358,7 +418,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="64" />
+		<set name="crystal_count" val="7" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1210" />
@@ -375,7 +435,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="98" />
+		<set name="crystal_count" val="10" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="4000" />
@@ -392,7 +452,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="143" />
+		<set name="crystal_count" val="15" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="4000" />
@@ -563,7 +623,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1139" name="Warrior Guild Badge" type="EtcItem">
-		<!-- A badge that shows that a player is a member of the Warrior Guild. Have it with you in Ruins of Agony when you hunt for Skeleton Trackers. -->
+		<!-- A badge that shows that player is a member of the Warrior Guild. Take this to the Ruins of Agony and kill tracker skeletons. -->
 		<set name="icon" val="icon.etc_badge_gold_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -605,7 +665,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1142" name="Rusted Bronze Sword" type="Weapon">
-		<!-- An old and rusty bronze sword called the 'Sword of Trial'. Use it to kill Giant Venomous Spiders and Arachnid Trackers. Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
+		<!-- Old and rusty bronze sword called the 'Sword of Trial'. Use this to hunt Venomous Spiders and Arachnid Trackers. -->
 		<set name="icon" val="icon.weapon_broad_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -614,8 +674,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1400" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -667,7 +727,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1145" name="Medallion of Warrior" type="EtcItem">
-		<!-- Take this medallion to the Grand Master of the Warrior's Guild to change your class to a Warrior. -->
+		<!-- Take this medallion and go to the Grand Master of the Warrior's Guild to change your occupation to a Warrior. -->
 		<set name="icon" val="icon.accessary_earing_of_protection_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -677,7 +737,6 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1146" name="Squire's Shirt" type="Armor">
-		<!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
 		<set name="icon" val="icon.armor_t01_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -693,13 +752,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pDef">33</stat>
 		</stats>
 	</item>
 	<item id="1147" name="Squire's Pants" type="Armor">
-		<!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
 		<set name="icon" val="icon.armor_t01_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -715,7 +772,6 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pDef">20</stat>
 		</stats>
@@ -738,7 +794,7 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="147" />
+		<set name="crystal_count" val="16" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="600" />
@@ -891,8 +947,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1160" name="Dark Bezoar" type="EtcItem">
-		<!-- Gather 13 Abyss Spirit Ore and take them to Sentry Nelsya. -->
+	<item id="1160" name="Abyss Spirit Ore" type="EtcItem">
+		<!-- Gather 13 dark bezoars and take them to Sentry Nelsya. -->
 		<set name="icon" val="icon.etc_bead_gold_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -908,7 +964,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1161" name="Ritual Sword" type="EtcItem">
-		<!-- Take this sword to the Grand Master of the Fighter Guild to transfer your class to Knight. -->
+		<!-- Take this sword to the Grand Master of the Fighter Guild to change your occupation to a Knight. -->
 		<set name="icon" val="icon.weapon_flamberge_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -988,7 +1044,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1166" name="Coin of Lords" type="EtcItem">
-		<!-- Gold coin engraved with the mark of the lord of Gludio. Gather three or more of these to end the Trial of the Esquire. -->
+		<!-- Gold coin engraved with the mark of the lord of Gludio. Gather three or more of these to end Trial of the Esquire. -->
 		<set name="icon" val="icon.etc_coins_silver_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1083,7 +1139,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1172" name="Gludio Guard's 1st Crest" type="EtcItem">
+	<item id="1172" name="Gludio Guard's 2nd Crest" type="EtcItem">
 		<!-- Crest that distinguishes guard membership. As Captain Bezique requested, hunt giant spiders. -->
 		<set name="icon" val="icon.etc_badge_silver_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1115,8 +1171,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1174" name="Einhasad's 1st Temple Badge" type="EtcItem">
-		<!-- As High Priest Levian requested, kill Langk Lizardmen and collect the proof. -->
+	<item id="1174" name="Einhasad's 2nd Temple Badge" type="EtcItem">
+		<!-- As High Priest Levian requested, kill Langk lizardmen and collect the proof. -->
 		<set name="icon" val="icon.accessary_earing_of_holy_spirit_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1132,7 +1188,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1175" name="Lizardman's Totem" type="EtcItem">
-		<!-- Small sculpture Langk Lizardmen carry with them. Collect twenty of these and take them to High Priestess Levian. -->
+		<!-- Small sculpture Langk lizardmen carry with them. Collect twenty of these and take them to High Priestess Levian. -->
 		<set name="icon" val="icon.etc_totem_green_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1147,7 +1203,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1176" name="Gludio Guard's 1st Crest" type="EtcItem">
+	<item id="1176" name="Gludio Guard's 3rd Crest" type="EtcItem">
 		<!-- Crest that proves guard membership. As Captain Gilbert requested, hunt giant spiders. -->
 		<set name="icon" val="icon.etc_badge_silver_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1179,7 +1235,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1178" name="Einhasad's 1st Temple Badge" type="EtcItem">
+	<item id="1178" name="Einhasad's 3rd Temple Badge" type="EtcItem">
 		<!-- As High Priest Biotin requested, hunt Silent Horrors in the Elven Ruins. -->
 		<set name="icon" val="icon.accessary_earing_of_holy_spirit_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1212,7 +1268,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1180" name="Bezique's Letter" type="EtcItem">
-		<!-- Captain Bezique's letter to Neti. Find Neti in Gludin Village and give her the letter. -->
+		<!-- Captain Bezique's letter to Neti. Find Neti in the Village of Gludin and give her the letter. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1228,7 +1284,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1181" name="Neti's Bow" type="Weapon">
-		<!-- Favorite bow used by Neti, who was once a Treasure Hunter. Use it when hunting the Skeletons and Spartoi of the Ruins of Agony to gather bone pieces. Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
+		<!-- Favorite bow used by Neti, who was once a Treasure Hunter. Use it when hunting the skeletons and Spartoi of the Ruins of Agony to gather bone pieces. -->
 		<set name="icon" val="icon.weapon_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1237,8 +1293,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1850" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="7" />
+		<set name="spiritshots" val="2" />
 		<set name="mp_consume" val="1" />
 		<set name="reuse_delay" val="1500" />
 		<set name="is_tradable" val="false" />
@@ -1261,7 +1317,7 @@
 		</stats>
 	</item>
 	<item id="1182" name="Neti's Dagger" type="Weapon">
-		<!-- Neti used this dagger when she was a Treasure Hunter. Use it when hunting the Skeletons and Spartoi of the Ruins of Agony to gather bone pieces. Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
+		<!-- Neti used this dagger when she was a Treasure Hunter. Use it when hunting the skeletons and Spartoi of the Ruins of Agony to gather bone pieces. -->
 		<set name="icon" val="icon.weapon_knife_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1270,8 +1326,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1000" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -1324,7 +1380,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1185" name="Most Wanted List" type="EtcItem">
-		<!-- It is written that whoever does away with the Cat's Eye Bandits and recovers the stolen goods will be rewarded. -->
+		<!-- It is written that whoever does away with the Cat's Eye bandits and recovers the stolen goods will be rewarded. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1340,7 +1396,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1186" name="Stolen Jewelry" type="EtcItem">
-		<!-- Fair amount of jewelry the Cat's Eye Bandits stole. You must take them to Captain Bezique. -->
+		<!-- Fair amount of jewelry the Cat's Eye bandits stole. You must take them to Captain Bezique. -->
 		<set name="icon" val="icon.etc_jewel_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1356,7 +1412,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1187" name="Stolen Tomes" type="EtcItem">
-		<!-- Rare tome the Cat's Eye Bandits stole. You must take it to Captain Bezique. -->
+		<!-- Rare tome the Cat's Eye bandits stole. You must take it to Captain Bezique. -->
 		<set name="icon" val="icon.etc_spell_books_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1372,7 +1428,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1188" name="Stolen Ring" type="EtcItem">
-		<!-- Expensive necklace that the Cat's Eye Bandits stole. You must take it back to Captain Bezique. -->
+		<!-- Expensive necklace that the Cat's Eye bandits have stolen. You must take it back to Captain Bezique. -->
 		<set name="icon" val="icon.accessary_ring_of_grace_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1388,7 +1444,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1189" name="Stolen Necklace" type="EtcItem">
-		<!-- Expensive necklace the Cat's Eye Bandits stole. You must take it to Captain Bezique. -->
+		<!-- Expensive necklace the Cat's Eye bandits stole. You must take it to Captain Bezique. -->
 		<set name="icon" val="icon.accessary_necklace_of_blessing_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1404,7 +1460,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1190" name="Bezique's Recommendation" type="EtcItem">
-		<!-- Take this letter to the Grand Masters of the Warrior Guild to change your class to a Rogue. -->
+		<!-- Take this medallion to the Grand Masters of the Fighter Guild to change your occupation to a Rogue. -->
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />

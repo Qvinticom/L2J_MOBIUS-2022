@@ -83,7 +83,6 @@ import org.l2jmobius.gameserver.network.serverpackets.ExUserInfoEquipSlot;
 import org.l2jmobius.gameserver.network.serverpackets.ExUserInfoInvenWeight;
 import org.l2jmobius.gameserver.network.serverpackets.ExVitalityEffectInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ExVoteSystemInfo;
-import org.l2jmobius.gameserver.network.serverpackets.ExWorldChatCnt;
 import org.l2jmobius.gameserver.network.serverpackets.HennaInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ItemList;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -603,10 +602,12 @@ public class EnterWorld implements IClientIncomingPacket
 			player.sendPacket(new ExBeautyItemList(player));
 		}
 		
-		if (Config.ENABLE_WORLD_CHAT)
-		{
-			player.sendPacket(new ExWorldChatCnt(player));
-		}
+		// Disabled to give a more Classic feeling.
+		// if (Config.ENABLE_WORLD_CHAT)
+		// {
+		// player.sendPacket(new ExWorldChatCnt(player));
+		// }
+		
 		player.sendPacket(new ExConnectedTimeAndGettableReward(player));
 		player.sendPacket(new ExOneDayReceiveRewardList(player, true));
 		

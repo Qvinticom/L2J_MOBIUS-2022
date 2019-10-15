@@ -76,10 +76,10 @@ public class CastleChamberlain extends AbstractNpcAI
 		35184, 36655, // Giran
 		35226, 36656, // Oren
 		35274, 36657, // Aden
-		// 35316, 36658, // Innadril
-		// 35363, 36659, // Goddard
-		// 35509, 36660, // Rune
-		// 35555, 36661, // Schuttgart
+		35316, 36658, // Innadril
+		35363, 36659, // Goddard
+		35509, 36660, // Rune
+		35555, 36661, // Schuttgart
 	};
 	//@formatter:on
 	// Item

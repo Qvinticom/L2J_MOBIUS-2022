@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="4400" toLevel="3" name="Acumen">
-		<!-- Increases Casting Spd. temporarily. Effect $s1. -->
+		<!-- Momentarily increases Casting Spd. Effect $s1. -->
 		<icon>icon.skill1085</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -32,7 +32,7 @@
 		</effects>
 	</skill>
 	<skill id="4401" toLevel="3" name="Empower">
-		<!-- Increases M. Atk. power temporarily. Effect $s1. -->
+		<!-- M. Atk. increases temporarily. Effect $s1. -->
 		<icon>icon.skill1059</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -92,7 +92,7 @@
 		</effects>
 	</skill>
 	<skill id="4403" toLevel="3" name="Guidance">
-		<!-- Increases Accuracy temporarily. Effect $s1. -->
+		<!-- Momentarily increases Accuracy. Effect $s1. -->
 		<icon>icon.skill1240</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -123,7 +123,7 @@
 		</effects>
 	</skill>
 	<skill id="4404" toLevel="3" name="Focus">
-		<!-- Momentarily increases critical P. Atk. rate. Effect $s1. -->
+		<!-- Momentarily increases the probability of critical attack. Effect $s1. -->
 		<icon>icon.skill1077</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -154,7 +154,7 @@
 		</effects>
 	</skill>
 	<skill id="4405" toLevel="3" name="Death Whisper">
-		<!-- Momentarily increase the Critical P. Atk. Effect $s1. -->
+		<!-- Momentarily increases critical P. Atk. Effect $s1. -->
 		<icon>icon.skill1242</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -712,7 +712,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4416" toLevel="26" name="Undead">
+	<skill id="4416" toLevel="27" name="Undead">
 		<!-- Called out of their graves by black magic, a curse or the power of an evil mind, most of these creatures lack intelligence and can perform only simple actions. However, some high-ranking undead possess great knowledge and sophistication even when compared to ordinary humanoids. -->
 		<icon>
 			<value level="1">icon.skill4290</value>
@@ -741,6 +741,7 @@
 			<value level="24">icon.skill4416_none</value>
 			<value level="25">icon.skill4416_kamael</value>
 			<value level="26">icon.skill_4416_ertheia</value>
+			<value level="27">icon.skill4416_mercenary</value>
 		</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -774,6 +775,7 @@
 					<value level="24">0</value>
 					<value level="25">0</value>
 					<value level="26">0</value>
+					<value level="27">0</value>
 				</CONSTRUCT_WEAKNESS>
 				<ANIMAL_WEAKNESS>
 					<value level="1">0</value>
@@ -802,6 +804,7 @@
 					<value level="24">0</value>
 					<value level="25">0</value>
 					<value level="26">0</value>
+					<value level="27">0</value>
 				</ANIMAL_WEAKNESS>
 				<PLANT_WEAKNESS>
 					<value level="1">0</value>
@@ -830,6 +833,7 @@
 					<value level="24">0</value>
 					<value level="25">0</value>
 					<value level="26">0</value>
+					<value level="27">0</value>
 				</PLANT_WEAKNESS>
 				<DRAGON_WEAKNESS>
 					<value level="1">0</value>
@@ -858,6 +862,7 @@
 					<value level="24">0</value>
 					<value level="25">0</value>
 					<value level="26">0</value>
+					<value level="27">0</value>
 				</DRAGON_WEAKNESS>
 				<DUAL>
 					<value level="1">0</value>
@@ -886,6 +891,7 @@
 					<value level="24">0</value>
 					<value level="25">0</value>
 					<value level="26">0</value>
+					<value level="27">0</value>
 				</DUAL>
 				<SHOCK>
 					<value level="1">0</value>
@@ -914,6 +920,7 @@
 					<value level="24">0</value>
 					<value level="25">0</value>
 					<value level="26">0</value>
+					<value level="27">0</value>
 				</SHOCK>
 				<BEAST_WEAKNESS>
 					<value level="1">0</value>
@@ -942,6 +949,7 @@
 					<value level="24">0</value>
 					<value level="25">0</value>
 					<value level="26">0</value>
+					<value level="27">0</value>
 				</BEAST_WEAKNESS>
 				<BLUNT>
 					<value level="1">0</value>
@@ -970,6 +978,7 @@
 					<value level="24">0</value>
 					<value level="25">0</value>
 					<value level="26">0</value>
+					<value level="27">0</value>
 				</BLUNT>
 				<GIANT_WEAKNESS>
 					<value level="1">0</value>
@@ -998,6 +1007,7 @@
 					<value level="24">0</value>
 					<value level="25">0</value>
 					<value level="26">0</value>
+					<value level="27">0</value>
 				</GIANT_WEAKNESS>
 				<BOW>
 					<value level="1">0</value>
@@ -1026,6 +1036,7 @@
 					<value level="24">0</value>
 					<value level="25">0</value>
 					<value level="26">0</value>
+					<value level="27">0</value>
 				</BOW>
 				<BUG_WEAKNESS>
 					<value level="1">0</value>
@@ -1054,6 +1065,7 @@
 					<value level="24">0</value>
 					<value level="25">0</value>
 					<value level="26">0</value>
+					<value level="27">0</value>
 				</BUG_WEAKNESS>
 				<SWORD>
 					<value level="1">0</value>
@@ -1082,6 +1094,7 @@
 					<value level="24">0</value>
 					<value level="25">0</value>
 					<value level="26">0</value>
+					<value level="27">0</value>
 				</SWORD>
 			</effect>
 		</effects>
@@ -1456,7 +1469,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4418" toLevel="5" name="Fire Attribute">
+	<skill id="4418" toLevel="5" name="Fire Attack">
 		<!-- Unleashes an attack fortified with Fire. Resistant to Fire attacks. -->
 		<icon>icon.etc_fire_crystal_i00</icon>
 		<magicLvl>1</magicLvl>
@@ -1479,7 +1492,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4419" toLevel="5" name="Water Attribute">
+	<skill id="4419" toLevel="5" name="Water Attack">
 		<!-- Unleashes an attack fortified with Water. Resistant to Water attacks. -->
 		<icon>icon.etc_water_crystal_i00</icon>
 		<magicLvl>1</magicLvl>
@@ -1502,7 +1515,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4420" toLevel="5" name="Wind Attribute">
+	<skill id="4420" toLevel="5" name="Wind Attack">
 		<!-- Unleashes an attack fortified with Wind. Resistant to Wind attacks. -->
 		<icon>icon.etc_wind_crystal_i00</icon>
 		<magicLvl>1</magicLvl>
@@ -1548,7 +1561,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4422" toLevel="5" name="Darkness Protection">
+	<skill id="4422" toLevel="5" name="Dark Attack">
 		<!-- Unleashes an attack fortified with Dark. Resistant to Dark attacks. -->
 		<icon>icon.etc_unholy_crystal_i00</icon>
 		<magicLvl>1</magicLvl>
@@ -1571,8 +1584,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4423" toLevel="5" name="Holy Attack">
-		<!-- Unleashes an attack fortified with Holy. Resistant to Holy attacks. -->
+	<skill id="4423" toLevel="5" name="Holy">
+		<!-- Inflicts attack boosted with the energy of Holy. Resistant to Holy attack. -->
 		<icon>icon.etc_holy_crystal_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1749,8 +1762,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4433" toLevel="5" name="Greater Holy Attack Resistance">
-		<!-- Very resistant to Holy. -->
+	<skill id="4433" toLevel="5" name="High Holy Attribute Resistance">
+		<!-- Highly resistant to Holy attack. -->
 		<icon>icon.skill4433</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1787,8 +1800,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4435" toLevel="5" name="Greater Stun Resistance">
-		<!-- Very resistant to Stun. -->
+	<skill id="4435" toLevel="5" name="High Stun Attack Resistance">
+		<!-- Resistant to Stun. -->
 		<icon>icon.skill4435</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1806,7 +1819,7 @@
 		</effects>
 	</skill>
 	<skill id="4436" toLevel="5" name="Greater Poison Resistance">
-		<!-- Very resistant to Poison. -->
+		<!-- Resistant to Poison attack. -->
 		<icon>icon.skill4436</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1824,7 +1837,7 @@
 		</effects>
 	</skill>
 	<skill id="4437" toLevel="5" name="Greater Bleed Resistance">
-		<!-- Very resistant to Bleed. -->
+		<!-- Resistant to Bleed. -->
 		<icon>icon.skill4437</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1842,7 +1855,7 @@
 		</effects>
 	</skill>
 	<skill id="4438" toLevel="5" name="Greater Sleep Resistance">
-		<!-- Very resistant to Sleep. -->
+		<!-- Resistant to Sleep. -->
 		<icon>icon.skill4286</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1860,7 +1873,7 @@
 		</effects>
 	</skill>
 	<skill id="4439" toLevel="5" name="Greater Hold Resistance">
-		<!-- Very resistant to Hold. -->
+		<!-- Resistant to Hold. -->
 		<icon>icon.skill4288</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1878,7 +1891,7 @@
 		</effects>
 	</skill>
 	<skill id="4440" toLevel="5" name="Greater Paralysis Resistance">
-		<!-- Very resistant to Paralysis. -->
+		<!-- Resistant to Paralyze attack. -->
 		<icon>icon.skill4440</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1896,7 +1909,7 @@
 		</effects>
 	</skill>
 	<skill id="4441" toLevel="5" name="Greater Mental Attack Resistance">
-		<!-- Very resistant to Mental Attacks. -->
+		<!-- Resistant to Silence/Fear. -->
 		<icon>icon.skill4441</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2507,7 +2520,7 @@
 		</effects>
 	</skill>
 	<skill id="4466" toLevel="3" name="Surrender to Dark">
-		<!-- Dark Attack Resistance decreases and Holy Attack Resistance increases momentarily. Effect $s1. -->
+		<!-- State of momentarily decreased Dark Resistance and increased Holy Resistance. Effect $s1 -->
 		<icon>icon.skill4336_new</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -2566,7 +2579,7 @@
 		</effects>
 	</skill>
 	<skill id="4467" toLevel="3" name="Surrender to Holy">
-		<!-- Holy Attack Resistance decreases and Dark Attack Resistance increases momentarily. Effect $s1. -->
+		<!-- State of momentarily decreased Holy Resistance and increased Dark Resistance. Effect $s1 -->
 		<icon>icon.skill4275_new</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -2674,6 +2687,9 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Spoil" />
+		</effects>
 	</skill>
 	<skill id="4471" toLevel="12" name="Anger">
 		<!-- Increases NPC's P. Atk. and P. Def. Effect $s1. -->
@@ -2781,7 +2797,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4472" toLevel="12" name="Golem Punch">
+	<skill id="4472" toLevel="12" name="Golem Strike">
 		<!-- For powerful Golems that are $s1x stronger. -->
 		<castRange>40</castRange>
 		<effectPoint>-100</effectPoint>
@@ -2840,7 +2856,7 @@
 		</effects>
 	</skill>
 	<skill id="4473" toLevel="12" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0101</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -2905,7 +2921,9 @@
 					<value level="12">2617</value>
 				</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="4474" toLevel="5" name="Restore Life">
@@ -3211,7 +3229,7 @@
 		</effects>
 	</skill>
 	<skill id="4483" toLevel="12" name="Hold">
-		<!-- Inflicted with Hold and unable to move. -->
+		<!-- Inflicted with hold and unable to move momentarily. -->
 		<icon>icon.skill4047</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -3512,7 +3530,7 @@
 		</effects>
 	</skill>
 	<skill id="4488" toLevel="12" name="Hold">
-		<!-- Inflicted with Hold and unable to move. -->
+		<!-- Inflicted with hold and unable to move momentarily. -->
 		<icon>icon.skill4047</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -3699,7 +3717,7 @@
 		</effects>
 	</skill>
 	<skill id="4491" toLevel="12" name="Holy Weapon">
-		<!-- Makes Holy attacks. -->
+		<!-- State of dealing Holy attack. -->
 		<icon>icon.skill1043</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -3890,7 +3908,7 @@
 				<!-- Decrease Speed -->
 				<attackerType>Playable</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>100</maxAttackerLevel>
+				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>50</chance>
 				<targetType>ENEMY</targetType>
 				<minDamage>1</minDamage>
@@ -3913,11 +3931,16 @@
 		</effects>
 	</skill>
 	<skill id="4494" toLevel="2" name="Raid Boss">
-		<!-- If the person who made the greatest contribution is $s1 or more Lv.s higher than the underground prisoner, then the item/Adena rewards will decrease. If the difference is $s2 or more Lv.s, then the monster will drop nothing at all. -->
+		<!-- If the person who made the greatest contribution is $s1 or more Lv.s higher than the raid monster, then the item/Adena rewards will decrease. If the difference is $s2 or more Lv.s, the monster will drop nothing at all. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceTrait">
+				<SHOCK>100</SHOCK>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="4495" toLevel="12" name="Power Shot">
 		<castRange>900</castRange>
@@ -3976,7 +3999,7 @@
 		</effects>
 	</skill>
 	<skill id="4496" toLevel="12" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0101</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -4052,7 +4075,9 @@
 					<value level="12">47895</value>
 				</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="4497" toLevel="1" name="Treasure Chest (Lv. 21)">

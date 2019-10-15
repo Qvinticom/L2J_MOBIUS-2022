@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/zones.xsd">
 	<!-- PVP Zones -->
+	<zone name="dion_monster_pvp" type="ArenaZone" shape="NPoly" minZ="-3596" maxZ="0"> <!-- [20_23] -->
+		<node X="11947" Y="183019" />
+		<node X="12937" Y="183019" />
+		<node X="12943" Y="184010" />
+		<node X="11941" Y="184010" />
+	</zone>
 	<zone name="gludin_pvp" type="ArenaZone" shape="NPoly" minZ="-3752" maxZ="-352"> <!-- [17_22] -->
 		<node X="-88411" Y="141732" />
 		<node X="-87429" Y="141733" />
@@ -38,17 +44,5 @@
 		<node X="150955" Y="46276" />
 		<node X="150956" Y="47052" />
 		<node X="148049" Y="47053" />
-	</zone>
-	
-	<!-- Classic Monster Race Track Arena -->
-	<zone name="Monster_Race_Arena_PvP" type="ArenaZone" shape="NPoly" minZ="-3800" maxZ="-3550"> <!-- [20_23] -->
-		<node X="13081" Y="183060" />
-		<node X="13302" Y="183285" />
-		<node X="13300" Y="184089" />
-		<node X="13086" Y="184308" />
-		<node X="11993" Y="184308" />
-		<node X="11774" Y="184091" />
-		<node X="11773" Y="183287" />
-		<node X="11994" Y="183055" />
 	</zone>
 </list>

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="6200" toLevel="1" name="Dispel NPC Transformation">
-		<!-- Undo the transformation. -->
+		<!-- Cancels transformation. -->
 		<icon>icon.skilltransform2</icon>
 		<castRange>900</castRange>
 		<effectPoint>10</effectPoint>
@@ -22,8 +22,196 @@
 			</effect>
 		</effects>
 	</skill>
+	<skill id="6201" toLevel="1" name="Transformed: Frog">
+		<!-- Transformed into a frog. -->
+		<icon>icon.skilltransform3</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>520</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<castRange>900</castRange>
+		<effectPoint>10</effectPoint>
+		<effectRange>1500</effectRange>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>111</transformId>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>111</transformationId>
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<dispel>IMPROVE_SPEED_AVOID_UP;SPEED_UP</dispel>
+				<rate>100</rate>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>IMPROVE_SPEED_AVOID_UP;SPEED_UP</slot>
+			</effect>
+			<effect name="WeightLimit">
+				<amount>1000</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="WeightPenalty">
+				<amount>9000</amount>
+			</effect>
+			<effect name="EnlargeSlot">
+				<amount>8</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6202" toLevel="1" name="Transformed: Young Child">
+		<!-- Transformed into a young child. -->
+		<icon>icon.skilltransform3</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>460</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<castRange>900</castRange>
+		<effectPoint>10</effectPoint>
+		<effectRange>1500</effectRange>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>112</transformId>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>112</transformationId>
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<dispel>IMPROVE_SPEED_AVOID_UP;SPEED_UP</dispel>
+				<rate>100</rate>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>IMPROVE_SPEED_AVOID_UP;SPEED_UP</slot>
+			</effect>
+			<effect name="WeightLimit">
+				<amount>1000</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="WeightPenalty">
+				<amount>9000</amount>
+			</effect>
+			<effect name="EnlargeSlot">
+				<amount>8</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6203" toLevel="1" name="Transformed: Native">
+		<!-- Transformed into a native. -->
+		<icon>icon.skilltransform3</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>215</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<castRange>900</castRange>
+		<effectPoint>10</effectPoint>
+		<effectRange>1500</effectRange>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>124</transformId>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>124</transformationId>
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<dispel>IMPROVE_SPEED_AVOID_UP;SPEED_UP</dispel>
+				<rate>100</rate>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>IMPROVE_SPEED_AVOID_UP;SPEED_UP</slot>
+			</effect>
+			<effect name="WeightLimit">
+				<amount>1000</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="WeightPenalty">
+				<amount>9000</amount>
+			</effect>
+			<effect name="EnlargeSlot">
+				<amount>8</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6204" toLevel="1" name="Transformed: Guards of the Dawn">
+		<!-- Transformed into a Guard of the Dawn. -->
+		<icon>icon.skilltransform3</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>-1</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<castRange>900</castRange>
+		<effectPoint>10</effectPoint>
+		<effectRange>1500</effectRange>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>113</transformId>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>113</transformationId>
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<dispel>IMPROVE_SPEED_AVOID_UP;SPEED_UP</dispel>
+				<rate>100</rate>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>IMPROVE_SPEED_AVOID_UP;SPEED_UP</slot>
+			</effect>
+			<effect name="WeightLimit">
+				<amount>1000</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="WeightPenalty">
+				<amount>9000</amount>
+			</effect>
+			<effect name="EnlargeSlot">
+				<amount>8</amount>
+			</effect>
+		</effects>
+	</skill>
 	<skill id="6205" toLevel="19" name="Strider Bite">
-		<!-- Commands the mounted strider to bite the enemies at the front. Attacks the enemy with $s1 Power added to P. Atk., causes bleed for $s2, and makes him consume $s3 HP every second. Over-hit. Critical. -->
+		<!-- Commands the mounted strider to bite the enemies at the front. Attacks the enemy with $s1 Power added to P. Atk., causes bleed for $s2, and makes him consume $s3 HP every second. Over-hit and Critical are possible. -->
 		<abnormalLvl>6</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
@@ -269,7 +457,7 @@
 		</effects>
 	</skill>
 	<skill id="6207" toLevel="1" name="Strider Dash">
-		<!-- Increases your Speed by 66 for 15 seconds. -->
+		<!-- Increases one's own Speed by 66 for 15 seconds. -->
 		<icon>icon.action108</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -307,7 +495,7 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="6209" toLevel="4" name="Grade Penalty">
+	<skill id="6209" toLevel="4" name="Weapon Grade Penalty">
 		<!-- The equipped weapon's grade doesn't match your Lv., so the following penalties are incurred: Decrease in Accuracy by $s1, Critical Rate by $s2, Critical Damage by $s3, Atk. Spd. by $s4, and P. Atk. by $s5. -->
 		<icon>
 			<value level="1">icon.skill6209_1</value>
@@ -321,12 +509,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effects>
 			<effect name="PAtk">
-				<amount>
-					<value level="1">-10</value>
-					<value level="2">-20</value>
-					<value level="3">-30</value>
-					<value level="4">-40</value>
-				</amount>
+				<amount>-10</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="Accuracy">
@@ -334,12 +517,7 @@
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="PhysicalAttackSpeed">
-				<amount>
-					<value level="1">-10</value>
-					<value level="2">-20</value>
-					<value level="3">-30</value>
-					<value level="4">-40</value>
-				</amount>
+				<amount>-10</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="CriticalDamage">
@@ -362,7 +540,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="6213" toLevel="4" name="Grade Penalty">
+	<skill id="6213" toLevel="4" name="Armor Grade Penalty">
 		<!-- When equipped with armor or accessories whose grade doesn't fit with your Lv., a penalty is incurred with decreases in evasion by $s1, Atk. Spd./Casting Spd./Speed by $s2. -->
 		<icon>
 			<value level="1">icon.skill6213_1</value>
@@ -631,6 +809,28 @@
 			</effect>
 		</effects>
 	</skill>
+	<skill id="6239" toLevel="1" name="Proof of Time and Space">
+		<coolTime>1000</coolTime>
+		<hitTime>2700</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>55</magicLvl>
+		<operateType>A1</operateType>
+		<reuseDelay>86400000</reuseDelay>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpNeedAgathion" />
+		</conditions>
+		<effects>
+			<effect name="Restoration">
+				<itemId>15352</itemId>
+				<itemCount>1</itemCount>
+			</effect>
+		</effects>
+	</skill>
 	<skill id="6240" toLevel="5" name="Heatstroke">
 		<!-- Heatstroke stage $s1. Inflicted with heatstroke. You are extremely hot and fatigued. -->
 		<icon>icon.etc_ashes_white_i00</icon>
@@ -857,7 +1057,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonNpc">
-				<npcId>13270</npcId>
+				<npcId>13270</npcId> <!-- Sultriness -->
 				<npcCount>1</npcCount>
 				<despawnDelay>7200</despawnDelay>
 			</effect>
@@ -1061,7 +1261,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="6263" toLevel="1" name="EMP Shock">
-		<!-- Stunned and unable to move for 2 seconds. -->
+		<!-- Stunned for 2 seconds and momentarily immobile. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2</abnormalTime>
@@ -1112,7 +1312,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="6266" toLevel="1" name="Stun">
-		<!-- Stunned and unable to move for 30 seconds. -->
+		<!-- Stunned for 30 seconds and momentarily immobile. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -1134,8 +1334,8 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="6267" toLevel="1" name="Soul Sucking">
-		<!-- Absorbs opponent's HP to add to one's own. -->
+	<skill id="6267" toLevel="1" name="Soul Drain">
+		<!-- Absorbs the target's stamina and makes it your own. -->
 		<icon>icon.skill1042</icon>
 		<effectPoint>-2</effectPoint>
 		<magicLvl>90</magicLvl>
@@ -1217,7 +1417,7 @@
 		<affectScope>POINT_BLANK</affectScope>
 	</skill>
 	<skill id="6271" toLevel="5" name="Grima Power Up">
-		<!-- P. Atk. + $s1 -->
+		<!-- Increase Physical Attack by $s1. -->
 		<icon>icon.skill1068</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1343,7 +1543,7 @@
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
-	<skill id="6277" toLevel="1" name="Summon Spirits">
+	<skill id="6277" toLevel="1" name="Summon Elemental">
 		<castRange>800</castRange>
 		<coolTime>500</coolTime>
 		<effectPoint>-689</effectPoint>
@@ -1380,7 +1580,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="6279" toLevel="1" name="Attack Nearby Range">
+	<skill id="6279" toLevel="1" name="Frozen Storm">
 		<affectRange>450</affectRange>
 		<coolTime>500</coolTime>
 		<effectPoint>-689</effectPoint>

@@ -30,6 +30,7 @@ import org.l2jmobius.gameserver.model.actor.Playable;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.EtcItem;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.type.CrystalType;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -209,6 +210,13 @@ public class ExtractableItems implements IItemHandler
 	
 	private void addItem(Map<ItemInstance, Long> extractedItems, ItemInstance newItem)
 	{
+		// Max equipable item grade configuration.
+		final int itemCrystalId = newItem.getItem().getCrystalType().getId();
+		if ((itemCrystalId > Config.MAX_EQUIPABLE_ITEM_GRADE.getId()) && (itemCrystalId < CrystalType.EVENT.getId()))
+		{
+			return;
+		}
+		
 		if (extractedItems.get(newItem) != null)
 		{
 			extractedItems.put(newItem, extractedItems.get(newItem) + 1);

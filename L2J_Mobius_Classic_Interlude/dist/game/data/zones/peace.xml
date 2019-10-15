@@ -651,6 +651,54 @@
 		<node X="46275" Y="191156" />
 		<node X="44031" Y="192413" />
 	</zone>
+	<zone name="dion_monster_race1" type="PeaceZone" shape="NPoly" minZ="-3652" maxZ="-3452"> <!-- [20_23] -->
+		<node X="11714" Y="181568" />
+		<node X="14406" Y="181571" />
+		<node X="14405" Y="182673" />
+		<node X="11714" Y="182673" />
+	</zone>
+	<zone name="dion_monster_race2" type="PeaceZone" shape="NPoly" minZ="-3610" maxZ="-3410"> <!-- [20_23] -->
+		<node X="13309" Y="181324" />
+		<node X="14061" Y="181324" />
+		<node X="14061" Y="181610" />
+		<node X="13309" Y="181610" />
+	</zone>
+	<zone name="dion_monster_race3" type="PeaceZone" shape="NPoly" minZ="-3608" maxZ="-3408"> <!-- [20_23] -->
+		<node X="13559" Y="182641" />
+		<node X="14073" Y="182640" />
+		<node X="14073" Y="182919" />
+		<node X="13560" Y="182918" />
+	</zone>
+	<zone name="dion_monster_race4" type="PeaceZone" shape="NPoly" minZ="-3612" maxZ="-3412"> <!-- [20_23] -->
+		<node X="12196" Y="182662" />
+		<node X="12447" Y="182663" />
+		<node X="12447" Y="182774" />
+		<node X="12197" Y="182774" />
+	</zone>
+	<zone name="dion_monster_race5" type="PeaceZone" shape="NPoly" minZ="-3624" maxZ="-3424"> <!-- [20_23] -->
+		<node X="11706" Y="182774" />
+		<node X="13194" Y="182774" />
+		<node X="13194" Y="183006" />
+		<node X="11701" Y="183017" />
+	</zone>
+	<zone name="dion_monster_race6" type="PeaceZone" shape="NPoly" minZ="-3616" maxZ="-3416"> <!-- [20_23] -->
+		<node X="11701" Y="184017" />
+		<node X="13188" Y="184011" />
+		<node X="13194" Y="184265" />
+		<node X="11701" Y="184260" />
+	</zone>
+	<zone name="dion_monster_race7" type="PeaceZone" shape="NPoly" minZ="-3660" maxZ="-3460"> <!-- [20_23] -->
+		<node X="11699" Y="182993" />
+		<node X="11949" Y="182990" />
+		<node X="11944" Y="184036" />
+		<node X="11697" Y="184032" />
+	</zone>
+	<zone name="dion_monster_race8" type="PeaceZone" shape="NPoly" minZ="-3636" maxZ="-3436"> <!-- [20_23] -->
+		<node X="12945" Y="182992" />
+		<node X="13193" Y="182987" />
+		<node X="13193" Y="184019" />
+		<node X="12945" Y="184029" />
+	</zone>
 	<zone name="heiness_peace1" type="PeaceZone" shape="NPoly" minZ="-4287" maxZ="-3287"> <!-- [23_24] -->
 		<node X="106085" Y="216119" />
 		<node X="116559" Y="216118" />
@@ -913,27 +961,5 @@
 	<zone name="The East Dungeon of Abyss 2nd Boss Room" id="600007" type="PeaceZone" shape="Cuboid" minZ="-7000" maxZ="-6500"> <!-- [16_12] -->
 		<node X="-112495" Y="-178268" />
 		<node X="-114025" Y="-179108" />
-	</zone>
-	
-	<!-- Classic Monster Race Track -->
-	<zone name="Monster_Race_Arena_Peace" type="PeaceZone" shape="NPoly" minZ="-3565" maxZ="-3200"> <!-- [20_23] -->
-		<node X="14398" Y="181581" />
-		<node X="14056" Y="181560" />
-		<node X="14060" Y="181325" />
-		<node X="13306" Y="181325" />
-		<node X="13306" Y="181575" />
-		<node X="11710" Y="181562" />
-		<node X="11715" Y="182745" />
-		<node X="11541" Y="182743" />
-		<node X="11541" Y="184629" />
-		<node X="11842" Y="184630" />
-		<node X="11839" Y="184821" />
-		<node X="13250" Y="184819" />
-		<node X="13252" Y="184619" />
-		<node X="13545" Y="184628" />
-		<node X="13549" Y="182916" />
-		<node X="14073" Y="182918" />
-		<node X="14072" Y="182673" />
-		<node X="14404" Y="182674" />
 	</zone>
 </list>

@@ -34,7 +34,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1503" name="Grandma's Mirror" type="EtcItem">
-		<!-- Article left by the grandmother of Redbonnet. Can be sold in any shop for a high price. -->
+		<!-- Article left by the grandmother of Redbonnet. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_mirror_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -45,7 +45,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1504" name="Grandma's Necklace" type="EtcItem">
-		<!-- Article left by the grandmother of Redbonnet. Can be sold in any shop for a high price. -->
+		<!-- Article left by the grandmother of Redbonnet. Can be sold in any shop. -->
 		<set name="icon" val="icon.accessary_aquastone_necklace_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -56,7 +56,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1505" name="Grandma's Hairpin" type="EtcItem">
-		<!-- Article left by the grandmother of Redbonnet. Can be sold in any shop for a high price. -->
+		<!-- Article left by the grandmother of Redbonnet. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_jewel_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -371,8 +371,8 @@
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1532" name="Amulet: Burning Flame" type="EtcItem">
-		<!-- Amulet required for the Burning Flame spell. Used by Orc Shamans. Required level: 25 -->
+	<item id="1532" name="Amulet: Blaze Quake" type="EtcItem">
+		<!-- Amulet required for the Blaze Quake spell. Used by Orc Shamans. Required level: 25 -->
 		<set name="icon" val="icon.etc_orcish_talisman_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -432,12 +432,12 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1538" name="Blessed Scroll of Escape" type="EtcItem">
-		<!-- Magical scroll that relocates you to the nearest village. -->
+		<!-- Magical scroll that relocates you to the nearest village -->
 		<set name="icon" val="icon.etc_scroll_of_return_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
+		<set name="weight" val="10" />
 		<set name="price" val="150000" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
@@ -471,7 +471,7 @@
 		</skills>
 	</item>
 	<item id="1540" name="Quick Healing Potion" type="EtcItem">
-		<!-- Magic potion that instantly restores HP. Instant effect with no cooldown. Cannot be used when HP is full. -->
+		<!-- Magic potion that instantly restores HP. Instant effect with no duration. Cannot be used when HP is full. -->
 		<set name="icon" val="icon.etc_potion_gold_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -686,7 +686,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1553" name="Hatos' 1st Order" type="EtcItem">
-		<!-- An order to kill Varangka's Messenger. After killing him, recover the letter and take it to Urutu Chief Hatos. -->
+		<!-- The order to kill Baranka's messenger. After killing him, recover the letter and take it to Urutu Chief Hatos. -->
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -701,8 +701,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1554" name="Hatos' 1st Order" type="EtcItem">
-		<!-- An order to kill Varangka's Messenger. After killing him, recover the letter and take it to Urutu Chief Hatos. -->
+	<item id="1554" name="Hatos' 2nd Order" type="EtcItem">
+		<!-- The order states that you must kill Baranka's messenger. After killing him, recover the letter and take it to Urutu Chief Hatos. -->
 		<set name="icon" val="icon.etc_piece_of_paper_gray_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -717,8 +717,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1555" name="Hatos' 1st Order" type="EtcItem">
-		<!-- An order to kill Varangka's Messenger. After killing him, recover the letter and take it to Urutu Chief Hatos. -->
+	<item id="1555" name="Hatos' 3rd Order" type="EtcItem">
+		<!-- The order states that you must kill Baranka's messenger. After killing him, recover the letter and take it to Urutu Chief Hatos. -->
 		<set name="icon" val="icon.etc_piece_of_paper_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -733,8 +733,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1556" name="Secret Letter to Dark Elves" type="EtcItem">
-		<!-- A secret letter that Varangka sent to Dark Elven Magister. Take the letter to Urutu Chief Hatos. -->
+	<item id="1556" name="Secret Letter to Dark Elf" type="EtcItem">
+		<!-- The secret letter that Baranka is sending to Dark Elven Magister Kaland. Take the letter to Urutu Chief Hatos. -->
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -749,8 +749,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1557" name="Secret Letter to Humans" type="EtcItem">
-		<!-- A secret letter that Varangka sent to Duke Van Halter. Take the letter to Urutu Chief Hatos. -->
+	<item id="1557" name="Secret Letter to Human" type="EtcItem">
+		<!-- The secret letter that Baranka is sending to Duke Van Halter. Take the letter to Urutu Chief Hatos. -->
 		<set name="icon" val="icon.etc_letter_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -765,8 +765,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1558" name="Secret Letter to Elves" type="EtcItem">
-		<!-- A secret letter that Varangka sent to Elven Master Laria. Take the letter to Urutu Chief Hatos. -->
+	<item id="1558" name="Secret Letter to Elf" type="EtcItem">
+		<!-- The secret letter that Baranka is sending to Elven Master Laria. Take the letter to Urutu Chief Hatos. -->
 		<set name="icon" val="icon.etc_letter_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -862,7 +862,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1564" name="Aquamarine" type="EtcItem">
-		<!-- This jewel is obtained by the Goblin Brigand Leader. Take 10 Aquamarines and 10 Chrysoberyls to Blacksmith Brunon. -->
+		<!-- This jewel is obtained by the goblin brigand leader. Take 10 aquamarines and 10 chrysoberyls to Blacksmith Brunon. -->
 		<set name="icon" val="icon.etc_jewel_green_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -878,7 +878,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1565" name="Chrysoberyl" type="EtcItem">
-		<!-- This jewel is obtained by the Goblin Brigand Leader. Take 10 Aquamarines and 10 Chrysoberyls to Blacksmith Brunon. -->
+		<!-- This jewel is obtained by the goblin brigand leader. Take 10 aquamarines and 10 chrysoberyls to Blacksmith Brunon. -->
 		<set name="icon" val="icon.etc_jewel_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -893,7 +893,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1566" name="Diamond Box" type="EtcItem">
+	<item id="1566" name="Jewel Box" type="EtcItem">
 		<!-- Blacksmith Brunon gives this Jewel Box. Take it to Collector Gouph. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1022,7 +1022,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1574" name="Mirien's Review" type="EtcItem">
-		<!-- Letter from Magister Mirien about the taste of Jonas' dish. Take this to Jonas. -->
+		<!-- Letter Magister Mirien wrote after tasting Jonas' dish. Take this and go to Jonas. -->
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1038,7 +1038,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1575" name="Mirien's Review" type="EtcItem">
-		<!-- Letter from Magister Mirien about the taste of Jonas' dish. Take this to Jonas. -->
+		<!-- Letter Magister Mirien wrote after tasting Jonas' dish. Take this to Jonas. -->
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1054,7 +1054,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1576" name="Mirien's Review" type="EtcItem">
-		<!-- Letter from Magister Mirien about the taste of Jonas' dish. Take this to Jonas. -->
+		<!-- Letter Magister Mirien wrote after tasting Jonas' dish. Take this to Jonas. -->
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1070,7 +1070,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1577" name="Mirien's Review" type="EtcItem">
-		<!-- Letter from Magister Mirien about the taste of Jonas' dish. Take this to Jonas. -->
+		<!-- Letter Magister Mirien wrote after tasting Jonas' dish. Take this to Jonas. -->
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1086,7 +1086,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1578" name="Green Blood" type="EtcItem">
-		<!-- Goblin's blood. If you have enough of this item, the Kuruka Ratman Leader appears. -->
+		<!-- Goblin's blood. If you have enough of this item, the Kuruka ratman leader appears. -->
 		<set name="icon" val="icon.etc_reagent_green_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1117,8 +1117,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1580" name="Kuruka Ratman Fang" type="EtcItem">
-		<!-- Fang obtained after killing Kuruka Ratman Leader. Collect ten of these to take to Prefect Karukia. -->
+	<item id="1580" name="Kuruka Ratman Tooth" type="EtcItem">
+		<!-- Tooth obtained after killing Kuruka ratman leader. Collect ten of these to take to Prefect Karukia. -->
 		<set name="icon" val="icon.etc_claw_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1310,7 +1310,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1592" name="Badge of Raider" type="EtcItem">
-		<!-- Earring given to an Orc who has earned the qualification to become an Orc Raider. Take this to the High Prefect to change your class to an Orc Raider. -->
+		<!-- Necklace given to an Orc who has earned the qualification to become an Orc Raider. Take this to the high prefect to change your occupation to an Orc Raider. -->
 		<set name="icon" val="icon.accessary_earing_of_black_ore_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1326,7 +1326,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1593" name="Pomegranate" type="EtcItem">
-		<!-- Red pomegranate fruit given by Gantaki Zu Urutu. Take this and go to Khavatari Rosheek. -->
+		<!-- Red pomegranate fruit given by Gantaki. Take this and go to Khavatari Rosheek. -->
 		<set name="icon" val="icon.etc_fruit_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1341,8 +1341,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1594" name="Leather Pouch" type="EtcItem">
-		<!-- Leather pouch given by Khavatari Rosheek. Take this and hunt Kasha Bears to collect 5 of their claws. -->
+	<item id="1594" name="1st Leather Pouch" type="EtcItem">
+		<!-- Leather pouch given by Khavatari Rosheek. Take this and hunt kasha bears and collect 5 of their claws. -->
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1357,8 +1357,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1595" name="Leather Pouch" type="EtcItem">
-		<!-- Leather pouch given by Khavatari Rosheek. Hunt Kasha Blade Spiders with this and collect 5 talons. -->
+	<item id="1595" name="2nd Leather Pouch" type="EtcItem">
+		<!-- Leather pouch given by Khavatari Rosheek. Hunt kasha blade spiders with this and collect 5 talons. -->
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1373,8 +1373,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1596" name="Leather Pouch" type="EtcItem">
-		<!-- Leather pouch Khavatari Rosheek gave you. Take this while hunting Scarlet Salamanders to obtain 5 of their scales. -->
+	<item id="1596" name="3rd Leather Pouch" type="EtcItem">
+		<!-- Leather pouch Khavatari Rosheek gave you. Take this while hunting scarlet salamanders to obtain 5 of their scales. -->
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1389,8 +1389,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1597" name="Leather Pouch (full)" type="EtcItem">
-		<!-- Pouch that contains 5 Kasha Bear Claws. Take this to Khavatari Rosheek. -->
+	<item id="1597" name="1st Leather Pouch (Full)" type="EtcItem">
+		<!-- Pouch that contains 5 kasha bear claws. Take this to Khavatari Rosheek. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1405,8 +1405,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1598" name="Leather Pouch (full)" type="EtcItem">
-		<!-- Pouch that contains 5 pincers of Kasha Blade Spider Talon. Take this to Khavatari Rosheek. -->
+	<item id="1598" name="2nd Leather Pouch (Full)" type="EtcItem">
+		<!-- Pouch that contains 5 pincers of kasha blade spider talon. Take this to Khavatari Rosheek. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1421,8 +1421,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1599" name="Leather Pouch (full)" type="EtcItem">
-		<!-- Pouch that contains 5 Scarlet Salamander Scales. Take this to Khavatari Rosheek. -->
+	<item id="1599" name="3rd Leather Pouch (Full)" type="EtcItem">
+		<!-- Pouch that contains 5 scales from the scarlet salamander. Take this to Khavatari Rosheek. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />

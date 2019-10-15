@@ -1,57 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
 	<skillTree type="classSkillTree" classId="112" parentClassId="43">
-		<skill skillName="Anti Magic" skillId="146" skillLvl="46" getLevel="76" levelUpSp="7400000" />
-		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="42" getLevel="76" levelUpSp="7400000" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="42" getLevel="76" levelUpSp="7400000" />
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="43" getLevel="76" levelUpSp="7400000" />
-		<skill skillName="Dryad Root" skillId="1201" skillLvl="34" getLevel="76" levelUpSp="8000000" />
-		<skill skillName="Wind Shackle" skillId="1206" skillLvl="20" getLevel="76" levelUpSp="7400000" />
-		<skill skillName="Recharge" skillId="1013" skillLvl="33" getLevel="76" levelUpSp="7400000" />
-		<skill skillName="Prophecy of Wind" skillId="1357" skillLvl="1" getLevel="76" levelUpSp="7400000">
-			<item id="90108" count="1" />
-		</skill>
-		<skill skillName="Might of Heaven" skillId="1028" skillLvl="20" getLevel="76" levelUpSp="7400000" />
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="3" getLevel="76" levelUpSp="7400000">
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="3" getLevel="76" levelUpSp="8100000">
 			<item id="8620" count="1" /> <!-- Ancient Book: Divine Inspiration (Manuscript) -->
 		</skill>
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="4" getLevel="76" levelUpSp="7400000">
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="4" getLevel="76" levelUpSp="8100000">
 			<item id="8621" count="1" /> <!-- Ancient Book: Divine Inspiration (Original Version) -->
 		</skill>
-		<skill skillName="Mount Saber Tooth Cougar" skillId="1835" skillLvl="1" getLevel="76">
-			<item id="90040" count="1" /> <!-- Spellbook: Mount Saber Tooth Cougar -->
-		</skill>
-		
-		<skill skillName="Anti Magic" skillId="146" skillLvl="47" getLevel="77" levelUpSp="7400000" />
-		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="43" getLevel="77" levelUpSp="7400000" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="43" getLevel="77" levelUpSp="7400000" />
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="44" getLevel="77" levelUpSp="7400000" />
-		<skill skillName="Mass Purify" skillId="1551" skillLvl="1" getLevel="77" levelUpSp="7400000">
-			<item id="90109" count="1" />
-		</skill>
-		<skill skillName="Mass Cure Poison" skillId="1550" skillLvl="1" getLevel="77" levelUpSp="7400000">
-			<item id="90104" count="1" />
-		</skill>
-		
-		<skill skillName="Anti Magic" skillId="146" skillLvl="48" getLevel="78" levelUpSp="16300000" />
-		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="44" getLevel="78" levelUpSp="16300000" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="44" getLevel="78" levelUpSp="16300000" />
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="45" getLevel="78" levelUpSp="16300000" />
-		<skill skillName="Dryad Root" skillId="1201" skillLvl="35" getLevel="78" levelUpSp="16300000" />
-		<skill skillName="Wind Shackle" skillId="1206" skillLvl="21" getLevel="78" levelUpSp="16300000" />
-		<skill skillName="Recharge" skillId="1013" skillLvl="34" getLevel="78" levelUpSp="16300000" />
-		<skill skillName="Enlightenment" skillId="1533" skillLvl="1" getLevel="78" levelUpSp="16300000">
-			<item id="90111" count="1" />
-		</skill>
-		<skill skillName="Might of Heaven" skillId="1028" skillLvl="21" getLevel="78" levelUpSp="16300000" />
-		<skill skillName="Stigma of Shilen" skillId="1539" skillLvl="5" getLevel="78" levelUpSp="16300000" />
-		
-		<skill skillName="Mana Gain" skillId="1460" skillLvl="1" getLevel="79" levelUpSp="16300000">
-			<item id="90106" count="1" />
-		</skill>
-		
-		<skill skillName="Lord of Vampires" skillId="1507" skillLvl="1" getLevel="80" levelUpSp="16300000">
-			<item id="90110" count="1" />
-		</skill>
+		<skill skillId="328" skillLvl="1" skillName="Wisdom" levelUpSp="10000000" getLevel="76" />
+		<skill skillId="329" skillLvl="1" skillName="Health" levelUpSp="10000000" getLevel="76" />
+		<skill skillId="1354" skillLvl="1" skillName="Arcane Protection" levelUpSp="10000000" getLevel="76" />
+		<skill skillId="331" skillLvl="1" skillName="Skill Mastery" levelUpSp="13000000" getLevel="77" />
+		<skill skillId="427" skillLvl="1" skillName="Spell Force" levelUpSp="13000000" getLevel="77" />
+		<skill skillId="1358" skillLvl="1" skillName="Block Shield" levelUpSp="13000000" getLevel="77" />
+		<skill skillId="336" skillLvl="1" skillName="Arcane Wisdom" levelUpSp="21340000" getLevel="78" />
+		<skill skillId="436" skillLvl="1" skillName="Divine Lore" levelUpSp="21340000" getLevel="78" />
+		<skill skillId="1357" skillLvl="1" skillName="Prophecy of Wind" levelUpSp="21340000" getLevel="78" />
+		<skill skillId="1428" skillLvl="1" skillName="Mass Recharge" levelUpSp="150000000" getLevel="80" />
 	</skillTree>
 </list>

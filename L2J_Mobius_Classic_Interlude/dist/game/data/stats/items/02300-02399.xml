@@ -350,6 +350,20 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
+	<item id="2325" name="Recipe: Tears of Fairy" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Tears of Fairy. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="11480" />
+		<set name="recipe_id" val="218" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
 	<item id="2326" name="Recipe: Horn of Glory" type="EtcItem">
 		<!-- For Dwarves only. Recipe for a Horn of Glory. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
@@ -658,6 +672,34 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
+	<item id="2348" name="Recipe: Heathen's Book" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Heathen's Book. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="17200" />
+		<set name="recipe_id" val="241" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2349" name="Recipe: Hex Doll" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a Hex Doll. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="17200" />
+		<set name="recipe_id" val="242" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
 	<item id="2350" name="Recipe: Pa'agrio Axe" type="EtcItem">
 		<!-- For Dwarves only. Recipe for a Pa'agrio Axe. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
@@ -812,8 +854,105 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="2368" name="Training Gloves" type="Weapon">
-		<!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
+	<item id="2361" name="Recipe: Candle of Wisdom" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a Candle of Wisdom. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="24520" />
+		<set name="recipe_id" val="254" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2362" name="Recipe: Blessed Branch" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a Blessed Branch. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="24520" />
+		<set name="recipe_id" val="255" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2363" name="Recipe: Phoenix Feather" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Phoenix Feather. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="24520" />
+		<set name="recipe_id" val="256" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2364" name="Recipe: Cerberus Eye" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a Cerberus Eye. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="24520" />
+		<set name="recipe_id" val="257" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2365" name="Recipe: Scroll of Destruction" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a Scroll of Destruction. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="24520" />
+		<set name="recipe_id" val="258" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2366" name="Recipe: Black Dragon Claw" type="EtcItem">
+		<!-- For Dwarves only. Recipe for Black Dragon Claw. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="24520" />
+		<set name="recipe_id" val="259" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2367" name="Recipe: Three Eyed Crow's Feather" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Three Eyed Crow's Feather. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="24520" />
+		<set name="recipe_id" val="260" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
+	<item id="2368" name="Squire's Gloves" type="Weapon">
 		<set name="icon" val="icon.weapon_training_gloves_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -844,7 +983,6 @@
 		</stats>
 	</item>
 	<item id="2369" name="Squire's Sword" type="Weapon">
-		<!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
 		<set name="icon" val="icon.weapon_squires_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -863,7 +1001,6 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pAtk">6</stat>
 			<stat type="mAtk">5</stat>
@@ -873,8 +1010,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2370" name="Guild Member's Club" type="Weapon">
-		<!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
+	<item id="2370" name="Sqire's Blunt Weapon" type="Weapon">
 		<set name="icon" val="icon.weapon_club_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1001,13 +1137,31 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
+	<item id="2375" name="Wolf Collar" type="EtcItem">
+		<!-- Necklace used to summon Wolves. Takes a part of the XP gained by the Pet master. -->
+		<set name="icon" val="icon.etc_prefect_belt_i00" />
+		<set name="default_action" val="SKILL_MAINTAIN" />
+		<set name="etcitem_type" val="PET_COLLAR" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="10" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="SummonItems" />
+		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
+		<set name="commissionItemType" val="PET_SUPPLIES" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="2046" level="1" /> <!-- Summon Pet -->
+		</skills>
+	</item>
 	<item id="2376" name="Avadon Breastplate" type="Armor">
 		<set name="icon" val="icon.armor_t66_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="277" />
+		<set name="crystal_count" val="29" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="7920" />
@@ -1025,7 +1179,7 @@
 		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="340" />
+		<set name="crystal_count" val="36" />
 		<set name="crystal_type" val="D" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="3870" />
@@ -1043,7 +1197,7 @@
 		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="340" />
+		<set name="crystal_count" val="36" />
 		<set name="crystal_type" val="D" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="3820" />
@@ -1061,7 +1215,7 @@
 		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="173" />
+		<set name="crystal_count" val="18" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="3520" />
@@ -1079,7 +1233,7 @@
 		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="268" />
+		<set name="crystal_count" val="28" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="3370" />
@@ -1098,7 +1252,7 @@
 		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="onepiece" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="628" />
+		<set name="crystal_count" val="72" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="9980" />
@@ -1117,7 +1271,7 @@
 		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="onepiece" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="463" />
+		<set name="crystal_count" val="308" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="9780" />
@@ -1136,7 +1290,7 @@
 		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="onepiece" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="704" />
+		<set name="crystal_count" val="469" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="9200" />
@@ -1154,7 +1308,7 @@
 		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="208" />
+		<set name="crystal_count" val="22" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="4330" />
@@ -1172,7 +1326,7 @@
 		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="214" />
+		<set name="crystal_count" val="142" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="4300" />
@@ -1205,7 +1359,7 @@
 		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="94" />
+		<set name="crystal_count" val="10" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1530" />
@@ -1223,7 +1377,7 @@
 		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="129" />
+		<set name="crystal_count" val="14" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1480" />
@@ -1241,7 +1395,7 @@
 		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="134" />
+		<set name="crystal_count" val="89" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1480" />
@@ -1260,7 +1414,7 @@
 		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="onepiece" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="304" />
+		<set name="crystal_count" val="35" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="5600" />
@@ -1279,7 +1433,7 @@
 		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="onepiece" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="470" />
+		<set name="crystal_count" val="54" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="5500" />
@@ -1298,7 +1452,7 @@
 		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="onepiece" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="470" />
+		<set name="crystal_count" val="54" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="5500" />
@@ -1317,7 +1471,7 @@
 		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="onepiece" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="347" />
+		<set name="crystal_count" val="231" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="5400" />
@@ -1336,7 +1490,7 @@
 		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="onepiece" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="528" />
+		<set name="crystal_count" val="352" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="5300" />
@@ -1355,7 +1509,7 @@
 		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="onepiece" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="528" />
+		<set name="crystal_count" val="352" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="5350" />
@@ -1373,7 +1527,7 @@
 		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="407" />
+		<set name="crystal_count" val="43" />
 		<set name="crystal_type" val="D" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="720" />
@@ -1392,7 +1546,7 @@
 		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="208" />
+		<set name="crystal_count" val="22" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1960" />
@@ -1411,7 +1565,7 @@
 		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="321" />
+		<set name="crystal_count" val="33" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1920" />
@@ -1430,7 +1584,7 @@
 		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="321" />
+		<set name="crystal_count" val="33" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1900" />

@@ -10,8 +10,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="80" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
 		<set name="is_tradable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -40,8 +40,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="300" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
 		<set name="is_tradable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -70,8 +70,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="750" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
 		<set name="is_tradable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -103,8 +103,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="750" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
 		<set name="is_tradable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -136,8 +136,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="150" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
 		<set name="is_tradable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -166,8 +166,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="120" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
 		<set name="is_tradable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -196,8 +196,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CHRYSOLITE" />
 		<set name="weight" val="100" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
 		<set name="is_tradable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -226,8 +226,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="150" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="9" />
+		<set name="spiritshots" val="3" />
 		<set name="mp_consume" val="1" />
 		<set name="reuse_delay" val="10" />
 		<set name="is_tradable" val="false" />
@@ -248,7 +248,7 @@
 			<stat type="pAtkRange">5000</stat>
 		</stats>
 	</item>
-	<item id="1308" name="Compound Scale Mail" type="Armor">
+	<item id="1308" name="Top" type="Armor">
 		<!-- Temporary item for Kamex -->
 		<set name="icon" val="icon.weapon_voodoo_doll_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -355,7 +355,7 @@
 			<stat type="maxMp">142</stat>
 		</stats>
 	</item>
-	<item id="1313" name="Compound Scale Gaiters" type="Armor">
+	<item id="1313" name="Pants" type="Armor">
 		<!-- Temporary item for Kamex -->
 		<set name="icon" val="icon.weapon_voodoo_doll_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -562,7 +562,7 @@
 			<stat type="pDef">14</stat>
 		</stats>
 	</item>
-	<item id="1323" name="Leather Shoes" type="Armor">
+	<item id="1323" name="Shoes" type="Armor">
 		<!-- Temporary item for Kamex -->
 		<set name="icon" val="icon.armor_iron_boots_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -783,10 +783,10 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="2250" />
 		<set name="price" val="8320" />
-		<set name="soulshots" val="1" />
+		<set name="soulshots" val="2" />
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="spiritshots" val="1" />
+		<set name="spiritshots" val="2" />
 		<stats>
 			<stat type="pAtk">21</stat>
 			<stat type="mAtk">12</stat>
@@ -917,7 +917,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1344" name="Mithril Arrow" type="EtcItem">
-		<!-- Steel Arrow coated by mithril. For A-grade bows. -->
+		<!-- Steel arrow plated with Mithril. -->
 		<set name="icon" val="icon.etc_mithril_quiver_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="etcitem_type" val="ARROW" />
@@ -927,6 +927,21 @@
 		<set name="weight" val="3" />
 		<set name="price" val="8" />
 		<set name="crystal_type" val="A" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1345" name="Arrow of Light" type="EtcItem">
+		<!-- A light arrow used for bows (S-grade). Material is unknown. -->
+		<set name="icon" val="icon.etc_shining_quiver_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="etcitem_type" val="ARROW" />
+		<set name="bodypart" val="lhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="3" />
+		<set name="price" val="10" />
+		<set name="crystal_type" val="S" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
@@ -947,8 +962,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1347" name="Monster Eye's Meat" type="EtcItem">
-		<!-- The meat of monster eye. Take this to Grocer Sarien. -->
+	<item id="1347" name="Monster Eye Meat" type="EtcItem">
+		<!-- The carcass of monster eye. Take this to Trader Sarien. -->
 		<set name="icon" val="icon.etc_bark_gold_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -964,7 +979,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1348" name="Basilisk's Gizzard" type="EtcItem">
-		<!-- The digestive organ of a basilisk. Take this to Grocer Sarien. -->
+		<!-- The digestive organ of a basilisk. Take this to Trader Sarien. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1043,7 +1058,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1353" name="Skull" type="EtcItem">
+	<item id="1353" name="Deadman's Skull" type="EtcItem">
 		<!-- Skull of skeleton from ruins. Take this to Samed in the Town of Gludio. -->
 		<set name="icon" val="icon.etc_skull_white_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1059,8 +1074,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1354" name="Ribs" type="EtcItem">
-		<!-- Ribs of skeleton from ruins. Take this to Samed in the Town of Gludio. -->
+	<item id="1354" name="Deadman's Rib Bone" type="EtcItem">
+		<!-- Rib of skeleton from ruins. Take this to Samed in the Town of Gludio. -->
 		<set name="icon" val="icon.etc_rib_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1107,7 +1122,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1357" name="Thigh Bone" type="EtcItem">
+	<item id="1357" name="Deadman's Thigh Bone" type="EtcItem">
 		<!-- Thigh bone of skeleton from ruins. Take this to Samed in the Town of Gludio. -->
 		<set name="icon" val="icon.etc_piece_bone_white_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1252,7 +1267,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1366" name="Monster Eye's Lens" type="EtcItem">
-		<!-- The transparent part of monster eye. Take this to Grocer Sarien. -->
+		<!-- The transparent part of monster eye. Take this to Trader Sarien. -->
 		<set name="icon" val="icon.etc_crystal_ball_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1356,7 +1371,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1374" name="Greater Wind Walk Potion" type="EtcItem">
-		<!-- Magic potion that increases Speed for 5 minutes. -->
+		<!-- Magical potion that increases movement Speed dramatically -->
 		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1378,7 +1393,7 @@
 		</skills>
 	</item>
 	<item id="1375" name="Greater Haste Potion" type="EtcItem">
-		<!-- Magical potion that increases Atk. Spd. dramatically for 5 minutes. -->
+		<!-- Magical potion that increases Atk. Spd. dramatically -->
 		<set name="icon" val="icon.etc_lesser_potion_purple_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1412,8 +1427,8 @@
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="300" />
 		<set name="price" val="81800" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="SPEAR" />
 		<set name="isAppearanceable" val="true" />
@@ -1441,7 +1456,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1378" name="Spellbook: Divine Heal" type="EtcItem">
-		<!-- Spellbook needed to learn Divine Heal. Used by Human Knights. Required level: 26 -->
+		<!-- Spellbook needed to learn Divine Heal. Used by Human Knights. Required level: 28 -->
 		<set name="icon" val="icon.etc_spell_books_hfighter_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1471,7 +1486,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1381" name="Spellbook: Freezing Strike" type="EtcItem">
-		<!-- Spellbook needed to learn Freezing Strike. Used by Palus Knights and Assassins. Required level: 34 -->
+		<!-- Spellbook needed to learn Freezing Strike. Used by Palus Knights and Assassins. Required level: 36 -->
 		<set name="icon" val="icon.etc_spell_books_defighter_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1511,7 +1526,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1385" name="Spellbook: Recharge" type="EtcItem">
-		<!-- Spellbook needed to learn Recharge. Used by Elven Oracles and Shillien Oracles. Required level: 28 -->
+		<!-- Spellbook needed to learn Recharge. Used by Elven Oracles and Shillien Oracles. Required level: 30 -->
 		<set name="icon" val="icon.etc_spell_books_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1601,7 +1616,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1394" name="Spellbook: Sleep" type="EtcItem">
-		<!-- Spellbook needed to learn Sleep. Used by Human Wizards, Clerics, Elven Wizards, Elven Oracles, Dark Wizards, and Shillien Oracles. Required level: 23 -->
+		<!-- Spellbook needed to learn Sleep. Used by Human Wizards, Clerics, Elven Wizards, Elven Oracles, Dark Wizards, and Shillien Oracles. Required level: 25 -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1609,6 +1624,24 @@
 		<set name="price" val="1800" />
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1395" name="Spellbook: Surrender to Water" type="EtcItem">
+		<!-- Spellbook needed to learn Surrender to Water. -->
+		<set name="icon" val="icon.etc_spell_books_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="price" val="1250" />
+	</item>
+	<item id="1396" name="Spellbook: Surrender to Wind" type="EtcItem">
+		<!-- Spellbook needed to learn Surrender to Water -->
+		<set name="icon" val="icon.etc_spell_books_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="price" val="1250" />
 	</item>
 	<item id="1397" name="Spellbook: Peace" type="EtcItem">
 		<!-- Spellbook needed to learn Peace. Used by Clerics. Required level: 35 -->

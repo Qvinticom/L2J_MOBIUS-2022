@@ -1919,7 +1919,6 @@
 				<item id="5007" min="1" max="1" chance="0.03" /> <!-- Recipe: Bow of Peril (60%) -->
 				<item id="4964" min="1" max="1" chance="0.03" /> <!-- Recipe: Heavy War Axe (60%) -->
 				<item id="4963" min="1" max="1" chance="0.03" /> <!-- Recipe: Great Sword (60%) -->
-				<item id="90012" min="1" max="1" chance="0.03" /> <!-- Common Life Stone -->
 			</drop>
 			<spoil>
 				<item id="4993" min="1" max="1" chance="23.84" /> <!-- Recipe: Sealed Doom Gloves (60%) -->
@@ -1997,7 +1996,6 @@
 				<item id="4980" min="1" max="1" chance="0.75" /> <!-- Recipe: Doom Shield (60%) -->
 				<item id="4041" min="1" max="1" chance="0.3" /> <!-- Mold Hardener -->
 				<item id="4972" min="1" max="1" chance="0.075" /> <!-- Recipe: Great Axe (60%) -->
-				<item id="90012" min="1" max="1" chance="0.075" /> <!-- Common Life Stone -->
 			</drop>
 			<spoil>
 				<item id="4980" min="1" max="1" chance="16.53" /> <!-- Recipe: Doom Shield (60%) -->
@@ -2085,7 +2083,6 @@
 				<item id="4623" min="1" max="1" chance="0.075" /> <!-- Greater Dye of WIT <Wit + 4 Int - 4> - 2nd Class Transfer -->
 				<item id="4624" min="1" max="1" chance="0.075" /> <!-- Greater Dye of WIT <Wit + 4 Men - 4> - 2nd Class Transfer -->
 				<item id="4969" min="1" max="1" chance="0.075" /> <!-- Recipe: Twilight Knife (60%) -->
-				<item id="90012" min="1" max="1" chance="0.03" /> <!-- Common Life Stone -->
 			</drop>
 			<spoil>
 				<item id="4964" min="1" max="1" chance="1.693" /> <!-- Recipe: Heavy War Axe (60%) -->
@@ -2260,9 +2257,7 @@
 				<item id="1974" min="1" max="1" chance="2.246" /> <!-- Crimson Boot Fabric -->
 				<item id="2950" min="1" max="1" chance="2.234" /> <!-- Gloves of Seal Pattern -->
 				<item id="2946" min="1" max="1" chance="1.519" /> <!-- Plated Leather Glove Design -->
-				<item id="49432" min="1" max="1" chance="0.075" /> <!-- Spellbook: Stigma of Shilen -->
 				<item id="5815" min="1" max="1" chance="0.03" /> <!-- Spellbook: Wild Magic -->
-				<item id="49568" min="1" max="1" chance="0.03" /> <!-- Spellbook: Sonic Move -->
 			</drop>
 			<spoil>
 				<item id="1895" min="1" max="3" chance="52.74" /> <!-- Metallic Fiber -->
@@ -2338,6 +2333,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
+		<equipment rhand="75" lhand="104" /> <!-- Caliburs / Shield of Victory -->
 		<acquire exp="8018" sp="240" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="563.434125" hpRegen="5.5" mp="637.2" mpRegen="2.1" />
@@ -2386,9 +2382,6 @@
 				<item id="2075" min="1" max="1" chance="0.3" /> <!-- Orcish Glaive Blade -->
 				<item id="2070" min="1" max="1" chance="0.3" /> <!-- Cursed Dagger Blade -->
 				<item id="2062" min="1" max="1" chance="0.3" /> <!-- Scythe Edge -->
-				<item id="49423" min="1" max="1" chance="0.075" /> <!-- Spellbook: Dual Weapon Defense -->
-				<item id="49424" min="1" max="1" chance="0.075" /> <!-- Spellbook: Broad Sweep -->
-				<item id="49569" min="1" max="1" chance="0.03" /> <!-- Spellbook: Sand Bomb -->
 			</drop>
 			<spoil>
 				<item id="2251" min="1" max="1" chance="46.95" /> <!-- Recipe: Steel Arrow -->
@@ -2454,7 +2447,6 @@
 				<item id="2330" min="1" max="1" chance="0.03" /> <!-- Recipe: Homunkulus' Sword -->
 				<item id="8388" min="1" max="1" chance="0.03" /> <!-- Spellbook: Greater Might -->
 				<item id="8389" min="1" max="1" chance="0.03" /> <!-- Spellbook: Greater Shield -->
-				<item id="49571" min="1" max="1" chance="0.03" /> <!-- Spellbook: Clear Mind -->
 			</drop>
 			<spoil>
 				<item id="1867" min="1" max="3" chance="68.38" /> <!-- Animal Skin -->
@@ -2534,7 +2526,6 @@
 				<item id="1880" min="1" max="1" chance="0.75" /> <!-- Steel -->
 				<item id="3942" min="1" max="1" chance="0.03" /> <!-- Spellbook: Party Return -->
 				<item id="6350" min="1" max="1" chance="0.03" /> <!-- Amulet: Pa'agrio's Honor -->
-				<item id="49429" min="1" max="1" chance="0.03" /> <!-- Spellbook: Hide -->
 			</drop>
 			<spoil>
 				<item id="1873" min="1" max="1" chance="75.89" /> <!-- Silver Nugget -->
@@ -2612,7 +2603,6 @@
 				<item id="1880" min="1" max="1" chance="0.75" /> <!-- Steel -->
 				<item id="3942" min="1" max="1" chance="0.03" /> <!-- Spellbook: Party Return -->
 				<item id="6350" min="1" max="1" chance="0.03" /> <!-- Amulet: Pa'agrio's Honor -->
-				<item id="49429" min="1" max="1" chance="0.03" /> <!-- Spellbook: Hide -->
 			</drop>
 			<spoil>
 				<item id="1873" min="1" max="1" chance="75.89" /> <!-- Silver Nugget -->
@@ -2690,7 +2680,6 @@
 				<item id="1880" min="1" max="1" chance="0.75" /> <!-- Steel -->
 				<item id="3942" min="1" max="1" chance="0.03" /> <!-- Spellbook: Party Return -->
 				<item id="6350" min="1" max="1" chance="0.03" /> <!-- Amulet: Pa'agrio's Honor -->
-				<item id="49429" min="1" max="1" chance="0.03" /> <!-- Spellbook: Hide -->
 			</drop>
 			<spoil>
 				<item id="1873" min="1" max="1" chance="75.89" /> <!-- Silver Nugget -->
@@ -2766,10 +2755,8 @@
 				<item id="2080" min="1" max="1" chance="0.3" /> <!-- Spirit Sword Blade -->
 				<item id="2078" min="1" max="1" chance="0.3" /> <!-- Katana Blade -->
 				<item id="2077" min="1" max="1" chance="0.3" /> <!-- Shamshir Blade -->
-				<item id="49562" min="1" max="1" chance="0.075" /> <!-- Spellbook: Spirit Sharing -->
 				<item id="3080" min="1" max="1" chance="0.03" /> <!-- Spellbook: Sleeping Cloud -->
 				<item id="3109" min="1" max="1" chance="0.03" /> <!-- Amulet: Seal of Silence -->
-				<item id="49570" min="1" max="1" chance="0.03" /> <!-- Spellbook: Mass Curse Gloom -->
 			</drop>
 			<spoil>
 				<item id="3007" min="1" max="1" chance="14.54" /> <!-- Recipe: Theca Leather Boots -->
@@ -2897,7 +2884,6 @@
 				<item id="1969" min="1" max="1" chance="2.323" /> <!-- Dwarven Chain Gaiter Material -->
 				<item id="1968" min="1" max="1" chance="1.484" /> <!-- Dwarven Chain Mail Shirt Material -->
 				<item id="2331" min="1" max="1" chance="0.3" /> <!-- Recipe: Poleaxe -->
-				<item id="49432" min="1" max="1" chance="0.3" /> <!-- Spellbook: Stigma of Shilen -->
 				<item id="5815" min="1" max="1" chance="0.03" /> <!-- Spellbook: Wild Magic -->
 			</drop>
 			<spoil>
@@ -3539,7 +3525,6 @@
 				<item id="5496" min="1" max="1" chance="1.426" /> <!-- Sealed Dark Crystal Boot Lining -->
 				<item id="5497" min="1" max="1" chance="1.407" /> <!-- Sealed Tallum Boot Lining -->
 				<item id="5509" min="1" max="1" chance="1.406" /> <!-- Sealed Tallum Glove Design -->
-				<item id="90045" min="1" max="1" chance="0.03" /> <!-- Magical Tablet -->
 			</drop>
 			<spoil>
 				<item id="1865" min="1" max="9" chance="84.2" /> <!-- Varnish -->
@@ -4636,7 +4621,6 @@
 				<item id="4088" min="1" max="1" chance="2.381" /> <!-- Sealed Blue Wolf Helmet Design -->
 				<item id="1874" min="1" max="1" chance="2.331" /> <!-- Oriharukon Ore -->
 				<item id="1875" min="1" max="1" chance="2.331" /> <!-- Stone of Purity -->
-				<item id="90012" min="1" max="1" chance="0.03" /> <!-- Common Life Stone -->
 			</drop>
 			<spoil>
 				<item id="1870" min="1" max="9" chance="76.68" /> <!-- Coal -->

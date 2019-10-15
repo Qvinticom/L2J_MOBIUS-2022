@@ -184,7 +184,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="903" toLevel="6" name="Stratum Explosion">
-		<!-- Attacks enemies in front of you. Power $s1. -->
+		<!-- Inflicts a powerful blow on nearby enemies with $s1 Power. -->
 		<icon>icon.skill_transform_etc</icon>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -465,7 +465,7 @@
 		<affectScope>SQUARE_PB</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
-	<skill id="907" toLevel="6" name="Aqua Splash">
+	<skill id="907" toLevel="6" name="Aqua Blast">
 		<!-- Inflicts a powerful ranged attack with $s1 Power. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<castRange>900</castRange>
@@ -528,7 +528,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="908" toLevel="6" name="Spin Slash">
-		<!-- Attacks enemies in front of you. Power $s1. -->
+		<!-- Inflicts a powerful blow on nearby enemies with $s1 Power. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -753,7 +753,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="911" toLevel="11" name="Energy Burst">
-		<!-- Attacks enemies in front of you. Power $s1. -->
+		<!-- Inflicts a powerful blow on nearby enemies with $s1 Power. -->
 		<icon>icon.skill_transform_etc</icon>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -840,21 +840,22 @@
 		</conditions>
 		<effects>
 			<effect name="Summon">
-				<npcId>14918</npcId>
+				<npcId>14918</npcId> <!-- Imperial Phoenix -->
+				<lifeTime>3600</lifeTime>
 				<consumeItemId>1461</consumeItemId> <!-- Crystal (A-grade) -->
 				<consumeItemCount>1</consumeItemCount>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="913" toLevel="1" name="Deflect Magic">
-		<!-- Increases Magic Attack Resistance by 50% for 20 minutes. -->
+		<!-- Increases Magic Attack Resistance by 100% for 20 minutes. -->
 		<icon>icon.skill0913</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>DD_RESIST</abnormalType>
 		<effectPoint>679</effectPoint>
 		<hitTime>1500</hitTime>
-		<magicLvl>77</magicLvl>
+		<magicLvl>81</magicLvl>
 		<mpConsume>37</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
@@ -864,13 +865,13 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="ResistDDMagic">
-				<amount>50</amount>
+				<amount>100</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="914" toLevel="1" name="Song of Purification">
-		<!-- With 50% probability removes debuffs from party members. Debuff Resistance +80%, Healing Power +30% for 2 min. -->
+		<!-- Provides an 80% chance of removing a party member's debuffs. And for the next 2 minutes, increases Debuff Resistance by 30% and increases the Healing power received by 30%. -->
 		<icon>icon.skill0914</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -879,8 +880,8 @@
 		<effectPoint>679</effectPoint>
 		<hitTime>2500</hitTime>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
-		<magicLvl>80</magicLvl>
-		<mpConsume>66</mpConsume>
+		<magicLvl>81</magicLvl>
+		<mpConsume>60</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>240000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -899,13 +900,13 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="ResistAbnormalByCategory">
-				<amount>-50</amount>
+				<amount>-30</amount>
 				<slot>DEBUFF</slot>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="915" toLevel="1" name="Dance of Berserker">
-		<!-- Decreases a party member's P. Def. by 4%, M. Def. by 8%, P. Evasion by 2, and increases their P. Atk. by 4%, M. Atk. by 8%, Atk. Spd. by 4%, Casting Spd. by 4% and Speed by 4 for 2 minutes. -->
+		<!-- Decreases a party member's P. Def., M. Def. and Evasion, and increases their P. Atk., M. Atk., Atk. Spd., Casting Spd. and Speed for 2 minutes. -->
 		<icon>icon.skill0915</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -914,8 +915,8 @@
 		<effectPoint>679</effectPoint>
 		<hitTime>2500</hitTime>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
-		<magicLvl>80</magicLvl>
-		<mpConsume>66</mpConsume>
+		<magicLvl>81</magicLvl>
+		<mpConsume>60</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>240000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -923,49 +924,57 @@
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>DUAL</item>
+					<item>DUALBLUNT</item>
+				</weaponType>
+			</condition>
+		</conditions>
 		<effects>
-			<effect name="PhysicalDefence">
-				<amount>-4</amount>
+			<effect name="PAtk">
+				<amount>8</amount>
 				<mode>PER</mode>
 			</effect>
+			<effect name="MAtk">
+				<amount>16</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>8</amount>
+				<mode>DIFF</mode>
+			</effect>
 			<effect name="MagicalDefence">
+				<amount>-16</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
 				<amount>-8</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PhysicalEvasion">
-				<amount>-2</amount>
+				<amount>-4</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="PAtk">
-				<amount>4</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MAtk">
+			<effect name="PhysicalAttackSpeed">
 				<amount>8</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PhysicalAttackSpeed">
-				<amount>4</amount>
-				<mode>PER</mode>
-			</effect>
 			<effect name="MagicalAttackSpeed">
-				<amount>4</amount>
+				<amount>8</amount>
 				<mode>PER</mode>
-			</effect>
-			<effect name="Speed">
-				<amount>4</amount>
-				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="916" toLevel="4" name="Shield Deflect Magic">
-		<!-- For $s1, transfers magical damage back to the enemy caster. Requires Shield. -->
+		<!-- For $s1, transfers magical damage back to the enemy caster. -->
 		<icon>icon.skill0916</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>8</abnormalTime>
 		<abnormalType>REFLECT_MAGIC_DD</abnormalType>
 		<effectPoint>204</effectPoint>
-		<hitTime>1000</hitTime>
+		<hitTime>500</hitTime>
 		<magicLvl>
 			<value level="1">60</value>
 			<value level="2">64</value>
@@ -999,15 +1008,15 @@
 		</effects>
 	</skill>
 	<skill id="917" toLevel="1" name="Final Secret">
-		<!-- For 30 sec., you call upon your hidden reserves to increase your skills power by 10% and standard attack damage by 8% during PvP. -->
+		<!-- For 30 sec., you call upon your hidden reserves to increase your skills power and ordinary attack damage by 30% during PvP. -->
 		<icon>icon.skill0917</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>FINAL_SECRET</abnormalType>
 		<effectPoint>597</effectPoint>
 		<hitTime>1500</hitTime>
-		<magicLvl>79</magicLvl>
-		<mpConsume>41</mpConsume>
+		<magicLvl>81</magicLvl>
+		<mpConsume>37</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>150000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -1016,22 +1025,22 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="PhysicalSkillPower">
-				<amount>10</amount>
+				<amount>30</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PvpPhysicalAttackDamageBonus">
-				<amount>8</amount>
+				<amount>30</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="918" toLevel="1" name="Maximum Force Focus">
-		<!-- Immediately increases Momentum to its maximum level. Available if the charge is below 8th level. Requires a fist weapon. -->
+		<!-- Immediately increases Momentum to its maximum level. -->
 		<icon>icon.skill0918</icon>
 		<effectPoint>150</effectPoint>
 		<hitTime>900</hitTime>
 		<hpConsume>80</hpConsume>
-		<magicLvl>80</magicLvl>
+		<magicLvl>81</magicLvl>
 		<mpConsume>20</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>75000</reuseDelay>
@@ -1053,12 +1062,12 @@
 		</effects>
 	</skill>
 	<skill id="919" toLevel="1" name="Maximum Sonic Focus">
-		<!-- Immediately increases Momentum to its maximum level. Available if the charge is below 8th level. Requires a dualsword. -->
+		<!-- Immediately increases Momentum to its maximum level. -->
 		<icon>icon.skill0919</icon>
 		<effectPoint>150</effectPoint>
 		<hitTime>900</hitTime>
 		<hpConsume>80</hpConsume>
-		<magicLvl>80</magicLvl>
+		<magicLvl>81</magicLvl>
 		<mpConsume>20</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>75000</reuseDelay>
@@ -1069,6 +1078,7 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DUAL</item>
+					<item>DUALBLUNT</item>
 				</weaponType>
 			</condition>
 			<condition name="OpEnergyMax">
@@ -1080,7 +1090,7 @@
 		</effects>
 	</skill>
 	<skill id="920" toLevel="37" name="Power Crush">
-		<!-- Attacks the enemy with $s1 Power added to P. Atk. Over-hit. Critical. -->
+		<!-- Attacks the enemy with $s1 Power added to P. Atk. Over-hit and Critical are possible. -->
 		<icon>icon.skill0920</icon>
 		<castRange>80</castRange>
 		<coolTime>720</coolTime>
@@ -1262,8 +1272,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="921" toLevel="1" name="Spike Thrust">
-		<!-- Attacks a target and inflicts damage with 3849 Power added to P. Atk. Over-hit. Critical. Ignores Shield Defense. -->
+	<skill id="921" toLevel="1" name="Cursed Pierce">
+		<!-- Attacks the enemy with 3849 Power added to P. Atk. Over-hit is possible. Ignores Shield Defense. Critical is possible. -->
 		<icon>icon.skill0921</icon>
 		<castRange>80</castRange>
 		<coolTime>720</coolTime>
@@ -1294,27 +1304,16 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="922" toLevel="4" name="Hide">
-		<!-- Renders invisible for $s1. Effect cancels upon any action except for moving. -->
+	<skill id="922" toLevel="1" name="Hide">
+		<!-- Hides the user. Decreases Speed by 30%, and the effect is canceled if any action other than movement is initiated. -->
 		<icon>icon.skill0922</icon>
 		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>30</abnormalTime>
 		<abnormalType>HIDE</abnormalType>
 		<abnormalVisualEffect>STEALTH</abnormalVisualEffect>
-		<abnormalTime>
-			<value level="1">15</value>
-			<value level="2">20</value>
-			<value level="3">25</value>
-			<value level="4">25</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-		</abnormalTime>
 		<effectPoint>679</effectPoint>
-		<magicLvl>
-			<value level="1">51</value>
-			<value level="2">61</value>
-			<value level="3">71</value>
-			<value level="4">71</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-		</magicLvl>
+		<magicLvl>81</magicLvl>
 		<operateType>A2</operateType>
-		<mpConsume>38</mpConsume>
 		<removedOnAnyActionExceptMove>true</removedOnAnyActionExceptMove>
 		<removedOnDamage>true</removedOnDamage>
 		<reuseDelay>180000</reuseDelay>
@@ -1335,7 +1334,7 @@
 		</effects>
 	</skill>
 	<skill id="923" toLevel="1" name="Dual Dagger Mastery">
-		<!-- When using a dual dagger, increases P. Atk. by 87.5 and the vital points attacks success rate by 5%. -->
+		<!-- When using a dual dagger, increases P. Atk. by 87.5 and the rate of deadly attack by 5%. -->
 		<icon>icon.skill0923</icon>
 		<magicLvl>81</magicLvl>
 		<operateType>P</operateType>
@@ -1362,7 +1361,7 @@
 		</effects>
 	</skill>
 	<skill id="924" toLevel="1" name="Seven Arrow">
-		<!-- Shoots 7 arrows to attack the enemy with 11440 Power added to P. Atk. Critical. -->
+		<!-- Shoots 7 arrows to attack the enemy with 11440 Power added to P. Atk. Critical hit is possible. -->
 		<icon>icon.skill0924</icon>
 		<castRange>900</castRange>
 		<effectPoint>-1022</effectPoint>
@@ -1438,7 +1437,7 @@
 		</effects>
 	</skill>
 	<skill id="927" toLevel="14" name="Burning Chop">
-		<!-- Attacks the enemy with $s1 Power added to P. Atk., causes burns for $s2, and makes him consume $s3 HP every second. Cannot be used when a bow is equipped. Over-hit. Critical. -->
+		<!-- Attacks the enemy with $s1 Power added to P. Atk., causes burns for $s2, and makes him consume $s3 HP every second. Cannot be used when a bow/crossbow is equipped. Over-hit and Critical are possible. -->
 		<icon>icon.skill0927</icon>
 		<abnormalLvl>
 			<value level="1">5</value>
@@ -1565,7 +1564,7 @@
 		</effects>
 	</skill>
 	<skill id="928" toLevel="1" name="Dual Blow">
-		<!-- Attacks the target's vital points with 11234 Power added to P. Atk. Lethal Strike is possible. Half Kill is possible. Critical. Over-hit. Requires a dual dagger to be equipped. -->
+		<!-- Attacks the target's vital points with 11234 Power added to P. Atk. Lethal Strike is possible. Half Kill is possible. Critical hit is possible. Over-hit is possible. Requires a dual dagger to be equipped. -->
 		<icon>icon.skill0928_1</icon>
 		<castRange>40</castRange>
 		<effectPoint>-337</effectPoint>
@@ -1600,6 +1599,190 @@
 				<halfLethal>8</halfLethal>
 			</effect>
 		</effects>
+	</skill>
+	<skill id="929" toLevel="1" name="Spirit of the Cat">
+		<!-- Harness the spirit of your servitor. This skill transforms you into a Human/Cat hybrid with specialized skills for 5 minutes. -->
+		<icon>icon.skilltransform1</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<castRange>600</castRange>
+		<effectPoint>1</effectPoint>
+		<effectRange>1100</effectRange>
+		<hitTime>2500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>-1</magicLvl>
+		<mpConsume>58</mpConsume>
+		<mpInitialConsume>15</mpInitialConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>3600000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>2.5</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>219</transformId>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="UnsummonServitors" />
+			<effect name="Transformation">
+				<transformationId>219</transformationId>
+			</effect>
+			<effect name="PAtk">
+				<amount>40</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>40</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="930" toLevel="1" name="Spirit of the Phantom">
+		<!-- Harness the spirit of your servitor. This skill transforms you into a Dark Elf/Phantom hybrid with specialized skills for 5 minutes. -->
+		<icon>icon.skilltransform1</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<castRange>600</castRange>
+		<effectPoint>1</effectPoint>
+		<effectRange>1100</effectRange>
+		<hitTime>2500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>-1</magicLvl>
+		<mpConsume>58</mpConsume>
+		<mpInitialConsume>15</mpInitialConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>3600000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>2.5</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>221</transformId>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="UnsummonServitors" />
+			<effect name="Transformation">
+				<transformationId>221</transformationId>
+			</effect>
+			<effect name="PAtk">
+				<amount>40</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>40</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="931" toLevel="1" name="Spirit of the Unicorn">
+		<!-- Harness the spirit of your servitor. This skill transforms you into an Elf/Unicorn hybrid with specialized skills for 5 minute. -->
+		<icon>icon.skilltransform1</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<castRange>600</castRange>
+		<effectPoint>1</effectPoint>
+		<effectRange>1100</effectRange>
+		<hitTime>2500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>-1</magicLvl>
+		<mpConsume>58</mpConsume>
+		<mpInitialConsume>15</mpInitialConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>3600000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>2.5</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>220</transformId>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="UnsummonServitors" />
+			<effect name="Transformation">
+				<transformationId>220</transformationId>
+			</effect>
+			<effect name="PAtk">
+				<amount>40</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>40</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="932" toLevel="9" name="Star Stone Gathering">
+		<!-- Collects Star Stones. -->
+		<icon>icon.skill_agathion_cute</icon>
+		<castRange>100</castRange>
+		<effectRange>400</effectRange>
+		<hitTime>6000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>85</magicLvl>
+		<operateType>A1</operateType>
+		<reuseDelay>10000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpTargetNpc">
+				<npcIds>
+					<item>18685</item>
+					<item>18686</item>
+					<item>18687</item>
+					<item>18688</item>
+					<item>18689</item>
+					<item>18690</item>
+					<item>18691</item>
+					<item>18692</item>
+				</npcIds>
+			</condition>
+		</conditions>
 	</skill>
 	<skill id="933" toLevel="1" name="Detection">
 		<!-- Finds any enemies hidden nearby. -->
@@ -2540,7 +2723,7 @@
 		</effects>
 	</skill>
 	<skill id="939" toLevel="1" name="Soul Rage">
-		<!-- Gathers souls and attacks the enemy by hurling projectiles. Possible up to Lv. 40. Critical hit and over-hit are possible. -->
+		<!-- Gathers souls and attacks the enemy by hurling projectiles. Possible up to level 40. Critical hit and over-hit are possible. -->
 		<icon>icon.skill0939</icon>
 		<castRange>600</castRange>
 		<effectPoint>-340</effectPoint>
@@ -2663,7 +2846,7 @@
 		</effects>
 	</skill>
 	<skill id="947" toLevel="1" name="Lucky Strike">
-		<!-- Inflicts an exploding attack on the enemy with 4312 Power added to P. Atk. Causes damage and spoil at the same time on some nearby enemies. Requires a sword or blunt weapon. Over-hit. -->
+		<!-- Inflicts an exploding attack on the enemy with 4312 Power added to P. Atk. Causes damage and spoil at the same time on some nearby enemies. Requires a sword or blunt weapon. Over-hit is possible. -->
 		<icon>icon.skill0947</icon>
 		<affectLimit>3-6</affectLimit>
 		<affectRange>150</affectRange>
@@ -2723,7 +2906,7 @@
 		</effects>
 	</skill>
 	<skill id="949" toLevel="1" name="Onslaught of Pa'agrio">
-		<!-- Attacks near the enemy with 4312 Power added to P. Atk., causes burns for 15 seconds, and makes him consume 92 HP every second. Requires a blunt weapon. Over-hit. -->
+		<!-- Attacks near the enemy with 4312 Power added to P. Atk., causes burns for 15 seconds, and makes him consume 92 HP every second. Requires a blunt weapon. Over-hit is possible. -->
 		<icon>icon.skill0949</icon>
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -2937,7 +3120,7 @@
 		</effects>
 	</skill>
 	<skill id="954" toLevel="1" name="Strider Bite">
-		<!-- Commands the mounted strider to bite the enemies in front. Attacks the enemy with 1649 Power added to P. Atk., causes Bleed for 20 seconds, and makes him consume 54 HP every second. Over-hit. Critical. -->
+		<!-- Commands the mounted strider to bite the enemies in front. Attacks the enemy with 1649 Power added to P. Atk., causes Bleed for 20 seconds, and makes him consume 54 HP every second. Over-hit and Critical are possible. -->
 		<icon>icon.skill00954</icon>
 		<abnormalLvl>6</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -2974,7 +3157,7 @@
 		</effects>
 	</skill>
 	<skill id="955" toLevel="1" name="Strider Dash">
-		<!-- Increases your Speed by 66 for 15 seconds. -->
+		<!-- Increases Speed by 66 for 15 seconds. -->
 		<icon>icon.skill000955</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -3059,7 +3242,7 @@
 		</effects>
 	</skill>
 	<skill id="957" toLevel="37" name="Guillotine Attack">
-		<!-- Attacks the target with $s1 Power added to P. Atk. Requires a two-handed sword/two-handed blunt weapon to be equipped. Ignores Shield Defense. Over-hit. -->
+		<!-- Attacks the target with $s1 Power added to P. Atk. Requires a sword or blunt weapon to be equipped. Ignores Shield Defense. Over-hit is possible. -->
 		<icon>icon.skill957</icon>
 		<castRange>40</castRange>
 		<coolTime>1080</coolTime>
@@ -3244,7 +3427,7 @@
 		</effects>
 	</skill>
 	<skill id="958" toLevel="37" name="Triple Blade Slash">
-		<!-- Attacks the enemy with $s1 Power added to P. Atk. Requires a dualsword. Over-hit. Ignores Shield Defense. -->
+		<!-- Attacks the enemy with $s1 Power added to P. Atk. Requires a dualsword. Over-hit is possible. Ignores Shield Defense. -->
 		<icon>icon.skill958</icon>
 		<castRange>40</castRange>
 		<coolTime>167</coolTime>
@@ -3429,7 +3612,7 @@
 		</effects>
 	</skill>
 	<skill id="959" toLevel="1" name="Frog Jump">
-		<!-- For 15 seconds, Speed + 33. -->
+		<!-- Increases Speed by 33 for 15 seconds. -->
 		<icon>icon.skill_transform_buff</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -3452,7 +3635,7 @@
 		</effects>
 	</skill>
 	<skill id="960" toLevel="1" name="Race Running">
-		<!-- For 15 seconds, Speed + 33. -->
+		<!-- Increases Speed by 33 for 15 seconds. -->
 		<icon>icon.skill_transform_buff</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -3475,7 +3658,7 @@
 		</effects>
 	</skill>
 	<skill id="961" toLevel="1" name="Swift Dash">
-		<!-- For 15 seconds, Speed + 33. -->
+		<!-- Increases Speed by 33 for 15 seconds. -->
 		<icon>icon.skill_transform_buff</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -3746,7 +3929,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="973" toLevel="8" name="Shock Attack">
+	<skill id="973" toLevel="8" name="Stun Attack">
 		<!-- Attack targets with Power $s1 added to P. Atk. Stuns the enemy for $s2. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -3811,11 +3994,13 @@
 					<value level="8">928</value>
 				</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="974" toLevel="7" name="Stun Shot">
-		<!-- Shoots an arrow with $s1 Power added to P. Atk. Causes shock for $s2. Also cancels target. -->
+		<!-- Fires arrows of $s1 power added to P. Attack. Inflicts Stun on the enemy for $s2. Cancels target. -->
 		<icon>icon.skill0101</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -3866,14 +4051,16 @@
 					<value level="7">2784</value>
 				</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 			<effect name="TargetCancel">
 				<chance>40</chance>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="975" toLevel="7" name="Aqua Swirl">
-		<!-- Creates a powerful vortex of water, inflicting Water damage on the enemy with $s1 Power added to M. Atk. -->
+		<!-- Creates a powerful vortex of water and inflicts Water damage on the enemy with $s1 Power added to M. Atk. -->
 		<icon>icon.skill1175</icon>
 		<castRange>750</castRange>
 		<effectPoint>
@@ -3937,8 +4124,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="976" toLevel="7" name="Transformation Skill - Wind Strike">
-		<!-- Creates a powerful hurricane, inflicting Wind damage on the enemy with $s1 Power added to M. Atk. -->
+	<skill id="976" toLevel="7" name="(Wind Strike)">
+		<!-- Creates a powerful hurricane and inflicts Wind damage on the enemy with $s1 Power added to M. Atk. -->
 		<icon>icon.skill1177</icon>
 		<castRange>600</castRange>
 		<effectPoint>
@@ -4002,7 +4189,7 @@
 		</effects>
 	</skill>
 	<skill id="977" toLevel="6" name="Ice Bolt">
-		<!-- Momentarily freezes the surrounding air, inflicting damage on the enemy with $s1 Power and decreasing their Speed by $s3 for $s2. -->
+		<!-- Temporarily freezes the surrounding air, inflicting Water damage on the enemy with $s1 Power added to M. Atk., and decreasing their Speed by $s3 for $s2. -->
 		<icon>icon.skill1184</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -4073,7 +4260,7 @@
 		</effects>
 	</skill>
 	<skill id="978" toLevel="7" name="Shoulder Charge">
-		<!-- Rushes in with the shoulder to attack the enemy. Inflicted with fear for $s1. Consumes up to $s2 souls to increase power. Over-hit. -->
+		<!-- Charges forward and hit the enemies hard with your shoulder to inflict Stun for $s1. Soul consumption boosts the power. Up to $s2 souls can be consumed. Over-hit is possible. -->
 		<icon>icon.skill0494</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -4131,7 +4318,9 @@
 				<power>1</power>
 				<overHit>true</overHit>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="979" toLevel="6" name="Aggression">
@@ -4268,7 +4457,9 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 			<effect name="DefenceTrait">
 				<SLEEP>100</SLEEP>
 			</effect>
@@ -4338,7 +4529,7 @@
 				<!-- Patience -->
 				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>99</maxAttackerLevel>
+				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>10</chance>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
@@ -4509,19 +4700,14 @@
 		<selfEffects>
 			<effect name="CallSkill">
 				<!-- Challenge of Faith -->
-				<skillId>6913</skillId> <!-- Challenge for Fate -->
+				<skillId>6913</skillId> <!-- Challenge of Faith -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</selfEffects>
 	</skill>
-	<skill id="986" toLevel="15" name="Deadly Strike">
-		<!-- Quickly strikes the target three times with $s1 Power. For $s2 decreases enemy's P. Def. by $s3. Requires dual swords. Over-hit. -->
+	<skill id="986" toLevel="25" name="Deadly Strike">
+		<!-- Attacks the enemy with $s1 Power added to P. Atk. Cannot be used when a bow/crossbow/fist weapon is equipped. Over-hit is possible. -->
 		<icon>icon.skill0986</icon>
-		<abnormalLvl>3</abnormalLvl>
-		<abnormalTime>10</abnormalTime>
-		<abnormalType>PD_DOWN</abnormalType>
-		<activateRate>80</activateRate>
-		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>40</castRange>
 		<effectPoint>
 			<value level="1">-417</value>
@@ -4539,6 +4725,16 @@
 			<value level="13">-1626</value>
 			<value level="14">-1727</value>
 			<value level="15">-1827</value>
+			<value level="16">-1925</value>
+			<value level="17">-1973</value>
+			<value level="18">-2020</value>
+			<value level="19">-2067</value>
+			<value level="20">-2112</value>
+			<value level="21">-2156</value>
+			<value level="22">-2200</value>
+			<value level="23">-2241</value>
+			<value level="24">-2282</value>
+			<value level="25">-2320</value>
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1500</hitTime>
@@ -4558,6 +4754,16 @@
 			<value level="13">70</value>
 			<value level="14">72</value>
 			<value level="15">74</value>
+			<value level="16">76</value>
+			<value level="17">77</value>
+			<value level="18">78</value>
+			<value level="19">79</value>
+			<value level="20">80</value>
+			<value level="21">81</value>
+			<value level="22">82</value>
+			<value level="23">83</value>
+			<value level="24">84</value>
+			<value level="25">85</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">38</value>
@@ -4575,15 +4781,24 @@
 			<value level="13">71</value>
 			<value level="14">73</value>
 			<value level="15">75</value>
+			<value level="16">77</value>
+			<value level="17">78</value>
+			<value level="18">78</value>
+			<value level="19">79</value>
+			<value level="20">80</value>
+			<value level="21">80</value>
+			<value level="22">81</value>
+			<value level="23">82</value>
+			<value level="24">82</value>
+			<value level="25">83</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<coolTime>500</coolTime>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<isDebuff>true</isDebuff>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -4592,6 +4807,7 @@
 					<item>DAGGER</item>
 					<item>POLE</item>
 					<item>DUAL</item>
+					<item>DUALBLUNT</item>
 				</weaponType>
 			</condition>
 		</conditions>
@@ -4613,12 +4829,18 @@
 					<value level="13">3252</value>
 					<value level="14">3453</value>
 					<value level="15">3653</value>
+					<value level="16">3849</value>
+					<value level="17">3945</value>
+					<value level="18">4040</value>
+					<value level="19">4133</value>
+					<value level="20">4224</value>
+					<value level="21">4312</value>
+					<value level="22">4399</value>
+					<value level="23">4482</value>
+					<value level="24">4563</value>
+					<value level="25">4640</value>
 				</power>
 				<overHit>true</overHit>
-			</effect>
-			<effect name="PhysicalDefence">
-				<amount>-23</amount>
-				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -4749,27 +4971,18 @@
 		</effects>
 	</skill>
 	<skill id="990" toLevel="1" name="Death Sting">
-		<!-- Fires an arrow of death at an enemy with 13006 Power added to P. Atk. Additionally, blocks magic skills usage for 10 sec. Requires a bow. Over-hit. Critical. -->
+		<!-- Shoots an arrow that is aimed to kill. Attacks the enemy with 24306 Power added to P. Atk. Over-hit possible. Critical hit possible. Requires a bow/crossbow to be equipped. -->
 		<icon>icon.skill0990</icon>
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>10</abnormalTime>
-		<abnormalType>SILENCE</abnormalType>
-		<activateRate>40</activateRate>
-		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>900</castRange>
 		<effectPoint>-1387</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>3500</hitTime>
-		<isDebuff>true</isDebuff>
-		<magicLvl>79</magicLvl>
-		<mpConsume>248</mpConsume>
-		<nextAction>ATTACK</nextAction>
-		<operateType>A2</operateType>
+		<magicLvl>83</magicLvl>
+		<mpConsume>165</mpConsume>
+		<operateType>A1</operateType>
 		<reuseDelay>12000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<coolTime>500</coolTime>
-		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
-		<trait>DERANGEMENT</trait>
 		<staticReuse>true</staticReuse>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -4777,19 +4990,20 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>BOW</item>
+					<item>CROSSBOW</item>
+					<item>TWOHANDCROSSBOW</item>
 				</weaponType>
 			</condition>
 		</conditions>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>13006</power>
+				<power>24306</power>
 				<overHit>true</overHit>
 				<criticalChance>30</criticalChance>
 			</effect>
-			<effect name="Mute" />
 		</effects>
 	</skill>
-	<skill id="991" toLevel="1" name="Throw Dagger">
+	<skill id="991" toLevel="1" name="Throwing Dagger">
 		<!-- Attacks the enemy by throwing a dagger with 3488 Power added to P. Atk. and decreases Speed by 80% for 10 seconds. Requires a dagger to be equipped. -->
 		<icon>icon.skill0991</icon>
 		<abnormalLvl>3</abnormalLvl>
@@ -4832,7 +5046,7 @@
 		</effects>
 	</skill>
 	<skill id="992" toLevel="8" name="Sonic Mastery">
-		<!-- Absorbs the target's Momentum. Momentum can be absorbed with a $s1 chance for standard physical attacks and $s2 during a critical attack. Applies when a sword, blunt weapon, or dualsword is equipped. Up to level $s3 of Momentum can be absorbed. -->
+		<!-- Absorbs the target's Momentum. Momentum can be absorbed with a $s1 chance for regular physical attacks and $s2 during a critical attack. Applies when a sword, blunt weapon, or dualsword is equipped. Up to stage $s3 of Momentum can be absorbed. -->
 		<icon>icon.skill0992</icon>
 		<magicLvl>
 			<value level="1">40</value>
@@ -4885,7 +5099,7 @@
 				<allowWeapons>DUAL,SWORD,BLUNT</allowWeapons>
 				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>100</maxAttackerLevel>
+				<maxAttackerLevel>127</maxAttackerLevel>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
 				<chance>15</chance>
@@ -4910,12 +5124,12 @@
 				<targetType>SELF</targetType>
 				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>100</maxAttackerLevel>
+				<maxAttackerLevel>127</maxAttackerLevel>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="993" toLevel="8" name="Force Mastery">
-		<!-- Absorbs the target's Momentum. Momentum can be absorbed with a $s1 chance for standard physical attacks and $s2 during a critical attack. Applies when a fist weapon is equipped. Up to level $s3 of Momentum can be absorbed. -->
+		<!-- Absorbs the target's Momentum. Momentum can be absorbed with a $s1 chance for regular physical attacks and $s2 during a critical attack. Applies when a fist weapon is equipped. Up to stage $s3 of Momentum can be absorbed. -->
 		<icon>icon.skill0993</icon>
 		<magicLvl>
 			<value level="1">24</value>
@@ -4959,7 +5173,7 @@
 				<allowWeapons>DUALFIST</allowWeapons>
 				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>100</maxAttackerLevel>
+				<maxAttackerLevel>127</maxAttackerLevel>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
 				<chance>15</chance>
@@ -4984,19 +5198,19 @@
 				<targetType>SELF</targetType>
 				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>100</maxAttackerLevel>
+				<maxAttackerLevel>127</maxAttackerLevel>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="994" toLevel="1" name="Rush">
-		<!-- Charges toward the enemy. Momentum level 1. Cannot be used when a bow/crossbow is equipped. -->
+		<!-- Charges toward the enemy. Cannot be used when a bow/crossbow is equipped. -->
 		<icon>icon.skill0484</icon>
 		<castRange>400</castRange>
 		<coolTime>200</coolTime>
 		<effectPoint>-379</effectPoint>
 		<effectRange>600</effectRange>
 		<hitTime>800</hitTime>
-		<magicLvl>78</magicLvl>
+		<magicLvl>40</magicLvl>
 		<mpConsume>38</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>DA1</operateType>
@@ -5023,7 +5237,7 @@
 		</conditions>
 	</skill>
 	<skill id="995" toLevel="1" name="Rush Impact">
-		<!-- Rushes forward to attack the enemies in front with 4224 Power added to P. Atk. and inflicts Stun for 9 seconds. Cannot be used when a bow/crossbow is equipped. -->
+		<!-- Charges forward to attack the enemies in front with 4224 power added to P. Attack and inflicts Stun for 9 seconds. Unavailable to use when a bow/crossbow is equipped. -->
 		<icon>icon.skill0793</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -5073,7 +5287,7 @@
 				<power>4224</power>
 			</effect>
 			<effect name="BlockActions">
-				<allowedSkills>35016</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
@@ -5118,7 +5332,7 @@
 		</effects>
 	</skill>
 	<skill id="997" toLevel="25" name="Crushing Strike">
-		<!-- Impacts the enemy with $s1 Power added to P. Atk, decreasing the target's P. Def. and M. Def. by $s3 for $s2. Requires a sword or blunt weapon to be equipped. Over-hit. -->
+		<!-- Impacts the enemy with $s1 Power added to P. Atk, decreasing the target's P. Def. and M. Def. by $s3 for $s2. Requires a sword or blunt weapon to be equipped. Over-hit is possible. -->
 		<icon>icon.skill0997</icon>
 		<abnormalTime>3</abnormalTime>
 		<activateRate>80</activateRate>

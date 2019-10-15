@@ -241,7 +241,7 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="16022" toLevel="1" name="Ground Shaker">
+	<skill id="16022" toLevel="1" name="Ground Slam">
 		<operateType>A1</operateType>
 		<castRange>600</castRange>
 		<hitTime>4600</hitTime>
@@ -355,6 +355,25 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
+	<skill id="16031" toLevel="1" name="Attraction">
+		<operateType>A1</operateType>
+		<effectPoint>-2</effectPoint>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>85</magicLvl>
+		<affectRange>5000</affectRange>
+		<hitTime>500</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PullBack">
+				<speed>5000</speed>
+				<delay>5000</delay>
+			</effect>
+			<effect name="BlockActions" />
+		</effects>
+	</skill>
 	<skill id="16032" toLevel="1" name="Gi-Sung Bae's Lineage II">
 		<operateType>A1</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -431,7 +450,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="PhysicalAttack">
-				<amount>350000</amount>
+				<power>350000</power>
 			</effect>
 			<effect name="DamOverTime">
 				<power>250</power>

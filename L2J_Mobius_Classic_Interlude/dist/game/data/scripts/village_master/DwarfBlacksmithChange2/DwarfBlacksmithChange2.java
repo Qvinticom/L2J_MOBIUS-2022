@@ -37,6 +37,9 @@ public class DwarfBlacksmithChange2 extends AbstractNpcAI
 		30687, // Vergara
 		30847, // Ferris
 		30897, // Roman
+		31272, // Noel
+		31317, // Lombert
+		31961, // Newyear
 	};
 	
 	// Items

@@ -87,7 +87,7 @@
 		</effects>
 	</skill>
 	<skill id="606" toLevel="1" name="Residence Fortitude">
-		<!-- Stun Resistance of clan members in residence increases by 10. -->
+		<!-- Increases Stun Resistance by 10 of each member of the clan occupying the dwelling. -->
 		<icon>icon.skill0386</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -332,8 +332,70 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="619" toLevel="1" name="Cancel Transformation">
-		<!-- Undo the transformation. -->
+	<skill id="617" toLevel="1" name="Transform Onyx Beast">
+		<!-- Transform into an Onyx Beast. -->
+		<icon>icon.skilltransform1</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effectPoint>1</effectPoint>
+		<hitTime>2500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>14400000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>1</transformId>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>1</transformationId>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="618" toLevel="1" name="Transform Doom Wraith">
+		<!-- Transform into a Doom Wraith. -->
+		<icon>icon.skilltransform1</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effectPoint>1</effectPoint>
+		<hitTime>2500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>14400000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>2</transformId>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>2</transformationId>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="619" toLevel="1" name="Dispel Transform">
+		<!-- Cancels transformation. -->
 		<icon>icon.skilltransform2</icon>
 		<effectPoint>10</effectPoint>
 		<hitTime>2500</hitTime>
@@ -349,6 +411,67 @@
 		<effects>
 			<effect name="DispelBySlot">
 				<dispel>TRANSFORM,-1</dispel>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="620" toLevel="1" name="Quiver of Bolts (B-grade)">
+		<!-- Summons between 700 and 2800 silver bolts. Consumes 1 B-grade Crystal. -->
+		<icon>icon.skill0620</icon>
+		<hitTime>3000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>1460</itemConsumeId> <!-- Crystal (B-Grade) -->
+		<magicLvl>52</magicLvl>
+		<mpConsume>366</mpConsume>
+		<operateType>A1</operateType>
+		<reuseDelay>600000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="30">
+						<item id="9635" count="700" /> <!-- Silver Bolt -->
+					</item>
+					<item chance="50">
+						<item id="9635" count="1400" /> <!-- Silver Bolt -->
+					</item>
+					<item chance="20">
+						<item id="9635" count="2800" /> <!-- Silver Bolt -->
+					</item>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="621" toLevel="1" name="Create Special Bolt">
+		<!-- Creates a bolt to be used with a special skill. -->
+		<icon>icon.skill0621</icon>
+		<hitTime>3000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>43</magicLvl>
+		<mpConsume>38</mpConsume>
+		<operateType>A1</operateType>
+		<reuseDelay>150000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Restoration">
+				<itemId>10113</itemId>
+				<itemCount>1</itemCount>
 			</effect>
 		</effects>
 	</skill>
@@ -398,8 +521,45 @@
 			</effect>
 		</effects>
 	</skill>
+	<skill id="623" toLevel="1" name="Find Trap">
+		<!-- Detects traps below Level 78. -->
+		<icon>icon.skill0470</icon>
+		<affectRange>300</affectRange>
+		<hitTime>2500</hitTime>
+		<magicLvl>74</magicLvl>
+		<mpConsume>67</mpConsume>
+		<operateType>A1</operateType>
+		<reuseDelay>3000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>INVISIBLE</affectObject>
+		<effects>
+			<effect name="TrapDetect">
+				<power>78</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="624" toLevel="1" name="Remove Trap">
+		<!-- Disarms traps below Level 78. -->
+		<icon>icon.skill0471</icon>
+		<castRange>400</castRange>
+		<effectRange>500</effectRange>
+		<hitTime>4000</hitTime>
+		<magicLvl>74</magicLvl>
+		<mpConsume>17</mpConsume>
+		<operateType>A1</operateType>
+		<reuseDelay>8000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effect name="TrapRemove">
+			<power>78</power>
+		</effect>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+	</skill>
 	<skill id="625" toLevel="1" name="Soul Gathering">
-		<!-- Gathers in nearby souls. Up to 8 souls can be absorbed at once. Consumes 10 Spirit Ore. -->
+		<!-- Gathers in nearby souls. Up to 8 souls can be absorbed at once. Consumes 10 Spirit Ores. -->
 		<icon>icon.skill0467</icon>
 		<effectPoint>150</effectPoint>
 		<hitTime>1500</hitTime>
@@ -455,7 +615,7 @@
 		</effects>
 	</skill>
 	<skill id="627" toLevel="40" name="Soul Shock">
-		<!-- Attacks the enemy with $s1 Power added to P. Atk. and causes fear for $s2. Requires a crossbow. Over-hit. Consumes $s3 Souls. -->
+		<!-- Attacks the enemy with $s1 Power added to P. Atk. and causes fear for $s2. Requires a crossbow. Over-hit is possible. Consumes $s3 Souls. -->
 		<icon>icon.skill0101</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -660,6 +820,49 @@
 			<effect name="Fear" />
 		</effects>
 	</skill>
+	<skill id="628" toLevel="1" name="Warp">
+		<!-- Teleports you to the battlefront. -->
+		<icon>icon.skill0484</icon>
+		<coolTime>200</coolTime>
+		<hitTime>100</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>32</magicLvl>
+		<mpConsume>20</mpConsume>
+		<mpInitialConsume>10</mpInitialConsume>
+		<operateType>A1</operateType>
+		<reuseDelay>10000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpBlink">
+				<direction>FRONT</direction>
+				<range>500</range>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Blink">
+				<!-- Teleport to Front -->
+				<angle>180</angle>
+				<range>500</range>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="629" toLevel="1" name="Rabbit Magic Eye">
+		<!-- Clear your mind and search your soul to find the hidden treasure chest. -->
+		<icon>icon.skill0629</icon>
+		<affectLimit>6-12</affectLimit>
+		<affectRange>200</affectRange>
+		<effectPoint>1000</effectPoint>
+		<hitTime>1500</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>85</magicLvl>
+		<operateType>A1</operateType>
+		<reuseDelay>5000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+	</skill>
 	<skill id="630" toLevel="1" name="Rabbit Tornado">
 		<!-- Opens a treasure chest with a spinning kick. -->
 		<icon>icon.skill0027</icon>
@@ -672,11 +875,16 @@
 		<operateType>A1</operateType>
 		<reuseDelay>60000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<targetType>DOOR_TREASURE</targetType>
+		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="OpUnlock" />
-		</conditions>
+		<targetConditions>
+			<condition name="OpTargetNpc">
+				<npcIds>
+					<item>13098</item>
+					<item>900102</item>
+				</npcIds>
+			</condition>
+		</targetConditions>
 	</skill>
 	<skill id="631" toLevel="6" name="Emergent Ability: Attack">
 		<!-- Increases P. Atk. -->
@@ -1095,7 +1303,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="643" toLevel="1" name="Summoner's Ability: Boost HP / MP">
+	<skill id="643" toLevel="1" name="Summoner Ability: Boost HP/MP">
 		<!-- Increases Max HP and Max MP. -->
 		<icon>icon.skill0211</icon>
 		<excludedFromCheck>true</excludedFromCheck>
@@ -1128,7 +1336,7 @@
 		</effects>
 	</skill>
 	<skill id="645" toLevel="1" name="Rogue Ability: Long Shot">
-		<!-- Increases the bow's range. -->
+		<!-- Increases bow range. -->
 		<icon>icon.skill0113</icon>
 		<excludedFromCheck>true</excludedFromCheck>
 		<magicLvl>75</magicLvl>
@@ -1145,7 +1353,7 @@
 		</effects>
 	</skill>
 	<skill id="646" toLevel="1" name="Wizard Ability: Mana Gain">
-		<!-- Increases the recovery rate of MP. -->
+		<!-- Increases the recovery rate when MP is being recovered by recharge. -->
 		<icon>icon.skill0285</icon>
 		<excludedFromCheck>true</excludedFromCheck>
 		<magicLvl>75</magicLvl>
@@ -1159,7 +1367,7 @@
 		</effects>
 	</skill>
 	<skill id="647" toLevel="1" name="Enchanter Ability: Mana Recovery">
-		<!-- Increases MP recovery. -->
+		<!-- Increases MP regeneration. -->
 		<icon>icon.skill0229</icon>
 		<excludedFromCheck>true</excludedFromCheck>
 		<magicLvl>75</magicLvl>
@@ -1187,7 +1395,7 @@
 		</effects>
 	</skill>
 	<skill id="650" toLevel="1" name="Warrior Ability: Attribute Resistance">
-		<!-- Increases the Paralysis/Hold/Sleep/Stun/Buff-canceling Attack Resistance. -->
+		<!-- Increases Paralyze/Hold/Sleep/Stun/Buff Cancellation Resistance. -->
 		<icon>icon.skill0287</icon>
 		<excludedFromCheck>true</excludedFromCheck>
 		<magicLvl>75</magicLvl>
@@ -1214,7 +1422,7 @@
 				<!-- Warrior Ability - Haste -->
 				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>100</maxAttackerLevel>
+				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>2</chance>
 				<targetType>SELF</targetType>
@@ -1237,7 +1445,7 @@
 				<!-- Knight Ability - Defense -->
 				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>99</maxAttackerLevel>
+				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>2</chance>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
@@ -1258,7 +1466,7 @@
 				<!-- Log Ability - Critical Chance -->
 				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>100</maxAttackerLevel>
+				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>2</chance>
 				<targetType>SELF</targetType>
@@ -1281,7 +1489,7 @@
 				<!-- Wizard Ability - Mana Steal -->
 				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>100</maxAttackerLevel>
+				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>2</chance>
 				<targetType>SELF</targetType>
@@ -1304,7 +1512,7 @@
 				<!-- Enchanter Ability - Barrier -->
 				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>99</maxAttackerLevel>
+				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>2</chance>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
@@ -1313,8 +1521,663 @@
 			</effect>
 		</effects>
 	</skill>
+	<skill id="656" toLevel="3" name="Transform Divine Warrior">
+		<!-- Transforms you into a Divine Warrior. -->
+		<icon>icon.skilltransform1</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<effectPoint>1</effectPoint>
+		<excludedFromCheck>true</excludedFromCheck>
+		<hitTime>2500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>-1</magicLvl>
+		<mpConsume>31</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>
+			<value level="1">14400000</value>
+			<value level="2">7200000</value>
+			<value level="3">3600000</value>
+		</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>253</transformId>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>253</transformationId>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="657" toLevel="3" name="Transform Divine Knight">
+		<!-- Transforms you into a Divine Knight. -->
+		<icon>icon.skilltransform1</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<effectPoint>1</effectPoint>
+		<excludedFromCheck>true</excludedFromCheck>
+		<hitTime>2500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>-1</magicLvl>
+		<mpConsume>31</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>
+			<value level="1">14400000</value>
+			<value level="2">7200000</value>
+			<value level="3">3600000</value>
+		</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>252</transformId>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>252</transformationId>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="658" toLevel="3" name="Transform Divine Rogue">
+		<!-- Transforms you into a Divine Rogue. -->
+		<icon>icon.skilltransform1</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<effectPoint>1</effectPoint>
+		<excludedFromCheck>true</excludedFromCheck>
+		<hitTime>2500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>-1</magicLvl>
+		<mpConsume>31</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>
+			<value level="1">14400000</value>
+			<value level="2">7200000</value>
+			<value level="3">3600000</value>
+		</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>254</transformId>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>254</transformationId>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="659" toLevel="3" name="Transform Divine Wizard">
+		<!-- Transforms you into a Divine Wizard. -->
+		<icon>icon.skilltransform1</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<effectPoint>1</effectPoint>
+		<excludedFromCheck>true</excludedFromCheck>
+		<hitTime>2500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>-1</magicLvl>
+		<mpConsume>31</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>
+			<value level="1">14400000</value>
+			<value level="2">7200000</value>
+			<value level="3">3600000</value>
+		</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>256</transformId>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>256</transformationId>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="660" toLevel="3" name="Transform Divine Summoner">
+		<!-- Transforms you into a Divine Summoner. -->
+		<icon>icon.skilltransform1</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<effectPoint>1</effectPoint>
+		<excludedFromCheck>true</excludedFromCheck>
+		<hitTime>2500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>-1</magicLvl>
+		<mpConsume>31</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>
+			<value level="1">14400000</value>
+			<value level="2">7200000</value>
+			<value level="3">3600000</value>
+		</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>258</transformId>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>258</transformationId>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="661" toLevel="3" name="Transform Divine Healer">
+		<!-- Transforms you into a Divine Healer. -->
+		<icon>icon.skilltransform1</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<effectPoint>1</effectPoint>
+		<excludedFromCheck>true</excludedFromCheck>
+		<hitTime>2500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>-1</magicLvl>
+		<mpConsume>31</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>
+			<value level="1">14400000</value>
+			<value level="2">7200000</value>
+			<value level="3">3600000</value>
+		</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>255</transformId>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>255</transformationId>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="662" toLevel="3" name="Transform Divine Enchanter">
+		<!-- Transforms you into a Divine Enchanter. -->
+		<icon>icon.skilltransform1</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<effectPoint>1</effectPoint>
+		<excludedFromCheck>true</excludedFromCheck>
+		<hitTime>2500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>-1</magicLvl>
+		<mpConsume>31</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>
+			<value level="1">14400000</value>
+			<value level="2">7200000</value>
+			<value level="3">3600000</value>
+		</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>257</transformId>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>257</transformationId>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="663" toLevel="1" name="Transform Zaken">
+		<!-- Transforms you into Zaken. -->
+		<icon>icon.skilltransform1</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effectPoint>1</effectPoint>
+		<hitTime>2500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>-1</magicLvl>
+		<mpConsume>31</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>14400000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>305</transformId>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>305</transformationId>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="664" toLevel="1" name="Transform Anakim">
+		<!-- Transforms you into Anakin. -->
+		<icon>icon.skilltransform1</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effectPoint>1</effectPoint>
+		<hitTime>2500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>-1</magicLvl>
+		<mpConsume>31</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>14400000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>306</transformId>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>306</transformationId>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="665" toLevel="1" name="Transform Venom">
+		<!-- Transforms you into Venom. -->
+		<icon>icon.skilltransform1</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effectPoint>1</effectPoint>
+		<hitTime>2500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>-1</magicLvl>
+		<mpConsume>31</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>14400000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>307</transformId>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>307</transformationId>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="666" toLevel="1" name="Transform Gordon">
+		<!-- Transforms you into Gordon. -->
+		<icon>icon.skilltransform1</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effectPoint>1</effectPoint>
+		<hitTime>2500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>-1</magicLvl>
+		<mpConsume>31</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>14400000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>308</transformId>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>308</transformationId>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="667" toLevel="1" name="Transform Ranku">
+		<!-- Transforms you into Ranku. -->
+		<icon>icon.skilltransform1</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effectPoint>1</effectPoint>
+		<hitTime>2500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>-1</magicLvl>
+		<mpConsume>31</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>14400000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>309</transformId>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>309</transformationId>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="668" toLevel="1" name="Transform Kechi">
+		<!-- Transforms you into Kechi. -->
+		<icon>icon.skilltransform1</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effectPoint>1</effectPoint>
+		<hitTime>2500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>-1</magicLvl>
+		<mpConsume>31</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>14400000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>310</transformId>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>310</transformationId>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="669" toLevel="1" name="Transform Demon Prince">
+		<!-- Transforms you into a Demon Prince. -->
+		<icon>icon.skilltransform1</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effectPoint>1</effectPoint>
+		<hitTime>2500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>-1</magicLvl>
+		<mpConsume>31</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>14400000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>311</transformId>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>311</transformationId>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="670" toLevel="1" name="Transform Heretic">
+		<!-- Transforms you into a Heretic. -->
+		<icon>icon.skilltransform1</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effectPoint>1</effectPoint>
+		<hitTime>2500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>-1</magicLvl>
+		<mpConsume>31</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>14400000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>3</transformId>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>3</transformationId>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="671" toLevel="1" name="Transform Veil Master">
+		<!-- Transforms you into a Veil Master. -->
+		<icon>icon.skilltransform1</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effectPoint>1</effectPoint>
+		<hitTime>2500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>-1</magicLvl>
+		<mpConsume>31</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>14400000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>4</transformId>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>4</transformationId>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="672" toLevel="1" name="Transform Saber Tooth Tiger">
+		<!-- Transforms you into a Saber Tooth Tiger. -->
+		<icon>icon.skilltransform1</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effectPoint>1</effectPoint>
+		<hitTime>2500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>-1</magicLvl>
+		<mpConsume>31</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>14400000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>5</transformId>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>5</transformationId>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="673" toLevel="1" name="Transform Oel Mahum">
+		<!-- Transforms you into Oel Mahum. -->
+		<icon>icon.skilltransform1</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effectPoint>1</effectPoint>
+		<hitTime>2500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>-1</magicLvl>
+		<mpConsume>31</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>14400000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>6</transformId>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>6</transformationId>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="674" toLevel="1" name="Transform Doll Blader">
+		<!-- Transforms you into a Doll Blader. -->
+		<icon>icon.skilltransform1</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effectPoint>1</effectPoint>
+		<hitTime>2500</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>-1</magicLvl>
+		<mpConsume>31</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>14400000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>7</transformId>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>7</transformationId>
+			</effect>
+		</effects>
+	</skill>
 	<skill id="675" toLevel="1" name="Divine Warrior Cross Slash">
-		<!-- Attacks the enemy with 2904 Power added to P. Atk. Over-hit. Critical. -->
+		<!-- Attacks the enemy with 2904 Power added to P. Atk. Over-hit and Critical are possible. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<castRange>40</castRange>
 		<coolTime>167</coolTime>
@@ -1338,7 +2201,7 @@
 		</effects>
 	</skill>
 	<skill id="676" toLevel="1" name="Divine Warrior Sonic Blaster">
-		<!-- Hurls Momentum to attack the enemy with 2323 Power added to P. Atk. Over-hit. Critical. -->
+		<!-- Hurls Momentum to attack the enemy with 2323 Power added to P. Atk. Over-hit and Critical are possible. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<castRange>600</castRange>
 		<effectPoint>-342</effectPoint>
@@ -1360,7 +2223,7 @@
 		</effects>
 	</skill>
 	<skill id="677" toLevel="1" name="Divine Warrior Transfixion of Earth">
-		<!-- Cuts with a downward blow to attack nearby enemies with 2323 Power added to P. Atk. Ignores Shield Defense. Over-hit. -->
+		<!-- Cuts with a downward blow to attack nearby enemies with 2323 Power added to P. Atk. Ignores Shield Defense. Over-hit is possible. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>150</affectRange>
@@ -1500,7 +2363,7 @@
 		</effects>
 	</skill>
 	<skill id="682" toLevel="1" name="Divine Knight Stun Attack">
-		<!-- Cause damage and shock together at the same time. Make the enemies shocked momentarily. Over-hit. Power 1162. -->
+		<!-- Deals damage and shock simultaneously. Momentarily inflicts Stun on the enemy. Over-hit is possible. 1162 power. -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -1529,11 +2392,13 @@
 				<power>1162</power>
 				<overHit>true</overHit>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="683" toLevel="1" name="Divine Knight Thunder Storm">
-		<!-- inflicts Stun and damage to the enemies nearby at the same time. Momentarily stuns nearby enemies. Ignores Shield Defense. Over-hit. Power 775. -->
+		<!-- Inflicts damage and shock on nearby enemies at once. Inflicts momentary Stun on nearby enemies. Ignores Shield Defense. Over-hit is possible. 775 power. -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -1563,7 +2428,9 @@
 				<overHit>true</overHit>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="684" toLevel="1" name="Divine Knight Ultimate Defense">
@@ -1639,7 +2506,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="686" toLevel="1" name="Divine Rogue Stun Shot">
-		<!-- Shoots arrows that inflict both damage and shock to the enemy in order to cancel target state. Momentarily stuns target. Over-hit. Power 2323. -->
+		<!-- Fires arrows canceling the target??s state by dealing damage and shock simultaneously. Momentarily inflicts Stun on the enemy. Over-hit is possible. 2323 power. -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -1667,14 +2534,16 @@
 				<power>2323</power>
 				<overHit>true</overHit>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 			<effect name="TargetCancel">
 				<chance>40</chance>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="687" toLevel="1" name="Divine Rogue Double Shot">
-		<!-- Shoots 2 arrows continuously. Critical. Over-hit. Power 6195. -->
+		<!-- Shoots 2 arrows continuously. Critical hit is possible. Over-hit is possible. Power 6195. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<castRange>900</castRange>
 		<coolTime>1000</coolTime>
@@ -1697,7 +2566,7 @@
 		</effects>
 	</skill>
 	<skill id="688" toLevel="1" name="Divine Rogue Bleed Attack">
-		<!-- Causes injury by deadly attacks. Momentarily causes the enemies to bleed. Over-hit. Power 1549. Effect 3. -->
+		<!-- Causes injury by deadly attacks. Momentarily causes the enemies to bleed. Over-hit is possible. Power 1549. Effect 3. -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -1734,7 +2603,7 @@
 		</effects>
 	</skill>
 	<skill id="689" toLevel="1" name="Divine Rogue Deadly Blow">
-		<!-- Attacks the target's vital points. CP Siphon. Over-hit. Power 6969. -->
+		<!-- Attacks the target's vital points. CP Siphon. Over-hit is possible. Power 6969. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
@@ -1827,7 +2696,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="692" toLevel="1" name="Divine Wizard Divine Flare">
-		<!-- Attacks a contacted target with non-attribute attack with 102 Power. -->
+		<!-- Attacks a contacted target with non-attribute attack. Momentarily decreases your M. Atk. during PvP. Power 102. -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLvl>0</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -1857,7 +2726,7 @@
 		</effects>
 	</skill>
 	<skill id="693" toLevel="1" name="Divine Wizard Holy Strike">
-		<!-- Unleashes holy attack. Over-hit. Power 128. -->
+		<!-- Unleashes holy attack. Over-hit is possible. Power 128. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<castRange>900</castRange>
 		<effectPoint>-844</effectPoint>
@@ -1935,14 +2804,16 @@
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 			<effect name="DefenceTrait">
 				<SLEEP>100</SLEEP>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="696" toLevel="1" name="Divine Wizard Surrender to Holy">
-		<!-- Immediately decreases Holy Attacks Resistance and increases Dark Attacks Resistance. Effect 3. -->
+		<!-- Momentarily decrease Holy Attack Resistance, and increase Dark Attack Resistance. Effect 3. -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>

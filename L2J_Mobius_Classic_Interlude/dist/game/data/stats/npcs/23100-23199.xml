@@ -344,6 +344,7 @@
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<acquire exp="112040" sp="26" />
+		<equipment rhand="147" /> <!-- Tear of Darkness -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2395" hpRegen="7.5" mp="1314" mpRegen="2.7" />
 			<speed>
@@ -1172,6 +1173,7 @@
 		<race>HUMAN</race>
 		<sex>MALE</sex>
 		<acquire exp="8739270" sp="2097" />
+		<equipment rhand="13979" lhand="13980" /> <!-- Monster Only (Dragontroop Commando) / Monster Only (Dragontroop Defender) -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="321920" hpRegen="8.5" mp="22058" mpRegen="30" />
 			<speed>
@@ -1524,6 +1526,7 @@
 		<race>DARK_ELF</race>
 		<sex>MALE</sex>
 		<acquire exp="1792262" sp="430" />
+		<equipment rhand="10278" lhand="10278" /> <!-- Monster Only (Behamah Dual) / Monster Only (Behamah Dual) -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="321920" hpRegen="8.5" mp="22058" mpRegen="30" />
 			<speed>
@@ -1567,6 +1570,7 @@
 		<race>ELF</race>
 		<sex>MALE</sex>
 		<acquire exp="1774210" sp="425" />
+		<equipment rhand="15302" /> <!-- Transparent Bow (NPC) -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="321920" hpRegen="8.5" mp="22058" mpRegen="30" />
 			<speed>
@@ -1653,6 +1657,7 @@
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<acquire exp="1794842" sp="430" />
+		<equipment rhand="13979" lhand="13980" /> <!-- Monster Only (Dragontroop Commando) / Monster Only (Dragontroop Defender) -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="321920" hpRegen="8.5" mp="22058" mpRegen="30" />
 			<speed>
@@ -2029,6 +2034,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="2191396" sp="525" />
+		<equipment rhand="13983" /> <!-- Monster Only (Death Knight_2hs) -->
 		<mpReward value="96" type="DIFF" ticks="10" affects="SOLO" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="14890" hpRegen="8.5" mp="2242" mpRegen="3" />
@@ -2242,6 +2248,7 @@
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<acquire exp="18591" sp="4" />
+		<equipment rhand="3937" /> <!-- Monster Only (Lesser Giant) -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1470" hpRegen="6.5" mp="775" mpRegen="2.4" />
 			<speed>
@@ -2285,6 +2292,7 @@
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<acquire exp="17004" sp="4" />
+		<equipment rhand="4028" /> <!-- Giant Cannon -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1470" hpRegen="6.5" mp="775" mpRegen="2.4" />
 			<speed>
@@ -3356,6 +3364,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="75108" sp="18" />
+		<equipment rhand="134" lhand="6721" /> <!-- Sword of Nightmare / Monster Only (Shield of Imperial Warlord Zombie) -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="3127" hpRegen="8.5" mp="1641" mpRegen="3" />
 			<speed>

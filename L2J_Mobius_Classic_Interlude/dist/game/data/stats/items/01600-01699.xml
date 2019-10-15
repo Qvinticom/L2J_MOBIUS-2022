@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="1600" name="Kasha Bear Claw" type="EtcItem">
-		<!-- Claw pulled out from a Kasha Bear after killing it. Collect 5 of these. -->
+		<!-- Claw pulled out from a kasha bear after killing it. Collect 5 of these. -->
 		<set name="icon" val="icon.etc_claw_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -17,7 +17,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1601" name="Kasha Blade Spider Talon" type="EtcItem">
-		<!-- Talon pulled out from a Kasha Blade Spider after killing it. Collect 5 of these. -->
+		<!-- Talon pulled out from a kasha blade spider after killing it. Collect 5 of these. -->
 		<set name="icon" val="icon.etc_horn_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -33,7 +33,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1602" name="Scarlet Salamander Scale" type="EtcItem">
-		<!-- Scale of a Scarlet Salamander. Collect 5 of these. -->
+		<!-- Scale of a scarlet salamander. Collect 5 of these. -->
 		<set name="icon" val="icon.etc_jewel_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -81,7 +81,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1605" name="Gantaki's Letter of Recommendation" type="EtcItem">
-		<!-- Gantaki's letter of recommendation. Receive the help of Gatekeeper Tamil and take this recommendation to Prefect Kasman in Gludin Village. -->
+		<!-- Gantaki's letter of recommendation. Receive the help of Gatekeeper Tamil and take this recommendation to Prefect Kasman in the Village of Gludin. -->
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -112,7 +112,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1607" name="Leather Pouch" type="EtcItem">
+	<item id="1607" name="4th Leather Pouch" type="EtcItem">
 		<!-- Leather pouch given by Khavatari Toruku. Take this, kill fighters of various races and collect 12 tokens. -->
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="immediate_effect" val="true" />
@@ -128,7 +128,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1608" name="Leather Pouch (full)" type="EtcItem">
+	<item id="1608" name="4th Leather Pouch (Full)" type="EtcItem">
 		<!-- Full pouch of 12 tokens after killing fighters of various races. Take this to Khavatari Toruku. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="immediate_effect" val="true" />
@@ -145,7 +145,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1609" name="Vuku Orc Tusk" type="EtcItem">
-		<!-- Tusk obtained after killing a Vuku Orc Warrior. Gather 3 of these. -->
+		<!-- Tusk obtained after killing a vuku Orc. Gather 3 of these. -->
 		<set name="icon" val="icon.etc_molar_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -161,7 +161,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1610" name="Ratman Fang" type="EtcItem">
-		<!-- Fang from a dead Ratman Warrior. Gather 3 of these. -->
+		<!-- Fang from a dead ratman fighter. Gather 3 of these. -->
 		<set name="icon" val="icon.etc_claw_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -177,7 +177,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1611" name="Langk Lizardman Tooth" type="EtcItem">
-		<!-- Tooth obtained after killing a Langk Lizardman. Gather 3 of these. -->
+		<!-- Tooth obtained after killing a Langk lizardman. Gather 3 of these. -->
 		<set name="icon" val="icon.etc_horn_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -193,7 +193,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1612" name="Felim Lizardman Tooth" type="EtcItem">
-		<!-- Tooth obtained after killing the Felim Lizardman. Gather 3 of these. -->
+		<!-- Tooth obtained after killing the Felim lizardman. Gather 3 of these. -->
 		<set name="icon" val="icon.etc_horn_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -241,7 +241,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1615" name="Khavatari Totem" type="EtcItem">
-		<!-- Token given to one who has qualifications to class transfers to Orc Monk. Take this to the high prefect to change your class to an Orc Monk. -->
+		<!-- Token given to one who has qualifications to change occupations to Orc Monk. Take this to the high prefect to change your occupation to an Orc Monk. -->
 		<set name="icon" val="icon.etc_orcish_talisman_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -273,7 +273,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1617" name="Kasha Bear Pelt" type="EtcItem">
-		<!-- Pelt of Kasha Bear. Take to Tataru along with Kasha Blade Spider Husk and Fiery Egg. -->
+		<!-- Pelt of kasha bear. Take to Tataru along with kasha bladespider husk and fiery egg. -->
 		<set name="icon" val="icon.etc_leather_brown_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -289,7 +289,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1618" name="Kasha Blade Spider Husk" type="EtcItem">
-		<!-- The husk of a Kasha Blade Spider. Take it to Tataru, along with a Kasha Bear Pelt and a Fiery Egg. -->
+		<!-- The husk of a kasha blade spider. Take it to Tataru, along with a kasha bear pelt and a fiery egg. -->
 		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -305,7 +305,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1619" name="1st Fiery Egg" type="EtcItem">
-		<!-- Spirit egg obtained from a Scarlet Salamander. Take it to Tataru along with a Kasha Bear Pelt and a Kasha Bblade Spider Husk. -->
+		<!-- Spirit egg obtained from a scarlet salamander. Take it to Tataru along with a kasha bear pelt and a kasha bladespider husk. -->
 		<set name="icon" val="icon.etc_crystal_ball_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -321,7 +321,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1620" name="Hestui Mask" type="EtcItem">
-		<!-- Mask in the shape of bear. Take this and go to Hestui Totem Spirit. -->
+		<!-- Mask in shape of bear. Take this and go to Hestui totem spirit. -->
 		<set name="icon" val="icon.etc_orcish_talisman_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -336,8 +336,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1621" name="1st Fiery Egg" type="EtcItem">
-		<!-- Spirit egg obtained from a Scarlet Salamander. Take it to Tataru along with a Kasha Bear Pelt and a Kasha Bblade Spider Husk. -->
+	<item id="1621" name="2nd Fiery Egg" type="EtcItem">
+		<!-- Spirit egg received from a scarlet salamander. Take this to the Hestui totem spirit. -->
 		<set name="icon" val="icon.etc_crystal_ball_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -353,7 +353,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1622" name="Totem Spirit Claw" type="EtcItem">
-		<!-- Claw received from Hestui Totem Spirit. Take this and go to Tataru. -->
+		<!-- Claw received from Hestui totem spirit. Take this and go to Tataru. -->
 		<set name="icon" val="icon.etc_claw_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -369,7 +369,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1623" name="Tataru's Letter of Recommendation" type="EtcItem">
-		<!-- Letter written by Tataru. Take this to Priest Umos in Gludin Village. -->
+		<!-- Letter written by Tataru. Take this to Seer Umos in the town of Gludin. -->
 		<set name="icon" val="icon.etc_letter_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -385,7 +385,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1624" name="Flame Charm" type="EtcItem">
-		<!-- Charm with inscription of flame mantra. Take this and gather Grizzly Blood and take to Priest Umos. -->
+		<!-- Charm with inscription of flame mantra. Take this and gather grizzly blood and take to Seer Umos. -->
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -401,7 +401,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1625" name="Grizzly Blood" type="EtcItem">
-		<!-- Glass bottle filled with Grizzly Blood. Gather 3 and take to Priest Umos. -->
+		<!-- Glass bottle filled with grizzly blood. Gather 3 and take to Seer Umos. -->
 		<set name="icon" val="icon.etc_reagent_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -417,7 +417,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1626" name="Blood Cauldron" type="EtcItem">
-		<!-- Cauldron filled with Grizzly Blood. Take this to the Duda-Mara Totem Spirit. -->
+		<!-- Cauldron filled with grizzly blood. Take this to the Duda-Mara totem spirit. -->
 		<set name="icon" val="icon.etc_oil_pot_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -433,7 +433,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1627" name="Spirit Net" type="EtcItem">
-		<!-- Net made with Spirit's Spider Silk. Use this to capture Durka Spirit hidden inside Arachnid Trackers. -->
+		<!-- Net made with Spirit's Spider Silk. Use this to capture Durka Spirit hidden inside Venomous Spiders. -->
 		<set name="icon" val="icon.etc_piece_of_cloth_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -449,7 +449,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1628" name="Durka Spirit" type="EtcItem">
-		<!-- Durka spirit bound inside Spirit Net. Take this to the Duda-Mara Totem Spirit. -->
+		<!-- Durka spirit bound inside Spirit Net. Take this to the Duda-Mara totem spirit. -->
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -465,7 +465,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1629" name="Durka Parasite" type="EtcItem">
-		<!-- Evil parasite spirit that comes out from spiders contaminated with the evil Durka Spirit. It is the key for calling upon the evil Durka Spirit. -->
+		<!-- Evil parasite spirit that comes out from spiders contaminated with the evil durka spirit. It is the key for calling upon the evil durka spirit. -->
 		<set name="icon" val="icon.etc_totem_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -481,7 +481,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1630" name="Totem Spirit Blood" type="EtcItem">
-		<!-- Blood spilt by the Duda-Mara Totem Spirit. Take this and go to Priest Umos. -->
+		<!-- Blood spilt by the Duda-Mara totem spirit. Take this and go to Seer Umos. -->
 		<set name="icon" val="icon.etc_potion_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -497,7 +497,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1631" name="Mask of Medium" type="EtcItem">
-		<!-- Token that shows one Has the qualifications to become an Orc Shaman. Take this to the high prefect, to change your class to an Orc Shaman. -->
+		<!-- Token that shows one Has the qualifications to become an Orc Shaman. Take this to the high prefect, to change your occupation to an Orc Shaman. -->
 		<set name="icon" val="icon.etc_skull_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -513,7 +513,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1632" name="Silvera's Ring" type="EtcItem">
-		<!-- Ring given to artisan aspirants by Blacksmith Silvera. Strike down the Boogle Ratman gang and collect their front teeth. -->
+		<!-- Ring given to artisan aspirants by Blacksmith Silvera. Strike down the boogle ratman gang and collect their front teeth. -->
 		<set name="icon" val="icon.accessary_ring_of_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -529,7 +529,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1633" name="1st Pass Certificate" type="EtcItem">
-		<!-- The certificate for passing the 1st artisan test. To take the next test, you must go to Blacksmith Kluto of Gludin Village. -->
+		<!-- The certificate for passing the 1st artisan test. To take the next test, you must go to Blacksmith Kluto of the village Gludin. -->
 		<set name="icon" val="icon.etc_letter_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -561,7 +561,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1635" name="Final Pass Certificate" type="EtcItem">
-		<!-- The certificate for passing the final Artisan test. Take this to the head blacksmith to class transfers to an Artisan. -->
+		<!-- The certificate for passing the final Artisan test. Take this to the head blacksmith to change occupations to an Artisan. -->
 		<set name="icon" val="icon.etc_letter_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -577,7 +577,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1636" name="Boogle Ratman Tooth" type="EtcItem">
-		<!-- The ugly front bucktooth of a Boogle Ratman. Just looking at it will make you nauseous. Collect 10 of these and take them to Blacksmith Silvera. -->
+		<!-- The ugly front bucktooth of a boogle ratman. Just looking at it will make you nauseous. Collect 10 of these and take them to Blacksmith Silvera. -->
 		<set name="icon" val="icon.etc_claw_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -592,8 +592,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1637" name="Boogle Ratman Captain's Tooth" type="EtcItem">
-		<!-- The Boogle Ratman Captain's big tooth. Before its stink makes you pass out, collect 2 of them and take them to Blacksmith Silvera. -->
+	<item id="1637" name="Boogle Ratman Leader's Tooth" type="EtcItem">
+		<!-- The boogle ratman leader's big tooth. Before its stink makes you pass out, collect 2 of them and take them to Blacksmith Silvera. -->
 		<set name="icon" val="icon.etc_horn_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -625,7 +625,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1639" name="Footprint of Thief" type="EtcItem">
-		<!-- Trace left by thieves. Kill Vuku Orc Warriors, recover stolen items and take them to Blacksmith Pinter. -->
+		<!-- Trace left by thieves. Kill Vuku Orc fighters, recover stolen items and take them to Blacksmith Pinter. -->
 		<set name="icon" val="icon.etc_leather_brown_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -641,7 +641,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1640" name="Stolen Secret Box" type="EtcItem">
-		<!-- Box stolen by Vuku Orc Warriors. The contents of the box are unknown, but anyway, take it to Blacksmith Pinter. -->
+		<!-- Secret box stolen by Vuku orc fighters. The contents of the box are unknown, but anyway, take it to Blacksmith Pinter. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -721,7 +721,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1645" name="Succubus Undies" type="EtcItem">
-		<!-- The underwear of Succubus received from Torai. Take this to Warehouse Keeper Raut of Gludin. -->
+		<!-- The underwear of Succubus received from Torai. Take this to Warehouse Freightman Raut of Gludin. -->
 		<set name="icon" val="icon.etc_piece_of_cloth_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -753,7 +753,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1647" name="Bronk's Ingot" type="EtcItem">
-		<!-- Ingot to be given to Head Blacksmith Bronk. -->
+		<!-- Ingot to be given to Chief Blacksmith Bronk. -->
 		<set name="icon" val="icon.etc_plate_glay_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -769,7 +769,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1648" name="Shari's Axe" type="EtcItem">
-		<!-- Axe to be given to Armor Merchant Shari. -->
+		<!-- Axe to be given to Trader Shari. -->
 		<set name="icon" val="icon.weapon_tomahawk_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -801,7 +801,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1650" name="Bronk's Pay" type="EtcItem">
-		<!-- Payment from Head Blacksmith Bronk. Take this to Grocer Mion. -->
+		<!-- Product cost given by Chief Blacksmith Bronk. Take this to Trader Mion. -->
 		<set name="icon" val="icon.etc_coins_gold_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -817,7 +817,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1651" name="Shari's Pay" type="EtcItem">
-		<!-- Payment from Shari. Take this to Grocer Mion. -->
+		<!-- Product cost given by Shari. Take this to Trader Mion. -->
 		<set name="icon" val="icon.etc_coins_gold_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -833,7 +833,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1652" name="Zimenf's Pay" type="EtcItem">
-		<!-- Payment from Zimenf. Take this to Grocer Mion. -->
+		<!-- Product cost given by Zimenf. Take this to Trader Mion. -->
 		<set name="icon" val="icon.etc_coins_gold_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -849,7 +849,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1653" name="Teddy Bear Picture" type="EtcItem">
-		<!-- Picture of a bear received by Master Toma. Take this and hunt Hunter Bears until Honey Bear appears. -->
+		<!-- Picture of a bear received by Master Toma. Take this to hunt hunter bears, then the honey bear will appear. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -881,7 +881,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1655" name="Honey Jar" type="EtcItem">
-		<!-- Honey jar taken from Honey Bear. Collect 5 and take them to Master Toma. -->
+		<!-- Honey jar taken from a honey bear. Collect 5 and take them to Master Toma. -->
 		<set name="icon" val="icon.etc_potion_gold_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -913,7 +913,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1657" name="Bead Parcel" type="EtcItem">
-		<!-- Parcel made of beads. Give this to Warehouse Keeper Raut of Gludin. -->
+		<!-- Parcel made of beads. Give this to Warehouse Freightman Raut of Gludin. -->
 		<set name="icon" val="icon.accessary_mage_earing_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -949,20 +949,20 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1660" name="Cursed Maingauche" type="Weapon">
-		<!-- Cursed Maingauche. P. Atk. is low, but it can inflict Bleeding after Critical Attack with a certain probability. -->
-		<set name="icon" val="icon.t00" />
+		<!-- Cursed Maingauche. Although its P. Atk. is weak, it gives Bleeding effect with a certain rate during a Critical Attacks. -->
+		<set name="icon" val="icon.weapon_maingauche_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="2545" />
+		<set name="crystal_count" val="265" />
 		<set name="crystal_type" val="D" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1070" />
 		<set name="price" val="214800" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="DAGGER" />
@@ -985,6 +985,36 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="10" />
 		<set name="price" val="1000" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1662" name="Wood" type="EtcItem">
+		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_squares_wood_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="20" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1663" name="(Not in Use) Trunk" type="EtcItem">
+		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_branch_gold_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="20" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1664" name="Steel Powder" type="EtcItem">
+		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_powder_gray_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="80" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1059,6 +1089,308 @@
 		<set name="weight" val="120" />
 		<set name="price" val="800" />
 		<set name="commissionItemType" val="SPELLBOOK" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1672" name="__" type="EtcItem">
+		<set name="icon" val="icon.item_normal06" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="40" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="price" val="800" />
+	</item>
+	<item id="1673" name="__" type="EtcItem">
+		<set name="icon" val="icon.item_normal06" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="40" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="price" val="800" />
+	</item>
+	<item id="1674" name="Twig of Treant" type="EtcItem">
+		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_branch_gold_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="80" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1675" name="Animal Blood" type="EtcItem">
+		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_reagent_red_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="40" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1676" name="Animal Bone" type="EtcItem">
+		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_piece_bone_white_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="20" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1677" name="Hot Oil" type="EtcItem">
+		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_oil_pot_black_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="40" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1678" name="(Not in Use) Thread" type="EtcItem">
+		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_skein_white_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="10" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1679" name="Bronze" type="EtcItem">
+		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_lump_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="150" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1680" name="Animal Hide" type="EtcItem">
+		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_leather_brown_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="40" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1681" name="Elf Stone" type="EtcItem">
+		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_crystal_ball_green_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="1500" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1682" name="Tear of Holy Spirit" type="EtcItem">
+		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_lesser_potion_clear_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="1000" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1683" name="Mithril" type="EtcItem">
+		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_squares_silver_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="400" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1684" name="Durable Stem" type="EtcItem">
+		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_herb_green_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="220" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1685" name="Wooden Frame" type="EtcItem">
+		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_squares_wood_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="2000" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1686" name="Bark of Treant" type="EtcItem">
+		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_branch_gold_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="480" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1687" name="(Not in Use) Coarse Bone Powder" type="EtcItem">
+		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_powder_white_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="80" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1688" name="Refined Steel" type="EtcItem">
+		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_plate_black_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="480" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1689" name="(Not in Use) Leather" type="EtcItem">
+		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_leather_brown_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="300" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1690" name="Bowstring" type="EtcItem">
+		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_skein_white_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="300" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1691" name="Steel Frame" type="EtcItem">
+		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_mold_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="4400" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1692" name="(Not in Use) Cord" type="EtcItem">
+		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_skein_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="45" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1693" name="Refined Bronze" type="EtcItem">
+		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_plate_blue_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="890" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1694" name="Treant Potion" type="EtcItem">
+		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_potion_green_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="800" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1695" name="Magic Paper" type="EtcItem">
+		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="580" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1696" name="Flaming Oil" type="EtcItem">
+		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_oil_pot_black_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="500" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1697" name="Magic Powder" type="EtcItem">
+		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_powder_gray_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="3080" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1698" name="Refined Mithril" type="EtcItem">
+		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_plate_white_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="2100" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="1699" name="Reinforced Steel" type="EtcItem">
+		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<set name="icon" val="icon.etc_squares_silver_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="2" />
+		<set name="price" val="1860" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
 </list>

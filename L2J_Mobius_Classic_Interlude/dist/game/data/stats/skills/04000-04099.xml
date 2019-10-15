@@ -1,5 +1,16 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="4000" toLevel="1" name="Returning Warrior's Bracelet">
+		<!-- 5 Talisman can be equipped. -->
+		<icon>icon.high_agathion_bracelet_i01</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="TalismanSlot">
+				<slots>5</slots>
+			</effect>
+		</effects>
+	</skill>
 	<skill id="4001" toLevel="12" name="Gust">
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
@@ -868,7 +879,7 @@
 		</effects>
 	</skill>
 	<skill id="4035" toLevel="12" name="Poison">
-		<!-- HP cut due to Poison. $s1 power. -->
+		<!-- Poisons a target, momentarily decreasing HP. Effect $s1. -->
 		<icon>icon.skill4035</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -953,7 +964,7 @@
 		</effects>
 	</skill>
 	<skill id="4036" toLevel="12" name="Poison">
-		<!-- HP cut due to Poison. $s1 power. -->
+		<!-- Poisons a target, momentarily decreasing HP. Effect $s1. -->
 		<icon>icon.skill4036</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -1424,11 +1435,13 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="4047" toLevel="13" name="Hold">
-		<!-- Inflicted with Hold and unable to move. -->
+		<!-- Afflicted with Hold and unable to move momentarily. -->
 		<icon>icon.skill4047</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -1741,7 +1754,7 @@
 		</effects>
 	</skill>
 	<skill id="4052" toLevel="15" name="Cubic Poison">
-		<!-- HP cut due to Poison. $s1 power. -->
+		<!-- Poisons a target, momentarily decreasing HP. Effect $s1. -->
 		<icon>icon.skill1168</icon>
 		<abnormalLvl>
 			<value level="1">5</value>
@@ -2099,7 +2112,9 @@
 			<effect name="PhysicalAttack">
 				<power>916</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="4064" toLevel="1" name="Paralysis">
@@ -2125,7 +2140,9 @@
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="4065" toLevel="12" name="Heal">
@@ -2491,7 +2508,7 @@
 		</effects>
 	</skill>
 	<skill id="4072" toLevel="12" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -2570,11 +2587,13 @@
 					<value level="12">873</value>
 				</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="4073" toLevel="12" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -2653,11 +2672,13 @@
 					<value level="12">873</value>
 				</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="4074" toLevel="2" name="Haste">
-		<!-- Atk. Spd. + $s1 -->
+		<!-- Increases Speed by $s1. -->
 		<icon>icon.skill1086</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2696,7 +2717,7 @@
 		</effects>
 	</skill>
 	<skill id="4075" toLevel="12" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0092</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -2746,7 +2767,9 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="4076" toLevel="3" name="Decrease Speed">
@@ -2931,7 +2954,7 @@
 		</effects>
 	</skill>
 	<skill id="4079" toLevel="1" name="Siege Hammer">
-		<!-- Powerful attack on castle doors and walls. -->
+		<!-- Powerfully attacks castle gates, castle walls, etc. -->
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -2942,6 +2965,9 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpSiegeHammer" />
+		</conditions>
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>665060</power>
@@ -2960,6 +2986,9 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpSiegeHammer" />
+		</conditions>
 		<effects>
 			<effect name="Heal">
 				<power>628</power>
@@ -3026,7 +3055,7 @@
 		</effects>
 	</skill>
 	<skill id="4084" toLevel="11" name="Physical Attack Resistance">
-		<!-- Physical Attack Resistance -->
+		<!-- Resistant to physical attacks. -->
 		<icon>icon.skill4084</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -3455,7 +3484,7 @@
 		</effects>
 	</skill>
 	<skill id="4095" toLevel="1" name="Damage Shield">
-		<!-- Reflects a part of received damage. -->
+		<!-- Reflects back a portion of damage inflicted by the enemy P. Atk. -->
 		<icon>icon.skill4095</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -3490,6 +3519,7 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>6000</reuseDelay>
+		<staticReuse>true</staticReuse>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -3645,7 +3675,7 @@
 		</effects>
 	</skill>
 	<skill id="4099" toLevel="2" name="Berserker Spirit">
-		<!-- P. Def. - $s1, M. Def. - $s2, Evasion - $s3, and P. Atk. + $s4, M. Atk. + $s5, Atk. Spd. + $s6, Casting Spd. + $s7, Speed + $s8. -->
+		<!-- P. Def. decreases momentarily by $s1, M. Def. by $s2, and Evasion by $s3. Increases P. Atk. by $s4, M. Atk. by $s5, Atk. Spd. by $s6, Casting Spd. by $s7, and Speed by $s8. -->
 		<icon>icon.skill1062</icon>
 		<abnormalLvl>
 			<value level="1">1</value>

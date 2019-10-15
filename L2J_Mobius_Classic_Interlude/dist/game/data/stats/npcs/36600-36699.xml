@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="36609" level="99" type="Npc" name="Proclaimer" title="Gludio">
+	<npc id="36600" level="99" type="Npc" name="Revolutionary" title="Gludio">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ELF</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
@@ -12,6 +12,279 @@
 			</speed>
 			<attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="405.66735" magical="296.84976" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skillList>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="7" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="36601" level="99" type="Npc" name="Revolutionary" title="Dion">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="40" />
+			</speed>
+			<attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="405.66735" magical="296.84976" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skillList>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="7" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="36602" level="99" type="Npc" name="Revolutionary" title="Giran">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="40" />
+			</speed>
+			<attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="405.66735" magical="296.84976" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skillList>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="7" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="36603" level="99" type="Npc" name="Revolutionary" title="Oren">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="40" />
+			</speed>
+			<attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="405.66735" magical="296.84976" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skillList>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="7" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="36604" level="99" type="Npc" name="Revolutionary" title="Aden">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="40" />
+			</speed>
+			<attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="405.66735" magical="296.84976" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skillList>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="7" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="36605" level="99" type="Npc" name="Revolutionary" title="Innadril">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="40" />
+			</speed>
+			<attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="405.66735" magical="296.84976" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skillList>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="7" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="36606" level="99" type="Npc" name="Revolutionary" title="Goddard">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="40" />
+			</speed>
+			<attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="405.66735" magical="296.84976" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skillList>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="7" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="36607" level="99" type="Npc" name="Revolutionary" title="Rune">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="40" />
+			</speed>
+			<attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="405.66735" magical="296.84976" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skillList>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="7" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="36608" level="99" type="Npc" name="Revolutionary" title="Schuttgart">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="40" />
+			</speed>
+			<attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="405.66735" magical="296.84976" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skillList>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="7" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="36609" level="99" type="Npc" name="Proclaimer" title="Gludio">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ELF</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="40" />
+			</speed>
+			<attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="405.66735" magical="296.84976" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" />
@@ -31,7 +304,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ELF</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
@@ -39,6 +312,9 @@
 			</speed>
 			<attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="405.66735" magical="296.84976" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" />
@@ -58,7 +334,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ELF</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
@@ -66,6 +342,9 @@
 			</speed>
 			<attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="405.66735" magical="296.84976" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" />
@@ -85,7 +364,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ELF</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
@@ -93,6 +372,9 @@
 			</speed>
 			<attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="405.66735" magical="296.84976" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" />
@@ -112,7 +394,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ELF</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
@@ -120,6 +402,9 @@
 			</speed>
 			<attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="405.66735" magical="296.84976" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" />
@@ -139,7 +424,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ELF</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
@@ -147,6 +432,9 @@
 			</speed>
 			<attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="405.66735" magical="296.84976" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" />
@@ -166,7 +454,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ELF</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
@@ -174,6 +462,9 @@
 			</speed>
 			<attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="405.66735" magical="296.84976" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" />
@@ -193,7 +484,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ELF</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
@@ -201,6 +492,9 @@
 			</speed>
 			<attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="405.66735" magical="296.84976" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" />
@@ -220,7 +514,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ELF</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
@@ -228,6 +522,9 @@
 			</speed>
 			<attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="405.66735" magical="296.84976" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" />
@@ -241,6 +538,1083 @@
 		<collision>
 			<radius normal="8.5" />
 			<height normal="23.5" />
+		</collision>
+	</npc>
+	<npc id="36618" level="99" type="Monster" name="Chamberlain of Darkness">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>DEMONIC</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="1858868" hpRegen="8371" mp="2355" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="40" />
+			</speed>
+			<attack physical="16415.3156565473" magical="2787.87857095938" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="3679.90243035914" magical="2133.38489847112" />
+			<attribute>
+				<defence fire="450" water="450" wind="450" earth="450" holy="400" dark="450" />
+				<attack type="DARK" value="450" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
+		</stats>
+		<status attackable="false" undying="false" />
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skillList>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="9" />
+			<height normal="34" />
+		</collision>
+	</npc>
+	<npc id="36619" level="99" type="Monster" name="Chamberlain of Darkness">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>DEMONIC</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="1858868" hpRegen="8371" mp="2355" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="40" />
+			</speed>
+			<attack physical="16415.3156565473" magical="2787.87857095938" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="3679.90243035914" magical="2133.38489847112" />
+			<attribute>
+				<defence fire="450" water="450" wind="450" earth="450" holy="400" dark="450" />
+				<attack type="DARK" value="450" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
+		</stats>
+		<status attackable="false" undying="false" />
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skillList>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="9" />
+			<height normal="34" />
+		</collision>
+	</npc>
+	<npc id="36620" level="99" type="Monster" name="Chamberlain of Darkness">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>DEMONIC</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="1858868" hpRegen="8371" mp="2355" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="40" />
+			</speed>
+			<attack physical="16415.3156565473" magical="2787.87857095938" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="3679.90243035914" magical="2133.38489847112" />
+			<attribute>
+				<defence fire="450" water="450" wind="450" earth="450" holy="400" dark="450" />
+				<attack type="DARK" value="450" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
+		</stats>
+		<status attackable="false" undying="false" />
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skillList>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="9" />
+			<height normal="34" />
+		</collision>
+	</npc>
+	<npc id="36621" level="99" type="Monster" name="Chamberlain of Darkness">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>DEMONIC</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="1858868" hpRegen="8371" mp="2355" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="40" />
+			</speed>
+			<attack physical="16415.3156565473" magical="2787.87857095938" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="3679.90243035914" magical="2133.38489847112" />
+			<attribute>
+				<defence fire="450" water="450" wind="450" earth="450" holy="400" dark="450" />
+				<attack type="DARK" value="450" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
+		</stats>
+		<status attackable="false" undying="false" />
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skillList>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="9" />
+			<height normal="34" />
+		</collision>
+	</npc>
+	<npc id="36622" level="99" type="Monster" name="Chamberlain of Darkness">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>DEMONIC</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="1858868" hpRegen="8371" mp="2355" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="40" />
+			</speed>
+			<attack physical="16415.3156565473" magical="2787.87857095938" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="3679.90243035914" magical="2133.38489847112" />
+			<attribute>
+				<defence fire="450" water="450" wind="450" earth="450" holy="400" dark="450" />
+				<attack type="DARK" value="450" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
+		</stats>
+		<status attackable="false" undying="false" />
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skillList>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="9" />
+			<height normal="34" />
+		</collision>
+	</npc>
+	<npc id="36623" level="99" type="Monster" name="Chamberlain of Darkness">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>DEMONIC</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="1858868" hpRegen="8371" mp="2355" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="40" />
+			</speed>
+			<attack physical="16415.3156565473" magical="2787.87857095938" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="3679.90243035914" magical="2133.38489847112" />
+			<attribute>
+				<defence fire="450" water="450" wind="450" earth="450" holy="400" dark="450" />
+				<attack type="DARK" value="450" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
+		</stats>
+		<status attackable="false" undying="false" />
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skillList>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="9" />
+			<height normal="34" />
+		</collision>
+	</npc>
+	<npc id="36624" level="99" type="Monster" name="Chamberlain of Darkness">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>DEMONIC</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="1858868" hpRegen="8371" mp="2355" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="40" />
+			</speed>
+			<attack physical="16415.3156565473" magical="2787.87857095938" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="3679.90243035914" magical="2133.38489847112" />
+			<attribute>
+				<defence fire="450" water="450" wind="450" earth="450" holy="400" dark="450" />
+				<attack type="DARK" value="450" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
+		</stats>
+		<status attackable="false" undying="false" />
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skillList>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="9" />
+			<height normal="34" />
+		</collision>
+	</npc>
+	<npc id="36625" level="99" type="Monster" name="Chamberlain of Darkness">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>DEMONIC</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="1858868" hpRegen="8371" mp="2355" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="40" />
+			</speed>
+			<attack physical="16415.3156565473" magical="2787.87857095938" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="3679.90243035914" magical="2133.38489847112" />
+			<attribute>
+				<defence fire="450" water="450" wind="450" earth="450" holy="400" dark="450" />
+				<attack type="DARK" value="450" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
+		</stats>
+		<status attackable="false" undying="false" />
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skillList>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="9" />
+			<height normal="34" />
+		</collision>
+	</npc>
+	<npc id="36626" level="99" type="Monster" name="Chamberlain of Darkness">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>DEMONIC</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="1858868" hpRegen="8371" mp="2355" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="40" />
+			</speed>
+			<attack physical="16415.3156565473" magical="2787.87857095938" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="3679.90243035914" magical="2133.38489847112" />
+			<attribute>
+				<defence fire="450" water="450" wind="450" earth="450" holy="400" dark="450" />
+				<attack type="DARK" value="450" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
+		</stats>
+		<status attackable="false" undying="false" />
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skillList>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="9" />
+			<height normal="34" />
+		</collision>
+	</npc>
+	<npc id="36627" level="40" type="Npc" name="Gludio Transportation Unit" title="Minion of Darkness">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="966" hpRegen="4.5" mp="478" mpRegen="1.8" />
+			<speed>
+				<walk ground="40" />
+				<run ground="120" />
+			</speed>
+			<attack physical="176.36077" magical="120.43155" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="156.55035" magical="114.55675" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skillList>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="10" />
+			<height normal="23.35" />
+		</collision>
+	</npc>
+	<npc id="36628" level="40" type="Npc" name="Dion Transportation Unit" title="Minion of Darkness">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="966" hpRegen="4.5" mp="478" mpRegen="1.8" />
+			<speed>
+				<walk ground="40" />
+				<run ground="120" />
+			</speed>
+			<attack physical="176.36077" magical="120.43155" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="156.55035" magical="114.55675" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skillList>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="10" />
+			<height normal="23.35" />
+		</collision>
+	</npc>
+	<npc id="36629" level="40" type="Npc" name="Giran Transportation Unit" title="Minion of Darkness">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="966" hpRegen="4.5" mp="478" mpRegen="1.8" />
+			<speed>
+				<walk ground="40" />
+				<run ground="120" />
+			</speed>
+			<attack physical="176.36077" magical="120.43155" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="156.55035" magical="114.55675" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skillList>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="10" />
+			<height normal="23.35" />
+		</collision>
+	</npc>
+	<npc id="36630" level="40" type="Npc" name="Oren Transportation Unit" title="Minion of Darkness">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="966" hpRegen="4.5" mp="478" mpRegen="1.8" />
+			<speed>
+				<walk ground="40" />
+				<run ground="120" />
+			</speed>
+			<attack physical="176.36077" magical="120.43155" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="156.55035" magical="114.55675" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skillList>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="10" />
+			<height normal="23.35" />
+		</collision>
+	</npc>
+	<npc id="36631" level="40" type="Npc" name="Aden Transportation Unit" title="Minion of Darkness">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="966" hpRegen="4.5" mp="478" mpRegen="1.8" />
+			<speed>
+				<walk ground="40" />
+				<run ground="120" />
+			</speed>
+			<attack physical="176.36077" magical="120.43155" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="156.55035" magical="114.55675" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skillList>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="10" />
+			<height normal="23.35" />
+		</collision>
+	</npc>
+	<npc id="36632" level="40" type="Npc" name="Innadril Transportation Unit" title="Minion of Darkness">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="966" hpRegen="4.5" mp="478" mpRegen="1.8" />
+			<speed>
+				<walk ground="40" />
+				<run ground="120" />
+			</speed>
+			<attack physical="176.36077" magical="120.43155" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="156.55035" magical="114.55675" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skillList>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="10" />
+			<height normal="23.35" />
+		</collision>
+	</npc>
+	<npc id="36633" level="40" type="Npc" name="Goddard Transportation Unit" title="Minion of Darkness">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="966" hpRegen="4.5" mp="478" mpRegen="1.8" />
+			<speed>
+				<walk ground="40" />
+				<run ground="120" />
+			</speed>
+			<attack physical="176.36077" magical="120.43155" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="156.55035" magical="114.55675" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skillList>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="10" />
+			<height normal="23.35" />
+		</collision>
+	</npc>
+	<npc id="36634" level="40" type="Npc" name="Rune Transportation Unit" title="Minion of Darkness">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="966" hpRegen="4.5" mp="478" mpRegen="1.8" />
+			<speed>
+				<walk ground="40" />
+				<run ground="120" />
+			</speed>
+			<attack physical="176.36077" magical="120.43155" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="156.55035" magical="114.55675" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skillList>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="10" />
+			<height normal="23.35" />
+		</collision>
+	</npc>
+	<npc id="36635" level="40" type="Npc" name="Schuttgart Transportation Unit" title="Minion of Darkness">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="966" hpRegen="4.5" mp="478" mpRegen="1.8" />
+			<speed>
+				<walk ground="40" />
+				<run ground="120" />
+			</speed>
+			<attack physical="176.36077" magical="120.43155" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="156.55035" magical="114.55675" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skillList>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="10" />
+			<height normal="23.35" />
+		</collision>
+	</npc>
+	<npc id="36636" level="40" type="Npc" name="Aden Transportation Unit" title="Minion of Darkness">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="966" hpRegen="4.5" mp="478" mpRegen="1.8" />
+			<speed>
+				<walk ground="40" />
+				<run ground="120" />
+			</speed>
+			<attack physical="176.36077" magical="120.43155" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="156.55035" magical="114.55675" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skillList>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="10" />
+			<height normal="23.35" />
+		</collision>
+	</npc>
+	<npc id="36637" level="40" type="Npc" name="Aden Transportation Unit" title="Minion of Darkness">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="966" hpRegen="4.5" mp="478" mpRegen="1.8" />
+			<speed>
+				<walk ground="40" />
+				<run ground="120" />
+			</speed>
+			<attack physical="176.36077" magical="120.43155" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="156.55035" magical="114.55675" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skillList>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="10" />
+			<height normal="23.35" />
+		</collision>
+	</npc>
+	<npc id="36638" level="40" type="Npc" name="Rune Transportation Unit" title="Minion of Darkness">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="966" hpRegen="4.5" mp="478" mpRegen="1.8" />
+			<speed>
+				<walk ground="40" />
+				<run ground="120" />
+			</speed>
+			<attack physical="176.36077" magical="120.43155" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="156.55035" magical="114.55675" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skillList>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="10" />
+			<height normal="23.35" />
+		</collision>
+	</npc>
+	<npc id="36639" level="40" type="Npc" name="Rune Transportation Unit" title="Minion of Darkness">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="966" hpRegen="4.5" mp="478" mpRegen="1.8" />
+			<speed>
+				<walk ground="40" />
+				<run ground="120" />
+			</speed>
+			<attack physical="176.36077" magical="120.43155" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="156.55035" magical="114.55675" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skillList>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="10" />
+			<height normal="23.35" />
+		</collision>
+	</npc>
+	<npc id="36640" level="40" type="Npc" name="Aden Supply Wagon">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="966" hpRegen="4.5" mp="478" mpRegen="1.8" />
+			<speed>
+				<walk ground="40" />
+				<run ground="40" />
+			</speed>
+			<attack physical="176.36077" magical="120.43155" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="156.55035" magical="114.55675" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skillList>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="20" />
+			<height normal="36" />
+		</collision>
+	</npc>
+	<npc id="36641" level="40" type="Npc" name="Rune Supply Wagon">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="966" hpRegen="4.5" mp="478" mpRegen="1.8" />
+			<speed>
+				<walk ground="40" />
+				<run ground="40" />
+			</speed>
+			<attack physical="176.36077" magical="120.43155" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="156.55035" magical="114.55675" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skillList>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="20" />
+			<height normal="36" />
+		</collision>
+	</npc>
+	<npc id="36642" level="40" type="Npc" name="Captain of the Revolutionaries">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="966" hpRegen="4.5" mp="478" mpRegen="1.8" />
+			<speed>
+				<walk ground="50" />
+				<run ground="40" />
+			</speed>
+			<attack physical="176.36077" magical="120.43155" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="156.55035" magical="114.55675" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skillList>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="7" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="36643" level="40" type="Npc" name="Captain of the Revolutionaries">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="966" hpRegen="4.5" mp="478" mpRegen="1.8" />
+			<speed>
+				<walk ground="50" />
+				<run ground="40" />
+			</speed>
+			<attack physical="176.36077" magical="120.43155" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="156.55035" magical="114.55675" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skillList>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="7" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="36644" level="40" type="Npc" name="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="966" hpRegen="4.5" mp="478" mpRegen="1.8" />
+			<speed>
+				<walk ground="1" />
+				<run ground="40" />
+			</speed>
+			<attack physical="176.36077" magical="120.43155" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="156.55035" magical="114.55675" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
+		</stats>
+		<status attackable="false" targetable="false" showName="false" />
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skillList>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="0.1" />
+			<height normal="0.1" />
+		</collision>
+	</npc>
+	<npc id="36645" level="40" type="Npc" name="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="966" hpRegen="4.5" mp="478" mpRegen="1.8" />
+			<speed>
+				<walk ground="1" />
+				<run ground="40" />
+			</speed>
+			<attack physical="176.36077" magical="120.43155" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="156.55035" magical="114.55675" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
+		</stats>
+		<status attackable="false" targetable="false" showName="false" />
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skillList>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="0.1" />
+			<height normal="0.1" />
+		</collision>
+	</npc>
+	<npc id="36646" level="40" type="Npc" name="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="966" hpRegen="4.5" mp="478" mpRegen="1.8" />
+			<speed>
+				<walk ground="1" />
+				<run ground="40" />
+			</speed>
+			<attack physical="176.36077" magical="120.43155" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="156.55035" magical="114.55675" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
+		</stats>
+		<status attackable="false" targetable="false" showName="false" />
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skillList>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="0.1" />
+			<height normal="0.1" />
+		</collision>
+	</npc>
+	<npc id="36647" level="40" type="Npc" name="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="966" hpRegen="4.5" mp="478" mpRegen="1.8" />
+			<speed>
+				<walk ground="1" />
+				<run ground="40" />
+			</speed>
+			<attack physical="176.36077" magical="120.43155" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="156.55035" magical="114.55675" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
+		</stats>
+		<status attackable="false" targetable="false" showName="false" />
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skillList>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="0.1" />
+			<height normal="0.1" />
+		</collision>
+	</npc>
+	<npc id="36648" level="40" type="Npc" name="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="966" hpRegen="4.5" mp="478" mpRegen="1.8" />
+			<speed>
+				<walk ground="1" />
+				<run ground="40" />
+			</speed>
+			<attack physical="176.36077" magical="120.43155" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="156.55035" magical="114.55675" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
+		</stats>
+		<status attackable="false" targetable="false" showName="false" />
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skillList>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="0.1" />
+			<height normal="0.1" />
+		</collision>
+	</npc>
+	<npc id="36649" level="40" type="Npc" name="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="966" hpRegen="4.5" mp="478" mpRegen="1.8" />
+			<speed>
+				<walk ground="1" />
+				<run ground="40" />
+			</speed>
+			<attack physical="176.36077" magical="120.43155" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="156.55035" magical="114.55675" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
+		</stats>
+		<status attackable="false" targetable="false" showName="false" />
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skillList>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="0.1" />
+			<height normal="0.1" />
+		</collision>
+	</npc>
+	<npc id="36650" level="40" type="Npc" name="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="966" hpRegen="4.5" mp="478" mpRegen="1.8" />
+			<speed>
+				<walk ground="1" />
+				<run ground="40" />
+			</speed>
+			<attack physical="176.36077" magical="120.43155" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="156.55035" magical="114.55675" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
+		</stats>
+		<status attackable="false" targetable="false" showName="false" />
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skillList>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="0.1" />
+			<height normal="0.1" />
+		</collision>
+	</npc>
+	<npc id="36651" level="40" type="Npc" name="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="966" hpRegen="4.5" mp="478" mpRegen="1.8" />
+			<speed>
+				<walk ground="1" />
+				<run ground="40" />
+			</speed>
+			<attack physical="176.36077" magical="120.43155" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="156.55035" magical="114.55675" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
+		</stats>
+		<status attackable="false" targetable="false" showName="false" />
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skillList>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="0.1" />
+			<height normal="0.1" />
+		</collision>
+	</npc>
+	<npc id="36652" level="40" type="Npc" name="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="966" hpRegen="4.5" mp="478" mpRegen="1.8" />
+			<speed>
+				<walk ground="1" />
+				<run ground="40" />
+			</speed>
+			<attack physical="176.36077" magical="120.43155" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="156.55035" magical="114.55675" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
+		</stats>
+		<status attackable="false" targetable="false" showName="false" />
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skillList>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="0.1" />
+			<height normal="0.1" />
 		</collision>
 	</npc>
 	<npc id="36653" level="99" type="Merchant" name="Chamberlain of Darkness">
@@ -268,7 +1642,7 @@
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
@@ -276,6 +1650,9 @@
 			</speed>
 			<attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="405.66735" magical="296.84976" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" />
@@ -283,6 +1660,7 @@
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
@@ -316,7 +1694,7 @@
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
@@ -324,6 +1702,9 @@
 			</speed>
 			<attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="405.66735" magical="296.84976" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" />
@@ -331,6 +1712,7 @@
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
@@ -365,7 +1747,7 @@
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
@@ -373,6 +1755,9 @@
 			</speed>
 			<attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="405.66735" magical="296.84976" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" />
@@ -380,6 +1765,7 @@
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
@@ -414,7 +1800,7 @@
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
@@ -422,6 +1808,9 @@
 			</speed>
 			<attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="405.66735" magical="296.84976" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" />
@@ -429,6 +1818,7 @@
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
@@ -471,7 +1861,7 @@
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
@@ -479,6 +1869,9 @@
 			</speed>
 			<attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="405.66735" magical="296.84976" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" />
@@ -486,6 +1879,7 @@
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
@@ -517,7 +1911,7 @@
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
@@ -525,6 +1919,9 @@
 			</speed>
 			<attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="405.66735" magical="296.84976" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" />
@@ -532,6 +1929,7 @@
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
@@ -567,7 +1965,7 @@
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
@@ -575,6 +1973,9 @@
 			</speed>
 			<attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="405.66735" magical="296.84976" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" />
@@ -582,6 +1983,7 @@
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
@@ -615,7 +2017,7 @@
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
@@ -623,6 +2025,9 @@
 			</speed>
 			<attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="405.66735" magical="296.84976" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" />
@@ -630,6 +2035,7 @@
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
@@ -664,7 +2070,7 @@
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
@@ -672,6 +2078,9 @@
 			</speed>
 			<attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="405.66735" magical="296.84976" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" />
@@ -679,6 +2088,7 @@
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
@@ -687,12 +2097,72 @@
 			<height normal="34" />
 		</collision>
 	</npc>
+	<npc id="36662" level="40" type="Npc" name="Captain of the Revolutionaries">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>MALE</sex>
+		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="966" hpRegen="4.5" mp="478" mpRegen="1.8" />
+			<speed>
+				<walk ground="50" />
+				<run ground="40" />
+			</speed>
+			<attack physical="176.36077" magical="120.43155" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="156.55035" magical="114.55675" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skillList>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="7" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="36663" level="40" type="Npc" name="Captain of the Revolutionaries">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>MALE</sex>
+		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="966" hpRegen="4.5" mp="478" mpRegen="1.8" />
+			<speed>
+				<walk ground="50" />
+				<run ground="40" />
+			</speed>
+			<attack physical="176.36077" magical="120.43155" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="156.55035" magical="114.55675" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skillList>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="7" />
+			<height normal="24" />
+		</collision>
+	</npc>
 	<npc id="36664" level="75" type="Npc" name="Herald of Light">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ELF</race>
 		<sex>FEMALE</sex>
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
@@ -700,6 +2170,9 @@
 			</speed>
 			<attack physical="794.70901" magical="542.68324" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="319.24623" magical="233.61053" />
+			<attribute>
+				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
+			</attribute>
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" />
@@ -720,7 +2193,7 @@
 		<race>ELF</race>
 		<sex>FEMALE</sex>
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
@@ -728,6 +2201,9 @@
 			</speed>
 			<attack physical="794.70901" magical="542.68324" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="319.24623" magical="233.61053" />
+			<attribute>
+				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
+			</attribute>
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" />
@@ -748,7 +2224,7 @@
 		<race>ELF</race>
 		<sex>FEMALE</sex>
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
@@ -756,6 +2232,9 @@
 			</speed>
 			<attack physical="794.70901" magical="542.68324" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="319.24623" magical="233.61053" />
+			<attribute>
+				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
+			</attribute>
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" />
@@ -776,7 +2255,7 @@
 		<race>ELF</race>
 		<sex>FEMALE</sex>
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
@@ -784,6 +2263,9 @@
 			</speed>
 			<attack physical="794.70901" magical="542.68324" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="319.24623" magical="233.61053" />
+			<attribute>
+				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
+			</attribute>
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" />
@@ -804,7 +2286,7 @@
 		<race>ELF</race>
 		<sex>FEMALE</sex>
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
@@ -812,6 +2294,9 @@
 			</speed>
 			<attack physical="794.70901" magical="542.68324" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="319.24623" magical="233.61053" />
+			<attribute>
+				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
+			</attribute>
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" />
@@ -832,7 +2317,7 @@
 		<race>ELF</race>
 		<sex>FEMALE</sex>
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
@@ -840,6 +2325,9 @@
 			</speed>
 			<attack physical="794.70901" magical="542.68324" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="319.24623" magical="233.61053" />
+			<attribute>
+				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
+			</attribute>
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" />
@@ -860,7 +2348,7 @@
 		<race>ELF</race>
 		<sex>FEMALE</sex>
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
@@ -868,6 +2356,9 @@
 			</speed>
 			<attack physical="794.70901" magical="542.68324" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="319.24623" magical="233.61053" />
+			<attribute>
+				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
+			</attribute>
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" />
@@ -888,7 +2379,7 @@
 		<race>ELF</race>
 		<sex>FEMALE</sex>
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
@@ -896,6 +2387,9 @@
 			</speed>
 			<attack physical="794.70901" magical="542.68324" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="319.24623" magical="233.61053" />
+			<attribute>
+				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
+			</attribute>
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" />
@@ -916,7 +2410,7 @@
 		<race>ELF</race>
 		<sex>FEMALE</sex>
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
@@ -924,6 +2418,9 @@
 			</speed>
 			<attack physical="794.70901" magical="542.68324" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="319.24623" magical="233.61053" />
+			<attribute>
+				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
+			</attribute>
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" />
@@ -944,7 +2441,7 @@
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
@@ -952,6 +2449,9 @@
 			</speed>
 			<attack physical="794.70901" magical="542.68324" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="319.24623" magical="233.61053" />
+			<attribute>
+				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
+			</attribute>
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" />
@@ -971,7 +2471,7 @@
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
@@ -979,6 +2479,9 @@
 			</speed>
 			<attack physical="794.70901" magical="542.68324" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="319.24623" magical="233.61053" />
+			<attribute>
+				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
+			</attribute>
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" />
@@ -998,7 +2501,7 @@
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
@@ -1006,6 +2509,9 @@
 			</speed>
 			<attack physical="794.70901" magical="542.68324" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="319.24623" magical="233.61053" />
+			<attribute>
+				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
+			</attribute>
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" />
@@ -1025,7 +2531,7 @@
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
@@ -1033,6 +2539,9 @@
 			</speed>
 			<attack physical="794.70901" magical="542.68324" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="319.24623" magical="233.61053" />
+			<attribute>
+				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
+			</attribute>
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" />
@@ -1052,7 +2561,7 @@
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
@@ -1060,6 +2569,9 @@
 			</speed>
 			<attack physical="794.70901" magical="542.68324" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="319.24623" magical="233.61053" />
+			<attribute>
+				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
+			</attribute>
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" />
@@ -1079,7 +2591,7 @@
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
@@ -1087,6 +2599,9 @@
 			</speed>
 			<attack physical="794.70901" magical="542.68324" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="319.24623" magical="233.61053" />
+			<attribute>
+				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
+			</attribute>
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" />
@@ -1106,7 +2621,7 @@
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
@@ -1114,6 +2629,9 @@
 			</speed>
 			<attack physical="794.70901" magical="542.68324" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="319.24623" magical="233.61053" />
+			<attribute>
+				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
+			</attribute>
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" />
@@ -1133,7 +2651,7 @@
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
@@ -1141,6 +2659,9 @@
 			</speed>
 			<attack physical="794.70901" magical="542.68324" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="319.24623" magical="233.61053" />
+			<attribute>
+				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
+			</attribute>
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" />
@@ -1160,7 +2681,7 @@
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
@@ -1168,6 +2689,9 @@
 			</speed>
 			<attack physical="794.70901" magical="542.68324" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="319.24623" magical="233.61053" />
+			<attribute>
+				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
+			</attribute>
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" />
@@ -1180,6 +2704,434 @@
 		<collision>
 			<radius normal="9" />
 			<height normal="34" />
+		</collision>
+	</npc>
+	<npc id="36682" level="75" type="Npc" name="Mermoden">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="192" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+			<attack physical="795.07855864326" magical="542.73382161824" critical="4" attackSpeed="253" range="40" />
+			<defence physical="319.51219512195" magical="233.84045721645" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="23.5" />
+		</collision>
+	</npc>
+	<npc id="36683" level="75" type="Npc" name="Mermoden">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="192" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+			<attack physical="795.07855864326" magical="542.73382161824" critical="4" attackSpeed="253" range="40" />
+			<defence physical="319.51219512195" magical="233.84045721645" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="23.5" />
+		</collision>
+	</npc>
+	<npc id="36684" level="75" type="Npc" name="Dimensional Wizard">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<equipment lhand="13466" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+			<attack physical="795.07855864326" magical="542.73382161824" critical="4" attackSpeed="253" range="40" />
+			<defence physical="319.51219512195" magical="233.84045721645" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="7" />
+			<height normal="21.2" />
+		</collision>
+	</npc>
+	<npc id="36685" level="75" type="Npc" name="Dimensional Wizard">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<equipment lhand="13466" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+			<attack physical="795.07855864326" magical="542.73382161824" critical="4" attackSpeed="253" range="40" />
+			<defence physical="319.51219512195" magical="233.84045721645" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="7" />
+			<height normal="21.2" />
+		</collision>
+	</npc>
+	<npc id="36686" level="75" type="Npc" name="Mermoden">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="192" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+			<attack physical="795.07855864326" magical="542.73382161824" critical="4" attackSpeed="253" range="40" />
+			<defence physical="319.51219512195" magical="233.84045721645" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="23.5" />
+		</collision>
+	</npc>
+	<npc id="36687" level="75" type="Npc" name="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
+			<speed>
+				<walk ground="1" />
+				<run ground="120" />
+			</speed>
+			<attack physical="795.07855864326" magical="542.73382161824" critical="4" attackSpeed="253" range="40" />
+			<defence physical="319.51219512195" magical="233.84045721645" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="44.5" />
+			<height normal="7" />
+		</collision>
+	</npc>
+	<npc id="36688" level="75" type="Npc" name="Dimensional Manager" title="Black Anvil Guild's Artisan">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
+			<speed>
+				<walk ground="20" />
+				<run ground="120" />
+			</speed>
+			<attack physical="795.07855864326" magical="542.73382161824" critical="4" attackSpeed="253" range="40" />
+			<defence physical="319.51219512195" magical="233.84045721645" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<collision>
+			<radius normal="8" />
+			<height normal="17.5" />
+		</collision>
+	</npc>
+	<npc id="36689" level="75" type="Npc" name="Dimensional Manager" title="Black Anvil Guild's Artisan">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
+			<speed>
+				<walk ground="20" />
+				<run ground="120" />
+			</speed>
+			<attack physical="795.07855864326" magical="542.73382161824" critical="4" attackSpeed="253" range="40" />
+			<defence physical="319.51219512195" magical="233.84045721645" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<collision>
+			<radius normal="8" />
+			<height normal="17.5" />
+		</collision>
+	</npc>
+	<npc id="36690" level="75" type="Npc" name="Dimensional Manager" title="Black Anvil Guild's Artisan">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
+			<speed>
+				<walk ground="20" />
+				<run ground="120" />
+			</speed>
+			<attack physical="795.07855864326" magical="542.73382161824" critical="4" attackSpeed="253" range="40" />
+			<defence physical="319.51219512195" magical="233.84045721645" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<collision>
+			<radius normal="8" />
+			<height normal="17.5" />
+		</collision>
+	</npc>
+	<npc id="36691" level="75" type="Npc" name="Dimensional Manager" title="Black Anvil Guild's Artisan">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
+			<speed>
+				<walk ground="20" />
+				<run ground="120" />
+			</speed>
+			<attack physical="795.07855864326" magical="542.73382161824" critical="4" attackSpeed="253" range="40" />
+			<defence physical="319.51219512195" magical="233.84045721645" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<collision>
+			<radius normal="8" />
+			<height normal="17.5" />
+		</collision>
+	</npc>
+	<npc id="36692" level="75" type="Npc" name="Dimensional Manager" title="Black Anvil Guild's Artisan">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
+			<speed>
+				<walk ground="20" />
+				<run ground="120" />
+			</speed>
+			<attack physical="795.07855864326" magical="542.73382161824" critical="4" attackSpeed="253" range="40" />
+			<defence physical="319.51219512195" magical="233.84045721645" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<collision>
+			<radius normal="8" />
+			<height normal="17.5" />
+		</collision>
+	</npc>
+	<npc id="36693" level="75" type="Npc" name="Dimensional Manager" title="Black Anvil Guild's Artisan">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
+			<speed>
+				<walk ground="20" />
+				<run ground="120" />
+			</speed>
+			<attack physical="795.07855864326" magical="542.73382161824" critical="4" attackSpeed="253" range="40" />
+			<defence physical="319.51219512195" magical="233.84045721645" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<collision>
+			<radius normal="8" />
+			<height normal="17.5" />
+		</collision>
+	</npc>
+	<npc id="36694" level="75" type="Npc" name="Dimensional Manager" title="Black Anvil Guild's Artisan">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
+			<speed>
+				<walk ground="20" />
+				<run ground="120" />
+			</speed>
+			<attack physical="795.07855864326" magical="542.73382161824" critical="4" attackSpeed="253" range="40" />
+			<defence physical="319.51219512195" magical="233.84045721645" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<collision>
+			<radius normal="8" />
+			<height normal="17.5" />
+		</collision>
+	</npc>
+	<npc id="36695" level="75" type="Npc" name="Dimensional Manager" title="Black Anvil Guild's Artisan">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
+			<speed>
+				<walk ground="20" />
+				<run ground="120" />
+			</speed>
+			<attack physical="795.07855864326" magical="542.73382161824" critical="4" attackSpeed="253" range="40" />
+			<defence physical="319.51219512195" magical="233.84045721645" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<collision>
+			<radius normal="8" />
+			<height normal="17.5" />
+		</collision>
+	</npc>
+	<npc id="36696" level="75" type="Npc" name="Dimensional Manager" title="Black Anvil Guild's Artisan">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
+			<speed>
+				<walk ground="20" />
+				<run ground="120" />
+			</speed>
+			<attack physical="795.07855864326" magical="542.73382161824" critical="4" attackSpeed="253" range="40" />
+			<defence physical="319.51219512195" magical="233.84045721645" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="14" /> <!-- Humans -->
+		</skillList>
+		<collision>
+			<radius normal="8" />
+			<height normal="17.5" />
+		</collision>
+	</npc>
+	<npc id="36697" level="75" type="Npc" name="Dimensional Emissary" title="Gludio">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+			<attack physical="795.07855864326" magical="542.73382161824" critical="4" attackSpeed="253" range="40" />
+			<defence physical="319.51219512195" magical="233.84045721645" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="36698" level="75" type="Npc" name="Dimensional Emissary" title="Dion">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+			<attack physical="795.07855864326" magical="542.73382161824" critical="4" attackSpeed="253" range="40" />
+			<defence physical="319.51219512195" magical="233.84045721645" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="36699" level="75" type="Npc" name="Dimensional Emissary" title="Giran">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+			<attack physical="795.07855864326" magical="542.73382161824" critical="4" attackSpeed="253" range="40" />
+			<defence physical="319.51219512195" magical="233.84045721645" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="25" />
 		</collision>
 	</npc>
 </list>

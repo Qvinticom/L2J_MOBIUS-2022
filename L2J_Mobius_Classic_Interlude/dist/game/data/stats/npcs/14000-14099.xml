@@ -1,12 +1,16 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="14001" level="46" type="Pet" name="Reanimated Man">
+		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="1229" hpRegen="5.5" mp="637" mpRegen="2.1" />
-			<attack physical="297.66312" magical="169.38777" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="248.0526" magical="169.38777" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="182.18816" magical="133.31739" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -14,7 +18,7 @@
 			<hitTime>300</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status undying="false" />
 		<skillList>
 			<skill id="4121" level="7" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="4408" level="6" /> <!-- HP Very High -->
@@ -26,6 +30,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 		</skillList>
 		<shots soul="3" spirit="1" />
 		<exCrtEffect>false</exCrtEffect>
@@ -36,12 +41,16 @@
 		</collision>
 	</npc>
 	<npc id="14002" level="54" type="Pet" name="Reanimated Man">
+		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="1621" hpRegen="6.5" mp="861" mpRegen="2.4" />
-			<attack physical="444.826848" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="370.68904" magical="253.13256" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="218.89589" magical="160.17851" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -49,7 +58,7 @@
 			<hitTime>300</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status undying="false" />
 		<skillList>
 			<skill id="4121" level="7" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="4408" level="6" /> <!-- HP Very High -->
@@ -61,6 +70,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 		</skillList>
 		<shots soul="3" spirit="1" />
 		<exCrtEffect>false</exCrtEffect>
@@ -71,12 +81,16 @@
 		</collision>
 	</npc>
 	<npc id="14003" level="62" type="Pet" name="Reanimated Man">
+		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2037" hpRegen="7.5" mp="1097" mpRegen="2.7" />
-			<attack physical="625.348692" magical="355.86007" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="521.12391" magical="355.86007" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="257.34267" magical="188.3122" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -84,7 +98,7 @@
 			<hitTime>300</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status undying="false" />
 		<skillList>
 			<skill id="4121" level="7" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="4408" level="6" /> <!-- HP Very High -->
@@ -96,6 +110,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 		</skillList>
 		<shots soul="4" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -106,12 +121,16 @@
 		</collision>
 	</npc>
 	<npc id="14004" level="66" type="Pet" name="Reanimated Man">
+		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2244" hpRegen="7.5" mp="1219" mpRegen="2.7" />
-			<attack physical="724.558836" magical="412.31647" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="603.79903" magical="412.31647" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="276.72752" magical="202.49719" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -119,7 +138,7 @@
 			<hitTime>300</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status undying="false" />
 		<skillList>
 			<skill id="4121" level="7" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="4408" level="6" /> <!-- HP Very High -->
@@ -131,6 +150,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 		</skillList>
 		<shots soul="4" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -141,12 +161,16 @@
 		</collision>
 	</npc>
 	<npc id="14005" level="70" type="Pet" name="Reanimated Man">
+		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="826.636476" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -154,7 +178,7 @@
 			<hitTime>300</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status undying="false" />
 		<skillList>
 			<skill id="4121" level="7" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="4408" level="6" /> <!-- HP Very High -->
@@ -166,6 +190,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 		</skillList>
 		<shots soul="5" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -176,12 +201,16 @@
 		</collision>
 	</npc>
 	<npc id="14006" level="74" type="Pet" name="Reanimated Man">
+		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2632" hpRegen="8.5" mp="1475" mpRegen="3" />
-			<attack physical="928.579176" magical="528.41601" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="773.81598" magical="528.41601" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="314.65987" magical="230.25444" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -189,7 +218,7 @@
 			<hitTime>300</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status undying="false" />
 		<skillList>
 			<skill id="4121" level="7" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="4408" level="6" /> <!-- HP Very High -->
@@ -201,6 +230,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 		</skillList>
 		<shots soul="5" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -211,12 +241,16 @@
 		</collision>
 	</npc>
 	<npc id="14007" level="76" type="Pet" name="Reanimated Man">
+		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2719" hpRegen="8.5" mp="1540" mpRegen="3" />
-			<attack physical="978.44574" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="815.37145" magical="556.793" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -224,7 +258,7 @@
 			<hitTime>300</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status undying="false" />
 		<skillList>
 			<skill id="4121" level="7" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="4408" level="6" /> <!-- HP Very High -->
@@ -236,6 +270,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 		</skillList>
 		<shots soul="5" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -246,12 +281,16 @@
 		</collision>
 	</npc>
 	<npc id="14008" level="78" type="Pet" name="Reanimated Man">
+		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2802" hpRegen="8.5" mp="1607" mpRegen="3" />
-			<attack physical="1032.10686" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="855.81387" magical="584.40994" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" />
+			<attribute>
+				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -271,6 +310,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 		</skillList>
 		<shots soul="5" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -281,12 +321,16 @@
 		</collision>
 	</npc>
 	<npc id="14009" level="78" type="Pet" name="Reanimated Man">
+		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2812" hpRegen="8.5" mp="1615" mpRegen="3" />
-			<attack physical="1037.24172" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="860.7348" magical="587.770295" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="333.7929775" magical="244.2552175" />
+			<attribute>
+				<defence fire="50" water="50" wind="50" earth="50" holy="50" dark="50" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -306,6 +350,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 		</skillList>
 		<shots soul="5" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -316,12 +361,16 @@
 		</collision>
 	</npc>
 	<npc id="14010" level="78" type="Pet" name="Reanimated Man">
+		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2822" hpRegen="8.5" mp="1624" mpRegen="3" />
-			<attack physical="1042.37658" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="865.65573" magical="591.13065" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="334.885345" magical="245.054565" />
+			<attribute>
+				<defence fire="60" water="60" wind="60" earth="60" holy="60" dark="60" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -341,6 +390,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 		</skillList>
 		<shots soul="5" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -351,12 +401,16 @@
 		</collision>
 	</npc>
 	<npc id="14011" level="78" type="Pet" name="Reanimated Man">
+		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2832" hpRegen="8.5" mp="1632" mpRegen="3" />
-			<attack physical="1047.51144" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="870.57666" magical="594.491005" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="335.9777125" magical="245.8539125" />
+			<attribute>
+				<defence fire="70" water="70" wind="70" earth="70" holy="70" dark="70" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -376,6 +430,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 		</skillList>
 		<shots soul="5" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -385,13 +440,17 @@
 			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="14012" level="78" type="Pet" name="Reanimated Man">
+	<npc id="14012" level="79" type="Pet" name="Reanimated Man">
+		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2842" hpRegen="8.5" mp="1641" mpRegen="3" />
-			<attack physical="1052.6463" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="875.49759" magical="597.85136" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="337.07008" magical="246.65326" />
+			<attribute>
+				<defence fire="80" water="80" wind="80" earth="80" holy="80" dark="80" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -411,6 +470,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 		</skillList>
 		<shots soul="5" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -420,13 +480,17 @@
 			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="14013" level="78" type="Pet" name="Reanimated Man">
+	<npc id="14013" level="79" type="Pet" name="Reanimated Man">
+		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2852" hpRegen="8.5" mp="1649" mpRegen="3" />
-			<attack physical="1057.78116" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="880.41852" magical="601.211715" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="338.1624475" magical="247.4526075" />
+			<attribute>
+				<defence fire="85" water="85" wind="85" earth="85" holy="85" dark="85" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -446,6 +510,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 		</skillList>
 		<shots soul="5" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -455,13 +520,17 @@
 			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="14014" level="78" type="Pet" name="Reanimated Man">
+	<npc id="14014" level="79" type="Pet" name="Reanimated Man">
+		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2862" hpRegen="8.5" mp="1657" mpRegen="3" />
-			<attack physical="1062.91602" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="885.33945" magical="604.57207" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="339.254815" magical="248.251955" />
+			<attribute>
+				<defence fire="90" water="90" wind="90" earth="90" holy="90" dark="90" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -481,6 +550,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 		</skillList>
 		<shots soul="5" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -490,13 +560,17 @@
 			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="14015" level="78" type="Pet" name="Reanimated Man">
+	<npc id="14015" level="79" type="Pet" name="Reanimated Man">
+		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2871" hpRegen="8.5" mp="1666" mpRegen="3" />
-			<attack physical="1068.05088" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="890.26038" magical="607.932425" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="340.3471825" magical="249.0513025" />
+			<attribute>
+				<defence fire="95" water="95" wind="95" earth="95" holy="95" dark="95" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -516,6 +590,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 		</skillList>
 		<shots soul="5" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -525,13 +600,17 @@
 			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="14016" level="78" type="Pet" name="Reanimated Man">
+	<npc id="14016" level="80" type="Pet" name="Reanimated Man">
+		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2880" hpRegen="8.5" mp="1674" mpRegen="3" />
-			<attack physical="1073.18574" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="894.75854" magical="611.00409" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341.375" magical="249.80341" />
+			<attribute>
+				<defence fire="100" water="100" wind="100" earth="100" holy="100" dark="100" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -551,6 +630,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 		</skillList>
 		<shots soul="5" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -560,13 +640,17 @@
 			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="14017" level="79" type="Pet" name="Reanimated Man">
+	<npc id="14017" level="80" type="Pet" name="Reanimated Man">
+		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2889" hpRegen="8.5" mp="1683" mpRegen="3" />
-			<attack physical="1078.3206" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="899.5737775" magical="614.2922725" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="342.45123" magical="250.5909475" />
+			<attribute>
+				<defence fire="102" water="102" wind="102" earth="102" holy="102" dark="102" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -586,6 +670,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 		</skillList>
 		<shots soul="5" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -595,13 +680,17 @@
 			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="14018" level="79" type="Pet" name="Reanimated Man">
+	<npc id="14018" level="80" type="Pet" name="Reanimated Man">
+		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2899" hpRegen="8.5" mp="1691" mpRegen="3" />
-			<attack physical="1083.45546" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="904.389015" magical="617.580455" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="343.52746" magical="251.378485" />
+			<attribute>
+				<defence fire="104" water="104" wind="104" earth="104" holy="104" dark="104" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -621,6 +710,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 		</skillList>
 		<shots soul="5" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -630,13 +720,17 @@
 			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="14019" level="79" type="Pet" name="Reanimated Man">
+	<npc id="14019" level="80" type="Pet" name="Reanimated Man">
+		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2908" hpRegen="8.5" mp="1700" mpRegen="3" />
-			<attack physical="1088.59032" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="909.2042525" magical="620.8686375" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="344.60369" magical="252.1660225" />
+			<attribute>
+				<defence fire="106" water="106" wind="106" earth="106" holy="106" dark="106" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -656,6 +750,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 		</skillList>
 		<shots soul="5" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -665,13 +760,17 @@
 			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="14020" level="79" type="Pet" name="Reanimated Man">
+	<npc id="14020" level="81" type="Pet" name="Reanimated Man">
+		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2916" hpRegen="8.5" mp="1708" mpRegen="3" />
-			<attack physical="1093.72518" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="913.54847" magical="623.83518" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="345.61127" magical="252.90333" />
+			<attribute>
+				<defence fire="109" water="109" wind="109" earth="109" holy="109" dark="109" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -691,6 +790,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 		</skillList>
 		<shots soul="5" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -700,13 +800,17 @@
 			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="14021" level="79" type="Pet" name="Reanimated Man">
+	<npc id="14021" level="81" type="Pet" name="Reanimated Man">
+		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2926" hpRegen="8.5" mp="1717" mpRegen="3" />
-			<attack physical="1098.86004" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="918.2459525" magical="627.0429525" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="346.6703375" magical="253.67831" />
+			<attribute>
+				<defence fire="111" water="111" wind="111" earth="111" holy="111" dark="111" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -726,6 +830,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 		</skillList>
 		<shots soul="5" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -735,13 +840,17 @@
 			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="14022" level="79" type="Pet" name="Reanimated Man">
+	<npc id="14022" level="81" type="Pet" name="Reanimated Man">
+		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2935" hpRegen="8.5" mp="1725" mpRegen="3" />
-			<attack physical="1103.9949" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="922.943435" magical="630.250725" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="347.729405" magical="254.45329" />
+			<attribute>
+				<defence fire="113" water="113" wind="113" earth="113" holy="113" dark="113" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -761,6 +870,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 		</skillList>
 		<shots soul="5" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -770,13 +880,17 @@
 			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="14023" level="79" type="Pet" name="Reanimated Man">
+	<npc id="14023" level="81" type="Pet" name="Reanimated Man">
+		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2944" hpRegen="8.5" mp="1734" mpRegen="3" />
-			<attack physical="1109.12976" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="927.6409175" magical="633.4584975" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="348.7884725" magical="255.22827" />
+			<attribute>
+				<defence fire="115" water="115" wind="115" earth="115" holy="115" dark="115" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -796,6 +910,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 		</skillList>
 		<shots soul="5" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -805,13 +920,17 @@
 			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="14024" level="79" type="Pet" name="Reanimated Man">
+	<npc id="14024" level="82" type="Pet" name="Reanimated Man">
+		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2951" hpRegen="8.5" mp="1743" mpRegen="3" />
-			<attack physical="1114.26462" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="931.81944" magical="636.31188" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="349.77477" magical="255.95" />
+			<attribute>
+				<defence fire="118" water="118" wind="118" earth="118" holy="118" dark="118" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -831,6 +950,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 		</skillList>
 		<shots soul="5" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -840,13 +960,17 @@
 			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="14025" level="79" type="Pet" name="Reanimated Man">
+	<npc id="14025" level="82" type="Pet" name="Reanimated Man">
+		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2960" hpRegen="8.5" mp="1751" mpRegen="3" />
-			<attack physical="1119.39948" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="936.3871825" magical="639.431055" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="350.815645" magical="256.7116675" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -866,6 +990,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 		</skillList>
 		<shots soul="5" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -875,13 +1000,17 @@
 			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="14026" level="80" type="Pet" name="Reanimated Man">
+	<npc id="14026" level="82" type="Pet" name="Reanimated Man">
+		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2969" hpRegen="8.5" mp="1760" mpRegen="3" />
-			<attack physical="1124.53434" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="940.954925" magical="642.55023" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="351.85652" magical="257.473335" />
+			<attribute>
+				<defence fire="122" water="122" wind="122" earth="122" holy="122" dark="122" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -901,6 +1030,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 		</skillList>
 		<shots soul="5" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -910,13 +1040,17 @@
 			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="14027" level="80" type="Pet" name="Reanimated Man">
+	<npc id="14027" level="82" type="Pet" name="Reanimated Man">
+		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2978" hpRegen="8.5" mp="1768" mpRegen="3" />
-			<attack physical="1129.6692" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="945.5226675" magical="645.669405" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="352.897395" magical="258.2350025" />
+			<attribute>
+				<defence fire="124" water="124" wind="124" earth="124" holy="124" dark="124" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -936,6 +1070,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 		</skillList>
 		<shots soul="5" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -945,13 +1080,17 @@
 			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="14028" level="80" type="Pet" name="Reanimated Man">
+	<npc id="14028" level="83" type="Pet" name="Reanimated Man">
+		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2985" hpRegen="8.5" mp="1777" mpRegen="3" />
-			<attack physical="1134.80406" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="949.52401" magical="648.40181" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="353.86144" magical="258.94045" />
+			<attribute>
+				<defence fire="127" water="127" wind="127" earth="127" holy="127" dark="127" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -971,6 +1110,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 		</skillList>
 		<shots soul="5" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -980,13 +1120,17 @@
 			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="14029" level="80" type="Pet" name="Reanimated Man">
+	<npc id="14029" level="83" type="Pet" name="Reanimated Man">
+		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2993" hpRegen="8.5" mp="1786" mpRegen="3" />
-			<attack physical="1139.93892" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="953.9501525" magical="651.4242925" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="354.8831075" magical="259.6880625" />
+			<attribute>
+				<defence fire="129" water="129" wind="129" earth="129" holy="129" dark="129" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -1006,6 +1150,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 		</skillList>
 		<shots soul="5" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -1015,13 +1160,17 @@
 			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="14030" level="80" type="Pet" name="Reanimated Man">
+	<npc id="14030" level="83" type="Pet" name="Reanimated Man">
+		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="3001" hpRegen="8.5" mp="1794" mpRegen="3" />
-			<attack physical="1145.07378" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="958.376295" magical="654.446775" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="355.904775" magical="260.435675" />
+			<attribute>
+				<defence fire="131" water="131" wind="131" earth="131" holy="131" dark="131" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -1041,6 +1190,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 		</skillList>
 		<shots soul="5" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -1050,13 +1200,17 @@
 			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="14031" level="80" type="Pet" name="Reanimated Man">
+	<npc id="14031" level="83" type="Pet" name="Reanimated Man">
+		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="3010" hpRegen="8.5" mp="1803" mpRegen="3" />
-			<attack physical="1150.20864" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="962.8024375" magical="657.4692575" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="356.9264425" magical="261.1832875" />
+			<attribute>
+				<defence fire="133" water="133" wind="133" earth="133" holy="133" dark="133" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -1076,6 +1230,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 		</skillList>
 		<shots soul="5" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -1085,13 +1240,17 @@
 			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="14032" level="80" type="Pet" name="Reanimated Man">
+	<npc id="14032" level="84" type="Pet" name="Reanimated Man">
+		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="3016" hpRegen="8.5" mp="1812" mpRegen="3" />
-			<attack physical="1155.3435" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="966.61544" magical="660.07304" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
+			<attribute>
+				<defence fire="136" water="136" wind="136" earth="136" holy="136" dark="136" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -1111,6 +1270,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 		</skillList>
 		<shots soul="5" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -1120,13 +1280,17 @@
 			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="14033" level="80" type="Pet" name="Reanimated Man">
+	<npc id="14033" level="84" type="Pet" name="Reanimated Man">
+		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="3024" hpRegen="8.5" mp="1820" mpRegen="3" />
-			<attack physical="1160.47836" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="970.8882975" magical="662.9908475" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="358.8686775" magical="262.604525" />
+			<attribute>
+				<defence fire="138" water="138" wind="138" earth="138" holy="138" dark="138" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -1146,6 +1310,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 		</skillList>
 		<shots soul="5" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -1155,13 +1320,17 @@
 			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="14034" level="80" type="Pet" name="Reanimated Man">
+	<npc id="14034" level="84" type="Pet" name="Reanimated Man">
+		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="3032" hpRegen="8.5" mp="1829" mpRegen="3" />
-			<attack physical="1165.61322" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="975.161155" magical="665.908655" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="359.870125" magical="263.33734" />
+			<attribute>
+				<defence fire="140" water="140" wind="140" earth="140" holy="140" dark="140" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -1181,6 +1350,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 		</skillList>
 		<shots soul="5" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -1190,13 +1360,17 @@
 			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="14035" level="80" type="Pet" name="Reanimated Man">
+	<npc id="14035" level="85" type="Pet" name="Reanimated Man">
+		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="3046" hpRegen="8.5" mp="1846" mpRegen="3" />
-			<attack physical="1170.74808" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="983.0479" magical="671.29428" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="361.78814" magical="264.74086" />
+			<attribute>
+				<defence fire="143" water="143" wind="143" earth="143" holy="143" dark="143" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -1216,6 +1390,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 		</skillList>
 		<shots soul="5" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -1225,13 +1400,17 @@
 			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="14036" level="80" type="Pet" name="Reanimated Man">
+	<npc id="14036" level="85" type="Pet" name="Reanimated Man">
+		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="3056" hpRegen="8.5" mp="1858" mpRegen="3" />
-			<attack physical="1175.88294" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="988.525386666667" magical="675.034693333333" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="363.09511" magical="265.697243333333" />
+			<attribute>
+				<defence fire="145" water="145" wind="145" earth="145" holy="145" dark="145" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -1251,6 +1430,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 		</skillList>
 		<shots soul="5" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -1260,13 +1440,17 @@
 			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="14037" level="80" type="Pet" name="Reanimated Man">
+	<npc id="14037" level="85" type="Pet" name="Reanimated Man">
+		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="3066" hpRegen="8.5" mp="1870" mpRegen="3" />
-			<attack physical="1181.0178" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="994.002873333333" magical="678.775106666667" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="364.40208" magical="266.653626666667" />
+			<attribute>
+				<defence fire="147" water="147" wind="147" earth="147" holy="147" dark="147" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -1286,6 +1470,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 		</skillList>
 		<shots soul="5" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -1296,6 +1481,7 @@
 		</collision>
 	</npc>
 	<npc id="14038" level="42" type="Pet" name="Corrupted Man">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4260" level="4" />
 			<param name="step1_action01" value="47" />
@@ -1304,8 +1490,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="1050" hpRegen="5.5" mp="531" mpRegen="2.1" />
-			<attack physical="238.015092" magical="135.44454" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="198.34591" magical="135.44454" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="164.88513" magical="120.65578" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="15" />
 				<run ground="140" />
@@ -1313,7 +1502,7 @@
 			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status undying="false" />
 		<skillList>
 			<skill id="4121" level="7" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="4408" level="6" /> <!-- HP Very High -->
@@ -1325,6 +1514,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4260" level="4" /> <!-- Steal Blood -->
 		</skillList>
 		<shots soul="1" spirit="1" />
@@ -1336,6 +1526,7 @@
 		</collision>
 	</npc>
 	<npc id="14039" level="50" type="Pet" name="Corrupted Man">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4260" level="5" />
 			<param name="step1_action01" value="47" />
@@ -1344,8 +1535,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="1421" hpRegen="5.5" mp="747" mpRegen="2.1" />
-			<attack physical="366.658872" magical="208.6504" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="305.54906" magical="208.6504" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="200.23844" magical="146.5258" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="15" />
 				<run ground="140" />
@@ -1353,7 +1547,7 @@
 			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status undying="false" />
 		<skillList>
 			<skill id="4121" level="7" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="4408" level="6" /> <!-- HP Very High -->
@@ -1365,6 +1559,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4260" level="5" /> <!-- Steal Blood -->
 		</skillList>
 		<shots soul="1" spirit="1" />
@@ -1376,6 +1571,7 @@
 		</collision>
 	</npc>
 	<npc id="14040" level="58" type="Pet" name="Corrupted Man">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4260" level="5" />
 			<param name="step1_action01" value="47" />
@@ -1384,8 +1580,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="1828" hpRegen="6.5" mp="977" mpRegen="2.4" />
-			<attack physical="531.47904" magical="302.44274" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="442.8992" magical="302.44274" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="237.99429" magical="174.1539" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="15" />
 				<run ground="140" />
@@ -1393,7 +1592,7 @@
 			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status undying="false" />
 		<skillList>
 			<skill id="4121" level="7" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="4408" level="6" /> <!-- HP Very High -->
@@ -1405,6 +1604,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4260" level="5" /> <!-- Steal Blood -->
 		</skillList>
 		<shots soul="2" spirit="2" />
@@ -1416,6 +1616,7 @@
 		</collision>
 	</npc>
 	<npc id="14041" level="64" type="Pet" name="Corrupted Man">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4260" level="6" />
 			<param name="step1_action01" value="47" />
@@ -1424,8 +1625,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2141" hpRegen="7.5" mp="1158" mpRegen="2.7" />
-			<attack physical="674.4273" magical="383.78868" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="562.02275" magical="383.78868" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="267.04468" magical="195.41171" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="15" />
 				<run ground="140" />
@@ -1433,7 +1637,7 @@
 			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status undying="false" />
 		<skillList>
 			<skill id="4121" level="7" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="4408" level="6" /> <!-- HP Very High -->
@@ -1445,6 +1649,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4260" level="6" /> <!-- Steal Blood -->
 		</skillList>
 		<shots soul="2" spirit="2" />
@@ -1456,6 +1661,7 @@
 		</collision>
 	</npc>
 	<npc id="14042" level="68" type="Pet" name="Corrupted Man">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4260" level="6" />
 			<param name="step1_action01" value="47" />
@@ -1464,8 +1670,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2345" hpRegen="7.5" mp="1282" mpRegen="2.7" />
-			<attack physical="775.415616" magical="441.25696" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="646.17968" magical="441.25696" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="286.3615" magical="209.54692" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="15" />
 				<run ground="140" />
@@ -1473,7 +1682,7 @@
 			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status undying="false" />
 		<skillList>
 			<skill id="4121" level="7" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="4408" level="6" /> <!-- HP Very High -->
@@ -1485,6 +1694,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4260" level="6" /> <!-- Steal Blood -->
 		</skillList>
 		<shots soul="3" spirit="2" />
@@ -1496,6 +1706,7 @@
 		</collision>
 	</npc>
 	<npc id="14043" level="72" type="Pet" name="Corrupted Man">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4260" level="7" />
 			<param name="step1_action01" value="47" />
@@ -1504,8 +1715,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2540" hpRegen="8.5" mp="1410" mpRegen="3" />
-			<attack physical="877.830072" magical="499.53679" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="731.52506" magical="499.53679" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="305.35947" magical="223.44881" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="15" />
 				<run ground="140" />
@@ -1513,7 +1727,7 @@
 			<hitTime>430</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status undying="false" />
 		<skillList>
 			<skill id="4121" level="7" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="4408" level="6" /> <!-- HP Very High -->
@@ -1525,6 +1739,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4260" level="7" /> <!-- Steal Blood -->
 		</skillList>
 		<shots soul="3" spirit="2" />
@@ -1536,6 +1751,7 @@
 		</collision>
 	</npc>
 	<npc id="14044" level="78" type="Pet" name="Corrupted Man">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4260" level="8" />
 			<param name="step1_action01" value="47" />
@@ -1544,8 +1760,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2802" hpRegen="8.5" mp="1607" mpRegen="3" />
-			<attack physical="1032.10686" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="855.81387" magical="584.40994" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" />
+			<attribute>
+				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
+			</attribute>
 			<speed>
 				<walk ground="15" />
 				<run ground="140" />
@@ -1565,6 +1784,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4260" level="8" /> <!-- Steal Blood -->
 		</skillList>
 		<shots soul="3" spirit="2" />
@@ -1576,6 +1796,7 @@
 		</collision>
 	</npc>
 	<npc id="14045" level="78" type="Pet" name="Corrupted Man">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4260" level="8" />
 			<param name="step1_action01" value="47" />
@@ -1584,8 +1805,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2812" hpRegen="8.5" mp="1615" mpRegen="3" />
-			<attack physical="1037.24172" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="860.7348" magical="587.770295" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="333.7929775" magical="244.2552175" />
+			<attribute>
+				<defence fire="50" water="50" wind="50" earth="50" holy="50" dark="50" />
+			</attribute>
 			<speed>
 				<walk ground="15" />
 				<run ground="140" />
@@ -1605,6 +1829,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4260" level="8" /> <!-- Steal Blood -->
 		</skillList>
 		<shots soul="3" spirit="2" />
@@ -1616,6 +1841,7 @@
 		</collision>
 	</npc>
 	<npc id="14046" level="78" type="Pet" name="Corrupted Man">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4260" level="8" />
 			<param name="step1_action01" value="47" />
@@ -1624,8 +1850,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2822" hpRegen="8.5" mp="1624" mpRegen="3" />
-			<attack physical="1042.37658" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="865.65573" magical="591.13065" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="334.885345" magical="245.054565" />
+			<attribute>
+				<defence fire="60" water="60" wind="60" earth="60" holy="60" dark="60" />
+			</attribute>
 			<speed>
 				<walk ground="15" />
 				<run ground="140" />
@@ -1645,6 +1874,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4260" level="8" /> <!-- Steal Blood -->
 		</skillList>
 		<shots soul="3" spirit="2" />
@@ -1656,6 +1886,7 @@
 		</collision>
 	</npc>
 	<npc id="14047" level="78" type="Pet" name="Corrupted Man">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4260" level="8" />
 			<param name="step1_action01" value="47" />
@@ -1664,8 +1895,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2832" hpRegen="8.5" mp="1632" mpRegen="3" />
-			<attack physical="1047.51144" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="870.57666" magical="594.491005" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="335.9777125" magical="245.8539125" />
+			<attribute>
+				<defence fire="70" water="70" wind="70" earth="70" holy="70" dark="70" />
+			</attribute>
 			<speed>
 				<walk ground="15" />
 				<run ground="140" />
@@ -1685,6 +1919,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4260" level="8" /> <!-- Steal Blood -->
 		</skillList>
 		<shots soul="3" spirit="2" />
@@ -1695,7 +1930,8 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="14048" level="78" type="Pet" name="Corrupted Man">
+	<npc id="14048" level="79" type="Pet" name="Corrupted Man">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4260" level="8" />
 			<param name="step1_action01" value="47" />
@@ -1704,8 +1940,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2842" hpRegen="8.5" mp="1641" mpRegen="3" />
-			<attack physical="1052.6463" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="875.49759" magical="597.85136" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="337.07008" magical="246.65326" />
+			<attribute>
+				<defence fire="80" water="80" wind="80" earth="80" holy="80" dark="80" />
+			</attribute>
 			<speed>
 				<walk ground="15" />
 				<run ground="140" />
@@ -1725,6 +1964,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4260" level="8" /> <!-- Steal Blood -->
 		</skillList>
 		<shots soul="3" spirit="2" />
@@ -1735,7 +1975,8 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="14049" level="78" type="Pet" name="Corrupted Man">
+	<npc id="14049" level="79" type="Pet" name="Corrupted Man">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4260" level="8" />
 			<param name="step1_action01" value="47" />
@@ -1744,8 +1985,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2852" hpRegen="8.5" mp="1649" mpRegen="3" />
-			<attack physical="1057.78116" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="880.41852" magical="601.211715" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="338.1624475" magical="247.4526075" />
+			<attribute>
+				<defence fire="85" water="85" wind="85" earth="85" holy="85" dark="85" />
+			</attribute>
 			<speed>
 				<walk ground="15" />
 				<run ground="140" />
@@ -1765,6 +2009,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4260" level="8" /> <!-- Steal Blood -->
 		</skillList>
 		<shots soul="3" spirit="2" />
@@ -1775,7 +2020,8 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="14050" level="78" type="Pet" name="Corrupted Man">
+	<npc id="14050" level="79" type="Pet" name="Corrupted Man">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4260" level="9" />
 			<param name="step1_action01" value="47" />
@@ -1784,8 +2030,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2862" hpRegen="8.5" mp="1657" mpRegen="3" />
-			<attack physical="1062.91602" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="885.33945" magical="604.57207" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="339.254815" magical="248.251955" />
+			<attribute>
+				<defence fire="90" water="90" wind="90" earth="90" holy="90" dark="90" />
+			</attribute>
 			<speed>
 				<walk ground="15" />
 				<run ground="140" />
@@ -1805,6 +2054,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4260" level="9" /> <!-- Steal Blood -->
 		</skillList>
 		<shots soul="3" spirit="2" />
@@ -1815,7 +2065,8 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="14051" level="78" type="Pet" name="Corrupted Man">
+	<npc id="14051" level="79" type="Pet" name="Corrupted Man">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4260" level="9" />
 			<param name="step1_action01" value="47" />
@@ -1824,8 +2075,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2871" hpRegen="8.5" mp="1666" mpRegen="3" />
-			<attack physical="1068.05088" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="890.26038" magical="607.932425" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="340.3471825" magical="249.0513025" />
+			<attribute>
+				<defence fire="95" water="95" wind="95" earth="95" holy="95" dark="95" />
+			</attribute>
 			<speed>
 				<walk ground="15" />
 				<run ground="140" />
@@ -1845,6 +2099,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4260" level="9" /> <!-- Steal Blood -->
 		</skillList>
 		<shots soul="3" spirit="2" />
@@ -1855,7 +2110,8 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="14052" level="78" type="Pet" name="Corrupted Man">
+	<npc id="14052" level="80" type="Pet" name="Corrupted Man">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4260" level="9" />
 			<param name="step1_action01" value="47" />
@@ -1864,8 +2120,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2880" hpRegen="8.5" mp="1674" mpRegen="3" />
-			<attack physical="1073.18574" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="894.75854" magical="611.00409" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341.375" magical="249.80341" />
+			<attribute>
+				<defence fire="100" water="100" wind="100" earth="100" holy="100" dark="100" />
+			</attribute>
 			<speed>
 				<walk ground="15" />
 				<run ground="140" />
@@ -1885,6 +2144,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4260" level="9" /> <!-- Steal Blood -->
 		</skillList>
 		<shots soul="3" spirit="2" />
@@ -1895,7 +2155,8 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="14053" level="79" type="Pet" name="Corrupted Man">
+	<npc id="14053" level="80" type="Pet" name="Corrupted Man">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4260" level="9" />
 			<param name="step1_action01" value="47" />
@@ -1904,8 +2165,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2889" hpRegen="8.5" mp="1683" mpRegen="3" />
-			<attack physical="1078.3206" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="899.5737775" magical="614.2922725" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="342.45123" magical="250.5909475" />
+			<attribute>
+				<defence fire="102" water="102" wind="102" earth="102" holy="102" dark="102" />
+			</attribute>
 			<speed>
 				<walk ground="15" />
 				<run ground="140" />
@@ -1925,6 +2189,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4260" level="9" /> <!-- Steal Blood -->
 		</skillList>
 		<shots soul="3" spirit="2" />
@@ -1935,7 +2200,8 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="14054" level="79" type="Pet" name="Corrupted Man">
+	<npc id="14054" level="80" type="Pet" name="Corrupted Man">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4260" level="9" />
 			<param name="step1_action01" value="47" />
@@ -1944,8 +2210,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2899" hpRegen="8.5" mp="1691" mpRegen="3" />
-			<attack physical="1083.45546" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="904.389015" magical="617.580455" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="343.52746" magical="251.378485" />
+			<attribute>
+				<defence fire="104" water="104" wind="104" earth="104" holy="104" dark="104" />
+			</attribute>
 			<speed>
 				<walk ground="15" />
 				<run ground="140" />
@@ -1965,6 +2234,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4260" level="9" /> <!-- Steal Blood -->
 		</skillList>
 		<shots soul="3" spirit="2" />
@@ -1975,7 +2245,8 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="14055" level="79" type="Pet" name="Corrupted Man">
+	<npc id="14055" level="80" type="Pet" name="Corrupted Man">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4260" level="9" />
 			<param name="step1_action01" value="47" />
@@ -1984,8 +2255,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2908" hpRegen="8.5" mp="1700" mpRegen="3" />
-			<attack physical="1088.59032" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="909.2042525" magical="620.8686375" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="344.60369" magical="252.1660225" />
+			<attribute>
+				<defence fire="106" water="106" wind="106" earth="106" holy="106" dark="106" />
+			</attribute>
 			<speed>
 				<walk ground="15" />
 				<run ground="140" />
@@ -2005,6 +2279,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4260" level="9" /> <!-- Steal Blood -->
 		</skillList>
 		<shots soul="3" spirit="2" />
@@ -2015,7 +2290,8 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="14056" level="79" type="Pet" name="Corrupted Man">
+	<npc id="14056" level="81" type="Pet" name="Corrupted Man">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4260" level="10" />
 			<param name="step1_action01" value="47" />
@@ -2024,8 +2300,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2916" hpRegen="8.5" mp="1708" mpRegen="3" />
-			<attack physical="1093.72518" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="913.54847" magical="623.83518" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="345.61127" magical="252.90333" />
+			<attribute>
+				<defence fire="109" water="109" wind="109" earth="109" holy="109" dark="109" />
+			</attribute>
 			<speed>
 				<walk ground="15" />
 				<run ground="140" />
@@ -2045,6 +2324,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4260" level="10" /> <!-- Steal Blood -->
 		</skillList>
 		<shots soul="3" spirit="2" />
@@ -2055,7 +2335,8 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="14057" level="79" type="Pet" name="Corrupted Man">
+	<npc id="14057" level="81" type="Pet" name="Corrupted Man">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4260" level="10" />
 			<param name="step1_action01" value="47" />
@@ -2064,8 +2345,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2926" hpRegen="8.5" mp="1717" mpRegen="3" />
-			<attack physical="1098.86004" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="918.2459525" magical="627.0429525" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="346.6703375" magical="253.67831" />
+			<attribute>
+				<defence fire="111" water="111" wind="111" earth="111" holy="111" dark="111" />
+			</attribute>
 			<speed>
 				<walk ground="15" />
 				<run ground="140" />
@@ -2085,6 +2369,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4260" level="10" /> <!-- Steal Blood -->
 		</skillList>
 		<shots soul="3" spirit="2" />
@@ -2095,7 +2380,8 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="14058" level="79" type="Pet" name="Corrupted Man">
+	<npc id="14058" level="81" type="Pet" name="Corrupted Man">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4260" level="10" />
 			<param name="step1_action01" value="47" />
@@ -2104,8 +2390,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2935" hpRegen="8.5" mp="1725" mpRegen="3" />
-			<attack physical="1103.9949" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="922.943435" magical="630.250725" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="347.729405" magical="254.45329" />
+			<attribute>
+				<defence fire="113" water="113" wind="113" earth="113" holy="113" dark="113" />
+			</attribute>
 			<speed>
 				<walk ground="15" />
 				<run ground="140" />
@@ -2125,6 +2414,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4260" level="10" /> <!-- Steal Blood -->
 		</skillList>
 		<shots soul="3" spirit="2" />
@@ -2135,7 +2425,8 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="14059" level="79" type="Pet" name="Corrupted Man">
+	<npc id="14059" level="81" type="Pet" name="Corrupted Man">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4260" level="10" />
 			<param name="step1_action01" value="47" />
@@ -2144,8 +2435,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2944" hpRegen="8.5" mp="1734" mpRegen="3" />
-			<attack physical="1109.12976" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="927.6409175" magical="633.4584975" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="348.7884725" magical="255.22827" />
+			<attribute>
+				<defence fire="115" water="115" wind="115" earth="115" holy="115" dark="115" />
+			</attribute>
 			<speed>
 				<walk ground="15" />
 				<run ground="140" />
@@ -2165,6 +2459,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4260" level="10" /> <!-- Steal Blood -->
 		</skillList>
 		<shots soul="3" spirit="2" />
@@ -2175,7 +2470,8 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="14060" level="79" type="Pet" name="Corrupted Man">
+	<npc id="14060" level="82" type="Pet" name="Corrupted Man">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4260" level="10" />
 			<param name="step1_action01" value="47" />
@@ -2184,8 +2480,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2951" hpRegen="8.5" mp="1743" mpRegen="3" />
-			<attack physical="1114.26462" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="931.81944" magical="636.31188" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="349.77477" magical="255.95" />
+			<attribute>
+				<defence fire="118" water="118" wind="118" earth="118" holy="118" dark="118" />
+			</attribute>
 			<speed>
 				<walk ground="15" />
 				<run ground="140" />
@@ -2205,6 +2504,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4260" level="10" /> <!-- Steal Blood -->
 		</skillList>
 		<shots soul="3" spirit="2" />
@@ -2215,7 +2515,8 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="14061" level="79" type="Pet" name="Corrupted Man">
+	<npc id="14061" level="82" type="Pet" name="Corrupted Man">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4260" level="10" />
 			<param name="step1_action01" value="47" />
@@ -2224,8 +2525,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2960" hpRegen="8.5" mp="1751" mpRegen="3" />
-			<attack physical="1119.39948" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="936.3871825" magical="639.431055" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="350.815645" magical="256.7116675" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
 			<speed>
 				<walk ground="15" />
 				<run ground="140" />
@@ -2245,6 +2549,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4260" level="10" /> <!-- Steal Blood -->
 		</skillList>
 		<shots soul="3" spirit="2" />
@@ -2255,7 +2560,8 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="14062" level="80" type="Pet" name="Corrupted Man">
+	<npc id="14062" level="82" type="Pet" name="Corrupted Man">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4260" level="11" />
 			<param name="step1_action01" value="47" />
@@ -2264,8 +2570,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2969" hpRegen="8.5" mp="1760" mpRegen="3" />
-			<attack physical="1124.53434" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="940.954925" magical="642.55023" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="351.85652" magical="257.473335" />
+			<attribute>
+				<defence fire="122" water="122" wind="122" earth="122" holy="122" dark="122" />
+			</attribute>
 			<speed>
 				<walk ground="15" />
 				<run ground="140" />
@@ -2285,6 +2594,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4260" level="11" /> <!-- Steal Blood -->
 		</skillList>
 		<shots soul="3" spirit="2" />
@@ -2295,7 +2605,8 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="14063" level="80" type="Pet" name="Corrupted Man">
+	<npc id="14063" level="82" type="Pet" name="Corrupted Man">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4260" level="11" />
 			<param name="step1_action01" value="47" />
@@ -2304,8 +2615,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2978" hpRegen="8.5" mp="1768" mpRegen="3" />
-			<attack physical="1129.6692" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="945.5226675" magical="645.669405" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="352.897395" magical="258.2350025" />
+			<attribute>
+				<defence fire="124" water="124" wind="124" earth="124" holy="124" dark="124" />
+			</attribute>
 			<speed>
 				<walk ground="15" />
 				<run ground="140" />
@@ -2325,6 +2639,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4260" level="11" /> <!-- Steal Blood -->
 		</skillList>
 		<shots soul="3" spirit="2" />
@@ -2335,7 +2650,8 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="14064" level="80" type="Pet" name="Corrupted Man">
+	<npc id="14064" level="83" type="Pet" name="Corrupted Man">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4260" level="11" />
 			<param name="step1_action01" value="47" />
@@ -2344,8 +2660,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2985" hpRegen="8.5" mp="1777" mpRegen="3" />
-			<attack physical="1134.80406" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="949.52401" magical="648.40181" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="353.86144" magical="258.94045" />
+			<attribute>
+				<defence fire="127" water="127" wind="127" earth="127" holy="127" dark="127" />
+			</attribute>
 			<speed>
 				<walk ground="15" />
 				<run ground="140" />
@@ -2365,6 +2684,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4260" level="11" /> <!-- Steal Blood -->
 		</skillList>
 		<shots soul="3" spirit="2" />
@@ -2375,7 +2695,8 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="14065" level="80" type="Pet" name="Corrupted Man">
+	<npc id="14065" level="83" type="Pet" name="Corrupted Man">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4260" level="11" />
 			<param name="step1_action01" value="47" />
@@ -2384,8 +2705,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2993" hpRegen="8.5" mp="1786" mpRegen="3" />
-			<attack physical="1139.93892" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="953.9501525" magical="651.4242925" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="354.8831075" magical="259.6880625" />
+			<attribute>
+				<defence fire="129" water="129" wind="129" earth="129" holy="129" dark="129" />
+			</attribute>
 			<speed>
 				<walk ground="15" />
 				<run ground="140" />
@@ -2405,6 +2729,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4260" level="11" /> <!-- Steal Blood -->
 		</skillList>
 		<shots soul="3" spirit="2" />
@@ -2415,7 +2740,8 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="14066" level="80" type="Pet" name="Corrupted Man">
+	<npc id="14066" level="83" type="Pet" name="Corrupted Man">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4260" level="11" />
 			<param name="step1_action01" value="47" />
@@ -2424,8 +2750,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="3001" hpRegen="8.5" mp="1794" mpRegen="3" />
-			<attack physical="1145.07378" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="958.376295" magical="654.446775" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="355.904775" magical="260.435675" />
+			<attribute>
+				<defence fire="131" water="131" wind="131" earth="131" holy="131" dark="131" />
+			</attribute>
 			<speed>
 				<walk ground="15" />
 				<run ground="140" />
@@ -2445,6 +2774,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4260" level="11" /> <!-- Steal Blood -->
 		</skillList>
 		<shots soul="3" spirit="2" />
@@ -2455,7 +2785,8 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="14067" level="80" type="Pet" name="Corrupted Man">
+	<npc id="14067" level="83" type="Pet" name="Corrupted Man">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4260" level="11" />
 			<param name="step1_action01" value="47" />
@@ -2464,8 +2795,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="3010" hpRegen="8.5" mp="1803" mpRegen="3" />
-			<attack physical="1150.20864" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="962.8024375" magical="657.4692575" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="356.9264425" magical="261.1832875" />
+			<attribute>
+				<defence fire="133" water="133" wind="133" earth="133" holy="133" dark="133" />
+			</attribute>
 			<speed>
 				<walk ground="15" />
 				<run ground="140" />
@@ -2485,6 +2819,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4260" level="11" /> <!-- Steal Blood -->
 		</skillList>
 		<shots soul="3" spirit="2" />
@@ -2495,7 +2830,8 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="14068" level="80" type="Pet" name="Corrupted Man">
+	<npc id="14068" level="84" type="Pet" name="Corrupted Man">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4260" level="12" />
 			<param name="step1_action01" value="47" />
@@ -2504,8 +2840,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="3016" hpRegen="8.5" mp="1812" mpRegen="3" />
-			<attack physical="1155.3435" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="966.61544" magical="660.07304" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
+			<attribute>
+				<defence fire="136" water="136" wind="136" earth="136" holy="136" dark="136" />
+			</attribute>
 			<speed>
 				<walk ground="15" />
 				<run ground="140" />
@@ -2525,6 +2864,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4260" level="12" /> <!-- Steal Blood -->
 		</skillList>
 		<shots soul="3" spirit="2" />
@@ -2535,7 +2875,8 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="14069" level="80" type="Pet" name="Corrupted Man">
+	<npc id="14069" level="84" type="Pet" name="Corrupted Man">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4260" level="12" />
 			<param name="step1_action01" value="47" />
@@ -2544,8 +2885,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="3024" hpRegen="8.5" mp="1820" mpRegen="3" />
-			<attack physical="1160.47836" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="970.8882975" magical="662.9908475" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="358.8686775" magical="262.604525" />
+			<attribute>
+				<defence fire="138" water="138" wind="138" earth="138" holy="138" dark="138" />
+			</attribute>
 			<speed>
 				<walk ground="15" />
 				<run ground="140" />
@@ -2565,6 +2909,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4260" level="12" /> <!-- Steal Blood -->
 		</skillList>
 		<shots soul="3" spirit="2" />
@@ -2575,7 +2920,8 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="14070" level="80" type="Pet" name="Corrupted Man">
+	<npc id="14070" level="84" type="Pet" name="Corrupted Man">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4260" level="12" />
 			<param name="step1_action01" value="47" />
@@ -2584,8 +2930,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="3032" hpRegen="8.5" mp="1829" mpRegen="3" />
-			<attack physical="1165.61322" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="975.161155" magical="665.908655" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="359.870125" magical="263.33734" />
+			<attribute>
+				<defence fire="140" water="140" wind="140" earth="140" holy="140" dark="140" />
+			</attribute>
 			<speed>
 				<walk ground="15" />
 				<run ground="140" />
@@ -2605,6 +2954,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4260" level="12" /> <!-- Steal Blood -->
 		</skillList>
 		<shots soul="3" spirit="2" />
@@ -2615,7 +2965,8 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="14071" level="80" type="Pet" name="Corrupted Man">
+	<npc id="14071" level="85" type="Pet" name="Corrupted Man">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4260" level="12" />
 			<param name="step1_action01" value="47" />
@@ -2624,8 +2975,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="3046" hpRegen="8.5" mp="1846" mpRegen="3" />
-			<attack physical="1170.74808" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="983.0479" magical="671.29428" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="361.78814" magical="264.74086" />
+			<attribute>
+				<defence fire="143" water="143" wind="143" earth="143" holy="143" dark="143" />
+			</attribute>
 			<speed>
 				<walk ground="15" />
 				<run ground="140" />
@@ -2646,6 +3000,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 		</skillList>
 		<shots soul="3" spirit="2" />
 		<exCrtEffect>false</exCrtEffect>
@@ -2655,7 +3010,8 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="14072" level="80" type="Pet" name="Corrupted Man">
+	<npc id="14072" level="85" type="Pet" name="Corrupted Man">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4260" level="12" />
 			<param name="step1_action01" value="47" />
@@ -2664,8 +3020,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="3056" hpRegen="8.5" mp="1858" mpRegen="3" />
-			<attack physical="1175.88294" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="988.525386666667" magical="675.034693333333" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="363.09511" magical="265.697243333333" />
+			<attribute>
+				<defence fire="145" water="145" wind="145" earth="145" holy="145" dark="145" />
+			</attribute>
 			<speed>
 				<walk ground="15" />
 				<run ground="140" />
@@ -2685,6 +3044,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4260" level="12" /> <!-- Steal Blood -->
 		</skillList>
 		<shots soul="3" spirit="2" />
@@ -2695,7 +3055,8 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="14073" level="80" type="Pet" name="Corrupted Man">
+	<npc id="14073" level="85" type="Pet" name="Corrupted Man">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4260" level="12" />
 			<param name="step1_action01" value="47" />
@@ -2704,8 +3065,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="3066" hpRegen="8.5" mp="1870" mpRegen="3" />
-			<attack physical="1181.0178" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="994.002873333333" magical="678.775106666667" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="364.40208" magical="266.653626666667" />
+			<attribute>
+				<defence fire="147" water="147" wind="147" earth="147" holy="147" dark="147" />
+			</attribute>
 			<speed>
 				<walk ground="15" />
 				<run ground="140" />
@@ -2725,6 +3089,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4260" level="12" /> <!-- Steal Blood -->
 		</skillList>
 		<shots soul="3" spirit="2" />
@@ -2736,6 +3101,7 @@
 		</collision>
 	</npc>
 	<npc id="14074" level="58" type="Pet" name="Cursed Man">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="4709" level="1" />
 			<skill name="PhysicalSpecial2" id="4708" level="1" />
@@ -2743,9 +3109,12 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="1828" hpRegen="7.8" mp="977" mpRegen="2.4" />
-			<attack physical="575.77" magical="302.44" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
-			<defence physical="237.99" magical="174.15" />
+			<vitals hp="1828" hpRegen="6.5" mp="977" mpRegen="2.4" />
+			<attack physical="442.8992" magical="302.44274" random="10" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="237.99429" magical="174.1539" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="80" />
 				<run ground="160" />
@@ -2765,6 +3134,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4709" level="1" /> <!-- Cursed Blow -->
 			<skill id="4708" level="1" /> <!-- Cursed Strike -->
 		</skillList>
@@ -2777,6 +3147,7 @@
 		</collision>
 	</npc>
 	<npc id="14075" level="62" type="Pet" name="Cursed Man">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="4709" level="2" />
 			<skill name="PhysicalSpecial2" id="4708" level="2" />
@@ -2784,9 +3155,12 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2037" hpRegen="9" mp="1097" mpRegen="2.7" />
-			<attack physical="677.456" magical="355.86" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
-			<defence physical="257.34" magical="188.31" />
+			<vitals hp="2037" hpRegen="7.5" mp="1097" mpRegen="2.7" />
+			<attack physical="521.12391" magical="355.86007" random="10" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="257.34267" magical="188.3122" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="80" />
 				<run ground="160" />
@@ -2806,6 +3180,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4709" level="2" /> <!-- Cursed Blow -->
 			<skill id="4708" level="2" /> <!-- Cursed Strike -->
 		</skillList>
@@ -2818,6 +3193,7 @@
 		</collision>
 	</npc>
 	<npc id="14076" level="66" type="Pet" name="Cursed Man">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="4709" level="3" />
 			<skill name="PhysicalSpecial2" id="4708" level="3" />
@@ -2825,9 +3201,12 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2244" hpRegen="9" mp="1219" mpRegen="2.7" />
-			<attack physical="784.94" magical="412.32" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
-			<defence physical="276.73" magical="202.5" />
+			<vitals hp="2244" hpRegen="7.5" mp="1219" mpRegen="2.7" />
+			<attack physical="603.79903" magical="412.31647" random="10" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="276.72752" magical="202.49719" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="80" />
 				<run ground="160" />
@@ -2847,6 +3226,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4709" level="3" /> <!-- Cursed Blow -->
 			<skill id="4708" level="3" /> <!-- Cursed Strike -->
 		</skillList>
@@ -2859,6 +3239,7 @@
 		</collision>
 	</npc>
 	<npc id="14077" level="70" type="Pet" name="Cursed Man">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="4709" level="4" />
 			<skill name="PhysicalSpecial2" id="4708" level="4" />
@@ -2866,9 +3247,12 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2444" hpRegen="9" mp="1345" mpRegen="2.7" />
-			<attack physical="895.518" magical="470.4" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
-			<defence physical="295.92" magical="216.54" />
+			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="80" />
 				<run ground="160" />
@@ -2888,6 +3272,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4709" level="4" /> <!-- Cursed Blow -->
 			<skill id="4708" level="4" /> <!-- Cursed Strike -->
 		</skillList>
@@ -2900,6 +3285,7 @@
 		</collision>
 	</npc>
 	<npc id="14078" level="72" type="Pet" name="Cursed Man">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="4709" level="5" />
 			<skill name="PhysicalSpecial2" id="4708" level="5" />
@@ -2907,9 +3293,12 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2540" hpRegen="10.2" mp="1410" mpRegen="3" />
-			<attack physical="950.989" magical="499.54" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
-			<defence physical="305.36" magical="223.45" />
+			<vitals hp="2540" hpRegen="8.5" mp="1410" mpRegen="3" />
+			<attack physical="731.52506" magical="499.53679" random="10" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="305.35947" magical="223.44881" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="80" />
 				<run ground="160" />
@@ -2929,6 +3318,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4709" level="5" /> <!-- Cursed Blow -->
 			<skill id="4708" level="5" /> <!-- Cursed Strike -->
 		</skillList>
@@ -2941,6 +3331,7 @@
 		</collision>
 	</npc>
 	<npc id="14079" level="74" type="Pet" name="Cursed Man">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="4709" level="6" />
 			<skill name="PhysicalSpecial2" id="4708" level="6" />
@@ -2948,9 +3339,12 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2632" hpRegen="10.2" mp="1475" mpRegen="3" />
-			<attack physical="1005.966" magical="528.42" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
-			<defence physical="314.66" magical="230.25" />
+			<vitals hp="2632" hpRegen="8.5" mp="1475" mpRegen="3" />
+			<attack physical="773.81598" magical="528.41601" random="10" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="314.65987" magical="230.25444" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="80" />
 				<run ground="160" />
@@ -2970,6 +3364,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4709" level="6" /> <!-- Cursed Blow -->
 			<skill id="4708" level="6" /> <!-- Cursed Strike -->
 		</skillList>
@@ -2982,6 +3377,7 @@
 		</collision>
 	</npc>
 	<npc id="14080" level="76" type="Pet" name="Cursed Man">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="4709" level="7" />
 			<skill name="PhysicalSpecial2" id="4708" level="7" />
@@ -2989,9 +3385,12 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2719" hpRegen="10.2" mp="1540" mpRegen="3" />
-			<attack physical="1059.981" magical="556.79" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
-			<defence physical="323.78" magical="236.93" />
+			<vitals hp="2719" hpRegen="8.5" mp="1540" mpRegen="3" />
+			<attack physical="815.37145" magical="556.793" random="10" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="323.78455" magical="236.93149" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="80" />
 				<run ground="160" />
@@ -3011,6 +3410,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4709" level="7" /> <!-- Cursed Blow -->
 			<skill id="4708" level="7" /> <!-- Cursed Strike -->
 		</skillList>
@@ -3023,6 +3423,7 @@
 		</collision>
 	</npc>
 	<npc id="14081" level="78" type="Pet" name="Cursed Man">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="4709" level="8" />
 			<skill name="PhysicalSpecial2" id="4708" level="8" />
@@ -3030,9 +3431,12 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2802" hpRegen="10.2" mp="1607" mpRegen="3" />
-			<attack physical="1112.553" magical="584.41" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<vitals hp="2802" hpRegen="8.5" mp="1607" mpRegen="3" />
+			<attack physical="855.81387" magical="584.40994" random="10" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" />
+			<attribute>
+				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
+			</attribute>
 			<speed>
 				<walk ground="80" />
 				<run ground="160" />
@@ -3052,6 +3456,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4709" level="8" /> <!-- Cursed Blow -->
 			<skill id="4708" level="8" /> <!-- Cursed Strike -->
 		</skillList>
@@ -3064,6 +3469,7 @@
 		</collision>
 	</npc>
 	<npc id="14082" level="78" type="Pet" name="Cursed Man">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="4709" level="8" />
 			<skill name="PhysicalSpecial2" id="4708" level="8" />
@@ -3071,9 +3477,12 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2812" hpRegen="10.2" mp="1615" mpRegen="3" />
-			<attack physical="1120.553" magical="584.41" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<vitals hp="2812" hpRegen="8.5" mp="1615" mpRegen="3" />
+			<attack physical="860.7348" magical="587.770295" random="10" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="333.7929775" magical="244.2552175" />
+			<attribute>
+				<defence fire="50" water="50" wind="50" earth="50" holy="50" dark="50" />
+			</attribute>
 			<speed>
 				<walk ground="80" />
 				<run ground="160" />
@@ -3093,6 +3502,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4709" level="8" /> <!-- Cursed Blow -->
 			<skill id="4708" level="8" /> <!-- Cursed Strike -->
 		</skillList>
@@ -3105,6 +3515,7 @@
 		</collision>
 	</npc>
 	<npc id="14083" level="78" type="Pet" name="Cursed Man">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="4709" level="8" />
 			<skill name="PhysicalSpecial2" id="4708" level="8" />
@@ -3112,9 +3523,12 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2822" hpRegen="10.2" mp="1624" mpRegen="3" />
-			<attack physical="1128.553" magical="584.41" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<vitals hp="2822" hpRegen="8.5" mp="1624" mpRegen="3" />
+			<attack physical="865.65573" magical="591.13065" random="10" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="334.885345" magical="245.054565" />
+			<attribute>
+				<defence fire="60" water="60" wind="60" earth="60" holy="60" dark="60" />
+			</attribute>
 			<speed>
 				<walk ground="80" />
 				<run ground="160" />
@@ -3134,6 +3548,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4709" level="8" /> <!-- Cursed Blow -->
 			<skill id="4708" level="8" /> <!-- Cursed Strike -->
 		</skillList>
@@ -3146,6 +3561,7 @@
 		</collision>
 	</npc>
 	<npc id="14084" level="78" type="Pet" name="Cursed Man">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="4709" level="8" />
 			<skill name="PhysicalSpecial2" id="4708" level="8" />
@@ -3153,9 +3569,12 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2832" hpRegen="10.2" mp="1632" mpRegen="3" />
-			<attack physical="1136.553" magical="584.41" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<vitals hp="2832" hpRegen="8.5" mp="1632" mpRegen="3" />
+			<attack physical="870.57666" magical="594.491005" random="10" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="335.9777125" magical="245.8539125" />
+			<attribute>
+				<defence fire="70" water="70" wind="70" earth="70" holy="70" dark="70" />
+			</attribute>
 			<speed>
 				<walk ground="80" />
 				<run ground="160" />
@@ -3175,6 +3594,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4709" level="8" /> <!-- Cursed Blow -->
 			<skill id="4708" level="8" /> <!-- Cursed Strike -->
 		</skillList>
@@ -3186,7 +3606,8 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="14085" level="78" type="Pet" name="Cursed Man">
+	<npc id="14085" level="79" type="Pet" name="Cursed Man">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="4709" level="8" />
 			<skill name="PhysicalSpecial2" id="4708" level="8" />
@@ -3194,9 +3615,12 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2842" hpRegen="10.2" mp="1641" mpRegen="3" />
-			<attack physical="1144.553" magical="584.41" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<vitals hp="2842" hpRegen="8.5" mp="1641" mpRegen="3" />
+			<attack physical="875.49759" magical="597.85136" random="10" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="337.07008" magical="246.65326" />
+			<attribute>
+				<defence fire="80" water="80" wind="80" earth="80" holy="80" dark="80" />
+			</attribute>
 			<speed>
 				<walk ground="80" />
 				<run ground="160" />
@@ -3216,6 +3640,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4709" level="8" /> <!-- Cursed Blow -->
 			<skill id="4708" level="8" /> <!-- Cursed Strike -->
 		</skillList>
@@ -3227,7 +3652,8 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="14086" level="78" type="Pet" name="Cursed Man">
+	<npc id="14086" level="79" type="Pet" name="Cursed Man">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="4709" level="8" />
 			<skill name="PhysicalSpecial2" id="4708" level="8" />
@@ -3235,9 +3661,12 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2852" hpRegen="10.2" mp="1649" mpRegen="3" />
-			<attack physical="1152.553" magical="584.41" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<vitals hp="2852" hpRegen="8.5" mp="1649" mpRegen="3" />
+			<attack physical="880.41852" magical="601.211715" random="10" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="338.1624475" magical="247.4526075" />
+			<attribute>
+				<defence fire="85" water="85" wind="85" earth="85" holy="85" dark="85" />
+			</attribute>
 			<speed>
 				<walk ground="80" />
 				<run ground="160" />
@@ -3257,6 +3686,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4709" level="8" /> <!-- Cursed Blow -->
 			<skill id="4708" level="8" /> <!-- Cursed Strike -->
 		</skillList>
@@ -3268,7 +3698,8 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="14087" level="78" type="Pet" name="Cursed Man">
+	<npc id="14087" level="79" type="Pet" name="Cursed Man">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="4709" level="8" />
 			<skill name="PhysicalSpecial2" id="4708" level="8" />
@@ -3276,9 +3707,12 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2862" hpRegen="10.2" mp="1657" mpRegen="3" />
-			<attack physical="1160.553" magical="584.41" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<vitals hp="2862" hpRegen="8.5" mp="1657" mpRegen="3" />
+			<attack physical="885.33945" magical="604.57207" random="10" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="339.254815" magical="248.251955" />
+			<attribute>
+				<defence fire="90" water="90" wind="90" earth="90" holy="90" dark="90" />
+			</attribute>
 			<speed>
 				<walk ground="80" />
 				<run ground="160" />
@@ -3298,6 +3732,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4709" level="8" /> <!-- Cursed Blow -->
 			<skill id="4708" level="8" /> <!-- Cursed Strike -->
 		</skillList>
@@ -3309,7 +3744,8 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="14088" level="78" type="Pet" name="Cursed Man">
+	<npc id="14088" level="79" type="Pet" name="Cursed Man">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="4709" level="8" />
 			<skill name="PhysicalSpecial2" id="4708" level="8" />
@@ -3317,9 +3753,12 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2871" hpRegen="10.2" mp="1666" mpRegen="3" />
-			<attack physical="1168.553" magical="584.41" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<vitals hp="2871" hpRegen="8.5" mp="1666" mpRegen="3" />
+			<attack physical="890.26038" magical="607.932425" random="10" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="340.3471825" magical="249.0513025" />
+			<attribute>
+				<defence fire="95" water="95" wind="95" earth="95" holy="95" dark="95" />
+			</attribute>
 			<speed>
 				<walk ground="80" />
 				<run ground="160" />
@@ -3339,6 +3778,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4709" level="8" /> <!-- Cursed Blow -->
 			<skill id="4708" level="8" /> <!-- Cursed Strike -->
 		</skillList>
@@ -3350,7 +3790,8 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="14089" level="78" type="Pet" name="Cursed Man">
+	<npc id="14089" level="80" type="Pet" name="Cursed Man">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="4709" level="8" />
 			<skill name="PhysicalSpecial2" id="4708" level="8" />
@@ -3358,9 +3799,12 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2880" hpRegen="10.2" mp="1674" mpRegen="3" />
-			<attack physical="1176.553" magical="584.41" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<vitals hp="2880" hpRegen="8.5" mp="1674" mpRegen="3" />
+			<attack physical="894.75854" magical="611.00409" random="10" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341.375" magical="249.80341" />
+			<attribute>
+				<defence fire="100" water="100" wind="100" earth="100" holy="100" dark="100" />
+			</attribute>
 			<speed>
 				<walk ground="80" />
 				<run ground="160" />
@@ -3380,6 +3824,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4709" level="8" /> <!-- Cursed Blow -->
 			<skill id="4708" level="8" /> <!-- Cursed Strike -->
 		</skillList>
@@ -3391,7 +3836,8 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="14090" level="79" type="Pet" name="Cursed Man">
+	<npc id="14090" level="80" type="Pet" name="Cursed Man">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="4709" level="8" />
 			<skill name="PhysicalSpecial2" id="4708" level="8" />
@@ -3399,9 +3845,12 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2889" hpRegen="10.2" mp="1683" mpRegen="3" />
-			<attack physical="1184.553" magical="584.41" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<vitals hp="2889" hpRegen="8.5" mp="1683" mpRegen="3" />
+			<attack physical="899.5737775" magical="614.2922725" random="10" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="342.45123" magical="250.5909475" />
+			<attribute>
+				<defence fire="102" water="102" wind="102" earth="102" holy="102" dark="102" />
+			</attribute>
 			<speed>
 				<walk ground="80" />
 				<run ground="160" />
@@ -3421,6 +3870,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4709" level="8" /> <!-- Cursed Blow -->
 			<skill id="4708" level="8" /> <!-- Cursed Strike -->
 		</skillList>
@@ -3432,7 +3882,8 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="14091" level="79" type="Pet" name="Cursed Man">
+	<npc id="14091" level="80" type="Pet" name="Cursed Man">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="4709" level="9" />
 			<skill name="PhysicalSpecial2" id="4708" level="9" />
@@ -3440,9 +3891,12 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2899" hpRegen="10.2" mp="1691" mpRegen="3" />
-			<attack physical="1192.553" magical="584.41" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<vitals hp="2899" hpRegen="8.5" mp="1691" mpRegen="3" />
+			<attack physical="904.389015" magical="617.580455" random="10" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="343.52746" magical="251.378485" />
+			<attribute>
+				<defence fire="104" water="104" wind="104" earth="104" holy="104" dark="104" />
+			</attribute>
 			<speed>
 				<walk ground="80" />
 				<run ground="160" />
@@ -3462,6 +3916,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4709" level="9" /> <!-- Cursed Blow -->
 			<skill id="4708" level="9" /> <!-- Cursed Strike -->
 		</skillList>
@@ -3473,7 +3928,8 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="14092" level="79" type="Pet" name="Cursed Man">
+	<npc id="14092" level="80" type="Pet" name="Cursed Man">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="4709" level="9" />
 			<skill name="PhysicalSpecial2" id="4708" level="9" />
@@ -3481,9 +3937,12 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2908" hpRegen="10.2" mp="1700" mpRegen="3" />
-			<attack physical="1200.553" magical="584.41" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<vitals hp="2908" hpRegen="8.5" mp="1700" mpRegen="3" />
+			<attack physical="909.2042525" magical="620.8686375" random="10" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="344.60369" magical="252.1660225" />
+			<attribute>
+				<defence fire="106" water="106" wind="106" earth="106" holy="106" dark="106" />
+			</attribute>
 			<speed>
 				<walk ground="80" />
 				<run ground="160" />
@@ -3503,6 +3962,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4709" level="9" /> <!-- Cursed Blow -->
 			<skill id="4708" level="9" /> <!-- Cursed Strike -->
 		</skillList>
@@ -3514,7 +3974,8 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="14093" level="79" type="Pet" name="Cursed Man">
+	<npc id="14093" level="81" type="Pet" name="Cursed Man">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="4709" level="9" />
 			<skill name="PhysicalSpecial2" id="4708" level="9" />
@@ -3522,9 +3983,12 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2916" hpRegen="10.2" mp="1708" mpRegen="3" />
-			<attack physical="1208.553" magical="584.41" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<vitals hp="2916" hpRegen="8.5" mp="1708" mpRegen="3" />
+			<attack physical="913.54847" magical="623.83518" random="10" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="345.61127" magical="252.90333" />
+			<attribute>
+				<defence fire="109" water="109" wind="109" earth="109" holy="109" dark="109" />
+			</attribute>
 			<speed>
 				<walk ground="80" />
 				<run ground="160" />
@@ -3544,6 +4008,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4709" level="9" /> <!-- Cursed Blow -->
 			<skill id="4708" level="9" /> <!-- Cursed Strike -->
 		</skillList>
@@ -3555,7 +4020,8 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="14094" level="79" type="Pet" name="Cursed Man">
+	<npc id="14094" level="81" type="Pet" name="Cursed Man">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="4709" level="9" />
 			<skill name="PhysicalSpecial2" id="4708" level="9" />
@@ -3563,9 +4029,12 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2926" hpRegen="10.2" mp="1717" mpRegen="3" />
-			<attack physical="1216.553" magical="584.41" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<vitals hp="2926" hpRegen="8.5" mp="1717" mpRegen="3" />
+			<attack physical="918.2459525" magical="627.0429525" random="10" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="346.6703375" magical="253.67831" />
+			<attribute>
+				<defence fire="111" water="111" wind="111" earth="111" holy="111" dark="111" />
+			</attribute>
 			<speed>
 				<walk ground="80" />
 				<run ground="160" />
@@ -3585,6 +4054,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4709" level="9" /> <!-- Cursed Blow -->
 			<skill id="4708" level="9" /> <!-- Cursed Strike -->
 		</skillList>
@@ -3596,7 +4066,8 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="14095" level="79" type="Pet" name="Cursed Man">
+	<npc id="14095" level="81" type="Pet" name="Cursed Man">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="4709" level="9" />
 			<skill name="PhysicalSpecial2" id="4708" level="9" />
@@ -3604,9 +4075,12 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2935" hpRegen="10.2" mp="1725" mpRegen="3" />
-			<attack physical="1224.553" magical="584.41" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<vitals hp="2935" hpRegen="8.5" mp="1725" mpRegen="3" />
+			<attack physical="922.943435" magical="630.250725" random="10" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="347.729405" magical="254.45329" />
+			<attribute>
+				<defence fire="113" water="113" wind="113" earth="113" holy="113" dark="113" />
+			</attribute>
 			<speed>
 				<walk ground="80" />
 				<run ground="160" />
@@ -3626,6 +4100,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4709" level="9" /> <!-- Cursed Blow -->
 			<skill id="4708" level="9" /> <!-- Cursed Strike -->
 		</skillList>
@@ -3637,7 +4112,8 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="14096" level="79" type="Pet" name="Cursed Man">
+	<npc id="14096" level="81" type="Pet" name="Cursed Man">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="4709" level="9" />
 			<skill name="PhysicalSpecial2" id="4708" level="9" />
@@ -3645,9 +4121,12 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2944" hpRegen="10.2" mp="1734" mpRegen="3" />
-			<attack physical="1232.553" magical="584.41" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<vitals hp="2944" hpRegen="8.5" mp="1734" mpRegen="3" />
+			<attack physical="927.6409175" magical="633.4584975" random="10" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="348.7884725" magical="255.22827" />
+			<attribute>
+				<defence fire="115" water="115" wind="115" earth="115" holy="115" dark="115" />
+			</attribute>
 			<speed>
 				<walk ground="80" />
 				<run ground="160" />
@@ -3667,6 +4146,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4709" level="9" /> <!-- Cursed Blow -->
 			<skill id="4708" level="9" /> <!-- Cursed Strike -->
 		</skillList>
@@ -3678,7 +4158,8 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="14097" level="79" type="Pet" name="Cursed Man">
+	<npc id="14097" level="82" type="Pet" name="Cursed Man">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="4709" level="9" />
 			<skill name="PhysicalSpecial2" id="4708" level="9" />
@@ -3686,9 +4167,12 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2951" hpRegen="10.2" mp="1743" mpRegen="3" />
-			<attack physical="1240.553" magical="584.41" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<vitals hp="2951" hpRegen="8.5" mp="1743" mpRegen="3" />
+			<attack physical="931.81944" magical="636.31188" random="10" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="349.77477" magical="255.95" />
+			<attribute>
+				<defence fire="118" water="118" wind="118" earth="118" holy="118" dark="118" />
+			</attribute>
 			<speed>
 				<walk ground="80" />
 				<run ground="160" />
@@ -3708,6 +4192,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4709" level="9" /> <!-- Cursed Blow -->
 			<skill id="4708" level="9" /> <!-- Cursed Strike -->
 		</skillList>
@@ -3719,7 +4204,8 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="14098" level="79" type="Pet" name="Cursed Man">
+	<npc id="14098" level="82" type="Pet" name="Cursed Man">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="4709" level="9" />
 			<skill name="PhysicalSpecial2" id="4708" level="9" />
@@ -3727,9 +4213,12 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2960" hpRegen="10.2" mp="1751" mpRegen="3" />
-			<attack physical="1248.553" magical="584.41" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<vitals hp="2960" hpRegen="8.5" mp="1751" mpRegen="3" />
+			<attack physical="936.3871825" magical="639.431055" random="10" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="350.815645" magical="256.7116675" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
 			<speed>
 				<walk ground="80" />
 				<run ground="160" />
@@ -3749,6 +4238,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4709" level="9" /> <!-- Cursed Blow -->
 			<skill id="4708" level="9" /> <!-- Cursed Strike -->
 		</skillList>
@@ -3760,7 +4250,8 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="14099" level="80" type="Pet" name="Cursed Man">
+	<npc id="14099" level="82" type="Pet" name="Cursed Man">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="4709" level="9" />
 			<skill name="PhysicalSpecial2" id="4708" level="9" />
@@ -3768,9 +4259,12 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2969" hpRegen="10.2" mp="1760" mpRegen="3" />
-			<attack physical="1256.553" magical="584.41" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<vitals hp="2969" hpRegen="8.5" mp="1760" mpRegen="3" />
+			<attack physical="940.954925" magical="642.55023" random="10" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="351.85652" magical="257.473335" />
+			<attribute>
+				<defence fire="122" water="122" wind="122" earth="122" holy="122" dark="122" />
+			</attribute>
 			<speed>
 				<walk ground="80" />
 				<run ground="160" />
@@ -3790,6 +4284,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4709" level="9" /> <!-- Cursed Blow -->
 			<skill id="4708" level="9" /> <!-- Cursed Strike -->
 		</skillList>

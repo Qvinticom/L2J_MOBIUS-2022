@@ -35,7 +35,9 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 			<effect name="DefenceTrait">
 				<SLEEP>100</SLEEP>
 			</effect>
@@ -627,7 +629,7 @@
 		</effects>
 	</skill>
 	<skill id="3113" toLevel="10" name="Item Skill: Stun">
-		<!-- Chance: Momentarily inflicts Stun on the target during a critical attack. -->
+		<!-- Activated skill: Causes a target to enter the Stun state momentarily if critically hit. -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -660,7 +662,9 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="3114" toLevel="15" name="Item Skill: Hold">
@@ -742,7 +746,9 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 			<effect name="DefenceTrait">
 				<SLEEP>100</SLEEP>
 			</effect>
@@ -2043,8 +2049,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3134" toLevel="10" name="Item Skill: Might in Duel - PvP">
-		<!-- Active: Temporarily increases your P. Atk. in PvP. -->
+	<skill id="3134" toLevel="10" name="Item Skill: Duel Might">
+		<!-- Active: Increases PvP P. Atk. temporarily. -->
 		<icon>icon.skill3123</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -2326,8 +2332,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3137" toLevel="10" name="Item Skill: Weakness in Duel">
-		<!-- Active: Temporarily decreases enemy's P. Atk. in PvP. -->
+	<skill id="3137" toLevel="10" name="Item Skill: Duel Weakness">
+		<!-- Active: Decreases the opponent's PvP P. Atk. temporarily. -->
 		<icon>icon.skill3123</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -3093,12 +3099,11 @@
 					<value level="14">-50</value>
 					<value level="15">-50</value>
 				</amount>
-				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="3146" toLevel="1" name="Item Skill: Return">
-		<!-- Active: Teleports to a town. Cannot be used in a specially designated place such as the GM Consultation Service. -->
+		<!-- Active: Teleports the caster to a village. Cannot be used in special areas, such as the GM Consultation Room. -->
 		<icon>icon.skill3123</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>20000</hitTime>
@@ -3121,7 +3126,7 @@
 		</effects>
 	</skill>
 	<skill id="3147" toLevel="1" name="Item Skill: Quick Return">
-		<!-- Active: Teleports to a town. Cannot be used in a specially designated place such as the GM Consultation Service. -->
+		<!-- Active: Teleports the caster to a village. Cannot be used in special areas, such as the GM Consultation Room. -->
 		<icon>icon.skill3123</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>1500</hitTime>
@@ -3654,7 +3659,7 @@
 		</effects>
 	</skill>
 	<skill id="3155" toLevel="10" name="Item Skill: Unlock">
-		<!-- Active: Opens doors Lv. $s2 with $s1 chance, doors Lv. $s4 with $s3 chance, and chests Lv. $s6 or below with $s5 chance. Requires $s7 Keys of a Thief. -->
+		<!-- Active: Opens doors Lv. $2 with $s1 chance, doors Lv. $s4 with $s3 chance, and chests Lv. $s6 or below with $s5 chance. Requires $s7 Keys of a Thief. -->
 		<icon>icon.skill3123</icon>
 		<castRange>40</castRange>
 		<effectPoint>
@@ -3775,6 +3780,15 @@
 			</effect>
 			<effect name="DamageBlock">
 				<type>BLOCK_MP</type>
+			</effect>
+			<effect name="DebuffBlock" />
+			<effect name="ResistDispelByCategory">
+				<amount>-100</amount>
+				<slot>ALL</slot>
+			</effect>
+			<effect name="ResistAbnormalByCategory">
+				<amount>-100</amount>
+				<slot>DEBUFF</slot>
 			</effect>
 		</effects>
 	</skill>
@@ -6066,7 +6080,7 @@
 		</effects>
 	</skill>
 	<skill id="3189" toLevel="10" name="Item Skill: Stun">
-		<!-- Active: Momentarily inflicts Stun on the target. -->
+		<!-- Applied skill: Inflicts Stun on the target momentarily. -->
 		<icon>icon.skill3123</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -6135,7 +6149,9 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="3190" toLevel="10" name="Item Skill: Hold">
@@ -6287,7 +6303,9 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 			<effect name="DefenceTrait">
 				<SLEEP>100</SLEEP>
 			</effect>

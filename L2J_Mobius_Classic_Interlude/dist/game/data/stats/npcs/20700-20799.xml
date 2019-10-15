@@ -1453,7 +1453,6 @@
 				<item id="948" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (B-grade) -->
 				<item id="4966" min="1" max="1" chance="0.075" /> <!-- Recipe: Keshanberk (60%) -->
 				<item id="4968" min="1" max="1" chance="0.075" /> <!-- Recipe: Kris (60%) -->
-				<item id="90012" min="1" max="1" chance="0.075" /> <!-- Common Life Stone -->
 			</drop>
 			<spoil>
 				<item id="4960" min="1" max="1" chance="42.86" /> <!-- Recipe: Sealed Zubei's Gauntlets (60%) -->
@@ -1525,7 +1524,6 @@
 				<item id="4963" min="1" max="1" chance="0.075" /> <!-- Recipe: Great Sword (60%) -->
 				<item id="4619" min="1" max="1" chance="0.075" /> <!-- Greater Dye of INT <Int + 4 Men - 4> - 2nd Class Transfer -->
 				<item id="4615" min="1" max="1" chance="0.075" /> <!-- Greater Dye of CON <Con + 4 Str - 4> - 2nd Class Transfer -->
-				<item id="90012" min="1" max="1" chance="0.075" /> <!-- Common Life Stone -->
 				<item id="5007" min="1" max="1" chance="0.03" /> <!-- Recipe: Bow of Peril (60%) -->
 			</drop>
 			<spoil>
@@ -2144,7 +2142,6 @@
 				<item id="5503" min="1" max="1" chance="4.543" /> <!-- Sealed Majestic Boot Lining -->
 				<item id="5515" min="1" max="1" chance="4.521" /> <!-- Sealed Majestic Gauntlet Design -->
 				<item id="5514" min="1" max="1" chance="4.508" /> <!-- Sealed Gauntlets of Nightmare Design -->
-				<item id="90045" min="1" max="1" chance="0.3" /> <!-- Magical Tablet -->
 			</drop>
 			<spoil>
 				<item id="1865" min="1" max="39" chance="91.975" /> <!-- Varnish -->
@@ -2734,17 +2731,19 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="7" /> <!-- Apprentice's Rod -->
-		<acquire exp="2212" sp="66" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="317.49359" hpRegen="4.5" mp="355.77" mpRegen="1.8" />
-			<attack physical="142.261856" magical="88.31491" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="124.2995273" magical="100.0527" />
+		<acquire exp="2137" sp="126" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="772.73802" hpRegen="4.5" mp="402.6" mpRegen="1.8" />
+			<attack physical="129.32896" magical="88.31491" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="136.72948" magical="91.0360303625432" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="43" />
 				<run ground="174" />
 			</speed>
 			<hitTime>480</hitTime>
-			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
@@ -2793,17 +2792,19 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="1" /> <!-- Short Sword -->
-		<acquire exp="749" sp="22" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="116.25832" hpRegen="2.5" mp="146.91" mpRegen="1.2" />
+		<acquire exp="618" sp="26" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="282.57403" hpRegen="2.5" mp="166.08" mpRegen="1.2" />
 			<attack physical="34.8979" magical="23.83074" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="78.68469" magical="57.57804" />
+			<defence physical="78.68469" magical="52.3891528929827" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="110" />
 			</speed>
 			<hitTime>460</hitTime>
-			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
@@ -2848,11 +2849,14 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<acquire exp="1471" sp="58" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1086" hpRegen="2.25" mp="402" mpRegen="1.8" />
-			<attack physical="172.1368458" magical="88.31491" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="102.726882" magical="100.0527" />
+		<acquire exp="981" sp="58" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="772.73802" hpRegen="4.5" mp="402.6" mpRegen="1.8" />
+			<attack physical="129.32896" magical="88.31491" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="136.72948" magical="91.0360303625432" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="24" />
 				<run ground="140" />
@@ -2919,16 +2923,18 @@
 		<sex>MALE</sex>
 		<equipment rhand="2507" /> <!-- Lizardspear -->
 		<acquire exp="1111" sp="67" /> <!-- Need confirm retail value -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1138" hpRegen="2.25" mp="417" mpRegen="1.8" />
-			<attack physical="336.9688264" magical="94.1437" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
-			<defence physical="127.7934364" magical="102.86506" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="809.52639" hpRegen="4.5" mp="417.6" mpRegen="1.8" />
+			<attack physical="137.86467" magical="94.1437" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="140.57278" magical="93.5949427192352" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="43" />
 				<run ground="140" />
 			</speed>
 			<hitTime>720</hitTime>
-			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
@@ -2994,16 +3000,18 @@
 		<sex>MALE</sex>
 		<equipment rhand="7" /> <!-- Apprentice's Rod -->
 		<acquire exp="1075" sp="66" /> <!-- Need confirm retail value -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1191" hpRegen="2.25" mp="432" mpRegen="1.8" />
-			<attack physical="161.508457" magical="100.26304" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="111.6417664" magical="105.72243" evasion="10" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="847.31754" hpRegen="4.5" mp="432.72" mpRegen="1.8" />
+			<attack physical="146.82587" magical="100.26304" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="144.47758" magical="96.1948088105753" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="43" />
 				<run ground="140" />
 			</speed>
 			<hitTime>480</hitTime>
-			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
@@ -3080,16 +3088,18 @@
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<acquire exp="1194" sp="76" /> <!-- Need confirm retail value -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1302" hpRegen="2.25" mp="463" mpRegen="1.8" />
-			<attack physical="193.4031711" magical="113.4007" random="10" critical="8" accuracy="0" attackSpeed="289" type="DAGGER" range="40" distance="80" width="120" />
-			<defence physical="114.5511044" magical="111.56912" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="925.85879" hpRegen="4.5" mp="463.32" mpRegen="1.8" />
+			<attack physical="166.06476" magical="113.4007" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="152.46752" magical="101.514599764346" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="100" />
 				<run ground="150" />
 			</speed>
 			<hitTime>460</hitTime>
-			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
@@ -3154,16 +3164,18 @@
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<acquire exp="1452" sp="94" /> <!-- Need confirm retail values -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1359" hpRegen="2.25" mp="478" mpRegen="1.8" />
-			<attack physical="205.3941618" magical="120.43155" random="10" critical="8" accuracy="0" attackSpeed="289" type="DAGGER" range="40" distance="80" width="120" />
-			<defence physical="117.618595" magical="114.55675" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="966.57792" hpRegen="4.5" mp="478.8" mpRegen="1.8" />
+			<attack physical="176.36077" magical="120.43155" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="156.55035" magical="104.232986928232" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="100" />
 				<run ground="174" />
 			</speed>
 			<hitTime>460</hitTime>
-			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
@@ -3230,11 +3242,15 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="3" /> <!-- rhand: Broadsword -->
-		<acquire exp="3816" sp="150" /> <!-- Need confirm retail values -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1086" hpRegen="4.5" mp="402" mpRegen="1.8" />
+		<acquire exp="2544" sp="150" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="772.73802" hpRegen="4.5" mp="402.6" mpRegen="1.8" />
 			<attack physical="129.32896" magical="88.31491" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="136.72948" magical="100.0527" />
+			<defence physical="136.72948" magical="91.0360303625432" />
+			<attribute>
+				<attack type="DARK" value="20" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="-32" dark="53" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="174" />
@@ -3297,20 +3313,22 @@
 			<param name="LongRangeGuardRate" value="10" />
 			<skill name="Buff" id="4030" level="2" />
 		</parameters>
-		<race>BEAST</race>
+		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="5128" /> <!-- rhand: Crokian Blade -->
-		<acquire exp="2399" sp="145" /> <!-- Need confirm retail values -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1138" hpRegen="4.5" mp="417" mpRegen="1.8" />
-			<attack physical="125.3315182" magical="94.1437" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="154.630058" magical="102.86506" />
+		<acquire exp="2399" sp="145" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="809.52639" hpRegen="4.5" mp="417.6" mpRegen="1.8" />
+			<attack physical="137.86467" magical="94.1437" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="140.57278" magical="93.5949427192352" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="18" />
 				<run ground="174" />
 			</speed>
 			<hitTime>780</hitTime>
-			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
@@ -3373,20 +3391,22 @@
 			<param name="LongRangeGuardRate" value="10" />
 			<skill name="PhysicalSpecial" id="4228" level="3" />
 		</parameters>
-		<race>BEAST</race>
+		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="5127" /> <!-- Dailaon Knife -->
-		<acquire exp="3081" sp="190" /> <!-- Need confirm retail value -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1191" hpRegen="4.5" mp="432" mpRegen="1.8" />
-			<attack physical="296.5882574" magical="100.26304" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
-			<defence physical="158.925338" magical="105.72243" />
+		<acquire exp="3081" sp="190" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="847.31754" hpRegen="4.5" mp="432.72" mpRegen="1.8" />
+			<attack physical="146.82587" magical="100.26304" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="144.47758" magical="96.1948088105753" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="18" />
 				<run ground="174" />
 			</speed>
 			<hitTime>910</hitTime>
-			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
@@ -3448,20 +3468,22 @@
 			<param name="LongRangeGuardRate" value="10" />
 			<skill name="Buff" id="4074" level="2" />
 		</parameters>
-		<race>BEAST</race>
+		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="5128" /> <!-- Crokian Blade -->
-		<acquire exp="5307" sp="331" /> <!-- Need confirm retail value -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1246" hpRegen="9" mp="447" mpRegen="1.8" />
-			<attack physical="171.845003" magical="106.67987" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="134.9480636" magical="108.62405" />
+		<acquire exp="5307" sp="331" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="886.09975" hpRegen="4.5" mp="447.96" mpRegen="1.8" />
+			<attack physical="156.22273" magical="106.67987" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="148.44287" magical="98.8349371271581" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="18" />
 				<run ground="174" />
 			</speed>
 			<hitTime>780</hitTime>
-			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
@@ -3526,20 +3548,22 @@
 			<skill name="W_ShortRangeDDMagic" id="4160" level="3" />
 			<skill name="DeBuff" id="4076" level="2" />
 		</parameters>
-		<race>BEAST</race>
+		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="5131" /> <!-- Monster Only (Parhit Staff) -->
-		<acquire exp="4937" sp="314" /> <!-- Need confirm retail value -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1302" hpRegen="9" mp="463" mpRegen="1.8" />
-			<attack physical="182.671236" magical="113.4007" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="117.8158109" magical="111.56912" evasion="10" />
+		<acquire exp="4937" sp="314" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="925.85879" hpRegen="4.5" mp="463.32" mpRegen="1.8" />
+			<attack physical="166.06476" magical="113.4007" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="152.46752" magical="101.514599764346" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="15" />
 				<run ground="174" />
 			</speed>
 			<hitTime>740</hitTime>
-			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
@@ -3615,12 +3639,14 @@
 			<vitals hp="396.928565" hpRegen="5.5" mp="423.03" mpRegen="2.1" />
 			<attack physical="193.996847" magical="120.43155" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="142.3185" magical="114.55675" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="18" />
 				<run ground="174" />
 			</speed>
 			<hitTime>780</hitTime>
-			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
@@ -3687,20 +3713,22 @@
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="Buff" id="4074" level="2" />
 		</parameters>
-		<race>BUG</race>
+		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="223" /> <!-- Kukuri -->
-		<acquire exp="5047" sp="330" /> <!-- Need confirm retail values -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1418" hpRegen="11" mp="504" mpRegen="2.1" />
-			<attack physical="170.1079818" magical="127.77787" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="176.759022" magical="117.58598" />
+		<acquire exp="5047" sp="330" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="1008.23781" hpRegen="5.5" mp="504.8" mpRegen="2.1" />
+			<attack physical="187.11878" magical="127.77787" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="160.69002" magical="106.989225133249" />
+			<attribute>
+				<defence fire="-5" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="25" />
 				<run ground="174" />
 			</speed>
 			<hitTime>460</hitTime>
-			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
@@ -3759,20 +3787,22 @@
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="DeBuff" id="4076" level="3" />
 		</parameters>
-		<race>BUG</race>
+		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="226" /> <!-- Cursed Dagger -->
-		<acquire exp="4771" sp="318" /> <!-- Need retail values -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1477" hpRegen="11" mp="531" mpRegen="2.1" />
-			<attack physical="173.5526713" magical="135.44454" random="10" critical="8" accuracy="0" attackSpeed="289" type="DAGGER" range="40" distance="80" width="120" />
-			<defence physical="164.88513" magical="120.65578" />
+		<acquire exp="4771" sp="318" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="1050.81652" hpRegen="5.5" mp="531.0" mpRegen="2.1" />
+			<attack physical="198.34591" magical="135.44454" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="164.88513" magical="109.782377202178" />
+			<attribute>
+				<defence fire="-5" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="25" />
 				<run ground="174" />
 			</speed>
 			<hitTime>760</hitTime>
-			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
@@ -3836,20 +3866,22 @@
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="DeBuff" id="4098" level="4" />
 		</parameters>
-		<race>BUG</race>
+		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="232" /> <!-- Dark Elven Dagger -->
-		<acquire exp="5101" sp="344" /> <!-- Need confirm retail values -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1539" hpRegen="11" mp="557" mpRegen="2.1" />
-			<attack physical="231.053152" magical="143.43577" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="153.7583364" magical="123.76505" />
+		<acquire exp="5101" sp="344" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="1094.28943" hpRegen="5.5" mp="557.4" mpRegen="2.1" />
+			<attack physical="210.04832" magical="143.43577" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="169.13417" magical="112.611442266143" />
+			<attribute>
+				<defence fire="-5" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="25" />
 				<run ground="174" />
 			</speed>
 			<hitTime>740</hitTime>
-			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
@@ -3921,17 +3953,19 @@
 		<race>BUG</race>
 		<sex>MALE</sex>
 		<equipment rhand="74" /> <!-- Katana -->
-		<acquire exp="7754" sp="530" /> <!-- Need confirm retail values -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1601" hpRegen="16.5" mp="584" mpRegen="2.1" />
-			<attack physical="244.454232" magical="151.75505" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="134.0183564" magical="126.91259" evasion="10" />
+		<acquire exp="7754" sp="530" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="1138.62924" hpRegen="5.5" mp="584.0" mpRegen="2.1" />
+			<attack physical="222.23112" magical="151.75505" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="173.43552" magical="115.475328468187" />
+			<attribute>
+				<defence fire="-5" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="25" />
 				<run ground="174" />
 			</speed>
 			<hitTime>580</hitTime>
-			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
@@ -3999,20 +4033,22 @@
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="PhysicalSpecial" id="4073" level="4" />
 		</parameters>
-		<race>HUMANOID</race>
+		<race>GIANT</race>
 		<sex>MALE</sex>
 		<equipment rhand="5132" /> <!-- Monster Only (Giant Trident) -->
-		<acquire exp="6270" sp="436" /> <!-- Need confirm retail values -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1664" hpRegen="11" mp="610" mpRegen="2.1" />
-			<attack physical="213.5439" magical="160.40508" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="195.566206" magical="130.09715" />
+		<acquire exp="6270" sp="436" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="1183.80594" hpRegen="5.5" mp="610.8" mpRegen="2.1" />
+			<attack physical="234.89829" magical="160.40508" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="177.78746" magical="118.372898457316" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="35" />
 				<run ground="174" />
 			</speed>
 			<hitTime>450</hitTime>
-			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
@@ -4079,16 +4115,18 @@
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
 		<acquire exp="6312" sp="448" /> <!-- Need confirm retail values -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1729" hpRegen="11" mp="637" mpRegen="2.1" />
-			<attack physical="272.85786" magical="169.38777" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="140.78176" magical="133.31739" evasion="10" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="1229.78678" hpRegen="5.5" mp="637.8" mpRegen="2.1" />
+			<attack physical="248.0526" magical="169.38777" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="182.18816" magical="121.302932993263" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="174" />
 			</speed>
 			<hitTime>350</hitTime>
-			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>

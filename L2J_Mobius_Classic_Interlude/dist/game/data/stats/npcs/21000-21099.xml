@@ -1868,14 +1868,17 @@
 			<skill name="SelfBuff" id="4091" level="1" /> <!-- NPC Ogre Spirit Totem -->
 			<skill name="PhysicalSpecial" id="4032" level="3" /> <!-- NPC Strike -->
 		</parameters>
-		<race>HUMANOID</race>
+		<race>GIANT</race>
 		<sex>MALE</sex>
 		<equipment rhand="98" /> <!-- rhand: Halberd -->
-		<acquire exp="3235" sp="134" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1246" hpRegen="2.25" mp="447" mpRegen="1.8" />
-			<attack physical="288.8181781" magical="106.67987" random="50" critical="1" accuracy="9" attackSpeed="182" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="111.5273253" magical="108.62405" />
+		<acquire exp="2156" sp="134" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="886.09975" hpRegen="4.5" mp="447.96" mpRegen="1.8" />
+			<attack physical="156.22273" magical="106.67987" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="148.44287" magical="98.8349371271581" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="22" />
 				<run ground="174" />
@@ -2471,7 +2474,6 @@
 				<item id="5496" min="1" max="1" chance="1.426" /> <!-- Sealed Dark Crystal Boot Lining -->
 				<item id="5497" min="1" max="1" chance="1.407" /> <!-- Sealed Tallum Boot Lining -->
 				<item id="5509" min="1" max="1" chance="1.406" /> <!-- Sealed Tallum Glove Design -->
-				<item id="90045" min="1" max="1" chance="0.03" /> <!-- Magical Tablet -->
 			</drop>
 			<spoil>
 				<item id="1865" min="1" max="9" chance="84.2" /> <!-- Varnish -->
@@ -2828,7 +2830,6 @@
 				<item id="4053" min="4" max="12" chance="4.784" /> <!-- Black Ore Ring Gemstone -->
 				<item id="1864" min="32" max="96" chance="2.803" /> <!-- Stem -->
 				<item id="4041" min="1" max="1" chance="1.235" /> <!-- Mold Hardener -->
-				<item id="90012" min="1" max="1" chance="0.3" /> <!-- Common Life Stone -->
 			</drop>
 			<spoil>
 				<item id="4974" min="1" max="1" chance="66.29" /> <!-- Recipe: Black Ore Ring (70%) -->
@@ -2952,7 +2953,6 @@
 				<item id="1871" min="7" max="21" chance="6.88" /> <!-- Charcoal -->
 				<item id="1875" min="1" max="1" chance="6.875" /> <!-- Stone of Purity -->
 				<item id="1895" min="3" max="9" chance="4.949" /> <!-- Metallic Fiber -->
-				<item id="90012" min="1" max="1" chance="0.3" /> <!-- Common Life Stone -->
 			</drop>
 			<spoil>
 				<item id="4975" min="1" max="1" chance="40.39" /> <!-- Recipe: Black Ore Necklace (70%) -->
@@ -3025,9 +3025,7 @@
 				<item id="1871" min="7" max="21" chance="6.606" /> <!-- Charcoal -->
 				<item id="1875" min="1" max="1" chance="6.58" /> <!-- Stone of Purity -->
 				<item id="1895" min="3" max="9" chance="4.699" /> <!-- Metallic Fiber -->
-				<item id="90045" min="1" max="1" chance="0.3" /> <!-- Magical Tablet -->
 				<item id="5230" min="1" max="1" chance="0.075" /> <!-- Recipe: Mithril Arrow -->
-				<item id="90012" min="1" max="1" chance="0.075" /> <!-- Common Life Stone -->
 			</drop>
 			<spoil>
 				<item id="4982" min="1" max="1" chance="14.38" /> <!-- Recipe: Blue Wolf Gaiters (60%) -->
@@ -3158,7 +3156,6 @@
 				<item id="1895" min="4" max="12" chance="5.911" /> <!-- Metallic Fiber -->
 				<item id="1865" min="18" max="54" chance="4.67" /> <!-- Varnish -->
 				<item id="1864" min="50" max="150" chance="3.396" /> <!-- Stem -->
-				<item id="90045" min="1" max="1" chance="3.071" /> <!-- Magical Tablet -->
 				<item id="4041" min="1" max="1" chance="1.5" /> <!-- Mold Hardener -->
 				<item id="3956" min="1" max="1" chance="0.3" /> <!-- Recipe: Blessed Spiritshot (A-grade) -->
 				<item id="5166" min="1" max="1" chance="0.3" /> <!-- Recipe: Blessed Spiritshot Compressed Package (A-grade) -->
@@ -3184,6 +3181,7 @@
 		</parameters>
 		<race>DIVINE</race>
 		<sex>MALE</sex>
+		<equipment rhand="147" /> <!-- rhand: Tear of Darkness -->
 		<acquire exp="87607" sp="2628" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1350.76404" hpRegen="8.5" mp="1305.375" mpRegen="3" />
@@ -3346,7 +3344,6 @@
 				<item id="1870" min="28" max="84" chance="5.476" /> <!-- Coal -->
 				<item id="4084" min="1" max="3" chance="5.012" /> <!-- Blue Wolf Tunic Fabric -->
 				<item id="1871" min="60" max="180" chance="2.514" /> <!-- Charcoal -->
-				<item id="90045" min="1" max="1" chance="0.75" /> <!-- Magical Tablet -->
 			</drop>
 			<spoil>
 				<item id="4988" min="1" max="1" chance="33.95" /> <!-- Recipe: Blue Wolf Stockings (60%) -->
@@ -3416,7 +3413,6 @@
 				<item id="1878" min="3" max="9" chance="5.109" /> <!-- Durable Braid -->
 				<item id="1895" min="4" max="12" chance="3.229" /> <!-- Metallic Fiber -->
 				<item id="1865" min="18" max="54" chance="2.515" /> <!-- Varnish -->
-				<item id="90045" min="1" max="1" chance="1.703" /> <!-- Magical Tablet -->
 				<item id="4041" min="1" max="1" chance="0.75" /> <!-- Mold Hardener -->
 				<item id="1807" min="1" max="1" chance="0.3" /> <!-- Recipe: Soulshot (A-grade) -->
 				<item id="5156" min="1" max="1" chance="0.075" /> <!-- Recipe: Soulshot Compressed Package (A-grade) -->
@@ -3553,7 +3549,6 @@
 				<item id="57" min="3871" max="9030" chance="70" /> <!-- Adena -->
 				<item id="1870" min="12" max="36" chance="13.55" /> <!-- Coal -->
 				<item id="4088" min="3" max="9" chance="7.479" /> <!-- Sealed Blue Wolf Helmet Design -->
-				<item id="90012" min="1" max="1" chance="0.3" /> <!-- Common Life Stone -->
 			</drop>
 			<spoil>
 				<item id="4962" min="1" max="1" chance="24.09" /> <!-- Recipe: Sealed Zubei's Helmet (60%) -->
@@ -3821,7 +3816,6 @@
 				<item id="1875" min="1" max="1" chance="26.43" /> <!-- Stone of Purity -->
 				<item id="4121" min="1" max="1" chance="9.089" /> <!-- Bow of Peril Shaft -->
 				<item id="2133" min="1" max="1" chance="1.378" /> <!-- Gemstone (A-grade) -->
-				<item id="90013" min="1" max="1" chance="0.3" /> <!-- Mid-grade Life Stone -->
 			</drop>
 			<spoil>
 				<item id="1870" min="1" max="69" chance="90.7" /> <!-- Coal -->
@@ -3889,7 +3883,6 @@
 				<item id="57" min="3474" max="8105" chance="70" /> <!-- Adena -->
 				<item id="1874" min="1" max="1" chance="21.2" /> <!-- Oriharukon Ore -->
 				<item id="4089" min="3" max="9" chance="6.747" /> <!-- Sealed Doom Helmet Design -->
-				<item id="90012" min="1" max="1" chance="0.3" /> <!-- Common Life Stone -->
 			</drop>
 			<spoil>
 				<item id="4179" min="1" max="1" chance="21.97" /> <!-- Recipe: Sealed Zubei's Helmet (100%) -->
@@ -3956,7 +3949,6 @@
 				<item id="57" min="3493" max="8149" chance="70" /> <!-- Adena -->
 				<item id="1870" min="12" max="36" chance="12.13" /> <!-- Coal -->
 				<item id="4088" min="3" max="9" chance="6.769" /> <!-- Sealed Blue Wolf Helmet Design -->
-				<item id="90012" min="1" max="1" chance="0.3" /> <!-- Common Life Stone -->
 			</drop>
 			<spoil>
 				<item id="4962" min="1" max="1" chance="21.94" /> <!-- Recipe: Sealed Zubei's Helmet (60%) -->
@@ -4022,7 +4014,6 @@
 				<item id="1887" min="1" max="1" chance="22.23" /> <!-- Varnish of Purity -->
 				<item id="4121" min="1" max="3" chance="10.61" /> <!-- Bow of Peril Shaft -->
 				<item id="5007" min="1" max="1" chance="0.75" /> <!-- Recipe: Bow of Peril (60%) -->
-				<item id="90013" min="1" max="1" chance="0.3" /> <!-- Mid-grade Life Stone -->
 			</drop>
 			<spoil>
 				<item id="948" min="1" max="1" chance="28.57" /> <!-- Scroll: Enchant Armor (B-grade) -->
@@ -4303,7 +4294,6 @@
 				<item id="4617" min="1" max="1" chance="0.075" /> <!-- Greater Dye of DEX <Dex + 4 Str - 4> - 2nd Class Transfer -->
 				<item id="4620" min="1" max="1" chance="0.075" /> <!-- Greater Dye of INT <Int + 4 Wit - 4> - 2nd Class Transfer -->
 				<item id="4971" min="1" max="1" chance="0.075" /> <!-- Recipe: Dark Elven Longbow (60%) -->
-				<item id="90012" min="1" max="1" chance="0.03" /> <!-- Common Life Stone -->
 			</drop>
 			<spoil>
 				<item id="4986" min="1" max="1" chance="5.507" /> <!-- Recipe: Blue Wolf Tunic (60%) -->

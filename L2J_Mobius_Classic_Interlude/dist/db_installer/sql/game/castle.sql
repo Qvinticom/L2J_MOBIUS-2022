@@ -18,8 +18,8 @@ INSERT IGNORE INTO `castle` VALUES
 (2,'Dion','NEUTRAL',0,0,'true',0,'false',0),
 (3,'Giran','NEUTRAL',0,0,'true',0,'false',0),
 (4,'Oren','NEUTRAL',0,0,'true',0,'false',0),
-(5,'Aden','NEUTRAL',0,0,'true',0,'false',0);
--- (6,'Innadril','NEUTRAL',0,0,'true',0,'false',0),
--- (7,'Goddard','NEUTRAL',0,0,'true',0,'false',0),
--- (8,'Rune','NEUTRAL',0,0,'true',0,'false',0),
--- (9,'Schuttgart','NEUTRAL',0,0,'true',0,'false',0);
+(5,'Aden','NEUTRAL',0,0,'true',0,'false',0),
+(6,'Innadril','NEUTRAL',0,0,'true',0,'false',0),
+(7,'Goddard','NEUTRAL',0,0,'true',0,'false',0),
+(8,'Rune','NEUTRAL',0,0,'true',0,'false',0),
+(9,'Schuttgart','NEUTRAL',0,0,'true',0,'false',0);

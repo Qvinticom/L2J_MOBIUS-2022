@@ -3,14 +3,12 @@
 	<npcs>
 		<npc>34262</npc> <!-- Sibi Manager -->
 	</npcs>
-	<item>
-		<!-- Adena -->
+		<item>
 		<ingredient id="57" count="110000" />
-		<!-- Sibi's Coin -->
 		<ingredient id="49783" count="200" />
-		<!-- Golden Mermaid's Tear 7-day -->
-		<production id="49585" count="1" />
-	</item>
+		<production id="21606" count="1" /> <!-- Xp Rune 50% (7 - Days) -->
+		<production id="20559" count="1" /> <!-- Sp Rune 50% (7 - Days) -->
+		</item> 
 	<item>
 		<!-- Sibi's Coin -->
 		<ingredient id="49783" count="2" />
@@ -42,64 +40,24 @@
 		<production id="34607" count="50" />
 	</item>
 	<item>
-		<!-- Sibi's Coin -->
 		<ingredient id="49783" count="2" />
-		<!-- Mysterious Blessed No-grade Soulshot -->
-		<production id="49744" count="267" />
+		<production id="21845" count="267" /> <!-- Mysterious Soulshots (No Grade) -->
 	</item>
 	<item>
-		<!-- Sibi's Coin -->
 		<ingredient id="49783" count="2" />
-		<!-- Mysterious Blessed D-grade Soulshot -->
-		<production id="49745" count="160" />
+		<production id="21846" count="160" /> <!-- Mysterious Soulshots (D - Grade) -->
 	</item>
 	<item>
-		<!-- Sibi's Coin -->
 		<ingredient id="49783" count="2" />
-		<!-- Mysterious Blessed C-grade Soulshot -->
-		<production id="49746" count="103" />
+		<production id="21847" count="103" /> <!-- Mysterious Soulshots (C - Grade) -->
 	</item>
 	<item>
-		<!-- Sibi's Coin -->
 		<ingredient id="49783" count="2" />
-		<!-- Mysterious Blessed B-grade Soulshot -->
-		<production id="49747" count="30" />
+		<production id="21848" count="30" /> <!-- Mysterious Soulshots (B - Grade) -->
 	</item>
 	<item>
-		<!-- Sibi's Coin -->
 		<ingredient id="49783" count="2" />
-		<!-- Mysterious Blessed A-grade Soulshot -->
-		<production id="49748" count="18" />
-	</item>
-	<item>
-		<!-- Sibi's Coin -->
-		<ingredient id="49783" count="2" />
-		<!-- Mysterious No-grade Spiritshot -->
-		<production id="49062" count="267" />
-	</item>
-	<item>
-		<!-- Sibi's Coin -->
-		<ingredient id="49783" count="2" />
-		<!-- Mysterious D-grade Spiritshot -->
-		<production id="49063" count="222" />
-	</item>
-	<item>
-		<!-- Sibi's Coin -->
-		<ingredient id="49783" count="2" />
-		<!-- Mysterious C-grade Spiritshot -->
-		<production id="49064" count="114" />
-	</item>
-	<item>
-		<!-- Sibi's Coin -->
-		<ingredient id="49783" count="2" />
-		<!-- Mysterious B-grade Spiritshot -->
-		<production id="49749" count="40" />
-	</item>
-	<item>
-		<!-- Sibi's Coin -->
-		<ingredient id="49783" count="2" />
-		<!-- Mysterious A-grade Spiritshot -->
-		<production id="49750" count="33" />
+		<production id="21849" count="18" /> <!-- Mysterious Soulshots (A - Grade) -->
 	</item>
 	<item>
 		<!-- Sibi's Coin -->
@@ -132,15 +90,11 @@
 		<production id="34614" count="14" />
 	</item>
 	<item>
-		<!-- Sibi's Coin -->
 		<ingredient id="49783" count="50" />
-		<!-- Greater Scroll of Resurrection -->
-		<production id="49542" count="1" />
+		<production id="3936" count="1" /> <!-- Blessed Scroll Resurrection -->
 	</item>
 	<item>
-		<!-- Sibi's Coin -->
-		<ingredient id="49783" count="50" />
-		<!-- Fishing Rod Chest 10-day -->
-		<production id="49507" count="1" />
-	</item>
+		<ingredient id="49783" count="60" />
+		<production id="46740" count="1" /> <!-- Reward Fishing Rod (30 - Days) -->
+	</item> 
 </list>

@@ -27,12 +27,16 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
+import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.IXmlReader;
+import org.l2jmobius.gameserver.datatables.ItemTable;
 import org.l2jmobius.gameserver.model.RecipeInstance;
 import org.l2jmobius.gameserver.model.RecipeList;
 import org.l2jmobius.gameserver.model.RecipeStatInstance;
 import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.type.CrystalType;
 
 /**
  * The Class RecipeData.
@@ -171,7 +175,20 @@ public class RecipeData implements IXmlReader
 							}
 							else if ("production".equalsIgnoreCase(c.getNodeName()))
 							{
-								set.set("itemId", Integer.parseInt(c.getAttributes().getNamedItem("id").getNodeValue()));
+								final int itemId = Integer.parseInt(c.getAttributes().getNamedItem("id").getNodeValue());
+								
+								// Max equipable item grade configuration.
+								final Item item = ItemTable.getInstance().getTemplate(id);
+								if (item != null)
+								{
+									final int itemCrystalId = item.getCrystalType().getId();
+									if ((itemCrystalId > Config.MAX_EQUIPABLE_ITEM_GRADE.getId()) && (itemCrystalId < CrystalType.EVENT.getId()))
+									{
+										continue RECIPES_FILE;
+									}
+								}
+								
+								set.set("itemId", itemId);
 								set.set("count", Integer.parseInt(c.getAttributes().getNamedItem("count").getNodeValue()));
 							}
 							else if ("productionRare".equalsIgnoreCase(c.getNodeName()))

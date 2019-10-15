@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="3200" name="Black Willow Leaf" type="EtcItem">
-		<!-- Leaf obtained by slaying the Black Willow Lurker. Take this to the Blight Treant who can be found at the east of Dark Elf Village and near Shilen Temple. -->
+		<!-- Leaf obtained by slaying the black willow lurker. Take this to the Blight Treant. -->
 		<set name="icon" val="icon.etc_leaf_gold_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -17,7 +17,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3201" name="Blight Treant Sap" type="EtcItem">
-		<!-- The sap of a Blight Treant. Take this to Arkenia at the Altar of Rites. -->
+		<!-- The sap of a blight treant. Take this to Arkenia. -->
 		<set name="icon" val="icon.etc_reagent_gold_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -33,7 +33,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3202" name="Arkenia's Letter" type="EtcItem">
-		<!-- Letter written by Arkenia. It states that the Initiation Ceremony of the Shillien Circle is complete. Take it to Hierarch Thifiell in Dark Elf Village. -->
+		<!-- Letter written by Arkenia. It states that the Initiation Ceremony of the Shillien Circle is complete. Take this to Tetrarch Thifiell. -->
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -49,7 +49,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3203" name="Mark of Glory" type="EtcItem">
-		<!-- Mark given to those who have passed the Testimony of Glory. Item for class transfer. -->
+		<!-- Mark given to those who have passed the Testimony of Glory. Item for occupational change. -->
 		<set name="icon" val="icon.etc_badge_gold_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -65,7 +65,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3204" name="Vokian's Order" type="EtcItem">
-		<!-- Procure 10 units of each of the following items: Manashen Shard after slaying Manashen Gargoyle in Ivory Tower Crater, Tyrant's Talon after slaying Tyrant in the Wastelands and Guardian Basilisk Fang after slaying Guardian Basilisk in Death Pass. -->
+		<!-- Collect and return with 10 Manashen Shards, 10 Tyrant's Talonss and 10 Guardian Basilisk Fangs. -->
 		<set name="icon" val="icon.etc_scroll_gray_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -81,7 +81,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3205" name="Manashen Shard" type="EtcItem">
-		<!-- Shard of the broken Manashen. Collect 10 and take them back to Prefect Vokian at the Orc Guild of Giran. -->
+		<!-- Shard of the broken manashen. Collect 10 and take them back to Prefect Vokian. -->
 		<set name="icon" val="icon.etc_broken_crystal_silver_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -97,7 +97,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3206" name="Tyrant's Talons" type="EtcItem">
-		<!-- The talons plucked from a slain Tyrant. Collect 10 and take them back to Prefect Vokian at the Orc Guild of Giran. -->
+		<!-- The talons plucked from a slain Tyrant. Collect 10 and take them back to Prefect Vokian. -->
 		<set name="icon" val="icon.etc_claw_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -113,7 +113,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3207" name="Guardian Basilisk Fang" type="EtcItem">
-		<!-- The fangs of a Guardian Basilisk slain in Death Pass. Collect 10 and take them back to Prefect Vokian at the Orc Guild of Giran. -->
+		<!-- The fangs of a slain Guardian Basilisk. Collect 10 and take them back to Prefect Vokian. -->
 		<set name="icon" val="icon.etc_fang_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -129,7 +129,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3208" name="Vokian's Order" type="EtcItem">
-		<!-- Orders of Prefect Vokian of the Orc Guild of Giran. The instructions are to go and seek out the Gandi Chief Chianta in the Town of Dion. -->
+		<!-- Prefect Vokian's orders. The instructions are to go and seek out the Gandi Chief Chianta in the Town of Dion. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -177,7 +177,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3211" name="Scepter of Breka" type="EtcItem">
-		<!-- Scepter of flame which can be obtained from a Breka Orc Chief. Take it along with 4 other tribes' scepters and go see Gandi Chief Chianta in Dion. -->
+		<!-- Scepter of flame which can be obtained from a Breka orc chief. Take it along with 4 other tribes' scepters and go see Gandi Chief Chianta. -->
 		<set name="icon" val="icon.weapon_buzdygan_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -193,7 +193,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3212" name="Scepter of Enku" type="EtcItem">
-		<!-- The flame scepter received from the Enku Orc Chief. Take this, along with the remaining 4 scepters, to Gandi Chief Chianta in Dion. -->
+		<!-- The flame scepter received from the Enku orc chief. Take this, along with the remaining 4 scepters, to Gandi Chief Chianta. -->
 		<set name="icon" val="icon.weapon_buzdygan_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -209,7 +209,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3213" name="Scepter of Vuku" type="EtcItem">
-		<!-- The flame scepter received from the Vuku Orc Chief. Take this, along with the remaining 4 scepters, to Gandi Chief Chianta in Dion. -->
+		<!-- The flame scepter received from the Vuku orc chief. Take this, along with the remaining 4 scepters, to Gandi Chief Chianta. -->
 		<set name="icon" val="icon.weapon_buzdygan_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -225,7 +225,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3214" name="Scepter of Turek" type="EtcItem">
-		<!-- The flame scepter received from the Turek Orc Chief. Take this, along with the remaining 4 scepters, to Gandi Chief Chianta in Dion. -->
+		<!-- The flame scepter received from the Turek orc chief. Take this, along with the remaining 4 scepters, to Gandi Chief Chianta. -->
 		<set name="icon" val="icon.weapon_buzdygan_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -241,7 +241,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3215" name="Scepter of Tunath" type="EtcItem">
-		<!-- The flame scepter received from the Lennunt Orc Chief. Take this, along with the remaining 4 scepters, to Gandi Chief Chianta in Dion. -->
+		<!-- The flame scepter received from the Lennunt orc chief. Take this, along with the remaining 4 scepters, to Gandi Chief Chianta. -->
 		<set name="icon" val="icon.weapon_buzdygan_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -256,7 +256,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3216" name="Chianta's 1st Order" type="EtcItem">
+	<item id="3216" name="Chianta's 2nd Order" type="EtcItem">
 		<!-- Gandi Chief Chianta's orders. The instructions are to come back for further orders after reaching level 38. -->
 		<set name="icon" val="icon.etc_letter_blue_i00" />
 		<set name="immediate_effect" val="true" />
@@ -272,8 +272,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3217" name="Chianta's 1st Order" type="EtcItem">
-		<!-- Gandi Chief Chianta's orders. The instructions are to bring back 20 each of Timak and Tamlin Orc heads. You can find the former at Timak Orc Barracks and the latter near Hunters Village. -->
+	<item id="3217" name="Chianta's 3rd Order" type="EtcItem">
+		<!-- Gandi Chief Chianta's orders. The instructions are to bring back 20 each of Timak and Tamlin Orc heads. -->
 		<set name="icon" val="icon.etc_letter_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -289,7 +289,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3218" name="Tamlin Orc Head" type="EtcItem">
-		<!-- The head of a Tamlin Orc cut off after being slain. Collect 20 of these and take them to Gandi Chief Chianta in Dion. -->
+		<!-- The head of a Tamlin Orc cut off after being slain. Collect 20 of these and take them to Gandi Chief Chianta. -->
 		<set name="icon" val="icon.etc_skull_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -305,7 +305,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3219" name="Timak Orc Head" type="EtcItem">
-		<!-- The head of a Timak Orc, cut off after being slain. Collect 20 of these and take them to Gandi Chief Chianta in Dion. -->
+		<!-- The head of a Timak orc, cut off after being slain. Collect 20 of these and take them to Gandi Chief Chianta. -->
 		<set name="icon" val="icon.etc_skull_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -337,7 +337,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3221" name="Pashika's Head" type="EtcItem">
-		<!-- Kill Pashika, son of Voltar, cut his head off and show it to Breka Chief Voltar at Breka's Stronghold. -->
+		<!-- Kill Pashika, son of Voltar, cut his head off and show it to Breka Chief Voltar. -->
 		<set name="icon" val="icon.etc_skull_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -353,7 +353,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3222" name="Vultus' Head" type="EtcItem">
-		<!-- Kill Vultus, son of Voltar, cut his head off and show it to Breka Chief Voltar at Breka's Stronghold. -->
+		<!-- Kill Vultus, son of Voltar, cut his head off and show it to Breka Chief Voltar. -->
 		<set name="icon" val="icon.etc_skull_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -385,7 +385,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3224" name="Enku Overlord Head" type="EtcItem">
-		<!-- The head of an Enku Overlord, cut off after being slain. Show this to Enku Chief Kepra at the south-east part of the Plains of Dion. -->
+		<!-- The head of an Enku overlord, cut off after being slain. Show this to Enku Chief Kepra. -->
 		<set name="icon" val="icon.etc_skull_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -449,7 +449,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3228" name="Manakia's Letter" type="EtcItem">
-		<!-- Letter of Priest Manakia of the Orc Guild of Giran. Take it to Breka Orc Chief. -->
+		<!-- Letter of Priest Manakia. Take it to Breka orc chief. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -465,7 +465,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3229" name="Manakia's Letter" type="EtcItem">
-		<!-- Letter of Priest Manakia of the Orc Guild of Giran. Take it to Enku Orc Chief. -->
+		<!-- Priest Manakia's letter. Take this and go to the Enku Orc Chief. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -609,7 +609,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3238" name="Mark of Prosperity" type="EtcItem">
-		<!-- Mark given to those who have passed the Testimony of Prosperity. Class transfer related item. -->
+		<!-- Mark given to those who have passed the Testimony of Prosperity. Occupation change related item. -->
 		<set name="icon" val="icon.etc_coins_gold_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -624,7 +624,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3239" name="Ring of Trials I" type="EtcItem">
+	<item id="3239" name="1st Ring of Trials" type="EtcItem">
 		<!-- Ring given to those Dwarves attempting the Testimony of Prosperity. Find the 4 proofs of prosperity. -->
 		<set name="icon" val="icon.accessary_ring_of_assistance_i00" />
 		<set name="immediate_effect" val="true" />
@@ -640,7 +640,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3240" name="Ring of Trials II" type="EtcItem">
+	<item id="3240" name="2nd Ring of Trials" type="EtcItem">
 		<!-- Ring given to those Dwarves attempting the Testimony of Prosperity. Find Maphr's tablet, which contains the ultimate secrets of geometry. -->
 		<set name="icon" val="icon.accessary_aquastone_ring_i00" />
 		<set name="immediate_effect" val="true" />
@@ -752,8 +752,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3247" name="Lockirin's Notice I" type="EtcItem">
-		<!-- Notice that guild contributions are due. Take this to Elder Spiron of the Elder Council of Dwarven Village. -->
+	<item id="3247" name="Lockirin's Notice" type="EtcItem">
+		<!-- Notice that guild contributions are due. Take this to Golden Wheel's Spiron. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -768,8 +768,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3248" name="Lockirin's Notice II" type="EtcItem">
-		<!-- Notice that guild contributions are due. Take this to Elder Balanki of the Elder Council of Dwarven Village. -->
+	<item id="3248" name="Lockirin's Notice" type="EtcItem">
+		<!-- Notice that guild contributions are due. Take this to Silver Scale's Balanki. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -784,8 +784,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3249" name="Lockirin's Notice III" type="EtcItem">
-		<!-- Notice that guild contributions are due. Take this to Elder Keef of the Elder Council of Dwarven Village. -->
+	<item id="3249" name="Lockirin's Notice" type="EtcItem">
+		<!-- Notice that guild contributions are due. Take this to Bronze Key's Keef. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -800,8 +800,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3250" name="Lockirin's Notice IV" type="EtcItem">
-		<!-- Notice that guild contributions are due. Take this to Elder Filaur of the Elder Council of Dwarven Village. -->
+	<item id="3250" name="Lockirin's Notice" type="EtcItem">
+		<!-- Notice that guild contributions are due. Take this to Filaur of the Grey Pillar. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -816,8 +816,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3251" name="Lockirin's Notice V" type="EtcItem">
-		<!-- Notice that guild contributions are due. Take this to Elder Arin of the Elder Council of Dwarven Village. -->
+	<item id="3251" name="Lockirin's Notice" type="EtcItem">
+		<!-- Notice that guild contributions are due. Take this to Black Anvil's Arin. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -833,7 +833,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3252" name="Contribution of Shari" type="EtcItem">
-		<!-- Trader Shari's guild contribution. Take this to Elder Spiron of the Elder Council of Dwarven Village. -->
+		<!-- Trader Shari's guild contribution. Take this to Golden Wheel's Spiron. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -849,7 +849,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3253" name="Contribution of Mion" type="EtcItem">
-		<!-- Trader Mion's guild contribution. Take this to Elder Balanki of the Elder Council of Dwarven Village. -->
+		<!-- Trader Mion's guild contribution. Take this to Silver Scale's Balanki. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -865,7 +865,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3254" name="Contribution of Maryse" type="EtcItem">
-		<!-- Trader Maryse Redbonnet's guild contribution. Take this to Elder Balanki of the Elder Council of Dwarven Village. -->
+		<!-- Maryse Redbonnet's guild contribution. Take this to Silver Scale's Balanki. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -897,7 +897,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3256" name="Contribution of Toma" type="EtcItem">
-		<!-- Trader Master Toma's guild contribution. Take this to Elder Arin of the Elder Council of Dwarven Village. -->
+		<!-- Master Toma's guild contribution. Take this to Black Anvil's Arin. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -913,7 +913,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3257" name="Receipt of Bolter" type="EtcItem">
-		<!-- Miner Bolter's receipt. Take this to Elder Filaur of the Elder Council of Dwarven Village. -->
+		<!-- Miner Bolter's contribution receipt. Take this to Black Anvil's Arin to confirm if Miner Bolter Has already submitted his contribution. -->
 		<set name="icon" val="icon.etc_ticket_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -928,8 +928,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3258" name="Receipt of Contribution I" type="EtcItem">
-		<!-- The contribution receipt received from Elder Spiron. Collect 5 receipts from various guilds and take them to First Elder Lockirin at the Hall of Elders of Dwarven Village. -->
+	<item id="3258" name="Receipt of Contribution" type="EtcItem">
+		<!-- The contribution receipt received from Golden Wheel's Spiron. Collect 5 receipts and take them to Lockirin of the Iron Gate. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -944,8 +944,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3259" name="Receipt of Contribution II" type="EtcItem">
-		<!-- The contribution receipt received from Elder Balanki. Collect 5 receipts from various guilds and take them to First Elder Lockirin at the Hall of Elders of Dwarven Village. -->
+	<item id="3259" name="Receipt of Contribution" type="EtcItem">
+		<!-- The contribution receipt received from Silver Scale's Balanki. Collect 5 receipts and take them to Lockirin of the Iron Gate. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -960,8 +960,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3260" name="Receipt of Contribution III" type="EtcItem">
-		<!-- The contribution receipt received from Elder Keef. Collect 5 receipts from various guilds and take them to First Elder Lockirin at the Hall of Elders of Dwarven Village. -->
+	<item id="3260" name="Receipt of Contribution" type="EtcItem">
+		<!-- The contribution receipt received from Bronze Key's Keef. Collect 5 receipts and take them to Lockirin of the Iron Gate. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -976,8 +976,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3261" name="Receipt of Contribution IV" type="EtcItem">
-		<!-- The contribution receipt received from Elder Filaur. Collect 5 receipts from various guilds and take them to First Elder Lockirin at the Hall of Elders of Dwarven Village. -->
+	<item id="3261" name="Receipt of Contribution" type="EtcItem">
+		<!-- Contribution receipt received from Filaur of the Grey Pillar. Collect 5 receipts and take them to Lockirin of the Iron Gate. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -992,8 +992,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3262" name="Receipt of Contribution V" type="EtcItem">
-		<!-- The contribution receipt received from Elder Arin. Collect 5 receipts from various guilds and take them to First Elder Lockirin at the Hall of Elders of Dwarven Village. -->
+	<item id="3262" name="Receipt of Contribution" type="EtcItem">
+		<!-- The contribution receipt received from Black Anvil's Arin. Collect 5 receipts and take them to Lockirin of the Iron Gate. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1009,7 +1009,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3263" name="Procuration of Torocco" type="EtcItem">
-		<!-- The bearer of this procuration hereby agrees to make contributions on behalf of Torocco. Take this to Elder Keef of the Elder Council of Dwarven Village. -->
+		<!-- The bearer of this procuration hereby agrees to make contributions on behalf of Torocco. Take this to Bronze Key's Keef. -->
 		<set name="icon" val="icon.etc_letter_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1041,7 +1041,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3265" name="Mandragora Petal" type="EtcItem">
-		<!-- Mandragora Petal. Collect 20 of these and take them to Guard Bright at the eastern part of Dion. -->
+		<!-- The petals of a mandragora flower. Collect 20 of these and take them to Guard Bright. -->
 		<set name="icon" val="icon.etc_herb_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1057,7 +1057,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3266" name="Crimson Moss" type="EtcItem">
-		<!-- Crimson Moss obtained from giant red ants. Collect 10 of these and take them to Guard Bright at the eastern part of Dion. -->
+		<!-- Crimson Moss obtained from giant red ants. Collect 10 of these and take them to Guard Bright. -->
 		<set name="icon" val="icon.etc_powder_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1105,7 +1105,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3269" name="Parman's Letter" type="EtcItem">
-		<!-- Warehouse Keeper Parman's letter. Bring it to Maestro Nikola. You can find him near Cruma Tower. -->
+		<!-- Warehouse Keeper Parman's letter. Take this to Maestro Nikola of the Cruma Tower. -->
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1121,7 +1121,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3270" name="Clay Dough" type="EtcItem">
-		<!-- Piece of clay that Maestro Nikola has given when you met near Cruma Tower. Use this to make a copy of the keyhole from the Lesser Giant's box. -->
+		<!-- Piece of clay that Maestro Nikola Has given. Use this to make a copy of the keyhole from the Lesser Giant's box. -->
 		<set name="icon" val="icon.etc_powder_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1137,7 +1137,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3271" name="Pattern of Keyhole" type="EtcItem">
-		<!-- The keyhole pattern made from clay dough. Take this to Maestro Nikola. You can find him near Cruma Tower. -->
+		<!-- The keyhole pattern made from clay dough. Take this to Maestro Nikola. -->
 		<set name="icon" val="icon.etc_plate_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1153,7 +1153,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3272" name="Nikola's List" type="EtcItem">
-		<!-- 20 Stakato Shells obtained by slaying Stakato in Cruma Marshlands, 10 Toad Lord Sacs obtained by slaying a Toad Lord in Cruma Marshlands, 10 Spider Thorns obtained by slaying a Marsh Spider in Cruma Marshlands and 10 D-grade Crystals. -->
+		<!-- 20 Stakato Shells, 10 Toad Lord Sacs, 10 Spider Thorns and 10 D-grade Crystals. -->
 		<set name="icon" val="icon.etc_piece_of_paper_gray_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1217,7 +1217,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3276" name="Mark of Champion" type="EtcItem">
-		<!-- Mark given to those who have passed the Test of the Champion. Item for class transfer. -->
+		<!-- Mark given to those who have passed the Test of the Champion. Item for occupational change. -->
 		<set name="icon" val="icon.etc_jewel_gold_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1280,8 +1280,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3280" name="Ascalon's 1st Letter" type="EtcItem">
-		<!-- Veteran Ascalon's letter. Take this to Dye Merchant Groot of Town of Giran. -->
+	<item id="3280" name="Ascalon's 2nd Letter" type="EtcItem">
+		<!-- Veteran Ascalon's letter. Take this to Trader Groot of Town of Giran. -->
 		<set name="icon" val="icon.etc_scroll_gray_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1297,7 +1297,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3281" name="White Rose Insignia" type="EtcItem">
-		<!-- Insignia given by Dye Merchant Groot. It was formerly worn by the medics of the iron rose. Aid Dye Merchant Groot in his material gathering. -->
+		<!-- Insignia given by Trader Groot. It was formerly worn by the medics of the iron rose. Aid Trader Groot in his material gathering. -->
 		<set name="icon" val="icon.shield_knight_shield_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1328,7 +1328,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3283" name="Ascalon's 1st Letter" type="EtcItem">
+	<item id="3283" name="Ascalon's 3rd Letter" type="EtcItem">
 		<!-- Veteran Ascalon's letter. Take this to Captain Mouen of the Town of Oren. -->
 		<set name="icon" val="icon.etc_scroll_gray_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1345,7 +1345,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3284" name="Mouen's 1st Order" type="EtcItem">
-		<!-- Orders to collect 10 heads of Road Scavengers or Road Collectors in Death Pass. -->
+		<!-- Bring me 100 heads of Road Scavengers or Road Collectors. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1360,8 +1360,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3285" name="Mouen's 1st Order" type="EtcItem">
-		<!-- Orders to destroy the Leto Lizardmen on the Plains of the Lizardmen and bring back 10 of their fangs. -->
+	<item id="3285" name="Mouen's 2nd Order" type="EtcItem">
+		<!-- Destroy the Leto Lizardmen and bring back 100 of their fangs. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1393,7 +1393,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3287" name="Harpy's Egg" type="EtcItem">
-		<!-- Egg obtained after slaying a Harpy. Collect 30 of these and take them to Dye Merchant Groot of Town of Giran. -->
+		<!-- Egg obtained after slaying a harpy. Collect 30 of these and take them to Trader Groot of Town of Giran. -->
 		<set name="icon" val="icon.etc_bead_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1409,7 +1409,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3288" name="Medusa's Venom" type="EtcItem">
-		<!-- The venom obtained after slaying a Medusa. Collect 30 of these and take them to Dye Merchant Groot of Town of Giran. -->
+		<!-- The venom obtained after slaying a medusa. Collect 30 of these and take them to Trader Groot of Town of Giran. -->
 		<set name="icon" val="icon.etc_reagent_green_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1425,7 +1425,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3289" name="Windsus Bile" type="EtcItem">
-		<!-- The bile obtained after slaying a Windsus. Collect 30 of these and take them to Dye Merchant Groot of Town of Giran. -->
+		<!-- The bile obtained after slaying a Windsus. Collect 30 of these and take them to Trader Groot of Town of Giran. -->
 		<set name="icon" val="icon.etc_potion_scarlet_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1441,7 +1441,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3290" name="Bloody Axe Head" type="EtcItem">
-		<!-- The head of a Bloody Axe's Escort. Collect 10 of these and return to Mason in the Town of Dion. -->
+		<!-- The head of a Bloody Axe Elite. Collect 10 of these and return to Mason in the Town of Dion. -->
 		<set name="icon" val="icon.etc_skull_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1473,7 +1473,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3292" name="Leto Lizardman Fang" type="EtcItem">
-		<!-- Fang from a slain Leto Lizardman from the Plains of the Lizardmen. Collect 10 of these and take them to Captain Mouen. -->
+		<!-- Fang from a slain Leto lizardman. Collect 10 of these and take them to Captain Mouen. -->
 		<set name="icon" val="icon.etc_fang_gray_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1489,7 +1489,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3293" name="Mark of Sagittarius" type="EtcItem">
-		<!-- Mark given to those who have passed the Test of the Sagittarius. Class transfer related item. -->
+		<!-- Mark given to those who have passed the Test of the Sagittarius. Occupation change related item. -->
 		<set name="icon" val="icon.weapon_wooden_arrow_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1521,7 +1521,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3295" name="Hamil's 1st Letter" type="EtcItem">
-		<!-- Deliver this letter to Sir Aron Tanford who can be found near the Ol Mahum Checkpoint at the southern part of the Wastelands. -->
+		<!-- Take this letter and meet with Sir Aron Tanford of the Southern Wastelands. -->
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1536,8 +1536,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3296" name="Hamil's 1st Letter" type="EtcItem">
-		<!-- The letter of Sagittarius Hamil to Prefect Vokian of Town of Giran. -->
+	<item id="3296" name="Hamil's 2nd Letter" type="EtcItem">
+		<!-- Take this letter and go to Prefect Vokian of Town of Giran. -->
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1552,8 +1552,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3297" name="Hamil's 1st Letter" type="EtcItem">
-		<!-- The letter of Sagittarius Hamil to Gauen of the Ivory Tower region. -->
+	<item id="3297" name="Hamil's 3rd Letter" type="EtcItem">
+		<!-- Take this letter and go to Gauen of the Ivory Tower. -->
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1585,7 +1585,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3299" name="Hunter's 2nd Rune" type="EtcItem">
-		<!-- Rune obtained from Breka Orcs. Collect 10 of these and take them, along with the Snake Amulet, to Prefect Vokian of the Orc Guild of Giran. -->
+		<!-- Rune obtained from Breka Orc Overlords or Shamans. Collect 10 of these and take them, along with the snake talisman, to Prefect Vokian. -->
 		<set name="icon" val="icon.etc_mold_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />

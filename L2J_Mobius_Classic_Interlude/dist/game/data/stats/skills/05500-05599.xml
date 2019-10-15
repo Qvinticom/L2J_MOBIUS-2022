@@ -37,7 +37,7 @@
 		</effects>
 	</skill>
 	<skill id="5501" toLevel="1" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -61,14 +61,16 @@
 		<affectScope>FAN</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 			<effect name="TargetCancel">
 				<chance>80</chance>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="5502" toLevel="1" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -89,7 +91,9 @@
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 			<effect name="TargetCancel">
 				<chance>80</chance>
 			</effect>
@@ -956,7 +960,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5535" toLevel="1" name="Little Angel Agathion Cute Trick">
-		<!-- See Agathion's cute trick. -->
+		<!-- See the summoned spirit perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
@@ -971,7 +975,7 @@
 		</conditions>
 	</skill>
 	<skill id="5536" toLevel="1" name="Little Devil Agathion Cute Trick">
-		<!-- See Agathion's cute trick. -->
+		<!-- See the summoned spirit perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
@@ -986,7 +990,7 @@
 		</conditions>
 	</skill>
 	<skill id="5537" toLevel="1" name="Rudolph Cuteness Trick">
-		<!-- See Agathion's cute trick. -->
+		<!-- See the summoned spirit perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
@@ -1016,7 +1020,7 @@
 		</conditions>
 	</skill>
 	<skill id="5539" toLevel="1" name="Little Angel Agathion Special Skill: Mysterious Power">
-		<!-- A mysterious power that no one knows. Use with caution! -->
+		<!-- Mysterious power with no explanation. Be careful when using! -->
 		<icon>icon.skill_agathion_special</icon>
 		<abnormalLvl>0</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
@@ -1061,7 +1065,7 @@
 		</effects>
 	</skill>
 	<skill id="5541" toLevel="1" name="Little Angel Agathion Special Skill: Blessed Resurrection">
-		<!-- Allows the use of Blessed Resurrection. -->
+		<!-- Blessed Resurrection is available. -->
 		<icon>icon.skill_agathion_special</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<castRange>400</castRange>
@@ -1101,7 +1105,7 @@
 		</conditions>
 	</skill>
 	<skill id="5543" toLevel="1" name="Little Devil Agathion Special Skill: Mysterious Power">
-		<!-- A mysterious power that no one knows. Use with caution! -->
+		<!-- Mysterious power with no explanation. Be careful when using! -->
 		<icon>icon.skill_agathion_special</icon>
 		<abnormalLvl>0</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
@@ -1146,7 +1150,7 @@
 		</effects>
 	</skill>
 	<skill id="5545" toLevel="1" name="Little Devil Agathion Special Skill: Blessed Resurrection">
-		<!-- Allows the use of Blessed Resurrection. -->
+		<!-- Blessed Resurrection is available. -->
 		<icon>icon.skill_agathion_special</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<castRange>400</castRange>
@@ -1225,7 +1229,7 @@
 		</effects>
 	</skill>
 	<skill id="5548" toLevel="4" name="Critical Momentum Attack">
-		<!-- Absorbs Soul after Critical. -->
+		<!-- Absorbs Soul after Critical Hit. -->
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<magicLvl>
 			<value level="1">20</value>
@@ -1288,7 +1292,7 @@
 				<!-- Stun -->
 				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>100</maxAttackerLevel>
+				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>15</chance>
 				<targetType>TARGET</targetType>
@@ -1313,7 +1317,7 @@
 		</effects>
 	</skill>
 	<skill id="5551" toLevel="12" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -1348,7 +1352,9 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 			<effect name="TargetCancel">
 				<chance>80</chance>
 			</effect>
@@ -1464,7 +1470,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5555" toLevel="12" name="Enhanced Silence Resistance">
+	<skill id="5555" toLevel="12" name="Weakened Silence Resistance">
 		<magicLvl>
 			<value level="1">10</value>
 			<value level="2">20</value>
@@ -1501,7 +1507,7 @@
 		</effects>
 	</skill>
 	<skill id="5556" toLevel="1" name="Protection Power">
-		<!-- M. Def. and Attribute Resistance are momentarily increased. -->
+		<!-- M. Def. and Attribute Resistance are maximized. -->
 		<icon>icon.skill0755</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -1549,7 +1555,7 @@
 		</effects>
 	</skill>
 	<skill id="5557" toLevel="1" name="Blessing of Resistance">
-		<!-- M. Def. and Attribute Resistance are momentarily increased. -->
+		<!-- M. Def. and Attribute Resistance are maximized. -->
 		<icon>icon.skill0755</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -1653,7 +1659,7 @@
 				<!-- Seed of Revenge -->
 				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>100</maxAttackerLevel>
+				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>
 					<value level="1">10</value>
 					<value level="2">10</value>
@@ -1719,7 +1725,7 @@
 				<!-- Spirit of Phoenix -->
 				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>100</maxAttackerLevel>
+				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>
 					<value level="1">10</value>
 					<value level="2">10</value>
@@ -1793,7 +1799,7 @@
 				<!-- Eva's Will -->
 				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>100</maxAttackerLevel>
+				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>
 					<value level="1">10</value>
 					<value level="2">10</value>
@@ -1859,7 +1865,7 @@
 				<!-- Pain of Shillien -->
 				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>100</maxAttackerLevel>
+				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>
 					<value level="1">10</value>
 					<value level="2">10</value>
@@ -1937,7 +1943,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="5567" toLevel="1" name="Fire Armor">
+	<skill id="5567" toLevel="1" name="Flame Armor">
 		<icon>icon.skill1492</icon>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
@@ -2279,7 +2285,7 @@
 		</effects>
 	</skill>
 	<skill id="5581" toLevel="1" name="Divine Beast Stun Attack">
-		<!-- Damages and stuns the target simultaneously. Over-hit. Power 704. -->
+		<!-- Deals damage and shock simultaneously. Momentarily inflicts Stun on the enemy. Over-hit is possible. 704 power. -->
 		<icon>icon.skill0100</icon>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
@@ -2301,7 +2307,9 @@
 				<power>704</power>
 				<overHit>true</overHit>
 			</effect>
-			<effect name="BlockActions" /> <!-- using 1 second due abnormal don't have abnormal time -->
+			<effect name="BlockActions"> <!-- using 1 second due abnormal don't have abnormal time -->
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="5582" toLevel="1" name="Divine Beast Fire Breath">
@@ -2527,7 +2535,7 @@
 		</effects>
 	</skill>
 	<skill id="5588" toLevel="3" name="Pet Focus">
-		<!-- Momentarily increases critical P. Atk. rate. Effect $s1. -->
+		<!-- Momentarily increase the probability of Critical P. Atk. Effect $s1. -->
 		<icon>icon.skill1077</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2629,7 +2637,7 @@
 		</effects>
 	</skill>
 	<skill id="5590" toLevel="12" name="Pet Battle Heal">
-		<!-- Quickly restores HP. Power $s1. -->
+		<!-- Quickly recovers HP. Power $s1. -->
 		<icon>icon.skill1218</icon>
 		<castRange>600</castRange>
 		<effectPoint>
@@ -2750,7 +2758,7 @@
 		</effects>
 	</skill>
 	<skill id="5592" toLevel="16" name="Lightning Barrier">
-		<!-- Momentarily stiffened. -->
+		<!-- Momentarily unable to move. -->
 		<icon>icon.skill1515</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -2807,7 +2815,9 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="5593" toLevel="1" name="Vampiric Mana Burn">
@@ -2916,7 +2926,9 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5598" toLevel="12" name="Petrification Resistance">
+	<skill id="5598" toLevel="12" name="Petrifaction Attack Resistance">
+		<!-- Slightly resistant to Petrifaction. -->
+		<icon>icon.skill11359</icon>
 		<magicLvl>
 			<value level="1">10</value>
 			<value level="2">20</value>
@@ -2952,7 +2964,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5599" toLevel="12" name="Stun Resistance">
+	<skill id="5599" toLevel="12" name="Stun Attack Resistance">
+		<!-- Slightly resistant to Sleep. -->
 		<magicLvl>
 			<value level="1">10</value>
 			<value level="2">20</value>

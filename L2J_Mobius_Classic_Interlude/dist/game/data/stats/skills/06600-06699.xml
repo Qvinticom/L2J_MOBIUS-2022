@@ -1849,7 +1849,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="6618" toLevel="7" name="Maguen Strike">
-		<!-- For $s1, decreases Speed by $s2. -->
+		<!-- Speed. Is decreased by $s2 for $s1. -->
 		<icon>icon.skill1160</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -1904,7 +1904,7 @@
 		</effects>
 	</skill>
 	<skill id="6619" toLevel="7" name="Maguen Power Strike">
-		<!-- For $s1, decreases Speed by $s2. -->
+		<!-- Speed. Is decreased by $s2 for $s1. -->
 		<icon>icon.skill1160</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -2053,7 +2053,7 @@
 		</effects>
 	</skill>
 	<skill id="6622" toLevel="1" name="Stun">
-		<!-- Stunned and unable to move for 20 seconds. The chance of receiving Critical Damage + 50%. -->
+		<!-- Stunned for 20 seconds and momentarily immobile with a boosted chance by 50% for getting hit by critical damage. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -2097,7 +2097,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6624" toLevel="1" name="Stun">
-		<!-- Stunned and unable to move for 9 seconds. The chance of receiving Critical Damage + 50%. -->
+		<!-- Stunned for 9 seconds and momentarily immobile. Your chance of getting hit by Critical Damage is increased by 50%. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -2223,7 +2223,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="6631" toLevel="1" name="Energy of Strength">
+	<skill id="6631" toLevel="1" name="Energy of Power">
 		<!-- Increases P. Atk. temporarily. Effect 3. -->
 		<icon>icon.etc_herb_red_i00</icon>
 		<abnormalInstant>true</abnormalInstant>
@@ -2374,7 +2374,7 @@
 		</effects>
 	</skill>
 	<skill id="6637" toLevel="1" name="Energy of HP Drain">
-		<!-- Provides the ability to recover HP temporarily by damaging the enemy with a certain probability. Effect 4. -->
+		<!-- Uses damage inflicted upon the enemy to temporarily restore HP with a certain probability. Effect 4. -->
 		<icon>icon.skill6637</icon>
 		<abnormalInstant>true</abnormalInstant>
 		<abnormalLvl>4</abnormalLvl>
@@ -2405,7 +2405,7 @@
 		</effects>
 	</skill>
 	<skill id="6638" toLevel="1" name="Mysterious Aura">
-		<!-- The target's head is enlarged. -->
+		<!-- You've got a big head. -->
 		<icon>icon.skill2513</icon>
 		<abnormalInstant>true</abnormalInstant>
 		<abnormalLvl>1</abnormalLvl>
@@ -2465,6 +2465,33 @@
 			<effect name="CriticalDamage">
 				<amount>35</amount>
 				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6640" toLevel="1" name="Vitality Replenishing Aura">
+		<!-- Recovers Vitality upon acquiring XP. -->
+		<icon>icon.skilltransform4</icon>
+		<abnormalInstant>true</abnormalInstant>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>VP_UP</abnormalType>
+		<abnormalVisualEffect>VP_UP</abnormalVisualEffect>
+		<castRange>2000</castRange>
+		<effectPoint>100</effectPoint>
+		<effectRange>2000</effectRange>
+		<isMagic>4</isMagic> <!-- Item Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>2000</reuseDelay>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitTime>100</hitTime>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="VitalityPointsRate">
+				<amount>-10</amount>
 			</effect>
 		</effects>
 	</skill>
@@ -2588,6 +2615,40 @@
 		<castRange>2000</castRange>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="6649" toLevel="1" name="Transform Treykan">
+		<!-- Transforms you into a fearsome Treykan. -->
+		<icon>icon.skilltransform1</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effectPoint>1</effectPoint>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<mpConsume>31</mpConsume>
+		<staticReuse>true</staticReuse>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<effectRange>2000</effectRange>
+		<irreplacableBuff>true</irreplacableBuff>
+		<hitTime>2500</hitTime>
+		<castRange>2000</castRange>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>126</transformId>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>126</transformationId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="6650" toLevel="1" name="Tacrakahn's Alienation">
 		<!-- All actions are sealed by Tacrakahn's special ability. Impossible to dispel. -->
@@ -2742,9 +2803,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="BlockActions">
-				<allowedSkills>35016</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 			<effect name="DamOverTime">
 				<power>115</power>
 				<ticks>5</ticks>
@@ -2810,7 +2869,7 @@
 		</effects>
 	</skill>
 	<skill id="6667" toLevel="1" name="Feral Wind Walk">
-		<!-- For 5 minutes, Speed + 33. -->
+		<!-- Increases Speed. by 33 for 5 minutes. -->
 		<icon>icon.skill1204</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>315</abnormalTime>
@@ -2837,7 +2896,7 @@
 		</effects>
 	</skill>
 	<skill id="6668" toLevel="1" name="Feral Death Whisper">
-		<!-- Increases critical attack effect by 35% for 5 minutes. -->
+		<!-- Increases critical P. Atk. by 35% for 5 minutes. -->
 		<icon>icon.skill1242</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>315</abnormalTime>
@@ -2891,7 +2950,7 @@
 		</effects>
 	</skill>
 	<skill id="6670" toLevel="1" name="Feral Vampiric Rage">
-		<!-- For 5 minutes, recovers as HP 9% of the physical damage inflicted on the enemy with a certain probability. -->
+		<!-- For 5 minutes, 9% of the physical damage inflicted on the enemy is recovered as HP with a certain probability. -->
 		<icon>icon.skill1268</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>315</abnormalTime>
@@ -2918,7 +2977,7 @@
 		</effects>
 	</skill>
 	<skill id="6671" toLevel="1" name="Feral Berserker Spirit">
-		<!-- P. Def. decreases momentarily. by 8%, M. Def. by 16%, and evasion by 4, and increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and Speed by 8 for 5 minutes. -->
+		<!-- P. Def. decreases momentarily. by 8%, M. Def. by 16%, Evasion by 4 and increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and Speed. by 8 for 5 minutes. -->
 		<icon>icon.skill1062</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>315</abnormalTime>
@@ -2976,7 +3035,7 @@
 		<!-- Increases Shield defense rate by 5% for 30 minutes. -->
 		<icon>icon.skill1243</icon>
 		<abnormalLvl>6</abnormalLvl>
-		<abnormalTime>315</abnormalTime>
+		<abnormalTime>1800</abnormalTime>
 		<abnormalType>SHIELD_PROB_UP</abnormalType>
 		<castRange>400</castRange>
 		<effectPoint>549</effectPoint>
@@ -3075,7 +3134,7 @@
 		</effects>
 	</skill>
 	<skill id="6677" toLevel="1" name="Hold">
-		<!-- Inflicted with Hold and unable to move. -->
+		<!-- Afflicted with Hold and unable to move temporarily. -->
 		<icon>icon.skill4047</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -3143,7 +3202,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6681" toLevel="1" name="Maguen Wind Walk">
-		<!-- For 20 minutes, Speed + 40. -->
+		<!-- Speed. increases by 40 for 20 minutes. -->
 		<icon>icon.skill1204</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
@@ -3171,7 +3230,7 @@
 		</effects>
 	</skill>
 	<skill id="6682" toLevel="1" name="Elite Maguen Wind Walk">
-		<!-- For 20 minutes, Speed + 45. -->
+		<!-- Speed. increases by 45 for 20 minutes. -->
 		<icon>icon.skill1204</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
@@ -3243,6 +3302,28 @@
 				<x>-178244</x>
 				<y>153389</y>
 				<z>2472</z>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6685" toLevel="1" name="Santa's Gift">
+		<coolTime>1000</coolTime>
+		<hitTime>2700</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>55</magicLvl>
+		<operateType>A1</operateType>
+		<reuseDelay>1800000</reuseDelay>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpNeedAgathion" />
+		</conditions>
+		<effects>
+			<effect name="Restoration">
+				<itemId>17003</itemId>
+				<itemCount>1</itemCount>
 			</effect>
 		</effects>
 	</skill>
@@ -3336,7 +3417,7 @@
 		</effects>
 	</skill>
 	<skill id="6690" toLevel="1" name="Hold">
-		<!-- Inflicted with Hold and unable to move. -->
+		<!-- Afflicted with Hold and unable to move temporarily. -->
 		<icon>icon.skill1201</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -3534,12 +3615,12 @@
 				<power>45257</power>
 			</effect>
 			<effect name="CallSkill">
-				<skillId>6698</skillId> <!-- Freeze -->
+				<skillId>6698</skillId> <!-- Freeze - Eternal Ice -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="6698" toLevel="1" name="Freeze">
+	<skill id="6698" toLevel="1" name="Freeze - Eternal Ice">
 		<!-- Actions prohibited for 15 seconds. HP decreases by 115 and MP decreases by 5% per second. -->
 		<icon>icon.skill6274</icon>
 		<abnormalLvl>3</abnormalLvl>
@@ -3579,7 +3660,7 @@
 		</endEffects>
 	</skill>
 	<skill id="6699" toLevel="1" name="Ball Trapping Gnosian Agathion Cute Trick">
-		<!-- See Agathion's cute trick. -->
+		<!-- See the summoned spirit perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>

@@ -15,7 +15,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4302" toLevel="1" name="Race">
-		<!-- Fairies -->
+		<!-- Fairy -->
 		<icon>icon.skill4302</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -159,7 +159,7 @@
 		</effects>
 	</skill>
 	<skill id="4315" toLevel="12" name="Hold">
-		<!-- Inflicted with Hold and unable to move. -->
+		<!-- Inflicted with hold and unable to move momentarily. -->
 		<icon>icon.skill1201</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -211,7 +211,7 @@
 			<effect name="Root" />
 		</effects>
 	</skill>
-	<skill id="4316" toLevel="12" name="Drain HP">
+	<skill id="4316" toLevel="12" name="Drain Energy">
 		<affectRange>150</affectRange>
 		<castRange>750</castRange>
 		<effectPoint>-100</effectPoint>
@@ -388,11 +388,13 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="4320" toLevel="12" name="Poison">
-		<!-- HP cut due to Poison. $s1 power. -->
+		<!-- Poisons a target, momentarily decreasing HP. Effect $s1. -->
 		<icon>icon.skill4035</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -499,7 +501,7 @@
 		</effects>
 	</skill>
 	<skill id="4322" toLevel="1" name="Adventurer's Wind Walk">
-		<!-- Speed increases temporarily. Effect 2. -->
+		<!-- Increases movement speed by 33 for 60 minutes. -->
 		<icon>icon.skill1204</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -522,7 +524,7 @@
 		</effects>
 	</skill>
 	<skill id="4323" toLevel="1" name="Adventurer's Shield">
-		<!-- For 60 minutes P. Def. increases by 15% -->
+		<!-- Increases P. Def. by 15% for 60 minutes. -->
 		<icon>icon.skill1040</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -545,7 +547,7 @@
 		</effects>
 	</skill>
 	<skill id="4324" toLevel="1" name="Adventurer's Blessed Body">
-		<!-- For 60 minutes, Max HP increases by 35%. -->
+		<!-- Increases Max HP by 35% for 60 minutes. -->
 		<icon>icon.skill1045</icon>
 		<abnormalLvl>7</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -568,7 +570,7 @@
 		</effects>
 	</skill>
 	<skill id="4325" toLevel="1" name="Adventurer's Vampiric Rage">
-		<!-- For 60 minutes, recovers as HP 9% of the physical damage inflicted on the enemy with a certain probability. -->
+		<!-- For 60 minutes, 9% of the physical damage inflicted on the enemy is recovered as HP with a certain probability. -->
 		<icon>icon.skill1268</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -591,7 +593,7 @@
 		</effects>
 	</skill>
 	<skill id="4326" toLevel="1" name="Adventurer's Regeneration">
-		<!-- For 60 min., HP Recovery Bonus + 20%. -->
+		<!-- Increases HP regeneration bonus by 20% for 60 minutes. -->
 		<icon>icon.skill1044</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -637,7 +639,7 @@
 		</effects>
 	</skill>
 	<skill id="4328" toLevel="1" name="Adventurer's Blessed Soul">
-		<!-- For 60 minutes, Max HP is increased by 35%. -->
+		<!-- Increases Max MP by 35% for 60 minutes. -->
 		<icon>icon.skill1048</icon>
 		<abnormalLvl>7</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -660,7 +662,7 @@
 		</effects>
 	</skill>
 	<skill id="4329" toLevel="1" name="Adventurer's Acumen">
-		<!-- For 60 minutes, Casting Spd. increases by 30% -->
+		<!-- Increases Casting Spd. by 30% for 60 minutes. -->
 		<icon>icon.skill1085</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -683,7 +685,7 @@
 		</effects>
 	</skill>
 	<skill id="4330" toLevel="1" name="Adventurer's Concentration">
-		<!-- For 60 minutes, decreases magic cancel rate by 18. -->
+		<!-- Decreases magic cancel damage by 18 for 60 minutes. -->
 		<icon>icon.skill1078</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -706,7 +708,7 @@
 		</effects>
 	</skill>
 	<skill id="4331" toLevel="1" name="Adventurer's Empower">
-		<!-- For 60 minutes, M. Atk. increases by 55%. -->
+		<!-- Increases M. Atk. by 55% for 60 minutes. -->
 		<icon>icon.skill1059</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -777,7 +779,7 @@
 		</effects>
 	</skill>
 	<skill id="4335" toLevel="1" name="Holy Attack">
-		<!-- Unleashes a holy attack. -->
+		<!-- Inflicts attack of Holy. -->
 		<icon>icon.skill1043</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -808,8 +810,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4337" toLevel="5" name="Holy Attack Resistance">
-		<!-- Resistant to Holy attacks. -->
+	<skill id="4337" toLevel="5" name="Holy Resistance">
+		<!-- Resistant to Holy attack. -->
 		<icon>icon.skill4337</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -905,7 +907,7 @@
 		</effects>
 	</skill>
 	<skill id="4342" toLevel="2" name="Wind Walk">
-		<!-- Increases Speed temporarily. Effect $s1. -->
+		<!-- Momentarily increases movement speed. Effect $s1. -->
 		<icon>icon.skill1204</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -973,7 +975,7 @@
 		</effects>
 	</skill>
 	<skill id="4344" toLevel="3" name="Shield">
-		<!-- Increases defense power temporarily. Effect $s1. -->
+		<!-- P. Def. increases temporarily. Effect $s1. -->
 		<icon>icon.skill1040</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1222,7 +1224,7 @@
 		</effects>
 	</skill>
 	<skill id="4350" toLevel="4" name="Stun Resistance">
-		<!-- Momentarily provides powerful resistance against Stun Attack. Effect $s1. -->
+		<!-- Increases Stun Resistance temporarily. Effect $s1 -->
 		<icon>icon.skill1259</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1387,7 +1389,7 @@
 		</effects>
 	</skill>
 	<skill id="4353" toLevel="6" name="Blessed Shield">
-		<!-- Momentarily increases the probability of shield defense. Effect $s1. -->
+		<!-- Momentarily increases shield defense rate. Effect $s1. -->
 		<icon>icon.skill1243</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1432,7 +1434,7 @@
 		</effects>
 	</skill>
 	<skill id="4354" toLevel="4" name="Vampiric Rage">
-		<!-- Momentarily restores HP using damage inflicted upon the enemy with a certain probability. Effect $s1. -->
+		<!-- Partially restores HP using damage inflicted upon the enemy with a certain probability. Effect $s1. -->
 		<icon>icon.skill1268</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1471,7 +1473,7 @@
 		</effects>
 	</skill>
 	<skill id="4355" toLevel="3" name="Acumen">
-		<!-- Increases Casting Spd. temporarily. Effect $s1. -->
+		<!-- Momentarily increases Casting Spd. Effect $s1. -->
 		<icon>icon.skill1085</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1507,7 +1509,7 @@
 		</effects>
 	</skill>
 	<skill id="4356" toLevel="3" name="Empower">
-		<!-- Increases M. Atk. power temporarily. Effect $s1. -->
+		<!-- M. Atk. increases temporarily. Effect $s1. -->
 		<icon>icon.skill1059</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1576,7 +1578,7 @@
 		</effects>
 	</skill>
 	<skill id="4358" toLevel="3" name="Guidance">
-		<!-- Increases Accuracy temporarily. Effect $s1. -->
+		<!-- Momentarily increases Accuracy. Effect $s1. -->
 		<icon>icon.skill1240</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1612,7 +1614,7 @@
 		</effects>
 	</skill>
 	<skill id="4359" toLevel="3" name="Focus">
-		<!-- Momentarily increases critical P. Atk. rate. Effect $s1. -->
+		<!-- Momentarily increases critical attack rate. Effect $s1. -->
 		<icon>icon.skill1077</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1648,7 +1650,7 @@
 		</effects>
 	</skill>
 	<skill id="4360" toLevel="3" name="Death Whisper">
-		<!-- Momentarily increase the Critical P. Atk. Effect $s1. -->
+		<!-- Momentarily increases critical P. Atk. Effect $s1. -->
 		<icon>icon.skill1242</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2232,7 +2234,7 @@
 		</effects>
 	</skill>
 	<skill id="4379" toLevel="5" name="Spear Resistance">
-		<!-- Spear Resistance -->
+		<!-- Resistant to spear/pole arm attacks. -->
 		<icon>icon.skill4379</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2456,7 +2458,7 @@
 		</effects>
 	</skill>
 	<skill id="4389" toLevel="5" name="Mental Attack Resistance">
-		<!-- Resistant to Mental Derangement -->
+		<!-- Provides resistance against mental attack. -->
 		<icon>icon.skill4389</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2483,7 +2485,7 @@
 		</effects>
 	</skill>
 	<skill id="4391" toLevel="2" name="Wind Walk">
-		<!-- Increases Speed temporarily. Effect $s1. -->
+		<!-- Momentarily increases movement speed. Effect $s1. -->
 		<icon>icon.skill1204</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -2499,7 +2501,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<targetType>SELF</targetType>
+		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="Speed">
@@ -2512,7 +2514,7 @@
 		</effects>
 	</skill>
 	<skill id="4392" toLevel="3" name="Shield">
-		<!-- Increases defense power temporarily. Effect $s1. -->
+		<!-- P. Def. increases temporarily. Effect $s1. -->
 		<icon>icon.skill1040</icon>
 		<abnormalLvl>
 			<value level="1">2</value>

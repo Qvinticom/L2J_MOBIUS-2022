@@ -45,6 +45,7 @@ import org.l2jmobius.gameserver.model.holders.MultisellListHolder;
 import org.l2jmobius.gameserver.model.holders.PreparedMultisellListHolder;
 import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.items.enchant.EnchantItemGroup;
+import org.l2jmobius.gameserver.model.items.type.CrystalType;
 import org.l2jmobius.gameserver.network.serverpackets.MultiSellList;
 
 public class MultisellData implements IXmlReader
@@ -154,6 +155,17 @@ public class MultisellData implements IXmlReader
 										continue;
 									}
 									
+									// Max equipable item grade configuration.
+									final Item item = ItemTable.getInstance().getTemplate(id);
+									if (item != null)
+									{
+										final int itemCrystalId = item.getCrystalType().getId();
+										if ((itemCrystalId > Config.MAX_EQUIPABLE_ITEM_GRADE.getId()) && (itemCrystalId < CrystalType.EVENT.getId()))
+										{
+											continue;
+										}
+									}
+									
 									products.add(product);
 								}
 								else
@@ -239,19 +251,16 @@ public class MultisellData implements IXmlReader
 			return;
 		}
 		
-		if (!template.isNpcAllowed(-1))
+		if (!template.isNpcAllowed(-1) && (((npc != null) && !template.isNpcAllowed(npc.getId())) || ((npc == null) && template.isNpcOnly())))
 		{
-			if ((npc == null) || !template.isNpcAllowed(npc.getId()))
+			if (player.isGM())
 			{
-				if (player.isGM())
-				{
-					player.sendMessage("Multisell " + listId + " is restricted. Under current conditions cannot be used. Only GMs are allowed to use it.");
-				}
-				else
-				{
-					LOGGER.warning(getClass().getSimpleName() + ": Player " + player + " attempted to open multisell " + listId + " from npc " + npc + " which is not allowed!");
-					return;
-				}
+				player.sendMessage("Multisell " + listId + " is restricted. Under current conditions cannot be used. Only GMs are allowed to use it.");
+			}
+			else
+			{
+				LOGGER.warning(getClass().getSimpleName() + ": Player " + player + " attempted to open multisell " + listId + " from npc " + npc + " which is not allowed!");
+				return;
 			}
 		}
 		

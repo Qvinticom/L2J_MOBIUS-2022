@@ -42,6 +42,7 @@ public class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("AdditionalPotionMp", AdditionalPotionMp::new);
 		EffectHandler.getInstance().registerHandler("AddSkillBySkill", AddSkillBySkill::new);
 		EffectHandler.getInstance().registerHandler("AddTeleportBookmarkSlot", AddTeleportBookmarkSlot::new);
+		EffectHandler.getInstance().registerHandler("AirBind", AirBind::new);
 		EffectHandler.getInstance().registerHandler("AreaDamage", AreaDamage::new);
 		EffectHandler.getInstance().registerHandler("AttackAttribute", AttackAttribute::new);
 		EffectHandler.getInstance().registerHandler("AttackAttributeAdd", AttackAttributeAdd::new);
@@ -268,6 +269,7 @@ public class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("RebalanceHP", RebalanceHP::new);
 		EffectHandler.getInstance().registerHandler("RebalanceHPSummon", RebalanceHPSummon::new);
 		EffectHandler.getInstance().registerHandler("RecoverVitalityInPeaceZone", RecoverVitalityInPeaceZone::new);
+		EffectHandler.getInstance().registerHandler("Recovery", Recovery::new);
 		EffectHandler.getInstance().registerHandler("ReduceDamage", ReduceDamage::new);
 		EffectHandler.getInstance().registerHandler("ReduceCancel", ReduceCancel::new);
 		EffectHandler.getInstance().registerHandler("ReduceDropPenalty", ReduceDropPenalty::new);

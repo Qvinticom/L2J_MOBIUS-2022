@@ -1506,17 +1506,19 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<acquire exp="2889" sp="86" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="396.80541" hpRegen="4.5" mp="423.03" mpRegen="1.8" />
-			<attack physical="193.996847" magical="120.43155" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="142.3185" magical="114.55675" />
+		<acquire exp="2848" sp="184" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="966.57792" hpRegen="4.5" mp="478.8" mpRegen="1.8" />
+			<attack physical="176.36077" magical="120.43155" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="156.55035" magical="104.232986928232" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="70" />
 				<run ground="174" />
 			</speed>
 			<hitTime>410</hitTime>
-			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>

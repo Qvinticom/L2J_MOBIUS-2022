@@ -53,7 +53,7 @@
 		</effects>
 	</skill>
 	<skill id="5301" toLevel="9" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -110,11 +110,13 @@
 					<value level="9">18909</value>
 				</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="5302" toLevel="9" name="Poison">
-		<!-- HP cut due to Poison. $s1 power. -->
+		<!-- Poisons a target, momentarily decreasing HP. Effect $s1. -->
 		<icon>icon.skill4035</icon>
 		<abnormalLvl>
 			<value level="1">8</value>
@@ -341,11 +343,13 @@
 					<value level="9">18909</value>
 				</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="5305" toLevel="9" name="Poison">
-		<!-- HP cut due to Poison. $s1 power. -->
+		<!-- Poisons a target, momentarily decreasing HP. Effect $s1. -->
 		<icon>icon.skill4035</icon>
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -477,11 +481,13 @@
 					<value level="9">18909</value>
 				</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="5307" toLevel="9" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -537,11 +543,13 @@
 					<value level="9">18909</value>
 				</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="5308" toLevel="9" name="Poison">
-		<!-- HP cut due to Poison. $s1 power. -->
+		<!-- Poisons a target, momentarily decreasing HP. Effect $s1. -->
 		<icon>icon.skill4035</icon>
 		<abnormalLvl>
 			<value level="1">8</value>
@@ -1747,7 +1755,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5331" toLevel="9" name="Drain HP">
+	<skill id="5331" toLevel="9" name="Drain Energy">
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<attributeType>DARK</attributeType>
@@ -1851,7 +1859,7 @@
 		</effects>
 	</skill>
 	<skill id="5333" toLevel="9" name="Poison">
-		<!-- HP cut due to Poison. $s1 power. -->
+		<!-- Poisons a target, momentarily decreasing HP. Effect $s1. -->
 		<icon>icon.skill4035</icon>
 		<abnormalLvl>
 			<value level="1">8</value>
@@ -3061,7 +3069,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="5362" toLevel="9" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -3118,11 +3126,13 @@
 					<value level="9">18380</value>
 				</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="5363" toLevel="9" name="Poison">
-		<!-- HP cut due to Poison. $s1 power. -->
+		<!-- Poisons a target, momentarily decreasing HP. Effect $s1. -->
 		<icon>icon.skill4035</icon>
 		<abnormalLvl>
 			<value level="1">8</value>
@@ -3337,11 +3347,13 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="PhysicalAttack" />
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="5366" toLevel="9" name="Poison">
-		<!-- HP cut due to Poison. $s1 power. -->
+		<!-- Poisons a target, momentarily decreasing HP. Effect $s1. -->
 		<icon>icon.skill4035</icon>
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -3462,11 +3474,13 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="PhysicalAttack" />
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="5368" toLevel="9" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -3510,7 +3524,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5369" toLevel="9" name="Poison">
-		<!-- HP cut due to Poison. $s1 power. -->
+		<!-- Poisons a target, momentarily decreasing HP. Effect $s1. -->
 		<icon>icon.skill4035</icon>
 		<abnormalLvl>
 			<value level="1">8</value>
@@ -4588,7 +4602,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5392" toLevel="9" name="Drain HP">
+	<skill id="5392" toLevel="9" name="Drain Energy">
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -4714,7 +4728,7 @@
 		</effects>
 	</skill>
 	<skill id="5394" toLevel="9" name="Poison">
-		<!-- HP cut due to Poison. $s1 power. -->
+		<!-- Poisons a target, momentarily decreasing HP. Effect $s1. -->
 		<icon>icon.skill4035</icon>
 		<abnormalLvl>
 			<value level="1">8</value>

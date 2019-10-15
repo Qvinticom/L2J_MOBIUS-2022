@@ -4519,6 +4519,7 @@
 		</parameters>
 		<race>DIVINE</race>
 		<sex>MALE</sex>
+		<equipment rhand="147" /> <!-- rhand: Tear of Darkness -->
 		<acquire exp="96708" sp="2901" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1296.723626" hpRegen="8.5" mp="1305.375" mpRegen="3" />
@@ -4560,7 +4561,6 @@
 				<item id="1875" min="1" max="1" chance="28.24" /> <!-- Stone of Purity -->
 				<item id="4121" min="1" max="1" chance="9.71" /> <!-- Bow of Peril Shaft -->
 				<item id="2133" min="1" max="1" chance="1.479" /> <!-- Gemstone (A-grade) -->
-				<item id="90013" min="1" max="1" chance="0.3" /> <!-- Mid-grade Life Stone -->
 			</drop>
 			<spoil>
 				<item id="1870" min="1" max="75" chance="93.75" /> <!-- Coal -->
@@ -4625,7 +4625,6 @@
 				<item id="57" min="3950" max="9213" chance="70" /> <!-- Adena -->
 				<item id="1874" min="1" max="1" chance="22.2" /> <!-- Oriharukon Ore -->
 				<item id="4089" min="3" max="9" chance="7.675" /> <!-- Sealed Doom Helmet Design -->
-				<item id="90012" min="1" max="1" chance="0.3" /> <!-- Common Life Stone -->
 			</drop>
 			<spoil>
 				<item id="4179" min="1" max="1" chance="23.12" /> <!-- Recipe: Sealed Zubei's Helmet (100%) -->
@@ -4945,11 +4944,14 @@
 		<race>BUG</race>
 		<sex>MALE</sex>
 		<equipment rhand="182" /> <!-- rhand: Doom Hammer -->
-		<acquire exp="3298" sp="205" /> <!-- Need confirm retail values -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1246" hpRegen="4.5" mp="447" mpRegen="1.8" />
+		<acquire exp="3298" sp="205" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="886.09975" hpRegen="4.5" mp="447.96" mpRegen="1.8" />
 			<attack physical="156.22273" magical="106.67987" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="148.44287" magical="108.62405" />
+			<defence physical="148.44287" magical="98.8349371271581" />
+			<attribute>
+				<defence fire="20" water="20" wind="-5" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="80" />
 				<run ground="174" />
@@ -5269,11 +5271,15 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="14866" sp="1120" /> <!-- Need confirm retail values -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1998" hpRegen="11" mp="747" mpRegen="2.1" />
-			<attack physical="336.103966" magical="208.6504" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="182.0349455" magical="146.5258" />
+		<acquire exp="14866" sp="1120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="1421.00103" hpRegen="5.5" mp="747.8" mpRegen="2.1" />
+			<attack physical="305.54906" magical="208.6504" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="200.23844" magical="133.321011603844" />
+			<attribute>
+				<attack type="DARK" value="20" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="-32" dark="53" />
+			</attribute>
 			<speed>
 				<walk ground="80" />
 				<run ground="174" />

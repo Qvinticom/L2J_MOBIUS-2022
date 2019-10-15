@@ -182,7 +182,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5110" toLevel="1" name="Cannon Fodder">
-		<!-- Bombards enemies that are either above you or protected by structures such as castle walls or doors. Consumes 5 Flash Gunpowder. -->
+		<!-- Bombards enemies that are either above you or protected by structures such as castle walls or doors. Consumes 4 Flash Gunpowder. -->
 		<affectRange>200</affectRange>
 		<castRange>1600</castRange>
 		<effectPoint>-100</effectPoint>
@@ -312,7 +312,7 @@
 		</effects>
 	</skill>
 	<skill id="5112" toLevel="12" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -362,7 +362,9 @@
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="5113" toLevel="12" name="Buff Dispel">
@@ -413,7 +415,7 @@
 		</effects>
 	</skill>
 	<skill id="5114" toLevel="12" name="Hold">
-		<!-- Inflicted with Hold and unable to move. -->
+		<!-- Inflicted with hold and unable to move momentarily. -->
 		<icon>icon.skill4047</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -523,7 +525,7 @@
 		</effects>
 	</skill>
 	<skill id="5116" toLevel="12" name="Hold">
-		<!-- Inflicted with Hold and unable to move. -->
+		<!-- Inflicted with hold and unable to move momentarily. -->
 		<icon>icon.skill4047</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -562,7 +564,7 @@
 		</effects>
 	</skill>
 	<skill id="5117" toLevel="1" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -590,10 +592,12 @@
 			<effect name="PhysicalAttack">
 				<power>829</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
-	<skill id="5118" toLevel="1" name="Cancel Sailren Use">
+	<skill id="5118" toLevel="1" name="Cancel Sairen Use">
 		<affectRange>300</affectRange>
 		<effectPoint>-100</effectPoint>
 		<hitTime>2500</hitTime>
@@ -639,7 +643,7 @@
 		</effects>
 	</skill>
 	<skill id="5120" toLevel="1" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -667,7 +671,9 @@
 			<effect name="PhysicalAttack">
 				<power>703</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="5121" toLevel="1" name="Presentation - Corpse Revival">
@@ -680,7 +686,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5122" toLevel="1" name="Sailren Use Might">
-		<!-- P. Atk. is increased by 50%. -->
+		<!-- Increases P. Atk. by 50%. -->
 		<icon>icon.skill4028</icon>
 		<abnormalLvl>99</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -1053,7 +1059,6 @@
 		</effects>
 	</skill>
 	<skill id="5137" toLevel="1" name="Grip of the Cat">
-		<!-- Immobilized. -->
 		<icon>icon.skill1201</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -1085,7 +1090,6 @@
 		</effects>
 	</skill>
 	<skill id="5138" toLevel="1" name="Whiplash">
-		<!-- Stunned State -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -1114,7 +1118,9 @@
 				<power>6198</power>
 				<overHit>true</overHit>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="5139" toLevel="1" name="Tidal Wave">
@@ -1144,7 +1150,6 @@
 		</effects>
 	</skill>
 	<skill id="5140" toLevel="1" name="Dark Curse">
-		<!-- Casts a curse poisoning nearby enemies. Decreases Atk. Spd. -->
 		<icon>icon.skill1160</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -1775,8 +1780,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5157" toLevel="10" name="Power in Duel">
-		<!-- Chance: Temporarily increases your P. Atk. in PvP. -->
+	<skill id="5157" toLevel="10" name="Duel Might">
+		<!-- Active: Increases PvP P. Atk. temporarily. -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -1923,8 +1928,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5160" toLevel="10" name="Weakness in Duel">
-		<!-- Chance: temporarily decreases P. Atk. in PvP. -->
+	<skill id="5160" toLevel="10" name="Duel Weakness">
+		<!-- Active: Decreases your opponent's PvP P. Atk. temporarily. -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -2308,7 +2313,7 @@
 		</effects>
 	</skill>
 	<skill id="5168" toLevel="10" name="Stun">
-		<!-- Active: Momentarily Stuns the target. -->
+		<!-- Activated skill: Causes a target to enter the Stun state momentarily. -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -2342,11 +2347,13 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="5169" toLevel="10" name="Hold">
-		<!-- Active: Momentarily inflicts Hold on the target. Chance to father be inflicted with Hold greatly decreases while effect lasts. -->
+		<!-- Active: Momentarily inflicts Hold on the target. Chance to further be inflicted with Hold greatly decreases while effect lasts. -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -2421,13 +2428,15 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 			<effect name="DefenceTrait">
 				<SLEEP>100</SLEEP>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5171" toLevel="10" name="Paralysis">
+	<skill id="5171" toLevel="10" name="Paralyze">
 		<!-- Active: Momentarily paralyzes the target. -->
 		<icon>icon.skill3080</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -2462,7 +2471,9 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="5172" toLevel="10" name="Medusa">
@@ -2842,6 +2853,25 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="ProtectionBlessing" />
+		</effects>
+	</skill>
+	<skill id="5183" toLevel="1" name="Dimensional Stun">
+		<!-- Momentarily immobile due to the Stun effect. -->
+		<icon>icon.skill0100</icon>
+		<affectRange>300</affectRange>
+		<effectPoint>-100</effectPoint>
+		<magicLvl>85</magicLvl>
+		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<trait>SHOCK</trait>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="FlyAway">
+				<radius>300</radius>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="5184" toLevel="1" name="Dragon Breath">

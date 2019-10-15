@@ -39,7 +39,7 @@ public class ExFriendDetailInfo implements IClientOutgoingPacket
 		_objectId = player.getObjectId();
 		_name = name;
 		_friend = World.getInstance().getPlayer(_name);
-		_lastAccess = (_friend == null) || _friend.isBlocked(player) ? 0 : _friend.isOnline() ? (int) System.currentTimeMillis() : (int) (System.currentTimeMillis() - _friend.getLastAccess()) / 1000;
+		_lastAccess = _friend.isBlocked(player) ? 0 : _friend.isOnline() ? (int) System.currentTimeMillis() : (int) (System.currentTimeMillis() - _friend.getLastAccess()) / 1000;
 	}
 	
 	@Override

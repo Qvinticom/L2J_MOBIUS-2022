@@ -37,8 +37,13 @@ public class DarkElfChange2 extends AbstractNpcAI
 		30195, // Brecson
 		30699, // Medown
 		30474, // Angus
+		31324, // Andromeda
 		30862, // Oltran
 		30910, // Xairakin
+		31285, // Samael
+		31334, // Tifaren
+		31974, // Drizzit
+		32096, // Helminter
 	};
 	// Items
 	private static int MARK_OF_CHALLENGER = 2627;

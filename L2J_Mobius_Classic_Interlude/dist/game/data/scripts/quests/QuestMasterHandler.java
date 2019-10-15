@@ -19,6 +19,15 @@ package quests;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import quests.Q00032_AnObviousLie.Q00032_AnObviousLie;
+import quests.Q00033_MakeAPairOfDressShoes.Q00033_MakeAPairOfDressShoes;
+import quests.Q00034_InSearchOfCloth.Q00034_InSearchOfCloth;
+import quests.Q00035_FindGlitteringJewelry.Q00035_FindGlitteringJewelry;
+import quests.Q00036_MakeASewingKit.Q00036_MakeASewingKit;
+import quests.Q00037_MakeFormalWear.Q00037_MakeFormalWear;
+import quests.Q00042_HelpTheUncle.Q00042_HelpTheUncle;
+import quests.Q00043_HelpTheSister.Q00043_HelpTheSister;
+import quests.Q00044_HelpTheSon.Q00044_HelpTheSon;
 import quests.Q00070_SagaOfThePhoenixKnight.Q00070_SagaOfThePhoenixKnight;
 import quests.Q00071_SagaOfEvasTemplar.Q00071_SagaOfEvasTemplar;
 import quests.Q00072_SagaOfTheSwordMuse.Q00072_SagaOfTheSwordMuse;
@@ -50,7 +59,13 @@ import quests.Q00097_SagaOfTheShillienTemplar.Q00097_SagaOfTheShillienTemplar;
 import quests.Q00098_SagaOfTheShillienSaint.Q00098_SagaOfTheShillienSaint;
 import quests.Q00099_SagaOfTheFortuneSeeker.Q00099_SagaOfTheFortuneSeeker;
 import quests.Q00100_SagaOfTheMaestro.Q00100_SagaOfTheMaestro;
+import quests.Q00110_ToThePrimevalIsle.Q00110_ToThePrimevalIsle;
+import quests.Q00111_ElrokianHuntersProof.Q00111_ElrokianHuntersProof;
+import quests.Q00124_MeetingTheElroki.Q00124_MeetingTheElroki;
+import quests.Q00125_TheNameOfEvil1.Q00125_TheNameOfEvil1;
+import quests.Q00126_TheNameOfEvil2.Q00126_TheNameOfEvil2;
 import quests.Q00127_FishingSpecialistsRequest.Q00127_FishingSpecialistsRequest;
+import quests.Q00210_ObtainAWolfPet.Q00210_ObtainAWolfPet;
 import quests.Q00211_TrialOfTheChallenger.Q00211_TrialOfTheChallenger;
 import quests.Q00212_TrialOfDuty.Q00212_TrialOfDuty;
 import quests.Q00213_TrialOfTheSeeker.Q00213_TrialOfTheSeeker;
@@ -144,8 +159,15 @@ import quests.Q00415_PathOfTheOrcMonk.Q00415_PathOfTheOrcMonk;
 import quests.Q00416_PathOfTheOrcShaman.Q00416_PathOfTheOrcShaman;
 import quests.Q00417_PathOfTheScavenger.Q00417_PathOfTheScavenger;
 import quests.Q00418_PathOfTheArtisan.Q00418_PathOfTheArtisan;
+import quests.Q00420_LittleWing.Q00420_LittleWing;
+import quests.Q00421_LittleWingsBigAdventure.Q00421_LittleWingsBigAdventure;
 import quests.Q00500_BrothersBoundInChains.Q00500_BrothersBoundInChains;
+import quests.Q00620_FourGoblets.Q00620_FourGoblets;
+import quests.Q00641_AttackSailren.Q00641_AttackSailren;
+import quests.Q00642_APowerfulPrimevalCreature.Q00642_APowerfulPrimevalCreature;
+import quests.Q00643_RiseAndFallOfTheElrokiTribe.Q00643_RiseAndFallOfTheElrokiTribe;
 import quests.Q00662_AGameOfCards.Q00662_AGameOfCards;
+import quests.Q00688_DefeatTheElrokianRaiders.Q00688_DefeatTheElrokianRaiders;
 import quests.Q00933_ExploringTheWestWingOfTheDungeonOfAbyss.Q00933_ExploringTheWestWingOfTheDungeonOfAbyss;
 import quests.Q00935_ExploringTheEastWingOfTheDungeonOfAbyss.Q00935_ExploringTheEastWingOfTheDungeonOfAbyss;
 import quests.Q10866_PunitiveOperationOnTheDevilIsle.Q10866_PunitiveOperationOnTheDevilIsle;
@@ -188,7 +210,6 @@ import quests.not_done.Q00910_RequestFromTheRedLibraGuildBasic;
 import quests.not_done.Q00911_RequestFromTheRedLibraGuildIntermediate;
 import quests.not_done.Q00912_RequestFromTheRedLibraGuildAdvanced;
 import quests.not_done.Q00913_RequestFromTheRedLibraGuildSuperAdvanced;
-import quests.not_done.Q10506_DianasRequest;
 import quests.not_done.Q10861_MonsterArenaTheBirthOfAWarrior;
 import quests.not_done.Q10862_MonsterArenaChallenge10Battles;
 import quests.not_done.Q10863_MonsterArenaNewChallenge15Battles;
@@ -208,6 +229,15 @@ public class QuestMasterHandler
 	
 	private static final Class<?>[] QUESTS =
 	{
+		Q00032_AnObviousLie.class, // FIXME: Grand Crusade
+		Q00033_MakeAPairOfDressShoes.class, // FIXME: Grand Crusade
+		Q00034_InSearchOfCloth.class, // FIXME: Grand Crusade
+		Q00035_FindGlitteringJewelry.class, // FIXME: Grand Crusade
+		Q00036_MakeASewingKit.class, // FIXME: Grand Crusade
+		Q00037_MakeFormalWear.class, // FIXME: Grand Crusade
+		Q00042_HelpTheUncle.class, // FIXME: Grand Crusade
+		Q00043_HelpTheSister.class, // FIXME: Grand Crusade
+		Q00044_HelpTheSon.class, // FIXME: Grand Crusade
 		Q00070_SagaOfThePhoenixKnight.class,
 		Q00071_SagaOfEvasTemplar.class,
 		Q00072_SagaOfTheSwordMuse.class,
@@ -239,7 +269,13 @@ public class QuestMasterHandler
 		Q00098_SagaOfTheShillienSaint.class,
 		Q00099_SagaOfTheFortuneSeeker.class,
 		Q00100_SagaOfTheMaestro.class,
+		Q00110_ToThePrimevalIsle.class, // FIXME: Grand Crusade
+		Q00111_ElrokianHuntersProof.class, // FIXME: Grand Crusade
+		Q00124_MeetingTheElroki.class, // FIXME: Grand Crusade
+		Q00125_TheNameOfEvil1.class, // FIXME: Grand Crusade
+		Q00126_TheNameOfEvil2.class, // FIXME: Grand Crusade
 		Q00127_FishingSpecialistsRequest.class,
+		Q00210_ObtainAWolfPet.class, // FIXME: Grand Crusade
 		Q00211_TrialOfTheChallenger.class,
 		Q00212_TrialOfDuty.class,
 		Q00213_TrialOfTheSeeker.class,
@@ -333,19 +369,26 @@ public class QuestMasterHandler
 		Q00416_PathOfTheOrcShaman.class,
 		Q00417_PathOfTheScavenger.class,
 		Q00418_PathOfTheArtisan.class,
+		Q00420_LittleWing.class, // FIXME: Underground
+		Q00421_LittleWingsBigAdventure.class, // FIXME: Underground
 		Q00500_BrothersBoundInChains.class,
+		Q00620_FourGoblets.class, // FIXME: Grand Crusade
 		Q00630_PirateTreasureHunt.class, // TODO: Not done.
+		Q00641_AttackSailren.class, // FIXME: Grand Crusade
+		Q00642_APowerfulPrimevalCreature.class, // FIXME: Grand Crusade
+		Q00643_RiseAndFallOfTheElrokiTribe.class, // FIXME: Grand Crusade
 		Q00657_MonsterArenaTrialForWarriors.class, // TODO: Not done.
 		Q00658_MonsterArenaTrialForEliteWarriors.class, // TODO: Not done.
 		Q00662_AGameOfCards.class,
 		Q00664_QuarrelsTime.class, // TODO: Not done.
+		Q00688_DefeatTheElrokianRaiders.class, // FIXME: Grand Crusade
 		Q00910_RequestFromTheRedLibraGuildBasic.class, // TODO: Not done.
 		Q00911_RequestFromTheRedLibraGuildIntermediate.class, // TODO: Not done.
 		Q00912_RequestFromTheRedLibraGuildAdvanced.class, // TODO: Not done.
 		Q00913_RequestFromTheRedLibraGuildSuperAdvanced.class, // TODO: Not done.
 		Q00933_ExploringTheWestWingOfTheDungeonOfAbyss.class,
 		Q00935_ExploringTheEastWingOfTheDungeonOfAbyss.class,
-		Q10506_DianasRequest.class, // TODO: Not done.
+		// Q10506_DianasRequest.class, // TODO: Not done. NPC 9001 not in client.
 		Q10861_MonsterArenaTheBirthOfAWarrior.class, // TODO: Not done.
 		Q10862_MonsterArenaChallenge10Battles.class, // TODO: Not done.
 		Q10863_MonsterArenaNewChallenge15Battles.class, // TODO: Not done.

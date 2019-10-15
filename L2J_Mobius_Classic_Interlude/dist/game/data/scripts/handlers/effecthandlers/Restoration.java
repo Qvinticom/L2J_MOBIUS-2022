@@ -16,11 +16,15 @@
  */
 package handlers.effecthandlers;
 
+import org.l2jmobius.Config;
+import org.l2jmobius.gameserver.datatables.ItemTable;
 import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.effects.EffectType;
+import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.type.CrystalType;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.PetItemList;
@@ -61,6 +65,18 @@ public class Restoration extends AbstractEffect
 			effected.sendPacket(SystemMessageId.THERE_WAS_NOTHING_FOUND_INSIDE);
 			LOGGER.warning(Restoration.class.getSimpleName() + " effect with wrong item Id/count: " + _itemId + "/" + _itemCount + "!");
 			return;
+		}
+		
+		// Max equipable item grade configuration.
+		final Item extractable = ItemTable.getInstance().getTemplate(_itemId);
+		if (extractable != null)
+		{
+			final int itemCrystalId = extractable.getCrystalType().getId();
+			if ((itemCrystalId > Config.MAX_EQUIPABLE_ITEM_GRADE.getId()) && (itemCrystalId < CrystalType.EVENT.getId()))
+			{
+				effected.sendPacket(SystemMessageId.THERE_WAS_NOTHING_FOUND_INSIDE);
+				return;
+			}
 		}
 		
 		if (effected.isPlayer())

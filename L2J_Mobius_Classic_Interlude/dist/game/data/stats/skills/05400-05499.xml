@@ -13,6 +13,33 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
+	<skill id="5401" toLevel="1" name="Stun">
+		<!-- Momentarily immobile due to the Stun effect. -->
+		<icon>icon.skill0100</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>2</abnormalTime>
+		<abnormalType>FLY_AWAY</abnormalType>
+		<affectRange>300</affectRange>
+		<effectPoint>-100</effectPoint>
+		<hitTime>5800</hitTime>
+		<isDebuff>true</isDebuff>
+		<magicLvl>85</magicLvl>
+		<operateType>A2</operateType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<trait>SHOCK</trait>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="FlyAway">
+				<radius>300</radius>
+			</effect>
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
+		</effects>
+	</skill>
 	<skill id="5402" toLevel="1" name="Presentation - Baylor 2">
 		<!-- Baylor - Magic Skill1 -->
 		<coolTime>500</coolTime>
@@ -61,7 +88,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5406" toLevel="1" name="Presentation - Demonic 2">
-		<!-- Not in use. -->
 		<castRange>600</castRange>
 		<effectRange>1100</effectRange>
 		<hitTime>3000</hitTime>
@@ -120,7 +146,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5411" toLevel="1" name="Presentation - Baylor 11">
-		<!-- Not in use. -->
 		<hitTime>1000</hitTime>
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -132,7 +157,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5412" toLevel="1" name="Presentation - Baylor 12">
-		<!-- Not in use. -->
 		<hitTime>2500</hitTime>
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -142,7 +166,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5413" toLevel="1" name="Agathion Cute Trick - Beast Farm">
-		<!-- See Agathion's cute trick. -->
+		<!-- See the summoned spirit perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
@@ -157,7 +181,7 @@
 		</conditions>
 	</skill>
 	<skill id="5414" toLevel="1" name="Agathion Cute Trick - Rainbow Clan Hall">
-		<!-- See Agathion's cute trick. -->
+		<!-- See the summoned spirit perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
@@ -172,7 +196,7 @@
 		</conditions>
 	</skill>
 	<skill id="5415" toLevel="1" name="Agathion Cute Trick - Castle">
-		<!-- See Agathion's cute trick. -->
+		<!-- See the summoned spirit perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
@@ -200,18 +224,38 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5417" toLevel="1" name="Invincibility">
-		<!-- Invincible against standard targets and skills and buffs/debuffs. -->
+		<!-- Invincible against general attack and skill, buff/de-buff. -->
 		<magicLvl>85</magicLvl>
 		<operateType>T</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
+		<effects>
+			<effect name="DebuffBlock" />
+			<effect name="ResistDispelByCategory">
+				<amount>-100</amount>
+				<slot>ALL</slot>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>INVINCIBILITY_SPECIAL</slot>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="5418" toLevel="1" name="Invincibility">
-		<!-- Invincible against standard targets and skills and buffs/debuffs. -->
+		<!-- Invincible against general attack and skill, buff/de-buff. -->
 		<magicLvl>85</magicLvl>
 		<operateType>T</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
+		<effects>
+			<effect name="DebuffBlock" />
+			<effect name="ResistDispelByCategory">
+				<amount>-100</amount>
+				<slot>ALL</slot>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>INVINCIBILITY_SPECIAL</slot>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="5419" toLevel="1" name="Invincible Blow">
 		<!-- Crystalline Golem -->
@@ -227,11 +271,21 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5420" toLevel="1" name="Invincibility">
-		<!-- Invincible against standard targets and skills and buffs/debuffs. -->
+		<!-- Invincible against general attack and skill, buff/de-buff. -->
 		<magicLvl>85</magicLvl>
 		<operateType>T</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
+		<effects>
+			<effect name="DebuffBlock" />
+			<effect name="ResistDispelByCategory">
+				<amount>-100</amount>
+				<slot>ALL</slot>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>INVINCIBILITY_SPECIAL</slot>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="5422" toLevel="12" name="Flame">
 		<!-- Body is on fire. HP continually decreases. -->
@@ -485,7 +539,7 @@
 		</effects>
 	</skill>
 	<skill id="5427" toLevel="1" name="Counter Rapid Shot">
-		<!-- Increases bow/crossbow Atk. Spd. -->
+		<!-- Bow/Crossbow Atk. Spd. has been increased. -->
 		<icon>icon.skill0533</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -515,7 +569,7 @@
 		</effects>
 	</skill>
 	<skill id="5428" toLevel="1" name="Counter Dash">
-		<!-- Speed is increased. -->
+		<!-- Condition causing target to increase speed. -->
 		<icon>icon.skill0534</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -634,11 +688,13 @@
 		<affectObject>ALL</affectObject>
 		<effects>
 			<effect name="PhysicalAttack" />
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 		<endEffects>
 			<effect name="CallSkill">
-				<skillId>5494</skillId>
+				<skillId>5494</skillId> <!-- Gust -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</endEffects>
@@ -667,11 +723,13 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="PhysicalAttack" />
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 		<endEffects>
 			<effect name="CallSkill">
-				<skillId>5494</skillId>
+				<skillId>5494</skillId> <!-- Gust -->
 				<skillLevel>1</skillLevel>
 			</effect>
 		</endEffects>
@@ -1131,7 +1189,9 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="5448" toLevel="1" name="Oblivion">
@@ -1147,7 +1207,7 @@
 		</effects>
 	</skill>
 	<skill id="5449" toLevel="1" name="Weak Constitution">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Momentarily immobile due to the Stun effect. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -1161,7 +1221,9 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="5450" toLevel="7" name="Thin Skin">
@@ -1251,7 +1313,7 @@
 		</effects>
 	</skill>
 	<skill id="5452" toLevel="3" name="Spite">
-		<!-- Greatly increases the amount of Critical Damage received. -->
+		<!-- Greatly increases the amount of Critical Damage received -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>T_CRT_DMG_UP</abnormalType>
@@ -1380,7 +1442,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5458" toLevel="1" name="Agathion Cute Trick - Fortress">
-		<!-- See Agathion's cute trick. -->
+		<!-- See the summoned spirit perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
@@ -1415,7 +1477,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5460" toLevel="1" name="Fear">
-		<!-- Afflicted with Fear and moving against own will momentarily. -->
+		<!-- Causes a temporary fear so strong that a target flees mindlessly. -->
 		<icon>icon.skill1092</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -1491,26 +1553,44 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5462" toLevel="1" name="Fire Attribute">
+	<skill id="5462" toLevel="1" name="Fire Attack">
 		<!-- Strong against the element of fire. -->
 		<icon>icon.skill4279_new</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>100</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="5463" toLevel="1" name="Water Attribute">
+	<skill id="5463" toLevel="1" name="Water Attack">
 		<!-- Strong against the element of water. -->
 		<icon>icon.skill4280_new</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>100</amount>
+				<attribute>WATER</attribute>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="5464" toLevel="1" name="Wind Attribute">
+	<skill id="5464" toLevel="1" name="Wind Attack">
 		<!-- Strong against the element of wind. -->
 		<icon>icon.skill4281_new</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>100</amount>
+				<attribute>WIND</attribute>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="5465" toLevel="1" name="Earth Attack">
 		<!-- Strong against the element of earth. -->
@@ -1518,20 +1598,38 @@
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>100</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="5466" toLevel="1" name="Holy Attribute">
+	<skill id="5466" toLevel="1" name="Holy Attacks">
 		<!-- Strong against the holy elemental. -->
 		<icon>icon.skill4275_new</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>100</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="5467" toLevel="1" name="Darkness Protection">
+	<skill id="5467" toLevel="1" name="Dark Attack">
 		<!-- Strong against the dark elemental. -->
 		<icon>icon.skill4336_new</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>100</amount>
+				<attribute>DARK</attribute>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="5468" toLevel="12" name="Fire Shot">
 		<affectRange>80</affectRange>
@@ -1692,6 +1790,42 @@
 			</effect>
 		</effects>
 	</skill>
+	<skill id="5481" toLevel="1" name="Transformation Penalty">
+		<!-- You cannot be transformed while under this effect. -->
+		<icon>icon.skilltransform3</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>TRANSFORM_HANGOVER</abnormalType>
+		<effectPoint>1</effectPoint>
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<isDebuff>true</isDebuff>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="5482" toLevel="1" name="Transformation Penalty">
+		<!-- You cannot be transformed while under this effect. -->
+		<icon>icon.skilltransform3</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>480</abnormalTime>
+		<abnormalType>TRANSFORM_HANGOVER</abnormalType>
+		<effectPoint>1</effectPoint>
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<isDebuff>true</isDebuff>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
 	<skill id="5483" toLevel="1" name="Counter Aggression">
 		<effectPoint>-662</effectPoint>
 		<magicLvl>76</magicLvl>
@@ -1719,7 +1853,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5485" toLevel="1" name="Endurance Defense Up">
-		<!-- Increases P. Def. Effect 1. -->
+		<!-- M. Def. is increased. Effect 1. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>MD_UP</abnormalType>
@@ -1733,8 +1867,8 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="5486" toLevel="1" name="Endurance Defense Up">
-		<!-- Increases P. Atk. Effect 1. -->
+	<skill id="5486" toLevel="1" name="Endurance Offense Up">
+		<!-- P. Atk. is increased. Effect 1. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
@@ -1810,7 +1944,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="5491" toLevel="1" name="Decreases bow/crossbow Atk. Spd.">
+	<skill id="5491" toLevel="1" name="Decrease Bow/Crossbow Atk. Spd.">
 		<!-- Decreases Atk. Spd. when equipped with bow/crossbow while transformed. -->
 		<icon>icon.skilltransform3</icon>
 		<magicLvl>1</magicLvl>
@@ -1890,6 +2024,48 @@
 			</effect>
 		</effects>
 	</skill>
+	<skill id="5493" toLevel="1" name="Naia Production">
+		<castRange>800</castRange>
+		<channelingSkillId>5106</channelingSkillId> <!-- Capture A State -->
+		<effectPoint>1</effectPoint>
+		<effectRange>1000</effectRange>
+		<hitTime>25000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>8764</itemConsumeId> <!-- Trap Stone -->
+		<magicLvl>85</magicLvl>
+		<mpPerChanneling>15</mpPerChanneling>
+		<operateType>CA5</operateType>
+		<reuseDelay>1000</reuseDelay>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<channelingStart>3.6</channelingStart>
+		<channelingTickInterval>2</channelingTickInterval>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpTargetNpc">
+				<npcIds>
+					<item>32331</item>
+				</npcIds>
+			</condition>
+		</conditions>
+	</skill>
+	<skill id="5494" toLevel="1" name="Gust">
+		<effectPoint>1</effectPoint>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<magicLvl>86</magicLvl>
+		<operateType>A1</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="FlyAway">
+				<radius>300</radius>
+			</effect>
+		</effects>
+	</skill>
 	<skill id="5495" toLevel="1" name="Bleed">
 		<!-- HP decreases from bleeding momentarily. Effect 10. -->
 		<icon>icon.skill0096</icon>
@@ -1946,7 +2122,7 @@
 		</effects>
 	</skill>
 	<skill id="5497" toLevel="1" name="Horn of Rising Darkness">
-		<!-- Cannot move and HP decreases temporarily due to the stun and bleeding. Effect 1. -->
+		<!-- Temporarily immobile due to the Stun and Bleed effect and your HP is draining. Effect 1 -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>

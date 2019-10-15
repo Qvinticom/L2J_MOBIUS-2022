@@ -110,7 +110,7 @@
 		</effects>
 	</skill>
 	<skill id="6304" toLevel="1" name="Stun">
-		<!-- Stunned and unable to move for 2 seconds. -->
+		<!-- Stunned for 2 seconds and momentarily immobile. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2</abnormalTime>
@@ -136,7 +136,9 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="6305" toLevel="1" name="Divine Gnosis">
@@ -161,7 +163,7 @@
 		</effects>
 	</skill>
 	<skill id="6306" toLevel="1" name="Solina Strike">
-		<!-- Causes bleeding for 10 seconds, draining 139 HP per second. -->
+		<!-- Causes profuse bleeding for 10 seconds, causing 139 HP damage per second. -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -393,7 +395,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="6315" toLevel="1" name="Holy Strike">
+	<skill id="6315" toLevel="1" name="Divine Blow">
 		<castRange>40</castRange>
 		<coolTime>500</coolTime>
 		<effectPoint>-574</effectPoint>
@@ -863,7 +865,7 @@
 		</effects>
 	</skill>
 	<skill id="6334" toLevel="1" name="Stun">
-		<!-- Stunned and unable to move for 4 seconds. -->
+		<!-- Stunned for 4 seconds and momentarily immobile. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>4</abnormalTime>
@@ -890,7 +892,9 @@
 			<effect name="PhysicalAttack">
 				<power>4563</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="6335" toLevel="1" name="Electric Rain 1">
@@ -1016,7 +1020,7 @@
 		</effects>
 	</skill>
 	<skill id="6340" toLevel="1" name="Stun">
-		<!-- Stunned and unable to move for 4 seconds. -->
+		<!-- Stunned for 4 seconds and momentarily immobile. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>4</abnormalTime>
@@ -1044,7 +1048,36 @@
 			<effect name="PhysicalAttack">
 				<power>4563</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6341" toLevel="1" name="Stronghold Water Cannon">
+		<!-- Knock back. -->
+		<affectRange>200</affectRange>
+		<castRange>600</castRange>
+		<coolTime>500</coolTime>
+		<effectPoint>-100</effectPoint>
+		<effectRange>900</effectRange>
+		<hitTime>500</hitTime>
+		<magicLvl>83</magicLvl>
+		<mpConsume>121</mpConsume>
+		<operateType>A2</operateType>
+		<abnormalType>STUN</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<activateRate>30</activateRate>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>2</abnormalTime>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>4563</power>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="6342" toLevel="1" name="Trap Over Steam">
@@ -1320,7 +1353,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6371" toLevel="1" name="Invincibility">
-		<!-- Invincible against standard targets and skills and buffs/debuffs. -->
+		<!-- Invincible against standard attacks, skills and buffs/debuffs. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PD_UP_SPECIAL</abnormalType>
@@ -1447,7 +1480,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6377" toLevel="10" name="Speed Up">
-		<!-- Atk. Spd. + $s1 -->
+		<!-- Increases Atk. Spd. by $s1. -->
 		<icon>icon.skill1086</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1498,8 +1531,8 @@
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
-	<skill id="6379" toLevel="1" name="Critical Blow">
-		<!-- Causes bleeding for 15 seconds, draining 93 HP per second. -->
+	<skill id="6379" toLevel="1" name="Critical Hit">
+		<!-- Profuse bleeding causes you to loss 93 HP per second for 15 seconds. -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -1528,7 +1561,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="6380" toLevel="1" name="Bistakon Roar">
-		<!-- Blocks all physical/magic skills for 20 seconds. -->
+		<!-- Blocks all the enemy's physical/magic skills for 20 seconds. -->
 		<icon>icon.skill1336</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -1592,7 +1625,7 @@
 		</effects>
 	</skill>
 	<skill id="6382" toLevel="1" name="Bistakon Rolling Claw">
-		<!-- Causes bleeding for 15 seconds, draining 93 HP per second. -->
+		<!-- Profuse bleeding causes you to loss 93 HP per second for 15 seconds. -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -1626,7 +1659,7 @@
 		</effects>
 	</skill>
 	<skill id="6383" toLevel="1" name="Bistakon Deadly Roar">
-		<!-- Blocks all physical/magic skills for 20 seconds. -->
+		<!-- Blocks all the enemy's physical/magic skills for 20 seconds. -->
 		<icon>icon.skill1336</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -1678,7 +1711,7 @@
 		</effects>
 	</skill>
 	<skill id="6385" toLevel="1" name="Bistakon Critical Claw">
-		<!-- Causes bleeding for 15 seconds, draining 95 HP per second. -->
+		<!-- Profuse bleeding causes you to lose 95 HP per second for 15 seconds. -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -1713,7 +1746,7 @@
 		</effects>
 	</skill>
 	<skill id="6386" toLevel="1" name="Bistakon Earth Rise">
-		<!-- Momentarily Stuns and immobilizes the enemy for 3 seconds. -->
+		<!-- Stunned for 3 seconds and momentarily immobile. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -1766,6 +1799,345 @@
 				<power>13688</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 				<criticalChance>15</criticalChance>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6388" toLevel="1" name="Bistakon Jump Blow">
+		<!-- Armor is destroyed. P. Def. and M. Def. decreased 10%. Additional 500 decrease. Evasion 4 decrease. Accumulates with every incurred attack. -->
+		<icon>icon.skill1336</icon>
+		<affectRange>200</affectRange>
+		<coolTime>500</coolTime>
+		<effectPoint>-1000</effectPoint>
+		<hitTime>2500</hitTime>
+		<magicLvl>85</magicLvl>
+		<mpConsume>121</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>1000</reuseDelay>
+		<abnormalType>ABSORB</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>20</abnormalTime>
+		<isDebuff>true</isDebuff>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>13688</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6389" toLevel="1" name="Kokracon Sonic Cage">
+		<!-- Speed is decreased by 50%. -->
+		<icon>icon.skill0102</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>600</abnormalTime>
+		<abnormalType>SPEED_DOWN</abnormalType>
+		<castRange>1200</castRange>
+		<effectPoint>1</effectPoint>
+		<effectRange>1500</effectRange>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>85</magicLvl>
+		<mpConsume>88</mpConsume>
+		<mpInitialConsume>22</mpInitialConsume>
+		<operateType>A2</operateType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Speed">
+				<amount>-50</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6390" toLevel="1" name="Kokracon Sonic Explosion">
+		<!-- Casting Spd. is decreased by 50%. -->
+		<icon>icon.skill1386</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>60</abnormalTime>
+		<abnormalType>CASTING_TIME_UP</abnormalType>
+		<affectRange>300</affectRange>
+		<effectPoint>-1000</effectPoint>
+		<fanRange>0;0;200;0</fanRange>
+		<hitTime>2000</hitTime>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>85</magicLvl>
+		<mpConsume>88</mpConsume>
+		<mpInitialConsume>22</mpInitialConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>2000</reuseDelay>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>RING_RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="MagicalAttackSpeed">
+				<amount>-50</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6391" toLevel="1" name="Kokracon Sonic Slash">
+		<!-- Stunned for 5 seconds and momentarily immobile. -->
+		<icon>icon.skill0100</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<activateRate>80</activateRate>
+		<basicProperty>PHYSICAL</basicProperty>
+		<castRange>60</castRange>
+		<coolTime>500</coolTime>
+		<effectPoint>-100</effectPoint>
+		<effectRange>400</effectRange>
+		<hitTime>2500</hitTime>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLvl>85</magicLvl>
+		<mpConsume>121</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>1000</reuseDelay>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<trait>SHOCK</trait>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>4563</power>
+			</effect>
+			<effect name="BlockActions" />
+		</effects>
+	</skill>
+	<skill id="6392" toLevel="1" name="Kokracon Sonic Shot">
+		<!-- Atk. Spd. is decreased by 50%. -->
+		<icon>icon.skill1104</icon>
+		<abnormalLvl>3</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>ATTACK_TIME_UP</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<activateRate>80</activateRate>
+		<affectRange>300</affectRange>
+		<basicProperty>MAGIC</basicProperty>
+		<coolTime>500</coolTime>
+		<effectPoint>-100</effectPoint>
+		<hitTime>2000</hitTime>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLvl>85</magicLvl>
+		<mpConsume>88</mpConsume>
+		<mpInitialConsume>22</mpInitialConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>1000</reuseDelay>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>1500</effectRange>
+		<castRange>1200</castRange>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttackSpeed">
+				<amount>-50</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6393" toLevel="1" name="Kokracon Sonic Beam">
+		<!-- Armor is destroyed. P. Def. and M. Def. decreased 10%. Additional 500 decrease. Evasion 4 decrease. Accumulates with every incurred attack. -->
+		<icon>icon.skill0122</icon>
+		<castRange>900</castRange>
+		<coolTime>500</coolTime>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1200</effectRange>
+		<hitTime>1000</hitTime>
+		<magicLvl>85</magicLvl>
+		<mpConsume>121</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>1000</reuseDelay>
+		<abnormalType>ABSORB</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>20</abnormalTime>
+		<isDebuff>true</isDebuff>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>13688</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6394" toLevel="1" name="Kokracon Sonic Bomb">
+		<affectRange>300</affectRange>
+		<coolTime>500</coolTime>
+		<effectPoint>-100</effectPoint>
+		<hitTime>1500</hitTime>
+		<magicLvl>85</magicLvl>
+		<mpConsume>121</mpConsume>
+		<operateType>A1</operateType>
+		<reuseDelay>1000</reuseDelay>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>13688</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6395" toLevel="1" name="Kokracon Dreadful Clow">
+		<!-- Profuse bleeding causes you to loss 93 HP per second for 15 seconds. -->
+		<icon>icon.skill0096</icon>
+		<abnormalLvl>3</abnormalLvl>
+		<abnormalTime>15</abnormalTime>
+		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
+		<abnormalType>BLEEDING</abnormalType>
+		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
+		<activateRate>100</activateRate>
+		<basicProperty>PHYSICAL</basicProperty>
+		<castRange>40</castRange>
+		<coolTime>500</coolTime>
+		<effectPoint>-574</effectPoint>
+		<effectRange>400</effectRange>
+		<hitTime>1500</hitTime>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>2</lvlBonusRate>
+		<magicLvl>85</magicLvl>
+		<mpConsume>121</mpConsume>
+		<nextAction>ATTACK</nextAction>
+		<operateType>A2</operateType>
+		<reuseDelay>1000</reuseDelay>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<trait>BLEED</trait>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DamOverTime">
+				<power>93</power>
+				<ticks>5</ticks>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6396" toLevel="1" name="Kokracon Panic">
+		<!-- Frightens the enemy and causes him to flee for 6 seconds. -->
+		<icon>icon.skill1169</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>6</abnormalTime>
+		<abnormalType>TURN_FLEE</abnormalType>
+		<abnormalVisualEffect>TURN_FLEE</abnormalVisualEffect>
+		<activateRate>80</activateRate>
+		<basicProperty>MAGIC</basicProperty>
+		<castRange>600</castRange>
+		<effectPoint>-574</effectPoint>
+		<effectRange>1100</effectRange>
+		<hitTime>2000</hitTime>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLvl>85</magicLvl>
+		<mpConsume>88</mpConsume>
+		<mpInitialConsume>22</mpInitialConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>1000</reuseDelay>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<trait>DERANGEMENT</trait>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="BlockControl" />
+			<effect name="Fear" />
+		</effects>
+	</skill>
+	<skill id="6397" toLevel="1" name="Kokracon Staggering Blow">
+		<!-- Stunned for 3 seconds and momentarily immobile. -->
+		<icon>icon.skill0100</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<activateRate>80</activateRate>
+		<basicProperty>PHYSICAL</basicProperty>
+		<castRange>40</castRange>
+		<coolTime>500</coolTime>
+		<effectPoint>-100</effectPoint>
+		<effectRange>400</effectRange>
+		<hitTime>2000</hitTime>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLvl>83</magicLvl>
+		<mpConsume>121</mpConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>1000</reuseDelay>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<affectRange>200</affectRange>
+		<trait>SHOCK</trait>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>9125</power>
+			</effect>
+			<effect name="BlockActions" />
+		</effects>
+	</skill>
+	<skill id="6398" toLevel="1" name="Kokracon Sonic Shout">
+		<!-- Frightens the enemy and causes him to flee for 3 seconds. -->
+		<icon>icon.skill1169</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3</abnormalTime>
+		<abnormalType>TURN_FLEE</abnormalType>
+		<abnormalVisualEffect>TURN_FLEE</abnormalVisualEffect>
+		<activateRate>80</activateRate>
+		<affectRange>300</affectRange>
+		<basicProperty>MAGIC</basicProperty>
+		<effectPoint>-100</effectPoint>
+		<fanRange>0;0;200;0</fanRange>
+		<hitTime>2000</hitTime>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLvl>85</magicLvl>
+		<mpConsume>88</mpConsume>
+		<mpInitialConsume>22</mpInitialConsume>
+		<operateType>A2</operateType>
+		<reuseDelay>1000</reuseDelay>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<trait>DERANGEMENT</trait>
+		<targetType>SELF</targetType>
+		<affectScope>RING_RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="BlockControl" />
+			<effect name="Fear" />
+		</effects>
+	</skill>
+	<skill id="6399" toLevel="1" name="Kokracon Dreadful Piercing">
+		<castRange>60</castRange>
+		<coolTime>500</coolTime>
+		<effectPoint>-100</effectPoint>
+		<effectRange>400</effectRange>
+		<hitTime>1500</hitTime>
+		<magicLvl>85</magicLvl>
+		<mpConsume>121</mpConsume>
+		<operateType>A1</operateType>
+		<reuseDelay>1000</reuseDelay>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>13688</power>
 			</effect>
 		</effects>
 	</skill>

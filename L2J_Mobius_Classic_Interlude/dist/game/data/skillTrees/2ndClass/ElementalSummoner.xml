@@ -1,348 +1,348 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
 	<skillTree type="classSkillTree" classId="28" parentClassId="26">
-		<!-- Confirmed CT2.5 -->
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="10" getLevel="40" levelUpSp="100000" />
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="11" getLevel="40" levelUpSp="100000" />
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="12" getLevel="40" levelUpSp="100000" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="9" getLevel="40" levelUpSp="100000" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="10" getLevel="40" levelUpSp="100000" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="11" getLevel="40" levelUpSp="100000" />
-		<skill skillName="Light Armor Mastery" skillId="258" skillLvl="1" getLevel="40" levelUpSp="100000" />
-		<skill skillName="Light Armor Mastery" skillId="258" skillLvl="2" getLevel="40" levelUpSp="100000" />
-		<skill skillName="Light Armor Mastery" skillId="258" skillLvl="3" getLevel="40" levelUpSp="100000" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="13" getLevel="40" levelUpSp="100000" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="14" getLevel="40" levelUpSp="100000" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="15" getLevel="40" levelUpSp="100000" />
-		<skill skillName="Boost Mana" skillId="213" skillLvl="3" getLevel="40" levelUpSp="100000" />
-		<skill skillName="Fast Spell Casting" skillId="228" skillLvl="2" getLevel="40" levelUpSp="100000" />
-		<skill skillName="Servitor Heal" skillId="1127" skillLvl="13" getLevel="40" levelUpSp="100000" />
-		<skill skillName="Servitor Heal" skillId="1127" skillLvl="14" getLevel="40" levelUpSp="100000" />
-		<skill skillName="Servitor Heal" skillId="1127" skillLvl="15" getLevel="40" levelUpSp="100000" />
-		<skill skillName="Servitor Recharge" skillId="1126" skillLvl="7" getLevel="40" levelUpSp="100000" />
-		<skill skillName="Servitor Recharge" skillId="1126" skillLvl="8" getLevel="40" levelUpSp="100000" />
-		<skill skillName="Summon Boxer the Unicorn" skillId="1226" skillLvl="5" getLevel="40" levelUpSp="100000" />
-		<skill skillName="Summon Mirage the Unicorn" skillId="1227" skillLvl="5" getLevel="40" levelUpSp="100000" />
-		<skill skillName="Summon Merrow the Unicorn" skillId="1277" skillLvl="1" getLevel="40" levelUpSp="100000" />
-		<skill skillName="Servitor Physical Shield" skillId="1140" skillLvl="1" getLevel="40" levelUpSp="100000" />
-		<skill skillName="Transfer Pain" skillId="1262" skillLvl="1" getLevel="40" levelUpSp="100000" />
-		<skill skillName="Summon Life Cubic" skillId="67" skillLvl="1" getLevel="40" levelUpSp="100000" />
-		<skill skillName="Servitor Cure" skillId="1300" skillLvl="1" getLevel="40" levelUpSp="100000" />
-		<skill skillName="Summon Spiritshots" skillId="11318" skillLvl="1" getLevel="40" levelUpSp="100000" />
-		<skill skillName="Summon Soulshots" skillId="11316" skillLvl="1" getLevel="40" levelUpSp="100000" />
-		<skill skillName="Spell Master" skillId="1830" skillLvl="1" getLevel="40" />
-		<skill skillName="Summon Aqua Cubic" skillId="1280" skillLvl="1" getLevel="40" levelUpSp="100000">
-			<item id="4923" count="1" />
-		</skill>
-		
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="13" getLevel="42" levelUpSp="140000" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="12" getLevel="42" levelUpSp="140000" />
-		<skill skillName="Light Armor Mastery" skillId="258" skillLvl="4" getLevel="42" levelUpSp="140000" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="16" getLevel="42" levelUpSp="140000" />
-		<skill skillName="Servitor Heal" skillId="1127" skillLvl="16" getLevel="42" levelUpSp="140000" />
-		<skill skillName="Servitor Recharge" skillId="1126" skillLvl="9" getLevel="42" levelUpSp="140000" />
-		
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="14" getLevel="43" levelUpSp="140000" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="13" getLevel="43" levelUpSp="140000" />
-		<skill skillName="Light Armor Mastery" skillId="258" skillLvl="5" getLevel="43" levelUpSp="140000" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="17" getLevel="43" levelUpSp="140000" />
-		<skill skillName="Servitor Heal" skillId="1127" skillLvl="17" getLevel="43" levelUpSp="140000" />
-		
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="15" getLevel="44" levelUpSp="140000" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="14" getLevel="44" levelUpSp="140000" />
-		<skill skillName="Light Armor Mastery" skillId="258" skillLvl="6" getLevel="44" levelUpSp="140000" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="18" getLevel="44" levelUpSp="140000" />
-		<skill skillName="Fast HP Recovery" skillId="212" skillLvl="2" getLevel="44" levelUpSp="140000" />
-		<skill skillName="Fast Mana Recovery" skillId="229" skillLvl="3" getLevel="44" levelUpSp="140000" />
-		<skill skillName="Cubic Mastery" skillId="143" skillLvl="1" getLevel="44" levelUpSp="140000" />
-		<skill skillName="Servitor Heal" skillId="1127" skillLvl="18" getLevel="44" levelUpSp="140000" />
-		<skill skillName="Servitor Recharge" skillId="1126" skillLvl="10" getLevel="44" levelUpSp="67" />
-		<skill skillName="Summon Boxer the Unicorn" skillId="1226" skillLvl="6" getLevel="44" levelUpSp="140000" />
-		<skill skillName="Summon Mirage the Unicorn" skillId="1227" skillLvl="6" getLevel="44" levelUpSp="140000" />
-		<skill skillName="Summon Merrow the Unicorn" skillId="1277" skillLvl="2" getLevel="44" levelUpSp="140000" />
-		<skill skillName="Servitor Magic Shield" skillId="1139" skillLvl="1" getLevel="44" levelUpSp="140000" />
-		<skill skillName="Servitor Haste" skillId="1141" skillLvl="1" getLevel="44" levelUpSp="140000" />
-		<skill skillName="Summon Aqua Cubic" skillId="1280" skillLvl="2" getLevel="44" levelUpSp="140000" />
-		<skill skillName="Spirit Sharing" skillId="1547" skillLvl="1" getLevel="44" levelUpSp="140000">
-			<item id="49562" count="1" />
-		</skill>
-		
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="16" getLevel="46" levelUpSp="220000" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="15" getLevel="46" levelUpSp="220000" />
-		<skill skillName="Light Armor Mastery" skillId="258" skillLvl="7" getLevel="46" levelUpSp="220000" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="19" getLevel="46" levelUpSp="220000" />
-		<skill skillName="Servitor Heal" skillId="1127" skillLvl="19" getLevel="46" levelUpSp="220000" />
-		<skill skillName="Servitor Recharge" skillId="1126" skillLvl="11" getLevel="46" levelUpSp="220000" />
-		
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="17" getLevel="47" levelUpSp="220000" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="16" getLevel="47" levelUpSp="220000" />
-		<skill skillName="Light Armor Mastery" skillId="258" skillLvl="8" getLevel="47" levelUpSp="220000" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="20" getLevel="47" levelUpSp="220000" />
-		<skill skillName="Servitor Heal" skillId="1127" skillLvl="20" getLevel="47" levelUpSp="220000" />
-		
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="18" getLevel="48" levelUpSp="220000" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="17" getLevel="48" levelUpSp="220000" />
-		<skill skillName="Light Armor Mastery" skillId="258" skillLvl="9" getLevel="48" levelUpSp="220000" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="21" getLevel="48" levelUpSp="220000" />
-		<skill skillName="Boost Mana" skillId="213" skillLvl="4" getLevel="48" levelUpSp="220000" />
-		<skill skillName="Quick Recovery" skillId="164" skillLvl="3" getLevel="48" levelUpSp="220000" />
-		<skill skillName="Servitor Heal" skillId="1127" skillLvl="21" getLevel="48" levelUpSp="220000" />
-		<skill skillName="Servitor Recharge" skillId="1126" skillLvl="12" getLevel="48" levelUpSp="220000" />
-		<skill skillName="Summon Boxer the Unicorn" skillId="1226" skillLvl="7" getLevel="48" levelUpSp="220000" />
-		<skill skillName="Summon Mirage the Unicorn" skillId="1227" skillLvl="7" getLevel="48" levelUpSp="220000" />
-		<skill skillName="Summon Merrow the Unicorn" skillId="1277" skillLvl="3" getLevel="48" levelUpSp="220000" />
-		<skill skillName="Servitor Magic Boost" skillId="1145" skillLvl="2" getLevel="48" levelUpSp="220000" />
-		<skill skillName="Servitor Physical Shield" skillId="1140" skillLvl="2" getLevel="48" levelUpSp="220000" />
-		<skill skillName="Transfer Pain" skillId="1262" skillLvl="2" getLevel="48" levelUpSp="220000" />
-		<skill skillName="Summon Life Cubic" skillId="67" skillLvl="2" getLevel="48" levelUpSp="220000" />
-		<skill skillName="Summon Aqua Cubic" skillId="1280" skillLvl="3" getLevel="48" levelUpSp="220000" />
-		<skill skillName="Servitor Cure" skillId="1300" skillLvl="2" getLevel="48" levelUpSp="220000" />
-		<skill skillName="Power Supremacy" skillId="1611" skillLvl="1" getLevel="48" levelUpSp="220000" />
-		
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="19" getLevel="50" levelUpSp="360000" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="18" getLevel="50" levelUpSp="360000" />
-		<skill skillName="Light Armor Mastery" skillId="258" skillLvl="10" getLevel="50" levelUpSp="360000" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="22" getLevel="50" levelUpSp="360000" />
-		<skill skillName="Servitor Heal" skillId="1127" skillLvl="22" getLevel="50" levelUpSp="360000" />
-		<skill skillName="Servitor Recharge" skillId="1126" skillLvl="13" getLevel="50" levelUpSp="360000" />
-		
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="20" getLevel="51" levelUpSp="360000" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="19" getLevel="51" levelUpSp="360000" />
-		<skill skillName="Light Armor Mastery" skillId="258" skillLvl="11" getLevel="51" levelUpSp="360000" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="23" getLevel="51" levelUpSp="360000" />
-		<skill skillName="Servitor Heal" skillId="1127" skillLvl="23" getLevel="51" levelUpSp="360000" />
-		
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="21" getLevel="52" levelUpSp="360000" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="20" getLevel="52" levelUpSp="360000" />
-		<skill skillName="Light Armor Mastery" skillId="258" skillLvl="12" getLevel="52" levelUpSp="360000" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="24" getLevel="52" levelUpSp="360000" />
-		<skill skillName="Fast HP Recovery" skillId="212" skillLvl="3" getLevel="52" levelUpSp="360000" />
-		<skill skillName="Fast Mana Recovery" skillId="229" skillLvl="4" getLevel="52" levelUpSp="360000" />
-		<skill skillName="Servitor Heal" skillId="1127" skillLvl="24" getLevel="52" levelUpSp="360000" />
-		<skill skillName="Servitor Recharge" skillId="1126" skillLvl="14" getLevel="52" levelUpSp="360000" />
-		<skill skillName="Summon Boxer the Unicorn" skillId="1226" skillLvl="8" getLevel="52" levelUpSp="360000" />
-		<skill skillName="Summon Mirage the Unicorn" skillId="1227" skillLvl="8" getLevel="52" levelUpSp="360000" />
-		<skill skillName="Summon Merrow the Unicorn" skillId="1277" skillLvl="4" getLevel="52" levelUpSp="360000" />
-		<skill skillName="Servitor Magic Shield" skillId="1139" skillLvl="2" getLevel="52" levelUpSp="360000" />
-		<skill skillName="Servitor Haste" skillId="1141" skillLvl="2" getLevel="52" levelUpSp="360000" />
-		<skill skillName="Summon Life Cubic" skillId="67" skillLvl="3" getLevel="52" levelUpSp="360000" />
-		<skill skillName="Summon Aqua Cubic" skillId="1280" skillLvl="4" getLevel="52" levelUpSp="360000" />
-		<skill skillName="Servitor Empowerment" skillId="1299" skillLvl="1" getLevel="52" levelUpSp="360000" />
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="1" getLevel="52" levelUpSp="360000">
-			<item id="8618" count="1" /> <!-- Ancient Book: Divine Inspiration (Modern Language Version) -->
-		</skill>
-		
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="22" getLevel="54" levelUpSp="570000" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="21" getLevel="54" levelUpSp="570000" />
-		<skill skillName="Light Armor Mastery" skillId="258" skillLvl="13" getLevel="54" levelUpSp="570000" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="25" getLevel="54" levelUpSp="570000" />
-		<skill skillName="Servitor Heal" skillId="1127" skillLvl="25" getLevel="54" levelUpSp="570000" />
-		<skill skillName="Servitor Recharge" skillId="1126" skillLvl="15" getLevel="54" levelUpSp="570000" />
-		
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="23" getLevel="55" levelUpSp="570000" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="22" getLevel="55" levelUpSp="570000" />
-		<skill skillName="Light Armor Mastery" skillId="258" skillLvl="14" getLevel="55" levelUpSp="570000" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="26" getLevel="55" levelUpSp="570000" />
-		<skill skillName="Servitor Heal" skillId="1127" skillLvl="26" getLevel="55" levelUpSp="570000" />
-		
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="24" getLevel="56" levelUpSp="570000" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="23" getLevel="56" levelUpSp="570000" />
-		<skill skillName="Light Armor Mastery" skillId="258" skillLvl="15" getLevel="56" levelUpSp="570000" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="27" getLevel="56" levelUpSp="570000" />
-		<skill skillName="Boost Mana" skillId="213" skillLvl="5" getLevel="56" levelUpSp="570000" />
-		<skill skillName="Fast Spell Casting" skillId="228" skillLvl="3" getLevel="56" levelUpSp="570000" />
-		<skill skillName="Cubic Mastery" skillId="143" skillLvl="2" getLevel="56" levelUpSp="570000" />
-		<skill skillName="Servitor Heal" skillId="1127" skillLvl="27" getLevel="56" levelUpSp="570000" />
-		<skill skillName="Servitor Recharge" skillId="1126" skillLvl="16" getLevel="56" levelUpSp="570000" />
-		<skill skillName="Summon Boxer the Unicorn" skillId="1226" skillLvl="9" getLevel="56" levelUpSp="570000" />
-		<skill skillName="Summon Mirage the Unicorn" skillId="1227" skillLvl="9" getLevel="56" levelUpSp="570000" />
-		<skill skillName="Summon Merrow the Unicorn" skillId="1277" skillLvl="5" getLevel="56" levelUpSp="570000" />
-		<skill skillName="Servitor Magic Boost" skillId="1145" skillLvl="3" getLevel="56" levelUpSp="570000" />
-		<skill skillName="Servitor Physical Shield" skillId="1140" skillLvl="3" getLevel="56" levelUpSp="570000" />
-		<skill skillName="Transfer Pain" skillId="1262" skillLvl="3" getLevel="56" levelUpSp="570000" />
-		<skill skillName="Summon Aqua Cubic" skillId="1280" skillLvl="5" getLevel="56" levelUpSp="570000" />
-		<skill skillName="Power Supremacy" skillId="1611" skillLvl="2" getLevel="56" levelUpSp="570000" />
-			
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="25" getLevel="57" levelUpSp="580000" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="24" getLevel="57" levelUpSp="580000" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="28" getLevel="57" levelUpSp="580000" />
-		<skill skillName="Light Armor Mastery" skillId="258" skillLvl="16" getLevel="57" levelUpSp="580000" />
-		<skill skillName="Servitor Heal" skillId="1127" skillLvl="28" getLevel="57" levelUpSp="580000" />
-		<skill skillName="Servitor Recharge" skillId="1126" skillLvl="17" getLevel="57" levelUpSp="580000" />
-		
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="26" getLevel="58" levelUpSp="580000" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="25" getLevel="58" levelUpSp="580000" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="29" getLevel="58" levelUpSp="580000" />
-		<skill skillName="Light Armor Mastery" skillId="258" skillLvl="17" getLevel="58" levelUpSp="580000" />
-		<skill skillName="Fast HP Recovery" skillId="212" skillLvl="4" getLevel="58" levelUpSp="580000" />
-		<skill skillName="Servitor Heal" skillId="1127" skillLvl="29" getLevel="58" levelUpSp="580000" />
-		<skill skillName="Servitor Recharge" skillId="1126" skillLvl="18" getLevel="58" levelUpSp="580000" />
-		<skill skillName="Summon Boxer the Unicorn" skillId="1226" skillLvl="10" getLevel="58" levelUpSp="580000" />
-		<skill skillName="Summon Mirage the Unicorn" skillId="1227" skillLvl="10" getLevel="58" levelUpSp="580000" />
-		<skill skillName="Summon Merrow the Unicorn" skillId="1277" skillLvl="6" getLevel="58" levelUpSp="580000" />
-		<skill skillName="Transfer Pain" skillId="1262" skillLvl="4" getLevel="58" levelUpSp="580000" />
-		
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="27" getLevel="59" levelUpSp="700000" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="30" getLevel="59" levelUpSp="700000" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="26" getLevel="59" levelUpSp="700000" />
-		<skill skillName="Light Armor Mastery" skillId="258" skillLvl="18" getLevel="59" levelUpSp="700000" />
-		<skill skillName="Servitor Heal" skillId="1127" skillLvl="30" getLevel="59" levelUpSp="700000" />
-		<skill skillName="Servitor Recharge" skillId="1126" skillLvl="19" getLevel="59" levelUpSp="700000" />
-		
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="28" getLevel="60" levelUpSp="700000" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="27" getLevel="60" levelUpSp="700000" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="31" getLevel="60" levelUpSp="700000" />
-		<skill skillName="Light Armor Mastery" skillId="258" skillLvl="19" getLevel="60" levelUpSp="700000" />
-		<skill skillName="Boost Mana" skillId="213" skillLvl="6" getLevel="60" levelUpSp="700000" />
-		<skill skillName="Fast Mana Recovery" skillId="229" skillLvl="5" getLevel="60" levelUpSp="700000" />
-		<skill skillName="Servitor Heal" skillId="1127" skillLvl="31" getLevel="60" levelUpSp="700000" />
-		<skill skillName="Servitor Recharge" skillId="1126" skillLvl="20" getLevel="60" levelUpSp="700000" />
-		<skill skillName="Summon Boxer the Unicorn" skillId="1226" skillLvl="11" getLevel="60" levelUpSp="700000" />
-		<skill skillName="Summon Mirage the Unicorn" skillId="1227" skillLvl="11" getLevel="60" levelUpSp="700000" />
-		<skill skillName="Summon Merrow the Unicorn" skillId="1277" skillLvl="7" getLevel="60" levelUpSp="700000" />
-		<skill skillName="Summon Life Cubic" skillId="67" skillLvl="4" getLevel="60" levelUpSp="700000" />
-		<skill skillName="Servitor Cure" skillId="1300" skillLvl="3" getLevel="60" levelUpSp="700000" />
-
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="29" getLevel="61" levelUpSp="850000" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="28" getLevel="61" levelUpSp="850000" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="32" getLevel="61" levelUpSp="850000" />
-		<skill skillName="Light Armor Mastery" skillId="258" skillLvl="20" getLevel="61" levelUpSp="850000" />
-		<skill skillName="Servitor Heal" skillId="1127" skillLvl="32" getLevel="61" levelUpSp="850000" />
-		<skill skillName="Servitor Recharge" skillId="1126" skillLvl="21" getLevel="61" levelUpSp="850000" />
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="2" getLevel="61" levelUpSp="850000">
-			<item id="8619" count="1" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
-		</skill>
-		
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="30" getLevel="62" levelUpSp="850000" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="29" getLevel="62" levelUpSp="850000" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="33" getLevel="62" levelUpSp="850000" />
-		<skill skillName="Light Armor Mastery" skillId="258" skillLvl="21" getLevel="62" levelUpSp="850000" />
-		<skill skillName="Servitor Heal" skillId="1127" skillLvl="33" getLevel="62" levelUpSp="850000" />
-		<skill skillName="Servitor Recharge" skillId="1126" skillLvl="22" getLevel="62" levelUpSp="850000" />
-		<skill skillName="Summon Boxer the Unicorn" skillId="1226" skillLvl="12" getLevel="62" levelUpSp="850000" />
-		<skill skillName="Summon Mirage the Unicorn" skillId="1227" skillLvl="12" getLevel="62" levelUpSp="850000" />
-		<skill skillName="Summon Merrow the Unicorn" skillId="1277" skillLvl="8" getLevel="62" levelUpSp="850000" />
-		<skill skillName="Summon Aqua Cubic" skillId="1280" skillLvl="6" getLevel="62" levelUpSp="850000" />
-		<skill skillName="Servitor Blessing" skillId="1301" skillLvl="1" getLevel="62" levelUpSp="850000" />
-		<skill skillName="Spirit Sharing" skillId="1547" skillLvl="2" getLevel="62" levelUpSp="850000" />
-		
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="31" getLevel="63" levelUpSp="1100000" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="30" getLevel="63" levelUpSp="1100000" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="34" getLevel="63" levelUpSp="1100000" />
-		<skill skillName="Light Armor Mastery" skillId="258" skillLvl="22" getLevel="63" levelUpSp="1100000" />
-		<skill skillName="Servitor Heal" skillId="1127" skillLvl="34" getLevel="63" levelUpSp="1100000" />
-		<skill skillName="Servitor Recharge" skillId="1126" skillLvl="23" getLevel="63" levelUpSp="1100000" />
-		
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="32" getLevel="64" levelUpSp="1100000" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="31" getLevel="64" levelUpSp="1100000" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="35" getLevel="64" levelUpSp="1100000" />
-		<skill skillName="Light Armor Mastery" skillId="258" skillLvl="23" getLevel="64" levelUpSp="1100000" />
-		<skill skillName="Fast HP Recovery" skillId="212" skillLvl="5" getLevel="64" levelUpSp="1100000" />
-		<skill skillName="Servitor Heal" skillId="1127" skillLvl="35" getLevel="64" levelUpSp="1100000" />
-		<skill skillName="Servitor Recharge" skillId="1126" skillLvl="24" getLevel="64" levelUpSp="1100000" />
-		<skill skillName="Summon Boxer the Unicorn" skillId="1226" skillLvl="13" getLevel="64" levelUpSp="1100000" />
-		<skill skillName="Summon Mirage the Unicorn" skillId="1227" skillLvl="13" getLevel="64" levelUpSp="1100000" />
-		<skill skillName="Summon Merrow the Unicorn" skillId="1277" skillLvl="9" getLevel="64" levelUpSp="1100000" />
-		<skill skillName="Summon Life Cubic" skillId="67" skillLvl="5" getLevel="64" levelUpSp="1100000" />
-		<skill skillName="Power Supremacy" skillId="1611" skillLvl="3" getLevel="64" levelUpSp="1100000" />
-		
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="33" getLevel="65" levelUpSp="1300000" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="32" getLevel="65" levelUpSp="1300000" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="36" getLevel="65" levelUpSp="1300000" />
-		<skill skillName="Light Armor Mastery" skillId="258" skillLvl="24" getLevel="65" levelUpSp="1300000" />
-		<skill skillName="Servitor Heal" skillId="1127" skillLvl="36" getLevel="65" levelUpSp="1300000" />
-		<skill skillName="Servitor Recharge" skillId="1126" skillLvl="25" getLevel="65" levelUpSp="1300000" />
-		
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="34" getLevel="66" levelUpSp="1300000" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="33" getLevel="66" levelUpSp="1300000" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="37" getLevel="66" levelUpSp="1300000" />
-		<skill skillName="Light Armor Mastery" skillId="258" skillLvl="25" getLevel="66" levelUpSp="1300000" />
-		<skill skillName="Boost Mana" skillId="213" skillLvl="7" getLevel="66" levelUpSp="1300000" />
-		<skill skillName="Servitor Heal" skillId="1127" skillLvl="37" getLevel="66" levelUpSp="1300000" />
-		<skill skillName="Servitor Recharge" skillId="1126" skillLvl="26" getLevel="66" levelUpSp="1300000" />
-		<skill skillName="Summon Boxer the Unicorn" skillId="1226" skillLvl="14" getLevel="66" levelUpSp="1300000" />
-		<skill skillName="Summon Mirage the Unicorn" skillId="1227" skillLvl="14" getLevel="66" levelUpSp="1300000" />
-		<skill skillName="Summon Merrow the Unicorn" skillId="1277" skillLvl="10" getLevel="66" levelUpSp="1300000" />
-		<skill skillName="Summon Aqua Cubic" skillId="1280" skillLvl="7" getLevel="66" levelUpSp="1300000" />
-		
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="35" getLevel="67" levelUpSp="1700000" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="34" getLevel="67" levelUpSp="1700000" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="38" getLevel="67" levelUpSp="1700000" />
-		<skill skillName="Light Armor Mastery" skillId="258" skillLvl="26" getLevel="67" levelUpSp="1700000" />
-		<skill skillName="Servitor Heal" skillId="1127" skillLvl="38" getLevel="67" levelUpSp="1700000" />
-		<skill skillName="Servitor Recharge" skillId="1126" skillLvl="27" getLevel="67" levelUpSp="1700000" />
-		
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="36" getLevel="68" levelUpSp="1700000" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="35" getLevel="68" levelUpSp="1700000" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="39" getLevel="68" levelUpSp="1700000" />
-		<skill skillName="Light Armor Mastery" skillId="258" skillLvl="27" getLevel="68" levelUpSp="1700000" />
-		<skill skillName="Fast Mana Recovery" skillId="229" skillLvl="6" getLevel="68" levelUpSp="1700000" />
-		<skill skillName="Servitor Heal" skillId="1127" skillLvl="39" getLevel="68" levelUpSp="1700000" />
-		<skill skillName="Servitor Recharge" skillId="1126" skillLvl="28" getLevel="68" levelUpSp="1700000" />
-		<skill skillName="Summon Boxer the Unicorn" skillId="1226" skillLvl="15" getLevel="68" levelUpSp="1700000" />
-		<skill skillName="Summon Mirage the Unicorn" skillId="1227" skillLvl="15" getLevel="68" levelUpSp="1700000" />
-		<skill skillName="Summon Merrow the Unicorn" skillId="1277" skillLvl="11" getLevel="68" levelUpSp="1700000" />
-		<skill skillName="Summon Life Cubic" skillId="67" skillLvl="6" getLevel="68" levelUpSp="1700000" />
-		
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="37" getLevel="69" levelUpSp="2000000" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="36" getLevel="69" levelUpSp="2000000" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="40" getLevel="69" levelUpSp="2000000" />
-		<skill skillName="Light Armor Mastery" skillId="258" skillLvl="28" getLevel="69" levelUpSp="2000000" />
-		<skill skillName="Servitor Heal" skillId="1127" skillLvl="40" getLevel="69" levelUpSp="2000000" />
-		<skill skillName="Servitor Recharge" skillId="1126" skillLvl="29" getLevel="69" levelUpSp="2000000" />
-		
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="38" getLevel="70" levelUpSp="2000000" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="37" getLevel="70" levelUpSp="2000000" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="41" getLevel="70" levelUpSp="2000000" />
-		<skill skillName="Light Armor Mastery" skillId="258" skillLvl="29" getLevel="70" levelUpSp="2000000" />
-		<skill skillName="Servitor Heal" skillId="1127" skillLvl="41" getLevel="70" levelUpSp="2000000" />
-		<skill skillName="Servitor Recharge" skillId="1126" skillLvl="30" getLevel="70" levelUpSp="2000000" />
-		<skill skillName="Summon Boxer the Unicorn" skillId="1226" skillLvl="16" getLevel="70" levelUpSp="2000000" />
-		<skill skillName="Summon Mirage the Unicorn" skillId="1227" skillLvl="16" getLevel="70" levelUpSp="2000000" />
-		<skill skillName="Summon Merrow the Unicorn" skillId="1277" skillLvl="12" getLevel="70" levelUpSp="2000000" />
-		<skill skillName="Summon Aqua Cubic" skillId="1280" skillLvl="8" getLevel="70" levelUpSp="2000000" />
-		<skill skillName="Transfer Pain" skillId="1262" skillLvl="5" getLevel="70" levelUpSp="2000000" />
-		<skill skillName="Servitor Empowerment" skillId="1299" skillLvl="2" getLevel="70" levelUpSp="2000000" />
-		<skill skillName="Spirit Sharing" skillId="1547" skillLvl="3" getLevel="70" levelUpSp="2000000" />
-		
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="39" getLevel="71" levelUpSp="2500000" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="38" getLevel="71" levelUpSp="2500000" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="42" getLevel="71" levelUpSp="2500000" />
-		<skill skillName="Light Armor Mastery" skillId="258" skillLvl="30" getLevel="71" levelUpSp="2500000" />
-		<skill skillName="Servitor Heal" skillId="1127" skillLvl="42" getLevel="71" levelUpSp="2500000" />
-		<skill skillName="Servitor Recharge" skillId="1126" skillLvl="31" getLevel="71" levelUpSp="2500000" />
-		
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="40" getLevel="72" levelUpSp="2500000" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="39" getLevel="72" levelUpSp="2500000" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="43" getLevel="72" levelUpSp="2500000" />
-		<skill skillName="Light Armor Mastery" skillId="258" skillLvl="31" getLevel="72" levelUpSp="2500000" />
-		<skill skillName="Boost Mana" skillId="213" skillLvl="8" getLevel="72" levelUpSp="2500000" />
-		<skill skillName="Servitor Heal" skillId="1127" skillLvl="43" getLevel="72" levelUpSp="2500000" />
-		<skill skillName="Servitor Recharge" skillId="1126" skillLvl="32" getLevel="72" levelUpSp="2500000" />
-		<skill skillName="Summon Boxer the Unicorn" skillId="1226" skillLvl="17" getLevel="72" levelUpSp="2500000" />
-		<skill skillName="Summon Mirage the Unicorn" skillId="1227" skillLvl="17" getLevel="72" levelUpSp="2500000" />
-		<skill skillName="Summon Merrow the Unicorn" skillId="1277" skillLvl="13" getLevel="72" levelUpSp="2500000" />
-		<skill skillName="Summon Life Cubic" skillId="67" skillLvl="7" getLevel="72" levelUpSp="2500000" />
-		<skill skillName="Power Supremacy" skillId="1611" skillLvl="4" getLevel="72" levelUpSp="2500000" />
-		
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="41" getLevel="73" levelUpSp="2900000" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="40" getLevel="73" levelUpSp="2900000" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="44" getLevel="73" levelUpSp="2900000" />
-		<skill skillName="Light Armor Mastery" skillId="258" skillLvl="32" getLevel="73" levelUpSp="2900000" />
-		<skill skillName="Servitor Heal" skillId="1127" skillLvl="44" getLevel="73" levelUpSp="2900000" />
-		<skill skillName="Servitor Recharge" skillId="1126" skillLvl="33" getLevel="73" levelUpSp="2900000" />
-		
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="42" getLevel="74" levelUpSp="2900000" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="41" getLevel="74" levelUpSp="2900000" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="45" getLevel="74" levelUpSp="2900000" />
-		<skill skillName="Light Armor Mastery" skillId="258" skillLvl="33" getLevel="74" levelUpSp="2900000" />
-		<skill skillName="Fast HP Recovery" skillId="212" skillLvl="6" getLevel="74" levelUpSp="2900000" />
-		<skill skillName="Fast Mana Recovery" skillId="229" skillLvl="7" getLevel="74" levelUpSp="2900000" />
-		<skill skillName="Servitor Heal" skillId="1127" skillLvl="45" getLevel="74" levelUpSp="2900000" />
-		<skill skillName="Servitor Recharge" skillId="1126" skillLvl="34" getLevel="74" levelUpSp="2900000" />
-		<skill skillName="Summon Boxer the Unicorn" skillId="1226" skillLvl="18" getLevel="74" levelUpSp="2900000" />
-		<skill skillName="Summon Mirage the Unicorn" skillId="1227" skillLvl="18" getLevel="74" levelUpSp="2900000" />
-		<skill skillName="Summon Merrow the Unicorn" skillId="1277" skillLvl="14" getLevel="74" levelUpSp="2900000" />
-		<skill skillName="Summon Aqua Cubic" skillId="1280" skillLvl="9" getLevel="74" levelUpSp="2900000" />
+		<skill skillId="67" skillLvl="1" skillName="Summon Life Cubic" levelUpSp="30000" getLevel="40" />
+		<skill skillId="146" skillLvl="13" skillName="Anti Magic" levelUpSp="10000" getLevel="40" />
+		<skill skillId="146" skillLvl="14" skillName="Anti Magic" levelUpSp="10000" getLevel="40" />
+		<skill skillId="146" skillLvl="15" skillName="Anti Magic" levelUpSp="10000" getLevel="40" />
+		<skill skillId="213" skillLvl="3" skillName="Boost Mana" levelUpSp="30000" getLevel="40" />
+		<skill skillId="228" skillLvl="2" skillName="Fast Spell Casting" levelUpSp="30000" getLevel="40" />
+		<skill skillId="234" skillLvl="9" skillName="Robe Mastery" levelUpSp="10000" getLevel="40" />
+		<skill skillId="234" skillLvl="10" skillName="Robe Mastery" levelUpSp="10000" getLevel="40" />
+		<skill skillId="234" skillLvl="11" skillName="Robe Mastery" levelUpSp="10000" getLevel="40" />
+		<skill skillId="249" skillLvl="10" skillName="Weapon Mastery" levelUpSp="10000" getLevel="40" />
+		<skill skillId="249" skillLvl="11" skillName="Weapon Mastery" levelUpSp="10000" getLevel="40" />
+		<skill skillId="249" skillLvl="12" skillName="Weapon Mastery" levelUpSp="10000" getLevel="40" />
+		<skill skillId="258" skillLvl="1" skillName="Light Armor Mastery" levelUpSp="10000" getLevel="40" />
+		<skill skillId="258" skillLvl="2" skillName="Light Armor Mastery" levelUpSp="10000" getLevel="40" />
+		<skill skillId="258" skillLvl="3" skillName="Light Armor Mastery" levelUpSp="10000" getLevel="40" />
+		<skill skillId="1126" skillLvl="7" skillName="Servitor Recharge" levelUpSp="15000" getLevel="40" />
+		<skill skillId="1126" skillLvl="8" skillName="Servitor Recharge" levelUpSp="15000" getLevel="40" />
+		<skill skillId="1127" skillLvl="13" skillName="Servitor Heal" levelUpSp="10000" getLevel="40" />
+		<skill skillId="1127" skillLvl="14" skillName="Servitor Heal" levelUpSp="10000" getLevel="40" />
+		<skill skillId="1127" skillLvl="15" skillName="Servitor Heal" levelUpSp="10000" getLevel="40" />
+		<skill skillId="1140" skillLvl="1" skillName="Servitor Physical Shield" levelUpSp="30000" getLevel="40" />
+		<skill skillId="1206" skillLvl="6" skillName="Wind Shackle" levelUpSp="30000" getLevel="40" />
+		<skill skillId="1226" skillLvl="5" skillName="Summon Unicorn Boxer" levelUpSp="30000" getLevel="40" />
+		<skill skillId="1227" skillLvl="5" skillName="Summon Unicorn Mirage" levelUpSp="30000" getLevel="40" />
+		<skill skillId="1262" skillLvl="1" skillName="Transfer Pain" levelUpSp="30000" getLevel="40" />
+		<skill skillId="1277" skillLvl="1" skillName="Summon Unicorn Merrow" levelUpSp="30000" getLevel="40" />
+		<skill skillId="1280" skillLvl="1" skillName="Summon Aqua Cubic" levelUpSp="30000" getLevel="40" />
+		<skill skillId="1300" skillLvl="1" skillName="Servitor Cure" levelUpSp="30000" getLevel="40" />
+		<skill skillId="1329" skillLvl="1" skillName="Mass Summon Aqua Cubic" levelUpSp="30000" getLevel="40" />
+		<skill skillId="143" skillLvl="1" skillName="Cubic Mastery" levelUpSp="41000" getLevel="44" />
+		<skill skillId="146" skillLvl="16" skillName="Anti Magic" levelUpSp="14000" getLevel="44" />
+		<skill skillId="146" skillLvl="17" skillName="Anti Magic" levelUpSp="14000" getLevel="44" />
+		<skill skillId="146" skillLvl="18" skillName="Anti Magic" levelUpSp="14000" getLevel="44" />
+		<skill skillId="212" skillLvl="2" skillName="Fast HP Recovery" levelUpSp="41000" getLevel="44" />
+		<skill skillId="229" skillLvl="3" skillName="Fast Mana Recovery" levelUpSp="41000" getLevel="44" />
+		<skill skillId="234" skillLvl="12" skillName="Robe Mastery" levelUpSp="14000" getLevel="44" />
+		<skill skillId="234" skillLvl="13" skillName="Robe Mastery" levelUpSp="14000" getLevel="44" />
+		<skill skillId="234" skillLvl="14" skillName="Robe Mastery" levelUpSp="14000" getLevel="44" />
+		<skill skillId="249" skillLvl="13" skillName="Weapon Mastery" levelUpSp="14000" getLevel="44" />
+		<skill skillId="249" skillLvl="14" skillName="Weapon Mastery" levelUpSp="14000" getLevel="44" />
+		<skill skillId="249" skillLvl="15" skillName="Weapon Mastery" levelUpSp="14000" getLevel="44" />
+		<skill skillId="258" skillLvl="4" skillName="Light Armor Mastery" levelUpSp="14000" getLevel="44" />
+		<skill skillId="258" skillLvl="5" skillName="Light Armor Mastery" levelUpSp="14000" getLevel="44" />
+		<skill skillId="258" skillLvl="6" skillName="Light Armor Mastery" levelUpSp="14000" getLevel="44" />
+		<skill skillId="1126" skillLvl="9" skillName="Servitor Recharge" levelUpSp="21000" getLevel="44" />
+		<skill skillId="1126" skillLvl="10" skillName="Servitor Recharge" levelUpSp="21000" getLevel="44" />
+		<skill skillId="1127" skillLvl="16" skillName="Servitor Heal" levelUpSp="14000" getLevel="44" />
+		<skill skillId="1127" skillLvl="17" skillName="Servitor Heal" levelUpSp="14000" getLevel="44" />
+		<skill skillId="1127" skillLvl="18" skillName="Servitor Heal" levelUpSp="14000" getLevel="44" />
+		<skill skillId="1139" skillLvl="1" skillName="Servitor Magic Shield" levelUpSp="41000" getLevel="44" />
+		<skill skillId="1141" skillLvl="1" skillName="Servitor Haste" levelUpSp="41000" getLevel="44" />
+		<skill skillId="1206" skillLvl="7" skillName="Wind Shackle" levelUpSp="41000" getLevel="44" />
+		<skill skillId="1226" skillLvl="6" skillName="Summon Unicorn Boxer" levelUpSp="41000" getLevel="44" />
+		<skill skillId="1227" skillLvl="6" skillName="Summon Unicorn Mirage" levelUpSp="41000" getLevel="44" />
+		<skill skillId="1277" skillLvl="2" skillName="Summon Unicorn Merrow" levelUpSp="41000" getLevel="44" />
+		<skill skillId="1280" skillLvl="2" skillName="Summon Aqua Cubic" levelUpSp="41000" getLevel="44" />
+		<skill skillId="1329" skillLvl="2" skillName="Mass Summon Aqua Cubic" levelUpSp="41000" getLevel="44" />
+		<skill skillId="67" skillLvl="2" skillName="Summon Life Cubic" levelUpSp="63000" getLevel="48" />
+		<skill skillId="146" skillLvl="19" skillName="Anti Magic" levelUpSp="21000" getLevel="48" />
+		<skill skillId="146" skillLvl="20" skillName="Anti Magic" levelUpSp="21000" getLevel="48" />
+		<skill skillId="146" skillLvl="21" skillName="Anti Magic" levelUpSp="21000" getLevel="48" />
+		<skill skillId="164" skillLvl="3" skillName="Quick Recovery" levelUpSp="63000" getLevel="48" />
+		<skill skillId="213" skillLvl="4" skillName="Boost Mana" levelUpSp="63000" getLevel="48" />
+		<skill skillId="234" skillLvl="15" skillName="Robe Mastery" levelUpSp="21000" getLevel="48" />
+		<skill skillId="234" skillLvl="16" skillName="Robe Mastery" levelUpSp="21000" getLevel="48" />
+		<skill skillId="234" skillLvl="17" skillName="Robe Mastery" levelUpSp="21000" getLevel="48" />
+		<skill skillId="249" skillLvl="16" skillName="Weapon Mastery" levelUpSp="21000" getLevel="48" />
+		<skill skillId="249" skillLvl="17" skillName="Weapon Mastery" levelUpSp="21000" getLevel="48" />
+		<skill skillId="249" skillLvl="18" skillName="Weapon Mastery" levelUpSp="21000" getLevel="48" />
+		<skill skillId="258" skillLvl="7" skillName="Light Armor Mastery" levelUpSp="21000" getLevel="48" />
+		<skill skillId="258" skillLvl="8" skillName="Light Armor Mastery" levelUpSp="21000" getLevel="48" />
+		<skill skillId="258" skillLvl="9" skillName="Light Armor Mastery" levelUpSp="21000" getLevel="48" />
+		<skill skillId="1126" skillLvl="11" skillName="Servitor Recharge" levelUpSp="32000" getLevel="48" />
+		<skill skillId="1126" skillLvl="12" skillName="Servitor Recharge" levelUpSp="32000" getLevel="48" />
+		<skill skillId="1127" skillLvl="19" skillName="Servitor Heal" levelUpSp="21000" getLevel="48" />
+		<skill skillId="1127" skillLvl="20" skillName="Servitor Heal" levelUpSp="21000" getLevel="48" />
+		<skill skillId="1127" skillLvl="21" skillName="Servitor Heal" levelUpSp="21000" getLevel="48" />
+		<skill skillId="1140" skillLvl="2" skillName="Servitor Physical Shield" levelUpSp="63000" getLevel="48" />
+		<skill skillId="1145" skillLvl="2" skillName="Bright Servitor" levelUpSp="63000" getLevel="48" />
+		<skill skillId="1206" skillLvl="8" skillName="Wind Shackle" levelUpSp="63000" getLevel="48" />
+		<skill skillId="1226" skillLvl="7" skillName="Summon Unicorn Boxer" levelUpSp="63000" getLevel="48" />
+		<skill skillId="1227" skillLvl="7" skillName="Summon Unicorn Mirage" levelUpSp="63000" getLevel="48" />
+		<skill skillId="1262" skillLvl="2" skillName="Transfer Pain" levelUpSp="63000" getLevel="48" />
+		<skill skillId="1277" skillLvl="3" skillName="Summon Unicorn Merrow" levelUpSp="63000" getLevel="48" />
+		<skill skillId="1280" skillLvl="3" skillName="Summon Aqua Cubic" levelUpSp="63000" getLevel="48" />
+		<skill skillId="1300" skillLvl="2" skillName="Servitor Cure" levelUpSp="63000" getLevel="48" />
+		<skill skillId="1329" skillLvl="3" skillName="Mass Summon Aqua Cubic" levelUpSp="63000" getLevel="48" />
+		<skill skillId="67" skillLvl="3" skillName="Summon Life Cubic" levelUpSp="100000" getLevel="52" />
+		<skill skillId="146" skillLvl="22" skillName="Anti Magic" levelUpSp="33000" getLevel="52" />
+		<skill skillId="146" skillLvl="23" skillName="Anti Magic" levelUpSp="33000" getLevel="52" />
+		<skill skillId="146" skillLvl="24" skillName="Anti Magic" levelUpSp="33000" getLevel="52" />
+		<skill skillId="212" skillLvl="3" skillName="Fast HP Recovery" levelUpSp="100000" getLevel="52" />
+		<skill skillId="229" skillLvl="4" skillName="Fast Mana Recovery" levelUpSp="100000" getLevel="52" />
+		<skill skillId="234" skillLvl="18" skillName="Robe Mastery" levelUpSp="33000" getLevel="52" />
+		<skill skillId="234" skillLvl="19" skillName="Robe Mastery" levelUpSp="33000" getLevel="52" />
+		<skill skillId="234" skillLvl="20" skillName="Robe Mastery" levelUpSp="33000" getLevel="52" />
+		<skill skillId="249" skillLvl="19" skillName="Weapon Mastery" levelUpSp="33000" getLevel="52" />
+		<skill skillId="249" skillLvl="20" skillName="Weapon Mastery" levelUpSp="33000" getLevel="52" />
+		<skill skillId="249" skillLvl="21" skillName="Weapon Mastery" levelUpSp="33000" getLevel="52" />
+		<skill skillId="258" skillLvl="10" skillName="Light Armor Mastery" levelUpSp="33000" getLevel="52" />
+		<skill skillId="258" skillLvl="11" skillName="Light Armor Mastery" levelUpSp="33000" getLevel="52" />
+		<skill skillId="258" skillLvl="12" skillName="Light Armor Mastery" levelUpSp="33000" getLevel="52" />
+		<skill skillId="1126" skillLvl="13" skillName="Servitor Recharge" levelUpSp="50000" getLevel="52" />
+		<skill skillId="1126" skillLvl="14" skillName="Servitor Recharge" levelUpSp="50000" getLevel="52" />
+		<skill skillId="1127" skillLvl="22" skillName="Servitor Heal" levelUpSp="33000" getLevel="52" />
+		<skill skillId="1127" skillLvl="23" skillName="Servitor Heal" levelUpSp="33000" getLevel="52" />
+		<skill skillId="1127" skillLvl="24" skillName="Servitor Heal" levelUpSp="33000" getLevel="52" />
+		<skill skillId="1139" skillLvl="2" skillName="Servitor Magic Shield" levelUpSp="100000" getLevel="52" />
+		<skill skillId="1141" skillLvl="2" skillName="Servitor Haste" levelUpSp="100000" getLevel="52" />
+		<skill skillId="1206" skillLvl="9" skillName="Wind Shackle" levelUpSp="100000" getLevel="52" />
+		<skill skillId="1226" skillLvl="8" skillName="Summon Unicorn Boxer" levelUpSp="100000" getLevel="52" />
+		<skill skillId="1227" skillLvl="8" skillName="Summon Unicorn Mirage" levelUpSp="100000" getLevel="52" />
+		<skill skillId="1277" skillLvl="4" skillName="Summon Unicorn Merrow" levelUpSp="100000" getLevel="52" />
+		<skill skillId="1280" skillLvl="4" skillName="Summon Aqua Cubic" levelUpSp="100000" getLevel="52" />
+		<skill skillId="1299" skillLvl="1" skillName="Servitor Empowerment" levelUpSp="100000" getLevel="52" />
+		<skill skillId="1329" skillLvl="4" skillName="Mass Summon Aqua Cubic" levelUpSp="100000" getLevel="52" />
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="1" getLevel="52" levelUpSp="230000">			<item id="8618" count="1" /> <!-- Ancient Book: Divine Inspiration (Modern Language Version) -->		</skill>
+		<skill skillId="143" skillLvl="2" skillName="Cubic Mastery" levelUpSp="100000" getLevel="56" />
+		<skill skillId="146" skillLvl="25" skillName="Anti Magic" levelUpSp="33000" getLevel="56" />
+		<skill skillId="146" skillLvl="26" skillName="Anti Magic" levelUpSp="33000" getLevel="56" />
+		<skill skillId="146" skillLvl="27" skillName="Anti Magic" levelUpSp="33000" getLevel="56" />
+		<skill skillId="213" skillLvl="5" skillName="Boost Mana" levelUpSp="100000" getLevel="56" />
+		<skill skillId="228" skillLvl="3" skillName="Fast Spell Casting" levelUpSp="100000" getLevel="56" />
+		<skill skillId="234" skillLvl="21" skillName="Robe Mastery" levelUpSp="33000" getLevel="56" />
+		<skill skillId="234" skillLvl="22" skillName="Robe Mastery" levelUpSp="33000" getLevel="56" />
+		<skill skillId="234" skillLvl="23" skillName="Robe Mastery" levelUpSp="33000" getLevel="56" />
+		<skill skillId="249" skillLvl="22" skillName="Weapon Mastery" levelUpSp="33000" getLevel="56" />
+		<skill skillId="249" skillLvl="23" skillName="Weapon Mastery" levelUpSp="33000" getLevel="56" />
+		<skill skillId="249" skillLvl="24" skillName="Weapon Mastery" levelUpSp="33000" getLevel="56" />
+		<skill skillId="258" skillLvl="13" skillName="Light Armor Mastery" levelUpSp="33000" getLevel="56" />
+		<skill skillId="258" skillLvl="14" skillName="Light Armor Mastery" levelUpSp="33000" getLevel="56" />
+		<skill skillId="258" skillLvl="15" skillName="Light Armor Mastery" levelUpSp="33000" getLevel="56" />
+		<skill skillId="1126" skillLvl="15" skillName="Servitor Recharge" levelUpSp="50000" getLevel="56" />
+		<skill skillId="1126" skillLvl="16" skillName="Servitor Recharge" levelUpSp="50000" getLevel="56" />
+		<skill skillId="1127" skillLvl="25" skillName="Servitor Heal" levelUpSp="33000" getLevel="56" />
+		<skill skillId="1127" skillLvl="26" skillName="Servitor Heal" levelUpSp="33000" getLevel="56" />
+		<skill skillId="1127" skillLvl="27" skillName="Servitor Heal" levelUpSp="33000" getLevel="56" />
+		<skill skillId="1140" skillLvl="3" skillName="Servitor Physical Shield" levelUpSp="100000" getLevel="56" />
+		<skill skillId="1145" skillLvl="3" skillName="Bright Servitor" levelUpSp="100000" getLevel="56" />
+		<skill skillId="1206" skillLvl="10" skillName="Wind Shackle" levelUpSp="100000" getLevel="56" />
+		<skill skillId="1226" skillLvl="9" skillName="Summon Unicorn Boxer" levelUpSp="100000" getLevel="56" />
+		<skill skillId="1227" skillLvl="9" skillName="Summon Unicorn Mirage" levelUpSp="100000" getLevel="56" />
+		<skill skillId="1262" skillLvl="3" skillName="Transfer Pain" levelUpSp="100000" getLevel="56" />
+		<skill skillId="1277" skillLvl="5" skillName="Summon Unicorn Merrow" levelUpSp="100000" getLevel="56" />
+		<skill skillId="1280" skillLvl="5" skillName="Summon Aqua Cubic" levelUpSp="100000" getLevel="56" />
+		<skill skillId="1329" skillLvl="5" skillName="Mass Summon Aqua Cubic" levelUpSp="100000" getLevel="56" />
+		<skill skillId="1332" skillLvl="1" skillName="Summon Unicorn Seraphim" levelUpSp="100000" getLevel="56" />
+		<skill skillId="1380" skillLvl="1" skillName="Betray" levelUpSp="100000" getLevel="56" />
+		<skill skillId="1403" skillLvl="1" skillName="Summon Friend" levelUpSp="105000" getLevel="56" />
+		<skill skillId="146" skillLvl="28" skillName="Anti Magic" levelUpSp="73000" getLevel="58" />
+		<skill skillId="146" skillLvl="29" skillName="Anti Magic" levelUpSp="73000" getLevel="58" />
+		<skill skillId="212" skillLvl="4" skillName="Fast HP Recovery" levelUpSp="147000" getLevel="58" />
+		<skill skillId="234" skillLvl="24" skillName="Robe Mastery" levelUpSp="73000" getLevel="58" />
+		<skill skillId="234" skillLvl="25" skillName="Robe Mastery" levelUpSp="73000" getLevel="58" />
+		<skill skillId="249" skillLvl="25" skillName="Weapon Mastery" levelUpSp="73000" getLevel="58" />
+		<skill skillId="249" skillLvl="26" skillName="Weapon Mastery" levelUpSp="73000" getLevel="58" />
+		<skill skillId="258" skillLvl="16" skillName="Light Armor Mastery" levelUpSp="73000" getLevel="58" />
+		<skill skillId="258" skillLvl="17" skillName="Light Armor Mastery" levelUpSp="73000" getLevel="58" />
+		<skill skillId="1126" skillLvl="17" skillName="Servitor Recharge" levelUpSp="73000" getLevel="58" />
+		<skill skillId="1126" skillLvl="18" skillName="Servitor Recharge" levelUpSp="73000" getLevel="58" />
+		<skill skillId="1127" skillLvl="28" skillName="Servitor Heal" levelUpSp="73000" getLevel="58" />
+		<skill skillId="1127" skillLvl="29" skillName="Servitor Heal" levelUpSp="73000" getLevel="58" />
+		<skill skillId="1206" skillLvl="11" skillName="Wind Shackle" levelUpSp="147000" getLevel="58" />
+		<skill skillId="1226" skillLvl="10" skillName="Summon Unicorn Boxer" levelUpSp="147000" getLevel="58" />
+		<skill skillId="1227" skillLvl="10" skillName="Summon Unicorn Mirage" levelUpSp="147000" getLevel="58" />
+		<skill skillId="1262" skillLvl="4" skillName="Transfer Pain" levelUpSp="147000" getLevel="58" />
+		<skill skillId="1277" skillLvl="6" skillName="Summon Unicorn Merrow" levelUpSp="147000" getLevel="58" />
+		<skill skillId="1332" skillLvl="2" skillName="Summon Unicorn Seraphim" levelUpSp="147000" getLevel="58" />
+		<skill skillId="1380" skillLvl="2" skillName="Betray" levelUpSp="147000" getLevel="58" />
+		<skill skillId="1384" skillLvl="1" skillName="Mass Surrender to Water" levelUpSp="147000" getLevel="58" />
+		<skill skillId="67" skillLvl="4" skillName="Summon Life Cubic" levelUpSp="188000" getLevel="60" />
+		<skill skillId="146" skillLvl="30" skillName="Anti Magic" levelUpSp="94000" getLevel="60" />
+		<skill skillId="146" skillLvl="31" skillName="Anti Magic" levelUpSp="94000" getLevel="60" />
+		<skill skillId="213" skillLvl="6" skillName="Boost Mana" levelUpSp="188000" getLevel="60" />
+		<skill skillId="229" skillLvl="5" skillName="Fast Mana Recovery" levelUpSp="188000" getLevel="60" />
+		<skill skillId="234" skillLvl="26" skillName="Robe Mastery" levelUpSp="94000" getLevel="60" />
+		<skill skillId="234" skillLvl="27" skillName="Robe Mastery" levelUpSp="94000" getLevel="60" />
+		<skill skillId="249" skillLvl="27" skillName="Weapon Mastery" levelUpSp="94000" getLevel="60" />
+		<skill skillId="249" skillLvl="28" skillName="Weapon Mastery" levelUpSp="94000" getLevel="60" />
+		<skill skillId="258" skillLvl="18" skillName="Light Armor Mastery" levelUpSp="94000" getLevel="60" />
+		<skill skillId="258" skillLvl="19" skillName="Light Armor Mastery" levelUpSp="94000" getLevel="60" />
+		<skill skillId="1126" skillLvl="19" skillName="Servitor Recharge" levelUpSp="94000" getLevel="60" />
+		<skill skillId="1126" skillLvl="20" skillName="Servitor Recharge" levelUpSp="94000" getLevel="60" />
+		<skill skillId="1127" skillLvl="30" skillName="Servitor Heal" levelUpSp="94000" getLevel="60" />
+		<skill skillId="1127" skillLvl="31" skillName="Servitor Heal" levelUpSp="94000" getLevel="60" />
+		<skill skillId="1206" skillLvl="12" skillName="Wind Shackle" levelUpSp="188000" getLevel="60" />
+		<skill skillId="1226" skillLvl="11" skillName="Summon Unicorn Boxer" levelUpSp="188000" getLevel="60" />
+		<skill skillId="1227" skillLvl="11" skillName="Summon Unicorn Mirage" levelUpSp="188000" getLevel="60" />
+		<skill skillId="1277" skillLvl="7" skillName="Summon Unicorn Merrow" levelUpSp="188000" getLevel="60" />
+		<skill skillId="1300" skillLvl="3" skillName="Servitor Cure" levelUpSp="188000" getLevel="60" />
+		<skill skillId="1332" skillLvl="3" skillName="Summon Unicorn Seraphim" levelUpSp="188000" getLevel="60" />
+		<skill skillId="1380" skillLvl="3" skillName="Betray" levelUpSp="188000" getLevel="60" />
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="2" getLevel="61" levelUpSp="640000">			<item id="8619" count="1" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->		</skill>
+		<skill skillId="146" skillLvl="32" skillName="Anti Magic" levelUpSp="130000" getLevel="62" />
+		<skill skillId="146" skillLvl="33" skillName="Anti Magic" levelUpSp="130000" getLevel="62" />
+		<skill skillId="234" skillLvl="28" skillName="Robe Mastery" levelUpSp="130000" getLevel="62" />
+		<skill skillId="234" skillLvl="29" skillName="Robe Mastery" levelUpSp="130000" getLevel="62" />
+		<skill skillId="249" skillLvl="29" skillName="Weapon Mastery" levelUpSp="130000" getLevel="62" />
+		<skill skillId="249" skillLvl="30" skillName="Weapon Mastery" levelUpSp="130000" getLevel="62" />
+		<skill skillId="258" skillLvl="20" skillName="Light Armor Mastery" levelUpSp="130000" getLevel="62" />
+		<skill skillId="258" skillLvl="21" skillName="Light Armor Mastery" levelUpSp="130000" getLevel="62" />
+		<skill skillId="1126" skillLvl="21" skillName="Servitor Recharge" levelUpSp="130000" getLevel="62" />
+		<skill skillId="1126" skillLvl="22" skillName="Servitor Recharge" levelUpSp="130000" getLevel="62" />
+		<skill skillId="1127" skillLvl="32" skillName="Servitor Heal" levelUpSp="130000" getLevel="62" />
+		<skill skillId="1127" skillLvl="33" skillName="Servitor Heal" levelUpSp="130000" getLevel="62" />
+		<skill skillId="1206" skillLvl="13" skillName="Wind Shackle" levelUpSp="250000" getLevel="62" />
+		<skill skillId="1226" skillLvl="12" skillName="Summon Unicorn Boxer" levelUpSp="250000" getLevel="62" />
+		<skill skillId="1227" skillLvl="12" skillName="Summon Unicorn Mirage" levelUpSp="250000" getLevel="62" />
+		<skill skillId="1277" skillLvl="8" skillName="Summon Unicorn Merrow" levelUpSp="250000" getLevel="62" />
+		<skill skillId="1280" skillLvl="6" skillName="Summon Aqua Cubic" levelUpSp="250000" getLevel="62" />
+		<skill skillId="1301" skillLvl="1" skillName="Servitor Blessing" levelUpSp="250000" getLevel="62" />
+		<skill skillId="1329" skillLvl="6" skillName="Mass Summon Aqua Cubic" levelUpSp="250000" getLevel="62" />
+		<skill skillId="1332" skillLvl="4" skillName="Summon Unicorn Seraphim" levelUpSp="250000" getLevel="62" />
+		<skill skillId="1380" skillLvl="4" skillName="Betray" levelUpSp="250000" getLevel="62" />
+		<skill skillId="1384" skillLvl="2" skillName="Mass Surrender to Water" levelUpSp="250000" getLevel="62" />
+		<skill skillId="67" skillLvl="5" skillName="Summon Life Cubic" levelUpSp="340000" getLevel="64" />
+		<skill skillId="146" skillLvl="34" skillName="Anti Magic" levelUpSp="170000" getLevel="64" />
+		<skill skillId="146" skillLvl="35" skillName="Anti Magic" levelUpSp="170000" getLevel="64" />
+		<skill skillId="212" skillLvl="5" skillName="Fast HP Recovery" levelUpSp="340000" getLevel="64" />
+		<skill skillId="234" skillLvl="30" skillName="Robe Mastery" levelUpSp="170000" getLevel="64" />
+		<skill skillId="234" skillLvl="31" skillName="Robe Mastery" levelUpSp="170000" getLevel="64" />
+		<skill skillId="249" skillLvl="31" skillName="Weapon Mastery" levelUpSp="170000" getLevel="64" />
+		<skill skillId="249" skillLvl="32" skillName="Weapon Mastery" levelUpSp="170000" getLevel="64" />
+		<skill skillId="258" skillLvl="22" skillName="Light Armor Mastery" levelUpSp="170000" getLevel="64" />
+		<skill skillId="258" skillLvl="23" skillName="Light Armor Mastery" levelUpSp="170000" getLevel="64" />
+		<skill skillId="1126" skillLvl="23" skillName="Servitor Recharge" levelUpSp="170000" getLevel="64" />
+		<skill skillId="1126" skillLvl="24" skillName="Servitor Recharge" levelUpSp="170000" getLevel="64" />
+		<skill skillId="1127" skillLvl="34" skillName="Servitor Heal" levelUpSp="170000" getLevel="64" />
+		<skill skillId="1127" skillLvl="35" skillName="Servitor Heal" levelUpSp="170000" getLevel="64" />
+		<skill skillId="1206" skillLvl="14" skillName="Wind Shackle" levelUpSp="340000" getLevel="64" />
+		<skill skillId="1226" skillLvl="13" skillName="Summon Unicorn Boxer" levelUpSp="340000" getLevel="64" />
+		<skill skillId="1227" skillLvl="13" skillName="Summon Unicorn Mirage" levelUpSp="340000" getLevel="64" />
+		<skill skillId="1277" skillLvl="9" skillName="Summon Unicorn Merrow" levelUpSp="340000" getLevel="64" />
+		<skill skillId="1332" skillLvl="5" skillName="Summon Unicorn Seraphim" levelUpSp="340000" getLevel="64" />
+		<skill skillId="1380" skillLvl="5" skillName="Betray" levelUpSp="340000" getLevel="64" />
+		<skill skillId="146" skillLvl="36" skillName="Anti Magic" levelUpSp="220000" getLevel="66" />
+		<skill skillId="146" skillLvl="37" skillName="Anti Magic" levelUpSp="220000" getLevel="66" />
+		<skill skillId="213" skillLvl="7" skillName="Boost Mana" levelUpSp="440000" getLevel="66" />
+		<skill skillId="234" skillLvl="32" skillName="Robe Mastery" levelUpSp="220000" getLevel="66" />
+		<skill skillId="234" skillLvl="33" skillName="Robe Mastery" levelUpSp="220000" getLevel="66" />
+		<skill skillId="249" skillLvl="33" skillName="Weapon Mastery" levelUpSp="220000" getLevel="66" />
+		<skill skillId="249" skillLvl="34" skillName="Weapon Mastery" levelUpSp="220000" getLevel="66" />
+		<skill skillId="258" skillLvl="24" skillName="Light Armor Mastery" levelUpSp="220000" getLevel="66" />
+		<skill skillId="258" skillLvl="25" skillName="Light Armor Mastery" levelUpSp="220000" getLevel="66" />
+		<skill skillId="1126" skillLvl="25" skillName="Servitor Recharge" levelUpSp="220000" getLevel="66" />
+		<skill skillId="1126" skillLvl="26" skillName="Servitor Recharge" levelUpSp="220000" getLevel="66" />
+		<skill skillId="1127" skillLvl="36" skillName="Servitor Heal" levelUpSp="220000" getLevel="66" />
+		<skill skillId="1127" skillLvl="37" skillName="Servitor Heal" levelUpSp="220000" getLevel="66" />
+		<skill skillId="1206" skillLvl="15" skillName="Wind Shackle" levelUpSp="440000" getLevel="66" />
+		<skill skillId="1226" skillLvl="14" skillName="Summon Unicorn Boxer" levelUpSp="440000" getLevel="66" />
+		<skill skillId="1227" skillLvl="14" skillName="Summon Unicorn Mirage" levelUpSp="440000" getLevel="66" />
+		<skill skillId="1277" skillLvl="10" skillName="Summon Unicorn Merrow" levelUpSp="440000" getLevel="66" />
+		<skill skillId="1280" skillLvl="7" skillName="Summon Aqua Cubic" levelUpSp="440000" getLevel="66" />
+		<skill skillId="1329" skillLvl="7" skillName="Mass Summon Aqua Cubic" levelUpSp="440000" getLevel="66" />
+		<skill skillId="1332" skillLvl="6" skillName="Summon Unicorn Seraphim" levelUpSp="440000" getLevel="66" />
+		<skill skillId="1380" skillLvl="6" skillName="Betray" levelUpSp="440000" getLevel="66" />
+		<skill skillId="1384" skillLvl="3" skillName="Mass Surrender to Water" levelUpSp="440000" getLevel="66" />
+		<skill skillId="67" skillLvl="6" skillName="Summon Life Cubic" levelUpSp="550000" getLevel="68" />
+		<skill skillId="146" skillLvl="38" skillName="Anti Magic" levelUpSp="280000" getLevel="68" />
+		<skill skillId="146" skillLvl="39" skillName="Anti Magic" levelUpSp="280000" getLevel="68" />
+		<skill skillId="229" skillLvl="6" skillName="Fast Mana Recovery" levelUpSp="550000" getLevel="68" />
+		<skill skillId="234" skillLvl="34" skillName="Robe Mastery" levelUpSp="280000" getLevel="68" />
+		<skill skillId="234" skillLvl="35" skillName="Robe Mastery" levelUpSp="280000" getLevel="68" />
+		<skill skillId="249" skillLvl="35" skillName="Weapon Mastery" levelUpSp="280000" getLevel="68" />
+		<skill skillId="249" skillLvl="36" skillName="Weapon Mastery" levelUpSp="280000" getLevel="68" />
+		<skill skillId="258" skillLvl="26" skillName="Light Armor Mastery" levelUpSp="280000" getLevel="68" />
+		<skill skillId="258" skillLvl="27" skillName="Light Armor Mastery" levelUpSp="280000" getLevel="68" />
+		<skill skillId="1126" skillLvl="27" skillName="Servitor Recharge" levelUpSp="280000" getLevel="68" />
+		<skill skillId="1126" skillLvl="28" skillName="Servitor Recharge" levelUpSp="280000" getLevel="68" />
+		<skill skillId="1127" skillLvl="38" skillName="Servitor Heal" levelUpSp="280000" getLevel="68" />
+		<skill skillId="1127" skillLvl="39" skillName="Servitor Heal" levelUpSp="280000" getLevel="68" />
+		<skill skillId="1206" skillLvl="16" skillName="Wind Shackle" levelUpSp="550000" getLevel="68" />
+		<skill skillId="1226" skillLvl="15" skillName="Summon Unicorn Boxer" levelUpSp="550000" getLevel="68" />
+		<skill skillId="1227" skillLvl="15" skillName="Summon Unicorn Mirage" levelUpSp="550000" getLevel="68" />
+		<skill skillId="1277" skillLvl="11" skillName="Summon Unicorn Merrow" levelUpSp="550000" getLevel="68" />
+		<skill skillId="1332" skillLvl="7" skillName="Summon Unicorn Seraphim" levelUpSp="550000" getLevel="68" />
+		<skill skillId="1380" skillLvl="7" skillName="Betray" levelUpSp="550000" getLevel="68" />
+		<skill skillId="146" skillLvl="40" skillName="Anti Magic" levelUpSp="280000" getLevel="70" />
+		<skill skillId="146" skillLvl="41" skillName="Anti Magic" levelUpSp="280000" getLevel="70" />
+		<skill skillId="234" skillLvl="36" skillName="Robe Mastery" levelUpSp="280000" getLevel="70" />
+		<skill skillId="234" skillLvl="37" skillName="Robe Mastery" levelUpSp="280000" getLevel="70" />
+		<skill skillId="249" skillLvl="37" skillName="Weapon Mastery" levelUpSp="280000" getLevel="70" />
+		<skill skillId="249" skillLvl="38" skillName="Weapon Mastery" levelUpSp="280000" getLevel="70" />
+		<skill skillId="258" skillLvl="28" skillName="Light Armor Mastery" levelUpSp="280000" getLevel="70" />
+		<skill skillId="258" skillLvl="29" skillName="Light Armor Mastery" levelUpSp="280000" getLevel="70" />
+		<skill skillId="1126" skillLvl="29" skillName="Servitor Recharge" levelUpSp="280000" getLevel="70" />
+		<skill skillId="1126" skillLvl="30" skillName="Servitor Recharge" levelUpSp="280000" getLevel="70" />
+		<skill skillId="1127" skillLvl="40" skillName="Servitor Heal" levelUpSp="280000" getLevel="70" />
+		<skill skillId="1127" skillLvl="41" skillName="Servitor Heal" levelUpSp="280000" getLevel="70" />
+		<skill skillId="1206" skillLvl="17" skillName="Wind Shackle" levelUpSp="550000" getLevel="70" />
+		<skill skillId="1226" skillLvl="16" skillName="Summon Unicorn Boxer" levelUpSp="550000" getLevel="70" />
+		<skill skillId="1227" skillLvl="16" skillName="Summon Unicorn Mirage" levelUpSp="550000" getLevel="70" />
+		<skill skillId="1262" skillLvl="5" skillName="Transfer Pain" levelUpSp="550000" getLevel="70" />
+		<skill skillId="1277" skillLvl="12" skillName="Summon Unicorn Merrow" levelUpSp="550000" getLevel="70" />
+		<skill skillId="1280" skillLvl="8" skillName="Summon Aqua Cubic" levelUpSp="550000" getLevel="70" />
+		<skill skillId="1299" skillLvl="2" skillName="Servitor Empowerment" levelUpSp="550000" getLevel="70" />
+		<skill skillId="1329" skillLvl="8" skillName="Mass Summon Aqua Cubic" levelUpSp="550000" getLevel="70" />
+		<skill skillId="1332" skillLvl="8" skillName="Summon Unicorn Seraphim" levelUpSp="550000" getLevel="70" />
+		<skill skillId="1380" skillLvl="8" skillName="Betray" levelUpSp="550000" getLevel="70" />
+		<skill skillId="1384" skillLvl="4" skillName="Mass Surrender to Water" levelUpSp="550000" getLevel="70" />
+		<skill skillId="67" skillLvl="7" skillName="Summon Life Cubic" levelUpSp="1070000" getLevel="72" />
+		<skill skillId="146" skillLvl="42" skillName="Anti Magic" levelUpSp="540000" getLevel="72" />
+		<skill skillId="146" skillLvl="43" skillName="Anti Magic" levelUpSp="540000" getLevel="72" />
+		<skill skillId="213" skillLvl="8" skillName="Boost Mana" levelUpSp="1070000" getLevel="72" />
+		<skill skillId="234" skillLvl="38" skillName="Robe Mastery" levelUpSp="540000" getLevel="72" />
+		<skill skillId="234" skillLvl="39" skillName="Robe Mastery" levelUpSp="540000" getLevel="72" />
+		<skill skillId="249" skillLvl="39" skillName="Weapon Mastery" levelUpSp="540000" getLevel="72" />
+		<skill skillId="249" skillLvl="40" skillName="Weapon Mastery" levelUpSp="540000" getLevel="72" />
+		<skill skillId="258" skillLvl="30" skillName="Light Armor Mastery" levelUpSp="540000" getLevel="72" />
+		<skill skillId="258" skillLvl="31" skillName="Light Armor Mastery" levelUpSp="540000" getLevel="72" />
+		<skill skillId="1126" skillLvl="31" skillName="Servitor Recharge" levelUpSp="540000" getLevel="72" />
+		<skill skillId="1126" skillLvl="32" skillName="Servitor Recharge" levelUpSp="540000" getLevel="72" />
+		<skill skillId="1127" skillLvl="42" skillName="Servitor Heal" levelUpSp="540000" getLevel="72" />
+		<skill skillId="1127" skillLvl="43" skillName="Servitor Heal" levelUpSp="540000" getLevel="72" />
+		<skill skillId="1206" skillLvl="18" skillName="Wind Shackle" levelUpSp="1070000" getLevel="72" />
+		<skill skillId="1226" skillLvl="17" skillName="Summon Unicorn Boxer" levelUpSp="1070000" getLevel="72" />
+		<skill skillId="1227" skillLvl="17" skillName="Summon Unicorn Mirage" levelUpSp="1070000" getLevel="72" />
+		<skill skillId="1277" skillLvl="13" skillName="Summon Unicorn Merrow" levelUpSp="1070000" getLevel="72" />
+		<skill skillId="1332" skillLvl="9" skillName="Summon Unicorn Seraphim" levelUpSp="1070000" getLevel="72" />
+		<skill skillId="1380" skillLvl="9" skillName="Betray" levelUpSp="1070000" getLevel="72" />
+		<skill skillId="146" skillLvl="44" skillName="Anti Magic" levelUpSp="680000" getLevel="74" />
+		<skill skillId="146" skillLvl="45" skillName="Anti Magic" levelUpSp="680000" getLevel="74" />
+		<skill skillId="212" skillLvl="6" skillName="Fast HP Recovery" levelUpSp="1350000" getLevel="74" />
+		<skill skillId="229" skillLvl="7" skillName="Fast Mana Recovery" levelUpSp="1350000" getLevel="74" />
+		<skill skillId="234" skillLvl="40" skillName="Robe Mastery" levelUpSp="680000" getLevel="74" />
+		<skill skillId="234" skillLvl="41" skillName="Robe Mastery" levelUpSp="680000" getLevel="74" />
+		<skill skillId="249" skillLvl="41" skillName="Weapon Mastery" levelUpSp="680000" getLevel="74" />
+		<skill skillId="249" skillLvl="42" skillName="Weapon Mastery" levelUpSp="680000" getLevel="74" />
+		<skill skillId="258" skillLvl="32" skillName="Light Armor Mastery" levelUpSp="680000" getLevel="74" />
+		<skill skillId="258" skillLvl="33" skillName="Light Armor Mastery" levelUpSp="680000" getLevel="74" />
+		<skill skillId="1126" skillLvl="33" skillName="Servitor Recharge" levelUpSp="680000" getLevel="74" />
+		<skill skillId="1126" skillLvl="34" skillName="Servitor Recharge" levelUpSp="680000" getLevel="74" />
+		<skill skillId="1127" skillLvl="44" skillName="Servitor Heal" levelUpSp="680000" getLevel="74" />
+		<skill skillId="1127" skillLvl="45" skillName="Servitor Heal" levelUpSp="680000" getLevel="74" />
+		<skill skillId="1206" skillLvl="19" skillName="Wind Shackle" levelUpSp="1350000" getLevel="74" />
+		<skill skillId="1226" skillLvl="18" skillName="Summon Unicorn Boxer" levelUpSp="1350000" getLevel="74" />
+		<skill skillId="1227" skillLvl="18" skillName="Summon Unicorn Mirage" levelUpSp="1350000" getLevel="74" />
+		<skill skillId="1277" skillLvl="14" skillName="Summon Unicorn Merrow" levelUpSp="1350000" getLevel="74" />
+		<skill skillId="1280" skillLvl="9" skillName="Summon Aqua Cubic" levelUpSp="1350000" getLevel="74" />
+		<skill skillId="1329" skillLvl="9" skillName="Mass Summon Aqua Cubic" levelUpSp="1350000" getLevel="74" />
+		<skill skillId="1332" skillLvl="10" skillName="Summon Unicorn Seraphim" levelUpSp="1350000" getLevel="74" />
+		<skill skillId="1380" skillLvl="10" skillName="Betray" levelUpSp="1350000" getLevel="74" />
+		<skill skillId="1384" skillLvl="5" skillName="Mass Surrender to Water" levelUpSp="1350000" getLevel="74" />
 	</skillTree>
 </list>

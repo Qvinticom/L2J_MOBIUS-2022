@@ -130,23 +130,16 @@ public class MultiSellChoose implements IClientIncomingPacket
 		}
 		
 		final Npc npc = player.getLastFolkNPC();
-		if (!list.isNpcAllowed(-1))
+		if (!list.isNpcAllowed(-1) && !isAllowedToUse(player, npc, list))
 		{
-			if ((npc == null) //
-				|| !list.isNpcAllowed(npc.getId()) //
-				|| !list.checkNpcObjectId(npc.getObjectId()) //
-				|| (player.getInstanceId() != npc.getInstanceId()) //
-				|| !player.isInsideRadius3D(npc, Npc.INTERACTION_DISTANCE))
+			if (player.isGM())
 			{
-				if (player.isGM())
-				{
-					player.sendMessage("Multisell " + _listId + " is restricted. Under current conditions cannot be used. Only GMs are allowed to use it.");
-				}
-				else
-				{
-					player.setMultiSell(null);
-					return;
-				}
+				player.sendMessage("Multisell " + _listId + " is restricted. Under current conditions cannot be used. Only GMs are allowed to use it.");
+			}
+			else
+			{
+				player.setMultiSell(null);
+				return;
 			}
 		}
 		
@@ -655,6 +648,32 @@ public class MultiSellChoose implements IClientIncomingPacket
 			return false;
 		}
 		
+		return true;
+	}
+	
+	/**
+	 * @param player
+	 * @param npc
+	 * @param list
+	 * @return {@code true} if player can buy stuff from the multisell, {@code false} otherwise.
+	 */
+	private boolean isAllowedToUse(PlayerInstance player, Npc npc, PreparedMultisellListHolder list)
+	{
+		if (npc != null)
+		{
+			if (!list.isNpcAllowed(npc.getId()))
+			{
+				return false;
+			}
+			else if (list.isNpcOnly() && (!list.checkNpcObjectId(npc.getObjectId()) || (npc.getInstanceWorld() != player.getInstanceWorld()) || !player.isInsideRadius3D(npc, Npc.INTERACTION_DISTANCE)))
+			{
+				return false;
+			}
+		}
+		else if (list.isNpcOnly())
+		{
+			return false;
+		}
 		return true;
 	}
 }

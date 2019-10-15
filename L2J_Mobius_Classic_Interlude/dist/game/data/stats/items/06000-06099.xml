@@ -1,5 +1,23 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="6000" name="Blueprint: Tower of Insolence, 12th Floor" type="EtcItem">
+		<!-- Blueprint drafted by the architects of the Tower of Insolence. This is the blueprint of the 12th of 13 floors. -->
+		<set name="icon" val="icon.etc_letter_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="400" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6001" name="Blueprint: Tower of Insolence, 13th Floor" type="EtcItem">
+		<!-- Blueprint drafted by the architects of the Tower of Insolence. This is the blueprint of the 13th of 13 floors. -->
+		<set name="icon" val="icon.etc_letter_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="400" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
 	<item id="6002" name="Ancient Porcelain" type="EtcItem">
 		<!-- Porcelain from the era of an ancient empire found in the Tower of Insolence. It Has not been evaluated by antique experts yet. -->
 		<set name="icon" val="icon.etc_oil_pot_white_i00" />
@@ -55,6 +73,299 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
+	<item id="6007" name="Reagent Pouch" type="EtcItem">
+		<!-- Pouch that contains an alchemic reagent. Double-click to confirm contents. -->
+		<set name="icon" val="icon.etc_pouch_gray_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_questitem" val="true" />
+		<skills>
+			<skill id="2174" level="1" /> <!-- Ingredient Bag -->
+		</skills>
+	</item>
+	<item id="6008" name="Reagent Pouch" type="EtcItem">
+		<!-- Pouch that contains an alchemic reagent. Double-click to confirm contents. -->
+		<set name="icon" val="icon.etc_pouch_yellow_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_questitem" val="true" />
+		<skills>
+			<skill id="2174" level="2" /> <!-- Ingredient Bag -->
+		</skills>
+	</item>
+	<item id="6009" name="Reagent Pouch" type="EtcItem">
+		<!-- Pouch that contains an alchemic reagent. Double-click to confirm contents. -->
+		<set name="icon" val="icon.etc_pouch_brown_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_questitem" val="true" />
+		<skills>
+			<skill id="2174" level="3" /> <!-- Ingredient Bag -->
+		</skills>
+	</item>
+	<item id="6010" name="Reagent Box" type="EtcItem">
+		<!-- Small box containing alchemic reagent. -->
+		<set name="icon" val="icon.etc_jewel_box_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_questitem" val="true" />
+		<skills>
+			<skill id="2175" level="1" /> <!-- Ingredient Box -->
+		</skills>
+	</item>
+	<item id="6011" name="Wyrm's Blood" type="EtcItem">
+		<!-- Used to mix alchemic reagents. -->
+		<set name="icon" val="icon.etc_reagent_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="200" />
+		<set name="is_questitem" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6012" name="Lava Stone" type="EtcItem">
+		<!-- Used to mix alchemic reagents. -->
+		<set name="icon" val="icon.etc_inf_ore_high_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="200" />
+		<set name="is_questitem" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6013" name="Moonstone Shard" type="EtcItem">
+		<!-- Used to mix alchemic reagents. -->
+		<set name="icon" val="icon.etc_broken_crystal_silver_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="200" />
+		<set name="is_questitem" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6014" name="Rotten Bone Piece" type="EtcItem">
+		<!-- Used to mix alchemic reagents. -->
+		<set name="icon" val="icon.etc_piece_bone_black_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="200" />
+		<set name="is_questitem" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6015" name="Demon's Blood" type="EtcItem">
+		<!-- Used to mix alchemic reagents. -->
+		<set name="icon" val="icon.etc_reagent_green_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="200" />
+		<set name="is_questitem" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6016" name="Infernium Ore" type="EtcItem">
+		<!-- Used to mix alchemic reagents. -->
+		<set name="icon" val="icon.etc_inf_ore_least_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="200" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6017" name="Blood Root" type="EtcItem">
+		<!-- Used to mix alchemic reagents. -->
+		<set name="icon" val="icon.etc_ginseng_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="200" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6018" name="Volcanic Ash" type="EtcItem">
+		<!-- Used to mix alchemic reagents. -->
+		<set name="icon" val="icon.etc_powder_gray_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="100" />
+		<set name="is_questitem" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6019" name="Quicksilver" type="EtcItem">
+		<!-- Used to mix alchemic reagents. -->
+		<set name="icon" val="icon.etc_reagent_silver_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="200" />
+		<set name="is_questitem" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6020" name="Brimstone" type="EtcItem">
+		<!-- Used to mix alchemic reagents. -->
+		<set name="icon" val="icon.etc_powder_orange_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="200" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6021" name="Dracoplasm" type="EtcItem">
+		<!-- Low-grade Reagent -->
+		<set name="icon" val="icon.etc_dragons_blood_i05" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="1200" />
+		<set name="is_questitem" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6022" name="Magma Dust" type="EtcItem">
+		<!-- Low-grade Reagent -->
+		<set name="icon" val="icon.etc_powder_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="2500" />
+		<set name="is_questitem" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6023" name="Moon Dust" type="EtcItem">
+		<!-- Low-grade Reagent -->
+		<set name="icon" val="icon.etc_powder_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="2500" />
+		<set name="is_questitem" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6024" name="Necroplasm" type="EtcItem">
+		<!-- Low-grade Reagent -->
+		<set name="icon" val="icon.etc_potion_purpel_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="2500" />
+		<set name="is_questitem" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6025" name="Demonplasm" type="EtcItem">
+		<!-- Low-grade Reagent -->
+		<set name="icon" val="icon.etc_potion_green_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="2500" />
+		<set name="is_questitem" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6026" name="Inferno Dust" type="EtcItem">
+		<!-- Low-grade Reagent -->
+		<set name="icon" val="icon.etc_powder_black_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="2500" />
+		<set name="is_questitem" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6027" name="Draconic Essence" type="EtcItem">
+		<!-- High-grade Reagent -->
+		<set name="icon" val="icon.etc_dragon_blood_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="2500" />
+		<set name="is_questitem" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6028" name="Fire Essence" type="EtcItem">
+		<!-- High-grade Reagent -->
+		<set name="icon" val="icon.etc_dragons_blood_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="2500" />
+		<set name="is_questitem" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6029" name="Lunargent" type="EtcItem">
+		<!-- High-grade Reagent -->
+		<set name="icon" val="icon.etc_mithril_ore_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="2500" />
+		<set name="is_questitem" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6030" name="Midnight Oil" type="EtcItem">
+		<!-- High-grade Reagent -->
+		<set name="icon" val="icon.etc_dragons_blood_i02" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="2500" />
+		<set name="is_questitem" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6031" name="Demonic Essence" type="EtcItem">
+		<!-- High-grade Reagent -->
+		<set name="icon" val="icon.etc_dragons_blood_i05" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="2500" />
+		<set name="is_questitem" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6032" name="Abyss Oil" type="EtcItem">
+		<!-- High-grade Reagent -->
+		<set name="icon" val="icon.etc_dragons_blood_i04" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="2500" />
+		<set name="is_questitem" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6033" name="Hellfire Oil" type="EtcItem">
+		<!-- Highest Grade Reagent -->
+		<set name="icon" val="icon.etc_luxury_wine_b_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="5000" />
+		<set name="is_questitem" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6034" name="Nightmare Oil" type="EtcItem">
+		<!-- Highest Grade Reagent -->
+		<set name="icon" val="icon.etc_luxury_wine_c_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="price" val="5000" />
+		<set name="is_questitem" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
 	<item id="6035" name="Magic Haste Potion" type="EtcItem">
 		<!-- Casting Spd. is raised. -->
 		<set name="icon" val="icon.etc_potion_of_acumen2_i00" />
@@ -75,7 +386,7 @@
 		</skills>
 	</item>
 	<item id="6036" name="Greater Magic Haste Potion" type="EtcItem">
-		<!-- Greatly increases Casting Spd. for 5 minutes. -->
+		<!-- Casting Spd. is raised. -->
 		<set name="icon" val="icon.etc_potion_of_acumen3_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -113,7 +424,7 @@
 		</skills>
 	</item>
 	<item id="6038" name="Greater Mercenary Posting Ticket (Sword/Stationary)" type="EtcItem">
-		<!-- Cannot be used. Can be sold at an NPC? store. -->
+		<!-- Gludio/Sword/Stationary. -->
 		<set name="icon" val="icon.mticket_sword_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -124,7 +435,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6039" name="Greater Mercenary Posting Ticket (Spear/Stationary)" type="EtcItem">
-		<!-- Cannot be used. Can be sold at an NPC? store. -->
+		<!-- Gludio/Spear/Stationary. -->
 		<set name="icon" val="icon.mticket_pole_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -135,7 +446,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6040" name="Greater Mercenary Posting Ticket (Bow/Stationary)" type="EtcItem">
-		<!-- Cannot be used. Can be sold at an NPC? store. -->
+		<!-- Gludio/Bow/Stationary. -->
 		<set name="icon" val="icon.mticket_bow_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -146,7 +457,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6041" name="Greater Mercenary Posting Ticket (Cleric/Stationary)" type="EtcItem">
-		<!-- Cannot be used. Can be sold at an NPC? store. -->
+		<!-- Gludio/Cleric/Stationary. -->
 		<set name="icon" val="icon.mticket_cleric_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -157,7 +468,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6042" name="Greater Mercenary Posting Ticket (Wizard/Stationary)" type="EtcItem">
-		<!-- Cannot be used. Can be sold at an NPC? store. -->
+		<!-- Gludio/Wizard/Stationary. -->
 		<set name="icon" val="icon.mticket_wizard_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -168,7 +479,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6043" name="Greater Mercenary Posting Ticket (Sword/Mobile)" type="EtcItem">
-		<!-- Cannot be used. Can be sold at an NPC? store. -->
+		<!-- Gludio/Sword/Mobile. -->
 		<set name="icon" val="icon.mticket_sword_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -179,7 +490,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6044" name="Greater Mercenary Posting Ticket (Spear/Mobile)" type="EtcItem">
-		<!-- Cannot be used. Can be sold at an NPC? store. -->
+		<!-- Gludio/Spear/Mobile. -->
 		<set name="icon" val="icon.mticket_pole_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -190,7 +501,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6045" name="Greater Mercenary Posting Ticket (Bow/Mobile)" type="EtcItem">
-		<!-- Cannot be used. Can be sold at an NPC? store. -->
+		<!-- Gludio/Bow/Mobile. -->
 		<set name="icon" val="icon.mticket_bow_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -201,7 +512,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6046" name="Greater Mercenary Posting Ticket (Cleric/Mobile)" type="EtcItem">
-		<!-- Cannot be used. Can be sold at an NPC? store. -->
+		<!-- Gludio/Cleric/Mobile. -->
 		<set name="icon" val="icon.mticket_cleric_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -212,7 +523,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6047" name="Greater Mercenary Posting Ticket (Wizard/Mobile)" type="EtcItem">
-		<!-- Cannot be used. Can be sold at an NPC? store. -->
+		<!-- Gludio/Wizard/Mobile. -->
 		<set name="icon" val="icon.mticket_wizard_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -221,6 +532,33 @@
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="6048" name="Trash" type="EtcItem">
+		<set name="icon" val="icon.mticket_sword_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="30000" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6049" name="Trash" type="EtcItem">
+		<set name="icon" val="icon.mticket_pole_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="30000" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6050" name="Trash" type="EtcItem">
+		<set name="icon" val="icon.mticket_bow_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="30000" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6051" name="Greater Mercenary Posting Ticket (Sword/Stationary)" type="EtcItem">
 		<!-- Dion/Sword/Stationary. -->
@@ -332,6 +670,33 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="MercTicket" />
 	</item>
+	<item id="6061" name="Trash" type="EtcItem">
+		<set name="icon" val="icon.mticket_cleric_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="30000" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6062" name="Trash" type="EtcItem">
+		<set name="icon" val="icon.mticket_wizard_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="30000" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6063" name="Trash" type="EtcItem">
+		<set name="icon" val="icon.mticket_sword_move_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="30000" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
 	<item id="6064" name="Greater Mercenary Posting Ticket (Sword/Stationary)" type="EtcItem">
 		<!-- Giran/Sword/Stationary. -->
 		<set name="icon" val="icon.mticket_sword_fix_i00" />
@@ -442,6 +807,33 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="MercTicket" />
 	</item>
+	<item id="6074" name="Trash" type="EtcItem">
+		<set name="icon" val="icon.mticket_pole_move_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="30000" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6075" name="Trash" type="EtcItem">
+		<set name="icon" val="icon.mticket_bow_move_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="30000" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6076" name="Trash" type="EtcItem">
+		<set name="icon" val="icon.mticket_cleric_move_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="30000" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
 	<item id="6077" name="Greater Mercenary Posting Ticket (Sword/Stationary)" type="EtcItem">
 		<!-- Oren/Sword/Stationary. -->
 		<set name="icon" val="icon.mticket_sword_fix_i00" />
@@ -551,6 +943,33 @@
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="MercTicket" />
+	</item>
+	<item id="6087" name="Trash" type="EtcItem">
+		<set name="icon" val="icon.mticket_wizard_move_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="30000" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6088" name="Trash" type="EtcItem">
+		<set name="icon" val="icon.mticket_sword_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="30000" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="6089" name="Trash" type="EtcItem">
+		<set name="icon" val="icon.mticket_pole_fix_i00" />
+		<set name="etcitem_type" val="CASTLE_GUARD" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="price" val="30000" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6090" name="Greater Mercenary Posting Ticket (Sword/Stationary)" type="EtcItem">
 		<!-- Aden/Sword/Stationary. -->

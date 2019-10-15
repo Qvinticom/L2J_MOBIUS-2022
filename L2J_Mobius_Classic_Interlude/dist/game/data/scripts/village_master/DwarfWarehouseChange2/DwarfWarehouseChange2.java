@@ -37,6 +37,9 @@ public class DwarfWarehouseChange2 extends AbstractNpcAI
 		30685, // Baxt
 		30845, // Klump
 		30894, // Natools
+		31269, // Mona
+		31314, // Donal
+		31958, // Yasheni
 	};
 	
 	// Items

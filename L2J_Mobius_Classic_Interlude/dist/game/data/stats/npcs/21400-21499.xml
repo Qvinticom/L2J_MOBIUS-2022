@@ -1,0 +1,418 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
+	<npc id="21438" level="65" type="Monster" name="Heathen Warrior">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<param name="MoveAroundSocial" value="80" />
+			<param name="MoveAroundSocial1" value="80" />
+			<param name="MoveAroundSocial2" value="80" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="30" />
+			<param name="LongRangeGuardRate" value="5" />
+			<skill name="PhysicalSpecial" id="4032" level="6" /> <!-- NPC Strike -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="946" lhand="945" /> <!-- rhand: Skeleton Dagger lhand: Skeleton Buckler -->
+		<acquire exp="1790" sp="167" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2193.43142" hpRegen="7.5" mp="1188.8" mpRegen="2.7" />
+			<attack physical="582.81759" magical="397.98887" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="271.89033" magical="181.027644954078" shield="136" shieldRate="20" />
+			<attribute>
+				<attack type="DARK" value="20" />
+				<defence fire="-5" water="20" wind="20" earth="20" holy="-32" dark="53" />
+			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="175" />
+			</speed>
+			<hitTime>520</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4032" level="6" /> <!-- NPC Strike -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
+			<skill id="4408" level="8" /> <!-- HP Increase (1/4x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="7" /> <!-- Daggers -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+		</skillList>
+		<shots shotChance="30" spiritChance="30" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>0.25</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="300">
+			<clanList>
+				<clan>UNDEAD</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<drop>
+				<item id="57" min="244" max="495" chance="70" /> <!-- Adena -->
+				<item id="11930" min="1" max="1" chance="0.000988889302484691" /> <!-- Common Item - Sword of Damascus -->
+				<item id="4114" min="1" max="1" chance="0.0132518596332967" /> <!-- Sword of Damascus Blade -->
+				<item id="11929" min="1" max="1" chance="0.000988889302484691" /> <!-- Common Item - Guardian Sword -->
+				<item id="8330" min="1" max="1" chance="0.0132295702332407" /> <!-- Guardian Sword Blade -->
+				<item id="11943" min="1" max="1" chance="0.000988889302484691" /> <!-- Common Item - Wizard's Tear -->
+				<item id="8336" min="1" max="1" chance="0.0132519023332968" /> <!-- Blade of the Wizard's Tear -->
+				<item id="1873" min="1" max="1" chance="0.727397538372517" /> <!-- Silver Nugget -->
+				<item id="1868" min="1" max="1" chance="3.63698769186258" /> <!-- Thread -->
+				<item id="1876" min="1" max="1" chance="0.363701423786163" /> <!-- Mithril Ore -->
+				<item id="1895" min="1" max="1" chance="0.519568911808968" /> <!-- Metallic Fiber -->
+				<item id="4042" min="1" max="1" chance="0.0303102217154503" /> <!-- Enria -->
+				<item id="729" min="1" max="1" chance="0.000201749592781067" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
+				<item id="8729" min="1" max="1" chance="0.0242471155323982" /> <!-- Life Stone - Level 64 -->
+				<item id="8739" min="1" max="1" chance="0.00606310618305206" /> <!-- Mid-Grade Life Stone - Level 64 -->
+				<item id="8749" min="1" max="1" chance="0.000605248778343201" /> <!-- High-Grade Life Stone - Level 64 -->
+				<item id="8759" min="1" max="1" chance="0.000116802395820618" /> <!-- Top-Grade Life Stone - Level 64 -->
+			</drop>
+			<spoil>
+				<item id="4077" min="1" max="1" chance="2.7694" /> <!-- Doom Shield Fragment -->
+				<item id="6333" min="1" max="1" chance="0.7068" /> <!-- Recipe: Sealed Phoenix Ring(70%) -->
+				<item id="4078" min="1" max="1" chance="0.8993" /> <!-- Blue Wolf Breastplate Part -->
+			</spoil>
+		</dropLists>
+		<collision>
+			<radius normal="11" />
+			<height normal="28.5" />
+		</collision>
+	</npc>
+	<npc id="21439" level="66" type="Monster" name="Heathen Executed">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<param name="MoveAroundSocial" value="130" />
+			<param name="MoveAroundSocial1" value="130" />
+			<param name="MoveAroundSocial2" value="130" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="30" />
+			<param name="LongRangeGuardRate" value="5" />
+			<skill name="PhysicalSpecial" id="4073" level="6" /> <!-- Stun -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<acquire exp="1845" sp="174" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2244.67715" hpRegen="7.5" mp="1219.8" mpRegen="2.7" />
+			<attack physical="603.79903" magical="412.31647" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="276.72752" magical="184.248304515217" />
+			<attribute>
+				<attack type="DARK" value="20" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="-32" dark="53" />
+			</attribute>
+			<speed>
+				<walk ground="15" />
+				<run ground="175" />
+			</speed>
+			<hitTime>450</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4073" level="6" /> <!-- Stun -->
+			<skill id="4408" level="8" /> <!-- HP Increase (1/4x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+		</skillList>
+		<shots shotChance="30" spiritChance="30" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>0.25</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="300">
+			<clanList>
+				<clan>UNDEAD</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<drop>
+				<item id="57" min="252" max="511" chance="70" /> <!-- Adena -->
+				<item id="11932" min="1" max="1" chance="0.0030719620013088" /> <!-- Common Item - Lance -->
+				<item id="4115" min="1" max="1" chance="0.0410280394530445" /> <!-- Lance Blade -->
+				<item id="1864" min="1" max="1" chance="3.41766726735878" /> <!-- Stem -->
+				<item id="1865" min="1" max="1" chance="1.70882721472931" /> <!-- Varnish -->
+				<item id="1866" min="1" max="1" chance="1.13922242245293" /> <!-- Suede -->
+				<item id="1873" min="1" max="1" chance="0.683528318311691" /> <!-- Silver Nugget -->
+				<item id="1868" min="1" max="1" chance="3.41766726735878" /> <!-- Thread -->
+				<item id="5456" min="1" max="1" chance="0.000629057107925415" /> <!-- Recipe: Tallum Glaive(60%) -->
+				<item id="8729" min="1" max="1" chance="0.0227872727870941" /> <!-- Life Stone - Level 64 -->
+				<item id="8739" min="1" max="1" chance="0.00570002767181397" /> <!-- Mid-Grade Life Stone - Level 64 -->
+				<item id="8749" min="1" max="1" chance="0.000564867607116699" /> <!-- High-Grade Life Stone - Level 64 -->
+				<item id="8759" min="1" max="1" chance="0.000115541101455688" /> <!-- Top-Grade Life Stone - Level 64 -->
+				<item id="1343" min="10" max="30" chance="2.44119090525627" /> <!-- Silver Arrow -->
+			</drop>
+			<spoil>
+				<item id="4116" min="1" max="1" chance="0.2781" /> <!-- Deadman's Glory Stone -->
+				<item id="5276" min="1" max="1" chance="0.0848" /> <!-- Recipe: Greater Spiritshot (A) Compressed Package(100%) -->
+				<item id="4117" min="1" max="1" chance="0.2781" /> <!-- Art of Battle Axe Blade -->
+			</spoil>
+		</dropLists>
+		<collision>
+			<radius normal="30" grown="15.5" />
+			<height normal="40" grown="48.5" />
+		</collision>
+	</npc>
+	<npc id="21440" level="67" type="Monster" name="Heathen Archer">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<param name="MoveAroundSocial" value="157" />
+			<param name="MoveAroundSocial1" value="157" />
+			<param name="MoveAroundSocial2" value="157" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="30" />
+			<skill name="PhysicalSpecial" id="4040" level="6" /> <!-- NPC Bow Attack -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="284" /> <!-- rhand: Dark Elven Long Bow -->
+		<acquire exp="2020" sp="192" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2295.48154" hpRegen="7.5" mp="1251.0" mpRegen="2.7" />
+			<attack physical="624.93199" magical="426.74754" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="281.55251" magical="187.460838840844" />
+			<attribute>
+				<attack type="DARK" value="20" />
+				<defence fire="-5" water="20" wind="20" earth="20" holy="-32" dark="53" />
+			</attribute>
+			<speed>
+				<walk ground="40" />
+				<run ground="155" />
+			</speed>
+			<hitTime>800</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4040" level="6" /> <!-- NPC Bow Attack -->
+			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
+			<skill id="4408" level="8" /> <!-- HP Increase (1/4x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="9" /> <!-- Bows -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+		</skillList>
+		<shots shotChance="30" spiritChance="30" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>0.25</sNpcPropHpRate>
+		<ai type="ARCHER" aggroRange="300" clanHelpRange="300" dodge="15" isAggressive="false">
+			<clanList>
+				<clan>UNDEAD</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<drop>
+				<item id="57" min="275" max="563" chance="70" /> <!-- Adena -->
+				<item id="12201" min="1" max="1" chance="0.00457697111400962" /> <!-- Common Item - Blue Wolf Tunic -->
+				<item id="4084" min="1" max="1" chance="0.0448237381165326" /> <!-- Blue Wolf Tunic Fabric -->
+				<item id="12192" min="1" max="1" chance="0.00457697111400962" /> <!-- Common Item - Tunic of Doom -->
+				<item id="4085" min="1" max="1" chance="0.0448237381165326" /> <!-- Tunic of Doom Pattern -->
+				<item id="12203" min="1" max="1" chance="0.00732718718251586" /> <!-- Common Item - Blue Wolf Stockings -->
+				<item id="4086" min="1" max="1" chance="0.0605221065075696" /> <!-- Blue Wolf Stockings Pattern -->
+				<item id="12205" min="1" max="1" chance="0.00732718718251586" /> <!-- Common Item - Stockings of Doom -->
+				<item id="4087" min="1" max="1" chance="0.0605221065075696" /> <!-- Stockings of Doom Pattern -->
+				<item id="1865" min="1" max="1" chance="1.87539037915039" /> <!-- Varnish -->
+				<item id="1870" min="1" max="1" chance="1.87539037915039" /> <!-- Coal -->
+				<item id="1879" min="1" max="1" chance="0.312562750225067" /> <!-- Cokes -->
+				<item id="1875" min="1" max="1" chance="0.125025100090027" /> <!-- Stone of Purity -->
+				<item id="4040" min="1" max="1" chance="0.0375047544670105" /> <!-- Mold Lubricant -->
+				<item id="6335" min="1" max="1" chance="0.00721645599365234" /> <!-- Recipe: Sealed Majestic Necklace(70%) -->
+				<item id="8730" min="1" max="1" chance="0.0208375166816711" /> <!-- Life Stone - Level 67 -->
+				<item id="8740" min="1" max="1" chance="0.00521111389541626" /> <!-- Mid-Grade Life Stone - Level 67 -->
+				<item id="8750" min="1" max="1" chance="0.000520417499542236" /> <!-- High-Grade Life Stone - Level 67 -->
+				<item id="8760" min="1" max="1" chance="0.000104083499908447" /> <!-- Top-Grade Life Stone - Level 67 -->
+				<item id="1343" min="10" max="30" chance="2.67913704324341" /> <!-- Silver Arrow -->
+			</drop>
+			<spoil>
+				<item id="4040" min="1" max="1" chance="1.3968" /> <!-- Mold Lubricant -->
+				<item id="1875" min="1" max="1" chance="4.6559" /> <!-- Stone of Purity -->
+				<item id="4099" min="1" max="1" chance="3.1353" /> <!-- Sealed Doom Boots Part -->
+			</spoil>
+		</dropLists>
+		<collision>
+			<radius normal="11" />
+			<height normal="27" />
+		</collision>
+	</npc>
+	<npc id="21441" level="68" type="Monster" name="Heathen Grunt">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="30" />
+			<param name="LongRangeGuardRate" value="5" />
+			<skill name="PhysicalSpecial" id="4072" level="6" /> <!-- Stun -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="96" /> <!-- rhand: Scythe -->
+		<acquire exp="1959" sp="190" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2345.76698" hpRegen="7.5" mp="1282.4" mpRegen="2.7" />
+			<attack physical="646.17968" magical="441.25696" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="286.3615" magical="190.662718462344" />
+			<attribute>
+				<attack type="DARK" value="20" />
+				<defence fire="-5" water="20" wind="20" earth="20" holy="-32" dark="53" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="170" />
+			</speed>
+			<hitTime>210</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4072" level="6" /> <!-- Stun -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
+			<skill id="4408" level="8" /> <!-- HP Increase (1/4x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+		</skillList>
+		<shots shotChance="30" spiritChance="30" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>0.25</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="300">
+			<clanList>
+				<clan>UNDEAD</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<drop>
+				<item id="57" min="269" max="546" chance="70" /> <!-- Adena -->
+				<item id="11946" min="1" max="1" chance="0.000691171083498746" /> <!-- Common Item - Dasparion's Staff -->
+				<item id="5543" min="1" max="1" chance="0.00854640219596028" /> <!-- Dasparion's Staff Head -->
+				<item id="11949" min="1" max="1" chance="0.000691171083498746" /> <!-- Common Item - Meteor Shower -->
+				<item id="5532" min="1" max="1" chance="0.00846657969786599" /> <!-- Meteor Shower Head -->
+				<item id="11953" min="1" max="1" chance="0.000691171083498746" /> <!-- Common Item - Spiritual Eye -->
+				<item id="8341" min="1" max="1" chance="0.00845575319812447" /> <!-- Spiritual Eye Piece -->
+				<item id="11958" min="1" max="1" chance="0.000691171083498746" /> <!-- Common Item - Destroyer Hammer -->
+				<item id="8346" min="1" max="1" chance="0.00846657969786599" /> <!-- Hammer Piece of Destroyer -->
+				<item id="1870" min="1" max="1" chance="1.82399016090059" /> <!-- Coal -->
+				<item id="1865" min="1" max="1" chance="1.82399016090059" /> <!-- Varnish -->
+				<item id="1874" min="1" max="1" chance="0.121598039360046" /> <!-- Oriharukon Ore -->
+				<item id="4043" min="1" max="1" chance="0.0607990196800232" /> <!-- Asofe -->
+				<item id="4039" min="1" max="1" chance="0.0607990196800232" /> <!-- Mold Glue -->
+				<item id="5442" min="1" max="1" chance="0.000678443996429443" /> <!-- Recipe: Soul Bow(60%) -->
+				<item id="8730" min="1" max="1" chance="0.0202685143933296" /> <!-- Life Stone - Level 67 -->
+				<item id="8740" min="1" max="1" chance="0.00506875947332382" /> <!-- Mid-Grade Life Stone - Level 67 -->
+				<item id="8750" min="1" max="1" chance="0.000508832997322083" /> <!-- High-Grade Life Stone - Level 67 -->
+				<item id="8760" min="1" max="1" chance="0.000104375999450684" /> <!-- Top-Grade Life Stone - Level 67 -->
+				<item id="1343" min="10" max="30" chance="2.60569463828659" /> <!-- Silver Arrow -->
+			</drop>
+			<spoil>
+				<item id="5448" min="1" max="1" chance="0.0252" /> <!-- Recipe: Soul Separator(60%) -->
+				<item id="5494" min="1" max="1" chance="1.4265" /> <!-- Sealed Dark Crystal Shield Fragment -->
+				<item id="729" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
+			</spoil>
+		</dropLists>
+		<collision>
+			<radius normal="10" grown="12" />
+			<height normal="28" grown="33" />
+		</collision>
+	</npc>
+	<npc id="21442" level="69" type="Monster" name="Heathen Knight">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<param name="MoveAroundSocial" value="215" />
+			<param name="MoveAroundSocial1" value="215" />
+			<param name="MoveAroundSocial2" value="215" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="30" />
+			<param name="LongRangeGuardRate" value="5" />
+			<skill name="PhysicalSpecial" id="4232" level="6" /> <!-- NPC AE Strike -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="150" lhand="103" /> <!-- rhand: Elemental Sword lhand: Tower Shield -->
+		<acquire exp="2017" sp="197" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2395.45533" hpRegen="7.5" mp="1314.0" mpRegen="2.7" />
+			<attack physical="667.50361" magical="455.81844" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="291.15063" magical="193.851368417065" shield="146" shieldRate="20" />
+			<attribute>
+				<attack type="DARK" value="20" />
+				<defence fire="-5" water="20" wind="20" earth="20" holy="-32" dark="53" />
+			</attribute>
+			<speed>
+				<walk ground="40" />
+				<run ground="165" />
+			</speed>
+			<hitTime>170</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4232" level="6" /> <!-- NPC AE Strike -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
+			<skill id="4408" level="8" /> <!-- HP Increase (1/4x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+		</skillList>
+		<shots shotChance="30" spiritChance="30" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>0.25</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="300">
+			<clanList>
+				<clan>UNDEAD</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<drop>
+				<item id="57" min="278" max="563" chance="70" /> <!-- Adena -->
+				<item id="11946" min="1" max="1" chance="0.000711887383386493" /> <!-- Common Item - Dasparion's Staff -->
+				<item id="5543" min="1" max="1" chance="0.00880256139457226" /> <!-- Dasparion's Staff Head -->
+				<item id="11949" min="1" max="1" chance="0.000711887383386493" /> <!-- Common Item - Meteor Shower -->
+				<item id="5532" min="1" max="1" chance="0.00872034639649093" /> <!-- Meteor Shower Head -->
+				<item id="11953" min="1" max="1" chance="0.000711887383386493" /> <!-- Common Item - Spiritual Eye -->
+				<item id="8341" min="1" max="1" chance="0.00870919539675116" /> <!-- Spiritual Eye Piece -->
+				<item id="11958" min="1" max="1" chance="0.000711887383386493" /> <!-- Common Item - Destroyer Hammer -->
+				<item id="8346" min="1" max="1" chance="0.00872034639649093" /> <!-- Hammer Piece of Destroyer -->
+				<item id="1870" min="1" max="1" chance="1.72586367706299" /> <!-- Coal -->
+				<item id="1865" min="1" max="1" chance="1.72586367706299" /> <!-- Varnish -->
+				<item id="1874" min="1" max="1" chance="0.115055520637512" /> <!-- Oriharukon Ore -->
+				<item id="4043" min="1" max="1" chance="0.0575308470687866" /> <!-- Asofe -->
+				<item id="4039" min="1" max="1" chance="0.0575308470687866" /> <!-- Mold Glue -->
+				<item id="5450" min="1" max="1" chance="0.000642044006347656" /> <!-- Recipe: Dragon Grinder(60%) -->
+				<item id="8487" min="1" max="1" chance="0.000944545509338379" /> <!-- Recipe: Destroyer Hammer (60%) -->
+				<item id="8730" min="1" max="1" chance="0.0191748911895752" /> <!-- Life Stone - Level 67 -->
+				<item id="8740" min="1" max="1" chance="0.00479680954742432" /> <!-- Mid-Grade Life Stone - Level 67 -->
+				<item id="8750" min="1" max="1" chance="0.000481533004760742" /> <!-- High-Grade Life Stone - Level 67 -->
+				<item id="8760" min="1" max="1" chance="0.0000987760009765625" /> <!-- Top-Grade Life Stone - Level 67 -->
+				<item id="1343" min="10" max="30" chance="2.46551689287567" /> <!-- Silver Arrow -->
+			</drop>
+			<spoil>
+				<item id="5448" min="1" max="1" chance="0.026" /> <!-- Recipe: Soul Separator(60%) -->
+				<item id="6341" min="1" max="1" chance="1.9393" /> <!-- Sealed Phoenix Earring Gemstone -->
+				<item id="729" min="1" max="1" chance="0.0078" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
+			</spoil>
+		</dropLists>
+		<collision>
+			<radius normal="10" />
+			<height normal="25" />
+		</collision>
+	</npc>
+</list>

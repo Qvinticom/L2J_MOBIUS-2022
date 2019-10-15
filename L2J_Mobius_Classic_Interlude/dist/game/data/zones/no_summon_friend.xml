@@ -18,6 +18,14 @@
 		<node X="-113990" Y="-177851" />
 		<node X="-115606" Y="-177858" />
 	</zone>
+	<zone name="monster_derby_track" type="NoSummonFriendZone" shape="NPoly" minZ="-3668" maxZ="-3168">
+		<node X="14566" Y="182997" />
+		<node X="13257" Y="182976" />
+		<node X="13250" Y="184333" />
+		<node X="11629" Y="184316" />
+		<node X="11621" Y="181298" />
+		<node X="14486" Y="181302" />
+	</zone>
 	<zone name="gm_prison" type="NoSummonFriendZone" shape="NPoly" minZ="-2992" maxZ="-2792">
 		<node X="-116390" Y="-251581" />
 		<node X="-112756" Y="-251617" />
@@ -158,17 +166,5 @@
 		<node X="100118" Y="30085" />
 		<node X="126188" Y="29775" />
 		<node X="127178" Y="3979" />
-	</zone>
-	
-	<!-- Classic Monster Race Track Arena -->
-	<zone name="Monster_Race_Arena_NoCall" type="NoSummonFriendZone" shape="NPoly" minZ="-3800" maxZ="-3550">
-		<node X="13081" Y="183060" />
-		<node X="13302" Y="183285" />
-		<node X="13300" Y="184089" />
-		<node X="13086" Y="184308" />
-		<node X="11993" Y="184308" />
-		<node X="11774" Y="184091" />
-		<node X="11773" Y="183287" />
-		<node X="11994" Y="183055" />
 	</zone>
 </list>

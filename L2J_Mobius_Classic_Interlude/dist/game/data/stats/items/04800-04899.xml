@@ -1,20 +1,20 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="4800" name="Fist" additionalName="Critical Damage" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. + 203 during a Critical Attack. -->
+	<item id="4800" name="Knuckle Duster" additionalName="Haste" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_knuckle_dust_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1148" />
+		<set name="crystal_count" val="118" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1490" />
 		<set name="price" val="441940" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="FIST_WEAPON" />
 		<set name="isAppearanceable" val="true" />
@@ -31,15 +31,15 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="4801" name="Arthro Nail" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 32. -->
+	<item id="4801" name="Arthro Nail" additionalName="Critical Poison" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_arthro_nail_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;52;90" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1157" />
+		<set name="crystal_count" val="119" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="BLOOD_STEEL" />
 		<set name="weight" val="1420" />
@@ -62,15 +62,15 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="4802" name="Arthro Nail" additionalName="Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
+	<item id="4802" name="Arthro Nail" additionalName="Rsk. Evasion" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_arthro_nail_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;52;90" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1157" />
+		<set name="crystal_count" val="119" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="BLOOD_STEEL" />
 		<set name="weight" val="1420" />
@@ -93,15 +93,15 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="4803" name="Arthro Nail" additionalName="Critical Damage" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. + 260 during a Critical Attack. -->
+	<item id="4803" name="Arthro Nail" additionalName="Rsk. Haste" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_arthro_nail_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;52;90" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1157" />
+		<set name="crystal_count" val="119" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="BLOOD_STEEL" />
 		<set name="weight" val="1420" />
@@ -124,15 +124,15 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="4804" name="Bellion Cestus" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 58. -->
+	<item id="4804" name="Bellion Cestus" additionalName="Critical Drain" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_bellion_cestus_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1746" />
+		<set name="crystal_count" val="180" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="MITHRIL" />
 		<set name="weight" val="1390" />
@@ -155,15 +155,15 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="4805" name="Bellion Cestus" additionalName="Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
+	<item id="4805" name="Bellion Cestus" additionalName="Critical Poison" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_bellion_cestus_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1746" />
+		<set name="crystal_count" val="180" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="MITHRIL" />
 		<set name="weight" val="1390" />
@@ -186,15 +186,15 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="4806" name="Bellion Cestus" additionalName="Critical Damage" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. + 275 during a Critical Attack. -->
+	<item id="4806" name="Bellion Cestus" additionalName="Rsk. Haste" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_bellion_cestus_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1746" />
+		<set name="crystal_count" val="180" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="MITHRIL" />
 		<set name="weight" val="1390" />
@@ -217,22 +217,106 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="4810" name="Crystallized Ice Bow" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 56. -->
+	<item id="4807" name="Blood Tornado - Critical Drain" type="Weapon">
+		<!-- <Special Option>. Absorbs the target's HP during a Critical Attack. No Soul Crystal option. -->
+		<set name="icon" val="icon.weapon_blood_tornado_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;32;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="976" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="BLOOD_STEEL" />
+		<set name="weight" val="1370" />
+		<set name="price" val="18300000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="FIST_WEAPON" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">259</stat>
+			<stat type="mAtk">107</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="4808" name="Blood Tornado - Rsk. Evasion" type="Weapon">
+		<!-- <Special Option>. Increases Evasion when HP drops to 60% or below. No Soul Crystal option. -->
+		<set name="icon" val="icon.weapon_blood_tornado_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;32;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="976" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="BLOOD_STEEL" />
+		<set name="weight" val="1370" />
+		<set name="price" val="18300000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="FIST_WEAPON" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">259</stat>
+			<stat type="mAtk">107</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="4809" name="Blood Tornado - Haste" type="Weapon">
+		<!-- <Special Option>. Increases Atk. Spd. No Soul Crystal option. -->
+		<set name="icon" val="icon.weapon_blood_tornado_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;32;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="976" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="BLOOD_STEEL" />
+		<set name="weight" val="1370" />
+		<set name="price" val="18300000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="FIST_WEAPON" />
+		<set name="isAppearanceable" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pAtk">259</stat>
+			<stat type="mAtk">107</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="4810" name="Crystallized Ice Bow" additionalName="Guidance" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_crystallized_ice_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="916" />
+		<set name="crystal_count" val="94" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="1790" />
 		<set name="price" val="352580" />
 		<set name="change_weaponId" val="9237" />
-		<set name="soulshots" val="3" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="8" />
+		<set name="spiritshots" val="2" />
 		<set name="mp_consume" val="2" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="1500" />
@@ -251,22 +335,22 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="4811" name="Crystallized Ice Bow" additionalName="Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
+	<item id="4811" name="Crystallized Ice Bow" additionalName="Evasion" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_crystallized_ice_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="916" />
+		<set name="crystal_count" val="94" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="1790" />
 		<set name="price" val="352580" />
 		<set name="change_weaponId" val="9238" />
-		<set name="soulshots" val="3" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="8" />
+		<set name="spiritshots" val="2" />
 		<set name="mp_consume" val="2" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="1500" />
@@ -285,22 +369,22 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="4812" name="Crystallized Ice Bow" additionalName="Critical Damage" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. + 86 during a Critical Attack. -->
+	<item id="4812" name="Crystallized Ice Bow" additionalName="Quick Recovery" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_crystallized_ice_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="916" />
+		<set name="crystal_count" val="94" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="1790" />
 		<set name="price" val="352580" />
 		<set name="change_weaponId" val="9239" />
-		<set name="soulshots" val="3" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="8" />
+		<set name="spiritshots" val="2" />
 		<set name="mp_consume" val="2" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="BOW" />
@@ -316,22 +400,22 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="4813" name="Elemental Bow" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 52. -->
+	<item id="4813" name="Elemental Bow" additionalName="Guidance" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_elemental_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1148" />
+		<set name="crystal_count" val="118" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1770" />
 		<set name="price" val="441940" />
 		<set name="change_weaponId" val="9257" />
-		<set name="soulshots" val="3" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="8" />
+		<set name="spiritshots" val="2" />
 		<set name="mp_consume" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="820" />
@@ -350,22 +434,22 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="4814" name="Elemental Bow" additionalName="Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
+	<item id="4814" name="Elemental Bow" additionalName="Miser" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_elemental_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1148" />
+		<set name="crystal_count" val="118" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1770" />
 		<set name="price" val="441940" />
 		<set name="change_weaponId" val="9258" />
-		<set name="soulshots" val="3" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="8" />
+		<set name="spiritshots" val="2" />
 		<set name="mp_consume" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="820" />
@@ -382,22 +466,22 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="4815" name="Elemental Bow" additionalName="Critical Damage" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. + 86 during a Critical Attack. -->
+	<item id="4815" name="Elemental Bow" additionalName="Quick Recovery" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_elemental_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1148" />
+		<set name="crystal_count" val="118" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1770" />
 		<set name="price" val="441940" />
 		<set name="change_weaponId" val="9259" />
-		<set name="soulshots" val="3" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="8" />
+		<set name="spiritshots" val="2" />
 		<set name="mp_consume" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="BOW" />
@@ -413,22 +497,22 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="4816" name="Noble Elven Bow" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 52. -->
+	<item id="4816" name="Noble Elven Bow" additionalName="Evasion" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_noble_elven_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1148" />
+		<set name="crystal_count" val="118" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="MITHRIL" />
 		<set name="weight" val="1760" />
 		<set name="price" val="441940" />
 		<set name="change_weaponId" val="9261" />
-		<set name="soulshots" val="3" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="8" />
+		<set name="spiritshots" val="2" />
 		<set name="mp_consume" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="1500" />
@@ -447,22 +531,22 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="4817" name="Noble Elven Bow" additionalName="Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
+	<item id="4817" name="Noble Elven Bow" additionalName="Miser" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_noble_elven_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1148" />
+		<set name="crystal_count" val="118" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="MITHRIL" />
 		<set name="weight" val="1760" />
 		<set name="price" val="441940" />
 		<set name="change_weaponId" val="9262" />
-		<set name="soulshots" val="3" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="8" />
+		<set name="spiritshots" val="2" />
 		<set name="mp_consume" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="1500" />
@@ -479,22 +563,22 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="4818" name="Noble Elven Bow" additionalName="Critical Damage" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. + 86 during a Critical Attack. -->
+	<item id="4818" name="Noble Elven Bow" additionalName="Cheap Shot" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_noble_elven_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1148" />
+		<set name="crystal_count" val="118" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="MITHRIL" />
 		<set name="weight" val="1760" />
 		<set name="price" val="441940" />
 		<set name="change_weaponId" val="9263" />
-		<set name="soulshots" val="3" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="8" />
+		<set name="spiritshots" val="2" />
 		<set name="mp_consume" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="1500" />
@@ -511,22 +595,22 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="4819" name="Akat Longbow" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 52. -->
+	<item id="4819" name="Akat Longbow" additionalName="Guidance" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_akat_long_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1720" />
+		<set name="crystal_count" val="177" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="HORN" />
 		<set name="weight" val="1740" />
 		<set name="price" val="660860" />
 		<set name="change_weaponId" val="9289" />
-		<set name="soulshots" val="4" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="9" />
+		<set name="spiritshots" val="3" />
 		<set name="mp_consume" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="820" />
@@ -545,22 +629,22 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="4820" name="Akat Longbow" additionalName="Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
+	<item id="4820" name="Akat Longbow" additionalName="Evasion" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_akat_long_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1720" />
+		<set name="crystal_count" val="177" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="HORN" />
 		<set name="weight" val="1740" />
 		<set name="price" val="660860" />
 		<set name="change_weaponId" val="9290" />
-		<set name="soulshots" val="4" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="9" />
+		<set name="spiritshots" val="3" />
 		<set name="mp_consume" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="820" />
@@ -579,22 +663,22 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="4821" name="Akat Longbow" additionalName="Critical Damage" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. + 92 during a Critical Attack. -->
+	<item id="4821" name="Akat Longbow" additionalName="Miser" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_akat_long_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1720" />
+		<set name="crystal_count" val="177" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="HORN" />
 		<set name="weight" val="1740" />
 		<set name="price" val="660860" />
 		<set name="change_weaponId" val="9291" />
-		<set name="soulshots" val="4" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="9" />
+		<set name="spiritshots" val="3" />
 		<set name="mp_consume" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="820" />
@@ -611,22 +695,22 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="4822" name="Eminence Bow" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 48. -->
+	<item id="4822" name="Eminence Bow" additionalName="Guidance" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_eminence_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="2452" />
+		<set name="crystal_count" val="252" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="CHRYSOLITE" />
 		<set name="weight" val="1720" />
 		<set name="price" val="942700" />
 		<set name="change_weaponId" val="9301" />
-		<set name="soulshots" val="5" />
-		<set name="spiritshots" val="2" />
+		<set name="soulshots" val="10" />
+		<set name="spiritshots" val="3" />
 		<set name="mp_consume" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="1500" />
@@ -645,22 +729,22 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="4823" name="Eminence Bow" additionalName="Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
+	<item id="4823" name="Eminence Bow" additionalName="Miser" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_eminence_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="2452" />
+		<set name="crystal_count" val="252" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="CHRYSOLITE" />
 		<set name="weight" val="1720" />
 		<set name="price" val="942700" />
 		<set name="change_weaponId" val="9302" />
-		<set name="soulshots" val="5" />
-		<set name="spiritshots" val="2" />
+		<set name="soulshots" val="10" />
+		<set name="spiritshots" val="3" />
 		<set name="mp_consume" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="1500" />
@@ -677,22 +761,22 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="4824" name="Eminence Bow" additionalName="Critical Damage" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. + 99 during a Critical Attack. -->
+	<item id="4824" name="Eminence Bow" additionalName="Cheap Shot" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_eminence_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="2452" />
+		<set name="crystal_count" val="252" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="CHRYSOLITE" />
 		<set name="weight" val="1720" />
 		<set name="price" val="942700" />
 		<set name="change_weaponId" val="9303" />
-		<set name="soulshots" val="5" />
-		<set name="spiritshots" val="2" />
+		<set name="soulshots" val="10" />
+		<set name="spiritshots" val="3" />
 		<set name="mp_consume" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<set name="reuse_delay" val="1500" />
@@ -709,15 +793,15 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="4825" name="Dark Elven Longbow" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 44. -->
+	<item id="4825" name="Dark Elven Longbow" additionalName="Evasion" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_dark_elven_long_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1157" />
+		<set name="crystal_count" val="119" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="1720" />
@@ -743,15 +827,15 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="4826" name="Dark Elven Longbow" additionalName="Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
+	<item id="4826" name="Dark Elven Longbow" additionalName="Critical Bleed" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_dark_elven_long_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1157" />
+		<set name="crystal_count" val="119" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="1720" />
@@ -777,15 +861,15 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="4827" name="Dark Elven Longbow" additionalName="Critical Damage" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. + 139 during a Critical Attack. -->
+	<item id="4827" name="Dark Elven Longbow" additionalName="Miser" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_dark_elven_long_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1157" />
+		<set name="crystal_count" val="119" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="1720" />
@@ -809,15 +893,15 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="4828" name="Bow of Peril" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 40. -->
+	<item id="4828" name="Bow of Peril" additionalName="Guidance" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_hazard_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1746" />
+		<set name="crystal_count" val="180" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="BLOOD_STEEL" />
 		<set name="weight" val="1700" />
@@ -843,15 +927,15 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="4829" name="Bow of Peril" additionalName="Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
+	<item id="4829" name="Bow of Peril" additionalName="Quick Recovery" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_hazard_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1746" />
+		<set name="crystal_count" val="180" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="BLOOD_STEEL" />
 		<set name="weight" val="1700" />
@@ -874,15 +958,15 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="4830" name="Bow of Peril" additionalName="Critical Damage" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. + 148 during a Critical Attack. -->
+	<item id="4830" name="Bow of Peril" additionalName="Cheap Shot" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_hazard_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1746" />
+		<set name="crystal_count" val="180" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="BLOOD_STEEL" />
 		<set name="weight" val="1700" />
@@ -906,21 +990,111 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="4834" name="Scythe" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 71. -->
+	<item id="4831" name="Carnage Bow - Critical Bleed" type="Weapon">
+		<!-- <Special Option>. Has a 30% chance of casting Bleed on the target during a standard Critical Attack. No Soul Crystal option. -->
+		<set name="icon" val="icon.weapon_carnium_bow_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="976" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="DAMASCUS" />
+		<set name="weight" val="1670" />
+		<set name="price" val="18300000" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="1" />
+		<set name="mp_consume" val="4" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="BOW" />
+		<set name="isAppearanceable" val="true" />
+		<set name="reuse_delay" val="1500" />
+		<stats>
+			<stat type="pAtk">440</stat>
+			<stat type="mAtk">107</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">500</stat>
+		</stats>
+	</item>
+	<item id="4832" name="Carnage Bow - Mana Up" type="Weapon">
+		<!-- <Special Option>. Increases Max MP by 30%. No Soul Crystal option. -->
+		<set name="icon" val="icon.weapon_carnium_bow_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="976" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="DAMASCUS" />
+		<set name="weight" val="1670" />
+		<set name="price" val="18300000" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="1" />
+		<set name="mp_consume" val="4" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="BOW" />
+		<set name="isAppearanceable" val="true" />
+		<set name="reuse_delay" val="1500" />
+		<stats>
+			<stat type="pAtk">440</stat>
+			<stat type="mAtk">107</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">500</stat>
+		</stats>
+	</item>
+	<item id="4833" name="Carnage Bow - Quick Recovery" type="Weapon">
+		<!-- <Special Option>. Decreases cooldown by about 10%. No Soul Crystal option. -->
+		<set name="icon" val="icon.weapon_carnium_bow_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="976" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="DAMASCUS" />
+		<set name="weight" val="1670" />
+		<set name="price" val="18300000" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="1" />
+		<set name="mp_consume" val="4" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="BOW" />
+		<set name="isAppearanceable" val="true" />
+		<set name="reuse_delay" val="1500" />
+		<stats>
+			<stat type="pAtk">440</stat>
+			<stat type="mAtk">107</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">500</stat>
+		</stats>
+	</item>
+	<item id="4834" name="Scythe" additionalName="Anger" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_scythe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="916" />
+		<set name="crystal_count" val="94" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="2040" />
 		<set name="price" val="352580" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="SPEAR" />
 		<set name="isAppearanceable" val="true" />
@@ -937,21 +1111,21 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="4835" name="Scythe" additionalName="Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
+	<item id="4835" name="Scythe" additionalName="Critical Stun" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_scythe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="916" />
+		<set name="crystal_count" val="94" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="2040" />
 		<set name="price" val="352580" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="SPEAR" />
 		<set name="isAppearanceable" val="true" />
@@ -969,21 +1143,21 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="4836" name="Scythe" additionalName="Critical Stun" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Has about a 34% chance of casting Stun on the target during a Critical Attack. -->
+	<item id="4836" name="Scythe" additionalName="Light Armor" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_scythe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="916" />
+		<set name="crystal_count" val="94" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="2040" />
 		<set name="price" val="352580" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="SPEAR" />
 		<set name="isAppearanceable" val="true" />
@@ -1001,21 +1175,21 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="4837" name="Orcish Glaive" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 71. -->
+	<item id="4837" name="Orcish Glaive" additionalName="Anger" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_orcish_glaive_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="916" />
+		<set name="crystal_count" val="94" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="2030" />
 		<set name="price" val="352580" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="SPEAR" />
 		<set name="isAppearanceable" val="true" />
@@ -1032,21 +1206,21 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="4838" name="Orcish Glaive" additionalName="Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
+	<item id="4838" name="Orcish Glaive" additionalName="Critical Stun" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_orcish_glaive_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="916" />
+		<set name="crystal_count" val="94" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="2030" />
 		<set name="price" val="352580" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="SPEAR" />
 		<set name="isAppearanceable" val="true" />
@@ -1064,21 +1238,21 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="4839" name="Orcish Glaive" additionalName="Critical Stun" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Has about a 34% chance of casting Stun on the target during a Critical Attack. -->
+	<item id="4839" name="Orcish Glaive" additionalName="Long Blow" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_orcish_glaive_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;80;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="916" />
+		<set name="crystal_count" val="94" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="2030" />
 		<set name="price" val="352580" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="SPEAR" />
 		<set name="isAppearanceable" val="true" />
@@ -1096,21 +1270,21 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="4840" name="Body Slasher" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 71. -->
+	<item id="4840" name="Body Slasher" additionalName="Critical Stun" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_body_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="916" />
+		<set name="crystal_count" val="94" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="2030" />
 		<set name="price" val="352580" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="SPEAR" />
 		<set name="isAppearanceable" val="true" />
@@ -1128,21 +1302,21 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="4841" name="Body Slasher" additionalName="Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
+	<item id="4841" name="Body Slasher" additionalName="Long Blow" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_body_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;80;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="916" />
+		<set name="crystal_count" val="94" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="2030" />
 		<set name="price" val="352580" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="SPEAR" />
 		<set name="isAppearanceable" val="true" />
@@ -1160,21 +1334,21 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="4842" name="Body Slasher" additionalName="Critical Stun" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Has about a 34% chance of casting Stun on the target during a Critical Attack. -->
+	<item id="4842" name="Body Slasher" additionalName="Wide Blow" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_body_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;66;180" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="916" />
+		<set name="crystal_count" val="94" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="2030" />
 		<set name="price" val="352580" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="SPEAR" />
 		<set name="isAppearanceable" val="true" />
@@ -1191,21 +1365,21 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="4843" name="Bec de Corbin" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 71. -->
+	<item id="4843" name="Bec de Corbin" additionalName="Critical Stun" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_bech_de_corbin_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1148" />
+		<set name="crystal_count" val="118" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="2020" />
 		<set name="price" val="441940" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="SPEAR" />
 		<set name="isAppearanceable" val="true" />
@@ -1223,21 +1397,21 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="4844" name="Bec de Corbin" additionalName="Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
+	<item id="4844" name="Bec de Corbin" additionalName="Long Blow" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_bech_de_corbin_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;80;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1148" />
+		<set name="crystal_count" val="118" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="2020" />
 		<set name="price" val="441940" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="SPEAR" />
 		<set name="isAppearanceable" val="true" />
@@ -1255,21 +1429,21 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="4845" name="Bec de Corbin" additionalName="Critical Stun" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Has about a 32% chance of casting Stun on the target during a Critical Attack. -->
+	<item id="4845" name="Bec de Corbin" additionalName="Light Armor" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_bech_de_corbin_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1148" />
+		<set name="crystal_count" val="118" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="2020" />
 		<set name="price" val="441940" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="SPEAR" />
 		<set name="isAppearanceable" val="true" />
@@ -1287,21 +1461,21 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="4846" name="scorpion" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 65. -->
+	<item id="4846" name="scorpion" additionalName="Anger" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_scorpion_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1912" />
+		<set name="crystal_count" val="196" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1990" />
 		<set name="price" val="735540" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="SPEAR" />
 		<set name="isAppearanceable" val="true" />
@@ -1318,21 +1492,21 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="4847" name="scorpion" additionalName="Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
+	<item id="4847" name="scorpion" additionalName="Critical Stun" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_scorpion_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1912" />
+		<set name="crystal_count" val="196" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1990" />
 		<set name="price" val="735540" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="SPEAR" />
 		<set name="isAppearanceable" val="true" />
@@ -1350,21 +1524,21 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="4848" name="scorpion" additionalName="Critical Stun" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Has about a 31% chance of casting Stun on the target during a Critical Attack. -->
+	<item id="4848" name="scorpion" additionalName="Long Blow" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_scorpion_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;80;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1912" />
+		<set name="crystal_count" val="196" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1990" />
 		<set name="price" val="735540" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="SPEAR" />
 		<set name="isAppearanceable" val="true" />
@@ -1382,21 +1556,21 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="4849" name="Widow Maker" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 65. -->
+	<item id="4849" name="Widow Maker" additionalName="Critical Stun" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_widow_maker_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1912" />
+		<set name="crystal_count" val="196" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1980" />
 		<set name="price" val="735540" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="SPEAR" />
 		<set name="isAppearanceable" val="true" />
@@ -1414,21 +1588,21 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="4850" name="Widow Maker" additionalName="Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
+	<item id="4850" name="Widow Maker" additionalName="Long Blow" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_widow_maker_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;80;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1912" />
+		<set name="crystal_count" val="196" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1980" />
 		<set name="price" val="735540" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="SPEAR" />
 		<set name="isAppearanceable" val="true" />
@@ -1446,21 +1620,21 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="4851" name="Widow Maker" additionalName="Critical Stun" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Has about a 31% chance of casting Stun on the target during a Critical Attack. -->
+	<item id="4851" name="Widow Maker" additionalName="Wide Blow" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_widow_maker_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;66;180" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1912" />
+		<set name="crystal_count" val="196" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1980" />
 		<set name="price" val="735540" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="SPEAR" />
 		<set name="isAppearanceable" val="true" />
@@ -1477,21 +1651,21 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="4852" name="Orcish Poleaxe" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 32. -->
+	<item id="4852" name="Orcish Poleaxe" additionalName="Critical Stun" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_orcish_poleaxe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="2452" />
+		<set name="crystal_count" val="252" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="BLOOD_STEEL" />
 		<set name="weight" val="1950" />
 		<set name="price" val="942700" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="SPEAR" />
 		<set name="isAppearanceable" val="true" />
@@ -1509,21 +1683,21 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="4853" name="Orcish Poleaxe" additionalName="Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
+	<item id="4853" name="Orcish Poleaxe" additionalName="Long Blow" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_orcish_poleaxe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;80;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="2452" />
+		<set name="crystal_count" val="252" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="BLOOD_STEEL" />
 		<set name="weight" val="1950" />
 		<set name="price" val="942700" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="SPEAR" />
 		<set name="isAppearanceable" val="true" />
@@ -1541,21 +1715,21 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="4854" name="Orcish Poleaxe" additionalName="Critical Stun" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Has about a 29% chance of casting Stun on the target during a Critical Attack. -->
+	<item id="4854" name="Orcish Poleaxe" additionalName="Wide Blow" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_orcish_poleaxe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;66;180" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="2452" />
+		<set name="crystal_count" val="252" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="BLOOD_STEEL" />
 		<set name="weight" val="1950" />
 		<set name="price" val="942700" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="SPEAR" />
 		<set name="isAppearanceable" val="true" />
@@ -1572,15 +1746,15 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="4855" name="Great Axe" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 58. -->
+	<item id="4855" name="Great Axe" additionalName="Anger" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_great_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1157" />
+		<set name="crystal_count" val="119" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="DAMASCUS" />
 		<set name="weight" val="1940" />
@@ -1603,15 +1777,15 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="4856" name="Great Axe" additionalName="Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
+	<item id="4856" name="Great Axe" additionalName="Critical Stun" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_great_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1157" />
+		<set name="crystal_count" val="119" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="DAMASCUS" />
 		<set name="weight" val="1940" />
@@ -1635,15 +1809,15 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="4857" name="Great Axe" additionalName="Critical Stun" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Has about a 27% chance of casting Stun on the target during a Critical Attack. -->
+	<item id="4857" name="Great Axe" additionalName="Light Armor" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_great_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1157" />
+		<set name="crystal_count" val="119" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="DAMASCUS" />
 		<set name="weight" val="1940" />
@@ -1667,15 +1841,15 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="4858" name="Lance" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 58. -->
+	<item id="4858" name="Lance" additionalName="Anger" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_lancia_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1746" />
+		<set name="crystal_count" val="180" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="BLOOD_STEEL" />
 		<set name="weight" val="1920" />
@@ -1698,15 +1872,15 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="4859" name="Lance" additionalName="Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
+	<item id="4859" name="Lance" additionalName="Critical Stun" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_lancia_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1746" />
+		<set name="crystal_count" val="180" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="BLOOD_STEEL" />
 		<set name="weight" val="1920" />
@@ -1730,15 +1904,15 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="4860" name="Lance" additionalName="Critical Stun" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Has about a 25% chance of casting Stun on the target during a Critical Attack. -->
+	<item id="4860" name="Lance" additionalName="Long Blow" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_lancia_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;80;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1746" />
+		<set name="crystal_count" val="180" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="BLOOD_STEEL" />
 		<set name="weight" val="1920" />
@@ -1762,21 +1936,115 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="4864" name="Heavy Doom Hammer" additionalName="Empower" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. M. Atk. + 50. -->
+	<item id="4861" name="Halberd" additionalName="Critical Stun" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Has about a 15% chance of casting Stun on the target during a Critical Attack. -->
+		<set name="icon" val="icon.weapon_halbard_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="976" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="weight" val="1900" />
+		<set name="price" val="18300000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="SPEAR" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+		</skills>
+		<stats>
+			<stat type="pAtk">213</stat>
+			<stat type="mAtk">107</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="4862" name="Halberd" additionalName="Long Blow" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases the attack range. -->
+		<set name="icon" val="icon.weapon_halbard_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;80;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="976" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="weight" val="1900" />
+		<set name="price" val="18300000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="SPEAR" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+		</skills>
+		<stats>
+			<stat type="pAtk">213</stat>
+			<stat type="mAtk">107</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="pAtkRange">80</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="4863" name="Halberd" additionalName="Wide Blow" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Broadens the angle of attack. -->
+		<set name="icon" val="icon.weapon_halbard_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;66;180" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="976" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="weight" val="1900" />
+		<set name="price" val="18300000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="SPEAR" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+		</skills>
+		<stats>
+			<stat type="pAtk">213</stat>
+			<stat type="mAtk">107</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="4864" name="Heavy Doom Hammer" additionalName="Magic Regeneration" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_heavy_doom_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="916" />
+		<set name="crystal_count" val="94" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1020" />
 		<set name="price" val="352580" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
@@ -1794,21 +2062,21 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="4865" name="Heavy Doom Hammer" additionalName="Acumen" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
+	<item id="4865" name="Heavy Doom Hammer" additionalName="Mental Shield" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_heavy_doom_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="916" />
+		<set name="crystal_count" val="94" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1020" />
 		<set name="price" val="352580" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
@@ -1826,21 +2094,21 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="4866" name="Heavy Doom Hammer" additionalName="Magic Regeneration" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 16%. -->
+	<item id="4866" name="Heavy Doom Hammer" additionalName="Magic Hold" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_heavy_doom_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="916" />
+		<set name="crystal_count" val="94" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1020" />
 		<set name="price" val="352580" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
@@ -1858,21 +2126,21 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="4867" name="Crystal Staff" additionalName="Empower" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. M. Atk. + 50. -->
+	<item id="4867" name="Crystal Staff" additionalName="Rsk. Evasion" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_crystal_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="916" />
+		<set name="crystal_count" val="94" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="1020" />
 		<set name="price" val="352580" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
@@ -1890,21 +2158,21 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="4868" name="Crystal Staff" additionalName="Acumen" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
+	<item id="4868" name="Crystal Staff" additionalName="Mana Up" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_crystal_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="916" />
+		<set name="crystal_count" val="94" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="1020" />
 		<set name="price" val="352580" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
@@ -1922,21 +2190,21 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="4869" name="Crystal Staff" additionalName="Magic Regeneration" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 16%. -->
+	<item id="4869" name="Crystal Staff" additionalName="Blessed Body" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_crystal_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="916" />
+		<set name="crystal_count" val="94" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="1020" />
 		<set name="price" val="352580" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
@@ -1954,21 +2222,21 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="4870" name="Heavy Doom Axe" additionalName="Empower" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. M. Atk. + 50. -->
+	<item id="4870" name="Heavy Doom Axe" additionalName="Magic Poison" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_heavy_doom_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;56;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="916" />
+		<set name="crystal_count" val="94" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1010" />
 		<set name="price" val="352580" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
@@ -1986,21 +2254,21 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="4871" name="Heavy Doom Axe" additionalName="Acumen" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
+	<item id="4871" name="Heavy Doom Axe" additionalName="Magic Weakness" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_heavy_doom_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;56;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="916" />
+		<set name="crystal_count" val="94" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1010" />
 		<set name="price" val="352580" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
@@ -2018,21 +2286,21 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="4872" name="Heavy Doom Axe" additionalName="Magic Regeneration" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 16%. -->
+	<item id="4872" name="Heavy Doom Axe" additionalName="Magic Chaos" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_heavy_doom_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;56;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="916" />
+		<set name="crystal_count" val="94" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1010" />
 		<set name="price" val="352580" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
@@ -2050,21 +2318,21 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="4873" name="Cursed Staff" additionalName="Empower" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. M. Atk. + 50. -->
+	<item id="4873" name="Cursed Staff" additionalName="Magic Hold" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_cursed_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1148" />
+		<set name="crystal_count" val="118" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1000" />
 		<set name="price" val="441940" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
@@ -2082,21 +2350,21 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="4874" name="Cursed Staff" additionalName="Acumen" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
+	<item id="4874" name="Cursed Staff" additionalName="Magic Poison" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_cursed_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1148" />
+		<set name="crystal_count" val="118" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1000" />
 		<set name="price" val="441940" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
@@ -2114,21 +2382,21 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="4875" name="Cursed Staff" additionalName="Magic Regeneration" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 16%. -->
+	<item id="4875" name="Cursed Staff" additionalName="Magic Weakness" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_cursed_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1148" />
+		<set name="crystal_count" val="118" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1000" />
 		<set name="price" val="441940" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
@@ -2146,21 +2414,21 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="4876" name="Paradia Staff" additionalName="Empower" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. M. Atk. + 50. -->
+	<item id="4876" name="Paradia Staff" additionalName="Magic Regeneration" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_paradia_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1720" />
+		<set name="crystal_count" val="177" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1010" />
 		<set name="price" val="660860" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
@@ -2178,21 +2446,21 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="4877" name="Paradia Staff" additionalName="Acumen" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
+	<item id="4877" name="Paradia Staff" additionalName="Mental Shield" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_paradia_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1720" />
+		<set name="crystal_count" val="177" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1010" />
 		<set name="price" val="660860" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
@@ -2210,21 +2478,21 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="4878" name="Paradia Staff" additionalName="Magic Regeneration" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 16%. -->
+	<item id="4878" name="Paradia Staff" additionalName="Magic Hold" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_paradia_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1720" />
+		<set name="crystal_count" val="177" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1010" />
 		<set name="price" val="660860" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
@@ -2242,21 +2510,21 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="4879" name="Pa'agrio Hammer" additionalName="Empower" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. M. Atk. + 50. -->
+	<item id="4879" name="Pa'agrio Hammer" additionalName="Rsk. Evasion" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_paagrio_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1720" />
+		<set name="crystal_count" val="177" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="BLOOD_STEEL" />
 		<set name="weight" val="1010" />
 		<set name="price" val="660860" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
@@ -2274,21 +2542,21 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="4880" name="Pa'agrio Hammer" additionalName="Acumen" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
+	<item id="4880" name="Pa'agrio Hammer" additionalName="Magic Poison" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_paagrio_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1720" />
+		<set name="crystal_count" val="177" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="BLOOD_STEEL" />
 		<set name="weight" val="1010" />
 		<set name="price" val="660860" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
@@ -2306,21 +2574,21 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="4881" name="Pa'agrio Hammer" additionalName="Magic Regeneration" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 16%. -->
+	<item id="4881" name="Pa'agrio Hammer" additionalName="Magic Weakness" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_paagrio_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1720" />
+		<set name="crystal_count" val="177" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="BLOOD_STEEL" />
 		<set name="weight" val="1010" />
 		<set name="price" val="660860" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
@@ -2338,21 +2606,21 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="4882" name="Sage's Staff" additionalName="Empower" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. M. Atk. + 50. -->
+	<item id="4882" name="Sage's Staff" additionalName="Magic Hold" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_sages_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1720" />
+		<set name="crystal_count" val="177" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1000" />
 		<set name="price" val="660860" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
@@ -2370,21 +2638,21 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="4883" name="Sage's Staff" additionalName="Acumen" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
+	<item id="4883" name="Sage's Staff" additionalName="Magic Poison" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_sages_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1720" />
+		<set name="crystal_count" val="177" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1000" />
 		<set name="price" val="660860" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
@@ -2402,21 +2670,21 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="4884" name="Sage's Staff" additionalName="Magic Regeneration" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 16%. -->
+	<item id="4884" name="Sage's Staff" additionalName="Magic Weakness" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_sages_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1720" />
+		<set name="crystal_count" val="177" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1000" />
 		<set name="price" val="660860" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
@@ -2434,21 +2702,21 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="4885" name="Pa'agrio Axe" additionalName="Empower" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. M. Atk. + 50. -->
+	<item id="4885" name="Pa'agrio Axe" additionalName="Mana Up" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_paagrio_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1912" />
+		<set name="crystal_count" val="196" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="BLOOD_STEEL" />
 		<set name="weight" val="990" />
 		<set name="price" val="735540" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
@@ -2466,21 +2734,21 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="4886" name="Pa'agrio Axe" additionalName="Acumen" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
+	<item id="4886" name="Pa'agrio Axe" additionalName="Magic Weakness" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_paagrio_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1912" />
+		<set name="crystal_count" val="196" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="BLOOD_STEEL" />
 		<set name="weight" val="990" />
 		<set name="price" val="735540" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
@@ -2498,21 +2766,21 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="4887" name="Pa'agrio Axe" additionalName="Magic Regeneration" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 16%. -->
+	<item id="4887" name="Pa'agrio Axe" additionalName="Magic Chaos" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_paagrio_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1912" />
+		<set name="crystal_count" val="196" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="BLOOD_STEEL" />
 		<set name="weight" val="990" />
 		<set name="price" val="735540" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
@@ -2530,21 +2798,21 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="4888" name="Deadman's Staff" additionalName="Empower" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. M. Atk. + 50. -->
+	<item id="4888" name="Deadman's Staff" additionalName="Magic Regeneration" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_deadmans_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="2452" />
+		<set name="crystal_count" val="252" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="BONE" />
 		<set name="weight" val="1010" />
 		<set name="price" val="942700" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
@@ -2562,21 +2830,21 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="4889" name="Deadman's Staff" additionalName="Acumen" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
+	<item id="4889" name="Deadman's Staff" additionalName="Mental Shield" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_deadmans_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="2452" />
+		<set name="crystal_count" val="252" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="BONE" />
 		<set name="weight" val="1010" />
 		<set name="price" val="942700" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
@@ -2594,21 +2862,21 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="4890" name="Deadman's Staff" additionalName="Magic Regeneration" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 16%. -->
+	<item id="4890" name="Deadman's Staff" additionalName="Magic Hold" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_deadmans_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="2452" />
+		<set name="crystal_count" val="252" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="BONE" />
 		<set name="weight" val="1010" />
 		<set name="price" val="942700" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
@@ -2626,21 +2894,21 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="4891" name="Ghoul's Staff" additionalName="Empower" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. M. Atk. + 50. -->
+	<item id="4891" name="Ghoul's Staff" additionalName="Rsk. Evasion" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_ghouls_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="2452" />
+		<set name="crystal_count" val="252" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="BONE" />
 		<set name="weight" val="1000" />
 		<set name="price" val="942700" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
@@ -2658,21 +2926,21 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="4892" name="Ghoul's Staff" additionalName="Acumen" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
+	<item id="4892" name="Ghoul's Staff" additionalName="Mana Up" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_ghouls_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="2452" />
+		<set name="crystal_count" val="252" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="BONE" />
 		<set name="weight" val="1000" />
 		<set name="price" val="942700" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
@@ -2690,21 +2958,21 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="4893" name="Ghoul's Staff" additionalName="Magic Regeneration" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 16%. -->
+	<item id="4893" name="Ghoul's Staff" additionalName="Blessed Body" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_ghouls_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="2452" />
+		<set name="crystal_count" val="252" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="BONE" />
 		<set name="weight" val="1000" />
 		<set name="price" val="942700" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
@@ -2722,21 +2990,21 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="4894" name="Demon's Staff" additionalName="Empower" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. M. Atk. + 50. -->
+	<item id="4894" name="Demon's Staff" additionalName="Magic Poison" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_demons_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="2452" />
+		<set name="crystal_count" val="252" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="990" />
 		<set name="price" val="942700" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
@@ -2754,21 +3022,21 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="4895" name="Demon's Staff" additionalName="Acumen" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
+	<item id="4895" name="Demon's Staff" additionalName="Magic Weakness" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_demons_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="2452" />
+		<set name="crystal_count" val="252" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="990" />
 		<set name="price" val="942700" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
@@ -2786,21 +3054,21 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="4896" name="Demon's Staff" additionalName="Magic Regeneration" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 16%. -->
+	<item id="4896" name="Demon's Staff" additionalName="Magic Chaos" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_demons_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="2452" />
+		<set name="crystal_count" val="252" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="990" />
 		<set name="price" val="942700" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
@@ -2818,15 +3086,15 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="4897" name="Spirit's Staff" additionalName="Empower" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. M. Atk. + 96. -->
+	<item id="4897" name="Spirit's Staff" additionalName="Magic Regeneration" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_sprites_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1157" />
+		<set name="crystal_count" val="119" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="960" />
@@ -2850,15 +3118,15 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="4898" name="Spirit's Staff" additionalName="Acumen" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
+	<item id="4898" name="Spirit's Staff" additionalName="Mental Shield" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_sprites_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1157" />
+		<set name="crystal_count" val="119" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="960" />
@@ -2882,15 +3150,15 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="4899" name="Spirit's Staff" additionalName="Magic Regeneration" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 14%. -->
+	<item id="4899" name="Spirit's Staff" additionalName="Magic Hold" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="icon.weapon_sprites_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1157" />
+		<set name="crystal_count" val="119" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="960" />

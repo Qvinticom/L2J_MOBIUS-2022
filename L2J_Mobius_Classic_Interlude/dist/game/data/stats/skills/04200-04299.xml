@@ -140,11 +140,13 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="4202" toLevel="12" name="Hold">
-		<!-- Inflicted with Hold and unable to move. -->
+		<!-- Inflicted with hold and unable to move momentarily. -->
 		<icon>icon.skill1201</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -427,11 +429,13 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="4206" toLevel="12" name="Aura Sink">
-		<!-- MP decreases. Effect $s1. -->
+		<!-- Decreases the target's usable amount of MP. Effect $s1. -->
 		<icon>icon.skill1170</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -566,7 +570,7 @@
 		</effects>
 	</skill>
 	<skill id="4208" toLevel="12" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0101</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -642,7 +646,9 @@
 					<value level="12">47895</value>
 				</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="4209" toLevel="12" name="Heal">
@@ -785,7 +791,7 @@
 		</effects>
 	</skill>
 	<skill id="4211" toLevel="12" name="Might">
-		<!-- P. Atk. + $s1 -->
+		<!-- P. Atk. is increased by $s1. -->
 		<icon>icon.skill1068</icon>
 		<abnormalLvl>99</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -836,7 +842,7 @@
 		</effects>
 	</skill>
 	<skill id="4212" toLevel="12" name="Shield">
-		<!-- P. Def. + $s1 -->
+		<!-- P. Def. + $s1. -->
 		<icon>icon.skill1040</icon>
 		<abnormalLvl>99</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -887,7 +893,7 @@
 		</effects>
 	</skill>
 	<skill id="4213" toLevel="12" name="Haste">
-		<!-- Atk. Spd. + $s1 -->
+		<!-- Atk. Spd. is increased by $s1. -->
 		<icon>icon.skill1086</icon>
 		<abnormalLvl>99</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -1065,7 +1071,7 @@
 		</effects>
 	</skill>
 	<skill id="4219" toLevel="1" name="Hold">
-		<!-- Inflicted with Hold and unable to move. -->
+		<!-- Inflicted with hold and unable to move momentarily. -->
 		<icon>icon.skill1201</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -1160,8 +1166,8 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="4225" toLevel="5" name="Stun Resistance">
-		<!-- Resistant to Stun Attacks. -->
+	<skill id="4225" toLevel="5" name="Stun Attack Resistance">
+		<!-- Slightly resistant to Sleep. -->
 		<icon>icon.skill4225</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1323,7 +1329,7 @@
 		</effects>
 	</skill>
 	<skill id="4230" toLevel="1" name="Wild Cannon">
-		<!-- Powerful attack on castle doors and walls. -->
+		<!-- Unleashes a devastating attack against castle gates and walls. -->
 		<castRange>2500</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>3000</effectRange>
@@ -1334,6 +1340,9 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpSiegeHammer" />
+		</conditions>
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>1330120</power>
@@ -1381,6 +1390,9 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpSiegeHammer" />
+		</conditions>
 		<effects>
 			<effect name="MagicalAttack">
 				<power>
@@ -1514,7 +1526,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4235" toLevel="1" name="">
+	<skill id="4235" toLevel="1" name="Devastated Return">
 		<hitTime>15000</hitTime>
 		<magicLvl>70</magicLvl>
 		<operateType>A1</operateType>
@@ -1697,7 +1709,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="4243" toLevel="1" name="Venomous Poison">
-		<!-- Noxious fumes gradually decrease your HP. Effect 9. -->
+		<!-- A deadly toxin courses through your bloodstream, gradually reducing your HP. Effect 9. -->
 		<icon>icon.skill4082</icon>
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -1827,7 +1839,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4247" toLevel="12" name="Dagger Storm">
+	<skill id="4247" toLevel="12" name="(Wind Strike)">
 		<castRange>1000</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1500</effectRange>
@@ -2765,7 +2777,7 @@
 		</effects>
 	</skill>
 	<skill id="4263" toLevel="1" name="Holiday Haste">
-		<!-- Temporarily increases Atk. Spd. Effect 1. -->
+		<!-- Atk. Spd. increases temporarily. Effect 1. -->
 		<icon>icon.skill1086</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
@@ -2891,7 +2903,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4270" toLevel="4" name="Weight Penalty">
-		<!-- Your inventory weight limit exceeds $s1. HP/MP regeneration is greatly decreased. -->
+		<!-- Your inventory weight limit exceeds $s1. HP/MP regeneration and movement are greatly decreased. -->
 		<icon>
 			<value level="1">icon.skill4270_1</value>
 			<value level="2">icon.skill4270_2</value>
@@ -2991,7 +3003,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4272" toLevel="1" name="Greater Bow/Crossbow Resistance">
-		<!-- Highly resistant to Bow/Crossbows. -->
+		<!-- Highly resistant to Bow/Crossbow attacks. -->
 		<icon>icon.skill4272</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -3053,14 +3065,14 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4275" toLevel="5" name="Holy Attack Vulnerability">
-		<!-- Vulnerable to Holy attacks. -->
+	<skill id="4275" toLevel="5" name="Holy Vulnerability">
+		<!-- Vulnerable to Divinity attack. -->
 		<icon>icon.skill4275_new</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="4276" toLevel="5" name="Bow / Crossbow Vulnerability">
+	<skill id="4276" toLevel="5" name="Bow/Crossbow Vulnerability">
 		<!-- Weak against Bow/Crossbow attacks. -->
 		<icon>icon.skill4276_new</icon>
 		<magicLvl>1</magicLvl>
@@ -3086,7 +3098,7 @@
 		</effects>
 	</skill>
 	<skill id="4277" toLevel="5" name="Poison Resistance">
-		<!-- Resistant to poison attack. -->
+		<!-- Slightly resistant to Poison attack. -->
 		<icon>icon.skill4277</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -3158,7 +3170,7 @@
 		</effects>
 	</skill>
 	<skill id="4284" toLevel="5" name="Bleed Resistance">
-		<!-- Resistant to Bleed attack. -->
+		<!-- Slightly resistant to Bleed. -->
 		<icon>icon.skill4284</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -3176,7 +3188,7 @@
 		</effects>
 	</skill>
 	<skill id="4285" toLevel="5" name="Sleep Resistance">
-		<!-- Resistant to Sleep attacks. -->
+		<!-- Slightly resistant to Sleep. -->
 		<icon>icon.skill4285</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -3194,7 +3206,7 @@
 		</effects>
 	</skill>
 	<skill id="4286" toLevel="1" name="Greater Sleep Resistance">
-		<!-- Very resistant to Sleep. -->
+		<!-- Very resistant to Sleep attacks. -->
 		<icon>icon.skill4286</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -3206,7 +3218,7 @@
 		</effects>
 	</skill>
 	<skill id="4287" toLevel="5" name="Hold Resistance">
-		<!-- Resistant to Hold attack. -->
+		<!-- Slightly resistant to Hold. -->
 		<icon>icon.skill4287</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -3224,7 +3236,7 @@
 		</effects>
 	</skill>
 	<skill id="4288" toLevel="1" name="Greater Hold Resistance">
-		<!-- Very resistant to Hold. -->
+		<!-- Very resistant to Hold attack. -->
 		<icon>icon.skill4288</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -3271,28 +3283,28 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4291" toLevel="1" name="Race">
-		<!-- Magical Creatures -->
+		<!-- Construct -->
 		<icon>icon.skill4291</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4292" toLevel="1" name="Race">
-		<!-- Beasts -->
+		<!-- Beast -->
 		<icon>icon.skill4292</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4293" toLevel="1" name="Race">
-		<!-- Animals -->
+		<!-- Animal -->
 		<icon>icon.skill4293</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4294" toLevel="1" name="Race">
-		<!-- Plants -->
+		<!-- Plant -->
 		<icon>icon.skill4294</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -3306,28 +3318,28 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4296" toLevel="1" name="Race">
-		<!-- Spirits -->
+		<!-- Spirit -->
 		<icon>icon.skill4296</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4297" toLevel="1" name="Race">
-		<!-- Angel -->
+		<!-- Divine -->
 		<icon>icon.skill4297</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4298" toLevel="1" name="Race">
-		<!-- Demons -->
+		<!-- Demonic -->
 		<icon>icon.skill4298</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4299" toLevel="1" name="Race">
-		<!-- Dragons -->
+		<!-- Dragon -->
 		<icon>icon.skill4299</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>

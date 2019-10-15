@@ -29,13 +29,23 @@
 		<remove itemId="57" count="700000" /> <!-- Adena -->
 	</fee>
 	<fee crystalType="A">
-		<first itemId="2133" count="24" /> <!-- Gemstone (A-grade) -->
-		<secondary itemId="2133" count="24" /> <!-- Gemstone (A-grade) -->
-		<third itemId="2133" count="24" /> <!-- Gemstone (A-grade) -->
-		<reNormal itemId="2133" count="12" /> <!-- Gemstone (A-grade) -->
-		<reSecondary itemId="2133" count="12" /> <!-- Gemstone (A-grade) -->
-		<reThird itemId="2133" count="12" /> <!-- Gemstone (A-grade) -->
+		<first itemId="2133" count="5" /> <!-- Gemstone (A-grade) -->
+		<secondary itemId="2133" count="5" /> <!-- Gemstone (A-grade) -->
+		<third itemId="2133" count="5" /> <!-- Gemstone (A-grade) -->
+		<reNormal itemId="2133" count="5" /> <!-- Gemstone (A-grade) -->
+		<reSecondary itemId="2133" count="5" /> <!-- Gemstone (A-grade) -->
+		<reThird itemId="2133" count="5" /> <!-- Gemstone (A-grade) -->
 		<remove itemId="2133" count="5" /> <!-- Gemstone (A-grade) -->
 		<remove itemId="57" count="3500000" /> <!-- Adena -->
+	</fee>
+	<fee crystalType="S">
+		<first itemId="2134" count="124" /> <!-- Gemstone (S-grade) -->
+		<secondary itemId="2134" count="124" /> <!-- Gemstone (S-grade) -->
+		<third itemId="2134" count="124" /> <!-- Gemstone (S-grade) -->
+		<reNormal itemId="2134" count="124" /> <!-- Gemstone (S-grade) -->
+		<reSecondary itemId="2134" count="124" /> <!-- Gemstone (S-grade) -->
+		<reThird itemId="2134" count="124" /> <!-- Gemstone (S-grade) -->
+		<remove itemId="2134" count="207" /> <!-- Gemstone (S-grade) -->
+		<remove itemId="57" count="10000000" /> <!-- Adena -->
 	</fee>
 </list>

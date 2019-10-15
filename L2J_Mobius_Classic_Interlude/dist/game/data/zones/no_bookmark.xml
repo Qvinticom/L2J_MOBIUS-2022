@@ -28,6 +28,15 @@
 		<node X="-113990" Y="-177851" />
 		<node X="-115606" Y="-177858" />
 	</zone>
+	<zone name="no_boormark_monster_derby_track" type="ConditionZone" shape="NPoly" minZ="-3668" maxZ="-3168">
+		<stat name="NoBookmark" val="true" />
+		<node X="14566" Y="182997" />
+		<node X="13257" Y="182976" />
+		<node X="13250" Y="184333" />
+		<node X="11629" Y="184316" />
+		<node X="11621" Y="181298" />
+		<node X="14486" Y="181302" />
+	</zone>
 	<zone name="no_boormark_gm_prison" type="ConditionZone" shape="NPoly" minZ="-2992" maxZ="-2792">
 		<stat name="NoBookmark" val="true" />
 		<node X="-116390" Y="-251581" />
@@ -172,6 +181,62 @@
 		<node X="-79968" Y="-44123" />
 		<node X="-80245" Y="-43614" />
 		<node X="-81544" Y="-43878" />
+	</zone>
+	<zone name="no_bookmark_dion_monster_race1" type="ConditionZone" shape="NPoly" minZ="-3652" maxZ="-3452">
+		<stat name="NoBookmark" val="true" />
+		<node X="11714" Y="181568" />
+		<node X="14406" Y="181571" />
+		<node X="14405" Y="182673" />
+		<node X="11714" Y="182673" />
+	</zone>
+	<zone name="no_bookmark_dion_monster_race2" type="ConditionZone" shape="NPoly" minZ="-3610" maxZ="-3410">
+		<stat name="NoBookmark" val="true" />
+		<node X="13309" Y="181324" />
+		<node X="14061" Y="181324" />
+		<node X="14061" Y="181610" />
+		<node X="13309" Y="181610" />
+	</zone>
+	<zone name="no_bookmark_dion_monster_race3" type="ConditionZone" shape="NPoly" minZ="-3608" maxZ="-3408">
+		<stat name="NoBookmark" val="true" />
+		<node X="13559" Y="182641" />
+		<node X="14073" Y="182640" />
+		<node X="14073" Y="182919" />
+		<node X="13560" Y="182918" />
+	</zone>
+	<zone name="no_bookmark_dion_monster_race4" type="ConditionZone" shape="NPoly" minZ="-3612" maxZ="-3412">
+		<stat name="NoBookmark" val="true" />
+		<node X="12196" Y="182662" />
+		<node X="12447" Y="182663" />
+		<node X="12447" Y="182774" />
+		<node X="12197" Y="182774" />
+	</zone>
+	<zone name="no_bookmark_dion_monster_race5" type="ConditionZone" shape="NPoly" minZ="-3624" maxZ="-3424">
+		<stat name="NoBookmark" val="true" />
+		<node X="11706" Y="182774" />
+		<node X="13194" Y="182774" />
+		<node X="13194" Y="183006" />
+		<node X="11701" Y="183017" />
+	</zone>
+	<zone name="no_bookmark_dion_monster_race6" type="ConditionZone" shape="NPoly" minZ="-3616" maxZ="-3416">
+		<stat name="NoBookmark" val="true" />
+		<node X="11701" Y="184017" />
+		<node X="13188" Y="184011" />
+		<node X="13194" Y="184265" />
+		<node X="11701" Y="184260" />
+	</zone>
+	<zone name="no_bookmark_dion_monster_race7" type="ConditionZone" shape="NPoly" minZ="-3660" maxZ="-3460">
+		<stat name="NoBookmark" val="true" />
+		<node X="11699" Y="182993" />
+		<node X="11949" Y="182990" />
+		<node X="11944" Y="184036" />
+		<node X="11697" Y="184032" />
+	</zone>
+	<zone name="no_bookmark_dion_monster_race8" type="ConditionZone" shape="NPoly" minZ="-3636" maxZ="-3436">
+		<stat name="NoBookmark" val="true" />
+		<node X="12945" Y="182992" />
+		<node X="13193" Y="182987" />
+		<node X="13193" Y="184019" />
+		<node X="12945" Y="184029" />
 	</zone>
 	<zone name="no_bookmark_gludin_pvp_peace_1" type="ConditionZone" shape="NPoly" minZ="-3723" maxZ="-3223">
 		<stat name="NoBookmark" val="true" />
@@ -8208,18 +8273,5 @@
 		<stat name="NoBookmark" val="true" />
 		<node X="-98296" Y="-262136" />
 		<node X="-65544" Y="-229384" />
-	</zone>
-	
-	<!-- Classic Monster Race Track Arena -->
-	<zone name="Monster_Race_Arena_No_Bookmark" type="ConditionZone" shape="NPoly" minZ="-3800" maxZ="-3550">
-		<stat name="NoBookmark" val="true" />
-		<node X="13081" Y="183060" />
-		<node X="13302" Y="183285" />
-		<node X="13300" Y="184089" />
-		<node X="13086" Y="184308" />
-		<node X="11993" Y="184308" />
-		<node X="11774" Y="184091" />
-		<node X="11773" Y="183287" />
-		<node X="11994" Y="183055" />
 	</zone>
 </list>

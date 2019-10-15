@@ -102,6 +102,11 @@ public class MultisellListHolder implements IIdentifiable
 	
 	public boolean isNpcAllowed(int npcId)
 	{
-		return (_npcsAllowed != null) && _npcsAllowed.contains(npcId);
+		return (_npcsAllowed == null) || _npcsAllowed.contains(npcId);
+	}
+	
+	public boolean isNpcOnly()
+	{
+		return _npcsAllowed != null;
 	}
 }

@@ -36,6 +36,9 @@ public class ElfHumanClericChange2 extends AbstractNpcAI
 		30191, // Hollint
 		30857, // Orven
 		30905, // Squillari
+		31279, // Gregory
+		31328, // Innocentin
+		31968, // Baryl
 	};
 	
 	// Items

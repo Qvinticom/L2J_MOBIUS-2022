@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="14600" level="79" type="Pet" name="Soulless">
+	<npc id="14600" level="80" type="Pet" name="Soulless">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="RangeDD" id="4138" level="9" />
 			<skill name="RangeDebuff" id="4259" level="9" />
@@ -9,8 +10,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2908" hpRegen="8.5" mp="1700" mpRegen="3" />
-			<attack physical="993.167505" magical="656.9002155" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="909.2042525" magical="620.8686375" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="344.60369" magical="252.1660225" />
+			<attribute>
+				<defence fire="106" water="106" wind="106" earth="106" holy="106" dark="106" />
+			</attribute>
 			<speed>
 				<walk ground="48" />
 				<run ground="180" />
@@ -30,6 +34,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5038" level="10" /> <!-- Summon PVP Penalty -->
 			<skill id="4138" level="9" /> <!-- Corpse Burst -->
 			<skill id="4259" level="9" /> <!-- Toxic Smoke -->
 		</skillList>
@@ -41,7 +46,8 @@
 			<height normal="33" />
 		</collision>
 	</npc>
-	<npc id="14601" level="79" type="Pet" name="Soulless">
+	<npc id="14601" level="81" type="Pet" name="Soulless">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="RangeDD" id="4138" level="10" />
 			<skill name="RangeDebuff" id="4259" level="10" />
@@ -50,8 +56,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2916" hpRegen="8.5" mp="1708" mpRegen="3" />
-			<attack physical="997.87446" magical="663.4902351" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="913.54847" magical="623.83518" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="345.61127" magical="252.90333" />
+			<attribute>
+				<defence fire="109" water="109" wind="109" earth="109" holy="109" dark="109" />
+			</attribute>
 			<speed>
 				<walk ground="48" />
 				<run ground="180" />
@@ -71,6 +80,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5038" level="10" /> <!-- Summon PVP Penalty -->
 			<skill id="4138" level="10" /> <!-- Corpse Burst -->
 			<skill id="4259" level="10" /> <!-- Toxic Smoke -->
 		</skillList>
@@ -82,7 +92,8 @@
 			<height normal="33" />
 		</collision>
 	</npc>
-	<npc id="14602" level="79" type="Pet" name="Soulless">
+	<npc id="14602" level="81" type="Pet" name="Soulless">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="RangeDD" id="4138" level="10" />
 			<skill name="RangeDebuff" id="4259" level="10" />
@@ -91,8 +102,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2926" hpRegen="8.5" mp="1717" mpRegen="3" />
-			<attack physical="1002.581415" magical="670.0802547" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="918.2459525" magical="627.0429525" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="346.6703375" magical="253.67831" />
+			<attribute>
+				<defence fire="111" water="111" wind="111" earth="111" holy="111" dark="111" />
+			</attribute>
 			<speed>
 				<walk ground="48" />
 				<run ground="180" />
@@ -112,6 +126,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5038" level="10" /> <!-- Summon PVP Penalty -->
 			<skill id="4138" level="10" /> <!-- Corpse Burst -->
 			<skill id="4259" level="10" /> <!-- Toxic Smoke -->
 		</skillList>
@@ -123,7 +138,8 @@
 			<height normal="33" />
 		</collision>
 	</npc>
-	<npc id="14603" level="79" type="Pet" name="Soulless">
+	<npc id="14603" level="81" type="Pet" name="Soulless">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="RangeDD" id="4138" level="10" />
 			<skill name="RangeDebuff" id="4259" level="10" />
@@ -132,8 +148,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2935" hpRegen="8.5" mp="1725" mpRegen="3" />
-			<attack physical="1007.28837" magical="676.6702743" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="922.943435" magical="630.250725" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="347.729405" magical="254.45329" />
+			<attribute>
+				<defence fire="113" water="113" wind="113" earth="113" holy="113" dark="113" />
+			</attribute>
 			<speed>
 				<walk ground="48" />
 				<run ground="180" />
@@ -153,6 +172,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5038" level="10" /> <!-- Summon PVP Penalty -->
 			<skill id="4138" level="10" /> <!-- Corpse Burst -->
 			<skill id="4259" level="10" /> <!-- Toxic Smoke -->
 		</skillList>
@@ -164,7 +184,8 @@
 			<height normal="33" />
 		</collision>
 	</npc>
-	<npc id="14604" level="79" type="Pet" name="Soulless">
+	<npc id="14604" level="81" type="Pet" name="Soulless">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="RangeDD" id="4138" level="10" />
 			<skill name="RangeDebuff" id="4259" level="10" />
@@ -173,8 +194,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2944" hpRegen="8.5" mp="1734" mpRegen="3" />
-			<attack physical="1011.995325" magical="683.2602939" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="927.6409175" magical="633.4584975" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="348.7884725" magical="255.22827" />
+			<attribute>
+				<defence fire="115" water="115" wind="115" earth="115" holy="115" dark="115" />
+			</attribute>
 			<speed>
 				<walk ground="48" />
 				<run ground="180" />
@@ -194,6 +218,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5038" level="10" /> <!-- Summon PVP Penalty -->
 			<skill id="4138" level="10" /> <!-- Corpse Burst -->
 			<skill id="4259" level="10" /> <!-- Toxic Smoke -->
 		</skillList>
@@ -205,7 +230,8 @@
 			<height normal="33" />
 		</collision>
 	</npc>
-	<npc id="14605" level="79" type="Pet" name="Soulless">
+	<npc id="14605" level="82" type="Pet" name="Soulless">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="RangeDD" id="4138" level="10" />
 			<skill name="RangeDebuff" id="4259" level="10" />
@@ -214,8 +240,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2951" hpRegen="8.5" mp="1743" mpRegen="3" />
-			<attack physical="1016.70228" magical="689.8503135" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="931.81944" magical="636.31188" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="349.77477" magical="255.95" />
+			<attribute>
+				<defence fire="118" water="118" wind="118" earth="118" holy="118" dark="118" />
+			</attribute>
 			<speed>
 				<walk ground="48" />
 				<run ground="180" />
@@ -235,6 +264,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5038" level="10" /> <!-- Summon PVP Penalty -->
 			<skill id="4138" level="10" /> <!-- Corpse Burst -->
 			<skill id="4259" level="10" /> <!-- Toxic Smoke -->
 		</skillList>
@@ -246,7 +276,8 @@
 			<height normal="33" />
 		</collision>
 	</npc>
-	<npc id="14606" level="79" type="Pet" name="Soulless">
+	<npc id="14606" level="82" type="Pet" name="Soulless">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="RangeDD" id="4138" level="10" />
 			<skill name="RangeDebuff" id="4259" level="10" />
@@ -255,8 +286,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2960" hpRegen="8.5" mp="1751" mpRegen="3" />
-			<attack physical="1021.409235" magical="696.440333" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="936.3871825" magical="639.431055" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="350.815645" magical="256.7116675" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
 			<speed>
 				<walk ground="48" />
 				<run ground="180" />
@@ -276,6 +310,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5038" level="10" /> <!-- Summon PVP Penalty -->
 			<skill id="4138" level="10" /> <!-- Corpse Burst -->
 			<skill id="4259" level="10" /> <!-- Toxic Smoke -->
 		</skillList>
@@ -287,7 +322,8 @@
 			<height normal="33" />
 		</collision>
 	</npc>
-	<npc id="14607" level="80" type="Pet" name="Soulless">
+	<npc id="14607" level="82" type="Pet" name="Soulless">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="RangeDD" id="4138" level="11" />
 			<skill name="RangeDebuff" id="4259" level="11" />
@@ -296,8 +332,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2969" hpRegen="8.5" mp="1760" mpRegen="3" />
-			<attack physical="1026.11619" magical="703.0303526" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="940.954925" magical="642.55023" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="351.85652" magical="257.473335" />
+			<attribute>
+				<defence fire="122" water="122" wind="122" earth="122" holy="122" dark="122" />
+			</attribute>
 			<speed>
 				<walk ground="48" />
 				<run ground="180" />
@@ -317,6 +356,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5038" level="10" /> <!-- Summon PVP Penalty -->
 			<skill id="4138" level="11" /> <!-- Corpse Burst -->
 			<skill id="4259" level="11" /> <!-- Toxic Smoke -->
 		</skillList>
@@ -328,7 +368,8 @@
 			<height normal="33" />
 		</collision>
 	</npc>
-	<npc id="14608" level="80" type="Pet" name="Soulless">
+	<npc id="14608" level="82" type="Pet" name="Soulless">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="RangeDD" id="4138" level="11" />
 			<skill name="RangeDebuff" id="4259" level="11" />
@@ -337,8 +378,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2978" hpRegen="8.5" mp="1768" mpRegen="3" />
-			<attack physical="1030.823145" magical="709.6203722" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="945.5226675" magical="645.669405" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="352.897395" magical="258.2350025" />
+			<attribute>
+				<defence fire="124" water="124" wind="124" earth="124" holy="124" dark="124" />
+			</attribute>
 			<speed>
 				<walk ground="48" />
 				<run ground="180" />
@@ -358,6 +402,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5038" level="10" /> <!-- Summon PVP Penalty -->
 			<skill id="4138" level="11" /> <!-- Corpse Burst -->
 			<skill id="4259" level="11" /> <!-- Toxic Smoke -->
 		</skillList>
@@ -369,7 +414,8 @@
 			<height normal="33" />
 		</collision>
 	</npc>
-	<npc id="14609" level="80" type="Pet" name="Soulless">
+	<npc id="14609" level="83" type="Pet" name="Soulless">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="RangeDD" id="4138" level="11" />
 			<skill name="RangeDebuff" id="4259" level="11" />
@@ -378,8 +424,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2985" hpRegen="8.5" mp="1777" mpRegen="3" />
-			<attack physical="1035.5301" magical="716.2103918" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="949.52401" magical="648.40181" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="353.86144" magical="258.94045" />
+			<attribute>
+				<defence fire="127" water="127" wind="127" earth="127" holy="127" dark="127" />
+			</attribute>
 			<speed>
 				<walk ground="48" />
 				<run ground="180" />
@@ -399,6 +448,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5038" level="10" /> <!-- Summon PVP Penalty -->
 			<skill id="4138" level="11" /> <!-- Corpse Burst -->
 			<skill id="4259" level="11" /> <!-- Toxic Smoke -->
 		</skillList>
@@ -410,7 +460,8 @@
 			<height normal="33" />
 		</collision>
 	</npc>
-	<npc id="14610" level="80" type="Pet" name="Soulless">
+	<npc id="14610" level="83" type="Pet" name="Soulless">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="RangeDD" id="4138" level="11" />
 			<skill name="RangeDebuff" id="4259" level="11" />
@@ -419,8 +470,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2993" hpRegen="8.5" mp="1786" mpRegen="3" />
-			<attack physical="1040.237055" magical="722.8004114" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="953.9501525" magical="651.4242925" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="354.8831075" magical="259.6880625" />
+			<attribute>
+				<defence fire="129" water="129" wind="129" earth="129" holy="129" dark="129" />
+			</attribute>
 			<speed>
 				<walk ground="48" />
 				<run ground="180" />
@@ -440,6 +494,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5038" level="10" /> <!-- Summon PVP Penalty -->
 			<skill id="4138" level="11" /> <!-- Corpse Burst -->
 			<skill id="4259" level="11" /> <!-- Toxic Smoke -->
 		</skillList>
@@ -451,7 +506,8 @@
 			<height normal="33" />
 		</collision>
 	</npc>
-	<npc id="14611" level="80" type="Pet" name="Soulless">
+	<npc id="14611" level="83" type="Pet" name="Soulless">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="RangeDD" id="4138" level="11" />
 			<skill name="RangeDebuff" id="4259" level="11" />
@@ -460,8 +516,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="3001" hpRegen="8.5" mp="1794" mpRegen="3" />
-			<attack physical="1044.94401" magical="729.390431" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="958.376295" magical="654.446775" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="355.904775" magical="260.435675" />
+			<attribute>
+				<defence fire="131" water="131" wind="131" earth="131" holy="131" dark="131" />
+			</attribute>
 			<speed>
 				<walk ground="48" />
 				<run ground="180" />
@@ -481,6 +540,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5038" level="10" /> <!-- Summon PVP Penalty -->
 			<skill id="4138" level="11" /> <!-- Corpse Burst -->
 			<skill id="4259" level="11" /> <!-- Toxic Smoke -->
 		</skillList>
@@ -492,7 +552,8 @@
 			<height normal="33" />
 		</collision>
 	</npc>
-	<npc id="14612" level="80" type="Pet" name="Soulless">
+	<npc id="14612" level="83" type="Pet" name="Soulless">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="RangeDD" id="4138" level="11" />
 			<skill name="RangeDebuff" id="4259" level="11" />
@@ -501,8 +562,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="3010" hpRegen="8.5" mp="1803" mpRegen="3" />
-			<attack physical="1049.650965" magical="735.9804506" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="962.8024375" magical="657.4692575" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="356.9264425" magical="261.1832875" />
+			<attribute>
+				<defence fire="133" water="133" wind="133" earth="133" holy="133" dark="133" />
+			</attribute>
 			<speed>
 				<walk ground="48" />
 				<run ground="180" />
@@ -522,6 +586,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5038" level="10" /> <!-- Summon PVP Penalty -->
 			<skill id="4138" level="11" /> <!-- Corpse Burst -->
 			<skill id="4259" level="11" /> <!-- Toxic Smoke -->
 		</skillList>
@@ -533,7 +598,8 @@
 			<height normal="33" />
 		</collision>
 	</npc>
-	<npc id="14613" level="80" type="Pet" name="Soulless">
+	<npc id="14613" level="84" type="Pet" name="Soulless">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="RangeDD" id="4138" level="12" />
 			<skill name="RangeDebuff" id="4259" level="12" />
@@ -542,8 +608,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="3016" hpRegen="8.5" mp="1812" mpRegen="3" />
-			<attack physical="1054.35792" magical="742.5704702" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="966.61544" magical="660.07304" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
+			<attribute>
+				<defence fire="136" water="136" wind="136" earth="136" holy="136" dark="136" />
+			</attribute>
 			<speed>
 				<walk ground="48" />
 				<run ground="180" />
@@ -563,6 +632,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5038" level="10" /> <!-- Summon PVP Penalty -->
 			<skill id="4138" level="12" /> <!-- Corpse Burst -->
 			<skill id="4259" level="12" /> <!-- Toxic Smoke -->
 		</skillList>
@@ -575,7 +645,8 @@
 			<height normal="33" />
 		</collision>
 	</npc>
-	<npc id="14614" level="80" type="Pet" name="Soulless">
+	<npc id="14614" level="84" type="Pet" name="Soulless">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="RangeDD" id="4138" level="12" />
 			<skill name="RangeDebuff" id="4259" level="12" />
@@ -584,8 +655,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="3024" hpRegen="8.5" mp="1820" mpRegen="3" />
-			<attack physical="1059.064875" magical="749.1604898" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="970.8882975" magical="662.9908475" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="358.8686775" magical="262.604525" />
+			<attribute>
+				<defence fire="138" water="138" wind="138" earth="138" holy="138" dark="138" />
+			</attribute>
 			<speed>
 				<walk ground="48" />
 				<run ground="180" />
@@ -605,6 +679,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5038" level="10" /> <!-- Summon PVP Penalty -->
 			<skill id="4138" level="12" /> <!-- Corpse Burst -->
 			<skill id="4259" level="12" /> <!-- Toxic Smoke -->
 		</skillList>
@@ -617,7 +692,8 @@
 			<height normal="33" />
 		</collision>
 	</npc>
-	<npc id="14615" level="80" type="Pet" name="Soulless">
+	<npc id="14615" level="84" type="Pet" name="Soulless">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="RangeDD" id="4138" level="12" />
 			<skill name="RangeDebuff" id="4259" level="12" />
@@ -626,8 +702,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="3032" hpRegen="8.5" mp="1829" mpRegen="3" />
-			<attack physical="1063.77183" magical="755.7505094" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="975.161155" magical="665.908655" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="359.870125" magical="263.33734" />
+			<attribute>
+				<defence fire="140" water="140" wind="140" earth="140" holy="140" dark="140" />
+			</attribute>
 			<speed>
 				<walk ground="48" />
 				<run ground="180" />
@@ -647,6 +726,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5038" level="10" /> <!-- Summon PVP Penalty -->
 			<skill id="4138" level="12" /> <!-- Corpse Burst -->
 			<skill id="4259" level="12" /> <!-- Toxic Smoke -->
 		</skillList>
@@ -659,7 +739,8 @@
 			<height normal="33" />
 		</collision>
 	</npc>
-	<npc id="14616" level="80" type="Pet" name="Soulless">
+	<npc id="14616" level="85" type="Pet" name="Soulless">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="RangeDD" id="4138" level="12" />
 			<skill name="RangeDebuff" id="4259" level="12" />
@@ -668,8 +749,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="3046" hpRegen="8.5" mp="1846" mpRegen="3" />
-			<attack physical="1068.478785" magical="762.340529" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="983.0479" magical="671.29428" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="361.78814" magical="264.74086" />
+			<attribute>
+				<defence fire="143" water="143" wind="143" earth="143" holy="143" dark="143" />
+			</attribute>
 			<speed>
 				<walk ground="48" />
 				<run ground="180" />
@@ -689,6 +773,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5038" level="10" /> <!-- Summon PVP Penalty -->
 			<skill id="4138" level="12" /> <!-- Corpse Burst -->
 			<skill id="4259" level="12" /> <!-- Toxic Smoke -->
 		</skillList>
@@ -701,7 +786,8 @@
 			<height normal="33" />
 		</collision>
 	</npc>
-	<npc id="14617" level="80" type="Pet" name="Soulless">
+	<npc id="14617" level="85" type="Pet" name="Soulless">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="RangeDD" id="4138" level="12" />
 			<skill name="RangeDebuff" id="4259" level="12" />
@@ -710,8 +796,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="3056" hpRegen="8.5" mp="1858" mpRegen="3" />
-			<attack physical="1073.18574" magical="768.9305486" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="988.525386666667" magical="675.034693333333" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="363.09511" magical="265.697243333333" />
+			<attribute>
+				<defence fire="145" water="145" wind="145" earth="145" holy="145" dark="145" />
+			</attribute>
 			<speed>
 				<walk ground="48" />
 				<run ground="180" />
@@ -731,6 +820,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5038" level="10" /> <!-- Summon PVP Penalty -->
 			<skill id="4138" level="12" /> <!-- Corpse Burst -->
 			<skill id="4259" level="12" /> <!-- Toxic Smoke -->
 		</skillList>
@@ -743,7 +833,8 @@
 			<height normal="33" />
 		</collision>
 	</npc>
-	<npc id="14618" level="80" type="Pet" name="Soulless">
+	<npc id="14618" level="85" type="Pet" name="Soulless">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="RangeDD" id="4138" level="12" />
 			<skill name="RangeDebuff" id="4259" level="12" />
@@ -752,8 +843,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="3066" hpRegen="8.5" mp="1870" mpRegen="3" />
-			<attack physical="1077.892695" magical="775.5205681" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="994.002873333333" magical="678.775106666667" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="364.40208" magical="266.653626666667" />
+			<attribute>
+				<defence fire="147" water="147" wind="147" earth="147" holy="147" dark="147" />
+			</attribute>
 			<speed>
 				<walk ground="48" />
 				<run ground="180" />
@@ -773,6 +867,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5038" level="10" /> <!-- Summon PVP Penalty -->
 			<skill id="4138" level="12" /> <!-- Corpse Burst -->
 			<skill id="4259" level="12" /> <!-- Toxic Smoke -->
 		</skillList>
@@ -786,6 +881,7 @@
 		</collision>
 	</npc>
 	<npc id="14619" level="58" type="Pet" name="Nightshade">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DeBuff1" id="4705" level="1" />
 			<skill name="DeBuff2" id="4706" level="1" />
@@ -800,9 +896,12 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="1828" hpRegen="5.5" mp="977" mpRegen="2.4" />
-			<attack physical="177.76" magical="302.44" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="237.99" magical="174.15" />
+			<vitals hp="1828" hpRegen="6.5" mp="977" mpRegen="2.4" />
+			<attack physical="442.8992" magical="302.44274" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="237.99429" magical="174.1539" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
@@ -839,6 +938,7 @@
 		</collision>
 	</npc>
 	<npc id="14620" level="60" type="Pet" name="Nightshade">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DeBuff1" id="4705" level="1" />
 			<skill name="DeBuff2" id="4706" level="1" />
@@ -853,9 +953,12 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="1933" hpRegen="5.5" mp="1036" mpRegen="2.4" />
-			<attack physical="190.6" magical="328.7" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="247.65" magical="181.22" />
+			<vitals hp="1933" hpRegen="6.5" mp="1036" mpRegen="2.4" />
+			<attack physical="481.34551" magical="328.69659" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="247.65008" magical="181.21958" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
@@ -892,6 +995,7 @@
 		</collision>
 	</npc>
 	<npc id="14621" level="62" type="Pet" name="Nightshade">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DeBuff1" id="4705" level="1" />
 			<skill name="DeBuff2" id="4706" level="1" />
@@ -906,9 +1010,12 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2037" hpRegen="5.5" mp="1097" mpRegen="2.7" />
-			<attack physical="203.62" magical="355.86" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="257.34" magical="188.31" />
+			<vitals hp="2037" hpRegen="7.5" mp="1097" mpRegen="2.7" />
+			<attack physical="521.12391" magical="355.86007" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="257.34267" magical="188.3122" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
@@ -945,6 +1052,7 @@
 		</collision>
 	</npc>
 	<npc id="14622" level="64" type="Pet" name="Nightshade">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DeBuff1" id="4705" level="2" />
 			<skill name="DeBuff2" id="4706" level="2" />
@@ -959,9 +1067,12 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2141" hpRegen="6.5" mp="1158" mpRegen="2.7" />
-			<attack physical="216.73" magical="383.79" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="267.04" magical="195.41" />
+			<vitals hp="2141" hpRegen="7.5" mp="1158" mpRegen="2.7" />
+			<attack physical="562.02275" magical="383.78868" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="267.04468" magical="195.41171" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
@@ -998,6 +1109,7 @@
 		</collision>
 	</npc>
 	<npc id="14623" level="66" type="Pet" name="Nightshade">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DeBuff1" id="4705" level="2" />
 			<skill name="DeBuff2" id="4706" level="2" />
@@ -1012,9 +1124,12 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2244" hpRegen="6.5" mp="1219" mpRegen="2.7" />
-			<attack physical="229.83" magical="412.32" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="276.73" magical="202.5" />
+			<vitals hp="2244" hpRegen="7.5" mp="1219" mpRegen="2.7" />
+			<attack physical="603.79903" magical="412.31647" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="276.72752" magical="202.49719" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
@@ -1051,6 +1166,7 @@
 		</collision>
 	</npc>
 	<npc id="14624" level="68" type="Pet" name="Nightshade">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DeBuff1" id="4705" level="2" />
 			<skill name="DeBuff2" id="4706" level="2" />
@@ -1065,9 +1181,12 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2345" hpRegen="6.5" mp="1282" mpRegen="2.7" />
-			<attack physical="242.83" magical="441.26" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="286.36" magical="209.55" />
+			<vitals hp="2345" hpRegen="7.5" mp="1282" mpRegen="2.7" />
+			<attack physical="646.17968" magical="441.25696" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="286.3615" magical="209.54692" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
@@ -1104,6 +1223,7 @@
 		</collision>
 	</npc>
 	<npc id="14625" level="70" type="Pet" name="Nightshade">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DeBuff1" id="4705" level="3" />
 			<skill name="DeBuff2" id="4706" level="3" />
@@ -1119,8 +1239,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="255.62" magical="470.4" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="295.92" magical="216.54" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
@@ -1157,6 +1280,7 @@
 		</collision>
 	</npc>
 	<npc id="14626" level="72" type="Pet" name="Nightshade">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DeBuff1" id="4705" level="3" />
 			<skill name="DeBuff2" id="4706" level="3" />
@@ -1171,9 +1295,12 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2540" hpRegen="7.5" mp="1410" mpRegen="3" />
-			<attack physical="268.07" magical="499.54" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="305.36" magical="223.45" />
+			<vitals hp="2540" hpRegen="8.5" mp="1410" mpRegen="3" />
+			<attack physical="731.52506" magical="499.53679" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="305.35947" magical="223.44881" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
@@ -1210,6 +1337,7 @@
 		</collision>
 	</npc>
 	<npc id="14627" level="74" type="Pet" name="Nightshade">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DeBuff1" id="4705" level="3" />
 			<skill name="DeBuff2" id="4706" level="3" />
@@ -1224,9 +1352,12 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2632" hpRegen="7.5" mp="1475" mpRegen="3" />
-			<attack physical="280.09" magical="528.42" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="314.66" magical="230.25" />
+			<vitals hp="2632" hpRegen="8.5" mp="1475" mpRegen="3" />
+			<attack physical="773.81598" magical="528.41601" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="314.65987" magical="230.25444" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
@@ -1263,6 +1394,7 @@
 		</collision>
 	</npc>
 	<npc id="14628" level="76" type="Pet" name="Nightshade">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DeBuff1" id="4705" level="3" />
 			<skill name="DeBuff2" id="4706" level="3" />
@@ -1277,9 +1409,12 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="2719" hpRegen="7.5" mp="1540" mpRegen="3" />
-			<attack physical="291.56" magical="556.79" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="323.78" magical="236.93" />
+			<vitals hp="2719" hpRegen="8.5" mp="1540" mpRegen="3" />
+			<attack physical="815.37145" magical="556.793" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="323.78455" magical="236.93149" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
@@ -1316,6 +1451,7 @@
 		</collision>
 	</npc>
 	<npc id="14633" level="78" type="Pet" name="Nightshade">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DeBuff1" id="4705" level="4" />
 			<skill name="DeBuff2" id="4706" level="4" />
@@ -1331,8 +1467,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2802" hpRegen="8.5" mp="1607" mpRegen="3" />
-			<attack physical="297.05" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="855.81387" magical="584.40994" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" />
+			<attribute>
+				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
@@ -1369,6 +1508,7 @@
 		</collision>
 	</npc>
 	<npc id="14634" level="78" type="Pet" name="Nightshade">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DeBuff1" id="4705" level="4" />
 			<skill name="DeBuff2" id="4706" level="4" />
@@ -1384,8 +1524,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2812" hpRegen="8.5" mp="1615" mpRegen="3" />
-			<attack physical="297.05" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="860.7348" magical="587.770295" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="333.7929775" magical="244.2552175" />
+			<attribute>
+				<defence fire="50" water="50" wind="50" earth="50" holy="50" dark="50" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
@@ -1422,6 +1565,7 @@
 		</collision>
 	</npc>
 	<npc id="14635" level="78" type="Pet" name="Nightshade">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DeBuff1" id="4705" level="4" />
 			<skill name="DeBuff2" id="4706" level="4" />
@@ -1437,8 +1581,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2822" hpRegen="8.5" mp="1624" mpRegen="3" />
-			<attack physical="297.05" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="865.65573" magical="591.13065" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="334.885345" magical="245.054565" />
+			<attribute>
+				<defence fire="60" water="60" wind="60" earth="60" holy="60" dark="60" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
@@ -1475,6 +1622,7 @@
 		</collision>
 	</npc>
 	<npc id="14636" level="78" type="Pet" name="Nightshade">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DeBuff1" id="4705" level="5" />
 			<skill name="DeBuff2" id="4706" level="5" />
@@ -1490,8 +1638,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2832" hpRegen="8.5" mp="1632" mpRegen="3" />
-			<attack physical="297.05" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="870.57666" magical="594.491005" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="335.9777125" magical="245.8539125" />
+			<attribute>
+				<defence fire="70" water="70" wind="70" earth="70" holy="70" dark="70" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
@@ -1527,7 +1678,8 @@
 			<height normal="35.5" />
 		</collision>
 	</npc>
-	<npc id="14637" level="78" type="Pet" name="Nightshade">
+	<npc id="14637" level="79" type="Pet" name="Nightshade">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DeBuff1" id="4705" level="5" />
 			<skill name="DeBuff2" id="4706" level="5" />
@@ -1543,8 +1695,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2842" hpRegen="8.5" mp="1641" mpRegen="3" />
-			<attack physical="297.05" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="875.49759" magical="597.85136" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="337.07008" magical="246.65326" />
+			<attribute>
+				<defence fire="80" water="80" wind="80" earth="80" holy="80" dark="80" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
@@ -1580,7 +1735,8 @@
 			<height normal="35.5" />
 		</collision>
 	</npc>
-	<npc id="14638" level="78" type="Pet" name="Nightshade">
+	<npc id="14638" level="79" type="Pet" name="Nightshade">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DeBuff1" id="4705" level="5" />
 			<skill name="DeBuff2" id="4706" level="5" />
@@ -1596,8 +1752,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2852" hpRegen="8.5" mp="1649" mpRegen="3" />
-			<attack physical="297.05" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="880.41852" magical="601.211715" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="338.1624475" magical="247.4526075" />
+			<attribute>
+				<defence fire="85" water="85" wind="85" earth="85" holy="85" dark="85" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
@@ -1633,7 +1792,8 @@
 			<height normal="35.5" />
 		</collision>
 	</npc>
-	<npc id="14639" level="78" type="Pet" name="Nightshade">
+	<npc id="14639" level="79" type="Pet" name="Nightshade">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DeBuff1" id="4705" level="6" />
 			<skill name="DeBuff2" id="4706" level="6" />
@@ -1649,8 +1809,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2862" hpRegen="8.5" mp="1657" mpRegen="3" />
-			<attack physical="297.05" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="885.33945" magical="604.57207" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="339.254815" magical="248.251955" />
+			<attribute>
+				<defence fire="90" water="90" wind="90" earth="90" holy="90" dark="90" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
@@ -1686,7 +1849,8 @@
 			<height normal="35.5" />
 		</collision>
 	</npc>
-	<npc id="14640" level="78" type="Pet" name="Nightshade">
+	<npc id="14640" level="79" type="Pet" name="Nightshade">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DeBuff1" id="4705" level="6" />
 			<skill name="DeBuff2" id="4706" level="6" />
@@ -1702,8 +1866,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2871" hpRegen="8.5" mp="1666" mpRegen="3" />
-			<attack physical="297.05" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="890.26038" magical="607.932425" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="340.3471825" magical="249.0513025" />
+			<attribute>
+				<defence fire="95" water="95" wind="95" earth="95" holy="95" dark="95" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
@@ -1739,7 +1906,8 @@
 			<height normal="35.5" />
 		</collision>
 	</npc>
-	<npc id="14641" level="78" type="Pet" name="Nightshade">
+	<npc id="14641" level="80" type="Pet" name="Nightshade">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DeBuff1" id="4705" level="6" />
 			<skill name="DeBuff2" id="4706" level="6" />
@@ -1755,8 +1923,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2880" hpRegen="8.5" mp="1674" mpRegen="3" />
-			<attack physical="297.05" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="894.75854" magical="611.00409" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341.375" magical="249.80341" />
+			<attribute>
+				<defence fire="100" water="100" wind="100" earth="100" holy="100" dark="100" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
@@ -1792,7 +1963,8 @@
 			<height normal="35.5" />
 		</collision>
 	</npc>
-	<npc id="14642" level="79" type="Pet" name="Nightshade">
+	<npc id="14642" level="80" type="Pet" name="Nightshade">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DeBuff1" id="4705" level="7" />
 			<skill name="DeBuff2" id="4706" level="7" />
@@ -1808,8 +1980,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2889" hpRegen="8.5" mp="1683" mpRegen="3" />
-			<attack physical="297.05" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="899.5737775" magical="614.2922725" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="342.45123" magical="250.5909475" />
+			<attribute>
+				<defence fire="102" water="102" wind="102" earth="102" holy="102" dark="102" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
@@ -1845,7 +2020,8 @@
 			<height normal="35.5" />
 		</collision>
 	</npc>
-	<npc id="14643" level="79" type="Pet" name="Nightshade">
+	<npc id="14643" level="80" type="Pet" name="Nightshade">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DeBuff1" id="4705" level="7" />
 			<skill name="DeBuff2" id="4706" level="7" />
@@ -1861,8 +2037,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2899" hpRegen="8.5" mp="1691" mpRegen="3" />
-			<attack physical="297.05" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="904.389015" magical="617.580455" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="343.52746" magical="251.378485" />
+			<attribute>
+				<defence fire="104" water="104" wind="104" earth="104" holy="104" dark="104" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
@@ -1898,7 +2077,8 @@
 			<height normal="35.5" />
 		</collision>
 	</npc>
-	<npc id="14644" level="79" type="Pet" name="Nightshade">
+	<npc id="14644" level="80" type="Pet" name="Nightshade">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DeBuff1" id="4705" level="7" />
 			<skill name="DeBuff2" id="4706" level="7" />
@@ -1914,8 +2094,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2908" hpRegen="8.5" mp="1700" mpRegen="3" />
-			<attack physical="297.05" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="909.2042525" magical="620.8686375" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="344.60369" magical="252.1660225" />
+			<attribute>
+				<defence fire="106" water="106" wind="106" earth="106" holy="106" dark="106" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
@@ -1951,7 +2134,8 @@
 			<height normal="35.5" />
 		</collision>
 	</npc>
-	<npc id="14645" level="79" type="Pet" name="Nightshade">
+	<npc id="14645" level="81" type="Pet" name="Nightshade">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DeBuff1" id="4705" level="8" />
 			<skill name="DeBuff2" id="4706" level="8" />
@@ -1967,8 +2151,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2916" hpRegen="8.5" mp="1708" mpRegen="3" />
-			<attack physical="297.05" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="913.54847" magical="623.83518" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="345.61127" magical="252.90333" />
+			<attribute>
+				<defence fire="109" water="109" wind="109" earth="109" holy="109" dark="109" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
@@ -2004,7 +2191,8 @@
 			<height normal="35.5" />
 		</collision>
 	</npc>
-	<npc id="14646" level="79" type="Pet" name="Nightshade">
+	<npc id="14646" level="81" type="Pet" name="Nightshade">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DeBuff1" id="4705" level="8" />
 			<skill name="DeBuff2" id="4706" level="8" />
@@ -2020,8 +2208,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2926" hpRegen="8.5" mp="1717" mpRegen="3" />
-			<attack physical="297.05" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="918.2459525" magical="627.0429525" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="346.6703375" magical="253.67831" />
+			<attribute>
+				<defence fire="111" water="111" wind="111" earth="111" holy="111" dark="111" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
@@ -2057,7 +2248,8 @@
 			<height normal="35.5" />
 		</collision>
 	</npc>
-	<npc id="14647" level="79" type="Pet" name="Nightshade">
+	<npc id="14647" level="81" type="Pet" name="Nightshade">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DeBuff1" id="4705" level="8" />
 			<skill name="DeBuff2" id="4706" level="8" />
@@ -2073,8 +2265,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2935" hpRegen="8.5" mp="1725" mpRegen="3" />
-			<attack physical="297.05" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="922.943435" magical="630.250725" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="347.729405" magical="254.45329" />
+			<attribute>
+				<defence fire="113" water="113" wind="113" earth="113" holy="113" dark="113" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
@@ -2110,7 +2305,8 @@
 			<height normal="35.5" />
 		</collision>
 	</npc>
-	<npc id="14648" level="79" type="Pet" name="Nightshade">
+	<npc id="14648" level="81" type="Pet" name="Nightshade">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DeBuff1" id="4705" level="9" />
 			<skill name="DeBuff2" id="4706" level="9" />
@@ -2126,8 +2322,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2944" hpRegen="8.5" mp="1734" mpRegen="3" />
-			<attack physical="297.05" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="927.6409175" magical="633.4584975" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="348.7884725" magical="255.22827" />
+			<attribute>
+				<defence fire="115" water="115" wind="115" earth="115" holy="115" dark="115" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
@@ -2163,7 +2362,8 @@
 			<height normal="35.5" />
 		</collision>
 	</npc>
-	<npc id="14649" level="79" type="Pet" name="Nightshade">
+	<npc id="14649" level="82" type="Pet" name="Nightshade">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DeBuff1" id="4705" level="9" />
 			<skill name="DeBuff2" id="4706" level="9" />
@@ -2179,8 +2379,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2951" hpRegen="8.5" mp="1743" mpRegen="3" />
-			<attack physical="297.05" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="931.81944" magical="636.31188" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="349.77477" magical="255.95" />
+			<attribute>
+				<defence fire="118" water="118" wind="118" earth="118" holy="118" dark="118" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
@@ -2216,7 +2419,8 @@
 			<height normal="35.5" />
 		</collision>
 	</npc>
-	<npc id="14650" level="79" type="Pet" name="Nightshade">
+	<npc id="14650" level="82" type="Pet" name="Nightshade">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DeBuff1" id="4705" level="9" />
 			<skill name="DeBuff2" id="4706" level="9" />
@@ -2232,8 +2436,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2960" hpRegen="8.5" mp="1751" mpRegen="3" />
-			<attack physical="297.05" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="936.3871825" magical="639.431055" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="350.815645" magical="256.7116675" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
@@ -2269,7 +2476,8 @@
 			<height normal="35.5" />
 		</collision>
 	</npc>
-	<npc id="14651" level="80" type="Pet" name="Nightshade">
+	<npc id="14651" level="82" type="Pet" name="Nightshade">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DeBuff1" id="4705" level="10" />
 			<skill name="DeBuff2" id="4706" level="10" />
@@ -2285,8 +2493,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2969" hpRegen="8.5" mp="1760" mpRegen="3" />
-			<attack physical="297.05" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="940.954925" magical="642.55023" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="351.85652" magical="257.473335" />
+			<attribute>
+				<defence fire="122" water="122" wind="122" earth="122" holy="122" dark="122" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
@@ -2322,7 +2533,8 @@
 			<height normal="35.5" />
 		</collision>
 	</npc>
-	<npc id="14652" level="80" type="Pet" name="Nightshade">
+	<npc id="14652" level="82" type="Pet" name="Nightshade">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DeBuff1" id="4705" level="10" />
 			<skill name="DeBuff2" id="4706" level="10" />
@@ -2338,8 +2550,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2978" hpRegen="8.5" mp="1768" mpRegen="3" />
-			<attack physical="297.05" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="945.5226675" magical="645.669405" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="352.897395" magical="258.2350025" />
+			<attribute>
+				<defence fire="124" water="124" wind="124" earth="124" holy="124" dark="124" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
@@ -2375,7 +2590,8 @@
 			<height normal="35.5" />
 		</collision>
 	</npc>
-	<npc id="14653" level="80" type="Pet" name="Nightshade">
+	<npc id="14653" level="83" type="Pet" name="Nightshade">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DeBuff1" id="4705" level="10" />
 			<skill name="DeBuff2" id="4706" level="10" />
@@ -2391,8 +2607,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2985" hpRegen="8.5" mp="1777" mpRegen="3" />
-			<attack physical="297.05" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="949.52401" magical="648.40181" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="353.86144" magical="258.94045" />
+			<attribute>
+				<defence fire="127" water="127" wind="127" earth="127" holy="127" dark="127" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
@@ -2428,7 +2647,8 @@
 			<height normal="35.5" />
 		</collision>
 	</npc>
-	<npc id="14654" level="80" type="Pet" name="Nightshade">
+	<npc id="14654" level="83" type="Pet" name="Nightshade">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DeBuff1" id="4705" level="11" />
 			<skill name="DeBuff2" id="4706" level="11" />
@@ -2444,8 +2664,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2993" hpRegen="8.5" mp="1786" mpRegen="3" />
-			<attack physical="297.05" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="953.9501525" magical="651.4242925" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="354.8831075" magical="259.6880625" />
+			<attribute>
+				<defence fire="129" water="129" wind="129" earth="129" holy="129" dark="129" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
@@ -2481,7 +2704,8 @@
 			<height normal="35.5" />
 		</collision>
 	</npc>
-	<npc id="14655" level="80" type="Pet" name="Nightshade">
+	<npc id="14655" level="83" type="Pet" name="Nightshade">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DeBuff1" id="4705" level="11" />
 			<skill name="DeBuff2" id="4706" level="11" />
@@ -2497,8 +2721,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="3001" hpRegen="8.5" mp="1794" mpRegen="3" />
-			<attack physical="297.05" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="958.376295" magical="654.446775" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="355.904775" magical="260.435675" />
+			<attribute>
+				<defence fire="131" water="131" wind="131" earth="131" holy="131" dark="131" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
@@ -2534,7 +2761,8 @@
 			<height normal="35.5" />
 		</collision>
 	</npc>
-	<npc id="14656" level="80" type="Pet" name="Nightshade">
+	<npc id="14656" level="83" type="Pet" name="Nightshade">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DeBuff1" id="4705" level="11" />
 			<skill name="DeBuff2" id="4706" level="11" />
@@ -2550,8 +2778,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="3010" hpRegen="8.5" mp="1803" mpRegen="3" />
-			<attack physical="297.05" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="962.8024375" magical="657.4692575" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="356.9264425" magical="261.1832875" />
+			<attribute>
+				<defence fire="133" water="133" wind="133" earth="133" holy="133" dark="133" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
@@ -2587,7 +2818,8 @@
 			<height normal="35.5" />
 		</collision>
 	</npc>
-	<npc id="14657" level="80" type="Pet" name="Nightshade">
+	<npc id="14657" level="84" type="Pet" name="Nightshade">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DeBuff1" id="4705" level="12" />
 			<skill name="DeBuff2" id="4706" level="12" />
@@ -2603,8 +2835,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="3016" hpRegen="8.5" mp="1812" mpRegen="3" />
-			<attack physical="297.05" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="966.61544" magical="660.07304" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
+			<attribute>
+				<defence fire="136" water="136" wind="136" earth="136" holy="136" dark="136" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
@@ -2640,7 +2875,8 @@
 			<height normal="35.5" />
 		</collision>
 	</npc>
-	<npc id="14658" level="80" type="Pet" name="Nightshade">
+	<npc id="14658" level="84" type="Pet" name="Nightshade">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DeBuff1" id="4705" level="12" />
 			<skill name="DeBuff2" id="4706" level="12" />
@@ -2656,8 +2892,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="3024" hpRegen="8.5" mp="1820" mpRegen="3" />
-			<attack physical="297.05" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="970.8882975" magical="662.9908475" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="358.8686775" magical="262.604525" />
+			<attribute>
+				<defence fire="138" water="138" wind="138" earth="138" holy="138" dark="138" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
@@ -2693,7 +2932,8 @@
 			<height normal="35.5" />
 		</collision>
 	</npc>
-	<npc id="14659" level="80" type="Pet" name="Nightshade">
+	<npc id="14659" level="84" type="Pet" name="Nightshade">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DeBuff1" id="4705" level="12" />
 			<skill name="DeBuff2" id="4706" level="12" />
@@ -2709,8 +2949,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="3032" hpRegen="8.5" mp="1829" mpRegen="3" />
-			<attack physical="297.05" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="975.161155" magical="665.908655" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="359.870125" magical="263.33734" />
+			<attribute>
+				<defence fire="140" water="140" wind="140" earth="140" holy="140" dark="140" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
@@ -2746,7 +2989,8 @@
 			<height normal="35.5" />
 		</collision>
 	</npc>
-	<npc id="14660" level="80" type="Pet" name="Nightshade">
+	<npc id="14660" level="85" type="Pet" name="Nightshade">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DeBuff1" id="4705" level="13" />
 			<skill name="DeBuff2" id="4706" level="13" />
@@ -2762,8 +3006,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="3046" hpRegen="8.5" mp="1846" mpRegen="3" />
-			<attack physical="297.05" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="983.0479" magical="671.29428" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="361.78814" magical="264.74086" />
+			<attribute>
+				<defence fire="143" water="143" wind="143" earth="143" holy="143" dark="143" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
@@ -2799,7 +3046,8 @@
 			<height normal="35.5" />
 		</collision>
 	</npc>
-	<npc id="14661" level="80" type="Pet" name="Nightshade">
+	<npc id="14661" level="85" type="Pet" name="Nightshade">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DeBuff1" id="4705" level="13" />
 			<skill name="DeBuff2" id="4706" level="13" />
@@ -2815,8 +3063,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="3056" hpRegen="8.5" mp="1858" mpRegen="3" />
-			<attack physical="297.05" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="988.525386666667" magical="675.034693333333" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="363.09511" magical="265.697243333333" />
+			<attribute>
+				<defence fire="145" water="145" wind="145" earth="145" holy="145" dark="145" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
@@ -2852,7 +3103,8 @@
 			<height normal="35.5" />
 		</collision>
 	</npc>
-	<npc id="14662" level="80" type="Pet" name="Nightshade">
+	<npc id="14662" level="85" type="Pet" name="Nightshade">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DeBuff1" id="4705" level="13" />
 			<skill name="DeBuff2" id="4706" level="13" />
@@ -2868,8 +3120,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="3066" hpRegen="8.5" mp="1870" mpRegen="3" />
-			<attack physical="297.05" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="994.002873333333" magical="678.775106666667" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="364.40208" magical="266.653626666667" />
+			<attribute>
+				<defence fire="147" water="147" wind="147" earth="147" holy="147" dark="147" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
@@ -2906,6 +3161,7 @@
 		</collision>
 	</npc>
 	<npc id="14663" level="30" type="Pet" name="Mechanic Golem">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4068" level="3" />
 			<param name="step1_action01" value="48" />
@@ -2914,8 +3170,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="604" hpRegen="3.5" mp="329" mpRegen="1.5" />
-			<attack physical="92.64226" magical="63.26266" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="92.64226" magical="63.26266" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="118.46427" magical="86.68702" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="150" />
@@ -2923,7 +3182,7 @@
 			<hitTime>720</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status undying="false" />
 		<skillList>
 			<skill id="4121" level="6" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="4408" level="4" /> <!-- HP High -->
@@ -2935,6 +3194,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4068" level="3" /> <!-- Mechanical Cannon -->
 		</skillList>
 		<shots soul="2" spirit="1" />
@@ -2946,6 +3206,7 @@
 		</collision>
 	</npc>
 	<npc id="14664" level="38" type="Pet" name="Mechanic Golem">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4068" level="3" />
 			<param name="step1_action01" value="48" />
@@ -2954,8 +3215,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="886" hpRegen="4.5" mp="447" mpRegen="1.8" />
-			<attack physical="156.22273" magical="106.67987" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="156.22273" magical="106.67987" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="148.44287" magical="108.62405" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="150" />
@@ -2963,7 +3227,7 @@
 			<hitTime>720</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status undying="false" />
 		<skillList>
 			<skill id="4121" level="6" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="4408" level="4" /> <!-- HP High -->
@@ -2975,6 +3239,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4068" level="3" /> <!-- Mechanical Cannon -->
 		</skillList>
 		<shots soul="2" spirit="1" />
@@ -2986,6 +3251,7 @@
 		</collision>
 	</npc>
 	<npc id="14665" level="45" type="Pet" name="Mechanic Golem">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4068" level="4" />
 			<param name="step1_action01" value="48" />
@@ -2994,8 +3260,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="1183" hpRegen="5.5" mp="610" mpRegen="2.1" />
-			<attack physical="234.89829" magical="160.40508" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="234.89829" magical="160.40508" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="177.78746" magical="130.09715" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="150" />
@@ -3003,7 +3272,7 @@
 			<hitTime>720</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status undying="false" />
 		<skillList>
 			<skill id="4121" level="6" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="4408" level="4" /> <!-- HP High -->
@@ -3015,6 +3284,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4068" level="4" /> <!-- Mechanical Cannon -->
 		</skillList>
 		<shots soul="3" spirit="1" />
@@ -3026,6 +3296,7 @@
 		</collision>
 	</npc>
 	<npc id="14666" level="51" type="Pet" name="Mechanic Golem">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4068" level="5" />
 			<param name="step1_action01" value="48" />
@@ -3034,8 +3305,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="1470" hpRegen="6.5" mp="775" mpRegen="2.4" />
-			<attack physical="321.13207" magical="219.29157" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="321.13207" magical="219.29157" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="204.85194" magical="149.90176" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="150" />
@@ -3043,7 +3317,7 @@
 			<hitTime>720</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status undying="false" />
 		<skillList>
 			<skill id="4121" level="6" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="4408" level="4" /> <!-- HP High -->
@@ -3055,6 +3329,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4068" level="5" /> <!-- Mechanical Cannon -->
 		</skillList>
 		<shots soul="3" spirit="1" />
@@ -3066,6 +3341,7 @@
 		</collision>
 	</npc>
 	<npc id="14667" level="57" type="Pet" name="Mechanic Golem">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4068" level="5" />
 			<param name="step1_action01" value="48" />
@@ -3074,8 +3350,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="1776" hpRegen="6.5" mp="948" mpRegen="2.4" />
-			<attack physical="424.23295" magical="289.69611" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="424.23295" magical="289.69611" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="233.18839" magical="170.63714" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="150" />
@@ -3083,7 +3362,7 @@
 			<hitTime>720</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status undying="false" />
 		<skillList>
 			<skill id="4121" level="6" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="4408" level="4" /> <!-- HP High -->
@@ -3095,6 +3374,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4068" level="5" /> <!-- Mechanical Cannon -->
 		</skillList>
 		<shots soul="4" spirit="2" />
@@ -3106,6 +3386,7 @@
 		</collision>
 	</npc>
 	<npc id="14668" level="62" type="Pet" name="Mechanic Golem">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4068" level="6" />
 			<param name="step1_action01" value="48" />
@@ -3114,8 +3395,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2037" hpRegen="7.5" mp="1097" mpRegen="2.7" />
-			<attack physical="521.12391" magical="355.86007" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="521.12391" magical="355.86007" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="257.34267" magical="188.3122" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="150" />
@@ -3123,7 +3407,7 @@
 			<hitTime>720</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status undying="false" />
 		<skillList>
 			<skill id="4121" level="6" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="4408" level="4" /> <!-- HP High -->
@@ -3135,6 +3419,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4068" level="6" /> <!-- Mechanical Cannon -->
 		</skillList>
 		<shots soul="4" spirit="2" />
@@ -3146,6 +3431,7 @@
 		</collision>
 	</npc>
 	<npc id="14669" level="66" type="Pet" name="Mechanic Golem">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4068" level="6" />
 			<param name="step1_action01" value="48" />
@@ -3154,8 +3440,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2244" hpRegen="7.5" mp="1219" mpRegen="2.7" />
-			<attack physical="603.79903" magical="412.31647" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="603.79903" magical="412.31647" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="276.72752" magical="202.49719" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="150" />
@@ -3163,7 +3452,7 @@
 			<hitTime>720</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status undying="false" />
 		<skillList>
 			<skill id="4121" level="6" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="4408" level="4" /> <!-- HP High -->
@@ -3175,6 +3464,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4068" level="6" /> <!-- Mechanical Cannon -->
 		</skillList>
 		<shots soul="4" spirit="2" />
@@ -3186,6 +3476,7 @@
 		</collision>
 	</npc>
 	<npc id="14670" level="70" type="Pet" name="Mechanic Golem">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4068" level="7" />
 			<param name="step1_action01" value="48" />
@@ -3194,8 +3485,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="150" />
@@ -3203,7 +3497,7 @@
 			<hitTime>720</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status undying="false" />
 		<skillList>
 			<skill id="4121" level="6" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="4408" level="4" /> <!-- HP High -->
@@ -3215,6 +3509,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4068" level="7" /> <!-- Mechanical Cannon -->
 		</skillList>
 		<shots soul="5" spirit="2" />
@@ -3226,6 +3521,7 @@
 		</collision>
 	</npc>
 	<npc id="14671" level="74" type="Pet" name="Mechanic Golem">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4068" level="7" />
 			<param name="step1_action01" value="48" />
@@ -3234,8 +3530,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2632" hpRegen="8.5" mp="1475" mpRegen="3" />
-			<attack physical="773.81598" magical="528.41601" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="773.81598" magical="528.41601" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="314.65987" magical="230.25444" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="150" />
@@ -3243,7 +3542,7 @@
 			<hitTime>720</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status undying="false" />
 		<skillList>
 			<skill id="4121" level="6" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="4408" level="4" /> <!-- HP High -->
@@ -3255,6 +3554,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4068" level="7" /> <!-- Mechanical Cannon -->
 		</skillList>
 		<shots soul="5" spirit="2" />
@@ -3266,6 +3566,7 @@
 		</collision>
 	</npc>
 	<npc id="14672" level="78" type="Pet" name="Mechanic Golem">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4068" level="8" />
 			<param name="step1_action01" value="48" />
@@ -3274,8 +3575,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2802" hpRegen="8.5" mp="1607" mpRegen="3" />
-			<attack physical="860.08905" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="855.81387" magical="584.40994" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" />
+			<attribute>
+				<defence fire="40" water="40" wind="40" earth="40" holy="40" dark="40" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="150" />
@@ -3295,6 +3599,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4068" level="8" /> <!-- Mechanical Cannon -->
 		</skillList>
 		<shots soul="5" spirit="2" />
@@ -3306,6 +3611,7 @@
 		</collision>
 	</npc>
 	<npc id="14673" level="78" type="Pet" name="Mechanic Golem">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4068" level="8" />
 			<param name="step1_action01" value="48" />
@@ -3314,8 +3620,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2812" hpRegen="8.5" mp="1615" mpRegen="3" />
-			<attack physical="864.3681" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="860.7348" magical="587.770295" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="333.7929775" magical="244.2552175" />
+			<attribute>
+				<defence fire="50" water="50" wind="50" earth="50" holy="50" dark="50" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="150" />
@@ -3335,6 +3644,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4068" level="8" /> <!-- Mechanical Cannon -->
 		</skillList>
 		<shots soul="5" spirit="2" />
@@ -3346,6 +3656,7 @@
 		</collision>
 	</npc>
 	<npc id="14674" level="78" type="Pet" name="Mechanic Golem">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4068" level="8" />
 			<param name="step1_action01" value="48" />
@@ -3354,8 +3665,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2822" hpRegen="8.5" mp="1624" mpRegen="3" />
-			<attack physical="868.64715" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="865.65573" magical="591.13065" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="334.885345" magical="245.054565" />
+			<attribute>
+				<defence fire="60" water="60" wind="60" earth="60" holy="60" dark="60" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="150" />
@@ -3375,6 +3689,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4068" level="8" /> <!-- Mechanical Cannon -->
 		</skillList>
 		<shots soul="5" spirit="2" />
@@ -3386,6 +3701,7 @@
 		</collision>
 	</npc>
 	<npc id="14675" level="78" type="Pet" name="Mechanic Golem">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4068" level="8" />
 			<param name="step1_action01" value="48" />
@@ -3394,8 +3710,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2832" hpRegen="8.5" mp="1632" mpRegen="3" />
-			<attack physical="872.9262" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="870.57666" magical="594.491005" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="335.9777125" magical="245.8539125" />
+			<attribute>
+				<defence fire="70" water="70" wind="70" earth="70" holy="70" dark="70" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="150" />
@@ -3415,6 +3734,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4068" level="8" /> <!-- Mechanical Cannon -->
 		</skillList>
 		<shots soul="5" spirit="2" />
@@ -3425,7 +3745,8 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="14676" level="78" type="Pet" name="Mechanic Golem">
+	<npc id="14676" level="79" type="Pet" name="Mechanic Golem">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4068" level="8" />
 			<param name="step1_action01" value="48" />
@@ -3434,8 +3755,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2842" hpRegen="8.5" mp="1641" mpRegen="3" />
-			<attack physical="877.20525" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="875.49759" magical="597.85136" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="337.07008" magical="246.65326" />
+			<attribute>
+				<defence fire="80" water="80" wind="80" earth="80" holy="80" dark="80" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="150" />
@@ -3455,6 +3779,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4068" level="8" /> <!-- Mechanical Cannon -->
 		</skillList>
 		<shots soul="5" spirit="2" />
@@ -3465,7 +3790,8 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="14677" level="78" type="Pet" name="Mechanic Golem">
+	<npc id="14677" level="79" type="Pet" name="Mechanic Golem">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4068" level="8" />
 			<param name="step1_action01" value="48" />
@@ -3474,8 +3800,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2852" hpRegen="8.5" mp="1649" mpRegen="3" />
-			<attack physical="881.4843" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="880.41852" magical="601.211715" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="338.1624475" magical="247.4526075" />
+			<attribute>
+				<defence fire="85" water="85" wind="85" earth="85" holy="85" dark="85" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="150" />
@@ -3495,6 +3824,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4068" level="8" /> <!-- Mechanical Cannon -->
 		</skillList>
 		<shots soul="5" spirit="2" />
@@ -3505,7 +3835,8 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="14678" level="78" type="Pet" name="Mechanic Golem">
+	<npc id="14678" level="79" type="Pet" name="Mechanic Golem">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4068" level="9" />
 			<param name="step1_action01" value="48" />
@@ -3514,8 +3845,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2862" hpRegen="8.5" mp="1657" mpRegen="3" />
-			<attack physical="885.76335" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="885.33945" magical="604.57207" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="339.254815" magical="248.251955" />
+			<attribute>
+				<defence fire="90" water="90" wind="90" earth="90" holy="90" dark="90" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="150" />
@@ -3535,6 +3869,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4068" level="9" /> <!-- Mechanical Cannon -->
 		</skillList>
 		<shots soul="5" spirit="2" />
@@ -3545,7 +3880,8 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="14679" level="78" type="Pet" name="Mechanic Golem">
+	<npc id="14679" level="79" type="Pet" name="Mechanic Golem">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4068" level="9" />
 			<param name="step1_action01" value="48" />
@@ -3554,8 +3890,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2871" hpRegen="8.5" mp="1666" mpRegen="3" />
-			<attack physical="890.0424" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="890.26038" magical="607.932425" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="340.3471825" magical="249.0513025" />
+			<attribute>
+				<defence fire="95" water="95" wind="95" earth="95" holy="95" dark="95" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="150" />
@@ -3575,6 +3914,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4068" level="9" /> <!-- Mechanical Cannon -->
 		</skillList>
 		<shots soul="5" spirit="2" />
@@ -3585,7 +3925,8 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="14680" level="78" type="Pet" name="Mechanic Golem">
+	<npc id="14680" level="80" type="Pet" name="Mechanic Golem">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4068" level="9" />
 			<param name="step1_action01" value="48" />
@@ -3594,8 +3935,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2880" hpRegen="8.5" mp="1674" mpRegen="3" />
-			<attack physical="894.32145" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="894.75854" magical="611.00409" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341.375" magical="249.80341" />
+			<attribute>
+				<defence fire="100" water="100" wind="100" earth="100" holy="100" dark="100" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="150" />
@@ -3615,6 +3959,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4068" level="9" /> <!-- Mechanical Cannon -->
 		</skillList>
 		<shots soul="5" spirit="2" />
@@ -3625,7 +3970,8 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="14681" level="79" type="Pet" name="Mechanic Golem">
+	<npc id="14681" level="80" type="Pet" name="Mechanic Golem">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4068" level="9" />
 			<param name="step1_action01" value="48" />
@@ -3634,8 +3980,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2889" hpRegen="8.5" mp="1683" mpRegen="3" />
-			<attack physical="898.6005" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="899.5737775" magical="614.2922725" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="342.45123" magical="250.5909475" />
+			<attribute>
+				<defence fire="102" water="102" wind="102" earth="102" holy="102" dark="102" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="150" />
@@ -3655,6 +4004,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4068" level="9" /> <!-- Mechanical Cannon -->
 		</skillList>
 		<shots soul="5" spirit="2" />
@@ -3665,7 +4015,8 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="14682" level="79" type="Pet" name="Mechanic Golem">
+	<npc id="14682" level="80" type="Pet" name="Mechanic Golem">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4068" level="9" />
 			<param name="step1_action01" value="48" />
@@ -3674,8 +4025,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2899" hpRegen="8.5" mp="1691" mpRegen="3" />
-			<attack physical="902.87955" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="904.389015" magical="617.580455" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="343.52746" magical="251.378485" />
+			<attribute>
+				<defence fire="104" water="104" wind="104" earth="104" holy="104" dark="104" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="150" />
@@ -3695,6 +4049,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4068" level="9" /> <!-- Mechanical Cannon -->
 		</skillList>
 		<shots soul="5" spirit="2" />
@@ -3705,7 +4060,8 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="14683" level="79" type="Pet" name="Mechanic Golem">
+	<npc id="14683" level="80" type="Pet" name="Mechanic Golem">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4068" level="9" />
 			<param name="step1_action01" value="48" />
@@ -3714,8 +4070,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2908" hpRegen="8.5" mp="1700" mpRegen="3" />
-			<attack physical="907.1586" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="909.2042525" magical="620.8686375" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="344.60369" magical="252.1660225" />
+			<attribute>
+				<defence fire="106" water="106" wind="106" earth="106" holy="106" dark="106" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="150" />
@@ -3735,6 +4094,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4068" level="9" /> <!-- Mechanical Cannon -->
 		</skillList>
 		<shots soul="5" spirit="2" />
@@ -3745,7 +4105,8 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="14684" level="79" type="Pet" name="Mechanic Golem">
+	<npc id="14684" level="81" type="Pet" name="Mechanic Golem">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4068" level="10" />
 			<param name="step1_action01" value="48" />
@@ -3754,8 +4115,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2916" hpRegen="8.5" mp="1708" mpRegen="3" />
-			<attack physical="911.43765" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="913.54847" magical="623.83518" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="345.61127" magical="252.90333" />
+			<attribute>
+				<defence fire="109" water="109" wind="109" earth="109" holy="109" dark="109" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="150" />
@@ -3775,6 +4139,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4068" level="10" /> <!-- Mechanical Cannon -->
 		</skillList>
 		<shots soul="5" spirit="2" />
@@ -3785,7 +4150,8 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="14685" level="79" type="Pet" name="Mechanic Golem">
+	<npc id="14685" level="81" type="Pet" name="Mechanic Golem">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4068" level="10" />
 			<param name="step1_action01" value="48" />
@@ -3794,8 +4160,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2926" hpRegen="8.5" mp="1717" mpRegen="3" />
-			<attack physical="915.7167" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="918.2459525" magical="627.0429525" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="346.6703375" magical="253.67831" />
+			<attribute>
+				<defence fire="111" water="111" wind="111" earth="111" holy="111" dark="111" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="150" />
@@ -3815,6 +4184,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4068" level="10" /> <!-- Mechanical Cannon -->
 		</skillList>
 		<shots soul="5" spirit="2" />
@@ -3825,7 +4195,8 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="14686" level="79" type="Pet" name="Mechanic Golem">
+	<npc id="14686" level="81" type="Pet" name="Mechanic Golem">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4068" level="10" />
 			<param name="step1_action01" value="48" />
@@ -3834,8 +4205,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2935" hpRegen="8.5" mp="1725" mpRegen="3" />
-			<attack physical="919.99575" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="922.943435" magical="630.250725" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="347.729405" magical="254.45329" />
+			<attribute>
+				<defence fire="113" water="113" wind="113" earth="113" holy="113" dark="113" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="150" />
@@ -3855,6 +4229,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4068" level="10" /> <!-- Mechanical Cannon -->
 		</skillList>
 		<shots soul="5" spirit="2" />
@@ -3865,7 +4240,8 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="14687" level="79" type="Pet" name="Mechanic Golem">
+	<npc id="14687" level="81" type="Pet" name="Mechanic Golem">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4068" level="10" />
 			<param name="step1_action01" value="48" />
@@ -3874,8 +4250,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2944" hpRegen="8.5" mp="1734" mpRegen="3" />
-			<attack physical="924.2748" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="927.6409175" magical="633.4584975" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="348.7884725" magical="255.22827" />
+			<attribute>
+				<defence fire="115" water="115" wind="115" earth="115" holy="115" dark="115" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="150" />
@@ -3895,6 +4274,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4068" level="10" /> <!-- Mechanical Cannon -->
 		</skillList>
 		<shots soul="5" spirit="2" />
@@ -3905,7 +4285,8 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="14688" level="79" type="Pet" name="Mechanic Golem">
+	<npc id="14688" level="82" type="Pet" name="Mechanic Golem">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4068" level="10" />
 			<param name="step1_action01" value="48" />
@@ -3914,8 +4295,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2951" hpRegen="8.5" mp="1743" mpRegen="3" />
-			<attack physical="928.55385" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="931.81944" magical="636.31188" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="349.77477" magical="255.95" />
+			<attribute>
+				<defence fire="118" water="118" wind="118" earth="118" holy="118" dark="118" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="150" />
@@ -3935,6 +4319,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4068" level="10" /> <!-- Mechanical Cannon -->
 		</skillList>
 		<shots soul="5" spirit="2" />
@@ -3945,7 +4330,8 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="14689" level="79" type="Pet" name="Mechanic Golem">
+	<npc id="14689" level="82" type="Pet" name="Mechanic Golem">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4068" level="10" />
 			<param name="step1_action01" value="48" />
@@ -3954,8 +4340,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2960" hpRegen="8.5" mp="1751" mpRegen="3" />
-			<attack physical="932.8329" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="936.3871825" magical="639.431055" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="350.815645" magical="256.7116675" />
+			<attribute>
+				<defence fire="120" water="120" wind="120" earth="120" holy="120" dark="120" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="150" />
@@ -3975,6 +4364,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4068" level="10" /> <!-- Mechanical Cannon -->
 		</skillList>
 		<shots soul="5" spirit="2" />
@@ -3985,7 +4375,8 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="14690" level="80" type="Pet" name="Mechanic Golem">
+	<npc id="14690" level="82" type="Pet" name="Mechanic Golem">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4068" level="11" />
 			<param name="step1_action01" value="48" />
@@ -3994,8 +4385,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2969" hpRegen="8.5" mp="1760" mpRegen="3" />
-			<attack physical="937.11195" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="940.954925" magical="642.55023" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="351.85652" magical="257.473335" />
+			<attribute>
+				<defence fire="122" water="122" wind="122" earth="122" holy="122" dark="122" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="150" />
@@ -4015,6 +4409,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4068" level="11" /> <!-- Mechanical Cannon -->
 		</skillList>
 		<shots soul="5" spirit="2" />
@@ -4025,7 +4420,8 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="14691" level="80" type="Pet" name="Mechanic Golem">
+	<npc id="14691" level="82" type="Pet" name="Mechanic Golem">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4068" level="11" />
 			<param name="step1_action01" value="48" />
@@ -4034,8 +4430,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2978" hpRegen="8.5" mp="1768" mpRegen="3" />
-			<attack physical="941.391" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="945.5226675" magical="645.669405" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="352.897395" magical="258.2350025" />
+			<attribute>
+				<defence fire="124" water="124" wind="124" earth="124" holy="124" dark="124" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="150" />
@@ -4055,6 +4454,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4068" level="11" /> <!-- Mechanical Cannon -->
 		</skillList>
 		<shots soul="5" spirit="2" />
@@ -4065,7 +4465,8 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="14692" level="80" type="Pet" name="Mechanic Golem">
+	<npc id="14692" level="83" type="Pet" name="Mechanic Golem">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4068" level="11" />
 			<param name="step1_action01" value="48" />
@@ -4074,8 +4475,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2985" hpRegen="8.5" mp="1777" mpRegen="3" />
-			<attack physical="945.67005" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="949.52401" magical="648.40181" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="353.86144" magical="258.94045" />
+			<attribute>
+				<defence fire="127" water="127" wind="127" earth="127" holy="127" dark="127" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="150" />
@@ -4095,6 +4499,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4068" level="11" /> <!-- Mechanical Cannon -->
 		</skillList>
 		<shots soul="5" spirit="2" />
@@ -4105,7 +4510,8 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="14693" level="80" type="Pet" name="Mechanic Golem">
+	<npc id="14693" level="83" type="Pet" name="Mechanic Golem">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4068" level="11" />
 			<param name="step1_action01" value="48" />
@@ -4114,8 +4520,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2993" hpRegen="8.5" mp="1786" mpRegen="3" />
-			<attack physical="949.9491" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="953.9501525" magical="651.4242925" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="354.8831075" magical="259.6880625" />
+			<attribute>
+				<defence fire="129" water="129" wind="129" earth="129" holy="129" dark="129" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="150" />
@@ -4135,6 +4544,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4068" level="11" /> <!-- Mechanical Cannon -->
 		</skillList>
 		<shots soul="5" spirit="2" />
@@ -4145,7 +4555,8 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="14694" level="80" type="Pet" name="Mechanic Golem">
+	<npc id="14694" level="83" type="Pet" name="Mechanic Golem">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4068" level="11" />
 			<param name="step1_action01" value="48" />
@@ -4154,8 +4565,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="3001" hpRegen="8.5" mp="1794" mpRegen="3" />
-			<attack physical="954.22815" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="958.376295" magical="654.446775" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="355.904775" magical="260.435675" />
+			<attribute>
+				<defence fire="131" water="131" wind="131" earth="131" holy="131" dark="131" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="150" />
@@ -4175,6 +4589,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4068" level="11" /> <!-- Mechanical Cannon -->
 		</skillList>
 		<shots soul="5" spirit="2" />
@@ -4185,7 +4600,8 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="14695" level="80" type="Pet" name="Mechanic Golem">
+	<npc id="14695" level="83" type="Pet" name="Mechanic Golem">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4068" level="11" />
 			<param name="step1_action01" value="48" />
@@ -4194,8 +4610,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="3010" hpRegen="8.5" mp="1803" mpRegen="3" />
-			<attack physical="958.5072" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="962.8024375" magical="657.4692575" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="356.9264425" magical="261.1832875" />
+			<attribute>
+				<defence fire="133" water="133" wind="133" earth="133" holy="133" dark="133" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="150" />
@@ -4215,6 +4634,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4068" level="11" /> <!-- Mechanical Cannon -->
 		</skillList>
 		<shots soul="5" spirit="2" />
@@ -4225,7 +4645,8 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="14696" level="80" type="Pet" name="Mechanic Golem">
+	<npc id="14696" level="84" type="Pet" name="Mechanic Golem">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4068" level="12" />
 			<param name="step1_action01" value="48" />
@@ -4234,8 +4655,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="3016" hpRegen="8.5" mp="1812" mpRegen="3" />
-			<attack physical="962.78625" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="966.61544" magical="660.07304" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.86723" magical="261.87171" />
+			<attribute>
+				<defence fire="136" water="136" wind="136" earth="136" holy="136" dark="136" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="150" />
@@ -4255,6 +4679,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4068" level="12" /> <!-- Mechanical Cannon -->
 		</skillList>
 		<shots soul="5" spirit="2" />
@@ -4265,7 +4690,8 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="14697" level="80" type="Pet" name="Mechanic Golem">
+	<npc id="14697" level="84" type="Pet" name="Mechanic Golem">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4068" level="12" />
 			<param name="step1_action01" value="48" />
@@ -4274,8 +4700,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="3024" hpRegen="8.5" mp="1820" mpRegen="3" />
-			<attack physical="967.0653" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="970.8882975" magical="662.9908475" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="358.8686775" magical="262.604525" />
+			<attribute>
+				<defence fire="138" water="138" wind="138" earth="138" holy="138" dark="138" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="150" />
@@ -4295,6 +4724,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4068" level="12" /> <!-- Mechanical Cannon -->
 		</skillList>
 		<shots soul="5" spirit="2" />
@@ -4305,7 +4735,8 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="14698" level="80" type="Pet" name="Mechanic Golem">
+	<npc id="14698" level="84" type="Pet" name="Mechanic Golem">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4068" level="12" />
 			<param name="step1_action01" value="48" />
@@ -4314,8 +4745,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="3032" hpRegen="8.5" mp="1829" mpRegen="3" />
-			<attack physical="971.34435" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="975.161155" magical="665.908655" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="359.870125" magical="263.33734" />
+			<attribute>
+				<defence fire="140" water="140" wind="140" earth="140" holy="140" dark="140" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="150" />
@@ -4335,6 +4769,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4068" level="12" /> <!-- Mechanical Cannon -->
 		</skillList>
 		<shots soul="5" spirit="2" />
@@ -4345,7 +4780,8 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="14699" level="80" type="Pet" name="Mechanic Golem">
+	<npc id="14699" level="85" type="Pet" name="Mechanic Golem">
+		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4068" level="12" />
 			<param name="step1_action01" value="48" />
@@ -4354,8 +4790,11 @@
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="3046" hpRegen="8.5" mp="1846" mpRegen="3" />
-			<attack physical="975.6234" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.7" magical="243.46" />
+			<attack physical="983.0479" magical="671.29428" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="361.78814" magical="264.74086" />
+			<attribute>
+				<defence fire="143" water="143" wind="143" earth="143" holy="143" dark="143" />
+			</attribute>
 			<speed>
 				<walk ground="30" />
 				<run ground="150" />
@@ -4375,6 +4814,7 @@
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5038" level="15" /> <!-- Summon PVP Penalty -->
 			<skill id="4068" level="12" /> <!-- Mechanical Cannon -->
 		</skillList>
 		<shots soul="5" spirit="2" />

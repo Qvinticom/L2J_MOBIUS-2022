@@ -61,7 +61,7 @@
 		</effects>
 	</skill>
 	<skill id="6804" toLevel="1" name="Arena Wind Walk">
-		<!-- For 5 minutes, Speed + 33. -->
+		<!-- Increases Speed by 33 for 5 minutes. -->
 		<icon>icon.skill1204</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -697,7 +697,7 @@
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
-	<skill id="6826" toLevel="1" name="Critical Blow">
+	<skill id="6826" toLevel="1" name="Critical Strike">
 		<effectPoint>-10000</effectPoint>
 		<operateType>A1</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1190,11 +1190,13 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="6854" toLevel="1" name="Hold">
-		<!-- Inflicted with Hold and unable to move. -->
+		<!-- Afflicted with Hold and unable to move temporarily. -->
 		<icon>icon.skill4047</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -1595,7 +1597,7 @@
 		</effects>
 	</skill>
 	<skill id="6873" toLevel="2" name="Hex">
-		<!-- Decreases P. Def. by $s1. -->
+		<!-- P. Def. is decreased by $s1. -->
 		<icon>icon.skill0122</icon>
 		<abnormalLvl>
 			<value level="1">3</value>
@@ -1747,7 +1749,9 @@
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="6879" toLevel="1" name="Vampiric Claw">
@@ -1796,7 +1800,7 @@
 			<effect name="Mute" />
 		</effects>
 	</skill>
-	<skill id="6881" toLevel="1" name="Critical Blow">
+	<skill id="6881" toLevel="1" name="Critical Strike">
 		<castRange>40</castRange>
 		<effectPoint>-10000</effectPoint>
 		<effectRange>300</effectRange>
@@ -1841,6 +1845,28 @@
 		<effects>
 			<effect name="BlockActions" />
 		</effects>
+	</skill>
+	<skill id="6883" toLevel="1" name="Vitality Recovery Effect">
+		<!-- For 5 minutes, energy is recovered. -->
+		<icon>icon.skilltransform4</icon>
+		<operateType>A2</operateType>
+		<effectPoint>100</effectPoint>
+		<abnormalType>VP_CHANGE</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<effectRange>1200</effectRange>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<affectRange>1000</affectRange>
+		<hitTime>100</hitTime>
+		<reuseDelay>2000</reuseDelay>
+		<isMagic>4</isMagic>
+		<castRange>900</castRange>
+		<abnormalVisualEffect>VP_UP</abnormalVisualEffect>
+		<targetType>TARGET</targetType>
+		<affectScope>PARTY</affectScope>
 	</skill>
 	<skill id="6884" toLevel="1" name="Morale Boost">
 		<abnormalTime>60</abnormalTime>
@@ -2183,7 +2209,7 @@
 		</effects>
 	</skill>
 	<skill id="6897" toLevel="12" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0100</icon>
 		<operateType>A2</operateType>
 		<mpConsume>

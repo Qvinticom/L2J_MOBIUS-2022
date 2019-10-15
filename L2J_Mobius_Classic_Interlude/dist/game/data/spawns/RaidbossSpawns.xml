@@ -10,6 +10,21 @@
 		</territories>
 		<npc id="25395" dbSave="true" dbName="archon_susceptor" respawnTime="24hour" respawnRandom="12hour" /> <!-- Archon Susceptor -->
 	</spawn>
+	<spawn name="godard16_mb2416_01m1" ai="DEFAULT_USE_DB_MAKER">
+		<territories>
+			<territory name="godard16_mb2416_01" minZ="-6825" maxZ="6175">
+				<node x="163397" y="-65343" />
+				<node x="163462" y="-33104" />
+				<node x="131476" y="-33183" />
+				<node x="131282" y="-65193" />
+			</territory>
+		</territories>
+		<npc id="29095" x="147408" y="-43552" z="-2328" dbSave="true" dbName="gordon" respawnTime="24hour" respawnRandom="12hour"> <!-- Gordon -->
+		<parameters>
+			<param name="SuperPointName" value="gordon" />
+		</parameters>
+		</npc>
+	</spawn>
 	<spawn name="aden06_mb2518_08m1" ai="DEFAULT_USE_DB_MAKER">
 		<territories>
 			<territory name="aden06_mb2518_08" minZ="-3205" maxZ="-3005">

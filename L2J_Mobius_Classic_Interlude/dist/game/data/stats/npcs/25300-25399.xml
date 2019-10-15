@@ -163,6 +163,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
+		<equipment rhand="79" lhand="6919" /> <!-- Damascus Sword / Monster Only (Shield of Ketra Orc) -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="49508.3622024573" hpRegen="92.3387631310317" mp="1777.4" mpRegen="3" />
 			<attack physical="5781.33098746697" magical="4488.35423115713" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -384,6 +385,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
+		<equipment rhand="6716" /> <!-- Monster Only (Silenos Shaman) -->
 		<acquire exp="1670060147" sp="400814" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="1801962.32226519" hpRegen="230.846907827579" mp="1674.8" mpRegen="3" />
@@ -427,6 +429,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
+		<equipment rhand="142" lhand="6918" /> <!-- Keshanberk / Monster Only (Shield of Silenos) -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="47562" hpRegen="91.4930863014358" mp="1641" mpRegen="3" />
 			<attack physical="5697.64406230895" magical="4423.65426034769" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -547,6 +550,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
+		<equipment rhand="6716" /> <!-- Monster Only (Silenos Shaman) -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="49508.3622024573" hpRegen="92.3387631310317" mp="1777.4" mpRegen="3" />
 			<attack physical="2890.66549373349" magical="1122.08855778928" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -936,6 +940,7 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
+		<equipment rhand="6723" /> <!-- Monster Only (Vampire Warrior) -->
 		<acquire exp="111003597" sp="26640" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="2103103.86214303" hpRegen="201.738734487134" mp="1219.8" mpRegen="2.7" />
@@ -1067,6 +1072,7 @@
 		</parameters>
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="6717" /> <!-- Monster Only (Einhasad Warrior) -->
 		<acquire exp="226669890" sp="54400" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="2240316.42745449" hpRegen="211.032268312086" mp="1345.8" mpRegen="2.7" />
@@ -1110,6 +1116,7 @@
 		</parameters>
 		<race>DIVINE</race>
 		<sex>MALE</sex>
+		<equipment rhand="6718" /> <!-- Monster Only (Einhasad Shaman) -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="58887" hpRegen="83.5603013365645" mp="1314" mpRegen="2.7" />
 			<attack physical="4493.83416522179" magical="3218.1584430212" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -1145,6 +1152,7 @@
 	<npc id="25327" level="69" type="Monster" name="Barakiel's Acolyte" title="Raid Fighter">
 		<race>DIVINE</race>
 		<sex>MALE</sex>
+		<equipment rhand="6718" /> <!-- Monster Only (Einhasad Shaman) -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="29443" hpRegen="83.5603013365645" mp="1314" mpRegen="2.7" />
 			<attack physical="2246.91708261089" magical="804.539610755299" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -1707,6 +1715,7 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="6720" /> <!-- Monster Only (Halisha's Shadow) -->
 		<acquire exp="115600000" sp="3468000" raidPoints="0" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="2770987.5" hpRegen="319.2293199" mp="2901.03" mpRegen="3" />
@@ -1834,6 +1843,7 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="6720" /> <!-- Monster Only (Halisha's Shadow) -->
 		<acquire exp="2643172" sp="634" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="10000000" hpRegen="73.0538466979355" mp="1708.8" mpRegen="3.03" />
@@ -2002,6 +2012,7 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="6720" /> <!-- Monster Only (Halisha's Shadow) -->
 		<acquire exp="2643172" sp="634" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="15000000" hpRegen="73.0538466979355" mp="1708.8" mpRegen="3.03" />
@@ -2137,6 +2148,7 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="6720" /> <!-- Monster Only (Halisha's Shadow) -->
 		<acquire exp="2643172" sp="634" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="20000000" hpRegen="73.0538466979355" mp="1708.8" mpRegen="3.03" />
@@ -2319,7 +2331,6 @@
 				<item id="349" min="1" max="3" chance="10.18" /> <!-- Compound Scale Mail -->
 				<item id="955" min="2" max="4" chance="100" /> <!-- Scroll: Enchant Weapon (D-grade) -->
 				<item id="956" min="5" max="15" chance="100" /> <!-- Scroll: Enchant Armor (D-grade) -->
-				<item id="70000" min="3" max="8" chance="100" /> <!-- Sealed Rune - Stage 1 -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -2424,7 +2435,6 @@
 				<item id="2425" min="1" max="3" chance="14.61" /> <!-- Brigandine Boots -->
 				<item id="955" min="2" max="4" chance="100" /> <!-- Scroll: Enchant Weapon (D-grade) -->
 				<item id="956" min="5" max="15" chance="100" /> <!-- Scroll: Enchant Armor (D-grade) -->
-				<item id="70000" min="4" max="11" chance="100" /> <!-- Sealed Rune - Stage 1 -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -2912,7 +2922,6 @@
 				<item id="347" min="2" max="4" chance="7.938" /> <!-- Ring Breastplate -->
 				<item id="955" min="2" max="8" chance="100" /> <!-- Scroll: Enchant Weapon (D-grade) -->
 				<item id="956" min="5" max="15" chance="100" /> <!-- Scroll: Enchant Armor (D-grade) -->
-				<item id="70000" min="2" max="6" chance="100" /> <!-- Sealed Rune - Stage 1 -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -3119,7 +3128,6 @@
 				<item id="45" min="2" max="6" chance="7.933" /> <!-- Bone Helmet -->
 				<item id="955" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Weapon (D-grade) -->
 				<item id="956" min="5" max="15" chance="100" /> <!-- Scroll: Enchant Armor (D-grade) -->
-				<item id="70000" min="3" max="8" chance="100" /> <!-- Sealed Rune - Stage 1 -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -3848,7 +3856,6 @@
 				<item id="415" min="1" max="3" chance="4.681" /> <!-- Mithril Banded Gaiters -->
 				<item id="955" min="2" max="4" chance="100" /> <!-- Scroll: Enchant Weapon (D-grade) -->
 				<item id="956" min="5" max="15" chance="100" /> <!-- Scroll: Enchant Armor (D-grade) -->
-				<item id="70000" min="4" max="12" chance="100" /> <!-- Sealed Rune - Stage 1 -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -3996,7 +4003,6 @@
 				<item id="2377" min="1" max="3" chance="8.824" /> <!-- Mithril Scale Gaiters -->
 				<item id="955" min="2" max="4" chance="100" /> <!-- Scroll: Enchant Weapon (D-grade) -->
 				<item id="956" min="5" max="15" chance="100" /> <!-- Scroll: Enchant Armor (D-grade) -->
-				<item id="70000" min="4" max="11" chance="100" /> <!-- Sealed Rune - Stage 1 -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -4124,7 +4130,6 @@
 				<item id="349" min="1" max="3" chance="9.943" /> <!-- Compound Scale Mail -->
 				<item id="955" min="2" max="4" chance="100" /> <!-- Scroll: Enchant Weapon (D-grade) -->
 				<item id="956" min="5" max="15" chance="100" /> <!-- Scroll: Enchant Armor (D-grade) -->
-				<item id="70000" min="3" max="9" chance="100" /> <!-- Sealed Rune - Stage 1 -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -4182,7 +4187,6 @@
 				<item id="238" min="1" max="1" chance="6.357" /> <!-- Dagger of Mana -->
 				<item id="955" min="2" max="4" chance="100" /> <!-- Scroll: Enchant Weapon (D-grade) -->
 				<item id="956" min="5" max="15" chance="100" /> <!-- Scroll: Enchant Armor (D-grade) -->
-				<item id="70000" min="3" max="9" chance="100" /> <!-- Sealed Rune - Stage 1 -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -4333,7 +4337,6 @@
 				<item id="189" min="1" max="1" chance="4.931" /> <!-- Staff of Life -->
 				<item id="955" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Weapon (D-grade) -->
 				<item id="956" min="2" max="8" chance="100" /> <!-- Scroll: Enchant Armor (D-grade) -->
-				<item id="70000" min="6" max="18" chance="100" /> <!-- Sealed Rune - Stage 1 -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -4485,7 +4488,6 @@
 				<item id="239" min="1" max="1" chance="1.872" /> <!-- Mystic Knife -->
 				<item id="955" min="2" max="4" chance="100" /> <!-- Scroll: Enchant Weapon (D-grade) -->
 				<item id="956" min="5" max="15" chance="100" /> <!-- Scroll: Enchant Armor (D-grade) -->
-				<item id="70000" min="4" max="11" chance="100" /> <!-- Sealed Rune - Stage 1 -->
 			</drop>
 		</dropLists>
 	</npc>

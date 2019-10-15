@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="4600" toLevel="12" name="P. Def.-decreasing Stun">
-		<!-- P. Def. decreases momentarily. Stunned and unable to move momentarily. Effect $s1. -->
+		<!-- State of momentarily decreased defense and immobility due to the Stun effect. Effect $s1 -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>
 			<value level="1">11</value>
@@ -66,7 +66,9 @@
 			<effect name="PhysicalAttack">
 				<power>16</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 			<effect name="PhysicalDefence">
 				<amount>
 					<value level="1">-17</value>
@@ -134,7 +136,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4602" toLevel="12" name="P. Atk. Decrease">
+	<skill id="4602" toLevel="12" name="Decrease P. Atk.">
 		<!-- P. Atk. decreases momentarily. Effect $s1. -->
 		<icon>icon.skill4037</icon>
 		<abnormalLvl>
@@ -233,7 +235,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4603" toLevel="12" name="P. Atk. Decrease">
+	<skill id="4603" toLevel="12" name="Decrease P. Atk.">
 		<!-- P. Atk. decreases momentarily. Effect $s1. -->
 		<icon>icon.skill4037</icon>
 		<abnormalLvl>
@@ -316,7 +318,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4604" toLevel="12" name="P. Atk. Decrease">
+	<skill id="4604" toLevel="12" name="Decrease P. Atk.">
 		<!-- P. Atk. decreases momentarily. Effect $s1. -->
 		<icon>icon.skill4037</icon>
 		<abnormalLvl>
@@ -532,7 +534,7 @@
 		</effects>
 	</skill>
 	<skill id="4606" toLevel="12" name="Poison">
-		<!-- HP cut due to Poison. $s1 power. -->
+		<!-- Poisons a target, momentarily decreasing HP. Effect $s1. -->
 		<icon>icon.skill4035</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -1243,10 +1245,12 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
-	<skill id="4621" toLevel="12" name="Drain HP">
+	<skill id="4621" toLevel="12" name="Drain Energy">
 		<castRange>500</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1000</effectRange>
@@ -1309,7 +1313,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4622" toLevel="12" name="Drain HP">
+	<skill id="4622" toLevel="12" name="Drain Energy">
 		<affectRange>200</affectRange>
 		<castRange>500</castRange>
 		<effectPoint>-100</effectPoint>
@@ -1372,7 +1376,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4623" toLevel="12" name="Drain HP">
+	<skill id="4623" toLevel="12" name="Drain Energy">
 		<castRange>1000</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1500</effectRange>
@@ -1612,7 +1616,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4627" toLevel="12" name="Physical Barrier">
+	<skill id="4627" toLevel="12" name="Magical Barrier">
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1696,7 +1700,7 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="4629" toLevel="12" name="Drain HP">
+	<skill id="4629" toLevel="12" name="Drain Energy">
 		<castRange>400</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>900</effectRange>
@@ -1876,6 +1880,7 @@
 		</effects>
 	</skill>
 	<skill id="4632" toLevel="3" name="Acumen Empower Wild Magic">
+		<!-- Casting Spd. +$s1, M. Atk. +$s2, M. Critical Rate +$s3. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1931,6 +1936,7 @@
 		</effects>
 	</skill>
 	<skill id="4633" toLevel="3" name="Acumen Berserker Empower">
+		<!-- P. Atk. +$s1, Atk. Spd. +$s2, M. Atk. +$s3, Casting Spd. +$s4, Movement Speed +$s5, P. Def. -$s6, M. Def. -$s7, M. Evasion -$s8. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2018,6 +2024,7 @@
 		</effects>
 	</skill>
 	<skill id="4634" toLevel="3" name="Acumen Empower Damage Shield">
+		<!-- Casting Spd. +$s1, M. Atk. +$s2 -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2072,6 +2079,7 @@
 		</effects>
 	</skill>
 	<skill id="4635" toLevel="3" name="Acumen Berserker Wild Magic">
+		<!-- P. Atk. +$s1, Atk. Spd. +$s2, M. Atk. +$s3, Casting Spd. +$s4, Movement Speed +$s5, M. Critical Rate +$s6, P. Def. -$s7, M. Def. -$s8, Evasion -$s9. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2167,6 +2175,7 @@
 		</effects>
 	</skill>
 	<skill id="4636" toLevel="3" name="Acumen Berserker Damage Shield">
+		<!-- P. Atk. +$s1, Atk. Spd. +$s2, M. Atk. +$s3, Casting Spd. +$s4, Movement Speed +$s5. Some damage is reflected. P. Def. -$s7, M. Def. -$s8, Evasion -$s9 Down. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2261,6 +2270,7 @@
 		</effects>
 	</skill>
 	<skill id="4637" toLevel="3" name="Acumen Wild Magic Damage Shield">
+		<!-- Casting Spd. +$s1, M. Critical Rate +$s2 -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2315,6 +2325,7 @@
 		</effects>
 	</skill>
 	<skill id="4638" toLevel="3" name="Acumen Empower Wild Magic">
+		<!-- Casting Spd. +$s1, M. Atk. +$s2, M. Critical Rate +$s3. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2372,6 +2383,7 @@
 		</effects>
 	</skill>
 	<skill id="4639" toLevel="3" name="Acumen Empower Berserker">
+		<!-- P. Atk. +$s1, Atk. Spd. +$s2, M. Atk. +$s3, Casting Spd. +$s4, Movement Speed +$s5 -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2515,7 +2527,9 @@
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="4641" toLevel="12" name="Super Strike">
@@ -2703,6 +2717,7 @@
 		</effects>
 	</skill>
 	<skill id="4644" toLevel="2" name="Haste">
+		<icon>icon.skill1086</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2732,6 +2747,7 @@
 		</effects>
 	</skill>
 	<skill id="4645" toLevel="3" name="Focus">
+		<icon>icon.skill1077</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2796,6 +2812,7 @@
 		</effects>
 	</skill>
 	<skill id="4647" toLevel="3" name="Might">
+		<icon>icon.skill1068</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2860,7 +2877,7 @@
 		</effects>
 	</skill>
 	<skill id="4649" toLevel="12" name="Poison">
-		<!-- HP cut due to Poison. $s1 power. -->
+		<!-- Poisons a target, momentarily decreasing HP. Effect $s1. -->
 		<icon>icon.skill4036</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -3258,7 +3275,7 @@
 		</effects>
 	</skill>
 	<skill id="4657" toLevel="12" name="Hold">
-		<!-- Inflicted with Hold and unable to move. -->
+		<!-- Inflicted with hold and unable to move momentarily. -->
 		<icon>icon.skill4047</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -3343,7 +3360,7 @@
 		</effects>
 	</skill>
 	<skill id="4658" toLevel="12" name="Hold">
-		<!-- Inflicted with Hold and unable to move. -->
+		<!-- Inflicted with hold and unable to move momentarily. -->
 		<icon>icon.skill4047</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -3428,7 +3445,7 @@
 		</effects>
 	</skill>
 	<skill id="4659" toLevel="12" name="Hold">
-		<!-- Inflicted with Hold and unable to move. -->
+		<!-- Inflicted with hold and unable to move momentarily. -->
 		<icon>icon.skill4047</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -3595,7 +3612,9 @@
 				</power>
 				<percentage>20</percentage>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="4661" toLevel="12" name="Sleep">
@@ -3681,7 +3700,9 @@
 				</power>
 				<percentage>20</percentage>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="4662" toLevel="12" name="Sleep">
@@ -3767,7 +3788,9 @@
 				</power>
 				<percentage>20</percentage>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="4663" toLevel="1" name="Aggression">
@@ -3786,7 +3809,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4664" toLevel="12" name="Drain HP">
+	<skill id="4664" toLevel="12" name="Drain Energy">
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -3861,7 +3884,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4665" toLevel="12" name="Drain HP">
+	<skill id="4665" toLevel="12" name="Drain Energy">
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -3936,7 +3959,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4666" toLevel="12" name="Drain HP">
+	<skill id="4666" toLevel="12" name="Drain Energy">
 		<castRange>1000</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1500</effectRange>
@@ -4011,7 +4034,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4667" toLevel="12" name="Drain HP">
+	<skill id="4667" toLevel="12" name="Drain Energy">
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -4086,7 +4109,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4668" toLevel="12" name="Drain HP">
+	<skill id="4668" toLevel="12" name="Drain Energy">
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -4161,7 +4184,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4669" toLevel="12" name="Drain HP">
+	<skill id="4669" toLevel="12" name="Drain Energy">
 		<castRange>1000</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1500</effectRange>
@@ -4237,7 +4260,7 @@
 		</effects>
 	</skill>
 	<skill id="4670" toLevel="12" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Momentarily immobile due to the short Stun. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2</abnormalTime>
@@ -4286,7 +4309,9 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="4671" toLevel="1" name="Teleport">
@@ -4881,6 +4906,42 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="4688" toLevel="1" name="Valakas Stun">
+		<!-- Momentarily immobile due to the Stun effect. -->
+		<icon>icon.skill4688</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>9</abnormalTime>
+		<abnormalType>FLY_AWAY</abnormalType>
+		<activateRate>80</activateRate>
+		<affectRange>250</affectRange>
+		<basicProperty>PHYSICAL</basicProperty>
+		<coolTime>3000</coolTime>
+		<effectPoint>-100</effectPoint>
+		<attributeType>FIRE</attributeType>
+		<attributeValue>180</attributeValue>
+		<fanRange>0;180;250;500</fanRange>
+		<hitTime>3000</hitTime>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLvl>99</magicLvl>
+		<operateType>A2</operateType>
+		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<trait>SHOCK</trait>
+		<targetType>SELF</targetType>
+		<affectScope>SQUARE_PB</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>27849</power>
+				<criticalChance>10</criticalChance>
+			</effect>
+			<effect name="FlyAway">
+				<radius>600</radius>
+			</effect>
+			<effect name="BlockActions" />
+		</effects>
 	</skill>
 	<skill id="4689" toLevel="2" name="Valakas Fear">
 		<!-- Afflicted with Fear and moving against own will momentarily. -->

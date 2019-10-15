@@ -46,6 +46,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
+		<equipment rhand="6370" /> <!-- Saint Spear -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="60562" hpRegen="297.117282634219" mp="1377" mpRegen="3" />
 			<attack physical="4437.51100167866" magical="3181.68179724353" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -259,6 +260,7 @@
 		</parameters>
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="6717" /> <!-- Monster Only (Einhasad Warrior) -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="63589" hpRegen="308.04072385958" mp="1507" mpRegen="3" />
 			<attack physical="4902.4469608376" magical="3475.50410725631" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -294,6 +296,7 @@
 	<npc id="25207" level="75" type="Monster" name="Ashakiel's Rod" title="Raid Fighter">
 		<race>DIVINE</race>
 		<sex>MALE</sex>
+		<equipment rhand="6718" /> <!-- Monster Only (Einhasad Shaman) -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="31794" hpRegen="308.04072385958" mp="1507" mpRegen="3" />
 			<attack physical="4902.4469608376" magical="3475.50410725631" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -782,7 +785,6 @@
 				<item id="173" min="1" max="1" chance="0.75" /> <!-- Skull Graver -->
 				<item id="193" min="1" max="1" chance="0.75" /> <!-- Stick of Faith -->
 				<item id="952" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Armor (C-grade) -->
-				<item id="70000" min="8" max="23" chance="100" /> <!-- Sealed Rune - Stage 1 -->
 				<item id="951" min="1" max="1" chance="30.61" /> <!-- Scroll: Enchant Weapon (C-grade) -->
 			</drop>
 		</dropLists>
@@ -1053,7 +1055,6 @@
 				<item id="261" min="1" max="1" chance="3.234" /> <!-- Bich'Hwa -->
 				<item id="955" min="2" max="4" chance="100" /> <!-- Scroll: Enchant Weapon (D-grade) -->
 				<item id="956" min="5" max="15" chance="100" /> <!-- Scroll: Enchant Armor (D-grade) -->
-				<item id="70000" min="4" max="11" chance="100" /> <!-- Sealed Rune - Stage 1 -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -1226,7 +1227,6 @@
 				<item id="203" min="1" max="1" chance="1.196" /> <!-- Pa'agrio Axe -->
 				<item id="174" min="1" max="1" chance="1.19" /> <!-- Nirvana Axe -->
 				<item id="952" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Armor (C-grade) -->
-				<item id="70000" min="12" max="35" chance="100" /> <!-- Sealed Rune - Stage 1 -->
 				<item id="951" min="1" max="1" chance="30.06" /> <!-- Scroll: Enchant Weapon (C-grade) -->
 			</drop>
 		</dropLists>
@@ -1421,7 +1421,6 @@
 				<item id="195" min="1" max="1" chance="4.1455" /> <!-- Cursed Staff -->
 				<item id="325" min="1" max="1" chance="4.1185" /> <!-- Horn of Glory -->
 				<item id="952" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Armor (C-grade) -->
-				<item id="70000" min="10" max="29" chance="100" /> <!-- Sealed Rune - Stage 1 -->
 				<item id="951" min="1" max="1" chance="31.26" /> <!-- Scroll: Enchant Weapon (C-grade) -->
 			</drop>
 		</dropLists>
@@ -1432,6 +1431,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
+		<equipment rhand="74" lhand="657" /> <!-- Katana / Inferno Shield -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="39349" hpRegen="66.0848830657008" mp="30954" mpRegen="2.4" />
 			<attack physical="2575.13922287136" magical="1602.60653438487" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1633,7 +1633,6 @@
 				<item id="303" min="1" max="1" chance="0.98" /> <!-- Widow Maker -->
 				<item id="75" min="1" max="1" chance="0.979" /> <!-- Caliburs -->
 				<item id="952" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Armor (C-grade) -->
-				<item id="70000" min="11" max="32" chance="100" /> <!-- Sealed Rune - Stage 1 -->
 				<item id="951" min="1" max="1" chance="28.79" /> <!-- Scroll: Enchant Weapon (C-grade) -->
 			</drop>
 		</dropLists>
@@ -1940,7 +1939,6 @@
 				<item id="74" min="1" max="1" chance="3.457" /> <!-- Katana -->
 				<item id="131" min="1" max="1" chance="3.447" /> <!-- Spirit Sword -->
 				<item id="952" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Armor (C-grade) -->
-				<item id="70000" min="9" max="27" chance="100" /> <!-- Sealed Rune - Stage 1 -->
 				<item id="951" min="1" max="1" chance="29.79" /> <!-- Scroll: Enchant Weapon (C-grade) -->
 			</drop>
 		</dropLists>
@@ -2472,7 +2470,6 @@
 				<item id="210" min="1" max="1" chance="1.271" /> <!-- Staff of Evil Spirits -->
 				<item id="91" min="1" max="1" chance="1.255" /> <!-- Heavy War Axe -->
 				<item id="175" min="1" max="1" chance="1.246" /> <!-- Art of Battle Axe -->
-				<item id="70000" min="15" max="45" chance="100" /> <!-- Sealed Rune - Stage 1 -->
 				<item id="948" min="1" max="1" chance="81.15" /> <!-- Scroll: Enchant Armor (B-grade) -->
 				<item id="947" min="1" max="1" chance="19.37" /> <!-- Scroll: Enchant Weapon (B-grade) -->
 			</drop>
@@ -2614,7 +2611,6 @@
 				<item id="267" min="1" max="1" chance="2.45" /> <!-- Arthro Nail -->
 				<item id="229" min="1" max="1" chance="2.437" /> <!-- Kris -->
 				<item id="300" min="1" max="1" chance="2.434" /> <!-- Great Axe -->
-				<item id="70000" min="13" max="38" chance="100" /> <!-- Sealed Rune - Stage 1 -->
 				<item id="948" min="1" max="1" chance="50.26" /> <!-- Scroll: Enchant Armor (B-grade) -->
 				<item id="947" min="1" max="1" chance="49.56" /> <!-- Scroll: Enchant Weapon (B-grade) -->
 			</drop>
@@ -2702,7 +2698,6 @@
 				<item id="204" min="1" max="1" chance="2.295" /> <!-- Deadman's Staff -->
 				<item id="228" min="1" max="1" chance="2.277" /> <!-- Crystal Dagger -->
 				<item id="952" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Armor (C-grade) -->
-				<item id="70000" min="11" max="32" chance="100" /> <!-- Sealed Rune - Stage 1 -->
 				<item id="951" min="1" max="1" chance="30.81" /> <!-- Scroll: Enchant Weapon (C-grade) -->
 			</drop>
 		</dropLists>
@@ -2886,7 +2881,6 @@
 				<item id="322" min="1" max="1" chance="5.393" /> <!-- Vajra Wand -->
 				<item id="188" min="1" max="1" chance="5.391" /> <!-- Ghost Staff -->
 				<item id="956" min="2" max="8" chance="100" /> <!-- Scroll: Enchant Armor (D-grade) -->
-				<item id="70000" min="6" max="18" chance="100" /> <!-- Sealed Rune - Stage 1 -->
 				<item id="955" min="1" max="1" chance="50.18" /> <!-- Scroll: Enchant Weapon (D-grade) -->
 			</drop>
 		</dropLists>
@@ -3053,7 +3047,6 @@
 				<item id="142" min="1" max="1" chance="1.006" /> <!-- Keshanberk -->
 				<item id="267" min="1" max="1" chance="0.999" /> <!-- Arthro Nail -->
 				<item id="264" min="1" max="1" chance="0.993" /> <!-- Pata -->
-				<item id="70000" min="14" max="41" chance="100" /> <!-- Sealed Rune - Stage 1 -->
 				<item id="948" min="1" max="1" chance="80.04" /> <!-- Scroll: Enchant Armor (B-grade) -->
 				<item id="947" min="1" max="1" chance="20.58" /> <!-- Scroll: Enchant Weapon (B-grade) -->
 			</drop>
@@ -3443,7 +3436,6 @@
 				<item id="220" min="1" max="1" chance="5.614" /> <!-- Crafted Dagger -->
 				<item id="168" min="1" max="1" chance="5.597" /> <!-- Work Hammer -->
 				<item id="955" min="2" max="8" chance="100" /> <!-- Scroll: Enchant Weapon (D-grade) -->
-				<item id="70000" min="3" max="8" chance="100" /> <!-- Sealed Rune - Stage 1 -->
 			</drop>
 		</dropLists>
 	</npc>

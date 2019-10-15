@@ -65,6 +65,7 @@ import org.l2jmobius.gameserver.enums.IllegalActionPunishmentType;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.base.ClassId;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
+import org.l2jmobius.gameserver.model.items.type.CrystalType;
 import org.l2jmobius.gameserver.util.FloodProtectorConfig;
 import org.l2jmobius.gameserver.util.Util;
 
@@ -302,6 +303,7 @@ public class Config
 	public static boolean STORE_UI_SETTINGS;
 	public static String[] FORBIDDEN_NAMES;
 	public static boolean SILENCE_MODE_EXCLUDE;
+	public static CrystalType MAX_EQUIPABLE_ITEM_GRADE;
 	
 	// --------------------------------------------------
 	// Castle Settings
@@ -826,6 +828,11 @@ public class Config
 	public static int ANTHARAS_WAIT_TIME;
 	public static int ANTHARAS_SPAWN_INTERVAL;
 	public static int ANTHARAS_SPAWN_RANDOM;
+	
+	// Valakas
+	public static int VALAKAS_WAIT_TIME;
+	public static int VALAKAS_SPAWN_INTERVAL;
+	public static int VALAKAS_SPAWN_RANDOM;
 	
 	// Baium
 	public static int BAIUM_SPAWN_INTERVAL;
@@ -1727,6 +1734,7 @@ public class Config
 			STORE_UI_SETTINGS = Character.getBoolean("StoreCharUiSettings", true);
 			FORBIDDEN_NAMES = Character.getString("ForbiddenNames", "").split(",");
 			SILENCE_MODE_EXCLUDE = Character.getBoolean("SilenceModeExclude", false);
+			MAX_EQUIPABLE_ITEM_GRADE = Enum.valueOf(CrystalType.class, Character.getString("MaxEquipableItemGrade", "EVENT"));
 			PLAYER_MOVEMENT_BLOCK_TIME = Character.getInt("NpcTalkBlockingTime", 0) * 1000;
 			ABILITY_MAX_POINTS = Character.getInt("AbilityMaxPoints", 16);
 			ABILITY_POINTS_RESET_ADENA = Character.getLong("AbilityPointsResetAdena", 10_000_000);
@@ -1869,7 +1877,7 @@ public class Config
 			{
 				LOGGER.log(Level.WARNING, "There was an error while parsing ban chat channels: ", nfe);
 			}
-			WORLD_CHAT_MIN_LEVEL = General.getInt("WorldChatMinLevel", 95);
+			WORLD_CHAT_MIN_LEVEL = General.getInt("WorldChatMinLevel", 0);
 			WORLD_CHAT_POINTS_PER_DAY = General.getInt("WorldChatPointsPerDay", 10);
 			WORLD_CHAT_INTERVAL = General.getDuration("WorldChatInterval", "20secs", Duration.ofSeconds(20));
 			ALT_MANOR_REFRESH_TIME = General.getInt("AltManorRefreshTime", 20);
@@ -2247,6 +2255,10 @@ public class Config
 			ANTHARAS_WAIT_TIME = GrandBossSettings.getInt("AntharasWaitTime", 30);
 			ANTHARAS_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfAntharasSpawn", 264);
 			ANTHARAS_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfAntharasSpawn", 72);
+			
+			VALAKAS_WAIT_TIME = GrandBossSettings.getInt("ValakasWaitTime", 30);
+			VALAKAS_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfValakasSpawn", 264);
+			VALAKAS_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfValakasSpawn", 72);
 			
 			BAIUM_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfBaiumSpawn", 168);
 			

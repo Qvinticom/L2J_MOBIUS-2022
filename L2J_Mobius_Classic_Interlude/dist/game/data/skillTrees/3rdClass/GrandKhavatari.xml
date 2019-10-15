@@ -1,60 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
 	<skillTree type="classSkillTree" classId="114" parentClassId="48">
-		<skill skillName="Force Burst" skillId="17" skillLvl="35" getLevel="76" levelUpSp="6100000" />
-		<skill skillName="Fist Weapon Mastery" skillId="210" skillLvl="46" getLevel="76" levelUpSp="6100000" />
-		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="48" getLevel="76" levelUpSp="6100000" />
-		<skill skillName="Burning Fist" skillId="280" skillLvl="38" getLevel="76" levelUpSp="6100000" />
-		<skill skillName="Force Blaster" skillId="54" skillLvl="50" getLevel="76" levelUpSp="6100000" />
-		<skill skillName="Soul Breaker" skillId="281" skillLvl="38" getLevel="76" levelUpSp="6100000" />
-		<skill skillName="Raging Force" skillId="346" skillLvl="1" getLevel="76" levelUpSp="6100000" />
-		<skill skillName="Force Storm" skillId="35" skillLvl="29" getLevel="76" levelUpSp="6100000" />
-		<skill skillName="Hurricane Assault" skillId="284" skillLvl="41" getLevel="76" levelUpSp="6100000" />
-		<skill skillName="Cripple" skillId="95" skillLvl="21" getLevel="76" levelUpSp="6100000" />
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="3" getLevel="76" levelUpSp="6100000">
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="3" getLevel="76" levelUpSp="8100000">
 			<item id="8620" count="1" /> <!-- Ancient Book: Divine Inspiration (Manuscript) -->
 		</skill>
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="4" getLevel="76" levelUpSp="6100000">
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="4" getLevel="76" levelUpSp="8100000">
 			<item id="8621" count="1" /> <!-- Ancient Book: Divine Inspiration (Original Version) -->
 		</skill>
-		<skill skillName="Mount Black Bear" skillId="1837" skillLvl="1" getLevel="76">
-			<item id="90042" count="1" /> <!-- Spellbook: Mount Black Bear -->
-		</skill>
-		
-		<skill skillName="Force Burst" skillId="17" skillLvl="36" getLevel="77" levelUpSp="6100000" />
-		<skill skillName="Fist Weapon Mastery" skillId="210" skillLvl="47" getLevel="77" levelUpSp="6100000" />
-		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="49" getLevel="77" levelUpSp="6100000" />
-		<skill skillName="Burning Fist" skillId="280" skillLvl="39" getLevel="77" levelUpSp="6100000" />
-		<skill skillName="Force Blaster" skillId="54" skillLvl="51" getLevel="77" levelUpSp="6100000" />
-		<skill skillName="Soul Breaker" skillId="281" skillLvl="39" getLevel="77" levelUpSp="6100000" />
-		<skill skillName="Force Barrier" skillId="443" skillLvl="1" getLevel="77" levelUpSp="6100000">
-			<item id="90070" count="1" />
-		</skill>
-		<skill skillName="Force Storm" skillId="35" skillLvl="30" getLevel="77" levelUpSp="6100000" />
-		<skill skillName="Hurricane Assault" skillId="284" skillLvl="42" getLevel="77" levelUpSp="6100000" />
-		
-		<skill skillName="Force Burst" skillId="17" skillLvl="37" getLevel="78" levelUpSp="14200000" />
-		<skill skillName="Fist Weapon Mastery" skillId="210" skillLvl="48" getLevel="78" levelUpSp="14200000" />
-		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="50" getLevel="78" levelUpSp="14200000" />
-		<skill skillName="Burning Fist" skillId="280" skillLvl="40" getLevel="78" levelUpSp="14200000" />
-		<skill skillName="Force Blaster" skillId="54" skillLvl="52" getLevel="78" levelUpSp="14200000" />
-		<skill skillName="Master of Combat" skillId="430" skillLvl="1" getLevel="78" levelUpSp="14200000" />
-		<skill skillName="Soul Breaker" skillId="281" skillLvl="40" getLevel="78" levelUpSp="14200000" />
-		<skill skillName="Raging Force" skillId="346" skillLvl="2" getLevel="78" levelUpSp="14200000" />
-		<skill skillName="Force Storm" skillId="35" skillLvl="31" getLevel="78" levelUpSp="14200000" />
-		<skill skillName="Rush" skillId="994" skillLvl="1" getLevel="78" levelUpSp="14200000">
-			<item id="90071" count="1" />
-		</skill>
-		<skill skillName="Hurricane Assault" skillId="284" skillLvl="43" getLevel="78" levelUpSp="14200000" />
-		<skill skillName="Braveheart" skillId="284" skillLvl="1" getLevel="78" levelUpSp="14200000" />
-		<skill skillName="Cripple" skillId="95" skillLvl="22" getLevel="78" levelUpSp="14200000" />
-		
-		<skill skillName="Final Secret" skillId="917" skillLvl="1" getLevel="79" levelUpSp="14200000">
-			<item id="90080" count="1" />
-		</skill>
-		<skill skillName="Maximum Force Focus" skillId="918" skillLvl="1" getLevel="80" levelUpSp="14200000">
-		<item id="90072" count="1" />
-		</skill>
-		<skill skillName="Raging Force" skillId="346" skillLvl="3" getLevel="80" levelUpSp="14200000" />
+		<skill skillId="328" skillLvl="1" skillName="Wisdom" levelUpSp="10000000" getLevel="76" />
+		<skill skillId="329" skillLvl="1" skillName="Health" levelUpSp="10000000" getLevel="76" />
+		<skill skillId="335" skillLvl="1" skillName="Fortitude" levelUpSp="10000000" getLevel="76" />
+		<skill skillId="330" skillLvl="1" skillName="Skill Mastery" levelUpSp="13000000" getLevel="77" />
+		<skill skillId="340" skillLvl="1" skillName="Riposte Stance" levelUpSp="13000000" getLevel="77" />
+		<skill skillId="426" skillLvl="1" skillName="Battle Force" levelUpSp="13000000" getLevel="77" />
+		<skill skillId="346" skillLvl="1" skillName="Raging Force" levelUpSp="21340000" getLevel="78" />
+		<skill skillId="430" skillLvl="1" skillName="Master of Combat" levelUpSp="21340000" getLevel="78" />
+		<skill skillId="441" skillLvl="1" skillName="Force Meditation" levelUpSp="21340000" getLevel="78" />
+		<skill skillId="443" skillLvl="1" skillName="Force Barrier" levelUpSp="80000000" getLevel="79" />
+		<skill skillId="458" skillLvl="1" skillName="Symbol of Energy" levelUpSp="150000000" getLevel="80" />
 	</skillTree>
 </list>

@@ -36,6 +36,7 @@ public class ElfHumanFighterChange1 extends AbstractNpcAI
 		30066, // Pabris
 		30288, // Rains
 		30373, // Ramos
+		32094, // Schule
 	};
 	
 	// Items

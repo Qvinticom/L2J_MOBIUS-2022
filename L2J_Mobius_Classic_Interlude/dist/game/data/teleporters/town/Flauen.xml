@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/teleporterData.xsd">
+	<npc id="30899"> <!-- Flauen -->
+		<teleport type="NORMAL">
+			<location npcStringId="1010007" x="83551" y="147945" z="-3395" feeCount="7600" /> <!-- The Town of Giran -->
+			<location npcStringId="1010021" x="47916" y="186857" z="-3485" feeCount="7100" /> <!-- Giran Harbor -->
+			<location npcStringId="1010089" x="87667" y="162816" z="-3537" feeCount="12000" /> <!-- Field of Silence (Lv. 81) -->
+			<location npcStringId="1010090" x="82190" y="226118" z="-3665" feeCount="5900" /> <!-- Field of Whispers (Lv. 81) -->
+			<location npcStringId="1010150" x="115583" y="192261" z="-3483" feeCount="2100" /> <!-- Alligator Island (Lv. 40) -->
+			<location npcStringId="1010153" x="84413" y="234334" z="-3651" feeCount="2400" /> <!-- Garden of Eva (Lv. 40) -->
+		</teleport>
+	</npc>
+</list>

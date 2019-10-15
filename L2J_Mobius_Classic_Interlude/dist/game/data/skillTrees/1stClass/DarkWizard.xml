@@ -1,142 +1,126 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
 	<skillTree type="classSkillTree" classId="39" parentClassId="38">
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="3" getLevel="20" levelUpSp="600" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="1" getLevel="20" levelUpSp="600" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="2" getLevel="20" levelUpSp="600" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="5" getLevel="20" levelUpSp="600" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="6" getLevel="20" levelUpSp="600" />
-		<skill skillName="Higher Mana Gain" skillId="285" skillLvl="1" getLevel="20" levelUpSp="600" />
-		<skill skillName="Higher Mana Gain" skillId="285" skillLvl="2" getLevel="20" levelUpSp="600" />
-		<skill skillName="Boost Mana" skillId="213" skillLvl="1" getLevel="20" levelUpSp="600" />
-		<skill skillName="Quick Recovery" skillId="164" skillLvl="1" getLevel="20" levelUpSp="600" />
-		<skill skillName="Ice Bolt" skillId="1184" skillLvl="5" getLevel="20" levelUpSp="600" />
-		<skill skillName="Ice Bolt" skillId="1184" skillLvl="6" getLevel="20" levelUpSp="600" />
-		<skill skillName="Vampiric Touch" skillId="1147" skillLvl="3" getLevel="20" levelUpSp="600" />
-		<skill skillName="Vampiric Touch" skillId="1147" skillLvl="4" getLevel="20" levelUpSp="600" />
-		<skill skillName="Twister" skillId="1178" skillLvl="1" getLevel="20" levelUpSp="600" />
-		<skill skillName="Twister" skillId="1178" skillLvl="2" getLevel="20" levelUpSp="600" />
-		<skill skillName="Aura Burn" skillId="1172" skillLvl="1" getLevel="20" levelUpSp="600" />
-		<skill skillName="Aura Burn" skillId="1172" skillLvl="2" getLevel="20" levelUpSp="600" />
-		<skill skillName="Servitor Heal" skillId="1127" skillLvl="1" getLevel="20" levelUpSp="600" />
-		<skill skillName="Servitor Heal" skillId="1127" skillLvl="2" getLevel="20" levelUpSp="600" />
-		<skill skillName="Servitor Heal" skillId="1127" skillLvl="3" getLevel="20" levelUpSp="600" />
-		<skill skillName="Flame Strike" skillId="1181" skillLvl="1" getLevel="20" levelUpSp="600" />
-		<skill skillName="Curse Poison" skillId="1168" skillLvl="2" getLevel="20" levelUpSp="600" />
-		<skill skillName="Summon Shadow" skillId="1128" skillLvl="1" getLevel="20" levelUpSp="600" />
-		<skill skillName="Summon Silhouette" skillId="1228" skillLvl="1" getLevel="20" levelUpSp="600" />
-		<skill skillName="Concentration" skillId="1078" skillLvl="1" getLevel="20" levelUpSp="600">
-			<item id="1392" count="1" />
-		</skill>
-		
-		<skill skillName="Anti Magic" skillId="146" skillLvl="7" getLevel="23" levelUpSp="2300" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="3" getLevel="23" levelUpSp="2300" />
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="4" getLevel="23" levelUpSp="2300" />
-		<skill skillName="Servitor Heal" skillId="1127" skillLvl="4" getLevel="23" levelUpSp="2300" />
-		<skill skillName="Servitor Recharge" skillId="1126" skillLvl="1" getLevel="23" levelUpSp="2300" />
-		<skill skillName="Vampiric Touch" skillId="1147" skillLvl="5" getLevel="23" levelUpSp="2300" />
-		<skill skillName="Aura Burn" skillId="1172" skillLvl="3" getLevel="23" levelUpSp="2300" />
-		<skill skillName="Twister" skillId="1178" skillLvl="3" getLevel="23" levelUpSp="2300" />
-		<skill skillName="Higher Mana Gain" skillId="285" skillLvl="3" getLevel="23" levelUpSp="2300" />
-		<skill skillName="Sleep" skillId="1069" skillLvl="1" getLevel="23" levelUpSp="2300">
-			<item id="1394" count="1" />
-		</skill>
-		
-		<skill skillName="Servitor Heal" skillId="1127" skillLvl="5" getLevel="24" levelUpSp="2300" />
-		<skill skillName="Sleep" skillId="1069" skillLvl="2" getLevel="24" levelUpSp="2300" />
-		
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="5" getLevel="25" levelUpSp="2300" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="4" getLevel="25" levelUpSp="2300" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="8" getLevel="25" levelUpSp="2300" />
-		<skill skillName="Higher Mana Gain" skillId="285" skillLvl="4" getLevel="25" levelUpSp="2300" />
-		<skill skillName="Fast Spell Casting" skillId="228" skillLvl="1" getLevel="25" levelUpSp="2300" />
-		<skill skillName="Fast Mana Recovery" skillId="229" skillLvl="1" getLevel="25" levelUpSp="2300" />
-		<skill skillName="Vampiric Touch" skillId="1147" skillLvl="6" getLevel="25" levelUpSp="2300" />
-		<skill skillName="Twister" skillId="1178" skillLvl="4" getLevel="25" levelUpSp="2300" />
-		<skill skillName="Aura Burn" skillId="1172" skillLvl="4" getLevel="25" levelUpSp="2300" />
-		<skill skillName="Servitor Heal" skillId="1127" skillLvl="6" getLevel="25" levelUpSp="2300" />
-		<skill skillName="Servitor Recharge" skillId="1126" skillLvl="2" getLevel="25" levelUpSp="2300" />
-		<skill skillName="Sleep" skillId="1069" skillLvl="3" getLevel="25" levelUpSp="2300" />
-		<skill skillName="Surrender To Poison" skillId="1224" skillLvl="1" getLevel="25" levelUpSp="2300" />
-		<skill skillName="Shadow Spark" skillId="1266" skillLvl="1" getLevel="25" levelUpSp="2300" />
-		<skill skillName="Flame Strike" skillId="1181" skillLvl="2" getLevel="25" levelUpSp="2300" />
-		<skill skillName="Summon Shadow" skillId="1128" skillLvl="2" getLevel="25" levelUpSp="2300" />
-		<skill skillName="Summon Silhouette" skillId="1228" skillLvl="2" getLevel="25" levelUpSp="2300" />
-		<skill skillName="Poisonous Cloud" skillId="1167" skillLvl="1" getLevel="25" levelUpSp="2300" />
-		<skill skillName="Body To Mind" skillId="1157" skillLvl="1" getLevel="25" levelUpSp="2300">
-			<item id="1517" count="1" />
-		</skill>
-		
-
-		<skill skillName="Anti Magic" skillId="146" skillLvl="9" getLevel="28" levelUpSp="5700" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="5" getLevel="28" levelUpSp="5700" />
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="6" getLevel="28" levelUpSp="5700" />
-		<skill skillName="Servitor Heal" skillId="1127" skillLvl="7" getLevel="28" levelUpSp="5700" />
-		<skill skillName="Servitor Recharge" skillId="1126" skillLvl="3" getLevel="28" levelUpSp="5700" />
-		<skill skillName="Aura Burn" skillId="1172" skillLvl="5" getLevel="28" levelUpSp="5700" />
-		<skill skillName="Twister" skillId="1178" skillLvl="5" getLevel="28" levelUpSp="5700" />
-		<skill skillName="Higher Mana Gain" skillId="285" skillLvl="5" getLevel="28" levelUpSp="5700" />
-		<skill skillName="Sleep" skillId="1069" skillLvl="4" getLevel="28" levelUpSp="5700" />
-		
-		<skill skillName="Servitor Heal" skillId="1127" skillLvl="8" getLevel="29" levelUpSp="5700" />
-		<skill skillName="Sleep" skillId="1069" skillLvl="5" getLevel="29" levelUpSp="5700" />
-		
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="7" getLevel="30" levelUpSp="5700" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="6" getLevel="30" levelUpSp="5700" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="10" getLevel="30" levelUpSp="5700" />
-		<skill skillName="Higher Mana Gain" skillId="285" skillLvl="6" getLevel="30" levelUpSp="5700" />
-		<skill skillName="Boost Mana" skillId="213" skillLvl="2" getLevel="30" levelUpSp="5700" />
-		<skill skillName="Quick Recovery" skillId="164" skillLvl="2" getLevel="30" levelUpSp="5700" />
-		<skill skillName="Twister" skillId="1178" skillLvl="6" getLevel="30" levelUpSp="5700" />
-		<skill skillName="Aura Burn" skillId="1172" skillLvl="6" getLevel="30" levelUpSp="5700" />
-		<skill skillName="Servitor Heal" skillId="1127" skillLvl="9" getLevel="30" levelUpSp="5700" />
-		<skill skillName="Servitor Recharge" skillId="1126" skillLvl="4" getLevel="30" levelUpSp="5700" />
-		<skill skillName="Sleep" skillId="1069" skillLvl="6" getLevel="30" levelUpSp="5700" />
-		<skill skillName="Surrender To Poison" skillId="1224" skillLvl="2" getLevel="30" levelUpSp="5700" />
-		<skill skillName="Shadow Spark" skillId="1266" skillLvl="2" getLevel="30" levelUpSp="5700" />
-		<skill skillName="Corpse Life Drain" skillId="1151" skillLvl="1" getLevel="30" levelUpSp="5700" />
-		<skill skillName="Flame Strike" skillId="1181" skillLvl="3" getLevel="30" levelUpSp="5700" />
-		<skill skillName="Summon Shadow" skillId="1128" skillLvl="3" getLevel="30" levelUpSp="5700" />
-		<skill skillName="Summon Silhouette" skillId="1228" skillLvl="3" getLevel="30" levelUpSp="5700" />
-		<skill skillName="Curse Poison" skillId="1168" skillLvl="3" getLevel="30" levelUpSp="5700" />
-		<skill skillName="Concentration" skillId="1078" skillLvl="2" getLevel="30" levelUpSp="5700" />
-
-		<skill skillName="Anti Magic" skillId="146" skillLvl="11" getLevel="33" levelUpSp="13000" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="7" getLevel="33" levelUpSp="13000" />
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="8" getLevel="33" levelUpSp="13000" />
-		<skill skillName="Servitor Heal" skillId="1127" skillLvl="10" getLevel="33" levelUpSp="13000" />
-		<skill skillName="Servitor Recharge" skillId="1126" skillLvl="5" getLevel="33" levelUpSp="13000" />
-		<skill skillName="Aura Burn" skillId="1172" skillLvl="7" getLevel="33" levelUpSp="13000" />
-		<skill skillName="Twister" skillId="1178" skillLvl="7" getLevel="33" levelUpSp="13000" />
-		<skill skillName="Higher Mana Gain" skillId="285" skillLvl="7" getLevel="33" levelUpSp="13000" />
-		<skill skillName="Sleep" skillId="1069" skillLvl="7" getLevel="33" levelUpSp="13000" />
-		
-		<skill skillName="Servitor Heal" skillId="1127" skillLvl="11" getLevel="34" levelUpSp="13000" />
-		<skill skillName="Sleep" skillId="1069" skillLvl="8" getLevel="34" levelUpSp="13000" />
-		
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="9" getLevel="35" levelUpSp="13000" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="8" getLevel="35" levelUpSp="13000" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="12" getLevel="35" levelUpSp="13000" />
-		<skill skillName="Higher Mana Gain" skillId="285" skillLvl="8" getLevel="35" levelUpSp="13000" />
-		<skill skillName="Fast HP Recovery" skillId="212" skillLvl="1" getLevel="35" levelUpSp="13000" />
-		<skill skillName="Fast Mana Recovery" skillId="229" skillLvl="2" getLevel="35" levelUpSp="13000" />
-		<skill skillName="Twister" skillId="1178" skillLvl="8" getLevel="35" levelUpSp="13000" />
-		<skill skillName="Aura Burn" skillId="1172" skillLvl="8" getLevel="35" levelUpSp="13000" />
-		<skill skillName="Servitor Heal" skillId="1127" skillLvl="12" getLevel="35" levelUpSp="13000" />
-		<skill skillName="Servitor Recharge" skillId="1126" skillLvl="6" getLevel="35" levelUpSp="13000" />
-		<skill skillName="Sleep" skillId="1069" skillLvl="9" getLevel="35" levelUpSp="13000" />
-		<skill skillName="Surrender To Poison" skillId="1224" skillLvl="3" getLevel="35" levelUpSp="13000" />
-		<skill skillName="Shadow Spark" skillId="1266" skillLvl="3" getLevel="35" levelUpSp="13000" />
-		<skill skillName="Curse Chaos" skillId="1222" skillLvl="1" getLevel="35" levelUpSp="13000">
-			<item id="1416" count="1" />
-		</skill>
-		<skill skillName="Corpse Life Drain" skillId="1151" skillLvl="2" getLevel="35" levelUpSp="13000" />
-		<skill skillName="Slow" skillId="1160" skillLvl="1" getLevel="35" levelUpSp="13000">
-			<item id="1409" count="1" />
-		</skill>
-		<skill skillName="Summon Shadow" skillId="1128" skillLvl="4" getLevel="35" levelUpSp="13000" />
-		<skill skillName="Summon Silhouette" skillId="1228" skillLvl="4" getLevel="35" levelUpSp="13000" />
-		<skill skillName="Poisonous Cloud" skillId="1167" skillLvl="2" getLevel="35" levelUpSp="13000" />
-		<skill skillName="Mighty Servitor" skillId="1146" skillLvl="1" getLevel="35" levelUpSp="13000" />
+		<skill skillId="146" skillLvl="5" skillName="Anti Magic" levelUpSp="1500" getLevel="20" />
+		<skill skillId="146" skillLvl="6" skillName="Anti Magic" levelUpSp="1500" getLevel="20" />
+		<skill skillId="164" skillLvl="1" skillName="Quick Recovery" levelUpSp="3100" getLevel="20" />
+		<skill skillId="213" skillLvl="1" skillName="Boost Mana" levelUpSp="3100" getLevel="20" />
+		<skill skillId="234" skillLvl="1" skillName="Robe Mastery" levelUpSp="1500" getLevel="20" />
+		<skill skillId="234" skillLvl="2" skillName="Robe Mastery" levelUpSp="1500" getLevel="20" />
+		<skill skillId="249" skillLvl="3" skillName="Weapon Mastery" levelUpSp="3100" getLevel="20" />
+		<skill skillId="285" skillLvl="1" skillName="Higher Mana Gain" levelUpSp="1500" getLevel="20" />
+		<skill skillId="285" skillLvl="2" skillName="Higher Mana Gain" levelUpSp="1500" getLevel="20" />
+		<skill skillId="1078" skillLvl="1" skillName="Concentration" levelUpSp="3100" getLevel="20" />
+		<skill skillId="1127" skillLvl="1" skillName="Servitor Heal" levelUpSp="1000" getLevel="20" />
+		<skill skillId="1127" skillLvl="2" skillName="Servitor Heal" levelUpSp="1000" getLevel="20" />
+		<skill skillId="1127" skillLvl="3" skillName="Servitor Heal" levelUpSp="1000" getLevel="20" />
+		<skill skillId="1128" skillLvl="1" skillName="Summon Shadow" levelUpSp="3100" getLevel="20" />
+		<skill skillId="1147" skillLvl="3" skillName="Vampiric Touch" levelUpSp="1500" getLevel="20" />
+		<skill skillId="1147" skillLvl="4" skillName="Vampiric Touch" levelUpSp="1500" getLevel="20" />
+		<skill skillId="1168" skillLvl="2" skillName="Curse: Poison" levelUpSp="3100" getLevel="20" />
+		<skill skillId="1172" skillLvl="1" skillName="Aura Burn" levelUpSp="1500" getLevel="20" />
+		<skill skillId="1172" skillLvl="2" skillName="Aura Burn" levelUpSp="1500" getLevel="20" />
+		<skill skillId="1178" skillLvl="1" skillName="Twister" levelUpSp="1500" getLevel="20" />
+		<skill skillId="1178" skillLvl="2" skillName="Twister" levelUpSp="1500" getLevel="20" />
+		<skill skillId="1181" skillLvl="1" skillName="Flame Strike" levelUpSp="3100" getLevel="20" />
+		<skill skillId="1184" skillLvl="5" skillName="Ice Bolt" levelUpSp="1500" getLevel="20" />
+		<skill skillId="1184" skillLvl="6" skillName="Ice Bolt" levelUpSp="1500" getLevel="20" />
+		<skill skillId="1206" skillLvl="2" skillName="Wind Shackle" levelUpSp="3100" getLevel="20" />
+		<skill skillId="1228" skillLvl="1" skillName="Summon Silhouette" levelUpSp="3100" getLevel="20" />
+		<skill skillId="146" skillLvl="7" skillName="Anti Magic" levelUpSp="2800" getLevel="25" />
+		<skill skillId="146" skillLvl="8" skillName="Anti Magic" levelUpSp="2800" getLevel="25" />
+		<skill skillId="228" skillLvl="1" skillName="Fast Spell Casting" levelUpSp="5500" getLevel="25" />
+		<skill skillId="229" skillLvl="1" skillName="Fast Mana Recovery" levelUpSp="5500" getLevel="25" />
+		<skill skillId="234" skillLvl="3" skillName="Robe Mastery" levelUpSp="2800" getLevel="25" />
+		<skill skillId="234" skillLvl="4" skillName="Robe Mastery" levelUpSp="2800" getLevel="25" />
+		<skill skillId="249" skillLvl="4" skillName="Weapon Mastery" levelUpSp="2800" getLevel="25" />
+		<skill skillId="249" skillLvl="5" skillName="Weapon Mastery" levelUpSp="2800" getLevel="25" />
+		<skill skillId="285" skillLvl="3" skillName="Higher Mana Gain" levelUpSp="2800" getLevel="25" />
+		<skill skillId="285" skillLvl="4" skillName="Higher Mana Gain" levelUpSp="2800" getLevel="25" />
+		<skill skillId="1069" skillLvl="1" skillName="Sleep" levelUpSp="1800" getLevel="25" />
+		<skill skillId="1069" skillLvl="2" skillName="Sleep" levelUpSp="1800" getLevel="25" />
+		<skill skillId="1069" skillLvl="3" skillName="Sleep" levelUpSp="1800" getLevel="25" />
+		<skill skillId="1126" skillLvl="1" skillName="Servitor Recharge" levelUpSp="2800" getLevel="25" />
+		<skill skillId="1126" skillLvl="2" skillName="Servitor Recharge" levelUpSp="2800" getLevel="25" />
+		<skill skillId="1127" skillLvl="4" skillName="Servitor Heal" levelUpSp="1800" getLevel="25" />
+		<skill skillId="1127" skillLvl="5" skillName="Servitor Heal" levelUpSp="1800" getLevel="25" />
+		<skill skillId="1127" skillLvl="6" skillName="Servitor Heal" levelUpSp="1800" getLevel="25" />
+		<skill skillId="1128" skillLvl="2" skillName="Summon Shadow" levelUpSp="5500" getLevel="25" />
+		<skill skillId="1147" skillLvl="5" skillName="Vampiric Touch" levelUpSp="2800" getLevel="25" />
+		<skill skillId="1147" skillLvl="6" skillName="Vampiric Touch" levelUpSp="2800" getLevel="25" />
+		<skill skillId="1157" skillLvl="1" skillName="Body To Mind" levelUpSp="5500" getLevel="25" />
+		<skill skillId="1167" skillLvl="1" skillName="Poisonous Cloud" levelUpSp="5500" getLevel="25" />
+		<skill skillId="1172" skillLvl="3" skillName="Aura Burn" levelUpSp="2800" getLevel="25" />
+		<skill skillId="1172" skillLvl="4" skillName="Aura Burn" levelUpSp="2800" getLevel="25" />
+		<skill skillId="1178" skillLvl="3" skillName="Twister" levelUpSp="2800" getLevel="25" />
+		<skill skillId="1178" skillLvl="4" skillName="Twister" levelUpSp="2800" getLevel="25" />
+		<skill skillId="1181" skillLvl="2" skillName="Flame Strike" levelUpSp="5500" getLevel="25" />
+		<skill skillId="1206" skillLvl="3" skillName="Wind Shackle" levelUpSp="5500" getLevel="25" />
+		<skill skillId="1224" skillLvl="1" skillName="Surrender To Poison" levelUpSp="5500" getLevel="25" />
+		<skill skillId="1228" skillLvl="2" skillName="Summon Silhouette" levelUpSp="5500" getLevel="25" />
+		<skill skillId="1266" skillLvl="1" skillName="Shadow Spark" levelUpSp="5500" getLevel="25" />
+		<skill skillId="146" skillLvl="9" skillName="Anti Magic" levelUpSp="5300" getLevel="30" />
+		<skill skillId="146" skillLvl="10" skillName="Anti Magic" levelUpSp="5300" getLevel="30" />
+		<skill skillId="164" skillLvl="2" skillName="Quick Recovery" levelUpSp="10500" getLevel="30" />
+		<skill skillId="213" skillLvl="2" skillName="Boost Mana" levelUpSp="10500" getLevel="30" />
+		<skill skillId="234" skillLvl="5" skillName="Robe Mastery" levelUpSp="5300" getLevel="30" />
+		<skill skillId="234" skillLvl="6" skillName="Robe Mastery" levelUpSp="5300" getLevel="30" />
+		<skill skillId="249" skillLvl="6" skillName="Weapon Mastery" levelUpSp="5300" getLevel="30" />
+		<skill skillId="249" skillLvl="7" skillName="Weapon Mastery" levelUpSp="5300" getLevel="30" />
+		<skill skillId="285" skillLvl="5" skillName="Higher Mana Gain" levelUpSp="5300" getLevel="30" />
+		<skill skillId="285" skillLvl="6" skillName="Higher Mana Gain" levelUpSp="5300" getLevel="30" />
+		<skill skillId="1069" skillLvl="4" skillName="Sleep" levelUpSp="3500" getLevel="30" />
+		<skill skillId="1069" skillLvl="5" skillName="Sleep" levelUpSp="3500" getLevel="30" />
+		<skill skillId="1069" skillLvl="6" skillName="Sleep" levelUpSp="3500" getLevel="30" />
+		<skill skillId="1078" skillLvl="2" skillName="Concentration" levelUpSp="10500" getLevel="30" />
+		<skill skillId="1126" skillLvl="3" skillName="Servitor Recharge" levelUpSp="5300" getLevel="30" />
+		<skill skillId="1126" skillLvl="4" skillName="Servitor Recharge" levelUpSp="5300" getLevel="30" />
+		<skill skillId="1127" skillLvl="7" skillName="Servitor Heal" levelUpSp="3500" getLevel="30" />
+		<skill skillId="1127" skillLvl="8" skillName="Servitor Heal" levelUpSp="3500" getLevel="30" />
+		<skill skillId="1127" skillLvl="9" skillName="Servitor Heal" levelUpSp="3500" getLevel="30" />
+		<skill skillId="1128" skillLvl="3" skillName="Summon Shadow" levelUpSp="10500" getLevel="30" />
+		<skill skillId="1151" skillLvl="1" skillName="Corpse Life Drain" levelUpSp="10500" getLevel="30" />
+		<skill skillId="1168" skillLvl="3" skillName="Curse: Poison" levelUpSp="10500" getLevel="30" />
+		<skill skillId="1172" skillLvl="5" skillName="Aura Burn" levelUpSp="5300" getLevel="30" />
+		<skill skillId="1172" skillLvl="6" skillName="Aura Burn" levelUpSp="5300" getLevel="30" />
+		<skill skillId="1178" skillLvl="5" skillName="Twister" levelUpSp="5300" getLevel="30" />
+		<skill skillId="1178" skillLvl="6" skillName="Twister" levelUpSp="5300" getLevel="30" />
+		<skill skillId="1181" skillLvl="3" skillName="Flame Strike" levelUpSp="10500" getLevel="30" />
+		<skill skillId="1206" skillLvl="4" skillName="Wind Shackle" levelUpSp="10500" getLevel="30" />
+		<skill skillId="1224" skillLvl="2" skillName="Surrender To Poison" levelUpSp="10500" getLevel="30" />
+		<skill skillId="1228" skillLvl="3" skillName="Summon Silhouette" levelUpSp="10500" getLevel="30" />
+		<skill skillId="1266" skillLvl="2" skillName="Shadow Spark" levelUpSp="10500" getLevel="30" />
+		<skill skillId="146" skillLvl="11" skillName="Anti Magic" levelUpSp="8800" getLevel="35" />
+		<skill skillId="146" skillLvl="12" skillName="Anti Magic" levelUpSp="8800" getLevel="35" />
+		<skill skillId="212" skillLvl="1" skillName="Fast HP Recovery" levelUpSp="17600" getLevel="35" />
+		<skill skillId="229" skillLvl="2" skillName="Fast Mana Recovery" levelUpSp="17600" getLevel="35" />
+		<skill skillId="234" skillLvl="7" skillName="Robe Mastery" levelUpSp="8800" getLevel="35" />
+		<skill skillId="234" skillLvl="8" skillName="Robe Mastery" levelUpSp="8800" getLevel="35" />
+		<skill skillId="249" skillLvl="8" skillName="Weapon Mastery" levelUpSp="8800" getLevel="35" />
+		<skill skillId="249" skillLvl="9" skillName="Weapon Mastery" levelUpSp="8800" getLevel="35" />
+		<skill skillId="285" skillLvl="7" skillName="Higher Mana Gain" levelUpSp="8800" getLevel="35" />
+		<skill skillId="285" skillLvl="8" skillName="Higher Mana Gain" levelUpSp="8800" getLevel="35" />
+		<skill skillId="1069" skillLvl="7" skillName="Sleep" levelUpSp="5900" getLevel="35" />
+		<skill skillId="1069" skillLvl="8" skillName="Sleep" levelUpSp="5900" getLevel="35" />
+		<skill skillId="1069" skillLvl="9" skillName="Sleep" levelUpSp="5900" getLevel="35" />
+		<skill skillId="1126" skillLvl="5" skillName="Servitor Recharge" levelUpSp="8800" getLevel="35" />
+		<skill skillId="1126" skillLvl="6" skillName="Servitor Recharge" levelUpSp="8800" getLevel="35" />
+		<skill skillId="1127" skillLvl="10" skillName="Servitor Heal" levelUpSp="5900" getLevel="35" />
+		<skill skillId="1127" skillLvl="11" skillName="Servitor Heal" levelUpSp="5900" getLevel="35" />
+		<skill skillId="1127" skillLvl="12" skillName="Servitor Heal" levelUpSp="5900" getLevel="35" />
+		<skill skillId="1128" skillLvl="4" skillName="Summon Shadow" levelUpSp="17600" getLevel="35" />
+		<skill skillId="1146" skillLvl="1" skillName="Mighty Servitor" levelUpSp="17600" getLevel="35" />
+		<skill skillId="1151" skillLvl="2" skillName="Corpse Life Drain" levelUpSp="17600" getLevel="35" />
+		<skill skillId="1160" skillLvl="1" skillName="Slow" levelUpSp="17600" getLevel="35" />
+		<skill skillId="1167" skillLvl="2" skillName="Poisonous Cloud" levelUpSp="17600" getLevel="35" />
+		<skill skillId="1172" skillLvl="7" skillName="Aura Burn" levelUpSp="8800" getLevel="35" />
+		<skill skillId="1172" skillLvl="8" skillName="Aura Burn" levelUpSp="8800" getLevel="35" />
+		<skill skillId="1178" skillLvl="7" skillName="Twister" levelUpSp="8800" getLevel="35" />
+		<skill skillId="1178" skillLvl="8" skillName="Twister" levelUpSp="8800" getLevel="35" />
+		<skill skillId="1206" skillLvl="5" skillName="Wind Shackle" levelUpSp="17600" getLevel="35" />
+		<skill skillId="1222" skillLvl="1" skillName="Curse Chaos" levelUpSp="17600" getLevel="35" />
+		<skill skillId="1224" skillLvl="3" skillName="Surrender To Poison" levelUpSp="17600" getLevel="35" />
+		<skill skillId="1228" skillLvl="4" skillName="Summon Silhouette" levelUpSp="17600" getLevel="35" />
+		<skill skillId="1266" skillLvl="3" skillName="Shadow Spark" levelUpSp="17600" getLevel="35" />
 	</skillTree>
 </list>

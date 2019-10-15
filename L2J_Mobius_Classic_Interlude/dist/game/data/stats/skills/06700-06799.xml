@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="6700" toLevel="1" name="Ball Trapping Orodriel Agathion Cute Trick">
-		<!-- See Agathion's cute trick. -->
+		<!-- See the summoned spirit perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
@@ -17,7 +17,7 @@
 		</conditions>
 	</skill>
 	<skill id="6701" toLevel="1" name="Penalty Kick Agathion Cute Trick">
-		<!-- See Agathion's cute trick. -->
+		<!-- See the summoned spirit perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
@@ -32,8 +32,75 @@
 			<condition name="OpNeedAgathion" />
 		</conditions>
 	</skill>
+	<skill id="6702" toLevel="1" name="Blessing of Cheers">
+		<blockedInOlympiad>false</blockedInOlympiad>
+		<operateType>A1</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>55</magicLvl>
+		<hitTime>2700</hitTime>
+		<coolTime>1000</coolTime>
+		<reuseDelay>1800000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpNeedAgathion" />
+		</conditions>
+		<effects>
+			<effect name="Restoration">
+				<itemId>17235</itemId>
+				<itemCount>1</itemCount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6703" toLevel="1" name="Blessing of Cheers">
+		<operateType>A1</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>55</magicLvl>
+		<hitTime>2700</hitTime>
+		<coolTime>1000</coolTime>
+		<reuseDelay>1800000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpNeedAgathion" />
+		</conditions>
+		<effects>
+			<effect name="Restoration">
+				<itemId>17235</itemId>
+				<itemCount>1</itemCount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6704" toLevel="1" name="Blessing of Cheers">
+		<operateType>A1</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>55</magicLvl>
+		<hitTime>2700</hitTime>
+		<coolTime>1000</coolTime>
+		<reuseDelay>1800000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpNeedAgathion" />
+		</conditions>
+		<effects>
+			<effect name="Restoration">
+				<itemId>17235</itemId>
+				<itemCount>1</itemCount>
+			</effect>
+		</effects>
+	</skill>
 	<skill id="6705" toLevel="1" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0100</icon>
 		<abnormalTime>3</abnormalTime>
 		<activateRate>50</activateRate>
@@ -129,7 +196,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="6710" toLevel="1" name="Etis Haste">
-		<!-- Atk. Spd. is increased by 10%. -->
+		<!-- Atk. Spd. increases by 10%. -->
 		<abnormalTime>30</abnormalTime>
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<effectPoint>1000</effectPoint>
@@ -164,7 +231,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6714" toLevel="1" name="Wind Walk of Elcadia">
-		<!-- For 10 minutes, Speed + 33. -->
+		<!-- Increases Speed by 33 for 10 minutes. -->
 		<icon>icon.skill1204</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
@@ -317,7 +384,7 @@
 		</effects>
 	</skill>
 	<skill id="6719" toLevel="1" name="Guidance of Elcadia">
-		<!-- For 10 minutes, Accuracy + 4. -->
+		<!-- Increases Accuracy by 4 for 10 minutes. -->
 		<icon>icon.skill1240</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
@@ -496,7 +563,7 @@
 				<!-- Bless the Blood -->
 				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>99</maxAttackerLevel>
+				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>60</chance>
 				<targetType>SELF</targetType>
 				<minDamage>60</minDamage>
@@ -570,7 +637,7 @@
 		</effects>
 	</skill>
 	<skill id="6729" toLevel="1" name="Holy Attack Resistance of Elcadia">
-		<!-- For 10 minutes, Resistance to Holy attacks + 33. -->
+		<!-- Increases Holy Attack Resistance by 30 for 10 minutes. -->
 		<icon>icon.skill1392</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
@@ -596,7 +663,7 @@
 		</effects>
 	</skill>
 	<skill id="6730" toLevel="1" name="Greater Battle Heal of Elcadia">
-		<!-- Immediately restores the target's HP with 858 Power. -->
+		<!-- Quickly recovers the target's HP by 858 power. -->
 		<icon>icon.skill1218</icon>
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<castRange>600</castRange>
@@ -760,7 +827,7 @@
 		</effects>
 	</skill>
 	<skill id="6738" toLevel="1" name="Hold">
-		<!-- Inflicted with Hold and unable to move. -->
+		<!-- Afflicted with Hold and unable to move temporarily. -->
 		<icon>icon.skill4047</icon>
 		<operateType>A2</operateType>
 		<mpConsume>80</mpConsume>
@@ -958,7 +1025,7 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="6748" toLevel="1" name="Shock Attack">
+	<skill id="6748" toLevel="1" name="Stun Attack">
 		<!-- Inflicts Stun for 5 seconds. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -987,7 +1054,9 @@
 				<power>15000</power>
 				<criticalChance>20</criticalChance>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="6749" toLevel="1" name="Devil Strike">
@@ -1425,7 +1494,7 @@
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
-	<skill id="6768" toLevel="1" name="Shock Attack">
+	<skill id="6768" toLevel="1" name="Stun Attack">
 		<!-- Inflicts Stun for 5 seconds. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -1455,7 +1524,9 @@
 				<power>15000</power>
 				<criticalChance>20</criticalChance>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="6769" toLevel="1" name="Petrify">
@@ -1589,7 +1660,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="6774" toLevel="1" name="Shock Attack">
+	<skill id="6774" toLevel="1" name="Stun Attack">
 		<!-- Inflicts Stun for 10 seconds. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -1618,7 +1689,9 @@
 				<power>15000</power>
 				<criticalChance>20</criticalChance>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="6775" toLevel="1" name="Soul Breath">
@@ -1722,7 +1795,9 @@
 				<power>200</power>
 				<ticks>1</ticks>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 			<effect name="Speed">
 				<amount>-20</amount>
 				<mode>PER</mode>
@@ -1750,7 +1825,7 @@
 		</effects>
 	</skill>
 	<skill id="6779" toLevel="1" name="Paralysis">
-		<!-- The target is paralyzed. -->
+		<!-- Body is rigid and paralyzed. -->
 		<icon>icon.skill1170</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime> <!-- FIXME: value unconfirmed -->
@@ -1768,7 +1843,9 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="6780" toLevel="1" name="Presentation - Portal Ray Combined Light Maintenance">

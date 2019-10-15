@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="7100" toLevel="1" name="Clan-exclusive Pet Stun">
-		<!-- Stuns for 3 sec. -->
+		<!-- Stuns the target for 3 seconds. -->
 		<icon>icon.skill5168</icon>
 		<operateType>A2</operateType>
 		<mpConsume>5</mpConsume>
@@ -23,7 +23,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="BlockActions">
-				<allowedSkills>35016</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
@@ -51,9 +51,8 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="BlockActions">
-				<allowedSkills>35016</allowedSkills>
-			</effect>
+			<effect name="AirBind" />
+			<effect name="BlockActions" />
 			<effect name="DefenceTrait">
 				<HOLD>100</HOLD>
 				<SLEEP>100</SLEEP>
@@ -99,7 +98,7 @@
 		<affectObject>FRIEND</affectObject>
 	</skill>
 	<skill id="7104" toLevel="1" name="Pa'agrio's Hand">
-		<!-- Raise the temperature of the Draco Egg through Pa'agrio's Hand. It raises the temperature by 1 - 10 degrees on a Small Draco Egg and 0.1 - 1.0 degrees on a Large Draco Egg. The Spirit of Flame Agathion must be summoned for it to be used. -->
+		<!-- Raise the temperature of the Draco Egg through Pa'agrio's Hand. It raises the temperature by 1 - 10 degrees on a Small Draco Egg and 0.1 - 1.0 degrees on a Large Draco Egg. The Fire Spirit Agathion must be summoned for it to be used. -->
 		<icon>icon.skill11775</icon>
 		<operateType>A1</operateType>
 		<castRange>100</castRange>
@@ -114,8 +113,8 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="7105" toLevel="1" name="Attempt Incubation">
-		<!-- Attempt Incubation -->
+	<skill id="7105" toLevel="1" name="Incubation Possible">
+		<!-- Incubation Possible -->
 		<operateType>A1</operateType>
 		<castRange>100</castRange>
 		<effectPoint>-1</effectPoint>
@@ -203,6 +202,474 @@
 			</condition>
 		</conditions>
 	</skill>
+	<skill id="7109" toLevel="1" name="Summon Bratty Angma">
+		<!-- Summon a Bratty Angma. -->
+		<icon>icon.skill0028</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>10000</reuseDelay>
+		<effectPoint>100</effectPoint>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeId>35650</itemConsumeId> <!-- Summon Scroll: Bratty Angma -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<conditions>
+			<condition name="CheckLevel">
+				<minLevel>76</minLevel>
+				<maxLevel>84</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+			<condition name="OpCanNotUseAirship" />
+			<condition name="OpCheckClassList">
+				<classIds>
+					<item>GLADIATOR</item>
+					<item>WARLORD</item>
+					<item>PALADIN</item>
+					<item>DARK_AVENGER</item>
+					<item>TREASURE_HUNTER</item>
+					<item>HAWKEYE</item>
+					<item>SORCERER</item>
+					<item>NECROMANCER</item>
+					<item>WARLOCK</item>
+					<item>BISHOP</item>
+					<item>PROPHET</item>
+					<item>TEMPLE_KNIGHT</item>
+					<item>SWORDSINGER</item>
+					<item>PLAINS_WALKER</item>
+					<item>SILVER_RANGER</item>
+					<item>SPELLSINGER</item>
+					<item>ELEMENTAL_SUMMONER</item>
+					<item>ELDER</item>
+					<item>SHILLIEN_KNIGHT</item>
+					<item>BLADEDANCER</item>
+					<item>ABYSS_WALKER</item>
+					<item>PHANTOM_RANGER</item>
+					<item>SPELLHOWLER</item>
+					<item>PHANTOM_SUMMONER</item>
+					<item>SHILLIEN_ELDER</item>
+					<item>DESTROYER</item>
+					<item>TYRANT</item>
+					<item>OVERLORD</item>
+					<item>WARCRYER</item>
+					<item>BOUNTY_HUNTER</item>
+					<item>WARSMITH</item>
+					<item>BERSERKER</item>
+					<item>MALE_SOULBREAKER</item>
+					<item>FEMALE_SOULBREAKER</item>
+					<item>ARBALESTER</item>
+					<item>INSPECTOR</item>
+					<item>DUELIST</item>
+					<item>DREADNOUGHT</item>
+					<item>PHOENIX_KNIGHT</item>
+					<item>HELL_KNIGHT</item>
+					<item>ADVENTURER</item>
+					<item>SAGITTARIUS</item>
+					<item>ARCHMAGE</item>
+					<item>SOULTAKER</item>
+					<item>ARCANA_LORD</item>
+					<item>CARDINAL</item>
+					<item>HIEROPHANT</item>
+					<item>EVA_TEMPLAR</item>
+					<item>SWORD_MUSE</item>
+					<item>WIND_RIDER</item>
+					<item>MOONLIGHT_SENTINEL</item>
+					<item>MYSTIC_MUSE</item>
+					<item>ELEMENTAL_MASTER</item>
+					<item>EVA_SAINT</item>
+					<item>SHILLIEN_TEMPLAR</item>
+					<item>SPECTRAL_DANCER</item>
+					<item>GHOST_HUNTER</item>
+					<item>GHOST_SENTINEL</item>
+					<item>STORM_SCREAMER</item>
+					<item>SPECTRAL_MASTER</item>
+					<item>SHILLIEN_SAINT</item>
+					<item>TITAN</item>
+					<item>GRAND_KHAVATARI</item>
+					<item>DOMINATOR</item>
+					<item>DOOMCRYER</item>
+					<item>FORTUNE_SEEKER</item>
+					<item>MAESTRO</item>
+					<item>DOOMBRINGER</item>
+					<item>MALE_SOUL_HOUND</item>
+					<item>FEMALE_SOUL_HOUND</item>
+					<item>TRICKSTER</item>
+					<item>JUDICATOR</item>
+					<item>SIGEL_KNIGHT</item>
+					<item>TYRR_WARRIOR</item>
+					<item>OTHELL_ROGUE</item>
+					<item>YUL_ARCHER</item>
+					<item>FEOH_WIZARD</item>
+					<item>ISS_ENCHANTER</item>
+					<item>WYNN_SUMMONER</item>
+					<item>AEORE_HEALER</item>
+				</classIds>
+				<affectType>CASTER</affectType>
+				<isWithin>true</isWithin>
+			</condition>
+			<condition name="OpPledge">
+				<level>5</level>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="SummonNpc">
+				<npcId>19288</npcId>
+				<npcCount>1</npcCount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="7110" toLevel="1" name="Summon Bratty Angma">
+		<!-- Summon a Bratty Angma. -->
+		<icon>icon.skill0028</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>10000</reuseDelay>
+		<effectPoint>100</effectPoint>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeId>35651</itemConsumeId> <!-- Summon Scroll: Bratty Angma -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<conditions>
+			<condition name="CheckLevel">
+				<minLevel>85</minLevel>
+				<maxLevel>89</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+			<condition name="OpCanNotUseAirship" />
+			<condition name="OpCheckClassList">
+				<classIds>
+					<item>GLADIATOR</item>
+					<item>WARLORD</item>
+					<item>PALADIN</item>
+					<item>DARK_AVENGER</item>
+					<item>TREASURE_HUNTER</item>
+					<item>HAWKEYE</item>
+					<item>SORCERER</item>
+					<item>NECROMANCER</item>
+					<item>WARLOCK</item>
+					<item>BISHOP</item>
+					<item>PROPHET</item>
+					<item>TEMPLE_KNIGHT</item>
+					<item>SWORDSINGER</item>
+					<item>PLAINS_WALKER</item>
+					<item>SILVER_RANGER</item>
+					<item>SPELLSINGER</item>
+					<item>ELEMENTAL_SUMMONER</item>
+					<item>ELDER</item>
+					<item>SHILLIEN_KNIGHT</item>
+					<item>BLADEDANCER</item>
+					<item>ABYSS_WALKER</item>
+					<item>PHANTOM_RANGER</item>
+					<item>SPELLHOWLER</item>
+					<item>PHANTOM_SUMMONER</item>
+					<item>SHILLIEN_ELDER</item>
+					<item>DESTROYER</item>
+					<item>TYRANT</item>
+					<item>OVERLORD</item>
+					<item>WARCRYER</item>
+					<item>BOUNTY_HUNTER</item>
+					<item>WARSMITH</item>
+					<item>BERSERKER</item>
+					<item>MALE_SOULBREAKER</item>
+					<item>FEMALE_SOULBREAKER</item>
+					<item>ARBALESTER</item>
+					<item>INSPECTOR</item>
+					<item>DUELIST</item>
+					<item>DREADNOUGHT</item>
+					<item>PHOENIX_KNIGHT</item>
+					<item>HELL_KNIGHT</item>
+					<item>ADVENTURER</item>
+					<item>SAGITTARIUS</item>
+					<item>ARCHMAGE</item>
+					<item>SOULTAKER</item>
+					<item>ARCANA_LORD</item>
+					<item>CARDINAL</item>
+					<item>HIEROPHANT</item>
+					<item>EVA_TEMPLAR</item>
+					<item>SWORD_MUSE</item>
+					<item>WIND_RIDER</item>
+					<item>MOONLIGHT_SENTINEL</item>
+					<item>MYSTIC_MUSE</item>
+					<item>ELEMENTAL_MASTER</item>
+					<item>EVA_SAINT</item>
+					<item>SHILLIEN_TEMPLAR</item>
+					<item>SPECTRAL_DANCER</item>
+					<item>GHOST_HUNTER</item>
+					<item>GHOST_SENTINEL</item>
+					<item>STORM_SCREAMER</item>
+					<item>SPECTRAL_MASTER</item>
+					<item>SHILLIEN_SAINT</item>
+					<item>TITAN</item>
+					<item>GRAND_KHAVATARI</item>
+					<item>DOMINATOR</item>
+					<item>DOOMCRYER</item>
+					<item>FORTUNE_SEEKER</item>
+					<item>MAESTRO</item>
+					<item>DOOMBRINGER</item>
+					<item>MALE_SOUL_HOUND</item>
+					<item>FEMALE_SOUL_HOUND</item>
+					<item>TRICKSTER</item>
+					<item>JUDICATOR</item>
+					<item>SIGEL_KNIGHT</item>
+					<item>TYRR_WARRIOR</item>
+					<item>OTHELL_ROGUE</item>
+					<item>YUL_ARCHER</item>
+					<item>FEOH_WIZARD</item>
+					<item>ISS_ENCHANTER</item>
+					<item>WYNN_SUMMONER</item>
+					<item>AEORE_HEALER</item>
+				</classIds>
+				<affectType>CASTER</affectType>
+				<isWithin>true</isWithin>
+			</condition>
+			<condition name="OpPledge">
+				<level>5</level>
+			</condition>
+		</conditions>
+	</skill>
+	<skill id="7111" toLevel="1" name="Summon Bratty Angma">
+		<!-- Summon a Bratty Angma. -->
+		<icon>icon.skill0028</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>10000</reuseDelay>
+		<effectPoint>100</effectPoint>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CheckLevel">
+				<minLevel>90</minLevel>
+				<maxLevel>94</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+			<condition name="OpCanNotUseAirship" />
+			<condition name="OpCheckClassList">
+				<classIds>
+					<item>GLADIATOR</item>
+					<item>WARLORD</item>
+					<item>PALADIN</item>
+					<item>DARK_AVENGER</item>
+					<item>TREASURE_HUNTER</item>
+					<item>HAWKEYE</item>
+					<item>SORCERER</item>
+					<item>NECROMANCER</item>
+					<item>WARLOCK</item>
+					<item>BISHOP</item>
+					<item>PROPHET</item>
+					<item>TEMPLE_KNIGHT</item>
+					<item>SWORDSINGER</item>
+					<item>PLAINS_WALKER</item>
+					<item>SILVER_RANGER</item>
+					<item>SPELLSINGER</item>
+					<item>ELEMENTAL_SUMMONER</item>
+					<item>ELDER</item>
+					<item>SHILLIEN_KNIGHT</item>
+					<item>BLADEDANCER</item>
+					<item>ABYSS_WALKER</item>
+					<item>PHANTOM_RANGER</item>
+					<item>SPELLHOWLER</item>
+					<item>PHANTOM_SUMMONER</item>
+					<item>SHILLIEN_ELDER</item>
+					<item>DESTROYER</item>
+					<item>TYRANT</item>
+					<item>OVERLORD</item>
+					<item>WARCRYER</item>
+					<item>BOUNTY_HUNTER</item>
+					<item>WARSMITH</item>
+					<item>BERSERKER</item>
+					<item>MALE_SOULBREAKER</item>
+					<item>FEMALE_SOULBREAKER</item>
+					<item>ARBALESTER</item>
+					<item>INSPECTOR</item>
+					<item>DUELIST</item>
+					<item>DREADNOUGHT</item>
+					<item>PHOENIX_KNIGHT</item>
+					<item>HELL_KNIGHT</item>
+					<item>ADVENTURER</item>
+					<item>SAGITTARIUS</item>
+					<item>ARCHMAGE</item>
+					<item>SOULTAKER</item>
+					<item>ARCANA_LORD</item>
+					<item>CARDINAL</item>
+					<item>HIEROPHANT</item>
+					<item>EVA_TEMPLAR</item>
+					<item>SWORD_MUSE</item>
+					<item>WIND_RIDER</item>
+					<item>MOONLIGHT_SENTINEL</item>
+					<item>MYSTIC_MUSE</item>
+					<item>ELEMENTAL_MASTER</item>
+					<item>EVA_SAINT</item>
+					<item>SHILLIEN_TEMPLAR</item>
+					<item>SPECTRAL_DANCER</item>
+					<item>GHOST_HUNTER</item>
+					<item>GHOST_SENTINEL</item>
+					<item>STORM_SCREAMER</item>
+					<item>SPECTRAL_MASTER</item>
+					<item>SHILLIEN_SAINT</item>
+					<item>TITAN</item>
+					<item>GRAND_KHAVATARI</item>
+					<item>DOMINATOR</item>
+					<item>DOOMCRYER</item>
+					<item>FORTUNE_SEEKER</item>
+					<item>MAESTRO</item>
+					<item>DOOMBRINGER</item>
+					<item>MALE_SOUL_HOUND</item>
+					<item>FEMALE_SOUL_HOUND</item>
+					<item>TRICKSTER</item>
+					<item>JUDICATOR</item>
+					<item>SIGEL_KNIGHT</item>
+					<item>TYRR_WARRIOR</item>
+					<item>OTHELL_ROGUE</item>
+					<item>YUL_ARCHER</item>
+					<item>FEOH_WIZARD</item>
+					<item>ISS_ENCHANTER</item>
+					<item>WYNN_SUMMONER</item>
+					<item>AEORE_HEALER</item>
+				</classIds>
+				<affectType>CASTER</affectType>
+				<isWithin>true</isWithin>
+			</condition>
+			<condition name="OpPledge">
+				<level>5</level>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="SummonNpc">
+				<npcId>19289</npcId>
+				<npcCount>1</npcCount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="7112" toLevel="1" name="Summon Bratty Angma">
+		<!-- Summon a Bratty Angma. -->
+		<icon>icon.skill0028</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>10000</reuseDelay>
+		<effectPoint>100</effectPoint>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeId>35652</itemConsumeId> <!-- Summon Scroll: Bratty Angma -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<conditions>
+			<condition name="CheckLevel">
+				<minLevel>95</minLevel>
+				<maxLevel>127</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+			<condition name="OpCanNotUseAirship" />
+			<condition name="OpCheckClassList">
+				<classIds>
+					<item>GLADIATOR</item>
+					<item>WARLORD</item>
+					<item>PALADIN</item>
+					<item>DARK_AVENGER</item>
+					<item>TREASURE_HUNTER</item>
+					<item>HAWKEYE</item>
+					<item>SORCERER</item>
+					<item>NECROMANCER</item>
+					<item>WARLOCK</item>
+					<item>BISHOP</item>
+					<item>PROPHET</item>
+					<item>TEMPLE_KNIGHT</item>
+					<item>SWORDSINGER</item>
+					<item>PLAINS_WALKER</item>
+					<item>SILVER_RANGER</item>
+					<item>SPELLSINGER</item>
+					<item>ELEMENTAL_SUMMONER</item>
+					<item>ELDER</item>
+					<item>SHILLIEN_KNIGHT</item>
+					<item>BLADEDANCER</item>
+					<item>ABYSS_WALKER</item>
+					<item>PHANTOM_RANGER</item>
+					<item>SPELLHOWLER</item>
+					<item>PHANTOM_SUMMONER</item>
+					<item>SHILLIEN_ELDER</item>
+					<item>DESTROYER</item>
+					<item>TYRANT</item>
+					<item>OVERLORD</item>
+					<item>WARCRYER</item>
+					<item>BOUNTY_HUNTER</item>
+					<item>WARSMITH</item>
+					<item>BERSERKER</item>
+					<item>MALE_SOULBREAKER</item>
+					<item>FEMALE_SOULBREAKER</item>
+					<item>ARBALESTER</item>
+					<item>INSPECTOR</item>
+					<item>DUELIST</item>
+					<item>DREADNOUGHT</item>
+					<item>PHOENIX_KNIGHT</item>
+					<item>HELL_KNIGHT</item>
+					<item>ADVENTURER</item>
+					<item>SAGITTARIUS</item>
+					<item>ARCHMAGE</item>
+					<item>SOULTAKER</item>
+					<item>ARCANA_LORD</item>
+					<item>CARDINAL</item>
+					<item>HIEROPHANT</item>
+					<item>EVA_TEMPLAR</item>
+					<item>SWORD_MUSE</item>
+					<item>WIND_RIDER</item>
+					<item>MOONLIGHT_SENTINEL</item>
+					<item>MYSTIC_MUSE</item>
+					<item>ELEMENTAL_MASTER</item>
+					<item>EVA_SAINT</item>
+					<item>SHILLIEN_TEMPLAR</item>
+					<item>SPECTRAL_DANCER</item>
+					<item>GHOST_HUNTER</item>
+					<item>GHOST_SENTINEL</item>
+					<item>STORM_SCREAMER</item>
+					<item>SPECTRAL_MASTER</item>
+					<item>SHILLIEN_SAINT</item>
+					<item>TITAN</item>
+					<item>GRAND_KHAVATARI</item>
+					<item>DOMINATOR</item>
+					<item>DOOMCRYER</item>
+					<item>FORTUNE_SEEKER</item>
+					<item>MAESTRO</item>
+					<item>DOOMBRINGER</item>
+					<item>MALE_SOUL_HOUND</item>
+					<item>FEMALE_SOUL_HOUND</item>
+					<item>TRICKSTER</item>
+					<item>JUDICATOR</item>
+					<item>SIGEL_KNIGHT</item>
+					<item>TYRR_WARRIOR</item>
+					<item>OTHELL_ROGUE</item>
+					<item>YUL_ARCHER</item>
+					<item>FEOH_WIZARD</item>
+					<item>ISS_ENCHANTER</item>
+					<item>WYNN_SUMMONER</item>
+					<item>AEORE_HEALER</item>
+				</classIds>
+				<affectType>CASTER</affectType>
+				<isWithin>true</isWithin>
+			</condition>
+			<condition name="OpPledge">
+				<level>5</level>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="SummonNpc">
+				<npcId>19290</npcId>
+				<npcCount>1</npcCount>
+			</effect>
+		</effects>
+	</skill>
 	<skill id="7113" toLevel="1" name="Pet Invincibility Effect">
 		<!-- Invincibility Effect -->
 		<icon>icon.skill0442</icon>
@@ -228,6 +695,42 @@
 				<type>BLOCK_MP</type>
 			</effect>
 			<effect name="DebuffBlock" />
+			<effect name="ResistDispelByCategory">
+				<amount>-100</amount>
+				<slot>ALL</slot>
+			</effect>
+			<effect name="ResistAbnormalByCategory">
+				<amount>-100</amount>
+				<slot>DEBUFF</slot>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="7114" toLevel="1" name="Spellbook: Clan Flag">
+		<operateType>A1</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<isMagic>2</isMagic>
+		<hitTime>1500</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeId>34895</itemConsumeId> <!-- Spellbook: Clan Flag -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<conditions>
+			<condition name="OpMainjob" />
+			<condition name="OpSocialClass">
+				<socialClass>8</socialClass>
+			</condition>
+			<condition name="OpSkill">
+				<skillId>15094</skillId> <!-- Clan Flag -->
+				<skillLevel>1</skillLevel>
+				<hasLearned>false</hasLearned>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="SetSkill">
+				<skillId>15094</skillId> <!-- Clan Flag -->
+				<skillLvl>1</skillLvl>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="7115" toLevel="1" name="Energy of Chaos">
@@ -249,42 +752,186 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="7122" toLevel="1" name="Raid Boss (Lv. 75)">
-		<!-- Enchanted by Shilen, enshrouded in darkness, Queen Ant's minion is guarding the lands near the Ant Nest. -->
-		<icon>icon.skillraid</icon>
-		<operateType>P</operateType>
-	</skill>
-	<skill id="7123" toLevel="1" name="Raid Boss (Lv. 75)">
-		<!-- Enchanted by Shilen, enshrouded in darkness, Giran is guarding the lands and praying about resurrection. -->
-		<icon>icon.skillraid</icon>
-		<operateType>P</operateType>
-	</skill>
-	<skill id="7124" toLevel="1" name="Raid Boss (Lv. 75)">
-		<!-- Enchanted by Shilen, enshrouded in darkness, minion of Core is guarding the lands around Cruma Tower. -->
-		<icon>icon.skillraid</icon>
-		<operateType>P</operateType>
-	</skill>
-	<skill id="7125" toLevel="1" name="Raid Boss (Lv. 75)">
-		<!-- Enchanted by Shilen, enshrouded in darkness, minion of Orfen is guarding the Plains of the Lizardmen. -->
-		<icon>icon.skillraid</icon>
-		<operateType>P</operateType>
-	</skill>
-	<skill id="7126" toLevel="1" name="Master's Blessing - Holy Weapon">
-		<!-- The GM is always by your side. Increases all party members' Holy Attack damage by 20 for 1 hour. -->
-		<icon>icon.skill1043</icon>
+	<skill id="7116" toLevel="1" name="Spellbook: Air Bike">
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>36952</itemConsumeId>
 		<operateType>A1</operateType>
-		<castRange>900</castRange>
-		<hitTime>500</hitTime>
-		<reuseDelay>1000</reuseDelay>
-		<effectPoint>243</effectPoint>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitTime>1500</hitTime>
+		<hitCancelTime>0.5</hitCancelTime>
+		<magicLvl>99</magicLvl>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<conditions>
+			<condition name="OpMainjob" />
+			<condition name="CheckLevel">
+				<minLevel>99</minLevel>
+				<maxLevel>127</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+			<condition name="OpSkill">
+				<skillId>19115</skillId> <!-- Air Bike -->
+				<skillLevel>1</skillLevel>
+				<hasLearned>false</hasLearned>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="SetSkill">
+				<skillId>19115</skillId> <!-- Air Bike -->
+				<skillLvl>1</skillLvl>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="7127" toLevel="1" name="Master's Blessing - Stun Resistance">
-		<!-- The GM is always by your side. Stun Resistance +40% for 1 hour. -->
-		<icon>icon.skill1259</icon>
+	<skill id="7117" toLevel="1" name="Spellbook: Hell Hound">
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>47148</itemConsumeId>
 		<operateType>A1</operateType>
-		<castRange>900</castRange>
-		<hitTime>500</hitTime>
-		<reuseDelay>1000</reuseDelay>
-		<effectPoint>646</effectPoint>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitTime>1500</hitTime>
+		<hitCancelTime>0.5</hitCancelTime>
+		<magicLvl>99</magicLvl>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<conditions>
+			<condition name="OpMainjob" />
+			<condition name="CheckLevel">
+				<minLevel>99</minLevel>
+				<maxLevel>127</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+			<condition name="OpSkill">
+				<skillId>8906</skillId> <!-- Riding the Hell Hound -->
+				<skillLevel>1</skillLevel>
+				<hasLearned>false</hasLearned>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="SetSkill">
+				<skillId>8906</skillId> <!-- Riding the Hell Hound -->
+				<skillLvl>1</skillLvl>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="7118" toLevel="1" name="Spellbook: Pegasus">
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>47150</itemConsumeId>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitTime>1500</hitTime>
+		<hitCancelTime>0.5</hitCancelTime>
+		<magicLvl>99</magicLvl>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<conditions>
+			<condition name="CheckLevel">
+				<minLevel>99</minLevel>
+				<maxLevel>127</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+			<condition name="OpSkill">
+				<skillId>8907</skillId> <!-- Riding the Pegasus -->
+				<skillLevel>1</skillLevel>
+				<hasLearned>false</hasLearned>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="SetSkill">
+				<skillId>8907</skillId> <!-- Riding the Pegasus -->
+				<skillLvl>1</skillLvl>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="7119" toLevel="1" name="Spellbook: Wing Hound">
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>47152</itemConsumeId>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitTime>1500</hitTime>
+		<hitCancelTime>0.5</hitCancelTime>
+		<magicLvl>99</magicLvl>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<conditions>
+			<condition name="CheckLevel">
+				<minLevel>99</minLevel>
+				<maxLevel>127</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+			<condition name="OpSkill">
+				<skillId>8908</skillId> <!-- Riding the Wing Hound -->
+				<skillLevel>1</skillLevel>
+				<hasLearned>false</hasLearned>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="SetSkill">
+				<skillId>8908</skillId> <!-- Riding the Wing Hound -->
+				<skillLvl>1</skillLvl>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="7120" toLevel="1" name="Spellbook: War Horse">
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>47149</itemConsumeId>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitTime>1500</hitTime>
+		<hitCancelTime>0.5</hitCancelTime>
+		<magicLvl>99</magicLvl>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<conditions>
+			<condition name="CheckLevel">
+				<minLevel>99</minLevel>
+				<maxLevel>127</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+			<condition name="OpSkill">
+				<skillId>8909</skillId> <!-- Riding the War Horse -->
+				<skillLevel>1</skillLevel>
+				<hasLearned>false</hasLearned>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="SetSkill">
+				<skillId>8909</skillId> <!-- Riding the War Horse -->
+				<skillLvl>1</skillLvl>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="7121" toLevel="1" name="Spellbook: Griffin">
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>47151</itemConsumeId>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitTime>1500</hitTime>
+		<hitCancelTime>0.5</hitCancelTime>
+		<magicLvl>99</magicLvl>
+		<isMagic>2</isMagic>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<conditions>
+			<condition name="CheckLevel">
+				<minLevel>99</minLevel>
+				<maxLevel>127</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+			<condition name="OpSkill">
+				<skillId>8910</skillId> <!-- Riding the Griffin -->
+				<skillLevel>1</skillLevel>
+				<hasLearned>false</hasLearned>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="SetSkill">
+				<skillId>8910</skillId> <!-- Riding the Griffin -->
+				<skillLvl>1</skillLvl>
+			</effect>
+		</effects>
 	</skill>
 </list>

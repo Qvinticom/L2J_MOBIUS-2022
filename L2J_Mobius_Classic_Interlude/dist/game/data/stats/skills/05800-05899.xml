@@ -36,7 +36,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="5802" toLevel="1" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -174,7 +174,7 @@
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
-	<skill id="5808" toLevel="1" name="Bursting Flame">
+	<skill id="5808" toLevel="1" name="Burst Flame">
 		<effectPoint>-676</effectPoint>
 		<hitTime>3000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -382,6 +382,28 @@
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="5822" toLevel="1" name="Bait for Drakes">
+		<castRange>600</castRange>
+		<effectPoint>-1000</effectPoint>
+		<effectRange>1100</effectRange>
+		<hitTime>3000</hitTime>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>13879</itemConsumeId> <!-- Bait for Drakes -->
+		<magicLvl>85</magicLvl>
+		<operateType>A1</operateType>
+		<reuseDelay>600000</reuseDelay>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpTargetNpc">
+				<npcIds>
+					<item>18781</item>
+				</npcIds>
+			</condition>
+		</conditions>
 	</skill>
 	<skill id="5823" toLevel="1" name="Boss Defeat">
 		<hitTime>2500</hitTime>
@@ -942,7 +964,7 @@
 		</effects>
 	</skill>
 	<skill id="5843" toLevel="1" name="Fear">
-		<!-- Afflicted with Fear and moving against own will momentarily. -->
+		<!-- Afflicted with Fear and moving against own will. -->
 		<icon>icon.skill1092</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -1015,7 +1037,7 @@
 				<!-- Bleed -->
 				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>100</maxAttackerLevel>
+				<maxAttackerLevel>127</maxAttackerLevel>
 				<minDamage>1</minDamage>
 				<chance>20</chance>
 				<targetType>TARGET</targetType>
@@ -1128,7 +1150,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="5849" toLevel="1" name="Decrease Speed">
-		<!-- Decreased Spd. -->
+		<!-- Speed is decreased. -->
 		<icon>icon.skill1160</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -1160,7 +1182,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="5851" toLevel="1" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -1182,7 +1204,9 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 			<effect name="TargetCancel">
 				<chance>80</chance>
 			</effect>
@@ -1215,7 +1239,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5854" toLevel="1" name="Decrease Speed">
-		<!-- Decreased Spd. -->
+		<!-- Speed is decreased. -->
 		<icon>icon.skill1160</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -1234,7 +1258,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5855" toLevel="2" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -1292,6 +1316,118 @@
 			<value level="2">FAN</value>
 		</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
+	</skill>
+	<skill id="5856" toLevel="1" name="Transformation Scroll: Makeshift Bat">
+		<!-- Transforms into a Makeshift Bat. -->
+		<icon>icon.skilltransform3</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<effectPoint>1</effectPoint>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>117</transformId>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>117</transformationId>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5857" toLevel="1" name="Transformation Scroll: Lady Tow">
+		<!-- Transforms into a Lady Tow. -->
+		<icon>icon.skilltransform3</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<effectPoint>1</effectPoint>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>118</transformId>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>118</transformationId>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5858" toLevel="1" name="Transformation Scroll: Angry Tow">
+		<!-- Transforms into an Angry Tow. -->
+		<icon>icon.skilltransform3</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<effectPoint>1</effectPoint>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>119</transformId>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>119</transformationId>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5859" toLevel="1" name="Transformation Scroll: Sleepy Tow">
+		<!-- Transforms into a Sleepy Tow. -->
+		<icon>icon.skilltransform3</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<effectPoint>1</effectPoint>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>120</transformId>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>120</transformationId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="5860" toLevel="1" name="Wrath of Valakas">
 		<!-- Magic skills are blocked and Speed decreases momentarily. Destruction of the Body is activated, inflicting major damage on the stamina of nearby party members after 10 seconds. -->
@@ -1949,7 +2085,7 @@
 		</effects>
 	</skill>
 	<skill id="5880" toLevel="2" name="Vicious Mutilation">
-		<!-- Decreased Spd. -->
+		<!-- Speed is decreased. -->
 		<icon>icon.skill1160</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -1993,7 +2129,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5882" toLevel="2" name="Weakened Pommel">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -2026,7 +2162,9 @@
 			<effect name="PhysicalAttack">
 				<power>873</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="5883" toLevel="1" name="Meggling Injury">
@@ -2099,7 +2237,7 @@
 		</effects>
 	</skill>
 	<skill id="5885" toLevel="1" name="Weakened Sweep">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -2131,7 +2269,9 @@
 					<value level="1">2319</value>
 				</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="5886" toLevel="1" name="Ground Shaker">
@@ -2191,8 +2331,8 @@
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
-	<skill id="5888" toLevel="2" name="Earthquake">
-		<!-- Stunned and unable to move momentarily. -->
+	<skill id="5888" toLevel="2" name="Earth Shaker">
+		<!-- Momentarily immobile due to the Stun effect and lost the target. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -2261,7 +2401,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5890" toLevel="3" name="Tainted Mass Shackle">
-		<!-- Cannot act because the target is locked. -->
+		<!-- Cannot move because the target is locked. -->
 		<icon>icon.skill0402</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -2307,7 +2447,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5892" toLevel="2" name="Cunning Coercion">
-		<!-- Makes the enemy show his back, removes its desire for attack, and cancels its target state. Inflicts mental shock on the enemy momentarily. -->
+		<!-- Makes the enemy show his back, removes its desire for attack, and cancels its target state. Momentarily inflicts mental shock on the enemy. -->
 		<icon>icon.skill0358</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>

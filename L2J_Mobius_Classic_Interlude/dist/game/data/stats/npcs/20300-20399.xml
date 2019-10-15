@@ -685,19 +685,21 @@
 			<param name="SpiritShotRate" value="5" />
 			<param name="LongRangeGuardRate" value="5" />
 		</parameters>
-		<race>BEAST</race>
+		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<acquire exp="2616" sp="174" /> <!-- Need confirm retail value -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1477" hpRegen="5.5" mp="531" mpRegen="2.1" />
-			<attack physical="218.180501" magical="135.44454" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="149.8955727" magical="120.65578" />
+		<acquire exp="2616" sp="174" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="1050.81652" hpRegen="5.5" mp="531.0" mpRegen="2.1" />
+			<attack physical="198.34591" magical="135.44454" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="164.88513" magical="109.782377202178" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="80" />
 				<run ground="174" />
 			</speed>
 			<hitTime>300</hitTime>
-			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>

@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="5600" name="Meteor Shower" additionalName="Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. -->
+	<item id="5600" name="Meteor Shower" additionalName="Critical Bleed" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Has a 42% chance of casting Bleed on the target during a standard Critical Attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_meteor_shower_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1128" />
+		<set name="crystal_count" val="751" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1600" />
@@ -19,6 +19,7 @@
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
 		<set name="isAppearanceable" val="true" />
 		<skills>
+			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
 			<skill id="3052" level="1" type="ON_CRITICAL_SKILL" /> <!-- Special Ability: Critical Bleed -->
 		</skills>
 		<stats>
@@ -31,15 +32,15 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5601" name="Meteor Shower" additionalName="Critical Damage" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. +247 during a Critical Attack. -->
+	<item id="5601" name="Meteor Shower" additionalName="Rsk. Haste" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 11% when HP drops to 60% or below. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_meteor_shower_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1128" />
+		<set name="crystal_count" val="751" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1600" />
@@ -62,15 +63,15 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5602" name="Elysian" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 54. -->
+	<item id="5602" name="Elysian" additionalName="Health" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_elysian_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1659" />
+		<set name="crystal_count" val="1106" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="1580" />
@@ -93,43 +94,15 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5603" name="Elysian" additionalName="Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. -->
+	<item id="5603" name="Elysian" additionalName="Anger" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. P. Atk. + 32 and decreases Max HP by 15%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_elysian_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1659" />
-		<set name="crystal_type" val="A" />
-		<set name="material" val="ORIHARUKON" />
-		<set name="weight" val="1580" />
-		<set name="price" val="20741000" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
-		<set name="commissionItemType" val="BLUNT_WEAPON" />
-		<set name="isAppearanceable" val="true" />
-		<stats>
-			<stat type="pAtk">232</stat>
-			<stat type="mAtk">114</stat>
-			<stat type="rCrit">6</stat>
-			<stat type="accCombat">8</stat>
-			<stat type="pAtkSpd">379</stat>
-			<stat type="randomDamage">20</stat>
-			<stat type="pAtkRange">40</stat>
-		</stats>
-	</item>
-	<item id="5604" name="Elysian" additionalName="Critical Damage" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. +256 during a Critical Attack. -->
-		<set name="icon" val="icon.weapon_elysian_i01" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BLUNT" />
-		<set name="bodypart" val="rhand" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1659" />
+		<set name="crystal_count" val="1106" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="1580" />
@@ -140,6 +113,38 @@
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
 		<set name="isAppearanceable" val="true" />
 		<skills>
+			<skill id="3057" level="2" /> <!-- Special Ability: Anger -->
+		</skills>
+		<stats>
+			<stat type="pAtk">232</stat>
+			<stat type="mAtk">114</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="5604" name="Elysian" additionalName="Critical Drain" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Absorbs 19 HP from the target during a Critical Attack. Increases damage inflicted during PvP. -->
+		<set name="icon" val="icon.weapon_elysian_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1106" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="weight" val="1580" />
+		<set name="price" val="20741000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
 			<skill id="3059" level="2" type="ON_CRITICAL_SKILL" /> <!-- Special Ability: Critical Drain -->
 		</skills>
 		<stats>
@@ -152,15 +157,15 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5605" name="Branch of the Mother Tree" additionalName="Empower" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. M. Atk. +151. -->
+	<item id="5605" name="Branch of the Mother Tree" additionalName="Conversion" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Max MP by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_worldtrees_branch_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1659" />
+		<set name="crystal_count" val="1106" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="900" />
@@ -184,15 +189,15 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5606" name="Branch of the Mother Tree" additionalName="Acumen" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
+	<item id="5606" name="Branch of the Mother Tree" additionalName="Magic Damage" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Has a 30% chance of inflicting an additional power 8 of magical damage on the target during magic use. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_worldtrees_branch_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1659" />
+		<set name="crystal_count" val="1106" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="900" />
@@ -205,6 +210,7 @@
 		<set name="isAppearanceable" val="true" />
 		<skills>
 			<skill id="3049" level="2" type_chance="30" type="ON_MAGIC_SKILL" /> <!-- Special Ability: Magic Damage -->
+			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
 		</skills>
 		<stats>
 			<stat type="pAtk">226</stat>
@@ -216,15 +222,15 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5607" name="Branch of the Mother Tree" additionalName="Magic Regeneration" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 12%. -->
+	<item id="5607" name="Branch of the Mother Tree" additionalName="Acumen" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_worldtrees_branch_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1659" />
+		<set name="crystal_count" val="1106" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="900" />
@@ -248,15 +254,15 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5608" name="Carnage Bow" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 40. -->
+	<item id="5608" name="Carnage Bow" additionalName="Light Armor" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Weight Gauge by 20%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_carnium_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1128" />
+		<set name="crystal_count" val="751" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="DAMASCUS" />
 		<set name="weight" val="900" />
@@ -271,6 +277,7 @@
 		<set name="isAppearanceable" val="true" />
 		<skills>
 			<skill id="3498" level="1" /> <!-- Special Ability: Light -->
+			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
 		</skills>
 		<stats>
 			<stat type="pAtk">440</stat>
@@ -282,15 +289,15 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="5609" name="Carnage Bow" additionalName="Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
+	<item id="5609" name="Carnage Bow" additionalName="Critical Bleed" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Has a 35% chance of casting Bleed on the target during a standard Critical Attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_carnium_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1128" />
+		<set name="crystal_count" val="751" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="DAMASCUS" />
 		<set name="weight" val="1670" />
@@ -304,6 +311,7 @@
 		<set name="commissionItemType" val="BOW" />
 		<set name="isAppearanceable" val="true" />
 		<skills>
+			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
 			<skill id="3053" level="1" type="ON_CRITICAL_SKILL" /> <!-- Special Ability: Critical Bleed -->
 		</skills>
 		<stats>
@@ -316,15 +324,15 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="5610" name="Carnage Bow" additionalName="Critical Damage" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. +164 during a Critical Attack. -->
+	<item id="5610" name="Carnage Bow" additionalName="Mana Up" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Max MP by 30%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_carnium_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1128" />
+		<set name="crystal_count" val="751" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="DAMASCUS" />
 		<set name="weight" val="1670" />
@@ -350,15 +358,15 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="5611" name="Soul Bow" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 40. -->
+	<item id="5611" name="Soul Bow" additionalName="Cheap Shot" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Has a 38% chance of decreasing MP consumption to 1 during a standard attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_soul_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1659" />
+		<set name="crystal_count" val="1106" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="1660" />
@@ -372,6 +380,9 @@
 		<set name="commissionItemType" val="BOW" />
 		<set name="isAppearanceable" val="true" />
 		<set name="reduced_mp_consume" val="38,1" />
+		<skills>
+			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
+		</skills>
 		<stats>
 			<stat type="pAtk">528</stat>
 			<stat type="mAtk">125</stat>
@@ -382,15 +393,15 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="5612" name="Soul Bow" additionalName="Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
+	<item id="5612" name="Soul Bow" additionalName="Quick Recovery" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Decreases cooldown by about 15%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_soul_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1659" />
+		<set name="crystal_count" val="1106" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="1660" />
@@ -403,6 +414,9 @@
 		<set name="reuse_delay" val="697" />
 		<set name="commissionItemType" val="BOW" />
 		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
+		</skills>
 		<stats>
 			<stat type="pAtk">528</stat>
 			<stat type="mAtk">125</stat>
@@ -413,15 +427,15 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="5613" name="Soul Bow" additionalName="Critical Damage" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. +180 during a Critical Attack. -->
+	<item id="5613" name="Soul Bow" additionalName="Critical Poison" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Has an 18% chance of casting Poison on the target during a standard Critical Attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_soul_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1659" />
+		<set name="crystal_count" val="1106" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="1660" />
@@ -435,6 +449,7 @@
 		<set name="commissionItemType" val="BOW" />
 		<set name="isAppearanceable" val="true" />
 		<skills>
+			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
 			<skill id="3062" level="2" type="ON_CRITICAL_SKILL" /> <!-- Special Ability: Critical Poison -->
 		</skills>
 		<stats>
@@ -448,70 +463,14 @@
 		</stats>
 	</item>
 	<item id="5614" name="Bloody Orchid" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 58. -->
+		<!-- <Soul Crystal Enhancement>. Increases Critical by 67. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_bloody_orchid_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1128" />
-		<set name="crystal_type" val="A" />
-		<set name="material" val="BLOOD_STEEL" />
-		<set name="weight" val="960" />
-		<set name="price" val="14098000" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
-		<set name="commissionItemType" val="DAGGER" />
-		<set name="isAppearanceable" val="true" />
-		<stats>
-			<stat type="pAtk">186</stat>
-			<stat type="mAtk">107</stat>
-			<stat type="rCrit">12</stat>
-			<stat type="accCombat">-3.75</stat>
-			<stat type="pAtkSpd">433</stat>
-			<stat type="randomDamage">5</stat>
-			<stat type="pAtkRange">40</stat>
-		</stats>
-	</item>
-	<item id="5615" name="Bloody Orchid" additionalName="Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 5%. -->
-		<set name="icon" val="icon.weapon_bloody_orchid_i01" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DAGGER" />
-		<set name="bodypart" val="rhand" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1128" />
-		<set name="crystal_type" val="A" />
-		<set name="material" val="BLOOD_STEEL" />
-		<set name="weight" val="960" />
-		<set name="price" val="14098000" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
-		<set name="commissionItemType" val="DAGGER" />
-		<set name="isAppearanceable" val="true" />
-		<stats>
-			<stat type="pAtk">186</stat>
-			<stat type="mAtk">107</stat>
-			<stat type="rCrit">12</stat>
-			<stat type="accCombat">-3.75</stat>
-			<stat type="pAtkSpd">433</stat>
-			<stat type="randomDamage">5</stat>
-			<stat type="pAtkRange">40</stat>
-		</stats>
-	</item>
-	<item id="5616" name="Bloody Orchid" additionalName="Mortal Strike" type="Weapon">
-		<!-- <Soul Crystal Enhancement> Increases the chance of success of performing the skills hitting vulnerable spots on enemy's body. -->
-		<set name="icon" val="icon.weapon_bloody_orchid_i01" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DAGGER" />
-		<set name="bodypart" val="rhand" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1128" />
+		<set name="crystal_count" val="751" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="BLOOD_STEEL" />
 		<set name="weight" val="960" />
@@ -522,6 +481,69 @@
 		<set name="commissionItemType" val="DAGGER" />
 		<set name="isAppearanceable" val="true" />
 		<skills>
+			<skill id="3051" level="1" /> <!-- Special Ability: Focus -->
+		</skills>
+		<stats>
+			<stat type="pAtk">186</stat>
+			<stat type="mAtk">107</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="5615" name="Bloody Orchid" additionalName="Back Blow" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases P. Critical Rate by 37% when attacking the target from behind. Increases damage inflicted during PvP. -->
+		<set name="icon" val="icon.weapon_bloody_orchid_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="751" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="BLOOD_STEEL" />
+		<set name="weight" val="960" />
+		<set name="price" val="14098000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="DAGGER" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3063" level="1" /> <!-- Special Ability: Back Blow -->
+		</skills>
+		<stats>
+			<stat type="pAtk">186</stat>
+			<stat type="mAtk">107</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="5616" name="Bloody Orchid" additionalName="Critical Bleed" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Has a 12% chance of casting Bleed on the target during a standard Critical Attack. Increases damage inflicted during PvP. -->
+		<set name="icon" val="icon.weapon_bloody_orchid_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="751" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="BLOOD_STEEL" />
+		<set name="weight" val="960" />
+		<set name="price" val="14098000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="DAGGER" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
 			<skill id="3054" level="1" type="ON_CRITICAL_SKILL" /> <!-- Special Ability: Critical Bleed -->
 		</skills>
 		<stats>
@@ -534,15 +556,15 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5617" name="Soul Separator" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 58. -->
+	<item id="5617" name="Soul Separator" additionalName="Guidance" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Accuracy by about 4. -->
 		<set name="icon" val="icon.weapon_soul_separator_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1659" />
+		<set name="crystal_count" val="1106" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="950" />
@@ -552,6 +574,9 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="DAGGER" />
 		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3064" level="1" /> <!-- Special Ability: Guidance -->
+		</skills>
 		<stats>
 			<stat type="pAtk">203</stat>
 			<stat type="mAtk">114</stat>
@@ -562,15 +587,15 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5618" name="Soul Separator" additionalName="Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 5%. -->
+	<item id="5618" name="Soul Separator" additionalName="Critical Damage" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. P. Atk. + 200 during a Critical Attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_soul_separator_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1659" />
+		<set name="crystal_count" val="1106" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="950" />
@@ -580,6 +605,9 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="DAGGER" />
 		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3066" level="2" /> <!-- Special Ability: Critical Damage -->
+		</skills>
 		<stats>
 			<stat type="pAtk">203</stat>
 			<stat type="mAtk">114</stat>
@@ -590,15 +618,15 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5619" name="Soul Separator" additionalName="Mortal Strike" type="Weapon">
-		<!-- <Soul Crystal Enhancement> Increases the chance of success of performing the skills hitting vulnerable spots on enemy's body. -->
+	<item id="5619" name="Soul Separator" additionalName="Rsk. Haste" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 11% when HP drops to 60% or below. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_soul_separator_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1659" />
+		<set name="crystal_count" val="1106" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="950" />
@@ -621,15 +649,15 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5620" name="Blood Tornado" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 54. -->
+	<item id="5620" name="Blood Tornado" additionalName="Haste" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_blood_tornado_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1128" />
+		<set name="crystal_count" val="751" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="BLOOD_STEEL" />
 		<set name="weight" val="1370" />
@@ -652,15 +680,15 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5621" name="Blood Tornado" additionalName="Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
+	<item id="5621" name="Blood Tornado" additionalName="Focus" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Critical by 61. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_blood_tornado_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1128" />
+		<set name="crystal_count" val="751" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="BLOOD_STEEL" />
 		<set name="weight" val="1370" />
@@ -670,6 +698,9 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="FIST_WEAPON" />
 		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3050" level="1" /> <!-- Special Ability: Focus -->
+		</skills>
 		<stats>
 			<stat type="pAtk">259</stat>
 			<stat type="mAtk">107</stat>
@@ -680,15 +711,15 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5622" name="Blood Tornado" additionalName="Critical Damage" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. +288 during a Critical Attack. -->
+	<item id="5622" name="Blood Tornado" additionalName="Anger" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. P. Atk. + 38 and decreases Max HP by 15%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_blood_tornado_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1128" />
+		<set name="crystal_count" val="751" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="BLOOD_STEEL" />
 		<set name="weight" val="1370" />
@@ -698,6 +729,9 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="FIST_WEAPON" />
 		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3058" level="1" /> <!-- Special Ability: Anger -->
+		</skills>
 		<stats>
 			<stat type="pAtk">259</stat>
 			<stat type="mAtk">107</stat>
@@ -708,15 +742,15 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5623" name="Dragon Grinder" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 54. -->
+	<item id="5623" name="Dragon Grinder" additionalName="Rsk. Evasion" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Evasion by 6 when HP drops to 60% or below. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dragon_grinder_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1659" />
+		<set name="crystal_count" val="1106" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="1350" />
@@ -739,15 +773,15 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5624" name="Dragon Grinder" additionalName="Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
+	<item id="5624" name="Dragon Grinder" additionalName="Guidance" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Accuracy by about 5. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dragon_grinder_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1659" />
+		<set name="crystal_count" val="1106" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="1350" />
@@ -757,6 +791,9 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="FIST_WEAPON" />
 		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3065" level="1" /> <!-- Special Ability: Guidance -->
+		</skills>
 		<stats>
 			<stat type="pAtk">282</stat>
 			<stat type="mAtk">114</stat>
@@ -767,15 +804,15 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5625" name="Dragon Grinder" additionalName="Critical Damage" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. +297 during a Critical Attack. -->
+	<item id="5625" name="Dragon Grinder" additionalName="Health" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dragon_grinder_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1659" />
+		<set name="crystal_count" val="1106" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="1350" />
@@ -798,15 +835,15 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5626" name="Halberd" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 54. -->
+	<item id="5626" name="Halberd" additionalName="Haste" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_halbard_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1128" />
+		<set name="crystal_count" val="751" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="1900" />
@@ -829,15 +866,15 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="5627" name="Halberd" additionalName="Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
+	<item id="5627" name="Halberd" additionalName="Critical Stun" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Has about a 25% chance of casting Stun on the target during a Critical Attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_halbard_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1128" />
+		<set name="crystal_count" val="751" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="1900" />
@@ -848,6 +885,7 @@
 		<set name="commissionItemType" val="SPEAR" />
 		<set name="isAppearanceable" val="true" />
 		<skills>
+			<skill id="3552" level="2" /> <!-- Special Ability: PvP Damage -->
 			<skill id="3070" level="1" type="ON_CRITICAL_SKILL" /> <!-- Special Ability: Critical Stun -->
 		</skills>
 		<stats>
@@ -860,15 +898,15 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="5628" name="Halberd" additionalName="Critical Stun" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. 24% chance of casting Stun upon the target during a Critical Attack. -->
+	<item id="5628" name="Halberd" additionalName="Wide Blow" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Broadens the angle of attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_halbard_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;66;180" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1128" />
+		<set name="crystal_count" val="751" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="1900" />
@@ -878,6 +916,9 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="SPEAR" />
 		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3552" level="2" /> <!-- Special Ability: PvP Damage -->
+		</skills>
 		<stats>
 			<stat type="pAtk">213</stat>
 			<stat type="mAtk">107</stat>
@@ -888,15 +929,105 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="5632" name="Tallum Glaive" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 54. -->
+	<item id="5629" name="Orcish Halberd" type="Weapon">
+		<set name="icon" val="icon.weapon_orcish_halbard_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1136" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="BLOOD_STEEL" />
+		<set name="weight" val="1880" />
+		<set name="price" val="21300000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="SPEAR" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+		</skills>
+		<stats>
+			<stat type="pAtk">219</stat>
+			<stat type="mAtk">109</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="5630" name="Orcish Halberd" type="Weapon">
+		<set name="icon" val="icon.weapon_orcish_halbard_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1136" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="BLOOD_STEEL" />
+		<set name="weight" val="1880" />
+		<set name="price" val="21300000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="SPEAR" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+		</skills>
+		<stats>
+			<stat type="pAtk">219</stat>
+			<stat type="mAtk">109</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="5631" name="Orcish Halberd" type="Weapon">
+		<set name="icon" val="icon.weapon_orcish_halbard_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="bodypart" val="lrhand" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="1136" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="BLOOD_STEEL" />
+		<set name="weight" val="1880" />
+		<set name="price" val="21300000" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="SPEAR" />
+		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+		</skills>
+		<stats>
+			<stat type="pAtk">219</stat>
+			<stat type="mAtk">109</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="5632" name="Tallum Glaive" additionalName="Guidance" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Accuracy by about 4. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_tallum_glaive_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1659" />
+		<set name="crystal_count" val="1106" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="CHRYSOLITE" />
 		<set name="weight" val="1840" />
@@ -919,15 +1050,15 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="5633" name="Tallum Glaive" additionalName="Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
+	<item id="5633" name="Tallum Glaive" additionalName="Health" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_tallum_glaive_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1659" />
+		<set name="crystal_count" val="1106" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="CHRYSOLITE" />
 		<set name="weight" val="1840" />
@@ -950,15 +1081,15 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="5634" name="Tallum Glaive" additionalName="Critical Stun" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. 24% chance of casting Stun upon the target during a Critical Attack. -->
+	<item id="5634" name="Tallum Glaive" additionalName="Wide Blow" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Broadens the angle of attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_tallum_glaive_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;66;180" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1659" />
+		<set name="crystal_count" val="1106" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="CHRYSOLITE" />
 		<set name="weight" val="1840" />
@@ -968,6 +1099,9 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="SPEAR" />
 		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3552" level="2" /> <!-- Special Ability: PvP Damage -->
+		</skills>
 		<stats>
 			<stat type="pAtk">232</stat>
 			<stat type="mAtk">114</stat>
@@ -978,15 +1112,15 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="5635" name="Tallum Blade" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 52. -->
+	<item id="5635" name="Tallum Blade" additionalName="Critical Poison" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Has a 10% chance of casting Poison on the target during a standard Critical Attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_tallum_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1128" />
+		<set name="crystal_count" val="751" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="1330" />
@@ -998,6 +1132,7 @@
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<set name="isAppearanceable" val="true" />
 		<skills>
+			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
 			<skill id="3061" level="1" type="ON_CRITICAL_SKILL" /> <!-- Special Ability: Critical Poison -->
 		</skills>
 		<stats>
@@ -1010,14 +1145,14 @@
 		</stats>
 	</item>
 	<item id="5636" name="Tallum Blade" additionalName="Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. -->
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_tallum_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1128" />
+		<set name="crystal_count" val="751" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="1330" />
@@ -1040,15 +1175,15 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5637" name="Tallum Blade" additionalName="Critical Damage" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. +247 during a Critical Attack. -->
+	<item id="5637" name="Tallum Blade" additionalName="Anger" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. P. Atk. + 31 and decreases Max HP by 15%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_tallum_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1128" />
+		<set name="crystal_count" val="751" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="1330" />
@@ -1059,6 +1194,9 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3057" level="1" /> <!-- Special Ability: Anger -->
+		</skills>
 		<stats>
 			<stat type="pAtk">213</stat>
 			<stat type="mAtk">107</stat>
@@ -1068,15 +1206,15 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5638" name="Elemental Sword" additionalName="Empower" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. M. Atk. +144. -->
+	<item id="5638" name="Elemental Sword" additionalName="M. Atk." type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases MP consumption by 15% and M. Atk. by 153 during magic use. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_elemental_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1128" />
+		<set name="crystal_count" val="751" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="MITHRIL" />
 		<set name="weight" val="830" />
@@ -1087,6 +1225,9 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
 		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3073" level="1" /> <!-- Special Ability: M. Atk. -->
+		</skills>
 		<stats>
 			<stat type="pAtk">170</stat>
 			<stat type="mAtk">143</stat>
@@ -1096,15 +1237,15 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5639" name="Elemental Sword" additionalName="Acumen" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
+	<item id="5639" name="Elemental Sword" additionalName="Magic Paralyze" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Has a 5% chance of casting Paralysis on the target during magic use. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_elemental_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1128" />
+		<set name="crystal_count" val="751" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="MITHRIL" />
 		<set name="weight" val="830" />
@@ -1117,6 +1258,7 @@
 		<set name="isAppearanceable" val="true" />
 		<skills>
 			<skill id="3075" level="1" type_chance="5" type="ON_MAGIC_SKILL" /> <!-- Special Ability: Magic Paralyze -->
+			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
 		</skills>
 		<stats>
 			<stat type="pAtk">170</stat>
@@ -1127,15 +1269,15 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5640" name="Elemental Sword" additionalName="Magic Regeneration" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 12%. -->
+	<item id="5640" name="Elemental Sword" additionalName="Empower" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. M. Atk. + 30. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_elemental_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1128" />
+		<set name="crystal_count" val="751" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="MITHRIL" />
 		<set name="weight" val="830" />
@@ -1146,6 +1288,9 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
 		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3072" level="1" /> <!-- Special Ability: Empower -->
+		</skills>
 		<stats>
 			<stat type="pAtk">170</stat>
 			<stat type="mAtk">143</stat>
@@ -1155,15 +1300,15 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5641" name="Sword of Miracles" additionalName="Empower" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. M. Atk. +151. -->
+	<item id="5641" name="Sword of Miracles" additionalName="M. Atk." type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases MP consumption by 15% and M. Atk. by 167 during magic use. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_sword_of_miracle_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1659" />
+		<set name="crystal_count" val="1106" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="840" />
@@ -1174,6 +1319,9 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
 		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3073" level="2" /> <!-- Special Ability: M. Atk. -->
+		</skills>
 		<stats>
 			<stat type="pAtk">186</stat>
 			<stat type="mAtk">152</stat>
@@ -1183,15 +1331,15 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5642" name="Sword of Miracles" additionalName="Acumen" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
+	<item id="5642" name="Sword of Miracles" additionalName="Magic Silence" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Has a 10% chance of casting Silence on the target during magic use. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_sword_of_miracle_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1659" />
+		<set name="crystal_count" val="1106" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="840" />
@@ -1204,6 +1352,7 @@
 		<set name="isAppearanceable" val="true" />
 		<skills>
 			<skill id="3074" level="2" type_chance="10" type="ON_MAGIC_SKILL" /> <!-- Special Ability: Magic Silence -->
+			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
 		</skills>
 		<stats>
 			<stat type="pAtk">186</stat>
@@ -1214,15 +1363,15 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5643" name="Sword of Miracles" additionalName="Magic Regeneration" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 12%. -->
+	<item id="5643" name="Sword of Miracles" additionalName="Acumen" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_sword_of_miracle_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1659" />
+		<set name="crystal_count" val="1106" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="ADAMANTAITE" />
 		<set name="weight" val="840" />
@@ -1245,15 +1394,15 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5644" name="Dragon Slayer" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 54. -->
+	<item id="5644" name="Dragon Slayer" additionalName="Health" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dragon_slayer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1659" />
+		<set name="crystal_count" val="1106" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="BONE" />
 		<set name="weight" val="1840" />
@@ -1276,15 +1425,15 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5645" name="Dragon Slayer" additionalName="Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
+	<item id="5645" name="Dragon Slayer" additionalName="Critical Bleed" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Has a 24% chance of casting Bleed on the target during a standard Critical Attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dragon_slayer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1659" />
+		<set name="crystal_count" val="1106" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="BONE" />
 		<set name="weight" val="1840" />
@@ -1296,6 +1445,7 @@
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<set name="isAppearanceable" val="true" />
 		<skills>
+			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
 			<skill id="3055" level="2" type="ON_CRITICAL_SKILL" /> <!-- Special Ability: Critical Bleed -->
 		</skills>
 		<stats>
@@ -1307,15 +1457,15 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5646" name="Dragon Slayer" additionalName="Critical Damage" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. +297 during a Critical Attack. -->
+	<item id="5646" name="Dragon Slayer" additionalName="Critical Drain" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Absorbs 11 HP from the target during a Critical Attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dragon_slayer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1659" />
+		<set name="crystal_count" val="1106" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="BONE" />
 		<set name="weight" val="1840" />
@@ -1327,6 +1477,7 @@
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<set name="isAppearanceable" val="true" />
 		<skills>
+			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
 			<skill id="3060" level="2" type="ON_CRITICAL_SKILL" /> <!-- Special Ability: Critical Drain -->
 		</skills>
 		<stats>
@@ -1338,15 +1489,15 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5647" name="Dark Legion's Edge" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 52. -->
+	<item id="5647" name="Dark Legion's Edge" additionalName="Critical Damage" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. P. Atk. + 326 during a Critical Attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dark_legions_edge_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1659" />
+		<set name="crystal_count" val="1106" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1320" />
@@ -1357,6 +1508,9 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<set name="isAppearanceable" val="true" />
+		<skills>
+			<skill id="3067" level="2" /> <!-- Special Ability: Critical Damage -->
+		</skills>
 		<stats>
 			<stat type="pAtk">232</stat>
 			<stat type="mAtk">114</stat>
@@ -1366,15 +1520,15 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5648" name="Dark Legion's Edge" additionalName="Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. -->
+	<item id="5648" name="Dark Legion's Edge" additionalName="Health" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dark_legions_edge_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1659" />
+		<set name="crystal_count" val="1106" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1320" />
@@ -1397,15 +1551,15 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5649" name="Dark Legion's Edge" additionalName="Critical Damage" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. +255 during a Critical Attack. -->
+	<item id="5649" name="Dark Legion's Edge" additionalName="Rsk. Focus" type="Weapon">
+		<!-- <Soul Crystal Enhancement>. Increases Critical by 130 when HP drops to 60% or below. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dark_legions_edge_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1659" />
+		<set name="crystal_count" val="1106" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1320" />
@@ -1427,5 +1581,755 @@
 			<stat type="randomDamage">10</stat>
 			<stat type="pAtkRange">40</stat>
 		</stats>
+	</item>
+	<item id="5650" name="Seed: Alternative Dark Coda" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Gludio area and it will bear the fruit of the Alternative Dark Coda. For best results, a level 5-15 character must plant it on a level 5-15 monster. Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_coda_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="5" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="1" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="5651" name="Seed: Alternative Red Coda" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Gludio area and it will bear the fruit of the Alternative Red Coda. For best results, a level 8-18 character must plant it on a level 8-18 monster. Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_coda_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="5" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="1" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="5652" name="Seed: Alternative Chilly Coda" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Gludio area and it will bear the fruit of the Alternative Chilly Coda. For best results, a level 11- 21 character must plant it on a level 11- 21 monster. Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_coda_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="5" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="1" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="5653" name="Seed: Alternative Blue Coda" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Gludio area and it will bear the fruit of the Alternative Blue Coda. For best results, a level 14- 24 character must plant it on a level 14- 24 monster. Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_coda_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="10" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="1" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="5654" name="Seed: Alternative Golden Coda" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Gludio area and it will bear the fruit of the Alternative Golden Coda. For best results, a level 17- 27 character must plant it on a level 17- 27 monster. Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_coda_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="20" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="1" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="5655" name="Seed: Alternative Lute Coda" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Gludio area and it will bear the fruit of the Alternative Lute Coda. For best results, a level 20- 30 character must plant it on a level 20- 30 monster. Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_coda_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="30" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="1" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="5656" name="Seed: Alternative Desert Coda" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Gludio area and it will bear the fruit of the Alternative Desert Coda. For best results, a level 23- 33 character must plant it on a level 23- 33 monster. Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_coda_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="20" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="1" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="5657" name="Seed: Alternative Blue Cobol" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Gludio area and it will bear the fruit of the Alternative Blue Coda. For best results, a level 32- 42 character must plant it on a level 32- 42 monster. Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_cobol_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="50" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="2" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="5658" name="Seed: Alternative Blue Coda" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Dion area and it will bear the fruit of the Alternative Blue Coda. For best results, a level 14- 24 character must plant it on a level 14- 24 monster. Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_coda_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="10" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="1" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="5659" name="Seed: Alternative Golden Coda" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Dion area and it will bear the fruit of the Alternative Golden Coda. For best results, a level 17- 27 character must plant it on a level 17- 27 monster. Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_coda_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="20" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="1" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="5660" name="Seed: Alternative Lute Coda" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Dion area and it will bear the fruit of the Alternative Lute Coda. For best results, a level 20- 30 character must plant it on a level 20- 30 monster. Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_coda_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="30" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="1" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="5661" name="Seed: Alternative Desert Coda" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Dion area and it will bear the fruit of the Alternative Desert Coda. For best results, a level 23- 33 character must plant it on a level 23- 33 monster. Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_coda_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="20" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="1" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="5662" name="Seed: Alternative Red Cobol" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Dion area and it will bear the fruit of the Alternative Red Cobol. For best results, a level 26- 36 character must plant it on a level 26- 36 monster. Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_cobol_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="20" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="2" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="5663" name="Seed: Alternative Chilly Cobol" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Dion area and it will bear the fruit of the Alternative Chilly Cobol. For best results, a level 29- 39 character must plant it on a level 29- 39 monster. Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_cobol_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="25" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="2" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="5664" name="Seed: Alternative Thorn Cobol" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Dion area and it will bear the fruit of the Alternative Thorn Cobol. For best results, a level 35- 45 character must plant it on a level 35- 45 monster. Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_cobol_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="50" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="2" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="5665" name="Seed: Alternative Golden Cobol" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Dion area and it will bear the fruit of the Alternative Golden Cobol. For best results, a level 38- 48 character must plant it on a level 38- 48 monster. Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_cobol_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="50" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="2" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="5666" name="Seed: Alternative Great Cobol" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Dion area and it will bear the fruit of the Alternative Great Cobol. For best results, a level 41- 51 character must plant it on a level 41- 51 monster. Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_cobol_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="50" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="2" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="5667" name="Seed: Alternative Red Cobol" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Giran area and it will bear the fruit of the Alternative Red Cobol. For best results, a level 26- 36 character must plant it on a level 26- 36 monster. Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_cobol_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="20" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="2" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="5668" name="Seed: Alternative Chilly Cobol" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Giran area and it will bear the fruit of the Alternative Chilly Cobol. For best results, a level 29- 39 character must plant it on a level 29- 39 monster. Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_cobol_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="25" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="2" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="5669" name="Seed: Alternative Blue Cobol" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Giran area and it will bear the fruit of the Alternative Blue Cobol. For best results, a level 32- 42 character must plant it on a level 32- 42 monster. Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_cobol_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="50" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="2" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="5670" name="Seed: Alternative Thorn Cobol" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Giran area and it will bear the fruit of the Alternative Thorn Cobol. For best results, a level 35- 45 character must plant it on a level 35- 45 monster. Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_cobol_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="50" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="2" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="5671" name="Seed: Alternative Golden Cobol" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Giran area and it will bear the fruit of the Alternative Golden Cobol. For best results, a level 38- 48 character must plant it on a level 38- 48 monster. Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_cobol_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="50" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="2" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="5672" name="Seed: Alternative Great Cobol" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Giran area and it will bear the fruit of the Alternative Great Cobol. For best results, a level 41- 51 character must plant it on a level 41- 51 monster. Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_cobol_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="50" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="2" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="5673" name="Seed: Alternative Red Codran" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Giran area and it will bear the fruit of the Alternative Red Codran. For best results, a level 44- 54 character must plant it on a level 44- 54 monster. Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_codran_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="40" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="3" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="5674" name="Seed: Alternative Twin Codran" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Giran area and it will bear the fruit of the Alternative Twin Codran. For best results, a level 53- 63 character must plant it on a level 53- 63 monster. Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_codran_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="50" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="3" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="5675" name="Seed: Alternative Desert Codran" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Giran area and it will bear the fruit of the Alternative Desert Codran. For best results, a level 59- 69 character must plant it on a level 59- 69 monster. Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_codran_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="100" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="3" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="5676" name="Seed: Alternative Dark Coda" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Alternative Dark Coda. For best results, a level 5-15 character must plant it on a level 5-15 monster. Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_coda_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="5" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="1" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="5677" name="Seed: Alternative Red Coda" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Alternative Red Coda. For best results, a level 8-18 character must plant it on a level 8-18 monster. Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_coda_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="5" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="1" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="5678" name="Seed: Alternative Blue Coda" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Alternative Blue Coda. For best results, a level 14- 24 character must plant it on a level 14- 24 monster. Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_coda_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="10" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="1" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="5679" name="Seed: Alternative Red Cobol" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Alternative Red Cobol. For best results, a level 26- 36 character must plant it on a level 26- 36 monster. Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_cobol_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="100" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="2" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="5680" name="Seed: Alternative Chilly Cobol" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Alternative Chilly Cobol. For best results, a level 29- 39 character must plant it on a level 29- 39 monster. Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_cobol_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="25" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="2" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="5681" name="Seed: Alternative Blue Cobol" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Alternative Blue Cobol. For best results, a level 32- 42 character must plant it on a level 32- 42 monster. Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_cobol_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="50" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="2" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="5682" name="Seed: Alternative Thorn Cobol" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Alternative Thorn Cobol. For best results, a level 35- 45 character must plant it on a level 35- 45 monster. Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_cobol_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="50" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="2" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="5683" name="Seed: Alternative Sea Codran" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Alternative Sea Codran. For best results, a level 45- 55 character must plant it on a level 45- 55 monster. Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_codran_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="50" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="3" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="5684" name="Seed: Alternative Chilly Codran" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Alternative Chilly Codran. For best results, a level 47- 57 character must plant it on a level 47- 57 monster. Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_codran_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="40" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="3" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="5685" name="Seed: Alternative Blue Codran" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Alternative Blue Codran. For best results, a level 50- 60 character must plant it on a level 50- 60 monster. Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_codran_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="50" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="3" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="5686" name="Seed: Alternative Twin Codran" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Oren area and it will bear the fruit of the Alternative Twin Codran. For best results, a level 53- 63 character must plant it on a level 53- 63 monster. Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_codran_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="50" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="3" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="5687" name="Seed: Alternative Thorn Cobol" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Alternative Thorn Cobol. For best results, a level 35- 45 character must plant it on a level 35- 45 monster. Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_cobol_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="50" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="2" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="5688" name="Seed: Alternative Golden Cobol" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Alternative Golden Cobol. For best results, a level 38- 48 character must plant it on a level 38- 48 monster. Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_cobol_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="50" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="2" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="5689" name="Seed: Alternative Great Cobol" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Alternative Great Cobol. For best results, a level 41- 51 character must plant it on a level 41- 51 monster. Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_cobol_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="50" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="2" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="5690" name="Seed: Alternative Red Codran" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Alternative Red Codran. For best results, a level 44- 54 character must plant it on a level 44- 54 monster. Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_codran_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="40" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="3" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="5691" name="Seed: Alternative Chilly Codran" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Alternative Chilly Codran. For best results, a level 47- 57 character must plant it on a level 47- 57 monster. Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_codran_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="40" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="3" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="5692" name="Seed: Alternative Blue Codran" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Alternative Blue Codran. For best results, a level 50- 60 character must plant it on a level 50- 60 monster. Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_codran_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="50" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="3" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="5693" name="Seed: Alternative Twin Codran" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Alternative Twin Codran. For best results, a level 53- 63 character must plant it on a level 53- 63 monster. Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_codran_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="50" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="3" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="5694" name="Seed: Alternative Great Codran" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Alternative Great Codran. For best results, a level 56- 66 character must plant it on a level 56- 66 monster. Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_codran_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="75" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="3" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="5695" name="Seed: Alternative Desert Codran" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Aden area and it will bear the fruit of the Alternative Desert Codran. For best results, a level 59- 69 character must plant it on a level 59- 69 monster. Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_codran_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="100" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="3" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="5696" name="Seed: Alternative Chilly Cobol" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Innadril area and it will bear the fruit of the Alternative Chilly Cobol. For best results, a level 29- 39 character must plant it on a level 29- 39 monster. Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_cobol_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="25" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="2" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="5697" name="Seed: Alternative Blue Cobol" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Innadril area and it will bear the fruit of the Alternative Blue Cobol. For best results, a level 32- 42 character must plant it on a level 32- 42 monster. Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_cobol_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="50" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="2" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="5698" name="Seed: Alternative Thorn Cobol" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Innadril area and it will bear the fruit of the Alternative Thorn Cobol. For best results, a level 35- 45 character must plant it on a level 35- 45 monster. Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_cobol_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="50" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="2" /> <!-- Sowing -->
+		</skills>
+	</item>
+	<item id="5699" name="Seed: Alternative Golden Cobol" type="EtcItem">
+		<!-- Plant this seed onto a monster in the Innadril area and it will bear the fruit of the Alternative Golden Cobol. For best results, a level 38- 48 character must plant it on a level 38- 48 monster. Cannot be transferred between servers. -->
+		<set name="icon" val="icon.etc_cobol_seed_i00" />
+		<set name="default_action" val="SEED" />
+		<set name="etcitem_type" val="SEED2" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="50" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="Seed" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<skills>
+			<skill id="2097" level="2" /> <!-- Sowing -->
+		</skills>
 	</item>
 </list>

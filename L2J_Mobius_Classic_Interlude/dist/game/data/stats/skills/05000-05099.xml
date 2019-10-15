@@ -82,6 +82,36 @@
 			</effect>
 		</effects>
 	</skill>
+	<skill id="5004" toLevel="1" name="Dimensional Stun">
+		<!-- Momentarily immobile due to the Stun effect. -->
+		<icon>icon.skill0100</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>2</abnormalTime>
+		<abnormalType>FLY_AWAY</abnormalType>
+		<affectRange>300</affectRange>
+		<effectPoint>-100</effectPoint>
+		<attributeType>DARK</attributeType>
+		<attributeValue>180</attributeValue>
+		<hitTime>5800</hitTime>
+		<isDebuff>true</isDebuff>
+		<magicLvl>85</magicLvl>
+		<operateType>A2</operateType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<trait>SHOCK</trait>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>5964</power>
+			</effect>
+			<effect name="FlyAway">
+				<radius>300</radius>
+			</effect>
+			<effect name="BlockActions" />
+		</effects>
+	</skill>
 	<skill id="5005" toLevel="1" name="Frintezza Pose">
 		<!-- Frintezza is in temporary state of paralysis. -->
 		<abnormalLvl>1</abnormalLvl>
@@ -295,9 +325,7 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="BlockActions" fromLevel="5" toLevel="5">
-				<allowedSkills>35016</allowedSkills>
-			</effect>
+			<effect name="BlockActions" fromLevel="5" toLevel="5" />
 		</effects>
 	</skill>
 	<skill id="5009" toLevel="1" name="Frintezza Ghost Fighter">
@@ -364,7 +392,7 @@
 		</effects>
 	</skill>
 	<skill id="5012" toLevel="1" name="Breath of Scarlet">
-		<!-- Afflicted with Hold and unable to move temporarily. -->
+		<!-- Unable to move momentarily. -->
 		<icon>icon.skill5012</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -445,8 +473,62 @@
 			</effect>
 		</effects>
 	</skill>
+	<skill id="5015" toLevel="6" name="Frintezza Charge">
+		<!-- Demon $s1 charge. -->
+		<affectRange>
+			<value level="1">400</value>
+			<value level="2">500</value>
+			<value level="3">700</value>
+			<value level="4">400</value>
+			<value level="5">500</value>
+			<value level="6">700</value>
+		</affectRange>
+		<castRange>150</castRange>
+		<coolTime>
+			<value level="1">0</value>
+			<value level="2">0</value>
+			<value level="3">0</value>
+			<value level="4">1500</value>
+			<value level="5">1500</value>
+			<value level="6">1500</value>
+		</coolTime>
+		<effectPoint>-100</effectPoint>
+		<effectRange>650</effectRange>
+		<attributeType>DARK</attributeType>
+		<attributeValue>180</attributeValue>
+		<fanRange>
+			<value level="1">0;0;400;150</value>
+			<value level="2">0;0;500;170</value>
+			<value level="3">0;0;700;200</value>
+			<value level="4">0;0;400;150</value>
+			<value level="5">0;0;500;170</value>
+			<value level="6">0;0;700;200</value>
+		</fanRange>
+		<hitTime>1500</hitTime>
+		<magicLvl>85</magicLvl>
+		<operateType>A1</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SQUARE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<cond msgId="113" addName="1">
+			<player insideZoneId="5015" />
+		</cond>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">48761</value>
+					<value level="2">52970</value>
+					<value level="3">68074</value>
+					<value level="4">48761</value>
+					<value level="5">52970</value>
+					<value level="6">68074</value>
+				</power>
+			</effect>
+		</effects>
+	</skill>
 	<skill id="5016" toLevel="1" name="Yoke of Scarlet">
-		<!-- Yoked status. -->
+		<!-- Unable to move momentarily. -->
 		<icon>icon.skill5016</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -473,7 +555,7 @@
 			<effect name="BlockActions" />
 		</effects>
 	</skill>
-	<skill id="5017" toLevel="1" name="Demons">
+	<skill id="5017" toLevel="1" name="Demon">
 		<!-- Demon Transformation -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7200</abnormalTime>
@@ -571,7 +653,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5021" toLevel="12" name="Inspiration of Einhasad">
-		<!-- Makes Holy attacks. -->
+		<!-- State of dealing Holy attack. -->
 		<icon>icon.skill1043</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -659,7 +741,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5023" toLevel="12" name="Hold">
-		<!-- Inflicted with Hold and unable to move. -->
+		<!-- Inflicted with hold and unable to move momentarily. -->
 		<icon>icon.skill4047</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -770,7 +852,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="5029" toLevel="1" name="Raid Boss (Lv. 52)">
-		<!-- Powerful gigantic golem created by Dr. Kaos using the Pael ruins star stone. Dr. Chaos was once the Golem Maestro for all guilds, but he tried to steal the Leader's Blueprints. Was assigned to obtaining revenge for the Black Anvil Guild, and he led the golem army that he made to Pavel's Ruins. When an outsider is found, in order to punish himself, consider it troops from the Black Anvil Guild, and just attack. His ultimate goal is world domination. -->
+		<!-- This powerful Chaos Golem was made from Star Stones gathered from the Ruins of Pavel by the mad scientist Dr. Chaos, who styles himself the Emperor of Evil. Once a Golem Maestro, Dr. Chaos was expelled from the Black Anvil Guild for trying to steal the blueprint from the elders. He swore revenge on the Black Anvil Guild, conquering the Ruins of Pavel with the Horrifying Golem Army he created. He views all outsiders as assassins sent by the Guild and will attack immediately. His ultimate goal is ??world domination.?? -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -791,7 +873,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="5032" toLevel="1" name="Raid Boss (Lv. 80)">
-		<!-- Though it appears human, it is actually an archangel who speaks directly with Einhasad. The ancient religious text discovered at the Tower of Insolence gave evidence that the grail was hidden somewhere in the Monastery of Silence. Afterward, extensive searches for the grail took place in the Temple of Bishop, but no one could escape the judgment of the Master of Splendor. -->
+		<!-- Although he appears human, he is actually a high-ranking Angel who directly interacts with Einhasad and worships the Grail. Recently an ancient religious document found in the Tower of Insolence provided proof that the Grail is hidden in the Monastery of Silence. Since then, adherents of the Pagan Temple have frequently tried to steal it, but none has avoided the judgment of the Lord of Splendor. -->
 		<icon>icon.skillraid</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -848,6 +930,76 @@
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
+	</skill>
+	<skill id="5038" toLevel="16" name="Servitor PvP Penalty">
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effects>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>
+					<value level="1">-2</value>
+					<value level="2">-4</value>
+					<value level="3">-6</value>
+					<value level="4">-8</value>
+					<value level="5">-10</value>
+					<value level="6">-12</value>
+					<value level="7">-14</value>
+					<value level="8">-16</value>
+					<value level="9">-18</value>
+					<value level="10">-20</value>
+					<value level="11">-22</value>
+					<value level="12">-24</value>
+					<value level="13">-26</value>
+					<value level="14">-28</value>
+					<value level="15">-30</value>
+					<value level="16">-50</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>
+					<value level="1">-2</value>
+					<value level="2">-4</value>
+					<value level="3">-6</value>
+					<value level="4">-8</value>
+					<value level="5">-10</value>
+					<value level="6">-12</value>
+					<value level="7">-14</value>
+					<value level="8">-16</value>
+					<value level="9">-18</value>
+					<value level="10">-20</value>
+					<value level="11">-22</value>
+					<value level="12">-24</value>
+					<value level="13">-26</value>
+					<value level="14">-28</value>
+					<value level="15">-30</value>
+					<value level="16">-50</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>
+					<value level="1">-2</value>
+					<value level="2">-4</value>
+					<value level="3">-6</value>
+					<value level="4">-8</value>
+					<value level="5">-10</value>
+					<value level="6">-12</value>
+					<value level="7">-14</value>
+					<value level="8">-16</value>
+					<value level="9">-18</value>
+					<value level="10">-20</value>
+					<value level="11">-22</value>
+					<value level="12">-24</value>
+					<value level="13">-26</value>
+					<value level="14">-28</value>
+					<value level="15">-30</value>
+					<value level="16">-50</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="5039" toLevel="1" name="Ultra Bomb">
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -2403,7 +2555,7 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="5071" toLevel="12" name="P. Atk. Decrease">
+	<skill id="5071" toLevel="12" name="Decrease P. Atk.">
 		<!-- P. Atk. decreases momentarily. Effect $s1. -->
 		<icon>icon.skill4037</icon>
 		<abnormalLvl>3</abnormalLvl>
@@ -2921,7 +3073,7 @@
 		</effects>
 	</skill>
 	<skill id="5083" toLevel="4" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill5083</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -2962,7 +3114,9 @@
 					<value level="4">8602</value>
 				</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 			<effect name="TargetCancel">
 				<chance>10</chance>
 			</effect>
@@ -3127,7 +3281,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5092" toLevel="1" name="Antharas Fear">
-		<!-- Afflicted with Fear and moving against own will momentarily. -->
+		<!-- Inflicted with Fear and moving against own will momentarily. -->
 		<icon>icon.skill4108</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -3156,25 +3310,22 @@
 		</effects>
 	</skill>
 	<skill id="5093" toLevel="1" name="Antharas Meteor">
-		<affectRange>150</affectRange>
 		<castRange>600</castRange>
 		<effectPoint>-1</effectPoint>
-		<effectRange>1100</effectRange>
+		<effectRange>2500</effectRange>
 		<attributeType>EARTH</attributeType>
-		<attributeValue>180</attributeValue>
+		<attributeValue>450</attributeValue>
 		<hitTime>8000</hitTime>
-		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>99</magicLvl>
-		<operateType>A1</operateType>
+		<magicLvl>110</magicLvl>
+		<operateType>A2</operateType>
 		<reuseDelay>6000</reuseDelay>
-		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
-		<magicCriticalRate>-5</magicCriticalRate>
+		<affectRange>300</affectRange>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
-			<effect name="MagicalAttack">
-				<power>1084</power>
+			<effect name="PhysicalAttack">
+				<power>34255</power>
 			</effect>
 		</effects>
 	</skill>

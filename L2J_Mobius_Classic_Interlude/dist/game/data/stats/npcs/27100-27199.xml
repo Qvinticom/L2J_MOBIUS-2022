@@ -161,7 +161,6 @@
 				<item id="952" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (C-grade) -->
 				<item id="4593" min="1" max="1" chance="0.075" /> <!-- Greater Dye of DEX <Dex + 2 Str - 2> - 2nd Class Transfer -->
 				<item id="4594" min="1" max="1" chance="0.075" /> <!-- Greater Dye of DEX <Dex + 2 CON - 2> - 2nd Class Transfer -->
-				<item id="49562" min="1" max="1" chance="0.075" /> <!-- Spellbook: Spirit Sharing -->
 			</drop>
 			<spoil>
 				<item id="4044" min="1" max="1" chance="45.59" /> <!-- Thons -->
@@ -3288,6 +3287,7 @@
 		</parameters>
 		<race>DIVINE</race>
 		<sex>MALE</sex>
+		<equipment rhand="6370" /> <!-- Saint Spear -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1933" hpRegen="6.5" mp="1036" mpRegen="2.4" />
 			<attack physical="437.5868273" magical="328.69659" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />

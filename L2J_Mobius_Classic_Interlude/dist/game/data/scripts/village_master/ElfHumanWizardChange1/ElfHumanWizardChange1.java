@@ -36,6 +36,8 @@ public class ElfHumanWizardChange1 extends AbstractNpcAI
 		30037, // Levian
 		30070, // Sylvain
 		30289, // Raymond
+		32095, // Marie
+		32098, // Celes
 	};
 	
 	// Items

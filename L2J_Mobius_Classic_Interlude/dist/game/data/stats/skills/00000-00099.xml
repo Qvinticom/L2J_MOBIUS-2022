@@ -1,13 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="1" toLevel="40" name="Triple Slash">
-		<!-- Quickly strikes the target three times with $s1 Power. For $s2 decreases enemy's P. Def. by $s3. Requires dual swords. Over-hit. Ignores shield block. -->
+	<skill id="1" toLevel="37" name="Triple Slash">
+		<!-- Attacks the enemy with $s1 Power added to P. Atk. Requires a dualsword. Over-hit and Critical are possible. Ignores Shield Defense. -->
 		<icon>icon.skill0001</icon>
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>10</abnormalTime>
-		<abnormalType>PD_DOWN</abnormalType>
-		<activateRate>70</activateRate>
-		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>40</castRange>
 		<coolTime>500</coolTime>
 		<effectPoint>
@@ -48,13 +43,9 @@
 			<value level="35">-383</value>
 			<value level="36">-386</value>
 			<value level="37">-388</value>
-			<value level="38">-391</value>
-			<value level="39">-394</value>
-			<value level="40">-397</value>
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1733</hitTime>
-		<isDebuff>true</isDebuff>
 		<magicLvl>
 			<value level="1">38</value>
 			<value level="2">39</value>
@@ -93,9 +84,6 @@
 			<value level="35">72</value>
 			<value level="36">73</value>
 			<value level="37">74</value>
-			<value level="38">76</value>
-			<value level="39">77</value>
-			<value level="40">78</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">42</value>
@@ -135,12 +123,9 @@
 			<value level="35">85</value>
 			<value level="36">86</value>
 			<value level="37">86</value>
-			<value level="38">95</value>
-			<value level="39">96</value>
-			<value level="40">97</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
@@ -193,17 +178,10 @@
 					<value level="35">2417</value>
 					<value level="36">2488</value>
 					<value level="37">2557</value>
-					<value level="38">2581</value>
-					<value level="39">2604</value>
-					<value level="40">2627</value>
 				</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 				<criticalChance>15</criticalChance>
 				<overHit>true</overHit>
-			</effect>
-			<effect name="PhysicalDefence">
-				<amount>-23</amount>
-				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -290,7 +268,7 @@
 		</effects>
 	</skill>
 	<skill id="3" toLevel="9" name="Power Strike">
-		<!-- Delivers a powerful blow that strikes the target with $s1 Power added to P. Atk. Requires a sword or blunt weapon. Over-hit. -->
+		<!-- Delivers a powerful blow that strikes the target with $s1 Power added to P. Atk. Requires a sword or blunt weapon. Over-hit is possible. -->
 		<icon>icon.skill0003</icon>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
@@ -361,7 +339,7 @@
 		</effects>
 	</skill>
 	<skill id="4" toLevel="2" name="Dash">
-		<!-- For $s1 Speed +$s2. -->
+		<!-- Increases Speed by $s2 for $s1. -->
 		<icon>icon.skill0004</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -398,11 +376,11 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5" toLevel="34" name="Double Sonic Slash">
-		<!-- Discharges a powerful energy beam at the enemy with $s1 Power added to P. Atk. Requires dualsword. Increases Power upon consumption of Momentum, and consumes up to $s2. Over-hit. Critical. -->
+	<skill id="5" toLevel="31" name="Double Sonic Slash">
+		<!-- Recharges the sword's energy and attacks the enemy with $s1 added to P. Atk. Increases Power upon consumption of up to $s2 Momentum levels. Over-hit and Critical are possible. -->
 		<icon>icon.skill0005</icon>
 		<castRange>40</castRange>
-		<coolTime>500</coolTime>
+		<coolTime>167</coolTime>
 		<effectPoint>
 			<value level="1">-372</value>
 			<value level="2">-381</value>
@@ -435,9 +413,6 @@
 			<value level="29">-574</value>
 			<value level="30">-578</value>
 			<value level="31">-582</value>
-			<value level="32">-585</value>
-			<value level="33">-588</value>
-			<value level="34">-591</value>
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1733</hitTime>
@@ -473,9 +448,6 @@
 			<value level="29">72</value>
 			<value level="30">73</value>
 			<value level="31">74</value>
-			<value level="32">76</value>
-			<value level="33">77</value>
-			<value level="34">78</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">59</value>
@@ -509,9 +481,6 @@
 			<value level="29">102</value>
 			<value level="30">104</value>
 			<value level="31">105</value>
-			<value level="32">115</value>
-			<value level="33">116</value>
-			<value level="34">117</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
@@ -563,24 +532,15 @@
 					<value level="29">3022</value>
 					<value level="30">3109</value>
 					<value level="31">3196</value>
-					<value level="32">3225</value>
-					<value level="33">3254</value>
-					<value level="34">3283</value>
 				</power>
 				<overHit>true</overHit>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="6" toLevel="40" name="Sonic Blaster">
-		<!-- Hurls a deadly blast of force from the sword with $s1 Power added to P. Atk, stunning the target for $s2. Requires a dualsword, sword or blunt to be equipped. Increases Power upon consuming Momentum, and consumes up to $s3. Over-hit. Critical. -->
+	<skill id="6" toLevel="37" name="Sonic Blaster">
+		<!-- Hurls a deadly blast of force from the sword with $s1 Power added to P. Atk. Requires a dualsword, sword or blunt to be equipped. Increases Power upon consumption of up to $s2 Momentum levels. Over-hit and Critical are possible. -->
 		<icon>icon.skill0006</icon>
 		<castRange>600</castRange>
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>5</abnormalTime>
-		<abnormalType>STUN</abnormalType>
-		<abnormalVisualEffect>STUN</abnormalVisualEffect>
-		<activateRate>35</activateRate>
-		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>
 			<value level="1">-183</value>
 			<value level="2">-188</value>
@@ -619,9 +579,6 @@
 			<value level="35">-328</value>
 			<value level="36">-331</value>
 			<value level="37">-333</value>
-			<value level="38">-336</value>
-			<value level="39">-339</value>
-			<value level="40">-342</value>
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>1900</hitTime>
@@ -663,9 +620,6 @@
 			<value level="35">72</value>
 			<value level="36">73</value>
 			<value level="37">74</value>
-			<value level="38">76</value>
-			<value level="39">77</value>
-			<value level="40">78</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">25</value>
@@ -705,16 +659,10 @@
 			<value level="35">51</value>
 			<value level="36">52</value>
 			<value level="37">53</value>
-			<value level="38">122</value>
-			<value level="39">123</value>
-			<value level="40">124</value>
 		</mpConsume>
-		<operateType>A2</operateType>
-		<isDebuff>true</isDebuff>
-		<coolTime>500</coolTime>
+		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
-		<trait>SHOCK</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -769,17 +717,13 @@
 					<value level="35">1727</value>
 					<value level="36">1777</value>
 					<value level="37">1827</value>
-					<value level="38">1843</value>
-					<value level="39">1860</value>
-					<value level="40">1876</value>
 				</power>
 				<overHit>true</overHit>
 			</effect>
-			<effect name="BlockActions" />
 		</effects>
 	</skill>
-	<skill id="7" toLevel="31" name="Sonic Storm">
-		<!-- Attacks the target and nearby enemies with $s1 Power added to P. Atk. Requires a sword, blunt weapon, spear, fist weapon, or dualsword. Increases Power upon consuming Momentum, and consumes up to $s2. Over-hit. Critical. -->
+	<skill id="7" toLevel="44" name="Sonic Storm">
+		<!-- Attacks near the enemy with $s1 Power added to P. Atk. Requires a sword, blunt weapon, spear, fist weapon, dual blunt weapon, or dualsword. Over-hit. Critical hit. -->
 		<icon>icon.skill0007</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
@@ -814,9 +758,22 @@
 			<value level="26">-164</value>
 			<value level="27">-166</value>
 			<value level="28">-167</value>
-			<value level="29">-712</value>
-			<value level="30">-715</value>
-			<value level="31">-718</value>
+			<value level="29">-709</value>
+			<value level="30">-709</value>
+			<value level="31">-709</value>
+			<value level="32">-709</value>
+			<value level="33">-709</value>
+			<value level="34">-709</value>
+			<value level="35">-709</value>
+			<value level="36">-709</value>
+			<value level="37">-709</value>
+			<value level="38">-709</value>
+			<value level="39">-709</value>
+			<value level="40">-709</value>
+			<value level="41">-709</value>
+			<value level="42">-709</value>
+			<value level="43">-709</value>
+			<value level="44">-709</value>
 		</effectPoint>
 		<effectRange>1000</effectRange>
 		<hitTime>1790</hitTime>
@@ -852,6 +809,19 @@
 			<value level="29">75</value>
 			<value level="30">77</value>
 			<value level="31">79</value>
+			<value level="32">81</value>
+			<value level="33">83</value>
+			<value level="34">85</value>
+			<value level="35">86</value>
+			<value level="36">88</value>
+			<value level="37">90</value>
+			<value level="38">92</value>
+			<value level="39">94</value>
+			<value level="40">96</value>
+			<value level="41">98</value>
+			<value level="42">101</value>
+			<value level="43">103</value>
+			<value level="44">105</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">55</value>
@@ -885,6 +855,19 @@
 			<value level="29">161</value>
 			<value level="30">163</value>
 			<value level="31">169</value>
+			<value level="32">175</value>
+			<value level="33">180</value>
+			<value level="34">161</value>
+			<value level="35">163</value>
+			<value level="36">169</value>
+			<value level="37">175</value>
+			<value level="38">180</value>
+			<value level="39">186</value>
+			<value level="40">192</value>
+			<value level="41">198</value>
+			<value level="42">204</value>
+			<value level="43">210</value>
+			<value level="44">216</value>
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>10000</reuseDelay>
@@ -936,13 +919,29 @@
 					<value level="29">427</value>
 					<value level="30">451</value>
 					<value level="31">473</value>
+					<value level="32">496</value>
+					<value level="33">520</value>
+					<value level="34">15024</value>
+					<value level="35">15542</value>
+					<value level="36">16580</value>
+					<value level="37">17618</value>
+					<value level="38">18656</value>
+					<value level="39">19695</value>
+					<value level="40">20732</value>
+					<value level="41">21771</value>
+					<value level="42">23352</value>
+					<value level="43">24490</value>
+					<value level="44">25628</value>
+					<value fromLevel="40" toLevel="44" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>
-					<value fromLevel="1" toLevel="31">15</value>
+					<value fromLevel="1" toLevel="44">15</value>
+					<value fromLevel="40" toLevel="44" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 				</criticalChance>
 				<pDefMod>
-					<value fromLevel="1" toLevel="31">1</value>
+					<value fromLevel="1" toLevel="44">1</value>
+					<value fromLevel="40" toLevel="44" fromSubLevel="3001" toSubLevel="3020">{0.99 - 0.006 * (subIndex - 1)}</value>
 				</pDefMod>
 			</effect>
 		</effects>
@@ -1005,8 +1004,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9" toLevel="37" name="Sonic Buster">
-		<!-- Hurls a powerful burst of energy at enemies in front with $s1 Power added to P. Atk. Requires a dualsword, sword or blunt weapon. Increases Power upon consuming Momentum, and consumes up to $s2. Consumes $s3 Momentum Stones. Over-hit. Critical. -->
+	<skill id="9" toLevel="34" name="Sonic Buster">
+		<!-- Hurls a powerful burst of energy at enemies in front with $s1 Power added to P. Atk. Requires a dualsword, sword or blunt weapon. Increases Power upon consumption of up to $s2 Momentum levels. Consumes $s3 Momentum Stones. Over-hit and Critical are possible. -->
 		<icon>icon.skill0009</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -1047,9 +1046,6 @@
 			<value level="32">-164</value>
 			<value level="33">-166</value>
 			<value level="34">-167</value>
-			<value level="35">-170</value>
-			<value level="36">-173</value>
-			<value level="37">-176</value>
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<fanRange>0;0;200;180</fanRange>
@@ -1091,9 +1087,6 @@
 			<value level="32">72</value>
 			<value level="33">73</value>
 			<value level="34">74</value>
-			<value level="35">76</value>
-			<value level="36">77</value>
-			<value level="37">78</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">46</value>
@@ -1130,9 +1123,6 @@
 			<value level="32">88</value>
 			<value level="33">89</value>
 			<value level="34">90</value>
-			<value level="35">99</value>
-			<value level="36">100</value>
-			<value level="37">101</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
@@ -1188,9 +1178,6 @@
 					<value level="32">432</value>
 					<value level="33">445</value>
 					<value level="34">457</value>
-					<value level="35">461</value>
-					<value level="36">465</value>
-					<value level="37">469</value>
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>15</criticalChance>
@@ -1198,7 +1185,7 @@
 		</effects>
 	</skill>
 	<skill id="10" toLevel="8" name="Summon Storm Cubic">
-		<!-- Summons a storm cubic that inflicts damage on the enemy with magic. Consumes $s1 Spirit Ore when summoning. -->
+		<!-- Summons a storm cubic that inflicts damage on the enemy with magic. Consumes $s1 Spirit Ore(s) when summoning. -->
 		<icon>icon.skill0010</icon>
 		<hitTime>6000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -1268,7 +1255,7 @@
 		</effects>
 	</skill>
 	<skill id="11" toLevel="12" name="Trick">
-		<!-- Reduces the enemy's aggressive tendencies, causing them to cancel their target. Requires a dagger. -->
+		<!-- Reduces the enemy's aggressive tendencies, causing them to cancel their target. -->
 		<icon>icon.skill0011</icon>
 		<castRange>400</castRange>
 		<effectPoint>
@@ -1321,13 +1308,6 @@
 		<trait>DERANGEMENT</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="EquipWeapon">
-				<weaponType>
-					<item>DAGGER</item>
-				</weaponType>
-			</condition>
-		</conditions>
 		<effects>
 			<effect name="DeleteHateOfMe">
 				<chance>80</chance>
@@ -1338,7 +1318,7 @@
 		</effects>
 	</skill>
 	<skill id="12" toLevel="14" name="Switch">
-		<!-- Confuses the enemy, causing them to cancel their target. Requires a dagger. -->
+		<!-- Confuses the enemy, causing them to cancel their target. -->
 		<icon>icon.skill0012</icon>
 		<castRange>600</castRange>
 		<effectPoint>
@@ -1397,13 +1377,6 @@
 		<trait>DERANGEMENT</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="EquipWeapon">
-				<weaponType>
-					<item>DAGGER</item>
-				</weaponType>
-			</condition>
-		</conditions>
 		<effects>
 			<effect name="RandomizeHate">
 				<chance>80</chance>
@@ -1434,12 +1407,13 @@
 		<effects>
 			<effect name="Summon">
 				<npcId>14737</npcId> <!-- Siege Golem -->
+				<lifeTime>1200</lifeTime>
 				<consumeItemId>2131</consumeItemId> <!-- Gemstone (C-grade) -->
 				<consumeItemCount>40</consumeItemCount>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15" toLevel="54" name="Charm">
+	<skill id="15" toLevel="52" name="Charm">
 		<!-- Decreases the enemy's aggression toward the user by $s1. -->
 		<icon>icon.skill0015</icon>
 		<castRange>600</castRange>
@@ -1500,8 +1474,6 @@
 			<value level="50">72</value>
 			<value level="51">73</value>
 			<value level="52">74</value>
-			<value level="53">76</value>
-			<value level="54">78</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">8</value>
@@ -1556,8 +1528,6 @@
 			<value level="50">27</value>
 			<value level="51">27</value>
 			<value level="52">28</value>
-			<value level="53">39</value>
-			<value level="54">42</value>
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">2</value>
@@ -1612,8 +1582,6 @@
 			<value level="50">7</value>
 			<value level="51">7</value>
 			<value level="52">7</value>
-			<value level="53">7</value>
-			<value level="54">7</value>
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>15000</reuseDelay>
@@ -1676,17 +1644,14 @@
 					<value level="50">-452</value>
 					<value level="51">-455</value>
 					<value level="52">-458</value>
-					<value level="53">-461</value>
-					<value level="54">-464</value>
 				</power>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="16" toLevel="24" name="Mortal Blow">
-		<!-- Attacks the target's vital points. Over-hit. Requires a dagger. Power $s1 added to P. Atk. -->
+		<!-- Attacks the target's vital points with $s1 Power added to P. Atk. Requires a dagger. Over-hit is possible. Cannot be used with Dual Daggers. -->
 		<icon>icon.skill0016</icon>
 		<castRange>40</castRange>
-		<affectRange>40</affectRange>
 		<coolTime>720</coolTime>
 		<effectPoint>
 			<value level="1">-52</value>
@@ -1814,13 +1779,13 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17" toLevel="37" name="Force Burst">
-		<!-- Hurls a powerful burst of energy at enemies in front with $s1 Power added to P. Atk. Requires a fist weapon. Increases Power upon consuming Momentum, and consumes up to $s3. Consumes $s2 Momentum Stones. Over-hit. Critical. -->
+	<skill id="17" toLevel="34" name="Force Burst">
+		<!-- Hurls a powerful burst of energy at enemies in front with $s1 Power added to P. Atk. Requires a fist weapon. Increases Power upon consuming Momentum, and consumes up to $s3. Consumes $s2 Momentum Stones. Over-hit and Critical are possible. -->
 		<icon>icon.skill0017</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
 		<castRange>40</castRange>
-		<coolTime>500</coolTime>
+		<coolTime>217</coolTime>
 		<effectPoint>
 			<value level="1">-116</value>
 			<value level="2">-119</value>
@@ -1856,9 +1821,6 @@
 			<value level="32">-192</value>
 			<value level="33">-193</value>
 			<value level="34">-194</value>
-			<value level="35">-197</value>
-			<value level="36">-200</value>
-			<value level="37">-203</value>
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<fanRange>0;0;200;180</fanRange>
@@ -1900,9 +1862,6 @@
 			<value level="32">72</value>
 			<value level="33">73</value>
 			<value level="34">74</value>
-			<value level="35">76</value>
-			<value level="36">77</value>
-			<value level="37">78</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">54</value>
@@ -1939,9 +1898,6 @@
 			<value level="32">102</value>
 			<value level="33">104</value>
 			<value level="34">105</value>
-			<value level="35">116</value>
-			<value level="36">117</value>
-			<value level="37">118</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
@@ -1994,16 +1950,13 @@
 					<value level="32">504</value>
 					<value level="33">519</value>
 					<value level="34">533</value>
-					<value level="35">539</value>
-					<value level="36">543</value>
-					<value level="37">548</value>
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>15</criticalChance>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18" toLevel="40" name="Aggression Aura">
+	<skill id="18" toLevel="37" name="Aggression Aura">
 		<!-- Provokes nearby enemies to attack with $s1 Power. -->
 		<icon>icon.skill0018</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -2012,46 +1965,43 @@
 		<affectLimit>10-10</affectLimit>
 		<affectRange>200</affectRange>
 		<effectPoint>
-			<value level="1">-1076</value>
-			<value level="2">-1105</value>
-			<value level="3">-1134</value>
-			<value level="4">-1164</value>
-			<value level="5">-1193</value>
-			<value level="6">-1222</value>
-			<value level="7">-1252</value>
-			<value level="8">-1281</value>
-			<value level="9">-1310</value>
-			<value level="10">-1340</value>
-			<value level="11">-1369</value>
-			<value level="12">-1398</value>
-			<value level="13">-1426</value>
-			<value level="14">-1455</value>
-			<value level="15">-1483</value>
-			<value level="16">-1511</value>
-			<value level="17">-1539</value>
-			<value level="18">-1566</value>
-			<value level="19">-1593</value>
-			<value level="20">-1619</value>
-			<value level="21">-1645</value>
-			<value level="22">-1670</value>
-			<value level="23">-1695</value>
-			<value level="24">-1719</value>
-			<value level="25">-1743</value>
-			<value level="26">-1766</value>
-			<value level="27">-1788</value>
-			<value level="28">-1809</value>
-			<value level="29">-1829</value>
-			<value level="30">-1849</value>
-			<value level="31">-1868</value>
-			<value level="32">-1886</value>
-			<value level="33">-1903</value>
-			<value level="34">-1919</value>
-			<value level="35">-1934</value>
-			<value level="36">-1948</value>
-			<value level="37">-1961</value>
-			<value level="38">-1974</value>
-			<value level="39">-1987</value>
-			<value level="40">-2000</value>
+			<value level="1">-4312</value>
+			<value level="2">-4427</value>
+			<value level="3">-4544</value>
+			<value level="4">-4661</value>
+			<value level="5">-4778</value>
+			<value level="6">-4895</value>
+			<value level="7">-5013</value>
+			<value level="8">-5131</value>
+			<value level="9">-5248</value>
+			<value level="10">-5365</value>
+			<value level="11">-5481</value>
+			<value level="12">-5597</value>
+			<value level="13">-5713</value>
+			<value level="14">-5827</value>
+			<value level="15">-5939</value>
+			<value level="16">-6051</value>
+			<value level="17">-6161</value>
+			<value level="18">-6271</value>
+			<value level="19">-6379</value>
+			<value level="20">-6483</value>
+			<value level="21">-6587</value>
+			<value level="22">-6688</value>
+			<value level="23">-6788</value>
+			<value level="24">-6884</value>
+			<value level="25">-6977</value>
+			<value level="26">-7069</value>
+			<value level="27">-7157</value>
+			<value level="28">-7243</value>
+			<value level="29">-7324</value>
+			<value level="30">-7403</value>
+			<value level="31">-7478</value>
+			<value level="32">-7550</value>
+			<value level="33">-7618</value>
+			<value level="34">-7682</value>
+			<value level="35">-7742</value>
+			<value level="36">-7798</value>
+			<value level="37">-7850</value>
 		</effectPoint>
 		<hitTime>1000</hitTime>
 		<isDebuff>true</isDebuff>
@@ -2093,9 +2043,6 @@
 			<value level="35">72</value>
 			<value level="36">73</value>
 			<value level="37">74</value>
-			<value level="38">76</value>
-			<value level="39">77</value>
-			<value level="40">78</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">50</value>
@@ -2135,9 +2082,6 @@
 			<value level="35">100</value>
 			<value level="36">101</value>
 			<value level="37">102</value>
-			<value level="38">112</value>
-			<value level="39">113</value>
-			<value level="40">114</value>
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>40000</reuseDelay>
@@ -2152,8 +2096,8 @@
 			<effect name="GetAgro" />
 		</effects>
 	</skill>
-	<skill id="19" toLevel="40" name="Double Shot">
-		<!-- Shoots $s1 arrows in succession to attack the enemy with $s2 Power added to P. Atk. Requires a bow. Over-hit. Critical. -->
+	<skill id="19" toLevel="37" name="Double Shot">
+		<!-- Shoots $s1 arrows in succession to attack the enemy with $s2 Power added to P. Atk. Requires a bow. Over-hit and Critical are possible. -->
 		<icon>icon.skill0019</icon>
 		<castRange>900</castRange>
 		<coolTime>1000</coolTime>
@@ -2195,9 +2139,6 @@
 			<value level="35">-656</value>
 			<value level="36">-661</value>
 			<value level="37">-665</value>
-			<value level="38">-668</value>
-			<value level="39">-671</value>
-			<value level="40">-674</value>
 		</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>3000</hitTime>
@@ -2239,9 +2180,6 @@
 			<value level="35">72</value>
 			<value level="36">73</value>
 			<value level="37">74</value>
-			<value level="38">76</value>
-			<value level="39">77</value>
-			<value level="40">78</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">72</value>
@@ -2281,9 +2219,6 @@
 			<value level="35">146</value>
 			<value level="36">148</value>
 			<value level="37">150</value>
-			<value level="38">165</value>
-			<value level="39">167</value>
-			<value level="40">169</value>
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
@@ -2337,9 +2272,6 @@
 					<value level="35">4604</value>
 					<value level="36">4738</value>
 					<value level="37">4870</value>
-					<value level="38">4915</value>
-					<value level="39">4959</value>
-					<value level="40">5003</value>
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>15</criticalChance>
@@ -2347,7 +2279,7 @@
 		</effects>
 	</skill>
 	<skill id="21" toLevel="3" name="Poison Recovery">
-		<!-- Cures the target of minor poisoning. -->
+		<!-- Cures the user of minor poisoning. -->
 		<icon>icon.skill0021</icon>
 		<effectPoint>
 			<value level="1">204</value>
@@ -2387,7 +2319,7 @@
 		</effects>
 	</skill>
 	<skill id="22" toLevel="7" name="Summon Vampiric Cubic">
-		<!-- Summons a Vampiric Cubic. A Vampiric Cubic uses magic that absorbs the target's HP and with it regenerates its master's HP. Consumes $s1 Spirit Ore. -->
+		<!-- Summons a Vampiric Cubic. A Vampiric Cubic uses magic that absorbs the target's HP and with it regenerates its master's HP. Consumes $s1 Spirit Ore(s). -->
 		<icon>icon.skill0022</icon>
 		<hitTime>6000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -2451,8 +2383,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="24" toLevel="34" name="Burst Shot">
-		<!-- Fires an exploding arrow to attack the enemy's surroundings with $s1 Power added to P. Atk. Requires a bow. Over-hit. -->
+	<skill id="24" toLevel="31" name="Burst Shot">
+		<!-- Fires an exploding arrow to attack the enemy's surroundings with $s1 Power added to P. Atk. Requires a bow. Over-hit is possible. -->
 		<icon>icon.skill0024</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
@@ -2490,9 +2422,6 @@
 			<value level="29">-328</value>
 			<value level="30">-331</value>
 			<value level="31">-333</value>
-			<value level="32">-336</value>
-			<value level="33">-339</value>
-			<value level="34">-341</value>
 		</effectPoint>
 		<effectRange>1000</effectRange>
 		<hitTime>3200</hitTime>
@@ -2528,9 +2457,6 @@
 			<value level="29">72</value>
 			<value level="30">73</value>
 			<value level="31">74</value>
-			<value level="32">76</value>
-			<value level="33">77</value>
-			<value level="34">78</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">125</value>
@@ -2564,9 +2490,6 @@
 			<value level="29">218</value>
 			<value level="30">221</value>
 			<value level="31">224</value>
-			<value level="32">246</value>
-			<value level="33">248</value>
-			<value level="34">250</value>
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>6000</reuseDelay>
@@ -2615,15 +2538,12 @@
 					<value level="29">1151</value>
 					<value level="30">1185</value>
 					<value level="31">1218</value>
-					<value level="32">1230</value>
-					<value level="33">1241</value>
-					<value level="34">1252</value>
 				</power>
 				<overHit>true</overHit>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="25" toLevel="10" name="Summon Mechanic Golem">
+	<skill id="25" toLevel="9" name="Summon Mechanic Golem">
 		<!-- Summons a mechanic golem that uses a cannon for ranged attacks. Requires $s1 D-grade Crystals. -->
 		<icon>icon.skill0025</icon>
 		<hitTime>15000</hitTime>
@@ -2637,7 +2557,6 @@
 			<value level="7">4</value>
 			<value level="8">3</value>
 			<value level="9">5</value>
-			<value level="10">7</value>
 		</itemConsumeCount>
 		<itemConsumeId>
 			<value level="1">1458</value>
@@ -2649,7 +2568,6 @@
 			<value level="7">1459</value>
 			<value level="8">1459</value>
 			<value level="9">1459</value>
-			<value level="10">1459</value>
 		</itemConsumeId>
 		<magicLvl>
 			<value level="1">28</value>
@@ -2661,7 +2579,6 @@
 			<value level="7">64</value>
 			<value level="8">68</value>
 			<value level="9">72</value>
-			<value level="10">76</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">49</value>
@@ -2673,7 +2590,6 @@
 			<value level="7">119</value>
 			<value level="8">126</value>
 			<value level="9">133</value>
-			<value level="10">153</value>
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
@@ -2695,8 +2611,8 @@
 					<value level="7">14669</value>
 					<value level="8">14670</value>
 					<value level="9">14671</value>
-					<value level="10">14672</value>
 				</npcId>
+				<lifeTime>1200</lifeTime>
 				<item>consumeItemId</item>
 				<consumeItemCount>
 					<value level="1">4</value>
@@ -2708,14 +2624,13 @@
 					<value level="7">3</value>
 					<value level="8">4</value>
 					<value level="9">4</value>
-					<value level="10">5</value>
 				</consumeItemCount>
 				<expMultiplier>0.85</expMultiplier>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="27" toLevel="14" name="Unlock">
-		<!-- Has a $s1 chance to open a level $s2 door, and $s3 chance to open a treasure chest. Requires $s4 Thief Keys. -->
+		<!-- Has a $s1 chance to open a level $s2 door and $s3 chance to open a treasure chest. Requires $s4 Thief Keys. -->
 		<icon>icon.skill0027</icon>
 		<castRange>40</castRange>
 		<effectPoint>
@@ -2815,8 +2730,8 @@
 			<effect name="OpenChest" />
 		</effects>
 	</skill>
-	<skill id="28" toLevel="52" name="Aggression">
-		<!-- Provokes the target with $s1 power. -->
+	<skill id="28" toLevel="49" name="Aggression">
+		<!-- Provokes the target to attack with $s1 Power. -->
 		<icon>icon.skill0028</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -2871,64 +2786,58 @@
 			<value level="47">800</value>
 			<value level="48">800</value>
 			<value level="49">800</value>
-			<value level="50">800</value>
-			<value level="51">800</value>
-			<value level="52">800</value>
 		</castRange>
 		<coolTime>200</coolTime>
 		<effectPoint>
-			<value level="1">-653</value>
-			<value level="2">-676</value>
-			<value level="3">-700</value>
-			<value level="4">-750</value>
-			<value level="5">-775</value>
-			<value level="6">-801</value>
-			<value level="7">-853</value>
-			<value level="8">-880</value>
-			<value level="9">-907</value>
-			<value level="10">-963</value>
-			<value level="11">-991</value>
-			<value level="12">-1019</value>
-			<value level="13">-1076</value>
-			<value level="14">-1105</value>
-			<value level="15">-1134</value>
-			<value level="16">-1164</value>
-			<value level="17">-1193</value>
-			<value level="18">-1222</value>
-			<value level="19">-1252</value>
-			<value level="20">-1281</value>
-			<value level="21">-1310</value>
-			<value level="22">-1340</value>
-			<value level="23">-1369</value>
-			<value level="24">-1398</value>
-			<value level="25">-1426</value>
-			<value level="26">-1455</value>
-			<value level="27">-1483</value>
-			<value level="28">-1511</value>
-			<value level="29">-1539</value>
-			<value level="30">-1566</value>
-			<value level="31">-1593</value>
-			<value level="32">-1619</value>
-			<value level="33">-1645</value>
-			<value level="34">-1670</value>
-			<value level="35">-1695</value>
-			<value level="36">-1719</value>
-			<value level="37">-1743</value>
-			<value level="38">-1766</value>
-			<value level="39">-1788</value>
-			<value level="40">-1809</value>
-			<value level="41">-1829</value>
-			<value level="42">-1849</value>
-			<value level="43">-1868</value>
-			<value level="44">-1886</value>
-			<value level="45">-1903</value>
-			<value level="46">-1919</value>
-			<value level="47">-1934</value>
-			<value level="48">-1948</value>
-			<value level="49">-1961</value>
-			<value level="50">-1974</value>
-			<value level="51">-1987</value>
-			<value level="52">-2000</value>
+			<value level="1">-3928</value>
+			<value level="2">-4069</value>
+			<value level="3">-4213</value>
+			<value level="4">-4508</value>
+			<value level="5">-4659</value>
+			<value level="6">-4814</value>
+			<value level="7">-5129</value>
+			<value level="8">-5291</value>
+			<value level="9">-5453</value>
+			<value level="10">-5786</value>
+			<value level="11">-5953</value>
+			<value level="12">-6124</value>
+			<value level="13">-6468</value>
+			<value level="14">-6641</value>
+			<value level="15">-6815</value>
+			<value level="16">-6992</value>
+			<value level="17">-7166</value>
+			<value level="18">-7343</value>
+			<value level="19">-7519</value>
+			<value level="20">-7696</value>
+			<value level="21">-7872</value>
+			<value level="22">-8047</value>
+			<value level="23">-8221</value>
+			<value level="24">-8396</value>
+			<value level="25">-8569</value>
+			<value level="26">-8740</value>
+			<value level="27">-8909</value>
+			<value level="28">-9076</value>
+			<value level="29">-9242</value>
+			<value level="30">-9406</value>
+			<value level="31">-9568</value>
+			<value level="32">-9724</value>
+			<value level="33">-9881</value>
+			<value level="34">-10032</value>
+			<value level="35">-10181</value>
+			<value level="36">-10325</value>
+			<value level="37">-10466</value>
+			<value level="38">-10603</value>
+			<value level="39">-10736</value>
+			<value level="40">-10864</value>
+			<value level="41">-10986</value>
+			<value level="42">-11105</value>
+			<value level="43">-11216</value>
+			<value level="44">-11324</value>
+			<value level="45">-11427</value>
+			<value level="46">-11522</value>
+			<value level="47">-11612</value>
+			<value level="48">-11697</value>
+			<value level="49">-11774</value>
 		</effectPoint>
 		<effectRange>
 			<value level="1">900</value>
@@ -2980,9 +2889,6 @@
 			<value level="47">1300</value>
 			<value level="48">1300</value>
 			<value level="49">1300</value>
-			<value level="50">1300</value>
-			<value level="51">1300</value>
-			<value level="52">1300</value>
 		</effectRange>
 		<hitTime>700</hitTime>
 		<isDebuff>true</isDebuff>
@@ -3036,9 +2942,6 @@
 			<value level="47">72</value>
 			<value level="48">73</value>
 			<value level="49">74</value>
-			<value level="50">76</value>
-			<value level="51">77</value>
-			<value level="52">78</value>
 		</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>6000</reuseDelay>
@@ -3053,7 +2956,7 @@
 		</effects>
 	</skill>
 	<skill id="29" toLevel="24" name="Iron Punch">
-		<!-- Attacks the enemy with $s1 Power added to P. Atk. Requires a fist weapon. Over-hit. -->
+		<!-- Attacks the enemy with $s1 Power added to P. Atk. Requires a fist weapon. Over-hit is possible. -->
 		<icon>icon.skill0029</icon>
 		<castRange>40</castRange>
 		<coolTime>296</coolTime>
@@ -3156,8 +3059,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30" toLevel="40" name="Backstab">
-		<!-- Attacks the enemy's unprotected back with $s1 Power added to P. Atk. Requires a dagger to be equipped. Over-hit. Critical. -->
+	<skill id="30" toLevel="37" name="Backstab">
+		<!-- Attacks the enemy's unprotected back with $s1 Power added to P. Atk. Requires a dagger or dual dagger to be equipped. Over-hit, critical hit and half-kill are possible. -->
 		<icon>icon.skill0030</icon>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
@@ -3199,9 +3102,6 @@
 			<value level="35">-547</value>
 			<value level="36">-551</value>
 			<value level="37">-554</value>
-			<value level="38">-558</value>
-			<value level="39">-561</value>
-			<value level="40">-564</value>
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1080</hitTime>
@@ -3243,9 +3143,6 @@
 			<value level="35">72</value>
 			<value level="36">73</value>
 			<value level="37">74</value>
-			<value level="38">76</value>
-			<value level="39">77</value>
-			<value level="40">78</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">54</value>
@@ -3285,9 +3182,6 @@
 			<value level="35">109</value>
 			<value level="36">111</value>
 			<value level="37">112</value>
-			<value level="38">123</value>
-			<value level="39">125</value>
-			<value level="40">127</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
@@ -3343,9 +3237,6 @@
 					<value level="35">5180</value>
 					<value level="36">5330</value>
 					<value level="37">5479</value>
-					<value level="38">6317</value>
-					<value level="39">6332</value>
-					<value level="40">6498</value>
 				</power>
 				<criticalChance>
 					<value level="1">5</value>
@@ -3385,9 +3276,6 @@
 					<value level="35">15</value>
 					<value level="36">15</value>
 					<value level="37">15</value>
-					<value level="38">15</value>
-					<value level="39">15</value>
-					<value level="40">15</value>
 				</criticalChance>
 				<chanceBoost>400</chanceBoost>
 				<overHit>true</overHit>
@@ -3431,9 +3319,6 @@
 					<value level="35">15</value>
 					<value level="36">15</value>
 					<value level="37">15</value>
-					<value level="38">15</value>
-					<value level="39">15</value>
-					<value level="40">15</value>
 				</halfLethal>
 			</effect>
 		</effects>
@@ -3542,13 +3427,12 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35" toLevel="31" name="Force Storm">
-		<!-- Attacks near the enemy with $s1 Power added to P. Atk. Requires a sword, blunt weapon, spear, fist weapon, or dualsword. Over-hit. Critical. -->
+	<skill id="35" toLevel="44" name="Force Storm">
+		<!-- Attacks near the enemy with $s1 Power added to P. Atk. Requires a sword, blunt weapon, spear, fist weapon, dual blunt weapon, or dualsword. Over-hit. Critical hit. -->
 		<icon>icon.skill0035</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
 		<castRange>500</castRange>
-		<coolTime>500</coolTime>
 		<effectPoint>
 			<value level="1">-114</value>
 			<value level="2">-117</value>
@@ -3578,9 +3462,22 @@
 			<value level="26">-164</value>
 			<value level="27">-166</value>
 			<value level="28">-167</value>
-			<value level="29">-170</value>
-			<value level="30">-173</value>
-			<value level="31">-176</value>
+			<value level="29">-709</value>
+			<value level="30">-709</value>
+			<value level="31">-709</value>
+			<value level="32">-709</value>
+			<value level="33">-709</value>
+			<value level="34">-709</value>
+			<value level="35">-709</value>
+			<value level="36">-709</value>
+			<value level="37">-709</value>
+			<value level="38">-709</value>
+			<value level="39">-709</value>
+			<value level="40">-709</value>
+			<value level="41">-709</value>
+			<value level="42">-709</value>
+			<value level="43">-709</value>
+			<value level="44">-709</value>
 		</effectPoint>
 		<effectRange>1000</effectRange>
 		<hitTime>1900</hitTime>
@@ -3616,6 +3513,19 @@
 			<value level="29">74</value>
 			<value level="30">75</value>
 			<value level="31">77</value>
+			<value level="32">79</value>
+			<value level="33">81</value>
+			<value level="34">83</value>
+			<value level="35">85</value>
+			<value level="36">86</value>
+			<value level="37">88</value>
+			<value level="38">90</value>
+			<value level="39">92</value>
+			<value level="40">94</value>
+			<value level="41">96</value>
+			<value level="42">98</value>
+			<value level="43">101</value>
+			<value level="44">103</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">55</value>
@@ -3649,6 +3559,19 @@
 			<value level="29">161</value>
 			<value level="30">163</value>
 			<value level="31">169</value>
+			<value level="32">175</value>
+			<value level="33">180</value>
+			<value level="34">161</value>
+			<value level="35">163</value>
+			<value level="36">169</value>
+			<value level="37">175</value>
+			<value level="38">180</value>
+			<value level="39">186</value>
+			<value level="40">192</value>
+			<value level="41">198</value>
+			<value level="42">204</value>
+			<value level="43">210</value>
+			<value level="44">216</value>
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
@@ -3697,19 +3620,35 @@
 					<value level="29">427</value>
 					<value level="30">451</value>
 					<value level="31">473</value>
+					<value level="32">496</value>
+					<value level="33">520</value>
+					<value level="34">15024</value>
+					<value level="35">15542</value>
+					<value level="36">16580</value>
+					<value level="37">17618</value>
+					<value level="38">18656</value>
+					<value level="39">19695</value>
+					<value level="40">20732</value>
+					<value level="41">21771</value>
+					<value level="42">23352</value>
+					<value level="43">24490</value>
+					<value level="44">25628</value>
+					<value fromLevel="40" toLevel="44" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>
-					<value fromLevel="1" toLevel="31">15</value>
+					<value fromLevel="1" toLevel="44">15</value>
+					<value fromLevel="40" toLevel="44" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 				</criticalChance>
 				<pDefMod>
-					<value fromLevel="1" toLevel="31">1</value>
+					<value fromLevel="1" toLevel="44">1</value>
+					<value fromLevel="40" toLevel="44" fromSubLevel="3001" toSubLevel="3020">{0.99 - 0.006 * (subIndex - 1)}</value>
 				</pDefMod>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="36" toLevel="40" name="Spinning Slasher">
-		<!-- Swings a spear to attack nearby enemies with $s1 Power added to P. Atk. Requires a polearm to be equipped. Ignores Shield Defense. Over-hit. -->
+	<skill id="36" toLevel="37" name="Spinning Slasher">
+		<!-- Swings a spear to attack nearby enemies with $s1 Power added to P. Atk. Requires a polearm to be equipped. Ignores Shield Defense. Over-hit and Critical are possible. -->
 		<icon>icon.skill0036</icon>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>150</affectRange>
@@ -3752,9 +3691,6 @@
 			<value level="35">-328</value>
 			<value level="36">-331</value>
 			<value level="37">-333</value>
-			<value level="38">-336</value>
-			<value level="39">-339</value>
-			<value level="40">-342</value>
 		</effectPoint>
 		<hitTime>1067</hitTime>
 		<magicLvl>
@@ -3795,9 +3731,6 @@
 			<value level="35">72</value>
 			<value level="36">73</value>
 			<value level="37">74</value>
-			<value level="38">76</value>
-			<value level="39">77</value>
-			<value level="40">78</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">36</value>
@@ -3837,9 +3770,6 @@
 			<value level="35">73</value>
 			<value level="36">74</value>
 			<value level="37">75</value>
-			<value level="38">83</value>
-			<value level="39">84</value>
-			<value level="40">85</value>
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>4000</reuseDelay>
@@ -3894,9 +3824,6 @@
 					<value level="35">2590</value>
 					<value level="36">2665</value>
 					<value level="37">2740</value>
-					<value level="38">2763</value>
-					<value level="39">2788</value>
-					<value level="40">2813</value>
 				</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 				<criticalChance>15</criticalChance>
@@ -4037,8 +3964,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="46" toLevel="17" name="Life Scavenge">
-		<!-- Drains HP from corpses and uses it to restore your HP. -->
+	<skill id="46" toLevel="15" name="Life Scavenge">
+		<!-- Absorbs residual life energy from a corpse to restore your own HP. -->
 		<icon>icon.skill0046</icon>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
@@ -4060,8 +3987,6 @@
 			<value level="13">70</value>
 			<value level="14">72</value>
 			<value level="15">74</value>
-			<value level="16">76</value>
-			<value level="17">78</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">28</value>
@@ -4079,8 +4004,6 @@
 			<value level="13">52</value>
 			<value level="14">53</value>
 			<value level="15">55</value>
-			<value level="16">75</value>
-			<value level="17">79</value>
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">7</value>
@@ -4098,8 +4021,6 @@
 			<value level="13">13</value>
 			<value level="14">14</value>
 			<value level="15">14</value>
-			<value level="16">14</value>
-			<value level="17">15</value>
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
@@ -4127,22 +4048,21 @@
 					<value level="13">222</value>
 					<value level="14">232</value>
 					<value level="15">243</value>
-					<value level="16">264</value>
-					<value level="17">286</value>
 				</power>
 			</effect>
 			<effect name="ConsumeBody" />
 		</effects>
 	</skill>
-	<skill id="48" toLevel="40" name="Thunder Storm">
-		<!-- Swings a spear to attack nearby enemies with $s1 Power added to P. Atk. and causes Stun for $s2. Requires a polearm to be equipped. Ignores Shield Defense. Over-hit. Critical. -->
+	<skill id="48" toLevel="49" name="Thunder Storm">
+		<!-- Swings a spear to attack nearby enemies with $s1 Power added to P. Atk. and causes Stun for $s2. Requires a polearm to be equipped. Ignores Shield Defense. Over-hit and Critical are possible. -->
 		<icon>icon.skill0048</icon>
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>7</abnormalTime>
+		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<activateRate>
-			<value fromLevel="1" toLevel="40">50</value>
+			<value fromLevel="1" toLevel="49">50</value>
+			<value fromLevel="45" toLevel="49" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>150</affectRange>
@@ -4186,9 +4106,18 @@
 			<value level="35">-164</value>
 			<value level="36">-166</value>
 			<value level="37">-167</value>
-			<value level="38">-170</value>
-			<value level="39">-173</value>
-			<value level="40">-176</value>
+			<value level="38">-167</value>
+			<value level="39">-167</value>
+			<value level="40">-167</value>
+			<value level="41">-167</value>
+			<value level="42">-167</value>
+			<value level="43">-167</value>
+			<value level="44">-167</value>
+			<value level="45">-167</value>
+			<value level="46">-167</value>
+			<value level="47">-167</value>
+			<value level="48">-167</value>
+			<value level="49">-167</value>
 		</effectPoint>
 		<hitTime>1080</hitTime>
 		<isDebuff>true</isDebuff>
@@ -4234,6 +4163,15 @@
 			<value level="38">75</value>
 			<value level="39">77</value>
 			<value level="40">79</value>
+			<value level="41">81</value>
+			<value level="42">83</value>
+			<value level="43">85</value>
+			<value level="44">90</value>
+			<value level="45">95</value>
+			<value level="46">99</value>
+			<value level="47">101</value>
+			<value level="48">103</value>
+			<value level="49">105</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">52</value>
@@ -4276,6 +4214,15 @@
 			<value level="38">112</value>
 			<value level="39">114</value>
 			<value level="40">116</value>
+			<value level="41">118</value>
+			<value level="42">120</value>
+			<value level="43">122</value>
+			<value level="44">124</value>
+			<value level="45">129</value>
+			<value level="46">133</value>
+			<value level="47">137</value>
+			<value level="48">141</value>
+			<value level="49">145</value>
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>5000</reuseDelay>
@@ -4334,15 +4281,26 @@
 					<value level="38">2140</value>
 					<value level="39">2200</value>
 					<value level="40">2260</value>
+					<value level="41">2320</value>
+					<value level="42">2380</value>
+					<value level="43">26003</value>
+					<value level="44">30494</value>
+					<value level="45">35883</value>
+					<value level="46">37680</value>
+					<value level="47">39349</value>
+					<value level="48">40997</value>
+					<value level="49">42645</value>
+					<value fromLevel="45" toLevel="49" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 				</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 				<criticalChance>
-					<value fromLevel="1" toLevel="40">15</value>
+					<value fromLevel="1" toLevel="49">15</value>
+					<value fromLevel="45" toLevel="49" fromSubLevel="3001" toSubLevel="3020">{base + base / 100 * subIndex}</value>
 				</criticalChance>
 				<overHit>true</overHit>
 			</effect>
 			<effect name="BlockActions">
-				<allowedSkills>35016</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
@@ -4585,8 +4543,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="54" toLevel="52" name="Force Blaster">
-		<!-- Discharges a powerful energy beam at the enemy with $s1 Power added to P. Atk. Requires a fist weapon. Increases Power upon consumption of Momentum, and consumes up to $s2. Over-hit. Critical. -->
+	<skill id="54" toLevel="49" name="Force Blaster">
+		<!-- Discharges a powerful energy beam at the enemy with $s1 Power added to P. Atk. Requires a fist weapon. Increases Power upon consumption of Momentum, and consumes up to $s2. Over-hit and Critical are possible. -->
 		<icon>icon.skill0054</icon>
 		<castRange>600</castRange>
 		<effectPoint>
@@ -4639,9 +4597,6 @@
 			<value level="47">-383</value>
 			<value level="48">-386</value>
 			<value level="49">-388</value>
-			<value level="50">-391</value>
-			<value level="51">-394</value>
-			<value level="52">-397</value>
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>1900</hitTime>
@@ -4695,9 +4650,6 @@
 			<value level="47">72</value>
 			<value level="48">73</value>
 			<value level="49">74</value>
-			<value level="50">76</value>
-			<value level="51">77</value>
-			<value level="52">78</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">17</value>
@@ -4749,12 +4701,8 @@
 			<value level="47">60</value>
 			<value level="48">61</value>
 			<value level="49">61</value>
-			<value level="50">67</value>
-			<value level="51">68</value>
-			<value level="52">69</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<coolTime>500</coolTime>
 		<reuseDelay>4000</reuseDelay>
 		<!-- charge values -->
 		<magicCriticalRate>5</magicCriticalRate>
@@ -4820,9 +4768,6 @@
 					<value level="47">2015</value>
 					<value level="48">2073</value>
 					<value level="49">2131</value>
-					<value level="50">2151</value>
-					<value level="51">2170</value>
-					<value level="52">2189</value>
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>15</criticalChance>
@@ -4830,7 +4775,7 @@
 		</effects>
 	</skill>
 	<skill id="56" toLevel="24" name="Power Shot">
-		<!-- Makes a powerful long-distance attack with $s1 Power added to P. Atk. Requires a bow. Over-hit. -->
+		<!-- Makes a powerful long-distance attack with $s1 Power added to P. Atk. Requires a bow. Over-hit is possible. -->
 		<icon>icon.skill0056</icon>
 		<castRange>700</castRange>
 		<coolTime>800</coolTime>
@@ -5277,7 +5222,7 @@
 		</effects>
 	</skill>
 	<skill id="61" toLevel="3" name="Cure Bleeding">
-		<!-- Cures minor bleeding. -->
+		<!-- Heals minor bleeding. -->
 		<icon>icon.skill0061</icon>
 		<effectPoint>
 			<value level="1">235</value>
@@ -5316,11 +5261,11 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="65" toLevel="15" name="Horror">
+	<skill id="65" toLevel="13" name="Horror">
 		<!-- Frightens the enemy into fleeing for $s1. -->
 		<icon>icon.skill0065</icon>
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>7</abnormalTime>
+		<abnormalTime>10</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
 		<abnormalVisualEffect>TURN_FLEE</abnormalVisualEffect>
 		<activateRate>80</activateRate>
@@ -5340,8 +5285,6 @@
 			<value level="11">-635</value>
 			<value level="12">-646</value>
 			<value level="13">-655</value>
-			<value level="14">-659</value>
-			<value level="15">-663</value>
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>1500</hitTime>
@@ -5362,8 +5305,6 @@
 			<value level="11">70</value>
 			<value level="12">72</value>
 			<value level="13">74</value>
-			<value level="14">76</value>
-			<value level="15">78</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">17</value>
@@ -5379,8 +5320,6 @@
 			<value level="11">26</value>
 			<value level="12">27</value>
 			<value level="13">28</value>
-			<value level="14">39</value>
-			<value level="15">42</value>
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">5</value>
@@ -5396,8 +5335,6 @@
 			<value level="11">7</value>
 			<value level="12">7</value>
 			<value level="13">7</value>
-			<value level="14">8</value>
-			<value level="15">8</value>
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>5000</reuseDelay>
@@ -5411,7 +5348,7 @@
 		</effects>
 	</skill>
 	<skill id="67" toLevel="7" name="Summon Life Cubic">
-		<!-- Summons a Life Cubic. The Life Cubic uses magic to regenerate HP to its owner and party members. Requires $s1 Spirit Ore. -->
+		<!-- Summons a Life Cubic. The Life Cubic uses magic to regenerate HP to its owner and party members. Requires $s1 Spirit Ore(s). -->
 		<icon>icon.skill0067</icon>
 		<hitTime>6000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -5475,8 +5412,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="69" toLevel="34" name="Sacrifice">
-		<!-- Consumes your HP to recover the target's HP by $s1. -->
+	<skill id="69" toLevel="37" name="Sacrifice">
+		<!-- Consumes your HP to recover the target's HP + $s1. -->
 		<icon>icon.skill0069</icon>
 		<castRange>600</castRange>
 		<effectPoint>
@@ -5514,6 +5451,9 @@
 			<value level="32">815</value>
 			<value level="33">820</value>
 			<value level="34">825</value>
+			<value level="35">830</value>
+			<value level="36">835</value>
+			<value level="37">840</value>
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>1500</hitTime>
@@ -5552,6 +5492,9 @@
 			<value level="32">1695</value>
 			<value level="33">1740</value>
 			<value level="34">1785</value>
+			<value level="35">1830</value>
+			<value level="36">1875</value>
+			<value level="37">1920</value>
 		</hpConsume>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
@@ -5589,6 +5532,9 @@
 			<value level="32">90</value>
 			<value level="33">95</value>
 			<value level="34">99</value>
+			<value level="35">101</value>
+			<value level="36">103</value>
+			<value level="37">105</value>
 		</magicLvl>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
@@ -5632,12 +5578,15 @@
 					<value level="32">2334</value>
 					<value level="33">2396</value>
 					<value level="34">2458</value>
-					<value fromLevel="33" toLevel="34" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
+					<value level="35">2520</value>
+					<value level="36">2582</value>
+					<value level="37">2644</value>
+					<value fromLevel="33" toLevel="37" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 				</power>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="70" toLevel="56" name="Drain HP">
+	<skill id="70" toLevel="53" name="Drain Energy">
 		<!-- Inflicts dark damage on the target with $s1 Power added to M. Atk. Absorbs $s2 of the damage inflicted on target as HP. -->
 		<icon>icon.skill0070</icon>
 		<castRange>600</castRange>
@@ -5695,9 +5644,6 @@
 			<value level="51">-646</value>
 			<value level="52">-650</value>
 			<value level="53">-655</value>
-			<value level="54">-659</value>
-			<value level="55">-663</value>
-			<value level="56">-667</value>
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<attributeType>DARK</attributeType>
@@ -5758,9 +5704,6 @@
 			<value level="51">72</value>
 			<value level="52">73</value>
 			<value level="53">74</value>
-			<value level="54">76</value>
-			<value level="55">77</value>
-			<value level="56">78</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">9</value>
@@ -5816,9 +5759,6 @@
 			<value level="51">40</value>
 			<value level="52">41</value>
 			<value level="53">41</value>
-			<value level="54">53</value>
-			<value level="55">55</value>
-			<value level="56">57</value>
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">3</value>
@@ -5874,9 +5814,6 @@
 			<value level="51">10</value>
 			<value level="52">11</value>
 			<value level="53">11</value>
-			<value level="54">11</value>
-			<value level="55">11</value>
-			<value level="56">11</value>
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>4000</reuseDelay>
@@ -5939,9 +5876,6 @@
 					<value level="51">105</value>
 					<value level="52">107</value>
 					<value level="53">108</value>
-					<value level="54">109</value>
-					<value level="55">110</value>
-					<value level="56">111</value>
 				</power>
 				<percentage>20</percentage>
 			</effect>
@@ -6019,7 +5953,7 @@
 		</effects>
 	</skill>
 	<skill id="76" toLevel="1" name="Bear Spirit Totem">
-		<!-- Possessed by a Bear's Spirit, P. Atk., P. Def. and M. Def. + 10%, Critical Damage + 10% for 5 minutes. Requires a fist weapon. -->
+		<!-- Possessed by a Bear's soul, P. Atk. and Critical Damage + 20%, and Speed - 30% for 5 minutes. Requires a fist weapon. -->
 		<icon>icon.skill0076</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -6043,28 +5977,18 @@
 		</conditions>
 		<effects>
 			<effect name="PAtk">
-				<amount>10</amount>
+				<amount>20</amount>
 				<mode>PER</mode>
 				<weaponType>
 					<item>DUALFIST</item>
 				</weaponType>
 			</effect>
-			<effect name="PhysicalDefence">
-				<amount>10</amount>
+			<effect name="Speed">
+				<amount>-30</amount>
 				<mode>PER</mode>
-				<weaponType>
-					<item>DUALFIST</item>
-				</weaponType>
-			</effect>
-			<effect name="MagicalDefence">
-				<amount>10</amount>
-				<mode>PER</mode>
-				<weaponType>
-					<item>DUALFIST</item>
-				</weaponType>
 			</effect>
 			<effect name="CriticalDamage">
-				<amount>10</amount>
+				<amount>20</amount>
 				<mode>PER</mode>
 				<weaponType>
 					<item>DUALFIST</item>
@@ -6176,13 +6100,13 @@
 		</effects>
 	</skill>
 	<skill id="81" toLevel="3" name="Punch of Doom">
-		<!-- Inflicts great damage on the enemy with iron-fist. Requires a fist weapon. Ignores Shield Defense. Over-hit. Critical. Power $s1. -->
+		<!-- Inflicts great damage on the enemy with iron-fist. Requires a fist weapon. Ignores Shield Defense. Over-hit and Critical are possible. Power $s1. -->
 		<icon>icon.skill0081</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<castRange>40</castRange>
-		<coolTime>500</coolTime>
+		<coolTime>440</coolTime>
 		<effectPoint>
 			<value level="1">-266</value>
 			<value level="2">-304</value>
@@ -6280,7 +6204,7 @@
 		</effects>
 	</skill>
 	<skill id="83" toLevel="1" name="Wolf Spirit Totem">
-		<!-- Possessed by a Wolf's Spirit, Speed and Atk. Spd. Boost + 10%, Accuracy + 3 for 5 minutes. Requires a fist weapon. -->
+		<!-- Possessed by a Wolf's soul, Speed + 20% and Accuracy + 3 for 5 minutes. Requires a fist weapon. -->
 		<icon>icon.skill0083</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -6304,15 +6228,8 @@
 		</conditions>
 		<effects>
 			<effect name="Speed">
-				<amount>10</amount>
+				<amount>20</amount>
 				<mode>PER</mode>
-			</effect>
-			<effect name="PhysicalAttackSpeed">
-				<amount>10</amount>
-				<mode>PER</mode>
-				<weaponType>
-					<item>DUALFIST</item>
-				</weaponType>
 			</effect>
 			<effect name="Accuracy">
 				<amount>3</amount>
@@ -6323,14 +6240,13 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="84" toLevel="4" name="Poison Blade Dance">
-		<!-- A sword emits a toxic cloud that momentarily damages and poisons nearby enemies. Requires a dualsword. -->
+	<skill id="84" toLevel="3" name="Poison Blade Dance">
+		<!-- A sword emits a toxic cloud that momentarily damages and poisons nearby enemies. Requires a dualsword. Effect $s1. -->
 		<icon>icon.skill0084</icon>
 		<abnormalLvl>
 			<value level="1">6</value>
 			<value level="2">7</value>
 			<value level="3">8</value>
-			<value level="4">9</value>
 		</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
@@ -6345,7 +6261,6 @@
 			<value level="1">-523</value>
 			<value level="2">-566</value>
 			<value level="3">-646</value>
-			<value level="4">-646</value>
 		</effectPoint>
 		<hitTime>1833</hitTime>
 		<isDebuff>true</isDebuff>
@@ -6354,13 +6269,11 @@
 			<value level="1">55</value>
 			<value level="2">60</value>
 			<value level="3">72</value>
-			<value level="4">78</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">38</value>
 			<value level="2">42</value>
 			<value level="3">50</value>
-			<value level="4">55</value>
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>15000</reuseDelay>
@@ -6386,14 +6299,13 @@
 					<value level="1">50</value>
 					<value level="2">58</value>
 					<value level="3">63</value>
-					<value level="4">69</value>
 				</power>
 				<ticks>5</ticks>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="86" toLevel="3" name="Reflect Damage">
-		<!-- For $s1, returns $s2 of damage received by the target back to the enemy. -->
+		<!-- For $s1, returns $s2 of received damage back to the enemy. -->
 		<icon>icon.skill0086</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -6527,11 +6439,11 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="92" toLevel="55" name="Shield Stun">
-		<!-- Makes an attack with a shield, stunning the target for $s1. Requires a shield. -->
+	<skill id="92" toLevel="52" name="Shield Stun">
+		<!-- Uses a shield to shock the enemy. Inflicts Stun on the target for $s1. Requires a shield. -->
 		<icon>icon.skill0092</icon>
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>7</abnormalTime>
+		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<activateRate>80</activateRate>
@@ -6591,9 +6503,6 @@
 			<value level="50">-1291</value>
 			<value level="51">-1300</value>
 			<value level="52">-1309</value>
-			<value level="53">-1318</value>
-			<value level="54">-1324</value>
-			<value level="55">-1332</value>
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1200</hitTime>
@@ -6652,9 +6561,6 @@
 			<value level="50">72</value>
 			<value level="51">73</value>
 			<value level="52">74</value>
-			<value level="53">76</value>
-			<value level="54">77</value>
-			<value level="55">78</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">10</value>
@@ -6709,9 +6615,6 @@
 			<value level="50">37</value>
 			<value level="51">37</value>
 			<value level="52">38</value>
-			<value level="53">41</value>
-			<value level="54">42</value>
-			<value level="55">42</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
@@ -6725,12 +6628,12 @@
 		</conditions>
 		<effects>
 			<effect name="BlockActions">
-				<allowedSkills>35016</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="94" toLevel="7" name="Rage">
-		<!-- For $s1 P. Atk. +$s2. When using a two-handed sword / two-handed blunt / polearm additionally P. Atk. +$s3, when using a two-handed sword / two-handed blunt Accuracy +$s4. Requires a sword / blunt / polearm / fist weapon / dual swords. -->
+		<!-- P. Atk. + $s2 for $s1. Requires a sword, blunt weapon, spear, fist weapon, dual blunt weapon, or dualsword. -->
 		<icon>icon.skill0094</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -6743,7 +6646,7 @@
 		</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="7">600</value>
-			<value fromLevel="6" toLevel="7" fromSubLevel="1001" toSubLevel="1030">{base + subIndex * 30}</value>
+			<value fromLevel="6" toLevel="7" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 30}</value>
 		</abnormalTime>
 		<abnormalType>PA_UP_SPECIAL</abnormalType>
 		<effectPoint>235</effectPoint>
@@ -6828,15 +6731,15 @@
 					<item>DUALBLUNT</item>
 				</weaponType>
 			</effect>
-			<effect name="PhysicalAttackSpeed" fromLevel="6" toLevel="7" fromSubLevel="2001" toSubLevel="2030">
+			<effect name="PhysicalAttackSpeed" fromLevel="6" toLevel="7" fromSubLevel="2001" toSubLevel="2020">
 				<amount>
-					<value fromLevel="6" toLevel="7" fromSubLevel="2001" toSubLevel="2030">{0.6 + 0.4 * subIndex}</value>
+					<value fromLevel="6" toLevel="7" fromSubLevel="2001" toSubLevel="2020">{0.6 + 0.4 * subIndex}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="95" toLevel="22" name="Cripple">
+	<skill id="95" toLevel="20" name="Cripple">
 		<!-- Decreases the enemy's Speed by $s2 for $s1. Requires a fist weapon. -->
 		<icon>icon.skill0095</icon>
 		<abnormalLvl>
@@ -6860,8 +6763,6 @@
 			<value level="18">3</value>
 			<value level="19">3</value>
 			<value level="20">3</value>
-			<value level="21">3</value>
-			<value level="22">3</value>
 		</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -6890,8 +6791,6 @@
 			<value level="18">-635</value>
 			<value level="19">-646</value>
 			<value level="20">-655</value>
-			<value level="21">-658</value>
-			<value level="22">-661</value>
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1604</hitTime>
@@ -6918,8 +6817,6 @@
 			<value level="18">70</value>
 			<value level="19">72</value>
 			<value level="20">74</value>
-			<value level="21">76</value>
-			<value level="22">78</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">10</value>
@@ -6942,8 +6839,6 @@
 			<value level="18">33</value>
 			<value level="19">34</value>
 			<value level="20">34</value>
-			<value level="21">37</value>
-			<value level="22">38</value>
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
@@ -6980,15 +6875,13 @@
 					<value level="18">-30</value>
 					<value level="19">-30</value>
 					<value level="20">-30</value>
-					<value level="21">-30</value>
-					<value level="22">-30</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="96" toLevel="7" name="Bleed">
-		<!-- Decreases the enemy's Speed by $s2 for $s1, and inflicts Bleed, causing them to lose $s3 HP every second. Requires a dagger. -->
+	<skill id="96" toLevel="6" name="Bleed">
+		<!-- Decreases the enemy's Speed by $s2 for $s1, and inflicts Bleed, causing them to lose $s3 HP every second. -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>
 			<value level="1">3</value>
@@ -6997,7 +6890,6 @@
 			<value level="4">6</value>
 			<value level="5">7</value>
 			<value level="6">8</value>
-			<value level="7">9</value>
 		</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
@@ -7014,7 +6906,6 @@
 			<value level="4">-279</value>
 			<value level="5">-311</value>
 			<value level="6">-323</value>
-			<value level="7">-333</value>
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1080</hitTime>
@@ -7027,7 +6918,6 @@
 			<value level="4">58</value>
 			<value level="5">66</value>
 			<value level="6">70</value>
-			<value level="7">76</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">28</value>
@@ -7036,7 +6926,6 @@
 			<value level="4">73</value>
 			<value level="5">83</value>
 			<value level="6">89</value>
-			<value level="7">97</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
@@ -7062,7 +6951,6 @@
 					<value level="4">54</value>
 					<value level="5">62</value>
 					<value level="6">67</value>
-					<value level="7">72</value>
 				</power>
 				<ticks>5</ticks>
 			</effect>
@@ -7072,7 +6960,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="97" toLevel="13" name="Sanctuary">
+	<skill id="97" toLevel="11" name="Sanctuary">
 		<!-- Decreases P. Atk. of nearby undead monsters by $s2 for $s1. -->
 		<icon>icon.skill0097</icon>
 		<abnormalLvl>3</abnormalLvl>
@@ -7094,8 +6982,6 @@
 			<value level="9">-635</value>
 			<value level="10">-646</value>
 			<value level="11">-655</value>
-			<value level="12">-659</value>
-			<value level="13">-663</value>
 		</effectPoint>
 		<hitTime>1500</hitTime>
 		<isDebuff>true</isDebuff>
@@ -7112,8 +6998,6 @@
 			<value level="9">70</value>
 			<value level="10">72</value>
 			<value level="11">74</value>
-			<value level="12">76</value>
-			<value level="13">78</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">35</value>
@@ -7127,8 +7011,6 @@
 			<value level="9">49</value>
 			<value level="10">50</value>
 			<value level="11">51</value>
-			<value level="12">56</value>
-			<value level="13">57</value>
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
@@ -7143,8 +7025,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="98" toLevel="6" name="Sword Symphony">
-		<!-- Attacks the enemy with 825 Power added to P. Atk. and blocks the use of magic skills for 10 seconds. Over-hit. Critical. -->
+	<skill id="98" toLevel="5" name="Sword Symphony">
+		<!-- Attacks the enemy with $s1 Power added to P. Atk. Blocks the use of magic skills for $s2. Over-hit and Critical are possible. -->
 		<icon>icon.skill0098</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -7159,7 +7041,6 @@
 			<value level="3">-450</value>
 			<value level="4">-470</value>
 			<value level="5">-487</value>
-			<value level="6">-487</value>
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>2000</hitTime>
@@ -7171,7 +7052,6 @@
 			<value level="3">64</value>
 			<value level="4">68</value>
 			<value level="5">72</value>
-			<value level="6">76</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">58</value>
@@ -7179,7 +7059,6 @@
 			<value level="3">69</value>
 			<value level="4">73</value>
 			<value level="5">77</value>
-			<value level="6">85</value>
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>15000</reuseDelay>
@@ -7196,7 +7075,6 @@
 					<value level="3">1194</value>
 					<value level="4">1373</value>
 					<value level="5">1554</value>
-					<value level="6">1726</value> <!-- Guessed -->
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>10</criticalChance>

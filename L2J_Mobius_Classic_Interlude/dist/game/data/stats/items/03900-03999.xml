@@ -1,12 +1,643 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="3900" name="Wolf's Luxury Plate" type="Armor">
+		<!-- Double-click to wear. Only for wolves, great wolves, and fenrir. -->
+		<set name="icon" val="icon.etc_pet_armor_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="160" />
+		<set name="price" val="283000" />
+		<set name="commissionItemType" val="PET_EQUIPMENT" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="ALL_WOLF_GROUP" />
+		</cond>
+		<stats>
+			<stat type="mDef">38</stat>
+			<stat type="pDef">43</stat>
+		</stats>
+	</item>
+	<item id="3901" name="Wolf's Mithril Armor" type="Armor">
+		<!-- Double-click to wear. Only for wolves, great wolves, and fenrir. -->
+		<set name="icon" val="icon.etc_pet_armor_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="160" />
+		<set name="price" val="412500" />
+		<set name="commissionItemType" val="PET_EQUIPMENT" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="ALL_WOLF_GROUP" />
+		</cond>
+		<stats>
+			<stat type="mDef">41</stat>
+			<stat type="pDef">47</stat>
+		</stats>
+	</item>
+	<item id="3902" name="Ghost Canine" type="Weapon">
+		<!-- Double-click to wear. Only for wolves, great wolves, and fenrir. -->
+		<set name="icon" val="icon.etc_pet_arms_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="100" />
+		<set name="price" val="30500" />
+		<set name="commissionItemType" val="PET_EQUIPMENT" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="ALL_WOLF_GROUP" />
+		</cond>
+		<stats>
+			<stat type="pAtk">11</stat>
+			<stat type="mAtk">10</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">277</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="3903" name="Mithril Canine" type="Weapon">
+		<!-- Double-click to wear. Only for wolves, great wolves, and fenrir. -->
+		<set name="icon" val="icon.etc_pet_arms_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="100" />
+		<set name="price" val="50000" />
+		<set name="commissionItemType" val="PET_EQUIPMENT" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="ALL_WOLF_GROUP" />
+		</cond>
+		<stats>
+			<stat type="pAtk">16</stat>
+			<stat type="mAtk">14</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">277</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="3904" name="Sylvan Canine" type="Weapon">
+		<!-- Double-click to wear. Only for wolves, great wolves, and fenrir. -->
+		<set name="icon" val="icon.etc_pet_arms_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="100" />
+		<set name="price" val="80000" />
+		<set name="commissionItemType" val="PET_EQUIPMENT" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="ALL_WOLF_GROUP" />
+		</cond>
+		<stats>
+			<stat type="pAtk">23</stat>
+			<stat type="mAtk">18</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">277</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="3905" name="Oriharukon Canine" type="Weapon">
+		<!-- Double-click to wear. Only for wolves, great wolves, and fenrir. -->
+		<set name="icon" val="icon.etc_pet_arms_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="100" />
+		<set name="price" val="120000" />
+		<set name="commissionItemType" val="PET_EQUIPMENT" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="ALL_WOLF_GROUP" />
+		</cond>
+		<stats>
+			<stat type="pAtk">31</stat>
+			<stat type="mAtk">24</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">277</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="3906" name="Fang of Saltydog" type="Weapon">
+		<!-- Double-click to wear. Only for wolves, great wolves, and fenrir. -->
+		<set name="icon" val="icon.etc_pet_arms_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="100" />
+		<set name="price" val="175000" />
+		<set name="commissionItemType" val="PET_EQUIPMENT" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="ALL_WOLF_GROUP" />
+		</cond>
+		<stats>
+			<stat type="pAtk">40</stat>
+			<stat type="mAtk">30</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">277</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="3907" name="Fang of Cerberus" type="Weapon">
+		<!-- Double-click to wear. Only for wolves, great wolves, and fenrir. -->
+		<set name="icon" val="icon.etc_pet_arms_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="100" />
+		<set name="price" val="225000" />
+		<set name="commissionItemType" val="PET_EQUIPMENT" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="ALL_WOLF_GROUP" />
+		</cond>
+		<stats>
+			<stat type="pAtk">49</stat>
+			<stat type="mAtk">36</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">277</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="3908" name="Fang of Coyote" type="Weapon">
+		<!-- Double-click to wear. Only for wolves, great wolves, and fenrir. -->
+		<set name="icon" val="icon.etc_pet_arms_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="100" />
+		<set name="price" val="285000" />
+		<set name="commissionItemType" val="PET_EQUIPMENT" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="ALL_WOLF_GROUP" />
+		</cond>
+		<stats>
+			<stat type="pAtk">58</stat>
+			<stat type="mAtk">42</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">277</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="3909" name="Crystallized Ice Canine" type="Weapon">
+		<!-- Double-click to wear. Only for wolves, great wolves, and fenrir. -->
+		<set name="icon" val="icon.etc_pet_arms_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="100" />
+		<set name="price" val="360000" />
+		<set name="commissionItemType" val="PET_EQUIPMENT" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="ALL_WOLF_GROUP" />
+		</cond>
+		<stats>
+			<stat type="pAtk">69</stat>
+			<stat type="mAtk">50</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">277</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="3910" name="Fang of the Blue Wolf" type="Weapon">
+		<!-- Double-click to wear. Only for wolves, great wolves, and fenrir. -->
+		<set name="icon" val="icon.etc_pet_arms_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="100" />
+		<set name="price" val="550000" />
+		<set name="commissionItemType" val="PET_EQUIPMENT" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="ALL_WOLF_GROUP" />
+		</cond>
+		<stats>
+			<stat type="pAtk">80</stat>
+			<stat type="mAtk">58</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">277</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="3911" name="Fang of Fenril" type="Weapon">
+		<!-- Double-click to wear. Only for wolves, great wolves, and fenril. -->
+		<set name="icon" val="icon.etc_pet_arms_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="100" />
+		<set name="price" val="750000" />
+		<set name="commissionItemType" val="PET_EQUIPMENT" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="ALL_WOLF_GROUP" />
+		</cond>
+		<stats>
+			<stat type="pAtk">93</stat>
+			<stat type="mAtk">66</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">277</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="3912" name="Hatchling's Soft Leather" type="Armor">
+		<!-- Double-click to wear. Only for hatchlings. -->
+		<set name="icon" val="icon.etc_pet_armor_i03" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="160" />
+		<set name="price" val="58500" />
+		<set name="commissionItemType" val="PET_EQUIPMENT" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="HATCHLING_GROUP" />
+		</cond>
+		<stats>
+			<stat type="mDef">26</stat>
+			<stat type="pDef">26</stat>
+		</stats>
+	</item>
+	<item id="3913" name="Hatchling's Scale Mail" type="Armor">
+		<!-- Double-click to wear. Only for hatchlings. -->
+		<set name="icon" val="icon.etc_pet_armor_i03" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="160" />
+		<set name="price" val="86000" />
+		<set name="commissionItemType" val="PET_EQUIPMENT" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="HATCHLING_GROUP" />
+		</cond>
+		<stats>
+			<stat type="mDef">29</stat>
+			<stat type="pDef">29</stat>
+		</stats>
+	</item>
+	<item id="3914" name="Hatchling's Brigandine" type="Armor">
+		<!-- Double-click to wear. Only for hatchlings. -->
+		<set name="icon" val="icon.etc_pet_armor_i03" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="160" />
+		<set name="price" val="113000" />
+		<set name="commissionItemType" val="PET_EQUIPMENT" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="HATCHLING_GROUP" />
+		</cond>
+		<stats>
+			<stat type="mDef">31</stat>
+			<stat type="pDef">31</stat>
+		</stats>
+	</item>
+	<item id="3915" name="Hatchling's Bronze Coat" type="Armor">
+		<!-- Double-click to wear. Only for hatchlings. -->
+		<set name="icon" val="icon.etc_pet_armor_i04" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="160" />
+		<set name="price" val="145500" />
+		<set name="commissionItemType" val="PET_EQUIPMENT" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="HATCHLING_GROUP" />
+		</cond>
+		<stats>
+			<stat type="mDef">33</stat>
+			<stat type="pDef">33</stat>
+		</stats>
+	</item>
+	<item id="3916" name="Hatchling's Steel Coat" type="Armor">
+		<!-- Double-click to wear. Only for hatchlings. -->
+		<set name="icon" val="icon.etc_pet_armor_i04" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="160" />
+		<set name="price" val="186000" />
+		<set name="commissionItemType" val="PET_EQUIPMENT" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="HATCHLING_GROUP" />
+		</cond>
+		<stats>
+			<stat type="mDef">36</stat>
+			<stat type="pDef">36</stat>
+		</stats>
+	</item>
+	<item id="3917" name="Hatchling's Shadowplate" type="Armor">
+		<!-- Double-click to wear. Only for hatchlings. -->
+		<set name="icon" val="icon.etc_pet_armor_i04" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="160" />
+		<set name="price" val="283000" />
+		<set name="commissionItemType" val="PET_EQUIPMENT" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="HATCHLING_GROUP" />
+		</cond>
+		<stats>
+			<stat type="mDef">38</stat>
+			<stat type="pDef">38</stat>
+		</stats>
+	</item>
+	<item id="3918" name="Hatchling's Mithril Coat" type="Armor">
+		<!-- Double-click to wear. Only for hatchlings. -->
+		<set name="icon" val="icon.etc_pet_armor_i04" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="160" />
+		<set name="price" val="412500" />
+		<set name="commissionItemType" val="PET_EQUIPMENT" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="HATCHLING_GROUP" />
+		</cond>
+		<stats>
+			<stat type="mDef">41</stat>
+			<stat type="pDef">41</stat>
+		</stats>
+	</item>
+	<item id="3919" name="Serpent Fang" type="Weapon">
+		<!-- Double-click to wear. Only for hatchlings. -->
+		<set name="icon" val="icon.etc_pet_arms_i03" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="100" />
+		<set name="price" val="100000" />
+		<set name="commissionItemType" val="PET_EQUIPMENT" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="HATCHLING_GROUP" />
+		</cond>
+		<stats>
+			<stat type="pAtk">8</stat>
+			<stat type="mAtk">7</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">277</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="3920" name="Viperbite" type="Weapon">
+		<!-- Double-click to wear. Only for hatchlings. -->
+		<set name="icon" val="icon.etc_pet_arms_i03" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="100" />
+		<set name="price" val="155000" />
+		<set name="commissionItemType" val="PET_EQUIPMENT" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="HATCHLING_GROUP" />
+		</cond>
+		<stats>
+			<stat type="pAtk">9</stat>
+			<stat type="mAtk">10</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">277</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="3921" name="Shadow Fang" type="Weapon">
+		<!-- Double-click to wear. Only for hatchlings. -->
+		<set name="icon" val="icon.etc_pet_arms_i03" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="100" />
+		<set name="price" val="210000" />
+		<set name="commissionItemType" val="PET_EQUIPMENT" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="HATCHLING_GROUP" />
+		</cond>
+		<stats>
+			<stat type="pAtk">10</stat>
+			<stat type="mAtk">11</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">277</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="3922" name="Alya Fang" type="Weapon">
+		<!-- Double-click to wear. Only for hatchlings. -->
+		<set name="icon" val="icon.etc_pet_arms_i04" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="100" />
+		<set name="price" val="285000" />
+		<set name="commissionItemType" val="PET_EQUIPMENT" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="HATCHLING_GROUP" />
+		</cond>
+		<stats>
+			<stat type="pAtk">12</stat>
+			<stat type="mAtk">13</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">277</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="3923" name="Torturer" type="Weapon">
+		<!-- Double-click to wear. Only for hatchlings. -->
+		<set name="icon" val="icon.etc_pet_arms_i04" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="100" />
+		<set name="price" val="380000" />
+		<set name="commissionItemType" val="PET_EQUIPMENT" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="HATCHLING_GROUP" />
+		</cond>
+		<stats>
+			<stat type="pAtk">13</stat>
+			<stat type="mAtk">16</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">277</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="3924" name="Unuk Alhay Fang" type="Weapon">
+		<!-- Double-click to wear. Only for hatchlings. -->
+		<set name="icon" val="icon.etc_pet_arms_i04" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="100" />
+		<set name="price" val="550000" />
+		<set name="commissionItemType" val="PET_EQUIPMENT" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="HATCHLING_GROUP" />
+		</cond>
+		<stats>
+			<stat type="pAtk">15</stat>
+			<stat type="mAtk">18</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">277</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="3925" name="Antiplague" type="Weapon">
+		<!-- Double-click to wear. Only for hatchlings. -->
+		<set name="icon" val="icon.etc_pet_arms_i04" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="100" />
+		<set name="price" val="800000" />
+		<set name="commissionItemType" val="PET_EQUIPMENT" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="HATCHLING_GROUP" />
+		</cond>
+		<stats>
+			<stat type="pAtk">17</stat>
+			<stat type="mAtk">21</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">277</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
 	<item id="3926" name="Scroll: Guidance" type="EtcItem">
-		<!-- Increases P. Accuracy by 2 for 20 minutes when used. -->
+		<!-- Accuracy increases. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
+		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -20,12 +651,12 @@
 		</skills>
 	</item>
 	<item id="3927" name="Scroll: Death Whisper" type="EtcItem">
-		<!-- For 20 minutes, P. Critical Damage + 25%. -->
+		<!-- Increases P. Critical Damage. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
+		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -39,12 +670,12 @@
 		</skills>
 	</item>
 	<item id="3928" name="Scroll: Focus" type="EtcItem">
-		<!-- Increases P. Critical Rate by 20% for 20 minutes when used. -->
+		<!-- P. Critical Rate increases. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
+		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -57,13 +688,13 @@
 			<skill id="2052" level="1" /> <!-- Scroll: Focus -->
 		</skills>
 	</item>
-	<item id="3929" name="Scroll: Acumen" type="EtcItem">
-		<!-- When used increases Casting Spd. by 15% for 20 minutes. -->
+	<item id="3929" name="Scroll: Greater Acumen" type="EtcItem">
+		<!-- Spell Casting Spd. Increases. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
+		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -77,12 +708,12 @@
 		</skills>
 	</item>
 	<item id="3930" name="Scroll: Haste" type="EtcItem">
-		<!-- When used increases Atk. Spd. by 15% for 20 minutes. -->
+		<!-- Increases Atk. Spd. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
+		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -101,7 +732,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
+		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -114,13 +745,13 @@
 			<skill id="2055" level="1" /> <!-- Scroll: Agility -->
 		</skills>
 	</item>
-	<item id="3932" name="Scroll: Empower" type="EtcItem">
-		<!-- When used increases M. Atk. by 55% for 20 minutes. -->
+	<item id="3932" name="Scroll: Mystic Empower" type="EtcItem">
+		<!-- M. Atk. Increases. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
+		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -139,7 +770,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
+		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -153,12 +784,12 @@
 		</skills>
 	</item>
 	<item id="3934" name="Scroll: Wind Walk" type="EtcItem">
-		<!-- Increases Speed by 20 for 20 minutes when used. -->
+		<!-- Speed increases. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
+		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -177,7 +808,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
+		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -196,7 +827,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
+		<set name="weight" val="10" />
 		<set name="price" val="400000" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
@@ -218,8 +849,8 @@
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="300" />
 		<set name="price" val="81800" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="SPEAR" />
 		<set name="isAppearanceable" val="true" />
@@ -249,8 +880,8 @@
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="300" />
 		<set name="price" val="81800" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="SPEAR" />
 		<set name="isAppearanceable" val="true" />
@@ -280,8 +911,8 @@
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="300" />
 		<set name="price" val="81800" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="SPEAR" />
 		<set name="isAppearanceable" val="true" />
@@ -339,7 +970,7 @@
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3944" name="Spellbook: Light" type="EtcItem">
+	<item id="3944" name="Spellbook: Decrease Weight" type="EtcItem">
 		<!-- Spellbook needed to learn Decrease Weight. Used by Elven Oracles. Required level: 35 -->
 		<set name="icon" val="icon.etc_spell_books_blue_i00" />
 		<set name="immediate_effect" val="true" />
@@ -349,8 +980,28 @@
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 	</item>
+	<item id="3945" name="Boat Ticket: Talking Island to Giran" type="EtcItem">
+		<!-- Ship ticket: From Talking Island - To Giran -->
+		<set name="icon" val="icon.etc_ticket_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+		<set name="price" val="5000" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="3946" name="Boat Ticket: Giran to Talking Island" type="EtcItem">
+		<!-- Ship ticket: From Giran - To Talking Island -->
+		<set name="icon" val="icon.etc_ticket_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+		<set name="price" val="5000" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+	</item>
 	<item id="3947" name="Blessed Spiritshot (No-grade)" type="EtcItem">
-		<!-- A Spiritshot bestowed on a weapon increases its M. Atk. Used with a No-grade weapon. -->
+		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its magic significantly. Used with No-grade weapons. -->
 		<set name="icon" val="icon.etc_spell_shot_white_i01" />
 		<set name="default_action" val="SPIRITSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -366,7 +1017,7 @@
 		</skills>
 	</item>
 	<item id="3948" name="Blessed Spiritshot (D-grade)" type="EtcItem">
-		<!-- The power of a higher-level spirit is bestowed upon a weapon causing its M. Atk. to momentarily increase. Used with a D-grade weapon. -->
+		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its magic significantly. Used with D-grade weapons. -->
 		<set name="icon" val="icon.etc_spell_shot_blue_i01" />
 		<set name="default_action" val="SPIRITSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -384,7 +1035,7 @@
 		</skills>
 	</item>
 	<item id="3949" name="Blessed Spiritshot (C-grade)" type="EtcItem">
-		<!-- The power of a higher-level spirit is bestowed upon a weapon causing its M. Atk. to momentarily increase. Used with a C-grade weapon. -->
+		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its magic significantly. Used with C-grade weapons. -->
 		<set name="icon" val="icon.etc_spell_shot_green_i01" />
 		<set name="default_action" val="SPIRITSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -402,7 +1053,7 @@
 		</skills>
 	</item>
 	<item id="3950" name="Blessed Spiritshot (B-grade)" type="EtcItem">
-		<!-- The power of a higher-level spirit is bestowed upon a weapon causing its M. Atk. to momentarily increase. Used with a B-grade weapon. -->
+		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its magic significantly. Used with B-grade weapons. -->
 		<set name="icon" val="icon.etc_spell_shot_red_i01" />
 		<set name="default_action" val="SPIRITSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -420,7 +1071,7 @@
 		</skills>
 	</item>
 	<item id="3951" name="Blessed Spiritshot (A-grade)" type="EtcItem">
-		<!-- The power of a Spiritshot is bestowed upon a weapon, temporarily increasing its magical power. Used with A-grade weapons. -->
+		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its magic significantly. Used with a-grade weapons. -->
 		<set name="icon" val="icon.etc_spell_shot_silver_i01" />
 		<set name="default_action" val="SPIRITSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -435,6 +1086,24 @@
 		<set name="commissionItemType" val="SPIRITSHOT" />
 		<skills>
 			<skill id="2163" level="1" /> <!-- Blessed Spiritshot (A-grade) -->
+		</skills>
+	</item>
+	<item id="3952" name="Blessed Spiritshot (S-grade)" type="EtcItem">
+		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its magic significantly. Used with S-grade weapons. -->
+		<set name="icon" val="icon.etc_spell_shot_gold_i01" />
+		<set name="default_action" val="SPIRITSHOT" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="price" val="350" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="BlessedSpiritShot" />
+		<set name="crystal_type" val="S" />
+		<set name="enchant_enabled" val="1" />
+		<set name="etcitem_type" val="SOULSHOT" />
+		<set name="commissionItemType" val="SPIRITSHOT" />
+		<skills>
+			<skill id="2164" level="1" /> <!-- Blessed Spiritshot (S-grade) -->
 		</skills>
 	</item>
 	<item id="3953" name="Recipe: Blessed Spiritshot (D-grade)" type="EtcItem">
@@ -493,13 +1162,27 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
+	<item id="3957" name="Recipe: Blessed Spiritshot (S-grade)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for the Blessed Spiritshot (S-grade). Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
+		<set name="icon" val="icon.etc_recipe_black_i00" />
+		<set name="default_action" val="RECIPE" />
+		<set name="etcitem_type" val="RECIPE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="30" />
+		<set name="price" val="450000" />
+		<set name="recipe_id" val="327" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="RECIPE" />
+		<set name="handler" val="Recipes" />
+	</item>
 	<item id="3958" name="Blessed Scroll of Escape" type="EtcItem">
-		<!-- Magical scroll that relocates you to the nearest village. -->
+		<!-- Magical scroll that relocates user to the nearest village -->
 		<set name="icon" val="icon.etc_scroll_of_return_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
+		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -514,7 +1197,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
+		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -524,7 +1207,7 @@
 		</skills>
 	</item>
 	<item id="3960" name="Mercenary Posting Ticket (Sword/Stationary)" type="EtcItem">
-		<!-- Cannot be used. Can be sold at an NPC? store. -->
+		<!-- Gludio/Sword/Stationary. -->
 		<set name="icon" val="icon.mticket_sword_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -535,7 +1218,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3961" name="Mercenary Posting Ticket (Spear/Stationary)" type="EtcItem">
-		<!-- Cannot be used. Can be sold at an NPC? store. -->
+		<!-- Gludio/Spear/Stationary. -->
 		<set name="icon" val="icon.mticket_pole_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -546,7 +1229,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3962" name="Mercenary Posting Ticket (Bow/Stationary)" type="EtcItem">
-		<!-- Cannot be used. Can be sold at an NPC? store. -->
+		<!-- Gludio/Bow/Stationary. -->
 		<set name="icon" val="icon.mticket_bow_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -557,7 +1240,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3963" name="Mercenary Posting Ticket (Cleric/Stationary)" type="EtcItem">
-		<!-- Cannot be used. Can be sold at an NPC? store. -->
+		<!-- Gludio/Cleric/Stationary. -->
 		<set name="icon" val="icon.mticket_cleric_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -568,7 +1251,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3964" name="Mercenary Posting Ticket (Wizard/Stationary)" type="EtcItem">
-		<!-- Cannot be used. Can be sold at an NPC? store. -->
+		<!-- Gludio/Wizard/Stationary. -->
 		<set name="icon" val="icon.mticket_wizard_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -579,7 +1262,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3965" name="Mercenary Posting Ticket (Sword/Mobile)" type="EtcItem">
-		<!-- Cannot be used. Can be sold at an NPC? store. -->
+		<!-- Gludio/Sword/Mobile. -->
 		<set name="icon" val="icon.mticket_sword_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -590,7 +1273,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3966" name="Mercenary Posting Ticket (Spear/Mobile)" type="EtcItem">
-		<!-- Cannot be used. Can be sold at an NPC? store. -->
+		<!-- Gludio/Spear/Mobile. -->
 		<set name="icon" val="icon.mticket_pole_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -601,7 +1284,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3967" name="Mercenary Posting Ticket (Bow/Mobile)" type="EtcItem">
-		<!-- Cannot be used. Can be sold at an NPC? store. -->
+		<!-- Gludio/Bow/Mobile. -->
 		<set name="icon" val="icon.mticket_bow_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -612,7 +1295,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3968" name="Mercenary Posting Ticket (Cleric/Mobile)" type="EtcItem">
-		<!-- Cannot be used. Can be sold at an NPC? store. -->
+		<!-- Gludio/Cleric/Mobile. -->
 		<set name="icon" val="icon.mticket_cleric_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -623,7 +1306,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3969" name="Mercenary Posting Ticket (Wizard/Mobile)" type="EtcItem">
-		<!-- Cannot be used. Can be sold at an NPC? store. -->
+		<!-- Gludio/Wizard/Mobile. -->
 		<set name="icon" val="icon.mticket_wizard_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -634,7 +1317,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3970" name="Mercenary Posting Ticket (Teleporter1)" type="EtcItem">
-		<!-- Cannot be used. Can be sold at an NPC? store. -->
+		<!-- Placed in Gludio, at the Teleporter or inside the castle, this ticket allows teleportation to the inner castle or the guardian's location. -->
 		<set name="icon" val="icon.mticket_teleporter_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -645,7 +1328,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3971" name="Mercenary Posting Ticket (Teleporter2)" type="EtcItem">
-		<!-- Cannot be used. Can be sold at an NPC? store. -->
+		<!-- Placed in Gludio, at the Teleporter or inside the castle, this ticket allows teleportation to the outer castle or the guardian's location. -->
 		<set name="icon" val="icon.mticket_teleporter_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -656,7 +1339,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3972" name="Mercenary Posting Ticket (Teleporter3)" type="EtcItem">
-		<!-- Cannot be used. Can be sold at an NPC? store. -->
+		<!-- Placed in Gludio, at the Teleporter or inside the castle, this ticket allows teleportation to the inner or outer castle. -->
 		<set name="icon" val="icon.mticket_teleporter_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />

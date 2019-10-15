@@ -17,7 +17,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1201" name="Mark of Faith" type="EtcItem">
-		<!-- Take this token to the high priest of the temple to change your class to a Cleric. -->
+		<!-- Take this token to the high priest of the temple to change your occupation to a Cleric. -->
 		<set name="icon" val="icon.accessary_earing_of_wisdom_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -65,7 +65,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1204" name="Elven Knight Brooch" type="EtcItem">
-		<!-- Take this brooch to the Grand Master of the Fighter Guild and he will change your class to a Knight. -->
+		<!-- Take this brooch to the Grand Master of the Fighter Guild and he will change your occupation to a Knight. -->
 		<set name="icon" val="icon.accessary_elven_earing_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -145,7 +145,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1209" name="Prias' 2nd Torn Letter" type="EtcItem">
-		<!-- Torn piece of letter written by Prias and is not legible. Collect all four torn pieces and take them to Guard Moretti. -->
+		<!-- Torn piece of letter written by Prias and is not legible Collect all four torn pieces and take them to Guard Moretti. -->
 		<set name="icon" val="icon.etc_piece_of_paper_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -209,7 +209,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1213" name="Guard's Bow" type="Weapon">
-		<!-- Bow given by Guard Moretti. May be efficiently used for some purpose. Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
+		<!-- Bow given by Guard Moretti. May be efficiently used for some purpose. -->
 		<set name="icon" val="icon.weapon_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -218,8 +218,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1800" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="7" />
+		<set name="spiritshots" val="2" />
 		<set name="mp_consume" val="1" />
 		<set name="reuse_delay" val="1500" />
 		<set name="is_tradable" val="false" />
@@ -273,7 +273,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1216" name="Moretti's Letter" type="EtcItem">
+	<item id="1216" name="Honorary Guard" type="EtcItem">
 		<!-- Letter written by Guard Moretti to Master Reisa. Take it to Master Reisa. -->
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="immediate_effect" val="true" />
@@ -290,7 +290,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1217" name="Reisa's Recommendation" type="EtcItem">
-		<!-- Take this recommendation to the Grand Master of the Fighter Guild to change your class to an Elven Scout. -->
+		<!-- Take this recommendation to the Grand Master of the Fighter Guild to change your occupation to an Elven Scout. -->
 		<set name="icon" val="icon.etc_letter_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -338,7 +338,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1220" name="Ruby of Magic" type="EtcItem">
-		<!-- Ruby that symbolizes fire. Gather 4 jewels that symbolize nature and take them to Rosella for permission to change your class. -->
+		<!-- Ruby that symbolizes fire. Gather 4 jewels that symbolize nature and take them to Rosella for a token to change occupations. -->
 		<set name="icon" val="icon.etc_jewel_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -354,7 +354,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1221" name="Pure Aquamarine" type="EtcItem">
-		<!-- Aquamarine that symbolizes water. Gather the 4 jewels that symbolize nature and take them to Rosella for permission to change your class. -->
+		<!-- Aquamarine that symbolizes water. Gather the 4 jewels that symbolize nature and take them to Rosella for a token to change occupations. -->
 		<set name="icon" val="icon.etc_jewel_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -434,7 +434,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1226" name="Nobility Amethyst" type="EtcItem">
-		<!-- Amethyst that symbolizes wind. Gather 4 jewels that symbolize nature and take them to Rosella for permission to change your class. -->
+		<!-- Amethyst that symbolizes wind. Gather 4 jewels that symbolize nature and take them to Rosella for a token to change occupations. -->
 		<set name="icon" val="icon.etc_jewel_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -482,7 +482,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1229" name="Fertility Peridot" type="EtcItem">
-		<!-- Peridot that symbolizes the earth. Gather 4 jewels that symbolize nature and take them to Rosella for permission to change your class. -->
+		<!-- Peridot that symbolizes the earth. Gather 4 jewels that symbolize nature and take them to Rosella for a token to change occupations. -->
 		<set name="icon" val="icon.etc_jewel_green_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -498,7 +498,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1230" name="Eternity Diamond" type="EtcItem">
-		<!-- Take this token to the Grand Master of the Mystic Guild to change your class to an Elven Wizard. -->
+		<!-- Take this token to the Grand Master of the Magician Guild to change your occupation to an Elven Wizard. -->
 		<set name="icon" val="icon.etc_jewel_silver_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -578,7 +578,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1235" name="Leaf of Oracle" type="EtcItem">
-		<!-- Take this to the high priest to change your class to an Oracle. -->
+		<!-- Take this to the high priest to change your occupation to an Oracle. -->
 		<set name="icon" val="icon.etc_leaf_green_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -610,7 +610,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1237" name="Palus Charm" type="EtcItem">
-		<!-- Charm inscribed with palus runes that symbolize a deep lake. Carry this and hunt Lycanthropes in the Neutral Zone. -->
+		<!-- Charm inscribed with palus runes that symbolize a deep lake. Carry this and hunt lycanthrope in the Neutral Zone. -->
 		<set name="icon" val="icon.accessary_earing_of_grace_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -626,7 +626,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1238" name="Lycanthrope Skull" type="EtcItem">
-		<!-- Skull obtained after killing a Lycanthrope. Collect thirteen and take them to Master Virgil. -->
+		<!-- Skull obtained after killing lycanthrope. Collect thirteen and take them to Master Virgil. -->
 		<set name="icon" val="icon.etc_skull_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -674,7 +674,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1241" name="Giant Venomous Spider's Carapace" type="EtcItem">
-		<!-- The hard carapace of a Venomous Spider. Take this and five Trimden Silk threads to Abyssal Celebrant Kalinta. -->
+		<!-- The hard carapace of a Venomous Spider. Take this and five Arachnid Tracker Silk threads to Abyssal Celebrant Kalinta. -->
 		<set name="icon" val="icon.etc_bark_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -722,7 +722,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1244" name="Gaze of Abyss" type="EtcItem">
-		<!-- Take this token to the Grand Master of the Dark Elf guild to change your class to a Palus Knight. -->
+		<!-- Take this token to the Grand Master of the Fighter Guild to change your occupation to a Knight. -->
 		<set name="icon" val="icon.etc_eyeball_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -754,7 +754,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1246" name="Arkenia's Letter" type="EtcItem">
-		<!-- Letter received from Arkenia. Take this to Guard Leikan to obtain information about the thieves. -->
+		<!-- Letter received from Arkenia. Take this to Guard Leikan to obtain information about the thief. -->
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -770,7 +770,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1247" name="Leikan's Note" type="EtcItem">
-		<!-- Simple contract given by Guard Leikan. Hunt Moonstone Beasts and collect their molars. -->
+		<!-- Simple contract given by Guard Leikan. Must hunt moonstone beasts and collect their molars. -->
 		<set name="icon" val="icon.etc_piece_of_paper_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -786,7 +786,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1248" name="Moonstone Beast's Molar" type="EtcItem">
-		<!-- Molar obtained after killing a Moonstone Beast. Collect 10 of these to take to Guard Leikan. -->
+		<!-- Molar obtained after killing a moonstone beast. Collect 10 of these to take to Guard Leikan. -->
 		<set name="icon" val="icon.etc_molar_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -850,7 +850,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1252" name="Iron Heart" type="EtcItem">
-		<!-- Take this to the Grand Master of the Dark Elf Guild to change your class to an Assassin. -->
+		<!-- Take this to the Grand Master of the Dark Elf Guild to change your occupation to an Assassin. -->
 		<set name="icon" val="icon.accessary_earing_of_mana_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -994,7 +994,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1261" name="Dark Jewel" type="EtcItem">
-		<!-- Take this token to the Grand Master of the Dark Elf guild to change your class to a Dark Wizard. -->
+		<!-- Take this token to the Grand Master of the Dark Elf guild to change your occupation to a Dark Wizard. -->
 		<set name="icon" val="icon.accessary_necklace_of_phantom_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1042,7 +1042,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1264" name="Bloody Rune" type="EtcItem">
-		<!-- Runes written with the blood of Dark Succubus. Collect 5 and take to Magister Talbot. -->
+		<!-- Runes written with the blood of dark Succubus. Collect 5 and take to Magister Talbot. -->
 		<set name="icon" val="icon.etc_piece_of_paper_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1090,7 +1090,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1267" name="Penitent's Badge" type="EtcItem">
-		<!-- A badge that shows one is in the course of repenting one's sins. Carry this and hunt Skeletons and Zombies in the Ruins of Despair. -->
+		<!-- A badge that shows one is in the course of repenting one's sins. Carry this and hunt skeletons and zombies in the Ruins of Despair. -->
 		<set name="icon" val="icon.accessary_earing_of_holy_spirit_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1138,7 +1138,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1270" name="Orb of Abyss" type="EtcItem">
-		<!-- Take this token to a Grand Master of a Dark Elf Guild in any major city to change your class to a Shillien Oracle. -->
+		<!-- Take this token to a Grand Master of a Dark Elf Guild in any major city to change your occupation to a Shillien Oracle. -->
 		<set name="icon" val="icon.etc_bead_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1282,7 +1282,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1279" name="Herb Scent" type="EtcItem">
-		<!-- Fragrant herb potpourri. Obtain 3 Hearts of Lunacy from a Skeleton Scout and take them to Arkenia. -->
+		<!-- Fragrant herb potpourri. Obtain 3 Hearts of Lunacy from a skeleton scout and take them to Arkenia. -->
 		<set name="icon" val="icon.etc_oil_pot_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1298,7 +1298,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1280" name="Map of Light" type="EtcItem">
-		<!-- Map given by the Flame Salamander. Kill Ratman Warriors and give the key of flame to the Flame Salamander in exchange for the token of fire. -->
+		<!-- Map given by the Flame Salamander. Kill ratman fighters and give the key of flame to the salamander in exchange for the token of fire. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1314,7 +1314,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1281" name="Key of Flame" type="EtcItem">
-		<!-- The key that can be obtained by killing a Ratman Warrior. When you give it to the Flame Salamander, it will give you the token of fire. -->
+		<!-- The key that can be obtained by killing a ratman fighter. When you give it to a salamander, he will give you the token of fire. -->
 		<set name="icon" val="icon.etc_key_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1378,7 +1378,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1285" name="Wind Bangle" type="EtcItem">
-		<!-- The Wind Token given to you by the Wind Spirit Sylph. Collect all four tokens and give them to Parina to receive a special token that will enable you to class transfers. -->
+		<!-- The Wind Token given to you by the Wind Spirit Sylph. Collect all four tokens and give them to Parina to receive a special token that will enable you to change occupations. -->
 		<set name="icon" val="icon.accessary_blue_coral_ring_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1394,7 +1394,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1286" name="Rama's Diary" type="EtcItem">
-		<!-- Kill Water Seers and take two Sparkle Pebbles to Water Undine for the token of water. -->
+		<!-- Kill water seer and take two sparkle pebbles to water Undine for the token of water. -->
 		<set name="icon" val="icon.etc_spell_books_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1410,7 +1410,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1287" name="Sparkle Pebble" type="EtcItem">
-		<!-- Kill Water Seers in Lake Fellmere for stones. If you give this to Water Undine, she will give you the token of water. -->
+		<!-- Kill water seer in Lake Fellmere for stones. If you give this to Water Undine, she will give you the token of water. -->
 		<set name="icon" val="icon.etc_crystal_ball_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1442,7 +1442,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1289" name="Rusty Coin" type="EtcItem">
-		<!-- The coin given by Earth Snake. Kill Read Bears and get the Red Soil to give it to the Earth Snake for Token of Earth. -->
+		<!-- The coin given by earth snake. Kill red bear and give red soil to earth snake for Token of Earth. -->
 		<set name="icon" val="icon.etc_coins_gold_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1458,7 +1458,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1290" name="Red Soil" type="EtcItem">
-		<!-- The soil obtained from killing Red Bears. Give to the Earth Snake for the token of earth. -->
+		<!-- The soil obtained from killing red bear. Give to the earth snake for the token of earth. -->
 		<set name="icon" val="icon.etc_powder_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1474,7 +1474,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1291" name="Earth Ring" type="EtcItem">
-		<!-- Token of Earth given by Earth Snake. Collect 4 tokens and give them to Parina to receive the token that enables class transfers. -->
+		<!-- Token of Earth given by earth snake. Collect 4 tokens and give them to Parina to receive the token that enables changing occupations. -->
 		<set name="icon" val="icon.accessary_ring_of_firefly_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1490,7 +1490,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1292" name="Bead of Season" type="EtcItem">
-		<!-- Take this bead to the high priest of the temple to change your class to a Wizard. -->
+		<!-- Take this bead to the high priest of the temple to change your occupation to a Wizard. -->
 		<set name="icon" val="icon.etc_crystal_ball_green_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1541,8 +1541,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="200" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
 		<set name="is_tradable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -1570,8 +1570,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="300" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
 		<set name="is_tradable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -1599,8 +1599,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="400" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
 		<set name="is_tradable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -1628,8 +1628,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="500" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
 		<set name="is_tradable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -1657,8 +1657,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="500" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
 		<set name="is_tradable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />

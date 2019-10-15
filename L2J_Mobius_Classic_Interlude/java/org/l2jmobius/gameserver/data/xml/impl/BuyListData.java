@@ -37,6 +37,7 @@ import org.l2jmobius.gameserver.datatables.ItemTable;
 import org.l2jmobius.gameserver.model.buylist.Product;
 import org.l2jmobius.gameserver.model.buylist.ProductList;
 import org.l2jmobius.gameserver.model.items.Item;
+import org.l2jmobius.gameserver.model.items.type.CrystalType;
 
 /**
  * Loads buy lists for NPCs.
@@ -127,6 +128,13 @@ public class BuyListData implements IXmlReader
 								final long restockDelay = parseLong(attrs, "restock_delay", -1L);
 								final long count = parseLong(attrs, "count", -1L);
 								final int baseTax = parseInteger(attrs, "baseTax", defaultBaseTax);
+								
+								// Max equipable item grade configuration.
+								final int itemCrystalId = item.getCrystalType().getId();
+								if ((itemCrystalId > Config.MAX_EQUIPABLE_ITEM_GRADE.getId()) && (itemCrystalId < CrystalType.EVENT.getId()))
+								{
+									break;
+								}
 								
 								buyList.addProduct(new Product(buyListId, item, price, restockDelay, count, baseTax));
 							}

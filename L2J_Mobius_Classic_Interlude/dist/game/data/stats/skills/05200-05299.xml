@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="5200" toLevel="8" name="Pet Recharge">
-		<!-- Restores MP. -->
+		<!-- Regenerates MP. -->
 		<icon>icon.skill1013</icon>
 		<castRange>400</castRange>
 		<effectPoint>
@@ -137,7 +137,7 @@
 		</effects>
 	</skill>
 	<skill id="5202" toLevel="12" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Momentarily immobile due to the Stun effect. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -187,11 +187,13 @@
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="5203" toLevel="12" name="Fear">
-		<!-- Afflicted with Fear and moving against own will momentarily. -->
+		<!-- Inflicted with Fear and moving against own will momentarily. -->
 		<icon>icon.skill1092</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -267,7 +269,7 @@
 		</effects>
 	</skill>
 	<skill id="5206" toLevel="1" name="Decrease Speed">
-		<!-- Mutant Curse: Speed decreases momentarily. Effect 1. -->
+		<!-- Curse of mutated animals: Speed decreases momentarily. Effect 1. -->
 		<icon>icon.skill1160</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -298,7 +300,7 @@
 		</effects>
 	</skill>
 	<skill id="5207" toLevel="1" name="Decrease Atk. Spd.">
-		<!-- Mutant Curse: Atk. Spd. decreases momentarily. Effect 1. -->
+		<!-- Curse of mutated animals: Atk. Spd. decreases momentarily. Effect 1. -->
 		<icon>icon.skill4038</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -400,7 +402,7 @@
 		</effects>
 	</skill>
 	<skill id="5211" toLevel="1" name="Vampiric Rage (Event)">
-		<!-- Provides the ability to recover HP temporarily by damaging the enemy with a certain probability. Effect 4. -->
+		<!-- Uses damage inflicted upon the enemy to temporarily restore HP with a certain probability. Effect 4. -->
 		<icon>icon.skill1268</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -424,7 +426,7 @@
 		</effects>
 	</skill>
 	<skill id="5212" toLevel="1" name="Regeneration (Event)">
-		<!-- Increases HP recovery bonus for a fixed time. Effect 3. -->
+		<!-- HP recovery bonus is increased for a fixed time. Effect 3. -->
 		<icon>icon.skill1044</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -448,7 +450,7 @@
 		</effects>
 	</skill>
 	<skill id="5213" toLevel="1" name="Haste (Event)">
-		<!-- Temporarily increases Atk. Spd. Effect 1. -->
+		<!-- Atk. Spd. increases temporarily. Effect 1. -->
 		<icon>icon.skill1086</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -520,7 +522,7 @@
 		</effects>
 	</skill>
 	<skill id="5216" toLevel="1" name="Concentration (Event)">
-		<!-- Momentarily lowers the probability of magic being canceled due to damage taken. Effect 1. -->
+		<!-- Momentarily decreases the probability of magic being canceled due to damage taken. Effect 1. -->
 		<icon>icon.skill1078</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -579,7 +581,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5219" toLevel="1" name="Giant Mutant Stun">
-		<!-- Curse of giant mutated animal: Stunned and unable to move momentarily. -->
+		<!-- Giant Mutant Curse: Momentarily immobile due to the Stun effect. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -605,7 +607,9 @@
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="5220" toLevel="1" name="Giant Mutant Fear">
@@ -707,16 +711,18 @@
 		</effects>
 	</skill>
 	<skill id="5225" toLevel="1" name="Invincibility">
-		<!-- Invincible against standard targets and skills and buffs/debuffs. -->
+		<!-- Invincible against general attack and skill, buff/de-buff. -->
 		<icon>icon.skill1427</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>PD_UP_SPECIAL</abnormalType>
 		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
 		<effectPoint>100</effectPoint>
+		<hitTime>3500</hitTime>
 		<magicLvl>85</magicLvl>
 		<mpConsume>60</mpConsume>
 		<operateType>A2</operateType>
+		<reuseDelay>6000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -752,8 +758,109 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
+	<skill id="5227" toLevel="2" name="Ground Strike">
+		<!-- Powerful attack on surrounding area. -->
+		<affectRange>300</affectRange>
+		<effectPoint>-100</effectPoint>
+		<hitTime>3000</hitTime>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">98</value>
+		</magicLvl>
+		<mpConsume>187</mpConsume>
+		<operateType>A1</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<reuseDelay>5000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">100756</value>
+					<value level="2">213631</value>
+				</power>
+				<criticalChance>20</criticalChance>
+			</effect>
+			<effect name="FlyAway"> <!-- TODO: {i_fly_away;curve;push;200} -->
+				<radius>200</radius>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5228" toLevel="2" name="Jump Attack">
+		<!-- Powerful attack on surrounding area. -->
+		<affectRange>200</affectRange>
+		<effectPoint>-100</effectPoint>
+		<hitTime>3000</hitTime>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">98</value>
+		</magicLvl>
+		<mpConsume>373</mpConsume>
+		<operateType>A1</operateType>
+		<reuseDelay>5000</reuseDelay>
+		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">100756</value>
+					<value level="2">213631</value>
+				</power>
+				<criticalChance>20</criticalChance>
+			</effect>
+			<effect name="FlyAway"> <!-- TODO: {i_fly_away;curve;push;200} -->
+				<radius>200</radius>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="5229" toLevel="2" name="Strong Punch">
+		<!-- Stunned by a Heavy Punch Attack. -->
+		<icon>icon.skill0100</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<activateRate>80</activateRate>
+		<basicProperty>PHYSICAL</basicProperty>
+		<castRange>600</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1100</effectRange>
+		<hitTime>3000</hitTime>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>2</lvlBonusRate>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">98</value>
+		</magicLvl>
+		<mpConsume>75</mpConsume>
+		<operateType>A2</operateType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<reuseDelay>5000</reuseDelay>
+		<trait>SHOCK</trait>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">125946</value>
+					<value level="2">267038</value>
+				</power>
+				<criticalChance>20</criticalChance>
+			</effect>
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
+			<effect name="FlyAway"> <!-- TODO: {i_fly_away;curve;push;300} -->
+				<radius>300</radius>
+			</effect>
+		</effects>
+	</skill>
 	<skill id="5230" toLevel="1" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -778,11 +885,13 @@
 			<effect name="PhysicalAttack">
 				<power>2784</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="5231" toLevel="1" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -807,11 +916,13 @@
 			<effect name="PhysicalAttack">
 				<power>5704</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="5232" toLevel="1" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -836,7 +947,9 @@
 			<effect name="PhysicalAttack">
 				<power>11407</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="5233" toLevel="1" name="Weight Spin Attack - Weak">
@@ -915,7 +1028,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5237" toLevel="1" name="Decrease Speed">
+	<skill id="5237" toLevel="1" name="Speed Down">
 		<!-- Decreases Speed. Effect 2. -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
@@ -971,7 +1084,9 @@
 			<effect name="MagicalAttack">
 				<power>298</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="5239" toLevel="5" name="Event Timer">
@@ -1000,7 +1115,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5240" toLevel="1" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -1027,11 +1142,13 @@
 			<effect name="PhysicalAttack">
 				<power>6723</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="5241" toLevel="1" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -1057,11 +1174,13 @@
 			<effect name="PhysicalAttack">
 				<power>11205</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="5242" toLevel="1" name="Sickness">
-		<!-- Blurs vision. -->
+		<!-- Temporary illness that makes you queasy and blurs your vision. -->
 		<icon>icon.skill5242</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -1440,7 +1559,7 @@
 		</effects>
 	</skill>
 	<skill id="5250" toLevel="1" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -1464,11 +1583,13 @@
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="5251" toLevel="12" name="Poison">
-		<!-- HP cut due to Poison. $s1 power. -->
+		<!-- Poisons a target, momentarily decreasing HP. Effect $s1. -->
 		<icon>icon.skill4035</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -1602,7 +1723,9 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="5253" toLevel="12" name="Bleed">
@@ -1973,7 +2096,7 @@
 		</effects>
 	</skill>
 	<skill id="5259" toLevel="12" name="Fear">
-		<!-- Afflicted with Fear and moving against own will momentarily. -->
+		<!-- Inflicted with Fear and moving against own will momentarily. -->
 		<icon>icon.skill1092</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -2042,7 +2165,7 @@
 		</effects>
 	</skill>
 	<skill id="5260" toLevel="12" name="Disarm">
-		<!-- Disarms equipment. -->
+		<!-- Disarmed. -->
 		<icon>icon.skill0485</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -2091,6 +2214,32 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="Disarm" />
+		</effects>
+	</skill>
+	<skill id="5261" toLevel="1" name="Zombie">
+		<!-- Condition causing target to transform into zombie. Condition to decrease physical ability. -->
+		<icon>icon.skilltransform3</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>7</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
+		<effectPoint>-100</effectPoint>
+		<hitTime>1500</hitTime>
+		<magicLvl>60</magicLvl>
+		<mpConsume>44</mpConsume>
+		<mpInitialConsume>11</mpInitialConsume>
+		<operateType>A2</operateType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<effectRange>1100</effectRange>
+		<isDebuff>true</isDebuff>
+		<castRange>600</castRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>303</transformationId>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="5262" toLevel="12" name="Rising Shot">
@@ -2708,14 +2857,16 @@
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 			<effect name="TargetCancel">
 				<chance>100</chance>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="5271" toLevel="19" name="Hold">
-		<!-- Inflicted with Hold and unable to move. -->
+		<!-- Inflicted with hold and unable to move momentarily. -->
 		<icon>icon.skill0518</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>

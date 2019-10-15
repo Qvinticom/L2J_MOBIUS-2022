@@ -54,6 +54,7 @@
 						<xs:attribute name="dyeName" type="xs:token" />
 						<xs:attribute name="dyeItemId" type="xs:positiveInteger" />
 						<xs:attribute name="dyeLevel" type="xs:positiveInteger" />
+						<xs:attribute name="isPremium" type="xs:boolean" use="optional" />
 					</xs:complexType>
 				</xs:element>
 			</xs:sequence>

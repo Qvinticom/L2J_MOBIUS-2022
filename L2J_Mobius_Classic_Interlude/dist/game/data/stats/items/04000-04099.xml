@@ -328,8 +328,8 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="300" />
 		<set name="price" val="81800" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="DAGGER" />
 		<set name="isAppearanceable" val="true" />
@@ -409,7 +409,6 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4037" name="Coin of Luck" type="EtcItem">
-		<!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_coins_gold_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -423,8 +422,28 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
+	<item id="4038" name="Hatchling Food" type="EtcItem">
+		<!-- When the hunger gauge of a Hatchling reaches 55% or below, its food will be consumed automatically. -->
+		<set name="icon" val="icon.etc_pouch_yellow_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="10" />
+		<set name="price" val="150" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="PetFood" />
+		<set name="commissionItemType" val="PET_SUPPLIES" />
+		<set name="for_npc" val="true" />
+		<cond addName="1" msgId="113">
+			<player categoryType="HATCHLING_GROUP" />
+		</cond>
+		<skills>
+			<skill id="2063" level="1" /> <!-- Hatchling Food -->
+		</skills>
+	</item>
 	<item id="4039" name="Mold Glue" type="EtcItem">
-		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<!-- Corroded ingredient. Sell it to a store or trade it in through the Aden Reconstruction Society for a new ingredient. -->
 		<set name="icon" val="icon.etc_reagent_red_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -435,7 +454,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4040" name="Mold Lubricant" type="EtcItem">
-		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<!-- Corroded ingredient. Sell it to a store or trade it in through the Aden Reconstruction Society for a new ingredient. -->
 		<set name="icon" val="icon.etc_reagent_gold_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -446,7 +465,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4041" name="Mold Hardener" type="EtcItem">
-		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<!-- Corroded ingredient. Sell it to a store or trade it in through the Aden Reconstruction Society for a new ingredient. -->
 		<set name="icon" val="icon.etc_reagent_blue_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -457,7 +476,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4042" name="Enria" type="EtcItem">
-		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<!-- Corroded ingredient. Sell it to a store or trade it in through the Aden Reconstruction Society for a new ingredient. -->
 		<set name="icon" val="icon.etc_gem_red_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -479,7 +498,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4044" name="Thons" type="EtcItem">
-		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<!-- Corroded ingredient. Sell it to a store or trade it in through the Aden Reconstruction Society for a new ingredient. -->
 		<set name="icon" val="icon.etc_gem_clear_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -490,7 +509,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4045" name="Maestro Holder" type="EtcItem">
-		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<!-- Corroded ingredient. Sell it to a store or trade it in through the Aden Reconstruction Society for a new ingredient. -->
 		<set name="icon" val="icon.etc_lump_yellow_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -501,7 +520,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4046" name="Maestro Anvil Lock" type="EtcItem">
-		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<!-- Corroded ingredient. Sell it to a store or trade it in through the Aden Reconstruction Society for a new ingredient. -->
 		<set name="icon" val="icon.etc_lump_dark_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -512,7 +531,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4047" name="Craftsman Mold" type="EtcItem">
-		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<!-- Corroded ingredient. Sell it to a store or trade it in through the Aden Reconstruction Society for a new ingredient. -->
 		<set name="icon" val="icon.etc_mold_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -523,7 +542,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4048" name="Maestro Mold" type="EtcItem">
-		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
+		<!-- Corroded ingredient. Sell it to a store or trade it in through the Aden Reconstruction Society for a new ingredient. -->
 		<set name="icon" val="icon.etc_silver_mold_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -534,7 +553,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4049" name="Adamantite Earring Gemstone" type="EtcItem">
-		<!-- Main ingredient definitely required for a Dwarf to make Admantite Earrings. Can be sold. -->
+		<!-- Main ingredient definitely required for a Dwarf to make admantite earrings. Can also be sold at ordinary shops. -->
 		<set name="icon" val="icon.etc_crystal_ball_gold_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -545,7 +564,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4050" name="Adamantite Ring Wire" type="EtcItem">
-		<!-- Main ingredient definitely required for a Dwarf to make Admantite Ring. Can be sold. -->
+		<!-- Main ingredient definitely required for a Dwarf to make admantite ring. Can also be sold at ordinary shops. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -556,7 +575,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4051" name="Adamantite Necklace Chain" type="EtcItem">
-		<!-- Main ingredient definitely required for a Dwarf to make Admantite Necklace. Can be sold. -->
+		<!-- Main ingredient definitely required for a Dwarf to make admantite necklace. Can also be sold at ordinary shops. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -567,7 +586,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4052" name="Black Ore Earring Piece" type="EtcItem">
-		<!-- Main ingredient definitely required for a Dwarf to make Black Ore Earring. Can be sold. -->
+		<!-- Main ingredient definitely required for a Dwarf to make Black Ore Earring. Can also be sold at ordinary shops. -->
 		<set name="icon" val="icon.etc_broken_crystal_silver_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -578,7 +597,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4053" name="Black Ore Ring Gemstone" type="EtcItem">
-		<!-- Main ingredient definitely required for a Dwarf to make Black Ore Ring. Can be sold. -->
+		<!-- Main ingredient definitely required for a Dwarf to make Black Ore Ring. Can also be sold at ordinary shops. -->
 		<set name="icon" val="icon.etc_gem_black_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -589,7 +608,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4054" name="Black Ore Necklace Beads" type="EtcItem">
-		<!-- Main ingredient definitely required for a Dwarf to make Black Ore Necklace. Can be sold. -->
+		<!-- Main ingredient definitely required for a Dwarf to make Black Ore Necklace. Can also be sold at ordinary shops. -->
 		<set name="icon" val="BranchSys2.icon.etc_blackorenecklace_beads_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -600,7 +619,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4055" name="Compound Shield Fragment" type="EtcItem">
-		<!-- Main ingredient definitely required for a Dwarf to make Compound Shield. Can be sold. -->
+		<!-- Main ingredient definitely required for a Dwarf to make Compound Shield. Can also be sold at ordinary shops. -->
 		<set name="icon" val="icon.etc_plate_silver_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -611,7 +630,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4056" name="Zubei's Breastplate Part" type="EtcItem">
-		<!-- Main ingredient definitely required for a Dwarf to make Zubei's Breastplate. Can be sold. -->
+		<!-- Main ingredient definitely required for a Dwarf to make Zubei's Breastplate. Can also be sold at ordinary shops. -->
 		<set name="icon" val="icon.etc_plate_silver_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -622,7 +641,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4057" name="Zubei's Gaiter Material" type="EtcItem">
-		<!-- Main ingredient definitely required for a Dwarf to make Zubei's Gaiters. Can be sold. -->
+		<!-- Main ingredient definitely required for a Dwarf to make Zubei's Gaiters. Can also be sold at ordinary shops. -->
 		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -633,7 +652,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4058" name="Implosion Boot Fragment" type="EtcItem">
-		<!-- Main ingredient definitely required for a Dwarf to make Implosion Boots. Can be sold. -->
+		<!-- Main ingredient definitely required for a Dwarf to make Implosion Boots. Can also be sold at ordinary shops. -->
 		<set name="icon" val="icon.etc_plate_silver_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -644,7 +663,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4059" name="Boots of Silence Fabric" type="EtcItem">
-		<!-- Main ingredient definitely required for a Dwarf to make Boots of Silence. Can be sold. -->
+		<!-- Main ingredient definitely required for a Dwarf to make silent Boots. Can also be sold at ordinary shops. -->
 		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -655,7 +674,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4060" name="Guardian's Boot Fabric" type="EtcItem">
-		<!-- Main ingredient definitely required for a Dwarf to make Guardian's Boots. Can be sold. -->
+		<!-- Main ingredient definitely required for a Dwarf to make guardian Boots. Can also be sold at ordinary shops. -->
 		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -666,7 +685,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4061" name="Paradia Boot Pattern" type="EtcItem">
-		<!-- Main ingredient definitely required for a Dwarf to make Paradia Boots. Can be sold. -->
+		<!-- Main ingredient definitely required for a Dwarf to make Paradia Boots. Can also be sold at ordinary shops. -->
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -677,7 +696,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4062" name="Elemental Boot Lining" type="EtcItem">
-		<!-- Main ingredient definitely required for a Dwarf to make Elemental Boots. Can be sold. -->
+		<!-- Main ingredient definitely required for a Dwarf to make Elemental Boots. Can also be sold at ordinary shops. -->
 		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -688,7 +707,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4063" name="Boots of Grace Lining" type="EtcItem">
-		<!-- Main ingredient definitely required for a Dwarf to make Boots of Grace. Can be sold. -->
+		<!-- Main ingredient definitely required for a Dwarf to make grace Boots. Can also be sold at ordinary shops. -->
 		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -699,7 +718,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4064" name="Avadon Breastplate Part" type="EtcItem">
-		<!-- Main ingredient definitely required for a Dwarf to make an Avadon Breastplate. Can be sold. -->
+		<!-- Main ingredient definitely required for a Dwarf to make an Avadon Breastplate. Can also be sold at ordinary shops. -->
 		<set name="icon" val="icon.etc_plate_silver_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -710,7 +729,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4065" name="Avadon Gaiter Material" type="EtcItem">
-		<!-- Main ingredient definitely required for a Dwarf to make Avadon Gaiters. Can be sold. -->
+		<!-- Main ingredient definitely required for a Dwarf to make Avadon Gaiters. Can also be sold at ordinary shops. -->
 		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -721,7 +740,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4066" name="Zubei's Leather Shirt Fabric" type="EtcItem">
-		<!-- Main ingredient definitely required for a Dwarf to make Zubei's Leather Shirt. Can be sold. -->
+		<!-- Main ingredient definitely required for a Dwarf to make Zubei's Leather Shirt. Can also be sold at ordinary shops. -->
 		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -732,7 +751,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4067" name="Zubei's Leather Gaiter Texture" type="EtcItem">
-		<!-- Main ingredient definitely required for a Dwarf to make Zubei's Leather Gaiters. Can be sold. -->
+		<!-- Main ingredient definitely required for a Dwarf to make Zubei's Leather Gaiters. Can also be sold at ordinary shops. -->
 		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -743,7 +762,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4068" name="Avadon Leather Armor Lining" type="EtcItem">
-		<!-- Main ingredient definitely required for a Dwarf to make Avadon Leather Armor. Can be sold. -->
+		<!-- Main ingredient definitely required for a Dwarf to make Avadon Leather Armor. Can also be sold at ordinary shops. -->
 		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -754,7 +773,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4069" name="Tunic of Zubei Fabric" type="EtcItem">
-		<!-- Main ingredient definitely required for a Dwarf to make Tunic of Zubei. Can be sold. -->
+		<!-- Main ingredient definitely required for a Dwarf to make Tunic of Zubei. Can also be sold at ordinary shops. -->
 		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -765,7 +784,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4070" name="Stockings of Zubei Fabric" type="EtcItem">
-		<!-- Main ingredient definitely required for a Dwarf to make Stockings of Zubei. Can be sold. -->
+		<!-- Main ingredient definitely required for a Dwarf to make Stockings of Zubei. Can also be sold at ordinary shops. -->
 		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -776,7 +795,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4071" name="Avadon Robe Fabric" type="EtcItem">
-		<!-- Main ingredient definitely required for a Dwarf to make Avadon Robe. Can be sold. -->
+		<!-- Main ingredient definitely required for a Dwarf to make Avadon Robe. Can also be sold at ordinary shops. -->
 		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -787,7 +806,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4072" name="Avadon Circlet Pattern" type="EtcItem">
-		<!-- Main ingredient definitely required for a Dwarf to make Sealed Avadon Circlet. Can be sold. -->
+		<!-- Main ingredient definitely required for a Dwarf to make Avadon Circlet. Can also be sold at ordinary shops. -->
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -798,7 +817,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4073" name="Sealed Avadon Glove Fragment" type="EtcItem">
-		<!-- Main ingredient definitely required for a Dwarf to make Avadon Gloves. Can be sold. -->
+		<!-- Main ingredient definitely required for a Dwarf to make Avadon Gloves. Can also be sold at ordinary shops. -->
 		<set name="icon" val="icon.etc_plate_silver_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -809,7 +828,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4074" name="Chain Gloves of Silence Design" type="EtcItem">
-		<!-- Main ingredient definitely required for a Dwarf to make Chain Gloves of Silence. Can be sold. -->
+		<!-- Main ingredient definitely required for a Dwarf to make Chain Gloves of Silence. Can also be sold at ordinary shops. -->
 		<set name="icon" val="icon.etc_pouch_brown_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -820,7 +839,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4075" name="Guardian's Glove Design" type="EtcItem">
-		<!-- Main ingredient definitely required for a Dwarf to Guardian's Gloves. Can be sold. -->
+		<!-- Main ingredient definitely required for a Dwarf to Guardian's Gloves. Can also be sold at ordinary shops. -->
 		<set name="icon" val="icon.etc_pouch_brown_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -831,7 +850,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4076" name="Gloves of Blessing Pattern" type="EtcItem">
-		<!-- Main ingredient definitely required for a Dwarf to make Gloves of Blessing. Can be sold. -->
+		<!-- Main ingredient definitely required for a Dwarf to make Gloves of Blessing. Can also be sold at ordinary shops. -->
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -842,7 +861,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4077" name="Doom Shield Fragment" type="EtcItem">
-		<!-- Main ingredient definitely required for a Dwarf to make Doom Shield. Can be sold. -->
+		<!-- Main ingredient definitely required for a Dwarf to make Doom Shield. Can also be sold at ordinary shops. -->
 		<set name="icon" val="icon.etc_plate_silver_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -853,7 +872,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4078" name="Blue Wolf Breastplate Part" type="EtcItem">
-		<!-- Main ingredient definitely required for a Dwarf to make Blue Wolf Breastplate. Can be sold. -->
+		<!-- Main ingredient definitely required for a Dwarf to make Blue Wolf Breastplate. Can also be sold at ordinary shops. -->
 		<set name="icon" val="icon.etc_plate_silver_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -864,7 +883,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4079" name="Boots of Blessing Design" type="EtcItem">
-		<!-- Main ingredient definitely required for a Dwarf to make Boots of Blessing. Can be sold. -->
+		<!-- Main ingredient definitely required for a Dwarf to make Boots of Blessing. Can also be sold at ordinary shops. -->
 		<set name="icon" val="icon.etc_pouch_brown_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -875,7 +894,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4080" name="Blue Wolf Gaiter Material" type="EtcItem">
-		<!-- Main ingredient definitely required for a Dwarf to make Blue Wolf Gaiters. Can be sold. -->
+		<!-- Main ingredient definitely required for a Dwarf to make Blue Wolf Gaiters. Can also be sold at ordinary shops. -->
 		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -886,7 +905,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4081" name="Doom Plate Armor Temper" type="EtcItem">
-		<!-- Main ingredient definitely required for a Dwarf to make Doom Plate Armor. Can be sold. -->
+		<!-- Main ingredient definitely required for a Dwarf to make Doom Plate Armor. Can also be sold at ordinary shops. -->
 		<set name="icon" val="icon.etc_lump_white_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -897,7 +916,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4082" name="Blue Wolf Leather Armor Texture" type="EtcItem">
-		<!-- Main ingredient definitely required for a Dwarf to make Blue Wolf Leather Armor. Can be sold. -->
+		<!-- Main ingredient definitely required for a Dwarf to make Blue Wolf Leather Armor. Can also be sold at ordinary shops. -->
 		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -908,7 +927,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4083" name="Leather Armor of Doom Design" type="EtcItem">
-		<!-- Main ingredient definitely required for a Dwarf to make Leather Armor of Doom. Can be sold. -->
+		<!-- Main ingredient definitely required for a Dwarf to make Leather Armor of Doom. Can also be sold at ordinary shops. -->
 		<set name="icon" val="icon.etc_pouch_brown_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -919,7 +938,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4084" name="Blue Wolf Tunic Fabric" type="EtcItem">
-		<!-- Main ingredient definitely required for a Dwarf to make Blue Wolf Tunic. Can be sold. -->
+		<!-- Main ingredient definitely required for a Dwarf to make Blue Wolf Tunic. Can also be sold at ordinary shops. -->
 		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -930,7 +949,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4085" name="Tunic of Doom Pattern" type="EtcItem">
-		<!-- Main ingredient definitely required for a Dwarf to make Tunic of Doom. Can be sold. -->
+		<!-- Main ingredient definitely required for a Dwarf to make Tunic of Doom. Can also be sold at ordinary shops. -->
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -941,7 +960,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4086" name="Blue Wolf Stocking Pattern" type="EtcItem">
-		<!-- Main ingredient definitely required for a Dwarf to make Blue Wolf Stockings. Can be sold. -->
+		<!-- Main ingredient definitely required for a Dwarf to make Blue Wolf Stockings. Can also be sold at ordinary shops. -->
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -952,7 +971,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4087" name="Stockings of Doom Pattern" type="EtcItem">
-		<!-- Main ingredient definitely required for a Dwarf to make Stockings of Doom. Can be sold. -->
+		<!-- Main ingredient definitely required for a Dwarf to make Stockings of Doom. Can also be sold at ordinary shops. -->
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -963,7 +982,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4088" name="Blue Wolf Helmet Design" type="EtcItem">
-		<!-- Main ingredient definitely required for a Dwarf to make Sealed Blue Wolf Helmet. Can be sold. -->
+		<!-- Main ingredient definitely required for a Dwarf to make Blue Wolf Helmet. Can also be sold at ordinary shops. -->
 		<set name="icon" val="icon.etc_pouch_brown_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -974,7 +993,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4089" name="Doom Helmet Pattern" type="EtcItem">
-		<!-- Main ingredient definitely required for a Dwarf to make Sealed Doom Helmet. Can be sold. -->
+		<!-- Main ingredient definitely required for a Dwarf to make Doom Helmet. Can also be sold at ordinary shops. -->
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -985,7 +1004,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4090" name="Sealed Blue Wolf Boot Design" type="EtcItem">
-		<!-- Main ingredient definitely required for a Dwarf to make Blue Wolf Boots. Can be sold. -->
+		<!-- Main ingredient definitely required for a Dwarf to make Blue Wolf Boots. Can also be sold at ordinary shops. -->
 		<set name="icon" val="icon.etc_pouch_brown_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -996,7 +1015,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4091" name="Sealed Doom Glove Fragment" type="EtcItem">
-		<!-- Main ingredient definitely required for a Dwarf to make Doom Gloves. Can be sold. -->
+		<!-- Main ingredient definitely required for a Dwarf to make Doom Gloves. Can also be sold at ordinary shops. -->
 		<set name="icon" val="icon.etc_plate_silver_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -1007,7 +1026,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4092" name="Elemental Glove Lining" type="EtcItem">
-		<!-- Main ingredient definitely required for a Dwarf to make Elemental Gloves. Can be sold. -->
+		<!-- Main ingredient definitely required for a Dwarf to make Elemental Gloves. Can also be sold at ordinary shops. -->
 		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -1018,7 +1037,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4093" name="Gloves of Grace Lining" type="EtcItem">
-		<!-- Main ingredient definitely required for a Dwarf to make Gloves of Grace. Can be sold. -->
+		<!-- Main ingredient definitely required for a Dwarf to make Gloves of Grace. Can also be sold at ordinary shops. -->
 		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -1029,7 +1048,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4094" name="Implosion Gauntlet Fabric" type="EtcItem">
-		<!-- Main ingredient definitely required for a Dwarf to make Implosion Gauntlets. Can be sold. -->
+		<!-- Main ingredient definitely required for a Dwarf to make Implosion Gauntlets. Can also be sold at ordinary shops. -->
 		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -1040,7 +1059,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4095" name="Paradia Glove Pattern" type="EtcItem">
-		<!-- Main ingredient definitely required for a Dwarf to make Paradia Gloves. Can be sold. -->
+		<!-- Main ingredient definitely required for a Dwarf to make Paradia Gloves. Can also be sold at ordinary shops. -->
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -1051,7 +1070,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4096" name="Sealed Blue Wolf Glove Fabric" type="EtcItem">
-		<!-- Main ingredient definitely required for a Dwarf to make Blue Wolf Gloves. Can be sold. -->
+		<!-- Main ingredient definitely required for a Dwarf to make Blue Wolf Gloves. Can also be sold at ordinary shops. -->
 		<set name="icon" val="icon.etc_leather_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -1062,7 +1081,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4097" name="Sealed Zubei's Boot Design" type="EtcItem">
-		<!-- Main ingredient definitely required for a Dwarf to make Zubei's Boots. Can be sold. -->
+		<!-- Main ingredient definitely required for a Dwarf to make Zubei's Boots. Can also be sold at ordinary shops. -->
 		<set name="icon" val="icon.etc_pouch_brown_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -1073,7 +1092,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4098" name="Sealed Avadon Boot Design" type="EtcItem">
-		<!-- Main ingredient definitely required for a Dwarf to make Avadon Boots. Can be sold. -->
+		<!-- Main ingredient definitely required for a Dwarf to make Avadon Boots. Can also be sold at ordinary shops. -->
 		<set name="icon" val="icon.etc_pouch_brown_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -1084,7 +1103,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4099" name="Sealed Doom Boot Fragment" type="EtcItem">
-		<!-- Main ingredient definitely required for a Dwarf to make Doom Boots. Can be sold. -->
+		<!-- Main ingredient definitely required for a Dwarf to make Doom Boots. Can also be sold at ordinary shops. -->
 		<set name="icon" val="icon.etc_plate_silver_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />

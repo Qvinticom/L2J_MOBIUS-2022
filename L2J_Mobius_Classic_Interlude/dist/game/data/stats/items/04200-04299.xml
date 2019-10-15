@@ -21,7 +21,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4202" name="Chrono Cithara" type="Weapon">
-		<!-- Chronicle I Souvenir! Cannot be dropped. -->
+		<!-- Chronicle I Souvenir!!! -->
 		<set name="icon" val="icon.weapon_chrono_cithara_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -173,13 +173,13 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4218" name="Scroll: Mana Regeneration" type="EtcItem">
-		<!-- Increases Speed of MP recovery for 1 hour. -->
+	<item id="4218" name="L2 Day - Scroll: Mana Regeneration" type="EtcItem">
+		<!-- Increases MP Recovery Rate. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
+		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -190,7 +190,6 @@
 		</skills>
 	</item>
 	<item id="4219" name="Dream Sword" type="Weapon">
-		<!-- Cannot be exchanged, dropped, destroyed, sold, or stored in a private warehouse. -->
 		<set name="icon" val="icon.weapon_knights_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -199,8 +198,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="1530" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -221,7 +220,6 @@
 		</stats>
 	</item>
 	<item id="4220" name="Dream Knife" type="Weapon">
-		<!-- Cannot be exchanged, dropped, destroyed, sold, or stored in a private warehouse. -->
 		<set name="icon" val="icon.weapon_assassin_knife_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -230,8 +228,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1110" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -253,7 +251,6 @@
 		</stats>
 	</item>
 	<item id="4221" name="Ubiquitous Axe" type="Weapon">
-		<!-- Cannot be exchanged, dropped, destroyed, sold, or stored in a private warehouse. -->
 		<set name="icon" val="icon.weapon_tomahawk_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -262,8 +259,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1850" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -285,7 +282,6 @@
 		</stats>
 	</item>
 	<item id="4222" name="Dream Shield" type="Armor">
-		<!-- Cannot be exchanged, dropped, destroyed, sold, or stored in a private warehouse. -->
 		<set name="icon" val="icon.shield_hoplon_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -309,7 +305,6 @@
 		</stats>
 	</item>
 	<item id="4223" name="Ubiquitous Shield" type="Armor">
-		<!-- Cannot be exchanged, dropped, destroyed, sold, or stored in a private warehouse. -->
 		<set name="icon" val="icon.shield_dwarven_chain_shield_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -333,7 +328,6 @@
 		</stats>
 	</item>
 	<item id="4224" name="Dream Armor" type="Armor">
-		<!-- Cannot be exchanged, dropped, destroyed, sold, or stored in a private warehouse. -->
 		<set name="icon" val="icon.armor_blast_plate_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -356,7 +350,6 @@
 		</stats>
 	</item>
 	<item id="4225" name="Dream Stockings" type="Armor">
-		<!-- Cannot be exchanged, dropped, destroyed, sold, or stored in a private warehouse. -->
 		<set name="icon" val="icon.armor_mithril_gaiters_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -379,7 +372,6 @@
 		</stats>
 	</item>
 	<item id="4226" name="Dream Gloves" type="Armor">
-		<!-- Cannot be exchanged, dropped, destroyed, sold, or stored in a private warehouse. -->
 		<set name="icon" val="icon.armor_gauntlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -401,7 +393,6 @@
 		</stats>
 	</item>
 	<item id="4227" name="Dream Boots" type="Armor">
-		<!-- Cannot be exchanged, dropped, destroyed, sold, or stored in a private warehouse. -->
 		<set name="icon" val="icon.armor_chain_boots_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -423,7 +414,6 @@
 		</stats>
 	</item>
 	<item id="4228" name="Ubiquitous Armor" type="Armor">
-		<!-- Cannot be exchanged, dropped, destroyed, sold, or stored in a private warehouse. -->
 		<set name="icon" val="icon.armor_compound_scale_mail_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -446,7 +436,6 @@
 		</stats>
 	</item>
 	<item id="4229" name="Ubiquitous Stockings" type="Armor">
-		<!-- Cannot be exchanged, dropped, destroyed, sold, or stored in a private warehouse. -->
 		<set name="icon" val="icon.armor_compound_scale_gaiters_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -469,7 +458,6 @@
 		</stats>
 	</item>
 	<item id="4230" name="Ubiquitous Gloves" type="Armor">
-		<!-- Cannot be exchanged, dropped, destroyed, sold, or stored in a private warehouse. -->
 		<set name="icon" val="icon.armor_manticor_skin_gloves_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -491,7 +479,6 @@
 		</stats>
 	</item>
 	<item id="4231" name="Ubiquitous Boots" type="Armor">
-		<!-- Cannot be exchanged, dropped, destroyed, sold, or stored in a private warehouse. -->
 		<set name="icon" val="icon.armor_iron_boots_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -524,20 +511,21 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="RollingDice" />
 	</item>
-	<item id="4233" name="Fist" type="Weapon">
+	<item id="4233" name="Knuckle Duster" type="Weapon">
+		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_knuckle_dust_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1148" />
+		<set name="crystal_count" val="118" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1490" />
 		<set name="price" val="441940" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
 		<set name="commissionItemType" val="FIST_WEAPON" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="1" />
@@ -548,6 +536,120 @@
 			<stat type="accCombat">8</stat>
 			<stat type="pAtkSpd">325</stat>
 			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="4234" name="Hatchling's Lv. 65 Armor" type="Armor">
+		<!-- Can be put on by Double-clicking. Exclusively used by a Hatchling. -->
+		<set name="icon" val="icon.etc_pet_armor_i06" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="160" />
+		<set name="price" val="1566000" />
+		<set name="commissionItemType" val="PET_EQUIPMENT" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="HATCHLING_GROUP" />
+		</cond>
+		<stats>
+			<stat type="mDef">50</stat>
+			<stat type="pDef">50</stat>
+		</stats>
+	</item>
+	<item id="4235" name="Hatchling's Lv. 75 Armor" type="Armor">
+		<!-- Can be put on by Double-clicking. Exclusively used by a Hatchling. -->
+		<set name="icon" val="icon.etc_pet_armor_i07" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="160" />
+		<set name="price" val="4793000" />
+		<set name="commissionItemType" val="PET_EQUIPMENT" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="HATCHLING_GROUP" />
+		</cond>
+		<stats>
+			<stat type="mDef">58</stat>
+			<stat type="pDef">58</stat>
+		</stats>
+	</item>
+	<item id="4236" name="Gara Item" type="Armor">
+		<set name="icon" val="icon.etc_pet_armor_i07" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="160" />
+		<set name="price" val="4793000" />
+		<set name="commissionItemType" val="PET_EQUIPMENT" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="HATCHLING_GROUP" />
+		</cond>
+		<stats>
+			<stat type="mDef">58</stat>
+			<stat type="pDef">58</stat>
+		</stats>
+	</item>
+	<item id="4237" name="Hatchling's Lv. 65 Weapon" type="Weapon">
+		<!-- Can be put on by Double-clicking. Exclusively used by a Hatchling. -->
+		<set name="icon" val="icon.etc_pet_arms_i04" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="100" />
+		<set name="price" val="2814000" />
+		<set name="commissionItemType" val="PET_EQUIPMENT" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="HATCHLING_GROUP" />
+		</cond>
+		<stats>
+			<stat type="pAtk">24</stat>
+			<stat type="mAtk">32</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">277</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="4238" name="Hatchling's Lv. 75 Weapon" type="Weapon">
+		<!-- Can be put on by Double-clicking. Exclusively used by a Hatchling. -->
+		<set name="icon" val="icon.etc_pet_arms_i04" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="100" />
+		<set name="price" val="9536500" />
+		<set name="commissionItemType" val="PET_EQUIPMENT" />
+		<set name="isAppearanceable" val="true" />
+		<set name="for_npc" val="true" />
+		<cond msgId="1518">
+			<player categoryType="HATCHLING_GROUP" />
+		</cond>
+		<stats>
+			<stat type="pAtk">31</stat>
+			<stat type="mAtk">43</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">277</stat>
+			<stat type="randomDamage">10</stat>
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
@@ -807,7 +909,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4255" name="Cargo Box" type="EtcItem">
+	<item id="4255" name="Trade Cargo" type="EtcItem">
 		<!-- The cargo boxes that have been robbed from the wagon of the Trade Guild. Collect 30 of them and take them to Guard Weisz. -->
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="immediate_effect" val="true" />
@@ -919,7 +1021,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4262" name="Orc Heads Bouquet - 1" type="EtcItem">
+	<item id="4262" name="Orc Heads Bouquet - 2" type="EtcItem">
 		<!-- Bouquet made by tying 100 orc heads together. On behalf of Jennifer who is shy, deliver it to Priest Manuel. -->
 		<set name="icon" val="icon.etc_flower_bouquet_i00" />
 		<set name="immediate_effect" val="true" />
@@ -935,7 +1037,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4263" name="Orc Heads Bouquet - 1" type="EtcItem">
+	<item id="4263" name="Orc Heads Bouquet - 3" type="EtcItem">
 		<!-- Bouquet made by tying 100 orc heads together. On behalf of Jennifer who is shy, deliver it to Vuku Chief Driko. -->
 		<set name="icon" val="icon.etc_flower_bouquet_i00" />
 		<set name="immediate_effect" val="true" />
@@ -951,7 +1053,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4264" name="Orc Heads Bouquet - 1" type="EtcItem">
+	<item id="4264" name="Orc Heads Bouquet - 4" type="EtcItem">
 		<!-- Bouquet made by tying 100 orc heads together. On behalf of Jennifer who is shy, deliver it to Seer Somak. -->
 		<set name="icon" val="icon.etc_flower_bouquet_i00" />
 		<set name="immediate_effect" val="true" />
@@ -967,7 +1069,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4265" name="Orc Heads Bouquet - 1" type="EtcItem">
+	<item id="4265" name="Orc Heads Bouquet - 5" type="EtcItem">
 		<!-- Bouquet made by tying 100 orc heads together. On behalf of Jennifer who is shy, deliver it to Prefect Dowki. -->
 		<set name="icon" val="icon.etc_flower_bouquet_i00" />
 		<set name="immediate_effect" val="true" />
@@ -983,7 +1085,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4266" name="Orc Heads Bouquet - 1" type="EtcItem">
+	<item id="4266" name="Orc Heads Bouquet - 6" type="EtcItem">
 		<!-- Bouquet made by tying 100 orc heads together. On behalf of Jennifer who is shy, deliver it to Watchman Endrigo. -->
 		<set name="icon" val="icon.etc_flower_bouquet_i00" />
 		<set name="immediate_effect" val="true" />
@@ -999,7 +1101,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4267" name="Orc Heads Bouquet - 1" type="EtcItem">
+	<item id="4267" name="Orc Heads Bouquet -7" type="EtcItem">
 		<!-- Bouquet made by tying 100 orc heads together. On behalf of Jennifer who is shy, deliver it to Captain Lucas. -->
 		<set name="icon" val="icon.etc_flower_bouquet_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1080,7 +1182,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4272" name="Totem Necklace" type="EtcItem">
-		<!-- Article left by a dead soldier. His descendent, High Prefect Garvarentz, lives in Hunters Village. Take it to him. -->
+		<!-- Article left by a dead soldier. His descendent, High Prefect Garvarentz, is living in Hunter's Village. Take it to him. -->
 		<set name="icon" val="icon.etc_totem_necklace_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BONE" />
@@ -1321,6 +1423,7 @@
 	</item>
 	<item id="4287" name="Lesser Giant's Powerstone" type="EtcItem">
 		<!-- The Lesser Giant's Powerstone that has been extracted from the corpse of a Giant. Take it to Magister Hanellin. -->
+		<set name="icon" val="icon.etc_instrument_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1336,6 +1439,7 @@
 	</item>
 	<item id="4288" name="Hanellin's 1st Letter" type="EtcItem">
 		<!-- A letter that Hanellin entrusted to you. Deliver it to Magister Harne at the Dark Elf Guild in the Town of Gludio and receive the next instructions. -->
+		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -1349,8 +1453,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4289" name="Hanellin's Letter" type="EtcItem">
-		<!-- Give this letter to Claudia Athebaldt in Aden. -->
+	<item id="4289" name="Hanellin's 2nd Letter" type="EtcItem">
+		<!-- Letter that Hanellin entrusted you with. Take it to Claudia Athebaldt of Town of Aden and receive your next assignment from her. -->
 		<set name="icon" val="icon.etc_piece_of_paper_gray_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1367,6 +1471,7 @@
 	</item>
 	<item id="4290" name="Hanellin's 3rd Letter" type="EtcItem">
 		<!-- Letter that Hanellin entrusted you with. Take it to Martien of the Town of Giran and receive your next assignment from him. -->
+		<set name="icon" val="icon.etc_piece_of_paper_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -1382,6 +1487,7 @@
 	</item>
 	<item id="4291" name="1st Key of Ark" type="EtcItem">
 		<!-- The key that was found upon the corpse of the guardian of the sacred ark. Use this key to open the sacred ark and retrieve the sacred object. -->
+		<set name="icon" val="icon.etc_old_key_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1395,8 +1501,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="4292" name="Key of Ark" type="EtcItem">
-		<!-- The key you got after killing Elberoth, the Ark Guardian. Use it to open the ark and obtain the sacred item. -->
+	<item id="4292" name="2nd Key of Ark" type="EtcItem">
+		<!-- The key that was taken after killing Elberos, the guardian of the sacred ark. Use the key to open the sacred ark and retrieve the sacred object. -->
 		<set name="icon" val="icon.etc_old_key_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1411,8 +1517,24 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
+	<item id="4293" name="3rd Key of Ark" type="EtcItem">
+		<!-- The key that was taken after killing Shadowfang, the guardian of the sacred ark. Use the key to open the sacred ark and retrieve the sacred object. -->
+		<set name="icon" val="icon.etc_old_key_i03" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
 	<item id="4294" name="White Cloth" type="EtcItem">
-		<!-- A reward for eliminating enemies in the Platinum Tribe. Collect 100 pcs. and bring them to Magister Hanellin. -->
+		<!-- Large piece of white cloth given by Magister Hanellin. Kill the Platinum Tribe Shamans and Overlords and soak the cloth with their blood. -->
 		<set name="icon" val="icon.etc_piece_of_cloth_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
@@ -1428,7 +1550,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4295" name="Blood-stained Cloth" type="EtcItem">
-		<!-- A cloth soaked in the blood of Angels and Platinum Tribe. According to Hanellin, you must wrap it around your body to challenge Baium. -->
+		<!-- Piece of cloth soaked in the blood of angels and the Platinum race. Hanellin Has told you that in order to challenge Baium, you must wrap this blood-soaked cloth around your body. -->
 		<set name="icon" val="icon.etc_piece_of_cloth_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
@@ -1480,6 +1602,22 @@
 		<set name="icon" val="icon.etc_wine_barrel_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="4299" name="Operation Document - 1/10" type="EtcItem">
+		<!-- This document was found in the cargo of the Trade Guild. The document contains various information regarding Innadril. How could this have happened...? -->
+		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />

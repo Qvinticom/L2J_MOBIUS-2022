@@ -48,9 +48,6 @@ import ai.AbstractNpcAI;
 public class ClanHallManager extends AbstractNpcAI
 {
 	// NPCs
-	//	35461, 35463, 35465, 35467, // Goddard
-	//	35566, 35568, 35570, 35572, 35574, 35576, 35578, // Rune
-	//	35580, 35582, 35584, 35586, // Schuttgart
 	// @formatter:off
 	private static final int[] CLANHALL_MANAGERS =
 	{
@@ -59,6 +56,9 @@ public class ClanHallManager extends AbstractNpcAI
 		35403, 35405, 35407, // Dion
 		35439, 35441, 35443, 35445, 35447, 35449, // Aden
 		35451, 35453, 35455, 35457, 35459, // Giran
+		35461, 35463, 35465, 35467, // Goddard
+		35566, 35568, 35570, 35572, 35574, 35576, 35578, // Rune
+		35580, 35582, 35584, 35586, // Schuttgart
 		36721, 36723, 36725, 36727, // Gludio Outskirts
 		36729, 36731, 36733, 36735, // Dion Outskirts
 		36737, 36739, // Floran Village

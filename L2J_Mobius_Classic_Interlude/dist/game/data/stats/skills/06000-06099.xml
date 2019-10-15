@@ -242,6 +242,25 @@
 			</effect>
 		</effects>
 	</skill>
+	<skill id="6024" toLevel="1" name="Weight Aerial Cleft">
+		<!-- Renders target unable to transform into a flying transformed object. -->
+		<icon>icon.skill6024</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>40</abnormalTime>
+		<abnormalType>PUBLIC_SLOT</abnormalType>
+		<effectPoint>-10</effectPoint>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>14</magicLvl>
+		<operateType>A2</operateType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<effectRange>1400</effectRange>
+		<isDebuff>true</isDebuff>
+		<castRange>900</castRange>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
 	<skill id="6025" toLevel="1" name="not_used">
 		<magicLvl>83</magicLvl>
 		<operateType>P</operateType>
@@ -300,7 +319,7 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="6034" toLevel="1" name="Freezing">
+	<skill id="6034" toLevel="1" name="Freeze">
 		<!-- Target cannot move until the match starts. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -329,9 +348,69 @@
 				<amount>-100</amount>
 				<slot>ALL</slot>
 			</effect>
+			<effect name="ResistAbnormalByCategory">
+				<amount>-100</amount>
+				<slot>DEBUFF</slot>
+			</effect>
 			<effect name="BlockMove" />
-			<effect name="BlockActions">
-				<allowedSkills>35016</allowedSkills>
+			<effect name="BlockActions" />
+		</effects>
+	</skill>
+	<skill id="6035" toLevel="1" name="Transform Red Team">
+		<!-- You are transformed into a wee Red Smidge with a big red hammer. -->
+		<icon>icon.skilltransform3</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<effectPoint>1</effectPoint>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<deleteAbnormalOnLeave>true</deleteAbnormalOnLeave>
+		<irreplacableBuff>true</irreplacableBuff>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>121</transformId>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>121</transformationId>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6036" toLevel="1" name="Transform Blue Team">
+		<!-- You are transformed into a wee Blue Smidge with a big blue hammer. -->
+		<icon>icon.skilltransform3</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<effectPoint>1</effectPoint>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<deleteAbnormalOnLeave>true</deleteAbnormalOnLeave>
+		<irreplacableBuff>true</irreplacableBuff>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>122</transformId>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>122</transformationId>
 			</effect>
 		</effects>
 	</skill>
@@ -1232,13 +1311,13 @@
 		</effects>
 	</skill>
 	<skill id="6059" toLevel="1" name="Counter Critical">
-		<!-- Increases P. Critical Damage. -->
+		<!-- Critical Damage is greatly increased. -->
 		<icon>icon.skill1542</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>8</abnormalTime>
 		<abnormalType>COUNTER_CRITICAL_TRIGGER</abnormalType>
 		<isTriggeredSkill>true</isTriggeredSkill>
-		<magicLvl>80</magicLvl>
+		<magicLvl>81</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>15000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -1266,14 +1345,14 @@
 		</effects>
 	</skill>
 	<skill id="6060" toLevel="1" name="Great Fury">
-		<!-- Increases Atk. Spd. by 30% for 8 seconds. -->
+		<!-- Increases Atk. Spd. by 50% for 8 seconds. -->
 		<icon>icon.skill1543</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>8</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN_SPECIAL</abnormalType>
 		<affectRange>1000</affectRange>
 		<isTriggeredSkill>true</isTriggeredSkill>
-		<magicLvl>80</magicLvl>
+		<magicLvl>81</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>15000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -1516,7 +1595,9 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="6091" toLevel="1" name="Anchor">
@@ -1538,7 +1619,9 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="6092" toLevel="1" name="Lightning Shock">
@@ -1561,7 +1644,9 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="6093" toLevel="1" name="Panther Hide">
@@ -1625,8 +1710,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="6095" toLevel="15" name="Panther Dark Claw">
-		<!-- Damages the target, decreasing Dark Attack Resistance by $s3 for $s2. -->
+	<skill id="6095" toLevel="15" name="Panther Cancel">
+		<!-- Attacker's P. Atk. is supplemented with $s1 power, decreasing Dark Attack Resistance by $s3 for $s2. -->
 		<icon>icon.skill1445</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -1691,7 +1776,7 @@
 		</effects>
 	</skill>
 	<skill id="6096" toLevel="13" name="Panther Fatal Claw">
-		<!-- Panther's P. Atk. is supplemented with $s1 Power added to P. Atk., in a deadly attack. -->
+		<!-- Panther's P. Atk. is supplemented with $s1 power, in a deadly attack. -->
 		<icon>icon.skill6096</icon>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>

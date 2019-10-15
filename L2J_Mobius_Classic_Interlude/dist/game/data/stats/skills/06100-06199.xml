@@ -256,7 +256,7 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="6116" toLevel="1" name="Attacks the Turkey">
+	<skill id="6116" toLevel="1" name="Attack Turkey">
 		<!-- Attacks the Turkey -->
 		<effectPoint>1</effectPoint>
 		<hitTime>3000</hitTime>
@@ -295,22 +295,6 @@
 		<castRange>500</castRange>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
-	</skill>
-	<skill id="6118" toLevel="1" name="Christmas Blessing">
-		<!-- Grants for 1 hour the following effects: Might, Shield, Focus, Haste, Acumen, Empower, Wind Walk. -->
-		<icon>icon.etc_x_mas_tree_i00</icon>
-		<operateType>A1</operateType>
-		<hitTime>200</hitTime>
-		<reuseDelay>1000</reuseDelay>
-		<effectPoint>1</effectPoint>
-	</skill>
-	<skill id="6119" toLevel="1" name="Blessing of Plenty">
-		<!-- Grants for 1 hour the following effects: Might, Shield, Focus, Haste, Acumen, Empower, Wind Walk. -->
-		<icon>icon.skill5662</icon>
-		<operateType>A1</operateType>
-		<castRange>400</castRange>
-		<hitTime>200</hitTime>
-		<reuseDelay>1000</reuseDelay>
 	</skill>
 	<skill id="6120" toLevel="1" name="Santa's Reward">
 		<!-- Santa's reward. For 1 hour, increases Max HP by 10%, Max MP by 10%, Max CP by 10%, Speed by 15%, P. Atk. by 10%, M. Atk. by 15%, Critical Rate by 5, Critical Damage by 15%, and the chance of prominent damage occurring through magic damage by 2. -->
@@ -369,8 +353,78 @@
 			</effect>
 		</effects>
 	</skill>
+	<skill id="6121" toLevel="1" name="Agathion's New Year's Gift 1">
+		<coolTime>1000</coolTime>
+		<hitTime>2700</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>55</magicLvl>
+		<operateType>A1</operateType>
+		<reuseDelay>86400000</reuseDelay>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpNeedAgathion" />
+		</conditions>
+		<effects>
+			<effect name="Restoration">
+				<itemId>14676</itemId>
+				<itemCount>1</itemCount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6122" toLevel="1" name="Agathion's New Year's Gift 2">
+		<coolTime>1000</coolTime>
+		<hitTime>2700</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>55</magicLvl>
+		<operateType>A1</operateType>
+		<reuseDelay>86400000</reuseDelay>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpNeedAgathion" />
+		</conditions>
+		<effects>
+			<effect name="Restoration">
+				<itemId>14677</itemId>
+				<itemCount>1</itemCount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="6123" toLevel="1" name="Agathion's New Year's Wish">
+		<!-- Agathion's New Year's Wish - Vitality is maintained and not consumed. -->
+		<icon>icon.etc_pi_gift_box_i03</icon>
+		<abnormalLvl>2</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>VP_KEEP</abnormalType>
+		<abnormalVisualEffect>VP_KEEP</abnormalVisualEffect>
+		<coolTime>1000</coolTime>
+		<hitTime>2000</hitTime>
+		<isMagic>4</isMagic> <!-- Item Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>86400000</reuseDelay>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanRestoreVitalPoint" />
+			<condition name="CanUseVitalityConsumeItem" />
+		</conditions>
+	</skill>
 	<skill id="6124" toLevel="1" name="Agathion Cute Trick - Neolithica">
-		<!-- See Agathion's cute trick. -->
+		<!-- See the summoned spirit perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -403,7 +457,9 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="6126" toLevel="1" name="Paralysis">
@@ -425,7 +481,9 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="6127" toLevel="1" name="Anti-limit">
@@ -447,7 +505,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6129" toLevel="1" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0092</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -472,7 +530,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6130" toLevel="1" name="Mutant Curse">
-		<!-- Mutant Curse: Stunned and unable to move momentarily. -->
+		<!-- Mutant Curse: Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0092</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -547,7 +605,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6133" toLevel="1" name="Mysterious Effect">
-		<!-- The target's head is enlarged. -->
+		<!-- Head is enlarged. -->
 		<icon>icon.skill2513</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
@@ -592,7 +650,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6135" toLevel="1" name="Mutant Curse">
-		<!-- Mutant Curse: Stunned and unable to move momentarily. -->
+		<!-- Mutant Curse: Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0092</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2</abnormalTime>
@@ -616,7 +674,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6136" toLevel="1" name="Agathion Cute Trick - Juju">
-		<!-- See Agathion's cute trick. -->
+		<!-- See the summoned spirit perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -632,7 +690,7 @@
 		</conditions>
 	</skill>
 	<skill id="6137" toLevel="1" name="Agathion Juju - Mysterious Effect">
-		<!-- The target's head is enlarged. -->
+		<!-- Makes the head enlarge. -->
 		<icon>icon.skill2513</icon>
 		<abnormalLvl>0</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
@@ -1125,66 +1183,8 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="6156" toLevel="1" name="Mood Melody">
-		<!-- Grants for 1 hour the following effects: Might, Shield, Focus, Haste, Acumen, Empower, Wind Walk, Death Whisper, and Vampiric Rage. -->
-		<icon>icon.bm_magmeld</icon>
-		<operateType>A2</operateType>
-		<castRange>400</castRange>
-		<hitTime>200</hitTime>
-		<reuseDelay>1000</reuseDelay>
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>3600</abnormalTime>
-		<abnormalType>G_EV_BUFF1</abnormalType>
-		<effectPoint>1</effectPoint>
-		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
-		<specialLevel>-2</specialLevel>
-		<magicLvl>-2</magicLvl>
-		<isMagic>1</isMagic>
-		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
-		<blockedInOlympiad>true</blockedInOlympiad>
-		<effects>
-			<effect name="PAtk">
-				<amount>15</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PhysicalDefence">
-				<amount>15</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="CriticalRate">
-				<amount>30</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PhysicalAttackSpeed">
-				<amount>33</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MagicalAttackSpeed">
-				<amount>30</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MAtk">
-				<amount>75</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="Speed">
-				<amount>33</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="CriticalDamage">
-				<amount>35</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="VampiricAttack">
-				<amount>9</amount>
-				<chance>80</chance>
-			</effect>
-		</effects>
-	</skill>
 	<skill id="6166" toLevel="1" name="Hold">
-		<!-- Inflicted with Hold and unable to move. -->
+		<!-- Inflicted with hold and unable to move momentarily. -->
 		<icon>icon.skill4047</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2</abnormalTime>
@@ -1212,7 +1212,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="6167" toLevel="12" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1</abnormalTime>
@@ -1262,7 +1262,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="6168" toLevel="12" name="Stun">
-		<!-- Stunned and unable to move momentarily. -->
+		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1</abnormalTime>
@@ -1704,8 +1704,35 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
+	<skill id="6196" toLevel="1" name="Agathion Oink Oink's Ability">
+		<!-- Agathion Oink Oink's Ability: Vitality is maintained and not consumed. -->
+		<icon>icon.skill_agathion_cute</icon>
+		<abnormalLvl>2</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>VP_KEEP</abnormalType>
+		<abnormalVisualEffect>VP_KEEP</abnormalVisualEffect>
+		<coolTime>1000</coolTime>
+		<isMagic>4</isMagic> <!-- Item Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>72000000</reuseDelay>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<hitTime>1500</hitTime>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanRestoreVitalPoint" />
+			<condition name="CanUseVitalityConsumeItem" />
+			<condition name="OpNeedAgathion" />
+		</conditions>
+	</skill>
 	<skill id="6197" toLevel="1" name="Agathion Cute Trick - Oink Oink">
-		<!-- See Agathion's cute trick. -->
+		<!-- See the summoned spirit perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1720,7 +1747,7 @@
 		</conditions>
 	</skill>
 	<skill id="6198" toLevel="1" name="Agathion Cute Trick - Light of the Dawn">
-		<!-- See Agathion's cute trick. -->
+		<!-- See the summoned spirit perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>55</magicLvl>

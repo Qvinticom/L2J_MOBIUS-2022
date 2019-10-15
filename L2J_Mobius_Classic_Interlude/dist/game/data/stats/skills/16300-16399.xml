@@ -86,7 +86,7 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="16317" toLevel="10" name="Pull Resistance">
-		<!-- Resistance to Pull. -->
+		<!-- Slightly resistant to Pull attack. -->
 		<icon>icon.skill10015</icon>
 		<operateType>P</operateType>
 	</skill>
@@ -116,11 +116,27 @@
 		<effectPoint>-1</effectPoint>
 		<isDebuff>true</isDebuff>
 	</skill>
+	<skill id="16322" toLevel="1" name="Orc Cyclone">
+		<!-- Blown away. -->
+		<icon>icon.skill4107</icon>
+		<operateType>A2</operateType>
+		<coolTime>500</coolTime>
+		<effectPoint>-1</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
 	<skill id="16323" toLevel="1" name="Orc Typhoon">
 		<!-- Blown away. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A1</operateType>
 		<hitTime>10000</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-1</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="16324" toLevel="1" name="Orc Typhoon">
+		<!-- Blown away. -->
+		<icon>icon.skill3080</icon>
+		<operateType>A2</operateType>
 		<coolTime>500</coolTime>
 		<effectPoint>-1</effectPoint>
 		<isDebuff>true</isDebuff>
@@ -136,7 +152,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16326" toLevel="1" name="Phoenix Rush">
-		<!-- Charges the enemy and inflicts damage. -->
+		<!-- Rush toward enemy and inflict damage. -->
 		<icon>icon.skill6041</icon>
 		<operateType>A2</operateType>
 		<castRange>500</castRange>
@@ -195,20 +211,45 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="16334" toLevel="3" name="Disarm">
-		<!-- Disarms equipment. -->
+		<!-- Disarmed. -->
 		<icon>icon.skill0485</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>DISARM</abnormalType>
+		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
 		<operateType>A2</operateType>
 		<trait>DISARM</trait>
-		<mpConsume>13</mpConsume>
+		<mpConsume>38</mpConsume>
 		<castRange>40</castRange>
 		<hitTime>1500</hitTime>
 		<coolTime>800</coolTime>
 		<reuseDelay>15000</reuseDelay>
 		<effectPoint>-100</effectPoint>
+		<abnormalTime>5</abnormalTime>
 		<isDebuff>true</isDebuff>
+		<activateRate>70</activateRate>
+		<basicProperty>PHYSICAL</basicProperty>
+		<lvlBonusRate>20</lvlBonusRate>
+		<magicCriticalRate>5</magicCriticalRate>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>SWORD</item>
+					<item>BLUNT</item>
+					<item>POLE</item>
+					<item>DUALFIST</item>
+					<item>DUAL</item>
+					<item>DUALBLUNT</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Disarm">
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16335" toLevel="1" name="Fear">
-		<!-- Afflicted with Fear and moving against own will momentarily. -->
+		<!-- Moving against your will due to Fear. -->
 		<icon>icon.skill1092</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
@@ -238,12 +279,19 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="16338" toLevel="2" name="Stiff Charge">
-		<!-- Petrify status. -->
+		<!-- Petrified. -->
 		<icon>icon.skill4111</icon>
 		<operateType>A2</operateType>
 		<mpConsume>15</mpConsume>
 		<hitTime>1000</hitTime>
 		<isMagic>1</isMagic>
+	</skill>
+	<skill id="16339" toLevel="1" name="Vortex Chaos">
+		<!-- Knocked down. -->
+		<icon>icon.skill11510</icon>
+		<operateType>A2</operateType>
+		<isMagic>1</isMagic>
+		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16340" toLevel="1" name="Reaper's Seal">
 		<!-- Branded with a seal and targeted by the Undead of Dragon Valley. -->
@@ -282,8 +330,8 @@
 		<effectPoint>-100</effectPoint>
 		<isMagic>1</isMagic>
 	</skill>
-	<skill id="16345" toLevel="2" name="Fire Flare">
-		<!-- HP decreases from bleeding. -->
+	<skill id="16345" toLevel="2" name="Fire Spike">
+		<!-- Bleeding with HP momentarily decreased. -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
 		<mpConsume>25</mpConsume>
@@ -339,6 +387,16 @@
 		<effectPoint>-100</effectPoint>
 		<isMagic>1</isMagic>
 	</skill>
+	<skill id="16351" toLevel="1" name="Kain's Sonic Star">
+		<icon>icon.skill10281</icon>
+		<operateType>A2</operateType>
+		<mpConsume>50</mpConsume>
+		<hitTime>5000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>10000</reuseDelay>
+		<effectPoint>-700</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
 	<skill id="16352" toLevel="1" name="Kain's Sonic Storm">
 		<icon>icon.skill0007</icon>
 		<operateType>A1</operateType>
@@ -367,6 +425,50 @@
 		<coolTime>800</coolTime>
 		<effectPoint>-100</effectPoint>
 		<reuseDelay>5000</reuseDelay>
+		<basicProperty>PHYSICAL</basicProperty>
+		<effectRange>400</effectRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<nextAction>ATTACK</nextAction>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>19893</power> <!-- Fix: Retail Missed -->
+				<overHit>true</overHit>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="16355" toLevel="1" name="Sacred Blow Down">
+		<icon>icon.skill10281</icon>
+		<operateType>A2</operateType>
+		<mpConsume>50</mpConsume>
+		<hitTime>5000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>10000</reuseDelay>
+		<effectPoint>-700</effectPoint>
+		<isDebuff>true</isDebuff>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<activateRate>200</activateRate>
+		<affectRange>900</affectRange>
+		<basicProperty>PHYSICAL</basicProperty>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<trait>PULL</trait>
+		<nextAction>ATTACK</nextAction>
+		<effects>
+			<effect name="AirBind" />
+			<effect name="Bluff">
+				<chance>100</chance>
+			</effect>
+			<effect name="PullBack">
+				<speed>600</speed>
+				<delay>600</delay>
+			</effect>
+			<effect name="BlockActions" />
+			<effect name="GetAgro" />
+		</effects>
 	</skill>
 	<skill id="16356" toLevel="1" name="Sacred Sphere">
 		<operateType>A1</operateType>
@@ -376,6 +478,17 @@
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
 		<isMagic>1</isMagic>
+		<affectRange>200</affectRange>
+		<effectRange>1000</effectRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<nextAction>CAST</nextAction>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>431</power> <!-- Fix: Retail Missed -->
+				<overHit>true</overHit>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16357" toLevel="2" name="Dimensional Barrier">
 		<!-- Monster's P./M. Atk. and P./M. Def. increase. -->
@@ -412,8 +525,8 @@
 		<icon>icon.skill_heavy_heart</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16364" toLevel="1" name="Dimensional Warp Pull">
-		<!-- Resistance to Pull. -->
+	<skill id="16364" toLevel="1" name="Dimensional Warp Pull/Danger Zone">
+		<!-- Resistance to Pull/Danger Zone. -->
 		<icon>icon.skill0388</icon>
 		<operateType>P</operateType>
 	</skill>
@@ -478,7 +591,7 @@
 		<effectPoint>-100</effectPoint>
 		<reuseDelay>3000</reuseDelay>
 	</skill>
-	<skill id="16371" toLevel="1" name="Dimension Storm">
+	<skill id="16371" toLevel="1" name="Dimensional Storm">
 		<!-- Attacks nearby enemies with 200% of P. Atk. power. -->
 		<operateType>A1</operateType>
 		<castRange>40</castRange>
@@ -517,11 +630,34 @@
 		<effectPoint>-100</effectPoint>
 		<isMagic>1</isMagic>
 	</skill>
+	<skill id="16375" toLevel="1" name="Dimensional Hammer">
+		<!-- Attacks target with 100% of P. Atk. power and inflicts Knock Down. -->
+		<icon>icon.skill0260</icon>
+		<operateType>A2</operateType>
+		<coolTime>500</coolTime>
+		<castRange>40</castRange>
+		<hitTime>2500</hitTime>
+		<reuseDelay>3000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
 	<skill id="16376" toLevel="1" name="Dimensional Bind">
 		<!-- Attacks target with 100% of P. Atk. power and inflicts Hold for 5 sec. -->
 		<icon>icon.skill4047</icon>
 		<operateType>A2</operateType>
+		<coolTime>500</coolTime>
 		<castRange>40</castRange>
+		<hitTime>2500</hitTime>
+		<reuseDelay>3000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="16377" toLevel="1" name="Dimensional Chain">
+		<!-- Attacks target with 100% of P. Atk. power and pulls target toward self. -->
+		<icon>icon.skill0403</icon>
+		<operateType>A2</operateType>
+		<coolTime>500</coolTime>
+		<castRange>600</castRange>
 		<hitTime>2500</hitTime>
 		<reuseDelay>3000</reuseDelay>
 		<effectPoint>-100</effectPoint>
@@ -531,6 +667,7 @@
 		<!-- Attacks nearby enemies with 100% of P. Atk. power and inflicts Stun for 5 sec. -->
 		<icon>icon.skill10265</icon>
 		<operateType>A2</operateType>
+		<coolTime>500</coolTime>
 		<hitTime>2500</hitTime>
 		<reuseDelay>3000</reuseDelay>
 		<effectPoint>-100</effectPoint>
@@ -539,20 +676,34 @@
 	<skill id="16379" toLevel="1" name="Dimensional Remedy">
 		<!-- Recover 40% of Max HP. -->
 		<operateType>A1</operateType>
+		<coolTime>500</coolTime>
 		<hitTime>2500</hitTime>
 		<effectPoint>-100</effectPoint>
 		<reuseDelay>3000</reuseDelay>
+	</skill>
+	<skill id="16380" toLevel="1" name="Dimensional Recoil Shot">
+		<!-- Attacks target with 100% of P. Atk. power and inflicts Knock Back. -->
+		<icon>icon.skill10770</icon>
+		<operateType>A2</operateType>
+		<coolTime>500</coolTime>
+		<castRange>600</castRange>
+		<hitTime>2500</hitTime>
+		<reuseDelay>3000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16381" toLevel="1" name="Dimensional Shield">
 		<!-- Allied monsters nearby have P./M. Def. + 100%. -->
 		<icon>icon.skill1503</icon>
 		<operateType>A2</operateType>
+		<coolTime>500</coolTime>
 		<hitTime>2500</hitTime>
 		<reuseDelay>3000</reuseDelay>
 	</skill>
 	<skill id="16382" toLevel="1" name="Dimensional Death Ring">
 		<!-- Attacks target's nearby enemies with 250 Power added to M. Atk. Damage increases as number of enemies affected increases. -->
 		<operateType>A1</operateType>
+		<coolTime>500</coolTime>
 		<castRange>600</castRange>
 		<hitTime>3000</hitTime>
 		<reuseDelay>3000</reuseDelay>
@@ -563,6 +714,7 @@
 		<!-- Attacks target's nearby enemies with 250 Power added to M. Atk. and block their P./M. Skills for 5 sec. -->
 		<icon>icon.skill1064</icon>
 		<operateType>A2</operateType>
+		<coolTime>500</coolTime>
 		<castRange>600</castRange>
 		<hitTime>2000</hitTime>
 		<reuseDelay>3000</reuseDelay>
@@ -574,6 +726,7 @@
 		<!-- Inflict Bleed on target's nearby enemies and cause them to lose 1,000 HP/second. -->
 		<icon>icon.skill0223</icon>
 		<operateType>A2</operateType>
+		<coolTime>500</coolTime>
 		<castRange>40</castRange>
 		<hitTime>2500</hitTime>
 		<reuseDelay>3000</reuseDelay>
@@ -583,10 +736,34 @@
 	<skill id="16385" toLevel="1" name="Dimesional Devil">
 		<!-- Attacks target's nearby enemies with 300% of P. Atk. power. Damage decreases as number of enemies affected increases. -->
 		<operateType>A1</operateType>
+		<coolTime>500</coolTime>
 		<castRange>40</castRange>
 		<hitTime>2500</hitTime>
 		<effectPoint>-100</effectPoint>
 		<reuseDelay>3000</reuseDelay>
+	</skill>
+	<skill id="16386" toLevel="1" name="Dimensional Stun">
+		<!-- Attacks enemies to the front with 200% of P. Atk. power and inflicts Knock Down. -->
+		<icon>icon.skill0777</icon>
+		<operateType>A2</operateType>
+		<coolTime>500</coolTime>
+		<castRange>40</castRange>
+		<hitTime>2500</hitTime>
+		<reuseDelay>3000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="16387" toLevel="1" name="Chain Smash">
+		<!-- Pulls target toward you. -->
+		<icon>icon.skill10015</icon>
+		<operateType>A2</operateType>
+		<mpConsume>10</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>1000</hitTime>
+		<coolTime>1000</coolTime>
+		<reuseDelay>5000</reuseDelay>
+		<effectPoint>-150</effectPoint>
+		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16388" toLevel="1" name="Kain's Wrath">
 		<!-- Consumed by vengeful fury toward all who harm Giselle. -->
@@ -715,7 +892,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16399" toLevel="1" name="Ferin's Cure">
-		<!-- Heals target with 1488 Power added to M. Atk. If HP is full, CP is restored. -->
+		<!-- Heals the target with 1488 power. If HP is full, CP is restored with the remaining power. -->
 		<icon>icon.skill11756</icon>
 		<operateType>A1</operateType>
 		<castRange>600</castRange>

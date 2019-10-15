@@ -24,6 +24,7 @@ import java.util.Map.Entry;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Rnd;
+import org.l2jmobius.gameserver.datatables.ItemTable;
 import org.l2jmobius.gameserver.model.ExtractableProductItem;
 import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -31,7 +32,9 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.holders.RestorationItemHolder;
+import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.items.type.CrystalType;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -107,6 +110,17 @@ public class RestorationRandom extends AbstractEffect
 			if ((createdItem.getId() <= 0) || (createdItem.getCount() <= 0))
 			{
 				continue;
+			}
+			
+			// Max equipable item grade configuration.
+			final Item extractable = ItemTable.getInstance().getTemplate(createdItem.getId());
+			if (extractable != null)
+			{
+				final int itemCrystalId = extractable.getCrystalType().getId();
+				if ((itemCrystalId > Config.MAX_EQUIPABLE_ITEM_GRADE.getId()) && (itemCrystalId < CrystalType.EVENT.getId()))
+				{
+					continue;
+				}
 			}
 			
 			long itemCount = (long) (createdItem.getCount() * Config.RATE_EXTRACTABLE);

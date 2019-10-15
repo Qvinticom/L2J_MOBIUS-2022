@@ -3353,11 +3353,14 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
-		<acquire exp="35673" sp="8" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="3638" hpRegen="34" mp="1442" mpRegen="3" />
+		<acquire exp="23782" sp="2447" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2586.66898" hpRegen="8.5" mp="1442.4" mpRegen="3" />
 			<attack physical="752.73928" magical="514.02335" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="310.02959" magical="226.8662" />
+			<defence physical="310.02959" magical="206.421198742611" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
@@ -3401,14 +3404,17 @@
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="DDMagic" id="4069" level="7" /> <!-- NPC Curve Beam Cannon -->
 		</parameters>
-		<race>BUG</race>
+		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="135" /> <!-- rhand: Samurai Longsword -->
-		<acquire exp="35642" sp="8" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="3702" hpRegen="34" mp="1475" mpRegen="3" />
+		<acquire exp="23761" sp="2477" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2632.19636" hpRegen="8.5" mp="1475.0" mpRegen="3" />
 			<attack physical="773.81598" magical="528.41601" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="314.65987" magical="230.25444" />
+			<defence physical="314.65987" magical="209.50409325236" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
 			<speed>
 				<walk ground="25" />
 				<run ground="160" />
@@ -3451,11 +3457,14 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="45113" sp="10" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="3764" hpRegen="34" mp="1507" mpRegen="3" />
+		<acquire exp="25063" sp="2679" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
 			<attack physical="815.37145" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="275.2168675" magical="236.93149" evasion="10" />
+			<defence physical="323.78455" magical="215.579412824268" />
+			<attribute>
+				<defence fire="20" water="20" wind="-5" earth="20" holy="-13" dark="53" />
+			</attribute>
 			<speed>
 				<walk ground="80" />
 				<run ground="200" />
@@ -4710,17 +4719,20 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="5800" lhand="5799" /> <!-- Nephilim Lord / Nephilim Lord -->
-		<acquire exp="33902" sp="3444" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="3572" hpRegen="34" mp="1410" mpRegen="3" />
-			<attack physical="885.1453226" magical="499.53679" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="252.3631983" magical="223.44881" shield="153" shieldRate="20" />
+		<acquire exp="33903" sp="3444" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2540.15331" hpRegen="8.5" mp="1410.0" mpRegen="3" />
+			<attack physical="731.52506" magical="499.53679" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="305.35947" magical="203.311781207645" shield="153" shieldRate="20" />
+			<attribute>
+				<attack type="DARK" value="20" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="-13" dark="184" />
+			</attribute>
 			<speed>
 				<walk ground="56" />
 				<run ground="190" />
 			</speed>
 			<hitTime>460</hitTime>
-			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
@@ -4781,17 +4793,20 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="236" lhand="236" /> <!-- Soul Separator / Soul Separator -->
-		<acquire exp="35478" sp="3742" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="3764" hpRegen="34" mp="1507" mpRegen="3" />
-			<attack physical="841.3981643" magical="542.68324" random="10" critical="8" accuracy="0" attackSpeed="289" type="DAGGER" range="40" distance="80" width="120" />
-			<defence physical="224.2638806" magical="233.61053" evasion="10" shield="140" />
+		<acquire exp="35479" sp="3742" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="212.557735094503" shield="140" />
+			<attribute>
+				<attack type="DARK" value="20" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="-13" dark="184" />
+			</attribute>
 			<speed>
 				<walk ground="36" />
 				<run ground="200" />
 			</speed>
 			<hitTime>460</hitTime>
-			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
@@ -4847,17 +4862,20 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="29221" sp="3198" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="3764" hpRegen="34" mp="1507" mpRegen="3" />
-			<attack physical="1035.534783" magical="584.40994" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="274.9591818" magical="243.45587" />
+		<acquire exp="29222" sp="3198" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="855.81387" magical="584.40994" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="221.515820894982" />
+			<attribute>
+				<attack type="DARK" value="20" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="-13" dark="184" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
 			<hitTime>500</hitTime>
-			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>

@@ -6,4 +6,4 @@ CREATE TABLE IF NOT EXISTS `gameservers` (
   PRIMARY KEY (`server_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
-INSERT INTO `gameservers` VALUES ('2', '-2ad66b3f483c22be097019f55c8abdf0', '');
+INSERT INTO `gameservers` VALUES ('1', '-2ad66b3f483c22be097019f55c8abdf0', '');

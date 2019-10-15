@@ -40,6 +40,7 @@ import org.l2jmobius.gameserver.model.items.EtcItem;
 import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.items.type.ActionType;
+import org.l2jmobius.gameserver.model.items.type.CrystalType;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -170,6 +171,13 @@ public class UseItem implements IClientIncomingPacket
 		
 		if (item.isEquipable())
 		{
+			// Max equipable item grade configuration.
+			final int itemCrystalId = item.getItem().getCrystalType().getId();
+			if (!player.isGM() && (itemCrystalId > Config.MAX_EQUIPABLE_ITEM_GRADE.getId()) && (itemCrystalId < CrystalType.EVENT.getId()))
+			{
+				return;
+			}
+			
 			// Don't allow to put formal wear while a cursed weapon is equipped.
 			if (player.isCursedWeaponEquipped() && (_itemId == 6408))
 			{

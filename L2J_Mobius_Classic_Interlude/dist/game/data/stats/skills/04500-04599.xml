@@ -107,7 +107,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>NONE</affectScope>
 	</skill>
-	<skill id="4515" toLevel="1" name="Raid Curse">
+	<skill id="4515" toLevel="2" name="Raid Curse">
 		<!-- The curse of the Raid Boss guardian spirit temporarily petrifies the target, immobilizing it like a stone. This curse befalls those who attempt to challenge a raid boss who is 9 or more Lv.s below their own, or those who do not meet the requirements for the raid. The curse is irreversible. -->
 		<icon>icon.skill4111</icon>
 		<abnormalLvl>99</abnormalLvl>
@@ -646,7 +646,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4540" toLevel="1" name="Curse Weakness">
+	<skill id="4540" toLevel="1" name="Curse of Weakness">
 		<!-- P. Def. decreases momentarily. and Speed significantly. Shield spell can remove the curse. -->
 		<icon>icon.skill1040</icon>
 		<abnormalLvl>3</abnormalLvl>
@@ -1123,11 +1123,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effects>
 			<effect name="DefenceTrait">
-				<POISON>20</POISON>
-				<HOLD>20</HOLD>
-				<PARALYZE>20</PARALYZE>
-				<BLEED>20</BLEED>
-				<SHOCK>20</SHOCK>
+				<CHANGEBODY>20</CHANGEBODY>
 			</effect>
 		</effects>
 	</skill>
@@ -1305,6 +1301,7 @@
 		<hitCancelTime>1.5</hitCancelTime>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<nextAction>CAST</nextAction>
 		<effects>
 			<effect name="MagicalAttack">
 				<power>
@@ -2393,9 +2390,7 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="BlockActions">
-				<allowedSkills>35016</allowedSkills>
-			</effect>
+			<effect name="BlockActions" />
 			<effect name="DamageBlock">
 				<type>BLOCK_HP</type>
 			</effect>
@@ -2510,7 +2505,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4580" toLevel="12" name="P. Atk. Decrease">
+	<skill id="4580" toLevel="12" name="Decrease P. Atk.">
 		<!-- P. Atk. decreases momentarily. Effect $s1. -->
 		<icon>icon.skill4037</icon>
 		<abnormalLvl>
@@ -2591,7 +2586,7 @@
 		</effects>
 	</skill>
 	<skill id="4581" toLevel="12" name="Hold">
-		<!-- Inflicted with Hold and unable to move. -->
+		<!-- Inflicted with hold and unable to move momentarily. -->
 		<icon>icon.skill4047</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -2644,7 +2639,7 @@
 		</effects>
 	</skill>
 	<skill id="4582" toLevel="12" name="Poison">
-		<!-- HP cut due to Poison. $s1 power. -->
+		<!-- Poisons a target, momentarily decreasing HP. Effect $s1. -->
 		<icon>icon.skill4035</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -2807,7 +2802,7 @@
 		</effects>
 	</skill>
 	<skill id="4584" toLevel="12" name="P. Def.-decreasing Stun">
-		<!-- P. Def. decreases momentarily. Stunned and unable to move momentarily. Effect $s1. -->
+		<!-- State of momentarily decreased defense and immobility due to the Stun effect. Effect $s1 -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>
 			<value level="1">11</value>
@@ -2883,7 +2878,9 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="PhysicalAttack" />
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 			<effect name="PhysicalDefence">
 				<amount>
 					<value level="1">-17</value>
@@ -2904,7 +2901,7 @@
 		</effects>
 	</skill>
 	<skill id="4585" toLevel="3" name="Berserker Spirit">
-		<!-- P. Def. - $s1, M. Def. - $s2, Evasion - $s3, and P. Atk. + $s4, M. Atk. + $s5, Atk. Spd. + $s6, Casting Spd. + $s7, Speed + $s8. -->
+		<!-- P. Def. decreases momentarily by $s1, M. Def. by $s2, and Evasion by $s3. Increases P. Atk. by $s4, M. Atk. by $s5, Atk. Spd. by $s6, Casting Spd. by $s7, and Speed by $s8. -->
 		<icon>icon.skill1062</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -3082,7 +3079,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4587" toLevel="12" name="P. Atk. Decrease">
+	<skill id="4587" toLevel="12" name="Decrease P. Atk.">
 		<!-- P. Atk. decreases momentarily. Effect $s1. -->
 		<icon>icon.skill4037</icon>
 		<abnormalLvl>

@@ -1,67 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
 	<skillTree type="classSkillTree" classId="106" parentClassId="33">
-		<skill skillName="Aggression" skillId="28" skillLvl="50" getLevel="76" levelUpSp="4900000" />
-		<skill skillName="Aggression Aura" skillId="18" skillLvl="38" getLevel="76" levelUpSp="4900000" />
-		<skill skillName="Sword/Blunt Weapon Mastery" skillId="257" skillLvl="46" getLevel="76" levelUpSp="4900000" />
-		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="53" getLevel="76" levelUpSp="4900000" />
-		<skill skillName="Sting" skillId="223" skillLvl="50" getLevel="76" levelUpSp="4900000" />
-		<skill skillName="Freezing Strike" skillId="105" skillLvl="25" getLevel="76" levelUpSp="4900000" />
-		<skill skillName="Drain HP" skillId="70" skillLvl="54" getLevel="76" levelUpSp="4900000" />
-		<skill skillName="Life Leech" skillId="289" skillLvl="16" getLevel="76" levelUpSp="4900000" />
-		<skill skillName="M.Def." skillId="147" skillLvl="52" getLevel="76" levelUpSp="4900000" />
-		<skill skillName="Judgment" skillId="401" skillLvl="16" getLevel="76" levelUpSp="4900000" />
-		<skill skillName="Hex" skillId="122" skillLvl="16" getLevel="76" levelUpSp="4900000" />
-		<skill skillName="Power Break" skillId="115" skillLvl="18" getLevel="76" levelUpSp="4900000" />
-		<skill skillName="Fortitude" skillId="335" skillLvl="1" getLevel="76" levelUpSp="4900000" />
-		<skill skillName="Chain Strike" skillId="10015" skillLvl="1" getLevel="76" levelUpSp="4900000" />
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="3" getLevel="76" levelUpSp="4900000">
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="3" getLevel="76" levelUpSp="8100000">
 			<item id="8620" count="1" /> <!-- Ancient Book: Divine Inspiration (Manuscript) -->
 		</skill>
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="4" getLevel="76" levelUpSp="4900000">
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="4" getLevel="76" levelUpSp="8100000">
 			<item id="8621" count="1" /> <!-- Ancient Book: Divine Inspiration (Original Version) -->
 		</skill>
-		<skill skillName="Mount Saber Tooth Cougar" skillId="1835" skillLvl="1" getLevel="76">
-			<item id="90040" count="1" /> <!-- Spellbook: Mount Saber Tooth Cougar -->
-		</skill>
-		
-		<skill skillName="Aggression" skillId="28" skillLvl="51" getLevel="77" levelUpSp="4900000" />
-		<skill skillName="Aggression Aura" skillId="18" skillLvl="39" getLevel="77" levelUpSp="4900000" />
-		<skill skillName="Sword/Blunt Weapon Mastery" skillId="257" skillLvl="47" getLevel="77" levelUpSp="4900000" />
-		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="54" getLevel="77" levelUpSp="4900000" />
-		<skill skillName="Sting" skillId="223" skillLvl="51" getLevel="77" levelUpSp="4900000" />
-		<skill skillName="Drain HP" skillId="70" skillLvl="55" getLevel="77" levelUpSp="4900000" />
-		<skill skillName="M.Def." skillId="147" skillLvl="53" getLevel="77" levelUpSp="4900000" />
-		<skill skillName="Vengeance" skillId="368" skillLvl="1" getLevel="77" levelUpSp="4900000">
-			<item id="90046" count="1" />
-		</skill>
-		<skill skillName="Deflect Magic" skillId="913" skillLvl="1" getLevel="77" levelUpSp="4900000" />
-		
-		<skill skillName="Aggression" skillId="28" skillLvl="52" getLevel="78" levelUpSp="11400000" />
-		<skill skillName="Aggression Aura" skillId="18" skillLvl="40" getLevel="78" levelUpSp="11400000" />
-		<skill skillName="Sword/Blunt Weapon Mastery" skillId="257" skillLvl="48" getLevel="78" levelUpSp="11400000" />
-		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="55" getLevel="78" levelUpSp="11400000" />
-		<skill skillName="Sting" skillId="223" skillLvl="52" getLevel="78" levelUpSp="11400000" />
-		<skill skillName="Freezing Strike" skillId="105" skillLvl="26" getLevel="78" levelUpSp="11400000" />
-		<skill skillName="Drain HP" skillId="70" skillLvl="56" getLevel="78" levelUpSp="11400000" />
-		<skill skillName="Life Leech" skillId="289" skillLvl="17" getLevel="78" levelUpSp="11400000" />
-		<skill skillName="M.Def." skillId="147" skillLvl="54" getLevel="78" levelUpSp="11400000" />
-		<skill skillName="Judgment" skillId="401" skillLvl="17" getLevel="78" levelUpSp="11400000" />
-		<skill skillName="Touch of Death" skillId="342" skillLvl="1" getLevel="78" levelUpSp="11400000">
-			<item id="90048" count="1" />
-		</skill>
-		<skill skillName="Knighthood" skillId="429" skillLvl="1" getLevel="78" levelUpSp="11400000" />
-		<skill skillName="Lightning Strike" skillId="279" skillLvl="6" getLevel="78" levelUpSp="11400000" />
-		<skill skillName="Hex" skillId="122" skillLvl="17" getLevel="78" levelUpSp="11400000" />
-		<skill skillName="Power Break" skillId="115" skillLvl="19" getLevel="78" levelUpSp="11400000" />
-		<skill skillName="Corpse Plague" skillId="103" skillLvl="5" getLevel="78" levelUpSp="11400000" />
-		
-		<skill skillName="Shield of Faith" skillId="528" skillLvl="1" getLevel="79" levelUpSp="11400000">
-			<item id="90049" count="1" />
-		</skill>
-		
-		<skill skillName="Mass Lightning Strike" skillId="10094" skillLvl="1" getLevel="80" levelUpSp="11400000">
-			<item id="90053" count="1" />
-		</skill>
+		<skill skillId="328" skillLvl="1" skillName="Wisdom" levelUpSp="10000000" getLevel="76" />
+		<skill skillId="329" skillLvl="1" skillName="Health" levelUpSp="10000000" getLevel="76" />
+		<skill skillId="335" skillLvl="1" skillName="Fortitude" levelUpSp="10000000" getLevel="76" />
+		<skill skillId="352" skillLvl="1" skillName="Shield Bash" levelUpSp="13000000" getLevel="77" />
+		<skill skillId="368" skillLvl="1" skillName="Vengeance" levelUpSp="13000000" getLevel="77" />
+		<skill skillId="426" skillLvl="1" skillName="Battle Force" levelUpSp="13000000" getLevel="77" />
+		<skill skillId="342" skillLvl="1" skillName="Touch of Death" levelUpSp="21340000" getLevel="78" />
+		<skill skillId="351" skillLvl="1" skillName="Magical Mirror" levelUpSp="21340000" getLevel="78" />
+		<skill skillId="429" skillLvl="1" skillName="Knighthood" levelUpSp="21340000" getLevel="78" />
+		<skill skillId="454" skillLvl="1" skillName="Symbol of Defense" levelUpSp="150000000" getLevel="80" />
 	</skillTree>
 </list>
