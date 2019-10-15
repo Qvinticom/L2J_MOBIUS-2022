@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="17701" toLevel="5" name="Topaz">
+		<!-- Interrupts target's skill casting. In PvP, ignores CP and inflicts a fixed damage of $s1. -->
+		<icon>icon.etc_bm_jewel_topaz_i00</icon>
+		<operateType>A1</operateType>
+		<castRange>600</castRange>
+		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>30000</reuseDelay>
+		<effectPoint>-1000</effectPoint>
+	</skill>
+	<skill id="17706" toLevel="5" name="Vital Stone">
+		<!-- Sayha Grace XP / SP +$s1, while hunting. -->
+		<icon>icon.etc_bm_jewel_vital</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="17707" toLevel="5" name="Jade">
+		<!-- Atk. Spd./Casting Spd. +$s1. -->
+		<icon>icon.etc_bm_jewel_jade_i00</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="17708" toLevel="5" name="Diamond">
+		<!-- P. Def. +$s1, when equipped. -->
+		<icon>icon.etc_bm_jewel_diamond_i00</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="17709" toLevel="5" name="Pearl">
+		<!-- M. Def. +$s1. -->
+		<icon>icon.etc_bm_jewel_pearl_i00</icon>
+		<operateType>P</operateType>
+	</skill>
+</list>

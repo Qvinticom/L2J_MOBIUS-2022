@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
+	<skillTree type="classSkillTree" classId="93" parentClassId="8">
+		<skill skillName="Throw Dagger in Wrist" skillId="1629" skillLvl="1" getLevel="76" levelUpSp="8300000" />
+		<skill skillName="Dagger Mastery" skillId="209" skillLvl="46" getLevel="76" levelUpSp="8300000" />
+		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="48" getLevel="76" levelUpSp="8300000" />
+		<skill skillName="Deadly Blow" skillId="263" skillLvl="38" getLevel="76" levelUpSp="8300000" />
+		<skill skillName="Lethal Blow" skillId="344" skillLvl="1" getLevel="76" levelUpSp="8300000" />
+		<skill skillName="Backstab" skillId="30" skillLvl="38" getLevel="76" levelUpSp="8300000" />
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="3" getLevel="76" levelUpSp="8300000">
+			<item id="8620" count="1" /> <!-- Ancient Book: Divine Inspiration (Manuscript) -->
+		</skill>
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="4" getLevel="76" levelUpSp="8300000">
+			<item id="8621" count="1" /> <!-- Ancient Book: Divine Inspiration (Original Version) -->
+		</skill>
+		<skill skillName="Mount Gold Maned Lion" skillId="1833" skillLvl="1" getLevel="76">
+			<item id="90038" count="1" /> <!-- Spellbook: Mount Golden Lion -->
+		</skill>
+		
+		<skill skillName="Dagger Mastery" skillId="209" skillLvl="47" getLevel="77" levelUpSp="8300000" />
+		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="49" getLevel="77" levelUpSp="8300000" />
+		<skill skillName="Critical Wound" skillId="531" skillLvl="1" getLevel="77" levelUpSp="8300000">
+			<item id="90055" count="1" />
+		</skill>
+		<skill skillName="Clear Movements" skillId="1631" skillLvl="1" getLevel="77" levelUpSp="8300000">
+			<item id="90054" count="1" />
+		</skill>
+		<skill skillName="Deadly Blow" skillId="263" skillLvl="39" getLevel="77" levelUpSp="8300000" />
+		<skill skillName="Backstab" skillId="30" skillLvl="39" getLevel="77" levelUpSp="8300000" />
+
+		<skill skillName="Dagger Mastery" skillId="209" skillLvl="48" getLevel="78" levelUpSp="19400000" />
+		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="50" getLevel="78" levelUpSp="19400000" />
+		<skill skillName="Sand Bomb" skillId="412" skillLvl="11" getLevel="78" levelUpSp="19400000" />
+		<skill skillName="Deadly Blow" skillId="263" skillLvl="40" getLevel="78" levelUpSp="19400000" />
+		<skill skillName="Backstab" skillId="30" skillLvl="40" getLevel="78" levelUpSp="19400000" />
+		<skill skillName="Focus Power" skillId="357" skillLvl="1" getLevel="78" levelUpSp="19400000">
+			<item id="90056" count="1" />
+		</skill>
+		<skill skillName="Focus Chance" skillId="356" skillLvl="1" getLevel="78" levelUpSp="19400000">
+			<item id="90057" count="1" />
+		</skill>
+		<!-- <skill skillName="Shadow Step" skillId="821" skillLvl="8" getLevel="78" levelUpSp="19400000" />Does not exist in Saviors client -->
+
+		
+		<skill skillName="Mirage" skillId="445" skillLvl="1" getLevel="79" levelUpSp="19400000">
+			<item id="90059" count="1" />
+		</skill>
+
+		<skill skillName="Exciting Adventure" skillId="768" skillLvl="1" getLevel="83" levelUpSp="19400000">
+			<item id="90133" count="1" />
+		</skill>
+	</skillTree>
+</list>

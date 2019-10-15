@@ -1,0 +1,430 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
+	<npc id="9000" level="75" type="Npc" name="Rosalia" title="Collector of Letters">
+		<!-- Classic NPC -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="100" />
+			</speed>
+			<attack physical="795.07855864326" magical="542.73382161824" critical="4" attackSpeed="253" range="40" />
+			<defence physical="319.51219512195" magical="233.84045721645" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="19" />
+		</collision>
+	</npc>
+	<npc id="9001" level="75" type="Npc" name="Diana" title="Contest Participant">
+		<!-- Classic NPC -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="100" />
+			</speed>
+			<attack physical="795.07855864326" magical="542.73382161824" critical="4" attackSpeed="253" range="40" />
+			<defence physical="319.51219512195" magical="233.84045721645" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="19" />
+		</collision>
+	</npc>
+	<npc id="9002" level="75" type="Npc" name="Synge the Cat" title="Grand Soloist">
+		<!-- Classic NPC -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3" />
+			<speed>
+				<walk ground="40" />
+				<run ground="1" />
+			</speed>
+			<attack physical="795.07855864326" magical="542.73382161824" critical="4" attackSpeed="253" range="40" />
+			<defence physical="319.51219512195" magical="233.84045721645" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="9" />
+			<height normal="16" />
+		</collision>
+	</npc>
+	<npc id="9003" level="75" type="Npc" name="Tumran Bugbear Warrior" title="Incredibly Strong Monster">
+		<!-- Classic NPC -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="306149" hpRegen="8.5" mp="245" mpRegen="3" />
+			<speed>
+				<walk ground="60" />
+				<run ground="160" />
+			</speed>
+			<attack physical="795.07855864326" magical="542.73382161824" critical="4" attackSpeed="253" range="40" />
+			<defence physical="319.51219512195" magical="233.84045721645" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="42.5" />
+			<height normal="95.5" />
+		</collision>
+	</npc>
+	<npc id="9004" level="75" type="Npc" name="Ruin Imp Elder" title="Incredibly Strong Monster">
+		<!-- Classic NPC -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="256190" hpRegen="8.5" mp="205" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="150" />
+			</speed>
+			<attack physical="795.07855864326" magical="542.73382161824" critical="4" attackSpeed="253" range="40" />
+			<defence physical="319.51219512195" magical="233.84045721645" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="25" />
+			<height normal="67.5" />
+		</collision>
+	</npc>
+	<npc id="9005" level="75" type="Npc" name="Ol Mahum Novice" title="Incredibly Strong Monster">
+		<!-- Classic NPC -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="198715" hpRegen="8.5" mp="166" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="150" />
+			</speed>
+			<attack physical="795.07855864326" magical="542.73382161824" critical="4" attackSpeed="253" range="40" />
+			<defence physical="319.51219512195" magical="233.84045721645" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="30" />
+			<height normal="66" />
+		</collision>
+	</npc>
+	<npc id="9006" level="75" type="Npc" name="Turek Orc Elder" title="Incredibly Strong Monster">
+		<!-- Classic NPC -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="518257" hpRegen="8.5" mp="387" mpRegen="3" />
+			<speed>
+				<walk ground="45" />
+				<run ground="120" />
+			</speed>
+			<attack physical="795.07855864326" magical="542.73382161824" critical="4" attackSpeed="253" range="40" />
+			<defence physical="319.51219512195" magical="233.84045721645" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="25" />
+			<height normal="60.5" />
+		</collision>
+	</npc>
+	<npc id="9007" level="75" type="Npc" name="Torfe" title="Incredibly Strong Monster">
+		<!-- Classic NPC -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="723726" hpRegen="8.5" mp="720" mpRegen="3" />
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<attack physical="795.07855864326" magical="542.73382161824" critical="4" attackSpeed="253" range="40" />
+			<defence physical="319.51219512195" magical="233.84045721645" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="35" />
+			<height normal="75.5" />
+		</collision>
+	</npc>
+	<npc id="9008" level="75" type="Npc" name="">
+		<!-- Classic NPC -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="4234" hpRegen="8.5" mp="1846" mpRegen="3" />
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<attack physical="795.07855864326" magical="542.73382161824" critical="4" attackSpeed="253" range="40" />
+			<defence physical="319.51219512195" magical="233.84045721645" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="0.1" />
+			<height normal="0.1" />
+		</collision>
+	</npc>
+	<npc id="9009" level="75" type="Npc" name="">
+		<!-- Classic NPC -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="4234" hpRegen="8.5" mp="1846" mpRegen="3" />
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<attack physical="795.07855864326" magical="542.73382161824" critical="4" attackSpeed="253" range="40" />
+			<defence physical="319.51219512195" magical="233.84045721645" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="0.1" />
+			<height normal="0.1" />
+		</collision>
+	</npc>
+	<npc id="9010" level="75" type="Npc" name="">
+		<!-- Classic NPC -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="4234" hpRegen="8.5" mp="1846" mpRegen="3" />
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<attack physical="795.07855864326" magical="542.73382161824" critical="4" attackSpeed="253" range="40" />
+			<defence physical="319.51219512195" magical="233.84045721645" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="0.1" />
+			<height normal="0.1" />
+		</collision>
+	</npc>
+	<npc id="9011" level="75" type="Npc" name="">
+		<!-- Classic NPC -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="4234" hpRegen="8.5" mp="1846" mpRegen="3" />
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<attack physical="795.07855864326" magical="542.73382161824" critical="4" attackSpeed="253" range="40" />
+			<defence physical="319.51219512195" magical="233.84045721645" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="0.1" />
+			<height normal="0.1" />
+		</collision>
+	</npc>
+	<npc id="9012" level="75" type="Npc" name="">
+		<!-- Classic NPC -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="4234" hpRegen="8.5" mp="1846" mpRegen="3" />
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<attack physical="795.07855864326" magical="542.73382161824" critical="4" attackSpeed="253" range="40" />
+			<defence physical="319.51219512195" magical="233.84045721645" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="0.1" />
+			<height normal="0.1" />
+		</collision>
+	</npc>
+	<npc id="9013" level="75" type="Npc" name="Shcrowl" title="Zombie Lord">
+		<!-- Classic NPC -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444" hpRegen="8.5" mp="1345" mpRegen="3" />
+			<speed>
+				<walk ground="37" />
+				<run ground="100" />
+			</speed>
+			<attack physical="795.07855864326" magical="542.73382161824" critical="4" attackSpeed="253" range="40" />
+			<defence physical="319.51219512195" magical="233.84045721645" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="20" />
+			<height normal="10" />
+		</collision>
+	</npc>
+	<npc id="9014" level="75" type="Npc" name="Riana" title="Event Manager">
+		<!-- Classic NPC -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1" hpRegen="8.5" mp="1" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="100" />
+			</speed>
+			<attack physical="795.07855864326" magical="542.73382161824" critical="4" attackSpeed="253" range="40" />
+			<defence physical="319.51219512195" magical="233.84045721645" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="7" />
+			<height normal="21.2" />
+		</collision>
+	</npc>
+	<npc id="9015" level="75" type="Npc" name="Riana" title="Celebrating Victory">
+		<!-- Classic NPC -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1" hpRegen="8.5" mp="1" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="100" />
+			</speed>
+			<attack physical="795.07855864326" magical="542.73382161824" critical="4" attackSpeed="253" range="40" />
+			<defence physical="319.51219512195" magical="233.84045721645" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="7" />
+			<height normal="21.2" />
+		</collision>
+	</npc>
+	<npc id="9016" level="75" type="Npc" name="Elk">
+		<!-- Classic NPC -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+			<attack physical="795.07855864326" magical="542.73382161824" critical="4" attackSpeed="253" range="40" />
+			<defence physical="319.51219512195" magical="233.84045721645" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="9017" level="75" type="Npc" name="Babayaga">
+		<!-- Classic NPC -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+			<attack physical="795.07855864326" magical="542.73382161824" critical="4" attackSpeed="253" range="40" />
+			<defence physical="319.51219512195" magical="233.84045721645" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="9018" level="75" type="Npc" name="Minion Eye">
+		<!-- Classic NPC -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+			<attack physical="795.07855864326" magical="542.73382161824" critical="4" attackSpeed="253" range="40" />
+			<defence physical="319.51219512195" magical="233.84045721645" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="9019" level="75" type="Npc" name="Matryoshka">
+		<!-- Classic NPC -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+			<attack physical="795.07855864326" magical="542.73382161824" critical="4" attackSpeed="253" range="40" />
+			<defence physical="319.51219512195" magical="233.84045721645" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="9020" level="75" type="Npc" name="Frintezza" title="In Love">
+		<!-- Classic NPC -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+			<attack physical="795.07855864326" magical="542.73382161824" critical="4" attackSpeed="253" range="40" />
+			<defence physical="319.51219512195" magical="233.84045721645" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="9021" level="55" type="Npc" name="Sin Eater">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4" />
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<attack physical="388.11142" magical="265.02979" critical="4" attackSpeed="253" range="40" type="FIST" distance="80" width="120" random="5" accuracy="5" />
+			<defence physical="223.6362" magical="163.64727" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<abnormalResist physical="0" magical="0" />
+		</stats>
+		<status attackable="false" undying="false" />
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+		</skillList>
+		<shots soul="2" spirit="2" />
+		<collision>
+			<radius normal="2" />
+			<height normal="1" />
+		</collision>
+	</npc>
+</list>

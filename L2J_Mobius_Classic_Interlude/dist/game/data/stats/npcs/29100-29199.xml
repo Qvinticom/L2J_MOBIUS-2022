@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
+	<npc id="29190" level="84" type="Monster" name="Tarask Dragon">
+		<!-- Todo: CT2.5 -->
+		<parameters>
+			<skill name="Skill01_ID" id="5095" level="1" />
+			<skill name="Skill02_ID" id="5096" level="1" />
+		</parameters>
+		<race>DRAGON</race>
+		<sex>MALE</sex>
+		<stats str="40" int="41" dex="30" wit="20" con="43" men="10">
+			<vitals hp="292335" hpRegen="76.71" mp="22800" mpRegen="3" />
+			<attack physical="3584.56902102981" magical="1386.66000087809" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1071.29474264312" magical="522.626863116263" />
+			<speed>
+				<walk ground="180" />
+				<run ground="180" />
+			</speed>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5095" level="1" /> <!-- Antharas Subordinate Melee Attack -->
+			<skill id="5096" level="1" /> <!-- Antharas Subordinate Remote Attack -->
+			<skill id="5465" level="1" /> <!-- Earth Attacks -->
+			<skill id="6655" level="1" /> <!-- Tarsque Carapace -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
+		<collision>
+			<radius normal="63" />
+			<height normal="54" />
+		</collision>
+	</npc>
+</list>

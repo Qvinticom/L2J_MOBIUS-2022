@@ -1,0 +1,690 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="90800" name="Fire Dragon Pendant Chest +5" additionalName="7-day" type="EtcItem">
+		<!-- Double-click to receive one Fire Dragon Pendant +5 (7-day). Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.bm_freya_gift_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="10080" />
+	</item>
+	<item id="90801" name="Talisman of Border Pack +5" additionalName="7-day" type="EtcItem">
+		<!-- Double-click to receive one Talisman of Border - Lv. 5 (7-day). Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.bm_freya_gift_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="10080" />
+	</item>
+	<item id="90802" name="Fire Dragon Pendant Chest +6" additionalName="7-day" type="EtcItem">
+		<!-- Double-click to receive one Fire Dragon Pendant +6 (7-day). Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.bm_freya_gift_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="10080" />
+	</item>
+	<item id="90803" name="Talisman of Border Pack +6" additionalName="7-day" type="EtcItem">
+		<!-- Double-click to receive one Talisman of Border - Lv. 6 (7-day). Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.bm_freya_gift_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="10080" />
+	</item>
+	<item id="90804" name="Fire Dragon Pendant Chest +7" additionalName="7-day" type="EtcItem">
+		<!-- Double-click to receive one Fire Dragon Pendant +7 (7-day). Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.bm_freya_gift_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="10080" />
+	</item>
+	<item id="90805" name="Talisman of Border Pack +7" additionalName="7-day" type="EtcItem">
+		<!-- Double-click to receive one Talisman of Border - Lv. 7 (7-day). Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.bm_freya_gift_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="10080" />
+	</item>
+	<item id="90806" name="Lv. 4 Vital Stone Chest" additionalName="15-day" type="EtcItem">
+		<!-- Double-click to receive one Vital Stone - Lv. 4 (15-day). Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.bm_freya_gift_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="21600" />
+	</item>
+	<item id="90807" name="Lv. 4 Diamond Chest" additionalName="15-day" type="EtcItem">
+		<!-- Double-click to receive one Diamond - Lv. 4 (15-day). Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.bm_freya_gift_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="21600" />
+	</item>
+	<item id="90808" name="Lv. 4 Pearl Box" additionalName="15-day" type="EtcItem">
+		<!-- Double-click to receive one Pearl - Lv. 4 (15-day). Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.bm_freya_gift_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="21600" />
+	</item>
+	<item id="90809" name="Lv. 4 Jade Chest" additionalName="15-day" type="EtcItem">
+		<!-- Double-click to receive one Jade - Lv. 4 (15-day). Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.bm_freya_gift_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="21600" />
+	</item>
+	<item id="90810" name="Fire Dragon Belt Chest" additionalName="7-day" type="EtcItem">
+		<!-- Double-click to receive one Fire Dragon Belt (7-day). Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.bm_freya_gift_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="10080" />
+	</item>
+	<item id="90811" name="Lv. 4 Garnet Box" additionalName="15-day" type="EtcItem">
+		<!-- Double-click to receive one Garnet - Lv. 4 (15-day). Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.bm_freya_gift_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="21600" />
+	</item>
+	<item id="90812" name="Fire Dragon Pendant Chest +8" additionalName="7-day" type="EtcItem">
+		<!-- Double-click to receive one Fire Dragon Pendant +8 (7-day). Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.bm_freya_gift_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="10080" />
+	</item>
+	<item id="90813" name="Talisman of Border Pack Lv. 8" additionalName="7-day" type="EtcItem">
+		<!-- Double-click to receive one Talisman of Border - Lv. 8 (7-day). Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.bm_freya_gift_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="10080" />
+	</item>
+	<item id="90814" name="Lv. 4 Topaz Chest" additionalName="15-day" type="EtcItem">
+		<!-- Double-click to receive one Topaz - Lv. 4 (15-day). Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.bm_freya_gift_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="time" val="21600" />
+	</item>
+	<item id="90815" name="Pirate's Treasure Chest Key" type="EtcItem">
+		<!-- A Key that can open Pirate's Treasure Chest. Covered in a thick layer of rust, might break at any moment. -->
+		<set name="icon" val="icon.etc_key_i00" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90816" name="Gracia's Cube" additionalName="15-day" type="EtcItem">
+		<!-- A 15-day item. Double-click to receive Gracia's Potion. (Can be used only once a day). Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. This item will be deleted after the event is over on October 5, 2016. -->
+		<set name="icon" val="icon.etc_violet_crystal_cube_pc_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="21600" />
+	</item>
+	<item id="90817" name="Gracia's Potion" type="EtcItem">
+		<!-- Sayha Grace points +105000 (3 slots). Cooldown: 10 minutes. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. This item will be deleted after the event is over on October 5, 2016. -->
+		<set name="icon" val="icon.bm_freya_potion" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90818" name="Refined Zaken's Earring" additionalName="7-day" type="Armor">
+		<!-- A 7-day item. MP +34, Bleed Resistance and Bleed Atk. Rate +20%, Stun Resistance and Stun Atk. Rate +15%, Mental Resistance and Atk. Rate +15% Healing Power +10%, HP Recovery Bonus +20%. Vampiric Rage Effect +8%. The effect doesn't stack if two identical earrings are worn. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.accessory_earring_of_zaken_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="10080" />
+		<stats>
+			<stat type="mDef">80</stat>
+			<stat type="maxMp">34</stat>
+		</stats>
+	</item>
+	<item id="90819" name="Refined Zaken's Earring" additionalName="15-day" type="Armor">
+		<!-- A 15-day item. MP +34, Bleed Resistance and Bleed Atk. Rate +20%, Stun Resistance and Stun Atk. Rate +15%, Mental Resistance and Atk. Rate +15% Healing Power +10%, HP Recovery Bonus +20%. Vampiric Rage Effect +8%. The effect doesn't stack if two identical earrings are worn. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.accessory_earring_of_zaken_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="21600" />
+		<skills>
+			<skill id="45017" level="3" /> <!-- Zaken's Earring -->
+		</skills>
+		<stats>
+			<stat type="mDef">80</stat>
+			<stat type="maxMp">34</stat>
+		</stats>
+	</item>
+	<item id="90820" name="Refined Zaken's Earring" additionalName="30 days" type="Armor">
+		<!-- A 30-day item. MP +34, Bleed Resistance and Bleed Atk. Rate +20%, Stun Resistance and Stun Atk. Rate +15%, Mental Resistance and Atk. Rate +15% Healing Power +10%, HP Recovery Bonus +20%. Vampiric Rage Effect +8%. The effect doesn't stack if two identical earrings are worn. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.accessory_earring_of_zaken_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">80</stat>
+			<stat type="maxMp">34</stat>
+		</stats>
+	</item>
+	<item id="90821" name="My Teleport Book - 1 slot" type="EtcItem">
+		<!-- A dimensional item. Increases the number of return points to save by 1. The maximum number is 18. -->
+		<set name="icon" val="icon.bookmark_book_i00" />
+		<set name="default_action" val="CALL_SKILL" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="90822" name="Sealed Doll of Border - Baium" additionalName="30 days" type="EtcItem">
+		<!-- Double-click to obtain Doll of Border - Baium (30-day). Cannot be dropped. -->
+		<set name="icon" val="icon.bm_baium_doll_30d" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90823" name="Sealed Doll of Border - Queen Ant" additionalName="30 days" type="EtcItem">
+		<!-- Double-click to obtain Doll of Border - Queen Ant (30-day). Cannot be dropped. -->
+		<set name="icon" val="icon.bm_queen_ant_doll_30d" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90824" name="Sealed Doll of Border - Orfen" additionalName="30 days" type="EtcItem">
+		<!-- Double-click to obtain Doll of Border - Orfen (30-day). Cannot be dropped. -->
+		<set name="icon" val="icon.bm_orfen_doll_30d" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90825" name="Doll of Border - Baium" additionalName="30 days" type="EtcItem">
+		<!-- A 30-day item. Boosts abilities if stored in the inventory. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. <Baium's Doll Spell>. Mental Resistance +40%, Paralysis/Knockdown/Pulling Resistance +20%, P./M. Def. +12%, Cooldown -3% -->
+		<set name="icon" val="icon.bm_baium_doll_30d" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="90826" name="Doll of Border - Queen Ant" additionalName="30 days" type="EtcItem">
+		<!-- A 30-day item. Boosts abilities if stored in the inventory. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. <Queen Ant's Doll Spell>. P. Atk. and Critical Damage +8%, Max HP +12%. -->
+		<set name="icon" val="icon.bm_queen_ant_doll_30d" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="90827" name="Doll of Border - Orfen" additionalName="30 days" type="EtcItem">
+		<!-- A 30-day item. Boosts abilities if stored in the inventory. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. <Orfen's Doll Spell>. M. Atk./M. Critical Damage +8%, Max MP +12%. -->
+		<set name="icon" val="icon.bm_orfen_doll_30d" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="90828" name="Transformation Scroll: Dark Knight Lv. 3" type="EtcItem">
+		<!-- Transforms into a Dark Knight for 15 minutes. Will not be deleted upon death. Transformation into a Dark Knight: Max HP/MP +10%, P. Atk. in PvP +10%, P. Def. in PvP +10%, Stun/Fear/Mental Resistance +10%. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_charm_of_courage_i05" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90829" name="Transformation Scroll: Dark Knight Lv. 2" type="EtcItem">
+		<!-- Transforms into a Dark Knight for 15 minutes. Will not be deleted upon death. Transformation into a Dark Knight: Max HP/MP +10%, P. Atk. in PvP +7%, P. Def. in PvP +7%, Stun/Fear/Mental Resistance +7%. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_charm_of_courage_i05" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90830" name="Transformation Scroll: Dark Knight Lv. 1" type="EtcItem">
+		<!-- Transforms into a Dark Knight for 15 minutes. Will not be deleted upon death. Transformation into a Dark Knight: Max HP/MP +10%, P. Atk. in PvP +5%, P. Def. in PvP +5%, Stun/Fear/Mental Resistance +5%. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_charm_of_courage_i05" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90831" name="Transformation Scroll: White Assassin" additionalName="Event" type="EtcItem">
+		<!-- For 15 minutes transforms you into White Assassin. Will not be deleted upon death. Transformation into White Assassin: Max HP/MP +7%, P./M. Accuracy +2, P./M. Atk. +3%, P./M. Def. +3%, Atk. Spd. +5%, M. Critical Rate +20, Speed +5. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_charm_of_courage_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90832" name="Glorious Amulet" additionalName="7-day" type="EtcItem">
+		<!-- A 7-day item. When in inventory, you get STR +1, DEX +1, CON + +1, INT +1, WIT +1, MEN +1. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. This item will be deleted after the event is over. -->
+		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="10080" />
+	</item>
+	<item id="90833" name="Agathion - Joy" additionalName="7-day" type="Armor">
+		<!-- A 7-day item. Enables to summon Agathion of Joy when equipped. <Skill used>. 1. Agathion's Escape: Allows to relocate to Giran, Gludio, Dion, Oren, Hunters Village. (Cooldown: 1 min). <Item Skill>. 1. Search for Evidence: Speed +66 for 15 sec.. <Item Skill>. 2. Hidden Search: monsters don't attack first. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="underwear" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="10080" />
+	</item>
+	<item id="90834" name="Warrior Experience Amulet" additionalName="7-day" type="EtcItem">
+		<!-- 7-day item. Increases XP and SP gain by +50%. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.skill_exp_sp_up" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="10080" />
+	</item>
+	<item id="90835" name="Life Control Tower's Scroll of Blessing" additionalName="Event" type="EtcItem">
+		<!-- Max. HP / MP +5%, XP / SP gain +30%, activates Paralysis / Mental Attack Resistance. Duration: 60 minutes. Reuse Time: 30 minutes. <Note> When used simultaneously with Angel Cat's Blessing, effects do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_aidcharm_cancel_valbreath_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="weight" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="90836" name="Warrior Experience Amulet" additionalName="7-day" type="EtcItem">
+		<!-- 7-day item. Increases XP and SP gain by +20%. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.skill19226" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="10080" />
+		<skills>
+			<skill id="39057" level="1" /> <!-- Warrior Experience Amulet -->
+		</skills>
+	</item>
+	<item id="90837" name="White Uniform Hat (STR+1 INT+1)" type="Armor">
+		<!-- White uniform hat that makes you feel the energy of a man of the sea. STR+1, INT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="BranchSys2.icon.br_navy_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="90838" name="White Uniform Hat (DEX+1 WIT+1)" type="Armor">
+		<!-- White uniform hat that makes you feel the energy of a man of the sea. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="BranchSys2.icon.br_navy_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="90839" name="White Uniform Hat (CON+1 MEN+1)" type="Armor">
+		<!-- White uniform hat that makes you feel the energy of a man of the sea. CON+1, MEN+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="BranchSys2.icon.br_navy_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="90840" name="Napoleon Hat (STR+1 INT+1)" type="Armor">
+		<!-- A Napoleon Hat bursting with enough energy to conquer the world. STR+1, INT+1. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="BranchSys.icon.br_napoleonic_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="90841" name="Napoleon Hat (DEX+1 WIT+1)" type="Armor">
+		<!-- A Napoleon Hat bursting with enough energy to conquer the world. DEX+1, WIT+1. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="BranchSys.icon.br_napoleonic_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="90842" name="Napoleon Hat (CON+1 MEN+1)" type="Armor">
+		<!-- A Napoleon Hat bursting with enough energy to conquer the world. CON+1, MEN+1. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="BranchSys.icon.br_napoleonic_cap_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="90843" name="Ninja Hair Accessory (STR+1 INT+1)" type="Armor">
+		<!-- Ninja Hair Accessory. Mask form. STR+1, INT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="BranchSys3.icon1.g_co_ninja_hair" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="90844" name="Ninja Hair Accessory (DEX+1 WIT+1)" type="Armor">
+		<!-- Ninja Hair Accessory. Mask form. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="BranchSys3.icon1.g_co_ninja_hair" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="90845" name="Ninja Hair Accessory (CON+1 MEN+1)" type="Armor">
+		<!-- Ninja Hair Accessory. Mask form. CON+1, MEN+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="BranchSys3.icon1.g_co_ninja_hair" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="90846" name="Warrior's Helmet (STR+1 INT+1)" type="Armor">
+		<!-- Helmet of a brave ancient warrior. STR+1, INT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="BranchSys2.icon.br_close_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="90847" name="Warrior's Helmet (DEX+1 WIT+1)" type="Armor">
+		<!-- Helmet of a brave ancient warrior. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="BranchSys2.icon.br_close_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="90848" name="Warrior's Helmet (CON+1 MEN+1)" type="Armor">
+		<!-- Helmet of a brave ancient warrior. CON+1, MEN+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="BranchSys2.icon.br_close_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="90849" name="First Mate Hat (STR+1 INT+1)" type="Armor">
+		<!-- First Mate Hat. STR+1, INT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="icon.Accessary_middle_ages_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="90850" name="First Mate Hat (DEX+1 WIT+1)" type="Armor">
+		<!-- First Mate Hat. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="icon.Accessary_middle_ages_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="90851" name="First Mate Hat (CON+1 MEN+1)" type="Armor">
+		<!-- First Mate Hat. CON+1, MEN+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="icon.Accessary_middle_ages_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="90852" name="Artisan's Goggles (STR+1 INT+1)" type="Armor">
+		<!-- Large goggles that protect the eyes. STR+1, INT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="icon.accessory_dwarf_goggle_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="90853" name="Artisan's Goggles (DEX+1 WIT+1)" type="Armor">
+		<!-- Large goggles that protect the eyes. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="icon.accessory_dwarf_goggle_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="90854" name="Artisan's Goggles (CON+1 MEN+1)" type="Armor">
+		<!-- Large goggles that protect the eyes. CON+1, MEN+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
+		<set name="icon" val="icon.accessory_dwarf_goggle_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="90855" name="Stabilized Eva's Scroll: Enchant Hair Accessory" type="EtcItem">
+		<!-- Hair Accessory M. / P. Def. +2. Starting from +5, additional special effects are activated and HP/MP/CP are increased. Can be safely enchanted up to +3. Cannot be dropped. From +6, enchantment level stays the same in case of failed enchantment. Cannot be dropped. -->
+		<set name="icon" val="icon.scroll_of_unidentify_am_d" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="90856" name="Eva's Life Stone - Hair Accessory" type="EtcItem">
+		<!-- Bring it to Augmenting Blacksmiths Jeris and Jeros in Giran or Aden, to use it for augmentation. Augmentation requires C-grade Gemstones (30 pcs.). Cannot be dropped. -->
+		<set name="icon" val="icon.trace_of_wind" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="90857" name="Shiny Eva's Life Stone - Hair Accessory" type="EtcItem">
+		<!-- Bring it to Augmenting Blacksmiths Jeris and Jeros in Giran or Aden, to use it for augmentation. Augmentation requires C-grade Gemstones (100 pcs.). Cannot be dropped. -->
+		<set name="icon" val="icon.trace_of_wind2" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="90858" name="Eva's Enhancement Pack - Hair Accessory" type="EtcItem">
+		<!-- Double-click to acquire one of the following items: 2 Scrolls: Enchant Hair Accessory, 1 High-grade Scroll: Enchant Hair Accessory, 1 Life Stone - Hair Accessory, 1 Giants Life Stone. Cannot be dropped. -->
+		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="90859" name="Eva's Hair Accessory Pack" type="EtcItem">
+		<!-- Double-click to acquire one of the following items: White Uniform Hat, Napoleon Hat, Ninja Hair Accessory, Warrior's Helmet, First Mate Hat, Artisan's Goggles. Cannot be dropped. -->
+		<set name="icon" val="icon.npoint_earring_of_lind_30day_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
+	</item>
+	<item id="90872" name="Piece of Wood" type="EtcItem">
+		<!-- Give it to Bliss to receive a Magic Woodpile. Will be deleted after the event is over. -->
+		<set name="icon" val="icon.etc_squares_wood_i00" />
+		<set name="is_stackable" val="true" />
+	</item>
+</list>
