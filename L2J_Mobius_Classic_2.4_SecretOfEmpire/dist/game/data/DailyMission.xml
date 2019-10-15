@@ -2215,9 +2215,11 @@
 			<item id="49781" count="3" />
 		</items>
 	</reward>
+	-->
 	<reward id="1103" reward_id="807" name="Special Daily Hunting (Lv. 45-60)" requiredCompletion="30">
-		Receive it when you kill 30 Earth Guardians Harits in Forest of Mirrors.
+		<!-- Receive it when you kill 30 Earth Guardians Harits in Forest of Mirrors. -->
 		<handler name="monster">
+			<param name="ids">21658</param>
 			<param name="minLevel">45</param>
 			<param name="maxLevel">60</param>
 		</handler>
@@ -2226,8 +2228,9 @@
 		</items>
 	</reward>
 	<reward id="1104" reward_id="808" name="Special Daily Hunting (Lv. 55-70)" requiredCompletion="30">
-		Receive it when you kill 30 Earth Guardians Palibati near Seal of Shilen.
+		<!-- Receive it when you kill 30 Earth Guardians Palibati near Seal of Shilen. -->
 		<handler name="monster">
+			<param name="ids">21660</param>
 			<param name="minLevel">55</param>
 			<param name="maxLevel">70</param>
 		</handler>
@@ -2236,8 +2239,9 @@
 		</items>
 	</reward>
 	<reward id="1105" reward_id="809" name="Special Daily Hunting (Lv. 65-75)" requiredCompletion="30">
-		Receive it when you kill 30 Sharp Talon Tigers in Forsaken Plains.
+		<!-- Receive it when you kill 30 Sharp Talon Tigers in Forsaken Plains. -->
 		<handler name="monster">
+			<param name="ids">21021</param>
 			<param name="minLevel">65</param>
 			<param name="maxLevel">75</param>
 		</handler>
@@ -2246,8 +2250,9 @@
 		</items>
 	</reward>
 	<reward id="1106" reward_id="810" name="Special Daily Hunting (Lv. 76+)" requiredCompletion="100">
-		Receive it when you kill 100 monsters from the list in Hot Springs: Ruler of Hot Springs Hot Springs Yeti, Hot Springs Buffalo, Hot Springs Grendel.
+		<!-- Receive it when you kill 100 monsters from the list in Hot Springs: Ruler of Hot Springs Hot Springs Yeti, Hot Springs Buffalo, Hot Springs Grendel. -->
 		<handler name="monster">
+			<param name="ids">21839,21834,21834</param>
 			<param name="minLevel">76</param>
 			<param name="maxLevel">99</param>
 		</handler>
@@ -2255,7 +2260,6 @@
 			<item id="90917" count="3" />
 		</items>
 	</reward>
-	-->
 	<!-- TODO: talkwithnpc handler
 	<reward id="1107" reward_id="502" name="Attribute control">
 		Attribute Spirits appeared in Aden. Ask Attribute Master Svein in Aden about hem. (Only available to characters who have completed their 3rd job advancement.)
@@ -2477,10 +2481,10 @@
 			<item id="91393" count="1" />
 		</items>
 	</reward>
-	<!-- FIXME: Add ids.
 	<reward id="1140" reward_id="826" name="Exploration of Imperial Tomb" requiredCompletion="500">
-		Receive it when you kill 500 monsters in Imperial Tomb. (For characters that reached Lv. 78 or higher.)
+		<!-- Receive it when you kill 500 monsters in Imperial Tomb. (For characters that reached Lv. 78 or higher.) -->
 		<handler name="monster">
+			<param name="ids">21396,21397,21398,21399,21400,21401,21402,21403,21404,21405,21406,21407,21408,21409,21410,21411,21412,21413,21414,21415,21416,21417,21418,21419,21420,21421,21422,21423,21424,21425,21426,21427,21428,21429,21430,21431,21432,21433,21434,21435,21436,21437,21438,21439,21440</param>
 			<param name="minLevel">78</param>
 			<param name="maxLevel">99</param>
 		</handler>
@@ -2488,7 +2492,6 @@
 			<item id="91406" count="1" />
 		</items>
 	</reward>
-	-->
 	<!-- TODO: aquireitem handler
 	<reward id="3000" reward_id="819" name="Hero's way I" requiredCompletion="80">
 		When you reach Lv. 80, you will get 1 special token for learning certification skill.
