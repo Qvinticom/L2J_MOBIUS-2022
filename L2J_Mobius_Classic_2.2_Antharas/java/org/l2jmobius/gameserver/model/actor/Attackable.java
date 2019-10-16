@@ -1387,6 +1387,9 @@ public class Attackable extends Npc
 		// Clear all aggro list and overhit
 		clearAggroList();
 		
+		// Set the intention of the Attackable to AI_INTENTION_ACTIVE
+		getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
+		
 		// Clear Harvester reward
 		_harvestItem.set(null);
 		_sweepItems.set(null);

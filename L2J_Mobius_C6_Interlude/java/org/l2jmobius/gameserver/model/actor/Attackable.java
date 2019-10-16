@@ -3064,12 +3064,19 @@ public class Attackable extends NpcInstance
 	public void onSpawn()
 	{
 		super.onSpawn();
+		
 		// Clear mob spoil,seed
 		setSpoil(false);
+		
 		// Clear all aggro char from list
 		clearAggroList();
+		
+		// Set the intention of the Attackable to AI_INTENTION_ACTIVE
+		getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
+		
 		// Clear Harvester Rewrard List
 		_harvestItems = null;
+		
 		// Clear mod Seeded stat
 		setSeeded(false);
 		
