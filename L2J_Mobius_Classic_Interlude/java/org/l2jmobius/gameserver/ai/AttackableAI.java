@@ -289,12 +289,12 @@ public class AttackableAI extends CreatureAI
 		{
 			for (Skill buff : getActiveChar().getTemplate().getAISkills(AISkillScope.BUFF))
 			{
-				target = skillTargetReconsider(buff, true);
-				if (target != null)
+				final Creature buffTarget = skillTargetReconsider(buff, true);
+				if (buffTarget != null)
 				{
-					setTarget(target);
+					setTarget(buffTarget);
 					_actor.doCast(buff);
-					LOGGER.finer(this + " used buff skill " + buff + " on " + _actor);
+					setTarget(target);
 					break;
 				}
 			}
