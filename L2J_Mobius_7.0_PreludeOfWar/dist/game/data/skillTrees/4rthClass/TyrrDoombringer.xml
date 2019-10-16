@@ -308,13 +308,17 @@
 		<skill skillName="Reduce Anger" skillId="10278" skillLvl="8" getLevel="98" levelUpSp="4990000" />
 		<skill skillName="Hurricane Storm" skillId="10288" skillLvl="8" getLevel="98" levelUpSp="4990000" />
 		
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="5" getLevel="99" levelUpSp="5000000">
+			<item id="40064" count="1" /> <!-- Ancient Book: Divine Inspiration (Beginner) -->
+		</skill>
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="6" getLevel="99" levelUpSp="5000000">
+			<item id="40065" count="1" /> <!-- Ancient Book: Divine Inspiration (Intermediate) -->
+		</skill>
 		<skill skillName="Jump Attack" skillId="10269" skillLvl="7" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Berserker" skillId="10274" skillLvl="4" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Soul Berserker" skillId="10328" skillLvl="3" getLevel="99" levelUpSp="5000000">
 			<item id="39738" count="8" /> <!-- Rune Stone -->
 		</skill>
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="5" getLevel="99" levelUpSp="5000000" />
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="6" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Hurricane Rush" skillId="10267" skillLvl="6" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Superior HP Mastery" skillId="10256" skillLvl="4" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Superior Two-handed Weapon Mastery" skillId="10311" skillLvl="4" getLevel="99" levelUpSp="5000000" />

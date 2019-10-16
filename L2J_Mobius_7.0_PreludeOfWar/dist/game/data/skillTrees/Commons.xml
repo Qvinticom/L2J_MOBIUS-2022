@@ -21,67 +21,66 @@
 		<skill skillName="Change Hair Accessory" skillId="17192" skillLvl="1" getLevel="1" autoGet="true" />
 		
 		<!-- Divine Inspiration -->
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="1" getLevel="20" levelUpSp="4" />
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="2" getLevel="40" levelUpSp="30" />
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="1" getLevel="76" levelUpSp="4" />
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="2" getLevel="76" levelUpSp="30" />
 		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="3" getLevel="76" levelUpSp="100" />
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="4" getLevel="76" levelUpSp="2000" />
-		
+	
 		<!-- Trade/Inventory/Warehouse -->
-		<skill skillName="Expand Trade" skillId="1370" skillLvl="1" getLevel="20" autoGet="true" >
-			<item id="57" count="20000000" /> <!-- Adena -->
-		</skill>
-		<skill skillName="Expand Trade" skillId="1370" skillLvl="2" getLevel="20" autoGet="true" >
+		<skill skillName="Expand Trade" skillId="1370" skillLvl="1" getLevel="20" autoGet="false" >
 			<item id="57" count="40000000" /> <!-- Adena -->
 		</skill>
-		<skill skillName="Expand Trade" skillId="1370" skillLvl="3" getLevel="20" autoGet="true" >
-			<item id="57" count="60000000" /> <!-- Adena -->
-		</skill>
-		<skill skillName="Expand Inventory" skillId="1372" skillLvl="1" getLevel="20" autoGet="true" >
-			<item id="57" count="20000000" /> <!-- Adena -->
-		</skill>
-		<skill skillName="Expand Inventory" skillId="1372" skillLvl="2" getLevel="20" autoGet="true" >
-			<item id="57" count="40000000" /> <!-- Adena -->
-		</skill>
-		<skill skillName="Expand Inventory" skillId="1372" skillLvl="3" getLevel="20" autoGet="true" >
-			<item id="57" count="60000000" /> <!-- Adena -->
-		</skill>
-		<skill skillName="Expand Inventory" skillId="1372" skillLvl="4" getLevel="20" autoGet="true" >
-			<item id="57" count="80000000" /> <!-- Adena -->
-		</skill>
-		<skill skillName="Expand Inventory" skillId="1372" skillLvl="5" getLevel="20" autoGet="true" >
-			<item id="57" count="100000000" /> <!-- Adena -->
-		</skill>
-		<skill skillName="Expand Inventory" skillId="1372" skillLvl="6" getLevel="20" autoGet="true" >
-			<item id="57" count="120000000" /> <!-- Adena -->
-		</skill>
-		<skill skillName="Expand Inventory" skillId="1372" skillLvl="7" getLevel="20" autoGet="true" >
-			<item id="57" count="200000000" /> <!-- Adena -->
-		</skill>
-		<skill skillName="Expand Inventory" skillId="1372" skillLvl="8" getLevel="20" autoGet="true" >
+		<skill skillName="Expand Trade" skillId="1370" skillLvl="2" getLevel="20" autoGet="false" >
 			<item id="57" count="400000000" /> <!-- Adena -->
 		</skill>
-		<skill skillName="Expand Warehouse" skillId="1371" skillLvl="1" getLevel="20" autoGet="true" >
+		<skill skillName="Expand Trade" skillId="1370" skillLvl="3" getLevel="20" autoGet="false" >
+			<item id="57" count="800000000" /> <!-- Adena -->
+		</skill>
+		<skill skillName="Expand Inventory" skillId="1372" skillLvl="1" getLevel="20" autoGet="false" >
 			<item id="57" count="20000000" /> <!-- Adena -->
 		</skill>
-		<skill skillName="Expand Warehouse" skillId="1371" skillLvl="2" getLevel="20" autoGet="true" >
+		<skill skillName="Expand Inventory" skillId="1372" skillLvl="2" getLevel="20" autoGet="false" >
 			<item id="57" count="40000000" /> <!-- Adena -->
 		</skill>
-		<skill skillName="Expand Warehouse" skillId="1371" skillLvl="3" getLevel="20" autoGet="true" >
+		<skill skillName="Expand Inventory" skillId="1372" skillLvl="3" getLevel="20" autoGet="false" >
 			<item id="57" count="60000000" /> <!-- Adena -->
 		</skill>
-		<skill skillName="Expand Warehouse" skillId="1371" skillLvl="4" getLevel="20" autoGet="true" >
+		<skill skillName="Expand Inventory" skillId="1372" skillLvl="4" getLevel="20" autoGet="false" >
 			<item id="57" count="80000000" /> <!-- Adena -->
 		</skill>
-		<skill skillName="Expand Warehouse" skillId="1371" skillLvl="5" getLevel="20" autoGet="true" >
+		<skill skillName="Expand Inventory" skillId="1372" skillLvl="5" getLevel="20" autoGet="false" >
 			<item id="57" count="100000000" /> <!-- Adena -->
 		</skill>
-		<skill skillName="Expand Warehouse" skillId="1371" skillLvl="6" getLevel="20" autoGet="true" >
+		<skill skillName="Expand Inventory" skillId="1372" skillLvl="6" getLevel="20" autoGet="false" >
 			<item id="57" count="120000000" /> <!-- Adena -->
 		</skill>
-		<skill skillName="Expand Warehouse" skillId="1371" skillLvl="7" getLevel="20" autoGet="true" >
+		<skill skillName="Expand Inventory" skillId="1372" skillLvl="7" getLevel="20" autoGet="false" >
 			<item id="57" count="200000000" /> <!-- Adena -->
 		</skill>
-		<skill skillName="Expand Warehouse" skillId="1371" skillLvl="8" getLevel="20" autoGet="true" >
+		<skill skillName="Expand Inventory" skillId="1372" skillLvl="8" getLevel="20" autoGet="false" >
+			<item id="57" count="400000000" /> <!-- Adena -->
+		</skill>
+		<skill skillName="Expand Warehouse" skillId="1371" skillLvl="1" getLevel="20" autoGet="false" >
+			<item id="57" count="20000000" /> <!-- Adena -->
+		</skill>
+		<skill skillName="Expand Warehouse" skillId="1371" skillLvl="2" getLevel="20" autoGet="false" >
+			<item id="57" count="40000000" /> <!-- Adena -->
+		</skill>
+		<skill skillName="Expand Warehouse" skillId="1371" skillLvl="3" getLevel="20" autoGet="false" >
+			<item id="57" count="60000000" /> <!-- Adena -->
+		</skill>
+		<skill skillName="Expand Warehouse" skillId="1371" skillLvl="4" getLevel="20" autoGet="false" >
+			<item id="57" count="80000000" /> <!-- Adena -->
+		</skill>
+		<skill skillName="Expand Warehouse" skillId="1371" skillLvl="5" getLevel="20" autoGet="false" >
+			<item id="57" count="100000000" /> <!-- Adena -->
+		</skill>
+		<skill skillName="Expand Warehouse" skillId="1371" skillLvl="6" getLevel="20" autoGet="false" >
+			<item id="57" count="120000000" /> <!-- Adena -->
+		</skill>
+		<skill skillName="Expand Warehouse" skillId="1371" skillLvl="7" getLevel="20" autoGet="false" >
+			<item id="57" count="200000000" /> <!-- Adena -->
+		</skill>
+		<skill skillName="Expand Warehouse" skillId="1371" skillLvl="8" getLevel="20" autoGet="false" >
 			<item id="57" count="400000000" /> <!-- Adena -->
 		</skill>
 	</skillTree>

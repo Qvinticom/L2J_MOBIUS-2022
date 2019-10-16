@@ -239,8 +239,12 @@
 		<skill skillName="Shield Bash" skillId="10009" skillLvl="8" getLevel="98" levelUpSp="4990000" />
 		<skill skillName="Chain Gust" skillId="10014" skillLvl="8" getLevel="98" levelUpSp="4990000" />
 		
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="5" getLevel="99" levelUpSp="5000000" />
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="6" getLevel="99" levelUpSp="5000000" />
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="5" getLevel="99" levelUpSp="5000000">
+			<item id="40064" count="1" /> <!-- Ancient Book: Divine Inspiration (Beginner) -->
+		</skill>
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="6" getLevel="99" levelUpSp="5000000">
+			<item id="40065" count="1" /> <!-- Ancient Book: Divine Inspiration (Intermediate) -->
+		</skill>
 		<skill skillName="Grand Shillien Shadow" skillId="19566" skillLvl="4" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Superior Sword/ Blunt Weapon Mastery" skillId="10001" skillLvl="4" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Superior Elemental Mastery" skillId="10044" skillLvl="4" getLevel="99" levelUpSp="5000000" />

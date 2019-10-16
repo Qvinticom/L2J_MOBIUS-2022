@@ -462,8 +462,12 @@
 		<skill skillName="Blessing Barrier" skillId="11621" skillLvl="1" getLevel="99" levelUpSp="5000000">
 			<item id="39738" count="4" /> <!-- Rune Stone -->
 		</skill>
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="5" getLevel="99" levelUpSp="5000000" />
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="6" getLevel="99" levelUpSp="5000000" />
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="5" getLevel="99" levelUpSp="5000000">
+			<item id="40064" count="1" /> <!-- Ancient Book: Divine Inspiration (Beginner) -->
+		</skill>
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="6" getLevel="99" levelUpSp="5000000">
+			<item id="40065" count="1" /> <!-- Ancient Book: Divine Inspiration (Intermediate) -->
+		</skill>
 		<skill skillName="Superior Anti Magic" skillId="11505" skillLvl="4" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Grand Vanguard of Baylor" skillId="11588" skillLvl="4" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Superior Light Armor Mastery" skillId="11503" skillLvl="4" getLevel="99" levelUpSp="5000000" />

@@ -271,8 +271,12 @@
 		<skill skillName="Pinpoint Shot" skillId="10763" skillLvl="8" getLevel="98" levelUpSp="4990000" />
 		<skill skillName="Bow Strike" skillId="10761" skillLvl="8" getLevel="98" levelUpSp="4990000" />
 		
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="5" getLevel="99" levelUpSp="5000000" />
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="6" getLevel="99" levelUpSp="5000000" />
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="5" getLevel="99" levelUpSp="5000000">
+			<item id="40064" count="1" /> <!-- Ancient Book: Divine Inspiration (Beginner) -->
+		</skill>
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="6" getLevel="99" levelUpSp="5000000">
+			<item id="40065" count="1" /> <!-- Ancient Book: Divine Inspiration (Intermediate) -->
+		</skill>
 		<skill skillName="Superior Critical Arrow" skillId="10756" skillLvl="4" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Superior Survival Ability" skillId="10754" skillLvl="4" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Superior Speed Mastery" skillId="10857" skillLvl="4" getLevel="99" levelUpSp="5000000" />

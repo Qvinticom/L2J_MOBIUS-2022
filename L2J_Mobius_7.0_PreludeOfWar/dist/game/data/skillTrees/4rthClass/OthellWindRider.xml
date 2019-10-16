@@ -267,8 +267,12 @@
 		<skill skillName="Jawbone Blow" skillId="10546" skillLvl="4" getLevel="98" levelUpSp="4990000" />
 		<skill skillName="Throw Poison Needle" skillId="10541" skillLvl="6" getLevel="98" levelUpSp="4990000" />
 		
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="5" getLevel="99" levelUpSp="5000000" />
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="6" getLevel="99" levelUpSp="5000000" />
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="5" getLevel="99" levelUpSp="5000000">
+			<item id="40064" count="1" /> <!-- Ancient Book: Divine Inspiration (Beginner) -->
+		</skill>
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="6" getLevel="99" levelUpSp="5000000">
+			<item id="40065" count="1" /> <!-- Ancient Book: Divine Inspiration (Intermediate) -->
+		</skill>
 		<skill skillName="Superior Haste" skillId="10608" skillLvl="4" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Superior Dagger Mastery" skillId="10501" skillLvl="4" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Superior Critical Mastery" skillId="10505" skillLvl="4" getLevel="99" levelUpSp="5000000" />

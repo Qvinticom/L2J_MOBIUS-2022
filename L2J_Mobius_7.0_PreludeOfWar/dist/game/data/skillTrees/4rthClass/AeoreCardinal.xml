@@ -331,10 +331,14 @@
 		<skill skillName="Mass Dark Veil" skillId="11767" skillLvl="8" getLevel="98" levelUpSp="4990000" />
 		<skill skillName="Dark Devour" skillId="11780" skillLvl="6" getLevel="98" levelUpSp="4990000" />
 		
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="5" getLevel="99" levelUpSp="5000000">
+			<item id="40064" count="1" /> <!-- Ancient Book: Divine Inspiration (Beginner) -->
+		</skill>
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="6" getLevel="99" levelUpSp="5000000">
+			<item id="40065" count="1" /> <!-- Ancient Book: Divine Inspiration (Intermediate) -->
+		</skill>
 		<skill skillName="Brilliant Recharge" skillId="11761" skillLvl="5" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Brilliant Heal" skillId="11757" skillLvl="8" getLevel="99" levelUpSp="5000000" />
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="5" getLevel="99" levelUpSp="5000000" />
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="6" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Superior Anti Magic" skillId="11789" skillLvl="4" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Superior Elemental Resistance" skillId="11790" skillLvl="4" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Superior Armor Mastery" skillId="11787" skillLvl="4" getLevel="99" levelUpSp="5000000" />

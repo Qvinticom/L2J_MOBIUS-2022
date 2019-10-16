@@ -327,8 +327,12 @@
 		<skill skillName="Elemental Crash" skillId="11017" skillLvl="8" getLevel="98" levelUpSp="4990000" />
 		<skill skillName="Elemental Spike" skillId="11011" skillLvl="8" getLevel="98" levelUpSp="4990000" />
 		
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="5" getLevel="99" levelUpSp="5000000" />
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="6" getLevel="99" levelUpSp="5000000" />
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="5" getLevel="99" levelUpSp="5000000">
+			<item id="40064" count="1" /> <!-- Ancient Book: Divine Inspiration (Beginner) -->
+		</skill>
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="6" getLevel="99" levelUpSp="5000000">
+			<item id="40065" count="1" /> <!-- Ancient Book: Divine Inspiration (Intermediate) -->
+		</skill>
 		<skill skillName="Superior Anti Magic" skillId="11003" skillLvl="4" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Superior Elemental Master" skillId="11124" skillLvl="4" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Superior Clear Mind" skillId="11187" skillLvl="4" getLevel="99" levelUpSp="5000000" />
