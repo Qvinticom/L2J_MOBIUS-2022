@@ -192,6 +192,7 @@ public class QuestMasterHandler
 		Q00040_ASpecialOrder.class,
 		Q00115_TheOtherSideOfTruth.class,
 		Q00119_LastImperialPrince.class,
+		Q00282_ADayOfKindnessAndCaring.class, // TODO: Not done.
 		Q00337_AudienceWithTheLandDragon.class,
 		Q00452_FindingtheLostSoldiers.class,
 		Q00453_NotStrongEnoughAlone.class,
@@ -329,7 +330,9 @@ public class QuestMasterHandler
 		Q00987_AdventureGuildsSpecialRequestLv3.class, // TODO: Not done.
 		Q00988_AdventureGuildsSpecialRequestLv4.class, // TODO: Not done.
 		Q00989_AdventureGuildsSpecialRequestLv5.class, // TODO: Not done.
+		Q01900_StormIsleSecretSpot.class, // TODO: Not done.
 		Q10282_ToTheSeedOfAnnihilation.class,
+		Q01901_StormIsleFurtiveDeal.class, // TODO: Not done.
 		Q10283_RequestOfIceMerchant.class,
 		Q10284_AcquisitionOfDivineSword.class,
 		Q10285_MeetingSirra.class,
@@ -360,6 +363,8 @@ public class QuestMasterHandler
 		Q10501_ZakenEmbroideredSoulCloak.class,
 		Q10502_FreyaEmbroideredSoulCloak.class,
 		Q10503_FrintezzaEmbroideredSoulCloak.class,
+		Q10514_NewPathToGlory.class, // TODO: Not done.
+		Q10515_NewWayForPride.class, // TODO: Not done.
 		Q10516_UnveiledFafurionTemple.class, // FIXME: Custom.
 		Q10517_FafurionsMinions.class, // FIXME: Custom.
 		Q10518_SucceedingThePriestess.class, // FIXME: Custom.
@@ -384,6 +389,9 @@ public class QuestMasterHandler
 		Q10577_TemperARustingBlade.class,
 		Q10578_TheSoulOfASword.class,
 		Q10579_ContainingTheAttributePower.class,
+		Q10589_WhereFatesIntersect.class, // TODO: Not done.
+		Q10590_ReawakenedFate.class, // TODO: Not done.
+		Q10591_NobleMaterial.class, // TODO: Not done.
 		Q10594_FergasonsScheme.class, // TODO: Not done.
 		Q10595_TheDimensionalWarpPart8.class, // TODO: Not done.
 		Q10596_TheDimensionalWarpPart9.class, // TODO: Not done.
@@ -391,6 +399,7 @@ public class QuestMasterHandler
 		Q10598_WithAllYourMight.class, // TODO: Not done.
 		Q10599_ThreadOfFateHangingOnTheMotherTree.class, // TODO: Not done.
 		Q10658_MakkumInTheDimension.class,
+		Q10673_ValentinesDayLucysReply.class, // TODO: Not done.
 		Q10701_TheRoadToDestruction.class,
 		Q10702_TheRoadToInfinity.class,
 		Q10748_MysteriousSuggestion1.class, // TODO: Not done.
@@ -463,6 +472,29 @@ public class QuestMasterHandler
 		Q10899_VeteranAdventurer.class, // TODO: Not done.
 		Q10900_PathToStrength.class, // TODO: Not done.
 		Q10901_AModelAdventurer.class, // TODO: Not done.
+		Q11024_PathOfDestinyBeginning.class, // TODO: Not done.
+		Q11025_PathOfDestinyProving.class, // TODO: Not done.
+		Q11026_PathOfDestinyConviction.class, // TODO: Not done.
+		Q11027_PathOfDestinyOvercome.class, // TODO: Not done.
+		Q11028_WindOfDestinyEncounter.class, // TODO: Not done.
+		Q11029_WindOfDestinyPromise.class, // TODO: Not done.
+		Q11030_WindOfDestinyChoice.class, // TODO: Not done.
+		Q11031_TrainingBeginsNow.class, // TODO: Not done.
+		Q11032_CurseOfUndying.class, // TODO: Not done.
+		Q11033_AntidoteIngredients.class, // TODO: Not done.
+		Q11034_ResurrectedOne.class, // TODO: Not done.
+		Q11035_DeathlyMischief.class, // TODO: Not done.
+		Q11036_ChangedSpirits.class, // TODO: Not done.
+		Q11037_WhyAreTheRatelHere.class, // TODO: Not done.
+		Q11038_GrowlersTurnedViolent.class, // TODO: Not done.
+		Q11039_CommunicationBreakdown.class, // TODO: Not done.
+		Q11040_AttackOfTheEnragedForest.class, // TODO: Not done.
+		Q11041_CheckOutTheSituation.class, // TODO: Not done.
+		Q11042_SuspiciousMovements.class, // TODO: Not done.
+		Q11043_SomeonesTrace.class, // TODO: Not done.
+		Q11044_KetraOrcs.class, // TODO: Not done.
+		Q11045_TheyMustBeUpToSomething.class, // TODO: Not done.
+		Q11046_PrayingForSafety.class, // TODO: Not done.
 	};
 	
 	public static void main(String[] args)
