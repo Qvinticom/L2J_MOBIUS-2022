@@ -1,8 +1,8 @@
 L2J-Mobius Classic Interlude
 
 Client: https://drive.google.com/uc?id=1Cyfb_OumjhPS9NFcLDMY11_s_ktH0kDk&export=download
-Patch: https://www.mediafire.com/file/6kenabuelb8412t/L2J_Mobius_Classic_Interlude_Patch.zip
-Geodata: https://www.mediafire.com/file/vpm099howjw9071/L2J_Mobius_Classic_Interlude_Geodata.zip
+Patch: https://www.mediafire.com/file/lw9gven4va0n281/L2J_Mobius_Classic_Interlude_Patch_v2.zip
+Geodata: https://www.mediafire.com/file/o4qw4gmm7y7s9is/L2J_Mobius_Classic_Interlude_Geodata_v2.zip
 JDK: https://www.mediafire.com/file/k25pt0umuf16uoh/openjdk-12.0.2_windows-x64_bin.zip
 
 This is a Classic server based on the Grand Crusade client.
@@ -14,7 +14,7 @@ Who knows? Maybe some day it will be a pure Interlude version.
 A lot of things can go wrong while using this project,
 if you do not know what you are doing, it is best not to use it.
 
-Tools that might be helpful.
+Tools that might be helpful (use with Java 1.8)
 L2ClientDat: https://github.com/MobiusDevelopment/l2clientdat
 XdatEditor: https://github.com/MobiusDevelopment/xdat_editor
 L2Tool: https://github.com/MobiusDevelopment/l2tool
