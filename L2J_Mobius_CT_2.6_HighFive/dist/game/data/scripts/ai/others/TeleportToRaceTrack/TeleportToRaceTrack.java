@@ -57,17 +57,18 @@ public class TeleportToRaceTrack extends AbstractNpcAI
 	private static final Map<Integer, Integer> TELEPORTERS = new HashMap<>();
 	static
 	{
+		TELEPORTERS.put(30320, 0); // Richlin
+		TELEPORTERS.put(30256, 1); // Bella
 		TELEPORTERS.put(30059, 2); // Trisha
 		TELEPORTERS.put(30080, 3); // Clarissa
-		TELEPORTERS.put(30177, 5); // Valentina
-		TELEPORTERS.put(30233, 7); // Esmeralda
-		TELEPORTERS.put(30256, 1); // Bella
-		TELEPORTERS.put(30320, 0); // Richlin
-		TELEPORTERS.put(30848, 6); // Elisa
 		TELEPORTERS.put(30899, 4); // Flauen
+		TELEPORTERS.put(30177, 5); // Valentina
+		TELEPORTERS.put(30848, 6); // Elisa
+		TELEPORTERS.put(30233, 7); // Esmeralda
 		TELEPORTERS.put(31320, 8); // Ilyana
 		TELEPORTERS.put(31275, 9); // Tatiana
 		TELEPORTERS.put(31964, 10); // Bilia
+		TELEPORTERS.put(31210, 11); // Race Track Gatekeeper
 	}
 	// Player Variables
 	private static final String MONSTER_RETURN = "MONSTER_RETURN";
