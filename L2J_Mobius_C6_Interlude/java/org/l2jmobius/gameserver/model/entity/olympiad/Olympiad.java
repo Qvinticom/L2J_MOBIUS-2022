@@ -1125,14 +1125,18 @@ public class Olympiad
 	 */
 	protected synchronized void saveNobleData()
 	{
+		Connection con = null;
+		
 		if ((_nobles == null) || _nobles.isEmpty())
 		{
 			return;
 		}
 		
-		PreparedStatement statement = null;
-		try (Connection con = DatabaseFactory.getConnection())
+		try
 		{
+			con = DatabaseFactory.getConnection();
+			PreparedStatement statement;
+			
 			for (Integer nobleId : _nobles.keySet())
 			{
 				final StatsSet nobleInfo = _nobles.get(nobleId);
@@ -1163,9 +1167,10 @@ public class Olympiad
 					statement.setInt(6, compWon);
 					statement.setInt(7, compLost);
 					statement.setInt(8, compDrawn);
+					statement.execute();
+					statement.close();
 					
 					nobleInfo.set("to_save", false);
-					
 					updateNobleStats(nobleId, nobleInfo);
 				}
 				else
@@ -1177,9 +1182,9 @@ public class Olympiad
 					statement.setInt(4, compLost);
 					statement.setInt(5, compDrawn);
 					statement.setInt(6, charId);
+					statement.execute();
+					statement.close();
 				}
-				statement.execute();
-				statement.close();
 			}
 		}
 		catch (SQLException e)
