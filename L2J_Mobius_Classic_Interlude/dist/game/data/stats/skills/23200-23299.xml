@@ -1501,7 +1501,6 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>77</magicLvl>
 		<operateType>A2</operateType>
-		<mpConsume>1</mpConsume>
 		<reuseDelay>1000</reuseDelay>
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
@@ -1537,7 +1536,6 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>82</magicLvl>
 		<operateType>A2</operateType>
-		<mpConsume>1</mpConsume>
 		<reuseDelay>1000</reuseDelay>
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
@@ -1571,7 +1569,6 @@
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
 		<operateType>A2</operateType>
-		<mpConsume>1</mpConsume>
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1657,7 +1654,6 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>74</magicLvl>
 		<operateType>A2</operateType>
-		<mpConsume>1</mpConsume>
 		<reuseDelay>1000</reuseDelay>
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
@@ -1688,10 +1684,10 @@
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>DWARF_ATTACK_BUFF</abnormalType>
 		<castRange>900</castRange>
+		<coolTime>500</coolTime>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
 		<operateType>A2</operateType>
-		<mpConsume>1</mpConsume>
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1720,10 +1716,10 @@
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>DWARF_ATTACK_BUFF</abnormalType>
 		<castRange>900</castRange>
+		<coolTime>500</coolTime>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
 		<operateType>A2</operateType>
-		<mpConsume>1</mpConsume>
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1758,10 +1754,10 @@
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>DWARF_DEFENCE_BUFF</abnormalType>
 		<castRange>900</castRange>
+		<coolTime>500</coolTime>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
 		<operateType>A2</operateType>
-		<mpConsume>1</mpConsume>
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1794,10 +1790,10 @@
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>DWARF_DEFENCE_BUFF</abnormalType>
 		<castRange>900</castRange>
+		<coolTime>500</coolTime>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
 		<operateType>A2</operateType>
-		<mpConsume>1</mpConsume>
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1834,7 +1830,6 @@
 		<hitTime>500</hitTime>
 		<magicLvl>81</magicLvl>
 		<operateType>A2</operateType>
-		<mpConsume>1</mpConsume>
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1870,7 +1865,6 @@
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
 		<operateType>A2</operateType>
-		<mpConsume>1</mpConsume>
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1908,7 +1902,6 @@
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
 		<operateType>A2</operateType>
-		<mpConsume>1</mpConsume>
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1935,7 +1928,6 @@
 		<effectRange>2000</effectRange>
 		<hitTime>1500</hitTime>
 		<operateType>A1</operateType>
-		<mpConsume>1</mpConsume>
 		<effectPoint>1</effectPoint>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>78</magicLvl>
@@ -2002,7 +1994,6 @@
 		<affectRange>2000</affectRange>
 		<hitTime>500</hitTime>
 		<operateType>A2</operateType>
-		<mpConsume>1</mpConsume>
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -2028,7 +2019,6 @@
 		<affectRange>2000</affectRange>
 		<hitTime>500</hitTime>
 		<operateType>A2</operateType>
-		<mpConsume>1</mpConsume>
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -2054,7 +2044,6 @@
 		<affectRange>2000</affectRange>
 		<hitTime>500</hitTime>
 		<operateType>A2</operateType>
-		<mpConsume>1</mpConsume>
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -2080,7 +2069,6 @@
 		<affectRange>2000</affectRange>
 		<hitTime>500</hitTime>
 		<operateType>A2</operateType>
-		<mpConsume>1</mpConsume>
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -2106,7 +2094,6 @@
 		<affectRange>2000</affectRange>
 		<hitTime>500</hitTime>
 		<operateType>A2</operateType>
-		<mpConsume>1</mpConsume>
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -2132,7 +2119,6 @@
 		<affectRange>2000</affectRange>
 		<hitTime>500</hitTime>
 		<operateType>A2</operateType>
-		<mpConsume>1</mpConsume>
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -2158,7 +2144,6 @@
 		<affectRange>2000</affectRange>
 		<hitTime>500</hitTime>
 		<operateType>A2</operateType>
-		<mpConsume>1</mpConsume>
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -2184,7 +2169,6 @@
 		<affectRange>2000</affectRange>
 		<hitTime>500</hitTime>
 		<operateType>A2</operateType>
-		<mpConsume>1</mpConsume>
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -2210,7 +2194,6 @@
 		<affectRange>2000</affectRange>
 		<hitTime>500</hitTime>
 		<operateType>A2</operateType>
-		<mpConsume>1</mpConsume>
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -2235,7 +2218,6 @@
 		<affectRange>2000</affectRange>
 		<hitTime>500</hitTime>
 		<operateType>A2</operateType>
-		<mpConsume>1</mpConsume>
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -2261,7 +2243,6 @@
 		<affectRange>2000</affectRange>
 		<hitTime>500</hitTime>
 		<operateType>A2</operateType>
-		<mpConsume>1</mpConsume>
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -2287,7 +2268,6 @@
 		<affectRange>2000</affectRange>
 		<hitTime>500</hitTime>
 		<operateType>A2</operateType>
-		<mpConsume>1</mpConsume>
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -2313,7 +2293,6 @@
 		<affectRange>2000</affectRange>
 		<hitTime>500</hitTime>
 		<operateType>A2</operateType>
-		<mpConsume>1</mpConsume>
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -2339,7 +2318,6 @@
 		<affectRange>2000</affectRange>
 		<hitTime>500</hitTime>
 		<operateType>A2</operateType>
-		<mpConsume>1</mpConsume>
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -2365,7 +2343,6 @@
 		<affectRange>2000</affectRange>
 		<hitTime>500</hitTime>
 		<operateType>A2</operateType>
-		<mpConsume>1</mpConsume>
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -2391,7 +2368,6 @@
 		<affectRange>2000</affectRange>
 		<hitTime>500</hitTime>
 		<operateType>A2</operateType>
-		<mpConsume>1</mpConsume>
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -2445,7 +2421,6 @@
 		<affectRange>2000</affectRange>
 		<hitTime>500</hitTime>
 		<operateType>A2</operateType>
-		<mpConsume>1</mpConsume>
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -2471,7 +2446,6 @@
 		<affectRange>2000</affectRange>
 		<hitTime>500</hitTime>
 		<operateType>A2</operateType>
-		<mpConsume>1</mpConsume>
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -2497,7 +2471,6 @@
 		<affectRange>2000</affectRange>
 		<hitTime>500</hitTime>
 		<operateType>A2</operateType>
-		<mpConsume>1</mpConsume>
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -2523,7 +2496,6 @@
 		<affectRange>2000</affectRange>
 		<hitTime>500</hitTime>
 		<operateType>A2</operateType>
-		<mpConsume>1</mpConsume>
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -2561,7 +2533,6 @@
 		<hitTime>500</hitTime>
 		<magicLvl>78</magicLvl>
 		<operateType>A2</operateType>
-		<mpConsume>1</mpConsume>
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -2637,7 +2608,6 @@
 		<affectRange>2000</affectRange>
 		<hitTime>500</hitTime>
 		<operateType>A2</operateType>
-		<mpConsume>1</mpConsume>
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -2711,7 +2681,6 @@
 		<affectRange>2000</affectRange>
 		<hitTime>500</hitTime>
 		<operateType>A2</operateType>
-		<mpConsume>1</mpConsume>
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -2781,7 +2750,6 @@
 		<affectRange>2000</affectRange>
 		<hitTime>500</hitTime>
 		<operateType>A2</operateType>
-		<mpConsume>1</mpConsume>
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -3079,9 +3047,9 @@
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>DWARF_ATTACK_BUFF</abnormalType>
 		<affectRange>2000</affectRange>
+		<coolTime>500</coolTime>
 		<hitTime>500</hitTime>
 		<operateType>A2</operateType>
-		<mpConsume>1</mpConsume>
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -3129,9 +3097,9 @@
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>DWARF_DEFENCE_BUFF</abnormalType>
 		<affectRange>2000</affectRange>
+		<coolTime>500</coolTime>
 		<hitTime>500</hitTime>
 		<operateType>A2</operateType>
-		<mpConsume>1</mpConsume>
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -3161,7 +3129,6 @@
 		<canBeDispelled>false</canBeDispelled>
 		<hitTime>500</hitTime>
 		<operateType>A2</operateType>
-		<mpConsume>1</mpConsume>
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -3186,7 +3153,6 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>77</magicLvl>
 		<operateType>A2</operateType>
-		<mpConsume>1</mpConsume>
 		<reuseDelay>1000</reuseDelay>
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
@@ -3222,7 +3188,6 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>82</magicLvl>
 		<operateType>A2</operateType>
-		<mpConsume>1</mpConsume>
 		<reuseDelay>1000</reuseDelay>
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
@@ -3256,7 +3221,6 @@
 		<affectRange>2000</affectRange>
 		<hitTime>500</hitTime>
 		<operateType>A2</operateType>
-		<mpConsume>1</mpConsume>
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -3342,7 +3306,6 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>74</magicLvl>
 		<operateType>A2</operateType>
-		<mpConsume>1</mpConsume>
 		<reuseDelay>1000</reuseDelay>
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
@@ -3374,9 +3337,9 @@
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>DWARF_ATTACK_BUFF</abnormalType>
 		<affectRange>2000</affectRange>
+		<coolTime>500</coolTime>
 		<hitTime>500</hitTime>
 		<operateType>A2</operateType>
-		<mpConsume>1</mpConsume>
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -3406,9 +3369,9 @@
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>DWARF_ATTACK_BUFF</abnormalType>
 		<affectRange>2000</affectRange>
+		<coolTime>500</coolTime>
 		<hitTime>500</hitTime>
 		<operateType>A2</operateType>
-		<mpConsume>1</mpConsume>
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -3444,9 +3407,9 @@
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>DWARF_DEFENCE_BUFF</abnormalType>
 		<affectRange>2000</affectRange>
+		<coolTime>500</coolTime>
 		<hitTime>500</hitTime>
 		<operateType>A2</operateType>
-		<mpConsume>1</mpConsume>
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -3480,9 +3443,9 @@
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>DWARF_DEFENCE_BUFF</abnormalType>
 		<affectRange>2000</affectRange>
+		<coolTime>500</coolTime>
 		<hitTime>500</hitTime>
 		<operateType>A2</operateType>
-		<mpConsume>1</mpConsume>
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -3519,7 +3482,6 @@
 		<hitTime>500</hitTime>
 		<magicLvl>81</magicLvl>
 		<operateType>A2</operateType>
-		<mpConsume>1</mpConsume>
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -3555,7 +3517,6 @@
 		<affectRange>2000</affectRange>
 		<hitTime>500</hitTime>
 		<operateType>A2</operateType>
-		<mpConsume>1</mpConsume>
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -3593,7 +3554,6 @@
 		<affectRange>2000</affectRange>
 		<hitTime>500</hitTime>
 		<operateType>A2</operateType>
-		<mpConsume>1</mpConsume>
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -3623,7 +3583,6 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<activateRate>0</activateRate>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
@@ -3634,6 +3593,20 @@
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Speed">
+				<amount>10</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="23298" toLevel="1" name="Flame Hawk">
 		<!-- Envelops in flames to inflict 300 fire damage every second for 10 seconds. -->
