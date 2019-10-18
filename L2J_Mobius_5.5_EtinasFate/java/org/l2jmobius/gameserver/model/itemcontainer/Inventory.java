@@ -2034,27 +2034,34 @@ public abstract class Inventory extends ItemContainer
 			{
 				while (rs.next())
 				{
-					final ItemInstance item = new ItemInstance(rs);
-					if (getOwner().isPlayer())
+					try
 					{
-						final PlayerInstance player = (PlayerInstance) getOwner();
-						
-						if (!player.canOverrideCond(PlayerCondOverride.ITEM_CONDITIONS) && !player.isHero() && item.isHeroItem())
+						final ItemInstance item = new ItemInstance(rs);
+						if (getOwner().isPlayer())
 						{
-							item.setItemLocation(ItemLocation.INVENTORY);
+							final PlayerInstance player = (PlayerInstance) getOwner();
+							
+							if (!player.canOverrideCond(PlayerCondOverride.ITEM_CONDITIONS) && !player.isHero() && item.isHeroItem())
+							{
+								item.setItemLocation(ItemLocation.INVENTORY);
+							}
+						}
+						
+						World.getInstance().addObject(item);
+						
+						// If stackable item is found in inventory just add to current quantity
+						if (item.isStackable() && (getItemByItemId(item.getId()) != null))
+						{
+							addItem("Restore", item, getOwner().getActingPlayer(), null);
+						}
+						else
+						{
+							addItem(item);
 						}
 					}
-					
-					World.getInstance().addObject(item);
-					
-					// If stackable item is found in inventory just add to current quantity
-					if (item.isStackable() && (getItemByItemId(item.getId()) != null))
+					catch (Exception e)
 					{
-						addItem("Restore", item, getOwner().getActingPlayer(), null);
-					}
-					else
-					{
-						addItem(item);
+						LOGGER.warning("Could not restore item " + rs.getInt("item_id") + " for " + getOwner());
 					}
 				}
 			}
