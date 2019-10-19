@@ -846,12 +846,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 	 */
 	public double calculateDirectionTo(ILocational target)
 	{
-		int heading = Util.calculateHeadingFrom(this, target) - _heading;
-		if (heading < 0)
-		{
-			heading += 65535;
-		}
-		return Util.convertHeadingToDegree(heading);
+		return Util.calculateAngleFrom(this, target);
 	}
 	
 	/**
