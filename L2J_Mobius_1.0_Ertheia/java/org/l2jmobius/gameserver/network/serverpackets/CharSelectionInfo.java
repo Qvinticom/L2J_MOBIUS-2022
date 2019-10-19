@@ -176,9 +176,11 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 				packet.writeD(charInfoPackage.getPaperdollItemVisualId(slot));
 			}
 			
-			packet.writeD(0x00); // ??
-			packet.writeD(0x00); // ??
-			packet.writeH(0x00); // ??
+			packet.writeH(charInfoPackage.getEnchantEffect(Inventory.PAPERDOLL_CHEST)); // Upper Body enchant level
+			packet.writeH(charInfoPackage.getEnchantEffect(Inventory.PAPERDOLL_LEGS)); // Lower Body enchant level
+			packet.writeH(charInfoPackage.getEnchantEffect(Inventory.PAPERDOLL_HEAD)); // Headgear enchant level
+			packet.writeH(charInfoPackage.getEnchantEffect(Inventory.PAPERDOLL_GLOVES)); // Gloves enchant level
+			packet.writeH(charInfoPackage.getEnchantEffect(Inventory.PAPERDOLL_FEET)); // Boots enchant level
 			
 			packet.writeD(charInfoPackage.getHairStyle());
 			packet.writeD(charInfoPackage.getHairColor());
@@ -191,7 +193,7 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 			packet.writeD(charInfoPackage.getClassId());
 			packet.writeD(i == _activeId ? 1 : 0);
 			
-			packet.writeC(charInfoPackage.getEnchantEffect() > 127 ? 127 : charInfoPackage.getEnchantEffect());
+			packet.writeC(charInfoPackage.getEnchantEffect(Inventory.PAPERDOLL_RHAND) > 127 ? 127 : charInfoPackage.getEnchantEffect(Inventory.PAPERDOLL_RHAND));
 			packet.writeD(charInfoPackage.getAugmentation() != null ? charInfoPackage.getAugmentation().getOption1Id() : 0);
 			// Mobius: Maybe use 2x writeH?
 			// packet.writeD(charInfoPackage.getAugmentation() != null ? charInfoPackage.getAugmentation().getOption2Id() : 0);

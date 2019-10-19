@@ -241,11 +241,11 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 				packet.writeD(charInfoPackage.getPaperdollItemVisualId(slot));
 			}
 			
-			packet.writeH(0x00); // Upper Body enchant level
-			packet.writeH(0x00); // Lower Body enchant level
-			packet.writeH(0x00); // Headgear enchant level
-			packet.writeH(0x00); // Gloves enchant level
-			packet.writeH(0x00); // Boots enchant level
+			packet.writeH(charInfoPackage.getEnchantEffect(Inventory.PAPERDOLL_CHEST)); // Upper Body enchant level
+			packet.writeH(charInfoPackage.getEnchantEffect(Inventory.PAPERDOLL_LEGS)); // Lower Body enchant level
+			packet.writeH(charInfoPackage.getEnchantEffect(Inventory.PAPERDOLL_HEAD)); // Headgear enchant level
+			packet.writeH(charInfoPackage.getEnchantEffect(Inventory.PAPERDOLL_GLOVES)); // Gloves enchant level
+			packet.writeH(charInfoPackage.getEnchantEffect(Inventory.PAPERDOLL_FEET)); // Boots enchant level
 			
 			packet.writeD(charInfoPackage.getHairStyle());
 			packet.writeD(charInfoPackage.getHairColor());
@@ -258,7 +258,7 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 			packet.writeD(charInfoPackage.getClassId());
 			packet.writeD(i == _activeId ? 1 : 0);
 			
-			packet.writeC(charInfoPackage.getEnchantEffect() > 127 ? 127 : charInfoPackage.getEnchantEffect());
+			packet.writeC(charInfoPackage.getEnchantEffect(Inventory.PAPERDOLL_RHAND) > 127 ? 127 : charInfoPackage.getEnchantEffect(Inventory.PAPERDOLL_RHAND));
 			packet.writeD(charInfoPackage.getAugmentation() != null ? charInfoPackage.getAugmentation().getOption1Id() : 0);
 			packet.writeD(charInfoPackage.getAugmentation() != null ? charInfoPackage.getAugmentation().getOption2Id() : 0);
 			
@@ -277,7 +277,7 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 			packet.writeD(charInfoPackage.getVitalityItemsUsed()); // Remaining vitality item uses
 			packet.writeD(charInfoPackage.getAccessLevel() == -100 ? 0x00 : 0x01); // Char is active or not
 			packet.writeC(charInfoPackage.isNoble() ? 0x01 : 0x00);
-			packet.writeC(Hero.getInstance().isHero(charInfoPackage.getObjectId()) ? 0x01 : 0x00); // Hero glow
+			packet.writeC(Hero.getInstance().isHero(charInfoPackage.getObjectId()) ? 0x02 : 0x00); // Hero glow
 			packet.writeC(charInfoPackage.isHairAccessoryEnabled() ? 0x01 : 0x00); // Show hair accessory if enabled
 		}
 		return true;

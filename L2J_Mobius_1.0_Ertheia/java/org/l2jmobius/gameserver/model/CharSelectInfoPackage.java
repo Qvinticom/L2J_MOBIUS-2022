@@ -16,7 +16,6 @@
  */
 package org.l2jmobius.gameserver.model;
 
-import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
 import org.l2jmobius.gameserver.model.variables.PlayerVariables;
 
@@ -321,9 +320,9 @@ public class CharSelectInfoPackage
 		_sp = sp;
 	}
 	
-	public int getEnchantEffect()
+	public int getEnchantEffect(int slot)
 	{
-		return _paperdoll[Inventory.PAPERDOLL_RHAND][2];
+		return _paperdoll[slot][2];
 	}
 	
 	public void setReputation(int reputation)
