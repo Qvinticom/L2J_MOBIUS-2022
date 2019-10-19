@@ -2148,10 +2148,9 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<isDebuff>true</isDebuff>
 		<effects>
-			<effect name="TargetMe" />
 			<effect name="GetAgro" />
 			<effect name="AddHate">
-				<power>1000000</power>
+				<power>500</power>
 			</effect>
 			<effect name="HateAttack">
 				<amount>500</amount>

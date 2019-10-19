@@ -1405,9 +1405,6 @@ public class Attackable extends Npc
 		// Clear all aggro char from list
 		clearAggroList();
 		
-		// Set the intention of the Attackable to AI_INTENTION_ACTIVE
-		getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
-		
 		// Clear Harvester reward
 		_harvestItem.set(null);
 		
@@ -1436,8 +1433,8 @@ public class Attackable extends Npc
 		
 		setWalking();
 		
-		// check the region where this mob is, do not activate the AI if region is inactive.
-		if (!isInActiveRegion() && hasAI())
+		// Check the region where this mob is, do not activate the AI if region is inactive.
+		if (hasAI() && !isInActiveRegion())
 		{
 			getAI().stopAITask();
 		}

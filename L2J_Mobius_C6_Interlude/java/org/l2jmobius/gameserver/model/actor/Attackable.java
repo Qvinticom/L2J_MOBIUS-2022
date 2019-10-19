@@ -3071,9 +3071,6 @@ public class Attackable extends NpcInstance
 		// Clear all aggro char from list
 		clearAggroList();
 		
-		// Set the intention of the Attackable to AI_INTENTION_ACTIVE
-		getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
-		
 		// Clear Harvester Rewrard List
 		_harvestItems = null;
 		
@@ -3085,8 +3082,8 @@ public class Attackable extends NpcInstance
 		
 		setWalking();
 		
-		// check the region where this mob is, do not activate the AI if region is inactive.
-		if (!isInActiveRegion())
+		// Check the region where this mob is, do not activate the AI if region is inactive.
+		if (hasAI() && !isInActiveRegion())
 		{
 			if (this instanceof SiegeGuardInstance)
 			{
