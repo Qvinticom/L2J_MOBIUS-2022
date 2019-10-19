@@ -961,7 +961,7 @@ public class Formulas
 		
 		final double chance = BaseStats.values()[val].calcBonus(actor) * actor.getStat().getValue(Stats.SKILL_CRITICAL_PROBABILITY, 1);
 		
-		return ((Rnd.nextDouble() * 100.) < chance);
+		return ((Rnd.nextDouble() * 100.) < (chance * Config.SKILL_MASTERY_CHANCE_MULTIPLIERS.getOrDefault(actor.getActingPlayer().getClassId(), 1f)));
 	}
 	
 	/**

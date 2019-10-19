@@ -476,13 +476,8 @@
 		</magicLvl>
 		<operateType>P</operateType>
 		<effects>
-			<effect name="StatBonusSkillCritical">
+			<effect name="SkillCritical">
 				<stat>STR</stat>
-				<weaponType>
-					<item>BOW</item>
-					<item>CROSSBOW</item>
-					<item>TWOHANDCROSSBOW</item>
-				</weaponType>
 			</effect>
 			<effect name="PAtk">
 				<amount>10</amount>
