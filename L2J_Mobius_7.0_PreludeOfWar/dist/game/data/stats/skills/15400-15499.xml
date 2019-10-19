@@ -125,7 +125,7 @@
 		<!-- Cannot target. -->
 		<icon>icon.notargetting</icon>
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>3</abnormalTime>
+		<abnormalTime>10</abnormalTime>
 		<abnormalType>MA_DOWN</abnormalType>
 		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
 		<operateType>A2</operateType>
@@ -136,7 +136,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="DisableTargeting" />
+			<effect name="Untargetable" />
 		</effects>
 	</skill>
 	<skill id="15405" toLevel="1" name="Master's Blessing (Awakening)">

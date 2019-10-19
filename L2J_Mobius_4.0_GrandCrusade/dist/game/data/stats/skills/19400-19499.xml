@@ -395,6 +395,7 @@
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<trait>PARALYZE</trait>
 		<isMagic>1</isMagic>
 		<isDebuff>true</isDebuff>
 		<effects>
@@ -520,6 +521,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>60</affectRange>
+		<trait>PARALYZE</trait>
 		<isMagic>1</isMagic>
 		<isDebuff>true</isDebuff>
 		<effects>

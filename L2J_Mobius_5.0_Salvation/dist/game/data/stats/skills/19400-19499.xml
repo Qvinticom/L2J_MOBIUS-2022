@@ -395,6 +395,7 @@
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<trait>PARALYZE</trait>
 		<isMagic>1</isMagic>
 		<isDebuff>true</isDebuff>
 		<effects>
@@ -411,7 +412,6 @@
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKBACK</abnormalVisualEffect>
 		<activateRate>100</activateRate> <!-- Guessed -->
-		<trait>KNOCKBACK</trait> <!-- Guessed -->
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">90</value>
@@ -427,6 +427,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
+		<trait>KNOCKBACK</trait>
 		<isMagic>1</isMagic>
 		<isDebuff>true</isDebuff>
 		<effects>
@@ -444,7 +445,6 @@
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
 		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
 		<activateRate>80</activateRate> <!-- Guessed -->
-		<trait>HOLD</trait> <!-- Guessed -->
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">90</value>
@@ -460,6 +460,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
+		<trait>HOLD</trait>
 		<isMagic>1</isMagic>
 		<isDebuff>true</isDebuff>
 		<effects>
@@ -473,7 +474,6 @@
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<activateRate>80</activateRate> <!-- Guessed -->
-		<trait>SHOCK</trait> <!-- Guessed -->
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">90</value>
@@ -489,6 +489,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
+		<trait>SHOCK</trait>
 		<isMagic>1</isMagic>
 		<isDebuff>true</isDebuff>
 		<effects>
@@ -504,7 +505,7 @@
 		<abnormalTime>4</abnormalTime>
 		<abnormalType>FREEZE</abnormalType>
 		<abnormalVisualEffect>FROZEN_PILLAR</abnormalVisualEffect>
-		<activateRate>18</activateRate> <!-- Guessed -->
+		<activateRate>20</activateRate> <!-- Guessed -->
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">90</value>
@@ -520,6 +521,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>60</affectRange>
+		<trait>PARALYZE</trait>
 		<isMagic>1</isMagic>
 		<isDebuff>true</isDebuff>
 		<effects>
@@ -535,7 +537,6 @@
 		<abnormalTime>3</abnormalTime>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<activateRate>100</activateRate> <!-- Guessed -->
-		<trait>SHOCK</trait> <!-- Guessed -->
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">90</value>
@@ -548,6 +549,7 @@
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<trait>SHOCK</trait>
 		<isMagic>1</isMagic>
 		<isDebuff>true</isDebuff>
 		<effects>
@@ -567,7 +569,6 @@
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
 		<activateRate>90</activateRate> <!-- Guessed -->
-		<trait>KNOCKDOWN</trait> <!-- Guessed -->
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">90</value>
@@ -580,6 +581,7 @@
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<trait>KNOCKBACK</trait>
 		<isMagic>1</isMagic>
 		<isDebuff>true</isDebuff>
 		<effects>
@@ -1639,6 +1641,13 @@
 			<effect name="Speed">
 				<amount>-50</amount>
 				<mode>PER</mode>
+			</effect>
+			<effect name="TargetCancel">
+				<chance>100</chance>
+			</effect>
+			<effect name="DisableTargeting" />
+			<effect name="DeleteHateOfMe">
+				<chance>100</chance>
 			</effect>
 		</effects>
 	</skill>
