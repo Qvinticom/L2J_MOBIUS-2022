@@ -952,8 +952,7 @@ public class Formulas
 			return false;
 		}
 		
-		final int val = (int) actor.getStat().getValue(Stats.SKILL_CRITICAL, -1);
-		
+		final int val = (int) actor.getStat().getAdd(Stats.SKILL_CRITICAL, -1);
 		if (val == -1)
 		{
 			return false;
