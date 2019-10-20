@@ -33,13 +33,25 @@
 		<!-- Double-click to apply 'Longing' effect to all party members. STR + 2, INT + 2, CON + 2, MEN + 2. Can be stacked with 'Compassion' and 'Devotion' effects. -->
 		<set name="icon" val="icon.etc_whiteday_cookie" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
+		<set name="reuse_delay" val="10000" />
+		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="for_npc" val="true" />
+		<set name="is_coc_restricted" val="true" />
+		<set name="commissionItemType" val="POTION" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="27848" level="1" /> <!-- Longing -->
+		</skills>
 	</item>
 	<item id="28504" name="Frintezza's Transformation Chocolate" type="EtcItem">
 		<!-- Contains Frintezza's limitless power. For 60 minutes, randomly transform into Snow Kung/Scarecrow Jack/Tin Golem/Makeshift Bat/Lady Tow/Heavy Tow/Sleepy Tow. -->
