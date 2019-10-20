@@ -2264,27 +2264,27 @@
 				<ticks>7</ticks>
 			</effect>
 			<effect name="MagicMpCost">
-				<amount>-25</amount>
+				<amount>-15</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
 			</effect>
 			<effect name="MagicMpCost">
-				<amount>-25</amount>
+				<amount>-15</amount>
 				<mode>PER</mode>
 				<magicType>0</magicType>
 			</effect>
 			<effect name="MagicMpCost">
-				<amount>-25</amount>
+				<amount>-15</amount>
 				<mode>PER</mode>
 				<magicType>3</magicType>
 			</effect>
 			<effect name="Reuse">
-				<amount>-10</amount>
+				<amount>-5</amount>
 				<mode>PER</mode>
 				<magicType>0</magicType>
 			</effect>
 			<effect name="Reuse">
-				<amount>-10</amount>
+				<amount>-5</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
 			</effect>
@@ -2292,6 +2292,10 @@
 				<amount>-10</amount>
 				<mode>PER</mode>
 				<magicType>3</magicType>
+			</effect>
+			<effect name="Speed">
+				<amount>20</amount>
+				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -2344,6 +2348,10 @@
 				<amount>-5</amount>
 				<mode>PER</mode>
 				<magicType>3</magicType>
+			</effect>
+			<effect name="Speed">
+				<amount>20</amount>
+				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
