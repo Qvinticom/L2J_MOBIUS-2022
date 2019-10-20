@@ -2367,7 +2367,15 @@
 				<amount>15</amount>
 				<mode>PER</mode>
 			</effect>
+			<effect name="MagicalDefence">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
 			<effect name="DefenceCriticalDamage">
+				<amount>-15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceMagicCriticalDamage">
 				<amount>-15</amount>
 				<mode>PER</mode>
 			</effect>
@@ -2394,10 +2402,18 @@
 		<affectObject>FRIEND</affectObject>
 		<effects>
 			<effect name="PhysicalDefence">
-				<amount>10</amount>
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>15</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="DefenceCriticalDamage">
+				<amount>-10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceMagicCriticalDamage">
 				<amount>-10</amount>
 				<mode>PER</mode>
 			</effect>
