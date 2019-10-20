@@ -16,8 +16,6 @@
  */
 package org.l2jmobius.gameserver.model.olympiad;
 
-import java.util.Set;
-
 import org.l2jmobius.gameserver.datatables.SpawnTable;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.Spawn;
@@ -30,13 +28,8 @@ import org.l2jmobius.gameserver.network.NpcStringId;
 public class OlympiadAnnouncer implements Runnable
 {
 	private static final int OLY_MANAGER = 31688;
-	private final Set<Spawn> _managers;
-	private int _currentStadium = 0;
 	
-	public OlympiadAnnouncer()
-	{
-		_managers = SpawnTable.getInstance().getSpawns(OLY_MANAGER);
-	}
+	private int _currentStadium = 0;
 	
 	@Override
 	public void run()
@@ -77,7 +70,7 @@ public class OlympiadAnnouncer implements Runnable
 					}
 				}
 				
-				for (Spawn spawn : _managers)
+				for (Spawn spawn : SpawnTable.getInstance().getSpawns(OLY_MANAGER))
 				{
 					final Npc manager = spawn.getLastSpawn();
 					if (manager != null)
