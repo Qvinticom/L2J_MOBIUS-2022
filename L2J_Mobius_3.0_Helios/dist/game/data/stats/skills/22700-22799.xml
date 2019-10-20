@@ -1589,6 +1589,14 @@
 				<hasAbnormal>false</hasAbnormal>
 			</condition>
 		</conditions>
+		<effects>
+			<effect name="ExpModify">
+				<amount>100</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>100</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="22747" toLevel="1" name="Fantasy Isle Medal of Glory">
 		<!-- Individual Fame + 200. -->
