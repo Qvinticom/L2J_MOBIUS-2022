@@ -67,7 +67,6 @@ public class FeedableBeasts extends AbstractNpcAI
 	// @formatter:on
 	
 	private static final Map<Integer, Integer> MAD_COW_POLYMORPH = new HashMap<>(6);
-	
 	static
 	{
 		MAD_COW_POLYMORPH.put(21824, 21468);
@@ -120,8 +119,8 @@ public class FeedableBeasts extends AbstractNpcAI
 		NpcStringId.ANIMALS_NEED_LOVE_TOO
 	};
 	
-	private final Map<Integer, Integer> _feedInfo = new ConcurrentHashMap<>();
-	private static Map<Integer, GrowthCapableMob> GROWTH_CAPABLE_MOBS = new HashMap<>();
+	private static final Map<Integer, Integer> _feedInfo = new ConcurrentHashMap<>();
+	private static final Map<Integer, GrowthCapableMob> GROWTH_CAPABLE_MOBS = new HashMap<>();
 	
 	// all mobs that grow by eating
 	private static class GrowthCapableMob

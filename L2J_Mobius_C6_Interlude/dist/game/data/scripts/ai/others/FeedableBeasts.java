@@ -65,6 +65,7 @@ public class FeedableBeasts extends Quest
 	// @formatter:on
 	
 	private static final Map<Integer, Integer> MAD_COW_POLYMORPH = new HashMap<>();
+	static
 	{
 		MAD_COW_POLYMORPH.put(21824, 21468);
 		MAD_COW_POLYMORPH.put(21825, 21469);
