@@ -741,15 +741,27 @@
 			<height normal="300" />
 		</collision>
 	</npc>
-	<npc id="29020" level="78" type="GrandBoss" name="Baium">
-		<!-- Confirmed CT2.5 -->
+	<npc id="29020" level="118" type="GrandBoss" name="Baium">
+		<!-- NEW UPDATE: PRELUDE OF WAR -->
+		<parameters>
+			<skill name="Skill01_ID" id="4127" level="1" />
+			<skill name="Skill02_ID" id="4128" level="1" />
+			<skill name="Skill03_ID" id="4129" level="1" />
+			<skill name="Skill04_ID" id="4130" level="1" />
+			<skill name="Skill05_ID" id="4131" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+			<param name="Skill02_Probablity" value="2000" />
+			<param name="Skill03_Probablity" value="2000" />
+			<param name="Skill04_Probablity" value="2000" />
+			<param name="Skill05_Probablity" value="500" />
+		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="11090077" sp="2661" raidPoints="0" />
+		<acquire exp="4879895267520" sp="4391908080" raidPoints="0" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="80131252.32" hpRegen="319.2293199" mp="29517.156" mpRegen="3" />
-			<attack physical="3374.18" magical="2200" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3300" magical="2200" />
+			<vitals hp="804647987.20873" hpRegen="561.9508371" mp="100626.447" mpRegen="3.6" />
+			<attack physical="380451.1715" magical="272840.6485" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="44109.29354" magical="21529.93964" />
 			<speed>
 				<walk ground="80" />
 				<run ground="120" />
@@ -758,8 +770,17 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4127" level="1" /> <!-- Baium: General Attack -->
+			<skill id="4127" level="1" /> <!-- Baium's Blow -->
+			<skill id="4128" level="1" /> <!-- Baium's Burst -->
+			<skill id="4129" level="1" /> <!-- Baium's Earthquake -->
+			<skill id="4130" level="1" /> <!-- Baium's Lightning -->
+			<skill id="4131" level="1" /> <!-- Baium's Paralysis -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="32909" level="1" /> <!-- Rule of Looting -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+			<skill id="32908" level="1" /> <!-- Critical Atk. Shield -->
 		</skillList>
 		<corpseTime>13</corpseTime>
 		<exCrtEffect>true</exCrtEffect>
@@ -772,44 +793,61 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="6658" min="1" max="1" chance="70.51" /> <!-- Baium's Ring -->
-				<item id="212" min="1" max="1" chance="6.056" /> <!-- Dasparion's Staff -->
-				<item id="150" min="1" max="1" chance="6.015" /> <!-- Elemental Sword -->
-				<item id="288" min="1" max="1" chance="6.01" /> <!-- Carnage Bow -->
-				<item id="98" min="1" max="1" chance="5.994" /> <!-- Halberd -->
-				<item id="269" min="1" max="1" chance="5.993" /> <!-- Blood Tornado -->
-				<item id="2504" min="1" max="1" chance="5.976" /> <!-- Meteor Shower -->
-				<item id="80" min="1" max="1" chance="5.973" /> <!-- Tallum Blade -->
-				<item id="235" min="1" max="1" chance="5.97" /> <!-- Bloody Orchid -->
-				<item id="6372" min="1" max="1" chance="1.267" /> <!-- Heaven's Divider -->
-				<item id="6364" min="1" max="1" chance="1.261" /> <!-- Forgotten Blade -->
-				<item id="6579" min="1" max="1" chance="1.219" /> <!-- Arcana Mace -->
-				<item id="6371" min="1" max="1" chance="1.197" /> <!-- Demon Splinter -->
-				<item id="7575" min="1" max="1" chance="1.189" /> <!-- Draconic Bow -->
-				<item id="6366" min="1" max="1" chance="1.179" /> <!-- Imperial Staff -->
-				<item id="6365" min="1" max="1" chance="1.144" /> <!-- Basalt Battlehammer -->
-				<item id="6370" min="1" max="1" chance="0.75" /> <!-- Saint Spear -->
-				<item id="6369" min="1" max="1" chance="0.75" /> <!-- Dragon Hunter Axe -->
-				<item id="6367" min="1" max="1" chance="0.75" /> <!-- Angel Slayer -->
-				<item id="6580" min="1" max="1" chance="0.75" /> <!-- Tallum Blade*Dark Legion's Edge -->
-				<item id="36514" min="1" max="2" chance="100" /> <!-- Elcyum Crystal -->
-				<item id="45929" min="1" max="6" chance="44.92" /> <!-- Spirit Stone -->
-				<item id="37520" min="1" max="1" chance="28.81" /> <!-- Bottle of Baium's Soul -->
-				<item id="46489" min="1" max="1" chance="20.8" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
-				<item id="46474" min="1" max="1" chance="20.39" /> <!-- Leona's Soul Crystal - Stage 1 -->
-				<item id="46504" min="1" max="1" chance="19.79" /> <!-- Lionel's Soul Crystal - Stage 1 -->
-				<item id="46475" min="1" max="1" chance="17.62" /> <!-- Leona's Soul Crystal - Stage 2 -->
-				<item id="46505" min="1" max="1" chance="17.61" /> <!-- Lionel's Soul Crystal - Stage 2 -->
-				<item id="46490" min="1" max="1" chance="16.51" /> <!-- Pantheon's Soul Crystal - Stage 2 -->
-				<item id="46476" min="1" max="1" chance="14.79" /> <!-- Leona's Soul Crystal - Stage 3 -->
-				<item id="46491" min="1" max="1" chance="14.33" /> <!-- Pantheon's Soul Crystal - Stage 3 -->
-				<item id="46459" min="1" max="1" chance="13.86" /> <!-- Mermoden's Soul Crystal - Stage 1 -->
-				<item id="46444" min="1" max="1" chance="13.77" /> <!-- Kain's Soul Crystal - Stage 1 -->
-				<item id="46506" min="1" max="1" chance="13.67" /> <!-- Lionel's Soul Crystal - Stage 3 -->
-				<item id="46445" min="1" max="1" chance="11.76" /> <!-- Kain's Soul Crystal - Stage 2 -->
-				<item id="46460" min="1" max="1" chance="11.43" /> <!-- Mermoden's Soul Crystal - Stage 2 -->
-				<item id="46461" min="1" max="1" chance="9.667" /> <!-- Mermoden's Soul Crystal - Stage 3 -->
-				<item id="46446" min="1" max="1" chance="9.56" /> <!-- Kain's Soul Crystal - Stage 3 -->
+				<item id="48669" min="1" max="1" chance="50.65" /> <!-- Angel's Necklace -->
+				<item id="48841" min="1" max="1" chance="49.47" /> <!-- Angel's Earring -->
+				<item id="80113" min="2" max="2" chance="20.97" /> <!-- Leviathan Leather Gloves -->
+				<item id="80104" min="2" max="2" chance="20.87" /> <!-- Leviathan Helmet -->
+				<item id="80112" min="2" max="2" chance="20.79" /> <!-- Leviathan Leather Leggings -->
+				<item id="80116" min="2" max="2" chance="20.71" /> <!-- Leviathan Tunic -->
+				<item id="80108" min="2" max="2" chance="20.46" /> <!-- Leviathan Boots -->
+				<item id="80106" min="2" max="2" chance="20.27" /> <!-- Leviathan Gaiters -->
+				<item id="80105" min="2" max="2" chance="20.25" /> <!-- Leviathan Breastplate -->
+				<item id="80111" min="2" max="2" chance="20.1" /> <!-- Leviathan Leather Armor -->
+				<item id="80118" min="2" max="2" chance="20.05" /> <!-- Leviathan Gloves -->
+				<item id="80114" min="2" max="2" chance="19.96" /> <!-- Leviathan Leather Boots -->
+				<item id="80119" min="2" max="2" chance="19.91" /> <!-- Leviathan Shoes -->
+				<item id="80115" min="2" max="2" chance="19.43" /> <!-- Leviathan Circlet -->
+				<item id="80110" min="2" max="2" chance="19.24" /> <!-- Leviathan Leather Helmet -->
+				<item id="80107" min="2" max="2" chance="19.09" /> <!-- Leviathan Gauntlets -->
+				<item id="80117" min="2" max="2" chance="19.06" /> <!-- Leviathan Stockings -->
+				<item id="80098" min="1" max="1" chance="7.213" /> <!-- Krishna Buster -->
+				<item id="80094" min="1" max="1" chance="7.191" /> <!-- Krishna Fighter -->
+				<item id="80097" min="1" max="1" chance="7.19" /> <!-- Krishna Shooter -->
+				<item id="80100" min="1" max="1" chance="7.162" /> <!-- Krishna Retributer -->
+				<item id="80099" min="1" max="1" chance="7.146" /> <!-- Krishna Caster -->
+				<item id="80101" min="1" max="1" chance="7.137" /> <!-- Krishna Dual Swords -->
+				<item id="80091" min="1" max="1" chance="7.124" /> <!-- Krishna Cutter -->
+				<item id="80096" min="1" max="1" chance="7.107" /> <!-- Krishna Thrower -->
+				<item id="80093" min="1" max="1" chance="7.101" /> <!-- Krishna Avenger -->
+				<item id="80095" min="1" max="1" chance="7.095" /> <!-- Krishna Stormer -->
+				<item id="80090" min="1" max="1" chance="7.088" /> <!-- Krishna Shaper -->
+				<item id="80092" min="1" max="1" chance="7.082" /> <!-- Krishna Slasher -->
+				<item id="80102" min="1" max="1" chance="7.068" /> <!-- Krishna Dual Daggers -->
+				<item id="80103" min="1" max="1" chance="7.047" /> <!-- Krishna Dual Blunt Weapon -->
+				<item id="45932" min="3" max="3" chance="81.4" /> <!-- Top-grade Spirit Stone -->
+				<item id="48997" min="1" max="1" chance="50.3" /> <!-- Lv. 4 Legendary Dye Pack (10-unit) -->
+				<item id="46493" min="1" max="1" chance="23.48" /> <!-- Pantheon's Soul Crystal Lv. 5 -->
+				<item id="46477" min="1" max="1" chance="23.39" /> <!-- Leona's Soul Crystal Lv. 4 -->
+				<item id="46507" min="1" max="1" chance="23.05" /> <!-- Lionel's Soul Crystal Lv. 4 -->
+				<item id="46508" min="1" max="1" chance="23.03" /> <!-- Lionel's Soul Crystal Lv. 5 -->
+				<item id="46492" min="1" max="1" chance="23.01" /> <!-- Pantheon's Soul Crystal Lv. 4 -->
+				<item id="46478" min="1" max="1" chance="22.68" /> <!-- Leona's Soul Crystal Lv. 5 -->
+				<item id="46462" min="1" max="1" chance="16.24" /> <!-- Mermoden's Soul Crystal Lv. 4 -->
+				<item id="46463" min="1" max="1" chance="16.19" /> <!-- Mermoden's Soul Crystal Lv. 5 -->
+				<item id="46448" min="1" max="1" chance="15.73" /> <!-- Kain's Soul Crystal Lv. 5 -->
+				<item id="46447" min="1" max="1" chance="15" /> <!-- Kain's Soul Crystal Lv. 4 -->
+				<item id="46479" min="1" max="1" chance="11.68" /> <!-- Leona's Soul Crystal Lv. 6 -->
+				<item id="46509" min="1" max="1" chance="11.22" /> <!-- Lionel's Soul Crystal Lv. 6 -->
+				<item id="46494" min="1" max="1" chance="10.98" /> <!-- Pantheon's Soul Crystal Lv. 6 -->
+				<item id="35567" min="1" max="1" chance="10.067" /> <!-- Dark Armor Enhancement Stone -->
+				<item id="35569" min="1" max="1" chance="9.975" /> <!-- Bloody Armor Enhancement Stone -->
+				<item id="46464" min="1" max="1" chance="7.795" /> <!-- Mermoden's Soul Crystal Lv. 6 -->
+				<item id="46449" min="1" max="1" chance="7.715" /> <!-- Kain's Soul Crystal Lv. 6 -->
+				<item id="46495" min="1" max="1" chance="6.934" /> <!-- Pantheon's Soul Crystal Lv. 7 -->
+				<item id="46510" min="1" max="1" chance="6.919" /> <!-- Lionel's Soul Crystal Lv. 7 -->
+				<item id="46480" min="1" max="1" chance="6.85" /> <!-- Leona's Soul Crystal Lv. 7 -->
+				<item id="46465" min="1" max="1" chance="4.684" /> <!-- Mermoden's Soul Crystal Lv. 7 -->
+				<item id="46450" min="1" max="1" chance="4.611" /> <!-- Kain's Soul Crystal Lv. 7 -->
 			</drop>
 		</dropLists>
 	</npc>

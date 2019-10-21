@@ -448,6 +448,17 @@
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-700</effectPoint>
+		<activateRate>100</activateRate>
+		<hitCancelTime>0</hitCancelTime>
+		<affectRange>1000</affectRange>
+		<effectRange>1100</effectRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>723</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32537" toLevel="1" name="Lilith Magic Blast">
 		<operateType>A1</operateType>
@@ -456,17 +467,43 @@
 		<hitTime>3000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-700</effectPoint>
+		<activateRate>70</activateRate>
+		<hitCancelTime>0</hitCancelTime>
+		<affectRange>900</affectRange>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>723</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32538" toLevel="1" name="Lilith Unholy Vengeance">
 		<!-- The Power of Darkness locks skills for 5 sec. -->
 		<icon>icon.skill1336</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<isDebuff>true</isDebuff>
 		<hitTime>5000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>-700</effectPoint>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>ROOT_MAGICALLY</abnormalType>
+		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
+		<affectLimit>200-200</affectLimit>
+		<hitCancelTime>0</hitCancelTime>
+		<activateRate>100</activateRate>
+		<affectRange>1200</affectRange>
+		<trait>HOLD</trait>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="Root" />
+		</effects>
 	</skill>
 	<skill id="32539" toLevel="1" name="Lilith Unholy Dimension">
 		<operateType>A1</operateType>
@@ -695,6 +732,16 @@
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
+		<hitCancelTime>0</hitCancelTime>
+		<hitTime>3000</hitTime>
+		<effectRange>500</effectRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>61189</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32567" toLevel="1" name="Anakim Power Multi Shot">
 		<operateType>A1</operateType>
@@ -702,16 +749,44 @@
 		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
+		<affectLimit>200-200</affectLimit>
+		<hitCancelTime>0</hitCancelTime>
+		<hitTime>3000</hitTime>
+		<affectRange>500</affectRange>
+		<fanRange>0;0;500;90</fanRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>FAN</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>61189</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32568" toLevel="1" name="Anakim Holy Vengeance">
 		<!-- Anakim's lightning strike paralyzes the enemy for 2 sec. -->
 		<icon>icon.skill1170</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<isDebuff>true</isDebuff>
 		<hitTime>5000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>-100</effectPoint>
+		<activateRate>100</activateRate>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>2</abnormalTime>
+		<abnormalType>PARALYZE</abnormalType>
+		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
+		<hitCancelTime>0</hitCancelTime>
+		<affectLimit>200-200</affectLimit>
+		<affectRange>1000</affectRange>
+		<trait>PARALYZE</trait>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="BlockActions" />
+		</effects>
 	</skill>
 	<skill id="32569" toLevel="1" name="Anakim Holy Dimension">
 		<operateType>A1</operateType>

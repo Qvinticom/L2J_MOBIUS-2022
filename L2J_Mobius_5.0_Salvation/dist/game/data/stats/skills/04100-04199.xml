@@ -1171,7 +1171,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>0</power>
+				<power>61189</power>
 			</effect>
 		</effects>
 	</skill>
@@ -1186,9 +1186,10 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SQUARE_PB</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>14000</power>
+				<power>61189</power>
 			</effect>
 		</effects>
 	</skill>
@@ -1200,12 +1201,12 @@
 		<magicLvl>75</magicLvl>
 		<operateType>A1</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<targetType>SELF</targetType>
+		<targetType>ENEMY</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>4000</power>
+				<power>61189</power>
 			</effect>
 		</effects>
 	</skill>
@@ -1225,7 +1226,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>367</power>
+				<power>723</power>
 			</effect>
 		</effects>
 	</skill>
@@ -1236,7 +1237,7 @@
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
 		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
-		<activateRate>10</activateRate>
+		<activateRate>30</activateRate>
 		<affectRange>150</affectRange>
 		<basicProperty>MAGIC</basicProperty>
 		<castRange>900</castRange>
@@ -1246,7 +1247,7 @@
 		<hitTime>3600</hitTime>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
-		<magicLvl>75</magicLvl>
+		<magicLvl>118</magicLvl>
 		<operateType>A2</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>1.5</hitCancelTime>
