@@ -752,7 +752,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="11511" toLevel="13" name="Phantom Slasher">
-		<!-- Attacks the target with $s1 Power added to P. Atk. to reduce its P. Atk./M. Atk./P. Def./M. Def. by $s3 for $s2. The target can remove these debuffs if it has Spectral Slash Stage 1 or higher. Requires a sword, blunt weapon, dualsword or dual blunt weapon to be equipped. Over-hit. Critical. -->
+		<!-- Attacks the target with 26041 power. For 10 seconds, enemy's P./ M. Atk. and P./ M. Def. -50%. Removes the Spectral Slash Lv. 1+ effect from the target. Requires a sword, a blunt weapon, dual swords, or dual blunt weapons. Critical. Over-hit. -->
 		<icon>icon.skill11511_2</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -820,6 +820,11 @@
 		<affectScope>SINGLE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<conditions>
+			<condition name="OpCheckAbnormal">
+				<type>ULTIMATE_DEBUFF</type>
+				<level>1</level>
+				<hasAbnormal>true</hasAbnormal>
+			</condition>
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DUAL</item>
@@ -869,24 +874,6 @@
 			<effect name="PhysicalDefence">
 				<amount>-50</amount>
 				<mode>PER</mode>
-			</effect>
-			<effect name="CallSkill">
-				<skillId>19435</skillId> <!-- Spectral Slash -->
-				<skillLevel>
-					<value level="1">1</value> <!-- Guessed -->
-					<value level="2">1</value> <!-- Guessed -->
-					<value level="3">2</value> <!-- Guessed -->
-					<value level="4">2</value> <!-- Guessed -->
-					<value level="5">3</value> <!-- Guessed -->
-					<value level="6">3</value> <!-- Guessed -->
-					<value level="7">3</value> <!-- Guessed -->
-					<value level="8">4</value> <!-- Guessed -->
-					<value level="9">4</value> <!-- Guessed -->
-					<value level="10">4</value> <!-- Guessed -->
-					<value level="11">5</value> <!-- Guessed -->
-					<value level="12">5</value> <!-- Guessed -->
-					<value level="13">5</value> <!-- Guessed -->
-				</skillLevel>
 			</effect>
 		</effects>
 		<selfEffects>
@@ -4580,25 +4567,28 @@
 		<icon>icon.skill11585</icon>
 		<operateType>P</operateType>
 		<effects>
-			<effect name="TriggerSkillBySkill">
-				<castSkillId>11508</castSkillId><!-- Trace of Twin Edges -->
-				<skillId>19435</skillId> <!-- Spectral Slash -->
+			<effect name="TriggerSkillBySkillAttack">
+				<skillId>19435</skillId> <!-- Phantom Slasher -->
 				<skillLevel>1</skillLevel>
-				<chance>30</chance>
+				<skillLevelScaleTo>5</skillLevelScaleTo>
+				<attackSkillId>11508</attackSkillId> <!-- Trace of Twin Edges -->
+				<chance>100</chance>
 				<targetType>TARGET</targetType>
 			</effect>
-			<effect name="TriggerSkillBySkill">
-				<castSkillId>19426</castSkillId><!-- Shadow Blade -->
-				<skillId>19435</skillId> <!-- Spectral Slash -->
+			<effect name="TriggerSkillBySkillAttack">
+				<skillId>19435</skillId> <!-- Phantom Slasher -->
 				<skillLevel>1</skillLevel>
-				<chance>30</chance>
+				<skillLevelScaleTo>5</skillLevelScaleTo>
+				<attackSkillId>19426</attackSkillId> <!-- Shadow Blade -->
+				<chance>100</chance>
 				<targetType>TARGET</targetType>
 			</effect>
-			<effect name="TriggerSkillBySkill">
-				<castSkillId>11510</castSkillId><!-- Resolving Bash -->
-				<skillId>19435</skillId> <!-- Spectral Slash -->
+			<effect name="TriggerSkillBySkillAttack">
+				<skillId>19435</skillId> <!-- Phantom Slasher -->
 				<skillLevel>1</skillLevel>
-				<chance>30</chance>
+				<skillLevelScaleTo>5</skillLevelScaleTo>
+				<attackSkillId>11510</attackSkillId> <!-- Resolving Bash -->
+				<chance>100</chance>
 				<targetType>TARGET</targetType>
 			</effect>
 			<effect name="PAtk">

@@ -1571,7 +1571,7 @@
 	<skill id="19435" toLevel="5" name="Spectral Slash">
 		<!-- The Spectral Sword attacks the target with $s1 Power added to P. Atk. and decreases P./ M. Def. by $s3 for $s2 -->
 		<icon>icon.skill19435</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<isDebuff>true</isDebuff>
 		<abnormalTime>10</abnormalTime>
@@ -1627,7 +1627,7 @@
 		</effects>
 	</skill>
 	<skill id="19436" toLevel="13" name="Dancing Phantom Blade">
-		<!-- Attacks the target and nearby enemies with $s1 Power added to P. Atk. to make them unable to target you and decrease their P. Atk./M. Atk./P. Def./M. Def./Movement Speed by $s3 for $s2. Enemies with the Spectral Slash Stage 2 or higher can remove these debuffs. Requires a sword, blunt weapon, dualsword or dual blunt weapon to be equipped. Over-hit. Critical. -->
+		<!-- Attacks the target and nearby enemies with 28631 power, making them unable to target you. For 10 seconds, enemies' P./ M. Atk., P./ M. Def., and Speed -50%. Can be used if the enemies are inflicted with Spectral Slash Lv. 2+. Requires a sword, a blunt weapon, dual swords, or dual blunt weapons. Critical. Over-hit. -->
 		<icon>icon.skill19436</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -1697,6 +1697,11 @@
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<conditions>
+			<condition name="OpCheckAbnormal">
+				<type>ULTIMATE_DEBUFF</type>
+				<level>2</level>
+				<hasAbnormal>true</hasAbnormal>
+			</condition>
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DUAL</item>
@@ -1759,6 +1764,12 @@
 				<chance>100</chance>
 			</effect>
 		</effects>
+		<selfEffects>
+			<effect name="CallSkill">
+				<skillId>15404</skillId> <!-- Unable to Target -->
+				<skillLevel>1</skillLevel>
+			</effect>
+		</selfEffects>
 	</skill>
 	<skill id="19437" toLevel="1" name="Vanguard of Baylor">
 		<!-- Summons the Dominant Flag. If used near the Dominant Flag, applies the effects of Melody/ Harmony/ Drum/ Ditty/ Rhapsody buff skills to clan members and enhances Seal Mesmerizing skills (Lv. 4+). Makes you immune to pulling. Consumes 5 Spirit Ore. -->
@@ -2203,18 +2214,23 @@
 		<!-- For $s1, P. Atk. and M. Atk. +$s2. Canceled if Prophecy of Might is cast. -->
 		<icon>icon.skill11866</icon>
 		<operateType>A2</operateType>
-		<reuseDelay>3000</reuseDelay>
+		<reuseDelay>
+			<value level="1">600000</value>
+			<value level="2">3000</value>
+		</reuseDelay>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
 		</abnormalLvl>
-		<abnormalType>SONG_WEAPON</abnormalType>
-		<abnormalTime>300</abnormalTime>
+		<abnormalTime>
+			<value level="1">300</value>
+			<value level="2">1</value>		
+		</abnormalTime>
+		<abnormalType>PD_UP_DMAGIC</abnormalType> <!-- NOT RETAIL: FIXME -->
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<effectPoint>707</effectPoint>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
-		<isTriggeredSkill>true</isTriggeredSkill>
 		<affectRange>2000</affectRange>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
@@ -2222,12 +2238,28 @@
 		<affectObject>FRIEND</affectObject>
 		<effects>
 			<effect name="PAtk">
-				<amount>20</amount>
+				<amount>
+					<value level="1">20</value>
+					<value level="2">0</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MAtk">
-				<amount>20</amount>
+				<amount>
+					<value level="1">20</value>
+					<value level="2">0</value>
+				</amount>
 				<mode>PER</mode>
+			</effect>
+			<effect name="ReuseSkillById" fromLevel="1" toLevel="1">
+				<skillId>19204</skillId>
+			</effect>
+			<effect name="TriggerSkillBySkill">
+				<castSkillId>19204</castSkillId>
+				<skillId>19447</skillId> <!-- Glaring -->
+				<skillLevel>2</skillLevel>
+				<chance>100</chance>
+				<targetType>SELF</targetType>
 			</effect>
 		</effects>
 	</skill>
