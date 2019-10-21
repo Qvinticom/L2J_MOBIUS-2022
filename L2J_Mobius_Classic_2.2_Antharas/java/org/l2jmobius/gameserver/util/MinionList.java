@@ -325,6 +325,12 @@ public class MinionList
 		
 		minion.spawnMe(newX, newY, master.getZ());
 		
+		// Make sure info is broadcasted in instances
+		if (minion.getInstanceId() > 0)
+		{
+			minion.broadcastInfo();
+		}
+		
 		return minion;
 	}
 	

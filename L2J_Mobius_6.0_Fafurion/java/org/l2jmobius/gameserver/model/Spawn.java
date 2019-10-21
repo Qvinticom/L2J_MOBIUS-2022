@@ -442,6 +442,12 @@ public class Spawn extends Location implements IIdentifiable, INamable
 		// Spawn NPC
 		npc.spawnMe(newlocx, newlocy, newlocz);
 		
+		// Make sure info is broadcasted in instances
+		if (npc.getInstanceId() > 0)
+		{
+			npc.broadcastInfo();
+		}
+		
 		if (_spawnTemplate != null)
 		{
 			_spawnTemplate.notifySpawnNpc(npc);
