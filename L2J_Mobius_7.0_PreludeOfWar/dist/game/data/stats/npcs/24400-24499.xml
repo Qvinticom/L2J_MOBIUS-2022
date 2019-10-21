@@ -138,6 +138,10 @@
 		</dropLists>
 	</npc>
 	<npc id="24405" level="78" type="Monster" name="Turek Orc Archer">
+		<parameters>
+			<skill name="Skill01_ID" id="4040" level="10" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="14" />
@@ -158,6 +162,7 @@
 			<height normal="25" />
 		</collision>
 		<skillList>
+			<skill id="4040" level="10" />
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<dropLists>
@@ -167,6 +172,10 @@
 		</dropLists>
 	</npc>
 	<npc id="24406" level="78" type="Monster" name="Turek Orc Skirmisher">
+		<parameters>
+			<skill name="Skill01_ID" id="4032" level="10" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="121" />
@@ -187,6 +196,7 @@
 			<height normal="22" />
 		</collision>
 		<skillList>
+			<skill id="4032" level="10" />
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<dropLists>
@@ -196,6 +206,10 @@
 		</dropLists>
 	</npc>
 	<npc id="24407" level="80" type="Monster" name="Turek Orc Prefect">
+		<parameters>
+			<skill name="Skill01_ID" id="4032" level="10" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="127" />
@@ -216,6 +230,7 @@
 			<height normal="23" />
 		</collision>
 		<skillList>
+			<skill id="4032" level="10" />
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<dropLists>
@@ -225,6 +240,10 @@
 		</dropLists>
 	</npc>
 	<npc id="24408" level="80" type="Monster" name="Turek Orc Priest">
+		<parameters>
+			<skill name="Skill01_ID" id="4561" level="10" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="7" />
@@ -244,6 +263,7 @@
 			<height normal="22" />
 		</collision>
 		<skillList>
+			<skill id="4561" level="10" />
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<dropLists>
