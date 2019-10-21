@@ -1,7 +1,7 @@
 L2J-Mobius Classic Seven Signs
 
 Client: https://drive.google.com/uc?id=1L4hcPsh5T3TOf_LcePonnMeQvcDm9DDV&export=download
-Geodata: http://www.mediafire.com/file/urs2uvjnwltk7ub/L2J_Mobius_Classic_2.2_Antharas_Geodata.zip
+Geodata: http://www.mediafire.com/file/tas8fp9ee2r6mn9/L2J_Mobius_Classic_2.2_Antharas_Geodata.zip
 JDK: https://www.mediafire.com/file/k25pt0umuf16uoh/openjdk-12.0.2_windows-x64_bin.zip
 
 Saviors: https://eu.4game.com/lineage2classic/play/saviors/

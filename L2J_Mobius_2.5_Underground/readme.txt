@@ -3,7 +3,7 @@ L2J-Mobius Underground
 Client: https://drive.google.com/uc?id=0Bz1qNvCniabUMDhOd3RpUzBNSW8&export=download
 Mirror: https://mega.nz/#!h1FXyByZ!XmyZBtk4qSOlKb435rx7X372_NreN1PTH8l7A4lNCoo
 
-Geodata: http://www.mediafire.com/file/quj0p3qap6ey0va/L2J_Mobius_2.5_Underground_Geodata.zip
+Geodata: http://www.mediafire.com/file/p6d27anpotr33zl/L2J_Mobius_2.5_Underground_Geodata.zip
 JDK: https://www.mediafire.com/file/k25pt0umuf16uoh/openjdk-12.0.2_windows-x64_bin.zip
 
 

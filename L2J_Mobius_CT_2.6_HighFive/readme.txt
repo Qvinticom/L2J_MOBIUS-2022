@@ -2,7 +2,7 @@ L2J-Mobius High Five
 
 Client mirror 1: https://cloud.mail.ru/public/8GTQ/NzhxB6dHq
 Client mirror 2: https://mega.nz/#!BZVjgI7L!bIJp-VpomuUGkqUZSGBE-VUXs_eLEpX21s_IaIM6g8E
-Geodata: http://www.mediafire.com/file/0nx8yedu5ebej23/L2J_Mobius_CT_2.6_HighFive_Geodata.zip
+Geodata: http://www.mediafire.com/file/ega48fmtx35t6iy/L2J_Mobius_CT_2.6_HighFive_Geodata.zip
 JDK: https://www.mediafire.com/file/k25pt0umuf16uoh/openjdk-12.0.2_windows-x64_bin.zip
 
 What is done

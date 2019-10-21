@@ -1,7 +1,7 @@
 L2J-Mobius Classic Zaken
 
 Client: https://drive.google.com/uc?id=1Cyfb_OumjhPS9NFcLDMY11_s_ktH0kDk&export=download
-Geodata: http://www.mediafire.com/file/cvhi4voldbmzow7/L2J_Mobius_Classic_2.1_Zaken_Geodata.zip
+Geodata: http://www.mediafire.com/file/cqrcj73pntv82d8/L2J_Mobius_Classic_2.1_Zaken_Geodata.zip
 JDK: https://www.mediafire.com/file/k25pt0umuf16uoh/openjdk-12.0.2_windows-x64_bin.zip
 
 Saviors: https://eu.4game.com/lineage2classic/play/saviors/

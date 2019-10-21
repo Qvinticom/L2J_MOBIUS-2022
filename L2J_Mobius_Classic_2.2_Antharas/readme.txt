@@ -3,7 +3,7 @@ L2J-Mobius Classic Antharas
 Client: https://mega.nz/#!ROAm2A4I!yghC8lp3OJIkPsue7AK2h9PlVPklMmjTM9GKOi0h71E
 Use mega downloader to download https://megadownloader.en.softonic.com/
 
-Geodata: http://www.mediafire.com/file/urs2uvjnwltk7ub/L2J_Mobius_Classic_2.2_Antharas_Geodata.zip
+Geodata: http://www.mediafire.com/file/tas8fp9ee2r6mn9/L2J_Mobius_Classic_2.2_Antharas_Geodata.zip
 JDK: https://www.mediafire.com/file/k25pt0umuf16uoh/openjdk-12.0.2_windows-x64_bin.zip
 
 Saviors: https://eu.4game.com/lineage2classic/play/saviors/

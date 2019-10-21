@@ -2,7 +2,7 @@ L2J-Mobius Classic Interlude
 
 Client: https://drive.google.com/uc?id=1Cyfb_OumjhPS9NFcLDMY11_s_ktH0kDk&export=download
 Patch: https://www.mediafire.com/file/lw9gven4va0n281/L2J_Mobius_Classic_Interlude_Patch_v2.zip
-Geodata: https://www.mediafire.com/file/o4qw4gmm7y7s9is/L2J_Mobius_Classic_Interlude_Geodata_v2.zip
+Geodata: http://www.mediafire.com/file/hpibngz0y2x0iwd/L2J_Mobius_Classic_Interlude_Geodata.zip
 JDK: https://www.mediafire.com/file/k25pt0umuf16uoh/openjdk-12.0.2_windows-x64_bin.zip
 
 This is a Classic server based on the Grand Crusade client.
