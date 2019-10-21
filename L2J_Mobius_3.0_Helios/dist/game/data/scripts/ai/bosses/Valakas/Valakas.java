@@ -16,23 +16,32 @@
  */
 package ai.bosses.Valakas;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.xml.impl.SkillData;
 import org.l2jmobius.gameserver.enums.MountType;
+import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.StatsSet;
+import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Playable;
 import org.l2jmobius.gameserver.model.actor.instance.GrandBossInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.skills.BuffInfo;
+import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
 import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
 import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import org.l2jmobius.gameserver.network.serverpackets.SpecialCamera;
+import org.l2jmobius.gameserver.util.Util;
 
 import ai.AbstractNpcAI;
 
@@ -46,12 +55,36 @@ public class Valakas extends AbstractNpcAI
 	private static final int VALAKAS = 29028;
 	// Skills
 	private static final int VALAKAS_REGENERATION = 4691;
-	/*
-	 * private static final SkillHolder VALAKAS_LAVA_SKIN = new SkillHolder(4680, 1); private static final SkillHolder[] VALAKAS_REGULAR_SKILLS = { new SkillHolder(4681, 1), // Valakas Trample new SkillHolder(4682, 1), // Valakas Trample new SkillHolder(4683, 1), // Valakas Dragon Breath new
-	 * SkillHolder(4689, 1), // Valakas Fear TODO: has two levels only level one is used. }; private static final SkillHolder[] VALAKAS_LOWHP_SKILLS = { new SkillHolder(4681, 1), // Valakas Trample new SkillHolder(4682, 1), // Valakas Trample new SkillHolder(4683, 1), // Valakas Dragon Breath new
-	 * SkillHolder(4689, 1), // Valakas Fear TODO: has two levels only level one is used. new SkillHolder(4690, 1), // Valakas Meteor Storm }; private static final SkillHolder[] VALAKAS_AOE_SKILLS = { new SkillHolder(4683, 1), // Valakas Dragon Breath new SkillHolder(4684, 1), // Valakas Dragon
-	 * Breath new SkillHolder(4685, 1), // Valakas Tail Stomp new SkillHolder(4686, 1), // Valakas Tail Stomp new SkillHolder(4688, 1), // Valakas Stun new SkillHolder(4689, 1), // Valakas Fear TODO: has two levels only level one is used. new SkillHolder(4690, 1), // Valakas Meteor Storm };
-	 */
+	private static final SkillHolder VALAKAS_LAVA_SKIN = new SkillHolder(4680, 1);
+	
+	private static final SkillHolder[] VALAKAS_REGULAR_SKILLS =
+	{
+		new SkillHolder(4681, 1), // Valakas Trample
+		new SkillHolder(4682, 1), // Valakas Trample
+		new SkillHolder(4683, 1), // Valakas Dragon Breath
+		new SkillHolder(4689, 1), // Valakas Fear TODO: has two levels only level one is used.
+	};
+	
+	private static final SkillHolder[] VALAKAS_LOWHP_SKILLS =
+	{
+		new SkillHolder(4681, 1), // Valakas Trample
+		new SkillHolder(4682, 1), // Valakas Trample
+		new SkillHolder(4683, 1), // Valakas Dragon Breath
+		new SkillHolder(4689, 1), // Valakas Fear TODO: has two levels only level one is used.
+		new SkillHolder(4690, 1), // Valakas Meteor Storm
+	};
+	
+	private static final SkillHolder[] VALAKAS_AOE_SKILLS =
+	{
+		new SkillHolder(4683, 1), // Valakas Dragon Breath
+		new SkillHolder(4684, 1), // Valakas Dragon Breath
+		new SkillHolder(4685, 1), // Valakas Tail Stomp
+		new SkillHolder(4686, 1), // Valakas Tail Stomp
+		new SkillHolder(4688, 1), // Valakas Stun
+		new SkillHolder(4689, 1), // Valakas Fear TODO: has two levels only level one is used.
+		new SkillHolder(4690, 1), // Valakas Meteor Storm
+	};
+	
 	// Locations
 	private static final Location TELEPORT_CUBE_LOCATIONS[] =
 	{
@@ -82,7 +115,7 @@ public class Valakas extends AbstractNpcAI
 	private static final byte DEAD = 3; // Valakas has been killed. Entry is locked.
 	// Misc
 	private long _timeTracker = 0; // Time tracker for last attack on Valakas.
-	// private Playable _actualVictim; // Actual target of Valakas.
+	private Playable _actualVictim; // Actual target of Valakas.
 	private static ZoneType ZONE;
 	
 	private Valakas()
@@ -326,10 +359,10 @@ public class Valakas extends AbstractNpcAI
 				
 				startQuestTimer("remove_players", 900000, null, null);
 			}
-			// else if (event.equalsIgnoreCase("skill_task"))
-			// {
-			// callSkillAI(npc);
-			// }
+			else if (event.equalsIgnoreCase("skill_task"))
+			{
+				callSkillAI(npc);
+			}
 		}
 		else if (event.equalsIgnoreCase("valakas_unlock"))
 		{
@@ -420,17 +453,114 @@ public class Valakas extends AbstractNpcAI
 		return super.onKill(npc, killer, isSummon);
 	}
 	
-	/*
-	 * @Override public String onAggroRangeEnter(Npc npc, PlayerInstance player, boolean isSummon) { return null; } private void callSkillAI(Npc npc) { if (npc.isInvul() || npc.isCastingNow()) { return; } // Pickup a target if no or dead victim. 10% luck he decides to reconsiders his target. if
-	 * ((_actualVictim == null) || _actualVictim.isDead() || !(npc.isInSurroundingRegion(_actualVictim)) || (getRandom(10) == 0)) { _actualVictim = getRandomTarget(npc); } // If result is still null, Valakas will roam. Don't go deeper in skill AI. if (_actualVictim == null) { if (getRandom(10) == 0)
-	 * { final int x = npc.getX(); final int y = npc.getY(); final int z = npc.getZ(); final int posX = x + getRandom(-1400, 1400); final int posY = y + getRandom(-1400, 1400); if (GeoEngine.getInstance().canMoveToTarget(x, y, z, posX, posY, z, npc.getInstanceId())) {
-	 * npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(posX, posY, z, 0)); } } return; } final Skill skill = getRandomSkill(npc).getSkill(); // Cast the skill or follow the target. if (Util.checkIfInRange((skill.getCastRange() < 600) ? 600 : skill.getCastRange(), npc,
-	 * _actualVictim, true)) { npc.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE); npc.setIsCastingNow(true); npc.setTarget(_actualVictim); npc.doCast(skill); } else { npc.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, _actualVictim, null); npc.setIsCastingNow(false); } } private
-	 * SkillHolder getRandomSkill(Npc npc) { final int hpRatio = (int) ((npc.getCurrentHp() / npc.getMaxHp()) * 100); // Valakas Lava Skin has priority. if ((hpRatio < 75) && (getRandom(150) == 0) && !npc.isAffectedBySkill(VALAKAS_LAVA_SKIN.getSkillId())) { return VALAKAS_LAVA_SKIN; } // Valakas
-	 * will use mass spells if he feels surrounded. if (World.getInstance().getVisibleObjectsInRange(npc, PlayerInstance.class, 1200).size() >= 20) { return VALAKAS_AOE_SKILLS[getRandom(VALAKAS_AOE_SKILLS.length)]; } if (hpRatio > 50) { return
-	 * VALAKAS_REGULAR_SKILLS[getRandom(VALAKAS_REGULAR_SKILLS.length)]; } return VALAKAS_LOWHP_SKILLS[getRandom(VALAKAS_LOWHP_SKILLS.length)]; } private Playable getRandomTarget(Npc npc) { final List<Playable> result = new ArrayList<>(); World.getInstance().forEachVisibleObject(npc, Playable.class,
-	 * obj -> { if ((obj == null) || obj.isPet()) { return; } else if (!obj.isDead() && obj.isPlayable()) { result.add(obj); } }); return result.isEmpty() ? null : result.get(getRandom(result.size())); }
+	@Override
+	public String onAggroRangeEnter(Npc npc, PlayerInstance player, boolean isSummon)
+	{
+		return null;
+	}
+	
+	private void callSkillAI(Npc npc)
+	{
+		if (npc.isInvul() || npc.isCastingNow())
+		{
+			return;
+		}
+		
+		// Pickup a target if no or dead victim. 10% luck he decides to reconsiders his target.
+		if ((_actualVictim == null) || _actualVictim.isDead() || !(npc.isInSurroundingRegion(_actualVictim)) || (getRandom(10) == 0))
+		{
+			_actualVictim = getRandomTarget(npc);
+		}
+		
+		// If result is still null, Valakas will roam. Don't go deeper in skill AI.
+		if (_actualVictim == null)
+		{
+			if (getRandom(10) == 0)
+			{
+				final int x = npc.getX();
+				final int y = npc.getY();
+				final int z = npc.getZ();
+				
+				final int posX = x + getRandom(-1400, 1400);
+				final int posY = y + getRandom(-1400, 1400);
+				
+				if (GeoEngine.getInstance().canMoveToTarget(x, y, z, posX, posY, z, npc.getInstanceWorld()))
+				{
+					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(posX, posY, z, 0));
+				}
+			}
+			return;
+		}
+		
+		final Skill skill = getRandomSkill(npc).getSkill();
+		
+		// Cast the skill or follow the target.
+		if (Util.checkIfInRange((skill.getCastRange() < 600) ? 600 : skill.getCastRange(), npc, _actualVictim, true))
+		{
+			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+			npc.setTarget(_actualVictim);
+			npc.doCast(skill);
+		}
+		else
+		{
+			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, _actualVictim, null);
+		}
+	}
+	
+	/**
+	 * Pick a random skill.<br>
+	 * Valakas will mostly use utility skills. If Valakas feels surrounded, he will use AoE skills.<br>
+	 * Lower than 50% HPs, he will begin to use Meteor skill.
+	 * @param npc valakas
+	 * @return a skill holder
 	 */
+	private SkillHolder getRandomSkill(Npc npc)
+	{
+		final int hpRatio = (int) ((npc.getCurrentHp() / npc.getMaxHp()) * 100);
+		
+		// Valakas Lava Skin has priority.
+		if ((hpRatio < 75) && (getRandom(150) == 0) && !npc.isAffectedBySkill(VALAKAS_LAVA_SKIN.getSkillId()))
+		{
+			return VALAKAS_LAVA_SKIN;
+		}
+		
+		// Valakas will use mass spells if he feels surrounded.
+		if (World.getInstance().getVisibleObjectsInRange(npc, PlayerInstance.class, 1200).size() >= 20)
+		{
+			return VALAKAS_AOE_SKILLS[getRandom(VALAKAS_AOE_SKILLS.length)];
+		}
+		
+		if (hpRatio > 50)
+		{
+			return VALAKAS_REGULAR_SKILLS[getRandom(VALAKAS_REGULAR_SKILLS.length)];
+		}
+		
+		return VALAKAS_LOWHP_SKILLS[getRandom(VALAKAS_LOWHP_SKILLS.length)];
+	}
+	
+	/**
+	 * Pickup a random Playable from the zone, deads targets aren't included.
+	 * @param npc
+	 * @return a random Playable.
+	 */
+	private Playable getRandomTarget(Npc npc)
+	{
+		final List<Playable> result = new ArrayList<>();
+		
+		World.getInstance().forEachVisibleObject(npc, Playable.class, obj ->
+		{
+			if ((obj == null) || obj.isPet())
+			{
+				return;
+			}
+			else if (!obj.isDead() && obj.isPlayable())
+			{
+				result.add(obj);
+			}
+		});
+		
+		return result.isEmpty() ? null : result.get(getRandom(result.size()));
+	}
 	
 	public static void main(String[] args)
 	{
