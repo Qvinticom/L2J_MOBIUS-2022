@@ -46,9 +46,7 @@ public class TeleportToRaceTrack extends AbstractNpcAI
 		TELEPORTER_LOCATIONS.put(30177, new Location(82956, 53162, -1495)); // Valentina
 		TELEPORTER_LOCATIONS.put(30848, new Location(146331, 25762, -2018)); // Elisa
 		TELEPORTER_LOCATIONS.put(30233, new Location(116819, 76994, -2714)); // Esmeralda
-		TELEPORTER_LOCATIONS.put(31320, new Location(43835, -47749, -792)); // Ilyana
 		TELEPORTER_LOCATIONS.put(31275, new Location(147930, -55281, -2728)); // Tatiana
-		TELEPORTER_LOCATIONS.put(31964, new Location(87386, -143246, -1293)); // Bilia
 		TELEPORTER_LOCATIONS.put(31210, new Location(12882, 181053, -3560)); // Race Track Gatekeeper
 	}
 	// Other
