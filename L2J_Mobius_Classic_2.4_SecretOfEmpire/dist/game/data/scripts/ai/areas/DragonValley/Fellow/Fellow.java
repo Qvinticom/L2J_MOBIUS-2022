@@ -1,20 +1,20 @@
 /*
  * This file is part of the L2J Mobius project.
- * 
+ *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
- * 
+ *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package ai.areas.TowerOfInsolence.Ateld;
+package ai.areas.DragonValley.Fellow;
 
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.enums.ChatType;
@@ -27,14 +27,14 @@ import org.l2jmobius.gameserver.network.serverpackets.NpcSay;
 import ai.AbstractNpcAI;
 
 /**
- * @author Mobius
+ * @author RobikBobik
  */
-public class Ateld extends AbstractNpcAI
+public class Fellow extends AbstractNpcAI
 {
 	// NPC
-	private static final int ATELD = 31714;
-	// Location
-	private static final Location TELEPORT_LOC = new Location(115322, 16756, 9012);
+	private static final int FELLOW = 31713;
+	// Location - Antharas Heart
+	private static final Location TELEPORT_LOC = new Location(154376, 121290, -3807);
 	// Misc
 	private static final NpcStringId[] TEXT =
 	{
@@ -42,11 +42,11 @@ public class Ateld extends AbstractNpcAI
 		NpcStringId.BALTHUS_KNIGHTS_ARE_LOOKING_FOR_MERCENARIES
 	};
 	
-	private Ateld()
+	private Fellow()
 	{
-		addFirstTalkId(ATELD);
-		addTalkId(ATELD);
-		addSpawnId(ATELD);
+		addFirstTalkId(FELLOW);
+		addTalkId(FELLOW);
+		addSpawnId(FELLOW);
 	}
 	
 	@Override
@@ -54,11 +54,11 @@ public class Ateld extends AbstractNpcAI
 	{
 		switch (event)
 		{
-			case "teleToBaium":
+			case "teleToAntharas":
 			{
 				if ((player.getCommandChannel() == null) || (player.getCommandChannel().getLeader() != player) || (player.getCommandChannel().getMemberCount() < 27) || (player.getCommandChannel().getMemberCount() > 300))
 				{
-					return "31714-01.html";
+					return "31713-01.html";
 				}
 				for (PlayerInstance member : player.getCommandChannel().getMembers())
 				{
@@ -82,7 +82,7 @@ public class Ateld extends AbstractNpcAI
 	@Override
 	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
-		return "31714.html";
+		return "31713.html";
 	}
 	
 	@Override
@@ -94,6 +94,6 @@ public class Ateld extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new Ateld();
+		new Fellow();
 	}
 }
