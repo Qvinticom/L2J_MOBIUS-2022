@@ -18,6 +18,7 @@ package ai.areas.GardenOfSpirits;
 
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 import ai.AbstractNpcAI;
@@ -90,9 +91,9 @@ public class Isabella extends AbstractNpcAI
 	@Override
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		World.getInstance().forEachVisibleObjectInRange(npc, Npc.class, 1500, minion ->
+		World.getInstance().forEachVisibleObjectInRange(npc, MonsterInstance.class, 1500, minion ->
 		{
-			if ((minion.getId() == CROA) || (minion.getId() == AMIS))
+			if ((minion != null) && !minion.isAlikeDead() && ((minion.getId() == CROA) || (minion.getId() == AMIS)))
 			{
 				minion.deleteMe();
 			}
