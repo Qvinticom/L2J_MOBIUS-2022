@@ -867,7 +867,6 @@ public class VillageMasterInstance extends NpcInstance
 			}
 			
 			Set<ClassId> unavailableClasses = subclassSetMap.get(pClass);
-			
 			if (unavailableClasses != null)
 			{
 				subclasses.removeAll(unavailableClasses);
@@ -876,12 +875,10 @@ public class VillageMasterInstance extends NpcInstance
 		
 		if (subclasses != null)
 		{
-			final ClassId currClassId = ClassId.getClassId(player.getClassId().getId());
+			final ClassId currClassId = player.getClassId();
 			for (ClassId tempClass : subclasses)
 			{
-				final ClassId tempClassId = ClassId.getClassId(tempClass.getId());
-				
-				if (currClassId.equalsOrChildOf(tempClassId))
+				if (currClassId.equalsOrChildOf(tempClass))
 				{
 					subclasses.remove(tempClass);
 				}
