@@ -96,36 +96,6 @@ public enum PlayerClass
 	DwarvenArtisan(Race.DWARF, Fighter, SECOND),
 	Warsmith(Race.DWARF, Fighter, THIRD),
 	
-	dummyEntry1(null, null, null),
-	dummyEntry2(null, null, null),
-	dummyEntry3(null, null, null),
-	dummyEntry4(null, null, null),
-	dummyEntry5(null, null, null),
-	dummyEntry6(null, null, null),
-	dummyEntry7(null, null, null),
-	dummyEntry8(null, null, null),
-	dummyEntry9(null, null, null),
-	dummyEntry10(null, null, null),
-	dummyEntry11(null, null, null),
-	dummyEntry12(null, null, null),
-	dummyEntry13(null, null, null),
-	dummyEntry14(null, null, null),
-	dummyEntry15(null, null, null),
-	dummyEntry16(null, null, null),
-	dummyEntry17(null, null, null),
-	dummyEntry18(null, null, null),
-	dummyEntry19(null, null, null),
-	dummyEntry20(null, null, null),
-	dummyEntry21(null, null, null),
-	dummyEntry22(null, null, null),
-	dummyEntry23(null, null, null),
-	dummyEntry24(null, null, null),
-	dummyEntry25(null, null, null),
-	dummyEntry26(null, null, null),
-	dummyEntry27(null, null, null),
-	dummyEntry28(null, null, null),
-	dummyEntry29(null, null, null),
-	dummyEntry30(null, null, null),
 	/*
 	 * (3rd classes)
 	 */
@@ -165,11 +135,6 @@ public enum PlayerClass
 	fortuneSeeker(Race.DWARF, Fighter, FOURTH),
 	maestro(Race.DWARF, Fighter, FOURTH),
 	
-	dummyEntry31(null, null, null),
-	dummyEntry32(null, null, null),
-	dummyEntry33(null, null, null),
-	dummyEntry34(null, null, null),
-	
 	maleSoldier(Race.KAMAEL, Fighter, FIRST),
 	femaleSoldier(Race.KAMAEL, Fighter, FIRST),
 	trooper(Race.KAMAEL, Fighter, SECOND),
@@ -185,9 +150,6 @@ public enum PlayerClass
 	inspector(Race.KAMAEL, Fighter, THIRD),
 	judicator(Race.KAMAEL, Fighter, FOURTH),
 	
-	dummyEntry35(null, null, null),
-	dummyEntry36(null, null, null),
-	
 	sigelKnight(null, Fighter, null),
 	tyrWarrior(null, Fighter, null),
 	otherRogue(null, Fighter, null),
@@ -196,8 +158,6 @@ public enum PlayerClass
 	issEnchanter(null, Priest, null),
 	wynnSummoner(null, Mystic, null),
 	eolhHealer(null, Priest, null),
-	
-	dummyEntry37(null, null, null),
 	
 	sigelPhoenixKnight(Race.HUMAN, Fighter, ClassLevel.AWAKEN),
 	sigelHellKnight(Race.HUMAN, Fighter, ClassLevel.AWAKEN),
