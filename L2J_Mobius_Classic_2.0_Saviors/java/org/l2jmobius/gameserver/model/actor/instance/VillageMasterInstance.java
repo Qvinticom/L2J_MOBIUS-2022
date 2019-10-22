@@ -853,11 +853,11 @@ public class VillageMasterInstance extends NpcInstance
 			{
 				if (player.getAppearance().isFemale())
 				{
-					subclasses.remove(ClassId.FEMALE_SOULBREAKER);
+					subclasses.remove(ClassId.MALE_SOULBREAKER);
 				}
 				else
 				{
-					subclasses.remove(ClassId.MALE_SOULBREAKER);
+					subclasses.remove(ClassId.FEMALE_SOULBREAKER);
 				}
 				
 				if (!player.getSubClasses().containsKey(2) || (player.getSubClasses().get(2).getLevel() < 75))
