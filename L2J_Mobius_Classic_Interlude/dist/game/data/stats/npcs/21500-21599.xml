@@ -1,5 +1,601 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
+	<npc id="21500" level="69" type="FeedableBeast" name="Alpine Cougar">
+		<!-- Interlude - C6 -->
+		<parameters>
+			<param name="MoveAroundSocial" value="90" />
+			<param name="MoveAroundSocial1" value="30" />
+			<param name="MoveAroundSocial2" value="90" />
+			<param name="silhouette1" value="21506" /> <!-- Alpine Cougar -->
+			<param name="ai_type1" value="alpine_cougar_4_war_a1" />
+			<param name="silhouette2" value="21506" /> <!-- Alpine Cougar -->
+			<param name="ai_type2" value="alpine_cougar_4_war_a1" />
+			<param name="silhouette_ex" value="16015" /> <!-- Trained Cougar -->
+			<param name="ai_type_ex" value="tamed_cougar_war" />
+			<param name="silhouette_ex2" value="16016" /> <!-- Trained Cougar -->
+			<param name="ai_type_ex2" value="tamed_cougar_wiz" />
+			<param name="TakeSocial" value="30" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+			<skill name="PhysicalSpecial" id="4067" level="6" /> <!-- NPC Mortal Blow -->
+			<skill name="SelfRangeDDMagic" id="4072" level="6" /> <!-- Shock -->
+			<skill name="SelfBuff" id="4074" level="2" /> <!-- NPC Haste -->
+		</parameters>
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<equipment rhand="0" lhand="0" /> <!-- ... / ... -->
+		<acquire exp="17264" sp="1688" raidPoints="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2395.45533" hpRegen="7.5" mp="1314.0" mpRegen="2.7" />
+			<attack physical="667.50361" magical="455.81844" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="291.15063" magical="193.851368417065" />
+			<speed>
+				<walk ground="60" />
+				<run ground="175" />
+			</speed>
+			<hitTime>450</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4067" level="6" /> <!-- NPC Mortal Blow -->
+			<skill id="4072" level="6" /> <!-- Shock -->
+			<skill id="4074" level="2" /> <!-- NPC Haste -->
+			<skill id="4408" level="10" /> <!-- HP Modifiers -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
+		</skillList>
+		<shots shotChance="30" spiritChance="30" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="300">
+			<clanList>
+				<clan>PET</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="16" />
+			<height normal="17.2" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="2340" max="4734" chance="70"/> <!-- Adena -->
+			</drop>
+			<spoil>
+				<item id="4042" min="1" max="1" chance="9.8055"/> <!-- Enria -->
+				<item id="5434" min="1" max="1" chance="0.2179"/> <!-- Recipe: Dragon Slayer(60%) -->
+				<item id="5509" min="1" max="1" chance="13.7944"/> <!-- Sealed Tallum Gloves Design -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="21501" level="69" type="FeedableBeast" name="Alpine Cougar">
+		<!-- Interlude - C6 -->
+		<parameters>
+			<param name="MoveAroundSocial" value="90" />
+			<param name="MoveAroundSocial1" value="30" />
+			<param name="MoveAroundSocial2" value="90" />
+			<param name="silhouette1" value="21507" /> <!-- Alpine Cougar -->
+			<param name="ai_type1" value="alpine_cougar_4_wiz_a1" />
+			<param name="silhouette2" value="21507" /> <!-- Alpine Cougar -->
+			<param name="ai_type2" value="alpine_cougar_4_wiz_a1" />
+			<param name="silhouette_ex" value="16015" /> <!-- Trained Cougar -->
+			<param name="ai_type_ex" value="tamed_cougar_war" />
+			<param name="silhouette_ex2" value="16016" /> <!-- Trained Cougar -->
+			<param name="ai_type_ex2" value="tamed_cougar_wiz" />
+			<param name="TakeSocial" value="30" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<skill name="W_ShortRangeDDMagic" id="4160" level="6" /> <!-- NPC Aura Burn - Magic -->
+			<skill name="W_LongRangeDDMagic" id="4566" level="6" /> <!-- NPC Eruption - Magic -->
+			<skill name="SelfRangeDDMagic" id="4571" level="6" /> <!-- NPC Blazing Circle -->
+			<skill name="SelfBuff" id="4633" level="3" /> <!-- NPC Buff - Acumen Empower Berserk -->
+		</parameters>
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<equipment rhand="0" lhand="0" /> <!-- ... / ... -->
+		<acquire exp="16604" sp="1624" raidPoints="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2395.45533" hpRegen="7.5" mp="1314.0" mpRegen="2.7" />
+			<attack physical="667.50361" magical="455.81844" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="291.15063" magical="193.851368417065" />
+			<speed>
+				<walk ground="60" />
+				<run ground="175" />
+			</speed>
+			<hitTime>450</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4160" level="6" /> <!-- NPC Aura Burn - Magic -->
+			<skill id="4408" level="10" /> <!-- HP Modifiers -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
+			<skill id="4566" level="6" /> <!-- NPC Eruption - Magic -->
+			<skill id="4571" level="6" /> <!-- NPC Blazing Circle -->
+			<skill id="4633" level="3" /> <!-- NPC Buff - Acumen Empower Berserk -->
+		</skillList>
+		<shots shotChance="30" spiritChance="30" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="300">
+			<clanList>
+				<clan>PET</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="16" />
+			<height normal="17.2" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="2250" max="4554" chance="70"/> <!-- Adena -->
+			</drop>
+			<spoil>
+				<item id="5440" min="1" max="1" chance="0.2096"/> <!-- Recipe: Elysian(60%) -->
+				<item id="5520" min="1" max="1" chance="3.6486"/> <!-- Sealed Dark Crystal Breastplate Pattern -->
+				<item id="5521" min="1" max="1" chance="2.5746"/> <!-- Sealed Tallum Plate Armor Pattern -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="21502" level="69" type="FeedableBeast" name="Alpine Cougar">
+		<!-- Interlude - C6 -->
+		<parameters>
+			<param name="MoveAroundSocial" value="90" />
+			<param name="MoveAroundSocial1" value="30" />
+			<param name="MoveAroundSocial2" value="90" />
+			<param name="silhouette1" value="21828" /> <!-- Alpine Cougar -->
+			<param name="ai_type1" value="alpine_cougar_4_war_i1" />
+			<param name="silhouette2" value="21828" /> <!-- Alpine Cougar -->
+			<param name="ai_type2" value="alpine_cougar_4_war_i1" />
+			<param name="silhouette_ex" value="16015" /> <!-- Trained Cougar -->
+			<param name="ai_type_ex" value="tamed_cougar_war" />
+			<param name="silhouette_ex2" value="16016" /> <!-- Trained Cougar -->
+			<param name="ai_type_ex2" value="tamed_cougar_wiz" />
+			<param name="TakeSocial" value="30" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+			<skill name="PhysicalSpecial" id="4073" level="6" /> <!-- Shock -->
+			<skill name="SelfBuff" id="4074" level="2" /> <!-- NPC Haste -->
+			<skill name="SelfRangeDDMagic" id="4232" level="6" /> <!-- NPC AE Strike -->
+		</parameters>
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<equipment rhand="0" lhand="0" /> <!-- ... / ... -->
+		<acquire exp="17264" sp="1688" raidPoints="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2395.45533" hpRegen="7.5" mp="1314.0" mpRegen="2.7" />
+			<attack physical="667.50361" magical="455.81844" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="291.15063" magical="193.851368417065" />
+			<speed>
+				<walk ground="60" />
+				<run ground="175" />
+			</speed>
+			<hitTime>450</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4073" level="6" /> <!-- Shock -->
+			<skill id="4074" level="2" /> <!-- NPC Haste -->
+			<skill id="4232" level="6" /> <!-- NPC AE Strike -->
+			<skill id="4408" level="10" /> <!-- HP Modifiers -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
+		</skillList>
+		<shots shotChance="30" spiritChance="30" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="300">
+			<clanList>
+				<clan>PET</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="16" />
+			<height normal="17.2" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="1343" min="560" max="1680" chance="7.9166"/> <!-- Silver Arrow -->
+				<item id="1866" min="20" max="60" chance="5.1722"/> <!-- Suede -->
+				<item id="1871" min="9" max="27" chance="17.2405"/> <!-- Charcoal -->
+				<item id="1885" min="4" max="12" chance="2.8734"/> <!-- High Grade Suede -->
+				<item id="4041" min="1" max="1" chance="2.6986"/> <!-- Mold Hardener -->
+				<item id="5220" min="1" max="1" chance="12.4132"/> <!-- Metal Hardener -->
+				<item id="5450" min="1" max="1" chance="0.1150"/> <!-- Recipe: Dragon Grinder(60%) -->
+			</drop>
+			<spoil>
+				<item id="730" min="1" max="1" chance="0.4903"/> <!-- Scroll: Enchant Armor (Grade A) -->
+				<item id="1885" min="1" max="3" chance="49.0275"/> <!-- High Grade Suede -->
+				<item id="5432" min="1" max="1" chance="2.8373"/> <!-- Recipe: Sealed Majestic Circlet(60%) -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="21503" level="69" type="FeedableBeast" name="Alpine Cougar">
+		<!-- Interlude - C6 -->
+		<parameters>
+			<param name="MoveAroundSocial" value="90" />
+			<param name="MoveAroundSocial1" value="30" />
+			<param name="MoveAroundSocial2" value="90" />
+			<param name="silhouette1" value="21829" /> <!-- Alpine Cougar -->
+			<param name="ai_type1" value="alpine_cougar_4_wiz_i1" />
+			<param name="silhouette2" value="21829" /> <!-- Alpine Cougar -->
+			<param name="ai_type2" value="alpine_cougar_4_wiz_i1" />
+			<param name="silhouette_ex" value="16015" /> <!-- Trained Cougar -->
+			<param name="ai_type_ex" value="tamed_cougar_war" />
+			<param name="silhouette_ex2" value="16016" /> <!-- Trained Cougar -->
+			<param name="ai_type_ex2" value="tamed_cougar_wiz" />
+			<param name="TakeSocial" value="30" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<skill name="W_ShortRangeDDMagic" id="4160" level="6" /> <!-- NPC Aura Burn - Magic -->
+			<skill name="SelfRangeDDMagic" id="4232" level="6" /> <!-- NPC AE Strike -->
+			<skill name="W_LongRangeDDMagic" id="4566" level="6" /> <!-- NPC Eruption - Magic -->
+			<skill name="SelfBuff" id="4633" level="3" /> <!-- NPC Buff - Acumen Empower Berserk -->
+		</parameters>
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<equipment rhand="0" lhand="0" /> <!-- ... / ... -->
+		<acquire exp="17946" sp="1756" raidPoints="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2395.45533" hpRegen="7.5" mp="1314.0" mpRegen="2.7" />
+			<attack physical="667.50361" magical="455.81844" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="291.15063" magical="193.851368417065" />
+			<speed>
+				<walk ground="60" />
+				<run ground="175" />
+			</speed>
+			<hitTime>450</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4160" level="6" /> <!-- NPC Aura Burn - Magic -->
+			<skill id="4232" level="6" /> <!-- NPC AE Strike -->
+			<skill id="4408" level="10" /> <!-- HP Modifiers -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
+			<skill id="4566" level="6" /> <!-- NPC Eruption - Magic -->
+			<skill id="4633" level="3" /> <!-- NPC Buff - Acumen Empower Berserk -->
+		</skillList>
+		<shots shotChance="30" spiritChance="30" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="300">
+			<clanList>
+				<clan>PET</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="16" />
+			<height normal="17.2" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="98" min="1" max="1" chance="0.0010"/> <!-- Halberd -->
+				<item id="1867" min="1" max="3" chance="20.0711"/> <!-- Animal Skin -->
+				<item id="1872" min="1" max="3" chance="13.3807"/> <!-- Animal Bone -->
+				<item id="1882" min="1" max="1" chance="6.6904"/> <!-- Leather -->
+				<item id="1894" min="1" max="1" chance="1.0564"/> <!-- Crafted Leather -->
+				<item id="4042" min="1" max="1" chance="0.5018"/> <!-- Enria -->
+				<item id="5456" min="1" max="1" chance="0.0112"/> <!-- Recipe: Tallum Glaive(60%) -->
+				<item id="5542" min="1" max="1" chance="0.3047"/> <!-- Halberd Edge -->
+			</drop>
+			<spoil>
+				<item id="5442" min="1" max="1" chance="0.2265"/> <!-- Recipe: Soul Bow(60%) -->
+				<item id="5524" min="1" max="1" chance="6.0274"/> <!-- Sealed Dark Crystal Gaiters Pattern -->
+				<item id="5525" min="1" max="1" chance="9.4534"/> <!-- Sealed Dark Crystal Helmet Design -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="21504" level="69" type="FeedableBeast" name="Alpine Cougar">
+		<!-- Interlude - C6 -->
+		<parameters>
+			<param name="MoveAroundSocial" value="90" />
+			<param name="MoveAroundSocial1" value="30" />
+			<param name="MoveAroundSocial2" value="90" />
+			<param name="silhouette1" value="21828" /> <!-- Alpine Cougar -->
+			<param name="ai_type1" value="alpine_cougar_4_war_i1" />
+			<param name="silhouette2" value="21828" /> <!-- Alpine Cougar -->
+			<param name="ai_type2" value="alpine_cougar_4_war_i1" />
+			<param name="silhouette_ex" value="16015" /> <!-- Trained Cougar -->
+			<param name="ai_type_ex" value="tamed_cougar_war" />
+			<param name="silhouette_ex2" value="16016" /> <!-- Trained Cougar -->
+			<param name="ai_type_ex2" value="tamed_cougar_wiz" />
+			<param name="TakeSocial" value="30" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+			<skill name="PhysicalSpecial" id="4067" level="6" /> <!-- NPC Mortal Blow -->
+			<skill name="SelfRangeDDMagic" id="4072" level="6" /> <!-- Shock -->
+			<skill name="SelfBuff" id="4074" level="2" /> <!-- NPC Haste -->
+		</parameters>
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<equipment rhand="0" lhand="0" /> <!-- ... / ... -->
+		<acquire exp="17264" sp="1688" raidPoints="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2395.45533" hpRegen="7.5" mp="1314.0" mpRegen="2.7" />
+			<attack physical="667.50361" magical="455.81844" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="291.15063" magical="193.851368417065" />
+			<speed>
+				<walk ground="60" />
+				<run ground="175" />
+			</speed>
+			<hitTime>450</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4067" level="6" /> <!-- NPC Mortal Blow -->
+			<skill id="4072" level="6" /> <!-- Shock -->
+			<skill id="4074" level="2" /> <!-- NPC Haste -->
+			<skill id="4408" level="10" /> <!-- HP Modifiers -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
+		</skillList>
+		<shots shotChance="30" spiritChance="30" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="300">
+			<clanList>
+				<clan>PET</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="16" />
+			<height normal="17.2" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="288" min="1" max="1" chance="0.0010"/> <!-- Carnage Bow -->
+				<item id="1343" min="30" max="90" chance="11.8221"/> <!-- Silver Arrow -->
+				<item id="1868" min="4" max="12" chance="6.2066"/> <!-- Thread -->
+				<item id="1873" min="1" max="1" chance="9.9306"/> <!-- Silver Nugget -->
+				<item id="1889" min="1" max="1" chance="1.6551"/> <!-- Compound Braid -->
+				<item id="4044" min="1" max="1" chance="0.8276"/> <!-- Thons -->
+				<item id="5432" min="1" max="1" chance="0.0541"/> <!-- Recipe: Sealed Majestic Circlet(60%) -->
+				<item id="5462" min="1" max="1" chance="0.0092"/> <!-- Recipe: Branch of The Mother Tree(60%) -->
+				<item id="5535" min="1" max="1" chance="0.2965"/> <!-- Carnage Bow Stave -->
+				<item id="5549" min="1" max="1" chance="2.4827"/> <!-- Metallic Thread -->
+			</drop>
+			<spoil>
+				<item id="729" min="1" max="1" chance="0.0654"/> <!-- Scroll: Enchant Weapon (Grade A) -->
+				<item id="5448" min="1" max="1" chance="0.2179"/> <!-- Recipe: Soul Separator(60%) -->
+				<item id="5526" min="1" max="1" chance="9.0946"/> <!-- Sealed Tallum Helm Design -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="21505" level="69" type="FeedableBeast" name="Alpine Cougar">
+		<!-- Interlude - C6 -->
+		<parameters>
+			<param name="MoveAroundSocial" value="90" />
+			<param name="MoveAroundSocial1" value="30" />
+			<param name="MoveAroundSocial2" value="90" />
+			<param name="silhouette1" value="21829" /> <!-- Alpine Cougar -->
+			<param name="ai_type1" value="alpine_cougar_4_wiz_i1" />
+			<param name="silhouette2" value="21829" /> <!-- Alpine Cougar -->
+			<param name="ai_type2" value="alpine_cougar_4_wiz_i1" />
+			<param name="silhouette_ex" value="16015" /> <!-- Trained Cougar -->
+			<param name="ai_type_ex" value="tamed_cougar_war" />
+			<param name="silhouette_ex2" value="16016" /> <!-- Trained Cougar -->
+			<param name="ai_type_ex2" value="tamed_cougar_wiz" />
+			<param name="TakeSocial" value="30" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<skill name="W_ShortRangeDDMagic" id="4160" level="6" /> <!-- NPC Aura Burn - Magic -->
+			<skill name="W_LongRangeDDMagic" id="4566" level="6" /> <!-- NPC Eruption - Magic -->
+			<skill name="SelfRangeDDMagic" id="4571" level="6" /> <!-- NPC Blazing Circle -->
+			<skill name="SelfBuff" id="4633" level="3" /> <!-- NPC Buff - Acumen Empower Berserk -->
+		</parameters>
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<equipment rhand="0" lhand="0" /> <!-- ... / ... -->
+		<acquire exp="16604" sp="1624" raidPoints="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2395.45533" hpRegen="7.5" mp="1314.0" mpRegen="2.7" />
+			<attack physical="667.50361" magical="455.81844" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="291.15063" magical="193.851368417065" />
+			<speed>
+				<walk ground="60" />
+				<run ground="175" />
+			</speed>
+			<hitTime>450</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4160" level="6" /> <!-- NPC Aura Burn - Magic -->
+			<skill id="4408" level="10" /> <!-- HP Modifiers -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
+			<skill id="4566" level="6" /> <!-- NPC Eruption - Magic -->
+			<skill id="4571" level="6" /> <!-- NPC Blazing Circle -->
+			<skill id="4633" level="3" /> <!-- NPC Buff - Acumen Empower Berserk -->
+		</skillList>
+		<shots shotChance="30" spiritChance="30" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="300">
+			<clanList>
+				<clan>PET</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="16" />
+			<height normal="17.2" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="235" min="1" max="1" chance="0.0010"/> <!-- Bloody Orchid -->
+				<item id="1864" min="1" max="3" chance="27.8555"/> <!-- Stem -->
+				<item id="1869" min="1" max="3" chance="9.2852"/> <!-- Iron Ore -->
+				<item id="1880" min="1" max="1" chance="2.7856"/> <!-- Steel -->
+				<item id="4043" min="1" max="1" chance="0.9286"/> <!-- Asofe -->
+				<item id="5430" min="1" max="1" chance="0.0068"/> <!-- Recipe: Sealed Helm of Nightmare(60%) -->
+				<item id="5464" min="1" max="1" chance="0.0103"/> <!-- Recipe: Dark Legion's Edge(60%) -->
+				<item id="5536" min="1" max="1" chance="0.2843"/> <!-- Bloody Orchid Head -->
+				<item id="5550" min="1" max="1" chance="0.3715"/> <!-- Durable Metal Plate -->
+			</drop>
+			<spoil>
+				<item id="4043" min="1" max="2" chance="18.8604"/> <!-- Asofe -->
+				<item id="5366" min="1" max="1" chance="4.0323"/> <!-- Recipe: Sealed Shield of Nightmare(60%) -->
+				<item id="5532" min="1" max="1" chance="1.9080"/> <!-- Meteor Shower Head -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="21506" level="69" type="FeedableBeast" name="Alpine Cougar">
+		<!-- Interlude - C6 -->
+		<parameters>
+			<param name="MoveAroundSocial" value="90" />
+			<param name="MoveAroundSocial1" value="30" />
+			<param name="MoveAroundSocial2" value="90" />
+			<param name="TakeSocial" value="30" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+			<skill name="SelfBuff" id="4318" level="1" /> <!-- Ultimate Buff -->
+			<skill name="DDMagic" id="4589" level="6" /> <!-- Decrease Speed -->
+			<skill name="PhysicalSpecial" id="4600" level="6" /> <!-- Reducing P. Def Shock -->
+		</parameters>
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<equipment rhand="0" lhand="0" /> <!-- ... / ... -->
+		<acquire exp="29105" sp="2848" raidPoints="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2395.45533" hpRegen="7.5" mp="1314.0" mpRegen="2.7" />
+			<attack physical="667.50361" magical="455.81844" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="291.15063" magical="193.851368417065" />
+			<speed>
+				<walk ground="60" />
+				<run ground="200" />
+			</speed>
+			<hitTime>450</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4318" level="1" /> <!-- Ultimate Buff -->
+			<skill id="4408" level="12" /> <!-- HP Modifiers -->
+			<skill id="4410" level="14" /> <!-- P. Atk. Modifiers -->
+			<skill id="4411" level="14" /> <!-- M. Atk. Modifiers -->
+			<skill id="4412" level="8" /> <!-- P. Def. Modifiers -->
+			<skill id="4413" level="8" /> <!-- M. Def. Modifiers -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
+			<skill id="4589" level="6" /> <!-- Decrease Speed -->
+			<skill id="4600" level="6" /> <!-- Reducing P. Def Stun -->
+		</skillList>
+		<shots shotChance="30" spiritChance="30" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="300">
+			<clanList>
+				<clan>PET</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="34" />
+			<height normal="28" grown="34" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="3990" max="7934" chance="70"/> <!-- Adena -->
+			</drop>
+			<spoil>
+				<item id="5450" min="1" max="1" chance="0.3673"/> <!-- Recipe: Dragon Grinder(60%) -->
+				<item id="5456" min="1" max="1" chance="0.3673"/> <!-- Recipe: Tallum Glaive(60%) -->
+				<item id="5535" min="1" max="1" chance="3.3842"/> <!-- Carnage Bow Stave -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="21507" level="69" type="FeedableBeast" name="Alpine Cougar">
+		<!-- Interlude - C6 -->
+		<parameters>
+			<param name="MoveAroundSocial" value="90" />
+			<param name="MoveAroundSocial1" value="30" />
+			<param name="MoveAroundSocial2" value="90" />
+			<param name="TakeSocial" value="30" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<skill name="W_ShortRangeDDMagic" id="4160" level="6" /> <!-- NPC Aura Burn - Magic -->
+			<skill name="SelfBuff" id="4318" level="1" /> <!-- Ultimate Buff -->
+			<skill name="W_LongRangeDDMagic" id="4566" level="6" /> <!-- NPC Eruption - Magic -->
+			<skill name="SelfRangeDDMagic" id="4571" level="6" /> <!-- NPC Blazing Circle -->
+			<skill name="HoldMagic" id="4657" level="6" /> <!-- Hold -->
+		</parameters>
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<equipment rhand="0" lhand="0" /> <!-- ... / ... -->
+		<acquire exp="27764" sp="2716" raidPoints="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2395.45533" hpRegen="7.5" mp="1314.0" mpRegen="2.7" />
+			<attack physical="667.50361" magical="455.81844" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="291.15063" magical="193.851368417065" />
+			<speed>
+				<walk ground="60" />
+				<run ground="200" />
+			</speed>
+			<hitTime>450</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4160" level="6" /> <!-- NPC Aura Burn - Magic -->
+			<skill id="4318" level="1" /> <!-- Ultimate Buff -->
+			<skill id="4408" level="12" /> <!-- HP Modifiers -->
+			<skill id="4410" level="14" /> <!-- P. Atk. Modifiers -->
+			<skill id="4411" level="14" /> <!-- M. Atk. Modifiers -->
+			<skill id="4412" level="8" /> <!-- P. Def. Modifiers -->
+			<skill id="4413" level="8" /> <!-- M. Def. Modifiers -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
+			<skill id="4566" level="6" /> <!-- NPC Eruption - Magic -->
+			<skill id="4571" level="6" /> <!-- NPC Blazing Circle -->
+			<skill id="4657" level="6" /> <!-- Hold -->
+		</skillList>
+		<shots shotChance="30" spiritChance="30" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="300">
+			<clanList>
+				<clan>PET</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="34" />
+			<height normal="28" grown="34" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="3792" max="7613" chance="70"/> <!-- Adena -->
+			</drop>
+			<spoil>
+				<item id="4041" min="1" max="1" chance="8.2270"/> <!-- Mold Hardener -->
+				<item id="5430" min="1" max="1" chance="1.5152"/> <!-- Recipe: Sealed Helm of Nightmare(60%) -->
+				<item id="5536" min="1" max="1" chance="3.2189"/> <!-- Bloody Orchid Head -->
+			</spoil>
+		</dropLists>
+	</npc>
 	<npc id="21508" level="66" type="Monster" name="Splinter Stakato">
 		<!-- Confirmed CT2.5 -->
 		<parameters>

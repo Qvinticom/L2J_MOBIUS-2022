@@ -1,7 +1,7 @@
 L2J-Mobius Classic Interlude
 
 Client: https://drive.google.com/uc?id=1Cyfb_OumjhPS9NFcLDMY11_s_ktH0kDk&export=download
-Patch: https://www.mediafire.com/file/lw9gven4va0n281/L2J_Mobius_Classic_Interlude_Patch_v2.zip
+Patch: https://www.mediafire.com/file/l5ra7saetsgx3il/L2J_Mobius_Classic_Interlude_Patch_v3.zip
 Geodata: http://www.mediafire.com/file/hpibngz0y2x0iwd/L2J_Mobius_Classic_Interlude_Geodata.zip
 JDK: https://www.mediafire.com/file/k25pt0umuf16uoh/openjdk-12.0.2_windows-x64_bin.zip
 
