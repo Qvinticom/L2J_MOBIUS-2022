@@ -16,10 +16,11 @@
  */
 package org.l2jmobius.gameserver.model.actor.instance;
 
+import org.l2jmobius.gameserver.data.xml.impl.CategoryData;
+import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
-import org.l2jmobius.gameserver.model.base.ClassType;
-import org.l2jmobius.gameserver.model.base.PlayerClass;
+import org.l2jmobius.gameserver.model.base.ClassId;
 
 public class VillageMasterFighterInstance extends VillageMasterInstance
 {
@@ -33,24 +34,24 @@ public class VillageMasterFighterInstance extends VillageMasterInstance
 	}
 	
 	@Override
-	protected final boolean checkVillageMasterRace(PlayerClass pclass)
+	protected final boolean checkVillageMasterRace(ClassId pclass)
 	{
 		if (pclass == null)
 		{
 			return false;
 		}
 		
-		return pclass.isOfRace(Race.HUMAN) || pclass.isOfRace(Race.ELF);
+		return (pclass.getRace() == Race.HUMAN) || (pclass.getRace() == Race.ELF);
 	}
 	
 	@Override
-	protected final boolean checkVillageMasterTeachType(PlayerClass pclass)
+	protected final boolean checkVillageMasterTeachType(ClassId pclass)
 	{
 		if (pclass == null)
 		{
 			return false;
 		}
 		
-		return pclass.isOfType(ClassType.Fighter);
+		return CategoryData.getInstance().isInCategory(CategoryType.FIGHTER_GROUP, pclass.getId());
 	}
 }

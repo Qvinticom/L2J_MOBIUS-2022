@@ -28,7 +28,7 @@ public class SubClass
 {
 	private static final byte _maxLevel = Config.MAX_SUBCLASS_LEVEL < ExperienceData.getInstance().getMaxLevel() ? Config.MAX_SUBCLASS_LEVEL : (byte) (ExperienceData.getInstance().getMaxLevel() - 1);
 	
-	private PlayerClass _class;
+	private ClassId _class;
 	private long _exp = ExperienceData.getInstance().getExpForLevel(Config.BASE_SUBCLASS_LEVEL);
 	private long _sp = 0;
 	private byte _level = Config.BASE_SUBCLASS_LEVEL;
@@ -45,7 +45,7 @@ public class SubClass
 		// using the preset default values.
 	}
 	
-	public PlayerClass getClassDefinition()
+	public ClassId getClassDefinition()
 	{
 		return _class;
 	}
@@ -91,7 +91,7 @@ public class SubClass
 	
 	public void setClassId(int classId)
 	{
-		_class = PlayerClass.values()[classId];
+		_class = ClassId.getClassId(classId);
 	}
 	
 	public void setExp(long expValue)

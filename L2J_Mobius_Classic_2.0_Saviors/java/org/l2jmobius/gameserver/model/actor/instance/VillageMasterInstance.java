@@ -16,17 +16,22 @@
  */
 package org.l2jmobius.gameserver.model.actor.instance;
 
+import java.util.EnumMap;
+import java.util.EnumSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 import java.util.logging.Logger;
 import java.util.regex.Pattern;
 import java.util.regex.PatternSyntaxException;
+import java.util.stream.Collectors;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.data.sql.impl.ClanTable;
+import org.l2jmobius.gameserver.data.xml.impl.CategoryData;
 import org.l2jmobius.gameserver.data.xml.impl.ClassListData;
 import org.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
+import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.instancemanager.CastleManager;
@@ -38,7 +43,6 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.base.AcquireSkillType;
 import org.l2jmobius.gameserver.model.base.ClassId;
-import org.l2jmobius.gameserver.model.base.PlayerClass;
 import org.l2jmobius.gameserver.model.base.SubClass;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.clan.Clan.SubPledge;
@@ -63,6 +67,37 @@ import org.l2jmobius.gameserver.util.Util;
 public class VillageMasterInstance extends NpcInstance
 {
 	private static Logger LOGGER = Logger.getLogger(VillageMasterInstance.class.getName());
+	
+	private static final Set<ClassId> mainSubclassSet;
+	private static final Set<ClassId> neverSubclassed = EnumSet.of(ClassId.OVERLORD, ClassId.WARSMITH);
+	private static final Set<ClassId> subclasseSet1 = EnumSet.of(ClassId.DARK_AVENGER, ClassId.PALADIN, ClassId.TEMPLE_KNIGHT, ClassId.SHILLIEN_KNIGHT);
+	private static final Set<ClassId> subclasseSet2 = EnumSet.of(ClassId.TREASURE_HUNTER, ClassId.ABYSS_WALKER, ClassId.PLAINS_WALKER);
+	private static final Set<ClassId> subclasseSet3 = EnumSet.of(ClassId.HAWKEYE, ClassId.SILVER_RANGER, ClassId.PHANTOM_RANGER);
+	private static final Set<ClassId> subclasseSet4 = EnumSet.of(ClassId.WARLOCK, ClassId.ELEMENTAL_SUMMONER, ClassId.PHANTOM_SUMMONER);
+	private static final Set<ClassId> subclasseSet5 = EnumSet.of(ClassId.SORCERER, ClassId.SPELLSINGER, ClassId.SPELLHOWLER);
+	private static final EnumMap<ClassId, Set<ClassId>> subclassSetMap = new EnumMap<>(ClassId.class);
+	static
+	{
+		final Set<ClassId> subclasses = CategoryData.getInstance().getCategoryByType(CategoryType.THIRD_CLASS_GROUP).stream().map(ClassId::getClassId).collect(Collectors.toSet());
+		subclasses.removeAll(neverSubclassed);
+		mainSubclassSet = subclasses;
+		subclassSetMap.put(ClassId.DARK_AVENGER, subclasseSet1);
+		subclassSetMap.put(ClassId.PALADIN, subclasseSet1);
+		subclassSetMap.put(ClassId.TEMPLE_KNIGHT, subclasseSet1);
+		subclassSetMap.put(ClassId.SHILLIEN_KNIGHT, subclasseSet1);
+		subclassSetMap.put(ClassId.TREASURE_HUNTER, subclasseSet2);
+		subclassSetMap.put(ClassId.ABYSS_WALKER, subclasseSet2);
+		subclassSetMap.put(ClassId.PLAINS_WALKER, subclasseSet2);
+		subclassSetMap.put(ClassId.HAWKEYE, subclasseSet3);
+		subclassSetMap.put(ClassId.SILVER_RANGER, subclasseSet3);
+		subclassSetMap.put(ClassId.PHANTOM_RANGER, subclasseSet3);
+		subclassSetMap.put(ClassId.WARLOCK, subclasseSet4);
+		subclassSetMap.put(ClassId.ELEMENTAL_SUMMONER, subclasseSet4);
+		subclassSetMap.put(ClassId.PHANTOM_SUMMONER, subclasseSet4);
+		subclassSetMap.put(ClassId.SORCERER, subclasseSet5);
+		subclassSetMap.put(ClassId.SPELLSINGER, subclasseSet5);
+		subclassSetMap.put(ClassId.SPELLHOWLER, subclasseSet5);
+	}
 	
 	/**
 	 * Creates a village master.
@@ -365,7 +400,7 @@ public class VillageMasterInstance extends NpcInstance
 				LOGGER.warning(VillageMasterInstance.class.getName() + ": Wrong numeric values for command " + command);
 			}
 			
-			Set<PlayerClass> subsAvailable = null;
+			Set<ClassId> subsAvailable = null;
 			switch (cmdChoice)
 			{
 				case 0: // Subclass change menu
@@ -384,9 +419,9 @@ public class VillageMasterInstance extends NpcInstance
 					{
 						html.setFile(player, "data/html/villagemaster/SubClass_Add.htm");
 						final StringBuilder content1 = new StringBuilder(200);
-						for (PlayerClass subClass : subsAvailable)
+						for (ClassId subClass : subsAvailable)
 						{
-							content1.append("<a action=\"bypass -h npc_%objectId%_Subclass 4 " + subClass.ordinal() + "\" msg=\"1268;" + ClassListData.getInstance().getClass(subClass.ordinal()).getClassName() + "\">" + ClassListData.getInstance().getClass(subClass.ordinal()).getClientCode() + "</a><br>");
+							content1.append("<a action=\"bypass -h npc_%objectId%_Subclass 4 " + subClass.getId() + "\" msg=\"1268;" + ClassListData.getInstance().getClass(subClass.getId()).getClassName() + "\">" + ClassListData.getInstance().getClass(subClass.getId()).getClientCode() + "</a><br>");
 						}
 						html.replace("%list%", content1.toString());
 					}
@@ -622,9 +657,9 @@ public class VillageMasterInstance extends NpcInstance
 					}
 					
 					final StringBuilder content6 = new StringBuilder(200);
-					for (PlayerClass subClass : subsAvailable)
+					for (ClassId subClass : subsAvailable)
 					{
-						content6.append("<a action=\"bypass -h npc_%objectId%_Subclass 7 " + paramOne + " " + subClass.ordinal() + "\" msg=\"1445;\">" + ClassListData.getInstance().getClass(subClass.ordinal()).getClientCode() + "</a><br>");
+						content6.append("<a action=\"bypass -h npc_%objectId%_Subclass 7 " + paramOne + " " + subClass.getId() + "\" msg=\"1445;\">" + ClassListData.getInstance().getClass(subClass.getId()).getClientCode() + "</a><br>");
 					}
 					
 					switch (paramOne)
@@ -735,7 +770,7 @@ public class VillageMasterInstance extends NpcInstance
 	 * @param player
 	 * @return
 	 */
-	private final Set<PlayerClass> getAvailableSubClasses(PlayerInstance player)
+	private final Set<ClassId> getAvailableSubClasses(PlayerInstance player)
 	{
 		// get player base class
 		final int currentBaseId = player.getBaseClass();
@@ -745,7 +780,7 @@ public class VillageMasterInstance extends NpcInstance
 		final int baseClassId;
 		if (baseCID.level() > 2)
 		{
-			baseClassId = baseCID.getParent().ordinal();
+			baseClassId = baseCID.getParent().getId();
 		}
 		else
 		{
@@ -758,13 +793,13 @@ public class VillageMasterInstance extends NpcInstance
 		 * and Shillien Knight Warlocks, Elemental Summoner and Phantom Summoner Elder and Shillien Elder Swordsinger and Bladedancer Sorcerer, Spellsinger and Spellhowler Also, Kamael have a special, hidden 4 subclass, the inspector, which can only be taken if you have already completed the other
 		 * two Kamael subclasses
 		 */
-		final Set<PlayerClass> availSubs = PlayerClass.values()[baseClassId].getAvailableSubclasses(player);
+		final Set<ClassId> availSubs = getSubclasses(player, baseClassId);
 		
 		if ((availSubs != null) && !availSubs.isEmpty())
 		{
-			for (Iterator<PlayerClass> availSub = availSubs.iterator(); availSub.hasNext();)
+			for (Iterator<ClassId> availSub = availSubs.iterator(); availSub.hasNext();)
 			{
-				final PlayerClass pclass = availSub.next();
+				final ClassId pclass = availSub.next();
 				
 				// check for the village master
 				if (!checkVillageMaster(pclass))
@@ -774,7 +809,7 @@ public class VillageMasterInstance extends NpcInstance
 				}
 				
 				// scan for already used subclasses
-				final int availClassId = pclass.ordinal();
+				final int availClassId = pclass.getId();
 				final ClassId cid = ClassId.getClassId(availClassId);
 				SubClass prevSubClass;
 				ClassId subClassId;
@@ -795,6 +830,66 @@ public class VillageMasterInstance extends NpcInstance
 		return availSubs;
 	}
 	
+	public final Set<ClassId> getSubclasses(PlayerInstance player, int classId)
+	{
+		Set<ClassId> subclasses = null;
+		final ClassId pClass = ClassId.getClassId(classId);
+		
+		if (CategoryData.getInstance().isInCategory(CategoryType.THIRD_CLASS_GROUP, classId) || (CategoryData.getInstance().isInCategory(CategoryType.FOURTH_CLASS_GROUP, classId)))
+		{
+			subclasses = EnumSet.copyOf(mainSubclassSet);
+			subclasses.remove(pClass);
+			
+			// Kamaels can only take Kamael classes as subclasses.
+			for (ClassId cid : ClassId.values())
+			{
+				if ((cid.getRace() == Race.KAMAEL) && (player.getRace() != Race.KAMAEL))
+				{
+					subclasses.remove(cid);
+				}
+			}
+			
+			if (player.getRace() == Race.KAMAEL)
+			{
+				if (player.getAppearance().isFemale())
+				{
+					subclasses.remove(ClassId.FEMALE_SOULBREAKER);
+				}
+				else
+				{
+					subclasses.remove(ClassId.MALE_SOULBREAKER);
+				}
+				
+				if (!player.getSubClasses().containsKey(2) || (player.getSubClasses().get(2).getLevel() < 75))
+				{
+					subclasses.remove(ClassId.INSPECTOR);
+				}
+			}
+			
+			Set<ClassId> unavailableClasses = subclassSetMap.get(pClass);
+			
+			if (unavailableClasses != null)
+			{
+				subclasses.removeAll(unavailableClasses);
+			}
+		}
+		
+		if (subclasses != null)
+		{
+			final ClassId currClassId = ClassId.getClassId(player.getClassId().getId());
+			for (ClassId tempClass : subclasses)
+			{
+				final ClassId tempClassId = ClassId.getClassId(tempClass.getId());
+				
+				if (currClassId.equalsOrChildOf(tempClassId))
+				{
+					subclasses.remove(tempClass);
+				}
+			}
+		}
+		return subclasses;
+	}
+	
 	/**
 	 * Check new subclass classId for validity (villagemaster race/type, is not contains in previous subclasses, is contains in allowed subclasses) Base class not added into allowed subclasses.
 	 * @param player
@@ -808,13 +903,13 @@ public class VillageMasterInstance extends NpcInstance
 			return false;
 		}
 		
-		final ClassId cid = ClassId.values()[classId];
+		final ClassId cid = ClassId.getClassId(classId);
 		SubClass sub;
 		ClassId subClassId;
 		for (Iterator<SubClass> subList = iterSubClasses(player); subList.hasNext();)
 		{
 			sub = subList.next();
-			subClassId = ClassId.values()[sub.getClassId()];
+			subClassId = ClassId.getClassId(sub.getClassId());
 			
 			if (subClassId.equalsOrChildOf(cid))
 			{
@@ -830,23 +925,23 @@ public class VillageMasterInstance extends NpcInstance
 		final int baseClassId;
 		if (baseCID.level() > 2)
 		{
-			baseClassId = baseCID.getParent().ordinal();
+			baseClassId = baseCID.getParent().getId();
 		}
 		else
 		{
 			baseClassId = currentBaseId;
 		}
 		
-		final Set<PlayerClass> availSubs = PlayerClass.values()[baseClassId].getAvailableSubclasses(player);
+		final Set<ClassId> availSubs = getSubclasses(player, baseClassId);
 		if ((availSubs == null) || availSubs.isEmpty())
 		{
 			return false;
 		}
 		
 		boolean found = false;
-		for (PlayerClass pclass : availSubs)
+		for (ClassId pclass : availSubs)
 		{
-			if (pclass.ordinal() == classId)
+			if (pclass.getId() == classId)
 			{
 				found = true;
 				break;
@@ -855,12 +950,12 @@ public class VillageMasterInstance extends NpcInstance
 		return found;
 	}
 	
-	protected boolean checkVillageMasterRace(PlayerClass pclass)
+	protected boolean checkVillageMasterRace(ClassId pclass)
 	{
 		return true;
 	}
 	
-	protected boolean checkVillageMasterTeachType(PlayerClass pclass)
+	protected boolean checkVillageMasterTeachType(ClassId pclass)
 	{
 		return true;
 	}
@@ -872,7 +967,7 @@ public class VillageMasterInstance extends NpcInstance
 	 */
 	public boolean checkVillageMaster(int classId)
 	{
-		return checkVillageMaster(PlayerClass.values()[classId]);
+		return checkVillageMaster(ClassId.getClassId(classId));
 	}
 	
 	/**
@@ -880,7 +975,7 @@ public class VillageMasterInstance extends NpcInstance
 	 * @param pclass
 	 * @return
 	 */
-	public boolean checkVillageMaster(PlayerClass pclass)
+	public boolean checkVillageMaster(ClassId pclass)
 	{
 		if (Config.ALT_GAME_SUBCLASS_EVERYWHERE)
 		{

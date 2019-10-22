@@ -34,7 +34,6 @@ import org.l2jmobius.gameserver.instancemanager.MentorManager;
 import org.l2jmobius.gameserver.model.Mentee;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.base.ClassLevel;
 import org.l2jmobius.gameserver.model.entity.Message;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
@@ -151,7 +150,7 @@ public class MentorGuide extends AbstractNpcAI implements IXmlReader
 		
 		if (event.equalsIgnoreCase("exchange"))
 		{
-			if (hasQuestItems(player, MENTEE_CERT) && (player.getLevel() >= MAX_LEVEL) && (player.getClassId().level() == ClassLevel.AWAKEN.ordinal()))
+			if (hasQuestItems(player, MENTEE_CERT) && (player.getLevel() >= MAX_LEVEL) && player.isAwakenedClass())
 			{
 				takeItems(player, MENTEE_CERT, 1);
 				giveItems(player, DIPLOMA, 40);

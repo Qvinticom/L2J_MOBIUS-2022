@@ -21,7 +21,6 @@ import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.base.ClassLevel;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
@@ -157,7 +156,7 @@ public class Q10376_BloodyGoodTime extends Quest
 				{
 					case State.CREATED:
 					{
-						if (((player.getClassId().level() != ClassLevel.AWAKEN.ordinal()) && (player.getRace() != Race.ERTHEIA)))
+						if (!player.isAwakenedClass() && (player.getRace() != Race.ERTHEIA))
 						{
 							return "32140-01.htm";
 						}

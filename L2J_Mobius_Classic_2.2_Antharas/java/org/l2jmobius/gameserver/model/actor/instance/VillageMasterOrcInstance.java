@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.model.actor.instance;
 
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
-import org.l2jmobius.gameserver.model.base.PlayerClass;
+import org.l2jmobius.gameserver.model.base.ClassId;
 
 public class VillageMasterOrcInstance extends VillageMasterInstance
 {
@@ -32,13 +32,13 @@ public class VillageMasterOrcInstance extends VillageMasterInstance
 	}
 	
 	@Override
-	protected final boolean checkVillageMasterRace(PlayerClass pclass)
+	protected final boolean checkVillageMasterRace(ClassId pclass)
 	{
 		if (pclass == null)
 		{
 			return false;
 		}
 		
-		return pclass.isOfRace(Race.ORC);
+		return pclass.getRace() == Race.ORC;
 	}
 }

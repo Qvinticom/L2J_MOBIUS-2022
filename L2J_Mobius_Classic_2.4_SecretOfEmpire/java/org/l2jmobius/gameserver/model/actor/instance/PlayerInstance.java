@@ -65,6 +65,7 @@ import org.l2jmobius.gameserver.data.sql.impl.CharSummonTable;
 import org.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import org.l2jmobius.gameserver.data.xml.impl.AdminData;
 import org.l2jmobius.gameserver.data.xml.impl.AttendanceRewardData;
+import org.l2jmobius.gameserver.data.xml.impl.CategoryData;
 import org.l2jmobius.gameserver.data.xml.impl.ClassListData;
 import org.l2jmobius.gameserver.data.xml.impl.ExperienceData;
 import org.l2jmobius.gameserver.data.xml.impl.HennaData;
@@ -179,8 +180,6 @@ import org.l2jmobius.gameserver.model.actor.tasks.player.WaterTask;
 import org.l2jmobius.gameserver.model.actor.templates.PlayerTemplate;
 import org.l2jmobius.gameserver.model.actor.transform.Transform;
 import org.l2jmobius.gameserver.model.base.ClassId;
-import org.l2jmobius.gameserver.model.base.ClassLevel;
-import org.l2jmobius.gameserver.model.base.PlayerClass;
 import org.l2jmobius.gameserver.model.base.SubClass;
 import org.l2jmobius.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
 import org.l2jmobius.gameserver.model.clan.Clan;
@@ -2324,7 +2323,7 @@ public class PlayerInstance extends Playable
 		
 		try
 		{
-			if ((getLvlJoinedAcademy() != 0) && (_clan != null) && (PlayerClass.values()[Id].getLevel() == ClassLevel.THIRD))
+			if ((getLvlJoinedAcademy() != 0) && (_clan != null) && CategoryData.getInstance().isInCategory(CategoryType.THIRD_CLASS_GROUP, Id))
 			{
 				if (_lvlJoinedAcademy <= 16)
 				{
@@ -9734,6 +9733,11 @@ public class PlayerInstance extends Playable
 	public boolean isSubClassActive()
 	{
 		return _classIndex > 0;
+	}
+	
+	public boolean isAwakenedClass()
+	{
+		return isInCategory(CategoryType.SIXTH_CLASS_GROUP);
 	}
 	
 	public void setDualClass(int classIndex)

@@ -16,8 +16,6 @@
  */
 package ai.areas.TalkingIsland.Raina;
 
-import static org.l2jmobius.gameserver.model.base.ClassLevel.THIRD;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.EnumMap;
@@ -25,7 +23,9 @@ import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.data.xml.impl.CategoryData;
@@ -37,8 +37,6 @@ import org.l2jmobius.gameserver.enums.SubclassInfoType;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.base.ClassId;
-import org.l2jmobius.gameserver.model.base.ClassLevel;
-import org.l2jmobius.gameserver.model.base.PlayerClass;
 import org.l2jmobius.gameserver.model.base.SubClass;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
@@ -65,45 +63,37 @@ public class Raina extends AbstractNpcAI
 	private static final int RAINA = 33491;
 	// Items
 	private static final int SUBCLASS_CERTIFICATE = 30433;
-	private static final int CHAOS_POMANDER_DUAL_CLASS = 37375;
-	private static final int ABELIUS_POWER = 32264;
-	private static final int SAPYROS_POWER = 32265;
-	private static final int ASHAGEN_POWER = 32266;
-	private static final int CRANIGG_POWER = 32267;
-	private static final int SOLTKREIG_POWER = 32268;
-	private static final int NAVIAROPE_POWER = 32269;
-	private static final int LEISTER_POWER = 32270;
-	private static final int LAKCIS_POWER = 32271;
+	private static final int CHAOS_POMANDER = 37375;
 	// Misc
-	private static final Set<PlayerClass> mainSubclassSet;
-	private static final Set<PlayerClass> neverSubclassed = EnumSet.of(PlayerClass.Overlord, PlayerClass.Warsmith);
-	private static final Set<PlayerClass> subclasseSet1 = EnumSet.of(PlayerClass.DarkAvenger, PlayerClass.Paladin, PlayerClass.TempleKnight, PlayerClass.ShillienKnight);
-	private static final Set<PlayerClass> subclasseSet2 = EnumSet.of(PlayerClass.TreasureHunter, PlayerClass.AbyssWalker, PlayerClass.Plainswalker);
-	private static final Set<PlayerClass> subclasseSet3 = EnumSet.of(PlayerClass.Hawkeye, PlayerClass.SilverRanger, PlayerClass.PhantomRanger);
-	private static final Set<PlayerClass> subclasseSet4 = EnumSet.of(PlayerClass.Warlock, PlayerClass.ElementalSummoner, PlayerClass.PhantomSummoner);
-	private static final Set<PlayerClass> subclasseSet5 = EnumSet.of(PlayerClass.Sorceror, PlayerClass.Spellsinger, PlayerClass.Spellhowler);
-	private static final EnumMap<PlayerClass, Set<PlayerClass>> subclassSetMap = new EnumMap<>(PlayerClass.class);
+	private static final Set<ClassId> mainSubclassSet;
+	private static final Set<ClassId> neverSubclassed = EnumSet.of(ClassId.OVERLORD, ClassId.WARSMITH);
+	private static final Set<ClassId> subclasseSet1 = EnumSet.of(ClassId.DARK_AVENGER, ClassId.PALADIN, ClassId.TEMPLE_KNIGHT, ClassId.SHILLIEN_KNIGHT);
+	private static final Set<ClassId> subclasseSet2 = EnumSet.of(ClassId.TREASURE_HUNTER, ClassId.ABYSS_WALKER, ClassId.PLAINS_WALKER);
+	private static final Set<ClassId> subclasseSet3 = EnumSet.of(ClassId.HAWKEYE, ClassId.SILVER_RANGER, ClassId.PHANTOM_RANGER);
+	private static final Set<ClassId> subclasseSet4 = EnumSet.of(ClassId.WARLOCK, ClassId.ELEMENTAL_SUMMONER, ClassId.PHANTOM_SUMMONER);
+	private static final Set<ClassId> subclasseSet5 = EnumSet.of(ClassId.SORCERER, ClassId.SPELLSINGER, ClassId.SPELLHOWLER);
+	private static final EnumMap<ClassId, Set<ClassId>> subclassSetMap = new EnumMap<>(ClassId.class);
 	static
 	{
-		final Set<PlayerClass> subclasses = PlayerClass.getSet(null, THIRD);
+		final Set<ClassId> subclasses = CategoryData.getInstance().getCategoryByType(CategoryType.THIRD_CLASS_GROUP).stream().map(ClassId::getClassId).collect(Collectors.toSet());
 		subclasses.removeAll(neverSubclassed);
 		mainSubclassSet = subclasses;
-		subclassSetMap.put(PlayerClass.DarkAvenger, subclasseSet1);
-		subclassSetMap.put(PlayerClass.Paladin, subclasseSet1);
-		subclassSetMap.put(PlayerClass.TempleKnight, subclasseSet1);
-		subclassSetMap.put(PlayerClass.ShillienKnight, subclasseSet1);
-		subclassSetMap.put(PlayerClass.TreasureHunter, subclasseSet2);
-		subclassSetMap.put(PlayerClass.AbyssWalker, subclasseSet2);
-		subclassSetMap.put(PlayerClass.Plainswalker, subclasseSet2);
-		subclassSetMap.put(PlayerClass.Hawkeye, subclasseSet3);
-		subclassSetMap.put(PlayerClass.SilverRanger, subclasseSet3);
-		subclassSetMap.put(PlayerClass.PhantomRanger, subclasseSet3);
-		subclassSetMap.put(PlayerClass.Warlock, subclasseSet4);
-		subclassSetMap.put(PlayerClass.ElementalSummoner, subclasseSet4);
-		subclassSetMap.put(PlayerClass.PhantomSummoner, subclasseSet4);
-		subclassSetMap.put(PlayerClass.Sorceror, subclasseSet5);
-		subclassSetMap.put(PlayerClass.Spellsinger, subclasseSet5);
-		subclassSetMap.put(PlayerClass.Spellhowler, subclasseSet5);
+		subclassSetMap.put(ClassId.DARK_AVENGER, subclasseSet1);
+		subclassSetMap.put(ClassId.PALADIN, subclasseSet1);
+		subclassSetMap.put(ClassId.TEMPLE_KNIGHT, subclasseSet1);
+		subclassSetMap.put(ClassId.SHILLIEN_KNIGHT, subclasseSet1);
+		subclassSetMap.put(ClassId.TREASURE_HUNTER, subclasseSet2);
+		subclassSetMap.put(ClassId.ABYSS_WALKER, subclasseSet2);
+		subclassSetMap.put(ClassId.PLAINS_WALKER, subclasseSet2);
+		subclassSetMap.put(ClassId.HAWKEYE, subclasseSet3);
+		subclassSetMap.put(ClassId.SILVER_RANGER, subclasseSet3);
+		subclassSetMap.put(ClassId.PHANTOM_RANGER, subclasseSet3);
+		subclassSetMap.put(ClassId.WARLOCK, subclasseSet4);
+		subclassSetMap.put(ClassId.ELEMENTAL_SUMMONER, subclasseSet4);
+		subclassSetMap.put(ClassId.PHANTOM_SUMMONER, subclasseSet4);
+		subclassSetMap.put(ClassId.SORCERER, subclasseSet5);
+		subclassSetMap.put(ClassId.SPELLSINGER, subclasseSet5);
+		subclassSetMap.put(ClassId.SPELLHOWLER, subclasseSet5);
 	}
 	
 	private static final Map<CategoryType, Integer> classCloak = new HashMap<>();
@@ -119,17 +109,30 @@ public class Raina extends AbstractNpcAI
 		classCloak.put(CategoryType.SIXTH_EOLH_GROUP, 30317); // Laksis Cloak Grade
 	}
 	
-	private static final List<PlayerClass> dualClassList = new ArrayList<>();
+	private static final Map<CategoryType, Integer> powerItem = new HashMap<>();
 	static
 	{
-		dualClassList.addAll(Arrays.asList(PlayerClass.sigelPhoenixKnight, PlayerClass.sigelHellKnight, PlayerClass.sigelEvasTemplar, PlayerClass.sigelShilenTemplar));
-		dualClassList.addAll(Arrays.asList(PlayerClass.tyrrDuelist, PlayerClass.tyrrDreadnought, PlayerClass.tyrrTitan, PlayerClass.tyrrGrandKhavatari, PlayerClass.tyrrDoombringer));
-		dualClassList.addAll(Arrays.asList(PlayerClass.othellAdventurer, PlayerClass.othellWindRider, PlayerClass.othellGhostHunter, PlayerClass.othellFortuneSeeker));
-		dualClassList.addAll(Arrays.asList(PlayerClass.yulSagittarius, PlayerClass.yulMoonlightSentinel, PlayerClass.yulGhostSentinel, PlayerClass.yulTrickster));
-		dualClassList.addAll(Arrays.asList(PlayerClass.feohArchmage, PlayerClass.feohSoultaker, PlayerClass.feohMysticMuse, PlayerClass.feoStormScreamer, PlayerClass.feohSoulHound));
-		dualClassList.addAll(Arrays.asList(PlayerClass.issHierophant, PlayerClass.issSwordMuse, PlayerClass.issSpectralDancer, PlayerClass.issDoomcryer));
-		dualClassList.addAll(Arrays.asList(PlayerClass.wynnArcanaLord, PlayerClass.wynnElementalMaster, PlayerClass.wynnSpectralMaster));
-		dualClassList.addAll(Arrays.asList(PlayerClass.aeoreCardinal, PlayerClass.aeoreEvaSaint, PlayerClass.aeoreShillienSaint));
+		powerItem.put(CategoryType.SIXTH_SIGEL_GROUP, 32264); // Abelius Power
+		powerItem.put(CategoryType.SIXTH_TIR_GROUP, 32265); // Sapyros Power
+		powerItem.put(CategoryType.SIXTH_OTHEL_GROUP, 32266); // Ashagen Power
+		powerItem.put(CategoryType.SIXTH_YR_GROUP, 32267); // Cranigg Power
+		powerItem.put(CategoryType.SIXTH_FEOH_GROUP, 32268); // Soltkreig Power
+		powerItem.put(CategoryType.SIXTH_WYNN_GROUP, 32269); // Naviarope Power
+		powerItem.put(CategoryType.SIXTH_IS_GROUP, 32270); // Leister Power
+		powerItem.put(CategoryType.SIXTH_EOLH_GROUP, 32271); // Laksis Power
+	}
+	
+	private static final List<ClassId> dualClassList = new ArrayList<>();
+	static
+	{
+		dualClassList.addAll(Arrays.asList(ClassId.SIGEL_PHOENIX_KNIGHT, ClassId.SIGEL_HELL_KNIGHT, ClassId.SIGEL_EVA_TEMPLAR, ClassId.SIGEL_SHILLIEN_TEMPLAR));
+		dualClassList.addAll(Arrays.asList(ClassId.TYRR_DUELIST, ClassId.TYRR_DREADNOUGHT, ClassId.TYRR_TITAN, ClassId.TYRR_GRAND_KHAVATARI, ClassId.TYRR_DOOMBRINGER));
+		dualClassList.addAll(Arrays.asList(ClassId.OTHELL_ADVENTURER, ClassId.OTHELL_WIND_RIDER, ClassId.OTHELL_GHOST_HUNTER, ClassId.OTHELL_FORTUNE_SEEKER));
+		dualClassList.addAll(Arrays.asList(ClassId.YUL_SAGITTARIUS, ClassId.YUL_MOONLIGHT_SENTINEL, ClassId.YUL_GHOST_SENTINEL, ClassId.YUL_TRICKSTER));
+		dualClassList.addAll(Arrays.asList(ClassId.FEOH_ARCHMAGE, ClassId.FEOH_SOULTAKER, ClassId.FEOH_MYSTIC_MUSE, ClassId.FEOH_STORM_SCREAMER, ClassId.FEOH_SOUL_HOUND));
+		dualClassList.addAll(Arrays.asList(ClassId.ISS_HIEROPHANT, ClassId.ISS_SWORD_MUSE, ClassId.ISS_SPECTRAL_DANCER, ClassId.ISS_DOOMCRYER));
+		dualClassList.addAll(Arrays.asList(ClassId.WYNN_ARCANA_LORD, ClassId.WYNN_ELEMENTAL_MASTER, ClassId.WYNN_SPECTRAL_MASTER));
+		dualClassList.addAll(Arrays.asList(ClassId.AEORE_CARDINAL, ClassId.AEORE_EVA_SAINT, ClassId.AEORE_SHILLIEN_SAINT));
 	}
 	
 	// @formatter:off
@@ -190,7 +193,7 @@ public class Raina extends AbstractNpcAI
 				}
 				else
 				{
-					final Set<PlayerClass> availSubs = getAvailableSubClasses(player);
+					final Set<ClassId> availSubs = getAvailableSubClasses(player);
 					final StringBuilder sb = new StringBuilder();
 					final NpcHtmlMessage html = getNpcHtmlMessage(player, npc, "subclassList.html");
 					
@@ -199,11 +202,11 @@ public class Raina extends AbstractNpcAI
 						break;
 					}
 					
-					for (PlayerClass subClass : availSubs)
+					for (ClassId subClass : availSubs)
 					{
 						if (subClass != null)
 						{
-							final int classId = subClass.ordinal();
+							final int classId = subClass.getId();
 							final int npcStringId = 11170000 + classId;
 							sb.append("<fstring p1=\"0\" p2=\"" + classId + "\">" + npcStringId + "</fstring>");
 						}
@@ -324,11 +327,11 @@ public class Raina extends AbstractNpcAI
 				final StringBuilder sb = new StringBuilder();
 				final NpcHtmlMessage html = getNpcHtmlMessage(player, npc, "addDualClassErtheiaList.html");
 				
-				for (PlayerClass dualClasses : getDualClasses(player, cType))
+				for (ClassId dualClasses : getDualClasses(player, cType))
 				{
 					if (dualClasses != null)
 					{
-						sb.append("<button value=\"" + ClassListData.getInstance().getClass(dualClasses.ordinal()).getClassName() + "\" action=\"bypass -h menu_select?ask=6&reply=" + dualClasses.ordinal() + "\" width=\"200\" height=\"31\" back=\"L2UI_CT1.HtmlWnd_DF_Awake_Down\" fore=\"L2UI_CT1.HtmlWnd_DF_Awake\"><br>");
+						sb.append("<button value=\"" + ClassListData.getInstance().getClass(dualClasses.getId()).getClassName() + "\" action=\"bypass -h menu_select?ask=6&reply=" + dualClasses.getId() + "\" width=\"200\" height=\"31\" back=\"L2UI_CT1.HtmlWnd_DF_Awake_Down\" fore=\"L2UI_CT1.HtmlWnd_DF_Awake\"><br>");
 					}
 				}
 				html.replace("%dualclassList%", sb.toString());
@@ -345,7 +348,7 @@ public class Raina extends AbstractNpcAI
 				{
 					htmltext = "noSummon.html";
 				}
-				else if (!player.hasDualClass() || (player.getLevel() < 85) || !player.isDualClassActive() || (player.getClassId().level() != ClassLevel.AWAKEN.ordinal()))
+				else if (!player.hasDualClass() || (player.getLevel() < 85) || !player.isDualClassActive() || !player.isAwakenedClass())
 				{
 					htmltext = "reawakenNoDual.html";
 				}
@@ -373,7 +376,7 @@ public class Raina extends AbstractNpcAI
 				{
 					htmltext = "noSummon.html";
 				}
-				else if (!player.hasDualClass() || !player.isDualClassActive() || (player.getClassId().level() != ClassLevel.AWAKEN.ordinal()))
+				else if (!player.hasDualClass() || !player.isDualClassActive() || !player.isAwakenedClass())
 				{
 					htmltext = "reawakenNoDual.html";
 				}
@@ -409,11 +412,11 @@ public class Raina extends AbstractNpcAI
 				final StringBuilder sb = new StringBuilder();
 				final NpcHtmlMessage html = getNpcHtmlMessage(player, npc, "reawakenClassList.html");
 				
-				for (PlayerClass dualClasses : getDualClasses(player, cType))
+				for (ClassId dualClasses : getDualClasses(player, cType))
 				{
 					if (dualClasses != null)
 					{
-						sb.append("<button value=\"" + ClassListData.getInstance().getClass(dualClasses.ordinal()).getClassName() + "\" action=\"bypass -h menu_select?ask=5&reply=" + dualClasses.ordinal() + "\" width=\"200\" height=\"31\" back=\"L2UI_CT1.HtmlWnd_DF_Awake_Down\" fore=\"L2UI_CT1.HtmlWnd_DF_Awake\"><br>");
+						sb.append("<button value=\"" + ClassListData.getInstance().getClass(dualClasses.getId()).getClassName() + "\" action=\"bypass -h menu_select?ask=5&reply=" + dualClasses.getId() + "\" width=\"200\" height=\"31\" back=\"L2UI_CT1.HtmlWnd_DF_Awake_Down\" fore=\"L2UI_CT1.HtmlWnd_DF_Awake\"><br>");
 					}
 				}
 				html.replace("%dualclassList%", sb.toString());
@@ -513,7 +516,7 @@ public class Raina extends AbstractNpcAI
 			case 2: // Remove (change) subclass list
 			{
 				final int subclassIndex = event.getReply();
-				final Set<PlayerClass> availSubs = getAvailableSubClasses(player);
+				final Set<ClassId> availSubs = getAvailableSubClasses(player);
 				final StringBuilder sb = new StringBuilder();
 				final NpcHtmlMessage html = getNpcHtmlMessage(player, npc, "removeSubclassList.html");
 				
@@ -522,11 +525,11 @@ public class Raina extends AbstractNpcAI
 					return;
 				}
 				
-				for (PlayerClass subClass : availSubs)
+				for (ClassId subClass : availSubs)
 				{
 					if (subClass != null)
 					{
-						final int classId = subClass.ordinal();
+						final int classId = subClass.getId();
 						final int npcStringId = 11170000 + classId;
 						sb.append("<fstring p1=\"3\" p2=\"" + classId + "\">" + npcStringId + "</fstring>");
 					}
@@ -578,13 +581,13 @@ public class Raina extends AbstractNpcAI
 			case 5: // Reawaken (change dual class)
 			{
 				final int classId = event.getReply();
-				if (player.isTransformed() || player.hasSummon() || (!player.hasDualClass() || !player.isDualClassActive() || (player.getClassId().level() != ClassLevel.AWAKEN.ordinal())))
+				if (player.isTransformed() || player.hasSummon() || (!player.hasDualClass() || !player.isDualClassActive() || !player.isAwakenedClass()))
 				{
 					break;
 				}
 				
 				// Validating classId
-				if (!getDualClasses(player, null).contains(PlayerClass.values()[classId]))
+				if (!getDualClasses(player, null).contains(ClassId.getClassId(classId)))
 				{
 					break;
 				}
@@ -614,9 +617,9 @@ public class Raina extends AbstractNpcAI
 					SkillTreesData.getInstance().cleanSkillUponAwakening(player);
 					player.sendPacket(new AcquireSkillList(player));
 					player.sendSkillList();
-					addPowerItem(player);
-					takeItems(player, CHAOS_POMANDER_DUAL_CLASS, -1);
-					giveItems(player, CHAOS_POMANDER_DUAL_CLASS, 2);
+					giveItems(player, getCloakId(player), 1);
+					takeItems(player, CHAOS_POMANDER, -1);
+					giveItems(player, CHAOS_POMANDER, 2);
 				}
 				break;
 			}
@@ -639,7 +642,7 @@ public class Raina extends AbstractNpcAI
 				}
 				
 				// Validating classId
-				if (!getDualClasses(player, null).contains(PlayerClass.values()[classId]))
+				if (!getDualClasses(player, null).contains(ClassId.getClassId(classId)))
 				{
 					break;
 				}
@@ -653,47 +656,13 @@ public class Raina extends AbstractNpcAI
 					SkillTreesData.getInstance().cleanSkillUponAwakening(player);
 					player.sendPacket(new AcquireSkillList(player));
 					player.sendSkillList();
-					addPowerItem(player);
-					takeItems(player, CHAOS_POMANDER_DUAL_CLASS, -1);
-					giveItems(player, CHAOS_POMANDER_DUAL_CLASS, 2);
+					giveItems(player, getPowerItemId(player), 1);
+					takeItems(player, CHAOS_POMANDER, -1);
+					giveItems(player, CHAOS_POMANDER, 2);
 				}
 				break;
 			}
 		}
-	}
-	
-	private void addPowerItem(PlayerInstance player)
-	{
-		int itemId = ABELIUS_POWER; // Sigel
-		if (player.isInCategory(CategoryType.SIXTH_TIR_GROUP))
-		{
-			itemId = SAPYROS_POWER;
-		}
-		else if (player.isInCategory(CategoryType.SIXTH_OTHEL_GROUP))
-		{
-			itemId = ASHAGEN_POWER;
-		}
-		else if (player.isInCategory(CategoryType.SIXTH_YR_GROUP))
-		{
-			itemId = CRANIGG_POWER;
-		}
-		else if (player.isInCategory(CategoryType.SIXTH_FEOH_GROUP))
-		{
-			itemId = SOLTKREIG_POWER;
-		}
-		else if (player.isInCategory(CategoryType.SIXTH_WYNN_GROUP))
-		{
-			itemId = NAVIAROPE_POWER;
-		}
-		else if (player.isInCategory(CategoryType.SIXTH_IS_GROUP))
-		{
-			itemId = LEISTER_POWER;
-		}
-		else if (player.isInCategory(CategoryType.SIXTH_EOLH_GROUP))
-		{
-			itemId = LAKCIS_POWER;
-		}
-		giveItems(player, itemId, 1);
 	}
 	
 	/**
@@ -701,20 +670,20 @@ public class Raina extends AbstractNpcAI
 	 * @param player
 	 * @return
 	 */
-	private Set<PlayerClass> getAvailableSubClasses(PlayerInstance player)
+	private Set<ClassId> getAvailableSubClasses(PlayerInstance player)
 	{
 		final int currentBaseId = player.getBaseClass();
 		final ClassId baseCID = ClassId.getClassId(currentBaseId);
-		final int baseClassId = (baseCID.level() > 2) ? baseCID.getParent().ordinal() : currentBaseId;
+		int baseClassId = (CategoryData.getInstance().isInCategory(CategoryType.FOURTH_CLASS_GROUP, baseCID.getId()) || CategoryData.getInstance().isInCategory(CategoryType.FIFTH_CLASS_GROUP, baseCID.getId()) || CategoryData.getInstance().isInCategory(CategoryType.SIXTH_CLASS_GROUP, baseCID.getId())) ? baseCID.getParent().getId() : currentBaseId;
 		
-		final Set<PlayerClass> availSubs = getSubclasses(player, baseClassId);
+		final Set<ClassId> availSubs = getSubclasses(player, baseClassId);
 		
 		if ((availSubs != null) && !availSubs.isEmpty())
 		{
-			for (PlayerClass pclass : availSubs)
+			for (ClassId pclass : availSubs)
 			{
 				// scan for already used subclasses
-				final int availClassId = pclass.ordinal();
+				final int availClassId = pclass.getId();
 				final ClassId cid = ClassId.getClassId(availClassId);
 				
 				for (SubClass subList : player.getSubClasses().values())
@@ -723,7 +692,7 @@ public class Raina extends AbstractNpcAI
 					
 					if (subId.equalsOrChildOf(cid))
 					{
-						availSubs.remove(pclass);
+						availSubs.remove(cid);
 						break;
 					}
 				}
@@ -747,11 +716,11 @@ public class Raina extends AbstractNpcAI
 	 */
 	private boolean isValidNewSubClass(PlayerInstance player, int classId)
 	{
-		final ClassId cid = ClassId.values()[classId];
+		final ClassId cid = ClassId.getClassId(classId);
 		ClassId subClassId;
 		for (SubClass subList : player.getSubClasses().values())
 		{
-			subClassId = ClassId.values()[subList.getClassId()];
+			subClassId = ClassId.getClassId(subList.getClassId());
 			
 			if (subClassId.equalsOrChildOf(cid))
 			{
@@ -764,8 +733,8 @@ public class Raina extends AbstractNpcAI
 		final ClassId baseCID = ClassId.getClassId(currentBaseId);
 		
 		// we need 2nd occupation ID
-		final int baseClassId = baseCID.level() > 2 ? baseCID.getParent().ordinal() : currentBaseId;
-		final Set<PlayerClass> availSubs = getSubclasses(player, baseClassId);
+		final int baseClassId = (CategoryData.getInstance().isInCategory(CategoryType.FOURTH_CLASS_GROUP, baseCID.getId()) || CategoryData.getInstance().isInCategory(CategoryType.FIFTH_CLASS_GROUP, baseCID.getId()) || CategoryData.getInstance().isInCategory(CategoryType.SIXTH_CLASS_GROUP, baseCID.getId())) ? baseCID.getParent().getId() : currentBaseId;
+		final Set<ClassId> availSubs = getSubclasses(player, baseClassId);
 		
 		if ((availSubs == null) || availSubs.isEmpty())
 		{
@@ -773,9 +742,9 @@ public class Raina extends AbstractNpcAI
 		}
 		
 		boolean found = false;
-		for (PlayerClass pclass : availSubs)
+		for (ClassId pclass : availSubs)
 		{
-			if (pclass.ordinal() == classId)
+			if (pclass.getId() == classId)
 			{
 				found = true;
 				break;
@@ -798,29 +767,29 @@ public class Raina extends AbstractNpcAI
 		return leveled;
 	}
 	
-	public List<PlayerClass> getAvailableDualclasses(PlayerInstance player)
+	public List<ClassId> getAvailableDualclasses(PlayerInstance player)
 	{
-		final List<PlayerClass> dualClasses = new ArrayList<>();
+		final List<ClassId> dualClasses = new ArrayList<>();
 		
-		for (PlayerClass playerClass : PlayerClass.values())
+		for (ClassId ClassId : ClassId.values())
 		{
-			if (!playerClass.isOfRace(Race.ERTHEIA) && playerClass.isOfLevel(ClassLevel.AWAKEN) && (playerClass.ordinal() != player.getClassId().getId()))
+			if ((ClassId.getRace() != Race.ERTHEIA) && CategoryData.getInstance().isInCategory(CategoryType.SIXTH_CLASS_GROUP, ClassId.getId()) && (ClassId.getId() != player.getClassId().getId()))
 			{
-				dualClasses.add(playerClass);
+				dualClasses.add(ClassId);
 			}
 		}
 		return dualClasses;
 	}
 	
-	private List<PlayerClass> getDualClasses(PlayerInstance player, CategoryType cType)
+	private List<ClassId> getDualClasses(PlayerInstance player, CategoryType cType)
 	{
-		final List<PlayerClass> tempList = new ArrayList<>();
+		final List<ClassId> tempList = new ArrayList<>();
 		final int baseClassId = player.getBaseClass();
 		final int dualClassId = player.getClassId().getId();
 		
-		for (PlayerClass temp : dualClassList)
+		for (ClassId temp : dualClassList)
 		{
-			if ((temp.ordinal() != baseClassId) && (temp.ordinal() != dualClassId) && ((cType == null) || CategoryData.getInstance().isInCategory(cType, temp.ordinal())))
+			if ((temp.getId() != baseClassId) && (temp.getId() != dualClassId) && ((cType == null) || CategoryData.getInstance().isInCategory(cType, temp.getId())))
 			{
 				tempList.add(temp);
 			}
@@ -828,40 +797,43 @@ public class Raina extends AbstractNpcAI
 		return tempList;
 	}
 	
-	public Set<PlayerClass> getSubclasses(PlayerInstance player, int classId)
+	public final Set<ClassId> getSubclasses(PlayerInstance player, int classId)
 	{
-		Set<PlayerClass> subclasses = null;
-		final PlayerClass pClass = PlayerClass.values()[classId];
+		Set<ClassId> subclasses = null;
+		final ClassId pClass = ClassId.getClassId(classId);
 		
-		if ((pClass.getLevel() == THIRD) || (pClass.getLevel() == ClassLevel.FOURTH))
+		if (CategoryData.getInstance().isInCategory(CategoryType.THIRD_CLASS_GROUP, classId) || (CategoryData.getInstance().isInCategory(CategoryType.FOURTH_CLASS_GROUP, classId)))
 		{
 			subclasses = EnumSet.copyOf(mainSubclassSet);
 			subclasses.remove(pClass);
-			subclasses.removeAll(PlayerClass.getSet(Race.ERTHEIA, THIRD));
+			
+			// Ertheia classes cannot be subclassed and only Kamael can take Kamael classes as subclasses.
+			for (ClassId cid : ClassId.values())
+			{
+				if ((cid.getRace() == Race.ERTHEIA) || ((cid.getRace() == Race.KAMAEL) && (player.getRace() != Race.KAMAEL)))
+				{
+					subclasses.remove(cid);
+				}
+			}
 			
 			if (player.getRace() == Race.KAMAEL)
 			{
 				if (player.getAppearance().isFemale())
 				{
-					subclasses.remove(PlayerClass.femaleSoulbreaker);
+					subclasses.remove(ClassId.MALE_SOULBREAKER);
 				}
 				else
 				{
-					subclasses.remove(PlayerClass.maleSoulbreaker);
+					subclasses.remove(ClassId.FEMALE_SOULBREAKER);
 				}
 				
 				if (!player.getSubClasses().containsKey(2) || (player.getSubClasses().get(2).getLevel() < 75))
 				{
-					subclasses.remove(PlayerClass.inspector);
+					subclasses.remove(ClassId.INSPECTOR);
 				}
 			}
-			else
-			{
-				// Only Kamael can take Kamael classes as subclasses.
-				subclasses.removeAll(PlayerClass.getSet(Race.KAMAEL, THIRD));
-			}
 			
-			final Set<PlayerClass> unavailableClasses = subclassSetMap.get(pClass);
+			Set<ClassId> unavailableClasses = subclassSetMap.get(pClass);
 			
 			if (unavailableClasses != null)
 			{
@@ -872,9 +844,9 @@ public class Raina extends AbstractNpcAI
 		if (subclasses != null)
 		{
 			final ClassId currClassId = ClassId.getClassId(player.getClassId().getId());
-			for (PlayerClass tempClass : subclasses)
+			for (ClassId tempClass : subclasses)
 			{
-				final ClassId tempClassId = ClassId.getClassId(tempClass.ordinal());
+				final ClassId tempClassId = ClassId.getClassId(tempClass.getId());
 				
 				if (currClassId.equalsOrChildOf(tempClassId))
 				{
@@ -910,41 +882,12 @@ public class Raina extends AbstractNpcAI
 	
 	private int getCloakId(PlayerInstance player)
 	{
-		CategoryType catType = null;
-		
-		if (player.isInCategory(CategoryType.SIXTH_SIGEL_GROUP))
-		{
-			catType = CategoryType.SIXTH_SIGEL_GROUP;
-		}
-		else if (player.isInCategory(CategoryType.SIXTH_TIR_GROUP))
-		{
-			catType = CategoryType.SIXTH_TIR_GROUP;
-		}
-		else if (player.isInCategory(CategoryType.SIXTH_OTHEL_GROUP))
-		{
-			catType = CategoryType.SIXTH_OTHEL_GROUP;
-		}
-		else if (player.isInCategory(CategoryType.SIXTH_YR_GROUP))
-		{
-			catType = CategoryType.SIXTH_YR_GROUP;
-		}
-		else if (player.isInCategory(CategoryType.SIXTH_FEOH_GROUP))
-		{
-			catType = CategoryType.SIXTH_FEOH_GROUP;
-		}
-		else if (player.isInCategory(CategoryType.SIXTH_IS_GROUP))
-		{
-			catType = CategoryType.SIXTH_IS_GROUP;
-		}
-		else if (player.isInCategory(CategoryType.SIXTH_WYNN_GROUP))
-		{
-			catType = CategoryType.SIXTH_WYNN_GROUP;
-		}
-		else if (player.isInCategory(CategoryType.SIXTH_EOLH_GROUP))
-		{
-			catType = CategoryType.SIXTH_EOLH_GROUP;
-		}
-		return classCloak.get(catType);
+		return classCloak.entrySet().stream().filter(e -> player.isInCategory(e.getKey())).mapToInt(Entry::getValue).findFirst().orElse(0);
+	}
+	
+	private int getPowerItemId(PlayerInstance player)
+	{
+		return powerItem.entrySet().stream().filter(e -> player.isInCategory(e.getKey())).mapToInt(Entry::getValue).findFirst().orElse(0);
 	}
 	
 	public static void main(String[] args)

@@ -9729,6 +9729,11 @@ public class PlayerInstance extends Playable
 		return _classIndex > 0;
 	}
 	
+	public boolean isAwakenedClass()
+	{
+		return isInCategory(CategoryType.SIXTH_CLASS_GROUP);
+	}
+	
 	public void setDualClass(int classIndex)
 	{
 		if (isSubClassActive())

@@ -16,11 +16,12 @@
  */
 package quests.Q10375_SuccubusDisciples;
 
+import org.l2jmobius.gameserver.data.xml.impl.CategoryData;
+import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.base.ClassLevel;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
@@ -106,7 +107,7 @@ public class Q10375_SuccubusDisciples extends Quest
 			htmltext = getAlreadyCompletedMsg(player);
 		}
 		
-		if ((npc.getId() == ZENYA) && (player.getClassId().level() == ClassLevel.THIRD.ordinal()))
+		if ((npc.getId() == ZENYA) && !CategoryData.getInstance().isInCategory(CategoryType.THIRD_CLASS_GROUP, player.getClassId().getId()))
 		{
 			return "noClass.html";
 		}

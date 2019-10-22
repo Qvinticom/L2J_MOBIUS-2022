@@ -19,7 +19,6 @@ package quests.Q10370_MenacingTimes;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.base.ClassLevel;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
@@ -155,7 +154,7 @@ public class Q10370_MenacingTimes extends Quest
 				{
 					case ORVEN:
 					{
-						if ((player.getRace() == Race.HUMAN) && (player.getClassId().level() == ClassLevel.FOURTH.ordinal()))
+						if ((player.getRace() == Race.HUMAN) && player.isAwakenedClass())
 						{
 							htmltext = "30857-01.htm";
 						}
@@ -167,7 +166,7 @@ public class Q10370_MenacingTimes extends Quest
 					}
 					case WINONIN:
 					{
-						if ((player.getRace() == Race.ELF) && (player.getClassId().level() == ClassLevel.FOURTH.ordinal()))
+						if ((player.getRace() == Race.ELF) && player.isAwakenedClass())
 						{
 							htmltext = "30856-01.htm";
 						}
@@ -179,7 +178,7 @@ public class Q10370_MenacingTimes extends Quest
 					}
 					case OLTRAN:
 					{
-						if ((player.getRace() == Race.DARK_ELF) && (player.getClassId().level() == ClassLevel.FOURTH.ordinal()))
+						if ((player.getRace() == Race.DARK_ELF) && player.isAwakenedClass())
 						{
 							htmltext = "30862-01.htm";
 						}
@@ -191,7 +190,7 @@ public class Q10370_MenacingTimes extends Quest
 					}
 					case LADANZA:
 					{
-						if ((player.getRace() == Race.ORC) && (player.getClassId().level() == ClassLevel.FOURTH.ordinal()))
+						if ((player.getRace() == Race.ORC) && player.isAwakenedClass())
 						{
 							htmltext = "30865-01.htm";
 						}
@@ -203,7 +202,7 @@ public class Q10370_MenacingTimes extends Quest
 					}
 					case FERRIS:
 					{
-						if ((player.getRace() == Race.DWARF) && (player.getClassId().level() == ClassLevel.FOURTH.ordinal()))
+						if ((player.getRace() == Race.DWARF) && player.isAwakenedClass())
 						{
 							htmltext = "30847-01.htm";
 						}
@@ -215,7 +214,7 @@ public class Q10370_MenacingTimes extends Quest
 					}
 					case BROME:
 					{
-						if ((player.getRace() == Race.KAMAEL) && (player.getClassId().level() == ClassLevel.FOURTH.ordinal()))
+						if ((player.getRace() == Race.KAMAEL) && player.isAwakenedClass())
 						{
 							htmltext = "32221-01.htm";
 						}

@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model.actor.instance;
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
-import org.l2jmobius.gameserver.model.base.PlayerClass;
+import org.l2jmobius.gameserver.model.base.ClassId;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 
 public class VillageMasterKamaelInstance extends VillageMasterInstance
@@ -75,13 +75,13 @@ public class VillageMasterKamaelInstance extends VillageMasterInstance
 	}
 	
 	@Override
-	protected final boolean checkVillageMasterRace(PlayerClass pclass)
+	protected final boolean checkVillageMasterRace(ClassId pclass)
 	{
 		if (pclass == null)
 		{
 			return false;
 		}
 		
-		return pclass.isOfRace(Race.KAMAEL);
+		return pclass.getRace() == Race.KAMAEL;
 	}
 }

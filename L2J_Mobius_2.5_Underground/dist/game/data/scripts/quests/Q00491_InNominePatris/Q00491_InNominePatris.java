@@ -20,7 +20,6 @@ import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.enums.QuestType;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.base.ClassLevel;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
@@ -120,7 +119,7 @@ public class Q00491_InNominePatris extends Quest
 				}
 				case State.CREATED:
 				{
-					htmltext = ((player.getClassId().level() == ClassLevel.FOURTH.ordinal()) ? "33649-01.htm" : "33649-00.html");
+					htmltext = (player.isAwakenedClass() ? "33649-01.htm" : "33649-00.html");
 					break;
 				}
 				case State.STARTED:
