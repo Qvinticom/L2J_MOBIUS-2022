@@ -1,0 +1,159 @@
+/*
+ * This file is part of the L2J Mobius project.
+ * 
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+package org.l2jmobius.gameserver.model.actor.instance;
+
+import java.util.concurrent.Future;
+import java.util.logging.Level;
+
+import org.l2jmobius.commons.concurrent.ThreadPool;
+import org.l2jmobius.gameserver.data.xml.impl.SkillData;
+import org.l2jmobius.gameserver.enums.InstanceType;
+import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.actor.Decoy;
+import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
+import org.l2jmobius.gameserver.model.skills.Skill;
+import org.l2jmobius.gameserver.taskmanager.DecayTaskManager;
+
+public class DecoyInstance extends Decoy
+{
+	private int _totalLifeTime;
+	private int _timeRemaining;
+	private Future<?> _DecoyLifeTask;
+	private Future<?> _HateSpam;
+	
+	/**
+	 * Creates a decoy.
+	 * @param template the decoy NPC template
+	 * @param owner the owner
+	 * @param totalLifeTime the total life time
+	 */
+	public DecoyInstance(NpcTemplate template, PlayerInstance owner, int totalLifeTime)
+	{
+		super(template, owner);
+		setInstanceType(InstanceType.DecoyInstance);
+		_totalLifeTime = totalLifeTime;
+		_timeRemaining = _totalLifeTime;
+		final int skilllevel = getTemplate().getDisplayId() - 13070;
+		_DecoyLifeTask = ThreadPool.scheduleAtFixedRate(new DecoyLifetime(getOwner(), this), 1000, 1000);
+		_HateSpam = ThreadPool.scheduleAtFixedRate(new HateSpam(this, SkillData.getInstance().getSkill(5272, skilllevel)), 2000, 5000);
+	}
+	
+	@Override
+	public boolean doDie(Creature killer)
+	{
+		if (!super.doDie(killer))
+		{
+			return false;
+		}
+		if (_HateSpam != null)
+		{
+			_HateSpam.cancel(true);
+			_HateSpam = null;
+		}
+		_totalLifeTime = 0;
+		DecayTaskManager.getInstance().add(this);
+		return true;
+	}
+	
+	static class DecoyLifetime implements Runnable
+	{
+		private final PlayerInstance _player;
+		
+		private final DecoyInstance _Decoy;
+		
+		DecoyLifetime(PlayerInstance player, DecoyInstance Decoy)
+		{
+			_player = player;
+			_Decoy = Decoy;
+		}
+		
+		@Override
+		public void run()
+		{
+			try
+			{
+				_Decoy.decTimeRemaining(1000);
+				final double newTimeRemaining = _Decoy.getTimeRemaining();
+				if (newTimeRemaining < 0)
+				{
+					_Decoy.unSummon(_player);
+				}
+			}
+			catch (Exception e)
+			{
+				LOGGER.log(Level.SEVERE, "Decoy Error: ", e);
+			}
+		}
+	}
+	
+	private static class HateSpam implements Runnable
+	{
+		private final DecoyInstance _player;
+		private final Skill _skill;
+		
+		HateSpam(DecoyInstance player, Skill Hate)
+		{
+			_player = player;
+			_skill = Hate;
+		}
+		
+		@Override
+		public void run()
+		{
+			try
+			{
+				_player.setTarget(_player);
+				_player.doCast(_skill);
+			}
+			catch (Throwable e)
+			{
+				LOGGER.log(Level.SEVERE, "Decoy Error: ", e);
+			}
+		}
+	}
+	
+	@Override
+	public void unSummon(PlayerInstance owner)
+	{
+		if (_DecoyLifeTask != null)
+		{
+			_DecoyLifeTask.cancel(true);
+			_DecoyLifeTask = null;
+		}
+		if (_HateSpam != null)
+		{
+			_HateSpam.cancel(true);
+			_HateSpam = null;
+		}
+		super.unSummon(owner);
+	}
+	
+	public void decTimeRemaining(int value)
+	{
+		_timeRemaining -= value;
+	}
+	
+	public int getTimeRemaining()
+	{
+		return _timeRemaining;
+	}
+	
+	public int getTotalLifeTime()
+	{
+		return _totalLifeTime;
+	}
+}
