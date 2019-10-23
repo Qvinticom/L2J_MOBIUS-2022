@@ -1888,6 +1888,7 @@
 		<operateType>A1</operateType>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>900</affectRange>
+		<fanRange>0,0,900,90</fanRange>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
 			<value level="1">85</value>
@@ -1920,8 +1921,8 @@
 			<value level="13">175</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
-		<castRange>1100</castRange>
-		<effectRange>1500</effectRange>
+		<castRange>900</castRange>
+		<effectRange>1200</effectRange>
 		<hitTime>2900</hitTime>
 		<coolTime>350</coolTime>
 		<effectPoint>
@@ -1940,7 +1941,6 @@
 			<value level="13">-729</value>
 		</effectPoint>
 		<reuseDelay>7000</reuseDelay>
-		<fanRange>0;0;900;90</fanRange>
 		<targetType>ENEMY</targetType>
 		<affectScope>FAN</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
