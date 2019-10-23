@@ -234,7 +234,6 @@ public class ResidenceOfQueenIgnis extends AbstractInstance
 		final Instance world = npc.getInstanceWorld();
 		if (world != null)
 		{
-			_playerFireRage.clear();
 			world.finishInstance();
 		}
 		return super.onKill(npc, player, isSummon);
