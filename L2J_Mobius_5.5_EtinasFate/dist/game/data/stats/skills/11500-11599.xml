@@ -471,13 +471,6 @@
 				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
 			</effect>
 		</effects>
-		<selfEffects>
-			<effect name="CallSkill">
-				<skillId>19442</skillId> <!-- Single Note - Triad -->
-				<skillLevel>1</skillLevel>
-				<skillLevelScaleTo>3</skillLevelScaleTo>
-			</effect>
-		</selfEffects>
 	</skill>
 	<skill id="11509" toLevel="11" name="Radiant Crash">
 		<!-- Attacks the target with $s1 Power added to P. Atk., for $s2, P. Def/ M. Def -$s3. Requires a sword/ blunt/ dual sword/ dual blunt to be equipped. Over-hit. Critical. -->
@@ -594,13 +587,6 @@
 				<mode>PER</mode>
 			</effect>
 		</effects>
-		<selfEffects>
-			<effect name="CallSkill">
-				<skillId>19442</skillId> <!-- Single Note - Triad -->
-				<skillLevel>1</skillLevel>
-				<skillLevelScaleTo>3</skillLevelScaleTo>
-			</effect>
-		</selfEffects>
 	</skill>
 	<skill id="11510" toLevel="11" name="Resolving Bash">
 		<!-- Attacks target with $s1 Power added to P. Atk., for $s2, P. Atk. and M. Atk. -$s3. Requires a sword/ blunt/ dual sword/ dual blunt weapon to be equipped. Over-hit. Critical. -->
@@ -717,13 +703,6 @@
 				<mode>PER</mode>
 			</effect>
 		</effects>
-		<selfEffects>
-			<effect name="CallSkill">
-				<skillId>19442</skillId> <!-- Single Note - Triad -->
-				<skillLevel>1</skillLevel>
-				<skillLevelScaleTo>3</skillLevelScaleTo>
-			</effect>
-		</selfEffects>
 	</skill>
 	<skill id="11511" toLevel="11" name="Phantom Slasher">
 		<!-- Attacks the target with $s1 Power added to P. Atk. to reduce its P. Atk./ M. Atk./ P./ M. Def. by $s3 for $s2. The target can remove these debuffs if it has Spectral Slash Stage 3 or higher. Requires a sword/ blunt/ dual sword/ dual blunt weapon to be equipped. Over-hit. Critical. -->
@@ -788,6 +767,11 @@
 		<affectScope>SINGLE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<conditions>
+			<condition name="OpCheckAbnormal">
+				<type>ULTIMATE_DEBUFF</type>
+				<level>1</level>
+				<hasAbnormal>true</hasAbnormal>
+			</condition>
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DUAL</item>
@@ -836,30 +820,7 @@
 				<amount>-20</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="CallSkill">
-				<skillId>19435</skillId> <!-- Spectral Slash -->
-				<skillLevel>
-					<value level="1">1</value> <!-- Guessed -->
-					<value level="2">1</value> <!-- Guessed -->
-					<value level="3">2</value> <!-- Guessed -->
-					<value level="4">2</value> <!-- Guessed -->
-					<value level="5">3</value> <!-- Guessed -->
-					<value level="6">3</value> <!-- Guessed -->
-					<value level="7">3</value> <!-- Guessed -->
-					<value level="8">4</value> <!-- Guessed -->
-					<value level="9">4</value> <!-- Guessed -->
-					<value level="10">4</value> <!-- Guessed -->
-					<value level="11">5</value> <!-- Guessed -->
-				</skillLevel>
-			</effect>
 		</effects>
-		<selfEffects>
-			<effect name="CallSkill">
-				<skillId>19442</skillId> <!-- Single Note - Triad -->
-				<skillLevel>1</skillLevel>
-				<skillLevelScaleTo>3</skillLevelScaleTo>
-			</effect>
-		</selfEffects>
 	</skill>
 	<skill id="11513" toLevel="11" name="Radiant Crash">
 		<!-- Attacks target and nearby enemies with $s1 Power added to P. Atk., for $s2, target's P. Def. and M. Def. -$s3. Requires a sword/ blunt/ dual sword/ dual blunt weapon to be equipped. Over-hit. Critical. -->
@@ -971,13 +932,6 @@
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
-		<selfEffects>
-			<effect name="CallSkill">
-				<skillId>19442</skillId> <!-- Single Note - Triad -->
-				<skillLevel>1</skillLevel>
-				<skillLevelScaleTo>3</skillLevelScaleTo>
-			</effect>
-		</selfEffects>
 	</skill>
 	<skill id="11514" toLevel="11" name="Resolving Bash">
 		<!-- Attacks target and nearby enemies with $s1 Power added to P. Atk., for $s2, P. Atk. and M. Atk. -$s3. Requires a sword/ blunt/ dual sword/ dual blunt weapon to be equipped. Over-hit. Critical. -->
@@ -1085,13 +1039,6 @@
 				<mode>PER</mode>
 			</effect>
 		</effects>
-		<selfEffects>
-			<effect name="CallSkill">
-				<skillId>19442</skillId> <!-- Single Note - Triad -->
-				<skillLevel>1</skillLevel>
-				<skillLevelScaleTo>3</skillLevelScaleTo>
-			</effect>
-		</selfEffects>
 	</skill>
 	<skill id="11515" toLevel="5" name="Confusion Bomber">
 		<!-- Curses target with darkness. For $s1, decreases Speed and Atk. Spd. by $s2. After $s3, detonates target to inflict damage nearby. Requires a sword, dual sword or dual blunt to be equipped. -->
@@ -2259,6 +2206,10 @@
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
 		<effects>
+			<effect name="MaxHp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
 			<effect name="DispelBySlotProbability">
 				<dispel>DANCE_OF_BLADESTORM;SONG_OF_CHAMPION;SONG_OF_EARTH;SONG_OF_HUNTER;SONG_OF_LIFE;SONG_OF_MEDITATION;SONG_OF_RENEWAL;SONG_OF_VENGEANCE;SONG_OF_VITALITY;SONG_OF_WARDING;SONG_OF_WATER;SONG_OF_WIND;DANCE_OF_BERSERKER;DANCE_OF_CONCENTRATION;DANCE_OF_FIRE;DANCE_OF_FURY;DANCE_OF_INSPIRATION;DANCE_OF_MYSTIC;DANCE_OF_SIREN;DANCE_OF_VAMPIRE;DANCE_OF_WARRIOR;SONG_OF_PURIFICATION;WISPERING_OF_BATTLE;SONG_OF_WINDSTORM;MOTION_OF_DEFENCE;BUFF_UNICORN_SERAPHIM;BUFF_QUEEN_OF_CAT;KNIGHT_AURA;DMG_SHIELD;AVOID_UP</dispel>
 				<rate>100</rate>
@@ -2277,10 +2228,6 @@
 			<effect name="ReduceCancel">
 				<amount>-40</amount>
 				<mode>DIFF</mode>
-			</effect>
-			<effect name="MaxHp">
-				<amount>30</amount>
-				<mode>PER</mode>
 			</effect>
 			<effect name="VampiricAttack">
 				<amount>8</amount>
@@ -3336,6 +3283,11 @@
 				<mode>PER</mode>
 			</effect>
 		</effects>
+		<endEffects>
+			<effect name="Confuse" abnormalTime="3">
+				<chance>100</chance>
+			</effect>
+		</endEffects>
 	</skill>
 	<skill id="11547" toLevel="10" name="Superior HP Recovery">
 		<!-- HP Recovery Bonus +$s1. STR +$s2. -->
@@ -4277,47 +4229,25 @@
 		<!-- M. Atk. +$s1, Skill Power +$s2 and Skill Cooldown -$s3. -->
 		<icon>icon.skill11581</icon>
 		<operateType>P</operateType>
-		<magicLvl>85</magicLvl>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">90</value>
+			<value level="3">95</value>
+			<value level="4">99</value>
+		</magicLvl>
 		<effects>
-			<effect name="MaxCp">
+			<effect name="MAtk">
 				<amount>
-					<value level="1">1.05</value>
-					<value level="2">1.06</value>
-					<value level="3">1.07</value>
-					<value level="4">1.10</value>
+					<value level="1">20</value>
+					<value level="2">25</value>
+					<value level="3">30</value>
+					<value level="4">35</value>
 				</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="MaxMp">
-				<amount>
-					<value level="1">1.05</value>
-					<value level="2">1.06</value>
-					<value level="3">1.07</value>
-					<value level="4">1.10</value>
-				</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="MpRegen">
-				<amount>
-					<value level="1">5</value>
-					<value level="2">6</value>
-					<value level="3">7</value>
-					<value level="4">10</value>
-				</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="PhysicalSkillPower">
-				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MaxHp">
-				<amount>
-					<value level="1">1.05</value>
-					<value level="2">1.06</value>
-					<value level="3">1.07</value>
-					<value level="4">1.10</value>
-				</amount>
-				<mode>DIFF</mode>
+			<effect name="MagicalSkillPower">
+				<amount>5</amount>
+				<mode>PER</mode>
 			</effect>
 			<effect name="Reuse">
 				<amount>
@@ -4338,15 +4268,6 @@
 				</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
-			</effect>
-			<effect name="SkillCriticalProbability">
-				<amount>
-					<value level="1">10</value>
-					<value level="2">20</value>
-					<value level="3">50</value>
-					<value level="4">100</value>
-				</amount>
-				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -4391,35 +4312,63 @@
 	<skill id="11583" toLevel="4" name="Grand Melody of Spirit">
 		<!-- Atk. Spd./ Casting Spd. +$s1 and Atk. Attribute +$s2. Activates the Single Note effect on you if Sforzando Sting, Radiant Crash or Resolving Bash is cast. -->
 		<icon>icon.skill11583</icon>
+		<operateType>P</operateType>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
 			<value level="4">99</value>
 		</magicLvl>
-		<operateType>P</operateType>
 		<effects>
-			<effect name="MagicalDefence">
+			<effect name="TriggerSkillBySkillAttack">
+				<skillId>19442</skillId> <!-- Single Note -->
+				<skillLevel>1</skillLevel>
+				<skillLevelScaleTo>3</skillLevelScaleTo>
+				<attackSkillId>19431</attackSkillId> <!--  Sforzando Sting -->
+				<chance>100</chance>
+				<targetType>SELF</targetType>
+			</effect>
+			<effect name="TriggerSkillBySkillAttack">
+				<skillId>19442</skillId> <!-- Single Note -->
+				<skillLevel>1</skillLevel>
+				<skillLevelScaleTo>3</skillLevelScaleTo>
+				<attackSkillId>11509</attackSkillId> <!-- Radiant Crash -->
+				<chance>100</chance>
+				<targetType>SELF</targetType>
+			</effect>
+			<effect name="TriggerSkillBySkillAttack">
+				<skillId>19442</skillId> <!-- Single Note -->
+				<skillLevel>1</skillLevel>
+				<skillLevelScaleTo>3</skillLevelScaleTo>
+				<attackSkillId>11510</attackSkillId> <!-- Resolving Bash -->
+				<chance>100</chance>
+				<targetType>SELF</targetType>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
 				<amount>
-					<value level="1">5</value>
-					<value level="2">7</value>
-					<value level="3">10</value>
+					<value level="1">10</value>
+					<value level="2">11</value>
+					<value level="3">13</value>
 					<value level="4">15</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PhysicalDefence">
+			<effect name="MagicalAttackSpeed">
 				<amount>
-					<value level="1">5</value>
-					<value level="2">7</value>
-					<value level="3">10</value>
+					<value level="1">10</value>
+					<value level="2">11</value>
+					<value level="3">13</value>
 					<value level="4">15</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PhysicalSkillPower">
-				<amount>5</amount>
-				<mode>PER</mode>
+			<effect name="AttackAttributeAdd">
+				<amount>
+					<value level="1">50</value>
+					<value level="2">60</value>
+					<value level="3">80</value>
+					<value level="4">100</value>
+				</amount>
 			</effect>
 		</effects>
 	</skill>
@@ -4466,26 +4415,35 @@
 		<!-- P. Atk./ M. Atk. +$s1 and P. Skill Power +$s2. Activates the Spectral Slash effect on the target if Trace of Twin Edges, Shadow Blade or Resolving Bash is cast. -->
 		<icon>icon.skill11585</icon>
 		<operateType>P</operateType>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">90</value>
+			<value level="3">95</value>
+			<value level="4">99</value>
+		</magicLvl>
 		<effects>
-			<effect name="TriggerSkillBySkill">
-				<castSkillId>11508</castSkillId><!-- Trace of Twin Edges -->
-				<skillId>19435</skillId> <!-- Spectral Slash -->
+			<effect name="TriggerSkillBySkillAttack">
+				<skillId>19435</skillId> <!-- Phantom Slasher -->
 				<skillLevel>1</skillLevel>
-				<chance>30</chance>
+				<skillLevelScaleTo>5</skillLevelScaleTo>
+				<attackSkillId>11508</attackSkillId> <!-- Trace of Twin Edges -->
+				<chance>100</chance>
 				<targetType>TARGET</targetType>
 			</effect>
-			<effect name="TriggerSkillBySkill">
-				<castSkillId>19426</castSkillId><!-- Shadow Blade -->
-				<skillId>19435</skillId> <!-- Spectral Slash -->
+			<effect name="TriggerSkillBySkillAttack">
+				<skillId>19435</skillId> <!-- Phantom Slasher -->
 				<skillLevel>1</skillLevel>
-				<chance>30</chance>
+				<skillLevelScaleTo>5</skillLevelScaleTo>
+				<attackSkillId>19426</attackSkillId> <!-- Shadow Blade -->
+				<chance>100</chance>
 				<targetType>TARGET</targetType>
 			</effect>
-			<effect name="TriggerSkillBySkill">
-				<castSkillId>11510</castSkillId><!-- Resolving Bash -->
-				<skillId>19435</skillId> <!-- Spectral Slash -->
+			<effect name="TriggerSkillBySkillAttack">
+				<skillId>19435</skillId> <!-- Phantom Slasher -->
 				<skillLevel>1</skillLevel>
-				<chance>30</chance>
+				<skillLevelScaleTo>5</skillLevelScaleTo>
+				<attackSkillId>11510</attackSkillId> <!-- Resolving Bash -->
+				<chance>100</chance>
 				<targetType>TARGET</targetType>
 			</effect>
 			<effect name="PAtk">
@@ -4579,6 +4537,9 @@
 			<value level="2">278</value>
 			<value level="3">306</value>
 			<value level="4">332</value>
+			<value level="5">358</value>
+			<value level="6">384</value>
+			<value level="7">410</value>
 		</mpConsume>
 		<castRange>900</castRange>
 		<hitTime>2000</hitTime>
@@ -4607,6 +4568,12 @@
 		<!-- PvP damage +$s1 and Max MP/ CP +$s2. -->
 		<icon>icon.skill11588</icon>
 		<operateType>P</operateType>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">90</value>
+			<value level="3">95</value>
+			<value level="4">99</value>
+		</magicLvl>
 		<effects>
 			<effect name="MaxMp">
 				<amount>
@@ -4615,6 +4582,18 @@
 					<value level="3">15</value>
 					<value level="4">20</value>
 				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>10</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -5003,7 +4982,7 @@
 			<effect name="MagicMpCost">
 				<amount>-10</amount>
 				<mode>PER</mode>
-				<magicType>22</magicType>
+				<magicType>2</magicType>
 			</effect>
 		</effects>
 	</skill>

@@ -45,7 +45,7 @@ public enum SkillOperateType
 	A2,
 	
 	/**
-	 * Active Skill with "Instant effect for target + Continuous effect for self"
+	 * Active Skill with "Instant effect for target + Continuous effect + Continuous effect for self"
 	 */
 	A3,
 	
@@ -163,6 +163,7 @@ public enum SkillOperateType
 		switch (this)
 		{
 			case A2:
+			case A3:
 			case A4:
 			case A5:
 			case A6:

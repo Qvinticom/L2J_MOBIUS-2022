@@ -133,7 +133,7 @@
 		<abnormalType>SONG_WEAPON</abnormalType> <!-- find proper name -->
 		<itemConsumeCount>5</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ores -->
-		<operateType>A2</operateType>
+		<operateType>A3</operateType>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<mpConsume>270</mpConsume>
@@ -168,11 +168,13 @@
 				<amount>25</amount>
 				<mode>PER</mode>
 			</effect>
+		</effects>
+		<selfEffects>
 			<effect name="CallSkill">
 				<skillId>19447</skillId> <!-- Glaring -->
 				<skillLevel>1</skillLevel>
 			</effect>
-		</effects>
+		</selfEffects>
 	</skill>
 	<skill id="19205" toLevel="1" name="Song of Archery">
 		<!-- Increases Bow/ Crossbow Resistance of all party members by 50% for 30 seconds. Consumes 5 Spirit Ore. -->
@@ -2276,8 +2278,7 @@
 			<value level="5">5</value>
 			<value level="6">6</value>
 			<value level="7">7</value>
-			<value level="7">8</value>
-			<value level="8">8</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="8">8</value>
 		</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>COUNTER_FLIP</abnormalType>
@@ -2350,8 +2351,7 @@
 			<value level="5">5</value>
 			<value level="6">6</value>
 			<value level="7">7</value>
-			<value level="7">8</value>
-			<value level="8">8</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="8">8</value>
 		</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>

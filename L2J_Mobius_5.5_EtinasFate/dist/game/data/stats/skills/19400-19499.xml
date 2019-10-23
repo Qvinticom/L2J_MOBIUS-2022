@@ -1153,10 +1153,6 @@
 			<effect name="CallSkill">
 				<skillId>19432</skillId> <!-- Swift Praise -->
 				<skillLevel>1</skillLevel>
-			</effect>
-			<effect name="CallSkill">
-				<skillId>19442</skillId> <!-- Single Note - Triad lvl 1 -->
-				<skillLevel>1</skillLevel>
 				<skillLevelScaleTo>3</skillLevelScaleTo>
 			</effect>
 		</selfEffects>
@@ -1280,6 +1276,12 @@
 					<item>BLUNT</item>
 				</weaponType>
 			</condition>
+			<condition name="OpCheckAbnormal">
+				<type>TRIAD</type>
+				<level>3</level>
+				<hasAbnormal>true</hasAbnormal>
+				<affectType>CASTER</affectType>
+			</condition>
 		</conditions>
 		<effects>
 			<effect name="PhysicalAttackWeaponBonus">
@@ -1322,8 +1324,14 @@
 		</effects>
 		<selfEffects>
 			<effect name="Reuse">
-				<amount>10</amount>
+				<amount>-10</amount>
 				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-10</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
 			</effect>
 			<effect name="CallSkill">
 				<skillId>19432</skillId> <!-- Swift Praise -->
@@ -1350,9 +1358,7 @@
 			<value level="10">10</value>
 			<value level="11">11</value>
 		</abnormalLvl>
-		<abnormalTime>20</abnormalTime>
 		<abnormalType>ULTIMATE_DEBUFF</abnormalType>
-		<activateRate>100</activateRate>
 		<castRange>100</castRange>
 		<coolTime>300</coolTime>
 		<effectRange>400</effectRange>
@@ -1383,8 +1389,7 @@
 			<value level="10">168</value>
 			<value level="11">172</value>
 		</mpConsume>
-		<operateType>A2</operateType>
-		<nextAction>ATTACK</nextAction>
+		<operateType>DA3</operateType>
 		<reuseDelay>7000</reuseDelay>
 		<effectPoint>
 			<value level="1">-687</value>
@@ -1404,6 +1409,7 @@
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -1412,6 +1418,16 @@
 					<item>SWORD</item>
 					<item>BLUNT</item>
 				</weaponType>
+			</condition>
+			<condition name="OpBlink">
+				<direction>BACK</direction>
+				<range>400</range>
+			</condition>
+			<condition name="OpCheckAbnormal">
+				<type>TRIAD</type>
+				<level>3</level>
+				<hasAbnormal>true</hasAbnormal>
+				<affectType>CASTER</affectType>
 			</condition>
 		</conditions>
 		<effects>
@@ -1436,28 +1452,8 @@
 					<value fromLevel="7" toLevel="11" fromSubLevel="3001" toSubLevel="3020">{0.99 - 0.006 * (subIndex - 1)}</value>
 				</pDefMod>
 			</effect>
-			<effect name="PhysicalAttackSpeed">
-				<amount>-50</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MagicalAttackSpeed">
-				<amount>-50</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PhysicalDefence">
-				<amount>-50</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MagicalDefence">
-				<amount>-50</amount>
-				<mode>PER</mode>
-			</effect>
 		</effects>
 		<selfEffects>
-			<effect name="Reuse">
-				<amount>10</amount>
-				<mode>PER</mode>
-			</effect>
 			<effect name="CallSkill">
 				<skillId>19432</skillId> <!-- Swift Praise -->
 				<skillLevel>1</skillLevel>
@@ -1466,6 +1462,46 @@
 				<dispel>TRIAD</dispel>
 			</effect>
 		</selfEffects>
+		<pveEffects>
+			<effect name="CallSkill">
+				<skillId>19522</skillId> <!-- Repeat Mark Somersault -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+					<value level="9">9</value>
+					<value level="10">10</value>
+					<value level="11">11</value>
+					<value level="12">12</value>
+					<value level="13">13</value>
+				</skillLevel>
+			</effect>
+		</pveEffects>
+		<pvpEffects>
+			<effect name="CallSkill">
+				<skillId>19522</skillId> <!-- Repeat Mark Somersault -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+					<value level="9">9</value>
+					<value level="10">10</value>
+					<value level="11">11</value>
+					<value level="12">12</value>
+					<value level="13">13</value>
+				</skillLevel>
+			</effect>
+		</pvpEffects>
 	</skill>
 	<skill id="19435" toLevel="5" name="Spectral Slash">
 		<!-- The Spectral Sword attacks the target with $s1 Power added to P. Atk. and decreases P. Def/ M. Def by $s3 for $s2. -->
@@ -1590,6 +1626,11 @@
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<conditions>
+			<condition name="OpCheckAbnormal">
+				<type>ULTIMATE_DEBUFF</type>
+				<level>2</level>
+				<hasAbnormal>true</hasAbnormal>
+			</condition>
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DUAL</item>
@@ -1650,6 +1691,12 @@
 				<chance>100</chance>
 			</effect>
 		</effects>
+		<selfEffects>
+			<effect name="CallSkill">
+				<skillId>15404</skillId> <!-- Unable to Target -->
+				<skillLevel>1</skillLevel>
+			</effect>
+		</selfEffects>
 	</skill>
 	<skill id="19437" toLevel="1" name="Vanguard of Baylor">
 		<!-- Summons the Dominant Flag. If used near the Dominant Flag, it applies the effects of Melody, Harmony, Drum, Ditty and Rhapsody buff skills to clan members and enhances Seal Mesmerizing skills (Lv. 4 or higher). Also makes the caster immune to Pull. Consumes 5 Spirit Ore. -->
@@ -1772,6 +1819,8 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<reuseDelay>1000</reuseDelay>
 		<effectPoint>-418</effectPoint>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="MagicalAttack">
 				<power>50</power>
@@ -1782,6 +1831,55 @@
 		<!-- P. Atk., P. Def, M. Atk. and M. Def +$s1 and P. Skill Power +$s2. Increases the chance to activate additional effect when the Rampageous Beat is cast. -->
 		<icon>icon.skill19441</icon>
 		<operateType>P</operateType>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">90</value>
+			<value level="3">95</value>
+			<value level="4">99</value>
+		</magicLvl>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">14</value>
+					<value level="2">16</value>
+					<value level="3">18</value>
+					<value level="4">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">14</value>
+					<value level="2">16</value>
+					<value level="3">18</value>
+					<value level="4">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">14</value>
+					<value level="2">16</value>
+					<value level="3">18</value>
+					<value level="4">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">14</value>
+					<value level="2">16</value>
+					<value level="3">18</value>
+					<value level="4">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="19442" toLevel="3" name="Single Note">
 		<!-- For $s1, P. Atk. and Atk. Spd. +$s2. -->
@@ -1822,6 +1920,12 @@
 			<effect name="PhysicalAttackSpeed">
 				<value level="1">3</value>
 				<value level="2">5</value>
+				<value level="3">10</value>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<value level="1">0</value>
+				<value level="2">0</value>
 				<value level="3">10</value>
 				<mode>PER</mode>
 			</effect>
@@ -2008,14 +2112,6 @@
 			<effect name="BlockAbnormalSlot">
 				<slot>DANCE_OF_BLADESTORM;SONG_OF_CHAMPION;SONG_OF_EARTH;SONG_OF_HUNTER;SONG_OF_LIFE;SONG_OF_MEDITATION;SONG_OF_RENEWAL;SONG_OF_VENGEANCE;SONG_OF_VITALITY;SONG_OF_WARDING;SONG_OF_WATER;SONG_OF_WIND;DANCE_OF_BERSERKER;DANCE_OF_CONCENTRATION;DANCE_OF_FIRE;DANCE_OF_FURY;DANCE_OF_INSPIRATION;DANCE_OF_MYSTIC;DANCE_OF_SIREN;DANCE_OF_VAMPIRE;DANCE_OF_WARRIOR;SONG_OF_PURIFICATION;WISPERING_OF_BATTLE;SONG_OF_WINDSTORM;MOTION_OF_DEFENCE;BUFF_UNICORN_SERAPHIM;BUFF_QUEEN_OF_CAT;KNIGHT_AURA;DMG_SHIELD;AVOID_UP</slot>
 			</effect>
-			<effect name="HpRegen">
-				<amount>75</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MpRegen">
-				<amount>100</amount>
-				<mode>PER</mode>
-			</effect>
 			<effect name="PhysicalEvasion">
 				<amount>5</amount>
 				<mode>DIFF</mode>
@@ -2023,6 +2119,14 @@
 			<effect name="MagicalEvasion">
 				<amount>5</amount>
 				<mode>DIFF</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>75</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>100</amount>
+				<mode>PER</mode>
 			</effect>
 			<effect name="MagicMpCost">
 				<amount>-22</amount>
@@ -2045,18 +2149,15 @@
 			<value level="1">1</value>
 			<value level="2">2</value>
 		</abnormalLvl>
-		<abnormalType>SONG_WEAPON</abnormalType>
-		<abnormalTime>300</abnormalTime>
+		<abnormalType>PD_UP_DMAGIC</abnormalType> <!-- NOT RETAIL: FIXME -->
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<effectPoint>707</effectPoint>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
-		<isTriggeredSkill>true</isTriggeredSkill>
 		<affectRange>2000</affectRange>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
-		<affectScope>PARTY</affectScope>
-		<affectObject>FRIEND</affectObject>
+		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="PAtk">
 				<amount>15</amount>
@@ -2065,6 +2166,13 @@
 			<effect name="MAtk">
 				<amount>15</amount>
 				<mode>PER</mode>
+			</effect>
+			<effect name="TriggerSkillBySkill">
+				<castSkillId>19204</castSkillId>
+				<skillId>19447</skillId> <!-- Glaring -->
+				<skillLevel>2</skillLevel>
+				<chance>100</chance>
+				<targetType>SELF</targetType>
 			</effect>
 		</effects>
 	</skill>
