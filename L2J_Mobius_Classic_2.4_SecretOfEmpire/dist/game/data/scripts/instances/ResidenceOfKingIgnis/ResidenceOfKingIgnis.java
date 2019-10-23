@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package instances.ResidenceOfIgnis;
+package instances.ResidenceOfKingIgnis;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -36,7 +36,7 @@ import instances.AbstractInstance;
  * @TODO: Check skill 50050 - working, but I dont know if is correct.
  * @TODO: Ignis other skills - skills are implemented, but I dont know if is correct.
  */
-public class ResidenceOfQueenIgnis extends AbstractInstance
+public class ResidenceOfKingIgnis extends AbstractInstance
 {
 	// NPCs
 	private static final int TARA = 34047;
@@ -53,12 +53,12 @@ public class ResidenceOfQueenIgnis extends AbstractInstance
 	private static SkillHolder FIRE_RAG_8 = new SkillHolder(50050, 8);
 	private static SkillHolder FIRE_RAG_9 = new SkillHolder(50050, 9);
 	private static SkillHolder FIRE_RAG_10 = new SkillHolder(50050, 10);
-	// Misc
 	private static SkillHolder FREYA_SAFETY_ZONE = new SkillHolder(50052, 1); // Just for an effect
+	// Misc
 	private static final int TEMPLATE_ID = 195;
 	private final Map<PlayerInstance, Integer> _playerFireRage = new ConcurrentHashMap<>();
 	
-	public ResidenceOfQueenIgnis()
+	public ResidenceOfKingIgnis()
 	{
 		super(TEMPLATE_ID);
 		addStartNpc(TARA);
@@ -241,6 +241,6 @@ public class ResidenceOfQueenIgnis extends AbstractInstance
 	
 	public static void main(String[] args)
 	{
-		new ResidenceOfQueenIgnis();
+		new ResidenceOfKingIgnis();
 	}
 }
