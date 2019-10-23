@@ -199,13 +199,26 @@
 	<item id="48417" name="Enhanced Ruler's Authority" type="Armor">
 		<!-- Enhanced Ruler's Authority. Max CP/ HP/ MP +1000, Weight +25600, Damage +10%, Received Damage -10%, Damage Reflect Resistance +10%, Fixed Damage Resistance +10%, Inventory Slots +36, and all Attribute defenses +20. -->
 		<set name="icon" val="icon.grankain_powerbelt2" />
+		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="waist" />
+		<set name="crystal_type" val="R" />
+		<set name="weight" val="440" />
+		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="1" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="GOLD" />
-		<set name="weight" val="5" />
+		<set name="commissionItemType" val="BELT" />
+		<skills>
+			<skill id="15145" level="2" /> <!-- Ruler's Authority -->
+		</skills>
 		<stats>
-			<stat type="pDef">100</stat>
+			<stat type="pDef">50</stat>
+			<stat type="fireRes">15</stat>
+			<stat type="waterRes">15</stat>
+			<stat type="windRes">15</stat>
+			<stat type="earthRes">15</stat>
+			<stat type="holyRes">15</stat>
+			<stat type="darkRes">15</stat>
 		</stats>
 	</item>
 	<item id="48418" name="Authority Ornament" type="EtcItem">
