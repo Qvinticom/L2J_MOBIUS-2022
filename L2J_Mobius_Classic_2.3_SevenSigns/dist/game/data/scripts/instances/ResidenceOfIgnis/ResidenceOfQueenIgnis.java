@@ -16,6 +16,9 @@
  */
 package instances.ResidenceOfIgnis;
 
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -38,11 +41,8 @@ public class ResidenceOfQueenIgnis extends AbstractInstance
 	// NPCs
 	private static final int TARA = 34047;
 	private static final int FREYA = 29109;
-	
-	// RAID
 	private static final int IGNIS = 29105;
-	
-	// SKILLS
+	// Skills
 	private static SkillHolder FIRE_RAG_1 = new SkillHolder(50050, 1);
 	private static SkillHolder FIRE_RAG_2 = new SkillHolder(50050, 2);
 	private static SkillHolder FIRE_RAG_3 = new SkillHolder(50050, 3);
@@ -53,10 +53,10 @@ public class ResidenceOfQueenIgnis extends AbstractInstance
 	private static SkillHolder FIRE_RAG_8 = new SkillHolder(50050, 8);
 	private static SkillHolder FIRE_RAG_9 = new SkillHolder(50050, 9);
 	private static SkillHolder FIRE_RAG_10 = new SkillHolder(50050, 10);
-	
-	private static SkillHolder FREYA_SAFETY_ZONE = new SkillHolder(50052, 1); // Just for an effect
 	// Misc
+	private static SkillHolder FREYA_SAFETY_ZONE = new SkillHolder(50052, 1); // Just for an effect
 	private static final int TEMPLATE_ID = 195;
+	private final Map<PlayerInstance, Integer> _playerFireRage = new ConcurrentHashMap<>();
 	
 	public ResidenceOfQueenIgnis()
 	{
@@ -76,58 +76,26 @@ public class ResidenceOfQueenIgnis extends AbstractInstance
 			case "ENTER":
 			{
 				enterInstance(player, npc, TEMPLATE_ID);
-				player.getVariables().set("REMOVE_FIRE_RAGE", 0);
 				break;
 			}
 			case "REMOVE_FIRE_RAGE":
 			{
-				if (player.isAffectedBySkill(50050))
+				if (player.isAffectedBySkill(FIRE_RAG_1))
 				{
-					if (player.getVariables().getInt("REMOVE_FIRE_RAGE") == 0)
+					final int playerFireRage = _playerFireRage.getOrDefault(player, 0);
+					if (playerFireRage < 5)
 					{
-						player.getVariables().set("REMOVE_FIRE_RAGE", 1);
-						player.stopSkillEffects(true, 50050);
+						_playerFireRage.put(player, playerFireRage + 1);
+						player.stopSkillEffects(true, FIRE_RAG_1.getSkillId());
 						player.doCast(FREYA_SAFETY_ZONE.getSkill());
 						npc.broadcastSay(ChatType.NPC_SHOUT, "Bless with you. Lets finish fight!");
+						break;
 					}
-					else if (player.getVariables().getInt("REMOVE_FIRE_RAGE") == 1)
-					{
-						player.getVariables().set("REMOVE_FIRE_RAGE", 2);
-						player.stopSkillEffects(true, 50050);
-						player.doCast(FREYA_SAFETY_ZONE.getSkill());
-						npc.broadcastSay(ChatType.NPC_SHOUT, "Bless with you. Lets finish fight!");
-					}
-					else if (player.getVariables().getInt("REMOVE_FIRE_RAGE") == 2)
-					{
-						player.getVariables().set("REMOVE_FIRE_RAGE", 3);
-						player.stopSkillEffects(true, 50050);
-						player.doCast(FREYA_SAFETY_ZONE.getSkill());
-						npc.broadcastSay(ChatType.NPC_SHOUT, "Bless with you. Lets finish fight!");
-					}
-					else if (player.getVariables().getInt("REMOVE_FIRE_RAGE") == 3)
-					{
-						player.getVariables().set("REMOVE_FIRE_RAGE", 4);
-						player.stopSkillEffects(true, 50050);
-						player.doCast(FREYA_SAFETY_ZONE.getSkill());
-						npc.broadcastSay(ChatType.NPC_SHOUT, "Bless with you. Lets finish fight!");
-					}
-					else if (player.getVariables().getInt("REMOVE_FIRE_RAGE") == 4)
-					{
-						player.getVariables().set("REMOVE_FIRE_RAGE", 5);
-						player.stopSkillEffects(true, 50050);
-						player.doCast(FREYA_SAFETY_ZONE.getSkill());
-						npc.broadcastSay(ChatType.NPC_SHOUT, "Bless with you. Lets finish fight!");
-					}
-					else if (player.getVariables().getInt("REMOVE_FIRE_RAGE") == 5)
-					{
-						npc.broadcastSay(ChatType.NPC_SHOUT, "You cannot use my power again.");
-						player.sendMessage("Freya: You cannot use my power again.");
-					}
+					npc.broadcastSay(ChatType.NPC_SHOUT, "You cannot use my power again.");
+					player.sendMessage("Freya: You cannot use my power again.");
+					break;
 				}
-				else
-				{
-					npc.broadcastSay(ChatType.NPC_SHOUT, "I help you only when you affected by Fire Rage skill.");
-				}
+				npc.broadcastSay(ChatType.NPC_SHOUT, "I help you only when you affected by Fire Rage skill.");
 				break;
 			}
 			case "CAST_FIRE_RAGE_1":
@@ -210,7 +178,6 @@ public class ResidenceOfQueenIgnis extends AbstractInstance
 				}
 				break;
 			}
-			
 		}
 		return null;
 	}
@@ -267,6 +234,7 @@ public class ResidenceOfQueenIgnis extends AbstractInstance
 		final Instance world = npc.getInstanceWorld();
 		if (world != null)
 		{
+			_playerFireRage.clear();
 			world.finishInstance();
 		}
 		return super.onKill(npc, player, isSummon);
