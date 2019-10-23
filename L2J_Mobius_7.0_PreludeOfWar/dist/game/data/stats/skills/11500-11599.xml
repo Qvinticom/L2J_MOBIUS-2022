@@ -479,7 +479,7 @@
 		</effects>
 	</skill>
 	<skill id="11509" toLevel="13" name="Radiant Crash">
-		<!-- Strikes the target with $s1 power, their P./ M. Def. -$s3 for $s2 Requires a sword, a blunt weapon, a dual sword, or a dual blunt weapon. Critical. Over-hit. -->
+		<!-- Strikes the target with 15338 power, their P./ M. Def. -40% for 20 seconds Requires a sword, a blunt weapon, a dual sword, or a dual blunt weapon. Critical. Over-hit. -->
 		<icon>icon.skill11514</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -522,19 +522,19 @@
 			<value level="13">109</value>
 		</magicLvl>
 		<mpConsume>
-			<value level="1">50</value>
-			<value level="2">51</value>
-			<value level="3">53</value>
-			<value level="4">55</value>
-			<value level="5">57</value>
-			<value level="6">59</value>
-			<value level="7">60</value>
-			<value level="8">62</value>
-			<value level="9">64</value>
-			<value level="10">66</value>
-			<value level="11">68</value>
-			<value level="12">70</value>
-			<value level="13">72</value>
+			<value level="1">46</value>
+			<value level="2">47</value>
+			<value level="3">48</value>
+			<value level="4">50</value>
+			<value level="5">52</value>
+			<value level="6">53</value>
+			<value level="7">55</value>
+			<value level="8">57</value>
+			<value level="9">59</value>
+			<value level="10">61</value>
+			<value level="11">63</value>
+			<value level="12">65</value>
+			<value level="13">67</value>
 		</mpConsume>
 		<operateType>A2</operateType>
 		<nextAction>ATTACK</nextAction>
@@ -605,7 +605,7 @@
 		</effects>
 	</skill>
 	<skill id="11510" toLevel="13" name="Resolving Bash">
-		<!-- Strikes the target with $s1 power, their P./ M. Atk. -$s3 for $s2 Requires a sword, a blunt weapon, a dual sword, or a dual blunt weapon. Critical. Over-hit. -->
+		<!-- Strikes the target with 15338 power, their P./ M. Atk. -40% for 20 seconds Requires a sword, a blunt weapon, a dual sword, or a dual blunt weapon. Critical. Over-hit. -->
 		<icon>icon.skill11509</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -857,9 +857,23 @@
 		</effects>
 	</skill>
 	<skill id="11513" toLevel="13" name="Radiant Crash">
-		<!-- Attacks the target and nearby enemies with $s1 power, their P./ M. Def. -$s3 for $s2 Requires a sword, a blunt weapon, a dual sword, or a dual blunt weapon. Critical. Over-hit. -->
+		<!-- (AOE) Attacks the target and nearby enemies with $s1 power, their P./ M. Def. -$s3 for $s2 Requires a sword, a blunt weapon, a dual sword, or a dual blunt weapon. Critical. Over-hit. -->
 		<icon>icon.skill11514</icon>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+			<value level="5">5</value>
+			<value level="6">6</value>
+			<value level="7">7</value>
+			<value level="8">8</value>
+			<value level="9">9</value>
+			<value level="10">10</value>
+			<value level="11">11</value>
+			<value level="12">12</value>
+			<value level="13">13</value>
+		</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>ULTIMATE_DEBUFF</abnormalType>
 		<activateRate>
@@ -969,16 +983,26 @@
 				<amount>-40</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PhysicalEvasion">
-				<amount>-15</amount>
-				<mode>DIFF</mode>
-			</effect>
 		</effects>
 	</skill>
 	<skill id="11514" toLevel="13" name="Resolving Bash">
-		<!-- Attacks the target and nearby enemies with $s1 power, their P./ M. Atk. -$s3 for $s2 Requires a sword, a blunt weapon, a dual sword, or a dual blunt weapon. Critical. Over-hit. -->
+		<!-- (AOE) Attacks the target and nearby enemies with $s1 power, their P./ M. Atk. -$s3 for $s2 Requires a sword, a blunt weapon, a dual sword, or a dual blunt weapon. Critical. Over-hit. -->
 		<icon>icon.skill11509</icon>
-		<abnormalLvl>5</abnormalLvl>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+			<value level="5">5</value>
+			<value level="6">6</value>
+			<value level="7">7</value>
+			<value level="8">8</value>
+			<value level="9">9</value>
+			<value level="10">10</value>
+			<value level="11">11</value>
+			<value level="12">12</value>
+			<value level="13">13</value>
+		</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>CRITICAL_PROB_DOWN</abnormalType>
 		<activateRate>
@@ -4446,7 +4470,23 @@
 				<skillId>19442</skillId> <!-- Single Note -->
 				<skillLevel>1</skillLevel>
 				<skillLevelScaleTo>3</skillLevelScaleTo>
+				<attackSkillId>11513</attackSkillId> <!-- Radiant Crash (AOE) -->
+				<chance>100</chance>
+				<targetType>SELF</targetType>
+			</effect>
+			<effect name="TriggerSkillBySkillAttack">
+				<skillId>19442</skillId> <!-- Single Note -->
+				<skillLevel>1</skillLevel>
+				<skillLevelScaleTo>3</skillLevelScaleTo>
 				<attackSkillId>11510</attackSkillId> <!-- Resolving Bash -->
+				<chance>100</chance>
+				<targetType>SELF</targetType>
+			</effect>
+			<effect name="TriggerSkillBySkillAttack">
+				<skillId>19442</skillId> <!-- Single Note -->
+				<skillLevel>1</skillLevel>
+				<skillLevelScaleTo>3</skillLevelScaleTo>
+				<attackSkillId>11514</attackSkillId> <!-- Resolving Bash (AOE) -->
 				<chance>100</chance>
 				<targetType>SELF</targetType>
 			</effect>

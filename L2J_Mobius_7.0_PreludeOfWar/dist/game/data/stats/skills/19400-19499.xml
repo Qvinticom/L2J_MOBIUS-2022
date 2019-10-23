@@ -774,8 +774,9 @@
 		</effects>
 	</skill>
 	<skill id="19426" toLevel="13" name="Shadow Blade">
-		<!-- Strikes the target with $s1 power, their P./ M. Def. -$s3 for $s2 Requires a sword, a blunt weapon, a dual sword, or a dual blunt weapon. Critical. Over-hit. -->
+		<!-- Strikes the target with 15338 power, their P./ M. Def. -40% for 20 seconds Requires a sword, a blunt weapon, a dual sword, or a dual blunt weapon. Critical. Over-hit. -->
 		<icon>icon.skill11510</icon>
+		<operateType>A2</operateType>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>ULTIMATE_DEBUFF</abnormalType>
@@ -817,7 +818,6 @@
 			<value level="12">70</value>
 			<value level="13">72</value>
 		</mpConsume>
-		<operateType>A2</operateType>
 		<nextAction>ATTACK</nextAction>
 		<reuseDelay>7000</reuseDelay>
 		<effectPoint>
@@ -884,16 +884,9 @@
 				<mode>PER</mode>
 			</effect>
 		</effects>
-		<selfEffects>
-			<effect name="CallSkill">
-				<skillId>19442</skillId> <!-- Single Note - Triad -->
-				<skillLevel>1</skillLevel>
-				<skillLevelScaleTo>3</skillLevelScaleTo>
-			</effect>
-		</selfEffects>
 	</skill>
 	<skill id="19427" toLevel="9" name="Hands of Einhasad">
-		<!-- For $s1, P./ M. Atk. +$s2, attack range +$s3. Normal attacks deal additional holy damage with $s4 power. -->
+		<!-- For 5 min., P./ M. Atk. +13%, attack range +150. Normal attacks deal additional holy damage with 50 power. -->
 		<icon>icon.skill19427</icon>
 		<abnormalTime>300</abnormalTime>
 		<effectPoint>566</effectPoint>
@@ -947,15 +940,15 @@
 			</effect>
 			<effect name="PAtk">
 				<amount>
-					<value level="1">5</value>
-					<value level="2">6</value>
-					<value level="3">7</value>
-					<value level="4">9</value>
-					<value level="5">10</value>
-					<value level="6">11</value>
-					<value level="7">13</value>
-					<value level="8">15</value>
-					<value level="9">17</value>
+					<value level="1">13</value>
+					<value level="2">14</value>
+					<value level="3">15</value>
+					<value level="4">17</value>
+					<value level="5">18</value>
+					<value level="6">19</value>
+					<value level="7">21</value>
+					<value level="8">23</value>
+					<value level="9">25</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1014,7 +1007,7 @@
 		<mpConsume>252</mpConsume>
 	</skill>
 	<skill id="19430" toLevel="13" name="Resonant Halo">
-		<!-- Increases P. Atk. by $s1 and Atk. Spd. by $s2 and allows casting Radiant Crash/ Resolving Bash over an area, which increases MP Consumption by $s3. Using the skill again cancels the effect. -->
+		<!-- Increases P. Atk. by 300 and Atk. Spd. by 5% and allows casting Radiant Crash/ Resolving Bash over an area, which increases MP Consumption by 35%. Using the skill again cancels the effect. -->
 		<icon>icon.skill19430</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1104,7 +1097,7 @@
 		</effects>
 	</skill>
 	<skill id="19431" toLevel="11" name="Sforzando Sting">
-		<!-- Rushes at the target to reduce Speed by $s2 for $s1 and gives the Swift Praise effect to allies. Requires a sword, blunt weapon, dual sword or dual blunt weapon to be equipped. -->
+		<!-- Rushes at the target to reduce Speed by 100 for 4 sec. and gives the Swift Praise effect to allies. Requires a sword, blunt weapon, dual sword or dual blunt weapon to be equipped. -->
 		<icon>icon.skill19431</icon>
 		<castRange>600</castRange>
 		<coolTime>200</coolTime>
@@ -1209,7 +1202,7 @@
 			<effect name="CallSkill">
 				<skillId>19432</skillId> <!-- Swift Praise -->
 				<skillLevel>1</skillLevel>
-				<skillLevelScaleTo>3</skillLevelScaleTo>
+				<skillLevelScaleTo>2</skillLevelScaleTo>
 			</effect>
 		</selfEffects>
 	</skill>
@@ -1265,7 +1258,7 @@
 		</effects>
 	</skill>
 	<skill id="19433" toLevel="13" name="Alluring Conduct">
-		<!-- Attacks the target and nearby enemies with $s1 power. For $s2, their Atk. Spd./ Casting Spd./ P. Def./ M. Def. -$s3, Skill Cooldown +$s4. Applies the Swift Praise effect. Can be used in the Triad state. Requires a sword, a blunt weapon, a dual sword, or a dual blunt weapon. -->
+		<!-- Attacks the target and nearby enemies with 24336 power. For 12 seconds, their Atk. Spd./ Casting Spd./ P. Def./ M. Def. -50%][10%, Skill Cooldown +. Applies the Swift Praise effect. Can be used in the Triad state. Requires a sword, a blunt weapon, a dual sword, or a dual blunt weapon. -->
 		<icon>icon.skill19433</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1402,7 +1395,8 @@
 			</effect>
 			<effect name="CallSkill">
 				<skillId>19432</skillId> <!-- Swift Praise -->
-				<skillLevel>2</skillLevel>
+				<skillLevel>1</skillLevel>
+				<skillLevelScaleTo>2</skillLevelScaleTo>
 			</effect>
 			<effect name="DispelBySlotMyself">
 				<dispel>TRIAD</dispel>
@@ -1410,7 +1404,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="19434" toLevel="13" name="Repeat Mark Somersault">
-		<!-- Strikes the target with $s1 power. For $s2, their P./ M. Def. -$s3, Speed +$s4. Moves the character back for $s5. Can be used in the Triad state. Requires a sword, a blunt weapon, a dual sword, or a dual blunt weapon. -->
+		<!-- Strikes the target with 21701 power. For 8 seconds, their P./ M. Def. -20%][150, Speed +400. Moves the character back for . Can be used in the Triad state. Requires a sword, a blunt weapon, a dual sword, or a dual blunt weapon. -->
 		<icon>icon.skill19434</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1517,10 +1511,6 @@
 			</effect>
 		</effects>
 		<selfEffects>
-			<effect name="CallSkill">
-				<skillId>19432</skillId> <!-- Swift Praise -->
-				<skillLevel>1</skillLevel>
-			</effect>
 			<effect name="DispelBySlotMyself">
 				<dispel>TRIAD</dispel>
 			</effect>
