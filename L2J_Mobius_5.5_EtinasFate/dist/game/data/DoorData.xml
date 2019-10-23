@@ -18278,4 +18278,52 @@
 		<status showHp="false" />
 		<openStatus openMethod="BY_ITEM" default="close" />
 	</door>
+	<door id="12230702" name="Etina_outer_door1">
+		<nodes nodeZ="3048">
+			<node x="-245663" y="188024" />
+			<node x="-245663" y="188024" />
+			<node x="-245663" y="188024" />
+			<node x="-245663" y="188024" />
+		</nodes>
+		<location x="-245663" y="188024" z="3048" height="150" />
+		<stats basePDef="644" baseMDef="518" baseHpMax="169710" />
+		<status showHp="false" />
+		<openStatus default="close" />
+	</door>
+	<door id="12230704" name="Etina_outer_door2">
+		<nodes nodeZ="3048">
+			<node x="-245851" y="188024" />
+			<node x="-245851" y="188024" />
+			<node x="-245851" y="188024" />
+			<node x="-245851" y="188024" />
+		</nodes>
+		<location x="-245851" y="188024" z="3048" height="150" />
+		<stats basePDef="644" baseMDef="518" baseHpMax="169710" />
+		<status showHp="false" />
+		<openStatus default="close" />
+	</door>
+	<door id="12230802" name="Etina_inner_door1">
+		<nodes nodeZ="3046">
+			<node x="-245681" y="189710" />
+			<node x="-245681" y="189710" />
+			<node x="-245681" y="189710" />
+			<node x="-245681" y="189710" />
+		</nodes>
+		<location x="-245681" y="189710" z="3046" height="150" />
+		<stats basePDef="644" baseMDef="518" baseHpMax="169710" />
+		<status showHp="false" />
+		<openStatus default="close" />
+	</door>
+	<door id="12230804" name="Etina_inner_door2">
+		<nodes nodeZ="3047">
+			<node x="-245844" y="189710" />
+			<node x="-245844" y="189710" />
+			<node x="-245844" y="189710" />
+			<node x="-245844" y="189710" />
+		</nodes>
+		<location x="-245844" y="189710" z="3047" height="150" />
+		<stats basePDef="644" baseMDef="518" baseHpMax="169710" />
+		<status showHp="false" />
+		<openStatus default="close" />
+	</door>
 </list>
