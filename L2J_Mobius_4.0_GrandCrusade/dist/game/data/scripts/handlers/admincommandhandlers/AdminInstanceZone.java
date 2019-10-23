@@ -54,7 +54,7 @@ public class AdminInstanceZone implements IAdminCommandHandler
 				InstanceManager.getInstance().deleteInstanceTime(player, instanceId);
 				BuilderUtil.sendSysMessage(activeChar, "Instance zone " + name + " cleared for player " + player.getName());
 				player.sendMessage("Admin cleared instance zone " + name + " for you");
-				
+				display(activeChar, activeChar); // for refreshing instance window
 				return true;
 			}
 			catch (Exception e)

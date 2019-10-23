@@ -109,7 +109,7 @@
 			<skill id="4416" level="10" /> <!-- Dragons -->
 		</skillList>
 	</npc>
-	<npc id="29105" level="82" type="RaidBoss" name="King Ignis">
+	<npc id="29105" level="82" type="RaidBoss" name="King Ignis" title="Flame Spirit King">
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<acquire exp="806880000" sp="21785760" raidPoints="0" />
@@ -131,6 +131,8 @@
 			<skill id="50079" level="1" /> <!-- 82 Lv. Raid Boss -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5620" level="2" /> <!-- Melee Attack Vulnerability -->
+			<skill id="50069" level="1" /> <!-- Fire Breath -->
+			<skill id="50070" level="1" /> <!-- Tears of Fire -->
 		</skillList>
 		<dropLists>
 			<drop>

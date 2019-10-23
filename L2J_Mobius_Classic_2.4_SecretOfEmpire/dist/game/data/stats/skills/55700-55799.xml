@@ -3,9 +3,26 @@
 	<skill id="55700" toLevel="1" name="Scroll: Dance of Fire">
 		<!-- For 10 min., P. Critical Damage +35%. -->
 		<icon>icon.skill0274</icon>
-		<operateType>A1</operateType>
+		<abnormalLvl>4</abnormalLvl>
+		<abnormalTime>600</abnormalTime>
+		<abnormalType>CRITICAL_DMG_UP</abnormalType>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>29014</itemConsumeId>
 		<hitTime>2500</hitTime>
 		<reuseDelay>3000</reuseDelay>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A2</operateType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="CriticalDamage">
+				<amount>35</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55701" toLevel="1" name="Release Agathion's Seal - Sin Eater">
 		<!-- Summon Sin Eater Agathion. -->
@@ -108,6 +125,7 @@
 		<!-- Brooch radiates bright light. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i03</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
 		<abnormalVisualEffect>AVE_BROOCH</abnormalVisualEffect>
 		<abnormalType>AVE_BROOCH</abnormalType>
 	</skill>

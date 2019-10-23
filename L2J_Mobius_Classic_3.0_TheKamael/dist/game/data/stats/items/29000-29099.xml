@@ -243,12 +243,21 @@
 	</item>
 	<item id="29014" name="Scroll: Dance of Fire" type="EtcItem">
 		<!-- Grants the effect of the Dance of Fire. Duration: 10 minutes. -->
-		<set name="icon" val="BranchIcon.Icon.etc_g_bm_dance_scroll_i00" />
+		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="55700" level="1" /> <!-- Scroll: Dance of Fire -->
+		</skills>
 	</item>
 	<item id="29015" name="Scroll: Enchant Weapon (D-grade)" type="EtcItem">
 		<!-- When enchanted, P. Atk. +4 for D-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dual swords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./ M. Atk. bonus is doubled. -->
