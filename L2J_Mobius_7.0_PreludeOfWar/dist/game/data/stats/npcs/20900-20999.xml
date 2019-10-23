@@ -2218,14 +2218,16 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
+		<acquire exp="16843" sp="4" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<attack physical="541.44774" magical="369.73862" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="262.19426" magical="191.86238" />
+			<vitals hp="2037.224535" hpRegen="7.5" mp="1107.826" mpRegen="2.7" />
+			<attack physical="521.12391" magical="355.86007" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="257.34267" magical="188.3122" />
 			<speed>
 				<walk ground="80" />
 				<run ground="174" />
 			</speed>
-			<hitTime>410</hitTime>
+			<hitTime>390</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
@@ -2237,9 +2239,31 @@
 		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450" />
 		<collision>
-			<radius normal="10" />
-			<height normal="32" />
+			<radius normal="12" />
+			<height normal="33" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="5308" min="1" max="1" chance="0.003" /> <!-- Sealed Dark Crystal Robe -->
+				<item id="57" min="60" max="141" chance="70" /> <!-- Adena -->
+				<item id="45929" min="1" max="3" chance="0.003" /> <!-- Spirit Stone -->
+				<item id="36559" min="1" max="1" chance="0.0009" /> <!-- Accessory Gem (High-grade) -->
+				<item id="45930" min="1" max="1" chance="0.0009" /> <!-- Mid-grade Spirit Stone -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<spoil>
+				<item id="36557" min="1" max="1" chance="0.3" /> <!-- Accessory Gem -->
+				<item id="36558" min="1" max="1" chance="0.075" /> <!-- Accessory Gem (Mid-grade) -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="20976" level="62" type="Monster" name="Spiteful Soul Warrior">
 		<!-- Confirmed CT2.5 -->

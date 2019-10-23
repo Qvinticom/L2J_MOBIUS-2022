@@ -3409,16 +3409,16 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="39686" sp="9" />
+		<acquire exp="16843" sp="4" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2089" hpRegen="7.5" mp="1127" mpRegen="2.7" />
-			<attack physical="541.44774" magical="369.73862" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="262.19426" magical="191.86238" />
+			<vitals hp="2037.224535" hpRegen="7.5" mp="1107.826" mpRegen="2.7" />
+			<attack physical="521.12391" magical="355.86007" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="257.34267" magical="188.3122" />
 			<speed>
 				<walk ground="80" />
 				<run ground="174" />
 			</speed>
-			<hitTime>410</hitTime>
+			<hitTime>390</hitTime>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
