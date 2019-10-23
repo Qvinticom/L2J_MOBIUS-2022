@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="27700" name="Eva's Earring - Stage 5" type="Armor">
-		<!-- MP +98, Water Resistance +90, DEX +5, WIT +5, MEN +5, Vampiric effect 7%, MP Consumption -7%, P. Def. +14%, M. Def. +19%, Physical and Magic Atk. Abnormal Status Reflection +18%, Reflect Damage Magic chance 18%, Physical Skill Evasion 9%, P. Skill Power +4%, Movement Speed +4, Received Heal +13%, Recovery Skill Power +188 effect, P. Atk. Resistance to the following abnormal statuses: Paralysis/ Bluff/ Aerial Yoke +18%, Sleep/ Change +14%, Stun/ Knock Back/ Pull/ Danger Zone/ MEN +38%, Petrification Bleed +48%. When used P. Def. and M. Def. are reduced by 40% and PvP Def. by 15% and all resistances by -150 for 40 sec. -->
+		<!-- MP + 98, Water Resistance + 90, DEX + 5, WIT + 5, MEN + 5, Vampiric effect 7%, MP Consumption -7%, P. Def + 14%, M. Def + 19%, Physical and Magic Atk. Abnormal Status Reflection + 18%, Reflect Damage Magic chance 18%, Physical Skill Evasion 9%, P. Skill Power + 4%, Movement Speed + 4, Received Heal + 13%, Recovery Skill Power + 188 effect, P. Atk. Resistance to the following abnormal statuses: Paralysis/Bluff/Aerial Yoke + 18%, Sleep/Change + 14%, Stun/Knock Back/Pull/Danger Zone/MEN + 38%, Petrification Bleed + 48%. When used P. Def. and M. Def are reduced by 40% and PvP Def. by 15% and all resistances by -150 for 40 seconds. -->
 		<set name="icon" val="BranchIcon.Icon.earring_of_eva_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -12,9 +12,10 @@
 		<set name="commissionItemType" val="EARRING" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="46785" level="1" type="ON_EQUIP" /> <!-- Equip Eva's Earring - Earring Stage 5 -->
-			<skill id="46786" level="1" type="ON_UNEQUIP" /> <!-- Unequip Eva's Earring - Earring Stage 5 -->
-			<skill id="27656" level="1" /> <!-- Eva's Earring -->
+			<skill id="46785" level="1" type="ON_EQUIP" />
+			<skill id="46786" level="1" type="ON_UNEQUIP" />
+			<skill id="27652" level="5" /> <!-- Eva's Earring -->
+			<skill id="27752" level="5" />
 		</skills>
 		<stats>
 			<stat type="mDef">320.0</stat>
@@ -22,7 +23,7 @@
 		</stats>
 	</item>
 	<item id="27701" name="Eva's Earring - Stage 6" type="Armor">
-		<!-- MP +102, Water Resistance +100, DEX +5, WIT +5, MEN +5, Vampiric effect 8%, MP Consumption -7%, P. Def. +15%, M. Def. +20%, Physical and Magic Atk. Abnormal Status Reflection +20%, Reflect Damage Magic chance 20%, Physical Skill Evasion 10%, P. Skill Power +5%, Movement Speed +5, Received Heal +15%, Recovery Skill Power +192 effect, P. Atk. Resistance to the following abnormal statuses: Paralysis/ Bluff/ Aerial Yoke +20%, Sleep/ Change +15%, Stun/ Knock Back/ Pull/ Danger Zone/ MEN +40%, Petrification Bleed +50%. When used P. Def. and M. Def. are reduced by 50% and PvP Def. by 20% and all resistances by -300 for 40 sec. -->
+		<!-- MP + 102, Water Resistance + 100, DEX + 5, WIT + 5, MEN + 5, Vampiric effect 8%, MP Consumption -7%, P. Def + 15%, M. Def + 20%, Physical and Magic Atk. Abnormal Status Reflection + 20%, Reflect Damage Magic chance 20%, Physical Skill Evasion 10%, P. Skill Power + 5%, Movement Speed + 5, Received Heal + 15%, Recovery Skill Power + 192 effect, P. Atk. Resistance to the following abnormal statuses: Paralysis/Bluff/Aerial Yoke + 20%, Sleep/Change + 15%, Stun/Knock Back/Pull/Danger Zone/MEN + 40%, Petrification Bleed + 50%. When used P. Def. and M. Def are reduced by 50% and PvP Def. by 20% and all resistances by -300 for 40 seconds. -->
 		<set name="icon" val="BranchIcon.Icon.earring_of_eva_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -33,9 +34,10 @@
 		<set name="commissionItemType" val="EARRING" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="46791" level="1" type="ON_EQUIP" /> <!-- Equip Eva's Earring - Earring Stage 6 -->
-			<skill id="46792" level="1" type="ON_UNEQUIP" /> <!-- Unequip Eva's Earring - Earring Stage 6 -->
-			<skill id="27657" level="1" /> <!-- Eva's Earring -->
+			<skill id="46791" level="1" type="ON_EQUIP" />
+			<skill id="46792" level="1" type="ON_UNEQUIP" />
+			<skill id="27652" level="6" /> <!-- Eva's Earring -->
+			<skill id="27752" level="6" />
 		</skills>
 		<stats>
 			<stat type="mDef">359.0</stat>
@@ -43,7 +45,7 @@
 		</stats>
 	</item>
 	<item id="27702" name="Sayha's Ring -Stage 1" type="Armor">
-		<!-- MP +53, CHA +3, LUC +3, Physical and Magic Critical Damage +20%, Atk. Spd. +6%, Casting Spd. +6%, Damage Reflection Resistance +30%, Resistances Against Fixed Damage Effects +5%, Physical and Magic Atk. Skill Power +5%, Movement Speed +2, Physical/ Mental Resistance +10, Accuracy +2, HP Recovery +10%. Resistance to the following abnormal statuses: Stun/ Knock Back/ Knock Down +20%, Hold/ Pull +12%, Seduction/ Petrification +10%, Poison +40%, Aerial Yoke/ Dismiss Party Member +5%, Danger Zone Resistance +10%. -->
+		<!-- MP + 53, CHA + 3, LUC + 3, Physical and Magic Critical Damage + 20%, Atk. Spd. + 6%, Casting Spd. + 6%, Damage Reflect Resistance + 30%, Resistances Against Fixed Damage Effects + 5%, Physical and Magic Atk. Skill Power + 5%, Movement Speed + 2, Physical/Mental Resistance + 10, Accuracy + 2, HP Recovery + 10%. Resistance to the following abnormal statuses: Stun/Knock Back/Knock Down + 20%, Hold/Pull + 12%, Seduction/Petrification + 10%, Poison + 40%, Aerial Yoke/Dismiss Party Member + 5%, Danger Zone Resistance + 10%. -->
 		<set name="icon" val="BranchIcon.Icon.ring_of_sayhas_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -54,8 +56,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="46721" level="1" type="ON_EQUIP" /> <!-- Equip Sayha's Ring - Ring Stage 1 -->
-			<skill id="46722" level="1" type="ON_UNEQUIP" /> <!-- Unequip Sayha's Ring - Ring Stage 1 -->
+			<skill id="46721" level="1" type="ON_EQUIP" />
+			<skill id="46722" level="1" type="ON_UNEQUIP" />
 			<skill id="27658" level="1" /> <!-- Sayha's Ring -->
 		</skills>
 		<stats>
@@ -64,7 +66,7 @@
 		</stats>
 	</item>
 	<item id="27703" name="Sayha's Ring -Stage 2" type="Armor">
-		<!-- MP +57, CHA +3, LUC +3, Physical and Magic Critical Damage +20%, Atk. Spd. +6%, Casting Spd. +6%, Damage Reflection Resistance +33%, Resistances Against Fixed Damage Effects +6%, Physical and Magic Atk. Skill Power +9%, Movement Speed +2, Physical/ Mental Resistance +11, Accuracy +3, HP Recovery +15%. Resistance to the following abnormal statuses: Stun/ Knock Back/ Knock Down +22%, Hold/ Pull +14%, Seduction/ Petrification +11%, Poison +42%, Aerial Yoke/ Dismiss Party Member +6%, Danger Zone Resistance +12%. With a chance of 1% for regular attacks and 2% for skill casting Physical and Magic Skills are blocked. Additionally, upon activation of toggle skills: Own Movement Speed +7, PvP P. Atk. +4%, Physical and Magic Atk. +12%, P. Critical Rate -55, Physical and Magic Def. -18%. Enemies near you receive Movement Speed -10%, Atk./ Casting Speed -10%. -->
+		<!-- MP + 57, CHA + 3, LUC + 3, Physical and Magic Critical Damage + 20%, Atk. Spd. + 6%, Casting Spd. + 6%, Damage Reflect Resistance + 33%, Resistances Against Fixed Damage Effects + 6%, Physical and Magic Atk. Skill Power + 9%, Movement Speed + 2, Physical/Mental Resistance + 11, Accuracy + 3, HP Recovery + 15%. Resistance to the following abnormal statuses: Stun/Knock Back/Knock Down + 22%, Hold/Pull + 14%, Seduction/Petrification + 11%, Poison + 42%, Aerial Yoke/Dismiss Party Member + 6%, Danger Zone Resistance + 12%. With a chance of 1% for regular attacks and 2% for skill casting Physical and Magic Skills are blocked. Additionally, upon activation of toggle skills: Own Movement Speed + 7, PvP P. Atk. + 4%, Physical and Magic Atk. + 12%, P. Critical Rate -55, Physical and Magic Def. -18%. Enemies near you receive Movement Speed -10%, Atk./Casting Speed -10%. -->
 		<set name="icon" val="BranchIcon.Icon.ring_of_sayhas_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -75,9 +77,11 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="46727" level="1" type="ON_EQUIP" /> <!-- Equip Sayha's Ring - Ring Stage 2 -->
-			<skill id="46728" level="1" type="ON_UNEQUIP" /> <!-- Unequip Sayha's Ring - Ring Stage 2 -->
-			<skill id="27659" level="1" /> <!-- Sayha's Ring -->
+			<skill id="46727" level="1" type="ON_EQUIP" />
+			<skill id="46728" level="1" type="ON_UNEQUIP" />
+			<skill id="27658" level="2" /> <!-- Sayha's Ring -->
+			<skill id="27753" level="2" />
+			<skill id="46799" level="2" />
 		</skills>
 		<stats>
 			<stat type="mDef">167.0</stat>
@@ -85,7 +89,7 @@
 		</stats>
 	</item>
 	<item id="27704" name="Sayha's Ring -Stage 3" type="Armor">
-		<!-- MP +60, CHA +4, LUC +4, Physical and Magic Critical Damage +21%, Atk. Spd. +7%, Casting Spd. +7%, Damage Reflection Resistance +35%, Resistances Against Fixed Damage Effects +7%, Physical and Magic Atk. Skill Power +12%, Movement Speed +3, Physical/ Mental Resistance +12, Accuracy +4, HP Recovery +18%. Resistance to the following abnormal statuses: Stun/ Knock Back/ Knock Down +24%, Hold/ Pull +16%, Seduction/ Petrification +12%, Poison 44%, Aerial Yoke/ Dismiss Party Member +7%, Danger Zone Resistance +14%. With a chance of 2% for regular attacks and 3% for skill casting Physical and Magic Skills are blocked. Additionally, upon activation of toggle skills: Own Movement Speed +10, PvP P. Atk. +6%, Physical and Magic Atk. +15%, P. Critical Rate -50, Physical and Magic Def. -16%. Enemies near you receive Movement Speed -15%, Atk./ Casting Speed -15%. -->
+		<!-- MP + 60, CHA + 4, LUC + 4, Physical and Magic Critical Damage + 21%, Atk. Spd. + 7%, Casting Spd. + 7%, Damage Reflect Resistance + 35%, Resistances Against Fixed Damage Effects + 7%, Physical and Magic Atk. Skill Power + 12%, Movement Speed + 3, Physical/Mental Resistance + 12, Accuracy + 4, HP Recovery + 18%. Resistance to the following abnormal statuses: Stun/Knock Back/Knock Down + 24%, Hold/Pull + 16%, Seduction/Petrification + 12%, Poison 44%, Aerial Yoke/Dismiss Party Member + 7%, Danger Zone Resistance + 14%. With a chance of 2% for regular attacks and 3% for skill casting Physical and Magic Skills are blocked. Additionally, upon activation of toggle skills: Own Movement Speed + 10, PvP P. Atk. + 6%, Physical and Magic Atk. + 15%, P. Critical Rate -50, Physical and Magic Def. -16%. Enemies near you receive Movement Speed -15%, Atk./Casting Speed -15%. -->
 		<set name="icon" val="BranchIcon.Icon.ring_of_sayhas_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -96,9 +100,11 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="46733" level="1" type="ON_EQUIP" /> <!-- Equip Sayha's Ring - Ring Stage 3 -->
-			<skill id="46734" level="1" type="ON_UNEQUIP" /> <!-- Unequip Sayha's Ring - Ring Stage 3 -->
-			<skill id="27660" level="1" /> <!-- Sayha's Ring -->
+			<skill id="46733" level="1" type="ON_EQUIP" />
+			<skill id="46734" level="1" type="ON_UNEQUIP" />
+			<skill id="27658" level="3" /> <!-- Sayha's Ring -->
+			<skill id="27753" level="3" />
+			<skill id="46799" level="3" />
 		</skills>
 		<stats>
 			<stat type="mDef">187.0</stat>
@@ -106,7 +112,7 @@
 		</stats>
 	</item>
 	<item id="27705" name="Sayha's Ring -Stage 4" type="Armor">
-		<!-- MP +62, CHA +4, LUC +4, Physical and Magic Critical Damage +21%, Atk. Spd. +7%, Casting Spd. +7%, Damage Reflection Resistance +37%, Resistances Against Fixed Damage Effects +10%, Physical and Magic Atk. Skill Power +16%, Movement Speed +3, Physical/ Mental Resistance +13, Accuracy +5, HP Recovery +22%. Resistance to the following abnormal statuses: Stun/ Knock Back/ Knock Down +26%, Hold/ Pull +18%, Seduction/ Petrification +13%, Poison 46%, Aerial Yoke/ Dismiss Party Member +8%, Danger Zone Resistance +16%. With a chance of 3% for regular attacks and 5% for skill casting Physical and Magic Skills are blocked. Additionally, upon activation of toggle skills: Own Movement Speed +15, PvP P. Atk. +9%, Physical and Magic Atk. +20%, P. Critical Rate -40, Physical and Magic Def. -13%. Enemies near you receive Movement Speed -20%, Atk./ Casting Speed -20%. -->
+		<!-- MP + 62, CHA + 4, LUC + 4, Physical and Magic Critical Damage + 21%, Atk. Spd. + 7%, Casting Spd. + 7%, Damage Reflect Resistance + 37%, Resistances Against Fixed Damage Effects + 10%, Physical and Magic Atk. Skill Power + 16%, Movement Speed + 3, Physical/Mental Resistance + 13, Accuracy + 5, HP Recovery + 22%. Resistance to the following abnormal statuses: Stun/Knock Back/Knock Down + 26%, Hold/Pull + 18%, Seduction/Petrification + 13%, Poison 46%, Aerial Yoke/Dismiss Party Member + 8%, Danger Zone Resistance + 16%. With a chance of 3% for regular attacks and 5% for skill casting Physical and Magic Skills are blocked. Additionally, upon activation of toggle skills: Own Movement Speed + 15, PvP P. Atk. + 9%, Physical and Magic Atk. + 20%, P. Critical Rate -40, Physical and Magic Def. -13%. Enemies near you receive Movement Speed -20%, Atk./Casting Speed -20%. -->
 		<set name="icon" val="BranchIcon.Icon.ring_of_sayhas_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -117,9 +123,11 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="46763" level="1" type="ON_EQUIP" /> <!-- Equip Sayha's Ring - Ring Stage 4 -->
-			<skill id="46764" level="1" type="ON_UNEQUIP" /> <!-- Unequip Sayha's Ring - Ring Stage 4 -->
-			<skill id="27661" level="1" /> <!-- Sayha's Ring -->
+			<skill id="46763" level="1" type="ON_EQUIP" />
+			<skill id="46764" level="1" type="ON_UNEQUIP" />
+			<skill id="27658" level="4" /> <!-- Sayha's Ring -->
+			<skill id="27753" level="4" />
+			<skill id="46799" level="4" />
 		</skills>
 		<stats>
 			<stat type="mDef">206.0</stat>
@@ -127,7 +135,7 @@
 		</stats>
 	</item>
 	<item id="27706" name="Sayha's Ring -Stage 5" type="Armor">
-		<!-- MP +64, CHA +5, LUC +5, Physical and Magic Critical Damage +22%, Atk. Spd. +8%, Casting Spd. +8%, Damage Reflection Resistance +39%, Resistances Against Fixed Damage Effects +13%, Physical and Magic Atk. Skill Power +19%, Movement Speed +4, Physical/ Mental Resistance +14, Accuracy +6, HP Recovery +25%. Resistance to the following abnormal statuses: Stun/ Knock Back/ Knock Down +28%, Hold/ Pull +19%, Seduction/ Petrification +14%, Poison +48%, Aerial Yoke/ Dismiss Party Member +9%, Danger Zone Resistance +18%. With a chance of 5% for regular attacks and 7% for skill casting Physical and Magic Skills are blocked. Additionally, upon activation of toggle skills: Own Movement Speed +20, PvP P. Atk. +12%, Physical and Magic Atk. +25%, P. Critical Rate -30, Physical and Magic Def. -10%. Enemies near you receive Movement Speed -25%, Atk./ Casting Speed -25%. -->
+		<!-- MP + 64, CHA + 5, LUC + 5, Physical and Magic Critical Damage + 22%, Atk. Spd. + 8%, Casting Spd. + 8%, Damage Reflect Resistance + 39%, Resistances Against Fixed Damage Effects + 13%, Physical and Magic Atk. Skill Power + 19%, Movement Speed + 4, Physical/Mental Resistance + 14, Accuracy + 6, HP Recovery + 25%. Resistance to the following abnormal statuses: Stun/Knock Back/Knock Down + 28%, Hold/Pull + 19%, Seduction/Petrification + 14%, Poison + 48%, Aerial Yoke/Dismiss Party Member + 9%, Danger Zone Resistance + 18%. With a chance of 5% for regular attacks and 7% for skill casting Physical and Magic Skills are blocked. Additionally, upon activation of toggle skills: Own Movement Speed + 20, PvP P. Atk. + 12%, Physical and Magic Atk. + 25%, P. Critical Rate -30, Physical and Magic Def. -10%. Enemies near you receive Movement Speed -25%, Atk./Casting Speed -25%. -->
 		<set name="icon" val="BranchIcon.Icon.ring_of_sayhas_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -138,9 +146,11 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="46769" level="1" type="ON_EQUIP" /> <!-- Equip Sayha's Ring - Ring Stage 5 -->
-			<skill id="46770" level="1" type="ON_UNEQUIP" /> <!-- Unequip Sayha's Ring - Ring Stage 5 -->
-			<skill id="27662" level="1" /> <!-- Sayha's Ring -->
+			<skill id="46769" level="1" type="ON_EQUIP" />
+			<skill id="46770" level="1" type="ON_UNEQUIP" />
+			<skill id="27658" level="5" /> <!-- Sayha's Ring -->
+			<skill id="27753" level="5" />
+			<skill id="46799" level="5" />
 		</skills>
 		<stats>
 			<stat type="mDef">225.0</stat>
@@ -148,7 +158,7 @@
 		</stats>
 	</item>
 	<item id="27707" name="Sayha's Ring -Stage 6" type="Armor">
-		<!-- MP +68, CHA +6, LUC +6, Physical and Magic Critical Damage +22%, Atk. Spd. +8%, Casting Spd. +8%, Damage Reflection Resistance +45%, Resistances Against Fixed Damage Effects +18%, Physical and Magic Atk. Skill Power +25%, Movement Speed +5, Physical/ Mental Resistance +15, Accuracy +7, HP Recovery +30%. Resistance to the following abnormal statuses: Stun/ Knock Back/ Knock Down +30%, Hold/ Pull +20%, Seduction/ Petrification +15%, Poison +50%, Aerial Yoke/ Dismiss Party Member +10%, Danger Zone Resistance +20%. With a chance of 7% for regular attacks and 10% for skill casting Physical and Magic Skills are blocked. Additionally, upon activation of toggle skills: Own Movement Speed +30, PvP P. Atk. +15%, Physical and Magic Atk. +35%, P. Critical Rate -20, Physical and Magic Def. -5%. Enemies near you receive Movement Speed -35%, Atk./ Casting Speed -35%. -->
+		<!-- MP + 68, CHA + 6, LUC + 6, Physical and Magic Critical Damage + 22%, Atk. Spd. + 8%, Casting Spd. + 8%, Damage Reflect Resistance + 45%, Resistances Against Fixed Damage Effects + 18%, Physical and Magic Atk. Skill Power + 25%, Movement Speed + 5, Physical/Mental Resistance + 15, Accuracy + 7, HP Recovery + 30%. Resistance to the following abnormal statuses: Stun/Knock Back/Knock Down + 30%, Hold/Pull + 20%, Seduction/Petrification + 15%, Poison + 50%, Aerial Yoke/Dismiss Party Member + 10%, Danger Zone Resistance + 20%. With a chance of 7% for regular attacks and 10% for skill casting Physical and Magic Skills are blocked. Additionally, upon activation of toggle skills: Own Movement Speed + 30, PvP P. Atk. + 15%, Physical and Magic Atk. + 35%, P. Critical Rate -20, Physical and Magic Def. -5%. Enemies near you receive Movement Speed -35%, Atk./Casting Speed -35%. -->
 		<set name="icon" val="BranchIcon.Icon.ring_of_sayhas_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -159,9 +169,11 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="46775" level="1" type="ON_EQUIP" /> <!-- Equip Sayha's Ring - Ring Stage 6 -->
-			<skill id="46776" level="1" type="ON_UNEQUIP" /> <!-- Unequip Sayha's Ring - Ring Stage 6 -->
-			<skill id="27663" level="1" /> <!-- Sayha's Ring -->
+			<skill id="46775" level="1" type="ON_EQUIP" />
+			<skill id="46776" level="1" type="ON_UNEQUIP" />
+			<skill id="27658" level="6" /> <!-- Sayha's Ring -->
+			<skill id="27753" level="6" />
+			<skill id="46799" level="6" />
 		</skills>
 		<stats>
 			<stat type="mDef">239.0</stat>
@@ -169,7 +181,7 @@
 		</stats>
 	</item>
 	<item id="27708" name="Maphr's Ring -Stage 1" type="Armor">
-		<!-- MP +53, CHA +3, LUC +3, Physical and Magic Critical Damage +20%, Atk. Spd. +6%, Casting Spd. +6%, Damage Reflection Resistance +30%, Resistances Against Fixed Damage Effects +5%, Physical and Magic Atk. Skill Power +5%, Movement Speed +2, Physical/ Mental Resistance +10, M. Accuracy +2, MP Recovery +10%. Resistance to the following abnormal statuses: Stun/ Knock Back/ Knock Down +20%, Hold/ Pull +12%, Seduction/ Petrification +10%, Poison +40%, Aerial Yoke/ Dismiss Party Member +5%, Danger Zone Resistance +10%. -->
+		<!-- MP + 53, CHA + 3, LUC + 3, Physical and Magic Critical Damage + 20%, Atk. Spd. + 6%, Casting Spd. + 6%, Damage Reflect Resistance + 30%, Resistances Against Fixed Damage Effects + 5%, Physical and Magic Atk. Skill Power + 5%, Movement Speed + 2, Physical/Mental Resistance + 10, M. Accuracy + 2, MP Recovery + 10%. Resistance to the following abnormal statuses: Stun/Knock Back/Knock Down + 20%, Hold/Pull + 12%, Seduction/Petrification + 10%, Poison + 40%, Aerial Yoke/Dismiss Party Member + 5%, Danger Zone Resistance + 10%. -->
 		<set name="icon" val="BranchIcon.Icon.ring_of_maphr_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -180,8 +192,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="46739" level="1" type="ON_EQUIP" /> <!-- Equip Maphr's Ring - Ring Stage 1 -->
-			<skill id="46740" level="1" type="ON_UNEQUIP" /> <!-- Unequip Maphr's Ring - Ring Stage 1 -->
+			<skill id="46739" level="1" type="ON_EQUIP" />
+			<skill id="46740" level="1" type="ON_UNEQUIP" />
 			<skill id="27664" level="1" /> <!-- Maphr's Ring -->
 		</skills>
 		<stats>
@@ -190,7 +202,7 @@
 		</stats>
 	</item>
 	<item id="27709" name="Maphr's Ring -Stage 2" type="Armor">
-		<!-- MP +57, CHA +3, LUC +3, Physical and Magic Critical Damage +20%, Atk. Spd. +6%, Casting Spd. +6%, Damage Reflection Resistance +33%, Resistances Against Fixed Damage Effects +6%, Physical and Magic Atk. Skill Power +9%, Movement Speed +2, Physical/ Mental Resistance +11, M. Accuracy +3, MP Recovery +15%. Resistance to the following abnormal statuses: Stun/ Knock Back/ Knock Down +22%, Hold/ Pull +14%, Seduction/ Petrification +11%, Poison +42%, Aerial Yoke/ Dismiss Party Member +6%, Danger Zone Resistance +12%. With a chance of 1% for regular attacks and 2% for skill casting targets can be bound. Additionally, upon activation of toggle skills: PvP Def. +4%, Physical/ Magical Critical Damage Received -6%, Fixed Damage Resistance +22%, Shield Defense +930, Shield Defense Success rate +22%, Movement Speed -28%. Additionally, party members receive PvP Def. +3%, Resistance Against Fixed Damage +17%, Received Heal +12%. -->
+		<!-- MP + 57, CHA + 3, LUC + 3, Physical and Magic Critical Damage + 20%, Atk. Spd. + 6%, Casting Spd. + 6%, Damage Reflect Resistance + 33%, Resistances Against Fixed Damage Effects + 6%, Physical and Magic Atk. Skill Power + 9%, Movement Speed + 2, Physical/Mental Resistance + 11, M. Accuracy + 3, MP Recovery + 15%. Resistance to the following abnormal statuses: Stun/Knock Back/Knock Down + 22%, Hold/Pull + 14%, Seduction/Petrification + 11%, Poison + 42%, Aerial Yoke/Dismiss Party Member + 6%, Danger Zone Resistance + 12%. With a chance of 1% for regular attacks and 2% for skill casting targets can be bound. Additionally, upon activation of toggle skills: PvP Def. + 4%, Physical/Magical Critical Damage Received -6%, Fixed Damage Resistance + 22%, Shield Defense + 930, Shield Defense Success rate + 22%, Movement Speed -28%. Additionally, party members receive PvP Def. + 3%, Resistance Against Fixed Damage + 17%, Received Heal + 12%. -->
 		<set name="icon" val="BranchIcon.Icon.ring_of_maphr_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -201,9 +213,11 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="46745" level="1" type="ON_EQUIP" /> <!-- Equip Maphr's Ring - Ring Stage 2 -->
-			<skill id="46746" level="1" type="ON_UNEQUIP" /> <!-- Unequip Maphr's Ring - Ring Stage 2 -->
-			<skill id="27665" level="1" /> <!-- Maphr's Ring -->
+			<skill id="46745" level="1" type="ON_EQUIP" />
+			<skill id="46746" level="1" type="ON_UNEQUIP" />
+			<skill id="27664" level="2" /> <!-- Maphr's Ring -->
+			<skill id="27754" level="2" />
+			<skill id="46801" level="2" />
 		</skills>
 		<stats>
 			<stat type="mDef">167.0</stat>
@@ -211,7 +225,7 @@
 		</stats>
 	</item>
 	<item id="27710" name="Maphr's Ring -Stage 3" type="Armor">
-		<!-- MP +60, CHA +4, LUC +4, Physical and Magic Critical Damage +21%, Atk. Spd. +7%, Casting Spd. +7%, Damage Reflection Resistance +35%, Resistances Against Fixed Damage Effects +7%, Physical and Magic Atk. Skill Power +12%, Movement Speed +3, Physical/ Mental Resistance +12, M. Accuracy +4, MP Recovery +18%. Resistance to the following abnormal statuses: Stun/ Knock Back/ Knock Down +24%, Hold/ Pull +16%, Seduction/ Petrification +12%, Poison 44%, Aerial Yoke/ Dismiss Party Member +7%, Danger Zone Resistance +14%. With a chance of 2% for regular attacks and 3% for skill casting targets can be bound. Additionally, upon activation of toggle skills: PvP Def. +5%, Physical/ Magical Critical Damage Received -12%, Fixed Damage Resistance +24%, Shield Defense +1000, Shield Defense Success rate +24%, Movement Speed -26%. Additionally, party members receive PvP Def. +4%, Resistance Against Fixed Damage +19%, Received Heal +14%. -->
+		<!-- MP + 60, CHA + 4, LUC + 4, Physical and Magic Critical Damage + 21%, Atk. Spd. + 7%, Casting Spd. + 7%, Damage Reflect Resistance + 35%, Resistances Against Fixed Damage Effects + 7%, Physical and Magic Atk. Skill Power + 12%, Movement Speed + 3, Physical/Mental Resistance + 12, M. Accuracy + 4, MP Recovery + 18%. Resistance to the following abnormal statuses: Stun/Knock Back/Knock Down + 24%, Hold/Pull + 16%, Seduction/Petrification + 12%, Poison 44%, Aerial Yoke/Dismiss Party Member + 7%, Danger Zone Resistance + 14%. With a chance of 2% for regular attacks and 3% for skill casting targets can be bound. Additionally, upon activation of toggle skills: PvP Def. + 5%, Physical/Magical Critical Damage Received -12%, Fixed Damage Resistance + 24%, Shield Defense + 1000, Shield Defense Success rate + 24%, Movement Speed -26%. Additionally, party members receive PvP Def. + 4%, Resistance Against Fixed Damage + 19%, Received Heal + 14%. -->
 		<set name="icon" val="BranchIcon.Icon.ring_of_maphr_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -222,9 +236,11 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="46751" level="1" type="ON_EQUIP" /> <!-- Equip Maphr's Ring - Ring Stage 3 -->
-			<skill id="46752" level="1" type="ON_UNEQUIP" /> <!-- Unequip Maphr's Ring - Ring Stage 3 -->
-			<skill id="27666" level="1" /> <!-- Maphr's Ring -->
+			<skill id="46751" level="1" type="ON_EQUIP" />
+			<skill id="46752" level="1" type="ON_UNEQUIP" />
+			<skill id="27664" level="3" /> <!-- Maphr's Ring -->
+			<skill id="27754" level="3" />
+			<skill id="46801" level="3" />
 		</skills>
 		<stats>
 			<stat type="mDef">187.0</stat>
@@ -232,7 +248,7 @@
 		</stats>
 	</item>
 	<item id="27711" name="Maphr's Ring -Stage 4" type="Armor">
-		<!-- MP +62, CHA +4, LUC +4, Physical and Magic Critical Damage +21%, Atk. Spd. +7%, Casting Spd. +7%, Damage Reflection Resistance +37%, Resistances Against Fixed Damage Effects +10%, Physical and Magic Atk. Skill Power +16%, Movement Speed +3, Physical/ Mental Resistance +13, M. Accuracy +5, MP Recovery +22%. Resistance to the following abnormal statuses: Stun/ Knock Back/ Knock Down +26%, Hold/ Pull +18%, Seduction/ Petrification +13%, Poison 46%, Aerial Yoke/ Dismiss Party Member +8%, Danger Zone Resistance +16%. With a chance of 3% for regular attacks and 5% for skill casting targets can be bound. Additionally, upon activation of toggle skills: PvP Def. +9%, Physical/ Magical Critical Damage Received -14%, Fixed Damage Resistance +28%, Shield Defense +1300, Shield Defense Success rate +30%, Movement Speed -23%. Additionally, party members receive PvP Def. +6%, Resistance Against Fixed Damage +21%, Received Heal +16%. -->
+		<!-- MP + 62, CHA + 4, LUC + 4, Physical and Magic Critical Damage + 21%, Atk. Spd. + 7%, Casting Spd. + 7%, Damage Reflect Resistance + 37%, Resistances Against Fixed Damage Effects + 10%, Physical and Magic Atk. Skill Power + 16%, Movement Speed + 3, Physical/Mental Resistance + 13, M. Accuracy + 5, MP Recovery + 22%. Resistance to the following abnormal statuses: Stun/Knock Back/Knock Down + 26%, Hold/Pull + 18%, Seduction/Petrification + 13%, Poison 46%, Aerial Yoke/Dismiss Party Member + 8%, Danger Zone Resistance + 16%. With a chance of 3% for regular attacks and 5% for skill casting targets can be bound. Additionally, upon activation of toggle skills: PvP Def. + 9%, Physical/Magical Critical Damage Received -14%, Fixed Damage Resistance + 28%, Shield Defense + 1300, Shield Defense Success rate + 30%, Movement Speed -23%. Additionally, party members receive PvP Def. + 6%, Resistance Against Fixed Damage + 21%, Received Heal + 16%. -->
 		<set name="icon" val="BranchIcon.Icon.ring_of_maphr_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -243,9 +259,11 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="46781" level="1" type="ON_EQUIP" /> <!-- Equip Maphr's Ring - Ring Stage 4 -->
-			<skill id="46782" level="1" type="ON_UNEQUIP" /> <!-- Unequip Maphr's Ring - Ring Stage 4 -->
-			<skill id="27667" level="1" /> <!-- Maphr's Ring -->
+			<skill id="46781" level="1" type="ON_EQUIP" />
+			<skill id="46782" level="1" type="ON_UNEQUIP" />
+			<skill id="27664" level="4" /> <!-- Maphr's Ring -->
+			<skill id="27754" level="4" />
+			<skill id="46801" level="4" />
 		</skills>
 		<stats>
 			<stat type="mDef">206.0</stat>
@@ -253,7 +271,7 @@
 		</stats>
 	</item>
 	<item id="27712" name="Maphr's Ring -Stage 5" type="Armor">
-		<!-- MP +64, CHA +5, LUC +5, Physical and Magic Critical Damage +22%, Atk. Spd. +8%, Casting Spd. +8%, Damage Reflection Resistance +39%, Resistances Against Fixed Damage Effects +13%, Physical and Magic Atk. Skill Power +19%, Movement Speed +4, Physical/ Mental Resistance +14, M. Accuracy +6, MP Recovery +25%. Resistance to the following abnormal statuses: Stun/ Knock Back/ Knock Down +28%, Hold/ Pull +19%, Seduction/ Petrification +14%, Poison +48%, Aerial Yoke/ Dismiss Party Member +9%, Danger Zone Resistance +18%. With a chance of 5% for regular attacks and 7% for skill casting targets can be bound. Additionally, upon activation of toggle skills: PvP Def. +12%, Physical/ Magical Critical Damage Received -18%, Fixed Damage Resistance +34%, Shield Defense +1800, Shield Defense Success rate +36%, Movement Speed -17%. Additionally, party members receive PvP Def. +8%, Resistance Against Fixed Damage +23%, Received Heal +18%. -->
+		<!-- MP + 64, CHA + 5, LUC + 5, Physical and Magic Critical Damage + 22%, Atk. Spd. + 8%, Casting Spd. + 8%, Damage Reflect Resistance + 39%, Resistances Against Fixed Damage Effects + 13%, Physical and Magic Atk. Skill Power + 19%, Movement Speed + 4, Physical/Mental Resistance + 14, M. Accuracy + 6, MP Recovery + 25%. Resistance to the following abnormal statuses: Stun/Knock Back/Knock Down + 28%, Hold/Pull + 19%, Seduction/Petrification + 14%, Poison + 48%, Aerial Yoke/Dismiss Party Member + 9%, Danger Zone Resistance + 18%. With a chance of 5% for regular attacks and 7% for skill casting targets can be bound. Additionally, upon activation of toggle skills: PvP Def. + 12%, Physical/Magical Critical Damage Received -18%, Fixed Damage Resistance + 34%, Shield Defense + 1800, Shield Defense Success rate + 36%, Movement Speed -17%. Additionally, party members receive PvP Def. + 8%, Resistance Against Fixed Damage + 23%, Received Heal + 18%. -->
 		<set name="icon" val="BranchIcon.Icon.ring_of_maphr_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -264,9 +282,11 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="46787" level="1" type="ON_EQUIP" /> <!-- Equip Maphr's Ring - Ring Stage 5 -->
-			<skill id="46788" level="1" type="ON_UNEQUIP" /> <!-- Unequip Maphr's Ring - Ring Stage 5 -->
-			<skill id="27668" level="1" /> <!-- Maphr's Ring -->
+			<skill id="46787" level="1" type="ON_EQUIP" />
+			<skill id="46788" level="1" type="ON_UNEQUIP" />
+			<skill id="27664" level="5" /> <!-- Maphr's Ring -->
+			<skill id="27754" level="5" />
+			<skill id="46801" level="5" />
 		</skills>
 		<stats>
 			<stat type="mDef">225.0</stat>
@@ -274,7 +294,7 @@
 		</stats>
 	</item>
 	<item id="27713" name="Maphr's Ring -Stage 6" type="Armor">
-		<!-- MP +68, CHA +6, LUC +6, Physical and Magic Critical Damage +22%, Atk. Spd. +8%, Casting Spd. +8%, Damage Reflection Resistance +45%, Resistances Against Fixed Damage Effects +18%, Physical and Magic Atk. Skill Power +25%, Movement Speed +5, Physical/ Mental Resistance +15, M. Accuracy +7, MP Recovery +30%. Resistance to the following abnormal statuses: Stun/ Knock Back/ Knock Down +30%, Hold/ Pull +20%, Seduction/ Petrification +15%, Poison +50%, Aerial Yoke/ Dismiss Party Member +10%, Danger Zone Resistance +20%. With a chance of 7% for regular attacks and 10% for skill casting targets can be bound. Additionally, upon activation of toggle skills: PvP Def. +15%, Physical/ Magical Critical Damage Received -25%, Fixed Damage Resistance +40%, Shield Defense +2500, Shield Defense Success rate +45%, Movement Speed -10%. Additionally, party members receive PvP Def. +10%, Resistance Against Fixed Damage +25%, Received Heal +20%. -->
+		<!-- MP + 68, CHA + 6, LUC + 6, Physical and Magic Critical Damage + 22%, Atk. Spd. + 8%, Casting Spd. + 8%, Damage Reflect Resistance + 45%, Resistances Against Fixed Damage Effects + 18%, Physical and Magic Atk. Skill Power + 25%, Movement Speed + 5, Physical/Mental Resistance + 15, M. Accuracy + 7, MP Recovery + 30%. Resistance to the following abnormal statuses: Stun/Knock Back/Knock Down + 30%, Hold/Pull + 20%, Seduction/Petrification + 15%, Poison + 50%, Aerial Yoke/Dismiss Party Member + 10%, Danger Zone Resistance + 20%. With a chance of 7% for regular attacks and 10% for skill casting targets can be bound. Additionally, upon activation of toggle skills: PvP Def. + 15%, Physical/Magical Critical Damage Received -25%, Fixed Damage Resistance + 40%, Shield Defense + 2500, Shield Defense Success rate + 45%, Movement Speed -10%. Additionally, party members receive PvP Def. + 10%, Resistance Against Fixed Damage + 25%, Received Heal + 20%. -->
 		<set name="icon" val="BranchIcon.Icon.ring_of_maphr_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -285,9 +305,11 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="46793" level="1" type="ON_EQUIP" /> <!-- Equip Maphr's Ring - Ring Stage 6 -->
-			<skill id="46794" level="1" type="ON_UNEQUIP" /> <!-- Unequip Maphr's Ring - Ring Stage 6 -->
-			<skill id="27669" level="1" /> <!-- Maphr's Ring -->
+			<skill id="46793" level="1" type="ON_EQUIP" />
+			<skill id="46794" level="1" type="ON_UNEQUIP" />
+			<skill id="27664" level="6" /> <!-- Maphr's Ring -->
+			<skill id="27754" level="6" />
+			<skill id="46801" level="6" />
 		</skills>
 		<stats>
 			<stat type="mDef">239.0</stat>

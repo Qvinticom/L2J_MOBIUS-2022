@@ -1,10 +1,22 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="46715" toLevel="1" name="Pa'agrio - Reliable Hit">
-		<operateType>A1</operateType>
+		<icon>icon.skill0000</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<magicLvl>1</magicLvl>
 		<castRange>600</castRange>
 		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
 		<effectPoint>-1000</effectPoint>
+		<reuseDelay>180000</reuseDelay>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<operateType>A1</operateType>
+		<effects>
+			<effect name="RealDamage">
+				<power>20000</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="46716" toLevel="2" name="Pa'agrio - Reliable Hit">
 		<operateType>A1</operateType>
@@ -1222,13 +1234,34 @@
 		</effects>
 	</skill>
 	<skill id="46797" toLevel="1" name="Sayha - Restrain Physical and Magic">
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>15</abnormalTime>
+		<activateRate>100</activateRate>
+		<basicProperty>MAGIC</basicProperty>
+		<effectPoint>-676</effectPoint>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>30</lvlBonusRate>
+		<magicLvl>-1</magicLvl>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<trait>DERANGEMENT</trait>
 		<operateType>A2</operateType>
-		<targetType>SELF</targetType>
+		<targetType>ENEMY_ONLY</targetType>
 		<castRange>600</castRange>
 		<hitTime>1000</hitTime>
 		<isDebuff>true</isDebuff>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Mute" />
+			<effect name="PhysicalMute" />
+		</effects>
 	</skill>
 	<skill id="46798" toLevel="1" name="Maphr - Yoke">
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>9</abnormalTime>
+		<abnormalType>AIRBIND</abnormalType>
+		<abnormalVisualEffect>AIRBIND</abnormalVisualEffect>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<castRange>600</castRange>
@@ -1236,12 +1269,154 @@
 		<effectPoint>-655</effectPoint>
 		<isMagic>1</isMagic>
 		<isDebuff>true</isDebuff>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effectRange>1000</effectRange>
+		<activateRate>100</activateRate>
+		<magicLvl>-1</magicLvl>
+		<trait>AIRBIND</trait>
+		<isDebuff>true</isDebuff>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="AirBind" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
+			<effect name="BlockControl" />
+			<effect name="DefenceTrait">
+				<AIRBIND>100</AIRBIND>
+				<KNOCKBACK>100</KNOCKBACK>
+				<KNOCKDOWN>100</KNOCKDOWN>
+				<HOLD>100</HOLD>
+				<SLEEP>100</SLEEP>
+				<DERANGEMENT>100</DERANGEMENT>
+				<CHANGEBODY>100</CHANGEBODY>
+				<SHOCK>100</SHOCK>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="46799" toLevel="6" name="Sayha's Ring">
 		<!-- Movement Speed + $s1, PvP P. Atk. + $s2, P. Atk./M. Atk. + $s3, P. Critical Rate + $s4, Physical and Magic Defense + $s5. -->
 		<icon>BranchIcon.Icon.ring_of_sayhas_i00</icon>
-		<operateType>T</operateType>
-		<targetType>SELF</targetType>
+		<abnormalVisualEffect>AURA_BUFF_SELF</abnormalVisualEffect>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<operateType>AU</operateType>
 		<reuseDelay>1000</reuseDelay>
+		<toggleGroupId>5</toggleGroupId>
+		<effects>
+			<effect name="Speed">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">7</value>
+					<value level="3">10</value>
+					<value level="4">15</value>
+					<value level="5">20</value>
+					<value level="6">30</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">4</value>
+					<value level="3">6</value>
+					<value level="4">9</value>
+					<value level="5">12</value>
+					<value level="6">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">4</value>
+					<value level="3">6</value>
+					<value level="4">9</value>
+					<value level="5">12</value>
+					<value level="6">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">4</value>
+					<value level="3">6</value>
+					<value level="4">9</value>
+					<value level="5">12</value>
+					<value level="6">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">12</value>
+					<value level="3">15</value>
+					<value level="4">20</value>
+					<value level="5">25</value>
+					<value level="6">35</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">12</value>
+					<value level="3">15</value>
+					<value level="4">20</value>
+					<value level="5">25</value>
+					<value level="6">35</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>
+					<value level="1">-60</value>
+					<value level="2">-55</value>
+					<value level="3">-50</value>
+					<value level="4">-40</value>
+					<value level="5">-30</value>
+					<value level="6">-20</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">-20</value>
+					<value level="2">-18</value>
+					<value level="3">-16</value>
+					<value level="4">-13</value>
+					<value level="5">-10</value>
+					<value level="6">-5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">-20</value>
+					<value level="2">-18</value>
+					<value level="3">-16</value>
+					<value level="4">-13</value>
+					<value level="5">-10</value>
+					<value level="6">-5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CallSkillOnActionTime">
+				<skillId>46800</skillId>
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+				</skillLevel>
+				<ticks>3</ticks>
+			</effect>
+		</effects>
 	</skill>
 </list>
