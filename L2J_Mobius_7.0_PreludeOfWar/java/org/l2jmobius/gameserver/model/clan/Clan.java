@@ -62,7 +62,6 @@ import org.l2jmobius.gameserver.model.interfaces.IIdentifiable;
 import org.l2jmobius.gameserver.model.interfaces.INamable;
 import org.l2jmobius.gameserver.model.itemcontainer.ClanWarehouse;
 import org.l2jmobius.gameserver.model.itemcontainer.ItemContainer;
-import org.l2jmobius.gameserver.model.skills.CommonSkill;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.variables.ClanVariables;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
@@ -528,7 +527,7 @@ public class Clan implements IIdentifiable, INamable
 			
 			// remove Clan skills from Player
 			removeSkillEffects(player);
-			player.getEffectList().stopSkillEffects(true, CommonSkill.CLAN_ADVENT.getId());
+			player.getEffectList().stopSkillEffects(true, 19009);
 			
 			// remove Residential skills
 			if (player.getClan().getCastleId() > 0)
