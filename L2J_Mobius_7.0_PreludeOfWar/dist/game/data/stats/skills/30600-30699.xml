@@ -24,10 +24,9 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<effects>
-			<effect name="CallSkillOnActionTime">
-				<skillId>30603</skillId> <!-- Eviscerator Force -->
-				<skillLevel>1</skillLevel>
-				<ticks>7</ticks>
+			<effect name="SkillCriticalProbability">
+				<amount>1</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -61,16 +60,15 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="30605" toLevel="1" name="Sayha's Seer Force">
-		<!-- M. Skill Critical Rate +1%. -->
+		<!-- M. Critical Rate +1%. -->
 		<icon>icon.icon_Er_wizard</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<effects>
-			<effect name="CallSkillOnActionTime">
-				<skillId>30606</skillId> <!-- Sayha's Seer Force -->
-				<skillLevel>1</skillLevel>
-				<ticks>7</ticks>
+			<effect name="MagicCriticalRate">
+				<amount>1</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>

@@ -678,17 +678,15 @@
 		</effects>
 	</skill>
 	<skill id="1927" toLevel="1" name="Sigel Force">
-		<!-- Casts Sigel Force on entire party, which increases P Atk. by 1%. -->
+		<!-- P. Atk. +1%. -->
 		<icon>icon.icon_sigel</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<effects>
-			<effect name="CallSkillOnActionTime">
-				<!-- Sigel Force -->
-				<skillId>1928</skillId> <!-- Sigel Force -->
-				<skillLevel>1</skillLevel>
-				<ticks>5</ticks>
+			<effect name="PAtk">
+				<amount>1</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -728,17 +726,15 @@
 		</effects>
 	</skill>
 	<skill id="1929" toLevel="1" name="Tyrr Force">
-		<!-- Casts Tyrr Force on entire party, which increases P. Critical Rate by 1%. -->
+		<!-- P. Critical Rate +1%. -->
 		<icon>icon.icon_tir</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<effects>
-			<effect name="CallSkillOnActionTime">
-				<!-- Tyrr Force -->
-				<skillId>1930</skillId> <!-- Tyrr Force -->
-				<skillLevel>1</skillLevel>
-				<ticks>5</ticks>
+			<effect name="CriticalRate">
+				<amount>1</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -769,17 +765,15 @@
 		</effects>
 	</skill>
 	<skill id="1931" toLevel="1" name="Othell Force">
-		<!-- Casts Othell Force on entire party, which increases Atk. Spd. by 1%. -->
+		<!-- Atk. Spd. +1%. -->
 		<icon>icon.icon_othel</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<effects>
-			<effect name="CallSkillOnActionTime">
-				<!-- Othell Force -->
-				<skillId>1932</skillId> <!-- Othell Force -->
-				<skillLevel>1</skillLevel>
-				<ticks>5</ticks>
+			<effect name="PhysicalAttackSpeed">
+				<amount>1</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -810,17 +804,15 @@
 		</effects>
 	</skill>
 	<skill id="1933" toLevel="1" name="Yul Force">
-		<!-- Casts Yul Force on entire party, which increases MP Recovery Bonus by 50%. -->
+		<!-- MP Recovery Bonus +50%. -->
 		<icon>icon.icon_yr</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<effects>
-			<effect name="CallSkillOnActionTime">
-				<!-- Yul Force -->
-				<skillId>1934</skillId> <!-- Yul Force -->
-				<skillLevel>1</skillLevel>
-				<ticks>5</ticks>
+			<effect name="MpRegen">
+				<amount>50</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -851,17 +843,15 @@
 		</effects>
 	</skill>
 	<skill id="1935" toLevel="1" name="Feoh Force">
-		<!-- Casts Feoh Force on entire party, which increases Casting Spd. by 1%. -->
+		<!-- Casting Spd. +1%. -->
 		<icon>icon.icon_feoh</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<effects>
-			<effect name="CallSkillOnActionTime">
-				<!-- Feoh Force -->
-				<skillId>1936</skillId> <!-- Feoh Force -->
-				<skillLevel>1</skillLevel>
-				<ticks>5</ticks>
+			<effect name="MagicalAttackSpeed">
+				<amount>1</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -892,17 +882,21 @@
 		</effects>
 	</skill>
 	<skill id="1937" toLevel="1" name="Wynn Force">
-		<!-- Casts Wynn Force on entire party, which decreases P./ M. Skill MP Consumption by 3%. -->
+		<!-- P./ M. Skill MP Consumption -3%. -->
 		<icon>icon.icon_wynn</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<effects>
-			<effect name="CallSkillOnActionTime">
-				<!-- Wynn Force -->
-				<skillId>1938</skillId> <!-- Wynn Force -->
-				<skillLevel>1</skillLevel>
-				<ticks>5</ticks>
+			<effect name="MagicMpCost">
+				<amount>-3</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-3</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
 			</effect>
 		</effects>
 	</skill>
@@ -939,17 +933,15 @@
 		</effects>
 	</skill>
 	<skill id="1939" toLevel="1" name="Aeore Force">
-		<!-- Casts Aeore Force on entire party, which increases M. Atk. by 1%. -->
+		<!-- M. Atk. +1%. -->
 		<icon>icon.icon_eolh</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<effects>
-			<effect name="CallSkillOnActionTime">
-				<!-- Aeore Force -->
-				<skillId>1940</skillId> <!-- Aeore Force -->
-				<skillLevel>1</skillLevel>
-				<ticks>5</ticks>
+			<effect name="MAtk">
+				<amount>1</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>

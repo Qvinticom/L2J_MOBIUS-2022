@@ -3381,15 +3381,15 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="20387947" sp="18343" />
+		<acquire exp="225805239" sp="203175" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="206434.12617" hpRegen="8.5" mp="2874.995" mpRegen="3" />
+			<vitals hp="83637.246975" hpRegen="8.5" mp="2922.844" mpRegen="3" />
+			<attack physical="6745.743697" magical="1186.412163" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="525.7003472" magical="304.7692712" />
 			<speed>
 				<walk ground="60" />
 				<run ground="170" />
 			</speed>
-			<attack physical="45027.439862948" magical="7933.4451512287" critical="4" attackSpeed="253" range="40" />
-			<defence physical="515.75551332479" magical="297.55916768147" />
 			<attribute>
 				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 				<attack type="EARTH" value="330" />
@@ -3400,10 +3400,6 @@
 			<skill id="32862" level="1" />
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4410" level="17" /> <!-- Very Strong P. Atk. -->
-			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 		<collision>
 			<radius normal="34" />
@@ -3411,43 +3407,35 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="1203" max="2808" chance="20" /> <!-- Adena -->
-				<item id="36538" min="1" max="1" chance="0.3" /> <!-- Durable Leather Braid -->
-				<item id="35347" min="1" max="1" chance="0.075" /> <!-- Eternal Leather Glove Ingredient -->
-				<item id="36539" min="1" max="1" chance="0.03" /> <!-- Quality Leather Braid -->
-				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="57" min="819" max="1909" chance="70" /> <!-- Adena -->
+				<item id="36548" min="1" max="1" chance="0.075" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="35327" min="1" max="1" chance="0.03" /> <!-- Helios Shaper Fragment -->
+				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant R-grade Weapon -->
+				<item id="36554" min="1" max="1" chance="0.003" /> <!-- Armor Fragment (High-grade) -->
+				<item id="35451" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Shaper (60%) -->
 			</drop>
 			<spoil>
-				<item id="36518" min="1" max="1" chance="7.194" /> <!-- Durable Leather -->
-				<item id="36519" min="1" max="1" chance="0.75" /> <!-- Quality Leather -->
+				<item id="36563" min="1" max="1" chance="0.3" /> <!-- Synthetic Cokes -->
+				<item id="36564" min="1" max="1" chance="0.03" /> <!-- Greater Synthetic Cokes -->
 			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="23488" level="98" type="Monster" name="Magma Apophis">
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="37861753" sp="33998" />
+		<acquire exp="124943719" sp="112367" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="206434.12617" hpRegen="8.5" mp="2874.995" mpRegen="3" />
-			<speed>
-				<walk ground="25" />
-				<run ground="170" />
-			</speed>
-			<attack physical="45027.550797101" magical="7933.4451512287" critical="4" attackSpeed="253" range="40" />
-			<defence physical="515.49473544358" magical="297.50874247089" />
+			<attack physical="6326.484931" magical="1133.341541" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="515.3924972" magical="297.3358744" />
 			<attribute>
 				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 				<attack type="EARTH" value="330" />
 			</attribute>
+			<speed>
+				<walk ground="25" />
+				<run ground="170" />
+			</speed>
 		</stats>
 		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
@@ -3468,7 +3456,7 @@
 				<item id="36538" min="1" max="1" chance="0.3" /> <!-- Durable Leather Braid -->
 				<item id="35345" min="1" max="1" chance="0.03" /> <!-- Eternal Leather Armor Ingredient -->
 				<item id="36539" min="1" max="1" chance="0.03" /> <!-- Quality Leather Braid -->
-				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant R-grade Weapon -->
 				<item id="35460" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Caster (60%) -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -3481,7 +3469,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36543" min="1" max="1" chance="2.623" /> <!-- Adamantite Wire -->
+				<item id="36543" min="1" max="1" chance="2.63" /> <!-- Adamantite Wire -->
 				<item id="36544" min="1" max="1" chance="0.3" /> <!-- Orichalcum Wire -->
 			</spoil>
 		</dropLists>
@@ -3554,28 +3542,25 @@
 		</parameters>
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
-		<acquire exp="18422873" sp="16518" />
+		<acquire exp="225805239" sp="203175" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="206434.12617" hpRegen="8.5" mp="2874.995" mpRegen="3" />
-			<speed>
-				<walk ground="60" />
-				<run ground="70" />
-			</speed>
-			<attack physical="45027.442645077" magical="7933.4451512287" critical="4" attackSpeed="253" range="40" />
-			<defence physical="515.50802139037" magical="297.55916768147" />
+			<vitals hp="83637.246975" hpRegen="8.5" mp="2922.844" mpRegen="3" />
+			<attack physical="6745.743697" magical="1186.412163" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="525.7003472" magical="304.7692712" />
 			<attribute>
 				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 				<attack type="EARTH" value="330" />
 			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="70" />
+			</speed>
 		</stats>
 		<skillList>
 			<skill id="18217" level="1" />
 			<skill id="32862" level="1" />
 			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
-			<skill id="4379" level="4" /> <!-- Spear Resistance -->
-			<skill id="16547" level="8" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 		<collision>
 			<radius normal="38" />
@@ -3583,24 +3568,16 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="1203" max="2808" chance="20" /> <!-- Adena -->
-				<item id="36543" min="1" max="1" chance="0.75" /> <!-- Adamantite Wire -->
-				<item id="17527" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="36544" min="1" max="1" chance="0.075" /> <!-- Orichalcum Wire -->
-				<item id="35471" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Leather Gloves (60%) -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="57" min="819" max="1909" chance="70" /> <!-- Adena -->
+				<item id="36518" min="1" max="1" chance="1.11" /> <!-- Durable Leather -->
+				<item id="36519" min="1" max="1" chance="0.3" /> <!-- Quality Leather -->
+				<item id="35345" min="1" max="1" chance="0.03" /> <!-- Eternal Leather Armor Ingredient -->
+				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant R-grade Weapon -->
+				<item id="35469" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Leather Armor (60%) -->
 			</drop>
 			<spoil>
-				<item id="36518" min="1" max="1" chance="7.276" /> <!-- Durable Leather -->
-				<item id="36539" min="1" max="1" chance="0.3" /> <!-- Quality Leather Braid -->
+				<item id="36523" min="1" max="1" chance="3.185" /> <!-- Adamantite -->
+				<item id="36524" min="1" max="1" chance="0.3" /> <!-- Orichalcum -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -3611,27 +3588,24 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
-		<acquire exp="18422873" sp="16518" />
+		<acquire exp="225805239" sp="203175" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="206434.12617" hpRegen="8.5" mp="2874.995" mpRegen="3" />
-			<speed>
-				<walk ground="50" />
-				<run ground="70" />
-			</speed>
-			<attack physical="45027.442645077" magical="7933.4451512287" critical="4" attackSpeed="253" range="40" />
-			<defence physical="515.50802139037" magical="297.55916768147" />
+			<vitals hp="83637.246975" hpRegen="8.5" mp="2922.844" mpRegen="3" />
+			<attack physical="6745.743697" magical="1186.412163" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="525.7003472" magical="304.7692712" />
 			<attribute>
 				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 				<attack type="EARTH" value="330" />
 			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="70" />
+			</speed>
 		</stats>
 		<skillList>
 			<skill id="32862" level="1" />
-			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
-			<skill id="4379" level="4" /> <!-- Spear Resistance -->
-			<skill id="16547" level="8" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 		<collision>
 			<radius normal="26" />
@@ -3639,24 +3613,16 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="1203" max="2808" chance="20" /> <!-- Adena -->
-				<item id="36543" min="1" max="1" chance="0.75" /> <!-- Adamantite Wire -->
-				<item id="17527" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="36544" min="1" max="1" chance="0.075" /> <!-- Orichalcum Wire -->
-				<item id="35472" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Leather Boots (60%) -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="57" min="819" max="1909" chance="70" /> <!-- Adena -->
+				<item id="36518" min="1" max="1" chance="1.118" /> <!-- Durable Leather -->
+				<item id="36519" min="1" max="1" chance="0.3" /> <!-- Quality Leather -->
+				<item id="35346" min="1" max="1" chance="0.03" /> <!-- Eternal Leather Legging Ingredient -->
+				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant R-grade Weapon -->
+				<item id="35470" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Leather Leggings (60%) -->
 			</drop>
 			<spoil>
-				<item id="36518" min="1" max="1" chance="7.148" /> <!-- Durable Leather -->
-				<item id="36539" min="1" max="1" chance="0.3" /> <!-- Quality Leather Braid -->
+				<item id="36523" min="1" max="1" chance="3.163" /> <!-- Adamantite -->
+				<item id="36524" min="1" max="1" chance="0.3" /> <!-- Orichalcum -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -3767,15 +3733,15 @@
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
-		<acquire exp="20807523" sp="18719" />
+		<acquire exp="225805239" sp="203175" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="207482.075985" hpRegen="8.5" mp="2922.844" mpRegen="3" />
+			<vitals hp="83637.246975" hpRegen="8.5" mp="2922.844" mpRegen="3" />
+			<attack physical="6745.743697" magical="1186.412163" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="525.7003472" magical="304.7692712" />
 			<speed>
 				<walk ground="39" />
 				<run ground="170" />
 			</speed>
-			<attack physical="47220.35912147" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
-			<defence physical="525.76050641815" magical="305.10497858296" />
 			<attribute>
 				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
 				<attack type="FIRE" value="330" />
@@ -3785,10 +3751,6 @@
 			<skill id="32862" level="1" />
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
-			<skill id="4410" level="17" /> <!-- Very Strong P. Atk. -->
-			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 		<collision>
 			<radius normal="20" />
@@ -3796,24 +3758,16 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="1239" max="2893" chance="20" /> <!-- Adena -->
-				<item id="36538" min="1" max="1" chance="0.3" /> <!-- Durable Leather Braid -->
-				<item id="35348" min="1" max="1" chance="0.075" /> <!-- Eternal Leather Boot Ingredient -->
-				<item id="36539" min="1" max="1" chance="0.03" /> <!-- Quality Leather Braid -->
-				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="57" min="828" max="1929" chance="70" /> <!-- Adena -->
+				<item id="36548" min="1" max="1" chance="0.075" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="35333" min="1" max="1" chance="0.03" /> <!-- Helios Thrower Fragment -->
+				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant R-grade Weapon -->
+				<item id="36554" min="1" max="1" chance="0.003" /> <!-- Armor Fragment (High-grade) -->
+				<item id="35457" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Thrower (60%) -->
 			</drop>
 			<spoil>
-				<item id="36538" min="1" max="1" chance="1.872" /> <!-- Durable Leather Braid -->
-				<item id="36539" min="1" max="1" chance="0.3" /> <!-- Quality Leather Braid -->
+				<item id="36563" min="1" max="1" chance="0.3" /> <!-- Synthetic Cokes -->
+				<item id="36564" min="1" max="1" chance="0.03" /> <!-- Greater Synthetic Cokes -->
 			</spoil>
 		</dropLists>
 	</npc>
@@ -3824,15 +3778,15 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="19266119" sp="17249" />
+		<acquire exp="225805239" sp="203175" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="207482.075985" hpRegen="8.5" mp="2922.844" mpRegen="3" />
+			<vitals hp="83637.246975" hpRegen="8.5" mp="2922.844" mpRegen="3" />
+			<attack physical="6745.743697" magical="1186.412163" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="525.7003472" magical="304.7692712" />
 			<speed>
 				<walk ground="80" />
 				<run ground="170" />
 			</speed>
-			<attack physical="47220.557386874" magical="8304.9089563844" critical="4" attackSpeed="253" range="40" />
-			<defence physical="526.06382978723" magical="305.10497858296" />
 			<attribute>
 				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
 				<attack type="FIRE" value="330" />
@@ -3842,9 +3796,6 @@
 			<skill id="32872" level="1" />
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
-			<skill id="4411" level="17" /> <!-- Very Strong M. Atk. -->
-			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 		<collision>
 			<radius normal="20" />
@@ -3852,43 +3803,35 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="1239" max="2893" chance="20" /> <!-- Adena -->
-				<item id="36538" min="1" max="1" chance="0.3" /> <!-- Durable Leather Braid -->
-				<item id="35353" min="1" max="1" chance="0.075" /> <!-- Eternal Shoe Ingredient -->
-				<item id="36539" min="1" max="1" chance="0.03" /> <!-- Quality Leather Braid -->
-				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="57" min="828" max="1929" chance="70" /> <!-- Adena -->
+				<item id="35331" min="1" max="1" chance="0.03" /> <!-- Helios Fighter Fragment -->
+				<item id="36553" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (Mid-grade) -->
+				<item id="36549" min="1" max="1" chance="0.0075" /> <!-- Weapon Fragment (High-grade) -->
+				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant R-grade Weapon -->
+				<item id="35455" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Fighter (60%) -->
 			</drop>
 			<spoil>
-				<item id="36538" min="1" max="1" chance="1.873" /> <!-- Durable Leather Braid -->
-				<item id="36539" min="1" max="1" chance="0.3" /> <!-- Quality Leather Braid -->
+				<item id="36563" min="1" max="1" chance="0.3" /> <!-- Synthetic Cokes -->
+				<item id="36564" min="1" max="1" chance="0.03" /> <!-- Greater Synthetic Cokes -->
 			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="23496" level="99" type="Monster" name="Magma Ifrit">
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
-		<acquire exp="38640638" sp="34695" />
+		<acquire exp="127514049" sp="114672" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="207482.075985" hpRegen="8.5" mp="2922.844" mpRegen="3" />
-			<speed>
-				<walk ground="39" />
-				<run ground="170" />
-			</speed>
-			<attack physical="47220.376818161" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
-			<defence physical="525.96801903" magical="304.86727805858" />
+			<attack physical="6745.743697" magical="1186.412163" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="525.7003472" magical="304.7692712" />
 			<attribute>
 				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
 				<attack type="FIRE" value="330" />
 			</attribute>
+			<speed>
+				<walk ground="39" />
+				<run ground="170" />
+			</speed>
 		</stats>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
@@ -3910,7 +3853,7 @@
 				<item id="35328" min="1" max="1" chance="0.03" /> <!-- Helios Cutter Fragment -->
 				<item id="35345" min="1" max="1" chance="0.03" /> <!-- Eternal Leather Armor Ingredient -->
 				<item id="36539" min="1" max="1" chance="0.03" /> <!-- Quality Leather Braid -->
-				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant R-grade Weapon -->
 				<item id="35452" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Cutter (60%) -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -3923,7 +3866,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36543" min="1" max="1" chance="2.663" /> <!-- Adamantite Wire -->
+				<item id="36543" min="1" max="1" chance="2.602" /> <!-- Adamantite Wire -->
 				<item id="36544" min="1" max="1" chance="0.3" /> <!-- Orichalcum Wire -->
 			</spoil>
 		</dropLists>
@@ -3931,19 +3874,19 @@
 	<npc id="23497" level="99" type="Monster" name="Blazing Saurus" title="Fire Stigma">
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
-		<acquire exp="44585435" sp="40086" />
+		<acquire exp="147131926" sp="132412" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="207482.075985" hpRegen="8.5" mp="2922.844" mpRegen="3" />
-			<speed>
-				<walk ground="1" />
-				<run ground="1" />
-			</speed>
-			<attack physical="47220.557386874" magical="8304.8858064068" critical="4" attackSpeed="253" range="40" />
-			<defence physical="525.96801903" magical="304.86727805858" />
+			<attack physical="6745.743697" magical="1186.412163" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="525.7003472" magical="304.7692712" />
 			<attribute>
 				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
 				<attack type="FIRE" value="330" />
 			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
 		</stats>
 		<skillList>
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
@@ -3965,7 +3908,7 @@
 				<item id="35332" min="1" max="1" chance="0.075" /> <!-- Helios Stormer Fragment -->
 				<item id="36539" min="1" max="1" chance="0.03" /> <!-- Quality Leather Braid -->
 				<item id="36549" min="1" max="1" chance="0.0075" /> <!-- Weapon Fragment (High-grade) -->
-				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant R-grade Weapon -->
 				<item id="35456" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Stormer (60%) -->
 				<item id="35471" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Leather Gloves (60%) -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
@@ -3987,19 +3930,19 @@
 	<npc id="23498" level="99" type="Monster" name="Blazing Wizard" title="Fire Stigma">
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
-		<acquire exp="44585435" sp="40086" />
+		<acquire exp="147131926" sp="132412" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="207482.075985" hpRegen="8.5" mp="2922.844" mpRegen="3" />
-			<speed>
-				<walk ground="45" />
-				<run ground="170" />
-			</speed>
-			<attack physical="47220.557386874" magical="8304.8858064068" critical="4" attackSpeed="253" range="40" />
-			<defence physical="525.96801903" magical="304.86727805858" />
+			<attack physical="6745.743697" magical="1186.412163" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="525.7003472" magical="304.7692712" />
 			<attribute>
 				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
 				<attack type="FIRE" value="330" />
 			</attribute>
+			<speed>
+				<walk ground="45" />
+				<run ground="170" />
+			</speed>
 		</stats>
 		<skillList>
 			<skill id="4416" level="1" /> <!-- Undead -->
@@ -4019,7 +3962,7 @@
 				<item id="57" min="3099" max="7232" chance="20" /> <!-- Adena -->
 				<item id="36543" min="1" max="1" chance="0.3" /> <!-- Adamantite Wire -->
 				<item id="35335" min="1" max="1" chance="0.075" /> <!-- Helios Buster Fragment -->
-				<item id="17527" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="17527" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant R-grade Armor -->
 				<item id="36544" min="1" max="1" chance="0.03" /> <!-- Orichalcum Wire -->
 				<item id="36554" min="1" max="1" chance="0.0075" /> <!-- Armor Fragment (High-grade) -->
 				<item id="35459" min="1" max="1" chance="0.0009" /> <!-- Recipe: Helios Buster (60%) -->
@@ -4047,27 +3990,24 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
-		<acquire exp="18801846" sp="16857" />
+		<acquire exp="225805239" sp="203175" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="207482.075985" hpRegen="8.5" mp="2922.844" mpRegen="3" />
-			<speed>
-				<walk ground="130" />
-				<run ground="70" />
-			</speed>
-			<attack physical="47220.368807127" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
-			<defence physical="526.06382978723" magical="305.10497858296" />
+			<vitals hp="83637.246975" hpRegen="8.5" mp="2922.844" mpRegen="3" />
+			<attack physical="6745.743697" magical="1186.412163" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="525.7003472" magical="304.7692712" />
 			<attribute>
 				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 				<attack type="EARTH" value="330" />
 			</attribute>
+			<speed>
+				<walk ground="130" />
+				<run ground="70" />
+			</speed>
 		</stats>
 		<skillList>
 			<skill id="32827" level="1" />
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
-			<skill id="4379" level="4" /> <!-- Spear Resistance -->
-			<skill id="16547" level="8" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 		<collision>
 			<radius normal="15" />
@@ -4075,25 +4015,16 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="1239" max="2893" chance="20" /> <!-- Adena -->
-				<item id="36543" min="1" max="1" chance="0.3" /> <!-- Adamantite Wire -->
-				<item id="17527" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="35336" min="1" max="1" chance="0.03" /> <!-- Helios Caster Fragment -->
-				<item id="36544" min="1" max="1" chance="0.03" /> <!-- Orichalcum Wire -->
-				<item id="35477" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Shoes (60%) -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="57" min="828" max="1929" chance="70" /> <!-- Adena -->
+				<item id="36528" min="1" max="1" chance="1.193" /> <!-- Metallic Fiber -->
+				<item id="36529" min="1" max="1" chance="0.3" /> <!-- Quality Fiber -->
+				<item id="35349" min="1" max="1" chance="0.03" /> <!-- Eternal Circlet Ingredient -->
+				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant R-grade Weapon -->
+				<item id="35473" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Circlet (60%) -->
 			</drop>
 			<spoil>
-				<item id="36518" min="1" max="1" chance="7.492" /> <!-- Durable Leather -->
-				<item id="36539" min="1" max="1" chance="0.3" /> <!-- Quality Leather Braid -->
+				<item id="36523" min="1" max="1" chance="3.239" /> <!-- Adamantite -->
+				<item id="36524" min="1" max="1" chance="0.3" /> <!-- Orichalcum -->
 			</spoil>
 		</dropLists>
 	</npc>

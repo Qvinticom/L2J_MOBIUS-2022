@@ -605,195 +605,684 @@
 			<height normal="120.75" />
 		</collision>
 	</npc>
-	<npc id="26431" level="85" type="Npc" name="Avenger Alusion" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="26431" level="106" type="RaidBoss" name="Avenger Alusion">
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<acquire exp="3332257463808" sp="2999031659" raidPoints="0" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="240004230.66992" hpRegen="453.2459686" mp="86023.581" mpRegen="3.3" />
+			<attack physical="306855.9531" magical="220061.8201" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="35576.70557" magical="17365.14602" />
 			<speed>
 				<walk ground="60" />
 				<run ground="300" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="34" />
 			<height normal="92.2" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="32910" level="1" /> <!-- Rule of Looting -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+			<skill id="32908" level="1" /> <!-- Critical Atk. Shield -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="19447" min="1" max="1" chance="90.52" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
+				<item id="39738" min="1" max="1" chance="50.15" /> <!-- Rune Stone -->
+				<item id="45931" min="3" max="3" chance="50.04" /> <!-- High-grade Spirit Stone -->
+				<item id="48620" min="1" max="1" chance="34.22" /> <!-- R99 Heavy Armor Crafting Pack -->
+				<item id="48622" min="1" max="1" chance="34.04" /> <!-- R99 Robe Crafting Pack -->
+				<item id="48621" min="1" max="1" chance="32.75" /> <!-- R99 Light Armor Crafting Pack -->
+				<item id="46489" min="1" max="1" chance="10.45" /> <!-- Pantheon's Soul Crystal Lv. 1 -->
+				<item id="46504" min="1" max="1" chance="10.37" /> <!-- Lionel's Soul Crystal Lv. 1 -->
+				<item id="46474" min="1" max="1" chance="10.28" /> <!-- Leona's Soul Crystal Lv. 1 -->
+				<item id="46459" min="1" max="1" chance="8.567" /> <!-- Mermoden's Soul Crystal Lv. 1 -->
+				<item id="46444" min="1" max="1" chance="8.441" /> <!-- Kain's Soul Crystal Lv. 1 -->
+				<item id="46475" min="1" max="1" chance="7.265" /> <!-- Leona's Soul Crystal Lv. 2 -->
+				<item id="46505" min="1" max="1" chance="7.217" /> <!-- Lionel's Soul Crystal Lv. 2 -->
+				<item id="46490" min="1" max="1" chance="7.178" /> <!-- Pantheon's Soul Crystal Lv. 2 -->
+				<item id="46445" min="1" max="1" chance="5.553" /> <!-- Kain's Soul Crystal Lv. 2 -->
+				<item id="46460" min="1" max="1" chance="5.503" /> <!-- Mermoden's Soul Crystal Lv. 2 -->
+				<item id="46476" min="1" max="1" chance="3.487" /> <!-- Leona's Soul Crystal Lv. 3 -->
+				<item id="46506" min="1" max="1" chance="3.47" /> <!-- Lionel's Soul Crystal Lv. 3 -->
+				<item id="46491" min="1" max="1" chance="3.385" /> <!-- Pantheon's Soul Crystal Lv. 3 -->
+				<item id="46446" min="1" max="1" chance="2.359" /> <!-- Kain's Soul Crystal Lv. 3 -->
+				<item id="46461" min="1" max="1" chance="2.347" /> <!-- Mermoden's Soul Crystal Lv. 3 -->
+				<item id="38043" min="1" max="1" chance="0.75" /> <!-- Helios Shaper Crafting Pack -->
+				<item id="38044" min="1" max="1" chance="0.75" /> <!-- Helios Cutter Crafting Pack -->
+				<item id="38045" min="1" max="1" chance="0.75" /> <!-- Helios Slasher Crafting Pack -->
+				<item id="46507" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal Lv. 4 -->
+				<item id="38046" min="1" max="1" chance="0.75" /> <!-- Helios Avenger Crafting Pack -->
+				<item id="38047" min="1" max="1" chance="0.75" /> <!-- Helios Fighter Crafting Pack -->
+				<item id="38048" min="1" max="1" chance="0.75" /> <!-- Helios Stormer Crafting Pack -->
+				<item id="46492" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal Lv. 4 -->
+				<item id="38049" min="1" max="1" chance="0.75" /> <!-- Helios Thrower Crafting Pack -->
+				<item id="38050" min="1" max="1" chance="0.75" /> <!-- Helios Shooter Crafting Pack -->
+				<item id="38051" min="1" max="1" chance="0.75" /> <!-- Helios Buster Crafting Pack -->
+				<item id="46477" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal Lv. 4 -->
+				<item id="38052" min="1" max="1" chance="0.75" /> <!-- Helios Caster Crafting Pack -->
+				<item id="38053" min="1" max="1" chance="0.75" /> <!-- Helios Retributer Crafting Pack -->
+				<item id="46447" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal Lv. 4 -->
+				<item id="46462" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal Lv. 4 -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="26432" level="85" type="Npc" name="Avenger Graff" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="26432" level="106" type="RaidBoss" name="Avenger Graff">
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<acquire exp="3332257463808" sp="2999031659" raidPoints="0" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="240004230.66992" hpRegen="453.2459686" mp="86023.581" mpRegen="3.3" />
+			<attack physical="306855.9531" magical="220061.8201" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="35576.70557" magical="17365.14602" />
 			<speed>
 				<walk ground="60" />
 				<run ground="300" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="34" />
 			<height normal="85.4" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="32910" level="1" /> <!-- Rule of Looting -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+			<skill id="32908" level="1" /> <!-- Critical Atk. Shield -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="19447" min="1" max="1" chance="91.325" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
+				<item id="45931" min="3" max="3" chance="51.25" /> <!-- High-grade Spirit Stone -->
+				<item id="39738" min="1" max="1" chance="50.73" /> <!-- Rune Stone -->
+				<item id="48621" min="1" max="1" chance="35.52" /> <!-- R99 Light Armor Crafting Pack -->
+				<item id="48622" min="1" max="1" chance="33.65" /> <!-- R99 Robe Crafting Pack -->
+				<item id="48620" min="1" max="1" chance="31.88" /> <!-- R99 Heavy Armor Crafting Pack -->
+				<item id="46474" min="1" max="1" chance="11.16" /> <!-- Leona's Soul Crystal Lv. 1 -->
+				<item id="46489" min="1" max="1" chance="11.01" /> <!-- Pantheon's Soul Crystal Lv. 1 -->
+				<item id="46504" min="1" max="1" chance="10.49" /> <!-- Lionel's Soul Crystal Lv. 1 -->
+				<item id="46444" min="1" max="1" chance="8.535" /> <!-- Kain's Soul Crystal Lv. 1 -->
+				<item id="46459" min="1" max="1" chance="8.489" /> <!-- Mermoden's Soul Crystal Lv. 1 -->
+				<item id="46505" min="1" max="1" chance="7.255" /> <!-- Lionel's Soul Crystal Lv. 2 -->
+				<item id="46475" min="1" max="1" chance="7.174" /> <!-- Leona's Soul Crystal Lv. 2 -->
+				<item id="46490" min="1" max="1" chance="7.171" /> <!-- Pantheon's Soul Crystal Lv. 2 -->
+				<item id="46445" min="1" max="1" chance="5.509" /> <!-- Kain's Soul Crystal Lv. 2 -->
+				<item id="46460" min="1" max="1" chance="5.432" /> <!-- Mermoden's Soul Crystal Lv. 2 -->
+				<item id="46491" min="1" max="1" chance="3.455" /> <!-- Pantheon's Soul Crystal Lv. 3 -->
+				<item id="46476" min="1" max="1" chance="3.455" /> <!-- Leona's Soul Crystal Lv. 3 -->
+				<item id="46506" min="1" max="1" chance="3.426" /> <!-- Lionel's Soul Crystal Lv. 3 -->
+				<item id="46461" min="1" max="1" chance="2.2795" /> <!-- Mermoden's Soul Crystal Lv. 3 -->
+				<item id="46446" min="1" max="1" chance="2.2795" /> <!-- Kain's Soul Crystal Lv. 3 -->
+				<item id="38046" min="1" max="1" chance="0.75" /> <!-- Helios Avenger Crafting Pack -->
+				<item id="46507" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal Lv. 4 -->
+				<item id="38045" min="1" max="1" chance="0.75" /> <!-- Helios Slasher Crafting Pack -->
+				<item id="38044" min="1" max="1" chance="0.75" /> <!-- Helios Cutter Crafting Pack -->
+				<item id="38043" min="1" max="1" chance="0.75" /> <!-- Helios Shaper Crafting Pack -->
+				<item id="38047" min="1" max="1" chance="0.75" /> <!-- Helios Fighter Crafting Pack -->
+				<item id="38048" min="1" max="1" chance="0.75" /> <!-- Helios Stormer Crafting Pack -->
+				<item id="46492" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal Lv. 4 -->
+				<item id="38049" min="1" max="1" chance="0.75" /> <!-- Helios Thrower Crafting Pack -->
+				<item id="38050" min="1" max="1" chance="0.75" /> <!-- Helios Shooter Crafting Pack -->
+				<item id="38051" min="1" max="1" chance="0.75" /> <!-- Helios Buster Crafting Pack -->
+				<item id="46477" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal Lv. 4 -->
+				<item id="38052" min="1" max="1" chance="0.75" /> <!-- Helios Caster Crafting Pack -->
+				<item id="38053" min="1" max="1" chance="0.75" /> <!-- Helios Retributer Crafting Pack -->
+				<item id="46462" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal Lv. 4 -->
+				<item id="46447" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal Lv. 4 -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="26433" level="85" type="Npc" name="Demon Venoma" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="8203" lhand="8203" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="26433" level="116" type="RaidBoss" name="Demon Venoma">
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="4583834285184" sp="4125450760" raidPoints="0" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="147352470.80583" hpRegen="543.0227337" mp="98179.66" mpRegen="3.6" />
+			<attack physical="367636.4933" magical="263650.599" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="42623.567" magical="20804.75" />
 			<speed>
 				<walk ground="79" />
 				<run ground="300" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="20" />
 			<height normal="56" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="32910" level="1" /> <!-- Rule of Looting -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+			<skill id="32908" level="1" /> <!-- Critical Atk. Shield -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="19447" min="1" max="1" chance="72.76" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
+				<item id="39738" min="1" max="1" chance="51.04" /> <!-- Rune Stone -->
+				<item id="45931" min="3" max="3" chance="50.86" /> <!-- High-grade Spirit Stone -->
+				<item id="48622" min="1" max="1" chance="33.92" /> <!-- R99 Robe Crafting Pack -->
+				<item id="48621" min="1" max="1" chance="32.63" /> <!-- R99 Light Armor Crafting Pack -->
+				<item id="48620" min="1" max="1" chance="32.21" /> <!-- R99 Heavy Armor Crafting Pack -->
+				<item id="46489" min="1" max="1" chance="11.16" /> <!-- Pantheon's Soul Crystal Lv. 1 -->
+				<item id="46504" min="1" max="1" chance="10.81" /> <!-- Lionel's Soul Crystal Lv. 1 -->
+				<item id="46474" min="1" max="1" chance="10.8" /> <!-- Leona's Soul Crystal Lv. 1 -->
+				<item id="46459" min="1" max="1" chance="8.518" /> <!-- Mermoden's Soul Crystal Lv. 1 -->
+				<item id="46444" min="1" max="1" chance="8.456" /> <!-- Kain's Soul Crystal Lv. 1 -->
+				<item id="46505" min="1" max="1" chance="7.188" /> <!-- Lionel's Soul Crystal Lv. 2 -->
+				<item id="46490" min="1" max="1" chance="7.17" /> <!-- Pantheon's Soul Crystal Lv. 2 -->
+				<item id="46475" min="1" max="1" chance="7.166" /> <!-- Leona's Soul Crystal Lv. 2 -->
+				<item id="46445" min="1" max="1" chance="5.512" /> <!-- Kain's Soul Crystal Lv. 2 -->
+				<item id="46460" min="1" max="1" chance="5.489" /> <!-- Mermoden's Soul Crystal Lv. 2 -->
+				<item id="46506" min="1" max="1" chance="3.455" /> <!-- Lionel's Soul Crystal Lv. 3 -->
+				<item id="46491" min="1" max="1" chance="3.439" /> <!-- Pantheon's Soul Crystal Lv. 3 -->
+				<item id="46476" min="1" max="1" chance="3.408" /> <!-- Leona's Soul Crystal Lv. 3 -->
+				<item id="38048" min="1" max="1" chance="2.453" /> <!-- Helios Stormer Crafting Pack -->
+				<item id="38050" min="1" max="1" chance="2.452" /> <!-- Helios Shooter Crafting Pack -->
+				<item id="38045" min="1" max="1" chance="2.425" /> <!-- Helios Slasher Crafting Pack -->
+				<item id="38051" min="1" max="1" chance="2.402" /> <!-- Helios Buster Crafting Pack -->
+				<item id="38049" min="1" max="1" chance="2.394" /> <!-- Helios Thrower Crafting Pack -->
+				<item id="38053" min="1" max="1" chance="2.39" /> <!-- Helios Retributer Crafting Pack -->
+				<item id="38044" min="1" max="1" chance="2.38" /> <!-- Helios Cutter Crafting Pack -->
+				<item id="38047" min="1" max="1" chance="2.377" /> <!-- Helios Fighter Crafting Pack -->
+				<item id="38046" min="1" max="1" chance="2.37" /> <!-- Helios Avenger Crafting Pack -->
+				<item id="46461" min="1" max="1" chance="2.359" /> <!-- Mermoden's Soul Crystal Lv. 3 -->
+				<item id="38052" min="1" max="1" chance="2.364" /> <!-- Helios Caster Crafting Pack -->
+				<item id="38043" min="1" max="1" chance="2.343" /> <!-- Helios Shaper Crafting Pack -->
+				<item id="46446" min="1" max="1" chance="2.307" /> <!-- Kain's Soul Crystal Lv. 3 -->
+				<item id="46507" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal Lv. 4 -->
+				<item id="46477" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal Lv. 4 -->
+				<item id="46492" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal Lv. 4 -->
+				<item id="46462" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal Lv. 4 -->
+				<item id="46447" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal Lv. 4 -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="26434" level="85" type="Npc" name="Fiend Sarboth" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="26434" level="116" type="RaidBoss" name="Fiend Sarboth">
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="4583834285184" sp="4125450760" raidPoints="0" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="147352470.80583" hpRegen="543.0227337" mp="98179.66" mpRegen="3.6" />
+			<attack physical="367636.4933" magical="263650.599" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="42623.567" magical="20804.75" />
 			<speed>
 				<walk ground="45" />
 				<run ground="300" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="25" />
 			<height normal="68" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="32910" level="1" /> <!-- Rule of Looting -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+			<skill id="32908" level="1" /> <!-- Critical Atk. Shield -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="19447" min="1" max="1" chance="74.96" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
+				<item id="45931" min="3" max="3" chance="50.73" /> <!-- High-grade Spirit Stone -->
+				<item id="39738" min="1" max="1" chance="50.71" /> <!-- Rune Stone -->
+				<item id="48621" min="1" max="1" chance="34.88" /> <!-- R99 Light Armor Crafting Pack -->
+				<item id="48620" min="1" max="1" chance="34.4" /> <!-- R99 Heavy Armor Crafting Pack -->
+				<item id="48622" min="1" max="1" chance="33.85" /> <!-- R99 Robe Crafting Pack -->
+				<item id="46474" min="1" max="1" chance="11.34" /> <!-- Leona's Soul Crystal Lv. 1 -->
+				<item id="46504" min="1" max="1" chance="10.95" /> <!-- Lionel's Soul Crystal Lv. 1 -->
+				<item id="46489" min="1" max="1" chance="10.32" /> <!-- Pantheon's Soul Crystal Lv. 1 -->
+				<item id="46459" min="1" max="1" chance="8.513" /> <!-- Mermoden's Soul Crystal Lv. 1 -->
+				<item id="46444" min="1" max="1" chance="8.513" /> <!-- Kain's Soul Crystal Lv. 1 -->
+				<item id="46505" min="1" max="1" chance="7.25" /> <!-- Lionel's Soul Crystal Lv. 2 -->
+				<item id="46475" min="1" max="1" chance="7.247" /> <!-- Leona's Soul Crystal Lv. 2 -->
+				<item id="46490" min="1" max="1" chance="7.145" /> <!-- Pantheon's Soul Crystal Lv. 2 -->
+				<item id="46460" min="1" max="1" chance="5.57" /> <!-- Mermoden's Soul Crystal Lv. 2 -->
+				<item id="46445" min="1" max="1" chance="5.496" /> <!-- Kain's Soul Crystal Lv. 2 -->
+				<item id="46476" min="1" max="1" chance="3.485" /> <!-- Leona's Soul Crystal Lv. 3 -->
+				<item id="46491" min="1" max="1" chance="3.457" /> <!-- Pantheon's Soul Crystal Lv. 3 -->
+				<item id="46506" min="1" max="1" chance="3.394" /> <!-- Lionel's Soul Crystal Lv. 3 -->
+				<item id="38049" min="1" max="1" chance="2.437" /> <!-- Helios Thrower Crafting Pack -->
+				<item id="38044" min="1" max="1" chance="2.422" /> <!-- Helios Cutter Crafting Pack -->
+				<item id="38053" min="1" max="1" chance="2.416" /> <!-- Helios Retributer Crafting Pack -->
+				<item id="38047" min="1" max="1" chance="2.398" /> <!-- Helios Fighter Crafting Pack -->
+				<item id="38045" min="1" max="1" chance="2.383" /> <!-- Helios Slasher Crafting Pack -->
+				<item id="38050" min="1" max="1" chance="2.381" /> <!-- Helios Shooter Crafting Pack -->
+				<item id="38051" min="1" max="1" chance="2.38" /> <!-- Helios Buster Crafting Pack -->
+				<item id="38043" min="1" max="1" chance="2.361" /> <!-- Helios Shaper Crafting Pack -->
+				<item id="38048" min="1" max="1" chance="2.359" /> <!-- Helios Stormer Crafting Pack -->
+				<item id="46461" min="1" max="1" chance="2.343" /> <!-- Mermoden's Soul Crystal Lv. 3 -->
+				<item id="38046" min="1" max="1" chance="2.351" /> <!-- Helios Avenger Crafting Pack -->
+				<item id="38052" min="1" max="1" chance="2.344" /> <!-- Helios Caster Crafting Pack -->
+				<item id="46446" min="1" max="1" chance="2.3035" /> <!-- Kain's Soul Crystal Lv. 3 -->
+				<item id="46507" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal Lv. 4 -->
+				<item id="46477" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal Lv. 4 -->
+				<item id="46492" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal Lv. 4 -->
+				<item id="46447" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal Lv. 4 -->
+				<item id="46462" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal Lv. 4 -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="26435" level="85" type="Npc" name="Watcher Tristan" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="26435" level="108" type="RaidBoss" name="Watcher Tristan">
+		<race>DRAGON</race>
+		<sex>MALE</sex>
+		<acquire exp="3557421649152" sp="3201679471" raidPoints="0" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="217701032.10752" hpRegen="470.5528213" mp="88542.547" mpRegen="3.3" />
+			<attack physical="318573.0144" magical="228464.7134" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="36935.17502" magical="18028.22092" />
 			<speed>
 				<walk ground="70" />
 				<run ground="300" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="36" />
 			<height normal="71.4" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="32910" level="1" /> <!-- Rule of Looting -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+			<skill id="32908" level="1" /> <!-- Critical Atk. Shield -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="19447" min="1" max="1" chance="83.35" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
+				<item id="39738" min="1" max="1" chance="49.77" /> <!-- Rune Stone -->
+				<item id="45931" min="3" max="3" chance="49.06" /> <!-- High-grade Spirit Stone -->
+				<item id="48621" min="1" max="1" chance="33.91" /> <!-- R99 Light Armor Crafting Pack -->
+				<item id="48622" min="1" max="1" chance="31.75" /> <!-- R99 Robe Crafting Pack -->
+				<item id="48620" min="1" max="1" chance="31.63" /> <!-- R99 Heavy Armor Crafting Pack -->
+				<item id="46489" min="1" max="1" chance="11.24" /> <!-- Pantheon's Soul Crystal Lv. 1 -->
+				<item id="46474" min="1" max="1" chance="11.2" /> <!-- Leona's Soul Crystal Lv. 1 -->
+				<item id="46504" min="1" max="1" chance="10.38" /> <!-- Lionel's Soul Crystal Lv. 1 -->
+				<item id="46444" min="1" max="1" chance="8.532" /> <!-- Kain's Soul Crystal Lv. 1 -->
+				<item id="46459" min="1" max="1" chance="8.47" /> <!-- Mermoden's Soul Crystal Lv. 1 -->
+				<item id="46505" min="1" max="1" chance="7.225" /> <!-- Lionel's Soul Crystal Lv. 2 -->
+				<item id="46475" min="1" max="1" chance="7.194" /> <!-- Leona's Soul Crystal Lv. 2 -->
+				<item id="46490" min="1" max="1" chance="7.136" /> <!-- Pantheon's Soul Crystal Lv. 2 -->
+				<item id="46460" min="1" max="1" chance="5.509" /> <!-- Mermoden's Soul Crystal Lv. 2 -->
+				<item id="46445" min="1" max="1" chance="5.434" /> <!-- Kain's Soul Crystal Lv. 2 -->
+				<item id="46476" min="1" max="1" chance="3.412" /> <!-- Leona's Soul Crystal Lv. 3 -->
+				<item id="46491" min="1" max="1" chance="3.391" /> <!-- Pantheon's Soul Crystal Lv. 3 -->
+				<item id="46506" min="1" max="1" chance="3.382" /> <!-- Lionel's Soul Crystal Lv. 3 -->
+				<item id="46446" min="1" max="1" chance="2.3875" /> <!-- Kain's Soul Crystal Lv. 3 -->
+				<item id="46461" min="1" max="1" chance="2.3825" /> <!-- Mermoden's Soul Crystal Lv. 3 -->
+				<item id="38048" min="1" max="1" chance="1.17" /> <!-- Helios Stormer Crafting Pack -->
+				<item id="38050" min="1" max="1" chance="1.15" /> <!-- Helios Shooter Crafting Pack -->
+				<item id="38045" min="1" max="1" chance="1.148" /> <!-- Helios Slasher Crafting Pack -->
+				<item id="38049" min="1" max="1" chance="1.145" /> <!-- Helios Thrower Crafting Pack -->
+				<item id="38053" min="1" max="1" chance="1.135" /> <!-- Helios Retributer Crafting Pack -->
+				<item id="38044" min="1" max="1" chance="1.101" /> <!-- Helios Cutter Crafting Pack -->
+				<item id="38043" min="1" max="1" chance="1.096" /> <!-- Helios Shaper Crafting Pack -->
+				<item id="38047" min="1" max="1" chance="1.091" /> <!-- Helios Fighter Crafting Pack -->
+				<item id="38051" min="1" max="1" chance="1.061" /> <!-- Helios Buster Crafting Pack -->
+				<item id="38046" min="1" max="1" chance="1.056" /> <!-- Helios Avenger Crafting Pack -->
+				<item id="38052" min="1" max="1" chance="1.035" /> <!-- Helios Caster Crafting Pack -->
+				<item id="46507" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal Lv. 4 -->
+				<item id="46492" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal Lv. 4 -->
+				<item id="46477" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal Lv. 4 -->
+				<item id="46447" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal Lv. 4 -->
+				<item id="46462" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal Lv. 4 -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="26436" level="85" type="Npc" name="Watcher Setheth" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="26436" level="108" type="RaidBoss" name="Watcher Setheth">
+		<race>DRAGON</race>
+		<sex>MALE</sex>
+		<acquire exp="3557421649152" sp="3201679471" raidPoints="0" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="217701032.10752" hpRegen="470.5528213" mp="88542.547" mpRegen="3.3" />
+			<attack physical="318573.0144" magical="228464.7134" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="36935.17502" magical="18028.22092" />
 			<speed>
 				<walk ground="60" />
 				<run ground="300" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="25.5" />
 			<height normal="67.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="32910" level="1" /> <!-- Rule of Looting -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+			<skill id="32908" level="1" /> <!-- Critical Atk. Shield -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="19447" min="1" max="1" chance="80.03" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
+				<item id="45931" min="3" max="3" chance="50.83" /> <!-- High-grade Spirit Stone -->
+				<item id="39738" min="1" max="1" chance="49.43" /> <!-- Rune Stone -->
+				<item id="48621" min="1" max="1" chance="35.63" /> <!-- R99 Light Armor Crafting Pack -->
+				<item id="48622" min="1" max="1" chance="32.54" /> <!-- R99 Robe Crafting Pack -->
+				<item id="48620" min="1" max="1" chance="31.37" /> <!-- R99 Heavy Armor Crafting Pack -->
+				<item id="46504" min="1" max="1" chance="11.33" /> <!-- Lionel's Soul Crystal Lv. 1 -->
+				<item id="46474" min="1" max="1" chance="11.06" /> <!-- Leona's Soul Crystal Lv. 1 -->
+				<item id="46489" min="1" max="1" chance="10.45" /> <!-- Pantheon's Soul Crystal Lv. 1 -->
+				<item id="46444" min="1" max="1" chance="8.519" /> <!-- Kain's Soul Crystal Lv. 1 -->
+				<item id="46459" min="1" max="1" chance="8.493" /> <!-- Mermoden's Soul Crystal Lv. 1 -->
+				<item id="46505" min="1" max="1" chance="7.203" /> <!-- Lionel's Soul Crystal Lv. 2 -->
+				<item id="46475" min="1" max="1" chance="7.158" /> <!-- Leona's Soul Crystal Lv. 2 -->
+				<item id="46490" min="1" max="1" chance="7.134" /> <!-- Pantheon's Soul Crystal Lv. 2 -->
+				<item id="46460" min="1" max="1" chance="5.527" /> <!-- Mermoden's Soul Crystal Lv. 2 -->
+				<item id="46445" min="1" max="1" chance="5.472" /> <!-- Kain's Soul Crystal Lv. 2 -->
+				<item id="46506" min="1" max="1" chance="3.456" /> <!-- Lionel's Soul Crystal Lv. 3 -->
+				<item id="46491" min="1" max="1" chance="3.448" /> <!-- Pantheon's Soul Crystal Lv. 3 -->
+				<item id="46476" min="1" max="1" chance="3.415" /> <!-- Leona's Soul Crystal Lv. 3 -->
+				<item id="46446" min="1" max="1" chance="2.359" /> <!-- Kain's Soul Crystal Lv. 3 -->
+				<item id="46461" min="1" max="1" chance="2.2665" /> <!-- Mermoden's Soul Crystal Lv. 3 -->
+				<item id="38053" min="1" max="1" chance="1.16" /> <!-- Helios Retributer Crafting Pack -->
+				<item id="38047" min="1" max="1" chance="1.159" /> <!-- Helios Fighter Crafting Pack -->
+				<item id="38052" min="1" max="1" chance="1.131" /> <!-- Helios Caster Crafting Pack -->
+				<item id="38048" min="1" max="1" chance="1.12" /> <!-- Helios Stormer Crafting Pack -->
+				<item id="38043" min="1" max="1" chance="1.116" /> <!-- Helios Shaper Crafting Pack -->
+				<item id="38050" min="1" max="1" chance="1.11" /> <!-- Helios Shooter Crafting Pack -->
+				<item id="38049" min="1" max="1" chance="1.092" /> <!-- Helios Thrower Crafting Pack -->
+				<item id="38044" min="1" max="1" chance="1.085" /> <!-- Helios Cutter Crafting Pack -->
+				<item id="38051" min="1" max="1" chance="1.079" /> <!-- Helios Buster Crafting Pack -->
+				<item id="38046" min="1" max="1" chance="1.04" /> <!-- Helios Avenger Crafting Pack -->
+				<item id="38045" min="1" max="1" chance="1.038" /> <!-- Helios Slasher Crafting Pack -->
+				<item id="46507" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal Lv. 4 -->
+				<item id="46477" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal Lv. 4 -->
+				<item id="46492" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal Lv. 4 -->
+				<item id="46447" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal Lv. 4 -->
+				<item id="46462" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal Lv. 4 -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="26437" level="85" type="Npc" name="Berserker Zetahl" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="26437" level="114" type="RaidBoss" name="Berserker Zetahl">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="4308330575808" sp="3877497477" raidPoints="0" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="162454985.36911" hpRegen="524.4188804" mp="95735.306" mpRegen="3.6" />
+			<attack physical="355041.3385" magical="254617.9807" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="41163.29188" magical="20091.98331" />
 			<speed>
 				<walk ground="50" />
 				<run ground="300" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="30" />
 			<height normal="40.8" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="32910" level="1" /> <!-- Rule of Looting -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+			<skill id="32908" level="1" /> <!-- Critical Atk. Shield -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="19447" min="1" max="1" chance="78.675" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
+				<item id="45931" min="3" max="3" chance="50.03" /> <!-- High-grade Spirit Stone -->
+				<item id="39738" min="1" max="1" chance="48.93" /> <!-- Rune Stone -->
+				<item id="48622" min="1" max="1" chance="34.29" /> <!-- R99 Robe Crafting Pack -->
+				<item id="48620" min="1" max="1" chance="33.41" /> <!-- R99 Heavy Armor Crafting Pack -->
+				<item id="48621" min="1" max="1" chance="32.37" /> <!-- R99 Light Armor Crafting Pack -->
+				<item id="46489" min="1" max="1" chance="10.77" /> <!-- Pantheon's Soul Crystal Lv. 1 -->
+				<item id="46474" min="1" max="1" chance="10.68" /> <!-- Leona's Soul Crystal Lv. 1 -->
+				<item id="46504" min="1" max="1" chance="10.38" /> <!-- Lionel's Soul Crystal Lv. 1 -->
+				<item id="46444" min="1" max="1" chance="8.531" /> <!-- Kain's Soul Crystal Lv. 1 -->
+				<item id="46459" min="1" max="1" chance="8.439" /> <!-- Mermoden's Soul Crystal Lv. 1 -->
+				<item id="46505" min="1" max="1" chance="7.196" /> <!-- Lionel's Soul Crystal Lv. 2 -->
+				<item id="46490" min="1" max="1" chance="7.173" /> <!-- Pantheon's Soul Crystal Lv. 2 -->
+				<item id="46475" min="1" max="1" chance="7.17" /> <!-- Leona's Soul Crystal Lv. 2 -->
+				<item id="46445" min="1" max="1" chance="5.458" /> <!-- Kain's Soul Crystal Lv. 2 -->
+				<item id="46460" min="1" max="1" chance="5.439" /> <!-- Mermoden's Soul Crystal Lv. 2 -->
+				<item id="46506" min="1" max="1" chance="3.5" /> <!-- Lionel's Soul Crystal Lv. 3 -->
+				<item id="46491" min="1" max="1" chance="3.45" /> <!-- Pantheon's Soul Crystal Lv. 3 -->
+				<item id="46476" min="1" max="1" chance="3.433" /> <!-- Leona's Soul Crystal Lv. 3 -->
+				<item id="46461" min="1" max="1" chance="2.375" /> <!-- Mermoden's Soul Crystal Lv. 3 -->
+				<item id="46446" min="1" max="1" chance="2.2955" /> <!-- Kain's Soul Crystal Lv. 3 -->
+				<item id="38049" min="1" max="1" chance="2.168" /> <!-- Helios Thrower Crafting Pack -->
+				<item id="38047" min="1" max="1" chance="2.156" /> <!-- Helios Fighter Crafting Pack -->
+				<item id="38046" min="1" max="1" chance="2.152" /> <!-- Helios Avenger Crafting Pack -->
+				<item id="38051" min="1" max="1" chance="2.151" /> <!-- Helios Buster Crafting Pack -->
+				<item id="38050" min="1" max="1" chance="2.146" /> <!-- Helios Shooter Crafting Pack -->
+				<item id="38053" min="1" max="1" chance="2.137" /> <!-- Helios Retributer Crafting Pack -->
+				<item id="38044" min="1" max="1" chance="2.12" /> <!-- Helios Cutter Crafting Pack -->
+				<item id="38052" min="1" max="1" chance="2.118" /> <!-- Helios Caster Crafting Pack -->
+				<item id="38048" min="1" max="1" chance="2.104" /> <!-- Helios Stormer Crafting Pack -->
+				<item id="38043" min="1" max="1" chance="2.101" /> <!-- Helios Shaper Crafting Pack -->
+				<item id="38045" min="1" max="1" chance="2.09" /> <!-- Helios Slasher Crafting Pack -->
+				<item id="46492" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal Lv. 4 -->
+				<item id="46477" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal Lv. 4 -->
+				<item id="46507" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal Lv. 4 -->
+				<item id="46447" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal Lv. 4 -->
+				<item id="46462" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal Lv. 4 -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="26438" level="85" type="Npc" name="Berserker Tabris" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="26438" level="114" type="RaidBoss" name="Berserker Tabris">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="4308330575808" sp="3877497477" raidPoints="0" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="162454985.36911" hpRegen="524.4188804" mp="95735.306" mpRegen="3.6" />
+			<attack physical="355041.3385" magical="254617.9807" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="41163.29188" magical="20091.98331" />
 			<speed>
 				<walk ground="50" />
 				<run ground="300" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="28" />
 			<height normal="54.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="32910" level="1" /> <!-- Rule of Looting -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+			<skill id="32908" level="1" /> <!-- Critical Atk. Shield -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="19447" min="1" max="1" chance="77.75" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
+				<item id="45931" min="3" max="3" chance="50.92" /> <!-- High-grade Spirit Stone -->
+				<item id="39738" min="1" max="1" chance="49.84" /> <!-- Rune Stone -->
+				<item id="48621" min="1" max="1" chance="34.87" /> <!-- R99 Light Armor Crafting Pack -->
+				<item id="48622" min="1" max="1" chance="32.87" /> <!-- R99 Robe Crafting Pack -->
+				<item id="48620" min="1" max="1" chance="31.42" /> <!-- R99 Heavy Armor Crafting Pack -->
+				<item id="46474" min="1" max="1" chance="11.15" /> <!-- Leona's Soul Crystal Lv. 1 -->
+				<item id="46504" min="1" max="1" chance="11.02" /> <!-- Lionel's Soul Crystal Lv. 1 -->
+				<item id="46489" min="1" max="1" chance="10.34" /> <!-- Pantheon's Soul Crystal Lv. 1 -->
+				<item id="46459" min="1" max="1" chance="8.458" /> <!-- Mermoden's Soul Crystal Lv. 1 -->
+				<item id="46444" min="1" max="1" chance="8.447" /> <!-- Kain's Soul Crystal Lv. 1 -->
+				<item id="46475" min="1" max="1" chance="7.235" /> <!-- Leona's Soul Crystal Lv. 2 -->
+				<item id="46505" min="1" max="1" chance="7.219" /> <!-- Lionel's Soul Crystal Lv. 2 -->
+				<item id="46490" min="1" max="1" chance="7.179" /> <!-- Pantheon's Soul Crystal Lv. 2 -->
+				<item id="46460" min="1" max="1" chance="5.55" /> <!-- Mermoden's Soul Crystal Lv. 2 -->
+				<item id="46445" min="1" max="1" chance="5.485" /> <!-- Kain's Soul Crystal Lv. 2 -->
+				<item id="46506" min="1" max="1" chance="3.439" /> <!-- Lionel's Soul Crystal Lv. 3 -->
+				<item id="46491" min="1" max="1" chance="3.419" /> <!-- Pantheon's Soul Crystal Lv. 3 -->
+				<item id="46476" min="1" max="1" chance="3.409" /> <!-- Leona's Soul Crystal Lv. 3 -->
+				<item id="46461" min="1" max="1" chance="2.331" /> <!-- Mermoden's Soul Crystal Lv. 3 -->
+				<item id="46446" min="1" max="1" chance="2.2875" /> <!-- Kain's Soul Crystal Lv. 3 -->
+				<item id="38045" min="1" max="1" chance="2.143" /> <!-- Helios Slasher Crafting Pack -->
+				<item id="38046" min="1" max="1" chance="2.141" /> <!-- Helios Avenger Crafting Pack -->
+				<item id="38044" min="1" max="1" chance="2.12" /> <!-- Helios Cutter Crafting Pack -->
+				<item id="38052" min="1" max="1" chance="2.089" /> <!-- Helios Caster Crafting Pack -->
+				<item id="38050" min="1" max="1" chance="2.084" /> <!-- Helios Shooter Crafting Pack -->
+				<item id="38049" min="1" max="1" chance="2.08" /> <!-- Helios Thrower Crafting Pack -->
+				<item id="38048" min="1" max="1" chance="2.078" /> <!-- Helios Stormer Crafting Pack -->
+				<item id="38051" min="1" max="1" chance="2.068" /> <!-- Helios Buster Crafting Pack -->
+				<item id="38047" min="1" max="1" chance="2.051" /> <!-- Helios Fighter Crafting Pack -->
+				<item id="38053" min="1" max="1" chance="2.037" /> <!-- Helios Retributer Crafting Pack -->
+				<item id="38043" min="1" max="1" chance="2.03" /> <!-- Helios Shaper Crafting Pack -->
+				<item id="46492" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal Lv. 4 -->
+				<item id="46477" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal Lv. 4 -->
+				<item id="46507" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal Lv. 4 -->
+				<item id="46447" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal Lv. 4 -->
+				<item id="46462" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal Lv. 4 -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="26439" level="85" type="Npc" name="Ferocious Valac" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="26439" level="112" type="RaidBoss" name="Ferocious Valac">
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="4044498296832" sp="3640048402" raidPoints="0" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="179115608.24732" hpRegen="506.1392772" mp="93288.519" mpRegen="3.6" />
+			<attack physical="342665.7071" magical="245742.7937" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="39728.46818" magical="19391.63956" />
 			<speed>
 				<walk ground="34" />
 				<run ground="300" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="54" />
 			<height normal="77.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="32910" level="1" /> <!-- Rule of Looting -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+			<skill id="32908" level="1" /> <!-- Critical Atk. Shield -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="19447" min="1" max="1" chance="74.82" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
+				<item id="45931" min="3" max="3" chance="51.09" /> <!-- High-grade Spirit Stone -->
+				<item id="39738" min="1" max="1" chance="49.14" /> <!-- Rune Stone -->
+				<item id="48621" min="1" max="1" chance="35.12" /> <!-- R99 Light Armor Crafting Pack -->
+				<item id="48620" min="1" max="1" chance="34.04" /> <!-- R99 Heavy Armor Crafting Pack -->
+				<item id="48622" min="1" max="1" chance="32.73" /> <!-- R99 Robe Crafting Pack -->
+				<item id="46504" min="1" max="1" chance="11.31" /> <!-- Lionel's Soul Crystal Lv. 1 -->
+				<item id="46489" min="1" max="1" chance="10.68" /> <!-- Pantheon's Soul Crystal Lv. 1 -->
+				<item id="46474" min="1" max="1" chance="10.28" /> <!-- Leona's Soul Crystal Lv. 1 -->
+				<item id="46444" min="1" max="1" chance="8.557" /> <!-- Kain's Soul Crystal Lv. 1 -->
+				<item id="46459" min="1" max="1" chance="8.466" /> <!-- Mermoden's Soul Crystal Lv. 1 -->
+				<item id="46505" min="1" max="1" chance="7.269" /> <!-- Lionel's Soul Crystal Lv. 2 -->
+				<item id="46475" min="1" max="1" chance="7.25" /> <!-- Leona's Soul Crystal Lv. 2 -->
+				<item id="46490" min="1" max="1" chance="7.167" /> <!-- Pantheon's Soul Crystal Lv. 2 -->
+				<item id="46445" min="1" max="1" chance="5.529" /> <!-- Kain's Soul Crystal Lv. 2 -->
+				<item id="46460" min="1" max="1" chance="5.529" /> <!-- Mermoden's Soul Crystal Lv. 2 -->
+				<item id="46476" min="1" max="1" chance="3.479" /> <!-- Leona's Soul Crystal Lv. 3 -->
+				<item id="46506" min="1" max="1" chance="3.435" /> <!-- Lionel's Soul Crystal Lv. 3 -->
+				<item id="46491" min="1" max="1" chance="3.412" /> <!-- Pantheon's Soul Crystal Lv. 3 -->
+				<item id="46446" min="1" max="1" chance="2.367" /> <!-- Kain's Soul Crystal Lv. 3 -->
+				<item id="46461" min="1" max="1" chance="2.2795" /> <!-- Mermoden's Soul Crystal Lv. 3 -->
+				<item id="38046" min="1" max="1" chance="1.863" /> <!-- Helios Avenger Crafting Pack -->
+				<item id="38053" min="1" max="1" chance="1.838" /> <!-- Helios Retributer Crafting Pack -->
+				<item id="38052" min="1" max="1" chance="1.823" /> <!-- Helios Caster Crafting Pack -->
+				<item id="38047" min="1" max="1" chance="1.809" /> <!-- Helios Fighter Crafting Pack -->
+				<item id="38051" min="1" max="1" chance="1.778" /> <!-- Helios Buster Crafting Pack -->
+				<item id="38050" min="1" max="1" chance="1.777" /> <!-- Helios Shooter Crafting Pack -->
+				<item id="38045" min="1" max="1" chance="1.77" /> <!-- Helios Slasher Crafting Pack -->
+				<item id="38048" min="1" max="1" chance="1.768" /> <!-- Helios Stormer Crafting Pack -->
+				<item id="38044" min="1" max="1" chance="1.761" /> <!-- Helios Cutter Crafting Pack -->
+				<item id="38049" min="1" max="1" chance="1.76" /> <!-- Helios Thrower Crafting Pack -->
+				<item id="38043" min="1" max="1" chance="1.751" /> <!-- Helios Shaper Crafting Pack -->
+				<item id="46492" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal Lv. 4 -->
+				<item id="46507" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal Lv. 4 -->
+				<item id="46477" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal Lv. 4 -->
+				<item id="46447" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal Lv. 4 -->
+				<item id="46462" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal Lv. 4 -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="26440" level="85" type="Npc" name="Arrogant Lebruum" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="26440" level="112" type="RaidBoss" name="Arrogant Lebruum">
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="4044498296832" sp="3640048402" raidPoints="0" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="179115608.24732" hpRegen="506.1392772" mp="93288.519" mpRegen="3.6" />
+			<attack physical="342665.7071" magical="245742.7937" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="39728.46818" magical="19391.63956" />
 			<speed>
 				<walk ground="60" />
 				<run ground="300" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="40" />
 			<height normal="84.197" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="32910" level="1" /> <!-- Rule of Looting -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+			<skill id="32908" level="1" /> <!-- Critical Atk. Shield -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="19447" min="1" max="1" chance="74.72" /> <!-- Blessed Scroll: Enchant R-grade Weapon -->
+				<item id="39738" min="1" max="1" chance="49.63" /> <!-- Rune Stone -->
+				<item id="45931" min="3" max="3" chance="49.08" /> <!-- High-grade Spirit Stone -->
+				<item id="48621" min="1" max="1" chance="34.66" /> <!-- R99 Light Armor Crafting Pack -->
+				<item id="48620" min="1" max="1" chance="31.93" /> <!-- R99 Heavy Armor Crafting Pack -->
+				<item id="48622" min="1" max="1" chance="31.6" /> <!-- R99 Robe Crafting Pack -->
+				<item id="46504" min="1" max="1" chance="10.43" /> <!-- Lionel's Soul Crystal Lv. 1 -->
+				<item id="46474" min="1" max="1" chance="10.36" /> <!-- Leona's Soul Crystal Lv. 1 -->
+				<item id="46489" min="1" max="1" chance="10.33" /> <!-- Pantheon's Soul Crystal Lv. 1 -->
+				<item id="46444" min="1" max="1" chance="8.569" /> <!-- Kain's Soul Crystal Lv. 1 -->
+				<item id="46459" min="1" max="1" chance="8.441" /> <!-- Mermoden's Soul Crystal Lv. 1 -->
+				<item id="46505" min="1" max="1" chance="7.239" /> <!-- Lionel's Soul Crystal Lv. 2 -->
+				<item id="46490" min="1" max="1" chance="7.238" /> <!-- Pantheon's Soul Crystal Lv. 2 -->
+				<item id="46475" min="1" max="1" chance="7.225" /> <!-- Leona's Soul Crystal Lv. 2 -->
+				<item id="46460" min="1" max="1" chance="5.524" /> <!-- Mermoden's Soul Crystal Lv. 2 -->
+				<item id="46445" min="1" max="1" chance="5.502" /> <!-- Kain's Soul Crystal Lv. 2 -->
+				<item id="46476" min="1" max="1" chance="3.519" /> <!-- Leona's Soul Crystal Lv. 3 -->
+				<item id="46506" min="1" max="1" chance="3.496" /> <!-- Lionel's Soul Crystal Lv. 3 -->
+				<item id="46491" min="1" max="1" chance="3.441" /> <!-- Pantheon's Soul Crystal Lv. 3 -->
+				<item id="46461" min="1" max="1" chance="2.31" /> <!-- Mermoden's Soul Crystal Lv. 3 -->
+				<item id="46446" min="1" max="1" chance="2.3055" /> <!-- Kain's Soul Crystal Lv. 3 -->
+				<item id="38045" min="1" max="1" chance="1.869" /> <!-- Helios Slasher Crafting Pack -->
+				<item id="38052" min="1" max="1" chance="1.845" /> <!-- Helios Caster Crafting Pack -->
+				<item id="38046" min="1" max="1" chance="1.84" /> <!-- Helios Avenger Crafting Pack -->
+				<item id="38048" min="1" max="1" chance="1.825" /> <!-- Helios Stormer Crafting Pack -->
+				<item id="38047" min="1" max="1" chance="1.824" /> <!-- Helios Fighter Crafting Pack -->
+				<item id="38044" min="1" max="1" chance="1.784" /> <!-- Helios Cutter Crafting Pack -->
+				<item id="38053" min="1" max="1" chance="1.767" /> <!-- Helios Retributer Crafting Pack -->
+				<item id="38043" min="1" max="1" chance="1.759" /> <!-- Helios Shaper Crafting Pack -->
+				<item id="38049" min="1" max="1" chance="1.748" /> <!-- Helios Thrower Crafting Pack -->
+				<item id="38051" min="1" max="1" chance="1.742" /> <!-- Helios Buster Crafting Pack -->
+				<item id="38050" min="1" max="1" chance="1.737" /> <!-- Helios Shooter Crafting Pack -->
+				<item id="46492" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal Lv. 4 -->
+				<item id="46507" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal Lv. 4 -->
+				<item id="46477" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal Lv. 4 -->
+				<item id="46462" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal Lv. 4 -->
+				<item id="46447" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal Lv. 4 -->
+			</drop>
+		</dropLists>
 	</npc>
 </list>
