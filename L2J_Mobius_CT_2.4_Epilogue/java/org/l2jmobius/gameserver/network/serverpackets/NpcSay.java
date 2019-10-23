@@ -70,6 +70,7 @@ public class NpcSay implements IClientOutgoingPacket
 		_textType = messageType;
 		_npcId = 1000000 + npcId;
 		_npcString = npcString.getId();
+		_text = npcString.getText();
 	}
 	
 	public NpcSay(Npc npc, ChatType messageType, NpcStringId npcString)
@@ -78,6 +79,7 @@ public class NpcSay implements IClientOutgoingPacket
 		_textType = messageType;
 		_npcId = 1000000 + npc.getTemplate().getDisplayId();
 		_npcString = npcString.getId();
+		_text = npcString.getText();
 	}
 	
 	/**
@@ -91,30 +93,6 @@ public class NpcSay implements IClientOutgoingPacket
 			_parameters = new ArrayList<>();
 		}
 		_parameters.add(text);
-		return this;
-	}
-	
-	/**
-	 * @param params a list of strings to add as parameters for this packet's message (replaces S1, S2 etc.)
-	 * @return this NpcSay packet object
-	 */
-	public NpcSay addStringParameters(String... params)
-	{
-		if ((params != null) && (params.length > 0))
-		{
-			if (_parameters == null)
-			{
-				_parameters = new ArrayList<>();
-			}
-			
-			for (String item : params)
-			{
-				if ((item != null) && (item.length() > 0))
-				{
-					_parameters.add(item);
-				}
-			}
-		}
 		return this;
 	}
 	
@@ -132,6 +110,14 @@ public class NpcSay implements IClientOutgoingPacket
 		packet.writeD(_textType.getClientId());
 		packet.writeD(_npcId);
 		
+		if (_parameters != null)
+		{
+			for (int i = 0; i < _parameters.size(); i++)
+			{
+				_text = _text.replace("$s" + (i + 1), _parameters.get(i));
+			}
+		}
+		
 		// Localisation related.
 		if (_lang != null)
 		{
@@ -141,25 +127,12 @@ public class NpcSay implements IClientOutgoingPacket
 				final NSLocalisation nsl = ns.getLocalisation(_lang);
 				if (nsl != null)
 				{
-					packet.writeD(-1);
-					packet.writeS(nsl.getLocalisation(_parameters != null ? _parameters : Collections.EMPTY_LIST));
-					return true;
+					_text = nsl.getLocalisation(_parameters != null ? _parameters : Collections.EMPTY_LIST);
 				}
 			}
 		}
 		
-		packet.writeD(_npcString);
-		if (_npcString == -1)
-		{
-			packet.writeS(_text);
-		}
-		else if (_parameters != null)
-		{
-			for (String s : _parameters)
-			{
-				packet.writeS(s);
-			}
-		}
+		packet.writeS(_text);
 		return true;
 	}
 }

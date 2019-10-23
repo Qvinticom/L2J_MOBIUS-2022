@@ -71,7 +71,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="6307" type="Weapon" name="Sword of Limit - Guidance">
-		<!-- <Soul Crystal Enhancement>. Increases Accuracy to 5. -->
+		<!-- <Soul Crystal Enhancement>. increases Accuracy to 5. -->
 		<set name="icon" val="icon.weapon_sword_of_limit_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -100,7 +100,7 @@
 		</for>
 	</item>
 	<item id="6308" type="Weapon" name="Sword of Limit - Critical Drain">
-		<!-- <Soul Crystal Enhancement>. Absorbs 9 HP from target on a critical attack. -->
+		<!-- <Soul Crystal Enhancement>. Absorbs HP +9 from target on a critical attack. -->
 		<set name="icon" val="icon.weapon_sword_of_limit_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -206,7 +206,7 @@
 		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="item_skill" val="3077-3" /> <!-- Special Ability: M. Atk. -->
+		<set name="item_skill" val="3077-3" /> <!-- Special Ability: Magic Power -->
 		<for>
 			<set stat="pAtk" val="111" />
 			<set stat="mAtk" val="101" />
@@ -418,7 +418,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="6323" type="Armor" name="Sealed Phoenix Necklace">
-		<!-- The blacksmith in a village can release the seal on this item. Effects upon seal release are M. Def. +4 and MP+26. -->
+		<!-- The seal can be broken with the help of the Blacksmith of Mammon. When the seal is broken, the effects of M. Def+4 and MP+26 are given. -->
 		<set name="icon" val="icon.accessary_phoenixs_necklace_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -435,7 +435,7 @@
 		</for>
 	</item>
 	<item id="6324" type="Armor" name="Sealed Phoenix Earring">
-		<!-- The blacksmith in a village can release the seal on this item. Effects upon seal release are M. Def. +3 and MP+20. -->
+		<!-- The seal can be broken with the help of the Blacksmith of Mammon. When the seal is broken, the effects of M. Def.+3 and MP+20 are given. -->
 		<set name="icon" val="icon.accessary_phoenixs_earing_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -452,7 +452,7 @@
 		</for>
 	</item>
 	<item id="6325" type="Armor" name="Sealed Phoenix Ring">
-		<!-- The blacksmith in a village can release the seal on this item. Effects upon seal release are M. Def. +2 and MP+13. -->
+		<!-- The seal can be broken with the help of the Blacksmith of Mammon. When the seal is broken, the effects of M. Def.+2 and MP+13 are given. -->
 		<set name="icon" val="icon.accessary_phoenixs_ring_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -469,7 +469,7 @@
 		</for>
 	</item>
 	<item id="6326" type="Armor" name="Sealed Majestic Necklace">
-		<!-- The blacksmith in a village can release the seal on this item. Effects upon seal release are M. Def. +5 and MP+33. -->
+		<!-- The seal can be broken with the help of the Blacksmith of Mammon. When the seal is broken, the effects of M. Def.+5 and MP+33 are given. -->
 		<set name="icon" val="icon.accessary_inferno_necklace_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -486,7 +486,7 @@
 		</for>
 	</item>
 	<item id="6327" type="Armor" name="Sealed Majestic Earring">
-		<!-- The blacksmith in a village can release the seal on this item. Effects upon seal release are M. Def. +3 and MP+25. -->
+		<!-- The seal can be broken with the help of the Blacksmith of Mammon. When the seal is broken, the effects of M. Def.+3 and MP+25 are given. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -503,7 +503,7 @@
 		</for>
 	</item>
 	<item id="6328" type="Armor" name="Sealed Majestic Ring">
-		<!-- The blacksmith in a village can release the seal on this item. Effects upon seal release are M. Def. +2 and MP+17. -->
+		<!-- The seal can be broken with the help of the Blacksmith of Mammon. When the seal is broken, the effects of M. Def.+2 and MP+17 are given. -->
 		<set name="icon" val="icon.accessary_inferno_ring_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -736,7 +736,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6347" type="Weapon" name="Berserker Blade - Focus">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 73. -->
+		<!-- <Soul Crystal Enhancement>. Increases Critical Attack by 73. -->
 		<set name="icon" val="icon.weapon_berserker_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -907,7 +907,7 @@
 		</for>
 	</item>
 	<item id="6356" type="Weapon" name="Dark Elven Dagger - Rsk. Haste">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 13% when HP drops to 60% or lower. -->
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 13% when HP falls below 60%. -->
 		<set name="icon" val="icon.weapon_darkelven_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -936,7 +936,7 @@
 		</for>
 	</item>
 	<item id="6357" type="Weapon" name="Stiletto - Rsk. Haste">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 12% when HP drops to 60% or lower. -->
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 12% when HP falls below 60%. -->
 		<set name="icon" val="icon.weapon_stiletto_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1047,7 +1047,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6363" type="EtcItem" name="Stolen Infernium Ore">
-		<!-- Infernium ore once owned by the Iron Gate Guild. Take it to Warehouse Keeper Romp of Town of Aden to play bingo. -->
+		<!-- Infernium ore once owned by the Iron Gate Guild. Take it to Warehouse Keeper Romp of Aden Castle Town to play bingo. -->
 		<set name="icon" val="icon.etc_inf_ore_high_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1084,7 +1084,7 @@
 		</for>
 	</item>
 	<item id="6365" type="Weapon" name="Basalt Battlehammer">
-		<!-- Bestows one of the following functions: HP Drain, Health, or HP Regeneration. -->
+		<!-- Bestows one of the following functions: HP Drain, Health or HP Regeneration. -->
 		<set name="icon" val="icon.weapon_basalt_battlehammer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1113,7 +1113,7 @@
 		</for>
 	</item>
 	<item id="6366" type="Weapon" name="Imperial Staff">
-		<!-- Bestows one of the following functions: Empower, MP Regeneration, or Magic Hold. -->
+		<!-- Bestows one of the following functions: Empower, MP Regeneration or Magic Hold. -->
 		<set name="icon" val="icon.weapon_imperial_staff_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1143,7 +1143,7 @@
 		</for>
 	</item>
 	<item id="6367" type="Weapon" name="Angel Slayer">
-		<!-- Bestows one of the following functions: Critical Damage, HP Drain or Haste. -->
+		<!-- Bestows one of the following functions: Crt. Damage, HP Drain or Haste. -->
 		<set name="icon" val="icon.weapon_angel_slayer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1202,7 +1202,7 @@
 		</for>
 	</item>
 	<item id="6369" type="Weapon" name="Dragon Hunter Axe">
-		<!-- Bestows one of the following functions: HP Regeneration, Health, or HP Drain. -->
+		<!-- Bestows one of the following functions: HP Regeneration, Health or HP Drain. -->
 		<set name="icon" val="icon.weapon_dragon_hunter_axe_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1704,7 +1704,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6399" type="EtcItem" name="Badge of Rabbit">
-		<!-- The badge that indicates that its bearer's event collector grade is "rabbit." Without this badge, one cannot prove one'S-Grade. -->
+		<!-- The badge that indicates that its bearer's event collector grade is "rabbit." Without this badge, one cannot prove one's grade. -->
 		<set name="icon" val="icon.etc_paper_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />

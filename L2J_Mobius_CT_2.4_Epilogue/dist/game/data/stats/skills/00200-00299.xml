@@ -19,7 +19,7 @@
 		<for>
 			<effect name="Buff">
 				<add stat="pAtk" val="#pAtk">
-					<using kind="SWORD,BLUNT" />
+					<using kind="BLUNT" /> <!-- Epilogue Modification -->
 				</add>
 			</effect>
 			<effect name="TriggerSkillByAttack">
@@ -28,16 +28,16 @@
 				<param minDamage="1" chance="50" />
 				<param skillId="#triggeredId" skillLevel="1" /> <!-- Blunt Mastery -->
 				<param targetType="SELF" />
-				<param allowWeapons="SWORD,BLUNT" />
+				<param allowWeapons="BLUNT" /> <!-- Epilogue Modification -->
 			</effect>
 		</for>
 		<enchant1for>
 			<effect name="Buff">
 				<add stat="pAtk" val="129.3">
-					<using kind="SWORD,BLUNT" />
+					<using kind="BLUNT" /> <!-- Epilogue Modification -->
 				</add>
 				<add stat="runSpd" val="#ench1runSpd">
-					<using kind="SWORD,BLUNT" />
+					<using kind="BLUNT" /> <!-- Epilogue Modification -->
 				</add>
 			</effect>
 			<effect name="TriggerSkillByAttack">
@@ -46,16 +46,16 @@
 				<param minDamage="1" chance="50" />
 				<param skillId="5604" skillLevel="1" /> <!-- Blunt Mastery -->
 				<param targetType="SELF" />
-				<param allowWeapons="SWORD,BLUNT" />
+				<param allowWeapons="BLUNT" /> <!-- Epilogue Modification -->
 			</effect>
 		</enchant1for>
 		<enchant2for>
 			<effect name="Buff">
 				<add stat="pAtk" val="129.3">
-					<using kind="SWORD,BLUNT" />
+					<using kind="BLUNT" /> <!-- Epilogue Modification -->
 				</add>
 				<add stat="critDmgAdd" val="#ench2cAtkAdd">
-					<using kind="SWORD,BLUNT" />
+					<using kind="BLUNT" /> <!-- Epilogue Modification -->
 				</add>
 			</effect>
 			<effect name="TriggerSkillByAttack">
@@ -64,16 +64,16 @@
 				<param minDamage="1" chance="50" />
 				<param skillId="5604" skillLevel="1" /> <!-- Blunt Mastery -->
 				<param targetType="SELF" />
-				<param allowWeapons="SWORD,BLUNT" />
+				<param allowWeapons="BLUNT" /> <!-- Epilogue Modification -->
 			</effect>
 		</enchant2for>
 		<enchant3for>
 			<effect name="Buff">
 				<add stat="pAtk" val="129.3">
-					<using kind="SWORD,BLUNT" />
+					<using kind="BLUNT" /> <!-- Epilogue Modification -->
 				</add>
 				<add stat="pAtkSpd" val="#ench3pAtkSpd">
-					<using kind="SWORD,BLUNT" />
+					<using kind="BLUNT" /> <!-- Epilogue Modification -->
 				</add>
 			</effect>
 			<effect name="TriggerSkillByAttack">
@@ -82,7 +82,7 @@
 				<param minDamage="1" chance="50" />
 				<param skillId="5604" skillLevel="1" /> <!-- Blunt Mastery -->
 				<param targetType="SELF" />
-				<param allowWeapons="SWORD,BLUNT" />
+				<param allowWeapons="BLUNT" /> <!-- Epilogue Modification -->
 			</effect>
 		</enchant3for>
 	</skill>
@@ -2274,7 +2274,7 @@
 	<skill id="278" levels="6" name="Summon Viper Cubic" enchantGroup1="2">
 		<!-- Summons a Viper Cubic. The Viper Cubic uses magic that poisons a targeted enemy. Consumes 2 Spirit Ore when summoning. -->
 		<table name="#cubicPower">531 773 1026 1264 1530 1822 </table>
-		<table name="#itemConsumeCount">2 3 4 5 5 5 </table>
+		<table name="#itemConsumeCount"> 3 4 5 6 6 6 </table> <!-- Epilogue Modification -->
 		<table name="#magicLvl">49 55 60 64 68 72 </table>
 		<table name="#mpConsume">35 40 44 48 51 53 </table>
 		<table name="#mpInitialConsume">9 10 11 12 13 14 </table>
@@ -2284,7 +2284,7 @@
 		<set name="icon" val="icon.skill0278" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="itemConsumeCount" val="#itemConsumeCount" />
-		<set name="itemConsumeId" val="3031" /> <!-- Spirit Ore -->
+		<set name="itemConsumeId" val="1458" /> <!-- Epilogue Modification -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
@@ -2468,13 +2468,13 @@
 	<skill id="282" levels="1" name="Puma Spirit Totem">
 		<!-- Possessed by a Puma's soul, the user's Accuracy increases by 6 and Atk. Spd. by 20% for 5 minutes. Requires a hand-to-hand weapon. -->
 		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="300" />
+		<set name="abnormalTime" val="120" /> <!-- Epilogue Modification -->
 		<set name="abnormalType" val="POSSESSION" />
 		<set name="effectPoint" val="379" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill0282" />
 		<set name="magicLvl" val="40" />
-		<set name="mpConsume" val="35" />
+		<set name="mpConsume" val="18" /> <!-- Epilogue Modification -->
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
 		<set name="targetType" val="SELF" />
@@ -3016,13 +3016,13 @@
 	<skill id="298" levels="1" name="Rabbit Spirit Totem">
 		<!-- Becomes possessed by a Rabbit's soul. Increases one's own Atk. Spd. by 30%, Speed by 30%, and Evasion by 12 for 5 minutes. Requires a hand-to-hand weapon. -->
 		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="300" />
+		<set name="abnormalTime" val="120" /> <!-- Epilogue Modification -->
 		<set name="abnormalType" val="POSSESSION" />
 		<set name="effectPoint" val="582" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill0298" />
 		<set name="magicLvl" val="62" />
-		<set name="mpConsume" val="58" />
+		<set name="mpConsume" val="29" /> <!-- Epilogue Modification -->
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
 		<set name="targetType" val="SELF" />

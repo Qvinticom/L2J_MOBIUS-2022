@@ -257,8 +257,8 @@
 		<set name="hitTime" val="6000" />
 		<set name="icon" val="icon.skill1406" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="itemConsumeCount" val="4" />
-		<set name="itemConsumeId" val="3031" /> <!-- Spirit Ore -->
+		<set name="itemConsumeCount" val="2" /> <!-- Epilogue Modification -->
+		<set name="itemConsumeId" val="1461" /> <!-- Epilogue Modification -->
 		<set name="magicLvl" val="79" />
 		<set name="mpConsume" val="115" />
 		<set name="mpInitialConsume" val="29" />
@@ -274,14 +274,14 @@
 		<for>
 			<effect name="Summon">
 				<param npcId="14836" />
-				<param consumeItemId="3031" consumeItemCount="11" />
+				<param consumeItemId="1461" consumeItemCount="1" /> <!-- Epilogue Modification -->
 				<param lifeTime="3600" />
 			</effect>
 		</for>
 		<enchant1for>
 			<effect name="Summon">
 				<param npcId="#ench1npcId" />
-				<param consumeItemId="3031" consumeItemCount="11" />
+				<param consumeItemId="1461" consumeItemCount="1" /> <!-- Epilogue Modification -->
 				<param lifeTime="3600" />
 			</effect>
 		</enchant1for>
@@ -293,8 +293,8 @@
 		<set name="hitTime" val="6000" />
 		<set name="icon" val="icon.skill1407" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="itemConsumeCount" val="4" />
-		<set name="itemConsumeId" val="3031" /> <!-- Spirit Ore -->
+		<set name="itemConsumeCount" val="2" /> <!-- Epilogue Modification -->
+		<set name="itemConsumeId" val="1461" /> <!-- Epilogue Modification -->
 		<set name="magicLvl" val="79" />
 		<set name="mpConsume" val="115" />
 		<set name="mpInitialConsume" val="29" />
@@ -310,14 +310,14 @@
 		<for>
 			<effect name="Summon">
 				<param npcId="14837" />
-				<param consumeItemId="3031" consumeItemCount="11" />
+				<param consumeItemId="1461" consumeItemCount="1" /> <!-- Epilogue Modification -->
 				<param lifeTime="3600" />
 			</effect>
 		</for>
 		<enchant1for>
 			<effect name="Summon">
 				<param npcId="#ench1npcId" />
-				<param consumeItemId="3031" consumeItemCount="11" />
+				<param consumeItemId="1461" consumeItemCount="1" /> <!-- Epilogue Modification -->
 				<param lifeTime="3600" />
 			</effect>
 		</enchant1for>
@@ -331,8 +331,8 @@
 		<set name="inheritElementals" val="true" />
 		<set name="inheritPercent" val="1.00" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="itemConsumeCount" val="4" />
-		<set name="itemConsumeId" val="3031" /> <!-- Spirit Ore -->
+		<set name="itemConsumeCount" val="2" /> <!-- Epilogue Modification -->
+		<set name="itemConsumeId" val="1461" /> <!-- Epilogue Modification -->
 		<set name="magicLvl" val="79" />
 		<set name="mpConsume" val="115" />
 		<set name="mpInitialConsume" val="29" />
@@ -348,14 +348,14 @@
 		<for>
 			<effect name="Summon">
 				<param npcId="14838" />
-				<param consumeItemId="3031" consumeItemCount="11" />
+				<param consumeItemId="1461" consumeItemCount="1" /> <!-- Epilogue Modification -->
 				<param lifeTime="3600" />
 			</effect>
 		</for>
 		<enchant1for>
 			<effect name="Summon">
 				<param npcId="#ench1npcId" />
-				<param consumeItemId="3031" consumeItemCount="11" />
+				<param consumeItemId="1461" consumeItemCount="1" /> <!-- Epilogue Modification -->
 				<param lifeTime="3600" />
 			</effect>
 		</enchant1for>
@@ -866,7 +866,7 @@
 		<set name="affectRange" val="180" />
 		<set name="blockedInOlympiad" val="true" />
 		<set name="castRange" val="900" />
-		<set name="hitTime" val="3000" />
+		<set name="hitTime" val="5000" /> <!-- Epilogue Modification -->
 		<set name="icon" val="icon.skill1425" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -875,7 +875,7 @@
 		<set name="mpConsume" val="70" />
 		<set name="mpInitialConsume" val="70" />
 		<set name="operateType" val="A1" />
-		<set name="reuseDelay" val="1200000" />
+		<set name="reuseDelay" val="1800000" /> <!-- Epilogue Modification -->
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="CLAN" />
 		<for>
@@ -981,7 +981,7 @@
 	<skill id="1430" levels="5" name="Invocation">
 		<!-- Decreases P. Def. by 90% and recovers 27 MP every second for 30 seconds. The status is canceled when damage is incurred. -->
 		<table name="#magicLvl">56 60 64 68 72 </table>
-		<table name="#mhot">27 30 34 37 42 </table>
+		<table name="#mhot"> 81 90 102 111 126 </table> <!-- Epilogue Modification -->
 		<table name="#mpConsume">21 22 24 26 27 </table>
 		<table name="#mpInitialConsume">6 6 6 7 7 </table>
 		<set name="abnormalLvl" val="1" />
@@ -1097,7 +1097,7 @@
 		<table name="#mpInitialConsume">6 7 8 9 </table>
 		<table name="#power">16 18 20 23 </table>
 		<set name="affectLimit" val="5-12" />
-		<set name="affectRange" val="200" />
+		<set name="affectRange" val="150" /> <!-- Epilogue Modification -->
 		<set name="castRange" val="500" />
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="1000" />
@@ -1271,22 +1271,22 @@
 		<enchant5 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="MagicalSoulAttack" />
-			<effect name="Debuff">
+			<!-- <effect name="Debuff">
 				<mul stat="runSpd" val="0.7" />
-			</effect>
+			</effect> -->  <!-- Epilogue Modification -->
 		</for>
 		<enchant3for>
 			<effect name="MagicalSoulAttack" />
-			<effect name="Debuff">
+			<!-- <effect name="Debuff">
 				<mul stat="runSpd" val="0.7" />
-			</effect>
+			</effect> -->  <!-- Epilogue Modification -->
 		</enchant3for>
 		<enchant5for>
 			<effect name="MagicalSoulAttack" />
-			<effect name="Debuff">
+			<!-- <effect name="Debuff">
 				<sub stat="darkRes" val="#ench5DarkhVuln" />
 				<mul stat="runSpd" val="0.7" />
-			</effect>
+			</effect> -->  <!-- Epilogue Modification -->
 		</enchant5for>
 	</skill>
 	<skill id="1438" levels="9" name="Annihilation Circle" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2">
@@ -2186,7 +2186,7 @@
 		<table name="#ench2mpConsume">226 222 218 214 210 208 204 200 196 192 188 184 181 177 173 </table>
 		<table name="#ench2mpInitialConsume">57 56 55 54 53 52 51 50 49 48 47 46 45 44 43 </table>
 		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="1200" />
+		<set name="abnormalTime" val="600" /> <!-- Epilogue Modification -->
 		<set name="abnormalType" val="T_CRT_DMG_DOWN" />
 		<set name="affectRange" val="1000" />
 		<set name="effectPoint" val="676" />
@@ -2364,20 +2364,20 @@
 		<set name="effectRange" val="1100" />
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="20" />
-		<set name="hitTime" val="3000" />
+		<set name="hitTime" val="11000" /> <!-- Epilogue Modification -->
 		<set name="icon" val="icon.skill1467" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="81" />
 		<set name="mpInitialConsume" val="72" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="117" />
-		<set name="reuseDelay" val="300000" />
+		<set name="reuseDelay" val="900000" /> <!-- Epilogue Modification -->
 		<set name="targetType" val="AREA" />
 		<for>
 			<effect name="MagicalAttack" />
-			<effect name="DamOverTime" ticks="3">
+			<!-- <effect name="DamOverTime" ticks="3">
 				<param power="111" />
-			</effect>
+			</effect> --> <!-- Epilogue Modification -->
 		</for>
 	</skill>
 	<skill id="1468" levels="1" name="Star Fall">
@@ -2396,20 +2396,20 @@
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="-679" />
 		<set name="effectRange" val="1100" />
-		<set name="hitTime" val="3000" />
+		<set name="hitTime" val="11000" /> <!-- Epilogue Modification -->
 		<set name="icon" val="icon.skill1468" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="81" />
 		<set name="mpInitialConsume" val="72" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="117" />
-		<set name="reuseDelay" val="300000" />
+		<set name="reuseDelay" val="900000" /> <!-- Epilogue Modification -->
 		<set name="targetType" val="AREA" />
 		<for>
 			<effect name="MagicalAttack" />
-			<effect name="DamOverTime" ticks="3">
+			<!-- <effect name="DamOverTime" ticks="3">
 				<param power="111" />
-			</effect>
+			</effect> --> <!-- Epilogue Modification -->
 		</for>
 	</skill>
 	<skill id="1469" levels="1" name="Leopold" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6" enchantGroup4="6">
@@ -2431,7 +2431,7 @@
 		<set name="icon" val="icon.skill1469" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="78" />
-		<set name="mpConsume" val="68" />
+		<set name="mpConsume" val="105" /> <!-- Epilogue Modification -->
 		<set name="mpInitialConsume" val="17" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="224" />
@@ -3286,7 +3286,7 @@
 				<param chance="10" />
 				<param skillId="5568" skillLevel="1" /> <!-- Frost Armor -->
 				<param targetType="ONE" />
-				<add stat="waterRes" val="60" />
+				<add stat="waterRes" val="10" /> <!-- Epilogue Modification -->
 			</effect>
 		</for>
 	</skill>
@@ -3312,7 +3312,7 @@
 				<param chance="10" />
 				<param skillId="5569" skillLevel="1" /> <!-- Hurricane Armor -->
 				<param targetType="ONE" />
-				<add stat="windRes" val="60" />
+				<add stat="windRes" val="10" /> <!-- Epilogue Modification -->
 			</effect>
 		</for>
 	</skill>
@@ -3337,12 +3337,12 @@
 		<set name="mpConsume" val="145" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="117" />
-		<set name="reuseDelay" val="60000" />
+		<set name="reuseDelay" val="180000" /> <!-- Epilogue Modification -->
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
 			<effect name="HpDrain">
-				<param power="0.2" />
+				<param power="0.4" /> <!-- Epilogue Modification -->
 			</effect>
 			<effect name="Debuff">
 				<mul stat="pAtk" val="0.5" />

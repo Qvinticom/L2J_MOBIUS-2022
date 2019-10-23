@@ -108,7 +108,7 @@
 		<set name="item_skill" val="2498-1" /> <!-- Bottle of Empty Soul -->
 	</item>
 	<item id="10410" type="EtcItem" name="Full Bottle of Souls - 5 Souls">
-		<!-- A bottle containing 5 Souls. Cannot be exchanged or dropped. Kamael Exclusive Weapon. Disappears without effect if used by other races. -->
+		<!-- A bottle containing 5 Souls. Cannot be exchanged or dropped. Kamael exclusive weapon. Disappears without effect if used by other races. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i11" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -122,7 +122,7 @@
 		<set name="item_skill" val="2499-1" /> <!-- Bottle of Full Soul -->
 	</item>
 	<item id="10411" type="EtcItem" name="Full Bottle of Souls - 5 Souls (For Combat)">
-		<!-- A bottle containing 5 Souls. Usable only in combat. Cannot be exchanged or dropped. Kamael Exclusive Weapon. Disappears without effect if used by other races. -->
+		<!-- A bottle containing 5 Souls. Usable only in combat. Cannot be exchanged or dropped. Kamael exclusive weapon. Disappears without effect if used by other races. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i11" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -152,7 +152,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10413" type="EtcItem" name="Dynastic Essence II">
-		<!-- An item that can modify Dynasty Tunic. Powerful options are available for a modified Dynasty Tunic. Grants more powerful options than Dynastic Essence. -->
+		<!-- An item that can modify Dynasty Chestcloth. Powerful options are available for a modified Dynasty Chestcloth. Grants more powerful options than Dynastic Essence. -->
 		<set name="icon" val="icon.etc_armor_soul_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -169,7 +169,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="10415" type="Weapon" name="Icarus Dual Sword">
-		<!-- When enchanted, P. Atk. of dual-swords, two-handed swords, two-handed blunt weapons and fist weapons will increase more than that of one-handed swords. When enchanted to 4 or more, increases Critical Attack by 109, and Max HP increases by 10%. Increases the damage inflicted during PvP. -->
+		<!-- When enchanted, the P. Atk. of dual-swords, two-handed swords, two-handed blunt weapons and fist weapons will increase more than that of one-handed swords. When enchanted by 4 or more, Increases Critical Attack by 109, and Max HP increases by 10%. Increases the damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -210,12 +210,12 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3428-1" /> <!-- Blue Talisman of Explosion -->
+		<set name="item_skill" val="3428-1" /> <!-- Blue Talisman - Explosion -->
 		<set name="duration" val="65" />
 		<set name="useSkillDisTime" val="6" />
 	</item>
 	<item id="10417" type="Armor" name="Blue Talisman - Magic Explosion">
-		<!-- Increases M. Atk. and M. Critical Rate . Effect does not stack with additional Talismans of the same type. This item cannot be exchanged or dropped. -->
+		<!-- Increases M. Atk. and magic critical rate. Effect does not stack with additional Talismans of the same type. This item cannot be exchanged or dropped. -->
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -226,7 +226,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3437-1" /> <!-- Blue Talisman of Magic Explosive Power -->
+		<set name="item_skill" val="3437-1" /> <!-- Blue Talisman - Magic Explosive Power -->
 		<set name="duration" val="65" />
 		<set name="useSkillDisTime" val="6" />
 	</item>
@@ -242,7 +242,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3431-1" /> <!-- White Talisman of Storm -->
+		<set name="item_skill" val="3431-1" /> <!-- White Talisman - Storm -->
 		<set name="duration" val="65" />
 		<set name="useSkillDisTime" val="6" />
 	</item>
@@ -258,7 +258,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3430-1" /> <!-- White Talisman of Darkness -->
+		<set name="item_skill" val="3430-1" /> <!-- White Talisman - Darkness -->
 		<set name="duration" val="65" />
 		<set name="useSkillDisTime" val="6" />
 	</item>
@@ -274,7 +274,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3432-1" /> <!-- White Talisman of Water -->
+		<set name="item_skill" val="3432-1" /> <!-- White Talisman - Water -->
 		<set name="duration" val="65" />
 		<set name="useSkillDisTime" val="6" />
 	</item>
@@ -290,12 +290,12 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3433-1" /> <!-- White Talisman of Fire -->
+		<set name="item_skill" val="3433-1" /> <!-- White Talisman - Fire -->
 		<set name="duration" val="65" />
 		<set name="useSkillDisTime" val="6" />
 	</item>
 	<item id="10422" type="Armor" name="White Talisman - Light">
-		<!-- Increases holy attribute. Effect does not stack with additional Talismans of the same type. This item cannot be exchanged or dropped. -->
+		<!-- Increases Divine attribute. Effect does not stack with additional Talismans of the same type. This item cannot be exchanged or dropped. -->
 		<set name="icon" val="icon.etc_talisman_i06" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -306,7 +306,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3435-1" /> <!-- White Talisman of Light -->
+		<set name="item_skill" val="3435-1" /> <!-- White Talisman - Light -->
 		<set name="duration" val="65" />
 		<set name="useSkillDisTime" val="6" />
 	</item>
@@ -321,7 +321,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3436-1" /> <!-- Blue Talisman of Self destruction -->
+		<set name="item_skill" val="3436-1" /> <!-- Blue Talisman - Self destruction -->
 		<set name="duration" val="60" />
 		<set name="useSkillDisTime" val="1" />
 	</item>
@@ -337,7 +337,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3438-1" /> <!-- Blue Talisman of Great Healing -->
+		<set name="item_skill" val="3438-1" /> <!-- Blue Talisman - Great Healing -->
 		<set name="duration" val="65" />
 		<set name="useSkillDisTime" val="6" />
 	</item>
@@ -450,7 +450,7 @@
 		<set name="for_npc" val="true" />
 	</item>
 	<item id="10434" type="Weapon" name="Icarus Sawsword - Focus">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 111. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Option>. Increases Critical Attack by 111. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_sowsword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -480,7 +480,7 @@
 		</for>
 	</item>
 	<item id="10435" type="Weapon" name="Icarus Sawsword - Health">
-		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_sowsword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -510,7 +510,7 @@
 		</for>
 	</item>
 	<item id="10436" type="Weapon" name="Icarus Sawsword - Light">
-		<!-- <Soul Crystal Enhancement>. Increases weight gauge by 20%. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Enhancement>. Weight gauge increases by 20%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_sowsword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -540,7 +540,7 @@
 		</for>
 	</item>
 	<item id="10437" type="Weapon" name="Icarus Heavy Arms - Focus">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 111. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Option>. Increases Critical Attack by 111. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_heavy_arms_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -570,7 +570,7 @@
 		</for>
 	</item>
 	<item id="10438" type="Weapon" name="Icarus Heavy Arms - Health">
-		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_heavy_arms_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -600,7 +600,7 @@
 		</for>
 	</item>
 	<item id="10439" type="Weapon" name="Icarus Heavy Arms - Light">
-		<!-- <Soul Crystal Enhancement>. Increases weight gauge by 20%. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Enhancement>. Weight gauge increases by 20%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_heavy_arms_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -630,7 +630,7 @@
 		</for>
 	</item>
 	<item id="10440" type="Weapon" name="Icarus Spirit - Acumen">
-		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Option>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_spirits_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -660,7 +660,7 @@
 		</for>
 	</item>
 	<item id="10441" type="Weapon" name="Icarus Spirit - Mana Up">
-		<!-- <Soul Crystal Enhancement>. Increases Max MP by 30%. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Option>. Increases Max MP by 30%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_spirits_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -690,7 +690,7 @@
 		</for>
 	</item>
 	<item id="10442" type="Weapon" name="Icarus Spirit - Conversion">
-		<!-- <Soul Crystal Enhancement>. Increases Max MP by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Option>. Increases the Max MP by 60% and decreases the Max HP by 40%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_spirits_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -720,7 +720,7 @@
 		</for>
 	</item>
 	<item id="10443" type="Weapon" name="Icarus Spitter - Cheap Shot">
-		<!-- <Soul Crystal Enhancement>. Decreases MP Consumption 4% during a skill attack. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Enhancement>. MP Consumption decreases 4% during a skill attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_spiter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -753,7 +753,7 @@
 		</for>
 	</item>
 	<item id="10444" type="Weapon" name="Icarus Spitter - Guidance">
-		<!-- <Soul Crystal Enhancement>. Increases Accuracy by 5.32. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Option>. Increases Accuracy by 5.32. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_spiter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -786,7 +786,7 @@
 		</for>
 	</item>
 	<item id="10445" type="Weapon" name="Icarus Spitter - Focus">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 116. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Option>. Increases Critical Attack by 116. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_spiter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -819,7 +819,7 @@
 		</for>
 	</item>
 	<item id="10446" type="Weapon" name="Icarus Disperser - Focus">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 116. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Option>. Increases Critical Attack by 116. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_disperser_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -849,7 +849,7 @@
 		</for>
 	</item>
 	<item id="10447" type="Weapon" name="Icarus Disperser - Evasion">
-		<!-- <Soul Crystal Enhancement>. Increases Evasion by 5. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Option>. Increases Evasion by 5. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_disperser_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -879,7 +879,7 @@
 		</for>
 	</item>
 	<item id="10448" type="Weapon" name="Icarus Disperser - Critical Damage">
-		<!-- <Soul Crystal Enhancement>. Increases P. Atk. by 559 on a critical attack. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Option>. Increases P. Atk. by 559 on a critical attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_disperser_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -909,7 +909,7 @@
 		</for>
 	</item>
 	<item id="10449" type="Weapon" name="Icarus Trident - Anger">
-		<!-- <Soul Crystal Enhancement>. Decreases HP by 15% while increasing P. Atk. by 78 during a critical attack. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Enhancement>player's HP by 15% while increasing P. Atk. by 78 during a . critical attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_trident_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -939,7 +939,7 @@
 		</for>
 	</item>
 	<item id="10450" type="Weapon" name="Icarus Trident - Critical Stun">
-		<!-- <Soul Crystal Enhancement>. There is a 48% chance that Stun effect is applied on a critical attack. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Option>. There is a 48% probability that Stun effect is applied on a critical attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_trident_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -971,7 +971,7 @@
 		</for>
 	</item>
 	<item id="10451" type="Weapon" name="Icarus Trident - Light">
-		<!-- <Soul Crystal Enhancement>. Increases weight gauge by 20%. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Enhancement>. Weight gauge increases by 20%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_trident_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1001,7 +1001,7 @@
 		</for>
 	</item>
 	<item id="10452" type="Weapon" name="Icarus Hammer - Anger">
-		<!-- <Soul Crystal Enhancement>. Decreases HP by 15% while increasing P. Atk. by 78 during a critical attack. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Enhancement>player's HP by 15% while increasing P. Atk. by 78 during a . critical attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1031,7 +1031,7 @@
 		</for>
 	</item>
 	<item id="10453" type="Weapon" name="Icarus Hammer - Health">
-		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1061,7 +1061,7 @@
 		</for>
 	</item>
 	<item id="10454" type="Weapon" name="Icarus Hammer - Rsk. Focus">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 164 when HP drops to 60% or lower. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Option>. Increases Critical Attack by 164 when HP becomes 60% or lower. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1091,7 +1091,7 @@
 		</for>
 	</item>
 	<item id="10455" type="Weapon" name="Icarus Hall - Mana Up">
-		<!-- <Soul Crystal Enhancement>. Increases Max MP by 30%. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Option>. Increases Max MP by 30%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_stick_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1122,7 +1122,7 @@
 		</for>
 	</item>
 	<item id="10456" type="Weapon" name="Icarus Hall - Conversion">
-		<!-- <Soul Crystal Enhancement>. Increases Max MP by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Option>. Increases Max MP by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_stick_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1153,7 +1153,7 @@
 		</for>
 	</item>
 	<item id="10457" type="Weapon" name="Icarus Hall - Acumen">
-		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Option>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_stick_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1184,7 +1184,7 @@
 		</for>
 	</item>
 	<item id="10458" type="Weapon" name="Icarus Hand - Rsk. Evasion">
-		<!-- <Soul Crystal Enhancement>. Increases Evasion by 6.8 when HP drops to 60% or lower. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Option>. Increases Evasion by 6.8 when HP becomes 60% or lower. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_knuckle_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1214,7 +1214,7 @@
 		</for>
 	</item>
 	<item id="10459" type="Weapon" name="Icarus Hand - Focus">
-		<!-- <Soul Crystal Enhancement>. Increases critical attack by 106. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Option>. Increases critical attack by 106. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_knuckle_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1244,7 +1244,7 @@
 		</for>
 	</item>
 	<item id="10460" type="Weapon" name="Icarus Hand - Haste">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 10%. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Option>. Increases Atk. Spd. by 10%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_knuckle_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1274,7 +1274,7 @@
 		</for>
 	</item>
 	<item id="10461" type="Weapon" name="Icarus Stinger - Focus">
-		<!-- Kamael Exclusive Weapon: Icarus Sawsword Conversion. <Soul Crystal Enhancement>. Critical Attack is increased by 111. Increases damage inflicted during PvP. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and of decreaseing MP consumption for skill use for you and your party members during a critical attack. -->
+		<!-- Kamael exclusive weapon: Icarus Sawsword Conversion. <Soul Crystal Option>. Critical Attack is increased by 111. Increases damage inflicted during PvP. When enchanted by 4 or more, a critical attack will have a chance to increase P. Atk., M. Atk., and healing power, and decrease MP consumption during skill use, for you and your party members. -->
 		<set name="icon" val="icon.weapon_icarus_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1309,7 +1309,7 @@
 		</for>
 	</item>
 	<item id="10462" type="Weapon" name="Icarus Stinger - Health">
-		<!-- Kamael Exclusive Weapon: Icarus Sawsword Conversion. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and of decreaseing MP consumption for skill use for you and your party members during a critical attack. -->
+		<!-- Kamael exclusive weapon: Icarus Sawsword Conversion. <Soul Crystal Option>. Max HP is increased by 25%. Increases damage inflicted during PvP. When enchanted by 4 or more, a critical attack will have a chance to increase P. Atk., M. Atk., and healing power, and decrease MP consumption during skill use, for you and your party members. -->
 		<set name="icon" val="icon.weapon_icarus_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1344,7 +1344,7 @@
 		</for>
 	</item>
 	<item id="10463" type="Weapon" name="Icarus Stinger - Light">
-		<!-- Kamael Exclusive Weapon: Icarus Sawsword Conversion. <Soul Crystal Enhancement>. Increases weight gauge by 20%. Increases damage inflicted during PvP.enchanted to . 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of recieved heal, and decreased MP consumption per skill during a critical attack. -->
+		<!-- Kamael exclusive weapon: Icarus Sawsword Conversion. <Soul Crystal Enhancement>. Weight gauge increases by 20%. Increases damage inflicted during PvP.enchanted to . 4 or more, party members including yourself will get the increased attack power, magic power and healing capacity by a fixed rate but decreased MP consumption per skill during a critical attack. -->
 		<set name="icon" val="icon.weapon_icarus_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1379,7 +1379,7 @@
 		</for>
 	</item>
 	<item id="10464" type="Weapon" name="Icarus Wingblade - Focus">
-		<!-- Kamael Exclusive Weapon: Icarus Heavy Arms Conversion. <Soul Crystal Enhancement>. Critical Attack is increased by 111. Increases damage inflicted during PvP. -->
+		<!-- Kamael exclusive weapon: Icarus Heavy Arms Conversion. <Soul Crystal Option>. Critical Attack is increased by 111. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_wing_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1413,7 +1413,7 @@
 		</for>
 	</item>
 	<item id="10465" type="Weapon" name="Icarus Wingblade - Health">
-		<!-- Kamael Exclusive Weapon: Icarus Heavy Arms Conversion. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
+		<!-- Kamael exclusive weapon: Icarus Heavy Arms Conversion. <Soul Crystal Option>. Max HP is increased by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_wing_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1447,7 +1447,7 @@
 		</for>
 	</item>
 	<item id="10466" type="Weapon" name="Icarus Wingblade - Light">
-		<!-- Kamael Exclusive Weapon: Icarus Heavy Arms Conversion. <Soul Crystal Enhancement>. Increases weight gauge by 20%. Increases damage inflicted during PvP. -->
+		<!-- Kamael exclusive weapon: Icarus Heavy Arms Conversion. <Soul Crystal Enhancement>. Weight gauge increases by 20%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_wing_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1481,7 +1481,7 @@
 		</for>
 	</item>
 	<item id="10467" type="Weapon" name="Icarus Shooter - Cheap Shot">
-		<!-- Kamael Exclusive Weapon: Icarus Spitter Conversion. <Soul Crystal Enhancement>. Decreased MP consumption by 12% when a skill is used. Increases damage inflicted during PvP. -->
+		<!-- Kamael exclusive weapon: Icarus Spitter Conversion. <Soul Crystal Option>. Decreased MP consumption by 12% when a skill is used. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1516,7 +1516,7 @@
 		</for>
 	</item>
 	<item id="10468" type="Weapon" name="Icarus Shooter - Guidance">
-		<!-- Kamael Exclusive Weapon: Icarus Spitter Conversion. <Soul Crystal Enhancement>. The Accuracy is increased by 5.32. Increases damage inflicted during PvP. -->
+		<!-- Kamael exclusive weapon: Icarus Spitter Conversion. <Soul Crystal Option>. The Accuracy is increased by 5.32. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1551,7 +1551,7 @@
 		</for>
 	</item>
 	<item id="10469" type="Weapon" name="Icarus Shooter - Focus">
-		<!-- Kamael Exclusive Weapon: Icarus Spitter Conversion. <Soul Crystal Enhancement>. Critical Attack is increased by 116. Increases damage inflicted during PvP. -->
+		<!-- Kamael exclusive weapon: Icarus Spitter Conversion. <Soul Crystal Option>. Critical Attack is increased by 116. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1828,7 +1828,7 @@
 		</for>
 	</item>
 	<item id="10480" type="EtcItem" name="Red Soul Crystal - Stage 15">
-		<!-- Red Crystal that absorbs souls, stage 15. Special abilities can be applied to the weapon when absorbing certain amount of souls. Every time it is used, it consumes 26 of MP. However, the Soul Crystal of this stage absorbs souls by itself, so there is no need for using the Soul Crystal to monsters. -->
+		<!-- Red Crystal that absorbs souls, stage 15.. Special abilities can be applied to the weapon when absorbing certain amount of souls. Every time it is used, it consumes 26 of MP. However, the Soul Crystal of this stage absorbs souls by itself, so there is no need for using the Soul Crystal to monsters. -->
 		<set name="icon" val="icon.etc_soul_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1839,7 +1839,7 @@
 		<set name="item_skill" val="2096-1" /> <!-- Soul Crystal -->
 	</item>
 	<item id="10481" type="EtcItem" name="Blue Soul Crystal - Stage 15">
-		<!-- Blue Crystal that absorbs souls, stage 15. Special abilities can be applied to the weapon when absorbing certain amount of souls. Every time it is used, it consumes 26 of MP. However, the Soul Crystal of this stage absorbs souls by itself, so there is no need for using the Soul Crystal to monsters. -->
+		<!-- Blue Crystal that absorbs souls, stage 15.. Special abilities can be applied to the weapon when absorbing certain amount of souls. Every time it is used, it consumes 26 of MP. However, the Soul Crystal of this stage absorbs souls by itself, so there is no need for using the Soul Crystal to monsters. -->
 		<set name="icon" val="icon.etc_soul_stone_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1850,7 +1850,7 @@
 		<set name="item_skill" val="2096-1" /> <!-- Soul Crystal -->
 	</item>
 	<item id="10482" type="EtcItem" name="Green Soul Crystal - Stage 15">
-		<!-- Green Crystal that absorbs souls, stage 15. Special abilities can be applied to the weapon when absorbing certain amount of souls. Every time it is used, it consumes 26 of MP. However, the Soul Crystal of this stage absorbs souls by itself, so there is no need for using the Soul Crystal to monsters. -->
+		<!-- Green Crystal that absorbs souls, stage 15.. Special abilities can be applied to the weapon when absorbing certain amount of souls. Every time it is used, it consumes 26 of MP. However, the Soul Crystal of this stage absorbs souls by itself, so there is no need for using the Soul Crystal to monsters. -->
 		<set name="icon" val="icon.etc_soul_stone_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1861,7 +1861,7 @@
 		<set name="item_skill" val="2096-1" /> <!-- Soul Crystal -->
 	</item>
 	<item id="10483" type="EtcItem" name="Life Stone - Level 82">
-		<!-- General mineral created when a stone in a monster is solidified by a physical or magic hit. Usable by characters level 82 and above when augmenting weapons. -->
+		<!-- General mineral created when a stone in a monster is solidified by a physical or magic hit. Usable by characters level 82 and above when refining weapons. -->
 		<set name="icon" val="icon.etc_mineral_general_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -1873,7 +1873,7 @@
 		</cond>
 	</item>
 	<item id="10484" type="EtcItem" name="Mid-Grade Life Stone - Level 82">
-		<!-- Mid-Grade mineral created when a stone in a monster is solidified by a physical or magic hit. Usable by characters level 82 and above when augmenting weapons. -->
+		<!-- Mid-Grade mineral created when a stone in a monster is solidified by a physical or magic hit. Usable by characters level 82 and above when refining weapons. -->
 		<set name="icon" val="icon.etc_mineral_special_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -1885,7 +1885,7 @@
 		</cond>
 	</item>
 	<item id="10485" type="EtcItem" name="High-Grade Life Stone - Level 82">
-		<!-- High-Grade mineral created when a stone in a monster is solidified by a physical or magic hit. Usable by characters level 82 and above when augmenting weapons. -->
+		<!-- High-Grade mineral created when a stone in a monster is solidified by a physical or magic hit. Usable by characters level 82 and above when refining weapons. -->
 		<set name="icon" val="icon.etc_mineral_rare_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -1897,7 +1897,7 @@
 		</cond>
 	</item>
 	<item id="10486" type="EtcItem" name="Top-Grade Life Stone - Level 82">
-		<!-- Top-Grade mineral created when a stone in a monster is solidified by a physical or magic hit. Usable by characters level 82 and above when augmenting weapons. -->
+		<!-- Top-Grade mineral created when a stone in a monster is solidified by a physical or magic hit. Usable by characters level 82 and above when refining weapons. -->
 		<set name="icon" val="icon.etc_mineral_unique_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -1916,7 +1916,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1212" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="4180" />
 		<set name="price" val="25255000" />
@@ -1938,7 +1938,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1212" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="4180" />
 		<set name="price" val="25255000" />
@@ -1960,7 +1960,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1212" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="4180" />
 		<set name="price" val="25255000" />
@@ -1982,7 +1982,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1212" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="4180" />
 		<set name="price" val="25255000" />

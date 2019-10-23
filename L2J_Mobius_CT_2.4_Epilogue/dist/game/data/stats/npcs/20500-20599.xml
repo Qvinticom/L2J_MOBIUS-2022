@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="20500" level="25" type="Monster" name="Turek Orc Sentinel">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="138" />
 			<param name="MoveAroundSocial1" value="138" />
@@ -67,7 +66,7 @@
 				<item id="8604" min="1" max="1" chance="4.73" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.77" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -83,7 +82,7 @@
 			<spoil>
 				<item id="1867" min="1" max="3" chance="52.0412" /> <!-- Animal Skin -->
 				<item id="1932" min="1" max="1" chance="12.3908" /> <!-- Bone Helmet Design -->
-				<item id="1931" min="1" max="1" chance="10.2042" /> <!-- Leather Boots Lining -->
+				<item id="1931" min="1" max="1" chance="10.2042" /> <!-- Leather Boot Lining -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -92,7 +91,6 @@
 		</collision>
 	</npc>
 	<npc id="20501" level="29" type="Monster" name="Turek Orc Shaman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -151,11 +149,11 @@
 				<item id="435" min="1" max="1" chance="0.0167791937968731" /> <!-- Mystic's Tunic -->
 				<item id="466" min="1" max="1" chance="0.0268824436745644" /> <!-- Elven Stockings -->
 				<item id="467" min="1" max="1" chance="0.0268824436745644" /> <!-- Dark Stockings -->
-				<item id="1933" min="1" max="1" chance="0.759039792811155" /> <!-- Dark Stockings Fabric -->
+				<item id="1933" min="1" max="1" chance="0.759039792811155" /> <!-- Dark Stocking Fabric -->
 				<item id="468" min="1" max="1" chance="0.0268838616745472" /> <!-- Mystic's Stockings -->
 				<item id="1875" min="1" max="1" chance="0.491547924982786" /> <!-- Stone of Purity -->
 				<item id="1879" min="1" max="1" chance="1.22887146215701" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="0.61443408137846" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="0.61443408137846" /> <!-- High Grade Suede -->
 				<item id="5550" min="1" max="1" chance="0.098308925116539" /> <!-- Durable Metal Plate -->
 				<item id="5549" min="1" max="1" chance="0.737323537174225" /> <!-- Metallic Thread -->
 				<item id="2264" min="1" max="1" chance="0.0762491361069679" /> <!-- Recipe: Two-handed Sword -->
@@ -167,7 +165,7 @@
 				<item id="8604" min="1" max="1" chance="4.73" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.77" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -182,7 +180,7 @@
 			</drop>
 			<spoil>
 				<item id="1870" min="1" max="1" chance="94.4489" /> <!-- Coal -->
-				<item id="1933" min="1" max="1" chance="11.1116" /> <!-- Dark Stockings Fabric -->
+				<item id="1933" min="1" max="1" chance="11.1116" /> <!-- Dark Stocking Fabric -->
 				<item id="2153" min="1" max="1" chance="14.6888" /> <!-- Recipe: Tiger's Eye Earring -->
 			</spoil>
 		</dropLists>
@@ -192,7 +190,6 @@
 		</collision>
 	</npc>
 	<npc id="20502" level="15" type="Monster" name="Twink Puma">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -244,7 +241,7 @@
 				<item id="8604" min="1" max="1" chance="5.72" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.88" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -260,7 +257,7 @@
 			<spoil>
 				<item id="1871" min="1" max="1" chance="23.3906" /> <!-- Charcoal -->
 				<item id="1896" min="1" max="1" chance="9.9113" /> <!-- Necklace of Anguish Chain -->
-				<item id="1923" min="1" max="1" chance="9.5863" /> <!-- Leather Stockings Pattern -->
+				<item id="1923" min="1" max="1" chance="9.5863" /> <!-- Leather Stocking Pattern -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -269,7 +266,6 @@
 		</collision>
 	</npc>
 	<npc id="20504" level="14" type="Monster" name="Dread Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="167" />
 			<param name="MoveAroundSocial1" value="167" />
@@ -333,7 +329,6 @@
 		</collision>
 	</npc>
 	<npc id="20505" level="20" type="Monster" name="Ruin Bat">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -399,7 +394,7 @@
 				<item id="8604" min="1" max="1" chance="5.72" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.88" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -424,7 +419,6 @@
 		</collision>
 	</npc>
 	<npc id="20506" level="17" type="Monster" name="Ruin Imp">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -486,7 +480,7 @@
 				<item id="8604" min="1" max="1" chance="5.72" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.88" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -511,7 +505,6 @@
 		</collision>
 	</npc>
 	<npc id="20507" level="21" type="Monster" name="Ruin Imp Elder">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -569,7 +562,7 @@
 				<item id="1864" min="1" max="1" chance="8.23661448888874" /> <!-- Stem -->
 				<item id="1869" min="1" max="1" chance="4.11830007859421" /> <!-- Iron Ore -->
 				<item id="1878" min="1" max="1" chance="1.64732863045788" /> <!-- Braided Hemp -->
-				<item id="1804" min="1" max="1" chance="0.16472856353569" /> <!-- Recipe: Soulshot (D-Grade) -->
+				<item id="1804" min="1" max="1" chance="0.16472856353569" /> <!-- Recipe: Soulshot: D-Grade -->
 				<item id="5273" min="1" max="1" chance="0.16472856353569" /> <!-- Recipe: Greater Spiritshot (D) Compressed Package(100%) -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
@@ -578,7 +571,7 @@
 				<item id="8604" min="1" max="1" chance="7.15" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.99" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -603,7 +596,6 @@
 		</collision>
 	</npc>
 	<npc id="20508" level="17" type="Monster" name="Plunder Tarantula">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -659,7 +651,7 @@
 				<item id="8604" min="1" max="1" chance="5.72" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.88" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -684,7 +676,6 @@
 		</collision>
 	</npc>
 	<npc id="20509" level="9" type="Monster" name="Spore Fungus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -743,7 +734,7 @@
 				<item id="8604" min="1" max="1" chance="4.73" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.77" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -768,7 +759,6 @@
 		</collision>
 	</npc>
 	<npc id="20510" level="12" type="Monster" name="Puma">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -820,7 +810,7 @@
 				<item id="8604" min="1" max="1" chance="5.72" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.88" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -835,7 +825,7 @@
 			</drop>
 			<spoil>
 				<item id="1798" min="1" max="1" chance="20.2966" /> <!-- Recipe: Leather Helmet -->
-				<item id="1923" min="1" max="1" chance="8.4846" /> <!-- Leather Stockings Pattern -->
+				<item id="1923" min="1" max="1" chance="8.4846" /> <!-- Leather Stocking Pattern -->
 				<item id="1792" min="1" max="1" chance="1.5222" /> <!-- Recipe: Short Spear -->
 			</spoil>
 		</dropLists>
@@ -845,7 +835,6 @@
 		</collision>
 	</npc>
 	<npc id="20511" level="19" type="Monster" name="Pitchstone Golem">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="116" />
 			<param name="MoveAroundSocial1" value="116" />
@@ -895,7 +884,7 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="115" max="195" chance="70" /> <!-- Adena -->
-				<item id="176" min="1" max="1" chance="0.0137499999254942" /> <!-- Apprentice's Staff -->
+				<item id="176" min="1" max="1" chance="0.0137499999254942" /> <!-- Journeyman's Staff -->
 				<item id="2501" min="1" max="1" chance="0.0137499999254942" /> <!-- Bone Club -->
 				<item id="1869" min="1" max="1" chance="2.06499655789375" /> <!-- Iron Ore -->
 				<item id="1870" min="1" max="1" chance="2.06499655789375" /> <!-- Coal -->
@@ -903,7 +892,7 @@
 				<item id="1872" min="1" max="1" chance="2.75332874385834" /> <!-- Animal Bone -->
 				<item id="1867" min="1" max="1" chance="2.75332874385834" /> <!-- Animal Skin -->
 				<item id="1800" min="1" max="1" chance="0.649372822177887" /> <!-- Recipe: Piece Bone Breastplate -->
-				<item id="735" min="1" max="1" chance="0.172079915716171" /> <!-- Alacrity Potion -->
+				<item id="735" min="1" max="1" chance="0.172079915716171" /> <!-- Potion of Alacrity -->
 			</drop>
 			<spoil>
 				<item id="734" min="1" max="1" chance="4.078" /> <!-- Haste Potion -->
@@ -917,7 +906,6 @@
 		</collision>
 	</npc>
 	<npc id="20512" level="35" type="Monster" name="Field Stalker">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="40" />
 			<param name="MoveAroundSocial1" value="40" />
@@ -971,7 +959,6 @@
 		</collision>
 	</npc>
 	<npc id="20513" level="32" type="Monster" name="Skeleton Knight">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="215" />
 			<param name="MoveAroundSocial1" value="215" />
@@ -1027,7 +1014,6 @@
 		</collision>
 	</npc>
 	<npc id="20514" level="15" type="Monster" name="Shield Skeleton">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="167" />
 			<param name="MoveAroundSocial1" value="167" />
@@ -1086,7 +1072,7 @@
 				<item id="8604" min="1" max="1" chance="5.72" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.88" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -1111,7 +1097,6 @@
 		</collision>
 	</npc>
 	<npc id="20515" level="16" type="Monster" name="Skeleton Infantryman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="167" />
 			<param name="MoveAroundSocial1" value="167" />
@@ -1171,7 +1156,7 @@
 				<item id="8604" min="1" max="1" chance="5.72" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.88" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -1185,7 +1170,7 @@
 				<item id="13028" min="1" max="1" chance="0.33" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="735" min="1" max="1" chance="1.9797" /> <!-- Alacrity Potion -->
+				<item id="735" min="1" max="1" chance="1.9797" /> <!-- Potion of Alacrity -->
 				<item id="2013" min="1" max="1" chance="0.5127" /> <!-- Forest Bow Shaft -->
 				<item id="1865" min="1" max="1" chance="23.7565" /> <!-- Varnish -->
 			</spoil>
@@ -1196,7 +1181,6 @@
 		</collision>
 	</npc>
 	<npc id="20516" level="14" type="Monster" name="Skeleton Sentinel">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="167" />
 			<param name="MoveAroundSocial1" value="167" />
@@ -1245,7 +1229,6 @@
 		</collision>
 	</npc>
 	<npc id="20517" level="12" type="Monster" name="Skeleton Hunter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="167" />
 			<param name="MoveAroundSocial1" value="167" />
@@ -1309,7 +1292,6 @@
 		</collision>
 	</npc>
 	<npc id="20518" level="13" type="Monster" name="Skeleton Hunter Archer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="157" />
 			<param name="MoveAroundSocial1" value="157" />
@@ -1372,7 +1354,6 @@
 		</collision>
 	</npc>
 	<npc id="20519" level="27" type="Monster" name="Skeleton Pikeman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1426,7 +1407,6 @@
 		</collision>
 	</npc>
 	<npc id="20520" level="10" type="Monster" name="Pirate Captain Uthanka">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
 			<param name="MoveAroundSocial1" value="75" />
@@ -1481,7 +1461,6 @@
 		</collision>
 	</npc>
 	<npc id="20521" level="14" type="Monster" name="Whinstone Golem">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="116" />
 			<param name="MoveAroundSocial1" value="116" />
@@ -1544,7 +1523,7 @@
 				<item id="8604" min="1" max="1" chance="5.72" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.88" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -1569,7 +1548,6 @@
 		</collision>
 	</npc>
 	<npc id="20522" level="10" type="Monster" name="White Fang">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -1619,7 +1597,6 @@
 		</collision>
 	</npc>
 	<npc id="20524" level="7" type="Monster" name="Grey Wolf Elder">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -1662,7 +1639,6 @@
 		</collision>
 	</npc>
 	<npc id="20525" level="4" type="Monster" name="Gray Wolf">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -1713,7 +1689,7 @@
 				<item id="8604" min="1" max="1" chance="4.73" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.77" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -1738,7 +1714,6 @@
 		</collision>
 	</npc>
 	<npc id="20526" level="15" type="Monster" name="Obsidian Golem">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="116" />
 			<param name="MoveAroundSocial1" value="116" />
@@ -1802,7 +1777,7 @@
 				<item id="8604" min="1" max="1" chance="5.72" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.88" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -1827,7 +1802,6 @@
 		</collision>
 	</npc>
 	<npc id="20527" level="4" type="Monster" name="Great Snow Wolf">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -1873,7 +1847,6 @@
 		</collision>
 	</npc>
 	<npc id="20528" level="13" type="Monster" name="Goblin Lord">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="42" />
 			<param name="MoveAroundSocial1" value="42" />
@@ -1925,7 +1898,7 @@
 				<item id="8604" min="1" max="1" chance="5.72" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.88" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -1950,7 +1923,6 @@
 		</collision>
 	</npc>
 	<npc id="20529" level="1" type="Monster" name="Young Brown Keltir">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2003,7 +1975,7 @@
 				<item id="8604" min="1" max="1" chance="4.73" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.77" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -2028,7 +2000,6 @@
 		</collision>
 	</npc>
 	<npc id="20530" level="1" type="Monster" name="Young Red Keltir">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2080,7 +2051,7 @@
 				<item id="8604" min="1" max="1" chance="4.73" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.77" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -2105,7 +2076,6 @@
 		</collision>
 	</npc>
 	<npc id="20531" level="1" type="Monster" name="Young Prairie Keltir">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2156,7 +2126,7 @@
 				<item id="8604" min="1" max="1" chance="4.73" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.77" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -2181,7 +2151,6 @@
 		</collision>
 	</npc>
 	<npc id="20532" level="2" type="Monster" name="Brown Keltir">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2232,7 +2201,7 @@
 				<item id="8604" min="1" max="1" chance="4.73" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.77" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -2257,7 +2226,6 @@
 		</collision>
 	</npc>
 	<npc id="20533" level="2" type="Monster" name="Longtail Keltir">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2308,7 +2276,7 @@
 				<item id="8604" min="1" max="1" chance="4.73" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.77" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -2333,7 +2301,6 @@
 		</collision>
 	</npc>
 	<npc id="20534" level="2" type="Monster" name="Red Keltir">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2384,7 +2351,7 @@
 				<item id="8604" min="1" max="1" chance="4.73" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.77" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -2409,7 +2376,6 @@
 		</collision>
 	</npc>
 	<npc id="20535" level="2" type="Monster" name="Prairie Keltir">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2461,7 +2427,7 @@
 				<item id="8604" min="1" max="1" chance="4.73" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.77" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -2486,7 +2452,6 @@
 		</collision>
 	</npc>
 	<npc id="20536" level="3" type="Monster" name="Elder Brown Keltir">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2536,7 +2501,7 @@
 				<item id="8604" min="1" max="1" chance="4.73" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.77" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -2561,7 +2526,6 @@
 		</collision>
 	</npc>
 	<npc id="20537" level="3" type="Monster" name="Elder Red Keltir">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2612,7 +2576,7 @@
 				<item id="8604" min="1" max="1" chance="4.73" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.77" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -2637,7 +2601,6 @@
 		</collision>
 	</npc>
 	<npc id="20538" level="3" type="Monster" name="Elder Prairie Keltir">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2687,7 +2650,7 @@
 				<item id="8604" min="1" max="1" chance="4.73" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.77" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -2712,7 +2675,6 @@
 		</collision>
 	</npc>
 	<npc id="20539" level="3" type="Monster" name="Elder Longtail Keltir">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2763,7 +2725,7 @@
 				<item id="8604" min="1" max="1" chance="4.73" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.77" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -2788,7 +2750,6 @@
 		</collision>
 	</npc>
 	<npc id="20540" level="12" type="Monster" name="Gemstone Beast">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -2846,7 +2807,6 @@
 		</collision>
 	</npc>
 	<npc id="20541" level="17" type="Monster" name="Ore Bat">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2913,7 +2873,6 @@
 		</collision>
 	</npc>
 	<npc id="20542" level="19" type="Monster" name="Skeleton Longbowman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="157" />
 			<param name="MoveAroundSocial1" value="157" />
@@ -2975,7 +2934,6 @@
 		</collision>
 	</npc>
 	<npc id="20543" level="20" type="Monster" name="Ghost">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3036,7 +2994,6 @@
 		</collision>
 	</npc>
 	<npc id="20544" level="3" type="Monster" name="Elder Keltir">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3087,7 +3044,7 @@
 				<item id="8604" min="1" max="1" chance="4.73" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.77" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -3112,7 +3069,6 @@
 		</collision>
 	</npc>
 	<npc id="20545" level="1" type="Monster" name="Young Keltir">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3165,7 +3121,7 @@
 				<item id="8604" min="1" max="1" chance="4.73" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.77" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -3190,7 +3146,6 @@
 		</collision>
 	</npc>
 	<npc id="20546" level="34" type="Monster" name="Turek Orc Elder">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -3261,7 +3216,7 @@
 				<item id="8604" min="1" max="1" chance="4.73" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.77" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -3286,7 +3241,6 @@
 		</collision>
 	</npc>
 	<npc id="20547" level="23" type="Monster" name="Ol Mahum Reserve">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -3351,7 +3305,7 @@
 				<item id="8604" min="1" max="1" chance="7.15" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.99" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -3366,7 +3320,7 @@
 			</drop>
 			<spoil>
 				<item id="2151" min="1" max="1" chance="10.5333" /> <!-- Recipe: Necklace of Devotion -->
-				<item id="1804" min="1" max="1" chance="1.5126" /> <!-- Recipe: Soulshot (D-Grade) -->
+				<item id="1804" min="1" max="1" chance="1.5126" /> <!-- Recipe: Soulshot: D-Grade -->
 				<item id="1898" min="1" max="1" chance="3.8844" /> <!-- Blue Diamond Necklace Gem -->
 			</spoil>
 		</dropLists>
@@ -3376,7 +3330,6 @@
 		</collision>
 	</npc>
 	<npc id="20548" level="23" type="Monster" name="Ol Mahum Deserter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -3439,7 +3392,7 @@
 				<item id="8604" min="1" max="1" chance="7.15" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.99" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -3455,7 +3408,7 @@
 			<spoil>
 				<item id="1865" min="1" max="1" chance="38.5707" /> <!-- Varnish -->
 				<item id="1930" min="1" max="1" chance="9.8899" /> <!-- Boot Lining -->
-				<item id="1804" min="1" max="1" chance="1.5428" /> <!-- Recipe: Soulshot (D-Grade) -->
+				<item id="1804" min="1" max="1" chance="1.5428" /> <!-- Recipe: Soulshot: D-Grade -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -3464,7 +3417,6 @@
 		</collision>
 	</npc>
 	<npc id="20549" level="34" type="Monster" name="Ol Mahum Lord">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -3527,6 +3479,7 @@
 				<item id="1866" min="1" max="1" chance="8.2806564373703" /> <!-- Suede -->
 				<item id="1877" min="1" max="1" chance="0.496822470596314" /> <!-- Adamantite Nugget -->
 				<item id="2277" min="1" max="1" chance="0.0887076371994018" /> <!-- Recipe: Bich'hwa -->
+				<item id="6667" min="1" max="1" chance="7.76308742459107" /> <!-- Deluxe Chest Key - Grade 3 -->
 				<item id="1341" min="20" max="60" chance="20.7016659693756" /> <!-- Bone Arrow -->
 				<item id="8600" min="1" max="1" chance="8.4" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="18.9" /> <!-- Greater Herb of Life -->
@@ -3535,7 +3488,7 @@
 				<item id="8604" min="1" max="1" chance="6.16" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.52" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -3560,7 +3513,6 @@
 		</collision>
 	</npc>
 	<npc id="20550" level="36" type="Monster" name="Guardian Basilisk">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3631,7 +3583,7 @@
 				<item id="8604" min="1" max="1" chance="7.26" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.21" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -3656,7 +3608,6 @@
 		</collision>
 	</npc>
 	<npc id="20551" level="37" type="Monster" name="Road Scavenger">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -3727,7 +3678,7 @@
 				<item id="8604" min="1" max="1" chance="7.26" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.21" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -3752,7 +3703,6 @@
 		</collision>
 	</npc>
 	<npc id="20552" level="38" type="Monster" name="Fettered Soul">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -3802,7 +3752,6 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="714" max="1424" chance="70" /> <!-- Adena -->
-				<item id="129" min="1" max="1" chance="0.00812308020234108" /> <!-- Sword of Revolution -->
 				<item id="2034" min="1" max="1" chance="0.460876931480169" /> <!-- Sword of Revolution Blade -->
 				<item id="1864" min="1" max="3" chance="14.5400808148193" /> <!-- Stem -->
 				<item id="1869" min="1" max="1" chance="14.5400808148193" /> <!-- Iron Ore -->
@@ -3817,7 +3766,7 @@
 				<item id="8604" min="1" max="1" chance="6.16" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.52" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -3842,7 +3791,6 @@
 		</collision>
 	</npc>
 	<npc id="20553" level="39" type="Monster" name="Windsus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="95" />
 			<param name="MoveAroundSocial1" value="95" />
@@ -3906,7 +3854,7 @@
 				<item id="8604" min="1" max="1" chance="7.26" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.21" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -3931,7 +3879,6 @@
 		</collision>
 	</npc>
 	<npc id="20554" level="40" type="Monster" name="Grandis">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -3984,7 +3931,6 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="425" max="848" chance="70" /> <!-- Adena -->
-				<item id="224" min="1" max="1" chance="0.00244991404831409" /> <!-- Maingauche -->
 				<item id="2038" min="1" max="1" chance="0.139000088741183" /> <!-- Maingauche Edge -->
 				<item id="1660" min="1" max="1" chance="0.00244991404831409" /> <!-- Cursed Maingauche -->
 				<item id="2044" min="1" max="1" chance="0.139000088741183" /> <!-- Cursed Maingauche Edge -->
@@ -4002,7 +3948,7 @@
 				<item id="8604" min="1" max="1" chance="7.26" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.21" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -4027,7 +3973,6 @@
 		</collision>
 	</npc>
 	<npc id="20555" level="40" type="Monster" name="Giant Fungus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -4096,7 +4041,7 @@
 				<item id="8604" min="1" max="1" chance="7.26" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.21" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -4121,7 +4066,6 @@
 		</collision>
 	</npc>
 	<npc id="20556" level="41" type="Monster" name="Giant Monstereye">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -4191,7 +4135,7 @@
 				<item id="8604" min="1" max="1" chance="7.59" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.32" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -4216,7 +4160,6 @@
 		</collision>
 	</npc>
 	<npc id="20557" level="42" type="Monster" name="Dire Wyrm">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -4269,6 +4212,7 @@
 				<item id="2297" min="1" max="1" chance="0.0322187384796143" /> <!-- Recipe: Flamberge -->
 				<item id="5154" min="1" max="1" chance="0.0246005146026611" /> <!-- Recipe: Soulshot (C) Compressed Package (100%) -->
 				<item id="2994" min="1" max="1" chance="0.585635089241028" /> <!-- Recipe: Boots of Seal -->
+				<item id="6668" min="1" max="1" chance="2.6353658372345" /> <!-- Deluxe Chest Key - Grade 4 -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
@@ -4276,7 +4220,7 @@
 				<item id="8604" min="1" max="1" chance="7.59" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.32" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -4301,7 +4245,6 @@
 		</collision>
 	</npc>
 	<npc id="20558" level="43" type="Monster" name="Rotting tree">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -4358,12 +4301,12 @@
 				<item id="1906" min="1" max="1" chance="1.22320726619267" /> <!-- Mithril Ring Wire -->
 				<item id="1875" min="1" max="1" chance="0.444957585033417" /> <!-- Stone of Purity -->
 				<item id="1879" min="1" max="1" chance="1.11240222733307" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="0.556201113666534" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="0.556201113666534" /> <!-- High Grade Suede -->
 				<item id="5550" min="1" max="1" chance="0.0889948229064941" /> <!-- Durable Metal Plate -->
 				<item id="5549" min="1" max="1" chance="0.667444642299652" /> <!-- Metallic Thread -->
-				<item id="2988" min="1" max="1" chance="0.281613075382233" /> <!-- Recipe: Reinforced Mithril Gaiters -->
+				<item id="2988" min="1" max="1" chance="0.281613075382233" /> <!-- Recipe: Tempered Mithril Gaiters -->
 				<item id="2303" min="1" max="1" chance="0.0291415068321228" /> <!-- Recipe: Skull Graver -->
-				<item id="1342" min="10" max="30" chance="13.3487440805016" /> <!-- Steel Arrow -->
+				<item id="1342" min="10" max="30" chance="13.3487440805016" /> <!-- Iron Arrow -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
@@ -4371,7 +4314,7 @@
 				<item id="8604" min="1" max="1" chance="7.59" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.32" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -4396,7 +4339,6 @@
 		</collision>
 	</npc>
 	<npc id="20559" level="44" type="Monster" name="Rotting Golem">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="116" />
 			<param name="MoveAroundSocial1" value="116" />
@@ -4455,10 +4397,10 @@
 				<item id="2164" min="1" max="1" chance="0.568107696220398" /> <!-- Recipe: Ring of Protection -->
 				<item id="5154" min="1" max="1" chance="0.024618613717556" /> <!-- Recipe: Soulshot (C) Compressed Package (100%) -->
 				<item id="2219" min="1" max="1" chance="0.458720346153736" /> <!-- Recipe: Crimson Boots -->
-				<item id="8723" min="1" max="1" chance="0.295416285210609" /> <!-- Life Stone - Level 46 -->
-				<item id="8733" min="1" max="1" chance="0.073855841152668" /> <!-- Mid-Grade Life Stone - Level 46 -->
-				<item id="8743" min="1" max="1" chance="0.00738381426525116" /> <!-- High-Grade Life Stone - Level 46 -->
-				<item id="8753" min="1" max="1" chance="0.00147959461307526" /> <!-- Top-Grade Life Stone - Level 46 -->
+				<item id="8723" min="1" max="1" chance="0.295416285210609" /> <!-- Life Stone: level 46 -->
+				<item id="8733" min="1" max="1" chance="0.073855841152668" /> <!-- Mid-Grade Life Stone: level 46 -->
+				<item id="8743" min="1" max="1" chance="0.00738381426525116" /> <!-- High-Grade Life Stone: level 46 -->
+				<item id="8753" min="1" max="1" chance="0.00147959461307526" /> <!-- Top-Grade Life Stone: level 46 -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
@@ -4466,7 +4408,7 @@
 				<item id="8604" min="1" max="1" chance="7.59" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.32" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -4491,7 +4433,6 @@
 		</collision>
 	</npc>
 	<npc id="20560" level="45" type="Monster" name="Trisalim Spider">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -4551,10 +4492,10 @@
 				<item id="2225" min="1" max="1" chance="0.0920661473350525" /> <!-- Recipe: Demon's Stockings -->
 				<item id="2321" min="1" max="1" chance="0.0147526731376648" /> <!-- Recipe: Stiletto -->
 				<item id="3003" min="1" max="1" chance="0.263076189071655" /> <!-- Recipe: Gloves of Seal -->
-				<item id="8723" min="1" max="1" chance="0.169432215732574" /> <!-- Life Stone - Level 46 -->
-				<item id="8733" min="1" max="1" chance="0.0423646282081604" /> <!-- Mid-Grade Life Stone - Level 46 -->
-				<item id="8743" min="1" max="1" chance="0.00423383311080933" /> <!-- High-Grade Life Stone - Level 46 -->
-				<item id="8753" min="1" max="1" chance="0.000867804302215576" /> <!-- Top-Grade Life Stone - Level 46 -->
+				<item id="8723" min="1" max="1" chance="0.169432215732574" /> <!-- Life Stone: level 46 -->
+				<item id="8733" min="1" max="1" chance="0.0423646282081604" /> <!-- Mid-Grade Life Stone: level 46 -->
+				<item id="8743" min="1" max="1" chance="0.00423383311080933" /> <!-- High-Grade Life Stone: level 46 -->
+				<item id="8753" min="1" max="1" chance="0.000867804302215576" /> <!-- Top-Grade Life Stone: level 46 -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
@@ -4562,7 +4503,7 @@
 				<item id="8604" min="1" max="1" chance="7.59" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.32" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -4587,7 +4528,6 @@
 		</collision>
 	</npc>
 	<npc id="20561" level="46" type="Monster" name="Trisalim Tarantula">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -4647,13 +4587,14 @@
 				<item id="1866" min="1" max="1" chance="3.62224054417992" /> <!-- Suede -->
 				<item id="1871" min="1" max="1" chance="5.43334636857033" /> <!-- Charcoal -->
 				<item id="5220" min="1" max="1" chance="0.217322296583176" /> <!-- Metal Hardener -->
-				<item id="1885" min="1" max="1" chance="0.45279090379715" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="0.45279090379715" /> <!-- High Grade Suede -->
 				<item id="4041" min="1" max="1" chance="0.0472439775180817" /> <!-- Mold Hardener -->
 				<item id="6037" min="1" max="1" chance="10.8667216325398" /> <!-- Waking Scroll -->
-				<item id="8723" min="1" max="1" chance="0.217322296583176" /> <!-- Life Stone - Level 46 -->
-				<item id="8733" min="1" max="1" chance="0.0543233502960205" /> <!-- Mid-Grade Life Stone - Level 46 -->
-				<item id="8743" min="1" max="1" chance="0.00543233502960205" /> <!-- High-Grade Life Stone - Level 46 -->
-				<item id="8753" min="1" max="1" chance="0.00109802516555786" /> <!-- Top-Grade Life Stone - Level 46 -->
+				<item id="6668" min="1" max="1" chance="1.94047052613258" /> <!-- Deluxe Chest Key - Grade 4 -->
+				<item id="8723" min="1" max="1" chance="0.217322296583176" /> <!-- Life Stone: level 46 -->
+				<item id="8733" min="1" max="1" chance="0.0543233502960205" /> <!-- Mid-Grade Life Stone: level 46 -->
+				<item id="8743" min="1" max="1" chance="0.00543233502960205" /> <!-- High-Grade Life Stone: level 46 -->
+				<item id="8753" min="1" max="1" chance="0.00109802516555786" /> <!-- Top-Grade Life Stone: level 46 -->
 				<item id="1832" min="1" max="1" chance="6.03708683723259" /> <!-- Greater Antidote -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
@@ -4662,7 +4603,7 @@
 				<item id="8604" min="1" max="1" chance="7.59" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.32" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -4687,7 +4628,6 @@
 		</collision>
 	</npc>
 	<npc id="20562" level="47" type="Monster" name="Spore Zombie">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -4754,11 +4694,11 @@
 				<item id="2166" min="1" max="1" chance="0.153410413848877" /> <!-- Recipe: Earrings of Binding (100%) -->
 				<item id="2230" min="1" max="1" chance="0.0877040832290649" /> <!-- Recipe: Theca Leather Gaiters -->
 				<item id="2226" min="1" max="1" chance="0.184709390115738" /> <!-- Recipe: Mithril Gauntlets -->
-				<item id="8724" min="1" max="1" chance="0.150851979578018" /> <!-- Life Stone - Level 49 -->
-				<item id="8734" min="1" max="1" chance="0.037707017244339" /> <!-- Mid-Grade Life Stone - Level 49 -->
-				<item id="8744" min="1" max="1" chance="0.00377787490463257" /> <!-- High-Grade Life Stone - Level 49 -->
-				<item id="8754" min="1" max="1" chance="0.000765139221191406" /> <!-- Top-Grade Life Stone - Level 49 -->
-				<item id="1342" min="10" max="30" chance="9.05116659588242" /> <!-- Steel Arrow -->
+				<item id="8724" min="1" max="1" chance="0.150851979578018" /> <!-- Life Stone: level 49 -->
+				<item id="8734" min="1" max="1" chance="0.037707017244339" /> <!-- Mid-Grade Life Stone: level 49 -->
+				<item id="8744" min="1" max="1" chance="0.00377787490463257" /> <!-- High-Grade Life Stone: level 49 -->
+				<item id="8754" min="1" max="1" chance="0.000765139221191406" /> <!-- Top-Grade Life Stone: level 49 -->
+				<item id="1342" min="10" max="30" chance="9.05116659588242" /> <!-- Iron Arrow -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
@@ -4766,7 +4706,7 @@
 				<item id="8604" min="1" max="1" chance="7.59" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.32" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -4791,7 +4731,6 @@
 		</collision>
 	</npc>
 	<npc id="20563" level="40" type="Monster" name="Manashen Gargoyle">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -4874,7 +4813,7 @@
 				<item id="8604" min="1" max="1" chance="7.26" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.21" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -4899,7 +4838,6 @@
 		</collision>
 	</npc>
 	<npc id="20564" level="41" type="Monster" name="Enchanted Monstereye">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -4966,6 +4904,7 @@
 				<item id="2297" min="1" max="1" chance="0.0310642778110504" /> <!-- Recipe: Flamberge -->
 				<item id="5154" min="1" max="1" chance="0.0237190298557281" /> <!-- Recipe: Soulshot (C) Compressed Package (100%) -->
 				<item id="2994" min="1" max="1" chance="0.564650633965492" /> <!-- Recipe: Boots of Seal -->
+				<item id="6668" min="1" max="1" chance="2.54093550414467" /> <!-- Deluxe Chest Key - Grade 4 -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
@@ -4973,7 +4912,7 @@
 				<item id="8604" min="1" max="1" chance="7.59" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.32" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -4987,7 +4926,7 @@
 				<item id="13028" min="1" max="1" chance="0.33" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="1885" min="1" max="1" chance="8.2647" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="8.2647" /> <!-- High Grade Suede -->
 				<item id="2306" min="1" max="1" chance="0.4331" /> <!-- Recipe: Stick of Faith -->
 				<item id="1864" min="1" max="5" chance="66.1179" /> <!-- Stem -->
 			</spoil>
@@ -4998,7 +4937,6 @@
 		</collision>
 	</npc>
 	<npc id="20565" level="42" type="Monster" name="Enchanted Stone Golem">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="116" />
 			<param name="MoveAroundSocial1" value="116" />
@@ -5057,10 +4995,10 @@
 				<item id="2053" min="1" max="1" chance="0.237753831047416" /> <!-- Scallop Jamadhr Edge -->
 				<item id="1875" min="1" max="1" chance="0.547617293978214" /> <!-- Stone of Purity -->
 				<item id="1879" min="1" max="1" chance="1.36904519224548" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="0.684522596122742" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="0.684522596122742" /> <!-- High Grade Suede -->
 				<item id="5550" min="1" max="1" chance="0.109522675875664" /> <!-- Durable Metal Plate -->
 				<item id="5549" min="1" max="1" chance="0.821427898267269" /> <!-- Metallic Thread -->
-				<item id="2988" min="1" max="1" chance="0.346594760145664" /> <!-- Recipe: Reinforced Mithril Gaiters -->
+				<item id="2988" min="1" max="1" chance="0.346594760145664" /> <!-- Recipe: Tempered Mithril Gaiters -->
 				<item id="2303" min="1" max="1" chance="0.0358694788422585" /> <!-- Recipe: Skull Graver -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
@@ -5069,7 +5007,7 @@
 				<item id="8604" min="1" max="1" chance="7.59" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.32" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -5094,7 +5032,6 @@
 		</collision>
 	</npc>
 	<npc id="20566" level="43" type="Monster" name="Enchanted Iron Golem">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -5159,10 +5096,10 @@
 				<item id="2164" min="1" max="1" chance="0.582953571628571" /> <!-- Recipe: Ring of Protection -->
 				<item id="5154" min="1" max="1" chance="0.0252619510185719" /> <!-- Recipe: Soulshot (C) Compressed Package (100%) -->
 				<item id="2219" min="1" max="1" chance="0.470707694946051" /> <!-- Recipe: Crimson Boots -->
-				<item id="8723" min="1" max="1" chance="0.303136147822857" /> <!-- Life Stone - Level 46 -->
-				<item id="8733" min="1" max="1" chance="0.0757858530557156" /> <!-- Mid-Grade Life Stone - Level 46 -->
-				<item id="8743" min="1" max="1" chance="0.00757676920557022" /> <!-- High-Grade Life Stone - Level 46 -->
-				<item id="8753" min="1" max="1" chance="0.00151825960111618" /> <!-- Top-Grade Life Stone - Level 46 -->
+				<item id="8723" min="1" max="1" chance="0.303136147822857" /> <!-- Life Stone: level 46 -->
+				<item id="8733" min="1" max="1" chance="0.0757858530557156" /> <!-- Mid-Grade Life Stone: level 46 -->
+				<item id="8743" min="1" max="1" chance="0.00757676920557022" /> <!-- High-Grade Life Stone: level 46 -->
+				<item id="8753" min="1" max="1" chance="0.00151825960111618" /> <!-- Top-Grade Life Stone: level 46 -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
@@ -5170,7 +5107,7 @@
 				<item id="8604" min="1" max="1" chance="7.59" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.32" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -5195,7 +5132,6 @@
 		</collision>
 	</npc>
 	<npc id="20567" level="44" type="Monster" name="Enchanted Gargoyle">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -5260,10 +5196,10 @@
 				<item id="2225" min="1" max="1" chance="0.105618519350052" /> <!-- Recipe: Demon's Stockings -->
 				<item id="2321" min="1" max="1" chance="0.0169243043003082" /> <!-- Recipe: Stiletto -->
 				<item id="3003" min="1" max="1" chance="0.301801675971985" /> <!-- Recipe: Gloves of Seal -->
-				<item id="8723" min="1" max="1" chance="0.19437307060051" /> <!-- Life Stone - Level 46 -->
-				<item id="8733" min="1" max="1" chance="0.0486008096752167" /> <!-- Mid-Grade Life Stone - Level 46 -->
-				<item id="8743" min="1" max="1" chance="0.00485706415748596" /> <!-- High-Grade Life Stone - Level 46 -->
-				<item id="8753" min="1" max="1" chance="0.000995547311782837" /> <!-- Top-Grade Life Stone - Level 46 -->
+				<item id="8723" min="1" max="1" chance="0.19437307060051" /> <!-- Life Stone: level 46 -->
+				<item id="8733" min="1" max="1" chance="0.0486008096752167" /> <!-- Mid-Grade Life Stone: level 46 -->
+				<item id="8743" min="1" max="1" chance="0.00485706415748596" /> <!-- High-Grade Life Stone: level 46 -->
+				<item id="8753" min="1" max="1" chance="0.000995547311782837" /> <!-- Top-Grade Life Stone: level 46 -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
@@ -5271,7 +5207,7 @@
 				<item id="8604" min="1" max="1" chance="7.59" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.32" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -5296,7 +5232,6 @@
 		</collision>
 	</npc>
 	<npc id="20568" level="45" type="Monster" name="Formor">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="135" />
 			<param name="MoveAroundSocial1" value="135" />
@@ -5366,12 +5301,12 @@
 				<item id="1866" min="1" max="1" chance="3.37044900094986" /> <!-- Suede -->
 				<item id="1873" min="1" max="1" chance="2.02228178668976" /> <!-- Silver Nugget -->
 				<item id="1868" min="1" max="1" chance="10.1113779681492" /> <!-- Thread -->
-				<item id="2324" min="1" max="1" chance="0.0176192554759979" /> <!-- Recipe: Noble Elven Bow -->
+				<item id="2324" min="1" max="1" chance="0.0176192554759979" /> <!-- Recipe: Elven Bow of Nobility -->
 				<item id="2321" min="1" max="1" chance="0.0176192554759979" /> <!-- Recipe: Stiletto -->
-				<item id="8723" min="1" max="1" chance="0.202234371728897" /> <!-- Life Stone - Level 46 -->
-				<item id="8733" min="1" max="1" chance="0.0505663342571259" /> <!-- Mid-Grade Life Stone - Level 46 -->
-				<item id="8743" min="1" max="1" chance="0.00504734383583069" /> <!-- High-Grade Life Stone - Level 46 -->
-				<item id="8753" min="1" max="1" chance="0.00102185488700867" /> <!-- Top-Grade Life Stone - Level 46 -->
+				<item id="8723" min="1" max="1" chance="0.202234371728897" /> <!-- Life Stone: level 46 -->
+				<item id="8733" min="1" max="1" chance="0.0505663342571259" /> <!-- Mid-Grade Life Stone: level 46 -->
+				<item id="8743" min="1" max="1" chance="0.00504734383583069" /> <!-- High-Grade Life Stone: level 46 -->
+				<item id="8753" min="1" max="1" chance="0.00102185488700867" /> <!-- Top-Grade Life Stone: level 46 -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
@@ -5379,7 +5314,7 @@
 				<item id="8604" min="1" max="1" chance="7.59" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.32" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -5404,7 +5339,6 @@
 		</collision>
 	</npc>
 	<npc id="20569" level="46" type="Monster" name="Formor Elder">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="135" />
 			<param name="MoveAroundSocial1" value="135" />
@@ -5469,10 +5403,10 @@
 				<item id="2508" min="1" max="1" chance="4.19689489993286" /> <!-- Cursed Bone -->
 				<item id="2230" min="1" max="1" chance="0.0975984848823547" /> <!-- Recipe: Theca Leather Gaiters -->
 				<item id="2220" min="1" max="1" chance="0.104272569532394" /> <!-- Recipe: Rind Leather Armor -->
-				<item id="8723" min="1" max="1" chance="0.201454924436569" /> <!-- Life Stone - Level 46 -->
-				<item id="8733" min="1" max="1" chance="0.0503677323589325" /> <!-- Mid-Grade Life Stone - Level 46 -->
-				<item id="8743" min="1" max="1" chance="0.00504157473564148" /> <!-- High-Grade Life Stone - Level 46 -->
-				<item id="8753" min="1" max="1" chance="0.000992309947967529" /> <!-- Top-Grade Life Stone - Level 46 -->
+				<item id="8723" min="1" max="1" chance="0.201454924436569" /> <!-- Life Stone: level 46 -->
+				<item id="8733" min="1" max="1" chance="0.0503677323589325" /> <!-- Mid-Grade Life Stone: level 46 -->
+				<item id="8743" min="1" max="1" chance="0.00504157473564148" /> <!-- High-Grade Life Stone: level 46 -->
+				<item id="8753" min="1" max="1" chance="0.000992309947967529" /> <!-- Top-Grade Life Stone: level 46 -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
@@ -5480,7 +5414,7 @@
 				<item id="8604" min="1" max="1" chance="7.59" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.32" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -5505,7 +5439,6 @@
 		</collision>
 	</npc>
 	<npc id="20570" level="47" type="Monster" name="Tarlk Bugbear">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="124" />
 			<param name="MoveAroundSocial1" value="124" />
@@ -5563,14 +5496,14 @@
 				<item id="1866" min="1" max="1" chance="3.44369482127285" /> <!-- Suede -->
 				<item id="1871" min="1" max="1" chance="5.16554712550926" /> <!-- Charcoal -->
 				<item id="5220" min="1" max="1" chance="0.206617578652382" /> <!-- Metal Hardener -->
-				<item id="1885" min="1" max="1" chance="0.43046062925911" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="0.43046062925911" /> <!-- High Grade Suede -->
 				<item id="4041" min="1" max="1" chance="0.0449134606809616" /> <!-- Mold Hardener -->
 				<item id="2167" min="1" max="1" chance="0.263549720901489" /> <!-- Recipe: Ring of Ages -->
-				<item id="2343" min="1" max="1" chance="0.0120088943681717" /> <!-- Recipe: Mace of Underworld -->
-				<item id="8724" min="1" max="1" chance="0.172186209143639" /> <!-- Life Stone - Level 49 -->
-				<item id="8734" min="1" max="1" chance="0.0430441054859161" /> <!-- Mid-Grade Life Stone - Level 49 -->
-				<item id="8744" min="1" max="1" chance="0.00430636798858643" /> <!-- High-Grade Life Stone - Level 49 -->
-				<item id="8754" min="1" max="1" chance="0.000871060797691345" /> <!-- Top-Grade Life Stone - Level 49 -->
+				<item id="2343" min="1" max="1" chance="0.0120088943681717" /> <!-- Recipe: Mace of the Underworld -->
+				<item id="8724" min="1" max="1" chance="0.172186209143639" /> <!-- Life Stone: level 49 -->
+				<item id="8734" min="1" max="1" chance="0.0430441054859161" /> <!-- Mid-Grade Life Stone: level 49 -->
+				<item id="8744" min="1" max="1" chance="0.00430636798858643" /> <!-- High-Grade Life Stone: level 49 -->
+				<item id="8754" min="1" max="1" chance="0.000871060797691345" /> <!-- Top-Grade Life Stone: level 49 -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
@@ -5578,7 +5511,7 @@
 				<item id="8604" min="1" max="1" chance="7.59" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.32" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -5603,7 +5536,6 @@
 		</collision>
 	</npc>
 	<npc id="20571" level="48" type="Monster" name="Tarlk Bugbear Warrior">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="124" />
 			<param name="MoveAroundSocial1" value="124" />
@@ -5666,15 +5598,16 @@
 				<item id="1866" min="1" max="1" chance="3.44453266093636" /> <!-- Suede -->
 				<item id="1871" min="1" max="1" chance="5.1667911475544" /> <!-- Charcoal -->
 				<item id="5220" min="1" max="1" chance="0.206669763378143" /> <!-- Metal Hardener -->
-				<item id="1885" min="1" max="1" chance="0.430564621654511" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="0.430564621654511" /> <!-- High Grade Suede -->
 				<item id="4041" min="1" max="1" chance="0.0449295735778809" /> <!-- Mold Hardener -->
 				<item id="2336" min="1" max="1" chance="0.0120167784080505" /> <!-- Recipe: Nirvana Axe -->
 				<item id="2508" min="1" max="1" chance="4.30566190424538" /> <!-- Cursed Bone -->
 				<item id="2351" min="1" max="1" chance="0.0108088254871368" /> <!-- Recipe: Scorpion -->
-				<item id="8724" min="1" max="1" chance="0.172219573581696" /> <!-- Life Stone - Level 49 -->
-				<item id="8734" min="1" max="1" chance="0.0430627372455597" /> <!-- Mid-Grade Life Stone - Level 49 -->
-				<item id="8744" min="1" max="1" chance="0.00429842987442017" /> <!-- High-Grade Life Stone - Level 49 -->
-				<item id="8754" min="1" max="1" chance="0.000862823514938354" /> <!-- Top-Grade Life Stone - Level 49 -->
+				<item id="6668" min="1" max="1" chance="1.84528143214798" /> <!-- Deluxe Chest Key - Grade 4 -->
+				<item id="8724" min="1" max="1" chance="0.172219573581696" /> <!-- Life Stone: level 49 -->
+				<item id="8734" min="1" max="1" chance="0.0430627372455597" /> <!-- Mid-Grade Life Stone: level 49 -->
+				<item id="8744" min="1" max="1" chance="0.00429842987442017" /> <!-- High-Grade Life Stone: level 49 -->
+				<item id="8754" min="1" max="1" chance="0.000862823514938354" /> <!-- Top-Grade Life Stone: level 49 -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
@@ -5682,7 +5615,7 @@
 				<item id="8604" min="1" max="1" chance="7.59" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.32" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -5697,8 +5630,8 @@
 			</drop>
 			<spoil>
 				<item id="2335" min="1" max="1" chance="0.3525" /> <!-- Recipe: War Axe -->
-				<item id="2968" min="1" max="1" chance="1.0228" /> <!-- Dwarven War Hammer Head -->
-				<item id="951" min="1" max="1" chance="0.2756" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
+				<item id="2968" min="1" max="1" chance="1.0228" /> <!-- Dwarven Warhammer Head -->
+				<item id="951" min="1" max="1" chance="0.2756" /> <!-- Scroll: Enchant Weapon (C) -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -5707,7 +5640,6 @@
 		</collision>
 	</npc>
 	<npc id="20572" level="49" type="Monster" name="Tarlk Bugbear High Warrior">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="149" />
 			<param name="MoveAroundSocial1" value="149" />
@@ -5769,11 +5701,11 @@
 				<item id="3009" min="1" max="1" chance="0.231197810668945" /> <!-- Recipe: Composite Boots -->
 				<item id="2508" min="1" max="1" chance="4.72036623252869" /> <!-- Cursed Bone -->
 				<item id="2224" min="1" max="1" chance="0.0769550825500488" /> <!-- Recipe: Demon's Tunic -->
-				<item id="8724" min="1" max="1" chance="0.188829282073975" /> <!-- Life Stone - Level 49 -->
-				<item id="8734" min="1" max="1" chance="0.0471906923675537" /> <!-- Mid-Grade Life Stone - Level 49 -->
-				<item id="8744" min="1" max="1" chance="0.00472239486694336" /> <!-- High-Grade Life Stone - Level 49 -->
-				<item id="8754" min="1" max="1" chance="0.000931176452636719" /> <!-- Top-Grade Life Stone - Level 49 -->
-				<item id="1342" min="10" max="30" chance="11.3289587731934" /> <!-- Steel Arrow -->
+				<item id="8724" min="1" max="1" chance="0.188829282073975" /> <!-- Life Stone: level 49 -->
+				<item id="8734" min="1" max="1" chance="0.0471906923675537" /> <!-- Mid-Grade Life Stone: level 49 -->
+				<item id="8744" min="1" max="1" chance="0.00472239486694336" /> <!-- High-Grade Life Stone: level 49 -->
+				<item id="8754" min="1" max="1" chance="0.000931176452636719" /> <!-- Top-Grade Life Stone: level 49 -->
+				<item id="1342" min="10" max="30" chance="11.3289587731934" /> <!-- Iron Arrow -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
@@ -5781,7 +5713,7 @@
 				<item id="8604" min="1" max="1" chance="7.59" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.32" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -5806,7 +5738,6 @@
 		</collision>
 	</npc>
 	<npc id="20573" level="50" type="Monster" name="Tarlk Basilisk">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -5864,11 +5795,11 @@
 				<item id="2231" min="1" max="1" chance="0.0163464593238831" /> <!-- Recipe: Full Plate Armor -->
 				<item id="3014" min="1" max="1" chance="0.105949273395538" /> <!-- Recipe: Full Plate Boots -->
 				<item id="3019" min="1" max="1" chance="0.101141491241455" /> <!-- Recipe: Full Plate Shield -->
-				<item id="8725" min="1" max="1" chance="0.105361655576706" /> <!-- Life Stone - Level 52 -->
-				<item id="8735" min="1" max="1" chance="0.0263359622440338" /> <!-- Mid-Grade Life Stone - Level 52 -->
-				<item id="8745" min="1" max="1" chance="0.00263537688446045" /> <!-- High-Grade Life Stone - Level 52 -->
-				<item id="8755" min="1" max="1" chance="0.000534198017120361" /> <!-- Top-Grade Life Stone - Level 52 -->
-				<item id="1342" min="10" max="30" chance="7.58619946092796" /> <!-- Steel Arrow -->
+				<item id="8725" min="1" max="1" chance="0.105361655576706" /> <!-- Life Stone: level 52 -->
+				<item id="8735" min="1" max="1" chance="0.0263359622440338" /> <!-- Mid-Grade Life Stone: level 52 -->
+				<item id="8745" min="1" max="1" chance="0.00263537688446045" /> <!-- High-Grade Life Stone: level 52 -->
+				<item id="8755" min="1" max="1" chance="0.000534198017120361" /> <!-- Top-Grade Life Stone: level 52 -->
+				<item id="1342" min="10" max="30" chance="7.58619946092796" /> <!-- Iron Arrow -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
@@ -5876,7 +5807,7 @@
 				<item id="8604" min="1" max="1" chance="7.59" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.32" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -5901,7 +5832,6 @@
 		</collision>
 	</npc>
 	<npc id="20574" level="51" type="Monster" name="Elder Tarlk Basilisk">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -5967,10 +5897,10 @@
 				<item id="4122" min="1" max="1" chance="0.17737806725502" /> <!-- Recipe: Maestro Holder (100%) -->
 				<item id="4609" min="1" max="1" chance="0.00887239093780518" /> <!-- Greater Dye of MEN <Men+3 Int-3> -->
 				<item id="4123" min="1" max="1" chance="0.17737806725502" /> <!-- Recipe: Maestro Anvil Lock (100%) -->
-				<item id="8725" min="1" max="1" chance="0.110863035821915" /> <!-- Life Stone - Level 52 -->
-				<item id="8735" min="1" max="1" chance="0.0277192465305328" /> <!-- Mid-Grade Life Stone - Level 52 -->
-				<item id="8745" min="1" max="1" chance="0.00277610974311829" /> <!-- High-Grade Life Stone - Level 52 -->
-				<item id="8755" min="1" max="1" chance="0.000558012008666992" /> <!-- Top-Grade Life Stone - Level 52 -->
+				<item id="8725" min="1" max="1" chance="0.110863035821915" /> <!-- Life Stone: level 52 -->
+				<item id="8735" min="1" max="1" chance="0.0277192465305328" /> <!-- Mid-Grade Life Stone: level 52 -->
+				<item id="8745" min="1" max="1" chance="0.00277610974311829" /> <!-- High-Grade Life Stone: level 52 -->
+				<item id="8755" min="1" max="1" chance="0.000558012008666992" /> <!-- Top-Grade Life Stone: level 52 -->
 				<item id="1539" min="1" max="1" chance="0.886820584774017" /> <!-- Greater Healing Potion -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
@@ -5979,7 +5909,7 @@
 				<item id="8604" min="1" max="1" chance="8.14" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.32" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -6004,7 +5934,6 @@
 		</collision>
 	</npc>
 	<npc id="20575" level="54" type="Monster" name="Oel Mahum Warrior">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -6068,10 +5997,10 @@
 				<item id="4184" min="1" max="1" chance="0.00462473942756653" /> <!-- Recipe: Sprite's Staff (100%) -->
 				<item id="5165" min="1" max="1" chance="0.00803147817420959" /> <!-- Recipe: Blessed Spiritshot (B) Compressed Package (100%) -->
 				<item id="4180" min="1" max="1" chance="0.445980565114975" /> <!-- Recipe: Silver Arrow (100%) -->
-				<item id="8726" min="1" max="1" chance="0.0929160519447327" /> <!-- Life Stone - Level 55 -->
-				<item id="8736" min="1" max="1" chance="0.0232244340362549" /> <!-- Mid-Grade Life Stone - Level 55 -->
-				<item id="8746" min="1" max="1" chance="0.00232610656356812" /> <!-- High-Grade Life Stone - Level 55 -->
-				<item id="8756" min="1" max="1" chance="0.000439579193115234" /> <!-- Top-Grade Life Stone - Level 55 -->
+				<item id="8726" min="1" max="1" chance="0.0929160519447327" /> <!-- Life Stone: level 55 -->
+				<item id="8736" min="1" max="1" chance="0.0232244340362549" /> <!-- Mid-Grade Life Stone: level 55 -->
+				<item id="8746" min="1" max="1" chance="0.00232610656356812" /> <!-- High-Grade Life Stone: level 55 -->
+				<item id="8756" min="1" max="1" chance="0.000439579193115234" /> <!-- Top-Grade Life Stone: level 55 -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
@@ -6079,7 +6008,7 @@
 				<item id="8604" min="1" max="1" chance="8.14" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.32" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -6094,7 +6023,7 @@
 			</drop>
 			<spoil>
 				<item id="4598" min="1" max="1" chance="0.4711" /> <!-- Greater Dye of MEN <Men+2 Wit-2> -->
-				<item id="1806" min="1" max="1" chance="0.2826" /> <!-- Recipe: Soulshot (B-Grade) -->
+				<item id="1806" min="1" max="1" chance="0.2826" /> <!-- Recipe: Soulshot: B-Grade -->
 				<item id="1870" min="1" max="3" chance="70.6598" /> <!-- Coal -->
 			</spoil>
 		</dropLists>
@@ -6104,7 +6033,6 @@
 		</collision>
 	</npc>
 	<npc id="20576" level="55" type="Monster" name="Oel Mahum Witch Doctor">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -6163,10 +6091,10 @@
 				<item id="57" min="1121" max="2284" chance="70" /> <!-- Adena -->
 				<item id="855" min="1" max="1" chance="0.0107178064341545" /> <!-- Nassen's Earring -->
 				<item id="1918" min="1" max="1" chance="0.756167309099197" /> <!-- Nassen's Earring Gemstone -->
-				<item id="119" min="1" max="1" chance="0.00803955047559738" /> <!-- Necklace of Seal -->
-				<item id="1920" min="1" max="1" chance="0.597430426255465" /> <!-- Necklace of Seal Chain -->
-				<item id="886" min="1" max="1" chance="0.0160767096512318" /> <!-- Ring of Seal -->
-				<item id="2917" min="1" max="1" chance="1.00286816108179" /> <!-- Ring of Seal Gemstone -->
+				<item id="119" min="1" max="1" chance="0.00803955047559738" /> <!-- Necklace of Binding -->
+				<item id="1920" min="1" max="1" chance="0.597430426255465" /> <!-- Necklace of Binding Chain -->
+				<item id="886" min="1" max="1" chance="0.0160767096512318" /> <!-- Ring of Binding -->
+				<item id="2917" min="1" max="1" chance="1.00286816108179" /> <!-- Ring of Binding Gemstone -->
 				<item id="1865" min="1" max="1" chance="8.05796020417786" /> <!-- Varnish -->
 				<item id="1870" min="1" max="1" chance="8.05796020417786" /> <!-- Coal -->
 				<item id="1879" min="1" max="1" chance="1.34299956249619" /> <!-- Cokes -->
@@ -6176,10 +6104,10 @@
 				<item id="5155" min="1" max="1" chance="0.0161135414772034" /> <!-- Recipe: Soulshot (B) Compressed Package (100%) -->
 				<item id="5275" min="1" max="1" chance="0.0161135414772034" /> <!-- Recipe: Greater Spiritshot (B) Compressed Package(100%) -->
 				<item id="4178" min="1" max="1" chance="0.147846854038239" /> <!-- Recipe: Zubei's Shield (100%) -->
-				<item id="8726" min="1" max="1" chance="0.186523070663452" /> <!-- Life Stone - Level 55 -->
-				<item id="8736" min="1" max="1" chance="0.046630767665863" /> <!-- Mid-Grade Life Stone - Level 55 -->
-				<item id="8746" min="1" max="1" chance="0.00466493530654907" /> <!-- High-Grade Life Stone - Level 55 -->
-				<item id="8756" min="1" max="1" chance="0.000966440780639648" /> <!-- Top-Grade Life Stone - Level 55 -->
+				<item id="8726" min="1" max="1" chance="0.186523070663452" /> <!-- Life Stone: level 55 -->
+				<item id="8736" min="1" max="1" chance="0.046630767665863" /> <!-- Mid-Grade Life Stone: level 55 -->
+				<item id="8746" min="1" max="1" chance="0.00466493530654907" /> <!-- High-Grade Life Stone: level 55 -->
+				<item id="8756" min="1" max="1" chance="0.000966440780639648" /> <!-- Top-Grade Life Stone: level 55 -->
 				<item id="8600" min="1" max="1" chance="8.4" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="18.9" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="14.7" /> <!-- Superior Herb of Life -->
@@ -6187,7 +6115,7 @@
 				<item id="8604" min="1" max="1" chance="6.05" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.85" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -6212,7 +6140,6 @@
 		</collision>
 	</npc>
 	<npc id="20577" level="35" type="Monster" name="Leto Lizardman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -6280,7 +6207,7 @@
 				<item id="8604" min="1" max="1" chance="7.26" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.21" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -6305,7 +6232,6 @@
 		</collision>
 	</npc>
 	<npc id="20578" level="36" type="Monster" name="Leto Lizardman Archer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="125" />
 			<param name="MoveAroundSocial1" value="125" />
@@ -6369,7 +6295,7 @@
 				<item id="8604" min="1" max="1" chance="7.26" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.21" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -6394,7 +6320,6 @@
 		</collision>
 	</npc>
 	<npc id="20579" level="37" type="Monster" name="Leto Lizardman Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -6466,6 +6391,7 @@
 				<item id="1889" min="1" max="1" chance="0.394007426223755" /> <!-- Compound Braid -->
 				<item id="2146" min="1" max="1" chance="0.422153347425461" /> <!-- Recipe: Artisan's frame -->
 				<item id="2286" min="1" max="1" chance="0.0328280404186249" /> <!-- Recipe: Bonebreaker -->
+				<item id="6668" min="1" max="1" chance="2.11080220772743" /> <!-- Deluxe Chest Key - Grade 4 -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
@@ -6473,7 +6399,7 @@
 				<item id="8604" min="1" max="1" chance="7.26" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.21" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -6498,7 +6424,6 @@
 		</collision>
 	</npc>
 	<npc id="20580" level="38" type="Monster" name="Leto Lizardman Warrior">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -6511,7 +6436,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<equipment rhand="21738" /> <!-- rhand: Winged Spear - Event -->
+		<equipment rhand="93" /> <!-- rhand: Winged Spear -->
 		<acquire exp="4687" sp="292" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="886.09975" hpRegen="4.5" mp="447.96" mpRegen="1.8" />
@@ -6566,7 +6491,7 @@
 				<item id="8604" min="1" max="1" chance="6.16" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.52" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -6591,7 +6516,6 @@
 		</collision>
 	</npc>
 	<npc id="20581" level="39" type="Monster" name="Leto Lizardman Shaman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -6646,11 +6570,11 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="368" max="733" chance="70" /> <!-- Adena -->
-				<item id="279" min="1" max="1" chance="0.00418651182174683" /> <!-- Reinforced Long Bow -->
-				<item id="2040" min="1" max="1" chance="0.260113476924896" /> <!-- Reinforced Long Bow Shaft -->
+				<item id="279" min="1" max="1" chance="0.00418651182174683" /> <!-- Strengthened Long Bow -->
+				<item id="2040" min="1" max="1" chance="0.260113476924896" /> <!-- Strengthened Long Bow Shaft -->
 				<item id="1875" min="1" max="1" chance="0.333025381879807" /> <!-- Stone of Purity -->
 				<item id="1879" min="1" max="1" chance="0.832572934499741" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="0.416276987449646" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="0.416276987449646" /> <!-- High Grade Suede -->
 				<item id="5550" min="1" max="1" chance="0.0666050763759613" /> <!-- Durable Metal Plate -->
 				<item id="5549" min="1" max="1" chance="0.499547552619934" /> <!-- Metallic Thread -->
 				<item id="2287" min="1" max="1" chance="0.0277568550567627" /> <!-- Recipe: Atuba Hammer -->
@@ -6664,7 +6588,7 @@
 				<item id="8604" min="1" max="1" chance="7.26" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.21" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -6689,7 +6613,6 @@
 		</collision>
 	</npc>
 	<npc id="20582" level="40" type="Monster" name="Leto Lizardman Overlord">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -6760,7 +6683,7 @@
 				<item id="8604" min="1" max="1" chance="6.16" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.52" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -6785,7 +6708,6 @@
 		</collision>
 	</npc>
 	<npc id="20583" level="40" type="Monster" name="Timak Orc">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="35" />
 			<param name="MoveAroundSocial1" value="35" />
@@ -6850,7 +6772,7 @@
 				<item id="8604" min="1" max="1" chance="7.26" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.21" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -6875,7 +6797,6 @@
 		</collision>
 	</npc>
 	<npc id="20584" level="41" type="Monster" name="Timak Orc Archer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -6934,6 +6855,7 @@
 				<item id="2297" min="1" max="1" chance="0.03927380235672" /> <!-- Recipe: Flamberge -->
 				<item id="5154" min="1" max="1" chance="0.0299873860359192" /> <!-- Recipe: Soulshot (C) Compressed Package (100%) -->
 				<item id="2994" min="1" max="1" chance="0.713873907960892" /> <!-- Recipe: Boots of Seal -->
+				<item id="6668" min="1" max="1" chance="3.21244225917435" /> <!-- Deluxe Chest Key - Grade 4 -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
@@ -6941,7 +6863,7 @@
 				<item id="8604" min="1" max="1" chance="7.59" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.32" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -6955,9 +6877,9 @@
 				<item id="13028" min="1" max="1" chance="0.33" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="2988" min="1" max="1" chance="5.2906" /> <!-- Recipe: Reinforced Mithril Gaiters -->
+				<item id="2988" min="1" max="1" chance="5.2906" /> <!-- Recipe: Tempered Mithril Gaiters -->
 				<item id="2211" min="1" max="1" chance="2.8114" /> <!-- Recipe: Plated Leather Armor -->
-				<item id="1805" min="1" max="1" chance="0.418" /> <!-- Recipe: Soulshot (C-Grade) -->
+				<item id="1805" min="1" max="1" chance="0.418" /> <!-- Recipe: Soulshot: C-Grade -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -6966,7 +6888,6 @@
 		</collision>
 	</npc>
 	<npc id="20585" level="42" type="Monster" name="Timak Orc Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="35" />
 			<param name="MoveAroundSocial1" value="35" />
@@ -7030,10 +6951,10 @@
 				<item id="2058" min="1" max="1" chance="0.0513261459678412" /> <!-- Atuba Mace Head -->
 				<item id="1875" min="1" max="1" chance="0.591249316302776" /> <!-- Stone of Purity -->
 				<item id="1879" min="1" max="1" chance="1.47812540400696" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="0.739062702003479" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="0.739062702003479" /> <!-- High Grade Suede -->
 				<item id="5550" min="1" max="1" chance="0.118249017960548" /> <!-- Durable Metal Plate -->
 				<item id="5549" min="1" max="1" chance="0.886876087704182" /> <!-- Metallic Thread -->
-				<item id="2988" min="1" max="1" chance="0.374210086539745" /> <!-- Recipe: Reinforced Mithril Gaiters -->
+				<item id="2988" min="1" max="1" chance="0.374210086539745" /> <!-- Recipe: Tempered Mithril Gaiters -->
 				<item id="2303" min="1" max="1" chance="0.0387274198145866" /> <!-- Recipe: Skull Graver -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
@@ -7042,7 +6963,7 @@
 				<item id="8604" min="1" max="1" chance="7.59" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.32" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -7067,7 +6988,6 @@
 		</collision>
 	</npc>
 	<npc id="20586" level="43" type="Monster" name="Timak Orc Warrior">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -7127,10 +7047,10 @@
 				<item id="2164" min="1" max="1" chance="0.575586788146973" /> <!-- Recipe: Ring of Protection -->
 				<item id="5154" min="1" max="1" chance="0.0249427157783508" /> <!-- Recipe: Soulshot (C) Compressed Package (100%) -->
 				<item id="2219" min="1" max="1" chance="0.464759362453461" /> <!-- Recipe: Crimson Boots -->
-				<item id="8723" min="1" max="1" chance="0.299305416740418" /> <!-- Life Stone - Level 46 -->
-				<item id="8733" min="1" max="1" chance="0.0748281473350525" /> <!-- Mid-Grade Life Stone - Level 46 -->
-				<item id="8743" min="1" max="1" chance="0.00748102158355713" /> <!-- High-Grade Life Stone - Level 46 -->
-				<item id="8753" min="1" max="1" chance="0.00149907335662842" /> <!-- Top-Grade Life Stone - Level 46 -->
+				<item id="8723" min="1" max="1" chance="0.299305416740418" /> <!-- Life Stone: level 46 -->
+				<item id="8733" min="1" max="1" chance="0.0748281473350525" /> <!-- Mid-Grade Life Stone: level 46 -->
+				<item id="8743" min="1" max="1" chance="0.00748102158355713" /> <!-- High-Grade Life Stone: level 46 -->
+				<item id="8753" min="1" max="1" chance="0.00149907335662842" /> <!-- Top-Grade Life Stone: level 46 -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
@@ -7138,7 +7058,7 @@
 				<item id="8604" min="1" max="1" chance="7.59" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.32" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -7163,7 +7083,6 @@
 		</collision>
 	</npc>
 	<npc id="20587" level="44" type="Monster" name="Timak Orc Shaman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -7243,10 +7162,10 @@
 				<item id="2225" min="1" max="1" chance="0.0887552527141571" /> <!-- Recipe: Demon's Stockings -->
 				<item id="2321" min="1" max="1" chance="0.0142221356105804" /> <!-- Recipe: Stiletto -->
 				<item id="3003" min="1" max="1" chance="0.253615409355164" /> <!-- Recipe: Gloves of Seal -->
-				<item id="8723" min="1" max="1" chance="0.163339072618484" /> <!-- Life Stone - Level 46 -->
-				<item id="8733" min="1" max="1" chance="0.040841106004715" /> <!-- Mid-Grade Life Stone - Level 46 -->
-				<item id="8743" min="1" max="1" chance="0.00408157546043396" /> <!-- High-Grade Life Stone - Level 46 -->
-				<item id="8753" min="1" max="1" chance="0.000836596212387085" /> <!-- Top-Grade Life Stone - Level 46 -->
+				<item id="8723" min="1" max="1" chance="0.163339072618484" /> <!-- Life Stone: level 46 -->
+				<item id="8733" min="1" max="1" chance="0.040841106004715" /> <!-- Mid-Grade Life Stone: level 46 -->
+				<item id="8743" min="1" max="1" chance="0.00408157546043396" /> <!-- High-Grade Life Stone: level 46 -->
+				<item id="8753" min="1" max="1" chance="0.000836596212387085" /> <!-- Top-Grade Life Stone: level 46 -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
@@ -7254,7 +7173,7 @@
 				<item id="8604" min="1" max="1" chance="7.59" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.32" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -7279,7 +7198,6 @@
 		</collision>
 	</npc>
 	<npc id="20588" level="45" type="Monster" name="Timak Orc Overlord">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -7350,10 +7268,10 @@
 				<item id="4044" min="1" max="1" chance="0.2117764647789" /> <!-- Thons -->
 				<item id="3003" min="1" max="1" chance="0.394606318962097" /> <!-- Recipe: Gloves of Seal -->
 				<item id="2214" min="1" max="1" chance="0.157640736309052" /> <!-- Recipe: Dwarven Chain Gaiters -->
-				<item id="8723" min="1" max="1" chance="0.254135236894608" /> <!-- Life Stone - Level 46 -->
-				<item id="8733" min="1" max="1" chance="0.0635294602737427" /> <!-- Mid-Grade Life Stone - Level 46 -->
-				<item id="8743" min="1" max="1" chance="0.0063494668674469" /> <!-- High-Grade Life Stone - Level 46 -->
-				<item id="8753" min="1" max="1" chance="0.00126989337348938" /> <!-- Top-Grade Life Stone - Level 46 -->
+				<item id="8723" min="1" max="1" chance="0.254135236894608" /> <!-- Life Stone: level 46 -->
+				<item id="8733" min="1" max="1" chance="0.0635294602737427" /> <!-- Mid-Grade Life Stone: level 46 -->
+				<item id="8743" min="1" max="1" chance="0.0063494668674469" /> <!-- High-Grade Life Stone: level 46 -->
+				<item id="8753" min="1" max="1" chance="0.00126989337348938" /> <!-- Top-Grade Life Stone: level 46 -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
@@ -7361,7 +7279,7 @@
 				<item id="8604" min="1" max="1" chance="7.59" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.32" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -7376,7 +7294,7 @@
 			</drop>
 			<spoil>
 				<item id="1959" min="1" max="1" chance="5.9745" /> <!-- Chain Mail Shirt Material -->
-				<item id="2324" min="1" max="1" chance="0.7728" /> <!-- Recipe: Noble Elven Bow -->
+				<item id="2324" min="1" max="1" chance="0.7728" /> <!-- Recipe: Elven Bow of Nobility -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -7385,7 +7303,6 @@
 		</collision>
 	</npc>
 	<npc id="20589" level="45" type="Monster" name="Fline">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -7448,10 +7365,10 @@
 				<item id="4044" min="1" max="1" chance="0.316561732601166" /> <!-- Thons -->
 				<item id="3003" min="1" max="1" chance="0.589854307731629" /> <!-- Recipe: Gloves of Seal -->
 				<item id="2214" min="1" max="1" chance="0.23564008713913" /> <!-- Recipe: Dwarven Chain Gaiters -->
-				<item id="8723" min="1" max="1" chance="0.379879279741287" /> <!-- Life Stone - Level 46 -->
-				<item id="8733" min="1" max="1" chance="0.0949633191604614" /> <!-- Mid-Grade Life Stone - Level 46 -->
-				<item id="8743" min="1" max="1" chance="0.00949113129615784" /> <!-- High-Grade Life Stone - Level 46 -->
-				<item id="8753" min="1" max="1" chance="0.00189822625923157" /> <!-- Top-Grade Life Stone - Level 46 -->
+				<item id="8723" min="1" max="1" chance="0.379879279741287" /> <!-- Life Stone: level 46 -->
+				<item id="8733" min="1" max="1" chance="0.0949633191604614" /> <!-- Mid-Grade Life Stone: level 46 -->
+				<item id="8743" min="1" max="1" chance="0.00949113129615784" /> <!-- High-Grade Life Stone: level 46 -->
+				<item id="8753" min="1" max="1" chance="0.00189822625923157" /> <!-- Top-Grade Life Stone: level 46 -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
@@ -7459,7 +7376,7 @@
 				<item id="8604" min="1" max="1" chance="4.73" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.77" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -7484,7 +7401,6 @@
 		</collision>
 	</npc>
 	<npc id="20590" level="46" type="Monster" name="Liele">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -7547,10 +7463,10 @@
 				<item id="4042" min="1" max="1" chance="0.163753735870361" /> <!-- Enria -->
 				<item id="2230" min="1" max="1" chance="0.190414076370239" /> <!-- Recipe: Theca Leather Gaiters -->
 				<item id="2320" min="1" max="1" chance="0.0342437262420654" /> <!-- Recipe: Cursed Staff -->
-				<item id="8723" min="1" max="1" chance="0.393032664169312" /> <!-- Life Stone - Level 46 -->
-				<item id="8733" min="1" max="1" chance="0.0982581660423279" /> <!-- Mid-Grade Life Stone - Level 46 -->
-				<item id="8743" min="1" max="1" chance="0.00983470338439942" /> <!-- High-Grade Life Stone - Level 46 -->
-				<item id="8753" min="1" max="1" chance="0.00198471423721313" /> <!-- Top-Grade Life Stone - Level 46 -->
+				<item id="8723" min="1" max="1" chance="0.393032664169312" /> <!-- Life Stone: level 46 -->
+				<item id="8733" min="1" max="1" chance="0.0982581660423279" /> <!-- Mid-Grade Life Stone: level 46 -->
+				<item id="8743" min="1" max="1" chance="0.00983470338439942" /> <!-- High-Grade Life Stone: level 46 -->
+				<item id="8753" min="1" max="1" chance="0.00198471423721313" /> <!-- Top-Grade Life Stone: level 46 -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
@@ -7558,7 +7474,7 @@
 				<item id="8604" min="1" max="1" chance="4.73" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.77" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -7572,7 +7488,7 @@
 				<item id="13028" min="1" max="1" chance="0.33" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="2935" min="1" max="1" chance="12.1583" /> <!-- Reinforced Mithril Gaiters Fragment -->
+				<item id="2935" min="1" max="1" chance="12.1583" /> <!-- Tempered Mithril Gaiters Fragment -->
 				<item id="2068" min="1" max="1" chance="1.6483" /> <!-- Stick of Faith Shaft -->
 				<item id="2163" min="1" max="1" chance="11.6683" /> <!-- Recipe: Earring of Protection -->
 			</spoil>
@@ -7583,7 +7499,6 @@
 		</collision>
 	</npc>
 	<npc id="20591" level="47" type="Monster" name="Valley Treant">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -7647,10 +7562,10 @@
 				<item id="4042" min="1" max="1" chance="0.180006048278809" /> <!-- Enria -->
 				<item id="2230" min="1" max="1" chance="0.209312387542725" /> <!-- Recipe: Theca Leather Gaiters -->
 				<item id="2320" min="1" max="1" chance="0.037642364654541" /> <!-- Recipe: Cursed Staff -->
-				<item id="8723" min="1" max="1" chance="0.432040565948486" /> <!-- Life Stone - Level 46 -->
-				<item id="8733" min="1" max="1" chance="0.108010141487122" /> <!-- Mid-Grade Life Stone - Level 46 -->
-				<item id="8743" min="1" max="1" chance="0.0108107829284668" /> <!-- High-Grade Life Stone - Level 46 -->
-				<item id="8753" min="1" max="1" chance="0.00218169414520264" /> <!-- Top-Grade Life Stone - Level 46 -->
+				<item id="8723" min="1" max="1" chance="0.432040565948486" /> <!-- Life Stone: level 46 -->
+				<item id="8733" min="1" max="1" chance="0.108010141487122" /> <!-- Mid-Grade Life Stone: level 46 -->
+				<item id="8743" min="1" max="1" chance="0.0108107829284668" /> <!-- High-Grade Life Stone: level 46 -->
+				<item id="8753" min="1" max="1" chance="0.00218169414520264" /> <!-- Top-Grade Life Stone: level 46 -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
@@ -7658,7 +7573,7 @@
 				<item id="8604" min="1" max="1" chance="4.73" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.77" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -7673,7 +7588,7 @@
 			</drop>
 			<spoil>
 				<item id="2947" min="1" max="1" chance="19.154" /> <!-- Dwarven Chain Shield Fragment -->
-				<item id="951" min="1" max="1" chance="0.4876" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
+				<item id="951" min="1" max="1" chance="0.4876" /> <!-- Scroll: Enchant Weapon (C) -->
 				<item id="1911" min="1" max="1" chance="19.9446" /> <!-- Earring of Protection Gemstone -->
 			</spoil>
 		</dropLists>
@@ -7683,7 +7598,6 @@
 		</collision>
 	</npc>
 	<npc id="20592" level="48" type="Monster" name="Satyr">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="71" />
 			<param name="MoveAroundSocial1" value="71" />
@@ -7737,7 +7651,7 @@
 				<item id="195" min="1" max="1" chance="0.00369714854884148" /> <!-- Cursed Staff -->
 				<item id="2082" min="1" max="1" chance="0.287900314390421" /> <!-- Cursed Staff Head -->
 				<item id="2502" min="1" max="1" chance="0.00369714854884148" /> <!-- Dwarven War Hammer -->
-				<item id="2968" min="1" max="1" chance="0.275605411495447" /> <!-- Dwarven War Hammer Head -->
+				<item id="2968" min="1" max="1" chance="0.275605411495447" /> <!-- Dwarven Warhammer Head -->
 				<item id="1871" min="1" max="1" chance="14.8529645098534" /> <!-- Charcoal -->
 				<item id="1866" min="1" max="1" chance="9.90198535650253" /> <!-- Suede -->
 				<item id="1877" min="1" max="1" chance="0.594121826370239" /> <!-- Adamantite Nugget -->
@@ -7745,10 +7659,10 @@
 				<item id="4040" min="1" max="1" chance="0.29706091318512" /> <!-- Mold Lubricant -->
 				<item id="2340" min="1" max="1" chance="0.0345425957145691" /> <!-- Recipe: Pa'agrian Hammer -->
 				<item id="3006" min="1" max="1" chance="0.606240137161255" /> <!-- Recipe: Demon's Gloves -->
-				<item id="8724" min="1" max="1" chance="0.495092505374908" /> <!-- Life Stone - Level 49 -->
-				<item id="8734" min="1" max="1" chance="0.123779888793945" /> <!-- Mid-Grade Life Stone - Level 49 -->
-				<item id="8744" min="1" max="1" chance="0.0123888087997437" /> <!-- High-Grade Life Stone - Level 49 -->
-				<item id="8754" min="1" max="1" chance="0.00246153187942505" /> <!-- Top-Grade Life Stone - Level 49 -->
+				<item id="8724" min="1" max="1" chance="0.495092505374908" /> <!-- Life Stone: level 49 -->
+				<item id="8734" min="1" max="1" chance="0.123779888793945" /> <!-- Mid-Grade Life Stone: level 49 -->
+				<item id="8744" min="1" max="1" chance="0.0123888087997437" /> <!-- High-Grade Life Stone: level 49 -->
+				<item id="8754" min="1" max="1" chance="0.00246153187942505" /> <!-- Top-Grade Life Stone: level 49 -->
 			</drop>
 			<spoil>
 				<item id="1880" min="1" max="1" chance="36.8745" /> <!-- Steel -->
@@ -7762,7 +7676,6 @@
 		</collision>
 	</npc>
 	<npc id="20593" level="49" type="Monster" name="Unicorn">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -7829,10 +7742,10 @@
 				<item id="4040" min="1" max="1" chance="0.318968902236938" /> <!-- Mold Lubricant -->
 				<item id="2340" min="1" max="1" chance="0.0370900826950073" /> <!-- Recipe: Pa'agrian Hammer -->
 				<item id="3006" min="1" max="1" chance="0.650949830352783" /> <!-- Recipe: Demon's Gloves -->
-				<item id="8724" min="1" max="1" chance="0.53160515549469" /> <!-- Life Stone - Level 49 -->
-				<item id="8734" min="1" max="1" chance="0.132908550048828" /> <!-- Mid-Grade Life Stone - Level 49 -->
-				<item id="8744" min="1" max="1" chance="0.0133024728851318" /> <!-- High-Grade Life Stone - Level 49 -->
-				<item id="8754" min="1" max="1" chance="0.00264306775665283" /> <!-- Top-Grade Life Stone - Level 49 -->
+				<item id="8724" min="1" max="1" chance="0.53160515549469" /> <!-- Life Stone: level 49 -->
+				<item id="8734" min="1" max="1" chance="0.132908550048828" /> <!-- Mid-Grade Life Stone: level 49 -->
+				<item id="8744" min="1" max="1" chance="0.0133024728851318" /> <!-- High-Grade Life Stone: level 49 -->
+				<item id="8754" min="1" max="1" chance="0.00264306775665283" /> <!-- Top-Grade Life Stone: level 49 -->
 			</drop>
 			<spoil>
 				<item id="2083" min="1" max="1" chance="2.6308" /> <!-- Stiletto Edge -->
@@ -7846,7 +7759,6 @@
 		</collision>
 	</npc>
 	<npc id="20594" level="50" type="Monster" name="Forest Runner">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -7909,10 +7821,11 @@
 				<item id="2234" min="1" max="1" chance="0.128410881435394" /> <!-- Recipe: Divine Stockings -->
 				<item id="4609" min="1" max="1" chance="0.0191587477931976" /> <!-- Greater Dye of MEN <Men+3 Int-3> -->
 				<item id="2356" min="1" max="1" chance="0.0140423332881927" /> <!-- Recipe: Demon's Staff -->
-				<item id="8725" min="1" max="1" chance="0.239331411111832" /> <!-- Life Stone - Level 52 -->
-				<item id="8735" min="1" max="1" chance="0.0598398044281006" /> <!-- Mid-Grade Life Stone - Level 52 -->
-				<item id="8745" min="1" max="1" chance="0.00597841912269592" /> <!-- High-Grade Life Stone - Level 52 -->
-				<item id="8755" min="1" max="1" chance="0.00116787722396851" /> <!-- Top-Grade Life Stone - Level 52 -->
+				<item id="6669" min="1" max="1" chance="2.00360460412025" /> <!-- Deluxe Chest Key - Grade 5 -->
+				<item id="8725" min="1" max="1" chance="0.239331411111832" /> <!-- Life Stone: level 52 -->
+				<item id="8735" min="1" max="1" chance="0.0598398044281006" /> <!-- Mid-Grade Life Stone: level 52 -->
+				<item id="8745" min="1" max="1" chance="0.00597841912269592" /> <!-- High-Grade Life Stone: level 52 -->
+				<item id="8755" min="1" max="1" chance="0.00116787722396851" /> <!-- Top-Grade Life Stone: level 52 -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
@@ -7920,7 +7833,7 @@
 				<item id="8604" min="1" max="1" chance="4.73" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.77" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -7945,7 +7858,6 @@
 		</collision>
 	</npc>
 	<npc id="20595" level="51" type="Monster" name="Fline Elder">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -8008,10 +7920,10 @@
 				<item id="4039" min="1" max="1" chance="0.353543102998734" /> <!-- Mold Glue -->
 				<item id="4125" min="1" max="1" chance="0.471374956798553" /> <!-- Recipe: Maestro Mold (100%) -->
 				<item id="3014" min="1" max="1" chance="0.296255475873947" /> <!-- Recipe: Full Plate Boots -->
-				<item id="8725" min="1" max="1" chance="0.294615290699005" /> <!-- Life Stone - Level 52 -->
-				<item id="8735" min="1" max="1" chance="0.0736419372749329" /> <!-- Mid-Grade Life Stone - Level 52 -->
-				<item id="8745" min="1" max="1" chance="0.00736894788742065" /> <!-- High-Grade Life Stone - Level 52 -->
-				<item id="8755" min="1" max="1" chance="0.00147378957748413" /> <!-- Top-Grade Life Stone - Level 52 -->
+				<item id="8725" min="1" max="1" chance="0.294615290699005" /> <!-- Life Stone: level 52 -->
+				<item id="8735" min="1" max="1" chance="0.0736419372749329" /> <!-- Mid-Grade Life Stone: level 52 -->
+				<item id="8745" min="1" max="1" chance="0.00736894788742065" /> <!-- High-Grade Life Stone: level 52 -->
+				<item id="8755" min="1" max="1" chance="0.00147378957748413" /> <!-- Top-Grade Life Stone: level 52 -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
@@ -8019,7 +7931,7 @@
 				<item id="8604" min="1" max="1" chance="4.73" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.77" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -8044,7 +7956,6 @@
 		</collision>
 	</npc>
 	<npc id="20596" level="52" type="Monster" name="Liele Elder">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -8110,8 +8021,8 @@
 				<item id="2103" min="1" max="1" chance="0.0436170547920764" /> <!-- Sage's Staff Head -->
 				<item id="201" min="1" max="1" chance="0.000468311389178038" /> <!-- Club of Nature -->
 				<item id="2104" min="1" max="1" chance="0.0436170547920764" /> <!-- Club of Nature Head -->
-				<item id="202" min="1" max="1" chance="0.000468311389178038" /> <!-- Mace of Underworld -->
-				<item id="2105" min="1" max="1" chance="0.0414440072422922" /> <!-- Mace of Underworld Head -->
+				<item id="202" min="1" max="1" chance="0.000468311389178038" /> <!-- Mace of the Underworld -->
+				<item id="2105" min="1" max="1" chance="0.0414440072422922" /> <!-- Mace of the Underworld Head -->
 				<item id="1873" min="1" max="1" chance="3.53745165221405" /> <!-- Silver Nugget -->
 				<item id="1868" min="1" max="1" chance="17.6872011210709" /> <!-- Thread -->
 				<item id="1876" min="1" max="1" chance="1.76871154110718" /> <!-- Mithril Ore -->
@@ -8121,10 +8032,11 @@
 				<item id="3017" min="1" max="1" chance="0.24701621736145" /> <!-- Recipe: Divine Gloves -->
 				<item id="5155" min="1" max="1" chance="0.0176848298110962" /> <!-- Recipe: Soulshot (B) Compressed Package (100%) -->
 				<item id="3017" min="1" max="1" chance="0.24701621736145" /> <!-- Recipe: Divine Gloves -->
-				<item id="8725" min="1" max="1" chance="0.245644857376099" /> <!-- Life Stone - Level 52 -->
-				<item id="8735" min="1" max="1" chance="0.0614254993438721" /> <!-- Mid-Grade Life Stone - Level 52 -->
-				<item id="8745" min="1" max="1" chance="0.00614254993438721" /> <!-- High-Grade Life Stone - Level 52 -->
-				<item id="8755" min="1" max="1" chance="0.00128564998626709" /> <!-- Top-Grade Life Stone - Level 52 -->
+				<item id="6669" min="1" max="1" chance="2.05663999803162" /> <!-- Deluxe Chest Key - Grade 5 -->
+				<item id="8725" min="1" max="1" chance="0.245644857376099" /> <!-- Life Stone: level 52 -->
+				<item id="8735" min="1" max="1" chance="0.0614254993438721" /> <!-- Mid-Grade Life Stone: level 52 -->
+				<item id="8745" min="1" max="1" chance="0.00614254993438721" /> <!-- High-Grade Life Stone: level 52 -->
+				<item id="8755" min="1" max="1" chance="0.00128564998626709" /> <!-- Top-Grade Life Stone: level 52 -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
@@ -8132,7 +8044,7 @@
 				<item id="8604" min="1" max="1" chance="4.73" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.77" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -8157,7 +8069,6 @@
 		</collision>
 	</npc>
 	<npc id="20597" level="53" type="Monster" name="Valley Treant Elder">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -8222,12 +8133,12 @@
 				<item id="4043" min="1" max="1" chance="0.511305540283203" /> <!-- Asofe -->
 				<item id="4039" min="1" max="1" chance="0.511305540283203" /> <!-- Mold Glue -->
 				<item id="4133" min="1" max="1" chance="0.0737602343139648" /> <!-- Recipe: Zubei's Breastplate (100%) -->
-				<item id="4959" min="1" max="1" chance="0.295545913757324" /> <!-- Recipe: Sealed Avadon Boots (60%) -->
+				<item id="4959" min="1" max="1" chance="0.295545913757324" /> <!-- Recipe: Avadon Boots (60%) -->
 				<item id="4941" min="1" max="1" chance="0.117996175842285" /> <!-- Recipe: Zubei's Gaiters (60%) -->
-				<item id="8726" min="1" max="1" chance="0.35506581072998" /> <!-- Life Stone - Level 55 -->
-				<item id="8736" min="1" max="1" chance="0.0887748689575195" /> <!-- Mid-Grade Life Stone - Level 55 -->
-				<item id="8746" min="1" max="1" chance="0.00888758642578125" /> <!-- High-Grade Life Stone - Level 55 -->
-				<item id="8756" min="1" max="1" chance="0.00171692010498047" /> <!-- Top-Grade Life Stone - Level 55 -->
+				<item id="8726" min="1" max="1" chance="0.35506581072998" /> <!-- Life Stone: level 55 -->
+				<item id="8736" min="1" max="1" chance="0.0887748689575195" /> <!-- Mid-Grade Life Stone: level 55 -->
+				<item id="8746" min="1" max="1" chance="0.00888758642578125" /> <!-- High-Grade Life Stone: level 55 -->
+				<item id="8756" min="1" max="1" chance="0.00171692010498047" /> <!-- Top-Grade Life Stone: level 55 -->
 			</drop>
 			<spoil>
 				<item id="3034" min="1" max="1" chance="0.997" /> <!-- Recipe: Spiritshot B -->
@@ -8241,7 +8152,6 @@
 		</collision>
 	</npc>
 	<npc id="20598" level="54" type="Monster" name="Satyr Elder">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="71" />
 			<param name="MoveAroundSocial1" value="71" />
@@ -8304,15 +8214,15 @@
 				<item id="4178" min="1" max="1" chance="0.260429497192383" /> <!-- Recipe: Zubei's Shield (100%) -->
 				<item id="4184" min="1" max="1" chance="0.0163675913085937" /> <!-- Recipe: Sprite's Staff (100%) -->
 				<item id="5160" min="1" max="1" chance="0.0283792913818359" /> <!-- Recipe: Spiritshot (B) Compressed Package (100%) -->
-				<item id="8726" min="1" max="1" chance="0.328583795410156" /> <!-- Life Stone - Level 55 -->
-				<item id="8736" min="1" max="1" chance="0.0821459488525391" /> <!-- Mid-Grade Life Stone - Level 55 -->
-				<item id="8746" min="1" max="1" chance="0.00822779455566406" /> <!-- High-Grade Life Stone - Level 55 -->
-				<item id="8756" min="1" max="1" chance="0.00162795935058594" /> <!-- Top-Grade Life Stone - Level 55 -->
+				<item id="8726" min="1" max="1" chance="0.328583795410156" /> <!-- Life Stone: level 55 -->
+				<item id="8736" min="1" max="1" chance="0.0821459488525391" /> <!-- Mid-Grade Life Stone: level 55 -->
+				<item id="8746" min="1" max="1" chance="0.00822779455566406" /> <!-- High-Grade Life Stone: level 55 -->
+				<item id="8756" min="1" max="1" chance="0.00162795935058594" /> <!-- Top-Grade Life Stone: level 55 -->
 			</drop>
 			<spoil>
 				<item id="4180" min="1" max="1" chance="51.2556" /> <!-- Recipe: Silver Arrow (100%) -->
 				<item id="2120" min="1" max="1" chance="2.2159" /> <!-- Great Pata Blade -->
-				<item id="1806" min="1" max="1" chance="0.9226" /> <!-- Recipe: Soulshot (B-Grade) -->
+				<item id="1806" min="1" max="1" chance="0.9226" /> <!-- Recipe: Soulshot: B-Grade -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -8321,7 +8231,6 @@
 		</collision>
 	</npc>
 	<npc id="20599" level="55" type="Monster" name="Unicorn Elder">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -8395,10 +8304,10 @@
 				<item id="4178" min="1" max="1" chance="0.270405368556976" /> <!-- Recipe: Zubei's Shield (100%) -->
 				<item id="4184" min="1" max="1" chance="0.0169945594024658" /> <!-- Recipe: Sprite's Staff (100%) -->
 				<item id="5160" min="1" max="1" chance="0.0294663731575012" /> <!-- Recipe: Spiritshot (B) Compressed Package (100%) -->
-				<item id="8726" min="1" max="1" chance="0.341170348434448" /> <!-- Life Stone - Level 55 -->
-				<item id="8736" min="1" max="1" chance="0.0852925871086121" /> <!-- Mid-Grade Life Stone - Level 55 -->
-				<item id="8746" min="1" max="1" chance="0.0085429640007019" /> <!-- High-Grade Life Stone - Level 55 -->
-				<item id="8756" min="1" max="1" chance="0.00169031908035278" /> <!-- Top-Grade Life Stone - Level 55 -->
+				<item id="8726" min="1" max="1" chance="0.341170348434448" /> <!-- Life Stone: level 55 -->
+				<item id="8736" min="1" max="1" chance="0.0852925871086121" /> <!-- Mid-Grade Life Stone: level 55 -->
+				<item id="8746" min="1" max="1" chance="0.0085429640007019" /> <!-- High-Grade Life Stone: level 55 -->
+				<item id="8756" min="1" max="1" chance="0.00169031908035278" /> <!-- Top-Grade Life Stone: level 55 -->
 			</drop>
 			<spoil>
 				<item id="2120" min="1" max="1" chance="2.3008" /> <!-- Great Pata Blade -->

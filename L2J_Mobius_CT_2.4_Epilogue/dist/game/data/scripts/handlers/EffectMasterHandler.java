@@ -121,7 +121,6 @@ public class EffectMasterHandler
 		MaxHp.class,
 		MpConsumePerLevel.class,
 		Mute.class,
-		NevitsHourglass.class,
 		NoblesseBless.class,
 		OpenChest.class,
 		Unsummon.class,

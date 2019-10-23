@@ -13,7 +13,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2901" type="EtcItem" name="Hermodt's Remains">
-		<!-- The remains of Hermodt, an ancient Orc hero. Take this, along with the other three heroes' remains, to Seer Somak. -->
+		<!-- The remains of Hermodt, an ancient Orc hero. Take this, along with the other three heros' remains, to Seer Somak. -->
 		<set name="icon" val="icon.etc_ashes_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -121,7 +121,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2910" type="EtcItem" name="Kiruna's Remains">
-		<!-- The remains of Kiruna, an ancient Orc hero. Take this, along with the other 3 heroes' remains, to Seer Somak. -->
+		<!-- The remains of Kiruna, an ancient Orc hero. Take this, along with the other 3 heros' remains, to Seer Somak. -->
 		<set name="icon" val="icon.etc_ashes_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -220,7 +220,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2917" type="EtcItem" name="Ring of Seal Gemstone">
-		<!-- A key material for Dwarves to make a Ring of Seal. Can be sold in any shop. -->
+		<!-- A key material for Dwarves to make a Ring of Binding. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_bead_silver_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -400,7 +400,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="2935" type="EtcItem" name="Reinforced Mithril Gaiters Fragment">
-		<!-- A key material for Dwarves to make Reinforced Mithril Gaiters. Can be sold in any shop. -->
+		<!-- A key material for Dwarves to make Tempered Mithril Gaiters. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_plate_silver_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -750,7 +750,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="2970" type="EtcItem" name="Recipe: Ring of Seal">
-		<!-- For Dwarves only. The recipe for a Ring of Seal. Requires Create Item - Skill Level 6. The success rate is 100%. -->
+		<!-- For Dwarves only. The recipe for a Ring of Binding. Requires Create Item - Skill Level 6. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -984,7 +984,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="2988" type="EtcItem" name="Recipe: Reinforced Mithril Gaiters">
-		<!-- For Dwarves only. The recipe for the Reinforced Mithril Gaiters. Requires Create Item - Skill Level 4. The success rate is 100%. -->
+		<!-- For Dwarves only. The recipe for the Tempered Mithril Gaiters. Requires Create Item - Skill Level 4. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />

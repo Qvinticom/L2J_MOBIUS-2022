@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="22200" level="80" type="Monster" name="Ornithomimus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="ag_type" value="0" />
 			<param name="ProbSelfRangeBuff1" value="50" />
@@ -65,14 +64,14 @@
 				<item id="6690" min="1" max="1" chance="0.0904076839407682" /> <!-- Imperial Staff Head -->
 				<item id="6693" min="1" max="1" chance="0.0918713441657126" /> <!-- Dragon Hunter Axe Blade -->
 				<item id="1879" min="1" max="1" chance="4.63524041992664" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="2.31762405271339" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="2.31762405271339" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="0.218129865114212" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.14637803576088" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.120915973780632" /> <!-- Adamantine -->
-				<item id="9573" min="1" max="1" chance="0.193136618642807" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.0482803119106293" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.00482649409103393" /> <!-- High-Grade Life Stone - Level 80 -->
-				<item id="9576" min="1" max="1" chance="0.000968373018264771" /> <!-- Top-Grade Life Stone - Level 80 -->
+				<item id="9573" min="1" max="1" chance="0.193136618642807" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.0482803119106293" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.00482649409103393" /> <!-- High-Grade Life Stone: level 80 -->
+				<item id="9576" min="1" max="1" chance="0.000968373018264771" /> <!-- Top-Grade Life Stone: level 80 -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
@@ -90,7 +89,7 @@
 			<spoil>
 				<item id="6901" min="1" max="1" chance="0.6779" /> <!-- Recipe: Shining Arrow (100%) -->
 				<item id="6694" min="1" max="1" chance="1.4918" /> <!-- Saint Spear Blade -->
-				<item id="960" min="1" max="1" chance="0.2712" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="960" min="1" max="1" chance="0.2712" /> <!-- Scroll: Enchant Armor (S) -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -99,7 +98,6 @@
 		</collision>
 	</npc>
 	<npc id="22201" level="80" type="Monster" name="Ornithomimus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="ag_type" value="0" />
 			<param name="IsSayPrivate" value="0" />
@@ -158,14 +156,14 @@
 				<item id="6690" min="1" max="1" chance="0.0904076839407682" /> <!-- Imperial Staff Head -->
 				<item id="6693" min="1" max="1" chance="0.0918713441657126" /> <!-- Dragon Hunter Axe Blade -->
 				<item id="1879" min="1" max="1" chance="4.63524041992664" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="2.31762405271339" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="2.31762405271339" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="0.218129865114212" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.14637803576088" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.120915973780632" /> <!-- Adamantine -->
-				<item id="9573" min="1" max="1" chance="0.193136618642807" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.0482803119106293" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.00482649409103393" /> <!-- High-Grade Life Stone - Level 80 -->
-				<item id="9576" min="1" max="1" chance="0.000968373018264771" /> <!-- Top-Grade Life Stone - Level 80 -->
+				<item id="9573" min="1" max="1" chance="0.193136618642807" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.0482803119106293" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.00482649409103393" /> <!-- High-Grade Life Stone: level 80 -->
+				<item id="9576" min="1" max="1" chance="0.000968373018264771" /> <!-- Top-Grade Life Stone: level 80 -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
@@ -192,7 +190,6 @@
 		</collision>
 	</npc>
 	<npc id="22202" level="80" type="Monster" name="Ornithomimus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="ag_type" value="0" />
 			<minions name="Privates">
@@ -260,14 +257,14 @@
 				<item id="6690" min="1" max="1" chance="0.0904076839407682" /> <!-- Imperial Staff Head -->
 				<item id="6693" min="1" max="1" chance="0.0918713441657126" /> <!-- Dragon Hunter Axe Blade -->
 				<item id="1879" min="1" max="1" chance="4.63524041992664" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="2.31762405271339" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="2.31762405271339" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="0.218129865114212" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.14637803576088" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.120915973780632" /> <!-- Adamantine -->
-				<item id="9573" min="1" max="1" chance="0.193136618642807" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.0482803119106293" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.00482649409103393" /> <!-- High-Grade Life Stone - Level 80 -->
-				<item id="9576" min="1" max="1" chance="0.000968373018264771" /> <!-- Top-Grade Life Stone - Level 80 -->
+				<item id="9573" min="1" max="1" chance="0.193136618642807" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.0482803119106293" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.00482649409103393" /> <!-- High-Grade Life Stone: level 80 -->
+				<item id="9576" min="1" max="1" chance="0.000968373018264771" /> <!-- Top-Grade Life Stone: level 80 -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
@@ -294,7 +291,6 @@
 		</collision>
 	</npc>
 	<npc id="22203" level="80" type="Monster" name="Deinonychus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="ag_type" value="0" />
 			<param name="ProbSelfRangeBuff1" value="100" />
@@ -354,14 +350,14 @@
 				<item id="7575" min="1" max="1" chance="0.000585416983813047" /> <!-- Draconic Bow -->
 				<item id="7579" min="1" max="1" chance="0.273614575434476" /> <!-- Draconic Bow Shaft -->
 				<item id="1879" min="1" max="1" chance="4.63524041992664" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="2.31762405271339" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="2.31762405271339" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="0.218129865114212" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.14637803576088" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.120915973780632" /> <!-- Adamantine -->
-				<item id="9573" min="1" max="1" chance="0.193136618642807" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.0482803119106293" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.00482649409103393" /> <!-- High-Grade Life Stone - Level 80 -->
-				<item id="9576" min="1" max="1" chance="0.000968373018264771" /> <!-- Top-Grade Life Stone - Level 80 -->
+				<item id="9573" min="1" max="1" chance="0.193136618642807" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.0482803119106293" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.00482649409103393" /> <!-- High-Grade Life Stone: level 80 -->
+				<item id="9576" min="1" max="1" chance="0.000968373018264771" /> <!-- Top-Grade Life Stone: level 80 -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
@@ -378,7 +374,7 @@
 			</drop>
 			<spoil>
 				<item id="6697" min="1" max="1" chance="1.4377" /> <!-- Arcana Mace Head -->
-				<item id="959" min="1" max="1" chance="0.0271" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="959" min="1" max="1" chance="0.0271" /> <!-- Scroll: Enchant Weapon (S) -->
 				<item id="1875" min="1" max="1" chance="45.1934" /> <!-- Stone of Purity -->
 			</spoil>
 		</dropLists>
@@ -388,7 +384,6 @@
 		</collision>
 	</npc>
 	<npc id="22204" level="80" type="Monster" name="Deinonychus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="ag_type" value="0" />
 			<param name="IsSayPrivate" value="0" />
@@ -441,14 +436,14 @@
 				<item id="7575" min="1" max="1" chance="0.000585416983813047" /> <!-- Draconic Bow -->
 				<item id="7579" min="1" max="1" chance="0.273614575434476" /> <!-- Draconic Bow Shaft -->
 				<item id="1879" min="1" max="1" chance="4.63524041992664" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="2.31762405271339" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="2.31762405271339" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="0.218129865114212" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.14637803576088" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.120915973780632" /> <!-- Adamantine -->
-				<item id="9573" min="1" max="1" chance="0.193136618642807" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.0482803119106293" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.00482649409103393" /> <!-- High-Grade Life Stone - Level 80 -->
-				<item id="9576" min="1" max="1" chance="0.000968373018264771" /> <!-- Top-Grade Life Stone - Level 80 -->
+				<item id="9573" min="1" max="1" chance="0.193136618642807" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.0482803119106293" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.00482649409103393" /> <!-- High-Grade Life Stone: level 80 -->
+				<item id="9576" min="1" max="1" chance="0.000968373018264771" /> <!-- Top-Grade Life Stone: level 80 -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
@@ -464,7 +459,7 @@
 				<item id="13028" min="1" max="1" chance="0.11" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="1885" min="1" max="1" chance="56.4917" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="56.4917" /> <!-- High Grade Suede -->
 				<item id="6698" min="1" max="1" chance="13.3157" /> <!-- Sealed Tateossian Earring Part -->
 				<item id="6901" min="1" max="1" chance="0.6779" /> <!-- Recipe: Shining Arrow (100%) -->
 			</spoil>
@@ -475,7 +470,6 @@
 		</collision>
 	</npc>
 	<npc id="22205" level="80" type="Monster" name="Deinonychus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="ag_type" value="0" />
 			<minions name="Privates">
@@ -539,14 +533,14 @@
 				<item id="7575" min="1" max="1" chance="0.000585416983813047" /> <!-- Draconic Bow -->
 				<item id="7579" min="1" max="1" chance="0.273614575434476" /> <!-- Draconic Bow Shaft -->
 				<item id="1879" min="1" max="1" chance="4.63524041992664" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="2.31762405271339" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="2.31762405271339" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="0.218129865114212" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.14637803576088" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.120915973780632" /> <!-- Adamantine -->
-				<item id="9573" min="1" max="1" chance="0.193136618642807" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.0482803119106293" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.00482649409103393" /> <!-- High-Grade Life Stone - Level 80 -->
-				<item id="9576" min="1" max="1" chance="0.000968373018264771" /> <!-- Top-Grade Life Stone - Level 80 -->
+				<item id="9573" min="1" max="1" chance="0.193136618642807" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.0482803119106293" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.00482649409103393" /> <!-- High-Grade Life Stone: level 80 -->
+				<item id="9576" min="1" max="1" chance="0.000968373018264771" /> <!-- Top-Grade Life Stone: level 80 -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
@@ -573,7 +567,6 @@
 		</collision>
 	</npc>
 	<npc id="22208" level="80" type="Monster" name="Pachycephalosaurus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="ag_type" value="1" />
 			<param name="ProbSelfRangeBuff1" value="50" />
@@ -631,10 +624,10 @@
 				<item id="8954" min="1" max="1" chance="0.143042903100371" /> <!-- Blue Primeval Crystal -->
 				<item id="8955" min="1" max="1" chance="0.0715214515501857" /> <!-- Green Primeval Crystal -->
 				<item id="8956" min="1" max="1" chance="0.0357607257750928" /> <!-- Red Primeval Crystal -->
-				<item id="8752" min="1" max="1" chance="0.00745002516147494" /> <!-- High-Grade Life Stone - Level 76 -->
-				<item id="8762" min="1" max="1" chance="0.0014899500322938" /> <!-- Top-Grade Life Stone - Level 76 -->
-				<item id="959" min="1" max="1" chance="0.00143055003100634" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="960" min="1" max="1" chance="0.0143044003100395" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="8752" min="1" max="1" chance="0.00745002516147494" /> <!-- High-Grade Life Stone: level 76 -->
+				<item id="8762" min="1" max="1" chance="0.0014899500322938" /> <!-- Top-Grade Life Stone: level 76 -->
+				<item id="959" min="1" max="1" chance="0.00143055003100634" /> <!-- Scroll: Enchant Weapon (S) -->
+				<item id="960" min="1" max="1" chance="0.0143044003100395" /> <!-- Scroll: Enchant Armor (S) -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
@@ -652,7 +645,7 @@
 			<spoil>
 				<item id="6901" min="1" max="1" chance="0.6779" /> <!-- Recipe: Shining Arrow (100%) -->
 				<item id="6703" min="1" max="1" chance="9.6519" /> <!-- Sealed Imperial Crusader Gauntlets Design -->
-				<item id="959" min="1" max="1" chance="0.0271" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="959" min="1" max="1" chance="0.0271" /> <!-- Scroll: Enchant Weapon (S) -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -661,7 +654,6 @@
 		</collision>
 	</npc>
 	<npc id="22209" level="80" type="Monster" name="Pachycephalosaurus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsSayPrivate" value="0" />
 			<param name="ag_type" value="1" />
@@ -712,10 +704,10 @@
 				<item id="8954" min="1" max="1" chance="0.143042903100371" /> <!-- Blue Primeval Crystal -->
 				<item id="8955" min="1" max="1" chance="0.0715214515501857" /> <!-- Green Primeval Crystal -->
 				<item id="8956" min="1" max="1" chance="0.0357607257750928" /> <!-- Red Primeval Crystal -->
-				<item id="8752" min="1" max="1" chance="0.00745002516147494" /> <!-- High-Grade Life Stone - Level 76 -->
-				<item id="8762" min="1" max="1" chance="0.0014899500322938" /> <!-- Top-Grade Life Stone - Level 76 -->
-				<item id="959" min="1" max="1" chance="0.00143055003100634" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="960" min="1" max="1" chance="0.0143044003100395" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="8752" min="1" max="1" chance="0.00745002516147494" /> <!-- High-Grade Life Stone: level 76 -->
+				<item id="8762" min="1" max="1" chance="0.0014899500322938" /> <!-- Top-Grade Life Stone: level 76 -->
+				<item id="959" min="1" max="1" chance="0.00143055003100634" /> <!-- Scroll: Enchant Weapon (S) -->
+				<item id="960" min="1" max="1" chance="0.0143044003100395" /> <!-- Scroll: Enchant Armor (S) -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
@@ -742,7 +734,6 @@
 		</collision>
 	</npc>
 	<npc id="22210" level="80" type="Monster" name="Pachycephalosaurus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="mobile_type" value="1" />
 			<minions name="Privates">
@@ -803,10 +794,10 @@
 				<item id="8954" min="1" max="1" chance="0.143042903100371" /> <!-- Blue Primeval Crystal -->
 				<item id="8955" min="1" max="1" chance="0.0715214515501857" /> <!-- Green Primeval Crystal -->
 				<item id="8956" min="1" max="1" chance="0.0357607257750928" /> <!-- Red Primeval Crystal -->
-				<item id="8752" min="1" max="1" chance="0.00745002516147494" /> <!-- High-Grade Life Stone - Level 76 -->
-				<item id="8762" min="1" max="1" chance="0.0014899500322938" /> <!-- Top-Grade Life Stone - Level 76 -->
-				<item id="959" min="1" max="1" chance="0.00143055003100634" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="960" min="1" max="1" chance="0.0143044003100395" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="8752" min="1" max="1" chance="0.00745002516147494" /> <!-- High-Grade Life Stone: level 76 -->
+				<item id="8762" min="1" max="1" chance="0.0014899500322938" /> <!-- Top-Grade Life Stone: level 76 -->
+				<item id="959" min="1" max="1" chance="0.00143055003100634" /> <!-- Scroll: Enchant Weapon (S) -->
+				<item id="960" min="1" max="1" chance="0.0143044003100395" /> <!-- Scroll: Enchant Armor (S) -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
@@ -833,7 +824,6 @@
 		</collision>
 	</npc>
 	<npc id="22211" level="80" type="Monster" name="Wild Strider">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="ag_type" value="1" />
 			<param name="ProbSelfRangeBuff1" value="100" />
@@ -891,8 +881,8 @@
 				<item id="8954" min="1" max="1" chance="0.200214893960357" /> <!-- Blue Primeval Crystal -->
 				<item id="8955" min="1" max="1" chance="0.100107446980178" /> <!-- Green Primeval Crystal -->
 				<item id="8956" min="1" max="1" chance="0.0500539096900821" /> <!-- Red Primeval Crystal -->
-				<item id="959" min="1" max="1" chance="0.0020020223236084" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="960" min="1" max="1" chance="0.0200217128360271" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="959" min="1" max="1" chance="0.0020020223236084" /> <!-- Scroll: Enchant Weapon (S) -->
+				<item id="960" min="1" max="1" chance="0.0200217128360271" /> <!-- Scroll: Enchant Armor (S) -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
@@ -909,7 +899,7 @@
 			</drop>
 			<spoil>
 				<item id="6706" min="1" max="1" chance="10.9968" /> <!-- Sealed Imperial Crusader Helmet Pattern -->
-				<item id="960" min="1" max="1" chance="0.2712" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="960" min="1" max="1" chance="0.2712" /> <!-- Scroll: Enchant Armor (S) -->
 				<item id="13099" min="1" max="1" chance="9.454" /> <!-- Sealed Arcana Sigil Piece -->
 			</spoil>
 		</dropLists>
@@ -919,7 +909,6 @@
 		</collision>
 	</npc>
 	<npc id="22212" level="80" type="Monster" name="Wild Strider">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsSayPrivate" value="0" />
 			<param name="ag_type" value="1" />
@@ -972,8 +961,8 @@
 				<item id="8954" min="1" max="1" chance="0.200214893960357" /> <!-- Blue Primeval Crystal -->
 				<item id="8955" min="1" max="1" chance="0.100107446980178" /> <!-- Green Primeval Crystal -->
 				<item id="8956" min="1" max="1" chance="0.0500539096900821" /> <!-- Red Primeval Crystal -->
-				<item id="959" min="1" max="1" chance="0.0020020223236084" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="960" min="1" max="1" chance="0.0200217128360271" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="959" min="1" max="1" chance="0.0020020223236084" /> <!-- Scroll: Enchant Weapon (S) -->
+				<item id="960" min="1" max="1" chance="0.0200217128360271" /> <!-- Scroll: Enchant Armor (S) -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
@@ -1000,7 +989,6 @@
 		</collision>
 	</npc>
 	<npc id="22213" level="80" type="Monster" name="Wild Strider">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="mobile_type" value="1" />
 			<minions name="Privates">
@@ -1061,8 +1049,8 @@
 				<item id="8954" min="1" max="1" chance="0.200214893960357" /> <!-- Blue Primeval Crystal -->
 				<item id="8955" min="1" max="1" chance="0.100107446980178" /> <!-- Green Primeval Crystal -->
 				<item id="8956" min="1" max="1" chance="0.0500539096900821" /> <!-- Red Primeval Crystal -->
-				<item id="959" min="1" max="1" chance="0.0020020223236084" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="960" min="1" max="1" chance="0.0200217128360271" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="959" min="1" max="1" chance="0.0020020223236084" /> <!-- Scroll: Enchant Weapon (S) -->
+				<item id="960" min="1" max="1" chance="0.0200217128360271" /> <!-- Scroll: Enchant Armor (S) -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
@@ -1089,7 +1077,6 @@
 		</collision>
 	</npc>
 	<npc id="22214" level="80" type="Monster" name="Elroki">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="ag_type" value="1" />
 			<param name="ai_type1" value="pachycephalosaurus" />
@@ -1166,8 +1153,8 @@
 				<item id="8954" min="1" max="1" chance="0.200214893960357" /> <!-- Blue Primeval Crystal -->
 				<item id="8955" min="1" max="1" chance="0.100107446980178" /> <!-- Green Primeval Crystal -->
 				<item id="8956" min="1" max="1" chance="0.0500539096900821" /> <!-- Red Primeval Crystal -->
-				<item id="959" min="1" max="1" chance="0.0020020223236084" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="960" min="1" max="1" chance="0.0200217128360271" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="959" min="1" max="1" chance="0.0020020223236084" /> <!-- Scroll: Enchant Weapon (S) -->
+				<item id="960" min="1" max="1" chance="0.0200217128360271" /> <!-- Scroll: Enchant Armor (S) -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
@@ -1183,7 +1170,7 @@
 				<item id="13028" min="1" max="1" chance="0.11" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="959" min="1" max="1" chance="0.0271" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="959" min="1" max="1" chance="0.0271" /> <!-- Scroll: Enchant Weapon (S) -->
 				<item id="5549" min="1" max="1" chance="67.7901" /> <!-- Metallic Thread -->
 				<item id="13099" min="1" max="1" chance="9.454" /> <!-- Sealed Arcana Sigil Piece -->
 			</spoil>
@@ -1194,7 +1181,6 @@
 		</collision>
 	</npc>
 	<npc id="22215" level="80" type="Monster" name="Tyrannosaurus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="ag_type" value="1" />
 			<param name="ProbSelfBuff1" value="100" />
@@ -1285,14 +1271,14 @@
 				<item id="6370" min="1" max="1" chance="0.0169752110795975" /> <!-- Saint Spear -->
 				<item id="6694" min="1" max="1" chance="7.98642463785839" /> <!-- Saint Spear Blade -->
 				<item id="1879" min="15" max="45" chance="4.48054787647247" /> <!-- Cokes -->
-				<item id="1885" min="2" max="6" chance="16.802001376648" /> <!-- High-Grade Suede -->
+				<item id="1885" min="2" max="6" chance="16.802001376648" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="6.32545934179687" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="4.24472956718445" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="3.50652682369995" /> <!-- Adamantine -->
-				<item id="9573" min="1" max="1" chance="5.6006529495163" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="1.40015260535431" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.140002502105713" /> <!-- High-Grade Life Stone - Level 80 -->
-				<item id="9576" min="1" max="1" chance="0.0280260172805786" /> <!-- Top-Grade Life Stone - Level 80 -->
+				<item id="9573" min="1" max="1" chance="5.6006529495163" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="1.40015260535431" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.140002502105713" /> <!-- High-Grade Life Stone: level 80 -->
+				<item id="9576" min="1" max="1" chance="0.0280260172805786" /> <!-- Top-Grade Life Stone: level 80 -->
 			</drop>
 			<spoil>
 				<item id="6710" min="1" max="7" chance="79.7242" /> <!-- Sealed Draconic Leather Helmet Pattern -->
@@ -1306,7 +1292,6 @@
 		</collision>
 	</npc>
 	<npc id="22216" level="80" type="Monster" name="Tyrannosaurus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="ag_type" value="1" />
 			<param name="ProbSelfBuff1" value="100" />
@@ -1395,19 +1380,19 @@
 				<item id="6370" min="1" max="1" chance="0.0169752110795975" /> <!-- Saint Spear -->
 				<item id="6694" min="1" max="1" chance="7.98642463785839" /> <!-- Saint Spear Blade -->
 				<item id="1879" min="15" max="45" chance="4.48054787647247" /> <!-- Cokes -->
-				<item id="1885" min="2" max="6" chance="16.802001376648" /> <!-- High-Grade Suede -->
+				<item id="1885" min="2" max="6" chance="16.802001376648" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="6.32545934179687" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="4.24472956718445" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="3.50652682369995" /> <!-- Adamantine -->
-				<item id="9573" min="1" max="1" chance="5.6006529495163" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="1.40015260535431" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.140002502105713" /> <!-- High-Grade Life Stone - Level 80 -->
-				<item id="9576" min="1" max="1" chance="0.0280260172805786" /> <!-- Top-Grade Life Stone - Level 80 -->
+				<item id="9573" min="1" max="1" chance="5.6006529495163" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="1.40015260535431" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.140002502105713" /> <!-- High-Grade Life Stone: level 80 -->
+				<item id="9576" min="1" max="1" chance="0.0280260172805786" /> <!-- Top-Grade Life Stone: level 80 -->
 			</drop>
 			<spoil>
 				<item id="6901" min="1" max="1" chance="19.6584" /> <!-- Recipe: Shining Arrow (100%) -->
 				<item id="6712" min="1" max="5" chance="93.2982" /> <!-- Sealed Major Arcana Gloves fabric -->
-				<item id="960" min="1" max="1" chance="7.8634" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="960" min="1" max="1" chance="7.8634" /> <!-- Scroll: Enchant Armor (S) -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -1416,7 +1401,6 @@
 		</collision>
 	</npc>
 	<npc id="22217" level="80" type="Monster" name="Tyrannosaurus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="ag_type" value="1" />
 			<param name="mobile_type" value="1" />
@@ -1504,14 +1488,14 @@
 				<item id="6370" min="1" max="1" chance="0.0169752110795975" /> <!-- Saint Spear -->
 				<item id="6694" min="1" max="1" chance="7.98642463785839" /> <!-- Saint Spear Blade -->
 				<item id="1879" min="15" max="45" chance="4.48054787647247" /> <!-- Cokes -->
-				<item id="1885" min="2" max="6" chance="16.802001376648" /> <!-- High-Grade Suede -->
+				<item id="1885" min="2" max="6" chance="16.802001376648" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="6.32545934179687" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="4.24472956718445" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="3.50652682369995" /> <!-- Adamantine -->
-				<item id="9573" min="1" max="1" chance="5.6006529495163" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="1.40015260535431" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.140002502105713" /> <!-- High-Grade Life Stone - Level 80 -->
-				<item id="9576" min="1" max="1" chance="0.0280260172805786" /> <!-- Top-Grade Life Stone - Level 80 -->
+				<item id="9573" min="1" max="1" chance="5.6006529495163" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="1.40015260535431" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.140002502105713" /> <!-- High-Grade Life Stone: level 80 -->
+				<item id="9576" min="1" max="1" chance="0.0280260172805786" /> <!-- Top-Grade Life Stone: level 80 -->
 			</drop>
 			<spoil>
 				<item id="4042" min="1" max="7" chance="81.91" /> <!-- Enria -->
@@ -1525,7 +1509,6 @@
 		</collision>
 	</npc>
 	<npc id="22218" level="80" type="Monster" name="Velociraptor">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial" id="4032" level="10" /> <!-- NPC Strike -->
 		</parameters>
@@ -1580,14 +1563,14 @@
 				<item id="6688" min="1" max="1" chance="0.135282676181853" /> <!-- Forgotten Blade Edge -->
 				<item id="6696" min="1" max="1" chance="0.137431907319605" /> <!-- Heavens Divider Edge -->
 				<item id="1879" min="1" max="1" chance="4.63524041992664" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="2.31762405271339" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="2.31762405271339" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="0.218129865114212" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.14637803576088" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.120915973780632" /> <!-- Adamantine -->
-				<item id="9573" min="1" max="1" chance="0.193136618642807" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.0482803119106293" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.00482649409103393" /> <!-- High-Grade Life Stone - Level 80 -->
-				<item id="9576" min="1" max="1" chance="0.000968373018264771" /> <!-- Top-Grade Life Stone - Level 80 -->
+				<item id="9573" min="1" max="1" chance="0.193136618642807" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.0482803119106293" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.00482649409103393" /> <!-- High-Grade Life Stone: level 80 -->
+				<item id="9576" min="1" max="1" chance="0.000968373018264771" /> <!-- Top-Grade Life Stone: level 80 -->
 			</drop>
 			<spoil>
 				<item id="6688" min="1" max="1" chance="1.4653" /> <!-- Forgotten Blade Edge -->
@@ -1601,7 +1584,6 @@
 		</collision>
 	</npc>
 	<npc id="22219" level="80" type="Monster" name="Ornithomimus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial" id="5084" level="1" /> <!-- NPC Blinding Blow -->
 		</parameters>
@@ -1657,14 +1639,14 @@
 				<item id="6690" min="1" max="1" chance="0.0904076839407682" /> <!-- Imperial Staff Head -->
 				<item id="6693" min="1" max="1" chance="0.0918713441657126" /> <!-- Dragon Hunter Axe Blade -->
 				<item id="1879" min="1" max="1" chance="4.63524041992664" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="2.31762405271339" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="2.31762405271339" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="0.218129865114212" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.14637803576088" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.120915973780632" /> <!-- Adamantine -->
-				<item id="9573" min="1" max="1" chance="0.193136618642807" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.0482803119106293" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.00482649409103393" /> <!-- High-Grade Life Stone - Level 80 -->
-				<item id="9576" min="1" max="1" chance="0.000968373018264771" /> <!-- Top-Grade Life Stone - Level 80 -->
+				<item id="9573" min="1" max="1" chance="0.193136618642807" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.0482803119106293" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.00482649409103393" /> <!-- High-Grade Life Stone: level 80 -->
+				<item id="9576" min="1" max="1" chance="0.000968373018264771" /> <!-- Top-Grade Life Stone: level 80 -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
@@ -1682,7 +1664,7 @@
 			<spoil>
 				<item id="6901" min="1" max="1" chance="0.6779" /> <!-- Recipe: Shining Arrow (100%) -->
 				<item id="6694" min="1" max="1" chance="1.4918" /> <!-- Saint Spear Blade -->
-				<item id="960" min="1" max="1" chance="0.2712" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="960" min="1" max="1" chance="0.2712" /> <!-- Scroll: Enchant Armor (S) -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -1691,7 +1673,6 @@
 		</collision>
 	</npc>
 	<npc id="22220" level="80" type="Monster" name="Deinonychus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial" id="4067" level="10" /> <!-- NPC Mortal Blow -->
 		</parameters>
@@ -1743,14 +1724,14 @@
 				<item id="7575" min="1" max="1" chance="0.000585416983813047" /> <!-- Draconic Bow -->
 				<item id="7579" min="1" max="1" chance="0.273614575434476" /> <!-- Draconic Bow Shaft -->
 				<item id="1879" min="1" max="1" chance="4.63524041992664" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="2.31762405271339" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="2.31762405271339" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="0.218129865114212" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.14637803576088" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.120915973780632" /> <!-- Adamantine -->
-				<item id="9573" min="1" max="1" chance="0.193136618642807" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.0482803119106293" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.00482649409103393" /> <!-- High-Grade Life Stone - Level 80 -->
-				<item id="9576" min="1" max="1" chance="0.000968373018264771" /> <!-- Top-Grade Life Stone - Level 80 -->
+				<item id="9573" min="1" max="1" chance="0.193136618642807" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.0482803119106293" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.00482649409103393" /> <!-- High-Grade Life Stone: level 80 -->
+				<item id="9576" min="1" max="1" chance="0.000968373018264771" /> <!-- Top-Grade Life Stone: level 80 -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
@@ -1767,7 +1748,7 @@
 			</drop>
 			<spoil>
 				<item id="6697" min="1" max="1" chance="1.4377" /> <!-- Arcana Mace Head -->
-				<item id="959" min="1" max="1" chance="0.0271" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="959" min="1" max="1" chance="0.0271" /> <!-- Scroll: Enchant Weapon (S) -->
 				<item id="1875" min="1" max="1" chance="45.1934" /> <!-- Stone of Purity -->
 			</spoil>
 		</dropLists>
@@ -1777,7 +1758,6 @@
 		</collision>
 	</npc>
 	<npc id="22221" level="80" type="Monster" name="Pachycephalosaurus">
-		<!-- Confirmed CT2.5 -->
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<acquire exp="14514" sp="2715" />
@@ -1821,14 +1801,14 @@
 				<item id="6367" min="1" max="1" chance="0.00058530493119359" /> <!-- Angel Slayer -->
 				<item id="6691" min="1" max="1" chance="0.270514709516972" /> <!-- Angel Slayer Blade -->
 				<item id="1879" min="1" max="1" chance="4.63524041992664" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="2.31762405271339" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="2.31762405271339" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="0.218129865114212" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.14637803576088" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.120915973780632" /> <!-- Adamantine -->
-				<item id="9573" min="1" max="1" chance="0.193136618642807" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.0482803119106293" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.00482649409103393" /> <!-- High-Grade Life Stone - Level 80 -->
-				<item id="9576" min="1" max="1" chance="0.000968373018264771" /> <!-- Top-Grade Life Stone - Level 80 -->
+				<item id="9573" min="1" max="1" chance="0.193136618642807" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.0482803119106293" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.00482649409103393" /> <!-- High-Grade Life Stone: level 80 -->
+				<item id="9576" min="1" max="1" chance="0.000968373018264771" /> <!-- Top-Grade Life Stone: level 80 -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
@@ -1846,7 +1826,7 @@
 			<spoil>
 				<item id="6901" min="1" max="1" chance="0.6779" /> <!-- Recipe: Shining Arrow (100%) -->
 				<item id="6703" min="1" max="1" chance="9.6519" /> <!-- Sealed Imperial Crusader Gauntlets Design -->
-				<item id="959" min="1" max="1" chance="0.0271" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="959" min="1" max="1" chance="0.0271" /> <!-- Scroll: Enchant Weapon (S) -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -1855,7 +1835,6 @@
 		</collision>
 	</npc>
 	<npc id="22222" level="80" type="Monster" name="Wild Strider">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial" id="4067" level="10" /> <!-- NPC Mortal Blow -->
 		</parameters>
@@ -1905,10 +1884,10 @@
 				<item id="8954" min="1" max="1" chance="0.143042903100371" /> <!-- Blue Primeval Crystal -->
 				<item id="8955" min="1" max="1" chance="0.0715214515501857" /> <!-- Green Primeval Crystal -->
 				<item id="8956" min="1" max="1" chance="0.0357607257750928" /> <!-- Red Primeval Crystal -->
-				<item id="8752" min="1" max="1" chance="0.00745002516147494" /> <!-- High-Grade Life Stone - Level 76 -->
-				<item id="8762" min="1" max="1" chance="0.0014899500322938" /> <!-- Top-Grade Life Stone - Level 76 -->
-				<item id="959" min="1" max="1" chance="0.00143055003100634" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="960" min="1" max="1" chance="0.0143044003100395" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="8752" min="1" max="1" chance="0.00745002516147494" /> <!-- High-Grade Life Stone: level 76 -->
+				<item id="8762" min="1" max="1" chance="0.0014899500322938" /> <!-- Top-Grade Life Stone: level 76 -->
+				<item id="959" min="1" max="1" chance="0.00143055003100634" /> <!-- Scroll: Enchant Weapon (S) -->
+				<item id="960" min="1" max="1" chance="0.0143044003100395" /> <!-- Scroll: Enchant Armor (S) -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
@@ -1925,7 +1904,7 @@
 			</drop>
 			<spoil>
 				<item id="6706" min="1" max="1" chance="10.9968" /> <!-- Sealed Imperial Crusader Helmet Pattern -->
-				<item id="960" min="1" max="1" chance="0.2712" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="960" min="1" max="1" chance="0.2712" /> <!-- Scroll: Enchant Armor (S) -->
 				<item id="1875" min="1" max="1" chance="45.1934" /> <!-- Stone of Purity -->
 			</spoil>
 		</dropLists>
@@ -1935,7 +1914,6 @@
 		</collision>
 	</npc>
 	<npc id="22223" level="80" type="Monster" name="Velociraptor">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="ag_type" value="1" />
 			<minions name="Privates">
@@ -2003,12 +1981,12 @@
 				<item id="2500" min="1" max="1" chance="0.000686969400107861" /> <!-- Dark Legion's Edge -->
 				<item id="5545" min="1" max="1" chance="0.195370817430675" /> <!-- Dark Legion's Edge Blade -->
 				<item id="1879" min="1" max="1" chance="10.1770251607666" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="5.0885125803833" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="5.0885125803833" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="0.478919023544312" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.321373198638916" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.265493587188721" /> <!-- Adamantine -->
-				<item id="959" min="1" max="1" chance="0.00243737181091309" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="960" min="1" max="1" chance="0.0244391509094238" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="959" min="1" max="1" chance="0.00243737181091309" /> <!-- Scroll: Enchant Weapon (S) -->
+				<item id="960" min="1" max="1" chance="0.0244391509094238" /> <!-- Scroll: Enchant Armor (S) -->
 			</drop>
 			<spoil>
 				<item id="6688" min="1" max="1" chance="1.4653" /> <!-- Forgotten Blade Edge -->
@@ -2022,7 +2000,6 @@
 		</collision>
 	</npc>
 	<npc id="22224" level="80" type="Monster" name="Ornithomimus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="ag_type" value="0" />
 			<minions name="Privates">
@@ -2091,8 +2068,8 @@
 				<item id="8954" min="1" max="1" chance="0.200214893960357" /> <!-- Blue Primeval Crystal -->
 				<item id="8955" min="1" max="1" chance="0.100107446980178" /> <!-- Green Primeval Crystal -->
 				<item id="8956" min="1" max="1" chance="0.0500539096900821" /> <!-- Red Primeval Crystal -->
-				<item id="959" min="1" max="1" chance="0.0020020223236084" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="960" min="1" max="1" chance="0.0200217128360271" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="959" min="1" max="1" chance="0.0020020223236084" /> <!-- Scroll: Enchant Weapon (S) -->
+				<item id="960" min="1" max="1" chance="0.0200217128360271" /> <!-- Scroll: Enchant Armor (S) -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
@@ -2110,7 +2087,7 @@
 			<spoil>
 				<item id="6901" min="1" max="1" chance="0.6779" /> <!-- Recipe: Shining Arrow (100%) -->
 				<item id="6694" min="1" max="1" chance="1.4918" /> <!-- Saint Spear Blade -->
-				<item id="960" min="1" max="1" chance="0.2712" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="960" min="1" max="1" chance="0.2712" /> <!-- Scroll: Enchant Armor (S) -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -2119,7 +2096,6 @@
 		</collision>
 	</npc>
 	<npc id="22225" level="80" type="Monster" name="Deinonychus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="ag_type" value="0" />
 			<minions name="Privates">
@@ -2182,14 +2158,14 @@
 				<item id="7575" min="1" max="1" chance="0.000585416983813047" /> <!-- Draconic Bow -->
 				<item id="7579" min="1" max="1" chance="0.273614575434476" /> <!-- Draconic Bow Shaft -->
 				<item id="1879" min="1" max="1" chance="4.63524041992664" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="2.31762405271339" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="2.31762405271339" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="0.218129865114212" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.14637803576088" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.120915973780632" /> <!-- Adamantine -->
-				<item id="9573" min="1" max="1" chance="0.193136618642807" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.0482803119106293" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.00482649409103393" /> <!-- High-Grade Life Stone - Level 80 -->
-				<item id="9576" min="1" max="1" chance="0.000968373018264771" /> <!-- Top-Grade Life Stone - Level 80 -->
+				<item id="9573" min="1" max="1" chance="0.193136618642807" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.0482803119106293" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.00482649409103393" /> <!-- High-Grade Life Stone: level 80 -->
+				<item id="9576" min="1" max="1" chance="0.000968373018264771" /> <!-- Top-Grade Life Stone: level 80 -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
@@ -2206,7 +2182,7 @@
 			</drop>
 			<spoil>
 				<item id="6697" min="1" max="1" chance="1.4377" /> <!-- Arcana Mace Head -->
-				<item id="959" min="1" max="1" chance="0.0271" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="959" min="1" max="1" chance="0.0271" /> <!-- Scroll: Enchant Weapon (S) -->
 				<item id="1875" min="1" max="1" chance="45.1934" /> <!-- Stone of Purity -->
 			</spoil>
 		</dropLists>
@@ -2216,7 +2192,6 @@
 		</collision>
 	</npc>
 	<npc id="22226" level="80" type="Monster" name="Pachycephalosaurus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="ag_type" value="1" />
 			<param name="ProbSelfRangeBuff1" value="50" />
@@ -2274,10 +2249,10 @@
 				<item id="8954" min="1" max="1" chance="0.143042903100371" /> <!-- Blue Primeval Crystal -->
 				<item id="8955" min="1" max="1" chance="0.0715214515501857" /> <!-- Green Primeval Crystal -->
 				<item id="8956" min="1" max="1" chance="0.0357607257750928" /> <!-- Red Primeval Crystal -->
-				<item id="8752" min="1" max="1" chance="0.00745002516147494" /> <!-- High-Grade Life Stone - Level 76 -->
-				<item id="8762" min="1" max="1" chance="0.0014899500322938" /> <!-- Top-Grade Life Stone - Level 76 -->
-				<item id="959" min="1" max="1" chance="0.00143055003100634" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="960" min="1" max="1" chance="0.0143044003100395" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="8752" min="1" max="1" chance="0.00745002516147494" /> <!-- High-Grade Life Stone: level 76 -->
+				<item id="8762" min="1" max="1" chance="0.0014899500322938" /> <!-- Top-Grade Life Stone: level 76 -->
+				<item id="959" min="1" max="1" chance="0.00143055003100634" /> <!-- Scroll: Enchant Weapon (S) -->
+				<item id="960" min="1" max="1" chance="0.0143044003100395" /> <!-- Scroll: Enchant Armor (S) -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
@@ -2295,7 +2270,7 @@
 			<spoil>
 				<item id="6901" min="1" max="1" chance="0.6779" /> <!-- Recipe: Shining Arrow (100%) -->
 				<item id="6703" min="1" max="1" chance="9.6519" /> <!-- Sealed Imperial Crusader Gauntlets Design -->
-				<item id="959" min="1" max="1" chance="0.0271" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="959" min="1" max="1" chance="0.0271" /> <!-- Scroll: Enchant Weapon (S) -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -2304,7 +2279,6 @@
 		</collision>
 	</npc>
 	<npc id="22227" level="80" type="Monster" name="Wild Strider">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="ag_type" value="1" />
 			<param name="ProbSelfRangeBuff1" value="100" />
@@ -2362,8 +2336,8 @@
 				<item id="8954" min="1" max="1" chance="0.200214893960357" /> <!-- Blue Primeval Crystal -->
 				<item id="8955" min="1" max="1" chance="0.100107446980178" /> <!-- Green Primeval Crystal -->
 				<item id="8956" min="1" max="1" chance="0.0500539096900821" /> <!-- Red Primeval Crystal -->
-				<item id="959" min="1" max="1" chance="0.0020020223236084" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="960" min="1" max="1" chance="0.0200217128360271" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="959" min="1" max="1" chance="0.0020020223236084" /> <!-- Scroll: Enchant Weapon (S) -->
+				<item id="960" min="1" max="1" chance="0.0200217128360271" /> <!-- Scroll: Enchant Armor (S) -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
@@ -2380,7 +2354,7 @@
 			</drop>
 			<spoil>
 				<item id="6706" min="1" max="1" chance="10.9968" /> <!-- Sealed Imperial Crusader Helmet Pattern -->
-				<item id="960" min="1" max="1" chance="0.2712" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="960" min="1" max="1" chance="0.2712" /> <!-- Scroll: Enchant Armor (S) -->
 				<item id="1875" min="1" max="1" chance="45.1934" /> <!-- Stone of Purity -->
 			</spoil>
 		</dropLists>
@@ -2390,7 +2364,6 @@
 		</collision>
 	</npc>
 	<npc id="22228" level="1" type="Monster" name="Grey Elpy">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2444,7 +2417,7 @@
 				<item id="8604" min="1" max="1" chance="4.73" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.77" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -2469,7 +2442,6 @@
 		</collision>
 	</npc>
 	<npc id="22229" level="1" type="Monster" name="Young Grey Keltir">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2521,7 +2493,7 @@
 				<item id="8604" min="1" max="1" chance="4.73" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.77" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -2546,7 +2518,6 @@
 		</collision>
 	</npc>
 	<npc id="22230" level="2" type="Monster" name="Grey Keltir">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2597,7 +2568,7 @@
 				<item id="8604" min="1" max="1" chance="4.73" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.77" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -2622,7 +2593,6 @@
 		</collision>
 	</npc>
 	<npc id="22231" level="3" type="Monster" name="Dominant Grey Keltir">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2673,7 +2643,7 @@
 				<item id="8604" min="1" max="1" chance="4.73" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.77" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -2698,7 +2668,6 @@
 		</collision>
 	</npc>
 	<npc id="22232" level="4" type="Monster" name="Black Wolf">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -2749,7 +2718,7 @@
 				<item id="8604" min="1" max="1" chance="4.73" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.77" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -2774,7 +2743,6 @@
 		</collision>
 	</npc>
 	<npc id="22233" level="5" type="Monster" name="Dominant Black Wolf">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -2824,7 +2792,7 @@
 				<item id="8604" min="1" max="1" chance="4.73" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.77" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -2849,7 +2817,6 @@
 		</collision>
 	</npc>
 	<npc id="22234" level="6" type="Monster" name="Green Goblin">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="42" />
 			<param name="MoveAroundSocial1" value="42" />
@@ -2905,7 +2872,7 @@
 				<item id="8604" min="1" max="1" chance="4.73" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.77" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -2930,7 +2897,6 @@
 		</collision>
 	</npc>
 	<npc id="22235" level="7" type="Monster" name="Mountain Werewolf">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="72" />
 			<param name="MoveAroundSocial1" value="72" />
@@ -2987,7 +2953,7 @@
 				<item id="8604" min="1" max="1" chance="4.73" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.77" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -3012,7 +2978,6 @@
 		</collision>
 	</npc>
 	<npc id="22236" level="8" type="Monster" name="Muertos Archer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="165" />
 			<param name="MoveAroundSocial1" value="165" />
@@ -3067,7 +3032,7 @@
 				<item id="8604" min="1" max="1" chance="4.73" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.77" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -3092,7 +3057,6 @@
 		</collision>
 	</npc>
 	<npc id="22237" level="9" type="Monster" name="Mountain Fungus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3139,7 +3103,7 @@
 				<item id="2005" min="1" max="1" chance="0.311690496942878" /> <!-- Broadsword Blade -->
 				<item id="1865" min="1" max="1" chance="2.18195142346954" /> <!-- Varnish -->
 				<item id="1870" min="1" max="1" chance="2.18195142346954" /> <!-- Coal -->
-				<item id="1795" min="1" max="1" chance="8.23374110109329" /> <!-- Recipe: Leather Shoes -->
+				<item id="1795" min="1" max="1" chance="8.23374110109329" /> <!-- Recipe:Leather Shoes -->
 				<item id="1060" min="1" max="1" chance="4.84875574068832" /> <!-- Lesser Healing Potion -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
@@ -3148,7 +3112,7 @@
 				<item id="8604" min="1" max="1" chance="4.73" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.77" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -3173,7 +3137,6 @@
 		</collision>
 	</npc>
 	<npc id="22238" level="10" type="Monster" name="Mountain Werewolf Chief">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="72" />
 			<param name="MoveAroundSocial1" value="72" />
@@ -3231,7 +3194,7 @@
 				<item id="8604" min="1" max="1" chance="4.73" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.77" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -3256,7 +3219,6 @@
 		</collision>
 	</npc>
 	<npc id="22239" level="11" type="Monster" name="Muertos Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="150" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -3312,7 +3274,7 @@
 				<item id="8604" min="1" max="1" chance="5.72" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.88" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -3337,7 +3299,6 @@
 		</collision>
 	</npc>
 	<npc id="22240" level="12" type="Monster" name="Muertos Scout">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="150" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -3393,7 +3354,7 @@
 				<item id="8604" min="1" max="1" chance="5.72" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.88" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -3418,7 +3379,6 @@
 		</collision>
 	</npc>
 	<npc id="22241" level="13" type="Monster" name="Colossus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="116" />
 			<param name="MoveAroundSocial1" value="116" />
@@ -3478,7 +3438,7 @@
 				<item id="8604" min="1" max="1" chance="5.72" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.88" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -3503,7 +3463,6 @@
 		</collision>
 	</npc>
 	<npc id="22242" level="14" type="Monster" name="Muertos Warrior">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="150" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -3560,7 +3519,7 @@
 				<item id="8604" min="1" max="1" chance="5.72" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.88" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -3574,7 +3533,7 @@
 				<item id="13028" min="1" max="1" chance="0.33" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="1923" min="1" max="1" chance="8.9762" /> <!-- Leather Stockings Pattern -->
+				<item id="1923" min="1" max="1" chance="8.9762" /> <!-- Leather Stocking Pattern -->
 				<item id="1798" min="1" max="1" chance="21.4725" /> <!-- Recipe: Leather Helmet -->
 				<item id="2008" min="1" max="1" chance="0.8522" /> <!-- Cedar Staff Head -->
 			</spoil>
@@ -3585,7 +3544,6 @@
 		</collision>
 	</npc>
 	<npc id="22243" level="15" type="Monster" name="Muertos Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="150" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -3641,7 +3599,7 @@
 				<item id="8604" min="1" max="1" chance="5.72" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.88" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -3666,7 +3624,6 @@
 		</collision>
 	</npc>
 	<npc id="22244" level="16" type="Monster" name="Crimson Spider">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3719,7 +3676,7 @@
 				<item id="8604" min="1" max="1" chance="5.72" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.88" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -3744,7 +3701,6 @@
 		</collision>
 	</npc>
 	<npc id="22245" level="17" type="Monster" name="Muertos Lieutenant">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="150" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -3788,7 +3744,7 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="119" max="190" chance="70" /> <!-- Adena -->
-				<item id="176" min="1" max="1" chance="0.0137000000104308" /> <!-- Apprentice's Staff -->
+				<item id="176" min="1" max="1" chance="0.0137000000104308" /> <!-- Journeyman's Staff -->
 				<item id="2501" min="1" max="1" chance="0.0137000000104308" /> <!-- Bone Club -->
 				<item id="1870" min="1" max="1" chance="4.78987625251007" /> <!-- Coal -->
 				<item id="1865" min="1" max="1" chance="4.78987625251007" /> <!-- Varnish -->
@@ -3800,7 +3756,7 @@
 				<item id="8604" min="1" max="1" chance="5.72" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.88" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -3825,7 +3781,6 @@
 		</collision>
 	</npc>
 	<npc id="22246" level="18" type="Monster" name="Muertos Commander">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="150" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -3883,7 +3838,7 @@
 				<item id="8604" min="1" max="1" chance="5.72" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="0.88" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -3908,7 +3863,6 @@
 		</collision>
 	</npc>
 	<npc id="22247" level="15" type="Monster" name="Grotto Golem">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="116" />
 			<param name="MoveAroundSocial1" value="116" />
@@ -3971,7 +3925,7 @@
 				<item id="8604" min="1" max="1" chance="5.72" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -3996,7 +3950,6 @@
 		</collision>
 	</npc>
 	<npc id="22248" level="15" type="Monster" name="Shady Muertos">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="150" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -4054,7 +4007,7 @@
 				<item id="8604" min="1" max="1" chance="5.72" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -4079,7 +4032,6 @@
 		</collision>
 	</npc>
 	<npc id="22249" level="16" type="Monster" name="Shady Muertos Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="165" />
 			<param name="MoveAroundSocial1" value="165" />
@@ -4138,7 +4090,7 @@
 				<item id="8604" min="1" max="1" chance="5.72" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -4152,7 +4104,7 @@
 				<item id="13028" min="1" max="1" chance="0.33" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="735" min="1" max="1" chance="2.9924" /> <!-- Alacrity Potion -->
+				<item id="735" min="1" max="1" chance="2.9924" /> <!-- Potion of Alacrity -->
 				<item id="1897" min="1" max="1" chance="8.5498" /> <!-- Necklace of Wisdom Chain -->
 				<item id="1800" min="1" max="1" chance="11.2922" /> <!-- Recipe: Piece Bone Breastplate -->
 			</spoil>
@@ -4163,7 +4115,6 @@
 		</collision>
 	</npc>
 	<npc id="22250" level="16" type="Monster" name="Grotto Leopard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -4222,7 +4173,7 @@
 				<item id="8604" min="1" max="1" chance="5.72" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -4247,7 +4198,6 @@
 		</collision>
 	</npc>
 	<npc id="22251" level="17" type="Monster" name="Shady Muertos Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="150" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -4292,7 +4242,7 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="181" max="290" chance="70" /> <!-- Adena -->
-				<item id="176" min="1" max="1" chance="0.0208500009030104" /> <!-- Apprentice's Staff -->
+				<item id="176" min="1" max="1" chance="0.0208500009030104" /> <!-- Journeyman's Staff -->
 				<item id="2501" min="1" max="1" chance="0.0208500009030104" /> <!-- Bone Club -->
 				<item id="1868" min="1" max="1" chance="14.6094659471226" /> <!-- Thread -->
 				<item id="1873" min="1" max="1" chance="2.92188939096451" /> <!-- Silver Nugget -->
@@ -4304,7 +4254,7 @@
 				<item id="8604" min="1" max="1" chance="5.72" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -4329,7 +4279,6 @@
 		</collision>
 	</npc>
 	<npc id="22252" level="17" type="Monster" name="Grotto Grizzly">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -4384,7 +4333,7 @@
 				<item id="8604" min="1" max="1" chance="5.72" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -4409,7 +4358,6 @@
 		</collision>
 	</npc>
 	<npc id="22253" level="18" type="Monster" name="Shady Muertos Warrior">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="150" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -4461,7 +4409,7 @@
 				<item id="1871" min="1" max="1" chance="3.75890780509949" /> <!-- Charcoal -->
 				<item id="1872" min="1" max="1" chance="5.01186972273254" /> <!-- Animal Bone -->
 				<item id="1867" min="1" max="1" chance="5.01186972273254" /> <!-- Animal Skin -->
-				<item id="2140" min="1" max="1" chance="0.751737456619263" /> <!-- Recipe: High-Grade Suede -->
+				<item id="2140" min="1" max="1" chance="0.751737456619263" /> <!-- Recipe: High Grade Suede -->
 				<item id="8600" min="1" max="1" chance="8.4" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="18.9" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="14.7" /> <!-- Superior Herb of Life -->
@@ -4469,7 +4417,7 @@
 				<item id="8604" min="1" max="1" chance="5.72" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -4494,7 +4442,6 @@
 		</collision>
 	</npc>
 	<npc id="22254" level="18" type="Monster" name="Shady Muertos Archer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="165" />
 			<param name="MoveAroundSocial1" value="165" />
@@ -4554,7 +4501,7 @@
 				<item id="8604" min="1" max="1" chance="5.72" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -4579,7 +4526,6 @@
 		</collision>
 	</npc>
 	<npc id="22255" level="19" type="Monster" name="Shady Muertos Commander">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="150" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -4631,7 +4577,7 @@
 				<item id="1868" min="1" max="1" chance="11.6294963574333" /> <!-- Thread -->
 				<item id="1873" min="1" max="1" chance="2.32589303032684" /> <!-- Silver Nugget -->
 				<item id="2142" min="1" max="1" chance="1.16294651516342" /> <!-- Recipe: Varnish of Purity -->
-				<item id="735" min="1" max="1" chance="0.484563648468018" /> <!-- Alacrity Potion -->
+				<item id="735" min="1" max="1" chance="0.484563648468018" /> <!-- Potion of Alacrity -->
 				<item id="8600" min="1" max="1" chance="8.4" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="18.9" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="14.7" /> <!-- Superior Herb of Life -->
@@ -4639,7 +4585,7 @@
 				<item id="8604" min="1" max="1" chance="5.72" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -4653,7 +4599,7 @@
 				<item id="13028" min="1" max="1" chance="0.33" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="2140" min="1" max="1" chance="7.8741" /> <!-- Recipe: High-Grade Suede -->
+				<item id="2140" min="1" max="1" chance="7.8741" /> <!-- Recipe: High Grade Suede -->
 				<item id="1924" min="1" max="1" chance="12.7002" /> <!-- Leather Helmet Design -->
 				<item id="2141" min="1" max="1" chance="7.8741" /> <!-- Recipe: Silver Mold -->
 			</spoil>
@@ -4664,7 +4610,6 @@
 		</collision>
 	</npc>
 	<npc id="22256" level="19" type="Monster" name="Shady Muertos Wizard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="150" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -4725,7 +4670,7 @@
 				<item id="8604" min="1" max="1" chance="5.72" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -4750,7 +4695,6 @@
 		</collision>
 	</npc>
 	<npc id="22257" level="78" type="Monster" name="Island Guardian">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -4819,11 +4763,11 @@
 				<item id="1876" min="1" max="1" chance="2.36365424156189" /> <!-- Mithril Ore -->
 				<item id="1895" min="1" max="1" chance="3.37664398710251" /> <!-- Metallic Fiber -->
 				<item id="4042" min="1" max="1" chance="0.196959684829712" /> <!-- Enria -->
-				<item id="1808" min="1" max="1" chance="0.00524489700317383" /> <!-- Recipe: Soulshot (S-Grade) -->
-				<item id="9573" min="1" max="1" chance="0.0820550333786011" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.0205310112953186" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.00203584817886353" /> <!-- High-Grade Life Stone - Level 80 -->
-				<item id="9576" min="1" max="1" chance="0.000414070816040039" /> <!-- Top-Grade Life Stone - Level 80 -->
+				<item id="1808" min="1" max="1" chance="0.00524489700317383" /> <!-- Recipe: Soulshot: S Grade -->
+				<item id="9573" min="1" max="1" chance="0.0820550333786011" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.0205310112953186" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.00203584817886353" /> <!-- High-Grade Life Stone: level 80 -->
+				<item id="9576" min="1" max="1" chance="0.000414070816040039" /> <!-- Top-Grade Life Stone: level 80 -->
 				<item id="9546" min="1" max="1" chance="0.0945461696624756" /> <!-- Fire Stone -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
@@ -4832,7 +4776,7 @@
 				<item id="8604" min="1" max="1" chance="8.91" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.32" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -4847,7 +4791,7 @@
 			</drop>
 			<spoil>
 				<item id="5480" min="1" max="1" chance="1.5799" /> <!-- Sealed Leather Armor of Nightmare Fabric -->
-				<item id="1808" min="1" max="1" chance="0.1565" /> <!-- Recipe: Soulshot (S-Grade) -->
+				<item id="1808" min="1" max="1" chance="0.1565" /> <!-- Recipe: Soulshot: S Grade -->
 				<item id="5481" min="1" max="1" chance="1.5799" /> <!-- Sealed Majestic Leather Armor Fabric -->
 			</spoil>
 		</dropLists>
@@ -4857,7 +4801,6 @@
 		</collision>
 	</npc>
 	<npc id="22258" level="79" type="Monster" name="White Sand Mirage">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -4916,13 +4859,13 @@
 				<item id="5529" min="1" max="1" chance="0.0611333994373977" /> <!-- Dragon Slayer Edge -->
 				<item id="11971" min="1" max="1" chance="0.00396138260522485" /> <!-- Common Item - Sword of Miracles -->
 				<item id="5546" min="1" max="1" chance="0.0671490484934747" /> <!-- Sword of Miracles Edge -->
-				<item id="11964" min="1" max="1" chance="0.00396138260522485" /> <!-- Common Item - Dark Legion's Edge -->
+				<item id="11964" min="1" max="1" chance="0.00396138260522485" /> <!-- Common Item - Dark Legion -->
 				<item id="5545" min="1" max="1" chance="0.0611333994373977" /> <!-- Dark Legion's Edge Blade -->
 				<item id="1894" min="1" max="1" chance="0.781915442333222" /> <!-- Crafted Leather -->
 				<item id="4039" min="1" max="1" chance="0.742820198316574" /> <!-- Mold Glue -->
 				<item id="4041" min="1" max="1" chance="0.193778378539085" /> <!-- Mold Hardener -->
 				<item id="4044" min="1" max="1" chance="0.742820198316574" /> <!-- Thons -->
-				<item id="959" min="1" max="1" chance="0.000892489023208618" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="959" min="1" max="1" chance="0.000892489023208618" /> <!-- Scroll: Enchant Weapon (S) -->
 				<item id="9546" min="1" max="1" chance="0.178273362135887" /> <!-- Fire Stone -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
@@ -4931,7 +4874,7 @@
 				<item id="8604" min="1" max="1" chance="8.91" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.32" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -4946,7 +4889,7 @@
 			</drop>
 			<spoil>
 				<item id="3036" min="1" max="1" chance="0.1206" /> <!-- Recipe: Spiritshot S -->
-				<item id="5487" min="1" max="1" chance="1.2222" /> <!-- Sealed Robe of Nightmare Fabric -->
+				<item id="5487" min="1" max="1" chance="1.2222" /> <!-- Sealed Nightmare Robe Fabric -->
 				<item id="1894" min="1" max="1" chance="9.5236" /> <!-- Crafted Leather -->
 			</spoil>
 		</dropLists>
@@ -4956,7 +4899,6 @@
 		</collision>
 	</npc>
 	<npc id="22259" level="80" type="Monster" name="Muddy Coral">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -5022,7 +4964,7 @@
 				<item id="1877" min="1" max="1" chance="0.72997500869751" /> <!-- Adamantite Nugget -->
 				<item id="4041" min="1" max="1" chance="0.158695857925415" /> <!-- Mold Hardener -->
 				<item id="4040" min="1" max="1" chance="0.364987504348755" /> <!-- Mold Lubricant -->
-				<item id="960" min="1" max="1" chance="0.00730580223083496" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="960" min="1" max="1" chance="0.00730580223083496" /> <!-- Scroll: Enchant Armor (S) -->
 				<item id="9546" min="1" max="1" chance="0.145986355819702" /> <!-- Fire Stone -->
 				<item id="1344" min="20" max="60" chance="11.4062161550903" /> <!-- Mithril Arrow -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
@@ -5032,7 +4974,7 @@
 				<item id="8604" min="1" max="1" chance="8.91" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.32" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -5057,7 +4999,6 @@
 		</collision>
 	</npc>
 	<npc id="22260" level="80" type="Monster" name="Kleopora">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -5124,7 +5065,7 @@
 				<item id="8604" min="1" max="1" chance="8.91" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.32" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -5149,7 +5090,6 @@
 		</collision>
 	</npc>
 	<npc id="22261" level="81" type="Monster" name="Seychelles">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -5215,7 +5155,7 @@
 				<item id="8604" min="1" max="1" chance="8.91" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.32" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -5229,7 +5169,7 @@
 				<item id="13028" min="1" max="1" chance="0.33" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="1885" min="1" max="1" chance="21.1091" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="21.1091" /> <!-- High Grade Suede -->
 				<item id="4041" min="1" max="1" chance="2.2027" /> <!-- Mold Hardener -->
 				<item id="5503" min="1" max="1" chance="4.2781" /> <!-- Sealed Majestic Boots Lining -->
 			</spoil>
@@ -5240,7 +5180,6 @@
 		</collision>
 	</npc>
 	<npc id="22262" level="81" type="Monster" name="Naiad">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -5307,11 +5246,11 @@
 				<item id="4040" min="1" max="1" chance="0.252665889839172" /> <!-- Mold Lubricant -->
 				<item id="9628" min="1" max="1" chance="0.0990850789761543" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.0664912471261025" /> <!-- Orichalcum -->
-				<item id="960" min="1" max="1" chance="0.00505297810077667" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				<item id="9573" min="1" max="1" chance="0.0877307399497032" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.0219316234374046" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.00219528544378281" /> <!-- High-Grade Life Stone - Level 80 -->
-				<item id="9576" min="1" max="1" chance="0.000437358608722687" /> <!-- Top-Grade Life Stone - Level 80 -->
+				<item id="960" min="1" max="1" chance="0.00505297810077667" /> <!-- Scroll: Enchant Armor (S) -->
+				<item id="9573" min="1" max="1" chance="0.0877307399497032" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.0219316234374046" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.00219528544378281" /> <!-- High-Grade Life Stone: level 80 -->
+				<item id="9576" min="1" max="1" chance="0.000437358608722687" /> <!-- Top-Grade Life Stone: level 80 -->
 				<item id="9546" min="1" max="1" chance="0.101072300615788" /> <!-- Fire Stone -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
@@ -5320,7 +5259,7 @@
 				<item id="8604" min="1" max="1" chance="8.91" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.32" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -5345,7 +5284,6 @@
 		</collision>
 	</npc>
 	<npc id="22263" level="82" type="Monster" name="Sonneratia">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -5404,11 +5342,11 @@
 				<item id="4040" min="1" max="1" chance="0.291147121009827" /> <!-- Mold Lubricant -->
 				<item id="9628" min="1" max="1" chance="0.114175821268558" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.0766179209446907" /> <!-- Orichalcum -->
-				<item id="960" min="1" max="1" chance="0.00582255098819733" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				<item id="9573" min="1" max="1" chance="0.10109220669508" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.0252718284487724" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.00252962929487228" /> <!-- High-Grade Life Stone - Level 80 -->
-				<item id="9576" min="1" max="1" chance="0.000503968698978424" /> <!-- Top-Grade Life Stone - Level 80 -->
+				<item id="960" min="1" max="1" chance="0.00582255098819733" /> <!-- Scroll: Enchant Armor (S) -->
+				<item id="9573" min="1" max="1" chance="0.10109220669508" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.0252718284487724" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.00252962929487228" /> <!-- High-Grade Life Stone: level 80 -->
+				<item id="9576" min="1" max="1" chance="0.000503968698978424" /> <!-- Top-Grade Life Stone: level 80 -->
 				<item id="9546" min="1" max="1" chance="0.116465698463917" /> <!-- Fire Stone -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
@@ -5417,7 +5355,7 @@
 				<item id="8604" min="1" max="1" chance="8.91" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.32" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -5442,7 +5380,6 @@
 		</collision>
 	</npc>
 	<npc id="22264" level="82" type="Monster" name="Castalia">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -5504,7 +5441,7 @@
 				<item id="5549" min="1" max="1" chance="1.84856587192154" /> <!-- Metallic Thread -->
 				<item id="1889" min="1" max="1" chance="1.23237724794769" /> <!-- Compound Braid -->
 				<item id="4044" min="1" max="1" chance="0.616188623973846" /> <!-- Thons -->
-				<item id="959" min="1" max="1" chance="0.000723169498443604" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="959" min="1" max="1" chance="0.000723169498443604" /> <!-- Scroll: Enchant Weapon (S) -->
 				<item id="9546" min="1" max="1" chance="0.147912268081665" /> <!-- Fire Stone -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
@@ -5513,7 +5450,7 @@
 				<item id="8604" min="1" max="1" chance="8.91" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.32" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -5538,7 +5475,6 @@
 		</collision>
 	</npc>
 	<npc id="22265" level="83" type="Monster" name="Chrysocolla">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="126" />
 			<param name="MoveAroundSocial1" value="126" />
@@ -5599,11 +5535,11 @@
 				<item id="4040" min="1" max="1" chance="0.299281326934814" /> <!-- Mold Lubricant -->
 				<item id="9628" min="1" max="1" chance="0.117365719347" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.0787585086460114" /> <!-- Orichalcum -->
-				<item id="960" min="1" max="1" chance="0.00598522417068481" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				<item id="9573" min="1" max="1" chance="0.103916568563461" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.0259778847408295" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.00260030327415466" /> <!-- High-Grade Life Stone - Level 80 -->
-				<item id="9576" min="1" max="1" chance="0.00051804881477356" /> <!-- Top-Grade Life Stone - Level 80 -->
+				<item id="960" min="1" max="1" chance="0.00598522417068481" /> <!-- Scroll: Enchant Armor (S) -->
+				<item id="9573" min="1" max="1" chance="0.103916568563461" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.0259778847408295" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.00260030327415466" /> <!-- High-Grade Life Stone: level 80 -->
+				<item id="9576" min="1" max="1" chance="0.00051804881477356" /> <!-- Top-Grade Life Stone: level 80 -->
 				<item id="9546" min="1" max="1" chance="0.119719572214127" /> <!-- Fire Stone -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
@@ -5612,7 +5548,7 @@
 				<item id="8604" min="1" max="1" chance="8.91" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.32" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -5628,7 +5564,7 @@
 			<spoil>
 				<item id="6901" min="1" max="1" chance="0.3038" /> <!-- Recipe: Shining Arrow (100%) -->
 				<item id="6688" min="1" max="1" chance="0.6566" /> <!-- Forgotten Blade Edge -->
-				<item id="959" min="1" max="1" chance="0.0122" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="959" min="1" max="1" chance="0.0122" /> <!-- Scroll: Enchant Weapon (S) -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -5637,7 +5573,6 @@
 		</collision>
 	</npc>
 	<npc id="22266" level="83" type="Monster" name="Pythia">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -5708,7 +5643,7 @@
 				<item id="8604" min="1" max="1" chance="8.91" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.32" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -5733,7 +5668,6 @@
 		</collision>
 	</npc>
 	<npc id="22267" level="83" type="Monster" name="Dark Water Dragon">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -5790,7 +5724,7 @@
 				<item id="4040" min="1" max="1" chance="8.31951042917252" /> <!-- Mold Lubricant -->
 				<item id="9628" min="1" max="1" chance="3.26254652194977" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="2.1893430815506" /> <!-- Orichalcum -->
-				<item id="959" min="1" max="1" chance="0.0166302186012268" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="959" min="1" max="1" chance="0.0166302186012268" /> <!-- Scroll: Enchant Weapon (S) -->
 			</drop>
 			<spoil>
 				<item id="6901" min="1" max="1" chance="4.2222" /> <!-- Recipe: Shining Arrow (100%) -->
@@ -5804,7 +5738,6 @@
 		</collision>
 	</npc>
 	<npc id="22268" level="82" type="Monster" name="Shade">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -5865,7 +5798,7 @@
 				<item id="1876" min="1" max="1" chance="2.53311537478638" /> <!-- Mithril Ore -->
 				<item id="1895" min="1" max="1" chance="3.61872481175232" /> <!-- Metallic Fiber -->
 				<item id="4042" min="1" max="1" chance="0.211092947898865" /> <!-- Enria -->
-				<item id="960" min="1" max="1" chance="0.00508416544342041" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="960" min="1" max="1" chance="0.00508416544342041" /> <!-- Scroll: Enchant Armor (S) -->
 				<item id="9548" min="1" max="1" chance="0.101323013679504" /> <!-- Earth Stone -->
 				<item id="1344" min="10" max="30" chance="15.831770928421" /> <!-- Mithril Arrow -->
 			</drop>
@@ -5881,7 +5814,6 @@
 		</collision>
 	</npc>
 	<npc id="22269" level="82" type="Monster" name="Shade">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -5947,8 +5879,8 @@
 			</drop>
 			<spoil>
 				<item id="5481" min="1" max="1" chance="0.9321" /> <!-- Sealed Majestic Leather Armor Fabric -->
-				<item id="1808" min="1" max="1" chance="0.0923" /> <!-- Recipe: Soulshot (S-Grade) -->
-				<item id="5487" min="1" max="1" chance="0.9354" /> <!-- Sealed Robe of Nightmare Fabric -->
+				<item id="1808" min="1" max="1" chance="0.0923" /> <!-- Recipe: Soulshot: S Grade -->
+				<item id="5487" min="1" max="1" chance="0.9354" /> <!-- Sealed Nightmare Robe Fabric -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -5957,7 +5889,6 @@
 		</collision>
 	</npc>
 	<npc id="22270" level="82" type="Monster" name="Water Dragon Detractor">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -6009,8 +5940,8 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="1537" max="3147" chance="70" /> <!-- Adena -->
-				<item id="12266" min="1" max="1" chance="0.0157881424078941" /> <!-- Common Item - Sealed Robe of Nightmare -->
-				<item id="5487" min="1" max="1" chance="0.127261857663631" /> <!-- Sealed Robe of Nightmare Fabric -->
+				<item id="12266" min="1" max="1" chance="0.0157881424078941" /> <!-- Common Item - Sealed Nightmare Robe -->
+				<item id="5487" min="1" max="1" chance="0.127261857663631" /> <!-- Sealed Nightmare Robe Fabric -->
 				<item id="12259" min="1" max="1" chance="0.0157881424078941" /> <!-- Common Item - Sealed Majestic Robe -->
 				<item id="5488" min="1" max="1" chance="0.127261857663631" /> <!-- Sealed Majestic Robe Fabric -->
 				<item id="1868" min="1" max="1" chance="18.8428485816193" /> <!-- Thread -->
@@ -6018,11 +5949,11 @@
 				<item id="5549" min="1" max="1" chance="0.942131499481201" /> <!-- Metallic Thread -->
 				<item id="1889" min="1" max="1" chance="0.628087666320801" /> <!-- Compound Braid -->
 				<item id="4044" min="1" max="1" chance="0.3140438331604" /> <!-- Thons -->
-				<item id="959" min="1" max="1" chance="0.00036431999206543" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="9573" min="1" max="1" chance="0.0654318705749512" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.0163579676437378" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.00163943996429443" /> <!-- High-Grade Life Stone - Level 80 -->
-				<item id="9576" min="1" max="1" chance="0.000327887992858887" /> <!-- Top-Grade Life Stone - Level 80 -->
+				<item id="959" min="1" max="1" chance="0.00036431999206543" /> <!-- Scroll: Enchant Weapon (S) -->
+				<item id="9573" min="1" max="1" chance="0.0654318705749512" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.0163579676437378" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.00163943996429443" /> <!-- High-Grade Life Stone: level 80 -->
+				<item id="9576" min="1" max="1" chance="0.000327887992858887" /> <!-- Top-Grade Life Stone: level 80 -->
 				<item id="9549" min="1" max="1" chance="0.0753778063583374" /> <!-- Wind Stone -->
 				<item id="1344" min="10" max="30" chance="11.776825903511" /> <!-- Mithril Arrow -->
 			</drop>
@@ -6038,7 +5969,6 @@
 		</collision>
 	</npc>
 	<npc id="22271" level="82" type="Monster" name="Water Dragon Detractor">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -6100,7 +6030,7 @@
 				<item id="4040" min="1" max="1" chance="0.376859867582321" /> <!-- Mold Lubricant -->
 				<item id="9628" min="1" max="1" chance="0.147788062467575" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.0991707287216187" /> <!-- Orichalcum -->
-				<item id="960" min="1" max="1" chance="0.00753460771560669" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="960" min="1" max="1" chance="0.00753460771560669" /> <!-- Scroll: Enchant Armor (S) -->
 				<item id="9549" min="1" max="1" chance="0.150747646512985" /> <!-- Wind Stone -->
 			</drop>
 			<spoil>
@@ -6115,7 +6045,6 @@
 		</collision>
 	</npc>
 	<npc id="22272" level="82" type="Monster" name="Beleth's Minion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="114" />
 			<param name="MoveAroundSocial1" value="114" />
@@ -6194,7 +6123,6 @@
 		</collision>
 	</npc>
 	<npc id="22273" level="82" type="Monster" name="Beleth's Minion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -6263,11 +6191,11 @@
 				<item id="4040" min="1" max="1" chance="0.346220512600899" /> <!-- Mold Lubricant -->
 				<item id="9628" min="1" max="1" chance="0.1357716375494" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.0911082722845078" /> <!-- Orichalcum -->
-				<item id="959" min="1" max="1" chance="0.000692191382408142" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="9573" min="1" max="1" chance="0.120214352544785" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.0300535881361961" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.00300706092357635" /> <!-- High-Grade Life Stone - Level 80 -->
-				<item id="9576" min="1" max="1" chance="0.000607085884571075" /> <!-- Top-Grade Life Stone - Level 80 -->
+				<item id="959" min="1" max="1" chance="0.000692191382408142" /> <!-- Scroll: Enchant Weapon (S) -->
+				<item id="9573" min="1" max="1" chance="0.120214352544785" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.0300535881361961" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.00300706092357635" /> <!-- High-Grade Life Stone: level 80 -->
+				<item id="9576" min="1" max="1" chance="0.000607085884571075" /> <!-- Top-Grade Life Stone: level 80 -->
 			</drop>
 			<spoil>
 				<item id="4040" min="1" max="1" chance="6.3254" /> <!-- Mold Lubricant -->
@@ -6281,7 +6209,6 @@
 		</collision>
 	</npc>
 	<npc id="22274" level="82" type="Monster" name="Beleth's Minion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="24" />
 			<param name="MoveAroundSocial1" value="24" />
@@ -6343,7 +6270,7 @@
 				<item id="1877" min="1" max="1" chance="0.908461560649872" /> <!-- Adamantite Nugget -->
 				<item id="4041" min="1" max="1" chance="0.197498335132599" /> <!-- Mold Hardener -->
 				<item id="4040" min="1" max="1" chance="0.454250018424988" /> <!-- Mold Lubricant -->
-				<item id="960" min="1" max="1" chance="0.0090803832244873" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="960" min="1" max="1" chance="0.0090803832244873" /> <!-- Scroll: Enchant Armor (S) -->
 				<item id="1344" min="20" max="60" chance="14.1949475518799" /> <!-- Mithril Arrow -->
 			</drop>
 			<spoil>
@@ -6358,7 +6285,6 @@
 		</collision>
 	</npc>
 	<npc id="22275" level="81" type="Monster" name="Gatekeeper Lohan">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -6440,7 +6366,6 @@
 		</collision>
 	</npc>
 	<npc id="22276" level="81" type="Monster" name="Gatekeeper of the Square">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="126" />
 			<param name="MoveAroundSocial1" value="126" />
@@ -6509,11 +6434,11 @@
 				<item id="4040" min="1" max="1" chance="0.506601356643677" /> <!-- Mold Lubricant -->
 				<item id="9628" min="1" max="1" chance="0.198671924354553" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.133318260601044" /> <!-- Orichalcum -->
-				<item id="959" min="1" max="1" chance="0.00100420503616333" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="9573" min="1" max="1" chance="0.175896554134369" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.0439841805839539" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.00437833395767212" /> <!-- High-Grade Life Stone - Level 80 -->
-				<item id="9576" min="1" max="1" chance="0.000883700431823731" /> <!-- Top-Grade Life Stone - Level 80 -->
+				<item id="959" min="1" max="1" chance="0.00100420503616333" /> <!-- Scroll: Enchant Weapon (S) -->
+				<item id="9573" min="1" max="1" chance="0.175896554134369" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.0439841805839539" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.00437833395767212" /> <!-- High-Grade Life Stone: level 80 -->
+				<item id="9576" min="1" max="1" chance="0.000883700431823731" /> <!-- Top-Grade Life Stone: level 80 -->
 				<item id="9546" min="1" max="1" chance="0.20264857629776" /> <!-- Fire Stone -->
 				<item id="1344" min="10" max="30" chance="31.6634684906616" /> <!-- Mithril Arrow -->
 			</drop>
@@ -6529,7 +6454,6 @@
 		</collision>
 	</npc>
 	<npc id="22277" level="81" type="Monster" name="Gatekeeper Provo">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="135" />
 			<param name="MoveAroundSocial1" value="135" />
@@ -6594,7 +6518,7 @@
 				<item id="1876" min="3" max="9" chance="3.70805428131104" /> <!-- Mithril Ore -->
 				<item id="1895" min="3" max="9" chance="6.18011364998627" /> <!-- Metallic Fiber -->
 				<item id="4042" min="1" max="1" chance="2.16304325466537" /> <!-- Enria -->
-				<item id="960" min="1" max="1" chance="0.051914150806427" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="960" min="1" max="1" chance="0.051914150806427" /> <!-- Scroll: Enchant Armor (S) -->
 				<item id="9547" min="1" max="1" chance="1.03824824442673" /> <!-- Water Stone -->
 			</drop>
 			<spoil>
@@ -6609,7 +6533,6 @@
 		</collision>
 	</npc>
 	<npc id="22278" level="81" type="Monster" name="Gatekeeper of Fire">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="126" />
 			<param name="MoveAroundSocial1" value="126" />
@@ -6683,7 +6606,6 @@
 		</collision>
 	</npc>
 	<npc id="22279" level="81" type="Monster" name="Chromatic Detainee">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -6745,12 +6667,12 @@
 				<item id="1877" min="1" max="1" chance="1.55862682975769" /> <!-- Adamantite Nugget -->
 				<item id="4041" min="1" max="1" chance="0.338808747917175" /> <!-- Mold Hardener -->
 				<item id="4040" min="1" max="1" chance="0.779313414878845" /> <!-- Mold Lubricant -->
-				<item id="959" min="1" max="1" chance="0.00155039038085937" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="959" min="1" max="1" chance="0.00155039038085937" /> <!-- Scroll: Enchant Weapon (S) -->
 				<item id="9546" min="1" max="1" chance="0.31177381565094" /> <!-- Fire Stone -->
 			</drop>
 			<spoil>
 				<item id="5533" min="1" max="1" chance="1.5188" /> <!-- Elysian Head -->
-				<item id="1808" min="1" max="1" chance="0.2461" /> <!-- Recipe: Soulshot (S-Grade) -->
+				<item id="1808" min="1" max="1" chance="0.2461" /> <!-- Recipe: Soulshot: S Grade -->
 				<item id="5534" min="1" max="1" chance="1.5201" /> <!-- Soul Bow Stave -->
 			</spoil>
 		</dropLists>
@@ -6760,7 +6682,6 @@
 		</collision>
 	</npc>
 	<npc id="22280" level="82" type="Monster" name="Rodo Knight">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="126" />
 			<param name="MoveAroundSocial1" value="126" />
@@ -6823,11 +6744,11 @@
 				<item id="4039" min="1" max="1" chance="0.517383579761624" /> <!-- Mold Glue -->
 				<item id="4041" min="1" max="1" chance="0.134970319137812" /> <!-- Mold Hardener -->
 				<item id="4044" min="1" max="1" chance="0.517383579761624" /> <!-- Thons -->
-				<item id="960" min="1" max="1" chance="0.00620783366954327" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				<item id="9573" min="1" max="1" chance="0.107787502271175" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.0269468755677938" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.00269448928678036" /> <!-- High-Grade Life Stone - Level 80 -->
-				<item id="9576" min="1" max="1" chance="0.000539294397354126" /> <!-- Top-Grade Life Stone - Level 80 -->
+				<item id="960" min="1" max="1" chance="0.00620783366954327" /> <!-- Scroll: Enchant Armor (S) -->
+				<item id="9573" min="1" max="1" chance="0.107787502271175" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.0269468755677938" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.00269448928678036" /> <!-- High-Grade Life Stone: level 80 -->
+				<item id="9576" min="1" max="1" chance="0.000539294397354126" /> <!-- Top-Grade Life Stone: level 80 -->
 				<item id="9546" min="1" max="1" chance="0.124172534990788" /> <!-- Fire Stone -->
 			</drop>
 			<spoil>
@@ -6842,7 +6763,6 @@
 		</collision>
 	</npc>
 	<npc id="22281" level="82" type="Monster" name="Plaza Caiman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -6916,7 +6836,6 @@
 		</collision>
 	</npc>
 	<npc id="22282" level="81" type="Monster" name="Chromatic Detainee">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -6975,7 +6894,7 @@
 				<item id="1880" min="1" max="1" chance="3.89653637343597" /> <!-- Steel -->
 				<item id="5550" min="1" max="1" chance="0.519542017524719" /> <!-- Durable Metal Plate -->
 				<item id="4043" min="1" max="1" chance="1.2988550438118" /> <!-- Asofe -->
-				<item id="959" min="1" max="1" chance="0.00155293196868897" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="959" min="1" max="1" chance="0.00155293196868897" /> <!-- Scroll: Enchant Weapon (S) -->
 				<item id="9546" min="1" max="1" chance="0.311707955715179" /> <!-- Fire Stone -->
 			</drop>
 			<spoil>
@@ -6990,7 +6909,6 @@
 		</collision>
 	</npc>
 	<npc id="22283" level="82" type="Monster" name="Emerald Alligar">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -7053,7 +6971,7 @@
 				<item id="4040" min="1" max="1" chance="0.310519127793789" /> <!-- Mold Lubricant -->
 				<item id="9628" min="1" max="1" chance="0.12177210736227" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.0817131534404755" /> <!-- Orichalcum -->
-				<item id="960" min="1" max="1" chance="0.00620824878787994" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="960" min="1" max="1" chance="0.00620824878787994" /> <!-- Scroll: Enchant Armor (S) -->
 				<item id="9546" min="1" max="1" chance="0.12421069935751" /> <!-- Fire Stone -->
 			</drop>
 			<spoil>
@@ -7068,7 +6986,6 @@
 		</collision>
 	</npc>
 	<npc id="22284" level="81" type="Monster" name="Chromatic Detainee">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -7126,8 +7043,8 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="3552" max="7274" chance="70" /> <!-- Adena -->
-				<item id="5326" min="1" max="1" chance="0.00197887429267168" /> <!-- Sealed Robe of Nightmare -->
-				<item id="5487" min="1" max="1" chance="0.294171124610603" /> <!-- Sealed Robe of Nightmare Fabric -->
+				<item id="5326" min="1" max="1" chance="0.00197887429267168" /> <!-- Sealed Nightmare Robe -->
+				<item id="5487" min="1" max="1" chance="0.294171124610603" /> <!-- Sealed Nightmare Robe Fabric -->
 				<item id="5329" min="1" max="1" chance="0.00197887429267168" /> <!-- Sealed Majestic Robe -->
 				<item id="5488" min="1" max="1" chance="0.294171124610603" /> <!-- Sealed Majestic Robe Fabric -->
 				<item id="1868" min="1" max="3" chance="23.7568080099068" /> <!-- Thread -->
@@ -7136,10 +7053,10 @@
 				<item id="1889" min="1" max="1" chance="1.58378976305389" /> <!-- Compound Braid -->
 				<item id="4044" min="1" max="1" chance="0.791894881526947" /> <!-- Thons -->
 				<item id="6901" min="1" max="1" chance="0.0237533872146606" /> <!-- Recipe: Shining Arrow (100%) -->
-				<item id="9573" min="1" max="1" chance="0.164966889846802" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.0412417224617004" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.00411264147567749" /> <!-- High-Grade Life Stone - Level 80 -->
-				<item id="9576" min="1" max="1" chance="0.00080715393447876" /> <!-- Top-Grade Life Stone - Level 80 -->
+				<item id="9573" min="1" max="1" chance="0.164966889846802" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.0412417224617004" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.00411264147567749" /> <!-- High-Grade Life Stone: level 80 -->
+				<item id="9576" min="1" max="1" chance="0.00080715393447876" /> <!-- Top-Grade Life Stone: level 80 -->
 				<item id="9547" min="1" max="1" chance="0.190103969520569" /> <!-- Water Stone -->
 			</drop>
 			<spoil>
@@ -7154,7 +7071,6 @@
 		</collision>
 	</npc>
 	<npc id="22285" level="81" type="Monster" name="Chromatic Detainee">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -7223,7 +7139,7 @@
 				<item id="1866" min="3" max="9" chance="4.47858163730621" /> <!-- Suede -->
 				<item id="1873" min="1" max="1" chance="16.1228080895004" /> <!-- Silver Nugget -->
 				<item id="1868" min="10" max="30" chance="3.83877813163376" /> <!-- Thread -->
-				<item id="959" min="1" max="1" chance="0.00163029123687744" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="959" min="1" max="1" chance="0.00163029123687744" /> <!-- Scroll: Enchant Weapon (S) -->
 				<item id="9547" min="1" max="1" chance="0.32245444569397" /> <!-- Water Stone -->
 			</drop>
 			<spoil>
@@ -7237,7 +7153,6 @@
 		</collision>
 	</npc>
 	<npc id="22286" level="82" type="Monster" name="Plaza Gaviel">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -7302,7 +7217,7 @@
 				<item id="1871" min="1" max="1" chance="13.3078375860863" /> <!-- Charcoal -->
 				<item id="1872" min="1" max="3" chance="8.87190667102432" /> <!-- Animal Bone -->
 				<item id="1867" min="1" max="3" chance="5.91460444734955" /> <!-- Animal Skin -->
-				<item id="960" min="1" max="1" chance="0.00533606715011597" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="960" min="1" max="1" chance="0.00533606715011597" /> <!-- Scroll: Enchant Armor (S) -->
 				<item id="9546" min="1" max="1" chance="0.106407456699371" /> <!-- Fire Stone -->
 			</drop>
 			<spoil>
@@ -7317,7 +7232,6 @@
 		</collision>
 	</npc>
 	<npc id="22287" level="82" type="Monster" name="Crystalline Unicorn">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -7401,7 +7315,6 @@
 		</collision>
 	</npc>
 	<npc id="22288" level="82" type="Monster" name="Emerald Boar">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="95" />
 			<param name="MoveAroundSocial1" value="95" />
@@ -7464,7 +7377,7 @@
 				<item id="1876" min="1" max="1" chance="10.1551429559326" /> <!-- Mithril Ore -->
 				<item id="1895" min="1" max="1" chance="14.5073060058746" /> <!-- Metallic Fiber -->
 				<item id="4042" min="1" max="1" chance="0.846261912994385" /> <!-- Enria -->
-				<item id="959" min="1" max="1" chance="0.00201262742614746" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="959" min="1" max="1" chance="0.00201262742614746" /> <!-- Scroll: Enchant Weapon (S) -->
 				<item id="9546" min="1" max="1" chance="0.406215302177429" /> <!-- Fire Stone -->
 			</drop>
 			<spoil>
@@ -7479,7 +7392,6 @@
 		</collision>
 	</npc>
 	<npc id="22289" level="82" type="Monster" name="Plaza Helm">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -7544,11 +7456,11 @@
 				<item id="1876" min="1" max="1" chance="6.29628431680679" /> <!-- Mithril Ore -->
 				<item id="1895" min="1" max="1" chance="8.99468061080933" /> <!-- Metallic Fiber -->
 				<item id="4042" min="1" max="1" chance="0.524673923816681" /> <!-- Enria -->
-				<item id="960" min="1" max="1" chance="0.0125833382225037" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				<item id="9573" min="1" max="1" chance="0.218610847740173" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.0546724350357056" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.00548302198410034" /> <!-- High-Grade Life Stone - Level 80 -->
-				<item id="9576" min="1" max="1" chance="0.00110449363708496" /> <!-- Top-Grade Life Stone - Level 80 -->
+				<item id="960" min="1" max="1" chance="0.0125833382225037" /> <!-- Scroll: Enchant Armor (S) -->
+				<item id="9573" min="1" max="1" chance="0.218610847740173" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.0546724350357056" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.00548302198410034" /> <!-- High-Grade Life Stone: level 80 -->
+				<item id="9576" min="1" max="1" chance="0.00110449363708496" /> <!-- Top-Grade Life Stone: level 80 -->
 				<item id="9546" min="1" max="1" chance="0.251785103054047" /> <!-- Fire Stone -->
 			</drop>
 			<spoil>
@@ -7563,7 +7475,6 @@
 		</collision>
 	</npc>
 	<npc id="22290" level="82" type="Monster" name="Terod's Minion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -7629,8 +7540,8 @@
 			</drop>
 			<spoil>
 				<item id="5481" min="1" max="1" chance="9.4465" /> <!-- Sealed Majestic Leather Armor Fabric -->
-				<item id="1808" min="1" max="1" chance="0.9356" /> <!-- Recipe: Soulshot (S-Grade) -->
-				<item id="5487" min="1" max="1" chance="9.4799" /> <!-- Sealed Robe of Nightmare Fabric -->
+				<item id="1808" min="1" max="1" chance="0.9356" /> <!-- Recipe: Soulshot: S Grade -->
+				<item id="5487" min="1" max="1" chance="9.4799" /> <!-- Sealed Nightmare Robe Fabric -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -7639,7 +7550,6 @@
 		</collision>
 	</npc>
 	<npc id="22291" level="82" type="Monster" name="Weylin's Minion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -7698,7 +7608,7 @@
 				<item id="5549" min="1" max="1" chance="12.7485119771957" /> <!-- Metallic Thread -->
 				<item id="1889" min="1" max="1" chance="8.49902390799713" /> <!-- Compound Braid -->
 				<item id="4044" min="1" max="1" chance="4.24948806919861" /> <!-- Thons -->
-				<item id="959" min="1" max="1" chance="0.00511134719085693" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="959" min="1" max="1" chance="0.00511134719085693" /> <!-- Scroll: Enchant Weapon (S) -->
 				<item id="9546" min="1" max="1" chance="1.01992872777557" /> <!-- Fire Stone -->
 			</drop>
 			<spoil>
@@ -7713,7 +7623,6 @@
 		</collision>
 	</npc>
 	<npc id="22292" level="82" type="Monster" name="Tourmaline">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="126" />
 			<param name="MoveAroundSocial1" value="126" />
@@ -7769,11 +7678,11 @@
 				<item id="4040" min="1" max="1" chance="0.508806822448731" /> <!-- Mold Lubricant -->
 				<item id="9628" min="1" max="1" chance="0.199532925548553" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.133896982265472" /> <!-- Orichalcum -->
-				<item id="960" min="1" max="1" chance="0.0101754523849487" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				<item id="9573" min="1" max="1" chance="0.176668085483551" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.0441648836708069" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.00442076376724243" /> <!-- High-Grade Life Stone - Level 80 -->
-				<item id="9576" min="1" max="1" chance="0.000880732433319092" /> <!-- Top-Grade Life Stone - Level 80 -->
+				<item id="960" min="1" max="1" chance="0.0101754523849487" /> <!-- Scroll: Enchant Armor (S) -->
+				<item id="9573" min="1" max="1" chance="0.176668085483551" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.0441648836708069" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.00442076376724243" /> <!-- High-Grade Life Stone: level 80 -->
+				<item id="9576" min="1" max="1" chance="0.000880732433319092" /> <!-- Top-Grade Life Stone: level 80 -->
 				<item id="9546" min="1" max="1" chance="0.203534700099945" /> <!-- Fire Stone -->
 			</drop>
 			<spoil>
@@ -7788,7 +7697,6 @@
 		</collision>
 	</npc>
 	<npc id="22293" level="82" type="Monster" name="Spinel">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="116" />
 			<param name="MoveAroundSocial1" value="116" />
@@ -7876,7 +7784,6 @@
 		</collision>
 	</npc>
 	<npc id="22294" level="82" type="Monster" name="Fire Opal">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="126" />
 			<param name="MoveAroundSocial1" value="126" />
@@ -7932,7 +7839,7 @@
 				<item id="4040" min="1" max="1" chance="0.848016700469971" /> <!-- Mold Lubricant -->
 				<item id="9628" min="1" max="1" chance="0.332551492576599" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.223160830734253" /> <!-- Orichalcum -->
-				<item id="959" min="1" max="1" chance="0.00169082234191895" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="959" min="1" max="1" chance="0.00169082234191895" /> <!-- Scroll: Enchant Weapon (S) -->
 				<item id="9546" min="1" max="1" chance="0.339217767547607" /> <!-- Fire Stone -->
 			</drop>
 			<spoil>
@@ -7947,7 +7854,6 @@
 		</collision>
 	</npc>
 	<npc id="22295" level="82" type="Monster" name="Reef Golem">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="126" />
 			<param name="MoveAroundSocial1" value="126" />
@@ -8019,7 +7925,7 @@
 				<item id="4040" min="1" max="1" chance="2.47072176055908" /> <!-- Mold Lubricant -->
 				<item id="4042" min="1" max="1" chance="2.05891980676651" /> <!-- Enria -->
 				<item id="4043" min="1" max="1" chance="4.11783961353302" /> <!-- Asofe -->
-				<item id="960" min="1" max="1" chance="0.0494342268943787" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="960" min="1" max="1" chance="0.0494342268943787" /> <!-- Scroll: Enchant Armor (S) -->
 				<item id="9546" min="1" max="1" chance="0.988279708003998" /> <!-- Fire Stone -->
 			</drop>
 			<spoil>
@@ -8034,7 +7940,6 @@
 		</collision>
 	</npc>
 	<npc id="22296" level="82" type="Monster" name="Reef Golem">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="126" />
 			<param name="MoveAroundSocial1" value="126" />
@@ -8110,7 +8015,6 @@
 		</collision>
 	</npc>
 	<npc id="22297" level="82" type="Monster" name="Reef Golem">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="126" />
 			<param name="MoveAroundSocial1" value="126" />
@@ -8169,8 +8073,8 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="10429" max="21361" chance="70" /> <!-- Adena -->
-				<item id="5326" min="1" max="1" chance="0.00581066718661785" /> <!-- Sealed Robe of Nightmare -->
-				<item id="5487" min="1" max="1" chance="0.863789330810666" /> <!-- Sealed Robe of Nightmare Fabric -->
+				<item id="5326" min="1" max="1" chance="0.00581066718661785" /> <!-- Sealed Nightmare Robe -->
+				<item id="5487" min="1" max="1" chance="0.863789330810666" /> <!-- Sealed Nightmare Robe Fabric -->
 				<item id="5329" min="1" max="1" chance="0.00581066718661785" /> <!-- Sealed Majestic Robe -->
 				<item id="5488" min="1" max="1" chance="0.863789330810666" /> <!-- Sealed Majestic Robe Fabric -->
 				<item id="1871" min="4" max="12" chance="13.7029419752731" /> <!-- Charcoal -->
@@ -8178,7 +8082,7 @@
 				<item id="1877" min="1" max="1" chance="4.38493585500336" /> <!-- Adamantite Nugget -->
 				<item id="4041" min="1" max="1" chance="0.953263090461731" /> <!-- Mold Hardener -->
 				<item id="4040" min="1" max="1" chance="2.19244468965149" /> <!-- Mold Lubricant -->
-				<item id="959" min="1" max="1" chance="0.00436871583557129" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="959" min="1" max="1" chance="0.00436871583557129" /> <!-- Scroll: Enchant Weapon (S) -->
 				<item id="9546" min="1" max="1" chance="0.876996466140747" /> <!-- Fire Stone -->
 			</drop>
 			<spoil>
@@ -8193,7 +8097,6 @@
 		</collision>
 	</npc>
 	<npc id="22298" level="82" type="Monster" name="Weylin">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -8256,11 +8159,11 @@
 				<item id="1876" min="4" max="12" chance="3.26978583116913" /> <!-- Mithril Ore -->
 				<item id="1895" min="3" max="9" chance="6.00574328164291" /> <!-- Metallic Fiber -->
 				<item id="4042" min="1" max="1" chance="2.4523189029274" /> <!-- Enria -->
-				<item id="960" min="1" max="1" chance="0.0588730126113892" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				<item id="9573" min="1" max="1" chance="1.02180295462799" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.255471209106445" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.0255471209106445" /> <!-- High-Grade Life Stone - Level 80 -->
-				<item id="9576" min="1" max="1" chance="0.00511761236190796" /> <!-- Top-Grade Life Stone - Level 80 -->
+				<item id="960" min="1" max="1" chance="0.0588730126113892" /> <!-- Scroll: Enchant Armor (S) -->
+				<item id="9573" min="1" max="1" chance="1.02180295462799" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.255471209106445" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.0255471209106445" /> <!-- High-Grade Life Stone: level 80 -->
+				<item id="9576" min="1" max="1" chance="0.00511761236190796" /> <!-- Top-Grade Life Stone: level 80 -->
 				<item id="9546" min="1" max="1" chance="1.17713272503662" /> <!-- Fire Stone -->
 				<item id="1344" min="150" max="450" chance="12.2616354555359" /> <!-- Mithril Arrow -->
 			</drop>
@@ -8276,7 +8179,6 @@
 		</collision>
 	</npc>
 	<npc id="22299" level="82" type="Monster" name="Dolph">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="71" />
 			<param name="MoveAroundSocial1" value="71" />

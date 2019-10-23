@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.model.events.impl.creature.trap.OnTrapAction;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.items.Weapon;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
-import org.l2jmobius.gameserver.model.olympiad.OlympiadGameManager;
+import org.l2jmobius.gameserver.model.olympiad.Olympiad;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -322,7 +322,7 @@ public class TrapInstance extends Npc
 		
 		if (_owner.isInOlympiadMode() && target.isPlayer() && ((PlayerInstance) target).isInOlympiadMode() && (((PlayerInstance) target).getOlympiadGameId() == _owner.getOlympiadGameId()))
 		{
-			OlympiadGameManager.getInstance().notifyCompetitorDamage(getOwner(), damage);
+			Olympiad.getInstance().notifyCompetitorDamage(getOwner(), damage, _owner.getOlympiadGameId());
 		}
 		
 		if (target.isInvul() && !target.isNpc())

@@ -1230,7 +1230,7 @@
 		</for>
 	</item>
 	<item id="14351" type="EtcItem" name="Gracian Anniversary Coins">
-		<!-- Gracian Anniversary Coins can be used at an Item Merchant in order to receive a reward. Cannot be exchanged, dropped, destroyed nor stored in a private warehouse. -->
+		<!-- Gracia Anniversary Coins can be used at an Item Merchant in order to receive a reward. Cannot be exchanged, dropped, deleted nor stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_coins_silver_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
@@ -1371,7 +1371,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="14363" type="Weapon" name="Icarus Sawsword {PvP}">
-		<!-- It can bestow one of the following three functions, Focus, Health or Light. Increases damage inflicted during PvP, during an attack, cancels a target's enhanced status by more than 1 occasionally. -->
+		<!-- It can bestow one of the following three functions, Focus, Health or Light. Increases damage inflicted during PvP, during an attack, cancels the opponent's enhanced status by more than 1 occasionally. -->
 		<set name="icon" val="icon.weapon_icarus_sowsword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1402,7 +1402,7 @@
 		</for>
 	</item>
 	<item id="14364" type="Weapon" name="Icarus Disperser {PvP}">
-		<!-- It can bestow one of the following three functions, Focus, Evasion or Crit. Damage. Increases damage inflicted during PvP. Improves the chance of CP recovery during an attack. -->
+		<!-- It can bestow one of the following three functions, Focus, Evasion or Crit. Damage. Increases damage inflicted during PvP, and recovers CP occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_disperser_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1434,7 +1434,7 @@
 		</for>
 	</item>
 	<item id="14365" type="Weapon" name="Icarus Spirit {PvP}">
-		<!-- It can bestow one of the following three functions, Acumen, Mana Up or Conversion. Increases damage inflicted during PvP. Has a chance of canceling more than 1 of a target's enhanced status, or of decreasing a target's Shield Defense during an attack. -->
+		<!-- It can bestow one of the following three functions, Acumen, Mana Up or Conversion. Increases damage inflicted during PvP, during an attack, cancels the opponent's enhanced status by more than 1 occasionally, or decreases the opponent's shield P. Def. -->
 		<set name="icon" val="icon.weapon_icarus_spirits_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1466,7 +1466,7 @@
 		</for>
 	</item>
 	<item id="14366" type="Weapon" name="Icarus Heavy Arms {PvP}">
-		<!-- It can bestow one of the following three functions, Focus, Health or Light. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when being attacked. -->
+		<!-- It can bestow one of the following three functions, Focus, Health or Light. Increases damage inflicted during PvP, and Casting Spd. increases occasionally when being attacked. -->
 		<set name="icon" val="icon.weapon_icarus_heavy_arms_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1497,7 +1497,7 @@
 		</for>
 	</item>
 	<item id="14367" type="Weapon" name="Icarus Trident {PvP}">
-		<!-- It can bestow one of the following three functions, Anger, Critical Stun or Light. Increases damage inflicted during PvP. Improves the chance of additional damage during an attack. -->
+		<!-- It can bestow one of the following three functions, Anger, Crt. Stun or Light. Increases damage inflicted during PvP, and additional damage is applied occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_trident_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1529,7 +1529,7 @@
 		</for>
 	</item>
 	<item id="14368" type="Weapon" name="Icarus Hammer {PvP}">
-		<!-- It can bestow one of the following three functions, Anger, Health or Rsk. Focus. Increases damage inflicted during PvP. Improves the chance of additional damage during an attack. -->
+		<!-- It can bestow one of the following three functions, Anger, Health or Rsk. Focus. Increases damage inflicted during PvP, and additional damage is applied occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_hammer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1561,7 +1561,7 @@
 		</for>
 	</item>
 	<item id="14369" type="Weapon" name="Icarus Hand {PvP}">
-		<!-- One ability amongst either Rsk. Evasion, Focus or Haste can be granted. Increases damage inflicted during PvP. Improves the chance of CP recovery during an attack. -->
+		<!-- One ability amongst either Rsk., Evasion, Focus or Haste can be granted. Increases damage inflicted during PvP, and recovers CP occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_knuckle_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1593,7 +1593,7 @@
 		</for>
 	</item>
 	<item id="14370" type="Weapon" name="Icarus Hall {PvP}">
-		<!-- It can bestow one of the follow three functions, Mana Up, Conversion or Acumen. Increases damage inflicted during PvP. Has a chance of canceling more than 1 of a target's enhanced status, or of decreasing a target's Shield Defense during an attack. -->
+		<!-- It can bestow one of the follow three functions, Mana Up, Conversion or Acumen. Increases damage inflicted during PvP, during an attack, cancels the opponent's enhanced status by more than 1 occasionally, or decreases the opponent's shield P. Def. -->
 		<set name="icon" val="icon.weapon_icarus_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1626,7 +1626,7 @@
 		</for>
 	</item>
 	<item id="14371" type="Weapon" name="Icarus Spitter {PvP}">
-		<!-- One ability amongst either Cheap Shot, Guidance or Focus can be granted. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when being attacked. -->
+		<!-- One ability amongst either Cheap Shot, Guidance or Focus can be granted. Increases damage inflicted during PvP, and Casting Spd. increases occasionally when being attacked. -->
 		<set name="icon" val="icon.weapon_icarus_spiter_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1660,7 +1660,7 @@
 		</for>
 	</item>
 	<item id="14372" type="Weapon" name="Icarus Stinger {PvP}">
-		<!-- Kamael Exclusive Weapon: Icarus Sawsword Conversion. Focus, Health, or Light can be bestowed. When enchanted to 4 or more, there's a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of received heal and decreased MP consumption per skill during a critical attack. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. -->
+		<!-- Kamael exclusive weapon Icarus Sawsword Conversion. Focus, Health, or Light can be bestowed. When enchanted over 4, party members including yourself can increase attack power, magic power and healing capacity occasionally and decrease MP consumption per skill during a critical attack. Increases damage inflicted during PvP, and increases the Atk. Spd. of bows/crossbows occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_stinger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1696,7 +1696,7 @@
 		</for>
 	</item>
 	<item id="14373" type="Weapon" name="Icarus Wingblade {PvP}">
-		<!-- Kamael Exclusive Weapon: Icarus Heavy Arms conversion. It can bestow one of the following three functions, Focus, Health, or Light. Increases damage inflicted during PvP, and decreases the range of bows/crossbows occasionally during an attack or decreases Resistance to attributes. -->
+		<!-- Kamael exclusive weapon Icarus Heavy Arms conversion. It can bestow one of the following three functions, Focus, Health, or Light. Increases damage inflicted during PvP, and decreases the range of bows/crossbows occasionally during an attack or decreases resistance to attributes. -->
 		<set name="icon" val="icon.weapon_icarus_wing_blade_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1731,7 +1731,7 @@
 		</for>
 	</item>
 	<item id="14374" type="Weapon" name="Icarus Shooter {PvP}">
-		<!-- Kamael Exclusive Weapon: Icarus Spitter Conversion. It can bestow one of the following functions, Cheap Shot, Guidance, or Focus. Increases damage inflicted during PvP. Improves the chance of additional damage during an attack. -->
+		<!-- Kamael exclusive weapon Icarus Spitter Conversion. It can bestow one of the following functions, Cheap Shot, Guidance, or Focus. Increases damage inflicted during PvP, and additional damage is applied occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_shooter_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1767,7 +1767,7 @@
 		</for>
 	</item>
 	<item id="14375" type="Weapon" name="Icarus Dual Sword {PvP}">
-		<!-- P. Atk. of dual bladed weapons, two-handed swords, two-handed blunt weapons and fighting weapons increases more than the regular one-handed swords when enchanted. When enchanted to 4 or more, increases Critical Attack by 109 and Max HP by 10%. Increases damage inflicted during PvP, and decreases the range of bows/crossbows occasionally during an attack. -->
+		<!-- The attack power of dual bladed weapons, two-handed swords, two-handed blunt weapons and fighting weapons increases more than the regular one-handed swords when enchanted. When enchanted to 4 or more, Critical Attack increases by 109, and Max HP increases by 10%. Increases damage inflicted during PvP, and decreases the range of bows/crossbows occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1799,7 +1799,7 @@
 		</for>
 	</item>
 	<item id="14376" type="Weapon" name="Icarus Sawsword {PvP} - Focus">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 111. Increases damage inflicted during PvP. Improves the chance of CP recovery during an attack. -->
+		<!-- <Soul Crystal Enhancement>. critical attack increases by 111. Increases damage inflicted during PvP, and recovers CP occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_sowsword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1830,7 +1830,7 @@
 		</for>
 	</item>
 	<item id="14377" type="Weapon" name="Icarus Sawsword {PvP} - Health">
-		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. Improves the chance of CP recovery during an attack. -->
+		<!-- <Soul Crystal Enhancement>. Max HP by 25%. Increases damage inflicted during PvP, and recovers CP occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_sowsword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1861,7 +1861,7 @@
 		</for>
 	</item>
 	<item id="14378" type="Weapon" name="Icarus Sawsword {PvP} - Light">
-		<!-- <Soul Crystal Enhancement>. Increases weight gauge by 20%. Increases damage inflicted during PvP. Improves the chance of CP recovery during an attack. -->
+		<!-- <Soul Crystal Enhancement>. Weight gauge increases by 20%. Increases damage inflicted during PvP, and recovers CP at a fixed rate during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_sowsword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1881,7 +1881,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3498-1;3552-3;3650-1" /> <!-- Special Ability: Light -->
+		<set name="item_skill" val="3498-1;3552-3;3650-1" /> <!-- Special Ability Light -->
 		<for>
 			<set stat="pAtk" val="363" />
 			<set stat="mAtk" val="163" />
@@ -1892,7 +1892,7 @@
 		</for>
 	</item>
 	<item id="14379" type="Weapon" name="Icarus Heavy Arms {PvP} - Focus">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 111. Increases damage inflicted during PvP. Improves the chance of additional damage during an attack. -->
+		<!-- <Soul Crystal Enhancement>. critical attack increases by 111. Increases damage inflicted during PvP, and additional damage is applied occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_heavy_arms_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1923,7 +1923,7 @@
 		</for>
 	</item>
 	<item id="14380" type="Weapon" name="Icarus Heavy Arms {PvP} - Health">
-		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. Improves the chance of additional damage during an attack. -->
+		<!-- <Soul Crystal Enhancement>. Max HP by 25%. Increases damage inflicted during PvP, and additional damage is applied occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_heavy_arms_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1954,7 +1954,7 @@
 		</for>
 	</item>
 	<item id="14381" type="Weapon" name="Icarus Heavy Arms {PvP} - Light">
-		<!-- <Soul Crystal Enhancement>. Increases weight gauge by 20%. Increases damage inflicted during PvP. Improves the chance of additional damage during an attack. -->
+		<!-- <Soul Crystal Enhancement>. Weight gauge increases by 20%. Increases damage inflicted during PvP, and additional damage is applied at a fixed rate during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_heavy_arms_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1974,7 +1974,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3498-1;3552-3;3653-1" /> <!-- Special Ability: Light -->
+		<set name="item_skill" val="3498-1;3552-3;3653-1" /> <!-- Special Ability Light -->
 		<for>
 			<set stat="pAtk" val="442" />
 			<set stat="mAtk" val="163" />
@@ -1985,7 +1985,7 @@
 		</for>
 	</item>
 	<item id="14382" type="Weapon" name="Icarus Spirit {PvP} - Acumen">
-		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when being attacked. -->
+		<!-- <Soul Crystal Enhancement>. Casting Spd by 15%. Increases damage inflicted during PvP, and Casting Spd. increases occasionally when being attacked. -->
 		<set name="icon" val="icon.weapon_icarus_spirits_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2017,7 +2017,7 @@
 		</for>
 	</item>
 	<item id="14383" type="Weapon" name="Icarus Spirit {PvP} - Mana Up">
-		<!-- <Soul Crystal Enhancement>. Max MP by 30%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when being attacked. -->
+		<!-- <Soul Crystal Enhancement>. Max MP by 30%. Increases damage inflicted during PvP, and Casting Spd. increases occasionally when being attacked. -->
 		<set name="icon" val="icon.weapon_icarus_spirits_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2049,7 +2049,7 @@
 		</for>
 	</item>
 	<item id="14384" type="Weapon" name="Icarus Spirit {PvP} - Conversion">
-		<!-- <Soul Crystal Enhancement>. Max MP increases by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when being attacked. -->
+		<!-- <Soul Crystal Enhancement>the . Max MP by 60% and decreases the Max HP by 40%. Increases damage inflicted during PvP, and Casting Spd. increases occasionally when being attacked. -->
 		<set name="icon" val="icon.weapon_icarus_spirits_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2081,7 +2081,7 @@
 		</for>
 	</item>
 	<item id="14385" type="Weapon" name="Icarus Spitter {PvP} - Cheap Shot">
-		<!-- <Soul Crystal Enhancement>. Decreases MP Consumption 4% during a skill attack. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. -->
+		<!-- <Soul Crystal Enhancement>. MP Consumption decreases 4% during a skill attack. Increases damage inflicted during PvP, and increases the Atk. Spd. of bows/crossbows occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_spiter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -2115,7 +2115,7 @@
 		</for>
 	</item>
 	<item id="14386" type="Weapon" name="Icarus Spitter {PvP} - Guidance">
-		<!-- <Soul Crystal Enhancement>. Increases Accuracy by 5.32. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. -->
+		<!-- <Soul Crystal Enhancement>. accuracy rate increases by 5.32. Increases damage inflicted during PvP, and increases the Atk. Spd. of bows/crossbows occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_spiter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -2149,7 +2149,7 @@
 		</for>
 	</item>
 	<item id="14387" type="Weapon" name="Icarus Spitter {PvP} - Focus">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 116. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. -->
+		<!-- <Soul Crystal Enhancement>. critical attack increases by 116. Increases damage inflicted during PvP, and increases the Atk. Spd. of bows/crossbows occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_spiter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -2183,7 +2183,7 @@
 		</for>
 	</item>
 	<item id="14388" type="Weapon" name="Icarus Disperser {PvP} - Focus">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 116. Increases damage inflicted during PvP. Has a chance of canceling more than 1 of a target's enhanced status, or of decreasing a target's Shield Defense during an attack. -->
+		<!-- <Soul Crystal Enhancement>. critical attack increases by 116. Increases damage inflicted during PvP, during an attack, cancels the opponent's enhanced status by more than 1 occasionally, or decreases the opponent's shield P. Def. -->
 		<set name="icon" val="icon.weapon_icarus_disperser_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -2215,7 +2215,7 @@
 		</for>
 	</item>
 	<item id="14389" type="Weapon" name="Icarus Disperser {PvP} - Evasion">
-		<!-- <Soul Crystal Enhancement>. Increases Evasion by 5. Increases damage inflicted during PvP. Has a chance of canceling more than 1 of a target's enhanced status, or of decreasing a target's Shield Defense during an attack. -->
+		<!-- <Soul Crystal Enhancement>. evasion increases by 5. Increases damage inflicted during PvP, during an attack, cancels the opponent's enhanced status by more than 1 occasionally, or decreases the opponent's shield P. Def. -->
 		<set name="icon" val="icon.weapon_icarus_disperser_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -2247,7 +2247,7 @@
 		</for>
 	</item>
 	<item id="14390" type="Weapon" name="Icarus Disperser {PvP} - Critical Damage">
-		<!-- <Soul Crystal Enhancement>. P. Atk. by 559 during a critical attack. Increases damage inflicted during PvP. Has a chance of canceling more than 1 of a target's enhanced status, or of decreasing a target's Shield Defense during an attack. -->
+		<!-- <Soul Crystal Enhancement>P. Atk. by 559 during a . critical attack. Increases damage inflicted during PvP, during an attack, cancels the opponent's enhanced status by more than 1 occasionally, or decreases the opponent's shield P. Def. -->
 		<set name="icon" val="icon.weapon_icarus_disperser_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -2279,7 +2279,7 @@
 		</for>
 	</item>
 	<item id="14391" type="Weapon" name="Icarus Trident {PvP} - Anger">
-		<!-- <Soul Crystal Enhancement>. Decreases HP by 15% while increasing P. Atk. by 78 during a critical attack. Increases damage inflicted during PvP. Improves the chance of additional damage during an attack. -->
+		<!-- <Soul Crystal Enhancement>player's HP by 15% while increasing P. Atk. by 78 during a . critical attack. Increases damage inflicted during PvP, and additional damage is applied occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_trident_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -2311,7 +2311,7 @@
 		</for>
 	</item>
 	<item id="14392" type="Weapon" name="Icarus Trident {PvP} - Critical Stun">
-		<!-- <Soul Crystal Enhancement>. There is a 48% chance to Stun target during a critical attack. Increases damage inflicted during PvP. Improves the chance of additional damage during an attack. -->
+		<!-- <Soul Crystal Enhancement>is a 48% probability that Stun effect is applied during a . critical attack. Increases damage inflicted during PvP, and additional damage is applied occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_trident_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -2345,7 +2345,7 @@
 		</for>
 	</item>
 	<item id="14393" type="Weapon" name="Icarus Trident {PvP} - Light">
-		<!-- <Soul Crystal Enhancement>. Increases weight gauge by 20%. Increases damage inflicted during PvP. Improves the chance of additional damage during an attack. -->
+		<!-- <Soul Crystal Enhancement>. Weight gauge increases by 20%. Increases damage inflicted during PvP, and additional damage is applied at a fixed rate during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_trident_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -2365,7 +2365,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3498-1;3552-4;3653-1" /> <!-- Special Ability: Light -->
+		<set name="item_skill" val="3498-1;3552-4;3653-1" /> <!-- Special Ability Light -->
 		<for>
 			<set stat="pAtk" val="363" />
 			<set stat="mAtk" val="163" />
@@ -2377,7 +2377,7 @@
 		</for>
 	</item>
 	<item id="14394" type="Weapon" name="Icarus Hammer {PvP} - Anger">
-		<!-- <Soul Crystal Enhancement>. Decreases HP by 15% while increasing P. Atk. by 78 during a critical attack. Increases damage inflicted during PvP. Improves the chance of CP recovery during an attack. -->
+		<!-- <Soul Crystal Enhancement>player's HP by 15% while increasing P. Atk. by 78 during a . critical attack. Increases damage inflicted during PvP, and recovers CP occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2409,7 +2409,7 @@
 		</for>
 	</item>
 	<item id="14395" type="Weapon" name="Icarus Hammer {PvP} - Health">
-		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. Improves the chance of CP recovery during an attack. -->
+		<!-- <Soul Crystal Enhancement>. Max HP by 25%. Increases damage inflicted during PvP, and recovers CP occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2441,7 +2441,7 @@
 		</for>
 	</item>
 	<item id="14396" type="Weapon" name="Icarus Hammer {PvP} - Rsk. Focus">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 164 when HP drops to 60% or lower. Increases damage inflicted during PvP. Improves the chance of CP recovery during an attack. -->
+		<!-- <Soul Crystal Enhancement>Critical attack increases by 164 when . HP drops to 60% or lower. Increases damage inflicted during PvP, and recovers CP occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2473,7 +2473,7 @@
 		</for>
 	</item>
 	<item id="14397" type="Weapon" name="Icarus Hall {PvP} - Mana Up">
-		<!-- <Soul Crystal Enhancement>. Max MP by 30%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when being attacked. -->
+		<!-- <Soul Crystal Enhancement>. Max MP by 30%. Increases damage inflicted during PvP, and Casting Spd. increases occasionally when being attacked. -->
 		<set name="icon" val="icon.weapon_icarus_stick_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2506,7 +2506,7 @@
 		</for>
 	</item>
 	<item id="14398" type="Weapon" name="Icarus Hall {PvP} - Conversion">
-		<!-- <Soul Crystal Enhancement>. Max MP increases by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when being attacked. -->
+		<!-- <Soul Crystal Enhancement>the . Max MP by 60% and decreases the Max HP by 40%. Increases damage inflicted during PvP, and Casting Spd. increases occasionally when being attacked. -->
 		<set name="icon" val="icon.weapon_icarus_stick_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2539,7 +2539,7 @@
 		</for>
 	</item>
 	<item id="14399" type="Weapon" name="Icarus Hall {PvP} - Acumen">
-		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when being attacked. -->
+		<!-- <Soul Crystal Enhancement>. Casting Spd by 15%. Increases damage inflicted during PvP, and Casting Spd. increases occasionally when being attacked. -->
 		<set name="icon" val="icon.weapon_icarus_stick_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />

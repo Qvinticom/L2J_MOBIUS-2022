@@ -48,7 +48,7 @@ public class PartyMatchDetail implements IClientOutgoingPacket
 		packet.writeD(_room.getLootType());
 		packet.writeD(_room.getLocation());
 		packet.writeS(_room.getTitle());
-		packet.writeH(59064);
+		// packet.writeH(59064);
 		return true;
 	}
 }

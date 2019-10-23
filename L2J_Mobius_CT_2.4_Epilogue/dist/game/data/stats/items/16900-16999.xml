@@ -320,7 +320,7 @@
 		</for>
 	</item>
 	<item id="16917" type="Armor" name="Fortune Gauntlet of Nightmare - Heavy Armor - 90-day limited period">
-		<!-- Gauntlet that makes a set with the Fortune Armor of Nightmare. No exchange/drop available -->
+		<!-- Gauntlet that makes a set with the Friendship Armor of Nightmare. No exchange/drop available -->
 		<set name="icon" val="icon.armor_t80_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -340,7 +340,7 @@
 		</for>
 	</item>
 	<item id="16918" type="Armor" name="Fortune Boots of Nightmare - Heavy Armor - 90-day limited period">
-		<!-- Boots that make a set with the Fortune Armor of Nightmare. No exchange/drop available -->
+		<!-- Boots that make a set with the Friendship Armor of Nightmare. No exchange/drop available -->
 		<set name="icon" val="icon.armor_t80_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -383,7 +383,7 @@
 		</for>
 	</item>
 	<item id="16920" type="Weapon" name="Sword of Miracles of Fortune - 90-day limited period">
-		<!-- Increases Casting Spd. by 15%, and increases damage inflicted during PvP. No exchange/drop available -->
+		<!-- Increases Magic Casting Spd. by 15%, and increases damage inflicted during PvP. No exchange/drop available -->
 		<set name="icon" val="icon.weapon_sword_of_miracle_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -413,7 +413,7 @@
 		</for>
 	</item>
 	<item id="16921" type="Weapon" name="Wizard's Tear of Fortune - 90-day limited period">
-		<!-- Casting Spd. increases by 15%. No exchange/drop available -->
+		<!-- Magic Casting Spd. increases by 15%. No exchange/drop available -->
 		<set name="icon" val="icon.weapon_tears_of_wizard_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -443,7 +443,7 @@
 		</for>
 	</item>
 	<item id="16922" type="Weapon" name="Homunkulus's Sword of Fortune - 90-day limited period">
-		<!-- Casting Spd. increases by 15%. No exchange/drop available -->
+		<!-- Magic Casting Spd. increases by 15%. No exchange/drop available -->
 		<set name="icon" val="icon.weapon_homunkuluss_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -654,7 +654,7 @@
 		</for>
 	</item>
 	<item id="16929" type="Weapon" name="Fortune Bow of Peril - 90-day limited period">
-		<!-- During a general attack, MP consumption decreases to 2 with a 42% chance. No exchange/drop available -->
+		<!-- During a general attack, MP consumption decreases to 2 with a 42% probability. No exchange/drop available -->
 		<set name="icon" val="icon.weapon_hazard_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -686,7 +686,7 @@
 		</for>
 	</item>
 	<item id="16930" type="Weapon" name="Eminence Bow of Fortune - 90-day limited period">
-		<!-- During a general attack, MP consumption decreases to 1 with a 42% chance. No exchange/drop available -->
+		<!-- During a general attack, MP consumption decreases to 1 with a 42% probability. No exchange/drop available -->
 		<set name="icon" val="icon.weapon_eminence_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -779,7 +779,7 @@
 		</for>
 	</item>
 	<item id="16933" type="Weapon" name="Art of Battle Axe of Fortune - 90-day limited period">
-		<!-- Max HP increases by 25%. No exchange/drop available -->
+		<!-- Maximum HP increases by 25%. No exchange/drop available -->
 		<set name="icon" val="icon.weapon_art_of_battle_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -809,7 +809,7 @@
 		</for>
 	</item>
 	<item id="16934" type="Weapon" name="Yaksa Mace of Fortune - 90-day limited period">
-		<!-- Max HP increases by 25%. No exchange/drop available -->
+		<!-- Maximum HP increases by 25%. No exchange/drop available -->
 		<set name="icon" val="icon.weapon_yaksa_mace_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -868,7 +868,7 @@
 		</for>
 	</item>
 	<item id="16936" type="Weapon" name="Sirra's Blade of Fortune - 90-day limited period">
-		<!-- Increases Max HP by 25%, and increases damage inflicted during PvP. No exchange/drop available -->
+		<!-- Increases Maximum HP by 25%, and increases damage inflicted during PvP. No exchange/drop available -->
 		<set name="icon" val="icon.weapon_sirr_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1012,7 +1012,7 @@
 		</for>
 	</item>
 	<item id="16941" type="Weapon" name="Guardian Sword of Fortune - 90-day limited period">
-		<!-- Max HP increases by 25%. No exchange/drop available -->
+		<!-- Maximum HP increases by 25%. No exchange/drop available -->
 		<set name="icon" val="icon.weapon_guardians_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1452,7 +1452,7 @@
 		</for>
 	</item>
 	<item id="16956" type="Weapon" name="Durendal of Fortune - 90-day limited period">
-		<!-- Kamael Exclusive Weapon. Increases Critical by 61, and increases damage inflicted during PvP. No exchange/drop available -->
+		<!-- Kamael exclusive weapon. Increases Critical by 61, and increases damage inflicted during PvP. No exchange/drop available -->
 		<set name="icon" val="icon.weapon_death_bringer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1485,7 +1485,7 @@
 		</for>
 	</item>
 	<item id="16957" type="Weapon" name="Dismantler of Fortune - 90-day limited period">
-		<!-- Kamael Exclusive Weapon. Max HP increases by 25%. No exchange/drop available -->
+		<!-- Kamael exclusive weapon. Maximum HP increases by 25%. No exchange/drop available -->
 		<set name="icon" val="icon.weapon_dismantler_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1518,7 +1518,7 @@
 		</for>
 	</item>
 	<item id="16958" type="Weapon" name="Saber Tooth of Fortune - 90-day limited period">
-		<!-- Kamael Exclusive Weapon. Increases Critical by 73. No exchange/drop available -->
+		<!-- Kamael exclusive weapon. Increases Critical by 73. No exchange/drop available -->
 		<set name="icon" val="icon.weapon_invincible_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1551,7 +1551,7 @@
 		</for>
 	</item>
 	<item id="16959" type="Weapon" name="General's Katzbalger of Fortune - 90-day limited period">
-		<!-- Kamael Exclusive Weapon. No exchange/drop available -->
+		<!-- Kamael exclusive weapon. No exchange/drop available -->
 		<set name="icon" val="icon.weapon_tulwar_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1583,7 +1583,7 @@
 		</for>
 	</item>
 	<item id="16960" type="Weapon" name="Eclair Bijou of Fortune - 90-day limited period">
-		<!-- Kamael Exclusive Weapon. Atk. Spd. increases by about 6%, and increases damage inflicted during PvP. Improves the chance that party members including yourself will get increased P. Atk., M. Atk. and the amount of recieved heal, and decreased MP consumption per skill during a critical attack. No exchange/drop available -->
+		<!-- Kamael exclusive weapon. Atk. Spd. increases by about 6%, and increases damage inflicted during PvP. Party members including youself will get the increased attack power, magic power and healing capacity by a fixed rate but decreased MP consumption per skill during a critical attack. No exchange/drop available -->
 		<set name="icon" val="icon.weapon_greed_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1617,7 +1617,7 @@
 		</for>
 	</item>
 	<item id="16961" type="Weapon" name="Colichemarde of Fortune - 90-day limited period">
-		<!-- Kamael Exclusive Weapon. Atk. Spd. increases by about 6%, and there is a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of recieved heal, and decreased MP consumption per skill during a critical attack. No exchange/drop available -->
+		<!-- Kamael exclusive weapon. Atk. Spd. increases by about 6%, and party members including youself will get the increased attack power, magic power and healing capacity by a fixed rate but decreased MP consumption per skill during a critical attack. No exchange/drop available -->
 		<set name="icon" val="icon.weapon_colichemarde_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1651,7 +1651,7 @@
 		</for>
 	</item>
 	<item id="16962" type="Weapon" name="Admiral's Estoc of Fortune - 90-day limited period">
-		<!-- Kamael Exclusive Weapon. Atk. Spd. increases by about 7%, and there is a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of recieved heal, and decreased MP consumption per skill during a critical attack. No exchange/drop available -->
+		<!-- Kamael exclusive weapon. Atk. Spd. increases by about 7%, and party members including youself will get the increased attack power, magic power and healing capacity by a fixed rate but decreased MP consumption per skill during a critical attack. No exchange/drop available -->
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1685,7 +1685,7 @@
 		</for>
 	</item>
 	<item id="16963" type="Weapon" name="Grand Epee of Fortune - 90-day limited period">
-		<!-- Kamael Exclusive Weapon. Improves the chance that party members including yourself will get increased P. Atk., M. Atk. and the amount of recieved heal, and decreased MP consumption per skill during a critical attack. No exchange/drop available -->
+		<!-- Kamael exclusive weapon. Party members including youself will get the increased attack power, magic power and healing capacity by a fixed rate but decreased MP consumption per skill during a critical attack. No exchange/drop available -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1718,7 +1718,7 @@
 		</for>
 	</item>
 	<item id="16964" type="Weapon" name="Screaming Vengeance of Fortune - 90-day limited period">
-		<!-- Kamael Exclusive Weapon. Increases Critical by 61, and increases damage inflicted during PvP. No exchange/drop available -->
+		<!-- Kamael exclusive weapon. Increases Critical by 61, and increases damage inflicted during PvP. No exchange/drop available -->
 		<set name="icon" val="icon.weapon_soul_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1752,7 +1752,7 @@
 		</for>
 	</item>
 	<item id="16965" type="Weapon" name="Hell Hound of Fortune - 90-day limited period">
-		<!-- Kamael Exclusive Weapon. MP consumption decreases by about 12% during skill use. No exchange/drop available -->
+		<!-- Kamael exclusive weapon. MP consumption decreases by about 12% during skill use. No exchange/drop available -->
 		<set name="icon" val="icon.weapon_hell_hound_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1771,7 +1771,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
-		<set name="item_skill" val="3360-1" /> <!-- Special Ability: Cheap Shot -->
+		<set name="item_skill" val="3360-1" /> <!-- Special Ability Cheap Shot -->
 		<set name="time" val="129600" />
 		<set name="enchanted" val="4" />
 		<cond msgId="1518">
@@ -1786,7 +1786,7 @@
 		</for>
 	</item>
 	<item id="16966" type="Weapon" name="Sharpshooter of Fortune - 90-day limited period">
-		<!-- Kamael Exclusive Weapon. MP consumption decreases by about 12% during skill use. No exchange/drop available -->
+		<!-- Kamael exclusive weapon. MP consumption decreases by about 12% during skill use. No exchange/drop available -->
 		<set name="icon" val="icon.weapon_taslam_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1805,7 +1805,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
-		<set name="item_skill" val="3360-1" /> <!-- Special Ability: Cheap Shot -->
+		<set name="item_skill" val="3360-1" /> <!-- Special Ability Cheap Shot -->
 		<set name="time" val="129600" />
 		<set name="enchanted" val="4" />
 		<cond msgId="1518">
@@ -1820,7 +1820,7 @@
 		</for>
 	</item>
 	<item id="16967" type="Weapon" name="Cranequin of Fortune - 90-day limited period">
-		<!-- Kamael Exclusive Weapon. No exchange/drop available -->
+		<!-- Kamael exclusive weapon. No exchange/drop available -->
 		<set name="icon" val="icon.weapon_hunting_gun_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1853,7 +1853,7 @@
 		</for>
 	</item>
 	<item id="16968" type="EtcItem" name="Knight Class Equipment Set - 90-day limited period">
-		<!-- Equipment Set for a Knight class. Expires after 90 days if not used. Cannot be exchanged or dropped. -->
+		<!-- Friend recommend service exclusive item set for the knight occupation class. Expires after 90 days if not used. No exchange/drop available -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1867,7 +1867,7 @@
 		<set name="capsuled_items" val="16975,1,1,100;16976,1,1,100;16977,1,1,100;16978,1,1,100;16990,1,1,100;16991,1,1,100;16994,1,1,100;16999,1,1,100;17000,1,1,100;17001,1,1,100;17002,1,1,100" />
 	</item>
 	<item id="16969" type="EtcItem" name="Mage Class Equipment Set - 90-day limited period">
-		<!-- Equipment Set for a Mage class. Expires after 90 days if not used. Cannot be exchanged or dropped. -->
+		<!-- Friend recommend service exclusive item set for the magic occupation classes. Expires after 90 days if not used. No exchange/drop available -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1881,7 +1881,7 @@
 		<set name="capsuled_items" val="16983,1,1,100;16984,1,1,100;16985,1,1,100;16986,1,1,100;16987,1,1,100;16999,1,1,100;17000,1,1,100;17001,1,1,100;17002,1,1,100" />
 	</item>
 	<item id="16970" type="EtcItem" name="Warrior Class Equipment Set - 90-day limited period">
-		<!-- Equipment Set for a Warrior class. Expires after 90 days if not used. Cannot be exchanged or dropped. -->
+		<!-- Friend recommend service exclusive item set for the warrior occupation classes. Expires after 90 days if not used. No exchange/drop available -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1895,7 +1895,7 @@
 		<set name="capsuled_items" val="16975,1,1,100;16976,1,1,100;16977,1,1,100;16978,1,1,100;16990,1,1,100;16994,1,1,100;16995,1,1,100;16999,1,1,100;17000,1,1,100;17001,1,1,100;17002,1,1,100" />
 	</item>
 	<item id="16971" type="EtcItem" name="Rogue Class Equipment Set - 90-day limited period">
-		<!-- Equipment Set for a Rogue class. Expires after 90 days if not used. Cannot be exchanged or dropped. -->
+		<!-- Friend recommend service exclusive item set for the rouge occupation classes. Expires after 90 days if not used. No exchange/drop available -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1909,7 +1909,7 @@
 		<set name="capsuled_items" val="16979,1,1,100;16980,1,1,100;16981,1,1,100;16982,1,1,100;16988,1,1,100;16989,1,1,100;16999,1,1,100;17000,1,1,100;17001,1,1,100;17002,1,1,100" />
 	</item>
 	<item id="16972" type="EtcItem" name="Kamael Class Equipment Set - 90-day limited period">
-		<!-- Equipment Set for a Kamael class. Expires after 90 days if not used. Cannot be exchanged or dropped. -->
+		<!-- Friend recommend service exclusive item set for the Kamael occupation classes. Expires after 90 days if not used. No exchange/drop available -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1923,7 +1923,7 @@
 		<set name="capsuled_items" val="16979,1,1,100;16980,1,1,100;16981,1,1,100;16982,1,1,100;16996,1,1,100;16997,1,1,100;16998,1,1,100;16999,1,1,100;17000,1,1,100;17001,1,1,100;17002,1,1,100" />
 	</item>
 	<item id="16973" type="EtcItem" name="Orc Fighter Class Equipment Set - 90-day limited period">
-		<!-- Equipment Set for an Orc Fighter class. Expires after 90 days if not used. Cannot be exchanged or dropped. -->
+		<!-- Friend recommend service exclusive item set for the Orc Fighter occupation classes. Expires after 90 days if not used. No exchange/drop available -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1937,7 +1937,7 @@
 		<set name="capsuled_items" val="16975,1,1,100;16976,1,1,100;16977,1,1,100;16978,1,1,100;16979,1,1,100;16980,1,1,100;16981,1,1,100;16982,1,1,100;16992,1,1,100;16993,1,1,100;16995,1,1,100;16999,1,1,100;17000,1,1,100;17001,1,1,100;17002,1,1,100" />
 	</item>
 	<item id="16974" type="EtcItem" name="Orc Mage Class Equipment Set - 90-day limited period">
-		<!-- Equipment Set for an Orc Mage class. Expires after 90 days if not used. Cannot be exchanged or dropped. -->
+		<!-- Friend recommend service exclusive item set for the Orc Mage occupation classes. Expires after 90 days if not used. No exchange/drop available -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1951,7 +1951,7 @@
 		<set name="capsuled_items" val="16975,1,1,100;16976,1,1,100;16977,1,1,100;16978,1,1,100;16983,1,1,100;16984,1,1,100;16985,1,1,100;16986,1,1,100;16987,1,1,100;16990,1,1,100;16999,1,1,100;17000,1,1,100;17001,1,1,100;17002,1,1,100" />
 	</item>
 	<item id="16975" type="EtcItem" name="Fortune Heavy Armor of Nightmare Set Pack - 90-day limited period">
-		<!-- When used, you acquire a Fortune Heavy Armor of Nightmare Set. Expires after 90 days if not used. Cannot be exchanged or dropped. -->
+		<!-- When used, you acquire a Friendship Heavy Armor of Nightmare Set. Expires after 90 days if not used. No exchange/drop available. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1966,7 +1966,7 @@
 		<set name="capsuled_items" val="16915,1,1,100;16916,1,1,100;16917,1,1,100;16918,1,1,100;16919,1,1,100" />
 	</item>
 	<item id="16976" type="EtcItem" name="Doom Plate Armor of Fortune Set Pack - 90-day limited period">
-		<!-- When used, you acquire a Doom Plate Armor of Fortune Set. Expires after 90 days if not used. Cannot be exchanged or dropped. -->
+		<!-- When used, you acquire a Doom Plate Armor of Friendship Set. Expires after 90 days if not used. No exchange/drop available. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1981,7 +1981,7 @@
 		<set name="capsuled_items" val="16889,1,1,100;16890,1,1,100;16892,1,1,100;16894,1,1,100;16895,1,1,100" />
 	</item>
 	<item id="16977" type="EtcItem" name="Full Plate of Fortune Set Pack - 90-day limited period">
-		<!-- When used, you acquire a Full Plate of Fortune Set. Expires after 90 days if not used. Cannot be exchanged or dropped. -->
+		<!-- When used, you acquire a Full Plate of Friendship Set. Expires after 90 days if not used. No exchange/drop available. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1996,7 +1996,7 @@
 		<set name="capsuled_items" val="16900,1,1,100;16901,1,1,100;16902,1,1,100;16903,1,1,100;16904,1,1,100" />
 	</item>
 	<item id="16978" type="EtcItem" name="Brigandine of Fortune Set Pack - 90-day limited period">
-		<!-- When used, you acquire a Brigandine of Fortune Set. Expires after 90 days if not used. Cannot be exchanged or dropped. -->
+		<!-- When used, you acquire a Brigandine of Friendship Set. Expires after 90 days if not used. No exchange/drop available. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2011,7 +2011,7 @@
 		<set name="capsuled_items" val="16909,1,1,100;16910,1,1,100;16911,1,1,100;16912,1,1,100;16913,1,1,100;16914,1,1,100" />
 	</item>
 	<item id="16979" type="EtcItem" name="Dark Crystal Light Armor of Fortune Set Pack - 90-day limited period">
-		<!-- When used, you acquire a Dark Crystal Light Armor of Fortune Set. Expires after 90 days if not used. Cannot be exchanged or dropped. -->
+		<!-- When used, you acquire a Dark Crystal Light Armor of Friendship Set. Expires after 90 days if not used. No exchange/drop available. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2026,7 +2026,7 @@
 		<set name="capsuled_items" val="16884,1,1,100;16885,1,1,100;16886,1,1,100;16887,1,1,100;16867,1,1,100" />
 	</item>
 	<item id="16980" type="EtcItem" name="Leather Armor of Doom of Fortune Set Pack - 90-day limited period">
-		<!-- When used, you acquire a Leather Armor of Doom of Fortune Set. Expires after 90 days if not used. Cannot be exchanged or dropped. -->
+		<!-- When used, you acquire a Leather Armor of Doom of Friendship Set. Expires after 90 days if not used. No exchange/drop available. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2041,7 +2041,7 @@
 		<set name="capsuled_items" val="16888,1,1,100;16889,1,1,100;16891,1,1,100;16893,1,1,100" />
 	</item>
 	<item id="16981" type="EtcItem" name="Plate Leather of Fortune Set Pack - 90-day limited period">
-		<!-- When used, you acquire a Plate Leather of Fortune Set. Expires after 90 days if not used. Cannot be exchanged or dropped. -->
+		<!-- When used, you acquire a Plate Leather of Friendship Set. Expires after 90 days if not used. No exchange/drop available. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2056,7 +2056,7 @@
 		<set name="capsuled_items" val="16896,1,1,100;16897,1,1,100;16898,1,1,100;16899,1,1,100;16900,1,1,100" />
 	</item>
 	<item id="16982" type="EtcItem" name="Manticore Leather of Fortune Set Pack - 90-day limited period">
-		<!-- When used, you acquire a Manticore Leather of Fortune Set. Expires after 90 days if not used. Cannot be exchanged or dropped. -->
+		<!-- When used, you acquire a Manticore Leather of Friendship Set. Expires after 90 days if not used. No exchange/drop available. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2071,7 +2071,7 @@
 		<set name="capsuled_items" val="16905,1,1,100;16906,1,1,100;16907,1,1,100;16908,1,1,100;16911,1,1,100" />
 	</item>
 	<item id="16983" type="EtcItem" name="Dark Crystal Robe of Fortune Set Pack - 90-day limited period">
-		<!-- When used, you acquire a Dark Crystal Robe of Fortune Set. Expires after 90 days if not used. Cannot be exchanged or dropped. -->
+		<!-- When used, you acquire a Dark Crystal Robe of Friendship Set. Expires after 90 days if not used. No exchange/drop available. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2086,7 +2086,7 @@
 		<set name="capsuled_items" val="16866,1,1,100;16867,1,1,100;16868,1,1,100;16869,1,1,100;16870,1,1,100" />
 	</item>
 	<item id="16984" type="EtcItem" name="Avadon Robe of Fortune Set Pack - 90-day limited period">
-		<!-- When used, you acquire an Avadon Robe of Fortune Set. Expires after 90 days if not used. Cannot be exchanged or dropped. -->
+		<!-- When used, you acquire an Avadon Robe of Friendship Set. Expires after 90 days if not used. No exchange/drop available. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2101,7 +2101,7 @@
 		<set name="capsuled_items" val="16871,1,1,100;16872,1,1,100;16873,1,1,100;16874,1,1,100;16875,1,1,100" />
 	</item>
 	<item id="16985" type="EtcItem" name="Karmian of Fortune Set Pack - 90-day limited period">
-		<!-- When used, you acquire a Karmian of Fortune Set. Expires after 90 days if not used. Cannot be exchanged or dropped. -->
+		<!-- When used, you acquire a Karmian of Friendship Set. Expires after 90 days if not used. No exchange/drop available. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2116,7 +2116,7 @@
 		<set name="capsuled_items" val="16876,1,1,100;16877,1,1,100;16878,1,1,100;16879,1,1,100;16900,1,1,100" />
 	</item>
 	<item id="16986" type="EtcItem" name="Mithril Tunic of Fortune Set Pack - 90-day limited period">
-		<!-- When used, you acquire a Mithril Tunic of Fortune Set. Expires after 90 days if not used. Cannot be exchanged or dropped. -->
+		<!-- When used, you acquire a Mithril Tunic of Friendship Set. Expires after 90 days if not used. No exchange/drop available. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2131,7 +2131,7 @@
 		<set name="capsuled_items" val="16880,1,1,100;16881,1,1,100;16882,1,1,100;16883,1,1,100;16911,1,1,100" />
 	</item>
 	<item id="16987" type="EtcItem" name="Magic Weapon of Fortune Set - 90-day limited period">
-		<!-- When used, you acquire 6 magic weapons at S~D grades. Expires after 90 days if not used. Cannot be exchanged or dropped. -->
+		<!-- When used, you acquire 4 magic weapons at A~D grades. Expires after 90 days if not used. No exchange/drop available. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2146,7 +2146,7 @@
 		<set name="capsuled_items" val="16920,1,1,100;16921,1,1,100;16922,1,1,100;16923,1,1,100" />
 	</item>
 	<item id="16988" type="EtcItem" name="Dagger of Fortune Set - 90-day limited period">
-		<!-- When used, you acquire 6 daggers at S~D grades. Expires after 90 days if not used. Cannot be exchanged or dropped. -->
+		<!-- When used, you acquire 4 daggers at A~D grades. Expires after 90 days if not used. No exchange/drop available. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2161,7 +2161,7 @@
 		<set name="capsuled_items" val="16924,1,1,100;16925,1,1,100;16926,1,1,100;16927,1,1,100" />
 	</item>
 	<item id="16989" type="EtcItem" name="Bow of Fortune Set - 90-day limited period">
-		<!-- When used, you acquire 6 bows at S~D grades. Expires after 90 days if not used. Cannot be exchanged or dropped. -->
+		<!-- When used, you acquire 4 bows at A~D grades. Expires after 90 days if not used. No exchange/drop available. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2176,7 +2176,7 @@
 		<set name="capsuled_items" val="16928,1,1,100;16929,1,1,100;16930,1,1,100;16931,1,1,100" />
 	</item>
 	<item id="16990" type="EtcItem" name="Blunt Weapon of Fortune Set - 90-day limited period">
-		<!-- When used, you acquire 6 blunts at S~D grades. Expires after 90 days if not used. Cannot be exchanged or dropped. -->
+		<!-- When used, you acquire 4 blunt weapons at A~D grades. Expires after 90 days if not used. No exchange/drop available. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2191,7 +2191,7 @@
 		<set name="capsuled_items" val="16932,1,1,100;16933,1,1,100;16934,1,1,100;16935,1,1,100" />
 	</item>
 	<item id="16991" type="EtcItem" name="One-handed Sword of Fortune Set - 90-day limited period">
-		<!-- When used, you acquire 6 one-handed swords at S~D grades. Expires after 90 days if not used. Cannot be exchanged or dropped. -->
+		<!-- When used, you acquire 4 one-handed swords at A~D grades. Expires after 90 days if not used. No exchange/drop available. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2206,7 +2206,7 @@
 		<set name="capsuled_items" val="16936,1,1,100;16937,1,1,100;16938,1,1,100;16939,1,1,100" />
 	</item>
 	<item id="16992" type="EtcItem" name="Two-handed Sword of Fortune Set - 90-day limited period">
-		<!-- When used, you acquire 6 two-handed swords at S~D grades. Expires after 90 days if not used. Cannot be exchanged or dropped. -->
+		<!-- When used, you acquire 4 two-handed swords at A~D grades. Expires after 90 days if not used. No exchange/drop available. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2221,7 +2221,7 @@
 		<set name="capsuled_items" val="16940,1,1,100;16941,1,1,100;16942,1,1,100;16943,1,1,100" />
 	</item>
 	<item id="16993" type="EtcItem" name="Hand-to-hand Combat Weapon of Fortune Set - 90-day limited period">
-		<!-- When used, you acquire 6 combat weapons at S~D grades. Expires after 90 days if not used. Cannot be exchanged or dropped. -->
+		<!-- When used, you acquire 4 hand-to-hand combat weapons at A~D grades. Expires after 90 days if not used. No exchange/drop available. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2236,7 +2236,7 @@
 		<set name="capsuled_items" val="16944,1,1,100;16945,1,1,100;16946,1,1,100;16947,1,1,100" />
 	</item>
 	<item id="16994" type="EtcItem" name="Dualsword of Fortune Set - 90-day limited period">
-		<!-- When used, you acquire 6 dualswords at S~D grades. Expires after 90 days if not used. Cannot be exchanged or dropped. -->
+		<!-- When used, you acquire 4 dualswords at A~D grades. Expires after 90 days if not used. No exchange/drop available. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2251,7 +2251,7 @@
 		<set name="capsuled_items" val="16948,1,1,100;16949,1,1,100;16950,1,1,100;16951,1,1,100" />
 	</item>
 	<item id="16995" type="EtcItem" name="Spear of Fortune Set - 90-day limited period">
-		<!-- When used, you acquire 6 spears at S~D grades. Expires after 90 days if not used. Cannot be exchanged or dropped. -->
+		<!-- When used, you acquire 4 spears at A~D grades. Expires after 90 days if not used. No exchange/drop available. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2266,7 +2266,7 @@
 		<set name="capsuled_items" val="16952,1,1,100;16953,1,1,100;16954,1,1,100;16955,1,1,100" />
 	</item>
 	<item id="16996" type="EtcItem" name="Ancient Sword of Fortune Set - 90-day limited period">
-		<!-- When used, you acquire 6 Ancient Swords at S~D grades. Expires after 90 days if not used. Cannot be exchanged or dropped. -->
+		<!-- When used, you acquire 4 ancient swords at A~D grades. Expires after 90 days if not used. No exchange/drop available. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2281,7 +2281,7 @@
 		<set name="capsuled_items" val="16956,1,1,100;16957,1,1,100;16958,1,1,100;16959,1,1,100" />
 	</item>
 	<item id="16997" type="EtcItem" name="Short Sword of Fortune Set - 90-day limited period">
-		<!-- When used, you acquire 6 short swords at S~D grades. Expires after 90 days if not used. Cannot be exchanged or dropped. -->
+		<!-- When used, you acquire 4 short swords at A~D grades. Expires after 90 days if not used. No exchange/drop available. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2296,7 +2296,7 @@
 		<set name="capsuled_items" val="16960,1,1,100;16961,1,1,100;16962,1,1,100;16963,1,1,100" />
 	</item>
 	<item id="16998" type="EtcItem" name="Crossbow of Fortune Set - 90-day limited period">
-		<!-- When used, you acquire 6 crossbows at S~D grades. Expires after 90 days if not used. Cannot be exchanged or dropped. -->
+		<!-- When used, you acquire 4 crossbows at A~D grades. Expires after 90 days if not used. No exchange/drop available. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2311,7 +2311,7 @@
 		<set name="capsuled_items" val="16964,1,1,100;16965,1,1,100;16966,1,1,100;16967,1,1,100" />
 	</item>
 	<item id="16999" type="EtcItem" name="Majestic Set of Fortune - 90-day limited period">
-		<!-- When used, you acquire a Majestic Set of Fortune. Expires after 90 days if not used. Cannot be exchanged or dropped. -->
+		<!-- When used, you acquire a Majestic Set of Friendship. Expires after 90 days if not used. No exchange/drop available. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />

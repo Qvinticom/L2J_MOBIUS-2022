@@ -883,10 +883,8 @@ public class Instance
 	{
 		if (!player.isOnEvent() && (_ejectTime > 0))
 		{
-			// Send message
-			final SystemMessage sm = new SystemMessage(SystemMessageId.IF_YOU_ARE_NOT_RESURRECTED_WITHIN_S1_MINUTES_YOU_WILL_BE_EXPELLED_FROM_THE_INSTANT_ZONE);
-			sm.addInt(_ejectTime / 60 / 1000);
-			player.sendPacket(sm);
+			// Proper system message doesn't exist in epilogue client.
+			player.sendMessage("If you are not resurrected within " + (_ejectTime / 1000 / 60) + " minutes, you will be expelled from the instance zone.");
 			
 			// Start eject task
 			_ejectDeadTasks.put(player.getObjectId(), ThreadPool.schedule(() ->

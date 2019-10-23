@@ -97,6 +97,18 @@ public class RequestExEnchantItemAttribute implements IClientIncomingPacket
 			player.sendPacket(SystemMessageId.ELEMENTAL_POWER_ENHANCER_USAGE_REQUIREMENT_IS_NOT_SUFFICIENT);
 			player.setActiveEnchantAttrItemId(PlayerInstance.ID_NONE);
 			return;
+			// old Epilogue check saved here, in case of needing it...
+			// can't enchant rods, shadow items, adventurers', PvP items, hero items, cloaks, bracelets, underwear (e.g. shirt), belt, necklace, earring, ring
+			// @formatter:off
+			/*
+			if ((item.getItem().getItemType() == WeaponType.FISHINGROD) || item.isShadowItem() || item.isPvp() || item.isHeroItem() || item.isTimeLimitedItem() || ((item.getItemId() >= 7816) && (item.getItemId() <= 7831)) || (item.getItem().getItemType() == WeaponType.NONE) || (item.getItem().getItemGradeSPlus() != Item.CRYSTAL_S) || (item.getItem().getBodyPart() == Item.SLOT_BACK) || (item.getItem().getBodyPart() == Item.SLOT_R_BRACELET) || (item.getItem().getBodyPart() == Item.SLOT_UNDERWEAR) || (item.getItem().getBodyPart() == Item.SLOT_BELT) || (item.getItem().getBodyPart() == Item.SLOT_NECK) || (item.getItem().getBodyPart() == Item.SLOT_R_EAR) || (item.getItem().getBodyPart() == Item.SLOT_R_FINGER) || (item.getItem().getElementals() != null))
+			{
+				player.sendPacket(SystemMessageId.ELEMENTAL_ENHANCE_REQUIREMENT_NOT_SUFFICIENT);
+				player.setActiveEnchantAttrItem(null);
+				return;
+			}
+			*/
+			// @formatter:on
 		}
 		
 		switch (item.getItemLocation())
@@ -133,7 +145,10 @@ public class RequestExEnchantItemAttribute implements IClientIncomingPacket
 		final int limit = getLimit(item, stoneId);
 		int powerToAdd = getPowerToAdd(stoneId, elementValue, item);
 		
-		if ((item.isWeapon() && (oldElement != null) && (oldElement.getElement() != elementToAdd) && (oldElement.getElement() != -2)) || (item.isArmor() && (item.getElemental(elementToAdd) == null) && (item.getElementals() != null) && (item.getElementals().length >= 3)))
+		// Epilogue fix
+		// Will not allow to add more than one element attribute
+		// if ((item.isWeapon() && (oldElement != null) && (oldElement.getElement() != elementToAdd) && (oldElement.getElement() != -2)) || (item.isArmor() && (item.getElemental(elementToAdd) == null) && (item.getElementals() != null) && (item.getElementals().length >= 3)))
+		if ((item.isWeapon() && (oldElement != null) && (oldElement.getElement() != elementToAdd) && (oldElement.getElement() != -2)) || ((item.getElemental(elementToAdd) == null) && (item.getElementals() != null) && (item.getElementals().length >= 1)))
 		{
 			player.sendPacket(SystemMessageId.ANOTHER_ELEMENTAL_POWER_HAS_ALREADY_BEEN_ADDED_THIS_ELEMENTAL_POWER_CANNOT_BE_ADDED);
 			player.setActiveEnchantAttrItemId(PlayerInstance.ID_NONE);

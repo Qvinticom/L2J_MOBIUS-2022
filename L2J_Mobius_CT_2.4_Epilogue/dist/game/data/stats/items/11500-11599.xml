@@ -108,7 +108,7 @@
 		</for>
 	</item>
 	<item id="11505" type="Armor" name="Imperial Crusader Gaiters">
-		<!-- Masterwork Item that increases P. Def., Max HP, and Resistance to Sleep/Hold. -->
+		<!-- A Masterwork Item that increases P. Def., Max HP, sleep resistance and hold resistance. -->
 		<set name="icon" val="icon.armor_t88_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -131,7 +131,7 @@
 		</for>
 	</item>
 	<item id="11506" type="Armor" name="Imperial Crusader Gauntlet">
-		<!-- Masterwork Item that increases P. Def., Max HP, and Resistance to Sleep/Hold. -->
+		<!-- A Masterwork Item that increases P. Def., Max HP, sleep resistance and hold resistance. -->
 		<set name="icon" val="icon.armor_t88_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -153,7 +153,7 @@
 		</for>
 	</item>
 	<item id="11507" type="Armor" name="Imperial Crusader Boots">
-		<!-- Masterwork Item that increases P. Def., Max HP, and Resistance to Sleep/Hold. -->
+		<!-- A Masterwork Item that increases P. Def., Max HP, sleep resistance and hold resistance. -->
 		<set name="icon" val="icon.armor_t88_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -175,7 +175,7 @@
 		</for>
 	</item>
 	<item id="11508" type="Armor" name="Imperial Crusader Shield">
-		<!-- Masterwork Item that increases M. Def. -->
+		<!-- Increases M. Def. -->
 		<set name="icon" val="icon.shield_imperial_crusader_shield_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -198,7 +198,7 @@
 		</for>
 	</item>
 	<item id="11509" type="Armor" name="Imperial Crusader Helmet">
-		<!-- Masterwork Item that increases P. Def., Max HP, and Resistance to Sleep/Hold. -->
+		<!-- A Masterwork Item that increases P. Def., Max HP, sleep resistance and hold resistance. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -220,7 +220,7 @@
 		</for>
 	</item>
 	<item id="11510" type="Armor" name="Imperial Crusader Breastplate">
-		<!-- Masterwork Item that increases P. Def., Max HP, and Resistance to Sleep/Hold. -->
+		<!-- A Masterwork Item that increases P. Def., Max HP, sleep resistance and hold resistance. -->
 		<set name="icon" val="icon.armor_t88_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -260,14 +260,14 @@
 		</for>
 	</item>
 	<item id="11512" type="Armor" name="Dynasty Gaiters">
-		<!-- Masterwork Item that increases P. Def./Max HP/Resistance to Dark -->
+		<!-- A Masterwork Item that increases P. Def./Max HP/resistance to darkness -->
 		<set name="icon" val="icon.armor_t91_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="732" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="3210" />
 		<set name="price" val="15248000" />
@@ -283,13 +283,13 @@
 		</for>
 	</item>
 	<item id="11513" type="Armor" name="Dynasty Gauntlet">
-		<!-- Masterwork Item that increases P. Def./Max HP/Resistance to Dark -->
+		<!-- A Masterwork Item that increases P. Def./Max HP/resistance to darkness -->
 		<set name="icon" val="icon.armor_t91_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="293" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="520" />
 		<set name="price" val="6099000" />
@@ -305,13 +305,13 @@
 		</for>
 	</item>
 	<item id="11514" type="Armor" name="Dynasty Gloves">
-		<!-- Masterwork Item that increases Max MP/M. Atk./Resistance to Dark -->
+		<!-- A Masterwork Item that increases Max MP/M. Atk./resistance to darkness -->
 		<set name="icon" val="icon.armor_t93_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="293" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="520" />
 		<set name="price" val="6099000" />
@@ -327,13 +327,13 @@
 		</for>
 	</item>
 	<item id="11515" type="Armor" name="Dynasty Leather Gloves">
-		<!-- Masterwork Item that increases Accuracy/evasion/Max HP/Atk. Spd./Resistance to Dark -->
+		<!-- A Masterwork Item that increases accuracy/evasion/Max HP/Atk. Spd./resistance to darkness -->
 		<set name="icon" val="icon.armor_t92_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="293" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="520" />
 		<set name="price" val="6099000" />
@@ -346,14 +346,14 @@
 		</for>
 	</item>
 	<item id="11516" type="Armor" name="Dynasty Leather Leggings">
-		<!-- Masterwork Item that increases Accuracy, Evasion, Max HP, dark resistance and Atk. Spd. -->
+		<!-- A Masterwork Item that increases Accuracy, Evasion, Max HP, dark resistance and Atk. Spd. -->
 		<set name="icon" val="icon.armor_t92_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="549" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1370" />
 		<set name="price" val="11436000" />
@@ -366,14 +366,14 @@
 		</for>
 	</item>
 	<item id="11517" type="Armor" name="Dynasty Leather Armor">
-		<!-- Masterwork Item that increases Accuracy/evasion/Max HP/Atk. Spd./Resistance to Dark -->
+		<!-- A Masterwork Item that increases accuracy/evasion/Max HP/Atk. Spd./resistance to darkness -->
 		<set name="icon" val="icon.armor_t92_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="878" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="4180" />
 		<set name="price" val="18298000" />
@@ -386,14 +386,14 @@
 		</for>
 	</item>
 	<item id="11518" type="Armor" name="Dynasty Leather Armor">
-		<!-- Masterwork Item that increases Accuracy, Evasion, Max HP, dark resistance and Atk. Spd. -->
+		<!-- A Masterwork Item that increases Accuracy, Evasion, Max HP, dark resistance and Atk. Spd. -->
 		<set name="icon" val="icon.armor_t92_ud_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="878" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="4180" />
 		<set name="price" val="18298000" />
@@ -408,14 +408,14 @@
 		</for>
 	</item>
 	<item id="11519" type="Armor" name="Dynasty Leather Armor">
-		<!-- Masterwork Item that increases Accuracy, Evasion, Max HP, dark resistance and Atk. Spd. -->
+		<!-- A Masterwork Item that increases Accuracy, Evasion, Max HP, dark resistance and Atk. Spd. -->
 		<set name="icon" val="icon.armor_t92_ub_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="878" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="4180" />
 		<set name="price" val="18298000" />
@@ -430,14 +430,14 @@
 		</for>
 	</item>
 	<item id="11520" type="Armor" name="Dynasty Leather Armor">
-		<!-- Masterwork Item that increases Accuracy, Evasion, Max HP, dark resistance and Atk. Spd. -->
+		<!-- A Masterwork Item that increases Accuracy, Evasion, Max HP, dark resistance and Atk. Spd. -->
 		<set name="icon" val="icon.armor_t92_ud_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="878" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="4180" />
 		<set name="price" val="18298000" />
@@ -455,14 +455,14 @@
 		</for>
 	</item>
 	<item id="11521" type="Armor" name="Dynasty Leather Armor">
-		<!-- Masterwork Item that increases Accuracy, Evasion, Max HP, dark resistance and Atk. Spd. -->
+		<!-- A Masterwork Item that increases Accuracy, Evasion, Max HP, dark resistance and Atk. Spd. -->
 		<set name="icon" val="icon.armor_t92_ub_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="878" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="4180" />
 		<set name="price" val="18298000" />
@@ -480,14 +480,14 @@
 		</for>
 	</item>
 	<item id="11522" type="Armor" name="Dynasty Leather Armor">
-		<!-- Masterwork Item that increases Accuracy, Evasion, Max HP, dark resistance and Atk. Spd. -->
+		<!-- A Masterwork Item that increases Accuracy, Evasion, Max HP, dark resistance and Atk. Spd. -->
 		<set name="icon" val="icon.armor_t92_ud_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="878" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="4180" />
 		<set name="price" val="18298000" />
@@ -502,14 +502,14 @@
 		</for>
 	</item>
 	<item id="11523" type="Armor" name="Dynasty Leather Armor">
-		<!-- Masterwork Item that increases Accuracy, Evasion, Max HP, dark resistance and Atk. Spd. -->
+		<!-- A Masterwork Item that increases Accuracy, Evasion, Max HP, dark resistance and Atk. Spd. -->
 		<set name="icon" val="icon.armor_t92_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="878" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="4180" />
 		<set name="price" val="18298000" />
@@ -524,13 +524,13 @@
 		</for>
 	</item>
 	<item id="11524" type="Armor" name="Dynasty Leather Boots">
-		<!-- Masterwork Item that increases Accuracy, Evasion, Max HP, dark resistance and Atk. Spd. -->
+		<!-- A Masterwork Item that increases Accuracy, Evasion, Max HP, dark resistance and Atk. Spd. -->
 		<set name="icon" val="icon.armor_t92_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="293" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1090" />
 		<set name="price" val="6099000" />
@@ -543,13 +543,13 @@
 		</for>
 	</item>
 	<item id="11525" type="Armor" name="Dynasty Leather Helmet">
-		<!-- Masterwork Item that increases Accuracy, Evasion, Max HP, dark resistance and Atk. Spd. -->
+		<!-- A Masterwork Item that increases Accuracy, Evasion, Max HP, dark resistance and Atk. Spd. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="439" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="9149000" />
@@ -562,13 +562,13 @@
 		</for>
 	</item>
 	<item id="11526" type="Armor" name="Dynasty Boots">
-		<!-- Masterwork Item that increases P. Def./Max HP/Resistance to Dark -->
+		<!-- A Masterwork Item that increases P. Def./Max HP/resistance to darkness -->
 		<set name="icon" val="icon.armor_t91_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="293" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1090" />
 		<set name="price" val="6099000" />
@@ -584,14 +584,14 @@
 		</for>
 	</item>
 	<item id="11527" type="Armor" name="Dynasty Breastplate">
-		<!-- Masterwork Item that increases P. Def./Max HP/Resistance to Dark -->
+		<!-- A Masterwork Item that increases P. Def./Max HP/resistance to darkness -->
 		<set name="icon" val="icon.armor_t91_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1171" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="7570" />
 		<set name="price" val="24398000" />
@@ -607,14 +607,14 @@
 		</for>
 	</item>
 	<item id="11528" type="Armor" name="Dynasty Breastplate">
-		<!-- Masterwork Item that has the effect of increased P. Def., increased Max HP, increased Resistance to Dark, and decreased MP Consumption upon skill use -->
+		<!-- A Masterwork Item that has the effect of increased P. Def., increased Max HP, increased resistance to darkness, and decreased MP Consumption upon skill use -->
 		<set name="icon" val="icon.armor_t91_uk_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1171" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="7570" />
 		<set name="price" val="24398000" />
@@ -632,14 +632,14 @@
 		</for>
 	</item>
 	<item id="11529" type="Armor" name="Dynasty Breastplate">
-		<!-- Masterwork Item that has the effect of increased P. Def., increased Max HP, increased Resistance to Dark, and decreased MP Consumption upon skill use -->
+		<!-- A Masterwork Item that has the effect of increased P. Def., increased Max HP, increased resistance to darkness, and decreased MP Consumption upon skill use -->
 		<set name="icon" val="icon.armor_t91_uw_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1171" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="7570" />
 		<set name="price" val="24398000" />
@@ -657,14 +657,14 @@
 		</for>
 	</item>
 	<item id="11530" type="Armor" name="Dynasty Breastplate">
-		<!-- Masterwork Item that has the effect of increased P. Def., increased Max HP, increased Resistance to Dark, and decreased MP Consumption upon skill use -->
+		<!-- A Masterwork Item that has the effect of increased P. Def., increased Max HP, increased resistance to darkness, and decreased MP Consumption upon skill use -->
 		<set name="icon" val="icon.armor_t91_uf_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1171" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="7570" />
 		<set name="price" val="24398000" />
@@ -682,14 +682,14 @@
 		</for>
 	</item>
 	<item id="11531" type="Armor" name="Dynasty Breastplate">
-		<!-- Masterwork Item that has the effect of increased P. Def., increased Max HP, increased Resistance to Dark, and decreased MP Consumption upon skill use -->
+		<!-- A Masterwork Item that has the effect of increased P. Def., increased Max HP, increased resistance to darkness, and decreased MP Consumption upon skill use -->
 		<set name="icon" val="icon.armor_t91_uke_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1171" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="7570" />
 		<set name="price" val="24398000" />
@@ -707,13 +707,13 @@
 		</for>
 	</item>
 	<item id="11532" type="Armor" name="Dynasty Shield">
-		<!-- Masterwork Item with a M. Def. effect -->
+		<!-- Rare item with magic resistance effect -->
 		<set name="icon" val="icon.shield_dynasty_shield_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="307" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1390" />
 		<set name="price" val="6404000" />
@@ -730,13 +730,13 @@
 		</for>
 	</item>
 	<item id="11533" type="Armor" name="Dynasty Shoes">
-		<!-- Masterwork Item that increases Max MP, Resistance to Dark, and M. Atk. -->
+		<!-- A Masterwork Item that increases Max MP, resistance to darkness, and M. Atk. -->
 		<set name="icon" val="icon.armor_t93_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="293" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1090" />
 		<set name="price" val="6099000" />
@@ -752,14 +752,14 @@
 		</for>
 	</item>
 	<item id="11534" type="Armor" name="Dynasty Silver Satin Tunic">
-		<!-- Masterwork Item that has increased Casting Spd. effect -->
+		<!-- A Masterwork Item that has increased Casting Spd. effect -->
 		<set name="icon" val="icon.armor_t93_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1212" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1780" />
 		<set name="price" val="25255000" />
@@ -776,14 +776,14 @@
 		</for>
 	</item>
 	<item id="11535" type="Armor" name="Dynasty Silver Satin Tunic">
-		<!-- Masterwork Item that increases P. Def., Max HP and dark resistance, and decreases MP consumption rate. -->
+		<!-- A Masterwork Item that increases P. Def., Max HP and dark resistance, and decreases MP consumption rate. -->
 		<set name="icon" val="icon.armor_t93_uh_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1212" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1780" />
 		<set name="price" val="25255000" />
@@ -802,14 +802,14 @@
 		</for>
 	</item>
 	<item id="11536" type="Armor" name="Dynasty Silver Satin Tunic">
-		<!-- Masterwork Item that increases P. Def., Max HP and dark resistance, and decreases MP consumption rate. -->
+		<!-- A Masterwork Item that increases P. Def., Max HP and dark resistance, and decreases MP consumption rate. -->
 		<set name="icon" val="icon.armor_t93_ue_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1212" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1780" />
 		<set name="price" val="25255000" />
@@ -828,14 +828,14 @@
 		</for>
 	</item>
 	<item id="11537" type="Armor" name="Dynasty Silver Satin Tunic">
-		<!-- Masterwork Item that increases P. Def., Max HP and dark resistance, and decreases MP consumption rate. -->
+		<!-- A Masterwork Item that increases P. Def., Max HP and dark resistance, and decreases MP consumption rate. -->
 		<set name="icon" val="icon.armor_t93_us_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1212" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1780" />
 		<set name="price" val="25255000" />
@@ -854,14 +854,14 @@
 		</for>
 	</item>
 	<item id="11538" type="Armor" name="Dynasty Silver Satin Tunic">
-		<!-- Masterwork Item that increases P. Def., Max HP and dark resistance, and decreases MP consumption rate. -->
+		<!-- A Masterwork Item that increases P. Def., Max HP and dark resistance, and decreases MP consumption rate. -->
 		<set name="icon" val="icon.armor_t93_uw_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1212" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1780" />
 		<set name="price" val="25255000" />
@@ -880,13 +880,13 @@
 		</for>
 	</item>
 	<item id="11539" type="Armor" name="Dynasty Circlet">
-		<!-- Masterwork Item that increases Max MP, Resistance to Dark, and M. Atk. -->
+		<!-- A Masterwork Item that increases Max MP, resistance to darkness, and M. Atk. -->
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="439" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="9149000" />
@@ -902,34 +902,34 @@
 		</for>
 	</item>
 	<item id="11540" type="Armor" name="Dynasty Jewel Leather Armor">
-		<!-- Masterwork Item that increases Accuracy, Evasion, Max MP, Resistance to Dark, and Atk. Spd. -->
+		<!-- A Masterwork Item that increases Accuracy, Evasion, Max MP, resistance to darkness, and Atk. Spd. -->
 		<set name="icon" val="icon.armor_t92_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1212" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="4180" />
 		<set name="price" val="25255000" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3805-1" /> <!-- Dynasty Jewel Leather Armor -->
+		<set name="item_skill" val="3805-1" /> <!-- Dynasty Jewel Leather Mail -->
 		<for>
 			<add order="0" stat="pDef" val="170" />
 			<enchant stat="pDef" val="0" />
 		</for>
 	</item>
 	<item id="11541" type="Armor" name="Dynasty Jewel Leather Armor">
-		<!-- Masterwork Item that increases Accuracy, Evasion, Max HP, dark resistance and Atk. Spd. -->
+		<!-- A Masterwork Item that increases Accuracy, Evasion, Max HP, dark resistance and Atk. Spd. -->
 		<set name="icon" val="icon.armor_t92_ud_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1212" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="4180" />
 		<set name="price" val="25255000" />
@@ -944,14 +944,14 @@
 		</for>
 	</item>
 	<item id="11542" type="Armor" name="Dynasty Jewel Leather Armor">
-		<!-- Masterwork Item that increases Accuracy, Evasion, Max HP, dark resistance and Atk. Spd. -->
+		<!-- A Masterwork Item that increases Accuracy, Evasion, Max HP, dark resistance and Atk. Spd. -->
 		<set name="icon" val="icon.armor_t92_ub_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1212" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="4180" />
 		<set name="price" val="25255000" />
@@ -966,14 +966,14 @@
 		</for>
 	</item>
 	<item id="11543" type="Armor" name="Dynasty Jewel Leather Armor">
-		<!-- Masterwork Item that increases Accuracy, Evasion, Max HP, dark resistance and Atk. Spd. -->
+		<!-- A Masterwork Item that increases Accuracy, Evasion, Max HP, dark resistance and Atk. Spd. -->
 		<set name="icon" val="icon.armor_t92_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1212" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="4180" />
 		<set name="price" val="25255000" />
@@ -988,14 +988,14 @@
 		</for>
 	</item>
 	<item id="11544" type="Armor" name="Dynasty Jewel Leather Armor">
-		<!-- Masterwork Item that increases Accuracy, Evasion, Max HP, dark resistance and Atk. Spd. -->
+		<!-- A Masterwork Item that increases Accuracy, Evasion, Max HP, dark resistance and Atk. Spd. -->
 		<set name="icon" val="icon.armor_t92_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1212" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="4180" />
 		<set name="price" val="25255000" />
@@ -1010,14 +1010,14 @@
 		</for>
 	</item>
 	<item id="11545" type="Armor" name="Dynasty Jewel Leather Armor">
-		<!-- Masterwork Item that increases Accuracy, Evasion, Max HP, dark resistance and Atk. Spd. -->
+		<!-- A Masterwork Item that increases Accuracy, Evasion, Max HP, dark resistance and Atk. Spd. -->
 		<set name="icon" val="icon.armor_t92_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1212" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="4180" />
 		<set name="price" val="25255000" />
@@ -1032,14 +1032,14 @@
 		</for>
 	</item>
 	<item id="11546" type="Armor" name="Dynasty Jewel Leather Armor">
-		<!-- Masterwork Item that increases Accuracy, Evasion, Max HP, dark resistance and Atk. Spd. -->
+		<!-- A Masterwork Item that increases Accuracy, Evasion, Max HP, dark resistance and Atk. Spd. -->
 		<set name="icon" val="icon.armor_t92_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1212" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="4180" />
 		<set name="price" val="25255000" />
@@ -1054,14 +1054,14 @@
 		</for>
 	</item>
 	<item id="11547" type="Armor" name="Dynasty Tunic">
-		<!-- Masterwork Item that has increased Casting Spd. effect -->
+		<!-- A Masterwork Item that has increased Casting Spd. effect -->
 		<set name="icon" val="icon.armor_t93_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="878" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1780" />
 		<set name="price" val="18298000" />
@@ -1084,7 +1084,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="878" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1780" />
 		<set name="price" val="18298000" />
@@ -1109,7 +1109,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="878" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1780" />
 		<set name="price" val="18298000" />
@@ -1134,7 +1134,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="878" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1780" />
 		<set name="price" val="18298000" />
@@ -1159,7 +1159,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="878" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1780" />
 		<set name="price" val="18298000" />
@@ -1178,14 +1178,14 @@
 		</for>
 	</item>
 	<item id="11552" type="Armor" name="Dynasty Platinum Plate">
-		<!-- Masterwork Item that has the effect of increased P. Def., increased Max HP, increased Resistance to Dark, and decreased MP Consumption upon skill use -->
+		<!-- A Masterwork Item that has the effect of increased P. Def., increased Max HP, increased resistance to darkness, and decreased MP Consumption upon skill use -->
 		<set name="icon" val="icon.armor_t91_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1616" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="7570" />
 		<set name="price" val="33673000" />
@@ -1201,14 +1201,14 @@
 		</for>
 	</item>
 	<item id="11553" type="Armor" name="Dynasty Platinum Plate">
-		<!-- Masterwork Item that has the effect of increased P. Def., increased Max HP, increased Resistance to Dark, and decreased MP Consumption upon skill use -->
+		<!-- A Masterwork Item that has the effect of increased P. Def., increased Max HP, increased resistance to darkness, and decreased MP Consumption upon skill use -->
 		<set name="icon" val="icon.armor_t91_uk_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1616" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="7570" />
 		<set name="price" val="33673000" />
@@ -1226,14 +1226,14 @@
 		</for>
 	</item>
 	<item id="11554" type="Armor" name="Dynasty Platinum Plate">
-		<!-- Masterwork Item that has the effect of increased P. Def., increased Max HP, increased Resistance to Dark, and decreased MP Consumption upon skill use -->
+		<!-- A Masterwork Item that has the effect of increased P. Def., increased Max HP, increased resistance to darkness, and decreased MP Consumption upon skill use -->
 		<set name="icon" val="icon.armor_t91_uw_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1616" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="7570" />
 		<set name="price" val="33673000" />
@@ -1251,14 +1251,14 @@
 		</for>
 	</item>
 	<item id="11555" type="Armor" name="Dynasty Platinum Plate">
-		<!-- Masterwork Item that has the effect of increased P. Def., increased Max HP, increased Resistance to Dark, and decreased MP Consumption upon skill use -->
+		<!-- A Masterwork Item that has the effect of increased P. Def., increased Max HP, increased resistance to darkness, and decreased MP Consumption upon skill use -->
 		<set name="icon" val="icon.armor_t91_uf_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1616" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="7570" />
 		<set name="price" val="33673000" />
@@ -1276,14 +1276,14 @@
 		</for>
 	</item>
 	<item id="11556" type="Armor" name="Dynasty Platinum Plate">
-		<!-- Masterwork Item that has the effect of increased P. Def., increased Max HP, increased Resistance to Dark, and decreased MP Consumption upon skill use -->
+		<!-- A Masterwork Item that has the effect of increased P. Def., increased Max HP, increased resistance to darkness, and decreased MP Consumption upon skill use -->
 		<set name="icon" val="icon.armor_t91_uke_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1616" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="7570" />
 		<set name="price" val="33673000" />
@@ -1301,13 +1301,13 @@
 		</for>
 	</item>
 	<item id="11557" type="Armor" name="Dynasty Helmet">
-		<!-- Masterwork Item that increases P. Def./Max HP/Resistance to Dark -->
+		<!-- A Masterwork Item that increases P. Def./Max HP/resistance to darkness -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="439" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="9149000" />
@@ -1323,14 +1323,14 @@
 		</for>
 	</item>
 	<item id="11558" type="Armor" name="Dynasty Stockings">
-		<!-- Masterwork Item that increases Max MP/M. Atk./Resistance to Dark -->
+		<!-- A Masterwork Item that increases Max MP/M. Atk./resistance to darkness -->
 		<set name="icon" val="icon.armor_t93_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="549" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="860" />
 		<set name="price" val="11436000" />
@@ -1354,7 +1354,7 @@
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="732" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="3210" />
 		<set name="price" val="15248000" />
@@ -1375,7 +1375,7 @@
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="293" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="520" />
 		<set name="price" val="6099000" />
@@ -1396,7 +1396,7 @@
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="293" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="520" />
 		<set name="price" val="6099000" />
@@ -1417,7 +1417,7 @@
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="293" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="520" />
 		<set name="price" val="6099000" />
@@ -1436,7 +1436,7 @@
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="549" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1370" />
 		<set name="price" val="11436000" />
@@ -1455,7 +1455,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="878" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="4180" />
 		<set name="price" val="18298000" />
@@ -1473,7 +1473,7 @@
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="293" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1090" />
 		<set name="price" val="6099000" />
@@ -1491,7 +1491,7 @@
 		<set name="bodypart" val="head" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="439" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="9149000" />
@@ -1509,7 +1509,7 @@
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="293" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1090" />
 		<set name="price" val="6099000" />
@@ -1531,7 +1531,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1171" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="7570" />
 		<set name="price" val="24398000" />
@@ -1552,7 +1552,7 @@
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="307" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1370" />
 		<set name="price" val="6404000" />
@@ -1574,7 +1574,7 @@
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="293" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1090" />
 		<set name="price" val="6099000" />
@@ -1595,7 +1595,7 @@
 		<set name="bodypart" val="head" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="439" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="9149000" />
@@ -1617,7 +1617,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="878" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1780" />
 		<set name="price" val="18298000" />
@@ -1639,7 +1639,7 @@
 		<set name="bodypart" val="head" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="439" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="9149000" />
@@ -1661,7 +1661,7 @@
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="549" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="860" />
 		<set name="price" val="11436000" />
@@ -1677,7 +1677,7 @@
 		</for>
 	</item>
 	<item id="11575" type="Armor" name="Adamantite Earring">
-		<!-- Masterwork Item that increases Max MP. -->
+		<!-- A Masterwork Item that increases Max MP. -->
 		<set name="icon" val="icon.accessary_adamantite_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1695,7 +1695,7 @@
 		</for>
 	</item>
 	<item id="11576" type="Armor" name="Adamantite Necklace">
-		<!-- Masterwork Item that increases Resistance to Stun. -->
+		<!-- A Masterwork Item that increases stun resistance. -->
 		<set name="icon" val="icon.accessary_adamantite_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1713,7 +1713,7 @@
 		</for>
 	</item>
 	<item id="11577" type="Armor" name="Adamantite Ring">
-		<!-- Masterwork Item that increases MP Recovery Rate. -->
+		<!-- A Masterwork Item that increases MP regeneration rate. -->
 		<set name="icon" val="icon.accessary_adamantite_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1731,7 +1731,7 @@
 		</for>
 	</item>
 	<item id="11578" type="Armor" name="Earring of Black Ore">
-		<!-- Masterwork Item that increases dark resistance. -->
+		<!-- A Masterwork Item that increases dark resistance. -->
 		<set name="icon" val="icon.accessary_earing_of_black_ore_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1749,7 +1749,7 @@
 		</for>
 	</item>
 	<item id="11579" type="Armor" name="Necklace of Black Ore">
-		<!-- Masterwork Item that increases Resistance to Stun. -->
+		<!-- A Masterwork Item that increases stun resistance. -->
 		<set name="icon" val="icon.accessary_necklace_of_black_ore_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1767,7 +1767,7 @@
 		</for>
 	</item>
 	<item id="11580" type="Armor" name="Ring of Black Ore">
-		<!-- Masterwork Item that increases Max MP. -->
+		<!-- A Masterwork Item that increases Max MP. -->
 		<set name="icon" val="icon.accessary_ring_of_black_ore_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1785,7 +1785,7 @@
 		</for>
 	</item>
 	<item id="11581" type="Armor" name="Sealed Phoenix Necklace">
-		<!-- Sealed Masterwork Item that has the effect of MP+ 26 and Max MP +21 when the seal is broken. The blacksmith in a village can release the seal on this item. -->
+		<!-- Sealed rare item. Effect increases by MP+26 when the seal is broken and Maximum of MP +21. -->
 		<set name="icon" val="icon.accessary_phoenixs_necklace_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1802,7 +1802,7 @@
 		</for>
 	</item>
 	<item id="11582" type="Armor" name="Sealed Phoenix Ring">
-		<!-- Sealed Masterwork Item that has the effect of MP +13 and MP Recovery Rate +0.71% when the seal is broken. The blacksmith in a village can release the seal on this item. -->
+		<!-- Sealed rare item. MP+ 13 when the seal is broken, the effect is increased MP Recovery Rate +0.71%. -->
 		<set name="icon" val="icon.accessary_phoenixs_ring_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1819,7 +1819,7 @@
 		</for>
 	</item>
 	<item id="11583" type="Armor" name="Sealed Phoenix Earring">
-		<!-- Sealed Masterwork Item that has the effect of MP +20 and M. Def +1% when the seal is broken. The blacksmith in a village can release the seal on this item. -->
+		<!-- Sealed rare item. The effect increases by MP+ 20, M. Def. +1% when seal is broken. -->
 		<set name="icon" val="icon.accessary_phoenixs_earing_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1836,7 +1836,7 @@
 		</for>
 	</item>
 	<item id="11584" type="Armor" name="Phoenix Necklace">
-		<!-- Masterwork Item that has the effect of MP +26 and Max MP +21 -->
+		<!-- Masterwork Item that has the effect of increased MP +26 and Max MP +21 -->
 		<set name="icon" val="icon.accessary_phoenixs_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1855,7 +1855,7 @@
 		</for>
 	</item>
 	<item id="11585" type="Armor" name="Phoenix Ring">
-		<!-- Masterwork Item that has the effect of MP +13 and MP Recovery Rate +0.71% -->
+		<!-- Masterwork Item that has the effect of increased MP +13 and MP Recovery Rate +0.71% -->
 		<set name="icon" val="icon.accessary_phoenixs_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1874,7 +1874,7 @@
 		</for>
 	</item>
 	<item id="11586" type="Armor" name="Phoenix Earring">
-		<!-- Masterwork Item that has the effect of MP +20 and M. Def. +1% -->
+		<!-- Masterwork Item that has the effect of increased MP +20 and M. Def. +1% -->
 		<set name="icon" val="icon.accessary_phoenixs_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1893,7 +1893,7 @@
 		</for>
 	</item>
 	<item id="11587" type="Armor" name="Majestic Necklace">
-		<!-- Masterwork Item that has the effect of MP +33 and M. Def. +1% -->
+		<!-- Masterwork Item that has the effect of increased MP +33 and M. Def. +1% -->
 		<set name="icon" val="icon.accessary_inferno_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1912,7 +1912,7 @@
 		</for>
 	</item>
 	<item id="11588" type="Armor" name="Majestic Ring">
-		<!-- Masterwork Item that has the effect of MP +17 and Max MP +11 -->
+		<!-- Masterwork Item that has the effect of increased MP +17 and Max MP +11 -->
 		<set name="icon" val="icon.accessary_inferno_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1931,7 +1931,7 @@
 		</for>
 	</item>
 	<item id="11589" type="Armor" name="Majestic Earring">
-		<!-- Masterwork Item that has the effect of MP +25 and Resistance to poison +5.71. -->
+		<!-- Masterwork Item that has the effect of MP +25 and increased resistance to poison +5.71. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1950,7 +1950,7 @@
 		</for>
 	</item>
 	<item id="11590" type="Armor" name="Sealed Majestic Necklace">
-		<!-- Sealed Masterwork Item that has the effect of MP+ 33 and M. Def. +1% when the seal is broken. The blacksmith in a village can release the seal on this item. -->
+		<!-- Sealed rare item. The effect increases by MP+ 33, M. Def. +1% when seal is broken. -->
 		<set name="icon" val="icon.accessary_inferno_necklace_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1967,7 +1967,7 @@
 		</for>
 	</item>
 	<item id="11591" type="Armor" name="Sealed Majestic Ring">
-		<!-- Sealed Masterwork Item that has the effect of MP+ 17 and Max MP +11 when the seal is broken. The blacksmith in a village can release the seal on this item. -->
+		<!-- Sealed rare item. The effect increases by MP+ 17, Maximum of MP +11 when seal is broken. -->
 		<set name="icon" val="icon.accessary_inferno_ring_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1984,7 +1984,7 @@
 		</for>
 	</item>
 	<item id="11592" type="Armor" name="Sealed Majestic Earring">
-		<!-- Sealed Masterwork Item that has the effect of MP+ 25 and Resistance to Poison +5.71 when the seal is broken. The blacksmith in a village can release the seal on this item. -->
+		<!-- Sealed rare item. The effect increases by MP+ 25, Poison Resistance +5.71 when the seal is broken. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -2001,7 +2001,7 @@
 		</for>
 	</item>
 	<item id="11593" type="Armor" name="Sealed Tateossian Necklace">
-		<!-- Sealed Masterwork Item that has the effect of MP+ 42 and Resistance to Poison +7.61 when the seal is broken. -->
+		<!-- Sealed rare item whose effect increases by MP+ 42, Poison Resistance +7.61 when the seal is broken. -->
 		<set name="icon" val="icon.accessory_tateossian_necklace_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -2018,7 +2018,7 @@
 		</for>
 	</item>
 	<item id="11594" type="Armor" name="Sealed Tateossian Ring">
-		<!-- Sealed Masterwork Item that has the effect of MP+ 21 and Terrain Resistance +1.14 when the seal is broken. -->
+		<!-- Sealed rare item whose effect increases by MP+ 21, Terrain Resistance +1.14 when the seal is broken. -->
 		<set name="icon" val="icon.accessory_tateossian_ring_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -2035,7 +2035,7 @@
 		</for>
 	</item>
 	<item id="11595" type="Armor" name="Sealed Tateossian Earring">
-		<!-- Sealed Masterwork Item that has the effect of MP+ 31 and Max MP +20 when seal is broken. -->
+		<!-- Sealed rare item. The effect increases by MP+ 31, Maximum of MP +20 when seal is broken. -->
 		<set name="icon" val="icon.accessory_tateossian_earring_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -2052,7 +2052,7 @@
 		</for>
 	</item>
 	<item id="11596" type="Armor" name="Tateossian Necklace">
-		<!-- Masterwork Item that has the effect of MP +42 and Resistance to bleed +7.61. -->
+		<!-- Masterwork Item that has the effect of MP +42 and increased resistance to bleed +7.61. -->
 		<set name="icon" val="icon.accessory_tateossian_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -2071,7 +2071,7 @@
 		</for>
 	</item>
 	<item id="11597" type="Armor" name="Tateossian Ring">
-		<!-- Masterwork Item that has the effect of MP +21 and Resistance to earth +1.14. -->
+		<!-- Masterwork Item that has the effect of MP +21 and increased resistance to earth +1.14. -->
 		<set name="icon" val="icon.accessory_tateossian_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -2090,7 +2090,7 @@
 		</for>
 	</item>
 	<item id="11598" type="Armor" name="Tateossian Earring">
-		<!-- Masterwork Item that has the effect of MP +31 and Max MP +20 -->
+		<!-- Masterwork Item that has the effect of increased MP +31 and Max MP +20 -->
 		<set name="icon" val="icon.accessory_tateossian_earring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -2109,13 +2109,13 @@
 		</for>
 	</item>
 	<item id="11599" type="Armor" name="Dynasty Necklace">
-		<!-- Masterwork Item that has the effect of MP +46 and Max MP +30 -->
+		<!-- Masterwork Item that has the effect of increased MP +46 and Max MP +30 -->
 		<set name="icon" val="icon.accessary_dynasty_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="381" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="7942000" />

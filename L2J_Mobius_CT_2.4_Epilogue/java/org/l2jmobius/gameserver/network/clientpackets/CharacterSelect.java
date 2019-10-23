@@ -21,7 +21,6 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.data.sql.impl.CharNameTable;
-import org.l2jmobius.gameserver.data.xml.impl.SecondaryAuthData;
 import org.l2jmobius.gameserver.instancemanager.AntiFeedManager;
 import org.l2jmobius.gameserver.instancemanager.PunishmentManager;
 import org.l2jmobius.gameserver.model.CharSelectInfoPackage;
@@ -76,12 +75,6 @@ public class CharacterSelect implements IClientIncomingPacket
 	{
 		if (!client.getFloodProtectors().getCharacterSelect().tryPerformAction("CharacterSelect"))
 		{
-			return;
-		}
-		
-		if (SecondaryAuthData.getInstance().isEnabled() && !client.getSecondaryAuth().isAuthed())
-		{
-			client.getSecondaryAuth().openDialog();
 			return;
 		}
 		

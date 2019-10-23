@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.handler.CommunityBoardHandler;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.holders.SellBuffHolder;
 import org.l2jmobius.gameserver.model.items.Item;
-import org.l2jmobius.gameserver.model.olympiad.OlympiadManager;
+import org.l2jmobius.gameserver.model.olympiad.Olympiad;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.serverpackets.ExPrivateStoreSetWholeMsg;
@@ -395,7 +395,7 @@ public class SellBuffsManager implements IXmlReader
 			player.sendMessage("You can't sell buffs in fake death!");
 			return false;
 		}
-		else if (player.isInOlympiadMode() || OlympiadManager.getInstance().isRegistered(player))
+		else if (player.isInOlympiadMode() || Olympiad.getInstance().isRegistered(player))
 		{
 			player.sendMessage("You can't sell buffs with Olympiad status!");
 			return false;

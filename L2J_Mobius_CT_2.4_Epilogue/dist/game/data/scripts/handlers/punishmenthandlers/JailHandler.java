@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.model.events.Containers;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLogin;
 import org.l2jmobius.gameserver.model.events.listeners.ConsumerEventListener;
-import org.l2jmobius.gameserver.model.olympiad.OlympiadManager;
+import org.l2jmobius.gameserver.model.olympiad.Olympiad;
 import org.l2jmobius.gameserver.model.punishment.PunishmentTask;
 import org.l2jmobius.gameserver.model.punishment.PunishmentType;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
@@ -163,9 +163,9 @@ public class JailHandler implements IPunishmentHandler
 			TvTEvent.removeParticipant(player.getObjectId());
 		}
 		
-		if (OlympiadManager.getInstance().isRegisteredInComp(player))
+		if (Olympiad.getInstance().isRegisteredInComp(player))
 		{
-			OlympiadManager.getInstance().removeDisconnectedCompetitor(player);
+			Olympiad.getInstance().removeDisconnectedCompetitor(player);
 		}
 		
 		ThreadPool.schedule(new TeleportTask(player, JailZone.getLocationIn()), 2000);

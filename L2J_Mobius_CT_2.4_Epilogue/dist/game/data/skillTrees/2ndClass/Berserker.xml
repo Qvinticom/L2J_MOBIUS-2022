@@ -2,19 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
 	<!-- Berserker -->
 	<skillTree type="classSkillTree" classId="127" parentClassId="125">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="1" getLevel="52" learnedByNpc="true">
-			<item id="8618" count="1" />
-		</skill>
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="2" getLevel="61" learnedByNpc="true">
-			<item id="8619" count="1" />
-		</skill>
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="3" getLevel="76" learnedByNpc="true">
-			<item id="8620" count="1" />
-		</skill>
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="4" getLevel="76" learnedByNpc="true">
-			<item id="8621" count="1" />
-		</skill>
+		<!-- Confirmed CT2.5 -->
 		<skill skillName="Ancient Sword Mastery" skillId="472" skillLvl="9" getLevel="40" levelUpSp="14000" learnedByNpc="true" />
 		<skill skillName="Ancient Sword Mastery" skillId="472" skillLvl="10" getLevel="40" levelUpSp="14000" learnedByNpc="true" />
 		<skill skillName="Ancient Sword Mastery" skillId="472" skillLvl="11" getLevel="40" levelUpSp="14000" learnedByNpc="true" />
@@ -24,36 +12,36 @@
 		<skill skillName="Magic Immunity" skillId="466" skillLvl="19" getLevel="40" levelUpSp="14000" learnedByNpc="true" />
 		<skill skillName="Magic Immunity" skillId="466" skillLvl="20" getLevel="40" levelUpSp="14000" learnedByNpc="true" />
 		<skill skillName="Magic Immunity" skillId="466" skillLvl="21" getLevel="40" levelUpSp="14000" learnedByNpc="true" />
-		<skill skillName="Soul Mastery" skillId="467" skillLvl="9" getLevel="40" levelUpSp="43000" learnedByNpc="true" />
+		<skill skillName="Soul Mastery" skillId="467" skillLvl="9" getLevel="40" levelUpSp="46000" learnedByNpc="true" />
 		<skill skillName="Dark Smash" skillId="477" skillLvl="1" getLevel="40" levelUpSp="14000" learnedByNpc="true" />
 		<skill skillName="Dark Smash" skillId="477" skillLvl="2" getLevel="40" levelUpSp="14000" learnedByNpc="true" />
 		<skill skillName="Dark Smash" skillId="477" skillLvl="3" getLevel="40" levelUpSp="14000" learnedByNpc="true" />
 		<skill skillName="Shoulder Charge" skillId="494" skillLvl="1" getLevel="40" levelUpSp="14000" learnedByNpc="true" />
 		<skill skillName="Shoulder Charge" skillId="494" skillLvl="2" getLevel="40" levelUpSp="14000" learnedByNpc="true" />
 		<skill skillName="Shoulder Charge" skillId="494" skillLvl="3" getLevel="40" levelUpSp="14000" learnedByNpc="true" />
-		<skill skillName="True Berserker" skillId="500" skillLvl="1" getLevel="40" levelUpSp="43000" learnedByNpc="true" />
-		<skill skillName="Life to Soul" skillId="502" skillLvl="1" getLevel="40" levelUpSp="43000" learnedByNpc="true" />
+		<skill skillName="True Berserker" skillId="500" skillLvl="1" getLevel="40" levelUpSp="46000" learnedByNpc="true" />
+		<skill skillName="Life to Soul" skillId="502" skillLvl="1" getLevel="40" levelUpSp="46000" learnedByNpc="true" />
 		<skill skillName="Critical Sense" skillId="626" skillLvl="1" getLevel="40" levelUpSp="43000" learnedByNpc="true" />
-		<skill skillName="Ancient Sword Mastery" skillId="472" skillLvl="12" getLevel="43" levelUpSp="15000" learnedByNpc="true" />
-		<skill skillName="Ancient Sword Mastery" skillId="472" skillLvl="13" getLevel="43" levelUpSp="15000" learnedByNpc="true" />
-		<skill skillName="Ancient Sword Mastery" skillId="472" skillLvl="14" getLevel="43" levelUpSp="15000" learnedByNpc="true" />
-		<skill skillName="Light Armor Mastery" skillId="465" skillLvl="17" getLevel="43" levelUpSp="15000" learnedByNpc="true" />
-		<skill skillName="Light Armor Mastery" skillId="465" skillLvl="18" getLevel="43" levelUpSp="15000" learnedByNpc="true" />
-		<skill skillName="Light Armor Mastery" skillId="465" skillLvl="19" getLevel="43" levelUpSp="15000" learnedByNpc="true" />
-		<skill skillName="Magic Immunity" skillId="466" skillLvl="22" getLevel="43" levelUpSp="15000" learnedByNpc="true" />
-		<skill skillName="Magic Immunity" skillId="466" skillLvl="23" getLevel="43" levelUpSp="15000" learnedByNpc="true" />
-		<skill skillName="Magic Immunity" skillId="466" skillLvl="24" getLevel="43" levelUpSp="15000" learnedByNpc="true" />
-		<skill skillName="Soul Mastery" skillId="467" skillLvl="10" getLevel="43" levelUpSp="46000" learnedByNpc="true" />
-		<skill skillName="Dark Smash" skillId="477" skillLvl="4" getLevel="43" levelUpSp="15000" learnedByNpc="true" />
-		<skill skillName="Dark Smash" skillId="477" skillLvl="5" getLevel="43" levelUpSp="15000" learnedByNpc="true" />
-		<skill skillName="Dark Smash" skillId="477" skillLvl="6" getLevel="43" levelUpSp="15000" learnedByNpc="true" />
-		<skill skillName="Shoulder Charge" skillId="494" skillLvl="4" getLevel="43" levelUpSp="15000" learnedByNpc="true" />
-		<skill skillName="Shoulder Charge" skillId="494" skillLvl="5" getLevel="43" levelUpSp="15000" learnedByNpc="true" />
-		<skill skillName="Shoulder Charge" skillId="494" skillLvl="6" getLevel="43" levelUpSp="15000" learnedByNpc="true" />
-		<skill skillName="Disarm" skillId="485" skillLvl="2" getLevel="43" levelUpSp="46000" learnedByNpc="true" />
-		<skill skillName="Scorn" skillId="503" skillLvl="1" getLevel="43" levelUpSp="46000" learnedByNpc="true" />
-		<skill skillName="Dark Armor" skillId="481" skillLvl="2" getLevel="43" levelUpSp="46000" learnedByNpc="true" />
-		<skill skillName="Fast Recovery" skillId="832" skillLvl="1" getLevel="43" levelUpSp="46000" learnedByNpc="true" />
+		<skill skillName="Ancient Sword Mastery" skillId="472" skillLvl="12" getLevel="43" levelUpSp="16000" learnedByNpc="true" />
+		<skill skillName="Ancient Sword Mastery" skillId="472" skillLvl="13" getLevel="43" levelUpSp="16000" learnedByNpc="true" />
+		<skill skillName="Ancient Sword Mastery" skillId="472" skillLvl="14" getLevel="43" levelUpSp="16000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="465" skillLvl="17" getLevel="43" levelUpSp="16000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="465" skillLvl="18" getLevel="43" levelUpSp="16000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="465" skillLvl="19" getLevel="43" levelUpSp="16000" learnedByNpc="true" />
+		<skill skillName="Magic Immunity" skillId="466" skillLvl="22" getLevel="43" levelUpSp="16000" learnedByNpc="true" />
+		<skill skillName="Magic Immunity" skillId="466" skillLvl="23" getLevel="43" levelUpSp="16000" learnedByNpc="true" />
+		<skill skillName="Magic Immunity" skillId="466" skillLvl="24" getLevel="43" levelUpSp="16000" learnedByNpc="true" />
+		<skill skillName="Soul Mastery" skillId="467" skillLvl="10" getLevel="43" levelUpSp="49000" learnedByNpc="true" />
+		<skill skillName="Dark Smash" skillId="477" skillLvl="4" getLevel="43" levelUpSp="16000" learnedByNpc="true" />
+		<skill skillName="Dark Smash" skillId="477" skillLvl="5" getLevel="43" levelUpSp="16000" learnedByNpc="true" />
+		<skill skillName="Dark Smash" skillId="477" skillLvl="6" getLevel="43" levelUpSp="16000" learnedByNpc="true" />
+		<skill skillName="Shoulder Charge" skillId="494" skillLvl="4" getLevel="43" levelUpSp="16000" learnedByNpc="true" />
+		<skill skillName="Shoulder Charge" skillId="494" skillLvl="5" getLevel="43" levelUpSp="16000" learnedByNpc="true" />
+		<skill skillName="Shoulder Charge" skillId="494" skillLvl="6" getLevel="43" levelUpSp="16000" learnedByNpc="true" />
+		<skill skillName="Disarm" skillId="485" skillLvl="2" getLevel="43" levelUpSp="49000" learnedByNpc="true" />
+		<skill skillName="Scorn" skillId="503" skillLvl="1" getLevel="43" levelUpSp="49000" learnedByNpc="true" />
+		<skill skillName="Dark Armor" skillId="481" skillLvl="2" getLevel="43" levelUpSp="49000" learnedByNpc="true" />
+		<skill skillName="Fast Recovery" skillId="832" skillLvl="1" getLevel="43" levelUpSp="49000" learnedByNpc="true" />
 		<skill skillName="Ancient Sword Mastery" skillId="472" skillLvl="15" getLevel="46" levelUpSp="25000" learnedByNpc="true" />
 		<skill skillName="Ancient Sword Mastery" skillId="472" skillLvl="16" getLevel="46" levelUpSp="25000" learnedByNpc="true" />
 		<skill skillName="Ancient Sword Mastery" skillId="472" skillLvl="17" getLevel="46" levelUpSp="25000" learnedByNpc="true" />
@@ -212,29 +200,29 @@
 		<skill skillName="Spread Wing" skillId="492" skillLvl="10" getLevel="60" levelUpSp="112000" learnedByNpc="true" />
 		<skill skillName="Spread Wing" skillId="492" skillLvl="11" getLevel="60" levelUpSp="112000" learnedByNpc="true" />
 		<skill skillName="Critical Sense" skillId="626" skillLvl="3" getLevel="60" levelUpSp="223000" learnedByNpc="true" />
-		<skill skillName="Ancient Sword Mastery" skillId="472" skillLvl="32" getLevel="62" levelUpSp="130000" learnedByNpc="true" />
-		<skill skillName="Ancient Sword Mastery" skillId="472" skillLvl="33" getLevel="62" levelUpSp="130000" learnedByNpc="true" />
-		<skill skillName="Light Armor Mastery" skillId="465" skillLvl="37" getLevel="62" levelUpSp="130000" learnedByNpc="true" />
-		<skill skillName="Light Armor Mastery" skillId="465" skillLvl="38" getLevel="62" levelUpSp="130000" learnedByNpc="true" />
-		<skill skillName="Magic Immunity" skillId="466" skillLvl="42" getLevel="62" levelUpSp="130000" learnedByNpc="true" />
-		<skill skillName="Magic Immunity" skillId="466" skillLvl="43" getLevel="62" levelUpSp="130000" learnedByNpc="true" />
-		<skill skillName="Soul Mastery" skillId="467" skillLvl="17" getLevel="62" levelUpSp="270000" learnedByNpc="true" />
-		<skill skillName="Dark Smash" skillId="477" skillLvl="24" getLevel="62" levelUpSp="130000" learnedByNpc="true" />
-		<skill skillName="Dark Smash" skillId="477" skillLvl="25" getLevel="62" levelUpSp="130000" learnedByNpc="true" />
-		<skill skillName="Slashing Blade" skillId="496" skillLvl="18" getLevel="62" levelUpSp="130000" learnedByNpc="true" />
-		<skill skillName="Slashing Blade" skillId="496" skillLvl="19" getLevel="62" levelUpSp="130000" learnedByNpc="true" />
-		<skill skillName="Crush of Pain" skillId="497" skillLvl="3" getLevel="62" levelUpSp="130000" learnedByNpc="true" />
-		<skill skillName="Crush of Pain" skillId="497" skillLvl="4" getLevel="62" levelUpSp="130000" learnedByNpc="true" />
-		<skill skillName="Violent Temper" skillId="501" skillLvl="6" getLevel="62" levelUpSp="270000" learnedByNpc="true" />
-		<skill skillName="Shoulder Charge" skillId="494" skillLvl="24" getLevel="62" levelUpSp="130000" learnedByNpc="true" />
-		<skill skillName="Shoulder Charge" skillId="494" skillLvl="25" getLevel="62" levelUpSp="130000" learnedByNpc="true" />
-		<skill skillName="Disarm" skillId="485" skillLvl="5" getLevel="62" levelUpSp="270000" learnedByNpc="true" />
-		<skill skillName="Courage" skillId="499" skillLvl="3" getLevel="62" levelUpSp="270000" learnedByNpc="true" />
-		<skill skillName="Storm Assault" skillId="493" skillLvl="15" getLevel="62" levelUpSp="130000" learnedByNpc="true" />
-		<skill skillName="Storm Assault" skillId="493" skillLvl="16" getLevel="62" levelUpSp="130000" learnedByNpc="true" />
-		<skill skillName="Blade Rush" skillId="495" skillLvl="4" getLevel="62" levelUpSp="270000" learnedByNpc="true" />
-		<skill skillName="Spread Wing" skillId="492" skillLvl="12" getLevel="62" levelUpSp="130000" learnedByNpc="true" />
-		<skill skillName="Spread Wing" skillId="492" skillLvl="13" getLevel="62" levelUpSp="130000" learnedByNpc="true" />
+		<skill skillName="Ancient Sword Mastery" skillId="472" skillLvl="32" getLevel="62" levelUpSp="140000" learnedByNpc="true" />
+		<skill skillName="Ancient Sword Mastery" skillId="472" skillLvl="33" getLevel="62" levelUpSp="140000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="465" skillLvl="37" getLevel="62" levelUpSp="140000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="465" skillLvl="38" getLevel="62" levelUpSp="140000" learnedByNpc="true" />
+		<skill skillName="Magic Immunity" skillId="466" skillLvl="42" getLevel="62" levelUpSp="140000" learnedByNpc="true" />
+		<skill skillName="Magic Immunity" skillId="466" skillLvl="43" getLevel="62" levelUpSp="140000" learnedByNpc="true" />
+		<skill skillName="Soul Mastery" skillId="467" skillLvl="17" getLevel="62" levelUpSp="290000" learnedByNpc="true" />
+		<skill skillName="Dark Smash" skillId="477" skillLvl="24" getLevel="62" levelUpSp="140000" learnedByNpc="true" />
+		<skill skillName="Dark Smash" skillId="477" skillLvl="25" getLevel="62" levelUpSp="140000" learnedByNpc="true" />
+		<skill skillName="Slashing Blade" skillId="496" skillLvl="18" getLevel="62" levelUpSp="140000" learnedByNpc="true" />
+		<skill skillName="Slashing Blade" skillId="496" skillLvl="19" getLevel="62" levelUpSp="140000" learnedByNpc="true" />
+		<skill skillName="Crush of Pain" skillId="497" skillLvl="3" getLevel="62" levelUpSp="140000" learnedByNpc="true" />
+		<skill skillName="Crush of Pain" skillId="497" skillLvl="4" getLevel="62" levelUpSp="140000" learnedByNpc="true" />
+		<skill skillName="Violent Temper" skillId="501" skillLvl="6" getLevel="62" levelUpSp="290000" learnedByNpc="true" />
+		<skill skillName="Shoulder Charge" skillId="494" skillLvl="24" getLevel="62" levelUpSp="140000" learnedByNpc="true" />
+		<skill skillName="Shoulder Charge" skillId="494" skillLvl="25" getLevel="62" levelUpSp="140000" learnedByNpc="true" />
+		<skill skillName="Disarm" skillId="485" skillLvl="5" getLevel="62" levelUpSp="290000" learnedByNpc="true" />
+		<skill skillName="Courage" skillId="499" skillLvl="3" getLevel="62" levelUpSp="290000" learnedByNpc="true" />
+		<skill skillName="Storm Assault" skillId="493" skillLvl="15" getLevel="62" levelUpSp="140000" learnedByNpc="true" />
+		<skill skillName="Storm Assault" skillId="493" skillLvl="16" getLevel="62" levelUpSp="140000" learnedByNpc="true" />
+		<skill skillName="Blade Rush" skillId="495" skillLvl="4" getLevel="62" levelUpSp="290000" learnedByNpc="true" />
+		<skill skillName="Spread Wing" skillId="492" skillLvl="12" getLevel="62" levelUpSp="140000" learnedByNpc="true" />
+		<skill skillName="Spread Wing" skillId="492" skillLvl="13" getLevel="62" levelUpSp="140000" learnedByNpc="true" />
 		<skill skillName="Ancient Sword Mastery" skillId="472" skillLvl="34" getLevel="64" levelUpSp="170000" learnedByNpc="true" />
 		<skill skillName="Ancient Sword Mastery" skillId="472" skillLvl="35" getLevel="64" levelUpSp="170000" learnedByNpc="true" />
 		<skill skillName="Light Armor Mastery" skillId="465" skillLvl="39" getLevel="64" levelUpSp="170000" learnedByNpc="true" />
@@ -380,8 +368,5 @@
 		<skill skillName="Blade Rush" skillId="495" skillLvl="10" getLevel="74" levelUpSp="1900000" learnedByNpc="true" />
 		<skill skillName="Spread Wing" skillId="492" skillLvl="24" getLevel="74" levelUpSp="930000" learnedByNpc="true" />
 		<skill skillName="Spread Wing" skillId="492" skillLvl="25" getLevel="74" levelUpSp="930000" learnedByNpc="true" />
-
-		<!-- HighFive new -->
-		<skill skillName="Soul Roar" skillId="20006" skillLvl="1" getLevel="62" levelUpSp="270000" learnedByNpc="true" />
 	</skillTree>
 </list>

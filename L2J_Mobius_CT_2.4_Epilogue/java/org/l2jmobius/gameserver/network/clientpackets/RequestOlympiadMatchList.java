@@ -17,9 +17,8 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.commons.network.PacketReader;
-import org.l2jmobius.gameserver.handler.BypassHandler;
-import org.l2jmobius.gameserver.handler.IBypassHandler;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.olympiad.Olympiad;
 import org.l2jmobius.gameserver.network.GameClient;
 
 /**
@@ -28,8 +27,6 @@ import org.l2jmobius.gameserver.network.GameClient;
  */
 public class RequestOlympiadMatchList implements IClientIncomingPacket
 {
-	private static final String COMMAND = "arenalist";
-	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
 	{
@@ -45,10 +42,6 @@ public class RequestOlympiadMatchList implements IClientIncomingPacket
 			return;
 		}
 		
-		final IBypassHandler handler = BypassHandler.getInstance().getHandler(COMMAND);
-		if (handler != null)
-		{
-			handler.useBypass(COMMAND, player, null);
-		}
+		Olympiad.sendMatchList(player);
 	}
 }

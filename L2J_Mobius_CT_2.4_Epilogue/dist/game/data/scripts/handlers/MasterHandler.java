@@ -150,8 +150,6 @@ import handlers.bypasshandlers.Loto;
 import handlers.bypasshandlers.Multisell;
 import handlers.bypasshandlers.NpcViewMod;
 import handlers.bypasshandlers.Observation;
-import handlers.bypasshandlers.OlympiadManagerLink;
-import handlers.bypasshandlers.OlympiadObservation;
 import handlers.bypasshandlers.PlayerHelp;
 import handlers.bypasshandlers.PrivateWarehouse;
 import handlers.bypasshandlers.QuestLink;
@@ -190,6 +188,7 @@ import handlers.communityboard.MailBoard;
 import handlers.communityboard.MemoBoard;
 import handlers.communityboard.RegionBoard;
 import handlers.itemhandlers.BeastSoulShot;
+import handlers.itemhandlers.BeastSpice;
 import handlers.itemhandlers.BeastSpiritShot;
 import handlers.itemhandlers.BlessedSpiritShot;
 import handlers.itemhandlers.Book;
@@ -453,8 +452,6 @@ public class MasterHandler
 			Multisell.class,
 			NpcViewMod.class,
 			Observation.class,
-			OlympiadObservation.class,
-			OlympiadManagerLink.class,
 			QuestLink.class,
 			PlayerHelp.class,
 			PrivateWarehouse.class,
@@ -502,6 +499,7 @@ public class MasterHandler
 		{
 			// Item Handlers
 			BeastSoulShot.class,
+			BeastSpice.class,
 			BeastSpiritShot.class,
 			BlessedSpiritShot.class,
 			Book.class,

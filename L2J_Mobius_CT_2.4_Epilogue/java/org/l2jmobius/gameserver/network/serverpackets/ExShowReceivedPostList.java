@@ -53,9 +53,8 @@ public class ExShowReceivedPostList implements IClientOutgoingPacket
 				packet.writeD(msg.isUnread() ? 0x01 : 0x00);
 				packet.writeD(0x01);
 				packet.writeD(msg.hasAttachments() ? 0x01 : 0x00);
-				packet.writeD(msg.isReturned() ? 0x01 : 0x00);
 				packet.writeD(msg.getSendBySystem());
-				packet.writeD(0x00);
+				packet.writeD(msg.isReturned() ? 0x01 : 0x00);
 			}
 		}
 		else

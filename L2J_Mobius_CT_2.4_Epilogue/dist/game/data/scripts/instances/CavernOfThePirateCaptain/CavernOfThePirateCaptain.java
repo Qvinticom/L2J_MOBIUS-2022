@@ -43,19 +43,12 @@ public class CavernOfThePirateCaptain extends AbstractInstance
 	private static final int PATHFINDER = 32713; // Pathfinder Worker
 	private static final int ZAKEN_60 = 29176; // Zaken
 	private static final int ZAKEN_60_NIGHT = 29022; // Zaken Night
-	private static final int ZAKEN_83 = 29181; // Zaken
 	private static final int CANDLE = 32705; // Zaken's Candle
 	private static final int DOLL_BLADER_60 = 29023; // Doll Blader
-	private static final int DOLL_BLADER_83 = 29182; // Doll Blader
 	private static final int VALE_MASTER_60 = 29024; // Veil Master
-	private static final int VALE_MASTER_83 = 29183; // Veil Master
 	private static final int PIRATES_ZOMBIE_60 = 29027; // Pirate Zombie
-	private static final int PIRATES_ZOMBIE_83 = 29185; // Pirate Zombie
 	private static final int PIRATES_ZOMBIE_CAPTAIN_60 = 29026; // Pirate Zombie Captain
-	private static final int PIRATES_ZOMBIE_CAPTAIN_83 = 29184; // Pirate Zombie Captain
 	// Items
-	private static final int VORPAL_RING = 15763; // Sealed Vorpal Ring
-	private static final int VORPAL_EARRING = 15764; // Sealed Vorpal Earring
 	private static final int FIRE = 15280; // Transparent 1HS (for NPC)
 	private static final int RED = 15281; // Transparent 1HS (for NPC)
 	private static final int BLUE = 15302; // Transparent Bow (for NPC)
@@ -110,16 +103,12 @@ public class CavernOfThePirateCaptain extends AbstractInstance
 	};
 	// Misc
 	private static final int MIN_LV_60 = 55;
-	private static final int MIN_LV_83 = 78;
 	private static final int PLAYERS_60_MIN = 9;
 	private static final int PLAYERS_60_MAX = 27;
 	private static final int PLAYERS_60_NIGHT_MIN = 72;
 	private static final int PLAYERS_60_NIGHT_MAX = 450;
-	private static final int PLAYERS_83_MIN = 9;
-	private static final int PLAYERS_83_MAX = 27;
 	private static final int TEMPLATE_ID_60 = 133;
 	private static final int TEMPLATE_ID_60_NIGHT = 114;
-	private static final int TEMPLATE_ID_83 = 135;
 	//@formatter:off
 	private static final int[][] ROOM_DATA =
 	{
@@ -148,7 +137,7 @@ public class CavernOfThePirateCaptain extends AbstractInstance
 	{
 		addStartNpc(PATHFINDER);
 		addTalkId(PATHFINDER);
-		addKillId(ZAKEN_60, ZAKEN_60_NIGHT, ZAKEN_83);
+		addKillId(ZAKEN_60, ZAKEN_60_NIGHT);
 		addFirstTalkId(CANDLE);
 	}
 	
@@ -157,7 +146,6 @@ public class CavernOfThePirateCaptain extends AbstractInstance
 	{
 		if (firstEntrance)
 		{
-			world.setParameter("is83", world.getTemplateId() == TEMPLATE_ID_83);
 			world.setParameter("isNight", world.getTemplateId() == TEMPLATE_ID_60_NIGHT);
 			world.setParameter("storeTime", System.currentTimeMillis());
 			
@@ -211,7 +199,6 @@ public class CavernOfThePirateCaptain extends AbstractInstance
 			return false;
 		}
 		
-		final boolean is83 = templateId == TEMPLATE_ID_83;
 		final boolean isNight = templateId == TEMPLATE_ID_60_NIGHT;
 		final Party party = player.getParty();
 		final boolean isInCC = party.isInCommandChannel();
@@ -224,7 +211,7 @@ public class CavernOfThePirateCaptain extends AbstractInstance
 			return false;
 		}
 		
-		if ((members.size() < (is83 ? PLAYERS_83_MIN : isNight ? PLAYERS_60_NIGHT_MIN : PLAYERS_60_MIN)) || (members.size() > (is83 ? PLAYERS_83_MAX : isNight ? PLAYERS_60_NIGHT_MAX : PLAYERS_60_MAX)))
+		if ((members.size() < (isNight ? PLAYERS_60_NIGHT_MIN : PLAYERS_60_MIN)) || (members.size() > (isNight ? PLAYERS_60_NIGHT_MAX : PLAYERS_60_MAX)))
 		{
 			broadcastSystemMessage(player, null, SystemMessageId.YOU_CANNOT_ENTER_DUE_TO_THE_PARTY_HAVING_EXCEEDED_THE_LIMIT, false);
 			return false;
@@ -232,7 +219,7 @@ public class CavernOfThePirateCaptain extends AbstractInstance
 		
 		for (PlayerInstance groupMembers : members)
 		{
-			if (groupMembers.getLevel() < (is83 ? MIN_LV_83 : MIN_LV_60))
+			if (groupMembers.getLevel() < MIN_LV_60)
 			{
 				broadcastSystemMessage(player, groupMembers, SystemMessageId.C1_S_LEVEL_DOES_NOT_CORRESPOND_TO_THE_REQUIREMENTS_FOR_ENTRY, true);
 				return false;
@@ -244,7 +231,7 @@ public class CavernOfThePirateCaptain extends AbstractInstance
 				return false;
 			}
 			
-			final Long reentertime = InstanceManager.getInstance().getInstanceTime(groupMembers.getObjectId(), (is83 ? TEMPLATE_ID_83 : isNight ? TEMPLATE_ID_60_NIGHT : TEMPLATE_ID_60));
+			final Long reentertime = InstanceManager.getInstance().getInstanceTime(groupMembers.getObjectId(), isNight ? TEMPLATE_ID_60_NIGHT : TEMPLATE_ID_60);
 			if (System.currentTimeMillis() < reentertime)
 			{
 				broadcastSystemMessage(player, groupMembers, SystemMessageId.C1_MAY_NOT_RE_ENTER_YET, true);
@@ -294,13 +281,6 @@ public class CavernOfThePirateCaptain extends AbstractInstance
 				enterInstance(player, TEMPLATE_ID_60_NIGHT);
 			}
 		}
-		else if (event.equals("enter83"))
-		{
-			if (checkConditions(player, TEMPLATE_ID_83))
-			{
-				enterInstance(player, TEMPLATE_ID_83);
-			}
-		}
 		else
 		{
 			final InstanceWorld world = InstanceManager.getInstance().getWorld(npc);
@@ -345,10 +325,10 @@ public class CavernOfThePirateCaptain extends AbstractInstance
 							final int room = getRoomByCandle(npc);
 							npc.setRHandId(RED);
 							manageScreenMsg(world, NpcStringId.THE_CANDLES_CAN_LEAD_YOU_TO_ZAKEN_DESTROY_HIM);
-							spawnNpc(world.getParameters().getBoolean("is83", false) ? DOLL_BLADER_83 : DOLL_BLADER_60, room, player, world);
-							spawnNpc(world.getParameters().getBoolean("is83", false) ? VALE_MASTER_83 : VALE_MASTER_60, room, player, world);
-							spawnNpc(world.getParameters().getBoolean("is83", false) ? PIRATES_ZOMBIE_83 : PIRATES_ZOMBIE_60, room, player, world);
-							spawnNpc(world.getParameters().getBoolean("is83", false) ? PIRATES_ZOMBIE_CAPTAIN_83 : PIRATES_ZOMBIE_CAPTAIN_60, room, player, world);
+							spawnNpc(DOLL_BLADER_60, room, player, world);
+							spawnNpc(VALE_MASTER_60, room, player, world);
+							spawnNpc(PIRATES_ZOMBIE_60, room, player, world);
+							spawnNpc(PIRATES_ZOMBIE_CAPTAIN_60, room, player, world);
 						}
 						break;
 					}
@@ -360,9 +340,9 @@ public class CavernOfThePirateCaptain extends AbstractInstance
 						}
 						world.getParameters().getObject("zaken", Npc.class).setInvisible(false);
 						world.getParameters().getObject("zaken", Npc.class).setIsParalyzed(false);
-						spawnNpc(world.getParameters().getBoolean("is83", false) ? DOLL_BLADER_83 : DOLL_BLADER_60, world.getParameters().getInt("zakenRoom", 0), player, world);
-						spawnNpc(world.getParameters().getBoolean("is83", false) ? PIRATES_ZOMBIE_83 : PIRATES_ZOMBIE_60, world.getParameters().getInt("zakenRoom", 0), player, world);
-						spawnNpc(world.getParameters().getBoolean("is83", false) ? PIRATES_ZOMBIE_CAPTAIN_83 : PIRATES_ZOMBIE_CAPTAIN_60, world.getParameters().getInt("zakenRoom", 0), player, world);
+						spawnNpc(DOLL_BLADER_60, world.getParameters().getInt("zakenRoom", 0), player, world);
+						spawnNpc(PIRATES_ZOMBIE_60, world.getParameters().getInt("zakenRoom", 0), player, world);
+						spawnNpc(PIRATES_ZOMBIE_CAPTAIN_60, world.getParameters().getInt("zakenRoom", 0), player, world);
 						break;
 					}
 				}
@@ -377,37 +357,6 @@ public class CavernOfThePirateCaptain extends AbstractInstance
 		final InstanceWorld world = InstanceManager.getInstance().getWorld(npc);
 		if (world != null)
 		{
-			if (npc.getId() == ZAKEN_83)
-			{
-				for (PlayerInstance playersInside : world.getParameters().getList("playersInside", PlayerInstance.class))
-				{
-					if ((playersInside != null) && ((playersInside.getInstanceId() == world.getInstanceId()) && playersInside.isInsideRadius3D(npc, 1500)))
-					{
-						final long time = System.currentTimeMillis() - world.getParameters().getLong("storeTime", 0);
-						if (time <= 300000) // 5 minutes
-						{
-							if (getRandomBoolean())
-							{
-								giveItems(playersInside, VORPAL_RING, 1);
-							}
-						}
-						else if (time <= 600000) // 10 minutes
-						{
-							if (getRandom(100) < 30)
-							{
-								giveItems(playersInside, VORPAL_EARRING, 1);
-							}
-						}
-						else if (time <= 900000) // 15 minutes
-						{
-							if (getRandom(100) < 25)
-							{
-								giveItems(playersInside, VORPAL_RING, 1);
-							}
-						}
-					}
-				}
-			}
 			finishInstance(world);
 		}
 		return super.onKill(npc, killer, isSummon);
@@ -480,7 +429,7 @@ public class CavernOfThePirateCaptain extends AbstractInstance
 	
 	private Attackable spawnNpc(int npcId, int roomId, PlayerInstance player, InstanceWorld world)
 	{
-		if ((player != null) && (npcId != ZAKEN_60) && (npcId != ZAKEN_83))
+		if ((player != null) && (npcId != ZAKEN_60))
 		{
 			final Attackable mob = (Attackable) addSpawn(npcId, ROOM_DATA[roomId - 1][0] + getRandom(350), ROOM_DATA[roomId - 1][1] + getRandom(350), ROOM_DATA[roomId - 1][2], 0, false, 0, false, world.getInstanceId());
 			addAttackDesire(mob, player);
@@ -505,7 +454,7 @@ public class CavernOfThePirateCaptain extends AbstractInstance
 		{
 			candles.get(ROOM_DATA[world.getParameters().getInt("zakenRoom", 0) - 1][i] - 1).getVariables().set("isBlue", 1);
 		}
-		final Npc zaken = spawnNpc(world.getParameters().getBoolean("is83", false) ? ZAKEN_83 : world.getParameters().getBoolean("isNight", false) ? ZAKEN_60_NIGHT : ZAKEN_60, world.getParameters().getInt("zakenRoom", 0), null, world);
+		final Npc zaken = spawnNpc(world.getParameters().getBoolean("isNight", false) ? ZAKEN_60_NIGHT : ZAKEN_60, world.getParameters().getInt("zakenRoom", 0), null, world);
 		zaken.setInvisible(true);
 		zaken.setIsParalyzed(true);
 		world.setParameter("zaken", zaken);

@@ -21,7 +21,6 @@ import java.util.logging.Logger;
 
 import ai.areas.Gracia.AI.EnergySeeds;
 import ai.areas.Gracia.AI.Lindvior;
-import ai.areas.Gracia.AI.Maguen;
 import ai.areas.Gracia.AI.StarStones;
 import ai.areas.Gracia.AI.NPC.AbyssGaze.AbyssGaze;
 import ai.areas.Gracia.AI.NPC.EkimusMouth.EkimusMouth;
@@ -29,11 +28,9 @@ import ai.areas.Gracia.AI.NPC.FortuneTelling.FortuneTelling;
 import ai.areas.Gracia.AI.NPC.GeneralDilios.GeneralDilios;
 import ai.areas.Gracia.AI.NPC.Klemis.Klemis;
 import ai.areas.Gracia.AI.NPC.Lekon.Lekon;
-import ai.areas.Gracia.AI.NPC.Nemo.Nemo;
 import ai.areas.Gracia.AI.NPC.Nottingale.Nottingale;
 import ai.areas.Gracia.AI.NPC.Seyo.Seyo;
 import ai.areas.Gracia.AI.NPC.ZealotOfShilen.ZealotOfShilen;
-import ai.areas.Gracia.AI.SeedOfAnnihilation.SeedOfAnnihilation;
 import ai.areas.Gracia.instances.HallOfErosionAttack.HallOfErosionAttack;
 import ai.areas.Gracia.instances.HallOfErosionDefence.HallOfErosionDefence;
 import ai.areas.Gracia.instances.HallOfSufferingAttack.HallOfSufferingAttack;
@@ -61,7 +58,6 @@ public class GraciaLoader
 		// AIs
 		EnergySeeds.class,
 		Lindvior.class,
-		Maguen.class,
 		StarStones.class,
 		// NPCs
 		AbyssGaze.class,
@@ -70,12 +66,9 @@ public class GraciaLoader
 		GeneralDilios.class,
 		Klemis.class,
 		Lekon.class,
-		Nemo.class,
 		Nottingale.class,
 		Seyo.class,
 		ZealotOfShilen.class,
-		// Seed of Annihilation
-		SeedOfAnnihilation.class,
 		// Instances
 		SecretArea.class,
 		SeedOfDestruction.class,

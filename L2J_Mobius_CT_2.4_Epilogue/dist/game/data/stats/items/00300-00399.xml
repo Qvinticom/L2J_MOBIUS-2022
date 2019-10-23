@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="300" type="Weapon" name="Great Axe">
-		<!-- Bestows one of the following functions: Anger, Critical Stun or Light. -->
+		<!-- Bestows either Anger, Critical Stun or Light. -->
 		<set name="icon" val="icon.weapon_great_axe_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -30,7 +30,7 @@
 		</for>
 	</item>
 	<item id="301" type="Weapon" name="Scorpion">
-		<!-- Bestows one of the following functions: Anger, Critical Stun or Wide Blow. -->
+		<!-- Bestows either Anger, Critical Stun or Wide Blow. -->
 		<set name="icon" val="icon.weapon_scorpion_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -59,7 +59,7 @@
 		</for>
 	</item>
 	<item id="302" type="Weapon" name="Body Slasher">
-		<!-- Bestows one of the following functions: Critical Stun, Towering Blow or Wide Blow. -->
+		<!-- Bestows either Critical Stun, Towering Blow or Wide Blow. -->
 		<set name="icon" val="icon.weapon_body_slasher_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -88,7 +88,7 @@
 		</for>
 	</item>
 	<item id="303" type="Weapon" name="Widow Maker">
-		<!-- Bestows one of the following functions: Critical Stun, Towering Blow or Wide Blow. -->
+		<!-- Bestows either Critical Stun, Towering Blow or Wide Blow. -->
 		<set name="icon" val="icon.weapon_widow_maker_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />

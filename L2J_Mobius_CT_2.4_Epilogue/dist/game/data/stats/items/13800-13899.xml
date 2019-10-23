@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="13800" type="EtcItem" name="Transformation Scroll: Frog">
-		<!-- Frog transformation scroll that was given by Secret Agent Colin. Use the scroll to obtain the bead from the Frog King at Narsell Lake. -->
+		<!-- Frog transformation scroll that was given by Secret Agent Kollin. Use the scroll to obtain the bead from the Frog King at Narsell Lake. -->
 		<set name="icon" val="icon.etc_q_frog_green_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ELIXIR" />
@@ -14,7 +14,7 @@
 		<set name="item_skill" val="2631-1" /> <!-- Scroll of Transformation - Frog -->
 	</item>
 	<item id="13801" type="EtcItem" name="Transformation Scroll: Young Child">
-		<!-- Frog transformation scroll that was given by Secret Agent Colin. Use the scroll to obtain candy from Grandma Tess at Narsell Lake. -->
+		<!-- Frog transformation scroll that was given by Secret Agent Kollin. Use the scroll to obtain candy from Grandma Tess at Narsell Lake. -->
 		<set name="icon" val="icon.weapon_apprentices_rod_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ELIXIR" />
@@ -27,7 +27,7 @@
 		<set name="item_skill" val="2632-1" /> <!-- Scroll of Transformation - Young Child -->
 	</item>
 	<item id="13802" type="Armor" name="Native's Hood">
-		<!-- Equip this hood, obtained from Secret Agent Colin, to alter your appearance, speak with Native Kuta at Narsell Lake and obtain the Native's Gloves. -->
+		<!-- Equip this hood, obtained from Secret Trainer Kollin, to alter your appearance, speak with Native Kuta at Narsell Lake and obtain the Native's Gloves. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -46,7 +46,7 @@
 		</for>
 	</item>
 	<item id="13803" type="Armor" name="Native's Tunic">
-		<!-- Equip this tunic, obtained from Secret Agent Colin, to alter your appearance, speak with Native Kuta at Narsell Lake and obtain the Native's Gloves. -->
+		<!-- Equip this tunic, obtained from Secret Trainer Kollin, to alter your appearance, speak with Native Kuta at Narsell Lake and obtain the Native's Gloves. -->
 		<set name="icon" val="icon.armor_t34_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -65,7 +65,7 @@
 		</for>
 	</item>
 	<item id="13804" type="Armor" name="Native's Trousers">
-		<!-- Equip these trousers, obtained from Secret Agent Colin, to alter your appearance, speak with Native Kuta at Narsell Lake and obtain the Native's Gloves. -->
+		<!-- Equip these trousers, obtained from Secret Trainer Kollin, to alter your appearance, speak with Native Kuta at Narsell Lake and obtain the Native's Gloves. -->
 		<set name="icon" val="icon.armor_t34_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -84,7 +84,7 @@
 		</for>
 	</item>
 	<item id="13805" type="Armor" name="Guards of the Dawn Helmet">
-		<!-- Obtained from Secret Agent Colin, it allows you use the Guards' Transformation skill when equipped with the Guards of Dawn Tunic and Trousers. -->
+		<!-- Obtained from Secret Trainer Kollin, it allows you use the Guards' Transformation skill when equipped with the Guards of Dawn Tunic and Trousers. -->
 		<set name="icon" val="icon.armor_leather_helmet_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -103,7 +103,7 @@
 		</for>
 	</item>
 	<item id="13806" type="Armor" name="Guards of the Dawn Tunic">
-		<!-- Obtained from Secret Agent Colin, it allows you use the Guards' Transformation skill when equipped with the Guards of Dawn Helmet and Trousers. -->
+		<!-- Obtained from Secret Trainer Kollin, it allows you use the Guards' Transformation skill when equipped with the Guards of Dawn Helmet and Trousers. -->
 		<set name="icon" val="icon.armor_t08_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -122,7 +122,7 @@
 		</for>
 	</item>
 	<item id="13807" type="Armor" name="Guards of the Dawn Trousers">
-		<!-- Obtained from Secret Agent Colin, it allows you use the Guards' Transformation skill when equipped with the Guards of Dawn Tunic and Helmet. -->
+		<!-- Obtained from Secret Trainer Kollin, it allows you use the Guards' Transformation skill when equipped with the Guards of Dawn Tunic and Helmet. -->
 		<set name="icon" val="icon.armor_t08_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -177,7 +177,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="13811" type="EtcItem" name="Keucereus' Introduction - Seed of Infinity">
-		<!-- Introduction received from Keucereus. If you go northwest from Keucereus Alliance Base, you can reach the Seed of Infinity. Deliver this mark to Officer Tepios there. -->
+		<!-- Introduction received from Keucereus. If you go northwest from Keucereus Alliance Base, you can reach the Seed of Infinity. Deliver this mark to Offier Tepios there. -->
 		<set name="icon" val="icon.etc_letter_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -326,7 +326,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="13825" type="EtcItem" name="Grail of Einhasad">
-		<!-- Proof that all Necropolis and Catacombs have been sealed. Deliver it to Emperor Shunaiman (Elmoreden Era). -->
+		<!-- Proof that all Necropoli and Catacombs have been sealed. Deliver it to Emperor Shunaiman (Elmoreden Era). -->
 		<set name="icon" val="icon.etc_holy_grail_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -497,7 +497,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="13841" type="EtcItem" name="Dragonkin Charm">
-		<!-- Energy from the Dragonkin that infest the Seed of Destruction. Can be used at Special Product Broker Kirklan. -->
+		<!-- Seed of Destruction special product. -->
 		<set name="icon" val="icon.etc_feather_gold_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -579,7 +579,7 @@
 		<set name="for_npc" val="true" />
 	</item>
 	<item id="13845" type="Weapon" name="Attribute Master Yin's Sword">
-		<!-- Weapon provided by Attribute Master Yin for capturing the Reckless Sprites of Water. You can feel the powerful fire energy. The sprite's power contained in this weapon will be useful when capturing the reckless sprite. 10-minute-limited-time Item. Fire power +10. Cannot be exchanged or dropped. -->
+		<!-- Weapon provided by Attribute Master Yin for capturng the Reckless Sprites of Water. You can feel the powerful fire energy. The sprite's power contained in this weapon will be useful when capturing the reckless sprite. 10-minute-limited-time Item. Fire power +10. No exchange/drop available. -->
 		<set name="icon" val="icon.weapon_long_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -701,7 +701,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="13855" type="EtcItem" name="Sacred Light Fragment">
-		<!-- Fragment piece that looks like it will break at any moment. A sacred light flows out from it. If you are prepared for it to break, the sacred power of this fragment piece may allow you to inflict damage on Witch Tiat of the Dragon of Darkness. Cannot be exchanged or dropped. -->
+		<!-- Fragment piece that looks like it will break at any moment. A sacred light flows out from it. If you are prepared for it to break, the sacred power of this fragment piece may allow you to inflict damage on Witch Tiat of the Dragon of Darkness. No exchange/drop available. -->
 		<set name="icon" val="icon.etc_piece_holy_light" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -792,7 +792,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="13863" type="EtcItem" name="Freed Soul Fragment">
-		<!-- Obtained through hunting in the Seed of Infinity. If you take them to Special Products Broker Kirklan you can exchange 5 of these items for a Freed Soul. -->
+		<!-- Obtained through hunting in the Seed of Infinity region, if you take them to Special Products Broker Kutran at Keucereus Alliance Base, you can exchange them for a Freed Soul's Nucleus. -->
 		<set name="icon" val="icon.etc_debris_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -804,7 +804,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="13864" type="EtcItem" name="Seal of Tiat">
-		<!-- Obtained after defeating Tiat, it represents Tiat's authority and power. Take it to Special Products Broker Kirklan at Keucereus Alliance Base to exchange it for a special item. -->
+		<!-- Obtained after defeating Tiat, it represents Tiat's authority and power. Take it to Special Products Broker Kutran at Keucereus Alliance Base to exchange it for a special item. -->
 		<set name="icon" val="icon.tiat_seal_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -815,7 +815,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="13865" type="EtcItem" name="Dragonkin Charm Fragment">
-		<!-- Obtained through hunting in the Seed of Destruction. If you take them to Special Products Broker Kirklan you can exchange 5 of these items for a Dragonkin Charm. -->
+		<!-- Obtained through hunting in the Seed of Destruction region, take them to Special Products Broker Kutran at Keucereus Alliance Base to exchange them for a Fleet Steed Troup's Charm. -->
 		<set name="icon" val="icon.etc_totem_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -827,7 +827,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="13866" type="EtcItem" name="Restless Soul">
-		<!-- Obtained in the Seed of Infinity. Take these Restless Souls to Special Products Broker Kirklan to exchange them for a reward. -->
+		<!-- Obtained in the Seed of Infinity region take these soul fragments to Special Products Broker Kutran at Keucereus Alliance Base to exchange them for a useful item. -->
 		<set name="icon" val="icon.soul_facet_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -838,7 +838,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="13867" type="EtcItem" name="Tiat Charm">
-		<!-- Breath of Tiat fragment that can be harvested by collecting in the Seed of Destruction region. If you bring it to the special products broker Kutran at the Kucereus clan outpost, you can exchange it for a useful item. -->
+		<!-- Obtained in the Seed of Infinity region take these soul fragments to Special Products Broker Kutran at Keucereus Alliance Base to exchange them for a useful item. -->
 		<set name="icon" val="icon.tiat_breath_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -850,7 +850,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="13868" type="EtcItem" name="Yehan Klodekus' Badge">
-		<!-- Badge of Yehan Klodekus, who degenerated into a Death Knight through M. Atk. of the Seed of Infinity. -->
+		<!-- Badge of Yehan Klodekus, who degenerated into a Death Knight through the magic power of the Seed of Infinity. -->
 		<set name="icon" val="icon.etc_badge_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -861,7 +861,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="13869" type="EtcItem" name="Yehan Klanikus' Badge">
-		<!-- Badge of Yehan Klanikus, who degenerated into a Death Knight through M. Atk. of the Seed of Infinity. -->
+		<!-- Badge of Yehan Klanikus, who degenerated into a Death Knight through the magic power of the Seed of Infinity. -->
 		<set name="icon" val="icon.etc_badge_silver_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -872,7 +872,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="13870" type="EtcItem" name="Lich Crystal">
-		<!-- Crystal left behind after the death of Kohemenus, who degenerated into a Lich through M. Atk. of the Seed of Infinity. -->
+		<!-- Crystal left behind after the death of Kohemenus, who degenerated into a Lich through the magic power of the Seed of Infinity. -->
 		<set name="icon" val="icon.etc_crystal_ball_green_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -998,7 +998,7 @@
 		<set name="item_skill" val="5822-1" /> <!-- Drake Bait -->
 	</item>
 	<item id="13881" type="Weapon" name="Attribute Master Yang's Sword">
-		<!-- Weapon provided by Attribute Master Yang for capturing the Reckless Sprites of Air. You can feel the powerful earth energy. The sprite's power contained in this weapon will be useful when capturing the reckless sprite. 10-minute-limited-time Item. Earth power +10. Cannot be exchanged or dropped. -->
+		<!-- Weapon provided by Attribute Master Yang for capturing the Reckless Sprites of Air. You can feel the powerfull earth energy. The sprite's power contained in this weapon will be usefull when capturing the reckless sprite. 10-minute-limited-time Item. Earth power +10. No exchange/drop available. -->
 		<set name="icon" val="icon.weapon_long_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1028,7 +1028,7 @@
 		</for>
 	</item>
 	<item id="13882" type="Weapon" name="Dynasty Dual Daggers">
-		<!-- P. Atk. of Dual Daggers increase more than that of regular one-handed swords when enchanted. When enchanted to 4 or more, increases Critical by 109. Increases the damage inflicted during PvP. Can be equipped by Dagger Masters above level 81. -->
+		<!-- The attack power of Dual Daggerss increase more than that of regular one-handed swords when enchanted. When enchanted to 4 or more, Critical increases by 109. Increases the damage inflicted during PvP. Can be equipped by Dagger Masters above level 81. -->
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALDAGGER" />
@@ -1038,7 +1038,7 @@
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="4219" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="2150" />
 		<set name="price" val="87901000" />
@@ -1065,7 +1065,7 @@
 		</for>
 	</item>
 	<item id="13883" type="Weapon" name="Icarus Dual Daggers">
-		<!-- P. Atk. of Dual Daggers increase more than that of regular one-handed swords when enchanted. When enchanted to 4 or more, increases Critical by 109. Increases the damage inflicted during PvP. Can be equipped by Dagger Masters above level 81. -->
+		<!-- The attack power Dual Daggerss increase more than that of regular one-handed swords when enchanted. When enchanted to 4 or more, Critical increases by 109. Increases the damage inflicted during PvP. Can be equipped by Dagger Masters above level 81. -->
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALDAGGER" />
@@ -1102,7 +1102,7 @@
 		</for>
 	</item>
 	<item id="13884" type="Weapon" name="Vesper Dual Daggers">
-		<!-- P. Atk. of Dual Daggers increase more than that of regular one-handed swords when enchanted. When enchanted to 4 or more, increases Critical by 109. Increases the damage inflicted during PvP. Can be equipped by Dagger Masters above level 81. -->
+		<!-- The attack power Dual Daggerss increase more than that of regular one-handed swords when enchanted. When enchanted to 4 or more, Critical increases by 109. Increases the damage inflicted during PvP. Can be equipped by Dagger Masters above level 81. -->
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALDAGGER" />
@@ -1168,7 +1168,7 @@
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="307" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="930" />
 		<set name="price" val="6404000" />
@@ -1222,7 +1222,7 @@
 		</for>
 	</item>
 	<item id="13889" type="Armor" name="Holy Spirit's Cloak - Kamael exclusive">
-		<!-- Cloak covered with energy of the Holy Spirit. Dark Attribute Defense +30. When the entire set of Vesper Noble or Dynasty set is worn, the Sealed Cloak Slot will be open and one can now wear the cloak. Kamael exclusive cloak. Enchantment, attribute and augmenting are impossible. -->
+		<!-- Cloak covered with energy of the Holy Spirit. Dark Attribute Defense +30. When the entire set of Vesper Noble or Dynasty set is worn, the Sealed Cloak Slot will be open and one can now wear the cloak. Kamael exclusive cloak. Enchantment, attribute and smelting are impossible. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
@@ -1243,7 +1243,7 @@
 		</for>
 	</item>
 	<item id="13890" type="Armor" name="Holy Spirit's Cloak">
-		<!-- Cloak covered with energy of the Holy Spirit. Resistance to Dark +30. When an armor set above the Dynasty level is worn, the Sealed Cloak Slot will be open so that the cloak can be equipped. Enchantment, attribute and smelting are impossible. -->
+		<!-- Cloak covered with energy of the Holy Spirit. Dark Attribute Defense +30. When the entire set of Vesper Noble or Dynasty set is worn, the Sealed Cloak Slot will be open and one can now wear the cloak. Enchantment, attribute and smelting are impossible. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
@@ -1261,7 +1261,7 @@
 		</for>
 	</item>
 	<item id="13891" type="Armor" name="Holy Spirit's Cloak - Light Armor exclusive">
-		<!-- Cloak covered with energy of the Holy Spirit. Dark Attribute Defense +30. When the entire set of Vesper Noble or Dynasty set is worn, the Sealed Cloak Slot will be open and one can now wear the cloak. The cloak is exclusively for Dagger Master and Bow Master excluding Kamaels. Enchantment, attribute and augmenting are impossible. -->
+		<!-- Cloak covered with energy of the Holy Spirit. Dark Attribute Defense +30. When the entire set of Vesper Noble or Dynasty set is worn, the Sealed Cloak Slot will be open and one can now wear the cloak. The cloak is exclusively for Dagger Master and Bow Master excluding Kamaels. Enchantment, attribute and smelting are impossible. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
@@ -1283,7 +1283,7 @@
 		</for>
 	</item>
 	<item id="13892" type="Armor" name="Holy Spirit's Cloak - Robe exclusive">
-		<!-- Cloak covered with energy of the Holy Spirit. Dark Attribute Defense +30. When the entire set of Vesper Noble or Dynasty set is worn, the Sealed Cloak Slot will be open and one can now wear the cloak. The cloak is exclusively for Healer, Enchanter, Summoner and Wizard excluding Kamaels. Enchantment, attribute and augmenting are impossible. -->
+		<!-- Cloak covered with energy of the Holy Spirit. Dark Attribute Defense +30. When the entire set of Vesper Noble or Dynasty set is worn, the Sealed Cloak Slot will be open and one can now wear the cloak. The cloak is exclusively for Healer, Enchanter, Summoner and Wizard excluding Kamaels. Enchantment, attribute and smelting are impossible. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
@@ -1305,7 +1305,7 @@
 		</for>
 	</item>
 	<item id="13893" type="EtcItem" name="Sealed Holy Spirit's Cloak">
-		<!-- Sealed Holy Spirit's Cloak. When the seal is cancelled, it'll have Dark Attribute Defense +30 effect. The seal can be cancelled through the weaver Olf Kanore and Olf Adams. It cannot be worn before the seal cancellation. Enchantment, attribute and augmenting are impossible. -->
+		<!-- Sealed Holy Spirit's Cloak. When the seal is cancelled, it'll have Dark Attribute Defense +30 effect. The seal can be cancelled through the weaver Olf Kanore and Olf Adams. It cannot be worn before the seal cancellation. Enchantment, attribute and smelting are impossible. -->
 		<set name="icon" val="icon.sealed_vesper_cloack_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="S84" />
@@ -1353,7 +1353,7 @@
 		</for>
 	</item>
 	<item id="13896" type="Armor" name="Iron Belt">
-		<!-- One can attach a function using A-Grade Magic Pin, Magic Pouch, Rune clip, and Magic ornament. -->
+		<!-- One can attach a function using A grade Magic Pin, Magic Pouch, Rune clip, and Magic ornament. -->
 		<set name="icon" val="icon.armor_belt_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1371,7 +1371,7 @@
 		</for>
 	</item>
 	<item id="13897" type="Armor" name="Mithril Belt">
-		<!-- One can attach a function using S-Grade Magic Pin, Magic Pouch, Rune clip, and Magic ornament. -->
+		<!-- One can attach a function using S grade Magic Pin, Magic Pouch, Rune clip, and Magic ornament. -->
 		<set name="icon" val="icon.armor_belt_i03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />

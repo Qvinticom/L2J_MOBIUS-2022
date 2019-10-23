@@ -25,7 +25,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10303" type="EtcItem" name="Transformation Sealbook: Veil Master">
-		<!-- Documents the method for transforming into Veil Master. -->
+		<!-- Documents the method for transforming into Vale Master. -->
 		<set name="icon" val="BranchSys2.icon.etc_sb_transform_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -79,7 +79,7 @@
 		</cond>
 	</item>
 	<item id="10308" type="EtcItem" name="Red Dragon Bugle of Wind">
-		<!-- Trumpet used to summon the Strider of the Red Wind. This takes some of experience which is acquired by the pet master. -->
+		<!-- A bugle used to summon a Red Wind Dragon. This pet uses some of the experience points earned by its master. -->
 		<set name="icon" val="icon.etc_bugle_i00" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -101,7 +101,7 @@
 		</cond>
 	</item>
 	<item id="10309" type="EtcItem" name="Red Dragon Bugle of Star">
-		<!-- Trumpet used to summon the Strider of the Red Star. This takes some of experience which is acquired by the pet master. -->
+		<!-- A bugle used to summon a Red Star Dragon. This pet uses some of the experience points earned by its master. -->
 		<set name="icon" val="icon.etc_bugle_i00" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -123,7 +123,7 @@
 		</cond>
 	</item>
 	<item id="10310" type="EtcItem" name="Red Dragon Bugle of Twilight">
-		<!-- Trumpet used to summon the Strider of the Red Dusk. This takes some of experience which is acquired by the pet master. -->
+		<!-- A bugle used to summon a Red Twilight Strider. This pet uses some of the experience points earned by its master. -->
 		<set name="icon" val="icon.etc_bugle_i00" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -193,7 +193,7 @@
 		</cond>
 	</item>
 	<item id="10314" type="Armor" name="Ring of Beleth">
-		<!-- MP +38, HP +105, increase M.Def. by 12%, increase Resistance to abnormal mental state by 10, increase abnormal mental state attack chance by 10, increase MP recharge power by 0.23, and increase Resistance to Dark attacks by 30. -->
+		<!-- Produces the following effects: MP +38, HP +105, increase M.Def. by 12%, increase resistance to abnormal mental state by 10, increase abnormal mental state attack chance by 10, increase MP recharge power by 0.23, and increase resistance to Dark attacks by 30. -->
 		<set name="icon" val="icon.accessary_dynasty_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -620,7 +620,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="10349" type="EtcItem" name="Cryptogram of the Goddess Sword">
-		<!-- Secret document about the Sword of Sthelotte that the Goddess of Lake Eva gave to Rionelle, bring it to Kluck. -->
+		<!-- Secret document about the Sword of Sthelotte that the Godess of Lake Eva gave to Rionelle, bring it to Kluck. -->
 		<set name="icon" val="icon.etc_plan_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -631,7 +631,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="10350" type="EtcItem" name="Predecessor's Report">
-		<!-- Investigate report of the intelligence agency that records the death of Shadow Fox. Bring it to Warehouse Chief Natools. -->
+		<!-- Investigate report of the intellegence agency that records the death of Shadow Fox. Bring it to Warehouse Chief Natools. -->
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -642,7 +642,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="10351" type="EtcItem" name="Cryptogram of the Angel Search">
-		<!-- Clue regarding the angel's location that was discovered by Shadow Fox's intelligence agency. Encoded as a Cryptogram. Decipher it through High Priest Raymond in the Town of Gludio. -->
+		<!-- Clue regarding the angel's location that was discovered by Shadow Fox's intellegence agency. Encoded as a Cryptogram. Decipher it through High Priest Raymond in the Town of Gludio. -->
 		<set name="icon" val="icon.etc_piece_of_paper_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1001,7 +1001,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="10382" type="EtcItem" name="Recipe - Icarus Stinger (60%)">
-		<!-- Exclusive to Dwarves. Recipe to make Icarus Spitter. Requires Create Item - Skill Level 9. The success rate is 60%. -->
+		<!-- Exclusive to Dwarves. Recipe to make Icarus Spitter. To obtain 'Create Item' skill, level 9 is needed, and the probability of success is 60%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1014,7 +1014,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="10383" type="EtcItem" name="Recipe - Icarus Wingblade (60%)">
-		<!-- Exclusive to Dwarves. Recipe to make Icarus Wingblade. Requires Create Item - Skill Level 9. The success rate is 60%. -->
+		<!-- Exclusive to Dwarves. Recipe to make Icarus Wingblade. To obtain 'Create Item' skill, level 9 is needed, and the probability of success is 60%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1027,7 +1027,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="10384" type="EtcItem" name="Recipe - Icarus Shooter (60%)">
-		<!-- Exclusive to Dwarves. Recipe to make Icarus Spitter. Requires Create Item - Skill Level 9. The success rate is 60%. -->
+		<!-- Exclusive to Dwarves. Recipe to make Icarus Spitter. To obtain 'Create Item' skill, level 9 is needed, and the probability of success is 60%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1040,7 +1040,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="10385" type="EtcItem" name="Recipe - Icarus Sawsword (100%)">
-		<!-- Exclusive to Dwarves. Recipe to make Icarus Sawsword. Requires Create Item - Skill Level 9. The success rate is 100%. -->
+		<!-- Exclusive to Dwarves. Recipe to make Icarus Sawsword. To obtain 'Create Item' skill, level 9 is needed, and the probability of success is 100%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1053,7 +1053,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="10386" type="EtcItem" name="Recipe - Icarus Disperser (100%)">
-		<!-- Exclusive to Dwarves. Recipe to make Icarus Disperser. Requires Create Item - Skill Level 9. The success rate is 100%. -->
+		<!-- Exclusive to Dwarves. Recipe to make Icarus Disperser. To obtain 'Create Item' skill, level 9 is needed, and the probability of success is 100%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1066,7 +1066,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="10387" type="EtcItem" name="Recipe - Icarus Spirit (100%)">
-		<!-- Exclusive to Dwarves. Recipe to make Icarus Spirit. Requires Create Item - Skill Level 9. The success rate is 100%. -->
+		<!-- Exclusive to Dwarves. Recipe to make Icarus Spirit. To obtain 'Create Item' skill, level 9 is needed, and the probability of success is 100%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1079,7 +1079,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="10388" type="EtcItem" name="Recipe - Icarus Heavy Arms (100%)">
-		<!-- Exclusive to Dwarves. Recipe to make Icarus Heavy Arms. Requires Create Item - Skill Level 9. The success rate is 100%. -->
+		<!-- Exclusive to Dwarves. Recipe to make Icarus Heavy Arms. To obtain 'Create Item' skill, level 9 is needed, and the probability of success is 100%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1092,7 +1092,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="10389" type="EtcItem" name="Recipe - Icarus Trident (100%)">
-		<!-- Exclusive to Dwarves. Recipe to make Icarus Trident. Requires Create Item - Skill Level 9. The success rate is 100%. -->
+		<!-- Exclusive to Dwarves. Recipe to make Icarus Trident. To obtain 'Create Item' skill, level 9 is needed, and the probability of success is 100%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1105,7 +1105,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="10390" type="EtcItem" name="Recipe - Icarus Hammer (100%)">
-		<!-- Exclusive to Dwarves. Recipe to make Icarus Hammer. Requires Create Item - Skill Level 9. The success rate is 100%. -->
+		<!-- Exclusive to Dwarves. Recipe to make Icarus Hammer. To obtain 'Create Item' skill, level 9 is needed, and the probability of success is 100%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1118,7 +1118,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="10391" type="EtcItem" name="Recipe - Icarus Hand (100%)">
-		<!-- Exclusive to Dwarves. Recipe to make Icarus Hand. Requires Create Item - Skill Level 9. The success rate is 100%. -->
+		<!-- Exclusive to Dwarves. Recipe to make Icarus Hand. To obtain 'Create Item' skill, level 9 is needed, and the probability of success is 100%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1131,7 +1131,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="10392" type="EtcItem" name="Recipe - Icarus Hall (100%)">
-		<!-- Exclusive to Dwarves. Recipe to make Icarus Hall. Requires Create Item - Skill Level 9. The success rate is 100%. -->
+		<!-- Exclusive to Dwarves. Recipe to make Icarus Hall. To obtain 'Create Item' skill, level 9 is needed, and the probability of success is 100%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1144,7 +1144,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="10393" type="EtcItem" name="Recipe - Icarus Spitter (100%)">
-		<!-- Exclusive to Dwarves. Recipe to make Icarus Spitter. Requires Create Item - Skill Level 9. The success rate is 100%. -->
+		<!-- Exclusive to Dwarves. Recipe to make Icarus Spitter. To obtain 'Create Item' skill, level 9 is needed, and the probability of success is 100%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1157,7 +1157,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="10394" type="EtcItem" name="Recipe - Icarus Stinger (100%)">
-		<!-- Exclusive to Dwarves. Recipe to make Icarus Spitter. Requires Create Item - Skill Level 9. The success rate is 100%. -->
+		<!-- Exclusive to Dwarves. Recipe to make Icarus Spitter. To obtain 'Create Item' skill, level 9 is needed, and the probability of success is 100%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1170,7 +1170,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="10395" type="EtcItem" name="Recipe - Icarus Wingblade (100%)">
-		<!-- Exclusive to Dwarves. Recipe to make Icarus Wingblade. Requires Create Item - Skill Level 9. The success rate is 100%. -->
+		<!-- Exclusive to Dwarves. Recipe to make Icarus Wingblade. To obtain 'Create Item' skill, level 9 is needed, and the probability of success is 100%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1183,7 +1183,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="10396" type="EtcItem" name="Recipe - Icarus Shooter (100%)">
-		<!-- Exclusive to Dwarves. Recipe to make Icarus Spitter. Requires Create Item - Skill Level 9. The success rate is 100%. -->
+		<!-- Exclusive to Dwarves. Recipe to make Icarus Spitter. To obtain 'Create Item' skill, level 9 is needed, and the probability of success is 100%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />

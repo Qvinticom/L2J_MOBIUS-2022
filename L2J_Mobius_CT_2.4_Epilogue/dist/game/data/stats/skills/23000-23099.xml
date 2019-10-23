@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="23000" levels="1" name="Majo Agathion Cute Trick">
-		<!-- You can see the summoned spirit's cute tricks. -->
+		<!-- Allows you to watch the summoned spirit perform cute tricks. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -13,7 +13,7 @@
 		</cond>
 	</skill>
 	<skill id="23001" levels="1" name="Gold Majo Agathion Cute Trick">
-		<!-- You can see the summoned spirit's cute tricks. -->
+		<!-- Allows you to watch the summoned spirit perform cute tricks. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -25,7 +25,7 @@
 		</cond>
 	</skill>
 	<skill id="23002" levels="1" name="Black Majo Agathion Cute Trick">
-		<!-- You can see the summoned spirit's cute tricks. -->
+		<!-- Allows you to watch the summoned spirit perform cute tricks. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -37,7 +37,7 @@
 		</cond>
 	</skill>
 	<skill id="23003" levels="1" name="Plaipitak Agathion Cute Trick">
-		<!-- You can see the summoned spirit's cute tricks. -->
+		<!-- Allows you to watch the summoned spirit perform cute tricks. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -49,7 +49,7 @@
 		</cond>
 	</skill>
 	<skill id="23004" levels="1" name="Majo Agathion Special Skill - Mysterious Power">
-		<!-- A mysterious power that no one knows. Use with caution! -->
+		<!-- Confers a mysterious, unknown power. Use with caution! -->
 		<set name="abnormalLvl" val="0" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="BIG_HEAD" />
@@ -68,7 +68,7 @@
 		</cond>
 	</skill>
 	<skill id="23005" levels="1" name="Gold Majo Agathion Special Skill - Power of Blessed Resurrection">
-		<!-- Blessed Resurrection is available. -->
+		<!-- Power of Blessed Resurrection is available. -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="castRange" val="400" />
 		<set name="effectPoint" val="1" />
@@ -93,7 +93,7 @@
 		</for>
 	</skill>
 	<skill id="23006" levels="1" name="Black Majo Agathion Special Skill - Power of Blessed Return">
-		<!-- Blessed Escape is available. -->
+		<!-- Power of Blessed Return is available. -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="200" />
 		<set name="icon" val="icon.skill_agathion_special" />
@@ -120,7 +120,7 @@
 		</for>
 	</skill>
 	<skill id="23007" levels="1" name="Plaipitak Agathion Special Skill - Mysterious Power">
-		<!-- A mysterious power that no one knows. Use with caution! -->
+		<!-- Confers a mysterious, unknown power. Use with caution! -->
 		<set name="abnormalLvl" val="0" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="BIG_HEAD" />
@@ -139,7 +139,7 @@
 		</cond>
 	</skill>
 	<skill id="23008" levels="1" name="Plaipitak Agathion Special Skill - Power of Blessed Return">
-		<!-- Blessed Escape is available. -->
+		<!-- Makes Power of Blessed Return available. -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="200" />
 		<set name="icon" val="icon.skill_agathion_special" />
@@ -166,7 +166,7 @@
 		</for>
 	</skill>
 	<skill id="23009" levels="1" name="Plaipitak Agathion Special Skill - Power of Blessed Resurrection">
-		<!-- Blessed Resurrection is available. -->
+		<!-- Makes Power of Blessed Resurrection available. -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="castRange" val="400" />
 		<set name="effectPoint" val="1" />
@@ -191,7 +191,7 @@
 		</for>
 	</skill>
 	<skill id="23010" levels="1" name="Baby Panda Agathion Cute Trick">
-		<!-- You can see the summoned spirit's cute tricks. -->
+		<!-- Able to see the summoned spirit perform cute tricks. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -203,7 +203,7 @@
 		</cond>
 	</skill>
 	<skill id="23011" levels="1" name="Bamboo Panda Agathion Cute Trick">
-		<!-- You can see the summoned spirit's cute tricks. -->
+		<!-- Able to see the summoned spirit perform cute tricks. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -215,7 +215,7 @@
 		</cond>
 	</skill>
 	<skill id="23012" levels="1" name="Sexy Panda Agathion Cute Trick">
-		<!-- You can see the summoned spirit's cute tricks. -->
+		<!-- Able to see the summoned spirit perform cute tricks. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -246,7 +246,7 @@
 		</cond>
 	</skill>
 	<skill id="23014" levels="1" name="Bamboo Panda Agathion Special Skill - Power of Blessed Resurrection">
-		<!-- Blessed Resurrection is available. -->
+		<!-- Power of Blessed Resurrection is available. -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="castRange" val="400" />
 		<set name="effectPoint" val="1" />
@@ -271,7 +271,7 @@
 		</for>
 	</skill>
 	<skill id="23015" levels="1" name="Sexy Panda Agathion Special Skill - Power of Blessed Return">
-		<!-- Blessed Escape is available. -->
+		<!-- Power of Blessed Return is available. -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="200" />
 		<set name="icon" val="icon.skill_agathion_special" />
@@ -298,7 +298,7 @@
 		</for>
 	</skill>
 	<skill id="23016" levels="1" name="Rudolph Agathion Special Skill - Ability of Energy">
-		<!-- Power of recovering Vitality can be used when acquiring Experience Points. -->
+		<!-- You can recover Vitality as you gain Experience Points. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="VP_UP" />
@@ -322,7 +322,7 @@
 		</for>
 	</skill>
 	<skill id="23017" levels="1" name="Holiday Festival">
-		<!-- Maximum HP/MP/CP, Physical/Defense Power, Speed and Physical/Magic Attack Power are increased, and MP consumption for skills is decreased. Effectiveness 1. -->
+		<!-- Max HP, MP and CP are increased -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="BR_EVENT_BUF1" />
@@ -349,7 +349,7 @@
 		</for>
 	</skill>
 	<skill id="23018" levels="1" name="Thomas D. Turkey's Mistake">
-		<!-- Maximum HP/MP/CP, Physical/Defense Power, Speed and Physical/Magic Attack Power are increased, and MP consumption for skills is decreased. Effectiveness 2. -->
+		<!-- Max HP, MP and CP are increased -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="BR_EVENT_BUF1" />
@@ -377,9 +377,9 @@
 		</for>
 	</skill>
 	<skill id="23019" levels="3" name="Scissors">
-		<!-- Challenging with "scissors." Cannot move. -->
-		<table name="#icons">BranchSys.icon.br_xmas_gawi_i00 BranchSys.icon.br_xmas_bawi_i00 BranchSys.icon.br_xmas_bo_i00 </table>
-		<table name="#magicLvl">1 2 3 </table>
+		<!-- Challenge opponent with "Scissors." Cannot move. -->
+		<table name="#icons"> BranchSys.icon.br_xmas_gawi_i00 BranchSys.icon.br_xmas_bawi_i00 BranchSys.icon.br_xmas_bo_i00 </table>
+		<table name="#magicLvl"> 1 2 3 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="BR_EVENT_BUF2" />
@@ -398,7 +398,7 @@
 		</for>
 	</skill>
 	<skill id="23020" levels="1" name="Challenge the Turkey">
-		<!-- Presentation of the Turkey's Attack -->
+		<!-- You challenge Thomas D. Turkey. -->
 		<set name="affectRange" val="500" />
 		<set name="blockedInOlympiad" val="true" />
 		<set name="coolTime" val="500" />
@@ -409,7 +409,7 @@
 		<set name="targetType" val="AURA" />
 	</skill>
 	<skill id="23021" levels="3" name="Turkey's Attack Scissors">
-		<!-- Presentation of the Turkey's Attack -->
+		<!-- Thomas D. Turkey chooses "Scissors." -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -417,9 +417,9 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="23022" levels="10" name="First Win">
-		<!-- First win at the rock-scissors-paper match. -->
-		<table name="#abnormalLvls">1 2 3 4 5 6 7 8 9 10 </table>
-		<table name="#icons">BranchSys.icon.br_xmas_pcwin1_i00 BranchSys.icon.br_xmas_pcwin2_i00 BranchSys.icon.br_xmas_pcwin3_i00 BranchSys.icon.br_xmas_pcwin4_i00 BranchSys.icon.br_xmas_pcwin5_i00 BranchSys.icon.br_xmas_pcwin6_i00 BranchSys.icon.br_xmas_pcwin7_i00 BranchSys.icon.br_xmas_pcwin8_i00 BranchSys.icon.br_xmas_pcwin9_i00 BranchSys.icon.br_xmas_pcwin10_i00 </table>
+		<!-- You've won your first "Rock-Paper-Scissors" match. -->
+		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<table name="#icons"> BranchSys.icon.br_xmas_pcwin1_i00 BranchSys.icon.br_xmas_pcwin2_i00 BranchSys.icon.br_xmas_pcwin3_i00 BranchSys.icon.br_xmas_pcwin4_i00 BranchSys.icon.br_xmas_pcwin5_i00 BranchSys.icon.br_xmas_pcwin6_i00 BranchSys.icon.br_xmas_pcwin7_i00 BranchSys.icon.br_xmas_pcwin8_i00 BranchSys.icon.br_xmas_pcwin9_i00 BranchSys.icon.br_xmas_pcwin10_i00 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="BR_EVENT_BUF3" />
@@ -444,7 +444,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23024" levels="1" name="Agathion of Love Special Skill - Energy Recovery Ability">
-		<!-- Recovers Vitality when acquiring Exp. for 20 minutes. Reuse delay is 12 hours. -->
+		<!-- Recovers energy when acquiring Exp. for 20 minutes. Reuse Delay 12 hours. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="VP_UP" />
@@ -468,7 +468,7 @@
 		</for>
 	</skill>
 	<skill id="23025" levels="1" name="Charming Cupid Agathion Cute Trick">
-		<!-- You can see the summoned spirit's cute tricks. -->
+		<!-- Lets you watch the summoned spirit perform cute tricks. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -480,7 +480,7 @@
 		</cond>
 	</skill>
 	<skill id="23026" levels="1" name="Naughty Cupid Agathion Cute Trick">
-		<!-- You can see the summoned spirit's cute tricks. -->
+		<!-- Lets you watch the summoned spirit perform cute tricks. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -492,7 +492,7 @@
 		</cond>
 	</skill>
 	<skill id="23027" levels="1" name="White Maneki Neko Agathion Cute Trick I">
-		<!-- You can see the summoned spirit's cute tricks. -->
+		<!-- Lets you watch the summoned spirit perform cute tricks. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -504,7 +504,7 @@
 		</cond>
 	</skill>
 	<skill id="23028" levels="1" name="Black Maneki Neko Agathion Cute Trick I">
-		<!-- You can see the summoned spirit's cute tricks. -->
+		<!-- Lets you watch the summoned spirit perform cute tricks. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -516,7 +516,7 @@
 		</cond>
 	</skill>
 	<skill id="23029" levels="1" name="Brown Maneki Neko Agathion Cute Trick I">
-		<!-- You can see the summoned spirit's cute tricks. -->
+		<!-- Lets you watch the summoned spirit perform cute tricks. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -528,7 +528,7 @@
 		</cond>
 	</skill>
 	<skill id="23030" levels="1" name="White Maneki Neko Agathion Special Skill - Blessed Resurrection Ability">
-		<!-- Can use the ability of Blessed Resurrection. Reuse delay is 12 hours. -->
+		<!-- Allows you to use the Blessed Resurrection ability. Reuse Delay: 12 hours. -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="castRange" val="400" />
 		<set name="effectPoint" val="1" />
@@ -553,7 +553,7 @@
 		</for>
 	</skill>
 	<skill id="23031" levels="1" name="Black Maneki Neko Agathion Special Skill - Ability of Blessed Return">
-		<!-- Can use the ability of Blessed Return. Reuse delay is 12 hours. -->
+		<!-- Allows you to use the Blessed Return ability. Reuse Delay: 12 hours. -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="200" />
 		<set name="icon" val="icon.skill_agathion_special" />
@@ -580,7 +580,7 @@
 		</for>
 	</skill>
 	<skill id="23032" levels="1" name="Brown Maneki Neko Agathion Special Skill - Ability of Energy Recovery">
-		<!-- Recovers Vitality when acquiring Exp. for 5 minutes. Reuse delay is 1 hours. -->
+		<!-- Recovers energy when acquiring Exp. for 5 minutes. Reuse Delay 1 hours. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="VP_UP" />
@@ -604,7 +604,7 @@
 		</for>
 	</skill>
 	<skill id="23033" levels="1" name="One-Eyed Bat Drove Agathion Cute Trick">
-		<!-- You can see the summoned spirit's cute tricks. -->
+		<!-- Lets you watch the summoned spirit perform cute tricks. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -616,7 +616,7 @@
 		</cond>
 	</skill>
 	<skill id="23034" levels="1" name="One-eyed Bat Drove Agathion Special Skill - Ability of Resist Unholy">
-		<!-- Increases Resistance to Dark by 30 for 5 minutes. Reuse delay is 1 hour. -->
+		<!-- Increases resistance to darkness type attacks by 30% for 5 minutes. Reuse Delay 1 hours. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="ARMOR_UNHOLY" />
@@ -640,7 +640,7 @@
 		</for>
 	</skill>
 	<skill id="23035" levels="1" name="One-eyed Bat Drove Agathion Special Skill - Ability of Energy Recovery">
-		<!-- Recovers Vitality when acquiring Exp. for 5 minutes. Reuse delay is 1 hours. -->
+		<!-- Recovers energy when acquiring Exp. for 5 minutes. Reuse Delay 1 hours. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="VP_UP" />
@@ -664,7 +664,7 @@
 		</for>
 	</skill>
 	<skill id="23036" levels="1" name="Pegasus Agathion Cute Trick">
-		<!-- You can see the summoned spirit's cute tricks. -->
+		<!-- Lets you watch the summoned spirit perform cute tricks. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -676,7 +676,7 @@
 		</cond>
 	</skill>
 	<skill id="23037" levels="1" name="Pegasus Agathion Special Skill - Ability of Wind Walk">
-		<!-- Increases Speed by 33 for 5 minutes. Reuse delay is 4 hours. -->
+		<!-- Increases moving speed by 33 for 5 minutes. Reuse Delay 4 hours. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="SPEED_UP" />
@@ -700,7 +700,7 @@
 		</for>
 	</skill>
 	<skill id="23038" levels="1" name="Pegasus Agathion Special Skill - Blessed Return Ability">
-		<!-- Can use the ability of Blessed Resurrection. Reuse delay is 12 hours. -->
+		<!-- Allows you to use the Blessed Resurrection ability. Reuse Delay: 12 hours. -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="200" />
 		<set name="icon" val="icon.skill_agathion_special" />
@@ -727,7 +727,7 @@
 		</for>
 	</skill>
 	<skill id="23039" levels="1" name="Yellow-Robed Tojigong Agathion Cute Trick">
-		<!-- You can see the summoned spirit's cute tricks. -->
+		<!-- Lets you watch the summoned spirit perform cute tricks. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -739,7 +739,7 @@
 		</cond>
 	</skill>
 	<skill id="23040" levels="1" name="Blue-Robed Tojigong Agathion Cute Trick">
-		<!-- You can see the summoned spirit's cute tricks. -->
+		<!-- Lets you watch the summoned spirit perform cute tricks. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -751,7 +751,7 @@
 		</cond>
 	</skill>
 	<skill id="23041" levels="1" name="Green-Robed Tojigong Agathion Cute Trick">
-		<!-- You can see the summoned spirit's cute tricks. -->
+		<!-- Lets you watch the summoned spirit perform cute tricks. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -763,7 +763,7 @@
 		</cond>
 	</skill>
 	<skill id="23042" levels="1" name="Yellow-robed Tojigong Agathion Special Skill - Ability of Greater Heal">
-		<!-- Recovers HP by 444 and increases HP Recovery by 30 for 15 seconds. Reuse delay is 4 hours. -->
+		<!-- Recovers HP by 444 and increases HP Recovery by 30 for 15 seconds. Reuse Delay 4 hours. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="LIFE_FORCE_OTHERS" />
@@ -790,7 +790,7 @@
 		</for>
 	</skill>
 	<skill id="23043" levels="1" name="Blue-robed Tojigong Agathion Special Skill - Ability of Reflect Damage">
-		<!-- For 5 minutes, returns 20% of the damage back to the enemy. Excludes damage caused by skills and long-range attacks. Reuse delay is 1 hour. -->
+		<!-- For 5 minutes, returns 20% of the damage back to the enemy. Excludes skill and long-range attacks. Reuse Delay 1 hours. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="DMG_SHIELD" />
@@ -814,7 +814,7 @@
 		</for>
 	</skill>
 	<skill id="23044" levels="1" name="Green-robed Tojigong Agathion Special Skill - Ability of Mana Regeneration">
-		<!-- Increases MP Regeneration by 3% for 5 minutes. Reuse delay is 1 hours. -->
+		<!-- Increases MP Regeneration by 3% for 5 minutes. Reuse Delay 1 hours. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MP_REGEN_UP" />
@@ -838,7 +838,7 @@
 		</for>
 	</skill>
 	<skill id="23045" levels="1" name="Bugbear Agathion Cute Trick">
-		<!-- You can see the summoned spirit's cute tricks. -->
+		<!-- Lets you watch the summoned spirit perform cute tricks. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -850,7 +850,7 @@
 		</cond>
 	</skill>
 	<skill id="23046" levels="1" name="White Maneki Neko Agathion Cute Trick II">
-		<!-- You can see the summoned spirit's cute tricks. -->
+		<!-- Lets you watch the summoned spirit perform cute tricks. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -862,7 +862,7 @@
 		</cond>
 	</skill>
 	<skill id="23047" levels="1" name="Black Maneki Neko Agathion Cute Trick II">
-		<!-- You can see the summoned spirit's cute tricks. -->
+		<!-- Lets you watch the summoned spirit perform cute tricks. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -874,7 +874,7 @@
 		</cond>
 	</skill>
 	<skill id="23048" levels="1" name="Brown Maneki Neko Agathion Cute Trick II">
-		<!-- You can see the summoned spirit's cute tricks. -->
+		<!-- Lets you watch the summoned spirit perform cute tricks. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -886,7 +886,7 @@
 		</cond>
 	</skill>
 	<skill id="23049" levels="1" name="Red Sumo Wrestler Agathion Cute Trick">
-		<!-- You can see the summoned spirit's cute tricks. -->
+		<!-- Able to see the summoned spirit perform cute tricks. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -898,7 +898,7 @@
 		</cond>
 	</skill>
 	<skill id="23050" levels="1" name="Blue Sumo Wrestler Agathion Cute Trick">
-		<!-- You can see the summoned spirit's cute tricks. -->
+		<!-- Able to see the summoned spirit perform cute tricks. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -910,7 +910,7 @@
 		</cond>
 	</skill>
 	<skill id="23051" levels="1" name="Great Sumo Match Agathion Cute Trick">
-		<!-- You can see the summoned spirit's cute tricks. -->
+		<!-- Able to see the summoned spirit perform cute tricks. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -922,7 +922,7 @@
 		</cond>
 	</skill>
 	<skill id="23052" levels="1" name="Button-Eyed Bear Doll Agathion Cute Trick">
-		<!-- You can see the summoned spirit's cute tricks. -->
+		<!-- Able to see the summoned spirit perform cute tricks. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -934,7 +934,7 @@
 		</cond>
 	</skill>
 	<skill id="23053" levels="1" name="God of Fortune Agathion Cute Trick">
-		<!-- You can see the summoned spirit's cute tricks. -->
+		<!-- Able to see the summoned spirit perform cute tricks. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -946,7 +946,7 @@
 		</cond>
 	</skill>
 	<skill id="23054" levels="1" name="Dryad Agathion Cute Trick">
-		<!-- You can see the summoned spirit's cute tricks. -->
+		<!-- Able to see the summoned spirit perform cute tricks. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -958,7 +958,7 @@
 		</cond>
 	</skill>
 	<skill id="23055" levels="1" name="Wonboso Agathion Cute Trick">
-		<!-- You can see the summoned spirit's cute tricks. -->
+		<!-- Able to see the summoned spirit perform cute tricks. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -970,7 +970,7 @@
 		</cond>
 	</skill>
 	<skill id="23056" levels="1" name="Daewoonso Agathion Cute Trick">
-		<!-- You can see the summoned spirit's cute tricks. -->
+		<!-- Able to see the summoned spirit perform cute tricks. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -982,7 +982,7 @@
 		</cond>
 	</skill>
 	<skill id="23057" levels="1" name="Red Sumo Wrestler Agathion Special Skill - Death Whisper Ability">
-		<!-- Increases Critical attack power by 35% for 5 minutes. Reuse delay is 1 hours. -->
+		<!-- Increases Critical attack power by 35% for 5 minutes. Reuse Delay 1 hours. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="CRITICAL_DMG_UP" />
@@ -1004,7 +1004,7 @@
 		</for>
 	</skill>
 	<skill id="23058" levels="1" name="Blue Sumo Wrestler Agathion Special Skill - Wild Magic Ability">
-		<!-- For 5 minutes, increases by 2 the occurrence rate of damage that is caused by magic damage. Reuse delay is 1 hour. -->
+		<!-- For 5 minutes, increases by 2% the occurrence rate of damage that is caused by damage magic. Reuse Delay 1 hours. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MAGIC_CRITICAL_UP" />
@@ -1026,7 +1026,7 @@
 		</for>
 	</skill>
 	<skill id="23059" levels="1" name="Great Sumo Match Agathion Special Skill - Mysterious Power">
-		<!-- A mysterious power that no one knows. Use with caution! Reuse delay is 1 hours. -->
+		<!-- A mysterious power that no one knows. Use with caution! Reuse Delay 1 hour. -->
 		<set name="abnormalLvl" val="0" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="BIG_HEAD" />
@@ -1045,7 +1045,7 @@
 		</cond>
 	</skill>
 	<skill id="23060" levels="1" name="Great Sumo Match Agathion Special Skill - Ability of Firework">
-		<!-- Sets off firecrackers. -->
+		<!-- Set off firecrackers. -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="icon.skill_agathion_special" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1058,7 +1058,7 @@
 		</cond>
 	</skill>
 	<skill id="23061" levels="1" name="Button-Eyed Bear Doll Agathion Special Skill - Ability of Blessed Return">
-		<!-- Can use the ability of Blessed Return. Reuse delay is 12 hours. -->
+		<!-- Can use the ability of Blessed Return. Reuse Delay 12 hours. -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="200" />
 		<set name="icon" val="icon.skill_agathion_special" />
@@ -1085,7 +1085,7 @@
 		</for>
 	</skill>
 	<skill id="23062" levels="1" name="Button-Eyed Bear Doll Agathion Special Skill - Ability of Blessed Resurrection">
-		<!-- Can use the ability of Blessed Resurrection. Reuse delay is 12 hours. -->
+		<!-- Can use the ability of Blessed Resurrection. Reuse Delay 12 hours. -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="castRange" val="400" />
 		<set name="effectPoint" val="1" />
@@ -1110,7 +1110,7 @@
 		</for>
 	</skill>
 	<skill id="23063" levels="1" name="Button-Eyed Bear Doll Agathion Special Skill - Ability of Energy Recovery">
-		<!-- Recovers Vitality when acquiring Exp. for 5 minutes. Reuse delay is 1 hours. -->
+		<!-- Recovers energy when acquiring Exp. for 5 minutes. Reuse Delay 1 hours. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="VP_UP" />
@@ -1134,7 +1134,7 @@
 		</for>
 	</skill>
 	<skill id="23064" levels="1" name="God of Fortune Agathion Special Skill - Energy Recovery Ability">
-		<!-- Recovers Vitality when acquiring Exp. for 5 minutes. Reuse delay is 1 hours. -->
+		<!-- Recovers energy when acquiring Exp. for 5 minutes. Reuse Delay 1 hours. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="VP_UP" />
@@ -1158,7 +1158,7 @@
 		</for>
 	</skill>
 	<skill id="23065" levels="1" name="Wonboso Agathion Special Skill - Wind Walk Ability">
-		<!-- Increases Speed by 20 for 5 minutes. Reuse delay is 1 hours. -->
+		<!-- Increases moving speed by 20 for 5 minutes. Reuse Delay 1 hours. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="BIG_HEAD" />
@@ -1180,7 +1180,7 @@
 		</for>
 	</skill>
 	<skill id="23066" levels="1" name="Daewoonso Agathion Special Skill - New Year's Gift Ability">
-		<!-- Can receive a New Year's Gift. Reuse delay is 1 hours. -->
+		<!-- Can receive a New Year's Gift. Reuse Delay 1 hours. -->
 		<table name="#extractableItems">
 			57,2009,99;57,20090,0.99;57,200900,0.099;57,2009000,0.0099
 		</table>
@@ -1206,7 +1206,7 @@
 		</for>
 	</skill>
 	<skill id="23067" levels="1" name="Pomona Agathion Cute Trick">
-		<!-- You can see the summoned spirit's cute tricks. -->
+		<!-- Able to see the summoned spirit perform cute tricks. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1218,7 +1218,7 @@
 		</cond>
 	</skill>
 	<skill id="23068" levels="1" name="Pomona Agathion Special Skill - Mental Shield Ability">
-		<!-- Increases Resistance to hold/sleep/abnormal mental attacks by 50 for 10 minutes. Reuse delay is 1 hour. -->
+		<!-- Increases resistance to hold/sleep/abnormal mental attacks by 50 for 10 minutes. Reuse Delay 1 hours. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="RESIST_DERANGEMENT" />
@@ -1240,7 +1240,7 @@
 		</for>
 	</skill>
 	<skill id="23069" levels="1" name="Threatening Roar">
-		<!-- Spirit's power: Decreases Speed and Atk. Spd. by 80% for 10 seconds. -->
+		<!-- Spirit's power: Decreases moving speed and Atk. Spd. by 80% for 10 seconds. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="SPEED_DOWN" />
@@ -1292,7 +1292,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23072" levels="1" name="Eva's Wrath">
-		<!-- For 70 seconds, attacks the spirit using Eva's Authority. -->
+		<!-- You are endowed with the spirit of Eva's Wrath for the next 70 seconds. This allows you to do damage to a Spirit of Fire. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="70" />
 		<set name="abnormalType" val="BR_EVENT_BUF2" />
@@ -1310,7 +1310,7 @@
 		</for>
 	</skill>
 	<skill id="23073" levels="1" name="Switch Mode">
-		<!-- The spirit's mode is switched. Change to counterattack mode or lethal move mode. -->
+		<!-- State to switch the spirit's mode. Switches to counter-attack mode or deadly mode. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="2" />
 		<set name="abnormalType" val="BR_EVENT_BUF3" />
@@ -1342,7 +1342,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23076" levels="1" name="Weaver Agathion Cute Trick">
-		<!-- You can see the summoned spirit's cute tricks. -->
+		<!-- Able to see the summoned spirit perform cute tricks. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1354,7 +1354,7 @@
 		</cond>
 	</skill>
 	<skill id="23077" levels="1" name="Weaver Agathion Special Skill - Power of the Golden Calf">
-		<!-- For 20 minutes, receives help from the Golden Calf. Increases party members' Max HP by 60%, Max MP by 60%, Max CP by 60%, physical P. Def. by 30%, magic M. Def. by 30%, Speed by 30, and P. Atk. by 20%. Decreases MP consumption during skill use by 10%. Reuse delay 5 minutes. Consumes 1 Girl's Soul Ore during skill use. -->
+		<!-- For 20 minutes, receives help from the Golden Calf. Increases party members' Max HP by 60%, Max MP by 60%, Max CP by 60%, physical P. Def. by 30%, magic M. Def. by 30%, moving speed by 30, and physical P. Atk. by 20%. Decreases MP consumption during skill use by 10%. Reuse delay 5 minutes. Consumes 1 Girl's Soul Ore during skill use. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="BR_EVENT_BUF5" />
@@ -1391,7 +1391,7 @@
 		</for>
 	</skill>
 	<skill id="23078" levels="1" name="Weaver Agathion Special Skill - Flute Sound">
-		<!-- For 20 minutes, through the magic of the mysterious flute sound, increases party members' Max HP by 40%, Max MP by 40%, Max CP by 40%, physical P. Def. by 30%, magic M. Def. by 30%, Speed by 20, and M. Atk. by 45%. Decreases MP consumption during skill use by 10%. Reuse delay 5 minutes. Consumes 1 Girl's Soul Ore during skill use. -->
+		<!-- For 20 minutes, through the magic of the mysterious flute sound, increases Max HP by 40%, Max MP by 40%, Max CP by 40%, physical P. Def. by 30%, magic M. Def. by 30%, moving speed by 20, and M. Atk. by 45%. Decreases MP consumption during skill use by 10%. Reuse delay 5 minutes. Consumes 1 Girl's Soul Ore during skill use. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="BR_EVENT_BUF5" />
@@ -1428,7 +1428,7 @@
 		</for>
 	</skill>
 	<skill id="23079" levels="1" name="Chon-chon Agathion Cute Trick">
-		<!-- You can see the summoned spirit's cute tricks. -->
+		<!-- Able to see the summoned spirit perform cute tricks. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1440,7 +1440,7 @@
 		</cond>
 	</skill>
 	<skill id="23080" levels="1" name="Chon-chon Agathion Special Skill - Great Warrior Soul Power">
-		<!-- For 5 minutes, receives the soul's help to raise Atk. Spd. by 20%, P. Atk. by 10%, and P. Def. by 20%. Increases critical attack power by 20% and critical attack rate by 20%. -->
+		<!-- For five minutes, the Great Spirit increases critical attack damage by 20%, P.Atk. by 10% and moving speed by 20%. Decreases the MP consumption of skills by 5%. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MULTI_BUFF" />
@@ -1466,7 +1466,7 @@
 		</for>
 	</skill>
 	<skill id="23081" levels="1" name="Tang-tang Agathion Cute Trick">
-		<!-- You can see the summoned spirit's cute tricks. -->
+		<!-- Able to see the summoned spirit perform cute tricks. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1478,7 +1478,7 @@
 		</cond>
 	</skill>
 	<skill id="23082" levels="1" name="Tang-tang Agathion Special Skill - Great Wizard Soul Power">
-		<!-- For 5 minutes, receives the soul's help to raise Casting Spd. by 20%, M. Atk. by 20%, and M. Def. by 20%. Raises the power of Prominent Damage through magic damage by 20% and the chance of prominent damage occurring through magic damage by 2. -->
+		<!-- For five minutes, the Great Spirit increases the casting speed by 20%, M.Atk. by 20%, M.Def. by 20% . Increases the probability of critical hits with magic attacks by 2% -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MULTI_BUFF" />
@@ -1504,7 +1504,7 @@
 		</for>
 	</skill>
 	<skill id="23083" levels="1" name="Dancing Kid Agathion Cute Trick">
-		<!-- You can see the summoned spirit's cute tricks. -->
+		<!-- Able to see the summoned spirit perform cute tricks. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1516,7 +1516,7 @@
 		</cond>
 	</skill>
 	<skill id="23084" levels="1" name="Dancing Kid Agathion Special Skill - Great Adventurer Soul Power">
-		<!-- For 5 minutes, receives the soul's help to raise Max HP by 20%, Max MP by 20%, and Speed by 20%. Increases HP recovery bonus by 20% and MP recovery bonus by 20%. -->
+		<!-- For five minutes, the Great Spirit increases maximum HP by 20%, maximum MP by 20%, MP recovery bonus by 20%, HP recovery bonus by 20% and moving speed by 20% -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MULTI_BUFF" />
@@ -1542,7 +1542,7 @@
 		</for>
 	</skill>
 	<skill id="23085" levels="1" name="Monkey King Agathion Cute Trick">
-		<!-- You can see the summoned spirit's cute tricks. -->
+		<!-- Able to see the summoned spirit perform cute tricks. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1554,7 +1554,7 @@
 		</cond>
 	</skill>
 	<skill id="23086" levels="1" name="Monkey King Agathion Special Skill - Great Wizard Soul Power">
-		<!-- For 5 minutes, receives the soul's help to raise Casting Spd. by 20%, M. Atk. by 20%, and M. Def. by 20%. Raises the power of Prominent Damage through magic damage by 20% and the chance of prominent damage occurring through magic damage by 2. -->
+		<!-- For five minutes, the Great Spirit increases the casting speed by 20%, M.Atk. by 20%, M.Def. by 20% . Increases the probability of critical magic attacks by 2% -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MULTI_BUFF" />
@@ -1580,7 +1580,7 @@
 		</for>
 	</skill>
 	<skill id="23087" levels="1" name="Utanka Agathion Cute Trick">
-		<!-- You can see the summoned spirit's cute tricks. -->
+		<!-- Able to see the summoned spirit perform cute tricks. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1592,7 +1592,7 @@
 		</cond>
 	</skill>
 	<skill id="23088" levels="1" name="Utanka Agathion Special Skill - Great Warrior Soul Power">
-		<!-- For 5 minutes, receives the soul's help to raise Atk. Spd. by 20%, P. Atk. by 10%, and P. Def. by 20%. Increases critical attack power by 20% and critical attack rate by 20%. -->
+		<!-- For five minutes, the Great Spirit increases critical attack damage by 20%, P.Atk. by 10% and P.Def. by 20%. Bestows the ability to recover HP equal to 5% of the melee damage -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MULTI_BUFF" />
@@ -1618,7 +1618,7 @@
 		</for>
 	</skill>
 	<skill id="23089" levels="1" name="Bonus B Agathion Cute Trick">
-		<!-- You can see the summoned spirit's cute tricks. -->
+		<!-- Able to see the summoned spirit perform cute tricks. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1630,7 +1630,7 @@
 		</cond>
 	</skill>
 	<skill id="23090" levels="1" name="Bonus B Agathion Special Skill - Great Adventurer Soul Power">
-		<!-- For 5 minutes, receives the soul's help to raise Max HP by 20%, Max MP by 20%, and Speed by 20%. Increases HP recovery bonus by 20% and MP recovery bonus by 20%. -->
+		<!-- For five minutes, the Great Spirit increases maximum HP by 20%, maximum MP by 20%, MP recovery bonus by 20%, HP recovery bonus by 20% and moving speed by 20% -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MULTI_BUFF" />
@@ -1656,7 +1656,7 @@
 		</for>
 	</skill>
 	<skill id="23091" levels="1" name="Trick of Halloween Children">
-		<!-- By the three sibling's trickery, Max HP/MP/CP are increased by 40% for 10 seconds. -->
+		<!-- By trick of Halloween Children, increase max HP/MP/CP by 40% for 10 seconds. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="BIG_HEAD" />
@@ -1718,7 +1718,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23097" levels="1" name="First Consecutive Win">
-		<!-- 1-time win at the Jack's Game. -->
+		<!-- 1st Consecutive Win in Jack Game. -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="-1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1727,7 +1727,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23098" levels="1" name="2nd Consecutive Win">
-		<!-- 2-time win at the Jack's Game. -->
+		<!-- 2nd Consecutive Win in Jack Game. -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="-1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1736,7 +1736,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23099" levels="1" name="Third Consecutive Win">
-		<!-- 3-time win at the Jack's Game. -->
+		<!-- 3rd Consecutive Win in Jack Game. -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="-1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->

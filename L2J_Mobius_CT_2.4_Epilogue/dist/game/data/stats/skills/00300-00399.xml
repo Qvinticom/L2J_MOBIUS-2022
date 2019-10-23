@@ -663,7 +663,7 @@
 	</skill>
 	<skill id="318" levels="1" name="Aegis Stance" enchantGroup1="1">
 		<!-- Enables Shield Defense from all directions and decreases Shield Defense by 30%. -->
-		<table name="#ench1sDef">0.71 0.72 0.73 0.74 0.75 0.76 0.77 0.78 0.79 0.8 0.81 0.82 0.83 0.84 0.85 0.86 0.87 0.88 0.89 0.9 0.91 0.92 0.93 0.94 0.95 0.96 0.97 0.98 0.99 1 </table>
+		<table name="#ench1sDef"> 0.61 0.62 0.63 0.64 0.65 0.66 0.67 0.68 0.69 0.7 0.71 0.72 0.73 0.74 0.75 0.76 0.77 0.78 0.79 0.8 0.81 0.82 0.83 0.84 0.85 0.86 0.87 0.88 0.89 0.9 </table> <!-- Epilogue Modification -->
 		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="icon" val="icon.skill0318" />
 		<set name="magicLvl" val="46" />
@@ -672,7 +672,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul stat="sDef" val="0.7" />
+				<mul stat="sDef" val="0.6" /> <!-- Epilogue Modification -->
 				<set stat="shieldDefAngle" val="360" />
 			</effect>
 		</for>
@@ -1379,11 +1379,11 @@
 	</skill>
 	<skill id="343" levels="1" name="Lethal Shot" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6" enchantGroup4="6" enchantGroup5="6" enchantGroup6="6" enchantGroup7="6">
 		<!-- Shoots an arrow that is aimed at a vital spot. Attacks the enemy with 7698 Power added to P. Atk. Requires a bow. Over-hit, Half-Kill, and Critical are possible. -->
-		<table name="#ench1Power">8475 8503 8530 8558 8586 8614 8641 8669 8697 8725 8753 8780 8808 8836 8864 </table>
+		<table name="#ench1Power"> 5779 5809 5838 5867 5897 5926 5956 5985 6015 6044 6073 6103 6132 6162 6191 </table> <!-- Epilogue Modification -->
 		<table name="#ench2mpConsume">148 143 138 133 128 123 118 113 108 103 98 93 88 83 79 </table>
-		<table name="#ench7Duel">7905 8113 8321 8528 8736 8944 9151 9359 9567 9774 9982 10190 10397 10605 10813 </table>
+		<table name="#ench7Duel"> 5226 5320 5414 5508 5603 5697 5791 5885 5980 6074 6168 6262 6357 6451 6545 </table> <!-- Epilogue Modification -->
 		<table name="#enchelementPower">3 6 10 13 16 20 23 26 30 33 36 40 43 46 50 </table>
-		<table name="#enchMagicLvl">81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
+		<table name="#enchMagicLvl"> 76 76 77 78 78 79 80 80 81 82 82 83 84 85 85 </table> <!-- Epilogue Modification -->
 		<set name="baseCritRate" val="15" />
 		<set name="castRange" val="900" />
 		<set name="effectPoint" val="-897" />
@@ -1394,7 +1394,7 @@
 		<set name="mpConsume" val="153" />
 		<set name="operateType" val="A1" />
 		<set name="overHit" val="true" />
-		<set name="power" val="7698" />
+		<set name="power" val="5132" /> <!-- Epilogue Modification -->
 		<set name="reuseDelay" val="8000" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DEATH" />
@@ -1422,7 +1422,7 @@
 		<for>
 			<effect name="PhysicalAttack" />
 			<effect name="Lethal">
-				<param halfLethal="10" />
+				<param halfLethal="5" /> <!-- Epilogue Modification -->
 			</effect>
 		</for>
 	</skill>
@@ -1500,7 +1500,7 @@
 		</for>
 		<selfEffects>
 			<effect name="FocusEnergy">
-				<param charge="8" />
+				<param charge="7" /> <!-- Epilogue Modification -->
 			</effect>
 		</selfEffects>
 	</skill>
@@ -1527,7 +1527,7 @@
 		</for>
 		<selfEffects>
 			<effect name="FocusEnergy">
-				<param charge="8" />
+				<param charge="7" /> <!-- Epilogue Modification -->
 			</effect>
 		</selfEffects>
 	</skill>
@@ -1540,7 +1540,7 @@
 		<table name="#enchMagicLvl">81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="affectLimit" val="6-12" />
 		<set name="affectRange" val="150" />
-		<set name="baseCritRate" val="20" />
+		<set name="baseCritRate" val="15" /> <!-- Epilogue Modification -->
 		<set name="effectPoint" val="-679" />
 		<set name="element" val="3" /> <!-- Earth -->
 		<set name="elementPower" val="20" />
@@ -1591,7 +1591,7 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="targetType" val="ONE" />
 		<cond msgId="113" addName="1">
-			<using kind="SWORD,BLUNT" />
+			<using kind="BLUNT" /> <!-- Epilogue Modification -->
 		</cond>
 		<for>
 			<effect name="PhysicalAttack" />
@@ -2438,7 +2438,7 @@
 		<table name="#ench2ActivateRates">41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 </table>
 		<table name="#enchMagicLvl">81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="10" />
+		<set name="abnormalTime" val="30" /> <!-- Epilogue Modification -->
 		<set name="abnormalType" val="TURN_STONE" />
 		<set name="abnormalVisualEffect" val="FLESH_STONE" />
 		<set name="activateRate" val="40" />
@@ -2455,7 +2455,7 @@
 		<set name="magicLvl" val="77" />
 		<set name="mpConsume" val="53" />
 		<set name="operateType" val="A2" />
-		<set name="reuseDelay" val="15000" />
+		<set name="reuseDelay" val="30000" /> <!-- Epilogue Modification -->
 		<set name="targetType" val="AURA" />
 		<enchant1 name="activateRate" val="#ench1ActivateRates" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />

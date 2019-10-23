@@ -73,7 +73,6 @@ import org.l2jmobius.gameserver.data.xml.impl.PlayerTemplateData;
 import org.l2jmobius.gameserver.data.xml.impl.PlayerXpPercentLostData;
 import org.l2jmobius.gameserver.data.xml.impl.PrimeShopData;
 import org.l2jmobius.gameserver.data.xml.impl.RecipeData;
-import org.l2jmobius.gameserver.data.xml.impl.SecondaryAuthData;
 import org.l2jmobius.gameserver.data.xml.impl.SendMessageLocalisationData;
 import org.l2jmobius.gameserver.data.xml.impl.SiegeScheduleData;
 import org.l2jmobius.gameserver.data.xml.impl.SkillData;
@@ -227,7 +226,6 @@ public class GameServer
 		
 		printSection("Data");
 		CategoryData.getInstance();
-		SecondaryAuthData.getInstance();
 		
 		printSection("Skills");
 		EffectHandler.getInstance().executeScript();

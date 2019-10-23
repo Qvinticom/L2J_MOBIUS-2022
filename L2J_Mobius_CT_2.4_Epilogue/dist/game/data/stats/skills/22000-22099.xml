@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="22000" levels="1" name="Spicy Kimchee">
-		<!-- Regeneration is temporarily increased. Effectiveness 1. -->
+		<!-- Temporarily increases regeneration. Effect 1. -->
 		<set name="abnormalInstant" val="true" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="300" />
@@ -17,7 +17,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22001" levels="1" name="Spicy Kimchee">
-		<!-- Regeneration and power are temporarily increased. Effectiveness 2. -->
+		<!-- Temporarily increases regeneration and power. Effect 2. -->
 		<set name="abnormalInstant" val="true" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="300" />
@@ -33,7 +33,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22002" levels="1" name="Spicy Kimchee">
-		<!-- Regeneration, power, and power speed are temporarily increased. Effectiveness 3. -->
+		<!-- Temporarily increases regeneration, power and power speed. Effect 3. -->
 		<set name="abnormalInstant" val="true" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="300" />
@@ -50,7 +50,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22003" levels="1" name="Sweet-and-Sour White Kimchee">
-		<!-- The effective time of Spicy Kimchee is increased. -->
+		<!-- Increases the effective time of Spicy Kimchee. -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="100" />
@@ -62,7 +62,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22004" levels="1" name="Energy Ginseng">
-		<!-- Recovers energy upon acquiring Exp. points. -->
+		<!-- Recovers vitality upon acquiring Exp. points. -->
 		<set name="abnormalInstant" val="true" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="300" />
@@ -84,7 +84,7 @@
 		</for>
 	</skill>
 	<skill id="22005" levels="1" name="Energy Red Ginseng">
-		<!-- Replenishes a certain amount of Vitality. -->
+		<!-- Restores a certain amount of vitality. -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="100" />
@@ -240,7 +240,7 @@
 		</for>
 	</skill>
 	<skill id="22013" levels="1" name="Holiday Festival">
-		<!-- Maximum HP/MP/CP, Physical/Defense Power, Speed and Physical Attack Power are increased, and MP consumption for skills is decreased. Effectiveness 3. -->
+		<!-- Max HP/MP/CP, Physical/Defense Power, Moving Speed and P. Atk. are increased, and MP consumption for skills is decreased. Effect 3. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="BR_EVENT_BUF1" />
@@ -271,7 +271,7 @@
 		</for>
 	</skill>
 	<skill id="22014" levels="1" name="Holiday Festival">
-		<!-- Maximum HP/MP/CP, Physical/Defense Power, Speed and Physical Attack Power are increased, and MP consumption for skills is decreased. Effectiveness 3. -->
+		<!-- Max HP/MP/CP, Physical/Defense Power, Moving Speed and P. Atk. are increased, and MP consumption for skills is decreased. Effect 3. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="BR_EVENT_BUF1" />
@@ -302,7 +302,7 @@
 		</for>
 	</skill>
 	<skill id="22015" levels="1" name="Holiday Festival">
-		<!-- Maximum HP/MP/CP, Physical/Defense Power and Speed are increased, and MP consumption for skills is decreased. Effectiveness 3. -->
+		<!-- Max HP/MP/CP, Physical/Defense Power and Moving Speed are increased, and MP consumption for skills is decreased. Effect 3. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="BR_EVENT_BUF1" />
@@ -332,7 +332,7 @@
 		</for>
 	</skill>
 	<skill id="22016" levels="1" name="Holiday Festival">
-		<!-- Maximum HP/MP/CP, Physical/Defense Power, Speed and Magic Attack Power are increased, and MP consumption for skills is decreased. Effectiveness 3. -->
+		<!-- Max HP/MP/CP, Physical/Defense Power, Moving Speed and M. Atk. are increased, and MP consumption for skills is decreased. Effect 3. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="BR_EVENT_BUF1" />
@@ -566,7 +566,7 @@
 		</for>
 	</skill>
 	<skill id="22029" levels="1" name="Baguette Herb">
-		<!-- Increases Atk. Spd. for a certain amount of time. -->
+		<!-- Temporarily increases Atk. Spd. -->
 		<set name="abnormalInstant" val="true" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
@@ -616,7 +616,7 @@
 		</for>
 	</skill>
 	<skill id="22031" levels="1" name="Cheesecake Herb">
-		<!-- Increases magic Casting Spd. for a certain amount of time. -->
+		<!-- Temporarily increases Magic Casting Speed. -->
 		<set name="abnormalInstant" val="true" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
@@ -697,7 +697,7 @@
 		</for>
 	</skill>
 	<skill id="22035" levels="1" name="Birthday Cake Effect">
-		<!-- Birthday Cake Vitality Buff. Increases your Vitality whenever you gain experience. -->
+		<!-- Birthday Cake Energy Effect. Energy is recovered upon acquiring Exp. points. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="VP_UP" />
@@ -733,9 +733,9 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="22039" levels="2" name="Rune of Experience Points">
-		<!-- Acquired Exp. increases by 30%. -->
-		<table name="#bonusExp">30 50 </table>
-		<table name="#icons">br_cashtex.skill.br_cash_rune_of_exp_buff_3 br_cashtex.skill.br_cash_rune_of_exp_buff_5 </table>
+		<!-- Acquired Experience Points increase by 30%. -->
+		<table name="#bonusExp"> 30 50 </table>
+		<table name="#icons"> br_cashtex.skill.br_cash_rune_of_exp_buff_3 br_cashtex.skill.br_cash_rune_of_exp_buff_5 </table>
 		<set name="icon" val="#icons" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -747,9 +747,9 @@
 		</for>
 	</skill>
 	<skill id="22040" levels="2" name="Rune of SP">
-		<!-- Acquired SP increases by 30%. -->
-		<table name="#bonusSp">30 50 </table>
-		<table name="#icons">br_cashtex.skill.br_cash_rune_of_sp_buff_3 br_cashtex.skill.br_cash_rune_of_sp_buff_5 </table>
+		<!-- Acquired SP increase by 30%. -->
+		<table name="#bonusSp"> 30 50 </table>
+		<table name="#icons"> br_cashtex.skill.br_cash_rune_of_sp_buff_3 br_cashtex.skill.br_cash_rune_of_sp_buff_5 </table>
 		<set name="icon" val="#icons" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -761,9 +761,9 @@
 		</for>
 	</skill>
 	<skill id="22041" levels="2" name="Rune of Crystal Form Level">
-		<!-- The user's grade penalty decreases by 3 level. -->
-		<table name="#bonus">3 5 </table>
-		<table name="#icons">br_cashtex.skill.br_cash_rune_of_rp_buff_3 br_cashtex.skill.br_cash_rune_of_rp_buff_5 </table>
+		<!-- One's Grade Penalty decreases by 3 level. -->
+		<table name="#bonus"> 3 5 </table>
+		<table name="#icons"> br_cashtex.skill.br_cash_rune_of_rp_buff_3 br_cashtex.skill.br_cash_rune_of_rp_buff_5 </table>
 		<set name="icon" val="#icons" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -788,8 +788,8 @@
 		</for>
 	</skill>
 	<skill id="22043" levels="6" name="Secret medicine of Will">
-		<table name="#amount">0 800 1500 2000 2500 3000 </table>
-		<table name="#levelRange">0;0 20;39 40;51 52;60 61;75 76;85 </table>
+		<table name="#amount"> 0 800 1500 2000 2500 3000 </table>
+		<table name="#levelRange"> 0;0 20;39 40;51 52;60 61;75 76;85 </table>
 		<set name="blockedInOlympiad" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -805,7 +805,7 @@
 		</for>
 	</skill>
 	<skill id="22044" levels="6" name="Secret medicine of Life">
-		<table name="#levelRange">0;0 20;39 40;51 52;60 61;75 76;85 </table>
+		<table name="#levelRange"> 0;0 20;39 40;51 52;60 61;75 76;85 </table>
 		<set name="blockedInOlympiad" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -821,7 +821,7 @@
 		</for>
 	</skill>
 	<skill id="22045" levels="1" name="Omen Beast Transformation Scroll">
-		<!-- Transformed into an Onyx Beast. -->
+		<!-- Transformed into Omen Beast. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
@@ -829,7 +829,7 @@
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="20364" /> <!-- Transformation Scroll: Omen Beast -->
+		<set name="itemConsumeId" val="20364" /> <!-- Omen Beast Transformation Scroll -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -843,7 +843,7 @@
 		</for>
 	</skill>
 	<skill id="22046" levels="1" name="Death Blader Transformation Scroll">
-		<!-- Transformed into a Death Blader. -->
+		<!-- Transformed into Death Blader. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
@@ -851,7 +851,7 @@
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="20365" /> <!-- Transformation Scroll: Death Blader -->
+		<set name="itemConsumeId" val="20365" /> <!-- Death Blader Transformation Scroll -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -865,7 +865,7 @@
 		</for>
 	</skill>
 	<skill id="22047" levels="1" name="Grail Apostle Transformation Scroll">
-		<!-- Transformed into a Grail Apostle. -->
+		<!-- Transformed into Grail Apostle. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
@@ -873,7 +873,7 @@
 		<set name="icon" val="icon.skilltransform2" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="20366" /> <!-- Transformation Scroll: Grail Apostle -->
+		<set name="itemConsumeId" val="20366" /> <!-- Grail Apostle Transformation Scroll -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -887,7 +887,7 @@
 		</for>
 	</skill>
 	<skill id="22048" levels="1" name="Unicorn Transformation Scroll">
-		<!-- Transformed into a Unicorn. -->
+		<!-- Transformed into Unicorn. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
@@ -895,7 +895,7 @@
 		<set name="icon" val="icon.skilltransform2" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="20367" /> <!-- Transformation Scroll: Unicorn -->
+		<set name="itemConsumeId" val="20367" /> <!-- Unicorn Transformation Scroll -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -909,7 +909,7 @@
 		</for>
 	</skill>
 	<skill id="22049" levels="1" name="Lilim Knight Transformation Scroll">
-		<!-- Transformed into a Lilim Knight. -->
+		<!-- Transformed into Lilim Knight. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
@@ -917,7 +917,7 @@
 		<set name="icon" val="icon.skilltransform2" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="20368" /> <!-- Transformation Scroll: Lilim Knight -->
+		<set name="itemConsumeId" val="20368" /> <!-- Lilim Knight Transformation Scroll -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -931,7 +931,7 @@
 		</for>
 	</skill>
 	<skill id="22050" levels="1" name="Golem Guardian Transformation Scroll">
-		<!-- Transformed into a Golem Guardian. -->
+		<!-- Transformed into Golem Guardian. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
@@ -939,7 +939,7 @@
 		<set name="icon" val="icon.skilltransform2" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="20369" /> <!-- Transformation Scroll: Golem Guardian -->
+		<set name="itemConsumeId" val="20369" /> <!-- Golem Guardian Transformation Scroll -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -953,7 +953,7 @@
 		</for>
 	</skill>
 	<skill id="22051" levels="1" name="Inferno Drake Transformation Scroll">
-		<!-- Transformed into an Inferno Drake. -->
+		<!-- Transformed into Inferno Drake. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
@@ -961,7 +961,7 @@
 		<set name="icon" val="icon.skilltransform2" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="20370" /> <!-- Transformation Scroll: Inferno Drake -->
+		<set name="itemConsumeId" val="20370" /> <!-- Inferno Drake Transformation Scroll -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -975,7 +975,7 @@
 		</for>
 	</skill>
 	<skill id="22052" levels="1" name="Dragon Bomber Transformation Scroll">
-		<!-- Transformed into a Dragon Bomber. -->
+		<!-- Transformed into Dragon Bomber. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
@@ -983,7 +983,7 @@
 		<set name="icon" val="icon.skilltransform2" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="20371" /> <!-- Transformation Scroll: Dragon Bomber -->
+		<set name="itemConsumeId" val="20371" /> <!-- Dragon Bomber Transformation Scroll -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -997,10 +997,10 @@
 		</for>
 	</skill>
 	<skill id="22053" levels="19" name="Escape">
-		<table name="#coordX">-84200 46915 9723 -45208 115158 -80831 -12728 15633 17860 83378 105760 111388 82916 85289 117052 146818 147922 43840 87326 </table>
-		<table name="#coordY">244566 51441 15576 -112502 -178170 149808 122726 142962 170191 147999 113064 219331 53210 16225 76884 25807 -55316 -47779 -143370 </table>
-		<table name="#coordZ">-3728 -2976 -4568 -240 -880 -3040 -3112 -2696 -3496 -3400 -3176 -3544 -1488 -3672 -2688 -2008 -2728 -792 -1319 </table>
-		<table name="#itemConsumeId">20372 20373 20374 20375 20376 20377 20378 20379 20380 20381 20382 20383 20384 20385 20386 20387 20388 20389 20390 </table>
+		<table name="#coordX"> -84200 46915 9723 -45208 115158 -80831 -12728 15633 17860 83378 105760 111388 82916 85289 117052 146818 147922 43840 87326 </table>
+		<table name="#coordY"> 244566 51441 15576 -112502 -178170 149808 122726 142962 170191 147999 113064 219331 53210 16225 76884 25807 -55316 -47779 -143370 </table>
+		<table name="#coordZ"> -3728 -2976 -4568 -240 -880 -3040 -3112 -2696 -3496 -3400 -3176 -3544 -1488 -3672 -2688 -2008 -2728 -792 -1319 </table>
+		<table name="#itemConsumeId"> 20372 20373 20374 20375 20376 20377 20378 20379 20380 20381 20382 20383 20384 20385 20386 20387 20388 20389 20390 </table>
 		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="20000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1024,7 +1024,7 @@
 		</for>
 	</skill>
 	<skill id="22054" levels="1" name="Potion of Energy Maintenance">
-		<!-- State in which the Vitality Stage is maintained. -->
+		<!-- A state in which the Energy Stage is maintained. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="VP_UP" />
@@ -1055,7 +1055,7 @@
 		</for>
 	</skill>
 	<skill id="22056" levels="1" name="Wind Walk">
-		<!-- Increases Speed by 33 for 1 hour. -->
+		<!-- Increases moving speed by 33 for 1 hour. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="SPEED_UP" />
@@ -1225,7 +1225,7 @@
 		</for>
 	</skill>
 	<skill id="22066" levels="1" name="Berserker Spirit">
-		<!-- Decreases party members' P. Def. by 8%, M. Def. by 16%, and evasion by 4, and increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and Speed by 8 for 1 hour. -->
+		<!-- Decreases a party member's P. Def. by 8%, M. Def. by 16%, and evasion by 4, and increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and moving speed by 8 for 1 hour. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="BERSERKER" />
@@ -1302,7 +1302,7 @@
 		</for>
 	</skill>
 	<skill id="22070" levels="1" name="Wild Magic">
-		<!-- For 1 hour, increases by 2 the occurrence rate of damage that is caused by magic damage. -->
+		<!-- For 1 hour, increases by 2 the occurrence rate of damage that is caused by damage magic. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MAGIC_CRITICAL_UP" />
@@ -1397,7 +1397,7 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="22079" levels="1" name="Resist Aqua">
-		<!-- Increases Resistance to water by 20% for 1 hour. -->
+		<!-- Increases resistance to water type attacks by 20% for 1 hour. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="ARMOR_WATER" />
@@ -1412,7 +1412,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22080" levels="1" name="Resist Wind">
-		<!-- Increases Resistance to wind by 20% for 1 hour. -->
+		<!-- Increases resistance to wind type attacks by 20% for 1 hour. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="ARMOR_WIND" />
@@ -1427,7 +1427,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22081" levels="1" name="Resist Fire">
-		<!-- Increases Resistance to fire by 20% for 1 hour. -->
+		<!-- Increases resistance to fire type attacks by 20% for 1 hour. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="ARMOR_FIRE" />
@@ -1442,7 +1442,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22082" levels="1" name="Resist Holy">
-		<!-- Increases Resistance to Holy by 23% for 1 hour. -->
+		<!-- Increases resistance to divinity type attacks by 23% for 1 hour. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="ARMOR_HOLY" />
@@ -1457,7 +1457,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22083" levels="1" name="Resist Unholy">
-		<!-- Increases Resistance to Dark by 23% for 1 hour. -->
+		<!-- Increases resistance to darkness type attacks by 23% for 1 hour. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="ARMOR_UNHOLY" />
@@ -1472,7 +1472,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22084" levels="1" name="Mental Shield">
-		<!-- Increases Resistance to hold/sleep/abnormal mental attacks by 40 for 1 hour. -->
+		<!-- Increases resistance to hold/sleep/abnormal mental attacks by 40 for 1 hour. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="RESIST_DERANGEMENT" />
@@ -1614,7 +1614,7 @@
 		</for>
 	</skill>
 	<skill id="22091" levels="1" name="Eva's Rune">
-		<!-- Through Eva's power, increases Max HP by 10% and decreases skill reuse time by 20%. Reflects some of the received damage back to the eenmy. Excludes damage caused by skills and long-range attack. -->
+		<!-- With the power of Eva, increases max HP by 10%, and decreases skill reuse time by 20%. Reflects partial damage received back to the emeny. Excludes damage caused by skills and long-range attack. -->
 		<set name="icon" val="BranchSys.icon.br_rune_of_eva_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -1629,6 +1629,7 @@
 		</for>
 	</skill>
 	<skill id="22092" levels="1" name="Scroll Master 1">
+		<!-- Thank you gift for helping the girl. For 2 minutes, increases Max HP by 60%, Max MP by 60%, Max CP by 60%, physical P. Def. by 30%, M. Def. by 30%, moving speed by 30, and physical P. Atk. by 20%. Decreases MP consumption during skill use by 10%. -->
 		<table name="#extractableItems">
 			20365,1,20;20364,1,20;20366,1,20;20367,1,20;20368,1,20
 		</table>
@@ -1651,6 +1652,7 @@
 		</for>
 	</skill>
 	<skill id="22093" levels="1" name="Scroll Master 2">
+		<!-- Thank you gift for helping the boy. For 2 minutes, increases Max HP by 40%, Max MP by 40%, Max CP by 40%, physical P. Def. by 30%, M. Def. by 30%, moving speed by 20, and M. Atk. by 45%. Decreases MP consumption during skill use by 10%. -->
 		<table name="#extractableItems">
 			20554,1,15;20392,1,15;20393,1,35;20394,1,35
 		</table>
@@ -1673,6 +1675,7 @@
 		</for>
 	</skill>
 	<skill id="22094" levels="1" name="Exp. Master">
+		<!-- When using a monster's corpse, comforts the monster's soul to borrow the monster's power temporarily. For 2 minutes, increases Max HP by 60%, Max MP by 60%, Max CP by 60%, physical P. Def. by 30%, M. Def. by 30%, moving speed by 30, and physical P. Atk. by 20%. Decreases MP consumption during skill use by 10%. -->
 		<table name="#extractableItems">
 			20581,1,70;20548,1,30
 		</table>
@@ -1693,6 +1696,7 @@
 		</for>
 	</skill>
 	<skill id="22095" levels="1" name="Summon Spirit of Fire">
+		<!-- When using a monster's corpse, comforts the monster's soul to borrow the monster's power temporarily. For 2 minutes, increases Max HP by 40%, Max MP by 40%, Max CP by 40%, physical P. Def. by 30%, M. Def. by 30%, moving speed by 20, and M. Atk. by 45%. Decreases MP consumption during skill use by 10%. -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1723,7 +1727,7 @@
 		</for>
 	</skill>
 	<skill id="22097" levels="1" name="Girl's Gift of Gratitude">
-		<!-- A thank-you gift for helping the girl. For 2 minutes, increases Max HP by 60%, Max MP by 60%, Max CP by 60%, physical P. Def. by 30%, M. Def. by 30%, Speed by 30, and physical P. Atk. by 20%. Decreases MP consumption during skill use by 10%. -->
+		<!-- Thank you gift for helping the girl. For 2 minutes, increases Max HP by 60%, Max MP by 60%, Max CP by 60%, physical P. Def. by 30%, M. Def. by 30%, moving speed by 30, and physical P. Atk. by 20%. Decreases MP consumption during skill use by 10%. -->
 		<set name="abnormalInstant" val="true" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
@@ -1753,7 +1757,7 @@
 		</for>
 	</skill>
 	<skill id="22098" levels="1" name="Boy's Gift of Gratitude">
-		<!-- A thank-you gift for helping the boy. For 2 minutes, increases Max HP by 40%, Max MP by 40%, Max CP by 40%, physical P. Def. by 30%, M. Def. by 30%, Speed by 20, and M. Atk. by 45%. Decreases MP consumption during skill use by 10%. -->
+		<!-- Thank you gift for helping the boy. For 2 minutes, increases Max HP by 40%, Max MP by 40%, Max CP by 40%, physical P. Def. by 30%, M. Def. by 30%, moving speed by 20, and M. Atk. by 45%. Decreases MP consumption during skill use by 10%. -->
 		<set name="abnormalInstant" val="true" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
@@ -1783,7 +1787,7 @@
 		</for>
 	</skill>
 	<skill id="22099" levels="1" name="Soul Silver Foil">
-		<!-- When using a monster's corpse, comforts the monster's soul to borrow the monster's power temporarily. For 2 minutes, increases Max HP by 60%, Max MP by 60%, Max CP by 60%, physical P. Def. by 30%, M. Def. by 30%, Speed by 30, and physical P. Atk. by 20%. Decreases MP consumption during skill use by 10%. -->
+		<!-- When using a monster's corpse, comforts the monster's soul to borrow the monster's power temporarily. For 2 minutes, increases Max HP by 60%, Max MP by 60%, Max CP by 60%, physical P. Def. by 30%, M. Def. by 30%, moving speed by 30, and physical P. Atk. by 20%. Decreases MP consumption during skill use by 10%. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="BR_EVENT_BUF6" />
@@ -1794,7 +1798,7 @@
 		<set name="icon" val="BranchSys.icon.br_ghost_silverpaper_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="20602" /> <!-- Soul Silver Foil (Event) -->
+		<set name="itemConsumeId" val="20602" /> <!-- Soul Silver Foil - Event -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A3" />
 		<set name="reuseDelay" val="5000" />

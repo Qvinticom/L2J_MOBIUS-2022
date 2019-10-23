@@ -228,7 +228,7 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5715" levels="1" name="Electric Flame">
-		<!-- Incurring continuous flame damage and has decreased Speed. -->
+		<!-- Incurring continuous flame damage and has decreased moving speed. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="FIRE_DOT" />
@@ -1198,7 +1198,6 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5771" levels="1" name="Buff Control">
-		<!-- Limits to prevent a buff upon the master. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MAGICAL_STANCE" />
@@ -1214,7 +1213,7 @@
 		</for>
 	</skill>
 	<skill id="5772" levels="1" name="Surrender to Fire">
-		<!-- Instantly decrease Resistance to fire attacks and increase Resistance to water attacks. Effect 4. -->
+		<!-- Instantly decrease resistance to fire attacks and increase resistance to water attacks. Effect 4. -->
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="ARMOR_FIRE" />
@@ -1228,7 +1227,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5773" levels="1" name="Surrender to Water">
-		<!-- Instantly decrease Resistance to water attacks and increase Resistance to fire attacks. Effect 4. -->
+		<!-- Instantly decrease resistance to water attacks and increase resistance to fire attacks. Effect 4. -->
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="ARMOR_WATER" />

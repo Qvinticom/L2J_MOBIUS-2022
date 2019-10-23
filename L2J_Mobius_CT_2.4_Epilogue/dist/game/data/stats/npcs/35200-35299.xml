@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="35200" level="75" type="Defender" name="Guard" title="Oren">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="2" /> <!-- rhand: Long Sword -->
@@ -45,7 +44,6 @@
 		</collision>
 	</npc>
 	<npc id="35201" level="75" type="Defender" name="Guard" title="Oren">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="14" /> <!-- rhand: Bow -->
@@ -89,7 +87,6 @@
 		</collision>
 	</npc>
 	<npc id="35202" level="75" type="Defender" name="Guard" title="Oren">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="16" /> <!-- rhand: Great Spear -->
@@ -133,7 +130,6 @@
 		</collision>
 	</npc>
 	<npc id="35203" level="75" type="Defender" name="Guard" title="Oren">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="2" /> <!-- rhand: Long Sword -->
@@ -177,7 +173,6 @@
 		</collision>
 	</npc>
 	<npc id="35204" level="75" type="Defender" name="Guard" title="Oren">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="14" /> <!-- rhand: Bow -->
@@ -221,7 +216,6 @@
 		</collision>
 	</npc>
 	<npc id="35205" level="79" type="Defender" name="Royal Knight" title="Oren">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="76" lhand="2497" /> <!-- rhand: Sword of Delusion lhand: Full Plate Shield -->
@@ -265,7 +259,6 @@
 		</collision>
 	</npc>
 	<npc id="35206" level="77" type="Defender" name="Court Sorcerer" title="Oren">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4026" level="1" /> <!-- Gludio Flame -->
 		</parameters>
@@ -313,7 +306,6 @@
 		</collision>
 	</npc>
 	<npc id="35207" level="77" type="Defender" name="Court Sorcerer" title="Oren">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="MagicHeal" id="4027" level="1" /> <!-- Gludio Heal -->
 		</parameters>
@@ -361,7 +353,6 @@
 		</collision>
 	</npc>
 	<npc id="35208" level="77" type="Defender" name="Court Guard" title="Oren">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="94" /> <!-- rhand: Bec de Corbin -->
@@ -405,10 +396,9 @@
 		</collision>
 	</npc>
 	<npc id="35209" level="75" type="Defender" name="Guard" title="Oren">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
-		<equipment rhand="21738" /> <!-- rhand: Winged Spear - Event -->
+		<equipment rhand="93" /> <!-- rhand: Winged Spear -->
 		<acquire exp="562" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
@@ -449,7 +439,6 @@
 		</collision>
 	</npc>
 	<npc id="35210" level="75" type="Defender" name="Guard" title="Oren">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="2499" /> <!-- rhand: Elven Long Sword -->
@@ -493,7 +482,6 @@
 		</collision>
 	</npc>
 	<npc id="35211" level="75" type="Defender" name="Guard" title="Oren">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="276" /> <!-- rhand: Elven Bow -->
@@ -537,7 +525,6 @@
 		</collision>
 	</npc>
 	<npc id="35212" level="75" type="Defender" name="Guard" title="Oren">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="16" /> <!-- rhand: Great Spear -->
@@ -581,7 +568,6 @@
 		</collision>
 	</npc>
 	<npc id="35213" level="75" type="Defender" name="Guard" title="Oren">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="2" /> <!-- rhand: Long Sword -->
@@ -625,7 +611,6 @@
 		</collision>
 	</npc>
 	<npc id="35214" level="75" type="Defender" name="Guard" title="Oren">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="14" /> <!-- rhand: Bow -->
@@ -669,7 +654,6 @@
 		</collision>
 	</npc>
 	<npc id="35215" level="75" type="Defender" name="Guard" title="Oren">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="16" /> <!-- rhand: Great Spear -->
@@ -713,7 +697,6 @@
 		</collision>
 	</npc>
 	<npc id="35216" level="75" type="Defender" name="Guard" title="Oren">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="2" /> <!-- rhand: Long Sword -->
@@ -757,7 +740,6 @@
 		</collision>
 	</npc>
 	<npc id="35217" level="75" type="Defender" name="Guard" title="Oren">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="14" /> <!-- rhand: Bow -->
@@ -801,7 +783,6 @@
 		</collision>
 	</npc>
 	<npc id="35218" level="75" type="CastleDoorman" name="Gatekeeper" title="Oren">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -865,7 +846,6 @@
 		</collision>
 	</npc>
 	<npc id="35219" level="75" type="CastleDoorman" name="Gatekeeper" title="Oren">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -929,7 +909,6 @@
 		</collision>
 	</npc>
 	<npc id="35220" level="75" type="CastleDoorman" name="Gatekeeper" title="Oren">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -993,7 +972,6 @@
 		</collision>
 	</npc>
 	<npc id="35221" level="75" type="Npc" name="Mass Gatekeeper" title="Oren">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -1037,7 +1015,6 @@
 		</collision>
 	</npc>
 	<npc id="35222" level="75" type="CastleDoorman" name="Outer Doorman" title="Oren">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -1087,7 +1064,6 @@
 		</collision>
 	</npc>
 	<npc id="35223" level="75" type="CastleDoorman" name="Inner Doorman" title="Oren">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -1137,7 +1113,6 @@
 		</collision>
 	</npc>
 	<npc id="35224" level="75" type="Npc" name="Blacksmith" title="Oren">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="93" />
@@ -1178,7 +1153,6 @@
 		</collision>
 	</npc>
 	<npc id="35225" level="75" type="Warehouse" name="Warehouse Keeper" title="Oren">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -1218,7 +1192,6 @@
 		</collision>
 	</npc>
 	<npc id="35226" level="75" type="Merchant" name="Brasseur" title="Chamberlain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="fnAgitBuff" value="castlebuff" />
 			<param name="MoveAroundSocial" value="0" />
@@ -1275,7 +1248,6 @@
 		</collision>
 	</npc>
 	<npc id="35227" level="75" type="Npc" name="Finrod" title="Wyvern Manager">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -1315,7 +1287,6 @@
 		</collision>
 	</npc>
 	<npc id="35228" level="75" type="Merchant" name="Morrison" title="Mercenary Manager">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -1356,7 +1327,6 @@
 		</collision>
 	</npc>
 	<npc id="35229" level="75" type="Merchant" name="Manor Manager" title="Oren">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -1397,7 +1367,6 @@
 		</collision>
 	</npc>
 	<npc id="35230" level="75" type="Merchant" name="Manor Manager" title="Oren">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -1438,7 +1407,6 @@
 		</collision>
 	</npc>
 	<npc id="35231" level="75" type="Merchant" name="Manor Manager" title="Oren">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -1479,7 +1447,6 @@
 		</collision>
 	</npc>
 	<npc id="35232" level="75" type="Npc" name="Sherwood" title="Messenger">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -1521,7 +1488,6 @@
 		</collision>
 	</npc>
 	<npc id="35233" level="20" type="Artefact" name="Aden Holy Artifact">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<acquire exp="40" sp="10" />
@@ -1559,7 +1525,6 @@
 		</collision>
 	</npc>
 	<npc id="35234" level="85" type="Defender" name="Amadeo Cadmus" title="King">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="80" /> <!-- rhand: Tallum Blade -->
@@ -1603,7 +1568,6 @@
 		</collision>
 	</npc>
 	<npc id="35235" level="81" type="Defender" name="Royal Knight" title="Aden">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="2" /> <!-- rhand: Long Sword -->
@@ -1647,7 +1611,6 @@
 		</collision>
 	</npc>
 	<npc id="35236" level="79" type="Defender" name="Court Sorcerer" title="Aden">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4114" level="1" /> <!-- Aden Flame -->
 		</parameters>
@@ -1694,7 +1657,6 @@
 		</collision>
 	</npc>
 	<npc id="35237" level="79" type="Defender" name="Court Sorcerer" title="Aden">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="MagicHeal" id="4115" level="1" /> <!-- Aden Heal -->
 		</parameters>
@@ -1741,7 +1703,6 @@
 		</collision>
 	</npc>
 	<npc id="35238" level="79" type="Defender" name="Court Guard" title="Aden">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="1376" /> <!-- rhand: Guard Spear -->
@@ -1784,7 +1745,6 @@
 		</collision>
 	</npc>
 	<npc id="35239" level="78" type="Defender" name="Guard" title="Aden">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="300" /> <!-- rhand: Great Axe -->
@@ -1827,7 +1787,6 @@
 		</collision>
 	</npc>
 	<npc id="35240" level="78" type="Defender" name="Guard" title="Aden">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="132" /> <!-- rhand: Sword of Limit -->
@@ -1870,7 +1829,6 @@
 		</collision>
 	</npc>
 	<npc id="35241" level="78" type="Defender" name="Guard" title="Aden">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="14" /> <!-- rhand: Bow -->
@@ -1913,7 +1871,6 @@
 		</collision>
 	</npc>
 	<npc id="35242" level="78" type="Defender" name="Guard" title="Aden">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="16" /> <!-- rhand: Great Spear -->
@@ -1956,7 +1913,6 @@
 		</collision>
 	</npc>
 	<npc id="35243" level="78" type="Defender" name="Guard" title="Aden">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="2" /> <!-- rhand: Long Sword -->
@@ -1999,7 +1955,6 @@
 		</collision>
 	</npc>
 	<npc id="35244" level="78" type="Defender" name="Guard" title="Aden">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="14" /> <!-- rhand: Bow -->
@@ -2042,7 +1997,6 @@
 		</collision>
 	</npc>
 	<npc id="35245" level="78" type="Defender" name="Guard" title="Aden">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="16" /> <!-- rhand: Great Spear -->
@@ -2085,7 +2039,6 @@
 		</collision>
 	</npc>
 	<npc id="35246" level="78" type="Defender" name="Guard" title="Aden">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="2" /> <!-- rhand: Long Sword -->
@@ -2128,7 +2081,6 @@
 		</collision>
 	</npc>
 	<npc id="35247" level="78" type="Defender" name="Guard" title="Aden">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="14" /> <!-- rhand: Bow -->
@@ -2171,7 +2123,6 @@
 		</collision>
 	</npc>
 	<npc id="35248" level="81" type="Defender" name="Royal Knight" title="Aden">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="142" lhand="633" /> <!-- rhand: Keshanberk lhand: Zubei's Shield -->
@@ -2215,7 +2166,6 @@
 		</collision>
 	</npc>
 	<npc id="35249" level="79" type="Defender" name="Court Sorcerer" title="Aden">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4114" level="1" /> <!-- Aden Flame -->
 		</parameters>
@@ -2262,7 +2212,6 @@
 		</collision>
 	</npc>
 	<npc id="35250" level="79" type="Defender" name="Court Sorcerer" title="Aden">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="MagicHeal" id="4115" level="1" /> <!-- Aden Heal -->
 		</parameters>
@@ -2309,7 +2258,6 @@
 		</collision>
 	</npc>
 	<npc id="35251" level="79" type="Defender" name="Court Guard" title="Aden">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="300" /> <!-- rhand: Great Axe -->
@@ -2352,7 +2300,6 @@
 		</collision>
 	</npc>
 	<npc id="35252" level="78" type="Defender" name="Guard" title="Aden">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="16" /> <!-- rhand: Great Spear -->
@@ -2395,7 +2342,6 @@
 		</collision>
 	</npc>
 	<npc id="35253" level="78" type="Defender" name="Guard" title="Aden">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="2" /> <!-- rhand: Long Sword -->
@@ -2438,7 +2384,6 @@
 		</collision>
 	</npc>
 	<npc id="35254" level="78" type="Defender" name="Guard" title="Aden">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="285" /> <!-- rhand: Noble Elven Bow -->
@@ -2481,7 +2426,6 @@
 		</collision>
 	</npc>
 	<npc id="35255" level="78" type="Defender" name="Guard" title="Aden">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="16" /> <!-- rhand: Great Spear -->
@@ -2524,7 +2468,6 @@
 		</collision>
 	</npc>
 	<npc id="35256" level="78" type="Defender" name="Guard" title="Aden">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="2" /> <!-- rhand: Long Sword -->
@@ -2567,7 +2510,6 @@
 		</collision>
 	</npc>
 	<npc id="35257" level="78" type="Defender" name="Guard" title="Aden">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="14" /> <!-- rhand: Bow -->
@@ -2610,7 +2552,6 @@
 		</collision>
 	</npc>
 	<npc id="35258" level="78" type="Defender" name="Guard" title="Aden">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="16" /> <!-- rhand: Great Spear -->
@@ -2653,7 +2594,6 @@
 		</collision>
 	</npc>
 	<npc id="35259" level="78" type="Defender" name="Guard" title="Aden">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="2" /> <!-- rhand: Long Sword -->
@@ -2696,7 +2636,6 @@
 		</collision>
 	</npc>
 	<npc id="35260" level="78" type="Defender" name="Guard" title="Aden">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="14" /> <!-- rhand: Bow -->
@@ -2739,7 +2678,6 @@
 		</collision>
 	</npc>
 	<npc id="35261" level="75" type="CastleDoorman" name="Gatekeeper" title="Aden">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -2821,7 +2759,6 @@
 		</collision>
 	</npc>
 	<npc id="35262" level="75" type="CastleDoorman" name="Gatekeeper" title="Aden">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -2903,7 +2840,6 @@
 		</collision>
 	</npc>
 	<npc id="35263" level="75" type="CastleDoorman" name="Gatekeeper" title="Aden">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -2985,7 +2921,6 @@
 		</collision>
 	</npc>
 	<npc id="35264" level="75" type="CastleDoorman" name="Gatekeeper" title="Aden">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -3067,7 +3002,6 @@
 		</collision>
 	</npc>
 	<npc id="35265" level="75" type="CastleDoorman" name="Gatekeeper" title="Aden">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -3149,7 +3083,6 @@
 		</collision>
 	</npc>
 	<npc id="35266" level="75" type="Npc" name="Mass Gatekeeper" title="Aden">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -3193,7 +3126,6 @@
 		</collision>
 	</npc>
 	<npc id="35267" level="75" type="CastleDoorman" name="Outer Doorman" title="Aden">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -3243,7 +3175,6 @@
 		</collision>
 	</npc>
 	<npc id="35268" level="75" type="CastleDoorman" name="Inner Doorman" title="Aden">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -3293,7 +3224,6 @@
 		</collision>
 	</npc>
 	<npc id="35269" level="75" type="CastleDoorman" name="Hall Doorman" title="Aden">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -3343,7 +3273,6 @@
 		</collision>
 	</npc>
 	<npc id="35270" level="75" type="CastleDoorman" name="Inner Doorman" title="Aden">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -3393,7 +3322,6 @@
 		</collision>
 	</npc>
 	<npc id="35271" level="75" type="CastleDoorman" name="Gatekeeper" title="Aden">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -3441,7 +3369,6 @@
 		</collision>
 	</npc>
 	<npc id="35272" level="75" type="Npc" name="Blacksmith" title="Aden">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="93" />
@@ -3482,7 +3409,6 @@
 		</collision>
 	</npc>
 	<npc id="35273" level="75" type="Warehouse" name="Warehouse Keeper" title="Aden">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -3522,7 +3448,6 @@
 		</collision>
 	</npc>
 	<npc id="35274" level="75" type="Merchant" name="Logan" title="Chamberlain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="fnAgitBuff" value="castlebuff" />
 			<param name="MoveAroundSocial" value="0" />
@@ -3587,7 +3512,6 @@
 		</collision>
 	</npc>
 	<npc id="35275" level="75" type="Npc" name="Kruger" title="Wyvern Manager">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -3627,7 +3551,6 @@
 		</collision>
 	</npc>
 	<npc id="35276" level="75" type="Merchant" name="Eldon" title="Mercenary Manager">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -3668,7 +3591,6 @@
 		</collision>
 	</npc>
 	<npc id="35277" level="75" type="Merchant" name="Manor Manager" title="Aden">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -3709,7 +3631,6 @@
 		</collision>
 	</npc>
 	<npc id="35278" level="75" type="Npc" name="Messenger Ruford" title="Messenger">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -3751,7 +3672,6 @@
 		</collision>
 	</npc>
 	<npc id="35279" level="20" type="Artefact" name="Innadril Holy Artifact">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<acquire exp="40" sp="10" />
@@ -3789,7 +3709,6 @@
 		</collision>
 	</npc>
 	<npc id="35280" level="83" type="Defender" name="Baron Lionel Hunter">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="79" /> <!-- rhand: Sword of Damascus -->
@@ -3833,7 +3752,6 @@
 		</collision>
 	</npc>
 	<npc id="35281" level="81" type="Defender" name="Schaht" title="Sir">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="142" /> <!-- rhand: Keshanberk -->
@@ -3877,7 +3795,6 @@
 		</collision>
 	</npc>
 	<npc id="35282" level="79" type="Defender" name="Royal Knight" title="Innadril">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="76" lhand="2497" /> <!-- rhand: Sword of Delusion lhand: Full Plate Shield -->
@@ -3921,7 +3838,6 @@
 		</collision>
 	</npc>
 	<npc id="35283" level="77" type="Defender" name="Court Sorcerer" title="Innadril">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4026" level="1" /> <!-- Gludio Flame -->
 		</parameters>
@@ -3969,7 +3885,6 @@
 		</collision>
 	</npc>
 	<npc id="35284" level="77" type="Defender" name="Court Sorcerer" title="Innadril">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="MagicHeal" id="4027" level="1" /> <!-- Gludio Heal -->
 		</parameters>
@@ -4017,7 +3932,6 @@
 		</collision>
 	</npc>
 	<npc id="35285" level="77" type="Defender" name="Court Guard" title="Innadril">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="94" /> <!-- rhand: Bec de Corbin -->
@@ -4061,7 +3975,6 @@
 		</collision>
 	</npc>
 	<npc id="35286" level="75" type="Defender" name="Guard" title="Innadril">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="16" /> <!-- rhand: Great Spear -->
@@ -4105,7 +4018,6 @@
 		</collision>
 	</npc>
 	<npc id="35287" level="75" type="Defender" name="Guard" title="Innadril">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="2499" /> <!-- rhand: Elven Long Sword -->
@@ -4149,7 +4061,6 @@
 		</collision>
 	</npc>
 	<npc id="35288" level="75" type="Defender" name="Guard" title="Innadril">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="276" /> <!-- rhand: Elven Bow -->
@@ -4193,7 +4104,6 @@
 		</collision>
 	</npc>
 	<npc id="35289" level="75" type="Defender" name="Guard" title="Innadril">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="16" /> <!-- rhand: Great Spear -->
@@ -4237,7 +4147,6 @@
 		</collision>
 	</npc>
 	<npc id="35290" level="75" type="Defender" name="Guard" title="Innadril">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="2" /> <!-- rhand: Long Sword -->
@@ -4281,7 +4190,6 @@
 		</collision>
 	</npc>
 	<npc id="35291" level="75" type="Defender" name="Guard" title="Innadril">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="14" /> <!-- rhand: Bow -->
@@ -4325,7 +4233,6 @@
 		</collision>
 	</npc>
 	<npc id="35292" level="75" type="Defender" name="Guard" title="Innadril">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="16" /> <!-- rhand: Great Spear -->
@@ -4369,7 +4276,6 @@
 		</collision>
 	</npc>
 	<npc id="35293" level="75" type="Defender" name="Guard" title="Innadril">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="2" /> <!-- rhand: Long Sword -->
@@ -4413,7 +4319,6 @@
 		</collision>
 	</npc>
 	<npc id="35294" level="75" type="Defender" name="Guard" title="Innadril">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="14" /> <!-- rhand: Bow -->
@@ -4457,7 +4362,6 @@
 		</collision>
 	</npc>
 	<npc id="35295" level="79" type="Defender" name="Royal Knight" title="Innadril">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="76" lhand="2497" /> <!-- rhand: Sword of Delusion lhand: Full Plate Shield -->
@@ -4501,7 +4405,6 @@
 		</collision>
 	</npc>
 	<npc id="35296" level="77" type="Defender" name="Court Sorcerer" title="Innadril">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4026" level="1" /> <!-- Gludio Flame -->
 		</parameters>
@@ -4549,7 +4452,6 @@
 		</collision>
 	</npc>
 	<npc id="35297" level="77" type="Defender" name="Court Sorcerer" title="Innadril">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="MagicHeal" id="4027" level="1" /> <!-- Gludio Heal -->
 		</parameters>
@@ -4597,7 +4499,6 @@
 		</collision>
 	</npc>
 	<npc id="35298" level="77" type="Defender" name="Court Guard" title="Innadril">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="94" /> <!-- rhand: Bec de Corbin -->
@@ -4641,10 +4542,9 @@
 		</collision>
 	</npc>
 	<npc id="35299" level="75" type="Defender" name="Guard" title="Innadril">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
-		<equipment rhand="21738" /> <!-- rhand: Winged Spear - Event -->
+		<equipment rhand="93" /> <!-- rhand: Winged Spear -->
 		<acquire exp="562" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />

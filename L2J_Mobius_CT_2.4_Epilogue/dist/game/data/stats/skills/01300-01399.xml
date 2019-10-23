@@ -661,7 +661,7 @@
 	<skill id="1328" levels="8" name="Mass Summon Storm Cubic" enchantGroup1="2">
 		<!-- Summons Storm Cubic for party members. Storm Cubic uses magic that damages a targeted enemy. Requires 16 Spirit Ore. -->
 		<table name="#cubicPower">282 434 677 919 1141 1394 1673 1975 </table>
-		<table name="#itemConsumeCount">16 20 26 29 36 39 42 46 </table>
+		<table name="#itemConsumeCount"> 20 24 32 36 44 48 56 52 </table> <!-- Epilogue Modification -->
 		<table name="#magicLvl">40 46 52 58 62 66 70 74 </table>
 		<table name="#mpConsume">111 130 150 170 183 195 207 217 </table>
 		<table name="#mpInitialConsume">28 33 38 43 46 49 52 55 </table>
@@ -672,7 +672,7 @@
 		<set name="icon" val="icon.skill1328" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="itemConsumeCount" val="#itemConsumeCount" />
-		<set name="itemConsumeId" val="3031" /> <!-- Spirit Ore -->
+		<set name="itemConsumeId" val="1458" /> <!-- Epilogue Modification -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
@@ -727,7 +727,7 @@
 	<skill id="1330" levels="8" name="Mass Summon Phantom Cubic" enchantGroup1="2">
 		<!-- Summons Phantom Cubic for party members. A Phantom Cubic uses magic that decreases the target's P. Atk., P. Def., and Atk. Spd. Requires 7 Spirit Ore. -->
 		<table name="#cubicPower">282 434 644 919 1141 1394 1673 1975 </table>
-		<table name="#itemConsumeCount">7 10 13 13 16 20 20 23 </table>
+		<table name="#itemConsumeCount"> 8 12 16 16 20 24 24 28 28 </table> <!-- Epilogue Modification -->
 		<table name="#magicLvl">40 46 52 58 62 66 70 74 </table>
 		<table name="#mpConsume">111 130 150 170 183 195 207 217 </table>
 		<table name="#mpInitialConsume">28 33 38 43 46 49 52 55 </table>
@@ -738,7 +738,7 @@
 		<set name="icon" val="icon.skill1330" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="itemConsumeCount" val="#itemConsumeCount" />
-		<set name="itemConsumeId" val="3031" /> <!-- Spirit Ore -->
+		<set name="itemConsumeId" val="1458" /> <!-- Epilogue Modification -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
@@ -761,8 +761,8 @@
 	</skill>
 	<skill id="1331" levels="10" name="Summon Feline Queen" enchantGroup1="1">
 		<!-- Summon the servitor Feline Queen. Requires 1 Spirit Ore and consumes 2 Spirit Ore at regular intervals up to 14 times. -->
-		<table name="#itemConsumeCount">1 1 2 2 4 1 1 4 1 2 </table>
-		<table name="#itemConsumeCountOT">2 2 2 2 2 4 4 4 6 6 </table>
+		<table name="#itemConsumeCount"> 1 1 2 2 3 2 3 4 3 4 </table> <!-- Epilogue Modification -->
+		<table name="#itemConsumeCountOT"> 1 1 1 1 1 2 2 2 3 3 </table> <!-- Epilogue Modification -->
 		<table name="#magicLvl">56 58 60 62 64 66 68 70 72 74 </table>
 		<table name="#mpConsume">56 62 69 75 82 85 88 92 95 98 </table>
 		<table name="#mpInitialConsume">14 16 18 19 21 22 22 23 24 25 </table>
@@ -770,7 +770,7 @@
 		<table name="#enchNpcId">14265 14266 14267 14268 14269 14270 14271 14272 14273 14274 14275 14276 14277 14278 14279 14280 14281 14282 14283 14284 14285 14286 14287 14288 14289 14290 14291 14292 14293 14294 </table>
 		<set name="icon" val="icon.skill1331" />
 		<set name="itemConsumeCount" val="#itemConsumeCount" />
-		<set name="itemConsumeId" val="3031" /> <!-- Spirit Ore -->
+		<set name="itemConsumeId" val="1459" /> <!-- Epilogue Modification -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
@@ -786,14 +786,14 @@
 		<for>
 			<effect name="Summon">
 				<param npcId="#npcIds" />
-				<param consumeItemId="3031" consumeItemCount="#itemConsumeCountOT" />
+				<param consumeItemId="1459" consumeItemCount="#itemConsumeCountOT" /> <!-- Epilogue Modification -->
 				<param lifeTime="3600" />
 			</effect>
 		</for>
 		<enchant1for>
 			<effect name="Summon">
 				<param npcId="#enchNpcId" />
-				<param consumeItemId="3031" consumeItemCount="6" />
+				<param consumeItemId="1459" consumeItemCount="6" /> <!-- Epilogue Modification -->
 				<param lifeTime="3600" />
 			</effect>
 		</enchant1for>
@@ -839,8 +839,8 @@
 	</skill>
 	<skill id="1333" levels="10" name="Summon Nightshade" enchantGroup1="1">
 		<!-- Summon the servitor Nightshade. Requires 1 Spirit Ore and additionally consumes 2 Spirit Ore at regular intervals up to 14 times. -->
-		<table name="#itemConsumeCount">1 1 2 2 4 1 1 4 1 2 </table>
-		<table name="#itemConsumeCountOT">2 2 2 2 2 4 4 4 6 6 </table>
+		<table name="#itemConsumeCount"> 1 1 2 2 3 2 3 4 3 4 </table> <!-- Epilogue Modification -->
+		<table name="#itemConsumeCountOT"> 1 1 1 1 1 2 2 2 3 3 </table> <!-- Epilogue Modification -->
 		<table name="#magicLvl">56 58 60 62 64 66 68 70 72 74 </table>
 		<table name="#mpConsume">56 62 69 75 82 85 88 92 95 98 </table>
 		<table name="#mpInitialConsume">14 16 18 19 21 22 22 23 24 25 </table>
@@ -848,7 +848,7 @@
 		<table name="#enchNpcId">14633 14634 14635 14636 14637 14638 14639 14640 14641 14642 14643 14644 14645 14646 14647 14648 14649 14650 14651 14652 14653 14654 14655 14656 14657 14658 14659 14660 14661 14662 </table>
 		<set name="icon" val="icon.skill1333" />
 		<set name="itemConsumeCount" val="#itemConsumeCount" />
-		<set name="itemConsumeId" val="3031" /> <!-- Spirit Ore -->
+		<set name="itemConsumeId" val="1459" /> <!-- Epilogue Modification -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
@@ -864,22 +864,22 @@
 		<for>
 			<effect name="Summon">
 				<param npcId="#npcIds" />
-				<param consumeItemId="3031" consumeItemCount="#itemConsumeCountOT" />
+				<param consumeItemId="1459" consumeItemCount="#itemConsumeCountOT" /> <!-- Epilogue Modification -->
 				<param lifeTime="3600" />
 			</effect>
 		</for>
 		<enchant1for>
 			<effect name="Summon">
 				<param npcId="#enchNpcId" />
-				<param consumeItemId="3031" consumeItemCount="6" />
+				<param consumeItemId="1459" consumeItemCount="6" /> <!-- Epilogue Modification -->
 				<param lifeTime="3600" />
 			</effect>
 		</enchant1for>
 	</skill>
 	<skill id="1334" levels="7" name="Summon Cursed Man" enchantGroup1="1">
 		<!-- Summons a Cursed Man. Consumes 3 Spirit Ore upon summoning and consumes 1 additional Spirit Ore at regular intervals up to 14 times. -->
-		<table name="#itemConsumeCount">3 5 12 1 2 3 4 </table>
-		<table name="#itemConsumeCountOT">1 1 1 2 2 2 2 </table>
+		<table name="#itemConsumeCount"> 1 2 2 3 3 3 3 </table> <!-- Epilogue Modification -->
+		<table name="#itemConsumeCountOT"> 2 2 3 3 3 4 4 </table> <!-- Epilogue Modification -->
 		<table name="#magicLvl">56 60 64 68 70 72 74 </table>
 		<table name="#mpConsume">82 88 95 101 104 106 109 </table>
 		<table name="#mpInitialConsume">21 22 24 26 26 27 28 </table>
@@ -887,7 +887,7 @@
 		<table name="#enchNpcId">14081 14082 14083 14084 14085 14086 14087 14088 14089 14090 14091 14092 14093 14094 14095 14096 14097 14098 14099 14100 14101 14102 14103 14104 14105 14106 14107 14108 14109 14110 </table>
 		<set name="icon" val="icon.skill1334" />
 		<set name="itemConsumeCount" val="#itemConsumeCount" />
-		<set name="itemConsumeId" val="3031" /> <!-- Spirit Ore -->
+		<set name="itemConsumeId" val="1459" /> <!-- Epilogue Modification -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
@@ -904,15 +904,15 @@
 		<for>
 			<effect name="Summon">
 				<param npcId="#npcIds" />
-				<param consumeItemId="3031" consumeItemCount="#itemConsumeCountOT" />
+				<param consumeItemId="1459" consumeItemCount="#itemConsumeCountOT" /> <!-- Epilogue Modification -->
 				<param lifeTime="3600" />
 			</effect>
 		</for>
 		<enchant1for>
 			<effect name="Summon">
 				<param npcId="#enchNpcId" />
-				<param consumeItemId="3031" consumeItemCount="2" />
-				<param lifeTime="3600" />
+				<param consumeItemId="1459" consumeItemCount="2" /> <!-- Epilogue Modification -->
+				<param lifeTime="1200" /> <!-- Epilogue Modification -->
 			</effect>
 		</enchant1for>
 	</skill>
@@ -1339,7 +1339,7 @@
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="HpDrain">
-				<param power="0.2" />
+				<param power="0.4" /> <!-- Epilogue Modification -->
 			</effect>
 			<effect name="ManaDamOverTime" ticks="5">
 				<param power="12" />
@@ -1349,7 +1349,7 @@
 		</for>
 		<enchant3for>
 			<effect name="HpDrain">
-				<param power="0.2" />
+				<param power="0.4" /> <!-- Epilogue Modification -->
 			</effect>
 			<effect name="ManaDamOverTime" ticks="5">
 				<param power="12" />
@@ -2559,7 +2559,7 @@
 		<set name="castRange" val="500" />
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="1000" />
-		<set name="hitTime" val="5000" />
+		<set name="hitTime" val="6000" /> <!-- Epilogue Modification -->
 		<set name="icon" val="icon.skill1381" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -2584,6 +2584,7 @@
 	<skill id="1382" levels="5" name="Mass Gloom" enchantGroup1="1" enchantGroup2="1">
 		<!-- Inflicts dark damage near the enemy with 33 Power added to M. Atk. For 30 seconds, decreases the enemies' M. Def. by 15% and Resistance to all attributes by 5. -->
 		<table name="#effectPoints">-549 -582 -611 -635 -655 </table>
+		<table name="#itemConsumeCount"> 4 4 4 5 5 </table> <!-- Epilogue Modification -->
 		<table name="#magicLvl">58 62 66 70 74 </table>
 		<table name="#mpConsume">80 87 93 98 103 </table>
 		<table name="#power">33 36 39 41 44 </table>
@@ -2608,51 +2609,53 @@
 		<set name="icon" val="icon.skill1382" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="itemConsumeId" val="2508" /> <!-- Epilogue Modification -->
+		<set name="itemConsumeCount" val="#itemConsumeCount" /> <!-- Epilogue Modification -->
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
-		<set name="reuseDelay" val="12000" />
+		<set name="reuseDelay" val="15000" /> <!-- Epilogue Modification -->
 		<set name="targetType" val="AREA" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant2 name="activateRate" val="#ench2ActivateRates" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<for>
-			<effect name="MagicalAttack" />
+			<!-- <effect name="MagicalAttack" /> --> <!-- Epilogue Modification -->
 			<effect name="Debuff">
 				<mul stat="mDef" val="0.85" />
-				<sub stat="waterRes" val="#vuln" />
+				<!-- <sub stat="waterRes" val="#vuln" />
 				<sub stat="fireRes" val="#vuln" />
 				<sub stat="windRes" val="#vuln" />
 				<sub stat="earthRes" val="#vuln" />
 				<sub stat="holyRes" val="#vuln" />
-				<sub stat="darkRes" val="#vuln" />
+				<sub stat="darkRes" val="#vuln" /> --> <!-- Epilogue Modification -->
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="MagicalAttack" />
+			<!-- <effect name="MagicalAttack" /> --> <!-- Epilogue Modification -->
 			<effect name="Debuff">
 				<mul stat="mDef" val="0.85" />
-				<sub stat="waterRes" val="25" />
+				<!-- <sub stat="waterRes" val="25" />
 				<sub stat="fireRes" val="25" />
 				<sub stat="windRes" val="25" />
 				<sub stat="earthRes" val="25" />
 				<sub stat="holyRes" val="25" />
-				<sub stat="darkRes" val="25" />
+				<sub stat="darkRes" val="25" /> --> <!-- Epilogue Modification -->
 			</effect>
 		</enchant1for>
 		<enchant2for>
 			<effect name="MagicalAttack" />
 			<effect name="Debuff">
 				<mul stat="mDef" val="0.85" />
-				<sub stat="waterRes" val="#ench2Vuln" />
+				<!-- <sub stat="waterRes" val="#ench2Vuln" />
 				<sub stat="fireRes" val="#ench2Vuln" />
 				<sub stat="windRes" val="#ench2Vuln" />
 				<sub stat="earthRes" val="#ench2Vuln" />
 				<sub stat="holyRes" val="#ench2Vuln" />
-				<sub stat="darkRes" val="#ench2Vuln" />
+				<sub stat="darkRes" val="#ench2Vuln" /> --> <!-- Epilogue Modification -->
 			</effect>
 		</enchant2for>
 	</skill>

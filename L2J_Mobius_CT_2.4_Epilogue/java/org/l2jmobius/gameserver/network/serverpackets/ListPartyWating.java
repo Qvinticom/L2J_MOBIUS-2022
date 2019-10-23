@@ -84,21 +84,8 @@ public class ListPartyWating implements IClientOutgoingPacket
 			packet.writeD(room.getMinLvl());
 			packet.writeD(room.getMaxLvl());
 			packet.writeD(room.getMaxMembers());
-			packet.writeS(room.getOwner().getName());
 			packet.writeD(room.getMembers());
-			for (PlayerInstance member : room.getPartyMembers())
-			{
-				if (member != null)
-				{
-					packet.writeD(member.getClassId().getId());
-					packet.writeS(member.getName());
-				}
-				else
-				{
-					packet.writeD(0x00);
-					packet.writeS("Not Found");
-				}
-			}
+			packet.writeS(room.getOwner().getName());
 		}
 		return true;
 	}

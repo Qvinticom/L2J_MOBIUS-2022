@@ -313,7 +313,7 @@
 		<set name="mpConsume" val="117" />
 		<set name="mpInitialConsume" val="28" />
 		<set name="operateType" val="A1" />
-		<set name="reuseDelay" val="5000" />
+		<set name="reuseDelay" val="20000" /> <!-- Epilogue Modification -->
 		<set name="targetType" val="SELF" />
 		<cond>
 			<player canSummon="true" />
@@ -322,7 +322,7 @@
 			<effect name="Summon">
 				<param npcId="14870" />
 				<param consumeItemId="1461" consumeItemCount="1" />
-				<param lifeTime="3600" />
+				<param lifeTime="1200" /> <!-- Epilogue Modification -->
 				<param expMultiplier="0.7" />
 			</effect>
 		</for>
@@ -1569,12 +1569,12 @@
 	<skill id="762" levels="1" name="Insane Crusher">
 		<!-- Unleashes a powerful strike with 8409 Power added to P. Atk. and Dark Curse to surrounding enemies when rage reaches its peak. Cancels at least one of the enemy's buffs, and drastically decreases Max CP, Resistance to de-buff attacks, and effectiveness of receiving HP recovery. Requires a sword or blunt weapon. Ignores shield defense. Critical and Over-hit are possible. -->
 		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="60" />
+		<set name="abnormalTime" val="120" /> <!-- Epilogue Modification -->
 		<set name="abnormalType" val="TOUCH_OF_DEATH" />
 		<set name="activateRate" val="70" />
 		<set name="affectLimit" val="5-12" />
-		<set name="affectRange" val="300" />
-		<set name="baseCritRate" val="50" />
+		<set name="affectRange" val="200" /> <!-- Epilogue Modification -->
+		<set name="baseCritRate" val="15" /> <!-- Epilogue Modification -->
 		<set name="basicProperty" val="CON" />
 		<set name="coolTime" val="700" />
 		<set name="effectPoint" val="-1357" />
@@ -1587,8 +1587,8 @@
 		<set name="mpConsume" val="80" />
 		<set name="operateType" val="A2" />
 		<set name="overHit" val="true" />
-		<set name="power" val="8409" />
-		<set name="reuseDelay" val="10000" />
+		<set name="power" val="6468" /> <!-- Epilogue Modification -->
+		<set name="reuseDelay" val="45000" /> <!-- Epilogue Modification -->
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="DEATH" />
 		<cond msgId="113" addName="1">
@@ -1620,7 +1620,7 @@
 		<set name="abnormalVisualEffect" val="TURN_FLEE" />
 		<set name="activateRate" val="90" />
 		<set name="affectLimit" val="10-10" />
-		<set name="affectRange" val="200" />
+		<set name="affectRange" val="100" /> <!-- Epilogue Modification -->
 		<set name="basicProperty" val="MEN" />
 		<set name="effectPoint" val="-6781" />
 		<set name="hitTime" val="1000" />
@@ -1637,7 +1637,7 @@
 			<effect name="Fear">
 				<mul stat="mDef" val="0.7" />
 				<mul stat="pDef" val="0.7" />
-				<mul stat="runSpd" val="0.7" />
+				<!-- <mul stat="runSpd" val="0.7" /> --> <!-- Epilogue Modification -->
 			</effect>
 		</for>
 	</skill>
@@ -1825,7 +1825,7 @@
 		<set name="mpConsume" val="160" />
 		<set name="operateType" val="A1" />
 		<set name="overHit" val="true" />
-		<set name="power" val="8049" />
+		<set name="power" val="5750" /> <!-- Epilogue Modification -->
 		<set name="reuseDelay" val="75000" />
 		<set name="targetType" val="FRONT_AREA" />
 		<cond msgId="113" addName="1">
@@ -1853,7 +1853,7 @@
 		<set name="mpConsume" val="160" />
 		<set name="operateType" val="A1" />
 		<set name="overHit" val="true" />
-		<set name="power" val="7043" />
+		<set name="power" val="4312" /> <!-- Epilogue Modification -->
 		<set name="reuseDelay" val="75000" />
 		<set name="targetType" val="AREA" />
 		<cond msgId="113" addName="1">
@@ -1871,7 +1871,7 @@
 		<set name="affectLimit" val="5-12" />
 		<set name="affectRange" val="900" />
 		<set name="baseCritRate" val="15" />
-		<set name="castRange" val="900" />
+		<set name="castRange" val="80" /> <!-- Epilogue Modification -->
 		<set name="coolTime" val="1000" />
 		<set name="effectPoint" val="-686" />
 		<set name="effectRange" val="1400" />
@@ -1882,7 +1882,7 @@
 		<set name="mpConsume" val="160" />
 		<set name="operateType" val="A1" />
 		<set name="overHit" val="true" />
-		<set name="power" val="8452" />
+		<set name="power" val="6037" /> <!-- Epilogue Modification -->
 		<set name="reuseDelay" val="75000" />
 		<set name="targetType" val="FRONT_AREA" />
 		<cond msgId="113" addName="1">
@@ -1903,14 +1903,14 @@
 		<set name="abnormalVisualEffect" val="TURN_FLEE" />
 		<set name="activateRate" val="80" />
 		<set name="affectLimit" val="10-10" />
-		<set name="affectRange" val="200" />
+		<set name="affectRange" val="100" /> <!-- Epilogue Modification -->
 		<set name="basicProperty" val="MEN" />
 		<set name="effectPoint" val="-655" />
 		<set name="hitTime" val="1000" />
 		<set name="icon" val="icon.skill0774" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
-		<set name="magicLvl" val="81" />
+		<set name="magicLvl" val="83" /> <!-- Epilogue Modification -->
 		<set name="mpConsume" val="87" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="75000" />
@@ -1935,7 +1935,7 @@
 		<set name="castRange" val="40" />
 		<set name="chargeConsume" val="2" />
 		<set name="effectPoint" val="-679" />
-		<set name="effectRange" val="200" />
+		<set name="effectRange" val="400" /> <!-- Epilogue Modification -->
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill0775" />
 		<set name="isDebuff" val="true" />
@@ -1969,7 +1969,7 @@
 		<set name="castRange" val="40" />
 		<set name="chargeConsume" val="2" />
 		<set name="effectPoint" val="-679" />
-		<set name="effectRange" val="200" />
+		<set name="effectRange" val="400" /> <!-- Epilogue Modification -->
 		<set name="hitTime" val="1200" />
 		<set name="icon" val="icon.skill0776" />
 		<set name="isDebuff" val="true" />
@@ -1992,17 +1992,17 @@
 				<param criticalChance="20" />
 			</effect>
 			<effect name="DamOverTime" ticks="1">
-				<param power="80" />
+				<param power="70" /> <!-- Epilogue Modification -->
 			</effect>
 		</for>
 	</skill>
 	<skill id="777" levels="1" name="Demolition Impact">
 		<!-- Unleashes a shock of destruction to attack nearby enemies with 7475 Power added to P. Atk. Requires a two-handed sword/ blunt weapon. Over-hit and Critical are possible. -->
-		<set name="affectRange" val="500" />
+		<set name="affectRange" val="150" /> <!-- Epilogue Modification -->
 		<set name="baseCritRate" val="15" />
-		<set name="castRange" val="150" />
+		<set name="castRange" val="40" /> <!-- Epilogue Modification -->
 		<set name="effectPoint" val="-686" />
-		<set name="effectRange" val="650" />
+		<set name="effectRange" val="400" /> <!-- Epilogue Modification -->
 		<set name="fanRange" val="0,0,500,60" />
 		<set name="hitTime" val="1200" />
 		<set name="icon" val="icon.skill0777" />
@@ -2010,7 +2010,7 @@
 		<set name="mpConsume" val="160" />
 		<set name="operateType" val="A1" />
 		<set name="overHit" val="true" />
-		<set name="power" val="7475" />
+		<set name="power" val="5750" /> <!-- Epilogue Modification -->
 		<set name="reuseDelay" val="75000" />
 		<set name="targetType" val="FRONT_AREA" />
 		<cond msgId="113" addName="1">
@@ -2052,8 +2052,8 @@
 		<set name="hitTime" val="6000" />
 		<set name="icon" val="icon.skill0779" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="itemConsumeCount" val="38" />
-		<set name="itemConsumeId" val="3031" /> <!-- Spirit Ore -->
+		<set name="itemConsumeCount" val="2" /> <!-- Epilogue Modification -->
+		<set name="itemConsumeId" val="1461" /> <!-- Epilogue Modification -->
 		<set name="magicLvl" val="80" />
 		<set name="mpConsume" val="59" />
 		<set name="mpInitialConsume" val="14" />
@@ -2072,8 +2072,8 @@
 		<set name="hitTime" val="6000" />
 		<set name="icon" val="icon.skill0779" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="itemConsumeCount" val="38" />
-		<set name="itemConsumeId" val="3031" /> <!-- Spirit Ore -->
+		<set name="itemConsumeCount" val="2" /> <!-- Epilogue Modification -->
+		<set name="itemConsumeId" val="1461" /> <!-- Epilogue Modification -->
 		<set name="magicLvl" val="80" />
 		<set name="mpConsume" val="59" />
 		<set name="mpInitialConsume" val="14" />
@@ -2092,8 +2092,8 @@
 		<set name="hitTime" val="6000" />
 		<set name="icon" val="icon.skill0779" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="itemConsumeCount" val="38" />
-		<set name="itemConsumeId" val="3031" /> <!-- Spirit Ore -->
+		<set name="itemConsumeCount" val="2" /> <!-- Epilogue Modification -->
+		<set name="itemConsumeId" val="1461" /> <!-- Epilogue Modification -->
 		<set name="magicLvl" val="80" />
 		<set name="mpConsume" val="59" />
 		<set name="mpInitialConsume" val="14" />
@@ -2112,8 +2112,8 @@
 		<set name="hitTime" val="6000" />
 		<set name="icon" val="icon.skill0779" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="itemConsumeCount" val="38" />
-		<set name="itemConsumeId" val="3031" /> <!-- Spirit Ore -->
+		<set name="itemConsumeCount" val="2" /> <!-- Epilogue Modification -->
+		<set name="itemConsumeId" val="1461" /> <!-- Epilogue Modification -->
 		<set name="magicLvl" val="80" />
 		<set name="mpConsume" val="59" />
 		<set name="mpInitialConsume" val="14" />
@@ -2132,8 +2132,8 @@
 		<set name="hitTime" val="6000" />
 		<set name="icon" val="icon.skill0779" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="itemConsumeCount" val="38" />
-		<set name="itemConsumeId" val="3031" /> <!-- Spirit Ore -->
+		<set name="itemConsumeCount" val="2" /> <!-- Epilogue Modification -->
+		<set name="itemConsumeId" val="1461" /> <!-- Epilogue Modification -->
 		<set name="magicLvl" val="80" />
 		<set name="mpConsume" val="59" />
 		<set name="mpInitialConsume" val="14" />

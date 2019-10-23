@@ -91,7 +91,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4109" type="EtcItem" name="Kris Edge">
-		<!-- Main ingredient definitely required for a Dwarf to make a Kris. Can also be sold at ordinary shops. -->
+		<!-- Main ingredient required by a Dwarf to make a Kris. Can also be sold at ordinary shops. -->
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -181,7 +181,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4118" type="EtcItem" name="Evil Spirit Head">
-		<!-- Main ingredient definitely required for a Dwarf to make the Staff of Evil Spirits. May also be sold at ordinary shops. -->
+		<!-- Main ingredient required for a Dwarf to make the Staff of Evil Spirits. May also be sold at ordinary shops. -->
 		<set name="icon" val="icon.etc_squares_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -191,7 +191,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4119" type="EtcItem" name="Demon's Dagger Edge">
-		<!-- Main ingredient definitely required for a Dwarf to make a Demon's Dagger. Can also be sold at ordinary shops. -->
+		<!-- Main ingredient definitely required for a Dwarf to make a Demon Dagger. Can also be sold at ordinary shops. -->
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -1040,7 +1040,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="4185" type="EtcItem" name="Recipe: Keshanberk (100%)">
-		<!-- For Dwarves only. The recipe for a Keshanberk. Requires Create Item - Skill Level 6. The success rate is 100%. -->
+		<!-- For Dwarves only. The recipe for a Kshanberk. Requires Create Item - Skill Level 6. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1196,7 +1196,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="4197" type="EtcItem" name="Recipe: Demon's Dagger (100%)">
-		<!-- For Dwarves only. The recipe for a Demon's Dagger. Requires Create Item - Skill Level 7. The success rate is 100%. -->
+		<!-- For Dwarves only. The recipe for a Demon Dagger. Requires Create Item - Skill Level 7. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />

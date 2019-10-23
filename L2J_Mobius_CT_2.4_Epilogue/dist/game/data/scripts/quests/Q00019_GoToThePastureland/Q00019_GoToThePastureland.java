@@ -16,69 +16,62 @@
  */
 package quests.Q00019_GoToThePastureland;
 
+import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
 
-/**
- * Go to the Pastureland (19)<br>
- * Original Jython script by disKret.
- * @author malyelfik
- */
 public class Q00019_GoToThePastureland extends Quest
 {
+	// Items
+	private static final int YOUNG_WILD_BEAST_MEAT = 7547;
+	
 	// NPCs
 	private static final int VLADIMIR = 31302;
 	private static final int TUNATUN = 31537;
-	// Items
-	private static final int VEAL = 15532;
-	private static final int YOUNG_WILD_BEAST_MEAT = 7547;
 	
 	public Q00019_GoToThePastureland()
 	{
 		super(19);
+		
+		registerQuestItems(YOUNG_WILD_BEAST_MEAT);
+		
 		addStartNpc(VLADIMIR);
 		addTalkId(VLADIMIR, TUNATUN);
-		registerQuestItems(VEAL, YOUNG_WILD_BEAST_MEAT);
 	}
 	
 	@Override
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		final QuestState qs = getQuestState(player, false);
-		
-		if (qs == null)
+		QuestState st = player.getQuestState(getName());
+		if (st == null)
 		{
-			return getNoQuestMsg(player);
+			return htmltext;
 		}
 		
-		if (event.equalsIgnoreCase("31302-02.htm"))
+		if (event.equals("31302-01.htm"))
 		{
-			qs.startQuest();
-			giveItems(player, VEAL, 1);
+			st.setState(State.STARTED);
+			st.set("cond", "1");
+			playSound(player, QuestSound.ITEMSOUND_QUEST_ACCEPT);
+			giveItems(player, YOUNG_WILD_BEAST_MEAT, 1);
 		}
-		else if (event.equalsIgnoreCase("31537-02.html"))
+		else if (event.equals("019_finish"))
 		{
 			if (hasQuestItems(player, YOUNG_WILD_BEAST_MEAT))
 			{
-				giveAdena(player, 50000, true);
-				addExpAndSp(player, 136766, 12688);
-				qs.exitQuest(false, true);
-				htmltext = "31537-02.html";
-			}
-			else if (hasQuestItems(player, VEAL))
-			{
-				giveAdena(player, 147200, true);
-				addExpAndSp(player, 385040, 75250);
-				qs.exitQuest(false, true);
-				htmltext = "31537-02.html";
+				htmltext = "31537-01.htm";
+				takeItems(player, YOUNG_WILD_BEAST_MEAT, 1);
+				rewardItems(player, 57, 30000);
+				playSound(player, QuestSound.ITEMSOUND_QUEST_FINISH);
+				st.exitQuest(false);
 			}
 			else
 			{
-				htmltext = "31537-03.html";
+				htmltext = "31537-02.htm";
 			}
 		}
 		return htmltext;
@@ -87,41 +80,33 @@ public class Q00019_GoToThePastureland extends Quest
 	@Override
 	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		final QuestState qs = getQuestState(player, true);
+		final QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
-		if (npc.getId() == VLADIMIR)
+		switch (st.getState())
 		{
-			switch (qs.getState())
-			{
-				case State.CREATED:
+			case State.CREATED:
+				htmltext = (player.getLevel() < 63) ? "31302-03.htm" : "31302-00.htm";
+				break;
+			
+			case State.STARTED:
+				switch (npc.getId())
 				{
-					if (player.getLevel() >= 82)
-					{
-						htmltext = "31302-01.htm";
-					}
-					else
-					{
-						htmltext = "31302-03.html";
-					}
-					break;
+					case VLADIMIR:
+						htmltext = "31302-02.htm";
+						break;
+					
+					case TUNATUN:
+						htmltext = "31537-00.htm";
+						break;
 				}
-				case State.STARTED:
-				{
-					htmltext = "31302-04.html";
-					break;
-				}
-				case State.COMPLETED:
-				{
-					htmltext = getAlreadyCompletedMsg(player);
-					break;
-				}
-			}
+				break;
+			
+			case State.COMPLETED:
+				htmltext = getAlreadyCompletedMsg(player);
+				break;
 		}
-		else if ((npc.getId() == TUNATUN) && qs.isCond(1))
-		{
-			htmltext = "31537-01.html";
-		}
+		
 		return htmltext;
 	}
 }

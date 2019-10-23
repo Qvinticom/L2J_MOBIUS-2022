@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="18600" level="86" type="Npc" name="Kratei's Steward">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -63,7 +62,7 @@
 				<item id="8604" min="1" max="1" chance="25" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="7" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="4" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="4" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="4" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="4" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="4" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="4" /> <!-- Herb of Critical Attack - Power -->
@@ -81,7 +80,6 @@
 		</collision>
 	</npc>
 	<npc id="18601" level="70" type="Npc" name="Kratei's Watcher">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -116,7 +114,6 @@
 		</collision>
 	</npc>
 	<npc id="18602" level="70" type="Npc" name="Kratei's Watcher">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -151,7 +148,6 @@
 		</collision>
 	</npc>
 	<npc id="18603" level="73" type="Npc">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -186,7 +182,6 @@
 		</collision>
 	</npc>
 	<npc id="18604" level="73" type="Npc">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -220,8 +215,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18605" level="73" type="Npc">
-		<!-- Confirmed CT2.5 -->
+	<npc id="18605" level="73" type="Npc" name="">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -256,7 +250,6 @@
 		</collision>
 	</npc>
 	<npc id="18606" level="73" type="Npc">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -291,7 +284,6 @@
 		</collision>
 	</npc>
 	<npc id="18607" level="39" type="Monster" name="Gargos" title="Spirit of Fire">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="114" />
 			<param name="MoveAroundSocial1" value="114" />
@@ -352,7 +344,6 @@
 		</collision>
 	</npc>
 	<npc id="18608" level="39" type="Monster" name="Kinsus" title="Spirit of Fire">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="150" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -411,7 +402,6 @@
 		</collision>
 	</npc>
 	<npc id="18609" level="36" type="Monster" name="Papion" title="Spirit of Water">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="150" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -473,7 +463,6 @@
 		</collision>
 	</npc>
 	<npc id="18610" level="36" type="Monster" name="Hillas" title="Spirit of Water">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -537,7 +526,6 @@
 		</collision>
 	</npc>
 	<npc id="18611" level="33" type="Monster" name="Spirit of Water">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -604,7 +592,6 @@
 		</collision>
 	</npc>
 	<npc id="18612" level="36" type="Monster" name="Spirit of Water">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -671,7 +658,6 @@
 		</collision>
 	</npc>
 	<npc id="18613" level="39" type="Monster" name="Spirit of Water">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -738,7 +724,6 @@
 		</collision>
 	</npc>
 	<npc id="18614" level="36" type="Monster" name="Spirit of Fire">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="215" />
 			<param name="MoveAroundSocial1" value="215" />
@@ -806,7 +791,6 @@
 		</collision>
 	</npc>
 	<npc id="18615" level="39" type="Monster" name="Spirit of Fire">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -873,7 +857,6 @@
 		</collision>
 	</npc>
 	<npc id="18616" level="36" type="Monster" name="Bloom">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -935,7 +918,6 @@
 		</collision>
 	</npc>
 	<npc id="18617" level="36" type="Npc">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<acquire exp="726" sp="28" />
@@ -972,7 +954,6 @@
 		</collision>
 	</npc>
 	<npc id="18618" level="36" type="Npc">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<acquire exp="726" sp="28" />
@@ -1009,7 +990,6 @@
 		</collision>
 	</npc>
 	<npc id="18619" level="36" type="Npc">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<acquire exp="726" sp="28" />
@@ -1046,7 +1026,6 @@
 		</collision>
 	</npc>
 	<npc id="18620" level="42" type="Monster" name="Adiantum">
-		<!-- Confirmed CT2.5 -->
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<acquire exp="91639" sp="4070" />
@@ -1084,7 +1063,6 @@
 		</collision>
 	</npc>
 	<npc id="18621" level="42" type="Npc">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<acquire exp="988" sp="44" />
@@ -1121,7 +1099,6 @@
 		</collision>
 	</npc>
 	<npc id="18622" level="61" type="Monster" name="Powder Keg">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<acquire exp="2085" sp="174" />
@@ -1157,7 +1134,6 @@
 		</collision>
 	</npc>
 	<npc id="18623" level="61" type="Monster" name="Begrudged Archer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="157" />
 			<param name="MoveAroundSocial1" value="157" />
@@ -1220,7 +1196,6 @@
 		</collision>
 	</npc>
 	<npc id="18624" level="58" type="Monster" name="Deadman's Grudge">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -1286,7 +1261,6 @@
 		</collision>
 	</npc>
 	<npc id="18625" level="61" type="Monster" name="Deadman's Grudge">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="215" />
 			<param name="MoveAroundSocial1" value="215" />
@@ -1353,7 +1327,6 @@
 		</collision>
 	</npc>
 	<npc id="18626" level="64" type="Monster" name="Deadman's Grudge">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -1420,7 +1393,6 @@
 		</collision>
 	</npc>
 	<npc id="18627" level="64" type="Monster" name="Deadman's Grudge">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -1487,7 +1459,6 @@
 		</collision>
 	</npc>
 	<npc id="18628" level="61" type="Monster" name="Atan" title="Lookout">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -1551,7 +1522,6 @@
 		</collision>
 	</npc>
 	<npc id="18629" level="61" type="Monster" name="Kams" title="Panuka">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="215" />
 			<param name="MoveAroundSocial1" value="215" />
@@ -1616,7 +1586,6 @@
 		</collision>
 	</npc>
 	<npc id="18630" level="61" type="Monster" name="Hikoro" title="Panuka">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1681,7 +1650,6 @@
 		</collision>
 	</npc>
 	<npc id="18631" level="64" type="Monster" name="Alkaso" title="Panuka">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -1746,7 +1714,6 @@
 		</collision>
 	</npc>
 	<npc id="18632" level="64" type="Monster" name="Gerbera" title="Panuka">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -1811,7 +1778,6 @@
 		</collision>
 	</npc>
 	<npc id="18633" level="67" type="Monster" name="Lematan">
-		<!-- Confirmed CT2.5 -->
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<acquire exp="317821" sp="23080" />
@@ -1848,7 +1814,6 @@
 		</collision>
 	</npc>
 	<npc id="18634" level="64" type="Monster" name="Lematan's Follower">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="232" /> <!-- rhand: Dark Elven Dagger -->
@@ -1886,7 +1851,6 @@
 		</collision>
 	</npc>
 	<npc id="18635" level="71" type="Monster" name="Varka Silenos Recruit">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="65" />
 			<param name="MoveAroundSocial1" value="65" />
@@ -1949,7 +1913,6 @@
 		</collision>
 	</npc>
 	<npc id="18636" level="71" type="Monster" name="Varka Silenos Footman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -2010,7 +1973,6 @@
 		</collision>
 	</npc>
 	<npc id="18637" level="72" type="Monster" name="Grazing Antelope">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -2069,7 +2031,6 @@
 		</collision>
 	</npc>
 	<npc id="18638" level="72" type="Monster" name="Varka Silenos Scout">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="65" />
 			<param name="MoveAroundSocial1" value="65" />
@@ -2130,7 +2091,6 @@
 		</collision>
 	</npc>
 	<npc id="18639" level="72" type="Monster" name="Varka Silenos Hunter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
 			<param name="MoveAroundSocial1" value="75" />
@@ -2192,7 +2152,6 @@
 		</collision>
 	</npc>
 	<npc id="18640" level="72" type="Monster" name="Varka Silenos Shaman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="123" />
 			<param name="MoveAroundSocial1" value="123" />
@@ -2256,7 +2215,6 @@
 		</collision>
 	</npc>
 	<npc id="18641" level="72" type="Monster" name="Varka Silenos Priest">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -2320,7 +2278,6 @@
 		</collision>
 	</npc>
 	<npc id="18642" level="72" type="Monster" name="Varka Silenos Warrior">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -2381,7 +2338,6 @@
 		</collision>
 	</npc>
 	<npc id="18643" level="73" type="Monster" name="Grazing Antelope">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -2440,7 +2396,6 @@
 		</collision>
 	</npc>
 	<npc id="18644" level="72" type="Monster" name="Varka Silenos Medium">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="123" />
 			<param name="MoveAroundSocial1" value="123" />
@@ -2504,7 +2459,6 @@
 		</collision>
 	</npc>
 	<npc id="18645" level="73" type="Monster" name="Varka Silenos Magus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -2568,7 +2522,6 @@
 		</collision>
 	</npc>
 	<npc id="18646" level="73" type="Monster" name="Varka Silenos Officer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -2629,7 +2582,6 @@
 		</collision>
 	</npc>
 	<npc id="18647" level="74" type="Monster" name="Grazing Flava">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -2688,7 +2640,6 @@
 		</collision>
 	</npc>
 	<npc id="18648" level="73" type="Monster" name="Varka Silenos Seer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="123" />
 			<param name="MoveAroundSocial1" value="123" />
@@ -2752,7 +2703,6 @@
 		</collision>
 	</npc>
 	<npc id="18649" level="73" type="Monster" name="Varka Silenos Great Magus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -2813,7 +2763,6 @@
 		</collision>
 	</npc>
 	<npc id="18650" level="73" type="Monster" name="Varka Silenos General">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -2876,7 +2825,6 @@
 		</collision>
 	</npc>
 	<npc id="18651" level="74" type="Monster" name="Grazing Elder Antelope">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -2935,7 +2883,6 @@
 		</collision>
 	</npc>
 	<npc id="18652" level="74" type="Monster" name="Varka Silenos Great Seer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="123" />
 			<param name="MoveAroundSocial1" value="123" />
@@ -2999,7 +2946,6 @@
 		</collision>
 	</npc>
 	<npc id="18653" level="74" type="Monster" name="Varka's Elite Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -3060,7 +3006,6 @@
 		</collision>
 	</npc>
 	<npc id="18654" level="72" type="Monster" name="Varka's Commander">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -3121,7 +3066,6 @@
 		</collision>
 	</npc>
 	<npc id="18655" level="74" type="Monster" name="Varka's Head Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -3182,7 +3126,6 @@
 		</collision>
 	</npc>
 	<npc id="18656" level="74" type="Monster" name="Varka's Head Magus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="123" />
 			<param name="MoveAroundSocial1" value="123" />
@@ -3243,8 +3186,7 @@
 			<height normal="39.5" />
 		</collision>
 	</npc>
-	<npc id="18657" level="74" type="Monster" name="Prophet's Guard">
-		<!-- Confirmed CT2.5 -->
+	<npc id="18657" level="74" type="Monster" name="Prophet Guard">
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -3305,7 +3247,6 @@
 		</collision>
 	</npc>
 	<npc id="18658" level="74" type="Monster" name="Disciple of Prophet">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -3367,7 +3308,6 @@
 		</collision>
 	</npc>
 	<npc id="18659" level="74" type="Monster" name="Varka's Prophet">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="123" />
 			<param name="MoveAroundSocial1" value="123" />
@@ -3431,7 +3371,6 @@
 		</collision>
 	</npc>
 	<npc id="18660" level="75" type="Monster" name="Latana">
-		<!-- Confirmed CT2.5 -->
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
 		<acquire exp="453825" sp="4067" />
@@ -3467,7 +3406,6 @@
 		</collision>
 	</npc>
 	<npc id="18661" level="75" type="Npc">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<acquire exp="8086" sp="614" />
@@ -3503,7 +3441,6 @@
 		</collision>
 	</npc>
 	<npc id="18662" level="73" type="Npc">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<acquire exp="7660" sp="300" />
@@ -3539,7 +3476,6 @@
 		</collision>
 	</npc>
 	<npc id="18663" level="73" type="Npc">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3573,8 +3509,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18664" level="52" type="Monster" name="Lucky Pig" title="The Spirit of Fortune">
-		<!-- Confirmed CT2.5 -->
+	<npc id="18664" level="52" type="Monster" name="Fortune Bug">
 		<parameters>
 			<param name="MoveAroundSocial" value="150" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -3614,8 +3549,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="18665" level="70" type="Monster" name="Lucky Pig" title="The Spirit of Fortune">
-		<!-- Confirmed CT2.5 -->
+	<npc id="18665" level="70" type="Monster" name="Fortune Bug">
 		<parameters>
 			<param name="MoveAroundSocial" value="150" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -3655,8 +3589,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="18666" level="75" type="Monster" name="Lucky Pig" title="The Spirit of Fortune">
-		<!-- Confirmed CT2.5 -->
+	<npc id="18666" level="75" type="Monster" name="Fortune Bug">
 		<parameters>
 			<param name="MoveAroundSocial" value="150" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -3697,7 +3630,6 @@
 		</collision>
 	</npc>
 	<npc id="18667" level="83" type="Monster" name="Ward of Death">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3737,7 +3669,6 @@
 		</collision>
 	</npc>
 	<npc id="18668" level="83" type="Monster" name="Ward of Death">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="type" value="1" />
 		</parameters>
@@ -3780,7 +3711,6 @@
 		</collision>
 	</npc>
 	<npc id="18669" level="73" type="Npc">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3815,7 +3745,6 @@
 		</collision>
 	</npc>
 	<npc id="18670" level="73" type="Npc">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3850,7 +3779,6 @@
 		</collision>
 	</npc>
 	<npc id="18671" level="1" type="Monster" name="Block">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3886,7 +3814,6 @@
 		</collision>
 	</npc>
 	<npc id="18672" level="1" type="Block" name="Block">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3922,7 +3849,6 @@
 		</collision>
 	</npc>
 	<npc id="18673" level="1" type="Monster" name="Block">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3958,7 +3884,6 @@
 		</collision>
 	</npc>
 	<npc id="18674" level="1" type="Monster" name="Block">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3994,7 +3919,6 @@
 		</collision>
 	</npc>
 	<npc id="18675" level="1" type="Monster" name="Block">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4030,7 +3954,6 @@
 		</collision>
 	</npc>
 	<npc id="18676" level="73" type="Monster" name="Block-Carrying GIrl">
-		<!-- Confirmed CT2.5 -->
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4065,7 +3988,6 @@
 		</collision>
 	</npc>
 	<npc id="18677" level="73" type="Monster" name="Dragon Steed Troop Messenger">
-		<!-- Confirmed CT2.5 -->
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4100,7 +4022,6 @@
 		</collision>
 	</npc>
 	<npc id="18678" level="1" type="Npc" name="Energy Seed - Water">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4140,7 +4061,6 @@
 		</collision>
 	</npc>
 	<npc id="18679" level="1" type="Npc" name="Energy Seed - Fire">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4180,7 +4100,6 @@
 		</collision>
 	</npc>
 	<npc id="18680" level="2" type="Npc" name="Energy Seed - Wind">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4220,7 +4139,6 @@
 		</collision>
 	</npc>
 	<npc id="18681" level="2" type="Npc" name="Energy Seed - Earth">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4259,8 +4177,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="18682" level="3" type="Npc" name="Energy Seed - Holy">
-		<!-- Confirmed CT2.5 -->
+	<npc id="18682" level="3" type="Npc" name="Energy Seed - Divinity">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4291,7 +4208,7 @@
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
 		<dropLists>
 			<drop>
-				<item id="14020" min="1" max="2" chance="100" /> <!-- Holy Energy Compression Stone -->
+				<item id="14020" min="1" max="2" chance="100" /> <!-- Sacred Energy Compression Stone -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -4299,8 +4216,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="18683" level="3" type="Npc" name="Energy Seed - Dark">
-		<!-- Confirmed CT2.5 -->
+	<npc id="18683" level="3" type="Npc" name="Energy Seed - Darkness">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4331,7 +4247,7 @@
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" />
 		<dropLists>
 			<drop>
-				<item id="14019" min="1" max="2" chance="100" /> <!-- Dark Energy Compression Stone -->
+				<item id="14019" min="1" max="2" chance="100" /> <!-- Darkness Energy Compression Stone -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -4340,7 +4256,6 @@
 		</collision>
 	</npc>
 	<npc id="18684" level="1" type="Npc" name="Red Star Stone">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4380,7 +4295,6 @@
 		</collision>
 	</npc>
 	<npc id="18685" level="1" type="Npc" name="Red Star Stone">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4420,7 +4334,6 @@
 		</collision>
 	</npc>
 	<npc id="18686" level="1" type="Npc" name="Red Star Stone">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4460,7 +4373,6 @@
 		</collision>
 	</npc>
 	<npc id="18687" level="1" type="Npc" name="Blue Star Stone">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4500,7 +4412,6 @@
 		</collision>
 	</npc>
 	<npc id="18688" level="1" type="Npc" name="Blue Star Stone">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4540,7 +4451,6 @@
 		</collision>
 	</npc>
 	<npc id="18689" level="1" type="Npc" name="Blue Star Stone">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4580,7 +4490,6 @@
 		</collision>
 	</npc>
 	<npc id="18690" level="1" type="Npc" name="Green Star Stone">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4620,7 +4529,6 @@
 		</collision>
 	</npc>
 	<npc id="18691" level="1" type="Npc" name="Green Star Stone">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4660,7 +4568,6 @@
 		</collision>
 	</npc>
 	<npc id="18692" level="1" type="Npc" name="Green Star Stone">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4699,8 +4606,7 @@
 			<height normal="30.5" />
 		</collision>
 	</npc>
-	<npc id="18693" level="76" type="Monster" name="Treasure Chest of the Ancient Giants">
-		<!-- Confirmed CT2.5 -->
+	<npc id="18693" level="76" type="Monster" name="Treasure Box of the Ancient Giants">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4740,8 +4646,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="18694" level="78" type="Monster" name="Treasure Chest Guard">
-		<!-- Confirmed CT2.5 -->
+	<npc id="18694" level="78" type="Monster" name="Treasure Box Guard">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="AttackRange" value="2" />
@@ -4792,8 +4697,7 @@
 			<height normal="60" />
 		</collision>
 	</npc>
-	<npc id="18695" level="78" type="Monster" name="Treasure Chest Guard">
-		<!-- Confirmed CT2.5 -->
+	<npc id="18695" level="78" type="Monster" name="Treasure Box Guard">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="AttackRange" value="2" />
@@ -4845,7 +4749,6 @@
 		</collision>
 	</npc>
 	<npc id="18696" level="80" type="Monster" name="Dimension Moving Device">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4884,7 +4787,6 @@
 		</collision>
 	</npc>
 	<npc id="18697" level="80" type="Monster" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4919,7 +4821,6 @@
 		</collision>
 	</npc>
 	<npc id="18698" level="80" type="Monster" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4954,7 +4855,6 @@
 		</collision>
 	</npc>
 	<npc id="18699" level="80" type="Monster" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">

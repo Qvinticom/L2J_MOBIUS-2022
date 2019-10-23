@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="25400" level="34" type="Monster" name="Page of Watchman" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4783" level="3" /> <!-- BOSS Heal -->
 			<skill name="SelfRangeBuff_a" id="4213" level="3" /> <!-- BOSS Haste -->
@@ -44,7 +43,6 @@
 		</collision>
 	</npc>
 	<npc id="25401" level="32" type="RaidBoss" name="Skyla" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25402" count="1" respawnTime="360" weightPoint="1" /> <!-- Retainer of Skyla -->
@@ -94,11 +92,10 @@
 				<item id="470" min="4" max="12" chance="4.1093403981514" /> <!-- Mithril Stockings -->
 				<item id="1944" min="53" max="157" chance="8.59984172392273" /> <!-- Mithril Tunic Fabric -->
 				<item id="1945" min="24" max="72" chance="29.2940010456276" /> <!-- Mithril Stocking Design -->
-				<item id="224" min="1" max="1" chance="4.94496310027695" /> <!-- Maingauche -->
 				<item id="1660" min="1" max="1" chance="4.94496310027695" /> <!-- Cursed Maingauche -->
 				<item id="2038" min="4" max="12" chance="35.0710323450317" /> <!-- Maingauche Edge -->
 				<item id="2044" min="8" max="22" chance="18.7045420952835" /> <!-- Cursed Maingauche Edge -->
-				<item id="956" min="12" max="36" chance="95.6177978515625" /> <!-- Scroll: Enchant Armor (D-Grade) -->
+				<item id="956" min="12" max="36" chance="95.6177978515625" /> <!-- Scroll: Enchant Armor (D) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -107,7 +104,6 @@
 		</collision>
 	</npc>
 	<npc id="25402" level="31" type="Monster" name="Retainer of Skyla" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4733" level="3" /> <!-- BOSS Mortal Blow -->
 		</parameters>
@@ -149,7 +145,6 @@
 		</collision>
 	</npc>
 	<npc id="25403" level="31" type="Monster" name="Follower of Skyla" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic_a" id="4196" level="3" /> <!-- Decrease Speed -->
 			<skill name="Debuff_a" id="4204" level="3" /> <!-- Bleed -->
@@ -193,7 +188,6 @@
 		</collision>
 	</npc>
 	<npc id="25404" level="33" type="RaidBoss" name="Corsair Captain Kylon" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25405" count="2" respawnTime="360" weightPoint="1" /> <!-- Kylon's Pirate -->
@@ -252,7 +246,7 @@
 				<item id="2499" min="1" max="1" chance="4.00399344541931" /> <!-- Elven Long Sword -->
 				<item id="2047" min="4" max="12" chance="30.5138181073227" /> <!-- Claymore Blade -->
 				<item id="2967" min="8" max="22" chance="16.0537946722488" /> <!-- Elven Long Sword Blade -->
-				<item id="6573" min="1" max="1" chance="4.79939985275269" /> <!-- Blessed Scroll: Enchant Weapon (C-Grade) -->
+				<item id="6573" min="1" max="1" chance="4.79939985275269" /> <!-- Blessed Scroll: Enchant Weapon (C) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -261,7 +255,6 @@
 		</collision>
 	</npc>
 	<npc id="25405" level="32" type="Monster" name="Kylon's Pirate" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4733" level="3" /> <!-- BOSS Mortal Blow -->
 		</parameters>
@@ -306,7 +299,6 @@
 		</collision>
 	</npc>
 	<npc id="25406" level="32" type="Monster" name="Kylon's Mate" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4728" level="3" /> <!-- Stun -->
 		</parameters>
@@ -351,7 +343,6 @@
 		</collision>
 	</npc>
 	<npc id="25407" level="60" type="RaidBoss" name="Lord Ishka" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25408" count="1" respawnTime="360" weightPoint="1" /> <!-- Ishka's Elite Officer -->
@@ -415,7 +406,7 @@
 				<item id="4613" min="1" max="3" chance="26.1503401146851" /> <!-- Greater Dye of STR <Str+4 Con-4> -->
 				<item id="4614" min="2" max="4" chance="17.4335121923218" /> <!-- Greater Dye of STR <Str+4 Dex-4> -->
 				<item id="4615" min="2" max="6" chance="13.0751700573425" /> <!-- Greater Dye of CON <Con+4 Str-4> -->
-				<item id="947" min="1" max="1" chance="15.1671800282288" /> <!-- Scroll: Enchant Weapon (B-Grade) -->
+				<item id="947" min="1" max="1" chance="15.1671800282288" /> <!-- Scroll: Enchant Weapon (B) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -424,7 +415,6 @@
 		</collision>
 	</npc>
 	<npc id="25408" level="59" type="Monster" name="Ishka's Elite Officer" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4733" level="5" /> <!-- BOSS Mortal Blow -->
 		</parameters>
@@ -469,7 +459,6 @@
 		</collision>
 	</npc>
 	<npc id="25409" level="59" type="Monster" name="Ishka's Elite Soldier" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4743" level="5" /> <!-- BOSS Strike -->
 		</parameters>
@@ -514,7 +503,6 @@
 		</collision>
 	</npc>
 	<npc id="25410" level="40" type="RaidBoss" name="Road Scavenger Leader" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25411" count="3" respawnTime="360" weightPoint="1" /> <!-- Road Scavenger Henchman -->
@@ -571,7 +559,7 @@
 				<item id="72" min="1" max="1" chance="3.93854441699982" /> <!-- Stormbringer -->
 				<item id="2059" min="8" max="22" chance="17.1916734607315" /> <!-- Flamberge Blade -->
 				<item id="2060" min="4" max="12" chance="34.4573378639603" /> <!-- Stormbringer Blade -->
-				<item id="6573" min="1" max="1" chance="6.00040006637573" /> <!-- Blessed Scroll: Enchant Weapon (C-Grade) -->
+				<item id="6573" min="1" max="1" chance="6.00040006637573" /> <!-- Blessed Scroll: Enchant Weapon (C) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -580,7 +568,6 @@
 		</collision>
 	</npc>
 	<npc id="25411" level="39" type="Monster" name="Road Scavenger Henchman" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4726" level="3" /> <!-- Stun -->
 		</parameters>
@@ -621,7 +608,6 @@
 		</collision>
 	</npc>
 	<npc id="25412" level="47" type="RaidBoss" name="Necrosentinel Royal Guard" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25413" count="3" respawnTime="360" weightPoint="1" /> <!-- Necrosentinel Archer -->
@@ -685,7 +671,7 @@
 				<item id="4607" min="1" max="3" chance="31.6811356857452" /> <!-- Greater Dye of INT <Int+3 Men-3> -->
 				<item id="4608" min="2" max="4" chance="21.1207336093979" /> <!-- Greater Dye of INT <Int+3 Wit-3> -->
 				<item id="4609" min="2" max="6" chance="15.8405678428726" /> <!-- Greater Dye of MEN <Men+3 Int-3> -->
-				<item id="6573" min="1" max="1" chance="1.9008596759491" /> <!-- Blessed Scroll: Enchant Weapon (C-Grade) -->
+				<item id="6573" min="1" max="1" chance="1.9008596759491" /> <!-- Blessed Scroll: Enchant Weapon (C) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -694,7 +680,6 @@
 		</collision>
 	</npc>
 	<npc id="25413" level="46" type="Monster" name="Necrosentinel Archer" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="279" /> <!-- rhand: Reinforced Long Bow -->
@@ -735,7 +720,6 @@
 		</collision>
 	</npc>
 	<npc id="25414" level="46" type="Monster" name="Necrosentinel Soldier" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="150" lhand="103" /> <!-- rhand: Elemental Sword lhand: Tower Shield -->
@@ -776,7 +760,6 @@
 		</collision>
 	</npc>
 	<npc id="25415" level="40" type="RaidBoss" name="Nakondas" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25416" count="3" respawnTime="360" weightPoint="1" /> <!-- Nakondas' Slave -->
@@ -839,7 +822,7 @@
 				<item id="2050" min="7" max="21" chance="6.72861090421295" /> <!-- Ghost Staff Head -->
 				<item id="2051" min="12" max="36" chance="3.92501692865753" /> <!-- Staff of Life Shaft -->
 				<item id="2058" min="3" max="9" chance="14.8066910920029" /> <!-- Atuba Mace Head -->
-				<item id="952" min="12" max="36" chance="38.6897010803223" /> <!-- Scroll: Enchant Armor (C-Grade) -->
+				<item id="952" min="12" max="36" chance="38.6897010803223" /> <!-- Scroll: Enchant Armor (C) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -848,7 +831,6 @@
 		</collision>
 	</npc>
 	<npc id="25416" level="39" type="Monster" name="Nakondas' Slave" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic_a" id="4194" level="3" /> <!-- BOSS Aura Burn -->
 			<skill name="Debuff_a" id="4200" level="3" /> <!-- Decrease Atk. Spd. -->
@@ -891,7 +873,6 @@
 		</collision>
 	</npc>
 	<npc id="25417" level="39" type="Monster" name="Nakondas' Chain" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4783" level="3" /> <!-- BOSS Heal -->
 			<skill name="SelfRangeBuff_a" id="4213" level="3" /> <!-- BOSS Haste -->
@@ -935,7 +916,6 @@
 		</collision>
 	</npc>
 	<npc id="25418" level="44" type="RaidBoss" name="Dread Avenger Kraven" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25419" count="3" respawnTime="360" weightPoint="1" /> <!-- Dread Panther -->
@@ -1000,7 +980,7 @@
 				<item id="199" min="1" max="1" chance="0.58987554183197" /> <!-- Pa'agrian Hammer -->
 				<item id="200" min="1" max="1" chance="0.58987554183197" /> <!-- Sage's Staff -->
 				<item id="201" min="1" max="1" chance="0.58987554183197" /> <!-- Club of Nature -->
-				<item id="202" min="1" max="1" chance="0.58987554183197" /> <!-- Mace of Underworld -->
+				<item id="202" min="1" max="1" chance="0.58987554183197" /> <!-- Mace of the Underworld -->
 				<item id="2097" min="4" max="10" chance="7.45662170782471" /> <!-- War Axe Blade -->
 				<item id="2098" min="4" max="12" chance="6.52454399434662" /> <!-- Nirvana Axe Blade -->
 				<item id="2099" min="10" max="30" chance="2.74663518351746" /> <!-- Stick of Eternity Shaft -->
@@ -1008,11 +988,11 @@
 				<item id="2102" min="3" max="9" chance="8.82701246640015" /> <!-- Pa'agrian Hammer Head -->
 				<item id="2103" min="2" max="6" chance="13.7331759175873" /> <!-- Sage's Staff Head -->
 				<item id="2104" min="3" max="7" chance="10.9865407340698" /> <!-- Club of Nature Head -->
-				<item id="2105" min="5" max="13" chance="5.79924309008789" /> <!-- Mace of Underworld Head -->
+				<item id="2105" min="5" max="13" chance="5.79924309008789" /> <!-- Mace of the Underworld Head -->
 				<item id="4607" min="1" max="3" chance="28.0738158346863" /> <!-- Greater Dye of INT <Int+3 Men-3> -->
 				<item id="4608" min="2" max="4" chance="18.7158563861237" /> <!-- Greater Dye of INT <Int+3 Wit-3> -->
 				<item id="4609" min="2" max="6" chance="14.0369079173431" /> <!-- Greater Dye of MEN <Men+3 Int-3> -->
-				<item id="6573" min="1" max="1" chance="1.68442144876099" /> <!-- Blessed Scroll: Enchant Weapon (C-Grade) -->
+				<item id="6573" min="1" max="1" chance="1.68442144876099" /> <!-- Blessed Scroll: Enchant Weapon (C) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -1021,7 +1001,6 @@
 		</collision>
 	</npc>
 	<npc id="25419" level="43" type="Monster" name="Dread Panther" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4743" level="4" /> <!-- BOSS Strike -->
 		</parameters>
@@ -1062,7 +1041,6 @@
 		</collision>
 	</npc>
 	<npc id="25420" level="48" type="RaidBoss" name="Orfen's Handmaiden" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25421" count="3" respawnTime="360" weightPoint="1" /> <!-- Trisalim Escort -->
@@ -1122,7 +1100,7 @@
 				<item id="4604" min="2" max="6" chance="16.4340340202637" /> <!-- Greater Dye of CON <Con+3 Dex-3> -->
 				<item id="4605" min="3" max="7" chance="13.1472172305908" /> <!-- Greater Dye of DEX <Dex+3 Str-3> -->
 				<item id="4606" min="3" max="9" chance="10.9560226801758" /> <!-- Greater Dye of DEX <Dex+3 Con-3> -->
-				<item id="952" min="21" max="63" chance="9.39082665490723" /> <!-- Scroll: Enchant Armor (C-Grade) -->
+				<item id="952" min="21" max="63" chance="9.39082665490723" /> <!-- Scroll: Enchant Armor (C) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -1131,7 +1109,6 @@
 		</collision>
 	</npc>
 	<npc id="25421" level="47" type="Monster" name="Trisalim Escort" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic_a" id="4196" level="4" /> <!-- Decrease Speed -->
 			<skill name="Debuff_a" id="4204" level="4" /> <!-- Bleed -->
@@ -1174,7 +1151,6 @@
 		</collision>
 	</npc>
 	<npc id="25422" level="47" type="Monster" name="Page of Rotting Tree" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4781" level="4" /> <!-- BOSS Heal -->
 			<skill name="SelfRangeBuff_a" id="4212" level="4" /> <!-- BOSS Shield -->
@@ -1217,7 +1193,6 @@
 		</collision>
 	</npc>
 	<npc id="25423" level="61" type="RaidBoss" name="Fairy Queen Timiniel" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25424" count="4" respawnTime="360" weightPoint="1" /> <!-- Timiniel's Royal Guards -->
@@ -1281,12 +1256,12 @@
 				<item id="4085" min="23" max="67" chance="6.01823383216858" /> <!-- Tunic of Doom Pattern -->
 				<item id="4086" min="6" max="18" chance="30.4725254074554" /> <!-- Blue Wolf Stockings Pattern -->
 				<item id="4087" min="11" max="31" chance="17.4129224439011" /> <!-- Stockings of Doom Pattern -->
-				<item id="234" min="1" max="1" chance="1.85300513049316" /> <!-- Demon's Dagger -->
-				<item id="4119" min="3" max="9" chance="68.2091973231201" /> <!-- Demon's Dagger Edge -->
+				<item id="234" min="1" max="1" chance="1.85300513049316" /> <!-- Demon Dagger -->
+				<item id="4119" min="3" max="9" chance="68.2091973231201" /> <!-- Demon Dagger Edge -->
 				<item id="4622" min="1" max="3" chance="20.8965207066422" /> <!-- Greater Dye of MEN <Men+4 Wit-4> -->
 				<item id="4623" min="2" max="4" chance="13.9310138044281" /> <!-- Greater Dye of WIT <Wit+4 Int-4> -->
 				<item id="4624" min="1" max="1" chance="41.792956712883" /> <!-- Greater Dye of WIT <Wit+4 Men-4> -->
-				<item id="6572" min="1" max="1" chance="8.0799100821991" /> <!-- Blessed Scroll: Enchant Armor (B-Grade) -->
+				<item id="6572" min="1" max="1" chance="8.0799100821991" /> <!-- Blessed Scroll: Enchant Armor (B) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -1295,7 +1270,6 @@
 		</collision>
 	</npc>
 	<npc id="25424" level="60" type="Monster" name="Timiniel's Royal Guards" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<race>FAIRY</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1337,7 +1311,6 @@
 		</collision>
 	</npc>
 	<npc id="25425" level="60" type="Monster" name="Timiniel's Royal Guard Captain" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4742" level="6" /> <!-- BOSS Strike -->
 		</parameters>
@@ -1383,7 +1356,6 @@
 		</collision>
 	</npc>
 	<npc id="25426" level="25" type="RaidBoss" name="Betrayer of Urutu Freki" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25427" count="2" respawnTime="360" weightPoint="1" /> <!-- Freki's Vampire Bat -->
@@ -1432,7 +1404,7 @@
 				<item id="628" min="4" max="12" chance="17.9129670541534" /> <!-- Hoplon -->
 				<item id="278" min="1" max="1" chance="11.8536378961182" /> <!-- Gastraphetes -->
 				<item id="2029" min="12" max="36" chance="21.9010618109131" /> <!-- Gastraphetes Shaft -->
-				<item id="956" min="12" max="36" chance="79.3367004394531" /> <!-- Scroll: Enchant Armor (D-Grade) -->
+				<item id="956" min="12" max="36" chance="79.3367004394531" /> <!-- Scroll: Enchant Armor (D) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -1441,7 +1413,6 @@
 		</collision>
 	</npc>
 	<npc id="25427" level="24" type="Monster" name="Freki's Vampire Bat" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4743" level="2" /> <!-- BOSS Strike -->
 		</parameters>
@@ -1482,7 +1453,6 @@
 		</collision>
 	</npc>
 	<npc id="25428" level="24" type="Monster" name="Freki's Wild Bear" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4728" level="2" /> <!-- Stun -->
 		</parameters>
@@ -1523,7 +1493,6 @@
 		</collision>
 	</npc>
 	<npc id="25429" level="25" type="RaidBoss" name="Mammon Collector Talos" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25430" count="3" respawnTime="360" weightPoint="1" /> <!-- Talos' Cohort -->
@@ -1581,7 +1550,7 @@
 				<item id="1938" min="60" max="180" chance="16.4578505803833" /> <!-- Mithril Banded Mail Material -->
 				<item id="1939" min="28" max="84" chance="46.0776622690125" /> <!-- Mithril Banded Gaiters Material -->
 				<item id="2028" min="27" max="81" chance="6.46378524630737" /> <!-- Shilen Knife Edge -->
-				<item id="6575" min="1" max="1" chance="12.6939001083374" /> <!-- Blessed Scroll: Enchant Weapon (D-Grade) -->
+				<item id="6575" min="1" max="1" chance="12.6939001083374" /> <!-- Blessed Scroll: Enchant Weapon (D) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -1590,7 +1559,6 @@
 		</collision>
 	</npc>
 	<npc id="25430" level="22" type="Monster" name="Talos' Cohort" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4743" level="2" /> <!-- BOSS Strike -->
 		</parameters>
@@ -1634,7 +1602,6 @@
 		</collision>
 	</npc>
 	<npc id="25431" level="44" type="RaidBoss" name="Flamestone Golem" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25433" count="2" respawnTime="360" weightPoint="1" /> <!-- Elemental of Spark -->
@@ -1691,7 +1658,7 @@
 				<item id="4610" min="1" max="3" chance="28.0738103266754" /> <!-- Greater Dye of MEN <Men+3 Wit-3> -->
 				<item id="4611" min="2" max="4" chance="18.7158735511169" /> <!-- Greater Dye of WIT <Wit+3 Int-3> -->
 				<item id="4612" min="2" max="6" chance="14.0369051633377" /> <!-- Greater Dye of WIT <Wit+3 Men-3> -->
-				<item id="6574" min="1" max="1" chance="14.4379144378738" /> <!-- Blessed Scroll: Enchant Armor (C-Grade) -->
+				<item id="6574" min="1" max="1" chance="14.4379144378738" /> <!-- Blessed Scroll: Enchant Armor (C) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -1700,7 +1667,6 @@
 		</collision>
 	</npc>
 	<npc id="25432" level="43" type="Monster" name="Elemental of Flame" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4783" level="4" /> <!-- BOSS Heal -->
 			<skill name="SelfRangeBuff_a" id="4211" level="4" /> <!-- BOSS Might -->
@@ -1746,7 +1712,6 @@
 		</collision>
 	</npc>
 	<npc id="25433" level="43" type="Monster" name="Elemental of Spark" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1786,7 +1751,6 @@
 		</collision>
 	</npc>
 	<npc id="25434" level="55" type="RaidBoss" name="Bandit Leader Barda" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25435" count="1" respawnTime="360" weightPoint="1" /> <!-- Barda's Bandit -->
@@ -1834,23 +1798,23 @@
 			<drop>
 				<item id="9814" min="1" max="4" chance="75" /> <!-- Memento Mori -->
 				<item id="8176" min="1" max="2" chance="62" /> <!-- Destruction Tombstone -->
-				<item id="554" min="1" max="1" chance="8.46247783197022" /> <!-- Sealed Zubei's Boots -->
-				<item id="600" min="1" max="1" chance="8.46247783197022" /> <!-- Sealed Avadon Boots -->
-				<item id="612" min="1" max="1" chance="8.46247783197022" /> <!-- Sealed Zubei's Gauntlets -->
-				<item id="2464" min="1" max="1" chance="8.46247783197022" /> <!-- Sealed Avadon Gloves -->
-				<item id="4097" min="60" max="180" chance="7.32360256036377" /> <!-- Sealed Zubei's Boots Design -->
-				<item id="4098" min="116" max="346" chance="3.80451136920166" /> <!-- Sealed Avadon Boots Design -->
-				<item id="4100" min="192" max="576" chance="2.28863832440186" /> <!-- Sealed Zubei's Gauntlets Part -->
-				<item id="4073" min="23" max="67" chance="19.5295400314331" /> <!-- Sealed Avadon Gloves Part -->
+				<item id="554" min="1" max="1" chance="8.46247783197022" /> <!-- Zubei's Boots -->
+				<item id="600" min="1" max="1" chance="8.46247783197022" /> <!-- Avadon Boots -->
+				<item id="612" min="1" max="1" chance="8.46247783197022" /> <!-- Zubei's Gauntlets -->
+				<item id="2464" min="1" max="1" chance="8.46247783197022" /> <!-- Avadon Gloves -->
+				<item id="4097" min="60" max="180" chance="7.32360256036377" /> <!-- Zubei's Boots Design -->
+				<item id="4098" min="116" max="346" chance="3.80451136920166" /> <!-- Avadon Boots Design -->
+				<item id="4100" min="192" max="576" chance="2.28863832440186" /> <!-- Zubei's Gauntlets Part -->
+				<item id="4073" min="23" max="67" chance="19.5295400314331" /> <!-- Avadon Gloves Part -->
 				<item id="78" min="1" max="1" chance="1.01111376942444" /> <!-- Great Sword -->
 				<item id="142" min="1" max="1" chance="1.01111376942444" /> <!-- Keshanberk -->
 				<item id="148" min="1" max="1" chance="1.01111376942444" /> <!-- Sword of Valhalla -->
 				<item id="4104" min="5" max="15" chance="19.3267651499863" /> <!-- Great Sword Blade -->
 				<item id="4107" min="9" max="27" chance="10.5707312506828" /> <!-- Keshanberk Blade -->
 				<item id="4108" min="14" max="42" chance="6.79546157694626" /> <!-- Sword of Valhalla Blade -->
-				<item id="6572" min="1" max="1" chance="11.6748786455154" /> <!-- Blessed Scroll: Enchant Armor (B-Grade) -->
-				<item id="6572" min="1" max="1" chance="11.6748786455154" /> <!-- Blessed Scroll: Enchant Armor (B-Grade) -->
-				<item id="948" min="1" max="3" chance="54.7258423793793" /> <!-- Scroll: Enchant Armor (B-Grade) -->
+				<item id="6572" min="1" max="1" chance="11.6748786455154" /> <!-- Blessed Scroll: Enchant Armor (B) -->
+				<item id="6572" min="1" max="1" chance="11.6748786455154" /> <!-- Blessed Scroll: Enchant Armor (B) -->
+				<item id="948" min="1" max="3" chance="54.7258423793793" /> <!-- Scroll: Enchant Armor (B) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -1859,7 +1823,6 @@
 		</collision>
 	</npc>
 	<npc id="25435" level="54" type="Monster" name="Barda's Bandit" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4743" level="5" /> <!-- BOSS Strike -->
 		</parameters>
@@ -1901,7 +1864,6 @@
 		</collision>
 	</npc>
 	<npc id="25436" level="54" type="Monster" name="Barda's Shaman" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic_a" id="4195" level="5" /> <!-- BOSS Twister -->
 			<skill name="Debuff_a" id="4199" level="5" /> <!-- Decrease P. Atk. -->
@@ -1945,7 +1907,6 @@
 		</collision>
 	</npc>
 	<npc id="25437" level="45" type="RaidBoss" name="Timak Orc Gosmos" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm02_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="4" /> <!-- BOSS Cancel Magic -->
@@ -2004,7 +1965,7 @@
 				<item id="4607" min="1" max="3" chance="29.2053286526184" /> <!-- Greater Dye of INT <Int+3 Men-3> -->
 				<item id="4608" min="2" max="4" chance="19.4701974249115" /> <!-- Greater Dye of INT <Int+3 Wit-3> -->
 				<item id="4609" min="2" max="6" chance="14.6026643263092" /> <!-- Greater Dye of MEN <Men+3 Int-3> -->
-				<item id="6573" min="1" max="1" chance="1.75231191549683" /> <!-- Blessed Scroll: Enchant Weapon (C-Grade) -->
+				<item id="6573" min="1" max="1" chance="1.75231191549683" /> <!-- Blessed Scroll: Enchant Weapon (C) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -2013,7 +1974,6 @@
 		</collision>
 	</npc>
 	<npc id="25438" level="44" type="RaidBoss" name="Thief Kelbar" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25439" count="1" respawnTime="360" weightPoint="1" /> <!-- Kelbar's Inferior -->
@@ -2069,7 +2029,7 @@
 				<item id="4601" min="1" max="3" chance="28.073812660553" /> <!-- Greater Dye of STR <Str+3 Con-3> -->
 				<item id="4602" min="2" max="4" chance="18.7158984451675" /> <!-- Greater Dye of STR <Str+3 Dex-3> -->
 				<item id="4603" min="2" max="6" chance="14.0369063302765" /> <!-- Greater Dye of CON <Con+3 Str-3> -->
-				<item id="951" min="3" max="7" chance="9.18777923148346" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
+				<item id="951" min="3" max="7" chance="9.18777923148346" /> <!-- Scroll: Enchant Weapon (C) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -2078,7 +2038,6 @@
 		</collision>
 	</npc>
 	<npc id="25439" level="43" type="Monster" name="Kelbar's Inferior" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4743" level="4" /> <!-- BOSS Strike -->
 		</parameters>
@@ -2120,7 +2079,6 @@
 		</collision>
 	</npc>
 	<npc id="25440" level="43" type="Monster" name="Kelbar's Wizard" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic_a" id="4191" level="4" /> <!-- BOSS Windstrike -->
 			<skill name="Debuff_a" id="4200" level="4" /> <!-- Decrease Atk. Spd. -->
@@ -2164,7 +2122,6 @@
 		</collision>
 	</npc>
 	<npc id="25441" level="45" type="RaidBoss" name="Evil Spirit Cyrion" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25442" count="4" respawnTime="360" weightPoint="1" /> <!-- Evil Creature of Forest -->
@@ -2217,10 +2174,10 @@
 			<drop>
 				<item id="9815" min="1" max="3" chance="75" /> <!-- Dragon Heart -->
 				<item id="8176" min="1" max="1" chance="75" /> <!-- Destruction Tombstone -->
-				<item id="854" min="1" max="1" chance="15.9080844186707" /> <!-- Earring of Seal -->
+				<item id="854" min="1" max="1" chance="15.9080844186707" /> <!-- Earring of Binding -->
 				<item id="885" min="1" max="1" chance="23.8568494130859" /> <!-- Ring of Ages -->
 				<item id="917" min="1" max="1" chance="11.9323426388321" /> <!-- Necklace of Mermaid -->
-				<item id="1914" min="81" max="243" chance="6.25046128378296" /> <!-- Earring of Seal Gemstone -->
+				<item id="1914" min="81" max="243" chance="6.25046128378296" /> <!-- Earring of Binding Gemstone -->
 				<item id="1915" min="280" max="840" chance="2.83570344150543" /> <!-- Ring of Ages Gemstone -->
 				<item id="1916" min="20" max="60" chance="19.1743606229706" /> <!-- Necklace of Mermaid Teardrop -->
 				<item id="283" min="1" max="1" chance="4.90919900058746" /> <!-- Akat Long Bow -->
@@ -2228,7 +2185,7 @@
 				<item id="4610" min="1" max="3" chance="29.2053491392364" /> <!-- Greater Dye of MEN <Men+3 Wit-3> -->
 				<item id="4611" min="2" max="4" chance="19.470232759491" /> <!-- Greater Dye of WIT <Wit+3 Int-3> -->
 				<item id="4612" min="2" max="6" chance="14.6026745696182" /> <!-- Greater Dye of WIT <Wit+3 Men-3> -->
-				<item id="6574" min="1" max="1" chance="15.0198468641739" /> <!-- Blessed Scroll: Enchant Armor (C-Grade) -->
+				<item id="6574" min="1" max="1" chance="15.0198468641739" /> <!-- Blessed Scroll: Enchant Armor (C) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -2237,7 +2194,6 @@
 		</collision>
 	</npc>
 	<npc id="25442" level="44" type="Monster" name="Evil Creature of Forest" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -2274,7 +2230,6 @@
 		</collision>
 	</npc>
 	<npc id="25443" level="44" type="Monster" name="Anger of Forest" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4743" level="4" /> <!-- BOSS Strike -->
 		</parameters>
@@ -2315,7 +2270,6 @@
 		</collision>
 	</npc>
 	<npc id="25444" level="65" type="RaidBoss" name="Enmity Ghost Ramdal" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25445" count="3" respawnTime="360" weightPoint="1" /> <!-- Enmity Ghosts -->
@@ -2373,9 +2327,9 @@
 				<item id="5521" min="3" max="7" chance="24.9299711502457" /> <!-- Sealed Tallum Plate Armor Pattern -->
 				<item id="288" min="1" max="1" chance="1.74877902449799" /> <!-- Carnage Bow -->
 				<item id="5535" min="3" max="9" chance="70.1021197181778" /> <!-- Carnage Bow Stave -->
-				<item id="729" min="1" max="1" chance="5.91838493066406" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
-				<item id="730" min="1" max="1" chance="44.3880145214844" /> <!-- Scroll: Enchant Armor (A-Grade) -->
-				<item id="6569" min="1" max="1" chance="0.710202110351563" /> <!-- Blessed Scroll: Enchant Weapon (A-Grade) -->
+				<item id="729" min="1" max="1" chance="5.91838493066406" /> <!-- Scroll: Enchant Weapon (A) -->
+				<item id="730" min="1" max="1" chance="44.3880145214844" /> <!-- Scroll: Enchant Armor (A) -->
+				<item id="6569" min="1" max="1" chance="0.710202110351563" /> <!-- Blessed Scroll: Enchant Weapon (A) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -2384,7 +2338,6 @@
 		</collision>
 	</npc>
 	<npc id="25445" level="64" type="Monster" name="Enmity Ghosts" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -2424,7 +2377,6 @@
 		</collision>
 	</npc>
 	<npc id="25446" level="64" type="Monster" name="Shooter of Enmity" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="279" /> <!-- rhand: Reinforced Long Bow -->
@@ -2465,7 +2417,6 @@
 		</collision>
 	</npc>
 	<npc id="25447" level="71" type="RaidBoss" name="Immortal Savior Mardil" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25448" count="2" respawnTime="360" weightPoint="1" /> <!-- Immortal Savior -->
@@ -2512,20 +2463,20 @@
 		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="8619" min="1" max="1" chance="52" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
+				<item id="8619" min="1" max="1" chance="52" /> <!-- Ancient Book - Divine Inspiration (Original Language Version) -->
 				<item id="9814" min="2" max="4" chance="84" /> <!-- Memento Mori -->
 				<item id="8176" min="1" max="2" chance="85" /> <!-- Destruction Tombstone -->
-				<item id="5326" min="1" max="1" chance="1.40024794662476" /> <!-- Sealed Robe of Nightmare -->
+				<item id="5326" min="1" max="1" chance="1.40024794662476" /> <!-- Sealed Nightmare Robe -->
 				<item id="5329" min="1" max="1" chance="1.40024794662476" /> <!-- Sealed Majestic Robe -->
-				<item id="5487" min="4" max="12" chance="26.0219717894936" /> <!-- Sealed Robe of Nightmare Fabric -->
+				<item id="5487" min="4" max="12" chance="26.0219717894936" /> <!-- Sealed Nightmare Robe Fabric -->
 				<item id="5488" min="8" max="22" chance="13.8784333487511" /> <!-- Sealed Majestic Robe Fabric -->
 				<item id="164" min="1" max="1" chance="0.668664039627075" /> <!-- Elysian -->
 				<item id="213" min="1" max="1" chance="0.668664039627075" /> <!-- Branch of the Mother Tree -->
 				<item id="5533" min="4" max="12" chance="23.7763376346207" /> <!-- Elysian Head -->
 				<item id="5544" min="8" max="22" chance="12.6682327846603" /> <!-- Branch of the Mother Tree Head -->
-				<item id="959" min="1" max="1" chance="2.39706521844482" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="960" min="1" max="1" chance="23.9707057190475" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				<item id="6577" min="1" max="1" chance="0.399528714607239" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
+				<item id="959" min="1" max="1" chance="2.39706521844482" /> <!-- Scroll: Enchant Weapon (S) -->
+				<item id="960" min="1" max="1" chance="23.9707057190475" /> <!-- Scroll: Enchant Armor (S) -->
+				<item id="6577" min="1" max="1" chance="0.399528714607239" /> <!-- Blessed Scroll: Enchant Weapon (S) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -2534,7 +2485,6 @@
 		</collision>
 	</npc>
 	<npc id="25448" level="70" type="Monster" name="Immortal Savior" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -2574,7 +2524,6 @@
 		</collision>
 	</npc>
 	<npc id="25449" level="70" type="Monster" name="Immortal Guide" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4783" level="7" /> <!-- BOSS Heal -->
 			<skill name="SelfRangeBuff_a" id="4213" level="7" /> <!-- BOSS Haste -->
@@ -2617,7 +2566,6 @@
 		</collision>
 	</npc>
 	<npc id="25450" level="79" type="RaidBoss" name="Cherub Galaxia" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25451" count="3" respawnTime="360" weightPoint="1" /> <!-- Galaxia's Guards -->
@@ -2684,9 +2632,9 @@
 				<item id="6372" min="1" max="1" chance="0.689864438400269" /> <!-- Heaven's Divider -->
 				<item id="6688" min="8" max="22" chance="21.2535051967316" /> <!-- Forgotten Blade Edge -->
 				<item id="6696" min="4" max="12" chance="40.483365963089" /> <!-- Heavens Divider Edge -->
-				<item id="959" min="1" max="1" chance="5.09845501379395" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="960" min="1" max="1" chance="50.9846640037384" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				<item id="6577" min="1" max="1" chance="0.849780457565308" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
+				<item id="959" min="1" max="1" chance="5.09845501379395" /> <!-- Scroll: Enchant Weapon (S) -->
+				<item id="960" min="1" max="1" chance="50.9846640037384" /> <!-- Scroll: Enchant Armor (S) -->
+				<item id="6577" min="1" max="1" chance="0.849780457565308" /> <!-- Blessed Scroll: Enchant Weapon (S) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -2695,7 +2643,6 @@
 		</collision>
 	</npc>
 	<npc id="25451" level="78" type="Monster" name="Galaxia's Guards" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic_a" id="4194" level="8" /> <!-- BOSS Aura Burn -->
 			<skill name="Debuff_a" id="4202" level="8" /> <!-- Hold -->
@@ -2739,7 +2686,6 @@
 		</collision>
 	</npc>
 	<npc id="25452" level="79" type="Monster" name="Messenger of Angel" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4210" level="8" /> <!-- BOSS Chant of Life -->
 			<skill name="SelfRangeBuff_a" id="4212" level="8" /> <!-- BOSS Shield -->
@@ -2783,7 +2729,6 @@
 		</collision>
 	</npc>
 	<npc id="25453" level="70" type="RaidBoss" name="Meanas Anor" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25454" count="3" respawnTime="360" weightPoint="1" /> <!-- Wyvern of Marsh -->
@@ -2832,7 +2777,7 @@
 		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="8619" min="1" max="1" chance="52" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
+				<item id="8619" min="1" max="1" chance="52" /> <!-- Ancient Book - Divine Inspiration (Original Language Version) -->
 				<item id="9815" min="3" max="7" chance="81" /> <!-- Dragon Heart -->
 				<item id="8176" min="1" max="4" chance="82" /> <!-- Destruction Tombstone -->
 				<item id="5320" min="1" max="1" chance="2.22890444089508" /> <!-- Sealed Leather Armor of Nightmare -->
@@ -2841,9 +2786,9 @@
 				<item id="5481" min="8" max="22" chance="22.0131835268097" /> <!-- Sealed Majestic Leather Armor Fabric -->
 				<item id="305" min="1" max="1" chance="2.1287468117981" /> <!-- Tallum Glaive -->
 				<item id="5541" min="12" max="36" chance="25.2256538229675" /> <!-- Tallum Glaive Edge -->
-				<item id="959" min="1" max="1" chance="3.81564065100098" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="960" min="1" max="1" chance="38.1564917262115" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				<item id="6577" min="1" max="1" chance="0.635968513900757" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
+				<item id="959" min="1" max="1" chance="3.81564065100098" /> <!-- Scroll: Enchant Weapon (S) -->
+				<item id="960" min="1" max="1" chance="38.1564917262115" /> <!-- Scroll: Enchant Armor (S) -->
+				<item id="6577" min="1" max="1" chance="0.635968513900757" /> <!-- Blessed Scroll: Enchant Weapon (S) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -2852,7 +2797,6 @@
 		</collision>
 	</npc>
 	<npc id="25454" level="69" type="Monster" name="Wyvern of Marsh" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic_a" id="4196" level="6" /> <!-- Decrease Speed -->
 			<skill name="Debuff_a" id="4204" level="6" /> <!-- Bleed -->
@@ -2895,7 +2839,6 @@
 		</collision>
 	</npc>
 	<npc id="25455" level="69" type="Monster" name="Succubus of Marsh" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4780" level="6" /> <!-- BOSS Heal -->
 			<skill name="SelfRangeBuff_a" id="4211" level="6" /> <!-- BOSS Might -->
@@ -2939,7 +2882,6 @@
 		</collision>
 	</npc>
 	<npc id="25456" level="49" type="RaidBoss" name="Mirror of Oblivion" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25457" count="1" respawnTime="360" weightPoint="1" /> <!-- Shards of Oblivion -->
@@ -2997,7 +2939,7 @@
 				<item id="4601" min="1" max="3" chance="34.0993016735535" /> <!-- Greater Dye of STR <Str+3 Con-3> -->
 				<item id="4602" min="2" max="4" chance="22.73289612957" /> <!-- Greater Dye of STR <Str+3 Dex-3> -->
 				<item id="4603" min="2" max="6" chance="17.0496508367767" /> <!-- Greater Dye of CON <Con+3 Str-3> -->
-				<item id="951" min="3" max="7" chance="11.1597544484787" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
+				<item id="951" min="3" max="7" chance="11.1597544484787" /> <!-- Scroll: Enchant Weapon (C) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -3006,7 +2948,6 @@
 		</collision>
 	</npc>
 	<npc id="25457" level="48" type="Monster" name="Shards of Oblivion" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3046,7 +2987,6 @@
 		</collision>
 	</npc>
 	<npc id="25458" level="48" type="Monster" name="Shadow of Oblivion" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4783" level="4" /> <!-- BOSS Heal -->
 			<skill name="SelfRangeBuff_a" id="4213" level="4" /> <!-- BOSS Haste -->
@@ -3092,7 +3032,6 @@
 		</collision>
 	</npc>
 	<npc id="25459" level="48" type="Monster" name="Shards of Oblivion" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3132,7 +3071,6 @@
 		</collision>
 	</npc>
 	<npc id="25460" level="51" type="RaidBoss" name="Deadman Ereve" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25461" count="2" respawnTime="360" weightPoint="1" /> <!-- Ereve's Knight -->
@@ -3196,7 +3134,7 @@
 				<item id="4601" min="1" max="3" chance="33.3178051897888" /> <!-- Greater Dye of STR <Str+3 Con-3> -->
 				<item id="4602" min="2" max="4" chance="22.2118978240585" /> <!-- Greater Dye of STR <Str+3 Dex-3> -->
 				<item id="4603" min="2" max="6" chance="16.6589025948944" /> <!-- Greater Dye of CON <Con+3 Str-3> -->
-				<item id="951" min="3" max="7" chance="10.903992352684" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
+				<item id="951" min="3" max="7" chance="10.903992352684" /> <!-- Scroll: Enchant Weapon (C) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -3205,7 +3143,6 @@
 		</collision>
 	</npc>
 	<npc id="25461" level="50" type="Monster" name="Ereve's Knight" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4743" level="5" /> <!-- BOSS Strike -->
 		</parameters>
@@ -3250,7 +3187,6 @@
 		</collision>
 	</npc>
 	<npc id="25462" level="50" type="Monster" name="Ereve's Squire" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4728" level="5" /> <!-- Stun -->
 		</parameters>
@@ -3295,7 +3231,6 @@
 		</collision>
 	</npc>
 	<npc id="25463" level="56" type="RaidBoss" name="Harit Guardian Garangky" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25464" count="1" respawnTime="360" weightPoint="1" /> <!-- Garangky Guard Captain -->
@@ -3347,11 +3282,11 @@
 				<item id="2392" min="1" max="1" chance="2.30969191387939" /> <!-- Leather Armor of Doom -->
 				<item id="4082" min="24" max="72" chance="8.20188510809326" /> <!-- Blue Wolf Leather Armor Texture -->
 				<item id="4083" min="8" max="22" chance="26.2459307711792" /> <!-- Leather Armor of Doom Design -->
-				<item id="234" min="1" max="1" chance="2.07156877770996" /> <!-- Demon's Dagger -->
-				<item id="4119" min="3" max="9" chance="76.2545344327393" /> <!-- Demon's Dagger Edge -->
-				<item id="947" min="1" max="1" chance="18.0660616646118" /> <!-- Scroll: Enchant Weapon (B-Grade) -->
-				<item id="948" min="1" max="3" chance="56.4564237486877" /> <!-- Scroll: Enchant Armor (B-Grade) -->
-				<item id="6571" min="1" max="1" chance="1.29041131521606" /> <!-- Blessed Scroll: Enchant Weapon (B-Grade) -->
+				<item id="234" min="1" max="1" chance="2.07156877770996" /> <!-- Demon Dagger -->
+				<item id="4119" min="3" max="9" chance="76.2545344327393" /> <!-- Demon Dagger Edge -->
+				<item id="947" min="1" max="1" chance="18.0660616646118" /> <!-- Scroll: Enchant Weapon (B) -->
+				<item id="948" min="1" max="3" chance="56.4564237486877" /> <!-- Scroll: Enchant Armor (B) -->
+				<item id="6571" min="1" max="1" chance="1.29041131521606" /> <!-- Blessed Scroll: Enchant Weapon (B) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -3360,7 +3295,6 @@
 		</collision>
 	</npc>
 	<npc id="25464" level="55" type="Monster" name="Garangky Guard Captain" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4728" level="5" /> <!-- Stun -->
 		</parameters>
@@ -3402,7 +3336,6 @@
 		</collision>
 	</npc>
 	<npc id="25465" level="55" type="Monster" name="Garangky Guard Shaman" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4783" level="5" /> <!-- BOSS Heal -->
 			<skill name="SelfRangeBuff_a" id="4212" level="5" /> <!-- BOSS Shield -->
@@ -3446,7 +3379,6 @@
 		</collision>
 	</npc>
 	<npc id="25466" level="55" type="Monster" name="Garangky Guard" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4743" level="5" /> <!-- BOSS Strike -->
 		</parameters>
@@ -3488,7 +3420,6 @@
 		</collision>
 	</npc>
 	<npc id="25467" level="64" type="RaidBoss" name="Gorgolos" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25468" count="4" respawnTime="360" weightPoint="1" /> <!-- Cursed Life -->
@@ -3548,9 +3479,9 @@
 				<item id="5526" min="14" max="42" chance="14.7821928310318" /> <!-- Sealed Tallum Helm Design -->
 				<item id="269" min="1" max="1" chance="1.70929034622192" /> <!-- Blood Tornado -->
 				<item id="5539" min="3" max="9" chance="67.7176124247742" /> <!-- Blood Tornado Edge -->
-				<item id="729" min="1" max="1" chance="5.78474251309967" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
-				<item id="730" min="1" max="1" chance="43.3856935097504" /> <!-- Scroll: Enchant Armor (A-Grade) -->
-				<item id="6569" min="1" max="1" chance="0.69416511240387" /> <!-- Blessed Scroll: Enchant Weapon (A-Grade) -->
+				<item id="729" min="1" max="1" chance="5.78474251309967" /> <!-- Scroll: Enchant Weapon (A) -->
+				<item id="730" min="1" max="1" chance="43.3856935097504" /> <!-- Scroll: Enchant Armor (A) -->
+				<item id="6569" min="1" max="1" chance="0.69416511240387" /> <!-- Blessed Scroll: Enchant Weapon (A) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -3559,7 +3490,6 @@
 		</collision>
 	</npc>
 	<npc id="25468" level="63" type="Monster" name="Cursed Life" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3597,7 +3527,6 @@
 		</collision>
 	</npc>
 	<npc id="25469" level="63" type="Monster" name="Cursed Soul" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4743" level="6" /> <!-- BOSS Strike -->
 		</parameters>
@@ -3639,7 +3568,6 @@
 		</collision>
 	</npc>
 	<npc id="25470" level="66" type="RaidBoss" name="Last Titan Utenus" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25471" count="3" respawnTime="360" weightPoint="1" /> <!-- Utenus's Wizard -->
@@ -3688,7 +3616,7 @@
 		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="8619" min="1" max="1" chance="50" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
+				<item id="8619" min="1" max="1" chance="50" /> <!-- Ancient Book - Divine Inspiration (Original Language Version) -->
 				<item id="9817" min="1" max="5" chance="77" /> <!-- Nonliving Nucleus -->
 				<item id="8176" min="1" max="2" chance="77" /> <!-- Destruction Tombstone -->
 				<item id="5290" min="1" max="1" chance="4.7168894000473" /> <!-- Sealed Dark Crystal Gloves -->
@@ -3701,8 +3629,8 @@
 				<item id="5497" min="23" max="67" chance="10.936699621376" /> <!-- Sealed Tallum Boots Lining -->
 				<item id="98" min="1" max="1" chance="1.78664878601074" /> <!-- Halberd -->
 				<item id="5542" min="3" max="9" chance="70.7823514581299" /> <!-- Halberd Edge -->
-				<item id="6570" min="1" max="1" chance="9.06982021309376" /> <!-- Blessed Scroll: Enchant Armor (A-Grade) -->
-				<item id="6569" min="1" max="1" chance="1.08838005088329" /> <!-- Blessed Scroll: Enchant Weapon (A-Grade) -->
+				<item id="6570" min="1" max="1" chance="9.06982021309376" /> <!-- Blessed Scroll: Enchant Armor (A) -->
+				<item id="6569" min="1" max="1" chance="1.08838005088329" /> <!-- Blessed Scroll: Enchant Weapon (A) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -3711,7 +3639,6 @@
 		</collision>
 	</npc>
 	<npc id="25471" level="65" type="Monster" name="Utenus's Wizard" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic_a" id="4195" level="6" /> <!-- BOSS Twister -->
 			<skill name="Debuff_a" id="4205" level="6" /> <!-- Paralysis -->
@@ -3757,7 +3684,6 @@
 		</collision>
 	</npc>
 	<npc id="25472" level="65" type="Monster" name="Utenus's Guard" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4743" level="6" /> <!-- BOSS Strike -->
 		</parameters>
@@ -3801,7 +3727,6 @@
 		</collision>
 	</npc>
 	<npc id="25473" level="52" type="RaidBoss" name="Grave Robber Kim" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25474" count="3" respawnTime="360" weightPoint="1" /> <!-- Kim's Gang -->
@@ -3861,7 +3786,7 @@
 				<item id="4607" min="1" max="3" chance="33.127559900589" /> <!-- Greater Dye of INT <Int+3 Men-3> -->
 				<item id="4608" min="2" max="4" chance="22.085015345726" /> <!-- Greater Dye of INT <Int+3 Wit-3> -->
 				<item id="4609" min="2" max="6" chance="16.5637799502945" /> <!-- Greater Dye of MEN <Men+3 Int-3> -->
-				<item id="6573" min="1" max="1" chance="1.98764474235535" /> <!-- Blessed Scroll: Enchant Weapon (C-Grade) -->
+				<item id="6573" min="1" max="1" chance="1.98764474235535" /> <!-- Blessed Scroll: Enchant Weapon (C) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -3870,7 +3795,6 @@
 		</collision>
 	</npc>
 	<npc id="25474" level="51" type="Monster" name="Kim's Gang" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4728" level="5" /> <!-- Stun -->
 		</parameters>
@@ -3912,7 +3836,6 @@
 		</collision>
 	</npc>
 	<npc id="25475" level="55" type="RaidBoss" name="Ghost Knight Kabed" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25476" count="3" respawnTime="360" weightPoint="1" /> <!-- Kabed's Soldier -->
@@ -3977,8 +3900,8 @@
 				<item id="4104" min="5" max="15" chance="19.3267651499863" /> <!-- Great Sword Blade -->
 				<item id="4107" min="9" max="27" chance="10.5707312506828" /> <!-- Keshanberk Blade -->
 				<item id="4108" min="14" max="42" chance="6.79546157694626" /> <!-- Sword of Valhalla Blade -->
-				<item id="947" min="1" max="1" chance="17.5123050485229" /> <!-- Scroll: Enchant Weapon (B-Grade) -->
-				<item id="948" min="1" max="3" chance="54.7260225521851" /> <!-- Scroll: Enchant Armor (B-Grade) -->
+				<item id="947" min="1" max="1" chance="17.5123050485229" /> <!-- Scroll: Enchant Weapon (B) -->
+				<item id="948" min="1" max="3" chance="54.7260225521851" /> <!-- Scroll: Enchant Armor (B) -->
 				<item id="4617" min="2" max="4" chance="20.1290735223389" /> <!-- Greater Dye of DEX <Dex+4 Str-4> -->
 			</drop>
 		</dropLists>
@@ -3988,7 +3911,6 @@
 		</collision>
 	</npc>
 	<npc id="25476" level="54" type="Monster" name="Kabed's Soldier" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="125" /> <!-- rhand: Spinebone Sword -->
@@ -4029,7 +3951,6 @@
 		</collision>
 	</npc>
 	<npc id="25477" level="54" type="Monster" name="Kabed's Archer" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="279" /> <!-- rhand: Reinforced Long Bow -->
@@ -4070,7 +3991,6 @@
 		</collision>
 	</npc>
 	<npc id="25478" level="65" type="RaidBoss" name="Shilen's Priest Hisilrome" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25479" count="1" respawnTime="360" weightPoint="1" /> <!-- Hisilrome's Servitor -->
@@ -4130,8 +4050,8 @@
 				<item id="5486" min="3" max="7" chance="32.4182143154297" /> <!-- Sealed Dark Crystal Robe Fabric -->
 				<item id="235" min="1" max="1" chance="1.74877942016602" /> <!-- Bloody Orchid -->
 				<item id="5536" min="3" max="9" chance="69.8990172106934" /> <!-- Bloody Orchid Head -->
-				<item id="6570" min="1" max="1" chance="8.87759971618652" /> <!-- Blessed Scroll: Enchant Armor (A-Grade) -->
-				<item id="729" min="1" max="1" chance="8.87759971618652" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
+				<item id="6570" min="1" max="1" chance="8.87759971618652" /> <!-- Blessed Scroll: Enchant Armor (A) -->
+				<item id="729" min="1" max="1" chance="8.87759971618652" /> <!-- Scroll: Enchant Weapon (A) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -4140,7 +4060,6 @@
 		</collision>
 	</npc>
 	<npc id="25479" level="64" type="Monster" name="Hisilrome's Servitor" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic_a" id="4192" level="6" /> <!-- BOSS HP Drain -->
 			<skill name="Debuff_a" id="4204" level="6" /> <!-- Bleed -->
@@ -4184,7 +4103,6 @@
 		</collision>
 	</npc>
 	<npc id="25480" level="64" type="Monster" name="Hisilrome's Page" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4783" level="6" /> <!-- BOSS Heal -->
 			<skill name="SelfRangeBuff_a" id="4211" level="6" /> <!-- BOSS Might -->
@@ -4227,7 +4145,6 @@
 		</collision>
 	</npc>
 	<npc id="25481" level="53" type="RaidBoss" name="Magus Kenishee" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25482" count="2" respawnTime="360" weightPoint="1" /> <!-- Shadow of Kenishee -->
@@ -4289,7 +4206,7 @@
 				<item id="4616" min="2" max="4" chance="14.1606886506348" /> <!-- Greater Dye of CON <Con+4 Dex-4> -->
 				<item id="4617" min="2" max="6" chance="10.6204985437012" /> <!-- Greater Dye of DEX <Dex+4 Str-4> -->
 				<item id="4618" min="3" max="7" chance="8.49639883496094" /> <!-- Greater Dye of DEX <Dex+4 Con-4> -->
-				<item id="948" min="1" max="3" chance="38.4995135800781" /> <!-- Scroll: Enchant Armor (B-Grade) -->
+				<item id="948" min="1" max="3" chance="38.4995135800781" /> <!-- Scroll: Enchant Armor (B) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -4298,7 +4215,6 @@
 		</collision>
 	</npc>
 	<npc id="25482" level="52" type="Monster" name="Shadow of Kenishee" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4743" level="5" /> <!-- BOSS Strike -->
 		</parameters>
@@ -4340,7 +4256,6 @@
 		</collision>
 	</npc>
 	<npc id="25483" level="52" type="Monster" name="Phantom of Kenishee" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4788" level="6" /> <!-- BOSS Chant of Life -->
 			<skill name="SelfRangeBuff_a" id="4212" level="6" /> <!-- BOSS Shield -->
@@ -4384,7 +4299,6 @@
 		</collision>
 	</npc>
 	<npc id="25484" level="50" type="RaidBoss" name="Zaken's Chief Mate Tillion" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25485" count="1" respawnTime="360" weightPoint="1" /> <!-- Tillion's Inferior -->
@@ -4450,7 +4364,7 @@
 				<item id="4607" min="1" max="3" chance="33.2293712472382" /> <!-- Greater Dye of INT <Int+3 Men-3> -->
 				<item id="4608" min="2" max="4" chance="22.1528895012589" /> <!-- Greater Dye of INT <Int+3 Wit-3> -->
 				<item id="4609" min="2" max="6" chance="16.6146856236191" /> <!-- Greater Dye of MEN <Men+3 Int-3> -->
-				<item id="6573" min="1" max="1" chance="1.99375339595032" /> <!-- Blessed Scroll: Enchant Weapon (C-Grade) -->
+				<item id="6573" min="1" max="1" chance="1.99375339595032" /> <!-- Blessed Scroll: Enchant Weapon (C) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -4459,7 +4373,6 @@
 		</collision>
 	</npc>
 	<npc id="25485" level="49" type="Monster" name="Tillion's Inferior" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4743" level="4" /> <!-- BOSS Strike -->
 		</parameters>
@@ -4504,7 +4417,6 @@
 		</collision>
 	</npc>
 	<npc id="25486" level="49" type="Monster" name="Tillion's Bat" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4743" level="4" /> <!-- BOSS Strike -->
 		</parameters>
@@ -4545,7 +4457,6 @@
 		</collision>
 	</npc>
 	<npc id="25487" level="40" type="RaidBoss" name="Water Spirit Lian" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25488" count="3" respawnTime="360" weightPoint="1" /> <!-- Spirit of Gildor -->
@@ -4592,7 +4503,7 @@
 			<drop>
 				<item id="9818" min="1" max="2" chance="85" /> <!-- Angelic Essence -->
 				<item id="8176" min="1" max="1" chance="64" /> <!-- Destruction Tombstone -->
-				<item id="62" min="11" max="33" chance="0.481523826095581" /> <!-- Reinforced Mithril Boots -->
+				<item id="62" min="11" max="33" chance="0.481523826095581" /> <!-- Mithril Boots -->
 				<item id="2429" min="12" max="34" chance="0.460563752235413" /> <!-- Chain Boots -->
 				<item id="2430" min="12" max="36" chance="0.441356992538452" /> <!-- Karmian Boots -->
 				<item id="2431" min="13" max="37" chance="0.423744154808044" /> <!-- Plated Leather Boots -->
@@ -4601,10 +4512,10 @@
 				<item id="2452" min="1" max="1" chance="10.5934444780045" /> <!-- Reinforced Mithril Gloves -->
 				<item id="2453" min="1" max="1" chance="10.5934444780045" /> <!-- Chain Gloves -->
 				<item id="2454" min="1" max="1" chance="10.5934444780045" /> <!-- Karmian Gloves -->
-				<item id="1958" min="220" max="660" chance="1.05071336035156" /> <!-- Reinforced Mithril Boots Design -->
+				<item id="1958" min="220" max="660" chance="1.05071336035156" /> <!-- Mithril Boots Design -->
 				<item id="2937" min="378" max="1134" chance="0.611508162467956" /> <!-- Chain Boots Part -->
 				<item id="2938" min="26" max="78" chance="8.89041855284119" /> <!-- Karmian Boots Fabric -->
-				<item id="2939" min="35" max="105" chance="6.60433597231293" /> <!-- Plate Leather Boots Lining -->
+				<item id="2939" min="35" max="105" chance="6.60433597231293" /> <!-- Plate Leather Boot Lining -->
 				<item id="2940" min="45" max="135" chance="5.1367323216095" /> <!-- Dwarven Chain Boots Part -->
 				<item id="2941" min="56" max="168" chance="4.12770002068329" /> <!-- Boots of Seal Pattern -->
 				<item id="2942" min="68" max="204" chance="3.39927768196869" /> <!-- Reinforced Mithril Gloves Design -->
@@ -4626,7 +4537,7 @@
 				<item id="2067" min="4" max="12" chance="7.81866820749664" /> <!-- Crystal Staff Head -->
 				<item id="2068" min="5" max="13" chance="6.94993608020782" /> <!-- Stick of Faith Shaft -->
 				<item id="2069" min="17" max="49" chance="2.06232959049225" /> <!-- Heavy Doom Axe Blade -->
-				<item id="6574" min="1" max="1" chance="51.4315986633301" /> <!-- Blessed Scroll: Enchant Armor (C-Grade) -->
+				<item id="6574" min="1" max="1" chance="51.4315986633301" /> <!-- Blessed Scroll: Enchant Armor (C) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -4635,7 +4546,6 @@
 		</collision>
 	</npc>
 	<npc id="25488" level="39" type="Monster" name="Spirit of Gildor" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic_a" id="4196" level="3" /> <!-- Decrease Speed -->
 			<skill name="Debuff_a" id="4200" level="3" /> <!-- Decrease Atk. Spd. -->
@@ -4678,7 +4588,6 @@
 		</collision>
 	</npc>
 	<npc id="25489" level="39" type="Monster" name="Guardian of Gildor" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4743" level="3" /> <!-- BOSS Strike -->
 		</parameters>
@@ -4719,7 +4628,6 @@
 		</collision>
 	</npc>
 	<npc id="25490" level="40" type="RaidBoss" name="Gwindorr" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25491" count="3" respawnTime="360" weightPoint="1" /> <!-- Guard of Gwindorr -->
@@ -4730,7 +4638,7 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<equipment rhand="21732" /> <!-- rhand: Sword of Revolution - Event -->
+		<equipment rhand="129" /> <!-- rhand: Sword of Revolution -->
 		<acquire exp="2030965" sp="181264" raidPoints="632" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="91937.3861400206" hpRegen="34.0387779378852" mp="478.8" mpRegen="1.8" />
@@ -4775,7 +4683,7 @@
 				<item id="2945" min="81" max="243" chance="7.69650287863541" /> <!-- Chain Shield Fragment -->
 				<item id="263" min="1" max="1" chance="7.87709476476669" /> <!-- Chakram -->
 				<item id="2073" min="12" max="36" chance="22.361505012455" /> <!-- Chakram Edge -->
-				<item id="951" min="1" max="3" chance="81.822998046875" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
+				<item id="951" min="1" max="3" chance="81.822998046875" /> <!-- Scroll: Enchant Weapon (C) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -4784,7 +4692,6 @@
 		</collision>
 	</npc>
 	<npc id="25491" level="39" type="Monster" name="Guard of Gwindorr" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="2507" /> <!-- rhand: Lizardspear -->
@@ -4822,7 +4729,6 @@
 		</collision>
 	</npc>
 	<npc id="25492" level="39" type="Monster" name="Follower of Gwindorr" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="2" /> <!-- rhand: Long Sword -->
@@ -4860,7 +4766,6 @@
 		</collision>
 	</npc>
 	<npc id="25493" level="55" type="RaidBoss" name="Eva's Spirit Niniel" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25494" count="1" respawnTime="360" weightPoint="1" /> <!-- Spirit of Niniel -->
@@ -4926,7 +4831,7 @@
 				<item id="4613" min="1" max="3" chance="22.6452388839569" /> <!-- Greater Dye of STR <Str+4 Con-4> -->
 				<item id="4614" min="2" max="4" chance="15.0968259226379" /> <!-- Greater Dye of STR <Str+4 Dex-4> -->
 				<item id="4615" min="1" max="1" chance="45.2904777679138" /> <!-- Greater Dye of CON <Con+4 Str-4> -->
-				<item id="947" min="1" max="1" chance="13.1341596959991" /> <!-- Scroll: Enchant Weapon (B-Grade) -->
+				<item id="947" min="1" max="1" chance="13.1341596959991" /> <!-- Scroll: Enchant Weapon (B) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -4935,7 +4840,6 @@
 		</collision>
 	</npc>
 	<npc id="25494" level="54" type="Monster" name="Spirit of Niniel" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4733" level="5" /> <!-- BOSS Mortal Blow -->
 		</parameters>
@@ -4976,7 +4880,6 @@
 		</collision>
 	</npc>
 	<npc id="25495" level="54" type="Monster" name="Spirit of Niniel" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<race>FAIRY</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -5013,7 +4916,6 @@
 		</collision>
 	</npc>
 	<npc id="25496" level="52" type="RaidBoss" name="Fafurion's Envoy Pingolpin" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25497" count="3" respawnTime="360" weightPoint="1" /> <!-- Fafurion's Envoy -->
@@ -5061,20 +4963,20 @@
 			<drop>
 				<item id="9816" min="1" max="3" chance="85" /> <!-- Earth Egg -->
 				<item id="8176" min="1" max="1" chance="85" /> <!-- Destruction Tombstone -->
-				<item id="554" min="1" max="1" chance="7.68394853020477" /> <!-- Sealed Zubei's Boots -->
-				<item id="600" min="1" max="1" chance="7.68394853020477" /> <!-- Sealed Avadon Boots -->
-				<item id="612" min="1" max="1" chance="7.68394853020477" /> <!-- Sealed Zubei's Gauntlets -->
-				<item id="2464" min="1" max="1" chance="7.68394853020477" /> <!-- Sealed Avadon Gloves -->
-				<item id="4097" min="60" max="180" chance="6.64984727249908" /> <!-- Sealed Zubei's Boots Design -->
-				<item id="4098" min="116" max="346" chance="3.45450471173859" /> <!-- Sealed Avadon Boots Design -->
-				<item id="4100" min="192" max="576" chance="2.07808864473724" /> <!-- Sealed Zubei's Gauntlets Part -->
-				<item id="4073" min="23" max="67" chance="17.7328654088974" /> <!-- Sealed Avadon Gloves Part -->
+				<item id="554" min="1" max="1" chance="7.68394853020477" /> <!-- Zubei's Boots -->
+				<item id="600" min="1" max="1" chance="7.68394853020477" /> <!-- Avadon Boots -->
+				<item id="612" min="1" max="1" chance="7.68394853020477" /> <!-- Zubei's Gauntlets -->
+				<item id="2464" min="1" max="1" chance="7.68394853020477" /> <!-- Avadon Gloves -->
+				<item id="4097" min="60" max="180" chance="6.64984727249908" /> <!-- Zubei's Boots Design -->
+				<item id="4098" min="116" max="346" chance="3.45450471173859" /> <!-- Avadon Boots Design -->
+				<item id="4100" min="192" max="576" chance="2.07808864473724" /> <!-- Zubei's Gauntlets Part -->
+				<item id="4073" min="23" max="67" chance="17.7328654088974" /> <!-- Avadon Gloves Part -->
 				<item id="267" min="1" max="1" chance="2.75428809860229" /> <!-- Arthro Nail -->
 				<item id="4111" min="12" max="36" chance="21.9361110713196" /> <!-- Arthro Nail Blade -->
 				<item id="4610" min="1" max="3" chance="33.127538931839" /> <!-- Greater Dye of MEN <Men+3 Wit-3> -->
 				<item id="4611" min="2" max="4" chance="22.0850259545593" /> <!-- Greater Dye of WIT <Wit+3 Int-3> -->
 				<item id="4612" min="2" max="6" chance="16.5637694659195" /> <!-- Greater Dye of WIT <Wit+3 Men-3> -->
-				<item id="6574" min="1" max="1" chance="17.036966734108" /> <!-- Blessed Scroll: Enchant Armor (C-Grade) -->
+				<item id="6574" min="1" max="1" chance="17.036966734108" /> <!-- Blessed Scroll: Enchant Armor (C) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -5083,7 +4985,6 @@
 		</collision>
 	</npc>
 	<npc id="25497" level="51" type="Monster" name="Fafurion's Envoy" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4743" level="5" /> <!-- BOSS Strike -->
 		</parameters>
@@ -5125,7 +5026,6 @@
 		</collision>
 	</npc>
 	<npc id="25498" level="45" type="RaidBoss" name="Fafurion's Henchman Istary" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25499" count="1" respawnTime="360" weightPoint="1" /> <!-- Alligator of Istary -->
@@ -5177,10 +5077,10 @@
 			<drop>
 				<item id="9816" min="1" max="3" chance="75" /> <!-- Earth Egg -->
 				<item id="8176" min="1" max="1" chance="75" /> <!-- Destruction Tombstone -->
-				<item id="854" min="1" max="1" chance="15.9080844186707" /> <!-- Earring of Seal -->
+				<item id="854" min="1" max="1" chance="15.9080844186707" /> <!-- Earring of Binding -->
 				<item id="885" min="1" max="1" chance="23.8568494130859" /> <!-- Ring of Ages -->
 				<item id="917" min="1" max="1" chance="11.9323426388321" /> <!-- Necklace of Mermaid -->
-				<item id="1914" min="81" max="243" chance="6.25046128378296" /> <!-- Earring of Seal Gemstone -->
+				<item id="1914" min="81" max="243" chance="6.25046128378296" /> <!-- Earring of Binding Gemstone -->
 				<item id="1915" min="280" max="840" chance="2.83570344150543" /> <!-- Ring of Ages Gemstone -->
 				<item id="1916" min="20" max="60" chance="19.1743606229706" /> <!-- Necklace of Mermaid Teardrop -->
 				<item id="231" min="1" max="1" chance="2.45460137008667" /> <!-- Grace Dagger -->
@@ -5190,7 +5090,7 @@
 				<item id="4601" min="1" max="3" chance="29.2053581408386" /> <!-- Greater Dye of STR <Str+3 Con-3> -->
 				<item id="4602" min="2" max="4" chance="19.47026303936" /> <!-- Greater Dye of STR <Str+3 Dex-3> -->
 				<item id="4603" min="2" max="6" chance="14.6026790704193" /> <!-- Greater Dye of CON <Con+3 Str-3> -->
-				<item id="951" min="3" max="7" chance="9.55810264244843" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
+				<item id="951" min="3" max="7" chance="9.55810264244843" /> <!-- Scroll: Enchant Weapon (C) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -5199,7 +5099,6 @@
 		</collision>
 	</npc>
 	<npc id="25499" level="44" type="Monster" name="Alligator of Istary" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4728" level="4" /> <!-- Stun -->
 		</parameters>

@@ -253,15 +253,15 @@
 		<set name="icon" val="icon.skill1111" />
 		<!-- H5 hitTime -->
 		<table name="#hitTime">15000 15000 15000 15000 6000 6000 6000 6000 6000 6000 6000 6000 6000 6000 6000 6000 6000 6000 </table>
-		<table name="#itemConsumeCount">1 1 2 2 7 1 1 4 5 6 11 12 2 3 4 4 9 10 </table>
-		<table name="#itemConsumeCountOT">0 0 0 0 0 1 1 1 1 1 1 1 2 2 2 2 2 2 </table>
+		<table name="#itemConsumeCount"> 3 4 1 3 5 3 4 4 5 6 6 7 5 6 7 9 7 8 </table> <!-- Epilogue Modification -->
+		<table name="#itemConsumeCountOT"> 0 0 1 1 1 2 2 3 3 3 4 4 5 5 5 5 6 6 </table> <!-- Epilogue Modification -->
 		<table name="#npcIds">14111 14112 14113 14114 14115 14116 14117 14118 14119 14120 14121 14122 14123 14124 14125 14126 14127 14128 </table>
 		<table name="#summonLifeTime">1200 1200 1200 1200 3600 3600 3600 3600 3600 3600 3600 3600 3600 3600 3600 3600 3600 3600 </table>
 		<table name="#enchNpcId">14129 14130 14131 14132 14133 14134 14135 14136 14137 14138 14139 14140 14141 14142 14143 14144 14145 14146 14147 14148 14149 14150 14151 14152 14153 14154 14155 14156 14157 14158 </table>
 		<set name="hitTime" val="#hitTime" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="itemConsumeCount" val="#itemConsumeCount" />
-		<set name="itemConsumeId" val="3031" /> <!-- Spirit Ore -->
+		<set name="itemConsumeId" val="1458" /> <!-- Epilogue Modification -->
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
@@ -273,14 +273,14 @@
 		<for>
 			<effect name="Summon">
 				<param npcId="#npcIds" />
-				<param consumeItemId="3031" consumeItemCount="#itemConsumeCountOT" />
+				<param consumeItemId="1458" consumeItemCount="#itemConsumeCountOT" /> <!-- Epilogue Modification -->
 				<param lifeTime="#summonLifeTime" />
 			</effect>
 		</for>
 		<enchant1for>
 			<effect name="Summon">
 				<param npcId="#enchNpcId" />
-				<param consumeItemId="3031" consumeItemCount="2" />
+				<param consumeItemId="1458" consumeItemCount="2" /> <!-- Epilogue Modification -->
 				<param lifeTime="3600" />
 			</effect>
 		</enchant1for>
@@ -370,14 +370,14 @@
 		<set name="icon" val="icon.skill1128" />
 		<!-- H5 hitTime -->
 		<table name="#hitTime">15000 15000 15000 15000 6000 6000 6000 6000 6000 6000 6000 6000 6000 6000 6000 6000 6000 6000 </table>
-		<table name="#itemConsumeCount">1 1 2 2 7 1 1 4 5 6 11 12 2 3 4 4 9 10 </table>
-		<table name="#itemConsumeCountOT">0 0 0 0 0 1 1 1 1 1 1 1 2 2 2 2 2 2 </table>
+		<table name="#itemConsumeCount"> 3 4 1 3 5 3 4 4 5 6 6 7 5 6 7 9 7 8 </table> <!-- Epilogue Modification -->
+		<table name="#itemConsumeCountOT"> 0 0 1 1 1 2 2 3 3 3 4 4 5 5 5 5 6 6 </table> <!-- Epilogue Modification -->
 		<table name="#npcIds">14479 14480 14481 14482 14483 14484 14485 14486 14487 14488 14489 14490 14491 14492 14493 14494 14495 14496 </table>
 		<table name="#summonLifeTime">1200 1200 1200 1200 3600 3600 3600 3600 3600 3600 3600 3600 3600 3600 3600 3600 3600 3600 </table>
 		<set name="hitTime" val="#hitTime" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="itemConsumeCount" val="#itemConsumeCount" />
-		<set name="itemConsumeId" val="3031" /> <!-- Spirit Ore -->
+		<set name="itemConsumeId" val="1458" /> <!-- Epilogue Modification -->
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
@@ -389,23 +389,23 @@
 		<for>
 			<effect name="Summon">
 				<param npcId="#npcIds" />
-				<param consumeItemId="3031" consumeItemCount="#itemConsumeCountOT" />
+				<param consumeItemId="1458" consumeItemCount="#itemConsumeCountOT" /> <!-- Epilogue Modification -->
 				<param lifeTime="#summonLifeTime" />
 			</effect>
 		</for>
 		<enchant1for>
 			<effect name="Summon">
 				<param npcId="#enchNpcId" />
-				<param consumeItemId="3031" consumeItemCount="2" />
+				<param consumeItemId="1458" consumeItemCount="2" /> <!-- Epilogue Modification -->
 				<param lifeTime="3600" />
 			</effect>
 		</enchant1for>
 	</skill>
 	<skill id="1129" levels="7" name="Summon Reanimated Man" enchantGroup1="1">
 		<!-- Summons a Reanimated Man. Requires 11 Spirit Ore. -->
-		<table name="#itemConsumeCount">11 13 6 9 9 6 9 </table>
-		<table name="#itemConsumeCountOT">0 0 1 1 1 2 2 </table>
-		<table name="#itemConsumeSteps">0 0 14 14 14 14 14 </table>
+		<table name="#itemConsumeCount"> 2 3 3 2 4 2 4 </table> <!-- Epilogue Modification -->
+		<table name="#itemConsumeCountOT"> 1 1 2 3 3 4 4 </table> <!-- Epilogue Modification -->
+		<table name="#itemConsumeSteps"> 0 0 4 4 4 4 4 </table> <!-- Epilogue Modification -->
 		<table name="#mpConsume">62 75 88 95 101 106 109 </table>
 		<table name="#mpInitialConsume">16 19 22 24 26 27 28 </table>
 		<table name="#npcIds">14001 14002 14003 14004 14005 14006 14007 </table>
@@ -416,7 +416,7 @@
 		<set name="hitTime" val="15000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="itemConsumeCount" val="#itemConsumeCount" />
-		<set name="itemConsumeId" val="3031" /> <!-- Spirit Ore -->
+		<set name="itemConsumeId" val="1459" /> <!-- Epilogue Modification -->
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
@@ -428,14 +428,14 @@
 		<for>
 			<effect name="Summon">
 				<param npcId="#npcIds" />
-				<param consumeItemId="3031" consumeItemCount="#itemConsumeCountOT" />
+				<param consumeItemId="1459" consumeItemCount="#itemConsumeCountOT" /> <!-- Epilogue Modification -->
 				<param lifeTime="3600" />
 			</effect>
 		</for>
 		<enchant1for>
 			<effect name="Summon">
 				<param npcId="#enchNpcId" />
-				<param consumeItemId="3031" consumeItemCount="2" />
+				<param consumeItemId="1459" consumeItemCount="2" /> <!-- Epilogue Modification -->
 				<param lifeTime="3600" />
 			</effect>
 		</enchant1for>
@@ -705,12 +705,14 @@
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill1148" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="itemConsumeCount" val="1" /> <!-- Epilogue Modification -->
+		<set name="itemConsumeId" val="2508" /> <!-- Epilogue Modification -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
-		<set name="reuseDelay" val="1000" />
+		<set name="reuseDelay" val="1200" /> <!-- Epilogue Modification -->
 		<set name="targetType" val="ONE" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
@@ -781,8 +783,8 @@
 		<!-- set name="effectRange" val="400" / -->
 		<set name="hitTime" val="15000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="3031" /> <!-- Spirit Ore -->
+		<set name="itemConsumeCount" val="3" /> <!-- Epilogue Modification -->
+		<set name="itemConsumeId" val="1458" /> <!-- Epilogue Modification -->
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
@@ -822,8 +824,8 @@
 		<set name="castRange" val="400" />
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="900" />
-		<set name="element" val="5" /> <!-- Dark -->
-		<set name="elementPower" val="20" />
+		<!-- <set name="element" val="5" /> --> <!-- Dark --> <!-- Epilogue Modification -->
+		<!-- <set name="elementPower" val="20" />  --> <!-- Epilogue Modification -->
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill1155" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1216,16 +1218,16 @@
 		<table name="#mpInitialConsume">8 9 10 11 11 11 12 12 13 13 13 14 14 </table>
 		<table name="#ench1ActivateRates">51 52 54 55 56 58 59 60 62 63 64 66 67 68 70 71 72 74 75 76 78 79 80 82 83 84 86 87 88 90 </table>
 		<table name="#ench2ActivateRates">51 52 52 53 54 54 55 56 56 57 57 58 59 59 60 61 61 62 63 63 64 64 65 66 66 67 68 68 69 70 </table>
-		<table name="#ench2mpConsume">54 53 52 51 50 49 48 47 46 45 43 43 42 42 41 40 39 38 37 36 35 34 33 32 31 30 29 29 28 27 </table>
-		<table name="#ench2mpInitialConsume">13 13 13 12 12 12 12 11 11 11 11 10 10 10 10 10 9 9 9 9 8 8 8 8 7 7 7 7 7 6 </table>
-		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
-		<set name="abnormalTime" val="5" />
+		<table name="#ench2mpConsume"> 54 54 53 53 52 52 51 51 50 50 49 49 48 48 47 47 46 46 45 45 44 44 43 43 42 42 41 41 40 40 </table> <!-- Epilogue Modification -->
+		<table name="#ench2mpInitialConsume"> 13 13 13 13 13 13 12 12 12 12 12 12 12 12 11 11 11 11 11 11 11 11 10 10 10 10 10 10 10 10 </table> <!-- Epilogue Modification -->
+		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 82 83 83 83 84 84 85 85 85 </table> <!-- Epilogue Modification -->
+		<set name="abnormalTime" val="15" /> <!-- Epilogue Modification -->
 		<set name="activateRate" val="50" />
 		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="400" />
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="900" />
-		<set name="hitTime" val="1500" />
+		<set name="hitTime" val="6000" /> <!-- Epilogue Modification -->
 		<set name="icon" val="icon.skill1170" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1234,7 +1236,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A2" />
-		<set name="reuseDelay" val="60000" />
+		<set name="reuseDelay" val="23000" /> <!-- Epilogue Modification -->
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="PARALYZE" />
 		<enchant1 name="activateRate" val="#ench1ActivateRates" />

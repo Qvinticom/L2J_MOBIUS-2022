@@ -567,10 +567,10 @@
 		<table name="#ench2reuse">44000 42000 42000 41000 40000 39000 38000 37000 36000 35000 34000 33000 32000 31000 30000 29000 28000 27000 26000 25000 24000 22000 22000 21000 20000 19000 18000 17000 16000 15000 </table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="effectPoint" val="-1" />
-		<set name="hitTime" val="1500" />
+		<set name="hitTime" val="3000" /> <!-- Epilogue Modification -->
 		<set name="icon" val="icon.skill0514" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="40" />
+		<set name="mpConsume" val="50" /> <!-- Epilogue Modification -->
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="45000" />
@@ -580,10 +580,10 @@
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="reuseDelay" val="#ench2reuse" />
 		<cond msgId="113" addName="1">
-			<player npcIdRadius="#npcId,150,false" />
+			<player npcIdRadius="#npcId,350,false" /> <!-- Epilogue Modification -->
 		</cond>
 		<enchant1cond msgId="113" addName="1">
-			<player npcIdRadius="#ench1npcId,150,false" />
+			<player npcIdRadius="#ench1npcId,350,false" /> <!-- Epilogue Modification -->
 		</enchant1cond>
 		<for>
 			<effect name="SummonTrap">
@@ -609,7 +609,7 @@
 		<table name="#ench2reuse">44000 42000 42000 41000 40000 39000 38000 37000 36000 35000 34000 33000 32000 31000 30000 29000 28000 27000 26000 25000 24000 22000 22000 21000 20000 19000 18000 17000 16000 15000 </table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="effectPoint" val="-1" />
-		<set name="hitTime" val="1500" />
+		<set name="hitTime" val="3000" /> <!-- Epilogue Modification -->
 		<set name="icon" val="icon.skill0515" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="40" />
@@ -651,7 +651,7 @@
 		<table name="#ench2reuse">44000 42000 42000 41000 40000 39000 38000 37000 36000 35000 34000 33000 32000 31000 30000 29000 28000 27000 26000 25000 24000 22000 22000 21000 20000 19000 18000 17000 16000 15000 </table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="effectPoint" val="-1" />
-		<set name="hitTime" val="1500" />
+		<set name="hitTime" val="3000" /> <!-- Epilogue Modification -->
 		<set name="icon" val="icon.skill0516" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="40" />
@@ -693,10 +693,10 @@
 		<table name="#ench2reuse">44000 42000 42000 41000 40000 39000 38000 37000 36000 35000 34000 33000 32000 31000 30000 29000 28000 27000 26000 25000 24000 22000 22000 21000 20000 19000 18000 17000 16000 15000 </table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="effectPoint" val="-1" />
-		<set name="hitTime" val="1500" />
+		<set name="hitTime" val="3000" /> <!-- Epilogue Modification -->
 		<set name="icon" val="icon.skill0517" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="40" />
+		<set name="mpConsume" val="50" /> <!-- Epilogue Modification -->
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="45000" />
@@ -706,10 +706,10 @@
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="reuseDelay" val="#ench2reuse" />
 		<cond msgId="113" addName="1">
-			<player npcIdRadius="#npcId,150,false" />
+			<player npcIdRadius="#npcId,350,false" /> <!-- Epilogue Modification -->
 		</cond>
 		<enchant1cond msgId="113" addName="1">
-			<player npcIdRadius="#ench1npcId,150,false" />
+			<player npcIdRadius="#ench1npcId,350,false" /> <!-- Epilogue Modification -->
 		</enchant1cond>
 		<for>
 			<effect name="SummonTrap">
@@ -735,10 +735,10 @@
 		<table name="#ench2reuse">44000 42000 42000 41000 40000 39000 38000 37000 36000 35000 34000 33000 32000 31000 30000 29000 28000 27000 26000 25000 24000 22000 22000 21000 20000 19000 18000 17000 16000 15000 </table>
 		<table name="#enchMagicLvl">76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="effectPoint" val="-1" />
-		<set name="hitTime" val="1500" />
+		<set name="hitTime" val="3000" /> <!-- Epilogue Modification -->
 		<set name="icon" val="icon.skill0518" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="40" />
+		<set name="mpConsume" val="50" /> <!-- Epilogue Modification -->
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="45000" />
@@ -748,10 +748,10 @@
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="reuseDelay" val="#ench2reuse" />
 		<cond msgId="113" addName="1">
-			<player npcIdRadius="#npcId,150,false" />
+			<player npcIdRadius="#npcId,350,false" /> <!-- Epilogue Modification -->
 		</cond>
 		<enchant1cond msgId="113" addName="1">
-			<player npcIdRadius="#ench1npcId,150,false" />
+			<player npcIdRadius="#ench1npcId,350,false" /> <!-- Epilogue Modification -->
 		</enchant1cond>
 		<for>
 			<effect name="SummonTrap">

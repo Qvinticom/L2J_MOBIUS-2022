@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="10700" type="Weapon" name="Eclair Bijou {PvP} - Haste">
-		<!-- Kamael Exclusive Weapon: Sirra's Blade Conversion. <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. Improves the chance of CP recovery during an attack. When enchanted to 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of recieved heal, and decreased MP consumption during skill use. -->
+		<!-- Kamael exclusive weapon Sirra's Blade Conversion The . attack speed of . <Soul Crystal Enhancement> increases by 6%. Increases damage inflicted during PvP, and recovers CP occasionally during an attack. When enchanted to 4 or more, party members including yourself will get the increased P. Atk., magic power, and healing capacity by a fixed rate, and MP consumption during skill use is decreased. -->
 		<set name="icon" val="icon.weapon_greed_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -37,7 +37,7 @@
 		</for>
 	</item>
 	<item id="10701" type="Weapon" name="Eclair Bijou {PvP} - Health">
-		<!-- Kamael Exclusive Weapon: Sirra's Blade Conversion . <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. Improves the chance of CP recovery during an attack. When enchanted to 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of recieved heal, and decreased MP consumption during skill use. -->
+		<!-- Kamael exclusive weapon Sirra's Blade Conversion . <Soul Crystal Enhancement>. Max HP increases by 25%. Increases damage inflicted during PvP, and recovers CP occasionally during an attack. When enchanted to 4 or more, party members including yourself will get the increased P. Atk., magic power, and healing capacity by a fixed rate, and MP consumption during skill use is decreased. -->
 		<set name="icon" val="icon.weapon_greed_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -73,7 +73,7 @@
 		</for>
 	</item>
 	<item id="10702" type="Weapon" name="Eclair Bijou {PvP} - Critical Poison">
-		<!-- Kamael Exclusive Weapon: Sirra's Blade Conversion. <Soul Crystal Enhancement>. Has a 15% chance of poisoning a target during a critical attack. Increases damage inflicted during PvP. Improves the chance of CP recovery during an attack. When enchanted to 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of recieved heal, and decreased MP consumption during skill use. -->
+		<!-- Kamael exclusive weapon Sirra's Blade Conversion. Endowed with a function to poison the target at the probability of 15% during . <Soul Crystal Enhancement> . general attack's critical . Increases damage inflicted during PvP, and recovers CP occasionally during an attack. When enchanted to 4 or more, party members including yourself will get the increased P. Atk., magic power, and healing capacity by a fixed rate, and MP consumption during skill use is decreased. -->
 		<set name="icon" val="icon.weapon_greed_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -110,7 +110,7 @@
 		</for>
 	</item>
 	<item id="10703" type="Weapon" name="Durendal {PvP} - Focus">
-		<!-- Kamael Exclusive Weapon: Sword of Ipos Conversion. <Soul Crystal Enhancement>. Increases Critical by 61. Increases damage inflicted during PvP. Improves the chance of additional damage during an attack. -->
+		<!-- Kamael exclusive weapon Sword of Ipos Conversion. <Soul Crystal Enhancement>. Critical increases by 61. Increases damage inflicted during PvP, and additional damage is applied occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_death_bringer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -145,7 +145,7 @@
 		</for>
 	</item>
 	<item id="10704" type="Weapon" name="Durendal {PvP} - Haste">
-		<!-- Kamael Exclusive Weapon: Sword of Ipos Conversion. <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. Improves the chance of additional damage during an attack. -->
+		<!-- Kamael exclusive weapon Sword of Ipos Conversion. The . attack speed of . <Soul Crystal Enhancement> increases by 6%. Increases damage inflicted during PvP, and additional damage is applied occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_death_bringer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -180,7 +180,7 @@
 		</for>
 	</item>
 	<item id="10705" type="Weapon" name="Durendal {PvP} - Health">
-		<!-- Kamael Exclusive Weapon: Sword of Ipos Conversion. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. Improves the chance of additional damage during an attack. -->
+		<!-- Kamael exclusive weapon Sword of Ipos Conversion. <Soul Crystal Enhancement>. Max HP increases by 25%. Increases damage inflicted during PvP, and additional damage is applied occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_death_bringer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -215,7 +215,7 @@
 		</for>
 	</item>
 	<item id="10706" type="Weapon" name="Screaming Vengeance {PvP} - Cheap Shot">
-		<!-- Kamael Exclusive Weapon: Shyeed's Bow Conversion. <Soul Crystal Enhancement>. When using skills MP consumption is decreased by 12%. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. -->
+		<!-- Kamael exclusive weapon Shyeed's Bow Conversion. <Soul Crystal Enhancement>when using the . skill MP consupmtion decreases by 12%. Increases damage inflicted during PvP, and increases the Atk. Spd. of bows/crossbows occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_soul_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -251,7 +251,7 @@
 		</for>
 	</item>
 	<item id="10707" type="Weapon" name="Screaming Vengeance {PvP} - Focus">
-		<!-- Kamael Exclusive Weapon: Shyeed's Bow Conversion. <Soul Crystal Enhancement>. Increases Critical by 61. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. -->
+		<!-- Kamael exclusive weapon Shyeed's Bow Conversion. <Soul Crystal Enhancement>. Critical increases by 61. Increases damage inflicted during PvP, and increases the Atk. Spd. of bows/crossbows occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_soul_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -287,7 +287,7 @@
 		</for>
 	</item>
 	<item id="10708" type="Weapon" name="Screaming Vengeance {PvP} - Quick Recovery">
-		<!-- Kamael Exclusive Weapon: Shyeed's Bow conversion. <Soul Crystal Enhancement>. Decreases re-use delay by 17%. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. -->
+		<!-- Kamael exclusive weapon Shyeed's Bow conversion. Endowed with a function to reduce . <Soul Crystal Enhancement> . re-use delay by 17%. Increases damage inflicted during PvP, and increases the Atk. Spd. of bows/crossbows occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_soul_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -323,7 +323,7 @@
 		</for>
 	</item>
 	<item id="10709" type="Weapon" name="Tallum Blade*Damascus {PvP}">
-		<!-- When enchanted with a two-handed sword, a two-handed blunt weapon or a fighting weapon, its P. Atk. increases more than that of a regular one-handed sword. When enchanted to 4 or more, Atk. Spd. increases by 8%. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. -->
+		<!-- The attack power of dual bladed weapons, two-handed swords, two-handed blunt weapons and fighting weapons increases more than that of the regular one-handed swords when enchanted. When enchanted to 4 or more, the Atk. Speed increases by 8%. Increases damage inflicted during PvP, and increases the Atk. Spd. of bows/crossbows occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -355,7 +355,7 @@
 		</for>
 	</item>
 	<item id="10710" type="Weapon" name="Forgotten Blade {PvP} - Haste">
-		<!-- <Soul Crystal Enhancement>. Atk. Spd. increases by about 7%. Increases damage inflicted during PvP. Improves the chance of CP recovery during an attack. -->
+		<!-- <Soul Crystal Enhancement>. Atk. Spd. increases by about 7%. Increases damage inflicted during PvP, and recovers CP occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_forgotten_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -386,7 +386,7 @@
 		</for>
 	</item>
 	<item id="10711" type="Weapon" name="Forgotten Blade {PvP} - Health">
-		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. Improves the chance of CP recovery during an attack. -->
+		<!-- <Soul Crystal Enhancement>. Max HP is increased by 25%. Increases damage inflicted during PvP, and recovers CP occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_forgotten_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -417,7 +417,7 @@
 		</for>
 	</item>
 	<item id="10712" type="Weapon" name="Forgotten Blade {PvP} - Focus">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 84. Increases damage inflicted during PvP. Improves the chance of CP recovery during an attack. -->
+		<!-- <Soul Crystal Enhancement>. Critical increases by 84. Increases damage inflicted during PvP, and recovers CP occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_forgotten_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -448,7 +448,7 @@
 		</for>
 	</item>
 	<item id="10713" type="Weapon" name="Heavens Divider {PvP} - Haste">
-		<!-- <Soul Crystal Enhancement>. Atk. Spd. increases by about 7%. Increases damage inflicted during PvP. Improves the chance of additional damage during an attack. -->
+		<!-- <Soul Crystal Enhancement>. Atk. Spd. increases by about 7%. Increases damage inflicted during PvP, and additional damage is applied occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_heavens_divider_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -479,7 +479,7 @@
 		</for>
 	</item>
 	<item id="10714" type="Weapon" name="Heavens Divider {PvP} - Health">
-		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. Improves the chance of additional damage during an attack. -->
+		<!-- <Soul Crystal Enhancement>. Max HP is increased by 25%. Increases damage inflicted during PvP, and additional damage is applied occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_heavens_divider_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -510,7 +510,7 @@
 		</for>
 	</item>
 	<item id="10715" type="Weapon" name="Heavens Divider {PvP} - Focus">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 84. Increases damage inflicted during PvP. Improves the chance of additional damage during an attack. -->
+		<!-- <Soul Crystal Enhancement>. Critical increases by 84. Increases damage inflicted during PvP, and additional damage is applied occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_heavens_divider_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -541,7 +541,7 @@
 		</for>
 	</item>
 	<item id="10716" type="Weapon" name="Basalt Battlehammer {PvP} - HP Drain">
-		<!-- <Soul Crystal Enhancement>. Restores 3% of melee damage inflicted upon the enemy to your own HP. Increases damage inflicted during PvP. Improves the chance of CP recovery during an attack. -->
+		<!-- <Soul Crystal Enhancement>. Recovers as HP 3% of the damage inflicted upon the enemy with a close range general physical attack. Increases damage inflicted during PvP, and recovers CP occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_basalt_battlehammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -573,7 +573,7 @@
 		</for>
 	</item>
 	<item id="10717" type="Weapon" name="Basalt Battlehammer {PvP} - Health">
-		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. Improves the chance of CP recovery during an attack. -->
+		<!-- <Soul Crystal Enhancement>. Max HP is increased by 25%. Increases damage inflicted during PvP, and recovers CP occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_basalt_battlehammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -605,7 +605,7 @@
 		</for>
 	</item>
 	<item id="10718" type="Weapon" name="Basalt Battlehammer {PvP} - HP Regeneration">
-		<!-- <Soul Crystal Enhancement>. Increases HP Recovery Rate. Increases damage inflicted during PvP. Improves the chance of CP recovery during an attack. -->
+		<!-- <Soul Crystal Enhancement>. HP recovery speed improves. Increases damage inflicted during PvP, and recovers CP occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_basalt_battlehammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -637,7 +637,7 @@
 		</for>
 	</item>
 	<item id="10719" type="Weapon" name="Dragon Hunter Axe {PvP} - HP Regeneration">
-		<!-- <Soul Crystal Enhancement>. Increases HP Recovery Rate. Increases damage inflicted during PvP. Improves the chance of additional damage during an attack. -->
+		<!-- <Soul Crystal Enhancement>. HP recovery speed improves. Increases damage inflicted during PvP, and additional damage is applied occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_dragon_hunter_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -669,7 +669,7 @@
 		</for>
 	</item>
 	<item id="10720" type="Weapon" name="Dragon Hunter Axe {PvP} - Health">
-		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. Improves the chance of additional damage during an attack. -->
+		<!-- <Soul Crystal Enhancement>. Max HP is increased by 25%. Increases damage inflicted during PvP, and additional damage is applied occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_dragon_hunter_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -701,7 +701,7 @@
 		</for>
 	</item>
 	<item id="10721" type="Weapon" name="Dragon Hunter Axe {PvP} - HP Drain">
-		<!-- <Soul Crystal Enhancement>. Restores 3% of melee damage inflicted upon the enemy to your own HP. Increases damage inflicted during PvP. Improves the chance of additional damage during an attack. -->
+		<!-- <Soul Crystal Enhancement>. Recovers as HP 3% of the damage inflicted upon the enemy with a close range general physical attack. Increases damage inflicted during PvP, and additional damage is applied occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_dragon_hunter_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -733,7 +733,7 @@
 		</for>
 	</item>
 	<item id="10722" type="Weapon" name="Angel Slayer {PvP} - Critical Damage">
-		<!-- <Soul Crystal Enhancement> . Critical Damage increased by 265. Increases damage in PvP. -->
+		<!-- <Soul Crystal Enhancement> . Critical damage increased by 265. Increases damage in PvP. -->
 		<set name="icon" val="icon.weapon_angel_slayer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -765,7 +765,7 @@
 		</for>
 	</item>
 	<item id="10723" type="Weapon" name="Angel Slayer {PvP} - HP Drain">
-		<!-- <Soul Crystal Enhancement>. Recovers as HP 3% of the damage inflicted upon the enemy with a close range general attack. Increases damage inflicted during PvP. Has a chance of canceling more than 1 of a target's enhanced status, or of decreasing a target's Shield Defense during an attack. -->
+		<!-- <Soul Crystal Enhancement>. Recovers as HP 3% of the damage inflicted upon the enemy with a close range general attack. Increases damage inflicted during PvP, during an attack, cancels the opponent's enhanced status by more than 1 occasionally, or decreases the opponent's shield P. Def. -->
 		<set name="icon" val="icon.weapon_angel_slayer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -797,7 +797,7 @@
 		</for>
 	</item>
 	<item id="10724" type="Weapon" name="Angel Slayer {PvP} - Haste">
-		<!-- <Soul Crystal Enhancement>. Atk. Spd. increases by about 7%. Increases damage inflicted during PvP. Has a chance of canceling more than 1 of a target's enhanced status, or of decreasing a target's Shield Defense during an attack. -->
+		<!-- <Soul Crystal Enhancement>. Atk. Spd. increases by about 7%. Increases damage inflicted during PvP, during an attack, cancels the opponent's enhanced status by more than 1 occasionally, or decreases the opponent's shield P. Def. -->
 		<set name="icon" val="icon.weapon_angel_slayer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -829,7 +829,7 @@
 		</for>
 	</item>
 	<item id="10725" type="Weapon" name="Saint Spear {PvP} - Health">
-		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. Improves the chance of additional damage during an attack. -->
+		<!-- <Soul Crystal Enhancement>. Maximum HP is increased by 25%. Increases damage inflicted during PvP, and additional damage is applied at a fixed rate during an attack. -->
 		<set name="icon" val="icon.weapon_saint_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -861,7 +861,7 @@
 		</for>
 	</item>
 	<item id="10726" type="Weapon" name="Saint Spear {PvP} - Guidance">
-		<!-- <Soul Crystal Enhancement>. Increases Accuracy by 5. Increases damage inflicted during PvP. Improves the chance of additional damage during an attack. -->
+		<!-- <Soul Crystal Enhancement>. Accuracy rate increases by 5. Increases damage inflicted during PvP, and additional damage is applied at a fixed rate during an attack. -->
 		<set name="icon" val="icon.weapon_saint_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -893,7 +893,7 @@
 		</for>
 	</item>
 	<item id="10727" type="Weapon" name="Saint Spear {PvP} - Haste">
-		<!-- <Soul Crystal Enhancement>. Atk. Spd. increases by about 7%. Increases damage inflicted during PvP. Improves the chance of additional damage during an attack. -->
+		<!-- <Soul Crystal Enhancement>. Atk. Spd. increases by about 7%. Increases damage inflicted during PvP, and additional damage is applied at a fixed rate during an attack. -->
 		<set name="icon" val="icon.weapon_saint_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -925,7 +925,7 @@
 		</for>
 	</item>
 	<item id="10728" type="Weapon" name="Demon Splinter {PvP} - Focus">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 80. Increases damage inflicted during PvP. Has a chance of canceling more than 1 of a target's enhanced status, or of decreasing a target's Shield Defense during an attack. -->
+		<!-- <Soul Crystal Enhancement>. Critical increases by 80. Increases damage inflicted during PvP, during an attack, cancels the opponent's enhanced status by more than 1 occasionally, or decreases the opponent's shield P. Def. -->
 		<set name="icon" val="icon.weapon_demon_splinter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -957,7 +957,7 @@
 		</for>
 	</item>
 	<item id="10729" type="Weapon" name="Demon Splinter {PvP} - Health">
-		<!-- <Soul Crystal Enhancement>. Max HP increases by 25%. Increases damage inflicted during PvP. Has a chance of canceling more than 1 of a target's enhanced status, or of decreasing a target's Shield Defense during an attack. -->
+		<!-- <Soul Crystal Enhancement>. Max HP increases by 25%. Increases damage inflicted during PvP, during an attack, cancels the opponent's enhanced status by more than 1 occasionally, or decreases the opponent's shield P. Def. -->
 		<set name="icon" val="icon.weapon_demon_splinter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -989,7 +989,7 @@
 		</for>
 	</item>
 	<item id="10730" type="Weapon" name="Demon Splinter {PvP} - Critical Stun">
-		<!-- <Soul Crystal Enhancement>. Stun effect at a chance of 27% during a critical attack. Increases damage inflicted during PvP. Has a chance of canceling more than 1 of a target's enhanced status, or of decreasing a target's Shield Defense during an attack. -->
+		<!-- <Soul Crystal Enhancement>. Stun effect at a probability of 27% during critical attack. Increases damage inflicted during PvP, during an attack, cancels the opponent's enhanced status by more than 1 occasionally, or decreases the opponent's shield P. Def. -->
 		<set name="icon" val="icon.weapon_demon_splinter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1022,7 +1022,7 @@
 		</for>
 	</item>
 	<item id="10731" type="Weapon" name="Arcana Mace {PvP} - Acumen">
-		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP, and increases Casting Spd. occasionally when being attacked. -->
+		<!-- <Soul Crystal Enhancement>. Magic Casting Spd. increases by 15%. Increases damage inflicted during PvP, and increases Casting Spd. occasionally when being attacked. -->
 		<set name="icon" val="icon.weapon_arcana_mace_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1055,7 +1055,7 @@
 		</for>
 	</item>
 	<item id="10732" type="Weapon" name="Arcana Mace {PvP} - MP Regeneration">
-		<!-- <Soul Crystal Enhancement>. MP Recovery Rate increases. Increases damage inflicted during PvP, and increases Casting Spd. occasionally when being attacked. -->
+		<!-- <Soul Crystal Enhancement>. MP Recovery Speed increases. Increases damage inflicted during PvP, and increases Casting Spd. occasionally when being attacked. -->
 		<set name="icon" val="icon.weapon_arcana_mace_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1121,7 +1121,7 @@
 		</for>
 	</item>
 	<item id="10734" type="Weapon" name="Imperial Staff {PvP} - Empower">
-		<!-- <Soul Crystal Enhancement>. Increases M. Atk. by 60. Increases damage inflicted during PvP, and increases Casting Spd. occasionally when being attacked. -->
+		<!-- <Soul Crystal Enhancement>. M. Atk. increases by 60. Increases damage inflicted during PvP, and increases Casting Spd. occasionally when being attacked. -->
 		<set name="icon" val="icon.weapon_imperial_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1154,7 +1154,7 @@
 		</for>
 	</item>
 	<item id="10735" type="Weapon" name="Imperial Staff {PvP} - MP Regeneration">
-		<!-- <Soul Crystal Enhancement>. MP Recovery Rate increases. Increases damage inflicted during PvP, and increases Casting Spd. occasionally when being attacked. -->
+		<!-- <Soul Crystal Enhancement>. MP Recovery Speed increases. Increases damage inflicted during PvP, and increases Casting Spd. occasionally when being attacked. -->
 		<set name="icon" val="icon.weapon_imperial_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1187,7 +1187,7 @@
 		</for>
 	</item>
 	<item id="10736" type="Weapon" name="Imperial Staff {PvP} - Magic Hold">
-		<!-- <Soul Crystal Enhancement>. Dryad Root is given a 20% chance when using a magic skill on the target. Increases damage inflicted during PvP, and increases Casting Spd. occasionally when being attacked. -->
+		<!-- <Soul Crystal Enhancement>. Dryad Root is given a 20% probability when using a magic skill on the target. Increases damage inflicted during PvP, and increases Casting Spd. occasionally when being attacked. -->
 		<set name="icon" val="icon.weapon_imperial_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1222,7 +1222,7 @@
 		</for>
 	</item>
 	<item id="10737" type="Weapon" name="Draconic Bow {PvP} - Cheap Shot">
-		<!-- <Soul Crystal Enhancement>. During a general attack, there is a 26% chance that MP consumption will be decreased to 1. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. -->
+		<!-- <Soul Crystal Enhancement>. During a general attack, there is a 26% probability that MP consumption will be decreased to 1. Increases damage inflicted during PvP, and increases the Atk. Spd. of bows/crossbows occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_draconic_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1257,7 +1257,7 @@
 		</for>
 	</item>
 	<item id="10738" type="Weapon" name="Draconic Bow {PvP} - Focus">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 88. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. -->
+		<!-- <Soul Crystal Enhancement>. Critical increases by 88. Increases damage inflicted during PvP, and increases the Atk. Spd. of bows/crossbows occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_draconic_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1291,7 +1291,7 @@
 		</for>
 	</item>
 	<item id="10739" type="Weapon" name="Draconic Bow {PvP} - Critical Slow">
-		<!-- <Soul Crystal Enhancement>. Slow effect at a certain rate during a critical attack. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. -->
+		<!-- <Soul Crystal Enhancement>. Slow effect at a certain rate during a critical attack. Increases damage inflicted during PvP, and increases the Atk. Spd. of bows/crossbows occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_draconic_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1326,7 +1326,7 @@
 		</for>
 	</item>
 	<item id="10740" type="Weapon" name="Laevateinn {PvP} - Haste">
-		<!-- Kamael Exclusive Weapon: Forgotten Blade Conversion . <Soul Crystal Enhancement>. Atk. Spd. increases by about 7%. Increases damage inflicted during PvP. Improves the chance of CP recovery during an attack. When enchanted to 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of recieved heal, and decreased MP consumption during skill use. -->
+		<!-- Kamael exclusive weapon Forgotten Blade Conversion . <Soul Crystal Enhancement>. Atk. Spd. increases by about 7%. Increases damage inflicted during PvP, and recovers CP occasionally during an attack. When enchanted to 4 or more, party members including yourself will get the increased P. Atk., magic power, and healing capacity by a fixed rate, and MP consumption during skill use is decreased. -->
 		<set name="icon" val="icon.weapon_leavatein_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1362,7 +1362,7 @@
 		</for>
 	</item>
 	<item id="10741" type="Weapon" name="Laevateinn {PvP} - Health">
-		<!-- Kamael Exclusive Weapon: Forgotten Blade Conversion . <Soul Crystal Enhancement>. Max HP increases by 25%. Increases damage inflicted during PvP. Improves the chance of CP recovery during an attack. When enchanted to 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of recieved heal, and decreased MP consumption during skill use. -->
+		<!-- Kamael exclusive weapon Forgotten Blade Conversion . <Soul Crystal Enhancement>. Max HP increases by 25%. Increases damage inflicted during PvP, and recovers CP occasionally during an attack. When enchanted to 4 or more, party members including yourself will get the increased P. Atk., magic power, and healing capacity by a fixed rate, and MP consumption during skill use is decreased. -->
 		<set name="icon" val="icon.weapon_leavatein_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1398,7 +1398,7 @@
 		</for>
 	</item>
 	<item id="10742" type="Weapon" name="Laevateinn {PvP} - Focus">
-		<!-- Kamael Exclusive Weapon: Forgotten Blade Conversion . <Soul Crystal Enhancement>. Increases Critical by 84. Increases damage inflicted during PvP. Improves the chance of CP recovery during an attack. When enchanted to 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of recieved heal, and decreased MP consumption during skill use. -->
+		<!-- Kamael exclusive weapon Forgotten Blade Conversion . <Soul Crystal Enhancement>. Critical increases by 84. Increases damage inflicted during PvP, and recovers CP occasionally during an attack. When enchanted to 4 or more, party members including yourself will get the increased P. Atk., magic power, and healing capacity by a fixed rate, and MP consumption during skill use is decreased. -->
 		<set name="icon" val="icon.weapon_leavatein_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1434,7 +1434,7 @@
 		</for>
 	</item>
 	<item id="10743" type="Weapon" name="Gram {PvP} - Haste">
-		<!-- Kamael Exclusive Weapon: Heaven's Divider Conversion. <Soul Crystal Enhancement>. Atk. Spd. increases by about 7%. Increases damage inflicted during PvP. Improves the chance of additional damage during an attack. -->
+		<!-- Kamael exclusive weapon Heaven's Divider Conversion. <Soul Crystal Enhancement>. Atk. Spd. increases by about 7%. Increases damage inflicted during PvP, and additional damage is applied occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_gram_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1469,7 +1469,7 @@
 		</for>
 	</item>
 	<item id="10744" type="Weapon" name="Gram {PvP} - Health">
-		<!-- Kamael Exclusive Weapon: Heaven's Divider Conversion. <Soul Crystal Enhancement>. Max HP increases by 25%. Increases damage inflicted during PvP. Improves the chance of additional damage during an attack. -->
+		<!-- Kamael exclusive weapon Heaven's Divider Conversion. <Soul Crystal Enhancement>. Max HP increases by 25%. Increases damage inflicted during PvP, and additional damage is applied occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_gram_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1504,7 +1504,7 @@
 		</for>
 	</item>
 	<item id="10745" type="Weapon" name="Gram {PvP} - Focus">
-		<!-- Kamael Exclusive Weapon: Heaven's Divider Conversion. <Soul Crystal Enhancement>. Increases Critical by 84. Increases damage inflicted during PvP. Improves the chance of additional damage during an attack. -->
+		<!-- Kamael exclusive weapon Heaven's Divider Conversion. <Soul Crystal Enhancement>. Critical increases by 84. Increases damage inflicted during PvP, and additional damage is applied occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_gram_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1539,7 +1539,7 @@
 		</for>
 	</item>
 	<item id="10746" type="Weapon" name="Sarunga {PvP} - Cheap Shot">
-		<!-- Kamael Exclusive Weapon: Draconic Bow Conversion. <Soul Crystal Enhancement>when using the . skill MP consumption decreases by 12%. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. -->
+		<!-- Kamael exclusive weapon Draconic Bow Conversion. <Soul Crystal Enhancement>when using the . skill MP consupmtion decreases by 12%. Increases damage inflicted during PvP, and increases the Atk. Spd. of bows/crossbows occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_sarnga_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1575,7 +1575,7 @@
 		</for>
 	</item>
 	<item id="10747" type="Weapon" name="Sarunga {PvP} - Focus">
-		<!-- Kamael Exclusive Weapon: Draconic Bow Conversion. <Soul Crystal Enhancement>. Increases Critical by 88. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. -->
+		<!-- Kamael exclusive weapon Draconic Bow Conversion. <Soul Crystal Enhancement>. Critical increases by 88. Increases damage inflicted during PvP, and increases the Atk. Spd. of bows/crossbows occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_sarnga_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1611,7 +1611,7 @@
 		</for>
 	</item>
 	<item id="10748" type="Weapon" name="Sarunga {PvP} - Critical Slow">
-		<!-- Kamael Exclusive Weapon: Draconic Bow Conversion. <Soul Crystal Enhancement>. Slow effect at a certain rate during a critical attack Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. -->
+		<!-- Kamael exclusive weapon Draconic Bow Conversion. <Soul Crystal Enhancement>. Sloe effect at a certain rate during a critical attack Increases damage inflicted during PvP, and increases the Atk. Spd. of bows/crossbows occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_sarnga_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1648,7 +1648,7 @@
 		</for>
 	</item>
 	<item id="10749" type="Weapon" name="Tallum Blade*Dark Legion's Edge {PvP}">
-		<!-- When enchanted with a two-handed sword, a two-handed blunt weapon or a fighting weapon, its P. Atk. increases more than that of a regular one-handed sword. When enchanted to 4 or more, Max HP increases by 15% and Max MP increases by 20% and Max CP increases by 30%. Increases damage inflicted during PvP, and decreases the range of bows/crossbows occasionally during an attack. -->
+		<!-- The attack power of dual bladed weapons, two-handed swords, two-handed blunt weapons and fighting weapons increases more than that of the regular one-handed swords when enchanted. When enchanted to 4 or more, Max HP increases by 15% and Max MP increases by 20% and Max CP increases by 30%. Increases damage inflicted during PvP, and decreases the range of bows/crossbows occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1680,7 +1680,7 @@
 		</for>
 	</item>
 	<item id="10750" type="Weapon" name="Dynasty Sword {PvP} - Focus">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 111. Increases damage inflicted during PvP. Improves the chance of CP recovery during an attack. -->
+		<!-- <Soul Crystal Enhancement>. critical attack increases by 111. Increases damage inflicted during PvP, and recovers CP occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_dynasty_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1690,7 +1690,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="74946000" />
@@ -1711,7 +1711,7 @@
 		</for>
 	</item>
 	<item id="10751" type="Weapon" name="Dynasty Sword {PvP} - Health">
-		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. Improves the chance of CP recovery during an attack. -->
+		<!-- <Soul Crystal Enhancement>. Max HP by 25%. Increases damage inflicted during PvP, and recovers CP occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_dynasty_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1721,7 +1721,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="74946000" />
@@ -1742,7 +1742,7 @@
 		</for>
 	</item>
 	<item id="10752" type="Weapon" name="Dynasty Sword {PvP} - Light">
-		<!-- <Soul Crystal Enhancement>. Increases weight gauge by 20%. Increases damage inflicted during PvP. Improves the chance of CP recovery during an attack. -->
+		<!-- <Soul Crystal Enhancement>. Weight gauge increases by 20%. Increases damage inflicted during PvP, and recovers CP at a fixed rate during an attack. -->
 		<set name="icon" val="icon.weapon_dynasty_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1752,7 +1752,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="74946000" />
@@ -1773,7 +1773,7 @@
 		</for>
 	</item>
 	<item id="10753" type="Weapon" name="Dynasty Blade {PvP} - Focus">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 111. Increases damage inflicted during PvP. Improves the chance of additional damage during an attack. -->
+		<!-- <Soul Crystal Enhancement>. critical attack increases by 111. Increases damage inflicted during PvP, and additional damage is applied occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1783,7 +1783,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="74946000" />
@@ -1804,7 +1804,7 @@
 		</for>
 	</item>
 	<item id="10754" type="Weapon" name="Dynasty Blade {PvP} - Health">
-		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. Improves the chance of additional damage during an attack. -->
+		<!-- <Soul Crystal Enhancement>. Max HP by 25%. Increases damage inflicted during PvP, and additional damage is applied occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1814,7 +1814,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="74946000" />
@@ -1835,7 +1835,7 @@
 		</for>
 	</item>
 	<item id="10755" type="Weapon" name="Dynasty Blade {PvP} - Light">
-		<!-- <Soul Crystal Enhancement>. Increases weight gauge by 20%. Increases damage inflicted during PvP. Improves the chance of additional damage during an attack. -->
+		<!-- <Soul Crystal Enhancement>. Weight gauge increases by 20%. Increases damage inflicted during PvP, and additional damage is applied at a fixed rate during an attack. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1845,7 +1845,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="74946000" />
@@ -1866,7 +1866,7 @@
 		</for>
 	</item>
 	<item id="10756" type="Weapon" name="Dynasty Cudgel {PvP} - Anger">
-		<!-- <Soul Crystal Enhancement>. Decreases HP by 15% while increasing P. Atk. by 78 during a critical attack. Increases damage inflicted during PvP. Improves the chance of CP recovery during an attack. -->
+		<!-- <Soul Crystal Enhancement>player's HP by 15% while increasing P. Atk. by 78 during a . critical attack. Increases damage inflicted during PvP, and recovers CP occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_dynasty_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1876,7 +1876,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="74946000" />
@@ -1898,7 +1898,7 @@
 		</for>
 	</item>
 	<item id="10757" type="Weapon" name="Dynasty Cudgel {PvP} - Health">
-		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. Improves the chance of CP recovery during an attack. -->
+		<!-- <Soul Crystal Enhancement>. Max HP by 25%. Increases damage inflicted during PvP, and recovers CP occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_dynasty_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1908,7 +1908,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="74946000" />
@@ -1930,7 +1930,7 @@
 		</for>
 	</item>
 	<item id="10758" type="Weapon" name="Dynasty Cudgel {PvP} - Rsk. Focus">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 164 when HP drops to 60% or lower. Increases damage inflicted during PvP. Improves the chance of CP recovery during an attack. -->
+		<!-- <Soul Crystal Enhancement>Critical attack increases by 164 when . HP drops to 60% or lower. Increases damage inflicted during PvP, and recovers CP occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_dynasty_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1940,7 +1940,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="74946000" />
@@ -1962,7 +1962,7 @@
 		</for>
 	</item>
 	<item id="10759" type="Weapon" name="Dynasty Crusher {PvP} - Anger">
-		<!-- <Soul Crystal Enhancement>. Decreases HP by 15% while increasing P. Atk. by 78 during a critical attack. Increases damage inflicted during PvP. Improves the chance of additional damage during an attack. -->
+		<!-- <Soul Crystal Enhancement>player's HP by 15% while increasing P. Atk. by 78 during a . critical attack. Increases damage inflicted during PvP, and additional damage is applied occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_dynasty_crusher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1972,7 +1972,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="74946000" />
@@ -1994,7 +1994,7 @@
 		</for>
 	</item>
 	<item id="10760" type="Weapon" name="Dynasty Crusher {PvP} - Health">
-		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. Improves the chance of additional damage during an attack. -->
+		<!-- <Soul Crystal Enhancement>. Max HP by 25%. Increases damage inflicted during PvP, and additional damage is applied occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_dynasty_crusher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2004,7 +2004,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="74946000" />
@@ -2026,7 +2026,7 @@
 		</for>
 	</item>
 	<item id="10761" type="Weapon" name="Dynasty Crusher {PvP} - Rsk. Focus">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 164 when HP drops to 60% or lower. Increases damage inflicted during PvP. Improves the chance of additional damage during an attack. -->
+		<!-- <Soul Crystal Enhancement>Critical attack increases by 164 when . HP drops to 60% or lower. Increases damage inflicted during PvP, and additional damage is applied occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_dynasty_crusher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2036,7 +2036,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="74946000" />
@@ -2058,7 +2058,7 @@
 		</for>
 	</item>
 	<item id="10762" type="Weapon" name="Dynasty Knife {PvP} - Focus">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 116. Increases damage inflicted during PvP. Has a chance of canceling more than 1 of a target's enhanced status, or of decreasing a target's Shield Defense during an attack. -->
+		<!-- <Soul Crystal Enhancement>. critical attack increases by 116. Increases damage inflicted during PvP, during an attack, cancels the opponent's enhanced status by more than 1 occasionally, or decreases the opponent's shield P. Def. -->
 		<set name="icon" val="icon.weapon_dynasty_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -2068,7 +2068,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="74946000" />
@@ -2090,7 +2090,7 @@
 		</for>
 	</item>
 	<item id="10763" type="Weapon" name="Dynasty Knife {PvP} - Evasion">
-		<!-- <Soul Crystal Enhancement>. Increases Evasion by 5. Increases damage inflicted during PvP. Has a chance of canceling more than 1 of a target's enhanced status, or of decreasing a target's Shield Defense during an attack. -->
+		<!-- <Soul Crystal Enhancement>. evasion increases by 5. Increases damage inflicted during PvP, during an attack, cancels the opponent's enhanced status by more than 1 occasionally, or decreases the opponent's shield P. Def. -->
 		<set name="icon" val="icon.weapon_dynasty_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -2100,7 +2100,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="74946000" />
@@ -2122,7 +2122,7 @@
 		</for>
 	</item>
 	<item id="10764" type="Weapon" name="Dynasty Knife {PvP} - Critical Damage">
-		<!-- <Soul Crystal Enhancement>. Increases P. Atk. by 559 during a critical attack. Increases damage inflicted during PvP. Has a chance of canceling more than 1 of a target's enhanced status, or of decreasing a target's Shield Defense during an attack. -->
+		<!-- <Soul Crystal Enhancement>P. Atk. by 559 during a . critical attack. Increases damage inflicted during PvP, during an attack, cancels the opponent's enhanced status by more than 1 occasionally, or decreases the opponent's shield P. Def. -->
 		<set name="icon" val="icon.weapon_dynasty_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -2132,7 +2132,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="74946000" />
@@ -2154,7 +2154,7 @@
 		</for>
 	</item>
 	<item id="10765" type="Weapon" name="Dynasty Halberd {PvP} - Anger">
-		<!-- <Soul Crystal Enhancement>. Decreases your own HP by 15% and increases P. Atk. by 78. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. -->
+		<!-- <Soul Crystal Enhancement>. Decreases your own HP by 15% and bestows ability to increase P. Atk. by 78. Increases damage inflicted during PvP, and additional damage is applied at a fixed rate during an attack. -->
 		<set name="icon" val="icon.weapon_dynasty_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -2164,7 +2164,7 @@
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="2010" />
 		<set name="price" val="74946000" />
@@ -2186,7 +2186,7 @@
 		</for>
 	</item>
 	<item id="10766" type="Weapon" name="Dynasty Halberd {PvP} - Critical Stun">
-		<!-- <Soul Crystal Enhancement>. During a Critical attack, bestows the ability to inflict the stun effect with a 48% chance. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. -->
+		<!-- <Soul Crystal Enhancement>. During a Critical attack, bestows the ability to inflict the stun effect with a 48% probability. Increases damage inflicted during PvP, and additional damage is applied at a fixed rate during an attack. -->
 		<set name="icon" val="icon.weapon_dynasty_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -2196,7 +2196,7 @@
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="2010" />
 		<set name="price" val="74946000" />
@@ -2220,7 +2220,7 @@
 		</for>
 	</item>
 	<item id="10767" type="Weapon" name="Dynasty Halberd {PvP} - Light">
-		<!-- <Soul Crystal Enhancement>. Increases weight gauge by 20%. Increases damage inflicted during PvP. Improves the chance of additional damage during an attack. -->
+		<!-- <Soul Crystal Enhancement>. Weight gauge increases by 20%. Increases damage inflicted during PvP, and additional damage is applied at a fixed rate during an attack. -->
 		<set name="icon" val="icon.weapon_dynasty_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -2230,7 +2230,7 @@
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="2010" />
 		<set name="price" val="74946000" />
@@ -2252,7 +2252,7 @@
 		</for>
 	</item>
 	<item id="10768" type="Weapon" name="Dynasty Bagh-Nakh {PvP} - Rsk. Evasion">
-		<!-- <Soul Crystal Enhancement>. Increases Evasion by 6.8 when HP drops to 60% or lower. Increases damage inflicted during PvP. Has a chance of canceling more than 1 of a target's enhanced status, or of decreasing a target's Shield Defense during an attack. -->
+		<!-- <Soul Crystal Enhancement>evasion increases by 6.8 when . HP drops to 60% or lower. Increases damage inflicted during PvP, during an attack, cancels the opponent's enhanced status by more than 1 occasionally, or decreases the opponent's shield P. Def. -->
 		<set name="icon" val="icon.weapon_dynasty_jamadhr_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -2262,7 +2262,7 @@
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1550" />
 		<set name="price" val="74946000" />
@@ -2284,7 +2284,7 @@
 		</for>
 	</item>
 	<item id="10769" type="Weapon" name="Dynasty Bagh-Nakh {PvP} - Focus">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 106. Increases damage inflicted during PvP. Has a chance of canceling more than 1 of a target's enhanced status, or of decreasing a target's Shield Defense during an attack. -->
+		<!-- <Soul Crystal Enhancement>. critical attack increases by 106. Increases damage inflicted during PvP, during an attack, cancels the opponent's enhanced status by more than 1 occasionally, or decreases the opponent's shield P. Def. -->
 		<set name="icon" val="icon.weapon_dynasty_jamadhr_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -2294,7 +2294,7 @@
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1550" />
 		<set name="price" val="74946000" />
@@ -2316,7 +2316,7 @@
 		</for>
 	</item>
 	<item id="10770" type="Weapon" name="Dynasty Bagh-Nakh {PvP} - Haste">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 10%. Increases damage inflicted during PvP. Has a chance of canceling more than 1 of a target's enhanced status, or of decreasing a target's Shield Defense during an attack. -->
+		<!-- The . attack speed of <Soul Crystal Enhancement> increases by 10%. Increases damage inflicted during PvP, during an attack, cancels the opponent's enhanced status by more than 1 occasionally, or decreases the opponent's shield P. Def. -->
 		<set name="icon" val="icon.weapon_dynasty_jamadhr_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -2326,7 +2326,7 @@
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1550" />
 		<set name="price" val="74946000" />
@@ -2348,7 +2348,7 @@
 		</for>
 	</item>
 	<item id="10771" type="Weapon" name="Dynasty Phantom {PvP} - Acumen">
-		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when being attacked. -->
+		<!-- <Soul Crystal Enhancement>. Casting Spd by 15%. Increases damage inflicted during PvP, and Casting Spd. increases occasionally when being attacked. -->
 		<set name="icon" val="icon.weapon_dynasty_magic_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2358,7 +2358,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="74946000" />
@@ -2380,7 +2380,7 @@
 		</for>
 	</item>
 	<item id="10772" type="Weapon" name="Dynasty Phantom {PvP} - Mana Up">
-		<!-- <Soul Crystal Enhancement>. Max MP by 30%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when being attacked. -->
+		<!-- <Soul Crystal Enhancement>. Max MP by 30%. Increases damage inflicted during PvP, and Casting Spd. increases occasionally when being attacked. -->
 		<set name="icon" val="icon.weapon_dynasty_magic_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2390,7 +2390,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="74946000" />
@@ -2412,7 +2412,7 @@
 		</for>
 	</item>
 	<item id="10773" type="Weapon" name="Dynasty Phantom {PvP} - Conversion">
-		<!-- <Soul Crystal Enhancement>. Increases Max MP by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when being attacked. -->
+		<!-- <Soul Crystal Enhancement>the . Max MP by 60% and decreases the Max HP by 40%. Increases damage inflicted during PvP, and Casting Spd. increases occasionally when being attacked. -->
 		<set name="icon" val="icon.weapon_dynasty_magic_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2422,7 +2422,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="74946000" />
@@ -2444,7 +2444,7 @@
 		</for>
 	</item>
 	<item id="10774" type="Weapon" name="Dynasty Mace {PvP} - Mana Up">
-		<!-- <Soul Crystal Enhancement>. Max MP by 30%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when being attacked. -->
+		<!-- <Soul Crystal Enhancement>. Max MP by 30%. Increases damage inflicted during PvP, and Casting Spd. increases occasionally when being attacked. -->
 		<set name="icon" val="icon.weapon_dynasty_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2454,7 +2454,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="price" val="74946000" />
@@ -2477,7 +2477,7 @@
 		</for>
 	</item>
 	<item id="10775" type="Weapon" name="Dynasty Mace {PvP} - Conversion">
-		<!-- <Soul Crystal Enhancement>. Increases Max MP by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when being attacked. -->
+		<!-- <Soul Crystal Enhancement>the . Max MP by 60% and decreases the Max HP by 40%. Increases damage inflicted during PvP, and Casting Spd. increases occasionally when being attacked. -->
 		<set name="icon" val="icon.weapon_dynasty_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2487,7 +2487,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="price" val="74946000" />
@@ -2510,7 +2510,7 @@
 		</for>
 	</item>
 	<item id="10776" type="Weapon" name="Dynasty Mace {PvP} - Acumen">
-		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when being attacked. -->
+		<!-- <Soul Crystal Enhancement>. Casting Spd by 15%. Increases damage inflicted during PvP, and Casting Spd. increases occasionally when being attacked. -->
 		<set name="icon" val="icon.weapon_dynasty_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2520,7 +2520,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="price" val="74946000" />
@@ -2543,7 +2543,7 @@
 		</for>
 	</item>
 	<item id="10777" type="Weapon" name="Dynasty Staff {PvP} - Mana Up">
-		<!-- <Soul Crystal Enhancement>. Max MP by 30%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when being attacked. -->
+		<!-- <Soul Crystal Enhancement>. Max MP by 30%. Increases damage inflicted during PvP, and Casting Spd. increases occasionally when being attacked. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2553,7 +2553,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="price" val="74946000" />
@@ -2576,7 +2576,7 @@
 		</for>
 	</item>
 	<item id="10778" type="Weapon" name="Dynasty Staff {PvP} - Conversion">
-		<!-- <Soul Crystal Enhancement>. Increases Max MP by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when being attacked. -->
+		<!-- <Soul Crystal Enhancement>the . Max MP by 60% and decreases the Max HP by 40%. Increases damage inflicted during PvP, and Casting Spd. increases occasionally when being attacked. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2586,7 +2586,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="price" val="74946000" />
@@ -2609,7 +2609,7 @@
 		</for>
 	</item>
 	<item id="10779" type="Weapon" name="Dynasty Staff {PvP} - Acumen">
-		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when being attacked. -->
+		<!-- <Soul Crystal Enhancement>. Casting Spd by 15%. Increases damage inflicted during PvP, and Casting Spd. increases occasionally when being attacked. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2619,7 +2619,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="price" val="74946000" />
@@ -2642,7 +2642,7 @@
 		</for>
 	</item>
 	<item id="10780" type="Weapon" name="Dynasty Bow {PvP} - Cheap Shot">
-		<!-- <Soul Crystal Enhancement>. Decreases MP Consumption 4% during a skill attack. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. -->
+		<!-- <Soul Crystal Enhancement>. MP Consumption decreases 4% during a skill attack. Increases damage inflicted during PvP, and increases the Atk. Spd. of bows/crossbows occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_dynasty_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -2652,7 +2652,7 @@
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="74946000" />
@@ -2676,7 +2676,7 @@
 		</for>
 	</item>
 	<item id="10781" type="Weapon" name="Dynasty Bow {PvP} - Guidance">
-		<!-- <Soul Crystal Enhancement>. Increaes Accuracy by 5.32. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. -->
+		<!-- <Soul Crystal Enhancement>. accuracy rate increases by 5.32. Increases damage inflicted during PvP, and increases the Atk. Spd. of bows/crossbows occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_dynasty_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -2686,7 +2686,7 @@
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="74946000" />
@@ -2710,7 +2710,7 @@
 		</for>
 	</item>
 	<item id="10782" type="Weapon" name="Dynasty Bow {PvP} - Focus">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 116. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. -->
+		<!-- <Soul Crystal Enhancement>. critical attack increases by 116. Increases damage inflicted during PvP, and increases the Atk. Spd. of bows/crossbows occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_dynasty_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -2720,7 +2720,7 @@
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="74946000" />
@@ -2744,7 +2744,7 @@
 		</for>
 	</item>
 	<item id="10783" type="Weapon" name="Dynasty Rapier {PvP} - Focus">
-		<!-- Kamael Exclusive Weapon: Dynasty Sword Conversion. <Soul Crystal Enhancement>. Increases Critical by 111. Increases damage inflicted during PvP. Improves the chance of CP recovery during an attack. When enchanted to 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of recieved heal, and decreased MP consumption during skill use. -->
+		<!-- Kamael exclusive weapon Dynasty Sword Conversion. <Soul Crystal Enhancement>. critical attack increases by 111. Increases damage inflicted during PvP, and recovers CP occasionally during an attack. When enchanted to 4 or more, party members including yourself will get the increased P. Atk., magic power, and healing capacity by a fixed rate, and MP consumption during skill use is decreased. -->
 		<set name="icon" val="icon.weapon_dynasty_rapier_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2754,7 +2754,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1280" />
 		<set name="price" val="74946000" />
@@ -2780,7 +2780,7 @@
 		</for>
 	</item>
 	<item id="10784" type="Weapon" name="Dynasty Rapier {PvP} - Health">
-		<!-- Kamael Exclusive Weapon: Dynasty Sword Conversion. <Soul Crystal Enhancement>. Max HP increases by 25%. Increases damage inflicted during PvP. Improves the chance of CP recovery during an attack. When enchanted to 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of recieved heal, and decreased MP consumption during skill use. -->
+		<!-- Kamael exclusive weapon Dynasty Sword Conversion. <Soul Crystal Enhancement>. Max HP increases by 25%. Increases damage inflicted during PvP, and recovers CP occasionally during an attack. When enchanted to 4 or more, party members including yourself will get the increased P. Atk., magic power, and healing capacity by a fixed rate, and MP consumption during skill use is decreased. -->
 		<set name="icon" val="icon.weapon_dynasty_rapier_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2790,7 +2790,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1280" />
 		<set name="price" val="74946000" />
@@ -2816,7 +2816,7 @@
 		</for>
 	</item>
 	<item id="10785" type="Weapon" name="Dynasty Rapier {PvP} - Light">
-		<!-- Kamael Exclusive Weapon: Dynasty Sword Conversion. <Soul Crystal Enhancement>. Increases weight gauge by 20%. Increases damage inflicted during PvP. Improves the chance of CP recovery during an attack. When enchanted to 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of recieved heal, and decreased MP consumption during skill use. -->
+		<!-- Kamael exclusive weapon: Dynasty Sword Conversion. <Soul Crystal Enhancement>. Weight gauge increases by 20%. Increases damage inflicted during PvP, and recovers CP at a fixed rate during an attack. When enchanted to 4 or more, party members including yourself will get the increased P. Atk., magic power, and healing capacity by a fixed rate, and MP consumption during skill use is decreased. -->
 		<set name="icon" val="icon.weapon_dynasty_rapier_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2826,7 +2826,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1280" />
 		<set name="price" val="74946000" />
@@ -2852,7 +2852,7 @@
 		</for>
 	</item>
 	<item id="10786" type="Weapon" name="Dynasty Ancient Sword {PvP} - Focus">
-		<!-- Kamael Exclusive Weapon: Dynasty Blade Conversion. <Soul Crystal Enhancement>. Increases Critical by 111. Increases damage inflicted during PvP. Improves the chance of additional damage during an attack. -->
+		<!-- Kamael exclusive weapon Dynasty Blade Conversion. <Soul Crystal Enhancement>. critical attack increases by 111. Increases damage inflicted during PvP, and additional damage is applied occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_dynasty_ancient_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -2862,7 +2862,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1800" />
 		<set name="price" val="74946000" />
@@ -2887,7 +2887,7 @@
 		</for>
 	</item>
 	<item id="10787" type="Weapon" name="Dynasty Ancient Sword {PvP} - Health">
-		<!-- Kamael Exclusive Weapon: Dynasty Blade Conversion. <Soul Crystal Enhancement>. Max HP increases by 25%. Increases damage inflicted during PvP. Improves the chance of additional damage during an attack. -->
+		<!-- Kamael exclusive weapon Dynasty Blade Conversion. <Soul Crystal Enhancement>. Max HP increases by 25%. Increases damage inflicted during PvP, and additional damage is applied occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_dynasty_ancient_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -2897,7 +2897,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1800" />
 		<set name="price" val="74946000" />
@@ -2922,7 +2922,7 @@
 		</for>
 	</item>
 	<item id="10788" type="Weapon" name="Dynasty Ancient Sword {PvP} - Light">
-		<!-- Kamael Exclusive Weapon: Dynasty Blade Conversion. <Soul Crystal Enhancement>. Increases weight gauge by 20%. Increases damage inflicted during PvP. Improves the chance of additional damage during an attack. -->
+		<!-- Kamael exclusive weapon: Dynasty Blade Conversion. <Soul Crystal Enhancement>. Weight gauge increases by 20%. Increases damage inflicted during PvP, and additional damage is applied at a fixed rate during an attack. -->
 		<set name="icon" val="icon.weapon_dynasty_ancient_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -2932,7 +2932,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1800" />
 		<set name="price" val="74946000" />
@@ -2957,7 +2957,7 @@
 		</for>
 	</item>
 	<item id="10789" type="Weapon" name="Dynasty Crossbow {PvP} - Cheap Shot">
-		<!-- Kamael Exclusive Weapon: Dynasty Bow Conversion. <Soul Crystal Enhancement>. When using skills MP consumption is decreased by 12%. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. -->
+		<!-- Kamael exclusive weapon Dynasty Bow Conversion. <Soul Crystal Enhancement>when using the . skill MP consupmtion decreases by 12%. Increases damage inflicted during PvP, and increases the Atk. Spd. of bows/crossbows occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_dynasty_crossbow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -2967,7 +2967,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1580" />
 		<set name="price" val="74946000" />
@@ -2993,7 +2993,7 @@
 		</for>
 	</item>
 	<item id="10790" type="Weapon" name="Dynasty Crossbow {PvP} - Guidance">
-		<!-- Kamael Exclusive Weapon: Dynasty Bow Conversion. <Soul Crystal Enhancement>. Increaes Accuracy by 5.32. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. -->
+		<!-- Kamael exclusive weapon Dynasty Bow Conversion. <Soul Crystal Enhancement>. accuracy rate increases by 5.32. Increases damage inflicted during PvP, and increases the Atk. Spd. of bows/crossbows occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_dynasty_crossbow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -3003,7 +3003,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1580" />
 		<set name="price" val="74946000" />
@@ -3029,7 +3029,7 @@
 		</for>
 	</item>
 	<item id="10791" type="Weapon" name="Dynasty Crossbow {PvP} - Focus">
-		<!-- Kamael Exclusive Weapon: Dynasty Bow Conversion. <Soul Crystal Enhancement>. Increases Critical by 116. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. -->
+		<!-- Kamael exclusive weapon Dynasty Bow Conversion. <Soul Crystal Enhancement>. critical attack increases by 116. Increases damage inflicted during PvP, and increases the Atk. Spd. of bows/crossbows occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_dynasty_crossbow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -3039,7 +3039,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1580" />
 		<set name="price" val="74946000" />
@@ -3065,6 +3065,7 @@
 		</for>
 	</item>
 	<item id="10792" type="Weapon" name="Dynasty Dual Sword {PvP}">
+		<!-- The attack power of dual bladed weapons, two-handed swords, two-handed blunt weapons and fighting weapons increases more than that of the regular one-handed swords when enchanted. When enchanted to 4 or more, Critical increases by 109 and Max HP increases by 10%. Increases damage inflicted during PvP, and increases the Atk. Spd. of bows/crossbows occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -3074,7 +3075,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="74946000" />

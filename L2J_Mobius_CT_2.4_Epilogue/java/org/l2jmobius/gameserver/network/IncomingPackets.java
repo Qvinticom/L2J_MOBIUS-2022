@@ -187,7 +187,7 @@ public enum IncomingPackets implements IIncomingPackets<GameClient>
 	REQUEST_RECIPE_SHOP_MAKE_ITEM(0xBF, RequestRecipeShopMakeItem::new, ConnectionState.IN_GAME),
 	REQUEST_RECIPE_SHOP_MANAGE_PREV(0xC0, RequestRecipeShopManagePrev::new, ConnectionState.IN_GAME),
 	OBSERVER_RETURN(0xC1, ObserverReturn::new, ConnectionState.IN_GAME),
-	REQUEST_EVALUATE(0xC2, null, ConnectionState.IN_GAME),
+	REQUEST_EVALUATE(0xC2, RequestEvaluate::new, ConnectionState.IN_GAME),
 	REQUEST_HENNA_ITEM_LIST(0xC3, RequestHennaItemList::new, ConnectionState.IN_GAME),
 	REQUEST_HENNA_ITEM_INFO(0xC4, RequestHennaItemInfo::new, ConnectionState.IN_GAME),
 	REQUEST_BUY_SEED(0xC5, RequestBuySeed::new, ConnectionState.IN_GAME),

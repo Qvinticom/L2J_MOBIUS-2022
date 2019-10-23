@@ -280,7 +280,7 @@
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="itemConsumeCount" val="8" />
-		<set name="itemConsumeId" val="1458" /> <!-- Crystal (D-Grade) -->
+		<set name="itemConsumeId" val="1458" /> <!-- Crystal: D-Grade -->
 		<set name="magicLvl" val="1" />
 		<set name="mpConsume" val="3" />
 		<set name="operateType" val="A1" />
@@ -300,7 +300,7 @@
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="itemConsumeCount" val="8" />
-		<set name="itemConsumeId" val="1458" /> <!-- Crystal (D-Grade) -->
+		<set name="itemConsumeId" val="1458" /> <!-- Crystal: D-Grade -->
 		<set name="magicLvl" val="1" />
 		<set name="mpConsume" val="3" />
 		<set name="operateType" val="A1" />
@@ -320,7 +320,7 @@
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="itemConsumeCount" val="8" />
-		<set name="itemConsumeId" val="1458" /> <!-- Crystal (D-Grade) -->
+		<set name="itemConsumeId" val="1458" /> <!-- Crystal: D-Grade -->
 		<set name="magicLvl" val="1" />
 		<set name="mpConsume" val="3" />
 		<set name="operateType" val="A1" />
@@ -377,7 +377,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="7041" levels="1" name="Master's Blessing - Focus">
-		<!-- The GM is always by your side. Increases Critical attack rate by 30% for 1 hour. -->
+		<!-- A GM is always by your side. Increases critical attack rate temporarily. Effect 3. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CRITICAL_PROB_UP" />
@@ -398,7 +398,7 @@
 		</for>
 	</skill>
 	<skill id="7042" levels="1" name="Master's Blessing - Death Whisper">
-		<!-- The GM is always by your side. Increases Critical attack power by 35% for 1 hour. -->
+		<!-- A GM is always by your side. Increases critical attack rate temporarily. Effect 3. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CRITICAL_DMG_UP" />
@@ -419,7 +419,7 @@
 		</for>
 	</skill>
 	<skill id="7043" levels="1" name="Master's Blessing - Haste">
-		<!-- The GM is always by your side. Increases Atk. Spd. by 33% for 1 hour. -->
+		<!-- A GM is always by your side. Increases Atk. Spd. temporarily. Effect 2. -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="ATTACK_TIME_DOWN" />
@@ -440,7 +440,7 @@
 		</for>
 	</skill>
 	<skill id="7044" levels="1" name="Master's Blessing - Guidance">
-		<!-- The GM is always by your side. Increases accuracy by 4 for 1 hour. -->
+		<!-- A GM is always by your side. Increases Accuracy temporarily. Effect 3. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="HIT_UP" />
@@ -461,7 +461,7 @@
 		</for>
 	</skill>
 	<skill id="7045" levels="1" name="Master's Blessing - Blessed Body">
-		<!-- The GM is always by your side. Increases Max HP by 35% for 1 hour. -->
+		<!-- A GM is always by your side. Increases maximum HP temporarily. Effect 6. -->
 		<set name="abnormalLvl" val="6" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MAX_HP_UP" />
@@ -482,7 +482,7 @@
 		</for>
 	</skill>
 	<skill id="7046" levels="1" name="Master's Blessing - Blessed Soul">
-		<!-- The GM is always by your side. Increases Max MP by 35% for 1 hour. -->
+		<!-- A GM is always by your side. Increases maximum MP temporarily. Effect 6. -->
 		<set name="abnormalLvl" val="6" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MAX_MP_UP" />
@@ -503,7 +503,7 @@
 		</for>
 	</skill>
 	<skill id="7047" levels="1" name="Master's Blessing - Agility">
-		<!-- The GM is always by your side. Increase Evasion by 4 for 1 hour. -->
+		<!-- A GM is always by your side. Increases Evasion temporarily. Effect 3. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="AVOID_UP" />
@@ -524,7 +524,7 @@
 		</for>
 	</skill>
 	<skill id="7048" levels="1" name="Master's Blessing - Acumen">
-		<!-- The GM is always by your side. Increases Casting Spd. by 30% for 1 hour. -->
+		<!-- A GM is always by your side. Increases Casting Spd. temporarily. Effect 3. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CASTING_TIME_DOWN" />
@@ -545,7 +545,7 @@
 		</for>
 	</skill>
 	<skill id="7049" levels="1" name="Master's Blessing - Decrease Weight">
-		<!-- The GM is always by your side. Increases the weight penalty interval by 9000 for 1 hour. -->
+		<!-- A GM is always by your side. Reduces current weight. Effect 3. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="DECREASE_WEIGHT_PENALTY" />
@@ -566,7 +566,7 @@
 		</for>
 	</skill>
 	<skill id="7050" levels="1" name="Master's Blessing - Might">
-		<!-- The GM is always by your side. Increases P. Atk. by 15% for 1 hour. -->
+		<!-- A GM is always by your side. Increases P. Atk. temporarily. Effect 3. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="PA_UP" />
@@ -587,7 +587,7 @@
 		</for>
 	</skill>
 	<skill id="7051" levels="1" name="Master's Blessing - Shield">
-		<!-- The GM is always by your side. Increases P. Def. by 15% for 1 hour. -->
+		<!-- A GM is always by your side. Increases P. Def. temporarily. Effect 3. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="PD_UP" />
@@ -608,7 +608,7 @@
 		</for>
 	</skill>
 	<skill id="7052" levels="1" name="Master's Blessing - Magic Barrier">
-		<!-- The GM is always by your side. Increases M. Def. by 30% for 1 hour. -->
+		<!-- A GM is always by your side. Increases M. Def. temporarily. Effect 3. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="PD_UP" />
@@ -629,7 +629,7 @@
 		</for>
 	</skill>
 	<skill id="7053" levels="1" name="Master's Blessing - Vampiric Rage">
-		<!-- The GM is always by your side. For 1 hour, 9% of the standard short-range physical damage inflicted on the enemy is recovered as HP. -->
+		<!-- A GM is always by your side. Temporarily increases the amount of HP absorbed from damage done to a target. Excludes damage from skills or ranged attacks. Effect 4. -->
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="VAMPIRIC_ATTACK" />
@@ -650,7 +650,7 @@
 		</for>
 	</skill>
 	<skill id="7054" levels="1" name="Master's Blessing - Empower">
-		<!-- The GM is always by your side. Increases M. Atk. by 75% for 1 hour. -->
+		<!-- A GM is always by your side. Increases M. Atk. temporarily. Effect 3. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MA_UP" />
@@ -671,7 +671,7 @@
 		</for>
 	</skill>
 	<skill id="7055" levels="1" name="Master's Blessing - Wind Walk">
-		<!-- The GM is always by your side. Increases Speed by 33 for 1 hour. -->
+		<!-- A GM is always by your side. Increases Speed temporarily. Effect 2. -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="SPEED_UP" />
@@ -692,7 +692,7 @@
 		</for>
 	</skill>
 	<skill id="7056" levels="1" name="Master's Blessing - Berserker Spirit">
-		<!-- The GM is always by your side. For 1 hour, decreases a party member's P. Def. by 8%, M. Def. by 16%, and evasion by 4. Increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and Speed by 8. -->
+		<!-- A GM is always by your side. Temporarily reduces P. Def., M. Def. and Evasion, and increases P. Atk., M. Atk., Atk. Spd., Casting Spd. and Speed. Effect 2. -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="BERSERKER" />
@@ -720,7 +720,7 @@
 		</for>
 	</skill>
 	<skill id="7057" levels="1" name="Master's Blessing - Greater Might">
-		<!-- The GM is always by your side. Increases P. Atk. by 10% for 1 hour. -->
+		<!-- A GM is always by your side. Temporarily increases the target's P. Atk. Effect 3. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="PA_PD_UP" />
@@ -741,7 +741,7 @@
 		</for>
 	</skill>
 	<skill id="7058" levels="1" name="Master's Blessing - Greater Shield">
-		<!-- The GM is always by your side. Increases P. Def. by 15% for 1 hour. -->
+		<!-- A GM is always by your side. Temporarily increases the target's P. Def. Effect 3. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="PA_PD_UP" />
@@ -762,7 +762,7 @@
 		</for>
 	</skill>
 	<skill id="7059" levels="1" name="Master's Blessing - Wild Magic">
-		<!-- The GM is always by your side. For 1 hour, increases by 2 the occurrence rate of damage that is caused by magic damage. -->
+		<!-- A GM is always by your side. Temporarily increases the critical attack rate for magic attacks. Effect 2. -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MAGIC_CRITICAL_UP" />
@@ -783,7 +783,7 @@
 		</for>
 	</skill>
 	<skill id="7060" levels="1" name="Master's Blessing - Clarity">
-		<!-- The GM is always by your side. For 1 hour, decreases physical skill MP consumption by 20%, magic skill's MP consumption by 10%, and song/dance skill's MP consumption by 20%. -->
+		<!-- A GM is always by your side. Temporarily decreases the target's MP consumption for skills. Effect 3. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CHEAP_MAGIC" />
@@ -806,7 +806,7 @@
 		</for>
 	</skill>
 	<skill id="7061" levels="1" name="Master's Blessing - Prophecy of Water">
-		<!-- The GM is always by your side. For 1 hour, receives help from a great spirit to increase the chance of prominent damage occurring through magic damage by 2, MP recovery bonus by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Resistance to de-buffs by 10%. Decreases Speed by 20% and MP consumption for skill use by 5%. -->
+		<!-- The GM is always by your side. For 1 hour, receives help from a great spirit to increase the rate of Prominent Damage occurring through damage magic by 2, MP recovery bonus by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and resistance to de-buffs by 10%. Decreases moving speed by 20% and MP consumption for skill use by 5%. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MULTI_BUFF" />
@@ -840,7 +840,7 @@
 		</for>
 	</skill>
 	<skill id="7062" levels="1" name="Master's Blessing - Prophecy of Fire">
-		<!-- The GM is always by your side. For 1 hour, receives help from a great spirit to increase Max MP by 20%, HP recovery bonus by 20%, the chance of prominent damage occurring through magic damage by 2, the power of critical attacks by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Resistance to de-buffs by 10%. Decreases Speed by 20%. -->
+		<!-- The GM is always by your side. For 1 hour, receives help from a great spirit to increase Max MP by 20%, HP recovery bonus by 20%, the rate of Prominent Damage occurring through damage magic by 2, the power of critical attacks by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and resistance to de-buffs by 10%. Decreases moving speed by 20%. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MULTI_BUFF" />
@@ -873,7 +873,7 @@
 		</for>
 	</skill>
 	<skill id="7063" levels="1" name="Master's Blessing - Prophecy of Wind">
-		<!-- The GM is always by your side. For 1 hour, receives help from a great spirit to increase Max HP by 20%, rate of critical attack by 20%, rate of Prominent Damage through magic damage by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Resistance to de-buff by 10%. Decreases Speed by 20%. Bestows the ability to recover as HP 5% of the standard short-range physical damage inflicted on the enemy. -->
+		<!-- The GM is always by your side. For 1 hour, receives help from a great spirit to increase Max HP by 20%, rate of critical attack by 20%, rate of Prominent Damage through damage magic by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and resistance to de-buff by 10%. Decreases moving speed by 20%. Bestows the ability to recover as HP 5% of the standard short-range physical damage inflicted on the enemy. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MULTI_BUFF" />
@@ -905,7 +905,7 @@
 		</for>
 	</skill>
 	<skill id="7064" levels="1" name="Master's Blessing - Chant of Victory">
-		<!-- The GM is always by your side. Recovers HP by 20%, and for 1 hour, receives help from a great spirit to increase Max HP by 20%, the chance of prominent damage occurring through magic damage by 2, the rate of critical attack by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, Resistance to de-buffs by 10%, and accuracy by 4. -->
+		<!-- The GM is always by your side. Recovers HP by 20%, and for 1 hour, receives help from a great spirit to increase Max HP by 20%, the rate of Prominent Damage occurring through damage magic by 2, the rate of critical attack by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, resistance to de-buffs by 10%, and accuracy by 4. -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MULTI_BUFF" />
@@ -939,7 +939,7 @@
 		</for>
 	</skill>
 	<skill id="7065" levels="1" name="Test - Charge">
-		<!-- Charges into the enemy. -->
+		<!-- Charges into an enemy. -->
 		<set name="coolTime" val="200" />
 		<set name="hitTime" val="800" />
 		<set name="magicLvl" val="75" />
@@ -1221,7 +1221,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="7088" levels="1" name="Master's Blessing - Improve Combat">
-		<!-- The GM is always by your side. Combine P. Atk. increase and P. Def. increase to have more advanced combat power increase effect. For 1 hour, increases P. Atk. by 15% and P. Def. by 15%. -->
+		<!-- The GM is always by your side. Combine P. Atk. increase and P. Def. increase to have more advanced combat power increase effect. For 40 minutes, increases P. Atk. by 15% and P. Def. by 15%. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="IMPROVE_PA_PD_UP" />
@@ -1251,7 +1251,7 @@
 		</for>
 	</skill>
 	<skill id="7089" levels="1" name="Master's Blessing - Improve Magic">
-		<!-- The GM is always by your side. Combine magic power increase and magic resistance increase to have more advanced magic ability increase effect. For 1 hour, increases M. Atk. by 75% and M. Def. by 30%. -->
+		<!-- The GM is always by your side. Combine magic power increase and magic resistance increase to have more advanced magic ability increase effect. For 40 minutes, increases M. Atk. by 75% and M. Def. by 30%. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="IMPROVE_MA_MD_UP" />
@@ -1281,7 +1281,7 @@
 		</for>
 	</skill>
 	<skill id="7090" levels="1" name="Master's Blessing - Improve Condition">
-		<!-- The GM is always by your side. Combine maximum HP increase and maximum MP increase to have more advanced mental and physical power. For 1 hour, increases Max HP by 35% and Max MP by 35%. -->
+		<!-- The GM is always by your side. Combine maximum HP increase and maximum MP increase to have more advanced mental and physical power. For 40 minutes, increases Max HP by 35% and Max MP by 35%. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="IMPROVE_HP_MP_UP" />
@@ -1311,7 +1311,7 @@
 		</for>
 	</skill>
 	<skill id="7091" levels="1" name="Master's Blessing - Improve Critical">
-		<!-- The GM is always by your side. Combine Critical Rate increase and Critical Damage increase to have more advanced critical increase effect. For 1 hour, increases Critical Rate by 30% and Critical Damage by 35%. -->
+		<!-- The GM is always by your side. Combine critical rate increase and critical power increase to have more advanced critical increase effect. For 40 minutes, increases critical rate by 30% and critical power by 35%. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="IMPROVE_CRT_RATE_DMG_UP" />
@@ -1341,7 +1341,7 @@
 		</for>
 	</skill>
 	<skill id="7092" levels="1" name="Master's Blessing - Improve Shield Defense">
-		<!-- The GM is always by your side. Combine shield Def. rate increase and shield P. Def. increase to have more advanced shield ability increase effect. For 1 hour, increases shield defense rate by 30% and shield P. Def. by 50%. -->
+		<!-- The GM is always by your side. Combine shield Def. rate increase and shield P. Def. increase to have more advanced shield ability increase effect. For 40 minutes, increases shield defense rate by 30% and shield P. Def. by 50%. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="IMPROVE_SHIELD_RATE_DEFENCE_UP" />
@@ -1371,7 +1371,7 @@
 		</for>
 	</skill>
 	<skill id="7093" levels="1" name="Master's Blessing - Improve Movement">
-		<!-- The GM is always by your side. Combine Spd. increase and Evasion increase to have more advanced movement increase effect. For 1 hour, increases Speed by 33 and evasion by 4. -->
+		<!-- The GM is always by your side. Combine Spd. increase and Evasion increase to have more advanced movement increase effect. For 40 minutes, increases moving speed by 33 and evasion by 4. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="IMPROVE_SPEED_AVOID_UP" />
@@ -1401,7 +1401,7 @@
 		</for>
 	</skill>
 	<skill id="7094" levels="1" name="Master's Blessing - Sharpen Edge">
-		<!-- The GM is always by your side. Sharpens a bladed weapon to increase P. Atk. by 5% and Critical Rate by 20% for 1 hour. -->
+		<!-- The GM is always by your side. Sharpens a bladed weapon to increase P. Atk. by 5% and critical rate by 20% for 10 minutes. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="DWARF_ATTACK_BUFF" />
@@ -1428,7 +1428,7 @@
 		</for>
 	</skill>
 	<skill id="7095" levels="1" name="Master's Blessing - Face Harden">
-		<!-- The GM is always by your side. Enhances the armor surface to increase P. Def. by 10% for 1 hour. -->
+		<!-- The GM is always by your side. Enhances the armor surface to increase P. Def. by 10% for 10 minutes. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="DWARF_DEFENCE_BUFF" />

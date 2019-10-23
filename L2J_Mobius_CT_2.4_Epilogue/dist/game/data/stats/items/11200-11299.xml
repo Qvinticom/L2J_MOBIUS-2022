@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="11200" type="Weapon" name="Draconic Bow - Earth - Focus">
-		<!-- Masterwork Item that increases Max HP. <Soul Crystal Enhancement>. Increases Critical by 88. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases Max HP. <Soul Crystal Enhancement>. Increases Critical Attack by 88. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_draconic_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -34,7 +34,7 @@
 		</for>
 	</item>
 	<item id="11201" type="Weapon" name="Draconic Bow - Earth - Critical Slow">
-		<!-- Masterwork Item that increases Max HP. <Soul Crystal Enhancement>. Has a chance of casting Slow on a critical attack. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases Max HP. <Soul Crystal Enhancement>. Has a chance of casting Slow on a critical attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_draconic_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -69,7 +69,7 @@
 		</for>
 	</item>
 	<item id="11202" type="Weapon" name="Dragon Hunter Axe - Thunder">
-		<!-- Masterwork Item that increases Critical Rate. It can bestow one of the followings: HP Regeneration, Health, or HP Drain. -->
+		<!-- A Masterwork Item that increases critical damage. Bestows one of the following functions: HP Regeneration, Health, or HP Drain. -->
 		<set name="icon" val="icon.weapon_dragon_hunter_axe_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -87,7 +87,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3894-1" /> <!-- Two-handed Blunt Weapon of Critical Damage -->
+		<set name="item_skill" val="3894-1" /> <!-- Two-handed Blunt Weapon of Critical Power -->
 		<for>
 			<set stat="pAtk" val="342" />
 			<set stat="mAtk" val="132" />
@@ -99,7 +99,7 @@
 		</for>
 	</item>
 	<item id="11203" type="Weapon" name="Dragon Hunter Axe - Thunder - HP Regeneration">
-		<!-- Masterwork Item that increases Critical Damage. <Soul Crystal Enhancement>. Increases HP Recovery Rate. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases critical damage. <Soul Crystal Option>. Increases HP regeneration rate. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dragon_hunter_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -117,7 +117,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3894-1;3569-1" /> <!-- Two-handed Blunt Weapon of Critical Damage -->
+		<set name="item_skill" val="3894-1;3569-1" /> <!-- Two-handed Blunt Weapon of Critical Power -->
 		<for>
 			<set stat="pAtk" val="342" />
 			<set stat="mAtk" val="132" />
@@ -129,7 +129,7 @@
 		</for>
 	</item>
 	<item id="11204" type="Weapon" name="Dragon Hunter Axe - Thunder - Health">
-		<!-- Masterwork Item that increases Critical Damage. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases critical damage. <Soul Crystal Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dragon_hunter_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -147,7 +147,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3894-1;3013-3" /> <!-- Two-handed Blunt Weapon of Critical Damage -->
+		<set name="item_skill" val="3894-1;3013-3" /> <!-- Two-handed Blunt Weapon of Critical Power -->
 		<for>
 			<set stat="pAtk" val="342" />
 			<set stat="mAtk" val="132" />
@@ -159,7 +159,7 @@
 		</for>
 	</item>
 	<item id="11205" type="Weapon" name="Dragon Hunter Axe - Thunder - HP Drain">
-		<!-- Masterwork Item that increases Critical Damage. <Soul Crystal Enhancement>. Restores 3% of melee damage inflicted upon the enemy to your own HP. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases critical damage. <Soul Crystal Option>. Restores 3% of melee damage inflicted upon the enemy to your own HP. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dragon_hunter_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -177,7 +177,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3894-1;3568-1" /> <!-- Two-handed Blunt Weapon of Critical Damage -->
+		<set name="item_skill" val="3894-1;3568-1" /> <!-- Two-handed Blunt Weapon of Critical Power -->
 		<for>
 			<set stat="pAtk" val="342" />
 			<set stat="mAtk" val="132" />
@@ -189,7 +189,7 @@
 		</for>
 	</item>
 	<item id="11206" type="Weapon" name="Laevateinn - Lightning">
-		<!-- Masterwork Item that increases Critical Rate. Kamael Exclusive Weapon: Forgotten Blade Conversion. Bestows one of the following functions: Haste, Health, or Focus. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and of decreaseing MP consumption for skill use for you and your party members during a critical attack. -->
+		<!-- A Masterwork Item that increases critical rate. Kamael exclusive weapon: Forgotten Blade Conversion. Bestows one of the following functions: Haste, Health, or Focus. When enchanted by 4 or more, a critical attack will have a chance to increase P. Atk., M. Atk., and healing power, and decrease MP consumption during skill use, for you and your party members. -->
 		<set name="icon" val="icon.weapon_leavatein_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -224,7 +224,7 @@
 		</for>
 	</item>
 	<item id="11207" type="Weapon" name="Laevateinn - Lightning - Haste">
-		<!-- Masterwork Item that increases Critical Rate. Kamael Exclusive Weapon: Forgotten Blade Conversion. <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%.Increases damage inflicted during PvP. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and of decreaseing MP consumption for skill use for you and your party members during a critical attack. -->
+		<!-- A Masterwork Item that increases critical rate. Kamael exclusive weapon: Forgotten Blade Conversion. <Soul Crystal Option>. Increases Atk. Spd. by 7%. Increases damage inflicted during PvP. When enchanted by 4 or more, a critical attack will have a chance to increase P. Atk., M. Atk., and healing power, and decrease MP consumption during skill use, for you and your party members. -->
 		<set name="icon" val="icon.weapon_leavatein_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -259,7 +259,7 @@
 		</for>
 	</item>
 	<item id="11208" type="Weapon" name="Laevateinn - Lightning - Health">
-		<!-- Masterwork Item that increases Critical Rate. Kamael Exclusive Weapon: Forgotten Blade Conversion. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and of decreaseing MP consumption for skill use for you and your party members during a critical attack. -->
+		<!-- A Masterwork Item that increases critical rate. Kamael exclusive weapon: Forgotten Blade Conversion. <Soul Crystal Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. When enchanted by 4 or more, a critical attack will have a chance to increase P. Atk., M. Atk., and healing power, and decrease MP consumption during skill use, for you and your party members. -->
 		<set name="icon" val="icon.weapon_leavatein_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -294,7 +294,7 @@
 		</for>
 	</item>
 	<item id="11209" type="Weapon" name="Laevateinn - Lightning - Focus">
-		<!-- Masterwork Item that increases Critical Rate. Kamael Exclusive Weapon: Forgotten Blade Conversion. <Soul Crystal Enhancement>. Increases Critical by 84. Increases damage inflicted during PvP. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and of decreaseing MP consumption for skill use for you and your party members during a critical attack. -->
+		<!-- A Masterwork Item that increases critical rate. Kamael exclusive weapon: Forgotten Blade Conversion. <Soul Crystal Option>. Increases Critical Attack by 84. Increases damage inflicted during PvP. When enchanted by 4 or more, a critical attack will have a chance to increase P. Atk., M. Atk., and healing power, and decrease MP consumption during skill use, for you and your party members. -->
 		<set name="icon" val="icon.weapon_leavatein_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -329,7 +329,7 @@
 		</for>
 	</item>
 	<item id="11210" type="Weapon" name="Basalt Battlehammer - Concentration">
-		<!-- Masterwork Item that increases Accuracy. It can bestow one of the following functions: HP Drain, Health, or HP Regeneration. -->
+		<!-- A Masterwork Item that increases Accuracy. Bestows one of the following functions: HP Drain, Health, or HP Regeneration. -->
 		<set name="icon" val="icon.weapon_basalt_battlehammer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -359,7 +359,7 @@
 		</for>
 	</item>
 	<item id="11211" type="Weapon" name="Basalt Battlehammer - Concentration - HP Drain">
-		<!-- Masterwork Item that increases Accuracy. <Soul Crystal Enhancement>. Restores 3% of melee damage inflicted upon the enemy to your own HP. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases Accuracy. <Soul Crystal Option>. Restores 3% of melee damage inflicted upon the enemy to your own HP. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_basalt_battlehammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -389,7 +389,7 @@
 		</for>
 	</item>
 	<item id="11212" type="Weapon" name="Basalt Battlehammer - Concentration - Health">
-		<!-- Masterwork Item that increases Accuracy. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases Accuracy. <Soul Crystal Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_basalt_battlehammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -419,7 +419,7 @@
 		</for>
 	</item>
 	<item id="11213" type="Weapon" name="Basalt Battlehammer - Concentration - HP Regeneration">
-		<!-- Masterwork Item that increases Accuracy. <Soul Crystal Enhancement>. Increases HP Recovery Rate. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases Accuracy. <Soul Crystal Option>. Increases HP regeneration rate. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_basalt_battlehammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -449,7 +449,7 @@
 		</for>
 	</item>
 	<item id="11214" type="Weapon" name="Sarunga - Earth">
-		<!-- Masterwork Item that increases Max HP. Kamael Exclusive Weapon: Draconic Bow Conversion. Bestows one of the following functions: Cheap Shot, Focus, or Critical Slow. -->
+		<!-- A Masterwork Item that increases Max HP. Kamael exclusive weapon: Draconic Bow Conversion. Bestows one of the following functions: Cheap Shot, Focus, or Crt. Slow. -->
 		<set name="icon" val="icon.weapon_sarnga_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -484,7 +484,7 @@
 		</for>
 	</item>
 	<item id="11215" type="Weapon" name="Sarunga - Earth - Cheap Shot">
-		<!-- Masterwork Item that increases Max HP. Kamael Exclusive Weapon: Draconic Bow Conversion. <Soul Crystal Enhancement>. Decreases MP consumption by 12% when using skills. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases Max HP. Kamael exclusive weapon: Draconic Bow Conversion. <Soul Crystal Option>. Decreases MP consumption by 12% when using skills. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_sarnga_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -519,7 +519,7 @@
 		</for>
 	</item>
 	<item id="11216" type="Weapon" name="Sarunga - Earth - Focus">
-		<!-- Masterwork Item that increases Max HP. Kamael Exclusive Weapon: Draconic Bow Conversion. <Soul Crystal Enhancement>. Increases Critical by 88. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases Max HP. Kamael exclusive weapon: Draconic Bow Conversion. <Soul Crystal Option>. Increases Critical Attack by 88. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_sarnga_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -554,7 +554,7 @@
 		</for>
 	</item>
 	<item id="11217" type="Weapon" name="Sarunga - Earth - Critical Slow">
-		<!-- Masterwork Item that increases Max HP. Kamael Exclusive Weapon: Draconic Bow Conversion. <Soul Crystal Enhancement>. Has a chance of casting Slow on a critical attack. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases Max HP. Kamael exclusive weapon: Draconic Bow Conversion. <Soul Crystal Option>. Has a chance of casting Slow on a critical attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_sarnga_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -591,7 +591,7 @@
 		</for>
 	</item>
 	<item id="11218" type="Weapon" name="Saint Spear - Destruction">
-		<!-- Masterwork Item that increases P. Atk. Bestows one of the following functions: Health, Guidance, or Haste. -->
+		<!-- A Masterwork Item that increases P. Atk. Bestows one of the following functions: Health, Guidance, or Haste. -->
 		<set name="icon" val="icon.weapon_saint_spear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -621,7 +621,7 @@
 		</for>
 	</item>
 	<item id="11219" type="Weapon" name="Saint Spear - Destruction - Health">
-		<!-- Masterwork Item that increases P. Atk. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases P. Atk. <Soul Crystal Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_saint_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -651,7 +651,7 @@
 		</for>
 	</item>
 	<item id="11220" type="Weapon" name="Saint Spear - Destruction - Guidance">
-		<!-- Masterwork Item that increases P. Atk. <Soul Crystal Enhancement>. Increases Accuracy by 5. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases P. Atk. <Soul Crystal Option>. Increases Accuracy by 5. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_saint_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -681,7 +681,7 @@
 		</for>
 	</item>
 	<item id="11221" type="Weapon" name="Saint Spear - Destruction - Haste">
-		<!-- Masterwork Item that increases P. Atk. <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%.Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases P. Atk. <Soul Crystal Option>. Increases Atk. Spd. by 7%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_saint_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -711,7 +711,7 @@
 		</for>
 	</item>
 	<item id="11222" type="Weapon" name="Arcana Mace - Nature">
-		<!-- Masterwork Item that increases Max MP. It can bestow one of the following functions: Acumen, MP Regeneration, or Mana Up. -->
+		<!-- A Masterwork Item that increases Max MP. Bestows one of the following functions: Acumen, MP Regeneration, or Mana Up. -->
 		<set name="icon" val="icon.weapon_arcana_mace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -742,7 +742,7 @@
 		</for>
 	</item>
 	<item id="11223" type="Weapon" name="Arcana Mace - Nature - Acumen">
-		<!-- Masterwork Item that increases Max MP. <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases Max MP. <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_arcana_mace_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -773,7 +773,7 @@
 		</for>
 	</item>
 	<item id="11224" type="Weapon" name="Arcana Mace - Nature - MP Regeneration">
-		<!-- Masterwork Item that increases Max MP. <Soul Crystal Enhancement>. Increases MP Recovery Rate. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases Max MP. <Soul Crystal Enhancement>. Increases MP regeneration rate. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_arcana_mace_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -804,7 +804,7 @@
 		</for>
 	</item>
 	<item id="11225" type="Weapon" name="Arcana Mace - Nature - Mana Up">
-		<!-- Masterwork Item that increases Max MP. <Soul Crystal Enhancement>. Increases Max MP by 30%. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases Max MP. <Soul Crystal Enhancement>. Increases Max MP by 30%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_arcana_mace_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -835,7 +835,7 @@
 		</for>
 	</item>
 	<item id="11226" type="Weapon" name="Angel Slayer - Concentration">
-		<!-- Masterwork Item that increases Accuracy. Bestows one of the following functions: Critical Damage, HP Drain, or Haste. -->
+		<!-- A Masterwork Item that increases Accuracy. Bestows one of the following functions: Crt. Damage, HP Drain,or Haste. -->
 		<set name="icon" val="icon.weapon_angel_slayer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -865,7 +865,7 @@
 		</for>
 	</item>
 	<item id="11227" type="Weapon" name="Angel Slayer - Concentration - Critical Damage">
-		<!-- Masterwork Item that increases Accuracy. <Soul Crystal Enhancement>. Increases P. Atk. by 265 on a critical attack. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases Accuracy. <Soul Crystal Enhancement>. Increases P. Atk. by 265 on a critical attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_angel_slayer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -895,7 +895,7 @@
 		</for>
 	</item>
 	<item id="11228" type="Weapon" name="Angel Slayer - Concentration - HP Drain">
-		<!-- Masterwork Item that increases Accuracy. <Soul Crystal Enhancement>. Restores 3% of melee damage inflicted upon the enemy to your own HP. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases Accuracy. <Soul Crystal Enhancement>. Restores 3% of melee damage inflicted upon the enemy to your own HP. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_angel_slayer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -925,7 +925,7 @@
 		</for>
 	</item>
 	<item id="11229" type="Weapon" name="Angel Slayer - Concentration - Haste">
-		<!-- Masterwork Item that increases Accuracy. <Soul Crystal Enhancement>. Atk. Spd. increases by 7%. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases Accuracy. <Soul Crystal Enhancement>. Atk. Spd. increases by 7%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_angel_slayer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -955,7 +955,7 @@
 		</for>
 	</item>
 	<item id="11230" type="Weapon" name="Imperial Staff - Nature">
-		<!-- Masterwork Item that increases Max MP. It can bestow one of the following functions: Empower, MP Regeneration, or Magic Hold. -->
+		<!-- A Masterwork Item that increases Max MP. Bestows one of the following functions: Empower, MP Regeneration, or Magic Hold. -->
 		<set name="icon" val="icon.weapon_imperial_staff_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -986,7 +986,7 @@
 		</for>
 	</item>
 	<item id="11231" type="Weapon" name="Imperial Staff - Nature - Empower">
-		<!-- Masterwork Item that increases Max MP. <Soul Crystal Enhancement>. Increases M. Atk. by 60. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases Max MP. <Soul Crystal Enhancement>. Increases M. Atk. by 60. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_imperial_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1017,7 +1017,7 @@
 		</for>
 	</item>
 	<item id="11232" type="Weapon" name="Imperial Staff - Nature - MP Regeneration">
-		<!-- Masterwork Item that increases Max MP. <Soul Crystal Enhancement>. Increases MP Recovery Rate. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases Max MP. <Soul Crystal Enhancement>. Increases MP regeneration rate. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_imperial_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1048,7 +1048,7 @@
 		</for>
 	</item>
 	<item id="11233" type="Weapon" name="Imperial Staff - Nature - Magic Hold">
-		<!-- Masterwork Item that increases Max MP. <Soul Crystal Enhancement>. Has a 20% chance of casting Dryad Root when using a magic skill on the target. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases Max MP. <Soul Crystal Enhancement>. Has a 20% chance of casting Dryad Root when using a magic skill on the target. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_imperial_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1081,7 +1081,7 @@
 		</for>
 	</item>
 	<item id="11234" type="Weapon" name="Tallum Blade*Dark Legion's Edge - Lightning">
-		<!-- Masterwork Item that increases Critical Rate. When enchanted, P. Atk. of a dualsword, two-handed sword, two-handed blunt weapon and fist weapon will increase more significantly than that of a one-handed sword. When enchanted to 4 or more, Max HP increases by 15% and Max MP increases by 20% and Max CP increases by 30%. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases the critical attack rate. When enchanted, the P.Atk. of a dualsword, two-handed sword, two-handed blunt weapon and fist weapon will increase more significantly than that of a one-handed sword. When enchanted to 4 or more, Max HP increases by 15% and Max MP increases by 20% and Max CP increases by 30%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1111,7 +1111,7 @@
 		</for>
 	</item>
 	<item id="11235" type="Weapon" name="Forgotten Blade - Lightning">
-		<!-- Masterwork Item that increases Critical Rate. Bestows one of the following functions: Haste, Health, or Focus. -->
+		<!-- A Masterwork Item that increases critical attack rate. Bestows one of the following functions: Haste, Health, or Focus. -->
 		<set name="icon" val="icon.weapon_forgotten_blade_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1141,7 +1141,7 @@
 		</for>
 	</item>
 	<item id="11236" type="Weapon" name="Forgotten Blade - Lightning - Haste">
-		<!-- Masterwork Item that increases Critical Rate. <Soul Crystal Enhancement>. Atk. Spd. increases by 7%. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases critical attack rate. <Soul Crystal Enhancement>. Atk. Spd. increases by 7%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_forgotten_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1171,7 +1171,7 @@
 		</for>
 	</item>
 	<item id="11237" type="Weapon" name="Forgotten Blade - Lightning - Health">
-		<!-- Masterwork Item that increases Critical Rate. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases critical attack rate. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_forgotten_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1201,7 +1201,7 @@
 		</for>
 	</item>
 	<item id="11238" type="Weapon" name="Forgotten Blade - Lightning - Focus">
-		<!-- Masterwork Item that increases Critical Rate. <Soul Crystal Enhancement>. Increases Critical by 84. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases critical attack rate. <Soul Crystal Enhancement>. Increases Critical Attack by 84. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_forgotten_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1231,7 +1231,7 @@
 		</for>
 	</item>
 	<item id="11239" type="Weapon" name="Heaven's Divider - Thunder">
-		<!-- Masterwork Item that increases Critical Damage. Bestows one of the following functions: Haste, Health, or Focus. -->
+		<!-- A Masterwork Item that increases critical damage. Bestows one of the following functions: Haste, Health, or Focus. -->
 		<set name="icon" val="icon.weapon_heavens_divider_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1250,7 +1250,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3844-1" /> <!-- Two-handed Sword of Critical Damage -->
+		<set name="item_skill" val="3844-1" /> <!-- Two-handed Sword of Critical Power -->
 		<for>
 			<set stat="pAtk" val="342" />
 			<set stat="mAtk" val="132" />
@@ -1261,7 +1261,7 @@
 		</for>
 	</item>
 	<item id="11240" type="Weapon" name="Heaven's Divider - Thunder - Haste">
-		<!-- Masterwork Item that increases Critical Damage. <Soul Crystal Enhancement>. Atk. Spd. increases by 7%. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases critical damage. <Soul Crystal Enhancement>. Atk. Spd. increases by 7%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_heavens_divider_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1280,7 +1280,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3844-1;3564-1" /> <!-- Two-handed Sword of Critical Damage -->
+		<set name="item_skill" val="3844-1;3564-1" /> <!-- Two-handed Sword of Critical Power -->
 		<for>
 			<set stat="pAtk" val="342" />
 			<set stat="mAtk" val="132" />
@@ -1291,7 +1291,7 @@
 		</for>
 	</item>
 	<item id="11241" type="Weapon" name="Heaven's Divider - Thunder - Health">
-		<!-- Masterwork Item that increases Critical Damage. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases critical damage. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_heavens_divider_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1310,7 +1310,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3844-1;3013-3" /> <!-- Two-handed Sword of Critical Damage -->
+		<set name="item_skill" val="3844-1;3013-3" /> <!-- Two-handed Sword of Critical Power -->
 		<for>
 			<set stat="pAtk" val="342" />
 			<set stat="mAtk" val="132" />
@@ -1321,7 +1321,7 @@
 		</for>
 	</item>
 	<item id="11242" type="Weapon" name="Heaven's Divider - Thunder - Focus">
-		<!-- Masterwork Item that increases Critical Damage. <Soul Crystal Enhancement>. Increases Critical by 84. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases critical damage. <Soul Crystal Enhancement>. Increases Critical Attack by 84. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_heavens_divider_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1340,7 +1340,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3844-1;3566-1" /> <!-- Two-handed Sword of Critical Damage -->
+		<set name="item_skill" val="3844-1;3566-1" /> <!-- Two-handed Sword of Critical Power -->
 		<for>
 			<set stat="pAtk" val="342" />
 			<set stat="mAtk" val="132" />
@@ -1351,7 +1351,7 @@
 		</for>
 	</item>
 	<item id="11243" type="Weapon" name="Dynasty Ancient Sword - Great Gale">
-		<!-- Masterwork Item that increases Atk. Spd. Kamael Exclusive Weapon: Dynasty Blade Conversion. Bestows one of the following functions: Focus, Health, or Light. -->
+		<!-- A Masterwork Item that increases Atk. Spd. Kamael exclusive weapon: Dynasty Blade Conversion. Bestows one of the following functions: Focus, Health, or Light. -->
 		<set name="icon" val="icon.weapon_dynasty_ancient_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1361,7 +1361,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1800" />
 		<set name="price" val="74946000" />
@@ -1385,7 +1385,7 @@
 		</for>
 	</item>
 	<item id="11244" type="Weapon" name="Dynasty Ancient Sword - Great Gale - Focus">
-		<!-- Masterwork Item that increases Atk. Spd. Kamael Exclusive Weapon: Dynasty Blade Conversion. <Soul Crystal Enhancement>. Increases Critical by 111. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases Atk. Spd. Kamael exclusive weapon: Dynasty Blade Conversion. <Soul Crystal Enhancement>. Increases Critical Attack by 111. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_ancient_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1395,7 +1395,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1800" />
 		<set name="price" val="74946000" />
@@ -1419,7 +1419,7 @@
 		</for>
 	</item>
 	<item id="11245" type="Weapon" name="Dynasty Ancient Sword - Great Gale - Health">
-		<!-- Masterwork Item that increases Atk. Spd. Kamael Exclusive Weapon: Dynasty Blade Conversion. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases Atk. Spd. Kamael exclusive weapon: Dynasty Blade Conversion. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_ancient_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1429,7 +1429,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1800" />
 		<set name="price" val="74946000" />
@@ -1453,7 +1453,7 @@
 		</for>
 	</item>
 	<item id="11246" type="Weapon" name="Dynasty Ancient Sword - Great Gale - Light">
-		<!-- Masterwork Item that increases Atk. Spd. Kamael Exclusive Weapon: Dynasty Blade Conversion. <Soul Crystal Enhancement>. Increases weight gauge by 20%. Increases damage inflicted during PvP. -->
+		<!-- A rare item than increases attack speed. Kamael exclusive weapon: Dynasty Blade Conversion. <Soul Crystal Enhancement>. Weight gauge increases by 20%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_ancient_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1463,7 +1463,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1800" />
 		<set name="price" val="74946000" />
@@ -1487,7 +1487,7 @@
 		</for>
 	</item>
 	<item id="11247" type="Weapon" name="Dynasty Knife - Great Gale">
-		<!-- Masterwork Item that increases Atk. Spd. Bestows one of the following functions: Focus, Evasion, or Critical Damage. -->
+		<!-- A Masterwork Item that increases the Atk. Spd. Bestows one of the following functions: Focus, Evasion, or Crt. Damage. -->
 		<set name="icon" val="icon.weapon_dynasty_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1497,7 +1497,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="74946000" />
@@ -1517,7 +1517,7 @@
 		</for>
 	</item>
 	<item id="11248" type="Weapon" name="Dynasty Knife - Great Gale - Focus">
-		<!-- Masterwork Item that increases Atk. Spd. <Soul Crystal Enhancement>. Increases Critical by 116. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases Atk. Spd. <Soul Crystal Enhancement>. Increases Critical Attack by 116. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1527,7 +1527,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="74946000" />
@@ -1547,7 +1547,7 @@
 		</for>
 	</item>
 	<item id="11249" type="Weapon" name="Dynasty Knife - Great Gale - Evasion">
-		<!-- Masterwork Item that increases Atk. Spd. <Soul Crystal Enhancement>. Increases Evasion by 5. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases Atk. Spd. <Soul Crystal Enhancement>. Increases Evasion by 5. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1557,7 +1557,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="74946000" />
@@ -1577,7 +1577,7 @@
 		</for>
 	</item>
 	<item id="11250" type="Weapon" name="Dynasty Knife - Great Gale - Critical Damage">
-		<!-- Masterwork Item that increases Atk. Spd. <Soul Crystal Enhancement>. Increases P. Atk. by 559 on a critical attack. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases Atk. Spd. <Soul Crystal Enhancement>. Increases P. Atk. by 559 on a critical attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1587,7 +1587,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="74946000" />
@@ -1607,7 +1607,7 @@
 		</for>
 	</item>
 	<item id="11251" type="Weapon" name="Dynasty Dual Sword - Earth">
-		<!-- Masterwork Item that increases Max HP. . When enchanted, increases P. Atk. of a dualsword, two-handed sword, two-handed blunt weapon and fist weapon more significantly than that of a one-handed sword. When enchanted to 4 or more, increases Critical Attack by 109 and Max HP increases by 10%. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases Max HP. . When enchanted, the P.Atk. of a dualsword, two-handed sword, two-handed blunt weapon and fist weapon will increase more significantly than that of a one-handed sword. When enchanted to 4 or more, Increases Critical Attack by 109 and Max HP increases by 10%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1617,7 +1617,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="74946000" />
@@ -1637,7 +1637,7 @@
 		</for>
 	</item>
 	<item id="11252" type="Weapon" name="Dynasty Rapier - Earth">
-		<!-- Masterwork Item that increases Max HP. Kamael Exclusive Weapon: Dynasty Sword Conversion. Focus, Health, or Light can be bestowed. When When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and of decreaseing MP consumption for skill use for you and your party members during a critical attack. -->
+		<!-- A Masterwork Item that increases Max HP. Kamael exclusive weapon: Dynasty Sword Conversion. Focus, Health, or Light can be bestowed. When When enchanted by 4 or more, a critical attack will have a chance to increase P. Atk., M. Atk., and healing power, and decrease MP consumption during skill use, for you and your party members. -->
 		<set name="icon" val="icon.weapon_dynasty_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1647,7 +1647,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1280" />
 		<set name="price" val="74946000" />
@@ -1672,7 +1672,7 @@
 		</for>
 	</item>
 	<item id="11253" type="Weapon" name="Dynasty Rapier - Earth - Focus">
-		<!-- Masterwork Item that increases Max HP. Kamael Exclusive Weapon: Dynasty Sword Conversion. <Soul Crystal Enhancement>. Increases Critical by 111. Increases damage inflicted during PvP. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and of decreaseing MP consumption for skill use for you and your party members during a critical attack. -->
+		<!-- A Masterwork Item that increases Max HP. Kamael exclusive weapon: Dynasty Sword Conversion. <Soul Crystal Enhancement>. Increases Critical Attack by 111. Increases damage inflicted during PvP. When enchanted by 4 or more, a critical attack will have a chance to increase P. Atk., M. Atk., and healing power, and decrease MP consumption during skill use, for you and your party members. -->
 		<set name="icon" val="icon.weapon_dynasty_rapier_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1682,7 +1682,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1280" />
 		<set name="price" val="74946000" />
@@ -1707,7 +1707,7 @@
 		</for>
 	</item>
 	<item id="11254" type="Weapon" name="Dynasty Rapier - Earth - Health">
-		<!-- Masterwork Item that increases Max HP. Kamael Exclusive Weapon: Dynasty Sword Conversion. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and of decreaseing MP consumption for skill use for you and your party members during a critical attack. -->
+		<!-- A Masterwork Item that increases Max HP. Kamael exclusive weapon: Dynasty Sword Conversion. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. When enchanted by 4 or more, a critical attack will have a chance to increase P. Atk., M. Atk., and healing power, and decrease MP consumption during skill use, for you and your party members. -->
 		<set name="icon" val="icon.weapon_dynasty_rapier_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1717,7 +1717,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1280" />
 		<set name="price" val="74946000" />
@@ -1742,7 +1742,7 @@
 		</for>
 	</item>
 	<item id="11255" type="Weapon" name="Dynasty Rapier - Earth - Light">
-		<!-- Masterwork Item that increases Max HP. Kamael Exclusive Weapon: Dynasty Sword Conversion. <Soul Crystal Enhancement>. Increases weight gauge by 20%. Increases damage inflicted during PvP. Enchanted to . 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of recieved heal, and decreased MP consumption per skill during a critical attack. -->
+		<!-- A rare item than increases maximum HP. Kamael exclusive weapon: Dynasty Sword Conversion. <Soul Crystal Enhancement>. Weight gauge increases by 20%. Increases damage inflicted during PvP.enchanted to . 4 or more, party members including yourself will get the increased attack power, magic power and healing capacity by a fixed rate but decreased MP consumption per skill during a critical attack. -->
 		<set name="icon" val="icon.weapon_dynasty_rapier_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1752,7 +1752,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1280" />
 		<set name="price" val="74946000" />
@@ -1777,7 +1777,7 @@
 		</for>
 	</item>
 	<item id="11256" type="Weapon" name="Dynasty Mace - Earth">
-		<!-- Masterwork Item that increases Max HP. Bestows one of the following functions: Mana Up, Conversion, Acumen. -->
+		<!-- A Masterwork Item that increases Max HP. Bestows one of the following functions: Mana Up, Conversion, Acumen. -->
 		<set name="icon" val="icon.weapon_dynasty_staff_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1787,7 +1787,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="price" val="74946000" />
@@ -1808,7 +1808,7 @@
 		</for>
 	</item>
 	<item id="11257" type="Weapon" name="Dynasty Mace - Earth - Mana Up">
-		<!-- Masterwork Item that increases Max HP. <Soul Crystal Enhancement>. Increases Max MP by 30%. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases Max HP. <Soul Crystal Enhancement>. Increases Max MP by 30%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1818,7 +1818,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="price" val="74946000" />
@@ -1839,7 +1839,7 @@
 		</for>
 	</item>
 	<item id="11258" type="Weapon" name="Dynasty Mace - Earth - Conversion">
-		<!-- Masterwork Item that increases Max HP. <Soul Crystal Enhancement>. Increases Max MP by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases Max HP. <Soul Crystal Enhancement>. Increases Max MP by 60% and Max HP decreases by 40%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1849,7 +1849,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="price" val="74946000" />
@@ -1870,7 +1870,7 @@
 		</for>
 	</item>
 	<item id="11259" type="Weapon" name="Dynasty Mace - Earth - Acumen">
-		<!-- Masterwork Item that increases Max HP. <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases Max HP. <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1880,7 +1880,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="price" val="74946000" />
@@ -1901,7 +1901,7 @@
 		</for>
 	</item>
 	<item id="11260" type="Weapon" name="Dynasty Bagh-Nakh - Great Gale">
-		<!-- Masterwork Item that increases Atk. Spd. Bestows one of the following functions: Evasion, Focus, or Haste. -->
+		<!-- A Masterwork Item that increases Atk. Spd. Bestows one of the following functions: Evasion, Focus, or Haste. -->
 		<set name="icon" val="icon.weapon_dynasty_jamadhr_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1911,7 +1911,7 @@
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1550" />
 		<set name="price" val="74946000" />
@@ -1931,7 +1931,7 @@
 		</for>
 	</item>
 	<item id="11261" type="Weapon" name="Dynasty Bagh-Nakh - Great Gale - Rsk. Evasion">
-		<!-- Masterwork Item that increases Atk. Spd. <Soul Crystal Enhancement>. Increases Evasion by 6.8 when HP is 60% or below. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases Atk. Spd. <Soul Crystal Enhancement>. Increases Evasion by 6.8 when HP is 60% or below. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_jamadhr_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1941,7 +1941,7 @@
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1550" />
 		<set name="price" val="74946000" />
@@ -1961,7 +1961,7 @@
 		</for>
 	</item>
 	<item id="11262" type="Weapon" name="Dynasty Bagh-Nakh - Great Gale - Focus">
-		<!-- Masterwork Item that increases Atk. Spd. <Soul Crystal Enhancement>. Increases Critical by 106. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases Atk. Spd. <Soul Crystal Enhancement>. Increases Critical Attack by 106. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_jamadhr_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1971,7 +1971,7 @@
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1550" />
 		<set name="price" val="74946000" />
@@ -1991,7 +1991,7 @@
 		</for>
 	</item>
 	<item id="11263" type="Weapon" name="Dynasty Bagh-Nakh - Great Gale - Haste">
-		<!-- Masterwork Item that increases Atk. Spd. <Soul Crystal Enhancement>. Atk. Spd. increases by about 10%. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases Atk. Spd. <Soul Crystal Enhancement>. Atk. Spd. increases by about 10%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_jamadhr_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -2001,7 +2001,7 @@
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1550" />
 		<set name="price" val="74946000" />
@@ -2021,7 +2021,7 @@
 		</for>
 	</item>
 	<item id="11264" type="Weapon" name="Dynasty Bow - Great Gale">
-		<!-- Masterwork Item that increases Atk. Spd. . Bestows one of the following functions: Cheap Shot, Guidance, or Focus. -->
+		<!-- A Masterwork Item that increases the Atk. Spd. . Bestows one of the following functions: Cheap Shot, Guidance, or Focus. -->
 		<set name="icon" val="icon.weapon_dynasty_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -2031,7 +2031,7 @@
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="74946000" />
@@ -2054,7 +2054,7 @@
 		</for>
 	</item>
 	<item id="11265" type="Weapon" name="Dynasty Bow - Great Gale - Cheap Shot">
-		<!-- Masterwork Item that increases Atk. Spd. <Soul Crystal Enhancement>. Decreases MP Consumption 4% during a skill attack. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases Atk. Spd. <Soul Crystal Enhancement>. MP Consumption decreases 4% during a skill attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -2064,7 +2064,7 @@
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="74946000" />
@@ -2087,7 +2087,7 @@
 		</for>
 	</item>
 	<item id="11266" type="Weapon" name="Dynasty Bow - Great Gale - Guidance">
-		<!-- Masterwork Item that increases Atk. Spd. <Soul Crystal Enhancement>. Increases Accuracy by 5.32. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases Atk. Spd. <Soul Crystal Enhancement>. Increases Accuracy by 5.32. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -2097,7 +2097,7 @@
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="74946000" />
@@ -2120,7 +2120,7 @@
 		</for>
 	</item>
 	<item id="11267" type="Weapon" name="Dynasty Bow - Great Gale - Focus">
-		<!-- Masterwork Item that increases Atk. Spd. <Soul Crystal Enhancement>. Increases Critical by 116. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases Atk. Spd. <Soul Crystal Enhancement>. Increases Critical Attack by 116. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -2130,7 +2130,7 @@
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="74946000" />
@@ -2153,7 +2153,7 @@
 		</for>
 	</item>
 	<item id="11268" type="Weapon" name="Dynasty Blade - Great Gale">
-		<!-- Masterwork Item that increases Atk. Spd. . Bestows one of the following functions: Focus, Health, or Light. -->
+		<!-- A Masterwork Item that increases the Atk. Spd. . Bestows one of the following functions: Focus, Health, or Light. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2163,7 +2163,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="74946000" />
@@ -2183,7 +2183,7 @@
 		</for>
 	</item>
 	<item id="11269" type="Weapon" name="Dynasty Blade - Great Gale - Focus">
-		<!-- Masterwork Item that increases Atk. Spd. <Soul Crystal Enhancement>. Increases Critical by 111. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases Atk. Spd. <Soul Crystal Enhancement>. Increases Critical Attack by 111. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2193,7 +2193,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="74946000" />
@@ -2213,7 +2213,7 @@
 		</for>
 	</item>
 	<item id="11270" type="Weapon" name="Dynasty Blade - Great Gale - Health">
-		<!-- Masterwork Item that increases Atk. Spd. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases Atk. Spd. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2223,7 +2223,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="74946000" />
@@ -2243,7 +2243,7 @@
 		</for>
 	</item>
 	<item id="11271" type="Weapon" name="Dynasty Blade - Great Gale - Light">
-		<!-- Masterwork Item that increases Atk. Spd. <Soul Crystal Enhancement>. Increases weight gauge by 20%. Increases damage inflicted during PvP. -->
+		<!-- A rare item that increases Atk. Spd. <Soul Crystal Enhancement>. Weight gauge increases by 20%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2253,7 +2253,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="74946000" />
@@ -2273,7 +2273,7 @@
 		</for>
 	</item>
 	<item id="11272" type="Weapon" name="Dynasty Sword - Earth">
-		<!-- Masterwork Item that increases Max HP. Bestows one of the following functions: Focus, Health, or Light -->
+		<!-- A Masterwork Item that increases Max HP. Bestows one of the following functions: Focus, Health, or Light -->
 		<set name="icon" val="icon.weapon_dynasty_blade_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2283,7 +2283,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="74946000" />
@@ -2303,7 +2303,7 @@
 		</for>
 	</item>
 	<item id="11273" type="Weapon" name="Dynasty Sword - Earth - Focus">
-		<!-- Masterwork Item that increases Max HP. <Soul Crystal Enhancement>. Increases Critical by 111. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases Max HP. <Soul Crystal Enhancement>. Increases Critical Attack by 111. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2313,7 +2313,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="74946000" />
@@ -2333,7 +2333,7 @@
 		</for>
 	</item>
 	<item id="11274" type="Weapon" name="Dynasty Sword - Earth - Health">
-		<!-- Masterwork Item that increases Max HP. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases Max HP. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2343,7 +2343,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="74946000" />
@@ -2363,7 +2363,7 @@
 		</for>
 	</item>
 	<item id="11275" type="Weapon" name="Dynasty Sword - Earth - Light">
-		<!-- Masterwork Item that increases Max HP. <Soul Crystal Enhancement>. Increases weight gauge by 20%. Increases damage inflicted during PvP. -->
+		<!-- A rare item that increases maximum HP. <Soul Crystal Enhancement>. Weight gauge increases by 20%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2373,7 +2373,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="74946000" />
@@ -2393,7 +2393,7 @@
 		</for>
 	</item>
 	<item id="11276" type="Weapon" name="Dynasty Staff - Holy Spirit">
-		<!-- Masterwork Item that increases heal amount. Bestows one of the following functions: Acumen, Mana Up, or Conversion. -->
+		<!-- A Masterwork Item that increases heal amount. Bestows one of the following functions: Acumen, Mana Up, or Conversion. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_staff_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2403,7 +2403,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="price" val="74946000" />
@@ -2424,7 +2424,7 @@
 		</for>
 	</item>
 	<item id="11277" type="Weapon" name="Dynasty Staff - Holy Spirit - Mana Up">
-		<!-- Masterwork Item that increases heal amount. <Soul Crystal Enhancement>. Increases Max MP by 30%. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases heal amount. <Soul Crystal Enhancement>. Increases Max MP by 30%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2434,7 +2434,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="price" val="74946000" />
@@ -2455,7 +2455,7 @@
 		</for>
 	</item>
 	<item id="11278" type="Weapon" name="Dynasty Staff - Holy Spirit - Conversion">
-		<!-- Masterwork Item that increases heal amount. <Soul Crystal Enhancement>. Increases Max MP by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases heal amount. <Soul Crystal Enhancement>. Increases Max MP by 60% and Max HP decreases by 40%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2465,7 +2465,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="price" val="74946000" />
@@ -2486,7 +2486,7 @@
 		</for>
 	</item>
 	<item id="11279" type="Weapon" name="Dynasty Staff - Holy Spirit - Acumen">
-		<!-- Masterwork Item that increases heal amount. <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases heal amount. <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2496,7 +2496,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="price" val="74946000" />
@@ -2517,7 +2517,7 @@
 		</for>
 	</item>
 	<item id="11280" type="Weapon" name="Dynasty Cudgel - Landslide">
-		<!-- Masterwork Item that has a chance to stun. Bestows one of the following functions: Anger, Health, or Rsk. Focus. -->
+		<!-- A Masterwork Item that has a chance to stun. Bestows one of the following functions:Anger, Health, or Rsk. Focus. -->
 		<set name="icon" val="icon.weapon_dynasty_hammer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2527,7 +2527,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="74946000" />
@@ -2547,7 +2547,7 @@
 		</for>
 	</item>
 	<item id="11281" type="Weapon" name="Dynasty Cudgel - Landslide - Anger">
-		<!-- Masterwork Item that has a chance to stun. <Soul Crystal Enhancement>. One's own HP decreases by 15% and P. Atk. +78. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that activates the stun effect occasionally when striking. <Soul Crystal Enhancement>. One's own HP decreases by 15% and P. Atk. increases by 78. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2557,7 +2557,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="74946000" />
@@ -2577,7 +2577,7 @@
 		</for>
 	</item>
 	<item id="11282" type="Weapon" name="Dynasty Cudgel - Landslide - Health">
-		<!-- Masterwork Item that has a chance to stun. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that has a chance to stun. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2587,7 +2587,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="74946000" />
@@ -2607,7 +2607,7 @@
 		</for>
 	</item>
 	<item id="11283" type="Weapon" name="Dynasty Cudgel - Landslide - Rsk. Focus">
-		<!-- Masterwork Item that has a chance to stun when attacking. <Soul Crystal Enhancement>. Increases Critical by 164 when HP is 60% or below. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that has a chance to stun when attacking. <Soul Crystal Enhancement>. Increases Critical Attack by 164 when HP is 60% or below. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2617,7 +2617,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="74946000" />
@@ -2637,7 +2637,7 @@
 		</for>
 	</item>
 	<item id="11284" type="Weapon" name="Dynasty Crusher - Great Gale">
-		<!-- Masterwork Item that increases Atk. Spd. . Bestows one of the following functions: Anger, Health, or Rsk. Focus. -->
+		<!-- A Masterwork Item that increases the Atk. Spd. . Bestows one of the following functions: Anger, Health, or Rsk. Focus. -->
 		<set name="icon" val="icon.weapon_dynasty_crusher_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2647,7 +2647,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="74946000" />
@@ -2667,7 +2667,7 @@
 		</for>
 	</item>
 	<item id="11285" type="Weapon" name="Dynasty Crusher - Great Gale - Anger">
-		<!-- Masterwork Item that increases Atk. Spd. <Soul Crystal Enhancement>. One's own HP decreases by 15% and P. Atk. +78. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases Atk. Spd. <Soul Crystal Enhancement>. One's own HP decreases by 15% and P. Atk. increases by 78. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_crusher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2677,7 +2677,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="74946000" />
@@ -2697,7 +2697,7 @@
 		</for>
 	</item>
 	<item id="11286" type="Weapon" name="Dynasty Crusher - Great Gale - Health">
-		<!-- Masterwork Item that increases Atk. Spd. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases Atk. Spd. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_crusher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2707,7 +2707,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="74946000" />
@@ -2727,7 +2727,7 @@
 		</for>
 	</item>
 	<item id="11287" type="Weapon" name="Dynasty Crusher - Great Gale - Rsk. Focus">
-		<!-- Masterwork Item that increases Atk. Spd. <Soul Crystal Enhancement>. Increases Critical by 164 when HP is 60% or below. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases Atk. Spd. <Soul Crystal Enhancement>. Increases Critical Attack by 164 when HP is 60% or below. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_crusher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2737,7 +2737,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="74946000" />
@@ -2757,7 +2757,7 @@
 		</for>
 	</item>
 	<item id="11288" type="Weapon" name="Dynasty Crossbow - Great Gale">
-		<!-- Masterwork Item that increases Atk. Spd. Kamael Exclusive Weapon: Dynasty Bow Conversion. Bestows one of the following functions: Cheap Shot, Guidance, or Focus. -->
+		<!-- A Masterwork Item that increases Atk. Spd. Kamael exclusive weapon: Dynasty Bow Conversion. Bestows one of the following functions: Cheap Shot, Guidance, or Focus. -->
 		<set name="icon" val="icon.weapon_dynasty_crossbow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -2767,7 +2767,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1580" />
 		<set name="price" val="74946000" />
@@ -2792,7 +2792,7 @@
 		</for>
 	</item>
 	<item id="11289" type="Weapon" name="Dynasty Crossbow - Great Gale - Cheap Shot">
-		<!-- Masterwork Item that increases Atk. Spd. Kamael Exclusive Weapon: Dynasty Bow Conversion. <Soul Crystal Enhancement> . Decreases MP consumption by 12% when using skills. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases Atk. Spd. Kamael exclusive weapon: Dynasty Bow Conversion. <Soul Crystal Enhancement> . Decreases MP consumption by 12% when using skills. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_crossbow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -2802,7 +2802,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1580" />
 		<set name="price" val="74946000" />
@@ -2827,7 +2827,7 @@
 		</for>
 	</item>
 	<item id="11290" type="Weapon" name="Dynasty Crossbow - Great Gale - Guidance">
-		<!-- Masterwork Item that increases Atk. Spd. Kamael Exclusive Weapon: Dynasty Bow Conversion. <Soul Crystal Enhancement>. Increases Accuracy by 5.32. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases Atk. Spd. Kamael exclusive weapon: Dynasty Bow Conversion. <Soul Crystal Enhancement>. Increases Accuracy by 5.32. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_crossbow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -2837,7 +2837,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1580" />
 		<set name="price" val="74946000" />
@@ -2862,7 +2862,7 @@
 		</for>
 	</item>
 	<item id="11291" type="Weapon" name="Dynasty Crossbow - Great Gale - Focus">
-		<!-- Masterwork Item that increases Atk. Spd. Kamael Exclusive Weapon: Dynasty Bow Conversion. <Soul Crystal Enhancement>. Increases Critical by 116. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases Atk. Spd. Kamael exclusive weapon: Dynasty Bow Conversion. <Soul Crystal Enhancement>. Increases Critical Attack by 116. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_crossbow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -2872,7 +2872,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1580" />
 		<set name="price" val="74946000" />
@@ -2897,7 +2897,7 @@
 		</for>
 	</item>
 	<item id="11292" type="Weapon" name="Dynasty Phantom - Nature">
-		<!-- Masterwork Item that increases Max MP. Bestows one of the following functions: Acumen, Mana Up, or Conversion. -->
+		<!-- A Masterwork Item that increases Max MP. Bestows one of the following functions: Acumen, Mana Up, or Conversion. -->
 		<set name="icon" val="icon.weapon_dynasty_magic_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2907,7 +2907,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="74946000" />
@@ -2927,7 +2927,7 @@
 		</for>
 	</item>
 	<item id="11293" type="Weapon" name="Dynasty Phantom - Nature - Acumen">
-		<!-- Masterwork Item that increases Max MP. <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases Max MP. <Soul Crystal Option>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_magic_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2937,7 +2937,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="74946000" />
@@ -2957,7 +2957,7 @@
 		</for>
 	</item>
 	<item id="11294" type="Weapon" name="Dynasty Phantom - Nature - Mana Up">
-		<!-- Masterwork Item that increases Max MP. <Soul Crystal Enhancement>. Increases Max MP by 30%. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases Max MP. <Soul Crystal Option>. Increases Max MP by 30%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_magic_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2967,7 +2967,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="74946000" />
@@ -2987,7 +2987,7 @@
 		</for>
 	</item>
 	<item id="11295" type="Weapon" name="Dynasty Phantom - Nature - Conversion">
-		<!-- Masterwork Item that increases Max MP. <Soul Crystal Enhancement>. Increases Max MP by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases Max MP. <Soul Crystal Option>. Increases Max MP by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_magic_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2997,7 +2997,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="74946000" />
@@ -3017,7 +3017,7 @@
 		</for>
 	</item>
 	<item id="11296" type="Weapon" name="Dynasty Halberd - Earth">
-		<!-- Masterwork Item that increases Max HP. Bestows one of the following functions: Anger, Critical Stun, or Light. -->
+		<!-- A Masterwork Item that increases Max HP. Bestows one of the following functions: Anger, Critical Stun, or Light. -->
 		<set name="icon" val="icon.weapon_dynasty_spear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -3027,7 +3027,7 @@
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="2010" />
 		<set name="price" val="74946000" />
@@ -3047,7 +3047,7 @@
 		</for>
 	</item>
 	<item id="11297" type="Weapon" name="Dynasty Halberd - Earth - Anger">
-		<!-- Masterwork Item that increases Max HP. <Soul Crystal Enhancement>. Decreases Max HP by 15% and increases P. Atk. by 78. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases Max HP. <Soul Crystal Enhancement>. Decreases Max HP by 15% and increases P. Atk. by 78. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -3057,7 +3057,7 @@
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="2010" />
 		<set name="price" val="74946000" />
@@ -3077,7 +3077,7 @@
 		</for>
 	</item>
 	<item id="11298" type="Weapon" name="Dynasty Halberd - Earth - Critical Stun">
-		<!-- Masterwork Item that increases Max HP. <Soul Crystal Enhancement>. Has a 48% chance of stunning a target during a critical attack. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases Max HP. <Soul Crystal Enhancement>. Has a 48% chance to stun on a critical attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -3087,7 +3087,7 @@
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="2010" />
 		<set name="price" val="74946000" />
@@ -3109,7 +3109,7 @@
 		</for>
 	</item>
 	<item id="11299" type="Weapon" name="Dynasty Halberd - Earth - Light">
-		<!-- Masterwork Item that increases Max HP. <Soul Crystal Enhancement>. Increases weight gauge by 20%. Increases damage inflicted during PvP. -->
+		<!-- A rare item that increases maximum HP. <Soul Crystal Enhancement>. Weight gauge increases by 20%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -3119,7 +3119,7 @@
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="2010" />
 		<set name="price" val="74946000" />

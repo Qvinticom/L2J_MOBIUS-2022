@@ -123,7 +123,8 @@ public class FakePlayerInfo implements IClientOutgoingPacket
 		packet.writeD(_mAtkSpd);
 		packet.writeD(_pAtkSpd);
 		
-		packet.writeD(0x00); // ?
+		packet.writeD(_npc.getScriptValue()); // getPvpFlag()
+		packet.writeD(_npc.getKarma());
 		
 		packet.writeD(_runSpd);
 		packet.writeD(_walkSpd);
@@ -159,6 +160,10 @@ public class FakePlayerInfo implements IClientOutgoingPacket
 			packet.writeD(0x00);
 			packet.writeD(0x00);
 		}
+		
+		// In UserInfo leader rights and siege flags, but here found nothing??
+		// Therefore RelationChanged packet with that info is required
+		packet.writeD(0x00);
 		
 		packet.writeC(0x01); // isSitting() ? 0x00 : 0x01 (at some initial tests it worked)
 		packet.writeC(_npc.isRunning() ? 0x01 : 0x00);
@@ -220,6 +225,9 @@ public class FakePlayerInfo implements IClientOutgoingPacket
 		
 		// T2.3
 		packet.writeD(_npc.getAbnormalVisualEffectSpecial());
+		packet.writeD(0x00); // territory Id
+		packet.writeD(0x00); // is Disguised
+		packet.writeD(0x00); // territory Id
 		return true;
 	}
 }

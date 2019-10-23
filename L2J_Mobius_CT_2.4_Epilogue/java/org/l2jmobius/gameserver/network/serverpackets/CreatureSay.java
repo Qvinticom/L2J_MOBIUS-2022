@@ -34,6 +34,8 @@ public class CreatureSay implements IClientOutgoingPacket
 	private String _charName = null;
 	private int _charId = 0;
 	private String _text = null;
+	private int _msgId = 0;
+	@SuppressWarnings("unused")
 	private int _npcString = -1;
 	private List<String> _parameters;
 	
@@ -91,6 +93,16 @@ public class CreatureSay implements IClientOutgoingPacket
 		_npcString = sysString.getId();
 	}
 	
+	// Old Epilogue method
+	// Using it for Boat/Vehicles
+	public CreatureSay(int objectId, ChatType messageType, int charId, int msgId)
+	{
+		_objectId = objectId;
+		_textType = messageType;
+		_charId = charId;
+		_msgId = msgId;
+	}
+	
 	/**
 	 * String parameter for argument S1,S2,.. in npcstring-e.dat
 	 * @param text
@@ -118,8 +130,12 @@ public class CreatureSay implements IClientOutgoingPacket
 		{
 			packet.writeD(_charId);
 		}
-		packet.writeD(_npcString); // High Five NPCString ID
-		if (_text != null)
+		if (_msgId != 0)
+		{
+			packet.writeD(_msgId);
+			// _msgId = 0;
+		}
+		else if (_text != null)
 		{
 			packet.writeS(_text);
 		}

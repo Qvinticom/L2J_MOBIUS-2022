@@ -30,7 +30,7 @@
 		</for>
 	</item>
 	<item id="201" type="Weapon" name="Club of Nature">
-		<!-- Bestows one of the following functions: Mental Shield, Magic Hold or Acumen. -->
+		<!-- Bestows one of the following functions: Magic Mental Shield, Magic Hold or Acumen. -->
 		<set name="icon" val="icon.weapon_club_of_nature_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -117,7 +117,7 @@
 		</for>
 	</item>
 	<item id="204" type="Weapon" name="Deadman's Staff">
-		<!-- Bestows one of the following functions: Regeneration, Mental Shield or Hold. -->
+		<!-- Bestows either Regeneration, Mental Shield or Hold. -->
 		<set name="icon" val="icon.weapon_deadmans_staff_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -146,7 +146,7 @@
 		</for>
 	</item>
 	<item id="205" type="Weapon" name="Ghoul's Staff">
-		<!-- Bestows one of the following functions: Rsk. Evasion, Mana Up or Blessed Body. -->
+		<!-- Bestows either Rsk. Evasion, Mana Up or Blessed Body. -->
 		<set name="icon" val="icon.weapon_ghouls_staff_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -288,7 +288,7 @@
 		</for>
 	</item>
 	<item id="210" type="Weapon" name="Staff of Evil Spirits">
-		<!-- Bestows one of the following functions: Focus, Blessed Body or Poison. -->
+		<!-- Bestows either Focus, Blessed Body or Poison. -->
 		<set name="icon" val="icon.weapon_staff_of_evil_sprit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -703,7 +703,7 @@
 		</for>
 	</item>
 	<item id="226" type="Weapon" name="Cursed Dagger">
-		<!-- Bestows one of the following functions: Critical Bleed, Critical Poison or Rsk. Haste. -->
+		<!-- Bestows Critical Bleed, Critical Poison or Rsk. Haste. -->
 		<set name="icon" val="icon.weapon_cursed_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -731,7 +731,7 @@
 		</for>
 	</item>
 	<item id="227" type="Weapon" name="Stiletto">
-		<!-- Bestows one of the following functions: Critical Bleed or Critical Poison. -->
+		<!-- Bestows either Critical Bleed or Critical Poison. -->
 		<set name="icon" val="icon.weapon_stiletto_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -759,7 +759,7 @@
 		</for>
 	</item>
 	<item id="228" type="Weapon" name="Crystal Dagger">
-		<!-- Bestows one of the following functions: Critical Bleed, Critical Damage or Critical Poison. -->
+		<!-- Bestows Critical Bleed, Critical Damage or Critical Poison. -->
 		<set name="icon" val="icon.weapon_crystal_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -926,7 +926,7 @@
 		</for>
 	</item>
 	<item id="234" type="Weapon" name="Demon's Dagger">
-		<!-- Bestows one of the following functions: Critical Bleed, Critical Damage or Critical Poison. -->
+		<!-- Bestows Critical Bleed, Critical Damage or Critical Poison. -->
 		<set name="icon" val="icon.weapon_demons_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1595,7 +1595,7 @@
 		</for>
 	</item>
 	<item id="263" type="Weapon" name="Chakram">
-		<!-- Bestows one of the following functions: Critical Drain, Critical Poison or Rsk. Haste. -->
+		<!-- Bestows either Critical Drain, Critical Poison or Rsk. Haste. -->
 		<set name="icon" val="icon.weapon_chakram_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1678,7 +1678,7 @@
 		</for>
 	</item>
 	<item id="266" type="Weapon" name="Great Pata">
-		<!-- Bestows one of the following functions: Critical Drain, Critical Poison or Rsk. Haste. -->
+		<!-- Bestows either Critical Drain, Critical Poison or Rsk. Haste. -->
 		<set name="icon" val="icon.weapon_great_pata_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1706,7 +1706,7 @@
 		</for>
 	</item>
 	<item id="267" type="Weapon" name="Arthro Nail">
-		<!-- Bestows one of the following functions: Critical Poison, Rsk. Evasion or Rsk. Haste. -->
+		<!-- Bestows either Critical Poison, Rsk. Evasion or Rsk. Haste. -->
 		<set name="icon" val="icon.weapon_arthro_nail_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1734,7 +1734,7 @@
 		</for>
 	</item>
 	<item id="268" type="Weapon" name="Bellion Cestus">
-		<!-- Bestows one of the following functions: Critical Drain, Critical Poison or Rsk. Haste. -->
+		<!-- Bestows either Critical Drain, Critical Poison or Rsk. Haste. -->
 		<set name="icon" val="icon.weapon_bellion_cestus_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -2131,7 +2131,7 @@
 		</for>
 	</item>
 	<item id="282" type="Weapon" name="Elemental Bow">
-		<!-- Bestows one of the following functions: Guidance, Miser or Quick Recovery. -->
+		<!-- Bestows either Guidance, Miser or Quick Recovery. -->
 		<set name="icon" val="icon.weapon_elemental_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -2162,7 +2162,7 @@
 		</for>
 	</item>
 	<item id="283" type="Weapon" name="Akat Long Bow">
-		<!-- Bestows one of the following functions: Guidance, Evasion or Miser. -->
+		<!-- Bestows either Guidance, Evasion or Miser. -->
 		<set name="icon" val="icon.weapon_akat_long_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -2193,7 +2193,7 @@
 		</for>
 	</item>
 	<item id="284" type="Weapon" name="Dark Elven Long Bow">
-		<!-- Bestows one of the following functions: Evasion, Critical Bleed or Miser. -->
+		<!-- Bestows either Evasion, Critical Bleed or Miser. -->
 		<set name="icon" val="icon.weapon_dark_elven_long_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -2224,7 +2224,7 @@
 		</for>
 	</item>
 	<item id="285" type="Weapon" name="Noble Elven Bow">
-		<!-- Bestows one of the following functions: Evasion, Miser or Cheap Shot. -->
+		<!-- Bestows either Evasion, Miser or Cheap Shot. -->
 		<set name="icon" val="icon.weapon_noble_elven_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -2255,7 +2255,7 @@
 		</for>
 	</item>
 	<item id="286" type="Weapon" name="Eminence Bow">
-		<!-- Bestows one of the following functions: Guidance, Miser or Cheap Shot. -->
+		<!-- Bestows either Guidance, Miser or Cheap Shot. -->
 		<set name="icon" val="icon.weapon_eminence_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -2286,7 +2286,7 @@
 		</for>
 	</item>
 	<item id="287" type="Weapon" name="Bow of Peril">
-		<!-- Bestows one of the following functions: Guidance, Quick Recovery or Cheap Shot. -->
+		<!-- Bestows either Guidance, Quick Recovery or Cheap Shot. -->
 		<set name="icon" val="icon.weapon_hazard_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -2317,7 +2317,7 @@
 		</for>
 	</item>
 	<item id="288" type="Weapon" name="Carnage Bow">
-		<!-- Bestows one of the following functions: Light, Critical Bleed, or Mana Up. -->
+		<!-- Bestows either Light, Critical Bleed, or Mana Up. -->
 		<set name="icon" val="icon.weapon_carnium_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -2604,7 +2604,7 @@
 		</for>
 	</item>
 	<item id="298" type="Weapon" name="Orcish Glaive">
-		<!-- Bestows one of the following functions: Anger, Critical Stun or Towering Blow. -->
+		<!-- Bestows either Anger, Critical Stun or Towering Blow. -->
 		<set name="icon" val="icon.weapon_orcish_glaive_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -2633,7 +2633,7 @@
 		</for>
 	</item>
 	<item id="299" type="Weapon" name="Orcish Poleaxe">
-		<!-- Bestows one of the following functions: Critical Stun, Towering Blow or Wide Blow. -->
+		<!-- Bestows either Critical Stun, Towering Blow or Wide Blow. -->
 		<set name="icon" val="icon.weapon_orcish_poleaxe_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />

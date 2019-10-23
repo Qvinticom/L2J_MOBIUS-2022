@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.entity.TvTEvent;
 import org.l2jmobius.gameserver.model.holders.SummonRequestHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
-import org.l2jmobius.gameserver.model.olympiad.OlympiadManager;
+import org.l2jmobius.gameserver.model.olympiad.Olympiad;
 import org.l2jmobius.gameserver.model.skills.BuffInfo;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -124,7 +124,7 @@ public class CallPc extends AbstractEffect
 			return false;
 		}
 		
-		if (target.isInOlympiadMode() || OlympiadManager.getInstance().isRegisteredInComp(target))
+		if (target.isInOlympiadMode() || Olympiad.getInstance().isRegisteredInComp(target))
 		{
 			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_SUMMON_PLAYERS_WHO_ARE_CURRENTLY_PARTICIPATING_IN_THE_GRAND_OLYMPIAD);
 			return false;

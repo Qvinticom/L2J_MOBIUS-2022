@@ -65,7 +65,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="20204" type="Armor" name="Queen Ant's Ring (Event) - 3-day limited period">
-		<!-- Event Queen Ant's Ring. MP+21, Resistance to Poison +30%, poison attack rate +30%, accuracy increase, critical damage increase, hold tolerance +20%, and hold attack rate +20%. Only one effect is applied even when the two identical rings are worn. Cannot be exchanged, dropped, or sold. -->
+		<!-- Produces the following effects: MP +21, increased resistance to poison by 30%, increased poison attack chance by 30%, increased accuracy, increased critical damage, increased resistance to hold by 20%, and increased hold attack chance by 20%. Only one effect is applied when wearing two of the same rings. Cannot be exchanged, dropped or sold. -->
 		<set name="icon" val="icon.accessory_ring_of_queen_ant_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -86,7 +86,7 @@
 		</for>
 	</item>
 	<item id="20205" type="Armor" name="Queen Ant's Ring (Event) - 7-day limited period">
-		<!-- Event Queen Ant's Ring. MP+21, Resistance to Poison +30%, poison attack rate +30%, accuracy increase, critical damage increase, hold tolerance +20%, and hold attack rate +20%. Only one effect is applied even when the two identical rings are worn. Cannot be exchanged, dropped, or sold. -->
+		<!-- Produces the following effects: MP +21, increased resistance to poison by 30%, increased poison attack chance by 30%, increased accuracy, increased critical damage, increased resistance to hold by 20%, and increased hold attack chance by 20%. Only one effect is applied when wearing two of the same rings. Cannot be exchanged, dropped or sold. -->
 		<set name="icon" val="icon.accessory_ring_of_queen_ant_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -107,7 +107,7 @@
 		</for>
 	</item>
 	<item id="20206" type="Armor" name="Queen Ant's Ring (Event) - 15-day limited period">
-		<!-- Event Queen Ant's Ring. MP+21, Resistance to Poison +30%, poison attack rate +30%, accuracy increase, critical damage increase, hold tolerance +20%, and hold attack rate +20%. Only one effect is applied even when the two identical rings are worn. Cannot be exchanged, dropped, or sold. -->
+		<!-- Produces the following effects: MP +21, increased resistance to poison by 30%, increased poison attack chance by 30%, increased accuracy, increased critical damage, increased resistance to hold by 20%, and increased hold attack chance by 20%. Only one effect is applied when wearing two of the same rings. Cannot be exchanged, dropped or sold. -->
 		<set name="icon" val="icon.accessory_ring_of_queen_ant_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -128,7 +128,7 @@
 		</for>
 	</item>
 	<item id="20207" type="Armor" name="Earring of Zaken (Event) - 3-day limited period">
-		<!-- Event Earring of Zaken. MP+31, Resistance to Bleed +30%, Bleed attack rate +30%, heal amount increase, vampiric rage effect, Resistance to Shock/Metal attacks +20%, and Shock/Mental attack rate +20%. Only one effect is applied even when the two identical earrings are worn. Cannot be exchanged, dropped, or sold. -->
+		<!-- Produces the following effects: MP +31, increases resistance to bleed by 30%, increases bleed attack chance by 30%, increases healing effects, produces vampiric rage effects, increases resistance to shock/abnormal mental attacks by 20%, and increases shock/abnormal mental attack chance rate by 20%. Only one effect is applied when wearing two of the same earrings. Cannot be exchanged, dropped or sold. -->
 		<set name="icon" val="icon.accessory_earring_of_zaken_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -149,7 +149,7 @@
 		</for>
 	</item>
 	<item id="20208" type="Armor" name="Earring of Zaken (Event) - 7-day limited period">
-		<!-- Event Earring of Zaken. MP+31, Resistance to Bleed +30%, Bleed attack rate +30%, heal amount increase, vampiric rage effect, Resistance to Shock/Metal attacks +20%, and Shock/Mental attack rate +20%. Only one effect is applied even when the two identical earrings are worn. Cannot be exchanged, dropped, or sold. -->
+		<!-- Produces the following effects: MP +31, increases resistance to bleed by 30%, increases bleed attack chance by 30%, increases healing effects, produces vampiric rage effects, increases resistance to shock/abnormal mental attacks by 20%, and increases shock/abnormal mental attack chance rate by 20%. Only one effect is applied when wearing two of the same earrings. Cannot be exchanged, dropped or sold. -->
 		<set name="icon" val="icon.accessory_earring_of_zaken_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -170,7 +170,7 @@
 		</for>
 	</item>
 	<item id="20209" type="Armor" name="Earring of Zaken (Event) - 15-day limited period">
-		<!-- Event Earring of Zaken. MP+31, Resistance to Bleed +30%, Bleed attack rate +30%, heal amount increase, vampiric rage effect, Resistance to Shock/Metal attacks +20%, and Shock/Mental attack rate +20%. Only one effect is applied even when the two identical earrings are worn. Cannot be exchanged, dropped, or sold. -->
+		<!-- Produces the following effects: MP +31, increases resistance to bleed by 30%, increases bleed attack chance by 30%, increases healing effects, produces vampiric rage effects, increases resistance to shock/abnormal mental attacks by 20%, and increases shock/abnormal mental attack chance rate by 20%. Only one effect is applied when wearing two of the same earrings. Cannot be exchanged, dropped or sold. -->
 		<set name="icon" val="icon.accessory_earring_of_zaken_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -223,7 +223,7 @@
 		<set name="capsuled_items" val="20213,1,1,100;20214,15,15,100" />
 	</item>
 	<item id="20212" type="Armor" name="Agathion Seal Bracelet - Charming Cupid">
-		<!-- Dimensional Item. Bracelet that summons a delightful Cupid Agathion. Cannot be exchanged, dropped or sold. Can be shared between characters on the same account through the Dimensional Merchant. -->
+		<!-- Bracelet that summons a delightful Cupid Agathion. Cannot be exchanged, dropped or sold. -->
 		<set name="icon" val="BranchSys.icon.br_aga_cupid_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -255,7 +255,7 @@
 		<set name="item_skill" val="3267-1;21032-1;23026-1" /> <!-- Dismiss Agathion -->
 	</item>
 	<item id="20214" type="EtcItem" name="Chocolate Cookie">
-		<!-- Dimensional Item. Fully replenishes vitality upon use. Re-use time is 60 minutes. Cannot be exchanged, dropped, or sold. Can be shared between characters on the same account through the Dimensional Merchant. -->
+		<!-- Fully replenishes your Vitality level upon use. Cannot be exchanged, dropped or sold. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_cookie_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -614,7 +614,7 @@
 		<set name="capsuled_items" val="20238,1,1,100" />
 	</item>
 	<item id="20236" type="Armor" name="Agathion Seal Bracelet - Pegasus">
-		<!-- Dimensional Item. Bracelet that summons a Pegasus Agathion. Cannot be exchanged or dropped. Can be shared between characters on the same account through the Dimensional Merchant. -->
+		<!-- Bracelet capable of summoning a Pegasus Agathion. Cannot be exchanged, dropped or sold. -->
 		<set name="icon" val="BranchSys.icon.br_aga_pegasus_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -937,7 +937,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="item_skill" val="21042-1" /> <!-- Blessing of Baguette -->
+		<set name="item_skill" val="21042-1" /> <!-- Baguette's Blessing -->
 		<set name="time" val="10080" />
 		<for>
 			<set stat="pAtk" val="1" />
@@ -965,7 +965,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="item_skill" val="21042-1" /> <!-- Blessing of Baguette -->
+		<set name="item_skill" val="21042-1" /> <!-- Baguette's Blessing -->
 		<set name="time" val="10080" />
 		<for>
 			<set stat="pAtk" val="1" />
@@ -994,7 +994,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="item_skill" val="21042-1" /> <!-- Blessing of Baguette -->
+		<set name="item_skill" val="21042-1" /> <!-- Baguette's Blessing -->
 		<set name="time" val="10080" />
 		<for>
 			<set stat="pAtk" val="1" />
@@ -1022,7 +1022,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="item_skill" val="21042-1" /> <!-- Blessing of Baguette -->
+		<set name="item_skill" val="21042-1" /> <!-- Baguette's Blessing -->
 		<set name="time" val="10080" />
 		<for>
 			<set stat="pAtk" val="1" />
@@ -1051,7 +1051,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="item_skill" val="21042-1" /> <!-- Blessing of Baguette -->
+		<set name="item_skill" val="21042-1" /> <!-- Baguette's Blessing -->
 		<set name="time" val="10080" />
 		<for>
 			<set stat="pAtk" val="1" />
@@ -1080,7 +1080,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="item_skill" val="21042-1;3599-1" /> <!-- Blessing of Baguette -->
+		<set name="item_skill" val="21042-1;3599-1" /> <!-- Baguette's Blessing -->
 		<set name="time" val="10080" />
 		<for>
 			<set stat="pAtk" val="1" />
@@ -1111,7 +1111,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="item_skill" val="21042-1" /> <!-- Blessing of Baguette -->
+		<set name="item_skill" val="21042-1" /> <!-- Baguette's Blessing -->
 		<set name="time" val="10080" />
 		<for>
 			<set stat="pAtk" val="1" />
@@ -1140,7 +1140,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="item_skill" val="21042-1" /> <!-- Blessing of Baguette -->
+		<set name="item_skill" val="21042-1" /> <!-- Baguette's Blessing -->
 		<set name="time" val="10080" />
 		<for>
 			<set stat="pAtk" val="1" />
@@ -1169,7 +1169,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="item_skill" val="21042-1" /> <!-- Blessing of Baguette -->
+		<set name="item_skill" val="21042-1" /> <!-- Baguette's Blessing -->
 		<set name="time" val="10080" />
 		<for>
 			<set stat="pAtk" val="1" />
@@ -1197,7 +1197,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="item_skill" val="21042-1" /> <!-- Blessing of Baguette -->
+		<set name="item_skill" val="21042-1" /> <!-- Baguette's Blessing -->
 		<set name="time" val="10080" />
 		<for>
 			<set stat="pAtk" val="1" />
@@ -1226,7 +1226,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="item_skill" val="21042-1" /> <!-- Blessing of Baguette -->
+		<set name="item_skill" val="21042-1" /> <!-- Baguette's Blessing -->
 		<set name="time" val="10080" />
 		<for>
 			<set stat="pAtk" val="1" />
@@ -1250,7 +1250,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="item_skill" val="21042-1" /> <!-- Blessing of Baguette -->
+		<set name="item_skill" val="21042-1" /> <!-- Baguette's Blessing -->
 		<set name="time" val="10080" />
 		<cond msgId="1518">
 			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
@@ -1281,7 +1281,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="item_skill" val="21042-1" /> <!-- Blessing of Baguette -->
+		<set name="item_skill" val="21042-1" /> <!-- Baguette's Blessing -->
 		<set name="time" val="10080" />
 		<cond msgId="1518">
 			<player races="KAMAEL" />
@@ -1313,7 +1313,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="item_skill" val="21042-1" /> <!-- Blessing of Baguette -->
+		<set name="item_skill" val="21042-1" /> <!-- Baguette's Blessing -->
 		<set name="time" val="10080" />
 		<cond msgId="1518">
 			<player races="KAMAEL" />
@@ -1346,7 +1346,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="item_skill" val="21042-1" /> <!-- Blessing of Baguette -->
+		<set name="item_skill" val="21042-1" /> <!-- Baguette's Blessing -->
 		<set name="time" val="10080" />
 		<cond msgId="1518">
 			<player races="KAMAEL" />
@@ -1360,7 +1360,7 @@
 		</for>
 	</item>
 	<item id="20270" type="Weapon" name="Baguette's Dualsword - 7-day limited period">
-		<!-- Dualsword containing the great power of Baguette. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<!-- Dualsword containing the great power of Baguette. No exchange/drop/sale available. Item that can be stored in a private warehouse. -->
 		<set name="icon" val="BranchSys.icon.br_dual_bread_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1378,7 +1378,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="item_skill" val="21042-1" /> <!-- Blessing of Baguette -->
+		<set name="item_skill" val="21042-1" /> <!-- Baguette's Blessing -->
 		<set name="time" val="10080" />
 		<for>
 			<set stat="pAtk" val="1" />
@@ -1402,7 +1402,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="22032-1" /> <!-- Legacy of Baguette -->
+		<set name="item_skill" val="22032-1" /> <!-- Baguette Legacy -->
 	</item>
 	<item id="20272" type="EtcItem" name="Baguette Herb">
 		<!-- Event item. Mysterious herb that increases Atk. Spd. -->
@@ -1412,7 +1412,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="22029-1" /> <!-- Baguette's Herb -->
+		<set name="item_skill" val="22029-1" /> <!-- Baguette Herb -->
 	</item>
 	<item id="20273" type="EtcItem" name="Cream Puff Herb">
 		<!-- Event item. Mysterious herb that recovers Vitality upon acquiring Exp. points. -->
@@ -1422,10 +1422,10 @@
 		<set name="material" val="PAPER" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="22030-1" /> <!-- Fresh Cream Herb -->
+		<set name="item_skill" val="22030-1" /> <!-- Cream Puff Herb -->
 	</item>
 	<item id="20274" type="EtcItem" name="Cheesecake Herb">
-		<!-- Event item. Mysterious herb that increases Casting Spd. -->
+		<!-- Event item. Mysterious herb that increases Magic Casting Speed. -->
 		<set name="icon" val="BranchSys.icon.br_herb_of_cheesecake_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="ex_immediate_effect" val="true" />
@@ -1479,7 +1479,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="22033-1" /> <!-- Legacy of Baguette-Kamael -->
+		<set name="item_skill" val="22033-1" /> <!-- Baguette Legacy - Kamael -->
 	</item>
 	<item id="20278" type="EtcItem" name="Gold Afro Hair Pack">
 		<!-- Pack with Gold Afro. Uses 2 hair accessory slots. -->
@@ -1516,7 +1516,7 @@
 		<set name="capsuled_items" val="20276,1,1,100" />
 	</item>
 	<item id="20280" type="EtcItem" name="Red Sumo Wrestler Agathion Pack">
-		<!-- Wrapped pack containing a Red Sumo Wrestler Agathion. Cannot be exchanged or dropped. -->
+		<!-- Wrapped pack containing a Red Sumo Wrestler Agathion. No exchange/drop available. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1532,7 +1532,7 @@
 		<set name="capsuled_items" val="20297,1,1,100" />
 	</item>
 	<item id="20281" type="EtcItem" name="Red Sumo Wrestler Agathion 7-Day Pack - Death Whisper">
-		<!-- Wrapped pack containing a Red Sumo Wrestler Agathion (7-day). Cannot be exchanged or dropped. -->
+		<!-- Wrapped pack containing a Red Sumo Wrestler Agathion (7-day). No exchange/drop available. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1548,7 +1548,7 @@
 		<set name="capsuled_items" val="20298,1,1,100" />
 	</item>
 	<item id="20282" type="EtcItem" name="Blue Sumo Wrestler Agathion Pack">
-		<!-- Wrapped pack containing a Blue Sumo Wrestler Agathion. Cannot be exchanged or dropped. -->
+		<!-- Wrapped pack containing a Blue Sumo Wrestler Agathion. No exchange/drop available. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1564,7 +1564,7 @@
 		<set name="capsuled_items" val="20299,1,1,100" />
 	</item>
 	<item id="20283" type="EtcItem" name="Blue Sumo Wrestler Agathion 7-Day Pack - Wild Magic">
-		<!-- Wrapped pack containing a Blue Sumo Wrestler Agathion (7-day). Cannot be exchanged or dropped. -->
+		<!-- Wrapped pack containing a Blue Sumo Wrestler Agathion (7-day). No exchange/drop available. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1580,7 +1580,7 @@
 		<set name="capsuled_items" val="20300,1,1,100" />
 	</item>
 	<item id="20284" type="EtcItem" name="Great Sumo Match Agathion Pack">
-		<!-- Wrapped pack containing a Great Sumo Match Agathion. Cannot be exchanged or dropped. -->
+		<!-- Wrapped pack containing a Great Sumo Match Agathion. No exchange/drop available. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1596,7 +1596,7 @@
 		<set name="capsuled_items" val="20301,1,1,100" />
 	</item>
 	<item id="20285" type="EtcItem" name="Great Sumo Match Agathion 7-Day Pack - Big Head / Firework">
-		<!-- Wrapped pack containing a Great Sumo Match Agathion (7 day). Cannot be exchanged or dropped. -->
+		<!-- Wrapped pack containing a Great Sumo Match Agathion (7 day). No exchange/drop available. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1612,7 +1612,7 @@
 		<set name="capsuled_items" val="20302,1,1,100" />
 	</item>
 	<item id="20286" type="EtcItem" name="Button-Eyed Bear Doll Agathion Pack">
-		<!-- Wrapped pack containing a Button-Eyed Bear Doll Agathion. Cannot be exchanged or dropped. -->
+		<!-- Wrapped pack containing a Button-Eyed Bear Doll Agathion. No exchange/drop available. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1628,7 +1628,7 @@
 		<set name="capsuled_items" val="20303,1,1,100" />
 	</item>
 	<item id="20287" type="EtcItem" name="Button-Eyed Bear Doll Agathion 7-Day Pack - Blessed Escape">
-		<!-- Wrapped pack containing a Button-Eyed Bear Doll Agathion (7 day). Cannot be exchanged or dropped. -->
+		<!-- Wrapped pack containing a Button-Eyed Bear Doll Agathion (7 day). No exchange/drop available. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1644,7 +1644,7 @@
 		<set name="capsuled_items" val="20304,1,1,100" />
 	</item>
 	<item id="20288" type="EtcItem" name="Button-Eyed Bear Doll Agathion 7-Day Pack - Resurrection">
-		<!-- Wrapped pack containing a Button-Eyed Bear Doll Agathion (7 day). Cannot be exchanged or dropped. -->
+		<!-- Wrapped pack containing a Button-Eyed Bear Doll Agathion (7 day). No exchange/drop available. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1660,7 +1660,7 @@
 		<set name="capsuled_items" val="20305,1,1,100" />
 	</item>
 	<item id="20289" type="EtcItem" name="Button-Eyed Bear Doll Agathion 7-Day Pack - Energy">
-		<!-- Wrapped pack containing a Button-Eyed Bear Doll Agathion (7 day). Cannot be exchanged or dropped. -->
+		<!-- Wrapped pack containing a Button-Eyed Bear Doll Agathion (7 day). No exchange/drop available. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1676,7 +1676,7 @@
 		<set name="capsuled_items" val="20306,1,1,100" />
 	</item>
 	<item id="20290" type="EtcItem" name="God of Fortune Agathion Pack">
-		<!-- Wrapped pack containing a God of Fortune Agathion. Cannot be exchanged or dropped. -->
+		<!-- Wrapped pack containing a God of Fortune Agathion. No exchange/drop available. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1692,7 +1692,7 @@
 		<set name="capsuled_items" val="20307,1,1,100" />
 	</item>
 	<item id="20291" type="EtcItem" name="God of Fortune Agathion 7-Day Pack - Energy">
-		<!-- Wrapped pack containing a God of Fortune Agathion (7-Day). Cannot be exchanged or dropped. -->
+		<!-- Wrapped pack containing a God of Fortune Agathion (7-Day). No exchange/drop available. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1708,7 +1708,7 @@
 		<set name="capsuled_items" val="20308,1,1,100" />
 	</item>
 	<item id="20292" type="EtcItem" name="Dryad Agathion Pack">
-		<!-- Wrapped pack containing a Dryad Agathion. Cannot be exchanged or dropped. -->
+		<!-- Wrapped pack containing a Dryad Agathion. No exchange/drop available. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1724,7 +1724,7 @@
 		<set name="capsuled_items" val="20309,1,1,100" />
 	</item>
 	<item id="20293" type="EtcItem" name="Wonboso Agathion Pack">
-		<!-- Wrapped pack containing a Wonboso Agathion. Cannot be exchanged or dropped. -->
+		<!-- Wrapped pack containing a Wonboso Agathion. No exchange/drop available. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1740,7 +1740,7 @@
 		<set name="capsuled_items" val="20310,1,1,100" />
 	</item>
 	<item id="20294" type="EtcItem" name="Wonboso Agathion 7-Day Pack - Wind Walk">
-		<!-- Wrapped pack containing a Wonboso Agathion (7-day). Cannot be exchanged or dropped. -->
+		<!-- Wrapped pack containing a Wonboso Agathion (7-day). No exchange/drop available. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1756,7 +1756,7 @@
 		<set name="capsuled_items" val="20311,1,1,100" />
 	</item>
 	<item id="20295" type="EtcItem" name="Daewoonso Agathion Pack">
-		<!-- Wrapped pack containing a Daewoonso Agathion. Cannot be exchanged or dropped. -->
+		<!-- Wrapped pack containing a Daewoonso Agathion. No exchange/drop available. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1772,7 +1772,7 @@
 		<set name="capsuled_items" val="20312,1,1,100" />
 	</item>
 	<item id="20296" type="EtcItem" name="Daewoonso Agathion 7-Day Pack - New Year's Gift">
-		<!-- Wrapped pack containing a Daewoonso Agathion (7-day). Cannot be exchanged or dropped. -->
+		<!-- Wrapped pack containing a Daewoonso Agathion (7-day). No exchange/drop available. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1788,7 +1788,7 @@
 		<set name="capsuled_items" val="20313,1,1,100" />
 	</item>
 	<item id="20297" type="Armor" name="Agathion Seal Bracelet - Red Sumo Wrestler">
-		<!-- Bracelet that summons Red Sumo Wrestler Agathion. Cannot be exchanged or dropped. -->
+		<!-- Bracelet that summons Red Sumo Wrestler Agathion. No exchange/drop available. -->
 		<set name="icon" val="BranchSys.icon.br_aga_sumo_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1805,7 +1805,7 @@
 		<set name="item_skill" val="3267-1;21043-1;23049-1" /> <!-- Dismiss Agathion -->
 	</item>
 	<item id="20298" type="Armor" name="Agathion Seal Bracelet - Red Sumo Wrestler - Death Whisper - 7-Day Limited Period">
-		<!-- Bracelet that summons Red Sumo Wrestler Agathion. Cannot be exchanged or dropped. Special skill reuse delay is 1 hour. -->
+		<!-- Bracelet that summons Red Sumo Wrestler Agathion. No exchange/drop available. Special skill reuse delay is 1 hour. -->
 		<set name="icon" val="BranchSys.icon.br_aga_sumo_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1822,7 +1822,7 @@
 		<set name="time" val="10080" />
 	</item>
 	<item id="20299" type="Armor" name="Agathion Seal Bracelet - Blue Sumo Wrestler">
-		<!-- Bracelet that summons Blue Sumo Wrestler Agathion. Cannot be exchanged or dropped. -->
+		<!-- Bracelet that summons Blue Sumo Wrestler Agathion. No exchange/drop available. -->
 		<set name="icon" val="BranchSys.icon.br_aga_sumo_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />

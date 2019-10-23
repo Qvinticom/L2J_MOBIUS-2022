@@ -16,14 +16,12 @@
  */
 package handlers.effecthandlers;
 
-import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.conditions.Condition;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.skills.BuffInfo;
 import org.l2jmobius.gameserver.network.SystemMessageId;
-import org.l2jmobius.gameserver.network.serverpackets.ExVoteSystemInfo;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 
@@ -73,10 +71,6 @@ public class GiveRecommendation extends AbstractEffect
 				sm.addInt(recommendationsGiven);
 				target.sendPacket(sm);
 				target.sendPacket(new UserInfo(target));
-				if (Config.NEVIT_ENABLED)
-				{
-					target.sendPacket(new ExVoteSystemInfo(target));
-				}
 			}
 			else
 			{

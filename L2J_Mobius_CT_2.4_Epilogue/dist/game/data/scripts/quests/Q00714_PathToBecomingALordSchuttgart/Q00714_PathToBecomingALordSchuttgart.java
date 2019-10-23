@@ -46,17 +46,19 @@ public final class Q00714_PathToBecomingALordSchuttgart extends Quest
 	
 	private static final int[] MOBS =
 	{
-		22801, // Cruel Pincer Golem
-		22802, // Cruel Pincer Golem
-		22803, // Cruel Pincer Golem
-		22804, // Horrifying Jackhammer Golem
-		22805, // Horrifying Jackhammer Golem
-		22806, // Horrifying Jackhammer Golem
-		22807, // Scout-type Golem No. 28
-		22808, // Scout-type Golem No. 2
-		22809, // Guard Golem
-		22810, // Micro Scout Golem
-		22811 // Great Chaos Golem
+		22052, // Menacing Jackhammer Golem
+		22053, // Horrifying Cannon Golem I
+		22054, // Horrifying Cannon Golem IV
+		22055, // Cruel Vice Golem
+		22056, // Probe Golem Champion I
+		22060, // Horrifying Cannon Golem
+		22062, // Horrifying Jackhammer Golem
+		22063, // Ginzu Golem Prodigy X
+		22065, // Horrifying Ginzu Golem V
+		22072, // Horrifying Cannon Golem VI
+		22074, // Epic Canon Golem
+		22076, // Deadly Ginzu Golem V
+		22077, // Horrifying Ginzu Golem VIII
 	};
 	
 	private static final int SCHUTTGART_CASTLE = 9;

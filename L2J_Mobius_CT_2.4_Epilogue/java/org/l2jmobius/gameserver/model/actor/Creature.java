@@ -138,7 +138,6 @@ import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.Attack;
 import org.l2jmobius.gameserver.network.serverpackets.ChangeMoveType;
 import org.l2jmobius.gameserver.network.serverpackets.ChangeWaitType;
-import org.l2jmobius.gameserver.network.serverpackets.ExRotation;
 import org.l2jmobius.gameserver.network.serverpackets.FakePlayerInfo;
 import org.l2jmobius.gameserver.network.serverpackets.FlyToLocation.FlyType;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
@@ -1804,7 +1803,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		if (target != this)
 		{
 			setHeading(Util.calculateHeadingFrom(this, target));
-			broadcastPacket(new ExRotation(getObjectId(), getHeading()));
 		}
 		
 		if (isPlayable())

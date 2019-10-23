@@ -630,7 +630,7 @@
 		</for>
 	</skill>
 	<skill id="4233" levels="1" name="Vampiric Attack">
-		<!-- Absorbs the enemy's HP with each attack. -->
+		<!-- Absorbs an enemy's HP with each attack. -->
 		<set name="icon" val="icon.skill4233" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -1299,7 +1299,7 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4268" levels="1" name="Danger Area">
-		<!-- You are located in an area in which you can receive environmental damage or penalty. -->
+		<!-- You are located in an area in which you can can receive environmental damage or penalty. -->
 		<set name="icon" val="icon.skill4268" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />

@@ -545,7 +545,7 @@
 		</for>
 	</skill>
 	<skill id="2050" levels="1" name="Scroll of Guidance">
-		<!-- Increases Accuracy by 4 for 60 minutes. -->
+		<!-- Increases Accuracy. Effect 3. -->
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="HIT_UP" />
@@ -553,7 +553,7 @@
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="3926" /> <!-- L2Day - Guidance Scroll -->
+		<set name="itemConsumeId" val="3926" /> <!-- L2Day - Scroll of Guidance -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -564,7 +564,7 @@
 		</for>
 	</skill>
 	<skill id="2051" levels="1" name="Scroll of Death Whisper">
-		<!-- Increases Critical Damage by 35% for 60 minutes. -->
+		<!-- Increases the impact of a critical attack. Effect 3. -->
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CRITICAL_DMG_UP" />
@@ -572,7 +572,7 @@
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="3927" /> <!-- L2Day - Death Whisper Scroll -->
+		<set name="itemConsumeId" val="3927" /> <!-- L2Day - Scroll of Death Whisper -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -583,7 +583,7 @@
 		</for>
 	</skill>
 	<skill id="2052" levels="1" name="Scroll of Focus">
-		<!-- Increases Critical Rate by 30% for 60 minutes. -->
+		<!-- Increases critical attack rate. Effect 3. -->
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CRITICAL_PROB_UP" />
@@ -591,7 +591,7 @@
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="3928" /> <!-- L2Day - Focus Scroll -->
+		<set name="itemConsumeId" val="3928" /> <!-- L2Day - Scroll of Focus -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -602,7 +602,7 @@
 		</for>
 	</skill>
 	<skill id="2053" levels="1" name="Scroll of Greater Acumen">
-		<!-- Increases Casting Spd. by 30% for 60 minutes. -->
+		<!-- Increases Casting Spd. Effect 3. -->
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CASTING_TIME_DOWN" />
@@ -610,7 +610,7 @@
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="3929" /> <!-- L2Day - Greater Acumen Scroll -->
+		<set name="itemConsumeId" val="3929" /> <!-- L2Day - Scroll of Greater Acumen -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -621,7 +621,7 @@
 		</for>
 	</skill>
 	<skill id="2054" levels="1" name="Scroll of Haste">
-		<!-- Increases Atk. Spd. by 33% for 60 minutes. -->
+		<!-- Increases Atk. Spd. Effect 2. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="ATTACK_TIME_DOWN" />
@@ -629,7 +629,7 @@
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="3930" /> <!-- L2Day - Haste Scroll -->
+		<set name="itemConsumeId" val="3930" /> <!-- L2Day - Scroll of Haste -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -640,7 +640,7 @@
 		</for>
 	</skill>
 	<skill id="2055" levels="1" name="Scroll of Agility">
-		<!-- Increases Evasion by 4 for 60 minutes. -->
+		<!-- Increases Evasion. Effect 3. -->
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="AVOID_UP" />
@@ -648,7 +648,7 @@
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="3931" /> <!-- L2Day - Agility Scroll -->
+		<set name="itemConsumeId" val="3931" /> <!-- L2Day - Scroll of Agility -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -659,7 +659,7 @@
 		</for>
 	</skill>
 	<skill id="2056" levels="1" name="Scroll of Mystic Empower">
-		<!-- Increases M. Atk. by 75% for 60 minutes. -->
+		<!-- Increases M. Atk. Effect 3. -->
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MA_UP" />
@@ -667,7 +667,7 @@
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="3932" /> <!-- L2Day - Mystic Empower Scroll -->
+		<set name="itemConsumeId" val="3932" /> <!-- L2Day - Scroll of Mystic Empower -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -678,7 +678,7 @@
 		</for>
 	</skill>
 	<skill id="2057" levels="1" name="Scroll of Might">
-		<!-- Increases P. Atk. by 15% for 60 minutes. -->
+		<!-- Increases P. Atk. Effect 3. -->
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="PA_UP" />
@@ -686,7 +686,7 @@
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="3933" /> <!-- L2Day - Might Scroll -->
+		<set name="itemConsumeId" val="3933" /> <!-- L2Day - Scroll of Might -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -697,7 +697,7 @@
 		</for>
 	</skill>
 	<skill id="2058" levels="1" name="Scroll of Wind Walk">
-		<!-- Increases Speed by 33 for 60 minutes. -->
+		<!-- Increases Speed. Effect 2. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="SPEED_UP" />
@@ -705,7 +705,7 @@
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="3934" /> <!-- L2Day - Windwalk Scroll -->
+		<set name="itemConsumeId" val="3934" /> <!-- L2Day - Scroll of Windwalk -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -716,7 +716,7 @@
 		</for>
 	</skill>
 	<skill id="2059" levels="1" name="Scroll of Shield">
-		<!-- Increases P. Def. by 15% for 60 minutes. -->
+		<!-- Increases P. Def. Effect 3. -->
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="PD_UP" />
@@ -724,7 +724,7 @@
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="3935" /> <!-- L2Day - Shield Scroll -->
+		<set name="itemConsumeId" val="3935" /> <!-- L2Day - Scroll of Shield -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -758,7 +758,7 @@
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="3959" /> <!-- Blessed Scroll of Resurrection - Event -->
+		<set name="itemConsumeId" val="3959" /> <!-- L2Day - Blessed Resurrection Effect -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="PC_BODY" />
@@ -803,6 +803,7 @@
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" /> <!-- Epilogue Modification -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="22100" levels="1" name="Soul Scent">
-		<!-- When using a monster's corpse, comforts the monster's soul to borrow the monster's power temporarily. For 2 minutes, increases Max HP by 40%, Max MP by 40%, Max CP by 40%, physical P. Def. by 30%, M. Def. by 30%, Speed by 20, and M. Atk. by 45%. Decreases MP consumption during skill use by 10%. -->
+		<!-- When using a monster's corpse, comforts the monster's soul to borrow the monster's power temporarily. For 2 minutes, increases Max HP by 40%, Max MP by 40%, Max CP by 40%, physical P. Def. by 30%, M. Def. by 30%, moving speed by 20, and M. Atk. by 45%. Decreases MP consumption during skill use by 10%. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="BR_EVENT_BUF6" />
@@ -12,7 +12,7 @@
 		<set name="icon" val="BranchSys.icon.br_ghost_incense_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="20603" /> <!-- Soul Scent (Event) -->
+		<set name="itemConsumeId" val="20603" /> <!-- Soul Scent - Event -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A3" />
 		<set name="reuseDelay" val="5000" />
@@ -83,7 +83,7 @@
 		<set name="hitTime" val="200" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="20583" /> <!-- Blessed Scroll of Escape (event) -->
+		<set name="itemConsumeId" val="20583" /> <!-- Blessed Scroll of Escape (Event) -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
@@ -109,7 +109,7 @@
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="20584" /> <!-- Blessed Scroll of Resurrection (event) -->
+		<set name="itemConsumeId" val="20584" /> <!-- Blessed Scroll of Resurrection (Event) -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="PC_BODY" />
@@ -127,7 +127,7 @@
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="20707" /> <!-- Wooldy Summon Scroll (Event) -->
+		<set name="itemConsumeId" val="20707" /> <!-- Wooldy Summon Scroll - Event -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="12000" />
@@ -153,7 +153,7 @@
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="20708" /> <!-- Verdandi Summon Scroll (Event) -->
+		<set name="itemConsumeId" val="20708" /> <!-- Verdandi Summon Scroll - Event -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="12000" />
@@ -179,7 +179,7 @@
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="20709" /> <!-- Skooldy Summon Scroll (Event) -->
+		<set name="itemConsumeId" val="20709" /> <!-- Skooldy Summon Scroll - Event -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="12000" />
@@ -385,7 +385,7 @@
 		</for>
 	</skill>
 	<skill id="22119" levels="1" name="Love for All Seasons">
-		<!-- For 1 hour, increases M. Atk. by 75% and the occurrence rate of damage that is caused by magic damage by 2. -->
+		<!-- For 1 hour, increases M. Atk. by 75% and the chance of Prominent Damage occurring through damage magic by 2. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MULTI_BUFF" />
@@ -426,7 +426,7 @@
 		</for>
 	</skill>
 	<skill id="22121" levels="1" name="Female Aniruddha">
-		<!-- For 1 hour, increases P. Def. by 15, M. Def. by 30%, and Shield defense rate by 15. -->
+		<!-- For 1 hour, increases P. Def. by 15%, Magic Resistance by 30%, and Shield Defense Rate by 15. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MULTI_BUFF" />
@@ -447,7 +447,7 @@
 		</for>
 	</skill>
 	<skill id="22122" levels="1" name="Kung Hei Fat Choy">
-		<!-- Decreases a party member's P. Def. by 8%, M. Def. by 16%, and evasion by 4, and increases P. Atk. by 15%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and Speed by 8 for 1 hour. Recovers 9% of the standard short-range physical damage inflicted on the enemy as HP. -->
+		<!-- For 1 hour, decreases party members' P. Def. by 8%, M. Def. by 16%, and Evasion by 4. Increases P. Atk. by 15%, P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and moving speed by 8. 9% of the standard short-range physical damage inflicted on the enemy is recovered by HP. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MULTI_BUFF" />
@@ -497,7 +497,7 @@
 		</for>
 	</skill>
 	<skill id="22124" levels="1" name="Hwa Gei Bu Gwi">
-		<!-- Increases Atk. Spd. by 33% and the weight penalty interval by 9000 for 1 hour. -->
+		<!-- For 1 hour, increases Atk. Spd. by 33% and weight penalty interval by 9000. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MULTI_BUFF" />
@@ -517,7 +517,7 @@
 		</for>
 	</skill>
 	<skill id="22125" levels="1" name="Fire Stamp">
-		<!-- For 1 hour, increases Speed by 33, evasion rate by 4, and Max HP by 35%. -->
+		<!-- For 1 hour, increases moving speed by 33, Evasion rate by 4, and Max HP by 35%. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MULTI_BUFF" />
@@ -568,9 +568,9 @@
 		</for>
 	</skill>
 	<skill id="22128" levels="3" name="Rudolph's Joy">
-		<!-- For 5 minutes, raises Atk. Spd. by 10% and magic Casting Spd. by 10%. -->
-		<table name="#abnormalLvls">1 2 3 </table>
-		<table name="#AtkSpd">1.1 1.15 1.2 </table>
+		<!-- For 5 minutes, raises Atk. Spd. by 10% and Magic Casting Spd. by 10%. -->
+		<table name="#abnormalLvls"> 1 2 3 </table>
+		<table name="#AtkSpd"> 1.1 1.15 1.2 </table>
 		<set name="abnormalInstant" val="true" />
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="300" />
@@ -602,7 +602,7 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="22130" levels="1" name="Food of Doubt's Effect">
-		<!-- Food of Doubt's effect. Vitality is recovered for 20 minutes when acquiring Exp. -->
+		<!-- Food of Doubt's effect.For 20 minutes, energy is recovered when Exp. is acquired. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="VP_UP" />
@@ -615,7 +615,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22131" levels="1" name="Red Firework Flames">
-		<!-- For 10 minutes, increases water attribute defense by 30 and STR by 1. -->
+		<!-- For 10 minutes, increases water type defense by 30 and STR by 1. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="BR_EVENT_BUF10" />
@@ -635,7 +635,7 @@
 		</for>
 	</skill>
 	<skill id="22132" levels="1" name="Gold Firework Flames">
-		<!-- For 10 minutes, increases Holy attribute defense by 30 and CON by 1. -->
+		<!-- For 10 minutes, increases divinity type defense by 30 and CON by 1. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="BR_EVENT_BUF10" />
@@ -655,7 +655,7 @@
 		</for>
 	</skill>
 	<skill id="22133" levels="1" name="Blue Firework Flames">
-		<!-- For 10 minutes, increases fire attribute defense by 30 and DEX by 1. -->
+		<!-- For 10 minutes, increases fire type defense by 30 and DEX by 1. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="BR_EVENT_BUF10" />
@@ -675,7 +675,7 @@
 		</for>
 	</skill>
 	<skill id="22134" levels="1" name="Pink Firework Flames">
-		<!-- For 10 minutes, increases earth attribute defense by 30 and MEN by 1. -->
+		<!-- For 10 minutes, increases earth type defense by 30 and MEN by 1. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="BR_EVENT_BUF10" />
@@ -695,7 +695,7 @@
 		</for>
 	</skill>
 	<skill id="22135" levels="1" name="White Firework Flames">
-		<!-- For 10 minutes, increases wind attribute defense by 30 and WIT by 1. -->
+		<!-- For 10 minutes, increases wind type defense by 30 and WIT by 1. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="BR_EVENT_BUF10" />
@@ -715,7 +715,7 @@
 		</for>
 	</skill>
 	<skill id="22136" levels="1" name="Silver Firework Flames">
-		<!-- For 10 minutes, increases Resistance to Dark by 30 and INT by 1. -->
+		<!-- For 10 minutes, increases darkness type defense by 30 and INT by 1. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="BR_EVENT_BUF10" />
@@ -760,7 +760,7 @@
 		</for>
 	</skill>
 	<skill id="22139" levels="1" name="Branding Wind Walk">
-		<!-- Increases Speed by 33 for 1 hour. -->
+		<!-- Increases moving speed by 33 for 1 hour. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="SPEED_UP" />
@@ -930,7 +930,7 @@
 		</for>
 	</skill>
 	<skill id="22149" levels="1" name="Kung Hei Fat Choy Berserker Spirit">
-		<!-- Decreases P. Def. by 8%, M. Def. by 16%, and evasion by 4, and increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and Speed by 8 for 1 hour. -->
+		<!-- Decreases P. Def. by 8%, M. Def. by 16%, and evasion by 4, and increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and moving speed by 8 for 1 hour. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="BERSERKER" />
@@ -1006,7 +1006,7 @@
 		</for>
 	</skill>
 	<skill id="22153" levels="1" name="Love for All Seasons Wild Magic">
-		<!-- For 1 hour, increases by 2 the occurrence rate of damage that is caused by magic damage. -->
+		<!-- For 1 hour, increases by 2 the occurrence rate of damage that is caused by damage magic. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MAGIC_CRITICAL_UP" />
@@ -1091,9 +1091,9 @@
 		</for>
 	</skill>
 	<skill id="22158" levels="10" name="Rose Petal">
-		<!-- Increases HP/MP Regeneration by 20% for 5 minutes. When the herb effect reaches level 10, the rose spirit consumes a red rose herb effect and replenishes some Vitality. -->
-		<table name="#abnormalLvls">1 2 3 4 5 6 7 8 9 10 </table>
-		<table name="#icons">BranchSys2.icon.Br_herb_rose_red_i00 BranchSys2.icon.Br_herb_rose_red_i01 BranchSys2.icon.Br_herb_rose_red_i02 BranchSys2.icon.Br_herb_rose_red_i03 BranchSys2.icon.Br_herb_rose_red_i04 BranchSys2.icon.Br_herb_rose_red_i05 BranchSys2.icon.Br_herb_rose_red_i06 BranchSys2.icon.Br_herb_rose_red_i07 BranchSys2.icon.Br_herb_rose_red_i08 BranchSys2.icon.Br_herb_rose_red_i09 </table>
+		<!-- Increase HP/MP recovery by 20% for 5 minutes. -->
+		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<table name="#icons"> BranchSys2.icon.Br_herb_rose_red_i00 BranchSys2.icon.Br_herb_rose_red_i01 BranchSys2.icon.Br_herb_rose_red_i02 BranchSys2.icon.Br_herb_rose_red_i03 BranchSys2.icon.Br_herb_rose_red_i04 BranchSys2.icon.Br_herb_rose_red_i05 BranchSys2.icon.Br_herb_rose_red_i06 BranchSys2.icon.Br_herb_rose_red_i07 BranchSys2.icon.Br_herb_rose_red_i08 BranchSys2.icon.Br_herb_rose_red_i09 </table>
 		<set name="abnormalInstant" val="true" />
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="300" />
@@ -1114,7 +1114,7 @@
 		</for>
 	</skill>
 	<skill id="22159" levels="1" name="Vesper Super Power">
-		<!-- For 10 minutes, increase physical P. Atk. by 15%, magic M. Atk. by 20%, and Speed by 10. -->
+		<!-- Increases P. Atk. by 15%, M. Atk. by 20% and Speed by 10 for 10 minutes. -->
 		<set name="abnormalInstant" val="true" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
@@ -1138,7 +1138,7 @@
 		</for>
 	</skill>
 	<skill id="22160" levels="1" name="Vesper Critical Power">
-		<!-- For 10 minutes, increase physical Critical Attack Rate by 15, magic Critical Rate by 2, and Speed by 10. Recovers 5% of the standard short-range physical damage inflicted on the enemy as HP. -->
+		<!-- Increases Physical critical attack rate by 15, Magical critical attack rate by 2 and Speed by 10 for 10 minutes. 5% of the standard short-range physical damage inflicted on the enemy is recovered as HP. -->
 		<set name="abnormalInstant" val="true" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
@@ -1163,7 +1163,7 @@
 		</for>
 	</skill>
 	<skill id="22161" levels="1" name="Invincible Vesper">
-		<!-- For 10 minutes, increases Atk. Spd. by 20%, Casting Spd. by 20%, and Speed by 20. -->
+		<!-- Increases Atk. Spd. by 20%, Casting Spd. by 20% and Speed by 20 for 10 minutes. -->
 		<set name="abnormalInstant" val="true" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
@@ -1187,7 +1187,7 @@
 		</for>
 	</skill>
 	<skill id="22162" levels="1" name="Mt. Fuji Herb">
-		<!-- For 10 minutes, Vitality is recovered when acquiring Exp. -->
+		<!-- Energy is recovered for 10 minutes when acquiring Exp. -->
 		<set name="abnormalInstant" val="true" />
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="600" />
@@ -1209,7 +1209,7 @@
 		</for>
 	</skill>
 	<skill id="22163" levels="1" name="Hawk Herb">
-		<!-- For 10 minutes, increases physical Atk. Spd. by 15% and physical critical attack rate by 10%. -->
+		<!-- Physical Atk Speed is increased by 15% and physical Critical Atk rate is increased by 10% for 10 minutes. -->
 		<set name="abnormalInstant" val="true" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
@@ -1231,7 +1231,7 @@
 		</for>
 	</skill>
 	<skill id="22164" levels="1" name="Eggplant Herb">
-		<!-- For 10 minutes, increases magic Atk. Spd. by 10% and magic critical rate by 2. -->
+		<!-- Magic Atk Speed is increased by 10% and magic Critical Atk is increased by 2 for 10 minutes. -->
 		<set name="abnormalInstant" val="true" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
@@ -1253,7 +1253,7 @@
 		</for>
 	</skill>
 	<skill id="22165" levels="1" name="Energy Replenish">
-		<!-- Replenishes a Soul Avatar's energy by 5000. -->
+		<!-- 5000 Soul Avatar Energy is replenished. -->
 		<set name="icon" val="icon.skill0788" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -1263,7 +1263,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22166" levels="1" name="Energy Replenish">
-		<!-- Replenishes a Soul Avatar's energy by 10000. -->
+		<!-- 10000 Soul Avatar Energy is replenished. -->
 		<set name="icon" val="icon.skill0788" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -1273,7 +1273,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22167" levels="1" name="April Fools' Day Vesper Weapon Gift">
-		<!-- Acquires one of the 14 types of Vesper weapons. -->
+		<!-- One among 14 Vesper Weapons will be given. -->
 		<table name="#extractableItems">
 			13457,1,13.32;13458,1,6.66;13459,1,6.66;13460,1,6.66;13461,1,6.66;13462,1,6.66;13463,1,6.66;13464,1,6.66;13466,1,6.66;13467,1,6.66;13468,1,6.66;13469,1,6.66;13470,1,6.66;13465,1,6.66
 		</table>
@@ -1296,7 +1296,7 @@
 		</for>
 	</skill>
 	<skill id="22168" levels="1" name="Thirst Quencher">
-		<!-- Replenishes an Agathion's energy by 1000. -->
+		<!-- Replenishes an Agathion's energy by 2500 -->
 		<set name="icon" val="icon.skill0001" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -1306,6 +1306,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22169" levels="1" name="Soccer Ball of Cheers Release">
+		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			6575,2,45;6573,1,30;6571,1,15;6569,1,9.4;6577,1,0.6
 		</table>
@@ -1328,7 +1329,7 @@
 		</for>
 	</skill>
 	<skill id="22170" levels="1" name="Hardin's Protection">
-		<!-- Maximizes P. Def. for 10 seconds. -->
+		<!-- Maximies P. Def. for 10 seconds. -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="PD_UP_SPECIAL" />
@@ -1344,7 +1345,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22171" levels="1" name="Hardin's Blessing">
-		<!-- Maximizes M. Def. for 10 seconds. -->
+		<!-- Maximies M. Def. for 10 seconds. -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="PD_UP_SPECIAL" />
@@ -1360,7 +1361,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22172" levels="1" name="Sylphide's Wings">
-		<!-- Increases your Speed by 300 for 15 seconds. -->
+		<!-- Increases one's own moving speed by 300 for 15 seconds. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="SPEED_UP_SPECIAL" />
@@ -1375,7 +1376,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22173" levels="1" name="Sylphide's Blessing">
-		<!-- Increases the user's Speed and those of friendly nearby targets by 300 for 15 seconds. -->
+		<!-- Increases the moving speed of yourself and friendly nearby targets by 300 for 15 seconds. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="SPEED_UP_SPECIAL" />
@@ -1390,7 +1391,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22174" levels="1" name="Yibein's Recovery Scroll">
-		<!-- Recovers the HP of the user and friendly nearby targets by 500. -->
+		<!-- Recovers HP of yourself and friendly nearby targets by 500. -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="effectPoint" val="800" />
 		<set name="icon" val="icon.skill0001" />
@@ -1403,7 +1404,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22175" levels="1" name="Rune of Life">
-		<!-- When HP falls below 30%, it is restored by 500. -->
+		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.skill0001" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -1418,7 +1419,7 @@
 		</for>
 	</skill>
 	<skill id="22176" levels="1" name="Rune of Spirit">
-		<!-- When MP falls below 10%, it is restored by 500. -->
+		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.skill0001" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -1443,6 +1444,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22178" levels="1" name="Hero's Potion">
+		<!-- Confirmed CT2.5 -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="icon.skill0001" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1462,6 +1464,7 @@
 		</for>
 	</skill>
 	<skill id="22179" levels="1" name="Fortuna of Chaos">
+		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			8618,3,13.999;8619,1,26;8620,3,17;8621,1,0.011;14700,25,4;14701,12,4;21038,6,5;9627,1,5;6622,3,19;21030,4,1.5;21031,4,1.5;21032,8,1;21033,8,1;21037,5,1
 		</table>
@@ -1485,6 +1488,7 @@
 		</for>
 	</skill>
 	<skill id="22180" levels="1" name="Wondrous Cubic - 1 time use">
+		<!-- High Five Skill -->
 		<table name="#extractableItems">
 			10633,1,35;10642,1,25;10634,1,20;10643,1,10;10635,1,4;10644,1,3;10636,1,1.2;10645,1,0.8;10637,1,0.6;10646,1,0.4
 		</table>
@@ -1506,11 +1510,13 @@
 		</for>
 	</skill>
 	<skill id="22181" levels="1" name="Refined Cubic - 1 time use">
+		<!-- none -->
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22182" levels="1" name="Birthday Joy">
-		<!-- Birthday gift received once a year. Increases your Vitality whenever you gain experience. This buff is active for 12 hours and is not lost upon death. However, it will disappear if you change to a subclass. -->
+		<!-- "Birthday gift received once a year. For 12 hours, recovers energy when Exp. is acquired through hunting. The buff disappears when the sub-class is changed." -->
+		<!-- Birthday Skill -->
 		<set name="canBeDispeled" val="false" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="reuseDelay" val="3600000" />
@@ -1524,6 +1530,7 @@
 		</for>
 	</skill>
 	<skill id="22183" levels="1" name="Dragon Master Lee Transformation Scroll">
+		<!-- High Five Skill -->
 		<!-- Transformed into Dragon Master Lee. -->
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="TRANSFORM" />
@@ -1536,6 +1543,7 @@
 		</for>
 	</skill>
 	<skill id="22184" levels="1" name="Dragon Master Karin Transformation Scroll">
+		<!-- High Five Skill -->
 		<!-- Transformed into Dragon Master Karin. -->
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="TRANSFORM" />
@@ -1553,24 +1561,28 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22186" levels="1" name="Echo Crystal - Theme of Celebration">
+		<!-- none -->
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22187" levels="1" name="Honeymoon Ticket - Joy of Energy">
-		<!-- State in which the Vitality Stage is maintained. -->
+		<!-- State in which the Energy Stage is maintained. -->
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22188" levels="1" name="Summon Big Wedding Cake">
+		<!-- none -->
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22189" levels="1" name="Flower Shower">
+		<!-- none -->
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22190" levels="1" name="Transformation Scroll - Blue Block Checker">
-		<!-- Transformed into a Treasure Hunter. Look for Event Treasure Chests on Fantasy Isle. -->
+		<!-- High Five Skill -->
+		<!-- Transformed into a cute block checker. Look for a treasure chest on Fantasy Isle. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
@@ -1595,7 +1607,7 @@
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="21172" /> <!-- Transformation Scroll: Onyx Beast - Event -->
+		<set name="itemConsumeId" val="21172" /> <!-- Transformation Scroll: Onyx Beast Event -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
@@ -1619,7 +1631,7 @@
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="21173" /> <!-- Transformation Scroll: Death Blader - Event -->
+		<set name="itemConsumeId" val="21173" /> <!-- Transformation Scroll: Death Blader Event -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
@@ -1643,7 +1655,7 @@
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="21174" /> <!-- Transformation Scroll: Grail Apostle - Event -->
+		<set name="itemConsumeId" val="21174" /> <!-- Transformation Scroll: Grail Apostle Event -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
@@ -1667,7 +1679,7 @@
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="21175" /> <!-- Transformation Scroll: Unicorn - Event -->
+		<set name="itemConsumeId" val="21175" /> <!-- Transformation Scroll: Unicorn Event -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
@@ -1691,7 +1703,7 @@
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="21176" /> <!-- Transformation Scroll: Lilim Knight - Event -->
+		<set name="itemConsumeId" val="21176" /> <!-- Transformation Scroll: Lilim Knight Event -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
@@ -1715,7 +1727,7 @@
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="21177" /> <!-- Transformation Scroll: Golem Guardian - Event -->
+		<set name="itemConsumeId" val="21177" /> <!-- Transformation Scroll: Golem Guardian Event -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
@@ -1739,7 +1751,7 @@
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="21178" /> <!-- Transformation Scroll: Inferno Drake - Event -->
+		<set name="itemConsumeId" val="21178" /> <!-- Transformation Scroll: Inferno Drake Event -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
@@ -1763,7 +1775,7 @@
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="21179" /> <!-- Transformation Scroll: Dragon Bomber - Event -->
+		<set name="itemConsumeId" val="21179" /> <!-- Transformation Scroll: Dragon Bomber Event -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
@@ -1787,7 +1799,7 @@
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="21180" /> <!-- Transformation Scroll: Heretic - Event -->
+		<set name="itemConsumeId" val="21180" /> <!-- Transformation Scroll: Heretic Event -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />

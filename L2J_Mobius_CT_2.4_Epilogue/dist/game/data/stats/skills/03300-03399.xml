@@ -13,7 +13,7 @@
 		</for>
 	</skill>
 	<skill id="3301" levels="1" name="Yellow Talisman of Violent Haste">
-		<!-- Increases Atk. Spd. when equipped with Talisman. -->
+		<!-- Increases attack speed when equipped with Talisman. -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="magicLvl" val="55" />
 		<set name="operateType" val="P" />
@@ -25,7 +25,7 @@
 		</for>
 	</skill>
 	<skill id="3302" levels="1" name="Yellow Talisman of Arcane Haste">
-		<!-- Increases Casting Spd. when equipped with Talisman. -->
+		<!-- Increases casting speed when equipped with Talisman. -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="magicLvl" val="55" />
 		<set name="operateType" val="P" />
@@ -37,7 +37,7 @@
 		</for>
 	</skill>
 	<skill id="3303" levels="1" name="White Talisman of Bandages">
-		<!-- Increases Resistance to Bleed when equipped with Talisman. -->
+		<!-- Increases resistance to bleeding when equipped with Talisman. -->
 		<set name="icon" val="icon.etc_talisman_i06" />
 		<set name="magicLvl" val="55" />
 		<set name="operateType" val="P" />
@@ -49,7 +49,7 @@
 		</for>
 	</skill>
 	<skill id="3304" levels="1" name="White Talisman of Attention">
-		<!-- Increases Resistance to sleep when equipped with Talisman. -->
+		<!-- Increases resistance to sleep when equipped with Talisman. -->
 		<set name="icon" val="icon.etc_talisman_i06" />
 		<set name="magicLvl" val="55" />
 		<set name="operateType" val="P" />
@@ -61,7 +61,7 @@
 		</for>
 	</skill>
 	<skill id="3305" levels="1" name="White Talisman of Grounding">
-		<!-- Increases Resistance to shock when equipped with Talisman. -->
+		<!-- Increases resistance to shock when equipped with Talisman. -->
 		<set name="icon" val="icon.etc_talisman_i06" />
 		<set name="magicLvl" val="55" />
 		<set name="operateType" val="P" />
@@ -73,7 +73,7 @@
 		</for>
 	</skill>
 	<skill id="3306" levels="1" name="White Talisman of Bravery">
-		<!-- Increases Resistance to mental attack when equipped with Talisman. -->
+		<!-- Increases resistance to mental attack when equipped with Talisman. -->
 		<set name="icon" val="icon.etc_talisman_i06" />
 		<set name="magicLvl" val="55" />
 		<set name="operateType" val="P" />
@@ -85,7 +85,7 @@
 		</for>
 	</skill>
 	<skill id="3307" levels="1" name="White Talisman of Motion">
-		<!-- Increases Resistance to paralysis when equipped with Talisman. -->
+		<!-- Increases resistance to paralysis when equipped with Talisman. -->
 		<set name="icon" val="icon.etc_talisman_i06" />
 		<set name="magicLvl" val="55" />
 		<set name="operateType" val="P" />
@@ -97,7 +97,7 @@
 		</for>
 	</skill>
 	<skill id="3308" levels="1" name="White Talisman of Freedom">
-		<!-- Increases Resistance to hold when equipped with Talisman. -->
+		<!-- Increases resistance to hold when equipped with Talisman. -->
 		<set name="icon" val="icon.etc_talisman_i06" />
 		<set name="magicLvl" val="55" />
 		<set name="operateType" val="P" />
@@ -109,7 +109,7 @@
 		</for>
 	</skill>
 	<skill id="3309" levels="1" name="White Talisman of Protection">
-		<!-- Increases Resistance to buff-lifting attack when equipped with Talisman. -->
+		<!-- Increases resistance to buff-lifting attack when equipped with Talisman. -->
 		<set name="icon" val="icon.etc_talisman_i06" />
 		<set name="magicLvl" val="55" />
 		<set name="operateType" val="P" />
@@ -121,7 +121,7 @@
 		</for>
 	</skill>
 	<skill id="3310" levels="1" name="Yellow Talisman of Physical Regeneration">
-		<!-- Increases HP Recovery Bonus when a talisman is equipped. -->
+		<!-- Increases HP recovery bonus when a talisman is equipped. -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="magicLvl" val="55" />
 		<set name="operateType" val="P" />
@@ -157,7 +157,7 @@
 		</for>
 	</skill>
 	<skill id="3313" levels="1" name="Yellow Talisman of Alacrity">
-		<!-- Increases P. Atk., M. Atk., and Speed when equipped with Talisman. -->
+		<!-- Increases attack/magic, movement speed when equipped with Talisman. -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="magicLvl" val="55" />
 		<set name="operateType" val="P" />
@@ -190,7 +190,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="3316" levels="1" name="Yellow Talisman of Critical Dodging">
-		<!-- Decreases critical rate of the opponent's regular attack when equipped with Talisman. -->
+		<!-- Decreases chance of a critical regular attack when equipped with Talisman. -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="magicLvl" val="55" />
 		<set name="operateType" val="P" />
@@ -246,7 +246,7 @@
 		</for>
 	</skill>
 	<skill id="3320" levels="1" name="Yellow Talisman of Mental Regeneration">
-		<!-- Increases MP Recovery Bonus when a talisman is equipped. -->
+		<!-- Increases MP recovery bonus when a talisman is equipped. -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="magicLvl" val="55" />
 		<set name="operateType" val="P" />
@@ -258,7 +258,7 @@
 		</for>
 	</skill>
 	<skill id="3321" levels="1" name="Blue Talisman of Evasion">
-		<!-- Use the power of the Talisman to increase the Evasion rate and decrease the chance of receiving a critical attack. -->
+		<!-- Use the power of the Talisman to increase the evasion rate and decrease the chance of receiving a critical attack. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="TALISMAN" />
@@ -433,7 +433,7 @@
 		</for>
 	</skill>
 	<skill id="3332" levels="1" name="Orange Talisman - Hot Springs Recovery">
-		<!-- Create 1 Hot Springs Recovery with the power of the Talisman. Consumes 16 Soul Ore. -->
+		<!-- Create 1 Hot Springs Recovery with the power of the Talisman. Consumes 16 Soul Ores. -->
 		<set name="hitTime" val="20000" />
 		<set name="icon" val="icon.etc_talisman_i04" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -459,7 +459,7 @@
 		</for>
 	</skill>
 	<skill id="3333" levels="1" name="Orange Talisman - A Grade Elixir of Life">
-		<!-- Create 1 Elixir of Life A with power of the Talisman. Consumes 50 Soul Ore. -->
+		<!-- Create 1 Elixir of Life A with power of the Talisman. Consumes 50 Soul Ores. -->
 		<set name="hitTime" val="20000" />
 		<set name="icon" val="icon.etc_talisman_i04" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -485,7 +485,7 @@
 		</for>
 	</skill>
 	<skill id="3334" levels="1" name="Orange Talisman - A Grade Elixir of Mental Strength">
-		<!-- Create 1 Elixir of Mental Strength A with the power of the Talisman. Consumes 57 Soul Ore. -->
+		<!-- Create 1 Elixir of Mental Strength A with the power of the Talisman. Consumes 57 Soul Ores. -->
 		<set name="hitTime" val="20000" />
 		<set name="icon" val="icon.etc_talisman_i04" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -584,55 +584,55 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="3339" levels="1" name="Bard">
-		<!-- Enables the character to wear equipment of Enchant Knight. -->
+		<!-- Possible to wear equipment of Enchant Knight. -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="3340" levels="1" name="Weapon Master">
-		<!-- Enables the character to wear equipment of Weapon Master. -->
+		<!-- Possible to wear equipment of Weapon Master. -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="3341" levels="1" name="Force Master">
-		<!-- Enables the character to wear equipment of Force Master. -->
+		<!-- Possible to wear equipment of Force Master. -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="3342" levels="1" name="Bow Master">
-		<!-- Enables the character to wear equipment of Bow Master. -->
+		<!-- Possible to wear equipment of Bow Master. -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="3343" levels="1" name="Dagger Master">
-		<!-- Enables the character to wear equipment of Dagger Master. -->
+		<!-- Possible to wear equipment of Dagger Master. -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="3344" levels="1" name="Wizard">
-		<!-- Enables the character to wear equipment of Wizard. -->
+		<!-- Possible to wear equipment of Wizard. -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="3345" levels="1" name="Summoner">
-		<!-- Enables the character to wear equipment of Summoner. -->
+		<!-- Possible to wear equipment of Summoner. -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="3346" levels="1" name="Healer">
-		<!-- Enables the character to wear equipment of Healer. -->
+		<!-- Possible to wear equipment of Healer. -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="3347" levels="1" name="Enchanter">
-		<!-- Enables the character to wear equipment of Enchanter. -->
+		<!-- Possible to wear equipment of Enchanter. -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
@@ -657,7 +657,7 @@
 		</for>
 	</skill>
 	<skill id="3349" levels="1" name="Dynasty Breast Plate - Weapon Master">
-		<!-- Increases P. Atk/Max HP/Critical Rate/Resistance to Dark/Critical Damage. -->
+		<!-- Increases P. Atk/Max HP/Critical Rate/Resistance to dark attacks/Critical Damage. -->
 		<set name="icon" val="icon.armor_t91_uw_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -674,7 +674,7 @@
 		</for>
 	</skill>
 	<skill id="3350" levels="1" name="Dynasty Breast Plate - Force Master">
-		<!-- Increases P. Atk./Max HP/Resistance to Dark, and decreases MP consumption. -->
+		<!-- Increases P. Atk./Max HP/dark resistance. MP consumption decreases. -->
 		<set name="icon" val="icon.armor_t91_uf_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -690,7 +690,7 @@
 		</for>
 	</skill>
 	<skill id="3351" levels="1" name="Dynasty Breast Plate - Bard">
-		<!-- Attack ability/Max HP/Resistance to Dark increase. Consumption of MP decreases. -->
+		<!-- Attack ability/Maximum HP/Tolerance to Darkness attributes increase. Consumption of MP decreases. -->
 		<set name="icon" val="icon.armor_t91_uke_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -706,7 +706,7 @@
 		</for>
 	</skill>
 	<skill id="3352" levels="1" name="Dynasty Leather Armor - Dagger Master">
-		<!-- Increases Evasion, Max HP, Atk. Spd., and Resistance to Hold. -->
+		<!-- Increases Evasion Rate./ Max HP/Attack Speed/Resistance to Hold -->
 		<set name="icon" val="icon.armor_t92_ud_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -725,7 +725,7 @@
 		</for>
 	</skill>
 	<skill id="3353" levels="1" name="Dynasty Leather Armor - Bow Master">
-		<!-- Increases Accuracy/Max MP/Atk. Spd./MP Recovery Rate/Resistance to Dark. -->
+		<!-- Increases Accuracy/Max MP/Attack Speed/MP Recovery Rate/Resistance to Dark Attack. -->
 		<set name="icon" val="icon.armor_t92_ub_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -742,7 +742,7 @@
 		</for>
 	</skill>
 	<skill id="3354" levels="1" name="Dynasty Tunic - Healer">
-		<!-- Increases Casting Spd./Max MP/Heal Power/Resistance to Dark, and decreases magic cancel rate against damage. -->
+		<!-- Increases Cast Speed/Max MP/Heal Power/Resistance to Dark Attack, and decreases magic cancel rate against damage. -->
 		<set name="icon" val="icon.armor_t93_uh_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -759,7 +759,7 @@
 		</for>
 	</skill>
 	<skill id="3355" levels="1" name="Dynasty Tunic - Enchanter">
-		<!-- Increases Casting Spd./Max MP/Resistance to Dark, and decreases MP consumption/magic cancel rate against damage. -->
+		<!-- Increases Cast Speed/Max MP/Resistance to Dark Attack, and decreases consumed MP/magic cancel rate against damage. -->
 		<set name="icon" val="icon.armor_t93_ue_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -776,7 +776,7 @@
 		</for>
 	</skill>
 	<skill id="3356" levels="1" name="Dynasty Tunic - Summoner">
-		<!-- Increases Casting Spd./ Max MP/P. Atk./P. Def./Resistance to Dark. -->
+		<!-- Increases Cast Speed/ Max MP/P. Atk./P. Def./Resistance to Dark Attack. -->
 		<set name="icon" val="icon.armor_t93_us_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -793,7 +793,7 @@
 		</for>
 	</skill>
 	<skill id="3357" levels="1" name="Dynasty Tunic - Wizard">
-		<!-- Increases Casting Spd./ Max MP/M. Atk./Resistance to Dark. -->
+		<!-- Increases Cast Speed/ Max MP/M. Atk./Resistance to Dark Attack. -->
 		<set name="icon" val="icon.armor_t93_uw_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -825,7 +825,7 @@
 		</for>
 	</skill>
 	<skill id="3359" levels="1" name="Transform Native">
-		<!-- Transforms into a Native. -->
+		<!-- Transforms into Native. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="TRANSFORM" />
@@ -858,7 +858,7 @@
 		</for>
 	</skill>
 	<skill id="3361" levels="1" name="Summon Agathion - Fortress">
-		<!-- Removes the seal of Agathion. -->
+		<!-- Summon an Agathion. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -890,7 +890,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="3365" levels="1" name="Dynasty Resistance Necklace">
-		<!-- Increases Resistance to shock attacks. -->
+		<!-- Increases resistance to shock attacks. -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -901,7 +901,7 @@
 		</for>
 	</skill>
 	<skill id="3366" levels="1" name="Dynasty Resistance Ring">
-		<!-- Increases Resistance to shock attacks. -->
+		<!-- Increases resistance to shock attacks. -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -912,7 +912,7 @@
 		</for>
 	</skill>
 	<skill id="3367" levels="1" name="Dynasty Resistance Earring">
-		<!-- Increases Resistance to shock attacks. -->
+		<!-- Increases resistance to shock attacks. -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -941,7 +941,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="3371" levels="1" name="Dynasty Resistance Necklace">
-		<!-- Increases Resistance to bleed attacks. -->
+		<!-- Increases resistance to bleed attacks. -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -952,7 +952,7 @@
 		</for>
 	</skill>
 	<skill id="3372" levels="1" name="Dynasty Resistance Ring">
-		<!-- Increases Resistance to bleed attacks. -->
+		<!-- Increases resistance to bleed attacks. -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -963,7 +963,7 @@
 		</for>
 	</skill>
 	<skill id="3373" levels="1" name="Dynasty Resistance Earring">
-		<!-- Increases Resistance to bleed attacks. -->
+		<!-- Increases resistance to bleed attacks. -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -992,7 +992,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="3377" levels="1" name="Dynasty Resistance Necklace">
-		<!-- Increases Resistance to poison attacks. -->
+		<!-- Increases resistance to poison attacks. -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -1003,7 +1003,7 @@
 		</for>
 	</skill>
 	<skill id="3378" levels="1" name="Dynasty Resistance Ring">
-		<!-- Increases Resistance to poison attacks. -->
+		<!-- Increases resistance to poison attacks. -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -1014,7 +1014,7 @@
 		</for>
 	</skill>
 	<skill id="3379" levels="1" name="Dynasty Resistance Earring">
-		<!-- Increases Resistance to poison attacks. -->
+		<!-- Increases resistance to poison attacks. -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -1043,7 +1043,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="3383" levels="1" name="Dynasty Resistance Necklace">
-		<!-- Increases Resistance to paralysis attacks. -->
+		<!-- Increases resistance to paralysis attacks. -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -1054,7 +1054,7 @@
 		</for>
 	</skill>
 	<skill id="3384" levels="1" name="Dynasty Resistance Ring">
-		<!-- Increases Resistance to paralysis attacks. -->
+		<!-- Increases resistance to paralysis attacks. -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -1065,7 +1065,7 @@
 		</for>
 	</skill>
 	<skill id="3385" levels="1" name="Dynasty Resistance Earring">
-		<!-- Increases Resistance to paralysis attacks. -->
+		<!-- Increases resistance to paralysis attacks. -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -1094,7 +1094,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="3389" levels="1" name="Dynasty Resistance Necklace">
-		<!-- Increases Resistance to hold attacks. -->
+		<!-- Increases resistance to hold attacks. -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -1105,7 +1105,7 @@
 		</for>
 	</skill>
 	<skill id="3390" levels="1" name="Dynasty Resistance Ring">
-		<!-- Increases Resistance to hold attacks. -->
+		<!-- Increases resistance to hold attacks. -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -1116,7 +1116,7 @@
 		</for>
 	</skill>
 	<skill id="3391" levels="1" name="Dynasty Resistance Earring">
-		<!-- Increases Resistance to hold attacks. -->
+		<!-- Increases resistance to hold attacks. -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -1145,7 +1145,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="3395" levels="1" name="Dynasty Resistance Necklace">
-		<!-- Increases Resistance to sleep attacks. -->
+		<!-- Increases resistance to sleep attacks. -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -1156,7 +1156,7 @@
 		</for>
 	</skill>
 	<skill id="3396" levels="1" name="Dynasty Resistance Ring">
-		<!-- Increases Resistance to sleep attacks. -->
+		<!-- Increases resistance to sleep attacks. -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -1167,7 +1167,7 @@
 		</for>
 	</skill>
 	<skill id="3397" levels="1" name="Dynasty Resistance Earring">
-		<!-- Increases Resistance to sleep attacks. -->
+		<!-- Increases resistance to sleep attacks. -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -1178,13 +1178,13 @@
 		</for>
 	</skill>
 	<skill id="3398" levels="1" name="Traits Strengthen Necklace">
-		<!-- Increases the power of mental attacks. -->
+		<!-- Increases the power of abnormal mental state attacks. -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="3399" levels="1" name="Traits Strengthen Ring">
-		<!-- Increases the power of mental attacks. -->
+		<!-- Increases the power of abnormal mental state attacks. -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />

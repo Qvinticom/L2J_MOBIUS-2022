@@ -43,6 +43,7 @@ import org.l2jmobius.gameserver.instancemanager.PremiumManager;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.buylist.BuyListHolder;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.serverpackets.BuyList;
@@ -166,8 +167,9 @@ public class HomeBoard implements IParseBoardHandler
 		{
 			final String page = command.replace("_bbssell;", "");
 			returnHtml = HtmCache.getInstance().getHtm(player, "data/html/CommunityBoard/Custom/" + page + ".html");
+			final BuyListHolder buyList = BuyListData.getInstance().getBuyList(423);
 			player.sendPacket(new BuyList(BuyListData.getInstance().getBuyList(423), player.getAdena(), 0));
-			player.sendPacket(new ExBuySellList(player, false));
+			player.sendPacket(new ExBuySellList(player, buyList, false));
 		}
 		else if (command.startsWith("_bbsteleport"))
 		{

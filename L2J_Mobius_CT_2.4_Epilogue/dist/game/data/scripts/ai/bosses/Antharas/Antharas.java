@@ -57,7 +57,7 @@ public class Antharas extends AbstractNpcAI
 	// NPCs
 	private static final int ANTHARAS = 29068; // Antharas
 	private static final int BEHEMOTH = 29069; // Behemoth Dragon
-	private static final int TERASQUE = 29190; // Tarask Dragon
+	// private static final int TERASQUE = 29190; // Tarask Dragon
 	private static final int BOMBER = 29070; // Dragon Bomber
 	private static final int HEART = 13001; // Heart of Warding
 	private static final int CUBE = 31859; // Teleportation Cubic
@@ -134,8 +134,8 @@ public class Antharas extends AbstractNpcAI
 		addMoveFinishedId(BOMBER);
 		addAggroRangeEnterId(BOMBER);
 		addSpellFinishedId(ANTHARAS);
-		addAttackId(ANTHARAS, BOMBER, BEHEMOTH, TERASQUE);
-		addKillId(ANTHARAS, TERASQUE, BEHEMOTH);
+		addAttackId(ANTHARAS, BOMBER, BEHEMOTH);
+		addKillId(ANTHARAS, BEHEMOTH);
 		
 		final StatsSet info = GrandBossManager.getInstance().getStatsSet(ANTHARAS);
 		final double curr_hp = info.getDouble("currentHP");
@@ -414,19 +414,19 @@ public class Antharas extends AbstractNpcAI
 					for (int i = 0; i < minionMultipler; i++)
 					{
 						addSpawn(BEHEMOTH, npc, true);
-						addSpawn(TERASQUE, npc, true);
+						addSpawn(BEHEMOTH, npc, true);
 					}
 					_minionCount += minionMultipler * 2;
 				}
 				else if (_minionCount < 98)
 				{
 					addSpawn(BEHEMOTH, npc, true);
-					addSpawn(TERASQUE, npc, true);
+					addSpawn(BEHEMOTH, npc, true);
 					_minionCount += 2;
 				}
 				else if (_minionCount < 99)
 				{
-					addSpawn(getRandomBoolean() ? BEHEMOTH : TERASQUE, npc, true);
+					addSpawn(getRandomBoolean() ? BEHEMOTH : BEHEMOTH, npc, true);
 					_minionCount++;
 				}
 				
@@ -541,7 +541,7 @@ public class Antharas extends AbstractNpcAI
 					_minionCount = 0;
 					for (Creature creature : zone.getCharactersInside())
 					{
-						if ((creature != null) && creature.isNpc() && ((creature.getId() == BEHEMOTH) || (creature.getId() == TERASQUE)))
+						if ((creature != null) && creature.isNpc() && ((creature.getId() == BEHEMOTH) || (creature.getId() == BEHEMOTH)))
 						{
 							creature.deleteMe();
 						}

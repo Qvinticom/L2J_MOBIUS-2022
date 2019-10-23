@@ -11,7 +11,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4401" type="EtcItem" name="Green Dimensional Stone">
-		<!-- Activates a Dimensional Vortex. Allows you to move to the 1st to 3rd floor of the Tower of Insolence. -->
+		<!-- Activates a Dimensional Vortex. Allows you to move to the first floor of the Tower of Insolence. -->
 		<set name="icon" val="icon.etc_gem_green_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -20,7 +20,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4402" type="EtcItem" name="Blue Dimensional Stone">
-		<!-- Activates a Dimensional Vortex. Allows you to move to the 4th to 6th floor of the Tower of Insolence. -->
+		<!-- Activates a Dimensional Vortex. Allows you to move to the fifth floor of the Tower of Insolence. -->
 		<set name="icon" val="icon.etc_gem_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -29,7 +29,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4403" type="EtcItem" name="Red Dimensional Stone">
-		<!-- Activates a Dimensional Vortex. Allows you to move to the 7th to 10th floor of the Tower of Insolence. -->
+		<!-- Activates a Dimensional Vortex. Allows you to move to the 10th floor of the Tower of Insolence. -->
 		<set name="icon" val="icon.etc_gem_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -839,7 +839,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4481" type="EtcItem" name="Greater Dye of STR (Str+1 Con-3)">
-		<!-- Greater Dye of STR <Str+1 Con-3>. Collect and take 10 units of this type of magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities tattooed onto your body. Can be used by all classes after completion of their second class transfer, and can be kept and used after the completion of the third class transfer as well. -->
+		<!-- Greater Dye of STR <Str+1 Con-3>. Collect and take 10 units of this type of magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities tatooed onto your body. Can be used by all classes after completion of their second class transfer, and can be kept and used after the completion of the third class transfer as well. -->
 		<set name="icon" val="icon.etc_str_hena_i01" />
 		<set name="etcitem_type" val="DYE" />
 		<set name="immediate_effect" val="true" />
@@ -849,7 +849,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4482" type="EtcItem" name="Greater Dye of STR (Str+1 Dex-3)">
-		<!-- Greater Dye of STR <Str+1 Dex-3>. Collect and take 10 units of this type of magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities tattooed onto your body. Can be used by all classes after completion of their second class transfer, and can be kept and used after the completion of the third class transfer as well. -->
+		<!-- Greater Dye of STR <Str+1 Dex-3>. Collect and take 10 units of this type of magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities tatooed onto your body. Can be used by all classes after completion of their second class transfer, and can be kept and used after the completion of the third class transfer as well. -->
 		<set name="icon" val="icon.etc_str_hena_i01" />
 		<set name="etcitem_type" val="DYE" />
 		<set name="immediate_effect" val="true" />
@@ -859,7 +859,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4483" type="EtcItem" name="Greater Dye of CON(Con+1 Str-3)">
-		<!-- Greater Dye of CON<Con+1 Str-3>. Collect and take 10 units of this type of magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities tattooed onto your body. Can be used by all classes after completion of their second class transfer, and can be kept and used after the completion of the third class transfer as well. -->
+		<!-- Greater Dye of CON<Con+1 Str-3>. Collect and take 10 units of this type of magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities tatooed onto your body. Can be used by all classes after completion of their second class transfer, and can be kept and used after the completion of the third class transfer as well. -->
 		<set name="icon" val="icon.etc_con_hena_i01" />
 		<set name="etcitem_type" val="DYE" />
 		<set name="immediate_effect" val="true" />
@@ -869,7 +869,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4484" type="EtcItem" name="Greater Dye of CON(Con+1 Dex-3)">
-		<!-- Greater Dye of CON<Con+1 Str-3>. Collect and take 10 units of this type of magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities tattooed onto your body. Can be used by all classes after completion of their second class transfer, and can be kept and used after the completion of the third class transfer as well. -->
+		<!-- Greater Dye of CON<Con+1 Str-3>. Collect and take 10 units of this type of magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities tatooed onto your body. Can be used by all classes after completion of their second class transfer, and can be kept and used after the completion of the third class transfer as well. -->
 		<set name="icon" val="icon.etc_con_hena_i01" />
 		<set name="etcitem_type" val="DYE" />
 		<set name="immediate_effect" val="true" />
@@ -879,7 +879,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4485" type="EtcItem" name="Greater Dye of DEX (Dex+1 Str-3)">
-		<!-- Greater Dye of DEX <Dex+1 Str-3>. Collect and take 10 units of this type of magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities tattooed onto your body. Can be used by all classes after completion of their second class transfer, and can be kept and used after the completion of the third class transfer as well. -->
+		<!-- Greater Dye of DEX <Dex+1 Str-3>. Collect and take 10 units of this type of magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities tatooed onto your body. Can be used by all classes after completion of their second class transfer, and can be kept and used after the completion of the third class transfer as well. -->
 		<set name="icon" val="icon.etc_dex_hena_i01" />
 		<set name="etcitem_type" val="DYE" />
 		<set name="immediate_effect" val="true" />
@@ -889,7 +889,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4486" type="EtcItem" name="Greater Dye of DEX (Dex+1 Con-3)">
-		<!-- Greater Dye of DEX <Dex+1 Con-3>. Collect and take 10 units of this type of magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities tattooed onto your body. Can be used by all classes after completion of their second class transfer, and can be kept and used after the completion of the third class transfer as well. -->
+		<!-- Greater Dye of DEX <Dex+1 Con-3>. Collect and take 10 units of this type of magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities tatooed onto your body. Can be used by all classes after completion of their second class transfer, and can be kept and used after the completion of the third class transfer as well. -->
 		<set name="icon" val="icon.etc_dex_hena_i01" />
 		<set name="etcitem_type" val="DYE" />
 		<set name="immediate_effect" val="true" />
@@ -899,7 +899,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4487" type="EtcItem" name="Greater Dye of INT (Int+1 Men-3)">
-		<!-- Greater Dye of INT <Int+1 Men-3>. Collect and take 10 units of this type of magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities tattooed onto your body. Can be used by the Wizard class after completion of their second class transfer, and can be kept and used after the completion of the third class transfer as well. -->
+		<!-- Greater Dye of INT <Int+1 Men-3>. Collect and take 10 units of this type of magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities tatooed onto your body. Can be used by the Wizard class after completion of their second class transfer, and can be kept and used after the completion of the third class transfer as well. -->
 		<set name="icon" val="icon.etc_int_hena_i01" />
 		<set name="etcitem_type" val="DYE" />
 		<set name="immediate_effect" val="true" />
@@ -909,7 +909,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4488" type="EtcItem" name="Greater Dye of INT (Int+1 Wit-3)">
-		<!-- Greater Dye of INT <Int+1 Wit-3>. Collect and take 10 units of this type of magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities tattooed onto your body. Can be used by the Wizard class and the Warrior class after completion of their second class transfer, and can be kept and used after the completion of the third class transfer as well. -->
+		<!-- Greater Dye of INT <Int+1 Wit-3>. Collect and take 10 units of this type of magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities tatooed onto your body. Can be used by the Wizard class and the Warrior class after completion of their second class transfer, and can be kept and used after the completion of the third class transfer as well. -->
 		<set name="icon" val="icon.etc_int_hena_i01" />
 		<set name="etcitem_type" val="DYE" />
 		<set name="immediate_effect" val="true" />
@@ -919,7 +919,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4489" type="EtcItem" name="Greater Dye of MEN (Men+1 Int-3)">
-		<!-- Greater Dye of MEN <Men+1 Int-3>. Collect and take 10 units of this type of magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities tattooed onto your body. Can be used by the Wizard class after completion of their second class transfer, and can be kept and used after the completion of the third class transfer as well. -->
+		<!-- Greater Dye of MEN <Men+1 Int-3>. Collect and take 10 units of this type of magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities tatooed onto your body. Can be used by the Wizard class after completion of their second class transfer, and can be kept and used after the completion of the third class transfer as well. -->
 		<set name="icon" val="icon.etc_men_hena_i01" />
 		<set name="etcitem_type" val="DYE" />
 		<set name="immediate_effect" val="true" />
@@ -929,7 +929,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4490" type="EtcItem" name="Greater Dye of MEN (Men+1 Wit-3)">
-		<!-- Greater Dye of MEN <Men+1 Wit-3>. Collect and take 10 units of this type of magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities tattooed onto your body. Can be used by the Wizard class and the Healer class after completion of their second class transfer, and can be kept and used after the completion of the third class transfer as well. -->
+		<!-- Greater Dye of MEN <Men+1 Wit-3>. Collect and take 10 units of this type of magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities tatooed onto your body. Can be used by the Wizard class and the Healer class after completion of their second class transfer, and can be kept and used after the completion of the third class transfer as well. -->
 		<set name="icon" val="icon.etc_men_hena_i01" />
 		<set name="etcitem_type" val="DYE" />
 		<set name="immediate_effect" val="true" />
@@ -939,7 +939,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4491" type="EtcItem" name="Greater Dye of WIT (Wit+1 Int-3)">
-		<!-- Greater Dye of WIT <Wit+1 Int-3>. Collect and take 10 units of this type of magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities tattooed onto your body. Can be used by the Warrior class and the Wizard class after completion of their second class transfer, and can be kept and used after the completion of the third class transfer as well. -->
+		<!-- Greater Dye of WIT <Wit+1 Int-3>. Collect and take 10 units of this type of magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities tatooed onto your body. Can be used by the Warrior class and the Wizard class after completion of their second class transfer, and can be kept and used after the completion of the third class transfer as well. -->
 		<set name="icon" val="icon.etc_wit_hena_i01" />
 		<set name="etcitem_type" val="DYE" />
 		<set name="immediate_effect" val="true" />
@@ -949,7 +949,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4492" type="EtcItem" name="Greater Dye of WIT (Wit+1 Men-3)">
-		<!-- Greater Dye of WIT <Wit+1 Men-3>. Collect and take 10 units of this type of magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities tattooed onto your body. Can be used by the wizard class and healer class after completion of their second class transfer, and can be kept and used after the completion of the third class transfer as well. -->
+		<!-- Greater Dye of WIT <Wit+1 Men-3>. Collect and take 10 units of this type of magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities tatooed onto your body. Can be used by the wizard class and healer class after completion of their second class transfer, and can be kept and used after the completion of the third class transfer as well. -->
 		<set name="icon" val="icon.etc_wit_hena_i01" />
 		<set name="etcitem_type" val="DYE" />
 		<set name="immediate_effect" val="true" />
@@ -959,7 +959,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4493" type="EtcItem" name="Greater Dye of STR (Str+1 Con-2)">
-		<!-- Greater Dye of STR <Str+1 Con-2>. Collect and take 10 units of this type of magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities tattooed onto your body. Can be used by all classes after completion of their second class transfer, and can be kept and used after the completion of the third class transfer as well. -->
+		<!-- Greater Dye of STR <Str+1 Con-2>. Collect and take 10 units of this type of magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities tatooed onto your body. Can be used by all classes after completion of their second class transfer, and can be kept and used after the completion of the third class transfer as well. -->
 		<set name="icon" val="icon.etc_str_hena_i01" />
 		<set name="etcitem_type" val="DYE" />
 		<set name="immediate_effect" val="true" />
@@ -969,7 +969,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4494" type="EtcItem" name="Greater Dye of STR (Str+1 Dex-2)">
-		<!-- Greater Dye of STR <Str+1 Dex-2>. Collect and take 10 units of this type of magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities tattooed onto your body. Can be used by all classes after completion of their second class transfer, and can be kept and used after the completion of the third class transfer as well. -->
+		<!-- Greater Dye of STR <Str+1 Dex-2>. Collect and take 10 units of this type of magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities tatooed onto your body. Can be used by all classes after completion of their second class transfer, and can be kept and used after the completion of the third class transfer as well. -->
 		<set name="icon" val="icon.etc_str_hena_i01" />
 		<set name="etcitem_type" val="DYE" />
 		<set name="immediate_effect" val="true" />
@@ -979,7 +979,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4495" type="EtcItem" name="Greater Dye of CON (Con+1 Str-2)">
-		<!-- Greater Dye of CON <Con+1 Str-2>. Collect and take 10 units of this type of magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities tattooed onto your body. Can be used by all classes after completion of their second class transfer, and can be kept and used after the completion of the third class transfer as well. -->
+		<!-- Greater Dye of CON <Con+1 Str-2>. Collect and take 10 units of this type of magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities tatooed onto your body. Can be used by all classes after completion of their second class transfer, and can be kept and used after the completion of the third class transfer as well. -->
 		<set name="icon" val="icon.etc_con_hena_i01" />
 		<set name="etcitem_type" val="DYE" />
 		<set name="immediate_effect" val="true" />
@@ -989,7 +989,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4496" type="EtcItem" name="Greater Dye of CON (Con+1 Dex-2)">
-		<!-- Greater Dye of CON <Con+1 Dex-2>. Collect and take 10 units of this type of magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities tattooed onto your body. Can be used by all classes after completion of their second class transfer, and can be kept and used after the completion of the third class transfer as well. -->
+		<!-- Greater Dye of CON <Con+1 Dex-2>. Collect and take 10 units of this type of magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities tatooed onto your body. Can be used by all classes after completion of their second class transfer, and can be kept and used after the completion of the third class transfer as well. -->
 		<set name="icon" val="icon.etc_con_hena_i01" />
 		<set name="etcitem_type" val="DYE" />
 		<set name="immediate_effect" val="true" />
@@ -999,7 +999,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4497" type="EtcItem" name="Greater Dye of DEX (Dex+1 Str-2)">
-		<!-- Greater Dye of DEX <Dex+1 Str-2>. Collect and take 10 units of this type of magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities tattooed onto your body. Can be used by all classes after completion of their second class transfer, and can be kept and used after the completion of the third class transfer as well. -->
+		<!-- Greater Dye of DEX <Dex+1 Str-2>. Collect and take 10 units of this type of magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities tatooed onto your body. Can be used by all classes after completion of their second class transfer, and can be kept and used after the completion of the third class transfer as well. -->
 		<set name="icon" val="icon.etc_dex_hena_i01" />
 		<set name="etcitem_type" val="DYE" />
 		<set name="immediate_effect" val="true" />
@@ -1009,7 +1009,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4498" type="EtcItem" name="Greater Dye of DEX (Dex+1 Con-2)">
-		<!-- Greater Dye of DEX <Dex+1 Con-2>. Collect and take 10 units of this type of magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities tattooed onto your body. Can be used by all classes after completion of their second class transfer, and can be kept and used after the completion of the third class transfer as well. -->
+		<!-- Greater Dye of DEX <Dex+1 Con-2>. Collect and take 10 units of this type of magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities tatooed onto your body. Can be used by all classes after completion of their second class transfer, and can be kept and used after the completion of the third class transfer as well. -->
 		<set name="icon" val="icon.etc_dex_hena_i01" />
 		<set name="etcitem_type" val="DYE" />
 		<set name="immediate_effect" val="true" />
@@ -1019,7 +1019,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4499" type="EtcItem" name="Greater Dye of INT (Int+1 Men-2)">
-		<!-- Greater Dye of INT <Int+1 Men-2>. Collect and take 10 units of this type of magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities tattooed onto your body. Can be used by the Wizard class after completion of their second class transfer, and can be kept and used after the completion of the third class transfer as well. -->
+		<!-- Greater Dye of INT <Int+1 Men-2>. Collect and take 10 units of this type of magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities tatooed onto your body. Can be used by the Wizard class after completion of their second class transfer, and can be kept and used after the completion of the third class transfer as well. -->
 		<set name="icon" val="icon.etc_int_hena_i01" />
 		<set name="etcitem_type" val="DYE" />
 		<set name="immediate_effect" val="true" />

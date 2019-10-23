@@ -674,7 +674,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="9144" type="EtcItem" name="Pirate's Booty">
-		<!-- One can receive Golden Apigas with a certain rate of chance by double clicking. If you are unlucky, you won't receive anything. (Can be used when the weight gauge is below 80% and there are more than 10 empty inventory slots.) -->
+		<!-- One can receive Golden Apigas with a certain rate of probability by double clicking. If you are unlucky, you won't receive anything. (Can be used when the weight gauge is below 80% and there are more than 10 empty inventory slots.) -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -706,14 +706,14 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2310-1" /> <!-- Guidance Scroll - Event Use -->
+		<set name="item_skill" val="2310-1" /> <!-- Scroll of Guidance - Event Use -->
 		<set name="for_npc" val="true" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="9147" type="EtcItem" name="Scroll of Death Whisper (Event)">
-		<!-- Critical Damage increases. Event reward item. -->
+		<!-- Critical attack power increases. Event reward item. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -722,14 +722,14 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2311-1" /> <!-- Death Whisper Scroll - Event Use -->
+		<set name="item_skill" val="2311-1" /> <!-- Scroll of Death Whisper - Event Use -->
 		<set name="for_npc" val="true" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="9148" type="EtcItem" name="Scroll of Focus (Event)">
-		<!-- Critical Rate increases. Event reward item. -->
+		<!-- Critical rate increases. Event reward item. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -738,7 +738,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2312-1" /> <!-- Focus Scroll - Event Use -->
+		<set name="item_skill" val="2312-1" /> <!-- Scroll of Focus - Event Use -->
 		<set name="for_npc" val="true" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
@@ -770,14 +770,14 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2314-1" /> <!-- Haste Scroll - Event Use -->
+		<set name="item_skill" val="2314-1" /> <!-- Scroll of Haste - Event Use -->
 		<set name="for_npc" val="true" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="9151" type="EtcItem" name="Scroll of Agility (Event)">
-		<!-- Increases Evasion. Event reward item. -->
+		<!-- Evasion increases. Event reward item. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -786,14 +786,14 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2315-1" /> <!-- Agility Scroll - Event Use -->
+		<set name="item_skill" val="2315-1" /> <!-- Scroll of Agility - Event Use -->
 		<set name="for_npc" val="true" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="9152" type="EtcItem" name="Scroll of Empower (Event)">
-		<!-- M. Atk. increases. Event reward item. -->
+		<!-- Magic power increases. Event reward item. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -818,14 +818,14 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2317-1" /> <!-- Might Scroll - Event Use -->
+		<set name="item_skill" val="2317-1" /> <!-- Scroll of Might - Event Use -->
 		<set name="for_npc" val="true" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="9154" type="EtcItem" name="Scroll of Wind Walk (Event)">
-		<!-- Speed increases. Event reward item. -->
+		<!-- Moving speed increases. Event reward item. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -834,7 +834,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2318-1" /> <!-- Wind Walk Scroll - Event Use -->
+		<set name="item_skill" val="2318-1" /> <!-- Scroll of Wind Walk - Event Use -->
 		<set name="for_npc" val="true" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
@@ -850,7 +850,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2319-1" /> <!-- Shield Scroll - Event Use -->
+		<set name="item_skill" val="2319-1" /> <!-- Scroll of Shield - Event Use -->
 		<set name="for_npc" val="true" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />

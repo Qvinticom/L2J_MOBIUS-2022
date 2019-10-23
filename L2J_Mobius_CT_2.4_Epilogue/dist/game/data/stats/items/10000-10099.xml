@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="10000" type="EtcItem" name="Wind Potion">
-		<!-- Increases Resistance to wind attacks by 30 for 10 minutes. -->
+		<!-- Increases defense against wind attacks by 30 for 10 minutes. -->
 		<set name="icon" val="icon.etc_wind_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -15,7 +15,7 @@
 		<set name="item_skill" val="2337-1" /> <!-- Wind Resist Potion -->
 	</item>
 	<item id="10001" type="EtcItem" name="Dark Potion">
-		<!-- Increases Resistance to dark attacks by 30 for 10 minutes. -->
+		<!-- Increases defense against dark attacks by 30 for 10 minutes. -->
 		<set name="icon" val="icon.etc_unholy_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -26,10 +26,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2340-1" /> <!-- Dark Resist Potion -->
+		<set name="item_skill" val="2340-1" /> <!-- Unholy Resist Potion -->
 	</item>
 	<item id="10002" type="EtcItem" name="Holy Potion">
-		<!-- Increases Resistance to Holy by 30 for 10 minutes. -->
+		<!-- Increases defense against divine attacks by 30 for 10 minutes. -->
 		<set name="icon" val="icon.etc_holy_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -43,7 +43,7 @@
 		<set name="item_skill" val="2339-1" /> <!-- Holy Resist Potion -->
 	</item>
 	<item id="10003" type="Weapon" name="Fleuret">
-		<!-- Kamael Exclusive Weapon: Knight Sword Conversion. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and of decreaseing MP consumption for skill use for you and your party members during a critical attack. -->
+		<!-- Kamael exclusive weapon: Knight Sword Conversion. When enchanted by 4 or more, a critical attack will have a chance to increase P. Atk., M. Atk., and healing power, and decrease MP consumption during skill use, for you and your party members. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -76,7 +76,7 @@
 		</for>
 	</item>
 	<item id="10004" type="Weapon" name="Dynasty Dual Sword">
-		<!-- When enchanted, P. Atk. of a dualsword will increase more than that of a two-handed sword, blunt or fist weapon. When enchanted by 4 or more charges, Critical Rate will increase by 109, and MaxHP will increase by 10%. Enhances damage done to the target during PvP. -->
+		<!-- When enchanted, the P. Atk. of a dualsword will increase more than that of a two-handed sword, blunt or fist weapon. When enchanted by 4 or more charges, the critical rate will increase by 109, and the MaxHP will increase by 10%. Enhances damage done to the target during PvP. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -86,7 +86,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="74946000" />

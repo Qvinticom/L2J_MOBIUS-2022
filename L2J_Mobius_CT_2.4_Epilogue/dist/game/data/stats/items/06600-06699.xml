@@ -121,7 +121,7 @@
 		</for>
 	</item>
 	<item id="6604" type="Weapon" name="Demon Splinter - Critical Stun">
-		<!-- <Soul Crystal Enhancement>. Has a 27% chance of casting Stun on a critical attack. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Option>. Has a 27% chance of casting Stun on a critical attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_demon_splinter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -274,7 +274,7 @@
 		</for>
 	</item>
 	<item id="6609" type="Weapon" name="Arcana Mace - MP Regeneration">
-		<!-- <Soul Crystal Enhancement>. Increases MP Recovery Rate. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Enhancement>. Increases MP regeneration rate. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_arcana_mace_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -336,7 +336,7 @@
 		</for>
 	</item>
 	<item id="6611" type="Weapon" name="Infinity Blade">
-		<!-- Divine hero's weapon. During a critical attack, casts a P. Def.-decreasing de-buff on the target. Also causes damage shield, increases Max HP/Max MP/Max CP, and Shield Defense. Adds holy P. Atk. Increases damage inflicted during PvP. -->
+		<!-- on a critical attack, decreases one's P. Def. and increases de-buff casting ability, damage shield effect, Max HP, Max MP, Max CP, and shield defense power. Enhances damage to target during PvP. -->
 		<set name="icon" val="icon.weapon_the_sword_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -370,7 +370,7 @@
 		</for>
 	</item>
 	<item id="6612" type="Weapon" name="Infinity Cleaver">
-		<!-- Divine hero's weapon. During a critical attack, inflicts additional damage on the target. Also has a chance of causing skill reflect and increasing Max HP/Max CP and Critical Damage/Rate. Adds holy P. Atk. Increases damage inflicted during PvP. -->
+		<!-- Increases critical attack success rate/power, MaxHP, MaxCP and damage inflicted during PvP. Inflicts extra damage on critical attack. Reflects debuff attack back on enemy. -->
 		<set name="icon" val="icon.weapon_the_two_handed_sword_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -403,7 +403,7 @@
 		</for>
 	</item>
 	<item id="6613" type="Weapon" name="Infinity Axe">
-		<!-- Divine hero's weapon. During a critical attack, inflicts discord on the target. Also causes damage shield, and increases Max HP/Max MP/Max CP and shield rate. Adds holy P. Atk. Increases damage inflicted during PvP. -->
+		<!-- on a critical attack, it bestows one the ability to cause internal conflict to one's opponent. Damage shield function, Max HP, Max MP, Max CP as well as one's shield defense rate are increased. It also enhances damage to target during PvP. -->
 		<set name="icon" val="icon.weapon_the_axe_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -438,7 +438,7 @@
 		</for>
 	</item>
 	<item id="6614" type="Weapon" name="Infinity Rod">
-		<!-- Divine hero's weapon. Recovers HP 100%, increases Max MP/Max CP, increases spell Casting Spd., and increases MP Regeneration Rate during magic skill use. Adds holy P. Atk. Increases damage inflicted during PvP. -->
+		<!-- Recovers HP 100%, increases Max MP/Max CP, increases casting speed and increases MP recovery speed during magic skill use. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_the_mace_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -474,7 +474,7 @@
 		</for>
 	</item>
 	<item id="6615" type="Weapon" name="Infinity Crusher">
-		<!-- Divine hero's weapon. During a critical attack, inflicts stun on the target. Also has a chance of causing skill reflect and increasing Max HP/Max CP and Atk. Spd. Adds holy P. Atk. Increases damage inflicted during PvP. -->
+		<!-- Increases Max HP, Max CP, and Atk. Spd. Stuns a target when a critical attack occurs and has possibility of reflecting the skill back on the player. Enhances damage to target during PvP. -->
 		<set name="icon" val="icon.weapon_the_hammer_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -509,7 +509,7 @@
 		</for>
 	</item>
 	<item id="6616" type="Weapon" name="Infinity Scepter">
-		<!-- Divine hero's weapon. Recovers HP 100% and adds holy P. Atk. Has a chance of increasing Max MP, Max CP, M. Atk., and M. Critical Rate, and of decreasing MP consumption and Magic Cancel Rate while using a magic skill. Increases damage inflicted during PvP. -->
+		<!-- Recovers HP 100%, increases Max MP/Max CP, increases M. Atk., decreases MP consumption, increases magic critical rate, and decreases chance of magic cancel during magic skill use. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_the_staff_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -545,7 +545,7 @@
 		</for>
 	</item>
 	<item id="6617" type="Weapon" name="Infinity Stinger">
-		<!-- Divine hero's weapon. During a critical attack, inflicts silence on the target. Also causes Vampiric Rage, and increases success rate when using mortal type skills. Increases Max MP/Max CP, Atk. Spd. and MP Regeneration Rate. Adds holy P. Atk. Increases damage inflicted during PvP. -->
+		<!-- Increases Max MP, Max CP, Atk. Spd., MP regen rate, and the success rate of Mortal and Deadly Blow from the back of the target. Silences the target when a critical attack occurs and has Vampiric Rage effect. Enhances damage to target during PvP. -->
 		<set name="icon" val="icon.weapon_the_dagger_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -580,7 +580,7 @@
 		</for>
 	</item>
 	<item id="6618" type="Weapon" name="Infinity Fang">
-		<!-- Divine hero's weapon. During a critical attack, inflicts stun on the target. Also has a chance of causing skill reflect and increasing Max HP/Max MP/Max CP and evasion. Adds holy P. Atk. Increases damage inflicted during PvP. -->
+		<!-- Increases Max HP, Max MP, Max CP and evasion. Stuns a target when a critical attack occurs and has possibility of reflecting the skill back on the player at a certain probability rate. Enhances damage to target during PvP. -->
 		<set name="icon" val="icon.weapon_the_fist_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -615,7 +615,7 @@
 		</for>
 	</item>
 	<item id="6619" type="Weapon" name="Infinity Bow">
-		<!-- Divine hero's weapon. During a critical attack, inflicts slow on the target. Also causes Cheap Shot. Decreases reuse delay and increases Max MP/Max CP. Adds holy P. Atk. Increases damage inflicted during PvP. -->
+		<!-- Increases Max MP/Max CP and decreases re-use delay of a bow. Slows target when a critical attack occurs and has Cheap Shot effect. Enhances damage to target during PvP. -->
 		<set name="icon" val="icon.weapon_the_bow_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -652,7 +652,7 @@
 		</for>
 	</item>
 	<item id="6620" type="Weapon" name="Infinity Wing">
-		<!-- Divine hero's weapon. During a critical attack, inflicts physical skill silence on the target. Also has a chance of causing skill reflect and increasing Max HP/Max MP/Max CP and Critical Rate. Adds holy P. Atk. Increases damage inflicted during PvP. -->
+		<!-- When a critical attack occurs, increases Max HP, Max MP, Max CP and critical chance. Silences the target and has possibility of reflecting the skill back on the target. Enhances damage to target during PvP. -->
 		<set name="icon" val="icon.weapon_the_dualsword_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -673,7 +673,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="oncrit_skill" val="3586-1" />
-		<set name="item_skill" val="3585-1" /> <!-- Special Ability: Infinity Wing -->
+		<set name="item_skill" val="3585-1" /> <!-- Infinity Wing -->
 		<cond msgId="1518">
 			<player isHero="true" />
 		</cond>
@@ -686,7 +686,7 @@
 		</for>
 	</item>
 	<item id="6621" type="Weapon" name="Infinity Spear">
-		<!-- Divine hero's weapon. During a critical attack, inflicts cancel on the target. Also has a chance of causing skill reflect and increasing Max HP/Max CP, Atk. Spd., and Accuracy. Adds Holy P. Atk. Increases damage inflicted during PvP. -->
+		<!-- on a critical attack, increases Max HP, Max CP, Atk. Spd. and Accuracy. Casts dispel on a target and has possibility of reflecting the skill back on the target. Enhances damage to target during PvP. -->
 		<set name="icon" val="icon.weapon_the_pole_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -919,7 +919,7 @@
 		<set name="material" val="STEEL" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="6643" type="EtcItem" name="Old Golden Spice">
+	<item id="6643" type="EtcItem" name="Golden Spice">
 		<!-- Food for creatures on the Beast Farm. - When this food is fed to monsters that are capable of evolving, they will do so at various rates. Once a monster reaches a certain level of growth, it can then become a pet. This food also causes monsters to only drop adena. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -928,10 +928,10 @@
 		<set name="price" val="50" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="handler" val="ItemSkills" />
+		<set name="handler" val="BeastSpice" />
 		<set name="item_skill" val="2188-1" /> <!-- Golden Spice -->
 	</item>
-	<item id="6644" type="EtcItem" name="Old Crystal Spice">
+	<item id="6644" type="EtcItem" name="Crystal Spice">
 		<!-- Food for creatures on the Beast Farm. - When this food is fed to monsters that are capable of evolving, they will do so at various rates. Once a monster reaches a certain level of growth, it can then become a pet. This food also causes monsters to only drop materials. -->
 		<set name="icon" val="icon.etc_pouch_brown_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -940,7 +940,7 @@
 		<set name="price" val="50" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="handler" val="ItemSkills" />
+		<set name="handler" val="BeastSpice" />
 		<set name="item_skill" val="2189-1" /> <!-- Crystal Spice -->
 	</item>
 	<item id="6645" type="EtcItem" name="Beast Soulshot">
@@ -1031,7 +1031,6 @@
 		</cond>
 	</item>
 	<item id="6651" type="EtcItem" name="Noblesse Gate Pass">
-		<!-- Expired certificate. Can be purchased from a shop. -->
 		<set name="icon" val="icon.etc_nobless_teleport_coupon_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1042,7 +1041,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6652" type="EtcItem" name="Scroll: Protection of Valakas">
-		<!-- Fire dragon's protection amulet. Upon use, resistance against Fire dragon's front attack increases. -->
+		<!-- Fire dragon's protection amulet. Upon use, the Fire dragon's front attack resistance increases. -->
 		<set name="icon" val="icon.etc_blesscharm_ward_val_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1086,7 +1085,7 @@
 		<set name="item_skill" val="2232-1" /> <!-- Amulet: Slay Valakas -->
 	</item>
 	<item id="6656" type="Armor" name="Earring of Antharas">
-		<!-- MP +37, Resistance to Bleed +40%, Bleed attack rate +40%, vampiric rage effect, Resistance to Stun/Mental attacks +30%, Stun/Mental attack rate +30%, decreases MP consumption, and increases heal amount and Resistance to Earth. Only one effect is applied when two of the same earrings are equipped. -->
+		<!-- Produces the following effects: MP +31, increase resist bleed by 50%, increase bleed attack chance by 40%, increase healing effects, vampiric rage, 30% increase in stun/abnormal mental state resistance, increase stun/abnormal mental state attack chance by 30%, decrease MP consumption, and increase resistance to earth attacks. If a character wears two identical earrings, the effect of only one earring will be applied. -->
 		<set name="icon" val="icon.accessory_earring_of_antaras_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1105,7 +1104,7 @@
 		</for>
 	</item>
 	<item id="6657" type="Armor" name="Necklace of Valakas">
-		<!-- MP +50, Resistance to Sleep +40%, Sleep attack rate +40%, HP +445, decreases skill reuse delay, and increases P. Atk., M. Atk., Wild Magic effect, Damage Shield effect, and Resistance to Fire. -->
+		<!-- Produces the following effects: MP +42, HP +445, increase resistance to sleep by 40%, increase sleep attack chance by 40%, decrease in skill re-use delay, increase P. Atk. and M. Atk., Wild Magic effect, Damage Shield effect and increase resistance to Fire attacks. -->
 		<set name="icon" val="icon.accessory_necklace_of_valakas_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1124,7 +1123,7 @@
 		</for>
 	</item>
 	<item id="6658" type="Armor" name="Ring of Baium">
-		<!-- MP +21, Resistance to Poison +40%, Poison attack rate +40%, Resistance to Hold +30%, Hold attack rate +30%, increase Accuracy, Critical Damage, Atk. Spd. and Casting Spd. When equipped with two identical rings, the effect of only one ring will be applied. -->
+		<!-- Produces the following effects: MP +21, increase resistance to poison by 40%, increase poison attack chance by 40%, increase accuracy, increase critical damage, increase resistance to hold by 30%, increase hold attack chance by 30%, increase Atk. Spd. and Casting Spd. If a character wears two identical rings, the effect of only one ring will be applied. -->
 		<set name="icon" val="icon.accessory_ring_of_baium_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1143,7 +1142,7 @@
 		</for>
 	</item>
 	<item id="6659" type="Armor" name="Earring of Zaken">
-		<!-- MP+31 -->
+		<!-- Produces the following effects: MP +31, increase resistance to bleed by 30%, increase bleed attack chance by 30%, vampiric rage effect, increase healing effects, increase resistance to stun/abnormal mental state attack by 20%, and increase stun/abnormal mental state attack chance by 20%. If a character wears two identical earrings, the effect of only one earring will be applied. -->
 		<set name="icon" val="icon.accessory_earring_of_zaken_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1162,7 +1161,7 @@
 		</for>
 	</item>
 	<item id="6660" type="Armor" name="Ring of Queen Ant">
-		<!-- MP +21, Resistance to Poison +30%, Poison attack rate +30%, increase Accuracy, increase Critical Damage, Resistance to Hold +20%, and Hold attack rate +20%. When equipped with two identical rings, the effect of only one ring will be applied. -->
+		<!-- Produces the following effects: MP +21, increase resistance to poison by 30%, increase poison attack chance by 30%, increase accuracy, increase critical damage, increase resistance to hold by 20%, and increase hold attack chance by 20%. If a character wears two identical rings, the effect of only one ring will be applied -->
 		<set name="icon" val="icon.accessory_ring_of_queen_ant_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1181,7 +1180,7 @@
 		</for>
 	</item>
 	<item id="6661" type="Armor" name="Earring of Orfen">
-		<!-- MP +31, Resistance to Bleed +20%, chance of Bleed attack +20%, and increase healing effects. When eqiupped with two identical earrings, the effect of only one earring will be applied. -->
+		<!-- Produces the following effects: MP +31, increase resistance to bleed by 20%, increase bleed attack chance by 20%, and increase healing effects. If a character wears two identical earrings, the effect of only one earring will be applied -->
 		<set name="icon" val="icon.accessory_earring_of_orfen_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1200,7 +1199,7 @@
 		</for>
 	</item>
 	<item id="6662" type="Armor" name="Ring of Core">
-		<!-- MP +21, Resistance to Poison +20%, Poison attack rate +20%, and increase Accuracy. When eqiupped with two identical rings, the effect of only one ring will be applied. -->
+		<!-- Produces the following effects: MP +21, increase resistance to poison by 20%, increase poison attack chance by 20%, and increase accuracy. If a character wears two identical rings, the effect of only one ring will be applied -->
 		<set name="icon" val="icon.accessory_ring_of_core_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1235,68 +1234,92 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6665" type="EtcItem" name="Deluxe Chest Key - Grade 1">
-		<!-- An old, rusty key that cannot be used anymore. Can be sold at the shop. -->
+		<!-- Opens a level 1~19 treasure chest with a success rate of 100%. When opening a higher level treasure chest, the success rate will decrease. However, the success rate will be the same for receiving an item as a reward. -->
 		<set name="icon" val="icon.etc_old_key_i00" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
 		<set name="price" val="130" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="2229-1" /> <!-- Treasure Chest Key - 1 -->
 	</item>
 	<item id="6666" type="EtcItem" name="Deluxe Chest Key - Grade 2">
-		<!-- An old, rusty key that cannot be used anymore. Can be sold at the shop. -->
+		<!-- Opens a level 20~29 treasure chest with a success rate of 100%. When opening a higher level treasure chest, the success rate will decrease. However, the success rate will be the same for receiving an item as a reward. -->
 		<set name="icon" val="icon.etc_old_key_i00" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
 		<set name="price" val="200" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="2229-2" /> <!-- Treasure Chest Key - 1 -->
 	</item>
 	<item id="6667" type="EtcItem" name="Deluxe Chest Key - Grade 3">
-		<!-- An old, rusty key that cannot be used anymore. Can be sold at the shop. -->
+		<!-- Opens a level 30~39 treasure chest with a success rate of 100%. When opening a higher level treasure chest, the success rate will decrease. However, the success rate will be the same for receiving an item as a reward. -->
 		<set name="icon" val="icon.etc_old_key_i00" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
 		<set name="price" val="320" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="2229-3" /> <!-- Treasure Chest Key - 1 -->
 	</item>
 	<item id="6668" type="EtcItem" name="Deluxe Chest Key - Grade 4">
-		<!-- An old, rusty key that cannot be used anymore. Can be sold at the shop. -->
+		<!-- Opens a level 40~49 treasure chest with a success rate of 100%. When opening a higher level treasure chest, the success rate will decrease. However, the success rate will be the same for receiving an item as a reward. -->
 		<set name="icon" val="icon.etc_old_key_i00" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
 		<set name="price" val="560" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="2229-4" /> <!-- Treasure Chest Key - 1 -->
 	</item>
 	<item id="6669" type="EtcItem" name="Deluxe Chest Key - Grade 5">
-		<!-- An old, rusty key that cannot be used anymore. Can be sold at the shop. -->
+		<!-- Opens a level 50~59 treasure chest with a success rate of 100%. When opening a higher level treasure chest, the success rate will decrease. However, the success rate will be the same for receiving an item as a reward. -->
 		<set name="icon" val="icon.etc_old_key_i00" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
 		<set name="price" val="860" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="2229-5" /> <!-- Treasure Chest Key - 1 -->
 	</item>
 	<item id="6670" type="EtcItem" name="Deluxe Chest Key - Grade 6">
-		<!-- An old, rusty key that cannot be used anymore. Can be sold at the shop. -->
+		<!-- Opens a level 60~69 treasure chest with a success rate of 100%. When opening a higher level treasure chest, the success rate will decrease. However, the success rate will be the same for receiving an item as a reward. -->
 		<set name="icon" val="icon.etc_old_key_i00" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
 		<set name="price" val="1200" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="2229-6" /> <!-- Treasure Chest Key - 1 -->
 	</item>
 	<item id="6671" type="EtcItem" name="Deluxe Chest Key - Grade 7">
-		<!-- An old, rusty key that cannot be used anymore. Can be sold at the shop. -->
+		<!-- Opens a level 70~79 treasure chest with a success rate of 100%. When opening a higher level treasure chest, the success rate will decrease. However, the success rate will be the same for receiving an item as a reward. -->
 		<set name="icon" val="icon.etc_old_key_i00" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
 		<set name="price" val="1800" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="2229-7" /> <!-- Treasure Chest Key - 1 -->
 	</item>
 	<item id="6672" type="EtcItem" name="Deluxe Chest Key - Grade 8">
-		<!-- An old, rusty key that cannot be used anymore. Can be sold at the shop. -->
+		<!-- Opens a level 80~89 treasure chest with a success rate of 100%. When opening a higher level treasure chest, the success rate will decrease. However, the success rate will be the same for receiving an item as a reward. -->
 		<set name="icon" val="icon.etc_old_key_i00" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
 		<set name="price" val="2400" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="2229-8" /> <!-- Treasure Chest Key - 1 -->
 	</item>
 	<item id="6673" type="EtcItem" name="Festival Adena">
 		<!-- Currency used in the "2005 Lineage II Live" event. -->

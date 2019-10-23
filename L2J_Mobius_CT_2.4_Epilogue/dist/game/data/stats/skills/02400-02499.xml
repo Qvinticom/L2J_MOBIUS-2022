@@ -215,7 +215,7 @@
 		</for>
 	</skill>
 	<skill id="2413" levels="1" name="Vampiric Rage">
-		<!-- Temporarily bestows the ability to recover HP with some damage redirected to the enemy. It does not include damage from skill or ranged attacks. Effect 2. -->
+		<!-- Temporarily bestows the ability to recover HP with some damage redirected to an enemy. It does not include damage from skill or ranged attacks. Effect 2. -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="VAMPIRIC_ATTACK" />
@@ -506,7 +506,7 @@
 		<set name="icon" val="icon.skill0298" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="10274" /> <!-- Transformation Scroll: Rabbit -->
+		<set name="itemConsumeId" val="10274" /> <!-- Rabbit Transformation Scroll -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -528,7 +528,7 @@
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="10260" /> <!-- Alacrity Juice -->
+		<set name="itemConsumeId" val="10260" /> <!-- Haste Juice -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -566,7 +566,7 @@
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i02" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="10262" /> <!-- Critical Hit Juice -->
+		<set name="itemConsumeId" val="10262" /> <!-- Critical Power Juice -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -585,7 +585,7 @@
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i03" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="10263" /> <!-- Critical Rate Juice -->
+		<set name="itemConsumeId" val="10263" /> <!-- Critical Attack Juice -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -642,7 +642,7 @@
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i06" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="10266" /> <!-- M. Atk. Juice -->
+		<set name="itemConsumeId" val="10266" /> <!-- Magic Power Juice -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -672,7 +672,7 @@
 		</for>
 	</skill>
 	<skill id="2437" levels="1" name="Speed Juice">
-		<!-- Increases Speed by 60 for 33 minutes. -->
+		<!-- Increases moving speed by 60 for 33 minutes. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="SPEED_UP" />
@@ -710,7 +710,7 @@
 		</for>
 	</skill>
 	<skill id="2439" levels="1" name="MP Consumption Juice">
-		<!-- For 60 minutes, it decreases physical skill MP consumption by 10%, magic skill's MP consumption by 4%, and song/dance skill's MP consumption by 10%. -->
+		<!-- For 60 minutes, it decreases physical skill MP consumption by 20%, magic skill's MP consumption by 10%, and song/dance skill's MP consumption by 20%. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CHEAP_MAGIC" />
@@ -1655,7 +1655,7 @@
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="10588" /> <!-- Forgotten Scroll - Thorn Root -->
+		<set name="itemConsumeId" val="10588" /> <!-- Forgotten Scroll - Throne Root -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />

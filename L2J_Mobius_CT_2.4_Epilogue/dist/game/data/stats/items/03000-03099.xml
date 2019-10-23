@@ -464,11 +464,12 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3031" type="EtcItem" name="Spirit Ore">
-		<!-- A material used by Dwarves in item manufacturing. Also used to summon and maintain servitors. Can be sold in any shop. -->
+		<!-- A material used by Dwarves in item manufacturing. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_stone_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
+		<set name="weight" val="5" /> <!-- Epilogue Modification -->
 		<set name="price" val="400" />
 		<set name="is_stackable" val="true" />
 	</item>

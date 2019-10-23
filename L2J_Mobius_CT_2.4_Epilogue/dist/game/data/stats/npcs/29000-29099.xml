@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="29001" level="40" type="GrandBoss" name="Queen Ant">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="29003" count="6" respawnTime="10" weightPoint="1" />
@@ -68,7 +67,7 @@
 				<item id="1125" min="1" max="3" chance="20" /> <!-- Assault Boots -->
 				<item id="607" min="1" max="3" chance="20" /> <!-- Ogre Power Gauntlets -->
 				<item id="630" min="1" max="3" chance="20" /> <!-- Square Shield -->
-				<item id="955" min="1" max="3" chance="20" /> <!-- Scroll: Enchant Weapon (D-Grade) -->
+				<item id="955" min="1" max="3" chance="20" /> <!-- Scroll: Enchant Weapon (D) -->
 				<item id="57" min="140000" max="170000" chance="100" /> <!-- Adena -->
 				<item id="57" min="140000" max="170000" chance="100" /> <!-- Adena -->
 				<item id="57" min="140000" max="170000" chance="100" /> <!-- Adena -->
@@ -85,7 +84,6 @@
 		</collision>
 	</npc>
 	<npc id="29002" level="38" type="Monster" name="Queen Ant Larva">
-		<!-- Confirmed CT2.5 -->
 		<race>BUG</race>
 		<sex>MALE</sex>
 		<acquire sp="1" />
@@ -126,7 +124,6 @@
 		</collision>
 	</npc>
 	<npc id="29003" level="35" type="Monster" name="Nurse Ant">
-		<!-- Confirmed CT2.5 -->
 		<race>BUG</race>
 		<sex>MALE</sex>
 		<acquire sp="1" />
@@ -168,7 +165,6 @@
 		</collision>
 	</npc>
 	<npc id="29004" level="37" type="Monster" name="Guard Ant">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -214,8 +210,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="29005" level="39" type="Monster" name="Court Guard Ant">
-		<!-- Confirmed CT2.5 -->
+	<npc id="29005" level="39" type="Monster" name="Royal Guard Ant">
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -262,7 +257,6 @@
 		</collision>
 	</npc>
 	<npc id="29006" level="50" type="GrandBoss" name="Core">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="29008" count="3" respawnTime="360" weightPoint="1" />
@@ -325,16 +319,16 @@
 				<item id="2435" min="1" max="1" chance="14" /> <!-- Demon's Boots -->
 				<item id="2459" min="1" max="1" chance="14" /> <!-- Demon's Gloves -->
 				<item id="107" min="1" max="1" chance="14" /> <!-- Composite Shield -->
-				<item id="951" min="1" max="1" chance="14" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
+				<item id="951" min="1" max="1" chance="14" /> <!-- Scroll: Enchant Weapon (C) -->
 				<item id="57" min="100000" max="150000" chance="100" /> <!-- Adena -->
 				<item id="57" min="100000" max="150000" chance="100" /> <!-- Adena -->
 				<item id="57" min="100000" max="150000" chance="100" /> <!-- Adena -->
 				<item id="57" min="100000" max="150000" chance="100" /> <!-- Adena -->
 				<item id="57" min="100000" max="150000" chance="100" /> <!-- Adena -->
-				<item id="8744" min="2" max="4" chance="45" /> <!-- High-Grade Life Stone - Level 49 -->
-				<item id="8745" min="2" max="4" chance="40" /> <!-- High-Grade Life Stone - Level 52 -->
-				<item id="8754" min="1" max="2" chance="10" /> <!-- Top-Grade Life Stone - Level 49 -->
-				<item id="8755" min="1" max="2" chance="5" /> <!-- Top-Grade Life Stone - Level 52 -->
+				<item id="8744" min="2" max="4" chance="45" /> <!-- High-Grade Life Stone: level 49 -->
+				<item id="8745" min="2" max="4" chance="40" /> <!-- High-Grade Life Stone: level 52 -->
+				<item id="8754" min="1" max="2" chance="10" /> <!-- Top-Grade Life Stone: level 49 -->
+				<item id="8755" min="1" max="2" chance="5" /> <!-- Top-Grade Life Stone: level 52 -->
 				<item id="6662" min="1" max="1" chance="30" /> <!-- Ring of Core -->
 			</drop>
 		</dropLists>
@@ -344,7 +338,6 @@
 		</collision>
 	</npc>
 	<npc id="29007" level="50" type="Monster" name="Death Knight">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="74" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -393,7 +386,6 @@
 		</collision>
 	</npc>
 	<npc id="29008" level="55" type="Monster" name="Doom Wraith">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -444,7 +436,6 @@
 		</collision>
 	</npc>
 	<npc id="29009" level="47" type="Monster" name="Dicor">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -493,7 +484,6 @@
 		</collision>
 	</npc>
 	<npc id="29010" level="46" type="Monster" name="Validus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -540,7 +530,6 @@
 		</collision>
 	</npc>
 	<npc id="29011" level="49" type="Monster" name="Susceptor">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -589,7 +578,6 @@
 		</collision>
 	</npc>
 	<npc id="29012" level="48" type="Monster" name="Perum">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -641,7 +629,6 @@
 		</collision>
 	</npc>
 	<npc id="29013" level="45" type="Monster" name="Premo">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="135" />
 			<param name="MoveAroundSocial1" value="135" />
@@ -688,7 +675,6 @@
 		</collision>
 	</npc>
 	<npc id="29014" level="50" type="GrandBoss" name="Orfen">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -747,7 +733,7 @@
 				<item id="265" min="1" max="1" chance="3.5" /> <!-- Fisted Blade -->
 				<item id="283" min="1" max="1" chance="4.2" /> <!-- Akat Long Bow -->
 				<item id="303" min="1" max="1" chance="4.2" /> <!-- Widow Maker -->
-				<item id="854" min="1" max="2" chance="35" /> <!-- Earring of Seal -->
+				<item id="854" min="1" max="2" chance="35" /> <!-- Earring of Binding -->
 				<item id="917" min="1" max="2" chance="30" /> <!-- Necklace of Mermaid -->
 				<item id="885" min="1" max="2" chance="35" /> <!-- Ring of Ages -->
 				<item id="60" min="1" max="1" chance="10" /> <!-- Composite Armor -->
@@ -759,16 +745,16 @@
 				<item id="64" min="1" max="2" chance="10" /> <!-- Composite Boots -->
 				<item id="608" min="1" max="2" chance="10" /> <!-- Mithril Gauntlets -->
 				<item id="103" min="1" max="2" chance="10" /> <!-- Tower Shield -->
-				<item id="951" min="1" max="2" chance="10" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
+				<item id="951" min="1" max="2" chance="10" /> <!-- Scroll: Enchant Weapon (C) -->
 				<item id="57" min="110000" max="150000" chance="100" /> <!-- Adena -->
 				<item id="57" min="110000" max="150000" chance="100" /> <!-- Adena -->
 				<item id="57" min="110000" max="150000" chance="100" /> <!-- Adena -->
 				<item id="57" min="110000" max="150000" chance="100" /> <!-- Adena -->
 				<item id="57" min="110000" max="150000" chance="100" /> <!-- Adena -->
-				<item id="8744" min="2" max="4" chance="45" /> <!-- High-Grade Life Stone - Level 49 -->
-				<item id="8745" min="2" max="4" chance="40" /> <!-- High-Grade Life Stone - Level 52 -->
-				<item id="8754" min="1" max="2" chance="10" /> <!-- Top-Grade Life Stone - Level 49 -->
-				<item id="8755" min="1" max="2" chance="5" /> <!-- Top-Grade Life Stone - Level 52 -->
+				<item id="8744" min="2" max="4" chance="45" /> <!-- High-Grade Life Stone: level 49 -->
+				<item id="8745" min="2" max="4" chance="40" /> <!-- High-Grade Life Stone: level 52 -->
+				<item id="8754" min="1" max="2" chance="10" /> <!-- Top-Grade Life Stone: level 49 -->
+				<item id="8755" min="1" max="2" chance="5" /> <!-- Top-Grade Life Stone: level 52 -->
 				<item id="6661" min="1" max="1" chance="30" /> <!-- Earring of Orfen -->
 			</drop>
 		</dropLists>
@@ -778,7 +764,6 @@
 		</collision>
 	</npc>
 	<npc id="29015" level="48" type="Monster" name="Raikel">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -825,7 +810,6 @@
 		</collision>
 	</npc>
 	<npc id="29016" level="49" type="Monster" name="Raikel Leos">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -872,7 +856,6 @@
 		</collision>
 	</npc>
 	<npc id="29017" level="48" type="Monster" name="Riba">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="40" />
 			<param name="MoveAroundSocial1" value="40" />
@@ -919,7 +902,6 @@
 		</collision>
 	</npc>
 	<npc id="29018" level="49" type="Monster" name="Riba Iren">
-		<!-- Confirmed CT2.5 -->
 		<race>BUG</race>
 		<sex>FEMALE</sex>
 		<acquire sp="1" />
@@ -961,7 +943,6 @@
 		</collision>
 	</npc>
 	<npc id="29019" level="79" type="GrandBoss" name="Antharas">
-		<!-- Confirmed CT2.5 -->
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<acquire exp="262720918" sp="29116376" raidPoints="30780" />
@@ -1007,7 +988,7 @@
 		<ai type="BALANCED" aggroRange="4096" clanHelpRange="300" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="8620" min="10" max="30" chance="50" /> <!-- Ancient Book: Divine Inspiration (Manuscript) -->
+				<item id="8620" min="10" max="30" chance="50" /> <!-- Ancient Book - Divine Inspiration (Manuscript) -->
 				<item id="13893" min="1" max="2" chance="50" /> <!-- Sealed Holy Spirit's Cloak -->
 				<item id="80" min="1" max="2" chance="25" /> <!-- Tallum Blade -->
 				<item id="98" min="1" max="2" chance="25" /> <!-- Halberd -->
@@ -1051,7 +1032,7 @@
 				<item id="5304" min="1" max="3" chance="25" /> <!-- Sealed Tallum Tunic -->
 				<item id="5311" min="1" max="3" chance="35" /> <!-- Sealed Armor of Nightmare -->
 				<item id="5320" min="1" max="3" chance="35" /> <!-- Sealed Leather Armor of Nightmare -->
-				<item id="5326" min="1" max="3" chance="30" /> <!-- Sealed Robe of Nightmare -->
+				<item id="5326" min="1" max="3" chance="30" /> <!-- Sealed Nightmare Robe -->
 				<item id="5293" min="1" max="3" chance="25" /> <!-- Sealed Tallum Plate Armor -->
 				<item id="5301" min="1" max="3" chance="25" /> <!-- Sealed Tallum Leather Armor -->
 				<item id="5308" min="1" max="3" chance="25" /> <!-- Sealed Dark Crystal Robe -->
@@ -1089,7 +1070,7 @@
 				<item id="6679" min="1" max="1" chance="34" /> <!-- Sealed Imperial Crusader Helmet -->
 				<item id="6683" min="1" max="1" chance="33" /> <!-- Sealed Draconic Leather Helmet -->
 				<item id="6687" min="1" max="1" chance="33" /> <!-- Sealed Major Arcana Circlet -->
-				<item id="729" min="1" max="19" chance="100" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
+				<item id="729" min="1" max="19" chance="100" /> <!-- Scroll: Enchant Weapon (A) -->
 				<item id="1538" min="1" max="59" chance="100" /> <!-- Blessed Scroll of Escape -->
 				<item id="3936" min="1" max="39" chance="100" /> <!-- Blessed Scroll of Resurrection -->
 				<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
@@ -1108,7 +1089,6 @@
 		</collision>
 	</npc>
 	<npc id="29020" level="75" type="GrandBoss" name="Baium">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="10253400" sp="1081544" raidPoints="13008" />
@@ -1146,8 +1126,7 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="6658" min="1" max="1" chance="100" /> <!-- Ring of Baium -->
-				<item id="8620" min="5" max="15" chance="100" /> <!-- Ancient Book: Divine Inspiration (Manuscript) -->
+				<item id="8620" min="5" max="15" chance="100" /> <!-- Ancient Book - Divine Inspiration (Manuscript) -->
 				<item id="80" min="1" max="1" chance="6" /> <!-- Tallum Blade -->
 				<item id="98" min="1" max="1" chance="6" /> <!-- Halberd -->
 				<item id="288" min="1" max="1" chance="6" /> <!-- Carnage Bow -->
@@ -1167,10 +1146,11 @@
 				<item id="6371" min="1" max="1" chance="1.2" /> <!-- Demon Splinter -->
 				<item id="6579" min="1" max="1" chance="1.2" /> <!-- Arcana Mace -->
 				<item id="6372" min="1" max="1" chance="1.2" /> <!-- Heaven's Divider -->
-				<item id="8751" min="1" max="2" chance="45" /> <!-- High-Grade Life Stone - Level 70 -->
-				<item id="8752" min="1" max="2" chance="40" /> <!-- High-Grade Life Stone - Level 76 -->
-				<item id="8761" min="1" max="1" chance="10" /> <!-- Top-Grade Life Stone - Level 70 -->
-				<item id="8762" min="1" max="1" chance="5" /> <!-- Top-Grade Life Stone - Level 76 -->
+				<item id="8751" min="1" max="2" chance="45" /> <!-- High-Grade Life Stone: level 70 -->
+				<item id="8752" min="1" max="2" chance="40" /> <!-- High-Grade Life Stone: level 76 -->
+				<item id="8761" min="1" max="1" chance="10" /> <!-- Top-Grade Life Stone: level 70 -->
+				<item id="8762" min="1" max="1" chance="5" /> <!-- Top-Grade Life Stone: level 76 -->
+				<item id="6658" min="1" max="1" chance="100" /> <!-- Ring of Baium -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -1179,10 +1159,9 @@
 		</collision>
 	</npc>
 	<npc id="29021" level="74" type="Monster" name="Archangel">
-		<!-- Confirmed CT2.5 -->
 		<race>DIVINE</race>
 		<sex>MALE</sex>
-		<equipment rhand="21738" /> <!-- rhand: Winged Spear - Event -->
+		<equipment rhand="93" /> <!-- rhand: Winged Spear -->
 		<acquire exp="6571" sp="343" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="186915" hpRegen="158" mp="1475.0" mpRegen="3" />
@@ -1223,7 +1202,6 @@
 		</collision>
 	</npc>
 	<npc id="29022" level="60" type="GrandBoss" name="Zaken">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="4879745" sp="423589" raidPoints="10448" />
@@ -1289,14 +1267,14 @@
 				<item id="2390" min="1" max="1" chance="10" /> <!-- Avadon Leather Armor -->
 				<item id="2406" min="1" max="1" chance="10" /> <!-- Avadon Robe -->
 				<item id="503" min="1" max="1" chance="3" /> <!-- Zubei's Helmet -->
-				<item id="554" min="1" max="1" chance="3" /> <!-- Sealed Zubei's Boots -->
-				<item id="600" min="1" max="1" chance="3" /> <!-- Sealed Avadon Boots -->
-				<item id="612" min="1" max="1" chance="3" /> <!-- Sealed Zubei's Gauntlets -->
+				<item id="554" min="1" max="1" chance="3" /> <!-- Zubei's Boots -->
+				<item id="600" min="1" max="1" chance="3" /> <!-- Avadon Boots -->
+				<item id="612" min="1" max="1" chance="3" /> <!-- Zubei's Gauntlets -->
 				<item id="633" min="1" max="1" chance="3" /> <!-- Zubei's Shield -->
 				<item id="673" min="1" max="1" chance="3" /> <!-- Avadon Shield -->
 				<item id="2415" min="1" max="1" chance="3" /> <!-- Avadon Circlet -->
-				<item id="2464" min="1" max="1" chance="3" /> <!-- Sealed Avadon Gloves -->
-				<item id="947" min="1" max="1" chance="6" /> <!-- Scroll: Enchant Weapon (B-Grade) -->
+				<item id="2464" min="1" max="1" chance="3" /> <!-- Avadon Gloves -->
+				<item id="947" min="1" max="1" chance="6" /> <!-- Scroll: Enchant Weapon (B) -->
 				<item id="57" min="180000" max="220000" chance="100" /> <!-- Adena -->
 				<item id="57" min="180000" max="220000" chance="100" /> <!-- Adena -->
 				<item id="57" min="180000" max="220000" chance="100" /> <!-- Adena -->
@@ -1304,13 +1282,13 @@
 				<item id="57" min="180000" max="220000" chance="100" /> <!-- Adena -->
 				<item id="57" min="180000" max="220000" chance="100" /> <!-- Adena -->
 				<item id="57" min="180000" max="220000" chance="100" /> <!-- Adena -->
-				<item id="6659" min="1" max="1" chance="85" /> <!-- Earring of Zaken -->
-				<item id="8747" min="2" max="4" chance="45" /> <!-- High-Grade Life Stone - Level 58 -->
-				<item id="8748" min="2" max="4" chance="40" /> <!-- High-Grade Life Stone - Level 61 -->
-				<item id="8757" min="1" max="2" chance="10" /> <!-- Top-Grade Life Stone - Level 58 -->
-				<item id="8758" min="1" max="2" chance="5" /> <!-- Top-Grade Life Stone - Level 61 -->
+				<item id="6659" min="1" max="1" chance="85" /> <!-- Zaken's Earring -->
+				<item id="8747" min="2" max="4" chance="45" /> <!-- High-Grade Life Stone: level 58 -->
+				<item id="8748" min="2" max="4" chance="40" /> <!-- High-Grade Life Stone: level 61 -->
+				<item id="8757" min="1" max="2" chance="10" /> <!-- Top-Grade Life Stone: level 58 -->
+				<item id="8758" min="1" max="2" chance="5" /> <!-- Top-Grade Life Stone: level 61 -->
 				<item id="8922" min="1" max="1" chance="1" /> <!-- Pirate Hat -->
-				<item id="10295" min="1" max="1" chance="1" /> <!-- Transformation Sealbook: Zaken -->
+				<item id="10295" min="1" max="1" chance="1" /> <!-- Transform Sealbook - Zaken -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -1319,7 +1297,6 @@
 		</collision>
 	</npc>
 	<npc id="29023" level="58" type="Monster" name="Doll Blader">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="50" />
 			<param name="MoveAroundSocial1" value="50" />
@@ -1362,7 +1339,7 @@
 		<ai aggroRange="300" clanHelpRange="300" />
 		<dropLists>
 			<drop>
-				<item id="1061" min="4" max="8" chance="20" /> <!-- Greater Healing Potion -->
+				<item id="1061" min="4" max="8" chance="20" /> <!-- Healing Potion -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -1370,8 +1347,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="29024" level="59" type="Monster" name="Veil Master">
-		<!-- Confirmed CT2.5 -->
+	<npc id="29024" level="59" type="Monster" name="Vale master">
 		<parameters>
 			<param name="MoveAroundSocial" value="114" />
 			<param name="MoveAroundSocial1" value="114" />
@@ -1413,7 +1389,7 @@
 		<ai aggroRange="300" clanHelpRange="300" />
 		<dropLists>
 			<drop>
-				<item id="1061" min="4" max="8" chance="20" /> <!-- Greater Healing Potion -->
+				<item id="1061" min="4" max="8" chance="20" /> <!-- Healing Potion -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -1422,7 +1398,6 @@
 		</collision>
 	</npc>
 	<npc id="29025" level="75" type="Npc" name="Baium">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
@@ -1458,7 +1433,6 @@
 		</collision>
 	</npc>
 	<npc id="29026" level="60" type="Monster" name="Pirate Zombie Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -1498,7 +1472,7 @@
 		<ai aggroRange="300" clanHelpRange="300" />
 		<dropLists>
 			<drop>
-				<item id="1061" min="4" max="8" chance="20" /> <!-- Greater Healing Potion -->
+				<item id="1061" min="4" max="8" chance="20" /> <!-- Healing Potion -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -1507,7 +1481,6 @@
 		</collision>
 	</npc>
 	<npc id="29027" level="57" type="Monster" name="Pirate Zombie">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -1547,7 +1520,7 @@
 		<ai aggroRange="300" clanHelpRange="300" />
 		<dropLists>
 			<drop>
-				<item id="1061" min="4" max="8" chance="20" /> <!-- Greater Healing Potion -->
+				<item id="1061" min="4" max="8" chance="20" /> <!-- Healing Potion -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -1555,8 +1528,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="29028" level="85" type="GrandBoss" name="Valakas" title="Fire Dragon">
-		<!-- Confirmed CT2.5 -->
+	<npc id="29028" level="85" type="GrandBoss" name="Valakas">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<acquire exp="296105299" sp="34817181" raidPoints="38248" />
@@ -1598,59 +1570,104 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="8620" min="10" max="30" chance="50" /> <!-- Ancient Book: Divine Inspiration (Manuscript) -->
+				<item id="8620" min="5" max="15" chance="100" /> <!-- Ancient Book - Divine Inspiration (Manuscript) -->
 				<item id="13893" min="1" max="2" chance="50" /> <!-- Sealed Holy Spirit's Cloak -->
-				<item id="15560" min="1" max="1" chance="6.37" /> <!-- Vigwik Axe -->
-				<item id="15561" min="1" max="1" chance="6.363" /> <!-- Devilish Maul -->
-				<item id="15562" min="1" max="1" chance="6.363" /> <!-- Feather Eye Blade -->
-				<item id="15563" min="1" max="1" chance="6.363" /> <!-- Octo Claw -->
-				<item id="15564" min="1" max="1" chance="6.363" /> <!-- Doubletop Spear -->
-				<item id="15565" min="1" max="1" chance="6.363" /> <!-- Rising Star -->
-				<item id="15566" min="1" max="1" chance="6.363" /> <!-- Black Visage -->
-				<item id="15567" min="1" max="1" chance="6.363" /> <!-- Veniplant Sword -->
-				<item id="15568" min="1" max="1" chance="6.363" /> <!-- Skull Carnium Bow -->
-				<item id="15558" min="1" max="1" chance="6.363" /> <!-- Periel Sword -->
-				<item id="15559" min="1" max="1" chance="6.363" /> <!-- Skull Edge -->
-				<item id="15544" min="1" max="1" chance="4.545" /> <!-- Eternal Core Sword -->
-				<item id="15545" min="1" max="1" chance="4.545" /> <!-- Mamba Edge -->
-				<item id="15546" min="1" max="1" chance="4.545" /> <!-- Eversor Mace -->
-				<item id="15547" min="1" max="1" chance="4.545" /> <!-- Contristo Hammer -->
-				<item id="15548" min="1" max="1" chance="4.545" /> <!-- Lava Saw -->
-				<item id="15549" min="1" max="1" chance="4.545" /> <!-- Jade Claw -->
-				<item id="15550" min="1" max="1" chance="4.545" /> <!-- Demitelum -->
-				<item id="15551" min="1" max="1" chance="4.545" /> <!-- Sacredium -->
-				<item id="15552" min="1" max="1" chance="4.545" /> <!-- Cyclic Cane -->
-				<item id="15553" min="1" max="1" chance="4.545" /> <!-- Archangel Sword -->
-				<item id="15554" min="1" max="1" chance="4.545" /> <!-- Recurve Thorne Bow -->
-				<item id="15743" min="1" max="1" chance="9.1" /> <!-- Sealed Vorpal Helmet -->
-				<item id="15744" min="1" max="1" chance="9.09" /> <!-- Sealed Vorpal Leather Helmet -->
-				<item id="15745" min="1" max="1" chance="9.09" /> <!-- Sealed Vorpal Circlet -->
-				<item id="15752" min="1" max="1" chance="9.09" /> <!-- Sealed Vorpal Gauntlet -->
-				<item id="15753" min="1" max="1" chance="9.09" /> <!-- Sealed Vorpal Leather Gloves -->
-				<item id="15754" min="1" max="1" chance="9.09" /> <!-- Sealed Vorpal Gloves -->
-				<item id="15755" min="1" max="1" chance="9.09" /> <!-- Sealed Vorpal Boots -->
-				<item id="15756" min="1" max="1" chance="9.09" /> <!-- Sealed Vorpal Leather Boots -->
-				<item id="15757" min="1" max="1" chance="9.09" /> <!-- Sealed Vorpal Shoes -->
-				<item id="15758" min="1" max="1" chance="9.09" /> <!-- Sealed Vorpal Shield -->
-				<item id="15759" min="1" max="1" chance="9.09" /> <!-- Sealed Vorpal Sigil -->
-				<item id="15746" min="1" max="1" chance="16.66" /> <!-- Sealed Vorpal Breastplate -->
-				<item id="15747" min="1" max="1" chance="16.66" /> <!-- Sealed Vorpal Leather Breastplate -->
-				<item id="15748" min="1" max="1" chance="16.66" /> <!-- Sealed Vorpal Tunic -->
-				<item id="15749" min="1" max="1" chance="16.7" /> <!-- Sealed Vorpal Gaiter -->
-				<item id="15750" min="1" max="1" chance="16.66" /> <!-- Sealed Vorpal Leather Legging -->
-				<item id="15751" min="1" max="1" chance="16.66" /> <!-- Sealed Vorpal Stockings -->
-				<item id="15763" min="1" max="1" chance="16.7" /> <!-- Sealed Vorpal Ring -->
-				<item id="15764" min="1" max="1" chance="16.65" /> <!-- Sealed Vorpal Earring -->
-				<item id="15765" min="1" max="1" chance="16.65" /> <!-- Sealed Vorpal Necklace -->
-				<item id="959" min="1" max="19" chance="100" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="80" min="1" max="2" chance="5" /> <!-- Tallum Blade -->
+				<item id="98" min="1" max="2" chance="5" /> <!-- Halberd -->
+				<item id="269" min="1" max="2" chance="5" /> <!-- Blood Tornado -->
+				<item id="2504" min="1" max="2" chance="5" /> <!-- Meteor Shower -->
+				<item id="150" min="1" max="2" chance="5" /> <!-- Elemental Sword -->
+				<item id="212" min="1" max="2" chance="5" /> <!-- Dasparion's Staff -->
+				<item id="235" min="1" max="2" chance="5" /> <!-- Bloody Orchid -->
+				<item id="288" min="1" max="2" chance="5" /> <!-- Carnage Bow -->
+				<item id="81" min="1" max="2" chance="5" /> <!-- Dragon Slayer -->
+				<item id="151" min="1" max="2" chance="5" /> <!-- Sword of Miracles -->
+				<item id="164" min="1" max="2" chance="5" /> <!-- Elysian -->
+				<item id="2500" min="1" max="2" chance="5" /> <!-- Dark Legion's Edge -->
+				<item id="213" min="1" max="2" chance="4" /> <!-- Branch of the Mother Tree -->
+				<item id="236" min="1" max="2" chance="4" /> <!-- Soul Separator -->
+				<item id="270" min="1" max="2" chance="4" /> <!-- Dragon Grinder -->
+				<item id="289" min="1" max="2" chance="4" /> <!-- Soul Bow -->
+				<item id="305" min="1" max="2" chance="4" /> <!-- Tallum Glaive -->
+				<item id="6364" min="1" max="1" chance="3.4" /> <!-- Forgotten Blade -->
+				<item id="6365" min="1" max="1" chance="3.4" /> <!-- Basalt Battlehammer -->
+				<item id="6369" min="1" max="1" chance="3.4" /> <!-- Dragon Hunter Axe -->
+				<item id="6370" min="1" max="1" chance="3.4" /> <!-- Saint Spear -->
+				<item id="6372" min="1" max="1" chance="3.2" /> <!-- Heaven's Divider -->
+				<item id="6580" min="1" max="1" chance="3.2" /> <!-- Tallum Blade*Dark Legion's Edge -->
+				<item id="6366" min="1" max="1" chance="4" /> <!-- Imperial Staff -->
+				<item id="6367" min="1" max="1" chance="4" /> <!-- Angel Slayer -->
+				<item id="6371" min="1" max="1" chance="4" /> <!-- Demon Splinter -->
+				<item id="6579" min="1" max="1" chance="4" /> <!-- Arcana Mace -->
+				<item id="7575" min="1" max="1" chance="4" /> <!-- Draconic Bow -->
+				<item id="6326" min="1" max="5" chance="6" /> <!-- Sealed Majestic Necklace -->
+				<item id="6327" min="1" max="5" chance="7" /> <!-- Sealed Majestic Earring -->
+				<item id="6328" min="1" max="5" chance="7" /> <!-- Sealed Majestic Ring -->
+				<item id="6323" min="1" max="5" chance="6" /> <!-- Sealed Phoenix Necklace -->
+				<item id="6324" min="1" max="5" chance="7" /> <!-- Sealed Phoenix Earring -->
+				<item id="6325" min="1" max="5" chance="7" /> <!-- Sealed Phoenix Ring -->
+				<item id="6724" min="1" max="1" chance="7" /> <!-- Sealed Tateossian Earring -->
+				<item id="6725" min="1" max="1" chance="7" /> <!-- Sealed Tateossian Ring -->
+				<item id="6726" min="1" max="1" chance="6" /> <!-- Sealed Tateossian Necklace -->
+				<item id="5287" min="1" max="3" chance="10" /> <!-- Sealed Dark Crystal breastplate -->
+				<item id="5297" min="1" max="3" chance="5" /> <!-- Sealed Dark Crystal Leather Armor -->
+				<item id="5304" min="1" max="3" chance="5" /> <!-- Sealed Tallum Tunic -->
+				<item id="5311" min="1" max="3" chance="7" /> <!-- Sealed Armor of Nightmare -->
+				<item id="5320" min="1" max="3" chance="7" /> <!-- Sealed Leather Armor of Nightmare -->
+				<item id="5326" min="1" max="3" chance="6" /> <!-- Sealed Nightmare Robe -->
+				<item id="5293" min="1" max="3" chance="5" /> <!-- Sealed Tallum Plate Armor -->
+				<item id="5301" min="1" max="3" chance="5" /> <!-- Sealed Tallum Leather Armor -->
+				<item id="5308" min="1" max="3" chance="5" /> <!-- Sealed Dark Crystal Robe -->
+				<item id="5316" min="1" max="3" chance="1.6" /> <!-- Sealed Majestic Plate Armor -->
+				<item id="5323" min="1" max="3" chance="1.6" /> <!-- Sealed Majestic Leather Armor -->
+				<item id="5329" min="1" max="3" chance="1.8" /> <!-- Sealed Majestic Robe -->
+				<item id="5288" min="1" max="3" chance="7" /> <!-- Sealed Dark Crystal Gaiters -->
+				<item id="5298" min="1" max="3" chance="7" /> <!-- Sealed Dark Crystal Leggings -->
+				<item id="5305" min="1" max="3" chance="6" /> <!-- Sealed Tallum Stockings -->
+				<item id="6674" min="1" max="1" chance="3" /> <!-- Sealed Imperial Crusader Breastplate -->
+				<item id="6675" min="1" max="1" chance="3" /> <!-- Sealed Imperial Crusader Gaiters -->
+				<item id="6680" min="1" max="1" chance="7" /> <!-- Sealed Draconic Leather Armor -->
+				<item id="6684" min="1" max="1" chance="7" /> <!-- Sealed Major Arcana Robe -->
+				<item id="5289" min="1" max="3" chance="5" /> <!-- Sealed Dark Crystal Helmet -->
+				<item id="5294" min="1" max="3" chance="5" /> <!-- Sealed Tallum Helmet -->
+				<item id="5312" min="1" max="3" chance="5" /> <!-- Sealed Helm of Nightmare -->
+				<item id="5317" min="1" max="3" chance="5" /> <!-- Sealed Majestic Circlet -->
+				<item id="5291" min="1" max="3" chance="5" /> <!-- Sealed Dark Crystal Boots -->
+				<item id="5296" min="1" max="3" chance="5" /> <!-- Sealed Tallum Boots -->
+				<item id="5314" min="1" max="3" chance="5" /> <!-- Sealed Boots of Nightmare -->
+				<item id="5319" min="1" max="3" chance="5" /> <!-- Sealed Majestic Boots -->
+				<item id="5290" min="1" max="3" chance="5" /> <!-- Sealed Dark Crystal Gloves -->
+				<item id="5295" min="1" max="3" chance="5" /> <!-- Sealed Tallum Gloves -->
+				<item id="5313" min="1" max="3" chance="5" /> <!-- Sealed Gauntlets of Nightmare -->
+				<item id="5318" min="1" max="3" chance="5" /> <!-- Sealed Majestic Gauntlets -->
+				<item id="5292" min="1" max="3" chance="8" /> <!-- Sealed Dark Crystal Shield -->
+				<item id="5315" min="1" max="3" chance="8" /> <!-- Sealed Shield of Nightmare -->
+				<item id="6678" min="1" max="1" chance="4" /> <!-- Sealed Imperial Crusader Shield -->
+				<item id="6676" min="1" max="1" chance="6.8" /> <!-- Sealed Imperial Crusader Gauntlet -->
+				<item id="6681" min="1" max="1" chance="6.6" /> <!-- Sealed Draconic Leather Glove -->
+				<item id="6685" min="1" max="1" chance="6.6" /> <!-- Sealed Major Arcana Glove -->
+				<item id="6677" min="1" max="1" chance="6.8" /> <!-- Sealed Imperial Crusader Boots -->
+				<item id="6682" min="1" max="1" chance="6.6" /> <!-- Sealed Draconic Leather Boots -->
+				<item id="6686" min="1" max="1" chance="6.6" /> <!-- Sealed Major Arcana Boots -->
+				<item id="6679" min="1" max="1" chance="6.8" /> <!-- Sealed Imperial Crusader Helmet -->
+				<item id="6683" min="1" max="1" chance="6.6" /> <!-- Sealed Draconic Leather Helmet -->
+				<item id="6687" min="1" max="1" chance="6.6" /> <!-- Sealed Major Arcana Circlet -->
+				<item id="729" min="1" max="19" chance="100" /> <!-- Scroll: Enchant Weapon (A) -->
 				<item id="1538" min="1" max="59" chance="100" /> <!-- Blessed Scroll of Escape -->
 				<item id="3936" min="1" max="39" chance="100" /> <!-- Blessed Scroll of Resurrection -->
 				<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
+				<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
+				<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
+				<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
+				<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
+				<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
+				<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
+				<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
 				<item id="57" min="2000000" max="6000000" chance="100" /> <!-- Adena -->
-				<item id="16162" min="2" max="4" chance="45" /> <!-- High-Grade Life Stone - Level 85 -->
-				<item id="16166" min="2" max="4" chance="40" /> <!-- High-Grade Life Stone - Level 86 -->
-				<item id="16163" min="1" max="2" chance="10" /> <!-- Top-Grade Life Stone - Level 85 -->
-				<item id="16167" min="1" max="2" chance="5" /> <!-- Top-Grade Life Stone - Level 86 -->
+				<item id="8751" min="1" max="2" chance="45" /> <!-- High-Grade Life Stone: level 70 -->
+				<item id="8752" min="1" max="2" chance="40" /> <!-- High-Grade Life Stone: level 76 -->
+				<item id="8761" min="1" max="1" chance="10" /> <!-- Top-Grade Life Stone: level 70 -->
+				<item id="8762" min="1" max="1" chance="5" /> <!-- Top-Grade Life Stone: level 76 -->
 				<item id="6657" min="1" max="1" chance="100" /> <!-- Necklace of Valakas -->
 				<item id="10549" min="1" max="1" chance="33" /> <!-- Forgotten Scroll - Protection of Rune -->
 				<item id="10550" min="1" max="1" chance="33" /> <!-- Forgotten Scroll - Protection of Elemental -->
@@ -1662,14 +1679,7 @@
 			<height normal="335" />
 		</collision>
 	</npc>
-	<npc id="29029" level="85" type="Monster" name="Lavasaurus Alpha">
-		<!-- Confirmed CT2.5 -->
-		<parameters>
-			<param name="SkillRange" value="500" />
-			<skill name="DDMagic" id="6656" level="1" /> <!-- Lavasaurus Firstborn Attack -->
-			<skill name="DDMagic2" id="6675" level="1" /> <!-- Lavasaurus Firstborn Attack -->
-			<skill name="Skill_Heal" id="6657" level="1" /> <!-- Lavasaurus Firstborn Heal -->
-		</parameters>
+	<npc id="29029" level="85" type="Monster" name="Elderly Lavasaurus" title="Family of Valakas">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1699,9 +1709,6 @@
 			<skill id="4415" level="10" /> <!-- Bows -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="5462" level="1" /> <!-- Fire Attacks -->
-			<skill id="6656" level="1" /> <!-- Lavasaurus Firstborn Attack -->
-			<skill id="6657" level="1" /> <!-- Lavasaurus Firstborn Heal -->
-			<skill id="6675" level="1" /> <!-- Lavasaurus Firstborn Attack -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="1000" clanHelpRange="300">
@@ -1715,7 +1722,6 @@
 		</collision>
 	</npc>
 	<npc id="29030" level="84" type="RaidBoss" name="Fenril Hound Kerinne" title="Family of Valakas">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="29031" count="2" respawnTime="360" weightPoint="1" /> <!-- Kerinne's Ifrit -->
@@ -1774,7 +1780,6 @@
 		</collision>
 	</npc>
 	<npc id="29031" level="84" type="Monster" name="Kerinne's Ifrit">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4209" level="9" /> <!-- BOSS Heal -->
 			<skill name="SelfRangeBuff_a" id="4213" level="9" /> <!-- BOSS Haste -->
@@ -1821,7 +1826,6 @@
 		</collision>
 	</npc>
 	<npc id="29032" level="84" type="Monster" name="Kerinne's Golem">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1862,7 +1866,6 @@
 		</collision>
 	</npc>
 	<npc id="29033" level="84" type="RaidBoss" name="Fenril Hound Freki" title="Family of Valakas">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="29034" count="3" respawnTime="360" weightPoint="1" /> <!-- Freki's Ifrit -->
@@ -1921,7 +1924,6 @@
 		</collision>
 	</npc>
 	<npc id="29034" level="84" type="Monster" name="Freki's Ifrit">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic_a" id="4193" level="9" /> <!-- BOSS Life Drain -->
 			<skill name="Debuff_a" id="4203" level="9" /> <!-- Decrease Speed -->
@@ -1968,7 +1970,6 @@
 		</collision>
 	</npc>
 	<npc id="29035" level="84" type="Monster" name="Freki's Golem">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -2009,7 +2010,6 @@
 		</collision>
 	</npc>
 	<npc id="29036" level="84" type="RaidBoss" name="Fenril Hound Uruz" title="Family of Valakas">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="SelfRangeCancel_a" id="4177" level="9" /> <!-- BOSS Cancel Magic -->
 			<skill name="SelfBuff_a" id="4175" level="9" /> <!-- BOSS Haste -->
@@ -2070,7 +2070,6 @@
 		</collision>
 	</npc>
 	<npc id="29037" level="84" type="RaidBoss" name="Fenril Hound Kinaz" title="Family of Valakas">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="29038" count="3" respawnTime="360" weightPoint="1" /> <!-- Kinaz's Ifrit -->
@@ -2133,7 +2132,6 @@
 		</collision>
 	</npc>
 	<npc id="29038" level="84" type="Monster" name="Kinaz's Ifrit">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic_a" id="4191" level="9" /> <!-- BOSS Windstrike -->
 			<skill name="Debuff_a" id="4201" level="9" /> <!-- Sleep -->
@@ -2180,7 +2178,6 @@
 		</collision>
 	</npc>
 	<npc id="29039" level="84" type="Monster" name="Kinaz's Ifrit">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4210" level="9" /> <!-- BOSS Chant of Life -->
 			<skill name="SelfRangeBuff_a" id="4212" level="9" /> <!-- BOSS Shield -->
@@ -2227,7 +2224,6 @@
 		</collision>
 	</npc>
 	<npc id="29040" level="84" type="RaidBoss" name="Wings of Flame, Ixion" title="Gatekeeper of Valakas">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="29041" count="1" respawnTime="30" weightPoint="1" /> <!-- Inferno Golem -->
@@ -2295,7 +2291,6 @@
 		</collision>
 	</npc>
 	<npc id="29041" level="84" type="Monster" name="Inferno Golem">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4179" level="9" /> <!-- BOSS Strike -->
 		</parameters>
@@ -2340,7 +2335,6 @@
 		</collision>
 	</npc>
 	<npc id="29042" level="84" type="Monster" name="Inferno Golem">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -2381,7 +2375,6 @@
 		</collision>
 	</npc>
 	<npc id="29043" level="84" type="Monster" name="Howling Ifrit">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4209" level="9" /> <!-- BOSS Heal -->
 			<skill name="SelfRangeBuff_a" id="4211" level="9" /> <!-- BOSS Might -->
@@ -2428,7 +2421,6 @@
 		</collision>
 	</npc>
 	<npc id="29044" level="84" type="Monster" name="Howling Ifrit">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic_a" id="4191" level="9" /> <!-- BOSS Windstrike -->
 			<skill name="Debuff_a" id="4199" level="9" /> <!-- Decrease P. Atk. -->
@@ -2475,7 +2467,6 @@
 		</collision>
 	</npc>
 	<npc id="29045" level="85" type="GrandBoss" name="Frintezza">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<stats str="60" int="76" dex="73" wit="43" con="57" men="80">
@@ -2518,7 +2509,6 @@
 		</collision>
 	</npc>
 	<npc id="29046" level="85" type="GrandBoss" name="Scarlet van Halisha">
-		<!-- Confirmed CT2.5 -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="8204" /> <!-- rhand: Monster Only (Follower of Frintezza Calibur) -->
@@ -2565,7 +2555,6 @@
 		</collision>
 	</npc>
 	<npc id="29047" level="85" type="GrandBoss" name="Scarlet van Halisha">
-		<!-- Confirmed CT2.5 -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="8222" /> <!-- rhand: Monster Only (Follower of Frintezza Tran Calibur) -->
@@ -2609,43 +2598,97 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="8620" min="5" max="25" chance="60" /> <!-- Ancient Book: Divine Inspiration (Manuscript) -->
-				<item id="13893" min="1" max="1" chance="40" /> <!-- Sealed Holy Spirit's Cloak -->
-				<item id="15743" min="1" max="1" chance="6.37" /> <!-- Sealed Vorpal Helmet -->
-				<item id="15744" min="1" max="1" chance="6.363" /> <!-- Sealed Vorpal Leather Helmet -->
-				<item id="15745" min="1" max="1" chance="6.363" /> <!-- Sealed Vorpal Circlet -->
-				<item id="15752" min="1" max="1" chance="6.363" /> <!-- Sealed Vorpal Gauntlet -->
-				<item id="15753" min="1" max="1" chance="6.363" /> <!-- Sealed Vorpal Leather Gloves -->
-				<item id="15754" min="1" max="1" chance="6.363" /> <!-- Sealed Vorpal Gloves -->
-				<item id="15755" min="1" max="1" chance="6.363" /> <!-- Sealed Vorpal Boots -->
-				<item id="15756" min="1" max="1" chance="6.363" /> <!-- Sealed Vorpal Leather Boots -->
-				<item id="15757" min="1" max="1" chance="6.363" /> <!-- Sealed Vorpal Shoes -->
-				<item id="15758" min="1" max="1" chance="6.363" /> <!-- Sealed Vorpal Shield -->
-				<item id="15759" min="1" max="1" chance="6.363" /> <!-- Sealed Vorpal Sigil -->
-				<item id="15746" min="1" max="1" chance="11.69" /> <!-- Sealed Vorpal Breastplate -->
-				<item id="15747" min="1" max="1" chance="11.662" /> <!-- Sealed Vorpal Leather Breastplate -->
-				<item id="15748" min="1" max="1" chance="11.662" /> <!-- Sealed Vorpal Tunic -->
-				<item id="15749" min="1" max="1" chance="11.662" /> <!-- Sealed Vorpal Gaiter -->
-				<item id="15750" min="1" max="1" chance="11.662" /> <!-- Sealed Vorpal Leather Legging -->
-				<item id="15751" min="1" max="1" chance="11.662" /> <!-- Sealed Vorpal Stockings -->
-				<item id="13457" min="1" max="1" chance="4.55" /> <!-- Vesper Cutter -->
-				<item id="13458" min="1" max="1" chance="4.545" /> <!-- Vesper Slasher -->
-				<item id="13459" min="1" max="1" chance="4.545" /> <!-- Vesper Buster -->
-				<item id="13460" min="1" max="1" chance="4.545" /> <!-- Vesper Shaper -->
-				<item id="13466" min="1" max="1" chance="4.545" /> <!-- Vesper Singer -->
-				<item id="13461" min="1" max="1" chance="4.545" /> <!-- Vesper Fighter -->
-				<item id="13462" min="1" max="1" chance="4.545" /> <!-- Vesper Stormer -->
-				<item id="13463" min="1" max="1" chance="4.545" /> <!-- Vesper Avenger -->
-				<item id="13464" min="1" max="1" chance="4.545" /> <!-- Vesper Retributer -->
-				<item id="13465" min="1" max="1" chance="4.545" /> <!-- Vesper Caster -->
-				<item id="13467" min="1" max="1" chance="4.545" /> <!-- Vesper Thrower -->
-				<item id="1538" min="1" max="30" chance="60" /> <!-- Blessed Scroll of Escape -->
-				<item id="3936" min="1" max="10" chance="60" /> <!-- Blessed Scroll of Resurrection -->
+				<item id="8620" min="5" max="15" chance="100" /> <!-- Ancient Book - Divine Inspiration (Manuscript) -->
+				<item id="13893" min="1" max="2" chance="50" /> <!-- Sealed Holy Spirit's Cloak -->
+				<item id="80" min="1" max="2" chance="5" /> <!-- Tallum Blade -->
+				<item id="98" min="1" max="2" chance="5" /> <!-- Halberd -->
+				<item id="269" min="1" max="2" chance="5" /> <!-- Blood Tornado -->
+				<item id="2504" min="1" max="2" chance="5" /> <!-- Meteor Shower -->
+				<item id="150" min="1" max="2" chance="5" /> <!-- Elemental Sword -->
+				<item id="212" min="1" max="2" chance="5" /> <!-- Dasparion's Staff -->
+				<item id="235" min="1" max="2" chance="5" /> <!-- Bloody Orchid -->
+				<item id="288" min="1" max="2" chance="5" /> <!-- Carnage Bow -->
+				<item id="81" min="1" max="2" chance="5" /> <!-- Dragon Slayer -->
+				<item id="151" min="1" max="2" chance="5" /> <!-- Sword of Miracles -->
+				<item id="164" min="1" max="2" chance="5" /> <!-- Elysian -->
+				<item id="2500" min="1" max="2" chance="5" /> <!-- Dark Legion's Edge -->
+				<item id="213" min="1" max="2" chance="4" /> <!-- Branch of the Mother Tree -->
+				<item id="236" min="1" max="2" chance="4" /> <!-- Soul Separator -->
+				<item id="270" min="1" max="2" chance="4" /> <!-- Dragon Grinder -->
+				<item id="289" min="1" max="2" chance="4" /> <!-- Soul Bow -->
+				<item id="305" min="1" max="2" chance="4" /> <!-- Tallum Glaive -->
+				<item id="6364" min="1" max="1" chance="3.4" /> <!-- Forgotten Blade -->
+				<item id="6365" min="1" max="1" chance="3.4" /> <!-- Basalt Battlehammer -->
+				<item id="6369" min="1" max="1" chance="3.4" /> <!-- Dragon Hunter Axe -->
+				<item id="6370" min="1" max="1" chance="3.4" /> <!-- Saint Spear -->
+				<item id="6372" min="1" max="1" chance="3.2" /> <!-- Heaven's Divider -->
+				<item id="6580" min="1" max="1" chance="3.2" /> <!-- Tallum Blade*Dark Legion's Edge -->
+				<item id="6366" min="1" max="1" chance="4" /> <!-- Imperial Staff -->
+				<item id="6367" min="1" max="1" chance="4" /> <!-- Angel Slayer -->
+				<item id="6371" min="1" max="1" chance="4" /> <!-- Demon Splinter -->
+				<item id="6579" min="1" max="1" chance="4" /> <!-- Arcana Mace -->
+				<item id="7575" min="1" max="1" chance="4" /> <!-- Draconic Bow -->
+				<item id="6326" min="1" max="5" chance="6" /> <!-- Sealed Majestic Necklace -->
+				<item id="6327" min="1" max="5" chance="7" /> <!-- Sealed Majestic Earring -->
+				<item id="6328" min="1" max="5" chance="7" /> <!-- Sealed Majestic Ring -->
+				<item id="6323" min="1" max="5" chance="6" /> <!-- Sealed Phoenix Necklace -->
+				<item id="6324" min="1" max="5" chance="7" /> <!-- Sealed Phoenix Earring -->
+				<item id="6325" min="1" max="5" chance="7" /> <!-- Sealed Phoenix Ring -->
+				<item id="6724" min="1" max="1" chance="7" /> <!-- Sealed Tateossian Earring -->
+				<item id="6725" min="1" max="1" chance="7" /> <!-- Sealed Tateossian Ring -->
+				<item id="6726" min="1" max="1" chance="6" /> <!-- Sealed Tateossian Necklace -->
+				<item id="5287" min="1" max="3" chance="10" /> <!-- Sealed Dark Crystal breastplate -->
+				<item id="5297" min="1" max="3" chance="5" /> <!-- Sealed Dark Crystal Leather Armor -->
+				<item id="5304" min="1" max="3" chance="5" /> <!-- Sealed Tallum Tunic -->
+				<item id="5311" min="1" max="3" chance="7" /> <!-- Sealed Armor of Nightmare -->
+				<item id="5320" min="1" max="3" chance="7" /> <!-- Sealed Leather Armor of Nightmare -->
+				<item id="5326" min="1" max="3" chance="6" /> <!-- Sealed Nightmare Robe -->
+				<item id="5293" min="1" max="3" chance="5" /> <!-- Sealed Tallum Plate Armor -->
+				<item id="5301" min="1" max="3" chance="5" /> <!-- Sealed Tallum Leather Armor -->
+				<item id="5308" min="1" max="3" chance="5" /> <!-- Sealed Dark Crystal Robe -->
+				<item id="5316" min="1" max="3" chance="1.6" /> <!-- Sealed Majestic Plate Armor -->
+				<item id="5323" min="1" max="3" chance="1.6" /> <!-- Sealed Majestic Leather Armor -->
+				<item id="5329" min="1" max="3" chance="1.8" /> <!-- Sealed Majestic Robe -->
+				<item id="5288" min="1" max="3" chance="7" /> <!-- Sealed Dark Crystal Gaiters -->
+				<item id="5298" min="1" max="3" chance="7" /> <!-- Sealed Dark Crystal Leggings -->
+				<item id="5305" min="1" max="3" chance="6" /> <!-- Sealed Tallum Stockings -->
+				<item id="6674" min="1" max="1" chance="3" /> <!-- Sealed Imperial Crusader Breastplate -->
+				<item id="6675" min="1" max="1" chance="3" /> <!-- Sealed Imperial Crusader Gaiters -->
+				<item id="6680" min="1" max="1" chance="7" /> <!-- Sealed Draconic Leather Armor -->
+				<item id="6684" min="1" max="1" chance="7" /> <!-- Sealed Major Arcana Robe -->
+				<item id="5289" min="1" max="3" chance="5" /> <!-- Sealed Dark Crystal Helmet -->
+				<item id="5294" min="1" max="3" chance="5" /> <!-- Sealed Tallum Helmet -->
+				<item id="5312" min="1" max="3" chance="5" /> <!-- Sealed Helm of Nightmare -->
+				<item id="5317" min="1" max="3" chance="5" /> <!-- Sealed Majestic Circlet -->
+				<item id="5291" min="1" max="3" chance="5" /> <!-- Sealed Dark Crystal Boots -->
+				<item id="5296" min="1" max="3" chance="5" /> <!-- Sealed Tallum Boots -->
+				<item id="5314" min="1" max="3" chance="5" /> <!-- Sealed Boots of Nightmare -->
+				<item id="5319" min="1" max="3" chance="5" /> <!-- Sealed Majestic Boots -->
+				<item id="5290" min="1" max="3" chance="5" /> <!-- Sealed Dark Crystal Gloves -->
+				<item id="5295" min="1" max="3" chance="5" /> <!-- Sealed Tallum Gloves -->
+				<item id="5313" min="1" max="3" chance="5" /> <!-- Sealed Gauntlets of Nightmare -->
+				<item id="5318" min="1" max="3" chance="5" /> <!-- Sealed Majestic Gauntlets -->
+				<item id="5292" min="1" max="3" chance="8" /> <!-- Sealed Dark Crystal Shield -->
+				<item id="5315" min="1" max="3" chance="8" /> <!-- Sealed Shield of Nightmare -->
+				<item id="6678" min="1" max="1" chance="4" /> <!-- Sealed Imperial Crusader Shield -->
+				<item id="6676" min="1" max="1" chance="6.8" /> <!-- Sealed Imperial Crusader Gauntlet -->
+				<item id="6681" min="1" max="1" chance="6.6" /> <!-- Sealed Draconic Leather Glove -->
+				<item id="6685" min="1" max="1" chance="6.6" /> <!-- Sealed Major Arcana Glove -->
+				<item id="6677" min="1" max="1" chance="6.8" /> <!-- Sealed Imperial Crusader Boots -->
+				<item id="6682" min="1" max="1" chance="6.6" /> <!-- Sealed Draconic Leather Boots -->
+				<item id="6686" min="1" max="1" chance="6.6" /> <!-- Sealed Major Arcana Boots -->
+				<item id="6679" min="1" max="1" chance="6.8" /> <!-- Sealed Imperial Crusader Helmet -->
+				<item id="6683" min="1" max="1" chance="6.6" /> <!-- Sealed Draconic Leather Helmet -->
+				<item id="6687" min="1" max="1" chance="6.6" /> <!-- Sealed Major Arcana Circlet -->
+				<item id="1538" min="1" max="30" chance="100" /> <!-- Blessed Scroll of Escape -->
+				<item id="3936" min="1" max="10" chance="100" /> <!-- Blessed Scroll of Resurrection -->
 				<item id="57" min="9000000" max="11000000" chance="100" /> <!-- Adena -->
 				<item id="57" min="9000000" max="11000000" chance="100" /> <!-- Adena -->
-				<item id="16162" min="2" max="4" chance="60" /> <!-- High-Grade Life Stone - Level 85 -->
-				<item id="16166" min="2" max="4" chance="40" /> <!-- High-Grade Life Stone - Level 86 -->
-				<item id="8191" min="1" max="1" chance="30" /> <!-- Necklace of Frintezza -->
+				<item id="8751" min="1" max="2" chance="45" /> <!-- High-Grade Life Stone: level 70 -->
+				<item id="8752" min="1" max="2" chance="40" /> <!-- High-Grade Life Stone: level 76 -->
+				<item id="8761" min="1" max="1" chance="10" /> <!-- Top-Grade Life Stone: level 70 -->
+				<item id="8762" min="1" max="1" chance="5" /> <!-- Top-Grade Life Stone: level 76 -->
+				<item id="8191" min="1" max="1" chance="100" /> <!-- Frintezza's Necklace -->
 				<item id="10549" min="1" max="1" chance="33" /> <!-- Forgotten Scroll - Protection of Rune -->
 				<item id="10550" min="1" max="1" chance="33" /> <!-- Forgotten Scroll - Protection of Elemental -->
 				<item id="10551" min="1" max="1" chance="34" /> <!-- Forgotten Scroll - Protection of Alignment -->
@@ -2657,7 +2700,6 @@
 		</collision>
 	</npc>
 	<npc id="29048" level="85" type="Monster" name="Evil Spirit">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -2700,7 +2742,6 @@
 		</collision>
 	</npc>
 	<npc id="29049" level="85" type="Monster" name="Evil Spirit">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -2743,7 +2784,6 @@
 		</collision>
 	</npc>
 	<npc id="29050" level="85" type="Monster" name="Breath of Halisha">
-		<!-- Confirmed CT2.5 -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -2786,7 +2826,6 @@
 		</collision>
 	</npc>
 	<npc id="29051" level="85" type="Monster" name="Breath of Halisha">
-		<!-- Confirmed CT2.5 -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -2828,8 +2867,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="29052" level="85" type="Monster" name="">
-		<!-- Confirmed CT2.5 -->
+	<npc id="29052" level="85" type="Monster">
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -2868,8 +2906,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="29053" level="85" type="Monster" name="">
-		<!-- Confirmed CT2.5 -->
+	<npc id="29053" level="85" type="Monster">
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -2908,8 +2945,7 @@
 			<height normal="58" />
 		</collision>
 	</npc>
-	<npc id="29054" level="78" type="RaidBoss" name="Benom" title="Triol's Leader"> <!-- Retail level is 75 -->
-		<!-- Confirmed CT2.5 -->
+	<npc id="29054" level="78" type="RaidBoss" name="Benom" title="Triol's Leader">
 		<parameters>
 			<skill name="PhysicalSpecial" id="4993" level="1" /> <!-- Venom - Strike -->
 			<skill name="DDMagic" id="4994" level="1" /> <!-- Venom - Sonic Storm -->
@@ -2962,7 +2998,7 @@
 				<item id="6372" min="1" max="1" chance="0.785900167579651" /> <!-- Heaven's Divider -->
 				<item id="6688" min="8" max="22" chance="27.632893985405" /> <!-- Forgotten Blade Edge -->
 				<item id="6696" min="24" max="72" chance="8.77250523387909" /> <!-- Heavens Divider Edge -->
-				<item id="10297" min="1" max="1" chance="1" /> <!-- Transformation Sealbook: Venom -->
+				<item id="10297" min="1" max="1" chance="1" /> <!-- Transform Sealbook - Venom -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -2971,7 +3007,6 @@
 		</collision>
 	</npc>
 	<npc id="29055" level="70" type="Npc" name="Teleportation Cubic">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3017,7 +3052,6 @@
 		</collision>
 	</npc>
 	<npc id="29056" level="60" type="RaidBoss" name="Ice Fairy Sirra" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="29058" count="2" respawnTime="360" weightPoint="1" /> <!-- Sirra's Beholder -->
@@ -3092,7 +3126,6 @@
 		</collision>
 	</npc>
 	<npc id="29057" level="59" type="Monster" name="Sirra's Page" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4780" level="5" /> <!-- BOSS Heal -->
 			<skill name="SelfRangeBuff_a" id="4213" level="5" /> <!-- BOSS Haste -->
@@ -3144,7 +3177,6 @@
 		</collision>
 	</npc>
 	<npc id="29058" level="59" type="Monster" name="Sirra's Beholder" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3189,8 +3221,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="29059" level="80" type="Monster">
-		<!-- Confirmed CT2.5 -->
+	<npc id="29059" level="80" type="Monster" name="">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3225,7 +3256,6 @@
 		</collision>
 	</npc>
 	<npc id="29060" level="59" type="RaidBoss" name="Captain of the Ice Queen's Royal Guard" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="SelfRangeCancel_a" id="4177" level="5" /> <!-- BOSS Cancel Magic -->
 			<skill name="SelfBuff_a" id="4173" level="5" /> <!-- BOSS Might -->
@@ -3292,7 +3322,6 @@
 		</collision>
 	</npc>
 	<npc id="29061" level="70" type="Teleporter" name="Teleportation Cubic">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3328,7 +3357,6 @@
 		</collision>
 	</npc>
 	<npc id="29062" level="80" type="RaidBoss" name="Andreas Van Halter" title="Seer of Pagan">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="29063" count="3" respawnTime="360" weightPoint="1" />
@@ -3388,9 +3416,9 @@
 				<item id="7575" min="1" max="1" chance="1.05043006954765" /> <!-- Draconic Bow -->
 				<item id="7579" min="12" max="36" chance="23.3503706354084" /> <!-- Draconic Bow Shaft -->
 				<item id="8921" min="1" max="1" chance="32.0095321874008" /> <!-- Demon Circlet -->
-				<item id="959" min="1" max="1" chance="3.20094644338989" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="960" min="1" max="1" chance="32.0095321874008" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				<item id="6577" min="1" max="1" chance="0.533491073898315" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
+				<item id="959" min="1" max="1" chance="3.20094644338989" /> <!-- Scroll: Enchant Weapon (S) -->
+				<item id="960" min="1" max="1" chance="32.0095321874008" /> <!-- Scroll: Enchant Armor (S) -->
+				<item id="6577" min="1" max="1" chance="0.533491073898315" /> <!-- Blessed Scroll: Enchant Weapon (S) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -3399,7 +3427,6 @@
 		</collision>
 	</npc>
 	<npc id="29063" level="80" type="Monster" name="Andreas' Acolyte" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic_a" id="4193" level="10" /> <!-- BOSS Life Drain -->
 			<skill name="Debuff_a" id="4206" level="10" /> <!-- Decrease MP -->
@@ -3452,7 +3479,6 @@
 		</collision>
 	</npc>
 	<npc id="29064" level="80" type="Monster" name="Andreas' Acolyte" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4210" level="10" /> <!-- BOSS Chant of Life -->
 			<skill name="SelfRangeBuff_a" id="4214" level="10" /> <!-- BOSS Reflect Damage -->
@@ -3505,7 +3531,6 @@
 		</collision>
 	</npc>
 	<npc id="29065" level="80" type="RaidBoss" name="Sailren" title="Sealed Evil Power">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RootingManage" value="0" />
 			<skill name="SelfRangeCancel_a" id="5118" level="1" /> <!-- Cancel Sailren Use -->
@@ -3556,9 +3581,9 @@
 				<item id="6707" min="3" max="9" chance="52.4645430979004" /> <!-- Sealed Draconic Leather Armor Part -->
 				<item id="6367" min="1" max="1" chance="0.449745141971588" /> <!-- Angel Slayer -->
 				<item id="6691" min="3" max="9" chance="39.5311546688194" /> <!-- Angel Slayer Blade -->
-				<item id="959" min="1" max="1" chance="1.82733543817139" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="960" min="1" max="1" chance="18.2733951923141" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				<item id="6577" min="1" max="1" chance="0.304569509895325" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
+				<item id="959" min="1" max="1" chance="1.82733543817139" /> <!-- Scroll: Enchant Weapon (S) -->
+				<item id="960" min="1" max="1" chance="18.2733951923141" /> <!-- Scroll: Enchant Armor (S) -->
+				<item id="6577" min="1" max="1" chance="0.304569509895325" /> <!-- Blessed Scroll: Enchant Weapon (S) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -3567,7 +3592,6 @@
 		</collision>
 	</npc>
 	<npc id="29066" level="79" type="GrandBoss" name="Antharas">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="ultra_respawn_time" value="8" />
 		</parameters>
@@ -3608,7 +3632,7 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="8620" min="10" max="30" chance="50" /> <!-- Ancient Book: Divine Inspiration (Manuscript) -->
+				<item id="8620" min="10" max="30" chance="50" /> <!-- Ancient Book - Divine Inspiration (Manuscript) -->
 				<item id="13893" min="1" max="2" chance="50" /> <!-- Sealed Holy Spirit's Cloak -->
 				<item id="80" min="1" max="2" chance="25" /> <!-- Tallum Blade -->
 				<item id="98" min="1" max="2" chance="25" /> <!-- Halberd -->
@@ -3652,7 +3676,7 @@
 				<item id="5304" min="1" max="3" chance="25" /> <!-- Sealed Tallum Tunic -->
 				<item id="5311" min="1" max="3" chance="35" /> <!-- Sealed Armor of Nightmare -->
 				<item id="5320" min="1" max="3" chance="35" /> <!-- Sealed Leather Armor of Nightmare -->
-				<item id="5326" min="1" max="3" chance="30" /> <!-- Sealed Robe of Nightmare -->
+				<item id="5326" min="1" max="3" chance="30" /> <!-- Sealed Nightmare Robe -->
 				<item id="5293" min="1" max="3" chance="25" /> <!-- Sealed Tallum Plate Armor -->
 				<item id="5301" min="1" max="3" chance="25" /> <!-- Sealed Tallum Leather Armor -->
 				<item id="5308" min="1" max="3" chance="25" /> <!-- Sealed Dark Crystal Robe -->
@@ -3690,7 +3714,7 @@
 				<item id="6679" min="1" max="1" chance="34" /> <!-- Sealed Imperial Crusader Helmet -->
 				<item id="6683" min="1" max="1" chance="33" /> <!-- Sealed Draconic Leather Helmet -->
 				<item id="6687" min="1" max="1" chance="33" /> <!-- Sealed Major Arcana Circlet -->
-				<item id="729" min="1" max="19" chance="100" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
+				<item id="729" min="1" max="19" chance="100" /> <!-- Scroll: Enchant Weapon (A) -->
 				<item id="1538" min="1" max="59" chance="100" /> <!-- Blessed Scroll of Escape -->
 				<item id="3936" min="1" max="39" chance="100" /> <!-- Blessed Scroll of Resurrection -->
 				<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
@@ -3700,10 +3724,10 @@
 				<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
 				<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
 				<item id="57" min="9000000" max="13000000" chance="100" /> <!-- Adena -->
-				<item id="8751" min="2" max="4" chance="45" /> <!-- High-Grade Life Stone - Level 70 -->
-				<item id="8752" min="2" max="4" chance="40" /> <!-- High-Grade Life Stone - Level 76 -->
-				<item id="8761" min="1" max="2" chance="10" /> <!-- Top-Grade Life Stone - Level 70 -->
-				<item id="8762" min="1" max="2" chance="5" /> <!-- Top-Grade Life Stone - Level 76 -->
+				<item id="8751" min="2" max="4" chance="45" /> <!-- High-Grade Life Stone: level 70 -->
+				<item id="8752" min="2" max="4" chance="40" /> <!-- High-Grade Life Stone: level 76 -->
+				<item id="8761" min="1" max="2" chance="10" /> <!-- Top-Grade Life Stone: level 70 -->
+				<item id="8762" min="1" max="2" chance="5" /> <!-- Top-Grade Life Stone: level 76 -->
 				<item id="6656" min="1" max="1" chance="100" /> <!-- Earring of Antharas -->
 				<item id="10549" min="1" max="1" chance="33" /> <!-- Forgotten Scroll - Protection of Rune -->
 				<item id="10550" min="1" max="1" chance="33" /> <!-- Forgotten Scroll - Protection of Elemental -->
@@ -3716,7 +3740,6 @@
 		</collision>
 	</npc>
 	<npc id="29067" level="79" type="GrandBoss" name="Antharas">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="ultra_respawn_time" value="5" />
 		</parameters>
@@ -3757,7 +3780,7 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="8620" min="10" max="30" chance="50" /> <!-- Ancient Book: Divine Inspiration (Manuscript) -->
+				<item id="8620" min="10" max="30" chance="50" /> <!-- Ancient Book - Divine Inspiration (Manuscript) -->
 				<item id="13893" min="1" max="2" chance="50" /> <!-- Sealed Holy Spirit's Cloak -->
 				<item id="80" min="1" max="2" chance="25" /> <!-- Tallum Blade -->
 				<item id="98" min="1" max="2" chance="25" /> <!-- Halberd -->
@@ -3801,7 +3824,7 @@
 				<item id="5304" min="1" max="3" chance="25" /> <!-- Sealed Tallum Tunic -->
 				<item id="5311" min="1" max="3" chance="35" /> <!-- Sealed Armor of Nightmare -->
 				<item id="5320" min="1" max="3" chance="35" /> <!-- Sealed Leather Armor of Nightmare -->
-				<item id="5326" min="1" max="3" chance="30" /> <!-- Sealed Robe of Nightmare -->
+				<item id="5326" min="1" max="3" chance="30" /> <!-- Sealed Nightmare Robe -->
 				<item id="5293" min="1" max="3" chance="25" /> <!-- Sealed Tallum Plate Armor -->
 				<item id="5301" min="1" max="3" chance="25" /> <!-- Sealed Tallum Leather Armor -->
 				<item id="5308" min="1" max="3" chance="25" /> <!-- Sealed Dark Crystal Robe -->
@@ -3839,7 +3862,7 @@
 				<item id="6679" min="1" max="1" chance="34" /> <!-- Sealed Imperial Crusader Helmet -->
 				<item id="6683" min="1" max="1" chance="33" /> <!-- Sealed Draconic Leather Helmet -->
 				<item id="6687" min="1" max="1" chance="33" /> <!-- Sealed Major Arcana Circlet -->
-				<item id="729" min="1" max="19" chance="100" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
+				<item id="729" min="1" max="19" chance="100" /> <!-- Scroll: Enchant Weapon (A) -->
 				<item id="1538" min="1" max="59" chance="100" /> <!-- Blessed Scroll of Escape -->
 				<item id="3936" min="1" max="39" chance="100" /> <!-- Blessed Scroll of Resurrection -->
 				<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
@@ -3849,11 +3872,11 @@
 				<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
 				<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
 				<item id="57" min="9000000" max="13000000" chance="100" /> <!-- Adena -->
-				<item id="8751" min="2" max="4" chance="45" /> <!-- High-Grade Life Stone - Level 70 -->
-				<item id="8752" min="2" max="4" chance="40" /> <!-- High-Grade Life Stone - Level 76 -->
-				<item id="8761" min="1" max="2" chance="10" /> <!-- Top-Grade Life Stone - Level 70 -->
-				<item id="8762" min="1" max="2" chance="5" /> <!-- Top-Grade Life Stone - Level 76 -->
-				<item id="959" min="8" max="12" chance="100" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="8751" min="2" max="4" chance="45" /> <!-- High-Grade Life Stone: level 70 -->
+				<item id="8752" min="2" max="4" chance="40" /> <!-- High-Grade Life Stone: level 76 -->
+				<item id="8761" min="1" max="2" chance="10" /> <!-- Top-Grade Life Stone: level 70 -->
+				<item id="8762" min="1" max="2" chance="5" /> <!-- Top-Grade Life Stone: level 76 -->
+				<item id="959" min="8" max="12" chance="100" /> <!-- Scroll: Enchant Weapon (S) -->
 				<item id="6656" min="1" max="1" chance="100" /> <!-- Earring of Antharas -->
 				<item id="10549" min="1" max="1" chance="33" /> <!-- Forgotten Scroll - Protection of Rune -->
 				<item id="10550" min="1" max="1" chance="33" /> <!-- Forgotten Scroll - Protection of Elemental -->
@@ -3865,8 +3888,7 @@
 			<height normal="300" />
 		</collision>
 	</npc>
-	<npc id="29068" level="85" type="GrandBoss" name="Antharas" title="Earth Dragon">
-		<!-- Confirmed CT2.5 -->
+	<npc id="29068" level="85" type="GrandBoss" name="Antharas">
 		<parameters>
 			<param name="ultra_respawn_time" value="3" />
 		</parameters>
@@ -3910,63 +3932,106 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="8620" min="10" max="30" chance="50" /> <!-- Ancient Book: Divine Inspiration (Manuscript) -->
-				<item id="13893" min="1" max="2" chance="50" /> <!-- Sealed Holy Spirit's Cloak -->
-				<item id="15560" min="1" max="1" chance="6.37" /> <!-- Vigwik Axe -->
-				<item id="15561" min="1" max="1" chance="6.363" /> <!-- Devilish Maul -->
-				<item id="15562" min="1" max="1" chance="6.363" /> <!-- Feather Eye Blade -->
-				<item id="15563" min="1" max="1" chance="6.363" /> <!-- Octo Claw -->
-				<item id="15564" min="1" max="1" chance="6.363" /> <!-- Doubletop Spear -->
-				<item id="15565" min="1" max="1" chance="6.363" /> <!-- Rising Star -->
-				<item id="15566" min="1" max="1" chance="6.363" /> <!-- Black Visage -->
-				<item id="15567" min="1" max="1" chance="6.363" /> <!-- Veniplant Sword -->
-				<item id="15568" min="1" max="1" chance="6.363" /> <!-- Skull Carnium Bow -->
-				<item id="15558" min="1" max="1" chance="6.363" /> <!-- Periel Sword -->
-				<item id="15559" min="1" max="1" chance="6.363" /> <!-- Skull Edge -->
-				<item id="15544" min="1" max="1" chance="4.55" /> <!-- Eternal Core Sword -->
-				<item id="15545" min="1" max="1" chance="4.545" /> <!-- Mamba Edge -->
-				<item id="15546" min="1" max="1" chance="4.545" /> <!-- Eversor Mace -->
-				<item id="15547" min="1" max="1" chance="4.545" /> <!-- Contristo Hammer -->
-				<item id="15548" min="1" max="1" chance="4.545" /> <!-- Lava Saw -->
-				<item id="15549" min="1" max="1" chance="4.545" /> <!-- Jade Claw -->
-				<item id="15550" min="1" max="1" chance="4.545" /> <!-- Demitelum -->
-				<item id="15551" min="1" max="1" chance="4.545" /> <!-- Sacredium -->
-				<item id="15552" min="1" max="1" chance="4.545" /> <!-- Cyclic Cane -->
-				<item id="15553" min="1" max="1" chance="4.545" /> <!-- Archangel Sword -->
-				<item id="15554" min="1" max="1" chance="4.545" /> <!-- Recurve Thorne Bow -->
-				<item id="15743" min="1" max="1" chance="9.1" /> <!-- Sealed Vorpal Helmet -->
-				<item id="15744" min="1" max="1" chance="9.09" /> <!-- Sealed Vorpal Leather Helmet -->
-				<item id="15745" min="1" max="1" chance="9.09" /> <!-- Sealed Vorpal Circlet -->
-				<item id="15752" min="1" max="1" chance="9.09" /> <!-- Sealed Vorpal Gauntlet -->
-				<item id="15753" min="1" max="1" chance="9.09" /> <!-- Sealed Vorpal Leather Gloves -->
-				<item id="15754" min="1" max="1" chance="9.09" /> <!-- Sealed Vorpal Gloves -->
-				<item id="15755" min="1" max="1" chance="9.09" /> <!-- Sealed Vorpal Boots -->
-				<item id="15756" min="1" max="1" chance="9.09" /> <!-- Sealed Vorpal Leather Boots -->
-				<item id="15757" min="1" max="1" chance="9.09" /> <!-- Sealed Vorpal Shoes -->
-				<item id="15758" min="1" max="1" chance="9.09" /> <!-- Sealed Vorpal Shield -->
-				<item id="15759" min="1" max="1" chance="9.09" /> <!-- Sealed Vorpal Sigil -->
-				<item id="15746" min="1" max="1" chance="16.7" /> <!-- Sealed Vorpal Breastplate -->
-				<item id="15747" min="1" max="1" chance="16.66" /> <!-- Sealed Vorpal Leather Breastplate -->
-				<item id="15748" min="1" max="1" chance="16.66" /> <!-- Sealed Vorpal Tunic -->
-				<item id="15749" min="1" max="1" chance="16.66" /> <!-- Sealed Vorpal Gaiter -->
-				<item id="15750" min="1" max="1" chance="16.66" /> <!-- Sealed Vorpal Leather Legging -->
-				<item id="15751" min="1" max="1" chance="16.66" /> <!-- Sealed Vorpal Stockings -->
-				<item id="15763" min="1" max="1" chance="16.7" /> <!-- Sealed Vorpal Ring -->
-				<item id="15764" min="1" max="1" chance="16.65" /> <!-- Sealed Vorpal Earring -->
-				<item id="15765" min="1" max="1" chance="16.65" /> <!-- Sealed Vorpal Necklace -->
-				<item id="959" min="1" max="19" chance="100" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="8620" min="10" max="30" chance="100" /> <!-- Ancient Book - Divine Inspiration (Manuscript) -->
+				<item id="13893" min="1" max="2" chance="100" /> <!-- Sealed Holy Spirit's Cloak -->
+				<item id="80" min="1" max="2" chance="5" /> <!-- Tallum Blade -->
+				<item id="98" min="1" max="2" chance="5" /> <!-- Halberd -->
+				<item id="269" min="1" max="2" chance="5" /> <!-- Blood Tornado -->
+				<item id="2504" min="1" max="2" chance="5" /> <!-- Meteor Shower -->
+				<item id="150" min="1" max="2" chance="5" /> <!-- Elemental Sword -->
+				<item id="212" min="1" max="2" chance="5" /> <!-- Dasparion's Staff -->
+				<item id="235" min="1" max="2" chance="5" /> <!-- Bloody Orchid -->
+				<item id="288" min="1" max="2" chance="5" /> <!-- Carnage Bow -->
+				<item id="81" min="1" max="2" chance="5" /> <!-- Dragon Slayer -->
+				<item id="151" min="1" max="2" chance="5" /> <!-- Sword of Miracles -->
+				<item id="164" min="1" max="2" chance="5" /> <!-- Elysian -->
+				<item id="2500" min="1" max="2" chance="5" /> <!-- Dark Legion's Edge -->
+				<item id="213" min="1" max="2" chance="4" /> <!-- Branch of the Mother Tree -->
+				<item id="236" min="1" max="2" chance="4" /> <!-- Soul Separator -->
+				<item id="270" min="1" max="2" chance="4" /> <!-- Dragon Grinder -->
+				<item id="289" min="1" max="2" chance="4" /> <!-- Soul Bow -->
+				<item id="305" min="1" max="2" chance="4" /> <!-- Tallum Glaive -->
+				<item id="6364" min="1" max="1" chance="3.4" /> <!-- Forgotten Blade -->
+				<item id="6365" min="1" max="1" chance="3.4" /> <!-- Basalt Battlehammer -->
+				<item id="6369" min="1" max="1" chance="3.4" /> <!-- Dragon Hunter Axe -->
+				<item id="6370" min="1" max="1" chance="3.4" /> <!-- Saint Spear -->
+				<item id="6372" min="1" max="1" chance="3.2" /> <!-- Heaven's Divider -->
+				<item id="6580" min="1" max="1" chance="3.2" /> <!-- Tallum Blade*Dark Legion's Edge -->
+				<item id="6366" min="1" max="1" chance="4" /> <!-- Imperial Staff -->
+				<item id="6367" min="1" max="1" chance="4" /> <!-- Angel Slayer -->
+				<item id="6371" min="1" max="1" chance="4" /> <!-- Demon Splinter -->
+				<item id="6579" min="1" max="1" chance="4" /> <!-- Arcana Mace -->
+				<item id="7575" min="1" max="1" chance="4" /> <!-- Draconic Bow -->
+				<item id="6326" min="1" max="5" chance="6" /> <!-- Sealed Majestic Necklace -->
+				<item id="6327" min="1" max="5" chance="7" /> <!-- Sealed Majestic Earring -->
+				<item id="6328" min="1" max="5" chance="7" /> <!-- Sealed Majestic Ring -->
+				<item id="6323" min="1" max="5" chance="6" /> <!-- Sealed Phoenix Necklace -->
+				<item id="6324" min="1" max="5" chance="7" /> <!-- Sealed Phoenix Earring -->
+				<item id="6325" min="1" max="5" chance="7" /> <!-- Sealed Phoenix Ring -->
+				<item id="6724" min="1" max="1" chance="17.5" /> <!-- Sealed Tateossian Earring -->
+				<item id="6725" min="1" max="1" chance="17.5" /> <!-- Sealed Tateossian Ring -->
+				<item id="6726" min="1" max="1" chance="15" /> <!-- Sealed Tateossian Necklace -->
+				<item id="5287" min="1" max="3" chance="10" /> <!-- Sealed Dark Crystal breastplate -->
+				<item id="5297" min="1" max="3" chance="5" /> <!-- Sealed Dark Crystal Leather Armor -->
+				<item id="5304" min="1" max="3" chance="5" /> <!-- Sealed Tallum Tunic -->
+				<item id="5311" min="1" max="3" chance="7" /> <!-- Sealed Armor of Nightmare -->
+				<item id="5320" min="1" max="3" chance="7" /> <!-- Sealed Leather Armor of Nightmare -->
+				<item id="5326" min="1" max="3" chance="6" /> <!-- Sealed Nightmare Robe -->
+				<item id="5293" min="1" max="3" chance="5" /> <!-- Sealed Tallum Plate Armor -->
+				<item id="5301" min="1" max="3" chance="5" /> <!-- Sealed Tallum Leather Armor -->
+				<item id="5308" min="1" max="3" chance="5" /> <!-- Sealed Dark Crystal Robe -->
+				<item id="5316" min="1" max="3" chance="1.6" /> <!-- Sealed Majestic Plate Armor -->
+				<item id="5323" min="1" max="3" chance="1.6" /> <!-- Sealed Majestic Leather Armor -->
+				<item id="5329" min="1" max="3" chance="1.8" /> <!-- Sealed Majestic Robe -->
+				<item id="5288" min="1" max="3" chance="7" /> <!-- Sealed Dark Crystal Gaiters -->
+				<item id="5298" min="1" max="3" chance="7" /> <!-- Sealed Dark Crystal Leggings -->
+				<item id="5305" min="1" max="3" chance="6" /> <!-- Sealed Tallum Stockings -->
+				<item id="6674" min="1" max="1" chance="3" /> <!-- Sealed Imperial Crusader Breastplate -->
+				<item id="6675" min="1" max="1" chance="3" /> <!-- Sealed Imperial Crusader Gaiters -->
+				<item id="6680" min="1" max="1" chance="7" /> <!-- Sealed Draconic Leather Armor -->
+				<item id="6684" min="1" max="1" chance="7" /> <!-- Sealed Major Arcana Robe -->
+				<item id="5289" min="1" max="3" chance="5" /> <!-- Sealed Dark Crystal Helmet -->
+				<item id="5294" min="1" max="3" chance="5" /> <!-- Sealed Tallum Helmet -->
+				<item id="5312" min="1" max="3" chance="5" /> <!-- Sealed Helm of Nightmare -->
+				<item id="5317" min="1" max="3" chance="5" /> <!-- Sealed Majestic Circlet -->
+				<item id="5291" min="1" max="3" chance="5" /> <!-- Sealed Dark Crystal Boots -->
+				<item id="5296" min="1" max="3" chance="5" /> <!-- Sealed Tallum Boots -->
+				<item id="5314" min="1" max="3" chance="5" /> <!-- Sealed Boots of Nightmare -->
+				<item id="5319" min="1" max="3" chance="5" /> <!-- Sealed Majestic Boots -->
+				<item id="5290" min="1" max="3" chance="5" /> <!-- Sealed Dark Crystal Gloves -->
+				<item id="5295" min="1" max="3" chance="5" /> <!-- Sealed Tallum Gloves -->
+				<item id="5313" min="1" max="3" chance="5" /> <!-- Sealed Gauntlets of Nightmare -->
+				<item id="5318" min="1" max="3" chance="5" /> <!-- Sealed Majestic Gauntlets -->
+				<item id="5292" min="1" max="3" chance="8" /> <!-- Sealed Dark Crystal Shield -->
+				<item id="5315" min="1" max="3" chance="8" /> <!-- Sealed Shield of Nightmare -->
+				<item id="6678" min="1" max="1" chance="4" /> <!-- Sealed Imperial Crusader Shield -->
+				<item id="6676" min="1" max="1" chance="6.8" /> <!-- Sealed Imperial Crusader Gauntlet -->
+				<item id="6681" min="1" max="1" chance="6.6" /> <!-- Sealed Draconic Leather Glove -->
+				<item id="6685" min="1" max="1" chance="6.6" /> <!-- Sealed Major Arcana Glove -->
+				<item id="6677" min="1" max="1" chance="6.8" /> <!-- Sealed Imperial Crusader Boots -->
+				<item id="6682" min="1" max="1" chance="6.6" /> <!-- Sealed Draconic Leather Boots -->
+				<item id="6686" min="1" max="1" chance="6.6" /> <!-- Sealed Major Arcana Boots -->
+				<item id="6679" min="1" max="1" chance="6.8" /> <!-- Sealed Imperial Crusader Helmet -->
+				<item id="6683" min="1" max="1" chance="6.6" /> <!-- Sealed Draconic Leather Helmet -->
+				<item id="6687" min="1" max="1" chance="6.6" /> <!-- Sealed Major Arcana Circlet -->
+				<item id="729" min="1" max="19" chance="100" /> <!-- Scroll: Enchant Weapon (A) -->
 				<item id="1538" min="1" max="59" chance="60" /> <!-- Blessed Scroll of Escape -->
 				<item id="3936" min="1" max="39" chance="60" /> <!-- Blessed Scroll of Resurrection -->
 				<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
-				<item id="57" min="2000000" max="6000000" chance="100" /> <!-- Adena -->
-				<item id="16162" min="2" max="4" chance="45" /> <!-- High-Grade Life Stone - Level 85 -->
-				<item id="16166" min="2" max="4" chance="40" /> <!-- High-Grade Life Stone - Level 86 -->
-				<item id="16163" min="1" max="2" chance="10" /> <!-- Top-Grade Life Stone - Level 85 -->
-				<item id="16167" min="1" max="2" chance="5" /> <!-- Top-Grade Life Stone - Level 86 -->
+				<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
+				<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
+				<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
+				<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
+				<item id="57" min="14000000" max="18000000" chance="100" /> <!-- Adena -->
+				<item id="57" min="9000000" max="13000000" chance="100" /> <!-- Adena -->
 				<item id="6656" min="1" max="1" chance="100" /> <!-- Earring of Antharas -->
 				<item id="10549" min="1" max="1" chance="33" /> <!-- Forgotten Scroll - Protection of Rune -->
 				<item id="10550" min="1" max="1" chance="33" /> <!-- Forgotten Scroll - Protection of Elemental -->
 				<item id="10551" min="1" max="1" chance="34" /> <!-- Forgotten Scroll - Protection of Alignment -->
+				<item id="8751" min="1" max="2" chance="45" /> <!-- High-Grade Life Stone: level 70 -->
+				<item id="8752" min="1" max="2" chance="40" /> <!-- High-Grade Life Stone: level 76 -->
+				<item id="8761" min="1" max="1" chance="10" /> <!-- Top-Grade Life Stone: level 70 -->
+				<item id="8762" min="1" max="1" chance="5" /> <!-- Top-Grade Life Stone: level 76 -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -3975,7 +4040,6 @@
 		</collision>
 	</npc>
 	<npc id="29069" level="85" type="Monster" name="Behemoth Dragon">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RootingManage" value="0" />
 			<skill name="PhysicalSpecial" id="5095" level="1" /> <!-- Antharas Subordinate Melee Attack -->
@@ -4028,7 +4092,6 @@
 		</collision>
 	</npc>
 	<npc id="29070" level="85" type="Monster" name="Dragon Bomber">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="SelfRangeDDMagic" id="5094" level="1" /> <!-- Antharas Subordinate Suicide -->
 		</parameters>
@@ -4076,7 +4139,6 @@
 		</collision>
 	</npc>
 	<npc id="29071" level="78" type="Monster" name="Dragon Bomber">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="SelfRangeDDMagic" id="5094" level="1" /> <!-- Antharas Subordinate Suicide -->
 		</parameters>
@@ -4122,7 +4184,6 @@
 		</collision>
 	</npc>
 	<npc id="29072" level="78" type="Monster" name="Dragon Bomber">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="SelfRangeDDMagic" id="5094" level="1" /> <!-- Antharas Subordinate Suicide -->
 		</parameters>
@@ -4168,7 +4229,6 @@
 		</collision>
 	</npc>
 	<npc id="29073" level="78" type="Monster" name="Dragon Bomber">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="SelfRangeDDMagic" id="5094" level="1" /> <!-- Antharas Subordinate Suicide -->
 		</parameters>
@@ -4214,7 +4274,6 @@
 		</collision>
 	</npc>
 	<npc id="29074" level="78" type="Monster" name="Dragon Bomber">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="SelfRangeDDMagic" id="5094" level="1" /> <!-- Antharas Subordinate Suicide -->
 		</parameters>
@@ -4260,7 +4319,6 @@
 		</collision>
 	</npc>
 	<npc id="29075" level="78" type="Monster" name="Dragon Bomber">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="SelfRangeDDMagic" id="5094" level="1" /> <!-- Antharas Subordinate Suicide -->
 		</parameters>
@@ -4306,7 +4364,6 @@
 		</collision>
 	</npc>
 	<npc id="29076" level="85" type="Monster" name="Dragon Bomber">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="SelfRangeDDMagic" id="5094" level="1" /> <!-- Antharas Subordinate Suicide -->
 		</parameters>
@@ -4353,8 +4410,7 @@
 			<height normal="34.5" />
 		</collision>
 	</npc>
-	<npc id="29077" level="78" type="Monster">
-		<!-- Confirmed CT2.5 -->
+	<npc id="29077" level="78" type="Monster" name="">
 		<parameters>
 			<param name="suicide1_x" value="177456" />
 			<param name="suicide2_x" value="177120" />
@@ -4406,8 +4462,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="29078" level="78" type="Monster">
-		<!-- Confirmed CT2.5 -->
+	<npc id="29078" level="78" type="Monster" name="">
 		<parameters>
 			<param name="suicide1_x" value="175952" />
 			<param name="suicide2_x" value="175712" />
@@ -4460,7 +4515,6 @@
 		</collision>
 	</npc>
 	<npc id="29079" level="78" type="Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="suicide1_x" value="175120" />
 			<param name="suicide2_x" value="175024" />
@@ -4513,7 +4567,6 @@
 		</collision>
 	</npc>
 	<npc id="29080" level="78" type="Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="suicide1_x" value="174640" />
 			<param name="suicide2_x" value="174576" />
@@ -4566,7 +4619,6 @@
 		</collision>
 	</npc>
 	<npc id="29081" level="78" type="Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="suicide1_x" value="173968" />
 			<param name="suicide2_x" value="173856" />
@@ -4619,7 +4671,6 @@
 		</collision>
 	</npc>
 	<npc id="29082" level="78" type="Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="suicide1_x" value="173920" />
 			<param name="suicide2_x" value="174064" />
@@ -4672,7 +4723,6 @@
 		</collision>
 	</npc>
 	<npc id="29083" level="78" type="Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="suicide1_x" value="174704" />
 			<param name="suicide2_x" value="174800" />
@@ -4724,8 +4774,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="29084" level="78" type="Monster">
-		<!-- Confirmed CT2.5 -->
+	<npc id="29084" level="78" type="Monster" name="">
 		<parameters>
 			<param name="suicide1_x" value="175424" />
 			<param name="suicide2_x" value="175632" />
@@ -4777,8 +4826,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="29085" level="78" type="Monster">
-		<!-- Confirmed CT2.5 -->
+	<npc id="29085" level="78" type="Monster" name="">
 		<parameters>
 			<param name="suicide1_x" value="176880" />
 			<param name="suicide2_x" value="177200" />
@@ -4830,8 +4878,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="29086" level="78" type="Monster">
-		<!-- Confirmed CT2.5 -->
+	<npc id="29086" level="78" type="Monster" name="">
 		<parameters>
 			<param name="suicide1_x" value="178368" />
 			<param name="suicide2_x" value="178592" />
@@ -4883,8 +4930,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="29087" level="78" type="Monster">
-		<!-- Confirmed CT2.5 -->
+	<npc id="29087" level="78" type="Monster" name="">
 		<parameters>
 			<param name="suicide1_x" value="179696" />
 			<param name="suicide2_x" value="179920" />
@@ -4936,8 +4982,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="29088" level="78" type="Monster">
-		<!-- Confirmed CT2.5 -->
+	<npc id="29088" level="78" type="Monster" name="">
 		<parameters>
 			<param name="suicide1_x" value="180592" />
 			<param name="suicide2_x" value="180752" />
@@ -4989,8 +5034,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="29089" level="78" type="Monster">
-		<!-- Confirmed CT2.5 -->
+	<npc id="29089" level="78" type="Monster" name="">
 		<parameters>
 			<param name="suicide1_x" value="180896" />
 			<param name="suicide2_x" value="180784" />
@@ -5042,8 +5086,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="29090" level="78" type="Monster">
-		<!-- Confirmed CT2.5 -->
+	<npc id="29090" level="78" type="Monster" name="">
 		<parameters>
 			<param name="suicide1_x" value="180496" />
 			<param name="suicide2_x" value="180512" />
@@ -5095,8 +5138,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="29091" level="78" type="Monster">
-		<!-- Confirmed CT2.5 -->
+	<npc id="29091" level="78" type="Monster" name="">
 		<parameters>
 			<param name="suicide1_x" value="180896" />
 			<param name="suicide2_x" value="181040" />
@@ -5148,8 +5190,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="29092" level="78" type="Monster">
-		<!-- Confirmed CT2.5 -->
+	<npc id="29092" level="78" type="Monster" name="">
 		<parameters>
 			<param name="suicide1_x" value="180720" />
 			<param name="suicide2_x" value="180640" />
@@ -5201,8 +5242,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="29093" level="78" type="Monster">
-		<!-- Confirmed CT2.5 -->
+	<npc id="29093" level="78" type="Monster" name="">
 		<parameters>
 			<param name="suicide1_x" value="180048" />
 			<param name="suicide2_x" value="179920" />
@@ -5254,8 +5294,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="29094" level="78" type="Monster">
-		<!-- Confirmed CT2.5 -->
+	<npc id="29094" level="78" type="Monster" name="">
 		<parameters>
 			<param name="suicide1_x" value="178848" />
 			<param name="suicide2_x" value="178560" />
@@ -5308,7 +5347,6 @@
 		</collision>
 	</npc>
 	<npc id="29095" level="80" type="RaidBoss" name="Gordon" title="Knight of Destruction">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="10" /> <!-- BOSS Cancel Magic -->
@@ -5358,10 +5396,10 @@
 				<item id="6711" min="12" max="36" chance="23.6814060487366" /> <!-- Sealed Major Arcana Robe Part -->
 				<item id="6371" min="1" max="1" chance="0.812021993515015" /> <!-- Demon Splinter -->
 				<item id="6695" min="3" max="9" chance="70.0326816808014" /> <!-- Demon Splinter Blade -->
-				<item id="959" min="1" max="1" chance="3.29927469927979" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="960" min="1" max="1" chance="32.992820676796" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				<item id="6577" min="1" max="1" chance="0.549903677879333" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
-				<item id="10298" min="1" max="1" chance="1" /> <!-- Transformation Sealbook: Gordon -->
+				<item id="959" min="1" max="1" chance="3.29927469927979" /> <!-- Scroll: Enchant Weapon (S) -->
+				<item id="960" min="1" max="1" chance="32.992820676796" /> <!-- Scroll: Enchant Armor (S) -->
+				<item id="6577" min="1" max="1" chance="0.549903677879333" /> <!-- Blessed Scroll: Enchant Weapon (S) -->
+				<item id="10298" min="1" max="1" chance="1" /> <!-- Transform Sealbook - Gordon -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -5370,7 +5408,6 @@
 		</collision>
 	</npc>
 	<npc id="29096" level="80" type="RaidBoss" name="Anais" title="Lord of Splendor">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="29098" count="3" respawnTime="360" weightPoint="1" /> <!-- Splendor Worshiper -->
@@ -5428,9 +5465,9 @@
 				<item id="6702" min="4" max="12" chance="49.1363297346878" /> <!-- Sealed Imperial Crusader Gaiters Pattern -->
 				<item id="6370" min="1" max="1" chance="0.812021952476501" /> <!-- Saint Spear -->
 				<item id="6694" min="3" max="9" chance="72.667477864418" /> <!-- Saint Spear Blade -->
-				<item id="959" min="1" max="1" chance="2.47446126979065" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="960" min="1" max="1" chance="24.7446650741081" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				<item id="6577" min="1" max="1" chance="0.412410211631775" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
+				<item id="959" min="1" max="1" chance="2.47446126979065" /> <!-- Scroll: Enchant Weapon (S) -->
+				<item id="960" min="1" max="1" chance="24.7446650741081" /> <!-- Scroll: Enchant Armor (S) -->
+				<item id="6577" min="1" max="1" chance="0.412410211631775" /> <!-- Blessed Scroll: Enchant Weapon (S) -->
 				<item id="8920" min="1" max="1" chance="24.7446650741081" /> <!-- Angel Halo -->
 			</drop>
 		</dropLists>
@@ -5439,8 +5476,7 @@
 			<height normal="41.8" />
 		</collision>
 	</npc>
-	<npc id="29097" level="80" type="Monster" name="Disciple of Splendor" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
+	<npc id="29097" level="80" type="Monster" name="Splendor Disciple" title="Raid Fighter">
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<equipment rhand="8221" /> <!-- rhand: Monster Only (Grail Apostle Spear) -->
@@ -5488,7 +5524,6 @@
 		</collision>
 	</npc>
 	<npc id="29098" level="80" type="Monster" name="Splendor Worshiper" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="LongRangePhysicalSpecial_a" id="4208" level="10" /> <!-- Stun -->
 		</parameters>
@@ -5539,7 +5574,6 @@
 		</collision>
 	</npc>
 	<npc id="29099" level="83" type="GrandBoss" name="Baylor" title="Warden">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="selfbuff1" id="5221" level="1" /> <!-- Balor - Physical Close Range Weak Point -->
 			<skill name="selfbuff2" id="5222" level="1" /> <!-- Balor - Physical Long Range Weak Point -->

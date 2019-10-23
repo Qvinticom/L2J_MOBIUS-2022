@@ -21,10 +21,12 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class ExVariationCancelResult implements IClientOutgoingPacket
 {
+	private final int _closeWindow;
 	private final int _result;
 	
 	public ExVariationCancelResult(int result)
 	{
+		_closeWindow = 1;
 		_result = result;
 	}
 	
@@ -32,6 +34,7 @@ public class ExVariationCancelResult implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_VARIATION_CANCEL_RESULT.writeId(packet);
+		packet.writeD(_closeWindow);
 		packet.writeD(_result);
 		return true;
 	}

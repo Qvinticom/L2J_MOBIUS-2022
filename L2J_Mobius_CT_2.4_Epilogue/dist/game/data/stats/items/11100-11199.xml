@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="11100" type="Weapon" name="Flaming Dragon Skull - Wisdom">
-		<!-- Masterwork Item that decreases MP consumption when using the skill. Bestows one of the following functions: Acumen, M. Atk., or Magic Silence. -->
+		<!-- A Masterwork Item that decreases MP consumption when using the skill. Bestows one of the following functions: Acumen, Magic Power, or Magic Silence. -->
 		<set name="icon" val="icon.weapon_dragon_flame_head_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -31,7 +31,7 @@
 		</for>
 	</item>
 	<item id="11101" type="Weapon" name="Flaming Dragon Skull - Wisdom - Acumen">
-		<!-- Masterwork Item that decreases MP consumption when using the skill. <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that decreases MP consumption when using the skill. <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dragon_flame_head_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -61,7 +61,7 @@
 		</for>
 	</item>
 	<item id="11102" type="Weapon" name="Flaming Dragon Skull - Wisdom - M. Atk.">
-		<!-- Masterwork Item that decreases MP consumption when using the skill. <Soul Crystal Enhancement>. Increases MP consumption by 15% and increases M. Atk. by 167 when using magic. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that decreases MP consumption when using the skill. <Soul Crystal Enhancement>. Increases MP consumption by 15% and increases M. Atk. by 167 when using magic. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dragon_flame_head_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -91,7 +91,7 @@
 		</for>
 	</item>
 	<item id="11103" type="Weapon" name="Flaming Dragon Skull - Wisdom - Magic Silence">
-		<!-- Masterwork Item that decreases MP consumption upon skill use. <Soul Crystal Enhancement>. Has a 10% chance of casting Silence when using a magic skill on the target. Increases damage inflicted during PvP. -->
+		<!-- A rare item that decreases MP consumption upon skill use. <Soul Crystal Enhancement>. Has a 10% chance of casting Silence when using a magic skill on the target. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dragon_flame_head_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -123,7 +123,7 @@
 		</for>
 	</item>
 	<item id="11104" type="Weapon" name="Branch of the Mother Tree - Nature">
-		<!-- Masterwork Item that increases Max MP. Bestows one of the following functions: Conversion, Magic Damage, or Acumen. -->
+		<!-- A Masterwork Item that increases Max MP. Bestows one of the following functions: Conversion, Magic Damage, or Acumen. -->
 		<set name="icon" val="icon.weapon_worldtrees_branch_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -153,7 +153,7 @@
 		</for>
 	</item>
 	<item id="11105" type="Weapon" name="Branch of the Mother Tree - Nature - Conversion">
-		<!-- Masterwork Item that increases Max MP. <Soul Crystal Enhancement>. Increases Max MP by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases Max MP. <Soul Crystal Enhancement>. Increases Max MP by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_worldtrees_branch_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -183,7 +183,7 @@
 		</for>
 	</item>
 	<item id="11106" type="Weapon" name="Branch of the Mother Tree - Nature - Magic Damage">
-		<!-- Masterwork Item that increases Max MP. <Soul Crystal Enhancement>. Has a 30% chance of inflicting an additional power 8 magic damage when using a magic skill on the target. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases Max MP. <Soul Crystal Enhancement>. Has a 30% chance of inflicting an additional power 8 of magic damage when using a magic skill on the target. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_worldtrees_branch_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -215,7 +215,7 @@
 		</for>
 	</item>
 	<item id="11107" type="Weapon" name="Branch of the Mother Tree - Nature - Acumen">
-		<!-- Masterwork Item that increases Max MP. <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases Max MP. <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_worldtrees_branch_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -245,7 +245,7 @@
 		</for>
 	</item>
 	<item id="11108" type="Weapon" name="Sword of Miracles - Holy Spirit">
-		<!-- Masterwork Item that increases heal amount. Bestows one of the following functions: M. Atk., Magic Silence, or Acumen. -->
+		<!-- A Masterwork Item that increases heal amount. Bestows one of the following functions: Magic Power, Magic Silence, or Acumen. -->
 		<set name="icon" val="icon.weapon_sword_of_miracle_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -274,7 +274,7 @@
 		</for>
 	</item>
 	<item id="11109" type="Weapon" name="Sword of Miracles - Holy Spirit - M. Atk.">
-		<!-- Masterwork Item that increases heal amount. <Soul Crystal Enhancement>. Increases MP consumption by 15% and increases M. Atk. by 167 when using magic. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases heal amount. <Soul Crystal Enhancement>. Increases MP consumption by 15% and increases M. Atk. by 167 when using magic. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_sword_of_miracle_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -303,7 +303,7 @@
 		</for>
 	</item>
 	<item id="11110" type="Weapon" name="Sword of Miracles - Holy Spirit - Magic Silence">
-		<!-- Masterwork Item that increases heal amount. <Soul Crystal Enhancement>. Has a 10% chance of casting Silence when using a magic skill on the target. Increases damage inflicted during PvP. -->
+		<!-- A rare item that increases the heal amount. <Soul Crystal Enhancement>. Has a 10% chance of casting Silence when using a magic skill on the target. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_sword_of_miracle_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -334,7 +334,7 @@
 		</for>
 	</item>
 	<item id="11111" type="Weapon" name="Sword of Miracles - Holy Spirit - Acumen">
-		<!-- Masterwork Item that increases heal amount. <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases heal amount. <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_sword_of_miracle_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -363,7 +363,7 @@
 		</for>
 	</item>
 	<item id="11112" type="Weapon" name="Reaper - Clairvoyance">
-		<!-- Masterwork Item that increases attack range. Kamael Exclusive Weapon: Soul Bow Conversion. Bestows one of the following functions: Cheap Shot, Quick Recovery, or Crt. poison. -->
+		<!-- A Masterwork Item that increases attack range. Kamael exclusive weapon: Soul Bow Conversion. Bestows one of the following functions: Cheap Shot, Quick Recovery, or Crt. poison. -->
 		<set name="icon" val="icon.weapon_soul_shooter_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -397,7 +397,7 @@
 		</for>
 	</item>
 	<item id="11113" type="Weapon" name="Reaper - Clairvoyance - Cheap Shot">
-		<!-- Masterwork Item that increases attack range. Kamael Exclusive Weapon: Soul Bow Conversion. <Soul Crystal Enhancement> . Decreases MP consumption by 12% when using skills. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases attack range. Kamael exclusive weapon: Soul Bow Conversion. <Soul Crystal Enhancement> . Decreases MP consumption by 12% when using skills. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_soul_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -431,7 +431,7 @@
 		</for>
 	</item>
 	<item id="11114" type="Weapon" name="Reaper - Clairvoyance - Quick Recovery">
-		<!-- Masterwork Item that increases attack range. Kamael Exclusive Weapon: Soul Bow Conversion. . <Soul Crystal Enhancement> . Decreases re-use delay by 15%. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases attack range. Kamael exclusive weapon: Soul Bow Conversion. . <Soul Crystal Enhancement> . Decreases re-use delay by 15%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_soul_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -465,7 +465,7 @@
 		</for>
 	</item>
 	<item id="11115" type="Weapon" name="Reaper - Clairvoyance - Critical Poison">
-		<!-- Masterwork Item that increases the range. Kamael Exclusive Weapon: Soul Bow Conversion. <Soul Crystal Enhancement>. Poisons the target with a 18% chance during a general critical attack. Increases damage inflicted during PvP. -->
+		<!-- A rare item than increases the range. Kamael exclusive weapon: Soul Bow Conversion. <Soul Crystal Enhancement>. Endowed with the ability to inflict poison on the target with a 18% probability during a general critical attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_soul_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -501,7 +501,7 @@
 		</for>
 	</item>
 	<item id="11116" type="Weapon" name="Soul Separator - On Fire">
-		<!-- Masterwork Item that increases HP regeneration. Bestows one of the following functions: Guidance, Critical Damage, or Rsk. Haste. -->
+		<!-- A Masterwork Item that increases HP regeneration. Bestows one of the following functions: Guidance, Crt. Damage, or Rsk. Haste. -->
 		<set name="icon" val="icon.weapon_soul_separator_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -530,7 +530,7 @@
 		</for>
 	</item>
 	<item id="11117" type="Weapon" name="Soul Separator - On Fire - Guidance">
-		<!-- Masterwork Item that increases HP regeneration. <Soul Crystal Enhancement>. Increases Accuracy by 4. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases HP regeneration. <Soul Crystal Enhancement>. Increases Accuracy by 4. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_soul_separator_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -559,7 +559,7 @@
 		</for>
 	</item>
 	<item id="11118" type="Weapon" name="Soul Separator - On Fire - Critical Damage">
-		<!-- Masterwork Item that increases HP regeneration. <Soul Crystal Enhancement>. Increases P. Atk. by 200 on a critical attack. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases HP regeneration. <Soul Crystal Enhancement>. Increases P. Atk. by 200 on a critical attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_soul_separator_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -588,7 +588,7 @@
 		</for>
 	</item>
 	<item id="11119" type="Weapon" name="Soul Separator - On Fire - Rsk. Haste">
-		<!-- Masterwork Item that increases HP regeneration. <Soul Crystal Enhancement>. Increases Atk. Spd. by 11% when HP drops to 60% or lower. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases HP regeneration. <Soul Crystal Enhancement>. Increases Atk. Spd. by 11% when HP falls below 60%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_soul_separator_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -617,7 +617,7 @@
 		</for>
 	</item>
 	<item id="11120" type="Weapon" name="Elysian - Great Gale">
-		<!-- Masterwork Item that increases Atk. Spd. Bestows one of the following functions: Health, Anger, or Critical Drain. -->
+		<!-- A Masterwork Item that increases Atk. Spd. Bestows one of the following functions: Health, Anger, or Crt. Drain. -->
 		<set name="icon" val="icon.weapon_elysian_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -646,7 +646,7 @@
 		</for>
 	</item>
 	<item id="11121" type="Weapon" name="Elysian - Great Gale - Health">
-		<!-- Masterwork Item that increases Atk. Spd. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases Atk. Spd. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_elysian_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -675,7 +675,7 @@
 		</for>
 	</item>
 	<item id="11122" type="Weapon" name="Elysian - Great Gale - Anger">
-		<!-- Masterwork Item that increases Atk. Spd. <Soul Crystal Enhancement>. Decreases Max HP by 15% and increases P. Atk. by 32. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases Atk. Spd. <Soul Crystal Enhancement>. Decreases Max HP by 15% and increases P. Atk. by 32. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_elysian_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -704,7 +704,7 @@
 		</for>
 	</item>
 	<item id="11123" type="Weapon" name="Elysian - Great Gale - Critical Drain">
-		<!-- Masterwork Item that increases Atk. Spd. <Soul Crystal Enhancement>. Absorbs 19 HP from a target on a critical attack. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases Atk. Spd. <Soul Crystal Enhancement>. Absorbs 19 HP from a target on a critical attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_elysian_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -735,7 +735,7 @@
 		</for>
 	</item>
 	<item id="11124" type="Weapon" name="Soul Bow - Clairvoyance">
-		<!-- Masterwork Item that increases attack range. Bestows one of the following functions: Cheap Shot, Quick Recovery, or Crt. Poison. -->
+		<!-- A Masterwork Item that increases attack range. Bestows one of the following functions: Cheap Shot, Quick Recovery, or Crt. Poison. -->
 		<set name="icon" val="icon.weapon_soul_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -767,7 +767,7 @@
 		</for>
 	</item>
 	<item id="11125" type="Weapon" name="Soul Bow - Clairvoyance - Cheap Shot">
-		<!-- Masterwork Item that increases attack range. <Soul Crystal Enhancement>. Has a 38% chance of decreasing MP consumption to 1 on a general attack. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases attack range. <Soul Crystal Enhancement>. Has a 38% chance of decreasing MP consumption to 2 on a general attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_soul_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -800,7 +800,7 @@
 		</for>
 	</item>
 	<item id="11126" type="Weapon" name="Soul Bow - Clairvoyance - Quick Recovery">
-		<!-- Masterwork Item that increases attack range. <Soul Crystal Enhancement>. Decreases re-use delay by 15%. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases attack range. <Soul Crystal Enhancement>. Decreases re-use delay by 15%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_soul_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -832,7 +832,7 @@
 		</for>
 	</item>
 	<item id="11127" type="Weapon" name="Soul Bow - Clairvoyance - Critical Poison">
-		<!-- Masterwork Item that increases attack range. <Soul Crystal Enhancement>. Poisons the target at the chance of 18% during the general attack critical. Increases damage inflicted during PvP. -->
+		<!-- A rare item that increases the range. <Soul Crystal Enhancement>. Poisons the target at the probability of 18% during the general attack critical. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_soul_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -866,7 +866,7 @@
 		</for>
 	</item>
 	<item id="11128" type="Weapon" name="Tallum Glaive - On Fire">
-		<!-- Masterwork Item that increases HP regeneration. Bestows one of the following functions: Guidance, Health, or Wide Blow. -->
+		<!-- A Masterwork Item that increases HP regeneration. Bestows one of the following functions: Guidance, Health, or Wide Blow. -->
 		<set name="icon" val="icon.weapon_tallum_glaive_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -895,7 +895,7 @@
 		</for>
 	</item>
 	<item id="11129" type="Weapon" name="Tallum Glaive - On Fire - Guidance">
-		<!-- Masterwork Item that increases HP regeneration. <Soul Crystal Enhancement>. Increases Accuracy by 4. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases HP regeneration. <Soul Crystal Enhancement>. Increases Accuracy by 4. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_tallum_glaive_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -924,7 +924,7 @@
 		</for>
 	</item>
 	<item id="11130" type="Weapon" name="Tallum Glaive - On Fire - Health">
-		<!-- Masterwork Item that increases HP regeneration. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases HP regeneration. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_tallum_glaive_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -953,7 +953,7 @@
 		</for>
 	</item>
 	<item id="11131" type="Weapon" name="Tallum Glaive - On Fire - Wide Blow">
-		<!-- Masterwork Item that increases HP regeneration. <Soul Crystal Enhancement>. Attack angle widens. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases HP regeneration. <Soul Crystal Enhancement>. Attack angle widens. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_tallum_glaive_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1005,7 +1005,7 @@
 		</for>
 	</item>
 	<item id="11133" type="Weapon" name="Naga Storm - Molar">
-		<!-- Masterwork Item that has a chance to poison when attacking. It can bestow one from the followings: Focus, Critical Damage, or Back Blow. -->
+		<!-- A Masterwork Item that has a chance to poison when attacking. Bestows one of the following functions: Focus, Critical Damage or Back Blow. -->
 		<set name="icon" val="icon.weapon_naga_storm_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1034,7 +1034,7 @@
 		</for>
 	</item>
 	<item id="11134" type="Weapon" name="Naga Storm - Molar - Focus">
-		<!-- Masterwork Item that has a chance to poison when attacking. <Soul Crystal Enhancement>. Increases Critical by 67. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that has a chance to poison when attacking. <Soul Crystal Enhancement>. Increases Critical Attack by 67. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_naga_storm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1063,7 +1063,7 @@
 		</for>
 	</item>
 	<item id="11135" type="Weapon" name="Naga Storm - Molar - Critical Damage">
-		<!-- Masterwork Item that has a chance to poison when attacking. <Soul Crystal Enhancement>. Increases P. Atk. by 200 on a critical attack. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that has a chance to poison when attacking. <Soul Crystal Enhancement>. Increases P. Atk. by 200 on a critical attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_naga_storm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1092,7 +1092,7 @@
 		</for>
 	</item>
 	<item id="11136" type="Weapon" name="Naga Storm - Molar - Back Blow">
-		<!-- Masterwork Item that has a chance to poison when attacking. <Soul Crystal Enhancement>. Increases Critical Rate by 37 when attacking a target from behind. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that has a chance to poison when attacking. <Soul Crystal Enhancement>. Increases Critical rate by 37 when attacking a target from behind. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_naga_storm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1121,7 +1121,7 @@
 		</for>
 	</item>
 	<item id="11137" type="Weapon" name="Daimon Crystal - Wisdom">
-		<!-- Masterwork Item that decreases MP consumption when using the skill. Bestows one of the following functions: Mana Up, Acumen, or Mental Shield. -->
+		<!-- A Masterwork Item that decreases MP consumption when using the skill. Bestows one of the following functions: Mana Up, Acumen, or Magic Mental Shield. -->
 		<set name="icon" val="icon.weapon_crystal_of_deamon_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1151,7 +1151,7 @@
 		</for>
 	</item>
 	<item id="11138" type="Weapon" name="Daimon Crystal - Wisdom - Mana Up">
-		<!-- Masterwork Item that decreases MP consumption when using the skill. <Soul Crystal Enhancement>. Increases Max MP by 30%. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that decreases MP consumption when using the skill. <Soul Crystal Enhancement>. Increases Max MP by 30%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_crystal_of_deamon_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1181,7 +1181,7 @@
 		</for>
 	</item>
 	<item id="11139" type="Weapon" name="Daimon Crystal - Wisdom - Acumen">
-		<!-- Masterwork Item that decreases MP consumption when using the skill. <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that decreases MP consumption when using the skill. <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_crystal_of_deamon_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1211,7 +1211,7 @@
 		</for>
 	</item>
 	<item id="11140" type="Weapon" name="Daimon Crystal - Wisdom - Mental Shield">
-		<!-- Masterwork Item that decreases MP consumption for skill use. <Soul Crystal Enhancement>. Has a 50% chance of casting Mental Shield when using a magic skill on the target. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that decreases MP consumption for skill use. <Soul Crystal Enhancement>. Has a 50% chance of casting Mental Shield when using a magic skill on the target. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_crystal_of_deamon_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1243,7 +1243,7 @@
 		</for>
 	</item>
 	<item id="11141" type="Weapon" name="Barakiel's Axe - On Fire">
-		<!-- Masterwork Item that increases HP regeneration. Bestows one of the following functions: Health, Haste, or Focus. -->
+		<!-- A Masterwork Item that increases HP regeneration. Bestows one of the following functions: Health, Haste, or Focus. -->
 		<set name="icon" val="icon.weapon_barakiel_axe_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1272,7 +1272,7 @@
 		</for>
 	</item>
 	<item id="11142" type="Weapon" name="Barakiel's Axe - On Fire - Health">
-		<!-- Masterwork Item that increases HP regeneration. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases HP regeneration. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_barakiel_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1301,7 +1301,7 @@
 		</for>
 	</item>
 	<item id="11143" type="Weapon" name="Barakiel's Axe - On Fire - Haste">
-		<!-- Masterwork Item that increases HP regeneration. <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases HP regeneration. <Soul Crystal Enhancement>. Increases Atk. Spd. by 6%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_barakiel_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1330,7 +1330,7 @@
 		</for>
 	</item>
 	<item id="11144" type="Weapon" name="Barakiel's Axe - On Fire - Focus">
-		<!-- Masterwork Item that increases HP regeneration. <Soul Crystal Enhancement>. Increases Critical by 61. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases HP regeneration. <Soul Crystal Enhancement>. Increases Critical Attack by 61. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_barakiel_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1359,7 +1359,7 @@
 		</for>
 	</item>
 	<item id="11145" type="Weapon" name="Screaming Vengeance - Concentration">
-		<!-- Masterwork Item that increases Accuracy. Kamael Exclusive Weapon: Shyeed's Bow Conversion. Bestows one of the following functions: Cheap Shot, Focus, or Quick Recovery. -->
+		<!-- A Masterwork Item that increases Accuracy. Kamael exclusive weapon: Shyeed's Bow Conversion. Bestows one of the following functions: Cheap Shot, Focus, or Quick Recovery. -->
 		<set name="icon" val="icon.weapon_soul_shooter_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1393,7 +1393,7 @@
 		</for>
 	</item>
 	<item id="11146" type="Weapon" name="Screaming Vengeance - Concentration - Cheap Shot">
-		<!-- Masterwork Item that increases Accuracy. Kamael Exclusive Weapon: Shyeed's Bow Conversion. <Soul Crystal Enhancement>. Decreases MP consumption by 12% when using skills. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases Accuracy. Kamael exclusive weapon: Shyeed's Bow Conversion. <Soul Crystal Option>. Decreases MP consumption by 12% when using skills. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_soul_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1427,7 +1427,7 @@
 		</for>
 	</item>
 	<item id="11147" type="Weapon" name="Screaming Vengeance - Concentration - Focus">
-		<!-- Masterwork Item that increases Accuracy. Kamael Exclusive Weapon: Shyeed's Bow Conversion. <Soul Crystal Enhancement>. Increases Critical by 61. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases Accuracy. Kamael exclusive weapon: Shyeed's Bow Conversion. <Soul Crystal Option>. Increases Critical Attack by 61. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_soul_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1461,7 +1461,7 @@
 		</for>
 	</item>
 	<item id="11148" type="Weapon" name="Screaming Vengeance - Concentration - Quick Recovery">
-		<!-- Masterwork Item that increases Accuracy. Kamael Exclusive Weapon: Shyeed's Bow Conversion. <Soul Crystal Enhancement>. Decreases re-use delay by 17%. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases Accuracy. Kamael exclusive weapon: Shyeed's Bow Conversion. <Soul Crystal Option>. Decreases re-use delay by 17%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_soul_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1495,7 +1495,7 @@
 		</for>
 	</item>
 	<item id="11149" type="Weapon" name="Behemoth's Tuning Fork - Destruction">
-		<!-- Masterwork Item that increases P. Atk. Bestows one of the following functions: Focus, Health, or Anger. -->
+		<!-- A Masterwork Item that increases P. Atk. Bestows one of the following functions: Focus, Health, or Anger. -->
 		<set name="icon" val="icon.weapon_tuning_fork_of_behemoth_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1524,7 +1524,7 @@
 		</for>
 	</item>
 	<item id="11150" type="Weapon" name="Behemoth's Tuning Fork - Destruction - Focus">
-		<!-- Masterwork Item that increases P. Atk. <Soul Crystal Enhancement>. Increases Critical by 61. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases P. Atk. <Soul Crystal Enhancement>. Increases Critical Attack by 61. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_tuning_fork_of_behemoth_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1553,7 +1553,7 @@
 		</for>
 	</item>
 	<item id="11151" type="Weapon" name="Behemoth's Tuning Fork - Destruction - Health">
-		<!-- Masterwork Item that increases P. Atk. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases P. Atk. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_tuning_fork_of_behemoth_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1582,7 +1582,7 @@
 		</for>
 	</item>
 	<item id="11152" type="Weapon" name="Behemoth's Tuning Fork - Destruction - Anger">
-		<!-- Masterwork Item that increases P. Atk. <Soul Crystal Enhancement>. Decreases Max HP by 15% and increases P. Atk. by 32. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases P. Atk. <Soul Crystal Enhancement>. Decreases Max HP by 15% and increases P. Atk. by 32. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_tuning_fork_of_behemoth_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1611,7 +1611,7 @@
 		</for>
 	</item>
 	<item id="11153" type="Weapon" name="Bultgang - Earth">
-		<!-- Masterwork Item that increases Max HP. Kamael Exclusive Weapon: Sword of Ipos Conversion. Bestows one of the following functions: Focus, Haste, or Health. -->
+		<!-- A Masterwork Item that increases Max HP. Kamael exclusive weapon: Sword of Ipos Conversion. Bestows one of the following functions: Focus, Haste, or Health. -->
 		<set name="icon" val="icon.weapon_death_bringer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1644,7 +1644,7 @@
 		</for>
 	</item>
 	<item id="11154" type="Weapon" name="Bultgang - Earth - Focus">
-		<!-- Masterwork Item that increases Max HP. Kamael Exclusive Weapon: Sword of Ipos Conversion. . <Soul Crystal Enhancement> . Increases Critical Attack by 61. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases Max HP. Kamael exclusive weapon: Sword of Ipos Conversion. . <Soul Crystal Enhancement> . Increases Critical Attack by 61. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_death_bringer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1677,7 +1677,7 @@
 		</for>
 	</item>
 	<item id="11155" type="Weapon" name="Bultgang - Earth - Haste">
-		<!-- Masterwork Item that increases Max HP. Kamael Exclusive Weapon: Sword of Ipos Conversion. . <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases Max HP. Kamael exclusive weapon: Sword of Ipos Conversion. . <Soul Crystal Enhancement>. Increases Atk. Spd. by 6%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_death_bringer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1710,7 +1710,7 @@
 		</for>
 	</item>
 	<item id="11156" type="Weapon" name="Bultgang - Earth - Health">
-		<!-- Masterwork Item that increases Max HP. Kamael Exclusive Weapon: Sword of Ipos Conversion. . <Soul Crystal Enhancement> . Increases Max HP by 25%. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases Max HP. Kamael exclusive weapon: Sword of Ipos Conversion. . <Soul Crystal Enhancement> . Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_death_bringer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1743,7 +1743,7 @@
 		</for>
 	</item>
 	<item id="11157" type="Weapon" name="Shyeed's Bow - Concentration">
-		<!-- Masterwork Item that increases Accuracy. Bestows one of the following functions: Cheap Shot, Focus, or Quick Recovery. -->
+		<!-- A Masterwork Item that increases Accuracy. Bestows one of the following functions: Cheap Shot, Focus, or Quick Recovery. -->
 		<set name="icon" val="icon.weapon_shyid_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1775,7 +1775,7 @@
 		</for>
 	</item>
 	<item id="11158" type="Weapon" name="Shyeed's Bow - Concentration - Cheap Shot">
-		<!-- Masterwork Item that increases Accuracy. <Soul Crystal Enhancement>. Has a 30% chance of decreasing MP consumption to 1 on a general attack. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases Accuracy. <Soul Crystal Option>. Has a 30% chance of decreasing MP consumption to 1 on a general attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_shyid_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1808,7 +1808,7 @@
 		</for>
 	</item>
 	<item id="11159" type="Weapon" name="Shyeed's Bow - Concentration - Focus">
-		<!-- Masterwork Item that increases Accuracy. <Soul Crystal Enhancement>. Increases Critical by 61. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases Accuracy. <Soul Crystal Option>. Increases Critical Attack by 61. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_shyid_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1840,7 +1840,7 @@
 		</for>
 	</item>
 	<item id="11160" type="Weapon" name="Shyeed's Bow - Concentration - Quick Recovery">
-		<!-- Masterwork Item that increases Accuracy. <Soul Crystal Enhancement>. Decreases re-use delay by 17%. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases Accuracy. <Soul Crystal Option>. Decreases re-use delay by 17%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_shyid_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1872,7 +1872,7 @@
 		</for>
 	</item>
 	<item id="11161" type="Weapon" name="Sword of Ipos - Earth">
-		<!-- Masterwork Item that increases Max HP. Bestows one of the following functions: Focus, Haste, or Health. -->
+		<!-- A Masterwork Item that increases Max HP. Bestows one of the following functions: Focus, Haste, or Health. -->
 		<set name="icon" val="icon.weapon_sword_of_ipos_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1901,7 +1901,7 @@
 		</for>
 	</item>
 	<item id="11162" type="Weapon" name="Sword of Ipos - Earth - Focus">
-		<!-- Masterwork Item that increases Max HP. <Soul Crystal Enhancement>. Increases Critical by 61. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases Max HP. <Soul Crystal Enhancement>. Increases Critical Attack by 61. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_sword_of_ipos_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1930,7 +1930,7 @@
 		</for>
 	</item>
 	<item id="11163" type="Weapon" name="Sword of Ipos - Earth - Haste">
-		<!-- Masterwork Item that increases Max HP. <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases Max HP. <Soul Crystal Enhancement>. Increases Atk. Spd. by 6%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_sword_of_ipos_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1959,7 +1959,7 @@
 		</for>
 	</item>
 	<item id="11164" type="Weapon" name="Sword of Ipos - Earth - Health">
-		<!-- Masterwork Item that increases Max HP. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases Max HP. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_sword_of_ipos_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1988,7 +1988,7 @@
 		</for>
 	</item>
 	<item id="11165" type="Weapon" name="Sobekk's Hurricane - Landslide">
-		<!-- Masterwork Item that has a chance to stun when attacking. It can bestow one of the following functions: Rsk. Haste, Health, or Critical Drain. -->
+		<!-- A Masterwork Item that has a chance to stun when attacking. Bestows one of the following functions: Rsk. Haste, Haste, Critical Drain -->
 		<set name="icon" val="icon.weapon_sobekk_hurricane_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -2017,7 +2017,7 @@
 		</for>
 	</item>
 	<item id="11166" type="Weapon" name="Sobekk's Hurricane - Landslide - Rsk. Haste">
-		<!-- Masterwork Item that has a chance to stun when attacking. <Soul Crystal Enhancement>. Increases Atk. Spd. by 11% when HP drops to 60% or lower. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that has a chance to stun when attacking. <Soul Crystal Enhancement>. Increases Atk. Spd. by 11% when HP falls below 60%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_sobekk_hurricane_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -2046,7 +2046,7 @@
 		</for>
 	</item>
 	<item id="11167" type="Weapon" name="Sobekk's Hurricane - Landslide - Haste">
-		<!-- Masterwork Item that has a chance to stun. <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that has a chance to stun. <Soul Crystal Enhancement>. Increases Atk. Spd. by 6%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_sobekk_hurricane_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -2075,7 +2075,7 @@
 		</for>
 	</item>
 	<item id="11168" type="Weapon" name="Sobekk's Hurricane - Landslide - Critical Drain">
-		<!-- Masterwork Item that has a chance to stun when attacking. <Soul Crystal Enhancement>. Has a chance to absorb 14 HP from a target on a critical attack. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that has a chance to stun when attacking. <Soul Crystal Enhancement>. Has a chance to absorb 14 HP from a target on a critical attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_sobekk_hurricane_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -2106,7 +2106,7 @@
 		</for>
 	</item>
 	<item id="11169" type="Weapon" name="Sirra's Blade - Landslide">
-		<!-- Masterwork Item that has a chance to stun. Bestows one of the following functions: Haste, Health, or Crt. Poison. -->
+		<!-- A Masterwork Item that has a chance to stun. Bestows one of the following functions:Haste, Health, or Crt. Poison. -->
 		<set name="icon" val="icon.weapon_sirr_blade_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2135,7 +2135,7 @@
 		</for>
 	</item>
 	<item id="11170" type="Weapon" name="Sirra's Blade - Landslide - Haste">
-		<!-- Masterwork Item that has a chance to stun. <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that has a chance to stun. <Soul Crystal Enhancement>. Increases Atk. Spd. by 6%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_sirr_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2164,7 +2164,7 @@
 		</for>
 	</item>
 	<item id="11171" type="Weapon" name="Sirra's Blade - Landslide - Health">
-		<!-- Masterwork Item that has a chance to stun when attacking. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that has a chance to stun when attacking. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_sirr_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2193,7 +2193,7 @@
 		</for>
 	</item>
 	<item id="11172" type="Weapon" name="Sirra's Blade - Landslide - Critical Poison">
-		<!-- Masterwork Item that has a chance to stun when attacking. <Soul Crystal Enhancement>. Has a 6% chance to poison a target on a critical attack. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that has a chance to stun when attacking. <Soul Crystal Enhancement>. Has a 6% chance to poison a target on a critical attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_sirr_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2224,7 +2224,7 @@
 		</for>
 	</item>
 	<item id="11173" type="Weapon" name="Eclair Bijou - Landslide">
-		<!-- Masterwork Item that has a chance to stun when attacking. Kamael Exclusive Weapon: Sirra's Blade Conversion. Bestows one of the following functions: Haste, Health, or Crt. Poison. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and of decreaseing MP consumption for skill use for you and your party members during a critical attack. -->
+		<!-- A Masterwork Item that has a chance to stun when attacking. Kamael exclusive weapon: Sirra's Blade Conversion. Bestows one of the following functions: Haste, Health, or Crt. Poison. When enchanted by 4 or more, a critical attack will have a chance to increase P. Atk., M. Atk., and healing power, and decrease MP consumption during skill use, for you and your party members. -->
 		<set name="icon" val="icon.weapon_greed_stinger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2258,7 +2258,7 @@
 		</for>
 	</item>
 	<item id="11174" type="Weapon" name="Eclair Bijou - Landslide - Haste">
-		<!-- Masterwork Item that has a chance to stun when attacking. Kamael Exclusive Weapon: Sirra's Blade Conversion . <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and of decreaseing MP consumption for skill use for you and your party members during a critical attack. -->
+		<!-- A Masterwork Item that has a chance to stun when attacking. Kamael exclusive weapon: Sirra's Blade Conversion . <Soul Crystal Enhancement>. Increases Atk. Spd. by 6%. Increases damage inflicted during PvP. When enchanted by 4 or more, a critical attack will have a chance to increase P. Atk., M. Atk., and healing power, and decrease MP consumption during skill use, for you and your party members. -->
 		<set name="icon" val="icon.weapon_greed_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2292,7 +2292,7 @@
 		</for>
 	</item>
 	<item id="11175" type="Weapon" name="Eclair Bijou - Landslide - Health">
-		<!-- Masterwork Item that has a chance to stun when attacking. Kamael Exclusive Weapon: Sirra's Blade Conversion . <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and of decreaseing MP consumption for skill use for you and your party members during a critical attack. -->
+		<!-- A Masterwork Item that has a chance to stun when attacking. Kamael exclusive weapon: Sirra's Blade Conversion . <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. When enchanted by 4 or more, a critical attack will have a chance to increase P. Atk., M. Atk., and healing power, and decrease MP consumption during skill use, for you and your party members. -->
 		<set name="icon" val="icon.weapon_greed_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2326,7 +2326,7 @@
 		</for>
 	</item>
 	<item id="11176" type="Weapon" name="Eclair Bijou - Landslide - Critical Poison">
-		<!-- Masterwork Item that has a chance to stun when attacking. Kamael Exclusive Weapon: Sirra's Blade Conversion. . <Soul Crystal Enhancement>. Has a 6% chance to poison a target on a critical attack. Increases damage inflicted during PvP. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and of decreaseing MP consumption for skill use for you and your party members during a critical attack. -->
+		<!-- A Masterwork Item that has a chance to stun when attacking. Kamael exclusive weapon: Sirra's Blade Conversion. . <Soul Crystal Enhancement>. Has a 6% chance to poison a target on a critical attack. Increases damage inflicted during PvP. When enchanted by 4 or more, a critical attack will have a chance to increase P. Atk., M. Atk., and healing power, and decrease MP consumption during skill use, for you and your party members. -->
 		<set name="icon" val="icon.weapon_greed_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2362,7 +2362,7 @@
 		</for>
 	</item>
 	<item id="11177" type="Weapon" name="Tiphon's Spear - Landslide">
-		<!-- Masterwork Item that has a chance to stun when attacking. Crt. Bestows one of the following functions: Stun, Towering Blow or Wide Blow. -->
+		<!-- A Masterwork Item that has a chance to stun when attacking. Crt. Bestows one of the following functions: Stun, Long Blow or Wide Blow. -->
 		<set name="icon" val="icon.weapon_tiphon_spear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -2391,7 +2391,7 @@
 		</for>
 	</item>
 	<item id="11178" type="Weapon" name="Tiphon's Spear - Landslide - Critical Stun">
-		<!-- Masterwork Item that has a chance to stun when attacking. <Soul Crystal Enhancement>. Has a 25% chance of stunning a target during a critical attack. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that has a chance to stun when attacking. <Soul Crystal Enhancement>. Has a 25% chance to stun on a critical attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_tiphon_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -2422,7 +2422,7 @@
 		</for>
 	</item>
 	<item id="11179" type="Weapon" name="Tiphon's Spear - Landslide - Towering Blow">
-		<!-- Masterwork Item that has a chance to stun. <Soul Crystal Enhancement>. Increases the attack range. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that has a chance to stun. <Soul Crystal Enhancement>. Increases attack range. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_tiphon_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -2452,7 +2452,7 @@
 		</for>
 	</item>
 	<item id="11180" type="Weapon" name="Tiphon's Spear - Landslide - Wild Blow">
-		<!-- Masterwork Item that has a chance to stun. <Soul Crystal Enhancement>. the attack angle widens. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that has a chance to stun. <Soul Crystal Enhancement>. the attack angle widens. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_tiphon_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -2481,7 +2481,7 @@
 		</for>
 	</item>
 	<item id="11181" type="Weapon" name="Tallum Blade*Damascus - Landslide">
-		<!-- Masterwork Item that has a chance to stun. . When enchanted, P. Atk. of a dualsword will increase more significantly than that of a one-handed or fist weapon. When enchanted to 4 or more, Atk. Spd. will increase by 8%. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that has a chance to stun. . When enchanted, the P.Atk. of a dualsword will increase more significantly than that of a one-handed or fist weapon. When enchanted by 4 or more, Atk. Spd. will increase by 8%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -2510,7 +2510,7 @@
 		</for>
 	</item>
 	<item id="11182" type="Weapon" name="Themis' Tongue - Cleverness">
-		<!-- Masterwork Item that increases MP regeneration. Bestows one of the following functions: Mana Up, Mental Shield, or Magic Focus. -->
+		<!-- A Masterwork Item that increases MP regeneration. Bestows one of the following functions: Mana Up, Magic Mental Shield, or Magic Focus. -->
 		<set name="icon" val="icon.weapon_tongue_of_themis_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2539,7 +2539,7 @@
 		</for>
 	</item>
 	<item id="11183" type="Weapon" name="Themis' Tongue - Cleverness - Mana Up">
-		<!-- Masterwork Item that increases MP regeneration. <Soul Crystal Enhancement>. Increases Max MP by 30%. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases MP regeneration. <Soul Crystal Option>. Increases Max MP by 30%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_tongue_of_themis_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2568,7 +2568,7 @@
 		</for>
 	</item>
 	<item id="11184" type="Weapon" name="Themis' Tongue - Cleverness - Mental Shield">
-		<!-- Masterwork Item that increases MP Regeneration. <Soul Crystal Enhancement>. Has a 50% chance of casting Mental Shield when using a magic skill on the target. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases MP Regeneration. <Soul Crystal Enhancement>. Has a 50% chance of casting Mental Shield when using a magic skill on the target. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_tongue_of_themis_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2599,7 +2599,7 @@
 		</for>
 	</item>
 	<item id="11185" type="Weapon" name="Themis' Tongue - Cleverness - Magic Focus">
-		<!-- Masterwork Item that increases MP Regeneration. <Soul Crystal Enhancement>. Has a 20% chance of casting Focus when using a magic skill on the target. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases MP Regeneration. <Soul Crystal Enhancement>. Has a 20% chance of casting Focus when using a magic skill on the target. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_tongue_of_themis_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2630,7 +2630,7 @@
 		</for>
 	</item>
 	<item id="11186" type="Weapon" name="Cabrio's Hand - Cleverness">
-		<!-- Masterwork Item that increases MP regeneration. Bestows one of the following functions: Conversion, Mana Up, or Magic Silence. -->
+		<!-- A Masterwork Item that increases MP regeneration. Bestows one of the following functions: Conversion, Mana Up, or Magic Silence. -->
 		<set name="icon" val="icon.weapon_hand_of_cabrio_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2660,7 +2660,7 @@
 		</for>
 	</item>
 	<item id="11187" type="Weapon" name="Cabrio's Hand - Cleverness - Conversion">
-		<!-- Masterwork Item that increases MP regeneration. <Soul Crystal Enhancement>. Increases Max MP by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases MP regeneration. <Soul Crystal Option>. Increases Max MP by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_hand_of_cabrio_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2690,7 +2690,7 @@
 		</for>
 	</item>
 	<item id="11188" type="Weapon" name="Cabrio's Hand - Cleverness - Mana Up">
-		<!-- Masterwork Item that increases MP regeneration. <Soul Crystal Enhancement>. Increases Max MP by 30%. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases MP regeneration. <Soul Crystal Option>. Increases Max MP by 30%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_hand_of_cabrio_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2720,7 +2720,7 @@
 		</for>
 	</item>
 	<item id="11189" type="Weapon" name="Cabrio's Hand - Cleverness - Magic Silence">
-		<!-- Masterwork Item that increases MP Regeneration. <Soul Crystal Enhancement>. Has a 10% chance of casting Silence when using a magic skill on the target. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases MP Regeneration. <Soul Crystal Enhancement>. Has a 10% chance of casting Silence when using a magic skill on the target. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_hand_of_cabrio_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2752,7 +2752,7 @@
 		</for>
 	</item>
 	<item id="11190" type="Weapon" name="Gram - Thunder">
-		<!-- Masterwork Item that increases Critical Damage. Kamael Exclusive Weapon: Heaven's Divider Conversion. Bestows one of the following functions: Haste, Health, or Focus. -->
+		<!-- A Masterwork Item that increases critical damage. Kamael exclusive weapon: Heaven's Divider Conversion. Bestows one of the following functions: Haste, Health, or Focus. -->
 		<set name="icon" val="icon.weapon_gram_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -2771,7 +2771,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3850-1" /> <!-- Ancient Sword of Critical Damage -->
+		<set name="item_skill" val="3850-1" /> <!-- Ancient Sword of Critical Power -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -2786,7 +2786,7 @@
 		</for>
 	</item>
 	<item id="11191" type="Weapon" name="Gram - Thunder - Haste">
-		<!-- Masterwork Item that increases Critical Damage. Kamael Exclusive Weapon: Heaven's Divider Conversion. <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%.Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases critical damage. Kamael exclusive weapon: Heaven's Divider Conversion. <Soul Crystal Option>. Increases Atk. Spd. by 7%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_gram_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -2805,7 +2805,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3850-1;3564-1" /> <!-- Ancient Sword of Critical Damage -->
+		<set name="item_skill" val="3850-1;3564-1" /> <!-- Ancient Sword of Critical Power -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -2820,7 +2820,7 @@
 		</for>
 	</item>
 	<item id="11192" type="Weapon" name="Gram - Thunder - Health">
-		<!-- Masterwork Item that increases Critical Damage. Kamael Exclusive Weapon: Heaven's Divider Conversion. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases critical damage. Kamael exclusive weapon: Heaven's Divider Conversion. <Soul Crystal Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_gram_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -2839,7 +2839,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3850-1;3013-3" /> <!-- Ancient Sword of Critical Damage -->
+		<set name="item_skill" val="3850-1;3013-3" /> <!-- Ancient Sword of Critical Power -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -2854,7 +2854,7 @@
 		</for>
 	</item>
 	<item id="11193" type="Weapon" name="Gram - Thunder - Focus">
-		<!-- Masterwork Item that increases Critical Damage. Kamael Exclusive Weapon: Heaven's Divider Conversion. <Soul Crystal Enhancement>. Increases Critical by 84. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases critical damage. Kamael exclusive weapon: Heaven's Divider Conversion. <Soul Crystal Option>. Increases Critical Attack by 84. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_gram_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -2873,7 +2873,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3850-1;3566-1" /> <!-- Ancient Sword of Critical Damage -->
+		<set name="item_skill" val="3850-1;3566-1" /> <!-- Ancient Sword of Critical Power -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -2888,7 +2888,7 @@
 		</for>
 	</item>
 	<item id="11194" type="Weapon" name="Demon Splinter - Thunder">
-		<!-- Masterwork Item that increases Critical Damage. Bestows one of the following functions: Focus, Health, or Critical Stun. -->
+		<!-- A Masterwork Item that increases critical damage. Bestows one of the following functions: Focus, Health, or Critical Stun. -->
 		<set name="icon" val="icon.weapon_demon_splinter_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -2906,7 +2906,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3883-1" /> <!-- Fist Weapon of Critical Damage -->
+		<set name="item_skill" val="3883-1" /> <!-- Fist Weapon of Critical Power -->
 		<for>
 			<set stat="pAtk" val="342" />
 			<set stat="mAtk" val="132" />
@@ -2918,7 +2918,7 @@
 		</for>
 	</item>
 	<item id="11195" type="Weapon" name="Demon Splinter - Thunder - Focus">
-		<!-- Masterwork Item that increases Critical Damage. <Soul Crystal Enhancement>. Increases Critical by 80. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases critical damage. <Soul Crystal Enhancement>. Increases Critical Attack by 80. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_demon_splinter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -2936,7 +2936,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3883-1;3565-1" /> <!-- Fist Weapon of Critical Damage -->
+		<set name="item_skill" val="3883-1;3565-1" /> <!-- Fist Weapon of Critical Power -->
 		<for>
 			<set stat="pAtk" val="342" />
 			<set stat="mAtk" val="132" />
@@ -2948,7 +2948,7 @@
 		</for>
 	</item>
 	<item id="11196" type="Weapon" name="Demon Splinter - Thunder - Health">
-		<!-- Masterwork Item that increases Critical Damage. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases critical damage. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_demon_splinter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -2966,7 +2966,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="item_skill" val="3883-1;3013-3" /> <!-- Fist Weapon of Critical Damage -->
+		<set name="item_skill" val="3883-1;3013-3" /> <!-- Fist Weapon of Critical Power -->
 		<for>
 			<set stat="pAtk" val="342" />
 			<set stat="mAtk" val="132" />
@@ -2978,7 +2978,7 @@
 		</for>
 	</item>
 	<item id="11197" type="Weapon" name="Demon Splinter - Thunder - Critical Stun">
-		<!-- Masterwork Item that increases Critical Damage. <Soul Crystal Enhancement>. Has a 27% chance of casting Stun on a critical attack. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases critical damage. <Soul Crystal Enhancement>. Has a 27% chance of casting Stun on a critical attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_demon_splinter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -2998,7 +2998,7 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="oncrit_chance" val="27" />
 		<set name="oncrit_skill" val="3571-1" />
-		<set name="item_skill" val="3883-1;3552-1" /> <!-- Fist Weapon of Critical Damage -->
+		<set name="item_skill" val="3883-1;3552-1" /> <!-- Fist Weapon of Critical Power -->
 		<for>
 			<set stat="pAtk" val="342" />
 			<set stat="mAtk" val="132" />
@@ -3010,7 +3010,7 @@
 		</for>
 	</item>
 	<item id="11198" type="Weapon" name="Draconic Bow - Earth">
-		<!-- Masterwork Item that increases Max HP. Bestows one of the following functions: Cheap Shot, Focus, or Critical Slow. -->
+		<!-- A Masterwork Item that increases tMax HP. Bestows one of the following functions: Cheap Shot, Focus, or Crt. Slow. -->
 		<set name="icon" val="icon.weapon_draconic_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -3043,7 +3043,7 @@
 		</for>
 	</item>
 	<item id="11199" type="Weapon" name="Draconic Bow - Earth - Cheap Shot">
-		<!-- Masterwork Item that increases Max HP. <Soul Crystal Enhancement>. Has a 26% chance of decreasing MP consumption to 1 on a general attack. Increases damage inflicted during PvP. -->
+		<!-- A Masterwork Item that increases Max HP. <Soul Crystal Enhancement>. Has a 26% chance of decreasing MP consumption to 1 on a general attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_draconic_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />

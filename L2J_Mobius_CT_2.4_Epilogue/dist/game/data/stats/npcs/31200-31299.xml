@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="31200" level="70" type="Npc" name="Preacher of Doom">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="PosX1" value="147481" />
 			<param name="PosY1" value="28254" />
@@ -46,7 +45,6 @@
 		</collision>
 	</npc>
 	<npc id="31201" level="70" type="Npc" name="Orator of Revelations">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="PosX1" value="0" />
 			<param name="PosY1" value="0" />
@@ -92,7 +90,6 @@
 		</collision>
 	</npc>
 	<npc id="31202" level="70" type="Npc" name="Maximus">
-		<!-- Confirmed CT2.5 -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -129,7 +126,6 @@
 		</collision>
 	</npc>
 	<npc id="31203" level="70" type="Npc" name="Moon Dancer">
-		<!-- Confirmed CT2.5 -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -166,7 +162,6 @@
 		</collision>
 	</npc>
 	<npc id="31204" level="70" type="Npc" name="Georgio">
-		<!-- Confirmed CT2.5 -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -203,7 +198,6 @@
 		</collision>
 	</npc>
 	<npc id="31205" level="70" type="Npc" name="Katz">
-		<!-- Confirmed CT2.5 -->
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -240,7 +234,6 @@
 		</collision>
 	</npc>
 	<npc id="31206" level="70" type="Npc" name="Ten Ten">
-		<!-- Confirmed CT2.5 -->
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -277,7 +270,6 @@
 		</collision>
 	</npc>
 	<npc id="31207" level="70" type="Npc" name="Sardinia">
-		<!-- Confirmed CT2.5 -->
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -314,7 +306,6 @@
 		</collision>
 	</npc>
 	<npc id="31208" level="70" type="Npc" name="La Grange">
-		<!-- Confirmed CT2.5 -->
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -351,7 +342,6 @@
 		</collision>
 	</npc>
 	<npc id="31209" level="70" type="Npc" name="Misty Rain">
-		<!-- Confirmed CT2.5 -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -388,7 +378,6 @@
 		</collision>
 	</npc>
 	<npc id="31210" level="70" type="Npc" name="Race Track Gatekeeper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -428,7 +417,6 @@
 		</collision>
 	</npc>
 	<npc id="31211" level="70" type="Teleporter" name="Race Track Guide">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="87" />
@@ -468,7 +456,6 @@
 		</collision>
 	</npc>
 	<npc id="31212" level="70" type="Teleporter" name="Event Gatekeeper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -509,7 +496,6 @@
 		</collision>
 	</npc>
 	<npc id="31213" level="70" type="Teleporter" name="Event Gatekeeper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -550,7 +536,6 @@
 		</collision>
 	</npc>
 	<npc id="31214" level="70" type="Teleporter" name="Event Gatekeeper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -591,7 +576,6 @@
 		</collision>
 	</npc>
 	<npc id="31215" level="70" type="Teleporter" name="Event Gatekeeper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -632,7 +616,6 @@
 		</collision>
 	</npc>
 	<npc id="31216" level="70" type="Teleporter" name="Event Gatekeeper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -673,7 +656,6 @@
 		</collision>
 	</npc>
 	<npc id="31217" level="70" type="Teleporter" name="Event Gatekeeper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -714,7 +696,6 @@
 		</collision>
 	</npc>
 	<npc id="31218" level="70" type="Teleporter" name="Event Gatekeeper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -755,7 +736,6 @@
 		</collision>
 	</npc>
 	<npc id="31219" level="70" type="Teleporter" name="Event Gatekeeper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -796,7 +776,6 @@
 		</collision>
 	</npc>
 	<npc id="31220" level="70" type="Teleporter" name="Event Gatekeeper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -837,7 +816,6 @@
 		</collision>
 	</npc>
 	<npc id="31221" level="70" type="Teleporter" name="Event Gatekeeper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -878,7 +856,6 @@
 		</collision>
 	</npc>
 	<npc id="31222" level="70" type="Teleporter" name="Event Gatekeeper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -919,7 +896,6 @@
 		</collision>
 	</npc>
 	<npc id="31223" level="70" type="Teleporter" name="Event Gatekeeper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -960,7 +936,6 @@
 		</collision>
 	</npc>
 	<npc id="31224" level="70" type="Teleporter" name="Event Gatekeeper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1001,7 +976,6 @@
 		</collision>
 	</npc>
 	<npc id="31225" level="70" type="Warehouse" name="Arena Manager">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -1041,7 +1015,6 @@
 		</collision>
 	</npc>
 	<npc id="31226" level="70" type="Warehouse" name="Arena Director">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -1081,7 +1054,6 @@
 		</collision>
 	</npc>
 	<npc id="31227" level="70" type="Npc" name="Buzz the Cat" title="Event Manager">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1122,7 +1094,6 @@
 		</collision>
 	</npc>
 	<npc id="31228" level="70" type="Npc" name="Roy the Cat" title="Event Manager">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1163,7 +1134,6 @@
 		</collision>
 	</npc>
 	<npc id="31229" level="70" type="Npc" name="Winnie the Cat" title="Event Manager">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1204,7 +1174,6 @@
 		</collision>
 	</npc>
 	<npc id="31230" level="70" type="Npc" name="Louie the Cat" title="Event Manager">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="30" />
 			<param name="MoveAroundSocial1" value="40" />
@@ -1296,7 +1265,6 @@
 		</collision>
 	</npc>
 	<npc id="31231" level="70" type="Npc" name="Preacher of Doom">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1333,7 +1301,6 @@
 		</collision>
 	</npc>
 	<npc id="31232" level="70" type="Npc" name="Preacher of Doom">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1370,7 +1337,6 @@
 		</collision>
 	</npc>
 	<npc id="31233" level="70" type="Npc" name="Preacher of Doom">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1407,7 +1373,6 @@
 		</collision>
 	</npc>
 	<npc id="31234" level="70" type="Npc" name="Preacher of Doom">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1444,7 +1409,6 @@
 		</collision>
 	</npc>
 	<npc id="31235" level="70" type="Npc" name="Preacher of Doom">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1481,7 +1445,6 @@
 		</collision>
 	</npc>
 	<npc id="31236" level="70" type="Npc" name="Preacher of Doom">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1518,7 +1481,6 @@
 		</collision>
 	</npc>
 	<npc id="31237" level="70" type="Npc" name="Preacher of Doom">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1555,7 +1517,6 @@
 		</collision>
 	</npc>
 	<npc id="31238" level="70" type="Npc" name="Preacher of Doom">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1592,7 +1553,6 @@
 		</collision>
 	</npc>
 	<npc id="31239" level="70" type="Npc" name="Preacher of Doom">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1629,7 +1589,6 @@
 		</collision>
 	</npc>
 	<npc id="31240" level="70" type="Npc" name="Preacher of Doom">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1666,7 +1625,6 @@
 		</collision>
 	</npc>
 	<npc id="31241" level="70" type="Npc" name="Preacher of Doom">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1703,7 +1661,6 @@
 		</collision>
 	</npc>
 	<npc id="31242" level="70" type="Npc" name="Preacher of Doom">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1740,7 +1697,6 @@
 		</collision>
 	</npc>
 	<npc id="31243" level="70" type="Npc" name="Preacher of Doom">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1777,7 +1733,6 @@
 		</collision>
 	</npc>
 	<npc id="31244" level="70" type="Npc" name="Preacher of Doom">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1814,7 +1769,6 @@
 		</collision>
 	</npc>
 	<npc id="31245" level="70" type="Npc" name="Preacher of Doom">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1851,7 +1805,6 @@
 		</collision>
 	</npc>
 	<npc id="31246" level="70" type="Npc" name="Preacher of Doom">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1888,7 +1841,6 @@
 		</collision>
 	</npc>
 	<npc id="31247" level="70" type="Npc" name="Orator of Revelations">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1926,7 +1878,6 @@
 		</collision>
 	</npc>
 	<npc id="31248" level="70" type="Npc" name="Orator of Revelations">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1964,7 +1915,6 @@
 		</collision>
 	</npc>
 	<npc id="31249" level="70" type="Npc" name="Orator of Revelations">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -2002,7 +1952,6 @@
 		</collision>
 	</npc>
 	<npc id="31250" level="70" type="Npc" name="Orator of Revelations">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -2040,7 +1989,6 @@
 		</collision>
 	</npc>
 	<npc id="31251" level="70" type="Npc" name="Orator of Revelations">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -2078,7 +2026,6 @@
 		</collision>
 	</npc>
 	<npc id="31252" level="70" type="Npc" name="Orator of Revelations">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -2116,7 +2063,6 @@
 		</collision>
 	</npc>
 	<npc id="31253" level="70" type="Npc" name="Orator of Revelations">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -2154,7 +2100,6 @@
 		</collision>
 	</npc>
 	<npc id="31254" level="70" type="Npc" name="Orator of Revelations">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -2192,7 +2137,6 @@
 		</collision>
 	</npc>
 	<npc id="31255" level="70" type="Npc" name="Buzz the Cat" title="Event Manager">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2232,8 +2176,7 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="31256" level="70" type="Merchant" name="Leon" title="Weapon Merchant">
-		<!-- Confirmed CT2.5 -->
+	<npc id="31256" level="70" type="Merchant" name="Leon" title="Trader">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -2272,8 +2215,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="31257" level="70" type="Merchant" name="Veronica" title="Weapon Merchant">
-		<!-- Confirmed CT2.5 -->
+	<npc id="31257" level="70" type="Merchant" name="Veronica" title="Trader">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -2312,8 +2254,7 @@
 			<height normal="25.3" />
 		</collision>
 	</npc>
-	<npc id="31258" level="70" type="Merchant" name="Helmut" title="Armor Merchant">
-		<!-- Confirmed CT2.5 -->
+	<npc id="31258" level="70" type="Merchant" name="Helmut" title="Trader">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -2352,8 +2293,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="31259" level="70" type="Merchant" name="Janne" title="Armor Merchant">
-		<!-- Confirmed CT2.5 -->
+	<npc id="31259" level="70" type="Merchant" name="Janne" title="Trader">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -2392,8 +2332,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="31260" level="70" type="Merchant" name="Judith" title="Accessory Merchant">
-		<!-- Confirmed CT2.5 -->
+	<npc id="31260" level="70" type="Merchant" name="Judith" title="Trader">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -2432,8 +2371,7 @@
 			<height normal="25.3" />
 		</collision>
 	</npc>
-	<npc id="31261" level="70" type="Merchant" name="Renee" title="Accessory Merchant">
-		<!-- Confirmed CT2.5 -->
+	<npc id="31261" level="70" type="Merchant" name="Renee" title="Trader">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -2473,7 +2411,6 @@
 		</collision>
 	</npc>
 	<npc id="31262" level="70" type="Merchant" name="Rupert" title="Trader">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -2512,8 +2449,7 @@
 			<height normal="21.5" />
 		</collision>
 	</npc>
-	<npc id="31263" level="70" type="Merchant" name="Liesel" title="Grocer">
-		<!-- Confirmed CT2.5 -->
+	<npc id="31263" level="70" type="Merchant" name="Liesel" title="Trader">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -2553,7 +2489,6 @@
 		</collision>
 	</npc>
 	<npc id="31264" level="70" type="Npc" name="Olsun" title="Symbol Maker">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -2593,7 +2528,6 @@
 		</collision>
 	</npc>
 	<npc id="31265" level="70" type="PetManager" name="Annette" title="Pet Manager">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -2665,7 +2599,6 @@
 		</collision>
 	</npc>
 	<npc id="31266" level="70" type="Npc" name="Kaiser">
-		<!-- Confirmed CT2.5 -->
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -2702,7 +2635,6 @@
 		</collision>
 	</npc>
 	<npc id="31267" level="70" type="Warehouse" name="Lietta" title="Warehouse Keeper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -2742,7 +2674,6 @@
 		</collision>
 	</npc>
 	<npc id="31268" level="70" type="Warehouse" name="Hakon" title="Warehouse Keeper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="93" />
@@ -2782,7 +2713,6 @@
 		</collision>
 	</npc>
 	<npc id="31269" level="70" type="VillageMasterDwarf" name="Mona" title="Warehouse Chief">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -2823,7 +2753,6 @@
 		</collision>
 	</npc>
 	<npc id="31270" level="70" type="Warehouse" name="Stefano" title="Warehouse Keeper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="88" />
@@ -2863,7 +2792,6 @@
 		</collision>
 	</npc>
 	<npc id="31271" level="70" type="Trainer" name="Hilda" title="Blacksmith">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="126" />
@@ -2904,7 +2832,6 @@
 		</collision>
 	</npc>
 	<npc id="31272" level="70" type="VillageMasterDwarf" name="Noel" title="Head Blacksmith">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -2945,7 +2872,6 @@
 		</collision>
 	</npc>
 	<npc id="31273" level="70" type="Merchant" name="Borodin" title="Blueprint Seller">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="102" />
@@ -2985,7 +2911,6 @@
 		</collision>
 	</npc>
 	<npc id="31274" level="70" type="Merchant" name="Fundin" title="Mineral Trader">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="93" />
@@ -3026,7 +2951,6 @@
 		</collision>
 	</npc>
 	<npc id="31275" level="70" type="Teleporter" name="Tatiana" title="Gatekeeper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="134" />
@@ -3067,7 +2991,6 @@
 		</collision>
 	</npc>
 	<npc id="31276" level="70" type="VillageMasterFighter" name="Bernhard" title="Grand Master">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="63" />
@@ -3109,7 +3032,6 @@
 		</collision>
 	</npc>
 	<npc id="31277" level="70" type="Trainer" name="Felix" title="Master">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -3150,7 +3072,6 @@
 		</collision>
 	</npc>
 	<npc id="31278" level="70" type="Trainer" name="Bronwyn" title="Master">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="187" />
@@ -3191,7 +3112,6 @@
 		</collision>
 	</npc>
 	<npc id="31279" level="70" type="VillageMasterPriest" name="Gregory" title="High Priest">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -3233,7 +3153,6 @@
 		</collision>
 	</npc>
 	<npc id="31280" level="70" type="Trainer" name="Bastian" title="Priest">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -3275,7 +3194,6 @@
 		</collision>
 	</npc>
 	<npc id="31281" level="70" type="Trainer" name="Cerenas" title="Priest">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="127" />
@@ -3317,7 +3235,6 @@
 		</collision>
 	</npc>
 	<npc id="31282" level="70" type="Trainer" name="Justin" title="Magister">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -3357,7 +3274,6 @@
 		</collision>
 	</npc>
 	<npc id="31283" level="70" type="Trainer" name="Alminas" title="Magister">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="127" />
@@ -3397,7 +3313,6 @@
 		</collision>
 	</npc>
 	<npc id="31284" level="70" type="Npc" name="Elena" title="Spellbook Seller">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -3437,7 +3352,6 @@
 		</collision>
 	</npc>
 	<npc id="31285" level="70" type="VillageMasterDElf" name="Samael" title="Grand Master">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="180" />
@@ -3478,7 +3392,6 @@
 		</collision>
 	</npc>
 	<npc id="31286" level="70" type="Trainer" name="Drakon" title="Master">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="103" />
@@ -3519,7 +3432,6 @@
 		</collision>
 	</npc>
 	<npc id="31287" level="70" type="Trainer" name="Kamilen" title="Magister">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="135" />
@@ -3562,7 +3474,6 @@
 		</collision>
 	</npc>
 	<npc id="31288" level="70" type="VillageMasterOrc" name="Aklan" title="High Prefect">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="95" />
@@ -3603,7 +3514,6 @@
 		</collision>
 	</npc>
 	<npc id="31289" level="70" type="Trainer" name="Lakan" title="Prefect">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -3644,7 +3554,6 @@
 		</collision>
 	</npc>
 	<npc id="31290" level="70" type="Trainer" name="Skahi" title="Seer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="165" />
@@ -3685,7 +3594,6 @@
 		</collision>
 	</npc>
 	<npc id="31291" level="70" type="Merchant" name="Terava" title="Amulet Seller">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -3725,7 +3633,6 @@
 		</collision>
 	</npc>
 	<npc id="31292" level="80" type="Guard" name="Andrei" title="Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -3766,7 +3673,6 @@
 		</collision>
 	</npc>
 	<npc id="31293" level="80" type="Guard" name="Gunter" title="Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -3807,7 +3713,6 @@
 		</collision>
 	</npc>
 	<npc id="31294" level="80" type="Guard" name="Sven" title="Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -3848,7 +3753,6 @@
 		</collision>
 	</npc>
 	<npc id="31295" level="80" type="Guard" name="Henrik" title="Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -3889,7 +3793,6 @@
 		</collision>
 	</npc>
 	<npc id="31296" level="80" type="Guard" name="Cadmon" title="Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -3930,7 +3833,6 @@
 		</collision>
 	</npc>
 	<npc id="31297" level="80" type="Guard" name="Bayard" title="Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -3971,7 +3873,6 @@
 		</collision>
 	</npc>
 	<npc id="31298" level="80" type="Guard" name="Ulrich" title="Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -4012,7 +3913,6 @@
 		</collision>
 	</npc>
 	<npc id="31299" level="80" type="Guard" name="Eugen" title="Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />

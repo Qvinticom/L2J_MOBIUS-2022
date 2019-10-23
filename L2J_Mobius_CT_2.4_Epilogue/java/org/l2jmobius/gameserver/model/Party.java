@@ -18,10 +18,8 @@ package org.l2jmobius.gameserver.model;
 
 import java.time.Duration;
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Set;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.Future;
 import java.util.logging.Level;
@@ -46,12 +44,10 @@ import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.stats.Stats;
 import org.l2jmobius.gameserver.network.SystemMessageId;
-import org.l2jmobius.gameserver.network.serverpackets.ExAskModifyPartyLooting;
 import org.l2jmobius.gameserver.network.serverpackets.ExCloseMPCC;
 import org.l2jmobius.gameserver.network.serverpackets.ExOpenMPCC;
 import org.l2jmobius.gameserver.network.serverpackets.ExPartyPetWindowAdd;
 import org.l2jmobius.gameserver.network.serverpackets.ExPartyPetWindowDelete;
-import org.l2jmobius.gameserver.network.serverpackets.ExSetPartyLooting;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.PartyMemberPosition;
 import org.l2jmobius.gameserver.network.serverpackets.PartySmallWindowAdd;
@@ -77,16 +73,12 @@ public class Party extends AbstractPlayerGroup
 	// @formatter:on
 	
 	private static final Duration PARTY_POSITION_BROADCAST_INTERVAL = Duration.ofSeconds(12);
-	private static final Duration PARTY_DISTRIBUTION_TYPE_REQUEST_TIMEOUT = Duration.ofSeconds(15);
 	
 	private final List<PlayerInstance> _members = new CopyOnWriteArrayList<>();
 	private boolean _pendingInvitation = false;
 	private long _pendingInviteTimeout;
 	private int _partyLvl = 0;
 	private volatile PartyDistributionType _distributionType = PartyDistributionType.FINDERS_KEEPERS;
-	private volatile PartyDistributionType _changeRequestDistributionType;
-	private volatile Future<?> _changeDistributionTypeRequestTask = null;
-	private volatile Set<Integer> _changeDistributionTypeAnswers = null;
 	private int _itemLastLoot = 0;
 	private CommandChannel _commandChannel = null;
 	private DimensionalRift _dr;
@@ -285,11 +277,6 @@ public class Party extends AbstractPlayerGroup
 		if (_members.contains(player))
 		{
 			return;
-		}
-		
-		if (_changeRequestDistributionType != null)
-		{
-			finishLootRequest(false); // cancel on invite
 		}
 		
 		// add player to party
@@ -502,11 +489,6 @@ public class Party extends AbstractPlayerGroup
 					{
 						DuelManager.getInstance().onRemoveFromParty(getLeader());
 					}
-				}
-				if (_changeDistributionTypeRequestTask != null)
-				{
-					_changeDistributionTypeRequestTask.cancel(true);
-					_changeDistributionTypeRequestTask = null;
 				}
 				if (_positionBroadcastTask != null)
 				{
@@ -988,71 +970,6 @@ public class Party extends AbstractPlayerGroup
 	public PlayerInstance getLeader()
 	{
 		return _members.get(0);
-	}
-	
-	public synchronized void requestLootChange(PartyDistributionType partyDistributionType)
-	{
-		if (_changeRequestDistributionType != null)
-		{
-			return;
-		}
-		_changeRequestDistributionType = partyDistributionType;
-		_changeDistributionTypeAnswers = new HashSet<>();
-		_changeDistributionTypeRequestTask = ThreadPool.schedule(() -> finishLootRequest(false), PARTY_DISTRIBUTION_TYPE_REQUEST_TIMEOUT.toMillis());
-		
-		broadcastToPartyMembers(getLeader(), new ExAskModifyPartyLooting(getLeader().getName(), partyDistributionType));
-		
-		final SystemMessage sm = new SystemMessage(SystemMessageId.REQUESTING_APPROVAL_FOR_CHANGING_PARTY_LOOT_TO_S1);
-		sm.addSystemString(partyDistributionType.getSysStringId());
-		getLeader().sendPacket(sm);
-	}
-	
-	public synchronized void answerLootChangeRequest(PlayerInstance member, boolean answer)
-	{
-		if ((_changeRequestDistributionType == null) || _changeDistributionTypeAnswers.contains(member.getObjectId()))
-		{
-			return;
-		}
-		
-		if (!answer)
-		{
-			finishLootRequest(false);
-			return;
-		}
-		
-		_changeDistributionTypeAnswers.add(member.getObjectId());
-		if (_changeDistributionTypeAnswers.size() >= (getMemberCount() - 1))
-		{
-			finishLootRequest(true);
-		}
-	}
-	
-	protected synchronized void finishLootRequest(boolean success)
-	{
-		if (_changeRequestDistributionType == null)
-		{
-			return;
-		}
-		if (_changeDistributionTypeRequestTask != null)
-		{
-			_changeDistributionTypeRequestTask.cancel(false);
-			_changeDistributionTypeRequestTask = null;
-		}
-		if (success)
-		{
-			broadcastPacket(new ExSetPartyLooting(1, _changeRequestDistributionType));
-			_distributionType = _changeRequestDistributionType;
-			final SystemMessage sm = new SystemMessage(SystemMessageId.PARTY_LOOT_WAS_CHANGED_TO_S1);
-			sm.addSystemString(_changeRequestDistributionType.getSysStringId());
-			broadcastPacket(sm);
-		}
-		else
-		{
-			broadcastPacket(new ExSetPartyLooting(0, _distributionType));
-			broadcastPacket(new SystemMessage(SystemMessageId.PARTY_LOOT_CHANGE_WAS_CANCELLED));
-		}
-		_changeRequestDistributionType = null;
-		_changeDistributionTypeAnswers = null;
 	}
 	
 	/**

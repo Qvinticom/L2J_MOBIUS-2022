@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.instancemanager.tasks.PenaltyRemoveTask;
 import org.l2jmobius.gameserver.model.ArenaParticipantsHolder;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.itemcontainer.PlayerInventory;
-import org.l2jmobius.gameserver.model.olympiad.OlympiadManager;
+import org.l2jmobius.gameserver.model.olympiad.Olympiad;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExCubeGameAddPlayer;
@@ -176,9 +176,9 @@ public class HandysBlockCheckerManager
 				return false;
 			}
 			
-			if (OlympiadManager.getInstance().isRegistered(player))
+			if (Olympiad.getInstance().isRegistered(player))
 			{
-				OlympiadManager.getInstance().unRegisterNoble(player);
+				Olympiad.getInstance().unRegisterNoble(player);
 				player.sendPacket(SystemMessageId.APPLICANTS_FOR_THE_OLYMPIAD_UNDERGROUND_COLISEUM_OR_KRATEI_S_CUBE_MATCHES_CANNOT_REGISTER);
 			}
 			

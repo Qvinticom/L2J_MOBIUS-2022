@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="700" type="EtcItem" name="_">
-		<!-- Description of the hobgoblin amulet -->
+		<!-- The amulet of a hobgoblin. -->
 		<set name="icon" val="icon.item_normal05" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -37,7 +37,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="703" type="EtcItem" name="Giant Spider's Poison Sac">
-		<!-- Giant Spider's Poison Sacs obtained from the dead giant spider. Take this to Priest Yohanes. -->
+		<!-- Poison sacs obtained from the dead giant spider. Take this to Priest Yohanes. -->
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -61,7 +61,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="705" type="EtcItem" name="_">
-		<!-- Description of an Orc feather amulet. -->
+		<!-- An Orc feather amulet. -->
 		<set name="icon" val="icon.item_normal48" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -421,7 +421,7 @@
 		</cond>
 	</item>
 	<item id="729" type="EtcItem" name="Scroll: Enchant Weapon (A-Grade)">
-		<!-- When enchanted, P. Atk. increases by 4 for A-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. increases by 5 for two-handed swords, two-handed blunts, dualswords, and two-handed combat weapons. P. Atk. increases by 8 for bows. M. Atk. increases by 3 for all weapons. Starting at +4, P. Atk. / M. Atk. bonus double. Enchanting is safe up to +3. -->
+		<!-- When enchanted, the P. Atk. of A-Grade weapons such as sword/one-handed, blunt weapon/one-handed, dagger and spear etc. will increase by 4. The P. Atk. of sword/two-handed, blunt weapon/two-handed, dualsword, and fist-fighting weapon/two-handed will increase by 5. The P. Atk. of bow weapons will increase by 8. The M. Atk. of all weapons will increase by 3. From +4, P. Atk. and M. Atk. bonus will double for all weapon types. It can be safely enchanted up to +3. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCRL_ENCHANT_WP" />
@@ -435,7 +435,7 @@
 		<set name="item_skill" val="2006-1" /> <!-- Scroll: Enchant Weapon (Grade A) -->
 	</item>
 	<item id="730" type="EtcItem" name="Scroll: Enchant Armor (A-Grade)">
-		<!-- When enchanted, P. Def. increases by 1 for A-grade armor and accessories. Starting at +4, P. Def. increases by 3 and a HP bonus is granted. Enchanting is safe up to +3, but one-piece body armor can be safely enchanted up to +4. -->
+		<!-- Increases P. Def. of A-Grade armor or accessory. Can safely enhance up to +3, although 1-piece armor can be enhanced up to +4. Also increases HP when armor is enhanced above +4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCRL_ENCHANT_AM" />
@@ -452,23 +452,27 @@
 		<!-- A scroll of enchantment that empowers an A-Grade weapon. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="SCROLL" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_WP" /> <!-- Epilogue Modification -->
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />  <!-- Epilogue Modification -->
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
+		<set name="item_skill" val="2006-1" /> <!-- Scroll: Enchant Weapon (Grade A) -->
 	</item>
 	<item id="732" type="EtcItem" name="Crystal Scroll: Enchant Armor (A-Grade)">
 		<!-- A scroll of enchantment that empowers an A-Grade armor. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="SCROLL" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_AM" /> <!-- Epilogue Modification -->
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />  <!-- Epilogue Modification -->
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
+		<set name="item_skill" val="2007-1" /> <!-- Scroll: Enchant Armor (Grade A) -->
 	</item>
 	<item id="733" type="EtcItem" name="Endeavor Potion">
 		<!-- A magical, liquid medicine that increases willpower. -->
@@ -569,7 +573,7 @@
 		</for>
 	</item>
 	<item id="739" type="EtcItem" name="Broken Sword Handle">
-		<!-- The handle portion of the sword of solidarity. Take this to Blacksmith Altran. -->
+		<!-- The handle portion of the sword of solidarity. Take this to Blacksmith Alltran. -->
 		<set name="icon" val="icon.weapon_small_sword_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -581,7 +585,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="740" type="EtcItem" name="Broken Blade Bottom">
-		<!-- Take this, and the upper portion of the blade to Blacksmith Altran. -->
+		<!-- Take this, and the upper portion of the blade to Blacksmith Alltran. -->
 		<set name="icon" val="icon.weapon_great_sword_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -593,7 +597,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="741" type="EtcItem" name="Broken Blade Top">
-		<!-- Take this, and the lower portion of the blade to Blacksmith Altran. -->
+		<!-- Take this, and the lower portion of the blade to Blacksmith Alltran. -->
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1283,7 +1287,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="796" type="EtcItem" name="Roien's Letter">
-		<!-- A letter on which Roien summarized the historical information related to the sword of solidarity. Take this to Blacksmith Altran. -->
+		<!-- A letter on which Roien summarized the historical information related to the sword of solidarity. Take this to Blacksmith Alltran. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />

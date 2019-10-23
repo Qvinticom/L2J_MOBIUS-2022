@@ -58,7 +58,7 @@
 		</for>
 	</item>
 	<item id="12604" type="EtcItem" name="Foundation Sealed Robe of Nightmare">
-		<!-- A rare Sealed Robe of Nightmare that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
+		<!-- A rare Sealed Nightmare Robe that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t82_ul_i02" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="immediate_effect" val="true" />
@@ -174,7 +174,7 @@
 		</for>
 	</item>
 	<item id="12612" type="EtcItem" name="Foundation Leather Armor of Nightmare">
-		<!-- A rare Leather Armor of Nightmare that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
+		<!-- A rare Nightmarish Leather Armor that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t81_ul_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="immediate_effect" val="true" />
@@ -187,7 +187,7 @@
 		</for>
 	</item>
 	<item id="12613" type="EtcItem" name="Foundation Robe of Nightmare">
-		<!-- A rare Robe of Nightmare that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
+		<!-- A rare Nightmare Robe that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t82_ul_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="immediate_effect" val="true" />
@@ -667,7 +667,7 @@
 		<set name="icon" val="icon.armor_t91_l_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="3210" />
 		<set name="price" val="15248000" />
@@ -682,7 +682,7 @@
 		<!-- A rare Dynasty Gauntlet that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t91_g_i00" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="520" />
 		<set name="price" val="6099000" />
@@ -697,7 +697,7 @@
 		<!-- A rare Dynasty Gloves that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t93_g_i00" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="520" />
 		<set name="price" val="6099000" />
@@ -712,7 +712,7 @@
 		<!-- A rare Dynasty Leather Gloves that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t92_g_i00" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="520" />
 		<set name="price" val="6099000" />
@@ -725,7 +725,7 @@
 		<set name="icon" val="icon.armor_t92_l_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1370" />
 		<set name="price" val="11436000" />
@@ -738,7 +738,7 @@
 		<set name="icon" val="icon.armor_t92_u_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="4180" />
 		<set name="price" val="18298000" />
@@ -751,7 +751,7 @@
 		<set name="icon" val="icon.armor_t92_ud_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="4180" />
 		<set name="price" val="18298000" />
@@ -767,7 +767,7 @@
 		<set name="icon" val="icon.armor_t92_ub_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="4180" />
 		<set name="price" val="18298000" />
@@ -783,7 +783,7 @@
 		<set name="icon" val="icon.armor_t92_ud_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="4180" />
 		<set name="price" val="18298000" />
@@ -802,7 +802,7 @@
 		<set name="icon" val="icon.armor_t92_ub_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="4180" />
 		<set name="price" val="18298000" />
@@ -821,7 +821,7 @@
 		<set name="icon" val="icon.armor_t92_ud_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="4180" />
 		<set name="price" val="18298000" />
@@ -837,7 +837,7 @@
 		<set name="icon" val="icon.armor_t92_u_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="4180" />
 		<set name="price" val="18298000" />
@@ -852,7 +852,7 @@
 		<!-- A rare Dynasty Leather Boots that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t92_b_i00" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1090" />
 		<set name="price" val="6099000" />
@@ -864,7 +864,7 @@
 		<!-- A rare Dynasty Leather Helmet that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="9149000" />
@@ -876,7 +876,7 @@
 		<!-- A rare Dynasty Boots that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t91_b_i00" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1090" />
 		<set name="price" val="6099000" />
@@ -892,7 +892,7 @@
 		<set name="icon" val="icon.armor_t91_u_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="7570" />
 		<set name="price" val="24398000" />
@@ -908,7 +908,7 @@
 		<set name="icon" val="icon.armor_t91_uk_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="7570" />
 		<set name="price" val="24398000" />
@@ -927,7 +927,7 @@
 		<set name="icon" val="icon.armor_t91_uw_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="7570" />
 		<set name="price" val="24398000" />
@@ -946,7 +946,7 @@
 		<set name="icon" val="icon.armor_t91_uf_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="7570" />
 		<set name="price" val="24398000" />
@@ -965,7 +965,7 @@
 		<set name="icon" val="icon.armor_t91_uke_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="7570" />
 		<set name="price" val="24398000" />
@@ -983,7 +983,7 @@
 		<!-- A rare Dynasty Shield that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.shield_dynasty_shield_i00" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1390" />
 		<set name="price" val="6404000" />
@@ -1000,7 +1000,7 @@
 		<!-- A rare Dynasty Shoes that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t93_b_i00" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1090" />
 		<set name="price" val="6099000" />
@@ -1016,7 +1016,7 @@
 		<set name="icon" val="icon.armor_t93_u_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1780" />
 		<set name="price" val="25255000" />
@@ -1032,7 +1032,7 @@
 		<set name="icon" val="icon.armor_t93_uh_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1780" />
 		<set name="price" val="25255000" />
@@ -1051,7 +1051,7 @@
 		<set name="icon" val="icon.armor_t93_ue_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1780" />
 		<set name="price" val="25255000" />
@@ -1070,7 +1070,7 @@
 		<set name="icon" val="icon.armor_t93_us_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1780" />
 		<set name="price" val="25255000" />
@@ -1089,7 +1089,7 @@
 		<set name="icon" val="icon.armor_t93_uw_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1780" />
 		<set name="price" val="25255000" />
@@ -1107,7 +1107,7 @@
 		<!-- A rare Dynasty Circlet that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="9149000" />
@@ -1119,21 +1119,21 @@
 		</for>
 	</item>
 	<item id="12675" type="EtcItem" name="Foundation Dynasty Jewel Leather Armor">
-		<!-- A rare Dynasty Jewel Leather Armor that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
+		<!-- A rare Dynasty Jewel Leather Mail that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t92_u_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="4180" />
 		<set name="price" val="25255000" />
 	</item>
 	<item id="12676" type="EtcItem" name="Foundation Dynasty Jewel Leather Armor">
-		<!-- A rare Dynasty Jewel Leather Armor that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
+		<!-- A rare Dynasty Jewel Leather Mail that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t92_ud_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="4180" />
 		<set name="price" val="25255000" />
@@ -1142,11 +1142,11 @@
 		</cond>
 	</item>
 	<item id="12677" type="EtcItem" name="Foundation Dynasty Jewel Leather Armor">
-		<!-- A rare Dynasty Jewel Leather Armor that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
+		<!-- A rare Dynasty Jewel Leather Mail that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t92_ub_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="4180" />
 		<set name="price" val="25255000" />
@@ -1155,11 +1155,11 @@
 		</cond>
 	</item>
 	<item id="12678" type="EtcItem" name="Foundation Dynasty Jewel Leather Armor">
-		<!-- A rare Dynasty Jewel Leather Armor that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
+		<!-- A rare Dynasty Jewel Leather Mail that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t92_u_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="4180" />
 		<set name="price" val="25255000" />
@@ -1168,11 +1168,11 @@
 		</cond>
 	</item>
 	<item id="12679" type="EtcItem" name="Foundation Dynasty Jewel Leather Armor">
-		<!-- A rare Dynasty Jewel Leather Armor that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
+		<!-- A rare Dynasty Jewel Leather Mail that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t92_u_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="4180" />
 		<set name="price" val="25255000" />
@@ -1181,11 +1181,11 @@
 		</cond>
 	</item>
 	<item id="12680" type="EtcItem" name="Foundation Dynasty Jewel Leather Armor">
-		<!-- A rare Dynasty Jewel Leather Armor that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
+		<!-- A rare Dynasty Jewel Leather Mail that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t92_u_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="4180" />
 		<set name="price" val="25255000" />
@@ -1194,11 +1194,11 @@
 		</cond>
 	</item>
 	<item id="12681" type="EtcItem" name="Foundation Dynasty Jewel Leather Armor">
-		<!-- A rare Dynasty Jewel Leather Armor that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
+		<!-- A rare Dynasty Jewel Leather Mail that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t92_u_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="4180" />
 		<set name="price" val="25255000" />
@@ -1211,7 +1211,7 @@
 		<set name="icon" val="icon.armor_t93_u_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1780" />
 		<set name="price" val="18298000" />
@@ -1228,7 +1228,7 @@
 		<set name="icon" val="icon.armor_t93_uh_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1780" />
 		<set name="price" val="18298000" />
@@ -1248,7 +1248,7 @@
 		<set name="icon" val="icon.armor_t93_ue_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1780" />
 		<set name="price" val="18298000" />
@@ -1268,7 +1268,7 @@
 		<set name="icon" val="icon.armor_t93_us_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1780" />
 		<set name="price" val="18298000" />
@@ -1288,7 +1288,7 @@
 		<set name="icon" val="icon.armor_t93_uw_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1780" />
 		<set name="price" val="18298000" />
@@ -1308,7 +1308,7 @@
 		<set name="icon" val="icon.armor_t91_u_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="7570" />
 		<set name="price" val="33673000" />
@@ -1321,7 +1321,7 @@
 		<set name="icon" val="icon.armor_t91_uk_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="7570" />
 		<set name="price" val="33673000" />
@@ -1337,7 +1337,7 @@
 		<set name="icon" val="icon.armor_t91_uw_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="7570" />
 		<set name="price" val="33673000" />
@@ -1353,7 +1353,7 @@
 		<set name="icon" val="icon.armor_t91_uf_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="7570" />
 		<set name="price" val="33673000" />
@@ -1369,7 +1369,7 @@
 		<set name="icon" val="icon.armor_t91_uke_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="7570" />
 		<set name="price" val="33673000" />
@@ -1384,7 +1384,7 @@
 		<!-- A rare Dynasty Helmet that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="9149000" />
@@ -1400,7 +1400,7 @@
 		<set name="icon" val="icon.armor_t93_l_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="860" />
 		<set name="price" val="11436000" />
@@ -1417,7 +1417,7 @@
 		<set name="icon" val="icon.armor_t91_l_i02" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="3210" />
 		<set name="price" val="15248000" />
@@ -1432,7 +1432,7 @@
 		<!-- A rare Sealed Dynasty Gauntlet that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t91_g_i02" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="520" />
 		<set name="price" val="6099000" />
@@ -1447,7 +1447,7 @@
 		<!-- A rare Sealed Dynasty Gloves that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t93_g_i02" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="520" />
 		<set name="price" val="6099000" />
@@ -1462,7 +1462,7 @@
 		<!-- A rare Sealed Dynasty Leather Gloves that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t92_g_i02" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="520" />
 		<set name="price" val="6099000" />
@@ -1475,7 +1475,7 @@
 		<set name="icon" val="icon.armor_t92_l_i02" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1370" />
 		<set name="price" val="11436000" />
@@ -1488,7 +1488,7 @@
 		<set name="icon" val="icon.armor_t92_u_i02" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="4180" />
 		<set name="price" val="18298000" />

@@ -301,7 +301,7 @@ public class ExShowScreenMessage implements IClientOutgoingPacket
 		packet.writeD(_effect ? 0x01 : 0x00);
 		packet.writeD(_time);
 		packet.writeD(_fade ? 0x01 : 0x00);
-		packet.writeD(_npcString);
+		// packet.writeD(_npcString);
 		if (_npcString == -1)
 		{
 			packet.writeS(_text);

@@ -18,7 +18,6 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.data.xml.impl.ExperienceData;
 import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2jmobius.gameserver.instancemanager.TerritoryWarManager;
 import org.l2jmobius.gameserver.model.Elementals;
@@ -31,6 +30,8 @@ public class UserInfo implements IClientOutgoingPacket
 {
 	private final PlayerInstance _player;
 	private int _relation;
+	private int _territoryId;
+	private final boolean _isDisguised;
 	private int _airShipHelm;
 	
 	private final int _runSpd;
@@ -62,7 +63,7 @@ public class UserInfo implements IClientOutgoingPacket
 		{
 			_relation |= 0x80;
 		}
-		// _isDisguised = TerritoryWarManager.getInstance().isDisguised(character.getObjectId());
+		_isDisguised = TerritoryWarManager.getInstance().isDisguised(_player.getObjectId());
 		if (_player.isInAirShip() && _player.getAirShip().isCaptain(_player))
 		{
 			_airShipHelm = _player.getAirShip().getHelmItemId();
@@ -100,7 +101,6 @@ public class UserInfo implements IClientOutgoingPacket
 		
 		packet.writeD(_player.getLevel());
 		packet.writeQ(_player.getExp());
-		packet.writeF((float) (_player.getExp() - ExperienceData.getInstance().getExpForLevel(_player.getLevel())) / (ExperienceData.getInstance().getExpForLevel(_player.getLevel() + 1) - ExperienceData.getInstance().getExpForLevel(_player.getLevel()))); // High Five exp %
 		packet.writeD(_player.getSTR());
 		packet.writeD(_player.getDEX());
 		packet.writeD(_player.getCON());
@@ -255,9 +255,9 @@ public class UserInfo implements IClientOutgoingPacket
 		packet.writeD(_player.isMinimapAllowed() ? 1 : 0); // Minimap on Hellbound
 		packet.writeD(_player.getVitalityPoints()); // Vitality Points
 		packet.writeD(_player.getAbnormalVisualEffectSpecial());
-		// packet.writeD(_territoryId); // CT2.3
-		// packet.writeD((_isDisguised ? 0x01: 0x00)); // CT2.3
-		// packet.writeD(_territoryId); // CT2.3
+		packet.writeD(_territoryId); // CT2.3
+		packet.writeD((_isDisguised ? 0x01 : 0x00)); // CT2.3
+		packet.writeD(_territoryId); // CT2.3
 		return true;
 	}
 }

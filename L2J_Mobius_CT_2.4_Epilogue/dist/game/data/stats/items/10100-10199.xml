@@ -91,7 +91,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10110" type="EtcItem" name="Forgotten Scroll - Meteor">
-		<!-- Spellbook needed to learn Meteor. Can be used by an Arch Mage and a Soul Taker. Can be acquired at level 81. -->
+		<!-- Spellbook needed to learn Meteor. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -100,7 +100,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10111" type="EtcItem" name="Forgotten Scroll - Star Fall">
-		<!-- Spellbook needed to learn Star Fall. Can be used by a Mystic Muse and a Storm Screamer. Can be acquired at level 81. -->
+		<!-- Spellbook needed to learn Star Fall. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -154,7 +154,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="10116" type="EtcItem" name="Recipe: Sealed Dynasty Sigil (100%)">
-		<!-- Exclusive to Dwarves. Recipe for making a Sealed Dynasty Sigil. Requires Create Item - Skill Level 9. The success rate is 100%. -->
+		<!-- Exclusive to Dwarves. Recipe for making a Sealed Dynasty Sigil. Requires the "Create Item" skill level 9 -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -166,10 +166,10 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10117" type="EtcItem" name="Chaotic Sealed Dynasty Sigil">
-		<!-- A rare Sealed Dynasty Sigil that requries a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
+		<!-- This rare Sealed Dynasty Sigil must first be vigorously polished by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_dynasty_sigil_i01" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1370" />
 		<set name="price" val="6404000" />
@@ -183,10 +183,10 @@
 		</for>
 	</item>
 	<item id="10118" type="EtcItem" name="Chaotic Dynasty Sigil">
-		<!-- A rare Sealed Dynasty Sigil that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
+		<!-- A rare Sealed Dynasty Sigil that needs to be polished with excessive force. It can be polished through the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.dynasty_sigil_i00" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1390" />
 		<set name="price" val="6404000" />
@@ -200,14 +200,14 @@
 		</for>
 	</item>
 	<item id="10119" type="Armor" name="Dynasty Sigil">
-		<!-- Increases M. Def. and Resistance to Dark. -->
+		<!-- Magic Resistance and Darkness Resistance increase. -->
 		<set name="icon" val="icon.dynasty_sigil_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="SIGIL" />
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="307" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="930" />
 		<set name="price" val="6404000" />
@@ -223,14 +223,14 @@
 		</for>
 	</item>
 	<item id="10120" type="Armor" name="Sealed Dynasty Sigil">
-		<!-- Sealed Masterwork Item. Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. -->
+		<!-- Sealed Masterwork Item. Seal can be removed by the blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_dynasty_sigil_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="SIGIL" />
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="307" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="930" />
 		<set name="price" val="6404000" />
@@ -245,7 +245,7 @@
 		</for>
 	</item>
 	<item id="10121" type="Armor" name="Sealed Arcana Sigil">
-		<!-- Sealed Masterwork Item. The seal can be broken with the help of the Blacksmith of Mammon. -->
+		<!-- Sealed Masterwork Item. Seal can be removed by the blacksmith of Mammon. -->
 		<set name="icon" val="icon.arcana_sigil_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="SIGIL" />
@@ -357,7 +357,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="878" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="4180" />
 		<set name="price" val="18298000" />
@@ -382,7 +382,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="878" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="4180" />
 		<set name="price" val="18298000" />
@@ -459,7 +459,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2371-1" /> <!-- Transformation Sealbook: Onyx Beast -->
+		<set name="item_skill" val="2371-1" /> <!-- Transform Sealbook - Onyx Beast -->
 	</item>
 	<item id="10132" type="EtcItem" name="Transformation Scroll: Death Blader">
 		<!-- A Scroll that transforms you into a Death Blader for 30 minutes. -->
@@ -471,7 +471,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2372-1" /> <!-- Transformation Sealbook: Death Blader -->
+		<set name="item_skill" val="2372-1" /> <!-- Transform Sealbook - Death Blader -->
 	</item>
 	<item id="10133" type="EtcItem" name="Transformation Scroll: Grail Apostle">
 		<!-- A Scroll that transforms you into a Grail Apostle for 30 minutes. -->
@@ -483,7 +483,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2373-1" /> <!-- Transformation Sealbook: Grail Apostle -->
+		<set name="item_skill" val="2373-1" /> <!-- Transform Sealbook - Grail Apostle -->
 	</item>
 	<item id="10134" type="EtcItem" name="Transformation Scroll: Unicorn">
 		<!-- A Scroll that transforms you into a Unicorn for 30 minutes. -->
@@ -495,7 +495,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2374-1" /> <!-- Transformation Sealbook: Unicorn -->
+		<set name="item_skill" val="2374-1" /> <!-- Transform Sealbook - Unicorn -->
 	</item>
 	<item id="10135" type="EtcItem" name="Transformation Scroll: Lilim Knight">
 		<!-- A Scroll that transforms you into a Lilim Knight for 30 minutes. -->
@@ -507,7 +507,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2375-1" /> <!-- Transformation Sealbook: Lilim Knight -->
+		<set name="item_skill" val="2375-1" /> <!-- Transform Sealbook - Lilim Knight -->
 	</item>
 	<item id="10136" type="EtcItem" name="Transformation Scroll: Golem Guardian">
 		<!-- A Scroll that transforms you into a Golem Guardian for 30 minutes. -->
@@ -519,7 +519,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2376-1" /> <!-- Transformation Sealbook: Golem Guardian -->
+		<set name="item_skill" val="2376-1" /> <!-- Transform Sealbook - Golem Guardian -->
 	</item>
 	<item id="10137" type="EtcItem" name="Transformation Scroll: Inferno Drake">
 		<!-- A Scroll that transforms you into a Inferno Drake for 30 minutes. -->
@@ -531,7 +531,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2377-1" /> <!-- Transformation Sealbook: Inferno Drake -->
+		<set name="item_skill" val="2377-1" /> <!-- Transform Sealbook - Inferno Drake -->
 	</item>
 	<item id="10138" type="EtcItem" name="Transformation Scroll: Dragon Bomber">
 		<!-- A Scroll that transforms you into a Dragon Bomber for 30 minutes. -->
@@ -543,7 +543,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2378-1" /> <!-- Transformation Sealbook: Dragon Bomber -->
+		<set name="item_skill" val="2378-1" /> <!-- Transform Sealbook - Dragon Bomber -->
 	</item>
 	<item id="10139" type="Armor" name="Agathion Bracelet">
 		<!-- A bracelet that summons a cute Rainbow Clan Hall Agathion. Shadow Item that cannot be exchanged or dropped. It lasts for 700 minutes. -->
@@ -754,7 +754,7 @@
 		</cond>
 	</item>
 	<item id="10151" type="EtcItem" name="Battleground Transform Spell">
-		<!-- When used, it transforms you into a pixy for a certain amount of time. It can only be used on the battleground during a siege battle or a fortress battle. It will have no effect if used while in a transformed state. -->
+		<!-- When used, it transforms you into a pixy for a certain amount of time. It can only be used on the battleground during a siege battle or a fortress battle. It will have no effect if used while a pet or servitor is summoned or while in a transformed state. -->
 		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -976,7 +976,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="10166" type="EtcItem" name="Hot Springs CP Potion">
-		<!-- Instantly recovers 1000 CP when used. -->
+		<!-- Recovers CP when in use. -->
 		<set name="icon" val="icon.etc_hot_spring_mineral_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ELIXIR" />
@@ -1021,7 +1021,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="878" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="4180" />
 		<set name="price" val="18298000" />
@@ -1036,7 +1036,7 @@
 		</for>
 	</item>
 	<item id="10169" type="Armor" name="Enchanter Circlet (Kamael only)">
-		<!-- A circlet that can be worn by the Kamael Race only, exclusively for the Enchanter class after completion of 2nd or 3rd class transfer. Cannot be worn in a sub job condition. Uses 2 hair accessory slots. -->
+		<!-- Exclusive to Kamael, use the 2 units of hair accessories and hair accessory slots that only the second and third class transfers of enchanters can wear. -->
 		<set name="icon" val="icon.accessary_weapon_master_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1118,7 +1118,7 @@
 		<set name="item_skill" val="2097-1" /> <!-- Sowing -->
 	</item>
 	<item id="10175" type="Armor" name="Goblin Circlet (Event)">
-		<!-- Gold colored, Goblin shaped hair accessory. This item is designed for use in events only and cannot be exchanged or dropped. -->
+		<!-- Gold colored, Gobblin shaped hair accessory. This item is designed for use in events only and cannot be exchanged or dropped. -->
 		<set name="icon" val="icon.accessory_taiwan_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -1154,7 +1154,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="10178" type="EtcItem" name="Sweet Fruit Cocktail">
-		<!-- A Cocktail made of various rare fruits. When consumed, it bestows temporary effects of Might, Shield, Wind Walk, Focus, Death Whisper, Guidance, Bless Shield, Bless Body, Haste, and Vampiric Rage for a certain amount of time. -->
+		<!-- A Cocktail made of various rare fruits. When consumed, it bestows temporary effects of Might, Shield, Wind Walk, Focus, Death Whisper, Guidance, Bless Shield, Bless Body, Haste, and Vampiric Rage. -->
 		<set name="icon" val="icon.etc_fruit_cocktail_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1172,7 +1172,7 @@
 		<set name="for_npc" val="true" />
 	</item>
 	<item id="10179" type="EtcItem" name="Fresh Fruit Cocktail">
-		<!-- A Cocktail made of various rare fruits. When consumed, it bestows temporary effects of Berserker Spirit, Blessed Body, Magic Barrier, Shield, Wind Walk, Blessed Soul, Empower, Acumen, and Clarity effects for a certain amount of time. -->
+		<!-- A Cocktail made of various rare fruits. When consumed, it bestows temporary effects of Berserker, Spirit, Bless Body, Magic Barrier, Shield, Wind Walk, Bless Soul, Empower, Acumen, and Clarity. -->
 		<set name="icon" val="icon.etc_fruit_cocktail_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />

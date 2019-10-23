@@ -2,19 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
 	<!-- Abyss Walker -->
 	<skillTree type="classSkillTree" classId="36" parentClassId="35">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="1" getLevel="52" learnedByNpc="true">
-			<item id="8618" count="1" />
-		</skill>
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="2" getLevel="61" learnedByNpc="true">
-			<item id="8619" count="1" />
-		</skill>
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="3" getLevel="76" learnedByNpc="true">
-			<item id="8620" count="1" />
-		</skill>
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="4" getLevel="76" learnedByNpc="true">
-			<item id="8621" count="1" />
-		</skill>
+		<!-- Confirmed CT2.5 -->
 		<skill skillName="Dagger Mastery" skillId="209" skillLvl="9" getLevel="40" levelUpSp="9300" learnedByNpc="true" />
 		<skill skillName="Dagger Mastery" skillId="209" skillLvl="10" getLevel="40" levelUpSp="9300" learnedByNpc="true" />
 		<skill skillName="Dagger Mastery" skillId="209" skillLvl="11" getLevel="40" levelUpSp="9300" learnedByNpc="true" />
@@ -37,7 +25,7 @@
 		<skill skillName="Freezing Strike" skillId="105" skillLvl="4" getLevel="40" levelUpSp="14000" learnedByNpc="true" />
 		<skill skillName="Vicious Stance" skillId="312" skillLvl="6" getLevel="40" levelUpSp="28000" learnedByNpc="true" />
 		<skill skillName="Unlock" skillId="27" skillLvl="6" getLevel="40" levelUpSp="28000" learnedByNpc="true" />
-		<skill skillName="Critical Damage" skillId="193" skillLvl="3" getLevel="40" levelUpSp="28000" learnedByNpc="true" />
+		<skill skillName="Critical Power" skillId="193" skillLvl="3" getLevel="40" levelUpSp="28000" learnedByNpc="true" />
 		<skill skillName="Silent Move" skillId="221" skillLvl="1" getLevel="40" levelUpSp="28000" learnedByNpc="true" />
 		<skill skillName="Confusion" skillId="2" skillLvl="5" getLevel="40" levelUpSp="28000" learnedByNpc="true" />
 		<skill skillName="Power Break" skillId="115" skillLvl="3" getLevel="40" levelUpSp="28000" learnedByNpc="true" />
@@ -155,7 +143,7 @@
 		<skill skillName="Trick" skillId="11" skillLvl="2" getLevel="52" levelUpSp="88000" learnedByNpc="true" />
 		<skill skillName="Unlock" skillId="27" skillLvl="9" getLevel="52" levelUpSp="88000" learnedByNpc="true" />
 		<skill skillName="Esprit" skillId="171" skillLvl="5" getLevel="52" levelUpSp="88000" learnedByNpc="true" />
-		<skill skillName="Critical Damage" skillId="193" skillLvl="4" getLevel="52" levelUpSp="88000" learnedByNpc="true" />
+		<skill skillName="Critical Power" skillId="193" skillLvl="4" getLevel="52" levelUpSp="88000" learnedByNpc="true" />
 		<skill skillName="Confusion" skillId="2" skillLvl="9" getLevel="52" levelUpSp="88000" learnedByNpc="true" />
 		<skill skillName="Power Break" skillId="115" skillLvl="7" getLevel="52" levelUpSp="88000" learnedByNpc="true" />
 		<skill skillName="Hex" skillId="122" skillLvl="5" getLevel="52" levelUpSp="88000" learnedByNpc="true" />
@@ -185,7 +173,7 @@
 		<skill skillName="Trick" skillId="11" skillLvl="3" getLevel="55" levelUpSp="116000" learnedByNpc="true" />
 		<skill skillName="Unlock" skillId="27" skillLvl="10" getLevel="55" levelUpSp="116000" learnedByNpc="true" />
 		<skill skillName="Acrobatic Move" skillId="225" skillLvl="3" getLevel="55" levelUpSp="116000" learnedByNpc="true" />
-		<skill skillName="Boost Breath" skillId="195" skillLvl="2" getLevel="55" levelUpSp="116000" learnedByNpc="true" />
+		<skill skillName="Breath Boost" skillId="195" skillLvl="2" getLevel="55" levelUpSp="116000" learnedByNpc="true" />
 		<skill skillName="Acrobatics" skillId="173" skillLvl="2" getLevel="55" levelUpSp="116000" learnedByNpc="true" />
 		<skill skillName="Ultimate Evasion" skillId="111" skillLvl="2" getLevel="55" levelUpSp="116000" learnedByNpc="true" />
 		<skill skillName="Confusion" skillId="2" skillLvl="10" getLevel="55" levelUpSp="116000" learnedByNpc="true" />
@@ -283,7 +271,7 @@
 		<skill skillName="Vicious Stance" skillId="312" skillLvl="15" getLevel="64" levelUpSp="300000" learnedByNpc="true" />
 		<skill skillName="Veil" skillId="106" skillLvl="9" getLevel="64" levelUpSp="300000" learnedByNpc="true" />
 		<skill skillName="Trick" skillId="11" skillLvl="7" getLevel="64" levelUpSp="300000" learnedByNpc="true" />
-		<skill skillName="Critical Damage" skillId="193" skillLvl="5" getLevel="64" levelUpSp="300000" learnedByNpc="true" />
+		<skill skillName="Critical Power" skillId="193" skillLvl="5" getLevel="64" levelUpSp="300000" learnedByNpc="true" />
 		<skill skillName="Unlock" skillId="27" skillLvl="12" getLevel="64" levelUpSp="300000" learnedByNpc="true" />
 		<skill skillName="Confusion" skillId="2" skillLvl="14" getLevel="64" levelUpSp="300000" learnedByNpc="true" />
 		<skill skillName="Power Break" skillId="115" skillLvl="12" getLevel="64" levelUpSp="300000" learnedByNpc="true" />
@@ -378,7 +366,7 @@
 		<skill skillName="Vicious Stance" skillId="312" skillLvl="19" getLevel="72" levelUpSp="710000" learnedByNpc="true" />
 		<skill skillName="Veil" skillId="106" skillLvl="13" getLevel="72" levelUpSp="710000" learnedByNpc="true" />
 		<skill skillName="Trick" skillId="11" skillLvl="11" getLevel="72" levelUpSp="710000" learnedByNpc="true" />
-		<skill skillName="Critical Damage" skillId="193" skillLvl="6" getLevel="72" levelUpSp="710000" learnedByNpc="true" />
+		<skill skillName="Critical Power" skillId="193" skillLvl="6" getLevel="72" levelUpSp="710000" learnedByNpc="true" />
 		<skill skillName="Unlock" skillId="27" skillLvl="14" getLevel="72" levelUpSp="710000" learnedByNpc="true" />
 		<skill skillName="Confusion" skillId="2" skillLvl="18" getLevel="72" levelUpSp="710000" learnedByNpc="true" />
 		<skill skillName="Power Break" skillId="115" skillLvl="16" getLevel="72" levelUpSp="710000" learnedByNpc="true" />
@@ -412,11 +400,12 @@
 		<skill skillName="Mortal Strike" skillId="410" skillLvl="3" getLevel="74" levelUpSp="1180000" learnedByNpc="true" />
 		<skill skillName="Sand Bomb" skillId="412" skillLvl="10" getLevel="74" levelUpSp="1180000" learnedByNpc="true" />
 		<skill skillName="Summon Treasure Key" skillId="419" skillLvl="4" getLevel="74" levelUpSp="1180000" learnedByNpc="true" />
-		<skill skillName="Critical Damage" skillId="193" skillLvl="7" getLevel="74" levelUpSp="1180000" learnedByNpc="true" />
-		<skill skillName="Find Trap" skillId="623" skillLvl="1" getLevel="74" levelUpSp="1180000" learnedByNpc="true" />
-		<skill skillName="Remove Trap" skillId="624" skillLvl="1" getLevel="74" levelUpSp="1180000" learnedByNpc="true" />
-
+		<skill skillName="Critical Power" skillId="193" skillLvl="7" getLevel="74" levelUpSp="1180000" learnedByNpc="true" />
+		<skill skillName="Detect Trap" skillId="623" skillLvl="1" getLevel="74" levelUpSp="1180000" learnedByNpc="true" />
+		<skill skillName="Defuse Trap" skillId="624" skillLvl="1" getLevel="74" levelUpSp="1180000" learnedByNpc="true" />
+		
 		<!-- Forgotten Scrolls -->
+		<skill skillName="Shadow Step" skillId="821" skillLvl="1" getLevel="72" learnedByFS="true" />
 		<skill skillName="Evasion Counter" skillId="818" skillLvl="1" getLevel="74" learnedByFS="true" />
 	</skillTree>
 </list>

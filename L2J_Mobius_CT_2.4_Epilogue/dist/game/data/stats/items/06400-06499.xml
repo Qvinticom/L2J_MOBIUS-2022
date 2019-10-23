@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="6400" type="EtcItem" name="Badge of Hyena">
-		<!-- The badge that indicates that its bearer's event collector grade is "hyena." Without this badge, one cannot prove one'S-Grade. -->
+		<!-- The badge that indicates that its bearer's event collector grade is "hyena." Without this badge, one cannot prove one's grade. -->
 		<set name="icon" val="icon.etc_paper_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -13,7 +13,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="6401" type="EtcItem" name="Badge of Fox">
-		<!-- The badge that indicates that its bearer's event collector grade is "fox." Without this badge, one cannot prove one'S-Grade. -->
+		<!-- The badge that indicates that its bearer's event collector grade is "fox." Without this badge, one cannot prove one's grade. -->
 		<set name="icon" val="icon.etc_paper_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -25,7 +25,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="6402" type="EtcItem" name="Badge of Wolf">
-		<!-- The badge that indicates that its bearer's event collector grade is "wolf." Without this badge, one cannot prove one'S-Grade. -->
+		<!-- The badge that indicates that its bearer's event collector grade is "wolf." Without this badge, one cannot prove one's grade. -->
 		<set name="icon" val="icon.etc_paper_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -1182,7 +1182,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2199-1" /> <!-- Item - Green Treasure Box -->
+		<set name="item_skill" val="2199-1" /> <!-- Item - Green Treasue Box -->
 	</item>
 	<item id="6493" type="EtcItem" name="Green Treasure Chest">
 		<!-- Double-click to see the change. -->
@@ -1195,7 +1195,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2199-2" /> <!-- Item - Green Treasure Box -->
+		<set name="item_skill" val="2199-2" /> <!-- Item - Green Treasue Box -->
 	</item>
 	<item id="6494" type="EtcItem" name="Big Green Treasure Chest">
 		<!-- Double-click to see the change. -->
@@ -1208,7 +1208,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2199-3" /> <!-- Item - Green Treasure Box -->
+		<set name="item_skill" val="2199-3" /> <!-- Item - Green Treasue Box -->
 	</item>
 	<item id="6495" type="EtcItem" name="Small Jade Treasure Chest">
 		<!-- Double-click to see the change. -->
@@ -1221,7 +1221,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2200-1" /> <!-- Item - Jade Treasure Box -->
+		<set name="item_skill" val="2200-1" /> <!-- Item - Jade Treasue Box -->
 	</item>
 	<item id="6496" type="EtcItem" name="Jade Treasure Chest">
 		<!-- Double-click to see the change. -->
@@ -1234,7 +1234,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2200-2" /> <!-- Item - Jade Treasure Box -->
+		<set name="item_skill" val="2200-2" /> <!-- Item - Jade Treasue Box -->
 	</item>
 	<item id="6497" type="EtcItem" name="Big Jade Treasure Chest">
 		<!-- Double-click to see the change. -->
@@ -1247,7 +1247,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2200-3" /> <!-- Item - Jade Treasure Box -->
+		<set name="item_skill" val="2200-3" /> <!-- Item - Jade Treasue Box -->
 	</item>
 	<item id="6498" type="EtcItem" name="Small Blue Treasure Chest">
 		<!-- Double-click to see the change. -->
@@ -1260,7 +1260,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2201-1" /> <!-- Item - Blue Treasure Box -->
+		<set name="item_skill" val="2201-1" /> <!-- Item - Blue Treasue Box -->
 	</item>
 	<item id="6499" type="EtcItem" name="Blue Treasure Chest">
 		<!-- Double-click to see the change. -->
@@ -1273,6 +1273,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2201-2" /> <!-- Item - Blue Treasure Box -->
+		<set name="item_skill" val="2201-2" /> <!-- Item - Blue Treasue Box -->
 	</item>
 </list>

@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="35400" level="70" type="ClanHallManager" name="Horner" title="Clan Hall Manager">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -50,7 +49,6 @@
 		</collision>
 	</npc>
 	<npc id="35401" level="70" type="ClanHallDoorman" name="Amiel" title="Clan Hall Gatekeeper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -90,7 +88,6 @@
 		</collision>
 	</npc>
 	<npc id="35402" level="70" type="ClanHallDoorman" name="Borna" title="Clan Hall Gatekeeper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -139,7 +136,6 @@
 		</collision>
 	</npc>
 	<npc id="35403" level="70" type="ClanHallManager" name="Ron" title="Clan Hall Manager">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -188,7 +184,6 @@
 		</collision>
 	</npc>
 	<npc id="35404" level="70" type="ClanHallDoorman" name="Jamal" title="Clan Hall Gatekeeper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -237,7 +232,6 @@
 		</collision>
 	</npc>
 	<npc id="35405" level="70" type="ClanHallManager" name="Flynn" title="Clan Hall Manager">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -286,7 +280,6 @@
 		</collision>
 	</npc>
 	<npc id="35406" level="70" type="ClanHallDoorman" name="Jabilo" title="Clan Hall Gatekeeper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -335,7 +328,6 @@
 		</collision>
 	</npc>
 	<npc id="35407" level="70" type="ClanHallManager" name="Seth" title="Clan Hall Manager">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -384,7 +376,6 @@
 		</collision>
 	</npc>
 	<npc id="35408" level="76" type="Monster" name="Dietrich">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="577" />
@@ -430,7 +421,6 @@
 		</collision>
 	</npc>
 	<npc id="35409" level="76" type="Monster" name="Mikhail">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="577" />
@@ -476,7 +466,6 @@
 		</collision>
 	</npc>
 	<npc id="35410" level="78" type="Monster" name="Gustav">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="608" />
@@ -524,7 +513,6 @@
 		</collision>
 	</npc>
 	<npc id="35411" level="73" type="Defender" name="Doom Servant">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -578,7 +566,6 @@
 		</collision>
 	</npc>
 	<npc id="35412" level="74" type="Defender" name="Doom Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -630,7 +617,6 @@
 		</collision>
 	</npc>
 	<npc id="35413" level="75" type="Defender" name="Doom Archer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="157" />
 			<param name="MoveAroundSocial1" value="157" />
@@ -686,7 +672,6 @@
 		</collision>
 	</npc>
 	<npc id="35414" level="76" type="Defender" name="Doom Trooper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -738,7 +723,6 @@
 		</collision>
 	</npc>
 	<npc id="35415" level="77" type="Defender" name="Doom Warrior">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="215" />
 			<param name="MoveAroundSocial1" value="215" />
@@ -794,7 +778,6 @@
 		</collision>
 	</npc>
 	<npc id="35416" level="78" type="Defender" name="Doom Knight">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -848,7 +831,6 @@
 		</collision>
 	</npc>
 	<npc id="35417" level="75" type="CastleDoorman" name="Doorman of Hell">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -891,7 +873,6 @@
 		</collision>
 	</npc>
 	<npc id="35418" level="75" type="CastleDoorman" name="Doorman of Hell">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -934,7 +915,6 @@
 		</collision>
 	</npc>
 	<npc id="35419" level="75" type="Npc" name="Hephaeston" title="Wyvern Manager">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -975,7 +955,6 @@
 		</collision>
 	</npc>
 	<npc id="35420" level="75" type="Npc" name="Loken" title="Messenger">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1017,7 +996,6 @@
 		</collision>
 	</npc>
 	<npc id="35421" level="75" type="ClanHallManager" name="Biggerstaff" title="Steward">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1058,7 +1036,6 @@
 		</collision>
 	</npc>
 	<npc id="35422" level="75" type="Npc" name="Flag of Winner">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<acquire exp="562" sp="10" />
@@ -1100,7 +1077,6 @@
 		</collision>
 	</npc>
 	<npc id="35423" level="75" type="Npc" name="Red Flag">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<acquire exp="562" sp="10" />
@@ -1143,7 +1119,6 @@
 		</collision>
 	</npc>
 	<npc id="35424" level="75" type="Npc" name="Yellow Flag">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<acquire exp="562" sp="10" />
@@ -1186,7 +1161,6 @@
 		</collision>
 	</npc>
 	<npc id="35425" level="75" type="Npc" name="Green Flag">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<acquire exp="562" sp="10" />
@@ -1229,7 +1203,6 @@
 		</collision>
 	</npc>
 	<npc id="35426" level="75" type="Npc" name="Blue Flag">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<acquire exp="562" sp="10" />
@@ -1272,7 +1245,6 @@
 		</collision>
 	</npc>
 	<npc id="35427" level="75" type="Npc" name="Purple Flag">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<acquire exp="562" sp="10" />
@@ -1315,7 +1287,6 @@
 		</collision>
 	</npc>
 	<npc id="35428" level="73" type="Defender" name="Oel Mahum Berserker">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<acquire exp="6394" sp="247" />
@@ -1354,7 +1325,6 @@
 		</collision>
 	</npc>
 	<npc id="35429" level="73" type="Defender" name="Oel Mahum Scout">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<acquire exp="6394" sp="247" />
@@ -1393,7 +1363,6 @@
 		</collision>
 	</npc>
 	<npc id="35430" level="73" type="Defender" name="Oel Mahum Leader">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<acquire exp="6394" sp="247" />
@@ -1431,7 +1400,6 @@
 		</collision>
 	</npc>
 	<npc id="35431" level="73" type="Defender" name="Oel Mahum Cleric">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<acquire exp="6394" sp="247" />
@@ -1469,7 +1437,6 @@
 		</collision>
 	</npc>
 	<npc id="35432" level="73" type="Defender" name="Oel Mahum Thief">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<acquire exp="6394" sp="247" />
@@ -1509,7 +1476,6 @@
 		</collision>
 	</npc>
 	<npc id="35433" level="75" type="CastleDoorman" name="Inner Doorman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -1553,7 +1519,6 @@
 		</collision>
 	</npc>
 	<npc id="35434" level="75" type="CastleDoorman" name="Inner Doorman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -1597,7 +1562,6 @@
 		</collision>
 	</npc>
 	<npc id="35435" level="75" type="CastleDoorman" name="Outer Doorman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -1641,7 +1605,6 @@
 		</collision>
 	</npc>
 	<npc id="35436" level="75" type="CastleDoorman" name="Outer Doorman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -1685,7 +1648,6 @@
 		</collision>
 	</npc>
 	<npc id="35437" level="75" type="Npc" name="Messenger">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -1732,7 +1694,6 @@
 		</collision>
 	</npc>
 	<npc id="35438" level="75" type="ClanHallManager" name="Chamberlain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -1779,7 +1740,6 @@
 		</collision>
 	</npc>
 	<npc id="35439" level="70" type="ClanHallManager" name="Carey" title="Clan Hall Manager">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -1819,7 +1779,6 @@
 		</collision>
 	</npc>
 	<npc id="35440" level="70" type="ClanHallDoorman" name="Daniel" title="Clan Hall Gatekeeper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -1890,7 +1849,6 @@
 		</collision>
 	</npc>
 	<npc id="35441" level="70" type="ClanHallManager" name="Dianne" title="Clan Hall Manager">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="102" />
@@ -1930,7 +1888,6 @@
 		</collision>
 	</npc>
 	<npc id="35442" level="70" type="ClanHallDoorman" name="Jacques" title="Clan Hall Gatekeeper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -2001,7 +1958,6 @@
 		</collision>
 	</npc>
 	<npc id="35443" level="70" type="ClanHallManager" name="Crissy" title="Clan Hall Manager">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -2041,7 +1997,6 @@
 		</collision>
 	</npc>
 	<npc id="35444" level="70" type="ClanHallDoorman" name="Joff" title="Clan Hall Gatekeeper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -2112,7 +2067,6 @@
 		</collision>
 	</npc>
 	<npc id="35445" level="70" type="ClanHallManager" name="Albert" title="Clan Hall Manager">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -2152,7 +2106,6 @@
 		</collision>
 	</npc>
 	<npc id="35446" level="70" type="ClanHallDoorman" name="Niels" title="Clan Hall Gatekeeper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -2223,7 +2176,6 @@
 		</collision>
 	</npc>
 	<npc id="35447" level="70" type="ClanHallManager" name="Korgen" title="Clan Hall Manager">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -2263,7 +2215,6 @@
 		</collision>
 	</npc>
 	<npc id="35448" level="70" type="ClanHallDoorman" name="Rudy" title="Clan Hall Gatekeeper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -2334,7 +2285,6 @@
 		</collision>
 	</npc>
 	<npc id="35449" level="70" type="ClanHallManager" name="DiMaggio" title="Clan Hall Manager">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -2374,7 +2324,6 @@
 		</collision>
 	</npc>
 	<npc id="35450" level="70" type="ClanHallDoorman" name="Gellar" title="Clan Hall Gatekeeper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -2445,7 +2394,6 @@
 		</collision>
 	</npc>
 	<npc id="35451" level="70" type="ClanHallManager" name="Emma" title="Clan Hall Manager">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -2485,7 +2433,6 @@
 		</collision>
 	</npc>
 	<npc id="35452" level="70" type="ClanHallDoorman" name="Theobolt" title="Clan Hall Gatekeeper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -2525,7 +2472,6 @@
 		</collision>
 	</npc>
 	<npc id="35453" level="70" type="ClanHallManager" name="Adrienne" title="Clan Hall Manager">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="102" />
@@ -2565,7 +2511,6 @@
 		</collision>
 	</npc>
 	<npc id="35454" level="70" type="ClanHallDoorman" name="Rosconne" title="Clan Hall Gatekeeper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -2605,7 +2550,6 @@
 		</collision>
 	</npc>
 	<npc id="35455" level="70" type="ClanHallManager" name="Bianca" title="Clan Hall Manager">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -2645,7 +2589,6 @@
 		</collision>
 	</npc>
 	<npc id="35456" level="70" type="ClanHallDoorman" name="Stewart" title="Clan Hall Gatekeeper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -2685,7 +2628,6 @@
 		</collision>
 	</npc>
 	<npc id="35457" level="70" type="ClanHallManager" name="Gladys" title="Clan Hall Manager">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="102" />
@@ -2725,7 +2667,6 @@
 		</collision>
 	</npc>
 	<npc id="35458" level="70" type="ClanHallDoorman" name="Theron" title="Clan Hall Gatekeeper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -2765,7 +2706,6 @@
 		</collision>
 	</npc>
 	<npc id="35459" level="70" type="ClanHallManager" name="Regina" title="Clan Hall Manager">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -2805,7 +2745,6 @@
 		</collision>
 	</npc>
 	<npc id="35460" level="70" type="ClanHallDoorman" name="Trey" title="Clan Hall Gatekeeper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -2845,7 +2784,6 @@
 		</collision>
 	</npc>
 	<npc id="35461" level="70" type="ClanHallManager" name="Aida" title="Clan Hall Manager">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="154" />
@@ -2885,7 +2823,6 @@
 		</collision>
 	</npc>
 	<npc id="35462" level="70" type="ClanHallDoorman" name="Kalmer" title="Clan Hall Gatekeeper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -2925,7 +2862,6 @@
 		</collision>
 	</npc>
 	<npc id="35463" level="70" type="ClanHallManager" name="Helga" title="Clan Hall Manager">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -2965,7 +2901,6 @@
 		</collision>
 	</npc>
 	<npc id="35464" level="70" type="ClanHallDoorman" name="Volfrem" title="Clan Hall Gatekeeper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -3005,7 +2940,6 @@
 		</collision>
 	</npc>
 	<npc id="35465" level="70" type="ClanHallManager" name="Millicent" title="Clan Hall Manager">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -3045,7 +2979,6 @@
 		</collision>
 	</npc>
 	<npc id="35466" level="70" type="ClanHallDoorman" name="Gerard" title="Clan Hall Gatekeeper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -3085,7 +3018,6 @@
 		</collision>
 	</npc>
 	<npc id="35467" level="70" type="ClanHallManager" name="Branhillde" title="Clan Hall Manager">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -3125,7 +3057,6 @@
 		</collision>
 	</npc>
 	<npc id="35468" level="70" type="ClanHallDoorman" name="Lambert" title="Clan Hall Gatekeeper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -3165,7 +3096,6 @@
 		</collision>
 	</npc>
 	<npc id="35469" level="20" type="Artefact" name="Gods' Altar">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3202,7 +3132,6 @@
 		</collision>
 	</npc>
 	<npc id="35470" level="85" type="Defender" name="Astair van Halter" title="King">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="80" /> <!-- rhand: Tallum Blade -->
@@ -3245,7 +3174,6 @@
 		</collision>
 	</npc>
 	<npc id="35471" level="81" type="Defender" name="Royal Knight" title="Rune">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="2" /> <!-- rhand: Long Sword -->
@@ -3288,7 +3216,6 @@
 		</collision>
 	</npc>
 	<npc id="35472" level="79" type="Defender" name="Court Sorcerer" title="Rune">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4114" level="1" /> <!-- Aden Flame -->
 		</parameters>
@@ -3334,7 +3261,6 @@
 		</collision>
 	</npc>
 	<npc id="35473" level="79" type="Defender" name="Court Sorcerer" title="Rune">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="MagicHeal" id="4115" level="1" /> <!-- Aden Heal -->
 		</parameters>
@@ -3380,7 +3306,6 @@
 		</collision>
 	</npc>
 	<npc id="35474" level="79" type="Defender" name="Court Guard" title="Rune">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="1376" /> <!-- rhand: Guard Spear -->
@@ -3422,7 +3347,6 @@
 		</collision>
 	</npc>
 	<npc id="35475" level="78" type="Defender" name="Guard" title="Rune">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="300" /> <!-- rhand: Great Axe -->
@@ -3464,7 +3388,6 @@
 		</collision>
 	</npc>
 	<npc id="35476" level="78" type="Defender" name="Guard" title="Rune">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="132" /> <!-- rhand: Sword of Limit -->
@@ -3506,7 +3429,6 @@
 		</collision>
 	</npc>
 	<npc id="35477" level="78" type="Defender" name="Guard" title="Rune">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="14" /> <!-- rhand: Bow -->
@@ -3548,7 +3470,6 @@
 		</collision>
 	</npc>
 	<npc id="35478" level="78" type="Defender" name="Guard" title="Rune">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="16" /> <!-- rhand: Great Spear -->
@@ -3590,7 +3511,6 @@
 		</collision>
 	</npc>
 	<npc id="35479" level="78" type="Defender" name="Guard" title="Rune">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="2" /> <!-- rhand: Long Sword -->
@@ -3632,7 +3552,6 @@
 		</collision>
 	</npc>
 	<npc id="35480" level="78" type="Defender" name="Guard" title="Rune">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="14" /> <!-- rhand: Bow -->
@@ -3674,7 +3593,6 @@
 		</collision>
 	</npc>
 	<npc id="35481" level="78" type="Defender" name="Guard" title="Rune">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="16" /> <!-- rhand: Great Spear -->
@@ -3716,7 +3634,6 @@
 		</collision>
 	</npc>
 	<npc id="35482" level="78" type="Defender" name="Guard" title="Rune">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="2" /> <!-- rhand: Long Sword -->
@@ -3758,7 +3675,6 @@
 		</collision>
 	</npc>
 	<npc id="35483" level="78" type="Defender" name="Guard" title="Rune">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="14" /> <!-- rhand: Bow -->
@@ -3800,7 +3716,6 @@
 		</collision>
 	</npc>
 	<npc id="35484" level="81" type="Defender" name="Royal Knight" title="Rune">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="142" lhand="633" /> <!-- rhand: Keshanberk lhand: Zubei's Shield -->
@@ -3843,7 +3758,6 @@
 		</collision>
 	</npc>
 	<npc id="35485" level="79" type="Defender" name="Court Sorcerer" title="Rune">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4114" level="1" /> <!-- Aden Flame -->
 		</parameters>
@@ -3889,7 +3803,6 @@
 		</collision>
 	</npc>
 	<npc id="35486" level="79" type="Defender" name="Court Sorcerer" title="Rune">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="MagicHeal" id="4115" level="1" /> <!-- Aden Heal -->
 		</parameters>
@@ -3935,7 +3848,6 @@
 		</collision>
 	</npc>
 	<npc id="35487" level="79" type="Defender" name="Court Guard" title="Rune">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="300" /> <!-- rhand: Great Axe -->
@@ -3977,7 +3889,6 @@
 		</collision>
 	</npc>
 	<npc id="35488" level="78" type="Defender" name="Guard" title="Rune">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="16" /> <!-- rhand: Great Spear -->
@@ -4019,7 +3930,6 @@
 		</collision>
 	</npc>
 	<npc id="35489" level="78" type="Defender" name="Guard" title="Rune">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="2" /> <!-- rhand: Long Sword -->
@@ -4061,7 +3971,6 @@
 		</collision>
 	</npc>
 	<npc id="35490" level="78" type="Defender" name="Guard" title="Rune">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="285" /> <!-- rhand: Noble Elven Bow -->
@@ -4103,7 +4012,6 @@
 		</collision>
 	</npc>
 	<npc id="35491" level="78" type="Defender" name="Guard" title="Rune">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="16" /> <!-- rhand: Great Spear -->
@@ -4145,7 +4053,6 @@
 		</collision>
 	</npc>
 	<npc id="35492" level="78" type="Defender" name="Guard" title="Rune">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="2" /> <!-- rhand: Long Sword -->
@@ -4187,7 +4094,6 @@
 		</collision>
 	</npc>
 	<npc id="35493" level="78" type="Defender" name="Guard" title="Rune">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="14" /> <!-- rhand: Bow -->
@@ -4229,7 +4135,6 @@
 		</collision>
 	</npc>
 	<npc id="35494" level="78" type="Defender" name="Guard" title="Rune">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="16" /> <!-- rhand: Great Spear -->
@@ -4271,7 +4176,6 @@
 		</collision>
 	</npc>
 	<npc id="35495" level="78" type="Defender" name="Guard" title="Rune">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="2" /> <!-- rhand: Long Sword -->
@@ -4313,7 +4217,6 @@
 		</collision>
 	</npc>
 	<npc id="35496" level="78" type="Defender" name="Guard" title="Rune">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="14" /> <!-- rhand: Bow -->
@@ -4355,7 +4258,6 @@
 		</collision>
 	</npc>
 	<npc id="35497" level="75" type="CastleDoorman" name="Gatekeeper" title="Rune">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -4436,7 +4338,6 @@
 		</collision>
 	</npc>
 	<npc id="35498" level="75" type="CastleDoorman" name="Gatekeeper" title="Rune">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -4517,7 +4418,6 @@
 		</collision>
 	</npc>
 	<npc id="35499" level="75" type="CastleDoorman" name="Gatekeeper" title="Rune">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />

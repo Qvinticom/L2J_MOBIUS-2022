@@ -28,7 +28,6 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.data.sql.impl.ClanTable;
-import org.l2jmobius.gameserver.data.xml.impl.ExperienceData;
 import org.l2jmobius.gameserver.model.CharSelectInfoPackage;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -121,8 +120,7 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 			
 			packet.writeD((int) charInfoPackage.getSp());
 			packet.writeQ(charInfoPackage.getExp());
-			packet.writeF((float) (charInfoPackage.getExp() - ExperienceData.getInstance().getExpForLevel(charInfoPackage.getLevel())) / (ExperienceData.getInstance().getExpForLevel(charInfoPackage.getLevel() + 1) - ExperienceData.getInstance().getExpForLevel(charInfoPackage.getLevel()))); // High
-																																																																									// Five
+			
 			packet.writeD(charInfoPackage.getLevel());
 			
 			packet.writeD(charInfoPackage.getKarma());
@@ -158,15 +156,6 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 			
 			// packet.writeD(charInfoPackage.getTransformId()); // Used to display Transformations
 			packet.writeD(0x00); // Currently on retail when you are on character select you don't see your transformation.
-			
-			packet.writeD(0x00); // Pet NpcId
-			packet.writeD(0x00); // Pet level
-			packet.writeD(0x00); // Pet Food
-			packet.writeD(0x00); // Pet Food Level
-			packet.writeF(0x00); // Current pet HP
-			packet.writeF(0x00); // Current pet MP
-			
-			packet.writeD(charInfoPackage.getVitalityPoints()); // Vitality
 		}
 		return true;
 	}

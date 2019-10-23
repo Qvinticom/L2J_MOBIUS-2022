@@ -2,13 +2,13 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
 	<!-- Palus Knight -->
 	<skillTree type="classSkillTree" classId="32" parentClassId="31">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<!-- Confirmed CT2.5 -->
 		<skill skillName="Sword/Blunt Weapon Mastery" skillId="217" skillLvl="1" getLevel="20" levelUpSp="4700" learnedByNpc="true" />
 		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="1" getLevel="20" levelUpSp="1500" learnedByNpc="true" />
 		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="2" getLevel="20" levelUpSp="1500" learnedByNpc="true" />
 		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="3" getLevel="20" levelUpSp="1500" learnedByNpc="true" />
-		<skill skillName="M. Def." skillId="147" skillLvl="1" getLevel="20" levelUpSp="2300" learnedByNpc="true" />
-		<skill skillName="M. Def." skillId="147" skillLvl="2" getLevel="20" levelUpSp="2300" learnedByNpc="true" />
+		<skill skillName="Magic Resistance" skillId="147" skillLvl="1" getLevel="20" levelUpSp="2300" learnedByNpc="true" />
+		<skill skillName="Magic Resistance" skillId="147" skillLvl="2" getLevel="20" levelUpSp="2300" learnedByNpc="true" />
 		<skill skillName="Drain Health" skillId="70" skillLvl="3" getLevel="20" levelUpSp="2300" learnedByNpc="true" />
 		<skill skillName="Drain Health" skillId="70" skillLvl="4" getLevel="20" levelUpSp="2300" learnedByNpc="true" />
 		<skill skillName="Defense Aura" skillId="91" skillLvl="2" getLevel="20" levelUpSp="4700" learnedByNpc="true" />
@@ -19,9 +19,9 @@
 		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="4" getLevel="24" levelUpSp="2900" learnedByNpc="true" />
 		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="5" getLevel="24" levelUpSp="2900" learnedByNpc="true" />
 		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="6" getLevel="24" levelUpSp="2900" learnedByNpc="true" />
-		<skill skillName="M. Def." skillId="147" skillLvl="3" getLevel="24" levelUpSp="2900" learnedByNpc="true" />
-		<skill skillName="M. Def." skillId="147" skillLvl="4" getLevel="24" levelUpSp="2900" learnedByNpc="true" />
-		<skill skillName="M. Def." skillId="147" skillLvl="5" getLevel="24" levelUpSp="2900" learnedByNpc="true" />
+		<skill skillName="Magic Resistance" skillId="147" skillLvl="3" getLevel="24" levelUpSp="2900" learnedByNpc="true" />
+		<skill skillName="Magic Resistance" skillId="147" skillLvl="4" getLevel="24" levelUpSp="2900" learnedByNpc="true" />
+		<skill skillName="Magic Resistance" skillId="147" skillLvl="5" getLevel="24" levelUpSp="2900" learnedByNpc="true" />
 		<skill skillName="Drain Health" skillId="70" skillLvl="5" getLevel="24" levelUpSp="2900" learnedByNpc="true" />
 		<skill skillName="Drain Health" skillId="70" skillLvl="6" getLevel="24" levelUpSp="2900" learnedByNpc="true" />
 		<skill skillName="Drain Health" skillId="70" skillLvl="7" getLevel="24" levelUpSp="2900" learnedByNpc="true" />
@@ -38,9 +38,9 @@
 		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="7" getLevel="28" levelUpSp="4400" learnedByNpc="true" />
 		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="8" getLevel="28" levelUpSp="4400" learnedByNpc="true" />
 		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="9" getLevel="28" levelUpSp="4400" learnedByNpc="true" />
-		<skill skillName="M. Def." skillId="147" skillLvl="6" getLevel="28" levelUpSp="4400" learnedByNpc="true" />
-		<skill skillName="M. Def." skillId="147" skillLvl="7" getLevel="28" levelUpSp="4400" learnedByNpc="true" />
-		<skill skillName="M. Def." skillId="147" skillLvl="8" getLevel="28" levelUpSp="4400" learnedByNpc="true" />
+		<skill skillName="Magic Resistance" skillId="147" skillLvl="6" getLevel="28" levelUpSp="4400" learnedByNpc="true" />
+		<skill skillName="Magic Resistance" skillId="147" skillLvl="7" getLevel="28" levelUpSp="4400" learnedByNpc="true" />
+		<skill skillName="Magic Resistance" skillId="147" skillLvl="8" getLevel="28" levelUpSp="4400" learnedByNpc="true" />
 		<skill skillName="Drain Health" skillId="70" skillLvl="8" getLevel="28" levelUpSp="4400" learnedByNpc="true" />
 		<skill skillName="Drain Health" skillId="70" skillLvl="9" getLevel="28" levelUpSp="4400" learnedByNpc="true" />
 		<skill skillName="Drain Health" skillId="70" skillLvl="10" getLevel="28" levelUpSp="4400" learnedByNpc="true" />
@@ -58,9 +58,9 @@
 		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="10" getLevel="32" levelUpSp="7400" learnedByNpc="true" />
 		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="11" getLevel="32" levelUpSp="7400" learnedByNpc="true" />
 		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="12" getLevel="32" levelUpSp="7400" learnedByNpc="true" />
-		<skill skillName="M. Def." skillId="147" skillLvl="9" getLevel="32" levelUpSp="7400" learnedByNpc="true" />
-		<skill skillName="M. Def." skillId="147" skillLvl="10" getLevel="32" levelUpSp="7400" learnedByNpc="true" />
-		<skill skillName="M. Def." skillId="147" skillLvl="11" getLevel="32" levelUpSp="7400" learnedByNpc="true" />
+		<skill skillName="Magic Resistance" skillId="147" skillLvl="9" getLevel="32" levelUpSp="7400" learnedByNpc="true" />
+		<skill skillName="Magic Resistance" skillId="147" skillLvl="10" getLevel="32" levelUpSp="7400" learnedByNpc="true" />
+		<skill skillName="Magic Resistance" skillId="147" skillLvl="11" getLevel="32" levelUpSp="7400" learnedByNpc="true" />
 		<skill skillName="Drain Health" skillId="70" skillLvl="11" getLevel="32" levelUpSp="7400" learnedByNpc="true" />
 		<skill skillName="Drain Health" skillId="70" skillLvl="12" getLevel="32" levelUpSp="7400" learnedByNpc="true" />
 		<skill skillName="Drain Health" skillId="70" skillLvl="13" getLevel="32" levelUpSp="7400" learnedByNpc="true" />
@@ -78,9 +78,9 @@
 		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="13" getLevel="36" levelUpSp="9000" learnedByNpc="true" />
 		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="14" getLevel="36" levelUpSp="9000" learnedByNpc="true" />
 		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="15" getLevel="36" levelUpSp="9000" learnedByNpc="true" />
-		<skill skillName="M. Def." skillId="147" skillLvl="12" getLevel="36" levelUpSp="9000" learnedByNpc="true" />
-		<skill skillName="M. Def." skillId="147" skillLvl="13" getLevel="36" levelUpSp="9000" learnedByNpc="true" />
-		<skill skillName="M. Def." skillId="147" skillLvl="14" getLevel="36" levelUpSp="9000" learnedByNpc="true" />
+		<skill skillName="Magic Resistance" skillId="147" skillLvl="12" getLevel="36" levelUpSp="9000" learnedByNpc="true" />
+		<skill skillName="Magic Resistance" skillId="147" skillLvl="13" getLevel="36" levelUpSp="9000" learnedByNpc="true" />
+		<skill skillName="Magic Resistance" skillId="147" skillLvl="14" getLevel="36" levelUpSp="9000" learnedByNpc="true" />
 		<skill skillName="Drain Health" skillId="70" skillLvl="14" getLevel="36" levelUpSp="9000" learnedByNpc="true" />
 		<skill skillName="Drain Health" skillId="70" skillLvl="15" getLevel="36" levelUpSp="9000" learnedByNpc="true" />
 		<skill skillName="Drain Health" skillId="70" skillLvl="16" getLevel="36" levelUpSp="9000" learnedByNpc="true" />

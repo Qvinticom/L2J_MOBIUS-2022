@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="18100" level="76" type="FestivalMonster" name="Offering of Forbidden Path">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="5" />
 			<param name="SSQPart" value="DAWN" />
@@ -47,8 +46,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="18101" level="78" type="FestivalMonster" name="Offering of Forbidden Path, Archer">
-		<!-- Confirmed CT2.5 -->
+	<npc id="18101" level="78" type="FestivalMonster" name="Offering of Forbidden Path Archer">
 		<parameters>
 			<param name="RoomIndex" value="5" />
 			<param name="SSQPart" value="DAWN" />
@@ -92,8 +90,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="18102" level="78" type="FestivalMonster" name="Offering of Forbidden Path, Warrior">
-		<!-- Confirmed CT2.5 -->
+	<npc id="18102" level="78" type="FestivalMonster" name="Offering of Forbidden Path Warrior">
 		<parameters>
 			<param name="RoomIndex" value="5" />
 			<param name="SSQPart" value="DAWN" />
@@ -147,8 +144,7 @@
 			<height normal="24" grown="28.8" />
 		</collision>
 	</npc>
-	<npc id="18103" level="78" type="FestivalMonster" name="Offering of Forbidden Path, Follower">
-		<!-- Confirmed CT2.5 -->
+	<npc id="18103" level="78" type="FestivalMonster" name="Offering of Forbidden Path Follower">
 		<parameters>
 			<param name="RoomIndex" value="5" />
 			<param name="SSQPart" value="DAWN" />
@@ -205,8 +201,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="18104" level="78" type="FestivalMonster" name="Offering of Forbidden Path, Berserker">
-		<!-- Confirmed CT2.5 -->
+	<npc id="18104" level="78" type="FestivalMonster" name="Offering of Forbidden Path Berserker">
 		<parameters>
 			<param name="RoomIndex" value="5" />
 			<param name="SSQPart" value="DAWN" />
@@ -261,8 +256,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="18105" level="78" type="FestivalMonster" name="Offering of Forbidden Path, Zealot">
-		<!-- Confirmed CT2.5 -->
+	<npc id="18105" level="78" type="FestivalMonster" name="Offering of Forbidden Path Zealot">
 		<parameters>
 			<param name="RoomIndex" value="5" />
 			<param name="SSQPart" value="DAWN" />
@@ -318,8 +312,7 @@
 			<height normal="34.8" />
 		</collision>
 	</npc>
-	<npc id="18106" level="76" type="FestivalMonster" name="Offering of Forbidden Path, Marksman">
-		<!-- Confirmed CT2.5 -->
+	<npc id="18106" level="76" type="FestivalMonster" name="Offering of Forbidden Path Marksman">
 		<parameters>
 			<param name="RoomIndex" value="5" />
 			<param name="SSQPart" value="DAWN" />
@@ -363,8 +356,7 @@
 			<height normal="32.4" />
 		</collision>
 	</npc>
-	<npc id="18107" level="78" type="FestivalMonster" name="Offering of Forbidden Path, Disciple">
-		<!-- Confirmed CT2.5 -->
+	<npc id="18107" level="78" type="FestivalMonster" name="Offering of Forbidden Path Disciple">
 		<parameters>
 			<param name="RoomIndex" value="5" />
 			<param name="SSQPart" value="DAWN" />
@@ -415,8 +407,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="18108" level="78" type="FestivalMonster" name="Offering of Forbidden Path, Saint">
-		<!-- Confirmed CT2.5 -->
+	<npc id="18108" level="78" type="FestivalMonster" name="Offering of Forbidden Path Saint">
 		<parameters>
 			<param name="RoomIndex" value="5" />
 			<param name="SSQPart" value="DAWN" />
@@ -471,7 +462,6 @@
 		</collision>
 	</npc>
 	<npc id="18109" level="30" type="FestivalMonster" name="Treasures of the Festival">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="1" />
 			<param name="SSQPart" value="TWILIGHT" />
@@ -515,10 +505,10 @@
 			<drop>
 				<item id="8923" min="1" max="1" chance="0.0095977555847168" /> <!-- Scar -->
 				<item id="8913" min="1" max="1" chance="0.0095977555847168" /> <!-- Butterfly Hairpin -->
-				<item id="955" min="1" max="1" chance="0.0956347788619995" /> <!-- Scroll: Enchant Weapon (D-Grade) -->
-				<item id="956" min="1" max="1" chance="0.797230712104797" /> <!-- Scroll: Enchant Armor (D-Grade) -->
+				<item id="955" min="1" max="1" chance="0.0956347788619995" /> <!-- Scroll: Enchant Weapon (D) -->
+				<item id="956" min="1" max="1" chance="0.797230712104797" /> <!-- Scroll: Enchant Armor (D) -->
 				<item id="1060" min="1" max="1" chance="53.1483942151337" /> <!-- Lesser Healing Potion -->
-				<item id="1061" min="1" max="1" chance="14.4949418164215" /> <!-- Greater Healing Potion -->
+				<item id="1061" min="1" max="1" chance="14.4949418164215" /> <!-- Healing Potion -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -527,7 +517,6 @@
 		</collision>
 	</npc>
 	<npc id="18110" level="41" type="FestivalMonster" name="Treasures of the Festival">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="2" />
 			<param name="SSQPart" value="TWILIGHT" />
@@ -571,10 +560,10 @@
 			<drop>
 				<item id="8923" min="1" max="1" chance="0.0146753792266846" /> <!-- Scar -->
 				<item id="8913" min="1" max="1" chance="0.0146753792266846" /> <!-- Butterfly Hairpin -->
-				<item id="951" min="1" max="1" chance="0.0665075696868896" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
-				<item id="952" min="1" max="1" chance="0.487930339111328" /> <!-- Scroll: Enchant Armor (C-Grade) -->
+				<item id="951" min="1" max="1" chance="0.0665075696868896" /> <!-- Scroll: Enchant Weapon (C) -->
+				<item id="952" min="1" max="1" chance="0.487930339111328" /> <!-- Scroll: Enchant Armor (C) -->
 				<item id="1832" min="1" max="1" chance="40.65954323703" /> <!-- Greater Antidote -->
-				<item id="1061" min="1" max="1" chance="22.1779326747437" /> <!-- Greater Healing Potion -->
+				<item id="1061" min="1" max="1" chance="22.1779326747437" /> <!-- Healing Potion -->
 				<item id="1834" min="1" max="1" chance="40.6594391563263" /> <!-- Emergency Dressing -->
 			</drop>
 		</dropLists>
@@ -584,7 +573,6 @@
 		</collision>
 	</npc>
 	<npc id="18111" level="52" type="FestivalMonster" name="Treasures of the Festival">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="3" />
 			<param name="SSQPart" value="TWILIGHT" />
@@ -628,11 +616,11 @@
 			<drop>
 				<item id="8923" min="1" max="1" chance="0.0231639402351379" /> <!-- Scar -->
 				<item id="8913" min="1" max="1" chance="0.0231639402351379" /> <!-- Butterfly Hairpin -->
-				<item id="951" min="1" max="1" chance="0.105326634231567" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
-				<item id="952" min="1" max="1" chance="0.772499022762299" /> <!-- Scroll: Enchant Armor (C-Grade) -->
+				<item id="951" min="1" max="1" chance="0.105326634231567" /> <!-- Scroll: Enchant Weapon (C) -->
+				<item id="952" min="1" max="1" chance="0.772499022762299" /> <!-- Scroll: Enchant Armor (C) -->
 				<item id="734" min="1" max="1" chance="9.65613879333115" /> <!-- Haste Potion -->
 				<item id="1539" min="1" max="1" chance="12.8748234412422" /> <!-- Greater Healing Potion -->
-				<item id="735" min="1" max="1" chance="4.82808353826523" /> <!-- Alacrity Potion -->
+				<item id="735" min="1" max="1" chance="4.82808353826523" /> <!-- Potion of Alacrity -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -641,7 +629,6 @@
 		</collision>
 	</npc>
 	<npc id="18112" level="63" type="FestivalMonster" name="Treasures of the Festival">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="4" />
 			<param name="SSQPart" value="TWILIGHT" />
@@ -685,11 +672,11 @@
 			<drop>
 				<item id="8923" min="1" max="1" chance="0.0336913911437988" /> <!-- Scar -->
 				<item id="8913" min="1" max="1" chance="0.0336913911437988" /> <!-- Butterfly Hairpin -->
-				<item id="947" min="1" max="1" chance="0.0336913911437988" /> <!-- Scroll: Enchant Weapon (B-Grade) -->
-				<item id="948" min="1" max="1" chance="0.210691521045685" /> <!-- Scroll: Enchant Armor (B-Grade) -->
+				<item id="947" min="1" max="1" chance="0.0336913911437988" /> <!-- Scroll: Enchant Weapon (B) -->
+				<item id="948" min="1" max="1" chance="0.210691521045685" /> <!-- Scroll: Enchant Armor (B) -->
 				<item id="734" min="1" max="1" chance="14.0459810766487" /> <!-- Haste Potion -->
 				<item id="1539" min="1" max="1" chance="18.7280015080643" /> <!-- Greater Healing Potion -->
-				<item id="735" min="1" max="1" chance="7.02305070152283" /> <!-- Alacrity Potion -->
+				<item id="735" min="1" max="1" chance="7.02305070152283" /> <!-- Potion of Alacrity -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -698,7 +685,6 @@
 		</collision>
 	</npc>
 	<npc id="18113" level="72" type="FestivalMonster" name="Treasures of the Festival">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="5" />
 			<param name="SSQPart" value="TWILIGHT" />
@@ -742,11 +728,11 @@
 			<drop>
 				<item id="8923" min="1" max="1" chance="0.0450971128082275" /> <!-- Scar -->
 				<item id="8913" min="1" max="1" chance="0.0450971128082275" /> <!-- Butterfly Hairpin -->
-				<item id="729" min="1" max="1" chance="0.0125032279586792" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
-				<item id="730" min="1" max="1" chance="0.093934507484436" /> <!-- Scroll: Enchant Armor (A-Grade) -->
+				<item id="729" min="1" max="1" chance="0.0125032279586792" /> <!-- Scroll: Enchant Weapon (A) -->
+				<item id="730" min="1" max="1" chance="0.093934507484436" /> <!-- Scroll: Enchant Armor (A) -->
 				<item id="734" min="1" max="1" chance="18.789145666008" /> <!-- Haste Potion -->
 				<item id="1539" min="1" max="1" chance="25.052194221344" /> <!-- Greater Healing Potion -->
-				<item id="735" min="1" max="1" chance="9.39462626560211" /> <!-- Alacrity Potion -->
+				<item id="735" min="1" max="1" chance="9.39462626560211" /> <!-- Potion of Alacrity -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -755,7 +741,6 @@
 		</collision>
 	</npc>
 	<npc id="18114" level="30" type="FestivalMonster" name="Treasures of the Festival">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="1" />
 			<param name="SSQPart" value="DAWN" />
@@ -799,10 +784,10 @@
 			<drop>
 				<item id="8923" min="1" max="1" chance="0.0095977555847168" /> <!-- Scar -->
 				<item id="8913" min="1" max="1" chance="0.0095977555847168" /> <!-- Butterfly Hairpin -->
-				<item id="955" min="1" max="1" chance="0.0956347788619995" /> <!-- Scroll: Enchant Weapon (D-Grade) -->
-				<item id="956" min="1" max="1" chance="0.797230712104797" /> <!-- Scroll: Enchant Armor (D-Grade) -->
+				<item id="955" min="1" max="1" chance="0.0956347788619995" /> <!-- Scroll: Enchant Weapon (D) -->
+				<item id="956" min="1" max="1" chance="0.797230712104797" /> <!-- Scroll: Enchant Armor (D) -->
 				<item id="1060" min="1" max="1" chance="53.1483942151337" /> <!-- Lesser Healing Potion -->
-				<item id="1061" min="1" max="1" chance="14.4949418164215" /> <!-- Greater Healing Potion -->
+				<item id="1061" min="1" max="1" chance="14.4949418164215" /> <!-- Healing Potion -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -811,7 +796,6 @@
 		</collision>
 	</npc>
 	<npc id="18115" level="41" type="FestivalMonster" name="Treasures of the Festival">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="2" />
 			<param name="SSQPart" value="DAWN" />
@@ -855,10 +839,10 @@
 			<drop>
 				<item id="8923" min="1" max="1" chance="0.0146753792266846" /> <!-- Scar -->
 				<item id="8913" min="1" max="1" chance="0.0146753792266846" /> <!-- Butterfly Hairpin -->
-				<item id="951" min="1" max="1" chance="0.0665075696868896" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
-				<item id="952" min="1" max="1" chance="0.487930339111328" /> <!-- Scroll: Enchant Armor (C-Grade) -->
+				<item id="951" min="1" max="1" chance="0.0665075696868896" /> <!-- Scroll: Enchant Weapon (C) -->
+				<item id="952" min="1" max="1" chance="0.487930339111328" /> <!-- Scroll: Enchant Armor (C) -->
 				<item id="1832" min="1" max="1" chance="40.65954323703" /> <!-- Greater Antidote -->
-				<item id="1061" min="1" max="1" chance="22.1779326747437" /> <!-- Greater Healing Potion -->
+				<item id="1061" min="1" max="1" chance="22.1779326747437" /> <!-- Healing Potion -->
 				<item id="1834" min="1" max="1" chance="40.6594391563263" /> <!-- Emergency Dressing -->
 			</drop>
 		</dropLists>
@@ -868,7 +852,6 @@
 		</collision>
 	</npc>
 	<npc id="18116" level="52" type="FestivalMonster" name="Treasures of the Festival">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="3" />
 			<param name="SSQPart" value="DAWN" />
@@ -912,11 +895,11 @@
 			<drop>
 				<item id="8923" min="1" max="1" chance="0.0231639402351379" /> <!-- Scar -->
 				<item id="8913" min="1" max="1" chance="0.0231639402351379" /> <!-- Butterfly Hairpin -->
-				<item id="951" min="1" max="1" chance="0.105326634231567" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
-				<item id="952" min="1" max="1" chance="0.772499022762299" /> <!-- Scroll: Enchant Armor (C-Grade) -->
+				<item id="951" min="1" max="1" chance="0.105326634231567" /> <!-- Scroll: Enchant Weapon (C) -->
+				<item id="952" min="1" max="1" chance="0.772499022762299" /> <!-- Scroll: Enchant Armor (C) -->
 				<item id="734" min="1" max="1" chance="9.65613879333115" /> <!-- Haste Potion -->
 				<item id="1539" min="1" max="1" chance="12.8748234412422" /> <!-- Greater Healing Potion -->
-				<item id="735" min="1" max="1" chance="4.82808353826523" /> <!-- Alacrity Potion -->
+				<item id="735" min="1" max="1" chance="4.82808353826523" /> <!-- Potion of Alacrity -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -925,7 +908,6 @@
 		</collision>
 	</npc>
 	<npc id="18117" level="63" type="FestivalMonster" name="Treasures of the Festival">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="4" />
 			<param name="SSQPart" value="DAWN" />
@@ -969,11 +951,11 @@
 			<drop>
 				<item id="8923" min="1" max="1" chance="0.0336913911437988" /> <!-- Scar -->
 				<item id="8913" min="1" max="1" chance="0.0336913911437988" /> <!-- Butterfly Hairpin -->
-				<item id="947" min="1" max="1" chance="0.0336913911437988" /> <!-- Scroll: Enchant Weapon (B-Grade) -->
-				<item id="948" min="1" max="1" chance="0.210691521045685" /> <!-- Scroll: Enchant Armor (B-Grade) -->
+				<item id="947" min="1" max="1" chance="0.0336913911437988" /> <!-- Scroll: Enchant Weapon (B) -->
+				<item id="948" min="1" max="1" chance="0.210691521045685" /> <!-- Scroll: Enchant Armor (B) -->
 				<item id="734" min="1" max="1" chance="14.0459810766487" /> <!-- Haste Potion -->
 				<item id="1539" min="1" max="1" chance="18.7280015080643" /> <!-- Greater Healing Potion -->
-				<item id="735" min="1" max="1" chance="7.02305070152283" /> <!-- Alacrity Potion -->
+				<item id="735" min="1" max="1" chance="7.02305070152283" /> <!-- Potion of Alacrity -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -982,7 +964,6 @@
 		</collision>
 	</npc>
 	<npc id="18118" level="72" type="FestivalMonster" name="Treasures of the Festival">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="5" />
 			<param name="SSQPart" value="DAWN" />
@@ -1026,11 +1007,11 @@
 			<drop>
 				<item id="8923" min="1" max="1" chance="0.0450971128082275" /> <!-- Scar -->
 				<item id="8913" min="1" max="1" chance="0.0450971128082275" /> <!-- Butterfly Hairpin -->
-				<item id="729" min="1" max="1" chance="0.0125032279586792" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
-				<item id="730" min="1" max="1" chance="0.093934507484436" /> <!-- Scroll: Enchant Armor (A-Grade) -->
+				<item id="729" min="1" max="1" chance="0.0125032279586792" /> <!-- Scroll: Enchant Weapon (A) -->
+				<item id="730" min="1" max="1" chance="0.093934507484436" /> <!-- Scroll: Enchant Armor (A) -->
 				<item id="734" min="1" max="1" chance="18.789145666008" /> <!-- Haste Potion -->
 				<item id="1539" min="1" max="1" chance="25.052194221344" /> <!-- Greater Healing Potion -->
-				<item id="735" min="1" max="1" chance="9.39462626560211" /> <!-- Alacrity Potion -->
+				<item id="735" min="1" max="1" chance="9.39462626560211" /> <!-- Potion of Alacrity -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -1039,7 +1020,6 @@
 		</collision>
 	</npc>
 	<npc id="18119" level="63" type="Monster" name="Corpse of Deadman">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1076,7 +1056,6 @@
 		</collision>
 	</npc>
 	<npc id="18120" level="78" type="SepulcherMonster" name="Halisha's Officer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -1138,7 +1117,6 @@
 		</collision>
 	</npc>
 	<npc id="18121" level="78" type="SepulcherMonster" name="Halisha's Officer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -1200,7 +1178,6 @@
 		</collision>
 	</npc>
 	<npc id="18122" level="78" type="SepulcherMonster" name="Halisha's Officer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -1260,7 +1237,6 @@
 		</collision>
 	</npc>
 	<npc id="18123" level="78" type="SepulcherMonster" name="Halisha's Officer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -1322,7 +1298,6 @@
 		</collision>
 	</npc>
 	<npc id="18124" level="78" type="SepulcherMonster" name="Halisha's Officer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -1384,7 +1359,6 @@
 		</collision>
 	</npc>
 	<npc id="18125" level="78" type="SepulcherMonster" name="Halisha's Officer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -1444,7 +1418,6 @@
 		</collision>
 	</npc>
 	<npc id="18126" level="78" type="SepulcherMonster" name="Halisha's Officer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -1506,7 +1479,6 @@
 		</collision>
 	</npc>
 	<npc id="18127" level="78" type="SepulcherMonster" name="Halisha's Officer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -1568,7 +1540,6 @@
 		</collision>
 	</npc>
 	<npc id="18128" level="78" type="SepulcherMonster" name="Halisha's Officer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -1628,7 +1599,6 @@
 		</collision>
 	</npc>
 	<npc id="18129" level="78" type="SepulcherMonster" name="Halisha's Officer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -1690,7 +1660,6 @@
 		</collision>
 	</npc>
 	<npc id="18130" level="78" type="SepulcherMonster" name="Halisha's Officer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -1752,7 +1721,6 @@
 		</collision>
 	</npc>
 	<npc id="18131" level="78" type="SepulcherMonster" name="Halisha's Officer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -1812,7 +1780,6 @@
 		</collision>
 	</npc>
 	<npc id="18132" level="78" type="SepulcherMonster" name="Imperial Healer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -1867,7 +1834,6 @@
 		</collision>
 	</npc>
 	<npc id="18133" level="78" type="SepulcherMonster" name="Imperial Mosaic">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -1917,7 +1883,6 @@
 		</collision>
 	</npc>
 	<npc id="18134" level="78" type="SepulcherMonster" name="Imperial Mosaic">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -1967,7 +1932,6 @@
 		</collision>
 	</npc>
 	<npc id="18135" level="78" type="SepulcherMonster" name="Imperial Mosaic">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -2018,7 +1982,6 @@
 		</collision>
 	</npc>
 	<npc id="18136" level="78" type="SepulcherMonster" name="Imperial Mosaic">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -2069,7 +2032,6 @@
 		</collision>
 	</npc>
 	<npc id="18137" level="78" type="SepulcherMonster" name="Imperial Mosaic">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="65" />
 			<param name="MoveAroundSocial1" value="65" />
@@ -2121,7 +2083,6 @@
 		</collision>
 	</npc>
 	<npc id="18138" level="78" type="SepulcherMonster" name="Imperial Mosaic">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="65" />
 			<param name="MoveAroundSocial1" value="65" />
@@ -2174,7 +2135,6 @@
 		</collision>
 	</npc>
 	<npc id="18139" level="78" type="SepulcherMonster" name="Imperial Mosaic">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="65" />
 			<param name="MoveAroundSocial1" value="65" />
@@ -2227,7 +2187,6 @@
 		</collision>
 	</npc>
 	<npc id="18140" level="78" type="SepulcherMonster" name="Imperial Mosaic">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="65" />
 			<param name="MoveAroundSocial1" value="65" />
@@ -2278,7 +2237,6 @@
 		</collision>
 	</npc>
 	<npc id="18141" level="78" type="SepulcherMonster" name="Beetle of Grave">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="65" />
 			<param name="MoveAroundSocial1" value="65" />
@@ -2334,7 +2292,6 @@
 		</collision>
 	</npc>
 	<npc id="18142" level="78" type="SepulcherMonster" name="Beetle of Grave">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="65" />
 			<param name="MoveAroundSocial1" value="65" />
@@ -2390,7 +2347,6 @@
 		</collision>
 	</npc>
 	<npc id="18143" level="78" type="SepulcherMonster" name="Beetle of Grave">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="65" />
 			<param name="MoveAroundSocial1" value="65" />
@@ -2446,7 +2402,6 @@
 		</collision>
 	</npc>
 	<npc id="18144" level="78" type="SepulcherMonster" name="Beetle of Grave">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="65" />
 			<param name="MoveAroundSocial1" value="65" />
@@ -2502,7 +2457,6 @@
 		</collision>
 	</npc>
 	<npc id="18145" level="78" type="SepulcherMonster" name="Beetle of Grave">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="65" />
 			<param name="MoveAroundSocial1" value="65" />
@@ -2556,7 +2510,6 @@
 		</collision>
 	</npc>
 	<npc id="18146" level="78" type="SepulcherMonster" name="Beetle of Grave">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="65" />
 			<param name="MoveAroundSocial1" value="65" />
@@ -2608,7 +2561,6 @@
 		</collision>
 	</npc>
 	<npc id="18147" level="78" type="SepulcherMonster" name="Beetle of Grave">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="65" />
 			<param name="MoveAroundSocial1" value="65" />
@@ -2660,7 +2612,6 @@
 		</collision>
 	</npc>
 	<npc id="18148" level="78" type="SepulcherMonster" name="Beetle of Grave">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="65" />
 			<param name="MoveAroundSocial1" value="65" />
@@ -2712,7 +2663,6 @@
 		</collision>
 	</npc>
 	<npc id="18149" level="78" type="SepulcherMonster" name="Beetle of Grave">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="65" />
 			<param name="MoveAroundSocial1" value="65" />
@@ -2764,7 +2714,6 @@
 		</collision>
 	</npc>
 	<npc id="18150" level="78" type="SepulcherMonster" name="Victim">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="KeyBox" value="31455" /> <!-- Key Box -->
 			<param name="StrongNPC" value="18158" /> <!-- Executioner of Halisha -->
@@ -2810,7 +2759,6 @@
 		</collision>
 	</npc>
 	<npc id="18151" level="78" type="SepulcherMonster" name="Victim">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="KeyBox" value="31455" /> <!-- Key Box -->
 			<param name="StrongNPC" value="18159" /> <!-- Executioner of Halisha -->
@@ -2856,7 +2804,6 @@
 		</collision>
 	</npc>
 	<npc id="18152" level="78" type="SepulcherMonster" name="Victim">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="KeyBox" value="31455" /> <!-- Key Box -->
 			<param name="StrongNPC" value="18160" /> <!-- Executioner of Halisha -->
@@ -2902,7 +2849,6 @@
 		</collision>
 	</npc>
 	<npc id="18153" level="78" type="SepulcherMonster" name="Victim">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="KeyBox" value="31455" /> <!-- Key Box -->
 			<param name="StrongNPC" value="18161" /> <!-- Executioner of Halisha -->
@@ -2948,7 +2894,6 @@
 		</collision>
 	</npc>
 	<npc id="18154" level="78" type="SepulcherMonster" name="Victim">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="KeyBox" value="31455" /> <!-- Key Box -->
 			<param name="StrongNPC" value="18162" /> <!-- Executioner of Halisha -->
@@ -2994,7 +2939,6 @@
 		</collision>
 	</npc>
 	<npc id="18155" level="78" type="SepulcherMonster" name="Victim">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="KeyBox" value="31455" /> <!-- Key Box -->
 			<param name="StrongNPC" value="18163" /> <!-- Executioner of Halisha -->
@@ -3040,7 +2984,6 @@
 		</collision>
 	</npc>
 	<npc id="18156" level="78" type="SepulcherMonster" name="Victim">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="KeyBox" value="31455" /> <!-- Key Box -->
 			<param name="StrongNPC" value="18164" /> <!-- Executioner of Halisha -->
@@ -3086,7 +3029,6 @@
 		</collision>
 	</npc>
 	<npc id="18157" level="78" type="SepulcherMonster" name="Victim">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="KeyBox" value="31455" /> <!-- Key Box -->
 			<param name="StrongNPC" value="18165" /> <!-- Executioner of Halisha -->
@@ -3132,7 +3074,6 @@
 		</collision>
 	</npc>
 	<npc id="18158" level="78" type="SepulcherMonster" name="Executioner of Halisha">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -3185,7 +3126,6 @@
 		</collision>
 	</npc>
 	<npc id="18159" level="78" type="SepulcherMonster" name="Executioner of Halisha">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -3238,7 +3178,6 @@
 		</collision>
 	</npc>
 	<npc id="18160" level="78" type="SepulcherMonster" name="Executioner of Halisha">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -3291,7 +3230,6 @@
 		</collision>
 	</npc>
 	<npc id="18161" level="78" type="SepulcherMonster" name="Executioner of Halisha">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -3344,7 +3282,6 @@
 		</collision>
 	</npc>
 	<npc id="18162" level="78" type="SepulcherMonster" name="Executioner of Halisha">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -3397,7 +3334,6 @@
 		</collision>
 	</npc>
 	<npc id="18163" level="78" type="SepulcherMonster" name="Executioner of Halisha">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -3450,7 +3386,6 @@
 		</collision>
 	</npc>
 	<npc id="18164" level="78" type="SepulcherMonster" name="Executioner of Halisha">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -3503,7 +3438,6 @@
 		</collision>
 	</npc>
 	<npc id="18165" level="78" type="SepulcherMonster" name="Executioner of Halisha">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -3556,7 +3490,6 @@
 		</collision>
 	</npc>
 	<npc id="18166" level="78" type="SepulcherMonster" name="Imperial Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="74" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -3609,7 +3542,6 @@
 		</collision>
 	</npc>
 	<npc id="18167" level="78" type="SepulcherMonster" name="Imperial Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="74" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -3662,7 +3594,6 @@
 		</collision>
 	</npc>
 	<npc id="18168" level="78" type="SepulcherMonster" name="Imperial Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="74" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -3716,7 +3647,6 @@
 		</collision>
 	</npc>
 	<npc id="18169" level="78" type="SepulcherMonster" name="Imperial Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="74" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -3770,7 +3700,6 @@
 		</collision>
 	</npc>
 	<npc id="18170" level="78" type="SepulcherMonster" name="Imperial Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3823,7 +3752,6 @@
 		</collision>
 	</npc>
 	<npc id="18171" level="78" type="SepulcherMonster" name="Imperial Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3877,7 +3805,6 @@
 		</collision>
 	</npc>
 	<npc id="18172" level="78" type="SepulcherMonster" name="Imperial Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3929,7 +3856,6 @@
 		</collision>
 	</npc>
 	<npc id="18173" level="78" type="SepulcherMonster" name="Halisha's Foreman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="108" />
 			<param name="MoveAroundSocial1" value="108" />
@@ -3986,7 +3912,6 @@
 		</collision>
 	</npc>
 	<npc id="18174" level="78" type="SepulcherMonster" name="Halisha's Foreman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="108" />
 			<param name="MoveAroundSocial1" value="108" />
@@ -4047,7 +3972,6 @@
 		</collision>
 	</npc>
 	<npc id="18175" level="78" type="SepulcherMonster" name="Halisha's Foreman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="108" />
 			<param name="MoveAroundSocial1" value="108" />
@@ -4106,7 +4030,6 @@
 		</collision>
 	</npc>
 	<npc id="18176" level="78" type="SepulcherMonster" name="Halisha's Foreman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="108" />
 			<param name="MoveAroundSocial1" value="108" />
@@ -4163,7 +4086,6 @@
 		</collision>
 	</npc>
 	<npc id="18177" level="78" type="SepulcherMonster" name="Halisha's Foreman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="108" />
 			<param name="MoveAroundSocial1" value="108" />
@@ -4224,7 +4146,6 @@
 		</collision>
 	</npc>
 	<npc id="18178" level="78" type="SepulcherMonster" name="Halisha's Foreman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="108" />
 			<param name="MoveAroundSocial1" value="108" />
@@ -4283,7 +4204,6 @@
 		</collision>
 	</npc>
 	<npc id="18179" level="78" type="SepulcherMonster" name="Halisha's Foreman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="108" />
 			<param name="MoveAroundSocial1" value="108" />
@@ -4340,7 +4260,6 @@
 		</collision>
 	</npc>
 	<npc id="18180" level="78" type="SepulcherMonster" name="Halisha's Foreman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="108" />
 			<param name="MoveAroundSocial1" value="108" />
@@ -4401,7 +4320,6 @@
 		</collision>
 	</npc>
 	<npc id="18181" level="78" type="SepulcherMonster" name="Halisha's Foreman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="108" />
 			<param name="MoveAroundSocial1" value="108" />
@@ -4460,7 +4378,6 @@
 		</collision>
 	</npc>
 	<npc id="18182" level="78" type="SepulcherMonster" name="Halisha's Foreman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="108" />
 			<param name="MoveAroundSocial1" value="108" />
@@ -4517,7 +4434,6 @@
 		</collision>
 	</npc>
 	<npc id="18183" level="78" type="SepulcherMonster" name="Halisha's Foreman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="108" />
 			<param name="MoveAroundSocial1" value="108" />
@@ -4578,7 +4494,6 @@
 		</collision>
 	</npc>
 	<npc id="18184" level="78" type="SepulcherMonster" name="Halisha's Foreman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="108" />
 			<param name="MoveAroundSocial1" value="108" />
@@ -4637,7 +4552,6 @@
 		</collision>
 	</npc>
 	<npc id="18185" level="78" type="SepulcherMonster" name="Evil Astrologer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="50" />
 			<param name="MoveAroundSocial1" value="50" />
@@ -4693,7 +4607,6 @@
 		</collision>
 	</npc>
 	<npc id="18186" level="78" type="SepulcherMonster" name="Evil Astrologer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="50" />
 			<param name="MoveAroundSocial1" value="50" />
@@ -4751,7 +4664,6 @@
 		</collision>
 	</npc>
 	<npc id="18187" level="78" type="SepulcherMonster" name="Knight of Darkness">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -4803,7 +4715,6 @@
 		</collision>
 	</npc>
 	<npc id="18188" level="78" type="SepulcherMonster" name="Knight of Darkness">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -4854,7 +4765,6 @@
 		</collision>
 	</npc>
 	<npc id="18189" level="78" type="SepulcherMonster" name="Knight of Darkness">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -4907,7 +4817,6 @@
 		</collision>
 	</npc>
 	<npc id="18190" level="78" type="SepulcherMonster" name="Knight of Darkness">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -4960,7 +4869,6 @@
 		</collision>
 	</npc>
 	<npc id="18191" level="78" type="SepulcherMonster" name="Witch of dust">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -5013,7 +4921,6 @@
 		</collision>
 	</npc>
 	<npc id="18192" level="78" type="SepulcherMonster" name="Witch of dust">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -5068,7 +4975,6 @@
 		</collision>
 	</npc>
 	<npc id="18193" level="78" type="SepulcherMonster" name="Witch of dust">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -5123,7 +5029,6 @@
 		</collision>
 	</npc>
 	<npc id="18194" level="78" type="SepulcherMonster" name="Witch of dust">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -5176,7 +5081,6 @@
 		</collision>
 	</npc>
 	<npc id="18195" level="78" type="SepulcherMonster" name="Signet of Emperor">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="115" />
 			<param name="MoveAroundSocial1" value="115" />
@@ -5228,7 +5132,6 @@
 		</collision>
 	</npc>
 	<npc id="18196" level="78" type="SepulcherMonster" name="Charm of Corner">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="AreaName" value="conquerors_weakness" />
 			<param name="type" value="0" />
@@ -5278,7 +5181,6 @@
 		</collision>
 	</npc>
 	<npc id="18197" level="78" type="SepulcherMonster" name="Charm of Corner">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="AreaName" value="conquerors_pddown" />
 			<param name="type" value="1" />
@@ -5328,7 +5230,6 @@
 		</collision>
 	</npc>
 	<npc id="18198" level="78" type="SepulcherMonster" name="Charm of Corner">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="AreaName" value="conquerors_poison" />
 			<param name="type" value="2" />
@@ -5378,7 +5279,6 @@
 		</collision>
 	</npc>
 	<npc id="18199" level="78" type="SepulcherMonster" name="Charm of Corner">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="AreaName" value="conquerors_nonheal" />
 			<param name="type" value="3" />

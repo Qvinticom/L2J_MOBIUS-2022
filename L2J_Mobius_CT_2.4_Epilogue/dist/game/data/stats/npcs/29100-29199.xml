@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="29100" level="83" type="Monster" name="Crystal Prison Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Aggressive_Time" value="7" />
@@ -50,7 +49,6 @@
 		</collision>
 	</npc>
 	<npc id="29101" level="83" type="Monster" name="Crystalline Golem">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -90,7 +88,6 @@
 		</collision>
 	</npc>
 	<npc id="29102" level="83" type="Monster" name="Crystalline Golem">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -130,7 +127,6 @@
 		</collision>
 	</npc>
 	<npc id="29103" level="83" type="Monster" name="Baylor" title="Warden">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="d_skill1" id="5401" level="1" /> <!-- Stun -->
 		</parameters>
@@ -172,7 +168,6 @@
 		</collision>
 	</npc>
 	<npc id="29104" level="83" type="Monster" name="Crystal Prison Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="d_skill1" id="5405" level="1" /> <!-- Presentation - Demonic 1 -->
 			<skill name="d_skill2" id="5406" level="1" /> <!-- Presentation - Demonic 2 -->
@@ -216,7 +211,6 @@
 		</collision>
 	</npc>
 	<npc id="29105" level="83" type="Monster" name="Crystalline Golem">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="d_skill1" id="5407" level="1" /> <!-- Presentation - Crystalline Golem 1 -->
 			<skill name="d_skill2" id="5408" level="1" /> <!-- Presentation - Crystalline Golem 2 -->
@@ -261,8 +255,7 @@
 			<height normal="47" />
 		</collision>
 	</npc>
-	<npc id="29106" level="83" type="Npc">
-		<!-- Confirmed CT2.5 -->
+	<npc id="29106" level="83" type="Npc" name="">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -296,8 +289,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="29107" level="83" type="Npc">
-		<!-- Confirmed CT2.5 -->
+	<npc id="29107" level="83" type="Npc" name="">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -331,8 +323,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="29108" level="83" type="Npc">
-		<!-- Confirmed CT2.5 -->
+	<npc id="29108" level="83" type="Npc" name="">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -366,8 +357,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="29109" level="83" type="Npc">
-		<!-- Confirmed CT2.5 -->
+	<npc id="29109" level="83" type="Npc" name="">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -401,8 +391,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="29110" level="83" type="Npc">
-		<!-- Confirmed CT2.5 -->
+	<npc id="29110" level="83" type="Npc" name="">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -437,7 +426,6 @@
 		</collision>
 	</npc>
 	<npc id="29111" level="83" type="Npc">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -472,7 +460,6 @@
 		</collision>
 	</npc>
 	<npc id="29112" level="83" type="Npc">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -507,7 +494,6 @@
 		</collision>
 	</npc>
 	<npc id="29113" level="83" type="Npc">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -541,8 +527,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="29114" level="83" type="Npc">
-		<!-- Confirmed CT2.5 -->
+	<npc id="29114" level="83" type="Npc" name="">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -577,7 +562,6 @@
 		</collision>
 	</npc>
 	<npc id="29115" level="83" type="Monster" name="Crystal Prison Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Aggressive_Time" value="7" />
@@ -622,7 +606,6 @@
 		</collision>
 	</npc>
 	<npc id="29116" level="83" type="Monster" name="Baylor's Treasure Chest">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -668,13 +651,13 @@
 				<item id="6713" min="4" max="10" chance="25.2576724294281" /> <!-- Sealed Major Arcana Boots Design -->
 				<item id="9458" min="1" max="1" chance="0.33322825487566" /> <!-- Dynasty Earrings - Stun Resistance -->
 				<item id="9461" min="1" max="1" chance="0.33322825487566" /> <!-- Dynasty Earrings - Poison Resistance -->
-				<item id="9464" min="1" max="1" chance="0.33322825487566" /> <!-- Dynasty Earrings - Bleed Resistance -->
+				<item id="9464" min="1" max="1" chance="0.33322825487566" /> <!-- Dynasty Earrings - Bleeding Resistance -->
 				<item id="9467" min="1" max="1" chance="0.33322825487566" /> <!-- Dynasty Earrings - Sleep Resistance -->
 				<item id="9470" min="1" max="1" chance="0.33322825487566" /> <!-- Dynasty Earrings - Paralysis Resistance -->
 				<item id="9473" min="1" max="1" chance="0.33322825487566" /> <!-- Dynasty Earrings - Hold Resistance -->
 				<item id="9476" min="1" max="1" chance="0.333230587475777" /> <!-- Dynasty Earrings - Fear Resistance -->
-				<item id="6577" min="1" max="1" chance="0.535774833664894" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
-				<item id="6578" min="1" max="1" chance="3.57182537843227" /> <!-- Blessed Scroll: Enchant Armor (S-Grade) -->
+				<item id="6577" min="1" max="1" chance="0.535774833664894" /> <!-- Blessed Scroll: Enchant Weapon (S) -->
+				<item id="6578" min="1" max="1" chance="3.57182537843227" /> <!-- Blessed Scroll: Enchant Armor (S) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -683,7 +666,6 @@
 		</collision>
 	</npc>
 	<npc id="29117" level="83" type="Monster" name="Baylor's Treasure Chest">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -724,8 +706,8 @@
 				<item id="6710" min="11" max="31" chance="28.7787776147461" /> <!-- Sealed Draconic Leather Helmet Pattern -->
 				<item id="6714" min="16" max="48" chance="18.886055211853" /> <!-- Sealed Major Arcana Circlet Pattern -->
 				<item id="10170" min="1" max="1" chance="8.44970035552979" /> <!-- Baylor's Earring -->
-				<item id="6577" min="1" max="1" chance="1.07153660611629" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
-				<item id="6578" min="1" max="1" chance="7.14356368227482" /> <!-- Blessed Scroll: Enchant Armor (S-Grade) -->
+				<item id="6577" min="1" max="1" chance="1.07153660611629" /> <!-- Blessed Scroll: Enchant Weapon (S) -->
+				<item id="6578" min="1" max="1" chance="7.14356368227482" /> <!-- Blessed Scroll: Enchant Armor (S) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -734,7 +716,6 @@
 		</collision>
 	</npc>
 	<npc id="29118" level="83" type="GrandBoss" name="Beleth">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<acquire exp="16447436" sp="1362651" raidPoints="3997" />
@@ -815,7 +796,6 @@
 		</collision>
 	</npc>
 	<npc id="29119" level="83" type="Monster" name="Beleth">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -858,7 +838,6 @@
 		</collision>
 	</npc>
 	<npc id="29120" level="80" type="Npc" name="Beleth Camera 1">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -893,7 +872,6 @@
 		</collision>
 	</npc>
 	<npc id="29121" level="80" type="Npc" name="Beleth Camera 2">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -928,7 +906,6 @@
 		</collision>
 	</npc>
 	<npc id="29122" level="80" type="Npc" name="Beleth Camera 3">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -963,7 +940,6 @@
 		</collision>
 	</npc>
 	<npc id="29123" level="80" type="Npc" name="Beleth Camera 4">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -998,7 +974,6 @@
 		</collision>
 	</npc>
 	<npc id="29124" level="80" type="Npc" name="Beleth Camera 5">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1033,7 +1008,6 @@
 		</collision>
 	</npc>
 	<npc id="29125" level="80" type="Npc" name="Beleth Camera 6">
-		<!-- Confirmed CT2.5 -->
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1068,7 +1042,6 @@
 		</collision>
 	</npc>
 	<npc id="29126" level="80" type="Npc" name="Beleth Presentation Incarnation 1">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1104,7 +1077,6 @@
 		</collision>
 	</npc>
 	<npc id="29127" level="80" type="Npc" name="Beleth Presentation Incarnation 2">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1140,7 +1112,6 @@
 		</collision>
 	</npc>
 	<npc id="29128" level="80" type="Npc" name="Beleth Presentation Elf">
-		<!-- Confirmed CT2.5 -->
 		<race>ELF</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1175,7 +1146,6 @@
 		</collision>
 	</npc>
 	<npc id="29129" level="29" type="RaidBoss" name="Lost Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="29130" count="2" respawnTime="300" weightPoint="1" /> <!-- Lost Guard -->
@@ -1229,9 +1199,9 @@
 				<item id="417" min="4" max="12" chance="6.729501122612" /> <!-- Manticore Skin Gaiters -->
 				<item id="1942" min="53" max="157" chance="14.0832081545372" /> <!-- Manticore Skin Shirt Texture -->
 				<item id="1943" min="216" max="648" chance="5.33020013940811" /> <!-- Manticore Skin Gaiters Pattern -->
-				<item id="279" min="1" max="1" chance="16.1958505237007" /> <!-- Reinforced Long Bow -->
-				<item id="2040" min="12" max="36" chance="41.9277494824028" /> <!-- Reinforced Long Bow Shaft -->
-				<item id="6576" min="3" max="9" chance="37.5803985595703" /> <!-- Blessed Scroll: Enchant Armor (D-Grade) -->
+				<item id="279" min="1" max="1" chance="16.1958505237007" /> <!-- Strengthened Long Bow -->
+				<item id="2040" min="12" max="36" chance="41.9277494824028" /> <!-- Strengthened Long Bow Shaft -->
+				<item id="6576" min="3" max="9" chance="37.5803985595703" /> <!-- Blessed Scroll: Enchant Armor (D) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -1240,7 +1210,6 @@
 		</collision>
 	</npc>
 	<npc id="29130" level="29" type="Monster" name="Lost Guard">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="72" /> <!-- rhand: Stormbringer -->
@@ -1278,7 +1247,6 @@
 		</collision>
 	</npc>
 	<npc id="29131" level="29" type="Monster" name="Lost Assistant Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="SelfRangeBuff_a" id="4214" level="2" /> <!-- BOSS Reflect Damage -->
 			<skill name="HealMagic_a" id="4780" level="2" /> <!-- BOSS Heal -->
@@ -1325,7 +1293,6 @@
 		</collision>
 	</npc>
 	<npc id="29132" level="39" type="RaidBoss" name="Lost Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="29133" count="2" respawnTime="300" weightPoint="1" /> <!-- Lost Guard -->
@@ -1384,7 +1351,7 @@
 				<item id="2060" min="24" max="72" chance="9.66362962039948" /> <!-- Stormbringer Blade -->
 				<item id="4589" min="4" max="12" chance="21.0353374594574" /> <!-- Greater Dye of STR <Str+2 Con-2> -->
 				<item id="4590" min="8" max="22" chance="11.2188833066635" /> <!-- Greater Dye of STR <Str+2 Dex-2> -->
-				<item id="6574" min="1" max="1" chance="28.8484785136642" /> <!-- Blessed Scroll: Enchant Armor (C-Grade) -->
+				<item id="6574" min="1" max="1" chance="28.8484785136642" /> <!-- Blessed Scroll: Enchant Armor (C) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -1393,7 +1360,6 @@
 		</collision>
 	</npc>
 	<npc id="29133" level="39" type="Monster" name="Lost Guard">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="16" /> <!-- rhand: Great Spear -->
@@ -1431,7 +1397,6 @@
 		</collision>
 	</npc>
 	<npc id="29134" level="39" type="Monster" name="Lost Assistant Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="SelfRangeBuff_a" id="4214" level="3" /> <!-- BOSS Reflect Damage -->
 			<skill name="HealMagic_a" id="4780" level="3" /> <!-- BOSS Heal -->
@@ -1478,7 +1443,6 @@
 		</collision>
 	</npc>
 	<npc id="29135" level="49" type="RaidBoss" name="Lost Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="29136" count="2" respawnTime="300" weightPoint="1" /> <!-- Lost Guard -->
@@ -1527,18 +1491,18 @@
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="119" min="1" max="1" chance="16.870391470623" /> <!-- Necklace of Seal -->
+				<item id="119" min="1" max="1" chance="16.870391470623" /> <!-- Necklace of Binding -->
 				<item id="855" min="1" max="1" chance="22.4938356615639" /> <!-- Nassen's Earring -->
-				<item id="886" min="6" max="16" chance="3.06733854940414" /> <!-- Ring of Seal -->
-				<item id="1920" min="140" max="420" chance="4.47788197227478" /> <!-- Necklace of Seal Chain -->
+				<item id="886" min="6" max="16" chance="3.06733854940414" /> <!-- Ring of Binding -->
+				<item id="1920" min="140" max="420" chance="4.47788197227478" /> <!-- Necklace of Binding Chain -->
 				<item id="1918" min="81" max="243" chance="9.79594106790543" /> <!-- Nassen's Earring Gemstone -->
-				<item id="2917" min="480" max="1440" chance="2.1924117237854" /> <!-- Ring of Seal Gemstone -->
+				<item id="2917" min="480" max="1440" chance="2.1924117237854" /> <!-- Ring of Binding Gemstone -->
 				<item id="286" min="1" max="1" chance="6.99656164527893" /> <!-- Eminence Bow -->
 				<item id="2121" min="12" max="36" chance="31.5949376833344" /> <!-- Eminence Bow Shaft -->
 				<item id="4607" min="5" max="15" chance="11.8748898319015" /> <!-- Greater Dye of INT <Int+3 Men-3> -->
 				<item id="4608" min="2" max="4" chance="39.5829661063385" /> <!-- Greater Dye of INT <Int+3 Wit-3> -->
 				<item id="4609" min="2" max="6" chance="29.6871822260056" /> <!-- Greater Dye of MEN <Men+3 Int-3> -->
-				<item id="6573" min="1" max="1" chance="3.5624584788208" /> <!-- Blessed Scroll: Enchant Weapon (C-Grade) -->
+				<item id="6573" min="1" max="1" chance="3.5624584788208" /> <!-- Blessed Scroll: Enchant Weapon (C) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -1547,7 +1511,6 @@
 		</collision>
 	</npc>
 	<npc id="29136" level="49" type="Monster" name="Lost Guard">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1584,7 +1547,6 @@
 		</collision>
 	</npc>
 	<npc id="29137" level="49" type="Monster" name="Lost Assistant Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="SelfRangeBuff_a" id="4214" level="4" /> <!-- BOSS Reflect Damage -->
 			<skill name="HealMagic_a" id="4780" level="4" /> <!-- BOSS Heal -->
@@ -1630,7 +1592,6 @@
 		</collision>
 	</npc>
 	<npc id="29138" level="59" type="RaidBoss" name="Lost Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="29139" count="2" respawnTime="300" weightPoint="1" /> <!-- Lost Guard -->
@@ -1696,7 +1657,7 @@
 				<item id="4616" min="5" max="15" chance="9.97403744717407" /> <!-- Greater Dye of CON <Con+4 Dex-4> -->
 				<item id="4617" min="2" max="4" chance="33.2469080764465" /> <!-- Greater Dye of DEX <Dex+4 Str-4> -->
 				<item id="4618" min="2" max="6" chance="24.9351810573349" /> <!-- Greater Dye of DEX <Dex+4 Con-4> -->
-				<item id="6572" min="1" max="1" chance="19.2832731382828" /> <!-- Blessed Scroll: Enchant Armor (B-Grade) -->
+				<item id="6572" min="1" max="1" chance="19.2832731382828" /> <!-- Blessed Scroll: Enchant Armor (B) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -1705,7 +1666,6 @@
 		</collision>
 	</npc>
 	<npc id="29139" level="59" type="Monster" name="Lost Guard">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1742,7 +1702,6 @@
 		</collision>
 	</npc>
 	<npc id="29140" level="59" type="Monster" name="Lost Assistant Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="SelfRangeBuff_a" id="4214" level="5" /> <!-- BOSS Reflect Damage -->
 			<skill name="HealMagic_a" id="4780" level="5" /> <!-- BOSS Heal -->
@@ -1788,7 +1747,6 @@
 		</collision>
 	</npc>
 	<npc id="29141" level="69" type="RaidBoss" name="Lost Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="29142" count="2" respawnTime="300" weightPoint="1" /> <!-- Lost Guard -->
@@ -1838,15 +1796,15 @@
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="5326" min="1" max="1" chance="2.18691807434082" /> <!-- Sealed Robe of Nightmare -->
+				<item id="5326" min="1" max="1" chance="2.18691807434082" /> <!-- Sealed Nightmare Robe -->
 				<item id="5329" min="1" max="1" chance="2.18691807434082" /> <!-- Sealed Majestic Robe -->
-				<item id="5487" min="4" max="12" chance="40.6413168279266" /> <!-- Sealed Robe of Nightmare Fabric -->
+				<item id="5487" min="4" max="12" chance="40.6413168279266" /> <!-- Sealed Nightmare Robe Fabric -->
 				<item id="5488" min="8" max="22" chance="21.6754445575714" /> <!-- Sealed Majestic Robe Fabric -->
 				<item id="289" min="1" max="1" chance="2.08865123649979" /> <!-- Soul Bow -->
 				<item id="5534" min="12" max="36" chance="24.7774490747795" /> <!-- Soul Bow Stave -->
-				<item id="730" min="1" max="1" chance="77.9949860438538" /> <!-- Scroll: Enchant Armor (A-Grade) -->
-				<item id="6569" min="1" max="1" chance="1.24790901963806" /> <!-- Blessed Scroll: Enchant Weapon (A-Grade) -->
-				<item id="729" min="1" max="1" chance="10.3993015917816" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
+				<item id="730" min="1" max="1" chance="77.9949860438538" /> <!-- Scroll: Enchant Armor (A) -->
+				<item id="6569" min="1" max="1" chance="1.24790901963806" /> <!-- Blessed Scroll: Enchant Weapon (A) -->
+				<item id="729" min="1" max="1" chance="10.3993015917816" /> <!-- Scroll: Enchant Weapon (A) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -1855,7 +1813,6 @@
 		</collision>
 	</npc>
 	<npc id="29142" level="69" type="Monster" name="Lost Guard">
-		<!-- Confirmed CT2.5 -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1892,7 +1849,6 @@
 		</collision>
 	</npc>
 	<npc id="29143" level="69" type="Monster" name="Lost Assistant Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="SelfRangeBuff_a" id="4214" level="6" /> <!-- BOSS Reflect Damage -->
 			<skill name="HealMagic_a" id="4780" level="6" /> <!-- BOSS Heal -->
@@ -1938,7 +1894,6 @@
 		</collision>
 	</npc>
 	<npc id="29144" level="78" type="RaidBoss" name="Lost Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="29145" count="2" respawnTime="150" weightPoint="1" /> <!-- Lost Guard -->
@@ -1995,9 +1950,9 @@
 				<item id="6707" min="12" max="36" chance="53.1611399757385" /> <!-- Sealed Draconic Leather Armor Part -->
 				<item id="7575" min="1" max="1" chance="1.80662365104675" /> <!-- Draconic Bow -->
 				<item id="7579" min="12" max="36" chance="35.1885774597931" /> <!-- Draconic Bow Shaft -->
-				<item id="959" min="1" max="1" chance="6.6759406315918" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="960" min="1" max="1" chance="66.759555412323" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				<item id="6577" min="1" max="1" chance="1.11270647073364" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
+				<item id="959" min="1" max="1" chance="6.6759406315918" /> <!-- Scroll: Enchant Weapon (S) -->
+				<item id="960" min="1" max="1" chance="66.759555412323" /> <!-- Scroll: Enchant Armor (S) -->
+				<item id="6577" min="1" max="1" chance="1.11270647073364" /> <!-- Blessed Scroll: Enchant Weapon (S) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -2006,7 +1961,6 @@
 		</collision>
 	</npc>
 	<npc id="29145" level="78" type="Monster" name="Lost Guard">
-		<!-- Confirmed CT2.5 -->
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<equipment rhand="8221" /> <!-- rhand: Monster Only (Grail Apostle Spear) -->
@@ -2046,7 +2000,6 @@
 		</collision>
 	</npc>
 	<npc id="29146" level="78" type="Monster" name="Lost Assistant Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="SelfRangeBuff_a" id="4214" level="7" /> <!-- BOSS Reflect Damage -->
 			<skill name="HealMagic_a" id="4780" level="7" /> <!-- BOSS Heal -->
@@ -2095,7 +2048,6 @@
 		</collision>
 	</npc>
 	<npc id="29147" level="81" type="RaidBoss" name="Lost Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="29148" count="2" respawnTime="150" weightPoint="1" /> <!-- Lost Guard -->
@@ -2156,9 +2108,9 @@
 				<item id="6714" min="16" max="48" chance="31.0539721856232" /> <!-- Sealed Major Arcana Circlet Pattern -->
 				<item id="6371" min="1" max="1" chance="1.71915758784485" /> <!-- Demon Splinter -->
 				<item id="6695" min="12" max="36" chance="32.4786420947723" /> <!-- Demon Splinter Blade -->
-				<item id="959" min="1" max="1" chance="6.3527295958252" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="960" min="1" max="1" chance="63.5274378362579" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				<item id="6577" min="1" max="1" chance="1.05883555863953" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
+				<item id="959" min="1" max="1" chance="6.3527295958252" /> <!-- Scroll: Enchant Weapon (S) -->
+				<item id="960" min="1" max="1" chance="63.5274378362579" /> <!-- Scroll: Enchant Armor (S) -->
+				<item id="6577" min="1" max="1" chance="1.05883555863953" /> <!-- Blessed Scroll: Enchant Weapon (S) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -2167,7 +2119,6 @@
 		</collision>
 	</npc>
 	<npc id="29148" level="81" type="Monster" name="Lost Guard">
-		<!-- Confirmed CT2.5 -->
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -2205,7 +2156,6 @@
 		</collision>
 	</npc>
 	<npc id="29149" level="81" type="Monster" name="Lost Assistant Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="SelfRangeBuff_a" id="4214" level="8" /> <!-- BOSS Reflect Damage -->
 			<skill name="HealMagic_a" id="4780" level="8" /> <!-- BOSS Heal -->
@@ -2252,7 +2202,6 @@
 		</collision>
 	</npc>
 	<npc id="29150" level="82" type="GrandBoss" name="Ekimus" title="Lord of Immortality">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill_HPBuff" id="5916" level="1" /> <!-- Cruising Aura -->
 		</parameters>
@@ -2345,7 +2294,6 @@
 		</collision>
 	</npc>
 	<npc id="29151" level="82" type="Monster" name="Feral Hound of the Netherworld">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="tide" value="1" />
 		</parameters>
@@ -2390,7 +2338,6 @@
 		</collision>
 	</npc>
 	<npc id="29152" level="82" type="Monster" name="Feral Hound of the Netherworld">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="tide" value="3" />
 		</parameters>
@@ -2434,7 +2381,6 @@
 		</collision>
 	</npc>
 	<npc id="29153" level="73" type="Npc">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -2469,7 +2415,6 @@
 		</collision>
 	</npc>
 	<npc id="29154" level="73" type="Npc">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -2504,7 +2449,6 @@
 		</collision>
 	</npc>
 	<npc id="29155" level="73" type="Npc">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -2539,7 +2483,6 @@
 		</collision>
 	</npc>
 	<npc id="29156" level="73" type="Npc">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -2574,7 +2517,6 @@
 		</collision>
 	</npc>
 	<npc id="29157" level="73" type="Npc">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -2609,7 +2551,6 @@
 		</collision>
 	</npc>
 	<npc id="29158" level="73" type="Npc">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -2644,7 +2585,6 @@
 		</collision>
 	</npc>
 	<npc id="29159" level="73" type="Npc">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -2679,7 +2619,6 @@
 		</collision>
 	</npc>
 	<npc id="29160" level="73" type="Npc">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -2714,7 +2653,6 @@
 		</collision>
 	</npc>
 	<npc id="29161" level="73" type="Npc" name="Pre-Awakened Ekimus">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -2749,7 +2687,6 @@
 		</collision>
 	</npc>
 	<npc id="29162" level="82" type="Monster" name="Soldiers of Bravery" title="Tiat's Bodyguards">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
 			<param name="Skill01_Prob" value="3333" />
@@ -2802,7 +2739,6 @@
 		</collision>
 	</npc>
 	<npc id="29163" level="82" type="GrandBoss" name="Tiat" title="Witch of the Dragon of Darkness">
-		<!-- Confirmed CT2.5 -->
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
 		<acquire raidPoints="3975" />
@@ -2882,7 +2818,6 @@
 		</collision>
 	</npc>
 	<npc id="29164" level="73" type="Npc">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -2917,7 +2852,6 @@
 		</collision>
 	</npc>
 	<npc id="29165" level="73" type="Npc">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -2952,7 +2886,6 @@
 		</collision>
 	</npc>
 	<npc id="29166" level="73" type="Npc">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -2987,7 +2920,6 @@
 		</collision>
 	</npc>
 	<npc id="29167" level="73" type="Npc">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3022,7 +2954,6 @@
 		</collision>
 	</npc>
 	<npc id="29168" level="73" type="Npc">
-		<!-- Confirmed CT2.5 -->
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3060,7 +2991,6 @@
 		</collision>
 	</npc>
 	<npc id="29169" level="73" type="Monster">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3095,7 +3025,6 @@
 		</collision>
 	</npc>
 	<npc id="29170" level="73" type="Npc">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3130,7 +3059,6 @@
 		</collision>
 	</npc>
 	<npc id="29171" level="73" type="Npc">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3165,7 +3093,6 @@
 		</collision>
 	</npc>
 	<npc id="29172" level="73" type="Npc">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3200,7 +3127,6 @@
 		</collision>
 	</npc>
 	<npc id="29173" level="73" type="Npc" name="Tiat Priest">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3235,7 +3161,6 @@
 		</collision>
 	</npc>
 	<npc id="29174" level="73" type="Npc" name="Tiat Priest">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3270,7 +3195,6 @@
 		</collision>
 	</npc>
 	<npc id="29175" level="82" type="GrandBoss" name="Tiat" title="Witch of the Dragon of Darkness">
-		<!-- Confirmed CT2.5 -->
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
 		<acquire exp="11480334" sp="4460470.034" raidPoints="3975" />
@@ -3326,7 +3250,7 @@
 				<item id="6709" min="28" max="82" chance="14.6656936489677" /> <!-- Sealed Draconic Leather Boots Design -->
 				<item id="6712" min="36" max="108" chance="11.2029316139488" /> <!-- Sealed Major Arcana Gloves fabric -->
 				<item id="6713" min="46" max="136" chance="8.86391393551254" /> <!-- Sealed Major Arcana Boots Design -->
-				<item id="6578" min="1" max="1" chance="9.79174767881775" /> <!-- Blessed Scroll: Enchant Armor (S-Grade) -->
+				<item id="6578" min="1" max="1" chance="9.79174767881775" /> <!-- Blessed Scroll: Enchant Armor (S) -->
 				<item id="3936" min="1" max="3" chance="55.0787509784088" /> <!-- Blessed Scroll of Resurrection -->
 			</drop>
 		</dropLists>
@@ -3336,7 +3260,6 @@
 		</collision>
 	</npc>
 	<npc id="29176" level="60" type="GrandBoss" name="Zaken">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="4154684" sp="587466.813342582" raidPoints="572" />
@@ -3377,837 +3300,17 @@
 				<item id="150" min="1" max="1" chance="2.12338189601135" /> <!-- Elemental Sword -->
 				<item id="5548" min="24" max="72" chance="10.6089543626289" /> <!-- Tallum Blade Edge -->
 				<item id="5547" min="8" max="22" chance="33.9486832430534" /> <!-- Elemental Sword Edge -->
-				<item id="729" min="1" max="1" chance="8.62337844545746" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
-				<item id="730" min="1" max="1" chance="64.6755241751862" /> <!-- Scroll: Enchant Armor (A-Grade) -->
-				<item id="6569" min="1" max="1" chance="1.03479946675873" /> <!-- Blessed Scroll: Enchant Weapon (A-Grade) -->
-				<item id="6659" min="1" max="1" chance="0.0900000035762787" /> <!-- Earring of Zaken -->
+				<item id="729" min="1" max="1" chance="8.62337844545746" /> <!-- Scroll: Enchant Weapon (A) -->
+				<item id="730" min="1" max="1" chance="64.6755241751862" /> <!-- Scroll: Enchant Armor (A) -->
+				<item id="6569" min="1" max="1" chance="1.03479946675873" /> <!-- Blessed Scroll: Enchant Weapon (A) -->
+				<item id="6659" min="1" max="1" chance="0.0900000035762787" /> <!-- Zaken's Earring -->
 				<item id="8922" min="1" max="1" chance="0.0900000035762787" /> <!-- Pirate Hat -->
-				<item id="8619" min="1" max="1" chance="0.180000007152557" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
+				<item id="8619" min="1" max="1" chance="0.180000007152557" /> <!-- Ancient Book - Divine Inspiration (Original Language Version) -->
 			</drop>
 		</dropLists>
 		<collision>
 			<radius normal="16" />
 			<height normal="32" />
-		</collision>
-	</npc>
-	<npc id="29177" level="85" type="GrandBoss" name="Freya" title="Ice Queen">
-		<!-- Confirmed CT2.5 -->
-		<race>HUMANOID</race>
-		<sex>FEMALE</sex>
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="1989104.85860933" hpRegen="556.482123682282" mp="184680.0" mpRegen="300" />
-			<attack physical="8184.13933986331" magical="2579.001338104" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1085.36442" magical="529.48" />
-			<attribute>
-				<attack type="WATER" value="370" />
-				<defence fire="250" water="370" wind="300" earth="300" holy="300" dark="300" default="300" />
-			</attribute>
-			<speed>
-				<walk ground="45" />
-				<run ground="150" />
-			</speed>
-		</stats>
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5463" level="1" /> <!-- Water Attacks -->
-			<skill id="6644" level="1" /> <!-- Ice Queen Freya -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clanList>
-				<clan>FREYA</clan>
-			</clanList>
-		</ai>
-		<collision>
-			<radius normal="50" />
-			<height normal="98.5" />
-		</collision>
-	</npc>
-	<npc id="29178" level="85" type="GrandBoss" name="Freya" title="Ice Queen">
-		<!-- Confirmed CT2.5 -->
-		<race>HUMANOID</race>
-		<sex>FEMALE</sex>
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="1989104.85860933" hpRegen="556.482123682282" mp="184680.0" mpRegen="300" />
-			<attack physical="8184.13933986331" magical="2579.001338104" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1085.36442" magical="529.48" />
-			<attribute>
-				<attack type="WATER" value="370" />
-				<defence fire="250" water="370" wind="300" earth="300" holy="300" dark="300" default="300" />
-			</attribute>
-			<speed>
-				<walk ground="45" />
-				<run ground="150" />
-			</speed>
-		</stats>
-		<status targetable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5463" level="1" /> <!-- Water Attacks -->
-			<skill id="6644" level="1" /> <!-- Ice Queen Freya -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clanList>
-				<clan>FREYA</clan>
-			</clanList>
-		</ai>
-		<collision>
-			<radius normal="50" />
-			<height normal="98.5" />
-		</collision>
-	</npc>
-	<npc id="29179" level="85" type="GrandBoss" name="Freya" title="Ice Queen">
-		<!-- Confirmed CT2.5 -->
-		<race>HUMANOID</race>
-		<sex>FEMALE</sex>
-		<acquire exp="51569936" sp="6164678.02046629" raidPoints="11965" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="2662001.19529538" hpRegen="612.13033605051" mp="184680.0" mpRegen="300" />
-			<attack physical="9002.55327384964" magical="3120.59161910585" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1193.900862" magical="582.428" />
-			<attribute>
-				<attack type="WATER" value="370" />
-				<defence fire="250" water="370" wind="300" earth="300" holy="300" dark="300" default="300" />
-			</attribute>
-			<speed>
-				<walk ground="54" />
-				<run ground="180" />
-			</speed>
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5463" level="1" /> <!-- Water Attacks -->
-			<skill id="6644" level="1" /> <!-- Ice Queen Freya -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clanList>
-				<clan>FREYA</clan>
-			</clanList>
-		</ai>
-		<dropLists>
-			<drop>
-				<item id="15560" min="1" max="1" chance="1.365" /> <!-- Vigwik Axe -->
-				<item id="15561" min="1" max="1" chance="1.3635" /> <!-- Devilish Maul -->
-				<item id="15562" min="1" max="1" chance="1.3635" /> <!-- Feather Eye Blade -->
-				<item id="15563" min="1" max="1" chance="1.3635" /> <!-- Octo Claw -->
-				<item id="15564" min="1" max="1" chance="1.3635" /> <!-- Doubletop Spear -->
-				<item id="15565" min="1" max="1" chance="1.3635" /> <!-- Rising Star -->
-				<item id="15566" min="1" max="1" chance="1.3635" /> <!-- Black Visage -->
-				<item id="15567" min="1" max="1" chance="1.3635" /> <!-- Veniplant Sword -->
-				<item id="15568" min="1" max="1" chance="1.3635" /> <!-- Skull Carnium Bow -->
-				<item id="15558" min="1" max="1" chance="1.3635" /> <!-- Periel Sword -->
-				<item id="15559" min="1" max="1" chance="1.3635" /> <!-- Skull Edge -->
-				<item id="13143" min="1" max="1" chance="4.55" /> <!-- Sealed Vesper Helmet -->
-				<item id="13144" min="1" max="1" chance="4.545" /> <!-- Sealed Vesper Leather Helmet -->
-				<item id="13145" min="1" max="1" chance="4.545" /> <!-- Sealed Vesper Circlet -->
-				<item id="14109" min="1" max="1" chance="4.545" /> <!-- Sealed Vesper Gauntlet -->
-				<item id="14113" min="1" max="1" chance="4.545" /> <!-- Sealed Vesper Leather Gloves -->
-				<item id="14116" min="1" max="1" chance="4.545" /> <!-- Sealed Vesper Gloves -->
-				<item id="14110" min="1" max="1" chance="4.545" /> <!-- Sealed Vesper Boots -->
-				<item id="14114" min="1" max="1" chance="4.545" /> <!-- Sealed Vesper Leather Boots -->
-				<item id="14117" min="1" max="1" chance="4.545" /> <!-- Sealed Vesper Shoes -->
-				<item id="14111" min="1" max="1" chance="4.545" /> <!-- Sealed Vesper Shield -->
-				<item id="13887" min="1" max="1" chance="4.545" /> <!-- Sealed Vesper Sigil -->
-				<item id="14105" min="1" max="1" chance="8.35" /> <!-- Sealed Vesper Breastplate -->
-				<item id="14106" min="1" max="1" chance="8.33" /> <!-- Sealed Vesper Leather Breastplate -->
-				<item id="14107" min="1" max="1" chance="8.33" /> <!-- Sealed Vesper Tunic -->
-				<item id="14108" min="1" max="1" chance="8.33" /> <!-- Sealed Vesper Gaiters -->
-				<item id="14112" min="1" max="1" chance="8.33" /> <!-- Sealed Vesper Leather Leggings -->
-				<item id="14115" min="1" max="1" chance="8.33" /> <!-- Sealed Vesper Stockings -->
-				<item id="14162" min="1" max="1" chance="16.7" /> <!-- Sealed Vesper Ring -->
-				<item id="14160" min="1" max="1" chance="16.65" /> <!-- Sealed Vesper Earring -->
-				<item id="14161" min="1" max="1" chance="16.65" /> <!-- Sealed Vesper Necklace -->
-				<item id="6577" min="1" max="1" chance="0.535774806" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
-				<item id="6578" min="1" max="1" chance="3.571825194" /> <!-- Blessed Scroll: Enchant Armor (S-Grade) -->
-				<item id="16164" min="2" max="4" chance="60" /> <!-- Life Stone - Level 86 -->
-				<item id="16165" min="2" max="4" chance="40" /> <!-- Mid-Grade Life Stone - Level 86 -->
-				<item id="16025" min="1" max="1" chance="25" /> <!-- Necklace of Freya -->
-				<item id="21894" min="1" max="1" chance="1.4" /> <!-- Ice Queen's Tiara -->
-				<item id="21714" min="1" max="1" chance="1.4" /> <!-- Sealed Cloak of Freya -->
-				<item id="14189" min="1" max="1" chance="3.076978941" /> <!-- Forgotten Scroll - Hurricane Armor -->
-				<item id="14202" min="1" max="1" chance="2.953018137" /> <!-- Forgotten Scroll - Maximum Sonic Focus -->
-				<item id="14194" min="1" max="1" chance="2.95097422" /> <!-- Forgotten Scroll - Blessing of Eva -->
-				<item id="14190" min="1" max="1" chance="2.932026557" /> <!-- Forgotten Scroll - Vampiric Mist -->
-				<item id="14198" min="1" max="1" chance="2.928988302" /> <!-- Forgotten Scroll - Song of Purification -->
-				<item id="14206" min="1" max="1" chance="2.92501095" /> <!-- Forgotten Scroll - Spirit of the Phantom -->
-				<item id="14197" min="1" max="1" chance="2.917001005" /> <!-- Forgotten Scroll - Seal of Limit -->
-				<item id="14199" min="1" max="1" chance="2.913023653" /> <!-- Forgotten Scroll - Dance of Berserker -->
-				<item id="14195" min="1" max="1" chance="2.910979736" /> <!-- Forgotten Scroll - Lord of Vampire -->
-				<item id="14204" min="1" max="1" chance="2.900981115" /> <!-- Forgotten Scroll - Spirit of the Cat -->
-				<item id="14200" min="1" max="1" chance="2.897003763" /> <!-- Forgotten Scroll - Summon Imperial Phoenix -->
-				<item id="14227" min="1" max="1" chance="2.888993818" /> <!-- Forgotten Scroll - Great Fury -->
-				<item id="14201" min="1" max="1" chance="2.886010804" /> <!-- Forgotten Scroll - Maximum Force Focus -->
-				<item id="14222" min="1" max="1" chance="2.877006521" /> <!-- This Forgotten Scroll can be used by Fortune Seekers level 83 and above to learn Lucky Strike. -->
-				<item id="14225" min="1" max="1" chance="2.869990914" /> <!-- Forgotten Scroll - Counter Critical -->
-				<item id="14226" min="1" max="1" chance="2.868996576" /> <!-- Forgotten Scroll - Onslaught of Pa'agrio -->
-				<item id="14223" min="1" max="1" chance="2.860986631" /> <!-- This Forgotten Scroll can be used by Doombringers level 83 and above to learn Eye for Eye. -->
-				<item id="14193" min="1" max="1" chance="2.85098801" /> <!-- Forgotten Scroll - Sublime Self Sacrifice -->
-				<item id="14205" min="1" max="1" chance="2.831985106" /> <!-- Forgotten Scroll - Spirit of the Unicorn -->
-			</drop>
-		</dropLists>
-		<collision>
-			<radius normal="22" />
-			<height normal="55" />
-		</collision>
-	</npc>
-	<npc id="29180" level="85" type="GrandBoss" name="Freya" title="Ice Queen">
-		<!-- Confirmed CT2.5 -->
-		<race>HUMANOID</race>
-		<sex>FEMALE</sex>
-		<acquire exp="108799553" sp="12524211.7184757" raidPoints="15922" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="47212840.5768211" hpRegen="18363.9100815153" mp="184680.0" mpRegen="1000" />
-			<attack physical="21208.8451812642" magical="5528.31840933477" random="30" critical="4" accuracy="7" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1589.082047322" magical="1193.8" evasion="11" />
-			<attribute>
-				<attack type="WATER" value="370" />
-				<defence fire="250" water="370" wind="300" earth="300" holy="300" dark="300" default="300" />
-			</attribute>
-			<speed>
-				<walk ground="54" />
-				<run ground="180" />
-			</speed>
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5463" level="1" /> <!-- Water Attacks -->
-			<skill id="6644" level="1" /> <!-- Ice Queen Freya -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clanList>
-				<clan>FREYA</clan>
-			</clanList>
-		</ai>
-		<dropLists>
-			<drop>
-				<item id="15560" min="1" max="1" chance="2.73" /> <!-- Vigwik Axe -->
-				<item id="15561" min="1" max="1" chance="2.727" /> <!-- Devilish Maul -->
-				<item id="15562" min="1" max="1" chance="2.727" /> <!-- Feather Eye Blade -->
-				<item id="15563" min="1" max="1" chance="2.727" /> <!-- Octo Claw -->
-				<item id="15564" min="1" max="1" chance="2.727" /> <!-- Doubletop Spear -->
-				<item id="15565" min="1" max="1" chance="2.727" /> <!-- Rising Star -->
-				<item id="15566" min="1" max="1" chance="2.727" /> <!-- Black Visage -->
-				<item id="15567" min="1" max="1" chance="2.727" /> <!-- Veniplant Sword -->
-				<item id="15568" min="1" max="1" chance="2.727" /> <!-- Skull Carnium Bow -->
-				<item id="15558" min="1" max="1" chance="2.727" /> <!-- Periel Sword -->
-				<item id="15559" min="1" max="1" chance="2.727" /> <!-- Skull Edge -->
-				<item id="15726" min="1" max="1" chance="4.55" /> <!-- Sealed Elegia Helmet -->
-				<item id="15727" min="1" max="1" chance="4.545" /> <!-- Sealed Elegia Leather Helmet -->
-				<item id="15728" min="1" max="1" chance="4.545" /> <!-- Sealed Elegia Circlet -->
-				<item id="15735" min="1" max="1" chance="4.545" /> <!-- Sealed Elegia Gauntlet -->
-				<item id="15736" min="1" max="1" chance="4.545" /> <!-- Sealed Elegia Leather Gloves -->
-				<item id="15737" min="1" max="1" chance="4.545" /> <!-- Sealed Elegia Gloves -->
-				<item id="15738" min="1" max="1" chance="4.545" /> <!-- Sealed Elegia Boots -->
-				<item id="15739" min="1" max="1" chance="4.545" /> <!-- Sealed Elegia Leather Boots -->
-				<item id="15740" min="1" max="1" chance="4.545" /> <!-- Sealed Elegia Shoes -->
-				<item id="15741" min="1" max="1" chance="4.545" /> <!-- Sealed Elegia Shield -->
-				<item id="15742" min="1" max="1" chance="4.545" /> <!-- Sealed Elegia Sigil -->
-				<item id="15729" min="1" max="1" chance="8.35" /> <!-- Sealed Elegia Breastplate -->
-				<item id="15730" min="1" max="1" chance="8.33" /> <!-- Sealed Elegia Leather Breastplate -->
-				<item id="15731" min="1" max="1" chance="8.33" /> <!-- Sealed Elegia Tunic -->
-				<item id="15732" min="1" max="1" chance="8.33" /> <!-- Sealed Elegia Gaiter -->
-				<item id="15733" min="1" max="1" chance="8.33" /> <!-- Sealed Elegia Leather Legging -->
-				<item id="15734" min="1" max="1" chance="8.33" /> <!-- Sealed Elegia Stockings -->
-				<item id="15760" min="1" max="1" chance="16.7" /> <!-- Sealed Elegia Ring -->
-				<item id="15761" min="1" max="1" chance="16.65" /> <!-- Sealed Elegia Earring -->
-				<item id="15762" min="1" max="1" chance="16.65" /> <!-- Sealed Elegia Necklace -->
-				<item id="6577" min="1" max="1" chance="0.535774833664894" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
-				<item id="6578" min="1" max="1" chance="3.57182537843227" /> <!-- Blessed Scroll: Enchant Armor (S-Grade) -->
-				<item id="16026" min="1" max="1" chance="30" /> <!-- Blessed Necklace of Freya -->
-				<item id="16027" min="1" max="1" chance="50" /> <!-- Bottle of Freya's Soul -->
-			</drop>
-		</dropLists>
-		<collision>
-			<radius normal="22" />
-			<height normal="55" />
-		</collision>
-	</npc>
-	<npc id="29181" level="83" type="GrandBoss" name="Zaken">
-		<!-- Confirmed CT2.5 -->
-		<race>UNDEAD</race>
-		<sex>MALE</sex>
-		<acquire exp="15282888" sp="2051807" raidPoints="1795" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="3155900.34672804" hpRegen="818.275841116973" mp="177740.0" mpRegen="300" />
-			<attack physical="8022.87946266377" magical="2559.9693577641" random="30" critical="4" accuracy="7" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1061.58432" magical="517.88" evasion="-18" />
-			<attribute>
-				<attack type="DARK" value="370" />
-				<defence fire="300" water="300" wind="300" earth="300" holy="250" dark="370" default="300" />
-			</attribute>
-			<speed>
-				<walk ground="42" />
-				<run ground="190" />
-			</speed>
-			<hitTime>590</hitTime>
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="5467" level="1" /> <!-- Dark Attacks -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false" />
-		<dropLists>
-			<drop>
-				<item id="13143" min="1" max="1" chance="1.776" /> <!-- Sealed Vesper Helmet -->
-				<item id="13144" min="1" max="1" chance="1.764" /> <!-- Sealed Vesper Leather Helmet -->
-				<item id="13145" min="1" max="1" chance="1.764" /> <!-- Sealed Vesper Circlet -->
-				<item id="14109" min="1" max="1" chance="1.764" /> <!-- Sealed Vesper Gauntlet -->
-				<item id="14113" min="1" max="1" chance="1.764" /> <!-- Sealed Vesper Leather Gloves -->
-				<item id="14116" min="1" max="1" chance="1.764" /> <!-- Sealed Vesper Gloves -->
-				<item id="14110" min="1" max="1" chance="1.764" /> <!-- Sealed Vesper Boots -->
-				<item id="14114" min="1" max="1" chance="1.764" /> <!-- Sealed Vesper Leather Boots -->
-				<item id="14117" min="1" max="1" chance="1.764" /> <!-- Sealed Vesper Shoes -->
-				<item id="14111" min="1" max="1" chance="1.764" /> <!-- Sealed Vesper Shield -->
-				<item id="13887" min="1" max="1" chance="1.764" /> <!-- Sealed Vesper Sigil -->
-				<item id="14105" min="1" max="1" chance="1.764" /> <!-- Sealed Vesper Breastplate -->
-				<item id="14106" min="1" max="1" chance="1.764" /> <!-- Sealed Vesper Leather Breastplate -->
-				<item id="14107" min="1" max="1" chance="1.764" /> <!-- Sealed Vesper Tunic -->
-				<item id="14108" min="1" max="1" chance="1.764" /> <!-- Sealed Vesper Gaiters -->
-				<item id="14112" min="1" max="1" chance="1.764" /> <!-- Sealed Vesper Leather Leggings -->
-				<item id="14115" min="1" max="1" chance="1.764" /> <!-- Sealed Vesper Stockings -->
-				<item id="15694" min="1" max="1" chance="4.144" /> <!-- Sealed Moirai Helmet -->
-				<item id="15695" min="1" max="1" chance="4.116" /> <!-- Sealed Moirai Leather Helmet -->
-				<item id="15696" min="1" max="1" chance="4.116" /> <!-- Sealed Moirai Circlet -->
-				<item id="15703" min="1" max="1" chance="4.116" /> <!-- Sealed Moirai Gauntlet -->
-				<item id="15704" min="1" max="1" chance="4.116" /> <!-- Sealed Moirai Leather Gloves -->
-				<item id="15705" min="1" max="1" chance="4.116" /> <!-- Sealed Moirai Gloves -->
-				<item id="15706" min="1" max="1" chance="4.116" /> <!-- Sealed Moirai Boots -->
-				<item id="15707" min="1" max="1" chance="4.116" /> <!-- Sealed Moirai Leather Boots -->
-				<item id="15708" min="1" max="1" chance="4.116" /> <!-- Sealed Moirai Shoes -->
-				<item id="15710" min="1" max="1" chance="4.116" /> <!-- Sealed Moirai Shield -->
-				<item id="15709" min="1" max="1" chance="4.116" /> <!-- Sealed Moirai Sigil -->
-				<item id="15697" min="1" max="1" chance="4.116" /> <!-- Sealed Moirai Breastplate -->
-				<item id="15698" min="1" max="1" chance="4.116" /> <!-- Sealed Moirai Leather Breastplate -->
-				<item id="15699" min="1" max="1" chance="4.116" /> <!-- Sealed Moirai Tunic -->
-				<item id="15700" min="1" max="1" chance="4.116" /> <!-- Sealed Moirai Gaiter -->
-				<item id="15701" min="1" max="1" chance="4.116" /> <!-- Sealed Moirai Leather Legging -->
-				<item id="15702" min="1" max="1" chance="4.116" /> <!-- Sealed Moirai Stockings -->
-				<item id="14162" min="1" max="1" chance="16.7" /> <!-- Sealed Vesper Ring -->
-				<item id="14160" min="1" max="1" chance="16.65" /> <!-- Sealed Vesper Earring -->
-				<item id="14161" min="1" max="1" chance="16.65" /> <!-- Sealed Vesper Necklace -->
-				<item id="1538" min="1" max="30" chance="100" /> <!-- Blessed Scroll of Escape -->
-				<item id="3936" min="1" max="10" chance="100" /> <!-- Blessed Scroll of Resurrection -->
-				<item id="57" min="9000000" max="1100000" chance="100" /> <!-- Adena -->
-				<item id="16162" min="2" max="4" chance="60" /> <!-- High-Grade Life Stone - Level 85 -->
-				<item id="16166" min="2" max="4" chance="40" /> <!-- High-Grade Life Stone - Level 86 -->
-				<item id="21712" min="1" max="1" chance="0.09" /> <!-- Blessed Earring of Zaken -->
-				<item id="21935" min="1" max="1" chance="0.1" /> <!-- Butcher Blades -->
-				<item id="21713" min="1" max="1" chance="2.893" /> <!-- Sealed Cloak of Zaken -->
-				<item id="21892" min="1" max="1" chance="3" /> <!-- Pirate King Hat -->
-				<item id="14170" min="1" max="1" chance="3.018977696" /> <!-- Forgotten Scroll - Seed of Revenge -->
-				<item id="14177" min="1" max="1" chance="2.947010168" /> <!-- Forgotten Scroll - Ghost Walking -->
-				<item id="14181" min="1" max="1" chance="2.93697548" /> <!-- Forgotten Scroll - Dread Pool -->
-				<item id="14179" min="1" max="1" chance="2.931017384" /> <!-- Forgotten Scroll - Arrow Rain -->
-				<item id="14175" min="1" max="1" chance="2.931017384" /> <!-- Forgotten Scroll - Exciting Adventure -->
-				<item id="14176" min="1" max="1" chance="2.928979088" /> <!-- Forgotten Scroll - Wind Riding -->
-				<item id="14182" min="1" max="1" chance="2.928979088" /> <!-- Forgotten Scroll - Force of Destruction -->
-				<item id="14178" min="1" max="1" chance="2.91998968" /> <!-- Forgotten Scroll - Flame Hawk -->
-				<item id="14173" min="1" max="1" chance="2.918996664" /> <!-- Forgotten Scroll - Eva's Will / Touch of Eva -->
-				<item id="14174" min="1" max="1" chance="2.917010632" /> <!-- Forgotten Scroll - Pain of Shillien -->
-				<item id="14172" min="1" max="1" chance="2.908021224" /> <!-- Forgotten Scroll - Spirit of Phoenix -->
-				<item id="14184" min="1" max="1" chance="2.893021456" /> <!-- Forgotten Scroll - Golem Armor -->
-				<item id="14183" min="1" max="1" chance="2.881993752" /> <!-- Forgotten Scroll - Demolition Impact -->
-				<item id="14186" min="1" max="1" chance="2.860983624" /> <!-- Forgotten Scroll - Lightning Shock -->
-				<item id="14187" min="1" max="1" chance="2.841018776" /> <!-- Forgotten Scroll - Flame Armor -->
-				<item id="14188" min="1" max="1" chance="2.836001432" /> <!-- Forgotten Scroll - Frost Armor -->
-				<item id="14185" min="1" max="1" chance="2.835008416" /> <!-- Forgotten Scroll - Wild Shot -->
-				<item id="14171" min="1" max="1" chance="2.828998056" /> <!-- Forgotten Scroll - Hell Scream -->
-			</drop>
-		</dropLists>
-		<collision>
-			<radius normal="16" />
-			<height normal="32" />
-		</collision>
-	</npc>
-	<npc id="29182" level="81" type="Monster" name="Doll Blader">
-		<!-- Confirmed CT2.5 -->
-		<race>DEMONIC</race>
-		<sex>MALE</sex>
-		<equipment rhand="5129" /> <!-- rhand: Doll Knife -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="3461.77253215841" hpRegen="8.5" mp="1708.8" mpRegen="3" />
-			<attack physical="1012.32268463427" magical="691.285164307598" random="30" critical="4" accuracy="5" attackSpeed="253" type="DUAL" range="40" distance="80" width="120" />
-			<defence physical="345.61127" magical="252.90333" />
-			<attribute>
-				<attack type="DARK" value="200" />
-				<defence fire="170" water="170" wind="170" earth="170" holy="150" dark="200" default="170" />
-			</attribute>
-			<speed>
-				<walk ground="22" />
-				<run ground="150" />
-			</speed>
-			<hitTime>500</hitTime>
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
-			<skill id="4085" level="1" /> <!-- Critical Damage -->
-			<skill id="4086" level="1" /> <!-- Critical Chance -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="19" /> <!-- Dual-Sword Weapons -->
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="5467" level="1" /> <!-- Dark Attacks -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
-		<collision>
-			<radius normal="6" />
-			<height normal="12" />
-		</collision>
-	</npc>
-	<npc id="29183" level="82" type="Monster" name="Veil Master">
-		<!-- Confirmed CT2.5 -->
-		<race>DEMONIC</race>
-		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="3643.38976668326" hpRegen="8.5" mp="1743.0" mpRegen="3" />
-			<attack physical="1055.28566004965" magical="720.623302603812" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
-			<defence physical="349.77477" magical="255.95" />
-			<attribute>
-				<attack type="DARK" value="170" />
-				<defence fire="150" water="150" wind="150" earth="150" holy="110" dark="170" default="120" />
-			</attribute>
-			<speed>
-				<walk ground="70" />
-				<run ground="155" />
-			</speed>
-			<hitTime>740</hitTime>
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
-			<skill id="4085" level="1" /> <!-- Critical Damage -->
-			<skill id="4086" level="1" /> <!-- Critical Chance -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="5467" level="1" /> <!-- Dark Attacks -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
-		<collision>
-			<radius normal="12" />
-			<height normal="40" />
-		</collision>
-	</npc>
-	<npc id="29184" level="83" type="Monster" name="Pirate Zombie Captain">
-		<!-- Confirmed CT2.5 -->
-		<parameters>
-			<param name="IsAggressive" value="1" />
-			<skill name="Skill01_ID" id="5708" level="2" /> <!-- Water Cannon -->
-			<skill name="Skill02_ID" id="5709" level="2" /> <!-- Whirlpool -->
-			<skill name="Skill03_ID" id="5710" level="2" /> <!-- Triple Sword -->
-		</parameters>
-		<race>DRAGON</race>
-		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="3835.59060587002" hpRegen="8.5" mp="1777.4" mpRegen="3" />
-			<attack physical="1099.42361669366" magical="750.763809564873" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="353.86144" magical="258.94045" />
-			<attribute>
-				<attack type="DARK" value="150" />
-				<defence fire="130" water="130" wind="130" earth="130" holy="90" dark="150" default="100" />
-			</attribute>
-			<speed>
-				<walk ground="25.5" />
-				<run ground="140" />
-			</speed>
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="10" /> <!-- Dragons -->
-			<skill id="5467" level="1" /> <!-- Dark Attacks -->
-			<skill id="5708" level="2" /> <!-- Water Cannon -->
-			<skill id="5709" level="2" /> <!-- Whirlpool -->
-			<skill id="5710" level="2" /> <!-- Triple Sword -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
-		<collision>
-			<radius normal="24" />
-			<height normal="37" />
-		</collision>
-	</npc>
-	<npc id="29185" level="81" type="Monster" name="Pirate Zombie">
-		<!-- Confirmed CT2.5 -->
-		<race>UNDEAD</race>
-		<sex>MALE</sex>
-		<equipment rhand="225" /> <!-- rhand: Mithril Dagger -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="3461.77253215841" hpRegen="8.5" mp="1708.8" mpRegen="3" />
-			<attack physical="1012.32268463427" magical="691.285164307598" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="345.61127" magical="252.90333" />
-			<attribute>
-				<attack type="DARK" value="250" />
-				<defence fire="200" water="200" wind="200" earth="200" holy="150" dark="250" default="200" />
-			</attribute>
-			<speed>
-				<walk ground="11" />
-				<run ground="140" />
-			</speed>
-			<hitTime>740</hitTime>
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="5467" level="1" /> <!-- Dark Attacks -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
-		<collision>
-			<radius normal="10" />
-			<height normal="23" />
-		</collision>
-	</npc>
-	<npc id="29186" level="85" type="GrandBoss" name="Baylor" title="Warden">
-		<!-- Confirmed CT2.5 -->
-		<parameters>
-			<skill name="selfbuff1" id="5221" level="1" /> <!-- Balor - Physical Close Range Weak Point -->
-			<skill name="selfbuff2" id="5222" level="1" /> <!-- Balor - Physical Long Range Weak Point -->
-			<skill name="selfbuff3" id="5223" level="1" /> <!-- Balor - Magic Weak Point -->
-			<skill name="selfbuff4" id="5224" level="1" /> <!-- Berserk -->
-			<skill name="selfbuff5" id="5225" level="1" /> <!-- Invincible -->
-			<skill name="PhysicalSpecial1" id="5227" level="1" /> <!-- Ground Strike -->
-			<skill name="PhysicalSpecial2" id="5228" level="1" /> <!-- Jump Attack -->
-			<skill name="PhysicalSpecial3" id="5229" level="1" /> <!-- Strong Punch -->
-			<skill name="PhysicalSpecial4" id="5226" level="1" /> <!-- Imprison -->
-			<skill name="d_skill1" id="5402" level="1" /> <!-- Presentation - Balor 2 -->
-			<skill name="d_skill2" id="5403" level="1" /> <!-- Presentation - Balor 3 -->
-			<skill name="d_skill3" id="5404" level="1" /> <!-- Presentation - Balor 4 -->
-		</parameters>
-		<race>DEMONIC</race>
-		<sex>MALE</sex>
-		<acquire exp="9930636" sp="1322209" raidPoints="1177" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="985293.229521332" hpRegen="378.673670134" mp="1955.34" mpRegen="300" />
-			<attack physical="3825.01371594665" magical="1860.88877295069" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
-			<defence physical="1654.784486487" magical="1181.91313447627" />
-			<attribute>
-				<attack type="DARK" value="370" />
-				<defence fire="300" water="300" wind="300" earth="300" holy="250" dark="370" default="300" />
-			</attribute>
-			<speed>
-				<walk ground="34" />
-				<run ground="180" />
-			</speed>
-			<hitTime>470</hitTime>
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="5221" level="1" /> <!-- Balor - Physical Close Range Weak Point -->
-			<skill id="5222" level="1" /> <!-- Balor - Physical Long Range Weak Point -->
-			<skill id="5223" level="1" /> <!-- Balor - Magic Weak Point -->
-			<skill id="5224" level="1" /> <!-- Berserk -->
-			<skill id="5225" level="1" /> <!-- Invincible -->
-			<skill id="5226" level="1" /> <!-- Imprison -->
-			<skill id="5227" level="1" /> <!-- Ground Strike -->
-			<skill id="5228" level="1" /> <!-- Jump Attack -->
-			<skill id="5229" level="1" /> <!-- Strong Punch -->
-			<skill id="5467" level="1" /> <!-- Dark Attacks -->
-			<skill id="5479" level="1" /> <!-- Boss Petrification Resistance -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
-		<dropLists>
-			<drop>
-				<item id="13143" min="1" max="1" chance="8.37" /> <!-- Sealed Vesper Helmet -->
-				<item id="13144" min="1" max="1" chance="8.33" /> <!-- Sealed Vesper Leather Helmet -->
-				<item id="13145" min="1" max="1" chance="8.33" /> <!-- Sealed Vesper Circlet -->
-				<item id="14109" min="1" max="1" chance="8.33" /> <!-- Sealed Vesper Gauntlet -->
-				<item id="14113" min="1" max="1" chance="8.33" /> <!-- Sealed Vesper Leather Gloves -->
-				<item id="14116" min="1" max="1" chance="8.33" /> <!-- Sealed Vesper Gloves -->
-				<item id="14110" min="1" max="1" chance="8.33" /> <!-- Sealed Vesper Boots -->
-				<item id="14114" min="1" max="1" chance="8.33" /> <!-- Sealed Vesper Leather Boots -->
-				<item id="14117" min="1" max="1" chance="8.33" /> <!-- Sealed Vesper Shoes -->
-				<item id="14111" min="1" max="1" chance="8.33" /> <!-- Sealed Vesper Shield -->
-				<item id="13887" min="1" max="1" chance="8.33" /> <!-- Sealed Vesper Sigil -->
-				<item id="10170" min="1" max="1" chance="8.33" /> <!-- Baylor's Earring -->
-				<item id="6577" min="1" max="1" chance="0.535774833664894" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
-				<item id="6578" min="1" max="1" chance="3.57182537843227" /> <!-- Blessed Scroll: Enchant Armor (S-Grade) -->
-			</drop>
-		</dropLists>
-		<collision>
-			<radius normal="54" />
-			<height normal="77.5" />
-		</collision>
-	</npc>
-	<npc id="29187" level="85" type="Monster" name="Crystal Prison Guard">
-		<!-- Confirmed CT2.5 -->
-		<parameters>
-			<param name="IsAggressive" value="1" />
-			<param name="Aggressive_Time" value="7" />
-			<param name="AttackRange" value="0" />
-			<skill name="Skill01_ID" id="5360" level="9" /> <!-- NPC(party) - Physical Range Close Range Attack - Dark -->
-			<skill name="Skill02_ID" id="5043" level="9" /> <!-- NPC Super Sonic Blaster -->
-			<skill name="PhysicalSpecial1" id="4032" level="9" /> <!-- NPC Strike -->
-		</parameters>
-		<race>DEMONIC</race>
-		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="18815.5731168728" hpRegen="187.367997844457" mp="1955.34" mpRegen="3" />
-			<attack physical="1834.58348056988" magical="1252.78269443248" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
-			<defence physical="602.794704" magical="441.099" />
-			<attribute>
-				<attack type="EARTH" value="300" />
-				<defence fire="220" water="220" wind="170" earth="300" holy="220" dark="220" default="220" />
-			</attribute>
-			<speed>
-				<walk ground="60" />
-				<run ground="210" />
-			</speed>
-			<hitTime>490</hitTime>
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4032" level="9" /> <!-- NPC Strike -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="5043" level="9" /> <!-- NPC Super Sonic Blaster -->
-			<skill id="5360" level="9" /> <!-- NPC(party) - Physical Range Close Range Attack - Dark -->
-			<skill id="5465" level="1" /> <!-- Earth Attacks -->
-			<skill id="5479" level="1" /> <!-- Boss Petrification Resistance -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
-		<collision>
-			<radius normal="36" />
-			<height normal="43.5" />
-		</collision>
-	</npc>
-	<npc id="29188" level="85" type="Monster" name="Crystalline Golem">
-		<!-- Confirmed CT2.5 -->
-		<race>CONSTRUCT</race>
-		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="114631.265522785" hpRegen="187.367997844457" mp="1846.8" mpRegen="3" />
-			<attack physical="983.0479" magical="671.29428" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="361.78814" magical="264.74086" />
-			<attribute>
-				<attack type="EARTH" value="300" />
-				<defence fire="220" water="220" wind="170" earth="300" holy="220" dark="220" default="220" />
-			</attribute>
-			<speed>
-				<walk ground="54" />
-				<run ground="170" />
-			</speed>
-			<hitTime>340</hitTime>
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-			<skill id="5465" level="1" /> <!-- Earth Attacks -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clanList>
-				<clan>DOOR</clan>
-			</clanList>
-		</ai>
-		<collision>
-			<radius normal="34" />
-			<height normal="47" />
-		</collision>
-	</npc>
-	<npc id="29189" level="85" type="Monster" name="Crystalline Golem">
-		<!-- Confirmed CT2.5 -->
-		<race>CONSTRUCT</race>
-		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="3046.70947" hpRegen="8.5" mp="1846.8" mpRegen="3" />
-			<attack physical="983.0479" magical="671.29428" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="361.78814" magical="264.74086" />
-			<attribute>
-				<attack type="EARTH" value="300" />
-				<defence fire="220" water="220" wind="170" earth="300" holy="220" dark="220" default="220" />
-			</attribute>
-			<speed>
-				<walk ground="54" />
-				<run ground="170" />
-			</speed>
-			<hitTime>340</hitTime>
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-			<skill id="5465" level="1" /> <!-- Earth Attacks -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clanList>
-				<clan>DOOR</clan>
-			</clanList>
-		</ai>
-		<collision>
-			<radius normal="34" />
-			<height normal="47" />
-		</collision>
-	</npc>
-	<npc id="29190" level="85" type="Monster" name="Tarask Dragon">
-		<!-- Confirmed CT2.5 -->
-		<parameters>
-			<skill name="Skill01_ID" id="5095" level="1" /> <!-- Antharas Subordinate Melee Attack -->
-			<skill name="Skill02_ID" id="5096" level="1" /> <!-- Antharas Subordinate Remote Attack -->
-		</parameters>
-		<race>DRAGON</race>
-		<sex>MALE</sex>
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="401551.696720203" hpRegen="76.71" mp="1809.0" mpRegen="3" />
-			<attack physical="3584.56902102981" magical="1386.66000087809" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1071.29474264312" magical="522.626863116263" />
-			<attribute>
-				<attack type="EARTH" value="300" />
-				<defence fire="220" water="220" wind="170" earth="300" holy="220" dark="220" default="220" />
-			</attribute>
-			<speed>
-				<walk ground="180" />
-				<run ground="180" />
-			</speed>
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="10" /> <!-- Dragons -->
-			<skill id="5095" level="1" /> <!-- Antharas Subordinate Melee Attack -->
-			<skill id="5096" level="1" /> <!-- Antharas Subordinate Remote Attack -->
-			<skill id="5465" level="1" /> <!-- Earth Attacks -->
-			<skill id="6655" level="1" /> <!-- Tarsque Carapace -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
-		<dropLists>
-			<drop>
-				<item id="8952" min="10" max="20" chance="100" /> <!-- Greater Herb of Life -->
-				<item id="8953" min="10" max="20" chance="100" /> <!-- Greater Herb of Mana -->
-			</drop>
-		</dropLists>
-		<collision>
-			<radius normal="63" />
-			<height normal="54" />
 		</collision>
 	</npc>
 </list>

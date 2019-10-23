@@ -433,7 +433,7 @@
 		</for>
 	</skill>
 	<skill id="5125" levels="1" name="Maximum Resist Status">
-		<!-- Maximizes Resistance to all debuff attacks. -->
+		<!-- Maximizes resistance to all debuff attacks. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="7" />
 		<set name="abnormalType" val="COMBINATION" />
@@ -580,7 +580,6 @@
 		</for>
 	</skill>
 	<skill id="5134" levels="1" name="Anti-Summoning Field">
-		<!-- Through distorted space and segmented time, the servitor disappears and all speeds are decreased. All buffs that increase speed also disappear. -->
 		<set name="abnormalTime" val="15" />
 		<set name="affectRange" val="200" />
 		<set name="attribute" val="5" />

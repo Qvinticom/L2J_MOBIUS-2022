@@ -16,6 +16,8 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import java.util.Calendar;
+
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.LoginServerThread;
@@ -69,14 +71,12 @@ import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import org.l2jmobius.gameserver.network.serverpackets.Die;
 import org.l2jmobius.gameserver.network.serverpackets.EtcStatusUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.ExBasicActionList;
+import org.l2jmobius.gameserver.network.serverpackets.ExBirthdayPopup;
 import org.l2jmobius.gameserver.network.serverpackets.ExGetBookMarkInfoPacket;
 import org.l2jmobius.gameserver.network.serverpackets.ExNoticePostArrived;
 import org.l2jmobius.gameserver.network.serverpackets.ExNotifyPremiumItem;
-import org.l2jmobius.gameserver.network.serverpackets.ExRotation;
-import org.l2jmobius.gameserver.network.serverpackets.ExShowContactList;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 import org.l2jmobius.gameserver.network.serverpackets.ExStorageMaxCount;
-import org.l2jmobius.gameserver.network.serverpackets.ExVoteSystemInfo;
 import org.l2jmobius.gameserver.network.serverpackets.FriendList;
 import org.l2jmobius.gameserver.network.serverpackets.HennaInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ItemList;
@@ -362,11 +362,6 @@ public class EnterWorld implements IClientIncomingPacket
 			}
 		}
 		
-		if (Config.NEVIT_ENABLED)
-		{
-			player.checkRecoBonusTask();
-		}
-		
 		player.broadcastUserInfo();
 		
 		// Send Macro List
@@ -426,7 +421,7 @@ public class EnterWorld implements IClientIncomingPacket
 		}
 		
 		player.spawnMe(player.getX(), player.getY(), player.getZ());
-		player.sendPacket(new ExRotation(player.getObjectId(), player.getHeading()));
+		// player.sendPacket(new ExRotation(player.getObjectId(), player.getHeading()));
 		
 		player.getInventory().applyItemSkills();
 		
@@ -509,11 +504,6 @@ public class EnterWorld implements IClientIncomingPacket
 		player.onPlayerEnter();
 		
 		client.sendPacket(new SkillCoolTime(player));
-		if (Config.NEVIT_ENABLED)
-		{
-			client.sendPacket(new ExVoteSystemInfo(player));
-		}
-		client.sendPacket(new ExShowContactList(player));
 		
 		for (ItemInstance i : player.getInventory().getItems())
 		{
@@ -598,8 +588,20 @@ public class EnterWorld implements IClientIncomingPacket
 		final int birthday = player.checkBirthDay();
 		if (birthday == 0)
 		{
-			player.sendPacket(SystemMessageId.HAPPY_BIRTHDAY_ALEGRIA_HAS_SENT_YOU_A_BIRTHDAY_GIFT);
-			// player.sendPacket(new ExBirthdayPopup()); Removed in H5?
+			QuestState qs = player.getQuestState("CharacterBirthday");
+			String NextBirthday = null;
+			if (qs != null)
+			{
+				NextBirthday = qs.get("Birthday");
+			}
+			
+			Calendar now = Calendar.getInstance();
+			now.setTimeInMillis(System.currentTimeMillis());
+			if ((NextBirthday == null) || (Integer.valueOf(NextBirthday) == now.get(Calendar.YEAR)))
+			{
+				player.sendPacket(SystemMessageId.HAPPY_BIRTHDAY_ALEGRIA_HAS_SENT_YOU_A_BIRTHDAY_GIFT);
+				player.sendPacket(new ExBirthdayPopup());
+			}
 		}
 		else if (birthday != -1)
 		{

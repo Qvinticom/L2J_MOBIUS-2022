@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE xml>
-<project name="L2J_Mobius_CT_2.6_HighFive" default="cleanup" basedir=".">
+<project name="L2J_Mobius_CT_2.4_Epilogue" default="cleanup" basedir=".">
 	<description>
 		This file is part of the L2J Mobius project.
 		
@@ -131,15 +131,15 @@
 	</target>
 
 	<target name="adding-core" depends="jar" description="Adding the compiled jars to the Zip file.">
-		<zip destfile="${build}/L2J_Mobius_CT_2.6_HighFive.zip" basedir="${build.dist}" level="9" />
+		<zip destfile="${build}/L2J_Mobius_CT_2.4_Epilogue.zip" basedir="${build.dist}" level="9" />
 	</target>
 
 	<target name="adding-datapack" depends="adding-core" description="Updating the Zip file with datapack content.">
-		<zip destfile="${build}/L2J_Mobius_CT_2.6_HighFive.zip" basedir="${datapack}" update="true" level="9" />
+		<zip destfile="${build}/L2J_Mobius_CT_2.4_Epilogue.zip" basedir="${datapack}" update="true" level="9" />
 	</target>
 
 	<target name="adding-readme" depends="adding-datapack" description="Adding readme.txt to the Zip file.">
-		<zip destfile="${build}/L2J_Mobius_CT_2.6_HighFive.zip" basedir="." includes="readme.txt" update="true" level="9" />
+		<zip destfile="${build}/L2J_Mobius_CT_2.4_Epilogue.zip" basedir="." includes="readme.txt" update="true" level="9" />
 	</target>
 
 	<target name="cleanup" depends="adding-readme" description="Cleaning the build folder.">

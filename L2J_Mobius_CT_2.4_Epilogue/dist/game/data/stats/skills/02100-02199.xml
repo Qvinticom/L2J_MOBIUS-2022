@@ -1111,11 +1111,11 @@
 	<skill id="2188" levels="1" name="Golden Spice">
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-150" />
-		<set name="effectRange" val="200" />
+		<set name="effectRange" val="400" /> <!-- Epilogue Modification -->
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="6643" /> <!-- Old Golden Spice -->
+		<set name="itemConsumeId" val="6643" /> <!-- Golden Spice -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="500" />
@@ -1124,11 +1124,11 @@
 	<skill id="2189" levels="1" name="Crystal Spice">
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-150" />
-		<set name="effectRange" val="200" />
+		<set name="effectRange" val="400" /> <!-- Epilogue Modification -->
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="6644" /> <!-- Old Crystal Spice -->
+		<set name="itemConsumeId" val="6644" /> <!-- Crystal Spice -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="500" />

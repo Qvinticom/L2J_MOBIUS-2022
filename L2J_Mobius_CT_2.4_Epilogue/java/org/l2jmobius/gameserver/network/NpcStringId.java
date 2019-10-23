@@ -17980,6 +17980,20 @@ public class NpcStringId
 		return _name;
 	}
 	
+	public String getText()
+	{
+		String text = "";
+		try
+		{
+			text = getClass().getField(_name).getAnnotation(ClientString.class).message();
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+		}
+		return text;
+	}
+	
 	public int getParamCount()
 	{
 		return _params;

@@ -25,7 +25,8 @@ public class SetupGauge implements IClientOutgoingPacket
 	public static final int RED = 1;
 	public static final int CYAN = 2;
 	
-	private final int _objectId;
+	@SuppressWarnings("unused")
+	private final int _objectId; // Not used on Epilogue.
 	private final int _dat1;
 	private final int _time;
 	private final int _time2;
@@ -50,7 +51,6 @@ public class SetupGauge implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.SETUP_GAUGE.writeId(packet);
-		packet.writeD(_objectId);
 		packet.writeD(_dat1);
 		packet.writeD(_time);
 		packet.writeD(_time2);

@@ -48,7 +48,6 @@ import org.l2jmobius.gameserver.model.base.ClassId;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExBrExtraUserInfo;
-import org.l2jmobius.gameserver.network.serverpackets.ExVoteSystemInfo;
 import org.l2jmobius.gameserver.network.serverpackets.GMViewItemList;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.network.serverpackets.PartySmallWindowAll;
@@ -331,10 +330,6 @@ public class AdminEditChar implements IAdminCommandHandler
 					player.broadcastUserInfo();
 					player.sendPacket(new UserInfo(player));
 					player.sendPacket(new ExBrExtraUserInfo(player));
-					if (Config.NEVIT_ENABLED)
-					{
-						player.sendPacket(new ExVoteSystemInfo(player));
-					}
 					player.sendMessage("A GM changed your Recommend points to " + recVal);
 					activeChar.sendMessage(player.getName() + "'s Recommend changed to " + recVal);
 				}

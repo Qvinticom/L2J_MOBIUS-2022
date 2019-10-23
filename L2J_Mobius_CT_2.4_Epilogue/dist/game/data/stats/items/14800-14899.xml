@@ -10,7 +10,7 @@
 		<set name="for_npc" val="true" />
 	</item>
 	<item id="14801" type="Armor" name="Gludio Guard Earring">
-		<!-- Ring given to the royal guard of Gludio territory. Stun Attack +15%, Bleed Defense +15%, Water Power Defense +10. CP +5%. Cannot be exchanged or dropped. Only one effect is applied when wearing the same two earrings. -->
+		<!-- Ring given to the royal guard of Gludio territory. Stun Attack +15%, Bleed Defense +15%, Water Power Defense +10. CP increases +5%. Cannot be exchanged or dropped. Only one effect is applied when wearing the same two earrings. -->
 		<set name="icon" val="icon.accessory_earring_of_domi_protection_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -31,7 +31,7 @@
 		</for>
 	</item>
 	<item id="14802" type="Armor" name="Dion Guard Earring">
-		<!-- Ring given to the royal guard of Dion territory. Hold Attack +15%, Resistance to Poison +15%, Resistance to Holy +10. CP +5%. Cannot be exchanged or dropped. Only one effect is applied when wearing the same two earrings. -->
+		<!-- Ring given to the royal guard of Dion territory. Hold Attack +15%, Poison Defense +15%, Divine Power Defense +10. CP increases +5%. Cannot be exchanged or dropped. Only one effect is applied when wearing the same two earrings. -->
 		<set name="icon" val="icon.accessory_earring_of_domi_protection_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -52,7 +52,7 @@
 		</for>
 	</item>
 	<item id="14803" type="Armor" name="Giran Guard Earring">
-		<!-- Ring given to the royal guard of Giran territory. Bleed Attack +15%, Paralysis Defense +15%, Wind Power Defense +10. CP +5%. Cannot be exchanged or dropped. Only one effect is applied when wearing the same two earrings. -->
+		<!-- Ring given to the royal guard of Giran territory. Bleed Attack +15%, Paralysis Defense +15%, Wind Power Defense +10. CP increases +5%. Cannot be exchanged or dropped. Only one effect is applied when wearing the same two earrings. -->
 		<set name="icon" val="icon.accessory_earring_of_domi_protection_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -73,7 +73,7 @@
 		</for>
 	</item>
 	<item id="14804" type="Armor" name="Oren Guard Earring">
-		<!-- Necklace given to the royal guard of Oren territory. Paralysis attack +15%, hold defense +15%, darkness defense +10. CP +5%. Cannot be exchanged or dropped. Only one effect is applied when wearing the same two earrings. -->
+		<!-- Necklace given to the royal guard of Oren territory. Paralysis attack +15%, hold defense +15%, darkness defense +10. CP increases +5%. Cannot be exchanged or dropped. Only one effect is applied when wearing the same two earrings. -->
 		<set name="icon" val="icon.accessory_earring_of_domi_protection_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -115,7 +115,7 @@
 		</for>
 	</item>
 	<item id="14806" type="Armor" name="Innadril Guard Earring">
-		<!-- Earring given to the royal guard of Innadril territory. Sleep Attack +15%, Stun Defense +15%, Water Power Defense +10. CP +5%. Cannot be exchanged or dropped. Only one effect is applied when wearing the same two earrings. -->
+		<!-- Earring given to the royal guard of Innadril territory. Sleep Attack +15%, Stun Defense +15%, Water Power Defense +10. CP increases +5%. Cannot be exchanged or dropped. Only one effect is applied when wearing the same two earrings. -->
 		<set name="icon" val="icon.accessory_earring_of_domi_protection_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -136,7 +136,7 @@
 		</for>
 	</item>
 	<item id="14807" type="Armor" name="Goddard Guard Earring">
-		<!-- Earring given to the royal guard of Goddard territory. Stun Attack +15%, Sleep Defense +15%, Fire Power Defense +10. CP +5%. Cannot be exchanged or dropped. Only one effect is applied when wearing the same two earrings. -->
+		<!-- Earring given to the royal guard of Goddard territory. Stun Attack +15%, Sleep Defense +15%, Fire Power Defense +10. CP increases +5%. Cannot be exchanged or dropped. Only one effect is applied when wearing the same two earrings. -->
 		<set name="icon" val="icon.accessory_earring_of_domi_protection_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -157,7 +157,7 @@
 		</for>
 	</item>
 	<item id="14808" type="Armor" name="Rune Guard Earring">
-		<!-- Earring given to the royal guard of Rune territory. Poison Attack +15%, Hold Defense +15%, Fire Power Defense +10. CP +5%. Cannot be exchanged or dropped. Only one effect is applied when wearing the same two earrings. -->
+		<!-- Earring given to the royal guard of Rune territory. Poison Attack +15%, Hold Defense +15%, Fire Power Defense +10. CP increases +5%. Cannot be exchanged or dropped. Only one effect is applied when wearing the same two earrings. -->
 		<set name="icon" val="icon.accessory_earring_of_domi_protection_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -178,7 +178,7 @@
 		</for>
 	</item>
 	<item id="14809" type="Armor" name="Schuttgart Guard Earring">
-		<!-- Necklace given to the royal guard of Schuttgart territory. Hold Attack +15%, Fear Defense +15%, Wind Power Defense +10. CP +5%. Cannot be exchanged or dropped. Only one effect is applied when wearing the same two earrings. -->
+		<!-- Necklace given to the royal guard of Schuttgart territory. Hold Attack +15%, Fear Defense +15%, Wind Power Defense +10. CP increases +5%. Cannot be exchanged or dropped. Only one effect is applied when wearing the same two earrings. -->
 		<set name="icon" val="icon.accessory_earring_of_domi_protection_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -210,7 +210,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="8331-1" /> <!-- Blue Talisman of Buff Cancel -->
+		<set name="item_skill" val="8331-1" /> <!-- Blue Talisman - Buff Cancel -->
 		<set name="duration" val="65" />
 		<set name="useSkillDisTime" val="6" />
 	</item>
@@ -226,12 +226,12 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="8332-1" /> <!-- Blue Talisman of Buff Steal -->
+		<set name="item_skill" val="8332-1" /> <!-- Blue Talisman - Buff Steal -->
 		<set name="duration" val="65" />
 		<set name="useSkillDisTime" val="6" />
 	</item>
 	<item id="14812" type="Armor" name="Red Talisman - Territory Guard">
-		<!-- When used, Max CP is greatly increased and a certain amount of CP is greatly recovered. Only one effect is applied when you wear the same two talismans. Shadow Item with no exchange/drop available -->
+		<!-- When used, the Max CP is greatly increased and a certain amount of CP is greatly recovered. Only one effect is applied when you wear the same two talismans. Shadow Item with no exchange/drop available -->
 		<set name="icon" val="icon.etc_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -242,7 +242,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="8333-1" /> <!-- Red Talisman of Territory Guard -->
+		<set name="item_skill" val="8333-1" /> <!-- Red Talisman - Territory Guard -->
 		<set name="duration" val="66" />
 		<set name="useSkillDisTime" val="6" />
 	</item>
@@ -258,12 +258,12 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="8334-1" /> <!-- Blue Talisman of Lord's Divine Protection -->
+		<set name="item_skill" val="8334-1" /> <!-- Blue Talisman - Lord's Divine Protection -->
 		<set name="duration" val="74" />
 		<set name="useSkillDisTime" val="15" />
 	</item>
 	<item id="14814" type="Armor" name="White Talisman - All Resistance">
-		<!-- Increases Resistance to all elements. Effect does not stack with additional Talismans of the same type. This item cannot be traded or dropped. -->
+		<!-- Increases resistance to all elements. Effect does not stack with additional Talismans of the same type. This item cannot be traded or dropped. -->
 		<set name="icon" val="icon.etc_talisman_i06" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -274,7 +274,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="8335-1" /> <!-- White Talisman of Attribute Resistance -->
+		<set name="item_skill" val="8335-1" /> <!-- White Talisman - Attribute Resistance -->
 		<set name="duration" val="65" />
 		<set name="useSkillDisTime" val="6" />
 	</item>
@@ -374,7 +374,7 @@
 		</cond>
 	</item>
 	<item id="14820" type="EtcItem" name="Skull Key of Suffering">
-		<!-- Key used to remove the time restriction on instance and allows you to enter the Hall of Suffering. Can only be used once a day outside the entrance to the Hall of Suffering. Cannot use multiple skull keys daily. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- Key used to remove the time restriction on instance and allows you to enter the Hall of Suffering. Can only be used once a day outside the entrace to the Hall of Suffering. Cannot use multiple skull keys daily. Cannot be exchanged or dropped.Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_skeleton_key_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="STEEL" />
@@ -388,7 +388,7 @@
 		<set name="for_npc" val="true" />
 	</item>
 	<item id="14821" type="EtcItem" name="Skull Key of Erosion">
-		<!-- Key used to remove the time restriction on instance and allows you to enter the Hall of Erosion. Can only be used once a day outside the entrance to the Hall of Erosion. Cannot use multiple skull keys daily. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- Key used to remove the time restriction on instance and allows you to enter the Hall of Erosion. Can only be used once a day outside the entrace to the Hall of Erosion. Cannot use multiple skull keys daily. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_skeleton_key_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="STEEL" />
@@ -416,7 +416,7 @@
 		<set name="for_npc" val="true" />
 	</item>
 	<item id="14823" type="EtcItem" name="Soul Extraction Device">
-		<!-- Device that can be used on a recently killed monster in the Seed of Infinity to collect additional Tears of a Freed Soul. Can be used only inside Seed of Infinity instant dungeons. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- Device that can be used on a recently killed monster in the Seed of Immortality to collect additional Tears of a Freed Soul. Can be used only inside Seed of Immortality instant dungeons. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_lantern_i00" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="material" val="STEEL" />
@@ -847,7 +847,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="14863" type="EtcItem" name="Letter to Helvetica">
-		<!-- Certificate containing Iason Heine's promise of support. Bring it to Dr. Helvetica at the Field of Silence Research Center located in the Field of Silence. -->
+		<!-- Certificate containing Iason Heine's promise of support. Bring it to Dr. Helvetica at the Field of Silence Research Center located in the Field of Slience. -->
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -871,7 +871,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="14865" type="EtcItem" name="Certificate of Support">
-		<!-- Certificate received from Dr. Helvetica of the Field of Silence Research Center. This certificate is necessary to receive an additional mission from him. -->
+		<!-- Cerfiticate received from Dr. Helvetica of the Field of Silence Research Center. This certificate is necessary to receive an additional mission from him. -->
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -895,7 +895,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="14867" type="EtcItem" name="Damaged Torch Fragment">
-		<!-- Broken piece left after the destruction of the Brazier of Purity built around the Ritual Site of Purge. Gather all and bring them to Dr. Helvetica in the Field of Silence Development Research Center. -->
+		<!-- Broken piece left after the destruction of the Brazier of Purity built around the Ritul Site of Purge. Gather all and bring them to Dr. Helvetica in the Field of Silence Development Reserach Center. -->
 		<set name="icon" val="icon.etc_charcoal_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -907,7 +907,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="14868" type="EtcItem" name="Guardian Spirit Fragment">
-		<!-- Broken piece of Guardian Spirit acquired from destroying the Magic Force Guardian Spirit and Evil Spirit in the Magic Force near the Ritual Site of Purge. Gather all and bring them to Dr. Helvetica in the Field of Silence Development Research Center. -->
+		<!-- Broken piece of Guardian Spirit acquired from destroying the Magic Force Guardian Spirit and Evil Spirit in the Magic Force near the Ritual Site of Purge. Gather all and bring them to Dr. Helvetica in the Field of Silence Development Reserach Center. -->
 		<set name="icon" val="icon.etc_crystal_ball_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1027,7 +1027,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="14878" type="EtcItem" name="Discharged Power Bead">
-		<!-- Discharged power bead that has replenished Lucien's altar as a replenished power bead. Also proof that replenishment is complete. When all replenishments are complete, take this bead as proof of the mission's completion to the Priest of the Earth Daichir in Maphr's Temple in the Dwarven Village. -->
+		<!-- Discharged power bead that has replenished Lucien's altar as a replenished power bead. Also proof that replenishment is complete. When all replenishments are complete, take this bead as proof of the misson's completion to the Priest of the Earth Daichir in Maphr's Temple in the Dwarven Village. -->
 		<set name="icon" val="icon.etc_bead_silver_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1098,7 +1098,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="14884" type="EtcItem" name="Gludio Supply Box - Magic Rune Clip - Grade S, A">
-		<!-- A box that has the symbol of Gludio. A high grade magic Rune clip that's attached to the belt can be acquired at a certain rate. -->
+		<!-- Box bearing the unique pattern of Gludio. A high grade magic Rune clip that's attached to the belt can be acquired at a certain rate. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1112,7 +1112,7 @@
 		<set name="item_skill" val="2975-1" /> <!-- Gludio supply box - magic rune clip -->
 	</item>
 	<item id="14885" type="EtcItem" name="Dion Supply Box - Magic Rune Clip - Grade S, A">
-		<!-- A box that has the symbol of Dion. A high grade magic Rune clip that's attached to the belt can be acquired at a certain rate. -->
+		<!-- Box bearing the unique pattern of Dion. A high grade magic Rune clip that's attached to the belt can be acquired at a certain rate. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1126,7 +1126,7 @@
 		<set name="item_skill" val="2976-1" /> <!-- Dion supply box - magic rune clip -->
 	</item>
 	<item id="14886" type="EtcItem" name="Giran Supply Box - Magic Rune Clip - Grade S, A">
-		<!-- A box that has the symbol of Giran. A high grade magic Rune clip that's attached to the belt can be acquired at a certain rate. -->
+		<!-- Box bearing the unique pattern of Giran. A high grade magic Rune clip that's attached to the belt can be acquired at a certain rate. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1140,7 +1140,7 @@
 		<set name="item_skill" val="2977-1" /> <!-- Giran supply box - magic rune clip -->
 	</item>
 	<item id="14887" type="EtcItem" name="Oren Supply Box - Magic Rune Clip - Grade S, A">
-		<!-- A box that has the symbol of Oren. A high grade magic Rune clip that's attached to the belt can be acquired at a certain rate. -->
+		<!-- Box bearing the unique pattern of Oren. A high grade magic Rune clip that's attached to the belt can be acquired at a certain rate. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1154,7 +1154,7 @@
 		<set name="item_skill" val="2978-1" /> <!-- Oren supply box - magic rune clip -->
 	</item>
 	<item id="14888" type="EtcItem" name="Aden Supply Box - Magic Rune Clip - Grade S, A">
-		<!-- A box that has the symbol of Aden. A high grade magic Rune clip that's attached to the belt can be acquired at a certain rate. -->
+		<!-- Box bearing the unique pattern of Aden. A high grade magic Rune clip that's attached to the belt can be acquired at a certain rate. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1168,7 +1168,7 @@
 		<set name="item_skill" val="2979-1" /> <!-- Aden supply box - magic rune clip -->
 	</item>
 	<item id="14889" type="EtcItem" name="Innadril Supply Box - Magic Rune Clip - Grade S, A">
-		<!-- A box that has the symbol of Innadril. A high grade magic Rune clip that's attached to the belt can be acquired at a certain rate. -->
+		<!-- Box bearing the unique pattern of Innadril. A high grade magic Rune clip that's attached to the belt can be acquired at a certain rate. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1182,7 +1182,7 @@
 		<set name="item_skill" val="2980-1" /> <!-- Innadril supply box - magic rune clip -->
 	</item>
 	<item id="14890" type="EtcItem" name="Goddard Supply Box: Magic Rune Clip - Grade S, A">
-		<!-- A box that has the symbol of Goddard. A high grade magic Rune clip that's attached to the belt can be acquired at a certain rate. -->
+		<!-- Box bearing the unique pattern of Goddard. A high grade magic Rune clip that's attached to the belt can be acquired at a certain rate. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1196,7 +1196,7 @@
 		<set name="item_skill" val="2981-1" /> <!-- Goddard supply box - magic rune clip -->
 	</item>
 	<item id="14891" type="EtcItem" name="Rune Supply Box - Magic Rune Clip - Grade S, A">
-		<!-- A box that has the symbol of Rune. A high grade magic Rune clip that's attached to the belt can be acquired at a certain rate. -->
+		<!-- Box bearing the unique pattern of Rune. A high grade magic Rune clip that's attached to the belt can be acquired at a certain rate. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1210,7 +1210,7 @@
 		<set name="item_skill" val="2982-1" /> <!-- Rune supply box - magic rune clip -->
 	</item>
 	<item id="14892" type="EtcItem" name="Schuttgart Supply Box - Magic Rune Clip - Grade S, A">
-		<!-- A box that has the symbol of Schuttgart. A high grade magic Rune clip that's attached to the belt can be acquired at a certain rate. -->
+		<!-- Box bearing the unique pattern of Schuttgart. A high grade magic Rune clip that's attached to the belt can be acquired at a certain rate. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1224,7 +1224,7 @@
 		<set name="item_skill" val="2983-1" /> <!-- Schuttgart supply box - magic rune clip -->
 	</item>
 	<item id="14893" type="EtcItem" name="Gludio Supply Box - Magic Ornament - Grade S, A">
-		<!-- A box that has the symbol of Gludio. A high grade magic pouch that's attached to the belt can be acquired at a certain rate. -->
+		<!-- Box bearing the unique pattern of Gludio. A high grade magic pouch that's attached to the belt can be acquired at a certain rate. -->
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1238,7 +1238,7 @@
 		<set name="item_skill" val="2984-1" /> <!-- Gludio supply box - magic ornament -->
 	</item>
 	<item id="14894" type="EtcItem" name="Dion Supply Box - Magic Ornament - Grade S, A">
-		<!-- A box that has the symbol of Dion. A high grade magic pouch that's attached to the belt can be acquired at a certain rate. -->
+		<!-- Box bearing the unique pattern of Dion. A high grade magic pouch that's attached to the belt can be acquired at a certain rate. -->
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1252,7 +1252,7 @@
 		<set name="item_skill" val="2985-1" /> <!-- Dion supply box - magic ornament -->
 	</item>
 	<item id="14895" type="EtcItem" name="Giran Supply Box - Magic Ornament - Grade S, A">
-		<!-- A box that has the symbol of Giran. A high grade magic pouch that's attached to the belt can be acquired at a certain rate. -->
+		<!-- Box bearing the unique pattern of Giran. A high grade magic pouch that's attached to the belt can be acquired at a certain rate. -->
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1266,7 +1266,7 @@
 		<set name="item_skill" val="2986-1" /> <!-- Giran supply box - magic ornament -->
 	</item>
 	<item id="14896" type="EtcItem" name="Oren Supply Box - Magic Ornament - Grade S, A">
-		<!-- A box that has the symbol of Oren. A high grade magic pouch that's attached to the belt can be acquired at a certain rate. -->
+		<!-- Box bearing the unique pattern of Oren. A high grade magic pouch that's attached to the belt can be acquired at a certain rate. -->
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1280,7 +1280,7 @@
 		<set name="item_skill" val="2987-1" /> <!-- Oren supply box - magic ornament -->
 	</item>
 	<item id="14897" type="EtcItem" name="Aden Supply Box - Magic Ornament - Grade S, A">
-		<!-- A box that has the symbol of Aden. A high grade magic pouch that's attached to the belt can be acquired at a certain rate. -->
+		<!-- Box bearing the unique pattern of Aden. A high grade magic pouch that's attached to the belt can be acquired at a certain rate. -->
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1294,7 +1294,7 @@
 		<set name="item_skill" val="2988-1" /> <!-- Aden supply box - magic ornament -->
 	</item>
 	<item id="14898" type="EtcItem" name="Innadril Supply Box - Magic Ornament - Grade S, A">
-		<!-- A box that has the symbol of Innadril. A high grade magic pouch that's attached to the belt can be acquired at a certain rate. -->
+		<!-- Box bearing the unique pattern of Innadril. A high grade magic pouch that's attached to the belt can be acquired at a certain rate. -->
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1308,7 +1308,7 @@
 		<set name="item_skill" val="2989-1" /> <!-- Innadril supply box - magic ornament -->
 	</item>
 	<item id="14899" type="EtcItem" name="Goddard Supply Box: Magic Ornament - Grade S, A">
-		<!-- A box that has the symbol of Goddard. A high grade magic pouch that's attached to the belt can be acquired at a certain rate. -->
+		<!-- Box bearing the unique pattern of Goddard. A high grade magic pouch that's attached to the belt can be acquired at a certain rate. -->
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />

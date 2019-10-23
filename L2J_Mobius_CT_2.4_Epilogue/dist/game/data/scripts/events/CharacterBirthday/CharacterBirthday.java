@@ -16,23 +16,31 @@
  */
 package events.CharacterBirthday;
 
+import java.util.Calendar;
+
+import org.l2jmobius.gameserver.data.xml.impl.SkillData;
+import org.l2jmobius.gameserver.instancemanager.QuestManager;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.util.Util;
+import org.l2jmobius.gameserver.model.quest.Quest;
+import org.l2jmobius.gameserver.model.quest.QuestState;
+import org.l2jmobius.gameserver.model.quest.State;
+import org.l2jmobius.gameserver.model.skills.Skill;
+import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
+import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
 
 import ai.AbstractNpcAI;
 
 /**
- * Character Birthday event AI.<br>
- * Updated to H5 by Nyaran.
  * @author Gnacik
  */
+
 public class CharacterBirthday extends AbstractNpcAI
 {
 	private static final int ALEGRIA = 32600;
-	private static int SPAWNS = 0;
+	private static boolean is_spawned = false;
 	
-	private static final int[] GK =
+	private final static int[] GK =
 	{
 		30006,
 		30059,
@@ -58,37 +66,61 @@ public class CharacterBirthday extends AbstractNpcAI
 	private CharacterBirthday()
 	{
 		addStartNpc(ALEGRIA);
-		addStartNpc(GK);
+		addFirstTalkId(ALEGRIA);
 		addTalkId(ALEGRIA);
-		addTalkId(GK);
+		for (int id : GK)
+		{
+			addStartNpc(id);
+			addTalkId(id);
+		}
 	}
 	
 	@Override
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		String htmltext = event;
+		String htmltext = "";
+		QuestState st = getQuestState(player, false);
+		htmltext = event;
+		
 		if (event.equalsIgnoreCase("despawn_npc"))
 		{
 			npc.doDie(player);
-			SPAWNS--;
-			
+			is_spawned = false;
 			htmltext = null;
 		}
-		else if (event.equalsIgnoreCase("change"))
+		if (event.equalsIgnoreCase("receive_reward"))
 		{
-			// Change Hat
-			if (hasQuestItems(player, 10250))
+			Calendar now = Calendar.getInstance();
+			now.setTimeInMillis(System.currentTimeMillis());
+			// Check if already received reward
+			String NextBirthday = st.get("Birthday");
+			if ((NextBirthday != null) && (Integer.valueOf(NextBirthday) > now.get(Calendar.YEAR)))
 			{
-				takeItems(player, 10250, 1); // Adventurer Hat (Event)
-				giveItems(player, 21594, 1); // Birthday Hat
-				htmltext = null; // FIXME: Probably has html
-				// Despawn npc
-				npc.doDie(player);
-				SPAWNS--;
+				htmltext = "32600-already.htm";
 			}
 			else
 			{
-				htmltext = "32600-nohat.htm";
+				// Give Adventurer Hat (Event)
+				giveItems(player, 10250, 1);
+				
+				// Give Buff
+				Skill skill;
+				skill = SkillData.getInstance().getSkill(5950, 1);
+				if (skill != null)
+				{
+					skill.applyEffects(npc, player);
+				}
+				npc.setTarget(player);
+				npc.broadcastPacket(new MagicSkillUse(player, 5950, 1, 1000, 0));
+				
+				// Despawn npc
+				npc.doDie(player);
+				is_spawned = false;
+				
+				// Update for next year
+				st.set("Birthday", String.valueOf(now.get(Calendar.YEAR) + 1));
+				
+				htmltext = "32600-ok.htm";
 			}
 		}
 		return htmltext;
@@ -97,22 +129,48 @@ public class CharacterBirthday extends AbstractNpcAI
 	@Override
 	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		if (SPAWNS >= 3)
+		if (is_spawned)
 		{
-			return "busy.htm";
+			return null;
 		}
 		
-		if (!Util.checkIfInRange(10, npc, player, true))
+		QuestState st = getQuestState(player, true);
+		
+		if ((st != null) && (player.checkBirthDay() == 0))
 		{
-			final Npc spawned = addSpawn(32600, player.getX() + 10, player.getY() + 10, player.getZ() + 10, 0, false, 0, true);
-			startQuestTimer("despawn_npc", 180000, spawned, player);
-			SPAWNS++;
+			player.sendPacket(new PlaySound(1, "HB01", 0, 0, 0, 0, 0));
+			Npc spawned = addSpawn(32600, player.getX() + 10, player.getY() + 10, player.getZ() + 10, 0, false, 0, true);
+			st.setState(State.STARTED);
+			startQuestTimer("despawn_npc", 60000, spawned, null);
+			is_spawned = true;
 		}
 		else
 		{
-			return "tooclose.htm";
+			return "32600-no.htm";
 		}
+		
 		return null;
+	}
+	
+	@Override
+	public String onFirstTalk(Npc npc, PlayerInstance player)
+	{
+		String htmltext = "";
+		QuestState st = player.getQuestState(getName());
+		if (st == null)
+		{
+			Quest q = QuestManager.getInstance().getQuest(getName());
+			st = q.newQuestState(player);
+		}
+		if (player.checkBirthDay() == 0)
+		{
+			htmltext = "32600.htm";
+		}
+		else
+		{
+			htmltext = "32600-no.htm";
+		}
+		return htmltext;
 	}
 	
 	public static void main(String[] args)

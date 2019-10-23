@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="14400" type="Weapon" name="Icarus Hand {PvP} - Rsk. Evasion">
-		<!-- <Soul Crystal Enhancement>. Increases Evasion by 6.8 when HP drops to 60% or lower. Increases damage inflicted during PvP. Has a chance of canceling more than 1 of a target's enhanced status, or of decreasing a target's Shield Defense during an attack. -->
+		<!-- <Soul Crystal Enhancement>evasion increases by 6.8 when . HP drops to 60% or lower. Increases damage inflicted during PvP, during an attack, cancels the opponent's enhanced status by more than 1 occasionally, or decreases the opponent's shield P. Def. -->
 		<set name="icon" val="icon.weapon_icarus_knuckle_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -33,7 +33,7 @@
 		</for>
 	</item>
 	<item id="14401" type="Weapon" name="Icarus Hand {PvP} - Focus">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 106. Increases damage inflicted during PvP. Has a chance of canceling more than 1 of a target's enhanced status, or of decreasing a target's Shield Defense during an attack. -->
+		<!-- <Soul Crystal Enhancement>. critical attack increases by 106. Increases damage inflicted during PvP, during an attack, cancels the opponent's enhanced status by more than 1 occasionally, or decreases the opponent's shield P. Def. -->
 		<set name="icon" val="icon.weapon_icarus_knuckle_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -65,7 +65,7 @@
 		</for>
 	</item>
 	<item id="14402" type="Weapon" name="Icarus Hand {PvP} - Haste">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 10%. Increases damage inflicted during PvP. Has a chance of canceling more than 1 of a target's enhanced status, or of decreasing a target's Shield Defense during an attack. -->
+		<!-- The . attack speed of <Soul Crystal Enhancement> increases by 10%. Increases damage inflicted during PvP, during an attack, cancels the opponent's enhanced status by more than 1 occasionally, or decreases the opponent's shield P. Def. -->
 		<set name="icon" val="icon.weapon_icarus_knuckle_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -97,7 +97,7 @@
 		</for>
 	</item>
 	<item id="14403" type="Weapon" name="Icarus Stinger {PvP} - Focus">
-		<!-- Kamael Exclusive Weapon: Icarus Sawsword Conversion. <Soul Crystal Enhancement>. Increases Critical by 111. Increases damage inflicted during PvP. Improves the chance of CP recovery during an attack. When enchanted to 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of recieved heal, and decreased MP consumption during skill use. Increases damage inflicted during PvP. -->
+		<!-- Kamael exclusive weapon Icarus Sawsword Conversion. <Soul Crystal Enhancement>. Critical attack increases by 111. Increases damage inflicted during PvP, and recovers CP occasionally during an attack. When enchanted to 4 or more, party members including yourself will get the increased P. Atk., magic power, and healing capacity by a fixed rate, and MP consumption during skill use is decreased. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -133,7 +133,7 @@
 		</for>
 	</item>
 	<item id="14404" type="Weapon" name="Icarus Stinger {PvP} - Health">
-		<!-- Kamael Exclusive Weapon: Icarus Sawsword Conversion. <Soul Crystal Enhancement>. Max HP increases by 25%. Increases damage inflicted during PvP. Improves the chance of CP recovery during an attack. When enchanted to 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of recieved heal, and decreased MP consumption during skill use. Increases damage inflicted during PvP. -->
+		<!-- Kamael exclusive weapon Icarus Sawsword Conversion. <Soul Crystal Enhancement>. Max HP increases by 25%. Increases damage inflicted during PvP, and recovers CP occasionally during an attack. When enchanted to 4 or more, party members including yourself will get the increased P. Atk., magic power, and healing capacity by a fixed rate, and MP consumption during skill use is decreased. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -169,7 +169,7 @@
 		</for>
 	</item>
 	<item id="14405" type="Weapon" name="Icarus Stinger {PvP} - Light">
-		<!-- Kamael Exclusive Weapon: Icarus Sawsword Conversion. <Soul Crystal Enhancement>. Increases weight gauge by 20%. Increases damage inflicted during PvP. Improves the chance of CP recovery during an attack. When enchanted to 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of recieved heal, and decreased MP consumption during skill use. Increases damage inflicted during PvP. -->
+		<!-- Kamael exclusive weapon: Icarus Sawsword Conversion. <Soul Crystal Enhancement>. Weight gauge increases by 20%. Increases damage inflicted during PvP, and recovers CP at a fixed rate during an attack. When enchanted to 4 or more, party members including yourself will get the increased P. Atk., magic power, and healing capacity by a fixed rate, and MP consumption during skill use is decreased. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -190,7 +190,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3498-1;3552-3;3650-1" /> <!-- Special Ability: Light -->
+		<set name="item_skill" val="3498-1;3552-3;3650-1" /> <!-- Special Ability Light -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -205,7 +205,7 @@
 		</for>
 	</item>
 	<item id="14406" type="Weapon" name="Icarus Wingblade {PvP} - Focus">
-		<!-- Kamael Exclusive Weapon: Icarus Heavy Arms Conversion. <Soul Crystal Enhancement>. Increases Critical by 111. Increases damage inflicted during PvP. Improves the chance of additional damage during an attack. -->
+		<!-- Kamael exclusive weapon Icarus Heavy Arms Conversion. <Soul Crystal Enhancement>. Critical attack increases by 111. Increases damage inflicted during PvP, and additional damage is applied occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_wing_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -240,7 +240,7 @@
 		</for>
 	</item>
 	<item id="14407" type="Weapon" name="Icarus Wingblade {PvP} - Health">
-		<!-- Kamael Exclusive Weapon: Icarus Heavy Arms Conversion. <Soul Crystal Enhancement>. Max HP increases by 25%. Increases damage inflicted during PvP. Improves the chance of additional damage during an attack. -->
+		<!-- Kamael exclusive weapon Icarus Heavy Arms Conversion. <Soul Crystal Enhancement>. Max HP increases by 25%. Increases damage inflicted during PvP, and additional damage is applied occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_wing_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -275,7 +275,7 @@
 		</for>
 	</item>
 	<item id="14408" type="Weapon" name="Icarus Wingblade {PvP} - Light">
-		<!-- Kamael Exclusive Weapon: Icarus Heavy Arms Conversion. <Soul Crystal Enhancement>. Increases weight gauge by 20%. Increases damage inflicted during PvP. Improves the chance of additional damage during an attack. -->
+		<!-- Kamael exclusive weapon: Icarus Heavy Arms Conversion. <Soul Crystal Enhancement>. Weight gauge increases by 20%. Increases damage inflicted during PvP, and additional damage is applied at a fixed rate during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_wing_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -310,7 +310,7 @@
 		</for>
 	</item>
 	<item id="14409" type="Weapon" name="Icarus Shooter {PvP} - Cheap Shot">
-		<!-- Kamael Exclusive Weapon: Icarus Spitter Conversion. <Soul Crystal Enhancement>when using the . skill MP consumption decreases by 12%. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. -->
+		<!-- Kamael exclusive weapon Icarus Spitter Conversion. <Soul Crystal Enhancement>when using the . skill MP consupmtion decreases by 12%. Increases damage inflicted during PvP, and increases the Atk. Spd. of bows/crossbows occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -346,7 +346,7 @@
 		</for>
 	</item>
 	<item id="14410" type="Weapon" name="Icarus Shooter {PvP} - Guidance">
-		<!-- Kamael Exclusive Weapon: Icarus Spitter Conversion. <Soul Crystal Enhancement>. Increases Accuracy by 5.32. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. -->
+		<!-- Kamael exclusive weapon Icarus Spitter Conversion. <Soul Crystal Enhancement>. accuracy rate increases by 5.32. Increases damage inflicted during PvP, and increases the Atk. Spd. of bows/crossbows occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -382,7 +382,7 @@
 		</for>
 	</item>
 	<item id="14411" type="Weapon" name="Icarus Shooter {PvP} - Focus">
-		<!-- Kamael Exclusive Weapon: Icarus Spitter Conversion. <Soul Crystal Enhancement>. Increases Critical by 116. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. -->
+		<!-- Kamael exclusive weapon Icarus Spitter Conversion. <Soul Crystal Enhancement>. Critical attack increases by 116. Increases damage inflicted during PvP, and increases the Atk. Spd. of bows/crossbows occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -418,7 +418,7 @@
 		</for>
 	</item>
 	<item id="14412" type="Weapon" name="Icarus Dual Sword - Destruction {PvP}">
-		<!-- Masterwork Item that increases P. Atk. P. Atk. of dual bladed weapons, two-handed swords, two-handed blunt weapons and fighting weapons increases more than the regular one-handed swords when enchanted. When enchanted to 4 or more, increases Critical Attack by 109 and Max HP by 10%. Increases damage inflicted during PvP, and decreases the range of bows/crossbows occasionally during an attack. -->
+		<!-- Masterwork Item that increases P. Atk. The attack power of dual bladed weapons, two-handed swords, two-handed blunt weapons and fighting weapons increases more than the regular one-handed swords when enchanted. When enchanted to 4 or more, critical attack increases by 109 and Max HP increases by 10%. Increases damage inflicted during PvP, and decreases the range of bows/crossbows occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -450,7 +450,7 @@
 		</for>
 	</item>
 	<item id="14413" type="Weapon" name="Icarus Disperser - Confusion {PvP}">
-		<!-- Masterwork Item that increases evasion. It can bestow one of the following three functions, Focus, Evasion, or Critical Damage. Increases damage inflicted during PvP. Has a chance of canceling more than 1 of a target's enhanced status, or of decreasing a target's Shield Defense during an attack. -->
+		<!-- Masterwork Item that increases evasion. It can bestow one of the following three functions, Focus, Evasion, or Crt. Damage. Increases damage inflicted during PvP, during an attack, cancels the opponent's enhanced status by more than 1 occasionally, or decreases the opponent's shield P. Def. -->
 		<set name="icon" val="icon.weapon_icarus_disperser_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -482,7 +482,7 @@
 		</for>
 	</item>
 	<item id="14414" type="Weapon" name="Icarus Disperser - Confusion {PvP} - Focus">
-		<!-- Masterwork Item that increases evasion. <Soul Crystal Enhancement>. Increases Critical by 116. Increases damage inflicted during PvP. Has a chance of canceling more than 1 of a target's enhanced status, or of decreasing a target's Shield Defense during an attack. -->
+		<!-- Masterwork Item that increases evasion. <Soul Crystal Enhancement>. Critical attack increases by 116. Increases damage inflicted during PvP, during an attack, cancels the opponent's enhanced status by more than 1 occasionally, or decreases the opponent's shield P. Def. -->
 		<set name="icon" val="icon.weapon_icarus_disperser_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -514,7 +514,7 @@
 		</for>
 	</item>
 	<item id="14415" type="Weapon" name="Icarus Disperser - Confusion {PvP} - Evasion">
-		<!-- Masterwork Item that increases evasion. <Soul Crystal Enhancement>. Increases Evasion by 5. Increases damage inflicted during PvP. Has a chance of canceling more than 1 of a target's enhanced status, or of decreasing a target's Shield Defense during an attack. -->
+		<!-- Masterwork Item that increases evasion. <Soul Crystal Enhancement>. Evasion increases by 5. Increases damage inflicted during PvP, during an attack, cancels the opponent's enhanced status by more than 1 occasionally, or decreases the opponent's shield P. Def. -->
 		<set name="icon" val="icon.weapon_icarus_disperser_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -546,7 +546,7 @@
 		</for>
 	</item>
 	<item id="14416" type="Weapon" name="Icarus Disperser - Confusion {PvP} - Critical Damage">
-		<!-- Masterwork Item that increases evasion. <Soul Crystal Enhancement>. Increases P. Atk. by 559 during a critical attack. Increases damage inflicted during PvP. Has a chance of canceling more than 1 of a target's enhanced status, or of decreasing a target's Shield Defense during an attack. -->
+		<!-- Masterwork Item that increases evasion. <Soul Crystal Enhancement>. P. Atk. increases by 559 during a critical attack. Increases damage inflicted during PvP, during an attack, cancels the opponent's enhanced status by more than 1 occasionally, or decreases the opponent's shield P. Def. -->
 		<set name="icon" val="icon.weapon_icarus_disperser_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -578,7 +578,7 @@
 		</for>
 	</item>
 	<item id="14417" type="Weapon" name="Icarus Sawsword - Destruction {PvP}">
-		<!-- Masterwork Item that increases P. Atk. It can bestow one of the following three functions, Focus, Health, or Light. Increases damage inflicted during PvP. Improves the chance of CP recovery during an attack. -->
+		<!-- Masterwork Item that increases P. Atk. It can bestow one of the following three functions, Focus, Health, or Light. Increases damage inflicted during PvP, and recovers CP occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_sowsword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -609,7 +609,7 @@
 		</for>
 	</item>
 	<item id="14418" type="Weapon" name="Icarus Sawsword - Destruction {PvP} - Focus">
-		<!-- Masterwork Item that increases P. Atk. <Soul Crystal Enhancement>. Increases Critical by 111. Increases damage inflicted during PvP. Improves the chance of CP recovery during an attack. -->
+		<!-- Masterwork Item that increases P. Atk. <Soul Crystal Enhancement>. Critical attack increases by 111. Increases damage inflicted during PvP, and recovers CP occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_sowsword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -640,7 +640,7 @@
 		</for>
 	</item>
 	<item id="14419" type="Weapon" name="Icarus Sawsword - Destruction {PvP} - Health">
-		<!-- Masterwork Item that increases P. Atk. <Soul Crystal Enhancement>. Max HP increases by 25%. Increases damage inflicted during PvP. Improves the chance of CP recovery during an attack. -->
+		<!-- Masterwork Item that increases P. Atk. <Soul Crystal Enhancement>. Max HP increases by 25%. Increases damage inflicted during PvP, and recovers CP occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_sowsword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -671,7 +671,7 @@
 		</for>
 	</item>
 	<item id="14420" type="Weapon" name="Icarus Sawsword - Destruction {PvP} - Light">
-		<!-- Masterwork Item that increases P. Atk. <Soul Crystal Enhancement>. Increases weight gauge by 20%. Increases damage inflicted during PvP. Improves the chance of CP recovery during an attack. -->
+		<!-- A rare item that increases P. Atk. <Soul Crystal Enhancement>. Weight gauge increases by 20%. Increases damage inflicted during PvP, and recovers CP at a fixed rate during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_sowsword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -691,7 +691,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3498-1;3825-3;3552-3;3650-1" /> <!-- Special Ability: Light -->
+		<set name="item_skill" val="3498-1;3825-3;3552-3;3650-1" /> <!-- Special Ability Light -->
 		<for>
 			<set stat="pAtk" val="363" />
 			<set stat="mAtk" val="163" />
@@ -702,7 +702,7 @@
 		</for>
 	</item>
 	<item id="14421" type="Weapon" name="Icarus Shooter - Concentration {PvP}">
-		<!-- Masterwork Item that increases the Accuracy. Kamael Exclusive Weapon: Icarus Spitter Conversion. It can bestow one of the following functions, Cheap Shot, Guidance, or Focus. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. -->
+		<!-- Masterwork Item that increases the accuracy rate. Kamael exclusive weapon Icarus Spitter Conversion. It can bestow one of the following functions, Cheap Shot, Guidance, or Focus. Increases damage inflicted during PvP, and increases the Atk. Spd. of bows/crossbows occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_shooter_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -738,7 +738,7 @@
 		</for>
 	</item>
 	<item id="14422" type="Weapon" name="Icarus Shooter - Concentration {PvP} - Cheap Shot">
-		<!-- Masterwork Item that increases the Accuracy. Kamael Exclusive Weapon: Icarus Spitter Conversion. <Soul Crystal Enhancement>when using the . skill MP consumption decreases by 12%. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. -->
+		<!-- Masterwork Item that increases the accuracy rate. Kamael exclusive weapon Icarus Spitter Conversion. <Soul Crystal Enhancement>when using the . skill MP consupmtion decreases by 12%. Increases damage inflicted during PvP, and increases the Atk. Spd. of bows/crossbows occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -774,7 +774,7 @@
 		</for>
 	</item>
 	<item id="14423" type="Weapon" name="Icarus Shooter - Concentration {PvP} - Guidance">
-		<!-- Masterwork Item that increases the Accuracy. Kamael Exclusive Weapon: Icarus Spitter Conversion. <Soul Crystal Enhancement>. Increases Accuracy by 5.32. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. -->
+		<!-- Masterwork Item that increases the accuracy rate. Kamael exclusive weapon Icarus Spitter Conversion. <Soul Crystal Enhancement>. accuracy rate increases by 5.32. Increases damage inflicted during PvP, and increases the Atk. Spd. of bows/crossbows occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -810,7 +810,7 @@
 		</for>
 	</item>
 	<item id="14424" type="Weapon" name="Icarus Shooter - Concentration {PvP} - Focus">
-		<!-- Masterwork Item that increases the Accuracy. Kamael Exclusive Weapon: Icarus Spitter Conversion. <Soul Crystal Enhancement>. Increases Critical by 116. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. -->
+		<!-- Masterwork Item that increases the accuracy rate. Kamael exclusive weapon Icarus Spitter Conversion. <Soul Crystal Enhancement>. Critical attack increases by 116. Increases damage inflicted during PvP, and increases the Atk. Spd. of bows/crossbows occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -846,7 +846,7 @@
 		</for>
 	</item>
 	<item id="14425" type="Weapon" name="Icarus Stinger - Destruction {PvP}">
-		<!-- Masterwork Item that increases P. Atk. Kamael Exclusive Weapon: Icarus Sawsword Conversion. Focus, Health, or Light can be bestowed. When enchanted to 4 or more, there's a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of received heal. -->
+		<!-- Masterwork Item than increases the P. Atk. Kamael exclusive weapon: Icarus Sawsword Conversion. Focus, Health, or Light can be bestowed. When enchanted over 4, party members including yourself can increase attack power, magic power and healing capacity occasionally and decrease MP consumption per skill during a critical attack. Increases damage inflicted during PvP, and recovers CP occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_stinger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -882,7 +882,7 @@
 		</for>
 	</item>
 	<item id="14426" type="Weapon" name="Icarus Stinger - Destruction {PvP} - Focus">
-		<!-- Masterwork Item than increases P. Atk. Kamael Exclusive Weapon: Icarus Sawsword Conversion. <Soul Crystal Enhancement>. Increases Critical by 111. Increases damage inflicted during PvP. When enchanted to 4 or more, party members including you -->
+		<!-- Masterwork Item than increases the P. Atk. Kamael exclusive weapon: Icarus Sawsword Conversion. <Soul Crystal Enhancement>. Critical attack increases by 111. Increases damage inflicted during PvP. When enchanted to 4 or more, party members including yourself will get the increased attack power, magic power and healing capacity by a fixed rate but decreased MP consumption per skill during a critical attack. Increases damage inflicted during PvP, and recovers CP occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -918,7 +918,7 @@
 		</for>
 	</item>
 	<item id="14427" type="Weapon" name="Icarus Stinger - Destruction {PvP} - Health">
-		<!-- Masterwork Item that increases P. Atk. Kamael Exclusive Weapon: Icarus Sawsword Conversion. <Soul Crystal Enhancement>. Max HP increases by 25%. Increases damage inflicted during PvP. When enchanted to 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of recieved heal, and decreased MP consumption per skill during a critical attack. Recovers CP occasionally during an attack. -->
+		<!-- Masterwork Item than increases the P. Atk. Kamael exclusive weapon: Icarus Sawsword Conversion. <Soul Crystal Enhancement>. Max HP increases by 25%. Increases damage inflicted during PvP. When enchanted to 4 or more, party members including yourself will get the increased attack power, magic power and healing capacity by a fixed rate but decreased MP consumption per skill during a critical attack. Increases damage inflicted during PvP, and recovers CP occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -954,7 +954,7 @@
 		</for>
 	</item>
 	<item id="14428" type="Weapon" name="Icarus Stinger - Destruction {PvP} - Light">
-		<!-- Masterwork Item that increases P. Atk. Kamael Exclusive Weapon: Icarus Sawsword Conversion. <Soul Crystal Enhancement>. weight gauge by 20%. Increases damage inflicted during PvP. When enchanted to 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of recieved heal, and decreased MP consumption per skill during a critical attack. Improves the chance of CP recovery during an attack. -->
+		<!-- A rare item than increases the P. Atk. Kamael exclusive weapon: Icarus Sawsword Conversion. <Soul Crystal Enhancement>. Weight gauge increases by 20%. Increases damage inflicted during PvP. When enchanted to 4 or more, party members including yourself will get the increased attack power, magic power and healing capacity by a fixed rate but decreased MP consumption per skill during a critical attack. Increases damage inflicted during PvP, and recovers CP at a fixed rate during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -975,7 +975,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3498-1;3830-3;3552-3;3650-1" /> <!-- Special Ability: Light -->
+		<set name="item_skill" val="3498-1;3830-3;3552-3;3650-1" /> <!-- Special Ability Light -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -990,7 +990,7 @@
 		</for>
 	</item>
 	<item id="14429" type="Weapon" name="Icarus Spirit - Nature {PvP}">
-		<!-- Masterwork Item that increases Max MP. It can bestow one of the following three functions, Acumen, Mana Up, or Conversion. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when being attacked. -->
+		<!-- Masterwork Item that increases Max MP. It can bestow one of the following three functions, Acumen, Mana Up, or Conversion. Increases damage inflicted during PvP, and Casting Spd. increases occasionally when being attacked. -->
 		<set name="icon" val="icon.weapon_icarus_spirits_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1022,7 +1022,7 @@
 		</for>
 	</item>
 	<item id="14430" type="Weapon" name="Icarus Spirit - Nature {PvP} - Acumen">
-		<!-- Masterwork Item that increases Max MP. <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when being attacked. -->
+		<!-- Masterwork Item that increases Max MP. <Soul Crystal Enhancement>. Magic casting speed increases by 15%. Increases damage inflicted during PvP, and Casting Spd. increases occasionally when being attacked. -->
 		<set name="icon" val="icon.weapon_icarus_spirits_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1054,7 +1054,7 @@
 		</for>
 	</item>
 	<item id="14431" type="Weapon" name="Icarus Spirit - Nature {PvP} - Mana Up">
-		<!-- Masterwork Item that increases Max MP. <Soul Crystal Enhancement>. Max MP increases by 30%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when being attacked. -->
+		<!-- Masterwork Item that increases Max MP. <Soul Crystal Enhancement>. Max MP increases by 30%. Increases damage inflicted during PvP, and Casting Spd. increases occasionally when being attacked. -->
 		<set name="icon" val="icon.weapon_icarus_spirits_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1086,7 +1086,7 @@
 		</for>
 	</item>
 	<item id="14432" type="Weapon" name="Icarus Spirit - Nature {PvP} - Conversion">
-		<!-- Masterwork Item that increases Max MP. <Soul Crystal Enhancement>. Max MP increases by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when being attacked. -->
+		<!-- Masterwork Item that increases Max MP. <Soul Crystal Enhancement>. Max MP increases by 60% and Max HP decreases by 40%. Increases damage inflicted during PvP, and Casting Spd. increases occasionally when being attacked. -->
 		<set name="icon" val="icon.weapon_icarus_spirits_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1118,7 +1118,7 @@
 		</for>
 	</item>
 	<item id="14433" type="Weapon" name="Icarus Spitter - Concentration {PvP}">
-		<!-- Masterwork Item that increases Accuracy. It can bestow one of the following functions, Cheap Shot, Guidance, or Focus. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. -->
+		<!-- Masterwork Item that increases Accuracy. It can bestow one of the following functions, Cheap Shot, Guidance, or Focus. Increases damage inflicted during PvP, and increases the Atk. Spd. of bows/crossbows occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_spiter_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1152,7 +1152,7 @@
 		</for>
 	</item>
 	<item id="14434" type="Weapon" name="Icarus Spitter - Concentration {PvP} - Cheap Shot">
-		<!-- Masterwork Item that increases Accuracy. <Soul Crystal Enhancement>. Decreases MP Consumption 4% during a skill attack. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. -->
+		<!-- Masterwork Item that increases accuracy. <Soul Crystal Enhancement>. MP Consumption decreases 4% during a skill attack. Increases damage inflicted during PvP, and increases the Atk. Spd. of bows/crossbows occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_spiter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1186,7 +1186,7 @@
 		</for>
 	</item>
 	<item id="14435" type="Weapon" name="Icarus Spitter - Concentration {PvP} - Guidance">
-		<!-- Masterwork Item that increases the Accuracy. <Soul Crystal Enhancement>. Increases Accuracy by 5.32 during a critical attack. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. -->
+		<!-- Masterwork Item that increases the accuracy rate. <Soul Crystal Enhancement>. Accuracy rate increases by 5.32 during a critical attack. Increases damage inflicted during PvP, and increases the Atk. Spd. of bows/crossbows occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_spiter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1220,7 +1220,7 @@
 		</for>
 	</item>
 	<item id="14436" type="Weapon" name="Icarus Spitter - Concentration {PvP} - Focus">
-		<!-- Masterwork Item that increases the Accuracy. <Soul Crystal Enhancement>. Increases Critical by 116 during a critical attack. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. -->
+		<!-- Masterwork Item that increases the accuracy rate. <Soul Crystal Enhancement>. Critical attack increases by 116 during a critical attack. Increases damage inflicted during PvP, and increases the Atk. Spd. of bows/crossbows occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_spiter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1254,7 +1254,7 @@
 		</for>
 	</item>
 	<item id="14437" type="Weapon" name="Icarus Wingblade - Lightning {PvP}">
-		<!-- Masterwork Item than increases Critical Rate. Kamael Exclusive Weapon: Icarus Heavy Arms conversion. It can bestow one of the following three functions, Focus, Health, or Light. Increases damage inflicted during PvP. Improves the chance of additional damage during an attack. -->
+		<!-- Masterwork Item than increases the critical rate. Kamael exclusive weapon: Icarus Heavy Arms conversion. It can bestow one of the following three functions, Focus, Health, or Light. Increases damage inflicted during PvP, and additional damage is applied occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_wing_blade_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1289,7 +1289,7 @@
 		</for>
 	</item>
 	<item id="14438" type="Weapon" name="Icarus Wingblade - Lightning {PvP} - Focus">
-		<!-- Masterwork Item than increases Critical Rate. Kamael Exclusive Weapon: Icarus Heavy Arms Conversion. <Soul Crystal Enhancement>. Increases Critical by 111. Increases damage inflicted during PvP. Improves the chance of additional damage during an attack. -->
+		<!-- Masterwork Item than increases the critical rate. Kamael exclusive weapon: Icarus Heavy Arms Conversion. <Soul Crystal Enhancement>. Critical attack increases by 111. Increases damage inflicted during PvP, and additional damage is applied occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_wing_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1324,7 +1324,7 @@
 		</for>
 	</item>
 	<item id="14439" type="Weapon" name="Icarus Wingblade - Lightning {PvP} - Health">
-		<!-- Masterwork Item than increases Critical Rate. Kamael Exclusive Weapon: Icarus Heavy Arms Conversion. <Soul Crystal Enhancement>. Max HP increases by 25%. Increases damage inflicted during PvP. Improves the chance of additional damage during an attack. -->
+		<!-- Masterwork Item than increases the critical rate. Kamael exclusive weapon: Icarus Heavy Arms Conversion. <Soul Crystal Enhancement>. Max HP increases by 25%. Increases damage inflicted during PvP, and additional damage is applied occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_wing_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1359,7 +1359,7 @@
 		</for>
 	</item>
 	<item id="14440" type="Weapon" name="Icarus Wingblade - Lightning {PvP} - Light">
-		<!-- Masterwork Item that increases Critical Rate. Kamael Exclusive Weapon: Icarus Heavy Arms Conversion. <Soul Crystal Enhancement>. Increases weight gauge by 20%. Increases damage inflicted during PvP. Improves the chance of additional damage during an attack. -->
+		<!-- A rare item than increases the critical rate. Kamael exclusive weapon: Icarus Heavy Arms Conversion. <Soul Crystal Enhancement>. Weight gauge increases by 20%. Increases damage inflicted during PvP, and additional damage is applied at a fixed rate during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_wing_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1379,7 +1379,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3498-1;3851-2;3552-3;3653-1" /> <!-- Special Ability: Light -->
+		<set name="item_skill" val="3498-1;3851-2;3552-3;3653-1" /> <!-- Special Ability Light -->
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -1394,7 +1394,7 @@
 		</for>
 	</item>
 	<item id="14441" type="Weapon" name="Icarus Trident - Thunder {PvP}">
-		<!-- Masterwork Item that increases Critical Damage. Can endow one of the three: Anger, Critical Stun, or Light. Increases damage inflicted during PvP. Improves the chance of additional damage during an attack. -->
+		<!-- Masterwork Item that increases the critical effect. Can endow one of the three: Anger, Critical Stun, or Light. Increases damage inflicted during PvP, and additional damage is applied occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_trident_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1414,7 +1414,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3873-2;3552-4;3653-1;3599-1" /> <!-- Polearm of Critical Damage -->
+		<set name="item_skill" val="3873-2;3552-4;3653-1;3599-1" /> <!-- Polearm of Critical Power -->
 		<for>
 			<set stat="pAtk" val="363" />
 			<set stat="mAtk" val="163" />
@@ -1426,7 +1426,7 @@
 		</for>
 	</item>
 	<item id="14442" type="Weapon" name="Icarus Trident - Thunder {PvP} - Anger">
-		<!-- Masterwork Item that increases Critical Damage. <Soul Crystal Enhancement>. One's own HP decreases by 15% and P. Atk. increases by 78. Increases damage inflicted during PvP. Improves the chance of additional damage during an attack. -->
+		<!-- Masterwork Item that increases critical effect. <Soul Crystal Enhancement>. One's own HP decreases by 15% and P. Atk. increases by 78. Increases damage inflicted during PvP, and additional damage is applied occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_trident_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1446,7 +1446,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3873-2;3552-1;3653-1;3600-10" /> <!-- Polearm of Critical Damage -->
+		<set name="item_skill" val="3873-2;3552-1;3653-1;3600-10" /> <!-- Polearm of Critical Power -->
 		<for>
 			<set stat="pAtk" val="363" />
 			<set stat="mAtk" val="163" />
@@ -1458,7 +1458,7 @@
 		</for>
 	</item>
 	<item id="14443" type="Weapon" name="Icarus Trident - Thunder {PvP} - Critical Stun">
-		<!-- Masterwork Item that increases Critical Damage. <Soul Crystal Enhancement>. Has a 48% chance of stunning the target during a critical attack. Increases damage inflicted during PvP. Improves the chance of additional damage during an attack. -->
+		<!-- Masterwork Item that increases critical attack impact. <Soul Crystal Enhancement>. Stun effect at the probability of 48% during critical attack. Increases damage inflicted during PvP, and additional damage is applied occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_trident_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1479,7 +1479,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="oncrit_skill" val="3070-4" />
-		<set name="item_skill" val="3873-2;3552-4;3653-1" /> <!-- Polearm of Critical Damage -->
+		<set name="item_skill" val="3873-2;3552-4;3653-1" /> <!-- Polearm of Critical Power -->
 		<for>
 			<set stat="pAtk" val="363" />
 			<set stat="mAtk" val="163" />
@@ -1491,7 +1491,7 @@
 		</for>
 	</item>
 	<item id="14444" type="Weapon" name="Icarus Trident - Thunder {PvP} - Light">
-		<!-- Masterwork Item that increases Critical Damage. <Soul Crystal Enhancement>. Increases weight gauge by 20%. Increases damage inflicted during PvP. Improves the chance of additional damage during an attack. -->
+		<!-- A rare item that increases the critical effect. <Soul Crystal Enhancement>. Weight gauge increases by 20%. Increases damage inflicted during PvP, and additional damage is applied at a fixed rate during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_trident_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1511,7 +1511,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3498-1;3873-2;3552-4;3653-1" /> <!-- Special Ability: Light -->
+		<set name="item_skill" val="3498-1;3873-2;3552-4;3653-1" /> <!-- Special Ability Light -->
 		<for>
 			<set stat="pAtk" val="363" />
 			<set stat="mAtk" val="163" />
@@ -1523,7 +1523,7 @@
 		</for>
 	</item>
 	<item id="14445" type="Weapon" name="Icarus Hammer - Earth {PvP}">
-		<!-- Masterwork Item that increases Max HP. It can bestow one of the following functions: Anger, Health, or Rsk. Focus. Increases damage inflicted during PvP. Improves the chance of CP recovery during an attack. -->
+		<!-- Masterwork Item that increases Max HP. It can bestow one of the following functions: Anger, Health, or Rsk. Focus. Increases damage inflicted during PvP, and recovers CP occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_hammer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1555,7 +1555,7 @@
 		</for>
 	</item>
 	<item id="14446" type="Weapon" name="Icarus Hammer - Earth {PvP} - Anger">
-		<!-- Masterwork Item that increases Max HP. <Soul Crystal Enhancement>. Your own HP decreases by 15% and P. Atk. increases by 78 during a critical attack. Increases damage inflicted during PvP. Improves the chance of CP recovery during an attack. -->
+		<!-- Masterwork Item that increases Max HP. <Soul Crystal Enhancement>. Your own HP decreases by 15% and P. Atk. increases by 78 during a critical attack. Increases damage inflicted during PvP, and recovers CP occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1587,7 +1587,7 @@
 		</for>
 	</item>
 	<item id="14447" type="Weapon" name="Icarus Hammer - Earth {PvP} - Health">
-		<!-- Masterwork Item that increases Max HP. <Soul Crystal Enhancement>. Max HP increases by 25%. Increases damage inflicted during PvP. Improves the chance of CP recovery during an attack. -->
+		<!-- Masterwork Item that increases Max HP. <Soul Crystal Enhancement>. Max HP increases by 25%. Increases damage inflicted during PvP, and recovers CP occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1619,7 +1619,7 @@
 		</for>
 	</item>
 	<item id="14448" type="Weapon" name="Icarus Hammer - Earth {PvP} - Rsk. Focus">
-		<!-- Masterwork Item that increases Max HP. <Soul Crystal Enhancement>. Increases Critical by 164 when HP is 60% or below. Increases damage inflicted during PvP. Improves the chance of CP recovery during an attack. -->
+		<!-- Masterwork Item that increases Max HP. <Soul Crystal Enhancement>. Critical attack increases by 164 when HP is 60% or below. Increases damage inflicted during PvP, and recovers CP occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1651,7 +1651,7 @@
 		</for>
 	</item>
 	<item id="14449" type="Weapon" name="Icarus Hand - Destruction {PvP}">
-		<!-- Masterwork Item that increases P. Atk. Bestows Rsk. Evasion, Focus, or Haste. Increases damage inflicted during PvP. Has a chance of canceling more than 1 of a target's enhanced status, or of decreasing a target's Shield Defense during an attack. -->
+		<!-- Masterwork Item that increases P. Atk. Bestows Rsk. Evasion, Focus, or Haste. Increases damage inflicted during PvP, during an attack, cancels the opponent's enhanced status by more than 1 occasionally, or decreases the opponent's shield P. Def. -->
 		<set name="icon" val="icon.weapon_icarus_knuckle_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1683,7 +1683,7 @@
 		</for>
 	</item>
 	<item id="14450" type="Weapon" name="Icarus Hand - Destruction {PvP} - Rsk. Evasion">
-		<!-- Masterwork Item that increases P. Atk. <Soul Crystal Enhancement>. Increases Evasion by 6.8 when HP is 60% or below. Increases damage inflicted during PvP. Has a chance of canceling more than 1 of a target's enhanced status, or of decreasing a target's Shield Defense during an attack. -->
+		<!-- Masterwork Item that increases P. Atk. <Soul Crystal Enhancement>. Evasion increases by 6.8 when HP is 60% or below. Increases damage inflicted during PvP, during an attack, cancels the opponent's enhanced status by more than 1 occasionally, or decreases the opponent's shield P. Def. -->
 		<set name="icon" val="icon.weapon_icarus_knuckle_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1715,7 +1715,7 @@
 		</for>
 	</item>
 	<item id="14451" type="Weapon" name="Icarus Hand - Destruction {PvP} - Focus">
-		<!-- Masterwork Item that increases P. Atk. <Soul Crystal Enhancement>. Increases Critical by 106. Increases damage inflicted during PvP. Has a chance of canceling more than 1 of a target's enhanced status, or of decreasing a target's Shield Defense during an attack. -->
+		<!-- Masterwork Item that increases P. Atk. <Soul Crystal Enhancement>. Critical attack increases by 106. Increases damage inflicted during PvP, during an attack, cancels the opponent's enhanced status by more than 1 occasionally, or decreases the opponent's shield P. Def. -->
 		<set name="icon" val="icon.weapon_icarus_knuckle_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1747,7 +1747,7 @@
 		</for>
 	</item>
 	<item id="14452" type="Weapon" name="Icarus Hand - Destruction {PvP} - Haste">
-		<!-- Masterwork Item that increases P. Atk. <Soul Crystal Enhancement>. Atk. Spd. increases by about 10%. Increases damage inflicted during PvP. Has a chance of canceling more than 1 of a target's enhanced status, or of decreasing a target's Shield Defense during an attack. -->
+		<!-- Masterwork Item that increases P. Atk. <Soul Crystal Enhancement>. Attack speed increases by about 10%. Increases damage inflicted during PvP, during an attack, cancels the opponent's enhanced status by more than 1 occasionally, or decreases the opponent's shield P. Def. -->
 		<set name="icon" val="icon.weapon_icarus_knuckle_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1779,7 +1779,7 @@
 		</for>
 	</item>
 	<item id="14453" type="Weapon" name="Icarus Heavy Arms - Lightning {PvP}">
-		<!-- Masterwork Item that increases Critical Rate. Can endow one of the three: Focus, Health, or Light. Increases damage inflicted during PvP. Improves the chance of additional damage during an attack. -->
+		<!-- Masterwork Item that increases the critical attack rate. Can endow one of the three:Focus, Health, or Light. Increases damage inflicted during PvP, and additional damage is applied occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_heavy_arms_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1810,7 +1810,7 @@
 		</for>
 	</item>
 	<item id="14454" type="Weapon" name="Icarus Heavy Arms - Lightning {PvP} - Focus">
-		<!-- Masterwork Item that increases Critical Rate. <Soul Crystal Enhancement>. Increases Critical by 111. Increases damage inflicted during PvP. Improves the chance of additional damage during an attack. -->
+		<!-- Masterwork Item that increases the critical attack rate. <Soul Crystal Enhancement>. Critical attack increases by 111. Increases damage inflicted during PvP, and additional damage is applied occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_heavy_arms_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1841,7 +1841,7 @@
 		</for>
 	</item>
 	<item id="14455" type="Weapon" name="Icarus Heavy Arms - Lightning {PvP} - Health">
-		<!-- Masterwork Item that increases Critical Rate. <Soul Crystal Enhancement>. Max HP increases by 25%. Increases damage inflicted during PvP. Improves the chance of additional damage during an attack. -->
+		<!-- Masterwork Item that increases the critical attack rate. <Soul Crystal Enhancement>. Max HP increases by 25%. Increases damage inflicted during PvP, and additional damage is applied occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_heavy_arms_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1872,7 +1872,7 @@
 		</for>
 	</item>
 	<item id="14456" type="Weapon" name="Icarus Heavy Arms - Lightning {PvP} - Light">
-		<!-- Masterwork Item that increases Critical Rate. <Soul Crystal Enhancement>. Increases weight gauge by 20%. Increases damage inflicted during PvP. Improves the chance of additional damage during an attack. -->
+		<!-- A rare item that increases the critical rate. <Soul Crystal Enhancement>. Weight gauge increases by 20%. Increases damage inflicted during PvP, and additional damage is applied at a fixed rate during an attack. -->
 		<set name="icon" val="icon.weapon_icarus_heavy_arms_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1892,7 +1892,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3498-1;3845-2;3552-3;3653-1" /> <!-- Special Ability: Light -->
+		<set name="item_skill" val="3498-1;3845-2;3552-3;3653-1" /> <!-- Special Ability Light -->
 		<for>
 			<set stat="pAtk" val="442" />
 			<set stat="mAtk" val="163" />
@@ -1903,7 +1903,7 @@
 		</for>
 	</item>
 	<item id="14457" type="Weapon" name="Icarus Hall - Hail {PvP}">
-		<!-- Masterwork Item that increases M. Atk. It can bestow one of the following three functions, Mana Up, Conversion, or Acumen. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when being attacked. -->
+		<!-- Masterwork Item that increases magic power. It can bestow one of the following three functions, Mana Up, Conversion, or Acumen. Increases damage inflicted during PvP, and Casting Spd. increases occasionally when being attacked. -->
 		<set name="icon" val="icon.weapon_icarus_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1936,7 +1936,7 @@
 		</for>
 	</item>
 	<item id="14458" type="Weapon" name="Icarus Hall - Hail {PvP} - Mana Up">
-		<!-- Masterwork Item that increases M. Atk. <Soul Crystal Enhancement>. Max MP increases by 30%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when being attacked. -->
+		<!-- Masterwork Item that increases magic power. <Soul Crystal Enhancement>. Max MP increases by 30%. Increases damage inflicted during PvP, and Casting Spd. increases occasionally when being attacked. -->
 		<set name="icon" val="icon.weapon_icarus_stick_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1969,7 +1969,7 @@
 		</for>
 	</item>
 	<item id="14459" type="Weapon" name="Icarus Hall - Hail {PvP} - Conversion">
-		<!-- Masterwork Item that increases M. Atk. <Soul Crystal Enhancement>. Max MP increases by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when being attacked. -->
+		<!-- Masterwork Item that increases magic power. <Soul Crystal Enhancement>. Max MP increases by 60% and Max HP decreases by 40%. Increases damage inflicted during PvP, and Casting Spd. increases occasionally when being attacked. -->
 		<set name="icon" val="icon.weapon_icarus_stick_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2002,7 +2002,7 @@
 		</for>
 	</item>
 	<item id="14460" type="Weapon" name="Icarus Hall - Hail {PvP} - Acumen">
-		<!-- Masterwork Item that increases the power of magic. <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when being attacked. -->
+		<!-- Masterwork Item that increases the power of magic. <Soul Crystal Enhancement>. Magic casting speed increases by 15%. Increases damage inflicted during PvP, and Casting Spd. increases occasionally when being attacked. -->
 		<set name="icon" val="icon.weapon_icarus_stick_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2035,7 +2035,7 @@
 		</for>
 	</item>
 	<item id="14461" type="Weapon" name="Icarus Dual Daggers {PvP}">
-		<!-- Dual daggers. Has higher P. Atk. than regular one-handed swords when enchanted. When enchanted to 4 or more, increases Critical by 109. During an attack, it has a chance of canceling a target's enhanced status by more than 1, or to decrease a target's Shield Defense. Can be equipped by Dagger masters above level 81. Increases damage inflicted during PvP. -->
+		<!-- Dagger dualswords, when enchanted, have more increased P. Atk. than regular one-handed swords. When enchanted to 4 or more, Critical increases by 109. During an attack, cancels the opponent's enhanced status by more than 1 at a fixed rate, or decreases the opponent's shield P. Def. Can be equipped by Dagger masters above level 81. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALDAGGER" />
@@ -2074,7 +2074,7 @@
 		</for>
 	</item>
 	<item id="14462" type="Weapon" name="Vesper Dual Sword {PvP}">
-		<!-- P. Atk. of dual bladed weapons, two-handed swords, two-handed blunt weapons and fighting weapons increases more than the regular one-handed swords when enchanted. When enchanted to 4 or more, increases Critical Attack by 109 and Max HP by 10%. Increases damage inflicted during PvP, and has a chance to decrease the range of bows/crossbows during an attack. -->
+		<!-- The attack power of dual bladed weapons, two-handed swords, two-handed blunt weapons and fighting weapons increases more than the regular one-handed swords when enchanted. When enchanted to 4 or more, Critical Attack increases by 109, and Max HP increases by 10%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -2106,7 +2106,7 @@
 		</for>
 	</item>
 	<item id="14463" type="Weapon" name="Vesper Cutter {PvP}">
-		<!-- It can bestow one of the following functions: Haste, Focus, or Health. Increases damage inflicted during PvP. Improves the chance of additional damage during an attack. -->
+		<!-- It can bestow one of the following three functions: Haste, Focus, or Health. Increases damage inflicted during PvP, and additional damage is applied occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_vesper_cutter_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2137,7 +2137,7 @@
 		</for>
 	</item>
 	<item id="14464" type="Weapon" name="Vesper Slasher {PvP}">
-		<!-- It can bestow one of the following three functions: Haste, Focus, or Health. Increases damage inflicted during PvP, and Casting Spd. increases at a fixed rate when being attacked. -->
+		<!-- It can bestow one of the following three functions: Haste, Focus, or Health. Increases damage inflicted during PvP, and Casting Spd. increases occasionally when being attacked. -->
 		<set name="icon" val="icon.weapon_vesper_slasher_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2168,7 +2168,7 @@
 		</for>
 	</item>
 	<item id="14465" type="Weapon" name="Vesper Buster {PvP}">
-		<!-- It can bestow one of the following functions: Acumen, Mana Up, or Magic Hold. Increases damage inflicted during PvP. Has a chance of canceling more than 1 of a target's enhanced status, or of decreasing a target's Shield Defense during an attack. -->
+		<!-- It can bestow one of the following three functions: Acumen, Mana Up, or Magic Hold. Increases damage inflicted during PvP, during an attack, cancels the opponent's enhanced status by more than 1 occasionally, or decreases the opponent's shield P. Def. -->
 		<set name="icon" val="icon.weapon_vesper_burster_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2200,7 +2200,7 @@
 		</for>
 	</item>
 	<item id="14466" type="Weapon" name="Vesper Shaper {PvP}">
-		<!-- It can bestow one of the following functions: Critical Damage, HP Drain, or Haste. Increases damage inflicted during PvP. Has a chance of canceling more than 1 of a target's enhanced status, or of decreasing a target's Shield Defense during an attack. -->
+		<!-- It can bestow one of the following three functions: Crt. Damage, HP Drain, or Haste. Increases damage inflicted during PvP, during an attack, cancels the opponent's enhanced status by more than 1 occasionally, or decreases the opponent's shield P. Def. -->
 		<set name="icon" val="icon.weapon_vesper_shaper_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -2232,7 +2232,7 @@
 		</for>
 	</item>
 	<item id="14467" type="Weapon" name="Vesper Fighter {PvP}">
-		<!-- It can bestow one of the following functions: Focus, Health, or Critical Stun. Increases damage inflicted during PvP. Improves the chance of additional damage during an attack. -->
+		<!-- It can bestow one of the following three functions: Focus, Health, or Crt. Stun. Increases damage inflicted during PvP, and additional damage is applied occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_vesper_fighter_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -2264,7 +2264,7 @@
 		</for>
 	</item>
 	<item id="14468" type="Weapon" name="Vesper Stormer {PvP}">
-		<!-- It can bestow one of the following functions: Health, Guidance, or Haste. Increases damage inflicted during PvP. Improves the chance of CP recovery during an attack. -->
+		<!-- It can bestow one of the following three functions: Health, Guidance, or Haste. Increases damage inflicted during PvP, and recovers CP occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_vesper_stormer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -2296,7 +2296,7 @@
 		</for>
 	</item>
 	<item id="14469" type="Weapon" name="Vesper Avenger {PvP}">
-		<!-- It can bestow one of the following functions: HP Regeneration, HP Drain, or Health. Increases damage inflicted during PvP. Improves the chance of CP recovery during an attack. -->
+		<!-- It can bestow one of the following three functions: HP Regeneration, HP Drain, or Health. Increases damage inflicted during PvP, and recovers CP occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_vesper_avenger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2328,7 +2328,7 @@
 		</for>
 	</item>
 	<item id="14470" type="Weapon" name="Vesper Retributer {PvP}">
-		<!-- It can bestow one of the following functions: HP Regeneration, HP Drain, or Health. Increases damage inflicted during PvP, and the chance to increase Casting Spd. when being attacked. -->
+		<!-- It can bestow one of the following three functions: HP Regeneration, HP Drain, or Health. Increases damage inflicted during PvP, and Casting Spd. increases occasionally when being attacked. -->
 		<set name="icon" val="icon.weapon_vesper_retributer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2360,7 +2360,7 @@
 		</for>
 	</item>
 	<item id="14471" type="Weapon" name="Vesper Caster {PvP}">
-		<!-- It can bestow one of the following functions: Acumen, MP Regeneration, or Mana Up. Increases damage inflicted during PvP, and the chance to increase Casting Spd. when being attacked. -->
+		<!-- It can bestow one of the following three functions: Acumen, MP Regeneration, or Mana Up. Increases damage inflicted during PvP, and Casting Spd. increases occasionally when being attacked. -->
 		<set name="icon" val="icon.weapon_vesper_caster_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2393,7 +2393,7 @@
 		</for>
 	</item>
 	<item id="14472" type="Weapon" name="Vesper Singer {PvP}">
-		<!-- It can bestow one of the following functions: Empower, MP Regeneration, or Magic Hold. Increases damage inflicted during PvP, and the chance to increase Atk. Spd. of bows/crossbows during an attack. -->
+		<!-- It can bestow one of the following three functions: Empower, MP Regeneration, or Magic Hold. Increases damage inflicted during PvP, and increases the Atk. Spd. of bows/crossbows occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_vesper_singer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2426,7 +2426,7 @@
 		</for>
 	</item>
 	<item id="14473" type="Weapon" name="Vesper Thrower {PvP}">
-		<!-- It can bestow one of the following functions: Cheap Shot, Critical Slow, or Focus. Increases damage inflicted during PvP, and decreases the range of bows/crossbows occasionally during an attack or decreases Resistance to attributes. -->
+		<!-- It can bestow one of the following three functions: Cheap Shot, Crt. Slow, or Focus. Increases damage inflicted during PvP, and decreases the range of bows/crossbows occasionally during an attack or decreases resistance to attributes. -->
 		<set name="icon" val="icon.weapon_vesper_thrower_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -2460,7 +2460,7 @@
 		</for>
 	</item>
 	<item id="14474" type="Weapon" name="Vesper Pincer {PvP}">
-		<!-- Kamael Exclusive Weapon: Vesper Cutter Conversion. Haste, Focus, or Health can be bestowed. When enchanted to 4 or more, there's a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of received heal and decreased MP consumption per skill during a critical attack. Increases damage inflicted during PvP, and decreases the range of bows/crossbows occasionally during an attack or decreases Resistance to attributes. -->
+		<!-- Kamael exclusive weapon Vesper Cutter Conversion. Haste, Focus, or Health can be bestowed. When enchanted over 4, party members including yourself can increase attack power, magic power and healing capacity occasionally and decrease MP consumption per skill during a critical attack. Increases damage inflicted during PvP, and decreases the range of bows/crossbows occasionally during an attack or decreases resistance to attributes. -->
 		<set name="icon" val="icon.weapon_vesper_pincer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2496,7 +2496,7 @@
 		</for>
 	</item>
 	<item id="14475" type="Weapon" name="Vesper Shooter {PvP}">
-		<!-- Kamael Exclusive Weapon: Vesper Thrower Conversion. Cheap Shot, Critical Slow, or Focus can be bestowed. Increases damage inflicted during PvP. Has a chance of canceling more than 1 of a target's enhanced status, or of decreasing a target's Shield Defense during an attack. -->
+		<!-- Kamael exclusive weapon Vesper Thrower Conversion. Cheap Shot, Crt. Slow, or Focus can be bestowed. Increases damage inflicted during PvP, during an attack, cancels the opponent's enhanced status by more than 1 occasionally, or decreases the opponent's shield P. Def. -->
 		<set name="icon" val="icon.weapon_vesper_schutze_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -2532,7 +2532,7 @@
 		</for>
 	</item>
 	<item id="14476" type="Weapon" name="Vesper Nagan {PvP}">
-		<!-- Kamael Exclusive Weapon: Vesper Slasher Conversion. Haste, Focus, or Health can be bestowed. Increases damage inflicted during PvP. Improves the chance of additional damage during an attack. -->
+		<!-- Kamael exclusive weapon Vesper Slasher Conversion. Haste, Focus, or Health can be bestowed. Increases damage inflicted during PvP, and additional damage is applied occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_vesper_nagen_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -2567,7 +2567,7 @@
 		</for>
 	</item>
 	<item id="14477" type="Weapon" name="Vesper Dual Daggers {PvP}">
-		<!-- Dual daggers, P. Atk. increases by more than regular one-handed swords when enchanted. Increases damage inflicted during PvP. Has a chance of canceling more than 1 of a target's enhanced status, or of decreasing a target's Shield Defense during an attack. Can be equipped by Dagger Masters above level 81. Increases damage inflicted during PvP. -->
+		<!-- Dagger dualswords, the attack power increases by more than regular one-handed swords when enchanted. Increases damage inflicted during PvP, during an attack, cancels the opponent's enhanced status by more than 1 occasionally, or decreases the opponent's shield P. Def. Can be equipped by Dagger Masters above level 81. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALDAGGER" />
@@ -2606,7 +2606,7 @@
 		</for>
 	</item>
 	<item id="14478" type="Weapon" name="Vesper Cutter {PvP} - Haste">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 11%. Increases damage inflicted during PvP. Improves the chance of CP recovery during an attack. -->
+		<!-- <Soul Crystal Enhancement>. Atk. Spd. increases by about 9%. Increases damage inflicted during PvP, and recovers CP occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_vesper_cutter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2637,7 +2637,7 @@
 		</for>
 	</item>
 	<item id="14479" type="Weapon" name="Vesper Cutter {PvP} - Health">
-		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. Improves the chance of CP recovery during an attack. -->
+		<!-- <Soul Crystal Enhancement>. Max HP by 25%. Increases damage inflicted during PvP, and recovers CP occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_vesper_cutter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2668,7 +2668,7 @@
 		</for>
 	</item>
 	<item id="14480" type="Weapon" name="Vesper Cutter {PvP} - Focus">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 131. Increases damage inflicted during PvP. Improves the chance of CP recovery during an attack. -->
+		<!-- <Soul Crystal Enhancement>. critical attack increases by 100. Increases damage inflicted during PvP, and recovers CP occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_vesper_cutter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2699,7 +2699,7 @@
 		</for>
 	</item>
 	<item id="14481" type="Weapon" name="Vesper Slasher {PvP} - Haste">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 11%. Increases damage inflicted during PvP. Improves the chance of additional damage during an attack. -->
+		<!-- <Soul Crystal Enhancement>. Atk. Spd. increases by about 9%. Increases damage inflicted during PvP, and additional damage is applied occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_vesper_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2730,7 +2730,7 @@
 		</for>
 	</item>
 	<item id="14482" type="Weapon" name="Vesper Slasher {PvP} - Health">
-		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. Improves the chance of additional damage during an attack. -->
+		<!-- <Soul Crystal Enhancement>. Max HP by 25%. Increases damage inflicted during PvP, and additional damage is applied occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_vesper_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2761,7 +2761,7 @@
 		</for>
 	</item>
 	<item id="14483" type="Weapon" name="Vesper Slasher {PvP} - Focus">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 131. Increases damage inflicted during PvP. Improves the chance of additional damage during an attack. -->
+		<!-- <Soul Crystal Enhancement>. critical attack increases by 100. Increases damage inflicted during PvP, and additional damage is applied occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_vesper_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2792,7 +2792,7 @@
 		</for>
 	</item>
 	<item id="14484" type="Weapon" name="Vesper Buster {PvP} - Mana Up">
-		<!-- <Soul Crystal Enhancement>. Max MP by 30%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when being attacked. -->
+		<!-- <Soul Crystal Enhancement>. Max MP by 30%. Increases damage inflicted during PvP, and Casting Spd. increases occasionally when being attacked. -->
 		<set name="icon" val="icon.weapon_vesper_burster_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2824,7 +2824,7 @@
 		</for>
 	</item>
 	<item id="14485" type="Weapon" name="Vesper Buster {PvP} - Acumen">
-		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when being attacked. -->
+		<!-- <Soul Crystal Enhancement>. Casting Spd by 15%. Increases damage inflicted during PvP, and Casting Spd. increases occasionally when being attacked. -->
 		<set name="icon" val="icon.weapon_vesper_burster_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2856,7 +2856,7 @@
 		</for>
 	</item>
 	<item id="14486" type="Weapon" name="Vesper Buster {PvP} - Magic Hold">
-		<!-- <Soul Crystal Enhancement>. Has a 20% chance of casting Dryad Root when using a magic skill on the target. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when being attacked. -->
+		<!-- <Soul Crystal Enhancement>. Has a 20% chance of casting Dryad Root when using a magic skill on the target. Increases damage inflicted during PvP, and Casting Spd. increases occasionally when being attacked. -->
 		<set name="icon" val="icon.weapon_vesper_burster_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2890,7 +2890,7 @@
 		</for>
 	</item>
 	<item id="14487" type="Weapon" name="Vesper Shaper {PvP} - Critical Damage">
-		<!-- <Soul Crystal Enhancement>. Increases P. Atk. by 906 during a critical attack. Increases damage inflicted during PvP. During an attack, it has a chance of canceling a target's enhanced status by more than 1, or to decrease a target's Shield Defense. -->
+		<!-- <Soul Crystal Enhancement>Increases P. Atk. by 665 during a critical attack. . Increases damage inflicted during PvP, during an attack, cancels the opponent's enhanced status by more than 1 occasionally, or decreases the opponent's shield P. Def. -->
 		<set name="icon" val="icon.weapon_vesper_shaper_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -2922,7 +2922,7 @@
 		</for>
 	</item>
 	<item id="14488" type="Weapon" name="Vesper Shaper {PvP} - HP Drain">
-		<!-- <Soul Crystal Enhancement>. Restores 4% of melee damage inflicted upon the enemy to your own HP. Increases damage inflicted during PvP. Has a chance of canceling more than 1 of a target's enhanced status, or of decreasing a target's Shield Defense during an attack. -->
+		<!-- <Soul Crystal Enhancement>. 4% of the damage inflicted on the enemy with a close range general physical attack is recovered as HP. Increases damage inflicted during PvP, during an attack, cancels the opponent's enhanced status by more than 1 occasionally, or decreases the opponent's shield P. Def. -->
 		<set name="icon" val="icon.weapon_vesper_shaper_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -2954,7 +2954,7 @@
 		</for>
 	</item>
 	<item id="14489" type="Weapon" name="Vesper Shaper {PvP} - Haste">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 11%. Increases damage inflicted during PvP. During an attack, it has a chance of canceling a target's enhanced status by more than 1, or to decrease a target's Shield Defense. -->
+		<!-- <Soul Crystal Enhancement>. Atk. Spd. increases by about 9%. Increases damage inflicted during PvP, during an attack, cancels the opponent's enhanced status by more than 1 occasionally, or decreases the opponent's shield P. Def. -->
 		<set name="icon" val="icon.weapon_vesper_shaper_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -2986,7 +2986,7 @@
 		</for>
 	</item>
 	<item id="14490" type="Weapon" name="Vesper Fighter {PvP} - Focus">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 123. Increases damage inflicted during PvP. During an attack, it has a chance of canceling a target's enhanced status by more than 1, or to decrease a target's Shield Defense. -->
+		<!-- <Soul Crystal Enhancement>. critical attack increases by 96. Increases damage inflicted during PvP, during an attack, cancels the opponent's enhanced status by more than 1 occasionally, or decreases the opponent's shield P. Def. -->
 		<set name="icon" val="icon.weapon_vesper_fighter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -3018,7 +3018,7 @@
 		</for>
 	</item>
 	<item id="14491" type="Weapon" name="Vesper Fighter {PvP} - Health">
-		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of canceling more than 1 of a target's enhanced status, or of decreasing a target's Shield Defense during an attack. -->
+		<!-- <Soul Crystal Enhancement>. Max HP by 25%. Increases damage inflicted during PvP, during an attack, cancels the opponent's enhanced status by more than 1 occasionally, or decreases the opponent's shield P. Def. -->
 		<set name="icon" val="icon.weapon_vesper_fighter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -3050,7 +3050,7 @@
 		</for>
 	</item>
 	<item id="14492" type="Weapon" name="Vesper Fighter {PvP} - Critical Stun">
-		<!-- <Soul Crystal Enhancement>. There is about 43% chance of afflicting Stun during a critical attack. Increases damage inflicted during PvP, during an attack, cancels a target's enhanced status by more than 1 occasionally, or decreases a target's Shield Defense. -->
+		<!-- <Soul Crystal Enhancement>is about 43% probability that Stun effect is applied during a . critical attack. Increases damage inflicted during PvP, during an attack, cancels the opponent's enhanced status by more than 1 occasionally, or decreases the opponent's shield P. Def. -->
 		<set name="icon" val="icon.weapon_vesper_fighter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -3083,7 +3083,7 @@
 		</for>
 	</item>
 	<item id="14493" type="Weapon" name="Vesper Stormer {PvP} - Health">
-		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. Improves the chance of additional damage during an attack. -->
+		<!-- <Soul Crystal Enhancement>. Max HP by 25%. Increases damage inflicted during PvP, and additional damage is applied occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_vesper_stormer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -3115,7 +3115,7 @@
 		</for>
 	</item>
 	<item id="14494" type="Weapon" name="Vesper Stormer {PvP} - Guidance">
-		<!-- <Soul Crystal Enhancement>. Increases Accuracy by 75 during a critical attack. Increases damage inflicted during PvP. Improves the chance of additional damage during an attack. -->
+		<!-- <Soul Crystal Enhancement>. Accuracy increases by 75 during a critical attack. Increases damage inflicted during PvP, and additional damage is applied occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_vesper_stormer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -3147,7 +3147,7 @@
 		</for>
 	</item>
 	<item id="14495" type="Weapon" name="Vesper Stormer {PvP} - Haste">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 11%. Increases damage inflicted during PvP. Improves the chance of additional damage during an attack. -->
+		<!-- <Soul Crystal Enhancement>. Atk. Spd. increases by about 9%. Increases damage inflicted during PvP, and additional damage is applied occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_vesper_stormer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -3179,7 +3179,7 @@
 		</for>
 	</item>
 	<item id="14496" type="Weapon" name="Vesper Avenger {PvP} - HP Drain">
-		<!-- <Soul Crystal Enhancement>. Restores 4% of melee damage inflicted upon the enemy to your own HP. Increases damage inflicted during PvP. Improves the chance of CP recovery during an attack. -->
+		<!-- <Soul Crystal Enhancement>. 4% of the damage inflicted on the enemy with a close range general physical attack is recovered as HP. Increases damage inflicted during PvP, and recovers CP occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_vesper_avenger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -3211,7 +3211,7 @@
 		</for>
 	</item>
 	<item id="14497" type="Weapon" name="Vesper Avenger {PvP} - Health">
-		<!-- <Soul Crystal Enhancement>. Max HP increases by 25%. Increases damage inflicted during PvP. Improves the chance of CP recovery during an attack. -->
+		<!-- <Soul Crystal Enhancement>. Max HP increases by 25%. Increases damage inflicted during PvP, and recovers CP occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_vesper_avenger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -3243,7 +3243,7 @@
 		</for>
 	</item>
 	<item id="14498" type="Weapon" name="Vesper Avenger {PvP} - HP Regeneration">
-		<!-- <Soul Crystal Enhancement>. Increases HP Recovery Rate. Increases damage inflicted during PvP. Improves the chance of CP recovery during an attack. -->
+		<!-- <Soul Crystal Enhancement>. HP recovery speed improves. Increases damage inflicted during PvP, and recovers CP occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_vesper_avenger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -3275,7 +3275,7 @@
 		</for>
 	</item>
 	<item id="14499" type="Weapon" name="Vesper Retributer {PvP} - HP Regeneration">
-		<!-- <Soul Crystal Enhancement>. Increases HP Recovery Rate. Increases damage inflicted during PvP. Improves the chance of additional damage during an attack. -->
+		<!-- <Soul Crystal Enhancement>. HP recovery speed improves. Increases damage inflicted during PvP, and additional damage is applied occasionally during an attack. -->
 		<set name="icon" val="icon.weapon_vesper_retributer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />

@@ -2,19 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
 	<!-- Spellsinger -->
 	<skillTree type="classSkillTree" classId="27" parentClassId="26">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="1" getLevel="52" learnedByNpc="true">
-			<item id="8618" count="1" />
-		</skill>
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="2" getLevel="61" learnedByNpc="true">
-			<item id="8619" count="1" />
-		</skill>
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="3" getLevel="76" learnedByNpc="true">
-			<item id="8620" count="1" />
-		</skill>
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="4" getLevel="76" learnedByNpc="true">
-			<item id="8621" count="1" />
-		</skill>
+		<!-- Confirmed CT2.5 -->
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="10" getLevel="40" levelUpSp="9000" learnedByNpc="true" />
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="11" getLevel="40" levelUpSp="9000" learnedByNpc="true" />
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="12" getLevel="40" levelUpSp="9000" learnedByNpc="true" />
@@ -29,6 +17,135 @@
 		<skill skillName="Boost Mana" skillId="213" skillLvl="3" getLevel="40" levelUpSp="27000" learnedByNpc="true" />
 		<skill skillName="Fast Spell Casting" skillId="228" skillLvl="2" getLevel="40" levelUpSp="27000" learnedByNpc="true" />
 		<skill skillName="Clear Mind" skillId="1297" skillLvl="1" getLevel="40" levelUpSp="27000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="13" getLevel="44" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="14" getLevel="44" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="15" getLevel="44" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="12" getLevel="44" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="13" getLevel="44" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="14" getLevel="44" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="16" getLevel="44" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="17" getLevel="44" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="18" getLevel="44" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Higher Mana Gain" skillId="285" skillLvl="11" getLevel="44" levelUpSp="18000" learnedByNpc="true" />
+		<skill skillName="Higher Mana Gain" skillId="285" skillLvl="12" getLevel="44" levelUpSp="18000" learnedByNpc="true" />
+		<skill skillName="Fast HP Recovery" skillId="212" skillLvl="2" getLevel="44" levelUpSp="35000" learnedByNpc="true" />
+		<skill skillName="Fast Mana Recovery" skillId="229" skillLvl="3" getLevel="44" levelUpSp="35000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="16" getLevel="48" levelUpSp="19000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="17" getLevel="48" levelUpSp="19000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="18" getLevel="48" levelUpSp="19000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="15" getLevel="48" levelUpSp="19000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="16" getLevel="48" levelUpSp="19000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="17" getLevel="48" levelUpSp="19000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="19" getLevel="48" levelUpSp="19000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="20" getLevel="48" levelUpSp="19000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="21" getLevel="48" levelUpSp="19000" learnedByNpc="true" />
+		<skill skillName="Higher Mana Gain" skillId="285" skillLvl="13" getLevel="48" levelUpSp="29000" learnedByNpc="true" />
+		<skill skillName="Higher Mana Gain" skillId="285" skillLvl="14" getLevel="48" levelUpSp="29000" learnedByNpc="true" />
+		<skill skillName="Boost Mana" skillId="213" skillLvl="4" getLevel="48" levelUpSp="57000" learnedByNpc="true" />
+		<skill skillName="Quick Recycle" skillId="164" skillLvl="3" getLevel="48" levelUpSp="57000" learnedByNpc="true" />
+		<skill skillName="Clear Mind" skillId="1297" skillLvl="2" getLevel="48" levelUpSp="57000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="19" getLevel="52" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="20" getLevel="52" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="21" getLevel="52" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="18" getLevel="52" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="19" getLevel="52" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="20" getLevel="52" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="22" getLevel="52" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="23" getLevel="52" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="24" getLevel="52" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Higher Mana Gain" skillId="285" skillLvl="15" getLevel="52" levelUpSp="45000" learnedByNpc="true" />
+		<skill skillName="Higher Mana Gain" skillId="285" skillLvl="16" getLevel="52" levelUpSp="45000" learnedByNpc="true" />
+		<skill skillName="Fast HP Recovery" skillId="212" skillLvl="3" getLevel="52" levelUpSp="90000" learnedByNpc="true" />
+		<skill skillName="Fast Mana Recovery" skillId="229" skillLvl="4" getLevel="52" levelUpSp="90000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="22" getLevel="56" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="23" getLevel="56" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="24" getLevel="56" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="21" getLevel="56" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="22" getLevel="56" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="23" getLevel="56" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="25" getLevel="56" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="26" getLevel="56" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="27" getLevel="56" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Higher Mana Gain" skillId="285" skillLvl="17" getLevel="56" levelUpSp="45000" learnedByNpc="true" />
+		<skill skillName="Higher Mana Gain" skillId="285" skillLvl="18" getLevel="56" levelUpSp="45000" learnedByNpc="true" />
+		<skill skillName="Boost Mana" skillId="213" skillLvl="5" getLevel="56" levelUpSp="91000" learnedByNpc="true" />
+		<skill skillName="Fast Spell Casting" skillId="228" skillLvl="3" getLevel="56" levelUpSp="91000" learnedByNpc="true" />
+		<skill skillName="Clear Mind" skillId="1297" skillLvl="3" getLevel="56" levelUpSp="91000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="25" getLevel="58" levelUpSp="55000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="26" getLevel="58" levelUpSp="55000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="24" getLevel="58" levelUpSp="55000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="25" getLevel="58" levelUpSp="55000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="28" getLevel="58" levelUpSp="55000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="29" getLevel="58" levelUpSp="55000" learnedByNpc="true" />
+		<skill skillName="Higher Mana Gain" skillId="285" skillLvl="19" getLevel="58" levelUpSp="110000" learnedByNpc="true" />
+		<skill skillName="Fast HP Recovery" skillId="212" skillLvl="4" getLevel="58" levelUpSp="110000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="27" getLevel="60" levelUpSp="71000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="28" getLevel="60" levelUpSp="71000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="26" getLevel="60" levelUpSp="71000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="27" getLevel="60" levelUpSp="71000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="30" getLevel="60" levelUpSp="71000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="31" getLevel="60" levelUpSp="71000" learnedByNpc="true" />
+		<skill skillName="Higher Mana Gain" skillId="285" skillLvl="20" getLevel="60" levelUpSp="143000" learnedByNpc="true" />
+		<skill skillName="Boost Mana" skillId="213" skillLvl="6" getLevel="60" levelUpSp="143000" learnedByNpc="true" />
+		<skill skillName="Fast Mana Recovery" skillId="229" skillLvl="5" getLevel="60" levelUpSp="143000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="29" getLevel="62" levelUpSp="100000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="30" getLevel="62" levelUpSp="100000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="28" getLevel="62" levelUpSp="100000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="29" getLevel="62" levelUpSp="100000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="32" getLevel="62" levelUpSp="100000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="33" getLevel="62" levelUpSp="100000" learnedByNpc="true" />
+		<skill skillName="Higher Mana Gain" skillId="285" skillLvl="21" getLevel="62" levelUpSp="190000" learnedByNpc="true" />
+		<skill skillName="Clear Mind" skillId="1297" skillLvl="4" getLevel="62" levelUpSp="190000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="31" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="32" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="30" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="31" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="34" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="35" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
+		<skill skillName="Higher Mana Gain" skillId="285" skillLvl="22" getLevel="64" levelUpSp="240000" learnedByNpc="true" />
+		<skill skillName="Fast HP Recovery" skillId="212" skillLvl="5" getLevel="64" levelUpSp="240000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="33" getLevel="66" levelUpSp="160000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="34" getLevel="66" levelUpSp="160000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="32" getLevel="66" levelUpSp="160000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="33" getLevel="66" levelUpSp="160000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="36" getLevel="66" levelUpSp="160000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="37" getLevel="66" levelUpSp="160000" learnedByNpc="true" />
+		<skill skillName="Higher Mana Gain" skillId="285" skillLvl="23" getLevel="66" levelUpSp="320000" learnedByNpc="true" />
+		<skill skillName="Boost Mana" skillId="213" skillLvl="7" getLevel="66" levelUpSp="320000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="35" getLevel="68" levelUpSp="180000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="36" getLevel="68" levelUpSp="180000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="34" getLevel="68" levelUpSp="180000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="35" getLevel="68" levelUpSp="180000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="38" getLevel="68" levelUpSp="180000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="39" getLevel="68" levelUpSp="180000" learnedByNpc="true" />
+		<skill skillName="Higher Mana Gain" skillId="285" skillLvl="24" getLevel="68" levelUpSp="370000" learnedByNpc="true" />
+		<skill skillName="Fast Mana Recovery" skillId="229" skillLvl="6" getLevel="68" levelUpSp="370000" learnedByNpc="true" />
+		<skill skillName="Clear Mind" skillId="1297" skillLvl="5" getLevel="68" levelUpSp="370000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="37" getLevel="70" levelUpSp="210000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="38" getLevel="70" levelUpSp="210000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="36" getLevel="70" levelUpSp="210000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="37" getLevel="70" levelUpSp="210000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="40" getLevel="70" levelUpSp="210000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="41" getLevel="70" levelUpSp="210000" learnedByNpc="true" />
+		<skill skillName="Higher Mana Gain" skillId="285" skillLvl="25" getLevel="70" levelUpSp="430000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="39" getLevel="72" levelUpSp="380000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="40" getLevel="72" levelUpSp="380000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="38" getLevel="72" levelUpSp="380000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="39" getLevel="72" levelUpSp="380000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="42" getLevel="72" levelUpSp="380000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="43" getLevel="72" levelUpSp="380000" learnedByNpc="true" />
+		<skill skillName="Higher Mana Gain" skillId="285" skillLvl="26" getLevel="72" levelUpSp="750000" learnedByNpc="true" />
+		<skill skillName="Boost Mana" skillId="213" skillLvl="8" getLevel="72" levelUpSp="750000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="41" getLevel="74" levelUpSp="500000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="42" getLevel="74" levelUpSp="500000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="40" getLevel="74" levelUpSp="500000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="234" skillLvl="41" getLevel="74" levelUpSp="500000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="44" getLevel="74" levelUpSp="500000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="45" getLevel="74" levelUpSp="500000" learnedByNpc="true" />
+		<skill skillName="Higher Mana Gain" skillId="285" skillLvl="27" getLevel="74" levelUpSp="1000000" learnedByNpc="true" />
+		<skill skillName="Fast HP Recovery" skillId="212" skillLvl="6" getLevel="74" levelUpSp="1000000" learnedByNpc="true" />
+		<skill skillName="Fast Mana Recovery" skillId="229" skillLvl="7" getLevel="74" levelUpSp="1000000" learnedByNpc="true" />
+		<skill skillName="Clear Mind" skillId="1297" skillLvl="6" getLevel="74" levelUpSp="1000000" learnedByNpc="true" />
 		<skill skillName="Aura Flare" skillId="1231" skillLvl="1" getLevel="40" levelUpSp="14000" learnedByNpc="true" />
 		<skill skillName="Aura Flare" skillId="1231" skillLvl="2" getLevel="40" levelUpSp="14000" learnedByNpc="true" />
 		<skill skillName="Sleep" skillId="1069" skillLvl="10" getLevel="40" levelUpSp="9000" learnedByNpc="true" />
@@ -47,19 +164,6 @@
 		<skill skillName="Freezing Skin" skillId="1238" skillLvl="1" getLevel="40" levelUpSp="27000" learnedByNpc="true" />
 		<skill skillName="Mana Regeneration" skillId="1047" skillLvl="1" getLevel="40" levelUpSp="27000" learnedByNpc="true" />
 		<skill skillName="Curse Fear" skillId="1169" skillLvl="1" getLevel="40" levelUpSp="27000" learnedByNpc="true" />
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="13" getLevel="44" levelUpSp="12000" learnedByNpc="true" />
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="14" getLevel="44" levelUpSp="12000" learnedByNpc="true" />
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="15" getLevel="44" levelUpSp="12000" learnedByNpc="true" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="12" getLevel="44" levelUpSp="12000" learnedByNpc="true" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="13" getLevel="44" levelUpSp="12000" learnedByNpc="true" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="14" getLevel="44" levelUpSp="12000" learnedByNpc="true" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="16" getLevel="44" levelUpSp="12000" learnedByNpc="true" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="17" getLevel="44" levelUpSp="12000" learnedByNpc="true" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="18" getLevel="44" levelUpSp="12000" learnedByNpc="true" />
-		<skill skillName="Higher Mana Gain" skillId="285" skillLvl="11" getLevel="44" levelUpSp="18000" learnedByNpc="true" />
-		<skill skillName="Higher Mana Gain" skillId="285" skillLvl="12" getLevel="44" levelUpSp="18000" learnedByNpc="true" />
-		<skill skillName="Fast HP Recovery" skillId="212" skillLvl="2" getLevel="44" levelUpSp="35000" learnedByNpc="true" />
-		<skill skillName="Fast Mana Recovery" skillId="229" skillLvl="3" getLevel="44" levelUpSp="35000" learnedByNpc="true" />
 		<skill skillName="Aura Flare" skillId="1231" skillLvl="3" getLevel="44" levelUpSp="18000" learnedByNpc="true" />
 		<skill skillName="Aura Flare" skillId="1231" skillLvl="4" getLevel="44" levelUpSp="18000" learnedByNpc="true" />
 		<skill skillName="Sleep" skillId="1069" skillLvl="13" getLevel="44" levelUpSp="12000" learnedByNpc="true" />
@@ -80,20 +184,6 @@
 		<skill skillName="Sleeping Cloud" skillId="1072" skillLvl="1" getLevel="44" levelUpSp="35000" learnedByNpc="true" />
 		<skill skillName="Freezing Shackle" skillId="1183" skillLvl="1" getLevel="44" levelUpSp="35000" learnedByNpc="true" />
 		<skill skillName="Curse Fear" skillId="1169" skillLvl="2" getLevel="44" levelUpSp="35000" learnedByNpc="true" />
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="16" getLevel="48" levelUpSp="19000" learnedByNpc="true" />
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="17" getLevel="48" levelUpSp="19000" learnedByNpc="true" />
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="18" getLevel="48" levelUpSp="19000" learnedByNpc="true" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="15" getLevel="48" levelUpSp="19000" learnedByNpc="true" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="16" getLevel="48" levelUpSp="19000" learnedByNpc="true" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="17" getLevel="48" levelUpSp="19000" learnedByNpc="true" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="19" getLevel="48" levelUpSp="19000" learnedByNpc="true" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="20" getLevel="48" levelUpSp="19000" learnedByNpc="true" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="21" getLevel="48" levelUpSp="19000" learnedByNpc="true" />
-		<skill skillName="Higher Mana Gain" skillId="285" skillLvl="13" getLevel="48" levelUpSp="29000" learnedByNpc="true" />
-		<skill skillName="Higher Mana Gain" skillId="285" skillLvl="14" getLevel="48" levelUpSp="29000" learnedByNpc="true" />
-		<skill skillName="Boost Mana" skillId="213" skillLvl="4" getLevel="48" levelUpSp="57000" learnedByNpc="true" />
-		<skill skillName="Quick Recycle" skillId="164" skillLvl="3" getLevel="48" levelUpSp="57000" learnedByNpc="true" />
-		<skill skillName="Clear Mind" skillId="1297" skillLvl="2" getLevel="48" levelUpSp="57000" learnedByNpc="true" />
 		<skill skillName="Aura Flare" skillId="1231" skillLvl="5" getLevel="48" levelUpSp="29000" learnedByNpc="true" />
 		<skill skillName="Aura Flare" skillId="1231" skillLvl="6" getLevel="48" levelUpSp="29000" learnedByNpc="true" />
 		<skill skillName="Sleep" skillId="1069" skillLvl="16" getLevel="48" levelUpSp="19000" learnedByNpc="true" />
@@ -114,19 +204,6 @@
 		<skill skillName="Freezing Skin" skillId="1238" skillLvl="2" getLevel="48" levelUpSp="57000" learnedByNpc="true" />
 		<skill skillName="Mana Regeneration" skillId="1047" skillLvl="2" getLevel="48" levelUpSp="57000" learnedByNpc="true" />
 		<skill skillName="Curse Fear" skillId="1169" skillLvl="3" getLevel="48" levelUpSp="57000" learnedByNpc="true" />
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="19" getLevel="52" levelUpSp="30000" learnedByNpc="true" />
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="20" getLevel="52" levelUpSp="30000" learnedByNpc="true" />
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="21" getLevel="52" levelUpSp="30000" learnedByNpc="true" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="18" getLevel="52" levelUpSp="30000" learnedByNpc="true" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="19" getLevel="52" levelUpSp="30000" learnedByNpc="true" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="20" getLevel="52" levelUpSp="30000" learnedByNpc="true" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="22" getLevel="52" levelUpSp="30000" learnedByNpc="true" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="23" getLevel="52" levelUpSp="30000" learnedByNpc="true" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="24" getLevel="52" levelUpSp="30000" learnedByNpc="true" />
-		<skill skillName="Higher Mana Gain" skillId="285" skillLvl="15" getLevel="52" levelUpSp="45000" learnedByNpc="true" />
-		<skill skillName="Higher Mana Gain" skillId="285" skillLvl="16" getLevel="52" levelUpSp="45000" learnedByNpc="true" />
-		<skill skillName="Fast HP Recovery" skillId="212" skillLvl="3" getLevel="52" levelUpSp="90000" learnedByNpc="true" />
-		<skill skillName="Fast Mana Recovery" skillId="229" skillLvl="4" getLevel="52" levelUpSp="90000" learnedByNpc="true" />
 		<skill skillName="Aura Flare" skillId="1231" skillLvl="7" getLevel="52" levelUpSp="45000" learnedByNpc="true" />
 		<skill skillName="Aura Flare" skillId="1231" skillLvl="8" getLevel="52" levelUpSp="45000" learnedByNpc="true" />
 		<skill skillName="Sleep" skillId="1069" skillLvl="19" getLevel="52" levelUpSp="30000" learnedByNpc="true" />
@@ -148,20 +225,6 @@
 		<skill skillName="Cancellation" skillId="1056" skillLvl="2" getLevel="52" levelUpSp="90000" learnedByNpc="true" />
 		<skill skillName="Freezing Shackle" skillId="1183" skillLvl="2" getLevel="52" levelUpSp="90000" learnedByNpc="true" />
 		<skill skillName="Curse Fear" skillId="1169" skillLvl="4" getLevel="52" levelUpSp="90000" learnedByNpc="true" />
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="22" getLevel="56" levelUpSp="30000" learnedByNpc="true" />
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="23" getLevel="56" levelUpSp="30000" learnedByNpc="true" />
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="24" getLevel="56" levelUpSp="30000" learnedByNpc="true" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="21" getLevel="56" levelUpSp="30000" learnedByNpc="true" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="22" getLevel="56" levelUpSp="30000" learnedByNpc="true" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="23" getLevel="56" levelUpSp="30000" learnedByNpc="true" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="25" getLevel="56" levelUpSp="30000" learnedByNpc="true" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="26" getLevel="56" levelUpSp="30000" learnedByNpc="true" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="27" getLevel="56" levelUpSp="30000" learnedByNpc="true" />
-		<skill skillName="Higher Mana Gain" skillId="285" skillLvl="17" getLevel="56" levelUpSp="45000" learnedByNpc="true" />
-		<skill skillName="Higher Mana Gain" skillId="285" skillLvl="18" getLevel="56" levelUpSp="45000" learnedByNpc="true" />
-		<skill skillName="Boost Mana" skillId="213" skillLvl="5" getLevel="56" levelUpSp="91000" learnedByNpc="true" />
-		<skill skillName="Fast Spell Casting" skillId="228" skillLvl="3" getLevel="56" levelUpSp="91000" learnedByNpc="true" />
-		<skill skillName="Clear Mind" skillId="1297" skillLvl="3" getLevel="56" levelUpSp="91000" learnedByNpc="true" />
 		<skill skillName="Aura Flare" skillId="1231" skillLvl="9" getLevel="56" levelUpSp="45000" learnedByNpc="true" />
 		<skill skillName="Aura Flare" skillId="1231" skillLvl="10" getLevel="56" levelUpSp="45000" learnedByNpc="true" />
 		<skill skillName="Sleep" skillId="1069" skillLvl="22" getLevel="56" levelUpSp="30000" learnedByNpc="true" />
@@ -184,14 +247,6 @@
 		<skill skillName="Freezing Skin" skillId="1238" skillLvl="3" getLevel="56" levelUpSp="91000" learnedByNpc="true" />
 		<skill skillName="Sleeping Cloud" skillId="1072" skillLvl="2" getLevel="56" levelUpSp="91000" learnedByNpc="true" />
 		<skill skillName="Curse Fear" skillId="1169" skillLvl="5" getLevel="56" levelUpSp="91000" learnedByNpc="true" />
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="25" getLevel="58" levelUpSp="55000" learnedByNpc="true" />
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="26" getLevel="58" levelUpSp="55000" learnedByNpc="true" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="24" getLevel="58" levelUpSp="55000" learnedByNpc="true" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="25" getLevel="58" levelUpSp="55000" learnedByNpc="true" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="28" getLevel="58" levelUpSp="55000" learnedByNpc="true" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="29" getLevel="58" levelUpSp="55000" learnedByNpc="true" />
-		<skill skillName="Higher Mana Gain" skillId="285" skillLvl="19" getLevel="58" levelUpSp="110000" learnedByNpc="true" />
-		<skill skillName="Fast HP Recovery" skillId="212" skillLvl="4" getLevel="58" levelUpSp="110000" learnedByNpc="true" />
 		<skill skillName="Aura Flare" skillId="1231" skillLvl="11" getLevel="58" levelUpSp="55000" learnedByNpc="true" />
 		<skill skillName="Aura Flare" skillId="1231" skillLvl="12" getLevel="58" levelUpSp="55000" learnedByNpc="true" />
 		<skill skillName="Sleep" skillId="1069" skillLvl="25" getLevel="58" levelUpSp="55000" learnedByNpc="true" />
@@ -211,15 +266,6 @@
 		<skill skillName="Aqua Splash" skillId="1295" skillLvl="1" getLevel="58" levelUpSp="110000" learnedByNpc="true" />
 		<skill skillName="Curse Fear" skillId="1169" skillLvl="6" getLevel="58" levelUpSp="110000" learnedByNpc="true" />
 		<skill skillName="Aura Flash" skillId="1417" skillLvl="1" getLevel="58" levelUpSp="110000" learnedByNpc="true" />
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="27" getLevel="60" levelUpSp="71000" learnedByNpc="true" />
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="28" getLevel="60" levelUpSp="71000" learnedByNpc="true" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="26" getLevel="60" levelUpSp="71000" learnedByNpc="true" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="27" getLevel="60" levelUpSp="71000" learnedByNpc="true" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="30" getLevel="60" levelUpSp="71000" learnedByNpc="true" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="31" getLevel="60" levelUpSp="71000" learnedByNpc="true" />
-		<skill skillName="Higher Mana Gain" skillId="285" skillLvl="20" getLevel="60" levelUpSp="143000" learnedByNpc="true" />
-		<skill skillName="Boost Mana" skillId="213" skillLvl="6" getLevel="60" levelUpSp="143000" learnedByNpc="true" />
-		<skill skillName="Fast Mana Recovery" skillId="229" skillLvl="5" getLevel="60" levelUpSp="143000" learnedByNpc="true" />
 		<skill skillName="Aura Flare" skillId="1231" skillLvl="13" getLevel="60" levelUpSp="71000" learnedByNpc="true" />
 		<skill skillName="Aura Flare" skillId="1231" skillLvl="14" getLevel="60" levelUpSp="71000" learnedByNpc="true" />
 		<skill skillName="Sleep" skillId="1069" skillLvl="27" getLevel="60" levelUpSp="71000" learnedByNpc="true" />
@@ -239,14 +285,6 @@
 		<skill skillName="Mana Regeneration" skillId="1047" skillLvl="3" getLevel="60" levelUpSp="143000" learnedByNpc="true" />
 		<skill skillName="Aqua Splash" skillId="1295" skillLvl="2" getLevel="60" levelUpSp="143000" learnedByNpc="true" />
 		<skill skillName="Curse Fear" skillId="1169" skillLvl="7" getLevel="60" levelUpSp="143000" learnedByNpc="true" />
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="29" getLevel="62" levelUpSp="100000" learnedByNpc="true" />
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="30" getLevel="62" levelUpSp="100000" learnedByNpc="true" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="28" getLevel="62" levelUpSp="100000" learnedByNpc="true" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="29" getLevel="62" levelUpSp="100000" learnedByNpc="true" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="32" getLevel="62" levelUpSp="100000" learnedByNpc="true" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="33" getLevel="62" levelUpSp="100000" learnedByNpc="true" />
-		<skill skillName="Higher Mana Gain" skillId="285" skillLvl="21" getLevel="62" levelUpSp="190000" learnedByNpc="true" />
-		<skill skillName="Clear Mind" skillId="1297" skillLvl="4" getLevel="62" levelUpSp="190000" learnedByNpc="true" />
 		<skill skillName="Aura Flare" skillId="1231" skillLvl="15" getLevel="62" levelUpSp="100000" learnedByNpc="true" />
 		<skill skillName="Aura Flare" skillId="1231" skillLvl="16" getLevel="62" levelUpSp="100000" learnedByNpc="true" />
 		<skill skillName="Sleep" skillId="1069" skillLvl="29" getLevel="62" levelUpSp="100000" learnedByNpc="true" />
@@ -267,14 +305,6 @@
 		<skill skillName="Aqua Splash" skillId="1295" skillLvl="3" getLevel="62" levelUpSp="190000" learnedByNpc="true" />
 		<skill skillName="Curse Fear" skillId="1169" skillLvl="8" getLevel="62" levelUpSp="190000" learnedByNpc="true" />
 		<skill skillName="Aura Flash" skillId="1417" skillLvl="2" getLevel="62" levelUpSp="190000" learnedByNpc="true" />
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="31" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="32" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="30" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="31" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="34" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="35" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
-		<skill skillName="Higher Mana Gain" skillId="285" skillLvl="22" getLevel="64" levelUpSp="240000" learnedByNpc="true" />
-		<skill skillName="Fast HP Recovery" skillId="212" skillLvl="5" getLevel="64" levelUpSp="240000" learnedByNpc="true" />
 		<skill skillName="Aura Flare" skillId="1231" skillLvl="17" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
 		<skill skillName="Aura Flare" skillId="1231" skillLvl="18" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
 		<skill skillName="Sleep" skillId="1069" skillLvl="31" getLevel="64" levelUpSp="120000" learnedByNpc="true" />
@@ -294,14 +324,6 @@
 		<skill skillName="Freezing Shackle" skillId="1183" skillLvl="3" getLevel="64" levelUpSp="240000" learnedByNpc="true" />
 		<skill skillName="Aqua Splash" skillId="1295" skillLvl="4" getLevel="64" levelUpSp="240000" learnedByNpc="true" />
 		<skill skillName="Curse Fear" skillId="1169" skillLvl="9" getLevel="64" levelUpSp="240000" learnedByNpc="true" />
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="33" getLevel="66" levelUpSp="160000" learnedByNpc="true" />
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="34" getLevel="66" levelUpSp="160000" learnedByNpc="true" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="32" getLevel="66" levelUpSp="160000" learnedByNpc="true" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="33" getLevel="66" levelUpSp="160000" learnedByNpc="true" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="36" getLevel="66" levelUpSp="160000" learnedByNpc="true" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="37" getLevel="66" levelUpSp="160000" learnedByNpc="true" />
-		<skill skillName="Higher Mana Gain" skillId="285" skillLvl="23" getLevel="66" levelUpSp="320000" learnedByNpc="true" />
-		<skill skillName="Boost Mana" skillId="213" skillLvl="7" getLevel="66" levelUpSp="320000" learnedByNpc="true" />
 		<skill skillName="Aura Flare" skillId="1231" skillLvl="19" getLevel="66" levelUpSp="160000" learnedByNpc="true" />
 		<skill skillName="Aura Flare" skillId="1231" skillLvl="20" getLevel="66" levelUpSp="160000" learnedByNpc="true" />
 		<skill skillName="Sleep" skillId="1069" skillLvl="33" getLevel="66" levelUpSp="160000" learnedByNpc="true" />
@@ -323,15 +345,6 @@
 		<skill skillName="Aqua Splash" skillId="1295" skillLvl="5" getLevel="66" levelUpSp="320000" learnedByNpc="true" />
 		<skill skillName="Curse Fear" skillId="1169" skillLvl="10" getLevel="66" levelUpSp="320000" learnedByNpc="true" />
 		<skill skillName="Aura Flash" skillId="1417" skillLvl="3" getLevel="66" levelUpSp="320000" learnedByNpc="true" />
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="35" getLevel="68" levelUpSp="180000" learnedByNpc="true" />
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="36" getLevel="68" levelUpSp="180000" learnedByNpc="true" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="34" getLevel="68" levelUpSp="180000" learnedByNpc="true" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="35" getLevel="68" levelUpSp="180000" learnedByNpc="true" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="38" getLevel="68" levelUpSp="180000" learnedByNpc="true" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="39" getLevel="68" levelUpSp="180000" learnedByNpc="true" />
-		<skill skillName="Higher Mana Gain" skillId="285" skillLvl="24" getLevel="68" levelUpSp="370000" learnedByNpc="true" />
-		<skill skillName="Fast Mana Recovery" skillId="229" skillLvl="6" getLevel="68" levelUpSp="370000" learnedByNpc="true" />
-		<skill skillName="Clear Mind" skillId="1297" skillLvl="5" getLevel="68" levelUpSp="370000" learnedByNpc="true" />
 		<skill skillName="Aura Flare" skillId="1231" skillLvl="21" getLevel="68" levelUpSp="180000" learnedByNpc="true" />
 		<skill skillName="Aura Flare" skillId="1231" skillLvl="22" getLevel="68" levelUpSp="180000" learnedByNpc="true" />
 		<skill skillName="Sleep" skillId="1069" skillLvl="35" getLevel="68" levelUpSp="180000" learnedByNpc="true" />
@@ -351,13 +364,6 @@
 		<skill skillName="Aura Symphony" skillId="1288" skillLvl="1" getLevel="68" levelUpSp="370000" learnedByNpc="true" />
 		<skill skillName="Aqua Splash" skillId="1295" skillLvl="6" getLevel="68" levelUpSp="370000" learnedByNpc="true" />
 		<skill skillName="Curse Fear" skillId="1169" skillLvl="11" getLevel="68" levelUpSp="370000" learnedByNpc="true" />
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="37" getLevel="70" levelUpSp="210000" learnedByNpc="true" />
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="38" getLevel="70" levelUpSp="210000" learnedByNpc="true" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="36" getLevel="70" levelUpSp="210000" learnedByNpc="true" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="37" getLevel="70" levelUpSp="210000" learnedByNpc="true" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="40" getLevel="70" levelUpSp="210000" learnedByNpc="true" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="41" getLevel="70" levelUpSp="210000" learnedByNpc="true" />
-		<skill skillName="Higher Mana Gain" skillId="285" skillLvl="25" getLevel="70" levelUpSp="430000" learnedByNpc="true" />
 		<skill skillName="Aura Flare" skillId="1231" skillLvl="23" getLevel="70" levelUpSp="210000" learnedByNpc="true" />
 		<skill skillName="Aura Flare" skillId="1231" skillLvl="24" getLevel="70" levelUpSp="210000" learnedByNpc="true" />
 		<skill skillName="Sleep" skillId="1069" skillLvl="37" getLevel="70" levelUpSp="210000" learnedByNpc="true" />
@@ -380,14 +386,6 @@
 		<skill skillName="Aqua Splash" skillId="1295" skillLvl="7" getLevel="70" levelUpSp="430000" learnedByNpc="true" />
 		<skill skillName="Curse Fear" skillId="1169" skillLvl="12" getLevel="70" levelUpSp="430000" learnedByNpc="true" />
 		<skill skillName="Aura Flash" skillId="1417" skillLvl="4" getLevel="70" levelUpSp="430000" learnedByNpc="true" />
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="39" getLevel="72" levelUpSp="380000" learnedByNpc="true" />
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="40" getLevel="72" levelUpSp="380000" learnedByNpc="true" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="38" getLevel="72" levelUpSp="380000" learnedByNpc="true" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="39" getLevel="72" levelUpSp="380000" learnedByNpc="true" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="42" getLevel="72" levelUpSp="380000" learnedByNpc="true" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="43" getLevel="72" levelUpSp="380000" learnedByNpc="true" />
-		<skill skillName="Higher Mana Gain" skillId="285" skillLvl="26" getLevel="72" levelUpSp="750000" learnedByNpc="true" />
-		<skill skillName="Boost Mana" skillId="213" skillLvl="8" getLevel="72" levelUpSp="750000" learnedByNpc="true" />
 		<skill skillName="Aura Flare" skillId="1231" skillLvl="25" getLevel="72" levelUpSp="380000" learnedByNpc="true" />
 		<skill skillName="Aura Flare" skillId="1231" skillLvl="26" getLevel="72" levelUpSp="380000" learnedByNpc="true" />
 		<skill skillName="Sleep" skillId="1069" skillLvl="39" getLevel="72" levelUpSp="380000" learnedByNpc="true" />
@@ -407,16 +405,6 @@
 		<skill skillName="Elemental Symphony" skillId="1293" skillLvl="1" getLevel="72" levelUpSp="750000" learnedByNpc="true" />
 		<skill skillName="Aqua Splash" skillId="1295" skillLvl="8" getLevel="72" levelUpSp="750000" learnedByNpc="true" />
 		<skill skillName="Curse Fear" skillId="1169" skillLvl="13" getLevel="72" levelUpSp="750000" learnedByNpc="true" />
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="41" getLevel="74" levelUpSp="500000" learnedByNpc="true" />
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="42" getLevel="74" levelUpSp="500000" learnedByNpc="true" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="40" getLevel="74" levelUpSp="500000" learnedByNpc="true" />
-		<skill skillName="Robe Mastery" skillId="234" skillLvl="41" getLevel="74" levelUpSp="500000" learnedByNpc="true" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="44" getLevel="74" levelUpSp="500000" learnedByNpc="true" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="45" getLevel="74" levelUpSp="500000" learnedByNpc="true" />
-		<skill skillName="Higher Mana Gain" skillId="285" skillLvl="27" getLevel="74" levelUpSp="1000000" learnedByNpc="true" />
-		<skill skillName="Fast HP Recovery" skillId="212" skillLvl="6" getLevel="74" levelUpSp="1000000" learnedByNpc="true" />
-		<skill skillName="Fast Mana Recovery" skillId="229" skillLvl="7" getLevel="74" levelUpSp="1000000" learnedByNpc="true" />
-		<skill skillName="Clear Mind" skillId="1297" skillLvl="6" getLevel="74" levelUpSp="1000000" learnedByNpc="true" />
 		<skill skillName="Aura Flare" skillId="1231" skillLvl="27" getLevel="74" levelUpSp="500000" learnedByNpc="true" />
 		<skill skillName="Aura Flare" skillId="1231" skillLvl="28" getLevel="74" levelUpSp="500000" learnedByNpc="true" />
 		<skill skillName="Sleep" skillId="1069" skillLvl="41" getLevel="74" levelUpSp="500000" learnedByNpc="true" />

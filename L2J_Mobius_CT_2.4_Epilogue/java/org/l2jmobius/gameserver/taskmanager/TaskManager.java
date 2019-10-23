@@ -41,7 +41,6 @@ import org.l2jmobius.gameserver.taskmanager.tasks.TaskClanLeaderApply;
 import org.l2jmobius.gameserver.taskmanager.tasks.TaskCleanUp;
 import org.l2jmobius.gameserver.taskmanager.tasks.TaskDailySkillReuseClean;
 import org.l2jmobius.gameserver.taskmanager.tasks.TaskGlobalVariablesSave;
-import org.l2jmobius.gameserver.taskmanager.tasks.TaskNevit;
 import org.l2jmobius.gameserver.taskmanager.tasks.TaskOlympiadSave;
 import org.l2jmobius.gameserver.taskmanager.tasks.TaskRaidPointsReset;
 import org.l2jmobius.gameserver.taskmanager.tasks.TaskRecom;
@@ -177,7 +176,6 @@ public class TaskManager
 		registerTask(new TaskCleanUp());
 		registerTask(new TaskDailySkillReuseClean());
 		registerTask(new TaskGlobalVariablesSave());
-		registerTask(new TaskNevit());
 		registerTask(new TaskOlympiadSave());
 		registerTask(new TaskRaidPointsReset());
 		registerTask(new TaskRecom());

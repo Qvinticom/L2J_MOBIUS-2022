@@ -203,7 +203,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="8920" type="Armor" name="Angel Halo">
-		<!-- Hair accessory imbued with Holy energy. It uses 2 hair accessory slots. -->
+		<!-- Hair accessory imbued with holy energy. It uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -571,7 +571,7 @@
 		</for>
 	</item>
 	<item id="8938" type="Weapon" name="Damascus * Tallum Blade">
-		<!-- When enchanted, P. Atk. of a dualsword will increase more significantly than that of a one-handed or fist weapon. When enchanted to 4 or more, Atk. Spd. will increase by 8%. Inflicts additional damage to target during PvP. -->
+		<!-- When enchanted, the P.Atk. of a dualsword will increase more significantly than that of a one-handed or fist weapon. When enchanted by 4 or more, Atk. Spd. will increase by 8%. Inflicts additional damage to target during PvP. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -633,7 +633,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="8942" type="EtcItem" name="Mark of the Future: Elf">
-		<!-- Mark of the Future. Received from Magister Juris of Town of Giran. -->
+		<!-- Mark of the Future. Received from Magister Juris of Giran Castle Town. -->
 		<set name="icon" val="icon.etc_jewel_silver_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -644,7 +644,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="8943" type="EtcItem" name="Mark of the Future: Dark Elf">
-		<!-- Mark of the Future. Received from Grand Master Oltran of Town of Aden. -->
+		<!-- Mark of the Future. Received from Grand Master Oltlin of Aden Castle Town. -->
 		<set name="icon" val="icon.etc_jewel_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -834,7 +834,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2200-2" /> <!-- Item - Jade Treasure Box -->
+		<set name="item_skill" val="2200-2" /> <!-- Item - Jade Treasue Box -->
 	</item>
 	<item id="8961" type="EtcItem" name="D-Grade Shadow Armor Set Box">
 		<!-- One can receive a D-grade Shadow Armor set by double clicking. (Can be used when the weight gauge is below 60% and there are more than 20 empty inventory slots.) -->
@@ -848,7 +848,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2200-2" /> <!-- Item - Jade Treasure Box -->
+		<set name="item_skill" val="2200-2" /> <!-- Item - Jade Treasue Box -->
 	</item>
 	<item id="8962" type="EtcItem" name="C-Grade Shadow Armor Set Box">
 		<!-- One can receive a C-grade Shadow Armor set by double clicking. (Can be used when the weight gauge is below 60% and there are more than 20 empty inventory slots.) -->
@@ -862,7 +862,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2200-2" /> <!-- Item - Jade Treasure Box -->
+		<set name="item_skill" val="2200-2" /> <!-- Item - Jade Treasue Box -->
 	</item>
 	<item id="8963" type="EtcItem" name="B-Grade Shadow Armor Set Box">
 		<!-- One can receive a B-grade Shadow Armor set by double clicking. (Can be used when the weight gauge is below 60% and there are more than 20 empty inventory slots.) -->
@@ -876,7 +876,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2200-2" /> <!-- Item - Jade Treasure Box -->
+		<set name="item_skill" val="2200-2" /> <!-- Item - Jade Treasue Box -->
 	</item>
 	<item id="8964" type="EtcItem" name="A-Grade Shadow Armor Set Box">
 		<!-- One can receive an A-grade Shadow Armor set by double clicking. (Can be used when the weight gauge is below 60% and there are more than 20 empty inventory slots.) -->
@@ -890,7 +890,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2200-2" /> <!-- Item - Jade Treasure Box -->
+		<set name="item_skill" val="2200-2" /> <!-- Item - Jade Treasue Box -->
 	</item>
 	<item id="8965" type="EtcItem" name="S-Grade Shadow Armor Set Box">
 		<!-- One can receive an S-grade Shadow Armor set by double clicking. (Can be used when the weight gauge is below 60% and there are more than 20 empty inventory slots.) -->
@@ -904,7 +904,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2200-2" /> <!-- Item - Jade Treasure Box -->
+		<set name="item_skill" val="2200-2" /> <!-- Item - Jade Treasue Box -->
 	</item>
 	<item id="8966" type="EtcItem" name="No Grade Item Set Box (Warrior Use)">
 		<!-- One can receive no-grade Supplies for Warriors by double clicking. (Can be used when the weight gauge is below 80% and there are more than 10 empty inventory slots.) -->

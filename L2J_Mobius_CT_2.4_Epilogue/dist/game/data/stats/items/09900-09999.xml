@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="9900" type="Armor" name="Quiet Footsteps Ring">
-		<!-- You can avoid the first attack by monsters when equipped. Lasts for 400 minutes. A Shadow Item which cannot be exchanged or dropped. Effect does not stack with additional rings. -->
+		<!-- You can avoid the first attack by monsters when worn. Lasts for 400 minutes. A Shadow Item which cannot be exchanged or dropped. Effect does not stack with additional rings. -->
 		<set name="icon" val="icon.accessary_ring_of_mana_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -296,7 +296,7 @@
 		<set name="useSkillDisTime" val="6" />
 	</item>
 	<item id="9915" type="Armor" name="Blue Talisman of Wild Magic">
-		<!-- Increases Critical Rate of magic attacks temporarily. Effect does not stack with additional Talismans of the same type. This item cannot be traded or dropped. -->
+		<!-- Increases the critical attack rate of magic attacks temporarily. Effect does not stack with additional Talismans of the same type. This item cannot be traded or dropped. -->
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -312,7 +312,7 @@
 		<set name="useSkillDisTime" val="6" />
 	</item>
 	<item id="9916" type="Armor" name="Blue Talisman of Defense">
-		<!-- Temporarily decreases P. Def./M. Def./Evasion and increases P. Atk./M. Atk./Atk. Spd./Casting Spd./speed. Effect does not stack with additional Talismans of the same type. This item cannot be traded or dropped. -->
+		<!-- Temporarily decreases defense/magic resistance/dodge and increases P. Atk./magic power/Atk. Spd./magic speed/speed. Effect does not stack with additional Talismans of the same type. This item cannot be traded or dropped. -->
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -392,7 +392,7 @@
 		<set name="useSkillDisTime" val="3" />
 	</item>
 	<item id="9921" type="Armor" name="Blue Talisman - Shield Protection">
-		<!-- When used, increases the protection power of a shield. Effect does not stack with additional Talismans of the same type. This item cannot be traded or dropped. -->
+		<!-- When used, it increases the protection power of a shield. Effect does not stack with additional Talismans of the same type. This item cannot be traded or dropped. -->
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -419,7 +419,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3286-1" /> <!-- Black Talisman of Mending -->
+		<set name="item_skill" val="3286-1" /> <!-- Black Talisman - Mending -->
 		<set name="duration" val="65" />
 		<set name="useSkillDisTime" val="6" />
 	</item>
@@ -435,12 +435,12 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3289-1" /> <!-- Black Talisman of Escape -->
+		<set name="item_skill" val="3289-1" /> <!-- Black Talisman - Escape -->
 		<set name="duration" val="65" />
 		<set name="useSkillDisTime" val="6" />
 	</item>
 	<item id="9924" type="Armor" name="Blue Talisman of Healing">
-		<!-- It increases HP Recovery Magic temporarily. Effect does not stack with additional Talismans of the same type. This item cannot be traded or dropped. -->
+		<!-- It increases HP Healing Magic temporarily. Effect does not stack with additional Talismans of the same type. This item cannot be traded or dropped. -->
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -472,7 +472,7 @@
 		<set name="useSkillDisTime" val="5" />
 	</item>
 	<item id="9926" type="Armor" name="Blue Talisman of Defense">
-		<!-- When used, increases P. Def. Effect does not stack with additional Talismans of the same type. This item cannot be traded or dropped. -->
+		<!-- When used, it increases defense power. Effect does not stack with additional Talismans of the same type. This item cannot be traded or dropped. -->
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -488,7 +488,7 @@
 		<set name="useSkillDisTime" val="6" />
 	</item>
 	<item id="9927" type="Armor" name="Blue Talisman of Magic Defense">
-		<!-- When used, increases magic P. Def. Effect does not stack with additional Talismans of the same type. This item cannot be traded or dropped. -->
+		<!-- When used, it increases magic defense power. Effect does not stack with additional Talismans of the same type. This item cannot be traded or dropped. -->
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -499,7 +499,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3276-1" /> <!-- Blue Talisman of M. Def. -->
+		<set name="item_skill" val="3276-1" /> <!-- Blue Talisman - Magic Resistance -->
 		<set name="duration" val="65" />
 		<set name="useSkillDisTime" val="6" />
 	</item>
@@ -520,7 +520,7 @@
 		<set name="useSkillDisTime" val="6" />
 	</item>
 	<item id="9929" type="Armor" name="Blue Talisman of Protection">
-		<!-- When used, increases the protection power of a shield. Effect does not stack with additional Talismans of the same type. This item cannot be traded or dropped. -->
+		<!-- When used, it increases the protection power of a shield. Effect does not stack with additional Talismans of the same type. This item cannot be traded or dropped. -->
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -536,7 +536,7 @@
 		<set name="useSkillDisTime" val="6" />
 	</item>
 	<item id="9930" type="Armor" name="Blue Talisman of Evasion">
-		<!-- When used, increases evasion and reduces Critical Damage possibilities. Effect does not stack with additional Talismans of the same type. This item cannot be traded or dropped. -->
+		<!-- When used, it increases evasion and reduces critical damage possibilities. Effect does not stack with additional Talismans of the same type. This item cannot be traded or dropped. -->
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -552,7 +552,7 @@
 		<set name="useSkillDisTime" val="6" />
 	</item>
 	<item id="9931" type="Armor" name="Red Talisman of Meditation">
-		<!-- When used, it greatly increases MP Recovery Rate. You cannot move during recovery. Effect does not stack with additional Talismans of the same type. This item cannot be traded or dropped. -->
+		<!-- When used, it greatly increases MP regeneration rate. You cannot move during recovery. Effect does not stack with additional Talismans of the same type. This item cannot be traded or dropped. -->
 		<set name="icon" val="icon.etc_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -568,7 +568,7 @@
 		<set name="useSkillDisTime" val="15" />
 	</item>
 	<item id="9932" type="Armor" name="Blue Talisman - Divine Protection">
-		<!-- When used, P. Def. and M. Def. greatly increase momentarily. Only one effect is applied when you wear the same two talismans. Shadow Item with no exchange/drop available -->
+		<!-- When used, defense power and magic resistance greatly increase momentarily. Only one effect is applied when you wear the same two talismans. Shadow Item with no exchange/drop available -->
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -579,7 +579,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3284-1" /> <!-- Blue Talisman of Divine Protection -->
+		<set name="item_skill" val="3284-1" /> <!-- Blue Talisman - Divine Protection -->
 		<set name="duration" val="74" />
 		<set name="useSkillDisTime" val="15" />
 	</item>
@@ -624,12 +624,12 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3296-1" /> <!-- Yellow Talisman of M. Def. -->
+		<set name="item_skill" val="3296-1" /> <!-- Yellow Talisman - Magic Resistance -->
 		<set name="duration" val="60" />
 		<set name="useSkillDisTime" val="1" />
 	</item>
 	<item id="9936" type="Armor" name="Yellow Talisman of Arcane Power">
-		<!-- Increases M. Atk. Effect does not stack with additional Talismans of the same type. This item cannot be traded or dropped. -->
+		<!-- Increases Magic Power. Effect does not stack with additional Talismans of the same type. This item cannot be traded or dropped. -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -689,7 +689,7 @@
 		<set name="useSkillDisTime" val="1" />
 	</item>
 	<item id="9940" type="Armor" name="Yellow Talisman of Alacrity">
-		<!-- Increases P. Atk., M. Atk., and Speed. Effect does not stack with additional Talismans of the same type. This item cannot be traded or dropped. -->
+		<!-- Increases attack, magic and speed. Effect does not stack with additional Talismans of the same type. This item cannot be traded or dropped. -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -744,12 +744,12 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3299-1" /> <!-- Yellow Talisman of Critical Damage -->
+		<set name="item_skill" val="3299-1" /> <!-- Yellow Talisman of Critical Power -->
 		<set name="duration" val="60" />
 		<set name="useSkillDisTime" val="1" />
 	</item>
 	<item id="9944" type="Armor" name="Yellow Talisman of Critical Dodging">
-		<!-- When used, it decreases physical Critical Damage possibility. Effect does not stack with additional Talismans of the same type. This item cannot be traded or dropped. -->
+		<!-- When used, it decreases physical critical damage possibility. Effect does not stack with additional Talismans of the same type. This item cannot be traded or dropped. -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -779,7 +779,7 @@
 		<set name="useSkillDisTime" val="1" />
 	</item>
 	<item id="9946" type="Armor" name="Yellow Talisman of Healing">
-		<!-- Increases HP Recovery Magic temporarily. Effect does not stack with additional Talismans of the same type. This item cannot be traded or dropped. -->
+		<!-- Increases HP Healing Magic temporarily. Effect does not stack with additional Talismans of the same type. This item cannot be traded or dropped. -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -839,7 +839,7 @@
 		<set name="useSkillDisTime" val="1" />
 	</item>
 	<item id="9950" type="Armor" name="Grey Talisman of Weight Training">
-		<!-- Increases weapon Weight Limit. Effect does not stack with additional Talismans of the same type. This item cannot be traded or dropped. -->
+		<!-- Increases weapon weight limit. Effect does not stack with additional Talismans of the same type. This item cannot be traded or dropped. -->
 		<set name="icon" val="icon.etc_talisman_i07" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -869,7 +869,7 @@
 		<set name="useSkillDisTime" val="1" />
 	</item>
 	<item id="9952" type="Armor" name="Orange Talisman - Hot Springs CP Potion">
-		<!-- Create 1 Hot Springs CP Potion following the consumption of 16 Soul Ore. Effect does not stack with additional Talismans of the same type. Shadow Item that cannot be traded or dropped. -->
+		<!-- Create 1 Hot Springs Recovery following the consumption of 16 Soul Ores. Effect does not stack with additional Talismans of the same type. Shadow Item that cannot be traded or dropped. -->
 		<set name="icon" val="icon.etc_talisman_i04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -881,12 +881,12 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3332-1" /> <!-- Orange Talisman of Hot Springs Recovery -->
+		<set name="item_skill" val="3332-1" /> <!-- Orange Talisman - Hot Springs Recovery -->
 		<set name="duration" val="64" />
 		<set name="useSkillDisTime" val="5" />
 	</item>
 	<item id="9953" type="Armor" name="Orange Talisman - Elixir of Life">
-		<!-- Consumes 50 Soul Ore to create an A-Grade Elixir of Life. Effect does not stack with additional Talismans of the same type. This item cannot be traded or dropped. -->
+		<!-- Consumes 50 Soul Ores to create an A-Grade Elixir of Life. Effect does not stack with additional Talismans of the same type. This item cannot be traded or dropped. -->
 		<set name="icon" val="icon.etc_talisman_i04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -897,12 +897,12 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3333-1" /> <!-- Orange Talisman of A Grade Elixir of Life -->
+		<set name="item_skill" val="3333-1" /> <!-- Orange Talisman - A Grade Elixir of Life -->
 		<set name="duration" val="64" />
 		<set name="useSkillDisTime" val="5" />
 	</item>
 	<item id="9954" type="Armor" name="Orange Talisman - Elixir of Mental Strength">
-		<!-- Consumes 57 Soul Ore to create an A-Grade Elixir of Mental Strength. Effect does not stack with additional Talismans of the same type. This item cannot be traded or dropped. -->
+		<!-- Consumes 57 Soul Ores to create an A-Grade Elixir of Mental Strength. Effect does not stack with additional Talismans of the same type. This item cannot be traded or dropped. -->
 		<set name="icon" val="icon.etc_talisman_i04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -913,7 +913,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3334-1" /> <!-- Orange Talisman of A Grade Elixir of Mental Strength -->
+		<set name="item_skill" val="3334-1" /> <!-- Orange Talisman - A Grade Elixir of Mental Strength -->
 		<set name="duration" val="65" />
 		<set name="useSkillDisTime" val="6" />
 	</item>
@@ -998,7 +998,7 @@
 		<set name="useSkillDisTime" val="6" />
 	</item>
 	<item id="9960" type="Armor" name="White Talisman of Bravery">
-		<!-- Increases Resistance to mental attacks. Effect does not stack with additional Talismans of the same type. This item cannot be traded or dropped. -->
+		<!-- Increases resistance to mental attacks. Effect does not stack with additional Talismans of the same type. This item cannot be traded or dropped. -->
 		<set name="icon" val="icon.etc_talisman_i06" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1013,7 +1013,7 @@
 		<set name="useSkillDisTime" val="1" />
 	</item>
 	<item id="9961" type="Armor" name="White Talisman of Motion">
-		<!-- When equipped, Resistance to Paralysis increases. Only one effect is applied when you wear the same two talismans. Shadow Item with no exchange/drop available -->
+		<!-- When equipped, resistance to paralysis attacks increases. Only one effect is applied when you wear the same two talismans. Shadow Item with no exchange/drop available -->
 		<set name="icon" val="icon.etc_talisman_i06" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1028,7 +1028,7 @@
 		<set name="useSkillDisTime" val="1" />
 	</item>
 	<item id="9962" type="Armor" name="White Talisman of Grounding">
-		<!-- When equipped, Resistance to Shock attacks increases. Only one effect is applied when you wear the same two talismans. Shadow Item with no exchange/drop available -->
+		<!-- When equipped, resistance to shock attacks increases. Only one effect is applied when you wear the same two talismans. Shadow Item with no exchange/drop available -->
 		<set name="icon" val="icon.etc_talisman_i06" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1043,7 +1043,7 @@
 		<set name="useSkillDisTime" val="1" />
 	</item>
 	<item id="9963" type="Armor" name="White Talisman of Attention">
-		<!-- When equipped, Resistance to sleep attacks increases. Only one effect is applied when you wear the same two talismans. Shadow Item with no exchange/drop available -->
+		<!-- When equipped, resistance to sleep attacks increases. Only one effect is applied when you wear the same two talismans. Shadow Item with no exchange/drop available -->
 		<set name="icon" val="icon.etc_talisman_i06" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1058,7 +1058,7 @@
 		<set name="useSkillDisTime" val="1" />
 	</item>
 	<item id="9964" type="Armor" name="White Talisman of Bandages">
-		<!-- When equipped, Resistance to bleed attacks increases. Only one effect is applied when you wear the same two talismans. Shadow Item with no exchange/drop available -->
+		<!-- When equipped, resistance to bleed attacks increases. Only one effect is applied when you wear the same two talismans. Shadow Item with no exchange/drop available -->
 		<set name="icon" val="icon.etc_talisman_i06" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1073,7 +1073,7 @@
 		<set name="useSkillDisTime" val="1" />
 	</item>
 	<item id="9965" type="Armor" name="White Talisman of Protection">
-		<!-- Increases Resistance to buff disarming magic. Effect does not stack with additional Talismans of the same type. This item cannot be traded or dropped. -->
+		<!-- Increases resistance to buff disarming magic. Effect does not stack with additional Talismans of the same type. This item cannot be traded or dropped. -->
 		<set name="icon" val="icon.etc_talisman_i06" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1088,7 +1088,7 @@
 		<set name="useSkillDisTime" val="1" />
 	</item>
 	<item id="9966" type="Armor" name="White Talisman of Freedom">
-		<!-- When equipped, Resistance to Hold increases. Only one effect is applied when you wear the same two talismans. Shadow Item with no exchange/drop available -->
+		<!-- When equipped, resistance to hold attacks increases. Only one effect is applied when you wear the same two talismans. Shadow Item with no exchange/drop available -->
 		<set name="icon" val="icon.etc_talisman_i06" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1341,7 +1341,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="9986" type="EtcItem" name="Recipe - Sealed Dynasty Necklace (70%)">
-		<!-- For Dwarves only. The recipe for the Sealed Dynasty Necklace. Requires Create Item Skill - Level 9. 70% success rate. -->
+		<!-- For Dwarves only. The recipe for the Sealed Dynasty Necklac. Requires Create Item Skill - Level 9. 70% success rate. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1510,7 +1510,7 @@
 		</for>
 	</item>
 	<item id="9997" type="EtcItem" name="Fire Potion">
-		<!-- Increases Resistance to fire attacks by 30 for 10 minutes. -->
+		<!-- Increases defense against fire attacks by 30 for 10 minutes. -->
 		<set name="icon" val="icon.etc_fire_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1524,7 +1524,7 @@
 		<set name="item_skill" val="2335-1" /> <!-- Fire Resist Potion -->
 	</item>
 	<item id="9998" type="EtcItem" name="Water Potion">
-		<!-- Increases Resistance to water attacks by 30 for 10 minutes. -->
+		<!-- Increases defense against water attacks by 30 for 10 minutes. -->
 		<set name="icon" val="icon.etc_water_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1538,7 +1538,7 @@
 		<set name="item_skill" val="2336-1" /> <!-- Water Resist Potion -->
 	</item>
 	<item id="9999" type="EtcItem" name="Earth Potion">
-		<!-- Increases Resistance to earth attacks by 30 for 10 minutes. -->
+		<!-- Increases defense against earth attacks by 30 for 10 minutes. -->
 		<set name="icon" val="icon.etc_earth_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />

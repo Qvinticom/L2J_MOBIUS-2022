@@ -77,27 +77,6 @@ public class Q00692_HowtoOpposeEvil extends Quest
 		QUEST_MOBS.put(22593, new ItemHolder(13865, 250));
 		QUEST_MOBS.put(22596, new ItemHolder(13865, 250));
 		QUEST_MOBS.put(22597, new ItemHolder(13865, 250));
-		// Seed of Annihilation
-		QUEST_MOBS.put(22746, new ItemHolder(15536, 125));
-		QUEST_MOBS.put(22747, new ItemHolder(15536, 125));
-		QUEST_MOBS.put(22748, new ItemHolder(15536, 125));
-		QUEST_MOBS.put(22749, new ItemHolder(15536, 125));
-		QUEST_MOBS.put(22750, new ItemHolder(15536, 125));
-		QUEST_MOBS.put(22751, new ItemHolder(15536, 125));
-		QUEST_MOBS.put(22752, new ItemHolder(15536, 125));
-		QUEST_MOBS.put(22753, new ItemHolder(15536, 125));
-		QUEST_MOBS.put(22754, new ItemHolder(15536, 125));
-		QUEST_MOBS.put(22755, new ItemHolder(15536, 125));
-		QUEST_MOBS.put(22756, new ItemHolder(15536, 125));
-		QUEST_MOBS.put(22757, new ItemHolder(15536, 125));
-		QUEST_MOBS.put(22758, new ItemHolder(15536, 125));
-		QUEST_MOBS.put(22759, new ItemHolder(15536, 125));
-		QUEST_MOBS.put(22760, new ItemHolder(15536, 125));
-		QUEST_MOBS.put(22761, new ItemHolder(15536, 125));
-		QUEST_MOBS.put(22762, new ItemHolder(15536, 125));
-		QUEST_MOBS.put(22763, new ItemHolder(15536, 125));
-		QUEST_MOBS.put(22764, new ItemHolder(15536, 125));
-		QUEST_MOBS.put(22765, new ItemHolder(15536, 125));
 	}
 	
 	public Q00692_HowtoOpposeEvil()

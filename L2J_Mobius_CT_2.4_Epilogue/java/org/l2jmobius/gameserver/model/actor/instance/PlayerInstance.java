@@ -163,8 +163,6 @@ import org.l2jmobius.gameserver.model.actor.tasks.player.InventoryEnableTask;
 import org.l2jmobius.gameserver.model.actor.tasks.player.LookingForFishTask;
 import org.l2jmobius.gameserver.model.actor.tasks.player.PetFeedTask;
 import org.l2jmobius.gameserver.model.actor.tasks.player.PvPFlagTask;
-import org.l2jmobius.gameserver.model.actor.tasks.player.RecoBonusTaskEnd;
-import org.l2jmobius.gameserver.model.actor.tasks.player.RecoGiveTask;
 import org.l2jmobius.gameserver.model.actor.tasks.player.RentPetTask;
 import org.l2jmobius.gameserver.model.actor.tasks.player.ResetChargesTask;
 import org.l2jmobius.gameserver.model.actor.tasks.player.ResetSoulsTask;
@@ -188,7 +186,6 @@ import org.l2jmobius.gameserver.model.entity.Duel;
 import org.l2jmobius.gameserver.model.entity.Fort;
 import org.l2jmobius.gameserver.model.entity.GameEvent;
 import org.l2jmobius.gameserver.model.entity.Hero;
-import org.l2jmobius.gameserver.model.entity.NevitSystem;
 import org.l2jmobius.gameserver.model.entity.Siege;
 import org.l2jmobius.gameserver.model.entity.TvTEvent;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
@@ -234,9 +231,7 @@ import org.l2jmobius.gameserver.model.items.type.ArmorType;
 import org.l2jmobius.gameserver.model.items.type.EtcItemType;
 import org.l2jmobius.gameserver.model.items.type.WeaponType;
 import org.l2jmobius.gameserver.model.multisell.PreparedListContainer;
-import org.l2jmobius.gameserver.model.olympiad.OlympiadGameManager;
-import org.l2jmobius.gameserver.model.olympiad.OlympiadGameTask;
-import org.l2jmobius.gameserver.model.olympiad.OlympiadManager;
+import org.l2jmobius.gameserver.model.olympiad.Olympiad;
 import org.l2jmobius.gameserver.model.punishment.PunishmentAffect;
 import org.l2jmobius.gameserver.model.punishment.PunishmentType;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -271,12 +266,12 @@ import org.l2jmobius.gameserver.network.serverpackets.ExFishingStart;
 import org.l2jmobius.gameserver.network.serverpackets.ExGetBookMarkInfoPacket;
 import org.l2jmobius.gameserver.network.serverpackets.ExGetOnAirShip;
 import org.l2jmobius.gameserver.network.serverpackets.ExOlympiadMode;
+import org.l2jmobius.gameserver.network.serverpackets.ExOlympiadUserInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ExPrivateStoreSetWholeMsg;
 import org.l2jmobius.gameserver.network.serverpackets.ExSetCompassZoneCode;
 import org.l2jmobius.gameserver.network.serverpackets.ExStartScenePlayer;
 import org.l2jmobius.gameserver.network.serverpackets.ExStorageMaxCount;
 import org.l2jmobius.gameserver.network.serverpackets.ExUseSharedGroupItem;
-import org.l2jmobius.gameserver.network.serverpackets.ExVoteSystemInfo;
 import org.l2jmobius.gameserver.network.serverpackets.FlyToLocation.FlyType;
 import org.l2jmobius.gameserver.network.serverpackets.FriendStatusPacket;
 import org.l2jmobius.gameserver.network.serverpackets.GetOnVehicle;
@@ -350,8 +345,8 @@ public class PlayerInstance extends Playable
 	private static final String DELETE_ITEM_REUSE_SAVE = "DELETE FROM character_item_reuse_save WHERE charId=?";
 	
 	// Character Character SQL String Definitions:
-	private static final String INSERT_CHARACTER = "INSERT INTO characters (account_name,charId,char_name,level,maxHp,curHp,maxCp,curCp,maxMp,curMp,face,hairStyle,hairColor,sex,exp,sp,karma,fame,pvpkills,pkkills,clanid,race,classid,deletetime,cancraft,title,title_color,accesslevel,online,isin7sdungeon,clan_privs,wantspeace,base_class,newbie,nobless,power_grade,createDate) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
-	private static final String UPDATE_CHARACTER = "UPDATE characters SET level=?,maxHp=?,curHp=?,maxCp=?,curCp=?,maxMp=?,curMp=?,face=?,hairStyle=?,hairColor=?,sex=?,heading=?,x=?,y=?,z=?,exp=?,expBeforeDeath=?,sp=?,karma=?,fame=?,pvpkills=?,pkkills=?,clanid=?,race=?,classid=?,deletetime=?,title=?,title_color=?,accesslevel=?,online=?,isin7sdungeon=?,clan_privs=?,wantspeace=?,base_class=?,onlinetime=?,newbie=?,nobless=?,power_grade=?,subpledge=?,lvl_joined_academy=?,apprentice=?,sponsor=?,clan_join_expiry_time=?,clan_create_expiry_time=?,char_name=?,death_penalty_level=?,bookmarkslot=?,vitality_points=?,language=?,faction=? WHERE charId=?";
+	private static final String INSERT_CHARACTER = "INSERT INTO characters (account_name,charId,char_name,level,maxHp,curHp,maxCp,curCp,maxMp,curMp,face,hairStyle,hairColor,sex,exp,sp,karma,fame,pvpkills,pkkills,clanid,race,classid,deletetime,cancraft,title,title_color,accesslevel,online,isin7sdungeon,clan_privs,wantspeace,base_class,newbie,nobless,power_grade,createDate,last_recom_date) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+	private static final String UPDATE_CHARACTER = "UPDATE characters SET level=?,maxHp=?,curHp=?,maxCp=?,curCp=?,maxMp=?,curMp=?,face=?,hairStyle=?,hairColor=?,sex=?,heading=?,x=?,y=?,z=?,exp=?,expBeforeDeath=?,sp=?,karma=?,fame=?,pvpkills=?,pkkills=?,clanid=?,race=?,classid=?,deletetime=?,title=?,title_color=?,accesslevel=?,online=?,isin7sdungeon=?,clan_privs=?,wantspeace=?,base_class=?,onlinetime=?,newbie=?,nobless=?,power_grade=?,subpledge=?,lvl_joined_academy=?,apprentice=?,sponsor=?,clan_join_expiry_time=?,clan_create_expiry_time=?,char_name=?,death_penalty_level=?,bookmarkslot=?,vitality_points=?,language=?,faction=?,last_recom_date=?,rec_have=?,rec_left=? WHERE charId=?";
 	private static final String RESTORE_CHARACTER = "SELECT * FROM characters WHERE charId=?";
 	
 	// Character Teleport Bookmark:
@@ -375,6 +370,11 @@ public class PlayerInstance extends Playable
 	// Character Shortcut SQL String Definitions:
 	private static final String DELETE_CHAR_SHORTCUTS = "DELETE FROM character_shortcuts WHERE charId=? AND class_index=?";
 	
+	// Character Recommendation SQL String Definitions:
+	private static final String RESTORE_CHAR_RECOMS = "SELECT charId,target_id FROM character_recommends WHERE charId=?";
+	private static final String ADD_CHAR_RECOM = "INSERT INTO character_recommends (charId,target_id) VALUES (?,?)";
+	private static final String DELETE_CHAR_RECOMS = "DELETE FROM character_recommends WHERE charId=?";
+	
 	// Character Recipe List Save
 	private static final String DELETE_CHAR_RECIPE_SHOP = "DELETE FROM character_recipeshoplist WHERE charId=?";
 	private static final String INSERT_CHAR_RECIPE_SHOP = "REPLACE INTO character_recipeshoplist (`charId`, `recipeId`, `price`, `index`) VALUES (?, ?, ?, ?)";
@@ -387,25 +387,6 @@ public class PlayerInstance extends Playable
 	public static final int ID_NONE = -1;
 	
 	public static final int REQUEST_TIMEOUT = 15;
-	
-	//@formatter:off
-	private static final int[][] NEVIT_HOURGLASS_BONUS =
-	{
-		{25, 50, 50, 50, 50, 50, 50, 50, 50, 50},
-		{16, 33, 50, 50, 50, 50, 50, 50, 50, 50},
-		{12, 25, 37, 50, 50, 50, 50, 50, 50, 50},
-		{10, 20, 30, 40, 50, 50, 50, 50, 50, 50},
-		{8, 16, 25, 33, 41, 50, 50, 50, 50, 50},
-		{7, 14, 21, 28, 35, 42, 50, 50, 50, 50},
-		{6, 12, 18, 25, 31, 37, 43, 50, 50, 50},
-		{5, 11, 16, 22, 27, 33, 38, 44, 50, 50},
-		{5, 10, 15, 20, 25, 30, 35, 40, 45, 50},
-	};
-	//@formatter:on
-	
-	private static final int NEVIT_HOURGLASS_ACTIVE = 0;
-	private static final int NEVIT_HOURGLASS_PAUSED = 1;
-	private static final int NEVIT_HOURGLASS_MAINTAIN = 10;
 	
 	private final Collection<IEventListener> _eventListeners = ConcurrentHashMap.newKeySet();
 	
@@ -543,12 +524,10 @@ public class PlayerInstance extends Playable
 	private int _recomHave; // how much I was recommended by others
 	/** The number of recommendation that the PlayerInstance can give */
 	private int _recomLeft; // how many recommendations I can give to others
-	/** Recommendation Bonus task **/
-	private ScheduledFuture<?> _nevitHourglassTask;
-	/** Recommendation task **/
-	private ScheduledFuture<?> _recoGiveTask;
-	/** Recommendation Two Hours bonus **/
-	protected boolean _recoTwoHoursGiven = false;
+	/** Date when recommendation points were updated last time */
+	private long _lastRecomUpdate;
+	/** List with the recommendations this player gave */
+	private final Collection<Integer> _recomChars = ConcurrentHashMap.newKeySet();
 	
 	private final PlayerInventory _inventory = new PlayerInventory(this);
 	private final PlayerFreight _freight = new PlayerFreight(this);
@@ -974,8 +953,6 @@ public class PlayerInstance extends Playable
 		player.setBaseClass(player.getClassId());
 		// Kept for backwards compatibility.
 		player.setNewbie(1);
-		// Give 20 recommendations
-		player.setRecomLeft(20);
 		// Add the player in the characters table of the database
 		return player.createDb() ? player : null;
 	}
@@ -1840,6 +1817,19 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
+	 * @return the date of last update of recomPoints.
+	 */
+	public long getLastRecomUpdate()
+	{
+		return _lastRecomUpdate;
+	}
+	
+	public void setLastRecomUpdate(long date)
+	{
+		_lastRecomUpdate = date;
+	}
+	
+	/**
 	 * @return the number of recommendation obtained by the PlayerInstance.
 	 */
 	public int getRecomHave()
@@ -1868,15 +1858,6 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Set the number of recommendation obtained by the PlayerInstance (Max : 255).
-	 * @param value
-	 */
-	public void setRecomLeft(int value)
-	{
-		_recomLeft = Math.min(Math.max(value, 0), 255);
-	}
-	
-	/**
 	 * @return the number of recommendation that the PlayerInstance can give.
 	 */
 	public int getRecomLeft()
@@ -1899,6 +1880,114 @@ public class PlayerInstance extends Playable
 	{
 		target.incRecomHave();
 		decRecomLeft();
+		_recomChars.add(target.getObjectId());
+		if (!Config.ALT_RECOMMEND)
+		{
+			try (Connection con = DatabaseFactory.getConnection();
+				PreparedStatement ps = con.prepareStatement(ADD_CHAR_RECOM))
+			{
+				ps.setInt(1, getObjectId());
+				ps.setInt(2, target.getObjectId());
+				ps.execute();
+			}
+			catch (Exception e)
+			{
+				LOGGER.log(Level.SEVERE, "Failed updating character recommendations for player: " + getObjectId(), e);
+			}
+		}
+	}
+	
+	public boolean canRecom(PlayerInstance target)
+	{
+		return !_recomChars.contains(target.getObjectId());
+	}
+	
+	/**
+	 * Retrieve from the database all Recommendation data of this player, add to _recomChars and calculate stats of the player.
+	 */
+	private void restoreRecom()
+	{
+		try (Connection con = DatabaseFactory.getConnection();
+			PreparedStatement ps = con.prepareStatement(RESTORE_CHAR_RECOMS))
+		{
+			ps.setInt(1, getObjectId());
+			ResultSet rset = ps.executeQuery();
+			while (rset.next())
+			{
+				_recomChars.add(rset.getInt("target_id"));
+			}
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.SEVERE, "Could not restore Recommendations for player: " + getObjectId(), e);
+		}
+	}
+	
+	private void checkRecom(int recsHave, int recsLeft)
+	{
+		Calendar check = Calendar.getInstance();
+		check.setTimeInMillis(_lastRecomUpdate);
+		check.add(Calendar.DAY_OF_MONTH, 1);
+		
+		Calendar min = Calendar.getInstance();
+		
+		_recomHave = recsHave;
+		_recomLeft = recsLeft;
+		
+		if ((getStat().getLevel() < 10) || check.after(min))
+		{
+			return;
+		}
+		
+		restartRecom();
+	}
+	
+	public void restartRecom()
+	{
+		_recomChars.clear();
+		
+		if (!Config.ALT_RECOMMEND)
+		{
+			try (Connection con = DatabaseFactory.getConnection();
+				PreparedStatement ps = con.prepareStatement(DELETE_CHAR_RECOMS))
+			{
+				ps.setInt(1, getObjectId());
+				ps.execute();
+			}
+			catch (Exception e)
+			{
+				LOGGER.log(Level.SEVERE, "Failed cleaning character recommendations for player: " + getObjectId(), e);
+			}
+		}
+		
+		if (getStat().getLevel() < 20)
+		{
+			_recomLeft = 3;
+			_recomHave--;
+		}
+		else if (getStat().getLevel() < 40)
+		{
+			_recomLeft = 6;
+			_recomHave -= 2;
+		}
+		else
+		{
+			_recomLeft = 9;
+			_recomHave -= 3;
+		}
+		if (_recomHave < 0)
+		{
+			_recomHave = 0;
+		}
+		
+		// If we have to update last update time, but it's now before 13, we should set it to yesterday
+		Calendar update = Calendar.getInstance();
+		if (update.get(Calendar.HOUR_OF_DAY) < 13)
+		{
+			update.add(Calendar.DAY_OF_MONTH, -1);
+		}
+		update.set(Calendar.HOUR_OF_DAY, 13);
+		_lastRecomUpdate = update.getTimeInMillis();
 	}
 	
 	/**
@@ -4063,10 +4152,34 @@ public class PlayerInstance extends Playable
 		
 		if (_inOlympiadMode && _OlympiadStart && (needCpUpdate || needHpUpdate))
 		{
-			final OlympiadGameTask game = OlympiadGameManager.getInstance().getOlympiadTask(getOlympiadGameId());
-			if ((game != null) && game.isBattleStarted())
+			Collection<PlayerInstance> players = World.getInstance().getVisibleObjects(this, PlayerInstance.class);
+			
+			if ((players != null) && !players.isEmpty())
 			{
-				game.getZone().broadcastStatusUpdate(this);
+				ExOlympiadUserInfo olyInfo = new ExOlympiadUserInfo(this);
+				
+				for (PlayerInstance player : players)
+				{
+					if ((player != null) && player.isInOlympiadMode() && (player.getOlympiadGameId() == _olympiadGameId))
+					{
+						player.sendPacket(olyInfo);
+					}
+				}
+			}
+			
+			players = Olympiad.getInstance().getSpectators(_olympiadGameId);
+			if ((players != null) && !players.isEmpty())
+			{
+				ExOlympiadUserInfo olyInfo = new ExOlympiadUserInfo(this);
+				
+				for (PlayerInstance spectator : players)
+				{
+					if (spectator == null)
+					{
+						continue;
+					}
+					spectator.sendPacket(olyInfo);
+				}
 			}
 		}
 		
@@ -5157,7 +5270,7 @@ public class PlayerInstance extends Playable
 						}
 					}
 					// If player is Lucky shouldn't get penalized.
-					if (!isLucky() && (insideSiegeZone || !insidePvpZone) && !_nevitSystem.isAdventBlessingActive())
+					if (!isLucky() && (insideSiegeZone || !insidePvpZone))
 					{
 						calculateDeathExpPenalty(killer, isAtWarWith(pk));
 					}
@@ -5604,11 +5717,6 @@ public class PlayerInstance extends Playable
 		
 		setExpBeforeDeath(getExp());
 		
-		if (_nevitSystem.isAdventBlessingActive())
-		{
-			lostExp = 0;
-		}
-		
 		getStat().removeExp(lostExp);
 	}
 	
@@ -5650,8 +5758,6 @@ public class PlayerInstance extends Playable
 		stopChargeTask();
 		stopFameTask();
 		stopVitalityTask();
-		stopNevitHourglassTask();
-		stopRecoGiveTask();
 	}
 	
 	@Override
@@ -6756,6 +6862,7 @@ public class PlayerInstance extends Playable
 			ps.setInt(35, _noble ? 1 : 0);
 			ps.setLong(36, 0);
 			ps.setTimestamp(37, new Timestamp(_createDate.getTimeInMillis()));
+			ps.setLong(38, System.currentTimeMillis()); // last_recom_date
 			ps.executeUpdate();
 		}
 		catch (Exception e)
@@ -6855,6 +6962,10 @@ public class PlayerInstance extends Playable
 					currentHp = rset.getDouble("curHp");
 					currentCp = rset.getDouble("curCp");
 					currentMp = rset.getDouble("curMp");
+					
+					// Check recommendations
+					player.setLastRecomUpdate(rset.getLong("last_recom_date"));
+					player.checkRecom(rset.getInt("rec_have"), rset.getInt("rec_left"));
 					
 					player._classIndex = 0;
 					try
@@ -7168,6 +7279,12 @@ public class PlayerInstance extends Playable
 		// Retrieve from the database all teleport bookmark of this PlayerInstance and add them to _tpbookmark.
 		restoreTeleportBookmark();
 		
+		// Retrieve from the database all recom data of this PlayerInstance and add to _recomChars.
+		if (!Config.ALT_RECOMMEND)
+		{
+			restoreRecom();
+		}
+		
 		// Retrieve from the database the recipe book of this PlayerInstance.
 		restoreRecipeBook(true);
 		
@@ -7408,7 +7525,12 @@ public class PlayerInstance extends Playable
 				factionId = 2;
 			}
 			ps.setInt(50, factionId);
-			ps.setInt(51, getObjectId());
+			
+			ps.setLong(51, getLastRecomUpdate());
+			ps.setInt(52, getRecomHave());
+			ps.setInt(53, getRecomLeft());
+			
+			ps.setInt(54, getObjectId());
 			
 			ps.execute();
 		}
@@ -8274,7 +8396,6 @@ public class PlayerInstance extends Playable
 	protected void autoSave()
 	{
 		storeMe();
-		storeRecommendations(false);
 		
 		if (Config.UPDATE_ITEMS_ON_CHAR_STORE)
 		{
@@ -9603,7 +9724,7 @@ public class PlayerInstance extends Playable
 		_lastLoc.setXYZ(0, 0, 0);
 	}
 	
-	public void enterOlympiadObserverMode(Location loc, int id, int instanceId)
+	public void enterOlympiadObserverMode(Location loc, int id, boolean storeCoords)
 	{
 		if (hasSummon())
 		{
@@ -9633,7 +9754,7 @@ public class PlayerInstance extends Playable
 		{
 			standUp();
 		}
-		if (!_observerMode)
+		if (storeCoords)
 		{
 			setLastLocation();
 		}
@@ -9642,7 +9763,7 @@ public class PlayerInstance extends Playable
 		setTarget(null);
 		setIsInvul(true);
 		setInvisible(true);
-		teleToLocation(loc, instanceId, 0);
+		teleToLocation(loc, 0);
 		sendPacket(new ExOlympiadMode(3));
 		
 		broadcastUserInfo();
@@ -9679,6 +9800,7 @@ public class PlayerInstance extends Playable
 		{
 			return;
 		}
+		Olympiad.removeSpectator(_olympiadGameId, this);
 		_olympiadGameId = -1;
 		_observerMode = false;
 		setTarget(null);
@@ -11373,15 +11495,6 @@ public class PlayerInstance extends Playable
 			LOGGER.log(Level.SEVERE, "deleteMe()", e);
 		}
 		
-		// Recommendations must be saved before task (timer) is canceled
-		try
-		{
-			storeRecommendations(false);
-		}
-		catch (Exception e)
-		{
-			LOGGER.log(Level.SEVERE, "deleteMe()", e);
-		}
 		// Stop the HP/MP/CP Regeneration task (scheduled tasks)
 		try
 		{
@@ -11455,9 +11568,9 @@ public class PlayerInstance extends Playable
 			}
 		}
 		
-		if (OlympiadManager.getInstance().isRegistered(this) || (getOlympiadGameId() != -1))
+		if (Olympiad.getInstance().isRegistered(this) || (getOlympiadGameId() != -1))
 		{
-			OlympiadManager.getInstance().removeDisconnectedCompetitor(this);
+			Olympiad.getInstance().removeDisconnectedCompetitor(this);
 		}
 		
 		// If the PlayerInstance has Pet, unsummon it
@@ -12582,7 +12695,7 @@ public class PlayerInstance extends Playable
 		
 		if (isInOlympiadMode() && target.isPlayer() && target.getActingPlayer().isInOlympiadMode() && (target.getActingPlayer().getOlympiadGameId() == getOlympiadGameId()))
 		{
-			OlympiadGameManager.getInstance().notifyCompetitorDamage(this, damage);
+			Olympiad.getInstance().notifyCompetitorDamage(this, damage, getOlympiadGameId());
 		}
 		
 		SystemMessage sm = null;
@@ -13969,185 +14082,6 @@ public class PlayerInstance extends Playable
 		return _handysBlockCheckerEventArena;
 	}
 	
-	/**
-	 * Load PlayerInstance Recommendations data.
-	 * @return
-	 */
-	private long loadRecommendations()
-	{
-		long _time_left = 0;
-		try (Connection con = DatabaseFactory.getConnection();
-			PreparedStatement ps = con.prepareStatement("SELECT rec_have,rec_left,time_left FROM character_reco_bonus WHERE charId=? LIMIT 1"))
-		{
-			ps.setInt(1, getObjectId());
-			try (ResultSet rs = ps.executeQuery())
-			{
-				if (rs.next())
-				{
-					setRecomHave(rs.getInt("rec_have"));
-					setRecomLeft(rs.getInt("rec_left"));
-					_time_left = rs.getLong("time_left");
-				}
-				else
-				{
-					_time_left = 3600000;
-				}
-			}
-		}
-		catch (Exception e)
-		{
-			LOGGER.log(Level.SEVERE, "Could not restore Recommendations for player: " + getObjectId(), e);
-		}
-		return _time_left;
-	}
-	
-	/**
-	 * Update PlayerInstance Recommendations data.
-	 * @param cancelRecoTask
-	 */
-	public void storeRecommendations(boolean cancelRecoTask)
-	{
-		long recoTaskEnd = 0;
-		if ((_nevitHourglassTask != null) && !_nevitHourglassTask.isDone())
-		{
-			recoTaskEnd = _nevitHourglassTask.getDelay(TimeUnit.MILLISECONDS);
-			
-			if (cancelRecoTask)
-			{
-				_nevitHourglassTask.cancel(false);
-				_nevitHourglassTask = null;
-			}
-		}
-		
-		try (Connection con = DatabaseFactory.getConnection();
-			PreparedStatement ps = con.prepareStatement("REPLACE INTO character_reco_bonus (charId,rec_have,rec_left,time_left) VALUES (?,?,?,?)"))
-		{
-			ps.setInt(1, getObjectId());
-			ps.setInt(2, _recomHave);
-			ps.setInt(3, _recomLeft);
-			ps.setLong(4, getStat().hasPausedNevitHourglass() ? loadRecommendations() : recoTaskEnd);
-			ps.execute();
-		}
-		catch (Exception e)
-		{
-			LOGGER.log(Level.SEVERE, "Could not update Recommendations for player: " + getObjectId(), e);
-		}
-	}
-	
-	public void checkRecoBonusTask()
-	{
-		// Create bonus task
-		startNevitHourglassTask();
-		
-		// Create task to give new recommendations
-		_recoGiveTask = ThreadPool.scheduleAtFixedRate(new RecoGiveTask(this), 7200000, 3600000);
-		
-		// Store new data
-		storeRecommendations(false);
-	}
-	
-	public void startNevitHourglassTask()
-	{
-		if (_nevitHourglassTask == null)
-		{
-			// Load data
-			final long taskTime = loadRecommendations();
-			
-			if (taskTime > 0)
-			{
-				// If player have some timeleft, start bonus task
-				_nevitHourglassTask = ThreadPool.schedule(new RecoBonusTaskEnd(this), taskTime);
-			}
-			sendPacket(new ExVoteSystemInfo(this));
-		}
-	}
-	
-	public void stopNevitHourglassTask()
-	{
-		if (_nevitHourglassTask != null)
-		{
-			_nevitHourglassTask.cancel(false);
-			_nevitHourglassTask = null;
-		}
-	}
-	
-	public void stopRecoGiveTask()
-	{
-		if (_recoGiveTask != null)
-		{
-			_recoGiveTask.cancel(false);
-			_recoGiveTask = null;
-		}
-	}
-	
-	public boolean isRecoTwoHoursGiven()
-	{
-		return _recoTwoHoursGiven;
-	}
-	
-	public void setRecoTwoHoursGiven(boolean val)
-	{
-		_recoTwoHoursGiven = val;
-	}
-	
-	public int getNevitHourglassTime()
-	{
-		if (_nevitHourglassTask != null)
-		{
-			return (int) Math.max(0, _nevitHourglassTask.getDelay(TimeUnit.SECONDS));
-		}
-		return 0;
-	}
-	
-	public boolean isNevitHourglassActive()
-	{
-		return (getNevitHourglassTime() > 0) || getStat().hasPausedNevitHourglass();
-	}
-	
-	public int getNevitHourglassStatus()
-	{
-		if (getStat().hasPausedNevitHourglass())
-		{
-			return NEVIT_HOURGLASS_PAUSED;
-		}
-		else if (getNevitHourglassTime() > 0)
-		{
-			return NEVIT_HOURGLASS_ACTIVE;
-		}
-		else
-		{
-			return NEVIT_HOURGLASS_MAINTAIN;
-		}
-	}
-	
-	public int getNevitHourglassBonus()
-	{
-		if (_isOnline && (_recomHave != 0) && isNevitHourglassActive())
-		{
-			final int lvl = getLevel() / 10;
-			final int exp = (Math.min(100, _recomHave) - 1) / 10;
-			
-			return NEVIT_HOURGLASS_BONUS[lvl][exp];
-		}
-		return 0;
-	}
-	
-	public double getNevitHourglassMultiplier()
-	{
-		double multiplier = 1.0;
-		
-		if (_isOnline && (_recomHave != 0) && isNevitHourglassActive())
-		{
-			final double bonus = getNevitHourglassBonus();
-			
-			if (bonus > 0)
-			{
-				multiplier += (bonus / 100);
-			}
-		}
-		return multiplier;
-	}
-	
 	public void setPremiumStatus(boolean premiumStatus)
 	{
 		_premiumStatus = premiumStatus;
@@ -14454,14 +14388,6 @@ public class PlayerInstance extends Playable
 	public boolean hasAction(PlayerAction act)
 	{
 		return (_actionMask & act.getMask()) == act.getMask();
-	}
-	
-	// High Five: Nevit's Bonus System
-	private final NevitSystem _nevitSystem = new NevitSystem(this);
-	
-	public NevitSystem getNevitSystem()
-	{
-		return _nevitSystem;
 	}
 	
 	/**

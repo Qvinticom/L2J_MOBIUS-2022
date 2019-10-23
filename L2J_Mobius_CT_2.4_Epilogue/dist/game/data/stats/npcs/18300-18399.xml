@@ -9,7 +9,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<equipment rhand="21735" /> <!-- rhand: Tarbar - Event -->
+		<equipment rhand="158" /> <!-- rhand: Tarbar -->
 		<acquire exp="1751" sp="100" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="702.20463" hpRegen="4.5" mp="372.96" mpRegen="1.8" />
@@ -92,7 +92,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="18302" level="44" type="Npc" name="Apostate's Offering, Evoked Spirit">
+	<npc id="18302" level="44" type="Npc" name="Offering of Apostates, Evoked Spirit">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="2" />
@@ -184,7 +184,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="18304" level="55" type="Npc" name="Witch's Offering, Evoked Spirit">
+	<npc id="18304" level="55" type="Npc" name="Offering of the Witch, Evoked Spirit">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="3" />
@@ -368,7 +368,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="18308" level="77" type="Npc" name="Offering of Forbidden Path, Evoked Spirit">
+	<npc id="18308" level="77" type="Npc" name="Offering of /Forbidden Path, Evoked Spirit">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="5" />
@@ -469,7 +469,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<equipment rhand="21735" /> <!-- rhand: Tarbar - Event -->
+		<equipment rhand="158" /> <!-- rhand: Tarbar -->
 		<acquire exp="1751" sp="100" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="702.20463" hpRegen="4.5" mp="372.96" mpRegen="1.8" />
@@ -552,7 +552,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="18312" level="44" type="Npc" name="Apostate's Offering, Evoked Spirit">
+	<npc id="18312" level="44" type="Npc" name="Offering of Apostates, Evoked Spirit">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="2" />
@@ -644,7 +644,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="18314" level="55" type="Npc" name="Witch's Offering, Evoked Spirit">
+	<npc id="18314" level="55" type="Npc" name="Offering of the Witch, Evoked Spirit">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="3" />
@@ -2166,7 +2166,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="18343" level="78" type="Monster" name="Doorman Zombie">
+	<npc id="18343" level="78" type="Monster" name="Gatekeeper Zombie">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="pass1" value="8064" /> <!-- Visitor's Mark -->
@@ -3728,7 +3728,7 @@
 			<height normal="47" />
 		</collision>
 	</npc>
-	<npc id="18371" level="82" type="Monster" name="Beleth's Sample">
+	<npc id="18371" level="82" type="Monster" name="Beleth Sample">
 		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -3770,7 +3770,7 @@
 			<height normal="30.5" />
 		</collision>
 	</npc>
-	<npc id="18372" level="82" type="Monster" name="Beleth's Sample">
+	<npc id="18372" level="82" type="Monster" name="Beleth Sample">
 		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -3812,7 +3812,7 @@
 			<height normal="24.6" />
 		</collision>
 	</npc>
-	<npc id="18373" level="82" type="Monster" name="Beleth's Sample">
+	<npc id="18373" level="82" type="Monster" name="Beleth Sample">
 		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -3853,7 +3853,7 @@
 			<height normal="22.3" />
 		</collision>
 	</npc>
-	<npc id="18374" level="82" type="Monster" name="Beleth's Sample">
+	<npc id="18374" level="82" type="Monster" name="Beleth Sample">
 		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -3895,7 +3895,7 @@
 			<height normal="22.3" />
 		</collision>
 	</npc>
-	<npc id="18375" level="82" type="Monster" name="Beleth's Sample">
+	<npc id="18375" level="82" type="Monster" name="Beleth Sample">
 		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -3937,7 +3937,7 @@
 			<height normal="28.5" />
 		</collision>
 	</npc>
-	<npc id="18376" level="82" type="Monster" name="Beleth's Sample">
+	<npc id="18376" level="82" type="Monster" name="Beleth Sample">
 		<!-- Confirmed CT2.5 -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
@@ -3979,7 +3979,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="18377" level="82" type="Monster" name="Beleth's Sample">
+	<npc id="18377" level="82" type="Monster" name="Beleth Sample">
 		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>

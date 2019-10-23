@@ -48,7 +48,7 @@ import org.l2jmobius.gameserver.model.clan.Clan.SubPledge;
 import org.l2jmobius.gameserver.model.clan.ClanMember;
 import org.l2jmobius.gameserver.model.entity.Castle;
 import org.l2jmobius.gameserver.model.entity.Fort;
-import org.l2jmobius.gameserver.model.olympiad.OlympiadManager;
+import org.l2jmobius.gameserver.model.olympiad.Olympiad;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -336,9 +336,9 @@ public class VillageMasterInstance extends NpcInstance
 				return;
 			}
 			
-			if (OlympiadManager.getInstance().isRegisteredInComp(player))
+			if (Olympiad.getInstance().isRegisteredInComp(player))
 			{
-				OlympiadManager.getInstance().unRegisterNoble(player);
+				Olympiad.getInstance().unRegisterNoble(player);
 			}
 			
 			final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());

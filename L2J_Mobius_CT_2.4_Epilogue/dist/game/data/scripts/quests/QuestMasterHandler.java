@@ -44,7 +44,6 @@ import quests.Q00022_TragedyInVonHellmannForest.Q00022_TragedyInVonHellmannFores
 import quests.Q00023_LidiasHeart.Q00023_LidiasHeart;
 import quests.Q00024_InhabitantsOfTheForestOfTheDead.Q00024_InhabitantsOfTheForestOfTheDead;
 import quests.Q00025_HidingBehindTheTruth.Q00025_HidingBehindTheTruth;
-import quests.Q00026_TiredOfWaiting.Q00026_TiredOfWaiting;
 import quests.Q00027_ChestCaughtWithABaitOfWind.Q00027_ChestCaughtWithABaitOfWind;
 import quests.Q00028_ChestCaughtWithABaitOfIcyAir.Q00028_ChestCaughtWithABaitOfIcyAir;
 import quests.Q00029_ChestCaughtWithABaitOfEarth.Q00029_ChestCaughtWithABaitOfEarth;
@@ -235,11 +234,6 @@ import quests.Q00241_PossessorOfAPreciousSoul1.Q00241_PossessorOfAPreciousSoul1;
 import quests.Q00242_PossessorOfAPreciousSoul2.Q00242_PossessorOfAPreciousSoul2;
 import quests.Q00246_PossessorOfAPreciousSoul3.Q00246_PossessorOfAPreciousSoul3;
 import quests.Q00247_PossessorOfAPreciousSoul4.Q00247_PossessorOfAPreciousSoul4;
-import quests.Q00249_PoisonedPlainsOfTheLizardmen.Q00249_PoisonedPlainsOfTheLizardmen;
-import quests.Q00250_WatchWhatYouEat.Q00250_WatchWhatYouEat;
-import quests.Q00251_NoSecrets.Q00251_NoSecrets;
-import quests.Q00252_ItSmellsDelicious.Q00252_ItSmellsDelicious;
-import quests.Q00254_LegendaryTales.Q00254_LegendaryTales;
 import quests.Q00255_Tutorial.Q00255_Tutorial;
 import quests.Q00257_TheGuardIsBusy.Q00257_TheGuardIsBusy;
 import quests.Q00258_BringWolfPelts.Q00258_BringWolfPelts;
@@ -254,7 +248,6 @@ import quests.Q00266_PleasOfPixies.Q00266_PleasOfPixies;
 import quests.Q00267_WrathOfVerdure.Q00267_WrathOfVerdure;
 import quests.Q00268_TracesOfEvil.Q00268_TracesOfEvil;
 import quests.Q00269_InventionAmbition.Q00269_InventionAmbition;
-import quests.Q00270_TheOneWhoEndsSilence.Q00270_TheOneWhoEndsSilence;
 import quests.Q00271_ProofOfValor.Q00271_ProofOfValor;
 import quests.Q00272_WrathOfAncestors.Q00272_WrathOfAncestors;
 import quests.Q00273_InvadersOfTheHolyLand.Q00273_InvadersOfTheHolyLand;
@@ -262,17 +255,11 @@ import quests.Q00274_SkirmishWithTheWerewolves.Q00274_SkirmishWithTheWerewolves;
 import quests.Q00275_DarkWingedSpies.Q00275_DarkWingedSpies;
 import quests.Q00276_TotemOfTheHestui.Q00276_TotemOfTheHestui;
 import quests.Q00277_GatekeepersOffering.Q00277_GatekeepersOffering;
-import quests.Q00278_HomeSecurity.Q00278_HomeSecurity;
-import quests.Q00279_TargetOfOpportunity.Q00279_TargetOfOpportunity;
 import quests.Q00280_TheFoodChain.Q00280_TheFoodChain;
 import quests.Q00281_HeadForTheHills.Q00281_HeadForTheHills;
 import quests.Q00283_TheFewTheProudTheBrave.Q00283_TheFewTheProudTheBrave;
 import quests.Q00284_MuertosFeather.Q00284_MuertosFeather;
 import quests.Q00286_FabulousFeathers.Q00286_FabulousFeathers;
-import quests.Q00287_FiguringItOut.Q00287_FiguringItOut;
-import quests.Q00288_HandleWithCare.Q00288_HandleWithCare;
-import quests.Q00289_NoMoreSoupForYou.Q00289_NoMoreSoupForYou;
-import quests.Q00290_ThreatRemoval.Q00290_ThreatRemoval;
 import quests.Q00291_RevengeOfTheRedbonnet.Q00291_RevengeOfTheRedbonnet;
 import quests.Q00292_BrigandsSweep.Q00292_BrigandsSweep;
 import quests.Q00293_TheHiddenVeins.Q00293_TheHiddenVeins;
@@ -372,22 +359,11 @@ import quests.Q00419_GetAPet.Q00419_GetAPet;
 import quests.Q00420_LittleWing.Q00420_LittleWing;
 import quests.Q00421_LittleWingsBigAdventure.Q00421_LittleWingsBigAdventure;
 import quests.Q00422_RepentYourSins.Q00422_RepentYourSins;
-import quests.Q00423_TakeYourBestShot.Q00423_TakeYourBestShot;
 import quests.Q00426_QuestForFishingShot.Q00426_QuestForFishingShot;
 import quests.Q00431_WeddingMarch.Q00431_WeddingMarch;
 import quests.Q00432_BirthdayPartySong.Q00432_BirthdayPartySong;
 import quests.Q00450_GraveRobberRescue.Q00450_GraveRobberRescue;
 import quests.Q00451_LuciensAltar.Q00451_LuciensAltar;
-import quests.Q00452_FindingtheLostSoldiers.Q00452_FindingtheLostSoldiers;
-import quests.Q00453_NotStrongEnoughAlone.Q00453_NotStrongEnoughAlone;
-import quests.Q00454_CompletelyLost.Q00454_CompletelyLost;
-import quests.Q00455_WingsOfSand.Q00455_WingsOfSand;
-import quests.Q00456_DontKnowDontCare.Q00456_DontKnowDontCare;
-import quests.Q00457_LostAndFound.Q00457_LostAndFound;
-import quests.Q00458_PerfectForm.Q00458_PerfectForm;
-import quests.Q00461_RumbleInTheBase.Q00461_RumbleInTheBase;
-import quests.Q00463_IMustBeaGenius.Q00463_IMustBeaGenius;
-import quests.Q00464_Oath.Q00464_Oath;
 import quests.Q00501_ProofOfClanAlliance.Q00501_ProofOfClanAlliance;
 import quests.Q00503_PursuitOfClanAmbition.Q00503_PursuitOfClanAmbition;
 import quests.Q00504_CompetitionForTheBanditStronghold.Q00504_CompetitionForTheBanditStronghold;
@@ -396,9 +372,6 @@ import quests.Q00509_AClansFame.Q00509_AClansFame;
 import quests.Q00510_AClansPrestige.Q00510_AClansPrestige;
 import quests.Q00511_AwlUnderFoot.Q00511_AwlUnderFoot;
 import quests.Q00512_BladeUnderFoot.Q00512_BladeUnderFoot;
-import quests.Q00551_OlympiadStarter.Q00551_OlympiadStarter;
-import quests.Q00552_OlympiadVeteran.Q00552_OlympiadVeteran;
-import quests.Q00553_OlympiadUndefeated.Q00553_OlympiadUndefeated;
 import quests.Q00601_WatchingEyes.Q00601_WatchingEyes;
 import quests.Q00602_ShadowOfLight.Q00602_ShadowOfLight;
 import quests.Q00603_DaimonTheWhiteEyedPart1.Q00603_DaimonTheWhiteEyedPart1;
@@ -482,13 +455,6 @@ import quests.Q00715_PathToBecomingALordGoddard.Q00715_PathToBecomingALordGoddar
 import quests.Q00716_PathToBecomingALordRune.Q00716_PathToBecomingALordRune;
 import quests.Q00726_LightWithinTheDarkness.Q00726_LightWithinTheDarkness;
 import quests.Q00727_HopeWithinTheDarkness.Q00727_HopeWithinTheDarkness;
-import quests.Q00901_HowLavasaurusesAreMade.Q00901_HowLavasaurusesAreMade;
-import quests.Q00902_ReclaimOurEra.Q00902_ReclaimOurEra;
-import quests.Q00903_TheCallOfAntharas.Q00903_TheCallOfAntharas;
-import quests.Q00904_DragonTrophyAntharas.Q00904_DragonTrophyAntharas;
-import quests.Q00905_RefinedDragonBlood.Q00905_RefinedDragonBlood;
-import quests.Q00906_TheCallOfValakas.Q00906_TheCallOfValakas;
-import quests.Q00907_DragonTrophyValakas.Q00907_DragonTrophyValakas;
 import quests.Q00998_FallenAngelSelect.Q00998_FallenAngelSelect;
 import quests.Q00999_T1Tutorial.Q00999_T1Tutorial;
 import quests.Q10267_JourneyToGracia.Q10267_JourneyToGracia;
@@ -506,26 +472,6 @@ import quests.Q10278_MutatedKaneusHeine.Q10278_MutatedKaneusHeine;
 import quests.Q10279_MutatedKaneusOren.Q10279_MutatedKaneusOren;
 import quests.Q10280_MutatedKaneusSchuttgart.Q10280_MutatedKaneusSchuttgart;
 import quests.Q10281_MutatedKaneusRune.Q10281_MutatedKaneusRune;
-import quests.Q10282_ToTheSeedOfAnnihilation.Q10282_ToTheSeedOfAnnihilation;
-import quests.Q10283_RequestOfIceMerchant.Q10283_RequestOfIceMerchant;
-import quests.Q10284_AcquisitionOfDivineSword.Q10284_AcquisitionOfDivineSword;
-import quests.Q10285_MeetingSirra.Q10285_MeetingSirra;
-import quests.Q10286_ReunionWithSirra.Q10286_ReunionWithSirra;
-import quests.Q10287_StoryOfThoseLeft.Q10287_StoryOfThoseLeft;
-import quests.Q10288_SecretMission.Q10288_SecretMission;
-import quests.Q10289_FadeToBlack.Q10289_FadeToBlack;
-import quests.Q10290_LandDragonConqueror.Q10290_LandDragonConqueror;
-import quests.Q10291_FireDragonDestroyer.Q10291_FireDragonDestroyer;
-import quests.Q10292_SevenSignsGirlOfDoubt.Q10292_SevenSignsGirlOfDoubt;
-import quests.Q10293_SevenSignsForbiddenBookOfTheElmoreAdenKingdom.Q10293_SevenSignsForbiddenBookOfTheElmoreAdenKingdom;
-import quests.Q10294_SevenSignsToTheMonasteryOfSilence.Q10294_SevenSignsToTheMonasteryOfSilence;
-import quests.Q10295_SevenSignsSolinasTomb.Q10295_SevenSignsSolinasTomb;
-import quests.Q10296_SevenSignsOneWhoSeeksThePowerOfTheSeal.Q10296_SevenSignsOneWhoSeeksThePowerOfTheSeal;
-import quests.Q10501_ZakenEmbroideredSoulCloak.Q10501_ZakenEmbroideredSoulCloak;
-import quests.Q10502_FreyaEmbroideredSoulCloak.Q10502_FreyaEmbroideredSoulCloak;
-import quests.Q10503_FrintezzaEmbroideredSoulCloak.Q10503_FrintezzaEmbroideredSoulCloak;
-import quests.Q10504_JewelOfAntharas.Q10504_JewelOfAntharas;
-import quests.Q10505_JewelOfValakas.Q10505_JewelOfValakas;
 
 /**
  * @author NosBit
@@ -561,7 +507,6 @@ public class QuestMasterHandler
 		Q00023_LidiasHeart.class,
 		Q00024_InhabitantsOfTheForestOfTheDead.class,
 		Q00025_HidingBehindTheTruth.class,
-		Q00026_TiredOfWaiting.class,
 		Q00027_ChestCaughtWithABaitOfWind.class,
 		Q00028_ChestCaughtWithABaitOfIcyAir.class,
 		Q00029_ChestCaughtWithABaitOfEarth.class,
@@ -752,11 +697,6 @@ public class QuestMasterHandler
 		Q00242_PossessorOfAPreciousSoul2.class,
 		Q00246_PossessorOfAPreciousSoul3.class,
 		Q00247_PossessorOfAPreciousSoul4.class,
-		Q00249_PoisonedPlainsOfTheLizardmen.class,
-		Q00250_WatchWhatYouEat.class,
-		Q00251_NoSecrets.class,
-		Q00252_ItSmellsDelicious.class,
-		Q00254_LegendaryTales.class,
 		Q00255_Tutorial.class,
 		Q00257_TheGuardIsBusy.class,
 		Q00258_BringWolfPelts.class,
@@ -771,7 +711,6 @@ public class QuestMasterHandler
 		Q00267_WrathOfVerdure.class,
 		Q00268_TracesOfEvil.class,
 		Q00269_InventionAmbition.class,
-		Q00270_TheOneWhoEndsSilence.class,
 		Q00271_ProofOfValor.class,
 		Q00272_WrathOfAncestors.class,
 		Q00273_InvadersOfTheHolyLand.class,
@@ -779,17 +718,11 @@ public class QuestMasterHandler
 		Q00275_DarkWingedSpies.class,
 		Q00276_TotemOfTheHestui.class,
 		Q00277_GatekeepersOffering.class,
-		Q00278_HomeSecurity.class,
-		Q00279_TargetOfOpportunity.class,
 		Q00280_TheFoodChain.class,
 		Q00281_HeadForTheHills.class,
 		Q00283_TheFewTheProudTheBrave.class,
 		Q00284_MuertosFeather.class,
 		Q00286_FabulousFeathers.class,
-		Q00287_FiguringItOut.class,
-		Q00288_HandleWithCare.class,
-		Q00289_NoMoreSoupForYou.class,
-		Q00290_ThreatRemoval.class,
 		Q00291_RevengeOfTheRedbonnet.class,
 		Q00292_BrigandsSweep.class,
 		Q00293_TheHiddenVeins.class,
@@ -889,22 +822,11 @@ public class QuestMasterHandler
 		Q00420_LittleWing.class,
 		Q00421_LittleWingsBigAdventure.class,
 		Q00422_RepentYourSins.class,
-		Q00423_TakeYourBestShot.class,
 		Q00426_QuestForFishingShot.class,
 		Q00431_WeddingMarch.class,
 		Q00432_BirthdayPartySong.class,
 		Q00450_GraveRobberRescue.class,
 		Q00451_LuciensAltar.class,
-		Q00452_FindingtheLostSoldiers.class,
-		Q00453_NotStrongEnoughAlone.class,
-		Q00454_CompletelyLost.class,
-		Q00455_WingsOfSand.class,
-		Q00456_DontKnowDontCare.class,
-		Q00457_LostAndFound.class,
-		Q00458_PerfectForm.class,
-		Q00461_RumbleInTheBase.class,
-		Q00463_IMustBeaGenius.class,
-		Q00464_Oath.class,
 		Q00501_ProofOfClanAlliance.class,
 		Q00503_PursuitOfClanAmbition.class,
 		Q00504_CompetitionForTheBanditStronghold.class,
@@ -913,9 +835,6 @@ public class QuestMasterHandler
 		Q00510_AClansPrestige.class,
 		Q00511_AwlUnderFoot.class,
 		Q00512_BladeUnderFoot.class,
-		Q00551_OlympiadStarter.class,
-		Q00552_OlympiadVeteran.class,
-		Q00553_OlympiadUndefeated.class,
 		Q00601_WatchingEyes.class,
 		Q00602_ShadowOfLight.class,
 		Q00603_DaimonTheWhiteEyedPart1.class,
@@ -999,13 +918,6 @@ public class QuestMasterHandler
 		Q00716_PathToBecomingALordRune.class,
 		Q00726_LightWithinTheDarkness.class,
 		Q00727_HopeWithinTheDarkness.class,
-		Q00901_HowLavasaurusesAreMade.class,
-		Q00902_ReclaimOurEra.class,
-		Q00903_TheCallOfAntharas.class,
-		Q00904_DragonTrophyAntharas.class,
-		Q00905_RefinedDragonBlood.class,
-		Q00906_TheCallOfValakas.class,
-		Q00907_DragonTrophyValakas.class,
 		Q00998_FallenAngelSelect.class,
 		Q00999_T1Tutorial.class,
 		Q10267_JourneyToGracia.class,
@@ -1022,27 +934,7 @@ public class QuestMasterHandler
 		Q10278_MutatedKaneusHeine.class,
 		Q10279_MutatedKaneusOren.class,
 		Q10280_MutatedKaneusSchuttgart.class,
-		Q10281_MutatedKaneusRune.class,
-		Q10282_ToTheSeedOfAnnihilation.class,
-		Q10283_RequestOfIceMerchant.class,
-		Q10284_AcquisitionOfDivineSword.class,
-		Q10285_MeetingSirra.class,
-		Q10286_ReunionWithSirra.class,
-		Q10287_StoryOfThoseLeft.class,
-		Q10288_SecretMission.class,
-		Q10289_FadeToBlack.class,
-		Q10290_LandDragonConqueror.class,
-		Q10291_FireDragonDestroyer.class,
-		Q10292_SevenSignsGirlOfDoubt.class,
-		Q10293_SevenSignsForbiddenBookOfTheElmoreAdenKingdom.class,
-		Q10294_SevenSignsToTheMonasteryOfSilence.class,
-		Q10295_SevenSignsSolinasTomb.class,
-		Q10296_SevenSignsOneWhoSeeksThePowerOfTheSeal.class,
-		Q10501_ZakenEmbroideredSoulCloak.class,
-		Q10502_FreyaEmbroideredSoulCloak.class,
-		Q10503_FrintezzaEmbroideredSoulCloak.class,
-		Q10504_JewelOfAntharas.class,
-		Q10505_JewelOfValakas.class
+		Q10281_MutatedKaneusRune.class
 	};
 	
 	public static void main(String[] args)

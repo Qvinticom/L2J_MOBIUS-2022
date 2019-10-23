@@ -38,14 +38,12 @@ public class ExRpItemLink implements IClientOutgoingPacket
 		OutgoingPackets.EX_RP_ITEM_LINK.writeId(packet);
 		packet.writeD(_item.getObjectId());
 		packet.writeD(_item.getDisplayId());
-		packet.writeD(_item.getLocationSlot());
 		packet.writeQ(_item.getCount());
 		packet.writeH(_item.getItem().getType2());
-		packet.writeH(_item.getCustomType1());
-		packet.writeH(_item.isEquipped() ? 0x01 : 0x00);
 		packet.writeD(_item.getItem().getBodyPart());
 		packet.writeH(_item.getEnchantLevel());
 		packet.writeH(_item.getCustomType2());
+		packet.writeH(0x00); // ??
 		if (_item.isAugmented())
 		{
 			packet.writeD(_item.getAugmentation().getAugmentationId());
@@ -55,7 +53,6 @@ public class ExRpItemLink implements IClientOutgoingPacket
 			packet.writeD(0x00);
 		}
 		packet.writeD(_item.getMana());
-		packet.writeD(_item.isTimeLimitedItem() ? (int) (_item.getRemainingTime() / 1000) : -9999);
 		packet.writeH(_item.getAttackElementType());
 		packet.writeH(_item.getAttackElementPower());
 		for (byte i = 0; i < 6; i++)

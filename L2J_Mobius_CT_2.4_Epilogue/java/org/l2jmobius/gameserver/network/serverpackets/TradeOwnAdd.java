@@ -17,7 +17,6 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.model.ItemInfo;
 import org.l2jmobius.gameserver.model.TradeItem;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
@@ -39,7 +38,7 @@ public class TradeOwnAdd extends AbstractItemPacket
 		OutgoingPackets.TRADE_OWN_ADD.writeId(packet);
 		
 		packet.writeH(1); // items added count
-		packet.writeH(0);
+		packet.writeH(_item.getItem().getType1()); // item type1
 		packet.writeD(_item.getObjectId());
 		packet.writeD(_item.getItem().getDisplayId());
 		packet.writeQ(_item.getCount());
@@ -52,7 +51,16 @@ public class TradeOwnAdd extends AbstractItemPacket
 		packet.writeH(_item.getCustomType2());
 		
 		// T1
-		writeItemElementalAndEnchant(packet, new ItemInfo(_item));
+		packet.writeH(_item.getAttackElementType());
+		packet.writeH(_item.getAttackElementPower());
+		for (byte i = 0; i < 6; i++)
+		{
+			packet.writeH(_item.getElementDefAttr(i));
+		}
+		for (int op : _item.getEnchantOptions())
+		{
+			packet.writeH(op);
+		}
 		return true;
 	}
 }

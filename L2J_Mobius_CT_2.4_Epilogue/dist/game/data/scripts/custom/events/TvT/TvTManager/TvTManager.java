@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.instancemanager.AntiFeedManager;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.entity.TvTEvent;
-import org.l2jmobius.gameserver.model.olympiad.OlympiadManager;
+import org.l2jmobius.gameserver.model.olympiad.Olympiad;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
 import ai.AbstractNpcAI;
@@ -74,7 +74,7 @@ public class TvTManager extends AbstractNpcAI implements IVoicedCommandHandler
 				{
 					htmltext = getHtm(player, "CursedWeaponEquipped.html");
 				}
-				else if (OlympiadManager.getInstance().isRegistered(player))
+				else if (Olympiad.getInstance().isRegistered(player))
 				{
 					htmltext = getHtm(player, "Olympiad.html");
 				}

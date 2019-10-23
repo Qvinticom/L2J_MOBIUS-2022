@@ -355,13 +355,13 @@
 	<skill id="109" levels="1" name="Ogre Spirit Totem">
 		<!-- Becomes possessed by an Ogre's soul. Increases one's own P. Atk./P. Def./M. Def. by 30% and Critical Damage by 10% for 5 minutes. Requires a hand-to-hand weapon. -->
 		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="300" />
+		<set name="abnormalTime" val="120" /> <!-- Epilogue Modification -->
 		<set name="abnormalType" val="POSSESSION" />
 		<set name="effectPoint" val="438" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill0109" />
 		<set name="magicLvl" val="46" />
-		<set name="mpConsume" val="41" />
+		<set name="mpConsume" val="21" /> <!-- Epilogue Modification -->
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
 		<set name="targetType" val="SELF" />

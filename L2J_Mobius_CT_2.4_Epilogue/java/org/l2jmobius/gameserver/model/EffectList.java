@@ -40,8 +40,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.effects.EffectFlag;
 import org.l2jmobius.gameserver.model.effects.EffectType;
-import org.l2jmobius.gameserver.model.olympiad.OlympiadGameManager;
-import org.l2jmobius.gameserver.model.olympiad.OlympiadGameTask;
+import org.l2jmobius.gameserver.model.olympiad.Olympiad;
 import org.l2jmobius.gameserver.model.skills.AbnormalType;
 import org.l2jmobius.gameserver.model.skills.BuffInfo;
 import org.l2jmobius.gameserver.model.skills.EffectScope;
@@ -1452,10 +1451,16 @@ public class EffectList
 			
 			if (os != null)
 			{
-				final OlympiadGameTask game = OlympiadGameManager.getInstance().getOlympiadTask(_owner.getActingPlayer().getOlympiadGameId());
-				if ((game != null) && game.isBattleStarted())
+				final List<PlayerInstance> specs = Olympiad.getInstance().getSpectators(((PlayerInstance) _owner).getOlympiadGameId());
+				if ((specs != null) && !specs.isEmpty())
 				{
-					game.getZone().broadcastPacketToObservers(os);
+					for (PlayerInstance spec : specs)
+					{
+						if (spec != null)
+						{
+							spec.sendPacket(os);
+						}
+					}
 				}
 			}
 			

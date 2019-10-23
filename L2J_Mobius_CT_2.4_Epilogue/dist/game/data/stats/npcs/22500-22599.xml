@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="22500" level="78" type="Monster" name="Lost Watcher">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="50" />
 			<param name="MoveAroundSocial1" value="50" />
@@ -65,7 +64,6 @@
 		</collision>
 	</npc>
 	<npc id="22501" level="78" type="Monster" name="Lost Watcher">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="50" />
 			<param name="MoveAroundSocial1" value="50" />
@@ -126,7 +124,6 @@
 		</collision>
 	</npc>
 	<npc id="22502" level="78" type="Monster" name="Lost Beholder">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -191,7 +188,6 @@
 		</collision>
 	</npc>
 	<npc id="22503" level="81" type="Monster" name="Lost Watcher">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -255,7 +251,6 @@
 		</collision>
 	</npc>
 	<npc id="22504" level="81" type="Monster" name="Lost Watcher">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -316,7 +311,6 @@
 		</collision>
 	</npc>
 	<npc id="22505" level="81" type="Monster" name="Lost Beholder">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -380,7 +374,6 @@
 		</collision>
 	</npc>
 	<npc id="22506" level="75" type="Monster" name="Boom - Child">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -426,7 +419,6 @@
 		</collision>
 	</npc>
 	<npc id="22507" level="77" type="Monster" name="Boom - Child">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -472,7 +464,6 @@
 		</collision>
 	</npc>
 	<npc id="22508" level="80" type="Monster" name="Boom - Child">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -518,7 +509,6 @@
 		</collision>
 	</npc>
 	<npc id="22509" level="76" type="Monster" name="Fanatic of Infinity">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probability" value="10" />
 			<param name="Skill02_Probability" value="20" />
@@ -577,7 +567,7 @@
 				<item id="4039" min="1" max="1" chance="4.9167753190918" /> <!-- Mold Glue -->
 				<item id="4041" min="1" max="1" chance="1.28264130688477" /> <!-- Mold Hardener -->
 				<item id="4044" min="1" max="1" chance="4.9167753190918" /> <!-- Thons -->
-				<item id="1808" min="1" max="1" chance="0.0655600576171875" /> <!-- Recipe: Soulshot (S-Grade) -->
+				<item id="1808" min="1" max="1" chance="0.0655600576171875" /> <!-- Recipe: Soulshot: S Grade -->
 			</drop>
 			<spoil>
 				<item id="3957" min="1" max="1" chance="0.8877" /> <!-- Recipe: Blessed Spiritshot S -->
@@ -591,7 +581,6 @@
 		</collision>
 	</npc>
 	<npc id="22510" level="77" type="Monster" name="Rotten Messenger">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probability" value="15" />
 			<param name="Skill02_Probability" value="20" />
@@ -663,7 +652,6 @@
 		</collision>
 	</npc>
 	<npc id="22511" level="77" type="Monster" name="Zealot of Infinity">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probability" value="20" />
 			<param name="Skill02_Probability" value="20" />
@@ -737,7 +725,6 @@
 		</collision>
 	</npc>
 	<npc id="22512" level="78" type="Monster" name="Body Severer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probability" value="10" />
 			<param name="Skill02_Probability" value="15" />
@@ -815,7 +802,6 @@
 		</collision>
 	</npc>
 	<npc id="22513" level="79" type="Monster" name="Body Harvester">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probability" value="15" />
 			<param name="Skill02_Probability" value="15" />
@@ -868,15 +854,15 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="10019" max="20447" chance="70" /> <!-- Adena -->
-				<item id="5326" min="1" max="1" chance="0.0055697809419632" /> <!-- Sealed Robe of Nightmare -->
-				<item id="5487" min="1" max="1" chance="0.827980195406914" /> <!-- Sealed Robe of Nightmare Fabric -->
+				<item id="5326" min="1" max="1" chance="0.0055697809419632" /> <!-- Sealed Nightmare Robe -->
+				<item id="5487" min="1" max="1" chance="0.827980195406914" /> <!-- Sealed Nightmare Robe Fabric -->
 				<item id="5329" min="1" max="1" chance="0.0055697809419632" /> <!-- Sealed Majestic Robe -->
 				<item id="5488" min="1" max="1" chance="0.827980195406914" /> <!-- Sealed Majestic Robe Fabric -->
 				<item id="1895" min="2" max="6" chance="8.75638227047729" /> <!-- Metallic Fiber -->
 				<item id="4040" min="1" max="1" chance="2.45179075136566" /> <!-- Mold Lubricant -->
 				<item id="4042" min="1" max="1" chance="2.04316412007141" /> <!-- Enria -->
 				<item id="4043" min="1" max="1" chance="4.08632824014282" /> <!-- Asofe -->
-				<item id="959" min="1" max="1" chance="0.00489224882507324" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="959" min="1" max="1" chance="0.00489224882507324" /> <!-- Scroll: Enchant Weapon (S) -->
 				<item id="1345" min="60" max="180" chance="13.6210425278091" /> <!-- Shining Arrow -->
 			</drop>
 			<spoil>
@@ -891,7 +877,6 @@
 		</collision>
 	</npc>
 	<npc id="22514" level="80" type="Monster" name="Soul Exploiter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probability" value="10" />
 			<param name="Skill02_Probability" value="10" />
@@ -954,7 +939,7 @@
 				<item id="4040" min="1" max="1" chance="2.61431535250855" /> <!-- Mold Lubricant -->
 				<item id="9628" min="1" max="1" chance="1.02522988861084" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.687993097412109" /> <!-- Orichalcum -->
-				<item id="960" min="1" max="1" chance="0.0522420765380859" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="960" min="1" max="1" chance="0.0522420765380859" /> <!-- Scroll: Enchant Armor (S) -->
 			</drop>
 			<spoil>
 				<item id="5523" min="1" max="1" chance="4.5183" /> <!-- Sealed Majestic Plate Armor Pattern -->
@@ -968,7 +953,6 @@
 		</collision>
 	</npc>
 	<npc id="22515" level="80" type="Monster" name="Soul Devourer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probability" value="15" />
 			<param name="Skill02_Probability" value="20" />
@@ -1047,7 +1031,6 @@
 		</collision>
 	</npc>
 	<npc id="22516" level="80" type="Monster" name="Butcher of Infinity">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -1119,7 +1102,7 @@
 			<spoil>
 				<item id="5282" min="1" max="1" chance="0.4892" /> <!-- Recipe: Greater Blessed Spiritshot (S) Compressed Package(100%) -->
 				<item id="5529" min="1" max="1" chance="3.0199" /> <!-- Dragon Slayer Edge -->
-				<item id="1808" min="1" max="1" chance="0.4892" /> <!-- Recipe: Soulshot (S-Grade) -->
+				<item id="1808" min="1" max="1" chance="0.4892" /> <!-- Recipe: Soulshot: S Grade -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -1128,7 +1111,6 @@
 		</collision>
 	</npc>
 	<npc id="22517" level="80" type="Monster" name="Disciple of Infinity">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -1208,7 +1190,6 @@
 		</collision>
 	</npc>
 	<npc id="22518" level="80" type="Monster" name="Rotten Messenger">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -1290,7 +1271,6 @@
 		</collision>
 	</npc>
 	<npc id="22519" level="81" type="Monster" name="Body Harvester">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="126" />
 			<param name="MoveAroundSocial1" value="126" />
@@ -1358,7 +1338,7 @@
 			<spoil>
 				<item id="6901" min="1" max="1" chance="1.1053" /> <!-- Recipe: Shining Arrow (100%) -->
 				<item id="6688" min="1" max="1" chance="2.3892" /> <!-- Forgotten Blade Edge -->
-				<item id="959" min="1" max="1" chance="0.0442" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="959" min="1" max="1" chance="0.0442" /> <!-- Scroll: Enchant Weapon (S) -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -1367,7 +1347,6 @@
 		</collision>
 	</npc>
 	<npc id="22520" level="81" type="Monster" name="Body Severer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="150" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -1445,7 +1424,6 @@
 		</collision>
 	</npc>
 	<npc id="22521" level="81" type="Monster" name="Soul Exploiter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="170" />
 			<param name="MoveAroundSocial1" value="170" />
@@ -1523,7 +1501,6 @@
 		</collision>
 	</npc>
 	<npc id="22522" level="81" type="Monster" name="Soul Devourer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -1603,7 +1580,6 @@
 		</collision>
 	</npc>
 	<npc id="22523" level="81" type="Monster" name="Soul Devourer" title="Food of Ekimus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -1670,8 +1646,8 @@
 			</drop>
 			<spoil>
 				<item id="5481" min="1" max="1" chance="71.3202" /> <!-- Sealed Majestic Leather Armor Fabric -->
-				<item id="1808" min="1" max="1" chance="7.064" /> <!-- Recipe: Soulshot (S-Grade) -->
-				<item id="5487" min="1" max="1" chance="71.5723" /> <!-- Sealed Robe of Nightmare Fabric -->
+				<item id="1808" min="1" max="1" chance="7.064" /> <!-- Recipe: Soulshot: S Grade -->
+				<item id="5487" min="1" max="1" chance="71.5723" /> <!-- Sealed Nightmare Robe Fabric -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -1680,7 +1656,6 @@
 		</collision>
 	</npc>
 	<npc id="22524" level="81" type="Monster" name="Emissary of Death">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -1738,8 +1713,8 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="6376" max="12790" chance="70" /> <!-- Adena -->
-				<item id="5326" min="1" max="1" chance="0.00406466040372849" /> <!-- Sealed Robe of Nightmare -->
-				<item id="5487" min="1" max="1" chance="0.604235310223103" /> <!-- Sealed Robe of Nightmare Fabric -->
+				<item id="5326" min="1" max="1" chance="0.00406466040372849" /> <!-- Sealed Nightmare Robe -->
+				<item id="5487" min="1" max="1" chance="0.604235310223103" /> <!-- Sealed Nightmare Robe Fabric -->
 				<item id="5329" min="1" max="1" chance="0.00406466040372849" /> <!-- Sealed Majestic Robe -->
 				<item id="5488" min="1" max="1" chance="0.604235310223103" /> <!-- Sealed Majestic Robe Fabric -->
 				<item id="1895" min="1" max="1" chance="25.5604993855591" /> <!-- Metallic Fiber -->
@@ -1752,7 +1727,7 @@
 			<spoil>
 				<item id="6901" min="1" max="1" chance="1.0896" /> <!-- Recipe: Shining Arrow (100%) -->
 				<item id="6688" min="1" max="1" chance="2.3552" /> <!-- Forgotten Blade Edge -->
-				<item id="960" min="1" max="1" chance="0.4359" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="960" min="1" max="1" chance="0.4359" /> <!-- Scroll: Enchant Armor (S) -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -1761,7 +1736,6 @@
 		</collision>
 	</npc>
 	<npc id="22525" level="81" type="Monster" name="Emissary of Death">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -1844,7 +1818,6 @@
 		</collision>
 	</npc>
 	<npc id="22526" level="81" type="Monster" name="Emissary of Death">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -1929,7 +1902,6 @@
 		</collision>
 	</npc>
 	<npc id="22527" level="81" type="Monster" name="Emissary of Death">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -1994,7 +1966,7 @@
 				<item id="5317" min="1" max="1" chance="0.00927488626098633" /> <!-- Sealed Majestic Circlet -->
 				<item id="5528" min="1" max="1" chance="1.12661255641413" /> <!-- Sealed Majestic Circlet Design -->
 				<item id="1879" min="1" max="1" chance="15.7055714730167" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="7.85277304720879" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="7.85277304720879" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="0.739075564937592" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.495973963518143" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.409712104949951" /> <!-- Adamantine -->
@@ -2002,7 +1974,7 @@
 			</drop>
 			<spoil>
 				<item id="6691" min="1" max="1" chance="2.4809" /> <!-- Angel Slayer Blade -->
-				<item id="959" min="1" max="1" chance="0.0459" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="959" min="1" max="1" chance="0.0459" /> <!-- Scroll: Enchant Weapon (S) -->
 				<item id="1894" min="1" max="1" chance="40.2724" /> <!-- Crafted Leather -->
 			</spoil>
 		</dropLists>
@@ -2012,7 +1984,6 @@
 		</collision>
 	</npc>
 	<npc id="22528" level="81" type="Monster" name="Cursed Prefect">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -2079,7 +2050,7 @@
 				<item id="2500" min="1" max="1" chance="0.00111878519546986" /> <!-- Dark Legion's Edge -->
 				<item id="5545" min="1" max="1" chance="0.318177167911649" /> <!-- Dark Legion's Edge Blade -->
 				<item id="1879" min="1" max="1" chance="16.5744073672485" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="8.28720368362427" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="8.28720368362427" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="0.779958780670166" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.523384446670532" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.432357780258179" /> <!-- Adamantine -->
@@ -2098,7 +2069,6 @@
 		</collision>
 	</npc>
 	<npc id="22529" level="81" type="Monster" name="Cursed Prefect">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -2168,7 +2138,7 @@
 				<item id="7902" min="1" max="1" chance="0.000859969202756882" /> <!-- Doom Crusher -->
 				<item id="8349" min="1" max="1" chance="0.2445885923841" /> <!-- Doom Crusher Head -->
 				<item id="1879" min="1" max="1" chance="19.8191731326294" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="9.9095865663147" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="9.9095865663147" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="0.932660600967407" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.625882370986939" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.517019415206909" /> <!-- Adamantine -->
@@ -2186,7 +2156,6 @@
 		</collision>
 	</npc>
 	<npc id="22530" level="81" type="Monster" name="Cursed Prefect">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="180" />
 			<param name="MoveAroundSocial1" value="180" />
@@ -2249,7 +2218,7 @@
 				<item id="270" min="1" max="1" chance="0.00267979494988918" /> <!-- Dragon Grinder -->
 				<item id="5538" min="1" max="1" chance="0.762320190744996" /> <!-- Dragon Grinder Edge -->
 				<item id="1879" min="1" max="1" chance="13.2345598239899" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="6.61727991199493" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="6.61727991199493" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="0.622783673286438" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.417916844844818" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.345273106098175" /> <!-- Adamantine -->
@@ -2257,7 +2226,7 @@
 				<item id="1345" min="20" max="60" chance="26.4692153577805" /> <!-- Shining Arrow -->
 			</drop>
 			<spoil>
-				<item id="960" min="1" max="1" chance="0.4514" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="960" min="1" max="1" chance="0.4514" /> <!-- Scroll: Enchant Armor (S) -->
 				<item id="1894" min="1" max="1" chance="39.5922" /> <!-- Crafted Leather -->
 				<item id="1894" min="1" max="1" chance="39.5922" /> <!-- Crafted Leather -->
 			</spoil>
@@ -2268,7 +2237,6 @@
 		</collision>
 	</npc>
 	<npc id="22531" level="81" type="Monster" name="Cursed Prefect">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="180" />
 			<param name="MoveAroundSocial1" value="180" />
@@ -2331,7 +2299,7 @@
 				<item id="289" min="1" max="1" chance="0.00274679997563362" /> <!-- Soul Bow -->
 				<item id="5534" min="1" max="1" chance="0.782053193062544" /> <!-- Soul Bow Stave -->
 				<item id="1879" min="1" max="1" chance="15.8254434008598" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="7.91270891427994" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="7.91270891427994" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="0.744716519355774" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.499759458065033" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.412839210510254" /> <!-- Adamantine -->
@@ -2349,7 +2317,6 @@
 		</collision>
 	</npc>
 	<npc id="22532" level="81" type="Monster" name="Law Scholar of Conclusions">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="150" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -2409,7 +2376,7 @@
 				<item id="236" min="1" max="1" chance="0.00253334678864479" /> <!-- Soul Separator -->
 				<item id="5537" min="1" max="1" chance="0.720866649968863" /> <!-- Soul Separator Head -->
 				<item id="1879" min="1" max="1" chance="12.5101020227051" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="6.25505101135254" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="6.25505101135254" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="0.588717062988281" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.395038729248047" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.326352059326172" /> <!-- Adamantine -->
@@ -2419,7 +2386,7 @@
 			<spoil>
 				<item id="6857" min="1" max="1" chance="1.9862" /> <!-- Recipe: Sealed Imperial Crusader Gauntlets (60%) -->
 				<item id="6698" min="1" max="1" chance="20.9509" /> <!-- Sealed Tateossian Earring Part -->
-				<item id="959" min="1" max="1" chance="0.0427" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="959" min="1" max="1" chance="0.0427" /> <!-- Scroll: Enchant Weapon (S) -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -2428,7 +2395,6 @@
 		</collision>
 	</npc>
 	<npc id="22533" level="81" type="Monster" name="Law Scholar of Conclusions">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="150" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -2490,7 +2456,7 @@
 				<item id="5323" min="1" max="1" chance="0.00407804300308228" /> <!-- Sealed Majestic Leather Armor -->
 				<item id="5481" min="1" max="1" chance="0.604221927623749" /> <!-- Sealed Majestic Leather Armor Fabric -->
 				<item id="1879" min="1" max="1" chance="14.9591937900352" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="7.47959689501762" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="7.47959689501762" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="0.703963482301712" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.472394321416855" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.390250345436096" /> <!-- Adamantine -->
@@ -2508,7 +2474,6 @@
 		</collision>
 	</npc>
 	<npc id="22534" level="81" type="Monster" name="Law Scholar of Conclusions">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="200" />
 			<param name="MoveAroundSocial1" value="200" />
@@ -2570,7 +2535,7 @@
 				<item id="5316" min="1" max="1" chance="0.00284586709004641" /> <!-- Sealed Majestic Plate Armor -->
 				<item id="5523" min="1" max="1" chance="0.426654146499813" /> <!-- Sealed Majestic Plate Armor Pattern -->
 				<item id="1879" min="1" max="1" chance="11.9309498319969" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="5.96545331549835" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="5.96545331549835" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="0.561440198776245" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.376755922863007" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.311263206539154" /> <!-- Adamantine -->
@@ -2589,7 +2554,6 @@
 		</collision>
 	</npc>
 	<npc id="22535" level="81" type="Monster" name="Law Scholar of Conclusions">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="200" />
 			<param name="MoveAroundSocial1" value="200" />
@@ -2646,12 +2610,12 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="6110" max="12231" chance="70" /> <!-- Adena -->
-				<item id="5326" min="1" max="1" chance="0.00388925827014446" /> <!-- Sealed Robe of Nightmare -->
-				<item id="5487" min="1" max="1" chance="0.57816076719296" /> <!-- Sealed Robe of Nightmare Fabric -->
+				<item id="5326" min="1" max="1" chance="0.00388925827014446" /> <!-- Sealed Nightmare Robe -->
+				<item id="5487" min="1" max="1" chance="0.57816076719296" /> <!-- Sealed Nightmare Robe Fabric -->
 				<item id="5329" min="1" max="1" chance="0.00388925827014446" /> <!-- Sealed Majestic Robe -->
 				<item id="5488" min="1" max="1" chance="0.57816076719296" /> <!-- Sealed Majestic Robe Fabric -->
 				<item id="1879" min="1" max="1" chance="14.266665102705" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="7.13334405615234" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="7.13334405615234" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="0.671374099628449" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.450527961845398" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.372180274915695" /> <!-- Adamantine -->
@@ -2659,7 +2623,7 @@
 			</drop>
 			<spoil>
 				<item id="6701" min="1" max="1" chance="5.551" /> <!-- Sealed Imperial Crusader Breastplate Part -->
-				<item id="960" min="1" max="1" chance="0.417" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="960" min="1" max="1" chance="0.417" /> <!-- Scroll: Enchant Armor (S) -->
 				<item id="1894" min="1" max="1" chance="36.5827" /> <!-- Crafted Leather -->
 			</spoil>
 		</dropLists>
@@ -2669,7 +2633,6 @@
 		</collision>
 	</npc>
 	<npc id="22536" level="81" type="Monster" name="Royal Guard Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
 			<param name="Skill01_Prob" value="3333" />
@@ -2728,7 +2691,7 @@
 				<item id="6328" min="1" max="1" chance="0.0797055513916016" /> <!-- Sealed Majestic Ring -->
 				<item id="6346" min="1" max="1" chance="12.9604920780716" /> <!-- Sealed Majestic Ring Gemstone -->
 				<item id="1879" min="2" max="6" chance="14.21889003088" /> <!-- Cokes -->
-				<item id="1885" min="3" max="9" chance="4.73961912452698" /> <!-- High-Grade Suede -->
+				<item id="1885" min="3" max="9" chance="4.73961912452698" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="2.67649425756454" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="1.79608613269806" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="1.48371906736374" /> <!-- Adamantine -->
@@ -2747,7 +2710,6 @@
 		</collision>
 	</npc>
 	<npc id="22537" level="81" type="Monster" name="Dragon Steed Troop Grand Magician">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
 			<param name="Skill01_Prob" value="10000" />
@@ -2808,7 +2770,7 @@
 				<item id="5319" min="1" max="1" chance="0.00934065810585022" /> <!-- Sealed Majestic Boots -->
 				<item id="5503" min="1" max="1" chance="1.06875930794334" /> <!-- Sealed Majestic Boots Lining -->
 				<item id="1879" min="1" max="1" chance="14.0628597387753" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="7.03144118428802" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="7.03144118428802" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="0.661785894493103" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.444087210830688" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.366851700712204" /> <!-- Adamantine -->
@@ -2826,7 +2788,6 @@
 		</collision>
 	</npc>
 	<npc id="22538" level="81" type="Monster" name="Dragon Steed Troop Commander">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
 			<param name="Skill01_Prob" value="1000" />
@@ -2886,7 +2847,7 @@
 				<item id="5317" min="1" max="1" chance="0.0112609536437988" /> <!-- Sealed Majestic Circlet -->
 				<item id="5528" min="1" max="1" chance="1.36785847452021" /> <!-- Sealed Majestic Circlet Design -->
 				<item id="1879" min="1" max="1" chance="16.344521059967" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="8.17226052998352" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="8.17226052998352" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="0.769166660640717" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.516147875537872" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.42638627173996" /> <!-- Adamantine -->
@@ -2894,7 +2855,7 @@
 				<item id="1345" min="60" max="180" chance="10.8962976301117" /> <!-- Shining Arrow -->
 			</drop>
 			<spoil>
-				<item id="959" min="1" max="1" chance="0.0557" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="959" min="1" max="1" chance="0.0557" /> <!-- Scroll: Enchant Weapon (S) -->
 				<item id="1894" min="1" max="1" chance="48.8959" /> <!-- Crafted Leather -->
 				<item id="1894" min="1" max="1" chance="48.8959" /> <!-- Crafted Leather -->
 			</spoil>
@@ -2905,7 +2866,6 @@
 		</collision>
 	</npc>
 	<npc id="22539" level="81" type="Monster" name="Dragon Steed Troops No 1 Battalion Commander">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
 			<param name="Skill01_Prob" value="1000" />
@@ -2965,7 +2925,7 @@
 				<item id="2500" min="1" max="1" chance="0.00113213105285168" /> <!-- Dark Legion's Edge -->
 				<item id="5545" min="1" max="1" chance="0.321972666030765" /> <!-- Dark Legion's Edge Blade -->
 				<item id="1879" min="1" max="1" chance="16.7723737098083" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="8.38618685490417" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="8.38618685490417" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="0.789301236179352" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.529659145488739" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.43754784053421" /> <!-- Adamantine -->
@@ -2974,7 +2934,7 @@
 			</drop>
 			<spoil>
 				<item id="5480" min="1" max="1" chance="6.4168" /> <!-- Sealed Leather Armor of Nightmare Fabric -->
-				<item id="1808" min="1" max="1" chance="0.6356" /> <!-- Recipe: Soulshot (S-Grade) -->
+				<item id="1808" min="1" max="1" chance="0.6356" /> <!-- Recipe: Soulshot: S Grade -->
 				<item id="5481" min="1" max="1" chance="6.4168" /> <!-- Sealed Majestic Leather Armor Fabric -->
 			</spoil>
 		</dropLists>
@@ -2984,7 +2944,6 @@
 		</collision>
 	</npc>
 	<npc id="22540" level="81" type="Monster" name="White Dragon Leader">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
 			<param name="Skill01_Prob" value="1000" />
@@ -3046,7 +3005,7 @@
 				<item id="7902" min="1" max="1" chance="0.000714290403842926" /> <!-- Doom Crusher -->
 				<item id="8349" min="1" max="1" chance="0.203155280292988" /> <!-- Doom Crusher Head -->
 				<item id="1879" min="1" max="1" chance="16.4608231138001" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="8.23041155690002" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="8.23041155690002" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="0.774625718757629" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.519811828092575" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.429405146650314" /> <!-- Adamantine -->
@@ -3054,7 +3013,7 @@
 			</drop>
 			<spoil>
 				<item id="3036" min="1" max="1" chance="0.5346" /> <!-- Recipe: Spiritshot S -->
-				<item id="5487" min="1" max="1" chance="5.417" /> <!-- Sealed Robe of Nightmare Fabric -->
+				<item id="5487" min="1" max="1" chance="5.417" /> <!-- Sealed Nightmare Robe Fabric -->
 				<item id="1894" min="1" max="1" chance="42.209" /> <!-- Crafted Leather -->
 			</spoil>
 		</dropLists>
@@ -3064,7 +3023,6 @@
 		</collision>
 	</npc>
 	<npc id="22541" level="80" type="Monster" name="Dragon Steed Troop Infantry">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
 			<param name="Skill01_Prob" value="1000" />
@@ -3120,7 +3078,7 @@
 				<item id="270" min="1" max="1" chance="0.00293236140155792" /> <!-- Dragon Grinder -->
 				<item id="5538" min="1" max="1" chance="0.834167667590141" /> <!-- Dragon Grinder Edge -->
 				<item id="1879" min="1" max="1" chance="14.4807519903564" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="7.24037599517822" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="7.24037599517822" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="0.681435505676269" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.457271273712158" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.377742965301514" /> <!-- Adamantine -->
@@ -3139,7 +3097,6 @@
 		</collision>
 	</npc>
 	<npc id="22542" level="81" type="Monster" name="Dragon Steed Troop Magic Leader">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
 			<param name="Skill01_Prob" value="10000" />
@@ -3195,7 +3152,7 @@
 				<item id="289" min="1" max="1" chance="0.00695414990186691" /> <!-- Soul Bow -->
 				<item id="5534" min="1" max="1" chance="1.97994582206011" /> <!-- Soul Bow Stave -->
 				<item id="1879" min="1" max="3" chance="20.0331059829483" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="20.0331059829483" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="20.0331059829483" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="1.88545262215805" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="1.26524786515045" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="1.04520668661118" /> <!-- Adamantine -->
@@ -3213,7 +3170,6 @@
 		</collision>
 	</npc>
 	<npc id="22543" level="81" type="Monster" name="Dragon Steed Troop Magician">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
 			<param name="Skill01_Prob" value="10000" />
@@ -3270,7 +3226,7 @@
 				<item id="236" min="1" max="1" chance="0.00275082096493244" /> <!-- Soul Separator -->
 				<item id="5537" min="1" max="1" chance="0.782749169021487" /> <!-- Soul Separator Head -->
 				<item id="1879" min="1" max="1" chance="13.5845411972351" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="6.79227059861755" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="6.79227059861755" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="0.639252878768921" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.428968448616028" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.35440368221283" /> <!-- Adamantine -->
@@ -3289,7 +3245,6 @@
 		</collision>
 	</npc>
 	<npc id="22544" level="80" type="Monster" name="Dragon Steed Troop Magic Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
 			<param name="Skill01_Prob" value="10000" />
@@ -3349,7 +3304,7 @@
 				<item id="5323" min="1" max="1" chance="0.0046733582906723" /> <!-- Sealed Majestic Leather Armor -->
 				<item id="5481" min="1" max="1" chance="0.692426625401497" /> <!-- Sealed Majestic Leather Armor Fabric -->
 				<item id="1879" min="1" max="1" chance="17.1432862559719" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="8.57162927708626" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="8.57162927708626" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="0.806731801914215" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.54137626553154" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.447217849395752" /> <!-- Adamantine -->
@@ -3367,7 +3322,6 @@
 		</collision>
 	</npc>
 	<npc id="22545" level="81" type="Monster" name="Wife of the Dragon of Darkness">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
 			<param name="Skill01_Prob" value="10000" />
@@ -3424,7 +3378,7 @@
 				<item id="5316" min="1" max="1" chance="0.00851739157867432" /> <!-- Sealed Majestic Plate Armor -->
 				<item id="5523" min="1" max="1" chance="1.27693259011078" /> <!-- Sealed Majestic Plate Armor Pattern -->
 				<item id="1879" min="1" max="3" chance="20.8300160709381" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="20.8300160709381" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="20.8300160709381" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="1.96045029693604" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="1.31558483955383" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="1.08679150512695" /> <!-- Adamantine -->
@@ -3432,7 +3386,7 @@
 			</drop>
 			<spoil>
 				<item id="6688" min="1" max="1" chance="6.5807" /> <!-- Forgotten Blade Edge -->
-				<item id="960" min="1" max="1" chance="1.2178" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="960" min="1" max="1" chance="1.2178" /> <!-- Scroll: Enchant Armor (S) -->
 				<item id="1894" min="1" max="3" chance="53.4125" /> <!-- Crafted Leather -->
 			</spoil>
 		</dropLists>
@@ -3442,7 +3396,6 @@
 		</collision>
 	</npc>
 	<npc id="22546" level="79" type="Monster" name="Warrior of Light">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Prob" value="3333" />
 			<skill name="Skill01_ID" id="5274" level="5" /> <!-- NPC(party) - Physical Single Long Range Attack -->
@@ -3490,12 +3443,12 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="8197" max="16729" chance="70" /> <!-- Adena -->
-				<item id="5326" min="1" max="1" chance="0.00455678972029686" /> <!-- Sealed Robe of Nightmare -->
-				<item id="5487" min="1" max="1" chance="0.677393183386087" /> <!-- Sealed Robe of Nightmare Fabric -->
+				<item id="5326" min="1" max="1" chance="0.00455678972029686" /> <!-- Sealed Nightmare Robe -->
+				<item id="5487" min="1" max="1" chance="0.677393183386087" /> <!-- Sealed Nightmare Robe Fabric -->
 				<item id="5329" min="1" max="1" chance="0.00455678972029686" /> <!-- Sealed Majestic Robe -->
 				<item id="5488" min="1" max="1" chance="0.677393183386087" /> <!-- Sealed Majestic Robe Fabric -->
 				<item id="1879" min="1" max="1" chance="14.3279094514923" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="7.16395472574616" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="7.16395472574616" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="0.674250346549988" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.452464756401062" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.373758236747742" /> <!-- Adamantine -->
@@ -3514,7 +3467,6 @@
 		</collision>
 	</npc>
 	<npc id="22547" level="79" type="Monster" name="Dragon Steed Troop Healer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Prob" value="2000" />
 			<skill name="Skill01_ID" id="5835" level="1" /> <!-- Major Heal -->
@@ -3572,7 +3524,7 @@
 				<item id="6328" min="1" max="1" chance="0.0144276827697754" /> <!-- Sealed Majestic Ring -->
 				<item id="6346" min="1" max="1" chance="2.34600808824348" /> <!-- Sealed Majestic Ring Gemstone -->
 				<item id="1879" min="1" max="1" chance="12.011031427948" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="6.00550600967407" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="6.00550600967407" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="0.565217244934082" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.379302266937256" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.313332436035156" /> <!-- Adamantine -->
@@ -3581,7 +3533,7 @@
 			<spoil>
 				<item id="5481" min="1" max="1" chance="3.9387" /> <!-- Sealed Majestic Leather Armor Fabric -->
 				<item id="5277" min="1" max="1" chance="0.3901" /> <!-- Recipe: Greater Spiritshot (S) Compressed Package(100%) -->
-				<item id="5487" min="1" max="1" chance="3.9526" /> <!-- Sealed Robe of Nightmare Fabric -->
+				<item id="5487" min="1" max="1" chance="3.9526" /> <!-- Sealed Nightmare Robe Fabric -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -3590,7 +3542,6 @@
 		</collision>
 	</npc>
 	<npc id="22548" level="80" type="Monster" name="Dragon Steed Troop Javelin Thrower">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Prob" value="1000" />
 			<param name="Skill02_Prob" value="1000" />
@@ -3648,7 +3599,7 @@
 				<item id="5319" min="1" max="1" chance="0.0128608418941498" /> <!-- Sealed Majestic Boots -->
 				<item id="5503" min="1" max="1" chance="1.47153919205666" /> <!-- Sealed Majestic Boots Lining -->
 				<item id="1879" min="1" max="1" chance="16.5965632217102" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="8.2982816108551" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="8.2982816108551" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="0.781027664531708" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.524107180423737" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.432961399715424" /> <!-- Adamantine -->
@@ -3667,7 +3618,6 @@
 		</collision>
 	</npc>
 	<npc id="22549" level="80" type="Monster" name="Dragon Steed Troop Javelin Thrower">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Prob" value="1000" />
 			<param name="Skill02_Prob" value="1000" />
@@ -3724,7 +3674,7 @@
 				<item id="5317" min="1" max="1" chance="0.0114346755065918" /> <!-- Sealed Majestic Circlet -->
 				<item id="5528" min="1" max="1" chance="1.38896032164145" /> <!-- Sealed Majestic Circlet Design -->
 				<item id="1879" min="1" max="1" chance="19.3626299291267" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="9.68129935661316" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="9.68129935661316" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="0.911192133293152" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.611457057449341" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.505104484714508" /> <!-- Adamantine -->
@@ -3733,7 +3683,7 @@
 			<spoil>
 				<item id="5282" min="1" max="1" chance="0.6289" /> <!-- Recipe: Greater Blessed Spiritshot (S) Compressed Package(100%) -->
 				<item id="5495" min="1" max="1" chance="21.4869" /> <!-- Sealed Shield of Nightmare Fragment -->
-				<item id="1808" min="1" max="1" chance="0.6289" /> <!-- Recipe: Soulshot (S-Grade) -->
+				<item id="1808" min="1" max="1" chance="0.6289" /> <!-- Recipe: Soulshot: S Grade -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -3742,7 +3692,6 @@
 		</collision>
 	</npc>
 	<npc id="22550" level="77" type="Monster" name="Savage Warrior">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Prob" value="1000" />
 			<param name="Skill02_Prob" value="1000" />
@@ -3805,7 +3754,7 @@
 				<item id="4039" min="1" max="1" chance="4.03082811471367" /> <!-- Mold Glue -->
 				<item id="4041" min="1" max="1" chance="1.0515238759861" /> <!-- Mold Hardener -->
 				<item id="4044" min="1" max="1" chance="4.03082811471367" /> <!-- Thons -->
-				<item id="1808" min="1" max="1" chance="0.0537468780441284" /> <!-- Recipe: Soulshot (S-Grade) -->
+				<item id="1808" min="1" max="1" chance="0.0537468780441284" /> <!-- Recipe: Soulshot: S Grade -->
 			</drop>
 			<spoil>
 				<item id="5502" min="1" max="1" chance="27.6561" /> <!-- Sealed Boots of Nightmare Lining -->
@@ -3819,7 +3768,6 @@
 		</collision>
 	</npc>
 	<npc id="22551" level="76" type="Monster" name="Priest of Darkness">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Prob" value="10000" />
 			<param name="Skill02_Prob" value="10000" />
@@ -3869,7 +3817,7 @@
 			<drop>
 				<item id="57" min="7866" max="16108" chance="70" /> <!-- Adena -->
 				<item id="212" min="1" max="1" chance="0.00102629451036453" /> <!-- Dasparion's Staff -->
-				<item id="5543" min="1" max="1" chance="0.246301843587399" /> <!-- Dasparion's Staff Head -->
+				<item id="5543" min="1" max="1" chance="0.246301843587399" /> <!-- Dasparion's Staff Edge -->
 				<item id="2504" min="1" max="1" chance="0.00102629451036453" /> <!-- Meteor Shower -->
 				<item id="5532" min="1" max="1" chance="0.24400176536417" /> <!-- Meteor Shower Head -->
 				<item id="7894" min="1" max="1" chance="0.00102629451036453" /> <!-- Spiritual Eye -->
@@ -3894,8 +3842,7 @@
 			<height normal="44" />
 		</collision>
 	</npc>
-	<npc id="22552" level="78" type="Monster" name="Mutated Drake">
-		<!-- Confirmed CT2.5 -->
+	<npc id="22552" level="78" type="Monster" name="Mutation Drake">
 		<parameters>
 			<param name="Skill01_Prob" value="1000" />
 			<skill name="Skill01_ID" id="5274" level="5" /> <!-- NPC(party) - Physical Single Long Range Attack -->
@@ -3961,7 +3908,6 @@
 		</collision>
 	</npc>
 	<npc id="22553" level="75" type="Monster" name="Large Crystal Core">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<acquire exp="8086" sp="852" />
@@ -3997,7 +3943,6 @@
 		</collision>
 	</npc>
 	<npc id="22554" level="75" type="Monster" name="Small Crystal Core">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<acquire exp="8086" sp="852" />
@@ -4033,7 +3978,6 @@
 		</collision>
 	</npc>
 	<npc id="22555" level="75" type="Monster" name="Small Crystal Core">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<acquire exp="8086" sp="852" />
@@ -4069,7 +4013,6 @@
 		</collision>
 	</npc>
 	<npc id="22556" level="75" type="Monster" name="Small Crystal Core">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<acquire exp="8086" sp="852" />
@@ -4105,7 +4048,6 @@
 		</collision>
 	</npc>
 	<npc id="22557" level="75" type="Monster" name="Defense Mechanism">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="134" />
 			<param name="MoveAroundSocial1" value="134" />
@@ -4153,7 +4095,6 @@
 		</collision>
 	</npc>
 	<npc id="22558" level="75" type="Monster" name="Defense Battery">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="134" />
 			<param name="MoveAroundSocial1" value="134" />
@@ -4200,7 +4141,6 @@
 		</collision>
 	</npc>
 	<npc id="22559" level="83" type="Monster" name="Defeated Troops Commander">
-		<!-- Confirmed CT2.5 -->
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4226,7 +4166,6 @@
 		</collision>
 	</npc>
 	<npc id="22560" level="82" type="Monster" name="Defeated Troops No 1 Battalion Commander">
-		<!-- Confirmed CT2.5 -->
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4252,7 +4191,6 @@
 		</collision>
 	</npc>
 	<npc id="22561" level="81" type="Monster" name="Defeated Troops White Dragon Leader">
-		<!-- Confirmed CT2.5 -->
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4278,7 +4216,6 @@
 		</collision>
 	</npc>
 	<npc id="22562" level="80" type="Monster" name="Defeated Troops Infantry">
-		<!-- Confirmed CT2.5 -->
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4304,7 +4241,6 @@
 		</collision>
 	</npc>
 	<npc id="22563" level="82" type="Monster" name="Defeated Troops Magic Leader">
-		<!-- Confirmed CT2.5 -->
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4330,7 +4266,6 @@
 		</collision>
 	</npc>
 	<npc id="22564" level="81" type="Monster" name="Defeated Troops Magician">
-		<!-- Confirmed CT2.5 -->
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4356,7 +4291,6 @@
 		</collision>
 	</npc>
 	<npc id="22565" level="80" type="Monster" name="Defeated Troops Magic Soldier">
-		<!-- Confirmed CT2.5 -->
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4382,7 +4316,6 @@
 		</collision>
 	</npc>
 	<npc id="22566" level="79" type="Monster" name="Defeated Troops Healer">
-		<!-- Confirmed CT2.5 -->
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4408,7 +4341,6 @@
 		</collision>
 	</npc>
 	<npc id="22567" level="80" type="Monster" name="Defeated Troops Javelin Thrower">
-		<!-- Confirmed CT2.5 -->
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4433,7 +4365,6 @@
 		</collision>
 	</npc>
 	<npc id="22568" level="80" type="Monster" name="Defeated Troops Javelin Thrower">
-		<!-- Confirmed CT2.5 -->
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4458,7 +4389,6 @@
 		</collision>
 	</npc>
 	<npc id="22569" level="81" type="Monster" name="Soldiers of Bravery" title="Tiat's Bodyguard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
 			<param name="Skill01_Prob" value="3333" />
@@ -4516,16 +4446,16 @@
 				<item id="6328" min="1" max="1" chance="0.407370208984375" /> <!-- Sealed Majestic Ring -->
 				<item id="6346" min="1" max="1" chance="66.2402840731201" /> <!-- Sealed Majestic Ring Gemstone -->
 				<item id="1879" min="15" max="45" chance="9.68959760635376" /> <!-- Cokes -->
-				<item id="1885" min="14" max="42" chance="5.19085117703247" /> <!-- High-Grade Suede -->
+				<item id="1885" min="14" max="42" chance="5.19085117703247" /> <!-- High Grade Suede -->
 				<item id="9628" min="4" max="12" chance="1.70991356130981" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="9.17960037957764" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="7.58316524465942" /> <!-- Adamantine -->
 				<item id="6861" min="1" max="1" chance="3.09241825756836" /> <!-- Recipe: Sealed Imperial Crusader Shield (60%) -->
-				<item id="14052" min="3" max="9" chance="7.26725284576416" /> <!-- Noble Enhancement Stone -->
+				<item id="14052" min="3" max="9" chance="7.26725284576416" /> <!-- Vesper Noble Enhance Stone -->
 			</drop>
 			<spoil>
 				<item id="6688" min="1" max="1" chance="53.5703" /> <!-- Forgotten Blade Edge -->
-				<item id="960" min="1" max="1" chance="9.9136" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="960" min="1" max="1" chance="9.9136" /> <!-- Scroll: Enchant Armor (S) -->
 				<item id="1894" min="1" max="19" chance="86.9615" /> <!-- Crafted Leather -->
 			</spoil>
 		</dropLists>
@@ -4535,7 +4465,6 @@
 		</collision>
 	</npc>
 	<npc id="22570" level="81" type="Monster" name="Royal Guard Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
 			<param name="Skill01_Prob" value="3333" />
@@ -4596,12 +4525,12 @@
 				<item id="5319" min="1" max="1" chance="0.40905992074585" /> <!-- Sealed Majestic Boots -->
 				<item id="5503" min="1" max="1" chance="46.8046890111389" /> <!-- Sealed Majestic Boots Lining -->
 				<item id="1879" min="168" max="504" chance="1.37469184336853" /> <!-- Cokes -->
-				<item id="1885" min="30" max="90" chance="3.84910570935059" /> <!-- High-Grade Suede -->
+				<item id="1885" min="30" max="90" chance="3.84910570935059" /> <!-- High Grade Suede -->
 				<item id="9628" min="5" max="15" chance="1.9760163227005" /> <!-- Leonard -->
 				<item id="9630" min="6" max="18" chance="1.12201368523407" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="12.0493709757843" /> <!-- Adamantine -->
 				<item id="6863" min="1" max="1" chance="3.44054317327881" /> <!-- Recipe: Sealed Imperial Crusader Helmet (60%) -->
-				<item id="14052" min="4" max="12" chance="8.66048784603882" /> <!-- Noble Enhancement Stone -->
+				<item id="14052" min="4" max="12" chance="8.66048784603882" /> <!-- Vesper Noble Enhance Stone -->
 				<item id="1345" min="2700" max="8100" chance="6.84287206777954" /> <!-- Shining Arrow -->
 			</drop>
 			<spoil>
@@ -4616,7 +4545,6 @@
 		</collision>
 	</npc>
 	<npc id="22571" level="81" type="Monster" name="Dragon Steed Troop Grand Magician">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
 			<param name="Skill01_Prob" value="10000" />
@@ -4675,12 +4603,12 @@
 				<item id="5317" min="1" max="1" chance="0.0642173371582031" /> <!-- Sealed Majestic Circlet -->
 				<item id="5528" min="1" max="1" chance="7.80042540103531" /> <!-- Sealed Majestic Circlet Design -->
 				<item id="1879" min="15" max="45" chance="3.10689986302185" /> <!-- Cokes -->
-				<item id="1885" min="2" max="6" chance="11.6509132006302" /> <!-- High-Grade Suede -->
+				<item id="1885" min="2" max="6" chance="11.6509132006302" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="4.38621384863663" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="2.94337066722107" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="2.43149021578217" /> <!-- Adamantine -->
 				<item id="6865" min="1" max="1" chance="0.214283640804291" /> <!-- Recipe: Sealed Draconic Leather Armor (60%) -->
-				<item id="14052" min="1" max="1" chance="13.9811268121948" /> <!-- Noble Enhancement Stone -->
+				<item id="14052" min="1" max="1" chance="13.9811268121948" /> <!-- Vesper Noble Enhance Stone -->
 			</drop>
 			<spoil>
 				<item id="6690" min="1" max="1" chance="17.2097" /> <!-- Imperial Staff Head -->
@@ -4694,7 +4622,6 @@
 		</collision>
 	</npc>
 	<npc id="22572" level="81" type="Monster" name="Dragon Steed Troop Commander">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
 			<param name="Skill01_Prob" value="1000" />
@@ -4754,16 +4681,16 @@
 				<item id="2500" min="1" max="1" chance="0.0146582119789124" /> <!-- Dark Legion's Edge -->
 				<item id="5545" min="1" max="1" chance="4.16872550064468" /> <!-- Dark Legion's Edge Blade -->
 				<item id="1879" min="14" max="42" chance="6.78628958953857" /> <!-- Cokes -->
-				<item id="1885" min="30" max="90" chance="1.58346757089233" /> <!-- High-Grade Suede -->
+				<item id="1885" min="30" max="90" chance="1.58346757089233" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="8.94193668092728" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="6.00051256023407" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="4.95694036235428" /> <!-- Adamantine -->
 				<item id="6867" min="1" max="1" chance="2.12306878310776" /> <!-- Recipe: Sealed Draconic Leather Gloves (60%) -->
-				<item id="14052" min="4" max="12" chance="3.56280203450775" /> <!-- Noble Enhancement Stone -->
+				<item id="14052" min="4" max="12" chance="3.56280203450775" /> <!-- Vesper Noble Enhance Stone -->
 				<item id="1345" min="2700" max="8100" chance="2.81508205833054" /> <!-- Shining Arrow -->
 			</drop>
 			<spoil>
-				<item id="959" min="1" max="1" chance="0.7406" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="959" min="1" max="1" chance="0.7406" /> <!-- Scroll: Enchant Weapon (S) -->
 				<item id="1894" min="1" max="13" chance="92.8078" /> <!-- Crafted Leather -->
 				<item id="1894" min="1" max="13" chance="92.8078" /> <!-- Crafted Leather -->
 			</spoil>
@@ -4774,7 +4701,6 @@
 		</collision>
 	</npc>
 	<npc id="22573" level="81" type="Monster" name="Dragon Steed Troops No 1 Battalion Commander">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
 			<param name="Skill01_Prob" value="1000" />
@@ -4836,16 +4762,16 @@
 				<item id="7902" min="1" max="1" chance="0.00300844675254822" /> <!-- Doom Crusher -->
 				<item id="8349" min="1" max="1" chance="0.855648962903976" /> <!-- Doom Crusher Head -->
 				<item id="1879" min="3" max="9" chance="9.90453118587494" /> <!-- Cokes -->
-				<item id="1885" min="2" max="6" chance="7.42839010578156" /> <!-- High-Grade Suede -->
+				<item id="1885" min="2" max="6" chance="7.42839010578156" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="2.79658481601715" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="1.87663859699249" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="1.55026378582001" /> <!-- Adamantine -->
 				<item id="6869" min="1" max="1" chance="0.66398221736908" /> <!-- Recipe: Sealed Draconic Leather Boots (60%) -->
-				<item id="14052" min="1" max="1" chance="8.91410788833618" /> <!-- Noble Enhancement Stone -->
+				<item id="14052" min="1" max="1" chance="8.91410788833618" /> <!-- Vesper Noble Enhance Stone -->
 			</drop>
 			<spoil>
 				<item id="5480" min="1" max="1" chance="22.7357" /> <!-- Sealed Leather Armor of Nightmare Fabric -->
-				<item id="1808" min="1" max="1" chance="2.2519" /> <!-- Recipe: Soulshot (S-Grade) -->
+				<item id="1808" min="1" max="1" chance="2.2519" /> <!-- Recipe: Soulshot: S Grade -->
 				<item id="5481" min="1" max="1" chance="22.7357" /> <!-- Sealed Majestic Leather Armor Fabric -->
 			</spoil>
 		</dropLists>
@@ -4855,7 +4781,6 @@
 		</collision>
 	</npc>
 	<npc id="22574" level="81" type="Monster" name="White Dragon Leader">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
 			<param name="Skill01_Prob" value="1000" />
@@ -4911,17 +4836,17 @@
 				<item id="270" min="1" max="1" chance="0.0100903917739391" /> <!-- Dragon Grinder -->
 				<item id="5538" min="1" max="1" chance="2.87040968642735" /> <!-- Dragon Grinder Edge -->
 				<item id="1879" min="2" max="6" chance="10.9004362834167" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="21.8008725668335" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="21.8008725668335" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="2.05183566539764" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="1.37691403869629" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="1.13742249721527" /> <!-- Adamantine -->
 				<item id="6871" min="1" max="1" chance="0.324799477424622" /> <!-- Recipe: Sealed Draconic Leather Helmet (60%) -->
-				<item id="14052" min="1" max="1" chance="6.54024179161072" /> <!-- Noble Enhancement Stone -->
+				<item id="14052" min="1" max="1" chance="6.54024179161072" /> <!-- Vesper Noble Enhance Stone -->
 				<item id="1345" min="300" max="900" chance="5.81357600704193" /> <!-- Shining Arrow -->
 			</drop>
 			<spoil>
 				<item id="3036" min="1" max="1" chance="1.8882" /> <!-- Recipe: Spiritshot S -->
-				<item id="5487" min="1" max="1" chance="19.1316" /> <!-- Sealed Robe of Nightmare Fabric -->
+				<item id="5487" min="1" max="1" chance="19.1316" /> <!-- Sealed Nightmare Robe Fabric -->
 				<item id="1894" min="1" max="3" chance="74.536" /> <!-- Crafted Leather -->
 			</spoil>
 		</dropLists>
@@ -4931,7 +4856,6 @@
 		</collision>
 	</npc>
 	<npc id="22575" level="80" type="Monster" name="Dragon Steed Troop Infantry">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
 			<param name="Skill01_Prob" value="1000" />
@@ -4987,12 +4911,12 @@
 				<item id="289" min="1" max="1" chance="0.0103456498384476" /> <!-- Soul Bow -->
 				<item id="5534" min="1" max="1" chance="2.94555430400372" /> <!-- Soul Bow Stave -->
 				<item id="1879" min="3" max="9" chance="8.51502720150757" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="25.5450344131241" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="25.5450344131241" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="2.40426018552399" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="1.61337953604126" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="1.33277947984314" /> <!-- Adamantine -->
 				<item id="6873" min="1" max="1" chance="0.117459391166687" /> <!-- Recipe: Sealed Major Arcana Robe (60%) -->
-				<item id="14052" min="1" max="1" chance="7.66345841339874" /> <!-- Noble Enhancement Stone -->
+				<item id="14052" min="1" max="1" chance="7.66345841339874" /> <!-- Vesper Noble Enhance Stone -->
 			</drop>
 			<spoil>
 				<item id="1894" min="1" max="3" chance="76.4201" /> <!-- Crafted Leather -->
@@ -5006,7 +4930,6 @@
 		</collision>
 	</npc>
 	<npc id="22576" level="81" type="Monster" name="Dragon Steed Troop Magic Leader">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
 			<param name="Skill01_Prob" value="10000" />
@@ -5063,12 +4986,12 @@
 				<item id="236" min="1" max="1" chance="0.00453508984971046" /> <!-- Soul Separator -->
 				<item id="5537" min="1" max="1" chance="1.29046486723495" /> <!-- Soul Separator Head -->
 				<item id="1879" min="1" max="1" chance="19.5959955825005" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="9.79797395700073" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="9.79797395700073" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="0.922147113018036" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.618832453926086" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.511196983200073" /> <!-- Adamantine -->
 				<item id="6875" min="1" max="1" chance="0.218941415874481" /> <!-- Recipe: Sealed Major Arcana Gloves (60%) -->
-				<item id="14052" min="1" max="1" chance="2.93938265340042" /> <!-- Noble Enhancement Stone -->
+				<item id="14052" min="1" max="1" chance="2.93938265340042" /> <!-- Vesper Noble Enhance Stone -->
 				<item id="1345" min="60" max="180" chance="13.0640288339996" /> <!-- Shining Arrow -->
 			</drop>
 			<spoil>
@@ -5083,7 +5006,6 @@
 		</collision>
 	</npc>
 	<npc id="22577" level="81" type="Monster" name="Dragon Steed Troop Magician">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
 			<param name="Skill01_Prob" value="10000" />
@@ -5142,12 +5064,12 @@
 				<item id="5323" min="1" max="1" chance="0.00715551460075378" /> <!-- Sealed Majestic Leather Armor -->
 				<item id="5481" min="1" max="1" chance="1.06019451534462" /> <!-- Sealed Majestic Leather Armor Fabric -->
 				<item id="1879" min="1" max="1" chance="22.4993120201721" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="11.2496560100861" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="11.2496560100861" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="1.05880470934296" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.710518391578674" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.58695343056488" /> <!-- Adamantine -->
 				<item id="6877" min="1" max="1" chance="0.251381192390442" /> <!-- Recipe: Sealed Major Arcana Boots (60%) -->
-				<item id="14052" min="1" max="1" chance="3.37487296412659" /> <!-- Noble Enhancement Stone -->
+				<item id="14052" min="1" max="1" chance="3.37487296412659" /> <!-- Vesper Noble Enhance Stone -->
 			</drop>
 			<spoil>
 				<item id="1894" min="1" max="1" chance="67.3085" /> <!-- Crafted Leather -->
@@ -5161,7 +5083,6 @@
 		</collision>
 	</npc>
 	<npc id="22578" level="80" type="Monster" name="Dragon Steed Troop Magic Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
 			<param name="Skill01_Prob" value="10000" />
@@ -5221,12 +5142,12 @@
 				<item id="5316" min="1" max="1" chance="0.00606544058704376" /> <!-- Sealed Majestic Plate Armor -->
 				<item id="5523" min="1" max="1" chance="0.909334587641716" /> <!-- Sealed Majestic Plate Armor Pattern -->
 				<item id="1879" min="2" max="6" chance="5.56248840045166" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="11.1250141551018" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="11.1250141551018" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="1.04707553691483" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.702632472953796" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.58044688980484" /> <!-- Adamantine -->
 				<item id="6879" min="1" max="1" chance="0.165740578548431" /> <!-- Recipe: Sealed Major Arcana Circlet (60%) -->
-				<item id="14052" min="1" max="1" chance="3.3374855694313" /> <!-- Noble Enhancement Stone -->
+				<item id="14052" min="1" max="1" chance="3.3374855694313" /> <!-- Vesper Noble Enhance Stone -->
 				<item id="1345" min="60" max="180" chance="14.8333148526039" /> <!-- Shining Arrow -->
 			</drop>
 			<spoil>
@@ -5241,7 +5162,6 @@
 		</collision>
 	</npc>
 	<npc id="22579" level="79" type="Monster" name="Warrior of Light">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Prob" value="3333" />
 			<skill name="Skill01_ID" id="5274" level="5" /> <!-- NPC(party) - Physical Single Long Range Attack -->
@@ -5289,17 +5209,17 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="15112" max="30841" chance="70" /> <!-- Adena -->
-				<item id="5326" min="1" max="1" chance="0.00840094417500496" /> <!-- Sealed Robe of Nightmare -->
-				<item id="5487" min="1" max="1" chance="1.2488490071876" /> <!-- Sealed Robe of Nightmare Fabric -->
+				<item id="5326" min="1" max="1" chance="0.00840094417500496" /> <!-- Sealed Nightmare Robe -->
+				<item id="5487" min="1" max="1" chance="1.2488490071876" /> <!-- Sealed Nightmare Robe Fabric -->
 				<item id="5329" min="1" max="1" chance="0.00840094417500496" /> <!-- Sealed Majestic Robe -->
 				<item id="5488" min="1" max="1" chance="1.2488490071876" /> <!-- Sealed Majestic Robe Fabric -->
 				<item id="1879" min="1" max="1" chance="26.4146312988281" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="13.2073156494141" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="13.2073156494141" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="1.24303598629761" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.834131524383545" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.689093559448242" /> <!-- Adamantine -->
 				<item id="6847" min="1" max="1" chance="0.285552237716675" /> <!-- Recipe: Sealed Tateossian Earring (70%) -->
-				<item id="14052" min="1" max="1" chance="3.96224133082581" /> <!-- Noble Enhancement Stone -->
+				<item id="14052" min="1" max="1" chance="3.96224133082581" /> <!-- Vesper Noble Enhance Stone -->
 			</drop>
 			<spoil>
 				<item id="5515" min="1" max="1" chance="38.036" /> <!-- Sealed Majestic Gauntlets Design -->
@@ -5313,7 +5233,6 @@
 		</collision>
 	</npc>
 	<npc id="22580" level="79" type="Monster" name="Dragon Steed Troop Healer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Prob" value="2000" />
 			<skill name="Skill01_ID" id="5835" level="1" /> <!-- Major Heal -->
@@ -5371,7 +5290,7 @@
 				<item id="6328" min="1" max="1" chance="0.0241419263000488" /> <!-- Sealed Majestic Ring -->
 				<item id="6346" min="1" max="1" chance="3.92558911014748" /> <!-- Sealed Majestic Ring Gemstone -->
 				<item id="1879" min="1" max="1" chance="17.2269357062302" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="8.61346785311508" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="8.61346785311508" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="0.810664027736664" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.543989414169312" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.449409973861694" /> <!-- Adamantine -->
@@ -5390,7 +5309,6 @@
 		</collision>
 	</npc>
 	<npc id="22581" level="80" type="Monster" name="Dragon Steed Troop Javelin Thrower">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Prob" value="1000" />
 			<param name="Skill02_Prob" value="1000" />
@@ -5448,7 +5366,7 @@
 				<item id="5319" min="1" max="1" chance="0.0224033706150055" /> <!-- Sealed Majestic Boots -->
 				<item id="5503" min="1" max="1" chance="2.56339656186485" /> <!-- Sealed Majestic Boots Lining -->
 				<item id="1879" min="1" max="3" chance="16.8647311481171" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="16.8647311481171" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="16.8647311481171" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="1.5872758793335" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="1.06512787617874" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.879893141395569" /> <!-- Adamantine -->
@@ -5466,7 +5384,6 @@
 		</collision>
 	</npc>
 	<npc id="22582" level="80" type="Monster" name="Dragon Steed Troop Javelin Thrower">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Prob" value="1000" />
 			<param name="Skill02_Prob" value="1000" />
@@ -5523,7 +5440,7 @@
 				<item id="5317" min="1" max="1" chance="0.0199190786132812" /> <!-- Sealed Majestic Circlet -->
 				<item id="5528" min="1" max="1" chance="2.41955356070709" /> <!-- Sealed Majestic Circlet Design -->
 				<item id="1879" min="2" max="6" chance="7.22774433249664" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="14.4554445992928" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="14.4554445992928" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="1.36052850389481" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.91299724930191" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.754184464588165" /> <!-- Adamantine -->
@@ -5542,7 +5459,6 @@
 		</collision>
 	</npc>
 	<npc id="22583" level="81" type="Monster" name="Dragon Steed Troop Magic Leader">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
 			<param name="Skill01_Prob" value="10000" />
@@ -5604,7 +5520,7 @@
 				<item id="2500" min="1" max="1" chance="0.00155614293408394" /> <!-- Dark Legion's Edge -->
 				<item id="5545" min="1" max="1" chance="0.442559620593309" /> <!-- Dark Legion's Edge Blade -->
 				<item id="1879" min="1" max="1" chance="26.896466926445" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="13.4482551039734" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="13.4482551039734" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="1.26572423776245" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.849356190734863" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.701636425193787" /> <!-- Adamantine -->
@@ -5612,7 +5528,7 @@
 			</drop>
 			<spoil>
 				<item id="5529" min="1" max="1" chance="5.3926" /> <!-- Dragon Slayer Edge -->
-				<item id="1808" min="1" max="1" chance="0.8736" /> <!-- Recipe: Soulshot (S-Grade) -->
+				<item id="1808" min="1" max="1" chance="0.8736" /> <!-- Recipe: Soulshot: S Grade -->
 				<item id="5533" min="1" max="1" chance="5.3915" /> <!-- Elysian Head -->
 			</spoil>
 		</dropLists>
@@ -5622,7 +5538,6 @@
 		</collision>
 	</npc>
 	<npc id="22584" level="81" type="Monster" name="Dragon Steed Troop Magician">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
 			<param name="Skill01_Prob" value="10000" />
@@ -5686,7 +5601,7 @@
 				<item id="7902" min="1" max="1" chance="0.00119731675672531" /> <!-- Doom Crusher -->
 				<item id="8349" min="1" max="1" chance="0.340535474092007" /> <!-- Doom Crusher Head -->
 				<item id="1879" min="2" max="6" chance="5.91264528751373" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="11.8253268211288" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="11.8253268211288" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="1.11297278895569" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.746850918922424" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.616981137680054" /> <!-- Adamantine -->
@@ -5705,7 +5620,6 @@
 		</collision>
 	</npc>
 	<npc id="22585" level="80" type="Monster" name="Dragon Steed Troop Magic Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
 			<param name="Skill01_Prob" value="10000" />
@@ -5764,7 +5678,7 @@
 				<item id="270" min="1" max="1" chance="0.00305426577717066" /> <!-- Dragon Grinder -->
 				<item id="5538" min="1" max="1" chance="0.868845756252706" /> <!-- Dragon Grinder Edge -->
 				<item id="1879" min="1" max="1" chance="17.5962240261993" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="8.79809779624939" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="8.79809779624939" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="0.828046227752686" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.555679810073852" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.459033661865234" /> <!-- Adamantine -->
@@ -5782,7 +5696,6 @@
 		</collision>
 	</npc>
 	<npc id="22586" level="81" type="Monster" name="Dragon Steed Troop Commander">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
 			<param name="Skill01_Prob" value="1000" />
@@ -5839,7 +5752,7 @@
 				<item id="289" min="1" max="1" chance="0.0446229004859924" /> <!-- Soul Bow -->
 				<item id="5534" min="1" max="1" chance="12.704777238369" /> <!-- Soul Bow Stave -->
 				<item id="1879" min="15" max="45" chance="8.56969093437958" /> <!-- Cokes -->
-				<item id="1885" min="12" max="36" chance="5.35606773013687" /> <!-- High-Grade Suede -->
+				<item id="1885" min="12" max="36" chance="5.35606773013687" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="12.0984307860756" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="8.11867750867462" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="6.70671085433197" /> <!-- Adamantine -->
@@ -5847,7 +5760,7 @@
 			</drop>
 			<spoil>
 				<item id="6688" min="1" max="1" chance="40.6104" /> <!-- Forgotten Blade Edge -->
-				<item id="960" min="1" max="1" chance="7.5153" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="960" min="1" max="1" chance="7.5153" /> <!-- Scroll: Enchant Armor (S) -->
 				<item id="1894" min="1" max="13" chance="94.1764" /> <!-- Crafted Leather -->
 			</spoil>
 		</dropLists>
@@ -5857,7 +5770,6 @@
 		</collision>
 	</npc>
 	<npc id="22587" level="81" type="Monster" name="Dragon Steed Troop Captain #1">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
 			<param name="Skill01_Prob" value="1000" />
@@ -5932,7 +5844,6 @@
 		</collision>
 	</npc>
 	<npc id="22588" level="81" type="Monster" name="White Dragon Leader">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
 			<param name="Skill01_Prob" value="1000" />
@@ -6000,7 +5911,7 @@
 			<spoil>
 				<item id="5481" min="1" max="1" chance="17.537" /> <!-- Sealed Majestic Leather Armor Fabric -->
 				<item id="5162" min="1" max="1" chance="1.737" /> <!-- Recipe: Spiritshot (S) Compressed Package (100%) -->
-				<item id="5487" min="1" max="1" chance="17.599" /> <!-- Sealed Robe of Nightmare Fabric -->
+				<item id="5487" min="1" max="1" chance="17.599" /> <!-- Sealed Nightmare Robe Fabric -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -6009,7 +5920,6 @@
 		</collision>
 	</npc>
 	<npc id="22589" level="80" type="Monster" name="Dragon Steed Troop Infantry">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
 			<param name="Skill01_Prob" value="1000" />
@@ -6086,8 +5996,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="22590" level="73" type="Monster">
-		<!-- Confirmed CT2.5 -->
+	<npc id="22590" level="73" type="Monster" name="">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<acquire exp="116749" sp="11412" />
@@ -6137,7 +6046,7 @@
 				<item id="4040" min="1" max="1" chance="2.3732052252655" /> <!-- Mold Lubricant -->
 				<item id="9628" min="1" max="1" chance="0.930658316261292" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.624517721385956" /> <!-- Orichalcum -->
-				<item id="1808" min="1" max="1" chance="0.0527345264282227" /> <!-- Recipe: Soulshot (S-Grade) -->
+				<item id="1808" min="1" max="1" chance="0.0527345264282227" /> <!-- Recipe: Soulshot: S Grade -->
 			</drop>
 			<spoil>
 				<item id="8690" min="1" max="1" chance="0.2276" /> <!-- Recipe: Sirra's Blade (60%) -->
@@ -6151,7 +6060,6 @@
 		</collision>
 	</npc>
 	<npc id="22591" level="81" type="Monster" name="Dragon Steed Troop Magic Leader">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
 			<param name="Skill01_Prob" value="10000" />
@@ -6215,7 +6123,7 @@
 				<item id="4040" min="1" max="1" chance="2.35356773561859" /> <!-- Mold Lubricant -->
 				<item id="9628" min="1" max="1" chance="0.922958174720764" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.61935795552063" /> <!-- Orichalcum -->
-				<item id="959" min="1" max="1" chance="0.00472792332458496" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="959" min="1" max="1" chance="0.00472792332458496" /> <!-- Scroll: Enchant Weapon (S) -->
 			</drop>
 			<spoil>
 				<item id="5480" min="1" max="1" chance="5.3597" /> <!-- Sealed Leather Armor of Nightmare Fabric -->
@@ -6229,7 +6137,6 @@
 		</collision>
 	</npc>
 	<npc id="22592" level="81" type="Monster" name="Dragon Steed Troop Magician">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
 			<param name="Skill01_Prob" value="10000" />
@@ -6295,13 +6202,13 @@
 				<item id="4040" min="1" max="1" chance="1.97258551446533" /> <!-- Mold Lubricant -->
 				<item id="9628" min="1" max="1" chance="0.773567940155029" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.519079112701416" /> <!-- Orichalcum -->
-				<item id="960" min="1" max="1" chance="0.0394720829772949" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="960" min="1" max="1" chance="0.0394720829772949" /> <!-- Scroll: Enchant Armor (S) -->
 				<item id="1345" min="60" max="180" chance="10.9587235274963" /> <!-- Shining Arrow -->
 			</drop>
 			<spoil>
 				<item id="5481" min="1" max="1" chance="5.3905" /> <!-- Sealed Majestic Leather Armor Fabric -->
-				<item id="1808" min="1" max="1" chance="0.5339" /> <!-- Recipe: Soulshot (S-Grade) -->
-				<item id="5487" min="1" max="1" chance="5.4096" /> <!-- Sealed Robe of Nightmare Fabric -->
+				<item id="1808" min="1" max="1" chance="0.5339" /> <!-- Recipe: Soulshot: S Grade -->
+				<item id="5487" min="1" max="1" chance="5.4096" /> <!-- Sealed Nightmare Robe Fabric -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -6310,7 +6217,6 @@
 		</collision>
 	</npc>
 	<npc id="22593" level="80" type="Monster" name="Dragon Steed Troop Magic Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
 			<param name="Skill01_Prob" value="10000" />
@@ -6389,7 +6295,6 @@
 		</collision>
 	</npc>
 	<npc id="22594" level="81" type="Monster" name="Dragon Steed Troop Commander">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
 			<param name="Skill01_Prob" value="1000" />
@@ -6469,7 +6374,6 @@
 		</collision>
 	</npc>
 	<npc id="22595" level="81" type="Monster" name="Dragon Steed Troops No 1 Battalion Commander">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
 			<param name="Skill01_Prob" value="1000" />
@@ -6541,7 +6445,7 @@
 			</drop>
 			<spoil>
 				<item id="5480" min="1" max="1" chance="24.223" /> <!-- Sealed Leather Armor of Nightmare Fabric -->
-				<item id="1808" min="1" max="1" chance="2.3992" /> <!-- Recipe: Soulshot (S-Grade) -->
+				<item id="1808" min="1" max="1" chance="2.3992" /> <!-- Recipe: Soulshot: S Grade -->
 				<item id="5481" min="1" max="1" chance="24.223" /> <!-- Sealed Majestic Leather Armor Fabric -->
 			</spoil>
 		</dropLists>
@@ -6551,7 +6455,6 @@
 		</collision>
 	</npc>
 	<npc id="22596" level="81" type="Monster" name="White Dragon Leader">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
 			<param name="Skill01_Prob" value="1000" />
@@ -6617,7 +6520,7 @@
 			<spoil>
 				<item id="1894" min="1" max="1" chance="45.3485" /> <!-- Crafted Leather -->
 				<item id="1894" min="1" max="1" chance="45.3485" /> <!-- Crafted Leather -->
-				<item id="5487" min="1" max="1" chance="5.8199" /> <!-- Sealed Robe of Nightmare Fabric -->
+				<item id="5487" min="1" max="1" chance="5.8199" /> <!-- Sealed Nightmare Robe Fabric -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -6626,7 +6529,6 @@
 		</collision>
 	</npc>
 	<npc id="22597" level="80" type="Monster" name="Dragon Steed Troop Infantry">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Breath_Prob" value="1000" />
 			<param name="Skill01_Prob" value="1000" />
@@ -6702,7 +6604,6 @@
 		</collision>
 	</npc>
 	<npc id="22598" level="82" type="Monster" name="Obelisk">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -6727,7 +6628,6 @@
 		</collision>
 	</npc>
 	<npc id="22599" level="82" type="Monster" name="Great Powerful Device">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">

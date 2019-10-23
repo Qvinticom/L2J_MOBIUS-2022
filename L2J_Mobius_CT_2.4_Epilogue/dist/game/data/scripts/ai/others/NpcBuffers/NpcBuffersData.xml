@@ -1,22 +1,4 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="NpcBuffersData.xsd">
-	<npc id="106"> <!-- Birthday Cake -->
-		<skill id="22250" level="1" initialDelay="1" delay="60" affectScope="PARTY" affectObject="FRIEND" /> <!-- Birthday Cake Vitality Buff -->
-	</npc>
-	<npc id="139"> <!-- Birthday Cake -->
-		<skill id="22035" level="1" initialDelay="1" delay="60" affectScope="PARTY" affectObject="FRIEND" /> <!-- Birthday Cake Vitality Buff -->
-	</npc>
-	<npc id="143"> <!-- Totem of Body -->
-		<skill id="23308" level="1" initialDelay="1" delay="5" affectScope="RANGE" affectObject="FRIEND" /> <!-- Totem's Energy - Body -->
-	</npc>
-	<npc id="144"> <!-- Totem of Spirit -->
-		<skill id="23309" level="1" initialDelay="1" delay="5" affectScope="RANGE" affectObject="FRIEND" /> <!-- Totem's Energy - Spirit -->
-	</npc>
-	<npc id="145"> <!-- Totem of Bravery -->
-		<skill id="23310" level="1" initialDelay="1" delay="5" affectScope="RANGE" affectObject="FRIEND" /> <!-- Totem's Energy - Courage -->
-	</npc>
-	<npc id="146"> <!-- Totem of Fortitude -->
-		<skill id="23311" level="1" initialDelay="1" delay="5" affectScope="RANGE" affectObject="FRIEND" /> <!-- Totem's Energy - Fortitude -->
-	</npc>
 	<npc id="13007"> <!-- Special Christmas Tree -->
 		<skill id="2139" level="1" initialDelay="1" delay="10" affectScope="RANGE" affectObject="FRIEND" /> <!-- Special Tree Recovery Bonus -->
 	</npc>

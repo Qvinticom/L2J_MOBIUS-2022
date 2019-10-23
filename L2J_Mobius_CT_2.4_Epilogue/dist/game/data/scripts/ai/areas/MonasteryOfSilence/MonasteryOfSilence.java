@@ -16,244 +16,88 @@
  */
 package ai.areas.MonasteryOfSilence;
 
+import java.util.ArrayList;
+
+import org.l2jmobius.commons.util.CommonUtil;
+import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
+import org.l2jmobius.gameserver.data.xml.impl.SkillData;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Attackable;
+import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
+import org.l2jmobius.gameserver.model.actor.Playable;
+import org.l2jmobius.gameserver.model.actor.Summon;
+import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.effects.EffectType;
-import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.skills.Skill;
-import org.l2jmobius.gameserver.network.NpcStringId;
+import org.l2jmobius.gameserver.network.serverpackets.NpcSay;
+import org.l2jmobius.gameserver.util.Util;
 
 import ai.AbstractNpcAI;
 
-/**
- * Monastery of Silence AI.
- * @author Kerberos, nonom
- */
 public class MonasteryOfSilence extends AbstractNpcAI
 {
-	// NPCs
-	private static final int CAPTAIN = 18910; // Solina Knight Captain
-	private static final int KNIGHT = 18909; // Solina Knights
-	private static final int SCARECROW = 18912; // Scarecrow
-	private static final int GUIDE = 22789; // Guide Solina
-	private static final int SEEKER = 22790; // Seeker Solina
-	private static final int SAVIOR = 22791; // Savior Solina
-	private static final int ASCETIC = 22793; // Ascetic Solina
-	private static final int[] DIVINITY_CLAN =
+	static final int[] mobs1 =
 	{
-		22794, // Divinity Judge
-		22795, // Divinity Manager
+		22124,
+		22125,
+		22126,
+		22127,
+		22129
 	};
-	// Skills
-	private static final SkillHolder ORDEAL_STRIKE = new SkillHolder(6303, 1); // Trial of the Coup
-	private static final SkillHolder LEADER_STRIKE = new SkillHolder(6304, 1); // Shock
-	private static final SkillHolder SAVER_STRIKE = new SkillHolder(6305, 1); // Sacred Gnosis
-	private static final SkillHolder SAVER_BLEED = new SkillHolder(6306, 1); // Solina Strike
-	private static final SkillHolder LEARNING_MAGIC = new SkillHolder(6308, 1); // Opus of the Wave
-	private static final SkillHolder STUDENT_CANCEL = new SkillHolder(6310, 1); // Loss of Quest
-	private static final SkillHolder WARRIOR_THRUSTING = new SkillHolder(6311, 1); // Solina Thrust
-	private static final SkillHolder KNIGHT_BLESS = new SkillHolder(6313, 1); // Solina Bless
-	// Misc
-	private static final NpcStringId[] DIVINITY_MSG =
+	static final int[] mobs2 =
 	{
-		NpcStringId.S1_WHY_WOULD_YOU_CHOOSE_THE_PATH_OF_DARKNESS,
-		NpcStringId.S1_HOW_DARE_YOU_DEFY_THE_WILL_OF_EINHASAD
+		22134,
+		22135
 	};
-	private static final NpcStringId[] SOLINA_KNIGHTS_MSG =
+	static final String[] text =
 	{
-		NpcStringId.PUNISH_ALL_THOSE_WHO_TREAD_FOOTSTEPS_IN_THIS_PLACE,
-		NpcStringId.WE_ARE_THE_SWORD_OF_TRUTH_THE_SWORD_OF_SOLINA,
-		NpcStringId.WE_RAISE_OUR_BLADES_FOR_THE_GLORY_OF_SOLINA
+		"You cannot carry a weapon without authorization!",
+		"name, why would you choose the path of darkness?!",
+		"name! How dare you defy the will of Einhasad!"
 	};
 	
 	private MonasteryOfSilence()
 	{
-		addSkillSeeId(DIVINITY_CLAN);
-		addAttackId(KNIGHT, CAPTAIN, GUIDE, SEEKER, ASCETIC);
-		addNpcHateId(GUIDE, SEEKER, SAVIOR, ASCETIC);
-		addAggroRangeEnterId(GUIDE, SEEKER, SAVIOR, ASCETIC);
-		addSpawnId(SCARECROW);
-	}
-	
-	@Override
-	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
-	{
-		switch (event)
-		{
-			case "TRAINING":
-			{
-				World.getInstance().forEachVisibleObjectInRange(npc, Npc.class, 400, character ->
-				{
-					if ((getRandom(100) < 30) && !character.isDead() && !character.isInCombat())
-					{
-						if ((character.getId() == CAPTAIN) && (getRandom(100) < 10) && npc.isScriptValue(0))
-						{
-							character.broadcastSay(ChatType.NPC_GENERAL, SOLINA_KNIGHTS_MSG[getRandom(SOLINA_KNIGHTS_MSG.length)]);
-							character.setScriptValue(1);
-							startQuestTimer("TIMER", 10000, character, null);
-						}
-						else if (character.getId() == KNIGHT)
-						{
-							character.setRunning();
-							((Attackable) character).addDamageHate(npc, 0, 100);
-							character.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, npc, null);
-						}
-					}
-				});
-				break;
-			}
-			case "DO_CAST":
-			{
-				if ((npc != null) && (player != null) && (getRandom(100) < 3))
-				{
-					if (npc.checkDoCastConditions(STUDENT_CANCEL.getSkill()))
-					{
-						npc.setTarget(player);
-						npc.doCast(STUDENT_CANCEL.getSkill());
-					}
-					npc.setScriptValue(0);
-				}
-				break;
-			}
-			case "TIMER":
-			{
-				if (npc != null)
-				{
-					npc.setScriptValue(0);
-				}
-				break;
-			}
-		}
-		return super.onAdvEvent(event, npc, player);
-	}
-	
-	@Override
-	public String onAttack(Npc npc, PlayerInstance player, int damage, boolean isSummon)
-	{
-		final Attackable mob = (Attackable) npc;
-		
-		switch (npc.getId())
-		{
-			case KNIGHT:
-			{
-				if ((getRandom(100) < 10) && (mob.getMostHated() == player) && mob.checkDoCastConditions(WARRIOR_THRUSTING.getSkill()))
-				{
-					npc.setTarget(player);
-					npc.doCast(WARRIOR_THRUSTING.getSkill());
-				}
-				break;
-			}
-			case CAPTAIN:
-			{
-				if ((getRandom(100) < 20) && (npc.getCurrentHp() < (npc.getMaxHp() * 0.5)) && npc.isScriptValue(0))
-				{
-					if (npc.checkDoCastConditions(KNIGHT_BLESS.getSkill()))
-					{
-						npc.setTarget(npc);
-						npc.doCast(KNIGHT_BLESS.getSkill());
-					}
-					npc.setScriptValue(1);
-					npc.broadcastSay(ChatType.GENERAL, NpcStringId.FOR_THE_GLORY_OF_SOLINA);
-					addAttackDesire(addSpawn(KNIGHT, npc), player);
-				}
-				break;
-			}
-			case GUIDE:
-			{
-				if ((getRandom(100) < 3) && (mob.getMostHated() == player) && npc.checkDoCastConditions(ORDEAL_STRIKE.getSkill()))
-				{
-					npc.setTarget(player);
-					npc.doCast(ORDEAL_STRIKE.getSkill());
-				}
-				break;
-			}
-			case SEEKER:
-			{
-				if ((getRandom(100) < 33) && (mob.getMostHated() == player) && npc.checkDoCastConditions(SAVER_STRIKE.getSkill()))
-				{
-					npc.setTarget(npc);
-					npc.doCast(SAVER_STRIKE.getSkill());
-				}
-				break;
-			}
-			case ASCETIC:
-			{
-				if ((mob.getMostHated() == player) && npc.isScriptValue(0))
-				{
-					npc.setScriptValue(1);
-					startQuestTimer("DO_CAST", 20000, npc, player);
-				}
-				break;
-			}
-		}
-		return super.onAttack(npc, player, damage, isSummon);
-	}
-	
-	@Override
-	public boolean onNpcHate(Attackable mob, PlayerInstance player, boolean isSummon)
-	{
-		return player.getActiveWeaponInstance() != null;
+		registerMobs(mobs1);
+		registerMobs(mobs2);
 	}
 	
 	@Override
 	public String onAggroRangeEnter(Npc npc, PlayerInstance player, boolean isSummon)
 	{
-		if (player.getActiveWeaponInstance() != null)
+		if (CommonUtil.contains(mobs1, npc.getId()) && !npc.isInCombat() && (npc.getTarget() == null))
 		{
-			SkillHolder skill = null;
-			switch (npc.getId())
-			{
-				case GUIDE:
-				{
-					if (getRandom(100) < 3)
-					{
-						skill = LEADER_STRIKE;
-					}
-					break;
-				}
-				case SEEKER:
-				{
-					skill = SAVER_BLEED;
-					break;
-				}
-				case SAVIOR:
-				{
-					skill = LEARNING_MAGIC;
-					break;
-				}
-				case ASCETIC:
-				{
-					if (getRandom(100) < 3)
-					{
-						skill = STUDENT_CANCEL;
-					}
-					
-					if (npc.isScriptValue(0))
-					{
-						npc.setScriptValue(1);
-						startQuestTimer("DO_CAST", 20000, npc, player);
-					}
-					break;
-				}
-			}
-			
-			if ((skill != null) && npc.checkDoCastConditions(skill.getSkill()))
+			if (player.getActiveWeaponInstance() != null)
 			{
 				npc.setTarget(player);
-				npc.doCast(skill.getSkill());
+				npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.GENERAL, npc.getId(), text[0]));
+				switch (npc.getId())
+				{
+					case 22124:
+					case 22126:
+					{
+						Skill skill = SkillData.getInstance().getSkill(4589, 8);
+						npc.doCast(skill);
+						break;
+					}
+					default:
+					{
+						npc.setRunning();
+						((Attackable) npc).addDamageHate(player, 0, 999);
+						npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
+						break;
+					}
+				}
 			}
-			
-			if (!npc.isInCombat())
+			else if (((Attackable) npc).getMostHated() == null)
 			{
-				npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.YOU_CANNOT_CARRY_A_WEAPON_WITHOUT_AUTHORIZATION);
+				return null;
 			}
-			
-			addAttackDesire(npc, player);
 		}
 		return super.onAggroRangeEnter(npc, player, isSummon);
 	}
@@ -261,15 +105,19 @@ public class MonasteryOfSilence extends AbstractNpcAI
 	@Override
 	public String onSkillSee(Npc npc, PlayerInstance caster, Skill skill, WorldObject[] targets, boolean isSummon)
 	{
-		if (skill.hasEffectType(EffectType.AGGRESSION) && (targets.length != 0))
+		if (CommonUtil.contains(mobs2, npc.getId()))
 		{
-			for (WorldObject obj : targets)
+			if (skill.hasEffectType(EffectType.AGGRESSION) && (targets.length != 0))
 			{
-				if (obj.equals(npc))
+				for (WorldObject obj : targets)
 				{
-					npc.broadcastSay(ChatType.NPC_GENERAL, DIVINITY_MSG[getRandom(DIVINITY_MSG.length)], caster.getName());
-					addAttackDesire(npc, caster);
-					break;
+					if (obj.equals(npc))
+					{
+						npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.GENERAL, npc.getId(), text[Rnd.get(2) + 1].replace("name", caster.getName())));
+						((Attackable) npc).addDamageHate(caster, 0, 999);
+						npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, caster);
+						break;
+					}
 				}
 			}
 		}
@@ -279,11 +127,64 @@ public class MonasteryOfSilence extends AbstractNpcAI
 	@Override
 	public String onSpawn(Npc npc)
 	{
-		npc.setIsInvul(true);
-		npc.disableCoreAI(true);
-		cancelQuestTimer("TRAINING", npc, null);
-		startQuestTimer("TRAINING", 30000, npc, null, true);
+		if (CommonUtil.contains(mobs1, npc.getId()))
+		{
+			ArrayList<Playable> result = new ArrayList<>();
+			for (WorldObject obj : World.getInstance().getVisibleObjects(npc, WorldObject.class))
+			{
+				if ((obj instanceof PlayerInstance) || (obj instanceof PetInstance))
+				{
+					if (Util.checkIfInRange(npc.getAggroRange(), npc, obj, true) && !((Creature) obj).isDead())
+					{
+						result.add((Playable) obj);
+					}
+				}
+			}
+			if (!result.isEmpty() && (result.size() != 0))
+			{
+				Object[] characters = result.toArray();
+				for (Object obj : characters)
+				{
+					Playable target = (Playable) (obj instanceof PlayerInstance ? obj : ((Summon) obj).getOwner());
+					if ((target.getActiveWeaponInstance() != null) && !npc.isInCombat() && (npc.getTarget() == null))
+					{
+						npc.setTarget(target);
+						npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.GENERAL, npc.getId(), text[0]));
+						switch (npc.getId())
+						{
+							case 22124:
+							case 22126:
+							case 22127:
+							{
+								Skill skill = SkillData.getInstance().getSkill(4589, 8);
+								npc.doCast(skill);
+								break;
+							}
+							default:
+							{
+								npc.setRunning();
+								((Attackable) npc).addDamageHate(target, 0, 999);
+								npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
+								break;
+							}
+						}
+					}
+				}
+			}
+		}
 		return super.onSpawn(npc);
+	}
+	
+	@Override
+	public String onSpellFinished(Npc npc, PlayerInstance player, Skill skill)
+	{
+		if (CommonUtil.contains(mobs1, npc.getId()) && (skill.getId() == 4589))
+		{
+			npc.setRunning();
+			((Attackable) npc).addDamageHate(player, 0, 999);
+			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
+		}
+		return super.onSpellFinished(npc, player, skill);
 	}
 	
 	public static void main(String[] args)

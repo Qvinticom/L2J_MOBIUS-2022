@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.data.sql.impl.OfflineTradersTable;
 import org.l2jmobius.gameserver.instancemanager.PlayerCountManager;
 import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.olympiad.OlympiadManager;
+import org.l2jmobius.gameserver.model.olympiad.Olympiad;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.GameClient;
 
@@ -107,7 +107,7 @@ public class OfflineTradeUtil
 		client.setDetached(true);
 		
 		player.leaveParty();
-		OlympiadManager.getInstance().unRegisterNoble(player);
+		Olympiad.getInstance().unRegisterNoble(player);
 		
 		// If the PlayerInstance has Pet, unsummon it
 		Summon pet = player.getSummon();

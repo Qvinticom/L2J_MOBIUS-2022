@@ -43,7 +43,6 @@ public class SpawnItem implements IClientOutgoingPacket
 		packet.writeD(_item.isStackable() ? 0x01 : 0x00);
 		packet.writeQ(_item.getCount());
 		packet.writeD(0x00); // c2
-		packet.writeD(0x00); // freya unk
 		return true;
 	}
 }

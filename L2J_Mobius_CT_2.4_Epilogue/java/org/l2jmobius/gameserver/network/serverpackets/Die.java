@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.entity.Castle;
 import org.l2jmobius.gameserver.model.entity.Fort;
 import org.l2jmobius.gameserver.model.entity.clanhall.SiegableHall;
-import org.l2jmobius.gameserver.model.olympiad.OlympiadManager;
+import org.l2jmobius.gameserver.model.olympiad.Olympiad;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class Die implements IClientOutgoingPacket
@@ -68,7 +68,7 @@ public class Die implements IClientOutgoingPacket
 		
 		if (_creature.isPlayer())
 		{
-			if (!OlympiadManager.getInstance().isRegistered(_creature.getActingPlayer()) && !_creature.isOnEvent())
+			if (!Olympiad.getInstance().isRegistered(_creature.getActingPlayer()) && !_creature.isOnEvent())
 			{
 				_staticRes = _creature.getInventory().haveItemForSelfResurrection();
 			}

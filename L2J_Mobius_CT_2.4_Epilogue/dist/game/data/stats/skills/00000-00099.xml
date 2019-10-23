@@ -468,7 +468,7 @@
 	<skill id="10" levels="8" name="Summon Storm Cubic" enchantGroup1="2">
 		<!-- Summons a storm cubic that inflicts damage on the enemy with magic. Consumes 4 Spirit Ore when summoning. -->
 		<table name="#cubicPower">282 434 677 919 1141 1394 1673 1975 </table>
-		<table name="#itemConsumeCount">4 5 7 7 8 10 11 11 </table>
+		<table name="#itemConsumeCount"> 5 6 8 9 11 12 13 14 </table> <!-- Epilogue Modification -->
 		<table name="#magicLvl">40 46 52 58 62 66 70 74 </table>
 		<table name="#mpConsume">28 33 38 43 46 49 52 55 </table>
 		<table name="#mpInitialConsume">7 9 10 11 12 13 13 14 </table>
@@ -478,7 +478,7 @@
 		<set name="icon" val="icon.skill0010" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="itemConsumeCount" val="#itemConsumeCount" />
-		<set name="itemConsumeId" val="3031" /> <!-- Spirit Ore -->
+		<set name="itemConsumeId" val="1458" /> <!-- Epilogue Modification -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
@@ -550,10 +550,10 @@
 	<skill id="13" levels="1" name="Summon Siege Golem" enchantGroup1="1">
 		<!-- Summons siege weapon. Summoning requires 180 Crystals: C-Grade and additionally consumes 40 Gemstones: C-Grade every minute. -->
 		<table name="#enchNpcId">14738 14739 14740 14741 14742 14743 14744 14745 14746 14747 14748 14749 14750 14751 14752 14753 14754 14755 14756 14757 14758 14759 14760 14761 14762 14763 14764 14765 14766 14767 </table>
-		<set name="hitTime" val="180000" />
+		<set name="hitTime" val="300000" /> <!-- Epilogue Modification -->
 		<set name="icon" val="icon.skill0013" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeCount" val="180" />
+		<set name="itemConsumeCount" val="300" /> <!-- Epilogue Modification -->
 		<set name="itemConsumeId" val="1459" /> <!-- Crystal (C-Grade) -->
 		<set name="magicLvl" val="49" />
 		<set name="mpInitialConsume" val="530" />
@@ -569,14 +569,14 @@
 		<for>
 			<effect name="Summon">
 				<param npcId="14737" />
-				<param consumeItemId="2131" consumeItemCount="40" />
+				<param consumeItemId="2131" consumeItemCount="70" /> <!-- Epilogue Modification -->
 				<param lifeTime="1200" />
 			</effect>
 		</for>
 		<enchant1for>
 			<effect name="Summon">
 				<param npcId="#enchNpcId" />
-				<param consumeItemId="2131" consumeItemCount="40" />
+				<param consumeItemId="2131" consumeItemCount="70" /> <!-- Epilogue Modification -->
 				<param lifeTime="1200" />
 			</effect>
 		</enchant1for>
@@ -832,7 +832,7 @@
 	<skill id="22" levels="7" name="Summon Vampiric Cubic" enchantGroup1="2">
 		<!-- Summons a Vampiric Cubic. A Vampiric Cubic uses magic that absorbs the target's HP and with it regenerates its master's HP. Consumes 5 Spirit Ore. -->
 		<table name="#cubicPower">351 531 773 1026 1264 1530 1822 </table>
-		<table name="#itemConsumeCount">5 6 7 7 9 10 11 </table>
+		<table name="#itemConsumeCount"> 6 7 8 9 11 12 13 </table> <!-- Epilogue Modification -->
 		<table name="#magicLvl">43 49 55 60 64 68 72 </table>
 		<table name="#mpConsume">30 35 40 44 48 51 53 </table>
 		<table name="#mpInitialConsume">8 9 10 11 12 13 14 </table>
@@ -842,7 +842,7 @@
 		<set name="icon" val="icon.skill0022" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="itemConsumeCount" val="#itemConsumeCount" />
-		<set name="itemConsumeId" val="3031" /> <!-- Spirit Ore -->
+		<set name="itemConsumeId" val="1458" /> <!-- Epilogue Modification -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
@@ -1097,7 +1097,7 @@
 	<skill id="33" levels="8" name="Summon Phantom Cubic" enchantGroup1="2">
 		<!-- Summons Phantom Cubic. A Phantom Cubic uses magic that decreases the target's P. Atk., P. Def., and Atk. Spd. Requires 2 Spirit Ore. -->
 		<table name="#cubicPower">282 434 644 919 1141 1394 1673 1975 </table>
-		<table name="#itemConsumeCount">2 2 3 3 4 5 5 6 </table>
+		<table name="#itemConsumeCount"> 2 3 4 4 5 6 6 7 </table> <!-- Epilogue Modification -->
 		<table name="#magicLvl">40 46 52 58 62 66 70 74 </table>
 		<table name="#mpConsume">28 33 38 43 46 49 52 55 </table>
 		<table name="#mpInitialConsume">7 9 10 11 12 13 13 14 </table>
@@ -1107,7 +1107,7 @@
 		<set name="icon" val="icon.skill0033" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="itemConsumeCount" val="#itemConsumeCount" />
-		<set name="itemConsumeId" val="3031" /> <!-- Spirit Ore -->
+		<set name="itemConsumeId" val="1458" /> <!-- Epilogue Modification -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
@@ -1765,7 +1765,7 @@
 	</skill>
 	<skill id="67" levels="7" name="Summon Life Cubic" enchantGroup1="2">
 		<!-- Summons a Life Cubic. The Life Cubic uses magic to regenerate HP to its owner and party members. Requires 5 Spirit Ore. -->
-		<table name="#itemConsumeCount">5 6 7 7 9 10 11 </table>
+		<table name="#itemConsumeCount"> 6 7 8 9 11 12 13 </table> <!-- Epilogue Modification -->
 		<table name="#magicLvl">42 49 53 60 64 68 72 </table>
 		<table name="#mpConsume">30 35 40 44 48 51 53 </table>
 		<table name="#mpInitialConsume">8 9 10 11 12 13 14 </table>
@@ -1774,7 +1774,7 @@
 		<set name="icon" val="icon.skill0067" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="itemConsumeCount" val="#itemConsumeCount" />
-		<set name="itemConsumeId" val="3031" /> <!-- Spirit Ore -->
+		<set name="itemConsumeId" val="1458" /> <!-- Epilogue Modification -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
@@ -1950,13 +1950,14 @@
 	<skill id="76" levels="1" name="Bear Spirit Totem">
 		<!-- Possessed by a Bear's soul, the user's P. Atk. and Critical Damage increases by 20%, and Speed by 30% for 5 minutes. Requires a hand-to-hand weapon. -->
 		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="300" />
+		<set name="abnormalTime" val="120" /> <!-- Epilogue Modification -->
 		<set name="abnormalType" val="POSSESSION" />
+		<!-- <set name="abnormalVisualEffect" val="STUN" /> Epilogue Modification -->
 		<set name="effectPoint" val="268" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill0076" />
 		<set name="magicLvl" val="28" />
-		<set name="mpConsume" val="25" />
+		<set name="mpConsume" val="13" /> <!-- Epilogue Modification -->
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="23000" />
 		<set name="targetType" val="SELF" />
@@ -2131,13 +2132,13 @@
 	<skill id="83" levels="1" name="Wolf Spirit Totem">
 		<!-- Possessed by a Wolf's soul, the user's Speed increases by 20% and Accuracy by 3 for 5 minutes. Requires a hand-to-hand weapon. -->
 		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="300" />
+		<set name="abnormalTime" val="120" /> <!-- Epilogue Modification -->
 		<set name="abnormalType" val="POSSESSION" />
 		<set name="effectPoint" val="204" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill0083" />
 		<set name="magicLvl" val="20" />
-		<set name="mpConsume" val="19" />
+		<set name="mpConsume" val="10" /> <!-- Epilogue Modification -->
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="23000" />
 		<set name="targetType" val="SELF" />
@@ -2646,7 +2647,7 @@
 		<table name="#mpConsume">58 64 69 73 77 </table>
 		<table name="#power">825 1023 1194 1373 1554 </table>
 		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="10" />
+		<set name="abnormalTime" val="2" /> <!-- Epilogue Modification -->
 		<set name="abnormalType" val="SILENCE" />
 		<set name="abnormalVisualEffect" val="SILENCE" />
 		<set name="activateRate" val="60" />
@@ -2668,7 +2669,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect name="Mute" />
+			<effect name="Fear" /> <!-- Epilogue Modification -->
 			<effect name="PhysicalAttack" />
 		</for>
 	</skill>

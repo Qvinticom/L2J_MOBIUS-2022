@@ -17,7 +17,6 @@
 package org.l2jmobius.gameserver.model.entity;
 
 import java.util.Calendar;
-import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
@@ -25,21 +24,16 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
-import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.enums.DuelResult;
 import org.l2jmobius.gameserver.enums.Team;
 import org.l2jmobius.gameserver.instancemanager.DuelManager;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
-import org.l2jmobius.gameserver.instancemanager.ZoneManager;
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
-import org.l2jmobius.gameserver.model.actor.instance.OlympiadManagerInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
-import org.l2jmobius.gameserver.model.zone.type.OlympiadStadiumZone;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.ExDuelEnd;
@@ -267,7 +261,9 @@ public class Duel
 					// Save player conditions before teleporting players
 					_duel.savePlayerConditions();
 					
-					_duel.teleportPlayers();
+					// TODO: stadia manager needs a function to return an unused stadium for duels
+					// currently only teleports to the same stadium
+					_duel.teleportPlayers(-83760, -238825, -3331);
 					
 					// give players 20 seconds to complete teleport and get ready (its ought to be 30 on official..)
 					ThreadPool.schedule(this, _duel.isPartyDuel() ? 20000 : 1);
@@ -604,42 +600,30 @@ public class Duel
 	}
 	
 	/**
-	 * Teleports all players to a free arena.
+	 * teleport all players to the given coordinates
+	 * @param x
+	 * @param y
+	 * @param z
 	 */
-	public void teleportPlayers()
+	public void teleportPlayers(int x, int y, int z)
 	{
+		// TODO: adjust the values if needed... or implement something better (especially using more then 1 arena)
 		if (!_partyDuel)
 		{
 			return;
 		}
+		int offset = 0;
 		
-		_duelInstanceId = InstanceManager.getInstance().createDynamicInstance(Rnd.get(147, 150)).getId(); // Random Olympiad arena.
-		final OlympiadStadiumZone zone = ZoneManager.getInstance().getZone(InstanceManager.getInstance().getInstance(_duelInstanceId).getNpcs().stream().findFirst().get(), OlympiadStadiumZone.class);
-		if (zone == null)
-		{
-			throw new RuntimeException("Unable to find a party duel arena!");
-		}
-		final List<Location> spawns = zone.getSpawns();
-		
-		// Remove Olympiad buffers
-		for (Npc buffer : InstanceManager.getInstance().getInstance(getDueldInstanceId()).getNpcs())
-		{
-			if ((buffer instanceof OlympiadManagerInstance) && buffer.isSpawned())
-			{
-				buffer.decayMe();
-			}
-		}
-		
-		final Location spawn1 = spawns.get(Rnd.get(spawns.size() / 2));
 		for (PlayerInstance temp : _playerA.getParty().getMembers())
 		{
-			temp.teleToLocation(spawn1.getX(), spawn1.getY(), spawn1.getZ(), 0, _duelInstanceId, 0);
+			temp.teleToLocation(new Location((x + offset) - 180, y - 150, z));
+			offset += 40;
 		}
-		
-		final Location spawn2 = spawns.get(Rnd.get(spawns.size() / 2, spawns.size()));
+		offset = 0;
 		for (PlayerInstance temp : _playerB.getParty().getMembers())
 		{
-			temp.teleToLocation(spawn2.getX(), spawn2.getY(), spawn2.getZ(), 0, _duelInstanceId, 0);
+			temp.teleToLocation(new Location((x + offset) - 180, y + 150, z));
+			offset += 40;
 		}
 	}
 	

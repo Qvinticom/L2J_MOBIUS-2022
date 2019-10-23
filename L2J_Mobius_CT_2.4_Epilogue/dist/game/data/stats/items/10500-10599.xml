@@ -318,7 +318,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3429-1" /> <!-- Red Talisman of Life Force -->
+		<set name="item_skill" val="3429-1" /> <!-- Red Talisman - Life Force -->
 		<set name="duration" val="70" />
 		<set name="useSkillDisTime" val="30" />
 	</item>
@@ -334,7 +334,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="3434-1" /> <!-- White Talisman of Earth -->
+		<set name="item_skill" val="3434-1" /> <!-- White Talisman - Earth -->
 		<set name="duration" val="80" />
 		<set name="useSkillDisTime" val="10" />
 	</item>
@@ -351,7 +351,7 @@
 		<set name="item_skill" val="2487-1" /> <!-- Item - Special Sound Crystal -->
 	</item>
 	<item id="10521" type="EtcItem" name="Rough Fire Ore">
-		<!-- The power of fire increases by 5 when given to a weapon. The power of fire increases by 6 and water resistance becomes stronger when given to armor. Element attribute can be given up until level 3, and it cannot be given above level 3. Cannot be exchanged or dropped. -->
+		<!-- The power of fire increases by 5 when given to a weapon. The power of fire increases by 6 and water resistance becomes stronger when given to armor. Element attribute can be given up until level 3, and it cannot be given above level 3. No exchange/drop available for this item. -->
 		<set name="icon" val="icon.etc_fire_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
@@ -367,7 +367,7 @@
 		<set name="item_skill" val="2329-1" /> <!-- Fire Stone -->
 	</item>
 	<item id="10522" type="EtcItem" name="Rough Water Ore">
-		<!-- The power of water increases by 5 when given to a weapon. The power of water increases by 6 and fire resistance becomes stronger when given to armor. Element attribute can be given up until level 3, and it cannot be given above level 3. Cannot be exchanged or dropped. -->
+		<!-- The power of water increases by 5 when given to a weapon. The power of water increases by 6 and fire resistance becomes stronger when given to armor. Element attribute can be given up until level 3, and it cannot be given above level 3. No exchange/drop available for this item. -->
 		<set name="icon" val="icon.etc_water_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
@@ -383,7 +383,7 @@
 		<set name="item_skill" val="2330-1" /> <!-- Water Stone -->
 	</item>
 	<item id="10523" type="EtcItem" name="Rough Earth Ore">
-		<!-- The power of the earth increases by 5 when given to a weapon. The power of the Earth increases by 6 and wind resistance becomes stronger when given to armor. Element attribute can be given up until level 3, and it cannot be given above level 3. Cannot be exchanged or dropped. -->
+		<!-- The power of the earth increases by 5 when given to a weapon. The power of the Earth increases by 6 and wind resistance becomes stronger when given to armor. Element attribute can be given up until level 3, and it cannot be given above level 3. No exchange/drop available for this item. -->
 		<set name="icon" val="icon.etc_earth_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
@@ -399,7 +399,7 @@
 		<set name="item_skill" val="2332-1" /> <!-- Earth Stone -->
 	</item>
 	<item id="10524" type="EtcItem" name="Rough Wind Ore">
-		<!-- The power of wind increases by 5 when given to a weapon. The power of wind increases by 6 and earth resistance becomes strong if given to defensive armor. Element attribute can be given up until level 3, and it cannot be given above level 3. Cannot be exchanged or dropped. -->
+		<!-- The power of wind increases by 5 when given to a weapon. The power of wind increases by 6 and earth resistance becomes strong if given to defensive armor. Element attribute can be given up until level 3, and it cannot be given above level 3. No exchange/drop available for this item. -->
 		<set name="icon" val="icon.etc_wind_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
@@ -415,7 +415,7 @@
 		<set name="item_skill" val="2331-1" /> <!-- Wind Stone -->
 	</item>
 	<item id="10525" type="EtcItem" name="Rough Dark Ore">
-		<!-- Increases dark power by 5 when given to a weapon. Increases dark power by 6 and increases Resistance to Holy when given to armor. Element attribute can be given up until level 3, and it cannot be given above level 3. Cannot be exchanged or dropped. -->
+		<!-- The power of darkness increases by 5 when given to a weapon. The power of darkness increases by 6 and divinity resistance becomes stronger when given to armor. Element attribute can be given up until level 3, and it cannot be given above level 3. No exchange/drop available for this item. -->
 		<set name="icon" val="icon.etc_unholy_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
@@ -431,7 +431,7 @@
 		<set name="item_skill" val="2334-1" /> <!-- Dark Stone -->
 	</item>
 	<item id="10526" type="EtcItem" name="Rough Holy Ore">
-		<!-- Increases holy power by 5 when given to a weapon. Increases holy power by 6 and Resistance to Dark becomes stronger when given to armor. Element attribute can be given up until level 3, and it cannot be given above level 3. Cannot be exchanged or dropped. -->
+		<!-- The power of divine increases by 5 when given to a weapon. The power of divine increases by 6 and darkness resistance becomes stronger when given to armor. Element attribute can be given up until level 3, and it cannot be given above level 3. No exchange/drop available for this item. -->
 		<set name="icon" val="icon.etc_holy_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCRL_ENCHANT_ATTR" />
@@ -444,10 +444,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
-		<set name="item_skill" val="2333-1" /> <!-- Holy Stone -->
+		<set name="item_skill" val="2333-1" /> <!-- Divine Stone -->
 	</item>
 	<item id="10527" type="Weapon" name="Dynasty Staff - Mana Up">
-		<!-- <Soul Crystal Enhancement>. Increases Max MP by 30%. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Option>. Increases Max MP by 30%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -457,7 +457,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="price" val="74946000" />
@@ -478,7 +478,7 @@
 		</for>
 	</item>
 	<item id="10528" type="Weapon" name="Dynasty Staff - Conversion">
-		<!-- <Soul Crystal Enhancement>. Increases Max MP by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Option>. Increases the Max MP by 60% and decreases the Max HP by 40%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -488,7 +488,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="price" val="74946000" />
@@ -509,7 +509,7 @@
 		</for>
 	</item>
 	<item id="10529" type="Weapon" name="Dynasty Staff - Acumen">
-		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Option>. Increases Increases Casting Spd. by 15%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -519,7 +519,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="price" val="74946000" />
@@ -540,7 +540,7 @@
 		</for>
 	</item>
 	<item id="10530" type="Weapon" name="Dynasty Crusher - Anger">
-		<!-- <Soul Crystal Enhancement>. Decreases HP by 15% while increasing P. Atk. by 78 during a critical attack. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Enhancement>player's HP by 15% while increasing P. Atk. by 78 during a . critical attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_crusher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -550,7 +550,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="74946000" />
@@ -570,7 +570,7 @@
 		</for>
 	</item>
 	<item id="10531" type="Weapon" name="Dynasty Crusher - Health">
-		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_crusher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -580,7 +580,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="74946000" />
@@ -600,7 +600,7 @@
 		</for>
 	</item>
 	<item id="10532" type="Weapon" name="Dynasty Crusher - Rsk. Focus">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 164 when HP drops to 60% or lower. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Option>. Increases Critical Attack by 164 when HP becomes 60% or lower. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_crusher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -610,7 +610,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="74946000" />
@@ -630,7 +630,7 @@
 		</for>
 	</item>
 	<item id="10533" type="Armor" name="Blue Talisman - P. Atk.">
-		<!-- Increases P. Atk. when used. Effect does not stack with additional Talismans of the same type. A Shadow Item which cannot be exchanged or dropped. -->
+		<!-- Increases P. Atk. when used. Effect does not stack wtih additional Talismans of the same type. A Shadow Item which cannot be exchanged or dropped. -->
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -646,7 +646,7 @@
 		<set name="useSkillDisTime" val="6" />
 	</item>
 	<item id="10534" type="Armor" name="Blue Talisman - Shield Defense">
-		<!-- Shield Def. increases when used. Effect does not stack with additional Talismans of the same type. A Shadow Item which cannot be exchanged or dropped. -->
+		<!-- Shield Def. increases when used. Effect does not stack wtih additional Talismans of the same type. A Shadow Item which cannot be exchanged or dropped. -->
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -662,7 +662,7 @@
 		<set name="useSkillDisTime" val="6" />
 	</item>
 	<item id="10535" type="Armor" name="Yellow Talisman - P. Def.">
-		<!-- P. Def. increases when equipped. Effect does not stack with additional Talismans of the same type. A Shadow Item which cannot be exchanged or dropped. -->
+		<!-- P. Def. increases when worn. Effect does not stack wtih additional Talismans of the same type. A Shadow Item which cannot be exchanged or dropped. -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -677,7 +677,7 @@
 		<set name="useSkillDisTime" val="1" />
 	</item>
 	<item id="10536" type="Armor" name="Yellow Talisman - M. Atk.">
-		<!-- Increases M. Atk. when equipped. Effect does not stack with additional Talismans of the same type. A Shadow Item which cannot be exchanged or dropped. -->
+		<!-- Increases M. Atk. when worn. Effect does not stack wtih additional Talismans of the same type. A Shadow Item which cannot be exchanged or dropped. -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -692,7 +692,7 @@
 		<set name="useSkillDisTime" val="1" />
 	</item>
 	<item id="10537" type="Armor" name="Yellow Talisman - Evasion">
-		<!-- Increases Evasion when equipped. Effect does not stack with additional Talismans of the same type. A Shadow Item which cannot be exchanged or dropped. -->
+		<!-- Evasion increases when worn. Effect does not stack wtih additional Talismans of the same type. A Shadow Item which cannot be exchanged or dropped. -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -707,7 +707,7 @@
 		<set name="useSkillDisTime" val="1" />
 	</item>
 	<item id="10538" type="Armor" name="Yellow Talisman - Healing Power">
-		<!-- HP recovery M. Atk. increases when equipped. Effect does not stack with additional Talismans of the same type. A Shadow Item which cannot be exchanged or dropped. -->
+		<!-- HP recovery magic power increases when worn. Effect does not stack wtih additional Talismans of the same type. A Shadow Item which cannot be exchanged or dropped. -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -722,7 +722,7 @@
 		<set name="useSkillDisTime" val="1" />
 	</item>
 	<item id="10539" type="Armor" name="Yellow Talisman - CP Recovery Rate">
-		<!-- CP recovery rate increases when equipped. Effect does not stack with additional Talismans of the same type. A Shadow Item which cannot be exchanged or dropped. -->
+		<!-- CP recovery rate increases when worn. Effect does not stack wtih additional Talismans of the same type. A Shadow Item which cannot be exchanged or dropped. -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -737,7 +737,7 @@
 		<set name="useSkillDisTime" val="1" />
 	</item>
 	<item id="10540" type="Armor" name="Yellow Talisman - HP Recovery Rate">
-		<!-- Increases HP Recovery Rate. Effect does not stack with additional Talismans of the same type. A Shadow Item which cannot be exchanged or dropped. -->
+		<!-- HP recovery rate increases when worn. Effect does not stack wtih additional Talismans of the same type. A Shadow Item which cannot be exchanged or dropped. -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -752,7 +752,7 @@
 		<set name="useSkillDisTime" val="1" />
 	</item>
 	<item id="10541" type="Armor" name="Yellow Talisman - Low Grade MP Recovery Rate">
-		<!-- Increases MP Recovery Rate. Effect does not stack with additional Talismans of the same type. This item cannot be exchanged or dropped. -->
+		<!-- Increases MP regeneration rate. Effect does not stack with additional Talismans of the same type. This item cannot be exchanged or dropped. -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -767,7 +767,7 @@
 		<set name="useSkillDisTime" val="1" />
 	</item>
 	<item id="10542" type="Armor" name="Red Talisman - HP/CP Recovery">
-		<!-- HP/CP are recovered when equipped. Effect does not stack with additional Talismans of the same type. A Shadow Item which cannot be exchanged or dropped. -->
+		<!-- HP/CP are recovered when worn. Effect does not stack wtih additional Talismans of the same type. A Shadow Item which cannot be exchanged or dropped. -->
 		<set name="icon" val="icon.etc_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -782,7 +782,7 @@
 		<set name="useSkillDisTime" val="5" />
 	</item>
 	<item id="10543" type="Armor" name="Yellow Talisman - Speed">
-		<!-- Speed increases when equipped. Effect does not stack with additional Talismans of the same type. A Shadow Item which cannot be exchanged or dropped. -->
+		<!-- Speed increases when worn. Effect does not stack wtih additional Talismans of the same type. A Shadow Item which cannot be exchanged or dropped. -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -823,7 +823,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="10546" type="EtcItem" name="Dynasty Staff Fragment">
-		<!-- For Dwarves only. Item required for construction of a Dynasty Staff. -->
+		<!-- For Dwarves only. Item required for contruction of a Dynasty Staff. -->
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -924,7 +924,7 @@
 		<set name="item_skill" val="2446-1" /> <!-- Anti-magic Armor -->
 	</item>
 	<item id="10555" type="EtcItem" name="Forgotten Scroll - Seed of Revenge">
-		<!-- Forgotten Scroll to learn the Seed of Revenge. Hell Knight uses it. Can be acquired by level 83. -->
+		<!-- Forgotten Scroll to learn the Seed of Revenge. Hell Knight uses it. Can be acquired by level 81. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_shield_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -935,7 +935,7 @@
 		<set name="item_skill" val="2447-1" /> <!-- Seed of Revenge -->
 	</item>
 	<item id="10556" type="EtcItem" name="Forgotten Scroll - Hell Scream">
-		<!-- Forgotten Scroll to learn the Hell Scream. Hell Knight uses it. Can be acquired by level 83. -->
+		<!-- Forgotten Scroll to learn the Hell Scream. Hell Knight uses it. Can be acquired by level 81. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_shield_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -954,7 +954,7 @@
 		<set name="price" val="11600" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2449-1" /> <!-- Song of Wind Storm -->
+		<set name="item_skill" val="2449-1" /> <!-- Song of Wind Strom -->
 	</item>
 	<item id="10558" type="EtcItem" name="Forgotten Scroll - Dance of Blade Storm">
 		<!-- Forgotten Scroll to learn the Dance of Blade Storm. Spectral Dancer uses it. Can be acquired by level 76. -->
@@ -965,7 +965,7 @@
 		<set name="price" val="11600" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2450-1" /> <!-- Dance of Blade Storm -->
+		<set name="item_skill" val="2450-1" /> <!-- Blade Storm -->
 	</item>
 	<item id="10559" type="EtcItem" name="Forgotten Scroll - Sixth Sense">
 		<!-- Forgotten Scroll to learn Sixth Sense. Phoenix Knight, Hell Knight, Eva's Templar, Shillien Templar, Sword Muse, Spectral Dancer, Adventurer, Wind Rider, Ghost Hunter, Trickster and Soul Hound use it. Can be acquired by level 81. -->
@@ -990,7 +990,7 @@
 		<set name="item_skill" val="2452-1" /> <!-- Expose Weak Point -->
 	</item>
 	<item id="10561" type="EtcItem" name="Forgotten Scroll - Exciting Adventure">
-		<!-- Forgotten Scroll to learn Exciting Adventure. Adventurer uses it. Can be acquired by level 83. -->
+		<!-- Forgotten Scroll to learn Exciting Adventure. Adventurer uses it. Can be acquired by level 81. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_sword_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1001,7 +1001,7 @@
 		<set name="item_skill" val="2453-1" /> <!-- Exciting Adventure -->
 	</item>
 	<item id="10562" type="EtcItem" name="Forgotten Scroll - Wind Riding">
-		<!-- Forgotten Scroll to learn Wind Riding. Wind Rider uses it. Can be acquired by level 83. -->
+		<!-- Forgotten Scroll to learn Wind Riding. Wind Rider uses it. Can be acquired by level 81. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_sword_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1012,7 +1012,7 @@
 		<set name="item_skill" val="2454-1" /> <!-- Wind Riding -->
 	</item>
 	<item id="10563" type="EtcItem" name="Forgotten Scroll - Ghost Walking">
-		<!-- Forgotten Scroll to learn Ghost Walking. Ghost Hunter uses it. Can be acquired by level 83. -->
+		<!-- Forgotten Scroll to learn Ghost Walking. Ghost Hunter uses it. Can be acquired by level 81. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_sword_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1023,7 +1023,7 @@
 		<set name="item_skill" val="2455-1" /> <!-- Ghost Walking -->
 	</item>
 	<item id="10564" type="EtcItem" name="Forgotten Scroll - Flame Hawk">
-		<!-- Forgotten Scroll to learn Flame Hawk. Sagittarius uses it. Can be acquired by level 83. -->
+		<!-- Forgotten Scroll to learn Flame Hawk. Sagittarius uses it. Can be acquired by level 81. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_sword_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1034,7 +1034,7 @@
 		<set name="item_skill" val="2456-1" /> <!-- Flame Hawk -->
 	</item>
 	<item id="10565" type="EtcItem" name="Forgotten Scroll - Arrow Rain">
-		<!-- Forgotten Scroll to learn Arrow Rain. Moonlight Sentinel uses it. Can be acquired by level 83. -->
+		<!-- Forgotten Scroll to learn Arrow Rain. Moonlight Sentinel uses it. Can be acquired by level 81. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_sword_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1042,10 +1042,10 @@
 		<set name="price" val="120000" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2457-1" /> <!-- Arrow Rain -->
+		<set name="item_skill" val="2457-1" /> <!-- Rain of Arrow -->
 	</item>
 	<item id="10566" type="EtcItem" name="Forgotten Scroll - Ghost Piercing">
-		<!-- Forgotten Scroll to learn Ghost Piercing. Ghost Sentinel uses it. Can be acquired by level 83. -->
+		<!-- Forgotten Scroll to learn Ghost Piercing. Ghost Sentinel uses it. Can be acquired by level 81. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_sword_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1056,7 +1056,7 @@
 		<set name="item_skill" val="2458-1" /> <!-- Ghost Piercing -->
 	</item>
 	<item id="10567" type="EtcItem" name="Forgotten Scroll - Dread Pool">
-		<!-- Forgotten Scroll to learn Dread Pool. Dreadnought uses it. Can be acquired by level 83. -->
+		<!-- Forgotten Scroll to learn Dread Pool. Dreadnought uses it. Can be acquired by level 81. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_sword_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1064,10 +1064,10 @@
 		<set name="price" val="120000" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2459-1" /> <!-- Dread Pool -->
+		<set name="item_skill" val="2459-1" /> <!-- Dread Pook -->
 	</item>
 	<item id="10568" type="EtcItem" name="Forgotten Scroll - Weapon Blockade">
-		<!-- Forgotten Scroll to learn Weapon Blockade. Dualist uses it. Can be acquired by level 83. -->
+		<!-- Forgotten Scroll to learn Weapon Blockade. Dualist uses it. Can be acquired by level 81. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_sword_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1078,7 +1078,7 @@
 		<set name="item_skill" val="2460-1" /> <!-- Weapon Blockade -->
 	</item>
 	<item id="10569" type="EtcItem" name="Forgotten Scroll - Force of Destruction">
-		<!-- Forgotten Scroll to learn Force of Destruction. Grand Khavatari uses it. Can be acquired by level 83. -->
+		<!-- Forgotten Scroll to learn Force of Destruction. Grand Khavatari uses it. Can be acquired by level 81. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_sword_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1086,10 +1086,10 @@
 		<set name="price" val="120000" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2461-1" /> <!-- Force of Destruction -->
+		<set name="item_skill" val="2461-1" /> <!-- Post of Destruction -->
 	</item>
 	<item id="10570" type="EtcItem" name="Forgotten Scroll - Demolition Impact">
-		<!-- Forgotten Scroll to learn Demolition Impact. Titan uses it. Can be acquired by level 83. -->
+		<!-- Forgotten Scroll to learn Demolition Impact. Titan uses it. Can be acquired by level 81. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_sword_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1100,7 +1100,7 @@
 		<set name="item_skill" val="2462-1" /> <!-- Demolition Impact -->
 	</item>
 	<item id="10571" type="EtcItem" name="Forgotten Scroll - Golem Armor">
-		<!-- Forgotten Scroll to learn Golem Armor. Maestro uses it. Can be acquired by level 83. -->
+		<!-- Forgotten Scroll to learn Golem Armor. Maestro uses it. Can be acquired by level 81. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_sword_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1111,7 +1111,7 @@
 		<set name="item_skill" val="2463-1" /> <!-- Golem Armor -->
 	</item>
 	<item id="10572" type="EtcItem" name="Forgotten Scroll - Flame Armor">
-		<!-- Forgotten Scroll to learn Flame Armor. Arch Mage uses it. Can be acquired by level 83. -->
+		<!-- Forgotten Scroll to learn Flame Armor. Arch Mage uses it. Can be acquired by level 81. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1122,7 +1122,7 @@
 		<set name="item_skill" val="2464-1" /> <!-- Flame Armor -->
 	</item>
 	<item id="10573" type="EtcItem" name="Forgotten Scroll - Frost Armor">
-		<!-- Forgotten Scroll to learn Frost Armor. Mystic Muse uses it. Can be acquired by level 83. -->
+		<!-- Forgotten Scroll to learn Frost Armor. Mystic Muse uses it. Can be acquired by level 81. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1133,7 +1133,7 @@
 		<set name="item_skill" val="2465-1" /> <!-- Frost Armor -->
 	</item>
 	<item id="10574" type="EtcItem" name="Forgotten Scroll - Hurricane Armor">
-		<!-- Forgotten Scroll to learn Hurricane Armor. Storm Screamer uses it. Can be acquired by level 83. -->
+		<!-- Forgotten Scroll to learn Hurricane Armor. Storm Screamer uses it. Can be acquired by level 81. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1144,7 +1144,7 @@
 		<set name="item_skill" val="2466-1" /> <!-- Hurricane Armor -->
 	</item>
 	<item id="10575" type="EtcItem" name="Forgotten Scroll - Vampiric Mist">
-		<!-- Forgotten Scroll to learn Vampiric Mist. Soul Taker uses it. Can be acquired by level 83. -->
+		<!-- Forgotten Scroll to learn Vampiric Mist. Soul Taker uses it. Can be acquired by level 81. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1174,7 +1174,7 @@
 		<set name="price" val="120000" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2469-1" /> <!-- Excessive Loyalty -->
+		<set name="item_skill" val="2469-1" /> <!-- Excessive Royalty -->
 	</item>
 	<item id="10578" type="EtcItem" name="Forgotten Scroll - Mutual Response">
 		<!-- Forgotten Scroll to learn Mutual Response. Arcana Lord, Elemental Master and Spectral Master use it. Can be acquired by level 81. -->
@@ -1254,7 +1254,7 @@
 		<set name="item_skill" val="2476-1" /> <!-- Improve Movement -->
 	</item>
 	<item id="10585" type="EtcItem" name="Forgotten Scroll - Sublime Self Sacrifice">
-		<!-- Forgotten Scroll to learn Sublime Self Sacrifice. Cardinal uses it. Can be acquired by level 83. -->
+		<!-- Forgotten Scroll to learn Sublime Self Sacrifice. Cardinal uses it. Can be acquired by level 81. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1265,7 +1265,7 @@
 		<set name="item_skill" val="2477-1" /> <!-- Sublime Self-sacrifice -->
 	</item>
 	<item id="10586" type="EtcItem" name="Forgotten Scroll - Blessing of Eva">
-		<!-- Forgotten Scroll to learn Blessing of Eva. Eva's Saint uses it. Can be acquired by level 83. -->
+		<!-- Forgotten Scroll to learn Blessing of Eva. Eva's Saint uses it. Can be acquired by level 81. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1276,7 +1276,7 @@
 		<set name="item_skill" val="2478-1" /> <!-- Blessing of Eva -->
 	</item>
 	<item id="10587" type="EtcItem" name="Forgotten Scroll - Lord of Vampire">
-		<!-- Forgotten Scroll to learn Lord of Vampire. Shillien Saint uses it. Can be acquired by level 83. -->
+		<!-- Forgotten Scroll to learn Lord of Vampire. Shillien Saint uses it. Can be acquired by level 81. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1284,10 +1284,10 @@
 		<set name="price" val="120000" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2479-1" /> <!-- Lord of Vampire -->
+		<set name="item_skill" val="2479-1" /> <!-- Loard of Vampire -->
 	</item>
 	<item id="10588" type="EtcItem" name="Forgotten Scroll - Thorn Root">
-		<!-- Forgotten Scroll needed to learn Thorn Root. Used by Shillien Saint. -->
+		<!-- Forgotten Scroll needed to learn Throne Root. Used by Shillien Saint. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1295,10 +1295,10 @@
 		<set name="price" val="120000" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2480-1" /> <!-- Thorn Root -->
+		<set name="item_skill" val="2480-1" /> <!-- Throne Route -->
 	</item>
 	<item id="10589" type="EtcItem" name="Forgotten Scroll - Seal of Limit">
-		<!-- Forgotten Scroll to learn Seal of Limit. Dominator uses it. Can be acquired by level 83. -->
+		<!-- Forgotten Scroll to learn Seal of Limit. Dominator uses it. Can be acquired by level 81. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1318,7 +1318,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10591" type="EtcItem" name="Forgotten Scroll - Spirit of Phoenix/Flame Icon">
-		<!-- Forgotten Scroll to learn Spirit of Phoenix and Flame Icon. Phoenix Knight uses it. Can be acquired by level 83. -->
+		<!-- Forgotten Scroll to learn Spirit of Phoenix and Flame Icon. Phoenix Knight uses it. Can be acquired by level 81. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_shield_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1329,7 +1329,7 @@
 		<set name="item_skill" val="2482-1" /> <!-- Spirit of Phoenix -->
 	</item>
 	<item id="10592" type="EtcItem" name="Forgotten Scroll - Eva's Will">
-		<!-- Forgotten Scroll to learn Eva's Will. Eva's Templar uses it. Can be acquired by level 83. -->
+		<!-- Forgotten Scroll to learn Eva's Will. Eva's Templar uses it. Can be acquired by level 81. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_shield_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1340,7 +1340,7 @@
 		<set name="item_skill" val="2483-1" /> <!-- Eva's Will -->
 	</item>
 	<item id="10593" type="EtcItem" name="Forgotten Scroll - Pain of Shilen / Spirit of Shilen">
-		<!-- Forgotten Scroll to learn Pain of Shillien. Shillien Templar uses it. Can be acquired by level 83. -->
+		<!-- Forgotten Scroll to learn Pain of Shillien. Shillien Templar uses it. Can be acquired by level 81. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_shield_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1351,7 +1351,7 @@
 		<set name="item_skill" val="2484-1" /> <!-- Pain of Shillien -->
 	</item>
 	<item id="10594" type="EtcItem" name="Forgotten Scroll - Wild Shot">
-		<!-- Forgotten Scroll to learn Wild Shot. Trickster uses it. Can be acquired by level 83. -->
+		<!-- Forgotten Scroll to learn Wild Shot. Trickster uses it. Can be acquired by level 81. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_sword_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1362,7 +1362,7 @@
 		<set name="item_skill" val="2488-1" /> <!-- Wild Shot -->
 	</item>
 	<item id="10595" type="EtcItem" name="Forgotten Scroll - Lightning Shock">
-		<!-- Forgotten Scroll to learn Lightning Shock. Soul Hound uses it. Can be acquired by level 83. -->
+		<!-- Forgotten Scroll to learn Lightning Shock. Soul Hound uses it. Can be acquired by level 81. -->
 		<set name="icon" val="BranchSys2.Icon.br_spell_books_magic_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1370,7 +1370,7 @@
 		<set name="price" val="120000" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2489-1" /> <!-- Lightning Shock -->
+		<set name="item_skill" val="2489-1" /> <!-- Lightning Stuns -->
 	</item>
 	<item id="10596" type="EtcItem" name="Battle Manual - Soul Cleanse">
 		<!-- Spellbook needed to learn Soul Cleanse. Used by Berserkers, Soul Breakers, Arbalesters, and Inspectors. Required level: 66 -->

@@ -240,7 +240,7 @@
 		</for>
 	</skill>
 	<skill id="26023" levels="1" name="High grade potion which improves moving speed">
-		<!-- Increases Speed by 33 for 20 minutes. -->
+		<!-- Increases moving speed by 20 for 33 minutes. -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="SPEED_UP" />
@@ -303,8 +303,8 @@
 		</for>
 	</skill>
 	<skill id="26027" levels="6" name="Secret medicine of Will">
-		<table name="#amount">0 350 600 800 1000 1200 </table>
-		<table name="#levelRange">0;0 20;39 40;51 52;60 61;75 76;85 </table>
+		<table name="#amount"> 0 350 600 800 1000 1200 </table>
+		<table name="#levelRange"> 0;0 20;39 40;51 52;60 61;75 76;85 </table>
 		<set name="blockedInOlympiad" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -320,8 +320,8 @@
 		</for>
 	</skill>
 	<skill id="26028" levels="6" name="Secret medicine of Life">
-		<table name="#amount">0 650 1100 1500 1900 2300 </table>
-		<table name="#levelRange">0;0 20;39 40;51 52;60 61;75 76;85 </table>
+		<table name="#amount"> 0 650 1100 1500 1900 2300 </table>
+		<table name="#levelRange"> 0;0 20;39 40;51 52;60 61;75 76;85 </table>
 		<set name="blockedInOlympiad" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -362,7 +362,7 @@
 		</for>
 	</skill>
 	<skill id="26031" levels="1" name="Wind Walk Scroll">
-		<!-- Increases Speed by 33 for 1 hour. -->
+		<!-- Increases moving speed by 33 for 1 hour. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="SPEED_UP" />
@@ -451,7 +451,7 @@
 		<set name="icon" val="br_cashtex.item.br_cash_scroll_of_death_whisper_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="22043" /> <!-- Scroll of Death Whisper -->
+		<set name="itemConsumeId" val="22043" /> <!-- Death Whisper Scroll -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -471,7 +471,7 @@
 		<set name="icon" val="br_cashtex.item.br_cash_scroll_of_guidance_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="22044" /> <!-- Scroll of Guidance -->
+		<set name="itemConsumeId" val="22044" /> <!-- Guidance Scroll -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -562,7 +562,7 @@
 		</for>
 	</skill>
 	<skill id="26041" levels="1" name="Berserker Spirit Scroll">
-		<!-- Decreases party members' P. Def. by 8%, M. Def. by 16%, and evasion by 4, and increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and Speed by 8 for 1 hour. -->
+		<!-- Decreases a party member's P. Def. by 8%, M. Def. by 16%, and evasion by 4, and increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and moving speed by 8 for 1 hour. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="BERSERKER" />
@@ -629,7 +629,7 @@
 		</for>
 	</skill>
 	<skill id="26044" levels="1" name="Clarity Scroll">
-		<!-- For 1 hour, decreases physical skill MP consumption by 20%, magic skill's MP consumption by 10%, and song/dance skill's MP consumption by 20%. Consumes 3 Spirit Ore. -->
+		<!-- For 1 hour, decreases physical skill MP consumption by 20%, magic skill's MP consumption by 10%, and song/dance skill's MP consumption by 20%. Consumes 3 Runestones. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CHEAP_MAGIC" />
@@ -651,7 +651,7 @@
 		</for>
 	</skill>
 	<skill id="26045" levels="1" name="Wild Magic Scroll">
-		<!-- For 1 hour, increases by 2 the occurrence rate of damage that is caused by magic damage. -->
+		<!-- For 1 hour, increases by 2 the occurrence rate of damage that is caused by damage magic. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MAGIC_CRITICAL_UP" />
@@ -671,9 +671,9 @@
 		</for>
 	</skill>
 	<skill id="26046" levels="5" name="Rune of Experience Points">
-		<!-- Acquired Exp. increases by 10%. -->
-		<table name="#bonusExp">10 20 30 40 50 </table>
-		<table name="#icons">br_cashtex.skill.br_cash_rune_of_exp_buff_1 br_cashtex.skill.br_cash_rune_of_exp_buff_2 br_cashtex.skill.br_cash_rune_of_exp_buff_3 br_cashtex.skill.br_cash_rune_of_exp_buff_4 br_cashtex.skill.br_cash_rune_of_exp_buff_5 </table>
+		<!-- Acquired Experience Points increase by 10%. -->
+		<table name="#bonusExp"> 10 20 30 40 50 </table>
+		<table name="#icons"> br_cashtex.skill.br_cash_rune_of_exp_buff_1 br_cashtex.skill.br_cash_rune_of_exp_buff_2 br_cashtex.skill.br_cash_rune_of_exp_buff_3 br_cashtex.skill.br_cash_rune_of_exp_buff_4 br_cashtex.skill.br_cash_rune_of_exp_buff_5 </table>
 		<set name="icon" val="#icons" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -685,9 +685,9 @@
 		</for>
 	</skill>
 	<skill id="26047" levels="5" name="Rune of SP">
-		<!-- Acquired SP increases by 10%. -->
-		<table name="#bonusSp">10 20 30 40 50 </table>
-		<table name="#icons">br_cashtex.skill.br_cash_rune_of_sp_buff_1 br_cashtex.skill.br_cash_rune_of_sp_buff_2 br_cashtex.skill.br_cash_rune_of_sp_buff_3 br_cashtex.skill.br_cash_rune_of_sp_buff_4 br_cashtex.skill.br_cash_rune_of_sp_buff_5 </table>
+		<!-- Acquired SP increase by 10%. -->
+		<table name="#bonusSp"> 10 20 30 40 50 </table>
+		<table name="#icons"> br_cashtex.skill.br_cash_rune_of_sp_buff_1 br_cashtex.skill.br_cash_rune_of_sp_buff_2 br_cashtex.skill.br_cash_rune_of_sp_buff_3 br_cashtex.skill.br_cash_rune_of_sp_buff_4 br_cashtex.skill.br_cash_rune_of_sp_buff_5 </table>
 		<set name="icon" val="#icons" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -699,9 +699,9 @@
 		</for>
 	</skill>
 	<skill id="26048" levels="5" name="Rune of Crystal Form">
-		<!-- The user's grade penalty decreases by 1 level. -->
-		<table name="#bonus">1 2 3 4 5 </table>
-		<table name="#icons">br_cashtex.skill.br_cash_rune_of_rp_buff_1 br_cashtex.skill.br_cash_rune_of_rp_buff_2 br_cashtex.skill.br_cash_rune_of_rp_buff_3 br_cashtex.skill.br_cash_rune_of_rp_buff_4 br_cashtex.skill.br_cash_rune_of_rp_buff_5 </table>
+		<!-- One's Grade Penalty decreases by 1 level. -->
+		<table name="#bonus"> 1 2 3 4 5 </table>
+		<table name="#icons"> br_cashtex.skill.br_cash_rune_of_rp_buff_1 br_cashtex.skill.br_cash_rune_of_rp_buff_2 br_cashtex.skill.br_cash_rune_of_rp_buff_3 br_cashtex.skill.br_cash_rune_of_rp_buff_4 br_cashtex.skill.br_cash_rune_of_rp_buff_5 </table>
 		<set name="icon" val="#icons" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -713,7 +713,7 @@
 		</for>
 	</skill>
 	<skill id="26049" levels="1" name="Rune of Feather">
-		<!-- The user's Weight Limit increases by 20%. -->
+		<!-- One's Weight Limit increases by 20% -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -859,7 +859,7 @@
 		</for>
 	</skill>
 	<skill id="26067" levels="5" name="Bone Quiver">
-		<table name="#itemId">22067 22068 22069 22070 22071 </table>
+		<table name="#itemId"> 22067 22068 22069 22070 22071 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -877,8 +877,8 @@
 		</for>
 	</skill>
 	<skill id="26068" levels="10" name="Blessed Spiritshot Pack">
-		<table name="#itemCount">5000 5000 5000 5000 5000 10000 10000 10000 10000 10000 </table>
-		<table name="#itemId">22072 22073 22074 22075 22076 22072 22073 22074 22075 22076 </table>
+		<table name="#itemCount"> 5000 5000 5000 5000 5000 10000 10000 10000 10000 10000 </table>
+		<table name="#itemId"> 22072 22073 22074 22075 22076 22072 22073 22074 22075 22076 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -896,8 +896,8 @@
 		</for>
 	</skill>
 	<skill id="26069" levels="10" name="Spiritshot Pack">
-		<table name="#itemCount">5000 5000 5000 5000 5000 10000 10000 10000 10000 10000 </table>
-		<table name="#itemId">22077 22078 22079 22080 22081 22077 22078 22079 22080 22081 </table>
+		<table name="#itemCount"> 5000 5000 5000 5000 5000 10000 10000 10000 10000 10000 </table>
+		<table name="#itemId"> 22077 22078 22079 22080 22081 22077 22078 22079 22080 22081 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -915,8 +915,8 @@
 		</for>
 	</skill>
 	<skill id="26070" levels="10" name="Soulshot Pack">
-		<table name="#itemCount">5000 5000 5000 5000 5000 10000 10000 10000 10000 10000 </table>
-		<table name="#itemId">22082 22083 22084 22085 22086 22082 22083 22084 22085 22086 </table>
+		<table name="#itemCount"> 5000 5000 5000 5000 5000 10000 10000 10000 10000 10000 </table>
+		<table name="#itemId"> 22082 22083 22084 22085 22086 22082 22083 22084 22085 22086 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -934,7 +934,7 @@
 		</for>
 	</skill>
 	<skill id="26071" levels="17" name="Wrapped daisy hairpin">
-		<table name="#itemId">22156 22157 22158 22159 22160 22161 22162 22163 22164 22165 22166 22167 22168 22169 22170 22171 22172 </table>
+		<table name="#itemId"> 22156 22157 22158 22159 22160 22161 22162 22163 22164 22165 22166 22167 22168 22169 22170 22171 22172 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -952,7 +952,7 @@
 		</for>
 	</skill>
 	<skill id="26072" levels="3" name="Wrapped Pet Exchange Ticket">
-		<table name="#itemId">7583 7584 7585 </table>
+		<table name="#itemId"> 7583 7584 7585 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -970,7 +970,7 @@
 		</for>
 	</skill>
 	<skill id="26073" levels="5" name="Bone Bolt Container">
-		<table name="#itemId">22144 22145 22146 22147 22148 </table>
+		<table name="#itemId"> 22144 22145 22146 22147 22148 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />

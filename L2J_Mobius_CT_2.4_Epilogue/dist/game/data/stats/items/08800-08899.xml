@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="8800" type="Weapon" name="Naga Storm - Focus">
-		<!-- <Soul Crystal Enhancement>. Increases Critical Rate by 67. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Enhancement>. Increases critical attack rate by 67. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_naga_storm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -59,7 +59,7 @@
 		</for>
 	</item>
 	<item id="8802" type="Weapon" name="Naga Storm - Back Blow">
-		<!-- <Soul Crystal Enhancement>. Increases Critical Rate by 37 when attacking a target from behind. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Enhancement>. Increases the critical attack rate by 37 when attacking a target from behind. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_naga_storm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -88,7 +88,7 @@
 		</for>
 	</item>
 	<item id="8803" type="Weapon" name="Tiphon's Spear - Critical Stun">
-		<!-- <Soul Crystal Enhancement>. Has a 25% chance of stunning a target during a critical attack. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Enhancement>. Has a 25% chance to stun on a critical attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_tiphon_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -119,7 +119,7 @@
 		</for>
 	</item>
 	<item id="8804" type="Weapon" name="Tiphon's Spear - Towering Blow">
-		<!-- <Soul Crystal Enhancement>. Increases the attack range. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Enhancement>. Increases the possibility of increasing attack range. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_tiphon_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -178,7 +178,7 @@
 		</for>
 	</item>
 	<item id="8806" type="Weapon" name="Shyeed's Bow - Cheap Shot">
-		<!-- <Soul Crystal Enhancement>. Adds a 30% chance of decreasing MP consumption by 1 on a general attack. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Enhancement>. Adds a 30% chance to decrease MP consumption by 1 on a general attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_shyid_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -211,7 +211,7 @@
 		</for>
 	</item>
 	<item id="8807" type="Weapon" name="Shyeed's Bow - Focus">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 61. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Enhancement> Increases Critical Attack by 61. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_shyid_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -275,7 +275,7 @@
 		</for>
 	</item>
 	<item id="8809" type="Weapon" name="Sobekk's Hurricane - Rsk. Haste">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 11% when HP drops to 60% or lower. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 11% when HP falls below 60%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_sobekk_hurricane_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />

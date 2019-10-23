@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="14900" type="EtcItem" name="Rune Supply Box - Magic Ornament - Grade S, A">
-		<!-- A box that has the symbol of Rune. A high grade magic pouch that's attached to the belt can be acquired at a certain rate. -->
+		<!-- Box bearing the unique pattern of Rune. A high grade magic pouch that's attached to the belt can be acquired at a certain rate. -->
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -15,7 +15,7 @@
 		<set name="item_skill" val="2991-1" /> <!-- Rune supply box - magic ornament -->
 	</item>
 	<item id="14901" type="EtcItem" name="Schuttgart Supply Box - Magic Ornament - Grade S, A">
-		<!-- A box that has the symbol of Schuttgart. A high grade magic pouch that's attached to the belt can be acquired at a certain rate. -->
+		<!-- Box bearing the unique pattern of Schuttgart. A high grade magic pouch that's attached to the belt can be acquired at a certain rate. -->
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -169,7 +169,7 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="14922" type="Armor" name="Low-grade Magic Rune Clip Iron Belt - HP Recovery">
-		<!-- Increases HP Recovery Rate. -->
+		<!-- HP Recovery Speed increases. -->
 		<set name="icon" val="icon.armor_magic_clip_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -188,7 +188,7 @@
 		</for>
 	</item>
 	<item id="14923" type="Armor" name="Ordinary Magic Rune Clip Iron Belt - HP Recovery">
-		<!-- Increases HP Recovery Rate. -->
+		<!-- HP Recovery Speed increases. -->
 		<set name="icon" val="icon.armor_magic_clip_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -207,7 +207,7 @@
 		</for>
 	</item>
 	<item id="14924" type="Armor" name="High-grade Magic Rune Clip Iron Belt - HP Recovery">
-		<!-- Increases HP Recovery Rate. -->
+		<!-- HP Recovery Speed increases. -->
 		<set name="icon" val="icon.armor_magic_clip_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -226,7 +226,7 @@
 		</for>
 	</item>
 	<item id="14925" type="Armor" name="Top-grade Magic Rune Clip Iron Belt - HP Recovery">
-		<!-- Increases HP Recovery Rate. -->
+		<!-- HP Recovery Speed increases. -->
 		<set name="icon" val="icon.armor_magic_clip_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -245,7 +245,7 @@
 		</for>
 	</item>
 	<item id="14926" type="Armor" name="Low-grade Magic Rune Clip Mithril Belt - HP Recovery">
-		<!-- Increases HP Recovery Rate. -->
+		<!-- HP Recovery Speed increases. -->
 		<set name="icon" val="icon.armor_magic_clip_belt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -264,7 +264,7 @@
 		</for>
 	</item>
 	<item id="14927" type="Armor" name="Ordinary Magic Rune Clip Mithril Belt - HP Recovery">
-		<!-- Increases HP Recovery Rate. -->
+		<!-- HP Recovery Speed increases. -->
 		<set name="icon" val="icon.armor_magic_clip_belt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -283,7 +283,7 @@
 		</for>
 	</item>
 	<item id="14928" type="Armor" name="High-grade Magic Rune Clip Mithril Belt - HP Recovery">
-		<!-- Increases HP Recovery Rate. -->
+		<!-- HP Recovery Speed increases. -->
 		<set name="icon" val="icon.armor_magic_clip_belt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -302,7 +302,7 @@
 		</for>
 	</item>
 	<item id="14929" type="Armor" name="Top-grade Magic Rune Clip Mithril Belt - HP Recovery">
-		<!-- Increases HP Recovery Rate. -->
+		<!-- HP Recovery Speed increases. -->
 		<set name="icon" val="icon.armor_magic_clip_belt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -321,7 +321,7 @@
 		</for>
 	</item>
 	<item id="14930" type="Armor" name="Low-grade Magic Rune Clip Iron Belt - MP Recovery">
-		<!-- MP Recovery Rate increases. -->
+		<!-- MP Recovery Speed increases. -->
 		<set name="icon" val="icon.armor_magic_clip_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -340,7 +340,7 @@
 		</for>
 	</item>
 	<item id="14931" type="Armor" name="Ordinary Magic Rune Clip Iron Belt - MP Recovery">
-		<!-- MP Recovery Rate increases. -->
+		<!-- MP Recovery Speed increases. -->
 		<set name="icon" val="icon.armor_magic_clip_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -359,7 +359,7 @@
 		</for>
 	</item>
 	<item id="14932" type="Armor" name="High-grade Magic Rune Clip Iron Belt - MP Recovery">
-		<!-- MP Recovery Rate increases. -->
+		<!-- MP Recovery Speed increases. -->
 		<set name="icon" val="icon.armor_magic_clip_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -378,7 +378,7 @@
 		</for>
 	</item>
 	<item id="14933" type="Armor" name="Top-grade Magic Rune Clip Iron Belt - MP Recovery">
-		<!-- MP Recovery Rate increases. -->
+		<!-- MP Recovery Speed increases. -->
 		<set name="icon" val="icon.armor_magic_clip_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -397,7 +397,7 @@
 		</for>
 	</item>
 	<item id="14934" type="Armor" name="Low-grade Magic Rune Clip Mithril Belt - MP Recovery">
-		<!-- MP Recovery Rate increases. -->
+		<!-- MP Recovery Speed increases. -->
 		<set name="icon" val="icon.armor_magic_clip_belt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -416,7 +416,7 @@
 		</for>
 	</item>
 	<item id="14935" type="Armor" name="Ordinary Magic Rune Clip Mithril Belt - MP Recovery">
-		<!-- MP Recovery Rate increases. -->
+		<!-- MP Recovery Speed increases. -->
 		<set name="icon" val="icon.armor_magic_clip_belt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -435,7 +435,7 @@
 		</for>
 	</item>
 	<item id="14936" type="Armor" name="High-grade Magic Rune Clip Mithril Belt - MP Recovery">
-		<!-- MP Recovery Rate increases. -->
+		<!-- MP Recovery Speed increases. -->
 		<set name="icon" val="icon.armor_magic_clip_belt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -454,7 +454,7 @@
 		</for>
 	</item>
 	<item id="14937" type="Armor" name="Top-grade Magic Rune Clip Mithril Belt - MP Recovery">
-		<!-- MP Recovery Rate increases. -->
+		<!-- MP Recovery Speed increases. -->
 		<set name="icon" val="icon.armor_magic_clip_belt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1229,7 +1229,7 @@
 		</for>
 	</item>
 	<item id="14980" type="Armor" name="Dark Crystal Gloves of Fortune - Robe - 30-day limited period">
-		<!-- Gloves that make a set with the Dark Crystal Robe of Fortune. No exchange/drop available -->
+		<!-- Gloves that make a set with the Dark Crystal Robe of Friendship. No exchange/drop available -->
 		<set name="icon" val="icon.armor_t76_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1250,7 +1250,7 @@
 		</for>
 	</item>
 	<item id="14981" type="Armor" name="Dark Crystal Boots of Fortune - Robe - 30-day limited period">
-		<!-- Boots that make a set with the Dark Crystal Robe of Fortune. No exchange/drop available -->
+		<!-- Boots that make a set with the Dark Crystal Robe of Friendship. No exchange/drop available -->
 		<set name="icon" val="icon.armor_t76_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1335,7 +1335,7 @@
 		</for>
 	</item>
 	<item id="14985" type="Armor" name="Avadon Gloves of Fortune - Robe - 30-day limited period">
-		<!-- Gloves that make a set with the Avadon Robe of Fortune. No exchange/drop available -->
+		<!-- Gloves that make a set with the Avadon Robe of Friendship. No exchange/drop available -->
 		<set name="icon" val="icon.armor_t59_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1356,7 +1356,7 @@
 		</for>
 	</item>
 	<item id="14986" type="Armor" name="Avadon Boots of Fortune - Robe - 30-day limited period">
-		<!-- Boots that make a set with the Avadon Robe of Fortune. No exchange or drop available -->
+		<!-- Boots that make a set with the Avadon Robe of Friendship. No exchange or drop available -->
 		<set name="icon" val="icon.armor_t59_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1602,7 +1602,7 @@
 		</for>
 	</item>
 	<item id="14998" type="Armor" name="Dark Crystal Gloves of Fortune - Light Armor - 30-day limited period">
-		<!-- Gloves that make a set with the Dark Crystal Leather Mail of Fortune. No exchange/drop available -->
+		<!-- Gloves that make a set with the Dark Crystal Leather Mail of Friendship. No exchange/drop available -->
 		<set name="icon" val="icon.armor_t75_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1620,7 +1620,7 @@
 		</for>
 	</item>
 	<item id="14999" type="Armor" name="Dark Crystal Boots of Fortune - Light Armor - 30-day limited period">
-		<!-- Boots that make a set with the Dark Crystal Leather Mail of Fortune. No exchange/drop available -->
+		<!-- Boots that make a set with the Dark Crystal Leather Mail of Friendship. No exchange/drop available -->
 		<set name="icon" val="icon.armor_t75_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />

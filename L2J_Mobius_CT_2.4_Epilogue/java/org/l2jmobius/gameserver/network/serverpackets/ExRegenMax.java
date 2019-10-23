@@ -37,8 +37,8 @@ public class ExRegenMax implements IClientOutgoingPacket
 	{
 		OutgoingPackets.EX_REGEN_MAX.writeId(packet);
 		packet.writeD(1);
-		packet.writeD(_time);
 		packet.writeD(_tickInterval);
+		packet.writeD(_time);
 		packet.writeF(_amountPerTick);
 		return true;
 	}

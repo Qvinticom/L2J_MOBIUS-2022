@@ -713,7 +713,7 @@
 		</for>
 	</item>
 	<item id="947" type="EtcItem" name="Scroll: Enchant Weapon (B-Grade)">
-		<!-- When enchanted, P. Atk. increases by 3 for B-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. increases by 4 for two-handed swords, two-handed blunts, dualswords, and two-handed combat weapons. P. Atk. increases by 6 for bows. M. Atk. increases by 3 for all weapons. Starting at +4, P. Atk. / M. Atk. bonus double. Enchanting is safe up to +3. -->
+		<!-- When enchanted, the P. Atk. of B-Grade weapons such as one-handed swords and blunt weapons, daggers and spears increases by 3. The P. Atk. of two-handed swords and blunt weapons, dualswords, and two-handed fist-fighting weapons increases by 4. The P. Atk. of bow weapons increases by 6. The M. Atk. of all weapons increases by 3. From +4, P. Atk. and M. Atk. bonus will double for all weapon types. It can be safely enchanted up to +3. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCRL_ENCHANT_WP" />
@@ -727,7 +727,7 @@
 		<set name="item_skill" val="2015-1" /> <!-- Scroll: Enchant Weapon (Grade B) -->
 	</item>
 	<item id="948" type="EtcItem" name="Scroll: Enchant Armor (B-Grade)">
-		<!-- When enchanted, P. Def. increases by 1 for B-grade armor and accessories. Starting at +4, P. Def. increases by 3 and a HP bonus is granted. Enchanting is safe up to +3, but one-piece body armor can be safely enchanted up to +4. -->
+		<!-- Increases P. Def. of B-Grade armor or accessory. Can safely enhance up to +3, although 1-piece armor can be enhanced up to +4. Also increases HP when armor is enhanced above +4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCRL_ENCHANT_AM" />
@@ -744,24 +744,30 @@
 		<!-- A scroll of enchantment that empowers a B-Grade weapon. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_WP" />  <!-- Epilogue Modification -->
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />  <!-- Epilogue Modification -->
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
+		<set name="item_skill" val="2015-1" /> <!-- Scroll: Enchant Weapon (Grade B) -->
 	</item>
 	<item id="950" type="EtcItem" name="Crystal Scroll: Enchant Armor (B-Grade)">
 		<!-- A scroll of enchantment that empowers a B-Grade armor. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_AM" />  <!-- Epilogue Modification -->
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />  <!-- Epilogue Modification -->
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
+		<set name="item_skill" val="2016-1" /> <!-- Scroll: Enchant Armor (Grade B) -->
 	</item>
 	<item id="951" type="EtcItem" name="Scroll: Enchant Weapon (C-Grade)">
-		<!-- When enchanted, P. Atk. increases by 3 for C-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. increases by 4 for two-handed swords, two-handed blunts, dualswords, and two-handed combat weapons. P. Atk. increases by 6 for bows. M. Atk. increases by 3 for all weapons. Starting at +4, P. Atk. / M. Atk. bonus double. Enchanting is safe up to +3. -->
+		<!-- When enchanted, the P. Atk. of C-Grade weapons such as one-handed swords and blunt weapons, daggers and spears increases by 3. The P. Atk. of two-handed swords and blunt weapons, dualswords, and two-handed fist-fighting weapons increases by 4. The P. Atk. of bow weapons increases by 6. The M. Atk. of all weapons increases by 3. From +4, P. Atk. and M. Atk. bonus will double for all weapon types. It can be safely enchanted up to +3. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCRL_ENCHANT_WP" />
@@ -775,7 +781,7 @@
 		<set name="item_skill" val="2017-1" /> <!-- Scroll: Enchant Weapon (Grade C) -->
 	</item>
 	<item id="952" type="EtcItem" name="Scroll: Enchant Armor (C-Grade)">
-		<!-- When enchanted, P. Def. increases by 1 for C-grade armor and accessories. Starting at +4, P. Def. increases by 3 and a HP bonus is granted. Enchanting is safe up to +3, but one-piece body armor can be safely enchanted up to +4. -->
+		<!-- Increases P. Def. of C-Grade armor or accessory. Can safely enhance up to +3, although 1-piece armor can be enhanced up to +4. Also increases HP when armor is enhanced above +4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCRL_ENCHANT_AM" />
@@ -792,24 +798,30 @@
 		<!-- A scroll of enchantment that empowers a C-Grade weapon. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_WP" />  <!-- Epilogue Modification -->
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />  <!-- Epilogue Modification -->
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
+		<set name="item_skill" val="2017-1" /> <!-- Scroll: Enchant Weapon (Grade C) -->
 	</item>
 	<item id="954" type="EtcItem" name="Crystal Scroll: Enchant Armor (C-Grade)">
 		<!-- A scroll of enchantment that empowers a C-Grade armor. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_AM" />  <!-- Epilogue Modification -->
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />  <!-- Epilogue Modification -->
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
+		<set name="item_skill" val="2018-1" /> <!-- Scroll: Enchant Armor (Grade C) -->
 	</item>
 	<item id="955" type="EtcItem" name="Scroll: Enchant Weapon (D-Grade)">
-		<!-- When enchanted, P. Atk. increases by 2 for all D-grade weapons with the exception of bows, which will increase by 4. M. Atk. increases by 2 for all weapons. Starting at +4, P. Atk. / M. Atk. bonus double. Enchanting is safe up to +3. -->
+		<!-- When enchanted the P. Atk. of all D-Grade weapons will increase by 2 with the exception of bows, which will increase by 4. The M. Atk. of all weapons increases by 2. From +4, P. Atk. and M. Atk. bonus will double for all weapon types. It can be safely enchanted up to +3. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCRL_ENCHANT_WP" />
@@ -823,7 +835,7 @@
 		<set name="item_skill" val="2019-1" /> <!-- Scroll: Enchant Weapon (Grade D) -->
 	</item>
 	<item id="956" type="EtcItem" name="Scroll: Enchant Armor (D-Grade)">
-		<!-- When enchanted, P. Def. increases by 1 for D-grade armor and accessories. Starting at +4, P. Def. increases by 3 and a HP bonus is granted. Enchanting is safe up to +3, but one-piece body armor can be safely enchanted up to +4. -->
+		<!-- Increases P. Def. of D-Grade armor or accessory. Can safely enhance up to +3, although 1-piece armor can be enhanced up to +4. Also increases HP when armor is enhanced above +4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCRL_ENCHANT_AM" />
@@ -840,24 +852,30 @@
 		<!-- A scroll of enchantment that empowers a D-Grade weapon. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_WP" />  <!-- Epilogue Modification -->
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />  <!-- Epilogue Modification -->
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
+		<set name="item_skill" val="2019-1" /> <!-- Scroll: Enchant Weapon (Grade D) -->
 	</item>
 	<item id="958" type="EtcItem" name="Crystal Scroll: Enchant Armor (D-Grade)">
 		<!-- A scroll of enchantment that empowers a D-Grade armor. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_AM" />  <!-- Epilogue Modification -->
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />  <!-- Epilogue Modification -->
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
+		<set name="item_skill" val="2020-1" /> <!-- Scroll: Enchant Armor (Grade D) -->
 	</item>
 	<item id="959" type="EtcItem" name="Scroll: Enchant Weapon (S-Grade)">
-		<!-- When enchanted, P. Atk. increases by 5 for S-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. increases by 6 for two-handed swords, two-handed blunts, dualswords, and two-handed combat weapons. P. Atk. increases by 10 for bows. M. Atk. increases by 4 for all weapons. Starting at +4, P. Atk. / M. Atk. bonus double. Enchanting is safe up to +3. -->
+		<!-- When enchanted, the P. Atk. of S grade weapons such as one-handed swords and blunt weapons, daggers and spears increases by 5. The P. Atk. of two-handed swords and blunt weapons, dualswords, and two-handed fist-fighting weapons increases by 6. The P. Atk. of bow weapons increases by 10. The M. Atk. of all weapons increases by 4. From +4, P. Atk. and M. Atk. bonus will double for all weapon types. It can be safely enchanted up to +3. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCRL_ENCHANT_WP" />
@@ -871,7 +889,7 @@
 		<set name="item_skill" val="2021-1" /> <!-- Scroll: Enchant Weapon (Grade S) -->
 	</item>
 	<item id="960" type="EtcItem" name="Scroll: Enchant Armor (S-Grade)">
-		<!-- When enchanted, P. Def. increases by 1 for S-grade armor and accessories. Starting at +4, P. Def. increases by 3 and a HP bonus is granted. Enchanting is safe up to +3, but one-piece body armor can be safely enchanted up to +4. -->
+		<!-- Increases P. Def. of S-Grade armor or accessory. Can safely enhance up to +3, although 1-piece armor can be enhanced up to +4. Also increases HP when armor is enhanced above +4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCRL_ENCHANT_AM" />
@@ -885,24 +903,30 @@
 		<set name="item_skill" val="2022-1" /> <!-- Scroll: Enchant Armor (Grade S) -->
 	</item>
 	<item id="961" type="EtcItem" name="Crystal Scroll: Enchant Weapon (S-Grade)">
-		<!-- A scroll of enchantment that empowers a S-Grade weapon. -->
+		<!-- A scroll of enchantment that empowers a S Grade weapon. -->
 		<set name="icon" val="BranchSys.icon.br_scrl_of_ench_wp_s_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_WP" />  <!-- Epilogue Modification -->
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />  <!-- Epilogue Modification -->
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
+		<set name="item_skill" val="2021-1" /> <!-- Scroll: Enchant Weapon (Grade S) -->
 	</item>
 	<item id="962" type="EtcItem" name="Crystal Scroll: Enchant Armor (S-Grade)">
-		<!-- A scroll of enchantment that empowers a S-Grade armor -->
+		<!-- A scroll of enchantment that empowers a S Grade armor -->
 		<set name="icon" val="BranchSys.icon.br_scrl_of_ench_am_s_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_AM" />  <!-- Epilogue Modification -->
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />  <!-- Epilogue Modification -->
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="EnchantScrolls" />
+		<set name="item_skill" val="2022-1" /> <!-- Scroll: Enchant Armor (Grade S) -->
 	</item>
 	<item id="963" type="EtcItem" name="Orcish Arrowhead">
 		<!-- An arrowhead that Turath orc marksmen use on Talking Island. Collect these and take to Master Minia. -->

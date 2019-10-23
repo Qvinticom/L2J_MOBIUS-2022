@@ -197,7 +197,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8621" type="EtcItem" name="Ancient Book: Divine Inspiration (Original Version)">
-		<!-- Awakens a forgotten ability. Those who lack the requisite knowledge cannot understand its contents. (Can only be used by characters level 76 or higher.) -->
+		<!-- Restores forgotten abilities. Those who lack the requisite knowledge cannot understand its contents. (Can only be used by characters level 76 or higher.) This item cannot be exchanged or dropped. -->
 		<set name="icon" val="icon.etc_add_buffslot_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1013,7 +1013,7 @@
 		<set name="item_skill" val="2304-1" /> <!-- Hair Style Change Potion -->
 	</item>
 	<item id="8678" type="Weapon" name="Sirra's Blade">
-		<!-- Bestows one of the following functions: Haste, Health, or Critical Poison. -->
+		<!-- Bestows Haste, Health, or Critical Poison. -->
 		<set name="icon" val="icon.weapon_sirr_blade_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1041,7 +1041,7 @@
 		</for>
 	</item>
 	<item id="8679" type="Weapon" name="Sword of Ipos">
-		<!-- Bestows one of the following functions: Focus, Haste, or Health. -->
+		<!-- Bestows Focus, Haste, or Health. -->
 		<set name="icon" val="icon.weapon_sword_of_ipos_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1069,7 +1069,7 @@
 		</for>
 	</item>
 	<item id="8680" type="Weapon" name="Barakiel's Axe">
-		<!-- Bestows one of the following functions: Health, Haste, or Focus. -->
+		<!-- Bestows Health, Haste, or Focus. -->
 		<set name="icon" val="icon.weapon_barakiel_axe_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1097,7 +1097,7 @@
 		</for>
 	</item>
 	<item id="8681" type="Weapon" name="Behemoth's Tuning Fork">
-		<!-- Bestows one of the following functions: Focus, Health, or Anger. -->
+		<!-- Bestows Focus, Health, or Anger. -->
 		<set name="icon" val="icon.weapon_tuning_fork_of_behemoth_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1125,7 +1125,7 @@
 		</for>
 	</item>
 	<item id="8682" type="Weapon" name="Naga Storm">
-		<!-- Bestows one of the following functions: Focus, Critical Damage, or Back Blow. -->
+		<!-- Bestows Focus, Critical Damage, or Back Blow. -->
 		<set name="icon" val="icon.weapon_naga_storm_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1153,7 +1153,7 @@
 		</for>
 	</item>
 	<item id="8683" type="Weapon" name="Tiphon's Spear">
-		<!-- Bestows one of the following functions: Critical Stun, Towering Blow or Wide Blow. -->
+		<!-- Bestows either Critical Stun, Towering Blow or Wide Blow. -->
 		<set name="icon" val="icon.weapon_tiphon_spear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1182,7 +1182,7 @@
 		</for>
 	</item>
 	<item id="8684" type="Weapon" name="Shyeed's Bow">
-		<!-- Bestows one of the following functions: Cheap Shot, Focus, or Quick Recovery. -->
+		<!-- Bestows Cheap Shot, Focus, or Quick Recovery. -->
 		<set name="icon" val="icon.weapon_shyid_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1213,7 +1213,7 @@
 		</for>
 	</item>
 	<item id="8685" type="Weapon" name="Sobekk's Hurricane">
-		<!-- Bestows one of the following functions: Rsk. Haste, Haste, or Critical Drain. -->
+		<!-- Bestows Rsk. Haste, Haste, or Critical Drain. -->
 		<set name="icon" val="icon.weapon_sobekk_hurricane_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1241,7 +1241,7 @@
 		</for>
 	</item>
 	<item id="8686" type="Weapon" name="Themis' Tongue">
-		<!-- Bestows one of the following functions: Mana Up, Mental Shield, or Magic Focus. -->
+		<!-- Bestows Mana Up, Magic Mental Shield, or Magic Focus. -->
 		<set name="icon" val="icon.weapon_tongue_of_themis_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1269,7 +1269,7 @@
 		</for>
 	</item>
 	<item id="8687" type="Weapon" name="Cabrio's Hand">
-		<!-- Bestows one of the following functions: Conversion, Mana Up, or Magic Silence. -->
+		<!-- Bestows Conversion, Mana Up, or Magic Silence. -->
 		<set name="icon" val="icon.weapon_hand_of_cabrio_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1298,7 +1298,7 @@
 		</for>
 	</item>
 	<item id="8688" type="Weapon" name="Daimon Crystal">
-		<!-- Bestows one of the following functions: Mana Up, Acumen, or Mental Shield. -->
+		<!-- Bestows Mana Up, Acumen, or Magic Mental Shield. -->
 		<set name="icon" val="icon.weapon_crystal_of_deamon_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />

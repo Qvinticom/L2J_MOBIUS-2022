@@ -77,7 +77,7 @@
 		</for>
 	</skill>
 	<skill id="2305" levels="1" name="Primeval Potion">
-		<!-- Improves Resistance to various poisons and anesthetics that originate on the Primeval Isle. -->
+		<!-- Improves resistance to various poisons and anesthetics that originate on the Primeval Isle. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="POTION_OF_GENESIS" />
@@ -392,7 +392,7 @@
 		<set name="hitTime" val="200" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="9156" /> <!-- Blessed Scroll of Escape - Event -->
+		<set name="itemConsumeId" val="9156" /> <!-- Blessed Scroll of Escape (Event) -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
@@ -417,7 +417,7 @@
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="9157" /> <!-- Blessed Scroll of Resurrection - Event -->
+		<set name="itemConsumeId" val="9157" /> <!-- Blessed Scroll of Resurrection (Event) -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="PC_BODY" />
@@ -680,7 +680,7 @@
 		</for>
 	</skill>
 	<skill id="2339" levels="1" name="Holy Resist Potion">
-		<!-- Increases the Resistance to holy element. -->
+		<!-- Increases the resistance to holy element. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="ATTRIBUTE_POTION" />
@@ -697,7 +697,7 @@
 		</for>
 	</skill>
 	<skill id="2340" levels="1" name="Unholy Resist Potion">
-		<!-- Increases the Resistance to dark element. -->
+		<!-- Increases the resistance to dark element. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="ATTRIBUTE_POTION" />
@@ -1295,7 +1295,7 @@
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="10131" /> <!-- Transformation Scroll: Onyx Beast -->
+		<set name="itemConsumeId" val="10131" /> <!-- Onyx Beast Transform Scroll -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -1317,7 +1317,7 @@
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="10132" /> <!-- Transformation Scroll: Death Blader -->
+		<set name="itemConsumeId" val="10132" /> <!-- Death Blader Transform Scroll -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -1331,7 +1331,7 @@
 		</for>
 	</skill>
 	<skill id="2373" levels="1" name="Transform Sealbook - Grail Apostle">
-		<!-- Transform into an Grail Apostle. -->
+		<!-- Transform into an Apostle Grail. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
@@ -1339,7 +1339,7 @@
 		<set name="icon" val="icon.skilltransform2" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="10133" /> <!-- Transformation Scroll: Grail Apostle -->
+		<set name="itemConsumeId" val="10133" /> <!-- Grail Apostle Transform Scroll -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -1361,7 +1361,7 @@
 		<set name="icon" val="icon.skilltransform2" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="10134" /> <!-- Transformation Scroll: Unicorn -->
+		<set name="itemConsumeId" val="10134" /> <!-- Unicorn Transform Scroll -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -1383,7 +1383,7 @@
 		<set name="icon" val="icon.skilltransform2" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="10135" /> <!-- Transformation Scroll: Lilim Knight -->
+		<set name="itemConsumeId" val="10135" /> <!-- Lilim Knight Transform Scroll -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -1405,7 +1405,7 @@
 		<set name="icon" val="icon.skilltransform2" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="10136" /> <!-- Transformation Scroll: Golem Guardian -->
+		<set name="itemConsumeId" val="10136" /> <!-- Golem Guardian Transform Scroll -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -1427,7 +1427,7 @@
 		<set name="icon" val="icon.skilltransform2" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="10137" /> <!-- Transformation Scroll: Inferno Drake -->
+		<set name="itemConsumeId" val="10137" /> <!-- Inferno Drake Transform Scroll -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -1449,7 +1449,7 @@
 		<set name="icon" val="icon.skilltransform2" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="10138" /> <!-- Transformation Scroll: Dragon Bomber -->
+		<set name="itemConsumeId" val="10138" /> <!-- Dragon Bomber Transform Scroll -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
@@ -1760,7 +1760,7 @@
 		</for>
 	</skill>
 	<skill id="2396" levels="1" name="Mental Potion">
-		<!-- Increases Resistance to Hold, Sleep, and Mental attacks. Effect 1. -->
+		<!-- Increases resistance to Hold, Sleep, and Mental attacks. Effect 1. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="HIT_UP" />
@@ -1809,7 +1809,7 @@
 		</for>
 	</skill>
 	<skill id="2399" levels="1" name="Capture Rope">
-		<!-- Instantly puts the enemy into hold. Targets will not receive any additional hold attack while the effect lasts. -->
+		<!-- Instantly puts an enemy into hold. Targets will not receive any additional hold attack while the effect lasts. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="7" />
 		<set name="abnormalType" val="ROOT_PHYSICALLY" />

@@ -17,8 +17,6 @@
 		<item itemId="5908" level="13" leveledItemId="9570" /> <!-- RED 13 - 14 -->
 		<item itemId="9570" level="14" leveledItemId="10480" /> <!-- RED 14 - 15 -->
 		<item itemId="10480" level="15" leveledItemId="13071" /> <!-- RED 15 - 16 -->
-		<item itemId="13071" level="16" leveledItemId="15541" /> <!-- RED 16 - 17 -->
-		<item itemId="15541" level="17" leveledItemId="15826" /> <!-- RED 17 - 18 -->
 
 		<item itemId="4640" level="0" leveledItemId="4641" /> <!-- GREEN 0 - 1 -->
 		<item itemId="4641" level="1" leveledItemId="4642" /> <!-- GREEN 1 - 2 -->
@@ -36,8 +34,6 @@
 		<item itemId="5911" level="13" leveledItemId="9572" /> <!-- GREEN 13 - 14 -->
 		<item itemId="9572" level="14" leveledItemId="10482" /> <!-- GREEN 14 - 15 -->
 		<item itemId="10482" level="15" leveledItemId="13073" /> <!-- GREEN 15 - 16 -->
-		<item itemId="13073" level="16" leveledItemId="15543" /> <!-- GREEN 16 - 17 -->
-		<item itemId="15543" level="17" leveledItemId="15828" /> <!-- GREEN 17 - 18 -->
 
 		<item itemId="4651" level="0" leveledItemId="4652" /> <!-- BLUE 0 - 1 -->
 		<item itemId="4652" level="1" leveledItemId="4653" /> <!-- BLUE 1 - 2 -->
@@ -55,8 +51,6 @@
 		<item itemId="5914" level="13" leveledItemId="9571" /> <!-- BLUE 13 - 14 -->
 		<item itemId="9571" level="14" leveledItemId="10481" /> <!-- BLUE 14 - 15 -->
 		<item itemId="10481" level="15" leveledItemId="13072" /> <!-- BLUE 15 - 16 -->
-		<item itemId="13072" level="16" leveledItemId="15542" /> <!-- BLUE 16 - 17 -->
-		<item itemId="15542" level="17" leveledItemId="15827" /> <!-- BLUE 17 - 18 -->
 	</crystal>
 	<npc>
 		<!-- Mobs that level up crystal from Level 1 up to 10 -->
@@ -367,7 +361,7 @@
 			<detail chance="9" skill="true" maxLevel="8" />
 		</item>
 
-		<!-- RaidBosses or GrandBosses that level up crystal from Level 10 up to 18 -->
+		<!-- RaidBosses or GrandBosses that level up crystal from Level 10 up to 16 -->
 		<item npcId="29001"> <!-- Queen Ant -->
 			<detail chance="5" absorbType="FULL_PARTY" levelList="10" />
 		</item>
@@ -383,11 +377,6 @@
 		</item>
 		<item npcId="29176"> <!-- Daytime Zaken -->
 			<detail chance="10" absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
-		</item>
-		<item npcId="29181"> <!-- Night-time Zaken -->
-			<detail chance="20" absorbType="PARTY_ONE_RANDOM" levelList="12, 13" />
-			<detail chance="10" absorbType="PARTY_ONE_RANDOM" levelList="14, 15" />
-			<detail chance="3" absorbType="PARTY_ONE_RANDOM" levelList="16" />
 		</item>
 		<item npcId="25016"> <!-- The 3rd Underwater Guardian -->
 			<detail chance="5" absorbType="PARTY_ONE_RANDOM" levelList="10, 11" />
@@ -529,9 +518,6 @@
 			<detail chance="3" absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12" />
 		</item>
 		<item npcId="25524"> <!-- Flamestone Giant -->
-			<detail chance="3" absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12" />
-		</item>
-		<item npcId="25703"> <!-- Gigantic Golem -->
 			<detail chance="3" absorbType="PARTY_ONE_RANDOM" levelList="10, 11, 12" />
 		</item>
 		<item npcId="25143"> <!-- Fire of Wrath Shuriel -->
@@ -733,10 +719,6 @@
 			<detail chance="10" absorbType="FULL_PARTY" levelList="12, 13, 14, 15" />
 			<detail chance="1" absorbType="FULL_PARTY" levelList="16" />
 		</item>
-		<item npcId="25701"> <!-- Anais -->
-			<detail chance="10" absorbType="PARTY_ONE_RANDOM" levelList="12, 13" />
-			<detail chance="5" absorbType="PARTY_ONE_RANDOM" levelList="14" />
-		</item>
 		<item npcId="25677"> <!-- Water Spirit Lian -->
 			<detail chance="10" absorbType="PARTY_ONE_RANDOM" levelList="12, 13" />
 			<detail chance="5" absorbType="PARTY_ONE_RANDOM" levelList="14" />
@@ -751,64 +733,25 @@
 			<detail chance="5" absorbType="PARTY_ONE_RANDOM" levelList="14" />
 			<detail chance="3" absorbType="PARTY_ONE_RANDOM" levelList="15" />
 		</item>
-		<item npcId="25713"> <!-- Darnel -->
-			<detail chance="1" absorbType="PARTY_ONE_RANDOM" levelList="12, 13, 14, 15" />
-		</item>
-		<item npcId="25714"> <!-- Kechi -->
-			<detail chance="1" absorbType="PARTY_ONE_RANDOM" levelList="12, 13, 14, 15" />
-		</item>
-		<item npcId="25716"> <!-- Tears -->
-			<detail chance="1" absorbType="PARTY_ONE_RANDOM" levelList="12, 13, 14, 15" />
-		</item>
-		<item npcId="25699"> <!-- Ice Knight Captain Normal Mode -->
-			<detail chance="10" absorbType="FULL_PARTY" levelList="12, 13" />
-		</item>
-		<item npcId="25700"> <!-- Ice Knight Captain Extreme Mode -->
-			<detail chance="20" absorbType="FULL_PARTY" levelList="12, 13, 14" />
-		</item>
-		<item npcId="25696"> <!-- Taklacan -->
-			<detail chance="10" absorbType="PARTY_ONE_RANDOM" levelList="12, 13, 14" />
-			<detail chance="3" absorbType="PARTY_ONE_RANDOM" levelList="15" />
-		</item>
-		<item npcId="25698"> <!-- Dopagen -->
-			<detail chance="10" absorbType="PARTY_ONE_RANDOM" levelList="12, 13, 14" />
-			<detail chance="3" absorbType="PARTY_ONE_RANDOM" levelList="15" />
-		</item>
-		<item npcId="29186"> <!-- Baylor -->
-			<detail chance="1" absorbType="PARTY_ONE_RANDOM" levelList="12, 13, 14, 15, 16" />
-		</item>
 		<item npcId="29047"> <!-- Scarlet van Halisha -->
 			<detail chance="100" absorbType="FULL_PARTY" levelList="12, 13" />
 			<detail chance="50" absorbType="FULL_PARTY" levelList="14" />
 			<detail chance="10" absorbType="FULL_PARTY" levelList="15" />
 		</item>
-		<item npcId="29179"> <!-- Freya Normal Mode -->
-			<detail chance="100" absorbType="FULL_PARTY" levelList="12, 13, 14" />
-			<detail chance="10" absorbType="FULL_PARTY" levelList="15" />
-		</item>
-		<item npcId="29180"> <!-- Freya Extreme Mode -->
-			<detail chance="100" absorbType="FULL_PARTY" levelList="12, 13, 14, 15" />
-			<detail chance="50" absorbType="FULL_PARTY" levelList="16, 17" />
-		</item>
 		<item npcId="29019"> <!-- Antharas -->
 			<detail chance="100" absorbType="FULL_PARTY" levelList="12, 13, 14, 15, 16" />
-			<detail chance="50" absorbType="FULL_PARTY" levelList="17" />
 		</item>
 		<item npcId="29066"> <!-- Antharas -->
 			<detail chance="100" absorbType="FULL_PARTY" levelList="12, 13, 14, 15, 16" />
-			<detail chance="50" absorbType="FULL_PARTY" levelList="17" />
 		</item>
 		<item npcId="29067"> <!-- Antharas -->
 			<detail chance="100" absorbType="FULL_PARTY" levelList="12, 13, 14, 15, 16" />
-			<detail chance="50" absorbType="FULL_PARTY" levelList="17" />
 		</item>
 		<item npcId="29068"> <!-- Antharas -->
 			<detail chance="100" absorbType="FULL_PARTY" levelList="12, 13, 14, 15, 16" />
-			<detail chance="50" absorbType="FULL_PARTY" levelList="17" />
 		</item>
 		<item npcId="29028"> <!-- Valakas -->
 			<detail chance="100" absorbType="FULL_PARTY" levelList="12, 13, 14, 15, 16" />
-			<detail chance="50" absorbType="FULL_PARTY" levelList="17" />
 		</item>
 	</npc>
 </list>

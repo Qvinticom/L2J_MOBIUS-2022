@@ -77,7 +77,7 @@
 		</for>
 	</item>
 	<item id="5705" type="Weapon" name="Keshanberk*Damascus">
-		<!-- When enchanted, P. Atk. of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, Max HP will increase by 25% as well. Enhances damage to target during PvP. -->
+		<!-- When enchanted, the P. Atk. of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, Max HP will increase by 25% as well. Enhances damage to target during PvP. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -105,7 +105,7 @@
 		</for>
 	</item>
 	<item id="5706" type="Weapon" name="Damascus*Damascus">
-		<!-- When enchanted, P. Atk. of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, Accuracy will increase by 6. Enhances damage to target during PvP. -->
+		<!-- When enchanted, the P. Atk. of a dualsword will increase more significantly than that of one-handed or fist weapon. When enchanted by 4 or more, Accuracy will increase by 6. Enhances damage to target during PvP. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -987,7 +987,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="5764" type="EtcItem" name="Sealed Doom Boots Part">
-		<!-- An essential ingredient needed by a Dwarf to make a pair of Sealed Doom Boots. It can also be sold to a regular store. -->
+		<!-- An essential ingredient needed by a Dwarf to make a pair of Sealed Boots of Doom. It can also be sold to a regular store. -->
 		<set name="icon" val="icon.etc_codran_seed_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />

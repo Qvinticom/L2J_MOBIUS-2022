@@ -601,7 +601,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="7550" type="EtcItem" name="Map Piece">
-		<!-- A piece of map obtained from the ghostly apparitions that haunt the Execution Grounds. -->
+		<!-- A piece of map obtained from the ghostly apparitions that haunt the Execution Groundss. -->
 		<set name="icon" val="icon.etc_map_piece_ivory_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -679,7 +679,7 @@
 		</cond>
 	</item>
 	<item id="7556" type="EtcItem" name="Scroll of Escape: Dark Elven Village">
-		<!-- A magical scroll that relocates you to Dark Elven Village. -->
+		<!-- A magical scroll that relocates you to Dark Elf Village. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -724,7 +724,7 @@
 		</cond>
 	</item>
 	<item id="7559" type="EtcItem" name="Scroll of Escape: Town of Giran">
-		<!-- A magical scroll that relocates you to Town of Giran. -->
+		<!-- A magical scroll that relocates you to Giran Castle Town. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -957,7 +957,7 @@
 		</for>
 	</item>
 	<item id="7576" type="Weapon" name="Draconic Bow - Cheap Shot">
-		<!-- <Soul Crystal Enhancement>. Has a 26% chance of decreasing MP consumption to 1 on a general attack. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Enhancement>. Has a 26% chance of decreasing MP consumption to 1 on a general attack. Enhances damage to a target during PvP. -->
 		<set name="icon" val="icon.weapon_draconic_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -991,7 +991,7 @@
 		</for>
 	</item>
 	<item id="7577" type="Weapon" name="Draconic Bow - Focus">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 88. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Enhancement>. Increases Critical Attack by 88. Enhances damage to a target during PvP. -->
 		<set name="icon" val="icon.weapon_draconic_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1024,7 +1024,7 @@
 		</for>
 	</item>
 	<item id="7578" type="Weapon" name="Draconic Bow - Critical Slow">
-		<!-- <Soul Crystal Enhancement>. Has a chance of casting Slow on a critical attack. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Enhancement>. Has a chance of casting Slow on a critical attack. Enhances damage to a target during PvP. -->
 		<set name="icon" val="icon.weapon_draconic_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />

@@ -34,6 +34,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
+import org.l2jmobius.commons.util.StringUtil;
 import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.data.sql.impl.CharNameTable;
 import org.l2jmobius.gameserver.data.sql.impl.ClanTable;
@@ -62,7 +63,7 @@ import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
  */
 public class Hero
 {
-	private static final Logger LOGGER = Logger.getLogger(Hero.class.getName());
+	private static final Logger _log = Logger.getLogger(Hero.class.getName());
 	
 	private static final String GET_HEROES = "SELECT heroes.charId, characters.char_name, heroes.class_id, heroes.count, heroes.played, heroes.claimed FROM heroes, characters WHERE characters.charId = heroes.charId AND heroes.played = 1";
 	private static final String GET_ALL_HEROES = "SELECT heroes.charId, characters.char_name, heroes.class_id, heroes.count, heroes.played, heroes.claimed FROM heroes, characters WHERE characters.charId = heroes.charId";
@@ -117,8 +118,8 @@ public class Hero
 		{
 			while (rset.next())
 			{
-				final StatsSet hero = new StatsSet();
-				final int charId = rset.getInt(Olympiad.CHAR_ID);
+				StatsSet hero = new StatsSet();
+				int charId = rset.getInt(Olympiad.CHAR_ID);
 				hero.set(Olympiad.CHAR_NAME, rset.getString(Olympiad.CHAR_NAME));
 				hero.set(Olympiad.CLASS_ID, rset.getInt(Olympiad.CLASS_ID));
 				hero.set(COUNT, rset.getInt(COUNT));
@@ -136,8 +137,8 @@ public class Hero
 			
 			while (rset2.next())
 			{
-				final StatsSet hero = new StatsSet();
-				final int charId = rset2.getInt(Olympiad.CHAR_ID);
+				StatsSet hero = new StatsSet();
+				int charId = rset2.getInt(Olympiad.CHAR_ID);
 				hero.set(Olympiad.CHAR_NAME, rset2.getString(Olympiad.CHAR_NAME));
 				hero.set(Olympiad.CLASS_ID, rset2.getInt(Olympiad.CLASS_ID));
 				hero.set(COUNT, rset2.getInt(COUNT));
@@ -151,11 +152,11 @@ public class Hero
 		}
 		catch (SQLException e)
 		{
-			LOGGER.warning("Hero System: Couldnt load Heroes: " + e.getMessage());
+			_log.warning("Hero System: Couldnt load Heroes: " + e.getMessage());
 		}
 		
-		LOGGER.info("Hero System: Loaded " + HEROES.size() + " Heroes.");
-		LOGGER.info("Hero System: Loaded " + COMPLETE_HEROS.size() + " all time Heroes.");
+		_log.info("Hero System: Loaded " + HEROES.size() + " Heroes.");
+		_log.info("Hero System: Loaded " + COMPLETE_HEROS.size() + " all time Heroes.");
 	}
 	
 	private void processHeros(PreparedStatement ps, int charId, StatsSet hero) throws SQLException
@@ -165,8 +166,8 @@ public class Hero
 		{
 			if (rs.next())
 			{
-				final int clanId = rs.getInt("clanid");
-				final int allyId = rs.getInt("allyId");
+				int clanId = rs.getInt("clanid");
+				int allyId = rs.getInt("allyId");
 				String clanName = "";
 				String allyName = "";
 				int clanCrest = 0;
@@ -192,9 +193,12 @@ public class Hero
 	
 	private String calcFightTime(long FightTime)
 	{
-		final String format = String.format("%%0%dd", 2);
-		FightTime /= 1000;
-		return String.format(format, (FightTime % 3600) / 60) + ":" + String.format(format, FightTime % 60);
+		String format = String.format("%%0%dd", 2);
+		FightTime = FightTime / 1000;
+		String seconds = String.format(format, FightTime % 60);
+		String minutes = String.format(format, (FightTime % 3600) / 60);
+		String time = minutes + ":" + seconds;
+		return time;
 	}
 	
 	/**
@@ -204,10 +208,10 @@ public class Hero
 	public void loadMessage(int charId)
 	{
 		try (Connection con = DatabaseFactory.getConnection();
-			PreparedStatement ps = con.prepareStatement("SELECT message FROM heroes WHERE charId=?"))
+			PreparedStatement statement = con.prepareStatement("SELECT message FROM heroes WHERE charId=?"))
 		{
-			ps.setInt(1, charId);
-			try (ResultSet rset = ps.executeQuery())
+			statement.setInt(1, charId);
+			try (ResultSet rset = statement.executeQuery())
 			{
 				if (rset.next())
 				{
@@ -217,7 +221,7 @@ public class Hero
 		}
 		catch (SQLException e)
 		{
-			LOGGER.warning("Hero System: Couldnt load Hero Message for CharId: " + charId + ": " + e.getMessage());
+			_log.warning("Hero System: Couldnt load Hero Message for CharId: " + charId + ": " + e.getMessage());
 		}
 	}
 	
@@ -226,25 +230,25 @@ public class Hero
 		final List<StatsSet> diary = new ArrayList<>();
 		int diaryentries = 0;
 		try (Connection con = DatabaseFactory.getConnection();
-			PreparedStatement ps = con.prepareStatement("SELECT * FROM  heroes_diary WHERE charId=? ORDER BY time ASC"))
+			PreparedStatement statement = con.prepareStatement("SELECT * FROM  heroes_diary WHERE charId=? ORDER BY time ASC"))
 		{
-			ps.setInt(1, charId);
-			try (ResultSet rset = ps.executeQuery())
+			statement.setInt(1, charId);
+			try (ResultSet rset = statement.executeQuery())
 			{
 				while (rset.next())
 				{
-					final StatsSet _diaryentry = new StatsSet();
+					StatsSet _diaryentry = new StatsSet();
 					
-					final long time = rset.getLong("time");
-					final int action = rset.getInt("action");
-					final int param = rset.getInt("param");
+					long time = rset.getLong("time");
+					int action = rset.getInt("action");
+					int param = rset.getInt("param");
 					
-					final String date = (new SimpleDateFormat("yyyy-MM-dd HH")).format(new Date(time));
+					String date = (new SimpleDateFormat("yyyy-MM-dd HH")).format(new Date(time));
 					_diaryentry.set("date", date);
 					
 					if (action == ACTION_RAID_KILLED)
 					{
-						final NpcTemplate template = NpcData.getInstance().getTemplate(param);
+						NpcTemplate template = NpcData.getInstance().getTemplate(param);
 						if (template != null)
 						{
 							_diaryentry.set("action", template.getName() + " was defeated");
@@ -256,7 +260,7 @@ public class Hero
 					}
 					else if (action == ACTION_CASTLE_TAKEN)
 					{
-						final Castle castle = CastleManager.getInstance().getCastleById(param);
+						Castle castle = CastleManager.getInstance().getCastleById(param);
 						if (castle != null)
 						{
 							_diaryentry.set("action", castle.getName() + " Castle was successfuly taken");
@@ -268,37 +272,37 @@ public class Hero
 			}
 			HERO_DIARY.put(charId, diary);
 			
-			LOGGER.info("Hero System: Loaded " + diaryentries + " diary entries for Hero: " + CharNameTable.getInstance().getNameById(charId));
+			_log.info("Hero System: Loaded " + diaryentries + " diary entries for Hero: " + CharNameTable.getInstance().getNameById(charId));
 		}
 		catch (SQLException e)
 		{
-			LOGGER.warning("Hero System: Couldnt load Hero Diary for CharId: " + charId + ": " + e.getMessage());
+			_log.warning("Hero System: Couldnt load Hero Diary for CharId: " + charId + ": " + e.getMessage());
 		}
 	}
 	
 	public void loadFights(int charId)
 	{
 		final List<StatsSet> fights = new ArrayList<>();
-		final StatsSet heroCountData = new StatsSet();
-		final Calendar data = Calendar.getInstance();
+		StatsSet heroCountData = new StatsSet();
+		Calendar data = Calendar.getInstance();
 		data.set(Calendar.DAY_OF_MONTH, 1);
 		data.set(Calendar.HOUR_OF_DAY, 0);
 		data.set(Calendar.MINUTE, 0);
 		data.set(Calendar.MILLISECOND, 0);
 		
-		final long from = data.getTimeInMillis();
+		long from = data.getTimeInMillis();
 		int numberoffights = 0;
 		int _victorys = 0;
 		int _losses = 0;
 		int _draws = 0;
 		
 		try (Connection con = DatabaseFactory.getConnection();
-			PreparedStatement ps = con.prepareStatement("SELECT * FROM olympiad_fights WHERE (charOneId=? OR charTwoId=?) AND start<? ORDER BY start ASC"))
+			PreparedStatement statement = con.prepareStatement("SELECT * FROM olympiad_fights WHERE (charOneId=? OR charTwoId=?) AND start<? ORDER BY start ASC"))
 		{
-			ps.setInt(1, charId);
-			ps.setInt(2, charId);
-			ps.setLong(3, from);
-			try (ResultSet rset = ps.executeQuery())
+			statement.setInt(1, charId);
+			statement.setInt(2, charId);
+			statement.setLong(3, from);
+			try (ResultSet rset = statement.executeQuery())
 			{
 				int charOneId;
 				int charOneClass;
@@ -321,16 +325,16 @@ public class Hero
 					
 					if (charId == charOneId)
 					{
-						final String name = CharNameTable.getInstance().getNameById(charTwoId);
-						final String cls = ClassListData.getInstance().getClass(charTwoClass).getClientCode();
+						String name = CharNameTable.getInstance().getNameById(charTwoId);
+						String cls = ClassListData.getInstance().getClass(charTwoClass).getClientCode();
 						if ((name != null) && (cls != null))
 						{
-							final StatsSet fight = new StatsSet();
+							StatsSet fight = new StatsSet();
 							fight.set("oponent", name);
 							fight.set("oponentclass", cls);
 							
 							fight.set("time", calcFightTime(time));
-							final String date = (new SimpleDateFormat("yyyy-MM-dd HH:mm")).format(new Date(start));
+							String date = (new SimpleDateFormat("yyyy-MM-dd HH:mm")).format(new Date(start));
 							fight.set("start", date);
 							
 							fight.set("classed", classed);
@@ -357,16 +361,16 @@ public class Hero
 					}
 					else if (charId == charTwoId)
 					{
-						final String name = CharNameTable.getInstance().getNameById(charOneId);
-						final String cls = ClassListData.getInstance().getClass(charOneClass).getClientCode();
+						String name = CharNameTable.getInstance().getNameById(charOneId);
+						String cls = ClassListData.getInstance().getClass(charOneClass).getClientCode();
 						if ((name != null) && (cls != null))
 						{
-							final StatsSet fight = new StatsSet();
+							StatsSet fight = new StatsSet();
 							fight.set("oponent", name);
 							fight.set("oponentclass", cls);
 							
 							fight.set("time", calcFightTime(time));
-							final String date = (new SimpleDateFormat("yyyy-MM-dd HH:mm")).format(new Date(start));
+							String date = (new SimpleDateFormat("yyyy-MM-dd HH:mm")).format(new Date(start));
 							fight.set("start", date);
 							
 							fight.set("classed", classed);
@@ -401,11 +405,11 @@ public class Hero
 			HERO_COUNTS.put(charId, heroCountData);
 			HERO_FIGHTS.put(charId, fights);
 			
-			LOGGER.info("Hero System: Loaded " + numberoffights + " fights for Hero: " + CharNameTable.getInstance().getNameById(charId));
+			_log.info("Hero System: Loaded " + numberoffights + " fights for Hero: " + CharNameTable.getInstance().getNameById(charId));
 		}
 		catch (SQLException e)
 		{
-			LOGGER.warning("Hero System: Couldnt load Hero fights history for CharId: " + charId + ": " + e);
+			_log.warning("Hero System: Couldnt load Hero fights history for CharId: " + charId + ": " + e);
 		}
 	}
 	
@@ -460,23 +464,23 @@ public class Hero
 					final StringBuilder fList = new StringBuilder(500);
 					int counter = 0;
 					int breakat = 0;
-					for (int i = (page - 1) * perpage; i < list.size(); i++)
+					for (int i = ((page - 1) * perpage); i < list.size(); i++)
 					{
 						breakat = i;
-						final StatsSet diaryEntry = list.get(i);
-						fList.append("<tr><td>");
+						StatsSet diaryEntry = list.get(i);
+						StringUtil.append(fList, "<tr><td>");
 						if (color)
 						{
-							fList.append("<table width=270 bgcolor=\"131210\">");
+							StringUtil.append(fList, "<table width=270 bgcolor=\"131210\">");
 						}
 						else
 						{
-							fList.append("<table width=270>");
+							StringUtil.append(fList, "<table width=270>");
 						}
-						fList.append("<tr><td width=270><font color=\"LEVEL\">" + diaryEntry.getString("date") + ":xx</font></td></tr>");
-						fList.append("<tr><td width=270>" + diaryEntry.getString("action") + "</td></tr>");
-						fList.append("<tr><td>&nbsp;</td></tr></table>");
-						fList.append("</td></tr>");
+						StringUtil.append(fList, "<tr><td width=270><font color=\"LEVEL\">" + diaryEntry.getString("date") + ":xx</font></td></tr>");
+						StringUtil.append(fList, "<tr><td width=270>" + diaryEntry.getString("action") + "</td></tr>");
+						StringUtil.append(fList, "<tr><td>&nbsp;</td></tr></table>");
+						StringUtil.append(fList, "</td></tr>");
 						color = !color;
 						counter++;
 						if (counter >= perpage)
@@ -548,23 +552,23 @@ public class Hero
 					final StringBuilder fList = new StringBuilder(500);
 					int counter = 0;
 					int breakat = 0;
-					for (int i = (page - 1) * perpage; i < heroFights.size(); i++)
+					for (int i = ((page - 1) * perpage); i < heroFights.size(); i++)
 					{
 						breakat = i;
-						final StatsSet fight = heroFights.get(i);
-						fList.append("<tr><td>");
+						StatsSet fight = heroFights.get(i);
+						StringUtil.append(fList, "<tr><td>");
 						if (color)
 						{
-							fList.append("<table width=270 bgcolor=\"131210\">");
+							StringUtil.append(fList, "<table width=270 bgcolor=\"131210\">");
 						}
 						else
 						{
-							fList.append("<table width=270>");
+							StringUtil.append(fList, "<table width=270>");
 						}
-						fList.append("<tr><td width=220><font color=\"LEVEL\">" + fight.getString("start") + "</font>&nbsp;&nbsp;" + fight.getString("result") + "</td><td width=50 align=right>" + (fight.getInt("classed") > 0 ? "<font color=\"FFFF99\">cls</font>" : "<font color=\"999999\">non-cls<font>") + "</td></tr>");
-						fList.append("<tr><td width=220>vs " + fight.getString("oponent") + " (" + fight.getString("oponentclass") + ")</td><td width=50 align=right>(" + fight.getString("time") + ")</td></tr>");
-						fList.append("<tr><td colspan=2>&nbsp;</td></tr></table>");
-						fList.append("</td></tr>");
+						StringUtil.append(fList, "<tr><td width=220><font color=\"LEVEL\">" + fight.getString("start") + "</font>&nbsp;&nbsp;" + fight.getString("result") + "</td><td width=50 align=right>" + (fight.getInt("classed") > 0 ? "<font color=\"FFFF99\">cls</font>" : "<font color=\"999999\">non-cls<font>") + "</td></tr>");
+						StringUtil.append(fList, "<tr><td width=220>vs " + fight.getString("oponent") + " (" + fight.getString("oponentclass") + ")</td><td width=50 align=right>(" + fight.getString("time") + ")</td></tr>");
+						StringUtil.append(fList, "<tr><td colspan=2>&nbsp;</td></tr></table>");
+						StringUtil.append(fList, "</td></tr>");
 						color = !color;
 						counter++;
 						if (counter >= perpage)
@@ -625,7 +629,7 @@ public class Hero
 			
 			for (int i = 0; i < Inventory.PAPERDOLL_TOTALSLOTS; i++)
 			{
-				final ItemInstance equippedItem = player.getInventory().getPaperdollItem(i);
+				ItemInstance equippedItem = player.getInventory().getPaperdollItem(i);
 				if ((equippedItem != null) && equippedItem.isHeroItem())
 				{
 					player.getInventory().unEquipItemInSlot(i);
@@ -633,7 +637,7 @@ public class Hero
 			}
 			
 			final InventoryUpdate iu = new InventoryUpdate();
-			for (ItemInstance item : player.getInventory().getItems())
+			for (ItemInstance item : player.getInventory().getAvailableItems(false, false, false))
 			{
 				if ((item != null) && item.isHeroItem())
 				{
@@ -661,12 +665,12 @@ public class Hero
 		
 		for (StatsSet hero : newHeroes)
 		{
-			final int charId = hero.getInt(Olympiad.CHAR_ID);
+			int charId = hero.getInt(Olympiad.CHAR_ID);
 			
 			if (COMPLETE_HEROS.containsKey(charId))
 			{
-				final StatsSet oldHero = COMPLETE_HEROS.get(charId);
-				final int count = oldHero.getInt(COUNT);
+				StatsSet oldHero = COMPLETE_HEROS.get(charId);
+				int count = oldHero.getInt(COUNT);
 				oldHero.set(COUNT, count + 1);
 				oldHero.set(PLAYED, 1);
 				oldHero.set(CLAIMED, false);
@@ -674,7 +678,7 @@ public class Hero
 			}
 			else
 			{
-				final StatsSet newHero = new StatsSet();
+				StatsSet newHero = new StatsSet();
 				newHero.set(Olympiad.CHAR_NAME, hero.getString(Olympiad.CHAR_NAME));
 				newHero.set(Olympiad.CLASS_ID, hero.getInt(Olympiad.CLASS_ID));
 				newHero.set(COUNT, 1);
@@ -693,9 +697,9 @@ public class Hero
 		{
 			if (setDefault)
 			{
-				try (Statement s = con.createStatement())
+				try (PreparedStatement update_all = con.prepareStatement(UPDATE_ALL))
 				{
-					s.executeUpdate(UPDATE_ALL);
+					update_all.execute();
 				}
 			}
 			else
@@ -726,8 +730,8 @@ public class Hero
 							{
 								if (rset.next())
 								{
-									final int clanId = rset.getInt("clanid");
-									final int allyId = rset.getInt("allyId");
+									int clanId = rset.getInt("clanid");
+									int allyId = rset.getInt("allyId");
 									
 									String clanName = "";
 									String allyName = "";
@@ -773,7 +777,7 @@ public class Hero
 		}
 		catch (SQLException e)
 		{
-			LOGGER.warning("Hero System: Couldnt update Heroes: " + e.getMessage());
+			_log.warning("Hero System: Couldnt update Heroes: " + e.getMessage());
 		}
 	}
 	
@@ -788,17 +792,16 @@ public class Hero
 		
 		final NpcTemplate template = NpcData.getInstance().getTemplate(npcId);
 		final List<StatsSet> list = HERO_DIARY.get(charId);
-		if ((list == null) || (template == null))
+		if ((list != null) && (template != null))
 		{
-			return;
+			// Prepare new data
+			final StatsSet diaryEntry = new StatsSet();
+			final String date = (new SimpleDateFormat("yyyy-MM-dd HH")).format(new Date(System.currentTimeMillis()));
+			diaryEntry.set("date", date);
+			diaryEntry.set("action", template.getName() + " was defeated");
+			// Add to old list
+			list.add(diaryEntry);
 		}
-		// Prepare new data
-		final StatsSet diaryEntry = new StatsSet();
-		final String date = (new SimpleDateFormat("yyyy-MM-dd HH")).format(new Date(System.currentTimeMillis()));
-		diaryEntry.set("date", date);
-		diaryEntry.set("action", template.getName() + " was defeated");
-		// Add to old list
-		list.add(diaryEntry);
 	}
 	
 	public void setCastleTaken(int charId, int castleId)
@@ -807,33 +810,32 @@ public class Hero
 		
 		final Castle castle = CastleManager.getInstance().getCastleById(castleId);
 		final List<StatsSet> list = HERO_DIARY.get(charId);
-		if ((list == null) || (castle == null))
+		if ((list != null) && (castle != null))
 		{
-			return;
+			// Prepare new data
+			final StatsSet diaryEntry = new StatsSet();
+			final String date = (new SimpleDateFormat("yyyy-MM-dd HH")).format(new Date(System.currentTimeMillis()));
+			diaryEntry.set("date", date);
+			diaryEntry.set("action", castle.getName() + " Castle was successfuly taken");
+			// Add to old list
+			list.add(diaryEntry);
 		}
-		// Prepare new data
-		final StatsSet diaryEntry = new StatsSet();
-		final String date = (new SimpleDateFormat("yyyy-MM-dd HH")).format(new Date(System.currentTimeMillis()));
-		diaryEntry.set("date", date);
-		diaryEntry.set("action", castle.getName() + " Castle was successfuly taken");
-		// Add to old list
-		list.add(diaryEntry);
 	}
 	
 	public void setDiaryData(int charId, int action, int param)
 	{
 		try (Connection con = DatabaseFactory.getConnection();
-			PreparedStatement ps = con.prepareStatement("INSERT INTO heroes_diary (charId, time, action, param) values(?,?,?,?)"))
+			PreparedStatement statement = con.prepareStatement("INSERT INTO heroes_diary (charId, time, action, param) values(?,?,?,?)"))
 		{
-			ps.setInt(1, charId);
-			ps.setLong(2, System.currentTimeMillis());
-			ps.setInt(3, action);
-			ps.setInt(4, param);
-			ps.execute();
+			statement.setInt(1, charId);
+			statement.setLong(2, System.currentTimeMillis());
+			statement.setInt(3, action);
+			statement.setInt(4, param);
+			statement.execute();
 		}
 		catch (SQLException e)
 		{
-			LOGGER.severe("SQL exception while saving DiaryData: " + e.getMessage());
+			_log.severe("SQL exception while saving DiaryData: " + e.getMessage());
 		}
 	}
 	
@@ -859,28 +861,28 @@ public class Hero
 		}
 		
 		try (Connection con = DatabaseFactory.getConnection();
-			PreparedStatement ps = con.prepareStatement("UPDATE heroes SET message=? WHERE charId=?;"))
+			PreparedStatement statement = con.prepareStatement("UPDATE heroes SET message=? WHERE charId=?;"))
 		{
-			ps.setString(1, HERO_MESSAGE.get(charId));
-			ps.setInt(2, charId);
-			ps.execute();
+			statement.setString(1, HERO_MESSAGE.get(charId));
+			statement.setInt(2, charId);
+			statement.execute();
 		}
 		catch (SQLException e)
 		{
-			LOGGER.severe("SQL exception while saving HeroMessage:" + e.getMessage());
+			_log.severe("SQL exception while saving HeroMessage:" + e.getMessage());
 		}
 	}
 	
 	private void deleteItemsInDb()
 	{
 		try (Connection con = DatabaseFactory.getConnection();
-			Statement s = con.createStatement())
+			PreparedStatement statement = con.prepareStatement(DELETE_ITEMS))
 		{
-			s.executeUpdate(DELETE_ITEMS);
+			statement.execute();
 		}
 		catch (SQLException e)
 		{
-			LOGGER.warning("Heroes: " + e.getMessage());
+			_log.warning("Heroes: " + e.getMessage());
 		}
 	}
 	

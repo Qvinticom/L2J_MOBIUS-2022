@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="18500" level="70" type="Npc" name="Ingenious Contraption">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="DoorName1" value="c_tower_3c_en" />
 			<param name="DoorName2" value="c_tower_3c_ex" />
@@ -42,7 +41,6 @@
 		</collision>
 	</npc>
 	<npc id="18501" level="70" type="Npc" name="Ingenious Contraption">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="DoorName1" value="c_tower_3d_en" />
 			<param name="DoorName2" value="c_tower_3d_ex" />
@@ -83,7 +81,6 @@
 		</collision>
 	</npc>
 	<npc id="18502" level="70" type="Npc" name="Ingenious Contraption">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="DoorName1" value="c_tower_2a_en" />
 			<param name="DoorName2" value="c_tower_2a_ex" />
@@ -124,7 +121,6 @@
 		</collision>
 	</npc>
 	<npc id="18503" level="70" type="Npc" name="Ingenious Contraption">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="DoorName1" value="c_tower_2b_en" />
 			<param name="DoorName2" value="c_tower_2b_ex" />
@@ -165,7 +161,6 @@
 		</collision>
 	</npc>
 	<npc id="18504" level="70" type="Npc" name="Ingenious Contraption">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="DoorName1" value="c_tower_2c_en" />
 			<param name="DoorName2" value="c_tower_2c_ex" />
@@ -206,7 +201,6 @@
 		</collision>
 	</npc>
 	<npc id="18505" level="70" type="Npc" name="Ingenious Contraption">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="DoorName1" value="c_tower_2d_en" />
 			<param name="DoorName2" value="c_tower_2d_ex" />
@@ -247,7 +241,6 @@
 		</collision>
 	</npc>
 	<npc id="18506" level="87" type="Monster" name="Soul Crystal Pillar">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="5417" level="1" /> <!-- Invincible -->
 		</parameters>
@@ -286,7 +279,6 @@
 		</collision>
 	</npc>
 	<npc id="18507" level="78" type="Npc">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsDetected" value="0" />
 			<param name="IsDefused" value="0" />
@@ -326,7 +318,6 @@
 		</collision>
 	</npc>
 	<npc id="18508" level="78" type="Npc">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsDetected" value="0" />
 			<param name="IsDefused" value="0" />
@@ -366,7 +357,6 @@
 		</collision>
 	</npc>
 	<npc id="18509" level="78" type="Npc">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsDetected" value="0" />
 			<param name="IsDefused" value="0" />
@@ -406,7 +396,6 @@
 		</collision>
 	</npc>
 	<npc id="18510" level="78" type="Npc">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsDetected" value="0" />
 			<param name="IsDefused" value="0" />
@@ -446,7 +435,6 @@
 		</collision>
 	</npc>
 	<npc id="18511" level="78" type="Npc">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsDetected" value="0" />
 			<param name="IsDefused" value="0" />
@@ -486,7 +474,6 @@
 		</collision>
 	</npc>
 	<npc id="18512" level="78" type="Npc">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsDetected" value="0" />
 			<param name="IsDefused" value="0" />
@@ -526,7 +513,6 @@
 		</collision>
 	</npc>
 	<npc id="18513" level="78" type="Npc">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsDetected" value="0" />
 			<param name="IsDefused" value="0" />
@@ -566,7 +552,6 @@
 		</collision>
 	</npc>
 	<npc id="18514" level="78" type="Npc">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsDetected" value="0" />
 			<param name="IsDefused" value="0" />
@@ -606,7 +591,6 @@
 		</collision>
 	</npc>
 	<npc id="18515" level="78" type="Npc">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsDetected" value="0" />
 			<param name="IsDefused" value="0" />
@@ -646,7 +630,6 @@
 		</collision>
 	</npc>
 	<npc id="18516" level="78" type="Npc">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="show_defused" value="0" />
 			<param name="IsDetected" value="1" />
@@ -687,7 +670,6 @@
 		</collision>
 	</npc>
 	<npc id="18517" level="78" type="Npc">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="show_defused" value="0" />
 			<param name="IsDetected" value="1" />
@@ -728,7 +710,6 @@
 		</collision>
 	</npc>
 	<npc id="18518" level="78" type="Npc">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="show_defused" value="0" />
 			<param name="IsDetected" value="1" />
@@ -769,7 +750,6 @@
 		</collision>
 	</npc>
 	<npc id="18519" level="78" type="Npc">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="show_defused" value="0" />
 			<param name="IsDetected" value="1" />
@@ -810,7 +790,6 @@
 		</collision>
 	</npc>
 	<npc id="18520" level="78" type="Npc">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="show_defused" value="0" />
 			<param name="IsDetected" value="1" />
@@ -851,7 +830,6 @@
 		</collision>
 	</npc>
 	<npc id="18521" level="78" type="Npc">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="show_defused" value="0" />
 			<param name="IsDetected" value="1" />
@@ -892,7 +870,6 @@
 		</collision>
 	</npc>
 	<npc id="18522" level="78" type="Npc">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="show_defused" value="0" />
 			<param name="IsDetected" value="1" />
@@ -933,7 +910,6 @@
 		</collision>
 	</npc>
 	<npc id="18523" level="78" type="Npc">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="show_defused" value="0" />
 			<param name="IsDetected" value="1" />
@@ -974,7 +950,6 @@
 		</collision>
 	</npc>
 	<npc id="18524" level="78" type="Npc">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="show_defused" value="0" />
 			<param name="IsDetected" value="1" />
@@ -1015,7 +990,6 @@
 		</collision>
 	</npc>
 	<npc id="18525" level="78" type="Npc">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsDetected" value="0" />
 			<param name="IsDefused" value="0" />
@@ -1055,7 +1029,6 @@
 		</collision>
 	</npc>
 	<npc id="18526" level="78" type="Npc">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsDetected" value="0" />
 			<param name="IsDefused" value="0" />
@@ -1095,7 +1068,6 @@
 		</collision>
 	</npc>
 	<npc id="18527" level="78" type="Npc">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsDetected" value="0" />
 			<param name="IsDefused" value="0" />
@@ -1135,7 +1107,6 @@
 		</collision>
 	</npc>
 	<npc id="18528" level="78" type="Npc">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsDetected" value="0" />
 			<param name="IsDefused" value="0" />
@@ -1175,7 +1146,6 @@
 		</collision>
 	</npc>
 	<npc id="18529" level="78" type="Npc">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsDetected" value="0" />
 			<param name="IsDefused" value="0" />
@@ -1215,7 +1185,6 @@
 		</collision>
 	</npc>
 	<npc id="18530" level="78" type="Npc">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsDetected" value="0" />
 			<param name="IsDefused" value="0" />
@@ -1255,7 +1224,6 @@
 		</collision>
 	</npc>
 	<npc id="18531" level="78" type="Npc">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsDetected" value="0" />
 			<param name="IsDefused" value="0" />
@@ -1295,7 +1263,6 @@
 		</collision>
 	</npc>
 	<npc id="18532" level="78" type="Npc">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsDetected" value="0" />
 			<param name="IsDefused" value="0" />
@@ -1335,7 +1302,6 @@
 		</collision>
 	</npc>
 	<npc id="18533" level="78" type="Npc">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsDetected" value="0" />
 			<param name="IsDefused" value="0" />
@@ -1375,7 +1341,6 @@
 		</collision>
 	</npc>
 	<npc id="18534" level="45" type="Npc" name="Kertang's Treasure Chest">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1417,7 +1382,6 @@
 		</collision>
 	</npc>
 	<npc id="18535" level="55" type="Npc" name="Kertang's Treasure Chest">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1459,7 +1423,6 @@
 		</collision>
 	</npc>
 	<npc id="18536" level="65" type="Npc" name="Kertang's Treasure Chest">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1501,7 +1464,6 @@
 		</collision>
 	</npc>
 	<npc id="18537" level="75" type="Npc" name="Kertang's Treasure Chest">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1543,7 +1505,6 @@
 		</collision>
 	</npc>
 	<npc id="18538" level="85" type="Npc" name="Kertang's Treasure Chest">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1585,7 +1546,6 @@
 		</collision>
 	</npc>
 	<npc id="18539" level="45" type="Npc" name="Resurrection Tower">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1621,7 +1581,6 @@
 		</collision>
 	</npc>
 	<npc id="18540" level="55" type="Npc" name="Resurrection Tower">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1657,7 +1616,6 @@
 		</collision>
 	</npc>
 	<npc id="18541" level="65" type="Npc" name="Resurrection Tower">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1693,7 +1651,6 @@
 		</collision>
 	</npc>
 	<npc id="18542" level="75" type="Npc" name="Resurrection Tower">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1729,7 +1686,6 @@
 		</collision>
 	</npc>
 	<npc id="18543" level="80" type="Npc" name="Resurrection Tower">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1765,7 +1721,6 @@
 		</collision>
 	</npc>
 	<npc id="18544" level="45" type="Monster" name="Cruma Border" title="Event Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="DespawnTime" value="60" />
 			<skill name="Skill01_ID" id="4357" level="2" /> <!-- Haste -->
@@ -1816,7 +1771,7 @@
 				<item id="8604" min="1" max="1" chance="7.59" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.32" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -1835,7 +1790,6 @@
 		</collision>
 	</npc>
 	<npc id="18545" level="45" type="Monster" name="Ancient Experiment" title="Event Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="57" />
 			<param name="MoveAroundSocial1" value="62" />
@@ -1907,7 +1861,6 @@
 		</collision>
 	</npc>
 	<npc id="18546" level="45" type="Monster" name="Ancient Experiment" title="Event Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="116" />
 			<param name="MoveAroundSocial1" value="116" />
@@ -1986,7 +1939,6 @@
 		</collision>
 	</npc>
 	<npc id="18547" level="45" type="Monster" name="Ancient Experiment" title="Event Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -2049,7 +2001,7 @@
 				<item id="1866" min="60" max="180" chance="4.94283870521164" /> <!-- Suede -->
 				<item id="1871" min="240" max="720" chance="1.85354842909241" /> <!-- Charcoal -->
 				<item id="5220" min="4" max="12" chance="3.95425380644989" /> <!-- Metal Hardener -->
-				<item id="1885" min="3" max="9" chance="10.5917604589119" /> <!-- High-Grade Suede -->
+				<item id="1885" min="3" max="9" chance="10.5917604589119" /> <!-- High Grade Suede -->
 				<item id="4041" min="1" max="1" chance="7.73658726429749" /> <!-- Mold Hardener -->
 				<item id="2213" min="1" max="1" chance="13.8153098895035" /> <!-- Recipe: Dwarven Chain Mail Shirt -->
 			</drop>
@@ -2065,7 +2017,6 @@
 		</collision>
 	</npc>
 	<npc id="18548" level="45" type="Monster" name="Ancient Experiment">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -2136,7 +2087,6 @@
 		</collision>
 	</npc>
 	<npc id="18549" level="45" type="Monster" name="Ancient Experiment">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -2187,14 +2137,14 @@
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="62" min="1" max="1" chance="0.0328630148849487" /> <!-- Reinforced Mithril Boots -->
-				<item id="1958" min="1" max="1" chance="1.43416890431213" /> <!-- Reinforced Mithril Boots Design -->
+				<item id="62" min="1" max="1" chance="0.0328630148849487" /> <!-- Mithril Boots -->
+				<item id="1958" min="1" max="1" chance="1.43416890431213" /> <!-- Mithril Boots Design -->
 				<item id="2429" min="1" max="1" chance="0.0328630148849487" /> <!-- Chain Boots -->
 				<item id="2937" min="1" max="1" chance="1.43416890431213" /> <!-- Chain Boots Part -->
 				<item id="2430" min="1" max="1" chance="0.0328630148849487" /> <!-- Karmian Boots -->
 				<item id="2938" min="1" max="1" chance="1.43416890431213" /> <!-- Karmian Boots Fabric -->
 				<item id="2431" min="1" max="1" chance="0.0328630148849487" /> <!-- Plated Leather Boots -->
-				<item id="2939" min="1" max="1" chance="1.43416890431213" /> <!-- Plate Leather Boots Lining -->
+				<item id="2939" min="1" max="1" chance="1.43416890431213" /> <!-- Plate Leather Boot Lining -->
 				<item id="2432" min="1" max="1" chance="0.0328630148849487" /> <!-- Dwarven Chain Boots -->
 				<item id="2940" min="1" max="1" chance="1.43416890431213" /> <!-- Dwarven Chain Boots Part -->
 				<item id="2433" min="1" max="1" chance="0.0328630148849487" /> <!-- Boots of Seal -->
@@ -2213,7 +2163,7 @@
 				<item id="2215" min="1" max="1" chance="0.609709584999084" /> <!-- Recipe: Robe of Seal -->
 			</drop>
 			<spoil>
-				<item id="1958" min="1" max="1" chance="54.6211" /> <!-- Reinforced Mithril Boots Design -->
+				<item id="1958" min="1" max="1" chance="54.6211" /> <!-- Mithril Boots Design -->
 				<item id="2213" min="1" max="1" chance="9.4357" /> <!-- Recipe: Dwarven Chain Mail Shirt -->
 				<item id="1959" min="1" max="1" chance="16.3679" /> <!-- Chain Mail Shirt Material -->
 			</spoil>
@@ -2224,7 +2174,6 @@
 		</collision>
 	</npc>
 	<npc id="18550" level="50" type="Monster" name="Cruma Phantom" title="Event Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -2293,13 +2242,13 @@
 				<item id="1866" min="60" max="180" chance="4.51359219311905" /> <!-- Suede -->
 				<item id="1871" min="240" max="720" chance="1.69259195575714" /> <!-- Charcoal -->
 				<item id="5220" min="4" max="12" chance="3.61084919451523" /> <!-- Metal Hardener -->
-				<item id="1885" min="3" max="9" chance="9.67196572812653" /> <!-- High-Grade Suede -->
+				<item id="1885" min="3" max="9" chance="9.67196572812653" /> <!-- High Grade Suede -->
 				<item id="4041" min="1" max="1" chance="7.06471918346024" /> <!-- Mold Hardener -->
-				<item id="2169" min="1" max="1" chance="14.3795817633324" /> <!-- Recipe: Necklace of Seal -->
+				<item id="2169" min="1" max="1" chance="14.3795817633324" /> <!-- Recipe: Necklace of Binding -->
 			</drop>
 			<spoil>
 				<item id="5220" min="1" max="9" chance="94.3019" /> <!-- Metal Hardener -->
-				<item id="1885" min="1" max="21" chance="89.3011" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="21" chance="89.3011" /> <!-- High Grade Suede -->
 				<item id="4601" min="1" max="1" chance="26.195" /> <!-- Greater Dye of STR <Str+3 Con-3> -->
 			</spoil>
 		</dropLists>
@@ -2309,7 +2258,6 @@
 		</collision>
 	</npc>
 	<npc id="18551" level="50" type="Monster" name="Cruma Phantom" title="Event Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2382,8 +2330,8 @@
 				<item id="2103" min="1" max="1" chance="1.51199756169319" /> <!-- Sage's Staff Head -->
 				<item id="201" min="1" max="1" chance="0.01623783659935" /> <!-- Club of Nature -->
 				<item id="2104" min="1" max="1" chance="1.51199756169319" /> <!-- Club of Nature Head -->
-				<item id="202" min="1" max="1" chance="0.01623783659935" /> <!-- Mace of Underworld -->
-				<item id="2105" min="1" max="1" chance="1.43668620715141" /> <!-- Mace of Underworld Head -->
+				<item id="202" min="1" max="1" chance="0.01623783659935" /> <!-- Mace of the Underworld -->
+				<item id="2105" min="1" max="1" chance="1.43668620715141" /> <!-- Mace of the Underworld Head -->
 				<item id="7898" min="1" max="1" chance="0.01623783659935" /> <!-- Karik Horn -->
 				<item id="8345" min="1" max="1" chance="1.45774171593189" /> <!-- Karik Horn Piece -->
 				<item id="1871" min="240" max="720" chance="1.67670507653809" /> <!-- Charcoal -->
@@ -2395,8 +2343,8 @@
 			</drop>
 			<spoil>
 				<item id="1539" min="1" max="55" chance="92.6751" /> <!-- Greater Healing Potion -->
-				<item id="1914" min="1" max="13" chance="93.7164" /> <!-- Earring of Seal Gemstone -->
-				<item id="2169" min="1" max="5" chance="68.8912" /> <!-- Recipe: Necklace of Seal -->
+				<item id="1914" min="1" max="13" chance="93.7164" /> <!-- Earring of Binding Gemstone -->
+				<item id="2169" min="1" max="5" chance="68.8912" /> <!-- Recipe: Necklace of Binding -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -2405,7 +2353,6 @@
 		</collision>
 	</npc>
 	<npc id="18552" level="50" type="Monster" name="Cruma Phantom">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2477,7 +2424,6 @@
 		</collision>
 	</npc>
 	<npc id="18553" level="50" type="Monster" name="Cruma Phantom">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2535,8 +2481,8 @@
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="854" min="1" max="1" chance="0.352624817573547" /> <!-- Earring of Seal -->
-				<item id="1914" min="1" max="1" chance="22.4427924943542" /> <!-- Earring of Seal Gemstone -->
+				<item id="854" min="1" max="1" chance="0.352624817573547" /> <!-- Earring of Binding -->
+				<item id="1914" min="1" max="1" chance="22.4427924943542" /> <!-- Earring of Binding Gemstone -->
 				<item id="885" min="1" max="1" chance="0.528747765357971" /> <!-- Ring of Ages -->
 				<item id="1915" min="1" max="1" chance="35.1966251129379" /> <!-- Ring of Ages Gemstone -->
 				<item id="917" min="1" max="1" chance="0.264487559280395" /> <!-- Necklace of Mermaid -->
@@ -2560,7 +2506,6 @@
 		</collision>
 	</npc>
 	<npc id="18554" level="23" type="Monster" name="Tomlan Kamos" title="Kaneus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="20" />
 			<param name="Skill02_Probablity" value="20" />
@@ -2617,8 +2562,8 @@
 				<item id="32" min="4" max="10" chance="7.17597589988709" /> <!-- Piece Bone Gaiters -->
 				<item id="1928" min="24" max="72" chance="11.6615960400391" /> <!-- Piece Bone Gaiters Fragment -->
 				<item id="34" min="4" max="12" chance="4.07066942448425" /> <!-- Bronze Gaiters -->
-				<item id="955" min="1" max="1" chance="29.8878515155792" /> <!-- Scroll: Enchant Weapon (D-Grade) -->
-				<item id="956" min="3" max="9" chance="41.5108453838348" /> <!-- Scroll: Enchant Armor (D-Grade) -->
+				<item id="955" min="1" max="1" chance="29.8878515155792" /> <!-- Scroll: Enchant Weapon (D) -->
+				<item id="956" min="3" max="9" chance="41.5108453838348" /> <!-- Scroll: Enchant Armor (D) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -2627,7 +2572,6 @@
 		</collision>
 	</npc>
 	<npc id="18555" level="26" type="Monster" name="Ol Ariosh" title="Kaneus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="5" />
 			<skill name="Skill01" id="4736" level="2" /> <!-- BOSS Spinning Slash -->
@@ -2673,8 +2617,8 @@
 				<item id="465" min="1" max="3" chance="28.414004689209" /> <!-- Cursed Stockings -->
 				<item id="432" min="2" max="4" chance="17.7440487265587" /> <!-- Cursed Tunic -->
 				<item id="465" min="1" max="3" chance="42.6211513161659" /> <!-- Cursed Stockings -->
-				<item id="955" min="1" max="1" chance="33.2602195233536" /> <!-- Scroll: Enchant Weapon (D-Grade) -->
-				<item id="956" min="3" max="9" chance="46.1946831255722" /> <!-- Scroll: Enchant Armor (D-Grade) -->
+				<item id="955" min="1" max="1" chance="33.2602195233536" /> <!-- Scroll: Enchant Weapon (D) -->
+				<item id="956" min="3" max="9" chance="46.1946831255722" /> <!-- Scroll: Enchant Armor (D) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -2683,7 +2627,6 @@
 		</collision>
 	</npc>
 	<npc id="18556" level="26" type="Monster" name="Follower of Ariosh">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="10" />
 			<skill name="Skill01" id="4719" level="1" /> <!-- BOSS Strike -->
@@ -2726,7 +2669,6 @@
 		</collision>
 	</npc>
 	<npc id="18557" level="26" type="Monster" name="Ranc Deumus" title="Kaneus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="10" />
 			<param name="Skill02_Probablity" value="10" />
@@ -2738,7 +2680,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<equipment rhand="21738" /> <!-- rhand: Winged Spear - Event -->
+		<equipment rhand="93" /> <!-- rhand: Winged Spear -->
 		<acquire exp="397271" sp="23285" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="60567.008055059" hpRegen="12.1792353154195" mp="1365.0" mpRegen="4.8" />
@@ -2777,8 +2719,8 @@
 				<item id="465" min="1" max="3" chance="28.414004689209" /> <!-- Cursed Stockings -->
 				<item id="432" min="2" max="4" chance="17.7440487265587" /> <!-- Cursed Tunic -->
 				<item id="465" min="1" max="3" chance="42.6211513161659" /> <!-- Cursed Stockings -->
-				<item id="955" min="1" max="1" chance="33.2602195233536" /> <!-- Scroll: Enchant Weapon (D-Grade) -->
-				<item id="956" min="3" max="9" chance="46.1946831255722" /> <!-- Scroll: Enchant Armor (D-Grade) -->
+				<item id="955" min="1" max="1" chance="33.2602195233536" /> <!-- Scroll: Enchant Weapon (D) -->
+				<item id="956" min="3" max="9" chance="46.1946831255722" /> <!-- Scroll: Enchant Armor (D) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -2787,7 +2729,6 @@
 		</collision>
 	</npc>
 	<npc id="18558" level="33" type="Monster" name="Crimson Hatu Otis" title="Kaneus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="aoe_skill" id="4737" level="3" /> <!-- BOSS Spinning Slash -->
 			<skill name="haste_skill" id="4175" level="3" /> <!-- BOSS Haste -->
@@ -2843,8 +2784,8 @@
 				<item id="2423" min="5" max="13" chance="2.66323063540649" /> <!-- Boots of Knowledge -->
 				<item id="2446" min="1" max="1" chance="23.9690757186584" /> <!-- Reinforced Leather Gloves -->
 				<item id="2447" min="1" max="1" chance="23.9690757186584" /> <!-- Gloves of Knowledge -->
-				<item id="955" min="1" max="1" chance="42.520675027298" /> <!-- Scroll: Enchant Weapon (D-Grade) -->
-				<item id="956" min="12" max="36" chance="14.7641264558563" /> <!-- Scroll: Enchant Armor (D-Grade) -->
+				<item id="955" min="1" max="1" chance="42.520675027298" /> <!-- Scroll: Enchant Weapon (D) -->
+				<item id="956" min="12" max="36" chance="14.7641264558563" /> <!-- Scroll: Enchant Armor (D) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -2853,7 +2794,6 @@
 		</collision>
 	</npc>
 	<npc id="18559" level="36" type="Monster" name="Seer Flouros" title="Kaneus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="30" />
 			<param name="Skill02_Probablity" value="40" />
@@ -2900,8 +2840,8 @@
 				<item id="628" min="1" max="3" chance="29.5838585927963" /> <!-- Hoplon -->
 				<item id="47" min="2" max="4" chance="20.6986054445801" /> <!-- Helmet -->
 				<item id="628" min="1" max="3" chance="44.3757964108887" /> <!-- Hoplon -->
-				<item id="955" min="1" max="1" chance="47.1697943526154" /> <!-- Scroll: Enchant Weapon (D-Grade) -->
-				<item id="956" min="12" max="36" chance="16.3784043473358" /> <!-- Scroll: Enchant Armor (D-Grade) -->
+				<item id="955" min="1" max="1" chance="47.1697943526154" /> <!-- Scroll: Enchant Weapon (D) -->
+				<item id="956" min="12" max="36" chance="16.3784043473358" /> <!-- Scroll: Enchant Armor (D) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -2910,7 +2850,6 @@
 		</collision>
 	</npc>
 	<npc id="18560" level="36" type="Monster" name="Follower of Flouros">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="50" />
 			<skill name="Skill01" id="4194" level="3" /> <!-- BOSS Aura Burn -->
@@ -2952,7 +2891,6 @@
 		</collision>
 	</npc>
 	<npc id="18561" level="36" type="Monster" name="Granitick Duerga" title="Kaneus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="20" />
 			<param name="Skill02_Probablity" value="5" />
@@ -3009,8 +2947,8 @@
 				<item id="127" min="1" max="1" chance="1.63135168660736" /> <!-- Crimson Sword -->
 				<item id="130" min="1" max="1" chance="1.63135168660736" /> <!-- Elven Sword -->
 				<item id="144" min="1" max="1" chance="2.20213930757904" /> <!-- Sword of Occult -->
-				<item id="955" min="1" max="1" chance="47.1697943526154" /> <!-- Scroll: Enchant Weapon (D-Grade) -->
-				<item id="956" min="12" max="36" chance="16.3784043473358" /> <!-- Scroll: Enchant Armor (D-Grade) -->
+				<item id="955" min="1" max="1" chance="47.1697943526154" /> <!-- Scroll: Enchant Weapon (D) -->
+				<item id="956" min="12" max="36" chance="16.3784043473358" /> <!-- Scroll: Enchant Armor (D) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -3019,7 +2957,6 @@
 		</collision>
 	</npc>
 	<npc id="18562" level="43" type="Monster" name="Blade Otis" title="Kaneus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="10" />
 			<param name="Skill02_Probablity" value="10" />
@@ -3074,8 +3011,8 @@
 				<item id="1950" min="8" max="22" chance="24.183223711441" /> <!-- Half Plate Temper -->
 				<item id="380" min="1" max="1" chance="11.8896456943359" /> <!-- Plate Gaiters -->
 				<item id="1951" min="24" max="72" chance="11.7536017300873" /> <!-- Plate Gaiters Part -->
-				<item id="951" min="1" max="1" chance="26.3413352966309" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
-				<item id="952" min="3" max="9" chance="32.1949653625488" /> <!-- Scroll: Enchant Armor (C-Grade) -->
+				<item id="951" min="1" max="1" chance="26.3413352966309" /> <!-- Scroll: Enchant Weapon (C) -->
+				<item id="952" min="3" max="9" chance="32.1949653625488" /> <!-- Scroll: Enchant Armor (C) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -3084,7 +3021,6 @@
 		</collision>
 	</npc>
 	<npc id="18563" level="43" type="Monster" name="Follower of Otis">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="fake_heal" id="4065" level="1" /> <!-- NPC Heal -->
 			<skill name="real_heal" id="4209" level="6" /> <!-- BOSS Heal -->
@@ -3128,7 +3064,6 @@
 		</collision>
 	</npc>
 	<npc id="18564" level="46" type="Monster" name="Weird Bunei" title="Kaneus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="5" />
 			<param name="Skill02_Probablity" value="20" />
@@ -3178,8 +3113,8 @@
 				<item id="2074" min="1" max="3" chance="60.0579191264992" /> <!-- Crystallized Ice Bow Shaft -->
 				<item id="281" min="1" max="1" chance="2.88596734799194" /> <!-- Crystallized Ice Bow -->
 				<item id="2074" min="3" max="9" chance="30.0284308453674" /> <!-- Crystallized Ice Bow Shaft -->
-				<item id="951" min="1" max="1" chance="29.9778751373291" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
-				<item id="952" min="3" max="9" chance="36.6396251678467" /> <!-- Scroll: Enchant Armor (C-Grade) -->
+				<item id="951" min="1" max="1" chance="29.9778751373291" /> <!-- Scroll: Enchant Weapon (C) -->
+				<item id="952" min="3" max="9" chance="36.6396251678467" /> <!-- Scroll: Enchant Armor (C) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -3188,7 +3123,6 @@
 		</collision>
 	</npc>
 	<npc id="18565" level="46" type="Monster" name="Brave Martim" title="Kaneus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="10" />
 			<param name="Skill02_Probablity" value="5" />
@@ -3251,8 +3185,8 @@
 				<item id="2936" min="14" max="42" chance="22.2265858839722" /> <!-- Chain Hood Pattern -->
 				<item id="2495" min="1" max="1" chance="16.6263863902893" /> <!-- Chain Shield -->
 				<item id="2945" min="81" max="243" chance="4.22975768431091" /> <!-- Chain Shield Fragment -->
-				<item id="951" min="1" max="1" chance="29.9778751373291" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
-				<item id="952" min="3" max="9" chance="36.6396251678467" /> <!-- Scroll: Enchant Armor (C-Grade) -->
+				<item id="951" min="1" max="1" chance="29.9778751373291" /> <!-- Scroll: Enchant Weapon (C) -->
+				<item id="952" min="3" max="9" chance="36.6396251678467" /> <!-- Scroll: Enchant Armor (C) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -3261,7 +3195,6 @@
 		</collision>
 	</npc>
 	<npc id="18566" level="53" type="Monster" name="Kaim Abigore" title="Kaneus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="10" />
 			<param name="Skill02_Probablity" value="10" />
@@ -3308,8 +3241,8 @@
 				<item id="2120" min="1" max="3" chance="47.0870274401856" /> <!-- Great Pata Blade -->
 				<item id="266" min="1" max="1" chance="1.24780734924316" /> <!-- Great Pata -->
 				<item id="2120" min="1" max="3" chance="70.6304961785889" /> <!-- Great Pata Blade -->
-				<item id="947" min="1" max="1" chance="7.62421884337235" /> <!-- Scroll: Enchant Weapon (B-Grade) -->
-				<item id="948" min="1" max="1" chance="47.6513815899773" /> <!-- Scroll: Enchant Armor (B-Grade) -->
+				<item id="947" min="1" max="1" chance="7.62421884337235" /> <!-- Scroll: Enchant Weapon (B) -->
+				<item id="948" min="1" max="1" chance="47.6513815899773" /> <!-- Scroll: Enchant Armor (B) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -3318,7 +3251,6 @@
 		</collision>
 	</npc>
 	<npc id="18567" level="53" type="Monster" name="Follower of Abigore">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="skill_explosion" id="4614" level="6" /> <!-- NPC Death Bomb -->
 		</parameters>
@@ -3359,7 +3291,6 @@
 		</collision>
 	</npc>
 	<npc id="18568" level="56" type="Monster" name="Knight Montagnar" title="Kaneus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="20" />
 			<skill name="Skill01" id="5043" level="7" /> <!-- NPC Super Sonic Blaster -->
@@ -3416,8 +3347,8 @@
 				<item id="4064" min="23" max="67" chance="4.03006653866577" /> <!-- Avadon Breastplate Part -->
 				<item id="2379" min="1" max="1" chance="2.00857601686096" /> <!-- Avadon Gaiters -->
 				<item id="4065" min="11" max="31" chance="13.3463998632813" /> <!-- Avadon Gaiters Material -->
-				<item id="947" min="1" max="1" chance="10.3909349443588" /> <!-- Scroll: Enchant Weapon (B-Grade) -->
-				<item id="948" min="1" max="1" chance="64.943362235817" /> <!-- Scroll: Enchant Armor (B-Grade) -->
+				<item id="947" min="1" max="1" chance="10.3909349443588" /> <!-- Scroll: Enchant Weapon (B) -->
+				<item id="948" min="1" max="1" chance="64.943362235817" /> <!-- Scroll: Enchant Armor (B) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -3426,7 +3357,6 @@
 		</collision>
 	</npc>
 	<npc id="18569" level="56" type="Monster" name="Follower of Montagnar">
-		<!-- Confirmed CT2.5 -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3462,7 +3392,6 @@
 		</collision>
 	</npc>
 	<npc id="18570" level="56" type="Monster" name="Summer Yaganitan" title="Kaneus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="10" />
 			<param name="Skill02_Probablity" value="5" />
@@ -3521,8 +3450,8 @@
 				<item id="4107" min="2" max="4" chance="25.0894476882477" /> <!-- Keshanberk Blade -->
 				<item id="148" min="1" max="1" chance="0.399963399673462" /> <!-- Sword of Valhalla -->
 				<item id="4108" min="2" max="6" chance="18.8171121420364" /> <!-- Sword of Valhalla Blade -->
-				<item id="947" min="1" max="1" chance="10.3909349443588" /> <!-- Scroll: Enchant Weapon (B-Grade) -->
-				<item id="948" min="1" max="1" chance="64.943362235817" /> <!-- Scroll: Enchant Armor (B-Grade) -->
+				<item id="947" min="1" max="1" chance="10.3909349443588" /> <!-- Scroll: Enchant Weapon (B) -->
+				<item id="948" min="1" max="1" chance="64.943362235817" /> <!-- Scroll: Enchant Armor (B) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -3531,7 +3460,6 @@
 		</collision>
 	</npc>
 	<npc id="18571" level="63" type="Monster" name="Venomous Storace" title="Kaneus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="5" />
 			<skill name="Skill01" id="4171" level="6" /> <!-- BOSS Spinning Slash -->
@@ -3588,8 +3516,8 @@
 				<item id="4086" min="6" max="18" chance="25.9838228470078" /> <!-- Blue Wolf Stockings Pattern -->
 				<item id="2404" min="1" max="1" chance="2.29039371318436" /> <!-- Stockings of Doom -->
 				<item id="4087" min="11" max="31" chance="14.8479420717888" /> <!-- Stockings of Doom Pattern -->
-				<item id="729" min="1" max="1" chance="3.82765679552841" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
-				<item id="730" min="1" max="1" chance="28.7074422340126" /> <!-- Scroll: Enchant Armor (A-Grade) -->
+				<item id="729" min="1" max="1" chance="3.82765679552841" /> <!-- Scroll: Enchant Weapon (A) -->
+				<item id="730" min="1" max="1" chance="28.7074422340126" /> <!-- Scroll: Enchant Armor (A) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -3598,7 +3526,6 @@
 		</collision>
 	</npc>
 	<npc id="18572" level="63" type="Monster" name="Follower of Storace">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="10" />
 			<skill name="Skill01" id="4723" level="5" /> <!-- BOSS Strike -->
@@ -3641,7 +3568,6 @@
 		</collision>
 	</npc>
 	<npc id="18573" level="66" type="Monster" name="Kel Bilette" title="Kaneus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="10" />
 			<param name="Skill02_Probablity" value="20" />
@@ -3688,24 +3614,24 @@
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
 		<dropLists>
 			<drop>
-				<item id="601" min="1" max="1" chance="2.88349648979187" /> <!-- Sealed Doom Boots -->
-				<item id="4099" min="60" max="180" chance="3.33761701557159" /> <!-- Sealed Doom Boots Part -->
-				<item id="2439" min="1" max="1" chance="2.88349648979187" /> <!-- Sealed Blue Wolf Boots -->
-				<item id="4090" min="11" max="31" chance="19.0722316782761" /> <!-- Sealed Blue Wolf Boots Design -->
-				<item id="2475" min="1" max="1" chance="2.88349648979187" /> <!-- Sealed Doom Gloves -->
-				<item id="4091" min="16" max="48" chance="12.5161330087662" /> <!-- Sealed Doom Gloves Part -->
-				<item id="2487" min="1" max="1" chance="2.88349648979187" /> <!-- Sealed Blue Wolf Gloves -->
-				<item id="4096" min="23" max="67" chance="8.90033049495697" /> <!-- Sealed Blue Wolf Gloves Fabric -->
-				<item id="601" min="1" max="1" chance="4.32524959041595" /> <!-- Sealed Doom Boots -->
-				<item id="4099" min="60" max="180" chance="5.00651475593567" /> <!-- Sealed Doom Boots Part -->
-				<item id="2439" min="1" max="1" chance="4.32524959041595" /> <!-- Sealed Blue Wolf Boots -->
-				<item id="4090" min="116" max="346" chance="2.60078466411591" /> <!-- Sealed Blue Wolf Boots Design -->
-				<item id="2475" min="1" max="1" chance="4.32524959041595" /> <!-- Sealed Doom Gloves -->
-				<item id="4091" min="16" max="48" chance="18.7744018180084" /> <!-- Sealed Doom Gloves Part -->
-				<item id="2487" min="1" max="1" chance="4.32524959041595" /> <!-- Sealed Blue Wolf Gloves -->
-				<item id="4096" min="23" max="67" chance="13.3508010716629" /> <!-- Sealed Blue Wolf Gloves Fabric -->
-				<item id="729" min="1" max="1" chance="3.85498617065048" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
-				<item id="730" min="1" max="1" chance="28.912412663578" /> <!-- Scroll: Enchant Armor (A-Grade) -->
+				<item id="601" min="1" max="1" chance="2.88349648979187" /> <!-- Boots of Doom -->
+				<item id="4099" min="60" max="180" chance="3.33761701557159" /> <!-- Doom Boots Part -->
+				<item id="2439" min="1" max="1" chance="2.88349648979187" /> <!-- Blue Wolf Boots -->
+				<item id="4090" min="11" max="31" chance="19.0722316782761" /> <!-- Blue Wolf Boots Design -->
+				<item id="2475" min="1" max="1" chance="2.88349648979187" /> <!-- Doom Gloves -->
+				<item id="4091" min="16" max="48" chance="12.5161330087662" /> <!-- Doom Gloves Part -->
+				<item id="2487" min="1" max="1" chance="2.88349648979187" /> <!-- Blue Wolf Gloves -->
+				<item id="4096" min="23" max="67" chance="8.90033049495697" /> <!-- Blue Wolf Gloves Fabric -->
+				<item id="601" min="1" max="1" chance="4.32524959041595" /> <!-- Boots of Doom -->
+				<item id="4099" min="60" max="180" chance="5.00651475593567" /> <!-- Doom Boots Part -->
+				<item id="2439" min="1" max="1" chance="4.32524959041595" /> <!-- Blue Wolf Boots -->
+				<item id="4090" min="116" max="346" chance="2.60078466411591" /> <!-- Blue Wolf Boots Design -->
+				<item id="2475" min="1" max="1" chance="4.32524959041595" /> <!-- Doom Gloves -->
+				<item id="4091" min="16" max="48" chance="18.7744018180084" /> <!-- Doom Gloves Part -->
+				<item id="2487" min="1" max="1" chance="4.32524959041595" /> <!-- Blue Wolf Gloves -->
+				<item id="4096" min="23" max="67" chance="13.3508010716629" /> <!-- Blue Wolf Gloves Fabric -->
+				<item id="729" min="1" max="1" chance="3.85498617065048" /> <!-- Scroll: Enchant Weapon (A) -->
+				<item id="730" min="1" max="1" chance="28.912412663578" /> <!-- Scroll: Enchant Armor (A) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -3714,7 +3640,6 @@
 		</collision>
 	</npc>
 	<npc id="18574" level="66" type="Monster" name="Follower of Bilette">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="less_heal" id="4065" level="6" /> <!-- NPC Heal -->
 		</parameters>
@@ -3756,7 +3681,6 @@
 		</collision>
 	</npc>
 	<npc id="18575" level="66" type="Monster" name="Warlord Tamuze" title="Kaneus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="5" />
 			<param name="Skill02_Probablity" value="5" />
@@ -3823,8 +3747,8 @@
 				<item id="8340" min="2" max="6" chance="11.6950366163177" /> <!-- Bones Head of Kaim Vanul -->
 				<item id="7901" min="1" max="1" chance="0.212177681419373" /> <!-- Star Buster -->
 				<item id="8348" min="3" max="7" chance="9.34019983840942" /> <!-- Star Buster Head -->
-				<item id="729" min="1" max="1" chance="3.85498617065048" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
-				<item id="730" min="1" max="1" chance="28.912412663578" /> <!-- Scroll: Enchant Armor (A-Grade) -->
+				<item id="729" min="1" max="1" chance="3.85498617065048" /> <!-- Scroll: Enchant Weapon (A) -->
+				<item id="730" min="1" max="1" chance="28.912412663578" /> <!-- Scroll: Enchant Armor (A) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -3833,7 +3757,6 @@
 		</collision>
 	</npc>
 	<npc id="18576" level="66" type="Monster" name="Follower of Tamuze">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="self_explosion" id="4139" level="6" /> <!-- Boom Attack -->
 		</parameters>
@@ -3876,7 +3799,6 @@
 		</collision>
 	</npc>
 	<npc id="18577" level="73" type="Monster" name="White Allosce" title="Kaneus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Skill01_Probablity" value="20" />
 			<param name="Skill02_Probablity" value="20" />
@@ -3931,8 +3853,8 @@
 				<item id="6341" min="9" max="27" chance="27.754155488327" /> <!-- Sealed Phoenix Earring Gemstone -->
 				<item id="6325" min="1" max="1" chance="5.39167488813019" /> <!-- Sealed Phoenix Ring -->
 				<item id="6345" min="40" max="120" chance="8.63722177005005" /> <!-- Sealed Phoenix Ring Gemstone -->
-				<item id="729" min="1" max="1" chance="3.90235077458191" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
-				<item id="730" min="1" max="1" chance="29.2676473943634" /> <!-- Scroll: Enchant Armor (A-Grade) -->
+				<item id="729" min="1" max="1" chance="3.90235077458191" /> <!-- Scroll: Enchant Weapon (A) -->
+				<item id="730" min="1" max="1" chance="29.2676473943634" /> <!-- Scroll: Enchant Armor (A) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -3941,7 +3863,6 @@
 		</collision>
 	</npc>
 	<npc id="18578" level="73" type="Monster" name="Follower of Allosce">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="soul_skill" id="5624" level="1" /> <!-- Soul Confinement -->
 		</parameters>
@@ -3981,7 +3902,6 @@
 		</collision>
 	</npc>
 	<npc id="18579" level="70" type="Npc" name="Hunting Ground Keeper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="69" />
 			<param name="MoveAroundSocial1" value="69" />
@@ -4038,7 +3958,7 @@
 				<item id="8604" min="1" max="1" chance="25" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="7" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="4" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="4" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="4" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="4" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="4" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="4" /> <!-- Herb of Critical Attack - Power -->
@@ -4056,7 +3976,6 @@
 		</collision>
 	</npc>
 	<npc id="18580" level="71" type="Npc" name="Cursed Girl">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -4112,7 +4031,7 @@
 				<item id="8604" min="1" max="1" chance="25" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="7" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="4" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="4" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="4" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="4" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="4" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="4" /> <!-- Herb of Critical Attack - Power -->
@@ -4130,7 +4049,6 @@
 		</collision>
 	</npc>
 	<npc id="18581" level="72" type="Npc" name="Gardener">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="148" />
 			<param name="MoveAroundSocial1" value="148" />
@@ -4184,7 +4102,7 @@
 				<item id="8604" min="1" max="1" chance="25" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="7" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="4" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="4" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="4" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="4" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="4" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="4" /> <!-- Herb of Critical Attack - Power -->
@@ -4202,7 +4120,6 @@
 		</collision>
 	</npc>
 	<npc id="18582" level="75" type="Npc" name="Turned Girl" title="Kratei's Fortune">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -4259,7 +4176,7 @@
 				<item id="8604" min="1" max="1" chance="25" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="7" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="4" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="4" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="4" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="4" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="4" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="4" /> <!-- Herb of Critical Attack - Power -->
@@ -4277,7 +4194,6 @@
 		</collision>
 	</npc>
 	<npc id="18583" level="74" type="Npc" name="Housekeeper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
 			<param name="MoveAroundSocial1" value="75" />
@@ -4331,7 +4247,7 @@
 				<item id="8604" min="1" max="1" chance="25" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="7" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="4" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="4" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="4" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="4" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="4" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="4" /> <!-- Herb of Critical Attack - Power -->
@@ -4349,7 +4265,6 @@
 		</collision>
 	</npc>
 	<npc id="18584" level="75" type="Npc" name="Turned Boy">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -4404,7 +4319,7 @@
 				<item id="8604" min="1" max="1" chance="25" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="7" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="4" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="4" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="4" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="4" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="4" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="4" /> <!-- Herb of Critical Attack - Power -->
@@ -4422,7 +4337,6 @@
 		</collision>
 	</npc>
 	<npc id="18585" level="75" type="Npc" name="Cursed Girl">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -4478,7 +4392,7 @@
 				<item id="8604" min="1" max="1" chance="25" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="7" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="4" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="4" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="4" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="4" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="4" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="4" /> <!-- Herb of Critical Attack - Power -->
@@ -4496,7 +4410,6 @@
 		</collision>
 	</npc>
 	<npc id="18586" level="75" type="Npc" name="Gardener">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="148" />
 			<param name="MoveAroundSocial1" value="148" />
@@ -4550,7 +4463,7 @@
 				<item id="8604" min="1" max="1" chance="25" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="7" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="4" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="4" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="4" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="4" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="4" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="4" /> <!-- Herb of Critical Attack - Power -->
@@ -4568,7 +4481,6 @@
 		</collision>
 	</npc>
 	<npc id="18587" level="76" type="Npc" name="Begrudged Maid">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -4625,7 +4537,7 @@
 				<item id="8604" min="1" max="1" chance="25" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="7" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="4" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="4" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="4" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="4" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="4" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="4" /> <!-- Herb of Critical Attack - Power -->
@@ -4643,7 +4555,6 @@
 		</collision>
 	</npc>
 	<npc id="18588" level="77" type="Npc" name="Hunting Ground Keeper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="69" />
 			<param name="MoveAroundSocial1" value="69" />
@@ -4700,7 +4611,7 @@
 				<item id="8604" min="1" max="1" chance="25" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="7" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="4" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="4" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="4" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="4" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="4" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="4" /> <!-- Herb of Critical Attack - Power -->
@@ -4718,7 +4629,6 @@
 		</collision>
 	</npc>
 	<npc id="18589" level="77" type="Npc" name="Cursed Gardener">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="148" />
 			<param name="MoveAroundSocial1" value="148" />
@@ -4772,7 +4682,7 @@
 				<item id="8604" min="1" max="1" chance="25" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="7" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="4" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="4" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="4" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="4" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="4" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="4" /> <!-- Herb of Critical Attack - Power -->
@@ -4790,7 +4700,6 @@
 		</collision>
 	</npc>
 	<npc id="18590" level="78" type="Npc" name="Baroness' Employee">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="69" />
 			<param name="MoveAroundSocial1" value="69" />
@@ -4847,7 +4756,7 @@
 				<item id="8604" min="1" max="1" chance="25" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="7" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="4" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="4" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="4" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="4" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="4" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="4" /> <!-- Herb of Critical Attack - Power -->
@@ -4865,7 +4774,6 @@
 		</collision>
 	</npc>
 	<npc id="18591" level="79" type="Npc" name="Begrudged Boy">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -4920,7 +4828,7 @@
 				<item id="8604" min="1" max="1" chance="25" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="7" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="4" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="4" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="4" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="4" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="4" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="4" /> <!-- Herb of Critical Attack - Power -->
@@ -4938,7 +4846,6 @@
 		</collision>
 	</npc>
 	<npc id="18592" level="80" type="Npc" name="Kratei's Steward">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -4998,7 +4905,7 @@
 				<item id="8604" min="1" max="1" chance="25" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="7" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="4" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="4" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="4" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="4" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="4" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="4" /> <!-- Herb of Critical Attack - Power -->
@@ -5016,7 +4923,6 @@
 		</collision>
 	</npc>
 	<npc id="18593" level="80" type="Npc" name="Housekeeper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
 			<param name="MoveAroundSocial1" value="75" />
@@ -5072,7 +4978,7 @@
 				<item id="8604" min="1" max="1" chance="25" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="7" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="4" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="4" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="4" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="4" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="4" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="4" /> <!-- Herb of Critical Attack - Power -->
@@ -5090,7 +4996,6 @@
 		</collision>
 	</npc>
 	<npc id="18594" level="81" type="Npc" name="Mansion Guide">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
 			<param name="MoveAroundSocial1" value="75" />
@@ -5146,7 +5051,7 @@
 				<item id="8604" min="1" max="1" chance="25" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="7" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="4" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="4" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="4" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="4" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="4" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="4" /> <!-- Herb of Critical Attack - Power -->
@@ -5164,7 +5069,6 @@
 		</collision>
 	</npc>
 	<npc id="18595" level="82" type="Npc" name="Baroness' Employee">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="69" />
 			<param name="MoveAroundSocial1" value="69" />
@@ -5223,7 +5127,7 @@
 				<item id="8604" min="1" max="1" chance="25" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="7" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="4" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="4" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="4" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="4" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="4" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="4" /> <!-- Herb of Critical Attack - Power -->
@@ -5241,7 +5145,6 @@
 		</collision>
 	</npc>
 	<npc id="18596" level="83" type="Npc" name="Cursed Gardener">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="148" />
 			<param name="MoveAroundSocial1" value="148" />
@@ -5297,7 +5200,7 @@
 				<item id="8604" min="1" max="1" chance="25" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="7" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="4" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="4" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="4" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="4" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="4" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="4" /> <!-- Herb of Critical Attack - Power -->
@@ -5315,7 +5218,6 @@
 		</collision>
 	</npc>
 	<npc id="18597" level="84" type="Npc" name="Begrudged Maid">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -5374,7 +5276,7 @@
 				<item id="8604" min="1" max="1" chance="25" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="7" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="4" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="4" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="4" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="4" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="4" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="4" /> <!-- Herb of Critical Attack - Power -->
@@ -5392,7 +5294,6 @@
 		</collision>
 	</npc>
 	<npc id="18598" level="85" type="Npc" name="Cursed Head Maid">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -5453,7 +5354,7 @@
 				<item id="8604" min="1" max="1" chance="25" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="7" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="4" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="4" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="4" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="4" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="4" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="4" /> <!-- Herb of Critical Attack - Power -->
@@ -5471,7 +5372,6 @@
 		</collision>
 	</npc>
 	<npc id="18599" level="85" type="Npc" name="Mansion Manager">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="136" />
 			<param name="MoveAroundSocial1" value="136" />
@@ -5530,7 +5430,7 @@
 				<item id="8604" min="1" max="1" chance="25" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="7" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="4" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="4" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="4" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="4" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="4" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="4" /> <!-- Herb of Critical Attack - Power -->

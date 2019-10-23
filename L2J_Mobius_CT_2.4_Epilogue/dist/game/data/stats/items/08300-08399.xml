@@ -402,7 +402,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8332" type="EtcItem" name="Priest Sword Blade">
-		<!-- A vital material used by Dwarves to make Priest Swords. Available at any shop. -->
+		<!-- Used by Dwarves to make Priest Swords, it can be sold at any regular shop. -->
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -522,7 +522,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8344" type="EtcItem" name="Dwarven Hammer Piece">
-		<!-- A vital material used by Dwarves to make Dwarven Hammers. Available at any shop. -->
+		<!-- Used by Dwarves to make Dwarven Hammers, it can be sold at any regular shop. -->
 		<set name="icon" val="icon.etc_squares_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -572,7 +572,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8349" type="EtcItem" name="Doom Crusher Head">
-		<!-- A vital material used by Dwarves to make a Red Doom Crusher. Available at any shop. -->
+		<!-- The essential ingredient needed to make a Red Doom Crusher. It can be sold at a regular store. -->
 		<set name="icon" val="icon.etc_squares_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -806,7 +806,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="8370" type="EtcItem" name="Recipe: Red Horn of Victory (100%)">
-		<!-- For All Tribes. Recipe for making Red Devil Horns. Requires Create Common Item Skill level 4. 100% chance of success. -->
+		<!-- For All Tirbes. Recipe for making Red Devil Horns. Requires Create Common Item Skill level 4. 100% chance of success. -->
 		<set name="icon" val="icon.etc_recipe_green_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />

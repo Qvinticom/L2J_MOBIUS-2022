@@ -778,14 +778,14 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8765" type="EtcItem" name="Red Gem">
-		<!-- Shiny red gems collected by Warehouse Chief Klump of Town of Aden. You can play the card game if you bring Klump more than 50 of these gems. -->
+		<!-- Shiny red gems collected by Warehouse Chief Klump of Aden Castle Town. You can play the card game if you bring Klump more than 50 of these gems. -->
 		<set name="icon" val="icon.ets_red_abead_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8766" type="EtcItem" name="Spirit Bead">
-		<!-- Beads collected by Blacksmith Wilbert of Town of Aden. You can play the game if you bring him more than 50. -->
+		<!-- Beads collected by Blacksmith Wilbert of Aden Castle Town. You can play the game if you bring him more than 50. -->
 		<set name="icon" val="icon.etc_bead_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -1001,7 +1001,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="8786" type="EtcItem" name="Primeval Potion">
-		<!-- Increases Resistance to poison and anesthesia. -->
+		<!-- Increases resistance to poison and anesthesia. -->
 		<set name="icon" val="icon.etc_potion_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -1014,7 +1014,7 @@
 		<set name="item_skill" val="2305-1" /> <!-- Primeval Potion -->
 	</item>
 	<item id="8787" type="EtcItem" name="Sprigant's Fruit">
-		<!-- This fruit, dropped by Sprigants, increases Resistance to poison and anesthesia. -->
+		<!-- This fruit, dropped by Sprigants, increases resistance to poison and anesthesia. -->
 		<set name="icon" val="icon.etc_fruit_green_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -1027,7 +1027,7 @@
 		<set name="item_skill" val="2305-1" /> <!-- Primeval Potion -->
 	</item>
 	<item id="8788" type="Weapon" name="Sirra's Blade - Haste">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 6%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_sirr_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1116,7 +1116,7 @@
 		</for>
 	</item>
 	<item id="8791" type="Weapon" name="Sword of Ipos - Focus">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 61. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Enhancement> Increases Critical Attack by 61. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_sword_of_ipos_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1145,7 +1145,7 @@
 		</for>
 	</item>
 	<item id="8792" type="Weapon" name="Sword of Ipos - Haste">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 6%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_sword_of_ipos_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1232,7 +1232,7 @@
 		</for>
 	</item>
 	<item id="8795" type="Weapon" name="Barakiel's Axe - Haste">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 6%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_barakiel_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1261,7 +1261,7 @@
 		</for>
 	</item>
 	<item id="8796" type="Weapon" name="Barakiel's Axe - Focus">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 61. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Enhancement> Increases Critical Attack by 61. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_barakiel_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1290,7 +1290,7 @@
 		</for>
 	</item>
 	<item id="8797" type="Weapon" name="Behemoth's Tuning Fork - Focus">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 61. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Enhancement> Increases Critical Attack by 61. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_tuning_fork_of_behemoth_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />

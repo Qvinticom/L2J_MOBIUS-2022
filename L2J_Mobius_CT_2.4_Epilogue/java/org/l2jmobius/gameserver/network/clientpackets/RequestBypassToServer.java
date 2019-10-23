@@ -36,6 +36,7 @@ import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnNpcManorBypass;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerBypass;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.olympiad.Olympiad;
 import org.l2jmobius.gameserver.network.Disconnection;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -57,7 +58,7 @@ public class RequestBypassToServer implements IClientIncomingPacket
 		"_friend",
 		"_match",
 		"_diary",
-		"_olympiad?command",
+		"OlympiadArenaChange",
 		"manor_menu_select"
 	};
 	
@@ -207,14 +208,9 @@ public class RequestBypassToServer implements IClientIncomingPacket
 					Hero.getInstance().showHeroDiary(player, heroclass, heroid, heropage);
 				}
 			}
-			else if (_command.startsWith("_olympiad?command"))
+			else if (_command.startsWith("OlympiadArenaChange"))
 			{
-				final int arenaId = Integer.parseInt(_command.split("=")[2]);
-				final IBypassHandler handler = BypassHandler.getInstance().getHandler("arenachange");
-				if (handler != null)
-				{
-					handler.useBypass("arenachange " + (arenaId - 1), player, null);
-				}
+				Olympiad.bypassChangeArena(_command, player);
 			}
 			else if (_command.startsWith("manor_menu_select"))
 			{

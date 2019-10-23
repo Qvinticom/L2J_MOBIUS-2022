@@ -653,8 +653,8 @@
 		</for>
 	</skill>
 	<skill id="2229" levels="8" name="Treasure Chest Key">
-		<table name="#effectPoints">-1 -2 -3 -4 -5 -6 -7 -8 </table>
-		<table name="#itemConsumeId">6665 6666 6667 6668 6669 6670 6671 6672 </table>
+		<table name="#effectPoints"> -1 -2 -3 -4 -5 -6 -7 -8 </table>
+		<table name="#itemConsumeId"> 6665 6666 6667 6668 6669 6670 6671 6672 </table>
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="400" />
@@ -680,7 +680,7 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="2231" levels="1" name="Amulet: Protection of Valakas">
-		<!-- Amulet: Protection of Valakas. Increases one's Resistance to attack when Valakas' attacks with its front claws. -->
+		<!-- Amulet: Protection of Valakas. Increases one's resistance to attack when Valakas' attacks with its front claws. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="VALAKAS_ITEM" />
@@ -789,9 +789,9 @@
 		</for>
 	</skill>
 	<skill id="2236" levels="1" name="Chapel Door Key">
-		<set name="castRange" val="1000" />
+		<set name="castRange" val="1000" /> <!-- Epilogue Modification -->
 		<set name="effectPoint" val="-1" />
-		<set name="effectRange" val="2000" />
+		<set name="effectRange" val="2000" /> <!-- Epilogue Modification -->
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -801,7 +801,7 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="targetType" val="UNLOCKABLE" />
 		<cond msgId="113" addName="1">
-			<target npcId="19160002,19160003,19160004,19160005,19160006,19160007,19160008,19160009,19160010,19160011" />
+			<target npcId="19160002,19160003,19160004,19160005,19160006,19160007,19160008,19160009,19160010,19160011" /> <!-- Epilogue Modification -->
 		</cond>
 		<for>
 			<effect name="OpenDoor">
@@ -822,7 +822,7 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="targetType" val="UNLOCKABLE" />
 		<cond msgId="113" addName="1">
-			<target npcId="19160012,19160013,19160014,19160015,19160016,19160017" />
+			<target npcId="19160012,19160013,19160014,19160015,19160016,19160017" /> <!-- Epilogue Modification -->
 		</cond>
 		<for>
 			<effect name="OpenDoor">
@@ -1048,7 +1048,7 @@
 		<set name="icon" val="icon.etc_fire_crystal_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="7906" /> <!-- Fire Blessing -->
+		<set name="itemConsumeId" val="7906" /> <!-- Blessing of Fire -->
 		<set name="magicLvl" val="25" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="10000" />
@@ -1069,7 +1069,7 @@
 		<set name="icon" val="icon.etc_water_crystal_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="7907" /> <!-- Water Blessing -->
+		<set name="itemConsumeId" val="7907" /> <!-- Blessing of Water -->
 		<set name="magicLvl" val="25" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="10000" />
@@ -1090,7 +1090,7 @@
 		<set name="icon" val="icon.etc_wind_crystal_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="7908" /> <!-- Wind Blessing -->
+		<set name="itemConsumeId" val="7908" /> <!-- Blessing of Wind -->
 		<set name="magicLvl" val="25" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="10000" />
@@ -1111,7 +1111,7 @@
 		<set name="icon" val="icon.etc_earth_crystal_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="7909" /> <!-- Earth Blessing -->
+		<set name="itemConsumeId" val="7909" /> <!-- Blessing of Earth -->
 		<set name="magicLvl" val="25" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="10000" />
@@ -1132,7 +1132,7 @@
 		<set name="icon" val="icon.etc_unholy_crystal_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="7910" /> <!-- Dark Blessing -->
+		<set name="itemConsumeId" val="7910" /> <!-- Blessing of Darkness -->
 		<set name="magicLvl" val="25" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="10000" />
@@ -1153,7 +1153,7 @@
 		<set name="icon" val="icon.etc_holy_crystal_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="7911" /> <!-- Holy Blessing -->
+		<set name="itemConsumeId" val="7911" /> <!-- Blessing of Sanctity -->
 		<set name="magicLvl" val="25" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="10000" />
@@ -1168,7 +1168,7 @@
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="7912" /> <!-- Fire Shard -->
+		<set name="itemConsumeId" val="7912" /> <!-- Fire Crystal -->
 		<set name="magicLvl" val="20" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10000" />
@@ -1178,7 +1178,7 @@
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="7913" /> <!-- Water Shard -->
+		<set name="itemConsumeId" val="7913" /> <!-- Water Crystal -->
 		<set name="magicLvl" val="20" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10000" />
@@ -1188,7 +1188,7 @@
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="7914" /> <!-- Wind Shard -->
+		<set name="itemConsumeId" val="7914" /> <!-- Wind Crystal -->
 		<set name="magicLvl" val="20" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10000" />
@@ -1198,7 +1198,7 @@
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="7915" /> <!-- Earth Shard -->
+		<set name="itemConsumeId" val="7915" /> <!-- Earth Crystal -->
 		<set name="magicLvl" val="20" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10000" />
@@ -1218,7 +1218,7 @@
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="itemConsumeId" val="7917" /> <!-- Holy Shard -->
+		<set name="itemConsumeId" val="7917" /> <!-- Sanctity Crystal -->
 		<set name="magicLvl" val="20" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10000" />

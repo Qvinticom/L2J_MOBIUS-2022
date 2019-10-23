@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="22400" level="83" type="Monster" name="Parme's Healer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="MagicHeal" id="4065" level="9" /> <!-- NPC Heal -->
 		</parameters>
@@ -54,12 +53,12 @@
 				<item id="4040" min="1" max="1" chance="0.351661083695889" /> <!-- Mold Lubricant -->
 				<item id="4042" min="1" max="1" chance="0.293049860546589" /> <!-- Enria -->
 				<item id="4043" min="1" max="1" chance="0.586099721093178" /> <!-- Asofe -->
-				<item id="959" min="1" max="1" chance="0.000694327189922333" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="959" min="1" max="1" chance="0.000694327189922333" /> <!-- Scroll: Enchant Weapon (S) -->
 			</drop>
 			<spoil>
 				<item id="4040" min="1" max="1" chance="3.5693" /> <!-- Mold Lubricant -->
 				<item id="5480" min="1" max="1" chance="0.8008" /> <!-- Sealed Leather Armor of Nightmare Fabric -->
-				<item id="1808" min="1" max="1" chance="0.0793" /> <!-- Recipe: Soulshot (S-Grade) -->
+				<item id="1808" min="1" max="1" chance="0.0793" /> <!-- Recipe: Soulshot: S Grade -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -68,7 +67,6 @@
 		</collision>
 	</npc>
 	<npc id="22401" level="83" type="Monster" name="Parme's Healer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="MagicHeal" id="4065" level="9" /> <!-- NPC Heal -->
 		</parameters>
@@ -124,17 +122,17 @@
 				<item id="5549" min="1" max="1" chance="0.799232623977661" /> <!-- Metallic Thread -->
 				<item id="1889" min="1" max="1" chance="0.53280120085144" /> <!-- Compound Braid -->
 				<item id="4044" min="1" max="1" chance="0.26640060042572" /> <!-- Thons -->
-				<item id="960" min="1" max="1" chance="0.00320556085205078" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				<item id="14166" min="1" max="1" chance="0.0386208437271118" /> <!-- Life Stone - Level 84 -->
-				<item id="14167" min="1" max="1" chance="0.00964750525665283" /> <!-- Mid-Grade Life Stone - Level 84 -->
-				<item id="14168" min="1" max="1" chance="0.000955503715515137" /> <!-- High-Grade Life Stone - Level 84 -->
-				<item id="14169" min="1" max="1" chance="0.00018493620300293" /> <!-- Top-Grade Life Stone - Level 84 -->
+				<item id="960" min="1" max="1" chance="0.00320556085205078" /> <!-- Scroll: Enchant Armor (S) -->
+				<item id="14166" min="1" max="1" chance="0.0386208437271118" /> <!-- Life Stone - level 84 -->
+				<item id="14167" min="1" max="1" chance="0.00964750525665283" /> <!-- Mid-Grade Life Stone - level 84 -->
+				<item id="14168" min="1" max="1" chance="0.000955503715515137" /> <!-- High-Grade Life Stone - level 84 -->
+				<item id="14169" min="1" max="1" chance="0.00018493620300293" /> <!-- Top-Grade Life Stone - level 84 -->
 				<item id="1344" min="10" max="30" chance="9.99028450891876" /> <!-- Mithril Arrow -->
 			</drop>
 			<spoil>
 				<item id="5481" min="1" max="1" chance="0.8008" /> <!-- Sealed Majestic Leather Armor Fabric -->
 				<item id="3036" min="1" max="1" chance="0.0793" /> <!-- Recipe: Spiritshot S -->
-				<item id="5487" min="1" max="1" chance="0.8037" /> <!-- Sealed Robe of Nightmare Fabric -->
+				<item id="5487" min="1" max="1" chance="0.8037" /> <!-- Sealed Nightmare Robe Fabric -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -143,7 +141,6 @@
 		</collision>
 	</npc>
 	<npc id="22402" level="83" type="Monster" name="Shadow Column">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="SelfRangeDDmagic" id="4614" level="9" /> <!-- NPC Death Bomb -->
 			<!-- <skill name="selfbuff" id="5417" level="1" /> --> <!-- Invincible -->
@@ -208,7 +205,6 @@
 		</collision>
 	</npc>
 	<npc id="22403" level="83" type="Monster" name="Foundry Foreman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -283,12 +279,12 @@
 				<item id="1876" min="1" max="1" chance="17.3963745836029" /> <!-- Mithril Ore -->
 				<item id="1895" min="3" max="9" chance="3.55030294091034" /> <!-- Metallic Fiber -->
 				<item id="4042" min="1" max="1" chance="1.4497145223999" /> <!-- Enria -->
-				<item id="959" min="1" max="1" chance="0.0034944909286499" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="14166" min="1" max="1" chance="0.42018757352066" /> <!-- Life Stone - Level 84 -->
-				<item id="14167" min="1" max="1" chance="0.104934570457458" /> <!-- Mid-Grade Life Stone - Level 84 -->
-				<item id="14168" min="1" max="1" chance="0.0104834727859497" /> <!-- High-Grade Life Stone - Level 84 -->
-				<item id="14169" min="1" max="1" chance="0.00209669455718994" /> <!-- Top-Grade Life Stone - Level 84 -->
-				<item id="9551" min="1" max="1" chance="0.695852986492157" /> <!-- Holy Stone -->
+				<item id="959" min="1" max="1" chance="0.0034944909286499" /> <!-- Scroll: Enchant Weapon (S) -->
+				<item id="14166" min="1" max="1" chance="0.42018757352066" /> <!-- Life Stone - level 84 -->
+				<item id="14167" min="1" max="1" chance="0.104934570457458" /> <!-- Mid-Grade Life Stone - level 84 -->
+				<item id="14168" min="1" max="1" chance="0.0104834727859497" /> <!-- High-Grade Life Stone - level 84 -->
+				<item id="14169" min="1" max="1" chance="0.00209669455718994" /> <!-- Top-Grade Life Stone - level 84 -->
+				<item id="9551" min="1" max="1" chance="0.695852986492157" /> <!-- Divine Stone -->
 				<item id="1345" min="40" max="120" chance="14.4969455388031" /> <!-- Shining Arrow -->
 			</drop>
 			<spoil>
@@ -303,7 +299,6 @@
 		</collision>
 	</npc>
 	<npc id="22404" level="83" type="Monster" name="Arcane Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="108" />
 			<param name="MoveAroundSocial1" value="108" />
@@ -376,14 +371,14 @@
 				<item id="4040" min="1" max="1" chance="12.2701506484909" /> <!-- Mold Lubricant -->
 				<item id="9628" min="1" max="1" chance="4.8118194094162" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="3.22899875431824" /> <!-- Orichalcum -->
-				<item id="960" min="1" max="1" chance="0.245398551177979" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="960" min="1" max="1" chance="0.245398551177979" /> <!-- Scroll: Enchant Armor (S) -->
 				<item id="6871" min="1" max="1" chance="0.761665048618317" /> <!-- Recipe: Sealed Draconic Leather Helmet (60%) -->
-				<item id="9551" min="1" max="1" chance="4.90808256835556" /> <!-- Holy Stone -->
+				<item id="9551" min="1" max="1" chance="4.90808256835556" /> <!-- Divine Stone -->
 				<item id="1344" min="2100" max="6300" chance="3.65182789431763" /> <!-- Mithril Arrow -->
 			</drop>
 			<spoil>
 				<item id="6689" min="1" max="1" chance="21.1298" /> <!-- Basalt Battlehammer Head -->
-				<item id="960" min="1" max="1" chance="3.9853" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="960" min="1" max="1" chance="3.9853" /> <!-- Scroll: Enchant Armor (S) -->
 				<item id="4040" min="1" max="5" chance="66.4223" /> <!-- Mold Lubricant -->
 			</spoil>
 		</dropLists>
@@ -393,7 +388,6 @@
 		</collision>
 	</npc>
 	<npc id="22405" level="83" type="Monster" name="Darion's Faithful Servant">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -467,16 +461,16 @@
 				<item id="10223" min="1" max="1" chance="0.000476008092328906" /> <!-- Icarus Spitter -->
 				<item id="10405" min="1" max="1" chance="0.157823989356592" /> <!-- Icarus Spitter Piece -->
 				<item id="1879" min="1" max="1" chance="20.5216114731331" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="10.2608226948662" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="10.2608226948662" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="0.965707331119537" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.648044462322235" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.535339602935791" /> <!-- Adamantine -->
-				<item id="9551" min="1" max="1" chance="0.98507370930481" /> <!-- Holy Stone -->
+				<item id="9551" min="1" max="1" chance="0.98507370930481" /> <!-- Divine Stone -->
 			</drop>
 			<spoil>
 				<item id="10405" min="1" max="1" chance="0.4807" /> <!-- Icarus Spitter Piece -->
 				<item id="1894" min="1" max="1" chance="39.4663" /> <!-- Crafted Leather -->
-				<item id="960" min="1" max="1" chance="0.4499" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="960" min="1" max="1" chance="0.4499" /> <!-- Scroll: Enchant Armor (S) -->
 				<item id="10381" min="1" max="1" chance="0.0725" /> <!-- Recipe - Icarus Spitter (60%) -->
 			</spoil>
 		</dropLists>
@@ -486,7 +480,6 @@
 		</collision>
 	</npc>
 	<npc id="22406" level="83" type="Monster" name="Darion's Faithful Servant">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -562,8 +555,8 @@
 				<item id="4040" min="1" max="1" chance="3.71197241400146" /> <!-- Mold Lubricant -->
 				<item id="4042" min="1" max="1" chance="3.09331034500122" /> <!-- Enria -->
 				<item id="4043" min="1" max="1" chance="6.18662069000244" /> <!-- Asofe -->
-				<item id="9551" min="1" max="1" chance="1.48479863824081" /> <!-- Holy Stone -->
-				<item id="959" min="1" max="1" chance="0.00744793297576904" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="9551" min="1" max="1" chance="1.48479863824081" /> <!-- Divine Stone -->
+				<item id="959" min="1" max="1" chance="0.00744793297576904" /> <!-- Scroll: Enchant Weapon (S) -->
 				<item id="1345" min="60" max="180" chance="20.6220206034737" /> <!-- Shining Arrow -->
 			</drop>
 			<spoil>
@@ -578,7 +571,6 @@
 		</collision>
 	</npc>
 	<npc id="22407" level="83" type="Monster" name="Darion's Faithful Servant">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -656,8 +648,8 @@
 				<item id="5549" min="4" max="12" chance="3.53001764631653" /> <!-- Metallic Thread -->
 				<item id="1889" min="5" max="15" chance="1.88269573464203" /> <!-- Compound Braid -->
 				<item id="4044" min="1" max="1" chance="9.41339443061066" /> <!-- Thons -->
-				<item id="9551" min="1" max="1" chance="2.25921803305054" /> <!-- Holy Stone -->
-				<item id="960" min="1" max="1" chance="0.112969325912476" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="9551" min="1" max="1" chance="2.25921803305054" /> <!-- Divine Stone -->
+				<item id="960" min="1" max="1" chance="0.112969325912476" /> <!-- Scroll: Enchant Armor (S) -->
 				<item id="1345" min="280" max="840" chance="6.72382307807922" /> <!-- Shining Arrow -->
 			</drop>
 			<spoil>
@@ -672,7 +664,6 @@
 		</collision>
 	</npc>
 	<npc id="22408" level="83" type="Monster" name="Darion's Faithful Servant">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -738,39 +729,15 @@
 			<drop>
 				<item id="9599" min="2" max="6" chance="53.98" /> <!-- Ancient Tome of the Demon -->
 				<item id="57" min="10298" max="20788" chance="70" /> <!-- Adena -->
-				<item id="15703" min="1" max="1" chance="0.00410396993255615" /> <!-- Sealed Moirai Gauntlet -->
-				<item id="15704" min="1" max="1" chance="0.00410396993255615" /> <!-- Sealed Moirai Leather Gloves -->
-				<item id="15705" min="1" max="1" chance="0.00410396993255615" /> <!-- Sealed Moirai Gloves -->
-				<item id="15706" min="1" max="1" chance="0.00410396993255615" /> <!-- Sealed Moirai Boots -->
-				<item id="15707" min="1" max="1" chance="0.00410396993255615" /> <!-- Sealed Moirai Leather Boots -->
-				<item id="15708" min="1" max="1" chance="0.00410396993255615" /> <!-- Sealed Moirai Shoes -->
-				<item id="15654" min="1" max="1" chance="1.54338981463623" /> <!-- Sealed Moirai Gauntlet Piece -->
-				<item id="15655" min="1" max="1" chance="1.54338981463623" /> <!-- Sealed Moirai Leather Gloves Piece -->
-				<item id="15656" min="1" max="1" chance="1.54338981463623" /> <!-- Sealed Moirai Gloves Piece -->
-				<item id="15657" min="1" max="1" chance="1.54338981463623" /> <!-- Sealed Moirai Boots Piece -->
-				<item id="15658" min="1" max="1" chance="1.54338981463623" /> <!-- Sealed Moirai Leather Boots Piece -->
-				<item id="15659" min="1" max="1" chance="1.54342695463562" /> <!-- Sealed Moirai Shoes Piece -->
 				<item id="1879" min="3" max="9" chance="9.5964923043251" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="28.7894769129753" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="28.7894769129753" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="2.70957729005814" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="1.8183055973053" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="1.50206007528305" /> <!-- Adamantine -->
-				<item id="9551" min="1" max="1" chance="2.7637867641449" /> <!-- Holy Stone -->
+				<item id="9551" min="1" max="1" chance="2.7637867641449" /> <!-- Divine Stone -->
 			</drop>
 			<spoil>
-				<item id="15654" min="1" max="1" chance="8.6701" /> <!-- Sealed Moirai Gauntlet Piece -->
-				<item id="15655" min="1" max="1" chance="8.6701" /> <!-- Sealed Moirai Leather Gloves Piece -->
-				<item id="15656" min="1" max="1" chance="8.6701" /> <!-- Sealed Moirai Gloves Piece -->
-				<item id="15657" min="1" max="1" chance="8.6701" /> <!-- Sealed Moirai Boots Piece -->
-				<item id="15658" min="1" max="1" chance="8.6701" /> <!-- Sealed Moirai Leather Boots Piece -->
-				<item id="15659" min="1" max="1" chance="8.6701" /> <!-- Sealed Moirai Shoes Piece -->
 				<item id="9630" min="1" max="1" chance="5.1108" /> <!-- Orichalcum -->
-				<item id="15784" min="1" max="1" chance="1.1535" /> <!-- Recipe - Sealed Moirai Gauntlet (60%) -->
-				<item id="15785" min="1" max="1" chance="1.1535" /> <!-- Recipe - Sealed Moirai Leather Gloves (60%) -->
-				<item id="15786" min="1" max="1" chance="1.1535" /> <!-- Recipe - Sealed Moirai Gloves (60%) -->
-				<item id="15787" min="1" max="1" chance="1.1535" /> <!-- Recipe - Sealed Moirai Boots (60%) -->
-				<item id="15788" min="1" max="1" chance="1.1535" /> <!-- Recipe - Sealed Moirai Leather Boots (60%) -->
-				<item id="15789" min="1" max="1" chance="1.1535" /> <!-- Recipe - Sealed Moirai Shoes (60%) -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -779,7 +746,6 @@
 		</collision>
 	</npc>
 	<npc id="22409" level="83" type="Monster" name="Darion's Faithful Servant">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -845,40 +811,18 @@
 			<drop>
 				<item id="9599" min="3" max="9" chance="81.18" /> <!-- Ancient Tome of the Demon -->
 				<item id="57" min="23228" max="46892" chance="70" /> <!-- Adena -->
-				<item id="15694" min="1" max="1" chance="0.00740588556671143" /> <!-- Sealed Moirai Helmet -->
-				<item id="15695" min="1" max="1" chance="0.00740588556671143" /> <!-- Sealed Moirai Leather Helmet -->
-				<item id="15696" min="1" max="1" chance="0.00740588556671143" /> <!-- Sealed Moirai Circlet -->
-				<item id="15710" min="1" max="1" chance="0.0105955491523743" /> <!-- Sealed Moirai Shield -->
-				<item id="15709" min="1" max="1" chance="0.0105955491523743" /> <!-- Sealed Moirai Sigil -->
-				<item id="15645" min="1" max="1" chance="2.77717042471695" /> <!-- Sealed Moirai Helmet Piece -->
-				<item id="15646" min="1" max="1" chance="2.77717042471695" /> <!-- Sealed Moirai Leather Helmet Piece -->
-				<item id="15647" min="1" max="1" chance="2.77717042471695" /> <!-- Sealed Moirai Circlet Piece -->
-				<item id="15693" min="1" max="1" chance="4.9782399442234" /> <!-- Sealed Moirai Shield Piece -->
-				<item id="15692" min="1" max="1" chance="4.9782399442234" /> <!-- Sealed Moirai Sigil Piece -->
 				<item id="1869" min="60" max="180" chance="3.54219317993546" /> <!-- Iron Ore -->
 				<item id="1864" min="216" max="648" chance="1.96787677460861" /> <!-- Stem -->
 				<item id="1880" min="3" max="9" chance="6.07236862970352" /> <!-- Steel -->
 				<item id="5550" min="1" max="1" chance="5.66753156635666" /> <!-- Durable Metal Plate -->
 				<item id="4043" min="1" max="1" chance="14.1688476479416" /> <!-- Asofe -->
-				<item id="14166" min="1" max="1" chance="2.05344477874374" /> <!-- Life Stone - Level 84 -->
-				<item id="14167" min="1" max="1" chance="0.512733671012878" /> <!-- Mid-Grade Life Stone - Level 84 -->
-				<item id="14168" min="1" max="1" chance="0.0512883527412415" /> <!-- High-Grade Life Stone - Level 84 -->
-				<item id="14169" min="1" max="1" chance="0.0102651633682251" /> <!-- Top-Grade Life Stone - Level 84 -->
-				<item id="9551" min="1" max="1" chance="3.40050395417404" /> <!-- Holy Stone -->
-				<item id="959" min="1" max="1" chance="0.0170461654472351" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="14166" min="1" max="1" chance="2.05344477874374" /> <!-- Life Stone - level 84 -->
+				<item id="14167" min="1" max="1" chance="0.512733671012878" /> <!-- Mid-Grade Life Stone - level 84 -->
+				<item id="14168" min="1" max="1" chance="0.0512883527412415" /> <!-- High-Grade Life Stone - level 84 -->
+				<item id="14169" min="1" max="1" chance="0.0102651633682251" /> <!-- Top-Grade Life Stone - level 84 -->
+				<item id="9551" min="1" max="1" chance="3.40050395417404" /> <!-- Divine Stone -->
+				<item id="959" min="1" max="1" chance="0.0170461654472351" /> <!-- Scroll: Enchant Weapon (S) -->
 			</drop>
-			<spoil>
-				<item id="15645" min="1" max="1" chance="16.8991" /> <!-- Sealed Moirai Helmet Piece -->
-				<item id="15646" min="1" max="1" chance="16.8991" /> <!-- Sealed Moirai Leather Helmet Piece -->
-				<item id="15647" min="1" max="1" chance="16.8991" /> <!-- Sealed Moirai Circlet Piece -->
-				<item id="15693" min="1" max="1" chance="30.2925" /> <!-- Sealed Moirai Shield Piece -->
-				<item id="15692" min="1" max="1" chance="30.2925" /> <!-- Sealed Moirai Sigil Piece -->
-				<item id="15775" min="1" max="1" chance="2.2551" /> <!-- Recipe - Sealed Moirai Helmet (60%) -->
-				<item id="15776" min="1" max="1" chance="2.2551" /> <!-- Recipe - Sealed Moirai Leather Helmet(60%) -->
-				<item id="15777" min="1" max="1" chance="2.2551" /> <!-- Recipe - Sealed Moirai Circlet (60%) -->
-				<item id="15791" min="1" max="1" chance="3.2215" /> <!-- Recipe - Sealed Moirai Shield (60%) -->
-				<item id="15790" min="1" max="1" chance="3.2215" /> <!-- Recipe - Sealed Moirai Sigil (60%) -->
-			</spoil>
 		</dropLists>
 		<collision>
 			<radius normal="28" />
@@ -886,7 +830,6 @@
 		</collision>
 	</npc>
 	<npc id="22410" level="83" type="Monster" name="Darion's Faithful Servant">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -951,28 +894,14 @@
 			<drop>
 				<item id="9599" min="4" max="12" chance="71.52" /> <!-- Ancient Tome of the Demon -->
 				<item id="57" min="27289" max="55089" chance="70" /> <!-- Adena -->
-				<item id="15766" min="1" max="1" chance="0.0334125568447113" /> <!-- Sealed Moirai Ring -->
-				<item id="15767" min="1" max="1" chance="0.0222663974628449" /> <!-- Sealed Moirai Earring -->
-				<item id="15768" min="1" max="1" chance="0.0166933177719116" /> <!-- Sealed Moirai Necklace -->
-				<item id="15772" min="1" max="1" chance="12.6279246258316" /> <!-- Sealed Moirai Ring Gem -->
-				<item id="15773" min="1" max="1" chance="7.09709665534592" /> <!-- Sealed Moirai Earring Gem -->
-				<item id="15774" min="1" max="1" chance="6.12390733480454" /> <!-- Sealed Moirai Necklace Gem -->
 				<item id="1879" min="15" max="45" chance="4.35954491687393" /> <!-- Cokes -->
-				<item id="1885" min="2" max="6" chance="16.3482216954536" /> <!-- High-Grade Suede -->
+				<item id="1885" min="2" max="6" chance="16.3482216954536" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="6.15463235516357" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="4.13009086904907" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="3.41180171915817" /> <!-- Adamantine -->
-				<item id="9551" min="1" max="1" chance="6.27774304046249" /> <!-- Holy Stone -->
-				<item id="960" min="1" max="1" chance="0.313864604278564" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="9551" min="1" max="1" chance="6.27774304046249" /> <!-- Divine Stone -->
+				<item id="960" min="1" max="1" chance="0.313864604278564" /> <!-- Scroll: Enchant Armor (S) -->
 			</drop>
-			<spoil>
-				<item id="15772" min="1" max="1" chance="76.9024" /> <!-- Sealed Moirai Ring Gem -->
-				<item id="15773" min="1" max="1" chance="43.2203" /> <!-- Sealed Moirai Earring Gem -->
-				<item id="15774" min="1" max="1" chance="37.2938" /> <!-- Sealed Moirai Necklace Gem -->
-				<item id="15812" min="1" max="1" chance="10.1741" /> <!-- Recipe - Sealed Moirai Ring (70%) -->
-				<item id="15813" min="1" max="1" chance="6.7819" /> <!-- Recipe - Sealed Moirai Earring (70%) -->
-				<item id="15814" min="1" max="1" chance="5.0866" /> <!-- Recipe - Sealed Moirai Necklace (70%) -->
-			</spoil>
 		</dropLists>
 		<collision>
 			<radius normal="28" />
@@ -980,7 +909,6 @@
 		</collision>
 	</npc>
 	<npc id="22411" level="83" type="Monster" name="Beleth's Retainer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1058,7 +986,7 @@
 				<item id="1889" min="4" max="12" chance="3.37240678247452" /> <!-- Compound Braid -->
 				<item id="4044" min="1" max="1" chance="15.1757697241859" /> <!-- Thons -->
 				<item id="6901" min="1" max="1" chance="0.455288088306427" /> <!-- Recipe: Shining Arrow (100%) -->
-				<item id="9551" min="1" max="1" chance="3.64214258125305" /> <!-- Holy Stone -->
+				<item id="9551" min="1" max="1" chance="3.64214258125305" /> <!-- Divine Stone -->
 			</drop>
 			<spoil>
 				<item id="6901" min="1" max="1" chance="6.4694" /> <!-- Recipe: Shining Arrow (100%) -->
@@ -1072,7 +1000,6 @@
 		</collision>
 	</npc>
 	<npc id="22412" level="83" type="Monster" name="Beleth's Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1158,12 +1085,12 @@
 				<item id="4039" min="9" max="27" chance="2.94536328164673" /> <!-- Mold Glue -->
 				<item id="4041" min="1" max="1" chance="13.830386766571" /> <!-- Mold Hardener -->
 				<item id="4044" min="2" max="6" chance="13.2541105683594" /> <!-- Thons -->
-				<item id="959" min="1" max="1" chance="0.0636435038757324" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="9551" min="1" max="1" chance="12.7239093630676" /> <!-- Holy Stone -->
+				<item id="959" min="1" max="1" chance="0.0636435038757324" /> <!-- Scroll: Enchant Weapon (S) -->
+				<item id="9551" min="1" max="1" chance="12.7239093630676" /> <!-- Divine Stone -->
 			</drop>
 			<spoil>
 				<item id="6699" min="1" max="9" chance="84.4475" /> <!-- Sealed Tateossian Ring Gem -->
-				<item id="959" min="1" max="1" chance="0.7749" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="959" min="1" max="1" chance="0.7749" /> <!-- Scroll: Enchant Weapon (S) -->
 				<item id="4044" min="1" max="13" chance="92.2488" /> <!-- Thons -->
 			</spoil>
 		</dropLists>
@@ -1173,7 +1100,6 @@
 		</collision>
 	</npc>
 	<npc id="22413" level="83" type="Monster" name="Beleth's Low Servant">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -1237,16 +1163,16 @@
 				<item id="6328" min="1" max="1" chance="0.125006975097656" /> <!-- Sealed Majestic Ring -->
 				<item id="6346" min="1" max="1" chance="20.3267135371399" /> <!-- Sealed Majestic Ring Gemstone -->
 				<item id="1879" min="3" max="9" chance="9.46075250644684" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="28.3823062735405" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="28.3823062735405" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="2.67129137119675" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="1.79254567072678" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="1.48081131604385" /> <!-- Adamantine -->
-				<item id="960" min="1" max="1" chance="0.13621923474884" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				<item id="14166" min="1" max="1" chance="1.64535674098206" /> <!-- Life Stone - Level 84 -->
-				<item id="14167" min="1" max="1" chance="0.410851643245697" /> <!-- Mid-Grade Life Stone - Level 84 -->
-				<item id="14168" min="1" max="1" chance="0.0410997905845642" /> <!-- High-Grade Life Stone - Level 84 -->
-				<item id="14169" min="1" max="1" chance="0.00819070559692383" /> <!-- Top-Grade Life Stone - Level 84 -->
-				<item id="9551" min="1" max="1" chance="2.72477472857666" /> <!-- Holy Stone -->
+				<item id="960" min="1" max="1" chance="0.13621923474884" /> <!-- Scroll: Enchant Armor (S) -->
+				<item id="14166" min="1" max="1" chance="1.64535674098206" /> <!-- Life Stone - level 84 -->
+				<item id="14167" min="1" max="1" chance="0.410851643245697" /> <!-- Mid-Grade Life Stone - level 84 -->
+				<item id="14168" min="1" max="1" chance="0.0410997905845642" /> <!-- High-Grade Life Stone - level 84 -->
+				<item id="14169" min="1" max="1" chance="0.00819070559692383" /> <!-- Top-Grade Life Stone - level 84 -->
+				<item id="9551" min="1" max="1" chance="2.72477472857666" /> <!-- Divine Stone -->
 			</drop>
 			<spoil>
 				<item id="1876" min="1" max="33" chance="89.4743" /> <!-- Mithril Ore -->
@@ -1260,7 +1186,6 @@
 		</collision>
 	</npc>
 	<npc id="22414" level="83" type="Monster" name="Beleth's Follower">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -1320,7 +1245,7 @@
 				<item id="9628" min="1" max="1" chance="3.80930997951508" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="2.55625952762604" /> <!-- Orichalcum -->
 				<item id="6901" min="1" max="1" chance="0.485680158805847" /> <!-- Recipe: Shining Arrow (100%) -->
-				<item id="9551" min="1" max="1" chance="3.88548484874725" /> <!-- Holy Stone -->
+				<item id="9551" min="1" max="1" chance="3.88548484874725" /> <!-- Divine Stone -->
 			</drop>
 			<spoil>
 				<item id="6701" min="1" max="1" chance="31.4955" /> <!-- Sealed Imperial Crusader Breastplate Part -->
@@ -1334,7 +1259,6 @@
 		</collision>
 	</npc>
 	<npc id="22415" level="83" type="Monster" name="Beleth's Devotee">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1405,16 +1329,16 @@
 				<item id="236" min="1" max="1" chance="0.0166036822957993" /> <!-- Soul Separator -->
 				<item id="5537" min="1" max="1" chance="4.72459628794956" /> <!-- Soul Separator Head -->
 				<item id="1879" min="3" max="9" chance="13.6658767418442" /> <!-- Cokes -->
-				<item id="1885" min="2" max="6" chance="10.2494257852325" /> <!-- High-Grade Suede -->
+				<item id="1885" min="2" max="6" chance="10.2494257852325" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="3.85860992792511" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="2.58933514343643" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="2.13900964758682" /> <!-- Adamantine -->
-				<item id="959" min="1" max="1" chance="0.0196871573638916" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="9551" min="1" max="1" chance="3.93575441863251" /> <!-- Holy Stone -->
+				<item id="959" min="1" max="1" chance="0.0196871573638916" /> <!-- Scroll: Enchant Weapon (S) -->
+				<item id="9551" min="1" max="1" chance="3.93575441863251" /> <!-- Divine Stone -->
 			</drop>
 			<spoil>
-				<item id="960" min="1" max="1" chance="2.7964" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				<item id="1885" min="1" max="13" chance="83.2251" /> <!-- High-Grade Suede -->
+				<item id="960" min="1" max="1" chance="2.7964" /> <!-- Scroll: Enchant Armor (S) -->
+				<item id="1885" min="1" max="13" chance="83.2251" /> <!-- High Grade Suede -->
 				<item id="13099" min="1" max="3" chance="48.7477" /> <!-- Sealed Arcana Sigil Piece -->
 			</spoil>
 		</dropLists>
@@ -1424,7 +1348,6 @@
 		</collision>
 	</npc>
 	<npc id="22416" level="82" type="Monster" name="Kechi's Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="124" />
 			<param name="MoveAroundSocial1" value="124" />
@@ -1495,12 +1418,12 @@
 				<item id="1876" min="3" max="9" chance="9.98442193218231" /> <!-- Mithril Ore -->
 				<item id="1895" min="3" max="9" chance="16.6406749926376" /> <!-- Metallic Fiber -->
 				<item id="4042" min="1" max="1" chance="5.82424259864807" /> <!-- Enria -->
-				<item id="960" min="1" max="1" chance="0.139769289283752" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="960" min="1" max="1" chance="0.139769289283752" /> <!-- Scroll: Enchant Armor (S) -->
 				<item id="9547" min="1" max="1" chance="2.79568217617035" /> <!-- Water Stone -->
 			</drop>
 			<spoil>
 				<item id="5480" min="1" max="1" chance="22.2823" /> <!-- Sealed Leather Armor of Nightmare Fabric -->
-				<item id="1808" min="1" max="1" chance="2.207" /> <!-- Recipe: Soulshot (S-Grade) -->
+				<item id="1808" min="1" max="1" chance="2.207" /> <!-- Recipe: Soulshot: S Grade -->
 				<item id="5481" min="1" max="1" chance="22.2823" /> <!-- Sealed Majestic Leather Armor Fabric -->
 			</spoil>
 		</dropLists>
@@ -1510,7 +1433,6 @@
 		</collision>
 	</npc>
 	<npc id="22417" level="82" type="Monster" name="Kechi's Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1579,25 +1501,25 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="5334" max="10925" chance="70" /> <!-- Adena -->
-				<item id="5326" min="1" max="1" chance="0.0029718195732832" /> <!-- Sealed Robe of Nightmare -->
-				<item id="5487" min="1" max="1" chance="0.441778191393971" /> <!-- Sealed Robe of Nightmare Fabric -->
+				<item id="5326" min="1" max="1" chance="0.0029718195732832" /> <!-- Sealed Nightmare Robe -->
+				<item id="5487" min="1" max="1" chance="0.441778191393971" /> <!-- Sealed Nightmare Robe Fabric -->
 				<item id="5329" min="1" max="1" chance="0.0029718195732832" /> <!-- Sealed Majestic Robe -->
 				<item id="5488" min="1" max="1" chance="0.441778191393971" /> <!-- Sealed Majestic Robe Fabric -->
 				<item id="1879" min="1" max="1" chance="5.94658202087784" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="2.97329101043892" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="2.97329101043892" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="0.279842387856483" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.187786693491936" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.155126367510796" /> <!-- Adamantine -->
 				<item id="6901" min="1" max="1" chance="0.0356840531682968" /> <!-- Recipe: Shining Arrow (100%) -->
-				<item id="10483" min="1" max="1" chance="0.247772554053307" /> <!-- Life Stone - Level 82 -->
-				<item id="10484" min="1" max="1" chance="0.0619405932884216" /> <!-- Mid-Grade Life Stone - Level 82 -->
-				<item id="10485" min="1" max="1" chance="0.00618998696899414" /> <!-- High-Grade Life Stone - Level 82 -->
-				<item id="10486" min="1" max="1" chance="0.00124206975364685" /> <!-- Top-Grade Life Stone - Level 82 -->
+				<item id="10483" min="1" max="1" chance="0.247772554053307" /> <!-- Life Stone - level 82 -->
+				<item id="10484" min="1" max="1" chance="0.0619405932884216" /> <!-- Mid-Grade Life Stone - level 82 -->
+				<item id="10485" min="1" max="1" chance="0.00618998696899414" /> <!-- High-Grade Life Stone - level 82 -->
+				<item id="10486" min="1" max="1" chance="0.00124206975364685" /> <!-- Top-Grade Life Stone - level 82 -->
 				<item id="9547" min="1" max="1" chance="0.285441882647514" /> <!-- Water Stone -->
 			</drop>
 			<spoil>
 				<item id="3036" min="1" max="1" chance="0.3541" /> <!-- Recipe: Spiritshot S -->
-				<item id="5487" min="1" max="1" chance="3.5877" /> <!-- Sealed Robe of Nightmare Fabric -->
+				<item id="5487" min="1" max="1" chance="3.5877" /> <!-- Sealed Nightmare Robe Fabric -->
 				<item id="4041" min="1" max="1" chance="6.928" /> <!-- Mold Hardener -->
 			</spoil>
 		</dropLists>
@@ -1607,7 +1529,6 @@
 		</collision>
 	</npc>
 	<npc id="22418" level="82" type="Monster" name="Burning Iris">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -1672,7 +1593,7 @@
 				<item id="5549" min="1" max="1" chance="3.84200114137268" /> <!-- Metallic Thread -->
 				<item id="1889" min="1" max="1" chance="2.56134615008163" /> <!-- Compound Braid -->
 				<item id="4044" min="1" max="1" chance="1.28065499129105" /> <!-- Thons -->
-				<item id="959" min="1" max="1" chance="0.00151903498077393" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="959" min="1" max="1" chance="0.00151903498077393" /> <!-- Scroll: Enchant Weapon (S) -->
 				<item id="9547" min="1" max="1" chance="0.307351411109924" /> <!-- Water Stone -->
 			</drop>
 			<spoil>
@@ -1687,7 +1608,6 @@
 		</collision>
 	</npc>
 	<npc id="22419" level="82" type="Monster" name="Flame Iris">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -1757,11 +1677,11 @@
 				<item id="4040" min="1" max="1" chance="0.504522504486084" /> <!-- Mold Lubricant -->
 				<item id="9628" min="1" max="1" chance="0.197852793798447" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.132769526380539" /> <!-- Orichalcum -->
-				<item id="960" min="1" max="1" chance="0.0100897717857361" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				<item id="10483" min="1" max="1" chance="0.17518048307991" /> <!-- Life Stone - Level 82 -->
-				<item id="10484" min="1" max="1" chance="0.0437930010700226" /> <!-- Mid-Grade Life Stone - Level 82 -->
-				<item id="10485" min="1" max="1" chance="0.00438353950691223" /> <!-- High-Grade Life Stone - Level 82 -->
-				<item id="10486" min="1" max="1" chance="0.000873316381454468" /> <!-- Top-Grade Life Stone - Level 82 -->
+				<item id="960" min="1" max="1" chance="0.0100897717857361" /> <!-- Scroll: Enchant Armor (S) -->
+				<item id="10483" min="1" max="1" chance="0.17518048307991" /> <!-- Life Stone - level 82 -->
+				<item id="10484" min="1" max="1" chance="0.0437930010700226" /> <!-- Mid-Grade Life Stone - level 82 -->
+				<item id="10485" min="1" max="1" chance="0.00438353950691223" /> <!-- High-Grade Life Stone - level 82 -->
+				<item id="10486" min="1" max="1" chance="0.000873316381454468" /> <!-- Top-Grade Life Stone - level 82 -->
 				<item id="9547" min="1" max="1" chance="0.201820872114182" /> <!-- Water Stone -->
 			</drop>
 			<spoil>
@@ -1776,7 +1696,6 @@
 		</collision>
 	</npc>
 	<npc id="22420" level="82" type="Monster" name="Brimstone Iris">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -1864,7 +1783,6 @@
 		</collision>
 	</npc>
 	<npc id="22422" level="83" type="Monster" name="Failan's Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Aggressive_Time" value="5" />
@@ -1926,13 +1844,13 @@
 				<item id="1876" min="1" max="1" chance="14.801428699997" /> <!-- Mithril Ore -->
 				<item id="1895" min="3" max="9" chance="3.020686006073" /> <!-- Metallic Fiber -->
 				<item id="4042" min="1" max="1" chance="1.23344188069153" /> <!-- Enria -->
-				<item id="960" min="1" max="1" chance="0.0295989052734375" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				<item id="9551" min="1" max="1" chance="0.592062193267822" /> <!-- Holy Stone -->
+				<item id="960" min="1" max="1" chance="0.0295989052734375" /> <!-- Scroll: Enchant Armor (S) -->
+				<item id="9551" min="1" max="1" chance="0.592062193267822" /> <!-- Divine Stone -->
 				<item id="1345" min="40" max="120" chance="12.3345869825134" /> <!-- Shining Arrow -->
 			</drop>
 			<spoil>
 				<item id="6689" min="1" max="1" chance="2.5489" /> <!-- Basalt Battlehammer Head -->
-				<item id="959" min="1" max="1" chance="0.0481" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="959" min="1" max="1" chance="0.0481" /> <!-- Scroll: Enchant Weapon (S) -->
 				<item id="4042" min="1" max="1" chance="20.0313" /> <!-- Enria -->
 			</spoil>
 		</dropLists>
@@ -1942,7 +1860,6 @@
 		</collision>
 	</npc>
 	<npc id="22423" level="83" type="Monster" name="Original Sin Warden">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2019,13 +1936,13 @@
 				<item id="4040" min="1" max="1" chance="5.14460739175415" /> <!-- Mold Lubricant -->
 				<item id="9628" min="1" max="1" chance="2.01749991176605" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="1.3538422206459" /> <!-- Orichalcum -->
-				<item id="9551" min="1" max="1" chance="2.05782905010223" /> <!-- Holy Stone -->
-				<item id="960" min="1" max="1" chance="0.102908835754395" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="9551" min="1" max="1" chance="2.05782905010223" /> <!-- Divine Stone -->
+				<item id="960" min="1" max="1" chance="0.102908835754395" /> <!-- Scroll: Enchant Armor (S) -->
 				<item id="1345" min="300" max="900" chance="5.71620339467239" /> <!-- Shining Arrow -->
 			</drop>
 			<spoil>
 				<item id="10405" min="1" max="1" chance="1.1716" /> <!-- Icarus Spitter Piece -->
-				<item id="959" min="1" max="1" chance="0.1097" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="959" min="1" max="1" chance="0.1097" /> <!-- Scroll: Enchant Weapon (S) -->
 				<item id="1894" min="1" max="3" chance="48.0954" /> <!-- Crafted Leather -->
 				<item id="10381" min="1" max="1" chance="0.1767" /> <!-- Recipe - Icarus Spitter (60%) -->
 			</spoil>
@@ -2036,7 +1953,6 @@
 		</collision>
 	</npc>
 	<npc id="22424" level="83" type="Monster" name="Slave of Greed">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -2098,14 +2014,14 @@
 				<item id="4040" min="1" max="1" chance="1.78209730930328" /> <!-- Mold Lubricant -->
 				<item id="4042" min="1" max="1" chance="1.48508814258575" /> <!-- Enria -->
 				<item id="4043" min="1" max="1" chance="2.9701339761734" /> <!-- Asofe -->
-				<item id="9551" min="1" max="1" chance="0.71282200012207" /> <!-- Holy Stone -->
+				<item id="9551" min="1" max="1" chance="0.71282200012207" /> <!-- Divine Stone -->
 				<item id="1345" min="60" max="180" chance="9.90047479324341" /> <!-- Shining Arrow -->
 			</drop>
 			<spoil>
 				<item id="10397" min="1" max="1" chance="0.1994" /> <!-- Icarus Sawsword Piece -->
 				<item id="10399" min="1" max="1" chance="0.1994" /> <!-- Icarus Spirit Piece -->
 				<item id="10400" min="1" max="1" chance="0.1988" /> <!-- Icarus Heavy Arms Piece -->
-				<item id="960" min="1" max="1" chance="0.186" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="960" min="1" max="1" chance="0.186" /> <!-- Scroll: Enchant Armor (S) -->
 				<item id="10373" min="1" max="1" chance="0.03" /> <!-- Recipe - Icarus Sawsword (60%) -->
 				<item id="10375" min="1" max="1" chance="0.03" /> <!-- Recipe - Icarus Spirit (60%) -->
 				<item id="10376" min="1" max="1" chance="0.03" /> <!-- Recipe - Icarus Heavy Arms (60%) -->
@@ -2117,7 +2033,6 @@
 		</collision>
 	</npc>
 	<npc id="22425" level="83" type="Monster" name="Slave of Lust">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -2176,12 +2091,12 @@
 				<item id="4040" min="1" max="1" chance="1.06924386112213" /> <!-- Mold Lubricant -->
 				<item id="9628" min="1" max="1" chance="0.419314809322357" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.281377152090073" /> <!-- Orichalcum -->
-				<item id="14166" min="1" max="1" chance="0.258265873003006" /> <!-- Life Stone - Level 84 -->
-				<item id="14167" min="1" max="1" chance="0.0644907957267761" /> <!-- Mid-Grade Life Stone - Level 84 -->
-				<item id="14168" min="1" max="1" chance="0.00644551851272583" /> <!-- High-Grade Life Stone - Level 84 -->
-				<item id="14169" min="1" max="1" chance="0.0012819815826416" /> <!-- Top-Grade Life Stone - Level 84 -->
-				<item id="9551" min="1" max="1" chance="0.427701105508804" /> <!-- Holy Stone -->
-				<item id="959" min="1" max="1" chance="0.00217224657058716" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="14166" min="1" max="1" chance="0.258265873003006" /> <!-- Life Stone - level 84 -->
+				<item id="14167" min="1" max="1" chance="0.0644907957267761" /> <!-- Mid-Grade Life Stone - level 84 -->
+				<item id="14168" min="1" max="1" chance="0.00644551851272583" /> <!-- High-Grade Life Stone - level 84 -->
+				<item id="14169" min="1" max="1" chance="0.0012819815826416" /> <!-- Top-Grade Life Stone - level 84 -->
+				<item id="9551" min="1" max="1" chance="0.427701105508804" /> <!-- Divine Stone -->
+				<item id="959" min="1" max="1" chance="0.00217224657058716" /> <!-- Scroll: Enchant Weapon (S) -->
 			</drop>
 			<spoil>
 				<item id="10400" min="1" max="1" chance="0.4638" /> <!-- Icarus Heavy Arms Piece -->
@@ -2195,7 +2110,6 @@
 		</collision>
 	</npc>
 	<npc id="22426" level="83" type="Monster" name="Slave of Wrath">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="114" />
 			<param name="MoveAroundSocial1" value="114" />
@@ -2254,12 +2168,12 @@
 				<item id="4040" min="1" max="1" chance="0.972065423229218" /> <!-- Mold Lubricant -->
 				<item id="9628" min="1" max="1" chance="0.38121451644516" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.255811806713104" /> <!-- Orichalcum -->
-				<item id="14166" min="1" max="1" chance="0.234814143688202" /> <!-- Life Stone - Level 84 -->
-				<item id="14167" min="1" max="1" chance="0.0586184759445191" /> <!-- Mid-Grade Life Stone - Level 84 -->
-				<item id="14168" min="1" max="1" chance="0.00588128987503052" /> <!-- High-Grade Life Stone - Level 84 -->
-				<item id="14169" min="1" max="1" chance="0.0011665368347168" /> <!-- Top-Grade Life Stone - Level 84 -->
-				<item id="9551" min="1" max="1" chance="0.388797005870819" /> <!-- Holy Stone -->
-				<item id="960" min="1" max="1" chance="0.0194422805786133" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="14166" min="1" max="1" chance="0.234814143688202" /> <!-- Life Stone - level 84 -->
+				<item id="14167" min="1" max="1" chance="0.0586184759445191" /> <!-- Mid-Grade Life Stone - level 84 -->
+				<item id="14168" min="1" max="1" chance="0.00588128987503052" /> <!-- High-Grade Life Stone - level 84 -->
+				<item id="14169" min="1" max="1" chance="0.0011665368347168" /> <!-- Top-Grade Life Stone - level 84 -->
+				<item id="9551" min="1" max="1" chance="0.388797005870819" /> <!-- Divine Stone -->
+				<item id="960" min="1" max="1" chance="0.0194422805786133" /> <!-- Scroll: Enchant Armor (S) -->
 				<item id="1345" min="10" max="30" chance="32.4014840925865" /> <!-- Shining Arrow -->
 			</drop>
 			<spoil>
@@ -2276,7 +2190,6 @@
 		</collision>
 	</npc>
 	<npc id="22427" level="83" type="Monster" name="Slave of Sloth">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -2337,15 +2250,15 @@
 				<item id="1882" min="1" max="1" chance="13.20065231987" /> <!-- Leather -->
 				<item id="1894" min="1" max="1" chance="2.08430873712158" /> <!-- Crafted Leather -->
 				<item id="4042" min="1" max="1" chance="0.990037554702759" /> <!-- Enria -->
-				<item id="14166" min="1" max="1" chance="0.286960816268921" /> <!-- Life Stone - Level 84 -->
-				<item id="14167" min="1" max="1" chance="0.0716416702423096" /> <!-- Mid-Grade Life Stone - Level 84 -->
-				<item id="14168" min="1" max="1" chance="0.00715507159423828" /> <!-- High-Grade Life Stone - Level 84 -->
-				<item id="14169" min="1" max="1" chance="0.00142495069885254" /> <!-- Top-Grade Life Stone - Level 84 -->
-				<item id="9551" min="1" max="1" chance="0.475266535217285" /> <!-- Holy Stone -->
+				<item id="14166" min="1" max="1" chance="0.286960816268921" /> <!-- Life Stone - level 84 -->
+				<item id="14167" min="1" max="1" chance="0.0716416702423096" /> <!-- Mid-Grade Life Stone - level 84 -->
+				<item id="14168" min="1" max="1" chance="0.00715507159423828" /> <!-- High-Grade Life Stone - level 84 -->
+				<item id="14169" min="1" max="1" chance="0.00142495069885254" /> <!-- Top-Grade Life Stone - level 84 -->
+				<item id="9551" min="1" max="1" chance="0.475266535217285" /> <!-- Divine Stone -->
 			</drop>
 			<spoil>
 				<item id="10403" min="1" max="1" chance="0.3478" /> <!-- Icarus Hand Piece -->
-				<item id="959" min="1" max="1" chance="0.0326" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="959" min="1" max="1" chance="0.0326" /> <!-- Scroll: Enchant Weapon (S) -->
 				<item id="1894" min="1" max="1" chance="28.5603" /> <!-- Crafted Leather -->
 				<item id="10379" min="1" max="1" chance="0.0525" /> <!-- Recipe - Icarus Hand (60%) -->
 			</spoil>
@@ -2356,7 +2269,6 @@
 		</collision>
 	</npc>
 	<npc id="22428" level="83" type="Monster" name="Slave of Envy">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -2410,28 +2322,14 @@
 			<drop>
 				<item id="9599" min="1" max="1" chance="55.69" /> <!-- Ancient Tome of the Demon -->
 				<item id="57" min="2656" max="5362" chance="70" /> <!-- Adena -->
-				<item id="15766" min="1" max="1" chance="0.00325201823472977" /> <!-- Sealed Moirai Ring -->
-				<item id="15767" min="1" max="1" chance="0.002167171189785" /> <!-- Sealed Moirai Earring -->
-				<item id="15768" min="1" max="1" chance="0.00162474766731262" /> <!-- Sealed Moirai Necklace -->
-				<item id="15772" min="1" max="1" chance="1.2290661065197" /> <!-- Sealed Moirai Ring Gem -->
-				<item id="15773" min="1" max="1" chance="0.69075491121769" /> <!-- Sealed Moirai Earring Gem -->
-				<item id="15774" min="1" max="1" chance="0.596035149693489" /> <!-- Sealed Moirai Necklace Gem -->
 				<item id="1895" min="1" max="1" chance="21.8214515979309" /> <!-- Metallic Fiber -->
 				<item id="4040" min="1" max="1" chance="1.52749508363342" /> <!-- Mold Lubricant -->
 				<item id="4042" min="1" max="1" chance="1.2729307036438" /> <!-- Enria -->
 				<item id="4043" min="1" max="1" chance="2.54582513938904" /> <!-- Asofe -->
-				<item id="9551" min="1" max="1" chance="0.611005287033081" /> <!-- Holy Stone -->
-				<item id="959" min="1" max="1" chance="0.00304650347900391" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="9551" min="1" max="1" chance="0.611005287033081" /> <!-- Divine Stone -->
+				<item id="959" min="1" max="1" chance="0.00304650347900391" /> <!-- Scroll: Enchant Weapon (S) -->
 				<item id="1345" min="60" max="180" chance="8.48614424446106" /> <!-- Shining Arrow -->
 			</drop>
-			<spoil>
-				<item id="15772" min="1" max="1" chance="7.4848" /> <!-- Sealed Moirai Ring Gem -->
-				<item id="15773" min="1" max="1" chance="4.2066" /> <!-- Sealed Moirai Earring Gem -->
-				<item id="15774" min="1" max="1" chance="3.6297" /> <!-- Sealed Moirai Necklace Gem -->
-				<item id="15812" min="1" max="1" chance="0.9902" /> <!-- Recipe - Sealed Moirai Ring (70%) -->
-				<item id="15813" min="1" max="1" chance="0.6601" /> <!-- Recipe - Sealed Moirai Earring (70%) -->
-				<item id="15814" min="1" max="1" chance="0.4951" /> <!-- Recipe - Sealed Moirai Necklace (70%) -->
-			</spoil>
 		</dropLists>
 		<collision>
 			<radius normal="11" />
@@ -2439,7 +2337,6 @@
 		</collision>
 	</npc>
 	<npc id="22429" level="83" type="Monster" name="Slave of Pride">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -2493,35 +2390,17 @@
 			<drop>
 				<item id="9599" min="1" max="1" chance="55.69" /> <!-- Ancient Tome of the Demon -->
 				<item id="57" min="2656" max="5362" chance="70" /> <!-- Adena -->
-				<item id="15703" min="1" max="1" chance="0.00211700858473778" /> <!-- Sealed Moirai Gauntlet -->
-				<item id="15704" min="1" max="1" chance="0.00211700858473778" /> <!-- Sealed Moirai Leather Gloves -->
-				<item id="15705" min="1" max="1" chance="0.00211700858473778" /> <!-- Sealed Moirai Gloves -->
-				<item id="15654" min="1" max="1" chance="0.795251284731627" /> <!-- Sealed Moirai Gauntlet Piece -->
-				<item id="15655" min="1" max="1" chance="0.795251284731627" /> <!-- Sealed Moirai Leather Gloves Piece -->
-				<item id="15656" min="1" max="1" chance="0.795246500531435" /> <!-- Sealed Moirai Gloves Piece -->
 				<item id="1873" min="2" max="6" chance="5.34626372731018" /> <!-- Silver Nugget -->
 				<item id="1868" min="18" max="54" chance="3.71268419856262" /> <!-- Thread -->
 				<item id="1876" min="1" max="1" chance="13.3656403355255" /> <!-- Mithril Ore -->
 				<item id="1895" min="3" max="9" chance="2.72766930422974" /> <!-- Metallic Fiber -->
 				<item id="4042" min="1" max="1" chance="1.11379386991882" /> <!-- Enria -->
-				<item id="9551" min="1" max="1" chance="0.534630169281006" /> <!-- Holy Stone -->
-				<item id="960" min="1" max="1" chance="0.0267277119140625" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="9551" min="1" max="1" chance="0.534630169281006" /> <!-- Divine Stone -->
+				<item id="960" min="1" max="1" chance="0.0267277119140625" /> <!-- Scroll: Enchant Armor (S) -->
 				<item id="1345" min="40" max="120" chance="11.1380905611877" /> <!-- Shining Arrow -->
 			</drop>
 			<spoil>
-				<item id="15654" min="1" max="1" chance="2.2362" /> <!-- Sealed Moirai Gauntlet Piece -->
-				<item id="15655" min="1" max="1" chance="2.2362" /> <!-- Sealed Moirai Leather Gloves Piece -->
-				<item id="15656" min="1" max="1" chance="2.2362" /> <!-- Sealed Moirai Gloves Piece -->
-				<item id="15657" min="1" max="1" chance="2.2362" /> <!-- Sealed Moirai Boots Piece -->
-				<item id="15658" min="1" max="1" chance="2.2362" /> <!-- Sealed Moirai Leather Boots Piece -->
-				<item id="15659" min="1" max="1" chance="2.2362" /> <!-- Sealed Moirai Shoes Piece -->
 				<item id="9630" min="1" max="1" chance="1.3182" /> <!-- Orichalcum -->
-				<item id="15784" min="1" max="1" chance="0.2975" /> <!-- Recipe - Sealed Moirai Gauntlet (60%) -->
-				<item id="15785" min="1" max="1" chance="0.2975" /> <!-- Recipe - Sealed Moirai Leather Gloves (60%) -->
-				<item id="15786" min="1" max="1" chance="0.2975" /> <!-- Recipe - Sealed Moirai Gloves (60%) -->
-				<item id="15787" min="1" max="1" chance="0.2975" /> <!-- Recipe - Sealed Moirai Boots (60%) -->
-				<item id="15788" min="1" max="1" chance="0.2975" /> <!-- Recipe - Sealed Moirai Leather Boots (60%) -->
-				<item id="15789" min="1" max="1" chance="0.2975" /> <!-- Recipe - Sealed Moirai Shoes (60%) -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -2530,7 +2409,6 @@
 		</collision>
 	</npc>
 	<npc id="22430" level="83" type="Monster" name="Slave of Gluttony">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -2583,29 +2461,13 @@
 			<drop>
 				<item id="9599" min="1" max="1" chance="55.69" /> <!-- Ancient Tome of the Demon -->
 				<item id="57" min="2656" max="5362" chance="70" /> <!-- Adena -->
-				<item id="15694" min="1" max="1" chance="0.00211695549619198" /> <!-- Sealed Moirai Helmet -->
-				<item id="15695" min="1" max="1" chance="0.00211695549619198" /> <!-- Sealed Moirai Leather Helmet -->
-				<item id="15645" min="1" max="1" chance="0.793133043073297" /> <!-- Sealed Moirai Helmet Piece -->
-				<item id="15646" min="1" max="1" chance="0.793133043073297" /> <!-- Sealed Moirai Leather Helmet Piece -->
 				<item id="1879" min="1" max="1" chance="14.8507387390709" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="7.4253816416359" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="7.4253816416359" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="0.698847032146454" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.468966046543121" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.38740566696167" /> <!-- Adamantine -->
-				<item id="9551" min="1" max="1" chance="0.712861770858765" /> <!-- Holy Stone -->
+				<item id="9551" min="1" max="1" chance="0.712861770858765" /> <!-- Divine Stone -->
 			</drop>
-			<spoil>
-				<item id="15645" min="1" max="1" chance="1.9323" /> <!-- Sealed Moirai Helmet Piece -->
-				<item id="15646" min="1" max="1" chance="1.9323" /> <!-- Sealed Moirai Leather Helmet Piece -->
-				<item id="15647" min="1" max="1" chance="1.9323" /> <!-- Sealed Moirai Circlet Piece -->
-				<item id="15693" min="1" max="1" chance="3.4637" /> <!-- Sealed Moirai Shield Piece -->
-				<item id="15692" min="1" max="1" chance="3.4637" /> <!-- Sealed Moirai Sigil Piece -->
-				<item id="15775" min="1" max="1" chance="0.2579" /> <!-- Recipe - Sealed Moirai Helmet (60%) -->
-				<item id="15776" min="1" max="1" chance="0.2579" /> <!-- Recipe - Sealed Moirai Leather Helmet(60%) -->
-				<item id="15777" min="1" max="1" chance="0.2579" /> <!-- Recipe - Sealed Moirai Circlet (60%) -->
-				<item id="15791" min="1" max="1" chance="0.3684" /> <!-- Recipe - Sealed Moirai Shield (60%) -->
-				<item id="15790" min="1" max="1" chance="0.3684" /> <!-- Recipe - Sealed Moirai Sigil (60%) -->
-			</spoil>
 		</dropLists>
 		<collision>
 			<radius normal="15" />
@@ -2613,7 +2475,6 @@
 		</collision>
 	</npc>
 	<npc id="22431" level="83" type="Monster" name="Original Sin Warden">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2686,20 +2547,16 @@
 			<drop>
 				<item id="9599" min="3" max="9" chance="53.6" /> <!-- Ancient Tome of the Demon -->
 				<item id="57" min="15337" max="30961" chance="70" /> <!-- Adena -->
-				<item id="15698" min="1" max="1" chance="0.0122240334529877" /> <!-- Sealed Moirai Leather Breastplate -->
-				<item id="15649" min="1" max="1" chance="4.95487610997963" /> <!-- Sealed Moirai Leather Breastplate Piece -->
 				<item id="1871" min="24" max="72" chance="9.18804705869293" /> <!-- Charcoal -->
 				<item id="1866" min="52" max="156" chance="2.80016410375214" /> <!-- Suede -->
 				<item id="1877" min="1" max="1" chance="17.6410613520584" /> <!-- Adamantite Nugget -->
 				<item id="4041" min="1" max="1" chance="3.83502130796051" /> <!-- Mold Hardener -->
 				<item id="4040" min="1" max="1" chance="8.8205306760292" /> <!-- Mold Lubricant -->
-				<item id="9551" min="1" max="1" chance="3.52823060269165" /> <!-- Holy Stone -->
-				<item id="959" min="1" max="1" chance="0.0176448194694519" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="9551" min="1" max="1" chance="3.52823060269165" /> <!-- Divine Stone -->
+				<item id="959" min="1" max="1" chance="0.0176448194694519" /> <!-- Scroll: Enchant Weapon (S) -->
 			</drop>
 			<spoil>
-				<item id="15649" min="1" max="1" chance="20.1187" /> <!-- Sealed Moirai Leather Breastplate Piece -->
 				<item id="9630" min="1" max="1" chance="32.9842" /> <!-- Orichalcum -->
-				<item id="15779" min="1" max="1" chance="2.4815" /> <!-- Recipe - Sealed Moirai Leather Breastplate (60%) -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -2708,7 +2565,6 @@
 		</collision>
 	</npc>
 	<npc id="22432" level="83" type="Monster" name="Slave of Greed">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -2762,24 +2618,20 @@
 			<drop>
 				<item id="9599" min="1" max="1" chance="48.41" /> <!-- Ancient Tome of the Demon -->
 				<item id="57" min="2309" max="4661" chance="70" /> <!-- Adena -->
-				<item id="15701" min="1" max="1" chance="0.00294467907500267" /> <!-- Sealed Moirai Leather Legging -->
-				<item id="15652" min="1" max="1" chance="1.21035531062531" /> <!-- Sealed Moirai Leather Legging Piece -->
 				<item id="1865" min="1" max="3" chance="21.126424094696" /> <!-- Varnish -->
 				<item id="1870" min="1" max="3" chance="14.084298240097" /> <!-- Coal -->
 				<item id="1879" min="1" max="1" chance="7.042125854599" /> <!-- Cokes -->
 				<item id="1875" min="1" max="1" chance="2.81684103565979" /> <!-- Stone of Purity -->
 				<item id="4040" min="1" max="1" chance="0.845047657608032" /> <!-- Mold Lubricant -->
-				<item id="14166" min="1" max="1" chance="0.204131054122925" /> <!-- Life Stone - Level 84 -->
-				<item id="14167" min="1" max="1" chance="0.0509513344573975" /> <!-- Mid-Grade Life Stone - Level 84 -->
-				<item id="14168" min="1" max="1" chance="0.00511839889526367" /> <!-- High-Grade Life Stone - Level 84 -->
-				<item id="14169" min="1" max="1" chance="0.00102367977905273" /> <!-- Top-Grade Life Stone - Level 84 -->
-				<item id="9551" min="1" max="1" chance="0.338000450683594" /> <!-- Holy Stone -->
-				<item id="960" min="1" max="1" chance="0.016937247253418" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="14166" min="1" max="1" chance="0.204131054122925" /> <!-- Life Stone - level 84 -->
+				<item id="14167" min="1" max="1" chance="0.0509513344573975" /> <!-- Mid-Grade Life Stone - level 84 -->
+				<item id="14168" min="1" max="1" chance="0.00511839889526367" /> <!-- High-Grade Life Stone - level 84 -->
+				<item id="14169" min="1" max="1" chance="0.00102367977905273" /> <!-- Top-Grade Life Stone - level 84 -->
+				<item id="9551" min="1" max="1" chance="0.338000450683594" /> <!-- Divine Stone -->
+				<item id="960" min="1" max="1" chance="0.016937247253418" /> <!-- Scroll: Enchant Armor (S) -->
 			</drop>
 			<spoil>
-				<item id="15652" min="1" max="1" chance="4.9141" /> <!-- Sealed Moirai Leather Legging Piece -->
 				<item id="9630" min="1" max="1" chance="4.9658" /> <!-- Orichalcum -->
-				<item id="15782" min="1" max="1" chance="0.5978" /> <!-- Recipe - Sealed Moirai Leather Legging (60%) -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -2788,7 +2640,6 @@
 		</collision>
 	</npc>
 	<npc id="22433" level="83" type="Monster" name="Slave of Lust">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -2841,27 +2692,13 @@
 			<drop>
 				<item id="9599" min="1" max="1" chance="48.41" /> <!-- Ancient Tome of the Demon -->
 				<item id="57" min="2309" max="4661" chance="70" /> <!-- Adena -->
-				<item id="15766" min="1" max="1" chance="0.00282716371130943" /> <!-- Sealed Moirai Ring -->
-				<item id="15767" min="1" max="1" chance="0.0018840447075367" /> <!-- Sealed Moirai Earring -->
-				<item id="15768" min="1" max="1" chance="0.00141248520565033" /> <!-- Sealed Moirai Necklace -->
-				<item id="15772" min="1" max="1" chance="1.06849680547428" /> <!-- Sealed Moirai Ring Gem -->
-				<item id="15773" min="1" max="1" chance="0.600512382602215" /> <!-- Sealed Moirai Earring Gem -->
-				<item id="15774" min="1" max="1" chance="0.518167127072811" /> <!-- Sealed Moirai Necklace Gem -->
 				<item id="1866" min="1" max="3" chance="17.2141112837524" /> <!-- Suede -->
 				<item id="1871" min="4" max="12" chance="9.68293523809814" /> <!-- Charcoal -->
 				<item id="5220" min="1" max="1" chance="3.09853474688721" /> <!-- Metal Hardener -->
-				<item id="1885" min="1" max="1" chance="6.45527757733154" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="6.45527757733154" /> <!-- High Grade Suede -->
 				<item id="4041" min="1" max="1" chance="0.673583022827148" /> <!-- Mold Hardener -->
-				<item id="9551" min="1" max="1" chance="0.619759791259766" /> <!-- Holy Stone -->
+				<item id="9551" min="1" max="1" chance="0.619759791259766" /> <!-- Divine Stone -->
 			</drop>
-			<spoil>
-				<item id="15772" min="1" max="1" chance="6.5069" /> <!-- Sealed Moirai Ring Gem -->
-				<item id="15773" min="1" max="1" chance="3.657" /> <!-- Sealed Moirai Earring Gem -->
-				<item id="15774" min="1" max="1" chance="3.1555" /> <!-- Sealed Moirai Necklace Gem -->
-				<item id="15812" min="1" max="1" chance="0.8609" /> <!-- Recipe - Sealed Moirai Ring (70%) -->
-				<item id="15813" min="1" max="1" chance="0.5738" /> <!-- Recipe - Sealed Moirai Earring (70%) -->
-				<item id="15814" min="1" max="1" chance="0.4304" /> <!-- Recipe - Sealed Moirai Necklace (70%) -->
-			</spoil>
 		</dropLists>
 		<collision>
 			<radius normal="12" />
@@ -2869,7 +2706,6 @@
 		</collision>
 	</npc>
 	<npc id="22434" level="83" type="Monster" name="Slave of Wrath">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="114" />
 			<param name="MoveAroundSocial1" value="114" />
@@ -2922,35 +2758,17 @@
 			<drop>
 				<item id="9599" min="1" max="1" chance="48.41" /> <!-- Ancient Tome of the Demon -->
 				<item id="57" min="2309" max="4661" chance="70" /> <!-- Adena -->
-				<item id="15706" min="1" max="1" chance="0.00184044608473778" /> <!-- Sealed Moirai Boots -->
-				<item id="15707" min="1" max="1" chance="0.00184044608473778" /> <!-- Sealed Moirai Leather Boots -->
-				<item id="15708" min="1" max="1" chance="0.00184044608473778" /> <!-- Sealed Moirai Shoes -->
-				<item id="15657" min="1" max="1" chance="0.691360972231627" /> <!-- Sealed Moirai Boots Piece -->
-				<item id="15658" min="1" max="1" chance="0.691360972231627" /> <!-- Sealed Moirai Leather Boots Piece -->
-				<item id="15659" min="1" max="1" chance="0.691356813031435" /> <!-- Sealed Moirai Shoes Piece -->
 				<item id="1869" min="9" max="27" chance="3.22765120535278" /> <!-- Iron Ore -->
 				<item id="1864" min="4" max="12" chance="14.5243614512863" /> <!-- Stem -->
 				<item id="1880" min="1" max="1" chance="5.80975147779465" /> <!-- Steel -->
 				<item id="5550" min="1" max="1" chance="0.77463353037262" /> <!-- Durable Metal Plate -->
 				<item id="4043" min="1" max="1" chance="1.93658382593155" /> <!-- Asofe -->
-				<item id="9551" min="1" max="1" chance="0.464773220943451" /> <!-- Holy Stone -->
-				<item id="959" min="1" max="1" chance="0.00231058884048462" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="9551" min="1" max="1" chance="0.464773220943451" /> <!-- Divine Stone -->
+				<item id="959" min="1" max="1" chance="0.00231058884048462" /> <!-- Scroll: Enchant Weapon (S) -->
 				<item id="1345" min="50" max="150" chance="7.7463353037262" /> <!-- Shining Arrow -->
 			</drop>
 			<spoil>
-				<item id="15654" min="1" max="1" chance="1.944" /> <!-- Sealed Moirai Gauntlet Piece -->
-				<item id="15655" min="1" max="1" chance="1.944" /> <!-- Sealed Moirai Leather Gloves Piece -->
-				<item id="15656" min="1" max="1" chance="1.944" /> <!-- Sealed Moirai Gloves Piece -->
-				<item id="15657" min="1" max="1" chance="1.944" /> <!-- Sealed Moirai Boots Piece -->
-				<item id="15658" min="1" max="1" chance="1.944" /> <!-- Sealed Moirai Leather Boots Piece -->
-				<item id="15659" min="1" max="1" chance="1.944" /> <!-- Sealed Moirai Shoes Piece -->
 				<item id="9630" min="1" max="1" chance="1.146" /> <!-- Orichalcum -->
-				<item id="15784" min="1" max="1" chance="0.2587" /> <!-- Recipe - Sealed Moirai Gauntlet (60%) -->
-				<item id="15785" min="1" max="1" chance="0.2587" /> <!-- Recipe - Sealed Moirai Leather Gloves (60%) -->
-				<item id="15786" min="1" max="1" chance="0.2587" /> <!-- Recipe - Sealed Moirai Gloves (60%) -->
-				<item id="15787" min="1" max="1" chance="0.2587" /> <!-- Recipe - Sealed Moirai Boots (60%) -->
-				<item id="15788" min="1" max="1" chance="0.2587" /> <!-- Recipe - Sealed Moirai Leather Boots (60%) -->
-				<item id="15789" min="1" max="1" chance="0.2587" /> <!-- Recipe - Sealed Moirai Shoes (60%) -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -2959,7 +2777,6 @@
 		</collision>
 	</npc>
 	<npc id="22435" level="83" type="Monster" name="Slave of Sloth">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -3014,19 +2831,15 @@
 			<drop>
 				<item id="9599" min="1" max="1" chance="48.41" /> <!-- Ancient Tome of the Demon -->
 				<item id="57" min="2309" max="4661" chance="70" /> <!-- Adena -->
-				<item id="15699" min="1" max="1" chance="0.00184033578169346" /> <!-- Sealed Moirai Tunic -->
-				<item id="15650" min="1" max="1" chance="0.745959656779647" /> <!-- Sealed Moirai Tunic Piece -->
 				<item id="1895" min="1" max="1" chance="22.1324710974216" /> <!-- Metallic Fiber -->
 				<item id="4040" min="1" max="1" chance="1.54927677897453" /> <!-- Mold Lubricant -->
 				<item id="9628" min="1" max="1" chance="0.607559024152756" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.407692408714294" /> <!-- Orichalcum -->
-				<item id="9551" min="1" max="1" chance="0.619700572509766" /> <!-- Holy Stone -->
-				<item id="960" min="1" max="1" chance="0.0310002372455597" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="9551" min="1" max="1" chance="0.619700572509766" /> <!-- Divine Stone -->
+				<item id="960" min="1" max="1" chance="0.0310002372455597" /> <!-- Scroll: Enchant Armor (S) -->
 			</drop>
 			<spoil>
-				<item id="15650" min="1" max="1" chance="3.0289" /> <!-- Sealed Moirai Tunic Piece -->
 				<item id="1894" min="1" max="1" chance="33.1055" /> <!-- Crafted Leather -->
-				<item id="15780" min="1" max="1" chance="0.3736" /> <!-- Recipe - Sealed Moirai Tunic (60%) -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -3035,7 +2848,6 @@
 		</collision>
 	</npc>
 	<npc id="22436" level="83" type="Monster" name="Slave of Envy">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -3089,19 +2901,15 @@
 			<drop>
 				<item id="9599" min="1" max="1" chance="48.41" /> <!-- Ancient Tome of the Demon -->
 				<item id="57" min="2309" max="4661" chance="70" /> <!-- Adena -->
-				<item id="15697" min="1" max="1" chance="0.0013803415992856" /> <!-- Sealed Moirai Breastplate -->
-				<item id="15648" min="1" max="1" chance="0.551419658114612" /> <!-- Sealed Moirai Breastplate Piece -->
 				<item id="1868" min="3" max="9" chance="25.8211782886047" /> <!-- Thread -->
 				<item id="1873" min="2" max="6" chance="7.74633858261108" /> <!-- Silver Nugget -->
 				<item id="5549" min="1" max="1" chance="7.74633858261108" /> <!-- Metallic Thread -->
 				<item id="1889" min="1" max="1" chance="5.16422572174072" /> <!-- Compound Braid -->
 				<item id="4044" min="1" max="1" chance="2.58211286087036" /> <!-- Thons -->
-				<item id="9551" min="1" max="1" chance="0.619707086608887" /> <!-- Holy Stone -->
+				<item id="9551" min="1" max="1" chance="0.619707086608887" /> <!-- Divine Stone -->
 			</drop>
 			<spoil>
-				<item id="15648" min="1" max="1" chance="2.2384" /> <!-- Sealed Moirai Breastplate Piece -->
 				<item id="1894" min="1" max="1" chance="33.1055" /> <!-- Crafted Leather -->
-				<item id="15778" min="1" max="1" chance="0.2802" /> <!-- Recipe - Sealed Moirai Breastplate (60%) -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -3110,7 +2918,6 @@
 		</collision>
 	</npc>
 	<npc id="22437" level="83" type="Monster" name="Slave of Pride">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -3164,21 +2971,17 @@
 			<drop>
 				<item id="9599" min="1" max="1" chance="48.41" /> <!-- Ancient Tome of the Demon -->
 				<item id="57" min="2309" max="4661" chance="70" /> <!-- Adena -->
-				<item id="15700" min="1" max="1" chance="0.00220829917430878" /> <!-- Sealed Moirai Gaiter -->
-				<item id="15651" min="1" max="1" chance="0.924091690049171" /> <!-- Sealed Moirai Gaiter Piece -->
 				<item id="1868" min="3" max="9" chance="19.3658774293137" /> <!-- Thread -->
 				<item id="1873" min="2" max="6" chance="4.64782889635468" /> <!-- Silver Nugget -->
 				<item id="5549" min="1" max="1" chance="5.8097632287941" /> <!-- Metallic Thread -->
 				<item id="1889" min="1" max="1" chance="3.87317548586273" /> <!-- Compound Braid -->
 				<item id="4044" min="1" max="1" chance="1.93658774293137" /> <!-- Thons -->
-				<item id="9551" min="1" max="1" chance="0.464792046295166" /> <!-- Holy Stone -->
-				<item id="959" min="1" max="1" chance="0.00233494822311401" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="9551" min="1" max="1" chance="0.464792046295166" /> <!-- Divine Stone -->
+				<item id="959" min="1" max="1" chance="0.00233494822311401" /> <!-- Scroll: Enchant Weapon (S) -->
 				<item id="1345" min="40" max="120" chance="9.68293871465683" /> <!-- Shining Arrow -->
 			</drop>
 			<spoil>
-				<item id="15651" min="1" max="1" chance="3.7515" /> <!-- Sealed Moirai Gaiter Piece -->
 				<item id="1894" min="1" max="1" chance="33.1055" /> <!-- Crafted Leather -->
-				<item id="15781" min="1" max="1" chance="0.4483" /> <!-- Recipe - Sealed Moirai Gaiter (60%) -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -3187,7 +2990,6 @@
 		</collision>
 	</npc>
 	<npc id="22438" level="83" type="Monster" name="Slave of Gluttony">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -3240,19 +3042,15 @@
 			<drop>
 				<item id="9599" min="1" max="1" chance="48.41" /> <!-- Ancient Tome of the Demon -->
 				<item id="57" min="2309" max="4661" chance="70" /> <!-- Adena -->
-				<item id="15702" min="1" max="1" chance="0.00294467907500267" /> <!-- Sealed Moirai Stockings -->
-				<item id="15653" min="1" max="1" chance="1.21035531062531" /> <!-- Sealed Moirai Stockings Piece -->
 				<item id="1895" min="1" max="1" chance="22.1324710974216" /> <!-- Metallic Fiber -->
 				<item id="4040" min="1" max="1" chance="1.54927677897453" /> <!-- Mold Lubricant -->
 				<item id="9628" min="1" max="1" chance="0.607559024152756" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.407692408714294" /> <!-- Orichalcum -->
-				<item id="9551" min="1" max="1" chance="0.619700572509766" /> <!-- Holy Stone -->
-				<item id="960" min="1" max="1" chance="0.0310002372455597" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="9551" min="1" max="1" chance="0.619700572509766" /> <!-- Divine Stone -->
+				<item id="960" min="1" max="1" chance="0.0310002372455597" /> <!-- Scroll: Enchant Armor (S) -->
 			</drop>
 			<spoil>
-				<item id="15653" min="1" max="1" chance="4.9141" /> <!-- Sealed Moirai Stockings Piece -->
-				<item id="959" min="1" max="1" chance="0.0377" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="15783" min="1" max="1" chance="0.5978" /> <!-- Recipe - Sealed Moirai Stockings (60%) -->
+				<item id="959" min="1" max="1" chance="0.0377" /> <!-- Scroll: Enchant Weapon (S) -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -3261,7 +3059,6 @@
 		</collision>
 	</npc>
 	<npc id="22439" level="83" type="Monster" name="Beleth's Assassin">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -3328,17 +3125,17 @@
 				<item id="4041" min="1" max="1" chance="4.05115475028992" /> <!-- Mold Hardener -->
 				<item id="4044" min="1" max="1" chance="15.5293810905762" /> <!-- Thons -->
 				<item id="6901" min="1" max="1" chance="0.465885068893433" /> <!-- Recipe: Shining Arrow (100%) -->
-				<item id="9551" min="1" max="1" chance="3.72703509894562" /> <!-- Holy Stone -->
-				<item id="14166" min="1" max="1" chance="2.25061122647095" /> <!-- Life Stone - Level 84 -->
-				<item id="14167" min="1" max="1" chance="0.561971023590088" /> <!-- Mid-Grade Life Stone - Level 84 -->
-				<item id="14168" min="1" max="1" chance="0.0561789214782715" /> <!-- High-Grade Life Stone - Level 84 -->
-				<item id="14169" min="1" max="1" chance="0.0112266938552856" /> <!-- Top-Grade Life Stone - Level 84 -->
+				<item id="9551" min="1" max="1" chance="3.72703509894562" /> <!-- Divine Stone -->
+				<item id="14166" min="1" max="1" chance="2.25061122647095" /> <!-- Life Stone - level 84 -->
+				<item id="14167" min="1" max="1" chance="0.561971023590088" /> <!-- Mid-Grade Life Stone - level 84 -->
+				<item id="14168" min="1" max="1" chance="0.0561789214782715" /> <!-- High-Grade Life Stone - level 84 -->
+				<item id="14169" min="1" max="1" chance="0.0112266938552856" /> <!-- Top-Grade Life Stone - level 84 -->
 				<item id="1345" min="240" max="720" chance="12.9411963610153" /> <!-- Shining Arrow -->
 			</drop>
 			<spoil>
 				<item id="6901" min="1" max="1" chance="10.4031" /> <!-- Recipe: Shining Arrow (100%) -->
 				<item id="6709" min="1" max="3" chance="74.0591" /> <!-- Sealed Draconic Leather Boots Design -->
-				<item id="960" min="1" max="1" chance="4.1612" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="960" min="1" max="1" chance="4.1612" /> <!-- Scroll: Enchant Armor (S) -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -3347,7 +3144,6 @@
 		</collision>
 	</npc>
 	<npc id="22440" level="83" type="Monster" name="Beleth's Assassin">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -3419,8 +3215,8 @@
 				<item id="4040" min="1" max="1" chance="17.5793894261742" /> <!-- Mold Lubricant -->
 				<item id="9628" min="1" max="1" chance="6.89386997746658" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="4.62614529524612" /> <!-- Orichalcum -->
-				<item id="959" min="1" max="1" chance="0.0351592451553345" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="9551" min="1" max="1" chance="7.03180240076828" /> <!-- Holy Stone -->
+				<item id="959" min="1" max="1" chance="0.0351592451553345" /> <!-- Scroll: Enchant Weapon (S) -->
+				<item id="9551" min="1" max="1" chance="7.03180240076828" /> <!-- Divine Stone -->
 			</drop>
 			<spoil>
 				<item id="4040" min="1" max="5" chance="71.3725" /> <!-- Mold Lubricant -->
@@ -3434,7 +3230,6 @@
 		</collision>
 	</npc>
 	<npc id="22441" level="83" type="Monster" name="Beleth's Minion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -3498,12 +3293,12 @@
 				<item id="1881" min="3" max="9" chance="7.46293370237732" /> <!-- Coarse Bone Powder -->
 				<item id="1875" min="4" max="12" chance="2.90226356946945" /> <!-- Stone of Purity -->
 				<item id="4041" min="1" max="1" chance="3.40698694382858" /> <!-- Mold Hardener -->
-				<item id="960" min="1" max="1" chance="0.156736468894959" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				<item id="9551" min="1" max="1" chance="3.1344515994873" /> <!-- Holy Stone -->
-				<item id="14166" min="1" max="1" chance="1.89278209844971" /> <!-- Life Stone - Level 84 -->
-				<item id="14167" min="1" max="1" chance="0.472639967788696" /> <!-- Mid-Grade Life Stone - Level 84 -->
-				<item id="14168" min="1" max="1" chance="0.047257052318573" /> <!-- High-Grade Life Stone - Level 84 -->
-				<item id="14169" min="1" max="1" chance="0.00940974370193481" /> <!-- Top-Grade Life Stone - Level 84 -->
+				<item id="960" min="1" max="1" chance="0.156736468894959" /> <!-- Scroll: Enchant Armor (S) -->
+				<item id="9551" min="1" max="1" chance="3.1344515994873" /> <!-- Divine Stone -->
+				<item id="14166" min="1" max="1" chance="1.89278209844971" /> <!-- Life Stone - level 84 -->
+				<item id="14167" min="1" max="1" chance="0.472639967788696" /> <!-- Mid-Grade Life Stone - level 84 -->
+				<item id="14168" min="1" max="1" chance="0.047257052318573" /> <!-- High-Grade Life Stone - level 84 -->
+				<item id="14169" min="1" max="1" chance="0.00940974370193481" /> <!-- Top-Grade Life Stone - level 84 -->
 			</drop>
 			<spoil>
 				<item id="6901" min="1" max="1" chance="8.749" /> <!-- Recipe: Shining Arrow (100%) -->
@@ -3517,7 +3312,6 @@
 		</collision>
 	</npc>
 	<npc id="22442" level="83" type="Monster" name="Beleth's Minion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -3582,11 +3376,11 @@
 				<item id="1895" min="3" max="9" chance="17.2514910692215" /> <!-- Metallic Fiber -->
 				<item id="4042" min="1" max="1" chance="6.03801084597778" /> <!-- Enria -->
 				<item id="6901" min="1" max="1" chance="0.362300060478211" /> <!-- Recipe: Shining Arrow (100%) -->
-				<item id="9551" min="1" max="1" chance="2.89822403182983" /> <!-- Holy Stone -->
+				<item id="9551" min="1" max="1" chance="2.89822403182983" /> <!-- Divine Stone -->
 			</drop>
 			<spoil>
 				<item id="6712" min="1" max="1" chance="73.2969" /> <!-- Sealed Major Arcana Gloves fabric -->
-				<item id="959" min="1" max="1" chance="0.2059" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="959" min="1" max="1" chance="0.2059" /> <!-- Scroll: Enchant Weapon (S) -->
 				<item id="1876" min="1" max="21" chance="93.6002" /> <!-- Mithril Ore -->
 			</spoil>
 		</dropLists>
@@ -3596,7 +3390,6 @@
 		</collision>
 	</npc>
 	<npc id="22443" level="45" type="Monster" name="Kertang's Messenger">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3668,7 +3461,6 @@
 		</collision>
 	</npc>
 	<npc id="22444" level="55" type="Monster" name="Kertang's Messenger">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3724,10 +3516,10 @@
 				<item id="1882" min="1" max="1" chance="2.58091084701538" /> <!-- Leather -->
 				<item id="1894" min="1" max="1" chance="0.407515836486816" /> <!-- Crafted Leather -->
 				<item id="4042" min="1" max="1" chance="0.193573439941406" /> <!-- Enria -->
-				<item id="1806" min="1" max="1" chance="0.0232397491455078" /> <!-- Recipe: Soulshot (B-Grade) -->
+				<item id="1806" min="1" max="1" chance="0.0232397491455078" /> <!-- Recipe: Soulshot: B-Grade -->
 			</drop>
 			<spoil>
-				<item id="1806" min="1" max="1" chance="0.3775" /> <!-- Recipe: Soulshot (B-Grade) -->
+				<item id="1806" min="1" max="1" chance="0.3775" /> <!-- Recipe: Soulshot: B-Grade -->
 				<item id="1918" min="1" max="1" chance="8.1736" /> <!-- Nassen's Earring Gemstone -->
 				<item id="3034" min="1" max="1" chance="0.3775" /> <!-- Recipe: Spiritshot B -->
 			</spoil>
@@ -3738,7 +3530,6 @@
 		</collision>
 	</npc>
 	<npc id="22445" level="65" type="Monster" name="Kertang's Messenger">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3794,7 +3585,7 @@
 				<item id="4040" min="1" max="1" chance="0.310650457879543" /> <!-- Mold Lubricant -->
 				<item id="4042" min="1" max="1" chance="0.258874460416317" /> <!-- Enria -->
 				<item id="4043" min="1" max="1" chance="0.517754447732449" /> <!-- Asofe -->
-				<item id="729" min="1" max="1" chance="0.00172991964197159" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
+				<item id="729" min="1" max="1" chance="0.00172991964197159" /> <!-- Scroll: Enchant Weapon (A) -->
 			</drop>
 			<spoil>
 				<item id="4052" min="1" max="1" chance="9.3086" /> <!-- Earring of Black Ore Piece -->
@@ -3808,7 +3599,6 @@
 		</collision>
 	</npc>
 	<npc id="22446" level="75" type="Monster" name="Kertang's Messenger">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3861,15 +3651,15 @@
 				<item id="288" min="1" max="1" chance="0.000700902020037174" /> <!-- Carnage Bow -->
 				<item id="5535" min="1" max="1" chance="0.16859910281986" /> <!-- Carnage Bow Stave -->
 				<item id="1879" min="1" max="1" chance="2.7450066181488" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="1.3725033090744" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="1.3725033090744" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="0.129178910316467" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.086684047958374" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.0716072184829712" /> <!-- Adamantine -->
-				<item id="1808" min="1" max="1" chance="0.00732000588226318" /> <!-- Recipe: Soulshot (S-Grade) -->
+				<item id="1808" min="1" max="1" chance="0.00732000588226318" /> <!-- Recipe: Soulshot: S Grade -->
 			</drop>
 			<spoil>
 				<item id="5480" min="1" max="1" chance="1.2009" /> <!-- Sealed Leather Armor of Nightmare Fabric -->
-				<item id="1808" min="1" max="1" chance="0.1189" /> <!-- Recipe: Soulshot (S-Grade) -->
+				<item id="1808" min="1" max="1" chance="0.1189" /> <!-- Recipe: Soulshot: S Grade -->
 				<item id="5481" min="1" max="1" chance="1.2009" /> <!-- Sealed Majestic Leather Armor Fabric -->
 			</spoil>
 		</dropLists>
@@ -3879,7 +3669,6 @@
 		</collision>
 	</npc>
 	<npc id="22447" level="80" type="Monster" name="Kertang's Messenger">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3940,11 +3729,11 @@
 				<item id="4040" min="1" max="1" chance="0.421777421182156" /> <!-- Mold Lubricant -->
 				<item id="4042" min="1" max="1" chance="0.351479933918476" /> <!-- Enria -->
 				<item id="4043" min="1" max="1" chance="0.702959867836952" /> <!-- Asofe -->
-				<item id="959" min="1" max="1" chance="0.000832766391277313" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="959" min="1" max="1" chance="0.000832766391277313" /> <!-- Scroll: Enchant Weapon (S) -->
 			</drop>
 			<spoil>
 				<item id="3036" min="1" max="1" chance="0.0951" /> <!-- Recipe: Spiritshot S -->
-				<item id="5487" min="1" max="1" chance="0.9639" /> <!-- Sealed Robe of Nightmare Fabric -->
+				<item id="5487" min="1" max="1" chance="0.9639" /> <!-- Sealed Nightmare Robe Fabric -->
 				<item id="4043" min="1" max="1" chance="7.135" /> <!-- Asofe -->
 			</spoil>
 		</dropLists>
@@ -3954,7 +3743,6 @@
 		</collision>
 	</npc>
 	<npc id="22448" level="86" type="Monster" name="Leodas" title="Resistance Commander">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -4038,7 +3826,7 @@
 				<item id="5549" min="42" max="126" chance="2.1552955797348" /> <!-- Metallic Thread -->
 				<item id="1889" min="4" max="12" chance="13.4107458984833" /> <!-- Compound Braid -->
 				<item id="4044" min="5" max="15" chance="6.03485974749756" /> <!-- Thons -->
-				<item id="960" min="1" max="1" chance="0.724160682731628" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="960" min="1" max="1" chance="0.724160682731628" /> <!-- Scroll: Enchant Armor (S) -->
 			</drop>
 			<spoil>
 				<item id="1889" min="1" max="31" chance="91.8806" /> <!-- Compound Braid -->
@@ -4052,7 +3840,6 @@
 		</collision>
 	</npc>
 	<npc id="22449" level="86" type="Monster" name="Amaskari" title="Torture Expert">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -4136,7 +3923,7 @@
 				<item id="9628" min="1" max="1" chance="2.26585867452812" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="1.5205175887928" /> <!-- Orichalcum -->
 				<item id="6901" min="1" max="1" chance="0.288892898397446" /> <!-- Recipe: Shining Arrow (100%) -->
-				<item id="9551" min="1" max="1" chance="2.31116910848045" /> <!-- Holy Stone -->
+				<item id="9551" min="1" max="1" chance="2.31116910848045" /> <!-- Divine Stone -->
 			</drop>
 			<spoil>
 				<item id="6689" min="1" max="1" chance="7.4624" /> <!-- Basalt Battlehammer Head -->
@@ -4150,7 +3937,6 @@
 		</collision>
 	</npc>
 	<npc id="22450" level="86" type="Monster" name="Tortured Native">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -4203,10 +3989,10 @@
 				<item id="1876" min="1" max="1" chance="2.76536065263367" /> <!-- Mithril Ore -->
 				<item id="1895" min="1" max="1" chance="3.9505152180481" /> <!-- Metallic Fiber -->
 				<item id="4042" min="1" max="1" chance="0.230433343986511" /> <!-- Enria -->
-				<item id="959" min="1" max="1" chance="0.000561836784362793" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="959" min="1" max="1" chance="0.000561836784362793" /> <!-- Scroll: Enchant Weapon (S) -->
 			</drop>
 			<spoil>
-				<item id="960" min="1" max="1" chance="0.0674" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="960" min="1" max="1" chance="0.0674" /> <!-- Scroll: Enchant Armor (S) -->
 				<item id="1895" min="1" max="1" chance="48.1173" /> <!-- Metallic Fiber -->
 				<item id="4042" min="1" max="1" chance="2.8068" /> <!-- Enria -->
 			</spoil>
@@ -4217,7 +4003,6 @@
 		</collision>
 	</npc>
 	<npc id="22451" level="86" type="Monster" name="Native Elite Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -4275,11 +4060,11 @@
 				<item id="5323" min="1" max="1" chance="0.00109979118609428" /> <!-- Sealed Majestic Leather Armor -->
 				<item id="5481" min="1" max="1" chance="0.162950206739664" /> <!-- Sealed Majestic Leather Armor Fabric -->
 				<item id="1879" min="1" max="1" chance="4.03409740577412" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="2.01705194453716" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="2.01705194453716" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="0.189837513421059" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.127390365807533" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.105236928993225" /> <!-- Adamantine -->
-				<item id="960" min="1" max="1" chance="0.00968605051231384" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="960" min="1" max="1" chance="0.00968605051231384" /> <!-- Scroll: Enchant Armor (S) -->
 			</drop>
 			<spoil>
 				<item id="4040" min="1" max="1" chance="5.8962" /> <!-- Mold Lubricant -->
@@ -4293,7 +4078,6 @@
 		</collision>
 	</npc>
 	<npc id="22452" level="25" type="Monster" name="White Skull Kanabion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -4351,7 +4135,7 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="956" min="1" max="1" chance="1.01261952" /> <!-- Scroll: Enchant Armor (D-Grade) -->
+				<item id="956" min="1" max="1" chance="1.01261952" /> <!-- Scroll: Enchant Armor (D) -->
 				<item id="8600" min="1" max="1" chance="8.4" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="18.9" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="14.7" /> <!-- Superior Herb of Life -->
@@ -4359,7 +4143,7 @@
 				<item id="8604" min="1" max="1" chance="5.94" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.41" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -4379,7 +4163,6 @@
 		</collision>
 	</npc>
 	<npc id="22453" level="25" type="Monster" name="White Skull Kanabion" title="Doppler">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="215" />
 			<param name="MoveAroundSocial1" value="215" />
@@ -4442,7 +4225,7 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="956" min="1" max="1" chance="1.01261952" /> <!-- Scroll: Enchant Armor (D-Grade) -->
+				<item id="956" min="1" max="1" chance="1.01261952" /> <!-- Scroll: Enchant Armor (D) -->
 				<item id="8600" min="1" max="1" chance="8.4" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="18.9" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="14.7" /> <!-- Superior Herb of Life -->
@@ -4450,7 +4233,7 @@
 				<item id="8604" min="1" max="1" chance="5.94" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.41" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -4470,7 +4253,6 @@
 		</collision>
 	</npc>
 	<npc id="22454" level="27" type="Monster" name="White Skull Kanabion" title="Void">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -4535,7 +4317,7 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="956" min="1" max="1" chance="1.11490432" /> <!-- Scroll: Enchant Armor (D-Grade) -->
+				<item id="956" min="1" max="1" chance="1.11490432" /> <!-- Scroll: Enchant Armor (D) -->
 				<item id="8600" min="1" max="1" chance="8.4" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="18.9" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="14.7" /> <!-- Superior Herb of Life -->
@@ -4543,7 +4325,7 @@
 				<item id="8604" min="1" max="1" chance="5.94" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.41" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -4563,7 +4345,6 @@
 		</collision>
 	</npc>
 	<npc id="22455" level="30" type="Monster" name="Begrudged Kanabion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="138" />
 			<param name="MoveAroundSocial1" value="138" />
@@ -4621,7 +4402,7 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="956" min="1" max="1" chance="1.2811392" /> <!-- Scroll: Enchant Armor (D-Grade) -->
+				<item id="956" min="1" max="1" chance="1.2811392" /> <!-- Scroll: Enchant Armor (D) -->
 				<item id="8600" min="1" max="1" chance="8.4" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="18.9" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="14.7" /> <!-- Superior Herb of Life -->
@@ -4629,7 +4410,7 @@
 				<item id="8604" min="1" max="1" chance="5.94" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.41" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -4649,7 +4430,6 @@
 		</collision>
 	</npc>
 	<npc id="22456" level="30" type="Monster" name="Begrudged Kanabion" title="Doppler">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
 			<param name="MoveAroundSocial1" value="75" />
@@ -4672,7 +4452,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<equipment rhand="21732" /> <!-- rhand: Sword of Revolution - Event -->
+		<equipment rhand="129" /> <!-- rhand: Sword of Revolution -->
 		<acquire exp="1499" sp="81" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="604.08419" hpRegen="3.5" mp="329.4" mpRegen="1.5" />
@@ -4710,7 +4490,7 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="956" min="1" max="1" chance="1.2811392" /> <!-- Scroll: Enchant Armor (D-Grade) -->
+				<item id="956" min="1" max="1" chance="1.2811392" /> <!-- Scroll: Enchant Armor (D) -->
 				<item id="8600" min="1" max="1" chance="8.4" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="18.9" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="14.7" /> <!-- Superior Herb of Life -->
@@ -4718,7 +4498,7 @@
 				<item id="8604" min="1" max="1" chance="5.94" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.41" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -4738,7 +4518,6 @@
 		</collision>
 	</npc>
 	<npc id="22457" level="32" type="Monster" name="Begrudged Kanabion" title="Void">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -4762,7 +4541,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<equipment rhand="21741" /> <!-- rhand: Sword of Magic Fog - Event -->
+		<equipment rhand="7886" /> <!-- rhand: Sword of Magic Fog -->
 		<acquire exp="1882" sp="90" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="604.08419" hpRegen="3.5" mp="329.4" mpRegen="1.5" />
@@ -4801,7 +4580,7 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="956" min="1" max="1" chance="1.4105472" /> <!-- Scroll: Enchant Armor (D-Grade) -->
+				<item id="956" min="1" max="1" chance="1.4105472" /> <!-- Scroll: Enchant Armor (D) -->
 				<item id="8600" min="1" max="1" chance="8.4" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="18.9" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="14.7" /> <!-- Superior Herb of Life -->
@@ -4809,7 +4588,7 @@
 				<item id="8604" min="1" max="1" chance="6.16" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.52" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -4829,7 +4608,6 @@
 		</collision>
 	</npc>
 	<npc id="22458" level="35" type="Monster" name="Rotten Kanabion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -4886,7 +4664,7 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="956" min="1" max="1" chance="1.7031168" /> <!-- Scroll: Enchant Armor (D-Grade) -->
+				<item id="956" min="1" max="1" chance="1.7031168" /> <!-- Scroll: Enchant Armor (D) -->
 				<item id="8600" min="1" max="1" chance="8.4" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="18.9" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="14.7" /> <!-- Superior Herb of Life -->
@@ -4894,7 +4672,7 @@
 				<item id="8604" min="1" max="1" chance="6.16" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.52" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -4914,7 +4692,6 @@
 		</collision>
 	</npc>
 	<npc id="22459" level="35" type="Monster" name="Rotten Kanabion" title="Doppler">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="126" />
 			<param name="MoveAroundSocial1" value="126" />
@@ -4974,7 +4751,7 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="956" min="1" max="1" chance="1.7031168" /> <!-- Scroll: Enchant Armor (D-Grade) -->
+				<item id="956" min="1" max="1" chance="1.7031168" /> <!-- Scroll: Enchant Armor (D) -->
 				<item id="8600" min="1" max="1" chance="8.4" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="18.9" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="14.7" /> <!-- Superior Herb of Life -->
@@ -4982,7 +4759,7 @@
 				<item id="8604" min="1" max="1" chance="6.16" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.52" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -5002,7 +4779,6 @@
 		</collision>
 	</npc>
 	<npc id="22460" level="37" type="Monster" name="Rotten Kanabion" title="Void">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -5063,7 +4839,7 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="956" min="1" max="1" chance="1.8751488" /> <!-- Scroll: Enchant Armor (D-Grade) -->
+				<item id="956" min="1" max="1" chance="1.8751488" /> <!-- Scroll: Enchant Armor (D) -->
 				<item id="8600" min="1" max="1" chance="8.4" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="18.9" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="14.7" /> <!-- Superior Herb of Life -->
@@ -5071,7 +4847,7 @@
 				<item id="8604" min="1" max="1" chance="6.16" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.52" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -5091,7 +4867,6 @@
 		</collision>
 	</npc>
 	<npc id="22461" level="40" type="Monster" name="Gluttonous Kanabion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="115" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -5149,7 +4924,7 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="956" min="1" max="1" chance="2.2011264" /> <!-- Scroll: Enchant Armor (D-Grade) -->
+				<item id="956" min="1" max="1" chance="2.2011264" /> <!-- Scroll: Enchant Armor (D) -->
 				<item id="8600" min="1" max="1" chance="8.4" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="18.9" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="14.7" /> <!-- Superior Herb of Life -->
@@ -5157,7 +4932,7 @@
 				<item id="8604" min="1" max="1" chance="6.16" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.52" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -5177,7 +4952,6 @@
 		</collision>
 	</npc>
 	<npc id="22462" level="40" type="Monster" name="Gluttonous Kanabion" title="Doppler">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -5236,7 +5010,7 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="956" min="1" max="1" chance="2.2011264" /> <!-- Scroll: Enchant Armor (D-Grade) -->
+				<item id="956" min="1" max="1" chance="2.2011264" /> <!-- Scroll: Enchant Armor (D) -->
 				<item id="8600" min="1" max="1" chance="8.4" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="18.9" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="14.7" /> <!-- Superior Herb of Life -->
@@ -5244,7 +5018,7 @@
 				<item id="8604" min="1" max="1" chance="6.16" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.52" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -5264,7 +5038,6 @@
 		</collision>
 	</npc>
 	<npc id="22463" level="42" type="Monster" name="Gluttonous Kanabion" title="Void">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="81" />
@@ -5327,7 +5100,7 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="956" min="1" max="1" chance="2.4234624" /> <!-- Scroll: Enchant Armor (D-Grade) -->
+				<item id="956" min="1" max="1" chance="2.4234624" /> <!-- Scroll: Enchant Armor (D) -->
 				<item id="8600" min="1" max="1" chance="8.4" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="18.9" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="14.7" /> <!-- Superior Herb of Life -->
@@ -5335,7 +5108,7 @@
 				<item id="8604" min="1" max="1" chance="6.27" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.63" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -5355,7 +5128,6 @@
 		</collision>
 	</npc>
 	<npc id="22464" level="45" type="Monster" name="Callous Kanabion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -5413,7 +5185,7 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="952" min="1" max="1" chance="1.11310848" /> <!-- Scroll: Enchant Armor (C-Grade) -->
+				<item id="952" min="1" max="1" chance="1.11310848" /> <!-- Scroll: Enchant Armor (C) -->
 				<item id="8600" min="1" max="1" chance="8.4" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="18.9" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="14.7" /> <!-- Superior Herb of Life -->
@@ -5421,7 +5193,7 @@
 				<item id="8604" min="1" max="1" chance="6.27" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.63" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -5441,7 +5213,6 @@
 		</collision>
 	</npc>
 	<npc id="22465" level="45" type="Monster" name="Callous Kanabion" title="Doppler">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -5502,7 +5273,7 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="952" min="1" max="1" chance="1.11310848" /> <!-- Scroll: Enchant Armor (C-Grade) -->
+				<item id="952" min="1" max="1" chance="1.11310848" /> <!-- Scroll: Enchant Armor (C) -->
 				<item id="8600" min="1" max="1" chance="8.4" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="18.9" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="14.7" /> <!-- Superior Herb of Life -->
@@ -5510,7 +5281,7 @@
 				<item id="8604" min="1" max="1" chance="6.27" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.63" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -5530,7 +5301,6 @@
 		</collision>
 	</npc>
 	<npc id="22466" level="47" type="Monster" name="Callous Kanabion" title="Void">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -5593,7 +5363,7 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="952" min="1" max="1" chance="1.22554368" /> <!-- Scroll: Enchant Armor (C-Grade) -->
+				<item id="952" min="1" max="1" chance="1.22554368" /> <!-- Scroll: Enchant Armor (C) -->
 				<item id="8600" min="1" max="1" chance="8.4" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="18.9" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="14.7" /> <!-- Superior Herb of Life -->
@@ -5601,7 +5371,7 @@
 				<item id="8604" min="1" max="1" chance="6.27" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.63" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -5621,7 +5391,6 @@
 		</collision>
 	</npc>
 	<npc id="22467" level="50" type="Monster" name="Savage Kanabion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="50" />
@@ -5679,7 +5448,7 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="952" min="1" max="1" chance="1.37769984" /> <!-- Scroll: Enchant Armor (C-Grade) -->
+				<item id="952" min="1" max="1" chance="1.37769984" /> <!-- Scroll: Enchant Armor (C) -->
 				<item id="8600" min="1" max="1" chance="8.4" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="18.9" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="14.7" /> <!-- Superior Herb of Life -->
@@ -5687,7 +5456,7 @@
 				<item id="8604" min="1" max="1" chance="6.27" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.63" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -5707,7 +5476,6 @@
 		</collision>
 	</npc>
 	<npc id="22468" level="50" type="Monster" name="Savage Kanabion" title="Doppler">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="50" />
@@ -5768,7 +5536,7 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="952" min="1" max="1" chance="1.37769984" /> <!-- Scroll: Enchant Armor (C-Grade) -->
+				<item id="952" min="1" max="1" chance="1.37769984" /> <!-- Scroll: Enchant Armor (C) -->
 				<item id="8600" min="1" max="1" chance="8.4" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="18.9" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="14.7" /> <!-- Superior Herb of Life -->
@@ -5776,7 +5544,7 @@
 				<item id="8604" min="1" max="1" chance="6.27" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.63" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -5796,7 +5564,6 @@
 		</collision>
 	</npc>
 	<npc id="22469" level="52" type="Monster" name="Savage Kanabion" title="Void">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -5859,7 +5626,7 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="952" min="1" max="1" chance="1.51686144" /> <!-- Scroll: Enchant Armor (C-Grade) -->
+				<item id="952" min="1" max="1" chance="1.51686144" /> <!-- Scroll: Enchant Armor (C) -->
 				<item id="8600" min="1" max="1" chance="8.4" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="18.9" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="14.7" /> <!-- Superior Herb of Life -->
@@ -5867,7 +5634,7 @@
 				<item id="8604" min="1" max="1" chance="6.05" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.85" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -5887,7 +5654,6 @@
 		</collision>
 	</npc>
 	<npc id="22470" level="55" type="Monster" name="Peerless Kanabion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="35" />
 			<param name="MoveAroundSocial1" value="35" />
@@ -5945,7 +5711,7 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="948" min="1" max="1" chance="0.31477248" /> <!-- Scroll: Enchant Armor (B-Grade) -->
+				<item id="948" min="1" max="1" chance="0.31477248" /> <!-- Scroll: Enchant Armor (B) -->
 				<item id="8600" min="1" max="1" chance="8.4" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="18.9" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="14.7" /> <!-- Superior Herb of Life -->
@@ -5953,7 +5719,7 @@
 				<item id="8604" min="1" max="1" chance="6.05" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.85" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -5973,7 +5739,6 @@
 		</collision>
 	</npc>
 	<npc id="22471" level="55" type="Monster" name="Peerless Kanabion" title="Doppler">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -6034,7 +5799,7 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="948" min="1" max="1" chance="0.31477248" /> <!-- Scroll: Enchant Armor (B-Grade) -->
+				<item id="948" min="1" max="1" chance="0.31477248" /> <!-- Scroll: Enchant Armor (B) -->
 				<item id="8600" min="1" max="1" chance="8.4" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="18.9" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="14.7" /> <!-- Superior Herb of Life -->
@@ -6042,7 +5807,7 @@
 				<item id="8604" min="1" max="1" chance="6.05" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.85" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -6062,7 +5827,6 @@
 		</collision>
 	</npc>
 	<npc id="22472" level="57" type="Monster" name="Peerless Kanabion" title="Void">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -6125,7 +5889,7 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="948" min="1" max="1" chance="0.34656768" /> <!-- Scroll: Enchant Armor (B-Grade) -->
+				<item id="948" min="1" max="1" chance="0.34656768" /> <!-- Scroll: Enchant Armor (B) -->
 				<item id="8600" min="1" max="1" chance="8.4" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="18.9" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="14.7" /> <!-- Superior Herb of Life -->
@@ -6133,7 +5897,7 @@
 				<item id="8604" min="1" max="1" chance="6.05" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.85" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -6153,7 +5917,6 @@
 		</collision>
 	</npc>
 	<npc id="22473" level="60" type="Monster" name="Massive Kanabion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -6211,7 +5974,7 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="948" min="1" max="1" chance="0.35924544" /> <!-- Scroll: Enchant Armor (B-Grade) -->
+				<item id="948" min="1" max="1" chance="0.35924544" /> <!-- Scroll: Enchant Armor (B) -->
 				<item id="8600" min="1" max="1" chance="8.4" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="18.9" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="14.7" /> <!-- Superior Herb of Life -->
@@ -6219,7 +5982,7 @@
 				<item id="8604" min="1" max="1" chance="6.05" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.85" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -6239,7 +6002,6 @@
 		</collision>
 	</npc>
 	<npc id="22474" level="60" type="Monster" name="Massive Kanabion" title="Doppler">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -6300,7 +6062,7 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="948" min="1" max="1" chance="0.35924544" /> <!-- Scroll: Enchant Armor (B-Grade) -->
+				<item id="948" min="1" max="1" chance="0.35924544" /> <!-- Scroll: Enchant Armor (B) -->
 				<item id="8600" min="1" max="1" chance="8.4" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="18.9" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="14.7" /> <!-- Superior Herb of Life -->
@@ -6308,7 +6070,7 @@
 				<item id="8604" min="1" max="1" chance="6.05" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.85" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -6328,7 +6090,6 @@
 		</collision>
 	</npc>
 	<npc id="22475" level="62" type="Monster" name="Massive Kanabion" title="Void">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -6391,7 +6152,7 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="948" min="1" max="1" chance="0.39746304" /> <!-- Scroll: Enchant Armor (B-Grade) -->
+				<item id="948" min="1" max="1" chance="0.39746304" /> <!-- Scroll: Enchant Armor (B) -->
 				<item id="8600" min="1" max="1" chance="8.4" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="18.9" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="14.7" /> <!-- Superior Herb of Life -->
@@ -6399,7 +6160,7 @@
 				<item id="8604" min="1" max="1" chance="5.94" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.96" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -6419,7 +6180,6 @@
 		</collision>
 	</npc>
 	<npc id="22476" level="65" type="Monster" name="Fervent Kanabion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -6477,7 +6237,7 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="730" min="1" max="1" chance="0.14239872" /> <!-- Scroll: Enchant Armor (A-Grade) -->
+				<item id="730" min="1" max="1" chance="0.14239872" /> <!-- Scroll: Enchant Armor (A) -->
 				<item id="8600" min="1" max="1" chance="8.4" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="18.9" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="14.7" /> <!-- Superior Herb of Life -->
@@ -6485,7 +6245,7 @@
 				<item id="8604" min="1" max="1" chance="5.94" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.96" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -6505,7 +6265,6 @@
 		</collision>
 	</npc>
 	<npc id="22477" level="65" type="Monster" name="Fervent Kanabion" title="Doppler">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -6565,7 +6324,7 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="730" min="1" max="1" chance="0.14239872" /> <!-- Scroll: Enchant Armor (A-Grade) -->
+				<item id="730" min="1" max="1" chance="0.14239872" /> <!-- Scroll: Enchant Armor (A) -->
 				<item id="8600" min="1" max="1" chance="8.4" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="18.9" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="14.7" /> <!-- Superior Herb of Life -->
@@ -6573,7 +6332,7 @@
 				<item id="8604" min="1" max="1" chance="5.94" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.96" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -6593,7 +6352,6 @@
 		</collision>
 	</npc>
 	<npc id="22478" level="67" type="Monster" name="Fervent Kanabion" title="Void">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -6655,7 +6413,7 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="730" min="1" max="1" chance="0.15754752" /> <!-- Scroll: Enchant Armor (A-Grade) -->
+				<item id="730" min="1" max="1" chance="0.15754752" /> <!-- Scroll: Enchant Armor (A) -->
 				<item id="8600" min="1" max="1" chance="8.4" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="18.9" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="14.7" /> <!-- Superior Herb of Life -->
@@ -6663,7 +6421,7 @@
 				<item id="8604" min="1" max="1" chance="5.94" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.96" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -6683,7 +6441,6 @@
 		</collision>
 	</npc>
 	<npc id="22479" level="70" type="Monster" name="Ruptured Kanabion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -6740,7 +6497,7 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="730" min="1" max="1" chance="0.16214016" /> <!-- Scroll: Enchant Armor (A-Grade) -->
+				<item id="730" min="1" max="1" chance="0.16214016" /> <!-- Scroll: Enchant Armor (A) -->
 				<item id="8600" min="1" max="1" chance="8.4" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="18.9" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="14.7" /> <!-- Superior Herb of Life -->
@@ -6748,7 +6505,7 @@
 				<item id="8604" min="1" max="1" chance="5.94" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.96" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -6768,7 +6525,6 @@
 		</collision>
 	</npc>
 	<npc id="22480" level="70" type="Monster" name="Ruptured Kanabion" title="Doppler">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -6828,7 +6584,7 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="730" min="1" max="1" chance="0.16214016" /> <!-- Scroll: Enchant Armor (A-Grade) -->
+				<item id="730" min="1" max="1" chance="0.16214016" /> <!-- Scroll: Enchant Armor (A) -->
 				<item id="8600" min="1" max="1" chance="8.4" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="18.9" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="14.7" /> <!-- Superior Herb of Life -->
@@ -6836,7 +6592,7 @@
 				<item id="8604" min="1" max="1" chance="5.94" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.96" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -6856,7 +6612,6 @@
 		</collision>
 	</npc>
 	<npc id="22481" level="72" type="Monster" name="Ruptured Kanabion" title="Void">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -6918,7 +6673,7 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="730" min="1" max="1" chance="0.17995776" /> <!-- Scroll: Enchant Armor (A-Grade) -->
+				<item id="730" min="1" max="1" chance="0.17995776" /> <!-- Scroll: Enchant Armor (A) -->
 				<item id="8600" min="1" max="1" chance="8.4" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="18.9" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="14.7" /> <!-- Superior Herb of Life -->
@@ -6926,7 +6681,7 @@
 				<item id="8604" min="1" max="1" chance="5.94" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.96" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -6946,7 +6701,6 @@
 		</collision>
 	</npc>
 	<npc id="22482" level="75" type="Monster" name="Sword Kanabion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -7003,7 +6757,7 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="960" min="1" max="1" chance="0.0904909824" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="960" min="1" max="1" chance="0.0904909824" /> <!-- Scroll: Enchant Armor (S) -->
 				<item id="8600" min="1" max="1" chance="8.4" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="18.9" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="14.7" /> <!-- Superior Herb of Life -->
@@ -7011,7 +6765,7 @@
 				<item id="8604" min="1" max="1" chance="5.94" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.96" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -7031,7 +6785,6 @@
 		</collision>
 	</npc>
 	<npc id="22483" level="75" type="Monster" name="Sword Kanabion" title="Doppler">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="160" />
 			<param name="MoveAroundSocial1" value="160" />
@@ -7091,7 +6844,7 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="960" min="1" max="1" chance="0.0904909824" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="960" min="1" max="1" chance="0.0904909824" /> <!-- Scroll: Enchant Armor (S) -->
 				<item id="8600" min="1" max="1" chance="8.4" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="18.9" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="14.7" /> <!-- Superior Herb of Life -->
@@ -7099,7 +6852,7 @@
 				<item id="8604" min="1" max="1" chance="5.94" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.96" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -7119,7 +6872,6 @@
 		</collision>
 	</npc>
 	<npc id="22484" level="77" type="Monster" name="Sword Kanabion" title="Void">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="160" />
 			<param name="MoveAroundSocial1" value="160" />
@@ -7183,7 +6935,7 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="960" min="1" max="1" chance="0.1004350464" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="960" min="1" max="1" chance="0.1004350464" /> <!-- Scroll: Enchant Armor (S) -->
 				<item id="8600" min="1" max="1" chance="8.4" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="18.9" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="14.7" /> <!-- Superior Herb of Life -->
@@ -7191,7 +6943,7 @@
 				<item id="8604" min="1" max="1" chance="5.94" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.96" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -7211,7 +6963,6 @@
 		</collision>
 	</npc>
 	<npc id="22485" level="29" type="Monster" name="Lost Watcher">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -7273,7 +7024,6 @@
 		</collision>
 	</npc>
 	<npc id="22486" level="29" type="Monster" name="Lost Watcher">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -7332,7 +7082,6 @@
 		</collision>
 	</npc>
 	<npc id="22487" level="29" type="Monster" name="Lost Beholder">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -7395,7 +7144,6 @@
 		</collision>
 	</npc>
 	<npc id="22488" level="39" type="Monster" name="Lost Watcher">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -7457,7 +7205,6 @@
 		</collision>
 	</npc>
 	<npc id="22489" level="39" type="Monster" name="Lost Watcher">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -7516,7 +7263,6 @@
 		</collision>
 	</npc>
 	<npc id="22490" level="39" type="Monster" name="Lost Beholder">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -7579,7 +7325,6 @@
 		</collision>
 	</npc>
 	<npc id="22491" level="49" type="Monster" name="Lost Watcher">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="116" />
 			<param name="MoveAroundSocial1" value="116" />
@@ -7640,7 +7385,6 @@
 		</collision>
 	</npc>
 	<npc id="22492" level="49" type="Monster" name="Lost Watcher">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="116" />
 			<param name="MoveAroundSocial1" value="116" />
@@ -7698,7 +7442,6 @@
 		</collision>
 	</npc>
 	<npc id="22493" level="49" type="Monster" name="Lost Beholder">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -7760,7 +7503,6 @@
 		</collision>
 	</npc>
 	<npc id="22494" level="59" type="Monster" name="Lost Watcher">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -7822,7 +7564,6 @@
 		</collision>
 	</npc>
 	<npc id="22495" level="59" type="Monster" name="Lost Watcher">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -7881,7 +7622,6 @@
 		</collision>
 	</npc>
 	<npc id="22496" level="59" type="Monster" name="Lost Beholder">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -7943,7 +7683,6 @@
 		</collision>
 	</npc>
 	<npc id="22497" level="69" type="Monster" name="Lost Watcher">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="78" />
 			<param name="MoveAroundSocial1" value="78" />
@@ -8004,7 +7743,6 @@
 		</collision>
 	</npc>
 	<npc id="22498" level="69" type="Monster" name="Lost Watcher">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="78" />
 			<param name="MoveAroundSocial1" value="78" />
@@ -8062,7 +7800,6 @@
 		</collision>
 	</npc>
 	<npc id="22499" level="69" type="Monster" name="Lost Beholder">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />

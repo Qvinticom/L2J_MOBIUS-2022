@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="13000" type="Armor" name="Sealed Helm of Nightmare - Light Armor Use">
-		<!-- Sealed Masterwork Item. The blacksmith in a village can release the seal on this item. -->
+		<!-- Rare item that increases magic resistance and resistance to sleep/hold, and restores a certain amount of short-range attack damage as HP -->
 		<set name="icon" val="icon.armor_leather_helmet_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -18,7 +18,7 @@
 		</for>
 	</item>
 	<item id="13001" type="Armor" name="Sealed Helm of Nightmare - Robe">
-		<!-- Sealed Masterwork Item. The blacksmith in a village can release the seal on this item. -->
+		<!-- A Masterwork Item that increases MP regeneration rate, M. Atk., sleep resistance and stun resistance -->
 		<set name="icon" val="icon.armor_leather_helmet_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -119,7 +119,7 @@
 		<set name="item_skill" val="2576-1" /> <!-- Pathfinder's Reward -->
 	</item>
 	<item id="13008" type="EtcItem" name="Spellbook - Bless the Blood">
-		<!-- Spellbook needed to learn Bless the Blood. Used by Shillien Elders. Required level: 40 -->
+		<!-- Spellbook needed to learn Bless the Blood. Used by Shilien Elders. Required level: 40 -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -138,7 +138,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="13010" type="EtcItem" name="Extra Entrance Pass - Kamaloka (Hall of the Abyss)">
-		<!-- Dimensional item. Extra entrance pass that lets you enter Kamaloka (Hall of the Abyss). Can cancel the limit on entrance if used while a limit on entrance to the Hall of the Abyss exists. Can only be used once a day outside the instant zone. After use, the effect disappears at the corresponding instant dungeon's reset time. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. Can be shared between characters within the account through Dimensional Merchant. -->
+		<!-- Vitamin item. Extra entrance pass that lets you enter Kamaloka (Hall of the Abyss). Can cancel the limit on entrance if used while a limit on entrance to the Hall of the Abyss exists. Can only be used once a day outside the instant zone. After use, the effect disappears at the corresponding instant dungeon's reset time. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.ticket_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -153,7 +153,7 @@
 		<set name="item_skill" val="2589-1" /> <!-- Extra Entrance Pass - Kamaloka (Hall of the Abyss) -->
 	</item>
 	<item id="13011" type="EtcItem" name="Extra Entrance Pass - Near Kamaloka">
-		<!-- Dimensional item. Extra entrance pass that lets you enter Near Kamaloka. Can cancel the limit on entrance if used while a limit on entrance to Near Kamaloka exists. Can only be used once a day outside the instant zone. After use, the effect disappears at the corresponding instant dungeon's reset time. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. Can be shared between characters within the account through Dimensional Merchant. -->
+		<!-- Vitamin item. Extra entrance pass that lets you enter Near Kamaloka. Can cancel the limit on entrance if used while a limit on entrance to Near Kamaloka exists. Can only be used once a day outside the instant zone. After use, the effect disappears at the corresponding instant dungeon's reset time. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.ticket_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -168,7 +168,7 @@
 		<set name="item_skill" val="2590-1" /> <!-- Extra Entrance Pass - Near Kamaloka -->
 	</item>
 	<item id="13012" type="EtcItem" name="Extra Entrance Pass - Kamaloka (Labyrinth of the Abyss)">
-		<!-- Dimensional item. Extra entrance pass that lets you enter Kamaloka (Labyrinth of the Abyss). Can cancel the limit on entrance if used while a limit on entrance to the Labyrinth of the Abyss exists. Can only be used once a day outside the instant zone. After use, the effect disappears at the corresponding instant dungeon's reset time. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. Can be shared between characters within the account through Dimensional Merchant. -->
+		<!-- Vitamin item. Extra entrance pass that lets you enter Kamaloka (Labyrinth of the Abyss). Can cancel the limit on entrance if used while a limit on entrance to the Labyrinth of the Abyss exists. Can only be used once a day outside the instant zone. After use, the effect disappears at the corresponding instant dungeon's reset time. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.ticket_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -200,7 +200,7 @@
 		<set name="is_dropable" val="false" />
 	</item>
 	<item id="13015" type="EtcItem" name="My Teleport Spellbook">
-		<!-- Dimensional item. Increases by 3 slots the free teleport list, which can remember designated locations. Can expand up to 9 slots. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. Can be shared between characters within an account through the Dimensional Merchant. -->
+		<!-- Vitamin item. Increases by 3 slots the free teleport list, which can remember designated locations. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.bookmark_book_i00" />
 		<set name="default_action" val="CALL_SKILL" />
 		<set name="material" val="PAPER" />
@@ -215,7 +215,7 @@
 		<set name="item_skill" val="2587-1" /> <!-- Increase number of teleport slots. -->
 	</item>
 	<item id="13016" type="EtcItem" name="My Teleport Scroll">
-		<!-- Dimensional item. Item that is consumed when moving to the remembered location. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. Can be shared between characters within the account through Dimensional Merchant. -->
+		<!-- Vitamin item. Item that is consumed when moving to the remembered location. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.bookmark_scroll_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -228,7 +228,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="13017" type="EtcItem" name="White Weasel Hunting Helper Necklace">
-		<!-- Dimensional item. Item that allows you to summon a hunting helper who temporarily casts warrior-type battle support magic. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. -->
+		<!-- Vitamin item. Item that allows you to summon a hunting helper who temporarily casts warrior-type battle support magic. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.pet_controler_i00" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -247,7 +247,7 @@
 		</cond>
 	</item>
 	<item id="13018" type="EtcItem" name="Fairy Princess Hunting Helper Necklace">
-		<!-- Dimensional item. Item that allows you to summon a hunting helper who temporarily casts magician-type battle support magic. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. -->
+		<!-- Vitamin item. Item that allows you to summon a hunting helper who temporarily casts magician-type battle support magic. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.pet_controler_i00" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -266,7 +266,7 @@
 		</cond>
 	</item>
 	<item id="13019" type="EtcItem" name="Wild Beast Fighter Hunting Helper Necklace">
-		<!-- Dimensional item. Item that allows you to summon a warrior-type battle hunting helper. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. -->
+		<!-- Vitamin item. Item that allows you to summon a warrior-type battle hunting helper. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.pet_controler_i01" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -285,7 +285,7 @@
 		</cond>
 	</item>
 	<item id="13020" type="EtcItem" name="Fox Shaman Hunting Helper Necklace">
-		<!-- Dimensional item. Item that allows you to summon a magician-type battle hunting helper. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. -->
+		<!-- Vitamin item. Item that allows you to summon a magician-type battle hunting helper. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.pet_controler_i01" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -304,7 +304,7 @@
 		</cond>
 	</item>
 	<item id="13021" type="EtcItem" name="Color Name">
-		<!-- Dimensional item. Item that allows you to change a character's name color. You can change back to the original name color by using the "/resetname" command after changing the name color. If there is no original name, the name will disappear. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. Can be shared between characters within the account through Dimensional Merchant. -->
+		<!-- Vitamin item. Item that allows you to change a character's name color. You can change back to the original name color by using the "/resetname" command after changing the name color. If there is no original name, the name will disappear. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.color_name_i00" />
 		<set name="default_action" val="NICK_COLOR" />
 		<set name="immediate_effect" val="true" />
@@ -319,7 +319,7 @@
 		<set name="handler" val="NicknameColor" />
 	</item>
 	<item id="13022" type="Armor" name="Light Purple-Maned Horse Mount Bracelet - 7-day limited period">
-		<!-- Dimensional item. Can ride a purple maned horse when equipped. Can be used for 7 days. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- Vitamin item. Can ride a purple maned horse when equipped. Can be used for 7 days. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -331,11 +331,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="unequip_skill" val="619-1" />
-		<set name="item_skill" val="8247-1" /> <!-- Mount Darkmane Pacer -->
+		<set name="item_skill" val="8247-1" /> <!-- Mount Light Purple Maned Horse -->
 		<set name="time" val="10080" />
 	</item>
 	<item id="13023" type="Armor" name="Agathion of Love - 30-day limited period">
-		<!-- Dimensional item. Can summon an Agathion of Love when equipped. Can be used for 30 days. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- Vitamin item. Can summon an Agathion of Love when equipped. Can be used for 30 days. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -351,7 +351,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="13024" type="Armor" name="Sudden Agathion - 30-day limited period">
-		<!-- Dimensional item. Can summon a Sudden Agathion when equipped. Can be used for 30 days. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- Vitamin item. Can summon a Sudden Agathion when equipped. Can be used for 30 days. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -367,7 +367,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="13025" type="Armor" name="Shiny Agathion - 30-day limited period">
-		<!-- Dimensional item. Can summon a Shiny Agathion when equipped. Can be used for 30 days. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- Vitamin item. Can summon a Shiny Agathion when equipped. Can be used for 30 days. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -383,7 +383,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="13026" type="Armor" name="Sobbing Agathion - 30-day limited period">
-		<!-- Dimensional item. Can summon a Sobbing Agathion when equipped. Can be used for 30 days. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- Vitamin item. Can summon a Sobbing Agathion when equipped. Can be used for 30 days. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -399,7 +399,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="13027" type="EtcItem" name="Gran Kain's Gift Box - 30-day limited period">
-		<!-- Dimensional item. Gift Box that gives you an item once a day. Can be used for 30 days. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- Vitamin item. Gift Box that gives you an item once a day. Can be used for 30 days. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.special_cube_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ELIXIR" />
@@ -408,7 +408,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
-		<set name="reuse_delay" val="86400000" /> <!-- TODO: Manage global (main class <-> subclasses) reuse for skills. -->
+		<set name="reuse_delay" val="86400000" /><!-- TODO: Manage global (main class <-> subclasses) reuse for skills. -->
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="2606-1" /> <!-- Gran Kain's Gift Box -->
 		<set name="time" val="43200" />
@@ -816,7 +816,7 @@
 		</cond>
 	</item>
 	<item id="13049" type="EtcItem" name="Divine Soul">
-		<!-- Potion that allows you to feel Holy energy. Cannot be exchanged or dropped. Can only be used in the Pailaka instant dungeon. -->
+		<!-- Potion that allows you to feel sacred energy. Cannot be exchanged or dropped. Can only be used in the Pailaka instant dungeon. -->
 		<set name="icon" val="icon.etc_unholy_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -827,7 +827,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2340-1" /> <!-- Dark Resist Potion -->
+		<set name="item_skill" val="2340-1" /> <!-- Unholy Resist Potion -->
 		<cond msgId="113" addName="1">
 			<player instanceId="44" />
 		</cond>
@@ -1018,7 +1018,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="13059" type="EtcItem" name="Long-Range Defense Increasing Potion">
-		<!-- Increases Resistance to long-range attacks. Cannot be exchanged or dropped. Can only be used in the Pailaka instant dungeon. -->
+		<!-- Increases defense against long-range attacks. Cannot be exchanged or dropped. Can only be used in the Pailaka instant dungeon. -->
 		<set name="icon" val="icon.etc_potion_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1163,7 +1163,7 @@
 		<set name="is_premium" val="true" />
 	</item>
 	<item id="13071" type="EtcItem" name="Red Soul Crystal - Stage 16">
-		<!-- Red Crystal that absorbs souls, stage 16. Special abilities can be applied to the weapon when absorbing certain amount of souls. Every time it is used, it consumes 26 of MP. However, the Soul Crystal of this stage absorbs souls by itself, so there is no need for using the Soul Crystal to monsters. -->
+		<!-- Red Crystal that absorbs souls, stage 16.. Special abilities can be applied to the weapon when absorbing certain amount of souls. Every time it is used, it consumes 26 of MP. However, the Soul Crystal of this stage absorbs souls by itself, so there is no need for using the Soul Crystal to monsters. -->
 		<set name="icon" val="icon.etc_soul_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1173,7 +1173,7 @@
 		<set name="item_skill" val="2096-1" /> <!-- Soul Crystal -->
 	</item>
 	<item id="13072" type="EtcItem" name="Blue Soul Crystal - Stage 16">
-		<!-- Blue Crystal that absorbs souls, stage 16. Special abilities can be applied to the weapon when absorbing certain amount of souls. Every time it is used, it consumes 26 of MP. However, the Soul Crystal of this stage absorbs souls by itself, so there is no need for using the Soul Crystal to monsters. -->
+		<!-- Blue Crystal that absorbs souls, stage 16.. Special abilities can be applied to the weapon when absorbing certain amount of souls. Every time it is used, it consumes 26 of MP. However, the Soul Crystal of this stage absorbs souls by itself, so there is no need for using the Soul Crystal to monsters. -->
 		<set name="icon" val="icon.etc_soul_stone_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1183,7 +1183,7 @@
 		<set name="item_skill" val="2096-1" /> <!-- Soul Crystal -->
 	</item>
 	<item id="13073" type="EtcItem" name="Green Soul Crystal - Stage 16">
-		<!-- Green Crystal that absorbs souls, stage 16. Special abilities can be applied to the weapon when absorbing certain amount of souls. Every time it is used, it consumes 26 of MP. However, the Soul Crystal of this stage absorbs souls by itself, so there is no need for using the Soul Crystal to monsters. -->
+		<!-- Green Crystal that absorbs souls, stage 16.. Special abilities can be applied to the weapon when absorbing certain amount of souls. Every time it is used, it consumes 26 of MP. However, the Soul Crystal of this stage absorbs souls by itself, so there is no need for using the Soul Crystal to monsters. -->
 		<set name="icon" val="icon.etc_soul_stone_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1232,7 +1232,7 @@
 		<set name="duration" val="10080" />
 	</item>
 	<item id="13077" type="EtcItem" name="Chaotic Arcana Sigil">
-		<!-- A rare Arcana Sigil that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
+		<!-- A rare Arcana Sigil that needs to be polished with excessive force. It can be polished through the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.arcana_sigil_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="S" />
@@ -1248,7 +1248,7 @@
 		</for>
 	</item>
 	<item id="13078" type="Armor" name="Arcana Sigil">
-		<!-- Increases M. Def. Decreases Magic Cancel Rate. -->
+		<!-- Increase of Magic Resistance. Magic cancel probability is decreased. -->
 		<set name="icon" val="icon.arcana_sigil_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="SIGIL" />
@@ -1271,7 +1271,7 @@
 		</for>
 	</item>
 	<item id="13079" type="EtcItem" name="My Teleport Spellbook 1-Sheet Pack">
-		<!-- Dimensional item pack. A wrapped pack containing a Free Teleporter's Scroll. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- Vitamin item pack. A wrapped pack containing a Free Teleporter's Scroll. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1286,7 +1286,7 @@
 		<set name="capsuled_items" val="13015,1,1,100" />
 	</item>
 	<item id="13080" type="EtcItem" name="My Teleport Scroll 30-Sheet Pack">
-		<!-- Dimensional item pack. A wrapped pack containing 30 sheets of Free Teleporter's Spellbooks. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- Vitamin item pack. A wrapped pack containing 30 sheets of Free Teleporter's Spellbooks. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1314,7 +1314,7 @@
 		<set name="is_premium" val="true" />
 	</item>
 	<item id="13082" type="EtcItem" name="Feather of Blessing 3-Sheet Pack">
-		<!-- Dimensional item pack. A wrapped pack containing 3 sheets of the Feather of Blessing. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- Vitamin item pack. A wrapped pack containing 3 sheets of the Feather of Blessing. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1329,7 +1329,7 @@
 		<set name="capsuled_items" val="10649,3,3,100" />
 	</item>
 	<item id="13083" type="EtcItem" name="Agathion of Love 30-Day Pack">
-		<!-- Dimensional item pack. A wrapped pack containing an Agathion of Love Seal Bracelet (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- Vitamin item pack. A wrapped pack containing an Agathion of Love Seal Bracelet (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1344,7 +1344,7 @@
 		<set name="capsuled_items" val="13023,1,1,100" />
 	</item>
 	<item id="13084" type="EtcItem" name="Pumpkin Transformation Stick 30-Day Pack">
-		<!-- Dimensional item pack. A wrapped pack containing Pumpkin Transformation Stick (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- Vitamin item pack. A wrapped pack containing Pumpkin Transformation Stick (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1359,7 +1359,7 @@
 		<set name="capsuled_items" val="12800,1,1,100" />
 	</item>
 	<item id="13085" type="EtcItem" name="Kamaloka Entrance Pass 3-Sheet Pack">
-		<!-- Dimensional item pack. A wrapped pack containing 5 Extra Entrances Passes each to Kamaloka (Hall of the Abyss), Near Kamaloka, and Kamaloka (Labyrinth of the Abyss). -->
+		<!-- Vitamin item pack. A wrapped pack containing 5 Extra Entrances Passes each to Kamaloka (Hall of the Abyss), Near Kamaloka, and Kamaloka (Labyrinth of the Abyss). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1375,7 +1375,7 @@
 		<set name="capsuled_items" val="13010,5,5,100;13011,5,5,100;13012,5,5,100" />
 	</item>
 	<item id="13086" type="EtcItem" name="Kat the Cat Hat 30-Day Pack">
-		<!-- Dimensional item pack. A wrapped pack containing a Kat the Cat Hat (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- Vitamin item pack. A wrapped pack containing a Kat the Cat Hat (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1390,7 +1390,7 @@
 		<set name="capsuled_items" val="12782,1,1,100" />
 	</item>
 	<item id="13087" type="EtcItem" name="Feline Queen Hat 30-Day Pack">
-		<!-- Dimensional item pack. A wrapped pack containing a Feline Queen Hat (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- Vitamin item pack. A wrapped pack containing a Feline Queen Hat (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1405,7 +1405,7 @@
 		<set name="capsuled_items" val="12783,1,1,100" />
 	</item>
 	<item id="13088" type="EtcItem" name="Monster Eye Hat 30-Day Pack">
-		<!-- Dimensional item pack. A wrapped pack containing a Monster Eye Hat (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- Vitamin item pack. A wrapped pack containing a Monster Eye Hat (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1420,7 +1420,7 @@
 		<set name="capsuled_items" val="12786,1,1,100" />
 	</item>
 	<item id="13089" type="EtcItem" name="Brown Bear Hat 30-Day Pack">
-		<!-- Dimensional item pack. A wrapped pack containing a Brown Bear Hat (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- Vitamin item pack. A wrapped pack containing a Brown Bear Hat (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1435,7 +1435,7 @@
 		<set name="capsuled_items" val="12787,1,1,100" />
 	</item>
 	<item id="13090" type="EtcItem" name="Fungus Hat 30-Day Pack">
-		<!-- Dimensional item pack. A wrapped pack containing a Fungus Hat (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- Vitamin item pack. A wrapped pack containing a Fungus Hat (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1450,7 +1450,7 @@
 		<set name="capsuled_items" val="12788,1,1,100" />
 	</item>
 	<item id="13091" type="EtcItem" name="Skull Hat 30-Day Pack">
-		<!-- Dimensional item pack. A wrapped pack containing a Skull Hat (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- Vitamin item pack. A wrapped pack containing a Skull Hat (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1465,7 +1465,7 @@
 		<set name="capsuled_items" val="12789,1,1,100" />
 	</item>
 	<item id="13092" type="EtcItem" name="Ornithomimus Hat 30-Day Pack">
-		<!-- Dimensional item pack. A wrapped pack containing a Ornithomimus Hat (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- Vitamin item pack. A wrapped pack containing a Ornithomimus Hat (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1480,7 +1480,7 @@
 		<set name="capsuled_items" val="12790,1,1,100" />
 	</item>
 	<item id="13093" type="EtcItem" name="Feline King Hat 30-Day Pack">
-		<!-- Dimensional item pack. A wrapped pack containing a Feline King Hat (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- Vitamin item pack. A wrapped pack containing a Feline King Hat (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1495,7 +1495,7 @@
 		<set name="capsuled_items" val="12791,1,1,100" />
 	</item>
 	<item id="13094" type="EtcItem" name="Kai the Cat Hat 30-Day Pack">
-		<!-- Dimensional item pack. A wrapped pack containing a Kai the Cat Hat (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- Vitamin item pack. A wrapped pack containing a Kai the Cat Hat (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1510,7 +1510,7 @@
 		<set name="capsuled_items" val="12792,1,1,100" />
 	</item>
 	<item id="13095" type="EtcItem" name="OX Stick 30-Day Pack">
-		<!-- Dimensional item pack. A wrapped pack containing an OX Stick (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- Vitamin item pack. A wrapped pack containing an OX Stick (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1525,7 +1525,7 @@
 		<set name="capsuled_items" val="12793,1,1,100;12794,1,1,100" />
 	</item>
 	<item id="13096" type="EtcItem" name="Rock-Paper-Scissors Stick 30-Day Pack">
-		<!-- Dimensional item pack. A wrapped pack containing a Rock-Paper-Scissors Stick (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- Vitamin item pack. A wrapped pack containing a Rock-Paper-Scissors Stick (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1540,7 +1540,7 @@
 		<set name="capsuled_items" val="12795,1,1,100;12796,1,1,100;12797,1,1,100" />
 	</item>
 	<item id="13097" type="EtcItem" name="Purple Maned Horse Bracelet Pack">
-		<!-- Dimensional item pack. A wrapped pack containing a bracelet that summons a Purple Maned Horse (7 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- Vitamin item pack. A wrapped pack containing a bracelet that summons a Purple Maned Horse (7 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1555,7 +1555,7 @@
 		<set name="capsuled_items" val="13022,1,1,100" />
 	</item>
 	<item id="13098" type="EtcItem" name="Color Name 3-Sheet Pack">
-		<!-- Dimensional item pack. A wrapped pack containing a Color Name. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- Vitamin item pack. A wrapped pack containing a Color Name. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />

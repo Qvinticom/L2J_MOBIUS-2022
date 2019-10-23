@@ -24,7 +24,6 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.network.GameClient;
-import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
 public class RequestPetGetItem implements IClientIncomingPacket
@@ -71,7 +70,8 @@ public class RequestPetGetItem implements IClientIncomingPacket
 		
 		if (pet.isUncontrollable())
 		{
-			client.sendPacket(SystemMessageId.YOU_ARE_NOT_ALLOWED_TO_ENTER_THE_PARTY_ROOM);
+			// no Epilogue sysstring
+			pet.getOwner().sendMessage("When your pet's hunger gauge is at 0%, you cannot use your pet.");
 			return;
 		}
 		

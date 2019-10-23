@@ -24,7 +24,6 @@ import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.instancemanager.BoatManager;
 import org.l2jmobius.gameserver.model.VehiclePathPoint;
 import org.l2jmobius.gameserver.model.actor.instance.BoatInstance;
-import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
 
@@ -139,29 +138,29 @@ public class BoatGludinRune implements Runnable
 	{
 		_boat = boat;
 		
-		ARRIVED_AT_GLUDIN = new CreatureSay(0, ChatType.BOAT, 801, SystemMessageId.THE_FERRY_HAS_ARRIVED_AT_GLUDIN_HARBOR);
-		ARRIVED_AT_GLUDIN_2 = new CreatureSay(0, ChatType.BOAT, 801, SystemMessageId.DEPARTURE_FOR_RUNE_HARBOR_WILL_TAKE_PLACE_AFTER_ANCHORING_FOR_TEN_MINUTES);
-		LEAVE_GLUDIN5 = new CreatureSay(0, ChatType.BOAT, 801, SystemMessageId.DEPARTURE_FOR_RUNE_HARBOR_WILL_TAKE_PLACE_IN_FIVE_MINUTES);
-		LEAVE_GLUDIN1 = new CreatureSay(0, ChatType.BOAT, 801, SystemMessageId.DEPARTURE_FOR_RUNE_HARBOR_WILL_TAKE_PLACE_IN_ONE_MINUTE);
-		LEAVE_GLUDIN0 = new CreatureSay(0, ChatType.BOAT, 801, SystemMessageId.MAKE_HASTE_WE_WILL_BE_DEPARTING_FOR_GLUDIN_HARBOR_SHORTLY_2);
-		LEAVING_GLUDIN = new CreatureSay(0, ChatType.BOAT, 801, SystemMessageId.WE_ARE_NOW_DEPARTING_FOR_GLUDIN_HARBOR_HOLD_ON_AND_ENJOY_THE_RIDE);
-		ARRIVED_AT_RUNE = new CreatureSay(0, ChatType.BOAT, 801, SystemMessageId.WELCOME_TO_RUNE_HARBOR);
-		ARRIVED_AT_RUNE_2 = new CreatureSay(0, ChatType.BOAT, 801, SystemMessageId.THE_FERRY_WILL_LEAVE_FOR_GLUDIN_HARBOR_AFTER_ANCHORING_FOR_TEN_MINUTES);
-		LEAVE_RUNE5 = new CreatureSay(0, ChatType.BOAT, 801, SystemMessageId.DEPARTURE_FOR_GLUDIN_HARBOR_WILL_TAKE_PLACE_IN_FIVE_MINUTES);
-		LEAVE_RUNE1 = new CreatureSay(0, ChatType.BOAT, 801, SystemMessageId.DEPARTURE_FOR_GLUDIN_HARBOR_WILL_TAKE_PLACE_IN_ONE_MINUTE);
-		LEAVE_RUNE0 = new CreatureSay(0, ChatType.BOAT, 801, SystemMessageId.MAKE_HASTE_WE_WILL_BE_DEPARTING_FOR_GLUDIN_HARBOR_SHORTLY);
-		LEAVING_RUNE = new CreatureSay(0, ChatType.BOAT, 801, SystemMessageId.WE_ARE_NOW_DEPARTING_FOR_GLUDIN_HARBOR_HOLD_ON_AND_ENJOY_THE_RIDE);
-		BUSY_GLUDIN = new CreatureSay(0, ChatType.BOAT, 801, SystemMessageId.THE_FERRY_FROM_RUNE_HARBOR_TO_GLUDIN_HARBOR_HAS_BEEN_DELAYED);
-		BUSY_RUNE = new CreatureSay(0, ChatType.BOAT, 801, SystemMessageId.THE_FERRY_FROM_GLUDIN_HARBOR_TO_RUNE_HARBOR_HAS_BEEN_DELAYED);
+		ARRIVED_AT_GLUDIN = new CreatureSay(0, ChatType.BOAT, 801, 986);
+		ARRIVED_AT_GLUDIN_2 = new CreatureSay(0, ChatType.BOAT, 801, 1625);
+		LEAVE_GLUDIN5 = new CreatureSay(0, ChatType.BOAT, 801, 1626);
+		LEAVE_GLUDIN1 = new CreatureSay(0, ChatType.BOAT, 801, 1627);
+		LEAVE_GLUDIN0 = new CreatureSay(0, ChatType.BOAT, 801, 1628);
+		LEAVING_GLUDIN = new CreatureSay(0, ChatType.BOAT, 801, 1629);
+		ARRIVED_AT_RUNE = new CreatureSay(0, ChatType.BOAT, 801, 1620);
+		ARRIVED_AT_RUNE_2 = new CreatureSay(0, ChatType.BOAT, 801, 980);
+		LEAVE_RUNE5 = new CreatureSay(0, ChatType.BOAT, 801, 1621);
+		LEAVE_RUNE1 = new CreatureSay(0, ChatType.BOAT, 801, 1622);
+		LEAVE_RUNE0 = new CreatureSay(0, ChatType.BOAT, 801, 1623);
+		LEAVING_RUNE = new CreatureSay(0, ChatType.BOAT, 801, 1624);
+		BUSY_GLUDIN = new CreatureSay(0, ChatType.BOAT, 801, 1618);
+		BUSY_RUNE = new CreatureSay(0, ChatType.BOAT, 801, 1619);
 		
-		ARRIVAL_RUNE15 = new CreatureSay(0, ChatType.BOAT, 801, SystemMessageId.THE_FERRY_FROM_GLUDIN_HARBOR_WILL_BE_ARRIVING_AT_RUNE_HARBOR_IN_APPROXIMATELY_15_MINUTES);
-		ARRIVAL_RUNE10 = new CreatureSay(0, ChatType.BOAT, 801, SystemMessageId.THE_FERRY_FROM_GLUDIN_HARBOR_WILL_BE_ARRIVING_AT_RUNE_HARBOR_IN_APPROXIMATELY_10_MINUTES);
-		ARRIVAL_RUNE5 = new CreatureSay(0, ChatType.BOAT, 801, SystemMessageId.THE_FERRY_FROM_GLUDIN_HARBOR_WILL_BE_ARRIVING_AT_RUNE_HARBOR_IN_APPROXIMATELY_5_MINUTES);
-		ARRIVAL_RUNE1 = new CreatureSay(0, ChatType.BOAT, 801, SystemMessageId.THE_FERRY_FROM_GLUDIN_HARBOR_WILL_BE_ARRIVING_AT_RUNE_HARBOR_IN_APPROXIMATELY_1_MINUTE);
-		ARRIVAL_GLUDIN15 = new CreatureSay(0, ChatType.BOAT, 801, SystemMessageId.THE_FERRY_FROM_RUNE_HARBOR_WILL_BE_ARRIVING_AT_GLUDIN_HARBOR_IN_APPROXIMATELY_15_MINUTES);
-		ARRIVAL_GLUDIN10 = new CreatureSay(0, ChatType.BOAT, 801, SystemMessageId.THE_FERRY_FROM_RUNE_HARBOR_WILL_BE_ARRIVING_AT_GLUDIN_HARBOR_IN_APPROXIMATELY_10_MINUTES);
-		ARRIVAL_GLUDIN5 = new CreatureSay(0, ChatType.BOAT, 801, SystemMessageId.THE_FERRY_FROM_RUNE_HARBOR_WILL_BE_ARRIVING_AT_GLUDIN_HARBOR_IN_APPROXIMATELY_5_MINUTES);
-		ARRIVAL_GLUDIN1 = new CreatureSay(0, ChatType.BOAT, 801, SystemMessageId.THE_FERRY_FROM_RUNE_HARBOR_WILL_BE_ARRIVING_AT_GLUDIN_HARBOR_IN_APPROXIMATELY_1_MINUTE);
+		ARRIVAL_RUNE15 = new CreatureSay(0, ChatType.BOAT, 801, 1634);
+		ARRIVAL_RUNE10 = new CreatureSay(0, ChatType.BOAT, 801, 1635);
+		ARRIVAL_RUNE5 = new CreatureSay(0, ChatType.BOAT, 801, 1636);
+		ARRIVAL_RUNE1 = new CreatureSay(0, ChatType.BOAT, 801, 1637);
+		ARRIVAL_GLUDIN15 = new CreatureSay(0, ChatType.BOAT, 801, 1630);
+		ARRIVAL_GLUDIN10 = new CreatureSay(0, ChatType.BOAT, 801, 1631);
+		ARRIVAL_GLUDIN5 = new CreatureSay(0, ChatType.BOAT, 801, 1632);
+		ARRIVAL_GLUDIN1 = new CreatureSay(0, ChatType.BOAT, 801, 1633);
 		
 		GLUDIN_SOUND = new PlaySound(0, "itemsound.ship_arrival_departure", 1, _boat.getObjectId(), GLUDIN_DOCK[0].getX(), GLUDIN_DOCK[0].getY(), GLUDIN_DOCK[0].getZ());
 		RUNE_SOUND = new PlaySound(0, "itemsound.ship_arrival_departure", 1, _boat.getObjectId(), RUNE_DOCK[0].getX(), RUNE_DOCK[0].getY(), RUNE_DOCK[0].getZ());

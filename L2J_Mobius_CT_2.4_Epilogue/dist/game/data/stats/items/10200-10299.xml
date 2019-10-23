@@ -64,7 +64,7 @@
 		<set name="price" val="30000" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2420-1" /> <!-- White Seed of Evil Lump -->
+		<set name="item_skill" val="2420-1" /> <!-- White Seed of Evil LUmp -->
 	</item>
 	<item id="10206" type="EtcItem" name="Black Seed of Evil Lump">
 		<!-- Double-click to obtain black seed of evil. -->
@@ -76,10 +76,10 @@
 		<set name="price" val="21000" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2421-1" /> <!-- Black Seed of Evil Lump -->
+		<set name="item_skill" val="2421-1" /> <!-- Black Seed of Evil LUmp -->
 	</item>
 	<item id="10207" type="Armor" name="Enhanced Striped Scale Shirt">
-		<!-- Max MP increases by 35, M. Def. increases. -->
+		<!-- Maximum MP increases by 35, magic resistance increases. -->
 		<set name="icon" val="icon.etc_stripe_shirts_a_i04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -97,7 +97,7 @@
 		</for>
 	</item>
 	<item id="10208" type="Armor" name="Enhanced Striped Mithril Shirt">
-		<!-- Max MP increases by 70, M. Def. increases by 50. -->
+		<!-- Maximum MP increases by 70, magic resistance increases by 50. -->
 		<set name="icon" val="icon.etc_stripe_shirts_s_i05" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -206,7 +206,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="878" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="4180" />
 		<set name="price" val="18298000" />
@@ -487,7 +487,7 @@
 		</for>
 	</item>
 	<item id="10224" type="Weapon" name="Icarus Stinger">
-		<!-- Kamael Exclusive Weapon: Icarus Sawsword Conversion. Bestows one of the following functions: Focus, Health or Light. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and healing power, and of decreaseing MP consumption for skill use for you and your party members during a critical attack. -->
+		<!-- Kamael exclusive weapon: Icarus Sawsword Conversion. Bestows one of the following functions: Focus, Health or Light. When enchanted by 4 or more, a critical attack will have a chance to increase P. Atk., M. Atk., and healing power, and decrease MP consumption during skill use, for you and your party members. -->
 		<set name="icon" val="icon.weapon_icarus_stinger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -521,7 +521,7 @@
 		</for>
 	</item>
 	<item id="10225" type="Weapon" name="Icarus Wingblade">
-		<!-- Kamael Exclusive Weapon: Icarus Heavy Arms Conversion. Bestows one of the following functions: Focus, Health or Light. -->
+		<!-- Kamael exclusive weapon: Icarus Heavy Arms Conversion. Bestows one of the following functions: Focus, Health or Light. -->
 		<set name="icon" val="icon.weapon_icarus_wing_blade_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -554,7 +554,7 @@
 		</for>
 	</item>
 	<item id="10226" type="Weapon" name="Icarus Shooter">
-		<!-- Kamael Exclusive Weapon: Icarus Spitter Conversion. Bestows one of the following functions: Cheap Shot, Guidance or Focus. -->
+		<!-- Kamael exclusive weapon: Icarus Spitter Conversion. Bestows one of the following functions: Cheap Shot, Guidance or Focus. -->
 		<set name="icon" val="icon.weapon_icarus_shooter_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -594,7 +594,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1616" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="7570" />
 		<set name="price" val="33673000" />
@@ -616,7 +616,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1616" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="7570" />
 		<set name="price" val="33673000" />
@@ -641,7 +641,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1616" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="7570" />
 		<set name="price" val="33673000" />
@@ -666,7 +666,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1616" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="7570" />
 		<set name="price" val="33673000" />
@@ -691,7 +691,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1616" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="7570" />
 		<set name="price" val="33673000" />
@@ -715,7 +715,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1212" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="4180" />
 		<set name="price" val="25255000" />
@@ -727,14 +727,14 @@
 		</for>
 	</item>
 	<item id="10233" type="Armor" name="Dynasty Jewel Leather Armor - Dagger Master">
-		<!-- Can be equipped by Adventurers, Wind Riders, Ghost Hunters, and Fortune Seekers. -->
+		<!-- Can only be worn by Adventurers, Wind Riders and Ghost Hunters. -->
 		<set name="icon" val="icon.armor_t92_ud_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1212" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="4180" />
 		<set name="price" val="25255000" />
@@ -756,7 +756,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1212" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="4180" />
 		<set name="price" val="25255000" />
@@ -777,7 +777,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1212" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1780" />
 		<set name="price" val="25255000" />
@@ -800,7 +800,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1212" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1780" />
 		<set name="price" val="25255000" />
@@ -826,7 +826,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1212" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1780" />
 		<set name="price" val="25255000" />
@@ -852,7 +852,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1212" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1780" />
 		<set name="price" val="25255000" />
@@ -878,7 +878,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1212" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1780" />
 		<set name="price" val="25255000" />
@@ -1029,7 +1029,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="price" val="74946000" />
@@ -1059,7 +1059,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="74946000" />
@@ -1156,7 +1156,7 @@
 		</cond>
 	</item>
 	<item id="10261" type="EtcItem" name="Accuracy Juice">
-		<!-- Delicious beverage made with rare fruits. Increases Accuracy by 4 when used. -->
+		<!-- Delicious beverage made with rare fruits. Accuracy increases by 4 when used. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1174,7 +1174,7 @@
 		</cond>
 	</item>
 	<item id="10262" type="EtcItem" name="Critical Hit Juice">
-		<!-- Delicious beverage made with rare fruits. Critical Damage increases by 35% when used. -->
+		<!-- Delicious beverage made with rare fruits. Critical effect increases by 35% when used. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1185,14 +1185,14 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2431-1" /> <!-- Critical Damage Juice -->
+		<set name="item_skill" val="2431-1" /> <!-- Critical Power Juice -->
 		<set name="for_npc" val="true" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="10263" type="EtcItem" name="Critical Rate Juice">
-		<!-- Delicious beverage made with rare fruits. Critical Rate increases by 30% when used. -->
+		<!-- Delicious beverage made with rare fruits. Critical rate increases by 30% when used. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1228,7 +1228,7 @@
 		</cond>
 	</item>
 	<item id="10265" type="EtcItem" name="Evasion Juice">
-		<!-- Delicious beverage made with rare fruits. Increases Evasion by 4 when used. -->
+		<!-- Delicious beverage made with rare fruits. Evasion increases by 4 when used. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1246,7 +1246,7 @@
 		</cond>
 	</item>
 	<item id="10266" type="EtcItem" name="M. Atk. Juice">
-		<!-- Delicious beverage made with rare fruits. Increases M. Atk. by 75% when used. -->
+		<!-- Delicious beverage made with rare fruits. M. Atk. increases by 75% when used. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i06" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1264,7 +1264,7 @@
 		</cond>
 	</item>
 	<item id="10267" type="EtcItem" name="Power Juice">
-		<!-- Delicious beverage made with rare fruits. Increases P. Atk. by 15% when used. -->
+		<!-- Delicious beverage made with rare fruits. P. Atk. increases by 15% when used. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i07" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1282,7 +1282,7 @@
 		</cond>
 	</item>
 	<item id="10268" type="EtcItem" name="Speed Juice">
-		<!-- Delicious beverage made with rare fruits. Speed increases by 33 when used. -->
+		<!-- Delicious beverage made with rare fruits. Moving speed increases by 33 when used. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i08" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1318,7 +1318,7 @@
 		</cond>
 	</item>
 	<item id="10270" type="EtcItem" name="MP Consumption Juice">
-		<!-- Delicious beverage made with rare fruits. Decreases physical skill MP consumption by 10%, magic skill MP consumption by 4%, and song/dance skill MP consumption by 10%. -->
+		<!-- Delicious beverage made with rare fruits. MP consumption decreases by 10 during skill use when used. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i10" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -1563,7 +1563,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10288" type="EtcItem" name="Transformation Sealbook: Divine Knight">
-		<!-- Allows for transformation into a highly specialized form, by transferring the powerful energy of the subclass to the main class. This item cannot be exchanged, dropped, destroyed, or stored in a warehouse. -->
+		<!-- Allows for tranformation into a highly specialized form, by transferring the powerful energy of the subclass to the main class. This item cannot be exchanged, dropped, destroyed, or stored in a warehouse. -->
 		<set name="icon" val="BranchSys2.icon.etc_sb_transform_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1576,7 +1576,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10289" type="EtcItem" name="Transformation Sealbook: Divine Warrior">
-		<!-- Allows for transformation into a highly specialized form, by transferring the powerful energy of the subclass to the main class. This item cannot be exchanged, dropped, destroyed, or stored in a warehouse. -->
+		<!-- Allows for tranformation into a highly specialized form, by transferring the powerful energy of the subclass to the main class. This item cannot be exchanged, dropped, destroyed, or stored in a warehouse. -->
 		<set name="icon" val="BranchSys2.icon.etc_sb_transform_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1589,7 +1589,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10290" type="EtcItem" name="Transformation Sealbook: Divine Rogue">
-		<!-- Allows for transformation into a highly specialized form, by transferring the powerful energy of the subclass to the main class. This item cannot be exchanged, dropped, destroyed, or stored in a warehouse. -->
+		<!-- Allows for tranformation into a highly specialized form, by transferring the powerful energy of the subclass to the main class. This item cannot be exchanged, dropped, destroyed, or stored in a warehouse. -->
 		<set name="icon" val="BranchSys2.icon.etc_sb_transform_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1602,7 +1602,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10291" type="EtcItem" name="Transformation Sealbook: Divine Healer">
-		<!-- Allows for transformation into a highly specialized form, by transferring the powerful energy of the subclass to the main class. This item cannot be exchanged, dropped, destroyed, or stored in a warehouse. -->
+		<!-- Allows for tranformation into a highly specialized form, by transferring the powerful energy of the subclass to the main class. This item cannot be exchanged, dropped, destroyed, or stored in a warehouse. -->
 		<set name="icon" val="BranchSys2.icon.etc_sb_transform_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1615,7 +1615,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10292" type="EtcItem" name="Transformation Sealbook: Divine Wizard">
-		<!-- Allows for transformation into a highly specialized form, by transferring the powerful energy of the subclass to the main class. This item cannot be exchanged, dropped, destroyed, or stored in a warehouse. -->
+		<!-- Allows for tranformation into a highly specialized form, by transferring the powerful energy of the subclass to the main class. This item cannot be exchanged, dropped, destroyed, or stored in a warehouse. -->
 		<set name="icon" val="BranchSys2.icon.etc_sb_transform_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1628,7 +1628,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10293" type="EtcItem" name="Transformation Sealbook: Divine Enchanter">
-		<!-- Allows for transformation into a highly specialized form, by transferring the powerful energy of the subclass to the main class. This item cannot be exchanged, dropped, destroyed, or stored in a warehouse. -->
+		<!-- Allows for tranformation into a highly specialized form, by transferring the powerful energy of the subclass to the main class. This item cannot be exchanged, dropped, destroyed, or stored in a warehouse. -->
 		<set name="icon" val="BranchSys2.icon.etc_sb_transform_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1641,7 +1641,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10294" type="EtcItem" name="Transformation Sealbook: Divine Summoner">
-		<!-- Allows for transformation into a highly specialized form, by transferring the powerful energy of the subclass to the main class. This item cannot be exchanged, dropped, destroyed, or stored in a warehouse. -->
+		<!-- Allows for tranformation into a highly specialized form, by transferring the powerful energy of the subclass to the main class. This item cannot be exchanged, dropped, destroyed, or stored in a warehouse. -->
 		<set name="icon" val="BranchSys2.icon.etc_sb_transform_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />

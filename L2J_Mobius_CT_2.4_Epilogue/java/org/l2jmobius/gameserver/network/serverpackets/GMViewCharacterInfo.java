@@ -17,7 +17,6 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
-import org.l2jmobius.gameserver.data.xml.impl.ExperienceData;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
@@ -60,7 +59,6 @@ public class GMViewCharacterInfo implements IClientOutgoingPacket
 		packet.writeD(_player.getClassId().getId());
 		packet.writeD(_player.getLevel());
 		packet.writeQ(_player.getExp());
-		packet.writeF((float) (_player.getExp() - ExperienceData.getInstance().getExpForLevel(_player.getLevel())) / (ExperienceData.getInstance().getExpForLevel(_player.getLevel() + 1) - ExperienceData.getInstance().getExpForLevel(_player.getLevel()))); // High Five exp %
 		packet.writeD(_player.getSTR());
 		packet.writeD(_player.getDEX());
 		packet.writeD(_player.getCON());

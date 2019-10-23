@@ -116,7 +116,6 @@ public class PetInfo implements IClientOutgoingPacket
 		packet.writeC(_summon.isInCombat() ? 1 : 0); // attacking 1=true
 		packet.writeC(_summon.isAlikeDead() ? 1 : 0); // dead 1=true
 		packet.writeC(_isSummoned ? 2 : _val); // 0=teleported 1=default 2=summoned
-		packet.writeD(-1); // High Five NPCString ID
 		if (_summon.isPet())
 		{
 			packet.writeS(_summon.getName()); // Pet name.
@@ -125,7 +124,6 @@ public class PetInfo implements IClientOutgoingPacket
 		{
 			packet.writeS(_summon.getTemplate().isUsingServerSideName() ? _summon.getName() : ""); // Summon name.
 		}
-		packet.writeD(-1); // High Five NPCString ID
 		packet.writeS(_summon.getTitle()); // owner name
 		packet.writeD(1);
 		packet.writeD(_summon.getPvpFlag()); // 0 = white,2= purpleblink, if its greater then karma = purple

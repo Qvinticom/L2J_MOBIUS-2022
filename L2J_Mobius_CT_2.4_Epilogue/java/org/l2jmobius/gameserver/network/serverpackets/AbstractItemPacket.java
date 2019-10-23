@@ -39,6 +39,7 @@ public abstract class AbstractItemPacket implements IClientOutgoingPacket
 	
 	protected void writeItem(PacketWriter packet, ItemInfo item)
 	{
+		packet.writeH(item.getItem().getType1());
 		packet.writeD(item.getObjectId()); // ObjectId
 		packet.writeD(item.getItem().getDisplayId()); // ItemId
 		packet.writeD(item.getLocation()); // T1
@@ -51,19 +52,13 @@ public abstract class AbstractItemPacket implements IClientOutgoingPacket
 		packet.writeH(item.getCustomType2()); // Pet name exists or not shown in control item
 		packet.writeD(item.getAugmentationBonus());
 		packet.writeD(item.getMana());
-		packet.writeD(item.getTime());
-		writeItemElementalAndEnchant(packet, item);
-	}
-	
-	protected void writeItemElementalAndEnchant(PacketWriter packet, ItemInfo item)
-	{
 		packet.writeH(item.getAttackElementType());
 		packet.writeH(item.getAttackElementPower());
 		for (byte i = 0; i < 6; i++)
 		{
 			packet.writeH(item.getElementDefAttr(i));
 		}
-		// Enchant Effects
+		packet.writeD(item.getTime());
 		for (int op : item.getEnchantOptions())
 		{
 			packet.writeH(op);

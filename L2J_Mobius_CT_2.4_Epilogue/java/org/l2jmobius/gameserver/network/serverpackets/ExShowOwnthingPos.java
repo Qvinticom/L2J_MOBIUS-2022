@@ -70,6 +70,7 @@ public class ExShowOwnthingPos implements IClientOutgoingPacket
 		else
 		{
 			packet.writeD(0x00);
+			packet.writeD(0x00);
 		}
 		return true;
 	}

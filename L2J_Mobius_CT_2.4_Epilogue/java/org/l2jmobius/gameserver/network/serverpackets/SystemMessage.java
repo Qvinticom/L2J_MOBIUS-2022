@@ -199,8 +199,7 @@ public class SystemMessage implements IClientOutgoingPacket
 	
 	public SystemMessage addPcName(PlayerInstance pc)
 	{
-		append(new SMParam(TYPE_PLAYER_NAME, pc.getAppearance().getVisibleName()));
-		return this;
+		return addString(pc.getAppearance().getVisibleName());
 	}
 	
 	/**

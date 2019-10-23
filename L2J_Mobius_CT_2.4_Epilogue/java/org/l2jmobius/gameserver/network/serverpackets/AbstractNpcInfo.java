@@ -170,13 +170,11 @@ public abstract class AbstractNpcInfo implements IClientOutgoingPacket
 			packet.writeC(_npc.isInCombat() ? 1 : 0);
 			packet.writeC(_npc.isAlikeDead() ? 1 : 0);
 			packet.writeC(_isSummoned ? 2 : 0); // invisible ?? 0=false 1=true 2=summoned (only works if model has a summon animation)
-			packet.writeD(-1); // High Five NPCString ID
 			if ((_localisation == null) && _npc.getTemplate().isUsingServerSideName())
 			{
 				_name = _npc.getName(); // On every subclass
 			}
 			packet.writeS(_name);
-			packet.writeD(-1); // High Five NPCString ID
 			if (_npc.isInvisible())
 			{
 				_title = "Invisible";
@@ -290,9 +288,7 @@ public abstract class AbstractNpcInfo implements IClientOutgoingPacket
 			packet.writeC(_trap.isInCombat() ? 1 : 0);
 			packet.writeC(_trap.isAlikeDead() ? 1 : 0);
 			packet.writeC(_isSummoned ? 2 : 0); // invisible ?? 0=false 1=true 2=summoned (only works if model has a summon animation)
-			packet.writeD(-1); // High Five NPCString ID
 			packet.writeS(_name);
-			packet.writeD(-1); // High Five NPCString ID
 			packet.writeS(_title);
 			packet.writeD(0x00); // title color 0 = client default
 			
@@ -384,9 +380,7 @@ public abstract class AbstractNpcInfo implements IClientOutgoingPacket
 			packet.writeC(_summon.isInCombat() ? 1 : 0);
 			packet.writeC(_summon.isAlikeDead() ? 1 : 0);
 			packet.writeC(_isSummoned ? 2 : _val); // invisible ?? 0=false 1=true 2=summoned (only works if model has a summon animation)
-			packet.writeD(-1); // High Five NPCString ID
 			packet.writeS(_name);
-			packet.writeD(-1); // High Five NPCString ID
 			packet.writeS(_title);
 			packet.writeD(0x01);// Title color 0=client default
 			

@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="16013" level="67" type="TamedBeast" name="Trained Buffalo">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="5186" level="2" /> <!-- Pet Haste -->
 			<skill name="Buff2" id="5187" level="4" /> <!-- Pet Vampiric Rage -->
@@ -62,7 +61,6 @@
 		</collision>
 	</npc>
 	<npc id="16014" level="67" type="TamedBeast" name="Trained Buffalo">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="5192" level="2" /> <!-- Pet Wind Walk -->
 			<skill name="Buff2" id="5193" level="3" /> <!-- Pet Acumen -->
@@ -123,7 +121,6 @@
 		</collision>
 	</npc>
 	<npc id="16015" level="69" type="TamedBeast" name="Trained Cougar">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="5186" level="2" /> <!-- Pet Haste -->
 			<skill name="Buff2" id="5187" level="4" /> <!-- Pet Vampiric Rage -->
@@ -184,7 +181,6 @@
 		</collision>
 	</npc>
 	<npc id="16016" level="69" type="TamedBeast" name="Trained Cougar">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="5192" level="2" /> <!-- Pet Wind Walk -->
 			<skill name="Buff2" id="5193" level="3" /> <!-- Pet Acumen -->
@@ -245,7 +241,6 @@
 		</collision>
 	</npc>
 	<npc id="16017" level="65" type="TamedBeast" name="Trained Kookaburra">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="5186" level="2" /> <!-- Pet Haste -->
 			<skill name="Buff2" id="5187" level="4" /> <!-- Pet Vampiric Rage -->
@@ -306,7 +301,6 @@
 		</collision>
 	</npc>
 	<npc id="16018" level="65" type="TamedBeast" name="Trained Kookaburra">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="5192" level="2" /> <!-- Pet Wind Walk -->
 			<skill name="Buff2" id="5193" level="3" /> <!-- Pet Acumen -->
@@ -367,7 +361,6 @@
 		</collision>
 	</npc>
 	<npc id="16019" level="67" type="Monster" name="Tiny Baby Buffalo">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="30" />
@@ -433,8 +426,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="16020" level="67" type="Monster" name="Trained Tiny Baby Buffalo">
-		<!-- Confirmed CT2.5 -->
+	<npc id="16020" level="67" type="Monster" name="Tame Tiny Baby Buffalo">
 		<parameters>
 			<skill name="Buff1" id="5186" level="2" /> <!-- Pet Haste -->
 			<skill name="Buff2" id="5187" level="4" /> <!-- Pet Vampiric Rage -->
@@ -497,7 +489,6 @@
 		</collision>
 	</npc>
 	<npc id="16021" level="69" type="Monster" name="Tiny Baby Cougar">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="30" />
@@ -563,8 +554,7 @@
 			<height normal="15.7" />
 		</collision>
 	</npc>
-	<npc id="16022" level="69" type="Monster" name="Trained Tiny Baby Cougar">
-		<!-- Confirmed CT2.5 -->
+	<npc id="16022" level="69" type="Monster" name="Tame Tiny Baby Cougar">
 		<parameters>
 			<skill name="Buff1" id="5186" level="2" /> <!-- Pet Haste -->
 			<skill name="Buff2" id="5187" level="4" /> <!-- Pet Vampiric Rage -->
@@ -627,7 +617,6 @@
 		</collision>
 	</npc>
 	<npc id="16023" level="65" type="Monster" name="Tiny Baby Kookaburra">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="78" />
 			<param name="MoveAroundSocial1" value="30" />
@@ -695,8 +684,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="16024" level="65" type="Monster" name="Trained Tiny Baby Kookaburra">
-		<!-- Confirmed CT2.5 -->
+	<npc id="16024" level="65" type="Monster" name="Tame Tiny Baby Kookaburra">
 		<parameters>
 			<skill name="Buff1" id="5192" level="2" /> <!-- Pet Wind Walk -->
 			<skill name="Buff2" id="5193" level="3" /> <!-- Pet Acumen -->
@@ -759,7 +747,6 @@
 		</collision>
 	</npc>
 	<npc id="16025" level="55" type="Pet" name="Great Wolf">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01" id="5442" level="1" /> <!-- Bite Attack -->
 			<param name="Skill01_ID" value="1041" />
@@ -807,7 +794,6 @@
 		</collision>
 	</npc>
 	<npc id="16026" level="55" type="Npc" name="Beastly Agathion">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -842,7 +828,6 @@
 		</collision>
 	</npc>
 	<npc id="16027" level="55" type="Npc" name="Rainbow Agathion">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -877,7 +862,6 @@
 		</collision>
 	</npc>
 	<npc id="16028" level="55" type="Npc" name="Lord Agathion">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -912,7 +896,6 @@
 		</collision>
 	</npc>
 	<npc id="16029" level="55" type="Npc" name="Fortress Agasion">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -947,7 +930,6 @@
 		</collision>
 	</npc>
 	<npc id="16030" level="55" type="Pet" name="Great Wolf">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01" id="5442" level="1" /> <!-- Bite Attack -->
 			<param name="Skill01_ID" value="1041" />
@@ -996,7 +978,6 @@
 		</collision>
 	</npc>
 	<npc id="16031" level="55" type="Npc" name="Little Angel Agathion">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -1031,7 +1012,6 @@
 		</collision>
 	</npc>
 	<npc id="16032" level="55" type="Npc" name="Little Devil Agathion">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -1066,7 +1046,6 @@
 		</collision>
 	</npc>
 	<npc id="16033" level="55" type="Npc" name="Rudolph Agathion">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -1101,7 +1080,6 @@
 		</collision>
 	</npc>
 	<npc id="16034" level="55" type="BabyPet" name="Improved Baby Buffalo">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="step0_buff01" id="5189" level="6" /> <!-- Pet Blessed Body -->
 			<skill name="step0_buff02" id="5586" level="3" /> <!-- Pet Might -->
@@ -1229,7 +1207,6 @@
 		</collision>
 	</npc>
 	<npc id="16035" level="55" type="BabyPet" name="Improved Baby Kookaburra">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="step0_buff01" id="5194" level="3" /> <!-- Pet Empower -->
 			<skill name="step0_buff02" id="5190" level="6" /> <!-- Pet Blessed Soul -->
@@ -1358,7 +1335,6 @@
 		</collision>
 	</npc>
 	<npc id="16036" level="55" type="BabyPet" name="Improved Baby Cougar">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="step0_buff01" id="5194" level="3" /> <!-- Pet Empower -->
 			<skill name="step0_buff02" id="5586" level="3" /> <!-- Pet Might -->
@@ -1486,7 +1462,6 @@
 		</collision>
 	</npc>
 	<npc id="16037" level="55" type="Pet" name="Great Snow Wolf">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="lv_step1" value="60" />
 			<param name="lv_step2" value="65" />
@@ -1607,7 +1582,6 @@
 		</collision>
 	</npc>
 	<npc id="16038" level="55" type="Pet" name="Red Wind Strider">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="lv_step1" value="60" />
 			<param name="lv_step2" value="65" />
@@ -1707,7 +1681,6 @@
 		</collision>
 	</npc>
 	<npc id="16039" level="55" type="Pet" name="Red Star Strider">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="lv_step1" value="60" />
 			<param name="lv_step2" value="65" />
@@ -1807,7 +1780,6 @@
 		</collision>
 	</npc>
 	<npc id="16040" level="55" type="Pet" name="Red Twilight Strider">
-		<!-- Confirmed CT2.5 -->
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -1846,7 +1818,6 @@
 		</collision>
 	</npc>
 	<npc id="16041" level="55" type="Pet" name="Fenrir">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01" id="5442" level="1" /> <!-- Bite Attack -->
 			<param name="Skill01_ID" value="1041" />
@@ -1898,7 +1869,6 @@
 		</collision>
 	</npc>
 	<npc id="16042" level="55" type="Pet" name="Snow Fenrir">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="lv_step1" value="60" />
 			<param name="lv_step2" value="65" />
@@ -2019,7 +1989,6 @@
 		</collision>
 	</npc>
 	<npc id="16043" level="55" type="Pet" name="Fox Shaman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="105" />
 			<skill name="step0_skill01" id="5749" level="1" /> <!-- Thunder Bolt -->
@@ -2125,7 +2094,6 @@
 		</collision>
 	</npc>
 	<npc id="16044" level="55" type="Pet" name="Wild Beast Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="105" />
 			<skill name="step0_skill04" id="5745" level="1" /> <!-- Death Blow -->
@@ -2231,7 +2199,6 @@
 		</collision>
 	</npc>
 	<npc id="16045" level="55" type="BabyPet" name="White Weasel">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="133" />
 			<skill name="step0_buff01" id="5189" level="6" /> <!-- Pet Blessed Body -->
@@ -2324,7 +2291,6 @@
 		</collision>
 	</npc>
 	<npc id="16046" level="55" type="BabyPet" name="Fairy Princess">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="123" />
 			<skill name="step0_buff01" id="5190" level="6" /> <!-- Pet Blessed Soul -->
@@ -2411,7 +2377,6 @@
 		</collision>
 	</npc>
 	<npc id="16049" level="55" type="Npc" name="Love Agathion">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -2446,7 +2411,6 @@
 		</collision>
 	</npc>
 	<npc id="16050" level="55" type="Pet" name="Owl Monk">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="50" />
 		</parameters>
@@ -2487,7 +2451,6 @@
 		</collision>
 	</npc>
 	<npc id="16051" level="55" type="BabyPet" name="Spirit Shaman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<skill name="step0_skill01" id="5749" level="1" /> <!-- Thunder Bolt -->
@@ -2632,7 +2595,6 @@
 		</collision>
 	</npc>
 	<npc id="16052" level="55" type="BabyPet" name="Toy Knight">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="58" />
 			<skill name="step0_skill01" id="6046" level="1" /> <!-- Piercing Attack -->
@@ -2807,7 +2769,6 @@
 		</collision>
 	</npc>
 	<npc id="16053" level="55" type="BabyPet" name="Turtle Ascetic">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<skill name="step0_skill01" id="6050" level="1" /> <!-- Power Smash -->
@@ -2979,7 +2940,6 @@
 		</collision>
 	</npc>
 	<npc id="16054" level="55" type="Npc" name="Monkey">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -3014,7 +2974,6 @@
 		</collision>
 	</npc>
 	<npc id="16055" level="55" type="Npc" name="Griffon">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -3049,7 +3008,6 @@
 		</collision>
 	</npc>
 	<npc id="16056" level="55" type="Npc" name="Joy">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -3084,7 +3042,6 @@
 		</collision>
 	</npc>
 	<npc id="16057" level="55" type="Npc" name="Sorrow">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -3119,7 +3076,6 @@
 		</collision>
 	</npc>
 	<npc id="16058" level="55" type="Npc" name="Anger">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -3154,7 +3110,6 @@
 		</collision>
 	</npc>
 	<npc id="16059" level="55" type="Npc" name="Boy Bear">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -3189,7 +3144,6 @@
 		</collision>
 	</npc>
 	<npc id="16060" level="55" type="Npc" name="Girl Bear">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -3224,7 +3178,6 @@
 		</collision>
 	</npc>
 	<npc id="16061" level="55" type="Npc" name="Collection Device">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -3259,7 +3212,6 @@
 		</collision>
 	</npc>
 	<npc id="16062" level="55" type="Npc" name="Knight">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -3293,8 +3245,7 @@
 			<height normal="7" />
 		</collision>
 	</npc>
-	<npc id="16063" level="55" type="Npc" name="Neolithica">
-		<!-- Confirmed CT2.5 -->
+	<npc id="16063" level="55" type="Npc" name="Saerom">
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3329,7 +3280,6 @@
 		</collision>
 	</npc>
 	<npc id="16064" level="55" type="Npc" name="Juju">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3364,7 +3314,6 @@
 		</collision>
 	</npc>
 	<npc id="16065" level="55" type="Npc" name="Oink Oink">
-		<!-- Confirmed CT2.5 -->
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3399,7 +3348,6 @@
 		</collision>
 	</npc>
 	<npc id="16066" level="55" type="Npc" name="Light of Dawn">
-		<!-- Confirmed CT2.5 -->
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3434,7 +3382,6 @@
 		</collision>
 	</npc>
 	<npc id="16067" level="55" type="Pet" name="Deinonychus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="lv_step1" value="60" />
 			<param name="lv_step2" value="65" />
@@ -3494,7 +3441,6 @@
 		</collision>
 	</npc>
 	<npc id="16068" level="55" type="Pet" name="Guardian's Strider">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="lv_step1" value="60" />
 			<param name="lv_step2" value="65" />
@@ -3595,7 +3541,6 @@
 		</collision>
 	</npc>
 	<npc id="16069" level="55" type="Npc" name="Pona">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3630,7 +3575,6 @@
 		</collision>
 	</npc>
 	<npc id="16070" level="55" type="Npc" name="Towbat">
-		<!-- Confirmed CT2.5 -->
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3663,198 +3607,7 @@
 			<height normal="5.87" />
 		</collision>
 	</npc>
-	<npc id="16071" level="55" type="Pet" name="Maguen">
-		<!-- Confirmed CT2.5 -->
-		<parameters>
-			<param name="lv_step1" value="60" />
-			<param name="lv_step2" value="65" />
-			<param name="lv_step3" value="70" />
-			<param name="lv_step4" value="75" />
-			<param name="lv_step5" value="80" />
-			<param name="lv_step6" value="85" />
-			<skill name="step0_skill01" id="6618" level="1" /> <!-- Maguen Strike -->
-			<param name="step0_action01" value="1093" />
-			<skill name="step1_skill01" id="6618" level="2" /> <!-- Maguen Strike -->
-			<skill name="step1_skill02" id="6681" level="1" /> <!-- Maguen Speed Walk -->
-			<skill name="step1_skill03" id="6683" level="1" /> <!-- Maguen Recall -->
-			<param name="step1_action01" value="1093" />
-			<param name="step1_action02" value="1094" />
-			<param name="step1_action03" value="1097" />
-			<skill name="step2_skill01" id="6618" level="3" /> <!-- Maguen Strike -->
-			<skill name="step2_skill02" id="6681" level="1" /> <!-- Maguen Speed Walk -->
-			<skill name="step2_skill03" id="6683" level="1" /> <!-- Maguen Recall -->
-			<param name="step2_action01" value="1093" />
-			<param name="step2_action02" value="1094" />
-			<param name="step2_action03" value="1097" />
-			<skill name="step3_skill01" id="6618" level="4" /> <!-- Maguen Strike -->
-			<skill name="step3_skill02" id="6681" level="1" /> <!-- Maguen Speed Walk -->
-			<skill name="step3_skill03" id="6683" level="1" /> <!-- Maguen Recall -->
-			<param name="step3_action01" value="1093" />
-			<param name="step3_action02" value="1094" />
-			<param name="step3_action03" value="1097" />
-			<skill name="step4_skill01" id="6618" level="5" /> <!-- Maguen Strike -->
-			<skill name="step4_skill02" id="6681" level="1" /> <!-- Maguen Speed Walk -->
-			<skill name="step4_skill03" id="6683" level="1" /> <!-- Maguen Recall -->
-			<param name="step4_action01" value="1093" />
-			<param name="step4_action02" value="1094" />
-			<param name="step4_action03" value="1097" />
-			<skill name="step5_skill01" id="6618" level="6" /> <!-- Maguen Strike -->
-			<skill name="step5_skill02" id="6681" level="1" /> <!-- Maguen Speed Walk -->
-			<skill name="step5_skill03" id="6683" level="1" /> <!-- Maguen Recall -->
-			<param name="step5_action01" value="1093" />
-			<param name="step5_action02" value="1094" />
-			<param name="step5_action03" value="1097" />
-			<skill name="step6_skill01" id="6618" level="7" /> <!-- Maguen Strike -->
-			<skill name="step6_skill02" id="6681" level="1" /> <!-- Maguen Speed Walk -->
-			<skill name="step6_skill03" id="6683" level="1" /> <!-- Maguen Recall -->
-			<param name="step6_action01" value="1093" />
-			<param name="step6_action02" value="1094" />
-			<param name="step6_action03" value="1097" />
-			<param name="step1_skill_target02" value="2" />
-			<param name="step1_skill_target03" value="2" />
-			<param name="step2_skill_target02" value="2" />
-			<param name="step2_skill_target03" value="2" />
-			<param name="step3_skill_target02" value="2" />
-			<param name="step3_skill_target03" value="2" />
-			<param name="step4_skill_target02" value="2" />
-			<param name="step4_skill_target03" value="2" />
-			<param name="step5_skill_target02" value="2" />
-			<param name="step5_skill_target03" value="2" />
-			<param name="step6_skill_target02" value="2" />
-			<param name="step6_skill_target03" value="2" />
-		</parameters>
-		<race>BEAST</race>
-		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="1673.05473" hpRegen="6.5" mp="889.8" mpRegen="2.4" />
-			<attack physical="388.11142" magical="265.02979" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="223.6362" magical="163.64727" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
-			<speed>
-				<walk ground="15" />
-				<run ground="120" />
-			</speed>
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-		</skillList>
-		<shots soul="2" spirit="2" />
-		<corpseTime>86400</corpseTime>
-		<exCrtEffect>false</exCrtEffect>
-		<collision>
-			<radius normal="11" />
-			<height normal="13.25" />
-		</collision>
-	</npc>
-	<npc id="16072" level="55" type="Pet" name="Elite Maguen">
-		<!-- Confirmed CT2.5 -->
-		<parameters>
-			<param name="lv_step1" value="60" />
-			<param name="lv_step2" value="65" />
-			<param name="lv_step3" value="70" />
-			<param name="lv_step4" value="75" />
-			<param name="lv_step5" value="80" />
-			<param name="lv_step6" value="85" />
-			<skill name="step0_skill01" id="6619" level="1" /> <!-- Maguen Power Strike -->
-			<param name="step0_action01" value="1095" />
-			<skill name="step1_skill01" id="6619" level="2" /> <!-- Maguen Power Strike -->
-			<skill name="step1_skill02" id="6682" level="1" /> <!-- Elite Maguen Speed Walk -->
-			<skill name="step1_skill03" id="6684" level="1" /> <!-- Maguen Party Recall -->
-			<param name="step1_action01" value="1095" />
-			<param name="step1_action02" value="1096" />
-			<param name="step1_action03" value="1098" />
-			<skill name="step2_skill01" id="6619" level="3" /> <!-- Maguen Power Strike -->
-			<skill name="step2_skill02" id="6682" level="1" /> <!-- Elite Maguen Speed Walk -->
-			<skill name="step2_skill03" id="6684" level="1" /> <!-- Maguen Party Recall -->
-			<param name="step2_action01" value="1095" />
-			<param name="step2_action02" value="1096" />
-			<param name="step2_action03" value="1098" />
-			<skill name="step3_skill01" id="6619" level="4" /> <!-- Maguen Power Strike -->
-			<skill name="step3_skill02" id="6682" level="1" /> <!-- Elite Maguen Speed Walk -->
-			<skill name="step3_skill03" id="6684" level="1" /> <!-- Maguen Party Recall -->
-			<param name="step3_action01" value="1095" />
-			<param name="step3_action02" value="1096" />
-			<param name="step3_action03" value="1098" />
-			<skill name="step4_skill01" id="6619" level="5" /> <!-- Maguen Power Strike -->
-			<skill name="step4_skill02" id="6682" level="1" /> <!-- Elite Maguen Speed Walk -->
-			<skill name="step4_skill03" id="6684" level="1" /> <!-- Maguen Party Recall -->
-			<param name="step4_action01" value="1095" />
-			<param name="step4_action02" value="1096" />
-			<param name="step4_action03" value="1098" />
-			<skill name="step5_skill01" id="6619" level="6" /> <!-- Maguen Power Strike -->
-			<skill name="step5_skill02" id="6682" level="1" /> <!-- Elite Maguen Speed Walk -->
-			<skill name="step5_skill03" id="6684" level="1" /> <!-- Maguen Party Recall -->
-			<param name="step5_action01" value="1095" />
-			<param name="step5_action02" value="1096" />
-			<param name="step5_action03" value="1098" />
-			<skill name="step6_skill01" id="6619" level="7" /> <!-- Maguen Power Strike -->
-			<skill name="step6_skill02" id="6682" level="1" /> <!-- Elite Maguen Speed Walk -->
-			<skill name="step6_skill03" id="6684" level="1" /> <!-- Maguen Party Recall -->
-			<param name="step6_action01" value="1095" />
-			<param name="step6_action02" value="1096" />
-			<param name="step6_action03" value="1098" />
-			<param name="step1_skill_target02" value="2" />
-			<param name="step1_skill_target03" value="2" />
-			<param name="step2_skill_target02" value="2" />
-			<param name="step2_skill_target03" value="2" />
-			<param name="step3_skill_target02" value="2" />
-			<param name="step3_skill_target03" value="2" />
-			<param name="step4_skill_target02" value="2" />
-			<param name="step4_skill_target03" value="2" />
-			<param name="step5_skill_target02" value="2" />
-			<param name="step5_skill_target03" value="2" />
-			<param name="step6_skill_target02" value="2" />
-			<param name="step6_skill_target03" value="2" />
-		</parameters>
-		<race>BEAST</race>
-		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="1673.05473" hpRegen="6.5" mp="889.8" mpRegen="2.4" />
-			<attack physical="388.11142" magical="265.02979" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="223.6362" magical="163.64727" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
-			<speed>
-				<walk ground="15" />
-				<run ground="120" />
-			</speed>
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-		</skillList>
-		<shots soul="2" spirit="2" />
-		<corpseTime>86400</corpseTime>
-		<exCrtEffect>false</exCrtEffect>
-		<collision>
-			<radius normal="11" />
-			<height normal="13.25" />
-		</collision>
-	</npc>
 	<npc id="16073" level="55" type="Npc" name="Rudolph Agathion">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3886,126 +3639,6 @@
 		<collision>
 			<radius normal="0.01" />
 			<height normal="5.271" />
-		</collision>
-	</npc>
-	<npc id="16074" level="80" type="Npc" name="Ball Trapping Gnosian">
-		<!-- TODO: Must be confirmed -->
-		<sex>MALE</sex>
-		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
-			<vitals hp="2444" mp="2444.0" />
-			<attack physical="500" magical="500" attackSpeed="278" range="40" />
-			<defence physical="500" magical="500" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
-			<speed>
-				<walk ground="60" />
-				<run ground="160" />
-			</speed>
-		</stats>
-		<collision>
-			<radius normal="25" />
-			<height normal="35" />
-		</collision>
-	</npc>
-	<npc id="16075" level="80" type="Npc" name="Ball Trapping Orodriel">
-		<!-- TODO: Must be confirmed -->
-		<sex>MALE</sex>
-		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
-			<vitals hp="2444" mp="2444.0" />
-			<attack physical="500" magical="500" attackSpeed="278" range="40" />
-			<defence physical="500" magical="500" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
-			<speed>
-				<walk ground="60" />
-				<run ground="160" />
-			</speed>
-		</stats>
-		<collision>
-			<radius normal="25" />
-			<height normal="35" />
-		</collision>
-	</npc>
-	<npc id="16076" level="80" type="Npc" name="Penalty Kick">
-		<!-- TODO: Must be confirmed -->
-		<sex>MALE</sex>
-		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
-			<vitals hp="2444" mp="2444.0" />
-			<attack physical="500" magical="500" attackSpeed="278" range="40" />
-			<defence physical="500" magical="500" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
-			<speed>
-				<walk ground="60" />
-				<run ground="160" />
-			</speed>
-		</stats>
-		<collision>
-			<radius normal="25" />
-			<height normal="35" />
-		</collision>
-	</npc>
-	<npc id="16077" level="80" type="Npc" name="Antharas">
-		<!-- TODO: Must be confirmed -->
-		<sex>MALE</sex>
-		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
-			<vitals hp="2444" mp="2444.0" />
-			<attack physical="500" magical="500" attackSpeed="278" range="40" />
-			<defence physical="500" magical="500" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
-			<speed>
-				<walk ground="60" />
-				<run ground="160" />
-			</speed>
-		</stats>
-		<collision>
-			<radius normal="25" />
-			<height normal="35" />
-		</collision>
-	</npc>
-	<npc id="16078" level="80" type="Npc" name="Nevit's Messenger Kanna">
-		<!-- TODO: Must be confirmed -->
-		<sex>MALE</sex>
-		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
-			<vitals hp="2444" mp="2444.0" />
-			<attack physical="500" magical="500" attackSpeed="278" range="40" />
-			<defence physical="500" magical="500" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
-			<speed>
-				<walk ground="60" />
-				<run ground="160" />
-			</speed>
-		</stats>
-		<collision>
-			<radius normal="25" />
-			<height normal="35" />
-		</collision>
-	</npc>
-	<npc id="16079" level="80" type="Npc" name="Guardian of Dawn Kallesin">
-		<!-- TODO: Must be confirmed -->
-		<sex>MALE</sex>
-		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
-			<vitals hp="2444" mp="2444.0" />
-			<attack physical="500" magical="500" attackSpeed="278" range="40" />
-			<defence physical="500" magical="500" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
-			<speed>
-				<walk ground="60" />
-				<run ground="160" />
-			</speed>
-		</stats>
-		<collision>
-			<radius normal="25" />
-			<height normal="35" />
 		</collision>
 	</npc>
 </list>

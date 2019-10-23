@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="30827" level="70" type="PetManager" name="Lundy" title="Pet Manager">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -73,7 +72,6 @@
 		</collision>
 	</npc>
 	<npc id="30828" level="70" type="PetManager" name="Waters" title="Pet Manager">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -145,7 +143,6 @@
 		</collision>
 	</npc>
 	<npc id="30829" level="70" type="PetManager" name="Cooper" title="Pet Manager">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -217,7 +214,6 @@
 		</collision>
 	</npc>
 	<npc id="30830" level="70" type="PetManager" name="Joey" title="Pet Manager">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -289,7 +285,6 @@
 		</collision>
 	</npc>
 	<npc id="30831" level="70" type="PetManager" name="Nelson" title="Pet Manager">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -361,7 +356,6 @@
 		</collision>
 	</npc>
 	<npc id="30832" level="70" type="Npc" name="Hardin">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -401,7 +395,6 @@
 		</collision>
 	</npc>
 	<npc id="30833" level="70" type="Trainer" name="Kaspar" title="Magister">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -441,7 +434,6 @@
 		</collision>
 	</npc>
 	<npc id="30834" level="70" type="Merchant" name="Cema" title="Magic Trader">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -481,7 +473,6 @@
 		</collision>
 	</npc>
 	<npc id="30835" level="70" type="Trainer" name="Icarus" title="Lich King">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="114" />
 			<param name="MoveAroundSocial1" value="114" />
@@ -523,7 +514,6 @@
 		</collision>
 	</npc>
 	<npc id="30836" level="70" type="Teleporter" name="Minerva" title="Gatekeeper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -563,8 +553,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="30837" level="70" type="Merchant" name="Woodrow" title="Weapon Merchant">
-		<!-- Confirmed CT2.5 -->
+	<npc id="30837" level="70" type="Merchant" name="Woodrow" title="Trader">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -603,8 +592,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="30838" level="70" type="Merchant" name="Woodley" title="Armor Merchant">
-		<!-- Confirmed CT2.5 -->
+	<npc id="30838" level="70" type="Merchant" name="Woodley" title="Trader">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -643,8 +631,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="30839" level="70" type="Merchant" name="Holly" title="Grocer">
-		<!-- Confirmed CT2.5 -->
+	<npc id="30839" level="70" type="Merchant" name="Holly" title="Trader">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -684,7 +671,6 @@
 		</collision>
 	</npc>
 	<npc id="30840" level="70" type="Merchant" name="Lorenzo" title="Trader">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -723,8 +709,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="30841" level="70" type="Merchant" name="Carson" title="Accessory Merchant">
-		<!-- Confirmed CT2.5 -->
+	<npc id="30841" level="70" type="Merchant" name="Carson" title="Trader">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -763,8 +748,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="30842" level="70" type="Merchant" name="Alexis" title="Accessory Merchant">
-		<!-- Confirmed CT2.5 -->
+	<npc id="30842" level="70" type="Merchant" name="Alexis" title="Trader">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="75" />
@@ -804,7 +788,6 @@
 		</collision>
 	</npc>
 	<npc id="30843" level="70" type="Warehouse" name="Romp" title="Warehouse Keeper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -844,7 +827,6 @@
 		</collision>
 	</npc>
 	<npc id="30844" level="70" type="Warehouse" name="Walderal" title="Warehouse Keeper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -884,7 +866,6 @@
 		</collision>
 	</npc>
 	<npc id="30845" level="70" type="VillageMasterDwarf" name="Klump" title="Warehouse Chief">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -925,7 +906,6 @@
 		</collision>
 	</npc>
 	<npc id="30846" level="70" type="Trainer" name="Wilbert" title="Blacksmith">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="93" />
@@ -966,7 +946,6 @@
 		</collision>
 	</npc>
 	<npc id="30847" level="70" type="VillageMasterDwarf" name="Ferris" title="Head Blacksmith">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -1007,7 +986,6 @@
 		</collision>
 	</npc>
 	<npc id="30848" level="70" type="Teleporter" name="Elisa" title="Gatekeeper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -1048,7 +1026,6 @@
 		</collision>
 	</npc>
 	<npc id="30849" level="70" type="VillageMasterFighter" name="Sedrick" title="Grand Master">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="158" />
@@ -1089,7 +1066,6 @@
 		</collision>
 	</npc>
 	<npc id="30850" level="70" type="Trainer" name="Aiken" title="Master">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -1129,7 +1105,6 @@
 		</collision>
 	</npc>
 	<npc id="30851" level="70" type="Trainer" name="Kendra" title="Master">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="157" />
@@ -1169,7 +1144,6 @@
 		</collision>
 	</npc>
 	<npc id="30852" level="70" type="Trainer" name="Sinden" title="Master">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="79" />
@@ -1209,7 +1183,6 @@
 		</collision>
 	</npc>
 	<npc id="30853" level="70" type="Trainer" name="Raien" title="Master">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="133" />
@@ -1249,7 +1222,6 @@
 		</collision>
 	</npc>
 	<npc id="30854" level="70" type="VillageMasterMystic" name="Drikiyan" title="Grand Magister">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -1290,7 +1262,6 @@
 		</collision>
 	</npc>
 	<npc id="30855" level="70" type="Trainer" name="Desmond" title="Magister">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -1330,7 +1301,6 @@
 		</collision>
 	</npc>
 	<npc id="30856" level="70" type="Trainer" name="Winonin" title="Magister">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="133" />
@@ -1370,7 +1340,6 @@
 		</collision>
 	</npc>
 	<npc id="30857" level="70" type="VillageMasterPriest" name="Orven" title="High Priest">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="135" />
@@ -1411,7 +1380,6 @@
 		</collision>
 	</npc>
 	<npc id="30858" level="70" type="Trainer" name="Ross" title="Priest">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -1453,7 +1421,6 @@
 		</collision>
 	</npc>
 	<npc id="30859" level="70" type="Trainer" name="Vivyan" title="Priestess">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -1495,7 +1462,6 @@
 		</collision>
 	</npc>
 	<npc id="30860" level="70" type="Trainer" name="Flownia" title="Priestess">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="75" />
@@ -1537,7 +1503,6 @@
 		</collision>
 	</npc>
 	<npc id="30861" level="70" type="Trainer" name="Leonard" title="Priest">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="127" />
@@ -1578,8 +1543,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="30862" level="70" type="VillageMasterDElf" name="Oltran" title="Grand Master">
-		<!-- Confirmed CT2.5 -->
+	<npc id="30862" level="70" type="VillageMasterDElf" name="Oltlin" title="Grand Master">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="103" />
@@ -1620,7 +1584,6 @@
 		</collision>
 	</npc>
 	<npc id="30863" level="70" type="Trainer" name="Ghest" title="Master">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -1660,7 +1623,6 @@
 		</collision>
 	</npc>
 	<npc id="30864" level="70" type="Trainer" name="Hanellin" title="Magister">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -1702,7 +1664,6 @@
 		</collision>
 	</npc>
 	<npc id="30865" level="70" type="VillageMasterOrc" name="Ladanza" title="High Prefect">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="95" />
@@ -1743,7 +1704,6 @@
 		</collision>
 	</npc>
 	<npc id="30866" level="70" type="Trainer" name="Marestella" title="Prefect">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="156" />
@@ -1783,7 +1743,6 @@
 		</collision>
 	</npc>
 	<npc id="30867" level="70" type="Trainer" name="Reva" title="Seer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="180" />
@@ -1823,7 +1782,6 @@
 		</collision>
 	</npc>
 	<npc id="30868" level="70" type="Npc" name="Sir Eric Rodemai">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="158" />
@@ -1864,7 +1822,6 @@
 		</collision>
 	</npc>
 	<npc id="30869" level="70" type="PetManager" name="Lemper" title="Pet Manager">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -1936,14 +1893,13 @@
 		</collision>
 	</npc>
 	<npc id="30870" level="80" type="Guard" name="Kurtiz" title="Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
 		</parameters>
 		<race>HUMAN</race>
 		<sex>MALE</sex>
-		<equipment rhand="21732" lhand="102" /> <!-- rhand: Sword of Revolution - Event lhand: Round Shield -->
+		<equipment rhand="129" lhand="102" /> <!-- rhand: Sword of Revolution lhand: Round Shield -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
 			<attack physical="970.537548504614" magical="662.751329129412" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1977,7 +1933,6 @@
 		</collision>
 	</npc>
 	<npc id="30871" level="80" type="Guard" name="Bret" title="Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -2018,7 +1973,6 @@
 		</collision>
 	</npc>
 	<npc id="30872" level="80" type="Guard" name="Conroy" title="Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -2059,7 +2013,6 @@
 		</collision>
 	</npc>
 	<npc id="30873" level="80" type="Guard" name="Coleman" title="Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -2100,7 +2053,6 @@
 		</collision>
 	</npc>
 	<npc id="30874" level="80" type="Guard" name="Aldis" title="Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -2141,7 +2093,6 @@
 		</collision>
 	</npc>
 	<npc id="30875" level="80" type="Guard" name="Carlton" title="Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -2182,7 +2133,6 @@
 		</collision>
 	</npc>
 	<npc id="30876" level="80" type="Guard" name="Eastan" title="Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -2223,7 +2173,6 @@
 		</collision>
 	</npc>
 	<npc id="30877" level="80" type="Guard" name="Grayson" title="Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -2264,7 +2213,6 @@
 		</collision>
 	</npc>
 	<npc id="30878" level="70" type="Teleporter" name="Angelina" title="Gatekeeper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -2305,7 +2253,6 @@
 		</collision>
 	</npc>
 	<npc id="30879" level="70" type="Merchant" name="Felton" title="Wharf Manager">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -2345,7 +2292,6 @@
 		</collision>
 	</npc>
 	<npc id="30880" level="80" type="Guard" name="Viktor Van Dake" title="Border Outpost Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="158" />
@@ -2386,7 +2332,6 @@
 		</collision>
 	</npc>
 	<npc id="30881" level="70" type="Guard" name="Sanders" title="Border Outpost Aide">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -2426,7 +2371,6 @@
 		</collision>
 	</npc>
 	<npc id="30882" level="80" type="Guard" name="Frontier Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -2467,7 +2411,6 @@
 		</collision>
 	</npc>
 	<npc id="30883" level="80" type="Guard" name="Frontier Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -2508,7 +2451,6 @@
 		</collision>
 	</npc>
 	<npc id="30884" level="80" type="Guard" name="Frontier Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -2549,7 +2491,6 @@
 		</collision>
 	</npc>
 	<npc id="30885" level="80" type="Guard" name="Frontier Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -2590,7 +2531,6 @@
 		</collision>
 	</npc>
 	<npc id="30886" level="80" type="Guard" name="Frontier Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -2631,7 +2571,6 @@
 		</collision>
 	</npc>
 	<npc id="30887" level="80" type="Guard" name="Frontier Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -2672,7 +2611,6 @@
 		</collision>
 	</npc>
 	<npc id="30888" level="80" type="Guard" name="Frontier Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -2713,7 +2651,6 @@
 		</collision>
 	</npc>
 	<npc id="30889" level="80" type="Guard" name="Frontier Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -2753,8 +2690,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="30890" level="70" type="Merchant" name="Espen" title="Armor Merchant">
-		<!-- Confirmed CT2.5 -->
+	<npc id="30890" level="70" type="Merchant" name="Espen" title="Trader">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -2793,8 +2729,7 @@
 			<height normal="24.5" />
 		</collision>
 	</npc>
-	<npc id="30891" level="70" type="Merchant" name="Verona" title="Weapon Merchant">
-		<!-- Confirmed CT2.5 -->
+	<npc id="30891" level="70" type="Merchant" name="Verona" title="Trader">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -2833,8 +2768,7 @@
 			<height normal="24.5" />
 		</collision>
 	</npc>
-	<npc id="30892" level="70" type="Merchant" name="Enverun" title="Accessory Merchant">
-		<!-- Confirmed CT2.5 -->
+	<npc id="30892" level="70" type="Merchant" name="Enverun" title="Trader">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -2873,8 +2807,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="30893" level="70" type="Merchant" name="Payel" title="Grocer">
-		<!-- Confirmed CT2.5 -->
+	<npc id="30893" level="70" type="Merchant" name="Payel" title="Trader">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="75" />
@@ -2914,7 +2847,6 @@
 		</collision>
 	</npc>
 	<npc id="30894" level="70" type="VillageMasterDwarf" name="Natools" title="Warehouse Chief">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="93" />
@@ -2955,7 +2887,6 @@
 		</collision>
 	</npc>
 	<npc id="30895" level="70" type="Warehouse" name="Kluck" title="Warehouse Keeper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -2995,7 +2926,6 @@
 		</collision>
 	</npc>
 	<npc id="30896" level="70" type="Warehouse" name="Mia" title="Warehouse Keeper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -3035,7 +2965,6 @@
 		</collision>
 	</npc>
 	<npc id="30897" level="70" type="VillageMasterDwarf" name="Roman" title="Head Blacksmith">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -3076,7 +3005,6 @@
 		</collision>
 	</npc>
 	<npc id="30898" level="70" type="Trainer" name="Morning" title="Blacksmith">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="126" />
@@ -3116,7 +3044,6 @@
 		</collision>
 	</npc>
 	<npc id="30899" level="70" type="Teleporter" name="Flauen" title="Gatekeeper">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="130" />

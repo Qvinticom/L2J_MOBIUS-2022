@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="25500" level="44" type="Monster" name="Alligator of Istary" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -38,7 +37,6 @@
 		</collision>
 	</npc>
 	<npc id="25501" level="30" type="RaidBoss" name="Boss Akata" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25502" count="3" respawnTime="360" weightPoint="1" /> <!-- Akata's Thug -->
@@ -88,14 +86,13 @@
 				<item id="417" min="4" max="12" chance="3.98209715018463" /> <!-- Manticore Skin Gaiters -->
 				<item id="1942" min="53" max="157" chance="8.33355280966186" /> <!-- Manticore Skin Shirt Texture -->
 				<item id="1943" min="24" max="72" chance="28.38692996418" /> <!-- Manticore Skin Gaiters Pattern -->
-				<item id="224" min="1" max="1" chance="4.79184239653778" /> <!-- Maingauche -->
 				<item id="1660" min="1" max="1" chance="4.79184239653778" /> <!-- Cursed Maingauche -->
 				<item id="2038" min="4" max="12" chance="33.9850583863525" /> <!-- Maingauche Edge -->
 				<item id="2044" min="8" max="22" chance="18.1253562468414" /> <!-- Cursed Maingauche Edge -->
 				<item id="4553" min="1" max="3" chance="33.3565157747803" /> <!-- Greater Dye of STR <Str+1 Con-1> -->
 				<item id="4554" min="2" max="4" chance="22.2377025094528" /> <!-- Greater Dye of STR <Str+1 Dex-1> -->
 				<item id="4555" min="2" max="6" chance="16.6782578873901" /> <!-- Greater Dye of CON <Con+1 Str-1> -->
-				<item id="6575" min="1" max="1" chance="3.70632174097443" /> <!-- Blessed Scroll: Enchant Weapon (D-Grade) -->
+				<item id="6575" min="1" max="1" chance="3.70632174097443" /> <!-- Blessed Scroll: Enchant Weapon (D) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -104,7 +101,6 @@
 		</collision>
 	</npc>
 	<npc id="25502" level="30" type="Monster" name="Akata's Thug" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="LongRangePhysicalSpecial_a" id="4757" level="3" /> <!-- BOSS Power Shot -->
 		</parameters>
@@ -146,7 +142,6 @@
 		</collision>
 	</npc>
 	<npc id="25503" level="30" type="Monster" name="Akata's Lackey" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="8529" /> <!-- rhand: For Monsters Only (Knife) -->
@@ -184,7 +179,6 @@
 		</collision>
 	</npc>
 	<npc id="25504" level="39" type="RaidBoss" name="Nellis' Vengeful Spirit" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25505" count="3" respawnTime="360" weightPoint="1" /> <!-- Nellis' Follower -->
@@ -230,7 +224,7 @@
 		<ai type="BALANCED" clanHelpRange="300" />
 		<dropLists>
 			<drop>
-				<item id="62" min="11" max="33" chance="0.468880349212646" /> <!-- Reinforced Mithril Boots -->
+				<item id="62" min="11" max="33" chance="0.468880349212646" /> <!-- Mithril Boots -->
 				<item id="2429" min="12" max="34" chance="0.448470628616333" /> <!-- Chain Boots -->
 				<item id="2430" min="12" max="36" chance="0.429768185028076" /> <!-- Karmian Boots -->
 				<item id="2431" min="13" max="37" chance="0.412617811447143" /> <!-- Plated Leather Boots -->
@@ -239,10 +233,10 @@
 				<item id="2452" min="1" max="1" chance="10.3152900791779" /> <!-- Reinforced Mithril Gloves -->
 				<item id="2453" min="1" max="1" chance="10.3152900791779" /> <!-- Chain Gloves -->
 				<item id="2454" min="1" max="1" chance="10.3152900791779" /> <!-- Karmian Gloves -->
-				<item id="1958" min="220" max="660" chance="1.02312454882813" /> <!-- Reinforced Mithril Boots Design -->
+				<item id="1958" min="220" max="660" chance="1.02312454882813" /> <!-- Mithril Boots Design -->
 				<item id="2937" min="378" max="1134" chance="0.595451658309937" /> <!-- Chain Boots Part -->
 				<item id="2938" min="26" max="78" chance="8.65698087985229" /> <!-- Karmian Boots Fabric -->
-				<item id="2939" min="35" max="105" chance="6.43092447184753" /> <!-- Plate Leather Boots Lining -->
+				<item id="2939" min="35" max="105" chance="6.43092447184753" /> <!-- Plate Leather Boot Lining -->
 				<item id="2940" min="45" max="135" chance="5.00185601260376" /> <!-- Dwarven Chain Boots Part -->
 				<item id="2941" min="56" max="168" chance="4.01931809446716" /> <!-- Boots of Seal Pattern -->
 				<item id="2942" min="68" max="204" chance="3.31002210112" /> <!-- Reinforced Mithril Gloves Design -->
@@ -254,9 +248,9 @@
 				<item id="2062" min="5" max="15" chance="17.6758026178589" /> <!-- Scythe Edge -->
 				<item id="2075" min="9" max="27" chance="9.81992561236572" /> <!-- Orcish Glaive Blade -->
 				<item id="2076" min="2" max="6" chance="44.1895065446472" /> <!-- Body Slasher Blade -->
-				<item id="951" min="1" max="1" chance="53.1163078531036" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
-				<item id="952" min="12" max="36" chance="16.2299849355011" /> <!-- Scroll: Enchant Armor (C-Grade) -->
-				<item id="6573" min="1" max="1" chance="1.94760674752808" /> <!-- Blessed Scroll: Enchant Weapon (C-Grade) -->
+				<item id="951" min="1" max="1" chance="53.1163078531036" /> <!-- Scroll: Enchant Weapon (C) -->
+				<item id="952" min="12" max="36" chance="16.2299849355011" /> <!-- Scroll: Enchant Armor (C) -->
+				<item id="6573" min="1" max="1" chance="1.94760674752808" /> <!-- Blessed Scroll: Enchant Weapon (C) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -265,7 +259,6 @@
 		</collision>
 	</npc>
 	<npc id="25505" level="38" type="Monster" name="Nellis' Follower" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4723" level="3" /> <!-- BOSS Strike -->
 		</parameters>
@@ -307,7 +300,6 @@
 		</collision>
 	</npc>
 	<npc id="25506" level="37" type="RaidBoss" name="Rayito the Looter" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25507" count="1" respawnTime="360" weightPoint="1" /> <!-- Rayito's Henchman -->
@@ -354,12 +346,12 @@
 		<dropLists>
 			<drop>
 				<item id="397" min="1" max="1" chance="14.237241203064" /> <!-- Mithril Shirt -->
-				<item id="2387" min="1" max="1" chance="22.7514184232178" /> <!-- Reinforced Mithril Gaiters -->
+				<item id="2387" min="1" max="1" chance="22.7514184232178" /> <!-- Tempered Mithril Gaiters -->
 				<item id="1961" min="53" max="157" chance="6.31317711791992" /> <!-- Mithril Shirt Fabric -->
-				<item id="2935" min="24" max="72" chance="22.9434635487671" /> <!-- Reinforced Mithril Gaiters Fragment -->
+				<item id="2935" min="24" max="72" chance="22.9434635487671" /> <!-- Tempered Mithril Gaiters Fragment -->
 				<item id="281" min="1" max="1" chance="7.05037603213692" /> <!-- Crystallized Ice Bow -->
 				<item id="2074" min="12" max="36" chance="18.339823629118" /> <!-- Crystallized Ice Bow Shaft -->
-				<item id="6574" min="1" max="1" chance="46.0337982177734" /> <!-- Blessed Scroll: Enchant Armor (C-Grade) -->
+				<item id="6574" min="1" max="1" chance="46.0337982177734" /> <!-- Blessed Scroll: Enchant Armor (C) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -368,7 +360,6 @@
 		</collision>
 	</npc>
 	<npc id="25507" level="36" type="Monster" name="Rayito's Henchman" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4728" level="3" /> <!-- Stun -->
 		</parameters>
@@ -410,7 +401,6 @@
 		</collision>
 	</npc>
 	<npc id="25508" level="36" type="Monster" name="Rayito's Henchman" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic_a" id="4194" level="3" /> <!-- BOSS Aura Burn -->
 			<skill name="Debuff_a" id="4202" level="3" /> <!-- Hold -->
@@ -454,7 +444,6 @@
 		</collision>
 	</npc>
 	<npc id="25509" level="53" type="RaidBoss" name="Dark Shaman Varangka" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25511" count="4" respawnTime="360" weightPoint="1" /> <!-- Varangka's Page -->
@@ -523,7 +512,7 @@
 				<item id="4613" min="1" max="3" chance="21.2410297034225" /> <!-- Greater Dye of STR <Str+4 Con-4> -->
 				<item id="4614" min="2" max="4" chance="14.1606864689484" /> <!-- Greater Dye of STR <Str+4 Dex-4> -->
 				<item id="4615" min="1" max="1" chance="42.4820594068451" /> <!-- Greater Dye of CON <Con+4 Str-4> -->
-				<item id="947" min="1" max="1" chance="12.319723261116" /> <!-- Scroll: Enchant Weapon (B-Grade) -->
+				<item id="947" min="1" max="1" chance="12.319723261116" /> <!-- Scroll: Enchant Weapon (B) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -532,7 +521,6 @@
 		</collision>
 	</npc>
 	<npc id="25510" level="52" type="Monster" name="Varangka's Descendant" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4731" level="5" /> <!-- BOSS Mortal Blow -->
 		</parameters>
@@ -574,7 +562,6 @@
 		</collision>
 	</npc>
 	<npc id="25511" level="52" type="Monster" name="Varangka's Page" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="179" /> <!-- rhand: Mace of Prayer -->
@@ -612,7 +599,6 @@
 		</collision>
 	</npc>
 	<npc id="25512" level="52" type="GrandBoss" name="Gigantic Chaos Golem" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm03_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="5" /> <!-- BOSS Cancel Magic -->
@@ -685,7 +671,7 @@
 				<item id="4604" min="2" max="6" chance="16.563786320137" /> <!-- Greater Dye of CON <Con+3 Dex-3> -->
 				<item id="4605" min="3" max="7" chance="13.2510189916496" /> <!-- Greater Dye of DEX <Dex+3 Str-3> -->
 				<item id="4606" min="3" max="9" chance="11.0425242134247" /> <!-- Greater Dye of DEX <Dex+3 Con-3> -->
-				<item id="952" min="21" max="63" chance="9.46497043206406" /> <!-- Scroll: Enchant Armor (C-Grade) -->
+				<item id="952" min="21" max="63" chance="9.46497043206406" /> <!-- Scroll: Enchant Armor (C) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -694,7 +680,6 @@
 		</collision>
 	</npc>
 	<npc id="25514" level="80" type="RaidBoss" name="Queen Shyeed" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25516" count="1" respawnTime="360" weightPoint="1" /> <!-- Spiked Stakato -->
@@ -749,7 +734,7 @@
 				<item id="6714" min="16" max="48" chance="13.2726616612358" /> <!-- Sealed Major Arcana Circlet Pattern -->
 				<item id="6367" min="1" max="1" chance="0.734770422222138" /> <!-- Angel Slayer -->
 				<item id="6691" min="3" max="9" chance="56.5930303285103" /> <!-- Angel Slayer Blade -->
-				<item id="6578" min="1" max="1" chance="4.52527626508713" /> <!-- Blessed Scroll: Enchant Armor (S-Grade) -->
+				<item id="6578" min="1" max="1" chance="4.52527626508713" /> <!-- Blessed Scroll: Enchant Armor (S) -->
 				<item id="3936" min="1" max="1" chance="50.9091223860359" /> <!-- Blessed Scroll of Resurrection -->
 			</drop>
 		</dropLists>
@@ -759,7 +744,6 @@
 		</collision>
 	</npc>
 	<npc id="25515" level="79" type="Monster" name="Spiked Stakato" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic_a" id="4195" level="8" /> <!-- BOSS Twister -->
 			<skill name="Debuff_a" id="4198" level="8" /> <!-- Poison -->
@@ -803,7 +787,6 @@
 		</collision>
 	</npc>
 	<npc id="25516" level="79" type="Monster" name="Spiked Stakato" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4726" level="8" /> <!-- Stun -->
 		</parameters>
@@ -844,7 +827,6 @@
 		</collision>
 	</npc>
 	<npc id="25523" level="73" type="RaidBoss" name="Plague Golem" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="7" /> <!-- BOSS Cancel Magic -->
@@ -890,7 +872,7 @@
 		<ai type="BALANCED" clanHelpRange="300" />
 		<dropLists>
 			<drop>
-				<item id="8619" min="1" max="1" chance="56" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
+				<item id="8619" min="1" max="1" chance="56" /> <!-- Ancient Book - Divine Inspiration (Original Language Version) -->
 				<item id="9817" min="3" max="7" chance="83" /> <!-- Nonliving Nucleus -->
 				<item id="8176" min="1" max="4" chance="83" /> <!-- Destruction Tombstone -->
 				<item id="6678" min="1" max="1" chance="2.22665012593079" /> <!-- Sealed Imperial Crusader Shield -->
@@ -903,8 +885,8 @@
 				<item id="6714" min="16" max="48" chance="18.9352267082748" /> <!-- Sealed Major Arcana Circlet Pattern -->
 				<item id="6367" min="1" max="1" chance="1.04824998604774" /> <!-- Angel Slayer -->
 				<item id="6691" min="12" max="36" chance="20.1838495470333" /> <!-- Angel Slayer Blade -->
-				<item id="6578" min="1" max="1" chance="6.45590763274384" /> <!-- Blessed Scroll: Enchant Armor (S-Grade) -->
-				<item id="6570" min="1" max="1" chance="16.1397916775589" /> <!-- Blessed Scroll: Enchant Armor (A-Grade) -->
+				<item id="6578" min="1" max="1" chance="6.45590763274384" /> <!-- Blessed Scroll: Enchant Armor (S) -->
+				<item id="6570" min="1" max="1" chance="16.1397916775589" /> <!-- Blessed Scroll: Enchant Armor (A) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -913,7 +895,6 @@
 		</collision>
 	</npc>
 	<npc id="25524" level="76" type="RaidBoss" name="Flamestone Giant" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25525" count="2" respawnTime="360" weightPoint="1" /> <!-- Flame Spirit -->
@@ -968,9 +949,9 @@
 				<item id="5529" min="9" max="27" chance="15.4169064637299" /> <!-- Dragon Slayer Edge -->
 				<item id="5546" min="5" max="15" chance="30.4812261234055" /> <!-- Sword of Miracles Edge -->
 				<item id="5545" min="14" max="42" chance="9.91090200388336" /> <!-- Dark Legion's Edge Blade -->
-				<item id="959" min="1" max="1" chance="5.24477399871826" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="960" min="1" max="1" chance="52.4478571207809" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				<item id="6577" min="1" max="1" chance="0.874168044319153" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
+				<item id="959" min="1" max="1" chance="5.24477399871826" /> <!-- Scroll: Enchant Weapon (S) -->
+				<item id="960" min="1" max="1" chance="52.4478571207809" /> <!-- Scroll: Enchant Armor (S) -->
+				<item id="6577" min="1" max="1" chance="0.874168044319153" /> <!-- Blessed Scroll: Enchant Weapon (S) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -979,7 +960,6 @@
 		</collision>
 	</npc>
 	<npc id="25525" level="75" type="Monster" name="Flame Spirit" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4780" level="8" /> <!-- BOSS Heal -->
 			<skill name="SelfRangeBuff_a" id="4211" level="8" /> <!-- BOSS Might -->
@@ -1022,7 +1002,6 @@
 		</collision>
 	</npc>
 	<npc id="25526" level="75" type="Monster" name="Charged Spirit" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1059,7 +1038,6 @@
 		</collision>
 	</npc>
 	<npc id="25527" level="80" type="RaidBoss" name="Uruka" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm03_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="10" /> <!-- BOSS Cancel Magic -->
@@ -1127,7 +1105,6 @@
 		</collision>
 	</npc>
 	<npc id="25528" level="22" type="RaidBoss" name="Tiberias" title="Prime Inspector">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveArounding" value="0" />
 			<param name="Party_Type" value="2" />
@@ -1198,9 +1175,9 @@
 				<item id="126" min="1" max="1" chance="2.64983438027191" /> <!-- Artisan's Sword -->
 				<item id="128" min="1" max="1" chance="2.64983438027191" /> <!-- Knight's Sword -->
 				<item id="2021" min="1" max="3" chance="41.4459620089416" /> <!-- Spinebone Sword Blade -->
-				<item id="6575" min="1" max="1" chance="1.57595063406754" /> <!-- Blessed Scroll: Enchant Weapon (D-Grade) -->
-				<item id="6576" min="1" max="1" chance="14.1837763430061" /> <!-- Blessed Scroll: Enchant Armor (D-Grade) -->
-				<item id="956" min="3" max="9" chance="39.3993726017838" /> <!-- Scroll: Enchant Armor (D-Grade) -->
+				<item id="6575" min="1" max="1" chance="1.57595063406754" /> <!-- Blessed Scroll: Enchant Weapon (D) -->
+				<item id="6576" min="1" max="1" chance="14.1837763430061" /> <!-- Blessed Scroll: Enchant Armor (D) -->
+				<item id="956" min="3" max="9" chance="39.3993726017838" /> <!-- Scroll: Enchant Armor (D) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -1209,7 +1186,6 @@
 		</collision>
 	</npc>
 	<npc id="25529" level="22" type="Npc" name="Garden Guard" title="Vice Inspector">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="AttackRange" value="2" />
 			<param name="IsHealer" value="1" />
@@ -1265,7 +1241,6 @@
 		</collision>
 	</npc>
 	<npc id="25530" level="22" type="Npc" name="Garden Guard" title="Vice Inspector">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Party_Type" value="1" />
 			<param name="Party_Loyalty" value="1" />
@@ -1312,7 +1287,6 @@
 		</collision>
 	</npc>
 	<npc id="25531" level="81" type="RaidBoss" name="Darnel" title="Torture Maiden">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="InzoneRestriction" value="1" />
 			<skill name="SelfRangeDebuff_a" id="4182" level="9" /> <!-- Poison -->
@@ -1371,7 +1345,7 @@
 				<item id="9468" min="1" max="1" chance="0.667094490611553" /> <!-- Dynasty Necklace - Sleep Resistance -->
 				<item id="9474" min="1" max="1" chance="0.667094490611553" /> <!-- Dynasty Necklace - Hold Resistance -->
 				<item id="9477" min="1" max="1" chance="0.667094490611553" /> <!-- Dynasty Necklace - Fear Resistance -->
-				<item id="6578" min="1" max="1" chance="2.30741661285162" /> <!-- Blessed Scroll: Enchant Armor (S-Grade) -->
+				<item id="6578" min="1" max="1" chance="2.30741661285162" /> <!-- Blessed Scroll: Enchant Armor (S) -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -1380,7 +1354,6 @@
 		</collision>
 	</npc>
 	<npc id="25532" level="82" type="RaidBoss" name="Kechi" title="Fire">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="InzoneRestriction" value="1" />
 			<skill name="selfbuff1" id="5418" level="1" /> <!-- Invincible -->
@@ -1450,10 +1423,10 @@
 				<item id="6697" min="3" max="7" chance="13.6331439608459" /> <!-- Arcana Mace Head -->
 				<item id="9459" min="1" max="1" chance="0.428266828866005" /> <!-- Dynasty Necklace - Stun Resistance -->
 				<item id="9462" min="1" max="1" chance="0.428266828866005" /> <!-- Dynasty Necklace - Poison Resistance -->
-				<item id="9465" min="1" max="1" chance="0.428266828866005" /> <!-- Dynasty Necklace - Bleed Resistance -->
+				<item id="9465" min="1" max="1" chance="0.428266828866005" /> <!-- Dynasty Necklace - Bleeding Resistance -->
 				<item id="9471" min="1" max="1" chance="0.428266828866005" /> <!-- Dynasty Necklace - Paralysis Resistance -->
-				<item id="6578" min="1" max="1" chance="1.48133275663376" /> <!-- Blessed Scroll: Enchant Armor (S-Grade) -->
-				<item id="10300" min="1" max="1" chance="1" /> <!-- Transformation Sealbook - Kechi -->
+				<item id="6578" min="1" max="1" chance="1.48133275663376" /> <!-- Blessed Scroll: Enchant Armor (S) -->
+				<item id="10300" min="1" max="1" chance="1" /> <!-- Transform Sealbook - Kechi -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -1462,7 +1435,6 @@
 		</collision>
 	</npc>
 	<npc id="25533" level="82" type="Monster" name="Kechi's Henchman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="0" />
 			<param name="AttackRange" value="0" />
@@ -1515,7 +1487,6 @@
 		</collision>
 	</npc>
 	<npc id="25534" level="83" type="RaidBoss" name="Tears" title="Ice">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="InzoneRestriction" value="1" />
 			<skill name="W_LongRangeDDMagic" id="5238" level="1" /> <!-- Freezing -->
@@ -1576,7 +1547,6 @@
 		</collision>
 	</npc>
 	<npc id="25535" level="83" type="Monster" name="Tears" title="Ice">
-		<!-- Confirmed CT2.5 -->
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="9638" lhand="9638" /> <!-- rhand: Tears r1 lhand: Tears r1 -->
@@ -1617,7 +1587,6 @@
 		</collision>
 	</npc>
 	<npc id="25536" level="81" type="RaidBoss" name="Hannibal" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25537" count="1" respawnTime="60" weightPoint="1" />
@@ -1688,7 +1657,6 @@
 		</collision>
 	</npc>
 	<npc id="25537" level="81" type="Monster" name="Enmity" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1727,7 +1695,6 @@
 		</collision>
 	</npc>
 	<npc id="25538" level="81" type="Monster" name="Vengeance" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4780" level="8" /> <!-- BOSS Heal -->
 			<skill name="SelfRangeBuff_a" id="4199" level="9" /> <!-- Decrease P. Atk. -->
@@ -1772,7 +1739,6 @@
 		</collision>
 	</npc>
 	<npc id="25539" level="81" type="RaidBoss" name="Typhoon" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Aggressive_Time" value="0" />
@@ -1847,7 +1813,6 @@
 		</collision>
 	</npc>
 	<npc id="25540" level="83" type="RaidBoss" name="Demon Prince" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Aggressive_Time" value="5" />
@@ -1919,7 +1884,7 @@
 				<item id="6690" min="2" max="4" chance="29.7984037778778" /> <!-- Imperial Staff Head -->
 				<item id="6693" min="6" max="18" chance="7.57018818443298" /> <!-- Dragon Hunter Axe Blade -->
 				<item id="6697" min="3" max="7" chance="17.5087787684326" /> <!-- Arcana Mace Head -->
-				<item id="10301" min="1" max="1" chance="0.03" /> <!-- Transformation Sealbook: Demon Prince -->
+				<item id="10301" min="1" max="1" chance="0.03" /> <!-- Transform Sealbook - Demon Prince -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -1928,7 +1893,6 @@
 		</collision>
 	</npc>
 	<npc id="25541" level="83" type="Monster" name="Fiend" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1968,7 +1932,6 @@
 		</collision>
 	</npc>
 	<npc id="25542" level="83" type="RaidBoss" name="Ranku" title="Raid Boss">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Aggressive_Time" value="5" />
@@ -2033,7 +1996,7 @@
 				<item id="6696" min="4" max="12" chance="15.1065733899536" /> <!-- Heavens Divider Edge -->
 				<item id="7575" min="1" max="1" chance="0.772254604480743" /> <!-- Draconic Bow -->
 				<item id="7579" min="3" max="9" chance="60.1647456701775" /> <!-- Draconic Bow Shaft -->
-				<item id="10299" min="1" max="1" chance="0.03" /> <!-- Transformation Sealbook: Ranku -->
+				<item id="10299" min="1" max="1" chance="0.03" /> <!-- Transform Sealbook - Ranku -->
 			</drop>
 		</dropLists>
 		<collision>
@@ -2042,7 +2005,6 @@
 		</collision>
 	</npc>
 	<npc id="25543" level="83" type="Monster" name="Eidolon" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Aggressive_Time" value="5" />
@@ -2095,7 +2057,6 @@
 		</collision>
 	</npc>
 	<npc id="25544" level="83" type="RaidBoss" name="Tully" title="Steel Citadel">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Aggressive_Time" value="5" />
@@ -2158,7 +2119,6 @@
 		</collision>
 	</npc>
 	<npc id="25545" level="83" type="Monster" name="Tully's Banshee" title="Raid Fighter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5230" level="1" /> <!-- Stun -->
 			<skill name="PhysicalSpecial2" id="5231" level="1" /> <!-- Stun -->
@@ -2210,7 +2170,6 @@
 		</collision>
 	</npc>
 	<npc id="25546" level="75" type="RaidBoss" name="Rhianna the Traitor" title="Forsaken Prisoner">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25547" count="2" respawnTime="360" weightPoint="1" /> <!-- Rhianna's Escort -->
@@ -2264,9 +2223,9 @@
 				<item id="5298" min="1" max="1" chance="1.53359827535629" /> <!-- Sealed Dark Crystal Leggings -->
 				<item id="5482" min="4" max="12" chance="21.1269841033173" /> <!-- Sealed Dark Crystal Leggings Design -->
 				<item id="9626" min="1" max="1" chance="3.98403854878807" /> <!-- Giant's Codex - Discipline -->
-				<item id="6570" min="1" max="1" chance="3.32003212399006" /> <!-- Blessed Scroll: Enchant Armor (A-Grade) -->
-				<item id="729" min="1" max="1" chance="3.32003212399006" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
-				<item id="6569" min="1" max="1" chance="0.398397241378784" /> <!-- Blessed Scroll: Enchant Weapon (A-Grade) -->
+				<item id="6570" min="1" max="1" chance="3.32003212399006" /> <!-- Blessed Scroll: Enchant Armor (A) -->
+				<item id="729" min="1" max="1" chance="3.32003212399006" /> <!-- Scroll: Enchant Weapon (A) -->
+				<item id="6569" min="1" max="1" chance="0.398397241378784" /> <!-- Blessed Scroll: Enchant Weapon (A) -->
 				<item id="9912" min="190" max="380" chance="100" /> <!-- Knight's Epaulette -->
 			</drop>
 		</dropLists>
@@ -2276,7 +2235,6 @@
 		</collision>
 	</npc>
 	<npc id="25547" level="74" type="Monster" name="Rhianna's Escort">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="different_level_9_attacked" id="5456" level="1" /> <!-- Stubborn Resistance -->
 			<skill name="different_level_9_see_spelled" id="5456" level="1" /> <!-- Stubborn Resistance -->
@@ -2317,7 +2275,6 @@
 		</collision>
 	</npc>
 	<npc id="25548" level="74" type="Monster" name="Rhianna's Healer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4781" level="7" /> <!-- BOSS Heal -->
 			<skill name="SelfRangeBuff_a" id="4213" level="7" /> <!-- BOSS Haste -->
@@ -2362,7 +2319,6 @@
 		</collision>
 	</npc>
 	<npc id="25549" level="75" type="RaidBoss" name="Tesla the Deceiver" title="Forsaken Prisoner">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25550" count="3" respawnTime="360" weightPoint="1" /> <!-- Tesla's Apprentice -->
@@ -2416,7 +2372,7 @@
 				<item id="5520" min="2" max="4" chance="28.3750701895256" /> <!-- Sealed Dark Crystal Breastplate Pattern -->
 				<item id="5524" min="4" max="12" chance="16.2636058481598" /> <!-- Sealed Dark Crystal Gaiters Pattern -->
 				<item id="9626" min="1" max="1" chance="8.21370005607605" /> <!-- Giant's Codex - Discipline -->
-				<item id="6578" min="1" max="1" chance="2.73790001869202" /> <!-- Blessed Scroll: Enchant Armor (S-Grade) -->
+				<item id="6578" min="1" max="1" chance="2.73790001869202" /> <!-- Blessed Scroll: Enchant Armor (S) -->
 				<item id="9912" min="190" max="380" chance="100" /> <!-- Knight's Epaulette -->
 			</drop>
 		</dropLists>
@@ -2426,7 +2382,6 @@
 		</collision>
 	</npc>
 	<npc id="25550" level="74" type="Monster" name="Tesla's Apprentice">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic_a" id="4195" level="7" /> <!-- BOSS Twister -->
 			<skill name="Debuff_a" id="4200" level="7" /> <!-- Decrease Atk. Spd. -->
@@ -2472,7 +2427,6 @@
 		</collision>
 	</npc>
 	<npc id="25551" level="74" type="Monster" name="Tesla's Herald">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4725" level="7" /> <!-- Stun -->
 			<skill name="different_level_9_attacked" id="5456" level="1" /> <!-- Stubborn Resistance -->
@@ -2516,7 +2470,6 @@
 		</collision>
 	</npc>
 	<npc id="25552" level="76" type="RaidBoss" name="Soul Hunter Chakundel" title="Forsaken Prisoner">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<param name="CouldDespawn" value="1" />
@@ -2573,9 +2526,9 @@
 				<item id="6688" min="1" max="1" chance="28.2998197492447" /> <!-- Forgotten Blade Edge -->
 				<item id="6696" min="1" max="1" chance="28.7494179943008" /> <!-- Heavens Divider Edge -->
 				<item id="9626" min="1" max="1" chance="4.07275744815826" /> <!-- Giant's Codex - Discipline -->
-				<item id="959" min="1" max="1" chance="1.22183609269714" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="960" min="1" max="1" chance="12.2182723444748" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				<item id="6577" min="1" max="1" chance="0.203633443283081" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
+				<item id="959" min="1" max="1" chance="1.22183609269714" /> <!-- Scroll: Enchant Weapon (S) -->
+				<item id="960" min="1" max="1" chance="12.2182723444748" /> <!-- Scroll: Enchant Armor (S) -->
+				<item id="6577" min="1" max="1" chance="0.203633443283081" /> <!-- Blessed Scroll: Enchant Weapon (S) -->
 				<item id="9912" min="188" max="377" chance="100" /> <!-- Knight's Epaulette -->
 			</drop>
 		</dropLists>
@@ -2585,7 +2538,6 @@
 		</collision>
 	</npc>
 	<npc id="25553" level="77" type="RaidBoss" name="Durango the Crusher" title="Forsaken Prisoner">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm03_A" />
 			<param name="doSummonNPC" value="1" />
@@ -2645,7 +2597,7 @@
 				<item id="6710" min="9" max="27" chance="8.00385657592773" /> <!-- Sealed Draconic Leather Helmet Pattern -->
 				<item id="6714" min="2" max="6" chance="36.0175332119751" /> <!-- Sealed Major Arcana Circlet Pattern -->
 				<item id="9626" min="1" max="1" chance="8.28884983062744" /> <!-- Giant's Codex - Discipline -->
-				<item id="6578" min="1" max="1" chance="2.76294994354248" /> <!-- Blessed Scroll: Enchant Armor (S-Grade) -->
+				<item id="6578" min="1" max="1" chance="2.76294994354248" /> <!-- Blessed Scroll: Enchant Armor (S) -->
 				<item id="9912" min="191" max="389" chance="100" /> <!-- Knight's Epaulette -->
 			</drop>
 		</dropLists>
@@ -2655,7 +2607,6 @@
 		</collision>
 	</npc>
 	<npc id="25554" level="78" type="RaidBoss" name="Brutus the Obstinate" title="Forsaken Prisoner">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25555" count="1" respawnTime="360" weightPoint="1" /> <!-- Brutus' Right Hand -->
@@ -2723,7 +2674,6 @@
 		</collision>
 	</npc>
 	<npc id="25555" level="77" type="Monster" name="Brutus' Right Hand">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4721" level="7" /> <!-- BOSS Strike -->
 			<skill name="different_level_9_attacked" id="5456" level="1" /> <!-- Stubborn Resistance -->
@@ -2769,7 +2719,6 @@
 		</collision>
 	</npc>
 	<npc id="25556" level="77" type="Monster" name="Brutus' Left Hand">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="different_level_9_attacked" id="5456" level="1" /> <!-- Stubborn Resistance -->
 			<skill name="different_level_9_see_spelled" id="5456" level="1" /> <!-- Stubborn Resistance -->
@@ -2813,7 +2762,6 @@
 		</collision>
 	</npc>
 	<npc id="25557" level="79" type="RaidBoss" name="Ranger Karankawa" title="Forsaken Prisoner">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25558" count="3" respawnTime="360" weightPoint="1" /> <!-- Karankawa's Root -->
@@ -2874,7 +2822,6 @@
 		</collision>
 	</npc>
 	<npc id="25558" level="78" type="Monster" name="Karankawa's Root">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic_a" id="4191" level="7" /> <!-- BOSS Windstrike -->
 			<skill name="Debuff_a" id="4198" level="7" /> <!-- Poison -->
@@ -2921,7 +2868,6 @@
 		</collision>
 	</npc>
 	<npc id="25559" level="78" type="Monster" name="Karankawa's Blossom">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4740" level="7" /> <!-- BOSS Strike -->
 			<skill name="different_level_9_attacked" id="5456" level="1" /> <!-- Stubborn Resistance -->
@@ -2966,7 +2912,6 @@
 		</collision>
 	</npc>
 	<npc id="25560" level="79" type="RaidBoss" name="Sargon the Mad" title="Forsaken Prisoner">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25561" count="2" respawnTime="360" weightPoint="1" /> <!-- Sargon's Attendant -->
@@ -3028,8 +2973,7 @@
 			<height normal="43.5" />
 		</collision>
 	</npc>
-	<npc id="25561" level="78" type="Monster" name="Sargon's Attendant">
-		<!-- Confirmed CT2.5 -->
+	<npc id="25561" level="78" type="Monster" name="Sargon Attendant">
 		<parameters>
 			<skill name="HealMagic_a" id="4780" level="7" /> <!-- BOSS Heal -->
 			<skill name="SelfRangeBuff_a" id="4211" level="7" /> <!-- BOSS Might -->
@@ -3077,7 +3021,6 @@
 		</collision>
 	</npc>
 	<npc id="25562" level="78" type="Monster" name="Sargon's Squire">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="different_level_9_attacked" id="5456" level="1" /> <!-- Stubborn Resistance -->
 			<skill name="different_level_9_see_spelled" id="5456" level="1" /> <!-- Stubborn Resistance -->
@@ -3121,7 +3064,6 @@
 		</collision>
 	</npc>
 	<npc id="25563" level="81" type="RaidBoss" name="Beautiful Atrielle" title="Forsaken Prisoner">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25564" count="1" respawnTime="360" weightPoint="1" /> <!-- Atrielle's Follower -->
@@ -3191,7 +3133,6 @@
 		</collision>
 	</npc>
 	<npc id="25564" level="80" type="Monster" name="Atrielle's Follower">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4725" level="7" /> <!-- Stun -->
 			<skill name="different_level_9_attacked" id="5456" level="1" /> <!-- Stubborn Resistance -->
@@ -3236,7 +3177,6 @@
 		</collision>
 	</npc>
 	<npc id="25565" level="80" type="Monster" name="Atrielle's Minion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="different_level_9_attacked" id="5456" level="1" /> <!-- Stubborn Resistance -->
 			<skill name="different_level_9_see_spelled" id="5456" level="1" /> <!-- Stubborn Resistance -->
@@ -3279,7 +3219,6 @@
 		</collision>
 	</npc>
 	<npc id="25566" level="82" type="RaidBoss" name="Nagen the Tomboy" title="Forsaken Prisoner">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25567" count="3" respawnTime="360" weightPoint="1" /> <!-- Nagen's Cohort -->
@@ -3350,7 +3289,6 @@
 		</collision>
 	</npc>
 	<npc id="25567" level="81" type="Monster" name="Nagen's Cohort">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic_a" id="4194" level="7" /> <!-- BOSS Aura Burn -->
 			<skill name="Debuff_a" id="4202" level="7" /> <!-- Hold -->
@@ -3397,7 +3335,6 @@
 		</collision>
 	</npc>
 	<npc id="25568" level="81" type="Monster" name="Nagen's Friend">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4785" level="7" /> <!-- BOSS Chant of Life -->
 			<skill name="SelfRangeBuff_a" id="4212" level="7" /> <!-- BOSS Shield -->
@@ -3444,7 +3381,6 @@
 		</collision>
 	</npc>
 	<npc id="25569" level="82" type="RaidBoss" name="Jax the Destroyer" title="Forsaken Prisoner">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25570" count="3" respawnTime="360" weightPoint="1" /> <!-- Jax's Vanguard -->
@@ -3515,7 +3451,6 @@
 		</collision>
 	</npc>
 	<npc id="25570" level="81" type="Monster" name="Jax's Vanguard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="different_level_9_attacked" id="5456" level="1" /> <!-- Stubborn Resistance -->
 			<skill name="different_level_9_see_spelled" id="5456" level="1" /> <!-- Stubborn Resistance -->
@@ -3559,7 +3494,6 @@
 		</collision>
 	</npc>
 	<npc id="25571" level="81" type="Monster" name="Jax's Raider">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="different_level_9_attacked" id="5456" level="1" /> <!-- Stubborn Resistance -->
 			<skill name="different_level_9_see_spelled" id="5456" level="1" /> <!-- Stubborn Resistance -->
@@ -3603,7 +3537,6 @@
 		</collision>
 	</npc>
 	<npc id="25572" level="72" type="RaidBoss" name="Hager the Outlaw" title="Forsaken Inmate">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25573" count="2" respawnTime="360" weightPoint="1" /> <!-- Hager's Henchman -->
@@ -3666,7 +3599,6 @@
 		</collision>
 	</npc>
 	<npc id="25573" level="71" type="Monster" name="Hager's Henchman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4780" level="6" /> <!-- BOSS Heal -->
 			<skill name="SelfRangeBuff_a" id="4213" level="6" /> <!-- BOSS Haste -->
@@ -3712,7 +3644,6 @@
 		</collision>
 	</npc>
 	<npc id="25574" level="71" type="Monster" name="Hager's Bodyguard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="different_level_9_attacked" id="5456" level="1" /> <!-- Stubborn Resistance -->
 			<skill name="different_level_9_see_spelled" id="5456" level="1" /> <!-- Stubborn Resistance -->
@@ -3754,7 +3685,6 @@
 		</collision>
 	</npc>
 	<npc id="25575" level="73" type="RaidBoss" name="All-Seeing Rango" title="Forsaken Inmate">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25576" count="4" respawnTime="360" weightPoint="1" /> <!-- Rango's Iris -->
@@ -3810,9 +3740,9 @@
 				<item id="5298" min="1" max="1" chance="1.17061608080292" /> <!-- Sealed Dark Crystal Leggings -->
 				<item id="5482" min="4" max="12" chance="16.1265096131287" /> <!-- Sealed Dark Crystal Leggings Design -->
 				<item id="9625" min="1" max="1" chance="4.56162582452393" /> <!-- Giant's Codex - Oblivion -->
-				<item id="6570" min="1" max="1" chance="2.5342343615799" /> <!-- Blessed Scroll: Enchant Armor (A-Grade) -->
-				<item id="729" min="1" max="1" chance="2.5342343615799" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
-				<item id="6569" min="1" max="1" chance="0.304105739181519" /> <!-- Blessed Scroll: Enchant Weapon (A-Grade) -->
+				<item id="6570" min="1" max="1" chance="2.5342343615799" /> <!-- Blessed Scroll: Enchant Armor (A) -->
+				<item id="729" min="1" max="1" chance="2.5342343615799" /> <!-- Scroll: Enchant Weapon (A) -->
+				<item id="6569" min="1" max="1" chance="0.304105739181519" /> <!-- Blessed Scroll: Enchant Weapon (A) -->
 				<item id="9912" min="184" max="368" chance="100" /> <!-- Knight's Epaulette -->
 			</drop>
 		</dropLists>
@@ -3822,7 +3752,6 @@
 		</collision>
 	</npc>
 	<npc id="25576" level="72" type="Monster" name="Rango's Iris">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="different_level_9_attacked" id="5456" level="1" /> <!-- Stubborn Resistance -->
 			<skill name="different_level_9_see_spelled" id="5456" level="1" /> <!-- Stubborn Resistance -->
@@ -3863,7 +3792,6 @@
 		</collision>
 	</npc>
 	<npc id="25577" level="72" type="Monster" name="Rango's Lens">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4741" level="6" /> <!-- BOSS Strike -->
 			<skill name="different_level_9_attacked" id="5456" level="1" /> <!-- Stubborn Resistance -->
@@ -3906,7 +3834,6 @@
 		</collision>
 	</npc>
 	<npc id="25578" level="73" type="RaidBoss" name="Jakard" title="Forsaken Inmate">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm03_A" />
 			<param name="CouldDespawn" value="1" />
@@ -3960,7 +3887,7 @@
 				<item id="6684" min="1" max="1" chance="0.259821143188477" /> <!-- Sealed Major Arcana Robe -->
 				<item id="6711" min="1" max="3" chance="50.1321771478271" /> <!-- Sealed Major Arcana Robe Part -->
 				<item id="9625" min="1" max="1" chance="9.44353565272522" /> <!-- Giant's Codex - Oblivion -->
-				<item id="730" min="1" max="1" chance="39.3481628030853" /> <!-- Scroll: Enchant Armor (A-Grade) -->
+				<item id="730" min="1" max="1" chance="39.3481628030853" /> <!-- Scroll: Enchant Armor (A) -->
 				<item id="9912" min="184" max="368" chance="100" /> <!-- Knight's Epaulette -->
 			</drop>
 		</dropLists>
@@ -3970,7 +3897,6 @@
 		</collision>
 	</npc>
 	<npc id="25579" level="74" type="RaidBoss" name="Helsing" title="Forsaken Inmate">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25580" count="4" respawnTime="360" weightPoint="1" /> <!-- Helsing's Guard -->
@@ -4035,9 +3961,9 @@
 				<item id="6685" min="1" max="1" chance="0.215625025749207" /> <!-- Sealed Major Arcana Glove -->
 				<item id="6686" min="1" max="1" chance="0.215704445648193" /> <!-- Sealed Major Arcana Boots -->
 				<item id="9625" min="1" max="1" chance="4.82280967111206" /> <!-- Giant's Codex - Oblivion -->
-				<item id="6570" min="1" max="1" chance="2.67933637217331" /> <!-- Blessed Scroll: Enchant Armor (A-Grade) -->
-				<item id="729" min="1" max="1" chance="2.67933637217331" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
-				<item id="6569" min="1" max="1" chance="0.321517843940735" /> <!-- Blessed Scroll: Enchant Weapon (A-Grade) -->
+				<item id="6570" min="1" max="1" chance="2.67933637217331" /> <!-- Blessed Scroll: Enchant Armor (A) -->
+				<item id="729" min="1" max="1" chance="2.67933637217331" /> <!-- Scroll: Enchant Weapon (A) -->
+				<item id="6569" min="1" max="1" chance="0.321517843940735" /> <!-- Blessed Scroll: Enchant Weapon (A) -->
 				<item id="9912" min="186" max="378" chance="100" /> <!-- Knight's Epaulette -->
 			</drop>
 		</dropLists>
@@ -4047,7 +3973,6 @@
 		</collision>
 	</npc>
 	<npc id="25580" level="73" type="Monster" name="Helsing's Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="different_level_9_attacked" id="5456" level="1" /> <!-- Stubborn Resistance -->
 			<skill name="different_level_9_see_spelled" id="5456" level="1" /> <!-- Stubborn Resistance -->
@@ -4089,7 +4014,6 @@
 		</collision>
 	</npc>
 	<npc id="25581" level="73" type="Monster" name="Helsing's Assassin">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4741" level="6" /> <!-- BOSS Strike -->
 			<skill name="different_level_9_attacked" id="5456" level="1" /> <!-- Stubborn Resistance -->
@@ -4133,7 +4057,6 @@
 		</collision>
 	</npc>
 	<npc id="25582" level="75" type="RaidBoss" name="Gillien" title="Forsaken Inmate">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25583" count="2" respawnTime="360" weightPoint="1" /> <!-- Gillien's Daughter -->
@@ -4185,7 +4108,7 @@
 				<item id="6725" min="1" max="1" chance="1.29145331889844" /> <!-- Sealed Tateossian Ring -->
 				<item id="6726" min="1" max="1" chance="0.645576966444016" /> <!-- Sealed Tateossian Necklace -->
 				<item id="9625" min="1" max="1" chance="9.85393546865845" /> <!-- Giant's Codex - Oblivion -->
-				<item id="730" min="1" max="1" chance="41.058166276947" /> <!-- Scroll: Enchant Armor (A-Grade) -->
+				<item id="730" min="1" max="1" chance="41.058166276947" /> <!-- Scroll: Enchant Armor (A) -->
 				<item id="9912" min="190" max="380" chance="100" /> <!-- Knight's Epaulette -->
 			</drop>
 		</dropLists>
@@ -4195,7 +4118,6 @@
 		</collision>
 	</npc>
 	<npc id="25583" level="74" type="Monster" name="Gillien's Daughter">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4785" level="6" /> <!-- BOSS Chant of Life -->
 			<skill name="SelfRangeBuff_a" id="4213" level="6" /> <!-- BOSS Haste -->
@@ -4241,7 +4163,6 @@
 		</collision>
 	</npc>
 	<npc id="25584" level="74" type="Monster" name="Gillien's Attendant">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="different_level_9_attacked" id="5456" level="1" /> <!-- Stubborn Resistance -->
 			<skill name="different_level_9_see_spelled" id="5456" level="1" /> <!-- Stubborn Resistance -->
@@ -4283,7 +4204,6 @@
 		</collision>
 	</npc>
 	<npc id="25585" level="76" type="RaidBoss" name="Medici" title="Forsaken Inmate">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25586" count="3" respawnTime="360" weightPoint="1" /> <!-- Medici's Sister -->
@@ -4344,9 +4264,9 @@
 				<item id="6685" min="1" max="1" chance="0.219011282043457" /> <!-- Sealed Major Arcana Glove -->
 				<item id="6686" min="1" max="1" chance="0.219246778045654" /> <!-- Sealed Major Arcana Boots -->
 				<item id="9625" min="1" max="1" chance="4.89871251795959" /> <!-- Giant's Codex - Oblivion -->
-				<item id="6570" min="1" max="1" chance="2.72150458368874" /> <!-- Blessed Scroll: Enchant Armor (A-Grade) -->
-				<item id="729" min="1" max="1" chance="2.72150458368874" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
-				<item id="6569" min="1" max="1" chance="0.326577989650726" /> <!-- Blessed Scroll: Enchant Weapon (A-Grade) -->
+				<item id="6570" min="1" max="1" chance="2.72150458368874" /> <!-- Blessed Scroll: Enchant Armor (A) -->
+				<item id="729" min="1" max="1" chance="2.72150458368874" /> <!-- Scroll: Enchant Weapon (A) -->
+				<item id="6569" min="1" max="1" chance="0.326577989650726" /> <!-- Blessed Scroll: Enchant Weapon (A) -->
 				<item id="9912" min="188" max="377" chance="100" /> <!-- Knight's Epaulette -->
 			</drop>
 		</dropLists>
@@ -4356,7 +4276,6 @@
 		</collision>
 	</npc>
 	<npc id="25586" level="75" type="Monster" name="Medici's Sister">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic_a" id="4192" level="6" /> <!-- BOSS HP Drain -->
 			<skill name="Debuff_a" id="4204" level="6" /> <!-- Bleed -->
@@ -4401,7 +4320,6 @@
 		</collision>
 	</npc>
 	<npc id="25587" level="75" type="Monster" name="Medici's Brother">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4725" level="6" /> <!-- Stun -->
 			<skill name="different_level_9_attacked" id="5456" level="1" /> <!-- Stubborn Resistance -->
@@ -4445,7 +4363,6 @@
 		</collision>
 	</npc>
 	<npc id="25588" level="77" type="RaidBoss" name="Immortal Muus" title="Forsaken Inmate">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm02_A" />
 			<param name="CouldDespawn" value="1" />
@@ -4504,7 +4421,7 @@
 				<item id="6710" min="9" max="27" chance="6.43747479678345" /> <!-- Sealed Draconic Leather Helmet Pattern -->
 				<item id="6714" min="2" max="6" chance="28.9687802492294" /> <!-- Sealed Major Arcana Circlet Pattern -->
 				<item id="9625" min="1" max="1" chance="10.0000060875549" /> <!-- Giant's Codex - Oblivion -->
-				<item id="730" min="1" max="1" chance="41.6667953650818" /> <!-- Scroll: Enchant Armor (A-Grade) -->
+				<item id="730" min="1" max="1" chance="41.6667953650818" /> <!-- Scroll: Enchant Armor (A) -->
 				<item id="9912" min="191" max="389" chance="100" /> <!-- Knight's Epaulette -->
 			</drop>
 		</dropLists>
@@ -4514,7 +4431,6 @@
 		</collision>
 	</npc>
 	<npc id="25589" level="78" type="RaidBoss" name="Brand the Exile" title="Forsaken Inmate">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25590" count="1" respawnTime="360" weightPoint="1" /> <!-- Brand's Chamberlain -->
@@ -4575,8 +4491,8 @@
 				<item id="9626" min="1" max="1" chance="2.72355565183067" /> <!-- Giant's Codex - Discipline -->
 				<item id="9587" min="1" max="1" chance="4.64242467882729" /> <!-- Striped Scale Shirt -->
 				<item id="9591" min="1" max="1" chance="3.57109867165947" /> <!-- Steel Bracelet -->
-				<item id="6577" min="1" max="1" chance="0.13617718353653" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
-				<item id="6578" min="1" max="1" chance="0.907843896543503" /> <!-- Blessed Scroll: Enchant Armor (S-Grade) -->
+				<item id="6577" min="1" max="1" chance="0.13617718353653" /> <!-- Blessed Scroll: Enchant Weapon (S) -->
+				<item id="6578" min="1" max="1" chance="0.907843896543503" /> <!-- Blessed Scroll: Enchant Armor (S) -->
 				<item id="9912" min="199" max="391" chance="100" /> <!-- Knight's Epaulette -->
 			</drop>
 		</dropLists>
@@ -4586,7 +4502,6 @@
 		</collision>
 	</npc>
 	<npc id="25590" level="77" type="Monster" name="Brand's Chamberlain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4725" level="6" /> <!-- Stun -->
 			<skill name="different_level_9_attacked" id="5456" level="1" /> <!-- Stubborn Resistance -->
@@ -4630,7 +4545,6 @@
 		</collision>
 	</npc>
 	<npc id="25591" level="77" type="Monster" name="Brand's Servant">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="different_level_9_attacked" id="5456" level="1" /> <!-- Stubborn Resistance -->
 			<skill name="different_level_9_see_spelled" id="5456" level="1" /> <!-- Stubborn Resistance -->
@@ -4672,7 +4586,6 @@
 		</collision>
 	</npc>
 	<npc id="25592" level="79" type="RaidBoss" name="Commander Koenig" title="Forsaken Inmate">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<param name="CouldDespawn" value="1" />
@@ -4729,9 +4642,9 @@
 				<item id="9626" min="1" max="1" chance="2.31610657781982" /> <!-- Giant's Codex - Discipline -->
 				<item id="9587" min="1" max="1" chance="3.94791049035645" /> <!-- Striped Scale Shirt -->
 				<item id="9591" min="1" max="1" chance="3.03684897418213" /> <!-- Steel Bracelet -->
-				<item id="959" min="1" max="1" chance="0.694828561386108" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="960" min="1" max="1" chance="6.94830267366028" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				<item id="6577" min="1" max="1" chance="0.115801916931152" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
+				<item id="959" min="1" max="1" chance="0.694828561386108" /> <!-- Scroll: Enchant Weapon (S) -->
+				<item id="960" min="1" max="1" chance="6.94830267366028" /> <!-- Scroll: Enchant Armor (S) -->
+				<item id="6577" min="1" max="1" chance="0.115801916931152" /> <!-- Blessed Scroll: Enchant Weapon (S) -->
 				<item id="9912" min="200" max="400" chance="100" /> <!-- Knight's Epaulette -->
 			</drop>
 		</dropLists>
@@ -4741,7 +4654,6 @@
 		</collision>
 	</npc>
 	<npc id="25593" level="80" type="RaidBoss" name="Gerg the Hunter" title="Forsaken Inmate">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25594" count="3" respawnTime="360" weightPoint="1" /> <!-- Gerg's Follower -->
@@ -4794,7 +4706,7 @@
 				<item id="9626" min="1" max="1" chance="3.54884740876007" /> <!-- Giant's Codex - Discipline -->
 				<item id="9587" min="1" max="1" chance="6.04918785523224" /> <!-- Striped Scale Shirt -->
 				<item id="9591" min="1" max="1" chance="4.65321074188614" /> <!-- Steel Bracelet -->
-				<item id="6578" min="1" max="1" chance="1.18295428098679" /> <!-- Blessed Scroll: Enchant Armor (S-Grade) -->
+				<item id="6578" min="1" max="1" chance="1.18295428098679" /> <!-- Blessed Scroll: Enchant Armor (S) -->
 				<item id="9912" min="202" max="408" chance="100" /> <!-- Knight's Epaulette -->
 			</drop>
 		</dropLists>
@@ -4804,7 +4716,6 @@
 		</collision>
 	</npc>
 	<npc id="25594" level="79" type="Monster" name="Gerg's Follower">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="LongRangePhysicalSpecial_a" id="4760" level="7" /> <!-- Stun -->
 			<skill name="different_level_9_attacked" id="5456" level="1" /> <!-- Stubborn Resistance -->
@@ -4848,7 +4759,6 @@
 		</collision>
 	</npc>
 	<npc id="25595" level="79" type="Monster" name="Gerg's Henchman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="different_level_9_attacked" id="5456" level="1" /> <!-- Stubborn Resistance -->
 			<skill name="different_level_9_see_spelled" id="5456" level="1" /> <!-- Stubborn Resistance -->
@@ -4890,7 +4800,6 @@
 		</collision>
 	</npc>
 	<npc id="25596" level="82" type="Monster" name="Ocular Servitor">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="AttackRange" value="2" />
 			<param name="Party_Type" value="1" />
@@ -4949,7 +4858,6 @@
 		</collision>
 	</npc>
 	<npc id="25597" level="82" type="Monster" name="Heurel">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="AttackRange" value="2" />
 			<param name="MovingAttack" value="0" />
@@ -5000,7 +4908,6 @@
 		</collision>
 	</npc>
 	<npc id="25598" level="82" type="Monster" name="Gegei">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="AttackRange" value="2" />
 			<param name="MovingAttack" value="0" />
@@ -5050,7 +4957,6 @@
 		</collision>
 	</npc>
 	<npc id="25599" level="82" type="Monster" name="Iglas">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="AttackRange" value="2" />
 			<param name="MovingAttack" value="0" />

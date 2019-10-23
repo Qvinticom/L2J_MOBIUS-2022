@@ -265,14 +265,14 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="13417" type="EtcItem" name="L2day - Y">
-		<!-- Items for L2day event. Combine special letters to spell "Angel Cat," and you'll get a great gift! -->
+		<!-- This event item can be combined with other letters/numbers to create specific words. Take them to an Event Manager to receive a fabulous gift! -->
 		<set name="icon" val="icon.etc_alphabet_y_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="13418" type="EtcItem" name="L2day - Letter 5">
-		<!-- Items for L2day event. Combine special letters to spell "Angel Cat," and you'll get a great gift! -->
+		<!-- This event item can be combined with other letters/numbers to create specific words. Take them to an Event Manager to receive a fabulous gift! -->
 		<set name="icon" val="icon.etc_alphabet_5_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -290,7 +290,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="13420" type="EtcItem" name="Multi-colored Honey Rice Cake">
-		<!-- Fully replenishes your Vitality. The effect does not apply to pets. Reuse time is 60 minutes. -->
+		<!-- This Lineage II 5-year anniversary thank you gift will fully replenish your energy. The effect does not apply to pets. -->
 		<set name="icon" val="icon.etc_five_color_honey_cake_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -303,7 +303,7 @@
 		<set name="item_skill" val="2645-1" /> <!-- Multi-Colored Honey Rice Cake -->
 	</item>
 	<item id="13421" type="EtcItem" name="Honey Wheat Cake">
-		<!-- Fully replenishes your Vitality. Cannot be exchanged or dropped. Can be stored in a private warehouse. Reuse time is 60 minutes. -->
+		<!-- This Lineage II 5-year anniversary thank you gift will fully replenish your energy. Cannot be exchanged or dropped. May be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_cake_of_wheatlfour_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -417,7 +417,7 @@
 		<set name="item_skill" val="2640-1" /> <!-- Five-year anniversary event box -->
 	</item>
 	<item id="13429" type="Armor" name="Teddy Bear Hat (Event)">
-		<!-- Interesting hair accessory that looks like a teddy bear. Uses 2 hair accessory slots. Cannot be exchanged or dropped. -->
+		<!-- Interesting hair accessory that looks like a teddy bear. Uses 2 hair accessory slots. No exchange/drop available for this item. -->
 		<set name="icon" val="icon.accessory_bear_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -429,7 +429,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="13430" type="Armor" name="Piggy Hat (Event)">
-		<!-- Interesting hair accessory that looks like a piggy. Uses 2 hair accessory slots. Cannot be exchanged or dropped. -->
+		<!-- Interesting hair accessory that looks like a piggy. Uses 2 hair accessory slots. No exchange/drop available for this item. -->
 		<set name="icon" val="icon.accessory_pig_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -441,7 +441,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="13431" type="Armor" name="Jester Hat (Event)">
-		<!-- A unique jester hat that is split at the end. Uses 2 hair accessory slots. Cannot be exchanged or dropped. -->
+		<!-- A unique jester hat that is split at the end. Uses 2 hair accessory slots. No exchange/drop available for this item. -->
 		<set name="icon" val="icon.accessory_jester_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -942,7 +942,7 @@
 		</for>
 	</item>
 	<item id="13457" type="Weapon" name="Vesper Cutter">
-		<!-- It can bestow one of the following functions: Haste, Focus, or Health. -->
+		<!-- It can bestow one of the following three functions: Haste, Focus, or Health. -->
 		<set name="icon" val="icon.weapon_vesper_cutter_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -971,7 +971,7 @@
 		</for>
 	</item>
 	<item id="13458" type="Weapon" name="Vesper Slasher">
-		<!-- It can bestow one of the following functions: Haste, Focus, or Health. -->
+		<!-- It can bestow one of the following three functions: Haste, Focus, or Health. -->
 		<set name="icon" val="icon.weapon_vesper_slasher_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1000,7 +1000,7 @@
 		</for>
 	</item>
 	<item id="13459" type="Weapon" name="Vesper Buster">
-		<!-- It can bestow one of the following functions: Acumen, Mana Up, or Magic Hold. -->
+		<!-- It can bestow one of the following three functions: Acumen, Mana Up, or Magic Hold. -->
 		<set name="icon" val="icon.weapon_vesper_burster_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1029,7 +1029,7 @@
 		</for>
 	</item>
 	<item id="13460" type="Weapon" name="Vesper Shaper">
-		<!-- It can bestow one of the following functions: Critical Damage, HP Drain, or Haste. -->
+		<!-- It can bestow one of the following three functions: Crt. Damage, HP Drain, or Haste. -->
 		<set name="icon" val="icon.weapon_vesper_shaper_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1058,7 +1058,7 @@
 		</for>
 	</item>
 	<item id="13461" type="Weapon" name="Vesper Fighter">
-		<!-- It can bestow one of the following functions: Focus, Health, or Critical Stun. -->
+		<!-- It can bestow one of the following three functions: Focus, Health, or Crt. Stun. -->
 		<set name="icon" val="icon.weapon_vesper_fighter_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1087,7 +1087,7 @@
 		</for>
 	</item>
 	<item id="13462" type="Weapon" name="Vesper Stormer">
-		<!-- It can bestow one of the following functions: Health, Guidance, or Haste. -->
+		<!-- It can bestow one of the following three functions: Health, Guidance, or Haste. -->
 		<set name="icon" val="icon.weapon_vesper_stormer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1117,7 +1117,7 @@
 		</for>
 	</item>
 	<item id="13463" type="Weapon" name="Vesper Avenger">
-		<!-- It can bestow one of the following functions: HP Regeneration, HP Drain, or Health. -->
+		<!-- It can bestow one of the following three functions: HP Regeneration, HP Drain, or Health. -->
 		<set name="icon" val="icon.weapon_vesper_avenger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1146,7 +1146,7 @@
 		</for>
 	</item>
 	<item id="13464" type="Weapon" name="Vesper Retributer">
-		<!-- It can bestow one of the following functions: HP Regeneration, HP Drain, or Health. -->
+		<!-- It can bestow one of the following three functions: HP Regeneration, HP Drain, or Health. -->
 		<set name="icon" val="icon.weapon_vesper_retributer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1175,7 +1175,7 @@
 		</for>
 	</item>
 	<item id="13465" type="Weapon" name="Vesper Caster">
-		<!-- It can bestow one of the following functions: Acumen, MP Regeneration, or Mana Up. -->
+		<!-- It can bestow one of the following three functions: Acumen, MP Regeneration, or Mana Up. -->
 		<set name="icon" val="icon.weapon_vesper_caster_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1205,7 +1205,7 @@
 		</for>
 	</item>
 	<item id="13466" type="Weapon" name="Vesper Singer">
-		<!-- It can bestow one of the following functions: Empower, MP Regeneration, or Magic Hold. -->
+		<!-- It can bestow one of the following three functions: Empower, MP Regeneration, or Magic Hold. -->
 		<set name="icon" val="icon.weapon_vesper_singer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1235,7 +1235,7 @@
 		</for>
 	</item>
 	<item id="13467" type="Weapon" name="Vesper Thrower">
-		<!-- It can bestow one of the following functions: Cheap Shot, Critical Slow, or Focus. -->
+		<!-- It can bestow one of the following three funcions: Cheap Shot, Crt. Slow, or Focus. -->
 		<set name="icon" val="icon.weapon_vesper_thrower_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1267,7 +1267,7 @@
 		</for>
 	</item>
 	<item id="13468" type="Weapon" name="Vesper Pincer">
-		<!-- Kamael Exclusive Weapon: Vesper Cutter Conversion. Haste, Focus, or Health can be bestowed. When enchanted to 4 or more, there's a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of recieved heal, and decreased MP consumption per skill during a critical attack. -->
+		<!-- Kamael exclusive weapon: Vesper Cutter Conversion. Haste, Focus, or Health can be bestowed. When enchanted over 4, party members including yourself can increase attack power, magic power and healing capacity occasionally and decrease MP consumption per skill during a critical attack. -->
 		<set name="icon" val="icon.weapon_vesper_pincer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1301,7 +1301,7 @@
 		</for>
 	</item>
 	<item id="13469" type="Weapon" name="Vesper Shooter">
-		<!-- Kamael Exclusive Weapon: Vesper Thrower Conversion. Cheap Shot, Critical Slow, or Focus can be bestowed. -->
+		<!-- Kamael exclusive weapon: Vesper Thrower Conversion. Cheap Shot, Crt. Slow, or Focus can be bestowed. -->
 		<set name="icon" val="icon.weapon_vesper_schutze_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1335,7 +1335,7 @@
 		</for>
 	</item>
 	<item id="13470" type="Weapon" name="Vesper Nagan">
-		<!-- Kamael Exclusive Weapon: Vesper Slasher Conversion. Haste, Focus, or Health can be bestowed. -->
+		<!-- Kamael exclusive weapon: Vesper Slasher Conversion. Haste, Focus, or Health can be bestowed. -->
 		<set name="icon" val="icon.weapon_vesper_nagen_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />

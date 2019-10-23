@@ -433,7 +433,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4336" type="EtcItem" name="Casian's Enzyme">
-		<!-- Enzyme created by Elder Casian. Find the Ant Larvae sleeping within the Ant Nest Dungeon and administer the enzyme to them. -->
+		<!-- Enzyme created by Elder Casian. Find the Ant Larvae sleeping within the the Ant Nest Dungeon and administer the enzyme to them. -->
 		<set name="icon" val="icon.etc_spell_shot_silver_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -457,7 +457,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4338" type="EtcItem" name="Blue Back Alligator Leather">
-		<!-- Leather from Blue Back Alligators caught on Alligator Island. You can sell it to Enverun at a high price. -->
+		<!-- Leather from Blue Back Alligators caught on Alligator Island. You can sell it to Enberun at a high price. -->
 		<set name="icon" val="icon.etc_scale_of_medusa_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -469,7 +469,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4339" type="EtcItem" name="Jewel Studded Alligator Leather">
-		<!-- A piece of Jewel Studded Alligator Leather caught on Alligator Island. You can sell it to Enverun at a high price. -->
+		<!-- A piece of Jewel Studded Alligator Leather caught on Alligator Island. You can sell it to Enberun at a high price. -->
 		<set name="icon" val="icon.etc_scale_of_medusa_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -772,7 +772,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4371" type="EtcItem" name="Scepter of Darkness">
-		<!-- A staff that gives off dark M. Atk. On its handle, the words "Great Demon King" are engraved. -->
+		<!-- A staff that gives off dark magic power. On its handle, the words "Great Demon King" are engraved. -->
 		<set name="icon" val="icon.etc_imperial_scepter_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -799,7 +799,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4374" type="EtcItem" name="Heart of Darkness">
-		<!-- A heart-shaped stone piece that gives off the aura of dark M. Atk. On its reverse, the words "I love you Merkenis!" are engraved. -->
+		<!-- A heart-shaped stone piece that gives off the aura of dark magic power. On its reverse, the words "I love you Merkenis!" are engraved. -->
 		<set name="icon" val="icon.etc_heart_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
@@ -925,7 +925,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4388" type="EtcItem" name="Malcom's Check">
-		<!-- A check of tremendous face value signed by Prince Malcom. It can be cashed at a warehouse in Town of Giran. -->
+		<!-- A check of tremendous face value signed by Prince Malcom. It can be cashed at a warehouse in Giran Castle Town. -->
 		<set name="icon" val="icon.etc_paper_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -934,7 +934,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4389" type="EtcItem" name="Deposit Box Key">
-		<!-- A key for a private deposit box located in a warehouse in Town of Giran. -->
+		<!-- A key for a private deposit box located in a warehouse in Giran Castle Town. -->
 		<set name="icon" val="icon.etc_old_key_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -980,7 +980,7 @@
 		<set name="handler" val="Calculator" />
 	</item>
 	<item id="4394" type="EtcItem" name="Hanellin's White Flower">
-		<!-- A mark of Hanellin. Along with your companions each carrying a red flower and yellow flower respectively, go to Town of Aden to see her. -->
+		<!-- A mark of Hannelin. Along with your companions each carrying a red flower and yellow flower respectively, go to Aden Castle Town to see her. -->
 		<set name="icon" val="icon.etc_flower_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
@@ -989,7 +989,7 @@
 		<set name="is_depositable" val="false" />
 	</item>
 	<item id="4395" type="EtcItem" name="Hanellin's Red Flower">
-		<!-- A mark of Hanellin. Along with your companions each carrying a white flower and yellow flower respectively, go to Town of Aden to see her. -->
+		<!-- A mark of Hannelin. Along with your companions each carrying a white flower and yellow flower respectively, go to Aden Castle Town to see her. -->
 		<set name="icon" val="icon.etc_flower_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
@@ -998,7 +998,7 @@
 		<set name="is_depositable" val="false" />
 	</item>
 	<item id="4396" type="EtcItem" name="Hanellin's Yellow Flower">
-		<!-- A mark of Hanellin. Along with your companions each carrying a white flower and red flower respectively, go to Town of Aden to see her. -->
+		<!-- A mark of Hannelin. Along with your companions each carrying a white flower and red flower respectively, go to Aden Castle Town to see her. -->
 		<set name="icon" val="icon.etc_flower_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />

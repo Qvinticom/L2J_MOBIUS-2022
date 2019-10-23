@@ -27,19 +27,18 @@
 	<enchant id="6576" targetGrade="D" maxEnchant="16" />
 	<enchant id="6578" targetGrade="S" maxEnchant="16" />
 
-	<!-- Not used anymore. -->
 	<!-- Crystal Scrolls: Enchant Weapon -->
-	<!-- <enchant id="731" targetGrade="A" bonusRate="100" /> -->
-	<!-- <enchant id="949" targetGrade="B" bonusRate="100" /> -->
-	<!-- <enchant id="953" targetGrade="C" bonusRate="100" /> -->
-	<!-- <enchant id="957" targetGrade="D" bonusRate="100" /> -->
-	<!-- <enchant id="961" targetGrade="S" bonusRate="100" /> -->
+	<enchant id="731" targetGrade="A" bonusRate="100" />
+	<enchant id="949" targetGrade="B" bonusRate="100" />
+	<enchant id="953" targetGrade="C" bonusRate="100" />
+	<enchant id="957" targetGrade="D" bonusRate="100" />
+	<enchant id="961" targetGrade="S" bonusRate="100" />
 	<!-- Crystal Scrolls: Enchant Armor -->
-	<!-- <enchant id="732" targetGrade="A" bonusRate="100" /> -->
-	<!-- <enchant id="950" targetGrade="B" bonusRate="100" /> -->
-	<!-- <enchant id="954" targetGrade="C" bonusRate="100" /> -->
-	<!-- <enchant id="958" targetGrade="D" bonusRate="100" /> -->
-	<!-- <enchant id="962" targetGrade="S" bonusRate="100" /> -->
+	<enchant id="732" targetGrade="A" bonusRate="100" />
+	<enchant id="950" targetGrade="B" bonusRate="100" />
+	<enchant id="954" targetGrade="C" bonusRate="100" />
+	<enchant id="958" targetGrade="D" bonusRate="100" />
+	<enchant id="962" targetGrade="S" bonusRate="100" />
 
 	<!-- Weapon Enchant Scrolls -->
 	<enchant id="22006" targetGrade="D" bonusRate="10" maxEnchant="16" />
@@ -72,40 +71,9 @@
 	<enchant id="22021" targetGrade="A" bonusRate="100" />
 	<enchant id="20522" targetGrade="S" bonusRate="100" />
 
-	<!-- Scroll: Enchant Weapon of Destruction -->
-	<enchant id="22221" targetGrade="S" maxEnchant="15" />
-	<enchant id="22223" targetGrade="A" maxEnchant="15" />
-	<enchant id="22225" targetGrade="B" maxEnchant="15" />
-	<enchant id="22227" targetGrade="C" maxEnchant="15" />
-	<enchant id="22229" targetGrade="D" maxEnchant="15" />
-	<!-- Scroll: Enchant Armor of Destruction -->
-	<enchant id="22222" targetGrade="S" maxEnchant="6" />
-	<enchant id="22224" targetGrade="A" maxEnchant="6" />
-	<enchant id="22226" targetGrade="B" maxEnchant="6" />
-	<enchant id="22228" targetGrade="C" maxEnchant="6" />
-	<enchant id="22230" targetGrade="D" maxEnchant="6" />
-
 	<!-- Master Yogi's Scroll: Enchant Weapon -->
 	<enchant id="13540" maxEnchant="23">
 		<item id="13539" /> <!-- Staff of Master Yogi -->
-	</enchant>
-
-	<!-- Olf's T-shirt Enchant Scroll -->
-	<enchant id="21581" maxEnchant="10">
-		<item id="21580" /> <!-- Olf's T-shirt -->
-		<item id="21706" /> <!-- Olf's T-shirt (Event) -->
-	</enchant>
-
-	<!-- Blessed Olf's T-shirt Enchant Scroll -->
-	<enchant id="21582" maxEnchant="10">
-		<item id="21580" /> <!-- Olf's T-shirt -->
-		<item id="21706" /> <!-- Olf's T-shirt (Event) -->
-	</enchant>
-
-	<!-- Blessed Olf's T-shirt Enchant Scroll - Event -->
-	<enchant id="21707" maxEnchant="10">
-		<item id="21580" /> <!-- Olf's T-shirt -->
-		<item id="21706" /> <!-- Olf's T-shirt (Event) -->
 	</enchant>
 
 	<!-- Event - Herdsman's Love Scroll Event -->

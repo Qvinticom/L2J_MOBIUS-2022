@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="21000" levels="1" name="Release Seal on Agathion - Majo">
-		<!-- Removes the seal of Agathion. -->
+		<!-- Removes the seal on the Agathion. -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
@@ -16,7 +16,7 @@
 		</for>
 	</skill>
 	<skill id="21001" levels="1" name="Release Seal on Agathion - Gold Majo">
-		<!-- Removes the seal of Agathion. -->
+		<!-- Removes the seal on the Agathion. -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
@@ -31,7 +31,7 @@
 		</for>
 	</skill>
 	<skill id="21002" levels="1" name="Release Seal on Agathion - Black Majo">
-		<!-- Removes the seal of Agathion. -->
+		<!-- Removes the seal on the Agathion. -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
@@ -46,7 +46,7 @@
 		</for>
 	</skill>
 	<skill id="21003" levels="1" name="Release Seal on Agathion - Plaipitak">
-		<!-- Removes the seal of Agathion. -->
+		<!-- Removes the seal on the Agathion. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -60,7 +60,7 @@
 		</for>
 	</skill>
 	<skill id="21004" levels="1" name="Wind Walk">
-		<!-- Increases Speed by 20 for 2 minutes. Reuse delay 18 minutes. -->
+		<!-- Increases moving speed by 20 for 2 minutes. Reuse delay 18 minutes. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="SPEED_UP" />
@@ -79,7 +79,7 @@
 		</for>
 	</skill>
 	<skill id="21005" levels="1" name="Agility">
-		<!-- Increases Evasion rate by 4 for 1 hour. Reuse delay is 24 hours. -->
+		<!-- Increases evasion rate by 4 for 1 hour. Reuse Delay 24 hours. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="AVOID_UP" />
@@ -97,7 +97,7 @@
 		</for>
 	</skill>
 	<skill id="21006" levels="1" name="Large Firework Effect">
-		<!-- Sets off firecrackers. -->
+		<!-- Sets off a string of firecrackers. -->
 		<set name="icon" val="BranchSys.icon.br_Afro_hair_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -106,7 +106,7 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="21007" levels="1" name="Ability of Doubt">
-		<!-- Increases the size of your head. -->
+		<!-- Enlarges your head. -->
 		<set name="abnormalLvl" val="0" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="BIG_HEAD" />
@@ -121,7 +121,7 @@
 		<set name="trait" val="ETC" />
 	</skill>
 	<skill id="21008" levels="1" name="Release Seal on Agathion - Baby Panda">
-		<!-- Removes the seal of Agathion. -->
+		<!-- Remove the seal on the Agathion. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -135,7 +135,7 @@
 		</for>
 	</skill>
 	<skill id="21009" levels="1" name="Release Seal on Agathion - Bamboo Panda">
-		<!-- Removes the seal of Agathion. -->
+		<!-- Remove the seal on the Agathion. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -149,7 +149,7 @@
 		</for>
 	</skill>
 	<skill id="21010" levels="1" name="Release Seal on Agathion - Sexy Panda">
-		<!-- Removes the seal of Agathion. -->
+		<!-- Remove the seal on the Agathion. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -163,7 +163,7 @@
 		</for>
 	</skill>
 	<skill id="21011" levels="1" name="Energy Recovery">
-		<!-- Recovers Vitality when acquiring Exp. for 20 minutes. -->
+		<!-- Recovers energy when acquiring Exp. for 20 minutes. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="VP_UP" />
@@ -183,7 +183,7 @@
 		</for>
 	</skill>
 	<skill id="21012" levels="1" name="Energy Recovery">
-		<!-- Recovers Vitality when acquiring Exp. for 20 minutes. -->
+		<!-- Recovers energy when acquiring Exp. for 20 minutes. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="VP_UP" />
@@ -203,7 +203,7 @@
 		</for>
 	</skill>
 	<skill id="21013" levels="1" name="Energy Recovery">
-		<!-- Recovers Vitality when acquiring Exp. for 20 minutes. -->
+		<!-- Recovers energy when acquiring Exp. for 20 minutes. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="VP_UP" />
@@ -223,7 +223,7 @@
 		</for>
 	</skill>
 	<skill id="21014" levels="1" name="Scissors">
-		<!-- Attacks with scissors. Usable only on the crooked turkey. -->
+		<!-- Challenge opponent with "Scissors." Can only be used on Thomas D. Turkey. -->
 		<set name="castRange" val="400" />
 		<set name="coolTime" val="500" />
 		<set name="effectPoint" val="-1" />
@@ -239,7 +239,7 @@
 		</cond>
 	</skill>
 	<skill id="21015" levels="1" name="Rock">
-		<!-- Challenge him with the rock. Usable only on the crooked turkey. -->
+		<!-- Challenge opponent with "Rock." Can only be used on Thomas D. Turkey. -->
 		<set name="castRange" val="400" />
 		<set name="coolTime" val="500" />
 		<set name="effectPoint" val="-1" />
@@ -254,7 +254,7 @@
 		</cond>
 	</skill>
 	<skill id="21016" levels="1" name="Paper">
-		<!-- Challenge him with the paper. Usable only on the crooked turkey. -->
+		<!-- Challenge opponent with "Paper." Can only be used on Thomas D. Turkey. -->
 		<set name="castRange" val="400" />
 		<set name="coolTime" val="500" />
 		<set name="effectPoint" val="-1" />
@@ -269,7 +269,7 @@
 		</cond>
 	</skill>
 	<skill id="21017" levels="1" name="Holiday Dream Weapon">
-		<!-- Increases Max CP. Increases critical rate. Bestows the ability to regenerate HP by using some of the damage inflicted on the enemy. Excludes damage caused by skills and long-range attack. -->
+		<!-- Max CP is increased. The rate of critical attacks is increased. Bestow the ability to regenerate HP by using some of the damage inflicted on the enemy. Excludes damage caused by skills and long-range attacks. -->
 		<set name="icon" val="BranchSys.icon.br_xmas_weapon_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -283,7 +283,7 @@
 		</for>
 	</skill>
 	<skill id="21018" levels="1" name="Holiday Dream Weapon">
-		<!-- Increases Max CP. The rate and power of critical attacks are increased. -->
+		<!-- Max CP is increased. The rate and power of critical attacks are increased. -->
 		<set name="icon" val="BranchSys.icon.br_xmas_weapon_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -297,7 +297,7 @@
 		</for>
 	</skill>
 	<skill id="21019" levels="1" name="Holiday Dream Weapon">
-		<!-- Increases Max CP. Increases deadly attack rate. Decreases MP consumption for skills. -->
+		<!-- Max CP is increased. The probability of deadly attacks is increased, and MP consumption for skills is decreased. -->
 		<set name="icon" val="BranchSys.icon.br_xmas_weapon_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -311,7 +311,7 @@
 		</for>
 	</skill>
 	<skill id="21020" levels="1" name="Holiday Dream Weapon">
-		<!-- Increases Max CP. Increases critical rate. Bestows the ability to regenerate HP by using some of the damage inflicted on the enemy. Excludes damage caused by skills and long-range attack. -->
+		<!-- Max CP and critical attack rate are increased. Will also regenerate HP by using some of the damage inflicted on the enemy. Excludes damage caused by skills and long-range attacks. -->
 		<set name="icon" val="BranchSys.icon.br_xmas_weapon_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -325,7 +325,7 @@
 		</for>
 	</skill>
 	<skill id="21021" levels="1" name="Holiday Dream Weapon">
-		<!-- Increases Max CP. The rate and power of critical attacks are increased. -->
+		<!-- Max CP is increased. The rate and power of critical attacks are increased. -->
 		<set name="icon" val="BranchSys.icon.br_xmas_weapon_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -339,7 +339,7 @@
 		</for>
 	</skill>
 	<skill id="21022" levels="1" name="Holiday Dream Weapon">
-		<!-- Increases Max CP and Casting Spd. Decreases MP consumption for skills. -->
+		<!-- Max CP is increased. Casting speed is increased, and MP consumption for skills is decreased. -->
 		<set name="icon" val="BranchSys.icon.br_xmas_weapon_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -353,7 +353,7 @@
 		</for>
 	</skill>
 	<skill id="21023" levels="1" name="Holiday Dream Weapon">
-		<!-- Increases Max CP and M. Atk. Decreases MP consumption for skills. -->
+		<!-- Max CP and M. Atk. are increased, and MP consumption for skills is decreased. -->
 		<set name="icon" val="BranchSys.icon.br_xmas_weapon_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -367,7 +367,7 @@
 		</for>
 	</skill>
 	<skill id="21024" levels="1" name="Holiday Dream Weapon">
-		<!-- Increases Max CP. MP consumption is decreased. Bestows the ability to regenerate HP by using some of the damage inflicted on the enemy. Excludes damage caused by skills and long-range attack. -->
+		<!-- Max CP is increased. MP consumption per skill is decreased. Bestow the ability to regenerate HP by using some of the damage inflicted on the enemy. Excludes damage caused by skills and long-range attacks. -->
 		<set name="icon" val="BranchSys.icon.br_xmas_weapon_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -381,7 +381,7 @@
 		</for>
 	</skill>
 	<skill id="21025" levels="1" name="Holiday Dream Weapon">
-		<!-- Increases Max CP. The rate and range of critical attacks are increased. -->
+		<!-- Max CP is increased. The rate and range of critical attacks are increased. -->
 		<set name="icon" val="BranchSys.icon.br_xmas_weapon_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -395,7 +395,7 @@
 		</for>
 	</skill>
 	<skill id="21026" levels="1" name="Holiday Dream Weapon">
-		<!-- Increases Max CP. Increases the number of enemies that can be attacked at the same time. Bestows the ability to regenerate HP by using some of the damage inflicted on the enemy. Excludes damage caused by skills and long-range attack. -->
+		<!-- Max CP is increased. Number of enemies which can be attacked at the same time increases. Bestow the ability to regenerate HP by using some of the damage inflicted on the enemy. Excludes damage caused by skills and long-range attacks. -->
 		<set name="icon" val="BranchSys.icon.br_xmas_weapon_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -409,7 +409,7 @@
 		</for>
 	</skill>
 	<skill id="21027" levels="1" name="Holiday Dream Weapon">
-		<!-- Increases Max CP. Atk. Spd. increases, and MP consumption for skills is decreased. -->
+		<!-- Max CP is increased. Atk. Spd. increases, and MP consumption for skills is decreased. -->
 		<set name="icon" val="BranchSys.icon.br_xmas_weapon_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -424,7 +424,7 @@
 		</for>
 	</skill>
 	<skill id="21028" levels="1" name="Holiday Dream Weapon">
-		<!-- Increases Max CP. Increases critical rate. Bestows the ability to regenerate HP by using some of the damage inflicted on the enemy. Excludes damage caused by skills and long-range attack. -->
+		<!-- Max CP is increased. The rate of critical attacks is increased. Bestow the ability to regenerate HP by using some of the damage inflicted on the enemy. Excludes damage caused by skills and long-range attacks. -->
 		<set name="icon" val="BranchSys.icon.br_xmas_weapon_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -438,7 +438,7 @@
 		</for>
 	</skill>
 	<skill id="21029" levels="1" name="Holiday Dream Weapon">
-		<!-- Increases Max CP. The rate and power of critical attacks are increased. -->
+		<!-- Max CP is increased. The rate and power of critical attacks are increased. -->
 		<set name="icon" val="BranchSys.icon.br_xmas_weapon_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -452,7 +452,7 @@
 		</for>
 	</skill>
 	<skill id="21030" levels="1" name="Holiday Dream Weapon">
-		<!-- Increases Max CP. Evasion and Accuracy are increased. -->
+		<!-- Max CP is increased. Evasion and Accuracy are increased. -->
 		<set name="icon" val="BranchSys.icon.br_xmas_weapon_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -466,7 +466,7 @@
 		</for>
 	</skill>
 	<skill id="21031" levels="1" name="Agathion Seal Release - Charming Cupid">
-		<!-- Removes the seal of Agathion. -->
+		<!-- Summons your Agathion. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -480,7 +480,7 @@
 		</for>
 	</skill>
 	<skill id="21032" levels="1" name="Agathion Seal Release - Naughty Cupid">
-		<!-- Removes the seal of Agathion. -->
+		<!-- Summons your Agathion. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -494,7 +494,7 @@
 		</for>
 	</skill>
 	<skill id="21033" levels="1" name="Release Seal on Agathion - White Maneki Neko">
-		<!-- Removes the seal of Agathion. -->
+		<!-- Summons your Agathion. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -508,7 +508,7 @@
 		</for>
 	</skill>
 	<skill id="21034" levels="1" name="Release Seal on Agathion - Black Maneki Neko">
-		<!-- Removes the seal of Agathion. -->
+		<!-- Summons your Agathion. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -522,7 +522,7 @@
 		</for>
 	</skill>
 	<skill id="21035" levels="1" name="Release Seal on Agathion - Brown Maneki Neko">
-		<!-- Removes the seal of Agathion. -->
+		<!-- Summons your Agathion. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -536,7 +536,7 @@
 		</for>
 	</skill>
 	<skill id="21036" levels="1" name="Release Seal on Agathion - One-eyed Bat Drove">
-		<!-- Removes the seal of Agathion. -->
+		<!-- Summons your Agathion. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -550,7 +550,7 @@
 		</for>
 	</skill>
 	<skill id="21037" levels="1" name="Release Seal on Agathion - Pegasus">
-		<!-- Removes the seal of Agathion. -->
+		<!-- Summons your Agathion. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -564,7 +564,7 @@
 		</for>
 	</skill>
 	<skill id="21038" levels="1" name="Release Seal on Agathion - Yellow-robed Tojigong">
-		<!-- Removes the seal of Agathion. -->
+		<!-- Summons your Agathion. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -578,7 +578,7 @@
 		</for>
 	</skill>
 	<skill id="21039" levels="1" name="Release Seal on Agathion - Blue-robed Tojigong">
-		<!-- Removes the seal of Agathion. -->
+		<!-- Summons your Agathion. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -592,7 +592,7 @@
 		</for>
 	</skill>
 	<skill id="21040" levels="1" name="Release Seal on Agathion - Green-robed Tojigong">
-		<!-- Removes the seal of Agathion. -->
+		<!-- Summons your Agathion. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -606,7 +606,7 @@
 		</for>
 	</skill>
 	<skill id="21041" levels="1" name="Release Seal on Agathion - Bugbear">
-		<!-- Removes the seal of Agathion. -->
+		<!-- Summons your Agathion. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -639,7 +639,7 @@
 		</for>
 	</skill>
 	<skill id="21043" levels="1" name="Agathion Seal Cancel - Red Sumo Wrestler">
-		<!-- Removes the seal of Agathion. -->
+		<!-- Removes the seal on the Agathion. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -653,7 +653,7 @@
 		</for>
 	</skill>
 	<skill id="21044" levels="1" name="Agathion Seal Cancel - Blue Sumo Wrestler Agathion">
-		<!-- Removes the seal of Agathion. -->
+		<!-- Removes the seal on the Agathion. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -667,7 +667,7 @@
 		</for>
 	</skill>
 	<skill id="21045" levels="1" name="Agathion Seal Cancel - Great Sumo Match">
-		<!-- Removes the seal of Agathion. -->
+		<!-- Removes the seal on the Agathion. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -681,7 +681,7 @@
 		</for>
 	</skill>
 	<skill id="21046" levels="1" name="Agathion Seal Cancel - Button-Eyed Bear Doll">
-		<!-- Removes the seal of Agathion. -->
+		<!-- Removes the seal on the Agathion. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -695,7 +695,7 @@
 		</for>
 	</skill>
 	<skill id="21047" levels="1" name="Agathion Seal Cancel - God of Fortune">
-		<!-- Removes the seal of Agathion. -->
+		<!-- Removes the seal on the Agathion. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -709,7 +709,7 @@
 		</for>
 	</skill>
 	<skill id="21048" levels="1" name="Agathion Seal Cancel - Dryad">
-		<!-- Removes the seal of Agathion. -->
+		<!-- Removes the seal on the Agathion. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -723,7 +723,7 @@
 		</for>
 	</skill>
 	<skill id="21049" levels="1" name="Agathion Seal Cancel - Wonboso">
-		<!-- Removes the seal of Agathion. -->
+		<!-- Removes the seal on the Agathion. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -737,7 +737,7 @@
 		</for>
 	</skill>
 	<skill id="21050" levels="1" name="Agathion Seal Cancel - Daewoonso">
-		<!-- Removes the seal of Agathion. -->
+		<!-- Removes the seal on the Agathion. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -751,7 +751,7 @@
 		</for>
 	</skill>
 	<skill id="21051" levels="1" name="Steam Beatle Mount">
-		<!-- Mounts a Steam Beetle. -->
+		<!-- Mounts a Steam Beatle. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="TRANSFORM" />
@@ -806,7 +806,7 @@
 		</for>
 	</skill>
 	<skill id="21054" levels="1" name="Blessed Resurrection Ability">
-		<!-- Allows the use of Blessed Resurrection. Reuse delay is 12 hours. -->
+		<!-- Can use the ability of Blessed Resurrection. Reuse Delay 12 hours. -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="castRange" val="400" />
 		<set name="effectPoint" val="1" />
@@ -828,7 +828,7 @@
 		</for>
 	</skill>
 	<skill id="21055" levels="1" name="Wind Walk">
-		<!-- Increases Speed by 20 for 2 minutes. Reuse delay 18 minutes. -->
+		<!-- Increases moving speed by 20 for 2 minutes. Reuse delay 18 minutes. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="SPEED_UP" />
@@ -847,7 +847,7 @@
 		</for>
 	</skill>
 	<skill id="21056" levels="1" name="Agility">
-		<!-- Increases Evasion rate by 4 for 1 hour. Reuse delay is 24 hours. -->
+		<!-- Increases evasion rate by 4 for 1 hour. Reuse Delay 24 hours. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="AVOID_UP" />
@@ -865,7 +865,7 @@
 		</for>
 	</skill>
 	<skill id="21057" levels="1" name="Reflect">
-		<!-- For 5 minutes, returns 20% of the damage back to the enemy. Excludes skill and long-range attacks. Reuse delay is 1 hour. -->
+		<!-- For 5 minutes, returns 20% of the damage back to the enemy. Excludes skill and long-range attacks. Reuse Delay 1 hours. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="DMG_SHIELD" />
@@ -886,7 +886,7 @@
 		</for>
 	</skill>
 	<skill id="21058" levels="1" name="Mana Regeneration">
-		<!-- Increases MP Recovery Rate 3% for 5 minutes. Reuse delay is 1 hour. -->
+		<!-- Increases MP Regeneration by 3% for 5 minutes. Reuse Delay 1 hours. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MP_REGEN_UP" />
@@ -907,7 +907,7 @@
 		</for>
 	</skill>
 	<skill id="21059" levels="1" name="Greater Heal">
-		<!-- Recovers HP by 444 and increases HP Recovery Rate by 30 for 15 seconds. Reuse delay is 4 hours. -->
+		<!-- Recovers HP by 444 and increases HP Recovery by 30 for 15 seconds. Reuse Delay 4 hours. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="LIFE_FORCE_OTHERS" />
@@ -931,7 +931,7 @@
 		</for>
 	</skill>
 	<skill id="21060" levels="1" name="Death Whisper">
-		<!-- Increases Critical Damage by 35% for 5 minutes. Reuse delay is 1 hour. -->
+		<!-- Increases Critical attack power by 35% for 5 minutes. Reuse Delay 1 hours. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="CRITICAL_DMG_UP" />
@@ -950,7 +950,7 @@
 		</for>
 	</skill>
 	<skill id="21061" levels="1" name="Agility">
-		<!-- Increases Evasion rate by 4 for 1 hour. Reuse delay is 24 hours. -->
+		<!-- Increases evasion rate by 4 for 1 hour. Reuse Delay 24 hours. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="AVOID_UP" />
@@ -968,7 +968,7 @@
 		</for>
 	</skill>
 	<skill id="21062" levels="1" name="Wild Magic">
-		<!-- For 5 minutes, increases by 2 the occurrence rate of damage that is caused by magic damage. Reuse delay is 1 hour. -->
+		<!-- For 5 minutes, increases by 2% the occurrence rate of damage that is caused by damage magic. Reuse Delay 1 hours. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MAGIC_CRITICAL_UP" />
@@ -987,7 +987,7 @@
 		</for>
 	</skill>
 	<skill id="21063" levels="1" name="Wind Walk">
-		<!-- Increases Speed by 20 for 2 minutes. Reuse delay 18 minutes. -->
+		<!-- Increases moving speed by 20 for 2 minutes. Reuse delay 18 minutes. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="SPEED_UP" />
@@ -1006,7 +1006,7 @@
 		</for>
 	</skill>
 	<skill id="21064" levels="1" name="Mana Regeneration">
-		<!-- Increases MP Recovery Rate 3 for 5 minutes. Reuse delay is 1 hour. -->
+		<!-- Increases MP Regeneration by 3% for 5 minutes. Reuse Delay 1 hours. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MP_REGEN_UP" />
@@ -1027,7 +1027,7 @@
 		</for>
 	</skill>
 	<skill id="21065" levels="1" name="Reflect">
-		<!-- For 5 minutes, returns 20% of the damage back to the enemy. Excludes skill and long-range attacks. Reuse delay is 1 hour. -->
+		<!-- For 5 minutes, returns 20% of the damage back to the enemy. Excludes skill and long-range attacks. Reuse Delay 1 hours. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="DMG_SHIELD" />
@@ -1048,7 +1048,7 @@
 		</for>
 	</skill>
 	<skill id="21066" levels="1" name="Energy Recovery">
-		<!-- Recovers Vitality when acquiring Exp. for 5 minutes. Reuse delay is 1 hour. -->
+		<!-- Recovers energy when acquiring Exp. for 5 minutes. Reuse Delay 1 hours. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="VP_UP" />
@@ -1069,7 +1069,7 @@
 		</for>
 	</skill>
 	<skill id="21067" levels="1" name="Blessed Escape Ability">
-		<!-- Allows the use of Blessed Escape. Reuse delay is 12 hours. -->
+		<!-- Can use the ability of Blessed Return. Reuse Delay 12 hours. -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="hitTime" val="200" />
 		<set name="icon" val="BranchSys.icon.br_plastic_hair_f_i00" />
@@ -1093,7 +1093,7 @@
 		</for>
 	</skill>
 	<skill id="21068" levels="1" name="Resist Unholy">
-		<!-- Increases Resistance to Dark by 30 for 5 minutes. Reuse delay is 1 hour. -->
+		<!-- Increases resistance to darkness type attacks by 30 for 5 minutes. Reuse Delay 1 hours. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="ARMOR_UNHOLY" />
@@ -1114,7 +1114,7 @@
 		</for>
 	</skill>
 	<skill id="21069" levels="1" name="Wind Walk">
-		<!-- Increases Speed by 20 for 2 minutes. Reuse delay 18 minutes. -->
+		<!-- Increases moving speed by 20 for 2 minutes. Reuse delay 18 minutes. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="SPEED_UP" />
@@ -1133,7 +1133,7 @@
 		</for>
 	</skill>
 	<skill id="21070" levels="1" name="Death Whisper">
-		<!-- Increases Critical Damage by 35% for 5 minutes. Reuse delay is 1 hour. -->
+		<!-- Increases Critical attack power by 35% for 5 minutes. Reuse Delay 1 hours. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="CRITICAL_DMG_UP" />
@@ -1152,7 +1152,7 @@
 		</for>
 	</skill>
 	<skill id="21071" levels="1" name="Agility">
-		<!-- Increases Evasion rate by 4 for 1 hour. Reuse delay is 24 hours. -->
+		<!-- Increases evasion rate by 4 for 1 hour. Reuse Delay 24 hours. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="AVOID_UP" />
@@ -1170,7 +1170,7 @@
 		</for>
 	</skill>
 	<skill id="21072" levels="1" name="Wild Magic">
-		<!-- For 5 minutes, increases by 2 the occurrence rate of damage that is caused by magic damage. Reuse delay is 1 hour. -->
+		<!-- For 5 minutes, increases by 2% the occurrence rate of damage that is caused by damage magic. Reuse Delay 1 hours. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MAGIC_CRITICAL_UP" />
@@ -1189,7 +1189,7 @@
 		</for>
 	</skill>
 	<skill id="21073" levels="1" name="Mana Regeneration">
-		<!-- Increases MP Recovery Rate 3 for 5 minutes. Reuse delay is 1 hour. -->
+		<!-- Increases MP Regeneration by 3% for 5 minutes. Reuse Delay 1 hours. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MP_REGEN_UP" />
@@ -1210,7 +1210,7 @@
 		</for>
 	</skill>
 	<skill id="21074" levels="1" name="Reflect">
-		<!-- For 5 minutes, returns 20% of the damage back to the enemy. Excludes skill and long-range attacks. Reuse delay is 1 hour. -->
+		<!-- For 5 minutes, returns 20% of the damage back to the enemy. Excludes skill and long-range attacks. Reuse Delay 1 hours. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="DMG_SHIELD" />
@@ -1231,7 +1231,7 @@
 		</for>
 	</skill>
 	<skill id="21075" levels="1" name="Greater Heal">
-		<!-- Recovers HP by 444 and increases HP Recovery Rate by 30 for 15 seconds. Reuse delay is 4 hours. -->
+		<!-- Recovers HP by 444 and increases HP Recovery by 30 for 15 seconds. Reuse Delay 4 hours. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="LIFE_FORCE_OTHERS" />
@@ -1255,7 +1255,7 @@
 		</for>
 	</skill>
 	<skill id="21076" levels="1" name="Resist Unholy">
-		<!-- Increases Resistance to Dark by 30 for 5 minutes. Reuse delay is 1 hour. -->
+		<!-- Increases resistance to darkness type attacks by 30 for 5 minutes. Reuse Delay 1 hours. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="ARMOR_UNHOLY" />
@@ -1276,7 +1276,7 @@
 		</for>
 	</skill>
 	<skill id="21077" levels="1" name="Wind Walk">
-		<!-- Increases Speed by 20 for 2 minutes. Reuse delay 18 minutes. -->
+		<!-- Increases moving speed by 20 for 2 minutes. Reuse delay 18 minutes. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="SPEED_UP" />
@@ -1295,7 +1295,7 @@
 		</for>
 	</skill>
 	<skill id="21078" levels="1" name="Death Whisper">
-		<!-- Increases Critical Damage by 35% for 5 minutes. Reuse delay is 1 hour. -->
+		<!-- Increases Critical attack power by 35% for 5 minutes. Reuse Delay 1 hours. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="CRITICAL_DMG_UP" />
@@ -1314,7 +1314,7 @@
 		</for>
 	</skill>
 	<skill id="21079" levels="1" name="Agility">
-		<!-- Increases Evasion rate by 4 for 1 hour. Reuse delay is 24 hours. -->
+		<!-- Increases evasion rate by 4 for 1 hour. Reuse Delay 24 hours. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="AVOID_UP" />
@@ -1332,7 +1332,7 @@
 		</for>
 	</skill>
 	<skill id="21080" levels="1" name="Wild Magic">
-		<!-- For 5 minutes, increases by 2 the occurrence rate of damage that is caused by magic damage. Reuse delay is 1 hour. -->
+		<!-- For 5 minutes, increases by 2% the occurrence rate of damage that is caused by damage magic. Reuse Delay 1 hours. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MAGIC_CRITICAL_UP" />
@@ -1351,7 +1351,7 @@
 		</for>
 	</skill>
 	<skill id="21081" levels="1" name="Mana Regeneration">
-		<!-- Increases MP Recovery Rate 3 for 5 minutes. Reuse delay is 1 hour. -->
+		<!-- Increases MP Regeneration by 3% for 5 minutes. Reuse Delay 1 hours. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MP_REGEN_UP" />
@@ -1372,7 +1372,7 @@
 		</for>
 	</skill>
 	<skill id="21082" levels="1" name="Reflect">
-		<!-- For 5 minutes, returns 20% of the damage back to the enemy. Excludes skill and long-range attacks. Reuse delay is 1 hour. -->
+		<!-- For 5 minutes, returns 20% of the damage back to the enemy. Excludes skill and long-range attacks. Reuse Delay 1 hours. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="DMG_SHIELD" />
@@ -1393,7 +1393,7 @@
 		</for>
 	</skill>
 	<skill id="21083" levels="1" name="Greater Heal">
-		<!-- Recovers HP by 444 and increases HP Recovery Rate by 30 for 15 seconds. Reuse delay is 4 hours. -->
+		<!-- Recovers HP by 444 and increases HP Recovery by 30 for 15 seconds. Reuse Delay 4 hours. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="LIFE_FORCE_OTHERS" />
@@ -1417,7 +1417,7 @@
 		</for>
 	</skill>
 	<skill id="21084" levels="1" name="Energy Recovery">
-		<!-- Recovers Vitality when acquiring Exp. for 5 minutes. Reuse delay is 1 hour. -->
+		<!-- Recovers energy when acquiring Exp. for 5 minutes. Reuse Delay 1 hours. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="VP_UP" />
@@ -1438,7 +1438,7 @@
 		</for>
 	</skill>
 	<skill id="21085" levels="1" name="Agathion Seal Cancel - Pomona">
-		<!-- Removes the seal of Agathion. -->
+		<!-- Removes the seal on the Agathion. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1452,7 +1452,7 @@
 		</for>
 	</skill>
 	<skill id="21086" levels="1" name="Blessing of Love">
-		<!-- Can feel the warm love of family. Protects the target with sacred power. Makes the target invincible for 10 seconds. Reuse delay is 4 hours. -->
+		<!-- Can feel the warm love of family. Protects the target with sacred power. Makes the target invincible for 10 seconds. Reuse Delay 4 hours. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="INVINCIBILITY" />
@@ -1472,7 +1472,7 @@
 		</for>
 	</skill>
 	<skill id="21087" levels="1" name="Berserker Spirit">
-		<!-- Decreases P. Def. by 8%, M. Def. by 16% and Evasion by 4, and increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and Speed by 8 for 20 minutes. -->
+		<!-- Decreases P. Def. by 8%, M. Def. by 16%, and evasion by 4, and increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and moving speed by 8 for 20 minutes. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="BERSERKER" />
@@ -1528,7 +1528,7 @@
 		</for>
 	</skill>
 	<skill id="21089" levels="1" name="Dance of Shadows">
-		<!-- Receives the soul's help, and for 2 minutes, decreases one's own Speed by 50% and invokes the ability not to receive the preemptive attack of monsters. -->
+		<!-- Receives the soul's help, and for 2 minutes, decreases one's own moving speed by 50% and invokes the ability not to receive the preemptive attack of monsters. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="DANCE_OF_SHADOW" />
@@ -1570,7 +1570,7 @@
 		</for>
 	</skill>
 	<skill id="21091" levels="1" name="Agathion Seal Cancel - Weaver">
-		<!-- Removes the seal of Agathion. -->
+		<!-- Removes the seal on the Agathion. -->
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1584,28 +1584,28 @@
 		</for>
 	</skill>
 	<skill id="21092" levels="1" name="Theme - Love">
-		<!-- The town's theme music plays on the headphones. -->
+		<!-- The sound of a magical town theme flows out of the headphones. -->
 		<set name="icon" val="BranchSys.icon.br_headphone_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="21093" levels="1" name="Theme - Hero">
-		<!-- The hero's theme music plays on the headphones. -->
+		<!-- The sound of hero theme flows out of the headphones. -->
 		<set name="icon" val="BranchSys.icon.br_headphone_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="21094" levels="1" name="Theme - Theme Park">
-		<!-- The theme park's theme music plays on the headphones. -->
+		<!-- The sound of theme park's theme flows out of the headphones. -->
 		<set name="icon" val="BranchSys.icon.br_headphone_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="21095" levels="1" name="Blessed Resurrection">
-		<!-- Allows the use of Blessed Resurrection. Reuse delay is 12 hours. -->
+		<!-- Can use the ability of Blessed Resurrection. Reuse Delay 12 hours. -->
 		<set name="blockedInOlympiad" val="true" />
 		<set name="castRange" val="400" />
 		<set name="coolTime" val="600" />
@@ -1627,7 +1627,7 @@
 		</for>
 	</skill>
 	<skill id="21096" levels="1" name="Ability of Cool Watermelon">
-		<!-- For 30 minutes, increases critical rate by 30% and Critical Damage by 35%. -->
+		<!-- For 30 minutes, increases critical rate by 30% and critical power by 35%. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="IMPROVE_CRT_RATE_DMG_UP" />
@@ -1677,7 +1677,7 @@
 		</for>
 	</skill>
 	<skill id="21098" levels="1" name="Great Adventurer's Soul Power : Endless">
-		<!-- For 5 minutes, receives the soul's help to raise Max HP by 20%, Max MP by 20%, and Speed by 20%. Increases Resistance to de-buffs by 10%. -->
+		<!-- For five minutes, the Great Spirit increases maximum HP by 20%, maximum MP by 20%, moving speed by 20%, and resistance against debuff by 10%. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MULTI_BUFF" />
@@ -1699,7 +1699,7 @@
 		</for>
 	</skill>
 	<skill id="21099" levels="1" name="Great Warrior's Soul Power: Strength">
-		<!-- For 5 minutes, increases Atk. Spd. by 20%, P. Atk. by 10%, and P. Def. by 20% with the soul's help. Bestows the ability to recover as HP 5% of the standard short-range physical damage inflicted on the enemy. -->
+		<!-- For five minutes, the Great Spirit increases Atk.Spd. by 20%, damage by 10% and P.Def. by 20%. You recover HP equal to 5% of the melee damage. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MULTI_BUFF" />

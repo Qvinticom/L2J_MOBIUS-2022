@@ -13,7 +13,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2703-1" /> <!-- Giran Archer Mercenary -->
+		<set name="item_skill" val="2703-1" /> <!-- Giran Archer Captain -->
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
@@ -31,13 +31,13 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2704-1" /> <!-- Giran Wizard Mercenary -->
+		<set name="item_skill" val="2704-1" /> <!-- Giran Magic Leader -->
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="13602" type="EtcItem" name="Transformation Scroll: Giran Kamael Captain Mercenary">
-		<!-- Allows you to transform into a Kamael Captain Mercenary. Can only be used by an elite mercenary in Giran Territory. -->
+		<!-- Allows you to transform into a White Captain mercenary. Can only be used by an elite mercenary in Giran Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -49,7 +49,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2705-1" /> <!-- Giran Kamael Captain Mercenary -->
+		<set name="item_skill" val="2705-1" /> <!-- Giran Kamael Guard Captain -->
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
@@ -67,7 +67,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2706-1" /> <!-- Giran Knight Captain Mercenary -->
+		<set name="item_skill" val="2706-1" /> <!-- Giran Knight of Dawn -->
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
@@ -85,7 +85,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2707-1" /> <!-- Giran Commander Mercenary -->
+		<set name="item_skill" val="2707-1" /> <!-- Giran Fortress Captain -->
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
@@ -211,7 +211,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2714-1" /> <!-- Oren Knight Mercenary -->
+		<set name="item_skill" val="2714-1" /> <!-- Oren Royal Guard Captain -->
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
@@ -229,7 +229,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2715-1" /> <!-- Oren Archer Mercenary -->
+		<set name="item_skill" val="2715-1" /> <!-- Oren Archer Captain -->
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
@@ -247,13 +247,13 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2716-1" /> <!-- Oren Wizard Mercenary -->
+		<set name="item_skill" val="2716-1" /> <!-- Oren Magic Leader -->
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="13614" type="EtcItem" name="Transformation Scroll: Oren Kamael Captain Mercenary">
-		<!-- Allows you to transform into a Kamael Captain Mercenary. Can only be used by an elite mercenary in Oren Territory. -->
+		<!-- Allows you to transform into a White Captain mercenary. Can only be used by an elite mercenary in Oren Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -265,7 +265,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2717-1" /> <!-- Oren Kamael Captain Mercenary -->
+		<set name="item_skill" val="2717-1" /> <!-- Oren Kamael Guard Captain -->
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
@@ -283,7 +283,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2718-1" /> <!-- Oren Knight Captain Mercenary -->
+		<set name="item_skill" val="2718-1" /> <!-- Oren Knight of Dawn -->
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
@@ -301,7 +301,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2719-1" /> <!-- Oren Commander Mercenary -->
+		<set name="item_skill" val="2719-1" /> <!-- Oren Fortress Captain -->
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
@@ -427,7 +427,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2726-1" /> <!-- Aden Knight Mercenary -->
+		<set name="item_skill" val="2726-1" /> <!-- Aden Royal Guard Captain -->
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
@@ -445,7 +445,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2727-1" /> <!-- Aden Archer Mercenary -->
+		<set name="item_skill" val="2727-1" /> <!-- Aden Archer Captain -->
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
@@ -463,13 +463,13 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2728-1" /> <!-- Aden Wizard Mercenary -->
+		<set name="item_skill" val="2728-1" /> <!-- Aden Magic Leader -->
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="13626" type="EtcItem" name="Transformation Scroll: Aden Kamael Captain Mercenary">
-		<!-- Allows you to transform into a Kamael Captain Mercenary. Can only be used by an elite mercenary in Aden Territory. -->
+		<!-- Allows you to transform into a White Captain mercenary. Can only be used by an elite mercenary in Aden Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -481,7 +481,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2729-1" /> <!-- Aden Kamael Captain Mercenary -->
+		<set name="item_skill" val="2729-1" /> <!-- Aden Kamael Guard Captain -->
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
@@ -499,7 +499,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2730-1" /> <!-- Aden Knight Captain Mercenary -->
+		<set name="item_skill" val="2730-1" /> <!-- Aden Knight of Dawn -->
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
@@ -517,7 +517,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2731-1" /> <!-- Aden Commander Mercenary -->
+		<set name="item_skill" val="2731-1" /> <!-- Aden Fortress Captain -->
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
@@ -643,7 +643,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2738-1" /> <!-- Innadril Knight Mercenary -->
+		<set name="item_skill" val="2738-1" /> <!-- Innadril Royal Guard Captain -->
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
@@ -661,7 +661,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2739-1" /> <!-- Innadril Archer Mercenary -->
+		<set name="item_skill" val="2739-1" /> <!-- Innadril Archer Captain -->
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
@@ -679,13 +679,13 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2740-1" /> <!-- Innadril Wizard Mercenary -->
+		<set name="item_skill" val="2740-1" /> <!-- Innadril Magic Leader -->
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="13638" type="EtcItem" name="Transformation Scroll: Innadril Kamael Captain Mercenary">
-		<!-- Allows you to transform into a Kamael Captain Mercenary. Can only be used by an elite mercenary in Innadril Territory. -->
+		<!-- Allows you to transform into a White Captain mercenary. Can only be used by an elite mercenary in Innadril Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -697,7 +697,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2741-1" /> <!-- Innadril Kamael Captain Mercenary -->
+		<set name="item_skill" val="2741-1" /> <!-- Innadril Kamael Guard Captain -->
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
@@ -715,7 +715,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2742-1" /> <!-- Innadril Knight Captain Mercenary -->
+		<set name="item_skill" val="2742-1" /> <!-- Innadril Knight of Dawn -->
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
@@ -733,7 +733,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2743-1" /> <!-- Innadril Commander Mercenary -->
+		<set name="item_skill" val="2743-1" /> <!-- Innadril Fortress Captain -->
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
@@ -829,7 +829,7 @@
 		</cond>
 	</item>
 	<item id="13646" type="EtcItem" name="Transformation Scroll: Goddard Kamael Mercenary">
-		<!-- Allows you to transform into a Kamael mercenary. Can only be used by an ordinary mercenary in Goddard Territory. -->
+		<!-- Allows you to transform into a Kamael mercenary. CCan only be used by an ordinary mercenary in Goddard Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -859,7 +859,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2750-1" /> <!-- Goddard Knight Mercenary -->
+		<set name="item_skill" val="2750-1" /> <!-- Goddard Royal Guard Captain -->
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
@@ -877,7 +877,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2751-1" /> <!-- Goddard Archer Mercenary -->
+		<set name="item_skill" val="2751-1" /> <!-- Goddard Archer Captain -->
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
@@ -895,13 +895,13 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2752-1" /> <!-- Goddard Wizard Mercenary -->
+		<set name="item_skill" val="2752-1" /> <!-- Goddard Magic Leader -->
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="13650" type="EtcItem" name="Transformation Scroll: Goddard Kamael Captain Mercenary">
-		<!-- Allows you to transform into a Kamael Captain Mercenary. Can only be used by an elite mercenary in Goddard Territory. -->
+		<!-- Allows you to transform into a White Captain mercenary. Can only be used by an elite mercenary in Goddard Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -913,7 +913,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2753-1" /> <!-- Goddard Kamael Captain Mercenary -->
+		<set name="item_skill" val="2753-1" /> <!-- Goddard Kamael Guard Captain -->
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
@@ -931,7 +931,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2754-1" /> <!-- Goddard Knight Captain Mercenary -->
+		<set name="item_skill" val="2754-1" /> <!-- Goddard Knight of Dawn -->
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
@@ -949,7 +949,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2755-1" /> <!-- Goddard Commander Mercenary -->
+		<set name="item_skill" val="2755-1" /> <!-- Goddard Fortress Captain -->
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
@@ -1075,7 +1075,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2762-1" /> <!-- Rune Knight Mercenary -->
+		<set name="item_skill" val="2762-1" /> <!-- Rune Royal Guard Captain -->
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
@@ -1093,7 +1093,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2763-1" /> <!-- Rune Archer Mercenary -->
+		<set name="item_skill" val="2763-1" /> <!-- Rune Archer Captain -->
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
@@ -1111,13 +1111,13 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2764-1" /> <!-- Rune Wizard Mercenary -->
+		<set name="item_skill" val="2764-1" /> <!-- Rune Magic Leader -->
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="13662" type="EtcItem" name="Transformation Scroll: Rune Kamael Captain Mercenary">
-		<!-- Allows you to transform into a Kamael Captain Mercenary. Can only be used by an elite mercenary in Rune Territory. -->
+		<!-- Allows you to transform into a White Captain mercenary. Can only be used by an elite mercenary in Rune Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1129,7 +1129,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2765-1" /> <!-- Rune Kamael Captain Mercenary -->
+		<set name="item_skill" val="2765-1" /> <!-- Rune Kamael Guard Captain -->
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
@@ -1147,7 +1147,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2766-1" /> <!-- Rune Knight Captain Mercenary -->
+		<set name="item_skill" val="2766-1" /> <!-- Rune Knight of Dawn -->
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
@@ -1165,7 +1165,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2767-1" /> <!-- Rune Commander Mercenary -->
+		<set name="item_skill" val="2767-1" /> <!-- Rune Fortress Captain -->
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
@@ -1291,7 +1291,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2774-1" /> <!-- Schuttgart Knight Mercenary -->
+		<set name="item_skill" val="2774-1" /> <!-- Schuttgart Royal Guard Captain -->
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
@@ -1309,7 +1309,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2775-1" /> <!-- Schuttgart Archer Mercenary -->
+		<set name="item_skill" val="2775-1" /> <!-- Schuttgart Archer Captain -->
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
@@ -1327,13 +1327,13 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2776-1" /> <!-- Schuttgart Wizard Mercenary -->
+		<set name="item_skill" val="2776-1" /> <!-- Schuttgart Magic Leader -->
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
 	</item>
 	<item id="13674" type="EtcItem" name="Transformation Scroll: Schuttgart Kamael Captain Mercenary">
-		<!-- Allows you to transform into a Kamael Captain Mercenary. Can only be used by an elite mercenary in Schuttgart Territory. -->
+		<!-- Allows you to transform into a White Captain mercenary. Can only be used by an elite mercenary in Schuttgart Territory. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1345,7 +1345,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2777-1" /> <!-- Schuttgart Kamael Captain Mercenary -->
+		<set name="item_skill" val="2777-1" /> <!-- Schuttgart Kamael Guard Captain -->
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
@@ -1363,7 +1363,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2778-1" /> <!-- Schuttgart Knight Captain Mercenary -->
+		<set name="item_skill" val="2778-1" /> <!-- Schuttgart Knight of Dawn -->
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
@@ -1381,7 +1381,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2779-1" /> <!-- Schuttgart Commander Mercenary -->
+		<set name="item_skill" val="2779-1" /> <!-- Schuttgart Fortress Captain -->
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
@@ -1513,7 +1513,7 @@
 		<set name="handler" val="Disguise" />
 	</item>
 	<item id="13686" type="EtcItem" name="Sealed Knight's Cloak">
-		<!-- Cloak with luxurious embroidery. When the seal is cancelled, it'll have Dark Attribute Defense +30 effect. The seal can be cancelled through the weaver Olf Kanore and Olf Adams. It cannot be worn before the seal cancellation. Enchantment, special abilities and augmentation are not possible. Cannot be exchanged or dropped. -->
+		<!-- Cloak with luxurious embroidery. When the seal is cancelled, it'll have Dark Attribute Defense +30 effect. The seal can be cancelled through the weaver Olf Kanore and Olf Adams. It cannot be worn before the seal cancellation. Enchantment, attribute, and smelting are impossible. No exchange/drop available. -->
 		<set name="icon" val="icon.sealed_vesper_cloack_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="S84" />
@@ -1536,7 +1536,7 @@
 		</for>
 	</item>
 	<item id="13687" type="Armor" name="Knight's Cloak">
-		<!-- Cloak with luxurious embroidery. Dark Attribute Defense +30. Can be worn by Barons or higher ranks of the clan that owns a castle. When an armor set above the Dynasty level is worn, the Sealed Cloak Slot will be open so that the cloak can be equipped. Enchantment, attribute, and smelting are impossible. Cannot be exchanged or dropped. -->
+		<!-- Cloak with luxurious embroidery. Dark Attribute Defense +30, and no exchange/drop available. Can be worn by Barons or higher ranks of the clan that owns a castle. When the entire Vesper Noble or Dynasty set is worn, the Sealed Cloak Slot will be open and one can now wear the cloak. Enchantment, attribute, and smelting are impossible. No exchange/drop available. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
@@ -1561,7 +1561,7 @@
 		</for>
 	</item>
 	<item id="13688" type="Armor" name="Knight's Cloak - Light Armor exclusive">
-		<!-- Cloak with luxurious embroidery. Dark Attribute Defense +30, and Cannot be exchanged or dropped. Can be worn by Barons or higher ranks of the clan that owns a castle. When the entire Vesper Noble or Dynasty set is worn, the Sealed Cloak Slot will be open and one can now wear the cloak. The cloak is exclusively for Bow Masters and Dagger Masters excluding Kamaels. Enchantment, special abilities and augmentation are not possible. Cannot be exchanged or dropped. -->
+		<!-- Cloak with luxurious embroidery. Dark Attribute Defense +30, and no exchange/drop available. Can be worn by Barons or higher ranks of the clan that owns a castle. When the entire Vesper Noble or Dynasty set is worn, the Sealed Cloak Slot will be open and one can now wear the cloak. The cloak is exclusively for Bow Masters and Dagger Masters excluding Kamaels. Enchantment, attribute, and smelting are impossible. No exchange/drop available. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
@@ -1588,7 +1588,7 @@
 		</for>
 	</item>
 	<item id="13689" type="Armor" name="Knight's Cloak - Robe exclusive">
-		<!-- Cloak with luxurious embroidery. Dark Attribute Defense +30, and Cannot be exchanged or dropped. Can be worn by Barons or higher ranks of the clan that owns a castle. When the entire Vesper Noble or Dynasty set is worn, the Sealed Cloak Slot will be open and one can now wear the cloak. The cloak is exclusively for Healer, Enchanter, Summoner and Wizard excluding Kamaels. Enchantment, special abilities and augmentation are not possible. Cannot be exchanged or dropped. -->
+		<!-- Cloak with luxurious embroidery. Dark Attribute Defense +30, and no exchange/drop available. Can be worn by Barons or higher ranks of the clan that owns a castle. When the entire Vesper Noble or Dynasty set is worn, the Sealed Cloak Slot will be open and one can now wear the cloak. The cloak is exclusively for Healer, Enchanter, Summoner and Wizard excluding Kamaels. Enchantment, attribute, and smelting are impossible. No exchange/drop available. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
@@ -1615,7 +1615,7 @@
 		</for>
 	</item>
 	<item id="13690" type="Armor" name="Knight's Cloak - Kamael exclusive">
-		<!-- Cloak with luxurious embroidery. Dark Attribute Defense +30, and Cannot be exchanged or dropped. Can be worn by Barons or higher ranks of the clan that owns a castle. When the entire Vesper Noble or Dynasty set is worn, the Sealed Cloak Slot will be open and one can now wear the cloak. Kamael exclusive cloak. Enchantment, special abilities and augmentation are not possible. Cannot be exchanged or dropped. -->
+		<!-- Cloak with luxurious embroidery. Dark Attribute Defense +30, and no exchange/drop available. Can be worn by Barons or higher ranks of the clan that owns a castle. When the entire Vesper Noble or Dynasty set is worn, the Sealed Cloak Slot will be open and one can now wear the cloak. Kamael exclusive cloak. Enchantment, attribute, and smelting are impossible. No exchange/drop available. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
@@ -1653,7 +1653,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="13692" type="EtcItem" name="Mark of Keucereus - Stage 2">
-		<!-- Mark given to an adventurer who successfully completes Kucereus' order to conquer the Hall of Erosion. Mark given to prove heroic achievements at the Seed of Infinity. -->
+		<!-- Mark given to an adventurer who successfully completes Kucereus' order to conquer the Hall of Erosion. Mark given to prove heroic achievements at the Seed of Immortalit. -->
 		<set name="icon" val="icon.etc_badge_silver_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -1665,7 +1665,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="13693" type="EtcItem" name="Gracian Anniversary Coins">
-		<!-- Gracian Anniversary Coins. When possessed, a reward can be acquired. Cannot be exchanged, dropped, deleted nor stored in a private warehouse. -->
+		<!-- Gracia Anniversary Coins. When possessed, a reward can be acquired. Cannot be exchanged, dropped, deleted nor stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_coins_silver_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
@@ -1676,7 +1676,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="13694" type="EtcItem" name="Gracia Key">
-		<!-- You can acquire Gracia Anniversary Coins by using a Gracian treasure box. Re-use time is 10 minutes. Cannot be exchanged, dropped, destroyed, or stored in a private warehouse. -->
+		<!-- Gracia Anniversary Coins can be acquired when used with Gracian treasure box. Duration for reuse: 10 minutes. Cannot be exchanged, dropped, deleted nor stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_key_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="LIQUID" />

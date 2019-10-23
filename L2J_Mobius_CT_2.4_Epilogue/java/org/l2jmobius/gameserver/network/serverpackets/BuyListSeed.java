@@ -60,29 +60,12 @@ public class BuyListSeed implements IClientOutgoingPacket
 			packet.writeH(_list.size()); // list length
 			for (SeedProduction s : _list)
 			{
-				packet.writeD(s.getId());
-				packet.writeD(s.getId());
-				packet.writeD(0x00);
+				packet.writeH(0x04); // item->type1
+				packet.writeD(0x00); // objectId
+				packet.writeD(s.getId()); // item id
 				packet.writeQ(s.getAmount()); // item count
-				packet.writeH(0x05); // Custom Type 2
-				packet.writeH(0x00); // Custom Type 1
-				packet.writeH(0x00); // Equipped
-				packet.writeD(0x00); // Body Part
-				packet.writeH(0x00); // Enchant
-				packet.writeH(0x00); // Custom Type
-				packet.writeD(0x00); // Augment
-				packet.writeD(-1); // Mana
-				packet.writeD(-9999); // Time
-				packet.writeH(0x00); // Element Type
-				packet.writeH(0x00); // Element Power
-				for (byte i = 0; i < 6; i++)
-				{
-					packet.writeH(0x00);
-				}
-				// Enchant Effects
-				packet.writeH(0x00);
-				packet.writeH(0x00);
-				packet.writeH(0x00);
+				packet.writeH(0x04); // item->type2
+				packet.writeH(0x00); // unknown :)
 				packet.writeQ(s.getPrice()); // price
 			}
 			_list.clear();

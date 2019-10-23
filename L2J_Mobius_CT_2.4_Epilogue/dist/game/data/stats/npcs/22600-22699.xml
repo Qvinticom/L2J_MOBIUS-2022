@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="22600" level="82" type="Monster" name="Throne of Destruction Powerful Device">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -26,7 +25,6 @@
 		</collision>
 	</npc>
 	<npc id="22601" level="73" type="Monster" name="Heart Protection Device">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -50,8 +48,7 @@
 			<height normal="74" />
 		</collision>
 	</npc>
-	<npc id="22602" level="73" type="Monster" name="Mutant Bird">
-		<!-- Confirmed CT2.5 -->
+	<npc id="22602" level="73" type="Monster" name="Mutant - Bird">
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -131,8 +128,7 @@
 			<height normal="85" />
 		</collision>
 	</npc>
-	<npc id="22603" level="74" type="Monster" name="Mutant Bird">
-		<!-- Confirmed CT2.5 -->
+	<npc id="22603" level="74" type="Monster" name="Mutant - Bird">
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -217,7 +213,6 @@
 		</collision>
 	</npc>
 	<npc id="22604" level="74" type="Monster" name="Dra Hawk">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -297,7 +292,6 @@
 		</collision>
 	</npc>
 	<npc id="22605" level="75" type="Monster" name="Dra Hawk">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -377,7 +371,6 @@
 		</collision>
 	</npc>
 	<npc id="22606" level="76" type="Monster" name="Floating Skull">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -460,7 +453,6 @@
 		</collision>
 	</npc>
 	<npc id="22607" level="77" type="Monster" name="Floating Skull">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -531,7 +523,6 @@
 		</collision>
 	</npc>
 	<npc id="22608" level="75" type="Monster" name="Floating Zombie">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -603,7 +594,6 @@
 		</collision>
 	</npc>
 	<npc id="22609" level="76" type="Monster" name="Floating Zombie">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -675,7 +665,6 @@
 		</collision>
 	</npc>
 	<npc id="22610" level="75" type="Monster" name="Mutated Drake Wing">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -754,7 +743,6 @@
 		</collision>
 	</npc>
 	<npc id="22611" level="76" type="Monster" name="Mutated Drake Wing">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -833,7 +821,6 @@
 		</collision>
 	</npc>
 	<npc id="22612" level="76" type="Monster" name="Drak">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -915,7 +902,6 @@
 		</collision>
 	</npc>
 	<npc id="22613" level="77" type="Monster" name="Drak">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -995,7 +981,6 @@
 		</collision>
 	</npc>
 	<npc id="22614" level="74" type="Monster" name="Vulture Rider">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="105" />
 			<param name="MoveAroundSocial1" value="105" />
@@ -1084,7 +1069,6 @@
 		</collision>
 	</npc>
 	<npc id="22615" level="75" type="Monster" name="Vulture Rider">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="105" />
 			<param name="MoveAroundSocial1" value="105" />
@@ -1167,7 +1151,6 @@
 		</collision>
 	</npc>
 	<npc id="22616" level="81" type="Monster" name="Seed of Pain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="5882" level="1" /> <!-- Weakened Pommel -->
 			<skill name="Skill02_ID" id="5890" level="1" /> <!-- Tainted Mass Shackle -->
@@ -1219,7 +1202,6 @@
 		</collision>
 	</npc>
 	<npc id="22617" level="82" type="Monster" name="Spiked Stakato">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial" id="4032" level="9" /> <!-- NPC Strike -->
 		</parameters>
@@ -1275,13 +1257,13 @@
 				<item id="9617" min="1" max="1" chance="0.0805422498141229" /> <!-- Dynasty Blade Piece -->
 				<item id="9618" min="1" max="1" chance="0.0805424922141284" /> <!-- Dynasty Phantom Piece -->
 				<item id="1879" min="1" max="1" chance="16.0903580224342" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="8.04519771236801" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="8.04519771236801" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="0.757209599704743" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.508110269794464" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.419766032970428" /> <!-- Adamantine -->
-				<item id="9573" min="1" max="1" chance="0.670436259555817" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.167599714313507" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.0167562312011719" /> <!-- High-Grade Life Stone - Level 80 -->
+				<item id="9573" min="1" max="1" chance="0.670436259555817" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.167599714313507" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.0167562312011719" /> <!-- High-Grade Life Stone: level 80 -->
 				<item id="1345" min="60" max="180" chance="10.7268679459877" /> <!-- Shining Arrow -->
 			</drop>
 			<spoil>
@@ -1296,7 +1278,6 @@
 		</collision>
 	</npc>
 	<npc id="22618" level="82" type="Monster" name="Spiked Stakato Worker">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial" id="4067" level="9" /> <!-- NPC Mortal Blow -->
 		</parameters>
@@ -1350,22 +1331,22 @@
 				<item id="9449" min="1" max="1" chance="0.000193189203336835" /> <!-- Dynasty Mace -->
 				<item id="10252" min="1" max="1" chance="0.000193189203336835" /> <!-- Dynasty Staff -->
 				<item id="10253" min="1" max="1" chance="0.000193189203336835" /> <!-- Dynasty Crusher -->
-				<item id="9622" min="1" max="1" chance="0.0584431966094524" /> <!-- Dynasty Cudgel Piece -->
+				<item id="9622" min="1" max="1" chance="0.0584431966094524" /> <!-- Halberd Cudgel Piece -->
 				<item id="9623" min="1" max="1" chance="0.0584431966094524" /> <!-- Dynasty Mace Piece -->
 				<item id="10546" min="1" max="1" chance="0.0605706658461988" /> <!-- Dynasty Staff Fragment -->
 				<item id="10547" min="1" max="1" chance="0.0605701882461906" /> <!-- Dynasty Crusher Fragment -->
 				<item id="1879" min="1" max="1" chance="16.0903640438175" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="8.04516867455864" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="8.04516867455864" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="0.757195172338486" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.508106924388885" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.419747466590881" /> <!-- Adamantine -->
-				<item id="9573" min="1" max="1" chance="0.670437396554947" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.167616022813797" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.0167642717514038" /> <!-- High-Grade Life Stone - Level 80 -->
+				<item id="9573" min="1" max="1" chance="0.670437396554947" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.167616022813797" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.0167642717514038" /> <!-- High-Grade Life Stone: level 80 -->
 				<item id="9625" min="1" max="1" chance="0.0193002682743073" /> <!-- Giant's Codex - Oblivion -->
 			</drop>
 			<spoil>
-				<item id="1808" min="1" max="1" chance="0.7839" /> <!-- Recipe: Soulshot (S-Grade) -->
+				<item id="1808" min="1" max="1" chance="0.7839" /> <!-- Recipe: Soulshot: S Grade -->
 				<item id="9623" min="1" max="1" chance="0.9494" /> <!-- Dynasty Mace Piece -->
 				<item id="3036" min="1" max="1" chance="0.7839" /> <!-- Recipe: Spiritshot S -->
 			</spoil>
@@ -1376,7 +1357,6 @@
 		</collision>
 	</npc>
 	<npc id="22619" level="82" type="Monster" name="Spiked Stakato Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial" id="4067" level="9" /> <!-- NPC Mortal Blow -->
 		</parameters>
@@ -1429,13 +1409,13 @@
 				<item id="9450" min="1" max="1" chance="0.00077277237573266" /> <!-- Dynasty Bagh-Nakh -->
 				<item id="9624" min="1" max="1" chance="0.233827220257133" /> <!-- Dynasty Bagh-Nakh Piece -->
 				<item id="1879" min="1" max="1" chance="16.0903755750656" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="8.04518778753281" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="8.04518778753281" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="0.757200424308777" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.50811852807045" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.419753569488525" /> <!-- Adamantine -->
-				<item id="9573" min="1" max="1" chance="0.670436763677597" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.167602518844604" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.0167602518844605" /> <!-- High-Grade Life Stone - Level 80 -->
+				<item id="9573" min="1" max="1" chance="0.670436763677597" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.167602518844604" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.0167602518844605" /> <!-- High-Grade Life Stone: level 80 -->
 				<item id="9626" min="1" max="1" chance="0.0128637602043152" /> <!-- Giant's Codex - Discipline -->
 			</drop>
 			<spoil>
@@ -1450,7 +1430,6 @@
 		</collision>
 	</npc>
 	<npc id="22620" level="82" type="Monster" name="Female Spiked Stakato">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="ai_type" value="n_spike_stakato_guard" />
 			<param name="silhouette" value="22619" /> <!-- Spiked Stakato Guard -->
@@ -1515,9 +1494,9 @@
 				<item id="4040" min="1" max="1" chance="2.24053752230072" /> <!-- Mold Lubricant -->
 				<item id="4042" min="1" max="1" chance="1.86714938358307" /> <!-- Enria -->
 				<item id="4043" min="1" max="1" chance="3.73425702916718" /> <!-- Asofe -->
-				<item id="9573" min="1" max="1" chance="0.777954562660217" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.194499075164795" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.0194499075164795" /> <!-- High-Grade Life Stone - Level 80 -->
+				<item id="9573" min="1" max="1" chance="0.777954562660217" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.194499075164795" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.0194499075164795" /> <!-- High-Grade Life Stone: level 80 -->
 				<item id="9546" min="1" max="1" chance="0.896240051719666" /> <!-- Fire Stone -->
 			</drop>
 			<spoil>
@@ -1532,7 +1511,6 @@
 		</collision>
 	</npc>
 	<npc id="22621" level="82" type="Monster" name="Male Spiked Stakato">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="22620" count="1" respawnTime="0" weightPoint="1" />
@@ -1598,14 +1576,14 @@
 				<item id="4040" min="1" max="1" chance="2.12242330875778" /> <!-- Mold Lubricant -->
 				<item id="4042" min="1" max="1" chance="1.76871903871536" /> <!-- Enria -->
 				<item id="4043" min="1" max="1" chance="3.53739853973007" /> <!-- Asofe -->
-				<item id="9573" min="1" max="1" chance="0.736943202472687" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.184245685043335" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.0184245685043335" /> <!-- High-Grade Life Stone - Level 80 -->
+				<item id="9573" min="1" max="1" chance="0.736943202472687" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.184245685043335" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.0184245685043335" /> <!-- High-Grade Life Stone: level 80 -->
 				<item id="9547" min="1" max="1" chance="0.848993046123505" /> <!-- Water Stone -->
 			</drop>
 			<spoil>
 				<item id="5157" min="1" max="1" chance="0.766" /> <!-- Recipe: Soulshot (S) Compressed Package (100%) -->
-				<item id="9622" min="1" max="1" chance="0.9277" /> <!-- Dynasty Cudgel Piece -->
+				<item id="9622" min="1" max="1" chance="0.9277" /> <!-- Halberd Cudgel Piece -->
 				<item id="9628" min="1" max="1" chance="13.517" /> <!-- Leonard -->
 			</spoil>
 		</dropLists>
@@ -1615,11 +1593,10 @@
 		</collision>
 	</npc>
 	<npc id="22622" level="83" type="Monster" name="Male Spiked Stakato">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial" id="4232" level="9" /> <!-- NPC AE Strike -->
 			<skill name="SelfRangeDDMagic" id="4571" level="7" /> <!-- NPC Blazing Circle -->
-			<!-- <skill name="SelfBuff" id="4030" level="3" /> --> <!-- NPC Clan Might -->
+			<skill name="SelfBuff" id="4030" level="3" /> <!-- NPC Clan Might -->
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -1678,9 +1655,9 @@
 				<item id="4040" min="1" max="1" chance="3.16063560547829" /> <!-- Mold Lubricant -->
 				<item id="9628" min="1" max="1" chance="1.23945060388947" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.831744608215332" /> <!-- Orichalcum -->
-				<item id="9573" min="1" max="1" chance="1.0974543453064" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.274363586326599" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.0274241701126099" /> <!-- High-Grade Life Stone - Level 80 -->
+				<item id="9573" min="1" max="1" chance="1.0974543453064" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.274363586326599" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.0274241701126099" /> <!-- High-Grade Life Stone: level 80 -->
 				<item id="9548" min="1" max="1" chance="1.26425424219131" /> <!-- Earth Stone -->
 			</drop>
 			<spoil>
@@ -1695,7 +1672,6 @@
 		</collision>
 	</npc>
 	<npc id="22623" level="82" type="Monster" name="Spiked Stakato Sorcerer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="W_LongRangeDDMagic" id="4563" level="9" /> <!-- NPC Solar Flare - Magic -->
 			<skill name="W_ShortRangeDDMagic" id="4257" level="9" /> <!-- NPC Hydroblast - Magic -->
@@ -1750,15 +1726,15 @@
 				<item id="9514" min="1" max="1" chance="0.00114541684889793" /> <!-- Sealed Dynasty Breast Plate -->
 				<item id="9515" min="1" max="1" chance="0.00183194047820568" /> <!-- Sealed Dynasty Gaiter -->
 				<item id="9530" min="1" max="1" chance="0.305165201827526" /> <!-- Sealed Dynasty Breast Plate Piece -->
-				<item id="9531" min="1" max="1" chance="0.902657492534518" /> <!-- Sealed Dynasty Gaiters Piece -->
+				<item id="9531" min="1" max="1" chance="0.902657492534518" /> <!-- Sealed Dynasty Gaiter Piece -->
 				<item id="1879" min="1" max="1" chance="15.5258074245071" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="7.76290371225357" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="7.76290371225357" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="0.730633398189545" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.490284752502441" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.405030505619049" /> <!-- Adamantine -->
-				<item id="9573" min="1" max="1" chance="0.64691526386261" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.161715573616028" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.0161821512413025" /> <!-- High-Grade Life Stone - Level 80 -->
+				<item id="9573" min="1" max="1" chance="0.64691526386261" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.161715573616028" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.0161821512413025" /> <!-- High-Grade Life Stone: level 80 -->
 				<item id="9549" min="1" max="1" chance="0.745226467475891" /> <!-- Wind Stone -->
 			</drop>
 			<spoil>
@@ -1773,7 +1749,6 @@
 		</collision>
 	</npc>
 	<npc id="22624" level="82" type="Monster" name="Cannibalistic Stakato Follower">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="4232" level="8" /> <!-- NPC AE Strike -->
 			<skill name="PhysicalSpecial2" id="6167" level="9" /> <!-- Shock -->
@@ -1836,9 +1811,9 @@
 				<item id="4039" min="1" max="1" chance="3.53740602081299" /> <!-- Mold Glue -->
 				<item id="4041" min="1" max="1" chance="0.922800395881653" /> <!-- Mold Hardener -->
 				<item id="4044" min="1" max="1" chance="3.53740602081299" /> <!-- Thons -->
-				<item id="9573" min="1" max="1" chance="0.736959587669373" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.184246651817322" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.0184273671417236" /> <!-- High-Grade Life Stone - Level 80 -->
+				<item id="9573" min="1" max="1" chance="0.736959587669373" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.184246651817322" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.0184273671417236" /> <!-- High-Grade Life Stone: level 80 -->
 				<item id="9550" min="1" max="1" chance="0.848969339115143" /> <!-- Dark Stone -->
 			</drop>
 			<spoil>
@@ -1853,7 +1828,6 @@
 		</collision>
 	</npc>
 	<npc id="22625" level="83" type="Monster" name="Cannibalistic Stakato Leader">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="22624" count="1" respawnTime="0" weightPoint="1" />
@@ -1922,10 +1896,10 @@
 				<item id="4040" min="1" max="1" chance="2.28173778809357" /> <!-- Mold Lubricant -->
 				<item id="4042" min="1" max="1" chance="1.9014835779953" /> <!-- Enria -->
 				<item id="4043" min="1" max="1" chance="3.80292465048981" /> <!-- Asofe -->
-				<item id="9573" min="1" max="1" chance="0.792260029289246" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.19807563369751" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.019807563369751" /> <!-- High-Grade Life Stone - Level 80 -->
-				<item id="9551" min="1" max="1" chance="0.912720618537903" /> <!-- Holy Stone -->
+				<item id="9573" min="1" max="1" chance="0.792260029289246" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.19807563369751" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.019807563369751" /> <!-- High-Grade Life Stone: level 80 -->
+				<item id="9551" min="1" max="1" chance="0.912720618537903" /> <!-- Divine Stone -->
 			</drop>
 			<spoil>
 				<item id="5272" min="1" max="1" chance="0.8235" /> <!-- Recipe: Greater Soulshot (S) Compressed Package(100%) -->
@@ -1939,7 +1913,6 @@
 		</collision>
 	</npc>
 	<npc id="22626" level="83" type="Monster" name="Cannibalistic Stakato Leader">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial" id="6167" level="9" /> <!-- Shock -->
 			<skill name="SelfRangeDDMagic" id="4571" level="8" /> <!-- NPC Blazing Circle -->
@@ -2002,18 +1975,18 @@
 				<item id="9992" min="1" max="1" chance="0.379151406415701" /> <!-- Sealed Dynasty Necklace Gemstone -->
 				<item id="9993" min="1" max="1" chance="0.694279024419308" /> <!-- Sealed Dynasty Ring Gemstone -->
 				<item id="1879" min="1" max="1" chance="23.4121358924561" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="11.706067946228" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="11.706067946228" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="1.10173341374588" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.739315487995148" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.610745632587433" /> <!-- Adamantine -->
-				<item id="9573" min="1" max="1" chance="0.975492722385407" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.243863475746155" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.024378583694458" /> <!-- High-Grade Life Stone - Level 80 -->
-				<item id="959" min="1" max="1" chance="0.00566763251495361" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="9573" min="1" max="1" chance="0.975492722385407" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.243863475746155" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.024378583694458" /> <!-- High-Grade Life Stone: level 80 -->
+				<item id="959" min="1" max="1" chance="0.00566763251495361" /> <!-- Scroll: Enchant Weapon (S) -->
 			</drop>
 			<spoil>
 				<item id="9624" min="1" max="1" chance="1.3815" /> <!-- Dynasty Bagh-Nakh Piece -->
-				<item id="960" min="1" max="1" chance="1.0266" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="960" min="1" max="1" chance="1.0266" /> <!-- Scroll: Enchant Armor (S) -->
 				<item id="9630" min="1" max="1" chance="13.5076" /> <!-- Orichalcum -->
 			</spoil>
 		</dropLists>
@@ -2023,7 +1996,6 @@
 		</collision>
 	</npc>
 	<npc id="22627" level="83" type="Monster" name="Spiked Stakato Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial" id="4032" level="9" /> <!-- NPC Strike -->
 		</parameters>
@@ -2088,10 +2060,10 @@
 				<item id="4039" min="1" max="1" chance="3.62788472644043" /> <!-- Mold Glue -->
 				<item id="4041" min="1" max="1" chance="0.946407543462753" /> <!-- Mold Hardener -->
 				<item id="4044" min="1" max="1" chance="3.62788472644043" /> <!-- Thons -->
-				<item id="9573" min="1" max="1" chance="0.75580497527504" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.188947986768723" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.0188908902168274" /> <!-- High-Grade Life Stone - Level 80 -->
-				<item id="960" min="1" max="1" chance="0.0435532730998993" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="9573" min="1" max="1" chance="0.75580497527504" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.188947986768723" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.0188908902168274" /> <!-- High-Grade Life Stone: level 80 -->
+				<item id="960" min="1" max="1" chance="0.0435532730998993" /> <!-- Scroll: Enchant Armor (S) -->
 			</drop>
 			<spoil>
 				<item id="1894" min="1" max="1" chance="62.0178" /> <!-- Crafted Leather -->
@@ -2105,7 +2077,6 @@
 		</collision>
 	</npc>
 	<npc id="22628" level="83" type="Monster" name="Spiked Stakato Drone">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial" id="4232" level="9" /> <!-- NPC AE Strike -->
 		</parameters>
@@ -2169,9 +2140,9 @@
 				<item id="4039" min="1" max="1" chance="3.62790678477859" /> <!-- Mold Glue -->
 				<item id="4041" min="1" max="1" chance="0.946411598907471" /> <!-- Mold Hardener -->
 				<item id="4044" min="1" max="1" chance="3.62790678477859" /> <!-- Thons -->
-				<item id="9573" min="1" max="1" chance="0.755815542633057" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.188953885658264" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.0188979951858521" /> <!-- High-Grade Life Stone - Level 80 -->
+				<item id="9573" min="1" max="1" chance="0.755815542633057" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.188953885658264" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.0188979951858521" /> <!-- High-Grade Life Stone: level 80 -->
 				<item id="5272" min="1" max="1" chance="0.0483658345756531" /> <!-- Recipe: Greater Soulshot (S) Compressed Package(100%) -->
 			</drop>
 			<spoil>
@@ -2186,7 +2157,6 @@
 		</collision>
 	</npc>
 	<npc id="22629" level="83" type="Monster" name="Spiked Stakato Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial" id="4032" level="9" /> <!-- NPC Strike -->
 		</parameters>
@@ -2242,13 +2212,13 @@
 				<item id="4039" min="1" max="1" chance="3.62790678477859" /> <!-- Mold Glue -->
 				<item id="4041" min="1" max="1" chance="0.946411598907471" /> <!-- Mold Hardener -->
 				<item id="4044" min="1" max="1" chance="3.62790678477859" /> <!-- Thons -->
-				<item id="9573" min="1" max="1" chance="0.755815542633057" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.188953885658264" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.0188979951858521" /> <!-- High-Grade Life Stone - Level 80 -->
+				<item id="9573" min="1" max="1" chance="0.755815542633057" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.188953885658264" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.0188979951858521" /> <!-- High-Grade Life Stone: level 80 -->
 				<item id="5277" min="1" max="1" chance="0.0483658345756531" /> <!-- Recipe: Greater Spiritshot (S) Compressed Package(100%) -->
 			</drop>
 			<spoil>
-				<item id="959" min="1" max="1" chance="0.0707" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="959" min="1" max="1" chance="0.0707" /> <!-- Scroll: Enchant Weapon (S) -->
 				<item id="1894" min="1" max="1" chance="62.0178" /> <!-- Crafted Leather -->
 				<item id="1894" min="1" max="1" chance="62.0178" /> <!-- Crafted Leather -->
 			</spoil>
@@ -2258,8 +2228,7 @@
 			<height normal="29.1" grown="26.4" />
 		</collision>
 	</npc>
-	<npc id="22630" level="83" type="Monster" name="Spiked Stakato Nurse">
-		<!-- Confirmed CT2.5 -->
+	<npc id="22630" level="83" type="Monster" name="Spike Stakato Nurse">
 		<parameters>
 			<minions name="Privates">
 				<npc id="22632" count="1" respawnTime="0" weightPoint="1" />
@@ -2326,18 +2295,18 @@
 				<item id="9617" min="1" max="1" chance="0.079678348043859" /> <!-- Dynasty Blade Piece -->
 				<item id="9618" min="1" max="1" chance="0.0796785878438652" /> <!-- Dynasty Phantom Piece -->
 				<item id="1879" min="1" max="1" chance="15.9229900689087" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="7.96149503445435" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="7.96149503445435" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="0.749320912475586" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.502843511413574" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.415378670959473" /> <!-- Adamantine -->
-				<item id="9573" min="1" max="1" chance="0.66346893637085" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.16586062399292" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.016578130279541" /> <!-- High-Grade Life Stone - Level 80 -->
+				<item id="9573" min="1" max="1" chance="0.66346893637085" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.16586062399292" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.016578130279541" /> <!-- High-Grade Life Stone: level 80 -->
 				<item id="5282" min="1" max="1" chance="0.0424632810668945" /> <!-- Recipe: Greater Blessed Spiritshot (S) Compressed Package(100%) -->
 			</drop>
 			<spoil>
-				<item id="9622" min="1" max="1" chance="0.9396" /> <!-- Dynasty Cudgel Piece -->
-				<item id="1808" min="1" max="1" chance="0.7758" /> <!-- Recipe: Soulshot (S-Grade) -->
+				<item id="9622" min="1" max="1" chance="0.9396" /> <!-- Halberd Cudgel Piece -->
+				<item id="1808" min="1" max="1" chance="0.7758" /> <!-- Recipe: Soulshot: S Grade -->
 				<item id="9530" min="1" max="1" chance="2.5421" /> <!-- Sealed Dynasty Breast Plate Piece -->
 			</spoil>
 		</dropLists>
@@ -2346,8 +2315,7 @@
 			<height normal="43.8" />
 		</collision>
 	</npc>
-	<npc id="22631" level="83" type="Monster" name="Spiked Stakato Nurse">
-		<!-- Confirmed CT2.5 -->
+	<npc id="22631" level="83" type="Monster" name="Spike Stakato Nurse">
 		<parameters>
 			<skill name="DDMagic1" id="4100" level="9" /> <!-- NPC Prominence -->
 			<skill name="DDMagic2" id="4078" level="9" /> <!-- NPC Flamestrike -->
@@ -2410,13 +2378,13 @@
 				<item id="9617" min="1" max="1" chance="0.109948147467971" /> <!-- Dynasty Blade Piece -->
 				<item id="9618" min="1" max="1" chance="0.109948478367984" /> <!-- Dynasty Phantom Piece -->
 				<item id="1879" min="1" max="1" chance="21.9665932656555" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="10.9832966328278" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="10.9832966328278" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="1.03371816612625" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.693665349323273" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.573053322727203" /> <!-- Adamantine -->
-				<item id="9573" min="1" max="1" chance="0.915262536369324" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.228833908641815" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.0228797359542847" /> <!-- High-Grade Life Stone - Level 80 -->
+				<item id="9573" min="1" max="1" chance="0.915262536369324" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.228833908641815" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.0228797359542847" /> <!-- High-Grade Life Stone: level 80 -->
 				<item id="6901" min="1" max="1" chance="0.131796050880432" /> <!-- Recipe: Shining Arrow (100%) -->
 			</drop>
 			<spoil>
@@ -2431,7 +2399,6 @@
 		</collision>
 	</npc>
 	<npc id="22632" level="82" type="Monster" name="Spiked Stakato Baby">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="ai_type" value="n_spike_stakato_raider" />
 			<param name="silhouette" value="22629" /> <!-- Spiked Stakato Captain -->
@@ -2492,7 +2459,7 @@
 				<item id="9449" min="1" max="1" chance="0.000216083905130625" /> <!-- Dynasty Mace -->
 				<item id="10252" min="1" max="1" chance="0.000216083905130625" /> <!-- Dynasty Staff -->
 				<item id="10253" min="1" max="1" chance="0.000216083905130625" /> <!-- Dynasty Crusher -->
-				<item id="9622" min="1" max="1" chance="0.065369254252106" /> <!-- Dynasty Cudgel Piece -->
+				<item id="9622" min="1" max="1" chance="0.065369254252106" /> <!-- Halberd Cudgel Piece -->
 				<item id="9623" min="1" max="1" chance="0.065369254252106" /> <!-- Dynasty Mace Piece -->
 				<item id="10546" min="1" max="1" chance="0.0677488482086062" /> <!-- Dynasty Staff Fragment -->
 				<item id="10547" min="1" max="1" chance="0.0677483140085936" /> <!-- Dynasty Crusher Fragment -->
@@ -2500,9 +2467,9 @@
 				<item id="4040" min="1" max="1" chance="2.4293671209259" /> <!-- Mold Lubricant -->
 				<item id="9628" min="1" max="1" chance="0.952687518112183" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.63929664855957" /> <!-- Orichalcum -->
-				<item id="9573" min="1" max="1" chance="0.843520839782715" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.210880209945679" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.0210840353546143" /> <!-- High-Grade Life Stone - Level 80 -->
+				<item id="9573" min="1" max="1" chance="0.843520839782715" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.210880209945679" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.0210840353546143" /> <!-- High-Grade Life Stone: level 80 -->
 				<item id="5157" min="1" max="1" chance="0.0540452777709961" /> <!-- Recipe: Soulshot (S) Compressed Package (100%) -->
 			</drop>
 			<spoil>
@@ -2517,7 +2484,6 @@
 		</collision>
 	</npc>
 	<npc id="22633" level="83" type="Monster" name="Spiked Stakato Shaman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="W_LongRangeDDMagic" id="4563" level="9" /> <!-- NPC Solar Flare - Magic -->
 			<skill name="W_ShortRangeDDMagic" id="4158" level="9" /> <!-- NPC Prominence - Magic -->
@@ -2575,18 +2541,18 @@
 				<item id="9449" min="1" max="1" chance="0.000191247594580054" /> <!-- Dynasty Mace -->
 				<item id="10252" min="1" max="1" chance="0.000191247594580054" /> <!-- Dynasty Staff -->
 				<item id="10253" min="1" max="1" chance="0.000191247594580054" /> <!-- Dynasty Crusher -->
-				<item id="9622" min="1" max="1" chance="0.0578558251603693" /> <!-- Dynasty Cudgel Piece -->
+				<item id="9622" min="1" max="1" chance="0.0578558251603693" /> <!-- Halberd Cudgel Piece -->
 				<item id="9623" min="1" max="1" chance="0.0578558251603693" /> <!-- Dynasty Mace Piece -->
 				<item id="10546" min="1" max="1" chance="0.0599619127006829" /> <!-- Dynasty Staff Fragment -->
 				<item id="10547" min="1" max="1" chance="0.0599614399006963" /> <!-- Dynasty Crusher Fragment -->
 				<item id="1879" min="1" max="1" chance="15.9229900689087" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="7.96149503445435" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="7.96149503445435" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="0.749320912475586" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.502843511413574" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.415378670959473" /> <!-- Adamantine -->
-				<item id="9573" min="1" max="1" chance="0.66346893637085" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.16586062399292" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.016578130279541" /> <!-- High-Grade Life Stone - Level 80 -->
+				<item id="9573" min="1" max="1" chance="0.66346893637085" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.16586062399292" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.016578130279541" /> <!-- High-Grade Life Stone: level 80 -->
 				<item id="5162" min="1" max="1" chance="0.0424632810668945" /> <!-- Recipe: Spiritshot (S) Compressed Package (100%) -->
 			</drop>
 			<spoil>
@@ -2601,7 +2567,6 @@
 		</collision>
 	</npc>
 	<npc id="22634" level="78" type="Monster" name="Scarlet Stakato Worker">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="4560" level="9" /> <!-- NPC Fire Burn -->
@@ -2668,7 +2633,6 @@
 		</collision>
 	</npc>
 	<npc id="22635" level="78" type="Monster" name="Scarlet Stakato Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="4580" level="9" /> <!-- Decrease P. Atk. -->
@@ -2737,7 +2701,6 @@
 		</collision>
 	</npc>
 	<npc id="22636" level="78" type="Monster" name="Scarlet Stakato Noble">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Skill01_AttackSplash" value="1" />
@@ -2792,7 +2755,7 @@
 				<item id="6686" min="1" max="1" chance="0.00336336832809448" /> <!-- Sealed Major Arcana Boots -->
 				<item id="6703" min="1" max="1" chance="0.764919773246765" /> <!-- Sealed Imperial Crusader Gauntlets Design -->
 				<item id="1879" min="1" max="1" chance="10.4467972457447" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="5.22340700917244" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="5.22340700917244" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="0.491621683698654" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.329900272821426" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.272521207626343" /> <!-- Adamantine -->
@@ -2810,7 +2773,6 @@
 		</collision>
 	</npc>
 	<npc id="22637" level="78" type="Monster" name="Tepra Scorpion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="4560" level="9" /> <!-- NPC Fire Burn -->
@@ -2877,7 +2839,6 @@
 		</collision>
 	</npc>
 	<npc id="22638" level="78" type="Monster" name="Tepra Scarab">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="4560" level="9" /> <!-- NPC Fire Burn -->
@@ -2927,7 +2888,7 @@
 				<item id="6367" min="1" max="1" chance="0.000871804223060608" /> <!-- Angel Slayer -->
 				<item id="6691" min="1" max="1" chance="0.402928206458092" /> <!-- Angel Slayer Blade -->
 				<item id="1879" min="1" max="1" chance="10.3548329601059" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="5.17742503690338" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="5.17742503690338" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="0.487278404777527" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.326991482460022" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.27012265447998" /> <!-- Adamantine -->
@@ -2945,7 +2906,6 @@
 		</collision>
 	</npc>
 	<npc id="22639" level="78" type="Monster" name="Assassin Beetle">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Skill01_AttackSplash" value="1" />
@@ -3018,7 +2978,6 @@
 		</collision>
 	</npc>
 	<npc id="22640" level="78" type="Monster" name="Mercenary of Destruction">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Skill01_AttackSplash" value="1" />
@@ -3077,7 +3036,7 @@
 			</drop>
 			<spoil>
 				<item id="5529" min="1" max="1" chance="2.7117" /> <!-- Dragon Slayer Edge -->
-				<item id="1808" min="1" max="1" chance="0.4393" /> <!-- Recipe: Soulshot (S-Grade) -->
+				<item id="1808" min="1" max="1" chance="0.4393" /> <!-- Recipe: Soulshot: S Grade -->
 				<item id="5533" min="1" max="1" chance="2.7112" /> <!-- Elysian Head -->
 			</spoil>
 		</dropLists>
@@ -3087,7 +3046,6 @@
 		</collision>
 	</npc>
 	<npc id="22641" level="78" type="Monster" name="Knight of Destruction">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="4560" level="9" /> <!-- NPC Fire Burn -->
@@ -3139,7 +3097,7 @@
 				<item id="6688" min="1" max="1" chance="0.202206267537028" /> <!-- Forgotten Blade Edge -->
 				<item id="6696" min="1" max="1" chance="0.205418711426407" /> <!-- Heavens Divider Edge -->
 				<item id="1879" min="1" max="1" chance="10.3924669307671" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="5.19624205333328" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="5.19624205333328" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="0.489049386623383" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.32817991185379" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.271104397796631" /> <!-- Adamantine -->
@@ -3157,7 +3115,6 @@
 		</collision>
 	</npc>
 	<npc id="22642" level="78" type="Monster" name="Lavastone Golem">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="4591" level="9" /> <!-- Decrease Speed -->
@@ -3211,11 +3168,11 @@
 				<item id="4039" min="1" max="1" chance="3.20287394868755" /> <!-- Mold Glue -->
 				<item id="4041" min="1" max="1" chance="0.835531344753265" /> <!-- Mold Hardener -->
 				<item id="4044" min="1" max="1" chance="3.20287394868755" /> <!-- Thons -->
-				<item id="9551" min="1" max="1" chance="0.768677000516892" /> <!-- Holy Stone -->
+				<item id="9551" min="1" max="1" chance="0.768677000516892" /> <!-- Divine Stone -->
 			</drop>
 			<spoil>
 				<item id="3036" min="1" max="1" chance="0.5783" /> <!-- Recipe: Spiritshot S -->
-				<item id="959" min="1" max="1" chance="0.052" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="959" min="1" max="1" chance="0.052" /> <!-- Scroll: Enchant Weapon (S) -->
 				<item id="3957" min="1" max="1" chance="0.5783" /> <!-- Recipe: Blessed Spiritshot S -->
 			</spoil>
 		</dropLists>
@@ -3225,7 +3182,6 @@
 		</collision>
 	</npc>
 	<npc id="22643" level="78" type="Monster" name="Magma Golem">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="4157" level="9" /> <!-- NPC Blaze - Magic -->
@@ -3279,12 +3235,12 @@
 				<item id="4040" min="1" max="1" chance="1.68520063560104" /> <!-- Mold Lubricant -->
 				<item id="4042" min="1" max="1" chance="1.40432730666733" /> <!-- Enria -->
 				<item id="4043" min="1" max="1" chance="2.80865461333466" /> <!-- Asofe -->
-				<item id="959" min="1" max="1" chance="0.00338306810760498" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="959" min="1" max="1" chance="0.00338306810760498" /> <!-- Scroll: Enchant Weapon (S) -->
 				<item id="1345" min="60" max="180" chance="9.36220826978302" /> <!-- Shining Arrow -->
 			</drop>
 			<spoil>
 				<item id="6688" min="1" max="1" chance="2.9596" /> <!-- Forgotten Blade Edge -->
-				<item id="960" min="1" max="1" chance="0.5477" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="960" min="1" max="1" chance="0.5477" /> <!-- Scroll: Enchant Armor (S) -->
 				<item id="1894" min="1" max="1" chance="48.0429" /> <!-- Crafted Leather -->
 			</spoil>
 		</dropLists>
@@ -3294,7 +3250,6 @@
 		</collision>
 	</npc>
 	<npc id="22644" level="78" type="Monster" name="Arimanes of Destruction">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="4589" level="9" /> <!-- Decrease Speed -->
@@ -3352,7 +3307,7 @@
 				<item id="4040" min="1" max="1" chance="2.04030752607727" /> <!-- Mold Lubricant -->
 				<item id="9628" min="1" max="1" chance="0.800126983795166" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.536935030883789" /> <!-- Orichalcum -->
-				<item id="960" min="1" max="1" chance="0.0407716314086914" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="960" min="1" max="1" chance="0.0407716314086914" /> <!-- Scroll: Enchant Armor (S) -->
 			</drop>
 			<spoil>
 				<item id="6708" min="1" max="1" chance="19.6689" /> <!-- Sealed Draconic Leather Gloves Fabric -->
@@ -3366,7 +3321,6 @@
 		</collision>
 	</npc>
 	<npc id="22645" level="78" type="Monster" name="Balrog of Destruction">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="4599" level="9" /> <!-- Decrease Speed -->
@@ -3435,7 +3389,6 @@
 		</collision>
 	</npc>
 	<npc id="22646" level="78" type="Monster" name="Ashuras of Destruction">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Skill01_AttackSplash" value="1" />
@@ -3502,7 +3455,6 @@
 		</collision>
 	</npc>
 	<npc id="22647" level="78" type="Monster" name="Lavasillisk">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="4560" level="9" /> <!-- NPC Fire Burn -->
@@ -3552,7 +3504,7 @@
 				<item id="6701" min="1" max="1" chance="0.693099184184074" /> <!-- Sealed Imperial Crusader Breastplate Part -->
 				<item id="6702" min="1" max="1" chance="0.892204131503105" /> <!-- Sealed Imperial Crusader Gaiters Pattern -->
 				<item id="1879" min="1" max="1" chance="14.4675396078911" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="7.23376980394554" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="7.23376980394554" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="0.680836610429764" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.456867713512421" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.377405381380081" /> <!-- Adamantine -->
@@ -3569,7 +3521,6 @@
 		</collision>
 	</npc>
 	<npc id="22648" level="78" type="Monster" name="Blazing Ifrit">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="4605" level="9" /> <!-- Surrender To Fire -->
@@ -3625,7 +3576,7 @@
 			<spoil>
 				<item id="5282" min="1" max="1" chance="0.6136" /> <!-- Recipe: Greater Blessed Spiritshot (S) Compressed Package(100%) -->
 				<item id="5529" min="1" max="1" chance="3.7877" /> <!-- Dragon Slayer Edge -->
-				<item id="1808" min="1" max="1" chance="0.6136" /> <!-- Recipe: Soulshot (S-Grade) -->
+				<item id="1808" min="1" max="1" chance="0.6136" /> <!-- Recipe: Soulshot: S Grade -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -3634,7 +3585,6 @@
 		</collision>
 	</npc>
 	<npc id="22649" level="78" type="Monster" name="Magma Drake">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="4560" level="9" /> <!-- NPC Fire Burn -->
@@ -3703,7 +3653,6 @@
 		</collision>
 	</npc>
 	<npc id="22650" level="83" type="Monster" name="Mucrokian Fanatic">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="4670" level="9" /> <!-- Short Stun -->
 			<skill name="Skill02_ID" id="5909" level="1" /> <!-- Stronghold Attack -->
@@ -3749,14 +3698,17 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="1476" max="2979" chance="70" /> <!-- Adena -->
-				<item id="10216" min="1" max="1" chance="0.0000007461" /> <!-- Icarus Disperser -->
-				<item id="10398" min="1" max="1" chance="0.00004145" /> <!-- Icarus Disperser Piece -->
-				<item id="1895" min="1" max="1" chance="16.9743034334" /> <!-- Metallic Fiber -->
-				<item id="4040" min="1" max="1" chance="1.188206107" /> <!-- Mold Lubricant -->
-				<item id="4042" min="1" max="1" chance="0.9901752824" /> <!-- Enria -->
-				<item id="4043" min="1" max="1" chance="1.9803294054" /> <!-- Asofe -->
-				<item id="6622" min="1" max="1" chance="0.105797" /> <!-- Giant's Codex -->
-				<item id="10549" min="1" max="1" chance="0.0211594" /> <!-- Forgotten Scroll - Protection of Rune -->
+				<item id="9442" min="1" max="1" chance="0.0000881227027624846" /> <!-- Dynasty Sword -->
+				<item id="9443" min="1" max="1" chance="0.0000881227027624846" /> <!-- Dynasty Blade -->
+				<item id="9444" min="1" max="1" chance="0.0000881227027624846" /> <!-- Dynasty Phantom -->
+				<item id="9616" min="1" max="1" chance="0.0275451838634908" /> <!-- Dynasty Sword Piece -->
+				<item id="9617" min="1" max="1" chance="0.0275451838634908" /> <!-- Dynasty Blade Piece -->
+				<item id="9618" min="1" max="1" chance="0.0275452667634934" /> <!-- Dynasty Phantom Piece -->
+				<item id="1895" min="1" max="1" chance="16.9743041874313" /> <!-- Metallic Fiber -->
+				<item id="4040" min="1" max="1" chance="1.18820615978241" /> <!-- Mold Lubricant -->
+				<item id="4042" min="1" max="1" chance="0.990175326385498" /> <!-- Enria -->
+				<item id="4043" min="1" max="1" chance="1.98032949337006" /> <!-- Asofe -->
+				<item id="5162" min="1" max="1" chance="0.0263857729721069" /> <!-- Recipe: Spiritshot (S) Compressed Package (100%) -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
@@ -3764,7 +3716,7 @@
 				<item id="8604" min="1" max="1" chance="8.91" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.32" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -3778,7 +3730,7 @@
 				<item id="13028" min="1" max="1" chance="0.33" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="959" min="1" max="1" chance="0.0241" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="959" min="1" max="1" chance="0.0241" /> <!-- Scroll: Enchant Weapon (S) -->
 				<item id="3036" min="1" max="1" chance="0.268" /> <!-- Recipe: Spiritshot S -->
 				<item id="10397" min="1" max="1" chance="0.2585" /> <!-- Icarus Sawsword Piece -->
 			</spoil>
@@ -3789,7 +3741,6 @@
 		</collision>
 	</npc>
 	<npc id="22651" level="83" type="Monster" name="Mucrokian Ascetic">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="4582" level="9" /> <!-- Poison -->
 			<skill name="Skill02_ID" id="5909" level="1" /> <!-- Stronghold Attack -->
@@ -3834,20 +3785,21 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="57" min="1477" max="3449" chance="70" /> <!-- Adena -->
-				<item id="10215" min="1" max="1" chance="0.0000007605" /> <!-- Icarus Sawsword -->
-				<item id="10217" min="1" max="1" chance="0.0000007605" /> <!-- Icarus Spirit -->
-				<item id="10218" min="1" max="1" chance="0.0000007605" /> <!-- Icarus Heavy Arms -->
-				<item id="10397" min="1" max="1" chance="0.00004225" /> <!-- Icarus Sawsword Piece -->
-				<item id="10399" min="1" max="1" chance="0.00004225" /> <!-- Icarus Spirit Piece -->
-				<item id="10400" min="1" max="1" chance="0.00004225" /> <!-- Icarus Heavy Arms Piece -->
-				<item id="1879" min="1" max="1" chance="8.5378705862" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="4.2689352931" /> <!-- High-Grade Suede -->
-				<item id="9628" min="1" max="1" chance="0.4017887649" /> <!-- Leonard -->
-				<item id="9630" min="1" max="1" chance="0.2696158102" /> <!-- Orichalcum -->
-				<item id="9629" min="1" max="1" chance="0.2227219273" /> <!-- Adamantine -->
-				<item id="6622" min="1" max="1" chance="0.0686185" /> <!-- Giant's Codex -->
-				<item id="10550" min="1" max="1" chance="0.0137237" /> <!-- Forgotten Scroll - Protection of Elemental -->
+				<item id="57" min="1527" max="3083" chance="70" /> <!-- Adena -->
+				<item id="9448" min="1" max="1" chance="0.0000683604999035597" /> <!-- Dynasty Cudgel -->
+				<item id="9449" min="1" max="1" chance="0.0000683604999035597" /> <!-- Dynasty Mace -->
+				<item id="10252" min="1" max="1" chance="0.0000683604999035597" /> <!-- Dynasty Staff -->
+				<item id="10253" min="1" max="1" chance="0.0000683604999035597" /> <!-- Dynasty Crusher -->
+				<item id="9622" min="1" max="1" chance="0.0206802764708251" /> <!-- Halberd Cudgel Piece -->
+				<item id="9623" min="1" max="1" chance="0.0206802764708251" /> <!-- Dynasty Mace Piece -->
+				<item id="10546" min="1" max="1" chance="0.021433086969763" /> <!-- Dynasty Staff Fragment -->
+				<item id="10547" min="1" max="1" chance="0.0214329179697633" /> <!-- Dynasty Crusher Fragment -->
+				<item id="1879" min="1" max="1" chance="8.53787031850052" /> <!-- Cokes -->
+				<item id="1885" min="1" max="1" chance="4.26893515925026" /> <!-- High Grade Suede -->
+				<item id="9628" min="1" max="1" chance="0.40178875230217" /> <!-- Leonard -->
+				<item id="9630" min="1" max="1" chance="0.269615801746368" /> <!-- Orichalcum -->
+				<item id="9629" min="1" max="1" chance="0.222721920316696" /> <!-- Adamantine -->
+				<item id="5167" min="1" max="1" chance="0.0227676175861359" /> <!-- Recipe: Blessed Spiritshot (S) Compressed Package (100%) -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
@@ -3855,7 +3807,7 @@
 				<item id="8604" min="1" max="1" chance="8.91" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.32" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -3871,7 +3823,7 @@
 			<spoil>
 				<item id="10405" min="1" max="1" chance="0.2666" /> <!-- Icarus Spitter Piece -->
 				<item id="9630" min="1" max="1" chance="3.2839" /> <!-- Orichalcum -->
-				<item id="959" min="1" max="1" chance="0.025" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="959" min="1" max="1" chance="0.025" /> <!-- Scroll: Enchant Weapon (S) -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -3880,7 +3832,6 @@
 		</collision>
 	</npc>
 	<npc id="22652" level="84" type="Monster" name="Mucrokian Savior">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="4670" level="9" /> <!-- Short Stun -->
 			<skill name="Skill02_ID" id="5909" level="1" /> <!-- Stronghold Attack -->
@@ -3926,21 +3877,16 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="1500" max="3065" chance="70" /> <!-- Adena -->
-				<item id="15694" min="1" max="1" chance="0.0000005877" /> <!-- Sealed Moirai Helmet -->
-				<item id="15695" min="1" max="1" chance="0.0000005877" /> <!-- Sealed Moirai Leather Helmet -->
-				<item id="15696" min="1" max="1" chance="0.0000005877" /> <!-- Sealed Moirai Circlet -->
-				<item id="15646" min="1" max="1" chance="0.0003265" /> <!-- Sealed Moirai Leather Helmet Piece -->
-				<item id="15645" min="1" max="1" chance="0.0003265" /> <!-- Sealed Moirai Helmet Piece -->
-				<item id="15647" min="1" max="1" chance="0.0003265" /> <!-- Sealed Moirai Circlet Piece -->
-				<item id="1894" min="1" max="1" chance="1.335342828" /> <!-- Crafted Leather -->
-				<item id="4039" min="1" max="1" chance="1.26857364" /> <!-- Mold Glue -->
-				<item id="4041" min="1" max="1" chance="0.330930672" /> <!-- Mold Hardener -->
-				<item id="4044" min="1" max="1" chance="1.26857364" /> <!-- Thons -->
-				<item id="9573" min="1" max="1" chance="0.26428428" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.066073344" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.006608244" /> <!-- High-Grade Life Stone - Level 80 -->
-				<item id="6622" min="1" max="1" chance="0.02274" /> <!-- Giant's Codex -->
-				<item id="14219" min="1" max="1" chance="0.004548" /> <!-- Forgotten Scroll - Magician's Will -->
+				<item id="10221" min="1" max="1" chance="0.000196357108101249" /> <!-- Icarus Hand -->
+				<item id="10403" min="1" max="1" chance="0.0651036455860287" /> <!-- Icarus Hand Piece -->
+				<item id="1894" min="1" max="1" chance="1.33534278655863" /> <!-- Crafted Leather -->
+				<item id="4039" min="1" max="1" chance="1.26857360063076" /> <!-- Mold Glue -->
+				<item id="4041" min="1" max="1" chance="0.330930661729813" /> <!-- Mold Hardener -->
+				<item id="4044" min="1" max="1" chance="1.26857360063076" /> <!-- Thons -->
+				<item id="9573" min="1" max="1" chance="0.264284271798134" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.0660733419494629" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.00660824379491806" /> <!-- High-Grade Life Stone: level 80 -->
+				<item id="9625" min="1" max="1" chance="0.00761335176372528" /> <!-- Giant's Codex - Oblivion -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
@@ -3948,7 +3894,7 @@
 				<item id="8604" min="1" max="1" chance="8.91" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.32" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -3973,7 +3919,6 @@
 		</collision>
 	</npc>
 	<npc id="22653" level="84" type="Monster" name="Mucrokian Preacher">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="4582" level="9" /> <!-- Poison -->
 			<skill name="Skill02_ID" id="5909" level="1" /> <!-- Stronghold Attack -->
@@ -4018,22 +3963,17 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="57" min="1500" max="3065" chance="70" /> <!-- Adena -->
-				<item id="15694" min="1" max="1" chance="0.0000005877" /> <!-- Sealed Moirai Helmet -->
-				<item id="15695" min="1" max="1" chance="0.0000005877" /> <!-- Sealed Moirai Leather Helmet -->
-				<item id="15696" min="1" max="1" chance="0.0000005877" /> <!-- Sealed Moirai Circlet -->
-				<item id="15646" min="1" max="1" chance="0.0003265" /> <!-- Sealed Moirai Leather Helmet Piece -->
-				<item id="15645" min="1" max="1" chance="0.0003265" /> <!-- Sealed Moirai Helmet Piece -->
-				<item id="15647" min="1" max="1" chance="0.0003265" /> <!-- Sealed Moirai Circlet Piece -->
-				<item id="1894" min="1" max="1" chance="1.335342828" /> <!-- Crafted Leather -->
-				<item id="4039" min="1" max="1" chance="1.26857364" /> <!-- Mold Glue -->
-				<item id="4041" min="1" max="1" chance="0.330930672" /> <!-- Mold Hardener -->
-				<item id="4044" min="1" max="1" chance="1.26857364" /> <!-- Thons -->
-				<item id="9573" min="1" max="1" chance="0.26428428" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.066073344" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.006608244" /> <!-- High-Grade Life Stone - Level 80 -->
-				<item id="6622" min="1" max="1" chance="0.02274" /> <!-- Giant's Codex -->
-				<item id="14219" min="1" max="1" chance="0.004548" /> <!-- Forgotten Scroll - Magician's Will -->
+				<item id="57" min="1552" max="3172" chance="70" /> <!-- Adena -->
+				<item id="10223" min="1" max="1" chance="0.000202972508065403" /> <!-- Icarus Spitter -->
+				<item id="10405" min="1" max="1" chance="0.0672970301741436" /> <!-- Icarus Spitter Piece -->
+				<item id="1894" min="1" max="1" chance="1.38171195727587" /> <!-- Crafted Leather -->
+				<item id="4039" min="1" max="1" chance="1.31262518358707" /> <!-- Mold Glue -->
+				<item id="4041" min="1" max="1" chance="0.342423756444454" /> <!-- Mold Hardener -->
+				<item id="4044" min="1" max="1" chance="1.31262518358707" /> <!-- Thons -->
+				<item id="9573" min="1" max="1" chance="0.27346397185564" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.0683671687889099" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.00683859819889069" /> <!-- High-Grade Life Stone: level 80 -->
+				<item id="9626" min="1" max="1" chance="0.00524417949914932" /> <!-- Giant's Codex - Discipline -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
@@ -4041,7 +3981,7 @@
 				<item id="8604" min="1" max="1" chance="8.91" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.32" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -4066,7 +4006,6 @@
 		</collision>
 	</npc>
 	<npc id="22654" level="83" type="Monster" name="Contaminated Mucrokian">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="4067" level="9" /> <!-- NPC Mortal Blow -->
@@ -4111,20 +4050,18 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="535" max="1080" chance="70" /> <!-- Adena -->
-				<item id="10223" min="1" max="1" chance="0.00000027" /> <!-- Icarus Spitter -->
-				<item id="10405" min="1" max="1" chance="0.000015" /> <!-- Icarus Spitter Piece -->
-				<item id="1879" min="1" max="1" chance="1.7946696859" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="0.8973297229" /> <!-- High-Grade Suede -->
-				<item id="9628" min="1" max="1" chance="0.0844501047" /> <!-- Leonard -->
-				<item id="9630" min="1" max="1" chance="0.0566687134" /> <!-- Orichalcum -->
-				<item id="9629" min="1" max="1" chance="0.0468177372" /> <!-- Adamantine -->
-				<item id="9573" min="1" max="1" chance="0.0747732102" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.0186984226" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.0018739383" /> <!-- High-Grade Life Stone - Level 80 -->
-				<item id="9546" min="1" max="1" chance="0.0861397212" /> <!-- Fire Stone -->
-				<item id="1345" min="10" max="30" chance="7.1786787436" /> <!-- Shining Arrow -->
-				<item id="6622" min="1" max="1" chance="0.00512005" /> <!-- Giant's Codex -->
-				<item id="10551" min="1" max="1" chance="0.00512005" /> <!-- Forgotten Scroll - Protection of Alignment -->
+				<item id="9446" min="1" max="1" chance="0.0000957599978595972" /> <!-- Dynasty Knife -->
+				<item id="9620" min="1" max="1" chance="0.0299042393315881" /> <!-- Dynasty Knife Piece -->
+				<item id="1879" min="1" max="1" chance="1.79466966958714" /> <!-- Cokes -->
+				<item id="1885" min="1" max="1" chance="0.897329714743614" /> <!-- High Grade Suede -->
+				<item id="9628" min="1" max="1" chance="0.0844501039323807" /> <!-- Leonard -->
+				<item id="9630" min="1" max="1" chance="0.056668712884903" /> <!-- Orichalcum -->
+				<item id="9629" min="1" max="1" chance="0.0468177367744446" /> <!-- Adamantine -->
+				<item id="9573" min="1" max="1" chance="0.07477320952034" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.0186984224300385" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.00187393828296661" /> <!-- High-Grade Life Stone: level 80 -->
+				<item id="9546" min="1" max="1" chance="0.0861397204170227" /> <!-- Fire Stone -->
+				<item id="1345" min="10" max="30" chance="7.17867867834854" /> <!-- Shining Arrow -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
@@ -4132,7 +4069,7 @@
 				<item id="8604" min="1" max="1" chance="8.91" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.32" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -4157,7 +4094,6 @@
 		</collision>
 	</npc>
 	<npc id="22655" level="84" type="Monster" name="Awakened Mucrokian">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="4072" level="9" /> <!-- Stun -->
 			<skill name="Skill02_ID" id="5909" level="1" /> <!-- Stronghold Attack -->
@@ -4202,22 +4138,16 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="2702" max="5522" chance="70" /> <!-- Adena -->
-				<item id="15703" min="1" max="1" chance="0.000007685" /> <!-- Sealed Moirai Gauntlet -->
-				<item id="15704" min="1" max="1" chance="0.000007685" /> <!-- Sealed Moirai Leather Gloves -->
-				<item id="15705" min="1" max="1" chance="0.000007685" /> <!-- Sealed Moirai Gloves -->
-				<item id="15654" min="1" max="1" chance="0.001537" /> <!-- Sealed Moirai Gauntlet Piece -->
-				<item id="15655" min="1" max="1" chance="0.001537" /> <!-- Sealed Moirai Leather Gloves Piece -->
-				<item id="15656" min="1" max="1" chance="0.001537" /> <!-- Sealed Moirai Gloves Piece -->
-				<item id="1894" min="1" max="1" chance="2.4054822775" /> <!-- Crafted Leather -->
-				<item id="4039" min="1" max="1" chance="2.2852086" /> <!-- Mold Glue -->
-				<item id="4041" min="1" max="1" chance="0.596140615" /> <!-- Mold Hardener -->
-				<item id="4044" min="1" max="1" chance="2.2852086" /> <!-- Thons -->
-				<item id="9573" min="1" max="1" chance="0.476085125" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.119025645" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.01190431" /> <!-- High-Grade Life Stone - Level 80 -->
-				<item id="9547" min="1" max="1" chance="0.5484448275" /> <!-- Water Stone -->
-				<item id="6622" min="1" max="1" chance="0.0436375" /> <!-- Giant's Codex -->
-				<item id="14219" min="1" max="1" chance="0.0436375" /> <!-- Forgotten Scroll - Magician's Will -->
+				<item id="9447" min="1" max="1" chance="0.000487997481226921" /> <!-- Dynasty Halberd -->
+				<item id="9621" min="1" max="1" chance="0.153211996605992" /> <!-- Dynasty Halberd Piece -->
+				<item id="1894" min="1" max="1" chance="2.40548226698589" /> <!-- Crafted Leather -->
+				<item id="4039" min="1" max="1" chance="2.2852085900116" /> <!-- Mold Glue -->
+				<item id="4041" min="1" max="1" chance="0.596140612394333" /> <!-- Mold Hardener -->
+				<item id="4044" min="1" max="1" chance="2.2852085900116" /> <!-- Thons -->
+				<item id="9573" min="1" max="1" chance="0.476085122919083" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.119025644479752" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.0119043099479675" /> <!-- High-Grade Life Stone: level 80 -->
+				<item id="9547" min="1" max="1" chance="0.548444825102806" /> <!-- Water Stone -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
@@ -4225,7 +4155,7 @@
 				<item id="8604" min="1" max="1" chance="8.91" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.32" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -4240,7 +4170,7 @@
 			</drop>
 			<spoil>
 				<item id="9542" min="1" max="1" chance="4.0033" /> <!-- Sealed Dynasty Circlet Piece -->
-				<item id="1808" min="1" max="1" chance="0.4948" /> <!-- Recipe: Soulshot (S-Grade) -->
+				<item id="1808" min="1" max="1" chance="0.4948" /> <!-- Recipe: Soulshot: S Grade -->
 				<item id="9530" min="1" max="1" chance="1.6215" /> <!-- Sealed Dynasty Breast Plate Piece -->
 			</spoil>
 		</dropLists>
@@ -4250,7 +4180,6 @@
 		</collision>
 	</npc>
 	<npc id="22656" level="83" type="Monster" name="Suppressor">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="4670" level="9" /> <!-- Short Stun -->
 			<skill name="Skill02_ID" id="5909" level="1" /> <!-- Stronghold Attack -->
@@ -4296,21 +4225,19 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="1476" max="2979" chance="70" /> <!-- Adena -->
-				<item id="15699" min="1" max="1" chance="0.000003861" /> <!-- Sealed Moirai Tunic -->
-				<item id="15702" min="1" max="1" chance="0.000003861" /> <!-- Sealed Moirai Stockings -->
-				<item id="15650" min="1" max="1" chance="0.002145" /> <!-- Sealed Moirai Tunic Piece -->
-				<item id="15653" min="1" max="1" chance="0.002145" /> <!-- Sealed Moirai Stockings Piece -->
-				<item id="1879" min="1" max="1" chance="5.5009524684" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="2.7504762342" /> <!-- High-Grade Suede -->
-				<item id="9628" min="1" max="1" chance="0.2588708906" /> <!-- Leonard -->
-				<item id="9630" min="1" max="1" chance="0.1737129056" /> <!-- Orichalcum -->
-				<item id="9629" min="1" max="1" chance="0.1435064534" /> <!-- Adamantine -->
-				<item id="9573" min="1" max="1" chance="0.2292086988" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.0572974828" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.0057335018" /> <!-- High-Grade Life Stone - Level 80 -->
-				<item id="9548" min="1" max="1" chance="0.2640413644" /> <!-- Earth Stone -->
-				<item id="6622" min="1" max="1" chance="0.046919" /> <!-- Giant's Codex -->
-				<item id="10549" min="1" max="1" chance="0.0093838" /> <!-- Forgotten Scroll - Protection of Rune -->
+				<item id="9514" min="1" max="1" chance="0.000405833990752697" /> <!-- Sealed Dynasty Breast Plate -->
+				<item id="9515" min="1" max="1" chance="0.00064907698521018" /> <!-- Sealed Dynasty Gaiter -->
+				<item id="9530" min="1" max="1" chance="0.108123441536307" /> <!-- Sealed Dynasty Breast Plate Piece -->
+				<item id="9531" min="1" max="1" chance="0.319821637712568" /> <!-- Sealed Dynasty Gaiter Piece -->
+				<item id="1879" min="1" max="1" chance="5.50095220631218" /> <!-- Cokes -->
+				<item id="1885" min="1" max="1" chance="2.75047610315609" /> <!-- High Grade Suede -->
+				<item id="9628" min="1" max="1" chance="0.258870878266335" /> <!-- Leonard -->
+				<item id="9630" min="1" max="1" chance="0.173712897323608" /> <!-- Orichalcum -->
+				<item id="9629" min="1" max="1" chance="0.143506446562767" /> <!-- Adamantine -->
+				<item id="9573" min="1" max="1" chance="0.229208687879562" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.0572974800701141" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.00573350152683258" /> <!-- High-Grade Life Stone: level 80 -->
+				<item id="9548" min="1" max="1" chance="0.264041351819992" /> <!-- Earth Stone -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
@@ -4318,7 +4245,7 @@
 				<item id="8604" min="1" max="1" chance="8.91" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.32" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -4334,7 +4261,7 @@
 			<spoil>
 				<item id="6901" min="1" max="1" chance="0.603" /> <!-- Recipe: Shining Arrow (100%) -->
 				<item id="10114" min="1" max="1" chance="1.4951" /> <!-- Sealed Dynasty Sigil Piece -->
-				<item id="960" min="1" max="1" chance="0.2412" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="960" min="1" max="1" chance="0.2412" /> <!-- Scroll: Enchant Armor (S) -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -4343,7 +4270,6 @@
 		</collision>
 	</npc>
 	<npc id="22657" level="84" type="Monster" name="Exterminator">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="4670" level="9" /> <!-- Short Stun -->
 			<skill name="Skill02_ID" id="5909" level="1" /> <!-- Stronghold Attack -->
@@ -4389,23 +4315,19 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="1500" max="3065" chance="70" /> <!-- Adena -->
-				<item id="15706" min="1" max="1" chance="0.0000030402" /> <!-- Sealed Moirai Boots -->
-				<item id="15707" min="1" max="1" chance="0.0000030402" /> <!-- Sealed Moirai Leather Boots -->
-				<item id="15708" min="1" max="1" chance="0.0000030402" /> <!-- Sealed Moirai Shoes -->
-				<item id="15657" min="1" max="1" chance="0.001689" /> <!-- Sealed Moirai Boots Piece -->
-				<item id="15658" min="1" max="1" chance="0.001689" /> <!-- Sealed Moirai Leather Boots Piece -->
-				<item id="15659" min="1" max="1" chance="0.001689" /> <!-- Sealed Moirai Shoes Piece -->
-				<item id="1879" min="1" max="1" chance="5.6381274804" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="2.8190637402" /> <!-- High-Grade Suede -->
-				<item id="9628" min="1" max="1" chance="0.2653262486" /> <!-- Leonard -->
-				<item id="9630" min="1" max="1" chance="0.1780447136" /> <!-- Orichalcum -->
-				<item id="9629" min="1" max="1" chance="0.1470850154" /> <!-- Adamantine -->
-				<item id="9573" min="1" max="1" chance="0.2349243828" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.0587262868" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.0058764758" /> <!-- High-Grade Life Stone - Level 80 -->
-				<item id="9549" min="1" max="1" chance="0.2706256564" /> <!-- Wind Stone -->
-				<item id="6622" min="1" max="1" chance="0.048089" /> <!-- Giant's Codex -->
-				<item id="10551" min="1" max="1" chance="0.0096178" /> <!-- Forgotten Scroll - Protection of Alignment -->
+				<item id="9519" min="1" max="1" chance="0.00055466759365797" /> <!-- Sealed Dynasty Leather Armor -->
+				<item id="9520" min="1" max="1" chance="0.000887400589853525" /> <!-- Sealed Dynasty Leather Leggings -->
+				<item id="9535" min="1" max="1" chance="0.136180352642924" /> <!-- Sealed Dynasty Leather Armor Piece -->
+				<item id="9536" min="1" max="1" chance="0.200177575311184" /> <!-- Sealed Dynasty Leather Leggings Piece -->
+				<item id="1879" min="1" max="1" chance="5.63812733906937" /> <!-- Cokes -->
+				<item id="1885" min="1" max="1" chance="2.81906366953468" /> <!-- High Grade Suede -->
+				<item id="9628" min="1" max="1" chance="0.265326241949081" /> <!-- Leonard -->
+				<item id="9630" min="1" max="1" chance="0.178044709136963" /> <!-- Orichalcum -->
+				<item id="9629" min="1" max="1" chance="0.147085011713028" /> <!-- Adamantine -->
+				<item id="9573" min="1" max="1" chance="0.234924376911163" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.0587262853279114" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.0058764756526947" /> <!-- High-Grade Life Stone: level 80 -->
+				<item id="9549" min="1" max="1" chance="0.270625649616241" /> <!-- Wind Stone -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
@@ -4413,7 +4335,7 @@
 				<item id="8604" min="1" max="1" chance="8.91" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.32" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -4438,7 +4360,6 @@
 		</collision>
 	</npc>
 	<npc id="22658" level="83" type="Monster" name="Sentinel Waterspirit">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="4582" level="9" /> <!-- Poison -->
 			<skill name="Skill02_ID" id="5910" level="1" /> <!-- Stronghold Attack -->
@@ -4483,21 +4404,19 @@
 		</ai>
 		<dropLists>
 			<drop>
-				<item id="57" min="1372" max="3204" chance="70" /> <!-- Adena -->
-				<item id="9524" min="1" max="1" chance="0.00001705" /> <!-- Sealed Dynasty Tunic -->
-				<item id="9525" min="1" max="1" chance="0.00001705" /> <!-- Sealed Dynasty Stockings -->
-				<item id="9540" min="1" max="1" chance="0.00341" /> <!-- Sealed Dynasty Tunic Piece -->
-				<item id="9541" min="1" max="1" chance="0.00341" /> <!-- Sealed Dynasty Stocking Piece -->
-				<item id="1894" min="1" max="1" chance="1.3480898731" /> <!-- Crafted Leather -->
-				<item id="4039" min="1" max="1" chance="1.280685624" /> <!-- Mold Glue -->
-				<item id="4041" min="1" max="1" chance="0.3340914766" /> <!-- Mold Hardener -->
-				<item id="4044" min="1" max="1" chance="1.280685624" /> <!-- Thons -->
-				<item id="9573" min="1" max="1" chance="0.266809505" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.0667048218" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.0066714604" /> <!-- High-Grade Life Stone - Level 80 -->
-				<item id="6622" min="1" max="1" chance="0.0244555" /> <!-- Giant's Codex -->
-				<item id="10550" min="1" max="1" chance="0.0048911" /> <!-- Forgotten Scroll - Protection of Elemental -->
-				<item id="9550" min="1" max="1" chance="0.3073616151" /> <!-- Dark Stone -->
+				<item id="57" min="1527" max="3083" chance="70" /> <!-- Adena -->
+				<item id="9524" min="1" max="1" chance="0.000559921984732151" /> <!-- Sealed Dynasty Tunic -->
+				<item id="9525" min="1" max="1" chance="0.000895806975573301" /> <!-- Sealed Dynasty Stockings -->
+				<item id="9540" min="1" max="1" chance="0.137470395251483" /> <!-- Sealed Dynasty Tunic Piece -->
+				<item id="9541" min="1" max="1" chance="0.202073866489887" /> <!-- Sealed Dynasty Stocking Piece -->
+				<item id="1894" min="1" max="1" chance="1.34808985375404" /> <!-- Crafted Leather -->
+				<item id="4039" min="1" max="1" chance="1.28068560562134" /> <!-- Mold Glue -->
+				<item id="4041" min="1" max="1" chance="0.334091471805572" /> <!-- Mold Hardener -->
+				<item id="4044" min="1" max="1" chance="1.28068560562134" /> <!-- Thons -->
+				<item id="9573" min="1" max="1" chance="0.266809501171112" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.0667048208427429" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.00667146030426025" /> <!-- High-Grade Life Stone: level 80 -->
+				<item id="9550" min="1" max="1" chance="0.307361610689163" /> <!-- Dark Stone -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
@@ -4505,7 +4424,7 @@
 				<item id="8604" min="1" max="1" chance="8.91" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.32" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -4530,7 +4449,6 @@
 		</collision>
 	</npc>
 	<npc id="22659" level="84" type="Monster" name="Guardian Waterspirit">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="4582" level="9" /> <!-- Poison -->
 			<skill name="Skill02_ID" id="5910" level="1" /> <!-- Stronghold Attack -->
@@ -4577,21 +4495,21 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="1552" max="3172" chance="70" /> <!-- Adena -->
-				<item id="15699" min="1" max="1" chance="0.0000035658" /> <!-- Sealed Moirai Tunic -->
-				<item id="15702" min="1" max="1" chance="0.0000035658" /> <!-- Sealed Moirai Stockings -->
-				<item id="15650" min="1" max="1" chance="0.001981" /> <!-- Sealed Moirai Tunic Piece -->
-				<item id="15653" min="1" max="1" chance="0.001981" /> <!-- Sealed Moirai Stockings Piece -->
-				<item id="1879" min="1" max="1" chance="5.8339242924" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="2.9169621462" /> <!-- High-Grade Suede -->
-				<item id="9628" min="1" max="1" chance="0.2745403066" /> <!-- Leonard -->
-				<item id="9630" min="1" max="1" chance="0.1842277216" /> <!-- Orichalcum -->
-				<item id="9629" min="1" max="1" chance="0.1521928774" /> <!-- Adamantine -->
-				<item id="9573" min="1" max="1" chance="0.2430826668" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.0607656908" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.0060805498" /> <!-- High-Grade Life Stone - Level 80 -->
-				<item id="9551" min="1" max="1" chance="0.2800237484" /> <!-- Holy Stone -->
-				<item id="6622" min="1" max="1" chance="0.049759" /> <!-- Giant's Codex -->
-				<item id="14219" min="1" max="1" chance="0.0099518" /> <!-- Forgotten Scroll - Magician's Will -->
+				<item id="9452" min="1" max="1" chance="0.0017361484054327" /> <!-- Sealed Dynasty Earring -->
+				<item id="9453" min="1" max="1" chance="0.00130191320407391" /> <!-- Sealed Dynasty Necklace -->
+				<item id="9454" min="1" max="1" chance="0.00260422260814905" /> <!-- Sealed Dynasty Ring -->
+				<item id="9991" min="1" max="1" chance="0.123094585985184" /> <!-- Sealed Dynasty Earring Gemstone -->
+				<item id="9992" min="1" max="1" chance="0.0944719092956185" /> <!-- Sealed Dynasty Necklace Gemstone -->
+				<item id="9993" min="1" max="1" chance="0.172991221741319" /> <!-- Sealed Dynasty Ring Gemstone -->
+				<item id="1879" min="1" max="1" chance="5.83392449545097" /> <!-- Cokes -->
+				<item id="1885" min="1" max="1" chance="2.91696224772549" /> <!-- High Grade Suede -->
+				<item id="9628" min="1" max="1" chance="0.274540316155434" /> <!-- Leonard -->
+				<item id="9630" min="1" max="1" chance="0.184227728012085" /> <!-- Orichalcum -->
+				<item id="9629" min="1" max="1" chance="0.152192882697105" /> <!-- Adamantine -->
+				<item id="9573" min="1" max="1" chance="0.243082675260544" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.0607656929149628" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.00608055001163483" /> <!-- High-Grade Life Stone: level 80 -->
+				<item id="9551" min="1" max="1" chance="0.280023758146286" /> <!-- Divine Stone -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
@@ -4599,7 +4517,7 @@
 				<item id="8604" min="1" max="1" chance="8.91" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.32" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -4614,7 +4532,7 @@
 			</drop>
 			<spoil>
 				<item id="9630" min="1" max="1" chance="3.3659" /> <!-- Orichalcum -->
-				<item id="959" min="1" max="1" chance="0.0256" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="959" min="1" max="1" chance="0.0256" /> <!-- Scroll: Enchant Weapon (S) -->
 				<item id="9991" min="1" max="1" chance="1.4995" /> <!-- Sealed Dynasty Earring Gemstone -->
 			</spoil>
 		</dropLists>
@@ -4624,7 +4542,6 @@
 		</collision>
 	</npc>
 	<npc id="22660" level="81" type="Monster" name="Lesser Giant">
-		<!-- Confirmed CT2.5 -->
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<equipment rhand="3937" /> <!-- rhand: Giant Bar -->
@@ -4677,14 +4594,14 @@
 				<item id="9543" min="1" max="1" chance="0.982927868601322" /> <!-- Sealed Dynasty Glove Piece -->
 				<item id="9544" min="1" max="1" chance="0.982916019601345" /> <!-- Sealed Dynasty Shoes Piece -->
 				<item id="1879" min="3" max="9" chance="7.60815042480469" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="22.8244512744141" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="22.8244512744141" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="2.14818807867432" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="1.44155023562622" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="1.1908442098999" /> <!-- Adamantine -->
-				<item id="9573" min="1" max="1" chance="1.90203760620117" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.475509401550293" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.0475509401550293" /> <!-- High-Grade Life Stone - Level 80 -->
-				<item id="959" min="1" max="1" chance="0.0109182681274414" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="9573" min="1" max="1" chance="1.90203760620117" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.475509401550293" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.0475509401550293" /> <!-- High-Grade Life Stone: level 80 -->
+				<item id="959" min="1" max="1" chance="0.0109182681274414" /> <!-- Scroll: Enchant Weapon (S) -->
 			</drop>
 			<spoil>
 				<item id="9630" min="1" max="1" chance="26.337" /> <!-- Orichalcum -->
@@ -4698,7 +4615,6 @@
 		</collision>
 	</npc>
 	<npc id="22661" level="81" type="Monster" name="Lesser Giant Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="SetHateGroup" value="ATTACKER_GROUP" />
 			<param name="SetHateGroupRatio" value="35" />
@@ -4756,18 +4672,18 @@
 				<item id="9545" min="1" max="1" chance="1.08309515503597" /> <!-- Sealed Dynasty Shield Piece -->
 				<item id="10114" min="1" max="1" chance="0.626553068278313" /> <!-- Sealed Dynasty Sigil Piece -->
 				<item id="1879" min="3" max="9" chance="7.79709936785889" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="23.3912981035767" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="23.3912981035767" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="2.20154167621994" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="1.47735288044357" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="1.22040512501907" /> <!-- Adamantine -->
-				<item id="9573" min="1" max="1" chance="1.94927484196472" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.48731871049118" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.0487434766387939" /> <!-- High-Grade Life Stone - Level 80 -->
-				<item id="960" min="1" max="1" chance="0.112264737464905" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="9573" min="1" max="1" chance="1.94927484196472" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.48731871049118" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.0487434766387939" /> <!-- High-Grade Life Stone: level 80 -->
+				<item id="960" min="1" max="1" chance="0.112264737464905" /> <!-- Scroll: Enchant Armor (S) -->
 			</drop>
 			<spoil>
 				<item id="9541" min="1" max="1" chance="13.4861" /> <!-- Sealed Dynasty Stocking Piece -->
-				<item id="1808" min="1" max="1" chance="2.2792" /> <!-- Recipe: Soulshot (S-Grade) -->
+				<item id="1808" min="1" max="1" chance="2.2792" /> <!-- Recipe: Soulshot: S Grade -->
 				<item id="9620" min="1" max="1" chance="2.8491" /> <!-- Dynasty Knife Piece -->
 			</spoil>
 		</dropLists>
@@ -4777,7 +4693,6 @@
 		</collision>
 	</npc>
 	<npc id="22662" level="82" type="Monster" name="Lesser Giant Shooter">
-		<!-- Confirmed CT2.5 -->
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<equipment rhand="4028" /> <!-- rhand: Giant Cannon -->
@@ -4824,17 +4739,17 @@
 				<item id="9617" min="1" max="1" chance="0.222454762781858" /> <!-- Dynasty Blade Piece -->
 				<item id="9618" min="1" max="1" chance="0.222455432281852" /> <!-- Dynasty Phantom Piece -->
 				<item id="1879" min="3" max="9" chance="7.4078915608635" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="22.2236746825905" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="22.2236746825905" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="2.09162353351593" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="1.40358270373535" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="1.15949255363846" /> <!-- Adamantine -->
-				<item id="9573" min="1" max="1" chance="1.85198208174133" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.462995520435333" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.0462885222129822" /> <!-- High-Grade Life Stone - Level 80 -->
+				<item id="9573" min="1" max="1" chance="1.85198208174133" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.462995520435333" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.0462885222129822" /> <!-- High-Grade Life Stone: level 80 -->
 				<item id="5272" min="1" max="1" chance="0.118570678424835" /> <!-- Recipe: Greater Soulshot (S) Compressed Package(100%) -->
 			</drop>
 			<spoil>
-				<item id="960" min="1" max="1" chance="1.9489" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="960" min="1" max="1" chance="1.9489" /> <!-- Scroll: Enchant Armor (S) -->
 				<item id="1894" min="1" max="3" chance="85.4794" /> <!-- Crafted Leather -->
 				<item id="9545" min="1" max="1" chance="20.8828" /> <!-- Sealed Dynasty Shield Piece -->
 			</spoil>
@@ -4845,7 +4760,6 @@
 		</collision>
 	</npc>
 	<npc id="22663" level="82" type="Monster" name="Lesser Giant Scout">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="6143" level="1" /> <!-- Ancient Beam -->
 		</parameters>
@@ -4895,18 +4809,18 @@
 				<item id="9449" min="1" max="1" chance="0.000533778194367886" /> <!-- Dynasty Mace -->
 				<item id="10252" min="1" max="1" chance="0.000533778194367886" /> <!-- Dynasty Staff -->
 				<item id="10253" min="1" max="1" chance="0.000533778194367886" /> <!-- Dynasty Crusher -->
-				<item id="9622" min="1" max="1" chance="0.161477470896184" /> <!-- Dynasty Cudgel Piece -->
+				<item id="9622" min="1" max="1" chance="0.161477470896184" /> <!-- Halberd Cudgel Piece -->
 				<item id="9623" min="1" max="1" chance="0.161477470896184" /> <!-- Dynasty Mace Piece -->
 				<item id="10546" min="1" max="1" chance="0.167355629034162" /> <!-- Dynasty Staff Fragment -->
 				<item id="10547" min="1" max="1" chance="0.167354309434175" /> <!-- Dynasty Crusher Fragment -->
 				<item id="1879" min="3" max="9" chance="7.4078915608635" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="22.2236746825905" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="22.2236746825905" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="2.09162353351593" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="1.40358270373535" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="1.15949255363846" /> <!-- Adamantine -->
-				<item id="9573" min="1" max="1" chance="1.85198208174133" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.462995520435333" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.0462885222129822" /> <!-- High-Grade Life Stone - Level 80 -->
+				<item id="9573" min="1" max="1" chance="1.85198208174133" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.462995520435333" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.0462885222129822" /> <!-- High-Grade Life Stone: level 80 -->
 				<item id="5277" min="1" max="1" chance="0.118570678424835" /> <!-- Recipe: Greater Spiritshot (S) Compressed Package(100%) -->
 			</drop>
 			<spoil>
@@ -4921,7 +4835,6 @@
 		</collision>
 	</npc>
 	<npc id="22664" level="82" type="Monster" name="Lesser Giant Mage">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="W_LongRangeDDMagic" id="6144" level="1" /> <!-- Ancient Beam -->
 			<skill name="W_ShortRangeDDMagic" id="4160" level="9" /> <!-- NPC Aura Burn - Magic -->
@@ -4975,9 +4888,9 @@
 				<item id="4040" min="1" max="1" chance="6.13114335860062" /> <!-- Mold Lubricant -->
 				<item id="9628" min="1" max="1" chance="2.40437697920609" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="1.6134602310791" /> <!-- Orichalcum -->
-				<item id="9573" min="1" max="1" chance="2.12887113822937" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.532217784557342" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.0532079797058105" /> <!-- High-Grade Life Stone - Level 80 -->
+				<item id="9573" min="1" max="1" chance="2.12887113822937" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.532217784557342" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.0532079797058105" /> <!-- High-Grade Life Stone: level 80 -->
 				<item id="5282" min="1" max="1" chance="0.136248856746674" /> <!-- Recipe: Greater Blessed Spiritshot (S) Compressed Package(100%) -->
 			</drop>
 			<spoil>
@@ -4992,7 +4905,6 @@
 		</collision>
 	</npc>
 	<npc id="22665" level="82" type="Monster" name="Lesser Giant Elder">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="CheckMagic" id="4036" level="9" /> <!-- Poison -->
 			<skill name="CheckMagic1" id="4046" level="9" /> <!-- Sleep -->
@@ -5052,13 +4964,13 @@
 				<item id="4040" min="1" max="1" chance="6.05760366210937" /> <!-- Mold Lubricant -->
 				<item id="9628" min="1" max="1" chance="2.37552439263916" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="1.59409900718689" /> <!-- Orichalcum -->
-				<item id="9573" min="1" max="1" chance="2.10334374983215" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.525842796157837" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.052592510055542" /> <!-- High-Grade Life Stone - Level 80 -->
+				<item id="9573" min="1" max="1" chance="2.10334374983215" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.525842796157837" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.052592510055542" /> <!-- High-Grade Life Stone: level 80 -->
 				<item id="6901" min="1" max="1" chance="0.302907617904663" /> <!-- Recipe: Shining Arrow (100%) -->
 			</drop>
 			<spoil>
-				<item id="1808" min="1" max="1" chance="2.1861" /> <!-- Recipe: Soulshot (S-Grade) -->
+				<item id="1808" min="1" max="1" chance="2.1861" /> <!-- Recipe: Soulshot: S Grade -->
 				<item id="9623" min="1" max="1" chance="2.6477" /> <!-- Dynasty Mace Piece -->
 				<item id="3036" min="1" max="1" chance="2.1861" /> <!-- Recipe: Spiritshot S -->
 			</spoil>
@@ -5069,7 +4981,6 @@
 		</collision>
 	</npc>
 	<npc id="22666" level="82" type="Monster" name="Barif">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="22667" count="3" respawnTime="0" weightPoint="1" />
@@ -5125,13 +5036,13 @@
 				<item id="9446" min="1" max="1" chance="0.000255998405098915" /> <!-- Dynasty Knife -->
 				<item id="9620" min="1" max="1" chance="0.0799440031923056" /> <!-- Dynasty Knife Piece -->
 				<item id="1879" min="1" max="1" chance="5.33110992804337" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="2.66555496402168" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="2.66555496402168" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="0.250877011070251" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.168354939891815" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.139071201267242" /> <!-- Adamantine -->
-				<item id="9573" min="1" max="1" chance="0.222133268835068" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.0555311041088104" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.00555045469093323" /> <!-- High-Grade Life Stone - Level 80 -->
+				<item id="9573" min="1" max="1" chance="0.222133268835068" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.0555311041088104" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.00555045469093323" /> <!-- High-Grade Life Stone: level 80 -->
 				<item id="5157" min="1" max="1" chance="0.014216954120636" /> <!-- Recipe: Soulshot (S) Compressed Package (100%) -->
 			</drop>
 			<spoil>
@@ -5146,7 +5057,6 @@
 		</collision>
 	</npc>
 	<npc id="22667" level="81" type="Monster" name="Barif's Pet">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial" id="4032" level="9" /> <!-- NPC Strike -->
 		</parameters>
@@ -5198,9 +5108,9 @@
 				<item id="4039" min="1" max="1" chance="1.23756515970612" /> <!-- Mold Glue -->
 				<item id="4041" min="1" max="1" chance="0.322843471740723" /> <!-- Mold Hardener -->
 				<item id="4044" min="1" max="1" chance="1.23756515970612" /> <!-- Thons -->
-				<item id="9573" min="1" max="1" chance="0.25782663067627" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.0644566576690674" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.00644655494689941" /> <!-- High-Grade Life Stone - Level 80 -->
+				<item id="9573" min="1" max="1" chance="0.25782663067627" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.0644566576690674" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.00644655494689941" /> <!-- High-Grade Life Stone: level 80 -->
 				<item id="5162" min="1" max="1" chance="0.0164987347640991" /> <!-- Recipe: Spiritshot (S) Compressed Package (100%) -->
 			</drop>
 			<spoil>
@@ -5215,7 +5125,6 @@
 		</collision>
 	</npc>
 	<npc id="22668" level="81" type="Monster" name="Gamlin" title="Scout">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<acquire exp="25150" sp="2646" />
@@ -5260,20 +5169,20 @@
 				<item id="9514" min="1" max="1" chance="0.000342073610961437" /> <!-- Sealed Dynasty Breast Plate -->
 				<item id="9515" min="1" max="1" chance="0.000547100817531347" /> <!-- Sealed Dynasty Gaiter -->
 				<item id="9530" min="1" max="1" chance="0.0911362205203772" /> <!-- Sealed Dynasty Breast Plate Piece -->
-				<item id="9531" min="1" max="1" chance="0.269574616638273" /> <!-- Sealed Dynasty Gaiters Piece -->
+				<item id="9531" min="1" max="1" chance="0.269574616638273" /> <!-- Sealed Dynasty Gaiter Piece -->
 				<item id="1879" min="1" max="1" chance="4.63668773157311" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="2.31834386578655" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="2.31834386578655" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="0.218198156681061" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.146425283830643" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.120956000051498" /> <!-- Adamantine -->
-				<item id="9573" min="1" max="1" chance="0.193198530190468" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.0482977077226639" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.00482746098232269" /> <!-- High-Grade Life Stone - Level 80 -->
+				<item id="9573" min="1" max="1" chance="0.193198530190468" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.0482977077226639" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.00482746098232269" /> <!-- High-Grade Life Stone: level 80 -->
 				<item id="5167" min="1" max="1" chance="0.0123650754985809" /> <!-- Recipe: Blessed Spiritshot (S) Compressed Package (100%) -->
 			</drop>
 			<spoil>
 				<item id="5157" min="1" max="1" chance="0.2259" /> <!-- Recipe: Soulshot (S) Compressed Package (100%) -->
-				<item id="9622" min="1" max="1" chance="0.2736" /> <!-- Dynasty Cudgel Piece -->
+				<item id="9622" min="1" max="1" chance="0.2736" /> <!-- Halberd Cudgel Piece -->
 				<item id="9628" min="1" max="1" chance="3.9865" /> <!-- Leonard -->
 			</spoil>
 		</dropLists>
@@ -5283,7 +5192,6 @@
 		</collision>
 	</npc>
 	<npc id="22669" level="81" type="Monster" name="Leogul" title="Scout">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DeBuff" id="4037" level="3" /> <!-- Decrease P. Atk. -->
 		</parameters>
@@ -5337,9 +5245,9 @@
 				<item id="4039" min="1" max="1" chance="1.04325399791718" /> <!-- Mold Glue -->
 				<item id="4041" min="1" max="1" chance="0.272151915908813" /> <!-- Mold Hardener -->
 				<item id="4044" min="1" max="1" chance="1.04325399791718" /> <!-- Thons -->
-				<item id="9573" min="1" max="1" chance="0.217343024482727" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.0543376262207031" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.00543451066207886" /> <!-- High-Grade Life Stone - Level 80 -->
+				<item id="9573" min="1" max="1" chance="0.217343024482727" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.0543376262207031" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.00543451066207886" /> <!-- High-Grade Life Stone: level 80 -->
 				<item id="9625" min="1" max="1" chance="0.006261094871521" /> <!-- Giant's Codex - Oblivion -->
 			</drop>
 			<spoil>
@@ -5354,7 +5262,6 @@
 		</collision>
 	</npc>
 	<npc id="22670" level="80" type="Monster" name="Cursed Lord">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="22671" count="2" respawnTime="0" weightPoint="1" />
@@ -5412,17 +5319,17 @@
 				<item id="9540" min="1" max="1" chance="0.138316995475113" /> <!-- Sealed Dynasty Tunic Piece -->
 				<item id="9541" min="1" max="1" chance="0.203318321925163" /> <!-- Sealed Dynasty Stocking Piece -->
 				<item id="1879" min="1" max="1" chance="5.7268870593071" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="2.86344352965355" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="2.86344352965355" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="0.269502802532196" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.180849564972877" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.149398705703735" /> <!-- Adamantine -->
-				<item id="9573" min="1" max="1" chance="0.238621877287865" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.0596530945968628" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.00596530945968628" /> <!-- High-Grade Life Stone - Level 80 -->
+				<item id="9573" min="1" max="1" chance="0.238621877287865" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.0596530945968628" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.00596530945968628" /> <!-- High-Grade Life Stone: level 80 -->
 				<item id="9626" min="1" max="1" chance="0.00457846999931335" /> <!-- Giant's Codex - Discipline -->
 			</drop>
 			<spoil>
-				<item id="959" min="1" max="1" chance="0.0251" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="959" min="1" max="1" chance="0.0251" /> <!-- Scroll: Enchant Weapon (S) -->
 				<item id="1894" min="1" max="1" chance="22.0275" /> <!-- Crafted Leather -->
 				<item id="9545" min="1" max="1" chance="2.6907" /> <!-- Sealed Dynasty Shield Piece -->
 			</spoil>
@@ -5433,7 +5340,6 @@
 		</collision>
 	</npc>
 	<npc id="22671" level="80" type="Monster" name="Cursed Guardian!">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4039" level="9" /> <!-- NPC MP Drain -->
 			<skill name="MagicHeal" id="4097" level="9" /> <!-- NPC Chant of Life -->
@@ -5497,7 +5403,7 @@
 			</drop>
 			<spoil>
 				<item id="9541" min="1" max="1" chance="1.5745" /> <!-- Sealed Dynasty Stocking Piece -->
-				<item id="1808" min="1" max="1" chance="0.2661" /> <!-- Recipe: Soulshot (S-Grade) -->
+				<item id="1808" min="1" max="1" chance="0.2661" /> <!-- Recipe: Soulshot: S Grade -->
 				<item id="9620" min="1" max="1" chance="0.3326" /> <!-- Dynasty Knife Piece -->
 			</spoil>
 		</dropLists>
@@ -5507,7 +5413,6 @@
 		</collision>
 	</npc>
 	<npc id="22672" level="80" type="Monster" name="Cursed Seer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="MagicHeal" id="4065" level="9" /> <!-- NPC Heal -->
 			<skill name="DeBuff" id="4098" level="9" /> <!-- Silence -->
@@ -5569,7 +5474,7 @@
 				<item id="9543" min="1" max="1" chance="0.117231301124632" /> <!-- Sealed Dynasty Glove Piece -->
 				<item id="9544" min="1" max="1" chance="0.117229887924612" /> <!-- Sealed Dynasty Shoes Piece -->
 				<item id="1879" min="1" max="1" chance="8.16626638400173" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="4.08313994030094" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="4.08313994030094" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="0.384288696101189" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.257879539086342" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.213030336784363" /> <!-- Adamantine -->
@@ -5587,7 +5492,6 @@
 		</collision>
 	</npc>
 	<npc id="22673" level="80" type="Monster" name="Hirokai">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DeBuff" id="4088" level="9" /> <!-- Bleed -->
 		</parameters>
@@ -5645,7 +5549,7 @@
 				<item id="9545" min="1" max="1" chance="0.108302964160979" /> <!-- Sealed Dynasty Shield Piece -->
 				<item id="10114" min="1" max="1" chance="0.0626505299047828" /> <!-- Sealed Dynasty Sigil Piece -->
 				<item id="1879" min="1" max="1" chance="7.01985727683449" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="3.50993443936729" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="3.50993443936729" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="0.330340901567459" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.221677505224228" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.183124391189575" /> <!-- Adamantine -->
@@ -5663,7 +5567,6 @@
 		</collision>
 	</npc>
 	<npc id="22674" level="80" type="Monster" name="Imagro">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4001" level="9" /> <!-- NPC Windstrike -->
 		</parameters>
@@ -5787,7 +5690,7 @@
 				<item id="9449" min="1" max="1" chance="0.0000571962977722287" /> <!-- Dynasty Mace -->
 				<item id="10252" min="1" max="1" chance="0.0000571962977722287" /> <!-- Dynasty Staff -->
 				<item id="10253" min="1" max="1" chance="0.0000571962977722287" /> <!-- Dynasty Crusher -->
-				<item id="9622" min="1" max="1" chance="0.0173029052260593" /> <!-- Dynasty Cudgel Piece -->
+				<item id="9622" min="1" max="1" chance="0.0173029052260593" /> <!-- Halberd Cudgel Piece -->
 				<item id="9623" min="1" max="1" chance="0.0173029052260593" /> <!-- Dynasty Mace Piece -->
 				<item id="10546" min="1" max="1" chance="0.0179327715015262" /> <!-- Dynasty Staff Fragment -->
 				<item id="10547" min="1" max="1" chance="0.0179326301015317" /> <!-- Dynasty Crusher Fragment -->
@@ -5809,7 +5712,6 @@
 		</collision>
 	</npc>
 	<npc id="22676" level="80" type="Monster" name="Hamlet">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<acquire exp="24791" sp="2648" />
@@ -5855,15 +5757,15 @@
 				<item id="9450" min="1" max="1" chance="0.000224650798782706" /> <!-- Dynasty Bagh-Nakh -->
 				<item id="9624" min="1" max="1" chance="0.0679753488316685" /> <!-- Dynasty Bagh-Nakh Piece -->
 				<item id="1879" min="1" max="1" chance="7.01985727683449" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="3.50993443936729" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="3.50993443936729" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="0.330340901567459" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.221677505224228" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.183124391189575" /> <!-- Adamantine -->
-				<item id="9551" min="1" max="1" chance="0.336965586524963" /> <!-- Holy Stone -->
+				<item id="9551" min="1" max="1" chance="0.336965586524963" /> <!-- Divine Stone -->
 			</drop>
 			<spoil>
 				<item id="5162" min="1" max="1" chance="0.228" /> <!-- Recipe: Spiritshot (S) Compressed Package (100%) -->
-				<item id="9622" min="1" max="1" chance="0.2761" /> <!-- Dynasty Cudgel Piece -->
+				<item id="9622" min="1" max="1" chance="0.2761" /> <!-- Halberd Cudgel Piece -->
 				<item id="5167" min="1" max="1" chance="0.228" /> <!-- Recipe: Blessed Spiritshot (S) Compressed Package (100%) -->
 			</spoil>
 		</dropLists>
@@ -5873,7 +5775,6 @@
 		</collision>
 	</npc>
 	<npc id="22677" level="80" type="Monster" name="Klennot">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial" id="4073" level="9" /> <!-- Stun -->
 		</parameters>
@@ -5924,11 +5825,11 @@
 				<item id="9445" min="1" max="1" chance="0.000230947191238403" /> <!-- Dynasty Bow -->
 				<item id="9619" min="1" max="1" chance="0.0726690500431061" /> <!-- Dynasty Bow Piece -->
 				<item id="1879" min="1" max="1" chance="7.21642424745941" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="3.60820633267975" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="3.60820633267975" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="0.339598751594544" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.227889397918701" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.188255452011108" /> <!-- Adamantine -->
-				<item id="959" min="1" max="1" chance="0.00172573288726807" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="959" min="1" max="1" chance="0.00172573288726807" /> <!-- Scroll: Enchant Weapon (S) -->
 			</drop>
 			<spoil>
 				<item id="1894" min="1" max="1" chance="18.5045" /> <!-- Crafted Leather -->
@@ -5942,7 +5843,6 @@
 		</collision>
 	</npc>
 	<npc id="22678" level="81" type="Monster" name="Grave Robber Summoner" title="Lunatic">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates1">
 				<npc id="22683" count="1" respawnTime="0" weightPoint="1" /> <!-- Servitor of Darkness -->
@@ -6005,11 +5905,11 @@
 				<item id="9446" min="1" max="1" chance="0.000124168797165155" /> <!-- Dynasty Knife -->
 				<item id="9620" min="1" max="1" chance="0.0387758303147256" /> <!-- Dynasty Knife Piece -->
 				<item id="1879" min="1" max="1" chance="3.32682982162476" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="1.6634055838623" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="1.6634055838623" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="0.156562183929443" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.105058765625" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.0867779434814453" /> <!-- Adamantine -->
-				<item id="960" min="1" max="1" chance="0.00798386926269531" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="960" min="1" max="1" chance="0.00798386926269531" /> <!-- Scroll: Enchant Armor (S) -->
 				<item id="1345" min="10" max="30" chance="13.3072819786987" /> <!-- Shining Arrow -->
 				<item id="8600" min="1" max="1" chance="28.6" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="19.76" /> <!-- Greater Herb of Life -->
@@ -6018,7 +5918,7 @@
 				<item id="8604" min="1" max="1" chance="8.91" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.32" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -6040,7 +5940,6 @@
 		</collision>
 	</npc>
 	<npc id="22679" level="82" type="Monster" name="Grave Robber Magician" title="Lunatic">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates1">
 				<npc id="22685" count="1" respawnTime="0" weightPoint="1" /> <!-- Servitor of Darkness -->
@@ -6103,7 +6002,7 @@
 				<item id="9447" min="1" max="1" chance="0.000127634996082634" /> <!-- Dynasty Halberd -->
 				<item id="9621" min="1" max="1" chance="0.0400723637701012" /> <!-- Dynasty Halberd Piece -->
 				<item id="1879" min="1" max="1" chance="3.98322381036282" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="1.99161190518141" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="1.99161190518141" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="0.187448914682865" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.125785475897789" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.103907792341709" /> <!-- Adamantine -->
@@ -6115,7 +6014,7 @@
 				<item id="8604" min="1" max="1" chance="8.91" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.32" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -6137,7 +6036,6 @@
 		</collision>
 	</npc>
 	<npc id="22680" level="81" type="Monster" name="Grave Robber Worker" title="Lunatic">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="5082" level="1" /> <!-- NPC Spinning, Slashing Trick -->
 			<!-- <skill name="SelfBuff" id="6145" level="1" /> --> <!-- Earthworm's Evil Aura -->
@@ -6186,7 +6084,7 @@
 				<item id="9514" min="1" max="1" chance="0.000200079003721476" /> <!-- Sealed Dynasty Breast Plate -->
 				<item id="9515" min="1" max="1" chance="0.000319999505952001" /> <!-- Sealed Dynasty Gaiter -->
 				<item id="9530" min="1" max="1" chance="0.0533056149914861" /> <!-- Sealed Dynasty Breast Plate Piece -->
-				<item id="9531" min="1" max="1" chance="0.157674310432747" /> <!-- Sealed Dynasty Gaiters Piece -->
+				<item id="9531" min="1" max="1" chance="0.157674310432747" /> <!-- Sealed Dynasty Gaiter Piece -->
 				<item id="1894" min="1" max="1" chance="0.856278479576111" /> <!-- Crafted Leather -->
 				<item id="4039" min="1" max="1" chance="0.8134692995224" /> <!-- Mold Glue -->
 				<item id="4041" min="1" max="1" chance="0.212205257331848" /> <!-- Mold Hardener -->
@@ -6200,7 +6098,7 @@
 				<item id="8604" min="1" max="1" chance="8.91" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.32" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -6222,7 +6120,6 @@
 		</collision>
 	</npc>
 	<npc id="22681" level="82" type="Monster" name="Grave Robber Warrior" title="Lunatic">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="DeBuffProb" value="2000" />
 			<skill name="Skill01_ID" id="5082" level="1" /> <!-- NPC Spinning, Slashing Trick -->
@@ -6276,7 +6173,7 @@
 				<item id="9535" min="1" max="1" chance="0.0672032735298872" /> <!-- Sealed Dynasty Leather Armor Piece -->
 				<item id="9536" min="1" max="1" chance="0.0987850896778107" /> <!-- Sealed Dynasty Leather Leggings Piece -->
 				<item id="1879" min="1" max="1" chance="4.17409229451752" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="2.08704614725876" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="2.08704614725876" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="0.196431108982086" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.13181287587738" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.108886855472565" /> <!-- Adamantine -->
@@ -6288,7 +6185,7 @@
 				<item id="8604" min="1" max="1" chance="8.91" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.32" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -6310,7 +6207,6 @@
 		</collision>
 	</npc>
 	<npc id="22682" level="82" type="Monster" name="Grave Robber Warrior of Light" title="Lunatic">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="4643" level="9" /> <!-- Decrease Speed -->
@@ -6375,7 +6271,7 @@
 				<item id="8604" min="1" max="1" chance="8.91" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.32" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -6388,7 +6284,7 @@
 			<spoil>
 				<item id="9540" min="1" max="1" chance="0.6036" /> <!-- Sealed Dynasty Tunic Piece -->
 				<item id="3957" min="1" max="1" chance="0.1499" /> <!-- Recipe: Blessed Spiritshot S -->
-				<item id="9622" min="1" max="1" chance="0.1816" /> <!-- Dynasty Cudgel Piece -->
+				<item id="9622" min="1" max="1" chance="0.1816" /> <!-- Halberd Cudgel Piece -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -6397,7 +6293,6 @@
 		</collision>
 	</npc>
 	<npc id="22683" level="81" type="Monster" name="Servitor of Darkness">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="4643" level="9" /> <!-- Decrease Speed -->
 		</parameters>
@@ -6461,7 +6356,7 @@
 				<item id="8604" min="1" max="1" chance="8.91" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.32" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -6483,7 +6378,6 @@
 		</collision>
 	</npc>
 	<npc id="22684" level="81" type="Monster" name="Servitor of Darkness">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="4573" level="9" /> <!-- NPC Sonic Blaster -->
 		</parameters>
@@ -6541,7 +6435,7 @@
 				<item id="9543" min="1" max="1" chance="0.0583833789749444" /> <!-- Sealed Dynasty Glove Piece -->
 				<item id="9544" min="1" max="1" chance="0.0583826751749217" /> <!-- Sealed Dynasty Shoes Piece -->
 				<item id="1879" min="1" max="1" chance="4.06733526027679" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="2.0336676301384" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="2.0336676301384" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="0.191407165775299" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.128441615562439" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.106101953525543" /> <!-- Adamantine -->
@@ -6553,7 +6447,7 @@
 				<item id="8604" min="1" max="1" chance="8.91" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.32" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -6575,7 +6469,6 @@
 		</collision>
 	</npc>
 	<npc id="22685" level="82" type="Monster" name="Servitor of Darkness">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="4573" level="9" /> <!-- NPC Sonic Blaster -->
 		</parameters>
@@ -6631,7 +6524,7 @@
 				<item id="9545" min="1" max="1" chance="0.0643963580510616" /> <!-- Sealed Dynasty Shield Piece -->
 				<item id="10114" min="1" max="1" chance="0.037251666998148" /> <!-- Sealed Dynasty Sigil Piece -->
 				<item id="1879" min="1" max="1" chance="4.17409229451752" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="2.08704614725876" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="2.08704614725876" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="0.196431108982086" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.13181287587738" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.108886855472565" /> <!-- Adamantine -->
@@ -6643,7 +6536,7 @@
 				<item id="8604" min="1" max="1" chance="8.91" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.32" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -6654,9 +6547,9 @@
 				<item id="13028" min="1" max="1" chance="0.33" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="9531" min="1" max="1" chance="1.3141" /> <!-- Sealed Dynasty Gaiters Piece -->
+				<item id="9531" min="1" max="1" chance="1.3141" /> <!-- Sealed Dynasty Gaiter Piece -->
 				<item id="5167" min="1" max="1" chance="0.1356" /> <!-- Recipe: Blessed Spiritshot (S) Compressed Package (100%) -->
-				<item id="9622" min="1" max="1" chance="0.1642" /> <!-- Dynasty Cudgel Piece -->
+				<item id="9622" min="1" max="1" chance="0.1642" /> <!-- Halberd Cudgel Piece -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -6665,7 +6558,6 @@
 		</collision>
 	</npc>
 	<npc id="22686" level="82" type="Monster" name="Servitor of Darkness">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="4573" level="9" /> <!-- NPC Sonic Blaster -->
 		</parameters>
@@ -6716,7 +6608,7 @@
 				<item id="9617" min="1" max="1" chance="0.0139221134871989" /> <!-- Dynasty Blade Piece -->
 				<item id="9618" min="1" max="1" chance="0.0139221553872004" /> <!-- Dynasty Phantom Piece -->
 				<item id="1879" min="1" max="1" chance="3.57780999705505" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="1.78889497007751" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="1.78889497007751" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="0.168357618804932" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.112980517837524" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.0933247558135986" /> <!-- Adamantine -->
@@ -6729,7 +6621,7 @@
 				<item id="8604" min="1" max="1" chance="8.91" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.32" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -6804,7 +6696,7 @@
 				<item id="9449" min="1" max="1" chance="0.0000557060001082718" /> <!-- Dynasty Mace -->
 				<item id="10252" min="1" max="1" chance="0.0000557060001082718" /> <!-- Dynasty Staff -->
 				<item id="10253" min="1" max="1" chance="0.0000557060001082718" /> <!-- Dynasty Crusher -->
-				<item id="9622" min="1" max="1" chance="0.0112396860218458" /> <!-- Dynasty Cudgel Piece -->
+				<item id="9622" min="1" max="1" chance="0.0112396860218458" /> <!-- Halberd Cudgel Piece -->
 				<item id="9623" min="1" max="1" chance="0.0112396860218458" /> <!-- Dynasty Mace Piece -->
 				<item id="10546" min="1" max="1" chance="0.0116488560226411" /> <!-- Dynasty Staff Fragment -->
 				<item id="10547" min="1" max="1" chance="0.0116489480226412" /> <!-- Dynasty Crusher Fragment -->
@@ -6821,7 +6713,7 @@
 				<item id="8604" min="1" max="1" chance="8.91" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.32" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -6843,7 +6735,6 @@
 		</collision>
 	</npc>
 	<npc id="22688" level="82" type="Monster" name="Evil Spirits of the Mine">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="SelfRangeBuffProb" value="3333" />
 			<param name="IsAggressive" value="1" />
@@ -6898,9 +6789,9 @@
 				<item id="4039" min="1" max="1" chance="0.713419238336086" /> <!-- Mold Glue -->
 				<item id="4041" min="1" max="1" chance="0.186108476887703" /> <!-- Mold Hardener -->
 				<item id="4044" min="1" max="1" chance="0.713419238336086" /> <!-- Thons -->
-				<item id="9573" min="1" max="1" chance="0.148627942278385" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.0371582644195557" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.00371633798193932" /> <!-- High-Grade Life Stone - Level 80 -->
+				<item id="9573" min="1" max="1" chance="0.148627942278385" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.0371582644195557" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.00371633798193932" /> <!-- High-Grade Life Stone: level 80 -->
 				<item id="9625" min="1" max="1" chance="0.00428158966398239" /> <!-- Giant's Codex - Oblivion -->
 				<item id="8600" min="1" max="1" chance="28.6" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="19.76" /> <!-- Greater Herb of Life -->
@@ -6909,7 +6800,7 @@
 				<item id="8604" min="1" max="1" chance="8.91" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.32" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -6921,7 +6812,7 @@
 			</drop>
 			<spoil>
 				<item id="9620" min="1" max="1" chance="0.1931" /> <!-- Dynasty Knife Piece -->
-				<item id="960" min="1" max="1" chance="0.139" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="960" min="1" max="1" chance="0.139" /> <!-- Scroll: Enchant Armor (S) -->
 				<item id="9991" min="1" max="1" chance="0.815" /> <!-- Sealed Dynasty Earring Gemstone -->
 			</spoil>
 		</dropLists>
@@ -6931,7 +6822,6 @@
 		</collision>
 	</npc>
 	<npc id="22689" level="82" type="Monster" name="Mine Bug">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<!-- <skill name="SelfBuff" id="6145" level="1" /> --> <!-- Earthworm's Evil Aura -->
@@ -6981,13 +6871,13 @@
 				<item id="9445" min="1" max="1" chance="0.000105813497016206" /> <!-- Dynasty Bow -->
 				<item id="9619" min="1" max="1" chance="0.0221941858741548" /> <!-- Dynasty Bow Piece -->
 				<item id="1879" min="1" max="1" chance="1.46661455287933" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="0.733307276439667" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="0.733307276439667" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="0.0690177278060913" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.0463142718067169" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.0382599331359863" /> <!-- Adamantine -->
-				<item id="9573" min="1" max="1" chance="0.0611093451366425" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.0152767281341553" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.00152767281341553" /> <!-- High-Grade Life Stone - Level 80 -->
+				<item id="9573" min="1" max="1" chance="0.0611093451366425" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.0152767281341553" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.00152767281341553" /> <!-- High-Grade Life Stone: level 80 -->
 				<item id="9626" min="1" max="1" chance="0.00117251321029663" /> <!-- Giant's Codex - Discipline -->
 				<item id="8600" min="1" max="1" chance="28.6" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="19.76" /> <!-- Greater Herb of Life -->
@@ -6996,7 +6886,7 @@
 				<item id="8604" min="1" max="1" chance="8.91" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.32" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -7018,7 +6908,6 @@
 		</collision>
 	</npc>
 	<npc id="22690" level="82" type="Monster" name="Earthworm's Descendant">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="DeBuffProb" value="5000" />
 			<skill name="Skill01_ID" id="4582" level="9" /> <!-- Poison -->
@@ -7068,13 +6957,13 @@
 				<item id="9446" min="1" max="1" chance="0.000159919195890427" /> <!-- Dynasty Knife -->
 				<item id="9620" min="1" max="1" chance="0.0499400795166492" /> <!-- Dynasty Knife Piece -->
 				<item id="1879" min="1" max="1" chance="2.99333612526512" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="1.49665952288246" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="1.49665952288246" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="0.14085463813591" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.0945179540977478" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.0780874749069214" /> <!-- Adamantine -->
-				<item id="9573" min="1" max="1" chance="0.124714510448456" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.0311871673622131" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.00312554853630066" /> <!-- High-Grade Life Stone - Level 80 -->
+				<item id="9573" min="1" max="1" chance="0.124714510448456" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.0311871673622131" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.00312554853630066" /> <!-- High-Grade Life Stone: level 80 -->
 				<item id="9546" min="1" max="1" chance="0.14367275566864" /> <!-- Fire Stone -->
 				<item id="1345" min="10" max="30" chance="11.9733445010605" /> <!-- Shining Arrow -->
 				<item id="8600" min="1" max="1" chance="28.6" /> <!-- Herb of Life -->
@@ -7084,7 +6973,7 @@
 				<item id="8604" min="1" max="1" chance="8.91" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.32" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -7106,7 +6995,6 @@
 		</collision>
 	</npc>
 	<npc id="22691" level="81" type="Monster" name="Ragna Orc" title="Spirit Infested">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="4032" level="9" /> <!-- NPC Strike -->
 		</parameters>
@@ -7158,13 +7046,13 @@
 				<item id="9447" min="1" max="1" chance="0.000148272502422333" /> <!-- Dynasty Halberd -->
 				<item id="9621" min="1" max="1" chance="0.0465517282605171" /> <!-- Dynasty Halberd Piece -->
 				<item id="1879" min="1" max="1" chance="3.08960337492943" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="1.54480168746471" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="1.54480168746471" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="0.145394526104927" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.0975656456756592" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.0806002279233932" /> <!-- Adamantine -->
-				<item id="9573" min="1" max="1" chance="0.128734791555405" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.0321810626888275" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.00322021442890167" /> <!-- High-Grade Life Stone - Level 80 -->
+				<item id="9573" min="1" max="1" chance="0.128734791555405" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.0321810626888275" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.00322021442890167" /> <!-- High-Grade Life Stone: level 80 -->
 				<item id="9547" min="1" max="1" chance="0.148298516530991" /> <!-- Water Stone -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
@@ -7173,7 +7061,7 @@
 				<item id="8604" min="1" max="1" chance="8.91" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.32" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -7187,7 +7075,7 @@
 				<item id="13028" min="1" max="1" chance="0.33" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="959" min="1" max="1" chance="0.0135" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="959" min="1" max="1" chance="0.0135" /> <!-- Scroll: Enchant Weapon (S) -->
 				<item id="9628" min="1" max="1" chance="2.6563" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="1.7825" /> <!-- Orichalcum -->
 			</spoil>
@@ -7198,7 +7086,6 @@
 		</collision>
 	</npc>
 	<npc id="22692" level="82" type="Monster" name="Ragna Orc Warrior" title="Spirit Infested">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="BuffDelay" value="10" />
 			<skill name="Skill01_ID" id="4032" level="9" /> <!-- NPC Strike -->
@@ -7253,14 +7140,14 @@
 				<item id="9514" min="1" max="1" chance="0.000241608401894569" /> <!-- Sealed Dynasty Breast Plate -->
 				<item id="9515" min="1" max="1" chance="0.000386420203030109" /> <!-- Sealed Dynasty Gaiter -->
 				<item id="9530" min="1" max="1" chance="0.0643699949047565" /> <!-- Sealed Dynasty Breast Plate Piece -->
-				<item id="9531" min="1" max="1" chance="0.190401978493035" /> <!-- Sealed Dynasty Gaiters Piece -->
+				<item id="9531" min="1" max="1" chance="0.190401978493035" /> <!-- Sealed Dynasty Gaiter Piece -->
 				<item id="1894" min="1" max="1" chance="0.775597464034796" /> <!-- Crafted Leather -->
 				<item id="4039" min="1" max="1" chance="0.736817731533051" /> <!-- Mold Glue -->
 				<item id="4041" min="1" max="1" chance="0.192213076573849" /> <!-- Mold Hardener -->
 				<item id="4044" min="1" max="1" chance="0.736817731533051" /> <!-- Thons -->
-				<item id="9573" min="1" max="1" chance="0.153503694069386" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.038377330517292" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.00383829585170746" /> <!-- High-Grade Life Stone - Level 80 -->
+				<item id="9573" min="1" max="1" chance="0.153503694069386" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.038377330517292" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.00383829585170746" /> <!-- High-Grade Life Stone: level 80 -->
 				<item id="9548" min="1" max="1" chance="0.176834567167997" /> <!-- Earth Stone -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
@@ -7269,7 +7156,7 @@
 				<item id="8604" min="1" max="1" chance="8.91" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.32" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -7284,8 +7171,8 @@
 			</drop>
 			<spoil>
 				<item id="9533" min="1" max="1" chance="1.7174" /> <!-- Sealed Dynasty Gauntlet Piece -->
-				<item id="1808" min="1" max="1" chance="0.1595" /> <!-- Recipe: Soulshot (S-Grade) -->
-				<item id="9531" min="1" max="1" chance="1.5464" /> <!-- Sealed Dynasty Gaiters Piece -->
+				<item id="1808" min="1" max="1" chance="0.1595" /> <!-- Recipe: Soulshot: S Grade -->
+				<item id="9531" min="1" max="1" chance="1.5464" /> <!-- Sealed Dynasty Gaiter Piece -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -7294,7 +7181,6 @@
 		</collision>
 	</npc>
 	<npc id="22693" level="82" type="Monster" name="Ragna Orc Hero" title="Spirit Infested">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="BuffDelay" value="10" />
@@ -7360,13 +7246,13 @@
 				<item id="9535" min="1" max="1" chance="0.0790958710983544" /> <!-- Sealed Dynasty Leather Armor Piece -->
 				<item id="9536" min="1" max="1" chance="0.11626654936862" /> <!-- Sealed Dynasty Leather Leggings Piece -->
 				<item id="1879" min="1" max="1" chance="3.27473113069439" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="1.63736556534719" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="1.63736556534719" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="0.154106505945683" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.103411738792419" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.0854297602286339" /> <!-- Adamantine -->
-				<item id="9573" min="1" max="1" chance="0.136448526995659" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.0341093386487961" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.00341316834497452" /> <!-- High-Grade Life Stone - Level 80 -->
+				<item id="9573" min="1" max="1" chance="0.136448526995659" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.0341093386487961" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.00341316834497452" /> <!-- High-Grade Life Stone: level 80 -->
 				<item id="9549" min="1" max="1" chance="0.157184502276421" /> <!-- Wind Stone -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
@@ -7375,7 +7261,7 @@
 				<item id="8604" min="1" max="1" chance="8.91" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.32" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -7400,7 +7286,6 @@
 		</collision>
 	</npc>
 	<npc id="22694" level="82" type="Monster" name="Ragna Orc Commander" title="Spirit Infested">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<minions name="Privates1">
@@ -7468,13 +7353,13 @@
 				<item id="9540" min="1" max="1" chance="0.0765964090388417" /> <!-- Sealed Dynasty Tunic Piece -->
 				<item id="9541" min="1" max="1" chance="0.112592478587151" /> <!-- Sealed Dynasty Stocking Piece -->
 				<item id="1879" min="1" max="1" chance="3.17073599174881" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="1.5853679958744" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="1.5853679958744" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="0.149212569051743" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.10012770791626" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.0827167803134918" /> <!-- Adamantine -->
-				<item id="9573" min="1" max="1" chance="0.132115351856232" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.0330261335639954" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.00330477687644958" /> <!-- High-Grade Life Stone - Level 80 -->
+				<item id="9573" min="1" max="1" chance="0.132115351856232" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.0330261335639954" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.00330477687644958" /> <!-- High-Grade Life Stone: level 80 -->
 				<item id="9550" min="1" max="1" chance="0.152192817920685" /> <!-- Dark Stone -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
@@ -7483,7 +7368,7 @@
 				<item id="8604" min="1" max="1" chance="8.91" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.32" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -7508,7 +7393,6 @@
 		</collision>
 	</npc>
 	<npc id="22695" level="81" type="Monster" name="Ragna Orc Healer" title="Spirit Infested">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="HealProb" value="3333" />
 			<param name="SelfRangeHealProb" value="1500" />
@@ -7571,10 +7455,10 @@
 				<item id="4039" min="1" max="1" chance="0.620945344366074" /> <!-- Mold Glue -->
 				<item id="4041" min="1" max="1" chance="0.161984455886841" /> <!-- Mold Hardener -->
 				<item id="4044" min="1" max="1" chance="0.620945344366074" /> <!-- Thons -->
-				<item id="9573" min="1" max="1" chance="0.129356834476471" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.0323466038188934" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.00323909750175476" /> <!-- High-Grade Life Stone - Level 80 -->
-				<item id="9551" min="1" max="1" chance="0.149028065879822" /> <!-- Holy Stone -->
+				<item id="9573" min="1" max="1" chance="0.129356834476471" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.0323466038188934" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.00323909750175476" /> <!-- High-Grade Life Stone: level 80 -->
+				<item id="9551" min="1" max="1" chance="0.149028065879822" /> <!-- Divine Stone -->
 				<item id="1345" min="10" max="30" chance="12.418921677721" /> <!-- Shining Arrow -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
@@ -7583,7 +7467,7 @@
 				<item id="8604" min="1" max="1" chance="8.91" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.32" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -7599,7 +7483,7 @@
 			<spoil>
 				<item id="9534" min="1" max="1" chance="1.6282" /> <!-- Sealed Dynasty Boot Piece -->
 				<item id="5157" min="1" max="1" chance="0.1513" /> <!-- Recipe: Soulshot (S) Compressed Package (100%) -->
-				<item id="9622" min="1" max="1" chance="0.1832" /> <!-- Dynasty Cudgel Piece -->
+				<item id="9622" min="1" max="1" chance="0.1832" /> <!-- Halberd Cudgel Piece -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -7608,7 +7492,6 @@
 		</collision>
 	</npc>
 	<npc id="22696" level="81" type="Monster" name="Ragna Orc Shaman" title="Spirit Infested">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="SelfRangeHealProb" value="1000" />
 			<skill name="Skill01_ID" id="4158" level="9" /> <!-- NPC Prominence - Magic -->
@@ -7675,14 +7558,14 @@
 				<item id="9543" min="1" max="1" chance="0.0663636009888947" /> <!-- Sealed Dynasty Glove Piece -->
 				<item id="9544" min="1" max="1" chance="0.0663628009888828" /> <!-- Sealed Dynasty Shoes Piece -->
 				<item id="1879" min="1" max="1" chance="3.08204240985107" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="1.54102120492554" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="1.54102120492554" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="0.145035426118851" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.0973256647205353" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.0804003509082794" /> <!-- Adamantine -->
-				<item id="9573" min="1" max="1" chance="0.12841673031044" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.032102905002594" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.00320926844024658" /> <!-- High-Grade Life Stone - Level 80 -->
-				<item id="959" min="1" max="1" chance="0.000746103809356689" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="9573" min="1" max="1" chance="0.12841673031044" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.032102905002594" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.00320926844024658" /> <!-- High-Grade Life Stone: level 80 -->
+				<item id="959" min="1" max="1" chance="0.000746103809356689" /> <!-- Scroll: Enchant Weapon (S) -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
@@ -7690,7 +7573,7 @@
 				<item id="8604" min="1" max="1" chance="8.91" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.32" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -7715,7 +7598,6 @@
 		</collision>
 	</npc>
 	<npc id="22697" level="82" type="Monster" name="Ragna Orc Seer" title="Spirit Infested">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="DeBuffProb" value="2000" />
@@ -7787,14 +7669,14 @@
 				<item id="9545" min="1" max="1" chance="0.0660123652455658" /> <!-- Sealed Dynasty Shield Piece -->
 				<item id="10114" min="1" max="1" chance="0.0381864863528162" /> <!-- Sealed Dynasty Sigil Piece -->
 				<item id="1879" min="1" max="1" chance="2.85258282076263" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="1.42629377838135" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="1.42629377838135" /> <!-- High Grade Suede -->
 				<item id="9628" min="1" max="1" chance="0.13423718572998" /> <!-- Leonard -->
 				<item id="9630" min="1" max="1" chance="0.0900834571609497" /> <!-- Orichalcum -->
 				<item id="9629" min="1" max="1" chance="0.0744167689590454" /> <!-- Adamantine -->
-				<item id="9573" min="1" max="1" chance="0.118859393531799" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.0297136643829346" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.00296947203826904" /> <!-- High-Grade Life Stone - Level 80 -->
-				<item id="960" min="1" max="1" chance="0.0068435200881958" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="9573" min="1" max="1" chance="0.118859393531799" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.0297136643829346" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.00296947203826904" /> <!-- High-Grade Life Stone: level 80 -->
+				<item id="960" min="1" max="1" chance="0.0068435200881958" /> <!-- Scroll: Enchant Armor (S) -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2.94" /> <!-- Superior Herb of Life -->
@@ -7802,7 +7684,7 @@
 				<item id="8604" min="1" max="1" chance="8.91" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.32" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -7827,7 +7709,6 @@
 		</collision>
 	</npc>
 	<npc id="22698" level="81" type="Monster" name="Ragna Orc Archer" title="Spirit Infested">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="4040" level="9" /> <!-- NPC Bow Attack -->
@@ -7887,9 +7768,9 @@
 				<item id="4039" min="1" max="1" chance="0.716250714159965" /> <!-- Mold Glue -->
 				<item id="4041" min="1" max="1" chance="0.18684823613739" /> <!-- Mold Hardener -->
 				<item id="4044" min="1" max="1" chance="0.716250714159965" /> <!-- Thons -->
-				<item id="9573" min="1" max="1" chance="0.149219220420837" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.0373048051052094" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.00373099513053894" /> <!-- High-Grade Life Stone - Level 80 -->
+				<item id="9573" min="1" max="1" chance="0.149219220420837" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.0373048051052094" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.00373099513053894" /> <!-- High-Grade Life Stone: level 80 -->
 				<item id="5272" min="1" max="1" chance="0.00954877443408966" /> <!-- Recipe: Greater Soulshot (S) Compressed Package(100%) -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
@@ -7898,7 +7779,7 @@
 				<item id="8604" min="1" max="1" chance="8.91" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.32" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -7923,7 +7804,6 @@
 		</collision>
 	</npc>
 	<npc id="22699" level="82" type="Monster" name="Ragna Orc Sniper" title="Spirit Infested">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="4040" level="9" /> <!-- NPC Bow Attack -->
@@ -7976,7 +7856,7 @@
 				<item id="9449" min="1" max="1" chance="0.0000392365011572838" /> <!-- Dynasty Mace -->
 				<item id="10252" min="1" max="1" chance="0.0000392365011572838" /> <!-- Dynasty Staff -->
 				<item id="10253" min="1" max="1" chance="0.0000392365011572838" /> <!-- Dynasty Crusher -->
-				<item id="9622" min="1" max="1" chance="0.0118697448500991" /> <!-- Dynasty Cudgel Piece -->
+				<item id="9622" min="1" max="1" chance="0.0118697448500991" /> <!-- Halberd Cudgel Piece -->
 				<item id="9623" min="1" max="1" chance="0.0118697448500991" /> <!-- Dynasty Mace Piece -->
 				<item id="10546" min="1" max="1" chance="0.0123018313628435" /> <!-- Dynasty Staff Fragment -->
 				<item id="10547" min="1" max="1" chance="0.0123017343628407" /> <!-- Dynasty Crusher Fragment -->
@@ -7984,9 +7864,9 @@
 				<item id="4039" min="1" max="1" chance="0.735067921051741" /> <!-- Mold Glue -->
 				<item id="4041" min="1" max="1" chance="0.191757078596115" /> <!-- Mold Hardener -->
 				<item id="4044" min="1" max="1" chance="0.735067921051741" /> <!-- Thons -->
-				<item id="9573" min="1" max="1" chance="0.153139480306625" /> <!-- Life Stone - Level 80 -->
-				<item id="9574" min="1" max="1" chance="0.0382848700766563" /> <!-- Mid-Grade Life Stone - Level 80 -->
-				<item id="9575" min="1" max="1" chance="0.003829015147686" /> <!-- High-Grade Life Stone - Level 80 -->
+				<item id="9573" min="1" max="1" chance="0.153139480306625" /> <!-- Life Stone: level 80 -->
+				<item id="9574" min="1" max="1" chance="0.0382848700766563" /> <!-- Mid-Grade Life Stone: level 80 -->
+				<item id="9575" min="1" max="1" chance="0.003829015147686" /> <!-- High-Grade Life Stone: level 80 -->
 				<item id="5277" min="1" max="1" chance="0.00979963807797432" /> <!-- Recipe: Greater Spiritshot (S) Compressed Package(100%) -->
 				<item id="8600" min="1" max="1" chance="23.1" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="15.96" /> <!-- Greater Herb of Life -->
@@ -7995,7 +7875,7 @@
 				<item id="8604" min="1" max="1" chance="8.91" /> <!-- Greater Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="1.32" /> <!-- Superior Herb of Mana -->
 				<item id="8606" min="1" max="1" chance="5" /> <!-- Herb of Power -->
-				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Alacrity -->
+				<item id="8608" min="1" max="1" chance="5" /> <!-- Herb of Atk. Spd. -->
 				<item id="8610" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Probability -->
 				<item id="10655" min="1" max="1" chance="5" /> <!-- Herb of Vampiric Rage -->
 				<item id="10656" min="1" max="1" chance="5" /> <!-- Herb of Critical Attack - Power -->
@@ -8011,7 +7891,7 @@
 			<spoil>
 				<item id="9620" min="1" max="1" chance="0.199" /> <!-- Dynasty Knife Piece -->
 				<item id="5272" min="1" max="1" chance="0.1592" /> <!-- Recipe: Greater Soulshot (S) Compressed Package(100%) -->
-				<item id="9531" min="1" max="1" chance="1.5428" /> <!-- Sealed Dynasty Gaiters Piece -->
+				<item id="9531" min="1" max="1" chance="1.5428" /> <!-- Sealed Dynasty Gaiter Piece -->
 			</spoil>
 		</dropLists>
 		<collision>

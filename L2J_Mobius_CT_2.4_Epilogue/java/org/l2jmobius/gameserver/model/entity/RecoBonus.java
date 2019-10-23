@@ -137,7 +137,7 @@ public class RecoBonus
 	
 	public static int getRecoBonus(PlayerInstance player)
 	{
-		if ((player != null) && player.isOnline() && (player.getRecomHave() != 0) && (player.getNevitHourglassTime() > 0))
+		if ((player != null) && player.isOnline() && (player.getRecomHave() != 0))
 		{
 			final int lvl = player.getLevel() / 10;
 			final int exp = (Math.min(100, player.getRecomHave()) - 1) / 10;

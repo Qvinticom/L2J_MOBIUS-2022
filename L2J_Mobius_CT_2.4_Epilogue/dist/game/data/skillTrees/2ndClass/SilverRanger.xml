@@ -2,41 +2,29 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
 	<!-- Silver Ranger -->
 	<skillTree type="classSkillTree" classId="24" parentClassId="22">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="1" getLevel="52" learnedByNpc="true">
-			<item id="8618" count="1" />
-		</skill>
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="2" getLevel="61" learnedByNpc="true">
-			<item id="8619" count="1" />
-		</skill>
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="3" getLevel="76" learnedByNpc="true">
-			<item id="8620" count="1" />
-		</skill>
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="4" getLevel="76" learnedByNpc="true">
-			<item id="8621" count="1" />
-		</skill>
-		<skill skillName="Bow Mastery" skillId="208" skillLvl="16" getLevel="40" levelUpSp="11000" learnedByNpc="true" />
-		<skill skillName="Bow Mastery" skillId="208" skillLvl="17" getLevel="40" levelUpSp="11000" learnedByNpc="true" />
-		<skill skillName="Bow Mastery" skillId="208" skillLvl="18" getLevel="40" levelUpSp="11000" learnedByNpc="true" />
-		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="11" getLevel="40" levelUpSp="11000" learnedByNpc="true" />
-		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="12" getLevel="40" levelUpSp="11000" learnedByNpc="true" />
-		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="13" getLevel="40" levelUpSp="11000" learnedByNpc="true" />
-		<skill skillName="Elemental Heal" skillId="58" skillLvl="19" getLevel="40" levelUpSp="11000" learnedByNpc="true" />
-		<skill skillName="Elemental Heal" skillId="58" skillLvl="20" getLevel="40" levelUpSp="11000" learnedByNpc="true" />
-		<skill skillName="Elemental Heal" skillId="58" skillLvl="21" getLevel="40" levelUpSp="11000" learnedByNpc="true" />
-		<skill skillName="Charm" skillId="15" skillLvl="16" getLevel="40" levelUpSp="11000" learnedByNpc="true" />
-		<skill skillName="Charm" skillId="15" skillLvl="17" getLevel="40" levelUpSp="11000" learnedByNpc="true" />
-		<skill skillName="Charm" skillId="15" skillLvl="18" getLevel="40" levelUpSp="11000" learnedByNpc="true" />
-		<skill skillName="Stun Shot" skillId="101" skillLvl="4" getLevel="40" levelUpSp="11000" learnedByNpc="true" />
-		<skill skillName="Stun Shot" skillId="101" skillLvl="5" getLevel="40" levelUpSp="11000" learnedByNpc="true" />
-		<skill skillName="Stun Shot" skillId="101" skillLvl="6" getLevel="40" levelUpSp="11000" learnedByNpc="true" />
-		<skill skillName="Double Shot" skillId="19" skillLvl="1" getLevel="40" levelUpSp="11000" learnedByNpc="true" />
-		<skill skillName="Double Shot" skillId="19" skillLvl="2" getLevel="40" levelUpSp="11000" learnedByNpc="true" />
-		<skill skillName="Double Shot" skillId="19" skillLvl="3" getLevel="40" levelUpSp="11000" learnedByNpc="true" />
-		<skill skillName="Vicious Stance" skillId="312" skillLvl="6" getLevel="40" levelUpSp="33000" learnedByNpc="true" />
-		<skill skillName="Entangle" skillId="102" skillLvl="2" getLevel="40" levelUpSp="33000" learnedByNpc="true" />
-		<skill skillName="Poison Recovery" skillId="21" skillLvl="2" getLevel="40" levelUpSp="33000" learnedByNpc="true" />
-		<skill skillName="Spirit Barrier" skillId="123" skillLvl="1" getLevel="40" levelUpSp="33000" learnedByNpc="true" />
+		<!-- Confirmed CT2.5 -->
+		<skill skillName="Bow Mastery" skillId="208" skillLvl="16" getLevel="40" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Bow Mastery" skillId="208" skillLvl="17" getLevel="40" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Bow Mastery" skillId="208" skillLvl="18" getLevel="40" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="11" getLevel="40" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="12" getLevel="40" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="13" getLevel="40" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Elemental Heal" skillId="58" skillLvl="19" getLevel="40" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Elemental Heal" skillId="58" skillLvl="20" getLevel="40" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Elemental Heal" skillId="58" skillLvl="21" getLevel="40" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Charm" skillId="15" skillLvl="16" getLevel="40" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Charm" skillId="15" skillLvl="17" getLevel="40" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Charm" skillId="15" skillLvl="18" getLevel="40" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Stunning Shot" skillId="101" skillLvl="4" getLevel="40" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Stunning Shot" skillId="101" skillLvl="5" getLevel="40" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Stunning Shot" skillId="101" skillLvl="6" getLevel="40" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Double Shot" skillId="19" skillLvl="1" getLevel="40" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Double Shot" skillId="19" skillLvl="2" getLevel="40" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Double Shot" skillId="19" skillLvl="3" getLevel="40" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Vicious Stance" skillId="312" skillLvl="6" getLevel="40" levelUpSp="35000" learnedByNpc="true" />
+		<skill skillName="Entangle" skillId="102" skillLvl="2" getLevel="40" levelUpSp="35000" learnedByNpc="true" />
+		<skill skillName="Poison Recovery" skillId="21" skillLvl="2" getLevel="40" levelUpSp="35000" learnedByNpc="true" />
+		<skill skillName="Spirit Barrier" skillId="123" skillLvl="1" getLevel="40" levelUpSp="35000" learnedByNpc="true" />
 		<skill skillName="Long Shot" skillId="113" skillLvl="2" getLevel="40" levelUpSp="35000" learnedByNpc="true" />
 		<skill skillName="Soul of Sagittarius" skillId="303" skillLvl="1" getLevel="40" levelUpSp="33000" learnedByNpc="true" />
 		<skill skillName="Bow Mastery" skillId="208" skillLvl="19" getLevel="43" levelUpSp="14000" learnedByNpc="true" />
@@ -51,9 +39,9 @@
 		<skill skillName="Charm" skillId="15" skillLvl="19" getLevel="43" levelUpSp="14000" learnedByNpc="true" />
 		<skill skillName="Charm" skillId="15" skillLvl="20" getLevel="43" levelUpSp="14000" learnedByNpc="true" />
 		<skill skillName="Charm" skillId="15" skillLvl="21" getLevel="43" levelUpSp="14000" learnedByNpc="true" />
-		<skill skillName="Stun Shot" skillId="101" skillLvl="7" getLevel="43" levelUpSp="14000" learnedByNpc="true" />
-		<skill skillName="Stun Shot" skillId="101" skillLvl="8" getLevel="43" levelUpSp="14000" learnedByNpc="true" />
-		<skill skillName="Stun Shot" skillId="101" skillLvl="9" getLevel="43" levelUpSp="14000" learnedByNpc="true" />
+		<skill skillName="Stunning Shot" skillId="101" skillLvl="7" getLevel="43" levelUpSp="14000" learnedByNpc="true" />
+		<skill skillName="Stunning Shot" skillId="101" skillLvl="8" getLevel="43" levelUpSp="14000" learnedByNpc="true" />
+		<skill skillName="Stunning Shot" skillId="101" skillLvl="9" getLevel="43" levelUpSp="14000" learnedByNpc="true" />
 		<skill skillName="Double Shot" skillId="19" skillLvl="4" getLevel="43" levelUpSp="14000" learnedByNpc="true" />
 		<skill skillName="Double Shot" skillId="19" skillLvl="5" getLevel="43" levelUpSp="14000" learnedByNpc="true" />
 		<skill skillName="Double Shot" skillId="19" skillLvl="6" getLevel="43" levelUpSp="14000" learnedByNpc="true" />
@@ -74,9 +62,9 @@
 		<skill skillName="Charm" skillId="15" skillLvl="22" getLevel="46" levelUpSp="17000" learnedByNpc="true" />
 		<skill skillName="Charm" skillId="15" skillLvl="23" getLevel="46" levelUpSp="17000" learnedByNpc="true" />
 		<skill skillName="Charm" skillId="15" skillLvl="24" getLevel="46" levelUpSp="17000" learnedByNpc="true" />
-		<skill skillName="Stun Shot" skillId="101" skillLvl="10" getLevel="46" levelUpSp="17000" learnedByNpc="true" />
-		<skill skillName="Stun Shot" skillId="101" skillLvl="11" getLevel="46" levelUpSp="17000" learnedByNpc="true" />
-		<skill skillName="Stun Shot" skillId="101" skillLvl="12" getLevel="46" levelUpSp="17000" learnedByNpc="true" />
+		<skill skillName="Stunning Shot" skillId="101" skillLvl="10" getLevel="46" levelUpSp="17000" learnedByNpc="true" />
+		<skill skillName="Stunning Shot" skillId="101" skillLvl="11" getLevel="46" levelUpSp="17000" learnedByNpc="true" />
+		<skill skillName="Stunning Shot" skillId="101" skillLvl="12" getLevel="46" levelUpSp="17000" learnedByNpc="true" />
 		<skill skillName="Double Shot" skillId="19" skillLvl="7" getLevel="46" levelUpSp="17000" learnedByNpc="true" />
 		<skill skillName="Double Shot" skillId="19" skillLvl="8" getLevel="46" levelUpSp="17000" learnedByNpc="true" />
 		<skill skillName="Double Shot" skillId="19" skillLvl="9" getLevel="46" levelUpSp="17000" learnedByNpc="true" />
@@ -99,9 +87,9 @@
 		<skill skillName="Charm" skillId="15" skillLvl="25" getLevel="49" levelUpSp="30000" learnedByNpc="true" />
 		<skill skillName="Charm" skillId="15" skillLvl="26" getLevel="49" levelUpSp="30000" learnedByNpc="true" />
 		<skill skillName="Charm" skillId="15" skillLvl="27" getLevel="49" levelUpSp="30000" learnedByNpc="true" />
-		<skill skillName="Stun Shot" skillId="101" skillLvl="13" getLevel="49" levelUpSp="30000" learnedByNpc="true" />
-		<skill skillName="Stun Shot" skillId="101" skillLvl="14" getLevel="49" levelUpSp="30000" learnedByNpc="true" />
-		<skill skillName="Stun Shot" skillId="101" skillLvl="15" getLevel="49" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Stunning Shot" skillId="101" skillLvl="13" getLevel="49" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Stunning Shot" skillId="101" skillLvl="14" getLevel="49" levelUpSp="30000" learnedByNpc="true" />
+		<skill skillName="Stunning Shot" skillId="101" skillLvl="15" getLevel="49" levelUpSp="30000" learnedByNpc="true" />
 		<skill skillName="Double Shot" skillId="19" skillLvl="10" getLevel="49" levelUpSp="30000" learnedByNpc="true" />
 		<skill skillName="Double Shot" skillId="19" skillLvl="11" getLevel="49" levelUpSp="30000" learnedByNpc="true" />
 		<skill skillName="Double Shot" skillId="19" skillLvl="12" getLevel="49" levelUpSp="30000" learnedByNpc="true" />
@@ -124,9 +112,9 @@
 		<skill skillName="Charm" skillId="15" skillLvl="28" getLevel="52" levelUpSp="45000" learnedByNpc="true" />
 		<skill skillName="Charm" skillId="15" skillLvl="29" getLevel="52" levelUpSp="45000" learnedByNpc="true" />
 		<skill skillName="Charm" skillId="15" skillLvl="30" getLevel="52" levelUpSp="45000" learnedByNpc="true" />
-		<skill skillName="Stun Shot" skillId="101" skillLvl="16" getLevel="52" levelUpSp="45000" learnedByNpc="true" />
-		<skill skillName="Stun Shot" skillId="101" skillLvl="17" getLevel="52" levelUpSp="45000" learnedByNpc="true" />
-		<skill skillName="Stun Shot" skillId="101" skillLvl="18" getLevel="52" levelUpSp="45000" learnedByNpc="true" />
+		<skill skillName="Stunning Shot" skillId="101" skillLvl="16" getLevel="52" levelUpSp="45000" learnedByNpc="true" />
+		<skill skillName="Stunning Shot" skillId="101" skillLvl="17" getLevel="52" levelUpSp="45000" learnedByNpc="true" />
+		<skill skillName="Stunning Shot" skillId="101" skillLvl="18" getLevel="52" levelUpSp="45000" learnedByNpc="true" />
 		<skill skillName="Double Shot" skillId="19" skillLvl="13" getLevel="52" levelUpSp="45000" learnedByNpc="true" />
 		<skill skillName="Double Shot" skillId="19" skillLvl="14" getLevel="52" levelUpSp="45000" learnedByNpc="true" />
 		<skill skillName="Double Shot" skillId="19" skillLvl="15" getLevel="52" levelUpSp="45000" learnedByNpc="true" />
@@ -149,9 +137,9 @@
 		<skill skillName="Charm" skillId="15" skillLvl="31" getLevel="55" levelUpSp="61000" learnedByNpc="true" />
 		<skill skillName="Charm" skillId="15" skillLvl="32" getLevel="55" levelUpSp="61000" learnedByNpc="true" />
 		<skill skillName="Charm" skillId="15" skillLvl="33" getLevel="55" levelUpSp="61000" learnedByNpc="true" />
-		<skill skillName="Stun Shot" skillId="101" skillLvl="19" getLevel="55" levelUpSp="61000" learnedByNpc="true" />
-		<skill skillName="Stun Shot" skillId="101" skillLvl="20" getLevel="55" levelUpSp="61000" learnedByNpc="true" />
-		<skill skillName="Stun Shot" skillId="101" skillLvl="21" getLevel="55" levelUpSp="61000" learnedByNpc="true" />
+		<skill skillName="Stunning Shot" skillId="101" skillLvl="19" getLevel="55" levelUpSp="61000" learnedByNpc="true" />
+		<skill skillName="Stunning Shot" skillId="101" skillLvl="20" getLevel="55" levelUpSp="61000" learnedByNpc="true" />
+		<skill skillName="Stunning Shot" skillId="101" skillLvl="21" getLevel="55" levelUpSp="61000" learnedByNpc="true" />
 		<skill skillName="Double Shot" skillId="19" skillLvl="16" getLevel="55" levelUpSp="61000" learnedByNpc="true" />
 		<skill skillName="Double Shot" skillId="19" skillLvl="17" getLevel="55" levelUpSp="61000" learnedByNpc="true" />
 		<skill skillName="Double Shot" skillId="19" skillLvl="18" getLevel="55" levelUpSp="61000" learnedByNpc="true" />
@@ -174,9 +162,9 @@
 		<skill skillName="Charm" skillId="15" skillLvl="34" getLevel="58" levelUpSp="67000" learnedByNpc="true" />
 		<skill skillName="Charm" skillId="15" skillLvl="35" getLevel="58" levelUpSp="67000" learnedByNpc="true" />
 		<skill skillName="Charm" skillId="15" skillLvl="36" getLevel="58" levelUpSp="67000" learnedByNpc="true" />
-		<skill skillName="Stun Shot" skillId="101" skillLvl="22" getLevel="58" levelUpSp="67000" learnedByNpc="true" />
-		<skill skillName="Stun Shot" skillId="101" skillLvl="23" getLevel="58" levelUpSp="67000" learnedByNpc="true" />
-		<skill skillName="Stun Shot" skillId="101" skillLvl="24" getLevel="58" levelUpSp="67000" learnedByNpc="true" />
+		<skill skillName="Stunning Shot" skillId="101" skillLvl="22" getLevel="58" levelUpSp="67000" learnedByNpc="true" />
+		<skill skillName="Stunning Shot" skillId="101" skillLvl="23" getLevel="58" levelUpSp="67000" learnedByNpc="true" />
+		<skill skillName="Stunning Shot" skillId="101" skillLvl="24" getLevel="58" levelUpSp="67000" learnedByNpc="true" />
 		<skill skillName="Double Shot" skillId="19" skillLvl="19" getLevel="58" levelUpSp="67000" learnedByNpc="true" />
 		<skill skillName="Double Shot" skillId="19" skillLvl="20" getLevel="58" levelUpSp="67000" learnedByNpc="true" />
 		<skill skillName="Double Shot" skillId="19" skillLvl="21" getLevel="58" levelUpSp="67000" learnedByNpc="true" />
@@ -189,31 +177,31 @@
 		<skill skillName="Spirit Barrier" skillId="123" skillLvl="3" getLevel="58" levelUpSp="200000" learnedByNpc="true" />
 		<skill skillName="Spirit of Sagittarius" skillId="415" skillLvl="1" getLevel="58" levelUpSp="200000" learnedByNpc="true" />
 		<skill skillName="Blessing of Sagittarius" skillId="416" skillLvl="1" getLevel="58" levelUpSp="200000" learnedByNpc="true" />
-		<skill skillName="Bow Mastery" skillId="208" skillLvl="37" getLevel="60" levelUpSp="120000" learnedByNpc="true" />
-		<skill skillName="Bow Mastery" skillId="208" skillLvl="38" getLevel="60" levelUpSp="120000" learnedByNpc="true" />
-		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="32" getLevel="60" levelUpSp="120000" learnedByNpc="true" />
-		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="33" getLevel="60" levelUpSp="120000" learnedByNpc="true" />
-		<skill skillName="Stun Shot" skillId="101" skillLvl="25" getLevel="60" levelUpSp="120000" learnedByNpc="true" />
-		<skill skillName="Stun Shot" skillId="101" skillLvl="26" getLevel="60" levelUpSp="120000" learnedByNpc="true" />
-		<skill skillName="Double Shot" skillId="19" skillLvl="22" getLevel="60" levelUpSp="120000" learnedByNpc="true" />
-		<skill skillName="Double Shot" skillId="19" skillLvl="23" getLevel="60" levelUpSp="120000" learnedByNpc="true" />
-		<skill skillName="Burst Shot" skillId="24" skillLvl="16" getLevel="60" levelUpSp="120000" learnedByNpc="true" />
-		<skill skillName="Burst Shot" skillId="24" skillLvl="17" getLevel="60" levelUpSp="120000" learnedByNpc="true" />
-		<skill skillName="Elemental Heal" skillId="58" skillLvl="40" getLevel="60" levelUpSp="120000" learnedByNpc="true" />
-		<skill skillName="Elemental Heal" skillId="58" skillLvl="41" getLevel="60" levelUpSp="120000" learnedByNpc="true" />
-		<skill skillName="Charm" skillId="15" skillLvl="37" getLevel="60" levelUpSp="120000" learnedByNpc="true" />
-		<skill skillName="Charm" skillId="15" skillLvl="38" getLevel="60" levelUpSp="120000" learnedByNpc="true" />
-		<skill skillName="Vicious Stance" skillId="312" skillLvl="13" getLevel="60" levelUpSp="240000" learnedByNpc="true" />
-		<skill skillName="Entangle" skillId="102" skillLvl="9" getLevel="60" levelUpSp="240000" learnedByNpc="true" />
-		<skill skillName="Poison Recovery" skillId="21" skillLvl="3" getLevel="60" levelUpSp="240000" learnedByNpc="true" />
-		<skill skillName="Rapid Fire" skillId="413" skillLvl="1" getLevel="60" levelUpSp="240000" learnedByNpc="true" />
+		<skill skillName="Bow Mastery" skillId="208" skillLvl="37" getLevel="60" levelUpSp="132000" learnedByNpc="true" />
+		<skill skillName="Bow Mastery" skillId="208" skillLvl="38" getLevel="60" levelUpSp="132000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="32" getLevel="60" levelUpSp="132000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="33" getLevel="60" levelUpSp="132000" learnedByNpc="true" />
+		<skill skillName="Stunning Shot" skillId="101" skillLvl="25" getLevel="60" levelUpSp="132000" learnedByNpc="true" />
+		<skill skillName="Stunning Shot" skillId="101" skillLvl="26" getLevel="60" levelUpSp="132000" learnedByNpc="true" />
+		<skill skillName="Double Shot" skillId="19" skillLvl="22" getLevel="60" levelUpSp="132000" learnedByNpc="true" />
+		<skill skillName="Double Shot" skillId="19" skillLvl="23" getLevel="60" levelUpSp="132000" learnedByNpc="true" />
+		<skill skillName="Burst Shot" skillId="24" skillLvl="16" getLevel="60" levelUpSp="132000" learnedByNpc="true" />
+		<skill skillName="Burst Shot" skillId="24" skillLvl="17" getLevel="60" levelUpSp="132000" learnedByNpc="true" />
+		<skill skillName="Elemental Heal" skillId="58" skillLvl="40" getLevel="60" levelUpSp="132000" learnedByNpc="true" />
+		<skill skillName="Elemental Heal" skillId="58" skillLvl="41" getLevel="60" levelUpSp="132000" learnedByNpc="true" />
+		<skill skillName="Charm" skillId="15" skillLvl="37" getLevel="60" levelUpSp="132000" learnedByNpc="true" />
+		<skill skillName="Charm" skillId="15" skillLvl="38" getLevel="60" levelUpSp="132000" learnedByNpc="true" />
+		<skill skillName="Vicious Stance" skillId="312" skillLvl="13" getLevel="60" levelUpSp="264000" learnedByNpc="true" />
+		<skill skillName="Entangle" skillId="102" skillLvl="9" getLevel="60" levelUpSp="264000" learnedByNpc="true" />
+		<skill skillName="Poison Recovery" skillId="21" skillLvl="3" getLevel="60" levelUpSp="264000" learnedByNpc="true" />
+		<skill skillName="Rapid Fire" skillId="413" skillLvl="1" getLevel="60" levelUpSp="264000" learnedByNpc="true" />
 		<skill skillName="Quiver of Arrow: A Grade" skillId="323" skillLvl="1" getLevel="60" levelUpSp="240000" learnedByNpc="true" />
 		<skill skillName="Bow Mastery" skillId="208" skillLvl="39" getLevel="62" levelUpSp="170000" learnedByNpc="true" />
 		<skill skillName="Bow Mastery" skillId="208" skillLvl="40" getLevel="62" levelUpSp="170000" learnedByNpc="true" />
 		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="34" getLevel="62" levelUpSp="170000" learnedByNpc="true" />
 		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="35" getLevel="62" levelUpSp="170000" learnedByNpc="true" />
-		<skill skillName="Stun Shot" skillId="101" skillLvl="27" getLevel="62" levelUpSp="170000" learnedByNpc="true" />
-		<skill skillName="Stun Shot" skillId="101" skillLvl="28" getLevel="62" levelUpSp="170000" learnedByNpc="true" />
+		<skill skillName="Stunning Shot" skillId="101" skillLvl="27" getLevel="62" levelUpSp="170000" learnedByNpc="true" />
+		<skill skillName="Stunning Shot" skillId="101" skillLvl="28" getLevel="62" levelUpSp="170000" learnedByNpc="true" />
 		<skill skillName="Double Shot" skillId="19" skillLvl="24" getLevel="62" levelUpSp="170000" learnedByNpc="true" />
 		<skill skillName="Double Shot" skillId="19" skillLvl="25" getLevel="62" levelUpSp="170000" learnedByNpc="true" />
 		<skill skillName="Burst Shot" skillId="24" skillLvl="18" getLevel="62" levelUpSp="170000" learnedByNpc="true" />
@@ -231,8 +219,8 @@
 		<skill skillName="Bow Mastery" skillId="208" skillLvl="42" getLevel="64" levelUpSp="220000" learnedByNpc="true" />
 		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="36" getLevel="64" levelUpSp="220000" learnedByNpc="true" />
 		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="37" getLevel="64" levelUpSp="220000" learnedByNpc="true" />
-		<skill skillName="Stun Shot" skillId="101" skillLvl="29" getLevel="64" levelUpSp="220000" learnedByNpc="true" />
-		<skill skillName="Stun Shot" skillId="101" skillLvl="30" getLevel="64" levelUpSp="220000" learnedByNpc="true" />
+		<skill skillName="Stunning Shot" skillId="101" skillLvl="29" getLevel="64" levelUpSp="220000" learnedByNpc="true" />
+		<skill skillName="Stunning Shot" skillId="101" skillLvl="30" getLevel="64" levelUpSp="220000" learnedByNpc="true" />
 		<skill skillName="Double Shot" skillId="19" skillLvl="26" getLevel="64" levelUpSp="220000" learnedByNpc="true" />
 		<skill skillName="Double Shot" skillId="19" skillLvl="27" getLevel="64" levelUpSp="220000" learnedByNpc="true" />
 		<skill skillName="Burst Shot" skillId="24" skillLvl="20" getLevel="64" levelUpSp="220000" learnedByNpc="true" />
@@ -245,31 +233,31 @@
 		<skill skillName="Entangle" skillId="102" skillLvl="11" getLevel="64" levelUpSp="440000" learnedByNpc="true" />
 		<skill skillName="Soul of Sagittarius" skillId="303" skillLvl="3" getLevel="64" levelUpSp="440000" learnedByNpc="true" />
 		<skill skillName="Rapid Fire" skillId="413" skillLvl="3" getLevel="64" levelUpSp="440000" learnedByNpc="true" />
-		<skill skillName="Bow Mastery" skillId="208" skillLvl="43" getLevel="66" levelUpSp="290000" learnedByNpc="true" />
-		<skill skillName="Bow Mastery" skillId="208" skillLvl="44" getLevel="66" levelUpSp="290000" learnedByNpc="true" />
-		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="38" getLevel="66" levelUpSp="290000" learnedByNpc="true" />
-		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="39" getLevel="66" levelUpSp="290000" learnedByNpc="true" />
-		<skill skillName="Stun Shot" skillId="101" skillLvl="31" getLevel="66" levelUpSp="290000" learnedByNpc="true" />
-		<skill skillName="Stun Shot" skillId="101" skillLvl="32" getLevel="66" levelUpSp="290000" learnedByNpc="true" />
-		<skill skillName="Double Shot" skillId="19" skillLvl="28" getLevel="66" levelUpSp="290000" learnedByNpc="true" />
-		<skill skillName="Double Shot" skillId="19" skillLvl="29" getLevel="66" levelUpSp="290000" learnedByNpc="true" />
-		<skill skillName="Burst Shot" skillId="24" skillLvl="22" getLevel="66" levelUpSp="290000" learnedByNpc="true" />
-		<skill skillName="Burst Shot" skillId="24" skillLvl="23" getLevel="66" levelUpSp="290000" learnedByNpc="true" />
-		<skill skillName="Elemental Heal" skillId="58" skillLvl="46" getLevel="66" levelUpSp="290000" learnedByNpc="true" />
-		<skill skillName="Elemental Heal" skillId="58" skillLvl="47" getLevel="66" levelUpSp="290000" learnedByNpc="true" />
-		<skill skillName="Charm" skillId="15" skillLvl="43" getLevel="66" levelUpSp="290000" learnedByNpc="true" />
-		<skill skillName="Charm" skillId="15" skillLvl="44" getLevel="66" levelUpSp="290000" learnedByNpc="true" />
-		<skill skillName="Vicious Stance" skillId="312" skillLvl="16" getLevel="66" levelUpSp="580000" learnedByNpc="true" />
-		<skill skillName="Entangle" skillId="102" skillLvl="12" getLevel="66" levelUpSp="580000" learnedByNpc="true" />
-		<skill skillName="Rapid Fire" skillId="413" skillLvl="4" getLevel="66" levelUpSp="580000" learnedByNpc="true" />
-		<skill skillName="Spirit of Sagittarius" skillId="415" skillLvl="2" getLevel="66" levelUpSp="580000" learnedByNpc="true" />
-		<skill skillName="Blessing of Sagittarius" skillId="416" skillLvl="2" getLevel="66" levelUpSp="580000" learnedByNpc="true" />
+		<skill skillName="Bow Mastery" skillId="208" skillLvl="43" getLevel="66" levelUpSp="270000" learnedByNpc="true" />
+		<skill skillName="Bow Mastery" skillId="208" skillLvl="44" getLevel="66" levelUpSp="270000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="38" getLevel="66" levelUpSp="270000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="39" getLevel="66" levelUpSp="270000" learnedByNpc="true" />
+		<skill skillName="Stunning Shot" skillId="101" skillLvl="31" getLevel="66" levelUpSp="270000" learnedByNpc="true" />
+		<skill skillName="Stunning Shot" skillId="101" skillLvl="32" getLevel="66" levelUpSp="270000" learnedByNpc="true" />
+		<skill skillName="Double Shot" skillId="19" skillLvl="28" getLevel="66" levelUpSp="270000" learnedByNpc="true" />
+		<skill skillName="Double Shot" skillId="19" skillLvl="29" getLevel="66" levelUpSp="270000" learnedByNpc="true" />
+		<skill skillName="Burst Shot" skillId="24" skillLvl="22" getLevel="66" levelUpSp="270000" learnedByNpc="true" />
+		<skill skillName="Burst Shot" skillId="24" skillLvl="23" getLevel="66" levelUpSp="270000" learnedByNpc="true" />
+		<skill skillName="Elemental Heal" skillId="58" skillLvl="46" getLevel="66" levelUpSp="270000" learnedByNpc="true" />
+		<skill skillName="Elemental Heal" skillId="58" skillLvl="47" getLevel="66" levelUpSp="270000" learnedByNpc="true" />
+		<skill skillName="Charm" skillId="15" skillLvl="43" getLevel="66" levelUpSp="270000" learnedByNpc="true" />
+		<skill skillName="Charm" skillId="15" skillLvl="44" getLevel="66" levelUpSp="270000" learnedByNpc="true" />
+		<skill skillName="Vicious Stance" skillId="312" skillLvl="16" getLevel="66" levelUpSp="540000" learnedByNpc="true" />
+		<skill skillName="Entangle" skillId="102" skillLvl="12" getLevel="66" levelUpSp="540000" learnedByNpc="true" />
+		<skill skillName="Rapid Fire" skillId="413" skillLvl="4" getLevel="66" levelUpSp="540000" learnedByNpc="true" />
+		<skill skillName="Spirit of Sagittarius" skillId="415" skillLvl="2" getLevel="66" levelUpSp="540000" learnedByNpc="true" />
+		<skill skillName="Blessing of Sagittarius" skillId="416" skillLvl="2" getLevel="66" levelUpSp="540000" learnedByNpc="true" />
 		<skill skillName="Bow Mastery" skillId="208" skillLvl="45" getLevel="68" levelUpSp="350000" learnedByNpc="true" />
 		<skill skillName="Bow Mastery" skillId="208" skillLvl="46" getLevel="68" levelUpSp="350000" learnedByNpc="true" />
 		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="40" getLevel="68" levelUpSp="350000" learnedByNpc="true" />
 		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="41" getLevel="68" levelUpSp="350000" learnedByNpc="true" />
-		<skill skillName="Stun Shot" skillId="101" skillLvl="33" getLevel="68" levelUpSp="350000" learnedByNpc="true" />
-		<skill skillName="Stun Shot" skillId="101" skillLvl="34" getLevel="68" levelUpSp="350000" learnedByNpc="true" />
+		<skill skillName="Stunning Shot" skillId="101" skillLvl="33" getLevel="68" levelUpSp="350000" learnedByNpc="true" />
+		<skill skillName="Stunning Shot" skillId="101" skillLvl="34" getLevel="68" levelUpSp="350000" learnedByNpc="true" />
 		<skill skillName="Double Shot" skillId="19" skillLvl="30" getLevel="68" levelUpSp="350000" learnedByNpc="true" />
 		<skill skillName="Double Shot" skillId="19" skillLvl="31" getLevel="68" levelUpSp="350000" learnedByNpc="true" />
 		<skill skillName="Burst Shot" skillId="24" skillLvl="24" getLevel="68" levelUpSp="350000" learnedByNpc="true" />
@@ -286,8 +274,8 @@
 		<skill skillName="Bow Mastery" skillId="208" skillLvl="48" getLevel="70" levelUpSp="420000" learnedByNpc="true" />
 		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="42" getLevel="70" levelUpSp="420000" learnedByNpc="true" />
 		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="43" getLevel="70" levelUpSp="420000" learnedByNpc="true" />
-		<skill skillName="Stun Shot" skillId="101" skillLvl="35" getLevel="70" levelUpSp="420000" learnedByNpc="true" />
-		<skill skillName="Stun Shot" skillId="101" skillLvl="36" getLevel="70" levelUpSp="420000" learnedByNpc="true" />
+		<skill skillName="Stunning Shot" skillId="101" skillLvl="35" getLevel="70" levelUpSp="420000" learnedByNpc="true" />
+		<skill skillName="Stunning Shot" skillId="101" skillLvl="36" getLevel="70" levelUpSp="420000" learnedByNpc="true" />
 		<skill skillName="Double Shot" skillId="19" skillLvl="32" getLevel="70" levelUpSp="420000" learnedByNpc="true" />
 		<skill skillName="Double Shot" skillId="19" skillLvl="33" getLevel="70" levelUpSp="420000" learnedByNpc="true" />
 		<skill skillName="Burst Shot" skillId="24" skillLvl="26" getLevel="70" levelUpSp="420000" learnedByNpc="true" />
@@ -304,8 +292,8 @@
 		<skill skillName="Bow Mastery" skillId="208" skillLvl="50" getLevel="72" levelUpSp="550000" learnedByNpc="true" />
 		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="44" getLevel="72" levelUpSp="550000" learnedByNpc="true" />
 		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="45" getLevel="72" levelUpSp="550000" learnedByNpc="true" />
-		<skill skillName="Stun Shot" skillId="101" skillLvl="37" getLevel="72" levelUpSp="550000" learnedByNpc="true" />
-		<skill skillName="Stun Shot" skillId="101" skillLvl="38" getLevel="72" levelUpSp="550000" learnedByNpc="true" />
+		<skill skillName="Stunning Shot" skillId="101" skillLvl="37" getLevel="72" levelUpSp="550000" learnedByNpc="true" />
+		<skill skillName="Stunning Shot" skillId="101" skillLvl="38" getLevel="72" levelUpSp="550000" learnedByNpc="true" />
 		<skill skillName="Double Shot" skillId="19" skillLvl="34" getLevel="72" levelUpSp="550000" learnedByNpc="true" />
 		<skill skillName="Double Shot" skillId="19" skillLvl="35" getLevel="72" levelUpSp="550000" learnedByNpc="true" />
 		<skill skillName="Burst Shot" skillId="24" skillLvl="28" getLevel="72" levelUpSp="550000" learnedByNpc="true" />
@@ -322,8 +310,8 @@
 		<skill skillName="Bow Mastery" skillId="208" skillLvl="52" getLevel="74" levelUpSp="930000" learnedByNpc="true" />
 		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="46" getLevel="74" levelUpSp="930000" learnedByNpc="true" />
 		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="47" getLevel="74" levelUpSp="930000" learnedByNpc="true" />
-		<skill skillName="Stun Shot" skillId="101" skillLvl="39" getLevel="74" levelUpSp="930000" learnedByNpc="true" />
-		<skill skillName="Stun Shot" skillId="101" skillLvl="40" getLevel="74" levelUpSp="930000" learnedByNpc="true" />
+		<skill skillName="Stunning Shot" skillId="101" skillLvl="39" getLevel="74" levelUpSp="930000" learnedByNpc="true" />
+		<skill skillName="Stunning Shot" skillId="101" skillLvl="40" getLevel="74" levelUpSp="930000" learnedByNpc="true" />
 		<skill skillName="Double Shot" skillId="19" skillLvl="36" getLevel="74" levelUpSp="930000" learnedByNpc="true" />
 		<skill skillName="Double Shot" skillId="19" skillLvl="37" getLevel="74" levelUpSp="930000" learnedByNpc="true" />
 		<skill skillName="Burst Shot" skillId="24" skillLvl="30" getLevel="74" levelUpSp="930000" learnedByNpc="true" />

@@ -60,8 +60,6 @@ import org.l2jmobius.gameserver.model.events.returns.TerminateReturn;
 import org.l2jmobius.gameserver.model.interfaces.IIdentifiable;
 import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
-import org.l2jmobius.gameserver.model.olympiad.CompetitionType;
-import org.l2jmobius.gameserver.model.olympiad.Participant;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -886,23 +884,6 @@ public class Quest extends AbstractScript implements IIdentifiable
 	}
 	
 	/**
-	 * @param winner
-	 * @param looser
-	 * @param type
-	 */
-	public void notifyOlympiadMatch(Participant winner, Participant looser, CompetitionType type)
-	{
-		try
-		{
-			onOlympiadMatchFinish(winner, looser, type);
-		}
-		catch (Exception e)
-		{
-			LOGGER.log(Level.WARNING, "Execution on onOlympiadMatchFinish() in notifyOlympiadMatch(): " + e.getMessage(), e);
-		}
-	}
-	
-	/**
 	 * @param npc
 	 */
 	public void notifyMoveFinished(Npc npc)
@@ -1311,25 +1292,6 @@ public class Quest extends AbstractScript implements IIdentifiable
 	public String onEventReceived(String eventName, Npc sender, Npc receiver, WorldObject reference)
 	{
 		return null;
-	}
-	
-	/**
-	 * This function is called whenever a player wins an Olympiad Game.
-	 * @param winner in this match.
-	 * @param looser in this match.
-	 * @param type the competition type.
-	 */
-	public void onOlympiadMatchFinish(Participant winner, Participant looser, CompetitionType type)
-	{
-	}
-	
-	/**
-	 * This function is called whenever a player looses an Olympiad Game.
-	 * @param loser this parameter contains a reference to the exact instance of the player who lose the competition.
-	 * @param type this parameter contains a reference to the competition type.
-	 */
-	public void onOlympiadLose(PlayerInstance loser, CompetitionType type)
-	{
 	}
 	
 	/**
@@ -2152,11 +2114,6 @@ public class Quest extends AbstractScript implements IIdentifiable
 	public void addCanSeeMeId(Collection<Integer> npcIds)
 	{
 		addNpcHateId(event -> new TerminateReturn(!notifyOnCanSeeMe(event.getNpc(), event.getActiveChar()), false, false), npcIds);
-	}
-	
-	public void addOlympiadMatchFinishId()
-	{
-		setOlympiadMatchResult(event -> notifyOlympiadMatch(event.getWinner(), event.getLoser(), event.getCompetitionType()));
 	}
 	
 	/**

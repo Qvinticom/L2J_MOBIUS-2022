@@ -542,16 +542,16 @@
 	<skill id="825" levels="1" name="Sharp Edge">
 		<!-- Sharpens a bladed weapon to increase P. Atk. by 5% and Critical Rate by 20% for 20 minutes. -->
 		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="1200" />
+		<set name="abnormalTime" val="600" /> <!-- Epilogue Modification -->
 		<set name="abnormalType" val="DWARF_ATTACK_BUFF" />
-		<set name="castRange" val="400" />
+		<set name="castRange" val="40" /> <!-- Epilogue Modification -->
 		<set name="coolTime" val="500" />
 		<set name="effectPoint" val="467" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill0825" />
 		<set name="magicLvl" val="49" />
-		<set name="mpConsume" val="44" />
+		<set name="mpConsume" val="28" /> <!-- Epilogue Modification -->
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="ONE" />
@@ -569,16 +569,16 @@
 	<skill id="826" levels="1" name="Spike">
 		<!-- Adds a spike to a blunt weapon to increase P. Atk. by 5% and its weight for shock attacks by 8% for 20 minute(s). -->
 		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="1200" />
+		<set name="abnormalTime" val="600" /> <!-- Epilogue Modification -->
 		<set name="abnormalType" val="DWARF_ATTACK_BUFF" />
-		<set name="castRange" val="400" />
+		<set name="castRange" val="40" /> <!-- Epilogue Modification -->
 		<set name="coolTime" val="500" />
 		<set name="effectPoint" val="467" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill0826" />
 		<set name="magicLvl" val="49" />
-		<set name="mpConsume" val="44" />
+		<set name="mpConsume" val="28" /> <!-- Epilogue Modification -->
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="ONE" />
@@ -596,7 +596,7 @@
 	<skill id="827" levels="1" name="Restring">
 		<!-- Enhances the string of a bow or crossbow to increase P. Atk. by 5% and range by 100 for 20 minute(s). -->
 		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="1200" />
+		<set name="abnormalTime" val="600" /> <!-- Epilogue Modification -->
 		<set name="abnormalType" val="DWARF_ATTACK_BUFF" />
 		<set name="castRange" val="400" />
 		<set name="coolTime" val="500" />
@@ -605,7 +605,7 @@
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill0827" />
 		<set name="magicLvl" val="49" />
-		<set name="mpConsume" val="44" />
+		<set name="mpConsume" val="28" /> <!-- Epilogue Modification -->
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="ONE" />
@@ -623,16 +623,16 @@
 	<skill id="828" levels="1" name="Case Harden">
 		<!-- Enhances the armor surface to increase P. Def. by 10% for 20 minute(s). -->
 		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="1200" />
+		<set name="abnormalTime" val="600" /> <!-- Epilogue Modification -->
 		<set name="abnormalType" val="DWARF_DEFENCE_BUFF" />
-		<set name="castRange" val="400" />
+		<set name="castRange" val="40" /> <!-- Epilogue Modification -->
 		<set name="coolTime" val="500" />
 		<set name="effectPoint" val="438" />
-		<set name="effectRange" val="900" />
+		<set name="effectRange" val="400" /> <!-- Epilogue Modification -->
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill0828" />
 		<set name="magicLvl" val="46" />
-		<set name="mpConsume" val="41" />
+		<set name="mpConsume" val="25" /> <!-- Epilogue Modification -->
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="ONE" />
@@ -647,16 +647,16 @@
 	<skill id="829" levels="1" name="Hard Tanning">
 		<!-- Tans armor to increase P. Def. by 5% and Evasion by 2 for 20 minutes. Works only on light armor users and can't be used on pets. -->
 		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="1200" />
+		<set name="abnormalTime" val="600" /> <!-- Epilogue Modification -->
 		<set name="abnormalType" val="DWARF_DEFENCE_BUFF" />
-		<set name="castRange" val="400" />
+		<set name="castRange" val="40" /> <!-- Epilogue Modification -->
 		<set name="coolTime" val="500" />
 		<set name="effectPoint" val="438" />
-		<set name="effectRange" val="900" />
+		<set name="effectRange" val="400" /> <!-- Epilogue Modification -->
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill0829" />
 		<set name="magicLvl" val="46" />
-		<set name="mpConsume" val="41" />
+		<set name="mpConsume" val="25" /> <!-- Epilogue Modification -->
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="ONE" />
@@ -674,7 +674,7 @@
 	<skill id="830" levels="1" name="Embroider">
 		<!-- Embroiders a robe to increase P. Def. by 5% and MP Recovery Bonus by 2 for 20 minutes. -->
 		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="1200" />
+		<set name="abnormalTime" val="600" /> <!-- Epilogue Modification -->
 		<set name="abnormalType" val="DWARF_DEFENCE_BUFF" />
 		<set name="castRange" val="400" />
 		<set name="coolTime" val="500" />
@@ -683,7 +683,7 @@
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill0830" />
 		<set name="magicLvl" val="46" />
-		<set name="mpConsume" val="41" />
+		<set name="mpConsume" val="25" /> <!-- Epilogue Modification -->
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="ONE" />

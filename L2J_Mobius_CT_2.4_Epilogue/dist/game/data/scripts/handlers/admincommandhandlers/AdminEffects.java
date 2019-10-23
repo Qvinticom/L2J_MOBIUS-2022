@@ -33,7 +33,6 @@ import org.l2jmobius.gameserver.network.serverpackets.Earthquake;
 import org.l2jmobius.gameserver.network.serverpackets.ExRedSky;
 import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
-import org.l2jmobius.gameserver.network.serverpackets.OnEventTrigger;
 import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
 import org.l2jmobius.gameserver.network.serverpackets.SSQInfo;
 import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
@@ -96,8 +95,7 @@ public class AdminEffects implements IAdminCommandHandler
 		"admin_atmosphere",
 		"admin_atmosphere_menu",
 		"admin_set_displayeffect",
-		"admin_set_displayeffect_menu",
-		"admin_event_trigger",
+		"admin_set_displayeffect_menu"
 	};
 	
 	@Override
@@ -561,20 +559,6 @@ public class AdminEffects implements IAdminCommandHandler
 			catch (Exception e)
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Usage: //set_displayeffect <id>");
-			}
-		}
-		else if (command.startsWith("admin_event_trigger"))
-		{
-			try
-			{
-				final int triggerId = Integer.parseInt(st.nextToken());
-				final boolean enable = Boolean.parseBoolean(st.nextToken());
-				World.getInstance().forEachVisibleObject(activeChar, PlayerInstance.class, player -> player.sendPacket(new OnEventTrigger(triggerId, enable)));
-				activeChar.sendPacket(new OnEventTrigger(triggerId, enable));
-			}
-			catch (Exception e)
-			{
-				BuilderUtil.sendSysMessage(activeChar, "Usage: //event_trigger id [true | false]");
 			}
 		}
 		

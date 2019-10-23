@@ -97,7 +97,7 @@
 		</cond>
 	</item>
 	<item id="9406" type="Armor" name="Enchanter Circlet">
-		<!-- A circlet that can be worn by the Enchanter class after completion of 2nd or 3rd class transfer. Cannot be worn in a sub job condition. Uses 2 hair accessory slots. -->
+		<!-- Hair accessory that can be worn by the Enchanter class after completion of 2nd or 3rd class transfer. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessary_enchanter_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -235,7 +235,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1171" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="7570" />
 		<set name="price" val="24398000" />
@@ -250,14 +250,14 @@
 		</for>
 	</item>
 	<item id="9417" type="Armor" name="Dynasty Breast Plate - Shield Master">
-		<!-- Can only be worn by Phoenix Knights, Hell Knights, Eva's Templars and Shillien Templars. -->
+		<!-- Can only be worn by Phoenix Knights, Hell Knights, Eva's Templars and Shillen Templars. -->
 		<set name="icon" val="icon.armor_t91_uk_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1171" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="7570" />
 		<set name="price" val="24398000" />
@@ -282,7 +282,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1171" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="7570" />
 		<set name="price" val="24398000" />
@@ -307,7 +307,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1171" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="7570" />
 		<set name="price" val="24398000" />
@@ -332,7 +332,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="1171" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="7570" />
 		<set name="price" val="24398000" />
@@ -356,7 +356,7 @@
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="731" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="3210" />
 		<set name="price" val="15248000" />
@@ -376,7 +376,7 @@
 		<set name="bodypart" val="head" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="439" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="9149000" />
@@ -396,7 +396,7 @@
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="293" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="520" />
 		<set name="price" val="6099000" />
@@ -416,7 +416,7 @@
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="293" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1090" />
 		<set name="price" val="6099000" />
@@ -437,7 +437,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="878" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="4180" />
 		<set name="price" val="18298000" />
@@ -449,14 +449,14 @@
 		</for>
 	</item>
 	<item id="9426" type="Armor" name="Dynasty Leather Armor - Dagger Master">
-		<!-- Can be equipped by Adventurers, Wind Riders, Ghost Hunters, and Fortune Seekers. -->
+		<!-- Can only be worn by Adventurers, Wind Riders, and Ghost Hunters. -->
 		<set name="icon" val="icon.armor_t92_ud_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="878" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="4180" />
 		<set name="price" val="18298000" />
@@ -478,7 +478,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="878" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="4180" />
 		<set name="price" val="18298000" />
@@ -499,7 +499,7 @@
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="549" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1370" />
 		<set name="price" val="11436000" />
@@ -516,7 +516,7 @@
 		<set name="bodypart" val="head" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="439" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="9149000" />
@@ -533,7 +533,7 @@
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="293" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="520" />
 		<set name="price" val="6099000" />
@@ -550,7 +550,7 @@
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="293" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1090" />
 		<set name="price" val="6099000" />
@@ -568,7 +568,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="878" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1780" />
 		<set name="price" val="18298000" />
@@ -591,7 +591,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="878" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1780" />
 		<set name="price" val="18298000" />
@@ -617,7 +617,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="878" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1780" />
 		<set name="price" val="18298000" />
@@ -643,7 +643,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="878" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1780" />
 		<set name="price" val="18298000" />
@@ -669,7 +669,7 @@
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="878" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1780" />
 		<set name="price" val="18298000" />
@@ -694,7 +694,7 @@
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="549" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="860" />
 		<set name="price" val="11436000" />
@@ -715,7 +715,7 @@
 		<set name="bodypart" val="head" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="439" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="9149000" />
@@ -735,7 +735,7 @@
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="293" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="520" />
 		<set name="price" val="6099000" />
@@ -755,7 +755,7 @@
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="293" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1090" />
 		<set name="price" val="6099000" />
@@ -775,7 +775,7 @@
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="307" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1150" />
 		<set name="price" val="6404000" />
@@ -791,7 +791,7 @@
 		</for>
 	</item>
 	<item id="9442" type="Weapon" name="Dynasty Sword">
-		<!-- Bestows one of the following functions: Focus, Health, or Light. -->
+		<!-- Bestows either Focus, Health, or Light. -->
 		<set name="icon" val="icon.weapon_dynasty_blade_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -801,7 +801,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="74946000" />
@@ -820,7 +820,7 @@
 		</for>
 	</item>
 	<item id="9443" type="Weapon" name="Dynasty Blade">
-		<!-- Bestows one of the following functions: Focus, Health, or Light. -->
+		<!-- Bestows either Focus, Health, or Light. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -830,7 +830,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="74946000" />
@@ -849,7 +849,7 @@
 		</for>
 	</item>
 	<item id="9444" type="Weapon" name="Dynasty Phantom">
-		<!-- Bestows one of the following functions: Acumen, Mana Up, or Conversion. -->
+		<!-- Bestows either Acumen, Mana Up, or Conversion. -->
 		<set name="icon" val="icon.weapon_dynasty_magic_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -859,7 +859,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="74946000" />
@@ -888,7 +888,7 @@
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="74946000" />
@@ -910,7 +910,7 @@
 		</for>
 	</item>
 	<item id="9446" type="Weapon" name="Dynasty Knife">
-		<!-- Bestows one of the following functions: Focus, Evasion, or Critical Damage. -->
+		<!-- Bestows either Focus, Evasion, or Critical Damage. -->
 		<set name="icon" val="icon.weapon_dynasty_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -920,7 +920,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="74946000" />
@@ -939,7 +939,7 @@
 		</for>
 	</item>
 	<item id="9447" type="Weapon" name="Dynasty Halberd">
-		<!-- Bestows one of the following functions: Anger, Critical Stun, or Light. -->
+		<!-- Bestows either Anger, Critical Stun, or Light. -->
 		<set name="icon" val="icon.weapon_dynasty_spear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -949,7 +949,7 @@
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="2010" />
 		<set name="price" val="74946000" />
@@ -979,7 +979,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="74946000" />
@@ -1008,7 +1008,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="price" val="74946000" />
@@ -1038,7 +1038,7 @@
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="3597" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1550" />
 		<set name="price" val="74946000" />
@@ -1066,13 +1066,13 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="9452" type="Armor" name="Sealed Dynasty Earring">
-		<!-- Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. When the seal is released, M. Def. +15 and MP +50. -->
+		<!-- Seal can be removed by the Blacksmith of Mammon. When the seal is released, the effect is M. Def. +8 and MP +35. -->
 		<set name="icon" val="icon.accessary_dynasty_earing_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="194" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="4032000" />
@@ -1083,13 +1083,13 @@
 		</for>
 	</item>
 	<item id="9453" type="Armor" name="Sealed Dynasty Necklace">
-		<!-- Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. When the seal is released, M. Def. +11 and MP +46. -->
+		<!-- Seal can be removed by the Blacksmith of Mammon. When the seal is released, the effect is M. Def. +11 and MP +46. -->
 		<set name="icon" val="icon.accessary_dynasty_necklace_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="258" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="5376000" />
@@ -1100,13 +1100,13 @@
 		</for>
 	</item>
 	<item id="9454" type="Armor" name="Sealed Dynasty Ring">
-		<!-- Seal can be removed by the Blacksmith of Mammon or Maestro Ishuma. When the seal is released, M. Def. +7 and MP +23. -->
+		<!-- The seal can be broken with the help of the Blacksmith of Mammon. When seal is broken, the effect of M.Def+7 and MP+23 is given. -->
 		<set name="icon" val="icon.accessary_dynasty_ring_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="129" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="2688000" />
@@ -1123,7 +1123,7 @@
 		<set name="bodypart" val="rear;lear" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="285" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="5956000" />
@@ -1141,7 +1141,7 @@
 		<set name="bodypart" val="neck" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="381" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="7942000" />
@@ -1159,7 +1159,7 @@
 		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="190" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="3971000" />
@@ -1171,13 +1171,13 @@
 		</for>
 	</item>
 	<item id="9458" type="Armor" name="Dynasty Earrings - Stun Resistance">
-		<!-- Produces the effect of MP +35, Resistance to Stun +12. -->
+		<!-- Produces the effect of MP +35, Stun Resistance +12. -->
 		<set name="icon" val="icon.accessary_dynasty_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="285" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="5956000" />
@@ -1190,13 +1190,13 @@
 		</for>
 	</item>
 	<item id="9459" type="Armor" name="Dynasty Necklace - Stun Resistance">
-		<!-- Produces the effect of MP +46, Resistance to Stun +18. -->
+		<!-- Produces the effect of MP +46, Stun Resistance +18. -->
 		<set name="icon" val="icon.accessary_dynasty_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="381" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="7942000" />
@@ -1209,13 +1209,13 @@
 		</for>
 	</item>
 	<item id="9460" type="Armor" name="Dynasty Ring - Stun Resistance">
-		<!-- Produces the effect of MP +23, Resistance to Stun +8. -->
+		<!-- Produces the effect of MP +23, Stun Resistance +8. -->
 		<set name="icon" val="icon.accessary_dynasty_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="190" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="3971000" />
@@ -1228,13 +1228,13 @@
 		</for>
 	</item>
 	<item id="9461" type="Armor" name="Dynasty Earrings - Poison Resistance">
-		<!-- Produces the effect of MP +35, Resistance to Poison +11. -->
+		<!-- Produces the effect of MP +35, Poison Resistance +11. -->
 		<set name="icon" val="icon.accessary_dynasty_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="285" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="5956000" />
@@ -1247,13 +1247,13 @@
 		</for>
 	</item>
 	<item id="9462" type="Armor" name="Dynasty Necklace - Poison Resistance">
-		<!-- Produces the effect of MP +46, Resistance to Poison +16. -->
+		<!-- Produces the effect of MP +46, Poison Resistance +16. -->
 		<set name="icon" val="icon.accessary_dynasty_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="381" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="7942000" />
@@ -1266,13 +1266,13 @@
 		</for>
 	</item>
 	<item id="9463" type="Armor" name="Dynasty Ring - Poison Resistance">
-		<!-- Produces the effect of MP +23, Resistance to Poison +7. -->
+		<!-- Produces the effect of MP +23, Poison Resistance +7. -->
 		<set name="icon" val="icon.accessary_dynasty_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="190" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="3971000" />
@@ -1291,7 +1291,7 @@
 		<set name="bodypart" val="rear;lear" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="285" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="5956000" />
@@ -1310,7 +1310,7 @@
 		<set name="bodypart" val="neck" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="381" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="7942000" />
@@ -1329,7 +1329,7 @@
 		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="190" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="3971000" />
@@ -1342,13 +1342,13 @@
 		</for>
 	</item>
 	<item id="9467" type="Armor" name="Dynasty Earrings - Sleep Resistance">
-		<!-- Produces the effect of MP +35, Resistance to Sleep +12. -->
+		<!-- Produces the effect of MP +35, Sleep Resistance +12. -->
 		<set name="icon" val="icon.accessary_dynasty_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="285" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="5956000" />
@@ -1361,13 +1361,13 @@
 		</for>
 	</item>
 	<item id="9468" type="Armor" name="Dynasty Necklace - Sleep Resistance">
-		<!-- Produces the effect of MP +46, Resistance to Sleep +18. -->
+		<!-- Produces the effect of MP +46, Sleep Resistance +18. -->
 		<set name="icon" val="icon.accessary_dynasty_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="381" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="7942000" />
@@ -1380,13 +1380,13 @@
 		</for>
 	</item>
 	<item id="9469" type="Armor" name="Dynasty Ring - Sleep Resistance">
-		<!-- Produces the effect of MP +23, Resistance to Sleep +8. -->
+		<!-- Produces the effect of MP +23, Sleep Resistance +8. -->
 		<set name="icon" val="icon.accessary_dynasty_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="190" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="3971000" />
@@ -1399,13 +1399,13 @@
 		</for>
 	</item>
 	<item id="9470" type="Armor" name="Dynasty Earrings - Paralysis Resistance">
-		<!-- Produces the effect of MP +35, Resistance to Paralysis +6. -->
+		<!-- Produces the effect of MP +35, Paralysis Resistance +6. -->
 		<set name="icon" val="icon.accessary_dynasty_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="285" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="5956000" />
@@ -1418,13 +1418,13 @@
 		</for>
 	</item>
 	<item id="9471" type="Armor" name="Dynasty Necklace - Paralysis Resistance">
-		<!-- Produces the effect of MP +46, Resistance to Paralysis +9. -->
+		<!-- Produces the effect of MP +46, Paralysis Resistance +9. -->
 		<set name="icon" val="icon.accessary_dynasty_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="381" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="7942000" />
@@ -1437,13 +1437,13 @@
 		</for>
 	</item>
 	<item id="9472" type="Armor" name="Dynasty Ring - Paralysis Resistance">
-		<!-- Produces the effect of MP +23, Resistance to Paralysis +4. -->
+		<!-- Produces the effect of MP +23, Paralysis Resistance +4. -->
 		<set name="icon" val="icon.accessary_dynasty_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="190" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="3971000" />
@@ -1456,13 +1456,13 @@
 		</for>
 	</item>
 	<item id="9473" type="Armor" name="Dynasty Earrings - Hold Resistance">
-		<!-- Produces the effect of MP +35, Resistance to Hold +12. -->
+		<!-- Produces the effect of MP +35, Hold Resistance +12. -->
 		<set name="icon" val="icon.accessary_dynasty_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="285" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="5956000" />
@@ -1475,13 +1475,13 @@
 		</for>
 	</item>
 	<item id="9474" type="Armor" name="Dynasty Necklace - Hold Resistance">
-		<!-- Produces the effect of MP +46, Resistance to Hold +18. -->
+		<!-- Produces the effect of MP +46, Hold Resistance +18. -->
 		<set name="icon" val="icon.accessary_dynasty_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="381" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="7942000" />
@@ -1494,13 +1494,13 @@
 		</for>
 	</item>
 	<item id="9475" type="Armor" name="Dynasty Ring - Hold Resistance">
-		<!-- Produces the effect of MP +23, Resistance to Hold +8. -->
+		<!-- Produces the effect of MP +23, Hold Resistance +8. -->
 		<set name="icon" val="icon.accessary_dynasty_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="190" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="3971000" />
@@ -1513,13 +1513,13 @@
 		</for>
 	</item>
 	<item id="9476" type="Armor" name="Dynasty Earrings - Fear Resistance">
-		<!-- Produces the effect of MP +35, Resistance to Fear +6. -->
+		<!-- Produces the effect of MP +35, Fear Resistance +6. -->
 		<set name="icon" val="icon.accessary_dynasty_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="285" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="5956000" />
@@ -1532,13 +1532,13 @@
 		</for>
 	</item>
 	<item id="9477" type="Armor" name="Dynasty Necklace - Fear Resistance">
-		<!-- Produces the effect of MP +46, Resistance to Fear +9. -->
+		<!-- Produces the effect of MP +46, Fear Resistance +9. -->
 		<set name="icon" val="icon.accessary_dynasty_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="381" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="7942000" />
@@ -1551,13 +1551,13 @@
 		</for>
 	</item>
 	<item id="9478" type="Armor" name="Dynasty Ring - Fear Resistance">
-		<!-- Produces the effect of MP +23, Resistance to Fear +4. -->
+		<!-- Produces the effect of MP +23, Fear Resistance +4. -->
 		<set name="icon" val="icon.accessary_dynasty_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="190" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="3971000" />
@@ -1576,7 +1576,7 @@
 		<set name="bodypart" val="rear;lear" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="285" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="5956000" />
@@ -1594,7 +1594,7 @@
 		<set name="bodypart" val="neck" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="381" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="7942000" />
@@ -1612,7 +1612,7 @@
 		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="190" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="3971000" />

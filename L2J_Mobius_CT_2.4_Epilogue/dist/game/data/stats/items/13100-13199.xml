@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="13100" type="EtcItem" name="Recipe - Sealed Arcana Sigil (60%)">
-		<!-- Exclusive to Dwarves. Recipe for making a Sealed Arcana Sigil. Requires Create Item - Skill Level 9. The success rate is 60%. -->
+		<!-- Exclusive to Dwarves. Recipe for making a Sealed Arcana Sigil. To obtain 'Create Item' skill, level 9 is needed, and the probability of success is 60%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -14,7 +14,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="13101" type="EtcItem" name="Recipe - Sealed Arcana Sigil (100%)">
-		<!-- Exclusive to Dwarves. Recipe for making a Sealed Arcana Sigil. Requires Create Item - Skill Level 9. The success rate is 100%. -->
+		<!-- Exclusive to Dwarves. Recipe for making a Sealed Arcana Sigil. To obtain 'Create Item' skill, level 9 is needed, and the probability of success is 100%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -27,7 +27,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="13102" type="EtcItem" name="Chaotic Sealed Arcana Sigil">
-		<!-- A rare Sealed Arcana Sigil that requires a thorough varnishing. It can be varnished by the Blacksmith of Mammon. -->
+		<!-- A rare Sealed Arcana Sigil that needs to be polished with excessive force. It can be polished through the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.arcana_sigil_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="S" />
@@ -43,7 +43,7 @@
 		</for>
 	</item>
 	<item id="13103" type="EtcItem" name="My Teleport Spellbook 1-Book Pack">
-		<!-- Dimensional item pack. A wrapped pack containing 1 sheet of the Free Teleporter's Scroll. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- Vitamin item pack. A wrapped pack containing 1 sheet of the Free Teleporter's Scroll. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -58,7 +58,7 @@
 		<set name="capsuled_items" val="13015,1,1,100" />
 	</item>
 	<item id="13104" type="EtcItem" name="My Teleport Scroll 30-Sheet Pack">
-		<!-- Dimensional item pack. A wrapped pack containing 30 sheets of Free Teleporter's Spellbooks. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- Vitamin item pack. A wrapped pack containing 30 sheets of Free Teleporter's Spellbooks. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -88,7 +88,7 @@
 		<set name="capsuled_items" val="13010,5,5,100;13011,5,5,100;13012,5,5,100" />
 	</item>
 	<item id="13106" type="EtcItem" name="Feather of Blessing 3-Sheet Pack">
-		<!-- Dimensional item pack. A wrapped pack containing 3 sheets of the Feather of Blessing. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- Vitamin item pack. A wrapped pack containing 3 sheets of the Feather of Blessing. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -103,7 +103,7 @@
 		<set name="capsuled_items" val="10649,3,3,100" />
 	</item>
 	<item id="13107" type="EtcItem" name="Agathion of Love 30-Day Pack">
-		<!-- Dimensional item pack. A wrapped pack containing an Agathion of Love Bracelet (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- Vitamin item pack. A wrapped pack containing an Agathion of Love Bracelet (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -118,7 +118,7 @@
 		<set name="capsuled_items" val="13023,1,1,100" />
 	</item>
 	<item id="13108" type="EtcItem" name="Pumpkin Transformation Stick 30-Day Pack">
-		<!-- Dimensional item pack. A wrapped pack containing Pumpkin Transformation Stick (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- Vitamin item pack. A wrapped pack containing Pumpkin Transformation Stick (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -133,7 +133,7 @@
 		<set name="capsuled_items" val="12800,1,1,100" />
 	</item>
 	<item id="13109" type="EtcItem" name="Kamaloka Entrance Pass 3-Sheet Pack">
-		<!-- Dimensional item pack. A wrapped pack containing 5 Sheets of Extra Entrances Passes each to Kamaloka (Hall of the Abyss), Near Kamaloka, and Kamaloka (Labyrinth of the Abyss). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- Vitamin item pack. A wrapped pack containing 5 Sheets of Extra Entrances Passes each to Kamaloka (Hall of the Abyss), Near Kamaloka, and Kamaloka (Labyrinth of the Abyss). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -148,7 +148,7 @@
 		<set name="capsuled_items" val="13010,5,5,100;13011,5,5,100;13012,5,5,100" />
 	</item>
 	<item id="13110" type="EtcItem" name="Kat the Cat Hat 30-Day Pack">
-		<!-- Dimensional item pack. A wrapped pack containing a Kat the Cat Hat (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- Vitamin item pack. A wrapped pack containing a Kat the Cat Hat (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -163,7 +163,7 @@
 		<set name="capsuled_items" val="12782,1,1,100" />
 	</item>
 	<item id="13111" type="EtcItem" name="Feline Queen Hat 30-Day Pack">
-		<!-- Dimensional item pack. A wrapped pack containing a Feline Queen Hat (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- Vitamin item pack. A wrapped pack containing a Feline Queen Hat (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -178,7 +178,7 @@
 		<set name="capsuled_items" val="12783,1,1,100" />
 	</item>
 	<item id="13112" type="EtcItem" name="Monster Eye Hat 30-Day Pack">
-		<!-- Dimensional item pack. A wrapped pack containing a Monster Eye Hat (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- Vitamin item pack. A wrapped pack containing a Monster Eye Hat (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -193,7 +193,7 @@
 		<set name="capsuled_items" val="12786,1,1,100" />
 	</item>
 	<item id="13113" type="EtcItem" name="Brown Bear Hat 30-Day Pack">
-		<!-- Dimensional item pack. A wrapped pack containing a Brown Bear Hat (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- Vitamin item pack. A wrapped pack containing a Brown Bear Hat (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -208,7 +208,7 @@
 		<set name="capsuled_items" val="12787,1,1,100" />
 	</item>
 	<item id="13114" type="EtcItem" name="Fungus Hat 30-Day Pack">
-		<!-- Dimensional item pack. A wrapped pack containing a Fungus Hat (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- Vitamin item pack. A wrapped pack containing a Fungus Hat (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -223,7 +223,7 @@
 		<set name="capsuled_items" val="12788,1,1,100" />
 	</item>
 	<item id="13115" type="EtcItem" name="Skull Hat 30-Day Pack">
-		<!-- Dimensional item pack. A wrapped pack containing a Skull Hat (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- Vitamin item pack. A wrapped pack containing a Skull Hat (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -238,7 +238,7 @@
 		<set name="capsuled_items" val="12789,1,1,100" />
 	</item>
 	<item id="13116" type="EtcItem" name="Ornithomimus Hat 30-Day Pack">
-		<!-- Dimensional item pack. A wrapped pack containing a Ornithomimus Hat (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- Vitamin item pack. A wrapped pack containing a Ornithomimus Hat (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -253,7 +253,7 @@
 		<set name="capsuled_items" val="12790,1,1,100" />
 	</item>
 	<item id="13117" type="EtcItem" name="Feline King Hat 30-Day Pack">
-		<!-- Dimensional item pack. A wrapped pack containing a Feline King Hat (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- Vitamin item pack. A wrapped pack containing a Feline King Hat (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -268,7 +268,7 @@
 		<set name="capsuled_items" val="12791,1,1,100" />
 	</item>
 	<item id="13118" type="EtcItem" name="Kai the Cat Hat 30-Day Pack">
-		<!-- Dimensional item pack. A wrapped pack containing a Kai the Cat Hat (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- Vitamin item pack. A wrapped pack containing a Kai the Cat Hat (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -283,7 +283,7 @@
 		<set name="capsuled_items" val="12792,1,1,100" />
 	</item>
 	<item id="13119" type="EtcItem" name="OX Stick 30-Day Pack">
-		<!-- Dimensional item pack. A wrapped pack containing an OX Stick (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- Vitamin item pack. A wrapped pack containing an OX Stick (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -298,7 +298,7 @@
 		<set name="capsuled_items" val="12793,1,1,100;12794,1,1,100" />
 	</item>
 	<item id="13120" type="EtcItem" name="Rock-Paper-Scissors Stick 30-Day Pack">
-		<!-- Dimensional item pack. A wrapped pack containing a Rock-Paper-Scissors Stick (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- Vitamin item pack. A wrapped pack containing a Rock-Paper-Scissors Stick (30 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -313,7 +313,7 @@
 		<set name="capsuled_items" val="12795,1,1,100;12796,1,1,100;12797,1,1,100" />
 	</item>
 	<item id="13121" type="EtcItem" name="Purple-Maned Horse 7-Day Pack">
-		<!-- Dimensional item pack. A wrapped pack containing a bracelet that summons a Purple Maned Horse (7 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- Vitamin item pack. A wrapped pack containing a bracelet that summons a Purple Maned Horse (7 days). Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -328,7 +328,7 @@
 		<set name="capsuled_items" val="13022,1,1,100" />
 	</item>
 	<item id="13122" type="EtcItem" name="Color Name 3-Sheet Pack">
-		<!-- Dimensional item pack. A wrapped pack containing 3 sheets of Color Names. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- Vitamin item pack. A wrapped pack containing 3 sheets of Color Names. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -343,7 +343,7 @@
 		<set name="capsuled_items" val="13021,3,3,100" />
 	</item>
 	<item id="13123" type="EtcItem" name="My Teleport Spellbook Pack">
-		<!-- Dimensional item pack. A wrapped pack containing a My Teleport Spellbook. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. -->
+		<!-- A wrapped pack containing a My Teleport Spellbook. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
@@ -351,7 +351,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="13124" type="EtcItem" name="Color Name 1-Sheet Pack">
-		<!-- Dimensional item pack. A wrapped pack containing 1 sheets of Color Names. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- Vitamin item pack. A wrapped pack containing 1 sheets of Color Names. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -366,7 +366,7 @@
 		<set name="capsuled_items" val="13021,1,1,100" />
 	</item>
 	<item id="13125" type="EtcItem" name="My Teleport Scroll 10-Sheet Pack">
-		<!-- Dimensional item pack. A wrapped pack containing 10 sheets of Free Teleporter's Spellbooks. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
+		<!-- Vitamin item pack. A wrapped pack containing 10 sheets of Free Teleporter's Spellbooks. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -381,7 +381,7 @@
 		<set name="capsuled_items" val="13016,10,10,100" />
 	</item>
 	<item id="13126" type="EtcItem" name="Dimensional Experience Pack - used for events">
-		<!-- Dimensional Item Pack. Contains 1 My Teleport Spellbook (event), 10 My Teleport Scrolls (event) and 1 Color Name (event). Cannot be exchanged or dropped. May be stored in a private warehouse. -->
+		<!-- Vitamin Item Pack. Contains 1 My Teleport Spellbook (event), 10 My Teleport Scrolls (event) and 1 Color Name (event). Cannot be exchanged or dropped. May be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -397,7 +397,7 @@
 		<set name="capsuled_items" val="13307,1,1,100;13302,10,10,100;13301,1,1,100" />
 	</item>
 	<item id="13127" type="EtcItem" name="Promotional Parcel 2">
-		<!-- A wrapped parcel. Can be shared between characters within the account through Dimensional Merchant. -->
+		<!-- A wrapped parcel. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
@@ -411,7 +411,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="13128" type="EtcItem" name="Phoenix Feather">
-		<!-- Item that permits same spot resurrection. Can be shared between characters within the account through Dimensional Merchant. -->
+		<!-- Item that permits same spot resurrection -->
 		<set name="icon" val="icon.etc_feather_gold_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -437,7 +437,7 @@
 		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
+		<set name="is_destroyable" val="true" /> <!-- Epilogue Modification -->
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -811,7 +811,7 @@
 		</cond>
 	</item>
 	<item id="13151" type="EtcItem" name="Pailaka Vitality Replenishing Potion (100%)">
-		<!-- Pailaka reward item. Replenishing potion that fills 100% of Vitality. Reuse time is 60 minutes. -->
+		<!-- Pailaka reward item. Replenishing potion that fills 100% of energy -->
 		<set name="icon" val="icon.etc_lesser_potion_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -824,14 +824,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2586-2" /> <!-- Vitality Replenishing Potion -->
+		<set name="item_skill" val="2586-2" /> <!-- Energy Replenishing Potion -->
 		<set name="for_npc" val="true" />
 		<cond msgId="113" addName="1">
 			<player instanceId="43,44,45" />
 		</cond>
 	</item>
 	<item id="13152" type="EtcItem" name="Pailaka Vitality Replenishing Potion (50%)">
-		<!-- Pailaka reward item. Replenishing potion that fills 50% of Vitality. Reuse time is 60 minutes. -->
+		<!-- Pailaka reward item. Replenishing potion that fills 50% of energy -->
 		<set name="icon" val="icon.etc_lesser_potion_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -844,7 +844,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2586-1" /> <!-- Vitality Replenishing Potion -->
+		<set name="item_skill" val="2586-1" /> <!-- Energy Replenishing Potion -->
 		<set name="for_npc" val="true" />
 		<cond msgId="113" addName="1">
 			<player instanceId="43,44,45" />
@@ -1502,7 +1502,7 @@
 		</for>
 	</item>
 	<item id="13175" type="Weapon" name="Player Commendation - Grand Epee - Player Commendation Weapon">
-		<!-- Kamael exclusive weapon. Limited-time item containing the power of a Grand ?p?e. When enchanted to 4 or more, during a critical attack, party members including yourself will receive at a fixed rate increased attack power, magic power, and healing capacity, as well as decreased MP consumption per skill. Cannot be exchanged, dropped, or crystallized. Cannot be granted additional functions. -->
+		<!-- Limited time item that contains the power of a Grand ?p?e. enchanted to 4 or more, party members including youself will get the increased attack power, magic power and healing capacity by a fixed rate but decreased MP consumption per skill during a critical attack. Cannot be exchanged, dropped, or crystallized. Cannot be granted additional functions. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1537,7 +1537,7 @@
 		</for>
 	</item>
 	<item id="13176" type="Weapon" name="Player Commendation - General Katzbalger - Player Commendation Weapon">
-		<!-- Kamael exclusive weapon. Limited-time item containing the power of a General's Katzbalger. Cannot be exchanged, dropped, or crystallized. Cannot be granted additional functions. -->
+		<!-- Limited time item that contains the power of a General's Katzbalger. Cannot be exchanged, dropped, or crystallized. Cannot be granted additional functions. -->
 		<set name="icon" val="icon.weapon_tulwar_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1571,7 +1571,7 @@
 		</for>
 	</item>
 	<item id="13177" type="Weapon" name="Player Commendation - Cranequin - Player Commendation Weapon">
-		<!-- Kamael exclusive weapon. Limited-time item containing the power of a Cranequin. Cannot be exchanged, dropped, or crystallized. Cannot be granted additional functions. -->
+		<!-- Limited time item that contains the power of a Cranequin. Cannot be exchanged, dropped, or crystallized. Cannot be granted additional functions. -->
 		<set name="icon" val="icon.weapon_hunting_gun_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1638,7 +1638,7 @@
 		</for>
 	</item>
 	<item id="13179" type="Weapon" name="Player Commendation - Ghost's Wand - Player Commendation Weapon">
-		<!-- PC Cafe exclusive item with a power of Samurai Long Sword Available to enchant by the enchanted scroll of PC Cafe exclusive weapons Casts Regeneration with a 30% of chance when using additional magic skills to a target. Cannot be exchanged, dropped, or crystallized. Cannot be granted additional functions. -->
+		<!-- PC Cafe exclusive item with a power of Samurai Long Sword Available to enchant by the enchanted scroll of PC Cafe exclusive weapons Casts Regeneration with a 30% of probability when using additional magic skills to a target. Cannot be exchanged, dropped, or crystallized. Cannot be granted additional functions. -->
 		<set name="icon" val="icon.weapon_deadmans_staff_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1707,7 +1707,7 @@
 		</for>
 	</item>
 	<item id="13181" type="Weapon" name="Player Commendation - Devil's Wand - Player Commendation Weapon">
-		<!-- PC Cafe exclusive item with a power of Devil's Wand Available to enchant by the enchanted scroll of PC Cafe exclusive weapons Casts a Curse Weakness with a 7% of chance when using additional magic skills to a target. Cannot be exchanged, dropped, or crystallized. Cannot be granted additional functions. -->
+		<!-- PC Cafe exclusive item with a power of Devil's Wand Available to enchant by the enchanted scroll of PC Cafe exclusive weapons Casts a Curse Weakness with a 7% of probability when using additional magic skills to a target. Cannot be exchanged, dropped, or crystallized. Cannot be granted additional functions. -->
 		<set name="icon" val="icon.weapon_demons_staff_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1742,7 +1742,7 @@
 		</for>
 	</item>
 	<item id="13182" type="Weapon" name="Player Commendation - Crystal Dagger - Player Commendation Weapon">
-		<!-- PC Cafe exclusive item with a power of Crystal Dagger Available to enchant by the enchanted scroll of PC Cafe exclusive weapons Critical Damage increases by 140 during additional critical attack. Cannot be exchanged, dropped, or crystallized. Cannot be granted additional functions. -->
+		<!-- PC Cafe exclusive item with a power of Crytal Dagger Available to enchant by the enchanted scroll of PC Cafe exclusive weapons Critical attack power increases by 140 during additional critical attack. Cannot be exchanged, dropped, or crystallized. Cannot be granted additional functions. -->
 		<set name="icon" val="icon.weapon_crystal_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1808,7 +1808,7 @@
 		</for>
 	</item>
 	<item id="13184" type="Weapon" name="Player Commendation - Eminence Bow - Player Commendation Weapon">
-		<!-- PC Cafe exclusive item with a power of Eminence Bow Available to enchant by the enchanted scroll of PC Cafe exclusive weapons During a general attack, MP consumption decreases to 1 with a 42% chance. Cannot be exchanged, dropped, or crystallized. Cannot be granted additional functions. -->
+		<!-- PC Cafe exclusive item with a power of Eminence Bow Available to enchant by the enchanted scroll of PC Cafe exclusive weapons During a general attack, MP consumption decreases to 1 with a 42% probability. Cannot be exchanged, dropped, or crystallized. Cannot be granted additional functions. -->
 		<set name="icon" val="icon.weapon_eminence_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1876,7 +1876,7 @@
 		</for>
 	</item>
 	<item id="13186" type="Weapon" name="Player Commendation - Yaksa Mace - Player Commendation Weapon">
-		<!-- PC Cafe exclusive item with a power of Yaksa Mace Available to enchant by the enchanted scroll of PC Cafe exclusive weapons Max HP increases by 25% additionally. Cannot be exchanged, dropped, or crystallized. Cannot be granted additional functions. -->
+		<!-- PC Cafe exclusive item with a power of Yaksa Mace Available to enchant by the enchanted scroll of PC Cafe exclusive weapons Maximum HP increases by 25% additionally. Cannot be exchanged, dropped, or crystallized. Cannot be granted additional functions. -->
 		<set name="icon" val="icon.weapon_yaksa_mace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1909,7 +1909,7 @@
 		</for>
 	</item>
 	<item id="13187" type="Weapon" name="Player Commendation - Shamshir*Shamshir - Player Commendation Weapon">
-		<!-- PC Cafe exclusive item with a power of Shamshir*Shamshir The PC Cafe exclusive weapon enhancing scroll, which will be endowed with a function to increase the Accuracy of 2 when enchanted over 4 Cannot be exchanged, dropped, or crystallized. Cannot be granted additional functions. -->
+		<!-- PC Cafe exclusive item with a power of Shamshir*Shamshir The PC Cafe exclusive weapon enhancing scroll, which will be endowed with a function to increase the accuracy of 2 when enchanted over 4 Cannot be exchanged, dropped, or crystallized. Cannot be granted additional functions. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1941,7 +1941,7 @@
 		</for>
 	</item>
 	<item id="13188" type="Weapon" name="Player Commendation - Admiral's Estoc - Player Commendation Weapon">
-		<!-- Kamael exclusive weapon. PC Cafe exclusive item containing the power of an Admiral's Estoc. Can be enchanted by using the PC Cafe Exclusive Weapon Enhance Scroll. Also increases Atk. Spd. by about 7%. When enchanted to 4 or more, during a critical attack, party members including yourself will receive at a fixed rate increased attack power, magic power, and healing capacity, as well as decreased MP consumption per skill. Cannot be exchanged, dropped, or crystallized. Cannot be granted additional functions. -->
+		<!-- PC Cafe exclusive item with a power of Amiral's Estoc Available to enchant by the enchanted scroll of PC Cafe exclusive weapons Additionally, attack speed increases by about 7% enchanted to 4 or more, party members including youself will get the increased attack power, magic power and healing capacity by a fixed rate but decreased MP consumption per skill during a critical attack. Cannot be exchanged, dropped, or crystallized. Cannot be granted additional functions. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1978,7 +1978,7 @@
 		</for>
 	</item>
 	<item id="13189" type="Weapon" name="Player Commendation - Saber Tooth - Player Commendation Weapon">
-		<!-- Kamael exclusive weapon. PC Cafe exclusive item containing the power of a Saber Tooth. Can be enchanted by using the PC Cafe Exclusive Weapon Enhance Scroll. Also increases Critical by 73. Cannot be exchanged, dropped, or crystallized. Cannot be granted additional functions. -->
+		<!-- PC Cafe exclusive item with a power of Saber Tooth Available to enchant by the enchanted scroll of PC Cafe exclusive weapons Increases Critical by 73 additionally. Cannot be exchanged, dropped, or crystallized. Cannot be granted additional functions. -->
 		<set name="icon" val="icon.weapon_invincible_blade_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -2014,7 +2014,7 @@
 		</for>
 	</item>
 	<item id="13190" type="Weapon" name="Player Commendation - Sharpshooter - Player Commendation Weapon">
-		<!-- Kamael exclusive weapon. PC Cafe exclusive item containing the power of a Sharpshooter. Can be enchanted by using the PC Cafe Exclusive Weapon Enhance Scroll. Also increases Accuracy by 4. Cannot be exchanged, dropped, or crystallized. Cannot be granted additional functions. -->
+		<!-- PC Cafe exclusive item with a power of Sharpshooter Available to enchant by the enchanted scroll of PC Cafe exclusive weapons Aditionally, the accuracy increases by 4. Cannot be exchanged, dropped, or crystallized. Cannot be granted additional functions. -->
 		<set name="icon" val="icon.weapon_taslam_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -2051,7 +2051,7 @@
 		</for>
 	</item>
 	<item id="13191" type="Weapon" name="Player Commendation - Ecliptic Sword - Player Commendation Weapon">
-		<!-- PC Cafe exclusive item with a power of Ecliptic Sword Available to enchant by the enchanted scroll of PC Cafe exclusive weapons Additionally, Increases M. Atk. by 26. Cannot be exchanged, dropped, or crystallized. Cannot be granted additional functions. -->
+		<!-- PC Cafe exclusive item with a power of Ecliptic Sword Available to enchant by the enchanted scroll of PC Cafe exclusive weapons Aditionally, magic power increases by 26. Cannot be exchanged, dropped, or crystallized. Cannot be granted additional functions. -->
 		<set name="icon" val="icon.weapon_sword_of_eclipse_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2084,7 +2084,7 @@
 		</for>
 	</item>
 	<item id="13192" type="Weapon" name="Player Commendation - Ecliptic Axe - Player Commendation Weapon">
-		<!-- PC Cafe exclusive item with a power of Ecliptic Axe Available to enchant by the enchanted scroll of PC Cafe exclusive weapons Casts Dryad Root with a 10% of chance when using additional magic skills to a target. Cannot be exchanged, dropped, or crystallized. Cannot be granted additional functions. -->
+		<!-- PC Cafe exclusive item with a power of Ecpiltic Axe Available to enchant by the enchanted scroll of PC Cafe exclusive weapons Casts Dryad Root with a 10% of probability when using additional magic skills to a target. Cannot be exchanged, dropped, or crystallized. Cannot be granted additional functions. -->
 		<set name="icon" val="icon.weapon_eclipse_axe_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2119,7 +2119,7 @@
 		</for>
 	</item>
 	<item id="13193" type="Weapon" name="Player Commendation - Dwarven Hammer - Player Commendation Weapon">
-		<!-- PC Cafe exclusive item with a power of Dwarven Hammer Available to enchant by the enchanted scroll of PC Cafe exclusive weapons Upon additional Critical, gives effect to a target by 42% of chance. Cannot be exchanged, dropped, or crystallized. Cannot be granted additional functions. -->
+		<!-- PC Cafe exclusive item with a power of Dwarven Hammer Available to enchant by the enchanted scroll of PC Cafe exclusive weapons Upon additional Critical, gives effect to a target by 42% of probability. Cannot be exchanged, dropped, or crystallized. Cannot be granted additional functions. -->
 		<set name="icon" val="icon.weapon_dwarven_hammer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2184,7 +2184,7 @@
 		</for>
 	</item>
 	<item id="13195" type="Weapon" name="Player Commendation - Lance - Player Commendation Weapon">
-		<!-- PC Cafe exclusive item with a power of Lance Available to enchant by the enchanted scroll of PC Cafe exclusive weapons Upon additional Critical, about 25% of Stun effect is activated. Cannot be exchanged, dropped, or crystallized. Cannot be granted additional functions. -->
+		<!-- PC Cafe exclusive item with a power of Lance Available to enchant by the enchanted scroll of PC Cafe exclusive weapons Upon aditional Critical, about 25% of Stun effect is activated. Cannot be exchanged, dropped, or crystallized. Cannot be granted additional functions. -->
 		<set name="icon" val="icon.weapon_lancia_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -2251,7 +2251,7 @@
 		</for>
 	</item>
 	<item id="13197" type="Weapon" name="Player Commendation - Art of Battle Axe - Player Commendation Weapon">
-		<!-- PC Cafe exclusive item with a power of Art of Battle Axe Available to enchant by the enchanted scroll of PC Cafe exclusive weapons Max HP increases by 25% additionally. Cannot be exchanged, dropped, or crystallized. Cannot be granted additional functions. -->
+		<!-- PC Cafe exclusive item with a power of Art of Battle Axe Available to enchant by the enchanted scroll of PC Cafe exclusive weapons Maximum HP increases by 25% additionally. Cannot be exchanged, dropped, or crystallized. Cannot be granted additional functions. -->
 		<set name="icon" val="icon.weapon_art_of_battle_axe_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2284,7 +2284,7 @@
 		</for>
 	</item>
 	<item id="13198" type="Weapon" name="Player Commendation - Staff of Evil Spirits - Player Commendation Weapon">
-		<!-- PC Cafe exclusive item with a power of Staff of Evil Spirits Available to enchant by the enchanted scroll of PC Cafe exclusive weapons Casts a Bless the Body with a 20% of chance when using additional magic skills to a target. Cannot be exchanged, dropped, or crystallized. Cannot be granted additional functions. -->
+		<!-- PC Cafe exclusive item with a power of Staff of Evil Spirits Available to enchant by the enchanted scroll of PC Cafe exclusive weapons Casts a Bless the Body with a 20% of probability when using additional magic skills to a target. Cannot be exchanged, dropped, or crystallized. Cannot be granted additional functions. -->
 		<set name="icon" val="icon.weapon_staff_of_evil_sprit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2319,7 +2319,7 @@
 		</for>
 	</item>
 	<item id="13199" type="Weapon" name="Player Commendation - Devil's Dagger - Player Commendation Weapon">
-		<!-- PC Cafe exclusive item with a power of Devil's Dagger Available to enchant by the enchanted scroll of PC Cafe exclusive weapons Critical Damage increases by 160 during additional critical attack. Cannot be exchanged, dropped, or crystallized. Cannot be granted additional functions. -->
+		<!-- PC Cafe exclusive item with a power of Devil's Dagger Available to enchant by the enchanted scroll of PC Cafe exclusive weapons Critical attack power increases by 160 during additional critical attack. Cannot be exchanged, dropped, or crystallized. Cannot be granted additional functions. -->
 		<set name="icon" val="icon.weapon_demons_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />

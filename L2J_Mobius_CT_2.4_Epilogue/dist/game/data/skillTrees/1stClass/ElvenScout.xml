@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
 	<!-- Elven Scout -->
 	<skillTree type="classSkillTree" classId="22" parentClassId="18">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<!-- Confirmed CT2.5 -->
 		<skill skillName="Bow Mastery" skillId="208" skillLvl="1" getLevel="20" levelUpSp="950" learnedByNpc="true" />
 		<skill skillName="Bow Mastery" skillId="208" skillLvl="2" getLevel="20" levelUpSp="950" learnedByNpc="true" />
 		<skill skillName="Bow Mastery" skillId="208" skillLvl="3" getLevel="20" levelUpSp="950" learnedByNpc="true" />
@@ -24,7 +24,7 @@
 		<skill skillName="Vicious Stance" skillId="312" skillLvl="1" getLevel="20" levelUpSp="2800" learnedByNpc="true" />
 		<skill skillName="Defense Aura" skillId="91" skillLvl="2" getLevel="20" levelUpSp="2800" learnedByNpc="true" />
 		<skill skillName="Long Shot" skillId="113" skillLvl="1" getLevel="20" levelUpSp="2800" learnedByNpc="true" />
-		<skill skillName="Boost Breath" skillId="195" skillLvl="1" getLevel="20" levelUpSp="2800" learnedByNpc="true" />
+		<skill skillName="Breath Boost" skillId="195" skillLvl="1" getLevel="20" levelUpSp="2800" learnedByNpc="true" />
 		<skill skillName="Acrobatics" skillId="173" skillLvl="1" getLevel="20" levelUpSp="2800" learnedByNpc="true" />
 		<skill skillName="Unlock" skillId="27" skillLvl="1" getLevel="20" levelUpSp="2800" learnedByNpc="true" />
 		<skill skillName="Bow Mastery" skillId="208" skillLvl="4" getLevel="24" levelUpSp="1700" learnedByNpc="true" />
@@ -121,9 +121,9 @@
 		<skill skillName="Charm" skillId="15" skillLvl="13" getLevel="36" levelUpSp="8600" learnedByNpc="true" />
 		<skill skillName="Charm" skillId="15" skillLvl="14" getLevel="36" levelUpSp="8600" learnedByNpc="true" />
 		<skill skillName="Charm" skillId="15" skillLvl="15" getLevel="36" levelUpSp="8600" learnedByNpc="true" />
-		<skill skillName="Stun Shot" skillId="101" skillLvl="1" getLevel="36" levelUpSp="8600" learnedByNpc="true" />
-		<skill skillName="Stun Shot" skillId="101" skillLvl="2" getLevel="36" levelUpSp="8600" learnedByNpc="true" />
-		<skill skillName="Stun Shot" skillId="101" skillLvl="3" getLevel="36" levelUpSp="8600" learnedByNpc="true" />
+		<skill skillName="Stunning Shot" skillId="101" skillLvl="1" getLevel="36" levelUpSp="8600" learnedByNpc="true" />
+		<skill skillName="Stunning Shot" skillId="101" skillLvl="2" getLevel="36" levelUpSp="8600" learnedByNpc="true" />
+		<skill skillName="Stunning Shot" skillId="101" skillLvl="3" getLevel="36" levelUpSp="8600" learnedByNpc="true" />
 		<skill skillName="Vicious Stance" skillId="312" skillLvl="5" getLevel="36" levelUpSp="26000" learnedByNpc="true" />
 		<skill skillName="Entangle" skillId="102" skillLvl="1" getLevel="36" levelUpSp="26000" learnedByNpc="true" />
 		<skill skillName="Esprit" skillId="171" skillLvl="1" getLevel="36" levelUpSp="26000" learnedByNpc="true" />

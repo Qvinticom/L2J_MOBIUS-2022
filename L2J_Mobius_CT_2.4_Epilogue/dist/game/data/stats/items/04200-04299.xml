@@ -155,7 +155,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4218" type="EtcItem" name="L2 Day - Scroll of Mana Regeneration">
-		<!-- MP Recovery Rate increases. -->
+		<!-- MP recovery speed increases. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -695,7 +695,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4249" type="EtcItem" name="Ol Mahum Captain's Head">
-		<!-- A severed head of an Ol Mahum captain. Collect 30 of them and take them to Turek Chief Burai. -->
+		<!-- A severed head of an ol mahum captain. Collect 30 of them and take them to Turek Chief Burai. -->
 		<set name="icon" val="icon.etc_skull_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
@@ -719,7 +719,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4251" type="EtcItem" name="Ancient Statue of Goddess">
-		<!-- A statue of a goddess from an old empire that has been discovered in the cemetery. Take it to Priestess Flownia of Town of Aden. -->
+		<!-- A statue of a goddess from an old empire that has been discovered in the cemetery. Take it to Priestess Flownia of Aden Castle Town. -->
 		<set name="icon" val="icon.etc_statue_of_einhasad_gold_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BONE" />
@@ -947,7 +947,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4270" type="EtcItem" name="Old Key">
-		<!-- An article left by a dead soldier. His descendent Sir Kristof Rodemai is living in Town of Giran. Take it to him. -->
+		<!-- An article left by a dead soldier. His descendent Sir Kristof Rodemai is living in Giran Castle Town. Take it to him. -->
 		<set name="icon" val="icon.etc_old_key_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -983,7 +983,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4273" type="EtcItem" name="Einhasad Crucifix">
-		<!-- An article left by a dead soldier. Take it to High Priest Orven of Einhasad Temple in Town of Aden where the dead soldier used to be stationed. -->
+		<!-- An article left by a dead soldier. Take it to High Priest Orven of Einhasad Temple in Aden Castle Town where the dead soldier used to be stationed. -->
 		<set name="icon" val="icon.etc_magic_coin_silver_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1175,7 +1175,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4289" type="EtcItem" name="Hanellin's 2nd Letter">
-		<!-- A letter that Hanellin entrusted you with. Take it to Claudia Athebaldt of Town of Aden and receive your next assignment from her. -->
+		<!-- A letter that Hanellin entrusted you with. Take it to Claudia Athebaldt of Aden Castle Town and receive your next assignment from her. -->
 		<set name="icon" val="icon.etc_piece_of_paper_gray_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1187,7 +1187,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="4290" type="EtcItem" name="Hanellin's 3rd Letter">
-		<!-- A letter that Hanellin entrusted you with. Take it to Martien of the Town of Giran and receive your next assignment from him. -->
+		<!-- A letter that Hanellin entrusted you with. Take it to Martien of the Giran Castle Town and receive your next assignment from him. -->
 		<set name="icon" val="icon.etc_piece_of_paper_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />

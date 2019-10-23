@@ -31,7 +31,6 @@ public class SoDManager
 	public static String ENERGY_SEEDS = "EnergySeeds";
 	
 	private static final byte SOITYPE = 2;
-	private static final byte SOATYPE = 3;
 	
 	// Seed of Destruction
 	private static final byte SODTYPE = 1;
@@ -62,11 +61,6 @@ public class SoDManager
 			case SOITYPE:
 			{
 				// Seed of Infinity
-				break;
-			}
-			case SOATYPE:
-			{
-				// Seed of Annihilation
 				break;
 			}
 			default:

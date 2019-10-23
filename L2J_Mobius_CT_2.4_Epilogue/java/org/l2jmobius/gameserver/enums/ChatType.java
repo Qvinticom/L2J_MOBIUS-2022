@@ -43,8 +43,8 @@ public enum ChatType
 	SCREEN_ANNOUNCE(19),
 	BATTLEFIELD(20),
 	MPCC_ROOM(21),
-	NPC_GENERAL(22),
-	NPC_SHOUT(23);
+	NPC_GENERAL(0), // Epilogue adjustment
+	NPC_SHOUT(1); // Epilogue adjustment
 	
 	private final int _clientId;
 	

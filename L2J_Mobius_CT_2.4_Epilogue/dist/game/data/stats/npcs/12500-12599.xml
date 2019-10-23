@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="12526" level="55" type="Pet" name="Wind Strider">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial" id="4710" level="1" /> <!-- Wild Stun -->
 			<skill name="Buff" id="4711" level="1" /> <!-- Wild Defense -->
@@ -44,7 +43,6 @@
 		</collision>
 	</npc>
 	<npc id="12527" level="55" type="Pet" name="Star Strider">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4712" level="1" /> <!-- Bright Burst -->
 			<skill name="Heal" id="4713" level="1" /> <!-- Bright Heal -->
@@ -87,7 +85,6 @@
 		</collision>
 	</npc>
 	<npc id="12528" level="55" type="Pet" name="Twilight Strider">
-		<!-- Confirmed CT2.5 -->
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -126,7 +123,6 @@
 		</collision>
 	</npc>
 	<npc id="12564" level="15" type="Pet" name="Sin Eater">
-		<!-- Confirmed CT2.5 -->
 		<race>FAIRY</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="1" men="25">

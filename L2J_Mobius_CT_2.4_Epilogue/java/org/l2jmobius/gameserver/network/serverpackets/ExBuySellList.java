@@ -16,8 +16,15 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.buylist.BuyListHolder;
+import org.l2jmobius.gameserver.model.buylist.Product;
+import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
@@ -26,12 +33,47 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExBuySellList extends AbstractItemPacket
 {
+	private final int _buyListId;
+	private final List<Product> _buyList = new ArrayList<>();
+	private final long _money;
+	private double _taxRate = 0;
 	private ItemInstance[] _sellList = null;
 	private ItemInstance[] _refundList = null;
 	private final boolean _done;
 	
-	public ExBuySellList(PlayerInstance player, boolean done)
+	public ExBuySellList(PlayerInstance player, BuyListHolder list, boolean done)
 	{
+		_money = player.getAdena();
+		_buyListId = list.getListId();
+		for (Product item : list.getProducts())
+		{
+			if (item.hasLimitedStock() && (item.getCount() <= 0))
+			{
+				continue;
+			}
+			_buyList.add(item);
+		}
+		_sellList = player.getInventory().getAvailableItems(true, false, false);
+		if (player.hasRefund())
+		{
+			_refundList = player.getRefund().getItems();
+		}
+		_done = done;
+	}
+	
+	public ExBuySellList(PlayerInstance player, BuyListHolder list, double taxRate, boolean done)
+	{
+		_money = player.getAdena();
+		_taxRate = taxRate;
+		_buyListId = list.getListId();
+		for (Product item : list.getProducts())
+		{
+			if (item.hasLimitedStock() && (item.getCount() <= 0))
+			{
+				continue;
+			}
+			_buyList.add(item);
+		}
 		_sellList = player.getInventory().getAvailableItems(false, false, false);
 		if (player.hasRefund())
 		{
@@ -44,15 +86,79 @@ public class ExBuySellList extends AbstractItemPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_BUY_SELL_LIST.writeId(packet);
-		packet.writeD(0x01);
+		packet.writeQ(_money);
 		
-		if ((_sellList != null))
+		packet.writeD(_buyListId);
+		packet.writeH(_buyList.size());
+		for (Product item : _buyList)
+		{
+			packet.writeH(item.getItem().getType1());
+			packet.writeD(0x00); // objectId
+			packet.writeD(item.getItemId());
+			packet.writeQ(item.getCount() < 0 ? 0 : item.getCount());
+			packet.writeH(item.getItem().getType2());
+			packet.writeH(0x00); // ?
+			if (item.getItem().getType1() != Item.TYPE1_ITEM_QUESTITEM_ADENA)
+			{
+				packet.writeD(item.getItem().getBodyPart());
+				packet.writeH(0x00); // item enchant level
+				packet.writeH(0x00); // ?
+				packet.writeH(0x00);
+			}
+			else
+			{
+				packet.writeD(0x00);
+				packet.writeH(0x00);
+				packet.writeH(0x00);
+				packet.writeH(0x00);
+			}
+			
+			if ((item.getItemId() >= 3960) && (item.getItemId() <= 4026))
+			{
+				packet.writeQ((long) (item.getPrice() * Config.RATE_SIEGE_GUARDS_PRICE));
+			}
+			else
+			{
+				packet.writeQ((long) (item.getPrice() * (1 + (_taxRate / 2))));
+			}
+			
+			// T1
+			for (byte i = 0; i < 8; i++)
+			{
+				packet.writeH(0x00);
+			}
+			packet.writeH(0x00); // Enchant effect 1
+			packet.writeH(0x00); // Enchant effect 2
+			packet.writeH(0x00); // Enchant effect 3
+		}
+		
+		if ((_sellList != null) && (_sellList.length > 0))
 		{
 			packet.writeH(_sellList.length);
 			for (ItemInstance item : _sellList)
 			{
-				writeItem(packet, item);
+				packet.writeH(item.getItem().getType1());
+				packet.writeD(item.getObjectId());
+				packet.writeD(item.getId());
+				packet.writeQ(item.getCount());
+				packet.writeH(item.getItem().getType2());
+				packet.writeH(0x00);
+				packet.writeD(item.getItem().getBodyPart());
+				packet.writeH(item.getEnchantLevel());
+				packet.writeH(0x00);
+				packet.writeH(0x00);
 				packet.writeQ(item.getItem().getReferencePrice() / 2);
+				
+				// T1
+				packet.writeH(item.getAttackElementType());
+				packet.writeH(item.getAttackElementPower());
+				for (byte i = 0; i < 6; i++)
+				{
+					packet.writeH(item.getElementDefAttr(i));
+				}
+				packet.writeH(0x00); // Enchant effect 1
+				packet.writeH(0x00); // Enchant effect 2
+				packet.writeH(0x00); // Enchant effect 3
 			}
 		}
 		else
@@ -63,12 +169,28 @@ public class ExBuySellList extends AbstractItemPacket
 		if ((_refundList != null) && (_refundList.length > 0))
 		{
 			packet.writeH(_refundList.length);
-			int i = 0;
+			int idx = 0;
 			for (ItemInstance item : _refundList)
 			{
-				writeItem(packet, item);
-				packet.writeD(i++);
-				packet.writeQ((item.getItem().getReferencePrice() / 2) * item.getCount());
+				packet.writeD(idx++);
+				packet.writeD(item.getId());
+				packet.writeQ(item.getCount());
+				packet.writeH(item.getItem().getType2());
+				packet.writeH(0x00); // ?
+				packet.writeH(item.getEnchantLevel());
+				packet.writeH(0x00); // ?
+				packet.writeQ((item.getCount() * item.getItem().getReferencePrice()) / 2);
+				
+				// T1
+				packet.writeH(item.getAttackElementType());
+				packet.writeH(item.getAttackElementPower());
+				for (byte i = 0; i < 6; i++)
+				{
+					packet.writeH(item.getElementDefAttr(i));
+				}
+				packet.writeH(0x00); // Enchant effect 1
+				packet.writeH(0x00); // Enchant effect 2
+				packet.writeH(0x00); // Enchant effect 3
 			}
 		}
 		else

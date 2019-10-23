@@ -68,13 +68,6 @@ public class OlympiadStat implements IUserCommandHandler
 		sm.addInt(Olympiad.getInstance().getCompetitionLost(nobleObjId));
 		sm.addInt(Olympiad.getInstance().getNoblePoints(nobleObjId));
 		player.sendPacket(sm);
-		
-		final SystemMessage sm2 = new SystemMessage(SystemMessageId.YOU_HAVE_S1_MATCH_ES_REMAINING_THAT_YOU_CAN_PARTICIPATE_IN_THIS_WEEK_S2_1_VS_1_CLASS_MATCHES_S3_1_VS_1_MATCHES_S4_3_VS_3_TEAM_MATCHES);
-		sm2.addInt(Olympiad.getInstance().getRemainingWeeklyMatches(nobleObjId));
-		sm2.addInt(Olympiad.getInstance().getRemainingWeeklyMatchesClassed(nobleObjId));
-		sm2.addInt(Olympiad.getInstance().getRemainingWeeklyMatchesNonClassed(nobleObjId));
-		sm2.addInt(Olympiad.getInstance().getRemainingWeeklyMatchesTeam(nobleObjId));
-		player.sendPacket(sm2);
 		return true;
 	}
 	

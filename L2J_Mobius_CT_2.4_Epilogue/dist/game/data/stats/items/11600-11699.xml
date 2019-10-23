@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="11600" type="Armor" name="Dynasty Ring">
-		<!-- Masterwork Item that has the effect of MP +23 and Resistance to Dark +1.14. -->
+		<!-- Masterwork Item that has the effect of MP +23 and increased resistance to darkness +1.14. -->
 		<set name="icon" val="icon.accessary_dynasty_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="190" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="3971000" />
@@ -20,13 +20,13 @@
 		</for>
 	</item>
 	<item id="11601" type="Armor" name="Dynasty Earrings">
-		<!-- Masterwork Item that has the effect of MP+ 35 and Resistance to sleep attacks +5. -->
+		<!-- Rare item that has the effect of MP+ 35 and +5 increase of ?Resistance to sleep attacks. -->
 		<set name="icon" val="icon.accessary_dynasty_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="285" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="5956000" />
@@ -39,13 +39,13 @@
 		</for>
 	</item>
 	<item id="11602" type="Armor" name="Sealed Dynasty Necklace">
-		<!-- Sealed Masterwork Item that thas the effect of MP +46 and Max MP +30 when the seal is broken. -->
+		<!-- Sealed rare item. Wthe seal is broken, MP+46, Maximum MP increases +30. -->
 		<set name="icon" val="icon.accessary_dynasty_necklace_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="258" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="5376000" />
@@ -56,13 +56,13 @@
 		</for>
 	</item>
 	<item id="11603" type="Armor" name="Sealed Dynasty Ring">
-		<!-- Sealed Masterwork Item that increases Resistance to Dark by 1.14. -->
+		<!-- Sealed rare item. When the seal is broken, Darkness Resistance increases +1.14. -->
 		<set name="icon" val="icon.accessary_dynasty_ring_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="129" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="2688000" />
@@ -73,13 +73,13 @@
 		</for>
 	</item>
 	<item id="11604" type="Armor" name="Sealed Dynasty Earring">
-		<!-- Sealed Masterwork Item that thas the effect of MP+ 35 and Resistance to sleep attacks +5. -->
+		<!-- Sealed rare item. When the seal is broken, MP+ 35 and Resistance to sleep attacks increases +5. -->
 		<set name="icon" val="icon.accessary_dynasty_earing_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="194" />
-		<set name="crystal_type" val="S" />
+		<set name="crystal_type" val="S80" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="4032000" />
@@ -90,7 +90,7 @@
 		</for>
 	</item>
 	<item id="11605" type="Weapon" name="Common Item - Steel Sword">
-		<!-- Steel Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Steel Sword with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_iron_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -115,7 +115,7 @@
 		</for>
 	</item>
 	<item id="11606" type="Weapon" name="Common Item - Reinforced Bow">
-		<!-- Reinforced Bow with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Strengthened Bow with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_strengthening_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -143,7 +143,7 @@
 		</for>
 	</item>
 	<item id="11607" type="Weapon" name="Common Item - Rapier">
-		<!-- Kamael Exclusive Weapon: Shadow weapon - Saber conversion. Rapier with limited ability enhancement. Enchantment, special abilities and augmentation are not possible. -->
+		<!-- Kamael exclusive weapon Shadow weapon - Saber conversion. Rapier with limited ability enhancement. Enchantment, storing souls, and smelting are impossible. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -173,7 +173,7 @@
 		</for>
 	</item>
 	<item id="11608" type="Weapon" name="Common Item - Bagh-Nakh">
-		<!-- Bagh-Nakh with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Bagh-Nakh with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_baghnakh_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -198,7 +198,7 @@
 		</for>
 	</item>
 	<item id="11609" type="Weapon" name="Common Item - Proof of Revenge">
-		<!-- Proof of Revenge with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Proof of Revenge with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_proof_of_revenge_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ETC" />
@@ -223,7 +223,7 @@
 		</for>
 	</item>
 	<item id="11610" type="Weapon" name="Common Item - Bone Staff">
-		<!-- Bone Staff with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Bone Staff with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_apprentices_staff_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -249,7 +249,7 @@
 		</for>
 	</item>
 	<item id="11611" type="Weapon" name="Common Item - Priest Sword">
-		<!-- Priest Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Priest Sword with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_sword_of_priest_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -274,7 +274,7 @@
 		</for>
 	</item>
 	<item id="11612" type="Weapon" name="Common Item - Branch of Life">
-		<!-- Branch of Life with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Branch of Life with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_branch_of_life_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ETC" />
@@ -299,7 +299,7 @@
 		</for>
 	</item>
 	<item id="11613" type="Weapon" name="Common Item - Crafted Dagger">
-		<!-- Crafted Dagger with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Crafted Dagger with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_handiwork_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -324,7 +324,7 @@
 		</for>
 	</item>
 	<item id="11614" type="Weapon" name="Common Item - Saber">
-		<!-- Saber with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Saber with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_saber_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -349,7 +349,7 @@
 		</for>
 	</item>
 	<item id="11615" type="Weapon" name="Common Item - Scalpel">
-		<!-- Scalpel with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Scalpel with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_scalpel_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -374,7 +374,7 @@
 		</for>
 	</item>
 	<item id="11616" type="Weapon" name="Common Item - Temptation of Abyss">
-		<!-- Temptation of Abyss with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Temptation of Abyss with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_temptation_of_abyss_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ETC" />
@@ -399,7 +399,7 @@
 		</for>
 	</item>
 	<item id="11617" type="Weapon" name="Common Item - Assassin Knife">
-		<!-- Assassin Knife with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Assassin Knife with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_assassin_knife_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -424,7 +424,7 @@
 		</for>
 	</item>
 	<item id="11618" type="Weapon" name="Common Item - Work Hammer">
-		<!-- Work Hammer with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Work Hammer with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_work_hammer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -449,7 +449,7 @@
 		</for>
 	</item>
 	<item id="11619" type="Weapon" name="Common Item - Scroll of Wisdom">
-		<!-- Scroll of Wisdom with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Scroll of Wisdom with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_scroll_of_wisdom_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ETC" />
@@ -474,7 +474,7 @@
 		</for>
 	</item>
 	<item id="11620" type="Weapon" name="Common Item - Talwar">
-		<!-- Kamael Exclusive Weapon: Shadow weapon - Steel Sword conversion. Talwar with limited ability enhancement. Enchantment, special abilities and augmentation are not possible. -->
+		<!-- Kamael exclusive weapon Shadow weapon - Steel Sword conversion. Talwar with limited ability enhancement. Enchantment, storing souls, and smelting are impossible. -->
 		<set name="icon" val="icon.weapon_tulwar_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -503,7 +503,7 @@
 		</for>
 	</item>
 	<item id="11621" type="Weapon" name="Common Item - Talwar">
-		<!-- Kamael Exclusive Weapon: Shadow weapon - Heavy Sword conversion. Talwar with limited ability enhancement. Enchantment, special abilities and augmentation are not possible. -->
+		<!-- Kamael exclusive weapon Shadow weapon - Heavy Sword conversion. Talwar with limited ability enhancement. Enchantment, storing souls, and smelting are impossible. -->
 		<set name="icon" val="icon.weapon_tulwar_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -532,7 +532,7 @@
 		</for>
 	</item>
 	<item id="11622" type="Weapon" name="Common Item - Trident">
-		<!-- Trident with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Trident with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_trident_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -558,7 +558,7 @@
 		</for>
 	</item>
 	<item id="11623" type="Weapon" name="Common Item - Hand Axe">
-		<!-- Hand Axe with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Hand Axe with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_hand_axe_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -583,7 +583,7 @@
 		</for>
 	</item>
 	<item id="11624" type="Weapon" name="Common Item - Field Gun">
-		<!-- Kamael Exclusive Weapon: Shadow weapon - Reinforced Bow conversion. Field Gun with limited ability enhancement. Enchantment, special abilities and augmentation are not possible. -->
+		<!-- Kamael exclusive weapon Shadow weapon - Strengthened Bow conversion. Field Gun with limited ability enhancement. Enchantment, storing souls, and smelting are impossible. -->
 		<set name="icon" val="icon.weapon_hunting_gun_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -613,7 +613,7 @@
 		</for>
 	</item>
 	<item id="11625" type="Weapon" name="Common Item - Heavy Sword">
-		<!-- Heavy Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Heavy Sword with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_heavy_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -638,7 +638,7 @@
 		</for>
 	</item>
 	<item id="11626" type="Weapon" name="Common Item - Heavy Mace">
-		<!-- Heavy Mace with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Heavy Mace with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_heavy_mace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -663,7 +663,7 @@
 		</for>
 	</item>
 	<item id="11627" type="Weapon" name="Common Item - Mace of Prayer">
-		<!-- Mace of Prayer with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Mace of Prayer with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_mace_of_prayer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -689,7 +689,7 @@
 		</for>
 	</item>
 	<item id="11628" type="Weapon" name="Common Item - Knight's Sword">
-		<!-- Knight's Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Knight's Sword with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_knights_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -714,7 +714,7 @@
 		</for>
 	</item>
 	<item id="11629" type="Weapon" name="Common Item - Dark Elven Bow">
-		<!-- Dark Elven Bow with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Dark Elven Bow with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_dark_elven_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -742,7 +742,7 @@
 		</for>
 	</item>
 	<item id="11630" type="Weapon" name="Common Item - Doom Hammer">
-		<!-- Doom Hammer with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Doom Hammer with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_doom_hammer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -768,7 +768,7 @@
 		</for>
 	</item>
 	<item id="11631" type="Weapon" name="Common Item - Dwarven Trident">
-		<!-- Dwarven Trident with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Dwarven Trident with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_dwarven_trident_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -794,7 +794,7 @@
 		</for>
 	</item>
 	<item id="11632" type="Weapon" name="Common Item - Long Bow">
-		<!-- Long Bow with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Long Bow with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_long_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -822,7 +822,7 @@
 		</for>
 	</item>
 	<item id="11633" type="Weapon" name="Common Item - Staff of Mana">
-		<!-- Staff of Mana with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Staff of Mana with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_staff_of_mana_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -848,7 +848,7 @@
 		</for>
 	</item>
 	<item id="11634" type="Weapon" name="Common Item - Mystic Staff">
-		<!-- Mystic Staff with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Mystic Staff with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_mystic_staff_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -874,7 +874,7 @@
 		</for>
 	</item>
 	<item id="11635" type="Weapon" name="Common Item - Bastard Sword">
-		<!-- Bastard Sword with limited enhancement options Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Bastard Sword with limited enhancement options Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_bastard_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -899,7 +899,7 @@
 		</for>
 	</item>
 	<item id="11636" type="Weapon" name="Common Item - Spinebone Sword">
-		<!-- Spinebone Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Spinebone Sword with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_spinebone_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -924,7 +924,7 @@
 		</for>
 	</item>
 	<item id="11637" type="Weapon" name="Common Item - Divine Tome">
-		<!-- Divine Tome with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Divine Tome with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_divine_tome_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ETC" />
@@ -949,7 +949,7 @@
 		</for>
 	</item>
 	<item id="11638" type="Weapon" name="Common Item - Mace of Judgment">
-		<!-- Mace of Judgment with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Mace of Judgement with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_mace_of_judgment_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -975,7 +975,7 @@
 		</for>
 	</item>
 	<item id="11639" type="Weapon" name="Common Item - Military Talwar">
-		<!-- Military Talwar with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Military Talwar with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_tulwar_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1003,7 +1003,7 @@
 		</for>
 	</item>
 	<item id="11640" type="Weapon" name="Common Item - Elven Bow">
-		<!-- Elven Bow with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Elven Bow with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_elven_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1031,7 +1031,7 @@
 		</for>
 	</item>
 	<item id="11641" type="Weapon" name="Common Item - Mace of Miracle">
-		<!-- Mace of Miracle with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Mace of Miracle with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_mace_of_miracle_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1057,7 +1057,7 @@
 		</for>
 	</item>
 	<item id="11642" type="Weapon" name="Common Item - Single-Edged Jamadhr">
-		<!-- Single-Edged Jamadhr with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Single-Edged Jamadhr with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_single-edged_jamadhr_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1082,7 +1082,7 @@
 		</for>
 	</item>
 	<item id="11643" type="Weapon" name="Common Item - Artisan's Sword">
-		<!-- Artisan's Sword with limited enhancement options Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Artisan's Sword with limited enhancement options Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_artisans_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1107,7 +1107,7 @@
 		</for>
 	</item>
 	<item id="11644" type="Weapon" name="Common Item - Conjuror's Staff">
-		<!-- Conjuror's Staff with limited enhancement options Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Conjuror's Staff with limited enhancement options Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_conjure_staff_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1133,7 +1133,7 @@
 		</for>
 	</item>
 	<item id="11645" type="Weapon" name="Common Item - Tomahawk">
-		<!-- Tomahawk with limited enhancement options Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Tomahawk with limited enhancement options Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_tomahawk_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1158,7 +1158,7 @@
 		</for>
 	</item>
 	<item id="11646" type="Weapon" name="Common Item - Poniard Dagger">
-		<!-- Poniard Dagger with limited enhancement options Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Poniard Dagger with limited enhancement options Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_dirk_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1183,7 +1183,7 @@
 		</for>
 	</item>
 	<item id="11647" type="Weapon" name="Common Item - Pike">
-		<!-- Pike with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Pike with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_pike_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1209,7 +1209,7 @@
 		</for>
 	</item>
 	<item id="11648" type="Weapon" name="Common Item - Fleuret">
-		<!-- Kamael Exclusive Weapon: Shadow weapon - Bastard Sword conversion. Fleuret with limited ability enhancement. Enchantment, special abilities and augmentation are not possible. -->
+		<!-- Kamael exclusive weapon Shadow weapon - Bastard Sword conversion. Fleuret with limited ability enhancement. Enchantment, storing souls, and smelting are impossible. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1239,7 +1239,7 @@
 		</for>
 	</item>
 	<item id="11649" type="Weapon" name="Common Item - Fleuret">
-		<!-- Kamael Exclusive Weapon: Shadow weapon - Spinebone Sword conversion. Fleuret with limited ability enhancement. Enchantment, special abilities and augmentation are not possible. -->
+		<!-- Kamael exclusive weapon Shadow weapon - Spinebone Sword conversion. Fleuret with limited ability enhancement. Enchantment, storing souls, and smelting are impossible. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1269,7 +1269,7 @@
 		</for>
 	</item>
 	<item id="11650" type="Weapon" name="Common Item - Fleuret">
-		<!-- Kamael Exclusive Weapon: Shadow weapon - Artisan's Sword conversion. Fleuret with limited ability enhancement. Enchantment, special abilities and augmentation are not possible. -->
+		<!-- Kamael exclusive weapon Shadow weapon - Artisan's Sword conversion. Fleuret with limited ability enhancement. Enchantment, storing souls, and smelting are impossible. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1299,7 +1299,7 @@
 		</for>
 	</item>
 	<item id="11651" type="Weapon" name="Common Item - Fleuret">
-		<!-- Kamael Exclusive Weapon: Shadow weapon - Knight's Sword conversion. Fleuret with limited ability enhancement. Enchantment, special abilities and augmentation are not possible. -->
+		<!-- Kamael exclusive weapon Shadow weapon - Knight's Sword conversion. Fleuret with limited ability enhancement. Enchantment, storing souls, and smelting are impossible. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1329,7 +1329,7 @@
 		</for>
 	</item>
 	<item id="11652" type="Weapon" name="Common Item - Hand Crossbow">
-		<!-- Kamael Exclusive Weapon: Shadow weapon - Dark Elven Bow conversion. Hand Crossbow with limited ability enhancement. Enchantment, special abilities and augmentation are not possible. -->
+		<!-- Kamael exclusive weapon Shadow weapon - Dark Elven Bow conversion. Hand Crossbow with limited ability enhancement. Enchantment, storing souls, and smelting are impossible. -->
 		<set name="icon" val="icon.weapon_hunting_gun_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1359,7 +1359,7 @@
 		</for>
 	</item>
 	<item id="11653" type="Weapon" name="Common Item - Hand Crossbow">
-		<!-- Kamael Exclusive Weapon: Shadow weapon - Long Bow conversion. Hand Crossbow with limited ability enhancement. Enchantment, special abilities and augmentation are not possible. -->
+		<!-- Kamael exclusive weapon Shadow weapon - Long Bow conversion. Hand Crossbow with limited ability enhancement. Enchantment, storing souls, and smelting are impossible. -->
 		<set name="icon" val="icon.weapon_hunting_gun_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1389,7 +1389,7 @@
 		</for>
 	</item>
 	<item id="11654" type="Weapon" name="Common Item - Hand Crossbow">
-		<!-- Kamael Exclusive Weapon: Shadow weapon - Elven Bow conversion. Hand Crossbow with limited ability enhancement. Enchantment, special abilities and augmentation are not possible. -->
+		<!-- Kamael exclusive weapon Shadow weapon - Elven Bow conversion. Hand Crossbow with limited ability enhancement. Enchantment, storing souls, and smelting are impossible. -->
 		<set name="icon" val="icon.weapon_hunting_gun_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1419,7 +1419,7 @@
 		</for>
 	</item>
 	<item id="11655" type="Weapon" name="Common Item - Sword of Magic">
-		<!-- Sword of Magic with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Sword of Magic with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_sword_of_magic_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1444,7 +1444,7 @@
 		</for>
 	</item>
 	<item id="11656" type="Weapon" name="Common Item - Sword of Mystic">
-		<!-- Sword of Mystic with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Sword of Mystic with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_sword_of_mystic_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1469,7 +1469,7 @@
 		</for>
 	</item>
 	<item id="11657" type="Weapon" name="Common Item - Sword of Occult">
-		<!-- Sword of Occult with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Sword of Occult with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_sword_of_occult_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1494,7 +1494,7 @@
 		</for>
 	</item>
 	<item id="11658" type="Weapon" name="Common Item - Saber*Saber">
-		<!-- Saber*Saber with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Saber*Saber with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1518,7 +1518,7 @@
 		</for>
 	</item>
 	<item id="11659" type="Weapon" name="Common Item - Gastraphetes">
-		<!-- Gastraphetes with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Gastraphetes with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_gastraphetes_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1546,7 +1546,7 @@
 		</for>
 	</item>
 	<item id="11660" type="Weapon" name="Common Item - Shilen Knife">
-		<!-- Shilen Knife with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Shilen Knife with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_knife_o'_silenus_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1572,7 +1572,7 @@
 		</for>
 	</item>
 	<item id="11661" type="Weapon" name="Common Item - Dwarven Pike">
-		<!-- Dwarven Pike with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Dwarven Pike with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_dwarven_pike_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1598,7 +1598,7 @@
 		</for>
 	</item>
 	<item id="11662" type="Weapon" name="Common Item - Dagger of Mana">
-		<!-- Dagger of Mana with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Dagger of Mana with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_dagger_of_mana_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1624,7 +1624,7 @@
 		</for>
 	</item>
 	<item id="11663" type="Weapon" name="Common Item - Staff of Magic">
-		<!-- Staff of Magic with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Staff of Magic with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_staff_of_magicpower_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1650,7 +1650,7 @@
 		</for>
 	</item>
 	<item id="11664" type="Weapon" name="Common Item - Mystic Knife">
-		<!-- Mystic Knife with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Mystic Knife with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_mystic_knife_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1676,7 +1676,7 @@
 		</for>
 	</item>
 	<item id="11665" type="Weapon" name="Common Item - Triple-Edged Jamadhr">
-		<!-- Triple-Edged Jamadhr with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Triple-Edged Jamadhr with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_triple-edged_jamadhr_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1701,7 +1701,7 @@
 		</for>
 	</item>
 	<item id="11666" type="Weapon" name="Common Item - Spiked Club">
-		<!-- Spiked Club with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Spiked Club with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_spike_club_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1726,7 +1726,7 @@
 		</for>
 	</item>
 	<item id="11667" type="Weapon" name="Common Item - Two-Handed Sword">
-		<!-- Two-Handed Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Two-Handed Sword with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_two_handed_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1751,7 +1751,7 @@
 		</for>
 	</item>
 	<item id="11668" type="Weapon" name="Common Item - Estoc">
-		<!-- Kamael Exclusive Weapon: Shadow weapon - Crimson Sword conversion. Estoc with limited ability enhancement. Enchantment, special abilities and augmentation are not possible. -->
+		<!-- Kamael exclusive weapon Shadow weapon - Crimson Sword conversion. Estoc with limited ability enhancement. Enchantment, storing souls, and smelting are impossible. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1781,7 +1781,7 @@
 		</for>
 	</item>
 	<item id="11669" type="Weapon" name="Common Item - Estoc">
-		<!-- Kamael Exclusive Weapon: Shadow weapon - Elven Sword conversion. Estoc with limited ability enhancement. Enchantment, special abilities and augmentation are not possible. -->
+		<!-- Kamael exclusive weapon Shadow weapon - Elven Sword conversion. Estoc with limited ability enhancement. Enchantment, storing souls, and smelting are impossible. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1811,7 +1811,7 @@
 		</for>
 	</item>
 	<item id="11670" type="Weapon" name="Common Item - Elven Sword">
-		<!-- Elven Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Elven Sword with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_elven_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1836,7 +1836,7 @@
 		</for>
 	</item>
 	<item id="11671" type="Weapon" name="Common Item - War Hammer">
-		<!-- War Hammer with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- War Hammer with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_war_hammer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1862,7 +1862,7 @@
 		</for>
 	</item>
 	<item id="11672" type="Weapon" name="Common Item - Conjuror's Knife">
-		<!-- Conjuror's Knife with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Conjuror's Knife with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_conjure_knife_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1888,7 +1888,7 @@
 		</for>
 	</item>
 	<item id="11673" type="Weapon" name="Common Item - Kukuri">
-		<!-- Kukuri with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Kukuri with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_kukuri_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1913,7 +1913,7 @@
 		</for>
 	</item>
 	<item id="11674" type="Weapon" name="Common Item - Crossbow">
-		<!-- Kamael Exclusive Weapon: Shadow weapon - Gastraphetes conversion. Crossbow with limited ability enhancement. Enchantment, special abilities and augmentation are not possible. -->
+		<!-- Kamael exclusive weapon Shadow weapon - Gastraphetes conversion. Crossbow with limited ability enhancement. Enchantment, storing souls, and smelting are impossible. -->
 		<set name="icon" val="icon.weapon_hunting_gun_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1943,7 +1943,7 @@
 		</for>
 	</item>
 	<item id="11675" type="Weapon" name="Common Item - Crimson Sword">
-		<!-- Crimson Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Crimson Sword with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_crimson_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1968,7 +1968,7 @@
 		</for>
 	</item>
 	<item id="11676" type="Weapon" name="Common Item - Tome of Blood">
-		<!-- Tome of Blood with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Tome of Blood with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_tome_of_blood_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ETC" />
@@ -1993,7 +1993,7 @@
 		</for>
 	</item>
 	<item id="11677" type="Weapon" name="Common Item - Field Sword">
-		<!-- Kamael Exclusive Weapon: Shadow weapon - Two-Handed Sword conversion. Field Sword with limited ability enhancement. Enchantment, special abilities and augmentation are not possible. -->
+		<!-- Kamael exclusive weapon Shadow weapon - Two-Handed Sword conversion. Field Sword with limited ability enhancement. Enchantment, storing souls, and smelting are impossible. -->
 		<set name="icon" val="icon.weapon_tulwar_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -2022,7 +2022,7 @@
 		</for>
 	</item>
 	<item id="11678" type="Weapon" name="Common Item - Sage's Blood">
-		<!-- Sage's Blood with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Blood of Saints with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_blood_of_saints_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ETC" />
@@ -2047,7 +2047,7 @@
 		</for>
 	</item>
 	<item id="11679" type="Weapon" name="Common Item - Saber*Knight's Sword">
-		<!-- Saber*Knight's Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Saber*Knight's Sword with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -2071,7 +2071,7 @@
 		</for>
 	</item>
 	<item id="11680" type="Weapon" name="Common Item - Saber*Bastard Sword">
-		<!-- Saber*Bastard Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Saber*Bastard Sword with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -2095,7 +2095,7 @@
 		</for>
 	</item>
 	<item id="11681" type="Weapon" name="Common Item - Saber*Spinebone Sword">
-		<!-- Saber*Spinebone Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Saber*Spinebone Sword with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -2119,7 +2119,7 @@
 		</for>
 	</item>
 	<item id="11682" type="Weapon" name="Common Item - Saber*Artisan's Sword">
-		<!-- Saber*Artisan's Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Saber*Artisan's Sword with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -2143,7 +2143,7 @@
 		</for>
 	</item>
 	<item id="11683" type="Weapon" name="Common Item - Reinforced Long Bow">
-		<!-- Reinforced Long Bow with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Strengthened Long Bow with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_strengthening_long_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -2171,7 +2171,7 @@
 		</for>
 	</item>
 	<item id="11684" type="Weapon" name="Common Item - Knight's Sword*Knight's Sword">
-		<!-- Knight's Sword*Knight's Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Knight's Sword*Knight's Sword with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -2195,7 +2195,7 @@
 		</for>
 	</item>
 	<item id="11685" type="Weapon" name="Common Item - Maingauche">
-		<!-- Maingauche with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Maingauche with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_maingauche_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -2220,7 +2220,7 @@
 		</for>
 	</item>
 	<item id="11686" type="Weapon" name="Common Item - Morning Star">
-		<!-- Morning Star with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Morning Star with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_morning_star_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2245,7 +2245,7 @@
 		</for>
 	</item>
 	<item id="11687" type="Weapon" name="Common Item - Bastard Sword*Knight's Sword">
-		<!-- Bastard Sword*Knight's Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Bastard Sword*Knight's Sword with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -2269,7 +2269,7 @@
 		</for>
 	</item>
 	<item id="11688" type="Weapon" name="Common Item - Bastard Sword*Bastard Sword">
-		<!-- Bastard Sword*Bastard Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Bastard Sword*Bastard Sword with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -2293,7 +2293,7 @@
 		</for>
 	</item>
 	<item id="11689" type="Weapon" name="Common Item - Bastard Sword*Spinebone Sword">
-		<!-- Bastard Sword*Spinebone Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Bastard Sword*Spinebone Sword with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -2317,7 +2317,7 @@
 		</for>
 	</item>
 	<item id="11690" type="Weapon" name="Common Item - Bastard Sword*Artisan's Sword">
-		<!-- Bastard Sword*Artisan's Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Bastard Sword*Artisan's Sword with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -2341,7 +2341,7 @@
 		</for>
 	</item>
 	<item id="11691" type="Weapon" name="Common Item - Bich'Hwa">
-		<!-- Bich'Hwa with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Bich'Hwa with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_bichhwa_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -2366,7 +2366,7 @@
 		</for>
 	</item>
 	<item id="11692" type="Weapon" name="Common Item - Priest Mace">
-		<!-- Priest Mace with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Priest Mace with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_mace_of_priest_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2392,7 +2392,7 @@
 		</for>
 	</item>
 	<item id="11693" type="Weapon" name="Common Item - Goat Head Staff">
-		<!-- Goat Head Staff with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Goat Head Staff with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_goathead_staff_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2418,7 +2418,7 @@
 		</for>
 	</item>
 	<item id="11694" type="Weapon" name="Common Item - Saber*Elven Sword">
-		<!-- Saber*Elven Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Saber*Elven Sword with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -2442,7 +2442,7 @@
 		</for>
 	</item>
 	<item id="11695" type="Weapon" name="Common Item - Saber*Crimson Sword">
-		<!-- Saber*Crimson Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Saber*Crimson Sword with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -2466,7 +2466,7 @@
 		</for>
 	</item>
 	<item id="11696" type="Weapon" name="Common Item - Sword of Magic Fog">
-		<!-- Sword of Magic Fog with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Sword of Magic Fog with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_sword_of_magic_fog_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2491,7 +2491,7 @@
 		</for>
 	</item>
 	<item id="11697" type="Weapon" name="Common Item - Skull Breaker">
-		<!-- Skull Breaker with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Skull Breaker with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_skull_breaker_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2516,7 +2516,7 @@
 		</for>
 	</item>
 	<item id="11698" type="Weapon" name="Common Item - Spinebone Sword*Knight's Sword">
-		<!-- Spinebone Sword*Knight's Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Spinebone Sword*Knight's Sword with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -2540,7 +2540,7 @@
 		</for>
 	</item>
 	<item id="11699" type="Weapon" name="Common Item - Spinebone Sword*Spinebone Sword">
-		<!-- Spinebone Sword*Spinebone Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<!-- Spinebone Sword*Spinebone Sword with limited enhancement options. Enchantment, soul storing and refining are impossible. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />

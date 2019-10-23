@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="3700" levels="1" name="Doom Shield">
-		<!-- Increases M. Def. -->
+		<!-- M. Def. is increased. -->
 		<set name="icon" val="icon.shield_doom_shield_i00" />
 		<set name="magicLvl" val="61" />
 		<set name="operateType" val="P" />
@@ -13,7 +13,7 @@
 		</for>
 	</skill>
 	<skill id="3701" levels="1" name="Leather Armor of Doom">
-		<!-- Increases lung capacity/P. Atk./MP Recovery bonus, and increases Resistance to poison attacks. -->
+		<!-- Increases lung capacity/P. Atk./MP Recovery bonus, and increases resistance to poison attacks. -->
 		<set name="icon" val="icon.armor_t72_ul_i00" />
 		<set name="magicLvl" val="61" />
 		<set name="operateType" val="P" />
@@ -30,7 +30,7 @@
 		</for>
 	</skill>
 	<skill id="3702" levels="1" name="Doom Gloves">
-		<!-- Increases lung capacity/P. Atk./MP Recovery bonus, and increases Resistance to poison attacks. -->
+		<!-- Increases lung capacity/P. Atk./MP Recovery bonus, and increases resistance to poison attacks. -->
 		<set name="icon" val="icon.armor_t72_g_i00" />
 		<set name="magicLvl" val="61" />
 		<set name="operateType" val="P" />
@@ -47,7 +47,7 @@
 		</for>
 	</skill>
 	<skill id="3703" levels="1" name="Doom Boots">
-		<!-- Increases lung capacity/P. Atk./MP Recovery bonus, and increases Resistance to poison attacks. -->
+		<!-- Increases lung capacity/P. Atk./MP Recovery bonus, and increases resistance to poison attacks. -->
 		<set name="icon" val="icon.armor_t72_b_i00" />
 		<set name="magicLvl" val="61" />
 		<set name="operateType" val="P" />
@@ -64,7 +64,7 @@
 		</for>
 	</skill>
 	<skill id="3704" levels="1" name="Doom Helmet">
-		<!-- Increases lung capacity/P. Atk./MP Recovery bonus, and increases Resistance to poison attacks. -->
+		<!-- Increases lung capacity/P. Atk./MP Recovery bonus, and increases resistance to poison attacks. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="magicLvl" val="61" />
 		<set name="operateType" val="P" />
@@ -81,7 +81,7 @@
 		</for>
 	</skill>
 	<skill id="3705" levels="1" name="Doom Gloves">
-		<!-- Increases Speed/lung capacity/MP Recovery Bonus. -->
+		<!-- Increases moving speed/lung capacity/MP recovery bonus. -->
 		<set name="icon" val="icon.armor_t73_g_i00" />
 		<set name="magicLvl" val="61" />
 		<set name="operateType" val="P" />
@@ -95,7 +95,7 @@
 		</for>
 	</skill>
 	<skill id="3706" levels="1" name="Doom Boots">
-		<!-- Increases Speed/lung capacity/MP Recovery Bonus. -->
+		<!-- Increases moving speed/lung capacity/MP recovery bonus. -->
 		<set name="icon" val="icon.armor_t73_b_i00" />
 		<set name="magicLvl" val="61" />
 		<set name="operateType" val="P" />
@@ -109,7 +109,7 @@
 		</for>
 	</skill>
 	<skill id="3707" levels="1" name="Tunic of Doom">
-		<!-- Increases Speed/lung capacity/MP Recovery Bonus. -->
+		<!-- Increases moving speed/lung capacity/MP recovery bonus. -->
 		<set name="icon" val="icon.armor_t73_u_i00" />
 		<set name="magicLvl" val="61" />
 		<set name="operateType" val="P" />
@@ -123,7 +123,7 @@
 		</for>
 	</skill>
 	<skill id="3708" levels="1" name="Stockings of Doom">
-		<!-- Increases Speed/lung capacity/MP Recovery Bonus. -->
+		<!-- Increases moving speed/lung capacity/MP recovery bonus. -->
 		<set name="icon" val="icon.armor_t73_l_i00" />
 		<set name="magicLvl" val="61" />
 		<set name="operateType" val="P" />
@@ -137,7 +137,7 @@
 		</for>
 	</skill>
 	<skill id="3709" levels="1" name="Doom Helmet">
-		<!-- Increases Speed/lung capacity/MP Recovery Bonus. -->
+		<!-- Increases moving speed/lung capacity/MP recovery bonus. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="magicLvl" val="61" />
 		<set name="operateType" val="P" />
@@ -151,7 +151,7 @@
 		</for>
 	</skill>
 	<skill id="3710" levels="1" name="Blue Wolf Breastplate">
-		<!-- Increases Speed and HP recovery bonus. -->
+		<!-- Increases speed/MP regeneration. -->
 		<set name="icon" val="icon.armor_t68_u_i00" />
 		<set name="magicLvl" val="61" />
 		<set name="operateType" val="P" />
@@ -164,7 +164,7 @@
 		</for>
 	</skill>
 	<skill id="3711" levels="1" name="Blue Wolf Gaiters">
-		<!-- Increases Speed and HP recovery bonus. -->
+		<!-- Increases speed/MP regeneration. -->
 		<set name="icon" val="icon.armor_t68_l_i00" />
 		<set name="magicLvl" val="61" />
 		<set name="operateType" val="P" />
@@ -177,7 +177,7 @@
 		</for>
 	</skill>
 	<skill id="3712" levels="1" name="Blue Wolf Boots">
-		<!-- Increases Speed and HP recovery bonus. -->
+		<!-- Increases speed/MP regeneration. -->
 		<set name="icon" val="icon.armor_t68_b_i00" />
 		<set name="magicLvl" val="61" />
 		<set name="operateType" val="P" />
@@ -190,7 +190,7 @@
 		</for>
 	</skill>
 	<skill id="3713" levels="1" name="Blue Wolf Gloves">
-		<!-- Increases Speed and HP recovery bonus. -->
+		<!-- Increases speed/MP regeneration. -->
 		<set name="icon" val="icon.armor_t68_g_i00" />
 		<set name="magicLvl" val="61" />
 		<set name="operateType" val="P" />
@@ -203,7 +203,7 @@
 		</for>
 	</skill>
 	<skill id="3714" levels="1" name="Blue Wolf Helmet">
-		<!-- Increases Speed and HP recovery bonus. -->
+		<!-- Increases speed/MP regeneration. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="magicLvl" val="61" />
 		<set name="operateType" val="P" />
@@ -216,7 +216,7 @@
 		</for>
 	</skill>
 	<skill id="3715" levels="1" name="Blue Wolf Leather Armor">
-		<!-- Increases P. Def. and Casting Spd. -->
+		<!-- P. Def./Casting Spd. is increased. -->
 		<set name="icon" val="icon.armor_t69_ul_i00" />
 		<set name="magicLvl" val="61" />
 		<set name="operateType" val="P" />
@@ -265,7 +265,7 @@
 		</for>
 	</skill>
 	<skill id="3719" levels="1" name="Blue Wolf Boots">
-		<!-- Increases Max MP and MP recovery bonus. -->
+		<!-- Increases Max MP/MP recovery bonus. -->
 		<set name="icon" val="icon.armor_t70_b_i00" />
 		<set name="magicLvl" val="61" />
 		<set name="operateType" val="P" />
@@ -278,7 +278,7 @@
 		</for>
 	</skill>
 	<skill id="3720" levels="1" name="Blue Wolf Gloves">
-		<!-- Increases Max MP and MP recovery bonus. -->
+		<!-- Increases Max MP/MP recovery bonus. -->
 		<set name="icon" val="icon.armor_t70_g_i00" />
 		<set name="magicLvl" val="61" />
 		<set name="operateType" val="P" />
@@ -291,7 +291,7 @@
 		</for>
 	</skill>
 	<skill id="3721" levels="1" name="Blue Wolf Tunic">
-		<!-- Increases Max MP and MP recovery bonus. -->
+		<!-- Increases Max MP/MP recovery bonus. -->
 		<set name="icon" val="icon.armor_t70_u_i00" />
 		<set name="magicLvl" val="61" />
 		<set name="operateType" val="P" />
@@ -304,7 +304,7 @@
 		</for>
 	</skill>
 	<skill id="3722" levels="1" name="Blue Wolf Stockings">
-		<!-- Increases Max MP and MP recovery bonus. -->
+		<!-- Increases Max MP/MP recovery bonus. -->
 		<set name="icon" val="icon.armor_t70_l_i00" />
 		<set name="magicLvl" val="61" />
 		<set name="operateType" val="P" />
@@ -317,7 +317,7 @@
 		</for>
 	</skill>
 	<skill id="3723" levels="1" name="Blue Wolf Helmet">
-		<!-- Increases Max MP and MP recovery bonus. -->
+		<!-- Increases Max MP/MP recovery bonus. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="magicLvl" val="61" />
 		<set name="operateType" val="P" />
@@ -330,7 +330,7 @@
 		</for>
 	</skill>
 	<skill id="3724" levels="1" name="Dark Crystal Helmet">
-		<!-- Increases Resistance to paralysis attacks and the effect of HP recovery magic to oneself. -->
+		<!-- Increases resistance to paralysis attacks and the effect of HP recovery magic to oneself. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="magicLvl" val="64" />
 		<set name="operateType" val="P" />
@@ -345,7 +345,7 @@
 		</for>
 	</skill>
 	<skill id="3725" levels="1" name="Dark Crystal Breastplate">
-		<!-- Increases Resistance to paralysis attacks and the effect of HP recovery magic to oneself. -->
+		<!-- Increases resistance to paralysis attacks and the effect of HP recovery magic to oneself. -->
 		<set name="icon" val="icon.armor_t74_u_i00" />
 		<set name="magicLvl" val="64" />
 		<set name="operateType" val="P" />
@@ -360,7 +360,7 @@
 		</for>
 	</skill>
 	<skill id="3726" levels="1" name="Dark Crystal Gaiters">
-		<!-- Increases Resistance to paralysis attacks and the effect of HP recovery magic to oneself. -->
+		<!-- Increases resistance to paralysis attacks and the effect of HP recovery magic to oneself. -->
 		<set name="icon" val="icon.armor_t74_l_i00" />
 		<set name="magicLvl" val="64" />
 		<set name="operateType" val="P" />
@@ -375,7 +375,7 @@
 		</for>
 	</skill>
 	<skill id="3727" levels="1" name="Dark Crystal Gloves">
-		<!-- Increases Resistance to paralysis attacks and the effect of HP recovery magic to oneself. -->
+		<!-- Increases resistance to paralysis attacks and the effect of HP recovery magic to oneself. -->
 		<set name="icon" val="icon.armor_t15_g_i00" />
 		<set name="magicLvl" val="64" />
 		<set name="operateType" val="P" />
@@ -390,7 +390,7 @@
 		</for>
 	</skill>
 	<skill id="3728" levels="1" name="Dark Crystal Boots">
-		<!-- Increases Resistance to paralysis attacks and the effect of HP recovery magic to oneself. -->
+		<!-- Increases resistance to paralysis attacks and the effect of HP recovery magic to oneself. -->
 		<set name="icon" val="icon.armor_t74_b_i00" />
 		<set name="magicLvl" val="64" />
 		<set name="operateType" val="P" />
@@ -405,7 +405,7 @@
 		</for>
 	</skill>
 	<skill id="3729" levels="1" name="Dark Crystal Shield">
-		<!-- Increases M. Def. -->
+		<!-- M. Def. is increased. -->
 		<set name="icon" val="icon.shield_dark_crystal_shield_i00" />
 		<set name="magicLvl" val="64" />
 		<set name="operateType" val="P" />
@@ -417,7 +417,7 @@
 		</for>
 	</skill>
 	<skill id="3730" levels="1" name="Dark Crystal Leather Armor">
-		<!-- Increases Resistance to paralysis attacks, Atk. Spd., and P. Atk. -->
+		<!-- Increases resistance to paralysis attacks and Atk. Spd./P. Atk. -->
 		<set name="icon" val="icon.armor_t75_u_i00" />
 		<set name="magicLvl" val="64" />
 		<set name="operateType" val="P" />
@@ -433,7 +433,7 @@
 		</for>
 	</skill>
 	<skill id="3731" levels="1" name="Dark Crystal Gloves">
-		<!-- Increases Resistance to paralysis attacks, Atk. Spd., and P. Atk. -->
+		<!-- Increases resistance to paralysis attacks and Atk. Spd./P. Atk. -->
 		<set name="icon" val="icon.armor_t15_g_i00" />
 		<set name="magicLvl" val="64" />
 		<set name="operateType" val="P" />
@@ -449,7 +449,7 @@
 		</for>
 	</skill>
 	<skill id="3732" levels="1" name="Dark Crystal Boots">
-		<!-- Increases Resistance to paralysis attacks, Atk. Spd., and P. Atk. -->
+		<!-- Increases resistance to paralysis attacks and Atk. Spd./P. Atk. -->
 		<set name="icon" val="icon.armor_t75_b_i00" />
 		<set name="magicLvl" val="64" />
 		<set name="operateType" val="P" />
@@ -465,7 +465,7 @@
 		</for>
 	</skill>
 	<skill id="3733" levels="1" name="Dark Crystal Helmet">
-		<!-- Increases Resistance to paralysis attacks, Atk. Spd., and P. Atk. -->
+		<!-- Increases resistance to paralysis attacks and Atk. Spd./P. Atk. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="magicLvl" val="64" />
 		<set name="operateType" val="P" />
@@ -481,7 +481,7 @@
 		</for>
 	</skill>
 	<skill id="3734" levels="1" name="Dark Crystal Leggings">
-		<!-- Increases Resistance to paralysis attacks, Atk. Spd., and P. Atk. -->
+		<!-- Increases resistance to paralysis attacks and Atk. Spd./P. Atk. -->
 		<set name="icon" val="icon.armor_t75_l_i00" />
 		<set name="magicLvl" val="64" />
 		<set name="operateType" val="P" />
@@ -497,7 +497,7 @@
 		</for>
 	</skill>
 	<skill id="3735" levels="1" name="Dark Crystal Gloves">
-		<!-- Decreases magic cancel rate, and increases Resistance to paralysis attacks, P. Def., and Speed. -->
+		<!-- Decreases magic cancel rate, and increases resistance to paralysis attacks and P. Def./speed. -->
 		<set name="icon" val="icon.armor_t15_g_i00" />
 		<set name="magicLvl" val="64" />
 		<set name="operateType" val="P" />
@@ -514,7 +514,7 @@
 		</for>
 	</skill>
 	<skill id="3736" levels="1" name="Dark Crystal Robe">
-		<!-- Decreases magic cancel rate, and increases Resistance to paralysis attacks, P. Def., Casting Spd. and Speed. -->
+		<!-- Decreases magic cancel rate, and increases resistance to paralysis attacks and P. Def./Casting Spd./speed. -->
 		<set name="icon" val="icon.armor_t76_ul_i00" />
 		<set name="magicLvl" val="64" />
 		<set name="operateType" val="P" />
@@ -532,7 +532,7 @@
 		</for>
 	</skill>
 	<skill id="3737" levels="1" name="Dark Crystal Boots">
-		<!-- Decreases magic cancel rate, and increases Resistance to paralysis attacks, P. Def., and Speed. -->
+		<!-- Decreases magic cancel rate, and increases resistance to paralysis attacks and P. Def./speed. -->
 		<set name="icon" val="icon.armor_t76_b_i00" />
 		<set name="magicLvl" val="64" />
 		<set name="operateType" val="P" />
@@ -549,7 +549,7 @@
 		</for>
 	</skill>
 	<skill id="3738" levels="1" name="Dark Crystal Helmet">
-		<!-- Decreases magic cancel rate, and increases Resistance to paralysis attacks, P. Def., and Speed. -->
+		<!-- Decreases magic cancel rate, and increases resistance to paralysis attacks and P. Def./speed. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="magicLvl" val="64" />
 		<set name="operateType" val="P" />
@@ -566,7 +566,7 @@
 		</for>
 	</skill>
 	<skill id="3739" levels="1" name="Tallum Gloves">
-		<!-- Increases Resistance to poison/bleed attacks, Atk. Spd., and weight limit. -->
+		<!-- Increases resistance to poison/bleed attacks and Atk. Spd./weight limit. -->
 		<set name="icon" val="icon.armor_t77_g_i00" />
 		<set name="magicLvl" val="64" />
 		<set name="operateType" val="P" />
@@ -583,7 +583,7 @@
 		</for>
 	</skill>
 	<skill id="3740" levels="1" name="Tallum Boots">
-		<!-- Increases Resistance to poison/bleed attacks, Atk. Spd., and weight limit. -->
+		<!-- Increases resistance to poison/bleed attacks and Atk. Spd./weight limit. -->
 		<set name="icon" val="icon.armor_t77_b_i00" />
 		<set name="magicLvl" val="64" />
 		<set name="operateType" val="P" />
@@ -600,7 +600,7 @@
 		</for>
 	</skill>
 	<skill id="3741" levels="1" name="Tallum Plate Armor">
-		<!-- Increases Resistance to poison/bleed attacks, Atk. Spd., and weight limit. -->
+		<!-- Increases resistance to poison/bleed attacks and Atk. Spd./weight limit. -->
 		<set name="icon" val="icon.armor_t77_ul_i00" />
 		<set name="magicLvl" val="64" />
 		<set name="operateType" val="P" />
@@ -617,7 +617,7 @@
 		</for>
 	</skill>
 	<skill id="3742" levels="1" name="Tallum Helmet">
-		<!-- Increases Resistance to poison/bleed attacks, Atk. Spd., and weight limit. -->
+		<!-- Increases resistance to poison/bleed attacks and Atk. Spd./weight limit. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="magicLvl" val="64" />
 		<set name="operateType" val="P" />
@@ -634,7 +634,7 @@
 		</for>
 	</skill>
 	<skill id="3743" levels="1" name="Tallum Leather Armor">
-		<!-- Increases Resistance to poison/bleed attacks, MP recovery rate, and Max MP. -->
+		<!-- Increases resistance to poison/bleed attacks and MP regeneration/maximum MP. -->
 		<set name="icon" val="icon.armor_t78_ul_i00" />
 		<set name="magicLvl" val="64" />
 		<set name="operateType" val="P" />
@@ -651,7 +651,7 @@
 		</for>
 	</skill>
 	<skill id="3744" levels="1" name="Tallum Gloves">
-		<!-- Increases Resistance to poison/bleed attacks, MP recovery rate, and Max MP. -->
+		<!-- Increases resistance to poison/bleed attacks and MP regeneration/maximum MP. -->
 		<set name="icon" val="icon.armor_t78_g_i00" />
 		<set name="magicLvl" val="64" />
 		<set name="operateType" val="P" />
@@ -668,7 +668,7 @@
 		</for>
 	</skill>
 	<skill id="3745" levels="1" name="Tallum Boots">
-		<!-- Increases Resistance to poison/bleed attacks, MP recovery rate, and Max MP. -->
+		<!-- Increases resistance to poison/bleed attacks and MP regeneration/maximum MP. -->
 		<set name="icon" val="icon.armor_t78_b_i00" />
 		<set name="magicLvl" val="64" />
 		<set name="operateType" val="P" />
@@ -685,7 +685,7 @@
 		</for>
 	</skill>
 	<skill id="3746" levels="1" name="Tallum Helmet">
-		<!-- Increases Resistance to poison/bleed attacks, MP recovery rate, and Max MP. -->
+		<!-- Increases resistance to poison/bleed attacks and MP regeneration/maximum MP. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="magicLvl" val="64" />
 		<set name="operateType" val="P" />
@@ -702,7 +702,7 @@
 		</for>
 	</skill>
 	<skill id="3747" levels="1" name="Tallum Gloves">
-		<!-- Increases Resistance to poison/bleed attacks and M. Def. -->
+		<!-- Increases resistance to poison/bleed attacks and magic P. Def. -->
 		<set name="icon" val="icon.armor_t79_g_i00" />
 		<set name="magicLvl" val="64" />
 		<set name="operateType" val="P" />
@@ -718,7 +718,7 @@
 		</for>
 	</skill>
 	<skill id="3748" levels="1" name="Tallum Boots">
-		<!-- Increases Resistance to poison/bleed attacks and M. Def. -->
+		<!-- Increases resistance to poison/bleed attacks and magic P. Def. -->
 		<set name="icon" val="icon.armor_t79_b_i00" />
 		<set name="magicLvl" val="64" />
 		<set name="operateType" val="P" />
@@ -746,7 +746,7 @@
 		</for>
 	</skill>
 	<skill id="3750" levels="1" name="Tallum Stockings">
-		<!-- Increases Resistance to poison/bleed attacks and M. Def. -->
+		<!-- Increases resistance to poison/bleed attacks and magic P. Def. -->
 		<set name="icon" val="icon.armor_t79_l_i00" />
 		<set name="magicLvl" val="64" />
 		<set name="operateType" val="P" />
@@ -762,7 +762,7 @@
 		</for>
 	</skill>
 	<skill id="3751" levels="1" name="Tallum Helmet">
-		<!-- Increases Resistance to poison/bleed attacks and M. Def. -->
+		<!-- Increases resistance to poison/bleed attacks and magic P. Def. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="magicLvl" val="64" />
 		<set name="operateType" val="P" />
@@ -778,7 +778,7 @@
 		</for>
 	</skill>
 	<skill id="3752" levels="1" name="Majestic Gauntlet">
-		<!-- Increases Resistance to shock attacks, P. Atk. and Accuracy. -->
+		<!-- Increases resistance to shock attacks and P. Atk./accuracy. -->
 		<set name="icon" val="icon.armor_t83_g_i00" />
 		<set name="magicLvl" val="67" />
 		<set name="operateType" val="P" />
@@ -794,7 +794,7 @@
 		</for>
 	</skill>
 	<skill id="3753" levels="1" name="Majestic Circlet">
-		<!-- Increases Resistance to shock attacks, P. Atk. and Accuracy. -->
+		<!-- Increases resistance to shock attacks and P. Atk./accuracy. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="magicLvl" val="67" />
 		<set name="operateType" val="P" />
@@ -810,7 +810,7 @@
 		</for>
 	</skill>
 	<skill id="3754" levels="1" name="Majestic Plate Armor">
-		<!-- Increases Resistance to shock attacks, P. Atk. and Accuracy. -->
+		<!-- Increases resistance to shock attacks and P. Atk./accuracy. -->
 		<set name="icon" val="icon.armor_t83_ul_i00" />
 		<set name="magicLvl" val="67" />
 		<set name="operateType" val="P" />
@@ -826,7 +826,7 @@
 		</for>
 	</skill>
 	<skill id="3755" levels="1" name="Majestic Boots">
-		<!-- Increases Resistance to shock attacks, P. Atk. and Accuracy. -->
+		<!-- Increases resistance to shock attacks and P. Atk./accuracy. -->
 		<set name="icon" val="icon.armor_t83_b_i00" />
 		<set name="magicLvl" val="67" />
 		<set name="operateType" val="P" />
@@ -842,7 +842,7 @@
 		</for>
 	</skill>
 	<skill id="3756" levels="1" name="Majestic Gauntlet">
-		<!-- Increases Resistance to shock attacks, P. Atk. of bows and crossbows, Max MP, and weight limit. -->
+		<!-- Increases resistance to shock attacks and bow or crossbow P. Atk./maximum MP/weight limit. -->
 		<set name="icon" val="icon.armor_t84_g_i00" />
 		<set name="magicLvl" val="67" />
 		<set name="operateType" val="P" />
@@ -861,7 +861,7 @@
 		</for>
 	</skill>
 	<skill id="3757" levels="1" name="Majestic Leather Armor">
-		<!-- Increases Resistance to shock attacks, P. Atk. of bows and crossbows, Max MP, and weight limit. -->
+		<!-- Increases resistance to shock attacks and bow or crossbow P. Atk./maximum MP/weight limit. -->
 		<set name="icon" val="icon.armor_t84_ul_i00" />
 		<set name="magicLvl" val="67" />
 		<set name="operateType" val="P" />
@@ -880,7 +880,7 @@
 		</for>
 	</skill>
 	<skill id="3758" levels="1" name="Majestic Boots">
-		<!-- Increases Resistance to shock attacks, P. Atk. of bows and crossbows, Max MP, and weight limit. -->
+		<!-- Increases resistance to shock attacks and bow or crossbow P. Atk./maximum MP/weight limit. -->
 		<set name="icon" val="icon.armor_t84_b_i00" />
 		<set name="magicLvl" val="67" />
 		<set name="operateType" val="P" />
@@ -899,7 +899,7 @@
 		</for>
 	</skill>
 	<skill id="3759" levels="1" name="Majestic Circlet">
-		<!-- Increases Resistance to shock attacks, P. Atk. of bows and crossbows, Max MP, and weight limit. -->
+		<!-- Increases resistance to shock attacks and bow or crossbow P. Atk./maximum MP/weight limit. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="magicLvl" val="67" />
 		<set name="operateType" val="P" />
@@ -918,7 +918,7 @@
 		</for>
 	</skill>
 	<skill id="3760" levels="1" name="Majestic Gauntlet">
-		<!-- Increases Resistance to shock attacks, Max MP, and MP Recovery bonus. -->
+		<!-- Increases resistance to shock attacks, and increases Max MP/MP Recovery bonus. -->
 		<set name="icon" val="icon.armor_t85_g_i00" />
 		<set name="magicLvl" val="67" />
 		<set name="operateType" val="P" />
@@ -934,7 +934,7 @@
 		</for>
 	</skill>
 	<skill id="3761" levels="1" name="Majestic Robe">
-		<!-- Increases Resistance to shock attacks, Max MP, MP Recovery bonus and Casting Spd. -->
+		<!-- Increases resistance to shock attacks, and increases Max MP/MP Recovery bonus. -->
 		<set name="icon" val="icon.armor_t85_ul_i00" />
 		<set name="magicLvl" val="67" />
 		<set name="operateType" val="P" />
@@ -950,7 +950,7 @@
 		</for>
 	</skill>
 	<skill id="3762" levels="1" name="Majestic Boots">
-		<!-- Increases Resistance to shock attacks, Max MP and MP recovery Bouns. -->
+		<!-- Increases resistance to shock attacks, and increases Max MP/Casting Spd./MP recovery. -->
 		<set name="icon" val="icon.armor_t85_b_i00" />
 		<set name="magicLvl" val="67" />
 		<set name="operateType" val="P" />
@@ -966,7 +966,7 @@
 		</for>
 	</skill>
 	<skill id="3763" levels="1" name="Majestic Circlet">
-		<!-- Increases Resistance to shock attacks, Max MP, and MP Recovery bonus. -->
+		<!-- Increases resistance to shock attacks, and increases Max MP/MP Recovery bonus. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="magicLvl" val="67" />
 		<set name="operateType" val="P" />
@@ -982,7 +982,7 @@
 		</for>
 	</skill>
 	<skill id="3764" levels="1" name="Armor of Nightmare">
-		<!-- Increases Resistance to sleep/hold attacks and P. Atk. -->
+		<!-- Increases resistance to sleep/hold attacks and P. Atk. -->
 		<set name="icon" val="icon.armor_t80_ul_i00" />
 		<set name="magicLvl" val="67" />
 		<set name="operateType" val="P" />
@@ -998,7 +998,7 @@
 		</for>
 	</skill>
 	<skill id="3765" levels="1" name="Gauntlet of Nightmare">
-		<!-- Increases Resistance to sleep/hold attacks and P. Atk. -->
+		<!-- Increases resistance to sleep/hold attacks and P. Atk. -->
 		<set name="icon" val="icon.armor_t80_g_i00" />
 		<set name="magicLvl" val="67" />
 		<set name="operateType" val="P" />
@@ -1014,7 +1014,7 @@
 		</for>
 	</skill>
 	<skill id="3766" levels="1" name="Boots of Nightmare">
-		<!-- Increases Resistance to sleep/hold attacks and P. Atk. -->
+		<!-- Increases resistance to sleep/hold attacks and P. Atk. -->
 		<set name="icon" val="icon.armor_t80_b_i00" />
 		<set name="magicLvl" val="67" />
 		<set name="operateType" val="P" />
@@ -1030,7 +1030,7 @@
 		</for>
 	</skill>
 	<skill id="3767" levels="1" name="Helm of Nightmare">
-		<!-- Increases Resistance to sleep/hold attacks and P. Atk. -->
+		<!-- Increases resistance to sleep/hold attacks and P. Atk. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="magicLvl" val="67" />
 		<set name="operateType" val="P" />
@@ -1046,7 +1046,7 @@
 		</for>
 	</skill>
 	<skill id="3768" levels="1" name="Nightmarish Leather Armor">
-		<!-- Increases Resistance to sleep/hold attacks and M. Def. A portion of the damage inflicted on the enemy is used to recover one's own HP. Excludes damage caused by skills and long-range attack. -->
+		<!-- Increases resistance to sleep/hold attacks and magic resistance. A portion of the damage inflicted on the enemy is used to recover one's own HP. Excludes damage caused by skills and long-range attack. -->
 		<set name="icon" val="icon.armor_t81_ul_i00" />
 		<set name="magicLvl" val="67" />
 		<set name="operateType" val="P" />
@@ -1063,7 +1063,7 @@
 		</for>
 	</skill>
 	<skill id="3769" levels="1" name="Gauntlet of Nightmare">
-		<!-- Increases Resistance to sleep/hold attacks and M. Def. -->
+		<!-- Increases resistance to sleep/hold attacks and magic resistance. -->
 		<set name="icon" val="icon.armor_t81_g_i00" />
 		<set name="magicLvl" val="67" />
 		<set name="operateType" val="P" />
@@ -1079,7 +1079,7 @@
 		</for>
 	</skill>
 	<skill id="3770" levels="1" name="Boots of Nightmare">
-		<!-- Increases Resistance to sleep/hold attacks and M. Def. -->
+		<!-- Increases resistance to sleep/hold attacks and magic resistance. -->
 		<set name="icon" val="icon.armor_t81_b_i00" />
 		<set name="magicLvl" val="67" />
 		<set name="operateType" val="P" />
@@ -1095,7 +1095,7 @@
 		</for>
 	</skill>
 	<skill id="3771" levels="1" name="Gauntlet of Nightmare">
-		<!-- Increases Resistance to sleep/hold attacks and MP regeneration/M. Atk. -->
+		<!-- Increases resistance to sleep/hold attacks and MP regeneration/magic power. -->
 		<set name="icon" val="icon.armor_t82_g_i00" />
 		<set name="magicLvl" val="67" />
 		<set name="operateType" val="P" />
@@ -1112,7 +1112,7 @@
 		</for>
 	</skill>
 	<skill id="3772" levels="1" name="Nightmare Robe">
-		<!-- Increases Resistance to sleep/hold attacks and MP regeneration/M. Atk. -->
+		<!-- Increases resistance to sleep/hold attacks and MP regeneration/magic power. -->
 		<set name="icon" val="icon.armor_t82_ul_i00" />
 		<set name="magicLvl" val="67" />
 		<set name="operateType" val="P" />
@@ -1129,7 +1129,7 @@
 		</for>
 	</skill>
 	<skill id="3773" levels="1" name="Boots of Nightmare">
-		<!-- Increases Resistance to sleep/hold attacks and MP regeneration/M. Atk. -->
+		<!-- Increases resistance to sleep/hold attacks and MP regeneration/magic power. -->
 		<set name="icon" val="icon.armor_t82_b_i00" />
 		<set name="magicLvl" val="67" />
 		<set name="operateType" val="P" />
@@ -1146,7 +1146,7 @@
 		</for>
 	</skill>
 	<skill id="3774" levels="1" name="Shield of Nightmare">
-		<!-- Increases M. Def. -->
+		<!-- M. Def. is increased. -->
 		<set name="icon" val="icon.shield_shield_of_nightmare_i00" />
 		<set name="magicLvl" val="67" />
 		<set name="operateType" val="P" />
@@ -1158,7 +1158,7 @@
 		</for>
 	</skill>
 	<skill id="3775" levels="1" name="Draconic Leather Gloves">
-		<!-- Increases Max MP, Atk. Spd., P. Atk., and weight limit. -->
+		<!-- Increases maximum MP/Atk. Spd./P. Atk./weight limit. -->
 		<set name="icon" val="icon.armor_t89_g_i00" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
@@ -1173,7 +1173,7 @@
 		</for>
 	</skill>
 	<skill id="3776" levels="1" name="Draconic Leather Boots">
-		<!-- Increases Max MP, Atk. Spd., P. Atk., and weight limit. -->
+		<!-- Increases maximum MP/Atk. Spd./P. Atk./weight limit. -->
 		<set name="icon" val="icon.armor_t89_b_i00" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
@@ -1188,7 +1188,7 @@
 		</for>
 	</skill>
 	<skill id="3777" levels="1" name="Draconic Leather Armor">
-		<!-- Increases Max MP, Atk. Spd., P. Atk., and weight limit. -->
+		<!-- Increases maximum MP/Atk. Spd./P. Atk./weight limit. -->
 		<set name="icon" val="icon.armor_t89_ul_i00" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
@@ -1203,7 +1203,7 @@
 		</for>
 	</skill>
 	<skill id="3778" levels="1" name="Draconic Leather Helmet">
-		<!-- Increases Max MP, Atk. Spd., P. Atk., and weight limit. -->
+		<!-- Increases maximum MP/Atk. Spd./P. Atk./weight limit. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
@@ -1218,7 +1218,7 @@
 		</for>
 	</skill>
 	<skill id="3779" levels="1" name="Major Arcana Gloves">
-		<!-- Decreases magic cancel rate, and increases Resistance to shock attacks, M. Atk., Speed and weight limit. -->
+		<!-- Decreases magic cancel rate, and increases resistance to shock attacks and magic power/speed/weight limit. -->
 		<set name="icon" val="icon.armor_t90_g_i00" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
@@ -1236,7 +1236,7 @@
 		</for>
 	</skill>
 	<skill id="3780" levels="1" name="Major Arcana Robe">
-		<!-- Decreases magic cancel rate, and increases Resistance to shock attacks, M. Atk., Speed and weight limit. -->
+		<!-- Decreases magic cancel rate, and increases resistance to shock attacks and magic power/speed/weight limit. -->
 		<set name="icon" val="icon.armor_t90_ul_i00" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
@@ -1254,7 +1254,7 @@
 		</for>
 	</skill>
 	<skill id="3781" levels="1" name="Major Arcana Boots">
-		<!-- Decreases magic cancel rate, and increases Resistance to shock attacks, M. Atk., Speed and weight limit. -->
+		<!-- Decreases magic cancel rate, and increases resistance to shock attacks and magic power/speed/weight limit. -->
 		<set name="icon" val="icon.armor_t90_b_i00" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
@@ -1272,7 +1272,7 @@
 		</for>
 	</skill>
 	<skill id="3782" levels="1" name="Major Arcana Circlet">
-		<!-- Decreases magic cancel rate, and increases Resistance to shock attacks, M. Atk., Speed and weight limit. -->
+		<!-- Decreases magic cancel rate, and increases resistance to shock attacks and magic power/speed/weight limit. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
@@ -1290,7 +1290,7 @@
 		</for>
 	</skill>
 	<skill id="3783" levels="1" name="Imperial Crusader Gaiters">
-		<!-- Increases Resistance to sleep/hold attacks, Max HP, and P. Def. -->
+		<!-- Increases resistance to sleep/hold attacks and Max. HP/P. Def. -->
 		<set name="icon" val="icon.armor_t88_l_i00" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
@@ -1307,7 +1307,7 @@
 		</for>
 	</skill>
 	<skill id="3784" levels="1" name="Imperial Crusader Gauntlet">
-		<!-- Increases Resistance to sleep/hold attacks, Max HP, and P. Def. -->
+		<!-- Increases resistance to sleep/hold attacks and Max. HP/P. Def. -->
 		<set name="icon" val="icon.armor_t88_g_i00" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
@@ -1324,7 +1324,7 @@
 		</for>
 	</skill>
 	<skill id="3785" levels="1" name="Imperial Crusader Boots">
-		<!-- Increases Resistance to sleep/hold attacks, Max HP, and P. Def. -->
+		<!-- Increases resistance to sleep/hold attacks and Max. HP/P. Def. -->
 		<set name="icon" val="icon.armor_t88_b_i00" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
@@ -1341,7 +1341,7 @@
 		</for>
 	</skill>
 	<skill id="3786" levels="1" name="Imperial Crusader Shield">
-		<!-- Increases M. Def. -->
+		<!-- M. Def. is increased. -->
 		<set name="icon" val="icon.shield_imperial_crusader_shield_i00" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
@@ -1353,7 +1353,7 @@
 		</for>
 	</skill>
 	<skill id="3787" levels="1" name="Imperial Crusader Helmet">
-		<!-- Increases Resistance to sleep/hold attacks, Max HP, and P. Def. -->
+		<!-- Increases resistance to sleep/hold attacks and Max. HP/P. Def. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
@@ -1370,7 +1370,7 @@
 		</for>
 	</skill>
 	<skill id="3788" levels="1" name="Imperial Crusader Breastplate">
-		<!-- Increases Resistance to sleep/hold attacks, Max HP, and P. Def. -->
+		<!-- Increases resistance to sleep/hold attacks and Max. HP/P. Def. -->
 		<set name="icon" val="icon.armor_t88_u_i00" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
@@ -1387,7 +1387,7 @@
 		</for>
 	</skill>
 	<skill id="3789" levels="1" name="Dynasty Breastplate">
-		<!-- Increases P. Def., Max HP, and Resistance to Dark. -->
+		<!-- Increases P. Def., Max. HP, and resistance to darkness attribute. -->
 		<set name="icon" val="icon.armor_t91_uf_i00" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
@@ -1401,7 +1401,7 @@
 		</for>
 	</skill>
 	<skill id="3790" levels="1" name="Dynasty Gaiters">
-		<!-- Increases P. Def., Max HP, and Resistance to Dark. -->
+		<!-- Increases P. Def., Max. HP, and resistance to darkness attribute. -->
 		<set name="icon" val="icon.armor_t91_l_i00" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
@@ -1415,7 +1415,7 @@
 		</for>
 	</skill>
 	<skill id="3791" levels="1" name="Dynasty Gauntlet">
-		<!-- Increases P. Def., Max HP, and Resistance to Dark. -->
+		<!-- Increases P. Def., Max. HP, and resistance to darkness attribute. -->
 		<set name="icon" val="icon.armor_t91_g_i00" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
@@ -1429,7 +1429,7 @@
 		</for>
 	</skill>
 	<skill id="3792" levels="1" name="Dynasty Boots">
-		<!-- Increases P. Def., Max HP, and Resistance to Dark. -->
+		<!-- Increases P. Def., Max. HP, and resistance to darkness attribute. -->
 		<set name="icon" val="icon.armor_t91_b_i00" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
@@ -1443,7 +1443,7 @@
 		</for>
 	</skill>
 	<skill id="3793" levels="1" name="Dynasty Shield">
-		<!-- Increases M. Def. -->
+		<!-- M. Def. is increased. -->
 		<set name="icon" val="icon.shield_dynasty_shield_i00" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
@@ -1455,7 +1455,7 @@
 		</for>
 	</skill>
 	<skill id="3794" levels="1" name="Dynasty Helmet">
-		<!-- Increases P. Def., Max HP, and Resistance to Dark. -->
+		<!-- Increases P. Def., Max. HP, and resistance to darkness attribute. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
@@ -1469,7 +1469,7 @@
 		</for>
 	</skill>
 	<skill id="3795" levels="1" name="Dynasty Leather Armor">
-		<!-- Increases Accuracy/Evasion/Max HP/Atk. Spd./Resistance to Dark. -->
+		<!-- Increases Accuracy/Evasion/Max. HP/Atk. Spd./resistance to darkness attribute. -->
 		<set name="icon" val="icon.armor_t92_ud_i00" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
@@ -1485,7 +1485,7 @@
 		</for>
 	</skill>
 	<skill id="3796" levels="1" name="Dynasty Leather Leggings">
-		<!-- Increases Accuracy/Evasion/Max HP/Atk. Spd./Resistance to Dark. -->
+		<!-- Increases Accuracy/Evasion/Max. HP/Atk. Spd./resistance to darkness attribute. -->
 		<set name="icon" val="icon.armor_t92_l_i00" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
@@ -1501,7 +1501,7 @@
 		</for>
 	</skill>
 	<skill id="3797" levels="1" name="Dynasty Leather Boots">
-		<!-- Increases Accuracy/Evasion/Max HP/Atk. Spd./Resistance to Dark. -->
+		<!-- Increases Accuracy/Evasion/Max. HP/Atk. Spd./resistance to darkness attribute. -->
 		<set name="icon" val="icon.armor_t92_b_i00" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
@@ -1517,7 +1517,7 @@
 		</for>
 	</skill>
 	<skill id="3798" levels="1" name="Dynasty Leather Helmet">
-		<!-- Increases Accuracy/Evasion/Max HP/Atk. Spd./Resistance to Dark. -->
+		<!-- Increases Accuracy/Evasion/Max. HP/Atk. Spd./resistance to darkness attribute. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />

@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
+import org.l2jmobius.gameserver.instancemanager.TerritoryWarManager;
 import org.l2jmobius.gameserver.model.actor.Decoy;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
@@ -43,6 +44,9 @@ public class CharInfo implements IClientOutgoingPacket
 	private final int _flyRunSpd;
 	private final int _flyWalkSpd;
 	private final double _moveMultiplier;
+	
+	private final int _territoryId;
+	private final boolean _isDisguised;
 	
 	private int _vehicleId = 0;
 	private final boolean _gmSeeInvis;
@@ -101,6 +105,9 @@ public class CharInfo implements IClientOutgoingPacket
 		_flyRunSpd = player.isFlying() ? _runSpd : 0;
 		_flyWalkSpd = player.isFlying() ? _walkSpd : 0;
 		_gmSeeInvis = gmSeeInvis;
+		
+		_territoryId = TerritoryWarManager.getInstance().getRegisteredTerritoryId(player);
+		_isDisguised = TerritoryWarManager.getInstance().isDisguised(player.getObjectId());
 	}
 	
 	public CharInfo(Decoy decoy, boolean gmSeeInvis)
@@ -146,7 +153,8 @@ public class CharInfo implements IClientOutgoingPacket
 		packet.writeD(_mAtkSpd);
 		packet.writeD(_pAtkSpd);
 		
-		packet.writeD(0x00); // ?
+		packet.writeD(_player.getPvpFlag());
+		packet.writeD(_player.getKarma());
 		
 		packet.writeD(_runSpd);
 		packet.writeD(_walkSpd);
@@ -182,6 +190,10 @@ public class CharInfo implements IClientOutgoingPacket
 			packet.writeD(0x00);
 			packet.writeD(0x00);
 		}
+		
+		// In UserInfo leader rights and siege flags, but here found nothing??
+		// Therefore RelationChanged packet with that info is required
+		packet.writeD(0x00);
 		
 		packet.writeC(_player.isSitting() ? 0 : 1); // standing = 1 sitting = 0
 		packet.writeC(_player.isRunning() ? 1 : 0); // running = 1 walking = 0
@@ -245,6 +257,9 @@ public class CharInfo implements IClientOutgoingPacket
 		
 		// T2.3
 		packet.writeD(_player.getAbnormalVisualEffectSpecial());
+		packet.writeD(_territoryId); // territory Id
+		packet.writeD((_isDisguised ? 0x01 : 0x00)); // is Disguised
+		packet.writeD(_territoryId); // territory Id
 		return true;
 	}
 	

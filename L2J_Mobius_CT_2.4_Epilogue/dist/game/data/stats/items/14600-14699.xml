@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="14600" type="Armor" name="Schuttgart Dark Resistance Ring">
-		<!-- Ring given to the guardian of Schuttgart territory. Resistance to Dark +12. Cannot be exchanged or dropped. Only one effect is applied even when wearing two earrings with the same effect. -->
+		<!-- Ring given to the guardian of Schuttgart territory. Darkness power defense +12. No exchange/drop available. -->
 		<set name="icon" val="icon.accessary_inferno_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -22,7 +22,7 @@
 		</for>
 	</item>
 	<item id="14601" type="Armor" name="Ancient Cloak: Kamael exclusive - Kamael Use">
-		<!-- Cloak covered with the ancient energy. When the entire set of Vesper Noble is worn, the Sealed Cloak Slot will be open and one can now wear the cloak. Kamael exclusive cloak. Enchantment, special abilities and augmentation are not possible. Cannot be exchanged or dropped. -->
+		<!-- Cloak covered with the ancient energy. When the entire set of Vesper Noble is worn, the Sealed Cloak Slot will be open and one can now wear the cloak. Kamael exclusive cloak. Enchantment, attribute, and smelting are impossible. No exchange/drop available. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
@@ -44,7 +44,7 @@
 		</for>
 	</item>
 	<item id="14602" type="Armor" name="Ancient Cloak">
-		<!-- Cloak covered with energy of the Holy Spirit. Armor sets that unlocks the cloak slot allow this to be worn. Kamael exclusive cloak. Enchantment, attribute and augmenting are impossible. Cannot be exchanged or dropped. -->
+		<!-- Cloak covered with energy of the Holy Spirit. When the entire set of Vesper Noble is worn, the Sealed Cloak Slot will be open and one can now wear the cloak. Kamael exclusive cloak. Enchantment, attribute and smelting are impossible. No exchange/drop available. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
@@ -66,7 +66,7 @@
 		</for>
 	</item>
 	<item id="14603" type="EtcItem" name="Sealed Ancient Cloak">
-		<!-- Sealed Ancient Cloak. The seal can be removed through the weavers Olf Kanore and Olf Adams. It cannot be worn before the seal is removed. Enchantment, attribute and augmenting are impossible. Cannot be exchanged or dropped. -->
+		<!-- Sealed Ancient Cloak. The seal can be removed through the weavers Olf Kanore and Olf Adams. It cannot be worn before the seal is removed. Enchantment, attribute and smelting are impossible. No exchange/drop available. -->
 		<set name="icon" val="icon.sealed_vesper_cloack_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="S80" />
@@ -80,7 +80,7 @@
 		</for>
 	</item>
 	<item id="14604" type="Armor" name="Red Talisman - Territory Guardian">
-		<!-- When used, Max CP is greatly increased and a certain amount of CP is greatly recovered. Only one effect is applied when you wear the same two talismans. Shadow Item with no exchange/drop available -->
+		<!-- When used, the Max CP is greatly increased and a certain amount of CP is greatly recovered. Only one effect is applied when you wear the same two talismans. Shadow Item with no exchange/drop available -->
 		<set name="icon" val="icon.etc_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -91,12 +91,12 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="8308-1" /> <!-- Red Talisman of Territory Guardian -->
+		<set name="item_skill" val="8308-1" /> <!-- Red Talisman - Guardian of the Territory -->
 		<set name="duration" val="66" />
 		<set name="useSkillDisTime" val="6" />
 	</item>
 	<item id="14605" type="Armor" name="Red Talisman - Territory Guard">
-		<!-- When used, Max CP is increased and a certain amount of CP is recovered. Only one effect is applied when you wear the same two talismans. Shadow Item with no exchange/drop available -->
+		<!-- When used, the Max CP is increased and a certain amount of CP is recovered. Only one effect is applied when you wear the same two talismans. Shadow Item with no exchange/drop available -->
 		<set name="icon" val="icon.etc_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -107,12 +107,12 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="item_skill" val="8309-1" /> <!-- Red Talisman of Territory Convoy -->
+		<set name="item_skill" val="8309-1" /> <!-- Red Talisman - Territory Convoy -->
 		<set name="duration" val="66" />
 		<set name="useSkillDisTime" val="6" />
 	</item>
 	<item id="14606" type="Weapon" name="Gracian Soldier Two-Handed Sword">
-		<!-- Uses Gracian Soldier's one-handed sword and 2 hair accessory slots. -->
+		<!-- Uses Gracia Soldier's one-handed sword and 2 hair accessory slots. -->
 		<set name="icon" val="icon.weapon_mon_gracia_soldier_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -149,7 +149,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="14608" type="Armor" name="Ancient Cloak: Light Armor exclusive">
-		<!-- Ancient Power Sealed Cloak. When the entire set of Vesper Noble is worn, the Sealed Cloak Slot will be open and one can now wear the cloak. The cloak is exclusively for Dagger Master and Bow Master excluding Kamaels. Enchantment, special abilities and augmentation are not possible. Cannot be exchanged or dropped. -->
+		<!-- Ancient Power Sealed Cloak. When the entire set of Vesper Noble is worn, the Sealed Cloak Slot will be open and one can now wear the cloak. The cloak is exclusively for Dagger Master and Bow Master excluding Kamaels. Enchantment, attribute, and smelting are impossible. No exchange/drop available. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
@@ -172,7 +172,7 @@
 		</for>
 	</item>
 	<item id="14609" type="Armor" name="Ancient Cloak">
-		<!-- A sealed cloak containing ancient power. When an armor set above the Dynasty level is worn, the Sealed Cloak Slot will be open so that the cloak can be equipped. Enchantment, attribute, and smelting are impossible. Cannot be exchanged or dropped. -->
+		<!-- Ancient Power Sealed Cloak. When the entire set of Vesper Noble is worn, the Sealed Cloak Slot will be open and one can now wear the cloak. Enchantment, attribute, and smelting are impossible. No exchange/drop available. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
@@ -191,7 +191,7 @@
 		</for>
 	</item>
 	<item id="14610" type="Armor" name="Ancient Cloak: Robe exclusive">
-		<!-- Ancient Power Sealed Cloak. When the entire set of Vesper Noble is worn, the Sealed Cloak Slot will be open and one can now wear the cloak. The cloak is exclusively for Healer, Enchanter, Summoner and Wizard excluding Kamaels. Enchantment, special abilities and augmentation are not possible. Cannot be exchanged or dropped. -->
+		<!-- Ancient Power Sealed Cloak. When the entire set of Vesper Noble is worn, the Sealed Cloak Slot will be open and one can now wear the cloak. The cloak is exclusively for Healer, Enchanter, Summoner and Wizard excluding Kamaels. Enchantment, attribute, and smelting are impossible. No exchange/drop available. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
@@ -214,7 +214,7 @@
 		</for>
 	</item>
 	<item id="14611" type="Armor" name="Rudolph's Nose">
-		<!-- Rudolph's Nose. 14-day-limited-time Item. Cannot be exchanged or dropped. -->
+		<!-- Rudolph's Nose. 14-day-limited-time Item. No exchange/drop available. -->
 		<set name="icon" val="icon.Accessory_nose_of_rudolph_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -227,7 +227,7 @@
 		<set name="time" val="20160" />
 	</item>
 	<item id="14612" type="EtcItem" name="Christmas Red Sock">
-		<!-- Item needed to receive a gift from Santa Claus who goes around each territory. Cannot be exchanged or dropped. -->
+		<!-- Item needed to receive a gift from Santa Claus who goes around each territory. No exchange/drop available. -->
 		<set name="icon" val="icon.xmas_present_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -238,7 +238,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="14613" type="Armor" name="Rock-Paper-Scissors Santa Hat">
-		<!-- When used, one can play rock-paper-scissors with Thomas D. Turkey in each territory. Cannot be exchanged or dropped. -->
+		<!-- When used, one can play rock-paper-scissors with Thomas D. Turkey in each territory. No exchange/drop available. -->
 		<set name="icon" val="icon.accessory_santas_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -292,7 +292,7 @@
 		<set name="item_skill" val="2858-1" /> <!-- Christmas Red Sock -->
 	</item>
 	<item id="14617" type="Armor" name="Agathion Seal Bracelet - Rudolph">
-		<!-- The bracelet which can summon cute Rudolph Agathion. 14-day-limited-time Item. Cannot be exchanged or dropped. -->
+		<!-- The bracelet which can summon cute Rudolph Agathion. 14-day-limited-time Item. No exchange/drop available. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -317,7 +317,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="14619" type="EtcItem" name="Santa Claus' Weapon Exchange Ticket">
-		<!-- Gift from Santa Claus. It can be exchanged with a weapon through Cat of Christmas. Cannot be exchanged or dropped. -->
+		<!-- Gift from Santa Claus. It can be exchanged with a weapon through Cat of Christmas. No exchange/drop available. -->
 		<set name="icon" val="icon.etc_level_bustup_ticket_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -328,7 +328,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="14620" type="EtcItem" name="Santa Claus' Weapon Exchange Ticket">
-		<!-- Gift from Santa Claus. It can be exchanged with a weapon through Cat of Christmas. Cannot be exchanged or dropped. -->
+		<!-- Gift from Santa Claus. It can be exchanged with a weapon through Cat of Christmas. No exchange/drop available. -->
 		<set name="icon" val="icon.etc_level_bustup_ticket_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -616,7 +616,7 @@
 		</for>
 	</item>
 	<item id="14632" type="Weapon" name="Santa Claus' Eclair Bijou">
-		<!-- Kamael Exclusive Weapon: Santa Claus' Sirra Blade Conversion -->
+		<!-- Kamael exclusive weapon: Santa Claus' Sirra Blade Conversion -->
 		<set name="icon" val="icon.weapon_greed_stinger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -645,7 +645,7 @@
 		</for>
 	</item>
 	<item id="14633" type="Weapon" name="Santa Claus' Screaming Vengeance">
-		<!-- Kamael Exclusive Weapon: Santa Claus' Shyeed Bow Conversion -->
+		<!-- Kamael exclusive weapon: Santa Claus' Shyeed Bow Conversion -->
 		<set name="icon" val="icon.weapon_soul_shooter_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -674,7 +674,7 @@
 		</for>
 	</item>
 	<item id="14634" type="Weapon" name="Santa Claus' Durendal">
-		<!-- Kamael Exclusive Weapon: Santa Claus' Sword of Ipos Conversion -->
+		<!-- Kamael exclusive weapon: Santa Claus' Sword of Ipos Conversion -->
 		<set name="icon" val="icon.weapon_death_bringer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1129,7 +1129,7 @@
 		</for>
 	</item>
 	<item id="14665" type="Armor" name="Dion Protection Earring">
-		<!-- Earring given to the guardian of Dion territory. Hold Attack +15%, Resistance to Poison +15%, Resistance to Holy +8. Cannot be exchanged or dropped. Only one effect is applied when wearing the same two earrings. -->
+		<!-- Earring given to the guardian of Dion territory. Hold Attack +15%, Poison Defense +15%, Divine Power Defense +8. Cannot be exchanged or dropped. Only one effect is applied when wearing the same two earrings. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1330,7 +1330,7 @@
 		</for>
 	</item>
 	<item id="14675" type="Armor" name="Agathion Seal Bracelet - Neolithica">
-		<!-- Bracelet that can summon an Agathion. Cannot be exchanged or dropped. Cannot receive the gift if the inventory and weight are full. -->
+		<!-- Bracelet that can summon an Agathion. No exchange/drop available. Cannot receive the gift if the inventory and weight are full. -->
 		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1342,7 +1342,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="unequip_skill" val="3267-1" />
-		<set name="item_skill" val="8314-1;6124-1;8323-1;3267-1" /> <!-- Release Seal on Agathion - Neolithica -->
+		<set name="item_skill" val="8314-1;6124-1;8323-1;3267-1" /> <!-- Release Seal on Agathion - Saerom -->
 		<set name="time" val="47520" />
 	</item>
 	<item id="14676" type="EtcItem" name="Agathion's New Year's Gift">
@@ -1368,7 +1368,7 @@
 		<set name="item_skill" val="2866-1" /> <!-- Agathion's New Year's Gift 2 -->
 	</item>
 	<item id="14678" type="EtcItem" name="Neolithic Crystal - B">
-		<!-- If you bring it to the Dimensional Merchant, you can exchange a B-Grade ordinary item for a Masterwork Item. -->
+		<!-- If you bring it to the Vitamin Manager, you can exchange a B Grade ordinary item for a rare item. -->
 		<set name="icon" val="icon.etc_warding_orb_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1376,7 +1376,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="14679" type="EtcItem" name="Neolithic Crystal - A">
-		<!-- If you bring it to the Dimensional Merchant, you can exchange an A-Grade ordinary item for a Masterwork Item. -->
+		<!-- If you bring it to the Vitamin Manager, you can exchange a A Grade ordinary item for a rare item. -->
 		<set name="icon" val="icon.etc_warding_orb_green_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1384,7 +1384,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="14680" type="EtcItem" name="Neolithic Crystal - S">
-		<!-- If you bring it to the Dimensional Merchant, you can exchange a S-Grade ordinary item for a Masterwork Item. -->
+		<!-- If you bring it to the Vitamin Manager, you can exchange a S Grade ordinary item for a rare item. -->
 		<set name="icon" val="icon.etc_warding_orb_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1392,7 +1392,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="14681" type="EtcItem" name="Neolithic Crystal - S80">
-		<!-- If you bring it to the Dimensional Merchant, you can exchange a S80-Grade ordinary item for a Masterwork Item. -->
+		<!-- If you bring it to the Vitamin Manager, you can exchange a S80 Grade ordinary item for a rare item. -->
 		<set name="icon" val="icon.etc_warding_orb_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1494,7 +1494,7 @@
 		</cond>
 	</item>
 	<item id="14687" type="EtcItem" name="Greater Elixir of Life (S-Grade)">
-		<!-- Regenerates HP. Can only be used by characters above level 76 upon themselves. Re-use delay is 5 minutes. -->
+		<!-- Regenerates HP. Can only be used by charactersabove level 76 upon themselves. Re-use delay is 5 minutes. -->
 		<set name="icon" val="icon.etc_super_hp_potion_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ELIXIR" />
@@ -1607,7 +1607,7 @@
 		</cond>
 	</item>
 	<item id="14693" type="EtcItem" name="Greater Elixir of Mental Strength (S-Grade)">
-		<!-- Regenerates MP. Can only be used by characters above level 76 upon themselves. Re-use delay is 5 minutes. -->
+		<!-- Regenerates MP. Can only be used by charactersabove level 76 upon themselves. Re-use delay is 5 minutes. -->
 		<set name="icon" val="icon.etc_super_mp_potion_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ELIXIR" />
@@ -1705,7 +1705,7 @@
 		<set name="item_skill" val="2862-5" /> <!-- Highest Power No-grade Secret Medicine of Will -->
 	</item>
 	<item id="14699" type="EtcItem" name="Greater Elixir of CP (S-Grade)">
-		<!-- Regenerates CP. Can only be used by characters above level 76 upon themselves. Re-use delay is 5 minutes. -->
+		<!-- Regenerates CP. Can only be used by charactersabove level 76 upon themselves. Re-use delay is 5 minutes. -->
 		<set name="icon" val="icon.etc_super_cp_potion_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ELIXIR" />

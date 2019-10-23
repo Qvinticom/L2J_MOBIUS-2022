@@ -31,7 +31,7 @@ public class ExSendUIEvent implements IClientOutgoingPacket
 	private final boolean _countUp;
 	private final int _startTime;
 	private final int _endTime;
-	private final int _npcstringId;
+	private String _text;
 	private List<String> _params = null;
 	
 	/**
@@ -77,7 +77,7 @@ public class ExSendUIEvent implements IClientOutgoingPacket
 		_countUp = countUp;
 		_startTime = startTime;
 		_endTime = endTime;
-		_npcstringId = npcstringId;
+		_text = NpcStringId.getNpcStringId(npcstringId).getText();
 		_params = Arrays.asList(params);
 	}
 	
@@ -93,16 +93,18 @@ public class ExSendUIEvent implements IClientOutgoingPacket
 		// timer always disappears 10 seconds before end
 		packet.writeS(String.valueOf(_startTime / 60));
 		packet.writeS(String.valueOf(_startTime % 60));
-		packet.writeS(String.valueOf(_endTime / 60));
-		packet.writeS(String.valueOf(_endTime % 60));
-		packet.writeD(_npcstringId);
 		if (_params != null)
 		{
-			for (String param : _params)
+			String tempText;
+			for (int i = 0; i < _params.size(); i++)
 			{
-				packet.writeS(param);
+				tempText = _text.replace("$s" + (i + 1), _params.get(i));
+				_text = tempText;
 			}
 		}
+		packet.writeS(_text); // text above timer
+		packet.writeS(String.valueOf(_endTime / 60));
+		packet.writeS(String.valueOf(_endTime % 60));
 		return true;
 	}
 }

@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="31800" level="70" type="Adventurer" name="Adventure Guildsman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -42,7 +41,6 @@
 		</collision>
 	</npc>
 	<npc id="31801" level="70" type="Adventurer" name="Adventure Guildsman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -83,14 +81,13 @@
 		</collision>
 	</npc>
 	<npc id="31802" level="70" type="Adventurer" name="Adventure Guildsman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="90" />
 		</parameters>
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
-		<equipment rhand="21732" lhand="102" /> <!-- rhand: Sword of Revolution - Event lhand: Round Shield -->
+		<equipment rhand="129" lhand="102" /> <!-- rhand: Sword of Revolution lhand: Round Shield -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -124,7 +121,6 @@
 		</collision>
 	</npc>
 	<npc id="31803" level="70" type="Adventurer" name="Adventure Guildsman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="188" />
@@ -164,14 +160,13 @@
 		</collision>
 	</npc>
 	<npc id="31804" level="70" type="Adventurer" name="Adventure Guildsman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="103" />
 		</parameters>
 		<race>DARK_ELF</race>
 		<sex>FEMALE</sex>
-		<equipment rhand="21731" /> <!-- rhand: Maingauche - Event -->
+		<equipment rhand="224" /> <!-- rhand: Maingauche -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -205,7 +200,6 @@
 		</collision>
 	</npc>
 	<npc id="31805" level="70" type="Adventurer" name="Adventure Guildsman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="123" />
@@ -246,7 +240,6 @@
 		</collision>
 	</npc>
 	<npc id="31806" level="70" type="Adventurer" name="Adventure Guildsman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -287,7 +280,6 @@
 		</collision>
 	</npc>
 	<npc id="31807" level="70" type="Adventurer" name="Adventure Guildsman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="165" />
@@ -328,14 +320,13 @@
 		</collision>
 	</npc>
 	<npc id="31808" level="70" type="Adventurer" name="Adventure Guildsman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="90" />
 		</parameters>
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
-		<equipment rhand="21732" lhand="102" /> <!-- rhand: Sword of Revolution - Event lhand: Round Shield -->
+		<equipment rhand="129" lhand="102" /> <!-- rhand: Sword of Revolution lhand: Round Shield -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -369,7 +360,6 @@
 		</collision>
 	</npc>
 	<npc id="31809" level="70" type="Adventurer" name="Adventure Guildsman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="188" />
@@ -409,14 +399,13 @@
 		</collision>
 	</npc>
 	<npc id="31810" level="70" type="Adventurer" name="Adventure Guildsman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="103" />
 		</parameters>
 		<race>DARK_ELF</race>
 		<sex>FEMALE</sex>
-		<equipment rhand="21731" /> <!-- rhand: Maingauche - Event -->
+		<equipment rhand="224" /> <!-- rhand: Maingauche -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -450,7 +439,6 @@
 		</collision>
 	</npc>
 	<npc id="31811" level="70" type="Adventurer" name="Adventure Guildsman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -491,14 +479,13 @@
 		</collision>
 	</npc>
 	<npc id="31812" level="70" type="Adventurer" name="Adventure Guildsman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="103" />
 		</parameters>
 		<race>DARK_ELF</race>
 		<sex>FEMALE</sex>
-		<equipment rhand="21731" /> <!-- rhand: Maingauche - Event -->
+		<equipment rhand="224" /> <!-- rhand: Maingauche -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -532,7 +519,6 @@
 		</collision>
 	</npc>
 	<npc id="31813" level="70" type="Adventurer" name="Adventure Guildsman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="123" />
@@ -573,7 +559,6 @@
 		</collision>
 	</npc>
 	<npc id="31814" level="70" type="Adventurer" name="Adventure Guildsman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -613,7 +598,6 @@
 		</collision>
 	</npc>
 	<npc id="31815" level="70" type="Adventurer" name="Adventure Guildsman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="188" />
@@ -653,14 +637,13 @@
 		</collision>
 	</npc>
 	<npc id="31816" level="70" type="Adventurer" name="Adventure Guildsman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="103" />
 		</parameters>
 		<race>DARK_ELF</race>
 		<sex>FEMALE</sex>
-		<equipment rhand="21731" /> <!-- rhand: Maingauche - Event -->
+		<equipment rhand="224" /> <!-- rhand: Maingauche -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -694,7 +677,6 @@
 		</collision>
 	</npc>
 	<npc id="31817" level="70" type="Adventurer" name="Adventure Guildsman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -735,14 +717,13 @@
 		</collision>
 	</npc>
 	<npc id="31818" level="70" type="Adventurer" name="Adventure Guildsman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="90" />
 		</parameters>
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
-		<equipment rhand="21732" lhand="102" /> <!-- rhand: Sword of Revolution - Event lhand: Round Shield -->
+		<equipment rhand="129" lhand="102" /> <!-- rhand: Sword of Revolution lhand: Round Shield -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -776,7 +757,6 @@
 		</collision>
 	</npc>
 	<npc id="31819" level="70" type="Adventurer" name="Adventure Guildsman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -816,7 +796,6 @@
 		</collision>
 	</npc>
 	<npc id="31820" level="70" type="Adventurer" name="Adventure Guildsman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="123" />
@@ -857,14 +836,13 @@
 		</collision>
 	</npc>
 	<npc id="31821" level="70" type="Adventurer" name="Adventure Guildsman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="103" />
 		</parameters>
 		<race>DARK_ELF</race>
 		<sex>FEMALE</sex>
-		<equipment rhand="21731" /> <!-- rhand: Maingauche - Event -->
+		<equipment rhand="224" /> <!-- rhand: Maingauche -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -898,14 +876,13 @@
 		</collision>
 	</npc>
 	<npc id="31822" level="70" type="Adventurer" name="Adventure Guildsman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="90" />
 		</parameters>
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
-		<equipment rhand="21732" lhand="102" /> <!-- rhand: Sword of Revolution - Event lhand: Round Shield -->
+		<equipment rhand="129" lhand="102" /> <!-- rhand: Sword of Revolution lhand: Round Shield -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -939,7 +916,6 @@
 		</collision>
 	</npc>
 	<npc id="31823" level="70" type="Adventurer" name="Adventure Guildsman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -980,7 +956,6 @@
 		</collision>
 	</npc>
 	<npc id="31824" level="70" type="Adventurer" name="Adventure Guildsman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -1020,14 +995,13 @@
 		</collision>
 	</npc>
 	<npc id="31825" level="70" type="Adventurer" name="Adventure Guildsman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="103" />
 		</parameters>
 		<race>DARK_ELF</race>
 		<sex>FEMALE</sex>
-		<equipment rhand="21731" /> <!-- rhand: Maingauche - Event -->
+		<equipment rhand="224" /> <!-- rhand: Maingauche -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1061,7 +1035,6 @@
 		</collision>
 	</npc>
 	<npc id="31826" level="70" type="Adventurer" name="Adventure Guildsman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="123" />
@@ -1102,7 +1075,6 @@
 		</collision>
 	</npc>
 	<npc id="31827" level="70" type="Adventurer" name="Adventure Guildsman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="123" />
@@ -1143,7 +1115,6 @@
 		</collision>
 	</npc>
 	<npc id="31828" level="70" type="Adventurer" name="Adventure Guildsman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -1184,7 +1155,6 @@
 		</collision>
 	</npc>
 	<npc id="31829" level="70" type="Adventurer" name="Adventure Guildsman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="139" />
@@ -1225,14 +1195,13 @@
 		</collision>
 	</npc>
 	<npc id="31830" level="70" type="Adventurer" name="Adventure Guildsman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="103" />
 		</parameters>
 		<race>DARK_ELF</race>
 		<sex>FEMALE</sex>
-		<equipment rhand="21731" /> <!-- rhand: Maingauche - Event -->
+		<equipment rhand="224" /> <!-- rhand: Maingauche -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1266,14 +1235,13 @@
 		</collision>
 	</npc>
 	<npc id="31831" level="70" type="Adventurer" name="Adventure Guildsman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="90" />
 		</parameters>
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
-		<equipment rhand="21732" lhand="102" /> <!-- rhand: Sword of Revolution - Event lhand: Round Shield -->
+		<equipment rhand="129" lhand="102" /> <!-- rhand: Sword of Revolution lhand: Round Shield -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1307,7 +1275,6 @@
 		</collision>
 	</npc>
 	<npc id="31832" level="70" type="Adventurer" name="Adventure Guildsman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="188" />
@@ -1347,7 +1314,6 @@
 		</collision>
 	</npc>
 	<npc id="31833" level="70" type="Adventurer" name="Adventure Guildsman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="123" />
@@ -1388,7 +1354,6 @@
 		</collision>
 	</npc>
 	<npc id="31834" level="70" type="Adventurer" name="Adventure Guildsman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -1429,7 +1394,6 @@
 		</collision>
 	</npc>
 	<npc id="31835" level="70" type="Adventurer" name="Adventure Guildsman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -1469,7 +1433,6 @@
 		</collision>
 	</npc>
 	<npc id="31836" level="70" type="Adventurer" name="Adventure Guildsman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -1510,14 +1473,13 @@
 		</collision>
 	</npc>
 	<npc id="31837" level="70" type="Adventurer" name="Adventure Guildsman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="103" />
 		</parameters>
 		<race>DARK_ELF</race>
 		<sex>FEMALE</sex>
-		<equipment rhand="21731" /> <!-- rhand: Maingauche - Event -->
+		<equipment rhand="224" /> <!-- rhand: Maingauche -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1551,7 +1513,6 @@
 		</collision>
 	</npc>
 	<npc id="31838" level="70" type="Adventurer" name="Adventure Guildsman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="165" />
@@ -1592,7 +1553,6 @@
 		</collision>
 	</npc>
 	<npc id="31839" level="70" type="Adventurer" name="Adventure Guildsman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -1633,7 +1593,6 @@
 		</collision>
 	</npc>
 	<npc id="31840" level="70" type="Adventurer" name="Adventure Guildsman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="188" />
@@ -1673,14 +1632,13 @@
 		</collision>
 	</npc>
 	<npc id="31841" level="70" type="Adventurer" name="Adventure Guildsman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="90" />
 		</parameters>
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
-		<equipment rhand="21732" lhand="102" /> <!-- rhand: Sword of Revolution - Event lhand: Round Shield -->
+		<equipment rhand="129" lhand="102" /> <!-- rhand: Sword of Revolution lhand: Round Shield -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
 			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
 			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1714,7 +1672,6 @@
 		</collision>
 	</npc>
 	<npc id="31842" level="70" type="Npc" name="Teleportation Cubic">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1756,7 +1713,6 @@
 		</collision>
 	</npc>
 	<npc id="31843" level="70" type="Teleporter" name="Teleportation Cubic">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1798,7 +1754,6 @@
 		</collision>
 	</npc>
 	<npc id="31844" level="50" type="Monster" name="Aracna">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1843,7 +1798,6 @@
 		</collision>
 	</npc>
 	<npc id="31845" level="80" type="FriendlyMob" name="Bloody Pixy">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1888,7 +1842,6 @@
 		</collision>
 	</npc>
 	<npc id="31846" level="80" type="Monster" name="Satyros">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="71" />
 			<param name="MoveAroundSocial1" value="71" />
@@ -1934,7 +1887,6 @@
 		</collision>
 	</npc>
 	<npc id="31847" level="80" type="Monster" name="Pan">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="71" />
 			<param name="MoveAroundSocial1" value="71" />
@@ -1980,7 +1932,6 @@
 		</collision>
 	</npc>
 	<npc id="31848" level="80" type="FriendlyMob" name="Pixy">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2025,7 +1976,6 @@
 		</collision>
 	</npc>
 	<npc id="31849" level="80" type="Monster" name="Red Arachne">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2070,7 +2020,6 @@
 		</collision>
 	</npc>
 	<npc id="31850" level="80" type="FriendlyMob" name="Blight Treant">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -2116,7 +2065,6 @@
 		</collision>
 	</npc>
 	<npc id="31851" level="80" type="FriendlyMob" name="Treant">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -2162,7 +2110,6 @@
 		</collision>
 	</npc>
 	<npc id="31852" level="50" type="Npc" name="Pixy Murika">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2207,7 +2154,6 @@
 		</collision>
 	</npc>
 	<npc id="31853" level="80" type="FriendlyMob" name="Treant Bremec">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -2252,7 +2198,6 @@
 		</collision>
 	</npc>
 	<npc id="31854" level="70" type="Npc" name="Event Manager">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<acquire exp="490" sp="10" />
@@ -2289,7 +2234,6 @@
 		</collision>
 	</npc>
 	<npc id="31855" level="70" type="Npc" name="Event Manager">
-		<!-- Confirmed CT2.5 -->
 		<race>ELF</race>
 		<sex>FEMALE</sex>
 		<acquire exp="490" sp="10" />
@@ -2326,7 +2270,6 @@
 		</collision>
 	</npc>
 	<npc id="31856" level="70" type="Npc" name="Event Manager">
-		<!-- Confirmed CT2.5 -->
 		<race>DARK_ELF</race>
 		<sex>FEMALE</sex>
 		<acquire exp="490" sp="10" />
@@ -2363,7 +2306,6 @@
 		</collision>
 	</npc>
 	<npc id="31857" level="70" type="Npc" name="Event Manager">
-		<!-- Confirmed CT2.5 -->
 		<race>DWARF</race>
 		<sex>FEMALE</sex>
 		<acquire exp="490" sp="10" />
@@ -2400,7 +2342,6 @@
 		</collision>
 	</npc>
 	<npc id="31858" level="70" type="Npc" name="Event Manager">
-		<!-- Confirmed CT2.5 -->
 		<race>ORC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="490" sp="10" />
@@ -2437,7 +2378,6 @@
 		</collision>
 	</npc>
 	<npc id="31859" level="70" type="Npc" name="Teleportation Cubic">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2479,7 +2419,6 @@
 		</collision>
 	</npc>
 	<npc id="31860" level="70" type="Npc" name="Buzz the Cat" title="Event Manager">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2521,7 +2460,6 @@
 		</collision>
 	</npc>
 	<npc id="31861" level="56" type="Teleporter" name="Gatekeeper">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<acquire exp="313" sp="10" />
@@ -2563,7 +2501,6 @@
 		</collision>
 	</npc>
 	<npc id="31862" level="70" type="Npc" name="Angelic Vortex">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<acquire exp="490" sp="10" />
@@ -2601,7 +2538,6 @@
 		</collision>
 	</npc>
 	<npc id="31863" level="70" type="Npc" name="Santa Trainee">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -2642,7 +2578,6 @@
 		</collision>
 	</npc>
 	<npc id="31864" level="70" type="Npc" name="Santa Trainee">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -2683,7 +2618,6 @@
 		</collision>
 	</npc>
 	<npc id="31865" level="35" type="Npc" name="Guardian of Border">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2725,7 +2659,6 @@
 		</collision>
 	</npc>
 	<npc id="31866" level="35" type="Npc" name="Guardian of Border">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2767,7 +2700,6 @@
 		</collision>
 	</npc>
 	<npc id="31867" level="35" type="Npc" name="Guardian of Border">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2809,7 +2741,6 @@
 		</collision>
 	</npc>
 	<npc id="31868" level="35" type="Npc" name="Guardian of Border">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2851,7 +2782,6 @@
 		</collision>
 	</npc>
 	<npc id="31869" level="35" type="Npc" name="Guardian of Border">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2893,7 +2823,6 @@
 		</collision>
 	</npc>
 	<npc id="31870" level="35" type="Npc" name="Guardian of Border">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2935,7 +2864,6 @@
 		</collision>
 	</npc>
 	<npc id="31871" level="35" type="Npc" name="Guardian of Border">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2977,7 +2905,6 @@
 		</collision>
 	</npc>
 	<npc id="31872" level="35" type="Npc" name="Guardian of Border">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3019,7 +2946,6 @@
 		</collision>
 	</npc>
 	<npc id="31873" level="35" type="Npc" name="Guardian of Border">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3061,7 +2987,6 @@
 		</collision>
 	</npc>
 	<npc id="31874" level="45" type="Npc" name="Guardian of Border">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3103,7 +3028,6 @@
 		</collision>
 	</npc>
 	<npc id="31875" level="45" type="Npc" name="Guardian of Border">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3145,7 +3069,6 @@
 		</collision>
 	</npc>
 	<npc id="31876" level="45" type="Npc" name="Guardian of Border">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3187,7 +3110,6 @@
 		</collision>
 	</npc>
 	<npc id="31877" level="45" type="Npc" name="Guardian of Border">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3229,7 +3151,6 @@
 		</collision>
 	</npc>
 	<npc id="31878" level="45" type="Npc" name="Guardian of Border">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3271,7 +3192,6 @@
 		</collision>
 	</npc>
 	<npc id="31879" level="45" type="Npc" name="Guardian of Border">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3313,7 +3233,6 @@
 		</collision>
 	</npc>
 	<npc id="31880" level="45" type="Npc" name="Guardian of Border">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3355,7 +3274,6 @@
 		</collision>
 	</npc>
 	<npc id="31881" level="45" type="Npc" name="Guardian of Border">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3397,7 +3315,6 @@
 		</collision>
 	</npc>
 	<npc id="31882" level="45" type="Npc" name="Guardian of Border">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3439,7 +3356,6 @@
 		</collision>
 	</npc>
 	<npc id="31883" level="55" type="Npc" name="Guardian of Border">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3481,7 +3397,6 @@
 		</collision>
 	</npc>
 	<npc id="31884" level="55" type="Npc" name="Guardian of Border">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3523,7 +3438,6 @@
 		</collision>
 	</npc>
 	<npc id="31885" level="55" type="Npc" name="Guardian of Border">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3565,7 +3479,6 @@
 		</collision>
 	</npc>
 	<npc id="31886" level="55" type="Npc" name="Guardian of Border">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3607,7 +3520,6 @@
 		</collision>
 	</npc>
 	<npc id="31887" level="55" type="Npc" name="Guardian of Border">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3649,7 +3561,6 @@
 		</collision>
 	</npc>
 	<npc id="31888" level="55" type="Npc" name="Guardian of Border">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3691,7 +3602,6 @@
 		</collision>
 	</npc>
 	<npc id="31889" level="55" type="Npc" name="Guardian of Border">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3733,7 +3643,6 @@
 		</collision>
 	</npc>
 	<npc id="31890" level="55" type="Npc" name="Guardian of Border">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3775,7 +3684,6 @@
 		</collision>
 	</npc>
 	<npc id="31891" level="55" type="Npc" name="Guardian of Border">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3817,7 +3725,6 @@
 		</collision>
 	</npc>
 	<npc id="31892" level="65" type="Npc" name="Guardian of Border">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3859,7 +3766,6 @@
 		</collision>
 	</npc>
 	<npc id="31893" level="65" type="Npc" name="Guardian of Border">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3901,7 +3807,6 @@
 		</collision>
 	</npc>
 	<npc id="31894" level="65" type="Npc" name="Guardian of Border">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3943,7 +3848,6 @@
 		</collision>
 	</npc>
 	<npc id="31895" level="65" type="Npc" name="Guardian of Border">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3985,7 +3889,6 @@
 		</collision>
 	</npc>
 	<npc id="31896" level="65" type="Npc" name="Guardian of Border">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -4027,7 +3930,6 @@
 		</collision>
 	</npc>
 	<npc id="31897" level="65" type="Npc" name="Guardian of Border">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -4069,7 +3971,6 @@
 		</collision>
 	</npc>
 	<npc id="31898" level="65" type="Npc" name="Guardian of Border">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -4111,7 +4012,6 @@
 		</collision>
 	</npc>
 	<npc id="31899" level="65" type="Npc" name="Guardian of Border">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />

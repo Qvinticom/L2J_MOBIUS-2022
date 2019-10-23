@@ -22,7 +22,6 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
 
 import ai.AbstractNpcAI;
 import quests.Q00115_TheOtherSideOfTruth.Q00115_TheOtherSideOfTruth;
-import quests.Q10283_RequestOfIceMerchant.Q10283_RequestOfIceMerchant;
 
 /**
  * Kier AI.
@@ -51,19 +50,6 @@ public class Kier extends AbstractNpcAI
 		else if (!st_Q00115.isCompleted())
 		{
 			htmltext = "32022-01.html";
-		}
-		
-		final QuestState st_Q10283 = player.getQuestState(Q10283_RequestOfIceMerchant.class.getSimpleName());
-		if (st_Q10283 != null)
-		{
-			if (st_Q10283.isMemoState(2))
-			{
-				htmltext = "32022-03.html";
-			}
-			else if (st_Q10283.isCompleted())
-			{
-				htmltext = "32022-04.html";
-			}
 		}
 		return htmltext;
 	}

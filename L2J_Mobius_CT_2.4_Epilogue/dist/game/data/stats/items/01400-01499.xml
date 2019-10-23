@@ -136,7 +136,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1415" type="EtcItem" name="Spellbook: Dryad Root">
-		<!-- Spellbook needed to learn Dryard Root. Used by Clerics, Oracles and Shillien Oracles. Required level: 25 -->
+		<!-- Spellbook needed to learn Dryard Root. Used by Clerics, Oracles and Shilien Oracles. Required level: 25 -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -587,7 +587,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1454" type="EtcItem" name="Wyrm's Tooth">
-		<!-- A sharp fang of a Wyrm. Collect these and take them to Guard Belton. -->
+		<!-- A sharp fang of a wyrm. Collect these and take them to Guard Belton. -->
 		<set name="icon" val="icon.etc_claw_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -678,7 +678,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1462" type="EtcItem" name="Crystal (S-Grade)">
-		<!-- A crystal of S-Grade. -->
+		<!-- A crystal of S Grade. -->
 		<set name="icon" val="icon.etc_crystal_gold_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="S" />

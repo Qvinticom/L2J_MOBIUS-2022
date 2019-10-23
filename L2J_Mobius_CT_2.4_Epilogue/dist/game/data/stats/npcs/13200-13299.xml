@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="13200" level="79" type="Npc" name="Young Child">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -36,7 +35,6 @@
 		</collision>
 	</npc>
 	<npc id="13201" level="79" type="Npc" name="Guards of the Dawn">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -71,7 +69,6 @@
 		</collision>
 	</npc>
 	<npc id="13202" level="76" type="Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5267" level="11" /> <!-- Trap Explosion -->
@@ -112,7 +109,6 @@
 		</collision>
 	</npc>
 	<npc id="13203" level="77" type="Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5267" level="12" /> <!-- Trap Explosion -->
@@ -153,7 +149,6 @@
 		</collision>
 	</npc>
 	<npc id="13204" level="78" type="Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5267" level="13" /> <!-- Trap Explosion -->
@@ -194,7 +189,6 @@
 		</collision>
 	</npc>
 	<npc id="13205" level="79" type="Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5267" level="14" /> <!-- Trap Explosion -->
@@ -235,7 +229,6 @@
 		</collision>
 	</npc>
 	<npc id="13206" level="80" type="Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5267" level="15" /> <!-- Trap Explosion -->
@@ -276,7 +269,6 @@
 		</collision>
 	</npc>
 	<npc id="13207" level="81" type="Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5267" level="16" /> <!-- Trap Explosion -->
@@ -317,7 +309,6 @@
 		</collision>
 	</npc>
 	<npc id="13208" level="82" type="Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5267" level="17" /> <!-- Trap Explosion -->
@@ -358,7 +349,6 @@
 		</collision>
 	</npc>
 	<npc id="13209" level="83" type="Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5267" level="18" /> <!-- Trap Explosion -->
@@ -399,7 +389,6 @@
 		</collision>
 	</npc>
 	<npc id="13210" level="84" type="Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5267" level="19" /> <!-- Trap Explosion -->
@@ -440,7 +429,6 @@
 		</collision>
 	</npc>
 	<npc id="13211" level="85" type="Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5267" level="20" /> <!-- Trap Explosion -->
@@ -481,7 +469,6 @@
 		</collision>
 	</npc>
 	<npc id="13212" level="86" type="Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5267" level="21" /> <!-- Trap Explosion -->
@@ -522,7 +509,6 @@
 		</collision>
 	</npc>
 	<npc id="13213" level="76" type="Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5268" level="7" /> <!-- Poison -->
@@ -563,7 +549,6 @@
 		</collision>
 	</npc>
 	<npc id="13214" level="77" type="Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5268" level="8" /> <!-- Poison -->
@@ -604,7 +589,6 @@
 		</collision>
 	</npc>
 	<npc id="13215" level="78" type="Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5268" level="9" /> <!-- Poison -->
@@ -645,7 +629,6 @@
 		</collision>
 	</npc>
 	<npc id="13216" level="79" type="Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5268" level="10" /> <!-- Poison -->
@@ -686,7 +669,6 @@
 		</collision>
 	</npc>
 	<npc id="13217" level="80" type="Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5268" level="11" /> <!-- Poison -->
@@ -727,7 +709,6 @@
 		</collision>
 	</npc>
 	<npc id="13218" level="81" type="Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5268" level="12" /> <!-- Poison -->
@@ -768,7 +749,6 @@
 		</collision>
 	</npc>
 	<npc id="13219" level="82" type="Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5268" level="13" /> <!-- Poison -->
@@ -809,7 +789,6 @@
 		</collision>
 	</npc>
 	<npc id="13220" level="83" type="Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5268" level="14" /> <!-- Poison -->
@@ -850,7 +829,6 @@
 		</collision>
 	</npc>
 	<npc id="13221" level="84" type="Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5268" level="15" /> <!-- Poison -->
@@ -891,7 +869,6 @@
 		</collision>
 	</npc>
 	<npc id="13222" level="85" type="Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5268" level="16" /> <!-- Poison -->
@@ -932,7 +909,6 @@
 		</collision>
 	</npc>
 	<npc id="13223" level="86" type="Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5268" level="17" /> <!-- Poison -->
@@ -973,7 +949,6 @@
 		</collision>
 	</npc>
 	<npc id="13224" level="76" type="Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5269" level="7" /> <!-- Slow Trap -->
@@ -1014,7 +989,6 @@
 		</collision>
 	</npc>
 	<npc id="13225" level="77" type="Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5269" level="8" /> <!-- Slow Trap -->
@@ -1055,7 +1029,6 @@
 		</collision>
 	</npc>
 	<npc id="13226" level="78" type="Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5269" level="9" /> <!-- Slow Trap -->
@@ -1096,7 +1069,6 @@
 		</collision>
 	</npc>
 	<npc id="13227" level="79" type="Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5269" level="10" /> <!-- Slow Trap -->
@@ -1137,7 +1109,6 @@
 		</collision>
 	</npc>
 	<npc id="13228" level="80" type="Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5269" level="11" /> <!-- Slow Trap -->
@@ -1178,7 +1149,6 @@
 		</collision>
 	</npc>
 	<npc id="13229" level="81" type="Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5269" level="12" /> <!-- Slow Trap -->
@@ -1219,7 +1189,6 @@
 		</collision>
 	</npc>
 	<npc id="13230" level="82" type="Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5269" level="13" /> <!-- Slow Trap -->
@@ -1260,7 +1229,6 @@
 		</collision>
 	</npc>
 	<npc id="13231" level="83" type="Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5269" level="14" /> <!-- Slow Trap -->
@@ -1301,7 +1269,6 @@
 		</collision>
 	</npc>
 	<npc id="13232" level="84" type="Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5269" level="15" /> <!-- Slow Trap -->
@@ -1342,7 +1309,6 @@
 		</collision>
 	</npc>
 	<npc id="13233" level="85" type="Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5269" level="16" /> <!-- Slow Trap -->
@@ -1383,7 +1349,6 @@
 		</collision>
 	</npc>
 	<npc id="13234" level="86" type="Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5269" level="17" /> <!-- Slow Trap -->
@@ -1424,7 +1389,6 @@
 		</collision>
 	</npc>
 	<npc id="13235" level="76" type="Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5270" level="6" /> <!-- Flash Trap -->
@@ -1465,7 +1429,6 @@
 		</collision>
 	</npc>
 	<npc id="13236" level="77" type="Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5270" level="7" /> <!-- Flash Trap -->
@@ -1506,7 +1469,6 @@
 		</collision>
 	</npc>
 	<npc id="13237" level="78" type="Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5270" level="8" /> <!-- Flash Trap -->
@@ -1547,7 +1509,6 @@
 		</collision>
 	</npc>
 	<npc id="13238" level="79" type="Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5270" level="9" /> <!-- Flash Trap -->
@@ -1588,7 +1549,6 @@
 		</collision>
 	</npc>
 	<npc id="13239" level="80" type="Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5270" level="10" /> <!-- Flash Trap -->
@@ -1629,7 +1589,6 @@
 		</collision>
 	</npc>
 	<npc id="13240" level="81" type="Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5270" level="11" /> <!-- Flash Trap -->
@@ -1670,7 +1629,6 @@
 		</collision>
 	</npc>
 	<npc id="13241" level="82" type="Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5270" level="12" /> <!-- Flash Trap -->
@@ -1711,7 +1669,6 @@
 		</collision>
 	</npc>
 	<npc id="13242" level="83" type="Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5270" level="13" /> <!-- Flash Trap -->
@@ -1752,7 +1709,6 @@
 		</collision>
 	</npc>
 	<npc id="13243" level="84" type="Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5270" level="14" /> <!-- Flash Trap -->
@@ -1793,7 +1749,6 @@
 		</collision>
 	</npc>
 	<npc id="13244" level="85" type="Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5270" level="15" /> <!-- Flash Trap -->
@@ -1834,7 +1789,6 @@
 		</collision>
 	</npc>
 	<npc id="13245" level="86" type="Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="0" />
 			<skill name="trap_skill" id="5270" level="16" /> <!-- Flash Trap -->
@@ -1875,7 +1829,6 @@
 		</collision>
 	</npc>
 	<npc id="13246" level="76" type="Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5271" level="9" /> <!-- Hold -->
@@ -1916,7 +1869,6 @@
 		</collision>
 	</npc>
 	<npc id="13247" level="77" type="Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5271" level="10" /> <!-- Hold -->
@@ -1957,7 +1909,6 @@
 		</collision>
 	</npc>
 	<npc id="13248" level="78" type="Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5271" level="11" /> <!-- Hold -->
@@ -1998,7 +1949,6 @@
 		</collision>
 	</npc>
 	<npc id="13249" level="79" type="Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5271" level="12" /> <!-- Hold -->
@@ -2039,7 +1989,6 @@
 		</collision>
 	</npc>
 	<npc id="13250" level="80" type="Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5271" level="13" /> <!-- Hold -->
@@ -2080,7 +2029,6 @@
 		</collision>
 	</npc>
 	<npc id="13251" level="81" type="Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5271" level="14" /> <!-- Hold -->
@@ -2121,7 +2069,6 @@
 		</collision>
 	</npc>
 	<npc id="13252" level="82" type="Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5271" level="15" /> <!-- Hold -->
@@ -2162,7 +2109,6 @@
 		</collision>
 	</npc>
 	<npc id="13253" level="83" type="Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5271" level="16" /> <!-- Hold -->
@@ -2203,7 +2149,6 @@
 		</collision>
 	</npc>
 	<npc id="13254" level="84" type="Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5271" level="17" /> <!-- Hold -->
@@ -2244,7 +2189,6 @@
 		</collision>
 	</npc>
 	<npc id="13255" level="85" type="Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5271" level="18" /> <!-- Hold -->
@@ -2285,7 +2229,6 @@
 		</collision>
 	</npc>
 	<npc id="13256" level="86" type="Npc" name="Trap">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="trap_skill_type" value="1" />
 			<skill name="trap_skill" id="5271" level="19" /> <!-- Hold -->
@@ -2326,7 +2269,6 @@
 		</collision>
 	</npc>
 	<npc id="13257" level="76" type="Decoy" name="Virtual Image">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="decoy_skill" id="5272" level="7" /> <!-- Decoy Provocation -->
 		</parameters>
@@ -2365,7 +2307,6 @@
 		</collision>
 	</npc>
 	<npc id="13258" level="77" type="Decoy" name="Virtual Image">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="decoy_skill" id="5272" level="8" /> <!-- Decoy Provocation -->
 		</parameters>
@@ -2404,7 +2345,6 @@
 		</collision>
 	</npc>
 	<npc id="13259" level="78" type="Decoy" name="Virtual Image">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="decoy_skill" id="5272" level="9" /> <!-- Decoy Provocation -->
 		</parameters>
@@ -2443,7 +2383,6 @@
 		</collision>
 	</npc>
 	<npc id="13260" level="79" type="Decoy" name="Virtual Image">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="decoy_skill" id="5272" level="10" /> <!-- Decoy Provocation -->
 		</parameters>
@@ -2482,7 +2421,6 @@
 		</collision>
 	</npc>
 	<npc id="13261" level="80" type="Decoy" name="Virtual Image">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="decoy_skill" id="5272" level="11" /> <!-- Decoy Provocation -->
 		</parameters>
@@ -2521,7 +2459,6 @@
 		</collision>
 	</npc>
 	<npc id="13262" level="81" type="Decoy" name="Virtual Image">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="decoy_skill" id="5272" level="12" /> <!-- Decoy Provocation -->
 		</parameters>
@@ -2560,7 +2497,6 @@
 		</collision>
 	</npc>
 	<npc id="13263" level="82" type="Decoy" name="Virtual Image">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="decoy_skill" id="5272" level="13" /> <!-- Decoy Provocation -->
 		</parameters>
@@ -2599,7 +2535,6 @@
 		</collision>
 	</npc>
 	<npc id="13264" level="83" type="Decoy" name="Virtual Image">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="decoy_skill" id="5272" level="14" /> <!-- Decoy Provocation -->
 		</parameters>
@@ -2638,7 +2573,6 @@
 		</collision>
 	</npc>
 	<npc id="13265" level="84" type="Decoy" name="Virtual Image">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="decoy_skill" id="5272" level="15" /> <!-- Decoy Provocation -->
 		</parameters>
@@ -2677,7 +2611,6 @@
 		</collision>
 	</npc>
 	<npc id="13266" level="85" type="Decoy" name="Virtual Image">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="decoy_skill" id="5272" level="16" /> <!-- Decoy Provocation -->
 		</parameters>
@@ -2716,7 +2649,6 @@
 		</collision>
 	</npc>
 	<npc id="13267" level="86" type="Decoy" name="Virtual Image">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="decoy_skill" id="5272" level="17" /> <!-- Decoy Provocation -->
 		</parameters>
@@ -2755,7 +2687,6 @@
 		</collision>
 	</npc>
 	<npc id="13268" level="55" type="Npc" name="Aqua Elf">
-		<!-- Confirmed CT2.5 -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
@@ -2790,7 +2721,6 @@
 		</collision>
 	</npc>
 	<npc id="13269" level="80" type="Npc" name="Hot Weather">
-		<!-- Confirmed CT2.5 -->
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -2825,7 +2755,6 @@
 		</collision>
 	</npc>
 	<npc id="13270" level="80" type="Npc" name="Sultriness">
-		<!-- Confirmed CT2.5 -->
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -2860,7 +2789,6 @@
 		</collision>
 	</npc>
 	<npc id="13271" level="1" type="Npc" name="Young Watermelon">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -2896,7 +2824,6 @@
 		</collision>
 	</npc>
 	<npc id="13272" level="1" type="Npc" name="Defective Watermelon">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -2933,7 +2860,6 @@
 		</collision>
 	</npc>
 	<npc id="13273" level="1" type="Npc" name="Rain Watermelon">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -2971,7 +2897,6 @@
 		</collision>
 	</npc>
 	<npc id="13274" level="1" type="Npc" name="Large Rain Watermelon">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -3009,7 +2934,6 @@
 		</collision>
 	</npc>
 	<npc id="13275" level="1" type="Npc" name="Young Honey Watermelon">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -3046,7 +2970,6 @@
 		</collision>
 	</npc>
 	<npc id="13276" level="1" type="Npc" name="Defective Honey Watermelon">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -3084,7 +3007,6 @@
 		</collision>
 	</npc>
 	<npc id="13277" level="1" type="Npc" name="Rain Honey Watermelon">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -3122,7 +3044,6 @@
 		</collision>
 	</npc>
 	<npc id="13278" level="1" type="Npc" name="Large Rain Honey Watermelon">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -3160,7 +3081,6 @@
 		</collision>
 	</npc>
 	<npc id="13279" level="1" type="Npc" name="Uldie">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -3197,7 +3117,6 @@
 		</collision>
 	</npc>
 	<npc id="13280" level="1" type="Npc" name="Belldandy">
-		<!-- Confirmed CT2.5 -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3234,7 +3153,6 @@
 		</collision>
 	</npc>
 	<npc id="13281" level="80" type="Npc" name="Skooldie" title="Event manager">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3271,7 +3189,6 @@
 		</collision>
 	</npc>
 	<npc id="13282" level="1" type="Npc" name="Skooldie">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3305,548 +3222,6 @@
 		<collision>
 			<radius normal="8" />
 			<height normal="12.8" />
-		</collision>
-	</npc>
-	<npc id="13283" level="55" type="Npc" name="Treykan">
-		<!-- Confirmed CT2.5 -->
-		<race>BEAST</race>
-		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="1673.05473" hpRegen="6.5" mp="889.8" mpRegen="2.4" />
-			<attack physical="388.11142" magical="265.02979" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
-			<defence physical="223.6362" magical="163.64727" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
-			<speed>
-				<walk ground="88" />
-				<run ground="180" />
-			</speed>
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-		</skillList>
-		<shots soul="2" spirit="2" />
-		<exCrtEffect>false</exCrtEffect>
-		<collision>
-			<radius normal="25" />
-			<height normal="27" />
-		</collision>
-	</npc>
-	<npc id="13284" level="80" type="Npc">
-		<!-- Confirmed CT2.5 -->
-		<race>CONSTRUCT</race>
-		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
-			<attack physical="970.537548504614" magical="662.751329129412" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
-			<defence physical="341.375" magical="249.80341" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
-			<speed>
-				<walk ground="1" />
-				<run ground="1" />
-			</speed>
-		</stats>
-		<status attackable="false" targetable="false" showName="false" canMove="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<collision>
-			<radius normal="0.1" />
-			<height normal="0.1" />
-		</collision>
-	</npc>
-	<npc id="13285" level="80" type="Npc" name="Santa Claus" title="Event manager">
-		<!-- Confirmed CT2.5 -->
-		<race>HUMAN</race>
-		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
-			<attack physical="970.537548504614" magical="662.751329129412" random="10" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
-			<defence physical="341.375" magical="249.80341" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-		</stats>
-		<status attackable="false" canMove="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="14" /> <!-- Humans -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<collision>
-			<radius normal="12" />
-			<height normal="25" />
-		</collision>
-	</npc>
-	<npc id="13286" level="85" type="Npc" name="Baby White Tiger">
-		<!-- Confirmed CT2.5 -->
-		<race>BEAST</race>
-		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="601.26582278481" mp="1846.8" mpRegen="3" />
-			<attack physical="1188.87259499001" magical="5.78704" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="60000" magical="200000" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
-			<speed>
-				<walk ground="28" />
-				<run ground="120" />
-			</speed>
-			<hitTime>480</hitTime>
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<collision>
-			<radius normal="8" />
-			<height normal="15.7" />
-		</collision>
-	</npc>
-	<npc id="13287" level="85" type="Npc" name="Baby White Tiger Captain">
-		<!-- Confirmed CT2.5 -->
-		<race>BEAST</race>
-		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7563.29113924051" mp="1846.8" mpRegen="3" />
-			<attack physical="1188.87259499001" magical="5.78704" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="60000" magical="200000" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
-			<speed>
-				<walk ground="28" />
-				<run ground="180" />
-			</speed>
-			<hitTime>480</hitTime>
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<collision>
-			<radius normal="22" />
-			<height normal="29.5" />
-		</collision>
-	</npc>
-	<npc id="13288" level="85" type="Npc" name="Gloomy Baby White Tiger">
-		<!-- Confirmed CT2.5 -->
-		<race>BEAST</race>
-		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="601.26582278481" mp="1846.8" mpRegen="3" />
-			<attack physical="1188.87259499001" magical="5.78704" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="60000" magical="200000" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
-			<speed>
-				<walk ground="28" />
-				<run ground="120" />
-			</speed>
-			<hitTime>480</hitTime>
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<collision>
-			<radius normal="8" />
-			<height normal="15.7" />
-		</collision>
-	</npc>
-	<npc id="13289" level="85" type="Npc" name="Gloomy Baby White Tiger Captain">
-		<!-- Confirmed CT2.5 -->
-		<race>BEAST</race>
-		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7563.29113924051" mp="1846.8" mpRegen="3" />
-			<attack physical="1188.87259499001" magical="5.78704" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="60000" magical="200000" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
-			<speed>
-				<walk ground="28" />
-				<run ground="180" />
-			</speed>
-			<hitTime>480</hitTime>
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<collision>
-			<radius normal="22" />
-			<height normal="29.5" />
-		</collision>
-	</npc>
-	<npc id="13290" level="85" type="Npc" name="White Tiger">
-		<!-- Confirmed CT2.5 -->
-		<race>BEAST</race>
-		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="601.26582278481" mp="1846.8" mpRegen="3" />
-			<attack physical="1188.87259499001" magical="5.78704" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="60000" magical="200000" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
-			<speed>
-				<walk ground="60" />
-				<run ground="120" />
-			</speed>
-			<hitTime>450</hitTime>
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<collision>
-			<radius normal="16" />
-			<height normal="17.2" />
-		</collision>
-	</npc>
-	<npc id="13291" level="85" type="Npc" name="White Tiger Captain">
-		<!-- Confirmed CT2.5 -->
-		<race>BEAST</race>
-		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="7563.29113924051" mp="1846.8" mpRegen="3" />
-			<attack physical="1188.87259499001" magical="5.78704" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="60000" magical="200000" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
-			<speed>
-				<walk ground="60" />
-				<run ground="180" />
-			</speed>
-			<hitTime>450</hitTime>
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<collision>
-			<radius normal="50" />
-			<height normal="34" />
-		</collision>
-	</npc>
-	<npc id="13292" level="75" type="Npc" name="Employee of Magic Research Institute" title="Event manager">
-		<!-- Confirmed CT2.5 -->
-		<race>DWARF</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="313" /> <!-- rhand: Temptation of Abyss -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="18" /> <!-- Dwarves -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<collision>
-			<radius normal="8" />
-			<height normal="17.5" />
-		</collision>
-	</npc>
-	<npc id="13293" level="85" type="Npc">
-		<!-- Confirmed CT2.5 -->
-		<race>CONSTRUCT</race>
-		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="4234.06312688557" mp="1846.8" mpRegen="3" />
-			<attack physical="1188.87259499001" magical="811.84586495282" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="361.78814" magical="264.74086" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
-			<speed>
-				<walk ground="1" />
-				<run ground="120" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<collision>
-			<radius normal="0.1" />
-			<height normal="0.1" />
-		</collision>
-	</npc>
-	<npc id="13294" level="85" type="Npc">
-		<!-- Confirmed CT2.5 -->
-		<race>CONSTRUCT</race>
-		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="4234.06312688557" mp="1846.8" mpRegen="3" />
-			<attack physical="1188.87259499001" magical="811.84586495282" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="361.78814" magical="264.74086" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
-			<speed>
-				<walk ground="1" />
-				<run ground="120" />
-			</speed>
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<collision>
-			<radius normal="0.1" />
-			<height normal="0.1" />
-		</collision>
-	</npc>
-	<npc id="13295" level="80" type="Npc" name="White Lady" title="Event manager">
-		<!-- Confirmed CT2.5 -->
-		<race>DWARF</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
-			<attack physical="970.537548504614" magical="662.751329129412" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="341.375" magical="249.80341" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
-			<speed>
-				<walk ground="50" />
-				<run ground="160" />
-			</speed>
-		</stats>
-		<status attackable="false" canMove="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="18" /> <!-- Dwarves -->
-			<skill id="4441" level="5" /> <!-- Greater Resist Mental Derangement -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<collision>
-			<radius normal="8" />
-			<height normal="17.5" />
-		</collision>
-	</npc>
-	<npc id="13296" level="80" type="Npc" name="Freya" title="Event manager">
-		<!-- Confirmed CT2.5 -->
-		<race>HUMANOID</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
-			<attack physical="970.537548504614" magical="662.751329129412" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="341.375" magical="249.80341" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
-			<speed>
-				<walk ground="54" />
-				<run ground="160" />
-			</speed>
-		</stats>
-		<status attackable="false" canMove="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4441" level="5" /> <!-- Greater Resist Mental Derangement -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<collision>
-			<radius normal="18" />
-			<height normal="36" />
-		</collision>
-	</npc>
-	<npc id="13297" level="80" type="Npc" name="World Cup Cat">
-		<!-- TODO: Must be confirmed -->
-		<sex>MALE</sex>
-		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
-			<vitals hp="2444" mp="2444.0" />
-			<attack physical="500" magical="500" attackSpeed="278" range="40" />
-			<defence physical="500" magical="500" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
-			<speed>
-				<walk ground="60" />
-				<run ground="160" />
-			</speed>
-		</stats>
-		<collision>
-			<radius normal="25" />
-			<height normal="35" />
-		</collision>
-	</npc>
-	<npc id="13298" level="80" type="Npc" name="Game Manager" title="Customer Joining">
-		<!-- TODO: Must be confirmed -->
-		<sex>MALE</sex>
-		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
-			<vitals hp="2444" mp="2444.0" />
-			<attack physical="500" magical="500" attackSpeed="278" range="40" />
-			<defence physical="500" magical="500" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
-			<speed>
-				<walk ground="60" />
-				<run ground="160" />
-			</speed>
-		</stats>
-		<collision>
-			<radius normal="25" />
-			<height normal="35" />
 		</collision>
 	</npc>
 </list>

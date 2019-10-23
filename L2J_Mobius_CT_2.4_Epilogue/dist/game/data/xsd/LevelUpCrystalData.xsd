@@ -6,7 +6,7 @@
 				<xs:element name="crystal" minOccurs="1" maxOccurs="1">
 					<xs:complexType>
 						<xs:sequence minOccurs="1" maxOccurs="1">
-							<xs:element name="item" minOccurs="54" maxOccurs="54">
+							<xs:element name="item" minOccurs="48" maxOccurs="48">
 								<xs:complexType>
 									<xs:attribute name="itemId" type="xs:positiveInteger" use="required" />
 									<xs:attribute name="level" use="required">

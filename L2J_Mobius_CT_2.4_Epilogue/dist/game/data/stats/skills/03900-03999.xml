@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="3900" levels="2" name="Staff of Divine Power">
-		<!-- Increases the power of one's own recovery magic. -->
-		<table name="#healEffect">33 43 </table>
-		<table name="#magicLvl">61 80 </table>
+		<!-- Increases one's own recovery magic power. -->
+		<table name="#healEffect"> 33 43 </table>
+		<table name="#magicLvl"> 61 80 </table>
 		<set name="icon" val="icon.skill1459" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
@@ -15,9 +15,9 @@
 		</for>
 	</skill>
 	<skill id="3901" levels="2" name="Staff of Mana Boost">
-		<!-- Increases Max MP. -->
-		<table name="#magicLvl">67 75 </table>
-		<table name="#maxMp">239 289 </table>
+		<!-- Increases maximum MP. -->
+		<table name="#magicLvl"> 67 75 </table>
+		<table name="#maxMp"> 239 289 </table>
 		<set name="icon" val="icon.skill0213" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
@@ -29,7 +29,7 @@
 		</for>
 	</skill>
 	<skill id="3902" levels="1" name="Staff of Clarity">
-		<!-- Decreases MP consumption. -->
+		<!-- Skill MP consumption decreases. -->
 		<set name="icon" val="icon.skill1397" />
 		<set name="magicLvl" val="70" />
 		<set name="operateType" val="P" />
@@ -43,7 +43,7 @@
 		</for>
 	</skill>
 	<skill id="3904" levels="1" name="Augment Option - Divine Attack">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -55,7 +55,7 @@
 		</for>
 	</skill>
 	<skill id="3905" levels="1" name="Augment Option - Dark Attack">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -67,7 +67,7 @@
 		</for>
 	</skill>
 	<skill id="3906" levels="1" name="Augment Option - Fire Attack">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -79,7 +79,7 @@
 		</for>
 	</skill>
 	<skill id="3907" levels="1" name="Augment Option - Water Attack">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -91,7 +91,7 @@
 		</for>
 	</skill>
 	<skill id="3908" levels="1" name="Augment Option - Wind Attack">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -103,7 +103,7 @@
 		</for>
 	</skill>
 	<skill id="3909" levels="1" name="Augment Option - Earth Attack">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -115,7 +115,7 @@
 		</for>
 	</skill>
 	<skill id="3910" levels="1" name="Augment Option - Divine Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -127,7 +127,7 @@
 		</for>
 	</skill>
 	<skill id="3911" levels="1" name="Augment Option - Dark Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -139,7 +139,7 @@
 		</for>
 	</skill>
 	<skill id="3912" levels="1" name="Augment Option - Fire Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -151,7 +151,7 @@
 		</for>
 	</skill>
 	<skill id="3913" levels="1" name="Augment Option - Water Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -163,7 +163,7 @@
 		</for>
 	</skill>
 	<skill id="3914" levels="1" name="Augment Option - Wind Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -175,7 +175,7 @@
 		</for>
 	</skill>
 	<skill id="3915" levels="1" name="Augment Option - Earth Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -187,7 +187,7 @@
 		</for>
 	</skill>
 	<skill id="3916" levels="1" name="Augment Option - Divine Attack">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -199,7 +199,7 @@
 		</for>
 	</skill>
 	<skill id="3917" levels="1" name="Augment Option - Dark Attack">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -211,7 +211,7 @@
 		</for>
 	</skill>
 	<skill id="3918" levels="1" name="Augment Option - Fire Attack">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -223,7 +223,7 @@
 		</for>
 	</skill>
 	<skill id="3919" levels="1" name="Augment Option - Water Attack">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -235,7 +235,7 @@
 		</for>
 	</skill>
 	<skill id="3920" levels="1" name="Augment Option - Wind Attack">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -247,7 +247,7 @@
 		</for>
 	</skill>
 	<skill id="3921" levels="1" name="Augment Option - Earth Attack">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -259,7 +259,7 @@
 		</for>
 	</skill>
 	<skill id="3922" levels="1" name="Augment Option - Divine Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -271,7 +271,7 @@
 		</for>
 	</skill>
 	<skill id="3923" levels="1" name="Augment Option - Dark Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -283,7 +283,7 @@
 		</for>
 	</skill>
 	<skill id="3924" levels="1" name="Augment Option - Fire Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -295,7 +295,7 @@
 		</for>
 	</skill>
 	<skill id="3925" levels="1" name="Augment Option - Water Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -307,7 +307,7 @@
 		</for>
 	</skill>
 	<skill id="3926" levels="1" name="Augment Option - Wind Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -319,7 +319,7 @@
 		</for>
 	</skill>
 	<skill id="3927" levels="1" name="Augment Option - Earth Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -331,7 +331,7 @@
 		</for>
 	</skill>
 	<skill id="3928" levels="1" name="Augment Option - Divine Attack">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -343,7 +343,7 @@
 		</for>
 	</skill>
 	<skill id="3929" levels="1" name="Augment Option - Dark Attack">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -355,7 +355,7 @@
 		</for>
 	</skill>
 	<skill id="3930" levels="1" name="Augment Option - Fire Attack">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -367,7 +367,7 @@
 		</for>
 	</skill>
 	<skill id="3931" levels="1" name="Augment Option - Water Attack">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -379,7 +379,7 @@
 		</for>
 	</skill>
 	<skill id="3932" levels="1" name="Augment Option - Wind Attack">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -391,7 +391,7 @@
 		</for>
 	</skill>
 	<skill id="3933" levels="1" name="Augment Option - Earth Attack">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -403,7 +403,7 @@
 		</for>
 	</skill>
 	<skill id="3934" levels="1" name="Augment Option - Divine Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -415,7 +415,7 @@
 		</for>
 	</skill>
 	<skill id="3935" levels="1" name="Augment Option - Dark Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -427,7 +427,7 @@
 		</for>
 	</skill>
 	<skill id="3936" levels="1" name="Augment Option - Fire Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -439,7 +439,7 @@
 		</for>
 	</skill>
 	<skill id="3937" levels="1" name="Augment Option - Water Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -451,7 +451,7 @@
 		</for>
 	</skill>
 	<skill id="3938" levels="1" name="Augment Option - Wind Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -463,7 +463,7 @@
 		</for>
 	</skill>
 	<skill id="3939" levels="1" name="Augment Option - Earth Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -475,7 +475,7 @@
 		</for>
 	</skill>
 	<skill id="3940" levels="1" name="Augment Option - Divine Attack">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -487,7 +487,7 @@
 		</for>
 	</skill>
 	<skill id="3941" levels="1" name="Augment Option - Dark Attack">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -499,7 +499,7 @@
 		</for>
 	</skill>
 	<skill id="3942" levels="1" name="Augment Option - Fire Attack">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -511,7 +511,7 @@
 		</for>
 	</skill>
 	<skill id="3943" levels="1" name="Augment Option - Water Attack">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -523,7 +523,7 @@
 		</for>
 	</skill>
 	<skill id="3944" levels="1" name="Augment Option - Wind Attack">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -535,7 +535,7 @@
 		</for>
 	</skill>
 	<skill id="3945" levels="1" name="Augment Option - Earth Attack">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -547,7 +547,7 @@
 		</for>
 	</skill>
 	<skill id="3946" levels="1" name="Augment Option - Divine Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -559,7 +559,7 @@
 		</for>
 	</skill>
 	<skill id="3947" levels="1" name="Augment Option - Dark Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -571,7 +571,7 @@
 		</for>
 	</skill>
 	<skill id="3948" levels="1" name="Augment Option - Fire Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -583,7 +583,7 @@
 		</for>
 	</skill>
 	<skill id="3949" levels="1" name="Augment Option - Water Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -595,7 +595,7 @@
 		</for>
 	</skill>
 	<skill id="3950" levels="1" name="Augment Option - Wind Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -607,7 +607,7 @@
 		</for>
 	</skill>
 	<skill id="3951" levels="1" name="Augment Option - Earth Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -619,7 +619,7 @@
 		</for>
 	</skill>
 	<skill id="3952" levels="1" name="Augment Option - Stun Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -631,7 +631,7 @@
 		</for>
 	</skill>
 	<skill id="3953" levels="1" name="Augment Option - Bleed Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -643,7 +643,7 @@
 		</for>
 	</skill>
 	<skill id="3954" levels="1" name="Augment Option - Poison Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -655,7 +655,7 @@
 		</for>
 	</skill>
 	<skill id="3955" levels="1" name="Augment Option - Sleep Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -667,7 +667,7 @@
 		</for>
 	</skill>
 	<skill id="3956" levels="1" name="Augment Option - Paralysis Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -679,7 +679,7 @@
 		</for>
 	</skill>
 	<skill id="3957" levels="1" name="Augment Option - Mental Attack Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -691,7 +691,7 @@
 		</for>
 	</skill>
 	<skill id="3958" levels="1" name="Augment Option - Stun Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -703,7 +703,7 @@
 		</for>
 	</skill>
 	<skill id="3959" levels="1" name="Augment Option - Bleed Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -715,7 +715,7 @@
 		</for>
 	</skill>
 	<skill id="3960" levels="1" name="Augment Option - Poison Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -727,7 +727,7 @@
 		</for>
 	</skill>
 	<skill id="3961" levels="1" name="Augment Option - Sleep Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -739,7 +739,7 @@
 		</for>
 	</skill>
 	<skill id="3962" levels="1" name="Augment Option - Paralysis Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -751,7 +751,7 @@
 		</for>
 	</skill>
 	<skill id="3963" levels="1" name="Augment Option - Mental Attack Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -763,7 +763,7 @@
 		</for>
 	</skill>
 	<skill id="3964" levels="1" name="Augment Option - Stun Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -775,7 +775,7 @@
 		</for>
 	</skill>
 	<skill id="3965" levels="1" name="Augment Option - Bleed Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -787,7 +787,7 @@
 		</for>
 	</skill>
 	<skill id="3966" levels="1" name="Augment Option - Poison Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -799,7 +799,7 @@
 		</for>
 	</skill>
 	<skill id="3967" levels="1" name="Augment Option - Sleep Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -811,7 +811,7 @@
 		</for>
 	</skill>
 	<skill id="3968" levels="1" name="Augment Option - Paralysis Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -823,7 +823,7 @@
 		</for>
 	</skill>
 	<skill id="3969" levels="1" name="Augment Option - Mental Attack Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -835,7 +835,7 @@
 		</for>
 	</skill>
 	<skill id="3970" levels="1" name="Augment Option - Stun Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -847,7 +847,7 @@
 		</for>
 	</skill>
 	<skill id="3971" levels="1" name="Augment Option - Bleed Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -859,7 +859,7 @@
 		</for>
 	</skill>
 	<skill id="3972" levels="1" name="Augment Option - Poison Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -871,7 +871,7 @@
 		</for>
 	</skill>
 	<skill id="3973" levels="1" name="Augment Option - Sleep Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -883,7 +883,7 @@
 		</for>
 	</skill>
 	<skill id="3974" levels="1" name="Augment Option - Paralysis Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -895,7 +895,7 @@
 		</for>
 	</skill>
 	<skill id="3975" levels="1" name="Augment Option - Mental Attack Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -907,7 +907,7 @@
 		</for>
 	</skill>
 	<skill id="3976" levels="1" name="Augment Option - Stun Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -919,7 +919,7 @@
 		</for>
 	</skill>
 	<skill id="3977" levels="1" name="Augment Option - Bleed Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -931,7 +931,7 @@
 		</for>
 	</skill>
 	<skill id="3978" levels="1" name="Augment Option - Poison Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -943,7 +943,7 @@
 		</for>
 	</skill>
 	<skill id="3979" levels="1" name="Augment Option - Sleep Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -955,7 +955,7 @@
 		</for>
 	</skill>
 	<skill id="3980" levels="1" name="Augment Option - Paralysis Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -967,7 +967,7 @@
 		</for>
 	</skill>
 	<skill id="3981" levels="1" name="Augment Option - Mental Attack Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -979,7 +979,7 @@
 		</for>
 	</skill>
 	<skill id="3982" levels="1" name="Augment Option - Stun Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -991,7 +991,7 @@
 		</for>
 	</skill>
 	<skill id="3983" levels="1" name="Augment Option - Bleed Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -1003,7 +1003,7 @@
 		</for>
 	</skill>
 	<skill id="3984" levels="1" name="Augment Option - Poison Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -1015,7 +1015,7 @@
 		</for>
 	</skill>
 	<skill id="3985" levels="1" name="Augment Option - Sleep Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -1027,7 +1027,7 @@
 		</for>
 	</skill>
 	<skill id="3986" levels="1" name="Augment Option - Paralysis Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -1039,7 +1039,7 @@
 		</for>
 	</skill>
 	<skill id="3987" levels="1" name="Augment Option - Mental Attack Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -1051,7 +1051,7 @@
 		</for>
 	</skill>
 	<skill id="3988" levels="1" name="Augment Option - Stun Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -1063,7 +1063,7 @@
 		</for>
 	</skill>
 	<skill id="3989" levels="1" name="Augment Option - Bleed Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -1075,7 +1075,7 @@
 		</for>
 	</skill>
 	<skill id="3990" levels="1" name="Augment Option - Poison Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -1087,7 +1087,7 @@
 		</for>
 	</skill>
 	<skill id="3991" levels="1" name="Augment Option - Sleep Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -1099,7 +1099,7 @@
 		</for>
 	</skill>
 	<skill id="3992" levels="1" name="Augment Option - Paralysis Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -1111,7 +1111,7 @@
 		</for>
 	</skill>
 	<skill id="3993" levels="1" name="Augment Option - Mental Attack Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -1123,7 +1123,7 @@
 		</for>
 	</skill>
 	<skill id="3994" levels="1" name="Augment Option - Stun Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -1135,7 +1135,7 @@
 		</for>
 	</skill>
 	<skill id="3995" levels="1" name="Augment Option - Bleed Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -1147,7 +1147,7 @@
 		</for>
 	</skill>
 	<skill id="3996" levels="1" name="Augment Option - Poison Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -1159,7 +1159,7 @@
 		</for>
 	</skill>
 	<skill id="3997" levels="1" name="Augment Option - Sleep Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -1171,7 +1171,7 @@
 		</for>
 	</skill>
 	<skill id="3998" levels="1" name="Augment Option - Paralysis Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -1183,7 +1183,7 @@
 		</for>
 	</skill>
 	<skill id="3999" levels="1" name="Augment Option - Mental Attack Resistance">
-		<!-- Accessory that contains special power. -->
+		<!-- Accessory that contains special powers. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />

@@ -169,7 +169,7 @@
 		<set name="item_skill" val="2937-1" /> <!-- Rune supply box - magic pouch -->
 	</item>
 	<item id="13712" type="EtcItem" name="Schuttgart Supply Box - Magic Pouch - Grade B, C">
-		<!-- A box that has the symbol of Schuttgart. Grade A, S magic pouch that can be attached to the belt is packaged. -->
+		<!-- Box bearing the unique pattern of Schuttgart. Grade A, S magic pouch that can be attached to the belt is packaged. -->
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -357,7 +357,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="13726" type="EtcItem" name="Design: Energy Star Stone">
-		<!-- Design for making an Energy Star Stone. Requires Create Common item level 9. Success rate is 100%. -->
+		<!-- Design for making an Energy Star Stone. The Create Command requires a level 9 item. Probability of success is 100%. -->
 		<set name="icon" val="icon.scroll_of_verification_i04" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -370,7 +370,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="13727" type="EtcItem" name="Design: Greater Quality Energy Star Stone">
-		<!-- Design for making a High-quality Energy Star Stone. Requires Create Common item level 9. Success rate is 100%. -->
+		<!-- Design for making a High-quality Energy Star Stone. The Create Command requires a level 9 item. Probability of success is 100%. -->
 		<set name="icon" val="icon.scroll_of_verification_i05" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -536,7 +536,7 @@
 		</cond>
 	</item>
 	<item id="13740" type="Armor" name="Gludio Water Resistance Necklace">
-		<!-- Necklace given to the guardian of Gludio territory. Water power defense +26. Cannot be exchanged or dropped. -->
+		<!-- Necklace given to the guardian of Gludio territory. Water power + 26. No exchange/drop available. -->
 		<set name="icon" val="icon.accessary_inferno_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -556,7 +556,7 @@
 		</for>
 	</item>
 	<item id="13741" type="Armor" name="Dion Holy Resistance Necklace">
-		<!-- Necklace given to the guardian of Dion territory. Resistance to Holy + 26. Cannot be exchanged or dropped. -->
+		<!-- Necklace given to the guardian of Dion territory. Divine power defense + 26. No exchange/drop available. -->
 		<set name="icon" val="icon.accessary_inferno_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -576,7 +576,7 @@
 		</for>
 	</item>
 	<item id="13742" type="Armor" name="Giran Wind Resistance Necklace">
-		<!-- Necklace given to the guardian of Giran territory. Wind power defense + 26. Cannot be exchanged or dropped. -->
+		<!-- Necklace given to the guardian of Giran territory. Wind power defense + 26. No exchange/drop available. -->
 		<set name="icon" val="icon.accessary_inferno_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -596,7 +596,7 @@
 		</for>
 	</item>
 	<item id="13743" type="Armor" name="Oren Dark Resistance Necklace">
-		<!-- Necklace given to the guardian of Oren territory. Resistance to Dark +26. Cannot be exchanged or dropped. -->
+		<!-- Necklace given to the guardian of Oren territory. Darkness type defense +26. No exchange/drop available. -->
 		<set name="icon" val="icon.accessary_inferno_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -616,7 +616,7 @@
 		</for>
 	</item>
 	<item id="13744" type="Armor" name="Aden Earth Resistance Necklace">
-		<!-- Necklace given to the guardian of Aden territory. Earth power defense + 26. Cannot be exchanged or dropped. -->
+		<!-- Necklace given to the guardian of Aden territory. Earth power defense + 26. No exchange/drop available. -->
 		<set name="icon" val="icon.accessary_inferno_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -636,7 +636,7 @@
 		</for>
 	</item>
 	<item id="13745" type="Armor" name="Innadril Water Resistance Necklace">
-		<!-- Necklace given to the guardian of Innadril territory. Water power defense + 26. Cannot be exchanged or dropped. -->
+		<!-- Necklace given to the guardian of Innadril territory. Water power defense + 26. No exchange/drop available. -->
 		<set name="icon" val="icon.accessary_inferno_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -656,7 +656,7 @@
 		</for>
 	</item>
 	<item id="13746" type="Armor" name="Goddard Fire Resistance Necklace">
-		<!-- Necklace given to the guardian of Goddard territory. Fire power defense + 26. Cannot be exchanged or dropped. -->
+		<!-- Necklace given to the guardian of Goddard territory. Fire power defense + 26. No exchange/drop available. -->
 		<set name="icon" val="icon.accessary_inferno_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -676,7 +676,7 @@
 		</for>
 	</item>
 	<item id="13747" type="Armor" name="Rune Fire Resistance Necklace">
-		<!-- Necklace given to the guardian of Rune territory. Fire power defense + 26. Cannot be exchanged or dropped. -->
+		<!-- Necklace given to the guardian of Rune territory. Fire power defense + 26. No exchange/drop available. -->
 		<set name="icon" val="icon.accessary_inferno_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -696,7 +696,7 @@
 		</for>
 	</item>
 	<item id="13748" type="Armor" name="Schuttgart Wind Resistance Necklace">
-		<!-- Necklace given to the guardian of Schuttgart territory. Wind power defense + 26. Cannot be exchanged or dropped. -->
+		<!-- Necklace given to the guardian of Schuttgart territory. Wind power defense + 26. No exchange/drop available. -->
 		<set name="icon" val="icon.accessary_inferno_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -716,7 +716,7 @@
 		</for>
 	</item>
 	<item id="13749" type="EtcItem" name="Emery Piece">
-		<!-- A small piece obtained on the Aerial Cleft battlefield. Cannot be exchanged or dropped. Though weak, it seems as if a great amount of energy is condensed into it. -->
+		<!-- A small piece obtained on the Aerial Cleft battlefield. No exchange/drop available for this item. Though weak, it seems as if a great amount of energy is condensed into it. -->
 		<set name="icon" val="icon.piece_of_emery_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -748,7 +748,7 @@
 		</cond>
 	</item>
 	<item id="13751" type="Armor" name="Warrior's T-shirt">
-		<!-- Olympiad Warrior's T-shirt. Bestows an option that increases Max CP by 672 when enchanted by 4 or more. Cannot be exchanged or dropped. -->
+		<!-- Olympiad Warrior's T-shirt. Bestows an option that increases Max CP by 672 when enchanted by 4 or more. No exchange/drop available for this item. -->
 		<set name="icon" val="icon.etc_shirts_a_i04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -767,7 +767,7 @@
 		</for>
 	</item>
 	<item id="13752" type="Armor" name="Olympiad Warrior's Ring">
-		<!-- Olympiad Warrior's ring. Limited time item available for 60 days. Limited time item available forMP+ 21, increased Accuracy, increased Critical Damage, hold resistance increase by 30% and hold attack rate increase by 30%. Only one effect is applied even when two identical rings are worn. Cannot be exchanged or dropped. -->
+		<!-- Shadow item that can be worn for 30 days. Effects are: MP +21, increased accuracy and critical damage, 30% hold resistance increase, 30% hold attack rate increase. Only one effect is applied if wearing two identical rings. No trade/drop available. -->
 		<set name="icon" val="icon.accessory_ring_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -786,7 +786,7 @@
 		</for>
 	</item>
 	<item id="13753" type="Armor" name="Olympiad Warrior's Necklace">
-		<!-- Olympiad Warrior's necklace. Limited time item available for 60 days. MP+ 42, Sleep/Paralysis/Shock Resistance increase by 15%. Sleep/Paralysis/Shock attack rate increase by 15%. Decreased skill reuse delay and damage shield effects. Cannot be exchanged or dropped. -->
+		<!-- Shadow item that can be worn for 30 days. Effects are: MP +42, 15% increase to Sleep/Hold/Shock resistance, 15% increase to Sleep/Hold/Shock attack rate, decreases magic reuse delay and reflects damage. No trade/drop available. -->
 		<set name="icon" val="icon.accessory_necklace_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -805,7 +805,7 @@
 		</for>
 	</item>
 	<item id="13754" type="Armor" name="Olympiad Warrior's Earring">
-		<!-- Olympiad Warrior's earring. Limited-time item available for 60 days. It has effects of MP +31, shock/mind attack resistance +20%, Shock/Mental attack rate +20% and Vampiric Rage. Cannot be exchanged or dropped. When equipped with two identical earrings, the effect of only one earring will be applied. -->
+		<!-- Shadow item that can be worn for 30 days. Effects are: MP +31, 20% increase to shock/mental attack rate and Vampiric Rage. Only one effect is applied even when two identical earrings are worn. No trade/drop available. -->
 		<set name="icon" val="icon.accessory_earring_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1003,7 +1003,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="13769" type="EtcItem" name="Artificial Regeneration Incubator">
-		<!-- By putting catalyzer inside Seed of Infinity, the device creates artificial tissue to eliminate the monsters that attack the Seed of Life. Can be used only to defend the instant dungeon Hall of Erosion in the Seed of Infinity. Exclusively used by Dwarf Fighters, Artisans, Warsmiths, and Maestros. Cannot be exchanged or dropped. -->
+		<!-- By putting catalyzer inside Seed of Infinity, the device creates artificial tissue to eliminate the monsters that attack the Seed of Life. Can be used only to defend the instant dungeon Hall of Erosion in the Seed of Infinity. Exclusively used by Dwarf Fighters, Artisans, Warsmiths, and Maestros. No exchange/drop available. -->
 		<set name="icon" val="icon.immo_lifeseed_decoy_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -1023,7 +1023,7 @@
 		</cond>
 	</item>
 	<item id="13770" type="Armor" name="Shadow Item - Shield of Yehan Miakesh">
-		<!-- Shield type shadow item that bears the crest of last hero of Ancient Gracian Kingdom. The user of this item will have the powerful skill against some monsters inside Tumor of Death and Seed of Infinity. Cannot be exchanged, dropped, or crystallized. Cannot be granted additional functions. Can be used only in the instant dungeons of the Seed of Infinity. Exclusively for Phoenix Knight, Hell Knight, Eva's Templar and Shillien Templar. -->
+		<!-- Shield type shadow item that bears the crest of last hero of Ancient Gracia Kingdom. The user of this item will have the powerful skill against some monsters inside Tumor of Death and Seed of Infinity. Cannot be exchanged, dropped, or crystallized. Cannot be granted additional functions. Can be used only in the instant dungeons of the Seed of Infinity. Exclusively for Phoenix Knight, Hell Knight, Eva's Templar and Shillien Templar. -->
 		<set name="icon" val="icon.immo_branded_shield_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -1067,7 +1067,7 @@
 		</cond>
 	</item>
 	<item id="13772" type="EtcItem" name="Life Aid Bandage">
-		<!-- A wondrous curative cloth that almost completely blocks the foreign contagion, which is the true nature of the Seed of Infinity, when you adhere it to your body. It increases Resistance to bleeding, poison, and Netherworld's Magyun induced special de-buff skills that the monsters use inside Seed of Infinity. Can be used only inside Seed of Infinity instant dungeons. -->
+		<!-- A wondrous curative cloth that almost completely blocks the foreign contagion, which is the true nature of the Seed of Infinity, when you adhere it to your body. It increases resistance to bleeding, poison, and Netherworld's Magyun induced special de-buff skills that the monsters use inside Seed of Infinity. Can be used only inside Seed of Infinity instant dungeons. -->
 		<set name="icon" val="icon.etc_piece_of_cloth_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1084,7 +1084,7 @@
 		</cond>
 	</item>
 	<item id="13773" type="EtcItem" name="Scent of Preservation">
-		<!-- An ancient Gracian scent used to keep a body from decaying. It stops severe bleeding up to the maximum effect 8 caused by the monsters inside Seed of Infinity. Can be used only inside Seed of Infinity instant dungeons. -->
+		<!-- An ancient Gracia scent used to keep a body from decaying. It stops severe bleeding up to the maximum effect 8 caused by the monsters inside Seed of Infinity. Can be used only inside Seed of Infinity instant dungeons. -->
 		<set name="icon" val="icon.etc_potion_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1094,13 +1094,13 @@
 		<set name="reuse_delay" val="500" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2625-1" /> <!-- Embalming -->
+		<set name="item_skill" val="2625-1" /> <!-- Enbalming -->
 		<cond msgId="113" addName="1">
 			<player instanceId="115,116,119,120,121,122" />
 		</cond>
 	</item>
 	<item id="13774" type="EtcItem" name="Scent of Exorcism">
-		<!-- An ancient Gracian scent used to cure people who are possessed by ghosts. It neutralizes the powerful poison up to the maximum effect 8 caused by the monsters inside Seed of Infinity. Can be used only inside Seed of Infinity instant dungeons. -->
+		<!-- An ancient Gracia scent used to cure people who are possessed by ghosts. It neutralizes the powerful poison up to the maximum effect 8 caused by the monsters inside Seed of Infinity. Can be used only inside Seed of Infinity instant dungeons. -->
 		<set name="icon" val="icon.etc_holy_grail_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ELIXIR" />
@@ -1132,7 +1132,7 @@
 		</cond>
 	</item>
 	<item id="13776" type="EtcItem" name="Structure Scarab">
-		<!-- Amulet frequently used by ancient Gracian nobles. It gives the ability to resurrect and protection against death. Can be used only inside Seed of Infinity instant dungeons. Cannot be exchanged or dropped. -->
+		<!-- Amulet frequently used by ancient Gracia nobles. It gives the ability to resurrect and protection against death. Can be used only inside Seed of Infinity instant dungeons. No exchange/drop available. -->
 		<set name="icon" val="icon.etc_beetle_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1435,7 +1435,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="item_skill" val="2371-1" /> <!-- Transformation Sealbook: Onyx Beast -->
+		<set name="item_skill" val="2371-1" /> <!-- Transform Sealbook - Onyx Beast -->
 	</item>
 	<item id="13794" type="EtcItem" name="Transformed Object: Handy's Block Checker Transformation Scroll Blue">
 		<!-- Transformed Object: Block-Flipping Transformation Scroll -->
@@ -1466,7 +1466,7 @@
 		<set name="item_skill" val="2670-1" /> <!-- Scroll of Transformation - Red -->
 	</item>
 	<item id="13796" type="EtcItem" name="Freed Soul">
-		<!-- Energy from ghosts that flow through the Seed of Infinity reside within this item. Can be used at Special Product Broker Kirklan. -->
+		<!-- The collective crystals of strong magic power of ghosts being flown in the Seed of Immortalitiy. Seed of Immortality special product -->
 		<set name="icon" val="icon.freed_soul_essense_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1477,7 +1477,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="13797" type="EtcItem" name="Tear of a Freed Soul">
-		<!-- A container having a ghosts being flown out of the Seed of Infinity . Seed of Infinity attack/defend reward -->
+		<!-- A container having a ghosts being flown out of the Seed of Immortality . Seed of Immortality attack/defend reward -->
 		<set name="icon" val="icon.etc_madicine_bottle_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -1486,7 +1486,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="13798" type="EtcItem" name="Portion of a Soul">
-		<!-- The ruin left when the ghosts have run out of their energy while being flown in the Seed of Infinity. Seed of Infinity collection additional reward -->
+		<!-- The ruin left when the ghosts have run out of their energy while being flown in the Seed of Immortality. Seed of Immortality collection additional reward -->
 		<set name="icon" val="icon.soul_facet_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />

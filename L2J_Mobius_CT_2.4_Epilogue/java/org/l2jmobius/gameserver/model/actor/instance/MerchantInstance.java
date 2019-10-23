@@ -102,7 +102,7 @@ public class MerchantInstance extends NpcInstance
 		player.setInventoryBlockingStatus(true);
 		
 		player.sendPacket(new BuyList(buyList, player.getAdena(), taxRate));
-		player.sendPacket(new ExBuySellList(player, false));
+		player.sendPacket(new ExBuySellList(player, buyList, taxRate, false));
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 	}
 }

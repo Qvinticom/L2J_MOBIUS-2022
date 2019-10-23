@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
 	<!-- Elven Oracle -->
 	<skillTree type="classSkillTree" classId="29" parentClassId="25">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<!-- Confirmed CT2.5 -->
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="3" getLevel="20" levelUpSp="3300" learnedByNpc="true" />
 		<skill skillName="Robe Mastery" skillId="235" skillLvl="1" getLevel="20" levelUpSp="1600" learnedByNpc="true" />
 		<skill skillName="Robe Mastery" skillId="235" skillLvl="2" getLevel="20" levelUpSp="1600" learnedByNpc="true" />
@@ -12,6 +12,36 @@
 		<skill skillName="Anti Magic" skillId="146" skillLvl="6" getLevel="20" levelUpSp="1600" learnedByNpc="true" />
 		<skill skillName="Boost Mana" skillId="213" skillLvl="1" getLevel="20" levelUpSp="3300" learnedByNpc="true" />
 		<skill skillName="Quick Recycle" skillId="164" skillLvl="1" getLevel="20" levelUpSp="3300" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="4" getLevel="25" levelUpSp="3200" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="5" getLevel="25" levelUpSp="3200" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="235" skillLvl="3" getLevel="25" levelUpSp="3200" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="235" skillLvl="4" getLevel="25" levelUpSp="3200" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="3" getLevel="25" levelUpSp="3200" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="4" getLevel="25" levelUpSp="3200" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="7" getLevel="25" levelUpSp="3200" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="8" getLevel="25" levelUpSp="3200" learnedByNpc="true" />
+		<skill skillName="Fast Spell Casting" skillId="228" skillLvl="1" getLevel="25" levelUpSp="6500" learnedByNpc="true" />
+		<skill skillName="Fast Mana Recovery" skillId="229" skillLvl="1" getLevel="25" levelUpSp="6500" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="6" getLevel="30" levelUpSp="6200" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="7" getLevel="30" levelUpSp="6200" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="235" skillLvl="5" getLevel="30" levelUpSp="6200" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="235" skillLvl="6" getLevel="30" levelUpSp="6200" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="5" getLevel="30" levelUpSp="6200" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="6" getLevel="30" levelUpSp="6200" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="9" getLevel="30" levelUpSp="6200" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="10" getLevel="30" levelUpSp="6200" learnedByNpc="true" />
+		<skill skillName="Boost Mana" skillId="213" skillLvl="2" getLevel="30" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Quick Recycle" skillId="164" skillLvl="2" getLevel="30" levelUpSp="12000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="8" getLevel="35" levelUpSp="10000" learnedByNpc="true" />
+		<skill skillName="Weapon Mastery" skillId="249" skillLvl="9" getLevel="35" levelUpSp="10000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="235" skillLvl="7" getLevel="35" levelUpSp="10000" learnedByNpc="true" />
+		<skill skillName="Robe Mastery" skillId="235" skillLvl="8" getLevel="35" levelUpSp="10000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="7" getLevel="35" levelUpSp="10000" learnedByNpc="true" />
+		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="8" getLevel="35" levelUpSp="10000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="11" getLevel="35" levelUpSp="10000" learnedByNpc="true" />
+		<skill skillName="Anti Magic" skillId="146" skillLvl="12" getLevel="35" levelUpSp="10000" learnedByNpc="true" />
+		<skill skillName="Fast HP Recovery" skillId="212" skillLvl="1" getLevel="35" levelUpSp="21000" learnedByNpc="true" />
+		<skill skillName="Fast Mana Recovery" skillId="229" skillLvl="2" getLevel="35" levelUpSp="21000" learnedByNpc="true" />
 		<skill skillName="Heal" skillId="1011" skillLvl="7" getLevel="20" levelUpSp="1100" learnedByNpc="true" />
 		<skill skillName="Heal" skillId="1011" skillLvl="8" getLevel="20" levelUpSp="1100" learnedByNpc="true" />
 		<skill skillName="Heal" skillId="1011" skillLvl="9" getLevel="20" levelUpSp="1100" learnedByNpc="true" />
@@ -29,16 +59,6 @@
 		<skill skillName="Concentration" skillId="1078" skillLvl="1" getLevel="20" levelUpSp="3300" learnedByNpc="true" />
 		<skill skillName="Resurrection" skillId="1016" skillLvl="1" getLevel="20" levelUpSp="3300" learnedByNpc="true" />
 		<skill skillName="Kiss of Eva" skillId="1073" skillLvl="1" getLevel="20" levelUpSp="3300" learnedByNpc="true" />
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="4" getLevel="25" levelUpSp="3200" learnedByNpc="true" />
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="5" getLevel="25" levelUpSp="3200" learnedByNpc="true" />
-		<skill skillName="Robe Mastery" skillId="235" skillLvl="3" getLevel="25" levelUpSp="3200" learnedByNpc="true" />
-		<skill skillName="Robe Mastery" skillId="235" skillLvl="4" getLevel="25" levelUpSp="3200" learnedByNpc="true" />
-		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="3" getLevel="25" levelUpSp="3200" learnedByNpc="true" />
-		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="4" getLevel="25" levelUpSp="3200" learnedByNpc="true" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="7" getLevel="25" levelUpSp="3200" learnedByNpc="true" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="8" getLevel="25" levelUpSp="3200" learnedByNpc="true" />
-		<skill skillName="Fast Spell Casting" skillId="228" skillLvl="1" getLevel="25" levelUpSp="6500" learnedByNpc="true" />
-		<skill skillName="Fast Mana Recovery" skillId="229" skillLvl="1" getLevel="25" levelUpSp="6500" learnedByNpc="true" />
 		<skill skillName="Heal" skillId="1011" skillLvl="10" getLevel="25" levelUpSp="2200" learnedByNpc="true" />
 		<skill skillName="Heal" skillId="1011" skillLvl="11" getLevel="25" levelUpSp="2200" learnedByNpc="true" />
 		<skill skillName="Heal" skillId="1011" skillLvl="12" getLevel="25" levelUpSp="2200" learnedByNpc="true" />
@@ -61,16 +81,6 @@
 		<skill skillName="Agility" skillId="1087" skillLvl="1" getLevel="25" levelUpSp="6500" learnedByNpc="true" />
 		<skill skillName="Holy Weapon" skillId="1043" skillLvl="1" getLevel="25" levelUpSp="6500" learnedByNpc="true" />
 		<skill skillName="Mental Shield" skillId="1035" skillLvl="1" getLevel="25" levelUpSp="6500" learnedByNpc="true" />
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="6" getLevel="30" levelUpSp="6200" learnedByNpc="true" />
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="7" getLevel="30" levelUpSp="6200" learnedByNpc="true" />
-		<skill skillName="Robe Mastery" skillId="235" skillLvl="5" getLevel="30" levelUpSp="6200" learnedByNpc="true" />
-		<skill skillName="Robe Mastery" skillId="235" skillLvl="6" getLevel="30" levelUpSp="6200" learnedByNpc="true" />
-		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="5" getLevel="30" levelUpSp="6200" learnedByNpc="true" />
-		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="6" getLevel="30" levelUpSp="6200" learnedByNpc="true" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="9" getLevel="30" levelUpSp="6200" learnedByNpc="true" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="10" getLevel="30" levelUpSp="6200" learnedByNpc="true" />
-		<skill skillName="Boost Mana" skillId="213" skillLvl="2" getLevel="30" levelUpSp="12000" learnedByNpc="true" />
-		<skill skillName="Quick Recycle" skillId="164" skillLvl="2" getLevel="30" levelUpSp="12000" learnedByNpc="true" />
 		<skill skillName="Heal" skillId="1011" skillLvl="13" getLevel="30" levelUpSp="4100" learnedByNpc="true" />
 		<skill skillName="Heal" skillId="1011" skillLvl="14" getLevel="30" levelUpSp="4100" learnedByNpc="true" />
 		<skill skillName="Heal" skillId="1011" skillLvl="15" getLevel="30" levelUpSp="4100" learnedByNpc="true" />
@@ -94,16 +104,6 @@
 		<skill skillName="Wind Walk" skillId="1204" skillLvl="2" getLevel="30" levelUpSp="12000" learnedByNpc="true" />
 		<skill skillName="Concentration" skillId="1078" skillLvl="2" getLevel="30" levelUpSp="12000" learnedByNpc="true" />
 		<skill skillName="Resurrection" skillId="1016" skillLvl="2" getLevel="30" levelUpSp="12000" learnedByNpc="true" />
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="8" getLevel="35" levelUpSp="10000" learnedByNpc="true" />
-		<skill skillName="Weapon Mastery" skillId="249" skillLvl="9" getLevel="35" levelUpSp="10000" learnedByNpc="true" />
-		<skill skillName="Robe Mastery" skillId="235" skillLvl="7" getLevel="35" levelUpSp="10000" learnedByNpc="true" />
-		<skill skillName="Robe Mastery" skillId="235" skillLvl="8" getLevel="35" levelUpSp="10000" learnedByNpc="true" />
-		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="7" getLevel="35" levelUpSp="10000" learnedByNpc="true" />
-		<skill skillName="Light Armor Mastery" skillId="236" skillLvl="8" getLevel="35" levelUpSp="10000" learnedByNpc="true" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="11" getLevel="35" levelUpSp="10000" learnedByNpc="true" />
-		<skill skillName="Anti Magic" skillId="146" skillLvl="12" getLevel="35" levelUpSp="10000" learnedByNpc="true" />
-		<skill skillName="Fast HP Recovery" skillId="212" skillLvl="1" getLevel="35" levelUpSp="21000" learnedByNpc="true" />
-		<skill skillName="Fast Mana Recovery" skillId="229" skillLvl="2" getLevel="35" levelUpSp="21000" learnedByNpc="true" />
 		<skill skillName="Heal" skillId="1011" skillLvl="16" getLevel="35" levelUpSp="6900" learnedByNpc="true" />
 		<skill skillName="Heal" skillId="1011" skillLvl="17" getLevel="35" levelUpSp="6900" learnedByNpc="true" />
 		<skill skillName="Heal" skillId="1011" skillLvl="18" getLevel="35" levelUpSp="6900" learnedByNpc="true" />

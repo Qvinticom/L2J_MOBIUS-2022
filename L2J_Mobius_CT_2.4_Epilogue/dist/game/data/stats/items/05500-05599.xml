@@ -101,7 +101,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="5510" type="EtcItem" name="Sealed Gloves of Underworld Design">
-		<!-- An essential ingredient needed by a Dwarf to make Sealed Gloves of Underworld. It can be sold at a regular store. -->
+		<!-- An essential ingredient needed by a Dwarf to make Sealed Gloves of the Underworld. It can be sold at a regular store. -->
 		<set name="icon" val="icon.etc_pouch_brown_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -1004,7 +1004,7 @@
 		<set name="item_skill" val="2167-3" /> <!-- Scroll of SP -->
 	</item>
 	<item id="5596" type="Weapon" name="Dasparion's Staff - Mana Up">
-		<!-- <Soul Crystal Enhancement>. Increases Max MP by 30%. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Enhancement>. Increases Max MP by 30%. Enhances damage to a target during PvP. -->
 		<set name="icon" val="icon.weapon_dasparions_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1034,7 +1034,7 @@
 		</for>
 	</item>
 	<item id="5597" type="Weapon" name="Dasparion's Staff - Conversion">
-		<!-- <Soul Crystal Enhancement>. Increases Max MP by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Enhancement>. Increases Max MP by 60% and decreases Max HP by 40%. Enhances damage to a target during PvP. -->
 		<set name="icon" val="icon.weapon_dasparions_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1064,7 +1064,7 @@
 		</for>
 	</item>
 	<item id="5598" type="Weapon" name="Dasparion's Staff - Acumen">
-		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Enhances damage to a target during PvP. -->
 		<set name="icon" val="icon.weapon_dasparions_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1094,7 +1094,7 @@
 		</for>
 	</item>
 	<item id="5599" type="Weapon" name="Meteor Shower - Focus">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 61. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Enhancement>. Increases Critical Attack by 61. Enhances damage to a target during PvP. -->
 		<set name="icon" val="icon.weapon_meteor_shower_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />

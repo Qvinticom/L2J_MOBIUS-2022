@@ -178,6 +178,6 @@ public class RequestSellItem implements IClientIncomingPacket
 		final StatusUpdate su = new StatusUpdate(player);
 		su.addAttribute(StatusUpdate.CUR_LOAD, player.getCurrentLoad());
 		player.sendPacket(su);
-		player.sendPacket(new ExBuySellList(player, true));
+		player.sendPacket(new ExBuySellList(player, buyList, true));
 	}
 }

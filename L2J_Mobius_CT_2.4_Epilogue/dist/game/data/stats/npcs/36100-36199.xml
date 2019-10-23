@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="36100" level="76" type="Defender" name="Wizard" title="Support Unit">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="127" />
@@ -70,7 +69,6 @@
 		</collision>
 	</npc>
 	<npc id="36101" level="76" type="Defender" name="Healer" title="Support Unit">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -137,7 +135,6 @@
 		</collision>
 	</npc>
 	<npc id="36102" level="78" type="FortCommander" name="Archer Captain" title="Archer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="105" />
@@ -204,7 +201,6 @@
 		</collision>
 	</npc>
 	<npc id="36103" level="76" type="Defender" name="Archer" title="Archer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="79" />
@@ -266,7 +262,6 @@
 		</collision>
 	</npc>
 	<npc id="36104" level="78" type="FortCommander" name="General" title="Officer's Barracks">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -333,7 +328,6 @@
 		</collision>
 	</npc>
 	<npc id="36105" level="78" type="Defender" name="Minister" title="Officer's Barracks">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -398,7 +392,6 @@
 		</collision>
 	</npc>
 	<npc id="36106" level="80" type="Monster" name="Ballista" title="Cloud Mountain">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -435,7 +428,6 @@
 		</collision>
 	</npc>
 	<npc id="36107" level="80" type="Npc" name="Mercenary Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -523,7 +515,6 @@
 		</collision>
 	</npc>
 	<npc id="36108" level="75" type="Npc" name="Mercenary Private">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -572,7 +563,6 @@
 		</collision>
 	</npc>
 	<npc id="36109" level="20" type="Npc" name="Flagpole">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -608,7 +598,6 @@
 		</collision>
 	</npc>
 	<npc id="36110" level="75" type="FortManager" name="Foreman" title="Tanor Fortress">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="fnAgitBuff" value="fortressbuff" />
 			<param name="MoveAroundSocial" value="0" />
@@ -650,7 +639,6 @@
 		</collision>
 	</npc>
 	<npc id="36111" level="75" type="Npc" name="Suspicious Merchant" title="Tanor Fortress">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -690,7 +678,6 @@
 		</collision>
 	</npc>
 	<npc id="36112" level="75" type="Npc" name="Guard Captain" title="Tanor Fortress">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -737,7 +724,6 @@
 		</collision>
 	</npc>
 	<npc id="36113" level="75" type="Npc" name="Archer Captain" title="Tanor Fortress">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="105" />
@@ -777,7 +763,6 @@
 		</collision>
 	</npc>
 	<npc id="36114" level="75" type="Npc" name="Support Unit Captain" title="Tanor Fortress">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -817,7 +802,6 @@
 		</collision>
 	</npc>
 	<npc id="36115" level="75" type="Npc" name="Engineering Manager" title="Tanor Fortress">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="144" />
@@ -857,7 +841,6 @@
 		</collision>
 	</npc>
 	<npc id="36116" level="75" type="FortLogistics" name="Logistics Officer" title="Tanor Fortress">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="88" />
@@ -916,7 +899,6 @@
 		</collision>
 	</npc>
 	<npc id="36117" level="80" type="Npc" name="Supply Box">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -953,7 +935,6 @@
 		</collision>
 	</npc>
 	<npc id="36118" level="75" type="Npc" name="Detention Camp Warden" title="Tanor Fortress">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -1000,7 +981,6 @@
 		</collision>
 	</npc>
 	<npc id="36119" level="75" type="FortDoorman" name="Doorman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -1044,7 +1024,6 @@
 		</collision>
 	</npc>
 	<npc id="36120" level="75" type="FortDoorman" name="Doorman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -1088,7 +1067,6 @@
 		</collision>
 	</npc>
 	<npc id="36121" level="75" type="FortDoorman" name="Doorman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -1135,7 +1113,6 @@
 		</collision>
 	</npc>
 	<npc id="36122" level="80" type="Defender" name="Rebel Commander" title="Tanor Fortress">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -1204,7 +1181,6 @@
 		</collision>
 	</npc>
 	<npc id="36123" level="76" type="Defender" name="Decorated Rebel Soldier" title="Tanor Fortress">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1266,7 +1242,6 @@
 		</collision>
 	</npc>
 	<npc id="36124" level="75" type="Defender" name="Rebel Private" title="Tanor Fortress">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -1323,7 +1298,6 @@
 		</collision>
 	</npc>
 	<npc id="36125" level="72" type="Defender" name="Court Guard" title="Tanor Fortress">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -1383,7 +1357,6 @@
 		</collision>
 	</npc>
 	<npc id="36126" level="72" type="Defender" name="Guard" title="Tanor Fortress">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="79" />
@@ -1443,7 +1416,6 @@
 		</collision>
 	</npc>
 	<npc id="36127" level="75" type="Npc" name="Power Control Unit" title="Control Room">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -1484,7 +1456,6 @@
 		</collision>
 	</npc>
 	<npc id="36128" level="76" type="Defender" name="Dwarven Gunnery Sergeant">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="165" />
 			<param name="MoveAroundSocial1" value="165" />
@@ -1546,7 +1517,6 @@
 		</collision>
 	</npc>
 	<npc id="36129" level="78" type="FortCommander" name="Guard Captain" title="Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -1623,7 +1593,6 @@
 		</collision>
 	</npc>
 	<npc id="36130" level="76" type="Defender" name="Guard" title="Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -1681,7 +1650,6 @@
 		</collision>
 	</npc>
 	<npc id="36131" level="76" type="Defender" name="Guard" title="Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -1742,7 +1710,6 @@
 		</collision>
 	</npc>
 	<npc id="36132" level="78" type="FortCommander" name="Support Unit Captain" title="Support Unit">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -1819,7 +1786,6 @@
 		</collision>
 	</npc>
 	<npc id="36133" level="76" type="Defender" name="Wizard" title="Support Unit">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="127" />
@@ -1888,7 +1854,6 @@
 		</collision>
 	</npc>
 	<npc id="36134" level="76" type="Defender" name="Healer" title="Support Unit">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -1955,7 +1920,6 @@
 		</collision>
 	</npc>
 	<npc id="36135" level="78" type="FortCommander" name="Archer Captain" title="Archer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="105" />
@@ -2022,7 +1986,6 @@
 		</collision>
 	</npc>
 	<npc id="36136" level="76" type="Defender" name="Archer" title="Archer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="79" />
@@ -2084,7 +2047,6 @@
 		</collision>
 	</npc>
 	<npc id="36137" level="80" type="Monster" name="Ballista" title="Tanor Fortress">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -2121,7 +2083,6 @@
 		</collision>
 	</npc>
 	<npc id="36138" level="80" type="Npc" name="Mercenary Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -2209,7 +2170,6 @@
 		</collision>
 	</npc>
 	<npc id="36139" level="75" type="Npc" name="Mercenary Private">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -2258,7 +2218,6 @@
 		</collision>
 	</npc>
 	<npc id="36140" level="20" type="Npc" name="Flagpole">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -2294,7 +2253,6 @@
 		</collision>
 	</npc>
 	<npc id="36141" level="75" type="FortManager" name="Foreman" title="Dragonspine Fortress">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="fnAgitBuff" value="fortressbuff" />
 			<param name="MoveAroundSocial" value="0" />
@@ -2336,7 +2294,6 @@
 		</collision>
 	</npc>
 	<npc id="36142" level="75" type="Npc" name="Suspicious Merchant" title="Dragonspine Fortress">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -2376,7 +2333,6 @@
 		</collision>
 	</npc>
 	<npc id="36143" level="75" type="Npc" name="Guard Captain" title="Dragonspine Fortress">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -2423,7 +2379,6 @@
 		</collision>
 	</npc>
 	<npc id="36144" level="75" type="Npc" name="Archer Captain" title="Dragonspine Fortress">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="105" />
@@ -2463,7 +2418,6 @@
 		</collision>
 	</npc>
 	<npc id="36145" level="75" type="Npc" name="Support Unit Captain" title="Dragonspine Fortress">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -2503,7 +2457,6 @@
 		</collision>
 	</npc>
 	<npc id="36146" level="75" type="Npc" name="Engineering Manager" title="Dragonspine Fortress">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="144" />
@@ -2543,7 +2496,6 @@
 		</collision>
 	</npc>
 	<npc id="36147" level="75" type="FortLogistics" name="Logistics Officer" title="Dragonspine Fortress">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="88" />
@@ -2602,7 +2554,6 @@
 		</collision>
 	</npc>
 	<npc id="36148" level="80" type="Npc" name="Supply Box">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -2639,7 +2590,6 @@
 		</collision>
 	</npc>
 	<npc id="36149" level="75" type="Npc" name="Detention Camp Warden" title="Dragonspine Fortress">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -2686,7 +2636,6 @@
 		</collision>
 	</npc>
 	<npc id="36150" level="75" type="FortDoorman" name="Doorman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -2730,7 +2679,6 @@
 		</collision>
 	</npc>
 	<npc id="36151" level="75" type="FortDoorman" name="Doorman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -2774,7 +2722,6 @@
 		</collision>
 	</npc>
 	<npc id="36152" level="75" type="FortDoorman" name="Doorman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -2821,7 +2768,6 @@
 		</collision>
 	</npc>
 	<npc id="36153" level="80" type="Defender" name="Rebel Commander" title="Dragonspine Fortress">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -2890,7 +2836,6 @@
 		</collision>
 	</npc>
 	<npc id="36154" level="76" type="Defender" name="Decorated Rebel Soldier" title="Dragonspine Fortress">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2952,7 +2897,6 @@
 		</collision>
 	</npc>
 	<npc id="36155" level="75" type="Defender" name="Rebel Private" title="Dragonspine Fortress">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -3009,7 +2953,6 @@
 		</collision>
 	</npc>
 	<npc id="36156" level="72" type="Defender" name="Court Guard" title="Dragonspine Fortress">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -3069,7 +3012,6 @@
 		</collision>
 	</npc>
 	<npc id="36157" level="72" type="Defender" name="Guard" title="Dragonspine Fortress">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="79" />
@@ -3129,7 +3071,6 @@
 		</collision>
 	</npc>
 	<npc id="36158" level="75" type="Npc" name="Power Control Unit" title="Control Room">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3170,7 +3111,6 @@
 		</collision>
 	</npc>
 	<npc id="36159" level="76" type="Defender" name="Dwarven Gunnery Sergeant">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="165" />
 			<param name="MoveAroundSocial1" value="165" />
@@ -3232,7 +3172,6 @@
 		</collision>
 	</npc>
 	<npc id="36160" level="78" type="FortCommander" name="Guard Captain" title="Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -3309,7 +3248,6 @@
 		</collision>
 	</npc>
 	<npc id="36161" level="76" type="Defender" name="Guard" title="Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -3367,7 +3305,6 @@
 		</collision>
 	</npc>
 	<npc id="36162" level="76" type="Defender" name="Guard" title="Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -3428,7 +3365,6 @@
 		</collision>
 	</npc>
 	<npc id="36163" level="78" type="FortCommander" name="Support Unit Captain" title="Support Unit">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -3505,7 +3441,6 @@
 		</collision>
 	</npc>
 	<npc id="36164" level="76" type="Defender" name="Wizard" title="Support Unit">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="127" />
@@ -3574,7 +3509,6 @@
 		</collision>
 	</npc>
 	<npc id="36165" level="76" type="Defender" name="Healer" title="Support Unit">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -3641,7 +3575,6 @@
 		</collision>
 	</npc>
 	<npc id="36166" level="78" type="FortCommander" name="Archer Captain" title="Archer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="105" />
@@ -3708,7 +3641,6 @@
 		</collision>
 	</npc>
 	<npc id="36167" level="76" type="Defender" name="Archer" title="Archer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="79" />
@@ -3770,7 +3702,6 @@
 		</collision>
 	</npc>
 	<npc id="36168" level="80" type="Monster" name="Ballista" title="Dragonspine Fortress">
-		<!-- Confirmed CT2.5 -->
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3807,7 +3738,6 @@
 		</collision>
 	</npc>
 	<npc id="36169" level="80" type="Npc" name="Mercenary Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -3895,7 +3825,6 @@
 		</collision>
 	</npc>
 	<npc id="36170" level="75" type="Npc" name="Mercenary Private">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -3944,7 +3873,6 @@
 		</collision>
 	</npc>
 	<npc id="36171" level="20" type="Npc" name="Flagpole">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3979,8 +3907,7 @@
 			<height normal="72.5" />
 		</collision>
 	</npc>
-	<npc id="36172" level="75" type="FortManager" name="Foreman" title="Antharas's Fortress">
-		<!-- Confirmed CT2.5 -->
+	<npc id="36172" level="75" type="FortManager" name="Foreman" title="Antharas' Fortress">
 		<parameters>
 			<param name="fnAgitBuff" value="fortressbuff" />
 			<param name="MoveAroundSocial" value="0" />
@@ -4021,8 +3948,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="36173" level="75" type="Npc" name="Suspicious Merchant" title="Antharas's Fortress">
-		<!-- Confirmed CT2.5 -->
+	<npc id="36173" level="75" type="Npc" name="Suspicious Merchant" title="Antharas' Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -4061,8 +3987,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="36174" level="75" type="Npc" name="Guard Captain" title="Antharas's Fortress">
-		<!-- Confirmed CT2.5 -->
+	<npc id="36174" level="75" type="Npc" name="Guard Captain" title="Antharas' Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -4108,8 +4033,7 @@
 			<height normal="23.75" />
 		</collision>
 	</npc>
-	<npc id="36175" level="75" type="Npc" name="Archer Captain" title="Antharas's Fortress">
-		<!-- Confirmed CT2.5 -->
+	<npc id="36175" level="75" type="Npc" name="Archer Captain" title="Antharas' Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="105" />
@@ -4148,8 +4072,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36176" level="75" type="Npc" name="General" title="Antharas's Fortress">
-		<!-- Confirmed CT2.5 -->
+	<npc id="36176" level="75" type="Npc" name="General" title="Antharas' Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -4189,8 +4112,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="36177" level="75" type="Npc" name="Support Unit Captain" title="Antharas's Fortress">
-		<!-- Confirmed CT2.5 -->
+	<npc id="36177" level="75" type="Npc" name="Support Unit Captain" title="Antharas' Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -4229,8 +4151,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36178" level="75" type="Npc" name="Engineering Manager" title="Antharas's Fortress">
-		<!-- Confirmed CT2.5 -->
+	<npc id="36178" level="75" type="Npc" name="Engineering Manager" title="Antharas' Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="144" />
@@ -4269,8 +4190,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="36179" level="75" type="FortLogistics" name="Logistics Officer" title="Antharas's Fortress">
-		<!-- Confirmed CT2.5 -->
+	<npc id="36179" level="75" type="FortLogistics" name="Logistics Officer" title="Antharas' Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="88" />
@@ -4329,7 +4249,6 @@
 		</collision>
 	</npc>
 	<npc id="36180" level="80" type="Npc" name="Supply Box">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4365,8 +4284,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="36181" level="75" type="Npc" name="Detention Camp Warden" title="Antharas's Fortress">
-		<!-- Confirmed CT2.5 -->
+	<npc id="36181" level="75" type="Npc" name="Detention Camp Warden" title="Antharas' Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -4413,7 +4331,6 @@
 		</collision>
 	</npc>
 	<npc id="36182" level="75" type="FortDoorman" name="Doorman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -4457,7 +4374,6 @@
 		</collision>
 	</npc>
 	<npc id="36183" level="75" type="FortDoorman" name="Doorman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -4501,7 +4417,6 @@
 		</collision>
 	</npc>
 	<npc id="36184" level="75" type="FortDoorman" name="Doorman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -4547,8 +4462,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="36185" level="80" type="Defender" name="Rebel Commander" title="Antharas's Fortress">
-		<!-- Confirmed CT2.5 -->
+	<npc id="36185" level="80" type="Defender" name="Rebel Commander" title="Antharas' Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -4616,8 +4530,7 @@
 			<height normal="26.985" />
 		</collision>
 	</npc>
-	<npc id="36186" level="76" type="Defender" name="Decorated Rebel Soldier" title="Antharas's Fortress">
-		<!-- Confirmed CT2.5 -->
+	<npc id="36186" level="76" type="Defender" name="Decorated Rebel Soldier" title="Antharas' Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -4678,8 +4591,7 @@
 			<height normal="45" />
 		</collision>
 	</npc>
-	<npc id="36187" level="75" type="Defender" name="Rebel Private" title="Antharas's Fortress">
-		<!-- Confirmed CT2.5 -->
+	<npc id="36187" level="75" type="Defender" name="Rebel Private" title="Antharas' Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -4735,8 +4647,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="36188" level="72" type="Defender" name="Court Guard" title="Antharas's Fortress">
-		<!-- Confirmed CT2.5 -->
+	<npc id="36188" level="72" type="Defender" name="Court Guard" title="Antharas' Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -4795,8 +4706,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="36189" level="72" type="Defender" name="Guard" title="Antharas's Fortress">
-		<!-- Confirmed CT2.5 -->
+	<npc id="36189" level="72" type="Defender" name="Guard" title="Antharas' Fortress">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="79" />
@@ -4856,7 +4766,6 @@
 		</collision>
 	</npc>
 	<npc id="36190" level="75" type="Npc" name="Main Machine" title="Control Room">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="barrack_id" value="3" />
 			<param name="fortress_id" value="116" />
@@ -4906,7 +4815,6 @@
 		</collision>
 	</npc>
 	<npc id="36191" level="75" type="Npc" name="Backup Power Unit" title="Control Room">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="broadcast_range" value="2000" />
 		</parameters>
@@ -4951,7 +4859,6 @@
 		</collision>
 	</npc>
 	<npc id="36192" level="75" type="Npc" name="Control Unit" title="Control Room">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="barrack_id" value="3" />
 			<param name="fortress_id" value="116" />
@@ -5000,7 +4907,6 @@
 		</collision>
 	</npc>
 	<npc id="36193" level="75" type="Npc" name="Power Control Unit" title="Control Room">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -5041,7 +4947,6 @@
 		</collision>
 	</npc>
 	<npc id="36194" level="76" type="Defender" name="Dwarven Gunnery Sergeant">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="165" />
 			<param name="MoveAroundSocial1" value="165" />
@@ -5104,7 +5009,6 @@
 		</collision>
 	</npc>
 	<npc id="36195" level="74" type="Defender" name="Scout Golem" title="Control Room">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="30" />
 			<param name="MoveAroundSocial1" value="30" />
@@ -5161,7 +5065,6 @@
 		</collision>
 	</npc>
 	<npc id="36196" level="78" type="FortCommander" name="Guard Captain" title="Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -5238,7 +5141,6 @@
 		</collision>
 	</npc>
 	<npc id="36197" level="76" type="Defender" name="Guard" title="Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -5296,7 +5198,6 @@
 		</collision>
 	</npc>
 	<npc id="36198" level="76" type="Defender" name="Guard" title="Guard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -5357,7 +5258,6 @@
 		</collision>
 	</npc>
 	<npc id="36199" level="78" type="FortCommander" name="Support Unit Captain" title="Support Unit">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="90" />

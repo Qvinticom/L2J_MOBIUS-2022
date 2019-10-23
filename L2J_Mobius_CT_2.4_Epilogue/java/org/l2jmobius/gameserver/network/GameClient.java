@@ -34,7 +34,6 @@ import org.l2jmobius.gameserver.LoginServerThread;
 import org.l2jmobius.gameserver.LoginServerThread.SessionKey;
 import org.l2jmobius.gameserver.data.sql.impl.CharNameTable;
 import org.l2jmobius.gameserver.data.sql.impl.ClanTable;
-import org.l2jmobius.gameserver.data.xml.impl.SecondaryAuthData;
 import org.l2jmobius.gameserver.model.CharSelectInfoPackage;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -47,7 +46,6 @@ import org.l2jmobius.gameserver.network.serverpackets.LeaveWorld;
 import org.l2jmobius.gameserver.network.serverpackets.NpcSay;
 import org.l2jmobius.gameserver.network.serverpackets.ServerClose;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import org.l2jmobius.gameserver.security.SecondaryPasswordAuth;
 import org.l2jmobius.gameserver.util.FloodProtectors;
 
 import io.netty.channel.Channel;
@@ -69,7 +67,6 @@ public class GameClient extends ChannelInboundHandler<GameClient>
 	private SessionKey _sessionId;
 	private PlayerInstance _player;
 	private final ReentrantLock _playerLock = new ReentrantLock();
-	private SecondaryPasswordAuth _secondaryAuth;
 	
 	private boolean _isAuthedGG;
 	private CharSelectInfoPackage[] _charSlotMapping = null;
@@ -207,11 +204,6 @@ public class GameClient extends ChannelInboundHandler<GameClient>
 	public void setAccountName(String activeChar)
 	{
 		_accountName = activeChar;
-		
-		if (SecondaryAuthData.getInstance().isEnabled())
-		{
-			_secondaryAuth = new SecondaryPasswordAuth(this);
-		}
 	}
 	
 	public String getAccountName()
@@ -502,9 +494,10 @@ public class GameClient extends ChannelInboundHandler<GameClient>
 				ps.execute();
 			}
 			
-			try (PreparedStatement ps = con.prepareStatement("DELETE FROM character_reco_bonus WHERE charId=?"))
+			try (PreparedStatement ps = con.prepareStatement("DELETE FROM character_recommends WHERE charId=? OR target_id=?"))
 			{
 				ps.setInt(1, objid);
+				ps.setInt(2, objid);
 				ps.execute();
 			}
 			
@@ -595,11 +588,6 @@ public class GameClient extends ChannelInboundHandler<GameClient>
 			return null;
 		}
 		return _charSlotMapping[charslot];
-	}
-	
-	public SecondaryPasswordAuth getSecondaryAuth()
-	{
-		return _secondaryAuth;
 	}
 	
 	/**

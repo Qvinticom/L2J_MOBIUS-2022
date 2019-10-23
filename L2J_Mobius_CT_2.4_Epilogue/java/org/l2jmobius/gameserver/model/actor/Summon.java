@@ -50,7 +50,7 @@ import org.l2jmobius.gameserver.model.items.EtcItem;
 import org.l2jmobius.gameserver.model.items.Weapon;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.items.type.ActionType;
-import org.l2jmobius.gameserver.model.olympiad.OlympiadGameManager;
+import org.l2jmobius.gameserver.model.olympiad.Olympiad;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.skills.targets.TargetType;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
@@ -773,7 +773,7 @@ public abstract class Summon extends Playable
 			
 			if (_owner.isInOlympiadMode() && target.isPlayer() && ((PlayerInstance) target).isInOlympiadMode() && (((PlayerInstance) target).getOlympiadGameId() == _owner.getOlympiadGameId()))
 			{
-				OlympiadGameManager.getInstance().notifyCompetitorDamage(getOwner(), damage);
+				Olympiad.getInstance().notifyCompetitorDamage(getOwner(), damage, getOwner().getOlympiadGameId());
 			}
 			
 			final SystemMessage sm;

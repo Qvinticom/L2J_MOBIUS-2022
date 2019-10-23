@@ -57,10 +57,4 @@ public class ItemList extends AbstractItemPacket
 		writeInventoryBlock(packet, _player.getInventory());
 		return true;
 	}
-	
-	@Override
-	public void runImpl(PlayerInstance player)
-	{
-		player.sendPacket(new ExQuestItemList(_player));
-	}
 }

@@ -366,7 +366,7 @@
 		</for>
 	</skill>
 	<skill id="5921" levels="1" name="Inhale">
-		<!-- P. Atk., Atk. Spd., M. Atk., accuracy, critical attack rate and Critical Damage are decreased. -->
+		<!-- P. Atk., Atk. Spd., M. Atk., accuracy, critical attack rate and critical damage are decreased. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="MULTI_DEBUFF_F" />
@@ -765,7 +765,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5950" levels="1" name="Birthday Cake">
-		<!-- Birthday cake received once a year. Recovers Vitality through the acquisition of Exp. -->
+		<!-- Birthday cake received once a year. Recovers vitality through the acquisition of Exp. -->
 		<set name="abnormalLvl" val="9" />
 		<set name="abnormalTime" val="43200" />
 		<set name="abnormalType" val="VP_UP" />
@@ -1297,7 +1297,7 @@
 		</for>
 	</skill>
 	<skill id="5988" levels="1" name="Armor Maintenance">
-		<!-- Maintains the armor to increase defense ability. -->
+		<!-- Maintains the armor in optimal condition to increase defense ability. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="DWARF_DEFENCE_BUFF" />

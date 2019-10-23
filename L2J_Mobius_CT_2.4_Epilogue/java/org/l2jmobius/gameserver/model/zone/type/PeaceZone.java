@@ -51,16 +51,6 @@ public class PeaceZone extends ZoneType
 			{
 				return;
 			}
-			
-			/* Nevit Turn Off on Peace Zone */
-			if (Config.NEVIT_ENABLED)
-			{
-				player.getNevitSystem().stopAdventTask(true);
-				
-				// Stop Nevit's Hourglass
-				player.storeRecommendations(true);
-				player.getStat().setPausedNevitHourglassStatus(true);
-			}
 		}
 		
 		if (Config.PEACE_ZONE_MODE != 2)

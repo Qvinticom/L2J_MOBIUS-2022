@@ -136,7 +136,7 @@ public class QuestLink implements IBypassHandler
 			}
 			else
 			{
-				String localisation = "<fstring>" + quest.getNpcStringId() + state + "</fstring>";
+				String localisation = NpcStringId.getNpcStringId(Integer.valueOf(quest.getNpcStringId() + state)).getText();
 				if (Config.MULTILANG_ENABLE)
 				{
 					final NpcStringId ns = NpcStringId.getNpcStringId(Integer.valueOf(quest.getNpcStringId() + state));
@@ -158,7 +158,7 @@ public class QuestLink implements IBypassHandler
 			{
 				if (questId == TO_LEAD_AND_BE_LED)
 				{
-					String localisation = "<a action=\"bypass -h Quest Q00118_ToLeadAndBeLed sponsor\">[<fstring>" + questId + state + "</fstring> (Sponsor)]</a><br>";
+					String localisation = "<a action=\"bypass -h Quest Q00118_ToLeadAndBeLed sponsor\">[" + NpcStringId.getNpcStringId(Integer.valueOf(questId + state)).getText() + " (Sponsor)]</a><br>";
 					if (Config.MULTILANG_ENABLE)
 					{
 						final NpcStringId ns = NpcStringId.getNpcStringId(Integer.valueOf(questId + state));
@@ -176,7 +176,7 @@ public class QuestLink implements IBypassHandler
 				
 				if (questId == THE_LEADER_AND_THE_FOLLOWER)
 				{
-					String localisation = "<a action=\"bypass -h Quest Q00123_TheLeaderAndTheFollower sponsor\">[<fstring>" + questId + state + "</fstring> (Sponsor)]</a><br>";
+					String localisation = "<a action=\"bypass -h Quest Q00123_TheLeaderAndTheFollower sponsor\">[" + NpcStringId.getNpcStringId(Integer.valueOf(questId + state)).getText() + " (Sponsor)]</a><br>";
 					if (Config.MULTILANG_ENABLE)
 					{
 						final NpcStringId ns = NpcStringId.getNpcStringId(Integer.valueOf(questId + state));
@@ -233,7 +233,7 @@ public class QuestLink implements IBypassHandler
 				if ((q.getId() >= 1) && (q.getId() < 20000))
 				{
 					// Too many ongoing quests.
-					if (player.getAllActiveQuests().size() > 40)
+					if (player.getAllActiveQuests().size() > 25)
 					{
 						final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
 						html.setFile(player, "data/html/fullquest.html");

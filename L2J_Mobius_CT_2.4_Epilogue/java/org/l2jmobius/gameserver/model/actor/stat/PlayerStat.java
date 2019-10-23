@@ -27,7 +27,6 @@ import org.l2jmobius.gameserver.model.actor.instance.ClassMasterInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.transform.TransformTemplate;
-import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLevelChanged;
 import org.l2jmobius.gameserver.model.quest.QuestState;
@@ -38,7 +37,6 @@ import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExBrExtraUserInfo;
 import org.l2jmobius.gameserver.network.serverpackets.ExVitalityPointInfo;
-import org.l2jmobius.gameserver.network.serverpackets.ExVoteSystemInfo;
 import org.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
@@ -59,7 +57,6 @@ public class PlayerStat extends PlayableStat
 	/** Player's maximum talisman count. */
 	private final AtomicInteger _talismanSlots = new AtomicInteger();
 	private boolean _cloakSlot = false;
-	private boolean _pausedNevitHourglass = false;
 	
 	public static final int VITALITY_LEVELS[] =
 	{
@@ -130,32 +127,13 @@ public class PlayerStat extends PlayableStat
 			addToSp *= Config.PREMIUM_RATE_SP;
 		}
 		
-		final double baseExp = addToExp;
-		final double baseSp = addToSp;
-		
 		double bonusExp = 1.;
 		double bonusSp = 1.;
-		
-		// Start Nevit's Hourglass
-		if (Config.NEVIT_ENABLED && (addToExp > 0) && !player.isInsideZone(ZoneId.PEACE))
-		{
-			player.startNevitHourglassTask();
-			
-			if (player.getEffectList().getFirstEffect(EffectType.NEVITS_HOURGLASS) == null)
-			{
-				setPausedNevitHourglassStatus(false);
-			}
-		}
 		
 		if (useBonuses)
 		{
 			bonusExp = getExpBonusMultiplier();
 			bonusSp = getSpBonusMultiplier();
-		}
-		
-		if (Config.NEVIT_ENABLED && (addToExp > 0) && !player.isInsideZone(ZoneId.PEACE))
-		{
-			player.getNevitSystem().startAdventTask();
 		}
 		
 		addToExp *= bonusExp;
@@ -204,20 +182,9 @@ public class PlayerStat extends PlayableStat
 		}
 		else
 		{
-			if ((addToExp - baseExp) > 0)
-			{
-				sm = new SystemMessage(SystemMessageId.YOU_HAVE_ACQUIRED_S1_EXP_BONUS_S2_AND_S3_SP_BONUS_S4);
-				sm.addLong(finalExp);
-				sm.addLong(Math.round(addToExp - baseExp));
-				sm.addLong(finalSp);
-				sm.addLong(Math.round(addToSp - baseSp));
-			}
-			else
-			{
-				sm = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_EXPERIENCE_AND_S2_SP);
-				sm.addLong((long) addToExp);
-				sm.addLong((long) addToSp);
-			}
+			sm = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_EXPERIENCE_AND_S2_SP);
+			sm.addLong((long) addToExp);
+			sm.addLong((long) addToSp);
 		}
 		player.sendPacket(sm);
 		return true;
@@ -331,12 +298,6 @@ public class PlayerStat extends PlayableStat
 		// Send a Server->Client packet UserInfo to the PlayerInstance
 		getActiveChar().sendPacket(new UserInfo(getActiveChar()));
 		getActiveChar().sendPacket(new ExBrExtraUserInfo(getActiveChar()));
-		// Nevit System
-		if (Config.NEVIT_ENABLED)
-		{
-			getActiveChar().sendPacket(new ExVoteSystemInfo(getActiveChar()));
-			getActiveChar().getNevitSystem().addPoints(2000);
-		}
 		
 		return levelIncreased;
 	}
@@ -450,17 +411,6 @@ public class PlayerStat extends PlayableStat
 	public void setCloakSlotStatus(boolean cloakSlot)
 	{
 		_cloakSlot = cloakSlot;
-	}
-	
-	public boolean hasPausedNevitHourglass()
-	{
-		return _pausedNevitHourglass;
-	}
-	
-	public void setPausedNevitHourglassStatus(boolean val)
-	{
-		_pausedNevitHourglass = val;
-		getActiveChar().sendPacket(new ExVoteSystemInfo(getActiveChar()));
 	}
 	
 	@Override
@@ -770,11 +720,6 @@ public class PlayerStat extends PlayableStat
 			{
 				int stat = (int) calcStat(Stats.VITALITY_CONSUME_RATE, 1, getActiveChar(), null);
 				
-				if (getActiveChar().getNevitSystem().isAdventBlessingActive())
-				{
-					stat = -10; // increase Vitality During Blessing
-				}
-				
 				if (stat == 0)
 				{
 					return;
@@ -854,10 +799,6 @@ public class PlayerStat extends PlayableStat
 	 */
 	public byte getVitalityLevel()
 	{
-		if (getActiveChar().getNevitSystem().isAdventBlessingActive())
-		{
-			return 4;
-		}
 		return _vitalityLevel;
 	}
 	
@@ -865,18 +806,11 @@ public class PlayerStat extends PlayableStat
 	{
 		double bonus = 1.0;
 		double vitality = 1.0;
-		double nevits = 1.0;
 		double hunting = 1.0;
 		double bonusExp = 1.0;
 		
 		// Bonus from Vitality System
 		vitality = getVitalityMultiplier();
-		
-		// Bonus from Nevit's Blessing
-		nevits = getActiveChar().getNevitHourglassMultiplier();
-		
-		// Bonus from Nevit's Hunting
-		// TODO: Nevit's hunting bonus
 		
 		// Bonus exp from skills
 		bonusExp = 1 + (calcStat(Stats.BONUS_EXP, 0, null, null) / 100);
@@ -884,10 +818,6 @@ public class PlayerStat extends PlayableStat
 		if (vitality > 1.0)
 		{
 			bonus += (vitality - 1);
-		}
-		if (nevits > 1.0)
-		{
-			bonus += (nevits - 1);
 		}
 		if (hunting > 1.0)
 		{
@@ -912,18 +842,11 @@ public class PlayerStat extends PlayableStat
 	{
 		double bonus = 1.0;
 		double vitality = 1.0;
-		double nevits = 1.0;
 		double hunting = 1.0;
 		double bonusSp = 1.0;
 		
 		// Bonus from Vitality System
 		vitality = getVitalityMultiplier();
-		
-		// Bonus from Nevit's Blessing
-		nevits = getActiveChar().getNevitHourglassMultiplier();
-		
-		// Bonus from Nevit's Hunting
-		// TODO: Nevit's hunting bonus
 		
 		// Bonus sp from skills
 		bonusSp = 1 + (calcStat(Stats.BONUS_SP, 0, null, null) / 100);
@@ -931,10 +854,6 @@ public class PlayerStat extends PlayableStat
 		if (vitality > 1.0)
 		{
 			bonus += (vitality - 1);
-		}
-		if (nevits > 1.0)
-		{
-			bonus += (nevits - 1);
 		}
 		if (hunting > 1.0)
 		{

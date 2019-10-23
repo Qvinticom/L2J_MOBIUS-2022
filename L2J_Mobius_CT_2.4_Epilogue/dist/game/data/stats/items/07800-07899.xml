@@ -213,7 +213,7 @@
 		</for>
 	</item>
 	<item id="7813" type="Weapon" name="Hell Knife - Magic Regeneration">
-		<!-- <Soul Crystal Enhancement>. Casts Regeneration on a target with a 30% chance when using a magic skill on the target. -->
+		<!-- <Soul Crystal Enhancement>. Endowed with the ability to cast Regeneration with a 30% probability when using a magic skill on the target. -->
 		<set name="icon" val="icon.weapon_hell_knife_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -888,7 +888,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="7840" type="Armor" name="Rabbit Ears - Event">
-		<!-- Hair accessory. In rememberance of the day you took on the hordes of angry bunnies. -->
+		<!-- for Japan -->
 		<set name="icon" val="icon.accessory_rabbit_ear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1457,7 +1457,7 @@
 		</for>
 	</item>
 	<item id="7870" type="Armor" name="Sealed Apella Helm">
-		<!-- May be worn by Elders and above. Sealed Apella Helmet. The blacksmith in a village can release the seal on this item. -->
+		<!-- May be worn by Elder and above. Seal can be removed by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_helmet_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1476,7 +1476,7 @@
 		</for>
 	</item>
 	<item id="7871" type="Armor" name="Sealed Apella Plate Armor">
-		<!-- May be worn by Elders and above. Sealed Apella Plate Armor. The blacksmith in a village can release the seal on this item. -->
+		<!-- May be worn by Elder and above. Seal can be removed by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t1004_ul_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1499,7 +1499,7 @@
 		</for>
 	</item>
 	<item id="7872" type="Armor" name="Sealed Apella Gauntlet">
-		<!-- May be worn by Elders and above. Sealed Apella Gauntlet. The blacksmith in a village can release the seal on this item. -->
+		<!-- May be worn by Elder and above. Seal can be removed by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t1004_g_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1521,7 +1521,7 @@
 		</for>
 	</item>
 	<item id="7873" type="Armor" name="Sealed Apella Solleret">
-		<!-- May be worn by Elders and above. Sealed Apella Solleret. The blacksmith in a village can release the seal on this item. -->
+		<!-- May be worn by Elder and above. Seal can be removed by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t1004_b_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1543,7 +1543,7 @@
 		</for>
 	</item>
 	<item id="7874" type="Armor" name="Sealed Apella Brigandine">
-		<!-- May be worn by Elders and above. Sealed Apella Clothing. The blacksmith in a village can release the seal on this item. -->
+		<!-- May be worn by Elder and above. Seal can be removed by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t1005_ul_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1563,7 +1563,7 @@
 		</for>
 	</item>
 	<item id="7875" type="Armor" name="Sealed Apella Leather Gloves">
-		<!-- May be worn by Elders and above. Sealed Apella Leather Gloves. The blacksmith in a village can release the seal on this item. -->
+		<!-- May be worn by Elder and above. Seal can be removed by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t1005_g_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1582,7 +1582,7 @@
 		</for>
 	</item>
 	<item id="7876" type="Armor" name="Sealed Apella Boots">
-		<!-- May be worn by Elders and above. Sealed Apella Shoes. The blacksmith in a village can release the seal on this item. -->
+		<!-- May be worn by Elder and above. Seal can be removed by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t1005_b_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1601,7 +1601,7 @@
 		</for>
 	</item>
 	<item id="7877" type="Armor" name="Sealed Apella Doublet">
-		<!-- May be worn by Elders and above. Sealed Apella Doublet. The blacksmith in a village can release the seal on this item. -->
+		<!-- May be worn by Elder and above. Seal can be removed by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t1006_ul_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -1625,7 +1625,7 @@
 		</for>
 	</item>
 	<item id="7878" type="Armor" name="Sealed Apella Silk Gloves">
-		<!-- May be worn by Elders and above. Sealed Apella Silk Gloves. The blacksmith in a village can release the seal on this item. -->
+		<!-- May be worn by Elder and above. Seal can be removed by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t1006_g_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1647,7 +1647,7 @@
 		</for>
 	</item>
 	<item id="7879" type="Armor" name="Sealed Apella Sandals">
-		<!-- May be worn by Elders and above. Sealed Apella Sandals. The blacksmith in a village can release the seal on this item. -->
+		<!-- May be worn by Elder and above. Seal can be removed by the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.armor_t1006_b_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1779,7 +1779,7 @@
 		</for>
 	</item>
 	<item id="7884" type="Weapon" name="Infernal Master">
-		<!-- Bestows one of the following functions: Haste, Critical Damage, or Focus. -->
+		<!-- Bestows either Haste, Critical Damage, or Focus. -->
 		<set name="icon" val="icon.weapon_inferno_master_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1861,7 +1861,7 @@
 		</for>
 	</item>
 	<item id="7887" type="Weapon" name="Mysterious Sword">
-		<!-- Bestows one of the following functions: Acumen, M. Atk., or Magic Weakness. -->
+		<!-- Bestows either Acumen, Magic Power, or Magic Weakness. -->
 		<set name="icon" val="icon.weapon_mystery_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1889,7 +1889,7 @@
 		</for>
 	</item>
 	<item id="7888" type="Weapon" name="Ecliptic Sword">
-		<!-- Bestows one of the following functions: Empower, M. Atk. or Magic Silence. -->
+		<!-- Bestows either Empower, Magic Power or Magic Silence. -->
 		<set name="icon" val="icon.weapon_sword_of_eclipse_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1917,7 +1917,7 @@
 		</for>
 	</item>
 	<item id="7889" type="Weapon" name="Wizard's Tear">
-		<!-- Bestows one of the following functions: Acumen, M. Atk., or Conversion. -->
+		<!-- Bestows either Acumen, Magic Power, or Conversion. -->
 		<set name="icon" val="icon.weapon_tears_of_wizard_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1973,7 +1973,7 @@
 		</for>
 	</item>
 	<item id="7891" type="Weapon" name="Ecliptic Axe">
-		<!-- Bestows one of the following functions: Conversion, M. Atk. or Magic Hold. -->
+		<!-- Bestows one of the following functions: Conversion, Magic Power or Magic Hold. -->
 		<set name="icon" val="icon.weapon_eclipse_axe_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2002,7 +2002,7 @@
 		</for>
 	</item>
 	<item id="7892" type="Weapon" name="Spell Breaker">
-		<!-- Bestows one of the following functions: Acumen, Mental Shield or Magic Hold. -->
+		<!-- Bestows either Acumen, Magic Mental Shield or Magic Hold. -->
 		<set name="icon" val="icon.weapon_spell_breaker_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2031,7 +2031,7 @@
 		</for>
 	</item>
 	<item id="7893" type="Weapon" name="Kaim Vanul's Bones">
-		<!-- Bestows one of the following functions: Mana Up, Magic Silence, or Conversion. -->
+		<!-- Bestows either Mana Up, Magic Silence, or Conversion. -->
 		<set name="icon" val="icon.weapon_bone_of_kaim_vanul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2060,7 +2060,7 @@
 		</for>
 	</item>
 	<item id="7894" type="Weapon" name="Spiritual Eye">
-		<!-- Bestows one of the following functions: Mana Up, Magic Poison, or Acumen. -->
+		<!-- Bestows either Mana Up, Magic Poison, or Acumen. -->
 		<set name="icon" val="icon.weapon_eye_of_soul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2089,7 +2089,7 @@
 		</for>
 	</item>
 	<item id="7895" type="Weapon" name="Flaming Dragon Skull">
-		<!-- Bestows one of the following functions: Acumen, M. Atk. or Magic Silence. -->
+		<!-- Bestows one of the following functions: Acumen, Magic Power or Magic Silence. -->
 		<set name="icon" val="icon.weapon_dragon_flame_head_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2145,7 +2145,7 @@
 		</for>
 	</item>
 	<item id="7897" type="Weapon" name="Dwarven Hammer">
-		<!-- Bestows one of the following functions: Health, Anger, or Critical Bleed. -->
+		<!-- Bestows either Health, Anger, or Critical Bleed. -->
 		<set name="icon" val="icon.weapon_dwarven_hammer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2173,7 +2173,7 @@
 		</for>
 	</item>
 	<item id="7898" type="Weapon" name="Karik Horn">
-		<!-- Bestows one of the following functions: Focus, Haste, or Critical Drain. -->
+		<!-- Bestows either Focus, Haste, or Critical Drain. -->
 		<set name="icon" val="icon.weapon_horn_of_karik_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2201,7 +2201,7 @@
 		</for>
 	</item>
 	<item id="7899" type="Weapon" name="Destroyer Hammer">
-		<!-- Bestows one of the following functions: Health, Haste, or Critical Drain. -->
+		<!-- Bestows either Health, Haste, or Critical Drain. -->
 		<set name="icon" val="icon.weapon_hammer_of_destroyer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />

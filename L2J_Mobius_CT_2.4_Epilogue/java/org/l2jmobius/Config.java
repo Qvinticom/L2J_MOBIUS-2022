@@ -285,6 +285,7 @@ public class Config
 	public static int MAX_PETITIONS_PER_PLAYER;
 	public static int MAX_PETITIONS_PENDING;
 	public static boolean FREE_TELEPORTING;
+	public static boolean ALT_RECOMMEND;
 	public static int DELETE_DAYS;
 	public static String PARTY_XP_CUTOFF_METHOD;
 	public static double PARTY_XP_CUTOFF_PERCENT;
@@ -298,12 +299,6 @@ public class Config
 	public static String[] FORBIDDEN_NAMES;
 	public static boolean SILENCE_MODE_EXCLUDE;
 	public static boolean ALT_VALIDATE_TRIGGER_SKILLS;
-	
-	public static boolean NEVIT_ENABLED;
-	public static int NEVIT_MAX_POINTS;
-	public static int NEVIT_BONUS_EFFECT_TIME;
-	public static int NEVIT_ADVENT_TIME;
-	public static boolean NEVIT_IGNORE_ADVENT_TIME;
 	
 	// --------------------------------------------------
 	// ClanHall Settings
@@ -586,9 +581,9 @@ public class Config
 	public static int ALT_OLY_NONCLASSED;
 	public static int ALT_OLY_TEAMS;
 	public static int ALT_OLY_REG_DISPLAY;
-	public static int[][] ALT_OLY_CLASSED_REWARD;
-	public static int[][] ALT_OLY_NONCLASSED_REWARD;
-	public static int[][] ALT_OLY_TEAM_REWARD;
+	public static int ALT_OLY_BATTLE_REWARD_ITEM;
+	public static int ALT_OLY_CLASSED_RITEM_C;
+	public static int ALT_OLY_NONCLASSED_RITEM_C;
 	public static int ALT_OLY_COMP_RITEM;
 	public static int ALT_OLY_MIN_MATCHES;
 	public static int ALT_OLY_GP_PER_POINT;
@@ -610,7 +605,7 @@ public class Config
 	public static boolean ALT_OLY_ANNOUNCE_GAMES;
 	public static List<Integer> LIST_OLY_RESTRICTED_ITEMS;
 	public static int ALT_OLY_ENCHANT_LIMIT;
-	public static int ALT_OLY_WAIT_TIME;
+	public static byte ALT_OLY_WAIT_TIME;
 	public static boolean ALT_OLY_USE_CUSTOM_PERIOD_SETTINGS;
 	public static String ALT_OLY_PERIOD;
 	public static int ALT_OLY_PERIOD_MULTIPLIER;
@@ -1005,6 +1000,10 @@ public class Config
 	// Queen Ant
 	public static int QUEEN_ANT_SPAWN_INTERVAL;
 	public static int QUEEN_ANT_SPAWN_RANDOM;
+	
+	// Frintezza
+	public static int FRINTEZZA_SPAWN_INTERVAL;
+	public static int FRINTEZZA_SPAWN_RANDOM;
 	
 	// Beleth
 	public static int BELETH_MIN_PLAYERS;
@@ -1947,6 +1946,7 @@ public class Config
 			MAX_PETITIONS_PER_PLAYER = Character.getInt("MaxPetitionsPerPlayer", 5);
 			MAX_PETITIONS_PENDING = Character.getInt("MaxPetitionsPending", 25);
 			FREE_TELEPORTING = Character.getBoolean("FreeTeleporting", false);
+			ALT_RECOMMEND = Character.getBoolean("AltRecommend", false);
 			DELETE_DAYS = Character.getInt("DeleteCharAfterDays", 7);
 			PARTY_XP_CUTOFF_METHOD = Character.getString("PartyXpCutoffMethod", "highfive");
 			PARTY_XP_CUTOFF_PERCENT = Character.getDouble("PartyXpCutoffPercent", 3);
@@ -1975,12 +1975,6 @@ public class Config
 			SILENCE_MODE_EXCLUDE = Character.getBoolean("SilenceModeExclude", false);
 			ALT_VALIDATE_TRIGGER_SKILLS = Character.getBoolean("AltValidateTriggerSkills", false);
 			PLAYER_MOVEMENT_BLOCK_TIME = Character.getInt("NpcTalkBlockingTime", 0) * 1000;
-			
-			NEVIT_ENABLED = Character.getBoolean("NevitEnabled", true);
-			NEVIT_MAX_POINTS = Character.getInt("NevitMaxPoints", 7200);
-			NEVIT_BONUS_EFFECT_TIME = Character.getInt("NevitBonusEffectTime", 180);
-			NEVIT_ADVENT_TIME = Character.getInt("NevitAdventTime", 14400);
-			NEVIT_IGNORE_ADVENT_TIME = Character.getBoolean("NevitIgnoreAdventTime", false);
 			
 			// Load Telnet config file (if exists)
 			final PropertiesParser telnetSettings = new PropertiesParser(TELNET_CONFIG_FILE);
@@ -2455,48 +2449,42 @@ public class Config
 			final PropertiesParser Olympiad = new PropertiesParser(OLYMPIAD_CONFIG_FILE);
 			
 			ALT_OLY_START_TIME = Olympiad.getInt("AltOlyStartTime", 18);
-			ALT_OLY_MIN = Olympiad.getInt("AltOlyMin", 0);
+			ALT_OLY_MIN = Olympiad.getInt("AltOlyMin", 00);
 			ALT_OLY_MAX_BUFFS = Olympiad.getInt("AltOlyMaxBuffs", 5);
 			ALT_OLY_CPERIOD = Olympiad.getLong("AltOlyCPeriod", 21600000);
-			ALT_OLY_BATTLE = Olympiad.getLong("AltOlyBattle", 300000);
+			ALT_OLY_BATTLE = Olympiad.getLong("AltOlyBattle", 360000);
 			ALT_OLY_WPERIOD = Olympiad.getLong("AltOlyWPeriod", 604800000);
 			ALT_OLY_VPERIOD = Olympiad.getLong("AltOlyVPeriod", 86400000);
-			ALT_OLY_START_POINTS = Olympiad.getInt("AltOlyStartPoints", 10);
-			ALT_OLY_WEEKLY_POINTS = Olympiad.getInt("AltOlyWeeklyPoints", 10);
-			ALT_OLY_CLASSED = Olympiad.getInt("AltOlyClassedParticipants", 11);
-			ALT_OLY_NONCLASSED = Olympiad.getInt("AltOlyNonClassedParticipants", 11);
-			ALT_OLY_TEAMS = Olympiad.getInt("AltOlyTeamsParticipants", 6);
+			ALT_OLY_CLASSED = Olympiad.getInt("AltOlyClassedParticipants", 5);
+			ALT_OLY_NONCLASSED = Olympiad.getInt("AltOlyNonClassedParticipants", 9);
 			ALT_OLY_REG_DISPLAY = Olympiad.getInt("AltOlyRegistrationDisplayNumber", 100);
-			ALT_OLY_CLASSED_REWARD = parseItemsList(Olympiad.getString("AltOlyClassedReward", "13722,50"));
-			ALT_OLY_NONCLASSED_REWARD = parseItemsList(Olympiad.getString("AltOlyNonClassedReward", "13722,40"));
-			ALT_OLY_TEAM_REWARD = parseItemsList(Olympiad.getString("AltOlyTeamReward", "13722,85"));
+			ALT_OLY_BATTLE_REWARD_ITEM = Olympiad.getInt("AltOlyBattleRewItem", 6651);
+			ALT_OLY_CLASSED_RITEM_C = Olympiad.getInt("AltOlyClassedRewItemCount", 50);
+			ALT_OLY_NONCLASSED_RITEM_C = Olympiad.getInt("AltOlyNonClassedRewItemCount", 40);
 			ALT_OLY_COMP_RITEM = Olympiad.getInt("AltOlyCompRewItem", 13722);
-			ALT_OLY_MIN_MATCHES = Olympiad.getInt("AltOlyMinMatchesForPoints", 15);
 			ALT_OLY_GP_PER_POINT = Olympiad.getInt("AltOlyGPPerPoint", 1000);
-			ALT_OLY_HERO_POINTS = Olympiad.getInt("AltOlyHeroPoints", 200);
-			ALT_OLY_RANK1_POINTS = Olympiad.getInt("AltOlyRank1Points", 100);
-			ALT_OLY_RANK2_POINTS = Olympiad.getInt("AltOlyRank2Points", 75);
+			ALT_OLY_HERO_POINTS = Olympiad.getInt("AltOlyHeroPoints", 180);
+			ALT_OLY_RANK1_POINTS = Olympiad.getInt("AltOlyRank1Points", 120);
+			ALT_OLY_RANK2_POINTS = Olympiad.getInt("AltOlyRank2Points", 80);
 			ALT_OLY_RANK3_POINTS = Olympiad.getInt("AltOlyRank3Points", 55);
-			ALT_OLY_RANK4_POINTS = Olympiad.getInt("AltOlyRank4Points", 40);
-			ALT_OLY_RANK5_POINTS = Olympiad.getInt("AltOlyRank5Points", 30);
+			ALT_OLY_RANK4_POINTS = Olympiad.getInt("AltOlyRank4Points", 35);
+			ALT_OLY_RANK5_POINTS = Olympiad.getInt("AltOlyRank5Points", 20);
 			ALT_OLY_MAX_POINTS = Olympiad.getInt("AltOlyMaxPoints", 10);
-			ALT_OLY_DIVIDER_CLASSED = Olympiad.getInt("AltOlyDividerClassed", 5);
-			ALT_OLY_DIVIDER_NON_CLASSED = Olympiad.getInt("AltOlyDividerNonClassed", 5);
-			ALT_OLY_MAX_WEEKLY_MATCHES = Olympiad.getInt("AltOlyMaxWeeklyMatches", 70);
-			ALT_OLY_MAX_WEEKLY_MATCHES_NON_CLASSED = Olympiad.getInt("AltOlyMaxWeeklyMatchesNonClassed", 60);
-			ALT_OLY_MAX_WEEKLY_MATCHES_CLASSED = Olympiad.getInt("AltOlyMaxWeeklyMatchesClassed", 30);
-			ALT_OLY_MAX_WEEKLY_MATCHES_TEAM = Olympiad.getInt("AltOlyMaxWeeklyMatchesTeam", 10);
 			ALT_OLY_LOG_FIGHTS = Olympiad.getBoolean("AltOlyLogFights", false);
 			ALT_OLY_SHOW_MONTHLY_WINNERS = Olympiad.getBoolean("AltOlyShowMonthlyWinners", true);
 			ALT_OLY_ANNOUNCE_GAMES = Olympiad.getBoolean("AltOlyAnnounceGames", true);
-			final String[] olyRestrictedItems = Olympiad.getString("AltOlyRestrictedItems", "6611,6612,6613,6614,6615,6616,6617,6618,6619,6620,6621,9388,9389,9390,17049,17050,17051,17052,17053,17054,17055,17056,17057,17058,17059,17060,17061,20759,20775,20776,20777,20778,14774").split(",");
+			String[] olyRestrictedItems = Olympiad.getString("AltOlyRestrictedItems", "6611,6612,6613,6614,6615,6616,6617,6618,6619,6620,6621,9388,9389,9390,17049,17050,17051,17052,17053,17054,17055,17056,17057,17058,17059,17060,17061,20759,20775,20776,20777,20778,14774").split(",");
 			LIST_OLY_RESTRICTED_ITEMS = new ArrayList<>(olyRestrictedItems.length);
 			for (String id : olyRestrictedItems)
 			{
 				LIST_OLY_RESTRICTED_ITEMS.add(Integer.parseInt(id));
 			}
 			ALT_OLY_ENCHANT_LIMIT = Olympiad.getInt("AltOlyEnchantLimit", -1);
-			ALT_OLY_WAIT_TIME = Olympiad.getInt("AltOlyWaitTime", 120);
+			ALT_OLY_WAIT_TIME = Olympiad.getByte("AltOlyWaitTime", (byte) 120);
+			if ((ALT_OLY_WAIT_TIME != 120) && (ALT_OLY_WAIT_TIME != 60) && (ALT_OLY_WAIT_TIME != 30) && (ALT_OLY_WAIT_TIME != 15) && (ALT_OLY_WAIT_TIME != 5))
+			{
+				ALT_OLY_WAIT_TIME = 120;
+			}
 			ALT_OLY_USE_CUSTOM_PERIOD_SETTINGS = Olympiad.getBoolean("AltOlyUseCustomPeriodSettings", false);
 			ALT_OLY_PERIOD = Olympiad.getString("AltOlyPeriod", "MONTH");
 			ALT_OLY_PERIOD_MULTIPLIER = Olympiad.getInt("AltOlyPeriodMultiplier", 1);
@@ -2555,6 +2543,9 @@ public class Config
 			
 			QUEEN_ANT_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfQueenAntSpawn", 36);
 			QUEEN_ANT_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfQueenAntSpawn", 17);
+			
+			FRINTEZZA_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfFrintezzaSpawn", 48);
+			FRINTEZZA_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfFrintezzaSpawn", 8);
 			
 			BELETH_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfBelethSpawn", 192);
 			BELETH_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfBelethSpawn", 148);
@@ -3615,58 +3606,6 @@ public class Config
 			ret.put(i++, Float.parseFloat(value));
 		}
 		return ret;
-	}
-	
-	/**
-	 * Parse a config value from its string representation to a two-dimensional int array.<br>
-	 * The format of the value to be parsed should be as follows: "item1Id,item1Amount;item2Id,item2Amount;...itemNId,itemNAmount".
-	 * @param line the value of the parameter to parse
-	 * @return the parsed list or {@code null} if nothing was parsed
-	 */
-	private static int[][] parseItemsList(String line)
-	{
-		final String[] propertySplit = line.split(";");
-		if (propertySplit.length == 0)
-		{
-			// nothing to do here
-			return null;
-		}
-		
-		int i = 0;
-		String[] valueSplit;
-		final int[][] result = new int[propertySplit.length][];
-		int[] tmp;
-		for (String value : propertySplit)
-		{
-			valueSplit = value.split(",");
-			if (valueSplit.length != 2)
-			{
-				LOGGER.warning("parseItemsList[Config.load()]: invalid entry -> \"" + valueSplit[0] + "\", should be itemId,itemNumber. Skipping to the next entry in the list.");
-				continue;
-			}
-			
-			tmp = new int[2];
-			try
-			{
-				tmp[0] = Integer.parseInt(valueSplit[0]);
-			}
-			catch (NumberFormatException e)
-			{
-				LOGGER.warning("parseItemsList[Config.load()]: invalid itemId -> \"" + valueSplit[0] + "\", value must be an integer. Skipping to the next entry in the list.");
-				continue;
-			}
-			try
-			{
-				tmp[1] = Integer.parseInt(valueSplit[1]);
-			}
-			catch (NumberFormatException e)
-			{
-				LOGGER.warning("parseItemsList[Config.load()]: invalid item number -> \"" + valueSplit[1] + "\", value must be an integer. Skipping to the next entry in the list.");
-				continue;
-			}
-			result[i++] = tmp;
-		}
-		return result;
 	}
 	
 	private static class IPConfigData implements IXmlReader

@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="21700" level="40" type="RiftInvader" name="Dimension Invader Elite Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -53,8 +52,10 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="1702" max="3397" chance="70" /> <!-- Adena -->
+				<item id="6668" min="3" max="9" chance="41.219898223877" /> <!-- Deluxe Chest Key - Grade 4 -->
 			</drop>
 			<spoil>
+				<item id="6668" min="1" max="3" chance="72.8069" /> <!-- Deluxe Chest Key - Grade 4 -->
 				<item id="6036" min="1" max="1" chance="13.5906" /> <!-- Greater Magic Haste Potion -->
 				<item id="1902" min="1" max="1" chance="41.3089" /> <!-- Elven Earring Beads -->
 			</spoil>
@@ -65,7 +66,6 @@
 		</collision>
 	</npc>
 	<npc id="21701" level="43" type="RiftInvader" name="Dimension Invader Elite Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -117,8 +117,10 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="1889" max="3837" chance="70" /> <!-- Adena -->
+				<item id="6668" min="3" max="9" chance="47.8838996887207" /> <!-- Deluxe Chest Key - Grade 4 -->
 			</drop>
 			<spoil>
+				<item id="6668" min="1" max="3" chance="85.3195" /> <!-- Deluxe Chest Key - Grade 4 -->
 				<item id="1905" min="1" max="1" chance="46.4775" /> <!-- Omen Beast's Eye Earring Gemstone -->
 				<item id="2160" min="1" max="1" chance="30.8251" /> <!-- Recipe: Moonstone Earring -->
 			</spoil>
@@ -129,7 +131,6 @@
 		</collision>
 	</npc>
 	<npc id="21702" level="40" type="RiftInvader" name="Dimension Invader Elite Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -185,8 +186,8 @@
 				<item id="1942" min="1" max="1" chance="2.6495666885004" /> <!-- Manticore Skin Shirt Texture -->
 				<item id="417" min="1" max="1" chance="0.09646295576334" /> <!-- Manticore Skin Gaiters -->
 				<item id="1943" min="1" max="1" chance="4.125869315835" /> <!-- Manticore Skin Gaiters Pattern -->
-				<item id="952" min="1" max="1" chance="1.38520801544189" /> <!-- Scroll: Enchant Armor (C-Grade) -->
-				<item id="951" min="1" max="1" chance="0.188892002105713" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
+				<item id="952" min="1" max="1" chance="1.38520801544189" /> <!-- Scroll: Enchant Armor (C) -->
+				<item id="951" min="1" max="1" chance="0.188892002105713" /> <!-- Scroll: Enchant Weapon (C) -->
 			</drop>
 			<spoil>
 				<item id="1902" min="1" max="1" chance="40.7248" /> <!-- Elven Earring Beads -->
@@ -200,7 +201,6 @@
 		</collision>
 	</npc>
 	<npc id="21703" level="45" type="RiftInvader" name="Dimension Invader Elite Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -258,16 +258,16 @@
 				<item id="2945" min="1" max="1" chance="3.28488291081905" /> <!-- Chain Shield Fragment -->
 				<item id="2413" min="1" max="1" chance="0.0557976738739014" /> <!-- Chain Hood -->
 				<item id="2936" min="1" max="1" chance="2.98351490719795" /> <!-- Chain Hood Pattern -->
-				<item id="951" min="1" max="1" chance="0.0739141573505402" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
-				<item id="952" min="1" max="1" chance="0.542042548704147" /> <!-- Scroll: Enchant Armor (C-Grade) -->
-				<item id="8723" min="1" max="1" chance="1.62612764611244" /> <!-- Life Stone - Level 46 -->
-				<item id="8733" min="1" max="1" chance="0.406530562828064" /> <!-- Mid-Grade Life Stone - Level 46 -->
-				<item id="8743" min="1" max="1" chance="0.0406525168027878" /> <!-- High-Grade Life Stone - Level 46 -->
-				<item id="8753" min="1" max="1" chance="0.00813266128063202" /> <!-- Top-Grade Life Stone - Level 46 -->
+				<item id="951" min="1" max="1" chance="0.0739141573505402" /> <!-- Scroll: Enchant Weapon (C) -->
+				<item id="952" min="1" max="1" chance="0.542042548704147" /> <!-- Scroll: Enchant Armor (C) -->
+				<item id="8723" min="1" max="1" chance="1.62612764611244" /> <!-- Life Stone: level 46 -->
+				<item id="8733" min="1" max="1" chance="0.406530562828064" /> <!-- Mid-Grade Life Stone: level 46 -->
+				<item id="8743" min="1" max="1" chance="0.0406525168027878" /> <!-- High-Grade Life Stone: level 46 -->
+				<item id="8753" min="1" max="1" chance="0.00813266128063202" /> <!-- Top-Grade Life Stone: level 46 -->
 			</drop>
 			<spoil>
-				<item id="951" min="1" max="1" chance="0.9384" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
-				<item id="952" min="1" max="1" chance="6.8813" /> <!-- Scroll: Enchant Armor (C-Grade) -->
+				<item id="951" min="1" max="1" chance="0.9384" /> <!-- Scroll: Enchant Weapon (C) -->
+				<item id="952" min="1" max="1" chance="6.8813" /> <!-- Scroll: Enchant Armor (C) -->
 				<item id="2163" min="1" max="1" chance="26.3316" /> <!-- Recipe: Earring of Protection -->
 			</spoil>
 		</dropLists>
@@ -277,7 +277,6 @@
 		</collision>
 	</npc>
 	<npc id="21704" level="43" type="RiftInvader" name="Dimension Invader Magus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -342,12 +341,12 @@
 				<item id="1963" min="1" max="1" chance="2.12759359395313" /> <!-- Ogre Power Gauntlets Part -->
 				<item id="2451" min="1" max="1" chance="0.0506977556619644" /> <!-- Sage's Worn Gloves -->
 				<item id="2933" min="1" max="1" chance="2.12764587315464" /> <!-- Sage's Worn Gloves Lining -->
-				<item id="951" min="1" max="1" chance="0.207948002815247" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
-				<item id="952" min="1" max="1" chance="1.52495202064514" /> <!-- Scroll: Enchant Armor (C-Grade) -->
+				<item id="951" min="1" max="1" chance="0.207948002815247" /> <!-- Scroll: Enchant Weapon (C) -->
+				<item id="952" min="1" max="1" chance="1.52495202064514" /> <!-- Scroll: Enchant Armor (C) -->
 			</drop>
 			<spoil>
-				<item id="951" min="1" max="1" chance="0.8282" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
-				<item id="952" min="1" max="1" chance="6.0738" /> <!-- Scroll: Enchant Armor (C-Grade) -->
+				<item id="951" min="1" max="1" chance="0.8282" /> <!-- Scroll: Enchant Weapon (C) -->
+				<item id="952" min="1" max="1" chance="6.0738" /> <!-- Scroll: Enchant Armor (C) -->
 				<item id="1905" min="1" max="1" chance="44.3126" /> <!-- Omen Beast's Eye Earring Gemstone -->
 			</spoil>
 		</dropLists>
@@ -357,7 +356,6 @@
 		</collision>
 	</npc>
 	<npc id="21705" level="50" type="RiftInvader" name="Purgatory Invader Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="50" />
 			<param name="MoveAroundSocial1" value="50" />
@@ -428,14 +426,14 @@
 				<item id="1875" min="1" max="1" chance="0.961464404449463" /> <!-- Stone of Purity -->
 				<item id="4041" min="1" max="1" chance="0.125399200210571" /> <!-- Mold Hardener -->
 				<item id="2170" min="1" max="1" chance="0.34013951133728" /> <!-- Recipe: Nassen's Earring -->
-				<item id="8725" min="1" max="1" chance="0.400617222137451" /> <!-- Life Stone - Level 52 -->
-				<item id="8735" min="1" max="1" chance="0.100133144683838" /> <!-- Mid-Grade Life Stone - Level 52 -->
-				<item id="8745" min="1" max="1" chance="0.0100302431488037" /> <!-- High-Grade Life Stone - Level 52 -->
-				<item id="8755" min="1" max="1" chance="0.00207376335144043" /> <!-- Top-Grade Life Stone - Level 52 -->
+				<item id="8725" min="1" max="1" chance="0.400617222137451" /> <!-- Life Stone: level 52 -->
+				<item id="8735" min="1" max="1" chance="0.100133144683838" /> <!-- Mid-Grade Life Stone: level 52 -->
+				<item id="8745" min="1" max="1" chance="0.0100302431488037" /> <!-- High-Grade Life Stone: level 52 -->
+				<item id="8755" min="1" max="1" chance="0.00207376335144043" /> <!-- Top-Grade Life Stone: level 52 -->
 			</drop>
 			<spoil>
-				<item id="1914" min="1" max="1" chance="19.5926" /> <!-- Earring of Seal Gemstone -->
-				<item id="2169" min="1" max="1" chance="6.1725" /> <!-- Recipe: Necklace of Seal -->
+				<item id="1914" min="1" max="1" chance="19.5926" /> <!-- Earring of Binding Gemstone -->
+				<item id="2169" min="1" max="1" chance="6.1725" /> <!-- Recipe: Necklace of Binding -->
 				<item id="1915" min="1" max="1" chance="30.7267" /> <!-- Ring of Ages Gemstone -->
 			</spoil>
 		</dropLists>
@@ -445,7 +443,6 @@
 		</collision>
 	</npc>
 	<npc id="21706" level="55" type="RiftInvader" name="Purgatory Invader Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="50" />
 			<param name="MoveAroundSocial1" value="50" />
@@ -509,10 +506,10 @@
 				<item id="4039" min="1" max="1" chance="0.498945850914001" /> <!-- Mold Glue -->
 				<item id="4143" min="1" max="1" chance="0.0959423779220581" /> <!-- Recipe: Zubei's Leather Shirt (100%) -->
 				<item id="4971" min="1" max="1" chance="0.0172520835342407" /> <!-- Recipe: Dark Elven Long Bow (60%) -->
-				<item id="8726" min="1" max="1" chance="0.346503711662292" /> <!-- Life Stone - Level 55 -->
-				<item id="8736" min="1" max="1" chance="0.0866178054656983" /> <!-- Mid-Grade Life Stone - Level 55 -->
-				<item id="8746" min="1" max="1" chance="0.00867477646636963" /> <!-- High-Grade Life Stone - Level 55 -->
-				<item id="8756" min="1" max="1" chance="0.00172195937347412" /> <!-- Top-Grade Life Stone - Level 55 -->
+				<item id="8726" min="1" max="1" chance="0.346503711662292" /> <!-- Life Stone: level 55 -->
+				<item id="8736" min="1" max="1" chance="0.0866178054656983" /> <!-- Mid-Grade Life Stone: level 55 -->
+				<item id="8746" min="1" max="1" chance="0.00867477646636963" /> <!-- High-Grade Life Stone: level 55 -->
+				<item id="8756" min="1" max="1" chance="0.00172195937347412" /> <!-- Top-Grade Life Stone: level 55 -->
 			</drop>
 			<spoil>
 				<item id="4039" min="1" max="1" chance="14.8647" /> <!-- Mold Glue -->
@@ -526,7 +523,6 @@
 		</collision>
 	</npc>
 	<npc id="21707" level="53" type="RiftInvader" name="Purgatory Invader Archer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="157" />
 			<param name="MoveAroundSocial1" value="157" />
@@ -580,18 +576,18 @@
 				<item id="2121" min="1" max="1" chance="0.301616867823392" /> <!-- Eminence Bow Shaft -->
 				<item id="1875" min="1" max="1" chance="0.874430354056835" /> <!-- Stone of Purity -->
 				<item id="1879" min="1" max="1" chance="2.18607282034206" /> <!-- Cokes -->
-				<item id="1885" min="1" max="1" chance="1.09303641017103" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="1.09303641017103" /> <!-- High Grade Suede -->
 				<item id="5550" min="1" max="1" chance="0.174883618971348" /> <!-- Durable Metal Plate -->
 				<item id="5549" min="1" max="1" chance="1.31164246628523" /> <!-- Metallic Thread -->
 				<item id="4134" min="1" max="1" chance="0.100893216791153" /> <!-- Recipe: Zubei's Gaiters (100%) -->
-				<item id="8726" min="1" max="1" chance="0.303623608780861" /> <!-- Life Stone - Level 55 -->
-				<item id="8736" min="1" max="1" chance="0.0759028373951912" /> <!-- Mid-Grade Life Stone - Level 55 -->
-				<item id="8746" min="1" max="1" chance="0.0075884448595047" /> <!-- High-Grade Life Stone - Level 55 -->
-				<item id="8756" min="1" max="1" chance="0.00152627041196823" /> <!-- Top-Grade Life Stone - Level 55 -->
+				<item id="8726" min="1" max="1" chance="0.303623608780861" /> <!-- Life Stone: level 55 -->
+				<item id="8736" min="1" max="1" chance="0.0759028373951912" /> <!-- Mid-Grade Life Stone: level 55 -->
+				<item id="8746" min="1" max="1" chance="0.0075884448595047" /> <!-- High-Grade Life Stone: level 55 -->
+				<item id="8756" min="1" max="1" chance="0.00152627041196823" /> <!-- Top-Grade Life Stone: level 55 -->
 			</drop>
 			<spoil>
-				<item id="1885" min="1" max="1" chance="29.6029" /> <!-- High-Grade Suede -->
-				<item id="1920" min="1" max="1" chance="12.1552" /> <!-- Necklace of Seal Chain -->
+				<item id="1885" min="1" max="1" chance="29.6029" /> <!-- High Grade Suede -->
+				<item id="1920" min="1" max="1" chance="12.1552" /> <!-- Necklace of Binding Chain -->
 				<item id="3034" min="1" max="1" chance="0.7105" /> <!-- Recipe: Spiritshot B -->
 			</spoil>
 		</dropLists>
@@ -601,7 +597,6 @@
 		</collision>
 	</npc>
 	<npc id="21708" level="55" type="RiftInvader" name="Purgatory Invader Elite Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -664,10 +659,10 @@
 				<item id="4039" min="1" max="1" chance="0.428627729232788" /> <!-- Mold Glue -->
 				<item id="4144" min="1" max="1" chance="0.132148296943665" /> <!-- Recipe: Zubei's Leather Gaiters (100%) -->
 				<item id="4972" min="1" max="1" chance="0.01481999842453" /> <!-- Recipe: Great Axe (60%) -->
-				<item id="8726" min="1" max="1" chance="0.297671389266968" /> <!-- Life Stone - Level 55 -->
-				<item id="8736" min="1" max="1" chance="0.0744178473167419" /> <!-- Mid-Grade Life Stone - Level 55 -->
-				<item id="8746" min="1" max="1" chance="0.00742986516189575" /> <!-- High-Grade Life Stone - Level 55 -->
-				<item id="8756" min="1" max="1" chance="0.00150981217193604" /> <!-- Top-Grade Life Stone - Level 55 -->
+				<item id="8726" min="1" max="1" chance="0.297671389266968" /> <!-- Life Stone: level 55 -->
+				<item id="8736" min="1" max="1" chance="0.0744178473167419" /> <!-- Mid-Grade Life Stone: level 55 -->
+				<item id="8746" min="1" max="1" chance="0.00742986516189575" /> <!-- High-Grade Life Stone: level 55 -->
+				<item id="8756" min="1" max="1" chance="0.00150981217193604" /> <!-- Top-Grade Life Stone: level 55 -->
 			</drop>
 			<spoil>
 				<item id="4142" min="1" max="1" chance="2.9469" /> <!-- Recipe: Avadon Gaiters (100%) -->
@@ -681,7 +676,6 @@
 		</collision>
 	</npc>
 	<npc id="21709" level="53" type="RiftInvader" name="Purgatory Invader Shaman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -753,10 +747,10 @@
 				<item id="4042" min="1" max="1" chance="0.26559462387085" /> <!-- Enria -->
 				<item id="4043" min="1" max="1" chance="0.531189247741699" /> <!-- Asofe -->
 				<item id="3955" min="1" max="1" chance="0.0318691327285767" /> <!-- Recipe: Blessed Spiritshot B -->
-				<item id="8726" min="1" max="1" chance="0.368880736198425" /> <!-- Life Stone - Level 55 -->
-				<item id="8736" min="1" max="1" chance="0.0922186408996582" /> <!-- Mid-Grade Life Stone - Level 55 -->
-				<item id="8746" min="1" max="1" chance="0.00922186408996582" /> <!-- High-Grade Life Stone - Level 55 -->
-				<item id="8756" min="1" max="1" chance="0.00185177993774414" /> <!-- Top-Grade Life Stone - Level 55 -->
+				<item id="8726" min="1" max="1" chance="0.368880736198425" /> <!-- Life Stone: level 55 -->
+				<item id="8736" min="1" max="1" chance="0.0922186408996582" /> <!-- Mid-Grade Life Stone: level 55 -->
+				<item id="8746" min="1" max="1" chance="0.00922186408996582" /> <!-- High-Grade Life Stone: level 55 -->
+				<item id="8756" min="1" max="1" chance="0.00185177993774414" /> <!-- Top-Grade Life Stone: level 55 -->
 			</drop>
 			<spoil>
 				<item id="1984" min="1" max="1" chance="8.3265" /> <!-- Theca Leather Armor Pattern -->
@@ -770,7 +764,6 @@
 		</collision>
 	</npc>
 	<npc id="21710" level="50" type="RiftInvader" name="Purgatory Invader Priest">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -836,10 +829,10 @@
 				<item id="4041" min="1" max="1" chance="0.0737763873653412" /> <!-- Mold Hardener -->
 				<item id="4040" min="1" max="1" chance="0.169704334180832" /> <!-- Mold Lubricant -->
 				<item id="2231" min="1" max="1" chance="0.036574648273468" /> <!-- Recipe: Full Plate Armor -->
-				<item id="8725" min="1" max="1" chance="0.23570140571785" /> <!-- Life Stone - Level 52 -->
-				<item id="8735" min="1" max="1" chance="0.0589295885295868" /> <!-- Mid-Grade Life Stone - Level 52 -->
-				<item id="8745" min="1" max="1" chance="0.00589804337310791" /> <!-- High-Grade Life Stone - Level 52 -->
-				<item id="8755" min="1" max="1" chance="0.00118638803482056" /> <!-- Top-Grade Life Stone - Level 52 -->
+				<item id="8725" min="1" max="1" chance="0.23570140571785" /> <!-- Life Stone: level 52 -->
+				<item id="8735" min="1" max="1" chance="0.0589295885295868" /> <!-- Mid-Grade Life Stone: level 52 -->
+				<item id="8745" min="1" max="1" chance="0.00589804337310791" /> <!-- High-Grade Life Stone: level 52 -->
+				<item id="8755" min="1" max="1" chance="0.00118638803482056" /> <!-- Top-Grade Life Stone: level 52 -->
 				<item id="1539" min="1" max="1" chance="1.88552650374031" /> <!-- Greater Healing Potion -->
 			</drop>
 			<spoil>
@@ -854,7 +847,6 @@
 		</collision>
 	</npc>
 	<npc id="21711" level="55" type="RiftInvader" name="Purgatory Invader Magus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -926,10 +918,10 @@
 				<item id="4040" min="1" max="1" chance="0.227761249206543" /> <!-- Mold Lubricant -->
 				<item id="4145" min="1" max="1" chance="0.0499437512645721" /> <!-- Recipe: Avadon Leather Armor (100%) -->
 				<item id="4972" min="1" max="1" chance="0.0131261130695343" /> <!-- Recipe: Great Axe (60%) -->
-				<item id="8726" min="1" max="1" chance="0.263611063396454" /> <!-- Life Stone - Level 55 -->
-				<item id="8736" min="1" max="1" chance="0.0659128473491669" /> <!-- Mid-Grade Life Stone - Level 55 -->
-				<item id="8746" min="1" max="1" chance="0.00659330103492737" /> <!-- High-Grade Life Stone - Level 55 -->
-				<item id="8756" min="1" max="1" chance="0.00131059500694275" /> <!-- Top-Grade Life Stone - Level 55 -->
+				<item id="8726" min="1" max="1" chance="0.263611063396454" /> <!-- Life Stone: level 55 -->
+				<item id="8736" min="1" max="1" chance="0.0659128473491669" /> <!-- Mid-Grade Life Stone: level 55 -->
+				<item id="8746" min="1" max="1" chance="0.00659330103492737" /> <!-- High-Grade Life Stone: level 55 -->
+				<item id="8756" min="1" max="1" chance="0.00131059500694275" /> <!-- Top-Grade Life Stone: level 55 -->
 			</drop>
 			<spoil>
 				<item id="2119" min="1" max="1" chance="1.546" /> <!-- Crystal Dagger Blade -->
@@ -943,7 +935,6 @@
 		</collision>
 	</npc>
 	<npc id="21712" level="50" type="RiftInvader" name="Purgatory Invader Martyrs">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -997,8 +988,8 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="1120" max="2277" chance="70" /> <!-- Adena -->
-				<item id="854" min="1" max="1" chance="0.0172235451478958" /> <!-- Earring of Seal -->
-				<item id="1914" min="1" max="1" chance="1.09619184614182" /> <!-- Earring of Seal Gemstone -->
+				<item id="854" min="1" max="1" chance="0.0172235451478958" /> <!-- Earring of Binding -->
+				<item id="1914" min="1" max="1" chance="1.09619184614182" /> <!-- Earring of Binding Gemstone -->
 				<item id="917" min="1" max="1" chance="0.0129185842609406" /> <!-- Necklace of Mermaid -->
 				<item id="1916" min="1" max="1" chance="0.830305912771225" /> <!-- Necklace of Mermaid Teardrop -->
 				<item id="885" min="1" max="1" chance="0.0258260637216568" /> <!-- Ring of Ages -->
@@ -1009,10 +1000,10 @@
 				<item id="1889" min="1" max="1" chance="0.780572255020142" /> <!-- Compound Braid -->
 				<item id="4044" min="1" max="1" chance="0.390286127510071" /> <!-- Thons -->
 				<item id="2232" min="1" max="1" chance="0.0672949772949219" /> <!-- Recipe: Drake Leather Armor -->
-				<item id="8725" min="1" max="1" chance="0.325248748258591" /> <!-- Life Stone - Level 52 -->
-				<item id="8735" min="1" max="1" chance="0.0813044555644989" /> <!-- Mid-Grade Life Stone - Level 52 -->
-				<item id="8745" min="1" max="1" chance="0.0081335381565094" /> <!-- High-Grade Life Stone - Level 52 -->
-				<item id="8755" min="1" max="1" chance="0.00163907803153992" /> <!-- Top-Grade Life Stone - Level 52 -->
+				<item id="8725" min="1" max="1" chance="0.325248748258591" /> <!-- Life Stone: level 52 -->
+				<item id="8735" min="1" max="1" chance="0.0813044555644989" /> <!-- Mid-Grade Life Stone: level 52 -->
+				<item id="8745" min="1" max="1" chance="0.0081335381565094" /> <!-- High-Grade Life Stone: level 52 -->
+				<item id="8755" min="1" max="1" chance="0.00163907803153992" /> <!-- Top-Grade Life Stone: level 52 -->
 			</drop>
 			<spoil>
 				<item id="5549" min="1" max="1" chance="28.3133" /> <!-- Metallic Thread -->
@@ -1026,7 +1017,6 @@
 		</collision>
 	</npc>
 	<npc id="21713" level="53" type="RiftInvader" name="Purgatory Invader Warrior">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -1087,10 +1077,10 @@
 				<item id="4043" min="1" max="1" chance="0.386584898471832" /> <!-- Asofe -->
 				<item id="4039" min="1" max="1" chance="0.386584898471832" /> <!-- Mold Glue -->
 				<item id="4126" min="1" max="1" chance="0.191371404886246" /> <!-- Recipe: Adamantite Earrings (100%) -->
-				<item id="8726" min="1" max="1" chance="0.26846594786644" /> <!-- Life Stone - Level 55 -->
-				<item id="8736" min="1" max="1" chance="0.0671101677417755" /> <!-- Mid-Grade Life Stone - Level 55 -->
-				<item id="8746" min="1" max="1" chance="0.00672365522384644" /> <!-- High-Grade Life Stone - Level 55 -->
-				<item id="8756" min="1" max="1" chance="0.0013649525642395" /> <!-- Top-Grade Life Stone - Level 55 -->
+				<item id="8726" min="1" max="1" chance="0.26846594786644" /> <!-- Life Stone: level 55 -->
+				<item id="8736" min="1" max="1" chance="0.0671101677417755" /> <!-- Mid-Grade Life Stone: level 55 -->
+				<item id="8746" min="1" max="1" chance="0.00672365522384644" /> <!-- High-Grade Life Stone: level 55 -->
+				<item id="8756" min="1" max="1" chance="0.0013649525642395" /> <!-- Top-Grade Life Stone: level 55 -->
 			</drop>
 			<spoil>
 				<item id="1874" min="1" max="1" chance="20.9404" /> <!-- Oriharukon Ore -->
@@ -1104,7 +1094,6 @@
 		</collision>
 	</npc>
 	<npc id="21714" level="50" type="RiftInvader" name="Purgatory Invader Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="50" />
 			<param name="MoveAroundSocial1" value="50" />
@@ -1167,11 +1156,11 @@
 				<item id="4042" min="1" max="1" chance="0.205447790536881" /> <!-- Enria -->
 				<item id="4043" min="1" max="1" chance="0.410890205673695" /> <!-- Asofe -->
 				<item id="2233" min="1" max="1" chance="0.115205574222565" /> <!-- Recipe: Divine Tunic -->
-				<item id="2970" min="1" max="1" chance="0.437116782597542" /> <!-- Recipe: Ring of Seal -->
-				<item id="8725" min="1" max="1" chance="0.342407608828068" /> <!-- Life Stone - Level 52 -->
-				<item id="8735" min="1" max="1" chance="0.0856032460570335" /> <!-- Mid-Grade Life Stone - Level 52 -->
-				<item id="8745" min="1" max="1" chance="0.00855763690567017" /> <!-- High-Grade Life Stone - Level 52 -->
-				<item id="8755" min="1" max="1" chance="0.00171475262117386" /> <!-- Top-Grade Life Stone - Level 52 -->
+				<item id="2970" min="1" max="1" chance="0.437116782597542" /> <!-- Recipe: Ring of Binding -->
+				<item id="8725" min="1" max="1" chance="0.342407608828068" /> <!-- Life Stone: level 52 -->
+				<item id="8735" min="1" max="1" chance="0.0856032460570335" /> <!-- Mid-Grade Life Stone: level 52 -->
+				<item id="8745" min="1" max="1" chance="0.00855763690567017" /> <!-- High-Grade Life Stone: level 52 -->
+				<item id="8755" min="1" max="1" chance="0.00171475262117386" /> <!-- Top-Grade Life Stone: level 52 -->
 			</drop>
 			<spoil>
 				<item id="1977" min="1" max="1" chance="4.4094" /> <!-- Composite Armor Temper -->
@@ -1185,7 +1174,6 @@
 		</collision>
 	</npc>
 	<npc id="21715" level="53" type="RiftInvader" name="Purgatory Invader Disciples">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -1248,10 +1236,10 @@
 				<item id="1894" min="1" max="1" chance="0.428500712985992" /> <!-- Crafted Leather -->
 				<item id="4042" min="1" max="1" chance="0.203551555080414" /> <!-- Enria -->
 				<item id="4127" min="1" max="1" chance="0.30230972196579" /> <!-- Recipe: Adamantite Ring (100%) -->
-				<item id="8726" min="1" max="1" chance="0.2827043969841" /> <!-- Life Stone - Level 55 -->
-				<item id="8736" min="1" max="1" chance="0.0706669549713135" /> <!-- Mid-Grade Life Stone - Level 55 -->
-				<item id="8746" min="1" max="1" chance="0.00705938007736206" /> <!-- High-Grade Life Stone - Level 55 -->
-				<item id="8756" min="1" max="1" chance="0.00138992975616455" /> <!-- Top-Grade Life Stone - Level 55 -->
+				<item id="8726" min="1" max="1" chance="0.2827043969841" /> <!-- Life Stone: level 55 -->
+				<item id="8736" min="1" max="1" chance="0.0706669549713135" /> <!-- Mid-Grade Life Stone: level 55 -->
+				<item id="8746" min="1" max="1" chance="0.00705938007736206" /> <!-- High-Grade Life Stone: level 55 -->
+				<item id="8756" min="1" max="1" chance="0.00138992975616455" /> <!-- Top-Grade Life Stone: level 55 -->
 			</drop>
 			<spoil>
 				<item id="4126" min="1" max="1" chance="5.4581" /> <!-- Recipe: Adamantite Earrings (100%) -->
@@ -1265,7 +1253,6 @@
 		</collision>
 	</npc>
 	<npc id="21716" level="55" type="RiftInvader" name="Purgatory Invader Berserker">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -1329,10 +1316,10 @@
 				<item id="1889" min="1" max="1" chance="0.931016638202667" /> <!-- Compound Braid -->
 				<item id="5220" min="1" max="1" chance="0.558613403701782" /> <!-- Metal Hardener -->
 				<item id="4146" min="1" max="1" chance="0.0895218173599243" /> <!-- Recipe: Tunic of Zubei (100%) -->
-				<item id="8726" min="1" max="1" chance="0.32326372718811" /> <!-- Life Stone - Level 55 -->
-				<item id="8736" min="1" max="1" chance="0.0808159317970276" /> <!-- Mid-Grade Life Stone - Level 55 -->
-				<item id="8746" min="1" max="1" chance="0.00809014513015747" /> <!-- High-Grade Life Stone - Level 55 -->
-				<item id="8756" min="1" max="1" chance="0.00159066278457642" /> <!-- Top-Grade Life Stone - Level 55 -->
+				<item id="8726" min="1" max="1" chance="0.32326372718811" /> <!-- Life Stone: level 55 -->
+				<item id="8736" min="1" max="1" chance="0.0808159317970276" /> <!-- Mid-Grade Life Stone: level 55 -->
+				<item id="8746" min="1" max="1" chance="0.00809014513015747" /> <!-- High-Grade Life Stone: level 55 -->
+				<item id="8756" min="1" max="1" chance="0.00159066278457642" /> <!-- Top-Grade Life Stone: level 55 -->
 			</drop>
 			<spoil>
 				<item id="2120" min="1" max="1" chance="1.8168" /> <!-- Great Pata Blade -->
@@ -1346,7 +1333,6 @@
 		</collision>
 	</npc>
 	<npc id="21717" level="50" type="Chest" name="Purgatory Invader Food">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<acquire exp="3636" sp="274" />
@@ -1400,11 +1386,12 @@
 				<item id="4040" min="1" max="1" chance="0.0771976868343353" /> <!-- Mold Lubricant -->
 				<item id="2234" min="1" max="1" chance="0.0575320669746399" /> <!-- Recipe: Divine Stockings -->
 				<item id="3012" min="1" max="1" chance="0.0720085811185837" /> <!-- Recipe: Full Plate Helmet -->
-				<item id="8725" min="1" max="1" chance="0.107225935225487" /> <!-- Life Stone - Level 52 -->
-				<item id="8735" min="1" max="1" chance="0.0268025880813599" /> <!-- Mid-Grade Life Stone - Level 52 -->
-				<item id="8745" min="1" max="1" chance="0.00268025880813599" /> <!-- High-Grade Life Stone - Level 52 -->
-				<item id="8755" min="1" max="1" chance="0.000529818601608276" /> <!-- Top-Grade Life Stone - Level 52 -->
-				<item id="1342" min="10" max="30" chance="7.7199868440342" /> <!-- Steel Arrow -->
+				<item id="6669" min="1" max="1" chance="0.897668540124893" /> <!-- Deluxe Chest Key - Grade 5 -->
+				<item id="8725" min="1" max="1" chance="0.107225935225487" /> <!-- Life Stone: level 52 -->
+				<item id="8735" min="1" max="1" chance="0.0268025880813599" /> <!-- Mid-Grade Life Stone: level 52 -->
+				<item id="8745" min="1" max="1" chance="0.00268025880813599" /> <!-- High-Grade Life Stone: level 52 -->
+				<item id="8755" min="1" max="1" chance="0.000529818601608276" /> <!-- Top-Grade Life Stone: level 52 -->
+				<item id="1342" min="10" max="30" chance="7.7199868440342" /> <!-- Iron Arrow -->
 			</drop>
 			<spoil>
 				<item id="2232" min="1" max="1" chance="0.6974" /> <!-- Recipe: Drake Leather Armor -->
@@ -1418,7 +1405,6 @@
 		</collision>
 	</npc>
 	<npc id="21718" level="55" type="RiftInvader" name="Purgatory Invader Elite Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -1481,10 +1467,10 @@
 				<item id="4044" min="1" max="1" chance="0.890809042720795" /> <!-- Thons -->
 				<item id="4147" min="1" max="1" chance="0.274648217926025" /> <!-- Recipe: Stockings of Zubei (100%) -->
 				<item id="8311" min="1" max="1" chance="0.0203881579399109" /> <!-- Recipe: Kaim Vanul's Bones (100%) -->
-				<item id="8726" min="1" max="1" chance="0.618616172847748" /> <!-- Life Stone - Level 55 -->
-				<item id="8736" min="1" max="1" chance="0.1546430818367" /> <!-- Mid-Grade Life Stone - Level 55 -->
-				<item id="8746" min="1" max="1" chance="0.0154774618339539" /> <!-- High-Grade Life Stone - Level 55 -->
-				<item id="8756" min="1" max="1" chance="0.00306918506622314" /> <!-- Top-Grade Life Stone - Level 55 -->
+				<item id="8726" min="1" max="1" chance="0.618616172847748" /> <!-- Life Stone: level 55 -->
+				<item id="8736" min="1" max="1" chance="0.1546430818367" /> <!-- Mid-Grade Life Stone: level 55 -->
+				<item id="8746" min="1" max="1" chance="0.0154774618339539" /> <!-- High-Grade Life Stone: level 55 -->
+				<item id="8756" min="1" max="1" chance="0.00306918506622314" /> <!-- Top-Grade Life Stone: level 55 -->
 			</drop>
 			<spoil>
 				<item id="4145" min="1" max="1" chance="3.4919" /> <!-- Recipe: Avadon Leather Armor (100%) -->
@@ -1498,7 +1484,6 @@
 		</collision>
 	</npc>
 	<npc id="21719" level="55" type="RiftInvader" name="Purgatory Invader Elite Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -1570,14 +1555,14 @@
 				<item id="1895" min="1" max="1" chance="8.55809574264526" /> <!-- Metallic Fiber -->
 				<item id="4042" min="1" max="1" chance="0.499215912887573" /> <!-- Enria -->
 				<item id="4148" min="1" max="1" chance="0.131364601791382" /> <!-- Recipe: Avadon Robe (100%) -->
-				<item id="8726" min="1" max="1" chance="0.693372337944031" /> <!-- Life Stone - Level 55 -->
-				<item id="8736" min="1" max="1" chance="0.173352592636108" /> <!-- Mid-Grade Life Stone - Level 55 -->
-				<item id="8746" min="1" max="1" chance="0.0173428657836914" /> <!-- High-Grade Life Stone - Level 55 -->
-				<item id="8756" min="1" max="1" chance="0.00342293403625488" /> <!-- Top-Grade Life Stone - Level 55 -->
+				<item id="8726" min="1" max="1" chance="0.693372337944031" /> <!-- Life Stone: level 55 -->
+				<item id="8736" min="1" max="1" chance="0.173352592636108" /> <!-- Mid-Grade Life Stone: level 55 -->
+				<item id="8746" min="1" max="1" chance="0.0173428657836914" /> <!-- High-Grade Life Stone: level 55 -->
+				<item id="8756" min="1" max="1" chance="0.00342293403625488" /> <!-- Top-Grade Life Stone: level 55 -->
 			</drop>
 			<spoil>
 				<item id="1876" min="1" max="3" chance="81.1236" /> <!-- Mithril Ore -->
-				<item id="2917" min="1" max="1" chance="46.596" /> <!-- Ring of Seal Gemstone -->
+				<item id="2917" min="1" max="1" chance="46.596" /> <!-- Ring of Binding Gemstone -->
 				<item id="4146" min="1" max="1" chance="5.2002" /> <!-- Recipe: Tunic of Zubei (100%) -->
 			</spoil>
 		</dropLists>
@@ -1587,7 +1572,6 @@
 		</collision>
 	</npc>
 	<npc id="21720" level="55" type="RiftInvader" name="Purgatory Invader Elite Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -1648,13 +1632,13 @@
 				<item id="1866" min="1" max="1" chance="0.778740544326305" /> <!-- Suede -->
 				<item id="1871" min="1" max="1" chance="1.16810974113941" /> <!-- Charcoal -->
 				<item id="5220" min="1" max="1" chance="0.046723959505558" /> <!-- Metal Hardener -->
-				<item id="1885" min="1" max="1" chance="0.0973428368782997" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="0.0973428368782997" /> <!-- High Grade Suede -->
 				<item id="4041" min="1" max="1" chance="0.0101577565360069" /> <!-- Mold Hardener -->
 				<item id="4149" min="1" max="1" chance="0.0150140373444557" /> <!-- Recipe: Avadon Circlet (100%) -->
-				<item id="8726" min="1" max="1" chance="0.0270386015605927" /> <!-- Life Stone - Level 55 -->
-				<item id="8736" min="1" max="1" chance="0.00675965039014816" /> <!-- Mid-Grade Life Stone - Level 55 -->
-				<item id="8746" min="1" max="1" chance="0.000675319828987122" /> <!-- High-Grade Life Stone - Level 55 -->
-				<item id="8756" min="1" max="1" chance="0.000137644805908203" /> <!-- Top-Grade Life Stone - Level 55 -->
+				<item id="8726" min="1" max="1" chance="0.0270386015605927" /> <!-- Life Stone: level 55 -->
+				<item id="8736" min="1" max="1" chance="0.00675965039014816" /> <!-- Mid-Grade Life Stone: level 55 -->
+				<item id="8746" min="1" max="1" chance="0.000675319828987122" /> <!-- High-Grade Life Stone: level 55 -->
+				<item id="8756" min="1" max="1" chance="0.000137644805908203" /> <!-- Top-Grade Life Stone: level 55 -->
 			</drop>
 			<spoil>
 				<item id="2954" min="1" max="1" chance="2.0023" /> <!-- Theca Leather Boots Texture -->
@@ -1668,7 +1652,6 @@
 		</collision>
 	</npc>
 	<npc id="21721" level="50" type="RiftInvader" name="Purgatory Invader Elite Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -1730,10 +1713,10 @@
 				<item id="4043" min="1" max="1" chance="0.0993536502814293" /> <!-- Asofe -->
 				<item id="4039" min="1" max="1" chance="0.0993536502814293" /> <!-- Mold Glue -->
 				<item id="2353" min="1" max="1" chance="0.00486513935089111" /> <!-- Recipe: Samurai Longsword -->
-				<item id="8725" min="1" max="1" chance="0.0827979433679581" /> <!-- Life Stone - Level 52 -->
-				<item id="8735" min="1" max="1" chance="0.0206962510418892" /> <!-- Mid-Grade Life Stone - Level 52 -->
-				<item id="8745" min="1" max="1" chance="0.00207027206420898" /> <!-- High-Grade Life Stone - Level 52 -->
-				<item id="8755" min="1" max="1" chance="0.000414054412841797" /> <!-- Top-Grade Life Stone - Level 52 -->
+				<item id="8725" min="1" max="1" chance="0.0827979433679581" /> <!-- Life Stone: level 52 -->
+				<item id="8735" min="1" max="1" chance="0.0206962510418892" /> <!-- Mid-Grade Life Stone: level 52 -->
+				<item id="8745" min="1" max="1" chance="0.00207027206420898" /> <!-- High-Grade Life Stone: level 52 -->
+				<item id="8755" min="1" max="1" chance="0.000414054412841797" /> <!-- Top-Grade Life Stone: level 52 -->
 			</drop>
 			<spoil>
 				<item id="1865" min="1" max="1" chance="72.0775" /> <!-- Varnish -->
@@ -1747,7 +1730,6 @@
 		</collision>
 	</npc>
 	<npc id="21722" level="53" type="RiftInvader" name="Purgatory Invader Warrior">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -1812,10 +1794,10 @@
 				<item id="1875" min="1" max="1" chance="1.85390592670441" /> <!-- Stone of Purity -->
 				<item id="4040" min="1" max="1" chance="0.556171778011322" /> <!-- Mold Lubricant -->
 				<item id="4133" min="1" max="1" chance="0.133686056232452" /> <!-- Recipe: Zubei's Breastplate (100%) -->
-				<item id="8726" min="1" max="1" chance="0.643721478652954" /> <!-- Life Stone - Level 55 -->
-				<item id="8736" min="1" max="1" chance="0.160930369663239" /> <!-- Mid-Grade Life Stone - Level 55 -->
-				<item id="8746" min="1" max="1" chance="0.0161079517364502" /> <!-- High-Grade Life Stone - Level 55 -->
-				<item id="8756" min="1" max="1" chance="0.00323153352737427" /> <!-- Top-Grade Life Stone - Level 55 -->
+				<item id="8726" min="1" max="1" chance="0.643721478652954" /> <!-- Life Stone: level 55 -->
+				<item id="8736" min="1" max="1" chance="0.160930369663239" /> <!-- Mid-Grade Life Stone: level 55 -->
+				<item id="8746" min="1" max="1" chance="0.0161079517364502" /> <!-- High-Grade Life Stone: level 55 -->
+				<item id="8756" min="1" max="1" chance="0.00323153352737427" /> <!-- Top-Grade Life Stone: level 55 -->
 			</drop>
 			<spoil>
 				<item id="1989" min="1" max="1" chance="22.6991" /> <!-- Divine Stocking Pattern -->
@@ -1829,7 +1811,6 @@
 		</collision>
 	</npc>
 	<npc id="21723" level="50" type="RiftInvader" name="Purgatory Invader Elite Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -1881,12 +1862,14 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="2562" max="5209" chance="70" /> <!-- Adena -->
-				<item id="8725" min="1" max="1" chance="5.74059717591858" /> <!-- Life Stone - Level 52 -->
-				<item id="8735" min="1" max="1" chance="1.43514929397964" /> <!-- Mid-Grade Life Stone - Level 52 -->
-				<item id="8745" min="1" max="1" chance="0.143524342887878" /> <!-- High-Grade Life Stone - Level 52 -->
-				<item id="8755" min="1" max="1" chance="0.0286797659378052" /> <!-- Top-Grade Life Stone - Level 52 -->
+				<item id="6669" min="1" max="3" chance="24.0303491344109" /> <!-- Deluxe Chest Key - Grade 5 -->
+				<item id="8725" min="1" max="1" chance="5.74059717591858" /> <!-- Life Stone: level 52 -->
+				<item id="8735" min="1" max="1" chance="1.43514929397964" /> <!-- Mid-Grade Life Stone: level 52 -->
+				<item id="8745" min="1" max="1" chance="0.143524342887878" /> <!-- High-Grade Life Stone: level 52 -->
+				<item id="8755" min="1" max="1" chance="0.0286797659378052" /> <!-- Top-Grade Life Stone: level 52 -->
 			</drop>
 			<spoil>
+				<item id="6669" min="1" max="3" chance="75.3266" /> <!-- Deluxe Chest Key - Grade 5 -->
 				<item id="4601" min="1" max="1" chance="1.4396" /> <!-- Greater Dye of STR <Str+3 Con-3> -->
 				<item id="1539" min="1" max="3" chance="71.9788" /> <!-- Greater Healing Potion -->
 			</spoil>
@@ -1897,7 +1880,6 @@
 		</collision>
 	</npc>
 	<npc id="21724" level="53" type="RiftInvader" name="Purgatory Invader Elite Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -1949,12 +1931,14 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="2892" max="5875" chance="70" /> <!-- Adena -->
-				<item id="8726" min="1" max="1" chance="5.24591800836182" /> <!-- Life Stone - Level 55 -->
-				<item id="8736" min="1" max="1" chance="1.31147950209045" /> <!-- Mid-Grade Life Stone - Level 55 -->
-				<item id="8746" min="1" max="1" chance="0.131141336929321" /> <!-- High-Grade Life Stone - Level 55 -->
-				<item id="8756" min="1" max="1" chance="0.0262547205047607" /> <!-- Top-Grade Life Stone - Level 55 -->
+				<item id="6669" min="1" max="3" chance="26.3516050527191" /> <!-- Deluxe Chest Key - Grade 5 -->
+				<item id="8726" min="1" max="1" chance="5.24591800836182" /> <!-- Life Stone: level 55 -->
+				<item id="8736" min="1" max="1" chance="1.31147950209045" /> <!-- Mid-Grade Life Stone: level 55 -->
+				<item id="8746" min="1" max="1" chance="0.131141336929321" /> <!-- High-Grade Life Stone: level 55 -->
+				<item id="8756" min="1" max="1" chance="0.0262547205047607" /> <!-- Top-Grade Life Stone: level 55 -->
 			</drop>
 			<spoil>
+				<item id="6669" min="1" max="3" chance="84.9629" /> <!-- Deluxe Chest Key - Grade 5 -->
 				<item id="1984" min="1" max="1" chance="15.663" /> <!-- Theca Leather Armor Pattern -->
 				<item id="4126" min="1" max="1" chance="12.0574" /> <!-- Recipe: Adamantite Earrings (100%) -->
 			</spoil>
@@ -1965,7 +1949,6 @@
 		</collision>
 	</npc>
 	<npc id="21725" level="50" type="RiftInvader" name="Purgatory Invader Elite Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -2031,23 +2014,23 @@
 				<item id="2103" min="1" max="1" chance="0.0930564680669904" /> <!-- Sage's Staff Head -->
 				<item id="201" min="1" max="1" chance="0.000999136783540249" /> <!-- Club of Nature -->
 				<item id="2104" min="1" max="1" chance="0.0930564680669904" /> <!-- Club of Nature Head -->
-				<item id="202" min="1" max="1" chance="0.000999136783540249" /> <!-- Mace of Underworld -->
-				<item id="2105" min="1" max="1" chance="0.0884202969433665" /> <!-- Mace of Underworld Head -->
+				<item id="202" min="1" max="1" chance="0.000999136783540249" /> <!-- Mace of the Underworld -->
+				<item id="2105" min="1" max="1" chance="0.0884202969433665" /> <!-- Mace of the Underworld Head -->
 				<item id="1894" min="1" max="1" chance="0.926698655220032" /> <!-- Crafted Leather -->
 				<item id="4039" min="1" max="1" chance="0.880360317419052" /> <!-- Mold Glue -->
 				<item id="4041" min="1" max="1" chance="0.229661433917999" /> <!-- Mold Hardener -->
 				<item id="4044" min="1" max="1" chance="0.880360317419052" /> <!-- Thons -->
-				<item id="951" min="1" max="1" chance="0.0480195762901306" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
-				<item id="952" min="1" max="1" chance="0.352144978227615" /> <!-- Scroll: Enchant Armor (C-Grade) -->
-				<item id="8725" min="1" max="1" chance="0.733637144765854" /> <!-- Life Stone - Level 52 -->
-				<item id="8735" min="1" max="1" chance="0.18340822211647" /> <!-- Mid-Grade Life Stone - Level 52 -->
-				<item id="8745" min="1" max="1" chance="0.0183403965816498" /> <!-- High-Grade Life Stone - Level 52 -->
-				<item id="8755" min="1" max="1" chance="0.00366893057632446" /> <!-- Top-Grade Life Stone - Level 52 -->
+				<item id="951" min="1" max="1" chance="0.0480195762901306" /> <!-- Scroll: Enchant Weapon (C) -->
+				<item id="952" min="1" max="1" chance="0.352144978227615" /> <!-- Scroll: Enchant Armor (C) -->
+				<item id="8725" min="1" max="1" chance="0.733637144765854" /> <!-- Life Stone: level 52 -->
+				<item id="8735" min="1" max="1" chance="0.18340822211647" /> <!-- Mid-Grade Life Stone: level 52 -->
+				<item id="8745" min="1" max="1" chance="0.0183403965816498" /> <!-- High-Grade Life Stone: level 52 -->
+				<item id="8755" min="1" max="1" chance="0.00366893057632446" /> <!-- Top-Grade Life Stone: level 52 -->
 			</drop>
 			<spoil>
-				<item id="951" min="1" max="1" chance="1.1612" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
-				<item id="952" min="1" max="1" chance="8.5153" /> <!-- Scroll: Enchant Armor (C-Grade) -->
-				<item id="1914" min="1" max="1" chance="35.8792" /> <!-- Earring of Seal Gemstone -->
+				<item id="951" min="1" max="1" chance="1.1612" /> <!-- Scroll: Enchant Weapon (C) -->
+				<item id="952" min="1" max="1" chance="8.5153" /> <!-- Scroll: Enchant Armor (C) -->
+				<item id="1914" min="1" max="1" chance="35.8792" /> <!-- Earring of Binding Gemstone -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -2056,7 +2039,6 @@
 		</collision>
 	</npc>
 	<npc id="21726" level="55" type="RiftInvader" name="Purgatory Invader Elite Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -2110,20 +2092,20 @@
 				<item id="57" min="3075" max="6264" chance="70" /> <!-- Adena -->
 				<item id="855" min="1" max="1" chance="0.0293929563932419" /> <!-- Nassen's Earring -->
 				<item id="1918" min="1" max="1" chance="2.07374455574417" /> <!-- Nassen's Earring Gemstone -->
-				<item id="119" min="1" max="1" chance="0.0220479962949753" /> <!-- Necklace of Seal -->
-				<item id="1920" min="1" max="1" chance="1.63841795192003" /> <!-- Necklace of Seal Chain -->
-				<item id="886" min="1" max="1" chance="0.0440894345898628" /> <!-- Ring of Seal -->
-				<item id="2917" min="1" max="1" chance="2.75030719279575" /> <!-- Ring of Seal Gemstone -->
-				<item id="951" min="1" max="1" chance="0.087054746201992" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
-				<item id="952" min="1" max="1" chance="0.638392895748138" /> <!-- Scroll: Enchant Armor (C-Grade) -->
-				<item id="8726" min="1" max="1" chance="1.10832171426272" /> <!-- Life Stone - Level 55 -->
-				<item id="8736" min="1" max="1" chance="0.277079892540693" /> <!-- Mid-Grade Life Stone - Level 55 -->
-				<item id="8746" min="1" max="1" chance="0.0277082036640644" /> <!-- High-Grade Life Stone - Level 55 -->
-				<item id="8756" min="1" max="1" chance="0.0055424983727932" /> <!-- Top-Grade Life Stone - Level 55 -->
+				<item id="119" min="1" max="1" chance="0.0220479962949753" /> <!-- Necklace of Binding -->
+				<item id="1920" min="1" max="1" chance="1.63841795192003" /> <!-- Necklace of Binding Chain -->
+				<item id="886" min="1" max="1" chance="0.0440894345898628" /> <!-- Ring of Binding -->
+				<item id="2917" min="1" max="1" chance="2.75030719279575" /> <!-- Ring of Binding Gemstone -->
+				<item id="951" min="1" max="1" chance="0.087054746201992" /> <!-- Scroll: Enchant Weapon (C) -->
+				<item id="952" min="1" max="1" chance="0.638392895748138" /> <!-- Scroll: Enchant Armor (C) -->
+				<item id="8726" min="1" max="1" chance="1.10832171426272" /> <!-- Life Stone: level 55 -->
+				<item id="8736" min="1" max="1" chance="0.277079892540693" /> <!-- Mid-Grade Life Stone: level 55 -->
+				<item id="8746" min="1" max="1" chance="0.0277082036640644" /> <!-- High-Grade Life Stone: level 55 -->
+				<item id="8756" min="1" max="1" chance="0.0055424983727932" /> <!-- Top-Grade Life Stone: level 55 -->
 			</drop>
 			<spoil>
-				<item id="951" min="1" max="1" chance="1.4147" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
-				<item id="952" min="1" max="1" chance="10.3742" /> <!-- Scroll: Enchant Armor (C-Grade) -->
+				<item id="951" min="1" max="1" chance="1.4147" /> <!-- Scroll: Enchant Weapon (C) -->
+				<item id="952" min="1" max="1" chance="10.3742" /> <!-- Scroll: Enchant Armor (C) -->
 				<item id="4127" min="1" max="1" chance="19.259" /> <!-- Recipe: Adamantite Ring (100%) -->
 			</spoil>
 		</dropLists>
@@ -2133,7 +2115,6 @@
 		</collision>
 	</npc>
 	<npc id="21727" level="53" type="RiftInvader" name="Purgatory Invader Magus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2190,20 +2171,20 @@
 				<item id="57" min="2758" max="5602" chance="70" /> <!-- Adena -->
 				<item id="855" min="1" max="1" chance="0.0263169585485458" /> <!-- Nassen's Earring -->
 				<item id="1918" min="1" max="1" chance="1.85672542712784" /> <!-- Nassen's Earring Gemstone -->
-				<item id="119" min="1" max="1" chance="0.0197406547613144" /> <!-- Necklace of Seal -->
-				<item id="1920" min="1" max="1" chance="1.46695612203836" /> <!-- Necklace of Seal Chain -->
-				<item id="886" min="1" max="1" chance="0.0394754378228188" /> <!-- Ring of Seal -->
-				<item id="2917" min="1" max="1" chance="2.46248520972919" /> <!-- Ring of Seal Gemstone -->
-				<item id="951" min="1" max="1" chance="0.077947721350193" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
-				<item id="952" min="1" max="1" chance="0.571608944034576" /> <!-- Scroll: Enchant Armor (C-Grade) -->
-				<item id="8726" min="1" max="1" chance="0.992377278882265" /> <!-- Life Stone - Level 55 -->
-				<item id="8736" min="1" max="1" chance="0.248093839770555" /> <!-- Mid-Grade Life Stone - Level 55 -->
-				<item id="8746" min="1" max="1" chance="0.0248095759570599" /> <!-- High-Grade Life Stone - Level 55 -->
-				<item id="8756" min="1" max="1" chance="0.00496268311142921" /> <!-- Top-Grade Life Stone - Level 55 -->
+				<item id="119" min="1" max="1" chance="0.0197406547613144" /> <!-- Necklace of Binding -->
+				<item id="1920" min="1" max="1" chance="1.46695612203836" /> <!-- Necklace of Binding Chain -->
+				<item id="886" min="1" max="1" chance="0.0394754378228188" /> <!-- Ring of Binding -->
+				<item id="2917" min="1" max="1" chance="2.46248520972919" /> <!-- Ring of Binding Gemstone -->
+				<item id="951" min="1" max="1" chance="0.077947721350193" /> <!-- Scroll: Enchant Weapon (C) -->
+				<item id="952" min="1" max="1" chance="0.571608944034576" /> <!-- Scroll: Enchant Armor (C) -->
+				<item id="8726" min="1" max="1" chance="0.992377278882265" /> <!-- Life Stone: level 55 -->
+				<item id="8736" min="1" max="1" chance="0.248093839770555" /> <!-- Mid-Grade Life Stone: level 55 -->
+				<item id="8746" min="1" max="1" chance="0.0248095759570599" /> <!-- High-Grade Life Stone: level 55 -->
+				<item id="8756" min="1" max="1" chance="0.00496268311142921" /> <!-- Top-Grade Life Stone: level 55 -->
 			</drop>
 			<spoil>
-				<item id="951" min="1" max="1" chance="1.2666" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
-				<item id="952" min="1" max="1" chance="9.2886" /> <!-- Scroll: Enchant Armor (C-Grade) -->
+				<item id="951" min="1" max="1" chance="1.2666" /> <!-- Scroll: Enchant Weapon (C) -->
+				<item id="952" min="1" max="1" chance="9.2886" /> <!-- Scroll: Enchant Armor (C) -->
 				<item id="1984" min="1" max="1" chance="14.9334" /> <!-- Theca Leather Armor Pattern -->
 			</spoil>
 		</dropLists>
@@ -2213,7 +2194,6 @@
 		</collision>
 	</npc>
 	<npc id="21728" level="60" type="RiftInvader" name="Forbidden Path Invader Elite Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="50" />
 			<param name="MoveAroundSocial1" value="50" />
@@ -2280,10 +2260,10 @@
 				<item id="1875" min="1" max="1" chance="1.00591584776688" /> <!-- Stone of Purity -->
 				<item id="4041" min="1" max="1" chance="0.131217859508514" /> <!-- Mold Hardener -->
 				<item id="4129" min="1" max="1" chance="0.163287486824036" /> <!-- Recipe: Earrings of Black Ore (100%) -->
-				<item id="8728" min="1" max="1" chance="0.251467994216919" /> <!-- Life Stone - Level 61 -->
-				<item id="8738" min="1" max="1" chance="0.0628669985542297" /> <!-- Mid-Grade Life Stone - Level 61 -->
-				<item id="8748" min="1" max="1" chance="0.00627353858566284" /> <!-- High-Grade Life Stone - Level 61 -->
-				<item id="8758" min="1" max="1" chance="0.00131612697601318" /> <!-- Top-Grade Life Stone - Level 61 -->
+				<item id="8728" min="1" max="1" chance="0.251467994216919" /> <!-- Life Stone: level 61 -->
+				<item id="8738" min="1" max="1" chance="0.0628669985542297" /> <!-- Mid-Grade Life Stone: level 61 -->
+				<item id="8748" min="1" max="1" chance="0.00627353858566284" /> <!-- High-Grade Life Stone: level 61 -->
+				<item id="8758" min="1" max="1" chance="0.00131612697601318" /> <!-- Top-Grade Life Stone: level 61 -->
 			</drop>
 			<spoil>
 				<item id="1867" min="1" max="15" chance="85.1364" /> <!-- Animal Skin -->
@@ -2297,7 +2277,6 @@
 		</collision>
 	</npc>
 	<npc id="21729" level="65" type="RiftInvader" name="Forbidden Path Invader Elite Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="50" />
 			<param name="MoveAroundSocial1" value="50" />
@@ -2358,13 +2337,13 @@
 				<item id="1889" min="1" max="1" chance="1.25539162489891" /> <!-- Compound Braid -->
 				<item id="5220" min="1" max="1" chance="0.753234974939346" /> <!-- Metal Hardener -->
 				<item id="6337" min="1" max="1" chance="0.0965685865306854" /> <!-- Recipe: Sealed Majestic Earring(70%) -->
-				<item id="8729" min="1" max="1" chance="0.251078324979782" /> <!-- Life Stone - Level 64 -->
-				<item id="8739" min="1" max="1" chance="0.0627752818698883" /> <!-- Mid-Grade Life Stone - Level 64 -->
-				<item id="8749" min="1" max="1" chance="0.00627068743705749" /> <!-- High-Grade Life Stone - Level 64 -->
-				<item id="8759" min="1" max="1" chance="0.0012541374874115" /> <!-- Top-Grade Life Stone - Level 64 -->
+				<item id="8729" min="1" max="1" chance="0.251078324979782" /> <!-- Life Stone: level 64 -->
+				<item id="8739" min="1" max="1" chance="0.0627752818698883" /> <!-- Mid-Grade Life Stone: level 64 -->
+				<item id="8749" min="1" max="1" chance="0.00627068743705749" /> <!-- High-Grade Life Stone: level 64 -->
+				<item id="8759" min="1" max="1" chance="0.0012541374874115" /> <!-- Top-Grade Life Stone: level 64 -->
 			</drop>
 			<spoil>
-				<item id="1807" min="1" max="1" chance="0.85" /> <!-- Recipe: Soulshot (A-Grade) -->
+				<item id="1807" min="1" max="1" chance="0.85" /> <!-- Recipe: Soulshot: A-Grade -->
 				<item id="4085" min="1" max="1" chance="11.0793" /> <!-- Tunic of Doom Pattern -->
 				<item id="3035" min="1" max="1" chance="0.85" /> <!-- Recipe: Spiritshot A -->
 			</spoil>
@@ -2375,7 +2354,6 @@
 		</collision>
 	</npc>
 	<npc id="21730" level="63" type="RiftInvader" name="Forbidden Path Invader Archer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="157" />
 			<param name="MoveAroundSocial1" value="157" />
@@ -2433,10 +2411,10 @@
 				<item id="4043" min="1" max="1" chance="0.504501706562042" /> <!-- Asofe -->
 				<item id="4039" min="1" max="1" chance="0.504501706562042" /> <!-- Mold Glue -->
 				<item id="5438" min="1" max="1" chance="0.00826891872406006" /> <!-- Recipe: Meteor Shower(60%) -->
-				<item id="8729" min="1" max="1" chance="0.201807193584442" /> <!-- Life Stone - Level 64 -->
-				<item id="8739" min="1" max="1" chance="0.0504599370956421" /> <!-- Mid-Grade Life Stone - Level 64 -->
-				<item id="8749" min="1" max="1" chance="0.00504599370956421" /> <!-- High-Grade Life Stone - Level 64 -->
-				<item id="8759" min="1" max="1" chance="0.000976643943786621" /> <!-- Top-Grade Life Stone - Level 64 -->
+				<item id="8729" min="1" max="1" chance="0.201807193584442" /> <!-- Life Stone: level 64 -->
+				<item id="8739" min="1" max="1" chance="0.0504599370956421" /> <!-- Mid-Grade Life Stone: level 64 -->
+				<item id="8749" min="1" max="1" chance="0.00504599370956421" /> <!-- High-Grade Life Stone: level 64 -->
+				<item id="8759" min="1" max="1" chance="0.000976643943786621" /> <!-- Top-Grade Life Stone: level 64 -->
 			</drop>
 			<spoil>
 				<item id="4087" min="1" max="1" chance="12.0236" /> <!-- Stockings of Doom Pattern -->
@@ -2450,7 +2428,6 @@
 		</collision>
 	</npc>
 	<npc id="21731" level="65" type="RiftInvader" name="Forbidden Path Invader Elite Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2516,10 +2493,10 @@
 				<item id="1894" min="1" max="1" chance="0.516031135757446" /> <!-- Crafted Leather -->
 				<item id="4042" min="1" max="1" chance="0.245107606994629" /> <!-- Enria -->
 				<item id="6339" min="1" max="1" chance="0.113113959289551" /> <!-- Recipe: Sealed Majestic Ring(70%) -->
-				<item id="8729" min="1" max="1" chance="0.196102502716064" /> <!-- Life Stone - Level 64 -->
-				<item id="8739" min="1" max="1" chance="0.0490051042785645" /> <!-- Mid-Grade Life Stone - Level 64 -->
-				<item id="8749" min="1" max="1" chance="0.00488409330749512" /> <!-- High-Grade Life Stone - Level 64 -->
-				<item id="8759" min="1" max="1" chance="0.000985027221679687" /> <!-- Top-Grade Life Stone - Level 64 -->
+				<item id="8729" min="1" max="1" chance="0.196102502716064" /> <!-- Life Stone: level 64 -->
+				<item id="8739" min="1" max="1" chance="0.0490051042785645" /> <!-- Mid-Grade Life Stone: level 64 -->
+				<item id="8749" min="1" max="1" chance="0.00488409330749512" /> <!-- High-Grade Life Stone: level 64 -->
+				<item id="8759" min="1" max="1" chance="0.000985027221679687" /> <!-- Top-Grade Life Stone: level 64 -->
 				<item id="1343" min="20" max="60" chance="10.5046586343994" /> <!-- Silver Arrow -->
 			</drop>
 			<spoil>
@@ -2534,7 +2511,6 @@
 		</collision>
 	</npc>
 	<npc id="21732" level="63" type="RiftInvader" name="Forbidden Path Invader Shaman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2591,18 +2567,18 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="2222" max="4499" chance="70" /> <!-- Adena -->
-				<item id="234" min="1" max="1" chance="0.00164009732621908" /> <!-- Demon's Dagger -->
-				<item id="4119" min="1" max="1" chance="0.362259908491194" /> <!-- Demon's Dagger Edge -->
+				<item id="234" min="1" max="1" chance="0.00164009732621908" /> <!-- Demon Dagger -->
+				<item id="4119" min="1" max="1" chance="0.362259908491194" /> <!-- Demon Dagger Edge -->
 				<item id="1864" min="4" max="12" chance="3.76122274799347" /> <!-- Stem -->
 				<item id="1869" min="1" max="1" chance="15.0448489788742" /> <!-- Iron Ore -->
 				<item id="1878" min="1" max="1" chance="6.01795639678955" /> <!-- Braided Hemp -->
 				<item id="1884" min="1" max="1" chance="9.25838476126862" /> <!-- Cord -->
 				<item id="4039" min="1" max="1" chance="0.501510370765686" /> <!-- Mold Glue -->
 				<item id="5444" min="1" max="1" chance="0.00823456753540039" /> <!-- Recipe: Carnage Bow(60%) -->
-				<item id="8729" min="1" max="1" chance="0.200612550926208" /> <!-- Life Stone - Level 64 -->
-				<item id="8739" min="1" max="1" chance="0.0501636410064697" /> <!-- Mid-Grade Life Stone - Level 64 -->
-				<item id="8749" min="1" max="1" chance="0.00499955886077881" /> <!-- High-Grade Life Stone - Level 64 -->
-				<item id="8759" min="1" max="1" chance="0.00100831439208984" /> <!-- Top-Grade Life Stone - Level 64 -->
+				<item id="8729" min="1" max="1" chance="0.200612550926208" /> <!-- Life Stone: level 64 -->
+				<item id="8739" min="1" max="1" chance="0.0501636410064697" /> <!-- Mid-Grade Life Stone: level 64 -->
+				<item id="8749" min="1" max="1" chance="0.00499955886077881" /> <!-- High-Grade Life Stone: level 64 -->
+				<item id="8759" min="1" max="1" chance="0.00100831439208984" /> <!-- Top-Grade Life Stone: level 64 -->
 				<item id="1343" min="30" max="90" chance="7.16415778199768" /> <!-- Silver Arrow -->
 			</drop>
 			<spoil>
@@ -2617,7 +2593,6 @@
 		</collision>
 	</npc>
 	<npc id="21733" level="60" type="RiftInvader" name="Forbidden Path Invader Priest">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2683,10 +2658,10 @@
 				<item id="1875" min="1" max="1" chance="0.591829450881958" /> <!-- Stone of Purity -->
 				<item id="4041" min="1" max="1" chance="0.0771968214454651" /> <!-- Mold Hardener -->
 				<item id="4130" min="1" max="1" chance="0.14410330273819" /> <!-- Recipe: Ring of Black Ore (100%) -->
-				<item id="8728" min="1" max="1" chance="0.14795736272049" /> <!-- Life Stone - Level 61 -->
-				<item id="8738" min="1" max="1" chance="0.0369989758300781" /> <!-- Mid-Grade Life Stone - Level 61 -->
-				<item id="8748" min="1" max="1" chance="0.00369989758300781" /> <!-- High-Grade Life Stone - Level 61 -->
-				<item id="8758" min="1" max="1" chance="0.000732271396636963" /> <!-- Top-Grade Life Stone - Level 61 -->
+				<item id="8728" min="1" max="1" chance="0.14795736272049" /> <!-- Life Stone: level 61 -->
+				<item id="8738" min="1" max="1" chance="0.0369989758300781" /> <!-- Mid-Grade Life Stone: level 61 -->
+				<item id="8748" min="1" max="1" chance="0.00369989758300781" /> <!-- High-Grade Life Stone: level 61 -->
+				<item id="8758" min="1" max="1" chance="0.000732271396636963" /> <!-- Top-Grade Life Stone: level 61 -->
 				<item id="1343" min="10" max="30" chance="12.6818229123573" /> <!-- Silver Arrow -->
 			</drop>
 			<spoil>
@@ -2701,7 +2676,6 @@
 		</collision>
 	</npc>
 	<npc id="21734" level="65" type="RiftInvader" name="Forbidden Path Invader Magus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2765,11 +2739,11 @@
 				<item id="1878" min="1" max="1" chance="5.73061120596313" /> <!-- Braided Hemp -->
 				<item id="1884" min="1" max="1" chance="8.81628100875091" /> <!-- Cord -->
 				<item id="4039" min="1" max="1" chance="0.477536292663574" /> <!-- Mold Glue -->
-				<item id="729" min="1" max="1" chance="0.00158124600219727" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
-				<item id="8729" min="1" max="1" chance="0.191023301765442" /> <!-- Life Stone - Level 64 -->
-				<item id="8739" min="1" max="1" chance="0.0477448445663452" /> <!-- Mid-Grade Life Stone - Level 64 -->
-				<item id="8749" min="1" max="1" chance="0.00478766150665283" /> <!-- High-Grade Life Stone - Level 64 -->
-				<item id="8759" min="1" max="1" chance="0.000966317001342774" /> <!-- Top-Grade Life Stone - Level 64 -->
+				<item id="729" min="1" max="1" chance="0.00158124600219727" /> <!-- Scroll: Enchant Weapon (A) -->
+				<item id="8729" min="1" max="1" chance="0.191023301765442" /> <!-- Life Stone: level 64 -->
+				<item id="8739" min="1" max="1" chance="0.0477448445663452" /> <!-- Mid-Grade Life Stone: level 64 -->
+				<item id="8749" min="1" max="1" chance="0.00478766150665283" /> <!-- High-Grade Life Stone: level 64 -->
+				<item id="8759" min="1" max="1" chance="0.000966317001342774" /> <!-- Top-Grade Life Stone: level 64 -->
 			</drop>
 			<spoil>
 				<item id="4087" min="1" max="1" chance="11.3812" /> <!-- Stockings of Doom Pattern -->
@@ -2783,7 +2757,6 @@
 		</collision>
 	</npc>
 	<npc id="21735" level="60" type="RiftInvader" name="Forbidden Path Invader Martyrs">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2844,15 +2817,15 @@
 				<item id="4041" min="1" max="1" chance="0.118358459442854" /> <!-- Mold Hardener -->
 				<item id="4044" min="1" max="1" chance="0.453709967064261" /> <!-- Thons -->
 				<item id="4131" min="1" max="1" chance="0.110660874679089" /> <!-- Recipe: Necklace of Black Ore (100%) -->
-				<item id="8728" min="1" max="1" chance="0.226854031332135" /> <!-- Life Stone - Level 61 -->
-				<item id="8738" min="1" max="1" chance="0.056713031733036" /> <!-- Mid-Grade Life Stone - Level 61 -->
-				<item id="8748" min="1" max="1" chance="0.0056713031733036" /> <!-- High-Grade Life Stone - Level 61 -->
-				<item id="8758" min="1" max="1" chance="0.0011331179946661" /> <!-- Top-Grade Life Stone - Level 61 -->
+				<item id="8728" min="1" max="1" chance="0.226854031332135" /> <!-- Life Stone: level 61 -->
+				<item id="8738" min="1" max="1" chance="0.056713031733036" /> <!-- Mid-Grade Life Stone: level 61 -->
+				<item id="8748" min="1" max="1" chance="0.0056713031733036" /> <!-- High-Grade Life Stone: level 61 -->
+				<item id="8758" min="1" max="1" chance="0.0011331179946661" /> <!-- Top-Grade Life Stone: level 61 -->
 			</drop>
 			<spoil>
 				<item id="4154" min="1" max="1" chance="4.9078" /> <!-- Recipe: Doom Shield (100%) -->
 				<item id="4064" min="1" max="1" chance="7.5061" /> <!-- Avadon Breastplate Part -->
-				<item id="948" min="1" max="1" chance="1.0368" /> <!-- Scroll: Enchant Armor (B-Grade) -->
+				<item id="948" min="1" max="1" chance="1.0368" /> <!-- Scroll: Enchant Armor (B) -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -2861,7 +2834,6 @@
 		</collision>
 	</npc>
 	<npc id="21736" level="63" type="RiftInvader" name="Forbidden Path Invader Warrior">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -2917,17 +2889,17 @@
 				<item id="1866" min="1" max="1" chance="8.92183603245735" /> <!-- Suede -->
 				<item id="1871" min="1" max="1" chance="13.3827418950863" /> <!-- Charcoal -->
 				<item id="5220" min="1" max="1" chance="0.535317454107285" /> <!-- Metal Hardener -->
-				<item id="1885" min="1" max="1" chance="1.11523861925697" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="1.11523861925697" /> <!-- High Grade Suede -->
 				<item id="4041" min="1" max="1" chance="0.116382871101379" /> <!-- Mold Hardener -->
 				<item id="5446" min="1" max="1" chance="0.00731646704292297" /> <!-- Recipe: Bloody Orchid(60%) -->
-				<item id="8729" min="1" max="1" chance="0.178439151369095" /> <!-- Life Stone - Level 64 -->
-				<item id="8739" min="1" max="1" chance="0.0446037110424042" /> <!-- Mid-Grade Life Stone - Level 64 -->
-				<item id="8749" min="1" max="1" chance="0.00447252470397949" /> <!-- High-Grade Life Stone - Level 64 -->
-				<item id="8759" min="1" max="1" chance="0.00085075198173523" /> <!-- Top-Grade Life Stone - Level 64 -->
+				<item id="8729" min="1" max="1" chance="0.178439151369095" /> <!-- Life Stone: level 64 -->
+				<item id="8739" min="1" max="1" chance="0.0446037110424042" /> <!-- Mid-Grade Life Stone: level 64 -->
+				<item id="8749" min="1" max="1" chance="0.00447252470397949" /> <!-- High-Grade Life Stone: level 64 -->
+				<item id="8759" min="1" max="1" chance="0.00085075198173523" /> <!-- Top-Grade Life Stone: level 64 -->
 			</drop>
 			<spoil>
 				<item id="5220" min="1" max="1" chance="18.1225" /> <!-- Metal Hardener -->
-				<item id="4090" min="1" max="1" chance="20.3395" /> <!-- Sealed Blue Wolf Boots Design -->
+				<item id="4090" min="1" max="1" chance="20.3395" /> <!-- Blue Wolf Boots Design -->
 				<item id="5438" min="1" max="1" chance="0.2476" /> <!-- Recipe: Meteor Shower(60%) -->
 			</spoil>
 		</dropLists>
@@ -2937,7 +2909,6 @@
 		</collision>
 	</npc>
 	<npc id="21737" level="60" type="RiftInvader" name="Forbidden Path Invader Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="50" />
 			<param name="MoveAroundSocial1" value="50" />
@@ -3001,10 +2972,10 @@
 				<item id="5550" min="1" max="1" chance="0.156317709083557" /> <!-- Durable Metal Plate -->
 				<item id="4043" min="1" max="1" chance="0.390815425308227" /> <!-- Asofe -->
 				<item id="4154" min="1" max="1" chance="0.138761051635742" /> <!-- Recipe: Doom Shield (100%) -->
-				<item id="8728" min="1" max="1" chance="0.195407712654114" /> <!-- Life Stone - Level 61 -->
-				<item id="8738" min="1" max="1" chance="0.0488625044631958" /> <!-- Mid-Grade Life Stone - Level 61 -->
-				<item id="8748" min="1" max="1" chance="0.00486509784698486" /> <!-- High-Grade Life Stone - Level 61 -->
-				<item id="8758" min="1" max="1" chance="0.000973019569396973" /> <!-- Top-Grade Life Stone - Level 61 -->
+				<item id="8728" min="1" max="1" chance="0.195407712654114" /> <!-- Life Stone: level 61 -->
+				<item id="8738" min="1" max="1" chance="0.0488625044631958" /> <!-- Mid-Grade Life Stone: level 61 -->
+				<item id="8748" min="1" max="1" chance="0.00486509784698486" /> <!-- High-Grade Life Stone: level 61 -->
+				<item id="8758" min="1" max="1" chance="0.000973019569396973" /> <!-- Top-Grade Life Stone: level 61 -->
 				<item id="1343" min="10" max="30" chance="16.7486281532288" /> <!-- Silver Arrow -->
 			</drop>
 			<spoil>
@@ -3019,7 +2990,6 @@
 		</collision>
 	</npc>
 	<npc id="21738" level="63" type="RiftInvader" name="Forbidden Path Invader Disciple">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -3084,16 +3054,16 @@
 				<item id="1875" min="1" max="1" chance="0.854059695510864" /> <!-- Stone of Purity -->
 				<item id="4040" min="1" max="1" chance="0.256217908653259" /> <!-- Mold Lubricant -->
 				<item id="5452" min="1" max="1" chance="0.0070144747467041" /> <!-- Recipe: Blood Tornado(60%) -->
-				<item id="8729" min="1" max="1" chance="0.170811939102173" /> <!-- Life Stone - Level 64 -->
-				<item id="8739" min="1" max="1" chance="0.0427029847755432" /> <!-- Mid-Grade Life Stone - Level 64 -->
-				<item id="8749" min="1" max="1" chance="0.00426555896759033" /> <!-- High-Grade Life Stone - Level 64 -->
-				<item id="8759" min="1" max="1" chance="0.000853111793518066" /> <!-- Top-Grade Life Stone - Level 64 -->
+				<item id="8729" min="1" max="1" chance="0.170811939102173" /> <!-- Life Stone: level 64 -->
+				<item id="8739" min="1" max="1" chance="0.0427029847755432" /> <!-- Mid-Grade Life Stone: level 64 -->
+				<item id="8749" min="1" max="1" chance="0.00426555896759033" /> <!-- High-Grade Life Stone: level 64 -->
+				<item id="8759" min="1" max="1" chance="0.000853111793518066" /> <!-- Top-Grade Life Stone: level 64 -->
 				<item id="1343" min="10" max="30" chance="18.3017125161438" /> <!-- Silver Arrow -->
 			</drop>
 			<spoil>
-				<item id="4091" min="1" max="1" chance="21.4178" /> <!-- Sealed Doom Gloves Part -->
+				<item id="4091" min="1" max="1" chance="21.4178" /> <!-- Doom Gloves Part -->
 				<item id="5444" min="1" max="1" chance="0.2607" /> <!-- Recipe: Carnage Bow(60%) -->
-				<item id="4096" min="1" max="1" chance="21.4178" /> <!-- Sealed Blue Wolf Gloves Fabric -->
+				<item id="4096" min="1" max="1" chance="21.4178" /> <!-- Blue Wolf Gloves Fabric -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -3102,7 +3072,6 @@
 		</collision>
 	</npc>
 	<npc id="21739" level="65" type="RiftInvader" name="Forbidden Path Invader Berserker">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -3165,13 +3134,13 @@
 				<item id="1866" min="1" max="1" chance="9.67961884288788" /> <!-- Suede -->
 				<item id="1871" min="1" max="1" chance="14.5194282643318" /> <!-- Charcoal -->
 				<item id="5220" min="1" max="1" chance="0.580775245857239" /> <!-- Metal Hardener -->
-				<item id="1885" min="1" max="1" chance="1.20994057588577" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="1.20994057588577" /> <!-- High Grade Suede -->
 				<item id="4041" min="1" max="1" chance="0.126275974273682" /> <!-- Mold Hardener -->
-				<item id="730" min="1" max="1" chance="0.0121093005180359" /> <!-- Scroll: Enchant Armor (A-Grade) -->
-				<item id="8729" min="1" max="1" chance="0.193607454586029" /> <!-- Life Stone - Level 64 -->
-				<item id="8739" min="1" max="1" chance="0.0483900841712952" /> <!-- Mid-Grade Life Stone - Level 64 -->
-				<item id="8749" min="1" max="1" chance="0.00485314378738403" /> <!-- High-Grade Life Stone - Level 64 -->
-				<item id="8759" min="1" max="1" chance="0.000989475917816162" /> <!-- Top-Grade Life Stone - Level 64 -->
+				<item id="730" min="1" max="1" chance="0.0121093005180359" /> <!-- Scroll: Enchant Armor (A) -->
+				<item id="8729" min="1" max="1" chance="0.193607454586029" /> <!-- Life Stone: level 64 -->
+				<item id="8739" min="1" max="1" chance="0.0483900841712952" /> <!-- Mid-Grade Life Stone: level 64 -->
+				<item id="8749" min="1" max="1" chance="0.00485314378738403" /> <!-- High-Grade Life Stone: level 64 -->
+				<item id="8759" min="1" max="1" chance="0.000989475917816162" /> <!-- Top-Grade Life Stone: level 64 -->
 				<item id="1343" min="10" max="30" chance="20.7419124861717" /> <!-- Silver Arrow -->
 			</drop>
 			<spoil>
@@ -3186,7 +3155,6 @@
 		</collision>
 	</npc>
 	<npc id="21740" level="60" type="Chest" name="Forbidden Path Invader Food">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<acquire exp="5235" sp="454" />
@@ -3238,10 +3206,11 @@
 				<item id="4042" min="1" max="1" chance="0.0874991137580872" /> <!-- Enria -->
 				<item id="4043" min="1" max="1" chance="0.175001098316193" /> <!-- Asofe -->
 				<item id="4155" min="1" max="1" chance="0.0163032733039856" /> <!-- Recipe: Blue Wolf Breastplate (100%) -->
-				<item id="8728" min="1" max="1" chance="0.0874991137580872" /> <!-- Life Stone - Level 61 -->
-				<item id="8738" min="1" max="1" chance="0.0218754961395264" /> <!-- Mid-Grade Life Stone - Level 61 -->
-				<item id="8748" min="1" max="1" chance="0.00218754961395264" /> <!-- High-Grade Life Stone - Level 61 -->
-				<item id="8758" min="1" max="1" chance="0.000436361602783203" /> <!-- Top-Grade Life Stone - Level 61 -->
+				<item id="6670" min="1" max="1" chance="0.874999749980927" /> <!-- Deluxe Chest Key - Grade 6 -->
+				<item id="8728" min="1" max="1" chance="0.0874991137580872" /> <!-- Life Stone: level 61 -->
+				<item id="8738" min="1" max="1" chance="0.0218754961395264" /> <!-- Mid-Grade Life Stone: level 61 -->
+				<item id="8748" min="1" max="1" chance="0.00218754961395264" /> <!-- High-Grade Life Stone: level 61 -->
+				<item id="8758" min="1" max="1" chance="0.000436361602783203" /> <!-- Top-Grade Life Stone: level 61 -->
 			</drop>
 			<spoil>
 				<item id="4065" min="1" max="1" chance="4.9715" /> <!-- Avadon Gaiters Material -->
@@ -3255,7 +3224,6 @@
 		</collision>
 	</npc>
 	<npc id="21741" level="65" type="RiftInvader" name="Forbidden Path Invader Elite Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -3319,14 +3287,14 @@
 				<item id="4041" min="1" max="1" chance="0.29234450680542" /> <!-- Mold Hardener -->
 				<item id="4040" min="1" max="1" chance="0.672379730102539" /> <!-- Mold Lubricant -->
 				<item id="5434" min="1" max="1" chance="0.0124670759277344" /> <!-- Recipe: Dragon Slayer(60%) -->
-				<item id="8729" min="1" max="1" chance="0.448267192901611" /> <!-- Life Stone - Level 64 -->
-				<item id="8739" min="1" max="1" chance="0.112077327850342" /> <!-- Mid-Grade Life Stone - Level 64 -->
-				<item id="8749" min="1" max="1" chance="0.0112035209350586" /> <!-- High-Grade Life Stone - Level 64 -->
-				<item id="8759" min="1" max="1" chance="0.00223228048706055" /> <!-- Top-Grade Life Stone - Level 64 -->
+				<item id="8729" min="1" max="1" chance="0.448267192901611" /> <!-- Life Stone: level 64 -->
+				<item id="8739" min="1" max="1" chance="0.112077327850342" /> <!-- Mid-Grade Life Stone: level 64 -->
+				<item id="8749" min="1" max="1" chance="0.0112035209350586" /> <!-- High-Grade Life Stone: level 64 -->
+				<item id="8759" min="1" max="1" chance="0.00223228048706055" /> <!-- Top-Grade Life Stone: level 64 -->
 			</drop>
 			<spoil>
 				<item id="4040" min="1" max="1" chance="22.7632" /> <!-- Mold Lubricant -->
-				<item id="4090" min="1" max="1" chance="51.0958" /> <!-- Sealed Blue Wolf Boots Design -->
+				<item id="4090" min="1" max="1" chance="51.0958" /> <!-- Blue Wolf Boots Design -->
 				<item id="5161" min="1" max="1" chance="1.5175" /> <!-- Recipe: Spiritshot (A) Compressed Package (100%) -->
 			</spoil>
 		</dropLists>
@@ -3336,7 +3304,6 @@
 		</collision>
 	</npc>
 	<npc id="21742" level="65" type="RiftInvader" name="Forbidden Path Invader Elite Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -3388,24 +3355,24 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="4596" max="9318" chance="70" /> <!-- Adena -->
-				<item id="234" min="1" max="1" chance="0.0033946723755002" /> <!-- Demon's Dagger -->
-				<item id="4119" min="1" max="1" chance="0.749805322188556" /> <!-- Demon's Dagger Edge -->
+				<item id="234" min="1" max="1" chance="0.0033946723755002" /> <!-- Demon Dagger -->
+				<item id="4119" min="1" max="1" chance="0.749805322188556" /> <!-- Demon Dagger Edge -->
 				<item id="1867" min="1" max="3" chance="13.8408969249229" /> <!-- Animal Skin -->
 				<item id="1872" min="2" max="6" chance="10.380644384491" /> <!-- Animal Bone -->
 				<item id="1882" min="1" max="1" chance="6.92042958966064" /> <!-- Leather -->
 				<item id="1894" min="1" max="1" chance="1.09269742228317" /> <!-- Crafted Leather -->
 				<item id="4042" min="1" max="1" chance="0.519039768344879" /> <!-- Enria -->
 				<item id="5440" min="1" max="1" chance="0.0115501541061401" /> <!-- Recipe: Elysian(60%) -->
-				<item id="8729" min="1" max="1" chance="0.415239363796234" /> <!-- Life Stone - Level 64 -->
-				<item id="8739" min="1" max="1" chance="0.103800404548645" /> <!-- Mid-Grade Life Stone - Level 64 -->
-				<item id="8749" min="1" max="1" chance="0.0103800404548645" /> <!-- High-Grade Life Stone - Level 64 -->
-				<item id="8759" min="1" max="1" chance="0.0020760080909729" /> <!-- Top-Grade Life Stone - Level 64 -->
+				<item id="8729" min="1" max="1" chance="0.415239363796234" /> <!-- Life Stone: level 64 -->
+				<item id="8739" min="1" max="1" chance="0.103800404548645" /> <!-- Mid-Grade Life Stone: level 64 -->
+				<item id="8749" min="1" max="1" chance="0.0103800404548645" /> <!-- High-Grade Life Stone: level 64 -->
+				<item id="8759" min="1" max="1" chance="0.0020760080909729" /> <!-- Top-Grade Life Stone: level 64 -->
 				<item id="1343" min="100" max="300" chance="4.44884759335327" /> <!-- Silver Arrow -->
 			</drop>
 			<spoil>
-				<item id="4091" min="1" max="1" chance="52.0636" /> <!-- Sealed Doom Gloves Part -->
+				<item id="4091" min="1" max="1" chance="52.0636" /> <!-- Doom Gloves Part -->
 				<item id="5166" min="1" max="1" chance="1.5463" /> <!-- Recipe: Blessed Spiritshot (A) Compressed Package (100%) -->
-				<item id="4096" min="1" max="1" chance="52.0636" /> <!-- Sealed Blue Wolf Gloves Fabric -->
+				<item id="4096" min="1" max="1" chance="52.0636" /> <!-- Blue Wolf Gloves Fabric -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -3414,7 +3381,6 @@
 		</collision>
 	</npc>
 	<npc id="21743" level="65" type="RiftInvader" name="Forbidden Path Invader Elite Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -3478,15 +3444,15 @@
 				<item id="4041" min="1" max="1" chance="0.0116161817176342" /> <!-- Mold Hardener -->
 				<item id="4040" min="1" max="1" chance="0.0267165155005455" /> <!-- Mold Lubricant -->
 				<item id="5442" min="1" max="1" chance="0.000494056509256363" /> <!-- Recipe: Soul Bow(60%) -->
-				<item id="8729" min="1" max="1" chance="0.0178117908337116" /> <!-- Life Stone - Level 64 -->
-				<item id="8739" min="1" max="1" chance="0.00445353308343887" /> <!-- Mid-Grade Life Stone - Level 64 -->
-				<item id="8749" min="1" max="1" chance="0.000444885008335114" /> <!-- High-Grade Life Stone - Level 64 -->
-				<item id="8759" min="1" max="1" chance="0.0000889770016670227" /> <!-- Top-Grade Life Stone - Level 64 -->
+				<item id="8729" min="1" max="1" chance="0.0178117908337116" /> <!-- Life Stone: level 64 -->
+				<item id="8739" min="1" max="1" chance="0.00445353308343887" /> <!-- Mid-Grade Life Stone: level 64 -->
+				<item id="8749" min="1" max="1" chance="0.000444885008335114" /> <!-- High-Grade Life Stone: level 64 -->
+				<item id="8759" min="1" max="1" chance="0.0000889770016670227" /> <!-- Top-Grade Life Stone: level 64 -->
 			</drop>
 			<spoil>
 				<item id="1877" min="1" max="1" chance="1.809" /> <!-- Adamantite Nugget -->
 				<item id="4041" min="1" max="1" chance="0.3933" /> <!-- Mold Hardener -->
-				<item id="4099" min="1" max="1" chance="2.0303" /> <!-- Sealed Doom Boots Part -->
+				<item id="4099" min="1" max="1" chance="2.0303" /> <!-- Doom Boots Part -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -3495,7 +3461,6 @@
 		</collision>
 	</npc>
 	<npc id="21744" level="60" type="RiftInvader" name="Forbidden Path Invader Elite Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -3559,16 +3524,16 @@
 				<item id="1889" min="1" max="1" chance="0.188997509102821" /> <!-- Compound Braid -->
 				<item id="4044" min="1" max="1" chance="0.0945045023012161" /> <!-- Thons -->
 				<item id="4157" min="1" max="1" chance="0.0141049780225754" /> <!-- Recipe: Blue Wolf Gaiters (100%) -->
-				<item id="8728" min="1" max="1" chance="0.0472465034008026" /> <!-- Life Stone - Level 61 -->
-				<item id="8738" min="1" max="1" chance="0.0118173736000061" /> <!-- Mid-Grade Life Stone - Level 61 -->
-				<item id="8748" min="1" max="1" chance="0.00118403645992279" /> <!-- High-Grade Life Stone - Level 61 -->
-				<item id="8758" min="1" max="1" chance="0.000241405491828918" /> <!-- Top-Grade Life Stone - Level 61 -->
+				<item id="8728" min="1" max="1" chance="0.0472465034008026" /> <!-- Life Stone: level 61 -->
+				<item id="8738" min="1" max="1" chance="0.0118173736000061" /> <!-- Mid-Grade Life Stone: level 61 -->
+				<item id="8748" min="1" max="1" chance="0.00118403645992279" /> <!-- High-Grade Life Stone: level 61 -->
+				<item id="8758" min="1" max="1" chance="0.000241405491828918" /> <!-- Top-Grade Life Stone: level 61 -->
 				<item id="1343" min="10" max="30" chance="4.04994498141766" /> <!-- Silver Arrow -->
 			</drop>
 			<spoil>
 				<item id="4157" min="1" max="1" chance="0.5252" /> <!-- Recipe: Blue Wolf Gaiters (100%) -->
 				<item id="4067" min="1" max="1" chance="3.7792" /> <!-- Zubei's Leather Gaiter Texture -->
-				<item id="947" min="1" max="1" chance="0.0422" /> <!-- Scroll: Enchant Weapon (B-Grade) -->
+				<item id="947" min="1" max="1" chance="0.0422" /> <!-- Scroll: Enchant Weapon (B) -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -3577,7 +3542,6 @@
 		</collision>
 	</npc>
 	<npc id="21745" level="63" type="RiftInvader" name="Forbidden Path Invader Warrior">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -3638,10 +3602,10 @@
 				<item id="4041" min="1" max="1" chance="0.253678567409515" /> <!-- Mold Hardener -->
 				<item id="4040" min="1" max="1" chance="0.583442255691528" /> <!-- Mold Lubricant -->
 				<item id="5460" min="1" max="1" chance="0.0159402387084961" /> <!-- Recipe: Dasparion's Staff(60%) -->
-				<item id="8729" min="1" max="1" chance="0.388949204227448" /> <!-- Life Stone - Level 64 -->
-				<item id="8739" min="1" max="1" chance="0.0972280763816833" /> <!-- Mid-Grade Life Stone - Level 64 -->
-				<item id="8749" min="1" max="1" chance="0.00974125698852539" /> <!-- High-Grade Life Stone - Level 64 -->
-				<item id="8759" min="1" max="1" chance="0.0019556311378479" /> <!-- Top-Grade Life Stone - Level 64 -->
+				<item id="8729" min="1" max="1" chance="0.388949204227448" /> <!-- Life Stone: level 64 -->
+				<item id="8739" min="1" max="1" chance="0.0972280763816833" /> <!-- Mid-Grade Life Stone: level 64 -->
+				<item id="8749" min="1" max="1" chance="0.00974125698852539" /> <!-- High-Grade Life Stone: level 64 -->
+				<item id="8759" min="1" max="1" chance="0.0019556311378479" /> <!-- Top-Grade Life Stone: level 64 -->
 				<item id="1343" min="80" max="240" chance="5.20917407331467" /> <!-- Silver Arrow -->
 			</drop>
 			<spoil>
@@ -3656,7 +3620,6 @@
 		</collision>
 	</npc>
 	<npc id="21746" level="60" type="RiftInvader" name="Forbidden Path Invader Elite Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -3708,14 +3671,16 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="3753" max="7629" chance="70" /> <!-- Adena -->
-				<item id="8728" min="1" max="1" chance="4.67131547601318" /> <!-- Life Stone - Level 61 -->
-				<item id="8738" min="1" max="1" chance="1.1678288690033" /> <!-- Mid-Grade Life Stone - Level 61 -->
-				<item id="8748" min="1" max="1" chance="0.116785820480347" /> <!-- High-Grade Life Stone - Level 61 -->
-				<item id="8758" min="1" max="1" chance="0.0233512969360352" /> <!-- Top-Grade Life Stone - Level 61 -->
+				<item id="6670" min="1" max="3" chance="23.3565187084656" /> <!-- Deluxe Chest Key - Grade 6 -->
+				<item id="8728" min="1" max="1" chance="4.67131547601318" /> <!-- Life Stone: level 61 -->
+				<item id="8738" min="1" max="1" chance="1.1678288690033" /> <!-- Mid-Grade Life Stone: level 61 -->
+				<item id="8748" min="1" max="1" chance="0.116785820480347" /> <!-- High-Grade Life Stone: level 61 -->
+				<item id="8758" min="1" max="1" chance="0.0233512969360352" /> <!-- Top-Grade Life Stone: level 61 -->
 			</drop>
 			<spoil>
-				<item id="947" min="1" max="1" chance="0.3795" /> <!-- Scroll: Enchant Weapon (B-Grade) -->
-				<item id="947" min="1" max="1" chance="0.3795" /> <!-- Scroll: Enchant Weapon (B-Grade) -->
+				<item id="6670" min="1" max="3" chance="79.0715" /> <!-- Deluxe Chest Key - Grade 6 -->
+				<item id="947" min="1" max="1" chance="0.3795" /> <!-- Scroll: Enchant Weapon (B) -->
+				<item id="947" min="1" max="1" chance="0.3795" /> <!-- Scroll: Enchant Weapon (B) -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -3724,7 +3689,6 @@
 		</collision>
 	</npc>
 	<npc id="21747" level="63" type="RiftInvader" name="Forbidden Path Invader Elite Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -3776,12 +3740,14 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="4180" max="8463" chance="70" /> <!-- Adena -->
-				<item id="8729" min="1" max="1" chance="4.15083278442764" /> <!-- Life Stone - Level 64 -->
-				<item id="8739" min="1" max="1" chance="1.03772382400703" /> <!-- Mid-Grade Life Stone - Level 64 -->
-				<item id="8749" min="1" max="1" chance="0.103769256820679" /> <!-- High-Grade Life Stone - Level 64 -->
-				<item id="8759" min="1" max="1" chance="0.0207538513641357" /> <!-- Top-Grade Life Stone - Level 64 -->
+				<item id="6670" min="1" max="3" chance="25.9427205305729" /> <!-- Deluxe Chest Key - Grade 6 -->
+				<item id="8729" min="1" max="1" chance="4.15083278442764" /> <!-- Life Stone: level 64 -->
+				<item id="8739" min="1" max="1" chance="1.03772382400703" /> <!-- Mid-Grade Life Stone: level 64 -->
+				<item id="8749" min="1" max="1" chance="0.103769256820679" /> <!-- High-Grade Life Stone: level 64 -->
+				<item id="8759" min="1" max="1" chance="0.0207538513641357" /> <!-- Top-Grade Life Stone: level 64 -->
 			</drop>
 			<spoil>
+				<item id="6670" min="1" max="3" chance="87.827" /> <!-- Deluxe Chest Key - Grade 6 -->
 				<item id="1894" min="1" max="1" chance="36.9798" /> <!-- Crafted Leather -->
 				<item id="4052" min="1" max="1" chance="37.3136" /> <!-- Earring of Black Ore Piece -->
 			</spoil>
@@ -3792,7 +3758,6 @@
 		</collision>
 	</npc>
 	<npc id="21748" level="60" type="RiftInvader" name="Forbidden Path Invader Elite Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -3851,16 +3816,16 @@
 				<item id="1881" min="1" max="1" chance="3.34926189300919" /> <!-- Coarse Bone Powder -->
 				<item id="1875" min="1" max="1" chance="1.67464782735443" /> <!-- Stone of Purity -->
 				<item id="4041" min="1" max="1" chance="0.218438196907043" /> <!-- Mold Hardener -->
-				<item id="947" min="1" max="1" chance="0.0100609865036011" /> <!-- Scroll: Enchant Weapon (B-Grade) -->
-				<item id="948" min="1" max="1" chance="0.0627967613983154" /> <!-- Scroll: Enchant Armor (B-Grade) -->
-				<item id="8728" min="1" max="1" chance="0.41864507598877" /> <!-- Life Stone - Level 61 -->
-				<item id="8738" min="1" max="1" chance="0.104661268997192" /> <!-- Mid-Grade Life Stone - Level 61 -->
-				<item id="8748" min="1" max="1" chance="0.0104661268997192" /> <!-- High-Grade Life Stone - Level 61 -->
-				<item id="8758" min="1" max="1" chance="0.00209322537994385" /> <!-- Top-Grade Life Stone - Level 61 -->
+				<item id="947" min="1" max="1" chance="0.0100609865036011" /> <!-- Scroll: Enchant Weapon (B) -->
+				<item id="948" min="1" max="1" chance="0.0627967613983154" /> <!-- Scroll: Enchant Armor (B) -->
+				<item id="8728" min="1" max="1" chance="0.41864507598877" /> <!-- Life Stone: level 61 -->
+				<item id="8738" min="1" max="1" chance="0.104661268997192" /> <!-- Mid-Grade Life Stone: level 61 -->
+				<item id="8748" min="1" max="1" chance="0.0104661268997192" /> <!-- High-Grade Life Stone: level 61 -->
+				<item id="8758" min="1" max="1" chance="0.00209322537994385" /> <!-- Top-Grade Life Stone: level 61 -->
 			</drop>
 			<spoil>
-				<item id="947" min="1" max="1" chance="0.3742" /> <!-- Scroll: Enchant Weapon (B-Grade) -->
-				<item id="948" min="1" max="1" chance="2.3386" /> <!-- Scroll: Enchant Armor (B-Grade) -->
+				<item id="947" min="1" max="1" chance="0.3742" /> <!-- Scroll: Enchant Weapon (B) -->
+				<item id="948" min="1" max="1" chance="2.3386" /> <!-- Scroll: Enchant Armor (B) -->
 				<item id="4129" min="1" max="1" chance="10.1238" /> <!-- Recipe: Earrings of Black Ore (100%) -->
 			</spoil>
 		</dropLists>
@@ -3870,7 +3835,6 @@
 		</collision>
 	</npc>
 	<npc id="21749" level="65" type="RiftInvader" name="Forbidden Path Invader Elite Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -3922,24 +3886,24 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="4408" max="8937" chance="70" /> <!-- Adena -->
-				<item id="601" min="1" max="1" chance="0.013273835952282" /> <!-- Sealed Doom Boots -->
-				<item id="4099" min="1" max="1" chance="1.843726157372" /> <!-- Sealed Doom Boots Part -->
-				<item id="2439" min="1" max="1" chance="0.013273835952282" /> <!-- Sealed Blue Wolf Boots -->
-				<item id="4090" min="1" max="1" chance="1.843726157372" /> <!-- Sealed Blue Wolf Boots Design -->
-				<item id="2475" min="1" max="1" chance="0.013273835952282" /> <!-- Sealed Doom Gloves -->
-				<item id="4091" min="1" max="1" chance="1.843726157372" /> <!-- Sealed Doom Gloves Part -->
-				<item id="2487" min="1" max="1" chance="0.013273835952282" /> <!-- Sealed Blue Wolf Gloves -->
-				<item id="4096" min="1" max="1" chance="1.843726157372" /> <!-- Sealed Blue Wolf Gloves Fabric -->
-				<item id="947" min="1" max="1" chance="0.0219040822305679" /> <!-- Scroll: Enchant Weapon (B-Grade) -->
-				<item id="948" min="1" max="1" chance="0.136903520791054" /> <!-- Scroll: Enchant Armor (B-Grade) -->
-				<item id="8729" min="1" max="1" chance="0.730150653018951" /> <!-- Life Stone - Level 64 -->
-				<item id="8739" min="1" max="1" chance="0.182537663254738" /> <!-- Mid-Grade Life Stone - Level 64 -->
-				<item id="8749" min="1" max="1" chance="0.018253219625473" /> <!-- High-Grade Life Stone - Level 64 -->
-				<item id="8759" min="1" max="1" chance="0.00365086260509491" /> <!-- Top-Grade Life Stone - Level 64 -->
+				<item id="601" min="1" max="1" chance="0.013273835952282" /> <!-- Boots of Doom -->
+				<item id="4099" min="1" max="1" chance="1.843726157372" /> <!-- Doom Boots Part -->
+				<item id="2439" min="1" max="1" chance="0.013273835952282" /> <!-- Blue Wolf Boots -->
+				<item id="4090" min="1" max="1" chance="1.843726157372" /> <!-- Blue Wolf Boots Design -->
+				<item id="2475" min="1" max="1" chance="0.013273835952282" /> <!-- Doom Gloves -->
+				<item id="4091" min="1" max="1" chance="1.843726157372" /> <!-- Doom Gloves Part -->
+				<item id="2487" min="1" max="1" chance="0.013273835952282" /> <!-- Blue Wolf Gloves -->
+				<item id="4096" min="1" max="1" chance="1.843726157372" /> <!-- Blue Wolf Gloves Fabric -->
+				<item id="947" min="1" max="1" chance="0.0219040822305679" /> <!-- Scroll: Enchant Weapon (B) -->
+				<item id="948" min="1" max="1" chance="0.136903520791054" /> <!-- Scroll: Enchant Armor (B) -->
+				<item id="8729" min="1" max="1" chance="0.730150653018951" /> <!-- Life Stone: level 64 -->
+				<item id="8739" min="1" max="1" chance="0.182537663254738" /> <!-- Mid-Grade Life Stone: level 64 -->
+				<item id="8749" min="1" max="1" chance="0.018253219625473" /> <!-- High-Grade Life Stone: level 64 -->
+				<item id="8759" min="1" max="1" chance="0.00365086260509491" /> <!-- Top-Grade Life Stone: level 64 -->
 			</drop>
 			<spoil>
-				<item id="947" min="1" max="1" chance="0.4449" /> <!-- Scroll: Enchant Weapon (B-Grade) -->
-				<item id="948" min="1" max="1" chance="2.7807" /> <!-- Scroll: Enchant Armor (B-Grade) -->
+				<item id="947" min="1" max="1" chance="0.4449" /> <!-- Scroll: Enchant Weapon (B) -->
+				<item id="948" min="1" max="1" chance="2.7807" /> <!-- Scroll: Enchant Armor (B) -->
 				<item id="4053" min="1" max="1" chance="47.6765" /> <!-- Ring of Black Ore Gemstone -->
 			</spoil>
 		</dropLists>
@@ -3949,7 +3913,6 @@
 		</collision>
 	</npc>
 	<npc id="21750" level="63" type="RiftInvader" name="Forbidden Path Invader Magus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -4010,16 +3973,16 @@
 				<item id="4088" min="1" max="1" chance="1.86972535490704" /> <!-- Blue Wolf Helmet Design -->
 				<item id="2417" min="1" max="1" chance="0.0106586642303467" /> <!-- Doom Helmet -->
 				<item id="4089" min="1" max="1" chance="1.86972535490704" /> <!-- Doom Helmet Pattern -->
-				<item id="947" min="1" max="1" chance="0.0197865938096046" /> <!-- Scroll: Enchant Weapon (B-Grade) -->
-				<item id="948" min="1" max="1" chance="0.123668927484989" /> <!-- Scroll: Enchant Armor (B-Grade) -->
-				<item id="8729" min="1" max="1" chance="0.659566296319962" /> <!-- Life Stone - Level 64 -->
-				<item id="8739" min="1" max="1" chance="0.16489157407999" /> <!-- Mid-Grade Life Stone - Level 64 -->
-				<item id="8749" min="1" max="1" chance="0.0164886635580063" /> <!-- High-Grade Life Stone - Level 64 -->
-				<item id="8759" min="1" max="1" chance="0.00329793025159836" /> <!-- Top-Grade Life Stone - Level 64 -->
+				<item id="947" min="1" max="1" chance="0.0197865938096046" /> <!-- Scroll: Enchant Weapon (B) -->
+				<item id="948" min="1" max="1" chance="0.123668927484989" /> <!-- Scroll: Enchant Armor (B) -->
+				<item id="8729" min="1" max="1" chance="0.659566296319962" /> <!-- Life Stone: level 64 -->
+				<item id="8739" min="1" max="1" chance="0.16489157407999" /> <!-- Mid-Grade Life Stone: level 64 -->
+				<item id="8749" min="1" max="1" chance="0.0164886635580063" /> <!-- High-Grade Life Stone: level 64 -->
+				<item id="8759" min="1" max="1" chance="0.00329793025159836" /> <!-- Top-Grade Life Stone: level 64 -->
 			</drop>
 			<spoil>
-				<item id="947" min="1" max="1" chance="0.4019" /> <!-- Scroll: Enchant Weapon (B-Grade) -->
-				<item id="948" min="1" max="1" chance="2.5121" /> <!-- Scroll: Enchant Armor (B-Grade) -->
+				<item id="947" min="1" max="1" chance="0.4019" /> <!-- Scroll: Enchant Weapon (B) -->
+				<item id="948" min="1" max="1" chance="2.5121" /> <!-- Scroll: Enchant Armor (B) -->
 				<item id="5230" min="1" max="1" chance="1.3398" /> <!-- Recipe: Mithril Arrow (100%) -->
 			</spoil>
 		</dropLists>
@@ -4029,7 +3992,6 @@
 		</collision>
 	</npc>
 	<npc id="21751" level="70" type="RiftInvader" name="Dark Omen Invader Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -4089,14 +4051,14 @@
 				<item id="1895" min="1" max="1" chance="5.48053013200378" /> <!-- Metallic Fiber -->
 				<item id="4042" min="1" max="1" chance="0.319683819473267" /> <!-- Enria -->
 				<item id="5434" min="1" max="1" chance="0.00711530614852905" /> <!-- Recipe: Dragon Slayer(60%) -->
-				<item id="8730" min="1" max="1" chance="0.213137848049164" /> <!-- Life Stone - Level 67 -->
-				<item id="8740" min="1" max="1" chance="0.0532959383125305" /> <!-- Mid-Grade Life Stone - Level 67 -->
-				<item id="8750" min="1" max="1" chance="0.00532500331115723" /> <!-- High-Grade Life Stone - Level 67 -->
-				<item id="8760" min="1" max="1" chance="0.00105581962203979" /> <!-- Top-Grade Life Stone - Level 67 -->
+				<item id="8730" min="1" max="1" chance="0.213137848049164" /> <!-- Life Stone: level 67 -->
+				<item id="8740" min="1" max="1" chance="0.0532959383125305" /> <!-- Mid-Grade Life Stone: level 67 -->
+				<item id="8750" min="1" max="1" chance="0.00532500331115723" /> <!-- High-Grade Life Stone: level 67 -->
+				<item id="8760" min="1" max="1" chance="0.00105581962203979" /> <!-- Top-Grade Life Stone: level 67 -->
 				<item id="1343" min="30" max="90" chance="9.13417098147202" /> <!-- Silver Arrow -->
 			</drop>
 			<spoil>
-				<item id="729" min="1" max="1" chance="0.0794" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
+				<item id="729" min="1" max="1" chance="0.0794" /> <!-- Scroll: Enchant Weapon (A) -->
 				<item id="1876" min="1" max="3" chance="71.4323" /> <!-- Mithril Ore -->
 				<item id="1895" min="1" max="5" chance="68.0308" /> <!-- Metallic Fiber -->
 			</spoil>
@@ -4107,7 +4069,6 @@
 		</collision>
 	</npc>
 	<npc id="21752" level="75" type="RiftInvader" name="Dark Omen Invader Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -4168,10 +4129,10 @@
 				<item id="1875" min="1" max="1" chance="1.56073125155258" /> <!-- Stone of Purity -->
 				<item id="4041" min="1" max="1" chance="0.203556901767731" /> <!-- Mold Hardener -->
 				<item id="5162" min="1" max="1" chance="0.0103953779983521" /> <!-- Recipe: Spiritshot (S) Compressed Package (100%) -->
-				<item id="8731" min="1" max="1" chance="0.216762881965637" /> <!-- Life Stone - Level 70 -->
-				<item id="8741" min="1" max="1" chance="0.0542099711914063" /> <!-- Mid-Grade Life Stone - Level 70 -->
-				<item id="8751" min="1" max="1" chance="0.0054286973991394" /> <!-- High-Grade Life Stone - Level 70 -->
-				<item id="8761" min="1" max="1" chance="0.0010780391998291" /> <!-- Top-Grade Life Stone - Level 70 -->
+				<item id="8731" min="1" max="1" chance="0.216762881965637" /> <!-- Life Stone: level 70 -->
+				<item id="8741" min="1" max="1" chance="0.0542099711914063" /> <!-- Mid-Grade Life Stone: level 70 -->
+				<item id="8751" min="1" max="1" chance="0.0054286973991394" /> <!-- High-Grade Life Stone: level 70 -->
+				<item id="8761" min="1" max="1" chance="0.0010780391998291" /> <!-- Top-Grade Life Stone: level 70 -->
 				<item id="1344" min="40" max="120" chance="7.31588202124023" /> <!-- Mithril Arrow -->
 			</drop>
 			<spoil>
@@ -4186,7 +4147,6 @@
 		</collision>
 	</npc>
 	<npc id="21753" level="73" type="RiftInvader" name="Dark Omen Invader Archer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="157" />
 			<param name="MoveAroundSocial1" value="157" />
@@ -4249,10 +4209,10 @@
 				<item id="5550" min="1" max="1" chance="0.253192317840576" /> <!-- Durable Metal Plate -->
 				<item id="4043" min="1" max="1" chance="0.632931878002167" /> <!-- Asofe -->
 				<item id="6901" min="1" max="1" chance="0.0189796405181885" /> <!-- Recipe: Shining Arrow (100%) -->
-				<item id="8731" min="1" max="1" chance="0.175806257789612" /> <!-- Life Stone - Level 70 -->
-				<item id="8741" min="1" max="1" chance="0.0439760227470398" /> <!-- Mid-Grade Life Stone - Level 70 -->
-				<item id="8751" min="1" max="1" chance="0.00440249393463135" /> <!-- High-Grade Life Stone - Level 70 -->
-				<item id="8761" min="1" max="1" chance="0.00088049878692627" /> <!-- Top-Grade Life Stone - Level 70 -->
+				<item id="8731" min="1" max="1" chance="0.175806257789612" /> <!-- Life Stone: level 70 -->
+				<item id="8741" min="1" max="1" chance="0.0439760227470398" /> <!-- Mid-Grade Life Stone: level 70 -->
+				<item id="8751" min="1" max="1" chance="0.00440249393463135" /> <!-- High-Grade Life Stone: level 70 -->
+				<item id="8761" min="1" max="1" chance="0.00088049878692627" /> <!-- Top-Grade Life Stone: level 70 -->
 				<item id="1344" min="30" max="90" chance="7.91162401672745" /> <!-- Mithril Arrow -->
 			</drop>
 			<spoil>
@@ -4267,7 +4227,6 @@
 		</collision>
 	</npc>
 	<npc id="21754" level="75" type="RiftInvader" name="Dark Omen Invader Elite Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -4328,10 +4287,10 @@
 				<item id="1895" min="1" max="1" chance="6.32075791926956" /> <!-- Metallic Fiber -->
 				<item id="4042" min="1" max="1" chance="0.368724644908905" /> <!-- Enria -->
 				<item id="5167" min="1" max="1" chance="0.0098270094909668" /> <!-- Recipe: Blessed Spiritshot (S) Compressed Package (100%) -->
-				<item id="8731" min="1" max="1" chance="0.204842318527222" /> <!-- Life Stone - Level 70 -->
-				<item id="8741" min="1" max="1" chance="0.0512105796318054" /> <!-- Mid-Grade Life Stone - Level 70 -->
-				<item id="8751" min="1" max="1" chance="0.00512529374313354" /> <!-- High-Grade Life Stone - Level 70 -->
-				<item id="8761" min="1" max="1" chance="0.00105894498825073" /> <!-- Top-Grade Life Stone - Level 70 -->
+				<item id="8731" min="1" max="1" chance="0.204842318527222" /> <!-- Life Stone: level 70 -->
+				<item id="8741" min="1" max="1" chance="0.0512105796318054" /> <!-- Mid-Grade Life Stone: level 70 -->
+				<item id="8751" min="1" max="1" chance="0.00512529374313354" /> <!-- High-Grade Life Stone: level 70 -->
+				<item id="8761" min="1" max="1" chance="0.00105894498825073" /> <!-- Top-Grade Life Stone: level 70 -->
 			</drop>
 			<spoil>
 				<item id="5277" min="1" max="1" chance="0.2663" /> <!-- Recipe: Greater Spiritshot (S) Compressed Package(100%) -->
@@ -4345,7 +4304,6 @@
 		</collision>
 	</npc>
 	<npc id="21755" level="73" type="RiftInvader" name="Dark Omen Invader Shaman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -4412,14 +4370,14 @@
 				<item id="1874" min="1" max="1" chance="1.52257536201096" /> <!-- Oriharukon Ore -->
 				<item id="4043" min="1" max="1" chance="0.761263179454803" /> <!-- Asofe -->
 				<item id="4039" min="1" max="1" chance="0.761263179454803" /> <!-- Mold Glue -->
-				<item id="1808" min="1" max="1" chance="0.0101436419792175" /> <!-- Recipe: Soulshot (S-Grade) -->
-				<item id="8731" min="1" max="1" chance="0.211448382320404" /> <!-- Life Stone - Level 70 -->
-				<item id="8741" min="1" max="1" chance="0.0528743463554382" /> <!-- Mid-Grade Life Stone - Level 70 -->
-				<item id="8751" min="1" max="1" chance="0.00529233494567871" /> <!-- High-Grade Life Stone - Level 70 -->
-				<item id="8761" min="1" max="1" chance="0.00107806822967529" /> <!-- Top-Grade Life Stone - Level 70 -->
+				<item id="1808" min="1" max="1" chance="0.0101436419792175" /> <!-- Recipe: Soulshot: S Grade -->
+				<item id="8731" min="1" max="1" chance="0.211448382320404" /> <!-- Life Stone: level 70 -->
+				<item id="8741" min="1" max="1" chance="0.0528743463554382" /> <!-- Mid-Grade Life Stone: level 70 -->
+				<item id="8751" min="1" max="1" chance="0.00529233494567871" /> <!-- High-Grade Life Stone: level 70 -->
+				<item id="8761" min="1" max="1" chance="0.00107806822967529" /> <!-- Top-Grade Life Stone: level 70 -->
 			</drop>
 			<spoil>
-				<item id="729" min="1" max="1" chance="0.0687" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
+				<item id="729" min="1" max="1" chance="0.0687" /> <!-- Scroll: Enchant Weapon (A) -->
 				<item id="1874" min="1" max="1" chance="41.2363" /> <!-- Oriharukon Ore -->
 				<item id="4043" min="1" max="1" chance="20.6181" /> <!-- Asofe -->
 			</spoil>
@@ -4430,7 +4388,6 @@
 		</collision>
 	</npc>
 	<npc id="21756" level="70" type="RiftInvader" name="Dark Omen Invader Priest">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -4492,10 +4449,10 @@
 				<item id="1895" min="1" max="1" chance="3.90150463973999" /> <!-- Metallic Fiber -->
 				<item id="4042" min="1" max="1" chance="0.227600052185059" /> <!-- Enria -->
 				<item id="5440" min="1" max="1" chance="0.00505866409301758" /> <!-- Recipe: Elysian(60%) -->
-				<item id="8730" min="1" max="1" chance="0.151720090789795" /> <!-- Life Stone - Level 67 -->
-				<item id="8740" min="1" max="1" chance="0.0379200646972656" /> <!-- Mid-Grade Life Stone - Level 67 -->
-				<item id="8750" min="1" max="1" chance="0.00378404006958008" /> <!-- High-Grade Life Stone - Level 67 -->
-				<item id="8760" min="1" max="1" chance="0.000796640014648437" /> <!-- Top-Grade Life Stone - Level 67 -->
+				<item id="8730" min="1" max="1" chance="0.151720090789795" /> <!-- Life Stone: level 67 -->
+				<item id="8740" min="1" max="1" chance="0.0379200646972656" /> <!-- Mid-Grade Life Stone: level 67 -->
+				<item id="8750" min="1" max="1" chance="0.00378404006958008" /> <!-- High-Grade Life Stone: level 67 -->
+				<item id="8760" min="1" max="1" chance="0.000796640014648437" /> <!-- Top-Grade Life Stone: level 67 -->
 			</drop>
 			<spoil>
 				<item id="5524" min="1" max="1" chance="4.5563" /> <!-- Sealed Dark Crystal Gaiters Pattern -->
@@ -4509,7 +4466,6 @@
 		</collision>
 	</npc>
 	<npc id="21757" level="75" type="RiftInvader" name="Dark Omen Invader Magus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -4571,10 +4527,10 @@
 				<item id="4041" min="1" max="1" chance="0.154879608345032" /> <!-- Mold Hardener -->
 				<item id="4040" min="1" max="1" chance="0.356201969642639" /> <!-- Mold Lubricant -->
 				<item id="5272" min="1" max="1" chance="0.00790245204925537" /> <!-- Recipe: Greater Soulshot (S) Compressed Package(100%) -->
-				<item id="8731" min="1" max="1" chance="0.164895015487671" /> <!-- Life Stone - Level 70 -->
-				<item id="8741" min="1" max="1" chance="0.0412448834228516" /> <!-- Mid-Grade Life Stone - Level 70 -->
-				<item id="8751" min="1" max="1" chance="0.00414139198303223" /> <!-- High-Grade Life Stone - Level 70 -->
-				<item id="8761" min="1" max="1" chance="0.000845182037353516" /> <!-- Top-Grade Life Stone - Level 70 -->
+				<item id="8731" min="1" max="1" chance="0.164895015487671" /> <!-- Life Stone: level 70 -->
+				<item id="8741" min="1" max="1" chance="0.0412448834228516" /> <!-- Mid-Grade Life Stone: level 70 -->
+				<item id="8751" min="1" max="1" chance="0.00414139198303223" /> <!-- High-Grade Life Stone: level 70 -->
+				<item id="8761" min="1" max="1" chance="0.000845182037353516" /> <!-- Top-Grade Life Stone: level 70 -->
 				<item id="1344" min="20" max="60" chance="11.1317658366776" /> <!-- Mithril Arrow -->
 			</drop>
 			<spoil>
@@ -4589,7 +4545,6 @@
 		</collision>
 	</npc>
 	<npc id="21758" level="70" type="RiftInvader" name="Dark Omen Invader Martyrs">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -4651,16 +4606,16 @@
 				<item id="1875" min="1" max="1" chance="1.03819746616364" /> <!-- Stone of Purity -->
 				<item id="4040" min="1" max="1" chance="0.31143601914978" /> <!-- Mold Lubricant -->
 				<item id="5442" min="1" max="1" chance="0.00575873342895508" /> <!-- Recipe: Soul Bow(60%) -->
-				<item id="8730" min="1" max="1" chance="0.173040651260376" /> <!-- Life Stone - Level 67 -->
-				<item id="8740" min="1" max="1" chance="0.0432369421157837" /> <!-- Mid-Grade Life Stone - Level 67 -->
-				<item id="8750" min="1" max="1" chance="0.00431905007171631" /> <!-- High-Grade Life Stone - Level 67 -->
-				<item id="8760" min="1" max="1" chance="0.000882386573791504" /> <!-- Top-Grade Life Stone - Level 67 -->
+				<item id="8730" min="1" max="1" chance="0.173040651260376" /> <!-- Life Stone: level 67 -->
+				<item id="8740" min="1" max="1" chance="0.0432369421157837" /> <!-- Mid-Grade Life Stone: level 67 -->
+				<item id="8750" min="1" max="1" chance="0.00431905007171631" /> <!-- High-Grade Life Stone: level 67 -->
+				<item id="8760" min="1" max="1" chance="0.000882386573791504" /> <!-- Top-Grade Life Stone: level 67 -->
 				<item id="1343" min="20" max="60" chance="11.1234115906143" /> <!-- Silver Arrow -->
 			</drop>
 			<spoil>
 				<item id="6335" min="1" max="1" chance="2.2305" /> <!-- Recipe: Sealed Majestic Necklace(70%) -->
 				<item id="5526" min="1" max="1" chance="8.9647" /> <!-- Sealed Tallum Helm Design -->
-				<item id="730" min="1" max="1" chance="0.4833" /> <!-- Scroll: Enchant Armor (A-Grade) -->
+				<item id="730" min="1" max="1" chance="0.4833" /> <!-- Scroll: Enchant Armor (A) -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -4669,7 +4624,6 @@
 		</collision>
 	</npc>
 	<npc id="21759" level="73" type="RiftInvader" name="Dark Omen Invader Warrior">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -4722,7 +4676,7 @@
 			<drop>
 				<item id="57" min="2470" max="5029" chance="70" /> <!-- Adena -->
 				<item id="212" min="1" max="1" chance="0.000327503000348806" /> <!-- Dasparion's Staff -->
-				<item id="5543" min="1" max="1" chance="0.0785978994837105" /> <!-- Dasparion's Staff Head -->
+				<item id="5543" min="1" max="1" chance="0.0785978994837105" /> <!-- Dasparion's Staff Edge -->
 				<item id="2504" min="1" max="1" chance="0.000327503000348806" /> <!-- Meteor Shower -->
 				<item id="5532" min="1" max="1" chance="0.0778639166829288" /> <!-- Meteor Shower Head -->
 				<item id="7894" min="1" max="1" chance="0.000327503000348806" /> <!-- Spiritual Eye -->
@@ -4735,10 +4689,10 @@
 				<item id="4041" min="1" max="1" chance="0.145998571128845" /> <!-- Mold Hardener -->
 				<item id="4040" min="1" max="1" chance="0.335776795646667" /> <!-- Mold Lubricant -->
 				<item id="3036" min="1" max="1" chance="0.00744931317901611" /> <!-- Recipe: Spiritshot S -->
-				<item id="8731" min="1" max="1" chance="0.155439679275513" /> <!-- Life Stone - Level 70 -->
-				<item id="8741" min="1" max="1" chance="0.0388798377685547" /> <!-- Mid-Grade Life Stone - Level 70 -->
-				<item id="8751" min="1" max="1" chance="0.00390391813659668" /> <!-- High-Grade Life Stone - Level 70 -->
-				<item id="8761" min="1" max="1" chance="0.000796717987060547" /> <!-- Top-Grade Life Stone - Level 70 -->
+				<item id="8731" min="1" max="1" chance="0.155439679275513" /> <!-- Life Stone: level 70 -->
+				<item id="8741" min="1" max="1" chance="0.0388798377685547" /> <!-- Mid-Grade Life Stone: level 70 -->
+				<item id="8751" min="1" max="1" chance="0.00390391813659668" /> <!-- High-Grade Life Stone: level 70 -->
+				<item id="8761" min="1" max="1" chance="0.000796717987060547" /> <!-- Top-Grade Life Stone: level 70 -->
 				<item id="1344" min="20" max="60" chance="10.4934530998764" /> <!-- Mithril Arrow -->
 			</drop>
 			<spoil>
@@ -4753,7 +4707,6 @@
 		</collision>
 	</npc>
 	<npc id="21760" level="70" type="RiftInvader" name="Dark Omen Invader Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -4816,17 +4769,17 @@
 				<item id="1866" min="1" max="1" chance="12.0228661966553" /> <!-- Suede -->
 				<item id="1871" min="1" max="1" chance="18.0342992949829" /> <!-- Charcoal -->
 				<item id="5220" min="1" max="1" chance="0.721360199295044" /> <!-- Metal Hardener -->
-				<item id="1885" min="1" max="1" chance="1.50285827458191" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="1.50285827458191" /> <!-- High Grade Suede -->
 				<item id="4041" min="1" max="1" chance="0.156835918029785" /> <!-- Mold Hardener -->
 				<item id="5448" min="1" max="1" chance="0.00667108575439453" /> <!-- Recipe: Soul Separator(60%) -->
-				<item id="8730" min="1" max="1" chance="0.200394183837891" /> <!-- Life Stone - Level 67 -->
-				<item id="8740" min="1" max="1" chance="0.0500985459594727" /> <!-- Mid-Grade Life Stone - Level 67 -->
-				<item id="8750" min="1" max="1" chance="0.0050033143157959" /> <!-- High-Grade Life Stone - Level 67 -->
-				<item id="8760" min="1" max="1" chance="0.00101374342346191" /> <!-- Top-Grade Life Stone - Level 67 -->
+				<item id="8730" min="1" max="1" chance="0.200394183837891" /> <!-- Life Stone: level 67 -->
+				<item id="8740" min="1" max="1" chance="0.0500985459594727" /> <!-- Mid-Grade Life Stone: level 67 -->
+				<item id="8750" min="1" max="1" chance="0.0050033143157959" /> <!-- High-Grade Life Stone: level 67 -->
+				<item id="8760" min="1" max="1" chance="0.00101374342346191" /> <!-- Top-Grade Life Stone: level 67 -->
 			</drop>
 			<spoil>
 				<item id="5220" min="1" max="1" chance="24.4215" /> <!-- Metal Hardener -->
-				<item id="1885" min="1" max="1" chance="50.8781" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="50.8781" /> <!-- High Grade Suede -->
 				<item id="5532" min="1" max="1" chance="2.0589" /> <!-- Meteor Shower Head -->
 			</spoil>
 		</dropLists>
@@ -4836,7 +4789,6 @@
 		</collision>
 	</npc>
 	<npc id="21761" level="73" type="RiftInvader" name="Dark Omen Invader Disciple">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -4898,15 +4850,15 @@
 				<item id="1875" min="1" max="1" chance="1.2965243048172" /> <!-- Stone of Purity -->
 				<item id="4041" min="1" max="1" chance="0.169100598106384" /> <!-- Mold Hardener -->
 				<item id="3957" min="1" max="1" chance="0.00863860015869141" /> <!-- Recipe: Blessed Spiritshot S -->
-				<item id="8731" min="1" max="1" chance="0.180071620307922" /> <!-- Life Stone - Level 70 -->
-				<item id="8741" min="1" max="1" chance="0.0450071068267822" /> <!-- Mid-Grade Life Stone - Level 70 -->
-				<item id="8751" min="1" max="1" chance="0.00449207208251953" /> <!-- High-Grade Life Stone - Level 70 -->
-				<item id="8761" min="1" max="1" chance="0.000950246017456055" /> <!-- Top-Grade Life Stone - Level 70 -->
+				<item id="8731" min="1" max="1" chance="0.180071620307922" /> <!-- Life Stone: level 70 -->
+				<item id="8741" min="1" max="1" chance="0.0450071068267822" /> <!-- Mid-Grade Life Stone: level 70 -->
+				<item id="8751" min="1" max="1" chance="0.00449207208251953" /> <!-- High-Grade Life Stone: level 70 -->
+				<item id="8761" min="1" max="1" chance="0.000950246017456055" /> <!-- Top-Grade Life Stone: level 70 -->
 			</drop>
 			<spoil>
 				<item id="6335" min="1" max="1" chance="2.0258" /> <!-- Recipe: Sealed Majestic Necklace(70%) -->
 				<item id="5526" min="1" max="1" chance="8.142" /> <!-- Sealed Tallum Helm Design -->
-				<item id="730" min="1" max="1" chance="0.4389" /> <!-- Scroll: Enchant Armor (A-Grade) -->
+				<item id="730" min="1" max="1" chance="0.4389" /> <!-- Scroll: Enchant Armor (A) -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -4915,7 +4867,6 @@
 		</collision>
 	</npc>
 	<npc id="21762" level="75" type="RiftInvader" name="Dark Omen Invader Berserker">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -4978,10 +4929,10 @@
 				<item id="1894" min="1" max="1" chance="0.766358554668426" /> <!-- Crafted Leather -->
 				<item id="4042" min="1" max="1" chance="0.36402905216217" /> <!-- Enria -->
 				<item id="5277" min="1" max="1" chance="0.00968746723175049" /> <!-- Recipe: Greater Spiritshot (S) Compressed Package(100%) -->
-				<item id="8731" min="1" max="1" chance="0.202238362312317" /> <!-- Life Stone - Level 70 -->
-				<item id="8741" min="1" max="1" chance="0.0505346228790283" /> <!-- Mid-Grade Life Stone - Level 70 -->
-				<item id="8751" min="1" max="1" chance="0.00504347520828247" /> <!-- High-Grade Life Stone - Level 70 -->
-				<item id="8761" min="1" max="1" chance="0.00109857875823975" /> <!-- Top-Grade Life Stone - Level 70 -->
+				<item id="8731" min="1" max="1" chance="0.202238362312317" /> <!-- Life Stone: level 70 -->
+				<item id="8741" min="1" max="1" chance="0.0505346228790283" /> <!-- Mid-Grade Life Stone: level 70 -->
+				<item id="8751" min="1" max="1" chance="0.00504347520828247" /> <!-- High-Grade Life Stone: level 70 -->
+				<item id="8761" min="1" max="1" chance="0.00109857875823975" /> <!-- Top-Grade Life Stone: level 70 -->
 			</drop>
 			<spoil>
 				<item id="5529" min="1" max="1" chance="1.6229" /> <!-- Dragon Slayer Edge -->
@@ -4995,7 +4946,6 @@
 		</collision>
 	</npc>
 	<npc id="21763" level="70" type="Chest" name="Dark Omen Invader Food">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<acquire exp="7126" sp="707" />
@@ -5035,7 +4985,7 @@
 			<drop>
 				<item id="57" min="983" max="2000" chance="70" /> <!-- Adena -->
 				<item id="212" min="1" max="1" chance="0.00013020700071007" /> <!-- Dasparion's Staff -->
-				<item id="5543" min="1" max="1" chance="0.0312485587704107" /> <!-- Dasparion's Staff Head -->
+				<item id="5543" min="1" max="1" chance="0.0312485587704107" /> <!-- Dasparion's Staff Edge -->
 				<item id="2504" min="1" max="1" chance="0.00013020700071007" /> <!-- Meteor Shower -->
 				<item id="5532" min="1" max="1" chance="0.0309567455688193" /> <!-- Meteor Shower Head -->
 				<item id="7894" min="1" max="1" chance="0.00013020700071007" /> <!-- Spiritual Eye -->
@@ -5048,10 +4998,11 @@
 				<item id="1894" min="1" max="1" chance="0.214661099143982" /> <!-- Crafted Leather -->
 				<item id="4042" min="1" max="1" chance="0.101968147018433" /> <!-- Enria -->
 				<item id="5450" min="1" max="1" chance="0.00225495902252197" /> <!-- Recipe: Dragon Grinder(60%) -->
-				<item id="8730" min="1" max="1" chance="0.0679787646789551" /> <!-- Life Stone - Level 67 -->
-				<item id="8740" min="1" max="1" chance="0.0169946911697388" /> <!-- Mid-Grade Life Stone - Level 67 -->
-				<item id="8750" min="1" max="1" chance="0.00170496901702881" /> <!-- High-Grade Life Stone - Level 67 -->
-				<item id="8760" min="1" max="1" chance="0.000329994003295898" /> <!-- Top-Grade Life Stone - Level 67 -->
+				<item id="6671" min="1" max="1" chance="0.679760147289276" /> <!-- Deluxe Chest Key - Grade 7 -->
+				<item id="8730" min="1" max="1" chance="0.0679787646789551" /> <!-- Life Stone: level 67 -->
+				<item id="8740" min="1" max="1" chance="0.0169946911697388" /> <!-- Mid-Grade Life Stone: level 67 -->
+				<item id="8750" min="1" max="1" chance="0.00170496901702881" /> <!-- High-Grade Life Stone: level 67 -->
+				<item id="8760" min="1" max="1" chance="0.000329994003295898" /> <!-- Top-Grade Life Stone: level 67 -->
 				<item id="1343" min="10" max="30" chance="8.73989117729187" /> <!-- Silver Arrow -->
 			</drop>
 			<spoil>
@@ -5066,7 +5017,6 @@
 		</collision>
 	</npc>
 	<npc id="21764" level="75" type="RiftInvader" name="Dark Omen Invader Elite Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -5126,10 +5076,10 @@
 				<item id="4042" min="1" max="1" chance="0.766265112121582" /> <!-- Enria -->
 				<item id="4043" min="1" max="1" chance="1.53253022424316" /> <!-- Asofe -->
 				<item id="5282" min="1" max="1" chance="0.0204532155761719" /> <!-- Recipe: Greater Blessed Spiritshot (S) Compressed Package(100%) -->
-				<item id="8731" min="1" max="1" chance="0.425682549179077" /> <!-- Life Stone - Level 70 -->
-				<item id="8741" min="1" max="1" chance="0.106420637294769" /> <!-- Mid-Grade Life Stone - Level 70 -->
-				<item id="8751" min="1" max="1" chance="0.0106374982795715" /> <!-- High-Grade Life Stone - Level 70 -->
-				<item id="8761" min="1" max="1" chance="0.00214576145553589" /> <!-- Top-Grade Life Stone - Level 70 -->
+				<item id="8731" min="1" max="1" chance="0.425682549179077" /> <!-- Life Stone: level 70 -->
+				<item id="8741" min="1" max="1" chance="0.106420637294769" /> <!-- Mid-Grade Life Stone: level 70 -->
+				<item id="8751" min="1" max="1" chance="0.0106374982795715" /> <!-- High-Grade Life Stone: level 70 -->
+				<item id="8761" min="1" max="1" chance="0.00214576145553589" /> <!-- Top-Grade Life Stone: level 70 -->
 				<item id="1344" min="20" max="60" chance="28.7348960500603" /> <!-- Mithril Arrow -->
 			</drop>
 			<spoil>
@@ -5144,7 +5094,6 @@
 		</collision>
 	</npc>
 	<npc id="21765" level="75" type="RiftInvader" name="Dark Omen Invader Elite Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -5205,13 +5154,13 @@
 				<item id="1889" min="1" max="1" chance="3.12308611340332" /> <!-- Compound Braid -->
 				<item id="4044" min="1" max="1" chance="1.56154305670166" /> <!-- Thons -->
 				<item id="6901" min="1" max="1" chance="0.0468520540161133" /> <!-- Recipe: Shining Arrow (100%) -->
-				<item id="8731" min="1" max="1" chance="0.43376934777832" /> <!-- Life Stone - Level 70 -->
-				<item id="8741" min="1" max="1" chance="0.108420174194336" /> <!-- Mid-Grade Life Stone - Level 70 -->
-				<item id="8751" min="1" max="1" chance="0.0108597476196289" /> <!-- High-Grade Life Stone - Level 70 -->
-				<item id="8761" min="1" max="1" chance="0.00217194952392578" /> <!-- Top-Grade Life Stone - Level 70 -->
+				<item id="8731" min="1" max="1" chance="0.43376934777832" /> <!-- Life Stone: level 70 -->
+				<item id="8741" min="1" max="1" chance="0.108420174194336" /> <!-- Mid-Grade Life Stone: level 70 -->
+				<item id="8751" min="1" max="1" chance="0.0108597476196289" /> <!-- High-Grade Life Stone: level 70 -->
+				<item id="8761" min="1" max="1" chance="0.00217194952392578" /> <!-- Top-Grade Life Stone: level 70 -->
 			</drop>
 			<spoil>
-				<item id="1808" min="1" max="1" chance="0.5639" /> <!-- Recipe: Soulshot (S-Grade) -->
+				<item id="1808" min="1" max="1" chance="0.5639" /> <!-- Recipe: Soulshot: S Grade -->
 				<item id="5537" min="1" max="1" chance="3.4808" /> <!-- Soul Separator Head -->
 				<item id="3036" min="1" max="1" chance="0.5639" /> <!-- Recipe: Spiritshot S -->
 			</spoil>
@@ -5222,7 +5171,6 @@
 		</collision>
 	</npc>
 	<npc id="21766" level="75" type="RiftInvader" name="Dark Omen Invader Elite Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -5282,11 +5230,11 @@
 				<item id="1881" min="1" max="1" chance="0.221436881454468" /> <!-- Coarse Bone Powder -->
 				<item id="1875" min="1" max="1" chance="0.110718440727234" /> <!-- Stone of Purity -->
 				<item id="4041" min="1" max="1" chance="0.0144445234861374" /> <!-- Mold Hardener -->
-				<item id="1808" min="1" max="1" chance="0.000735282594203949" /> <!-- Recipe: Soulshot (S-Grade) -->
-				<item id="8731" min="1" max="1" chance="0.0153790882787704" /> <!-- Life Stone - Level 70 -->
-				<item id="8741" min="1" max="1" chance="0.0038413361697197" /> <!-- Mid-Grade Life Stone - Level 70 -->
-				<item id="8751" min="1" max="1" chance="0.000384820796966553" /> <!-- High-Grade Life Stone - Level 70 -->
-				<item id="8761" min="1" max="1" chance="0.0000755897994041443" /> <!-- Top-Grade Life Stone - Level 70 -->
+				<item id="1808" min="1" max="1" chance="0.000735282594203949" /> <!-- Recipe: Soulshot: S Grade -->
+				<item id="8731" min="1" max="1" chance="0.0153790882787704" /> <!-- Life Stone: level 70 -->
+				<item id="8741" min="1" max="1" chance="0.0038413361697197" /> <!-- Mid-Grade Life Stone: level 70 -->
+				<item id="8751" min="1" max="1" chance="0.000384820796966553" /> <!-- High-Grade Life Stone: level 70 -->
+				<item id="8761" min="1" max="1" chance="0.0000755897994041443" /> <!-- Top-Grade Life Stone: level 70 -->
 				<item id="1344" min="10" max="30" chance="2.07600512263536" /> <!-- Mithril Arrow -->
 			</drop>
 			<spoil>
@@ -5301,7 +5249,6 @@
 		</collision>
 	</npc>
 	<npc id="21767" level="70" type="RiftInvader" name="Dark Omen Invader Elite Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -5361,14 +5308,14 @@
 				<item id="1889" min="1" max="1" chance="0.2907231003685" /> <!-- Compound Braid -->
 				<item id="4044" min="1" max="1" chance="0.14536155018425" /> <!-- Thons -->
 				<item id="5456" min="1" max="1" chance="0.00161905562210083" /> <!-- Recipe: Tallum Glaive(60%) -->
-				<item id="8730" min="1" max="1" chance="0.0484576506614685" /> <!-- Life Stone - Level 67 -->
-				<item id="8740" min="1" max="1" chance="0.0121087117652893" /> <!-- Mid-Grade Life Stone - Level 67 -->
-				<item id="8750" min="1" max="1" chance="0.0012085908164978" /> <!-- High-Grade Life Stone - Level 67 -->
-				<item id="8760" min="1" max="1" chance="0.000228036003112793" /> <!-- Top-Grade Life Stone - Level 67 -->
+				<item id="8730" min="1" max="1" chance="0.0484576506614685" /> <!-- Life Stone: level 67 -->
+				<item id="8740" min="1" max="1" chance="0.0121087117652893" /> <!-- Mid-Grade Life Stone: level 67 -->
+				<item id="8750" min="1" max="1" chance="0.0012085908164978" /> <!-- High-Grade Life Stone: level 67 -->
+				<item id="8760" min="1" max="1" chance="0.000228036003112793" /> <!-- Top-Grade Life Stone: level 67 -->
 			</drop>
 			<spoil>
 				<item id="5536" min="1" max="1" chance="0.5023" /> <!-- Bloody Orchid Head -->
-				<item id="729" min="1" max="1" chance="0.0164" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
+				<item id="729" min="1" max="1" chance="0.0164" /> <!-- Scroll: Enchant Weapon (A) -->
 				<item id="4044" min="1" max="1" chance="4.9211" /> <!-- Thons -->
 			</spoil>
 		</dropLists>
@@ -5378,7 +5325,6 @@
 		</collision>
 	</npc>
 	<npc id="21768" level="73" type="RiftInvader" name="Dark Omen Invader Warrior">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -5440,10 +5386,10 @@
 				<item id="4041" min="1" max="1" chance="0.385071070388794" /> <!-- Mold Hardener -->
 				<item id="4040" min="1" max="1" chance="0.885670575714111" /> <!-- Mold Lubricant -->
 				<item id="5162" min="1" max="1" chance="0.0196697119827271" /> <!-- Recipe: Spiritshot (S) Compressed Package (100%) -->
-				<item id="8731" min="1" max="1" chance="0.410040578186035" /> <!-- Life Stone - Level 70 -->
-				<item id="8741" min="1" max="1" chance="0.102510144546509" /> <!-- Mid-Grade Life Stone - Level 70 -->
-				<item id="8751" min="1" max="1" chance="0.0102439006347656" /> <!-- High-Grade Life Stone - Level 70 -->
-				<item id="8761" min="1" max="1" chance="0.00206300776672363" /> <!-- Top-Grade Life Stone - Level 70 -->
+				<item id="8731" min="1" max="1" chance="0.410040578186035" /> <!-- Life Stone: level 70 -->
+				<item id="8741" min="1" max="1" chance="0.102510144546509" /> <!-- Mid-Grade Life Stone: level 70 -->
+				<item id="8751" min="1" max="1" chance="0.0102439006347656" /> <!-- High-Grade Life Stone: level 70 -->
+				<item id="8761" min="1" max="1" chance="0.00206300776672363" /> <!-- Top-Grade Life Stone: level 70 -->
 			</drop>
 			<spoil>
 				<item id="6337" min="1" max="1" chance="6.1505" /> <!-- Recipe: Sealed Majestic Earring(70%) -->
@@ -5457,7 +5403,6 @@
 		</collision>
 	</npc>
 	<npc id="21769" level="70" type="RiftInvader" name="Dark Omen Invader Elite Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -5509,14 +5454,16 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="5248" max="10676" chance="70" /> <!-- Adena -->
-				<item id="8730" min="1" max="1" chance="4.35483436982727" /> <!-- Life Stone - Level 67 -->
-				<item id="8740" min="1" max="1" chance="1.08870859245682" /> <!-- Mid-Grade Life Stone - Level 67 -->
-				<item id="8750" min="1" max="1" chance="0.108856122406006" /> <!-- High-Grade Life Stone - Level 67 -->
-				<item id="8760" min="1" max="1" chance="0.0218105227203369" /> <!-- Top-Grade Life Stone - Level 67 -->
+				<item id="6671" min="1" max="1" chance="43.5485893122673" /> <!-- Deluxe Chest Key - Grade 7 -->
+				<item id="8730" min="1" max="1" chance="4.35483436982727" /> <!-- Life Stone: level 67 -->
+				<item id="8740" min="1" max="1" chance="1.08870859245682" /> <!-- Mid-Grade Life Stone: level 67 -->
+				<item id="8750" min="1" max="1" chance="0.108856122406006" /> <!-- High-Grade Life Stone: level 67 -->
+				<item id="8760" min="1" max="1" chance="0.0218105227203369" /> <!-- Top-Grade Life Stone: level 67 -->
 			</drop>
 			<spoil>
+				<item id="6671" min="1" max="3" chance="73.7151" /> <!-- Deluxe Chest Key - Grade 7 -->
 				<item id="5478" min="1" max="1" chance="11.1577" /> <!-- Sealed Dark Crystal Leather Armor Pattern -->
-				<item id="729" min="1" max="1" chance="0.1474" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
+				<item id="729" min="1" max="1" chance="0.1474" /> <!-- Scroll: Enchant Weapon (A) -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -5525,7 +5472,6 @@
 		</collision>
 	</npc>
 	<npc id="21770" level="73" type="RiftInvader" name="Dark Omen Invader Elite Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -5578,12 +5524,14 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="5746" max="11699" chance="70" /> <!-- Adena -->
-				<item id="8731" min="1" max="1" chance="3.97796371046829" /> <!-- Life Stone - Level 70 -->
-				<item id="8741" min="1" max="1" chance="0.994498167491913" /> <!-- Mid-Grade Life Stone - Level 70 -->
-				<item id="8751" min="1" max="1" chance="0.0994469207992554" /> <!-- High-Grade Life Stone - Level 70 -->
-				<item id="8761" min="1" max="1" chance="0.0198662165603638" /> <!-- Top-Grade Life Stone - Level 70 -->
+				<item id="6671" min="1" max="3" chance="23.867724343811" /> <!-- Deluxe Chest Key - Grade 7 -->
+				<item id="8731" min="1" max="1" chance="3.97796371046829" /> <!-- Life Stone: level 70 -->
+				<item id="8741" min="1" max="1" chance="0.994498167491913" /> <!-- Mid-Grade Life Stone: level 70 -->
+				<item id="8751" min="1" max="1" chance="0.0994469207992554" /> <!-- High-Grade Life Stone: level 70 -->
+				<item id="8761" min="1" max="1" chance="0.0198662165603638" /> <!-- Top-Grade Life Stone: level 70 -->
 			</drop>
 			<spoil>
+				<item id="6671" min="1" max="3" chance="64.6418" /> <!-- Deluxe Chest Key - Grade 7 -->
 				<item id="1894" min="1" max="1" chance="40.8264" /> <!-- Crafted Leather -->
 				<item id="1894" min="1" max="1" chance="40.8264" /> <!-- Crafted Leather -->
 			</spoil>
@@ -5594,7 +5542,6 @@
 		</collision>
 	</npc>
 	<npc id="21771" level="70" type="RiftInvader" name="Dark Omen Invader Elite Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -5648,16 +5595,16 @@
 				<item id="57" min="5173" max="10525" chance="70" /> <!-- Adena -->
 				<item id="235" min="1" max="1" chance="0.00274073513031006" /> <!-- Bloody Orchid -->
 				<item id="5536" min="1" max="1" chance="0.657359248085022" /> <!-- Bloody Orchid Head -->
-				<item id="729" min="1" max="1" chance="0.00715530425798893" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
-				<item id="730" min="1" max="1" chance="0.053664781934917" /> <!-- Scroll: Enchant Armor (A-Grade) -->
-				<item id="8730" min="1" max="1" chance="0.715531402498901" /> <!-- Life Stone - Level 67 -->
-				<item id="8740" min="1" max="1" chance="0.178882606449723" /> <!-- Mid-Grade Life Stone - Level 67 -->
-				<item id="8750" min="1" max="1" chance="0.0178882606449723" /> <!-- High-Grade Life Stone - Level 67 -->
-				<item id="8760" min="1" max="1" chance="0.00357765212899447" /> <!-- Top-Grade Life Stone - Level 67 -->
+				<item id="729" min="1" max="1" chance="0.00715530425798893" /> <!-- Scroll: Enchant Weapon (A) -->
+				<item id="730" min="1" max="1" chance="0.053664781934917" /> <!-- Scroll: Enchant Armor (A) -->
+				<item id="8730" min="1" max="1" chance="0.715531402498901" /> <!-- Life Stone: level 67 -->
+				<item id="8740" min="1" max="1" chance="0.178882606449723" /> <!-- Mid-Grade Life Stone: level 67 -->
+				<item id="8750" min="1" max="1" chance="0.0178882606449723" /> <!-- High-Grade Life Stone: level 67 -->
+				<item id="8760" min="1" max="1" chance="0.00357765212899447" /> <!-- Top-Grade Life Stone: level 67 -->
 			</drop>
 			<spoil>
-				<item id="729" min="1" max="1" chance="0.1453" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
-				<item id="730" min="1" max="1" chance="1.0901" /> <!-- Scroll: Enchant Armor (A-Grade) -->
+				<item id="729" min="1" max="1" chance="0.1453" /> <!-- Scroll: Enchant Weapon (A) -->
+				<item id="730" min="1" max="1" chance="1.0901" /> <!-- Scroll: Enchant Armor (A) -->
 				<item id="5479" min="1" max="1" chance="7.7403" /> <!-- Sealed Tallum Leather Armor Pattern -->
 			</spoil>
 		</dropLists>
@@ -5667,7 +5614,6 @@
 		</collision>
 	</npc>
 	<npc id="21772" level="75" type="RiftInvader" name="Dark Omen Invader Elite Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -5721,23 +5667,23 @@
 			<drop>
 				<item id="57" min="6003" max="12248" chance="70" /> <!-- Adena -->
 				<item id="212" min="1" max="1" chance="0.000796707970201969" /> <!-- Dasparion's Staff -->
-				<item id="5543" min="1" max="1" chance="0.191203051248729" /> <!-- Dasparion's Staff Head -->
+				<item id="5543" min="1" max="1" chance="0.191203051248729" /> <!-- Dasparion's Staff Edge -->
 				<item id="2504" min="1" max="1" chance="0.000796707970201969" /> <!-- Meteor Shower -->
 				<item id="5532" min="1" max="1" chance="0.189417510515511" /> <!-- Meteor Shower Head -->
 				<item id="7894" min="1" max="1" chance="0.000796707970201969" /> <!-- Spiritual Eye -->
 				<item id="8341" min="1" max="1" chance="0.189175067324579" /> <!-- Spiritual Eye Piece -->
 				<item id="7899" min="1" max="1" chance="0.000796707970201969" /> <!-- Destroyer Hammer -->
 				<item id="8346" min="1" max="1" chance="0.189417510515511" /> <!-- Hammer Piece of Destroyer -->
-				<item id="729" min="1" max="1" chance="0.00832091885197163" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
-				<item id="730" min="1" max="1" chance="0.0624073705397844" /> <!-- Scroll: Enchant Armor (A-Grade) -->
-				<item id="8731" min="1" max="1" chance="0.693415334697604" /> <!-- Life Stone - Level 70 -->
-				<item id="8741" min="1" max="1" chance="0.173353594099402" /> <!-- Mid-Grade Life Stone - Level 70 -->
-				<item id="8751" min="1" max="1" chance="0.0173356468999386" /> <!-- High-Grade Life Stone - Level 70 -->
-				<item id="8761" min="1" max="1" chance="0.00346712937998772" /> <!-- Top-Grade Life Stone - Level 70 -->
+				<item id="729" min="1" max="1" chance="0.00832091885197163" /> <!-- Scroll: Enchant Weapon (A) -->
+				<item id="730" min="1" max="1" chance="0.0624073705397844" /> <!-- Scroll: Enchant Armor (A) -->
+				<item id="8731" min="1" max="1" chance="0.693415334697604" /> <!-- Life Stone: level 70 -->
+				<item id="8741" min="1" max="1" chance="0.173353594099402" /> <!-- Mid-Grade Life Stone: level 70 -->
+				<item id="8751" min="1" max="1" chance="0.0173356468999386" /> <!-- High-Grade Life Stone: level 70 -->
+				<item id="8761" min="1" max="1" chance="0.00346712937998772" /> <!-- Top-Grade Life Stone: level 70 -->
 			</drop>
 			<spoil>
-				<item id="729" min="1" max="1" chance="0.1352" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
-				<item id="730" min="1" max="1" chance="1.0141" /> <!-- Scroll: Enchant Armor (A-Grade) -->
+				<item id="729" min="1" max="1" chance="0.1352" /> <!-- Scroll: Enchant Weapon (A) -->
+				<item id="730" min="1" max="1" chance="1.0141" /> <!-- Scroll: Enchant Armor (A) -->
 				<item id="6901" min="1" max="1" chance="1.2169" /> <!-- Recipe: Shining Arrow (100%) -->
 			</spoil>
 		</dropLists>
@@ -5747,7 +5693,6 @@
 		</collision>
 	</npc>
 	<npc id="21773" level="73" type="RiftInvader" name="Dark Omen Invader Magus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -5803,16 +5748,16 @@
 				<item id="57" min="5478" max="11154" chance="70" /> <!-- Adena -->
 				<item id="288" min="1" max="1" chance="0.0029054519534111" /> <!-- Carnage Bow -->
 				<item id="5535" min="1" max="1" chance="0.698894536793232" /> <!-- Carnage Bow Stave -->
-				<item id="729" min="1" max="1" chance="0.00758546885299683" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
-				<item id="730" min="1" max="1" chance="0.0568914531974793" /> <!-- Scroll: Enchant Armor (A-Grade) -->
-				<item id="8731" min="1" max="1" chance="0.632127354816437" /> <!-- Life Stone - Level 70 -->
-				<item id="8741" min="1" max="1" chance="0.158031620304108" /> <!-- Mid-Grade Life Stone - Level 70 -->
-				<item id="8751" min="1" max="1" chance="0.0158034241104126" /> <!-- High-Grade Life Stone - Level 70 -->
-				<item id="8761" min="1" max="1" chance="0.00316068482208252" /> <!-- Top-Grade Life Stone - Level 70 -->
+				<item id="729" min="1" max="1" chance="0.00758546885299683" /> <!-- Scroll: Enchant Weapon (A) -->
+				<item id="730" min="1" max="1" chance="0.0568914531974793" /> <!-- Scroll: Enchant Armor (A) -->
+				<item id="8731" min="1" max="1" chance="0.632127354816437" /> <!-- Life Stone: level 70 -->
+				<item id="8741" min="1" max="1" chance="0.158031620304108" /> <!-- Mid-Grade Life Stone: level 70 -->
+				<item id="8751" min="1" max="1" chance="0.0158034241104126" /> <!-- High-Grade Life Stone: level 70 -->
+				<item id="8761" min="1" max="1" chance="0.00316068482208252" /> <!-- Top-Grade Life Stone: level 70 -->
 			</drop>
 			<spoil>
-				<item id="729" min="1" max="1" chance="0.1233" /> <!-- Scroll: Enchant Weapon (A-Grade) -->
-				<item id="730" min="1" max="1" chance="0.9245" /> <!-- Scroll: Enchant Armor (A-Grade) -->
+				<item id="729" min="1" max="1" chance="0.1233" /> <!-- Scroll: Enchant Weapon (A) -->
+				<item id="730" min="1" max="1" chance="0.9245" /> <!-- Scroll: Enchant Armor (A) -->
 				<item id="5482" min="1" max="1" chance="14.642" /> <!-- Sealed Dark Crystal Leggings Design -->
 			</spoil>
 		</dropLists>
@@ -5822,7 +5767,6 @@
 		</collision>
 	</npc>
 	<npc id="21774" level="78" type="RiftInvader" name="Messenger Invader Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -5877,10 +5821,10 @@
 				<item id="1876" min="1" max="1" chance="6.27907580982208" /> <!-- Mithril Ore -->
 				<item id="1895" min="1" max="1" chance="8.97008034938812" /> <!-- Metallic Fiber -->
 				<item id="4042" min="1" max="1" chance="0.523253056610107" /> <!-- Enria -->
-				<item id="959" min="1" max="1" chance="0.00125217602539062" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="8732" min="1" max="1" chance="0.261626528305054" /> <!-- Life Stone - Level 76 -->
-				<item id="8742" min="1" max="1" chance="0.0654261973266601" /> <!-- Mid-Grade Life Stone - Level 76 -->
-				<item id="8752" min="1" max="1" chance="0.00653479363250732" /> <!-- High-Grade Life Stone - Level 76 -->
+				<item id="959" min="1" max="1" chance="0.00125217602539062" /> <!-- Scroll: Enchant Weapon (S) -->
+				<item id="8732" min="1" max="1" chance="0.261626528305054" /> <!-- Life Stone: level 76 -->
+				<item id="8742" min="1" max="1" chance="0.0654261973266601" /> <!-- Mid-Grade Life Stone: level 76 -->
+				<item id="8752" min="1" max="1" chance="0.00653479363250732" /> <!-- High-Grade Life Stone: level 76 -->
 			</drop>
 			<spoil>
 				<item id="1876" min="1" max="3" chance="76.5263" /> <!-- Mithril Ore -->
@@ -5894,7 +5838,6 @@
 		</collision>
 	</npc>
 	<npc id="21775" level="78" type="RiftInvader" name="Messenger Invader Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -5949,15 +5892,15 @@
 				<item id="1866" min="1" max="1" chance="24.9295544998627" /> <!-- Suede -->
 				<item id="1871" min="1" max="3" chance="18.6971903562469" /> <!-- Charcoal -->
 				<item id="5220" min="1" max="1" chance="1.49576151894379" /> <!-- Metal Hardener -->
-				<item id="1885" min="1" max="1" chance="3.11618207180786" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="3.11618207180786" /> <!-- High Grade Suede -->
 				<item id="4041" min="1" max="1" chance="0.325161289970398" /> <!-- Mold Hardener -->
-				<item id="959" min="1" max="1" chance="0.00151784369659424" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="8732" min="1" max="1" chance="0.31159862210083" /> <!-- Life Stone - Level 76 -->
-				<item id="8742" min="1" max="1" chance="0.0778996555252075" /> <!-- Mid-Grade Life Stone - Level 76 -->
-				<item id="8752" min="1" max="1" chance="0.00783403198242187" /> <!-- High-Grade Life Stone - Level 76 -->
+				<item id="959" min="1" max="1" chance="0.00151784369659424" /> <!-- Scroll: Enchant Weapon (S) -->
+				<item id="8732" min="1" max="1" chance="0.31159862210083" /> <!-- Life Stone: level 76 -->
+				<item id="8742" min="1" max="1" chance="0.0778996555252075" /> <!-- Mid-Grade Life Stone: level 76 -->
+				<item id="8752" min="1" max="1" chance="0.00783403198242187" /> <!-- High-Grade Life Stone: level 76 -->
 			</drop>
 			<spoil>
-				<item id="960" min="1" max="1" chance="0.3646" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="960" min="1" max="1" chance="0.3646" /> <!-- Scroll: Enchant Armor (S) -->
 				<item id="4041" min="1" max="1" chance="7.926" /> <!-- Mold Hardener -->
 				<item id="5220" min="1" max="1" chance="36.4595" /> <!-- Metal Hardener -->
 			</spoil>
@@ -5968,7 +5911,6 @@
 		</collision>
 	</npc>
 	<npc id="21776" level="78" type="RiftInvader" name="Messenger Invader Archer">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="157" />
 			<param name="MoveAroundSocial1" value="157" />
@@ -6019,8 +5961,8 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="3684" max="7518" chance="70" /> <!-- Adena -->
-				<item id="5326" min="1" max="1" chance="0.00208845915544033" /> <!-- Sealed Robe of Nightmare -->
-				<item id="5487" min="1" max="1" chance="0.310461549141526" /> <!-- Sealed Robe of Nightmare Fabric -->
+				<item id="5326" min="1" max="1" chance="0.00208845915544033" /> <!-- Sealed Nightmare Robe -->
+				<item id="5487" min="1" max="1" chance="0.310461549141526" /> <!-- Sealed Nightmare Robe Fabric -->
 				<item id="5329" min="1" max="1" chance="0.00208845915544033" /> <!-- Sealed Majestic Robe -->
 				<item id="5488" min="1" max="1" chance="0.310461549141526" /> <!-- Sealed Majestic Robe Fabric -->
 				<item id="1867" min="1" max="3" chance="18.3857113362122" /> <!-- Animal Skin -->
@@ -6028,10 +5970,10 @@
 				<item id="1882" min="1" max="1" chance="6.12857044540405" /> <!-- Leather -->
 				<item id="1894" min="1" max="1" chance="0.967678937927246" /> <!-- Crafted Leather -->
 				<item id="4042" min="1" max="1" chance="0.459666343955994" /> <!-- Enria -->
-				<item id="960" min="1" max="1" chance="0.0110263377227783" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				<item id="8732" min="1" max="1" chance="0.229809611427307" /> <!-- Life Stone - Level 76 -->
-				<item id="8742" min="1" max="1" chance="0.0574406225814819" /> <!-- Mid-Grade Life Stone - Level 76 -->
-				<item id="8752" min="1" max="1" chance="0.00574877436828613" /> <!-- High-Grade Life Stone - Level 76 -->
+				<item id="960" min="1" max="1" chance="0.0110263377227783" /> <!-- Scroll: Enchant Armor (S) -->
+				<item id="8732" min="1" max="1" chance="0.229809611427307" /> <!-- Life Stone: level 76 -->
+				<item id="8742" min="1" max="1" chance="0.0574406225814819" /> <!-- Mid-Grade Life Stone: level 76 -->
+				<item id="8752" min="1" max="1" chance="0.00574877436828613" /> <!-- High-Grade Life Stone: level 76 -->
 				<item id="1344" min="40" max="120" chance="8.61830807898712" /> <!-- Mithril Arrow -->
 			</drop>
 			<spoil>
@@ -6046,7 +5988,6 @@
 		</collision>
 	</npc>
 	<npc id="21777" level="78" type="RiftInvader" name="Messenger Invader Elite Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -6094,8 +6035,8 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="3860" max="7880" chance="70" /> <!-- Adena -->
-				<item id="5326" min="1" max="1" chance="0.00218935737073421" /> <!-- Sealed Robe of Nightmare -->
-				<item id="5487" min="1" max="1" chance="0.325460653215051" /> <!-- Sealed Robe of Nightmare Fabric -->
+				<item id="5326" min="1" max="1" chance="0.00218935737073421" /> <!-- Sealed Nightmare Robe -->
+				<item id="5487" min="1" max="1" chance="0.325460653215051" /> <!-- Sealed Nightmare Robe Fabric -->
 				<item id="5329" min="1" max="1" chance="0.00218935737073421" /> <!-- Sealed Majestic Robe -->
 				<item id="5488" min="1" max="1" chance="0.325460653215051" /> <!-- Sealed Majestic Robe Fabric -->
 				<item id="1869" min="2" max="6" chance="7.22800623875618" /> <!-- Iron Ore -->
@@ -6103,10 +6044,10 @@
 				<item id="1880" min="1" max="1" chance="2.89120249550247" /> <!-- Steel -->
 				<item id="5550" min="1" max="1" chance="0.385485768386841" /> <!-- Durable Metal Plate -->
 				<item id="4043" min="1" max="1" chance="0.963744037267685" /> <!-- Asofe -->
-				<item id="960" min="1" max="1" chance="0.0115503572273254" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				<item id="8732" min="1" max="1" chance="0.240928605241776" /> <!-- Life Stone - Level 76 -->
-				<item id="8742" min="1" max="1" chance="0.0602395553855896" /> <!-- Mid-Grade Life Stone - Level 76 -->
-				<item id="8752" min="1" max="1" chance="0.00601210901832581" /> <!-- High-Grade Life Stone - Level 76 -->
+				<item id="960" min="1" max="1" chance="0.0115503572273254" /> <!-- Scroll: Enchant Armor (S) -->
+				<item id="8732" min="1" max="1" chance="0.240928605241776" /> <!-- Life Stone: level 76 -->
+				<item id="8742" min="1" max="1" chance="0.0602395553855896" /> <!-- Mid-Grade Life Stone: level 76 -->
+				<item id="8752" min="1" max="1" chance="0.00601210901832581" /> <!-- High-Grade Life Stone: level 76 -->
 				<item id="1344" min="30" max="90" chance="12.0467264250946" /> <!-- Mithril Arrow -->
 			</drop>
 			<spoil>
@@ -6121,7 +6062,6 @@
 		</collision>
 	</npc>
 	<npc id="21778" level="78" type="RiftInvader" name="Messenger Invader Shaman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -6183,13 +6123,13 @@
 				<item id="4040" min="1" max="1" chance="0.753887581912994" /> <!-- Mold Lubricant -->
 				<item id="4042" min="1" max="1" chance="0.628239651594162" /> <!-- Enria -->
 				<item id="4043" min="1" max="1" chance="1.25647930318832" /> <!-- Asofe -->
-				<item id="959" min="1" max="1" chance="0.00150534451580048" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="8732" min="1" max="1" chance="0.314119825797081" /> <!-- Life Stone - Level 76 -->
-				<item id="8742" min="1" max="1" chance="0.078526503824234" /> <!-- Mid-Grade Life Stone - Level 76 -->
-				<item id="8752" min="1" max="1" chance="0.00787198508262634" /> <!-- High-Grade Life Stone - Level 76 -->
+				<item id="959" min="1" max="1" chance="0.00150534451580048" /> <!-- Scroll: Enchant Weapon (S) -->
+				<item id="8732" min="1" max="1" chance="0.314119825797081" /> <!-- Life Stone: level 76 -->
+				<item id="8742" min="1" max="1" chance="0.078526503824234" /> <!-- Mid-Grade Life Stone: level 76 -->
+				<item id="8752" min="1" max="1" chance="0.00787198508262634" /> <!-- High-Grade Life Stone: level 76 -->
 			</drop>
 			<spoil>
-				<item id="960" min="1" max="1" chance="0.3267" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="960" min="1" max="1" chance="0.3267" /> <!-- Scroll: Enchant Armor (S) -->
 				<item id="4042" min="1" max="1" chance="13.6119" /> <!-- Enria -->
 				<item id="4043" min="1" max="1" chance="27.2238" /> <!-- Asofe -->
 			</spoil>
@@ -6200,7 +6140,6 @@
 		</collision>
 	</npc>
 	<npc id="21779" level="78" type="RiftInvader" name="Messenger Invader Priest">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -6258,10 +6197,10 @@
 				<item id="4039" min="1" max="1" chance="0.677273422241211" /> <!-- Mold Glue -->
 				<item id="4041" min="1" max="1" chance="0.176667907714844" /> <!-- Mold Hardener -->
 				<item id="4044" min="1" max="1" chance="0.677273422241211" /> <!-- Thons -->
-				<item id="960" min="1" max="1" chance="0.00813675537109375" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				<item id="8732" min="1" max="1" chance="0.169311389160156" /> <!-- Life Stone - Level 76 -->
-				<item id="8742" min="1" max="1" chance="0.0423278472900391" /> <!-- Mid-Grade Life Stone - Level 76 -->
-				<item id="8752" min="1" max="1" chance="0.0042355712890625" /> <!-- High-Grade Life Stone - Level 76 -->
+				<item id="960" min="1" max="1" chance="0.00813675537109375" /> <!-- Scroll: Enchant Armor (S) -->
+				<item id="8732" min="1" max="1" chance="0.169311389160156" /> <!-- Life Stone: level 76 -->
+				<item id="8742" min="1" max="1" chance="0.0423278472900391" /> <!-- Mid-Grade Life Stone: level 76 -->
+				<item id="8752" min="1" max="1" chance="0.0042355712890625" /> <!-- High-Grade Life Stone: level 76 -->
 				<item id="1344" min="10" max="30" chance="25.3974607452393" /> <!-- Mithril Arrow -->
 			</drop>
 			<spoil>
@@ -6276,7 +6215,6 @@
 		</collision>
 	</npc>
 	<npc id="21780" level="78" type="RiftInvader" name="Messenger Invader Magus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -6337,13 +6275,13 @@
 				<item id="1882" min="1" max="1" chance="6.3221251870079" /> <!-- Leather -->
 				<item id="1894" min="1" max="1" chance="0.998234472537994" /> <!-- Crafted Leather -->
 				<item id="4042" min="1" max="1" chance="0.47416038174057" /> <!-- Enria -->
-				<item id="959" min="1" max="1" chance="0.00115154937362671" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="8732" min="1" max="1" chance="0.23706033657074" /> <!-- Life Stone - Level 76 -->
-				<item id="8742" min="1" max="1" chance="0.0592849384422302" /> <!-- Mid-Grade Life Stone - Level 76 -->
-				<item id="8752" min="1" max="1" chance="0.00591658126449585" /> <!-- High-Grade Life Stone - Level 76 -->
+				<item id="959" min="1" max="1" chance="0.00115154937362671" /> <!-- Scroll: Enchant Weapon (S) -->
+				<item id="8732" min="1" max="1" chance="0.23706033657074" /> <!-- Life Stone: level 76 -->
+				<item id="8742" min="1" max="1" chance="0.0592849384422302" /> <!-- Mid-Grade Life Stone: level 76 -->
+				<item id="8752" min="1" max="1" chance="0.00591658126449585" /> <!-- High-Grade Life Stone: level 76 -->
 			</drop>
 			<spoil>
-				<item id="959" min="1" max="1" chance="0.0277" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="959" min="1" max="1" chance="0.0277" /> <!-- Scroll: Enchant Weapon (S) -->
 				<item id="1894" min="1" max="1" chance="24.3319" /> <!-- Crafted Leather -->
 				<item id="4042" min="1" max="1" chance="11.5576" /> <!-- Enria -->
 			</spoil>
@@ -6354,7 +6292,6 @@
 		</collision>
 	</npc>
 	<npc id="21781" level="78" type="RiftInvader" name="Messenger Invader Martyrs">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -6413,10 +6350,10 @@
 				<item id="1877" min="1" max="1" chance="1.01953072484589" /> <!-- Adamantite Nugget -->
 				<item id="4041" min="1" max="1" chance="0.221627439422607" /> <!-- Mold Hardener -->
 				<item id="4040" min="1" max="1" chance="0.509787614173889" /> <!-- Mold Lubricant -->
-				<item id="959" min="1" max="1" chance="0.00102358054351807" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="8732" min="1" max="1" chance="0.212415214530945" /> <!-- Life Stone - Level 76 -->
-				<item id="8742" min="1" max="1" chance="0.0530926777572632" /> <!-- Mid-Grade Life Stone - Level 76 -->
-				<item id="8752" min="1" max="1" chance="0.00529591672515869" /> <!-- High-Grade Life Stone - Level 76 -->
+				<item id="959" min="1" max="1" chance="0.00102358054351807" /> <!-- Scroll: Enchant Weapon (S) -->
+				<item id="8732" min="1" max="1" chance="0.212415214530945" /> <!-- Life Stone: level 76 -->
+				<item id="8742" min="1" max="1" chance="0.0530926777572632" /> <!-- Mid-Grade Life Stone: level 76 -->
+				<item id="8752" min="1" max="1" chance="0.00529591672515869" /> <!-- High-Grade Life Stone: level 76 -->
 			</drop>
 			<spoil>
 				<item id="6344" min="1" max="1" chance="9.1077" /> <!-- Sealed Majestic Necklace Beads -->
@@ -6430,7 +6367,6 @@
 		</collision>
 	</npc>
 	<npc id="21782" level="78" type="RiftInvader" name="Messenger Invader Warrior">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -6494,10 +6430,10 @@
 				<item id="1876" min="1" max="1" chance="4.87708707788086" /> <!-- Mithril Ore -->
 				<item id="1895" min="1" max="1" chance="6.96731128942871" /> <!-- Metallic Fiber -->
 				<item id="4042" min="1" max="1" chance="0.406423923156738" /> <!-- Enria -->
-				<item id="960" min="1" max="1" chance="0.00974831745910645" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				<item id="8732" min="1" max="1" chance="0.203211961578369" /> <!-- Life Stone - Level 76 -->
-				<item id="8742" min="1" max="1" chance="0.0508222558441162" /> <!-- Mid-Grade Life Stone - Level 76 -->
-				<item id="8752" min="1" max="1" chance="0.00508607867431641" /> <!-- High-Grade Life Stone - Level 76 -->
+				<item id="960" min="1" max="1" chance="0.00974831745910645" /> <!-- Scroll: Enchant Armor (S) -->
+				<item id="8732" min="1" max="1" chance="0.203211961578369" /> <!-- Life Stone: level 76 -->
+				<item id="8742" min="1" max="1" chance="0.0508222558441162" /> <!-- Mid-Grade Life Stone: level 76 -->
+				<item id="8752" min="1" max="1" chance="0.00508607867431641" /> <!-- High-Grade Life Stone: level 76 -->
 				<item id="1344" min="30" max="90" chance="10.1605980789185" /> <!-- Mithril Arrow -->
 			</drop>
 			<spoil>
@@ -6512,7 +6448,6 @@
 		</collision>
 	</npc>
 	<npc id="21783" level="78" type="RiftInvader" name="Messenger Invader Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -6560,8 +6495,8 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="3224" max="6583" chance="70" /> <!-- Adena -->
-				<item id="5326" min="1" max="1" chance="0.00182886339235306" /> <!-- Sealed Robe of Nightmare -->
-				<item id="5487" min="1" max="1" chance="0.271871135463238" /> <!-- Sealed Robe of Nightmare Fabric -->
+				<item id="5326" min="1" max="1" chance="0.00182886339235306" /> <!-- Sealed Nightmare Robe -->
+				<item id="5487" min="1" max="1" chance="0.271871135463238" /> <!-- Sealed Nightmare Robe Fabric -->
 				<item id="5329" min="1" max="1" chance="0.00182886339235306" /> <!-- Sealed Majestic Robe -->
 				<item id="5488" min="1" max="1" chance="0.271871135463238" /> <!-- Sealed Majestic Robe Fabric -->
 				<item id="1865" min="1" max="3" chance="8.0501604646225" /> <!-- Varnish -->
@@ -6569,10 +6504,10 @@
 				<item id="1879" min="1" max="1" chance="4.02506244921112" /> <!-- Cokes -->
 				<item id="1875" min="1" max="1" chance="1.6100463194046" /> <!-- Stone of Purity -->
 				<item id="4040" min="1" max="1" chance="0.483024565681458" /> <!-- Mold Lubricant -->
-				<item id="960" min="1" max="1" chance="0.00967400646972656" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				<item id="8732" min="1" max="1" chance="0.201269127250671" /> <!-- Life Stone - Level 76 -->
-				<item id="8742" min="1" max="1" chance="0.0503261733627319" /> <!-- Mid-Grade Life Stone - Level 76 -->
-				<item id="8752" min="1" max="1" chance="0.00501483423614502" /> <!-- High-Grade Life Stone - Level 76 -->
+				<item id="960" min="1" max="1" chance="0.00967400646972656" /> <!-- Scroll: Enchant Armor (S) -->
+				<item id="8732" min="1" max="1" chance="0.201269127250671" /> <!-- Life Stone: level 76 -->
+				<item id="8742" min="1" max="1" chance="0.0503261733627319" /> <!-- Mid-Grade Life Stone: level 76 -->
+				<item id="8752" min="1" max="1" chance="0.00501483423614502" /> <!-- High-Grade Life Stone: level 76 -->
 				<item id="1344" min="20" max="60" chance="15.0940108591919" /> <!-- Mithril Arrow -->
 			</drop>
 			<spoil>
@@ -6587,7 +6522,6 @@
 		</collision>
 	</npc>
 	<npc id="21784" level="78" type="RiftInvader" name="Messenger Invader Disciple">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -6650,13 +6584,13 @@
 				<item id="4039" min="1" max="1" chance="1.06991776312351" /> <!-- Mold Glue -->
 				<item id="4041" min="1" max="1" chance="0.279110840923548" /> <!-- Mold Hardener -->
 				<item id="4044" min="1" max="1" chance="1.06991776312351" /> <!-- Thons -->
-				<item id="959" min="1" max="1" chance="0.00128287501573563" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="8732" min="1" max="1" chance="0.267479440780878" /> <!-- Life Stone - Level 76 -->
-				<item id="8742" min="1" max="1" chance="0.0668688883202076" /> <!-- Mid-Grade Life Stone - Level 76 -->
-				<item id="8752" min="1" max="1" chance="0.00669038758206367" /> <!-- High-Grade Life Stone - Level 76 -->
+				<item id="959" min="1" max="1" chance="0.00128287501573563" /> <!-- Scroll: Enchant Weapon (S) -->
+				<item id="8732" min="1" max="1" chance="0.267479440780878" /> <!-- Life Stone: level 76 -->
+				<item id="8742" min="1" max="1" chance="0.0668688883202076" /> <!-- Mid-Grade Life Stone: level 76 -->
+				<item id="8752" min="1" max="1" chance="0.00669038758206367" /> <!-- High-Grade Life Stone: level 76 -->
 			</drop>
 			<spoil>
-				<item id="959" min="1" max="1" chance="0.0278" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="959" min="1" max="1" chance="0.0278" /> <!-- Scroll: Enchant Weapon (S) -->
 				<item id="4041" min="1" max="1" chance="6.0474" /> <!-- Mold Hardener -->
 				<item id="4044" min="1" max="1" chance="23.1818" /> <!-- Thons -->
 			</spoil>
@@ -6667,7 +6601,6 @@
 		</collision>
 	</npc>
 	<npc id="21785" level="78" type="RiftInvader" name="Messenger Invader Berserker">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -6734,10 +6667,10 @@
 				<item id="5549" min="1" max="1" chance="2.85443933854675" /> <!-- Metallic Thread -->
 				<item id="1889" min="1" max="1" chance="1.90294740203094" /> <!-- Compound Braid -->
 				<item id="4044" min="1" max="1" chance="0.951491936515808" /> <!-- Thons -->
-				<item id="960" min="1" max="1" chance="0.011415423210144" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				<item id="8732" min="1" max="1" chance="0.237863866378784" /> <!-- Life Stone - Level 76 -->
-				<item id="8742" min="1" max="1" chance="0.0594842020950317" /> <!-- Mid-Grade Life Stone - Level 76 -->
-				<item id="8752" min="1" max="1" chance="0.00594477310943603" /> <!-- High-Grade Life Stone - Level 76 -->
+				<item id="960" min="1" max="1" chance="0.011415423210144" /> <!-- Scroll: Enchant Armor (S) -->
+				<item id="8732" min="1" max="1" chance="0.237863866378784" /> <!-- Life Stone: level 76 -->
+				<item id="8742" min="1" max="1" chance="0.0594842020950317" /> <!-- Mid-Grade Life Stone: level 76 -->
+				<item id="8752" min="1" max="1" chance="0.00594477310943603" /> <!-- High-Grade Life Stone: level 76 -->
 				<item id="1344" min="30" max="90" chance="11.8935215579453" /> <!-- Mithril Arrow -->
 			</drop>
 			<spoil>
@@ -6752,7 +6685,6 @@
 		</collision>
 	</npc>
 	<npc id="21786" level="78" type="Chest" name="Messenger Invader Food">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<acquire exp="9308" sp="1045" />
@@ -6801,11 +6733,12 @@
 				<item id="1866" min="1" max="1" chance="7.28240064116478" /> <!-- Suede -->
 				<item id="1871" min="1" max="1" chance="10.9236112990475" /> <!-- Charcoal -->
 				<item id="5220" min="1" max="1" chance="0.436937009105682" /> <!-- Metal Hardener -->
-				<item id="1885" min="1" max="1" chance="0.910302664470672" /> <!-- High-Grade Suede -->
+				<item id="1885" min="1" max="1" chance="0.910302664470672" /> <!-- High Grade Suede -->
 				<item id="4041" min="1" max="1" chance="0.0949791151618958" /> <!-- Mold Hardener -->
-				<item id="8732" min="1" max="1" chance="0.0910302664470673" /> <!-- Life Stone - Level 76 -->
-				<item id="8742" min="1" max="1" chance="0.0227627352619171" /> <!-- Mid-Grade Life Stone - Level 76 -->
-				<item id="8752" min="1" max="1" chance="0.00227420606613159" /> <!-- High-Grade Life Stone - Level 76 -->
+				<item id="6672" min="1" max="1" chance="0.910302664470672" /> <!-- Deluxe Chest Key - Grade 8 -->
+				<item id="8732" min="1" max="1" chance="0.0910302664470673" /> <!-- Life Stone: level 76 -->
+				<item id="8742" min="1" max="1" chance="0.0227627352619171" /> <!-- Mid-Grade Life Stone: level 76 -->
+				<item id="8752" min="1" max="1" chance="0.00227420606613159" /> <!-- High-Grade Life Stone: level 76 -->
 			</drop>
 			<spoil>
 				<item id="5277" min="1" max="1" chance="0.1183" /> <!-- Recipe: Greater Spiritshot (S) Compressed Package(100%) -->
@@ -6819,7 +6752,6 @@
 		</collision>
 	</npc>
 	<npc id="21787" level="78" type="RiftInvader" name="Messenger Invader Elite Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -6882,15 +6814,15 @@
 				<item id="1866" min="3" max="9" chance="7.41798700526428" /> <!-- Suede -->
 				<item id="1873" min="4" max="12" chance="3.33810372618866" /> <!-- Silver Nugget -->
 				<item id="1868" min="10" max="30" chance="6.35826089905548" /> <!-- Thread -->
-				<item id="959" min="1" max="1" chance="0.00268066952514648" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="8732" min="1" max="1" chance="0.556334664665222" /> <!-- Life Stone - Level 76 -->
-				<item id="8742" min="1" max="1" chance="0.139107600715637" /> <!-- Mid-Grade Life Stone - Level 76 -->
-				<item id="8752" min="1" max="1" chance="0.0138341695137024" /> <!-- High-Grade Life Stone - Level 76 -->
+				<item id="959" min="1" max="1" chance="0.00268066952514648" /> <!-- Scroll: Enchant Weapon (S) -->
+				<item id="8732" min="1" max="1" chance="0.556334664665222" /> <!-- Life Stone: level 76 -->
+				<item id="8742" min="1" max="1" chance="0.139107600715637" /> <!-- Mid-Grade Life Stone: level 76 -->
+				<item id="8752" min="1" max="1" chance="0.0138341695137024" /> <!-- High-Grade Life Stone: level 76 -->
 			</drop>
 			<spoil>
-				<item id="960" min="1" max="1" chance="0.6509" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="960" min="1" max="1" chance="0.6509" /> <!-- Scroll: Enchant Armor (S) -->
 				<item id="6688" min="1" max="1" chance="3.5174" /> <!-- Forgotten Blade Edge -->
-				<item id="959" min="1" max="1" chance="0.0651" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="959" min="1" max="1" chance="0.0651" /> <!-- Scroll: Enchant Weapon (S) -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -6899,7 +6831,6 @@
 		</collision>
 	</npc>
 	<npc id="21788" level="78" type="RiftInvader" name="Messenger Invader Elite Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -6962,10 +6893,10 @@
 				<item id="1871" min="3" max="9" chance="8.74619957400513" /> <!-- Charcoal -->
 				<item id="1872" min="8" max="24" chance="5.10197070570374" /> <!-- Animal Bone -->
 				<item id="1867" min="13" max="39" chance="3.02339780863953" /> <!-- Animal Skin -->
-				<item id="960" min="1" max="1" chance="0.0244745064697266" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				<item id="8732" min="1" max="1" chance="0.510192879730225" /> <!-- Life Stone - Level 76 -->
-				<item id="8742" min="1" max="1" chance="0.127569174133301" /> <!-- Mid-Grade Life Stone - Level 76 -->
-				<item id="8752" min="1" max="1" chance="0.0127401540527344" /> <!-- High-Grade Life Stone - Level 76 -->
+				<item id="960" min="1" max="1" chance="0.0244745064697266" /> <!-- Scroll: Enchant Armor (S) -->
+				<item id="8732" min="1" max="1" chance="0.510192879730225" /> <!-- Life Stone: level 76 -->
+				<item id="8742" min="1" max="1" chance="0.127569174133301" /> <!-- Mid-Grade Life Stone: level 76 -->
+				<item id="8752" min="1" max="1" chance="0.0127401540527344" /> <!-- High-Grade Life Stone: level 76 -->
 				<item id="1344" min="400" max="1200" chance="1.91324425318909" /> <!-- Mithril Arrow -->
 			</drop>
 			<spoil>
@@ -6980,7 +6911,6 @@
 		</collision>
 	</npc>
 	<npc id="21789" level="78" type="RiftInvader" name="Messenger Invader Elite Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -7044,13 +6974,13 @@
 				<item id="4039" min="1" max="1" chance="0.0994920286220312" /> <!-- Mold Glue -->
 				<item id="4041" min="1" max="1" chance="0.0259546151405275" /> <!-- Mold Hardener -->
 				<item id="4044" min="1" max="1" chance="0.0994920286220312" /> <!-- Thons -->
-				<item id="959" min="1" max="1" chance="0.000119294998347759" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="8732" min="1" max="1" chance="0.0248730071555078" /> <!-- Life Stone - Level 76 -->
-				<item id="8742" min="1" max="1" chance="0.0062181614138782" /> <!-- Mid-Grade Life Stone - Level 76 -->
-				<item id="8752" min="1" max="1" chance="0.000622141491383314" /> <!-- High-Grade Life Stone - Level 76 -->
+				<item id="959" min="1" max="1" chance="0.000119294998347759" /> <!-- Scroll: Enchant Weapon (S) -->
+				<item id="8732" min="1" max="1" chance="0.0248730071555078" /> <!-- Life Stone: level 76 -->
+				<item id="8742" min="1" max="1" chance="0.0062181614138782" /> <!-- Mid-Grade Life Stone: level 76 -->
+				<item id="8752" min="1" max="1" chance="0.000622141491383314" /> <!-- High-Grade Life Stone: level 76 -->
 			</drop>
 			<spoil>
-				<item id="959" min="1" max="1" chance="0.0026" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="959" min="1" max="1" chance="0.0026" /> <!-- Scroll: Enchant Weapon (S) -->
 				<item id="1894" min="1" max="1" chance="2.2689" /> <!-- Crafted Leather -->
 				<item id="4039" min="1" max="1" chance="2.1554" /> <!-- Mold Glue -->
 			</spoil>
@@ -7061,7 +6991,6 @@
 		</collision>
 	</npc>
 	<npc id="21790" level="78" type="RiftInvader" name="Messenger Invader Elite Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -7126,15 +7055,15 @@
 				<item id="1880" min="1" max="1" chance="0.583986864562988" /> <!-- Steel -->
 				<item id="5550" min="1" max="1" chance="0.0778631992816925" /> <!-- Durable Metal Plate -->
 				<item id="4043" min="1" max="1" chance="0.194670868154526" /> <!-- Asofe -->
-				<item id="960" min="1" max="1" chance="0.00234233095359802" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				<item id="8732" min="1" max="1" chance="0.0486741520137787" /> <!-- Life Stone - Level 76 -->
-				<item id="8742" min="1" max="1" chance="0.0121749729785919" /> <!-- Mid-Grade Life Stone - Level 76 -->
-				<item id="8752" min="1" max="1" chance="0.0012097753276825" /> <!-- High-Grade Life Stone - Level 76 -->
+				<item id="960" min="1" max="1" chance="0.00234233095359802" /> <!-- Scroll: Enchant Armor (S) -->
+				<item id="8732" min="1" max="1" chance="0.0486741520137787" /> <!-- Life Stone: level 76 -->
+				<item id="8742" min="1" max="1" chance="0.0121749729785919" /> <!-- Mid-Grade Life Stone: level 76 -->
+				<item id="8752" min="1" max="1" chance="0.0012097753276825" /> <!-- High-Grade Life Stone: level 76 -->
 				<item id="1344" min="10" max="30" chance="7.29968136763382" /> <!-- Mithril Arrow -->
 			</drop>
 			<spoil>
 				<item id="5550" min="1" max="1" chance="2.1088" /> <!-- Durable Metal Plate -->
-				<item id="5487" min="1" max="1" chance="0.7122" /> <!-- Sealed Robe of Nightmare Fabric -->
+				<item id="5487" min="1" max="1" chance="0.7122" /> <!-- Sealed Nightmare Robe Fabric -->
 				<item id="5282" min="1" max="1" chance="0.0703" /> <!-- Recipe: Greater Blessed Spiritshot (S) Compressed Package(100%) -->
 			</spoil>
 		</dropLists>
@@ -7144,7 +7073,6 @@
 		</collision>
 	</npc>
 	<npc id="21791" level="78" type="RiftInvader" name="Messenger Invader Warrior">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -7210,13 +7138,13 @@
 				<item id="1879" min="1" max="1" chance="10.8279541299744" /> <!-- Cokes -->
 				<item id="1875" min="1" max="1" chance="4.33120042330933" /> <!-- Stone of Purity -->
 				<item id="4040" min="1" max="1" chance="1.29935074133301" /> <!-- Mold Lubricant -->
-				<item id="959" min="1" max="1" chance="0.00258105644226074" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="8732" min="1" max="1" chance="0.541411784988403" /> <!-- Life Stone - Level 76 -->
-				<item id="8742" min="1" max="1" chance="0.135341214172363" /> <!-- Mid-Grade Life Stone - Level 76 -->
-				<item id="8752" min="1" max="1" chance="0.0135153500976562" /> <!-- High-Grade Life Stone - Level 76 -->
+				<item id="959" min="1" max="1" chance="0.00258105644226074" /> <!-- Scroll: Enchant Weapon (S) -->
+				<item id="8732" min="1" max="1" chance="0.541411784988403" /> <!-- Life Stone: level 76 -->
+				<item id="8742" min="1" max="1" chance="0.135341214172363" /> <!-- Mid-Grade Life Stone: level 76 -->
+				<item id="8752" min="1" max="1" chance="0.0135153500976562" /> <!-- High-Grade Life Stone: level 76 -->
 			</drop>
 			<spoil>
-				<item id="960" min="1" max="1" chance="0.6334" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="960" min="1" max="1" chance="0.6334" /> <!-- Scroll: Enchant Armor (S) -->
 				<item id="1875" min="1" max="3" chance="52.7864" /> <!-- Stone of Purity -->
 				<item id="4040" min="1" max="1" chance="31.6718" /> <!-- Mold Lubricant -->
 			</spoil>
@@ -7227,7 +7155,6 @@
 		</collision>
 	</npc>
 	<npc id="21792" level="78" type="RiftInvader" name="Messenger Invader Elite Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -7279,11 +7206,13 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="7008" max="14306" chance="70" /> <!-- Adena -->
-				<item id="8732" min="1" max="1" chance="5.46729853439713" /> <!-- Life Stone - Level 76 -->
-				<item id="8742" min="1" max="1" chance="1.36683321039963" /> <!-- Mid-Grade Life Stone - Level 76 -->
-				<item id="8752" min="1" max="1" chance="0.136645583118439" /> <!-- High-Grade Life Stone - Level 76 -->
+				<item id="6672" min="1" max="3" chance="27.3364240575829" /> <!-- Deluxe Chest Key - Grade 8 -->
+				<item id="8732" min="1" max="1" chance="5.46729853439713" /> <!-- Life Stone: level 76 -->
+				<item id="8742" min="1" max="1" chance="1.36683321039963" /> <!-- Mid-Grade Life Stone: level 76 -->
+				<item id="8752" min="1" max="1" chance="0.136645583118439" /> <!-- High-Grade Life Stone: level 76 -->
 			</drop>
 			<spoil>
+				<item id="6672" min="1" max="3" chance="59.2289" /> <!-- Deluxe Chest Key - Grade 8 -->
 				<item id="1894" min="1" max="1" chance="49.877" /> <!-- Crafted Leather -->
 				<item id="1894" min="1" max="1" chance="49.877" /> <!-- Crafted Leather -->
 			</spoil>
@@ -7294,7 +7223,6 @@
 		</collision>
 	</npc>
 	<npc id="21793" level="78" type="RiftInvader" name="Messenger Invader Elite Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -7346,11 +7274,13 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="7577" max="15464" chance="70" /> <!-- Adena -->
-				<item id="8732" min="1" max="1" chance="5.90898883649826" /> <!-- Life Stone - Level 76 -->
-				<item id="8742" min="1" max="1" chance="1.47725647882462" /> <!-- Mid-Grade Life Stone - Level 76 -->
-				<item id="8752" min="1" max="1" chance="0.14768486120224" /> <!-- High-Grade Life Stone - Level 76 -->
+				<item id="6672" min="1" max="3" chance="29.5448700248909" /> <!-- Deluxe Chest Key - Grade 8 -->
+				<item id="8732" min="1" max="1" chance="5.90898883649826" /> <!-- Life Stone: level 76 -->
+				<item id="8742" min="1" max="1" chance="1.47725647882462" /> <!-- Mid-Grade Life Stone: level 76 -->
+				<item id="8752" min="1" max="1" chance="0.14768486120224" /> <!-- High-Grade Life Stone: level 76 -->
 			</drop>
 			<spoil>
+				<item id="6672" min="1" max="3" chance="64.0139" /> <!-- Deluxe Chest Key - Grade 8 -->
 				<item id="6689" min="1" max="1" chance="3.2582" /> <!-- Basalt Battlehammer Head -->
 				<item id="6690" min="1" max="1" chance="3.3271" /> <!-- Imperial Staff Head -->
 			</spoil>
@@ -7361,7 +7291,6 @@
 		</collision>
 	</npc>
 	<npc id="21794" level="78" type="RiftInvader" name="Messenger Invader Elite Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -7419,16 +7348,16 @@
 				<item id="5546" min="1" max="1" chance="0.259784432783604" /> <!-- Sword of Miracles Edge -->
 				<item id="2500" min="1" max="1" chance="0.000831624305069447" /> <!-- Dark Legion's Edge -->
 				<item id="5545" min="1" max="1" chance="0.236509981741726" /> <!-- Dark Legion's Edge Blade -->
-				<item id="959" min="1" max="1" chance="0.00413953649103642" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="960" min="1" max="1" chance="0.0413953649103642" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				<item id="8732" min="1" max="1" chance="0.862403435632586" /> <!-- Life Stone - Level 76 -->
-				<item id="8742" min="1" max="1" chance="0.215600572633147" /> <!-- Mid-Grade Life Stone - Level 76 -->
-				<item id="8752" min="1" max="1" chance="0.0215610878533125" /> <!-- High-Grade Life Stone - Level 76 -->
+				<item id="959" min="1" max="1" chance="0.00413953649103642" /> <!-- Scroll: Enchant Weapon (S) -->
+				<item id="960" min="1" max="1" chance="0.0413953649103642" /> <!-- Scroll: Enchant Armor (S) -->
+				<item id="8732" min="1" max="1" chance="0.862403435632586" /> <!-- Life Stone: level 76 -->
+				<item id="8742" min="1" max="1" chance="0.215600572633147" /> <!-- Mid-Grade Life Stone: level 76 -->
+				<item id="8752" min="1" max="1" chance="0.0215610878533125" /> <!-- High-Grade Life Stone: level 76 -->
 			</drop>
 			<spoil>
-				<item id="959" min="1" max="1" chance="0.0561" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="960" min="1" max="1" chance="0.5606" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				<item id="1808" min="1" max="1" chance="0.6228" /> <!-- Recipe: Soulshot (S-Grade) -->
+				<item id="959" min="1" max="1" chance="0.0561" /> <!-- Scroll: Enchant Weapon (S) -->
+				<item id="960" min="1" max="1" chance="0.5606" /> <!-- Scroll: Enchant Armor (S) -->
+				<item id="1808" min="1" max="1" chance="0.6228" /> <!-- Recipe: Soulshot: S Grade -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -7437,7 +7366,6 @@
 		</collision>
 	</npc>
 	<npc id="21795" level="78" type="RiftInvader" name="Messenger Invader Elite Soldier">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -7491,15 +7419,15 @@
 				<item id="57" min="7840" max="16005" chance="70" /> <!-- Adena -->
 				<item id="289" min="1" max="1" chance="0.002831149995327" /> <!-- Soul Bow -->
 				<item id="5534" min="1" max="1" chance="0.806068848669529" /> <!-- Soul Bow Stave -->
-				<item id="959" min="1" max="1" chance="0.00469769245862961" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="960" min="1" max="1" chance="0.0469769245862961" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				<item id="8732" min="1" max="1" chance="0.978685928881168" /> <!-- Life Stone - Level 76 -->
-				<item id="8742" min="1" max="1" chance="0.244671157345295" /> <!-- Mid-Grade Life Stone - Level 76 -->
-				<item id="8752" min="1" max="1" chance="0.0244682852845192" /> <!-- High-Grade Life Stone - Level 76 -->
+				<item id="959" min="1" max="1" chance="0.00469769245862961" /> <!-- Scroll: Enchant Weapon (S) -->
+				<item id="960" min="1" max="1" chance="0.0469769245862961" /> <!-- Scroll: Enchant Armor (S) -->
+				<item id="8732" min="1" max="1" chance="0.978685928881168" /> <!-- Life Stone: level 76 -->
+				<item id="8742" min="1" max="1" chance="0.244671157345295" /> <!-- Mid-Grade Life Stone: level 76 -->
+				<item id="8752" min="1" max="1" chance="0.0244682852845192" /> <!-- High-Grade Life Stone: level 76 -->
 			</drop>
 			<spoil>
-				<item id="959" min="1" max="1" chance="0.0636" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="960" min="1" max="1" chance="0.6361" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="959" min="1" max="1" chance="0.0636" /> <!-- Scroll: Enchant Weapon (S) -->
+				<item id="960" min="1" max="1" chance="0.6361" /> <!-- Scroll: Enchant Armor (S) -->
 				<item id="6691" min="1" max="1" chance="3.4375" /> <!-- Angel Slayer Blade -->
 			</spoil>
 		</dropLists>
@@ -7509,7 +7437,6 @@
 		</collision>
 	</npc>
 	<npc id="21796" level="78" type="RiftInvader" name="Messenger Invader Magus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -7561,16 +7488,16 @@
 				<item id="57" min="7224" max="14744" chance="70" /> <!-- Adena -->
 				<item id="289" min="1" max="1" chance="0.0026075000166893" /> <!-- Soul Bow -->
 				<item id="5534" min="1" max="1" chance="0.742392504751682" /> <!-- Soul Bow Stave -->
-				<item id="959" min="1" max="1" chance="0.00432679353654385" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="960" min="1" max="1" chance="0.0432679353654385" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				<item id="8732" min="1" max="1" chance="0.901415320113301" /> <!-- Life Stone - Level 76 -->
-				<item id="8742" min="1" max="1" chance="0.225353530803323" /> <!-- Mid-Grade Life Stone - Level 76 -->
-				<item id="8752" min="1" max="1" chance="0.0225364302903414" /> <!-- High-Grade Life Stone - Level 76 -->
+				<item id="959" min="1" max="1" chance="0.00432679353654385" /> <!-- Scroll: Enchant Weapon (S) -->
+				<item id="960" min="1" max="1" chance="0.0432679353654385" /> <!-- Scroll: Enchant Armor (S) -->
+				<item id="8732" min="1" max="1" chance="0.901415320113301" /> <!-- Life Stone: level 76 -->
+				<item id="8742" min="1" max="1" chance="0.225353530803323" /> <!-- Mid-Grade Life Stone: level 76 -->
+				<item id="8752" min="1" max="1" chance="0.0225364302903414" /> <!-- High-Grade Life Stone: level 76 -->
 			</drop>
 			<spoil>
-				<item id="959" min="1" max="1" chance="0.0586" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
-				<item id="960" min="1" max="1" chance="0.5859" /> <!-- Scroll: Enchant Armor (S-Grade) -->
-				<item id="960" min="1" max="1" chance="0.5859" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="959" min="1" max="1" chance="0.0586" /> <!-- Scroll: Enchant Weapon (S) -->
+				<item id="960" min="1" max="1" chance="0.5859" /> <!-- Scroll: Enchant Armor (S) -->
+				<item id="960" min="1" max="1" chance="0.5859" /> <!-- Scroll: Enchant Armor (S) -->
 			</spoil>
 		</dropLists>
 		<collision>
@@ -7579,7 +7506,6 @@
 		</collision>
 	</npc>
 	<npc id="21797" level="55" type="Monster" name="Spirit of Timiniel">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -7640,12 +7566,12 @@
 				<item id="1871" min="1" max="1" chance="2.67955147268486" /> <!-- Charcoal -->
 				<item id="1872" min="1" max="1" chance="3.57272508477974" /> <!-- Animal Bone -->
 				<item id="1867" min="1" max="1" chance="3.57272508477974" /> <!-- Animal Skin -->
-				<item id="4175" min="1" max="1" chance="0.0516223343753815" /> <!-- Recipe: Sealed Avadon Boots (100%) -->
+				<item id="4175" min="1" max="1" chance="0.0516223343753815" /> <!-- Recipe: Avadon Boots (100%) -->
 				<item id="4972" min="1" max="1" chance="0.00309427642250061" /> <!-- Recipe: Great Axe (60%) -->
-				<item id="8726" min="1" max="1" chance="0.0620233922510147" /> <!-- Life Stone - Level 55 -->
-				<item id="8736" min="1" max="1" chance="0.0155020185127258" /> <!-- Mid-Grade Life Stone - Level 55 -->
-				<item id="8746" min="1" max="1" chance="0.00154713821125031" /> <!-- High-Grade Life Stone - Level 55 -->
-				<item id="8756" min="1" max="1" chance="0.000306364002227783" /> <!-- Top-Grade Life Stone - Level 55 -->
+				<item id="8726" min="1" max="1" chance="0.0620233922510147" /> <!-- Life Stone: level 55 -->
+				<item id="8736" min="1" max="1" chance="0.0155020185127258" /> <!-- Mid-Grade Life Stone: level 55 -->
+				<item id="8746" min="1" max="1" chance="0.00154713821125031" /> <!-- High-Grade Life Stone: level 55 -->
+				<item id="8756" min="1" max="1" chance="0.000306364002227783" /> <!-- Top-Grade Life Stone: level 55 -->
 			</drop>
 			<spoil>
 				<item id="2961" min="1" max="1" chance="4.3468" /> <!-- Full Plate Boots Part -->
@@ -7658,8 +7584,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="21798" level="76" type="Monster" name="Ghost of a Doorman">
-		<!-- Confirmed CT2.5 -->
+	<npc id="21798" level="76" type="Monster" name="Ghost of a Gatekeeper">
 		<parameters>
 			<param name="MoveAroundSocial" value="215" />
 			<param name="MoveAroundSocial1" value="215" />
@@ -7717,13 +7642,14 @@
 				<item id="4042" min="1" max="1" chance="0.247699265014648" /> <!-- Enria -->
 				<item id="4043" min="1" max="1" chance="0.495398530029297" /> <!-- Asofe -->
 				<item id="5282" min="1" max="1" chance="0.00659486975097656" /> <!-- Recipe: Greater Blessed Spiritshot (S) Compressed Package(100%) -->
-				<item id="8732" min="1" max="1" chance="0.123862266357422" /> <!-- Life Stone - Level 76 -->
-				<item id="8742" min="1" max="1" chance="0.0309529327392578" /> <!-- Mid-Grade Life Stone - Level 76 -->
-				<item id="8752" min="1" max="1" chance="0.00310792712402344" /> <!-- High-Grade Life Stone - Level 76 -->
+				<item id="6672" min="1" max="1" chance="1.23852159277344" /> <!-- Deluxe Chest Key - Grade 8 -->
+				<item id="8732" min="1" max="1" chance="0.123862266357422" /> <!-- Life Stone: level 76 -->
+				<item id="8742" min="1" max="1" chance="0.0309529327392578" /> <!-- Mid-Grade Life Stone: level 76 -->
+				<item id="8752" min="1" max="1" chance="0.00310792712402344" /> <!-- High-Grade Life Stone: level 76 -->
 				<item id="1344" min="10" max="30" chance="18.5779249624023" /> <!-- Mithril Arrow -->
 			</drop>
 			<spoil>
-				<item id="5487" min="1" max="1" chance="1.8126" /> <!-- Sealed Robe of Nightmare Fabric -->
+				<item id="5487" min="1" max="1" chance="1.8126" /> <!-- Sealed Nightmare Robe Fabric -->
 				<item id="5282" min="1" max="1" chance="0.1789" /> <!-- Recipe: Greater Blessed Spiritshot (S) Compressed Package(100%) -->
 				<item id="5488" min="1" max="1" chance="1.8126" /> <!-- Sealed Majestic Robe Fabric -->
 			</spoil>
@@ -7733,8 +7659,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="21799" level="76" type="Monster" name="Ghost of a Doorman">
-		<!-- Confirmed CT2.5 -->
+	<npc id="21799" level="76" type="Monster" name="Ghost of a Gatekeeper">
 		<parameters>
 			<param name="MoveAroundSocial" value="215" />
 			<param name="MoveAroundSocial1" value="215" />
@@ -7786,7 +7711,7 @@
 			<drop>
 				<item id="57" min="3642" max="7457" chance="70" /> <!-- Adena -->
 				<item id="11946" min="1" max="1" chance="0.00940520000872016" /> <!-- Common Item - Dasparion's Staff -->
-				<item id="5543" min="1" max="1" chance="0.116296274434805" /> <!-- Dasparion's Staff Head -->
+				<item id="5543" min="1" max="1" chance="0.116296274434805" /> <!-- Dasparion's Staff Edge -->
 				<item id="11949" min="1" max="1" chance="0.00940520000872016" /> <!-- Common Item - Meteor Shower -->
 				<item id="5532" min="1" max="1" chance="0.115210079456896" /> <!-- Meteor Shower Head -->
 				<item id="11953" min="1" max="1" chance="0.00940520000872016" /> <!-- Common Item - Spiritual Eye -->
@@ -7794,9 +7719,9 @@
 				<item id="11958" min="1" max="1" chance="0.00940520000872016" /> <!-- Common Item - Destroyer Hammer -->
 				<item id="8346" min="1" max="1" chance="0.115210079456896" /> <!-- Hammer Piece of Destroyer -->
 				<item id="6901" min="1" max="1" chance="0.0683358747982979" /> <!-- Recipe: Shining Arrow (100%) -->
-				<item id="8732" min="1" max="1" chance="0.569462445719242" /> <!-- Life Stone - Level 76 -->
-				<item id="8742" min="1" max="1" chance="0.142365214229822" /> <!-- Mid-Grade Life Stone - Level 76 -->
-				<item id="8752" min="1" max="1" chance="0.0142364419829845" /> <!-- High-Grade Life Stone - Level 76 -->
+				<item id="8732" min="1" max="1" chance="0.569462445719242" /> <!-- Life Stone: level 76 -->
+				<item id="8742" min="1" max="1" chance="0.142365214229822" /> <!-- Mid-Grade Life Stone: level 76 -->
+				<item id="8752" min="1" max="1" chance="0.0142364419829845" /> <!-- High-Grade Life Stone: level 76 -->
 			</drop>
 			<spoil>
 				<item id="6901" min="1" max="1" chance="0.7403" /> <!-- Recipe: Shining Arrow (100%) -->

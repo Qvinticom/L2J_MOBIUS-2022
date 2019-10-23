@@ -120,9 +120,9 @@ public class ToIVortex extends AbstractNpcAI
 			case "BLUE":
 			case "RED":
 			{
-				if (player.getAdena() >= 10000)
+				if (player.getAdena() >= 100000)
 				{
-					takeItems(player, Inventory.ADENA_ID, 10000);
+					takeItems(player, Inventory.ADENA_ID, 100000);
 					giveItems(player, DIMENSION_TRADE.get(event), 1);
 				}
 				else

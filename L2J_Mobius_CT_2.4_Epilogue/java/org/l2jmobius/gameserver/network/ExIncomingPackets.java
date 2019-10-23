@@ -32,9 +32,6 @@ import org.l2jmobius.gameserver.network.clientpackets.*;
 public enum ExIncomingPackets implements IIncomingPackets<GameClient>
 {
 	REQUEST_GOTO_LOBBY(0x36, RequestGotoLobby::new, ConnectionState.AUTHENTICATED),
-	REQUEST_EX_2ND_PASSWORD_CHECK(0x93, RequestEx2ndPasswordCheck::new, ConnectionState.AUTHENTICATED),
-	REQUEST_EX_2ND_PASSWORD_VERIFY(0x94, RequestEx2ndPasswordVerify::new, ConnectionState.AUTHENTICATED),
-	REQUEST_EX_2ND_PASSWORD_REQ(0x95, RequestEx2ndPasswordReq::new, ConnectionState.AUTHENTICATED),
 	REQUEST_MANOR_LIST(0x01, RequestManorList::new, ConnectionState.IN_GAME),
 	REQUEST_PROCEDURE_CROP_LIST(0x02, RequestProcureCropList::new, ConnectionState.IN_GAME),
 	REQUEST_SET_SEED(0x03, RequestSetSeed::new, ConnectionState.IN_GAME),
@@ -150,30 +147,15 @@ public enum ExIncomingPackets implements IIncomingPackets<GameClient>
 	REQUEST_REFUND_ITEM(0x75, RequestRefundItem::new, ConnectionState.IN_GAME),
 	REQUEST_BUI_SELL_UI_CLOSE(0x76, RequestBuySellUIClose::new, ConnectionState.IN_GAME),
 	REQUEST_EX_EVENT_MATCH_OBSERVER_END(0x77, null, ConnectionState.IN_GAME),
-	REQUEST_PARTY_LOOT_MODIFICATION(0x78, RequestPartyLootModification::new, ConnectionState.IN_GAME),
-	ANSWER_PARTY_LOOT_MODIFICATION(0x79, AnswerPartyLootModification::new, ConnectionState.IN_GAME),
-	ANSWER_COUPLE_ACTION(0x7A, AnswerCoupleAction::new, ConnectionState.IN_GAME),
-	BR_EVENT_RANKER_LIST(0x7B, BrEventRankerList::new, ConnectionState.IN_GAME),
-	REQUEST_ASK_MEMBERSHIP(0x7C, null, ConnectionState.IN_GAME),
-	REQUEST_ADD_EXPAND_QUEST_ALARM(0x7D, null, ConnectionState.IN_GAME),
-	REQUEST_NEW_VOTE_SYSTEM(0x7E, RequestVoteNew::new, ConnectionState.IN_GAME),
-	REQUEST_AGIT_ACTION(0x80, null, ConnectionState.IN_GAME), // TODO: Implement / HANDLE SWITCH
-	REQUEST_EX_ADD_POST_FRIEND_FOR_POST_BOX(0x84, RequestExAddContactToContactList::new, ConnectionState.IN_GAME),
-	REQUEST_EX_DELETE_POST_FRIEND_FOR_POST_BOX(0x85, RequestExDeleteContactFromContactList::new, ConnectionState.IN_GAME),
-	REQUEST_EX_SHOW_POST_FRIEND_FOR_POST_BOX(0x86, RequestExShowContactList::new, ConnectionState.IN_GAME),
-	REQUEST_EX_FRIEND_LIST_FOR_POST_BOX(0x87, RequestExFriendListExtended::new, ConnectionState.IN_GAME),
-	REQUEST_EX_OLYMPIAD_MATCH_LIST_REFRESH(0x88, RequestExOlympiadMatchListRefresh::new, ConnectionState.IN_GAME),
-	REQUEST_BR_GAME_POINT(0x89, RequestBrGamePoint::new, ConnectionState.IN_GAME),
-	REQUEST_BR_PRODUCT_LIST(0x8A, RequestBrProductList::new, ConnectionState.IN_GAME),
-	REQUEST_BR_PRODUCT_INFO(0x8B, RequestBrProductInfo::new, ConnectionState.IN_GAME),
-	REQUEST_BR_BUI_PRODUCT(0x8C, RequestBrBuyProduct::new, ConnectionState.IN_GAME),
-	REQUEST_BR_RECENT_PRODUCT_LIST(0x8D, RequestBrRecentProductList::new, ConnectionState.IN_GAME),
-	REQUEST_BR_MINI_GAME_LOAD_SCORES(0x8E, null, ConnectionState.IN_GAME),
-	REQUEST_BR_MINI_GAME_INSERT_SCORE(0x8F, null, ConnectionState.IN_GAME),
-	REQUEST_BR_LECTURE_MARK(0x90, null, ConnectionState.IN_GAME),
-	REQUEST_GOODS_INVENTORY_INFO(0x91, null, ConnectionState.IN_GAME),
-	REQUEST_USE_GOODS_INVENTORY_ITEM(0x92, null, ConnectionState.IN_GAME),
-	REQUEST_HARDWARE_INFO(0x96, null, ConnectionState.values());
+	REQUEST_BR_GAME_POINT(0x78, RequestBrGamePoint::new, ConnectionState.IN_GAME),
+	REQUEST_BR_PRODUCT_LIST(0x79, RequestBrProductList::new, ConnectionState.IN_GAME),
+	REQUEST_BR_PRODUCT_INFO(0x7A, RequestBrProductInfo::new, ConnectionState.IN_GAME),
+	REQUEST_BR_BUI_PRODUCT(0x7B, RequestBrBuyProduct::new, ConnectionState.IN_GAME),
+	REQUEST_BR_RECENT_PRODUCT_LIST(0x7C, RequestBrRecentProductList::new, ConnectionState.IN_GAME),
+	BR_EVENT_RANKER_LIST(0x7D, BrEventRankerList::new, ConnectionState.IN_GAME),
+	REQUEST_BR_MINI_GAME_LOAD_SCORES(0x7E, null, ConnectionState.IN_GAME),
+	REQUEST_BR_MINI_GAME_INSERT_SCORE(0x7F, null, ConnectionState.IN_GAME),
+	REQUEST_BR_LECTURE_MARK(0x80, null, ConnectionState.IN_GAME);
 	
 	public static final ExIncomingPackets[] PACKET_ARRAY;
 	static

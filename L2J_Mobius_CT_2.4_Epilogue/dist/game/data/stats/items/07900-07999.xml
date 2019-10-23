@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="7900" type="Weapon" name="Ice Storm Hammer">
-		<!-- Bestows one of the following functions: Focus, Anger, or Critical Bleed. -->
+		<!-- Bestows either Focus, Anger, or Critical Bleed. -->
 		<set name="icon" val="icon.weapon_ice_storm_hammer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -29,7 +29,7 @@
 		</for>
 	</item>
 	<item id="7901" type="Weapon" name="Star Buster">
-		<!-- Bestows one of the following functions: Health, Haste, or Rsk. Focus. -->
+		<!-- Bestows either Health, Haste, or Rsk. Focus. -->
 		<set name="icon" val="icon.weapon_star_buster_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -85,7 +85,7 @@
 		</for>
 	</item>
 	<item id="7903" type="Weapon" name="Frintezza's Sword">
-		<!-- Frintezza's sword of transformation. -->
+		<!-- Frintezz'a sword of transformation. -->
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -174,7 +174,7 @@
 		<set name="item_skill" val="2251-1" /> <!-- Bless of Earth -->
 	</item>
 	<item id="7910" type="EtcItem" name="Dark Blessing">
-		<!-- Bestows Dark attack attribute while engaged in a physical attack. -->
+		<!-- Bestows darkness attack attribute while engaged in a physical attack. -->
 		<set name="icon" val="icon.etc_unholy_crystal_1_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="LIQUID" />
@@ -186,7 +186,7 @@
 		<set name="item_skill" val="2252-1" /> <!-- Bless of Darkness -->
 	</item>
 	<item id="7911" type="EtcItem" name="Holy Blessing">
-		<!-- Bestows Holy attack attribute while engaged in a physical attack. -->
+		<!-- Bestows sacred attack attribute while engaged in a physical attack. -->
 		<set name="icon" val="icon.etc_holy_crystal_1_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="LIQUID" />
@@ -210,7 +210,7 @@
 		<set name="item_skill" val="2254-3" /> <!-- Crystal of Fire -->
 	</item>
 	<item id="7913" type="EtcItem" name="Water Shard">
-		<!-- Eliminates vulnerability to water attacks. -->
+		<!-- Eliminates vulnerability to to water attacks. -->
 		<set name="icon" val="icon.etc_water_crystal_1_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="LIQUID" />
@@ -246,7 +246,7 @@
 		<set name="item_skill" val="2257-3" /> <!-- Crystal of Earth -->
 	</item>
 	<item id="7916" type="EtcItem" name="Dark Shard">
-		<!-- Eliminates vulnerability to Dark attacks. -->
+		<!-- Eliminates vulnerability to darkness attacks. -->
 		<set name="icon" val="icon.etc_unholy_crystal_1_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="LIQUID" />
@@ -258,7 +258,7 @@
 		<set name="item_skill" val="2258-3" /> <!-- Crystal of Darkness -->
 	</item>
 	<item id="7917" type="EtcItem" name="Holy Shard">
-		<!-- Eliminates vulnerability to Holy attacks. -->
+		<!-- Eliminates vulnerability to sacred attacks. -->
 		<set name="icon" val="icon.etc_holy_crystal_1_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="LIQUID" />

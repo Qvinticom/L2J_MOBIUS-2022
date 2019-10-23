@@ -24,7 +24,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="8102" type="Weapon" name="Pa'agrian Sword - Focus">
-		<!-- <Soul Crystal Enhancement>. Increases Critical Rate by 77. -->
+		<!-- <Soul Crystal Enhancement>. Increases critical attack rate by 77. -->
 		<set name="icon" val="icon.weapon_sword_of_paagrio_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -171,7 +171,7 @@
 		</for>
 	</item>
 	<item id="8107" type="Weapon" name="Guardian Sword - Critical Bleed">
-		<!-- <Soul Crystal Enhancement>. Inflicts Bleed on the target with a 24% chance during a general critical attack. -->
+		<!-- <Soul Crystal Enhancement>. Endowed with the ability to inflict bleed on the target with a 24% probability during a general critical attack. -->
 		<set name="icon" val="icon.weapon_guardians_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -201,7 +201,7 @@
 		</for>
 	</item>
 	<item id="8108" type="Weapon" name="Infernal Master - Haste">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. Increases damage inflicted on one's opponent during PvP. -->
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 6%. Increases damage inflicted on one's opponent during PvP. -->
 		<set name="icon" val="icon.weapon_inferno_master_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -259,7 +259,7 @@
 		</for>
 	</item>
 	<item id="8110" type="Weapon" name="Infernal Master - Focus">
-		<!-- <Soul Crystal Enhancement>. Increases Critical Rate by 61. Increases damage inflicted during PvP. -->
+		<!-- <Soul Crystal Enhancement>. Increases critical attack rate by 61. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_inferno_master_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -335,7 +335,7 @@
 		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="item_skill" val="3077-1" /> <!-- Special Ability: M. Atk. -->
+		<set name="item_skill" val="3077-1" /> <!-- Special Ability: Magic Power -->
 		<for>
 			<set stat="pAtk" val="85" />
 			<set stat="mAtk" val="81" />
@@ -423,7 +423,7 @@
 		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="item_skill" val="3077-4" /> <!-- Special Ability: M. Atk. -->
+		<set name="item_skill" val="3077-4" /> <!-- Special Ability: Magic Power -->
 		<for>
 			<set stat="pAtk" val="125" />
 			<set stat="mAtk" val="111" />
@@ -511,7 +511,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="item_skill" val="3077-6" /> <!-- Special Ability: M. Atk. -->
+		<set name="item_skill" val="3077-6" /> <!-- Special Ability: Magic Power -->
 		<for>
 			<set stat="pAtk" val="155" />
 			<set stat="mAtk" val="132" />
@@ -609,7 +609,7 @@
 		</for>
 	</item>
 	<item id="8122" type="Weapon" name="Dwarven Hammer - Critical Bleed">
-		<!-- <Soul Crystal Enhancement>. Inflicts Bleed on the target with a 42% chance during a general critical attack. -->
+		<!-- <Soul Crystal Enhancement>. Endowed with the ability to inflict bleed on the target with a 42% probability during a general critical attack. -->
 		<set name="icon" val="icon.weapon_dwarven_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -639,7 +639,7 @@
 		</for>
 	</item>
 	<item id="8123" type="Weapon" name="Karik Horn - Focus">
-		<!-- <Soul Crystal Enhancement>. Increases Critical Rate by 77. -->
+		<!-- <Soul Crystal Enhancement>. Increases critical attack rate by 77. -->
 		<set name="icon" val="icon.weapon_horn_of_karik_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -668,7 +668,7 @@
 		</for>
 	</item>
 	<item id="8124" type="Weapon" name="Karik Horn - Haste">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 7%. -->
 		<set name="icon" val="icon.weapon_horn_of_karik_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -816,7 +816,7 @@
 		</for>
 	</item>
 	<item id="8129" type="Weapon" name="Ice Storm Hammer - Focus">
-		<!-- <Soul Crystal Enhancement>. Increases Critical Rate by 68. -->
+		<!-- <Soul Crystal Enhancement>. Increases critical attack rate by 68. -->
 		<set name="icon" val="icon.weapon_ice_storm_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -874,7 +874,7 @@
 		</for>
 	</item>
 	<item id="8131" type="Weapon" name="Ice Storm Hammer - Critical Bleed">
-		<!-- <Soul Crystal Enhancement>. Inflicts Bleed on the target with a 41% chance during a general critical attack. -->
+		<!-- <Soul Crystal Enhancement>. Endowed with the ability to inflict bleed on the target with a 41% probability during a general critical attack. -->
 		<set name="icon" val="icon.weapon_ice_storm_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -933,7 +933,7 @@
 		</for>
 	</item>
 	<item id="8133" type="Weapon" name="Star Buster - Haste">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. -->
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 6%. -->
 		<set name="icon" val="icon.weapon_star_buster_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -962,7 +962,7 @@
 		</for>
 	</item>
 	<item id="8134" type="Weapon" name="Star Buster - Rsk. Focus">
-		<!-- <Soul Crystal Enhancement>. Increases Critical Rate by 99 when the character's HP falls to 60% or below. -->
+		<!-- <Soul Crystal Enhancement>. Critical attack rate increases by 99 when the character's HP falls to 60% or below. -->
 		<set name="icon" val="icon.weapon_star_buster_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1049,7 +1049,7 @@
 		</for>
 	</item>
 	<item id="8137" type="Weapon" name="Doom Crusher - Rsk. Haste">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 11% when HP drops to 60% or lower. Increases damage inflicted on one's opponent during PvP. -->
+		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 11% when HP falls below 60%. Increases damage inflicted on one's opponent during PvP. -->
 		<set name="icon" val="icon.weapon_doom_crusher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1126,7 +1126,7 @@
 		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="item_skill" val="3077-4" /> <!-- Special Ability: M. Atk. -->
+		<set name="item_skill" val="3077-4" /> <!-- Special Ability: Magic Power -->
 		<for>
 			<set stat="pAtk" val="125" />
 			<set stat="mAtk" val="111" />
@@ -1169,7 +1169,7 @@
 		</for>
 	</item>
 	<item id="8141" type="Weapon" name="Spell Breaker - Acumen">
-		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. -->
+		<!-- <Soul Crystal Enhancement>. Increases Increases Casting Spd. by 15%. -->
 		<set name="icon" val="icon.weapon_spell_breaker_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1322,7 +1322,7 @@
 		</for>
 	</item>
 	<item id="8146" type="Weapon" name="Kaim Vanul's Bones - Conversion">
-		<!-- <Soul Crystal Enhancement>. Increases Max MP by 60% and decreases Max HP by 40%. -->
+		<!-- <Soul Crystal Enhancement>. Increases the Max MP by 60% and decreases the Max HP by 40%. -->
 		<set name="icon" val="icon.weapon_bone_of_kaim_vanul_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1492,7 +1492,7 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="item_skill" val="3073-2" /> <!-- Special Ability: M. Atk. -->
+		<set name="item_skill" val="3073-2" /> <!-- Special Ability: Magic Power -->
 		<for>
 			<set stat="pAtk" val="186" />
 			<set stat="mAtk" val="152" />
@@ -1770,7 +1770,7 @@
 		<set name="price" val="500000" />
 	</item>
 	<item id="8181" type="Armor" name="Academy Circlet">
-		<!-- Circlet awarded to graduates of the Academy. When equipped by a level 40~75 character, upon death, the Exp. penalty decreases by 50%. Can be repurchased through Blacksmith Pinter of Gludio. -->
+		<!-- Circlet awarded to graduates of the Academy. -->
 		<set name="icon" val="icon.accessory_academy_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -1915,7 +1915,7 @@
 		</for>
 	</item>
 	<item id="8191" type="Armor" name="Necklace of Frintezza">
-		<!-- MP +42, increase Resistance to sleep/paralysis/stun by 15%, increase sleep/paralysis/stun attack chance by 15%, increase Resistance to poison/bleed by 25%, increase poison/bleed attack chance by 25%, decrease in skill re-use delay, increase Damage Shield effect, and increase Resistance to Dark attacks. -->
+		<!-- Produces the following effects: MP +42, increase resistance to sleep/paralysis/stun by 15%, increase sleep/paralysis/stun attack chance by 15%, increase resistance to poison/bleed by 25%, increase poison/bleed attack chance by 25%, decrease in skill re-use delay, increase Damage Shield effect, and increase resistance to Dark attacks. -->
 		<set name="icon" val="icon.accessory_necklace_of_frintessa_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />

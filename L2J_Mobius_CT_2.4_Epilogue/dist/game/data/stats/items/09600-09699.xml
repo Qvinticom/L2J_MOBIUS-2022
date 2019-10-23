@@ -741,7 +741,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="9649" type="EtcItem" name="Transformation Sealbook: Death Blader">
-		<!-- This book contains a spell to magically transform yourself into a Death Blader. -->
+		<!-- This book contains a spell to magically transform yourself into an Death Blader. -->
 		<set name="icon" val="BranchSys2.icon.etc_sb_transform_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1078,7 +1078,7 @@
 		</cond>
 	</item>
 	<item id="9669" type="Armor" name="Native Helmet">
-		<!-- When you use this with Native Tunic and Pants, you can transform into a Native. Transformation will be cancelled if unequipped. -->
+		<!-- When you use this with Native Chestcloth and Loincloth, you can transform into a Native. Transformation is cancelled if unequipped. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1096,7 +1096,7 @@
 		</for>
 	</item>
 	<item id="9670" type="Armor" name="Native Tunic">
-		<!-- When you use this with Native Helmet and Pants, you can transform into a Native. Transformation will be cancelled if unequipped. -->
+		<!-- When you use this with Native Headdress and Loincloth, you can transform into a Native. Transformation is cancelled if unequipped. -->
 		<set name="icon" val="icon.armor_t34_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1114,7 +1114,7 @@
 		</for>
 	</item>
 	<item id="9671" type="Armor" name="Native Pants">
-		<!-- When you use this with Native Helmet and Tunic, you can transform into a Native. Transformation will be cancelled if unequipped. -->
+		<!-- When you use this with Native Headdress and Chestcloth, you can transform into a Native. Transformation is cancelled if unequipped. -->
 		<set name="icon" val="icon.armor_t34_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1132,7 +1132,7 @@
 		</for>
 	</item>
 	<item id="9672" type="EtcItem" name="Magic Bottle">
-		<!-- Bottle that can hold the Chimera's M. Atk. -->
+		<!-- Bottle that can hold the Chimera's magic power. -->
 		<set name="icon" val="icon.etc_magical_bottle_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="LIQUID" />
@@ -1369,7 +1369,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="9693" type="EtcItem" name="Crystal Fragment">
-		<!-- A Crystalline Golem Shard. Can be used in Crystal Caverns Coral Garden. -->
+		<!-- A Crystalline Golem Fragment. Can be used in Crystal Caverns Coral Garden. -->
 		<set name="icon" val="icon.etc_crystal_piece_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />

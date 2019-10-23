@@ -22,6 +22,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.buylist.BuyListHolder;
 import org.l2jmobius.gameserver.model.buylist.Product;
+import org.l2jmobius.gameserver.model.items.Item;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class BuyList implements IClientOutgoingPacket
@@ -42,8 +43,7 @@ public class BuyList implements IClientOutgoingPacket
 	@Override
 	public boolean write(PacketWriter packet)
 	{
-		OutgoingPackets.EX_BUY_SELL_LIST.writeId(packet);
-		packet.writeD(0x00);
+		OutgoingPackets.EX_BUY_SELL_LIST.writeId(packet); // writeC(0x07) ?
 		packet.writeQ(_money); // current money
 		packet.writeD(_listId);
 		
@@ -53,29 +53,27 @@ public class BuyList implements IClientOutgoingPacket
 		{
 			if ((product.getCount() > 0) || !product.hasLimitedStock())
 			{
+				packet.writeH(product.getItem().getType1()); // item type1
+				packet.writeD(0x00); // objectId
 				packet.writeD(product.getItemId());
-				packet.writeD(product.getItemId());
-				packet.writeD(0);
 				packet.writeQ(product.getCount() < 0 ? 0 : product.getCount());
 				packet.writeH(product.getItem().getType2());
-				packet.writeH(product.getItem().getType1()); // Custom Type 1
 				packet.writeH(0x00); // isEquipped
-				packet.writeD(product.getItem().getBodyPart()); // Body Part
-				packet.writeH(product.getItem().getDefaultEnchantLevel()); // Enchant
-				packet.writeH(0x00); // Custom Type
-				packet.writeD(0x00); // Augment
-				packet.writeD(-1); // Mana
-				packet.writeD(-9999); // Time
-				packet.writeH(0x00); // Element Type
-				packet.writeH(0x00); // Element Power
-				for (byte i = 0; i < 6; i++)
+				
+				if (product.getItem().getType1() != Item.TYPE1_ITEM_QUESTITEM_ADENA)
 				{
+					packet.writeD(product.getItem().getBodyPart());
+					packet.writeH(0x00); // item enchant level
+					packet.writeH(0x00); // ?
 					packet.writeH(0x00);
 				}
-				// Enchant Effects
-				packet.writeH(0x00);
-				packet.writeH(0x00);
-				packet.writeH(0x00);
+				else
+				{
+					packet.writeD(0x00);
+					packet.writeH(0x00);
+					packet.writeH(0x00);
+					packet.writeH(0x00);
+				}
 				
 				if ((product.getItemId() >= 3960) && (product.getItemId() <= 4026))
 				{
@@ -85,6 +83,16 @@ public class BuyList implements IClientOutgoingPacket
 				{
 					packet.writeQ((long) (product.getPrice() * (1 + _taxRate)));
 				}
+				
+				// T1
+				for (byte i = 0; i < 8; i++)
+				{
+					packet.writeH(0x00);
+				}
+				
+				packet.writeH(0x00); // Enchant effect 1
+				packet.writeH(0x00); // Enchant effect 2
+				packet.writeH(0x00); // Enchant effect 3
 			}
 		}
 		return true;

@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="36500" level="80" type="Monster" name="Territory Catapult" title="Dion">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -38,7 +37,6 @@
 		</collision>
 	</npc>
 	<npc id="36501" level="80" type="Monster" name="Territory Catapult" title="Giran">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -75,7 +73,6 @@
 		</collision>
 	</npc>
 	<npc id="36502" level="80" type="Monster" name="Territory Catapult" title="Oren">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -112,7 +109,6 @@
 		</collision>
 	</npc>
 	<npc id="36503" level="80" type="Monster" name="Territory Catapult" title="Aden">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -149,7 +145,6 @@
 		</collision>
 	</npc>
 	<npc id="36504" level="80" type="Monster" name="Territory Catapult" title="Innadril">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -186,7 +181,6 @@
 		</collision>
 	</npc>
 	<npc id="36505" level="80" type="Monster" name="Territory Catapult" title="Goddard">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -223,7 +217,6 @@
 		</collision>
 	</npc>
 	<npc id="36506" level="80" type="Monster" name="Territory Catapult" title="Rune">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -260,7 +253,6 @@
 		</collision>
 	</npc>
 	<npc id="36507" level="80" type="Monster" name="Territory Catapult" title="Schuttgart">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -297,7 +289,6 @@
 		</collision>
 	</npc>
 	<npc id="36508" level="80" type="Defender" name="Military Association Leader" title="Gludio">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="158" />
@@ -345,7 +336,6 @@
 		</collision>
 	</npc>
 	<npc id="36509" level="70" type="Defender" name="Territory Border Guard" title="Gludio">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="79" />
@@ -394,7 +384,6 @@
 		</collision>
 	</npc>
 	<npc id="36510" level="80" type="Defender" name="Religious Association Leader" title="Gludio">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="127" />
@@ -447,7 +436,6 @@
 		</collision>
 	</npc>
 	<npc id="36511" level="80" type="Defender" name="Territory Guard" title="Gludio">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -496,7 +484,6 @@
 		</collision>
 	</npc>
 	<npc id="36512" level="75" type="Defender" name="Territory Border Guard" title="Gludio">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="79" />
@@ -545,7 +532,6 @@
 		</collision>
 	</npc>
 	<npc id="36513" level="80" type="Defender" name="Economic Association Leader" title="Gludio">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -593,7 +579,6 @@
 		</collision>
 	</npc>
 	<npc id="36514" level="80" type="Defender" name="Military Association Leader" title="Dion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="158" />
@@ -641,7 +626,6 @@
 		</collision>
 	</npc>
 	<npc id="36515" level="70" type="Defender" name="Territory Border Guard" title="Dion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="79" />
@@ -690,7 +674,6 @@
 		</collision>
 	</npc>
 	<npc id="36516" level="80" type="Defender" name="Religious Association Leader" title="Dion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="127" />
@@ -743,7 +726,6 @@
 		</collision>
 	</npc>
 	<npc id="36517" level="80" type="Defender" name="Territory Guard" title="Dion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -792,7 +774,6 @@
 		</collision>
 	</npc>
 	<npc id="36518" level="75" type="Defender" name="Territory Border Guard" title="Dion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="79" />
@@ -841,7 +822,6 @@
 		</collision>
 	</npc>
 	<npc id="36519" level="80" type="Defender" name="Economic Association Leader" title="Dion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -889,7 +869,6 @@
 		</collision>
 	</npc>
 	<npc id="36520" level="80" type="Defender" name="Military Association Leader" title="Giran">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="158" />
@@ -937,7 +916,6 @@
 		</collision>
 	</npc>
 	<npc id="36521" level="70" type="Defender" name="Territory Border Guard" title="Giran">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="79" />
@@ -986,7 +964,6 @@
 		</collision>
 	</npc>
 	<npc id="36522" level="80" type="Defender" name="Religious Association Leader" title="Giran">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="127" />
@@ -1039,7 +1016,6 @@
 		</collision>
 	</npc>
 	<npc id="36523" level="80" type="Defender" name="Territory Guard" title="Giran">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -1088,7 +1064,6 @@
 		</collision>
 	</npc>
 	<npc id="36524" level="75" type="Defender" name="Territory Border Guard" title="Giran">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="79" />
@@ -1137,7 +1112,6 @@
 		</collision>
 	</npc>
 	<npc id="36525" level="80" type="Defender" name="Economic Association Leader" title="Giran">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -1185,7 +1159,6 @@
 		</collision>
 	</npc>
 	<npc id="36526" level="80" type="Defender" name="Military Association Leader" title="Oren">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="158" />
@@ -1233,7 +1206,6 @@
 		</collision>
 	</npc>
 	<npc id="36527" level="70" type="Defender" name="Territory Border Guard" title="Oren">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="79" />
@@ -1282,7 +1254,6 @@
 		</collision>
 	</npc>
 	<npc id="36528" level="80" type="Defender" name="Religious Association Leader" title="Oren">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="127" />
@@ -1335,7 +1306,6 @@
 		</collision>
 	</npc>
 	<npc id="36529" level="80" type="Defender" name="Territory Guard" title="Oren">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -1384,7 +1354,6 @@
 		</collision>
 	</npc>
 	<npc id="36530" level="75" type="Defender" name="Territory Border Guard" title="Oren">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="79" />
@@ -1433,7 +1402,6 @@
 		</collision>
 	</npc>
 	<npc id="36531" level="80" type="Defender" name="Economic Association Leader" title="Oren">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -1481,7 +1449,6 @@
 		</collision>
 	</npc>
 	<npc id="36532" level="80" type="Defender" name="Military Association Leader" title="Aden">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="158" />
@@ -1529,7 +1496,6 @@
 		</collision>
 	</npc>
 	<npc id="36533" level="70" type="Defender" name="Territory Border Guard" title="Aden">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="79" />
@@ -1578,7 +1544,6 @@
 		</collision>
 	</npc>
 	<npc id="36534" level="80" type="Defender" name="Religious Association Leader" title="Aden">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="127" />
@@ -1631,7 +1596,6 @@
 		</collision>
 	</npc>
 	<npc id="36535" level="80" type="Defender" name="Territory Guard" title="Aden">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -1680,7 +1644,6 @@
 		</collision>
 	</npc>
 	<npc id="36536" level="75" type="Defender" name="Territory Border Guard" title="Aden">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="79" />
@@ -1729,7 +1692,6 @@
 		</collision>
 	</npc>
 	<npc id="36537" level="80" type="Defender" name="Economic Association Leader" title="Aden">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -1777,7 +1739,6 @@
 		</collision>
 	</npc>
 	<npc id="36538" level="80" type="Defender" name="Military Association Leader" title="Innadril">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="158" />
@@ -1825,7 +1786,6 @@
 		</collision>
 	</npc>
 	<npc id="36539" level="70" type="Defender" name="Territory Border Guard" title="Innadril">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="79" />
@@ -1874,7 +1834,6 @@
 		</collision>
 	</npc>
 	<npc id="36540" level="80" type="Defender" name="Religious Association Leader" title="Innadril">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="127" />
@@ -1927,7 +1886,6 @@
 		</collision>
 	</npc>
 	<npc id="36541" level="80" type="Defender" name="Territory Guard" title="Innadril">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -1976,7 +1934,6 @@
 		</collision>
 	</npc>
 	<npc id="36542" level="75" type="Defender" name="Territory Border Guard" title="Innadril">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="79" />
@@ -2025,7 +1982,6 @@
 		</collision>
 	</npc>
 	<npc id="36543" level="80" type="Defender" name="Economic Association Leader" title="Innadril">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -2073,7 +2029,6 @@
 		</collision>
 	</npc>
 	<npc id="36544" level="80" type="Defender" name="Military Association Leader" title="Goddard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="158" />
@@ -2121,7 +2076,6 @@
 		</collision>
 	</npc>
 	<npc id="36545" level="70" type="Defender" name="Territory Border Guard" title="Goddard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="79" />
@@ -2170,7 +2124,6 @@
 		</collision>
 	</npc>
 	<npc id="36546" level="80" type="Defender" name="Religious Association Leader" title="Goddard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="127" />
@@ -2223,7 +2176,6 @@
 		</collision>
 	</npc>
 	<npc id="36547" level="80" type="Defender" name="Territory Guard" title="Goddard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -2272,7 +2224,6 @@
 		</collision>
 	</npc>
 	<npc id="36548" level="75" type="Defender" name="Territory Border Guard" title="Goddard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="79" />
@@ -2321,7 +2272,6 @@
 		</collision>
 	</npc>
 	<npc id="36549" level="80" type="Defender" name="Economic Association Leader" title="Goddard">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -2369,7 +2319,6 @@
 		</collision>
 	</npc>
 	<npc id="36550" level="80" type="Defender" name="Military Association Leader" title="Rune">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="158" />
@@ -2417,7 +2366,6 @@
 		</collision>
 	</npc>
 	<npc id="36551" level="70" type="Defender" name="Territory Border Guard" title="Rune">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="79" />
@@ -2466,7 +2414,6 @@
 		</collision>
 	</npc>
 	<npc id="36552" level="80" type="Defender" name="Religious Association Leader" title="Rune">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="127" />
@@ -2519,7 +2466,6 @@
 		</collision>
 	</npc>
 	<npc id="36553" level="80" type="Defender" name="Territory Guard" title="Rune">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -2568,7 +2514,6 @@
 		</collision>
 	</npc>
 	<npc id="36554" level="75" type="Defender" name="Territory Border Guard" title="Rune">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="79" />
@@ -2617,7 +2562,6 @@
 		</collision>
 	</npc>
 	<npc id="36555" level="80" type="Defender" name="Economic Association Leader" title="Rune">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -2665,7 +2609,6 @@
 		</collision>
 	</npc>
 	<npc id="36556" level="80" type="Defender" name="Military Association Leader" title="Schuttgart">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="158" />
@@ -2713,7 +2656,6 @@
 		</collision>
 	</npc>
 	<npc id="36557" level="70" type="Defender" name="Territory Border Guard" title="Schuttgart">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="79" />
@@ -2762,7 +2704,6 @@
 		</collision>
 	</npc>
 	<npc id="36558" level="80" type="Defender" name="Religious Association Leader" title="Schuttgart">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="127" />
@@ -2815,7 +2756,6 @@
 		</collision>
 	</npc>
 	<npc id="36559" level="80" type="Defender" name="Territory Guard" title="Schuttgart">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -2864,7 +2804,6 @@
 		</collision>
 	</npc>
 	<npc id="36560" level="75" type="Defender" name="Territory Border Guard" title="Schuttgart">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="79" />
@@ -2913,7 +2852,6 @@
 		</collision>
 	</npc>
 	<npc id="36561" level="80" type="Defender" name="Economic Association Leader" title="Schuttgart">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -2961,7 +2899,6 @@
 		</collision>
 	</npc>
 	<npc id="36562" level="83" type="QuestGuard" name="Seduced Knight" title="Investigator">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -3020,7 +2957,6 @@
 		</collision>
 	</npc>
 	<npc id="36563" level="83" type="QuestGuard" name="Seduced Ranger" title="Investigator">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="105" />
@@ -3077,7 +3013,6 @@
 		</collision>
 	</npc>
 	<npc id="36564" level="83" type="QuestGuard" name="Seduced Mage" title="Investigator">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -3132,7 +3067,6 @@
 		</collision>
 	</npc>
 	<npc id="36565" level="83" type="QuestGuard" name="Seduced Warrior" title="Investigator">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -3189,7 +3123,6 @@
 		</collision>
 	</npc>
 	<npc id="36566" level="77" type="Npc" name="Seduced Knight" title="Investigator">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -3248,7 +3181,6 @@
 		</collision>
 	</npc>
 	<npc id="36567" level="77" type="Npc" name="Seduced Ranger" title="Investigator">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="105" />
@@ -3305,7 +3237,6 @@
 		</collision>
 	</npc>
 	<npc id="36568" level="77" type="Npc" name="Seduced Mage" title="Investigator">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -3360,7 +3291,6 @@
 		</collision>
 	</npc>
 	<npc id="36569" level="77" type="Npc" name="Seduced Warrior" title="Investigator">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -3417,7 +3347,6 @@
 		</collision>
 	</npc>
 	<npc id="36570" level="80" type="Teleporter" name="Emery Compressor" title="Aerial Cleft">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3462,7 +3391,6 @@
 		</collision>
 	</npc>
 	<npc id="36571" level="80" type="Npc" name="Vortex" title="Aerial Cleft">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3501,7 +3429,6 @@
 		</collision>
 	</npc>
 	<npc id="36572" level="80" type="TerritoryWard" name="Gludio Ward">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3538,7 +3465,6 @@
 		</collision>
 	</npc>
 	<npc id="36573" level="80" type="TerritoryWard" name="Dion Ward">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3575,7 +3501,6 @@
 		</collision>
 	</npc>
 	<npc id="36574" level="80" type="TerritoryWard" name="Giran Ward">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3612,7 +3537,6 @@
 		</collision>
 	</npc>
 	<npc id="36575" level="80" type="TerritoryWard" name="Oren Ward">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3649,7 +3573,6 @@
 		</collision>
 	</npc>
 	<npc id="36576" level="80" type="TerritoryWard" name="Aden Ward">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3686,7 +3609,6 @@
 		</collision>
 	</npc>
 	<npc id="36577" level="80" type="TerritoryWard" name="Innadril Ward">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3723,7 +3645,6 @@
 		</collision>
 	</npc>
 	<npc id="36578" level="80" type="TerritoryWard" name="Goddard Ward">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3760,7 +3681,6 @@
 		</collision>
 	</npc>
 	<npc id="36579" level="80" type="TerritoryWard" name="Rune Ward">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3797,7 +3717,6 @@
 		</collision>
 	</npc>
 	<npc id="36580" level="80" type="TerritoryWard" name="Schuttgart Ward">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3834,7 +3753,6 @@
 		</collision>
 	</npc>
 	<npc id="36581" level="80" type="Npc" name="Territory Catapult" title="Gludio">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3870,7 +3788,6 @@
 		</collision>
 	</npc>
 	<npc id="36582" level="80" type="Npc" name="Territory Catapult" title="Dion">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3906,7 +3823,6 @@
 		</collision>
 	</npc>
 	<npc id="36583" level="80" type="Npc" name="Territory Catapult" title="Giran">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3942,7 +3858,6 @@
 		</collision>
 	</npc>
 	<npc id="36584" level="80" type="Npc" name="Territory Catapult" title="Oren">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -3978,7 +3893,6 @@
 		</collision>
 	</npc>
 	<npc id="36585" level="80" type="Npc" name="Territory Catapult" title="Aden">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4014,7 +3928,6 @@
 		</collision>
 	</npc>
 	<npc id="36586" level="80" type="Npc" name="Territory Catapult" title="Innadril">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4050,7 +3963,6 @@
 		</collision>
 	</npc>
 	<npc id="36587" level="80" type="Npc" name="Territory Catapult" title="Goddard">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4086,7 +3998,6 @@
 		</collision>
 	</npc>
 	<npc id="36588" level="80" type="Npc" name="Territory Catapult" title="Rune">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4122,7 +4033,6 @@
 		</collision>
 	</npc>
 	<npc id="36589" level="80" type="Npc" name="Territory Catapult" title="Schuttgart">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4158,7 +4068,6 @@
 		</collision>
 	</npc>
 	<npc id="36590" level="1" type="Npc" name="Outpost">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -4198,7 +4107,6 @@
 		</collision>
 	</npc>
 	<npc id="36591" level="80" type="Monster" name="Supplies Safe">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4237,7 +4145,6 @@
 		</collision>
 	</npc>
 	<npc id="36592" level="80" type="Monster" name="Supplies Safe">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4276,7 +4183,6 @@
 		</collision>
 	</npc>
 	<npc id="36593" level="80" type="Monster" name="Supplies Safe">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4315,7 +4221,6 @@
 		</collision>
 	</npc>
 	<npc id="36594" level="80" type="Monster" name="Supplies Safe">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4354,7 +4259,6 @@
 		</collision>
 	</npc>
 	<npc id="36595" level="80" type="Monster" name="Supplies Safe">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4393,7 +4297,6 @@
 		</collision>
 	</npc>
 	<npc id="36596" level="80" type="Monster" name="Supplies Safe">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4432,7 +4335,6 @@
 		</collision>
 	</npc>
 	<npc id="36597" level="80" type="Monster" name="Supplies Safe">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4471,7 +4373,6 @@
 		</collision>
 	</npc>
 	<npc id="36598" level="80" type="Monster" name="Supplies Safe">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -4510,7 +4411,6 @@
 		</collision>
 	</npc>
 	<npc id="36599" level="80" type="Monster" name="Supplies Safe">
-		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
