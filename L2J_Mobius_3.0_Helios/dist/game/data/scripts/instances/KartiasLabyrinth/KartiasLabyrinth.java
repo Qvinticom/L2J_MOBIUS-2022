@@ -34,19 +34,11 @@ import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureDeath;
 import org.l2jmobius.gameserver.model.events.impl.creature.OnCreatureSee;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
-import org.l2jmobius.gameserver.model.quest.QuestState;
-import org.l2jmobius.gameserver.model.quest.State;
 import org.l2jmobius.gameserver.model.zone.ZoneType;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 
 import instances.AbstractInstance;
-import quests.Q00494_IncarnationOfGreedZellakaGroup.Q00494_IncarnationOfGreedZellakaGroup;
-import quests.Q00495_IncarnationOfJealousyPellineGroup.Q00495_IncarnationOfJealousyPellineGroup;
-import quests.Q00496_IncarnationOfGluttonyKaliosGroup.Q00496_IncarnationOfGluttonyKaliosGroup;
-import quests.Q00497_IncarnationOfGreedZellakaSolo.Q00497_IncarnationOfGreedZellakaSolo;
-import quests.Q00498_IncarnationOfJealousyPellineSolo.Q00498_IncarnationOfJealousyPellineSolo;
-import quests.Q00499_IncarnationOfGluttonyKaliosSolo.Q00499_IncarnationOfGluttonyKaliosSolo;
 
 /**
  * Kartia Labyrinth instance zone.
@@ -217,63 +209,33 @@ public class KartiasLabyrinth extends AbstractInstance
 			}
 			case "request_zellaka_solo":
 			{
-				final QuestState qs = player.getQuestState(Q00497_IncarnationOfGreedZellakaSolo.class.getSimpleName());
-				if ((qs != null) && (qs.getState() == State.STARTED) && qs.isCond(1))
-				{
-					enterInstance(player, npc, TEMPLATE_ID_SOLO_85);
-					return null;
-				}
-				return "33647-9.htm";
+				enterInstance(player, npc, TEMPLATE_ID_SOLO_85);
+				return null;
 			}
 			case "request_pelline_solo":
 			{
-				final QuestState qs = player.getQuestState(Q00498_IncarnationOfJealousyPellineSolo.class.getSimpleName());
-				if ((qs != null) && (qs.getState() == State.STARTED) && qs.isCond(1))
-				{
-					enterInstance(player, npc, TEMPLATE_ID_SOLO_90);
-					return null;
-				}
-				return "33647-9.htm";
+				enterInstance(player, npc, TEMPLATE_ID_SOLO_90);
+				return null;
 			}
 			case "request_kalios_solo":
 			{
-				final QuestState qs = player.getQuestState(Q00499_IncarnationOfGluttonyKaliosSolo.class.getSimpleName());
-				if ((qs != null) && (qs.getState() == State.STARTED) && qs.isCond(1))
-				{
-					enterInstance(player, npc, TEMPLATE_ID_SOLO_95);
-					return null;
-				}
-				return "33647-9.htm";
+				enterInstance(player, npc, TEMPLATE_ID_SOLO_95);
+				return null;
 			}
 			case "request_zellaka_party":
 			{
-				final QuestState qs = player.getQuestState(Q00494_IncarnationOfGreedZellakaGroup.class.getSimpleName());
-				if ((qs != null) && (qs.getState() == State.STARTED) && qs.isCond(1))
-				{
-					enterInstance(player, npc, TEMPLATE_ID_GROUP_85);
-					return null;
-				}
-				return "33647-9.htm";
+				enterInstance(player, npc, TEMPLATE_ID_GROUP_85);
+				return null;
 			}
 			case "request_pelline_party":
 			{
-				final QuestState qs = player.getQuestState(Q00495_IncarnationOfJealousyPellineGroup.class.getSimpleName());
-				if ((qs != null) && (qs.getState() == State.STARTED) && qs.isCond(1))
-				{
-					enterInstance(player, npc, TEMPLATE_ID_GROUP_90);
-					return null;
-				}
-				return "33647-9.htm";
+				enterInstance(player, npc, TEMPLATE_ID_GROUP_90);
+				return null;
 			}
 			case "request_kalios_party":
 			{
-				final QuestState qs = player.getQuestState(Q00496_IncarnationOfGluttonyKaliosGroup.class.getSimpleName());
-				if ((qs != null) && (qs.getState() == State.STARTED) && qs.isCond(1))
-				{
-					enterInstance(player, npc, TEMPLATE_ID_GROUP_95);
-					return null;
-				}
-				return "33647-9.htm";
+				enterInstance(player, npc, TEMPLATE_ID_GROUP_95);
+				return null;
 			}
 			default:
 			{
