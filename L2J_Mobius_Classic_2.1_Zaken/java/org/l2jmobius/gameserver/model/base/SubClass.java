@@ -52,7 +52,7 @@ public class SubClass
 	
 	public int getClassId()
 	{
-		return _class.ordinal();
+		return _class.getId();
 	}
 	
 	public long getExp()

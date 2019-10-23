@@ -92,7 +92,7 @@ public class Q00182_NewRecruits extends Quest
 					{
 						htmltext = "32138-00.html";
 					}
-					else if ((level >= 17) && (level <= 21) && (player.getClassId().ordinal() == 0))
+					else if ((level >= 17) && (level <= 21) && (player.getClassId().getId() == 0))
 					{
 						htmltext = "32138-01.htm";
 					}

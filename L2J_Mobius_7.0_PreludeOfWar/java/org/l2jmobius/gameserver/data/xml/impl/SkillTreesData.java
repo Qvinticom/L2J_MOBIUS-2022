@@ -1571,7 +1571,7 @@ public class SkillTreesData implements IXmlReader
 			}
 			tempMap.clear();
 			Arrays.sort(array);
-			_skillsByClassIdHashCodes.put(cls.ordinal(), array);
+			_skillsByClassIdHashCodes.put(cls.getId(), array);
 		}
 		
 		// Race specific skills from Fishing and Transformation skill trees.
@@ -1683,7 +1683,7 @@ public class SkillTreesData implements IXmlReader
 		final int maxLvl = SkillData.getInstance().getMaxLevel(skill.getId());
 		final long hashCode = SkillData.getSkillHashCode(skill.getId(), Math.min(skill.getLevel(), maxLvl));
 		
-		if (Arrays.binarySearch(_skillsByClassIdHashCodes.get(player.getClassId().ordinal()), hashCode) >= 0)
+		if (Arrays.binarySearch(_skillsByClassIdHashCodes.get(player.getClassId().getId()), hashCode) >= 0)
 		{
 			return true;
 		}

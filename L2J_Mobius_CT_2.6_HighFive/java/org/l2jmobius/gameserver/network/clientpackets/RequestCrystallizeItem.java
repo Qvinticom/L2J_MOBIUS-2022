@@ -83,9 +83,9 @@ public class RequestCrystallizeItem implements IClientIncomingPacket
 		{
 			player.sendPacket(SystemMessageId.YOU_MAY_NOT_CRYSTALLIZE_THIS_ITEM_YOUR_CRYSTALLIZATION_SKILL_LEVEL_IS_TOO_LOW);
 			player.sendPacket(ActionFailed.STATIC_PACKET);
-			if ((player.getRace() != Race.DWARF) && (player.getClassId().ordinal() != 117) && (player.getClassId().ordinal() != 55))
+			if ((player.getRace() != Race.DWARF) && (player.getClassId().getId() != 117) && (player.getClassId().getId() != 55))
 			{
-				LOGGER.info("Player " + client + " used crystalize with classid: " + player.getClassId().ordinal());
+				LOGGER.info("Player " + client + " used crystalize with classid: " + player.getClassId().getId());
 			}
 			return;
 		}

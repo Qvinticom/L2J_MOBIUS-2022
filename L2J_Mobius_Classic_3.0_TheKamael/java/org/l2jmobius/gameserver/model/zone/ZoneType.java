@@ -276,7 +276,7 @@ public abstract class ZoneType extends ListenersContainer
 				
 				for (int _clas : _class)
 				{
-					if (((PlayerInstance) creature).getClassId().ordinal() == _clas)
+					if (((PlayerInstance) creature).getClassId().getId() == _clas)
 					{
 						ok = true;
 						break;
