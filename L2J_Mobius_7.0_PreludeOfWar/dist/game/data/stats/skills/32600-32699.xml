@@ -724,6 +724,24 @@
 		<!-- Becomes immune to all status effects. -->
 		<icon>icon.skill1411</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceTrait">
+				<KNOCKBACK>100</KNOCKBACK>
+				<KNOCKDOWN>100</KNOCKDOWN>
+				<AIRBIND>100</AIRBIND>
+				<DEPORT>100</DEPORT>
+				<CHANGEBODY>100</CHANGEBODY>
+				<PARALYZE>100</PARALYZE>
+				<TURN_STONE>100</TURN_STONE>
+				<PULL>100</PULL>
+				<DISARM>100</DISARM>
+				<PHYSICAL_BLOCKADE>100</PHYSICAL_BLOCKADE>
+				<DERANGEMENT>100</DERANGEMENT>
+				<SLEEP>100</SLEEP>
+				<HOLD>100</HOLD>
+				<SHOCK>100</SHOCK>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32676" toLevel="1" name="Spiz Strike">
 		<operateType>A1</operateType>

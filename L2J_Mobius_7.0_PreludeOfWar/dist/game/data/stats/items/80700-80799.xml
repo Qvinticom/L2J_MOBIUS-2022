@@ -1226,12 +1226,17 @@
 		</skills>
 	</item>
 	<item id="80763" name="Elite Monster Reward Box" type="EtcItem">
-		<!-- Box that can be obtained by defeating elite monsters. Use it to obtain various items including Dark Armor Enhancement Stones and Bloody Armor Enhancement Stones. -->
+		<!-- Double-click to obtain various items including Dark Armor Enhancement Stone, Bloody Armor Enhancement Stone. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="is_sellable" val="false" />
+		<set name="weight" val="0" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39486" level="1" /> <!-- Elite Monster Reward Box -->
+		</skills>
 	</item>
 	<item id="80764" name="+6 Angel's Necklace Box" additionalName="Event" type="EtcItem">
 		<!-- A gift from Festival Fairy's fortune draw. Double-click to obtain +6 Angel's Necklace. -->

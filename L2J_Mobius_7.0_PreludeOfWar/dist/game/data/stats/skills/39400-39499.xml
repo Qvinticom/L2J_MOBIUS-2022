@@ -925,10 +925,80 @@
 		<hitTime>200</hitTime>
 	</skill>
 	<skill id="39486" toLevel="4" name="Elite Monster Reward Box">
-		<operateType>A1</operateType>
-		<hitTime>500</hitTime>
-		<coolTime>500</coolTime>
-		<reuseDelay>500</reuseDelay>
+			<!-- This Skill has no description -->
+			<isMagic>2</isMagic> <!-- Static Skill -->
+			<magicLvl>1</magicLvl>
+			<operateType>A1</operateType>
+			<magicCriticalRate>5</magicCriticalRate>
+			<hitCancelTime>0</hitCancelTime>
+			<targetType>SELF</targetType>
+			<affectScope>SINGLE</affectScope>
+			<conditions>
+				<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+				</condition>
+			</conditions>
+			<effects>
+				<effect name="RestorationRandom">
+				<items>
+					<item chance="5.5555555555556">
+					<item id="57" count="300000" /> <!-- Adena -->
+					</item>
+					<item chance="5.5555555555556">
+					<item id="35569" count="1" /> <!-- Bloody Armor Enhancement Stone -->
+					</item>
+					<item chance="5.5555555555556">
+					<item id="35567" count="1" /> <!-- Dark Armor Enhancement Stone -->
+					</item>
+					<item chance="5.5555555555556">
+					<item id="17434" count="1" /> <!-- Eternal Boots -->
+					</item>
+					<item chance="5.5555555555556">
+					<item id="17431" count="1" /> <!-- Eternal Breastplate -->
+					</item>
+					<item chance="5.5555555555556">
+					<item id="17441" count="1" /> <!-- Eternal Circlet -->
+					</item>
+					<item chance="5.5555555555556">
+					<item id="17432" count="1" /> <!-- Eternal Gaiters -->
+					</item>
+					<item chance="5.5555555555556">
+					<item id="17433" count="1" /> <!-- Eternal Gauntlets -->
+					</item>
+					<item chance="5.5555555555556">
+					<item id="17444" count="1" /> <!-- Eternal Gloves -->
+					</item>
+					<item chance="5.5555555555556">
+					<item id="17430" count="1" /> <!-- Eternal Helmet -->
+					</item>
+					<item chance="5.5555555555556">
+					<item id="17437" count="1" /> <!-- Eternal Leather Armor -->
+					</item>
+					<item chance="5.5555555555556">
+					<item id="17440" count="1" /> <!-- Eternal Leather Boots -->
+					</item>
+					<item chance="5.5555555555556">
+					<item id="17439" count="1" /> <!-- Eternal Leather Gloves -->
+					</item>
+					<item chance="5.5555555555556">
+					<item id="17436" count="1" /> <!-- Eternal Leather Helmet -->
+					</item>
+					<item chance="5.5555555555556">
+					<item id="17438" count="1" /> <!-- Eternal Leather Leggings -->
+					</item>
+					<item chance="5.5555555555556">
+					<item id="17445" count="1" /> <!-- Eternal Shoes -->
+					</item>
+					<item chance="5.5555555555556">
+					<item id="17443" count="1" /> <!-- Eternal Stockings -->
+					</item>
+					<item chance="5.5555555555556">
+					<item id="17442" count="1" /> <!-- Eternal Tunic -->
+					</item>
+				</items>
+				</effect>	
+			</effects>
 	</skill>
 	<skill id="39487" toLevel="1" name="PA Event Box">
 		<operateType>A1</operateType>

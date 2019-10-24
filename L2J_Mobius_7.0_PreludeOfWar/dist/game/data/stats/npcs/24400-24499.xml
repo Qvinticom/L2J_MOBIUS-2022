@@ -471,123 +471,212 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="24415" level="85" type="Npc" name="Breka Orc Scout">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24415" level="113" type="Monster" name="Breka Orc Scout">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
 		<equipment rhand="123" lhand="20" />
+		<acquire exp="1408114244" sp="1267196" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="488815" hpRegen="9.5" mp="4440" mpRegen="3.3" />
+			<attack physical="82640" magical="74826" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="8049" magical="4676" />
 			<speed>
 				<walk ground="80" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="10" />
 			<height normal="20" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="4593" max="10717" chance="70" /> <!-- Adena -->
+				<item id="35344" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Helmet Ingredient -->
+				<item id="36540" min="1" max="1" chance="0.075" /> <!-- Exquisite Leather Braid -->
+				<item id="35468" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Leather Helmet (60%) -->
+			</drop>
+			<spoil>
+				<item id="36559" min="1" max="1" chance="0.75" /> <!-- Accessory Gem (High-grade) -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="24416" level="85" type="Npc" name="Breka Orc Scout Captain">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24416" level="113" type="Monster" name="Breka Orc Scout Captain">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
 		<equipment rhand="79" />
+		<acquire exp="1408114244" sp="1267196" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="488815" hpRegen="9.5" mp="4440" mpRegen="3.3" />
+			<attack physical="82640" magical="74826" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="8049" magical="4676" />
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+			</attribute>
 			<speed>
 				<walk ground="80" />
 				<run ground="174" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="12" />
 			<height normal="24" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="4593" max="10717" chance="70" /> <!-- Adena -->
+				<item id="35347" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Glove Ingredient -->
+				<item id="36530" min="1" max="1" chance="0.3" /> <!-- Exquisite Fiber -->
+				<item id="35471" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Leather Gloves (60%) -->
+			</drop>
+			<spoil>
+				<item id="36564" min="1" max="1" chance="2.764" /> <!-- Greater Synthetic Cokes -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="24417" level="85" type="Npc" name="Breka Orc Archer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24417" level="113" type="Monster" name="Breka Orc Archer">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
 		<equipment rhand="275" />
+		<acquire exp="1408114244" sp="1267196" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="488815" hpRegen="9.5" mp="4440" mpRegen="3.3" />
+			<attack physical="82640" magical="74826" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="8049" magical="4676" />
 			<speed>
 				<walk ground="45" />
 				<run ground="130" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="11" />
 			<height normal="21.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="4593" max="10717" chance="70" /> <!-- Adena -->
+				<item id="35348" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Boot Ingredient -->
+				<item id="36535" min="1" max="1" chance="0.03" /> <!-- Quality Braid -->
+				<item id="35472" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Leather Boots (60%) -->
+			</drop>
+			<spoil>
+				<item id="36519" min="1" max="1" chance="8.762" /> <!-- Quality Leather -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="24418" level="85" type="Npc" name="Breka Orc Shaman">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24418" level="114" type="Monster" name="Breka Orc Shaman">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="1453199724" sp="1307788" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="527920" hpRegen="9.5" mp="4503" mpRegen="3.3" />
+			<attack physical="85997" magical="78431" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="8405" magical="4883" />
 			<speed>
 				<walk ground="43" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="15" />
 			<height normal="28.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="4809" max="11217" chance="70" /> <!-- Adena -->
+				<item id="35346" min="1" max="1" chance="0.075" /> <!-- Eternal Leather Legging Ingredient -->
+				<item id="35345" min="1" max="1"  chance="0.03" /> <!-- Eternal Leather Armor Ingredient -->
+				<item id="36525" min="1" max="1"  chance="0.03" /> <!-- Durandil -->
+				<item id="35470" min="1" max="1"  chance="0.003" /> <!-- Recipe: Eternal Leather Leggings (60%) -->
+			</drop>
+			<spoil>
+				<item id="36539" min="1" max="1" chance="2.333" /> <!-- Quality Leather Braid -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="24419" level="85" type="Npc" name="Breka Orc Slaughterer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24419" level="114" type="Monster" name="Breka Orc Slaughterer">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
 		<equipment rhand="38425" />
+		<acquire exp="1453199724" sp="1307788" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="527920" hpRegen="9.5" mp="4503" mpRegen="3.3" />
+			<attack physical="85997" magical="78431" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="8405" magical="4883" />
 			<speed>
 				<walk ground="48" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="15" />
 			<height normal="33" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="4809" max="11217" chance="70" /> <!-- Adena -->
+				<item id="17438" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Pants -->
+				<item id="36545" min="1" max="1" chance="0.03" /> <!-- Durandil Wire -->
+				<item id="35469" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Leather Armor (60%) -->
+			</drop>
+			<spoil>
+				<item id="36529" min="1" max="1" chance="10.03" /> <!-- Durable Fiber -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="24420" level="85" type="Npc" name="Breka Orc Prefect" title="Lord of Breka's Stronghold">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24420" level="114" type="Monster" name="Breka Orc Prefect" title="Lord of Breka's Stronghold">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="10172398068" sp="9155033" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="2639599" hpRegen="9.5" mp="4503" mpRegen="3.3" />
+			<attack physical="85997" magical="78431" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="8405" magical="4883" />
 			<speed>
 				<walk ground="42" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="15" />
 			<height normal="36.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="80763" min="3" max="3" chance="100" /> <!-- Elite Monster Reward Box -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="24421" level="105" type="Monster" name="Stone Gargoyle">
 		<race>ETC</race>
@@ -1766,6 +1855,10 @@
 		</dropLists>
 	</npc>
 	<npc id="24462" level="109" type="Monster" name="Bewildered Expedition Member">
+		<parameters>
+			<skill name="Skill01_ID" id="32862" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<acquire exp="1239342753" sp="1115389" />
@@ -1784,6 +1877,7 @@
 			<height normal="33.4" />
 		</collision>
 		<skillList>
+			<skill id="32862" level="1" /> <!-- Critical Strike  -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
@@ -1801,6 +1895,10 @@
 		</dropLists>
 	</npc>
 	<npc id="24463" level="109" type="Monster" name="Bewildered Patrol">
+		<parameters>
+			<skill name="Skill01_ID" id="32861" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="15302" />
@@ -1821,6 +1919,7 @@
 			<height normal="31.45" />
 		</collision>
 		<skillList>
+			<skill id="32861" level="1" /> <!-- Rapid Throw  -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
@@ -1837,6 +1936,10 @@
 		</dropLists>
 	</npc>
 	<npc id="24464" level="110" type="Monster" name="Bewildered Dwarf Adventurer">
+		<parameters>
+			<skill name="Skill01_ID" id="32862" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
 		<race>DWARF</race>
 		<sex>MALE</sex>
 		<acquire exp="1279841200" sp="1151799" />
@@ -1855,6 +1958,7 @@
 			<height normal="30" />
 		</collision>
 		<skillList>
+			<skill id="32862" level="1" /> <!-- Critical Strike  -->
 			<skill id="4416" level="18" /> <!-- Dwarves -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
@@ -1863,7 +1967,7 @@
 				<item id="57" min="3992" max="9310" chance="70" /> <!-- Adena -->
 				<item id="35347" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Glove Ingredient -->
 				<item id="35348" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Boot Ingredient -->
-				<item id="36535" min="1" max="1" chance="0.03" /> <!-- Quality Braid -->
+				<item id="36530" min="1" max="1" chance="0.3" /> <!-- Exquisite Fiber -->
 				<item id="35471" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Leather Gloves (60%) -->
 			</drop>
 			<spoil>
@@ -1872,6 +1976,10 @@
 		</dropLists>
 	</npc>
 	<npc id="24465" level="110" type="Monster" name="Forest Evil Spirit">
+		<parameters>
+			<skill name="Skill01_ID" id="32865" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="1279841200" sp="1151799" />
@@ -1890,6 +1998,7 @@
 			<height normal="52" />
 		</collision>
 		<skillList>
+			<skill id="32865" level="1" /> <!-- Energy Burst  -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
