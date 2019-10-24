@@ -28,6 +28,8 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
 import org.l2jmobius.gameserver.network.NpcStringId;
 
+import quests.custom.Q00589_ASecretChange.Q00589_ASecretChange;
+
 /**
  * To Each Their Own (590)
  * @URL https://l2wiki.com/To_Each_Their_Own
@@ -64,6 +66,7 @@ public class Q00590_ToEachTheirOwn extends Quest
 		registerQuestItems(MONSTER_DROP);
 		addCondMinLevel(MIN_LEVEL, getNoQuestMsg(null));
 		addCondMaxLevel(MAX_LEVEL, getNoQuestMsg(null));
+		addCondCompletedQuest(Q00589_ASecretChange.class.getSimpleName(), "34424-05.htm");
 	}
 	
 	@Override
@@ -79,11 +82,7 @@ public class Q00590_ToEachTheirOwn extends Quest
 		{
 			case "accept.htm":
 			{
-				if (qs.isCreated())
-				{
-					qs.startQuest();
-					qs.setCond(KILLING_COND);
-				}
+				qs.startQuest();
 				break;
 			}
 			case "reward.html":

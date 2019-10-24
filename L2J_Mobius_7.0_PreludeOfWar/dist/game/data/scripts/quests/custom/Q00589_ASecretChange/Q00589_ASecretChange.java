@@ -80,11 +80,7 @@ public class Q00589_ASecretChange extends Quest
 		{
 			case "accept.htm":
 			{
-				if (qs.isCreated())
-				{
-					qs.startQuest();
-					qs.setCond(KILLING_COND);
-				}
+				qs.startQuest();
 				break;
 			}
 			case "reward.html":
