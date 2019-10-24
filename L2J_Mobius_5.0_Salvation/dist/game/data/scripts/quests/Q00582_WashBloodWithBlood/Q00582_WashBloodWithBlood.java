@@ -28,6 +28,8 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
 import org.l2jmobius.gameserver.network.NpcStringId;
 
+import quests.Q00581_ThePurificationRitual.Q00581_ThePurificationRitual;
+
 /**
  * Meaning Of Survival (00581)
  * @URL https://l2wiki.com/The_Purification_Ritual
@@ -57,6 +59,7 @@ public class Q00582_WashBloodWithBlood extends Quest
 	private static final int KILLING_COND = 1;
 	private static final int FINISH_COND = 2;
 	private static final int MIN_LEVEL = 85;
+	private static final int MAX_LEVEL = 95;
 	// Rewards
 	private static final int XP = 231860550;
 	private static final int SP = 231840;
@@ -71,6 +74,8 @@ public class Q00582_WashBloodWithBlood extends Quest
 		addKillId(MONSTERS);
 		registerQuestItems(MONSTER_DROP);
 		addCondMinLevel(MIN_LEVEL, getNoQuestMsg(null));
+		addCondMaxLevel(MAX_LEVEL, getNoQuestMsg(null));
+		addCondCompletedQuest(Q00581_ThePurificationRitual.class.getSimpleName(), "34414-08.htm");
 	}
 	
 	@Override
@@ -91,11 +96,7 @@ public class Q00582_WashBloodWithBlood extends Quest
 			}
 			case "34414-03.htm":
 			{
-				if (qs.isCreated())
-				{
-					qs.startQuest();
-					qs.setCond(KILLING_COND);
-				}
+				qs.startQuest();
 				break;
 			}
 			case "34414-05.html":

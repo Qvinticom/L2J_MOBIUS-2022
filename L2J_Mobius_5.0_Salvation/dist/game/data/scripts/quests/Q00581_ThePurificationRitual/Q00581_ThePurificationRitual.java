@@ -57,6 +57,7 @@ public class Q00581_ThePurificationRitual extends Quest
 	private static final int KILLING_COND = 1;
 	private static final int FINISH_COND = 2;
 	private static final int MIN_LEVEL = 85;
+	private static final int MAX_LEVEL = 95;
 	// Rewards
 	private static final int XP = 231860550;
 	private static final int SP = 231840;
@@ -71,6 +72,7 @@ public class Q00581_ThePurificationRitual extends Quest
 		addKillId(MONSTERS);
 		registerQuestItems(MONSTER_DROP);
 		addCondMinLevel(MIN_LEVEL, getNoQuestMsg(null));
+		addCondMaxLevel(MAX_LEVEL, getNoQuestMsg(null));
 	}
 	
 	@Override
@@ -91,11 +93,7 @@ public class Q00581_ThePurificationRitual extends Quest
 			}
 			case "34414-03.htm":
 			{
-				if (qs.isCreated())
-				{
-					qs.startQuest();
-					qs.setCond(KILLING_COND);
-				}
+				qs.startQuest();
 				break;
 			}
 			case "34414-05.html":

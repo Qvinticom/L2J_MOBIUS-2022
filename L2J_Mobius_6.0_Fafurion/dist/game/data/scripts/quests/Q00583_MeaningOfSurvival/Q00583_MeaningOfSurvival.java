@@ -58,6 +58,7 @@ public class Q00583_MeaningOfSurvival extends Quest
 	private static final int KILLING_COND = 1;
 	private static final int FINISH_COND = 2;
 	private static final int MIN_LEVEL = 86;
+	private static final int MAX_LEVEL = 96;
 	// Rewards
 	private static final int XP = 284703720;
 	private static final int SP = 284700;
@@ -72,6 +73,7 @@ public class Q00583_MeaningOfSurvival extends Quest
 		addKillId(MONSTERS);
 		registerQuestItems(MONSTER_DROP);
 		addCondMinLevel(MIN_LEVEL, getNoQuestMsg(null));
+		addCondMaxLevel(MAX_LEVEL, getNoQuestMsg(null));
 	}
 	
 	@Override
@@ -92,11 +94,7 @@ public class Q00583_MeaningOfSurvival extends Quest
 			}
 			case "30137-03.htm":
 			{
-				if (qs.isCreated())
-				{
-					qs.startQuest();
-					qs.setCond(KILLING_COND);
-				}
+				qs.startQuest();
 				break;
 			}
 			case "30137-05.html":
