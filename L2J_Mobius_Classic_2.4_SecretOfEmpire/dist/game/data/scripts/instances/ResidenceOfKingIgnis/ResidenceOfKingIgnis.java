@@ -56,7 +56,7 @@ public class ResidenceOfKingIgnis extends AbstractInstance
 	private static SkillHolder FREYA_SAFETY_ZONE = new SkillHolder(50052, 1); // Just for an effect
 	// Misc
 	private static final int TEMPLATE_ID = 195;
-	private final Map<PlayerInstance, Integer> _playerFireRage = new ConcurrentHashMap<>();
+	private static final Map<PlayerInstance, Integer> _playerFireRage = new ConcurrentHashMap<>();
 	
 	public ResidenceOfKingIgnis()
 	{
@@ -76,6 +76,7 @@ public class ResidenceOfKingIgnis extends AbstractInstance
 			case "ENTER":
 			{
 				enterInstance(player, npc, TEMPLATE_ID);
+				_playerFireRage.put(player, 0);
 				break;
 			}
 			case "REMOVE_FIRE_RAGE":
