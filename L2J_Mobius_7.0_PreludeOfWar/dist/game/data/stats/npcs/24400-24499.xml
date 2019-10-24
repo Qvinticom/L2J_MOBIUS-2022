@@ -551,12 +551,13 @@
 		<acquire exp="1408114244" sp="1267196" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="488815" hpRegen="9.5" mp="4440" mpRegen="3.3" />
-			<attack physical="82640" magical="74826" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="82640" magical="74826" random="30" critical="4.75" accuracy="4.75" reuseDelay="1500" type="BOW" range="600" distance="80" width="120" />
 			<defence physical="8049" magical="4676" />
 			<speed>
 				<walk ground="45" />
 				<run ground="130" />
 			</speed>
+			<hitTime>800</hitTime>
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -613,6 +614,11 @@
 				<item id="36539" min="1" max="1" chance="2.333" /> <!-- Quality Leather Braid -->
 			</spoil>
 		</dropLists>
+		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true">
+			<clanList>
+				<clan>BREKA</clan>
+			</clanList>
+		</ai>
 	</npc>
 	<npc id="24419" level="114" type="Monster" name="Breka Orc Slaughterer">
 		<race>HUMANOID</race>
@@ -648,6 +654,11 @@
 				<item id="36529" min="1" max="1" chance="10.03" /> <!-- Durable Fiber -->
 			</spoil>
 		</dropLists>
+		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true">
+			<clanList>
+				<clan>BREKA</clan>
+			</clanList>
+		</ai>
 	</npc>
 	<npc id="24420" level="114" type="Monster" name="Breka Orc Prefect" title="Lord of Breka's Stronghold">
 		<race>HUMANOID</race>
@@ -677,6 +688,11 @@
 				<item id="80763" min="3" max="3" chance="100" /> <!-- Elite Monster Reward Box -->
 			</drop>
 		</dropLists>
+		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true">
+			<clanList>
+				<clan>BREKA</clan>
+			</clanList>
+		</ai>
 	</npc>
 	<npc id="24421" level="105" type="Monster" name="Stone Gargoyle">
 		<race>ETC</race>
@@ -1974,6 +1990,11 @@
 				<item id="36544" min="1" max="1" chance="1.294" /> <!-- Orichalcum Wire -->
 			</spoil>
 		</dropLists>
+		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true">
+			<clanList>
+				<clan>FOREST</clan>
+			</clanList>
+		</ai>
 	</npc>
 	<npc id="24465" level="110" type="Monster" name="Forest Evil Spirit">
 		<parameters>
@@ -2042,6 +2063,11 @@
 				<item id="80763" min="2" max="2" chance="100" /> <!-- Elite Monster Reward Box -->
 			</drop>
 		</dropLists>
+		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true">
+			<clanList>
+				<clan>FOREST</clan>
+			</clanList>
+		</ai>
 	</npc>
 	<npc id="24470" level="112" type="Monster" name="Kamael Traitor">
 		<race>HUMANOID</race>
