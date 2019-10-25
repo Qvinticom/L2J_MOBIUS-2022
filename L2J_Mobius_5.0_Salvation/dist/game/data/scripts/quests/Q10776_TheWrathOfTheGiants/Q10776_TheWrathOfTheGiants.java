@@ -53,7 +53,7 @@ public class Q10776_TheWrathOfTheGiants extends Quest
 		new Location(16515, 113298, -9064)
 	};
 	// Misc
-	private static final int MIN_LEVEL = 48;
+	private static final int MIN_LEVEL = 46;
 	
 	public Q10776_TheWrathOfTheGiants()
 	{
