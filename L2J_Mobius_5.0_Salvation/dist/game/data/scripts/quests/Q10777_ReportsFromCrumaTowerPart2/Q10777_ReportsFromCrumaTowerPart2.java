@@ -45,7 +45,7 @@ public class Q10777_ReportsFromCrumaTowerPart2 extends Quest
 	// Skill
 	private static final SkillHolder TELEPORT = new SkillHolder(2588, 1);
 	// Misc
-	private static final int MIN_LEVEL = 49;
+	private static final int MIN_LEVEL = 46;
 	
 	public Q10777_ReportsFromCrumaTowerPart2()
 	{
