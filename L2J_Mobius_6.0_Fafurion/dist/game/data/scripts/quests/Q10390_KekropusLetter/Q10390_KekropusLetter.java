@@ -101,6 +101,7 @@ public class Q10390_KekropusLetter extends Quest
 			case "30155-04.htm":
 			{
 				qs.startQuest();
+				player.sendPacket(new PlaySound(3, "Npcdialog1.kekrops_quest_1", 0, 0, 0, 0, 0));
 				htmltext = event;
 				break;
 			}
@@ -118,7 +119,6 @@ public class Q10390_KekropusLetter extends Quest
 				if (qs.isCond(1))
 				{
 					player.sendPacket(new TutorialShowHtml(getHtm(player, event)));
-					player.sendPacket(new PlaySound(3, "Npcdialog1.kekrops_quest_1", 0, 0, 0, 0, 0));
 					qs.setCond(2, true);
 				}
 				break;
