@@ -22,10 +22,10 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.TreeMap;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
@@ -51,7 +51,7 @@ public class SchemeBufferTable
 	private static final String DELETE_SCHEMES = "TRUNCATE TABLE buffer_schemes";
 	private static final String INSERT_SCHEME = "INSERT INTO buffer_schemes (object_id, scheme_name, skills) VALUES (?,?,?)";
 	
-	private final Map<Integer, HashMap<String, ArrayList<Integer>>> _schemesTable = new ConcurrentHashMap<>();
+	private final Map<Integer, Map<String, ArrayList<Integer>>> _schemesTable = new ConcurrentHashMap<>();
 	private final Map<Integer, BuffSkillHolder> _availableBuffs = new LinkedHashMap<>();
 	
 	public SchemeBufferTable()
@@ -146,7 +146,7 @@ public class SchemeBufferTable
 			// Save _schemesTable content.
 			try (PreparedStatement st = con.prepareStatement(INSERT_SCHEME))
 			{
-				for (Map.Entry<Integer, HashMap<String, ArrayList<Integer>>> player : _schemesTable.entrySet())
+				for (Map.Entry<Integer, Map<String, ArrayList<Integer>>> player : _schemesTable.entrySet())
 				{
 					for (Map.Entry<String, ArrayList<Integer>> scheme : player.getValue().entrySet())
 					{
@@ -182,7 +182,7 @@ public class SchemeBufferTable
 	{
 		if (!_schemesTable.containsKey(playerId))
 		{
-			_schemesTable.put(playerId, new HashMap<>());
+			_schemesTable.put(playerId, new TreeMap<>(String.CASE_INSENSITIVE_ORDER));
 		}
 		else if (_schemesTable.get(playerId).size() >= Config.BUFFER_MAX_SCHEMES)
 		{
