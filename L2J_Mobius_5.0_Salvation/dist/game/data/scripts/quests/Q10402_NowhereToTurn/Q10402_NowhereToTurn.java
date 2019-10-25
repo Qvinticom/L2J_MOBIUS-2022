@@ -49,7 +49,7 @@ public class Q10402_NowhereToTurn extends Quest
 		21022, // Fallen Orc Captain
 	};
 	// Misc
-	private static final int MIN_LEVEL = 58;
+	private static final int MIN_LEVEL = 56;
 	private static final int MAX_LEVEL = 61;
 	
 	public Q10402_NowhereToTurn()
@@ -140,14 +140,14 @@ public class Q10402_NowhereToTurn extends Quest
 		{
 			int killCount = qs.getInt("KILLED_COUNT");
 			
-			if (killCount < 60)
+			if (killCount < 100)
 			{
 				killCount++;
 				qs.set("KILLED_COUNT", killCount);
 				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 			
-			if (killCount == 60)
+			if (killCount == 100)
 			{
 				qs.setCond(2, true);
 			}
