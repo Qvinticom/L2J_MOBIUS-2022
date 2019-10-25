@@ -46,7 +46,7 @@ public class Q10709_TheStolenSeed extends Quest
 	private static final int BLESSED_SCROLL_OF_ESCAPE = 33640; // Blessed Scroll of Escape
 	private static final int PAULINA_EQUIPMENT_SET = 46851; // Paulina's Equipment Set (A-grade)
 	// Misc
-	private static final int MIN_LEVEL = 58;
+	private static final int MIN_LEVEL = 56;
 	private static final int MAX_LEVEL = 61;
 	
 	public Q10709_TheStolenSeed()
