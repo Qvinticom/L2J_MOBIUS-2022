@@ -59,7 +59,6 @@ public class ResidenceOfKingPetram extends AbstractInstance
 		addStartNpc(TRITAN);
 		addKillId(PETRAM, PETRAM_PIECE, PETRAM_FRAGMENT);
 		addAttackId(PETRAM);
-		addSpawnId(PETRAM);
 		addInstanceLeaveId(TEMPLATE_ID);
 	}
 	
@@ -71,7 +70,10 @@ public class ResidenceOfKingPetram extends AbstractInstance
 			case "ENTER":
 			{
 				enterInstance(player, npc, TEMPLATE_ID);
-				_petram = (RaidBossInstance) addSpawn(PETRAM, 222063, 191514, -15486, 50142, false, 0, true, player.getInstanceId());
+				if (player.getInstanceWorld() != null)
+				{
+					_petram = (RaidBossInstance) player.getInstanceWorld().getNpc(PETRAM);
+				}
 				break;
 			}
 			case "SPAWN_MINION":
@@ -121,12 +123,6 @@ public class ResidenceOfKingPetram extends AbstractInstance
 			}
 		}
 		return null;
-	}
-	
-	@Override
-	public String onSpawn(Npc npc)
-	{
-		return super.onSpawn(npc);
 	}
 	
 	@Override

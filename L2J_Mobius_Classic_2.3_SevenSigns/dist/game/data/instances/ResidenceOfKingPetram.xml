@@ -28,4 +28,9 @@
 	<reenter apply="ON_ENTER">
 		<reset day="WEDNESDAY" hour="6" minute="30" />
 	</reenter>
+	<spawnlist>
+		<group>
+			<npc id="29108" x="222063" y="191514" z="-15486" heading="50142" /> <!-- Petram -->
+		</group>
+	</spawnlist>
 </instance>
