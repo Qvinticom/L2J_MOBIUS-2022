@@ -393,7 +393,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29108" level="82" type="RaidBoss" name="King Petram">
+	<npc id="29108" level="82" type="RaidBoss" name="King Petram" title="Earth Spirit King">
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<acquire exp="806880000" sp="21785760" raidPoints="0" />
@@ -406,7 +406,7 @@
 				<run ground="190" />
 			</speed>
 		</stats>
-		<status attackable="true" />
+		<status attackable="true" canMove="false"/>
 		<collision>
 			<radius normal="80" />
 			<height normal="125" />
@@ -620,7 +620,7 @@
 			<height normal="100" />
 		</collision>
 	</npc>
-	<npc id="29116" level="80" type="Npc" name="Petram Piece">
+	<npc id="29116" level="80" type="Monster" name="Petram Piece">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -633,13 +633,13 @@
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" canMove="false"/>
 		<collision>
 			<radius normal="40" />
 			<height normal="61" />
 		</collision>
 	</npc>
-	<npc id="29117" level="80" type="Npc" name="Petram Fragment">
+	<npc id="29117" level="80" type="Monster" name="Petram Fragment">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -652,7 +652,7 @@
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" canMove="false"/>
 		<collision>
 			<radius normal="40" />
 			<height normal="61" />
