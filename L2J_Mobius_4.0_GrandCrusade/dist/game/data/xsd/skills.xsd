@@ -1753,7 +1753,21 @@
 															<xs:element name="speed" type="xs:unsignedShort" />
 															<xs:element name="delay" type="xs:unsignedShort" />
 															<xs:element name="canKill" type="xs:boolean" />
-															<xs:element name="CHANGEBODY" type="xs:unsignedByte" />
+															<xs:element name="CHANGEBODY">
+																<xs:complexType mixed="true">
+																	<xs:sequence minOccurs="0">
+																		<xs:element maxOccurs="unbounded" name="value">
+																			<xs:complexType>
+																				<xs:simpleContent>
+																					<xs:extension base="xs:unsignedByte">
+																						<xs:attribute name="level" type="xs:unsignedByte" use="required" />
+																					</xs:extension>
+																				</xs:simpleContent>
+																			</xs:complexType>
+																		</xs:element>
+																	</xs:sequence>
+																</xs:complexType>
+															</xs:element>
 															<xs:element name="KNOCKBACK">
 																<xs:complexType mixed="true">
 																	<xs:sequence minOccurs="0">
@@ -1838,8 +1852,36 @@
 																</xs:complexType>
 															</xs:element>
 															<xs:element name="PHYSICAL_BLOCKADE" type="xs:unsignedByte" />
-															<xs:element name="DISARM" type="xs:unsignedByte" />
-															<xs:element name="DEPORT" type="xs:unsignedByte" />
+															<xs:element name="DISARM">
+																<xs:complexType mixed="true">
+																	<xs:sequence minOccurs="0">
+																		<xs:element maxOccurs="unbounded" name="value">
+																			<xs:complexType>
+																				<xs:simpleContent>
+																					<xs:extension base="xs:unsignedByte">
+																						<xs:attribute name="level" type="xs:unsignedByte" use="required" />
+																					</xs:extension>
+																				</xs:simpleContent>
+																			</xs:complexType>
+																		</xs:element>
+																	</xs:sequence>
+																</xs:complexType>
+															</xs:element>
+															<xs:element name="DEPORT">
+																<xs:complexType mixed="true">
+																	<xs:sequence minOccurs="0">
+																		<xs:element maxOccurs="unbounded" name="value">
+																			<xs:complexType>
+																				<xs:simpleContent>
+																					<xs:extension base="xs:unsignedByte">
+																						<xs:attribute name="level" type="xs:unsignedByte" use="required" />
+																					</xs:extension>
+																				</xs:simpleContent>
+																			</xs:complexType>
+																		</xs:element>
+																	</xs:sequence>
+																</xs:complexType>
+															</xs:element>
 															<xs:element name="normal" type="xs:unsignedShort" />
 															<xs:element name="ride" type="xs:unsignedShort" />
 															<xs:element name="wyvern" type="xs:unsignedShort" />

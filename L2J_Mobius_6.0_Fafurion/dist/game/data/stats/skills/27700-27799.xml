@@ -847,15 +847,61 @@
 	<skill id="27749" toLevel="6" name="Gran Kain's Necklace">
 		<!-- When used, ignores target's invincibility for $s1 sec. -->
 		<icon>BranchIcon.Icon.necklace_of_grankein_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<reuseDelay>600000</reuseDelay>
+		<effectPoint>-1</effectPoint>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+			<value level="5">5</value>
+			<value level="6">6</value>
+		</abnormalLvl>
+		<abnormalTime>
+			<value level="1">6</value>
+			<value level="2">7</value>
+			<value level="3">8</value>
+			<value level="4">10</value>
+			<value level="5">12</value>
+			<value level="6">15</value>		
+		</abnormalTime>
+		<hitCancelTime>0</hitCancelTime>
+		<basicProperty>NONE</basicProperty>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="27750" toLevel="6" name="Einhasad's Necklace">
 		<!-- Damage Reflection Resistance becomes $s1 for 30 sec. -->
 		<icon>BranchIcon.Icon.necklace_of_einhasad_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<reuseDelay>300000</reuseDelay>
 		<effectPoint>1</effectPoint>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+			<value level="5">5</value>
+			<value level="6">6</value>
+		</abnormalLvl>
+		<abnormalTime>30</abnormalTime>
+		<hitCancelTime>0</hitCancelTime>
+		<basicProperty>NONE</basicProperty>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DamageShield">
+				<amount>
+					<value level="1">15</value>
+					<value level="2">20</value>
+					<value level="3">35</value>
+					<value level="4">60</value>
+					<value level="5">80</value>
+					<value level="6">100</value>
+				</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27751" toLevel="6" name="Pa'agrio's Earring">
 		<!-- $s1 chance with standard attacks and $s2 chance when casting a skill to inflict $s3 fixed damage. -->
@@ -865,12 +911,148 @@
 	<skill id="27752" toLevel="6" name="Eva's Earring">
 		<!-- P. Def. and M. Def. become $s1 for 40 sec. -->
 		<icon>BranchIcon.Icon.earring_of_eva_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<isDebuff>true</isDebuff>
 		<castRange>600</castRange>
 		<reuseDelay>300000</reuseDelay>
 		<effectPoint>-379</effectPoint>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+			<value level="5">5</value>
+			<value level="6">6</value>
+		</abnormalLvl>
+		<abnormalTime>40</abnormalTime>
+		<hitCancelTime>0</hitCancelTime>
+		<basicProperty>NONE</basicProperty>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">15</value>
+					<value level="2">20</value>
+					<value level="3">25</value>
+					<value level="4">30</value>
+					<value level="5">40</value>
+					<value level="6">50</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">15</value>
+					<value level="2">20</value>
+					<value level="3">25</value>
+					<value level="4">30</value>
+					<value level="5">40</value>
+					<value level="6">50</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">10</value>
+					<value level="4">12</value>
+					<value level="5">15</value>
+					<value level="6">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">10</value>
+					<value level="4">12</value>
+					<value level="5">15</value>
+					<value level="6">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">10</value>
+					<value level="4">12</value>
+					<value level="5">15</value>
+					<value level="6">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">150</value>
+					<value level="6">300</value>
+				</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">150</value>
+					<value level="6">300</value>
+				</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">150</value>
+					<value level="6">300</value>
+				</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">150</value>
+					<value level="6">300</value>
+				</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">150</value>
+					<value level="6">300</value>
+				</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">150</value>
+					<value level="6">300</value>
+				</amount>
+				<attribute>DARK</attribute>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27753" toLevel="6" name="Sayha's Ring">
 		<!-- $s1 chance with standard attacks and $s2 chance when casting a skill to Restrain Physical and Magic skills. -->
