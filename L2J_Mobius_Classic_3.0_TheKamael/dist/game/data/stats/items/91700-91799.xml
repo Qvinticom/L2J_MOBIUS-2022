@@ -856,23 +856,37 @@
 		<!-- For 20 min., P. Atk. +200, M. Atk. +350, P./ M. Critical Rate +30, Atk. Spd./ Casting Spd. +50, P./ M. Def. +200, Max HP/ MP/ CP +500. Cooldown: 1 min. The effect remains after death. -->
 		<set name="icon" val="icon.ev_charge_scroll" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="54071" level="1" /> <!-- Dragon Scroll (Event) -->
+		</skills>
 	</item>
 	<item id="91781" name="Sayha's Effect Scroll" additionalName="Event" type="EtcItem">
 		<!-- For 20 min., grants the following effects: Sayha's Shield, Sayha's Magic Barrier, Sayha's Decrease Weight, Sayha's Clarity, Sayha's Berserker Spirit, Sayha's Wind Walk, Sayha's Might, Sayha's Focus, Sayha's Haste, Sayha's Death Whisper, Sayha's Empower, Sayha's Wild Magic, Sayha's Acumen, Sayha's Concentration, Sayha's Prophecy, Sayha's Recover HP, Sayha's Recover MP. Cooldown: 1 min. Can't be used when the Sayha's Recover MP effect is active. Note: The Sayha's Victory effect does not stack if the identical effect is active. -->
 		<set name="icon" val="icon.etc_ssq_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="54070" level="1" /> <!-- Sayha's Effect Scroll (Event) -->
+		</skills>
 	</item>
 	<item id="91782" name="Nuia's Gift" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Special Dragon Fruit, PA Coins, Talisman of Baium, Weapon Pack (Best S-grade). -->

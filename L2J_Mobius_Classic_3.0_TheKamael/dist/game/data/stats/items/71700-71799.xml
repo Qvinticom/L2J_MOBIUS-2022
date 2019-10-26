@@ -448,10 +448,19 @@
 		<!-- For 20 min., P./ M. Atk. +150, P./ M. Critical Rate +30, Atk. Spd./ Casting Spd. +50, P./ M. Def. +200, Max HP/ MP/ CP +500. Cooldown: 1 h. The effect remains after death. -->
 		<set name="icon" val="icon.ev_charge_scroll" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="59634" level="1" /> <!-- Dragon Scroll (Event) -->
+		</skills>
 	</item>
 	<item id="71742" name="Dimensional Talisman Lv. 1" type="Armor">
 		<!-- P./ M. Def. +25, P./ M. Evasion. +1, Max HP/ MP/ CP +150, Speed +5, Atk. Spd./ Casting Spd. +10, Acquired XP/ SP +5%. Activates Dimensional Border Power Lv. 1 (increases attack power with a certain chance). Can be upgraded by Alchemist Veruti in Giran. The effect doesn't stack with that of Talisman of Border, the Dimensional Talisman effect takes precedence. -->

@@ -132,6 +132,7 @@
 	<skill id="55711" toLevel="1" name="Remove Lv. 4 Brooch">
 		<!-- Bright light fades. -->
 		<operateType>A1</operateType>
+		<effectPoint>1</effectPoint>
 		<effects>
 			<effect name="DispelBySlot">
 				<dispel>AVE_BROOCH,10</dispel>
