@@ -166,14 +166,14 @@
 		<attributeType>WATER</attributeType>
 		<attributeValue>450</attributeValue>
 		<hitTime>1000</hitTime>
-		<magicLvl>110</magicLvl>
+		<magicLvl>-1</magicLvl>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>34255</power>
+				<power>300000</power>
 			</effect>
 		</effects>
 	</skill>
@@ -308,7 +308,7 @@
 		<attributeValue>450</attributeValue>
 		<fanRange>0;180;1500;600</fanRange>
 		<hitTime>3000</hitTime>
-		<magicLvl>110</magicLvl>
+		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
 		<trait>SHOCK</trait>
 		<targetType>SELF</targetType>
@@ -316,7 +316,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>34255</power>
+				<power>300000</power>
 			</effect>
 			<effect name="BlockActions" />
 		</effects>
@@ -334,7 +334,7 @@
 		<attributeValue>450</attributeValue>
 		<fanRange>0;180;1500;600</fanRange>
 		<hitTime>500</hitTime>
-		<magicLvl>110</magicLvl>
+		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
 		<isDebuff>true</isDebuff>
 		<trait>SHOCK</trait>
@@ -343,7 +343,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>34255</power>
+				<power>300000</power>
 			</effect>
 			<effect name="BlockActions" />
 		</effects>
@@ -392,7 +392,7 @@
 		<effectPoint>-100</effectPoint>
 		<attributeType>WATER</attributeType>
 		<attributeValue>450</attributeValue>
-		<magicLvl>110</magicLvl>
+		<magicLvl>-1</magicLvl>
 		<isDebuff>true</isDebuff>
 		<fanRange>0;0;2500;900</fanRange>
 		<targetType>SELF</targetType>
@@ -400,10 +400,10 @@
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>34255</power>
+				<power>300000</power>
 			</effect>
 			<effect name="DamOverTime">
-				<power>512</power>
+				<power>5120</power>
 				<ticks>1</ticks>
 			</effect>
 		</effects>
@@ -420,7 +420,7 @@
 		<effectPoint>-100</effectPoint>
 		<hitTime>3000</hitTime>
 		<isDebuff>true</isDebuff>
-		<magicLvl>110</magicLvl>
+		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<trait>DERANGEMENT</trait>
