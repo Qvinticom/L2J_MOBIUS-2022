@@ -695,6 +695,10 @@
 		</ai>
 	</npc>
 	<npc id="24421" level="105" type="Monster" name="Stone Gargoyle">
+		<parameters>
+			<skill name="Skill01_ID" id="32862" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<acquire exp="1087406775" sp="978579" />
@@ -713,6 +717,7 @@
 			<height normal="50" />
 		</collision>
 		<skillList>
+			<skill id="32862" level="1" /> <!-- Critical Strike -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
@@ -729,6 +734,10 @@
 		</dropLists>
 	</npc>
 	<npc id="24422" level="105" type="Monster" name="Stone Golem">
+		<parameters>
+			<skill name="Skill01_ID" id="32862" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<acquire exp="1087406775" sp="978579" />
@@ -747,6 +756,7 @@
 			<height normal="31" />
 		</collision>
 		<skillList>
+			<skill id="32862" level="1" /> <!-- Critical Strike -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
@@ -763,12 +773,18 @@
 		</dropLists>
 	</npc>
 	<npc id="24423" level="105" type="Monster" name="Monster Eye">
+		<parameters>
+			<skill name="Skill01_ID" id="32854" level="1" />
+			<skill name="Skill02_ID" id="32866" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+			<param name="Skill02_Probablity" value="2000" />
+		</parameters>
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<acquire exp="1087406775" sp="978579" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="157384.27041" hpRegen="9.5" mp="32075.861" mpRegen="3.3" />
-			<attack physical="55784" magical="45986" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="55784" magical="45986" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="5201" magical="3020" />
 			<speed>
 				<walk ground="90" />
@@ -781,6 +797,8 @@
 			<height normal="43" />
 		</collision>
 		<skillList>
+			<skill id="32854" level="1" /> <!-- Energy Burst -->
+			<skill id="32866" level="1" /> <!-- Magical Attack -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
@@ -797,6 +815,10 @@
 		</dropLists>
 	</npc>
 	<npc id="24424" level="106" type="Monster" name="Gargoyle Hunter">
+		<parameters>
+			<skill name="Skill01_ID" id="32862" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<acquire exp="1123970788" sp="1011465" />
@@ -815,6 +837,7 @@
 			<height normal="65" />
 		</collision>
 		<skillList>
+			<skill id="32862" level="1" /> <!-- Critical Strike -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
@@ -829,8 +852,17 @@
 				<item id="36554" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (High-grade) -->
 			</spoil>
 		</dropLists>
+		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true">
+			<clanList>
+				<clan>IVORY</clan>
+			</clanList>
+		</ai>
 	</npc>
 	<npc id="24425" level="106" type="Monster" name="Steel Golem">
+		<parameters>
+			<skill name="Skill01_ID" id="32862" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<acquire exp="1123970788" sp="1011465" />
@@ -849,6 +881,7 @@
 			<height normal="34" />
 		</collision>
 		<skillList>
+			<skill id="32862" level="1" /> <!-- Critical Strike -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
@@ -863,6 +896,11 @@
 				<item id="36559" min="1" max="1" chance="0.75" /> <!-- Accessory Gem (High-grade) -->
 			</spoil>
 		</dropLists>
+		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true">
+			<clanList>
+				<clan>IVORY</clan>
+			</clanList>
+		</ai>
 	</npc>
 	<npc id="24426" level="106" type="Monster" name="Stone Cube" title="Lord of Ivory Tower Crater">
 		<race>ETC</race>
@@ -892,6 +930,11 @@
 				<item id="80763" min="1" max="1" chance="100" /> <!-- Elite Monster Reward Box -->
 			</drop>
 		</dropLists>
+		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true">
+			<clanList>
+				<clan>IVORY</clan>
+			</clanList>
+		</ai>
 	</npc>
 	<npc id="24427" level="110" type="Monster" name="Fury Tier Nero">
 		<race>ELEMENTAL</race>
@@ -1266,6 +1309,10 @@
 		</dropLists>
 	</npc>
 	<npc id="24445" level="111" type="Monster" name="Lizardman Rogue">
+		<parameters>
+			<skill name="Skill01_ID" id="32862" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<acquire exp="1321464213" sp="1189223" />
@@ -1284,6 +1331,7 @@
 			<height normal="40.25" />
 		</collision>
 		<skillList>
+			<skill id="32862" level="1" /> <!-- Critical Strike -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
@@ -1404,6 +1452,10 @@
 		</dropLists>
 	</npc>
 	<npc id="24449" level="112" type="Monster" name="Lizardman Warrior">
+		<parameters>
+			<skill name="Skill01_ID" id="32862" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<acquire exp="1364210176" sp="1227682" />
@@ -1422,6 +1474,7 @@
 			<height normal="37.5" />
 		</collision>
 		<skillList>
+			<skill id="32862" level="1" /> <!-- Critical Strike -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
@@ -1437,8 +1490,19 @@
 				<item id="36549" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment (High-grade) -->
 			</spoil>
 		</dropLists>
+		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true">
+			<clanList>
+				<clan>PRAYER</clan>
+			</clanList>
+		</ai>
 	</npc>
 	<npc id="24450" level="112" type="Monster" name="Lizardmen Wizard">
+		<parameters>
+			<skill name="Skill01_ID" id="32854" level="1" />
+			<skill name="Skill02_ID" id="32866" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+			<param name="Skill02_Probablity" value="2000" />
+		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<acquire exp="1364210176" sp="1227682" />
@@ -1457,6 +1521,8 @@
 			<height normal="53.5" />
 		</collision>
 		<skillList>
+			<skill id="32854" level="1" /> <!-- Energy Burst -->
+			<skill id="32866" level="1" /> <!-- Magical Attack -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
@@ -1473,6 +1539,10 @@
 		</dropLists>
 	</npc>
 	<npc id="24451" level="112" type="Monster" name="Lizardmen Defender" title="Lord of Isle of Prayer">
+		<parameters>
+			<skill name="Skill01_ID" id="32870" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<acquire exp="9549471232" sp="8594522" />
@@ -1491,6 +1561,7 @@
 			<height normal="57.75" />
 		</collision>
 		<skillList>
+			<skill id="32870" level="1" /> <!-- Stunning Strike -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
@@ -1500,6 +1571,11 @@
 				<item id="80763" min="2" max="2" chance="100" /> <!-- Elite Monster Reward Box -->
 			</drop>
 		</dropLists>
+		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true">
+			<clanList>
+				<clan>PRAYER</clan>
+			</clanList>
+		</ai>
 	</npc>
 	<npc id="24452" level="89" type="Monster" name="Doom Soldier">
 		<parameters>

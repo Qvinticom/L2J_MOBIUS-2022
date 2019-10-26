@@ -115,6 +115,16 @@
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
+		<effectRange>100</effectRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<nextAction>ATTACK</nextAction>
+		<effects>
+			<effect name="PhysicalAttack"> <!-- Fix: Retail Missed -->
+				<power>28833</power>
+				<overHit>true</overHit>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32914" toLevel="1" name="Rapid Throw">
 		<!-- Ranged Throw-type Monsters' Powerful Single Target Physical Attack Skill -->
@@ -123,6 +133,16 @@
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
+		<effectRange>100</effectRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<nextAction>ATTACK</nextAction>
+		<effects>
+			<effect name="PhysicalAttack"> <!-- Fix: Retail Missed -->
+				<power>28833</power>
+				<overHit>true</overHit>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32915" toLevel="1" name="Energy Burst">
 		<!-- A normal attack of a monster that uses long-range magic attacks. -->
@@ -133,6 +153,17 @@
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-1000</effectPoint>
+		<effectRange>900</effectRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<nextAction>CAST</nextAction>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>553</power>
+				<overHit>true</overHit>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32916" toLevel="1" name="Stunning Strike">
 		<!-- Strikes nearby targets with an AoE attack, stunning them for 5 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
@@ -143,6 +174,32 @@
 		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-1000</effectPoint>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
+		<activateRate>80</activateRate>
+		<effectRange>400</effectRange>
+		<basicProperty>NONE</basicProperty>
+		<trait>SHOCK</trait>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<nextAction>ATTACK</nextAction>
+		<effects>
+			<effect name="PhysicalAttack"> <!-- Fix: Retail Missed -->
+				<power>28833</power>
+				<overHit>true</overHit>
+			</effect>
+			<effect name="TargetCancel">
+				<chance>60</chance>
+			</effect>
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32917" toLevel="1" name="Critical Strike">
 		<!-- Physical melee skill used by warriors. Attacks 1 monster with a weapon. -->
@@ -151,6 +208,16 @@
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
+		<effectRange>100</effectRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<nextAction>ATTACK</nextAction>
+		<effects>
+			<effect name="PhysicalAttack"> <!-- Fix: Retail Missed -->
+				<power>28833</power>
+				<overHit>true</overHit>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32918" toLevel="1" name="Rapid Throw">
 		<!-- Ranged Throw-type Monsters' Powerful Single Target Physical Attack Skill -->
@@ -159,6 +226,16 @@
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
+		<effectRange>100</effectRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<nextAction>ATTACK</nextAction>
+		<effects>
+			<effect name="PhysicalAttack"> <!-- Fix: Retail Missed -->
+				<power>28833</power>
+				<overHit>true</overHit>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32919" toLevel="1" name="Stunning Strike">
 		<!-- Strikes nearby targets with an AoE attack, stunning them for 5 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
@@ -169,5 +246,31 @@
 		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-1000</effectPoint>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
+		<activateRate>80</activateRate>
+		<effectRange>400</effectRange>
+		<basicProperty>NONE</basicProperty>
+		<trait>SHOCK</trait>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<nextAction>ATTACK</nextAction>
+		<effects>
+			<effect name="PhysicalAttack"> <!-- Fix: Retail Missed -->
+				<power>28833</power>
+				<overHit>true</overHit>
+			</effect>
+			<effect name="TargetCancel">
+				<chance>60</chance>
+			</effect>
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
+		</effects>
 	</skill>
 </list>

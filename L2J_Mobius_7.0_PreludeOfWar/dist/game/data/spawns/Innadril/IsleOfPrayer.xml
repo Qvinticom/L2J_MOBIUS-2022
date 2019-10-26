@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
+	<spawn name="IsleOfPrayer">
+		<group>
+			<npc id="18367" x="134928" y="172432" z="-3704" heading="49152" respawnTime="60sec" /> <!-- Prison Guard -->
+			<npc id="18367" x="160528" y="185216" z="-3704" heading="49152" respawnTime="60sec" /> <!-- Prison Guard -->
+			<npc id="18368" x="135120" y="171856" z="-3704" heading="49152" respawnTime="15sec" /> <!-- Prison Guard -->
+			<npc id="18368" x="134768" y="171856" z="-3704" heading="49152" respawnTime="15sec" /> <!-- Prison Guard -->
+			<npc id="18368" x="160384" y="184704" z="-3704" heading="49152" respawnTime="15sec" /> <!-- Prison Guard -->
+			<npc id="18368" x="160704" y="184704" z="-3704" heading="49152" respawnTime="15sec" /> <!-- Prison Guard -->
+			<npc id="18367" x="155312" y="160160" z="-3352" respawnTime="60sec" /> <!-- Prison Guard -->
+			<npc id="18367" x="146592" y="151888" z="-2872" heading="49152" respawnTime="60sec" /> <!-- Prison Guard -->
+			<npc id="18368" x="155840" y="159936" z="-3352" respawnTime="15sec" /> <!-- Prison Guard -->
+			<npc id="18368" x="155840" y="160448" z="-3352" respawnTime="15sec" /> <!-- Prison Guard -->
+			<npc id="18368" x="146366" y="151506" z="-2872" heading="49152" respawnTime="15sec" /> <!-- Prison Guard -->
+			<npc id="18368" x="146880" y="151504" z="-2872" heading="49152" respawnTime="15sec" /> <!-- Prison Guard -->
+			<npc id="32264" x="143472" y="191040" z="-3720" respawnTime="60sec" /> <!-- Kanis -->
+			<npc id="32281" x="149440" y="173392" z="-5016" respawnTime="60sec" /> <!-- Oracle Guide -->
+			<npc id="32349" x="159312" y="183904" z="-3680" heading="34248" respawnTime="60sec" /> <!-- Rignos -->
+			<!-- NEW SPAWN MOBS: UPDATE PRELUDE OF WAR -->
+			<npc id="24446" x="150488" y="193793" z="-3737" heading="50866" respawnTime="60sec" /> <!-- Island Guardian -->
+			<npc id="24447" x="150648" y="193759" z="-3736" heading="63334" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24446" x="150664" y="193931" z="-3737" heading="8381" respawnTime="60sec" /> <!-- Island Guardian -->
+			<npc id="24447" x="150916" y="193866" z="-3739" heading="51770" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="151161" y="193891" z="-3738" heading="3498" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="151262" y="193806" z="-3730" heading="53375" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24448" x="151081" y="193628" z="-3732" heading="41275" respawnTime="60sec" /> <!-- Lizardman Archer -->
+			<npc id="24449" x="149744" y="192754" z="-3698" heading="64188" respawnTime="60sec" /> <!-- Lizardman Warrior -->
+			<npc id="24449" x="149855" y="192780" z="-3696" heading="2399" respawnTime="60sec" /> <!-- Lizardman Warrior -->
+			<npc id="24450" x="149699" y="192602" z="-3719" heading="41646" respawnTime="60sec" /> <!-- Lizardmen Wizard -->
+			<npc id="24451" x="149827" y="192629" z="-3711" heading="2168" respawnTime="60sec" /> <!-- Lizardmen Defender -->
+			<npc id="24446" x="148737" y="193161" z="-3727" heading="50504" respawnTime="60sec" /> <!-- Island Guardian -->
+			<npc id="24446" x="148881" y="192948" z="-3730" heading="56943" respawnTime="60sec" /> <!-- Island Guardian -->
+			<npc id="24447" x="148964" y="192696" z="-3730" heading="48836" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="148812" y="192754" z="-3728" heading="27888" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="148598" y="192979" z="-3728" heading="15479" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="148721" y="193017" z="-3728" heading="61724" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24448" x="148592" y="192873" z="-3728" heading="41532" respawnTime="60sec" /> <!-- Lizardman Archer -->
+			<npc id="24446" x="152074" y="192555" z="-3731" heading="60670" respawnTime="60sec" /> <!-- Island Guardian -->
+			<npc id="24446" x="152393" y="192479" z="-3735" heading="962" respawnTime="60sec" /> <!-- Island Guardian -->
+			<npc id="24447" x="152488" y="192140" z="-3764" heading="54884" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="152701" y="192112" z="-3766" heading="58253" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="152930" y="191865" z="-3771" heading="60116" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="152939" y="191542" z="-3750" heading="46656" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24448" x="153146" y="191631" z="-3744" heading="4201" respawnTime="60sec" /> <!-- Lizardman Archer -->
+			<npc id="24450" x="151615" y="190885" z="-3768" heading="35525" respawnTime="60sec" /> <!-- Lizardmen Wizard -->
+			<npc id="24449" x="151750" y="190717" z="-3771" heading="5576" respawnTime="60sec" /> <!-- Lizardman Warrior -->
+			<npc id="24449" x="151820" y="190850" z="-3771" heading="2582" respawnTime="60sec" /> <!-- Lizardman Warrior -->
+			<npc id="24451" x="151459" y="190686" z="-3771" heading="37213" respawnTime="60sec" /> <!-- Lizardmen Defender -->
+			<npc id="24447" x="155166" y="190565" z="-3748" heading="59930" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24446" x="154870" y="190166" z="-3770" heading="40280" respawnTime="60sec" /> <!-- Island Guardian -->
+			<npc id="24446" x="154705" y="189890" z="-3774" heading="44077" respawnTime="60sec" /> <!-- Island Guardian -->
+			<npc id="24447" x="154639" y="189766" z="-3773" heading="30430" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="154358" y="189974" z="-3774" heading="20126" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="154509" y="190188" z="-3773" heading="8377" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24448" x="154805" y="190024" z="-3776" heading="60258" respawnTime="60sec" /> <!-- Lizardman Archer -->
+			<npc id="24449" x="153421" y="189448" z="-3781" heading="37077" respawnTime="60sec" /> <!-- Lizardman Warrior -->
+			<npc id="24449" x="153525" y="189384" z="-3777" heading="59782" respawnTime="60sec" /> <!-- Lizardman Warrior -->
+			<npc id="24450" x="153370" y="189294" z="-3776" heading="25642" respawnTime="60sec" /> <!-- Lizardmen Wizard -->
+			<npc id="24451" x="153198" y="189394" z="-3775" heading="27275" respawnTime="60sec" /> <!-- Lizardmen Defender -->
+			<npc id="24446" x="156966" y="188206" z="-3727" heading="37604" respawnTime="60sec" /> <!-- Island Guardian -->
+			<npc id="24446" x="157011" y="188035" z="-3720" heading="57934" respawnTime="60sec" /> <!-- Island Guardian -->
+			<npc id="24447" x="157258" y="187921" z="-3731" heading="555" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="157058" y="188125" z="-3729" heading="29250" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="157109" y="188054" z="-3730" heading="57007" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="157136" y="188219" z="-3743" heading="14692" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24448" x="157443" y="188077" z="-3766" heading="61035" respawnTime="60sec" /> <!-- Lizardman Archer -->
+			<npc id="24445" x="156247" y="186206" z="-3718" heading="49797" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24445" x="156049" y="186359" z="-3720" heading="25905" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24447" x="155931" y="186215" z="-3721" heading="59095" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="156079" y="186109" z="-3723" heading="56218" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="156298" y="186107" z="-3718" heading="1534" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="156282" y="185908" z="-3718" heading="40913" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24448" x="156035" y="185989" z="-3723" heading="29462" respawnTime="60sec" /> <!-- Lizardman Archer -->
+			<npc id="24449" x="155232" y="185807" z="-3774" heading="64032" respawnTime="60sec" /> <!-- Lizardman Warrior -->
+			<npc id="24449" x="155304" y="185872" z="-3768" heading="13584" respawnTime="60sec" /> <!-- Lizardman Warrior -->
+			<npc id="24450" x="155021" y="185864" z="-3765" heading="33030" respawnTime="60sec" /> <!-- Lizardmen Wizard -->
+			<npc id="24451" x="155033" y="185647" z="-3752" heading="52408" respawnTime="60sec" /> <!-- Lizardmen Defender -->
+			<npc id="24445" x="156923" y="185303" z="-3760" heading="51910" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24445" x="156951" y="185467" z="-3739" heading="14620" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24447" x="157146" y="185373" z="-3748" heading="60850" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="157136" y="185142" z="-3772" heading="48700" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="156924" y="185060" z="-3769" heading="36623" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="156696" y="185071" z="-3767" heading="31625" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24448" x="156905" y="184972" z="-3771" heading="60921" respawnTime="60sec" /> <!-- Lizardman Archer -->
+			<npc id="24449" x="157629" y="184534" z="-3776" heading="56184" respawnTime="60sec" /> <!-- Lizardman Warrior -->
+			<npc id="24449" x="157673" y="184616" z="-3778" heading="7379" respawnTime="60sec" /> <!-- Lizardman Warrior -->
+			<npc id="24450" x="157946" y="184478" z="-3776" heading="57226" respawnTime="60sec" /> <!-- Lizardmen Wizard -->
+			<npc id="24451" x="157856" y="184310" z="-3776" heading="31985" respawnTime="60sec" /> <!-- Lizardmen Defender -->
+			<npc id="24445" x="158091" y="183363" z="-3775" heading="10067" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24445" x="158272" y="183307" z="-3775" heading="62482" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24447" x="158085" y="183131" z="-3768" heading="40644" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="157906" y="183193" z="-3767" heading="27992" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="157921" y="183329" z="-3775" heading="15238" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="158012" y="183514" z="-3775" heading="11615" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24448" x="158213" y="183514" z="-3777" respawnTime="60sec" /> <!-- Lizardman Archer -->
+			<npc id="24446" x="158268" y="181640" z="-3625" heading="50112" respawnTime="60sec" /> <!-- Island Guardian -->
+			<npc id="24446" x="158655" y="181347" z="-3612" heading="54827" respawnTime="60sec" /> <!-- Island Guardian -->
+			<npc id="24447" x="158651" y="181658" z="-3632" heading="28449" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="158486" y="181568" z="-3623" heading="40074" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="158419" y="181451" z="-3614" heading="44315" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="158316" y="181466" z="-3614" heading="31259" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24448" x="158399" y="181317" z="-3610" heading="54492" respawnTime="60sec" /> <!-- Lizardman Archer -->
+			<npc id="24445" x="157406" y="181118" z="-3604" heading="31941" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24445" x="157258" y="180914" z="-3604" heading="45007" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24447" x="157146" y="180955" z="-3608" heading="9672" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="157216" y="181145" z="-3610" heading="12702" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="156978" y="181106" z="-3611" heading="36490" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="156983" y="180962" z="-3609" heading="49885" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24448" x="157065" y="180822" z="-3606" heading="54678" respawnTime="60sec" /> <!-- Lizardman Archer -->
+			<npc id="24449" x="158306" y="180455" z="-3525" heading="57884" respawnTime="60sec" /> <!-- Lizardman Warrior -->
+			<npc id="24449" x="158466" y="180487" z="-3552" heading="2134" respawnTime="60sec" /> <!-- Lizardman Warrior -->
+			<npc id="24450" x="158448" y="180320" z="-3523" heading="48028" respawnTime="60sec" /> <!-- Lizardmen Wizard -->
+			<npc id="24451" x="158316" y="180307" z="-3500" heading="23349" respawnTime="60sec" /> <!-- Lizardmen Defender -->
+			<npc id="24445" x="157726" y="179038" z="-3452" heading="44315" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24445" x="158000" y="179063" z="-3449" heading="1382" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24447" x="158107" y="179239" z="-3447" heading="20193" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="157962" y="179186" z="-3448" heading="34248" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="157778" y="179205" z="-3454" heading="28048" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="157542" y="178960" z="-3454" heading="41148" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24448" x="157785" y="178805" z="-3450" heading="5160" respawnTime="60sec" /> <!-- Lizardman Archer -->
+			<npc id="24447" x="155621" y="179088" z="-3462" heading="27776" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="155574" y="178944" z="-3475" heading="48284" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="155575" y="178829" z="-3480" heading="50410" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="155499" y="178670" z="-3483" heading="40666" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24446" x="155476" y="178856" z="-3481" heading="17667" respawnTime="60sec" /> <!-- Island Guardian -->
+			<npc id="24446" x="155418" y="178984" z="-3475" heading="20821" respawnTime="60sec" /> <!-- Island Guardian -->
+			<npc id="24448" x="155396" y="178821" z="-3483" heading="47752" respawnTime="60sec" /> <!-- Lizardman Archer -->
+			<npc id="24449" x="154106" y="179423" z="-3479" heading="27836" respawnTime="60sec" /> <!-- Lizardman Warrior -->
+			<npc id="24449" x="154005" y="179400" z="-3483" heading="35103" respawnTime="60sec" /> <!-- Lizardman Warrior -->
+			<npc id="24450" x="154039" y="179294" z="-3487" heading="57598" respawnTime="60sec" /> <!-- Lizardmen Wizard -->
+			<npc id="24451" x="154086" y="179338" z="-3485" heading="7848" respawnTime="60sec" /> <!-- Lizardmen Defender -->
+			<npc id="24445" x="152762" y="179678" z="-3486" heading="26925" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24445" x="152672" y="179832" z="-3490" heading="21900" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24447" x="152520" y="179705" z="-3490" heading="52683" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="152691" y="179557" z="-3478" heading="58144" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="152583" y="179755" z="-3488" heading="22395" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="152544" y="180080" z="-3494" heading="17213" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24448" x="152410" y="179825" z="-3490" heading="44105" respawnTime="60sec" /> <!-- Lizardman Archer -->
+			<npc id="24447" x="149600" y="183302" z="-3690" heading="43018" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="149731" y="183409" z="-3696" heading="7150" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="149734" y="183640" z="-3716" heading="26255" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="149891" y="183655" z="-3716" heading="993" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24445" x="149831" y="183546" z="-3711" heading="43903" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24445" x="149946" y="183452" z="-3696" heading="57807" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24448" x="150089" y="183665" z="-3713" heading="11505" respawnTime="60sec" /> <!-- Lizardman Archer -->
+			<npc id="24447" x="149205" y="185430" z="-3724" heading="19105" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="149356" y="185549" z="-3713" heading="4836" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="149437" y="185480" z="-3715" heading="54590" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="149383" y="185380" z="-3725" heading="44398" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24445" x="149538" y="185609" z="-3692" heading="10039" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24445" x="149419" y="185685" z="-3687" heading="26839" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24448" x="149234" y="185729" z="-3695" heading="30709" respawnTime="60sec" /> <!-- Lizardman Archer -->
+			<npc id="24449" x="150754" y="185072" z="-3760" heading="51696" respawnTime="60sec" /> <!-- Lizardman Warrior -->
+			<npc id="24449" x="150923" y="185074" z="-3764" heading="165" respawnTime="60sec" /> <!-- Lizardman Warrior -->
+			<npc id="24450" x="150772" y="185266" z="-3749" heading="26392" respawnTime="60sec" /> <!-- Lizardmen Wizard -->
+			<npc id="24451" x="150547" y="185274" z="-3745" heading="39805" respawnTime="60sec" /> <!-- Lizardmen Defender -->
+			<npc id="24447" x="150856" y="186324" z="-3737" heading="16317" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="150666" y="186480" z="-3732" heading="25597" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="150727" y="186637" z="-3737" heading="12493" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="150872" y="186691" z="-3745" heading="63842" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24445" x="150985" y="186667" z="-3755" heading="63353" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24445" x="151090" y="186614" z="-3762" heading="60660" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24448" x="150793" y="186883" z="-3746" heading="25345" respawnTime="60sec" /> <!-- Lizardman Archer -->
+			<npc id="24447" x="147549" y="184396" z="-3754" heading="25027" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="147322" y="184405" z="-3755" heading="32340" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="147443" y="184236" z="-3737" heading="56737" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="147144" y="184234" z="-3740" heading="30088" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24448" x="147216" y="184479" z="-3761" heading="9528" respawnTime="60sec" /> <!-- Lizardman Archer -->
+			<npc id="24445" x="147423" y="184551" z="-3765" heading="3491" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24445" x="147434" y="184474" z="-3759" heading="50632" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24449" x="146005" y="184488" z="-3748" heading="29996" respawnTime="60sec" /> <!-- Lizardman Warrior -->
+			<npc id="24449" x="145899" y="184422" z="-3748" heading="38576" respawnTime="60sec" /> <!-- Lizardman Warrior -->
+			<npc id="24450" x="145780" y="184508" z="-3744" heading="26240" respawnTime="60sec" /> <!-- Lizardmen Wizard -->
+			<npc id="24451" x="145861" y="184640" z="-3737" heading="10643" respawnTime="60sec" /> <!-- Lizardmen Defender -->
+			<npc id="24449" x="148751" y="184328" z="-3744" heading="8128" respawnTime="60sec" /> <!-- Lizardman Warrior -->
+			<npc id="24449" x="148804" y="184440" z="-3763" heading="11773" respawnTime="60sec" /> <!-- Lizardman Warrior -->
+			<npc id="24451" x="148874" y="184532" z="-3769" heading="9599" respawnTime="60sec" /> <!-- Lizardmen Defender -->
+			<npc id="24450" x="148628" y="184601" z="-3769" heading="38790" respawnTime="60sec" /> <!-- Lizardmen Wizard -->
+			<npc id="24447" x="144689" y="184505" z="-3764" heading="28325" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="144472" y="184325" z="-3774" heading="41930" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="144682" y="184109" z="-3766" heading="1849" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="144857" y="184157" z="-3765" heading="4836" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24445" x="144344" y="183932" z="-3744" heading="37452" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24445" x="144425" y="183749" z="-3747" heading="56078" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24448" x="144296" y="183841" z="-3742" heading="26328" respawnTime="60sec" /> <!-- Lizardman Archer -->
+			<npc id="24447" x="143111" y="182671" z="-3773" heading="37004" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="143137" y="182517" z="-3778" heading="50896" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="142978" y="182380" z="-3762" heading="40186" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="142848" y="182564" z="-3772" heading="22878" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24448" x="143120" y="182315" z="-3749" heading="57664" respawnTime="60sec" /> <!-- Lizardman Archer -->
+			<npc id="24445" x="142800" y="182814" z="-3758" heading="65054" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24445" x="142904" y="182780" z="-3766" heading="62286" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24449" x="142077" y="182589" z="-3720" heading="38835" respawnTime="60sec" /> <!-- Lizardman Warrior -->
+			<npc id="24449" x="142072" y="182486" z="-3717" heading="48646" respawnTime="60sec" /> <!-- Lizardman Warrior -->
+			<npc id="24450" x="141932" y="182526" z="-3689" heading="29865" respawnTime="60sec" /> <!-- Lizardmen Wizard -->
+			<npc id="24451" x="141931" y="182593" z="-3692" heading="16539" respawnTime="60sec" /> <!-- Lizardmen Defender -->
+			<npc id="24447" x="140931" y="182091" z="-3685" heading="36055" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="141062" y="181941" z="-3676" heading="341" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="141242" y="182031" z="-3680" heading="12021" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="141165" y="182156" z="-3684" heading="22142" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24448" x="141061" y="182113" z="-3686" heading="36857" respawnTime="60sec" /> <!-- Lizardman Archer -->
+			<npc id="24445" x="141188" y="181958" z="-3676" heading="56311" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24445" x="141180" y="181844" z="-3664" heading="48421" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24447" x="141500" y="179571" z="-3558" heading="45020" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="141493" y="179437" z="-3555" heading="48607" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="141284" y="179489" z="-3581" heading="30224" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="141267" y="179570" z="-3577" heading="18541" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24445" x="141399" y="179362" z="-3559" heading="54161" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24445" x="141479" y="179288" z="-3541" heading="57750" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24448" x="141628" y="179334" z="-3532" heading="5306" respawnTime="60sec" /> <!-- Lizardman Archer -->
+			<npc id="24449" x="140330" y="178643" z="-3590" heading="38001" respawnTime="60sec" /> <!-- Lizardman Warrior -->
+			<npc id="24449" x="140371" y="178499" z="-3590" heading="56522" respawnTime="60sec" /> <!-- Lizardman Warrior -->
+			<npc id="24450" x="140203" y="178502" z="-3589" heading="32581" respawnTime="60sec" /> <!-- Lizardmen Wizard -->
+			<npc id="24451" x="140204" y="178412" z="-3586" heading="49267" respawnTime="60sec" /> <!-- Lizardmen Defender -->
+			<npc id="24447" x="140742" y="175412" z="-3249" heading="48987" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="140477" y="175509" z="-3267" heading="29075" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="140410" y="175350" z="-3262" heading="42880" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="140163" y="175484" z="-3288" heading="27550" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24445" x="140293" y="175374" z="-3267" heading="58164" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24445" x="140308" y="175192" z="-3258" heading="50009" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24448" x="140535" y="175150" z="-3250" heading="1211" respawnTime="60sec" /> <!-- Lizardman Archer -->
+			<npc id="24449" x="139560" y="174607" z="-3187" heading="37049" respawnTime="60sec" /> <!-- Lizardman Warrior -->
+			<npc id="24449" x="139622" y="174501" z="-3177" respawnTime="60sec" /> <!-- Lizardman Warrior -->
+			<npc id="24450" x="139656" y="174590" z="-3185" heading="15612" respawnTime="60sec" /> <!-- Lizardmen Wizard -->
+			<npc id="24451" x="139431" y="174429" z="-3174" heading="39246" respawnTime="60sec" /> <!-- Lizardmen Defender -->
+			<npc id="24447" x="137823" y="174200" z="-3245" heading="33528" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="137867" y="174370" z="-3247" heading="17965" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="137741" y="174366" z="-3246" heading="33975" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="137689" y="174506" z="-3246" heading="18605" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24445" x="137808" y="174554" z="-3246" heading="3999" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24445" x="137599" y="174217" z="-3246" heading="43364" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24448" x="137682" y="174019" z="-3238" heading="55886" respawnTime="60sec" /> <!-- Lizardman Archer -->
+			<npc id="24447" x="136135" y="174075" z="-3272" heading="24448" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="135981" y="174147" z="-3275" heading="28171" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="136040" y="174286" z="-3270" heading="6845" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="136168" y="174256" z="-3269" heading="60714" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24445" x="136281" y="174385" z="-3266" heading="18344" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24445" x="136111" y="174391" z="-3266" heading="32357" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24448" x="135723" y="173916" z="-3265" heading="42730" respawnTime="60sec" /> <!-- Lizardman Archer -->
+			<npc id="24447" x="138626" y="171181" z="-2954" heading="45679" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="138681" y="170683" z="-2935" heading="52395" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="138812" y="170503" z="-2927" heading="57343" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="138864" y="170368" z="-2922" heading="52986" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24448" x="138804" y="170236" z="-2917" heading="44702" respawnTime="60sec" /> <!-- Lizardman Archer -->
+			<npc id="24445" x="138657" y="170317" z="-2916" heading="29956" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24445" x="138592" y="170482" z="-2924" heading="16849" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24449" x="139727" y="170895" z="-2913" heading="62814" respawnTime="60sec" /> <!-- Lizardman Warrior -->
+			<npc id="24449" x="139671" y="171010" z="-2914" heading="31649" respawnTime="60sec" /> <!-- Lizardman Warrior -->
+			<npc id="24450" x="139564" y="170921" z="-2914" heading="42972" respawnTime="60sec" /> <!-- Lizardmen Wizard -->
+			<npc id="24451" x="139835" y="170970" z="-2913" heading="21561" respawnTime="60sec" /> <!-- Lizardmen Defender -->
+			<npc id="24447" x="141105" y="171468" z="-2907" heading="62754" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="141155" y="171577" z="-2906" heading="11898" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="140969" y="171711" z="-2911" heading="28520" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="140885" y="171595" z="-2911" heading="43064" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24448" x="140863" y="171491" z="-2912" heading="46977" respawnTime="60sec" /> <!-- Lizardman Archer -->
+			<npc id="24445" x="141268" y="171723" z="-2891" heading="5425" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24445" x="141056" y="171821" z="-2903" heading="30381" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24447" x="138472" y="169256" z="-2920" heading="27945" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="138320" y="169184" z="-2920" heading="40037" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="138034" y="169306" z="-2914" heading="21169" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="138064" y="169443" z="-2911" heading="10449" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24448" x="138178" y="169316" z="-2913" heading="58481" respawnTime="60sec" /> <!-- Lizardman Archer -->
+			<npc id="24445" x="138079" y="169089" z="-2918" heading="46541" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24445" x="138227" y="169028" z="-2924" heading="64722" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24447" x="137911" y="165483" z="-2784" heading="54098" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="138109" y="165409" z="-2807" heading="6902" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="138186" y="165570" z="-2814" heading="13732" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="138065" y="165779" z="-2795" heading="23630" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24448" x="138208" y="165742" z="-2807" heading="62895" respawnTime="60sec" /> <!-- Lizardman Archer -->
+			<npc id="24445" x="137925" y="165633" z="-2785" heading="36602" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24445" x="137885" y="165300" z="-2784" heading="55471" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24447" x="140072" y="164757" z="-2833" heading="63500" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="140291" y="164930" z="-2797" heading="8095" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="140397" y="164882" z="-2781" heading="48108" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="140302" y="164685" z="-2815" heading="43311" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24448" x="140199" y="164551" z="-2837" heading="42316" respawnTime="60sec" /> <!-- Lizardman Archer -->
+			<npc id="24445" x="139942" y="164587" z="-2859" heading="31316" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24445" x="139867" y="164800" z="-2851" heading="19886" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24449" x="139014" y="165657" z="-2815" heading="51800" respawnTime="60sec" /> <!-- Lizardman Warrior -->
+			<npc id="24449" x="139104" y="165743" z="-2802" heading="10330" respawnTime="60sec" /> <!-- Lizardman Warrior -->
+			<npc id="24450" x="139153" y="165617" z="-2808" heading="44663" respawnTime="60sec" /> <!-- Lizardmen Wizard -->
+			<npc id="24451" x="139230" y="165667" z="-2799" heading="8874" respawnTime="60sec" /> <!-- Lizardmen Defender -->
+			<npc id="24447" x="140320" y="166779" z="-2699" heading="62683" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="140543" y="166780" z="-2694" heading="64167" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="140816" y="166630" z="-2708" heading="48528" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="140715" y="166434" z="-2718" heading="25173" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24448" x="140426" y="166467" z="-2716" heading="33065" respawnTime="60sec" /> <!-- Lizardman Archer -->
+			<npc id="24445" x="140457" y="166624" z="-2704" heading="14350" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24445" x="140235" y="166665" z="-2721" heading="30834" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24447" x="156185" y="170003" z="-3405" heading="3045" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="156338" y="170255" z="-3439" heading="14305" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="156632" y="170293" z="-3461" heading="62868" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="156514" y="170131" z="-3451" heading="39656" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24446" x="156402" y="170025" z="-3437" heading="36345" respawnTime="60sec" /> <!-- Island Guardian -->
+			<npc id="24446" x="156220" y="170123" z="-3425" heading="27616" respawnTime="60sec" /> <!-- Island Guardian -->
+			<npc id="24448" x="156221" y="170403" z="-3446" heading="16108" respawnTime="60sec" /> <!-- Lizardman Archer -->
+			<npc id="24449" x="157876" y="171327" z="-3477" heading="3317" respawnTime="60sec" /> <!-- Lizardman Warrior -->
+			<npc id="24449" x="157795" y="171445" z="-3477" heading="32767" respawnTime="60sec" /> <!-- Lizardman Warrior -->
+			<npc id="24450" x="157614" y="171368" z="-3480" heading="37858" respawnTime="60sec" /> <!-- Lizardmen Wizard -->
+			<npc id="24451" x="157625" y="171235" z="-3481" heading="52507" respawnTime="60sec" /> <!-- Lizardmen Defender -->
+			<npc id="24446" x="158877" y="171517" z="-3418" heading="64139" respawnTime="60sec" /> <!-- Island Guardian -->
+			<npc id="24446" x="159151" y="171578" z="-3390" heading="2277" respawnTime="60sec" /> <!-- Island Guardian -->
+			<npc id="24447" x="159011" y="171880" z="-3418" heading="28684" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="158818" y="172060" z="-3423" heading="23644" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="158659" y="172062" z="-3426" heading="35640" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="158618" y="171968" z="-3430" heading="44862" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24448" x="158731" y="171883" z="-3429" heading="58809" respawnTime="60sec" /> <!-- Lizardman Archer -->
+			<npc id="24447" x="159099" y="173758" z="-3356" heading="15331" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="158903" y="173891" z="-3351" heading="31407" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="158787" y="173692" z="-3360" heading="52676" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="158886" y="173632" z="-3359" heading="601" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24446" x="159041" y="173800" z="-3356" heading="11986" respawnTime="60sec" /> <!-- Island Guardian -->
+			<npc id="24446" x="158971" y="174189" z="-3347" heading="18230" respawnTime="60sec" /> <!-- Island Guardian -->
+			<npc id="24448" x="158688" y="174333" z="-3328" heading="34384" respawnTime="60sec" /> <!-- Lizardman Archer -->
+			<npc id="24451" x="159747" y="173011" z="-3388" heading="55352" respawnTime="60sec" /> <!-- Lizardmen Defender -->
+			<npc id="24451" x="158942" y="175884" z="-3307" heading="17735" respawnTime="60sec" /> <!-- Lizardmen Defender -->
+			<npc id="24450" x="158770" y="175671" z="-3287" heading="47756" respawnTime="60sec" /> <!-- Lizardmen Wizard -->
+			<npc id="24449" x="158878" y="175464" z="-3284" heading="58912" respawnTime="60sec" /> <!-- Lizardman Warrior -->
+			<npc id="24449" x="159035" y="175602" z="-3305" heading="8716" respawnTime="60sec" /> <!-- Lizardman Warrior -->
+			<npc id="24447" x="159646" y="178164" z="-3357" heading="15736" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="159392" y="178256" z="-3359" heading="37471" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="159382" y="178008" z="-3360" heading="52024" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="159582" y="178033" z="-3356" heading="5586" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24446" x="159756" y="178229" z="-3353" heading="10586" respawnTime="60sec" /> <!-- Island Guardian -->
+			<npc id="24446" x="159700" y="178387" z="-3353" heading="22163" respawnTime="60sec" /> <!-- Island Guardian -->
+			<npc id="24448" x="159482" y="178478" z="-3357" heading="37421" respawnTime="60sec" /> <!-- Lizardman Archer -->
+			<npc id="24449" x="155721" y="181185" z="-3610" heading="10641" respawnTime="60sec" /> <!-- Lizardman Warrior -->
+			<npc id="24449" x="155654" y="181153" z="-3611" heading="37415" respawnTime="60sec" /> <!-- Lizardman Warrior -->
+			<npc id="24450" x="155800" y="181045" z="-3607" heading="59083" respawnTime="60sec" /> <!-- Lizardmen Wizard -->
+			<npc id="24451" x="155679" y="180926" z="-3605" heading="38255" respawnTime="60sec" /> <!-- Lizardmen Defender -->
+			<npc id="24447" x="154341" y="181945" z="-3695" heading="18992" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="154169" y="181798" z="-3696" heading="41211" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="154229" y="181664" z="-3695" heading="59852" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="154398" y="181707" z="-3700" heading="10152" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24448" x="154220" y="181931" z="-3699" heading="25653" respawnTime="60sec" /> <!-- Lizardman Archer -->
+			<npc id="24445" x="154083" y="182303" z="-3699" heading="26304" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24445" x="154260" y="182334" z="-3691" heading="1808" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24447" x="153559" y="182937" z="-3698" heading="17567" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="153377" y="183122" z="-3699" heading="24490" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="153276" y="182879" z="-3693" heading="48539" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="153353" y="182712" z="-3695" heading="55148" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24448" x="153161" y="182841" z="-3695" heading="26185" respawnTime="60sec" /> <!-- Lizardman Archer -->
+			<npc id="24445" x="153187" y="183068" z="-3693" heading="15194" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24445" x="153311" y="183256" z="-3698" heading="10311" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24445" x="154272" y="184448" z="-3755" heading="6426" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24445" x="154385" y="184695" z="-3771" heading="13402" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24447" x="154550" y="184700" z="-3779" heading="56181" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="154557" y="184616" z="-3776" heading="50083" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="154488" y="184480" z="-3765" heading="41753" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="154708" y="184393" z="-3751" heading="60959" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24448" x="154799" y="184584" z="-3774" heading="12702" respawnTime="60sec" /> <!-- Lizardman Archer -->
+			<npc id="24447" x="152950" y="185503" z="-3767" heading="21507" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="152702" y="185603" z="-3768" heading="31262" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="152547" y="185836" z="-3766" heading="16264" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="152652" y="185938" z="-3765" heading="61255" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24448" x="152883" y="185684" z="-3771" heading="55612" respawnTime="60sec" /> <!-- Lizardman Archer -->
+			<npc id="24445" x="152815" y="186000" z="-3765" heading="21500" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24445" x="152909" y="185833" z="-3772" heading="19888" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24449" x="151527" y="188569" z="-3769" heading="6699" respawnTime="60sec" /> <!-- Lizardman Warrior -->
+			<npc id="24449" x="151302" y="188368" z="-3774" heading="47714" respawnTime="60sec" /> <!-- Lizardman Warrior -->
+			<npc id="24450" x="151459" y="188275" z="-3756" heading="63501" respawnTime="60sec" /> <!-- Lizardmen Wizard -->
+			<npc id="24451" x="151309" y="188641" z="-3759" heading="20479" respawnTime="60sec" /> <!-- Lizardmen Defender -->
+			<npc id="24445" x="150228" y="188754" z="-3771" heading="25697" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24445" x="150065" y="188688" z="-3767" heading="46413" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24447" x="150418" y="188315" z="-3756" heading="62403" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="150198" y="188370" z="-3753" heading="30185" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="149963" y="188430" z="-3749" heading="30185" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="150081" y="188546" z="-3760" heading="8102" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24448" x="149758" y="188650" z="-3762" heading="29497" respawnTime="60sec" /> <!-- Lizardman Archer -->
+			<npc id="24445" x="150001" y="187353" z="-3702" heading="43797" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24445" x="149952" y="187251" z="-3707" heading="44498" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24447" x="150163" y="187213" z="-3700" heading="181" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="150221" y="187332" z="-3708" heading="16932" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="149997" y="187479" z="-3704" heading="28312" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="149884" y="187469" z="-3708" heading="33650" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24448" x="149728" y="187321" z="-3723" heading="45886" respawnTime="60sec" /> <!-- Lizardman Archer -->
+			<npc id="24445" x="148722" y="187202" z="-3765" heading="38767" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24445" x="148833" y="187165" z="-3768" heading="62352" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24447" x="148859" y="187033" z="-3769" heading="51180" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="149049" y="187087" z="-3770" heading="11973" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="148946" y="187300" z="-3769" heading="28139" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="149043" y="187239" z="-3768" heading="59807" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24448" x="149196" y="186991" z="-3761" heading="52981" respawnTime="60sec" /> <!-- Lizardman Archer -->
+			<npc id="24449" x="147485" y="187028" z="-3768" heading="30965" respawnTime="60sec" /> <!-- Lizardman Warrior -->
+			<npc id="24449" x="147411" y="186814" z="-3755" heading="64896" respawnTime="60sec" /> <!-- Lizardman Warrior -->
+			<npc id="24450" x="147613" y="186845" z="-3756" heading="2454" respawnTime="60sec" /> <!-- Lizardmen Wizard -->
+			<npc id="24451" x="147689" y="186982" z="-3765" heading="12758" respawnTime="60sec" /> <!-- Lizardmen Defender -->
+			<npc id="24447" x="147928" y="188525" z="-3767" heading="15991" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="147707" y="188668" z="-3767" heading="33628" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="147741" y="188474" z="-3767" heading="53579" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="147572" y="188461" z="-3760" heading="33564" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24448" x="147567" y="188272" z="-3744" heading="51770" respawnTime="60sec" /> <!-- Lizardman Archer -->
+			<npc id="24445" x="147804" y="188288" z="-3749" heading="1503" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24445" x="148073" y="188493" z="-3761" heading="6798" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24445" x="145955" y="187191" z="-3747" heading="39244" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24445" x="145861" y="186909" z="-3770" heading="54441" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24447" x="146212" y="186813" z="-3776" heading="61396" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="146208" y="186953" z="-3776" heading="16681" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="146107" y="187004" z="-3775" heading="27849" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="146281" y="187092" z="-3769" heading="3566" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24448" x="146233" y="187154" z="-3762" heading="24843" respawnTime="60sec" /> <!-- Lizardman Archer -->
+			<npc id="24447" x="144940" y="188031" z="-3780" heading="27581" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="144945" y="187982" z="-3780" heading="54907" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="145056" y="187935" z="-3787" heading="6711" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="145110" y="188038" z="-3783" heading="15790" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24448" x="145054" y="188175" z="-3780" heading="30914" respawnTime="60sec" /> <!-- Lizardman Archer -->
+			<npc id="24445" x="144775" y="187854" z="-3794" heading="21220" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24445" x="144685" y="187968" z="-3790" heading="23148" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24449" x="145506" y="188993" z="-3715" heading="8523" respawnTime="60sec" /> <!-- Lizardman Warrior -->
+			<npc id="24449" x="145361" y="189130" z="-3718" heading="24871" respawnTime="60sec" /> <!-- Lizardman Warrior -->
+			<npc id="24450" x="145210" y="188979" z="-3731" heading="44481" respawnTime="60sec" /> <!-- Lizardmen Wizard -->
+			<npc id="24451" x="145563" y="189337" z="-3716" heading="60699" respawnTime="60sec" /> <!-- Lizardmen Defender -->
+			<npc id="24447" x="144005" y="189614" z="-3737" heading="21646" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="143723" y="189793" z="-3757" heading="41567" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="143680" y="189600" z="-3757" heading="52200" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="143925" y="189296" z="-3735" heading="57725" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24448" x="143852" y="189256" z="-3734" heading="33856" respawnTime="60sec" /> <!-- Lizardman Archer -->
+			<npc id="24445" x="143689" y="189314" z="-3739" heading="29202" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24445" x="143540" y="189553" z="-3757" heading="22174" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24447" x="147609" y="190629" z="-3761" heading="4742" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="147552" y="190871" z="-3766" heading="23598" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="147887" y="190925" z="-3766" heading="1688" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="147284" y="190578" z="-3762" heading="64600" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24448" x="147441" y="190703" z="-3764" heading="7013" respawnTime="60sec" /> <!-- Lizardman Archer -->
+			<npc id="24445" x="147582" y="191101" z="-3759" heading="7918" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24445" x="147810" y="191071" z="-3766" heading="64171" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24447" x="143919" y="192425" z="-3778" heading="9550" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="144022" y="192435" z="-3771" heading="11947" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="143950" y="192213" z="-3782" heading="45880" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="143769" y="192306" z="-3778" heading="27817" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24448" x="143948" y="192622" z="-3769" heading="11008" respawnTime="60sec" /> <!-- Lizardman Archer -->
+			<npc id="24445" x="143769" y="192777" z="-3788" heading="25324" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24445" x="144192" y="192428" z="-3754" heading="58346" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24449" x="144335" y="190972" z="-3770" heading="49541" respawnTime="60sec" /> <!-- Lizardman Warrior -->
+			<npc id="24449" x="144475" y="190920" z="-3764" heading="10949" respawnTime="60sec" /> <!-- Lizardman Warrior -->
+			<npc id="24450" x="144567" y="191187" z="-3759" heading="19394" respawnTime="60sec" /> <!-- Lizardmen Wizard -->
+			<npc id="24451" x="144382" y="191127" z="-3772" heading="41475" respawnTime="60sec" /> <!-- Lizardmen Defender -->
+			<npc id="24447" x="141605" y="188133" z="-3760" heading="42981" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="141440" y="188090" z="-3749" heading="35435" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="141156" y="187876" z="-3762" heading="41249" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="141413" y="187814" z="-3765" heading="583" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24445" x="141699" y="187846" z="-3765" heading="2456" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24445" x="141574" y="187605" z="-3758" heading="42560" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24448" x="141156" y="187532" z="-3767" heading="32209" respawnTime="60sec" /> <!-- Lizardman Archer -->
+			<npc id="24449" x="140422" y="187826" z="-3740" heading="29226" respawnTime="60sec" /> <!-- Lizardman Warrior -->
+			<npc id="24449" x="140240" y="187693" z="-3761" heading="47072" respawnTime="60sec" /> <!-- Lizardman Warrior -->
+			<npc id="24450" x="140488" y="187548" z="-3769" heading="1572" respawnTime="60sec" /> <!-- Lizardmen Wizard -->
+			<npc id="24451" x="140321" y="187429" z="-3773" heading="38710" respawnTime="60sec" /> <!-- Lizardmen Defender -->
+			<npc id="24449" x="142424" y="187215" z="-3724" heading="47782" respawnTime="60sec" /> <!-- Lizardman Warrior -->
+			<npc id="24449" x="142556" y="186981" z="-3737" heading="56107" respawnTime="60sec" /> <!-- Lizardman Warrior -->
+			<npc id="24450" x="142379" y="186735" z="-3766" heading="39465" respawnTime="60sec" /> <!-- Lizardmen Wizard -->
+			<npc id="24451" x="142171" y="186843" z="-3753" heading="27772" respawnTime="60sec" /> <!-- Lizardmen Defender -->
+			<npc id="24447" x="143608" y="186328" z="-3767" heading="53776" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="143667" y="186205" z="-3774" heading="53776" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="143876" y="186281" z="-3774" heading="5407" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="143840" y="186384" z="-3771" heading="24914" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24448" x="143697" y="186518" z="-3769" heading="24914" respawnTime="60sec" /> <!-- Lizardman Archer -->
+			<npc id="24445" x="143741" y="186011" z="-3741" heading="50064" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24445" x="143564" y="185888" z="-3736" heading="27412" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24447" x="142205" y="184623" z="-3765" heading="43227" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="142282" y="184411" z="-3764" heading="51579" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="142505" y="184581" z="-3764" heading="6227" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="142390" y="184762" z="-3771" heading="29297" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24448" x="142012" y="184706" z="-3767" heading="42812" respawnTime="60sec" /> <!-- Lizardman Archer -->
+			<npc id="24445" x="141912" y="184291" z="-3768" heading="49038" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24445" x="142189" y="184247" z="-3763" heading="64975" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24447" x="143909" y="177895" z="-3227" heading="47227" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="143988" y="177745" z="-3225" heading="54244" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="143913" y="177427" z="-3207" heading="41122" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="143716" y="177530" z="-3211" heading="27743" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24448" x="143849" y="177703" z="-3225" heading="9877" respawnTime="60sec" /> <!-- Lizardman Archer -->
+			<npc id="24445" x="143664" y="177806" z="-3221" heading="26986" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24445" x="143592" y="177971" z="-3216" heading="20675" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24449" x="142317" y="176978" z="-3227" heading="40258" respawnTime="60sec" /> <!-- Lizardman Warrior -->
+			<npc id="24449" x="142368" y="176842" z="-3224" heading="52894" respawnTime="60sec" /> <!-- Lizardman Warrior -->
+			<npc id="24450" x="142190" y="176746" z="-3235" heading="37926" respawnTime="60sec" /> <!-- Lizardmen Wizard -->
+			<npc id="24451" x="142061" y="176859" z="-3244" heading="25264" respawnTime="60sec" /> <!-- Lizardmen Defender -->
+			<npc id="24447" x="136602" y="182312" z="-3495" heading="33329" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="136544" y="182527" z="-3494" heading="19132" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="136233" y="182583" z="-3484" heading="30909" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="136152" y="182462" z="-3487" heading="42999" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24448" x="136368" y="182218" z="-3494" heading="56709" respawnTime="60sec" /> <!-- Lizardman Archer -->
+			<npc id="24445" x="136742" y="182367" z="-3495" heading="31690" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24445" x="136142" y="182765" z="-3469" heading="29412" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24449" x="138280" y="182298" z="-3494" heading="61843" respawnTime="60sec" /> <!-- Lizardman Warrior -->
+			<npc id="24449" x="138285" y="182431" z="-3493" heading="23974" respawnTime="60sec" /> <!-- Lizardman Warrior -->
+			<npc id="24450" x="138098" y="182540" z="-3490" heading="30402" respawnTime="60sec" /> <!-- Lizardmen Wizard -->
+			<npc id="24451" x="138003" y="182470" z="-3493" heading="39391" respawnTime="60sec" /> <!-- Lizardmen Defender -->
+			<npc id="24447" x="139269" y="182137" z="-3532" heading="55762" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="139487" y="182186" z="-3555" heading="10688" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="139372" y="182395" z="-3511" heading="23452" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="139509" y="182523" z="-3508" heading="64319" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24448" x="139674" y="182402" z="-3536" heading="52733" respawnTime="60sec" /> <!-- Lizardman Archer -->
+			<npc id="24445" x="139767" y="182037" z="-3613" heading="51522" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24445" x="139649" y="182156" z="-3586" heading="24531" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24447" x="139088" y="184729" z="-3665" heading="41184" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="139207" y="184610" z="-3681" heading="64036" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="139454" y="184766" z="-3682" heading="11485" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="139400" y="184965" z="-3666" heading="33253" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24445" x="139028" y="184868" z="-3661" heading="37274" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24445" x="138850" y="184727" z="-3650" heading="39933" respawnTime="60sec" /> <!-- Lizardman Rogue -->
+			<npc id="24448" x="138921" y="184602" z="-3656" heading="58317" respawnTime="60sec" /> <!-- Lizardman Archer -->
+			<npc id="24449" x="140640" y="184284" z="-3729" heading="63811" respawnTime="60sec" /> <!-- Lizardman Warrior -->
+			<npc id="24449" x="140718" y="184133" z="-3724" heading="54278" respawnTime="60sec" /> <!-- Lizardman Warrior -->
+			<npc id="24450" x="140799" y="184201" z="-3730" heading="14593" respawnTime="60sec" /> <!-- Lizardmen Wizard -->
+			<npc id="24451" x="140922" y="183950" z="-3717" heading="47388" respawnTime="60sec" /> <!-- Lizardmen Defender -->
+			<npc id="24447" x="138466" y="187195" z="-3765" heading="1860" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="138551" y="187450" z="-3781" heading="15152" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="138416" y="187536" z="-3778" heading="22264" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="138515" y="187762" z="-3780" heading="7623" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24446" x="138634" y="187869" z="-3787" heading="7623" respawnTime="60sec" /> <!-- Island Guardian -->
+			<npc id="24446" x="138318" y="187800" z="-3767" heading="34989" respawnTime="60sec" /> <!-- Island Guardian -->
+			<npc id="24448" x="138682" y="187679" z="-3792" heading="61945" respawnTime="60sec" /> <!-- Lizardman Archer -->
+			<npc id="24447" x="140228" y="188641" z="-3667" heading="880" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="140051" y="188767" z="-3680" heading="35696" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="139920" y="188543" z="-3677" heading="54541" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="140074" y="188391" z="-3685" heading="60484" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24448" x="139939" y="188381" z="-3677" heading="33251" respawnTime="60sec" /> <!-- Lizardman Archer -->
+			<npc id="24446" x="140331" y="188365" z="-3698" heading="65110" respawnTime="60sec" /> <!-- Island Guardian -->
+			<npc id="24446" x="140022" y="188246" z="-3710" heading="36602" respawnTime="60sec" /> <!-- Island Guardian -->
+			<npc id="24447" x="141333" y="189767" z="-3590" heading="694" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="141346" y="189932" z="-3620" heading="15740" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="140797" y="190105" z="-3671" heading="32230" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24447" x="140582" y="190297" z="-3660" heading="23646" respawnTime="60sec" /> <!-- Niasis -->
+			<npc id="24448" x="141000" y="190460" z="-3686" heading="3724" respawnTime="60sec" /> <!-- Lizardman Archer -->
+			<npc id="24446" x="140930" y="190084" z="-3680" heading="37475" respawnTime="60sec" /> <!-- Island Guardian -->
+			<npc id="24446" x="140670" y="189976" z="-3665" heading="34523" respawnTime="60sec" /> <!-- Island Guardian -->
+			<npc id="24449" x="141794" y="191304" z="-3742" heading="3416" respawnTime="60sec" /> <!-- Lizardman Warrior -->
+			<npc id="24449" x="141540" y="191282" z="-3748" heading="33830" respawnTime="60sec" /> <!-- Lizardman Warrior -->
+			<npc id="24450" x="141744" y="191473" z="-3740" heading="6146" respawnTime="60sec" /> <!-- Lizardmen Wizard -->
+			<npc id="24451" x="141441" y="191488" z="-3742" heading="32915" respawnTime="60sec" /> <!-- Lizardmen Defender -->
+		</group>
+	</spawn>
+</list>

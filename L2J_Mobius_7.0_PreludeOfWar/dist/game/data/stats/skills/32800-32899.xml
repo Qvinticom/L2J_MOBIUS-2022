@@ -218,6 +218,15 @@
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-1000</effectPoint>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<nextAction>ATTACK</nextAction>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>553</power>
+				<overHit>true</overHit>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32825" toLevel="1" name="Wind Attack">
 		<!-- A powerful attack of a harpy monster that uses long-range magic attacks. -->
@@ -262,6 +271,16 @@
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
+		<effectRange>100</effectRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<nextAction>ATTACK</nextAction>
+		<effects>
+			<effect name="PhysicalAttack"> <!-- Fix: Retail Missed -->
+				<power>28833</power>
+				<overHit>true</overHit>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32829" toLevel="1" name="All Skill Master">
 		<!-- P./M. Skill Cooldown -10%. -->
@@ -280,6 +299,32 @@
 		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-1000</effectPoint>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
+		<activateRate>80</activateRate>
+		<effectRange>400</effectRange>
+		<basicProperty>NONE</basicProperty>
+		<trait>SHOCK</trait>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<nextAction>ATTACK</nextAction>
+		<effects>
+			<effect name="PhysicalAttack"> <!-- Fix: Retail Missed -->
+				<power>28833</power>
+				<overHit>true</overHit>
+			</effect>
+			<effect name="TargetCancel">
+				<chance>60</chance>
+			</effect>
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32831" toLevel="1" name="Silencing Strike">
 		<!-- Strikes nearby enemies with an AoE attack, inflicting Silence for 5 sec. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
@@ -518,6 +563,16 @@
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
+		<effectRange>100</effectRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<nextAction>ATTACK</nextAction>
+		<effects>
+			<effect name="PhysicalAttack"> <!-- Fix: Retail Missed -->
+				<power>28833</power>
+				<overHit>true</overHit>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32851" toLevel="1" name="Stunning Strike">
 		<!-- Strikes nearby targets with an AoE attack, stunning them for 5 sec. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
@@ -528,6 +583,32 @@
 		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-1000</effectPoint>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
+		<activateRate>80</activateRate>
+		<effectRange>400</effectRange>
+		<basicProperty>NONE</basicProperty>
+		<trait>SHOCK</trait>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<nextAction>ATTACK</nextAction>
+		<effects>
+			<effect name="PhysicalAttack"> <!-- Fix: Retail Missed -->
+				<power>28833</power>
+				<overHit>true</overHit>
+			</effect>
+			<effect name="TargetCancel">
+				<chance>60</chance>
+			</effect>
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32852" toLevel="1" name="Critical Strike">
 		<!-- Physical melee skill used by warriors. Attacks 1 monster with a weapon. -->
@@ -556,6 +637,32 @@
 		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-1000</effectPoint>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
+		<activateRate>80</activateRate>
+		<effectRange>400</effectRange>
+		<basicProperty>NONE</basicProperty>
+		<trait>SHOCK</trait>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<nextAction>ATTACK</nextAction>
+		<effects>
+			<effect name="PhysicalAttack"> <!-- Fix: Retail Missed -->
+				<power>28833</power>
+				<overHit>true</overHit>
+			</effect>
+			<effect name="TargetCancel">
+				<chance>60</chance>
+			</effect>
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32854" toLevel="1" name="Energy Burst">
 		<!-- A normal attack of a humanoid monster that uses long-range magic attacks. -->
@@ -587,6 +694,15 @@
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-1000</effectPoint>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<nextAction>ATTACK</nextAction>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>553</power>
+				<overHit>true</overHit>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32856" toLevel="25" name="Golden Pig's Energy - Stage 1">
 		<!-- Golden Pig's energy for the new year. Everything will work out. For 1 hour, XP/SP +$s1, XP/SP Gain while in Vitality Mode +$s2. A certain amount of Vitality is recovered after 1 hour, and you can obtain Golden Pig's Lucky Coin. Total of 24 stages. <Caution> If you are dead at the time the item is given, you cannot receive Golden Pig's Energy Buff and Golden Pig's Lucky Coin. You cannot receive the item if you don't have space in the inventory. -->
