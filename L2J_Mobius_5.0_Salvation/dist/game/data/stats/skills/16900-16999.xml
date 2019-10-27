@@ -171,8 +171,20 @@
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
 		<castRange>900</castRange>
-		<hitTime>5000</hitTime>
 		<effectPoint>-100</effectPoint>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>117</power>
+			</effect>
+			<effect name="CallSkill">
+				<!-- Ignite -->
+				<skillId>11139</skillId> <!-- Ignite -->
+				<skillLevel>1</skillLevel>
+				<skillLevelScaleTo>5</skillLevelScaleTo>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16920" toLevel="1" name="Robust Judgment">
 		<!-- Inflicts dark attribute damage on the enemy and decreases the critical attack damage by 50% and resistance towards various melee weapons by 30 for 10 seconds. -->
