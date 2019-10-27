@@ -553,7 +553,17 @@ public class GameClient extends ChannelInboundHandler<GameClient>
 			{
 				LOGGER.severe("Attempt of double login: " + player.getName() + "(" + objectId + ") " + _accountName);
 			}
-			Disconnection.of(player).defaultSequence(false);
+			
+			if (player.getClient() != null)
+			{
+				Disconnection.of(player).defaultSequence(false);
+			}
+			else
+			{
+				player.storeMe();
+				player.deleteMe();
+			}
+			
 			return null;
 		}
 		
