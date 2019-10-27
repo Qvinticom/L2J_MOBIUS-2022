@@ -95,15 +95,25 @@ public class Q11031_TrainingBeginsNow extends Quest
 				htmltext = event;
 				break;
 			}
+			case "reward_shots":
+			{
+				if (qs.isCond(1))
+				{
+					qs.setCond(2, true);
+					if (!player.getVariables().getBoolean(NOVICE_SHOTS_REWARDED_VAR, false))
+					{
+						player.getVariables().set(NOVICE_SHOTS_REWARDED_VAR, true);
+						giveItems(player, player.isMageClass() ? NOVICE_SPIRITSHOTS : NOVICE_SOULSHOTS);
+					}
+				}
+				break;
+			}
 			case "34505-05.html":
 			{
-				if (qs.isCond(2))
-				{
-					qs.setCond(3, true);
-					player.sendPacket(new ExTutorialShowId(25)); // Adventurers Guide
-					// TODO: Buff player support in Quest class.
-					htmltext = event;
-				}
+				qs.setCond(3, true);
+				player.sendPacket(new ExTutorialShowId(25)); // Adventurers Guide
+				// TODO: Buff player support in Quest class.
+				htmltext = event;
 				break;
 			}
 			case "teleport":
@@ -152,12 +162,7 @@ public class Q11031_TrainingBeginsNow extends Quest
 					{
 						if (qs.isCond(1))
 						{
-							qs.setCond(2, true);
-							if (!player.getVariables().getBoolean(NOVICE_SHOTS_REWARDED_VAR, false))
-							{
-								player.getVariables().set(NOVICE_SHOTS_REWARDED_VAR, true);
-								giveItems(player, player.isMageClass() ? NOVICE_SPIRITSHOTS : NOVICE_SOULSHOTS);
-							}
+							startQuestTimer("reward_shots", 100, npc, player);
 							player.sendPacket(new ExTutorialShowId(14)); // Soulshots and Spiritshots
 							htmltext = "34505-04.html";
 						}
