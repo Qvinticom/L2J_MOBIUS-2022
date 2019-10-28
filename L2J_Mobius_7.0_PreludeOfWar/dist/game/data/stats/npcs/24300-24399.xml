@@ -2118,8 +2118,13 @@
 		</collision>
 	</npc>
 	<npc id="24372" level="107" type="Monster" name="Crokian Lad">
+		<parameters>
+			<skill name="Skill01_ID" id="32862" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
+		<equipment rhand="5128" /> 
 		<acquire exp="1138774785" sp="1024800" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="192357.781605" hpRegen="9.5" mp="32075.861" mpRegen="3.3" />
@@ -2136,6 +2141,7 @@
 			<height normal="32.2" />
 		</collision>
 		<skillList>
+			<skill id="32862" level="1" /> <!-- Critical Strike  -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 		</skillList>
@@ -2154,17 +2160,23 @@
 		</dropLists>
 	</npc>
 	<npc id="24373" level="107" type="Monster" name="Dailaon Lad">
+		<parameters>
+			<skill name="Skill01_ID" id="32861" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
+		<equipment rhand="5127" /> 
 		<acquire exp="1161546846" sp="1045294" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="192357.781605" hpRegen="9.5" mp="32075.861" mpRegen="3.3" />
-			<attack physical="62498" magical="53196" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="62498" magical="53196" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" reuseDelay="1500" type="BOW" range="600" distance="80" width="120" />
 			<defence physical="5913" magical="3434" />
 			<speed>
 				<walk ground="18" />
 				<run ground="174" />
 			</speed>
+			<hitTime>800</hitTime>
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -2172,6 +2184,7 @@
 			<height normal="31.1" />
 		</collision>
 		<skillList>
+			<skill id="32861" level="1" /> <!-- Rapid Throw  -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 		</skillList>
@@ -2210,8 +2223,13 @@
 		</skillList>
 	</npc>
 	<npc id="24375" level="107" type="Monster" name="Farhite Lad">
+		<parameters>
+			<skill name="Skill01_ID" id="32862" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
+		<equipment rhand="5131" /> 
 		<acquire exp="1138774785" sp="1024800" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="192357.781605" hpRegen="9.5" mp="32075.861" mpRegen="3.3" />
@@ -2228,6 +2246,7 @@
 			<height normal="34.4" />
 		</collision>
 		<skillList>
+			<skill id="32862" level="1" /> <!-- Critical Strike  -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 		</skillList>
@@ -2245,8 +2264,13 @@
 		</dropLists>
 	</npc>
 	<npc id="24376" level="107" type="Monster" name="Nos Lad">
+		<parameters>
+			<skill name="Skill01_ID" id="32862" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
+		<equipment rhand="128" /> 
 		<acquire exp="1161546846" sp="1045294" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="192357.781605" hpRegen="9.5" mp="32075.861" mpRegen="3.3" />
@@ -2263,6 +2287,7 @@
 			<height normal="35.25" />
 		</collision>
 		<skillList>
+			<skill id="32862" level="1" /> <!-- Critical Strike  -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 		</skillList>
@@ -2278,8 +2303,13 @@
 		</dropLists>
 	</npc>
 	<npc id="24377" level="108" type="Monster" name="Swamp Tribe" title="Lord of Alligator Island">
+		<parameters>
+			<skill name="Skill01_ID" id="32870" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
+		<equipment rhand="5131" /> 
 		<acquire exp="8399456352" sp="7559439" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1049220.47781" hpRegen="9.5" mp="32075.861" mpRegen="3.3" />
@@ -2296,6 +2326,7 @@
 			<height normal="65" />
 		</collision>
 		<skillList>
+			<skill id="32870" level="1" /> <!-- Stunning Strike -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
@@ -2305,10 +2336,20 @@
 				<item id="80763" min="1" max="1" chance="100" /> <!-- Elite Monster Reward Box -->
 			</drop>
 		</dropLists>
+		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true">
+			<clanList>
+				<clan>ALLIGATOR</clan>
+			</clanList>
+		</ai>
 	</npc>
 	<npc id="24378" level="108" type="Monster" name="Swamp Alligator">
+		<parameters>
+			<skill name="Skill01_ID" id="32862" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
+		<equipment rhand="5128" /> 
 		<acquire exp="1199922336" sp="1079854" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="209844.221745" hpRegen="9.5" mp="32075.861" mpRegen="3.3" />
@@ -2325,6 +2366,7 @@
 			<height normal="32.2" />
 		</collision>
 		<skillList>
+			<skill id="32862" level="1" /> <!-- Critical Strike  -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 		</skillList>
@@ -2339,19 +2381,30 @@
 				<item id="36554" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (High-grade) -->
 			</spoil>
 		</dropLists>
+		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true">
+			<clanList>
+				<clan>ALLIGATOR</clan>
+			</clanList>
+		</ai>
 	</npc>
 	<npc id="24379" level="108" type="Monster" name="Swamp Warrior">
+		<parameters>
+			<skill name="Skill01_ID" id="32861" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
+		<equipment rhand="5127" /> 
 		<acquire exp="1199922336" sp="1079854" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="209844.221745" hpRegen="9.5" mp="32075.861" mpRegen="3.3" />
-			<attack physical="65855" magical="56801" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="65855" magical="56801" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" reuseDelay="1500" type="BOW" range="600" distance="80" width="120" />
 			<defence physical="6269" magical="3641" />
 			<speed>
 				<walk ground="18" />
 				<run ground="174" />
 			</speed>
+			<hitTime>800</hitTime>
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -2359,6 +2412,7 @@
 			<height normal="31.1" />
 		</collision>
 		<skillList>
+			<skill id="32861" level="1" /> <!-- Rapid Throw  -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 		</skillList>
