@@ -661,7 +661,7 @@ public class SkillTreesData implements IXmlReader
 			return result;
 		}
 		
-		final boolean isAwaken = /* player.isInCategory(CategoryType.SIXTH_CLASS_GROUP) && */ ((player.getRace() != Race.ERTHEIA) || player.isDualClassActive());
+		// final boolean isAwaken = player.isInCategory(CategoryType.SIXTH_CLASS_GROUP) && ((player.getRace() != Race.ERTHEIA) || player.isDualClassActive());
 		
 		for (Entry<Long, SkillLearn> entry : skills.entrySet())
 		{
@@ -672,10 +672,10 @@ public class SkillTreesData implements IXmlReader
 				continue;
 			}
 			
-			if (isAwaken && !isCurrentClassSkillNoParent(classId, entry.getKey()) && !isAwakenSaveSkill(player.getClassId(), skill.getSkillId()))
-			{
-				continue;
-			}
+			// if (isAwaken && !isCurrentClassSkillNoParent(classId, entry.getKey()) && !isAwakenSaveSkill(player.getClassId(), skill.getSkillId()))
+			// {
+			// continue;
+			// }
 			
 			if (player.getLevel() >= skill.getGetLevel())
 			{
