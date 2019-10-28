@@ -13,7 +13,7 @@
 		<condition type="CommandChannel" />
 		<condition type="CommandChannelLeader" />
 		<condition type="GroupMin">
-			<param name="limit" value="27" />
+			<param name="limit" value="18" /> <!-- The Kamael update -->
 		</condition>
 		<condition type="GroupMax">
 			<param name="limit" value="100" />
