@@ -49,7 +49,7 @@ public class Q10784_TheBrokenDevice extends Quest
 	private static final int PAULINA_EQUIPMENT_SET = 46851;
 	private static final int BLESSED_SCROLL_OF_ESCAPE = 33640;
 	// Misc
-	private static final int MIN_LEVEL = 58;
+	private static final int MIN_LEVEL = 56;
 	private static final int MAX_LEVEL = 61;
 	
 	public Q10784_TheBrokenDevice()
@@ -144,7 +144,7 @@ public class Q10784_TheBrokenDevice extends Quest
 		if ((qs != null) && qs.isCond(1))
 		{
 			giveItems(killer, BROKE_MAGIC_DEVICE_FRAGMENT, 1);
-			if (getQuestItemsCount(killer, BROKE_MAGIC_DEVICE_FRAGMENT) >= 100)
+			if (getQuestItemsCount(killer, BROKE_MAGIC_DEVICE_FRAGMENT) >= 200)
 			{
 				qs.setCond(2, true);
 			}

@@ -59,7 +59,7 @@ public class Q10783_TracesOfAnAmbush extends Quest
 		NpcStringId.YOU_LITTLE_PUNK_TAKE_THAT
 	};
 	// Misc
-	private static final int MIN_LEVEL = 58;
+	private static final int MIN_LEVEL = 56;
 	private static final int MAX_LEVEL = 61;
 	private static final int SPAWN_RATE = 70;
 	private static final int DROP_RATE = 80;

@@ -40,7 +40,7 @@ public class Q10782_LettersFromTheQueenForsakenPlains extends LetterQuest
 	// Location
 	private static final Location TELEPORT_LOC = new Location(147446, 22761, -1984);
 	// Misc
-	private static final int MIN_LEVEL = 58;
+	private static final int MIN_LEVEL = 56;
 	private static final int MAX_LEVEL = 60;
 	
 	public Q10782_LettersFromTheQueenForsakenPlains()
