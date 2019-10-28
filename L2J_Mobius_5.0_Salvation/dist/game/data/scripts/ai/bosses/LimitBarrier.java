@@ -31,10 +31,9 @@ import ai.AbstractNpcAI;
 /**
  * Limit Barrier AI
  * @author RobikBobik<br>
- *         OK - Many Raid Bosses lvl 50 and higher from now on use Ξ�οΏ½Ξ’Β²Ξ�Β²Ξ²β‚¬οΏ½Ξ’Β¬Ξ�Ξ�Ξ�οΏ½Ξ’Β½Limit BarrierΞ�οΏ½Ξ’Β²Ξ�Β²Ξ²β‚¬οΏ½Ξ’Β¬Ξ�Ξ�Ξ�οΏ½Ξ’Β½ skill when their HP reaches 90%, 60% and 30%.<br>
+ *         OK - Raid Bosses lvl 100 and higher from now on use "Limit Barrier" skill when their HP reaches 90%, 60% and 30%.<br>
  *         OK - 600 hits in 15 seconds are required to destroy the barrier. Amount of damage does not matter.<br>
  *         OK - If barrier destruction is failed, Boss restores full HP.<br>
- *         OK - Death Knight, who randomly appear after boss's death, also use Limit Barrier.<br>
  *         OK - Epic Bosses Orfen, Queen Ant and Core also use Limit Barrier.<br>
  *         OK - Epic Bosses Antharas, Zaken and Baium and their analogues in instance zones do not use Limit Barrier.<br>
  *         OK - Raid Bosses in instances do not use Limit Barrier.<br>
@@ -43,244 +42,12 @@ import ai.AbstractNpcAI;
 public final class LimitBarrier extends AbstractNpcAI
 {
 	// NPCs
-	private static int[] RAID_BOSSES =
+	private static final int[] RAID_BOSSES =
 	{
-		29325, // Orfen
+		29014, // Orfen
 		29001, // Queen Ant
 		29006, // Core
-		25375, // Zombie Lord Farakelsus
-		25373, // Malex Herald of Dagoniel
-		25395, // Archon Susceptor
-		25273, // Carnamakos
-		25493, // Niniel Spirit Eva
-		25496, // Papurrion Pingolpin
-		25016, // Guardian 3 of Garden
-		25032, // Eva Guardian Millenu
-		25319, // Amber
-		25523, // Degeneration Golem
-		29095, // Gordon
-		25504, // Spirits of Nellis
-		25506, // Rayito the Looter
-		25501, // Grave Robber Akata
-		29062, // Triolls Priest Andreas
-		25527, // Uruka
-		25677, // Water Spirit Lian
-		25674, // Gwindorr
-		25214, // Fafurions Pagehood Sika
-		25394, // Premo Prime the Creature
-		25211, // Sebek
-		25188, // Apepi
-		25185, // Tasaba Patriarch Hellena
-		25208, // Water Couatl Ateka
-		25189, // Cronoss Summons Mumu
-		25115, // Icarus Sample 21
-		25179, // Hatos
-		25726, // Behemoth Leader
-		25725, // Dragon Beast
-		25252, // Palibati Queen Themis
-		25146, // Serpent Demon Bifrons
-		25063, // Grandeur Soul Chertuba
-		25004, // Turek Mercenary Boss
-		25076, // Princess Molrang
-		25369, // Soul Scavenger
-		25169, // Ragraman
-		25362, // Tracker Sharuk
-		25365, // Patriarch Kuroboros
-		25366, // Priest of Kuroboros
-		25060, // Love Reverser Kael
-		25038, // Tirak
-		25095, // Elf Renoa
-		25127, // Langk Matriarch Rashkos
-		25357, // Sukar Wererat Chief
-		25149, // Zombie Lord Crowl
-		25166, // Ikuntai
-		25352, // Giant Wasteland Basil
-		25354, // Gargoyle Lord Sirocco
-		25870, // Airis
-		25871, // Goya
-		25099, // Repiro Rot Tree
-		25418, // Dread Avenger Kraven
-		25420, // Handmaiden of Orfen
-		25131, // Carnage Lord Gato
-		25122, // Refuge Hoper Leo
-		25067, // Master of Ledflage Shaka
-		25088, // Crazy Mechanic Golem
-		25431, // Iron Giant Totem
-		25260, // Iron Giant Totem
-		25026, // Katu Van Atui
-		25158, // King Tarlk
-		25437, // Timak Orc Gosmos
-		25230, // Timak Seer Ragoth
-		25085, // Timak Orc Hunter A
-		25155, // Shaman King Selu
-		25064, // Wizard of Storm Teruk
-		25134, // Leto Chief Talkin
-		25226, // Roaring Seer Kastor
-		25051, // Rahha
-		25248, // Doom Blade Tanatos
-		25426, // Betrayer of Urutu Freki
-		25429, // Mammpns Collector Talos
-		25041, // Ikuntai
-		25170, // Remmel
-		25023, // Jeruna Queen
-		25392, // Queens Nobel Leader
-		25128, // Vuku Witchdr Gharmash
-		25360, // Tiger Hornet
-		25019, // Pan Draid
-		25398, // Eyes of Bereth
-		25388, // Redeye Leader Trakia
-		25391, // Nurkas Messenger
-		25272, // Partisan Leader Talakin
-		25079, // Catseye
-		25152, // Flamelord Shadar
-		25404, // Corsair Captain Kylon
-		25410, // Road Scavenger Leader
-		25020, // Breka Warlock Pastu
-		25173, // King Tiger Karuta
-		25082, // Lost Cat the Cat A
-		25112, // Meana Agent of Beres
-		25098, // Sejarr S Summoner
-		25415, // Nakondas
-		25498, // Istary Papurrion
-		25057, // Biconne of Blue Sky
-		25192, // Earth Protecter Panathen
-		25434, // Bandit Leader Barda
-		25444, // Enmity Ghost Ramdal
-		25447, // Hope Immortality Mardil
-		25092, // Korim
-		25143, // Shuriel Fire of Wrath
-		25450, // Cherub Garacsia
-		25044, // Barion
-		25047, // Karte
-		25050, // Verfa
-		25163, // Roar Skylancer
-		25007, // Retreat Spider Cletu
-		25102, // Shacram
-		25441, // Monster Cyrion
-		25438, // Kelbar
-		25103, // Sorcery Isirr
-		25456, // Oblivion S Mirror
-		25460, // Ereve Deathman
-		25238, // Nightmare Drake
-		25255, // Gargoyle Lord Tiphon
-		25106, // Manes Lidia
-		25233, // Spirit Andras Betrayer
-		25478, // Priest Hisilrome
-		25245, // Last Lesser Glaki
-		25244, // Last Lesser Olkuth
-		25256, // Taik Prefect Arak
-		25125, // Fiercetiger King Angel
-		25089, // Soulless Wild Boar
-		25241, // Harit Hero Tamash
-		25463, // Harit Tutelar Garangky
-		25309, // Varka Hero Shadith
-		25235, // Vanor Chief Kandra
-		25269, // Beastlord Behemoth
-		25293, // Geyser Guardian Hestia
-		25299, // Ketra Hero Hekaton
-		25325, // Blinding Fire Barakiel
-		25322, // Demonic Agent Falston
-		3473, // Omega Golem
-		3477, // Reinforced Super Kat the Cat
-		3479, // Darkened Super Feline Queen
-		3481, // Control-Crazed Mew the Cat
-		25775, // Apherus
-		25886, // Houpon the Warden Overseer
-		25887, // Crook the Mad
-		25892, // Guillotine of Death
-		25902, // Gigantic Golem
-		25922, // Nerva Chief Turakan
-		25945, // Megaloprepis
-		25946, // Antharas' Herald Komabor
-		25947, // Skellrus' Herald Iskios
-		25948, // Valakas' Herald Potigia
-		25949, // Lindvior's Herald Numa
-		25950, // Fafurion's Herald Aquarion
-		25956, // Vengeful Eligos
-		25957, // Vengeful Agarez
-		25958, // Vengeful Lerazia
-		25959, // Vengeful Oretross
-		25960, // Vengeful Edaire
-		25961, // Vengeful Agonia
-		25967, // Zetahl
-		25968, // Tabris
-		25969, // Stelos
-		25970, // Ravolas
-		25971, // Stelo Soma
-		25972, // Dephracor
-		25978, // Garamor's Herald Gariott
-		25979, // Varvacion
-		25980, // Varmoni
-		25981, // Varvinos
-		25982, // Varmonia
-		25983, // Varkaron
-		25989, // Harp's Clone
-		25990, // Isadora's Avatar
-		25991, // Maliss' Avatar
-		25992, // Embryo Garron
-		25993, // Embryo Nigel
-		25994, // Embryo Dabos
-		26000, // Amden Orc Turahot
-		26001, // Amden Orc Turation
-		26002, // Amden Orc Turamathia
-		26003, // Amden Orc Turabait
-		26004, // Nerva Orc Nermion
-		26005, // Nerva Orc Nergatt
-		26011, // Bloody Earth Dragon Gagia
-		26012, // Demon Fardune
-		26013, // Demon Harsia
-		26014, // Demon Bedukel
-		26015, // Bloody Witch Rumilla
-		26016, // Shilen's Priest Sasia
-		26022, // Dark Messenger Afjak
-		26023, // Dusk Knight Feilnor
-		26024, // Chaos Wizard Amormio
-		26025, // Insolence Knight Lahav
-		26026, // Death Priest Borhunt
-		26027, // Destruction Knight Zeruel
-		26033, // Fallen Angel Tiera
-		26034, // Corrupted Goblier
-		26035, // Corrupted Cherkia
-		26036, // Corrupted Harthemon
-		26037, // Corrupted Sarboth
-		26038, // Fallen Angel Eloule
-		26044, // Evil Magikus
-		26045, // Kerfaus
-		26046, // Milinaus
-		26047, // Sarkaus
-		26048, // Shimeus
-		26049, // Evil Kinigos
-		26055, // Ekidnas Statue Tarstan
-		26056, // Ekidnas Statue Abelsnif
-		26057, // Ekidnas Statue Kimesis
-		26058, // Ekidnas Statue Kathargon
-		26059, // Ekidnas Statue Pantasaus
-		26060, // Ekidnas Statue Ixignon
-		26066, // Enhanced Mahum Radium
-		26067, // Typheron
-		26068, // Timarga
-		26069, // Tycepton
-		26070, // Tiverga
-		26071, // Enhanced Mahum Supercium
-		26077, // Monster Laum
-		26078, // Monster Minotaur
-		26079, // Monster Sarga
-		26080, // Monster Hogliff
-		26081, // Monster Artarot
-		26082, // Monster Centaur
 		26131, // Isabella
-		25875, // Queen of Darkness
-		25696, // Taklacan
-		25697, // Torumba
-		25698, // Dopagen
-		25927, // Krogel
-		25928, // Tebot
-		25929, // Tegaffe
-		25930, // Thesakar
-		25931, // Theor
-		25932, // Transformed: Dartanion
-		25933, // Garden Patrol Captain
-		25937, // Spicula Negative
 		26137, // Mimir
 		26162, // Demon Worshipper Dorgon
 		26163, // Demon Worshipper Zarka
@@ -314,12 +81,11 @@ public final class LimitBarrier extends AbstractNpcAI
 	@Override
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final int hits = RAIDBOSS_HITS.getOrDefault(npc, 0);
-		
 		switch (event)
 		{
 			case "RESTORE_FULL_HP":
 			{
+				final int hits = RAIDBOSS_HITS.getOrDefault(npc, 0);
 				if (hits < HIT_COUNT)
 				{
 					if (player != null)

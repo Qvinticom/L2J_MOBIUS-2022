@@ -31,7 +31,7 @@ import ai.AbstractNpcAI;
 /**
  * Limit Barrier AI
  * @author RobikBobik<br>
- *         OK - Many Raid Bosses lvl 50 and higher from now on use β€�Limit Barrierβ€� skill when their HP reaches 90%, 60% and 30%.<br>
+ *         OK - Many Raid Bosses lvl 50 and higher from now on use "Limit Barrier" skill when their HP reaches 90%, 60% and 30%.<br>
  *         OK - 300 hits in 15 seconds are required to destroy the barrier. Amount of damage does not matter.<br>
  *         OK - If barrier destruction is failed, Boss restores full HP.<br>
  *         OK - Death Knight, who randomly appear after boss's death, also use Limit Barrier.<br>
@@ -43,7 +43,7 @@ import ai.AbstractNpcAI;
 public final class LimitBarrier extends AbstractNpcAI
 {
 	// NPCs
-	private static int[] RAID_BOSSES =
+	private static final int[] RAID_BOSSES =
 	{
 		29001, // Queen Ant
 		29006, // Core
@@ -149,12 +149,11 @@ public final class LimitBarrier extends AbstractNpcAI
 	@Override
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		final int hits = RAIDBOSS_HITS.getOrDefault(npc, 0);
-		
 		switch (event)
 		{
 			case "RESTORE_FULL_HP":
 			{
+				final int hits = RAIDBOSS_HITS.getOrDefault(npc, 0);
 				if (hits < HIT_COUNT)
 				{
 					if (player != null)
