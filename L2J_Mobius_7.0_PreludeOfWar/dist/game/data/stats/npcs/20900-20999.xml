@@ -1091,483 +1091,341 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20936" level="40" type="Monster" name="Tanor Silenos">
-		<!-- Confirmed CT2.5 -->
+	<npc id="20936" level="107" type="Monster" name="Tanor Silenos">
 		<parameters>
-			<param name="MoveAroundSocial" value="100" />
-			<param name="MoveAroundSocial1" value="50" />
-			<param name="MoveAroundSocial2" value="100" />
-			<param name="SoulShot" value="100" />
-			<param name="SoulShotRate" value="10" />
-			<param name="SpiritShot" value="100" />
-			<param name="SpiritShotRate" value="5" />
-			<param name="LongRangeGuardRate" value="5" />
-			<skill name="Buff" id="4103" level="2" />
+			<skill name="Skill01_ID" id="32827" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<equipment rhand="88" /> <!-- Morning Star -->
-		<acquire exp="929" sp="0" />
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="483.28089" hpRegen="4.5" mp="482.545" mpRegen="1.8" />
-			<attack physical="176.36077" magical="120.43155" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="156.55035" magical="114.55675" />
+		<equipment rhand="88" /> 
+		<acquire exp="1161546846" sp="1045294" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="192357.781605" hpRegen="9.5" mp="32075.861" mpRegen="3.3" />
+			<attack physical="62498" magical="53196" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5913" magical="3434" />
 			<speed>
 				<walk ground="34" />
 				<run ground="174" />
 			</speed>
-			<hitTime>460</hitTime>
-			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" canBeSown="true" />
-		<skillList>
-			<skill id="4103" level="2" /> <!-- NPC Ultimate Evasion -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skillList>
-		<shots shotChance="30" spiritChance="30" />
-		<exCrtEffect>false</exCrtEffect>
-		<sNpcPropHpRate>0.5</sNpcPropHpRate>
-		<ai clanHelpRange="300" aggroRange="450">
-			<clanList>
-				<clan>SILENOS</clan>
-			</clanList>
-		</ai>
+		<status attackable="true" />
 		<collision>
 			<radius normal="13" />
 			<height normal="29" />
 		</collision>
+		<skillList>
+			<skill id="32827" level="1" /> <!-- Critical Attack -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
 		<dropLists>
 			<drop>
-				<item id="57" min="11" max="26" chance="70" /> <!-- Adena -->
-				<item id="36521" min="1" max="1" chance="6.818" /> <!-- Iron Ore -->
-				<item id="36556" min="1" max="1" chance="2.666" /> <!-- Accessory Gem (Low-grade) -->
+				<item id="17432" min="1" max="1" chance="0.003" /> <!-- Eternal Gaiters -->
+				<item id="57" min="3134" max="7315" chance="70" /> <!-- Adena -->
+				<item id="36564" min="1" max="1" chance="0.03" /> <!-- Greater Synthetic Cokes -->
+				<item id="35464" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Gaiters (60%) -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="6.228" /> <!-- Thread -->
-				<item id="36880" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thread - Downgrade -->
+				<item id="36564" min="1" max="1" chance="0.3" /> <!-- Greater Synthetic Cokes -->
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20937" level="42" type="Monster" name="Tanor Silenos Solider">
-		<!-- Confirmed CT2.5 -->
+	<npc id="20937" level="107" type="Monster" name="Tanor Silenos Solider">
 		<parameters>
-			<param name="MoveAroundSocial" value="100" />
-			<param name="MoveAroundSocial1" value="50" />
-			<param name="MoveAroundSocial2" value="100" />
-			<param name="SoulShot" value="100" />
-			<param name="SoulShotRate" value="10" />
-			<param name="SpiritShot" value="100" />
-			<param name="SpiritShotRate" value="5" />
-			<param name="LongRangeGuardRate" value="5" />
-			<skill name="PhysicalSpecial" id="4073" level="4" />
+			<skill name="Skill01_ID" id="32827" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<equipment rhand="158" lhand="18" /> <!-- Tarbar / Leather Shield -->
-		<acquire exp="1214" sp="0" />
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="524.92128" hpRegen="5.5" mp="536.071" mpRegen="2.1" />
-			<attack physical="198.34591" magical="135.44454" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="164.88513" magical="120.65578" shield="82" shieldRate="20" />
+		<equipment rhand="158" lhand="18" />
+		<acquire exp="1161546846" sp="1045294" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="192357.781605" hpRegen="9.5" mp="32075.861" mpRegen="3.3" />
+			<attack physical="62498" magical="53196" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5913" magical="3434" />
 			<speed>
 				<walk ground="34" />
 				<run ground="174" />
 			</speed>
-			<hitTime>460</hitTime>
-			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" canBeSown="true" />
-		<skillList>
-			<skill id="4073" level="4" /> <!-- Stun -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skillList>
-		<shots shotChance="30" spiritChance="30" />
-		<exCrtEffect>false</exCrtEffect>
-		<sNpcPropHpRate>0.5</sNpcPropHpRate>
-		<ai clanHelpRange="300" aggroRange="450">
-			<clanList>
-				<clan>SILENOS</clan>
-			</clanList>
-		</ai>
+		<status attackable="true" />
 		<collision>
 			<radius normal="13" />
 			<height normal="29" />
 		</collision>
+		<skillList>
+			<skill id="32827" level="1" /> <!-- Critical Attack -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
 		<dropLists>
 			<drop>
-				<item id="57" min="15" max="34" chance="70" /> <!-- Adena -->
-				<item id="36526" min="1" max="1" chance="26.3" /> <!-- Fiber -->
-				<item id="36561" min="1" max="1" chance="0.75" /> <!-- Cokes -->
+				<item id="57" min="3134" max="7315" chance="70" /> <!-- Adena -->
+				<item id="36519" min="1" max="1" chance="1.58" /> <!-- Quality Leather -->
+				<item id="35342" min="1" max="1" chance="0.3" /> <!-- Eternal Boot Ingredient -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="8.144" /> <!-- Thread -->
-				<item id="36880" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thread - Downgrade -->
+				<item id="36549" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment (High-grade) -->
 			</spoil>
 		</dropLists>
+		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true">
+			<clanList>
+				<clan>SILENOS</clan>
+			</clanList>
+		</ai>
 	</npc>
-	<npc id="20938" level="44" type="Monster" name="Tanor Silenos Scout">
-		<!-- Confirmed CT2.5 -->
+	<npc id="20938" level="107" type="Monster" name="Tanor Silenos Scout">
 		<parameters>
-			<param name="MoveAroundSocial" value="100" />
-			<param name="MoveAroundSocial1" value="50" />
-			<param name="MoveAroundSocial2" value="100" />
-			<param name="SoulShot" value="100" />
-			<param name="SoulShotRate" value="10" />
-			<param name="SpiritShot" value="100" />
-			<param name="SpiritShotRate" value="5" />
-			<param name="LongRangeGuardRate" value="5" />
-			<skill name="PhysicalSpecial" id="4032" level="4" />
+			<skill name="Skill01_ID" id="32827" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<equipment rhand="5" /> <!-- Mace -->
-		<acquire exp="1333" sp="0" />
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="569.08533" hpRegen="5.5" mp="589.597" mpRegen="2.1" />
-			<attack physical="222.23112" magical="151.75505" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="173.43552" magical="126.91259" />
+		<equipment rhand="5" /> 
+		<acquire exp="1161546846" sp="1045294" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="192357.781605" hpRegen="9.5" mp="32075.861" mpRegen="3.3" />
+			<attack physical="62498" magical="53196" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5913" magical="3434" />
 			<speed>
 				<walk ground="34" />
 				<run ground="174" />
 			</speed>
-			<hitTime>460</hitTime>
-			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" canBeSown="true" />
-		<skillList>
-			<skill id="4032" level="4" /> <!-- NPC Strike -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4071" level="5" /> <!-- Bow/ Crossbow Resistance -->
-			<skill id="4273" level="3" /> <!-- Dagger/ Rapier Resistance -->
-			<skill id="4439" level="2" /> <!-- Greater Hold Resistance -->
-		</skillList>
-		<shots shotChance="30" spiritChance="30" />
-		<exCrtEffect>false</exCrtEffect>
-		<sNpcPropHpRate>0.5</sNpcPropHpRate>
-		<ai clanHelpRange="300" aggroRange="450">
-			<clanList>
-				<clan>SILENOS</clan>
-			</clanList>
-		</ai>
+		<status attackable="true" />
 		<collision>
 			<radius normal="13" />
 			<height normal="29" />
 		</collision>
+		<skillList>
+			<skill id="32827" level="1" /> <!-- Critical Attack -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
 		<dropLists>
 			<drop>
-				<item id="57" min="16" max="38" chance="70" /> <!-- Adena -->
-				<item id="36516" min="1" max="1" chance="24.28" /> <!-- Worn Leather -->
-				<item id="36536" min="1" max="1" chance="6.424" /> <!-- Worn Leather Braid -->
+				<item id="57" min="3134" max="7315" chance="70" /> <!-- Adena -->
+				<item id="35343" min="1" max="1" chance="0.3" /> <!-- Eternal Shield Ingredient -->
+				<item id="36539" min="1" max="1" chance="0.3" /> <!-- Quality Leather Braid -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="9.016" /> <!-- Thread -->
-				<item id="36880" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thread - Downgrade -->
+				<item id="36554" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (High-grade) -->
 			</spoil>
 		</dropLists>
+		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true">
+			<clanList>
+				<clan>SILENOS</clan>
+			</clanList>
+		</ai>
 	</npc>
-	<npc id="20939" level="46" type="Monster" name="Tanor Silenos Warrior">
-		<!-- Confirmed CT2.5 -->
-		<parameters>
-			<param name="MoveAroundSocial" value="60" />
-			<param name="MoveAroundSocial1" value="50" />
-			<param name="MoveAroundSocial2" value="60" />
-			<minions name="Privates">
-				<npc id="20936" count="1" respawnTime="300" weightPoint="1" />
-				<npc id="20937" count="1" respawnTime="300" weightPoint="1" />
-				<npc id="20938" count="1" respawnTime="300" weightPoint="1" />
-			</minions>
-			<param name="SoulShot" value="100" />
-			<param name="SoulShotRate" value="10" />
-			<param name="SpiritShot" value="100" />
-			<param name="SpiritShotRate" value="5" />
-			<param name="LongRangeGuardRate" value="5" />
-			<skill name="PhysicalSpecial" id="4032" level="4" />
-		</parameters>
+	<npc id="20939" level="108" type="Monster" name="Tanor Silenos Warrior">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<equipment rhand="160" /> <!-- Battle Axe -->
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<attack physical="248.0526" magical="169.38777" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="182.18816" magical="133.31739" />
+		<equipment rhand="160" /> 
+		<acquire exp="1199922336" sp="1079854" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="209844.221745" hpRegen="9.5" mp="32075.861" mpRegen="3.3" />
+			<attack physical="65855" magical="56801" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6269" magical="3641" />
 			<speed>
 				<walk ground="36" />
 				<run ground="174" />
 			</speed>
-			<hitTime>390</hitTime>
-			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" canBeSown="true" />
-		<skillList>
-			<skill id="4032" level="4" /> <!-- NPC Strike -->
-		</skillList>
-		<shots shotChance="30" spiritChance="30" />
-		<exCrtEffect>false</exCrtEffect>
-		<sNpcPropHpRate>0.5</sNpcPropHpRate>
-		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clanList>
-				<clan>SILENOS</clan>
-			</clanList>
-		</ai>
+		<status attackable="true" />
 		<collision>
 			<radius normal="13" />
 			<height normal="31" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="3296" max="7687" chance="70" /> <!-- Adena -->
+				<item id="36529" min="1" max="1" chance="0.75" /> <!-- Quality Fiber -->
+				<item id="35329" min="1" max="1" chance="0.3" /> <!-- Helios Slasher Fragment -->
+				<item id="35465" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Gauntlets (60%) -->
+			</drop>
+			<spoil>
+				<item id="36559" min="1" max="1" chance="0.75" /> <!-- Accessory Gem (High-grade) -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="20940" level="48" type="Monster" name="Tanor Silenos Shaman">
-		<!-- Confirmed CT2.5 -->
-		<parameters>
-			<param name="MoveAroundSocial" value="100" />
-			<param name="MoveAroundSocial1" value="60" />
-			<param name="MoveAroundSocial2" value="100" />
-			<param name="SoulShot" value="100" />
-			<param name="SoulShotRate" value="10" />
-			<param name="SpiritShot" value="100" />
-			<param name="SpiritShotRate" value="5" />
-			<param name="LongRangeGuardRate" value="5" />
-			<skill name="MagicHeal" id="4065" level="4" />
-			<skill name="DeBuff" id="4037" level="2" />
-		</parameters>
+	<npc id="20940" level="107" type="Monster" name="Tanor Silenos Shaman">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<equipment rhand="9" /> <!-- Cedar Staff -->
-		<acquire exp="1810" sp="0" />
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="661.829835" hpRegen="5.5" mp="699.082" mpRegen="2.1" />
-			<attack physical="275.82705" magical="188.35412" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="191.12803" magical="139.8592" />
+		<equipment rhand="9" /> 
+		<acquire exp="1138774785" sp="1024800" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="192357.781605" hpRegen="9.5" mp="32075.861" mpRegen="3.3" />
+			<attack physical="62498" magical="53196" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5913" magical="3434" />
 			<speed>
 				<walk ground="29" />
 				<run ground="174" />
 			</speed>
-			<hitTime>220</hitTime>
-			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" canBeSown="true" />
-		<skillList>
-			<skill id="4037" level="2" /> <!-- Decrease P. Atk. -->
-			<skill id="4065" level="4" /> <!-- NPC Heal -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4095" level="1" /> <!-- Damage Shield -->
-			<skill id="4438" level="2" /> <!-- Greater Sleep Resistance -->
-		</skillList>
-		<shots shotChance="30" spiritChance="30" />
-		<exCrtEffect>false</exCrtEffect>
-		<sNpcPropHpRate>0.5</sNpcPropHpRate>
-		<ai type="BALANCED" clanHelpRange="300" aggroRange="450">
-			<clanList>
-				<clan>SILENOS</clan>
-			</clanList>
-		</ai>
+		<status attackable="true" />
 		<collision>
 			<radius normal="13" />
 			<height normal="32" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
 		<dropLists>
 			<drop>
-				<item id="57" min="27" max="64" chance="70" /> <!-- Adena -->
-				<item id="36526" min="1" max="1" chance="46.99" /> <!-- Fiber -->
-				<item id="36546" min="1" max="1" chance="2.223" /> <!-- Weapon Fragment (Low-grade) -->
+				<item id="57" min="3701" max="8640" chance="70" /> <!-- Adena -->
+				<item id="35353" min="1" max="1" chance="0.3" /> <!-- Eternal Shoe Ingredient -->
+				<item id="36530" min="1" max="1" chance="0.075" /> <!-- Exquisite Fiber -->
+				<item id="36535" min="1" max="1" chance="0.03" /> <!-- Quality Braid -->
+				<item id="35477" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Shoes (60%) -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="15.02" /> <!-- Thread -->
-				<item id="36880" min="1" max="1" chance="0.003" /> <!-- Recipe: Thread - Downgrade -->
+				<item id="36550" min="1" max="1" chance="0.03" /> <!-- Weapon Fragment (Top-grade) -->
+				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20941" level="50" type="Monster" name="Tanor Silenos Chieftain">
-		<!-- Confirmed CT2.5 -->
-		<parameters>
-			<param name="MoveAroundSocial" value="90" />
-			<param name="MoveAroundSocial1" value="60" />
-			<param name="MoveAroundSocial2" value="90" />
-			<minions name="Privates">
-				<npc id="20940" count="3" respawnTime="0" weightPoint="1" />
-			</minions>
-			<param name="SoulShot" value="100" />
-			<param name="SoulShotRate" value="10" />
-			<param name="SpiritShot" value="100" />
-			<param name="SpiritShotRate" value="5" />
-			<param name="LongRangeGuardRate" value="5" />
-			<skill name="PhysicalSpecial" id="4032" level="5" />
-		</parameters>
+	<npc id="20941" level="108" type="Monster" name="Tanor Silenos Chieftain" title="Lord of Tanor Canyon">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<equipment rhand="75" /> <!-- Caliburs -->
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<attack physical="305.54906" magical="208.6504" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="200.23844" magical="146.5258" />
+		<equipment rhand="75" /> 
+		<acquire exp="8399456352" sp="7559439" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="1049220.47781" hpRegen="9.5" mp="32075.861" mpRegen="3.3" />
+			<attack physical="65855" magical="56801" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6269" magical="3641" />
 			<speed>
 				<walk ground="27" />
 				<run ground="174" />
 			</speed>
-			<hitTime>390</hitTime>
-			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" canBeSown="true" />
-		<skillList>
-			<skill id="4032" level="5" /> <!-- NPC Strike -->
-		</skillList>
-		<shots shotChance="30" spiritChance="30" />
-		<exCrtEffect>false</exCrtEffect>
-		<sNpcPropHpRate>0.5</sNpcPropHpRate>
-		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clanList>
-				<clan>SILENOS</clan>
-			</clanList>
-		</ai>
+		<status attackable="true" />
 		<collision>
-			<radius normal="13" grown="15.6" />
-			<height normal="31.5" grown="38.1" />
+			<radius normal="23.4" />
+			<height normal="59.1" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="80763" min="1" max="1" chance="100" /> <!-- Elite Monster Reward Box -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="20942" level="43" type="Monster" name="Nightmare Guide">
-		<!-- Confirmed CT2.5 -->
+	<npc id="20942" level="107" type="Monster" name="Nightmare Guide">
 		<parameters>
-			<param name="MoveAroundSocial" value="0" />
-			<param name="MoveAroundSocial1" value="0" />
-			<param name="MoveAroundSocial2" value="0" />
-			<param name="SoulShot" value="100" />
-			<param name="SoulShotRate" value="10" />
-			<param name="SpiritShot" value="100" />
-			<param name="SpiritShotRate" value="5" />
-			<param name="LongRangeGuardRate" value="5" />
-			<skill name="Buff" id="4099" level="2" />
+			<skill name="Skill01_ID" id="32823" level="1" />
+			<skill name="Skill02_ID" id="32824" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+			<param name="Skill02_Probablity" value="2000" />
 		</parameters>
 		<race>BEAST</race>
-		<sex>FEMALE</sex>
-		<acquire exp="886" sp="0" />
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="547.003305" hpRegen="5.5" mp="562.834" mpRegen="2.1" />
-			<attack physical="210.04832" magical="143.43577" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="169.13417" magical="123.76505" />
+		<sex>MALE</sex>
+		<acquire exp="1161546846" sp="1045294" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="192357.781605" hpRegen="9.5" mp="32075.861" mpRegen="3.3" />
+			<attack physical="62498" magical="53196" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5913" magical="3434" />
 			<speed>
 				<walk ground="60" />
 				<run ground="174" />
 			</speed>
-			<hitTime>650</hitTime>
-			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" canBeSown="true" />
-		<skillList>
-			<skill id="4099" level="2" /> <!-- NPC Berserk -->
-			<skill id="4416" level="3" /> <!-- Beast -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-		</skillList>
-		<shots shotChance="30" spiritChance="30" />
-		<exCrtEffect>false</exCrtEffect>
-		<sNpcPropHpRate>0.5</sNpcPropHpRate>
-		<ai clanHelpRange="300" aggroRange="450" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="10" />
 			<height normal="42" />
 		</collision>
+		<skillList>
+			<skill id="32823" level="1" /> <!-- Howl -->
+			<skill id="32824" level="1" /> <!-- Magical Attack -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
 		<dropLists>
 			<drop>
-				<item id="57" min="11" max="25" chance="70" /> <!-- Adena -->
-				<item id="36541" min="1" max="1" chance="6.012" /> <!-- Steel Wire -->
+				<item id="57" min="3134" max="7315" chance="70" /> <!-- Adena -->
+				<item id="36534" min="1" max="1" chance="0.75" /> <!-- Durable Braid -->
+				<item id="35341" min="1" max="1" chance="0.3" /> <!-- Eternal Gauntlet Ingredient -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="5.919" /> <!-- Thread -->
-				<item id="36880" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thread - Downgrade -->
+				<item id="36564" min="1" max="1" chance="0.3" /> <!-- Greater Synthetic Cokes -->
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20943" level="45" type="Monster" name="Nightmare Watchman">
-		<!-- Confirmed CT2.5 -->
+	<npc id="20943" level="108" type="Monster" name="Nightmare Watchman">
 		<parameters>
-			<param name="MoveAroundSocial" value="0" />
-			<param name="MoveAroundSocial1" value="0" />
-			<param name="MoveAroundSocial2" value="0" />
-			<param name="SoulShot" value="100" />
-			<param name="SoulShotRate" value="10" />
-			<param name="SpiritShot" value="100" />
-			<param name="SpiritShotRate" value="5" />
-			<param name="LongRangeGuardRate" value="5" />
-			<skill name="DDMagic" id="4100" level="4" />
-			<skill name="MagicHeal" id="4097" level="4" />
+			<skill name="Skill01_ID" id="32823" level="1" />
+			<skill name="Skill02_ID" id="32824" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+			<param name="Skill02_Probablity" value="2000" />
 		</parameters>
 		<race>BEAST</race>
-		<sex>FEMALE</sex>
-		<acquire exp="1274" sp="0" />
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="591.79827" hpRegen="5.5" mp="616.36" mpRegen="2.1" />
-			<attack physical="234.89829" magical="160.40508" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="177.78746" magical="130.09715" />
+		<sex>MALE</sex>
+		<acquire exp="1199922336" sp="1079854" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="209844.221745" hpRegen="9.5" mp="32075.861" mpRegen="3.3" />
+			<attack physical="65855" magical="56801" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6269" magical="3641" />
 			<speed>
 				<walk ground="60" />
 				<run ground="174" />
 			</speed>
-			<hitTime>650</hitTime>
-			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" canBeSown="true" />
-		<skillList>
-			<skill id="4097" level="4" /> <!-- NPC Chant of Life -->
-			<skill id="4100" level="4" /> <!-- NPC Prominence -->
-			<skill id="4416" level="3" /> <!-- Beast -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-		</skillList>
-		<shots shotChance="30" spiritChance="30" />
-		<exCrtEffect>false</exCrtEffect>
-		<sNpcPropHpRate>0.5</sNpcPropHpRate>
-		<ai clanHelpRange="300" aggroRange="450" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="10" />
 			<height normal="42" />
 		</collision>
+		<skillList>
+			<skill id="32823" level="1" /> <!-- Howl -->
+			<skill id="32824" level="1" /> <!-- Magical Attack -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
 		<dropLists>
 			<drop>
-				<item id="57" min="15" max="36" chance="70" /> <!-- Adena -->
-				<item id="36556" min="1" max="1" chance="3.755" /> <!-- Accessory Gem (Low-grade) -->
-				<item id="36546" min="1" max="1" chance="1.187" /> <!-- Weapon Fragment (Low-grade) -->
+				<item id="17434" min="1" max="1" chance="0.0075" /> <!-- Eternal Boots -->
+				<item id="57" min="3296" max="7687" chance="70" /> <!-- Adena -->
+				<item id="36524" min="1" max="1" chance="0.3" /> <!-- Orichalcum -->
+				<item id="35466" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Boots (60%) -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="8.54" /> <!-- Thread -->
-				<item id="36880" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thread - Downgrade -->
+				<item id="36549" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment (High-grade) -->
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="20944" level="47" type="Monster" name="Nightmare Lord">
-		<!-- Confirmed CT2.5 -->
-		<parameters>
-			<param name="MoveAroundSocial" value="110" />
-			<param name="MoveAroundSocial1" value="110" />
-			<param name="MoveAroundSocial2" value="110" />
-			<minions name="Privates">
-				<npc id="20942" count="1" respawnTime="0" weightPoint="1" />
-				<npc id="20943" count="2" respawnTime="0" weightPoint="1" />
-			</minions>
-			<param name="SoulShot" value="100" />
-			<param name="SoulShotRate" value="10" />
-			<param name="SpiritShot" value="100" />
-			<param name="SpiritShotRate" value="5" />
-			<param name="LongRangeGuardRate" value="5" />
-			<skill name="DDMagic" id="4087" level="4" />
-		</parameters>
+	<npc id="20944" level="108" type="Monster" name="Nightmare Lord" title="Watcher of Tanor Canyon">
 		<race>DEMONIC</race>
-		<sex>FEMALE</sex>
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<attack physical="261.69549" magical="178.7041" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="186.63569" magical="136.5719" />
+		<sex>MALE</sex>
+		<acquire exp="1176396048" sp="1058742" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="209844.221745" hpRegen="9.5" mp="32075.861" mpRegen="3.3" />
+			<attack physical="65855" magical="56801" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6269" magical="3641" />
 			<speed>
 				<walk ground="60" />
 				<run ground="174" />
 			</speed>
-			<hitTime>840</hitTime>
-			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" canBeSown="true" />
-		<skillList>
-			<skill id="4087" level="4" /> <!-- NPC Blaze -->
-		</skillList>
-		<shots shotChance="30" spiritChance="30" />
-		<exCrtEffect>false</exCrtEffect>
-		<sNpcPropHpRate>0.5</sNpcPropHpRate>
-		<ai aggroRange="450" clanHelpRange="300" isAggressive="true" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="20" />
 			<height normal="75" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
 	</npc>
 	<npc id="20954" level="60" type="Monster" name="Starving Corpse">
 		<!-- Confirmed CT2.5 -->
