@@ -4245,20 +4245,12 @@ public class PlayerInstance extends Playable
 	@Override
 	public int getAllyId()
 	{
-		if (_clan == null)
-		{
-			return 0;
-		}
-		return _clan.getAllyId();
+		return _clan == null ? 0 : _clan.getAllyId();
 	}
 	
 	public int getAllyCrestId()
 	{
-		if ((_clanId == 0) || (_clan == null) || (_clan.getAllyId() == 0))
-		{
-			return 0;
-		}
-		return _clan.getAllyCrestId();
+		return getAllyId() == 0 ? 0 : _clan.getAllyCrestId();
 	}
 	
 	/**

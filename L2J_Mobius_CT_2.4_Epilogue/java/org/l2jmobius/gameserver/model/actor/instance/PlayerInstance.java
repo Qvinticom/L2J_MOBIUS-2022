@@ -4315,7 +4315,7 @@ public class PlayerInstance extends Playable
 	
 	public int getAllyCrestId()
 	{
-		return (_clanId == 0) || (_clan.getAllyId() == 0) ? 0 : _clan.getAllyCrestId();
+		return getAllyId() == 0 ? 0 : _clan.getAllyCrestId();
 	}
 	
 	/**

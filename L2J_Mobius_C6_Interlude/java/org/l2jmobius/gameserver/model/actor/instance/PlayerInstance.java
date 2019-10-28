@@ -5588,34 +5588,16 @@ public class PlayerInstance extends Playable
 	}
 	
 	/**
-	 * Return the Alliance Identifier of the PlayerInstance.<BR>
-	 * <BR>
-	 * @return the ally id
+	 * @return the Alliance Identifier of the PlayerInstance.
 	 */
 	public int getAllyId()
 	{
-		if (_clan == null)
-		{
-			return 0;
-		}
-		return _clan.getAllyId();
+		return _clan == null ? 0 : _clan.getAllyId();
 	}
 	
-	/**
-	 * Gets the ally crest id.
-	 * @return the ally crest id
-	 */
 	public int getAllyCrestId()
 	{
-		if ((getClanId() == 0) || (getClan() == null))
-		{
-			return 0;
-		}
-		if (getClan().getAllyId() == 0)
-		{
-			return 0;
-		}
-		return getClan().getAllyCrestId();
+		return getAllyId() == 0 ? 0 : _clan.getAllyCrestId();
 	}
 	
 	/**
