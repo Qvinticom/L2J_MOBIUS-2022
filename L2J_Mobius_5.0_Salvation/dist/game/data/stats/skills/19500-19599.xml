@@ -685,7 +685,7 @@
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PhysicalSkillPower">
+			<effect name="MagicalSkillPower">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1857,7 +1857,7 @@
 			<value level="4">99</value>
 		</magicLvl>
 		<effects>
-		<effect name="TriggerSkillByDamage">
+			<effect name="TriggerSkillByDamage">
 				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
@@ -1872,7 +1872,7 @@
 				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
-				<chance>30</chance>
+				<chance>6</chance>
 				<targetType>MY_PARTY</targetType>
 				<minDamage>1</minDamage>
 				<allowWeapons>ALL</allowWeapons>

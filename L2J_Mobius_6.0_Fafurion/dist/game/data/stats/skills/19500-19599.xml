@@ -1905,7 +1905,7 @@
 		</effects>
 	</skill>
 	<skill id="19566" toLevel="4" name="Grand Shillien Shadow">
-		<!-- P. Atk. +$s1, Shield Def. +$s2, and Attack Attribute +$s3, and activates Shillien Shadow on the caster. $s4 chance to activate Shilen's Presence on allies. -->
+		<!-- P. Atk. +2%, Shield Def. +5%, and Attack Attribute +15, and activates Shillien Shadow on the caster. 6% chance to activate Shilen's Presence on allies. -->
 		<icon>icon.skill19560</icon>
 		<operateType>P</operateType>
 		<mpConsume>8</mpConsume>
@@ -1916,7 +1916,7 @@
 			<value level="4">99</value>
 		</magicLvl>
 		<effects>
-		<effect name="TriggerSkillByDamage">
+			<effect name="TriggerSkillByDamage">
 				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
@@ -1931,7 +1931,7 @@
 				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
-				<chance>30</chance>
+				<chance>6</chance>
 				<targetType>MY_PARTY</targetType>
 				<minDamage>1</minDamage>
 				<allowWeapons>ALL</allowWeapons>
