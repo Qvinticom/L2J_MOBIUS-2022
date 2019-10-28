@@ -103,74 +103,98 @@
 	<item id="80908" name="Lv. 95 Achievement Reward Box" type="EtcItem">
 		<!-- A box to congratulate you for reaching Lv. 95. Obtain Talismans, bracelets, and consumables. -->
 		<set name="icon" val="icon.ev_2018_xmas_box" />
-		<set name="default_action" val="PEEL" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
+		<set name="weight" val="0" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="33794" min="30000" max="30000" chance="100" /> <!-- Blessed R-grade Spiritshot -->
+			<item id="33640" min="10" max="10" chance="100" /> <!-- Blessed Scroll of Escape -->
+			<item id="48072" min="1" max="1" chance="100" /> <!-- Elementary Seed Bracelet -->
+			<item id="48124" min="1" max="1" chance="100" /> <!-- Fairy Agathion Charm -->
+			<item id="47736" min="15" max="15" chance="100" /> <!-- Pa'agrio's Blessing - Might -->
+			<item id="33780" min="30000" max="30000" chance="100" /> <!-- Soulshot (R-grade) -->
+			<item id="34985" min="1" max="1" chance="100" /> <!-- Talisman - Destruction -->
+			<item id="39634" min="1" max="1" chance="100" /> <!-- Venir's Talisman Lv. 1 -->
+		</capsuled_items>
 	</item>
 	<item id="80909" name="Lv. 99 Achievement Reward Box" type="EtcItem">
 		<!-- A box to congratulate you for reaching Lv. 99. Obtain Brooches, gems, and consumables. -->
 		<set name="icon" val="icon.ev_2018_xmas_box" />
-		<set name="default_action" val="PEEL" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
+		<set name="weight" val="0" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="33794" min="30000" max="30000" chance="100" /> <!-- Blessed R-grade Spiritshot -->
+			<item id="33640" min="10" max="10" chance="100" /> <!-- Blessed Scroll of Escape -->
+			<item id="38891" min="1" max="1" chance="100" /> <!-- Diamond Lv. 2 -->
+			<item id="38881" min="1" max="1" chance="100" /> <!-- Emerald Lv. 2 -->
+			<item id="38768" min="1" max="1" chance="100" /> <!-- La Vie En Rose's Brooch Lv. 1 -->
+			<item id="47736" min="25" max="25" chance="100" /> <!-- Pa'agrio's Blessing - Might -->
+			<item id="38896" min="1" max="1" chance="100" /> <!-- Pearl Lv. 2 -->
+			<item id="33780" min="30000" max="30000" chance="100" /> <!-- Soulshot (R-grade) -->
+		</capsuled_items>
 	</item>
 	<item id="80910" name="Lv. 100 Achievement Reward Box" type="EtcItem">
 		<!-- A box to congratulate you for reaching Lv. 100. Obtain Belts and consumables. -->
 		<set name="icon" val="icon.ev_2018_xmas_box" />
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="80911" name="+5 Circlet of Authority Box" type="EtcItem">
-		<!-- Obtain a +5 Circlet of Authority. -->
-		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
+		<set name="weight" val="0" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="33794" min="30000" max="30000" chance="100" /> <!-- Blessed R-grade Spiritshot -->
+			<item id="33640" min="10" max="10" chance="100" /> <!-- Blessed Scroll of Escape -->
+			<item id="47044" min="1" max="1" chance="100" /> <!-- Commando Belt -->
+			<item id="48848" min="25" max="35" chance="100" /> <!-- Freya's Ice Rose -->
+			<item id="33780" min="30000" max="30000" chance="100" /> <!-- Soulshot (R-grade) -->
+		</capsuled_items>
 	</item>
-	<item id="80912" name="+5 Circlet of Foresight Box" type="EtcItem">
-		<!-- Obtain a +5 Circlet of Foresight. -->
+	<item id="80911" name="+5 Warrior's Circlet Box" type="EtcItem">
+		<!-- Double-click to obtain +5 Warrior's Circlet. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="0" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48202" min="1" max="1" minEnchant="5" maxEnchant="5" chance="100" /> <!-- Warrior's Circlet -->
+		</capsuled_items>
 	</item>
-	<item id="80913" name="+5 Circlet of Grace Box" type="EtcItem">
-		<!-- Obtain a +5 Circlet of Grace. -->
+	<item id="80912" name="+5 Wizard's Circlet Box" type="EtcItem">
+		<!-- Double-click to obtain +5 Wizard's Circlet. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="0" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48205" min="1" max="1" minEnchant="5" maxEnchant="5" chance="100" /> <!-- Wizard's Circlet -->
+		</capsuled_items>
+	</item>
+	<item id="80913" name="+5 Knight's Circlet Box" type="EtcItem">
+		<!-- Double-click to obtain +5 Knight's Circlet. -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="0" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="48208" min="1" max="1" minEnchant="5" maxEnchant="5" chance="100" /> <!-- Knight's Circlet -->
+		</capsuled_items>
 	</item>
 	<item id="80914" name="Red Libra Request - Ivory Tower Crater" type="EtcItem">
 		<!-- A request issued by the Red Libra Merchants to eliminate monsters in Ivory Tower Crater. Double-click to use the item and accept the request. Can be played once a day. -->
