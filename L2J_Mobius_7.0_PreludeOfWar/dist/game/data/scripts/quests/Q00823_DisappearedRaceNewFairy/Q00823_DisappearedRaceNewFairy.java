@@ -16,6 +16,7 @@
  */
 package quests.Q00823_DisappearedRaceNewFairy;
 
+import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.enums.Faction;
 import org.l2jmobius.gameserver.enums.QuestType;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -25,9 +26,9 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
 
 /**
- * Disappeared Race, New Fairy (00823)
+ * Disappeared Race, New Fairy (823)
  * @URL https://l2wiki.com/Disappeared_Race,_New_Fairy
- * @author Gigi / Stayway rework rewards
+ * @author Dmitri
  */
 public class Q00823_DisappearedRaceNewFairy extends Quest
 {
@@ -46,7 +47,7 @@ public class Q00823_DisappearedRaceNewFairy extends Quest
 		23573, // Nymph Cosmos
 		23578 // Nymph Guardian
 	};
-	// Item's
+	// Items
 	private static final int NYMPH_STAMEN = 46258;
 	private static final int BASIC_SUPPLY_BOX = 47178;
 	private static final int INTERMEDIATE_SUPPLY_BOX = 47179;
@@ -79,44 +80,152 @@ public class Q00823_DisappearedRaceNewFairy extends Quest
 			case "30747-02.htm":
 			case "30747-03.htm":
 			case "30747-04.htm":
-			case "30747-09.html":
+			case "30747-04a.htm":
+			case "30747-04b.htm":
+			case "30747-06.html":
+			case "30747-06a.html":
+			case "30747-06b.html":
 			{
 				htmltext = event;
 				break;
 			}
-			case "30747-05.htm":
+			case "select_mission":
 			{
 				qs.startQuest();
+				if ((player.getFactionLevel(Faction.MOTHER_TREE_GUARDIANS) >= 1) && (player.getFactionLevel(Faction.MOTHER_TREE_GUARDIANS) < 2))
+				{
+					htmltext = "30747-04a.htm";
+					break;
+				}
+				else if (player.getFactionLevel(Faction.MOTHER_TREE_GUARDIANS) >= 2)
+				{
+					htmltext = "30747-04b.htm";
+					break;
+				}
+				htmltext = "30747-04.htm";
+				break;
+			}
+			case "return":
+			{
+				if ((player.getFactionLevel(Faction.MOTHER_TREE_GUARDIANS) >= 1) && (player.getFactionLevel(Faction.MOTHER_TREE_GUARDIANS) < 2))
+				{
+					htmltext = "30747-04a.htm";
+					break;
+				}
+				else if (player.getFactionLevel(Faction.MOTHER_TREE_GUARDIANS) >= 2)
+				{
+					htmltext = "30747-04b.htm";
+					break;
+				}
+				htmltext = "30747-04.htm";
+				break;
+			}
+			case "30747-07.html":
+			{
+				qs.setCond(2, true);
+				htmltext = event;
+				break;
+			}
+			case "30747-07a.html":
+			{
+				qs.setCond(3, true);
+				htmltext = event;
+				break;
+			}
+			case "30747-07b.html":
+			{
+				qs.setCond(4, true);
 				htmltext = event;
 				break;
 			}
 			case "30747-10.html":
 			{
-				if (qs.isCond(2))
+				final int chance = getRandom(100);
+				switch (qs.getCond())
 				{
-					final int factionLevel = player.getFactionLevel(Faction.MOTHER_TREE_GUARDIANS);
-					if (factionLevel == 0)
+					case 5:
 					{
-						addFactionPoints(player, Faction.MOTHER_TREE_GUARDIANS, 100);
-						giveItems(player, BASIC_SUPPLY_BOX, 1);
-						addExpAndSp(player, 5536944000L, 13288590);
+						if ((getQuestItemsCount(player, NYMPH_STAMEN) == 200) && (player.getLevel() >= MIN_LEVEL))
+						{
+							if (chance < 2)
+							{
+								giveItems(player, ADVANCED_SUPPLY_BOX, 1);
+							}
+							else if (chance < 20)
+							{
+								giveItems(player, INTERMEDIATE_SUPPLY_BOX, 1);
+							}
+							else if (chance < 100)
+							{
+								giveItems(player, BASIC_SUPPLY_BOX, 1);
+							}
+							addExpAndSp(player, 5_536_944_000L, 13_288_590);
+							addFactionPoints(player, Faction.MOTHER_TREE_GUARDIANS, 100);
+							qs.exitQuest(QuestType.DAILY, true);
+							htmltext = event;
+						}
+						else
+						{
+							htmltext = getNoQuestLevelRewardMsg(player);
+						}
+						break;
 					}
-					else if (factionLevel == 1)
+					case 6:
 					{
-						addFactionPoints(player, Faction.MOTHER_TREE_GUARDIANS, 200);
-						giveItems(player, INTERMEDIATE_SUPPLY_BOX, 1);
-						addExpAndSp(player, 11073888000L, 26577180);
+						if ((getQuestItemsCount(player, NYMPH_STAMEN) == 400) && (player.getLevel() >= MIN_LEVEL))
+						{
+							if (chance < 2)
+							{
+								giveItems(player, ADVANCED_SUPPLY_BOX, 1);
+							}
+							else if (chance < 20)
+							{
+								giveItems(player, BASIC_SUPPLY_BOX, 1);
+							}
+							else if (chance < 100)
+							{
+								giveItems(player, INTERMEDIATE_SUPPLY_BOX, 1);
+							}
+							addExpAndSp(player, 11_073_888_000L, 26_577_180);
+							addFactionPoints(player, Faction.MOTHER_TREE_GUARDIANS, 200);
+							qs.exitQuest(QuestType.DAILY, true);
+							htmltext = event;
+						}
+						else
+						{
+							htmltext = getNoQuestLevelRewardMsg(player);
+						}
+						break;
 					}
-					else if (factionLevel > 1)
+					case 7:
 					{
-						addFactionPoints(player, Faction.MOTHER_TREE_GUARDIANS, 300);
-						giveItems(player, ADVANCED_SUPPLY_BOX, 1);
-						addExpAndSp(player, 16610832000L, 39865770);
+						if ((getQuestItemsCount(player, NYMPH_STAMEN) == 600) && (player.getLevel() >= MIN_LEVEL))
+						{
+							if (chance < 2)
+							{
+								giveItems(player, BASIC_SUPPLY_BOX, 1);
+							}
+							else if (chance < 20)
+							{
+								giveItems(player, INTERMEDIATE_SUPPLY_BOX, 1);
+							}
+							else if (chance < 100)
+							{
+								giveItems(player, ADVANCED_SUPPLY_BOX, 1);
+							}
+							addExpAndSp(player, 16_610_832_000L, 39_865_770);
+							addFactionPoints(player, Faction.MOTHER_TREE_GUARDIANS, 300);
+							qs.exitQuest(QuestType.DAILY, true);
+							htmltext = event;
+						}
+						else
+						{
+							htmltext = getNoQuestLevelRewardMsg(player);
+						}
+						break;
 					}
-					qs.exitQuest(QuestType.DAILY, true);
-					htmltext = event;
-					break;
 				}
+				break;
 			}
 		}
 		return htmltext;
@@ -130,33 +239,64 @@ public class Q00823_DisappearedRaceNewFairy extends Quest
 		
 		switch (qs.getState())
 		{
+			case State.CREATED:
+			{
+				htmltext = "30747-01.htm";
+			}
+			case State.STARTED:
+			{
+				switch (qs.getCond())
+				{
+					case 1:
+					{
+						if ((player.getFactionLevel(Faction.MOTHER_TREE_GUARDIANS) >= 1) && (player.getFactionLevel(Faction.MOTHER_TREE_GUARDIANS) < 2))
+						{
+							htmltext = "30747-04a.htm";
+							break;
+						}
+						else if (player.getFactionLevel(Faction.MOTHER_TREE_GUARDIANS) >= 2)
+						{
+							htmltext = "30747-04b.htm";
+							break;
+						}
+						htmltext = "30747-04.htm";
+						break;
+					}
+					case 2:
+					{
+						htmltext = "30747-08.html";
+						break;
+					}
+					case 3:
+					{
+						htmltext = "30747-08a.html";
+						break;
+					}
+					case 4:
+					{
+						htmltext = "30747-08b.html";
+						break;
+					}
+					case 5:
+					case 6:
+					case 7:
+					{
+						htmltext = "30747-09.html";
+						break;
+					}
+				}
+				break;
+			}
 			case State.COMPLETED:
 			{
 				if (!qs.isNowAvailable())
 				{
-					htmltext = "30747-11.html";
-					break;
-				}
-				qs.setState(State.CREATED);
-			}
-			case State.CREATED:
-			{
-				htmltext = "30747-01.htm";
-				break;
-			}
-			case State.STARTED:
-			{
-				if (qs.isCond(1))
-				{
-					htmltext = "30747-06.html";
-				}
-				else if (qs.isCond(2) && (getQuestItemsCount(player, NYMPH_STAMEN) < 1800))
-				{
-					htmltext = "30747-07.html";
+					htmltext = getAlreadyCompletedMsg(player, QuestType.DAILY);
 				}
 				else
 				{
-					htmltext = "30747-08.html";
+					qs.setState(State.CREATED);
+					htmltext = "30747-01.htm";
 				}
 				break;
 			}
@@ -165,37 +305,45 @@ public class Q00823_DisappearedRaceNewFairy extends Quest
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
-		final QuestState qs = getRandomPartyMemberState(killer, 1, 3, npc);
-		if (qs != null)
+		executeForEachPlayer(player, npc, isSummon, true, false);
+		return super.onKill(npc, player, isSummon);
+	}
+	
+	@Override
+	public void actionForEachPlayer(PlayerInstance player, Npc npc, boolean isSummon)
+	{
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && (qs.getCond() > 1) && player.isInsideRadius3D(npc, Config.ALT_PARTY_RANGE))
 		{
-			final int factionLevel = killer.getFactionLevel(Faction.MOTHER_TREE_GUARDIANS);
-			if (factionLevel == 0)
+			switch (qs.getCond())
 			{
-				giveItems(killer, NYMPH_STAMEN, 1, true);
-				if (getQuestItemsCount(killer, NYMPH_STAMEN) >= 300)
+				case 2:
 				{
-					qs.setCond(2, true);
+					if (giveItemRandomly(player, npc, NYMPH_STAMEN, 1, 200, 1, true))
+					{
+						qs.setCond(5, true);
+					}
+					break;
 				}
-			}
-			else if (factionLevel == 1)
-			{
-				giveItems(killer, NYMPH_STAMEN, 1, true);
-				if (getQuestItemsCount(killer, NYMPH_STAMEN) >= 600)
+				case 3:
 				{
-					qs.setCond(2, true);
+					if (giveItemRandomly(player, npc, NYMPH_STAMEN, 1, 400, 1, true))
+					{
+						qs.setCond(6, true);
+					}
+					break;
 				}
-			}
-			else if (factionLevel > 1)
-			{
-				giveItems(killer, NYMPH_STAMEN, 1, true);
-				if (getQuestItemsCount(killer, NYMPH_STAMEN) >= 900)
+				case 4:
 				{
-					qs.setCond(2, true);
+					if (giveItemRandomly(player, npc, NYMPH_STAMEN, 1, 600, 1, true))
+					{
+						qs.setCond(7, true);
+					}
+					break;
 				}
 			}
 		}
-		return super.onKill(npc, killer, isSummon);
 	}
 }
