@@ -1207,14 +1207,15 @@
 		</selfEffects>
 	</skill>
 	<skill id="19432" toLevel="2" name="Swift Praise">
-		<!-- Increases all party members' P. Atk./ M. Atk./ Atk. Spd./ Casting Spd. $s2 times for $s1 Cooldown $s3. -->
+		<!-- Increases all party members' P. Atk./ M. Atk./ Atk. Spd./ Casting Spd. 1.5 times for 4 sec. Cooldown 8 sec. -->
 		<icon>icon.skill19432</icon>
 		<operateType>A2</operateType>
 		<isTriggeredSkill>true</isTriggeredSkill>
+		<operateType>A2</operateType>
 		<effectPoint>687</effectPoint>
 		<abnormalLvl>
-			<value level="1">1</value>
-			<value level="2">2</value>
+			<value level="1">4</value>
+			<value level="2">5</value>
 		</abnormalLvl>
 		<abnormalTime>4</abnormalTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
