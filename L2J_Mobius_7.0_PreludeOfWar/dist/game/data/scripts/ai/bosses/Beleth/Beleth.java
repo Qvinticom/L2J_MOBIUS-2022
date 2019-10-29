@@ -461,7 +461,7 @@ public class Beleth extends AbstractNpcAI
 				ym[15] = (ym[7] + ym[0]) / 2;
 				_minions.add(addSpawn(FAKE_BELETH, new Location(xm[15], ym[15], -9357, 49152)));
 				
-				_allowedObjId = _minions.get(getRandom(_minions.size())).getObjectId();
+				_allowedObjId = getRandomEntry(_minions).getObjectId();
 				break;
 			}
 			case "SPAWN_REAL":

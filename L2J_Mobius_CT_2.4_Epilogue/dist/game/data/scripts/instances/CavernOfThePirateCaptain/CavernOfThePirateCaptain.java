@@ -176,14 +176,14 @@ public class CavernOfThePirateCaptain extends AbstractInstance
 		}
 		else
 		{
-			teleportPlayer(player, ENTER_LOC[getRandom(ENTER_LOC.length)], world.getInstanceId(), false);
+			teleportPlayer(player, getRandomEntry(ENTER_LOC), world.getInstanceId(), false);
 		}
 	}
 	
 	private void managePlayerEnter(PlayerInstance player, InstanceWorld world)
 	{
 		world.addAllowed(player);
-		teleportPlayer(player, ENTER_LOC[getRandom(ENTER_LOC.length)], world.getInstanceId(), false);
+		teleportPlayer(player, getRandomEntry(ENTER_LOC), world.getInstanceId(), false);
 	}
 	
 	private boolean checkConditions(PlayerInstance player, int templateId)

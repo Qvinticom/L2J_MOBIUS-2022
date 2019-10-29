@@ -80,7 +80,7 @@ public class Rooney extends AbstractNpcAI
 	private Rooney()
 	{
 		addSeeCreatureId(ROONEY);
-		addSpawn(ROONEY, LOCATIONS[getRandom(LOCATIONS.length)], false, 0);
+		addSpawn(ROONEY, getRandomEntry(LOCATIONS), false, 0);
 	}
 	
 	@Override
@@ -113,7 +113,7 @@ public class Rooney extends AbstractNpcAI
 				}
 				default:
 				{
-					npc.teleToLocation(LOCATIONS[getRandom(LOCATIONS.length)], false);
+					npc.teleToLocation(getRandomEntry(LOCATIONS), false);
 					npc.setScriptValue(0);
 					return null;
 				}

@@ -180,7 +180,7 @@ public class AshenShadowRevolutionaries extends AbstractInstance
 				{
 					world.setStatus(1);
 					world.spawnGroup("wave_1");
-					final Npc questGiver = addSpawn(QUEST_GIVERS[getRandom(QUEST_GIVERS.length)], QUEST_GIVER_LOCATION, false, 0, false, world.getId());
+					final Npc questGiver = addSpawn(getRandomEntry(QUEST_GIVERS), QUEST_GIVER_LOCATION, false, 0, false, world.getId());
 					questGiver.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.THERE_S_NO_ONE_RIGHT);
 					if (questGiver.getId() == 34098) // Blacksmith Kluto
 					{
@@ -202,7 +202,7 @@ public class AshenShadowRevolutionaries extends AbstractInstance
 					}
 					else if (getRandom(10) < 3)
 					{
-						addSpawn(SPY_DWARF, SPY_DWARF_LOCATION[getRandom(SPY_DWARF_LOCATION.length)], false, 0, false, world.getId());
+						addSpawn(SPY_DWARF, getRandomEntry(SPY_DWARF_LOCATION), false, 0, false, world.getId());
 					}
 					showOnScreenMsg(world, NpcStringId.ASHEN_SHADOW_REVOLUTIONARIES_KEEP_THE_FORMATION, ExShowScreenMessage.TOP_CENTER, 10000, false);
 				}
@@ -249,7 +249,7 @@ public class AshenShadowRevolutionaries extends AbstractInstance
 		final int id = npc.getId();
 		if (id == SIGNALMAN)
 		{
-			addSpawn(COMMANDERS[getRandom(COMMANDERS.length)], world.isStatus(1) ? COMMANDER_LOCATION_1 : COMMANDER_LOCATION_2, false, 0, false, world.getId());
+			addSpawn(getRandomEntry(COMMANDERS), world.isStatus(1) ? COMMANDER_LOCATION_1 : COMMANDER_LOCATION_2, false, 0, false, world.getId());
 		}
 		else if (CommonUtil.contains(COMMANDERS, id))
 		{
@@ -283,7 +283,7 @@ public class AshenShadowRevolutionaries extends AbstractInstance
 	{
 		if (getRandom(10) < 1)
 		{
-			npc.broadcastSay(ChatType.NPC_GENERAL, DWARF_SPY_TEXT[getRandom(DWARF_SPY_TEXT.length)]);
+			npc.broadcastSay(ChatType.NPC_GENERAL, getRandomEntry(DWARF_SPY_TEXT));
 		}
 		return super.onAttack(npc, attacker, damage, isSummon);
 	}

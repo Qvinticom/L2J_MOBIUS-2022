@@ -132,7 +132,7 @@ public class FreyaCelebration extends LongTimeEvent
 			}
 			else if (getRandom(10) < 2)
 			{
-				npc.broadcastPacket(new CreatureSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getName(), FREYA_TEXT[getRandom(FREYA_TEXT.length - 1)]));
+				npc.broadcastPacket(new CreatureSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getName(), getRandomEntry(FREYA_TEXT)));
 			}
 		}
 		return super.onSkillSee(npc, caster, skill, targets, isSummon);

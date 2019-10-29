@@ -95,8 +95,7 @@ public class Elpies extends Event
 		
 		EVENT_ACTIVE = true;
 		
-		final EventLocation[] locations = EventLocation.values();
-		final EventLocation randomLoc = locations[getRandom(locations.length)];
+		final EventLocation randomLoc = getRandomEntry(EventLocation.values());
 		
 		CURRENT_ELPY_COUNT = 0;
 		final long despawnDelay = EVENT_DURATION_MINUTES * 60000;

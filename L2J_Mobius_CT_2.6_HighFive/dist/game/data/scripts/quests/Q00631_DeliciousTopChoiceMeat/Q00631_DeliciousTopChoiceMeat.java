@@ -120,32 +120,32 @@ public class Q00631_DeliciousTopChoiceMeat extends Quest
 					{
 						case 0:
 						{
-							rewardItems(player, RECIPE[getRandom(RECIPE.length)], 1);
+							rewardItems(player, getRandomEntry(RECIPE), 1);
 							break;
 						}
 						case 1:
 						{
-							rewardItems(player, PIECE[getRandom(PIECE.length)], 1);
+							rewardItems(player, getRandomEntry(PIECE), 1);
 							break;
 						}
 						case 2:
 						{
-							rewardItems(player, PIECE[getRandom(PIECE.length)], 2);
+							rewardItems(player, getRandomEntry(PIECE), 2);
 							break;
 						}
 						case 3:
 						{
-							rewardItems(player, PIECE[getRandom(PIECE.length)], 3);
+							rewardItems(player, getRandomEntry(PIECE), 3);
 							break;
 						}
 						case 4:
 						{
-							rewardItems(player, PIECE[getRandom(PIECE.length)], getRandom(5) + 2);
+							rewardItems(player, getRandomEntry(PIECE), getRandom(5) + 2);
 							break;
 						}
 						case 5:
 						{
-							rewardItems(player, PIECE[getRandom(PIECE.length)], getRandom(7) + 2);
+							rewardItems(player, getRandomEntry(PIECE), getRandom(7) + 2);
 							break;
 						}
 						case 6:

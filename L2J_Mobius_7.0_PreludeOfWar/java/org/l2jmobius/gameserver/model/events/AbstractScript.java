@@ -3042,22 +3042,43 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	
 	/**
 	 * Get a random entry.<br>
-	 * @param entry array with values.
-	 * @return random one value from array entry.
+	 * @param <T>
+	 * @param array of values.
+	 * @return one value from array.
 	 */
-	public static String getRandomEntry(String... entry)
+	@SuppressWarnings("unchecked")
+	public static <T> T getRandomEntry(T... array)
 	{
-		return entry[getRandom(entry.length)];
+		if (array.length == 0)
+		{
+			return null;
+		}
+		return array[getRandom(array.length)];
 	}
 	
 	/**
 	 * Get a random entry.<br>
-	 * @param entry array with values.
-	 * @return random one value from array entry.
+	 * @param <T>
+	 * @param list of values.
+	 * @return one value from list.
 	 */
-	public static int getRandomEntry(int... entry)
+	public static <T> T getRandomEntry(List<T> list)
 	{
-		return entry[getRandom(entry.length)];
+		if (list.isEmpty())
+		{
+			return null;
+		}
+		return list.get(getRandom(list.size()));
+	}
+	
+	/**
+	 * Get a random entry.<br>
+	 * @param array of Integers.
+	 * @return one Integer from array.
+	 */
+	public static int getRandomEntry(int... array)
+	{
+		return array[getRandom(array.length)];
 	}
 	
 	/**

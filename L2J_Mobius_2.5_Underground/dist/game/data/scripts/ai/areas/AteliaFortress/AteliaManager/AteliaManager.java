@@ -608,7 +608,7 @@ public class AteliaManager extends AbstractNpcAI
 			if (!npc.isCastingNow() && (chance <= 20))
 			{
 				npc.setTarget(attacker);
-				npc.doCast(ATELIA_POISON[getRandom(ATELIA_POISON.length)].getSkill());
+				npc.doCast(getRandomEntry(ATELIA_POISON).getSkill());
 			}
 		}
 		else if (CommonUtil.contains(FLOOR_MOBS, npc.getId()) && (chance > 90))

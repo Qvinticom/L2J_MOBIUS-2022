@@ -107,7 +107,7 @@ public class Q10707_FlamesOfSorrow extends Quest
 				npc.deleteMe();
 				final Npc spirit = addSpawn(VENGEFUL_SPIRIT, player, true, 60000);
 				addAttackPlayerDesire(spirit, player);
-				spirit.broadcastSay(ChatType.NPC_GENERAL, RANDOM_MSGS[getRandom(RANDOM_MSGS.length)]);
+				spirit.broadcastSay(ChatType.NPC_GENERAL, getRandomEntry(RANDOM_MSGS));
 				qs.setCond(2, false);
 				break;
 			}

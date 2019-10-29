@@ -76,7 +76,7 @@ public class DelusionTeleport extends AbstractNpcAI
 		{
 			final int locId = npc.getParameters().getInt("Level", -1);
 			player.getVariables().set(PlayerVariables.DELUSION_RETURN, RETURN_LOCATIONS.containsKey(locId) ? locId : 0);
-			player.teleToLocation(HALL_LOCATIONS[getRandom(HALL_LOCATIONS.length)], false);
+			player.teleToLocation(getRandomEntry(HALL_LOCATIONS), false);
 		}
 		else
 		{

@@ -79,7 +79,7 @@ public class DelusionTeleport extends AbstractNpcAI
 			final TownZone town = TownManager.getTown(npc.getX(), npc.getY(), npc.getZ());
 			final int townId = ((town == null) ? 0 : town.getTownId());
 			player.getVariables().set(DELUSION_RETURN, townId);
-			player.teleToLocation(HALL_LOCATIONS[getRandom(HALL_LOCATIONS.length)], false);
+			player.teleToLocation(getRandomEntry(HALL_LOCATIONS), false);
 		}
 		else
 		{

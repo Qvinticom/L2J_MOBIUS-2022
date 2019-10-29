@@ -381,11 +381,11 @@ public class HallOfSufferingAttack extends AbstractNpcAI
 					world.isBossesAttacked = false;
 					return "";
 				}
-				Npc mob = addSpawn(TWIN_MOBIDS[getRandom(TWIN_MOBIDS.length)], TWIN_SPAWNS[0][1], TWIN_SPAWNS[0][2], TWIN_SPAWNS[0][3], 0, false, 0, false, npc.getInstanceId());
+				Npc mob = addSpawn(getRandomEntry(TWIN_MOBIDS), TWIN_SPAWNS[0][1], TWIN_SPAWNS[0][2], TWIN_SPAWNS[0][3], 0, false, 0, false, npc.getInstanceId());
 				((Attackable) mob).addDamageHate(((Attackable) npc).getMostHated(), 0, 1);
 				if (getRandom(100) < 33)
 				{
-					mob = addSpawn(TWIN_MOBIDS[getRandom(TWIN_MOBIDS.length)], TWIN_SPAWNS[1][1], TWIN_SPAWNS[1][2], TWIN_SPAWNS[1][3], 0, false, 0, false, npc.getInstanceId());
+					mob = addSpawn(getRandomEntry(TWIN_MOBIDS), TWIN_SPAWNS[1][1], TWIN_SPAWNS[1][2], TWIN_SPAWNS[1][3], 0, false, 0, false, npc.getInstanceId());
 					((Attackable) mob).addDamageHate(((Attackable) npc).getMostHated(), 0, 1);
 				}
 				startQuestTimer("spawnBossGuards", BOSS_MINION_SPAWN_TIME, npc, null);

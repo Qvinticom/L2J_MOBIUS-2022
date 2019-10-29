@@ -233,17 +233,17 @@ public class FortressDungeon extends AbstractInstance
 			{
 				case 0:
 				{
-					npcId = RAIDS1[getRandom(RAIDS1.length)];
+					npcId = getRandomEntry(RAIDS1);
 					break;
 				}
 				case 1:
 				{
-					npcId = RAIDS2[getRandom(RAIDS2.length)];
+					npcId = getRandomEntry(RAIDS2);
 					break;
 				}
 				default:
 				{
-					npcId = RAIDS3[getRandom(RAIDS3.length)];
+					npcId = getRandomEntry(RAIDS3);
 				}
 			}
 			

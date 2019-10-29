@@ -768,7 +768,7 @@ public class CrystalCaverns extends AbstractInstance
 		
 		for (int[] spawn : HALL_SPAWNS)
 		{
-			final Npc mob = addSpawn(CGMOBS[getRandom(CGMOBS.length)], spawn[0], spawn[1], spawn[2], spawn[3], false, 0, false, world.getInstanceId());
+			final Npc mob = addSpawn(getRandomEntry(CGMOBS), spawn[0], spawn[1], spawn[2], spawn[3], false, 0, false, world.getInstanceId());
 			world.npcList1.put(mob, false);
 		}
 	}
@@ -1291,7 +1291,7 @@ public class CrystalCaverns extends AbstractInstance
 			{
 				if (world._alarm == null)
 				{
-					final int[] spawnLoc = ALARMSPAWN[getRandom(ALARMSPAWN.length)];
+					final int[] spawnLoc = getRandomEntry(ALARMSPAWN);
 					npc.addSkill(SkillData.getInstance().getSkill(5244, 1));
 					npc.addSkill(SkillData.getInstance().getSkill(5245, 1));
 					world._alarm = addSpawn(ALARMID, spawnLoc[0], spawnLoc[1], spawnLoc[2], 10800, false, 0, false, world.getInstanceId());
@@ -1332,7 +1332,7 @@ public class CrystalCaverns extends AbstractInstance
 					}
 					else if (rand < 33)
 					{
-						npc.setTarget(world._raiders.get(getRandom(world._raiders.size())));
+						npc.setTarget(getRandomEntry(world._raiders));
 						npc.doCast(SkillData.getInstance().getSkill(5229, 1));
 					}
 				}

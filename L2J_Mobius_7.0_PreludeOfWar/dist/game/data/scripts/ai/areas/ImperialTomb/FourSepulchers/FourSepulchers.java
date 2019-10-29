@@ -302,7 +302,7 @@ public class FourSepulchers extends AbstractNpcAI implements IXmlReader
 					{
 						npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, destination);
 					}
-					npc.broadcastSay(ChatType.NPC_GENERAL, VICTIM_MSG[getRandom(VICTIM_MSG.length)]);
+					npc.broadcastSay(ChatType.NPC_GENERAL, getRandomEntry(VICTIM_MSG));
 					startQuestTimer("VICTIM_FLEE", 3000, npc, null, false);
 				}
 				return null;

@@ -89,19 +89,19 @@ public class Q10280_MutatedKaneusSchuttgart extends Quest
 		final int npcId = npc.getId();
 		if (killer.getParty() != null)
 		{
-			final List<PlayerInstance> PartyMembers = new ArrayList<>();
+			final List<PlayerInstance> partyMembers = new ArrayList<>();
 			for (PlayerInstance member : killer.getParty().getMembers())
 			{
 				qs = getQuestState(member, false);
 				if ((qs != null) && qs.isStarted() && (((npcId == VENOMOUS_STORACE) && !hasQuestItems(member, TISSUE_VS)) || ((npcId == KEL_BILETTE) && !hasQuestItems(member, TISSUE_KB))))
 				{
-					PartyMembers.add(member);
+					partyMembers.add(member);
 				}
 			}
 			
-			if (!PartyMembers.isEmpty())
+			if (!partyMembers.isEmpty())
 			{
-				rewardItem(npcId, PartyMembers.get(getRandom(PartyMembers.size())));
+				rewardItem(npcId, getRandomEntry(partyMembers));
 			}
 		}
 		else if (qs.isStarted())

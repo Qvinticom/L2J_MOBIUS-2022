@@ -266,7 +266,7 @@ public class SSQMonasteryOfSilence extends AbstractInstance
 					npc.getAI().startFollow(player);
 					if (player.isInCombat())
 					{
-						npc.doCast(BUFFS[getRandom(BUFFS.length)].getSkill());
+						npc.doCast(getRandomEntry(BUFFS).getSkill());
 					}
 					startQuestTimer("FOLLOW", 5000, npc, player);
 					break;
@@ -277,11 +277,11 @@ public class SSQMonasteryOfSilence extends AbstractInstance
 					final QuestState st_Q10295 = player.getQuestState(Q10295_SevenSignsSolinasTomb.class.getSimpleName());
 					if ((st_Q10294 != null) && st_Q10294.isStarted())
 					{
-						npc.broadcastSay(ChatType.NPC_GENERAL, ELCADIA_DIALOGS_Q010294[getRandom(ELCADIA_DIALOGS_Q010294.length)]);
+						npc.broadcastSay(ChatType.NPC_GENERAL, getRandomEntry(ELCADIA_DIALOGS_Q010294));
 					}
 					if ((st_Q10295 != null) && st_Q10295.isMemoState(1))
 					{
-						npc.broadcastSay(ChatType.NPC_GENERAL, ELCADIA_DIALOGS_Q010295[getRandom(ELCADIA_DIALOGS_Q010295.length)]);
+						npc.broadcastSay(ChatType.NPC_GENERAL, getRandomEntry(ELCADIA_DIALOGS_Q010295));
 					}
 					startQuestTimer("DIALOG", 10000, npc, player);
 					break;

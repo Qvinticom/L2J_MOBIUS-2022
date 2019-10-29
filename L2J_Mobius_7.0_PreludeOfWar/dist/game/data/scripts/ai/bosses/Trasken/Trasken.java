@@ -560,7 +560,7 @@ public class Trasken extends AbstractNpcAI
 		}
 		if ((npc.getId() == LAVRA_1) || (npc.getId() == LAVRA_2) || (npc.getId() == LAVRA_3) || (npc.getId() == TRADJAN))
 		{
-			addAttackPlayerDesire(npc, _zoneLair.getPlayersInside().get(getRandom(_zoneLair.getPlayersInside().size())));
+			addAttackPlayerDesire(npc, getRandomEntry(_zoneLair.getPlayersInside()));
 		}
 		else if ((npc.getId() == TIE) || (npc.getId() == BIG_TIE))
 		{

@@ -290,7 +290,7 @@ public class SeedOfAnnihilation extends AbstractNpcAI
 		{
 			if (CommonUtil.contains(element.elite_mob_ids, npc.getId()))
 			{
-				spawnGroupOfMinion((MonsterInstance) npc, element.minion_lists[getRandom(element.minion_lists.length)]);
+				spawnGroupOfMinion((MonsterInstance) npc, getRandomEntry(element.minion_lists));
 			}
 		}
 		return super.onSpawn(npc);

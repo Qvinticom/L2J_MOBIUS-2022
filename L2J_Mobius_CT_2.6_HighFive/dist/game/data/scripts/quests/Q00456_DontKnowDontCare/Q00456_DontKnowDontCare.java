@@ -326,15 +326,15 @@ public class Q00456_DontKnowDontCare extends Quest
 		
 		if (chance < 170)
 		{
-			reward = ARMOR[getRandom(ARMOR.length)];
+			reward = getRandomEntry(ARMOR);
 		}
 		else if (chance < 200)
 		{
-			reward = ACCESSORIES[getRandom(ACCESSORIES.length)];
+			reward = getRandomEntry(ACCESSORIES);
 		}
 		else if (chance < 270)
 		{
-			reward = WEAPONS[getRandom(WEAPONS.length)];
+			reward = getRandomEntry(WEAPONS);
 		}
 		else if (chance < 325)
 		{
@@ -346,7 +346,7 @@ public class Q00456_DontKnowDontCare extends Quest
 		}
 		else if (chance < 925)
 		{
-			reward = ATTRIBUTE_CRYSTALS[getRandom(ATTRIBUTE_CRYSTALS.length)];
+			reward = getRandomEntry(ATTRIBUTE_CRYSTALS);
 		}
 		else if (chance < 1100)
 		{

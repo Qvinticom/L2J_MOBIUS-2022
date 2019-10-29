@@ -58,7 +58,7 @@ public class DemonPrince extends AbstractNpcAI
 	{
 		if (event.equalsIgnoreCase("cast") && (npc != null) && (npc.getId() == FIEND) && !npc.isDead())
 		{
-			npc.doCast(AOE[getRandom(AOE.length)].getSkill());
+			npc.doCast(getRandomEntry(AOE).getSkill());
 		}
 		return super.onAdvEvent(event, npc, player);
 	}

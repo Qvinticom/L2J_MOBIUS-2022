@@ -85,7 +85,7 @@ public class EveTheFortuneTeller extends LongTimeEvent
 			}
 			case "JAYCE_SHOUT":
 			{
-				Broadcast.toKnownPlayersInRadius(npc, new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), JAYCE_TEXT[getRandom(JAYCE_TEXT.length)]), 1000);
+				Broadcast.toKnownPlayersInRadius(npc, new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), getRandomEntry(JAYCE_TEXT)), 1000);
 				break;
 			}
 		}

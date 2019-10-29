@@ -2052,4 +2052,45 @@ public class Quest extends ManagedScript
 			deleteQuestToOfflineMembers(player.getClanId());
 		}
 	}
+	
+	/**
+	 * Get a random entry.<br>
+	 * @param <T>
+	 * @param array of values.
+	 * @return one value from array.
+	 */
+	@SuppressWarnings("unchecked")
+	public static <T> T getRandomEntry(T... array)
+	{
+		if (array.length == 0)
+		{
+			return null;
+		}
+		return array[Rnd.get(array.length)];
+	}
+	
+	/**
+	 * Get a random entry.<br>
+	 * @param <T>
+	 * @param list of values.
+	 * @return one value from list.
+	 */
+	public static <T> T getRandomEntry(List<T> list)
+	{
+		if (list.isEmpty())
+		{
+			return null;
+		}
+		return list.get(Rnd.get(list.size()));
+	}
+	
+	/**
+	 * Get a random entry.<br>
+	 * @param array of Integers.
+	 * @return one Integer from array.
+	 */
+	public static int getRandomEntry(int... array)
+	{
+		return array[Rnd.get(array.length)];
+	}
 }

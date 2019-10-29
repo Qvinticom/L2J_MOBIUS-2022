@@ -58,6 +58,12 @@ public class TeredorWarzone extends AbstractInstance
 	private static final int HATCHET_UNDERBUG = 18994; // Hatched Underbug
 	private static final int TEREDOR_LARVA = 19016; // Teredor's Larva
 	private static final int MUTANTED_MILLIPADE = 19000; // Mutated Millipede
+	private static final int[] MILLIPADES =
+	{
+		MUTANTED_MILLIPADE,
+		HATCHET_UNDERBUG,
+		HATCHET_MILLIPADE
+	};
 	// Items
 	private static final int FAKE_TEREDOR_WEAPON = 15280;
 	// Skill
@@ -427,7 +433,7 @@ public class TeredorWarzone extends AbstractInstance
 								}
 								case 7:
 								{
-									npcId = getRandomEntry(MUTANTED_MILLIPADE, HATCHET_UNDERBUG, HATCHET_MILLIPADE);
+									npcId = getRandomEntry(MILLIPADES);
 									break;
 								}
 							}

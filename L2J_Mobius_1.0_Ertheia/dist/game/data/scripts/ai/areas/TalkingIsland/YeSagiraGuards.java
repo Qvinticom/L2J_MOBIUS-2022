@@ -16,8 +16,6 @@
  */
 package ai.areas.TalkingIsland;
 
-import java.util.List;
-
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
@@ -50,14 +48,10 @@ public class YeSagiraGuards extends AbstractNpcAI
 		{
 			if (!npc.isInCombat())
 			{
-				final List<MonsterInstance> nearbyMonsters = World.getInstance().getVisibleObjectsInRange(npc, MonsterInstance.class, 1000);
-				if (!nearbyMonsters.isEmpty())
+				final MonsterInstance monster = getRandomEntry(World.getInstance().getVisibleObjectsInRange(npc, MonsterInstance.class, 1000));
+				if ((monster != null) && !monster.isDead() && !monster.isInCombat())
 				{
-					final MonsterInstance monster = nearbyMonsters.get(getRandom(nearbyMonsters.size()));
-					if ((monster != null) && !monster.isDead() && !monster.isInCombat())
-					{
-						npc.reduceCurrentHp(1, monster, null); // TODO: Find better way for attack
-					}
+					npc.reduceCurrentHp(1, monster, null); // TODO: Find better way for attack
 				}
 			}
 			startQuestTimer("GUARD_AGGRO", 10000, npc, null);

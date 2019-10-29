@@ -117,7 +117,7 @@ public class Mammons extends AbstractNpcAI
 				
 				if (blacksmith != null)
 				{
-					blacksmith.broadcastSay(ChatType.NPC_GENERAL, RANDOM_SAY[getRandom(RANDOM_SAY.length)]);
+					blacksmith.broadcastSay(ChatType.NPC_GENERAL, getRandomEntry(RANDOM_SAY));
 					
 					if (Config.ANNOUNCE_MAMMON_SPAWN)
 					{

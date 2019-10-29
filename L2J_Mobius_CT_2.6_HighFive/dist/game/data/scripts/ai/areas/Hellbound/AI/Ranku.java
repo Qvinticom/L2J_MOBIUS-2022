@@ -16,7 +16,6 @@
  */
 package ai.areas.Hellbound.AI;
 
-import java.util.List;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -59,8 +58,7 @@ public class Ranku extends AbstractNpcAI
 			{
 				if ((minion != null) && !minion.isDead() && MY_TRACKING_SET.contains(minion.getObjectId()))
 				{
-					final List<PlayerInstance> players = World.getInstance().getVisibleObjects(minion, PlayerInstance.class);
-					final PlayerInstance killer = players.get(getRandom(players.size()));
+					final PlayerInstance killer = getRandomEntry(World.getInstance().getVisibleObjects(minion, PlayerInstance.class));
 					minion.reduceCurrentHp(minion.getMaxHp() / 100, killer, null);
 				}
 			}

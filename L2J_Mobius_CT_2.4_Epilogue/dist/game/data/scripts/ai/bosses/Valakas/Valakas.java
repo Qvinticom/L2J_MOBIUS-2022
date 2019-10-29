@@ -528,15 +528,15 @@ public class Valakas extends AbstractNpcAI
 		// Valakas will use mass spells if he feels surrounded.
 		if (World.getInstance().getVisibleObjectsInRange(npc, PlayerInstance.class, 1200).size() >= 20)
 		{
-			return VALAKAS_AOE_SKILLS[getRandom(VALAKAS_AOE_SKILLS.length)];
+			return getRandomEntry(VALAKAS_AOE_SKILLS);
 		}
 		
 		if (hpRatio > 50)
 		{
-			return VALAKAS_REGULAR_SKILLS[getRandom(VALAKAS_REGULAR_SKILLS.length)];
+			return getRandomEntry(VALAKAS_REGULAR_SKILLS);
 		}
 		
-		return VALAKAS_LOWHP_SKILLS[getRandom(VALAKAS_LOWHP_SKILLS.length)];
+		return getRandomEntry(VALAKAS_LOWHP_SKILLS);
 	}
 	
 	/**
@@ -560,7 +560,7 @@ public class Valakas extends AbstractNpcAI
 			}
 		});
 		
-		return result.isEmpty() ? null : result.get(getRandom(result.size()));
+		return getRandomEntry(result);
 	}
 	
 	public static void main(String[] args)

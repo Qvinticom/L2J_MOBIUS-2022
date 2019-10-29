@@ -46,7 +46,7 @@ public class DrillSergeant extends AbstractNpcAI
 	{
 		if (event.equals("SOCIAL_SHOW"))
 		{
-			final int socialActionId = SOCIAL_ACTIONS[getRandom(SOCIAL_ACTIONS.length)];
+			final int socialActionId = getRandomEntry(SOCIAL_ACTIONS);
 			npc.broadcastSocialAction(socialActionId);
 			
 			World.getInstance().forEachVisibleObjectInRange(npc, Npc.class, 500, chars ->

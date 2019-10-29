@@ -88,7 +88,7 @@ public class TeleportToFantasy extends AbstractNpcAI
 		}
 		else
 		{
-			player.teleToLocation(ISLE_LOCATIONS[getRandom(ISLE_LOCATIONS.length)]);
+			player.teleToLocation(getRandomEntry(ISLE_LOCATIONS));
 			player.getVariables().set(FANTASY_RETURN, npc.getId());
 		}
 		return super.onTalk(npc, player);

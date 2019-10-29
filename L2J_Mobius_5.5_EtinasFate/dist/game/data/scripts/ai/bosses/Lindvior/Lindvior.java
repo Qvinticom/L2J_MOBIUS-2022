@@ -774,7 +774,7 @@ public class Lindvior extends AbstractNpcAI
 							guard.setIsInvul(false);
 							if (!guard.isDead())
 							{
-								guard.broadcastSay(ChatType.NPC_GENERAL, GUARD_MSG_1[getRandom(GUARD_MSG_1.length)]);
+								guard.broadcastSay(ChatType.NPC_GENERAL, getRandomEntry(GUARD_MSG_1));
 							}
 						});
 					}
@@ -894,7 +894,7 @@ public class Lindvior extends AbstractNpcAI
 		{
 			if ((npc != null) && !npc.isDead())
 			{
-				npc.broadcastSay(ChatType.NPC_GENERAL, GUARD_MSG[getRandom(GUARD_MSG.length)]);
+				npc.broadcastSay(ChatType.NPC_GENERAL, getRandomEntry(GUARD_MSG));
 				getTimers().addTimer("NPC_SHOUT", (10 + getRandom(5)) * 1000, npc, null);
 			}
 		}
@@ -925,7 +925,7 @@ public class Lindvior extends AbstractNpcAI
 		
 		for (int i = 0; i < count; i++)
 		{
-			_monsterSpawn.add(addSpawn(npcIds[getRandom(npcIds.length)], x, y, loc.getZ(), loc.getHeading(), true, 0, true));
+			_monsterSpawn.add(addSpawn(getRandomEntry(npcIds), x, y, loc.getZ(), loc.getHeading(), true, 0, true));
 		}
 	}
 	

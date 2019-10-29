@@ -72,7 +72,7 @@ public class GeneralDilios extends AbstractNpcAI
 			else
 			{
 				value = -1;
-				_general.broadcastPacket(new NpcSay(_general.getObjectId(), ChatType.NPC_SHOUT, GENERAL_ID, DILIOS_TEXT[getRandom(DILIOS_TEXT.length)]));
+				_general.broadcastPacket(new NpcSay(_general.getObjectId(), ChatType.NPC_SHOUT, GENERAL_ID, getRandomEntry(DILIOS_TEXT)));
 			}
 			startQuestTimer("command_" + (value + 1), 60000, null, null);
 		}

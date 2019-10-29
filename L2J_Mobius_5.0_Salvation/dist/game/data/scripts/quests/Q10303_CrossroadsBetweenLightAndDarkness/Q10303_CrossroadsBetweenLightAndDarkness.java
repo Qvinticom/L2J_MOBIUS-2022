@@ -129,7 +129,7 @@ public class Q10303_CrossroadsBetweenLightAndDarkness extends Quest
 				if (qs.isCond(1))
 				{
 					giveAdena(player, 465855, true);
-					giveItems(player, JOHAN_REWARD[getRandom(JOHAN_REWARD.length)], 1);
+					giveItems(player, getRandomEntry(JOHAN_REWARD), 1);
 					addExpAndSp(player, 6730155, 2847330);
 					qs.exitQuest(false, true);
 					htmltext = event;
@@ -141,7 +141,7 @@ public class Q10303_CrossroadsBetweenLightAndDarkness extends Quest
 				if (qs.isCond(1))
 				{
 					giveAdena(player, 465855, true);
-					giveItems(player, PRIEST_REWARD[getRandom(PRIEST_REWARD.length)], 1);
+					giveItems(player, getRandomEntry(PRIEST_REWARD), 1);
 					addExpAndSp(player, 6730155, 2847330);
 					qs.exitQuest(false, true);
 					htmltext = event;

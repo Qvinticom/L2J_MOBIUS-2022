@@ -87,7 +87,7 @@ public class Q10306_TheCorruptedLeader extends Quest
 				{
 					addExpAndSp(player, 9_479_594, 2_275);
 					giveItems(player, ENCHANT_ARMOR_R, 2);
-					giveItems(player, REWARD_CRYSTALS[getRandom(REWARD_CRYSTALS.length)], 1);
+					giveItems(player, getRandomEntry(REWARD_CRYSTALS), 1);
 					qs.exitQuest(false, true);
 					htmltext = "32895-09.html";
 					

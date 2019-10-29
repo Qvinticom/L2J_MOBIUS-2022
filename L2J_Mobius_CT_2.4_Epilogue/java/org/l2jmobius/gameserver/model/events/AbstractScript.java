@@ -2617,6 +2617,47 @@ public abstract class AbstractScript extends ManagedScript
 	}
 	
 	/**
+	 * Get a random entry.<br>
+	 * @param <T>
+	 * @param array of values.
+	 * @return one value from array.
+	 */
+	@SuppressWarnings("unchecked")
+	public static <T> T getRandomEntry(T... array)
+	{
+		if (array.length == 0)
+		{
+			return null;
+		}
+		return array[getRandom(array.length)];
+	}
+	
+	/**
+	 * Get a random entry.<br>
+	 * @param <T>
+	 * @param list of values.
+	 * @return one value from list.
+	 */
+	public static <T> T getRandomEntry(List<T> list)
+	{
+		if (list.isEmpty())
+		{
+			return null;
+		}
+		return list.get(getRandom(list.size()));
+	}
+	
+	/**
+	 * Get a random entry.<br>
+	 * @param array of Integers.
+	 * @return one Integer from array.
+	 */
+	public static int getRandomEntry(int... array)
+	{
+		return array[getRandom(array.length)];
+	}
+	
+	/**
 	 * Get the ID of the item equipped in the specified inventory slot of the player.
 	 * @param player the player whose inventory to check
 	 * @param slot the location in the player's inventory to check

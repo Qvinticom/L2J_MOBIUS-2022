@@ -251,7 +251,7 @@ public class BeastFarm extends AbstractNpcAI
 		{
 			final TamedBeastInstance nextNpc = new TamedBeastInstance(nextNpcId, player, food, npc.getX(), npc.getY(), npc.getZ(), true);
 			
-			final TamedBeast beast = TAMED_BEAST_DATA.get(getRandom(TAMED_BEAST_DATA.size()));
+			final TamedBeast beast = getRandomEntry(TAMED_BEAST_DATA);
 			String name = beast.getName();
 			switch (nextNpcId)
 			{

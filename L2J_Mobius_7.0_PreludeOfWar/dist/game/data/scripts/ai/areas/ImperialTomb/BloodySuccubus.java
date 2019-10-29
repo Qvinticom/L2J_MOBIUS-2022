@@ -129,7 +129,7 @@ public class BloodySuccubus extends AbstractNpcAI
 					cancelQuestTimer("say", npc, null);
 					return null;
 				}
-				npc.broadcastSay(ChatType.NPC_GENERAL, ON_ATTACK_MSG_BLOODY_SUCCUBUS[getRandom(ON_ATTACK_MSG_BLOODY_SUCCUBUS.length)]);
+				npc.broadcastSay(ChatType.NPC_GENERAL, getRandomEntry(ON_ATTACK_MSG_BLOODY_SUCCUBUS));
 				break;
 			}
 			case "say1":
@@ -139,7 +139,7 @@ public class BloodySuccubus extends AbstractNpcAI
 					cancelQuestTimer("say1", npc, null);
 					return null;
 				}
-				npc.broadcastSay(ChatType.NPC_GENERAL, ON_ATTACK_MSG_SUCCUBUS_OF_DEATH[getRandom(ON_ATTACK_MSG_SUCCUBUS_OF_DEATH.length)]);
+				npc.broadcastSay(ChatType.NPC_GENERAL, getRandomEntry(ON_ATTACK_MSG_SUCCUBUS_OF_DEATH));
 				break;
 			}
 			case "say2":
@@ -149,7 +149,7 @@ public class BloodySuccubus extends AbstractNpcAI
 					cancelQuestTimer("say2", npc, null);
 					return null;
 				}
-				npc.broadcastSay(ChatType.NPC_GENERAL, ON_ATTACK_MSG_SUCCUBUS_OF_DARKNESS[getRandom(ON_ATTACK_MSG_SUCCUBUS_OF_DARKNESS.length)]);
+				npc.broadcastSay(ChatType.NPC_GENERAL, getRandomEntry(ON_ATTACK_MSG_SUCCUBUS_OF_DARKNESS));
 				break;
 			}
 			case "say3":
@@ -159,7 +159,7 @@ public class BloodySuccubus extends AbstractNpcAI
 					cancelQuestTimer("say3", npc, null);
 					return null;
 				}
-				npc.broadcastSay(ChatType.NPC_GENERAL, ON_ATTACK_MSG_SUCCUBUS_OF_LUNACY[getRandom(ON_ATTACK_MSG_SUCCUBUS_OF_LUNACY.length)]);
+				npc.broadcastSay(ChatType.NPC_GENERAL, getRandomEntry(ON_ATTACK_MSG_SUCCUBUS_OF_LUNACY));
 				break;
 			}
 			case "say4":
@@ -169,7 +169,7 @@ public class BloodySuccubus extends AbstractNpcAI
 					cancelQuestTimer("say4", npc, null);
 					return null;
 				}
-				npc.broadcastSay(ChatType.NPC_GENERAL, ON_ATTACK_MSG_SUCCUBUS_OF_SILENCE[getRandom(ON_ATTACK_MSG_SUCCUBUS_OF_SILENCE.length)]);
+				npc.broadcastSay(ChatType.NPC_GENERAL, getRandomEntry(ON_ATTACK_MSG_SUCCUBUS_OF_SILENCE));
 				break;
 			}
 		}
@@ -238,31 +238,31 @@ public class BloodySuccubus extends AbstractNpcAI
 			case BLOODY_SUCCUBUS:
 			{
 				cancelQuestTimer("say", npc, player);
-				npc.broadcastSay(ChatType.NPC_GENERAL, ON_FAILED_MSG_BLOODY_SUCCUBUS[getRandom(ON_FAILED_MSG_BLOODY_SUCCUBUS.length)]);
+				npc.broadcastSay(ChatType.NPC_GENERAL, getRandomEntry(ON_FAILED_MSG_BLOODY_SUCCUBUS));
 				break;
 			}
 			case SUCCUBUS_OF_DEATH:
 			{
 				cancelQuestTimer("say1", npc, player);
-				npc.broadcastSay(ChatType.NPC_GENERAL, ON_FAILED_MSG_SUCCUBUS_OF_DEATH[getRandom(ON_FAILED_MSG_SUCCUBUS_OF_DEATH.length)]);
+				npc.broadcastSay(ChatType.NPC_GENERAL, getRandomEntry(ON_FAILED_MSG_SUCCUBUS_OF_DEATH));
 				break;
 			}
 			case SUCCUBUS_OF_DARKNESS:
 			{
 				cancelQuestTimer("say2", npc, player);
-				npc.broadcastSay(ChatType.NPC_GENERAL, ON_FAILED_MSG_SUCCUBUS_OF_DARKNESS[getRandom(ON_FAILED_MSG_SUCCUBUS_OF_DARKNESS.length)]);
+				npc.broadcastSay(ChatType.NPC_GENERAL, getRandomEntry(ON_FAILED_MSG_SUCCUBUS_OF_DARKNESS));
 				break;
 			}
 			case SUCCUBUS_OF_LUNACY:
 			{
 				cancelQuestTimer("say3", npc, player);
-				npc.broadcastSay(ChatType.NPC_GENERAL, ON_FAILED_MSG_SUCCUBUS_OF_LUNACY[getRandom(ON_FAILED_MSG_SUCCUBUS_OF_LUNACY.length)]);
+				npc.broadcastSay(ChatType.NPC_GENERAL, getRandomEntry(ON_FAILED_MSG_SUCCUBUS_OF_LUNACY));
 				break;
 			}
 			case SUCCUBUS_OF_SILENCE:
 			{
 				cancelQuestTimer("say4", npc, player);
-				npc.broadcastSay(ChatType.NPC_GENERAL, ON_FAILED_MSG_SUCCUBUS_OF_SILENCE[getRandom(ON_FAILED_MSG_SUCCUBUS_OF_SILENCE.length)]);
+				npc.broadcastSay(ChatType.NPC_GENERAL, getRandomEntry(ON_FAILED_MSG_SUCCUBUS_OF_SILENCE));
 				break;
 			}
 		}

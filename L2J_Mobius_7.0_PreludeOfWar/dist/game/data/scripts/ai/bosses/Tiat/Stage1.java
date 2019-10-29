@@ -543,13 +543,12 @@ public class Stage1 extends AbstractInstance implements IXmlReader
 				case "Spawn":
 				{
 					final List<PlayerInstance> players = new ArrayList<>(world.getPlayers());
-					final PlayerInstance target = players.get(getRandom(players.size()));
 					final int deviceCount = world.getParameters().getInt("deviceCount", 0);
-					if ((deviceCount < MAX_DEVICESPAWNEDMOBCOUNT) && !target.isDead())
+					if ((deviceCount < MAX_DEVICESPAWNEDMOBCOUNT) && !getRandomEntry(players).isDead())
 					{
 						world.setParameter("deviceCount", deviceCount + 1);
 						
-						final Attackable mob = (Attackable) addSpawn(SPAWN_MOB_IDS[getRandom(SPAWN_MOB_IDS.length)], npc.getSpawn().getLocation(), false, 0, false, world.getId());
+						final Attackable mob = (Attackable) addSpawn(getRandomEntry(SPAWN_MOB_IDS), npc.getSpawn().getLocation(), false, 0, false, world.getId());
 						mob.setSeeThroughSilentMove(true);
 						mob.setRunning();
 						mob.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, (world.getStatus() >= 7) ? MOVE_TO_TIAT : MOVE_TO_DOOR);

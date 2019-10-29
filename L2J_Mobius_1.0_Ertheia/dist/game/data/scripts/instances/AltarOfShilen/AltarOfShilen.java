@@ -267,7 +267,7 @@ public class AltarOfShilen extends AbstractInstance
 		{
 			if (getRandom(30) < 3)
 			{
-				npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), SHOUT_MSG[getRandom(SHOUT_MSG.length)]));
+				npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), getRandomEntry(SHOUT_MSG)));
 			}
 		}
 		return super.onAttack(npc, attacker, damage, isSummon);

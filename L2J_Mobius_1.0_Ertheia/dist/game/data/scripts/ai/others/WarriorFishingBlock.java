@@ -89,7 +89,7 @@ public class WarriorFishingBlock extends AbstractNpcAI
 				else
 				{
 					final PlayerInstance target = obj.getActingPlayer();
-					npc.broadcastSay(ChatType.NPC_GENERAL, NPC_STRINGS_ON_SPAWN[getRandom(NPC_STRINGS_ON_SPAWN.length)], target.getName());
+					npc.broadcastSay(ChatType.NPC_GENERAL, getRandomEntry(NPC_STRINGS_ON_SPAWN), target.getName());
 					((Attackable) npc).addDamageHate(target, 0, 2000);
 					npc.getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, target);
 					npc.addAttackerToAttackByList(target);
@@ -112,7 +112,7 @@ public class WarriorFishingBlock extends AbstractNpcAI
 	{
 		if (getRandom(100) < CHANCE_TO_SHOUT_ON_ATTACK)
 		{
-			npc.broadcastSay(ChatType.NPC_GENERAL, NPC_STRINGS_ON_ATTACK[getRandom(NPC_STRINGS_ON_ATTACK.length)]);
+			npc.broadcastSay(ChatType.NPC_GENERAL, getRandomEntry(NPC_STRINGS_ON_ATTACK));
 		}
 		return super.onAttack(npc, attacker, damage, isSummon);
 	}
@@ -120,7 +120,7 @@ public class WarriorFishingBlock extends AbstractNpcAI
 	@Override
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		npc.broadcastSay(ChatType.NPC_GENERAL, NPC_STRINGS_ON_KILL[getRandom(NPC_STRINGS_ON_KILL.length)]);
+		npc.broadcastSay(ChatType.NPC_GENERAL, getRandomEntry(NPC_STRINGS_ON_KILL));
 		cancelQuestTimer("DESPAWN", npc, killer);
 		return super.onKill(npc, killer, isSummon);
 	}

@@ -174,7 +174,7 @@ public class OracleTeleport extends AbstractNpcAI
 			}
 			else
 			{
-				player.teleToLocation(RETURN_LOCS[getRandom(RETURN_LOCS.length - 1)]);
+				player.teleToLocation(getRandomEntry(RETURN_LOCS));
 				htmltext = "rift_back_unknown.htm";
 				player.setIsIn7sDungeon(false);
 				qs.exitQuest(true);

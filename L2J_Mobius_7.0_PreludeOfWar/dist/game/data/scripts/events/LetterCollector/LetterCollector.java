@@ -216,19 +216,19 @@ public class LetterCollector extends LongTimeEvent
 	{
 		if (getRandom(100) < 1)
 		{
-			return REWARDS_TAUTI[getRandom(REWARDS_TAUTI.length)];
+			return getRandomEntry(REWARDS_TAUTI);
 		}
 		else if (getRandom(100) < 3)
 		{
-			return REWARDS_SPECTER[getRandom(REWARDS_SPECTER.length)];
+			return getRandomEntry(REWARDS_SPECTER);
 		}
 		else if (getRandom(100) < 3)
 		{
-			return REWARDS_SERAPH[getRandom(REWARDS_SERAPH.length)];
+			return getRandomEntry(REWARDS_SERAPH);
 		}
 		else
 		{
-			return REWARDS_OTHER[getRandom(REWARDS_OTHER.length)];
+			return getRandomEntry(REWARDS_OTHER);
 		}
 	}
 	

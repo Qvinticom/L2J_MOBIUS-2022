@@ -102,7 +102,7 @@ public class DenOfEvil extends AbstractNpcAI
 		addSpawnId(EYE_IDS);
 		for (Location loc : EYE_SPAWNS)
 		{
-			addSpawn(EYE_IDS[getRandom(EYE_IDS.length)], loc, false, 0);
+			addSpawn(getRandomEntry(EYE_IDS), loc, false, 0);
 		}
 	}
 	
@@ -167,7 +167,7 @@ public class DenOfEvil extends AbstractNpcAI
 		@Override
 		public void run()
 		{
-			addSpawn(EYE_IDS[getRandom(EYE_IDS.length)], _loc, false, 0);
+			addSpawn(getRandomEntry(EYE_IDS), _loc, false, 0);
 		}
 	}
 	

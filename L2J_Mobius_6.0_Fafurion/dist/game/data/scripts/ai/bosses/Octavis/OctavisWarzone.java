@@ -293,12 +293,9 @@ public class OctavisWarzone extends AbstractInstance
 				}
 				case "BEASTS_MINIONS_SPAWN":
 				{
-					final Location loc = BEASTS_MINIONS_LOC[getRandom(BEASTS_MINIONS_LOC.length)];
-					final int count = getRandom(10);
-					
-					for (int i = 0; i < count; i++)
+					for (int i = 0; i < getRandom(10); i++)
 					{
-						final Npc beast = addSpawn((!isExtremeMode(world) ? BEASTS_MINIONS[0] : BEASTS_MINIONS[1]), loc, false, 0, false, world.getId());
+						final Npc beast = addSpawn((!isExtremeMode(world) ? BEASTS_MINIONS[0] : BEASTS_MINIONS[1]), getRandomEntry(BEASTS_MINIONS_LOC), false, 0, false, world.getId());
 						beast.setRunning();
 						((Attackable) beast).setCanReturnToSpawnPoint(false);
 						addMoveToDesire(beast, Util.getRandomPosition(BEASTS_RANDOM_POINT, 500, 500), 23);

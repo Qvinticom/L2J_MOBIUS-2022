@@ -113,14 +113,14 @@ public class CastleDungeon extends AbstractInstance
 		{
 			if (player.getParty() == null)
 			{
-				teleportPlayer(player, ENTER_LOC[getRandom(ENTER_LOC.length)], world.getInstanceId());
+				teleportPlayer(player, getRandomEntry(ENTER_LOC), world.getInstanceId());
 				world.addAllowed(player);
 			}
 			else
 			{
 				for (PlayerInstance partyMember : player.getParty().getMembers())
 				{
-					teleportPlayer(partyMember, ENTER_LOC[getRandom(ENTER_LOC.length)], world.getInstanceId());
+					teleportPlayer(partyMember, getRandomEntry(ENTER_LOC), world.getInstanceId());
 					world.addAllowed(partyMember);
 				}
 			}
@@ -129,7 +129,7 @@ public class CastleDungeon extends AbstractInstance
 		}
 		else
 		{
-			teleportPlayer(player, ENTER_LOC[getRandom(ENTER_LOC.length)], world.getInstanceId());
+			teleportPlayer(player, getRandomEntry(ENTER_LOC), world.getInstanceId());
 		}
 	}
 	
@@ -209,15 +209,15 @@ public class CastleDungeon extends AbstractInstance
 		int spawnId;
 		if (world.getStatus() == 0)
 		{
-			spawnId = RAIDS1[getRandom(RAIDS1.length)];
+			spawnId = getRandomEntry(RAIDS1);
 		}
 		else if (world.getStatus() == 1)
 		{
-			spawnId = RAIDS2[getRandom(RAIDS2.length)];
+			spawnId = getRandomEntry(RAIDS2);
 		}
 		else
 		{
-			spawnId = RAIDS3[getRandom(RAIDS3.length)];
+			spawnId = getRandomEntry(RAIDS3);
 		}
 		
 		addSpawn(spawnId, RAIDS_LOC, false, 0, false, world.getInstanceId());

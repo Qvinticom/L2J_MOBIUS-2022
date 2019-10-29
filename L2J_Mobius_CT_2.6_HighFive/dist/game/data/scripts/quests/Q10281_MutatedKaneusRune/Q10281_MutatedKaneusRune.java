@@ -87,19 +87,19 @@ public class Q10281_MutatedKaneusRune extends Quest
 		final int npcId = npc.getId();
 		if (killer.getParty() != null)
 		{
-			final List<PlayerInstance> PartyMembers = new ArrayList<>();
+			final List<PlayerInstance> partyMembers = new ArrayList<>();
 			for (PlayerInstance member : killer.getParty().getMembers())
 			{
 				qs = getQuestState(member, false);
 				if ((qs != null) && qs.isStarted() && !hasQuestItems(member, TISSUE_WA))
 				{
-					PartyMembers.add(member);
+					partyMembers.add(member);
 				}
 			}
 			
-			if (!PartyMembers.isEmpty())
+			if (!partyMembers.isEmpty())
 			{
-				rewardItem(npcId, PartyMembers.get(getRandom(PartyMembers.size())));
+				rewardItem(npcId, getRandomEntry(partyMembers));
 			}
 		}
 		else if (qs.isStarted() && !hasQuestItems(killer, TISSUE_WA))

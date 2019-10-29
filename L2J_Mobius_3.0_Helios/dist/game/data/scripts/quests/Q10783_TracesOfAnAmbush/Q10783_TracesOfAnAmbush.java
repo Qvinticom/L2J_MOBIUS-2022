@@ -168,7 +168,7 @@ public class Q10783_TracesOfAnAmbush extends Quest
 			{
 				final Npc mob = addSpawn(EMBRYO_PREDATOR, npc, false, 120000);
 				addAttackPlayerDesire(mob, killer);
-				mob.broadcastSay(ChatType.NPC_GENERAL, MESSAGES[getRandom(MESSAGES.length)]);
+				mob.broadcastSay(ChatType.NPC_GENERAL, getRandomEntry(MESSAGES));
 			}
 		}
 		return super.onKill(npc, killer, isSummon);

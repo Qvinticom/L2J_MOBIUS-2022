@@ -101,7 +101,7 @@ public class TersisHerald extends AbstractNpcAI
 		}
 		else if (event.equals("TEXT_SPAM"))
 		{
-			SPAWNED_NPCS.stream().forEach(n -> n.broadcastSay(ChatType.NPC_GENERAL, SPAM_MSGS[getRandom(SPAM_MSGS.length)]));
+			SPAWNED_NPCS.stream().forEach(n -> n.broadcastSay(ChatType.NPC_GENERAL, getRandomEntry(SPAM_MSGS)));
 		}
 	}
 	

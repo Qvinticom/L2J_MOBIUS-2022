@@ -552,7 +552,7 @@ public class FeedableBeasts extends AbstractNpcAI
 			// rare random talk...
 			if (getRandom(20) == 0)
 			{
-				final NpcStringId message = TEXT[growthLevel][getRandom(TEXT[growthLevel].length)];
+				final NpcStringId message = getRandomEntry(TEXT[growthLevel]);
 				npc.broadcastSay(ChatType.NPC_GENERAL, message, message.getParamCount() > 0 ? caster.getName() : null);
 			}
 			
@@ -575,7 +575,7 @@ public class FeedableBeasts extends AbstractNpcAI
 			if (skillId == beast.getFoodType())
 			{
 				beast.onReceiveFood();
-				final NpcStringId message = TAMED_TEXT[getRandom(TAMED_TEXT.length)];
+				final NpcStringId message = getRandomEntry(TAMED_TEXT);
 				npc.broadcastSay(ChatType.NPC_GENERAL, message, message.getParamCount() > 0 ? caster.getName() : null);
 			}
 		}

@@ -213,7 +213,7 @@ public class Q00828_EvasBlessing extends Quest
 					}
 				}
 			}
-			npc.broadcastSay(ChatType.NPC_GENERAL, CAPTIVES_TEXT[getRandom(CAPTIVES_TEXT.length)]);
+			npc.broadcastSay(ChatType.NPC_GENERAL, getRandomEntry(CAPTIVES_TEXT));
 			npc.deleteMe();
 			return "captive-0" + getRandom(1, 3) + ".html";
 		}

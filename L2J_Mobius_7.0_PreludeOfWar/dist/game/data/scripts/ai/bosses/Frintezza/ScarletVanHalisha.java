@@ -267,12 +267,7 @@ public class ScarletVanHalisha extends AbstractNpcAI
 				}
 			}
 		}
-		if (!result.isEmpty() && (result.size() != 0))
-		{
-			final Object[] characters = result.toArray();
-			return (Creature) characters[getRandom(characters.length)];
-		}
-		return null;
+		return getRandomEntry(result);
 	}
 	
 	public static void main(String[] args)

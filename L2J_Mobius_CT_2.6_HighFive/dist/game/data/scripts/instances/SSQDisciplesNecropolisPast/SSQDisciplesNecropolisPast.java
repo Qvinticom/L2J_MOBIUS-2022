@@ -187,7 +187,7 @@ public class SSQDisciplesNecropolisPast extends AbstractInstance
 	
 	private void makeCast(Npc npc, List<Npc> targets)
 	{
-		npc.setTarget(targets.get(getRandom(targets.size())));
+		npc.setTarget(getRandomEntry(targets));
 		if (SKILLS.containsKey(npc.getId()))
 		{
 			npc.doCast(SKILLS.get(npc.getId()).getSkill());
@@ -235,7 +235,7 @@ public class SSQDisciplesNecropolisPast extends AbstractInstance
 							}
 							else if (getRandom(100) < 10)
 							{
-								caster.broadcastPacket(new NpcSay(caster.getObjectId(), ChatType.NPC_SHOUT, caster.getId(), LILITH_SHOUT[getRandom(3)]));
+								caster.broadcastPacket(new NpcSay(caster.getObjectId(), ChatType.NPC_SHOUT, caster.getId(), getRandomEntry(LILITH_SHOUT)));
 							}
 						}
 					}

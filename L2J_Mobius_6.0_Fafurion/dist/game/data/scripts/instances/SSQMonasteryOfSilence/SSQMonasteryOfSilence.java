@@ -199,18 +199,18 @@ public class SSQMonasteryOfSilence extends AbstractInstance
 					if (player.isInCombat())
 					{
 						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.THE_GUARDIAN_OF_THE_SEAL_DOESN_T_SEEM_TO_GET_INJURED_AT_ALL_UNTIL_THE_BARRIER_IS_DESTROYED);
-						SkillCaster.triggerCast(npc, player, BUFFS[getRandom(BUFFS.length)].getSkill());
+						SkillCaster.triggerCast(npc, player, getRandomEntry(BUFFS).getSkill());
 					}
 					else
 					{
 						final QuestState qs = player.getQuestState(Q10295_SevenSignsSolinasTomb.class.getSimpleName());
 						if ((qs != null) && (qs.getCond() < 2) && !qs.isCompleted())
 						{
-							npc.broadcastSay(ChatType.NPC_GENERAL, ELCADIA_DIALOGS2[getRandom(ELCADIA_DIALOGS2.length)]);
+							npc.broadcastSay(ChatType.NPC_GENERAL, getRandomEntry(ELCADIA_DIALOGS2));
 						}
 						else if (qs == null)
 						{
-							npc.broadcastSay(ChatType.NPC_GENERAL, ELCADIA_DIALOGS[getRandom(ELCADIA_DIALOGS.length)]);
+							npc.broadcastSay(ChatType.NPC_GENERAL, getRandomEntry(ELCADIA_DIALOGS));
 						}
 					}
 					startQuestTimer("FOLLOW", 10000, npc, player);

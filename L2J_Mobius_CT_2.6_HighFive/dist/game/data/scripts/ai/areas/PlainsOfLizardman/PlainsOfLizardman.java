@@ -189,7 +189,7 @@ public class PlainsOfLizardman extends AbstractNpcAI
 		}
 		if (random <= 25)
 		{
-			buffer.doCast(BUFFS[BUFF_LIST[getRandom(BUFF_LIST.length)]].getSkill());
+			buffer.doCast(BUFFS[getRandomEntry(BUFF_LIST)].getSkill());
 		}
 		if (random <= 10)
 		{

@@ -102,12 +102,12 @@ public class TeleportToUndergroundColiseum extends AbstractNpcAI
 		}
 		else if (event.equals("return"))
 		{
-			player.teleToLocation(RETURN_LOCS[getRandom(RETURN_LOCS.length)], false);
+			player.teleToLocation(getRandomEntry(RETURN_LOCS), false);
 		}
 		else if (Util.isDigit(event))
 		{
 			final int val = Integer.parseInt(event) - 1;
-			player.teleToLocation(MANAGERS_LOCS[val][getRandom(MANAGERS_LOCS[val].length)], false);
+			player.teleToLocation(getRandomEntry(MANAGERS_LOCS[val]), false);
 		}
 		return null;
 	}
@@ -117,11 +117,11 @@ public class TeleportToUndergroundColiseum extends AbstractNpcAI
 	{
 		if (CommonUtil.contains(MANAGERS, npc.getId()))
 		{
-			player.teleToLocation(RETURN_LOCS[getRandom(RETURN_LOCS.length)], false);
+			player.teleToLocation(getRandomEntry(RETURN_LOCS), false);
 		}
 		else
 		{
-			player.teleToLocation(COLISEUM_LOCS[getRandom(COLISEUM_LOCS.length)], false);
+			player.teleToLocation(getRandomEntry(COLISEUM_LOCS), false);
 		}
 		return null;
 	}

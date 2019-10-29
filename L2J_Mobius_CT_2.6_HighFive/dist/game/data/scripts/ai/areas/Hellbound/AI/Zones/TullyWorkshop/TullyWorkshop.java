@@ -1019,8 +1019,7 @@ public class TullyWorkshop extends AbstractNpcAI
 							MinionList.spawnMinion(monster, 25596);
 						}
 						
-						final PlayerInstance target = player.getParty() == null ? player : player.getParty().getMembers().get(getRandom(player.getParty().getMembers().size()));
-						
+						final PlayerInstance target = player.getParty() == null ? player : getRandomEntry(player.getParty().getMembers());
 						if ((target != null) && !target.isDead())
 						{
 							monster.addDamageHate(target, 0, 999);

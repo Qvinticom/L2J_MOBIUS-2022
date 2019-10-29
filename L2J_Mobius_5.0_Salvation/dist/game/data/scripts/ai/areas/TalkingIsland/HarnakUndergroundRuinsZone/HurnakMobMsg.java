@@ -59,7 +59,7 @@ public class HurnakMobMsg extends AbstractNpcAI
 	{
 		if (event.equals("ATTACK"))
 		{
-			npc.broadcastSay(ChatType.NPC_GENERAL, ON_ATTACK_MSG[getRandom(ON_ATTACK_MSG.length)]);
+			npc.broadcastSay(ChatType.NPC_GENERAL, getRandomEntry(ON_ATTACK_MSG));
 		}
 		return super.onAdvEvent(event, npc, player);
 	}
@@ -77,7 +77,7 @@ public class HurnakMobMsg extends AbstractNpcAI
 	@Override
 	public String onKill(Npc npc, PlayerInstance attacker, boolean isSummon)
 	{
-		npc.broadcastSay(ChatType.NPC_GENERAL, ON_FAILED_MSG[getRandom(ON_FAILED_MSG.length)]);
+		npc.broadcastSay(ChatType.NPC_GENERAL, getRandomEntry(ON_FAILED_MSG));
 		return super.onKill(npc, attacker, isSummon);
 	}
 	

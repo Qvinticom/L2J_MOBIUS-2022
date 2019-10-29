@@ -98,7 +98,7 @@ public class CabaleBuffer extends AbstractNpcAI
 				{
 					messages = PREACHER_MSG;
 				}
-				broadcastSay(_npc, messages[getRandom(messages.length)], null, -1);
+				broadcastSay(_npc, getRandomEntry(messages), null, -1);
 				ThreadPool.schedule(this, 60000);
 			}
 		}

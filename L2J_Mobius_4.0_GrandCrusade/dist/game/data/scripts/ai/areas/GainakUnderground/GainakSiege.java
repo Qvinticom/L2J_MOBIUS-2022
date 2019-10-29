@@ -112,7 +112,7 @@ public class GainakSiege extends AbstractNpcAI
 			{
 				for (Location loc : ASSASSIN_SPAWNS)
 				{
-					addSpawn(ASSASSIN_IDS[getRandom(ASSASSIN_IDS.length)], loc, true, 1800000);
+					addSpawn(getRandomEntry(ASSASSIN_IDS), loc, true, 1800000);
 				}
 				_isInSiege = true;
 				GAINAK_TOWN_ZONE.broadcastPacket(new OnEventTrigger(SIEGE_EFFECT, true));
@@ -156,7 +156,7 @@ public class GainakSiege extends AbstractNpcAI
 		@Override
 		public void run()
 		{
-			addSpawn(ASSASSIN_IDS[getRandom(ASSASSIN_IDS.length)], _loc, true, 1800000);
+			addSpawn(getRandomEntry(ASSASSIN_IDS), _loc, true, 1800000);
 		}
 	}
 	

@@ -168,7 +168,7 @@ public class Q00643_RiseAndFallOfTheElrokiTribe extends Quest
 				}
 				else
 				{
-					rewardItems(player, PIECE[getRandom(PIECE.length)], 5);
+					rewardItems(player, getRandomEntry(PIECE), 5);
 					takeItems(player, BONES_OF_A_PLAINS_DINOSAUR, 300);
 					playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 					htmltext = "32117-05.html";

@@ -65,7 +65,7 @@ public class Seyo extends AbstractNpcAI
 				if (npc.isScriptValue(1))
 				{
 					npc.setScriptValue(0);
-					npc.broadcastSay(ChatType.NPC_GENERAL, TEXT[getRandom(TEXT.length)]);
+					npc.broadcastSay(ChatType.NPC_GENERAL, getRandomEntry(TEXT));
 				}
 				break;
 			}

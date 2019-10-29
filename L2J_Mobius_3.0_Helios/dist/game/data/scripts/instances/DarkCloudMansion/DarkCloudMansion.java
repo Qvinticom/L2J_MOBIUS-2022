@@ -143,7 +143,7 @@ public class DarkCloudMansion extends AbstractInstance
 				}
 				case "CHAT":
 				{
-					world.getNpcs(BELETH_SAMPLE).stream().filter(n -> n.isScriptValue(1)).forEach(n -> n.broadcastSay(ChatType.NPC_GENERAL, DECAY_CHAT[getRandom(DECAY_CHAT.length)]));
+					world.getNpcs(BELETH_SAMPLE).stream().filter(n -> n.isScriptValue(1)).forEach(n -> n.broadcastSay(ChatType.NPC_GENERAL, getRandomEntry(DECAY_CHAT)));
 					break;
 				}
 			}
@@ -204,7 +204,7 @@ public class DarkCloudMansion extends AbstractInstance
 						}
 						else
 						{
-							addSpawn(MONOLITH_PRIVATES[getRandom(MONOLITH_PRIVATES.length)], npc, false, 0, false, world.getId());
+							addSpawn(getRandomEntry(MONOLITH_PRIVATES), npc, false, 0, false, world.getId());
 						}
 						world.openCloseDoor(ROOM_B_DOOR, false);
 					}
@@ -264,7 +264,7 @@ public class DarkCloudMansion extends AbstractInstance
 						world.openCloseDoor(ROOM_D_DOOR, false);
 						if (npc.isHpBlocked() && (getRandom(100) < 12))
 						{
-							addSpawn(BELETH_SUBORDINATE[getRandom(BELETH_SUBORDINATE.length)], npc, false, 0, false, world.getId());
+							addSpawn(getRandomEntry(BELETH_SUBORDINATE), npc, false, 0, false, world.getId());
 						}
 					}
 					break;
@@ -391,7 +391,7 @@ public class DarkCloudMansion extends AbstractInstance
 		final List<Npc> npcs = world.spawnGroup("roomE");
 		for (Npc n : npcs)
 		{
-			n.broadcastSay(ChatType.NPC_GENERAL, SPAWN_CHAT[getRandom(SPAWN_CHAT.length)]);
+			n.broadcastSay(ChatType.NPC_GENERAL, getRandomEntry(SPAWN_CHAT));
 		}
 		for (int i = 0; i < 3; i++)
 		{
@@ -413,7 +413,7 @@ public class DarkCloudMansion extends AbstractInstance
 					world.setParameter("found", found);
 					
 					npc.setScriptValue(-1);
-					npc.broadcastSay(ChatType.NPC_GENERAL, SUCCESS_CHAT[getRandom(SUCCESS_CHAT.length)]);
+					npc.broadcastSay(ChatType.NPC_GENERAL, getRandomEntry(SUCCESS_CHAT));
 					
 					if (found != 3)
 					{
@@ -431,7 +431,7 @@ public class DarkCloudMansion extends AbstractInstance
 					world.setParameter("blocked", true);
 					world.setParameter("found", 0);
 					
-					npc.broadcastSay(ChatType.NPC_GENERAL, FAIL_CHAT[getRandom(FAIL_CHAT.length)]);
+					npc.broadcastSay(ChatType.NPC_GENERAL, getRandomEntry(FAIL_CHAT));
 					npc.setScriptValue(-1);
 					startQuestTimer("CHAT", 4000, npc, null);
 					startQuestTimer("DELETE", 4500, npc, null);

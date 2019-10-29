@@ -113,7 +113,7 @@ public class Q00617_GatherTheFlames extends Quest
 				{
 					return getNoQuestMsg(player);
 				}
-				giveItems(player, REWARD[getRandom(REWARD.length)], 1);
+				giveItems(player, getRandomEntry(REWARD), 1);
 				takeItems(player, TORCH, 1000);
 				break;
 			}

@@ -116,7 +116,7 @@ public class FactionSystem extends AbstractNpcAI
 			{
 				if (npc != null)
 				{
-					npc.broadcastSay(ChatType.NPC_GENERAL, TEXTS[getRandom(TEXTS.length)], 1500);
+					npc.broadcastSay(ChatType.NPC_GENERAL, getRandomEntry(TEXTS), 1500);
 				}
 				break;
 			}

@@ -163,7 +163,7 @@ public class TaintedDimension extends AbstractInstance
 				}
 				case "MONSTER_SAY":
 				{
-					npc.broadcastSay(ChatType.NPC_GENERAL, MONSTER_SAY[getRandom(MONSTER_SAY.length)]);
+					npc.broadcastSay(ChatType.NPC_GENERAL, getRandomEntry(MONSTER_SAY));
 					break;
 				}
 				case "HUMAN_1_SAY":

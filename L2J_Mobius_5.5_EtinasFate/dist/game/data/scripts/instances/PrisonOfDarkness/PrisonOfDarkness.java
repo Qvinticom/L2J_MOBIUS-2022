@@ -135,7 +135,7 @@ public class PrisonOfDarkness extends AbstractInstance
 				{
 					if (npcVars.getBoolean("CAN_TELEPORT", true))
 					{
-						npc.teleToLocation(WARP_POINT_RANDOM_LOCS[getRandom(WARP_POINT_RANDOM_LOCS.length)]);
+						npc.teleToLocation(getRandomEntry(WARP_POINT_RANDOM_LOCS));
 						showOnScreenMsg(instance, NpcStringId.THE_LOCATION_OF_THE_ESCAPE_DEVICE_IS_MOVED, ExShowScreenMessage.TOP_CENTER, 4000);
 						
 						switch (npcVars.getInt("TIME_MULTIPLER", 5))
@@ -333,7 +333,7 @@ public class PrisonOfDarkness extends AbstractInstance
 			{
 				case WARP_POINT:
 				{
-					npc.teleToLocation(WARP_POINT_RANDOM_LOCS[getRandom(WARP_POINT_RANDOM_LOCS.length)]);
+					npc.teleToLocation(getRandomEntry(WARP_POINT_RANDOM_LOCS));
 					getTimers().addTimer("CHANGE_POSITION", (60000 * npcVars.getInt("TIME_MULTIPLER", 5)), npc, null);
 					break;
 				}
@@ -366,7 +366,7 @@ public class PrisonOfDarkness extends AbstractInstance
 			{
 				case 0:
 					takeItems(creature.getActingPlayer(), GIANT_CANNONBALL, -1);
-					creature.teleToLocation(PLAYERS_RANDOM_LOCS[getRandom(PLAYERS_RANDOM_LOCS.length)]);
+					creature.teleToLocation(getRandomEntry(PLAYERS_RANDOM_LOCS));
 					showOnScreenMsg(creature.getActingPlayer(), NpcStringId.YOU_NEED_TO_FIND_ESCAPE_DEVICE_RE_ENTRY_IS_NOT_ALLOWED_ONCE_YOU_VE_LEFT_THE_INSTANT_ZONE, ExShowScreenMessage.TOP_CENTER, 4000);
 					instance.getParameters().increaseInt("PLAYERS_COUNT", 0, 1);
 					break;
@@ -401,7 +401,7 @@ public class PrisonOfDarkness extends AbstractInstance
 		{
 			if ((skill == TELEPORT.getSkill()) && (player != null) && (npc.calculateDistance3D(player) < 1000) && (npc.getCurrentHpPercent() > 10))
 			{
-				player.teleToLocation(PLAYERS_TELEPORT_RANDOM_LOCS[getRandom(PLAYERS_TELEPORT_RANDOM_LOCS.length)]);
+				player.teleToLocation(getRandomEntry(PLAYERS_TELEPORT_RANDOM_LOCS));
 			}
 		}
 		return super.onSpellFinished(npc, player, skill);
