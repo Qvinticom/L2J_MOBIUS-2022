@@ -743,14 +743,14 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24318" level="115" type="Monster" name="Temple Guard Captain">
+	<npc id="24318" level="120" type="Monster" name="Temple Guard Captain">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<acquire exp="7534890850" sp="6771200" />
+		<acquire exp="4633012800" sp="4161600" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="11956767.95688" hpRegen="9.5" mp="36834.809" mpRegen="3.3" />
-			<attack physical="89354" magical="82036" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="8761" magical="5090" />
+			<vitals hp="792809.681745" hpRegen="9.5" mp="3958.491" mpRegen="3.3" />
+			<attack physical="106139" magical="100061" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="10541" magical="6125" />
 			<speed>
 				<walk ground="70" />
 				<run ground="180" />
@@ -769,25 +769,16 @@
 		<skillList>
 			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
-			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="16417" level="10" /> <!-- Faint Attack Resistance -->
-			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
-			<skill id="16177" level="10" /> <!-- Knock Down Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="57" min="54921" max="128184" chance="70" /> <!-- Adena -->
-				<item id="36550" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment (Top-grade) -->
-				<item id="36555" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (Top-grade) -->
-				<item id="80251" min="1" max="1" chance="0.03" /> <!-- Recipe: Krishna Dicing Death (60%) -->
+				<item id="57" min="38632" max="90393" chance="70" /> <!-- Adena -->
+				<item id="36540" min="1" max="1" chance="0.75" /> <!-- Exquisite Leather Braid -->
+				<item id="80251" min="1" max="1" chance="0.075" /> <!-- Recipe: Krishna Cutter (60%) -->
 			</drop>
 			<spoil>
-				<item id="36565" min="1" max="1" chance="0.3" /> <!-- Exquisite Synthetic Cokes -->
+				<item id="36564" min="1" max="1" chance="2.744" /> <!-- Greater Synthetic Cokes -->
 			</spoil>
-			<lucky>
-				<item id="48979" min="1" max="3" chance="46.99" /> <!-- Damaged Spellbook -->
-			</lucky>
 		</dropLists>
 	</npc>
 	<npc id="24319" level="113" type="Monster" name="Elite Guardian Warrior">
@@ -885,14 +876,14 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24321" level="112" type="Monster" name="Temple Patrol Guard">
+	<npc id="24321" level="119" type="Monster" name="Temple Patrol Guard">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<acquire exp="2739597056" sp="2458624" />
+		<acquire exp="4493214495" sp="4035885" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3442903.785915" hpRegen="9.5" mp="35405.827" mpRegen="3.3" />
-			<attack physical="79283" magical="71221" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="7693" magical="4469" />
+			<vitals hp="734083.48263" hpRegen="9.5" mp="3907.398" mpRegen="3.3" />
+			<attack physical="102782" magical="96456" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="10185" magical="5918" />
 			<speed>
 				<walk ground="65" />
 				<run ground="180" />
@@ -911,33 +902,26 @@
 		<skillList>
 			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
-			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4440" level="1" /> <!-- Greater Paralysis Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="57" min="34540" max="80522" chance="70" /> <!-- Adena -->
-				<item id="36544" min="1" max="1" chance="1.457" /> <!-- Orichalcum Wire -->
-				<item id="36545" min="1" max="1" chance="0.3" /> <!-- Durandil Wire -->
-				<item id="80278" min="1" max="1" chance="0.075" /> <!-- Krishna Shaper Fragment -->
+				<item id="57" min="37944" max="88743" chance="70" /> <!-- Adena -->
+				<item id="36530" min="1" max="1" chance="1.735" /> <!-- Exquisite Fiber -->
+				<item id="80278" min="1" max="1" chance="1.246" /> <!-- Krishna Shaper Fragment -->
 			</drop>
 			<spoil>
-				<item id="36565" min="1" max="1" chance="0.3" /> <!-- Exquisite Synthetic Cokes -->
+				<item id="36519" min="1" max="1" chance="73.51" /> <!-- Quality Leather -->
 			</spoil>
-			<lucky>
-				<item id="48979" min="1" max="3" chance="47.39" /> <!-- Damaged Spellbook -->
-			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24322" level="114" type="Monster" name="Temple Knight Recruit">
+	<npc id="24322" level="119" type="Monster" name="Temple Knight Recruit">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<acquire exp="3434335956" sp="3080052" />
+		<acquire exp="4493214495" sp="4035885" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3795799.782015" hpRegen="9.5" mp="36358.752" mpRegen="3.3" />
-			<attack physical="85997" magical="78431" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="8405" magical="4883" />
+			<vitals hp="734083.48263" hpRegen="9.5" mp="3907.398" mpRegen="3.3" />
+			<attack physical="102782" magical="96456" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="10185" magical="5918" />
 			<speed>
 				<walk ground="65" />
 				<run ground="180" />
@@ -956,33 +940,26 @@
 		<skillList>
 			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
-			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4440" level="1" /> <!-- Greater Paralysis Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="57" min="35899" max="83740" chance="70" /> <!-- Adena -->
-				<item id="36544" min="1" max="1" chance="1.627" /> <!-- Orichalcum Wire -->
-				<item id="36545" min="1" max="1" chance="0.3" /> <!-- Durandil Wire -->
-				<item id="80279" min="1" max="1" chance="0.075" /> <!-- Krishna Cutter Fragment -->
+				<item id="57" min="37944" max="88743" chance="70" /> <!-- Adena -->
+				<item id="80279" min="1" max="1" chance="1.273" /> <!-- Krishna Cutter Fragment -->
+				<item id="36535" min="1" max="1" chance="0.75" /> <!-- Quality Braid -->
 			</drop>
 			<spoil>
-				<item id="36565" min="1" max="1" chance="0.3" /> <!-- Exquisite Synthetic Cokes -->
+				<item id="36539" min="1" max="1" chance="18.25" /> <!-- Quality Leather Braid -->
 			</spoil>
-			<lucky>
-				<item id="48979" min="1" max="3" chance="47.95" /> <!-- Damaged Spellbook -->
-			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24323" level="112" type="Monster" name="Temple Guard">
+	<npc id="24323" level="120" type="Monster" name="Temple Guard">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<acquire exp="2739597056" sp="2458624" />
+		<acquire exp="4633012800" sp="4161600" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3442903.785915" hpRegen="9.5" mp="35405.827" mpRegen="3.3" />
-			<attack physical="79283" magical="71221" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="7693" magical="4469" />
+			<vitals hp="792809.681745" hpRegen="9.5" mp="3958.491" mpRegen="3.3" />
+			<attack physical="106139" magical="100061" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="10541" magical="6125" />
 			<speed>
 				<walk ground="65" />
 				<run ground="180" />
@@ -1001,34 +978,27 @@
 		<skillList>
 			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
-			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="16417" level="10" /> <!-- Faint Attack Resistance -->
-			<skill id="4440" level="1" /> <!-- Greater Paralysis Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="57" min="34540" max="80522" chance="70" /> <!-- Adena -->
-				<item id="36544" min="1" max="1" chance="1.509" /> <!-- Orichalcum Wire -->
-				<item id="36545" min="1" max="1" chance="0.3" /> <!-- Durandil Wire -->
-				<item id="80278" min="1" max="1" chance="0.075" /> <!-- Krishna Shaper Fragment -->
+				<item id="57" min="38632" max="90393" chance="70" /> <!-- Adena -->
+				<item id="80297" min="1" max="1" chance="1.152" /> <!-- Leviathan Leather Leggings Material -->
+				<item id="36525" min="1" max="1" chance="0.3" /> <!-- Durandil -->
+				<item id="80269" min="1" max="1" chance="0.03" /> <!-- Recipe: Leviathan Leather Leggings (60%) -->
 			</drop>
 			<spoil>
-				<item id="36565" min="1" max="1" chance="0.3" /> <!-- Exquisite Synthetic Cokes -->
+				<item id="36529" min="1" max="1" chance="78.79" /> <!-- Quality Fiber -->
 			</spoil>
-			<lucky>
-				<item id="48979" min="1" max="3" chance="46.93" /> <!-- Damaged Spellbook -->
-			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24324" level="114" type="Monster" name="Temple Guardian Warrior">
+	<npc id="24324" level="120" type="Monster" name="Temple Guardian Warrior">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<acquire exp="3434335956" sp="3080052" />
+		<acquire exp="4633012800" sp="4161600" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3795799.782015" hpRegen="9.5" mp="36358.752" mpRegen="3.3" />
-			<attack physical="85997" magical="78431" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="8405" magical="4883" />
+			<vitals hp="792809.681745" hpRegen="9.5" mp="3958.491" mpRegen="3.3" />
+			<attack physical="106139" magical="100061" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="10541" magical="6125" />
 			<speed>
 				<walk ground="65" />
 				<run ground="180" />
@@ -1047,38 +1017,31 @@
 		<skillList>
 			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
-			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="16417" level="10" /> <!-- Faint Attack Resistance -->
-			<skill id="4440" level="1" /> <!-- Greater Paralysis Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="57" min="35899" max="83740" chance="70" /> <!-- Adena -->
-				<item id="36544" min="1" max="1" chance="1.551" /> <!-- Orichalcum Wire -->
+				<item id="57" min="38632" max="90393" chance="70" /> <!-- Adena -->
+				<item id="80298" min="1" max="1" chance="3.072" /> <!-- Leviathan Leather Glove Material -->
 				<item id="36545" min="1" max="1" chance="0.3" /> <!-- Durandil Wire -->
-				<item id="80279" min="1" max="1" chance="0.075" /> <!-- Krishna Cutter Fragment -->
+				<item id="80270" min="1" max="1" chance="0.03" /> <!-- Recipe: Leviathan Leather Gloves (60%) -->
 			</drop>
 			<spoil>
-				<item id="36565" min="1" max="1" chance="0.3" /> <!-- Exquisite Synthetic Cokes -->
+				<item id="36534" min="1" max="1" chance="24.15" /> <!-- Durable Braid -->
 			</spoil>
-			<lucky>
-				<item id="48979" min="1" max="3" chance="46.83" /> <!-- Damaged Spellbook -->
-			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24325" level="112" type="Monster" name="Temple Wizard">
+	<npc id="24325" level="120" type="Monster" name="Temple Wizard">
 		<parameters>
 			<skill name="Skill01_ID" id="32697" level="1" />
 			<param name="Skill01_Probablity" value="2000" />
 		</parameters>
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
-		<acquire exp="2739597056" sp="2458624" />
+		<acquire exp="4633012800" sp="4161600" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3442903.785915" hpRegen="9.5" mp="35405.827" mpRegen="3.3" />
-			<attack physical="79283" magical="71221" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="7693" magical="4469" />
+			<vitals hp="792809.681745" hpRegen="9.5" mp="3958.491" mpRegen="3.3" />
+			<attack physical="106139" magical="100061" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="10541" magical="6125" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
@@ -1098,38 +1061,31 @@
 			<skill id="32697" level="1" /> <!-- Aqua Spike -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
-			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
-			<skill id="16417" level="10" /> <!-- Faint Attack Resistance -->
-			<skill id="16177" level="6" /> <!-- Knock Down Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="57" min="34540" max="80522" chance="70" /> <!-- Adena -->
-				<item id="36519" min="1" max="1" chance="5.603" /> <!-- Quality Leather -->
-				<item id="36520" min="1" max="1" chance="0.3" /> <!-- Exquisite Leather -->
-				<item id="80295" min="1" max="1" chance="0.075" /> <!-- Leviathan Leather Helmet Material -->
-				<item id="80267" min="1" max="1" chance="0.003" /> <!-- Recipe: Leviathan Leather Helmet (60%) -->
+				<item id="57" min="38632" max="90393" chance="70" /> <!-- Adena -->
+				<item id="80295" min="1" max="1" chance="1.985" /> <!-- Leviathan Leather Helmet Material -->
+				<item id="36550" min="1" max="1" chance="0.03" /> <!-- Weapon Fragment (Top-grade) -->
+				<item id="80267" min="1" max="1" chance="0.03" /> <!-- Recipe: Leviathan Leather Helmet (60%) -->
 			</drop>
 			<spoil>
-				<item id="36565" min="1" max="1" chance="0.3" /> <!-- Exquisite Synthetic Cokes -->
+				<item id="36524" min="1" max="1" chance="28.55" /> <!-- Orichalcum -->
 			</spoil>
-			<lucky>
-				<item id="48979" min="1" max="3" chance="46.91" /> <!-- Damaged Spellbook -->
-			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24326" level="114" type="Monster" name="Temple Guardian Wizard">
+	<npc id="24326" level="120" type="Monster" name="Temple Guardian Wizard">
 		<parameters>
 			<skill name="Skill01_ID" id="32697" level="1" />
 			<param name="Skill01_Probablity" value="2000" />
 		</parameters>
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
-		<acquire exp="3434335956" sp="3080052" />
+		<acquire exp="4633012800" sp="4161600" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3795799.782015" hpRegen="9.5" mp="36358.752" mpRegen="3.3" />
-			<attack physical="85997" magical="78431" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="8405" magical="4883" />
+			<vitals hp="792809.681745" hpRegen="9.5" mp="3958.491" mpRegen="3.3" />
+			<attack physical="106139" magical="100061" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="10541" magical="6125" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
@@ -1149,24 +1105,17 @@
 			<skill id="32697" level="1" /> <!-- Aqua Spike -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
-			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
-			<skill id="16417" level="10" /> <!-- Faint Attack Resistance -->
-			<skill id="16177" level="6" /> <!-- Knock Down Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="57" min="35899" max="83740" chance="70" /> <!-- Adena -->
-				<item id="36539" min="1" max="1" chance="1.412" /> <!-- Quality Leather Braid -->
-				<item id="36540" min="1" max="1" chance="0.3" /> <!-- Exquisite Leather Braid -->
-				<item id="80296" min="1" max="1" chance="0.075" /> <!-- Leviathan Leather Armor Material -->
-				<item id="80268" min="1" max="1" chance="0.003" /> <!-- Recipe: Leviathan Leather Armor (60%) -->
+				<item id="57" min="38632" max="90393" chance="70" /> <!-- Adena -->
+				<item id="80296" min="1" max="1" chance="0.75" /> <!-- Leviathan Leather Armor Material -->
+				<item id="36555" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (Top-grade) -->
+				<item id="80268" min="1" max="1" chance="0.0075" /> <!-- Recipe: Leviathan Leather Armor (60%) -->
 			</drop>
 			<spoil>
-				<item id="36565" min="1" max="1" chance="0.3" /> <!-- Exquisite Synthetic Cokes -->
+				<item id="36544" min="1" max="1" chance="13.23" /> <!-- Orichalcum Wire -->
 			</spoil>
-			<lucky>
-				<item id="48979" min="1" max="3" chance="47.06" /> <!-- Damaged Spellbook -->
-			</lucky>
 		</dropLists>
 	</npc>
 	<npc id="24327" level="112" type="Monster" name="Temple Priest">
@@ -1266,18 +1215,18 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="24329" level="111" type="Monster" name="Starving Water Dragon">
+	<npc id="24329" level="119" type="Monster" name="Starving Water Dragon">
 		<parameters>
 			<skill name="Skill01_ID" id="32704" level="1" />
 			<param name="Skill01_Probablity" value="2000" />
 		</parameters>
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<acquire exp="2446272945" sp="2193138" />
+		<acquire exp="4493214495" sp="4035885" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2295269.400915" hpRegen="9.5" mp="34930.581" mpRegen="3.3" />
-			<attack physical="75926" magical="67616" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="7337" magical="4262" />
+			<vitals hp="734083.48263" hpRegen="9.5" mp="3907.398" mpRegen="3.3" />
+			<attack physical="102782" magical="96456" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="10185" magical="5918" />
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
@@ -1297,22 +1246,17 @@
 			<skill id="32704" level="1" /> <!-- Bite Attack -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
-			<skill id="14819" level="1" /> <!-- Instant Kill Attack Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="57" min="22550" max="52632" chance="70" /> <!-- Adena -->
-				<item id="36555" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (Top-grade) -->
-				<item id="80299" min="1" max="1" chance="0.03" /> <!-- Leviathan Leather Boots Material -->
-				<item id="80271" min="1" max="1" chance="0.003" /> <!-- Recipe: Leviathan Leather Boots (60%) -->
+				<item id="57" min="37944" max="88743" chance="70" /> <!-- Adena -->
+				<item id="80299" min="1" max="1" chance="3.0115" /> <!-- Leviathan Leather Boots Material -->
+				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
+				<item id="80271" min="1" max="1" chance="0.03" /> <!-- Recipe: Leviathan Leather Boots (60%) -->
 			</drop>
 			<spoil>
-				<item id="36565" min="1" max="1" chance="0.3" /> <!-- Exquisite Synthetic Cokes -->
+				<item id="36549" min="1" max="1" chance="3.678" /> <!-- Weapon Fragment (High-grade) -->
 			</spoil>
-			<lucky>
-				<item id="48979" min="1" max="3" chance="47.21" /> <!-- Damaged Spellbook -->
-			</lucky>
 		</dropLists>
 	</npc>
 	<npc id="24330" level="85" type="Npc" name="Ice Knight">
