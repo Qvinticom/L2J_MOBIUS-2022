@@ -252,289 +252,433 @@
 		<!-- Double-click to obtain Grankain's Necklace Stage 1. -->
 		<set name="icon" val="BranchIcon.Icon.necklace_of_grankein_i00" />
 		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
+		<set name="is_commissionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="27678" min="1" max="1" chance="100" /> <!-- Gran Kain's Necklace - Stage 1 -->
+		</capsuled_items>
 	</item>
 	<item id="28320" name="Gran Kain's Necklace - Stage 2" type="EtcItem">
 		<!-- Double-click to obtain Grankain's Necklace Stage 2. -->
 		<set name="icon" val="BranchIcon.Icon.necklace_of_grankein_i00" />
 		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
+		<set name="is_commissionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="27679" min="1" max="1" chance="100" /> <!-- Gran Kain's Necklace - Stage 2 -->
+		</capsuled_items>
 	</item>
 	<item id="28321" name="Gran Kain's Necklace - Stage 3" type="EtcItem">
 		<!-- Double-click to obtain Grankain's Necklace Stage 3. -->
 		<set name="icon" val="BranchIcon.Icon.necklace_of_grankein_i00" />
 		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
+		<set name="is_commissionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="27680" min="1" max="1" chance="100" /> <!-- Gran Kain's Necklace - Stage 3 -->
+		</capsuled_items>
 	</item>
 	<item id="28322" name="Gran Kain's Necklace - Stage 4" type="EtcItem">
 		<!-- Double-click to obtain Grankain's Necklace Stage 4. -->
 		<set name="icon" val="BranchIcon.Icon.necklace_of_grankein_i00" />
 		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
+		<set name="is_commissionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="27681" min="1" max="1" chance="100" /> <!-- Gran Kain's Necklace - Stage 4 -->
+		</capsuled_items>
 	</item>
 	<item id="28323" name="Gran Kain's Necklace - Stage 5" type="EtcItem">
 		<!-- Double-click to obtain Grankain's Necklace Stage 5. -->
 		<set name="icon" val="BranchIcon.Icon.necklace_of_grankein_i00" />
 		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
+		<set name="is_commissionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="27682" min="1" max="1" chance="100" /> <!-- Gran Kain's Necklace - Stage 5 -->
+		</capsuled_items>
 	</item>
 	<item id="28324" name="Gran Kain's Necklace - Stage 6" type="EtcItem">
 		<!-- Double-click to obtain Grankain's Necklace Stage 6. -->
 		<set name="icon" val="BranchIcon.Icon.necklace_of_grankein_i00" />
 		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
+		<set name="is_commissionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="27683" min="1" max="1" chance="100" /> <!-- Gran Kain's Necklace - Stage 6 -->
+		</capsuled_items>
 	</item>
 	<item id="28325" name="Einhasad's Necklace - Stage 1" type="EtcItem">
 		<!-- Double-click to obtain Einhasad's Necklace Stage 1. -->
 		<set name="icon" val="BranchIcon.Icon.necklace_of_einhasad_i00" />
 		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
+		<set name="is_commissionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="27684" min="1" max="1" chance="100" /> <!-- Einhasad's Necklace - Stage 1 -->
+		</capsuled_items>
 	</item>
 	<item id="28326" name="Einhasad's Necklace - Stage 2" type="EtcItem">
 		<!-- Double-click to obtain Einhasad's Necklace Stage 2. -->
 		<set name="icon" val="BranchIcon.Icon.necklace_of_einhasad_i00" />
 		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
+		<set name="is_commissionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="27685" min="1" max="1" chance="100" /> <!-- Einhasad's Necklace - Stage 2 -->
+		</capsuled_items>
 	</item>
 	<item id="28327" name="Einhasad's Necklace - Stage 3" type="EtcItem">
 		<!-- Double-click to obtain Einhasad's Necklace Stage 3. -->
 		<set name="icon" val="BranchIcon.Icon.necklace_of_einhasad_i00" />
 		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
+		<set name="is_commissionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="27686" min="1" max="1" chance="100" /> <!-- Einhasad's Necklace - Stage 3 -->
+		</capsuled_items>
 	</item>
 	<item id="28328" name="Einhasad's Necklace - Stage 4" type="EtcItem">
 		<!-- Double-click to obtain Einhasad's Necklace Stage 4. -->
 		<set name="icon" val="BranchIcon.Icon.necklace_of_einhasad_i00" />
 		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
+		<set name="is_commissionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="27687" min="1" max="1" chance="100" /> <!-- Einhasad's Necklace - Stage 4 -->
+		</capsuled_items>
 	</item>
 	<item id="28329" name="Einhasad's Necklace - Stage 5" type="EtcItem">
 		<!-- Double-click to obtain Einhasad's Necklace Stage 5. -->
 		<set name="icon" val="BranchIcon.Icon.necklace_of_einhasad_i00" />
 		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
+		<set name="is_commissionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="27688" min="1" max="1" chance="100" /> <!-- Einhasad's Necklace - Stage 5 -->
+		</capsuled_items>
 	</item>
 	<item id="28330" name="Einhasad's Necklace - Stage 6" type="EtcItem">
 		<!-- Double-click to obtain Einhasad's Necklace Stage 6. -->
 		<set name="icon" val="BranchIcon.Icon.necklace_of_einhasad_i00" />
 		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
+		<set name="is_commissionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="27689" min="1" max="1" chance="100" /> <!-- Einhasad's Necklace - Stage 6 -->
+		</capsuled_items>
 	</item>
 	<item id="28331" name="Pa'agrio's Earring - Stage 1" type="EtcItem">
 		<!-- Double-click to obtain Pa'agrio's Earring Stage 1. -->
 		<set name="icon" val="BranchIcon.Icon.earring_of_paagrio_i00" />
 		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
+		<set name="is_commissionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="27690" min="1" max="1" chance="100" /> <!-- Pa'agrio's Earring - Stage 1 -->
+		</capsuled_items>
 	</item>
 	<item id="28332" name="Pa'agrio's Earring - Stage 2" type="EtcItem">
 		<!-- Double-click to obtain Pa'agrio's Earring Stage 2. -->
 		<set name="icon" val="BranchIcon.Icon.earring_of_paagrio_i00" />
 		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
+		<set name="is_commissionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="27691" min="1" max="1" chance="100" /> <!-- Pa'agrio's Earring - Stage 2 -->
+		</capsuled_items>
 	</item>
 	<item id="28333" name="Pa'agrio's Earring - Stage 3" type="EtcItem">
 		<!-- Double-click to obtain Pa'agrio's Earring Stage 3. -->
 		<set name="icon" val="BranchIcon.Icon.earring_of_paagrio_i00" />
 		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
+		<set name="is_commissionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="27692" min="1" max="1" chance="100" /> <!-- Pa'agrio's Earring - Stage 3 -->
+		</capsuled_items>
 	</item>
 	<item id="28334" name="Pa'agrio's Earring - Stage 4" type="EtcItem">
 		<!-- Double-click to obtain Pa'agrio's Earring Stage 4. -->
 		<set name="icon" val="BranchIcon.Icon.earring_of_paagrio_i00" />
 		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
+		<set name="is_commissionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="27693" min="1" max="1" chance="100" /> <!-- Pa'agrio's Earring - Stage 4 -->
+		</capsuled_items>
 	</item>
 	<item id="28335" name="Pa'agrio's Earring - Stage 5" type="EtcItem">
 		<!-- Double-click to obtain Pa'agrio's Earring Stage 5. -->
 		<set name="icon" val="BranchIcon.Icon.earring_of_paagrio_i00" />
 		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
+		<set name="is_commissionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="27694" min="1" max="1" chance="100" /> <!-- Pa'agrio's Earring - Stage 5 -->
+		</capsuled_items>
 	</item>
 	<item id="28336" name="Pa'agrio's Earring - Stage 6" type="EtcItem">
 		<!-- Double-click to obtain Pa'agrio's Earring Stage 6. -->
 		<set name="icon" val="BranchIcon.Icon.earring_of_paagrio_i00" />
 		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
+		<set name="is_commissionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="27695" min="1" max="1" chance="100" /> <!-- Pa'agrio's Earring - Stage 6 -->
+		</capsuled_items>
 	</item>
 	<item id="28337" name="Eva's Earring - Stage 1" type="EtcItem">
 		<!-- Double-click to obtain Eva's Earring Stage 1. -->
 		<set name="icon" val="BranchIcon.Icon.earring_of_eva_i00" />
 		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
+		<set name="is_commissionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="27696" min="1" max="1" chance="100" /> <!-- Eva's Earring - Stage 1 -->
+		</capsuled_items>
 	</item>
 	<item id="28338" name="Eva's Earring - Stage 2" type="EtcItem">
 		<!-- Double-click to obtain Eva's Earring Stage 2. -->
 		<set name="icon" val="BranchIcon.Icon.earring_of_eva_i00" />
 		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
+		<set name="is_commissionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="27697" min="1" max="1" chance="100" /> <!-- Eva's Earring - Stage 2 -->
+		</capsuled_items>
 	</item>
 	<item id="28339" name="Eva's Earring - Stage 3" type="EtcItem">
 		<!-- Double-click to obtain Eva's Earring Stage 3. -->
 		<set name="icon" val="BranchIcon.Icon.earring_of_eva_i00" />
 		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
+		<set name="is_commissionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="27698" min="1" max="1" chance="100" /> <!-- Eva's Earring - Stage 3 -->
+		</capsuled_items>
 	</item>
 	<item id="28340" name="Eva's Earring - Stage 4" type="EtcItem">
 		<!-- Double-click to obtain Eva's Earring Stage 4. -->
 		<set name="icon" val="BranchIcon.Icon.earring_of_eva_i00" />
 		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
+		<set name="is_commissionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="27699" min="1" max="1" chance="100" /> <!-- Eva's Earring - Stage 4 -->
+		</capsuled_items>
 	</item>
 	<item id="28341" name="Eva's Earring - Stage 5" type="EtcItem">
 		<!-- Double-click to obtain Eva's Earring Stage 5. -->
 		<set name="icon" val="BranchIcon.Icon.earring_of_eva_i00" />
 		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
+		<set name="is_commissionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="27700" min="1" max="1" chance="100" /> <!-- Eva's Earring - Stage 5 -->
+		</capsuled_items>
 	</item>
 	<item id="28342" name="Eva's Earring - Stage 6" type="EtcItem">
 		<!-- Double-click to obtain Eva's Earring Stage 6. -->
 		<set name="icon" val="BranchIcon.Icon.earring_of_eva_i00" />
 		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
+		<set name="is_commissionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="27701" min="1" max="1" chance="100" /> <!-- Eva's Earring - Stage 6 -->
+		</capsuled_items>
 	</item>
 	<item id="28343" name="Sayha's Ring - Stage 1" type="EtcItem">
 		<!-- Double-click to obtain Sayha's Ring Stage 1. -->
 		<set name="icon" val="BranchIcon.Icon.ring_of_sayhas_i00" />
 		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
+		<set name="is_commissionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="27702" min="1" max="1" chance="100" /> <!-- Sayha's Ring - Stage 1 -->
+		</capsuled_items>
 	</item>
 	<item id="28344" name="Sayha's Ring - Stage 2" type="EtcItem">
 		<!-- Double-click to obtain Sayha's Ring Stage 2. -->
 		<set name="icon" val="BranchIcon.Icon.ring_of_sayhas_i00" />
 		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
+		<set name="is_commissionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="27703" min="1" max="1" chance="100" /> <!-- Sayha's Ring - Stage 2 -->
+		</capsuled_items>
 	</item>
 	<item id="28345" name="Sayha's Ring - Stage 3" type="EtcItem">
 		<!-- Double-click to obtain Sayha's Ring Stage 3. -->
 		<set name="icon" val="BranchIcon.Icon.ring_of_sayhas_i00" />
 		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
+		<set name="is_commissionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="27704" min="1" max="1" chance="100" /> <!-- Sayha's Ring - Stage 3 -->
+		</capsuled_items>
 	</item>
 	<item id="28346" name="Sayha's Ring - Stage 4" type="EtcItem">
 		<!-- Double-click to obtain Sayha's Ring Stage 4. -->
 		<set name="icon" val="BranchIcon.Icon.ring_of_sayhas_i00" />
 		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
+		<set name="is_commissionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="27705" min="1" max="1" chance="100" /> <!-- Sayha's Ring - Stage 4 -->
+		</capsuled_items>
 	</item>
 	<item id="28347" name="Sayha's Ring - Stage 5" type="EtcItem">
 		<!-- Double-click to obtain Sayha's Ring Stage 5. -->
 		<set name="icon" val="BranchIcon.Icon.ring_of_sayhas_i00" />
 		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
+		<set name="is_commissionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="27706" min="1" max="1" chance="100" /> <!-- Sayha's Ring - Stage 5 -->
+		</capsuled_items>
 	</item>
 	<item id="28348" name="Sayha's Ring - Stage 6" type="EtcItem">
 		<!-- Double-click to obtain Sayha's Ring Stage 6. -->
 		<set name="icon" val="BranchIcon.Icon.ring_of_sayhas_i00" />
 		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
+		<set name="is_commissionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="27707" min="1" max="1" chance="100" /> <!-- Sayha's Ring - Stage 6 -->
+		</capsuled_items>
 	</item>
 	<item id="28349" name="Maphr's Ring - Stage 1" type="EtcItem">
 		<!-- Double-click to obtain Maphr's Ring Stage 1. -->
 		<set name="icon" val="BranchIcon.Icon.ring_of_maphr_i00" />
 		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
+		<set name="is_commissionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="27708" min="1" max="1" chance="100" /> <!-- Maphr's Ring - Stage 1 -->
+		</capsuled_items>
 	</item>
 	<item id="28350" name="Maphr's Ring - Stage 2" type="EtcItem">
 		<!-- Double-click to obtain Maphr's Ring Stage 2. -->
 		<set name="icon" val="BranchIcon.Icon.ring_of_maphr_i00" />
 		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
+		<set name="is_commissionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="27709" min="1" max="1" chance="100" /> <!-- Maphr's Ring - Stage 2 -->
+		</capsuled_items>
 	</item>
 	<item id="28351" name="Maphr's Ring - Stage 3" type="EtcItem">
 		<!-- Double-click to obtain Maphr's Ring Stage 3. -->
 		<set name="icon" val="BranchIcon.Icon.ring_of_maphr_i00" />
 		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
+		<set name="is_commissionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="27710" min="1" max="1" chance="100" /> <!-- Maphr's Ring - Stage 3 -->
+		</capsuled_items>
 	</item>
 	<item id="28352" name="Maphr's Ring - Stage 4" type="EtcItem">
 		<!-- Double-click to obtain Maphr's Ring Stage 4. -->
 		<set name="icon" val="BranchIcon.Icon.ring_of_maphr_i00" />
 		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
+		<set name="is_commissionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="27711" min="1" max="1" chance="100" /> <!-- Maphr's Ring - Stage 4 -->
+		</capsuled_items>
 	</item>
 	<item id="28353" name="Maphr's Ring - Stage 5" type="EtcItem">
 		<!-- Double-click to obtain Maphr's Ring Stage 5. -->
 		<set name="icon" val="BranchIcon.Icon.ring_of_maphr_i00" />
 		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
+		<set name="is_commissionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="27712" min="1" max="1" chance="100" /> <!-- Maphr's Ring - Stage 5 -->
+		</capsuled_items>
 	</item>
 	<item id="28354" name="Maphr's Ring - Stage 6" type="EtcItem">
 		<!-- Double-click to obtain Maphr's Ring Stage 6. -->
 		<set name="icon" val="BranchIcon.Icon.ring_of_maphr_i00" />
 		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
+		<set name="is_commissionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="27713" min="1" max="1" chance="100" /> <!-- Maphr's Ring - Stage 6 -->
+		</capsuled_items>
 	</item>
 	<item id="28355" name="Prestige Cube" additionalName="7-day" type="EtcItem">
 		<!-- Double-click to obtain either Dark/ Bloody Eternal Enhancement Stone, various Weapon Enchant Scrolls, Giant's Energy, or Gemstone (R-grade). Once a day. Cannot be used in the Olympiad. -->
