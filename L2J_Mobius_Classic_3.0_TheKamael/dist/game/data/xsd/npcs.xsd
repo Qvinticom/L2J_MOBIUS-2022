@@ -66,7 +66,7 @@
 									<xs:attribute name="exp" type="xs:decimal" />
 									<xs:attribute name="sp" type="xs:decimal" />
 									<xs:attribute name="raidPoints" type="xs:decimal" />
-									<xs:attribute name="attribute_exp" type="xs:decimal" />
+									<xs:attribute name="attributeExp" type="xs:decimal" />
 								</xs:complexType>
 							</xs:element>
 							<xs:element name="mpReward" minOccurs="0" maxOccurs="1">

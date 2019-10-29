@@ -172,7 +172,7 @@ public class NpcTemplate extends CreatureTemplate implements IIdentifiable
 		_exp = set.getDouble("exp", 0);
 		_sp = set.getDouble("sp", 0);
 		_raidPoints = set.getDouble("raidPoints", 0);
-		_attributeExp = set.getLong("attribute_exp", 0);
+		_attributeExp = set.getLong("attributeExp", 0);
 		
 		_unique = set.getBoolean("unique", false);
 		_attackable = set.getBoolean("attackable", true);
