@@ -2081,15 +2081,15 @@
 				<skillId>10060</skillId> <!-- Aggression Attack -->
 				<skillLevel>1</skillLevel>
 			</effect>
-			<effect name="PhysicalDefence" fromLevel="5" toLevel="9" fromSubLevel="2001" toSubLevel="3020">
+			<effect name="PhysicalDefence" fromLevel="5" toLevel="11" fromSubLevel="2001" toSubLevel="3020">
 				<amount>
-					<value fromLevel="5" toLevel="9" fromSubLevel="2001" toSubLevel="2020">{-0.6 - (0.4 * subIndex)}</value>
+					<value fromLevel="5" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{-0.6 - (0.4 * subIndex)}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="Speed" fromLevel="5" toLevel="9" fromSubLevel="3001" toSubLevel="3020">
+			<effect name="Speed" fromLevel="5" toLevel="11" fromSubLevel="3001" toSubLevel="3020">
 				<amount>
-					<value fromLevel="5" toLevel="9" fromSubLevel="3001" toSubLevel="3020">{-2 * subIndex}</value>
+					<value fromLevel="5" toLevel="11" fromSubLevel="3001" toSubLevel="3020">{-2 * subIndex}</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -2171,15 +2171,15 @@
 				<skillId>10060</skillId> <!-- Aggression Attack -->
 				<skillLevel>1</skillLevel>
 			</effect>
-			<effect name="PhysicalDefence" fromLevel="5" toLevel="9" fromSubLevel="2001" toSubLevel="3020">
+			<effect name="PhysicalDefence" fromLevel="5" toLevel="10" fromSubLevel="2001" toSubLevel="3020">
 				<amount>
-					<value fromLevel="5" toLevel="9" fromSubLevel="2001" toSubLevel="2020">{-0.6 - (0.4 * subIndex)}</value>
+					<value fromLevel="5" toLevel="10" fromSubLevel="2001" toSubLevel="2020">{-0.6 - (0.4 * subIndex)}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="Speed" fromLevel="5" toLevel="9" fromSubLevel="3001" toSubLevel="3020">
+			<effect name="Speed" fromLevel="5" toLevel="10" fromSubLevel="3001" toSubLevel="3020">
 				<amount>
-					<value fromLevel="5" toLevel="9" fromSubLevel="3001" toSubLevel="3020">{-2 * subIndex}</value>
+					<value fromLevel="5" toLevel="10" fromSubLevel="3001" toSubLevel="3020">{-2 * subIndex}</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
