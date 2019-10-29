@@ -251,7 +251,7 @@ public class SkillCaster implements Runnable
 		int reuseDelay = caster.getStat().getReuseTime(_skill);
 		if (reuseDelay > 10)
 		{
-			if (Formulas.calcSkillMastery(caster, _skill) && !(_skill.getReferenceItemId() > 0))
+			if (Formulas.calcSkillMastery(caster, _skill))
 			{
 				reuseDelay = 100;
 				caster.sendPacket(SystemMessageId.A_SKILL_IS_READY_TO_BE_USED_AGAIN);

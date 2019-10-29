@@ -943,10 +943,20 @@ public class Formulas
 		return false;
 	}
 	
-	public static boolean calcSkillMastery(Creature actor, Skill sk)
+	public static boolean calcSkillMastery(Creature actor, Skill skill)
 	{
-		// Static Skills are not affected by Skill Mastery.
-		if (sk.isStatic() || !actor.isPlayer())
+		// Non players are not affected by Skill Mastery.
+		if (!actor.isPlayer())
+		{
+			return false;
+		}
+		// Static skills are not affected by Skill Mastery.
+		if (skill.isStatic())
+		{
+			return false;
+		}
+		// Item skills are not affected by Skill Mastery.
+		if (skill.getReferenceItemId() > 0)
 		{
 			return false;
 		}
