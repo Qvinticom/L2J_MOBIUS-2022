@@ -42,7 +42,6 @@ public class EnchantedMegaliths extends AbstractNpcAI
 	// NPCs
 	private static final int[] MONSTERS =
 	{
-		19574,
 		23354,
 		23355,
 		23356,
@@ -50,9 +49,6 @@ public class EnchantedMegaliths extends AbstractNpcAI
 		23358,
 		23360,
 		23361,
-		23362,
-		23363,
-		23364,
 		23365,
 		23367,
 		23368,

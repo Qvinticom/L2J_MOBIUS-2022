@@ -198,6 +198,17 @@
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-1000</effectPoint>
+		<effectRange>900</effectRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<nextAction>CAST</nextAction>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>553</power>
+				<overHit>true</overHit>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32823" toLevel="1" name="Howl">
 		<!-- A normal attack of a harpy monster that uses long-range magic attacks. -->
@@ -208,6 +219,17 @@
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-1000</effectPoint>
+		<effectRange>900</effectRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<nextAction>CAST</nextAction>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>553</power>
+				<overHit>true</overHit>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32824" toLevel="1" name="Magical Attack">
 		<!-- A powerful attack of a humanoid monster that uses long-range magic attacks. -->
@@ -237,6 +259,15 @@
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-1000</effectPoint>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<nextAction>ATTACK</nextAction>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>553</power>
+				<overHit>true</overHit>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32826" toLevel="1" name="Power Wing Attack">
 		<!-- Melee Warrior-type Succubus Monsters' Powerful Single Target Physical Weapon Attack Skill -->
@@ -245,6 +276,16 @@
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
+		<effectRange>100</effectRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<nextAction>ATTACK</nextAction>
+		<effects>
+			<effect name="PhysicalAttack"> <!-- Fix: Retail Missed -->
+				<power>31628</power>
+				<overHit>true</overHit>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32827" toLevel="1" name="Critical Strike">
 		<!-- Physical melee skill used by warriors. Attacks 1 monster with a weapon. -->
@@ -1154,6 +1195,16 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>-1000</effectPoint>
+		<effectRange>100</effectRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<nextAction>ATTACK</nextAction>
+		<effects>
+			<effect name="PhysicalAttack"> <!-- Fix: Retail Missed -->
+				<power>31628</power>
+				<overHit>true</overHit>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32891" toLevel="1" name="Spear Slash">
 		<icon>icon.skill0320</icon>
@@ -1162,6 +1213,16 @@
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-1000</effectPoint>
+		<effectRange>100</effectRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<nextAction>ATTACK</nextAction>
+		<effects>
+			<effect name="PhysicalAttack"> <!-- Fix: Retail Missed -->
+				<power>31628</power>
+				<overHit>true</overHit>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32892" toLevel="1" name="Slashing Blade">
 		<icon>icon.skill0496</icon>
@@ -1170,6 +1231,16 @@
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-1000</effectPoint>
+		<effectRange>100</effectRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<nextAction>ATTACK</nextAction>
+		<effects>
+			<effect name="PhysicalAttack"> <!-- Fix: Retail Missed -->
+				<power>31628</power>
+				<overHit>true</overHit>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32893" toLevel="1" name="Aqua Spike">
 		<icon>icon.skill1417</icon>
@@ -1179,6 +1250,17 @@
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-1000</effectPoint>
+		<effectRange>900</effectRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<nextAction>CAST</nextAction>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>553</power>
+				<overHit>true</overHit>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32894" toLevel="1" name="Bite Attack">
 		<icon>icon.skill0325</icon>
@@ -1188,6 +1270,16 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>-1000</effectPoint>
+		<effectRange>100</effectRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<nextAction>ATTACK</nextAction>
+		<effects>
+			<effect name="PhysicalAttack"> <!-- Fix: Retail Missed -->
+				<power>31628</power>
+				<overHit>true</overHit>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32895" toLevel="1" name="Fatal Strike">
 		<operateType>A1</operateType>
@@ -1197,6 +1289,16 @@
 		<reuseDelay>5000</reuseDelay>
 		<effectPoint>-100</effectPoint>
 		<mpConsume>50</mpConsume>
+		<effectRange>100</effectRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<nextAction>ATTACK</nextAction>
+		<effects>
+			<effect name="PhysicalAttack"> <!-- Fix: Retail Missed -->
+				<power>31628</power>
+				<overHit>true</overHit>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32896" toLevel="1" name="Fatal Strike">
 		<operateType>A1</operateType>
@@ -1206,6 +1308,16 @@
 		<reuseDelay>5000</reuseDelay>
 		<effectPoint>-100</effectPoint>
 		<mpConsume>1</mpConsume>
+		<effectRange>100</effectRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<nextAction>ATTACK</nextAction>
+		<effects>
+			<effect name="PhysicalAttack"> <!-- Fix: Retail Missed -->
+				<power>47813</power>
+				<overHit>true</overHit>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32897" toLevel="1" name="Fatal Slasher">
 		<operateType>A1</operateType>
@@ -1214,6 +1326,16 @@
 		<reuseDelay>5000</reuseDelay>
 		<effectPoint>-100</effectPoint>
 		<mpConsume>1</mpConsume>
+		<effectRange>100</effectRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<nextAction>ATTACK</nextAction>
+		<effects>
+			<effect name="PhysicalAttack"> <!-- Fix: Retail Missed -->
+				<power>31628</power>
+				<overHit>true</overHit>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32898" toLevel="1" name="Mass Bleed">
 		<!-- Inflicts Bleed on the target and decreases HP. Effect 11.. Inflicted status: Infection (Bleed, Poison). -->

@@ -301,192 +301,209 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23811" level="99" type="Monster" name="Cantera Tanya">
-		<!-- Source: www.l2wiki.com -->
+	<npc id="23811" level="102" type="Monster" name="Cantera Tanya">
+		<parameters>
+			<skill name="Skill01_ID" id="32896" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
 		<race>DEMONIC</race>
-		<sex>FEMALE</sex>
-		<acquire exp="28158076" sp="25286" />
+		<sex>MALE</sex>
+		<acquire exp="777178800" sp="699461" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="41082.030225" hpRegen="8.5" mp="29224.385" mpRegen="3" />
+			<vitals hp="114731.261835" hpRegen="9.5" mp="3063.958" mpRegen="3.3" />
+			<attack physical="45713" magical="35171" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="4133" magical="2399" />
 			<speed>
 				<walk ground="60" />
-				<run ground="160" />
+				<run ground="150" />
 			</speed>
-			<attack physical="27349" magical="21195" critical="4" attackSpeed="253" range="40" />
-			<defence physical="11721" magical="11775" />
-			<attribute>
-				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
-				<attack type="FIRE" value="330" />
-			</attribute>
 		</stats>
-		<skillList>
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
-		</skillList>
+		<status attackable="true" />
 		<collision>
 			<radius normal="28" />
 			<height normal="59" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="57" min="1144" max="2665" chance="70" /> <!-- Adena -->
-				<item id="37776" min="1" max="1" chance="0.075" /> <!-- Scroll of Blessing Scraps: Weapon (R-grade) -->
-				<item id="37791" min="1" max="1" chance="0.03" /> <!-- Sealed Demonic Tome -->
-				<item id="37773" min="1" max="1" chance="0.0075" /> <!-- Recipe: Scroll of Blessing: Weapon (R-grade) -->
-			</drop>
-			<lucky>
-				<item id="48979" min="1" max="3" chance="46.65" /> <!-- Damaged Spellbook -->
-			</lucky>
-		</dropLists>
-	</npc>
-	<npc id="23812" level="99" type="Monster" name="Cantera Deathmoz">
-		<!-- Source: www.l2wiki.com -->
-		<race>DEMONIC</race>
-		<acquire exp="28158076" sp="25286" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="41082.030225" hpRegen="8.5" mp="29224.385" mpRegen="3" />
-			<speed>
-				<walk ground="70" />
-				<run ground="160" />
-			</speed>
-			<attack physical="27349" magical="21195" critical="4" attackSpeed="253" range="40" />
-			<defence physical="11721" magical="11775" />
-			<attribute>
-				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
-				<attack type="FIRE" value="330" />
-			</attribute>
-		</stats>
 		<skillList>
+			<skill id="32896" level="1" /> <!-- Fatal Strike -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="2315" max="5393" chance="70" /> <!-- Adena -->
+				<item id="36519" min="1" max="1" chance="0.75" /> <!-- Quality Leather -->
+				<item id="35338" min="1" max="1" chance="0.3" /> <!-- Eternal Helmet Ingredient -->
+				<item id="35462" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Helmet (60%) -->
+			</drop>
+			<spoil>
+				<item id="36549" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment (High-grade) -->
+			</spoil>
+		</dropLists>
+		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true">
+			<clanList>
+				<clan>CANTERA</clan>
+			</clanList>
+		</ai>
+	</npc>
+	<npc id="23812" level="102" type="Monster" name="Cantera Deathmoz">
+		<parameters>
+			<skill name="Skill01_ID" id="32896" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="777178800" sp="699461" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="114731.261835" hpRegen="9.5" mp="3063.958" mpRegen="3.3" />
+			<attack physical="45713" magical="35171" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="4133" magical="2399" />
+			<speed>
+				<walk ground="70" />
+				<run ground="150" />
+			</speed>
+		</stats>
+		<status attackable="true" />
 		<collision>
 			<radius normal="16" />
 			<height normal="60" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="57" min="1144" max="2665" chance="70" /> <!-- Adena -->
-				<item id="37791" min="1" max="1" chance="0.03" /> <!-- Sealed Demonic Tome -->
-				<item id="37778" min="1" max="1" chance="0.003" /> <!-- Scroll of Blessing Scraps: Weapon (R99-grade) -->
-				<item id="37775" min="1" max="1" chance="0.0009" /> <!-- Recipe: Scroll of Blessing: Weapon (R99-grade) -->
-			</drop>
-			<lucky>
-				<item id="48979" min="1" max="3" chance="46.32" /> <!-- Damaged Spellbook -->
-			</lucky>
-		</dropLists>
-	</npc>
-	<npc id="23813" level="99" type="Monster" name="Cantera Floxis">
-		<!-- Source: www.l2wiki.com -->
-		<race>ETC</race>
-		<acquire exp="28158076" sp="25286" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="41082.030225" hpRegen="8.5" mp="29224.385" mpRegen="3" />
-			<speed>
-				<walk ground="13" />
-				<run ground="160" />
-			</speed>
-			<attack physical="27349" magical="21195" critical="4" attackSpeed="253" range="40" />
-			<defence physical="11721" magical="11775" />
-			<attribute>
-				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
-				<attack type="FIRE" value="330" />
-			</attribute>
-		</stats>
 		<skillList>
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="32896" level="1" /> <!-- Fatal Strike -->
+			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="2315" max="5393" chance="70" /> <!-- Adena -->
+				<item id="36539" min="1" max="1" chance="0.3" /> <!-- Quality Leather Braid -->
+				<item id="35339" min="1" max="1" chance="0.03" /> <!-- Eternal Breastplate Ingredient -->
+				<item id="35463" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Breastplate (60%) -->
+			</drop>
+			<spoil>
+				<item id="36554" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (High-grade) -->
+			</spoil>
+		</dropLists>
+		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true">
+			<clanList>
+				<clan>CANTERA</clan>
+			</clanList>
+		</ai>
+	</npc>
+	<npc id="23813" level="101" type="Monster" name="Cantera Floxis">
+		<parameters>
+			<skill name="Skill01_ID" id="32896" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
+		<race>ETC</race>
+		<sex>MALE</sex>
+		<acquire exp="699462168" sp="629504" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="103257.441645" hpRegen="9.5" mp="3015.298" mpRegen="3.3" />
+			<attack physical="42356" magical="31566" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3777" magical="2192" />
+			<speed>
+				<walk ground="13" />
+				<run ground="150" />
+			</speed>
+		</stats>
+		<status attackable="true" />
 		<collision>
 			<radius normal="38" />
 			<height normal="45" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="57" min="1144" max="2665" chance="70" /> <!-- Adena -->
-				<item id="37791" min="1" max="1" chance="0.03" /> <!-- Sealed Demonic Tome -->
-				<item id="37787" min="1" max="1" chance="0.0075" /> <!-- Scroll of Blessing Scraps: Armor (R99-grade) -->
-				<item id="36921" min="1" max="1" chance="0.0009" /> <!-- Recipe: Weapon Fragment (Top-grade) - Upgrade -->
-				<item id="37784" min="1" max="1" chance="0.0009" /> <!-- Recipe: Scroll of Blessing: Armor (R99-grade) -->
-			</drop>
-			<lucky>
-				<item id="48979" min="1" max="3" chance="46.96" /> <!-- Damaged Spellbook -->
-			</lucky>
-		</dropLists>
-	</npc>
-	<npc id="23814" level="99" type="Monster" name="Cantera Belika">
-		<!-- Source: www.l2wiki.com -->
-		<race>ELEMENTAL</race>
-		<acquire exp="28158076" sp="25286" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="41082.030225" hpRegen="8.5" mp="29224.385" mpRegen="3" />
-			<speed>
-				<walk ground="38" />
-				<run ground="160" />
-			</speed>
-			<attack physical="27349" magical="21195" critical="4" attackSpeed="253" range="40" />
-			<defence physical="11721" magical="11775" />
-			<attribute>
-				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
-				<attack type="FIRE" value="330" />
-			</attribute>
-		</stats>
 		<skillList>
-			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="32896" level="1" /> <!-- Fatal Strike -->
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="2263" max="5290" chance="70" /> <!-- Adena -->
+				<item id="36529" min="1" max="1" chance="0.75" /> <!-- Quality Fiber -->
+				<item id="35340" min="1" max="1" chance="0.075" /> <!-- Eternal Gaiter Ingredient -->
+				<item id="35464" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Gaiters (60%) -->
+			</drop>
+			<spoil>
+				<item id="36559" min="1" max="1" chance="0.75" /> <!-- Accessory Gem (High-grade) -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="23814" level="101" type="Monster" name="Cantera Belika">
+		<parameters>
+			<skill name="Skill01_ID" id="32896" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<acquire exp="699462168" sp="629504" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="103257.441645" hpRegen="9.5" mp="3015.298" mpRegen="3.3" />
+			<attack physical="42356" magical="31566" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3777" magical="2192" />
+			<speed>
+				<walk ground="38" />
+				<run ground="150" />
+			</speed>
+		</stats>
+		<status attackable="true" />
 		<collision>
 			<radius normal="13" />
 			<height normal="55" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="57" min="1144" max="2665" chance="70" /> <!-- Adena -->
-				<item id="37791" min="1" max="1" chance="0.03" /> <!-- Sealed Demonic Tome -->
-				<item id="37778" min="1" max="1" chance="0.003" /> <!-- Scroll of Blessing Scraps: Weapon (R99-grade) -->
-				<item id="37775" min="1" max="1" chance="0.0009" /> <!-- Recipe: Scroll of Blessing: Weapon (R99-grade) -->
-			</drop>
-			<lucky>
-				<item id="48979" min="1" max="3" chance="46.22" /> <!-- Damaged Spellbook -->
-			</lucky>
-		</dropLists>
-	</npc>
-	<npc id="23815" level="99" type="Monster" name="Cantera Bridget">
-		<!-- Source: www.l2wiki.com -->
-		<race>HUMANOID</race>
-		<acquire exp="28158076" sp="25286" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="41082.030225" hpRegen="8.5" mp="29224.385" mpRegen="3" />
-			<speed>
-				<walk ground="46" />
-				<run ground="160" />
-			</speed>
-			<attack physical="27349" magical="21195" critical="4" attackSpeed="253" range="40" />
-			<defence physical="11721" magical="11775" />
-			<attribute>
-				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
-				<attack type="FIRE" value="330" />
-			</attribute>
-		</stats>
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="32896" level="1" /> <!-- Fatal Strike -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="2263" max="5290" chance="70" /> <!-- Adena -->
+				<item id="35341" min="1" max="1" chance="0.3" /> <!-- Eternal Gauntlet Ingredient -->
+				<item id="36534" min="1" max="1" chance="0.3" /> <!-- Durable Braid -->
+				<item id="35465" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Gauntlets (60%) -->
+			</drop>
+			<spoil>
+				<item id="36564" min="1" max="1" chance="0.3" /> <!-- Greater Synthetic Cokes -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="23815" level="101" type="Monster" name="Cantera Bridget">
+		<parameters>
+			<skill name="Skill01_ID" id="32896" level="1" />
+			<param name="Skill01_Probablity" value="2000" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="699462168" sp="629504" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="103257.441645" hpRegen="9.5" mp="3015.298" mpRegen="3.3" />
+			<attack physical="42356" magical="31566" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3777" magical="2192" />
+			<speed>
+				<walk ground="46" />
+				<run ground="150" />
+			</speed>
+		</stats>
+		<status attackable="true" />
 		<collision>
 			<radius normal="35" />
 			<height normal="47.5" />
 		</collision>
+		<skillList>
+			<skill id="32896" level="1" /> <!-- Fatal Strike -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+		</skillList>
 		<dropLists>
 			<drop>
-				<item id="57" min="1144" max="2665" chance="70" /> <!-- Adena -->
-				<item id="37791" min="1" max="1" chance="0.03" /> <!-- Sealed Demonic Tome -->
-				<item id="37787" min="1" max="1" chance="0.0075" /> <!-- Scroll of Blessing Scraps: Armor (R99-grade) -->
-				<item id="36919" min="1" max="1" chance="0.0009" /> <!-- Recipe: Weapon Fragment (High-grade) - Downgrade -->
-				<item id="37784" min="1" max="1" chance="0.0009" /> <!-- Recipe: Scroll of Blessing: Armor (R99-grade) -->
+				<item id="57" min="2263" max="5290" chance="70" /> <!-- Adena -->
+				<item id="35342" min="1" max="1" chance="0.3" /> <!-- Eternal Boot Ingredient -->
+				<item id="36539" min="1" max="1" chance="0.3" /> <!-- Quality Leather Braid -->
+				<item id="35466" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Boots (60%) -->
 			</drop>
-			<lucky>
-				<item id="48979" min="1" max="3" chance="47.18" /> <!-- Damaged Spellbook -->
-			</lucky>
+			<spoil>
+				<item id="36549" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment (High-grade) -->
+			</spoil>
 		</dropLists>
 	</npc>
 	<npc id="23816" level="103" type="Monster" name="Om Bathus" title="Hunter">
