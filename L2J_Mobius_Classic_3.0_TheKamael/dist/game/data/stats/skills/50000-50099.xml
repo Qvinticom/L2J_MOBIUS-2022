@@ -373,12 +373,34 @@
 	<skill id="50043" toLevel="2" name="Hurricane Bolt">
 		<!-- Bolt of lightning attacks with 138 Power added to M. Atk., paralyses for 5 sec. -->
 		<icon>icon.skill1170</icon>
-		<operateType>A1</operateType>
-		<isDebuff>true</isDebuff>
-		<castRange>600</castRange>
-		<hitTime>2500</hitTime>
-		<coolTime>500</coolTime>
+		<abnormalTime>5</abnormalTime>
+		<activateRate>80</activateRate>
+		<basicProperty>MAGIC</basicProperty>
+		<castRange>900</castRange>
 		<effectPoint>-100</effectPoint>
+		<effectRange>1400</effectRange>
+		<hitTime>2500</hitTime>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLvl>85</magicLvl>
+		<mpConsume>69</mpConsume>
+		<operateType>A2</operateType>
+		<abnormalType>PARALYZE</abnormalType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<abnormalLvl>1</abnormalLvl>
+		<trait>PARALYZE</trait>
+		<attributeType>DARK</attributeType>
+		<attributeValue>120</attributeValue>
+		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="BlockActions" />
+			<effect name="MagicalAttack">
+				<power>138</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50044" toLevel="2" name="Hurricane Destruction">
 		<!-- Strong whirlwind attacks with 170 Power added to M. Atk. and knocks down nereby enemies. -->

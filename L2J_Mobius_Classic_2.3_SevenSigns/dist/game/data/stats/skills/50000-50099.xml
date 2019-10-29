@@ -373,12 +373,34 @@
 	<skill id="50043" toLevel="1" name="Hurricane Bolt">
 		<!-- Bolt of lightning attacks with 138 Power addedt to M. Atk., paralyses for 5 sec. -->
 		<icon>icon.skill1170</icon>
-		<operateType>A1</operateType>
-		<isDebuff>true</isDebuff>
-		<castRange>600</castRange>
-		<hitTime>2500</hitTime>
-		<coolTime>500</coolTime>
+		<abnormalTime>5</abnormalTime>
+		<activateRate>80</activateRate>
+		<basicProperty>MAGIC</basicProperty>
+		<castRange>900</castRange>
 		<effectPoint>-100</effectPoint>
+		<effectRange>1400</effectRange>
+		<hitTime>2500</hitTime>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<lvlBonusRate>1</lvlBonusRate>
+		<magicLvl>85</magicLvl>
+		<mpConsume>69</mpConsume>
+		<operateType>A2</operateType>
+		<abnormalType>PARALYZE</abnormalType>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<abnormalLvl>1</abnormalLvl>
+		<trait>PARALYZE</trait>
+		<attributeType>DARK</attributeType>
+		<attributeValue>120</attributeValue>
+		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="BlockActions" />
+			<effect name="MagicalAttack">
+				<power>138</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50044" toLevel="1" name="Hurricane Destruction">
 		<!-- Strong whirlwind attacks with 170 Power added to M. Atk. and knocks down nereby enemies. -->
@@ -397,26 +419,39 @@
 	<skill id="50046" toLevel="2" name="Wind Ability - Lv. 1 Atk.">
 		<!-- P. Atk. +20%. -->
 		<icon>icon.skill1062</icon>
-		<operateType>A1</operateType>
-		<hitTime>1000</hitTime>
-		<coolTime>500</coolTime>
-		<effectPoint>100</effectPoint>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PAtk">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50047" toLevel="2" name="Wind Ability - Lv. 1 Def.">
 		<!-- P./ M. Def. +50%. -->
 		<icon>icon.skill1062</icon>
-		<operateType>A1</operateType>
-		<hitTime>1000</hitTime>
-		<coolTime>500</coolTime>
-		<effectPoint>100</effectPoint>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50048" toLevel="2" name="Wind Ability - Lv. 1 Magic">
 		<!-- M. Atk. +20%. -->
 		<icon>icon.skill1062</icon>
-		<operateType>A1</operateType>
-		<hitTime>1000</hitTime>
-		<coolTime>500</coolTime>
-		<effectPoint>100</effectPoint>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="MAtk">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50049" toLevel="1" name="Fire Breath">
 		<!-- Attacks enemies in front of the boss with 220 Power added to M. Atk. -->

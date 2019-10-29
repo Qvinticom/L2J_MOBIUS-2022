@@ -525,7 +525,7 @@
 			<height normal="0.001" />
 		</collision>
 	</npc>
-	<npc id="29111" level="80" type="Npc" name="Water Slime">
+	<npc id="29111" level="80" type="Monster" name="Water Slime">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -544,7 +544,7 @@
 			<height normal="39" />
 		</collision>
 	</npc>
-	<npc id="29112" level="80" type="Npc" name="Procella's Guardian">
+	<npc id="29112" level="80" type="Monster" name="Procella's Guardian">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -563,7 +563,7 @@
 			<height normal="133" />
 		</collision>
 	</npc>
-	<npc id="29113" level="80" type="Npc" name="Procella's Guardian">
+	<npc id="29113" level="80" type="Monster" name="Procella's Guardian">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -582,7 +582,7 @@
 			<height normal="133" />
 		</collision>
 	</npc>
-	<npc id="29114" level="80" type="Npc" name="Procella's Guardian">
+	<npc id="29114" level="80" type="Monster" name="Procella's Guardian">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -601,11 +601,11 @@
 			<height normal="133" />
 		</collision>
 	</npc>
-	<npc id="29115" level="80" type="Npc" name="Procella's Storm">
+	<npc id="29115" level="80" type="Monster" name="Procella's Storm">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="88" int="79" dex="55" wit="20" con="82" men="78">
 			<vitals hp="8446" hpRegen="10.5" mp="18000" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
