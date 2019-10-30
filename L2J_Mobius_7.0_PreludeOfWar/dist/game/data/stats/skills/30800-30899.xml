@@ -19,23 +19,114 @@
 		<!-- When a sword or blunt weapon is equipped, P. Atk. +5%+51, P. Accuracy + 4, and each normal attack increases the enmity toward you. In addition, STR increases by 1 and depending on your STR, the skill Cooldown resets or duration increases 2-fold. -->
 		<icon>icon.skill10001</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="PAtk">
+				<amount>5</amount>
+				<mode>PER</mode>
+				<weaponType>
+					<item>SWORD</item>
+					<item>BLUNT</item>
+				</weaponType>
+			</effect>
+			<effect name="PAtk">
+				<amount>51</amount>
+				<mode>DIFF</mode>
+				<weaponType>
+					<item>SWORD</item>
+					<item>BLUNT</item>
+				</weaponType>
+			</effect>
+			<effect name="SkillCritical">
+				<stat>STR</stat>
+			</effect>
+			<effect name="Accuracy">
+				<amount>4</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="HateAttack">
+				<amount>500</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>STR</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="30803" toLevel="1" name="Novice Iron Aura">
 		<!-- You and your ally's P./M. Def. -7% and P./M. Critical Damage Received -5%. -->
 		<icon>icon.skill10032</icon>
-		<operateType>T</operateType>
+		<abnormalVisualEffect>AURA_BUFF_SELF</abnormalVisualEffect>
+		<magicLvl>40</magicLvl>
+		<magicCriticalRate>5</magicCriticalRate>
+		<operateType>AU</operateType>
 		<reuseDelay>1000</reuseDelay>
+		<toggleGroupId>4</toggleGroupId>
+		<effects>
+			<effect name="CallSkillOnActionTime">
+				<skillId>30640</skillId> <!-- Novice Iron Aura -->
+				<skillLevel>1</skillLevel>
+				<ticks>7</ticks>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceCriticalDamage">
+				<amount>-5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceMagicCriticalDamage">
+				<amount>-5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="30804" toLevel="1" name="Novice Thunder Storm">
 		<!-- Swings a spear to attack nearby enemies with 2200 power. Inflicts stun for 9 sec. Requires a spear. Ignores Shield Defense. Critical. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill0048</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<isDebuff>true</isDebuff>
 		<hitTime>1080</hitTime>
 		<coolTime>720</coolTime>
 		<reuseDelay>5000</reuseDelay>
 		<effectPoint>-167</effectPoint>
 		<mpConsume>114</mpConsume>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>9</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<activateRate>50</activateRate>
+		<affectLimit>6-12</affectLimit>
+		<affectRange>150</affectRange>
+		<basicProperty>PHYSICAL</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<trait>SHOCK</trait>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>POLE</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>2200</power>
+				<criticalChance>15</criticalChance>
+				<ignoreShieldDefence>true</ignoreShieldDefence>
+				<overHit>true</overHit>
+			</effect>
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="30805" toLevel="1" name="Novice Sonic Storm">
 		<!-- Attacks nearby enemies with 451 power. Requires a sword, a blunt weapon, a spear, a fist weapon, or a dual sword. Critical. Over-hit. -->
@@ -47,6 +138,33 @@
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>-709</effectPoint>
 		<mpConsume>163</mpConsume>
+		<effectRange>1000</effectRange>
+		<magicCriticalRate>5</magicCriticalRate>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>150</affectRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>ANCIENTSWORD</item>
+					<item>DUAL</item>
+					<item>POLE</item>
+					<item>SWORD</item>
+					<item>BLUNT</item>
+					<item>DUALFIST</item>
+					<item>DUALBLUNT</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="EnergyAttack">
+				<power>451</power>
+				<overHit>true</overHit>
+				<criticalChance>15</criticalChance>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="30806" toLevel="1" name="Novice Force Storm">
 		<!-- Attacks nearby enemies with 451 power. Requires a sword, a blunt weapon, a spear, a fist weapon, or a dual sword. Critical. Over-hit. -->
@@ -58,6 +176,33 @@
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>-709</effectPoint>
 		<mpConsume>163</mpConsume>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>150</affectRange>
+		<effectRange>1000</effectRange>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>ANCIENTSWORD</item>
+					<item>DUAL</item>
+					<item>POLE</item>
+					<item>SWORD</item>
+					<item>BLUNT</item>
+					<item>DUALFIST</item>
+					<item>DUALBLUNT</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>451</power>
+				<overHit>true</overHit>
+				<criticalChance>15</criticalChance>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="30807" toLevel="1" name="Novice Hands of Einhasad">
 		<!-- For 5 min., P./ M. Atk. +3%, attack range +100. -->
@@ -68,6 +213,29 @@
 		<reuseDelay>30000</reuseDelay>
 		<effectPoint>566</effectPoint>
 		<mpConsume>38</mpConsume>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<effectPoint>566</effectPoint>
+		<effectRange>900</effectRange>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>40</magicLvl>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MAtk">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackRange">
+				<amount>100</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="30808" toLevel="1" name="Novice Shield Song">
 		<!-- For 30 min., P. Def. +3%, 6 Attributes Resistance +10, Bow/ Crossbow Resistance +5%, Debuff Resistance +5%. -->
@@ -78,6 +246,48 @@
 		<reuseDelay>30000</reuseDelay>
 		<effectPoint>566</effectPoint>
 		<mpConsume>8</mpConsume>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DefenceTrait">
+				<BOW>5</BOW>
+				<CROSSBOW>5</CROSSBOW>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ResistAbnormalByCategory">
+				<amount>-5</amount>
+				<slot>DEBUFF</slot>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>10</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>10</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>10</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>10</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>10</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>10</amount>
+				<attribute>DARK</attribute>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="30809" toLevel="1" name="Novice Sword Waltz">
 		<!-- For 30 min., P. Atk./Atk. Spd. +7% and P. Critical Rate/Speed +5. -->
@@ -88,6 +298,28 @@
 		<reuseDelay>30000</reuseDelay>
 		<effectPoint>566</effectPoint>
 		<mpConsume>8</mpConsume>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PAtk">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>5</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>5</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="30810" toLevel="1" name="Novice Seal of Confusion">
 		<!-- Cancels nearby enemies' targets. -->
@@ -101,6 +333,17 @@
 		<reuseDelay>60000</reuseDelay>
 		<effectPoint>-457</effectPoint>
 		<mpConsume>107</mpConsume>
+		<affectRange>200</affectRange>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>40</magicLvl>
+		<affectLimit>10-10</affectLimit>
+		<trait>DERANGEMENT</trait>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="TargetCancel" />
+		</effects>
 	</skill>
 	<skill id="30811" toLevel="1" name="Novice Rampageous Beat">
 		<!-- Strikes the target with 2164 power. Requires a sword, a blunt weapon, a dual sword, or a dual blunt weapon. Critical. Over-hit. -->
@@ -112,6 +355,30 @@
 		<reuseDelay>7000</reuseDelay>
 		<effectPoint>-692</effectPoint>
 		<mpConsume>13</mpConsume>
+		<effectRange>400</effectRange>
+		<magicLvl>40</magicLvl>
+		<nextAction>ATTACK</nextAction>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>DUAL</item>
+					<item>DUALBLUNT</item>
+					<item>SWORD</item>
+					<item>BLUNT</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PhysicalAttackWeaponBonus">
+				<power>2164</power>
+				<overHit>true</overHit>
+				<criticalChance>5</criticalChance>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="30812" toLevel="2" name="Fantasia Harmony">
 		<!-- For $s1, party members' P. Atk. +$s2, M. Atk. +$s3, P. Def. +$s4, M. Def. +$s5, P./ M. Critical Rate +$s6, P. Critical Damage +$s7, Atk. Spd. +$s8, Casting Spd. +$s9, Shield Defense Rate +$s10, Shield Defense +$s11, Skill Cooldown -$s12, Skill MP Consumption -$s13. -->
@@ -362,6 +629,41 @@
 		<reuseDelay>2000</reuseDelay>
 		<effectPoint>687</effectPoint>
 		<mpConsume>181</mpConsume>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="1">1800</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + (subIndex * 90)}</value>
+		</abnormalTime>
+		<abnormalLvl>1</abnormalLvl>
+		<itemConsumeCount>10</itemConsumeCount>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="TargetMyPledge">
+				<includeMe>true</includeMe>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="MpRegen">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="AttackAttributeAdd">
+				<amount>10</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="30817" toLevel="2" name="Frenzy Fantasia Harmony">
 		<!-- For $s1, clan members' P. Atk. +$s2, M. Atk. +$s3, P. Def. +$s4, M. Def. +$s5, P./M. Critical Rate +$s6, P. Critical Damage +$s7, Atk. Spd. +$s8, Casting Spd. +$s9, Shield Defense Rate +$s10, Shield Def. +$s11, Skill Cooldown -$s12, All Skills MP Consumption -$s13. -->
@@ -375,15 +677,173 @@
 			<value level="1">140</value>
 			<value level="2">151</value>
 		</mpConsume>
+		<abnormalLvl>
+			<value level="1">4</value>
+			<value level="2">5</value>
+		</abnormalLvl>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="2">1800</value>
+			<value fromLevel="1" toLevel="2" fromSubLevel="1001" toSubLevel="1020">{base + (subIndex * 90)}</value>
+		</abnormalTime>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">103</value>
+		</magicLvl>
+		<isMagic>22</isMagic>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<itemConsumeCount>
+			<value level="1">0</value>
+			<value level="2">10</value>
+		</itemConsumeCount>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<castRange>900</castRange>
+		<effectRange>1100</effectRange>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="TargetMyPledge">
+				<includeMe>true</includeMe>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">22</value>
+					<value level="2">25</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">40</value>
+					<value level="2">45</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">45</value>
+					<value level="2">45</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">15</value>
+					<value level="2">35</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>
+					<value level="1">70</value>
+					<value level="2">85</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">35</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ShieldDefence">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ShieldDefenceRate">
+				<amount>
+					<value level="1">30</value>
+					<value level="2">50</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceCriticalRate">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">-25</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceMagicCriticalRate">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">-25</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-15</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-20</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-20</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<dispel>MULTI_BUFF;DANCE_OF_BLADESTORM;SONG_OF_CHAMPION;SONG_OF_EARTH;SONG_OF_HUNTER;SONG_OF_LIFE;SONG_OF_MEDITATION;SONG_OF_RENEWAL;SONG_OF_VENGEANCE;SONG_OF_VITALITY;SONG_OF_WARDING;SONG_OF_WATER;SONG_OF_WIND;DANCE_OF_BERSERKER;DANCE_OF_CONCENTRATION;DANCE_OF_FIRE;DANCE_OF_FURY;DANCE_OF_INSPIRATION;DANCE_OF_MYSTIC;DANCE_OF_SIREN;DANCE_OF_VAMPIRE;DANCE_OF_WARRIOR;SONG_OF_PURIFICATION;WISPERING_OF_BATTLE;SONG_OF_WINDSTORM;MOTION_OF_DEFENCE;INSTINCT;BERSERKER;PA_PD_UP;IMPROVE_SHIELD_RATE_DEFENCE_UP;SHIELD_PROB_UP;SHIELD_DEFENCE_UP;CANCEL_PROB_DOWN;MA_UP_SPECIAL</dispel>
+				<rate>100</rate>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>MULTI_BUFF;DANCE_OF_BLADESTORM;SONG_OF_CHAMPION;SONG_OF_EARTH;SONG_OF_HUNTER;SONG_OF_LIFE;SONG_OF_MEDITATION;SONG_OF_RENEWAL;SONG_OF_VENGEANCE;SONG_OF_VITALITY;SONG_OF_WARDING;SONG_OF_WATER;SONG_OF_WIND;DANCE_OF_BERSERKER;DANCE_OF_CONCENTRATION;DANCE_OF_FIRE;DANCE_OF_FURY;DANCE_OF_INSPIRATION;DANCE_OF_MYSTIC;DANCE_OF_SIREN;DANCE_OF_VAMPIRE;DANCE_OF_WARRIOR;SONG_OF_PURIFICATION;WISPERING_OF_BATTLE;SONG_OF_WINDSTORM;MOTION_OF_DEFENCE;INSTINCT;BERSERKER;PA_PD_UP;IMPROVE_SHIELD_RATE_DEFENCE_UP;SHIELD_PROB_UP;SHIELD_DEFENCE_UP;CANCEL_PROB_DOWN;MA_UP_SPECIAL</slot>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="30818" toLevel="6" name="Kaliel's Protection">
 		<!-- Creates a barrier that absorbs $s2 damage for $s1. -->
 		<icon>icon.bm_kalie_rbracelet03</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
-		<reuseDelay>2400000</reuseDelay>
+		<reuseDelay>
+			<value level="1">2400000</value>
+			<value level="2">2100000</value>
+			<value level="3">1800000</value>
+			<value level="4">1200000</value>
+			<value level="5">900000</value>
+			<value level="6">300000</value>
+		</reuseDelay>
 		<effectPoint>1000</effectPoint>
+		<abnormalType>INVINCIBILITY</abnormalType>
+		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="AbsorbDamage">
+				<amount>75000</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="30819" toLevel="1" name="Force Intention">
 		<!-- Detonates the Warrior's Momentum charge and for 1 minute, P. Atk. +10%, P. Critical Damage +15%. Need 10 Momentum. Consumes 5 Soulstones. -->

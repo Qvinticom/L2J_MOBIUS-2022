@@ -1538,159 +1538,223 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="15250" level="85" type="Npc" name="Blood Panther">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="15250" level="40" type="Npc" name="Blood Panther">
+		<parameters>
+			<skill name="Skill01_ID" id="30765" level="1" />
+			<skill name="Skill02_ID" id="30766" level="1" />
+		</parameters>
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="1933.0" hpRegen="10.5" mp="1036.0" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="198" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="176.36077" magical="120.43155" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="156.55035" magical="114.55675" />
+			<attribute>
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
+			</attribute>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="false" />
+		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="20" />
 			<height normal="14.5" />
 		</collision>
 	</npc>
-	<npc id="15251" level="85" type="Npc" name="Blood Panther">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="15251" level="76" type="Npc" name="Blood Panther">
+		<parameters>
+			<skill name="Skill01_ID" id="30765" level="2" />
+			<skill name="Skill02_ID" id="30766" level="2" />
+		</parameters>
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="2880.0" hpRegen="10.5" mp="1674.0" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="198" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="824.4220731" magical="562.9734023" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="323.78455" magical="236.93149" />
+			<attribute>
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
+			</attribute>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="false" />
+		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="20" />
 			<height normal="14.5" />
 		</collision>
 	</npc>
-	<npc id="15252" level="85" type="Npc" name="Feline Queen">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="15252" level="40" type="Npc" name="Feline Queen">
+		<parameters>
+			<skill name="Skill01_ID" id="30761" level="1" />
+			<skill name="Skill02_ID" id="30762" level="1" />
+		</parameters>
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<equipment rhand="37014" />
+		<equipment lhand="37014" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="1306.0" hpRegen="10.5" mp="698.0" mpRegen="3.6" />
 			<speed>
 				<walk ground="25" />
 				<run ground="198" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="176.36077" magical="120.43155" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="156.55035" magical="114.55675" />
+			<attribute>
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
+			</attribute>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="false" />
+		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="8" />
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="15253" level="85" type="Npc" name="Feline Queen">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="15253" level="76" type="Npc" name="Feline Queen">
+		<parameters>
+			<skill name="Skill01_ID" id="30761" level="2" />
+			<skill name="Skill02_ID" id="30762" level="2" />
+		</parameters>
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<equipment rhand="37014" />
+		<equipment lhand="37014" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="2057.0" hpRegen="10.5" mp="1197.0" mpRegen="3.6" />
 			<speed>
 				<walk ground="25" />
 				<run ground="198" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="824.4220731" magical="562.9734023" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="323.78455" magical="236.93149" />
+			<attribute>
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
+			</attribute>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="false" />
+		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="8" />
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="15254" level="85" type="Npc" name="Seraphim the Unicorn">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="15254" level="40" type="Npc" name="Seraphim the Unicorn">
+		<parameters>
+			<skill name="Skill01_ID" id="30763" level="1" />
+			<skill name="Skill02_ID" id="30764" level="1" />
+		</parameters>
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="37015" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="1306.0" hpRegen="10.5" mp="698.0" mpRegen="3.6" />
 			<speed>
 				<walk ground="27" />
 				<run ground="198" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="176.36077" magical="120.43155" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="156.55035" magical="114.55675" />
+			<attribute>
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
+			</attribute>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="false" />
+		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="13.5" />
 			<height normal="25.5" />
 		</collision>
 	</npc>
-	<npc id="15255" level="85" type="Npc" name="Seraphim the Unicorn">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="15255" level="76" type="Npc" name="Seraphim the Unicorn">
+		<parameters>
+			<skill name="Skill01_ID" id="30763" level="2" />
+			<skill name="Skill02_ID" id="30764" level="2" />
+		</parameters>
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="37015" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="2057.0" hpRegen="10.5" mp="1197.0" mpRegen="3.6" />
 			<speed>
 				<walk ground="27" />
 				<run ground="198" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="824.4220731" magical="562.9734023" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="323.78455" magical="236.93149" />
+			<attribute>
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
+			</attribute>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="false" />
+		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="13.5" />
 			<height normal="25.5" />
 		</collision>
 	</npc>
-	<npc id="15256" level="85" type="Npc" name="Soulless">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="15256" level="40" type="Npc" name="Soulless">
+		<parameters>
+			<skill name="Skill01_ID" id="30765" level="1" />
+			<skill name="Skill02_ID" id="30766" level="1" />
+		</parameters>
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="37016" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="1306.0" hpRegen="10.5" mp="698.0" mpRegen="3.6" />
 			<speed>
 				<walk ground="48" />
 				<run ground="198" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="176.36077" magical="120.43155" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="156.55035" magical="114.55675" />
+			<attribute>
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
+			</attribute>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="false" />
+		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="7" />
 			<height normal="33" />
 		</collision>
 	</npc>
-	<npc id="15257" level="85" type="Npc" name="Soulless">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="15257" level="76" type="Npc" name="Soulless">
+		<parameters>
+			<skill name="Skill01_ID" id="30765" level="2" />
+			<skill name="Skill02_ID" id="30766" level="2" />
+		</parameters>
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="37016" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="2057.0" hpRegen="10.5" mp="1197.0" mpRegen="3.6" />
 			<speed>
 				<walk ground="48" />
 				<run ground="198" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="824.4220731" magical="562.9734023" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="323.78455" magical="236.93149" />
+			<attribute>
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
+			</attribute>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="false" />
+		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="7" />
 			<height normal="33" />

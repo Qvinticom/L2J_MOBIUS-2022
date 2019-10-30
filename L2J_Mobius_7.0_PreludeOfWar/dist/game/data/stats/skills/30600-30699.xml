@@ -1256,26 +1256,36 @@
 	<skill id="30640" toLevel="1" name="Novice Iron Aura">
 		<!-- P./ M. Def. +7% and P. Critical Damage/ M. Critical Damage Received -5%. Only one Knight's Aura can be active at any time. -->
 		<icon>icon.skill10032</icon>
-		<operateType>AU</operateType>
-		<hitTime>500</hitTime>
-		<reuseDelay>1000</reuseDelay>
-		<effectPoint>2</effectPoint>
-		<abnormalVisualEffect>AURA_BUFF_SELF</abnormalVisualEffect>
-		<magicLvl>40</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>11</abnormalTime>
+		<abnormalType>AURA</abnormalType>
+		<abnormalVisualEffect>AURA_BUFF</abnormalVisualEffect>
+		<affectRange>1100</affectRange>
+		<canBeDispelled>false</canBeDispelled>
 		<magicCriticalRate>5</magicCriticalRate>
-		<toggleGroupId>4</toggleGroupId>
+		<magicLvl>40</magicLvl>
+		<operateType>A5</operateType>
+		<hitTime>500</hitTime>
+		<effectPoint>2</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<reuseDelay>1000</reuseDelay>
+		<targetType>MY_PARTY</targetType>
+		<affectScope>PARTY</affectScope>
+		<affectObject>FRIEND</affectObject>
 		<effects>
-			<effect name="CallSkillOnActionTime">
-				<!-- Iron Aura -->
-				<skillId>10033</skillId> <!-- Iron Aura -->
-				<skillLevel>1</skillLevel>
-				<ticks>7</ticks>
-			</effect>
 			<effect name="PhysicalDefence">
 				<amount>7</amount>
 				<mode>PER</mode>
 			</effect>
+			<effect name="MagicalDefence">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
 			<effect name="DefenceCriticalDamage">
+				<amount>-5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceMagicCriticalDamage">
 				<amount>-5</amount>
 				<mode>PER</mode>
 			</effect>
@@ -2302,21 +2312,25 @@
 		<!-- Summons a Blood Panther to fight with you. -->
 		<icon>icon.skill11853</icon>
 		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<hitTime>3500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>30000</reuseDelay>
 		<mpConsume>15</mpConsume>
+		<magicLvl>
+			<value level="1">40</value>
+			<value level="2">76</value>		
+		</magicLvl>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<magicLvl>40</magicLvl>
 		<conditions>
 			<condition name="CanSummon" />
 		</conditions>
 		<effects>
 			<effect name="Summon">
 				<npcId>
-					<value level="1">15138</value>
-					<value level="2">15139</value>
+					<value level="1">15250</value>
+					<value level="2">15251</value>
 				</npcId>
 				<lifeTime>-1</lifeTime>
 			</effect>
@@ -2529,11 +2543,10 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>5000</reuseDelay>
 		<mpConsume>35</mpConsume>
-		<itemConsumeCount>2</itemConsumeCount>
-		<itemConsumeId>3031</itemConsumeId>
-		<magicLvl>40</magicLvl>
-		<mpInitialConsume>5</mpInitialConsume> <!-- Guessing -->
-		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>
+			<value level="1">40</value>
+			<value level="2">76</value>		
+		</magicLvl>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -2542,15 +2555,10 @@
 		<effects>
 			<effect name="Summon">
 				<npcId>
-					<value level="1">14251</value>
-					<value level="2">14252</value>
+					<value level="1">15252</value>
+					<value level="2">15253</value>
 				</npcId>
-				<lifeTime>3600</lifeTime>
-				<consumeItemId>3031</consumeItemId> <!-- Spirit Ore -->
-				<consumeItemCount>
-					<value level="1">2</value>
-					<value level="2">2</value>
-				</consumeItemCount>
+				<lifeTime>-1</lifeTime>
 			</effect>
 		</effects>
 	</skill>
@@ -3072,10 +3080,10 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>5000</reuseDelay>
 		<mpConsume>35</mpConsume>
-		<mpInitialConsume>14</mpInitialConsume> <!-- Guessing -->
-		<itemConsumeCount>2</itemConsumeCount>
-		<itemConsumeId>3031</itemConsumeId>
-		<magicLvl>40</magicLvl>
+		<magicLvl>
+			<value level="1">40</value>
+			<value level="2">76</value>		
+		</magicLvl>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -3084,15 +3092,10 @@
 		<effects>
 			<effect name="Summon">
 				<npcId>
-					<value level="1">14435</value>
-					<value level="2">14436</value>
+					<value level="1">15254</value>
+					<value level="2">15255</value>
 				</npcId>
-				<lifeTime>3600</lifeTime>
-				<consumeItemId>3031</consumeItemId> <!-- Spirit Ore -->
-				<consumeItemCount>
-					<value level="1">2</value>
-					<value level="2">2</value>
-				</consumeItemCount>
+				<lifeTime>-1</lifeTime>
 			</effect>
 		</effects>
 	</skill>
@@ -3421,29 +3424,22 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>5000</reuseDelay>
 		<mpConsume>35</mpConsume>
+		<magicLvl>
+			<value level="1">40</value>
+			<value level="2">76</value>		
+		</magicLvl>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<itemConsumeCount>
-			<value level="1">1</value>
-			<value level="2">1</value>
-		</itemConsumeCount>
-		<itemConsumeId>3031</itemConsumeId>
-		<magicLvl>40</magicLvl>
 		<conditions>
 			<condition name="CanSummon" />
 		</conditions>
 		<effects>
 			<effect name="Summon">
 				<npcId>
-					<value level="1">14575</value>
-					<value level="2">14576</value>
+					<value level="1">15256</value>
+					<value level="2">15257</value>
 				</npcId>
-				<lifeTime>3600</lifeTime>
-				<consumeItemId>3031</consumeItemId> <!-- Spirit Ore -->
-				<consumeItemCount>
-					<value level="1">2</value>
-					<value level="2">2</value>
-				</consumeItemCount>
+				<lifeTime>-1</lifeTime>
 			</effect>
 		</effects>
 	</skill>
