@@ -57,6 +57,11 @@ public class RequestPetition implements IClientIncomingPacket
 			return;
 		}
 		
+		if ((_type <= 0) || (_type >= 10))
+		{
+			return;
+		}
+		
 		if (!AdminData.getInstance().isGmOnline(false))
 		{
 			client.sendPacket(SystemMessageId.THERE_ARE_NO_GMS_CURRENTLY_VISIBLE_IN_THE_PUBLIC_LIST_AS_THEY_MAY_BE_PERFORMING_OTHER_FUNCTIONS_AT_THE_MOMENT);

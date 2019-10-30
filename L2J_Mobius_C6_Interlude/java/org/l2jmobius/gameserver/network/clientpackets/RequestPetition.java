@@ -48,6 +48,11 @@ public class RequestPetition extends GameClientPacket
 			return;
 		}
 		
+		if ((_type <= 0) || (_type >= 10))
+		{
+			return;
+		}
+		
 		if (!AdminData.getInstance().isGmOnline(false))
 		{
 			player.sendPacket(SystemMessageId.NO_GM_PROVIDING_SERVICE_NOW);
