@@ -61,7 +61,7 @@ public class ChangePlayerName implements IBypassHandler
 		}
 		
 		// Destroy item.
-		player.destroyItemByItemId("ChangePlayerName", NAME_CHANGE_TICKET, 1, player, true);
+		player.destroyItemByItemId("ChangePlayerName to " + newName, NAME_CHANGE_TICKET, 1, player, true);
 		
 		// Set name and proceed.
 		player.setName(newName);
