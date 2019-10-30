@@ -119,7 +119,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="19606" level="85" type="Npc" name="Flame Flower">
+	<npc id="19606" level="99" type="FriendlyNpc" name="Flame Flower">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -130,24 +130,24 @@
 				<run ground="1" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" randomWalk="false" talkable="false" />
 		<collision>
 			<radius normal="12" />
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="19607" level="85" type="Npc" name="Seal Tombstone">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
+	<npc id="19607" level="100" type="Monster" name="Seal Tombstone">
+		<race>ETC</race>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1613128" hpRegen="7.5" mp="23928" mpRegen="2.7" />
+			<vitals hp="17131280.0" hpRegen="7.5" mp="23928.0" mpRegen="2.7" />
+			<attack physical="1280.9" magical="1001.1" critical="4" attackSpeed="253" range="40" />
+			<defence physical="16389.1" magical="13989.5" />
 			<speed>
 				<walk ground="1" />
 				<run ground="1" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" randomWalk="false" canMove="false" randomAnimation="false" />
 		<collision>
 			<radius normal="30" />
 			<height normal="60.8" />
@@ -164,7 +164,7 @@
 				<run ground="1" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" targetable="false" showName="false" />
 		<collision>
 			<radius normal="160" />
 			<height normal="40" />

@@ -692,20 +692,39 @@
 	<skill id="16571" toLevel="1" name="Weakened Defense">
 		<!-- P. Def. is decreased -->
 		<icon>icon.skill11276</icon>
-		<operateType>A1</operateType>
+		<abnormalLvl>1</abnormalLvl>		
+		<abnormalTime>1</abnormalTime>
+		<operateType>A2</operateType>
 		<castRange>900</castRange>
 		<hitTime>600000</hitTime>
 		<reuseDelay>300000</reuseDelay>
 		<effectPoint>-707</effectPoint>
+		<isMagic>2</isMagic>
 		<isDebuff>true</isDebuff>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="16572" toLevel="1" name="Seal Archangel's Wrath">
 		<!-- Seal Archangel's Wrath causes Action Prohibit state -->
 		<icon>icon.skill4111</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<operateType>A2</operateType>
 		<castRange>400</castRange>
 		<effectPoint>-100</effectPoint>
+		<affectLimit>10-10</affectLimit>
 		<isDebuff>true</isDebuff>
+		<fanRange>0;0;80;300</fanRange>
+		<targetType>SELF</targetType>
+		<affectScope>FAN_PB</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16573" toLevel="1" name="Kelbim Petrify">
 		<!-- A Petrify spell causes the body to temporarily turn to rock. -->

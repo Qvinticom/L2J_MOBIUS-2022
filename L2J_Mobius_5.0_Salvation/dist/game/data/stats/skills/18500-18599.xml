@@ -123,36 +123,70 @@
 		<coolTime>500</coolTime>
 	</skill>
 	<skill id="18513" toLevel="1" name="Summon Flame Flower">
+		<icon>icon.skill0000</icon>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>46554</itemConsumeId> <!-- Flame Flower -->
 		<operateType>A1</operateType>
 		<hitTime>1500</hitTime>
 		<reuseDelay>3000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="18514" toLevel="1" name="Seal Altar of Earth">
 		<!-- The seal of the ruler is engraved on the ancient relic protecting the fort. -->
 		<icon>icon.skill0246</icon>
 		<operateType>A1</operateType>
-		<coolTime>500</coolTime>
 		<mpConsume>10</mpConsume>
 		<castRange>100</castRange>
-		<hitTime>60000</hitTime>
+		<hitTime>120000</hitTime>
 		<reuseDelay>5000</reuseDelay>
 	</skill>
 	<skill id="18515" toLevel="3" name="Weakened Defense">
-		<!-- P./ M. Def. -10% -->
+		<!-- P./M. Def. is decreased by Lvl 1 - 10%. -->
+		<!-- P./M. Def. is decreased by Lvl 2 - 30%. -->
+		<!-- P./M. Def. is decreased by Lvl 3 - 50%. -->
 		<icon>icon.skill1042</icon>
+		<abnormalLvl>5</abnormalLvl>
+		<abnormalTime>60</abnormalTime>
+		<abnormalType>PD_DOWN</abnormalType>
 		<operateType>A2</operateType>
-		<castRange>500</castRange>
+		<castRange>600</castRange>
 		<effectPoint>-692</effectPoint>
 		<isDebuff>true</isDebuff>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">-10</value>
+					<value level="2">-30</value>
+					<value level="2">-50</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">-10</value>
+					<value level="2">-30</value>
+					<value level="3">-50</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CallSkill">
+				<skillId>16571</skillId>
+				<skillLevel>1</skillLevel>
+			</effect>			
+		</effects>
 	</skill>
 	<skill id="18516" toLevel="1" name="Seal Altar of Wind">
 		<!-- The seal of the ruler is engraved on the ancient relic protecting the fort. -->
 		<icon>icon.skill0246</icon>
 		<operateType>A1</operateType>
-		<coolTime>500</coolTime>
 		<mpConsume>10</mpConsume>
 		<castRange>100</castRange>
-		<hitTime>60000</hitTime>
+		<hitTime>120000</hitTime>
 		<reuseDelay>5000</reuseDelay>
 	</skill>
 	<skill id="18517" toLevel="1" name="Top-grade Love Potion - Party">

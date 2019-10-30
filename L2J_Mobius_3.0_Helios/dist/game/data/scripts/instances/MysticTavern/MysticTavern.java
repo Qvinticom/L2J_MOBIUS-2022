@@ -36,6 +36,7 @@ import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
 
 import ai.AbstractNpcAI;
 import instances.MysticTavern.StoryOfFreya.StoryOfFreya;
+import instances.MysticTavern.StoryOfTauti.StoryOfTauti;
 import quests.Q10297_GrandOpeningComeToOurPub.Q10297_GrandOpeningComeToOurPub;
 
 /**
@@ -57,7 +58,7 @@ public class MysticTavern extends AbstractNpcAI
 	private static final int LUPIA = 34185;
 	private static final int MEY = 34186;
 	// Instances
-	// private static final int INSTANCE_TAUTI = 261;
+	private static final int INSTANCE_TAUTI = 261;
 	// private static final int INSTANCE_KELBIM = 262;
 	private static final int INSTANCE_FREYA = 263;
 	// Zones
@@ -105,7 +106,7 @@ public class MysticTavern extends AbstractNpcAI
 					}
 					final List<Integer> availableInstances = new ArrayList<>();
 					availableInstances.add(INSTANCE_FREYA);
-					// availableInstances.add(INSTANCE_TAUTI);
+					availableInstances.add(INSTANCE_TAUTI);
 					// availableInstances.add(INSTANCE_KELBIM);
 					for (PlayerInstance member : party.getMembers())
 					{
@@ -132,16 +133,16 @@ public class MysticTavern extends AbstractNpcAI
 								}
 							}
 						}
-						// if (InstanceManager.getInstance().getInstanceTime(member, INSTANCE_TAUTI) > 0)
-						// {
-						// for (int i = 0; i < availableInstances.size(); i++)
-						// {
-						// if (availableInstances.get(i) == INSTANCE_TAUTI)
-						// {
-						// availableInstances.remove(i);
-						// }
-						// }
-						// }
+						if (InstanceManager.getInstance().getInstanceTime(member, INSTANCE_TAUTI) > 0)
+						{
+							for (int i = 0; i < availableInstances.size(); i++)
+							{
+								if (availableInstances.get(i) == INSTANCE_TAUTI)
+								{
+									availableInstances.remove(i);
+								}
+							}
+						}
 						// if (InstanceManager.getInstance().getInstanceTime(member, INSTANCE_KELBIM) > 0)
 						// {
 						// for (int i = 0; i < availableInstances.size(); i++)
@@ -160,7 +161,6 @@ public class MysticTavern extends AbstractNpcAI
 					npc.setScriptValue(getRandom(availableInstances.size()));
 					startQuestTimer("npcRoute", 3000, npc, player);
 				}
-				startQuestTimer("npcRoute", 3000, npc, player); // TODO only for test
 				break;
 			}
 			case "npcRoute":
@@ -333,11 +333,11 @@ public class MysticTavern extends AbstractNpcAI
 						player.processQuestEvent(StoryOfFreya.class.getSimpleName(), "start_story");
 						break;
 					}
-					// case INSTANCE_TAUTI:
-					// {
-					// player.processQuestEvent(StoryOfTauti.class.getSimpleName(), "start_story");
-					// break;
-					// }
+					case INSTANCE_TAUTI:
+					{
+						player.processQuestEvent(StoryOfTauti.class.getSimpleName(), "start_story");
+						break;
+					}
 					// case INSTANCE_KELBIM:
 					// {
 					// player.processQuestEvent(StoryOfKelbim.class.getSimpleName(), "start_story");

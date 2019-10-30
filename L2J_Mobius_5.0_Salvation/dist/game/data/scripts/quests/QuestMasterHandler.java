@@ -197,6 +197,7 @@ import quests.Q00828_EvasBlessing.Q00828_EvasBlessing;
 import quests.Q00829_MaphrsSalvation.Q00829_MaphrsSalvation;
 import quests.Q00830_TheWayOfTheGiantsPawn.Q00830_TheWayOfTheGiantsPawn;
 import quests.Q00831_SayhasScheme.Q00831_SayhasScheme;
+import quests.Q00833_DevilsTreasureTauti.Q00833_DevilsTreasureTauti;
 import quests.Q00835_PitiableMelisa.Q00835_PitiableMelisa;
 import quests.Q00901_HowLavasaurusesAreMade.Q00901_HowLavasaurusesAreMade;
 import quests.Q00902_ReclaimOurEra.Q00902_ReclaimOurEra;
@@ -701,6 +702,7 @@ public class QuestMasterHandler
 		Q00829_MaphrsSalvation.class,
 		Q00830_TheWayOfTheGiantsPawn.class,
 		Q00831_SayhasScheme.class,
+		Q00833_DevilsTreasureTauti.class,
 		Q00835_PitiableMelisa.class,
 		Q00836_RequestFromTheBlackbirdClan.class, // TODO: Not done.
 		Q00837_RequestFromTheGiantTrackers.class, // TODO: Not done.

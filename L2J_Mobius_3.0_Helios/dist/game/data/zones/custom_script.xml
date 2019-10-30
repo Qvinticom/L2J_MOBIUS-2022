@@ -1131,4 +1131,31 @@
 	<zone name="Mystic_Tavern_Globe5" id="80023" type="ScriptZone" shape="Cylinder" minZ="-14250" maxZ="-14100" rad="110">
 		<node X="-49355" Y="-148215" />
 	</zone>
+	<!-- Mystic Tavern Tauti -->
+	<zone name="Flame_Flower_Zone" id="80027" type="ScriptZone" shape="Cylinder" minZ="-8120" maxZ="-8040" rad="750">
+		<node X="143990" Y="-148845" />
+	</zone>
+	<zone name="Tauti_Start_Zone" id="80028" type="ScriptZone" shape="Cylinder" minZ="-7650" maxZ="-7550" rad="300">
+		<node X="142644" Y="-151100" />
+	</zone>
+	<zone name="Tauti_Scorpion_Zone" id="80029" type="ScriptZone" shape="Cylinder" minZ="-8850" maxZ="-8700" rad="650">
+		<node X="146900" Y="-148800" />
+	</zone>
+	<zone name="Tauti_Golem_Zone" id="80030" type="ScriptZone" shape="Cylinder" minZ="-9100" maxZ="-9000" rad="400">
+		<node X="150660" Y="-148760" />
+	</zone>
+	<zone name="Tauti_Tombstone_Zone" id="80031" type="ScriptZone" shape="NPoly" minZ="-9100" maxZ="-8900">
+		<node X="150744" Y="-150872" />
+		<node X="151087" Y="-150872" />
+		<node X="151173" Y="-151291" />
+		<node X="150400" Y="-152900" />		
+		<node X="149945" Y="-152920" />
+		<node X="149837" Y="-152680" />
+	</zone>
+	<zone name="Tauti_Angel_Zone" id="80032" type="ScriptZone" shape="Cylinder" minZ="-11200" maxZ="-11000" rad="200">
+		<node X="152620" Y="-151338" />
+	</zone>
+	<zone name="Tauti_Scarab_Zone" id="80033" type="ScriptZone" shape="Cylinder" minZ="-9150" maxZ="-9000" rad="550">
+		<node X="148800" Y="-153125" />
+	</zone>
 </list>
