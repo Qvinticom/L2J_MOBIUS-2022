@@ -3720,10 +3720,15 @@
 		<effectPoint>687</effectPoint>
 		<isMagic>1</isMagic>
 		<effects>
-			<effect name="AttackTrait">
-				<!-- Guessed -->
-				<KNOCKBACK>60</KNOCKBACK>
+			<effect name="AttackTrait"> <!-- CONFUSION ATTACK RATE -->
+				<AGGRESSION>60</AGGRESSION>
+				<AIRBIND>60</AIRBIND>
 				<KNOCKDOWN>60</KNOCKDOWN>
+				<KNOCKBACK>60</KNOCKBACK>
+				<KNOCKBACK>60</KNOCKBACK>
+				<PARALYZE>60</PARALYZE>
+				<SHOCK>60</SHOCK>
+				<PULL>60</PULL>
 			</effect>
 			<effect name="PAtk">
 				<amount>20</amount>
@@ -3732,6 +3737,20 @@
 			<effect name="Accuracy">
 				<amount>23</amount>
 				<mode>DIFF</mode>
+			</effect>
+			<effect name="DebuffBlock" />
+			<effect name="DispelByCategory">
+				<slot>DEBUFF</slot>
+				<rate>100</rate>
+				<max>10</max>
+			</effect>
+			<effect name="ResistDispelByCategory">
+				<amount>-100</amount>
+				<slot>ALL</slot>
+			</effect>
+			<effect name="ResistAbnormalByCategory">
+				<amount>-100</amount>
+				<slot>DEBUFF</slot>
 			</effect>
 		</effects>
 		<selfEffects>
@@ -3809,7 +3828,7 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="Reuse">
-				<amount>-60</amount> <!-- Guessed -->
+				<amount>-60</amount>
 				<mode>PER</mode>
 				<magicType>0</magicType>
 			</effect>
@@ -3817,6 +3836,20 @@
 				<amount>-60</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
+			</effect>
+			<effect name="DebuffBlock" />
+			<effect name="DispelByCategory">
+				<slot>DEBUFF</slot>
+				<rate>100</rate>
+				<max>10</max>
+			</effect>
+			<effect name="ResistDispelByCategory">
+				<amount>-100</amount>
+				<slot>ALL</slot>
+			</effect>
+			<effect name="ResistAbnormalByCategory">
+				<amount>-100</amount>
+				<slot>DEBUFF</slot>
 			</effect>
 		</effects>
 		<selfEffects>
@@ -3892,6 +3925,20 @@
 			<effect name="CriticalDamage">
 				<amount>20</amount>
 				<mode>PER</mode>
+			</effect>
+			<effect name="DebuffBlock" />
+			<effect name="DispelByCategory">
+				<slot>DEBUFF</slot>
+				<rate>100</rate>
+				<max>10</max>
+			</effect>
+			<effect name="ResistDispelByCategory">
+				<amount>-100</amount>
+				<slot>ALL</slot>
+			</effect>
+			<effect name="ResistAbnormalByCategory">
+				<amount>-100</amount>
+				<slot>DEBUFF</slot>
 			</effect>
 		</effects>
 		<selfEffects>

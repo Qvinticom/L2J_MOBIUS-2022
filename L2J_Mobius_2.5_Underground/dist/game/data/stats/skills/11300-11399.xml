@@ -3601,10 +3601,15 @@
 		<effectPoint>687</effectPoint>
 		<isMagic>1</isMagic>
 		<effects>
-			<effect name="AttackTrait">
-				<!-- Guessed -->
-				<KNOCKBACK>30</KNOCKBACK>
-				<KNOCKDOWN>30</KNOCKDOWN>
+			<effect name="AttackTrait"> <!-- CONFUSION ATTACK RATE -->
+				<AGGRESSION>60</AGGRESSION>
+				<AIRBIND>60</AIRBIND>
+				<KNOCKDOWN>60</KNOCKDOWN>
+				<KNOCKBACK>60</KNOCKBACK>
+				<KNOCKBACK>60</KNOCKBACK>
+				<PARALYZE>60</PARALYZE>
+				<SHOCK>60</SHOCK>
+				<PULL>60</PULL>
 			</effect>
 			<effect name="PAtk">
 				<amount>30</amount>
