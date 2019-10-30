@@ -414,9 +414,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="Book" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="default_action" val="CAPSULE" />
+		<set name="default_action" val="SHOW_HTML" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23623" name="Gender Change Ticket" type="EtcItem">
@@ -429,6 +430,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ChangeCharacterNameItem" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="CAPSULE" />

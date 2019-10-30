@@ -480,7 +480,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				{
 					return false;
 				}
-				if (CharNameTable.getInstance().getIdByName(val) > 0)
+				if (CharNameTable.getInstance().doesCharNameExist(val))
 				{
 					BuilderUtil.sendSysMessage(activeChar, "Warning, player " + val + " already exists");
 					return false;
