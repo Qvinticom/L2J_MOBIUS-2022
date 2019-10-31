@@ -373,46 +373,70 @@
 	<item id="80835" name="Kaliel's Bracelet" type="Armor">
 		<!-- Kaliel's Bracelet\nActivates 5 talisman slots when equipped\n\n<Upgrade Condition>\nCan be upgraded to Kaliel's Greater Bracelet when enchanted to +5. -->
 		<set name="default_action" val="EQUIP" />
-		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
 		<set name="is_sellable" val="false" />
 		<set name="bodypart" val="rbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="BRACELET" />
+		<set name="enchant_enabled" val="1" />
 		<skills>
 			<skill id="35524" level="1" /> <!-- Kaliel's Bracelet -->
+			<skill id="35524" level="2" type="ON_ENCHANT" type_value="1" /> <!-- Kaliel's Bracelet +1 -->
+			<skill id="35524" level="3" type="ON_ENCHANT" type_value="2" /> <!-- Kaliel's Bracelet +2 -->
+			<skill id="35524" level="4" type="ON_ENCHANT" type_value="3" /> <!-- Kaliel's Bracelet +3 -->
+			<skill id="35524" level="5" type="ON_ENCHANT" type_value="4" /> <!-- Kaliel's Bracelet +4 -->
+			<skill id="35524" level="6" type="ON_ENCHANT" type_value="5" /> <!-- Kaliel's Bracelet +5 -->
 		</skills>
 	</item>
 	<item id="80836" name="Kaliel's Greater Bracelet" type="Armor">
 		<!-- Kaliel's Greater Bracelet\nActivates 6 talisman slots when equipped.\n\n<Upgrade Condition>\nCan be upgraded to Kaliel's Top-grade Bracelet when enchanted to +5. -->
 		<set name="default_action" val="EQUIP" />
-		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
 		<set name="is_sellable" val="false" />
 		<set name="bodypart" val="rbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="BRACELET" />
+		<set name="enchant_enabled" val="1" />
 		<skills>
 			<skill id="35525" level="1" /> <!-- Kaliel's Greater Bracelet -->
+			<skill id="35525" level="2" type="ON_ENCHANT" type_value="1" /> <!-- Kaliel's Greater Bracelet +1 -->
+			<skill id="35525" level="3" type="ON_ENCHANT" type_value="2" /> <!-- Kaliel's Greater Bracelet +2 -->
+			<skill id="35525" level="4" type="ON_ENCHANT" type_value="3" /> <!-- Kaliel's Greater Bracelet +3 -->
+			<skill id="35525" level="5" type="ON_ENCHANT" type_value="4" /> <!-- Kaliel's Greater Bracelet +4 -->
+			<skill id="35525" level="6" type="ON_ENCHANT" type_value="5" /> <!-- Kaliel's Greater Bracelet +5 -->
 		</skills>
 	</item>
 	<item id="80837" name="Kaliel's Top-grade Bracelet" type="Armor">
 		<!-- Kaliel's Top-grade Bracelet\nActivates 6 talisman slots when equipped. -->
 		<set name="default_action" val="EQUIP" />
-		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
 		<set name="is_sellable" val="false" />
 		<set name="bodypart" val="rbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="BRACELET" />
+		<set name="enchant_enabled" val="1" />
 		<skills>
 			<skill id="35526" level="1" /> <!-- Kaliel's Top Grade Bracelet -->
+			<skill id="35526" level="2" type="ON_ENCHANT" type_value="1" /> <!-- Kaliel's Top-grade Bracelet +1 -->
+			<skill id="35526" level="3" type="ON_ENCHANT" type_value="2" /> <!-- Kaliel's Top-grade Bracelet +2 -->
+			<skill id="35526" level="4" type="ON_ENCHANT" type_value="3" /> <!-- Kaliel's Top-grade Bracelet +3 -->
+			<skill id="35526" level="5" type="ON_ENCHANT" type_value="4" /> <!-- Kaliel's Top-grade Bracelet +4 -->
+			<skill id="35526" level="6" type="ON_ENCHANT" type_value="5" /> <!-- Kaliel's Top-grade Bracelet +5 -->
+			<skill id="35526" level="7" type="ON_ENCHANT" type_value="6" /> <!-- Kaliel's Top-grade Bracelet +6 -->
+			<skill id="35526" level="8" type="ON_ENCHANT" type_value="7" /> <!-- Kaliel's Top-grade Bracelet +7 -->
+			<skill id="35526" level="9" type="ON_ENCHANT" type_value="8" /> <!-- Kaliel's Top-grade Bracelet +8 -->
+			<skill id="35526" level="10" type="ON_ENCHANT" type_value="9" /> <!-- Kaliel's Top-grade Bracelet +9 -->
+			<skill id="35526" level="11" type="ON_ENCHANT" type_value="10" /> <!-- Kaliel's Top-grade Bracelet +10 -->
+			<skill id="30818" level="1" type="ON_ENCHANT" type_value="5" /> <!-- Kaliel's Top-grade Bracelet +5 -->
+			<skill id="30818" level="2" type="ON_ENCHANT" type_value="6" /> <!-- Kaliel's Top-grade Bracelet +6 -->
+			<skill id="30818" level="3" type="ON_ENCHANT" type_value="7" /> <!-- Kaliel's Top-grade Bracelet +7 -->
+			<skill id="30818" level="4" type="ON_ENCHANT" type_value="8" /> <!-- Kaliel's Top-grade Bracelet +8 -->
+			<skill id="30818" level="5" type="ON_ENCHANT" type_value="9" /> <!-- Kaliel's Top-grade Bracelet +9 -->
+			<skill id="30818" level="6" type="ON_ENCHANT" type_value="10" /> <!-- Kaliel's Top-grade Bracelet +10 -->
 		</skills>
 	</item>
 	<item id="80838" name="Enchant Scroll: Blessed Bracelet" type="EtcItem">
 		<!-- Enchant scroll to enchant Kaliel's Bracelet. If it fails, the enchantment level of the bracelet will be reset. -->
-		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -420,9 +444,12 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="BLESS_ENCHT_AM" />
 		<set name="handler" val="EnchantScrolls" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
 		<skills>
 			<skill id="39527" level="1" /> <!-- Enchant Scroll: Blessed Bracelet -->
 		</skills>

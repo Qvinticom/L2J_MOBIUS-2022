@@ -829,12 +829,12 @@
 			<value level="6">300000</value>
 		</reuseDelay>
 		<effectPoint>1000</effectPoint>
-		<abnormalType>INVINCIBILITY</abnormalType>
-		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
+		<abnormalType>ABSORB</abnormalType>
+		<abnormalVisualEffect>AVE_ABSORB2_SHIELD</abnormalVisualEffect>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>10</abnormalTime>
+		<abnormalTime>15</abnormalTime>
 		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>

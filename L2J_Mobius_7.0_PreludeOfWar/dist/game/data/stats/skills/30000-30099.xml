@@ -894,11 +894,16 @@
 	<skill id="30010" toLevel="3" name="Windy Refuge">
 		<!-- Cancels all debuffs and recovers HP/ MP for $s1 inside a refuge of wind. Cannot move. -->
 		<icon>icon.skill30010</icon>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+		</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="3">10</value>
 			<value fromLevel="1" toLevel="3" fromSubLevel="1001" toSubLevel="1020">{base + (0.5 * subIndex)}</value>
 		</abnormalTime>
+		<abnormalType>HIDE</abnormalType>
 		<abnormalVisualEffect>WIND_HIDE</abnormalVisualEffect>
 		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
 		<effectPoint>687</effectPoint>
@@ -917,6 +922,7 @@
 		<reuseDelay>180000</reuseDelay>
 		<isMagic>1</isMagic>
 		<effects>
+			<effect name="Hide" />
 			<effect name="DispelByCategory">
 				<slot>DEBUFF</slot>
 				<rate>100</rate>

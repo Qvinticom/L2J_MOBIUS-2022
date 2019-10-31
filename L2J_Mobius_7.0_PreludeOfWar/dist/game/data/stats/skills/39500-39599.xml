@@ -147,6 +147,12 @@
 	</skill>
 	<skill id="39527" toLevel="1" name="Enchant Scroll: Blessed Bracelet">
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="39528" toLevel="1" name="PA Event Box">
 		<operateType>A1</operateType>

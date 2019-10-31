@@ -4220,7 +4220,10 @@
 		</effects>
 	</skill>
 	<skill id="10069" toLevel="4" name="Grand Thorn of Vengeance">
-		<!-- P. Atk. +$s1 and Reflect Damage/ Reflect Magic +$s2. Activates the Avenging Will with a chance of $s3 on you when you attack, and activates the Spirit of Revenge with a certain chance when you're hit. -->
+		<!-- P. Atk. +3% and Reflect Damage/ Reflect Magic +5%. Activates the Avenging Will with a chance of 30% on you when you attack, and activates the Spirit of Revenge with a certain chance when you're hit. -->
+		<!-- P. Atk. +6% and Reflect Damage/ Reflect Magic +9%. Activates the Avenging Will with a chance of 30% on you when you attack, and activates the Spirit of Revenge with a certain chance when you're hit. -->
+		<!-- P. Atk. +8% and Reflect Damage/ Reflect Magic +12%. Activates the Avenging Will with a chance of 30% on you when you attack, and activates the Spirit of Revenge with a certain chance when you're hit. -->
+		<!-- P. Atk. +10% and Reflect Damage/ Reflect Magic +15%. Activates the Avenging Will with a chance of 30% on you when you attack, and activates the Spirit of Revenge with a certain chance when you're hit. -->
 		<icon>icon.skill10069_2</icon>
 		<operateType>P</operateType>
 		<magicLvl>
@@ -4239,8 +4242,15 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
+			<effect name="ReflectMagic">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">9</value>
+					<value level="3">12</value>
+					<value level="4">15</value>
+				</amount>
+			</effect>
 			<effect name="TriggerSkillByAttack">
-				<!-- Vampirism -->
 				<attackerType>Creature</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
 				<maxAttackerLevel>127</maxAttackerLevel>
@@ -4257,16 +4267,40 @@
 				<chance>30</chance>
 				<targetType>SELF</targetType>
 			</effect>
+			<effect name="TriggerSkillByDamage">
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>127</maxAttackerLevel>
+				<allowSkillAttack>true</allowSkillAttack>
+				<skillId>10067</skillId> <!-- Spirit of Revenge -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+				</skillLevel>
+				<allowWeapons>ALL</allowWeapons>
+				<minDamage>1</minDamage>
+				<chance>5</chance>
+				<targetType>MY_PARTY</targetType>
+				<affectScope>SINGLE</affectScope>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="10070" toLevel="4" name="Avenging Will">
 		<!-- For $s2, recovers $s1 HP, P. Critical Damage +$s3, and makes immune to debuff. -->
 		<icon>icon.skill10069</icon>
-		<operateType>A1</operateType>
-		<abnormalLvl>1</abnormalLvl>
+		<operateType>A2</operateType>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+		</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<isTriggeredSkill>true</isTriggeredSkill>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">90</value>
