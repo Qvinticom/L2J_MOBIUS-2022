@@ -285,7 +285,15 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="0" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+			<capsuled_items>
+					<item id="36094" min="16" max="16" chance="100" /> <!-- Vitality Replenishing Star Candy -->
+			</capsuled_items>
 	</item>
 	<item id="45812" name="Clan Reward" type="EtcItem">
 		<!-- Alliance made with blood! Reward given to those who worked hard for the growth of their clans. Use it to receive 17 Vitality Replenishing Star Candies. -->
@@ -297,7 +305,15 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="0" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+			<capsuled_items>
+					<item id="36094" min="17" max="17" chance="100" /> <!-- Vitality Replenishing Star Candy -->
+			</capsuled_items>
 	</item>
 	<item id="45813" name="Clan Reward" type="EtcItem">
 		<!-- Alliance made with blood! Reward given to those who worked hard for the growth of their clans. Use it to receive 18 Vitality Replenishing Star Candies. -->
@@ -309,7 +325,15 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="0" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+			<capsuled_items>
+					<item id="36094" min="18" max="18" chance="100" /> <!-- Vitality Replenishing Star Candy -->
+			</capsuled_items>
 	</item>
 	<item id="45814" name="Clan Reward" type="EtcItem">
 		<!-- Alliance made with blood! Reward given to those who worked hard for the growth of their clans. Use it to receive 19 Vitality Replenishing Star Candies. -->
@@ -321,7 +345,15 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="0" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+			<capsuled_items>
+					<item id="36094" min="19" max="19" chance="100" /> <!-- Vitality Replenishing Star Candy -->
+			</capsuled_items>
 	</item>
 	<item id="45815" name="Clan Reward" type="EtcItem">
 		<!-- Alliance made with blood! Reward given to those who worked hard for the growth of their clans. Use it to receive 20 Vitality Replenishing Star Candies. -->
@@ -333,7 +365,15 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="0" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+			<capsuled_items>
+					<item id="36094" min="20" max="20" chance="100" /> <!-- Vitality Replenishing Star Candy -->
+			</capsuled_items>
 	</item>
 	<item id="45816" name="Clan Reward" type="EtcItem">
 		<!-- Alliance made with blood! Reward given to those who worked hard for the growth of their clans. Use it to receive 21 Vitality Replenishing Star Candies. -->
@@ -345,7 +385,15 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="0" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+			<capsuled_items>
+					<item id="36094" min="21" max="21" chance="100" /> <!-- Vitality Replenishing Star Candy -->
+			</capsuled_items>
 	</item>
 	<item id="45817" name="Weapon Attribute Change Crystal (R-grade)" type="EtcItem">
 		<!-- Double-click to change the attributes of R, R95, R99 and R110-grade weapons. It can be used when there is an R-grade weapon bestowed in the inventory. -->

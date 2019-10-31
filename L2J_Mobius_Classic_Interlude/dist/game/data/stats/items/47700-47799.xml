@@ -177,15 +177,20 @@
 	<item id="47715" name="Clan Reward" type="EtcItem">
 		<!-- Recharge yourself! This item is paid to those who have worked for the growth of the Clan. You can get 25 Vitality Replenishing Star Candy. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="0" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+			<capsuled_items>
+					<item id="36094" min="25" max="25" chance="100" /> <!-- Vitality Replenishing Star Candy -->
+			</capsuled_items>
 	</item>
 	<item id="47716" name="Monster Only: Hand Axe" type="Weapon">
 		<!-- Monsters Weapon. Hand Axe -->

@@ -360,6 +360,9 @@
 			<effect name="ExpModify">
 				<amount>25</amount>
 			</effect>
+			<effect name="SpModify">
+				<amount>25</amount>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="9619" toLevel="1" name="Nom Nom Candy">
@@ -370,6 +373,9 @@
 		<abnormalLevel>1</abnormalLevel>
 		<effects>
 			<effect name="ExpModify">
+				<amount>25</amount>
+			</effect>
+			<effect name="SpModify">
 				<amount>25</amount>
 			</effect>
 		</effects>
@@ -525,6 +531,14 @@
 		<conditions>
 			<condition name="OpNeedAgathion" />
 		</conditions>
+		<effects>
+			<effect name="ExpModify">
+				<amount>30</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>30</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9628" toLevel="1" name="Star Agathion's Gift Box">
 		<itemConsumeId>36093</itemConsumeId>
@@ -560,9 +574,15 @@
 		<magicLvl>1</magicLvl>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
-		<reuseDelay>30000</reuseDelay>
+		<itemConsumeId>36094</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="VitalityPointUp">
+				<value>17500</value>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9630" toLevel="1" name="Vitality Recovering Star Candy">
 		<!-- For 10 min., Vitality is replenished when XP is gained through hunting. -->
@@ -591,6 +611,11 @@
 				<hasAbnormal>false</hasAbnormal>
 			</condition>
 		</conditions>
+		<effects>
+			<effect name="VitalityPointsRate">
+				<amount>-10</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9631" toLevel="1" name="Vitality Maintaining Star Candy">
 		<!-- For 10 min., Vitality is maintained. -->
@@ -612,6 +637,13 @@
 		<isMagic>4</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="VitalityPointsRate">
+				<amount>-100</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9632" toLevel="1" name="Star Agathion Pack">
 		<itemConsumeId>36102</itemConsumeId>
@@ -804,6 +836,14 @@
 		<conditions>
 			<condition name="OpNeedAgathion" />
 		</conditions>
+		<effects>
+			<effect name="ExpModify">
+				<amount>30</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>30</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9641" toLevel="1" name="Powerful Sooro Teleport: Talking Island Village">
 		<!-- Return to Talking Island Village. -->
@@ -915,6 +955,14 @@
 		<conditions>
 			<condition name="OpNeedAgathion" />
 		</conditions>
+		<effects>
+			<effect name="ExpModify">
+				<amount>30</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>30</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9647" toLevel="1" name="Chic Jaebum Teleport: Talking Island Village">
 		<!-- Return to Talking Island Village. -->
@@ -1026,6 +1074,14 @@
 		<conditions>
 			<condition name="OpNeedAgathion" />
 		</conditions>
+		<effects>
+			<effect name="ExpModify">
+				<amount>30</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>30</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9653" toLevel="1" name="Cute Shinyoung Teleport: Talking Island Village">
 		<!-- Return to Talking Island Village. -->
@@ -1137,6 +1193,14 @@
 		<conditions>
 			<condition name="OpNeedAgathion" />
 		</conditions>
+		<effects>
+			<effect name="ExpModify">
+				<amount>30</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>30</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9659" toLevel="1" name="Repair Energy Supplier">
 		<!-- Usable through the Multi Hammer 3 item. Skill is used in Clan Production Request Type A. Repairs Energy Supplier. -->
@@ -1177,6 +1241,24 @@
 		<reuseDelay>3600000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PAtk">
+				<amount>22</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>70</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9661" toLevel="1" name="Heavenly P. Def. Cookie (Event)">
 		<!-- For 1 hour, P. Def +45%, M. Def +15%, P. Critical Rate/ M. Critical Rate +100%, P. Critical Damage +35%, Shield Defense Rate +30%, and Shield Def. +50%. -->
@@ -1196,6 +1278,36 @@
 		<reuseDelay>3600000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>45</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>35</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ShieldDefenceRate">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ShieldDefence">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9662" toLevel="1" name="Heavenly Magic Cookie (Event)">
 		<!-- For 1 hour, M. Atk. +40%, M. Critical Rate +100%, Casting Spd. +15%, Skill Cooldown -20%, and Skill MP Consumption -15%. -->
@@ -1215,6 +1327,20 @@
 		<reuseDelay>3600000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MAtk">
+				<amount>40</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9663" toLevel="1" name="Heavenly CP Cookie (Event)">
 		<!-- For 1 hr., Max CP +20%. Buff remains even after death. -->
@@ -1234,6 +1360,12 @@
 		<reuseDelay>3600000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MaxCp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9664" toLevel="1" name="Kaliel's Treasure Chest (Low-grade)">
 		<!-- Kaliel's Treasure Chest skill (Low-grade). -->
