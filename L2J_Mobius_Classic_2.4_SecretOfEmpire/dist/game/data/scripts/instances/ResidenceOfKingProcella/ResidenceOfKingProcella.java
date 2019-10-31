@@ -16,7 +16,6 @@
  */
 package instances.ResidenceOfKingProcella;
 
-import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -43,7 +42,8 @@ public class ResidenceOfKingProcella extends AbstractInstance
 	private static final int PROCELLA_STORM = 29115;
 	// Skills
 	private static final SkillHolder HURRICANE_SUMMON = new SkillHolder(50042, 1); // When spawn Minion
-	private static final SkillHolder HURRICANE_BOLT = new SkillHolder(50043, 1); // When player in Radius + para
+	private static final int HURRICANE_BOLT = 50043;
+	private static final SkillHolder HURRICANE_BOLT_LV_1 = new SkillHolder(50043, 1); // When player in Radius + para
 	// Misc
 	private static final int TEMPLATE_ID = 197;
 	private static int STORM_MAX_COUNT = 16; // TODO: Max is limit ?
@@ -70,7 +70,7 @@ public class ResidenceOfKingProcella extends AbstractInstance
 			{
 				enterInstance(player, npc, TEMPLATE_ID);
 				_procella = (RaidBossInstance) addSpawn(PROCELLA, 212862, 179828, -15489, 49151, false, 0, true, player.getInstanceId());
-				startQuestTimer("SPAWN_MINION", 20000, _procella, player);
+				startQuestTimer("SPAWN_MINION", 300000 + getRandom(-15000, 15000), _procella, player);
 				startQuestTimer("SPAWN_STORM", 5000, _procella, player);
 				_procellaStormCount = 0;
 				break;
@@ -82,7 +82,7 @@ public class ResidenceOfKingProcella extends AbstractInstance
 					_minion1 = (MonsterInstance) addSpawn(PROCELLA_GUARDIAN_1, 212663, 179421, -15486, 31011, true, 0, true, npc.getInstanceId());
 					_minion2 = (MonsterInstance) addSpawn(PROCELLA_GUARDIAN_2, 213258, 179822, -15486, 12001, true, 0, true, npc.getInstanceId());
 					_minion3 = (MonsterInstance) addSpawn(PROCELLA_GUARDIAN_3, 212558, 179974, -15486, 12311, true, 0, true, npc.getInstanceId());
-					startQuestTimer("HIDE_PROCELLA", 3000, _procella, null);
+					startQuestTimer("HIDE_PROCELLA", 1000, _procella, null);
 				}
 				break;
 			}
@@ -91,12 +91,11 @@ public class ResidenceOfKingProcella extends AbstractInstance
 				if (_procellaStormCount < STORM_MAX_COUNT)
 				{
 					_procella.useMagic(HURRICANE_SUMMON.getSkill());
-					
 					final Npc procellaStorm = addSpawn(PROCELLA_STORM, _procella.getX() + getRandom(-500, 500), _procella.getY() + getRandom(-500, 500), _procella.getZ(), 31011, true, 0, true, npc.getInstanceId());
 					procellaStorm.setRandomWalking(true);
 					_procellaStormCount++;
-					startQuestTimer("SPAWN_STORM", 300000, _procella, null);
-					startQuestTimer("CHECK_CHAR_INSIDE_RADIUS_NPC", 1000, procellaStorm, player);
+					startQuestTimer("SPAWN_STORM", 60000, _procella, null);
+					startQuestTimer("CHECK_CHAR_INSIDE_RADIUS_NPC", 100, procellaStorm, player);// All time checking
 				}
 				break;
 			}
@@ -105,32 +104,43 @@ public class ResidenceOfKingProcella extends AbstractInstance
 				if (_procella.isInvisible())
 				{
 					_procella.setInvisible(false);
-					_procella.broadcastSay(ChatType.NPC_SHOUT, "Im invisible");
 				}
 				else
 				{
 					_procella.setInvisible(true);
-					_procella.broadcastSay(ChatType.NPC_SHOUT, "Im visible");
-					startQuestTimer("SPAWN_MINION", 300000, _procella, player);
+					startQuestTimer("SPAWN_MINION", 300000 + getRandom(-15000, 15000), _procella, player);
 				}
 				break;
 			}
 			case "CHECK_CHAR_INSIDE_RADIUS_NPC":
 			{
-				if ((player != null) && (player.isInsideRadius3D(npc, 200)))
+				final Instance world = npc.getInstanceWorld();
+				if (world != null)
 				{
-					npc.abortAttack();
-					npc.abortCast();
-					npc.setTarget(player);
-					if (SkillCaster.checkUseConditions(npc, HURRICANE_BOLT.getSkill()))
+					final PlayerInstance plr = world.getPlayers().stream().findAny().get();
+					if ((plr != null) && (plr.isInsideRadius3D(npc, 100)))
 					{
-						npc.doCast(HURRICANE_BOLT.getSkill());
+						npc.abortAttack();
+						npc.abortCast();
+						npc.setTarget(plr);
+						if (plr.getAffectedSkillLevel(HURRICANE_BOLT) == 1)
+						{
+							npc.abortCast();
+							startQuestTimer("CHECK_CHAR_INSIDE_RADIUS_NPC", 100, npc, player);// All time checking
+						}
+						else
+						{
+							if (SkillCaster.checkUseConditions(npc, HURRICANE_BOLT_LV_1.getSkill()))
+							{
+								npc.doCast(HURRICANE_BOLT_LV_1.getSkill());
+							}
+						}
+						startQuestTimer("CHECK_CHAR_INSIDE_RADIUS_NPC", 100, npc, player);// All time checking
 					}
-					startQuestTimer("CHECK_CHAR_INSIDE_RADIUS_NPC", 10000, npc, player);
-				}
-				else
-				{
-					startQuestTimer("CHECK_CHAR_INSIDE_RADIUS_NPC", 10000, npc, player);
+					else
+					{
+						startQuestTimer("CHECK_CHAR_INSIDE_RADIUS_NPC", 100, npc, player);// All time checking
+					}
 				}
 				break;
 			}
@@ -146,6 +156,9 @@ public class ResidenceOfKingProcella extends AbstractInstance
 			final Instance world = npc.getInstanceWorld();
 			if (world != null)
 			{
+				cancelQuestTimer("SPAWN_MINION", npc, player);
+				cancelQuestTimer("SPAWN_STORM", npc, player);
+				cancelQuestTimer("CHECK_CHAR_INSIDE_RADIUS_NPC", npc, player);
 				world.finishInstance();
 			}
 		}
