@@ -2245,7 +2245,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	public CreatureAI getAI()
 	{
-		if (_ai == null)
+		CreatureAI ai = _ai;
+		if (ai == null)
 		{
 			synchronized (this)
 			{
@@ -2255,8 +2256,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 				}
 			}
 		}
-		
-		return _ai;
+		return ai;
 	}
 	
 	/**
