@@ -57,9 +57,7 @@ public class RequestAnswerFriendInvite implements IClientIncomingPacket
 		if (player.getFriendList().contains(requestor.getObjectId()) //
 			|| requestor.getFriendList().contains(player.getObjectId()))
 		{
-			final SystemMessage sm = new SystemMessage(SystemMessageId.THIS_PLAYER_IS_ALREADY_REGISTERED_ON_YOUR_FRIENDS_LIST);
-			sm.addString(player.getName());
-			requestor.sendPacket(sm);
+			requestor.sendPacket(SystemMessageId.THIS_PLAYER_IS_ALREADY_REGISTERED_ON_YOUR_FRIENDS_LIST);
 			return;
 		}
 		
