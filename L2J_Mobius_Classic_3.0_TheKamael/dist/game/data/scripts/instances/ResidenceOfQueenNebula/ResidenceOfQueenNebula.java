@@ -16,10 +16,13 @@
  */
 package instances.ResidenceOfQueenNebula;
 
+import org.l2jmobius.gameserver.data.xml.impl.SkillData;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
+import org.l2jmobius.gameserver.model.skills.AbnormalVisualEffect;
+import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.skills.SkillCaster;
 
 import instances.AbstractInstance;
@@ -28,7 +31,6 @@ import instances.AbstractInstance;
  * @author RobikBobik
  * @NOTE: Retail like working
  * @TODO: Rewrite code to modern style.
- * @TODO: Nebula uses attacks on a surface, summons minions (Water Slime) and casts
  * @TODO: The less Nebula's HP, the more damage she deals.
  */
 public class ResidenceOfQueenNebula extends AbstractInstance
@@ -37,21 +39,23 @@ public class ResidenceOfQueenNebula extends AbstractInstance
 	private static final int IRIS = 34046;
 	private static final int NEBULA = 29106;
 	private static final int WATER_SLIME = 29111;
+	// Skills
+	private static final int AQUA_RAGE = 50036;
+	private static SkillHolder AQUA_RAGE_1 = new SkillHolder(AQUA_RAGE, 1);
+	private static SkillHolder AQUA_RAGE_2 = new SkillHolder(AQUA_RAGE, 2);
+	private static SkillHolder AQUA_RAGE_3 = new SkillHolder(AQUA_RAGE, 3);
+	private static SkillHolder AQUA_RAGE_4 = new SkillHolder(AQUA_RAGE, 4);
+	private static SkillHolder AQUA_RAGE_5 = new SkillHolder(AQUA_RAGE, 5);
+	private static SkillHolder AQUA_SUMMON = new SkillHolder(50037, 1);
 	// Misc
 	private static final int TEMPLATE_ID = 196;
-	// Skills
-	// Debuffs which reduces Speed and increases the damage received (the effect stacks up to 5 times). When it's stacked to 5 times, the character becomes unable to move or make any actions.
-	private static SkillHolder AQUA_RAGE_1 = new SkillHolder(50036, 1);
-	private static SkillHolder AQUA_RAGE_2 = new SkillHolder(50036, 2);
-	private static SkillHolder AQUA_RAGE_3 = new SkillHolder(50036, 3);
-	private static SkillHolder AQUA_RAGE_4 = new SkillHolder(50036, 4);
-	private static SkillHolder AQUA_RAGE_5 = new SkillHolder(50036, 5);
 	
 	public ResidenceOfQueenNebula()
 	{
 		super(TEMPLATE_ID);
 		addStartNpc(IRIS);
-		addKillId(NEBULA);
+		addKillId(NEBULA, WATER_SLIME);
+		addAttackId(NEBULA);
 		addSpawnId(NEBULA);
 		addInstanceLeaveId(TEMPLATE_ID);
 	}
@@ -68,70 +72,85 @@ public class ResidenceOfQueenNebula extends AbstractInstance
 			}
 			case "SPAWN_WATER_SLIME":
 			{
-				startQuestTimer("CAST_AQUA_RAGE", 5000, npc, player);
-				if (npc.getId() == NEBULA)
+				final Instance world = npc.getInstanceWorld();
+				if (world != null)
 				{
-					for (int i = 0; i < getRandom(4, 6); i++)
+					final PlayerInstance plr = world.getPlayers().stream().findAny().get();
+					startQuestTimer("CAST_AQUA_RAGE", 60000 + getRandom(-15000, 15000), npc, plr);
+					if (npc.getId() == NEBULA)
 					{
-						addSpawn(npc, WATER_SLIME, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, -1, true, npc.getInstanceId());
-						startQuestTimer("SPAWN_WATER_SLIME", 300000, npc, null);
+						npc.doCast(AQUA_SUMMON.getSkill());
+						for (int i = 0; i < getRandom(4, 6); i++)
+						{
+							addSpawn(npc, WATER_SLIME, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), true, -1, true, npc.getInstanceId());
+							startQuestTimer("SPAWN_WATER_SLIME", 300000, npc, null);
+						}
 					}
 				}
 				break;
 			}
 			case "PLAYER_PARA":
 			{
-				player.setIsImmobilized(true);
-				startQuestTimer("PLAYER_UNPARA", 30000, npc, player);
+				if (player.getAffectedSkillLevel(AQUA_RAGE) == 5)
+				{
+					player.getEffectList().startAbnormalVisualEffect(AbnormalVisualEffect.FROZEN_PILLAR);
+					player.setIsImmobilized(true);
+					startQuestTimer("PLAYER_UNPARA", 5000, npc, player);
+				}
+				
 				break;
 			}
 			case "PLAYER_UNPARA":
 			{
 				player.getEffectList().stopSkillEffects(true, AQUA_RAGE_5.getSkill());
+				player.getEffectList().stopAbnormalVisualEffect(AbnormalVisualEffect.FROZEN_PILLAR);
 				player.setIsImmobilized(false);
 				break;
 			}
 			case "CAST_AQUA_RAGE":
 			{
-				startQuestTimer("CAST_AQUA_RAGE", 10000, npc, player);
-				if (!player.isAffectedBySkill(AQUA_RAGE_1))
+				startQuestTimer("CAST_AQUA_RAGE", 5000, npc, player);
+				if ((player.isInsideRadius3D(npc, 1000)))
 				{
-					if (SkillCaster.checkUseConditions(npc, AQUA_RAGE_1.getSkill()))
+					if (player.getAffectedSkillLevel(AQUA_RAGE) == 1)
 					{
-						npc.doCast(AQUA_RAGE_1.getSkill());
+						if (SkillCaster.checkUseConditions(npc, AQUA_RAGE_2.getSkill()))
+						{
+							npc.doCast(AQUA_RAGE_2.getSkill());
+						}
 					}
-				}
-				else if (player.isAffectedBySkill(AQUA_RAGE_1))
-				{
-					if (SkillCaster.checkUseConditions(npc, AQUA_RAGE_2.getSkill()))
+					else if (player.getAffectedSkillLevel(AQUA_RAGE) == 2)
 					{
-						player.getEffectList().stopSkillEffects(true, AQUA_RAGE_1.getSkill());
-						npc.doCast(AQUA_RAGE_2.getSkill());
+						if (SkillCaster.checkUseConditions(npc, AQUA_RAGE_3.getSkill()))
+						{
+							npc.doCast(AQUA_RAGE_3.getSkill());
+						}
 					}
-				}
-				else if (player.isAffectedBySkill(AQUA_RAGE_2))
-				{
-					if (SkillCaster.checkUseConditions(npc, AQUA_RAGE_3.getSkill()))
+					else if (player.getAffectedSkillLevel(AQUA_RAGE) == 3)
 					{
-						player.getEffectList().stopSkillEffects(true, AQUA_RAGE_2.getSkill());
-						npc.doCast(AQUA_RAGE_3.getSkill());
+						if (SkillCaster.checkUseConditions(npc, AQUA_RAGE_4.getSkill()))
+						{
+							npc.doCast(AQUA_RAGE_4.getSkill());
+						}
 					}
-				}
-				else if (player.isAffectedBySkill(AQUA_RAGE_3))
-				{
-					if (SkillCaster.checkUseConditions(npc, AQUA_RAGE_4.getSkill()))
+					else if (player.getAffectedSkillLevel(AQUA_RAGE) == 4)
 					{
-						player.getEffectList().stopSkillEffects(true, AQUA_RAGE_3.getSkill());
-						npc.doCast(AQUA_RAGE_4.getSkill());
+						if (SkillCaster.checkUseConditions(npc, AQUA_RAGE_5.getSkill()))
+						{
+							npc.doCast(AQUA_RAGE_5.getSkill());
+							startQuestTimer("PLAYER_PARA", 100, npc, player);
+						}
 					}
-				}
-				else if (player.isAffectedBySkill(AQUA_RAGE_4))
-				{
-					if (SkillCaster.checkUseConditions(npc, AQUA_RAGE_5.getSkill()))
+					else if (player.getAffectedSkillLevel(AQUA_RAGE) == 5)
 					{
-						player.getEffectList().stopSkillEffects(true, AQUA_RAGE_4.getSkill());
-						npc.doCast(AQUA_RAGE_5.getSkill());
-						startQuestTimer("PLAYER_PARA", 1000, npc, player);
+						npc.abortCast();
+					}
+					else
+					{
+						if (SkillCaster.checkUseConditions(npc, AQUA_RAGE_1.getSkill()))
+						{
+							npc.doCast(AQUA_RAGE_1.getSkill());
+						}
 					}
 				}
 				break;
@@ -143,21 +162,64 @@ public class ResidenceOfQueenNebula extends AbstractInstance
 	@Override
 	public String onSpawn(Npc npc)
 	{
-		startQuestTimer("SPAWN_WATER_SLIME", 12000, npc, null);
+		startQuestTimer("SPAWN_WATER_SLIME", 300000, npc, null);
 		return super.onSpawn(npc);
 	}
 	
 	@Override
 	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
-		if (npc.getId() == NEBULA)
+		switch (npc.getId())
 		{
-			final Instance world = npc.getInstanceWorld();
-			if (world != null)
+			case NEBULA:
 			{
-				world.finishInstance();
+				cancelQuestTimer("CAST_AQUA_RAGE", npc, player);
+				cancelQuestTimer("SPAWN_WATER_SLIME", npc, player);
+				final Instance world = npc.getInstanceWorld();
+				if (world != null)
+				{
+					world.finishInstance();
+				}
+			}
+			case WATER_SLIME:
+			{
+				if (player.getAffectedSkillLevel(AQUA_RAGE) == 1)
+				{
+					if (getRandom(100) < 50)
+					{
+						player.stopSkillEffects(AQUA_RAGE_1.getSkill());
+					}
+				}
+				else if (player.getAffectedSkillLevel(AQUA_RAGE) == 2)
+				{
+					if (getRandom(100) < 50)
+					{
+						player.stopSkillEffects(AQUA_RAGE_2.getSkill());
+						final Skill skill = SkillData.getInstance().getSkill(AQUA_RAGE, 1);
+						skill.applyEffects(player, player);
+					}
+				}
+				else if (player.getAffectedSkillLevel(AQUA_RAGE) == 3)
+				{
+					if (getRandom(100) < 50)
+					{
+						player.stopSkillEffects(AQUA_RAGE_3.getSkill());
+						final Skill skill = SkillData.getInstance().getSkill(AQUA_RAGE, 2);
+						skill.applyEffects(player, player);
+					}
+				}
+				else if (player.getAffectedSkillLevel(AQUA_RAGE) == 4)
+				{
+					if (getRandom(100) < 50)
+					{
+						player.stopSkillEffects(AQUA_RAGE_4.getSkill());
+						final Skill skill = SkillData.getInstance().getSkill(AQUA_RAGE, 3);
+						skill.applyEffects(player, player);
+					}
+				}
 			}
 		}
+		
 		return super.onKill(npc, player, isSummon);
 	}
 	
