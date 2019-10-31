@@ -166,6 +166,10 @@
 					<item>POLE</item>
 				</weaponType>
 			</effect>
+			<effect name="SetSkill">
+				<skillId>30612</skillId> <!-- Cancel Edge of Storm -->
+				<skillLvl>1</skillLvl>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="30611" toLevel="1" name="Edge of Storm">
@@ -200,6 +204,10 @@
 					<item>POLE</item>
 				</weaponType>
 			</effect>
+			<effect name="SetSkill">
+				<skillId>30612</skillId> <!-- Cancel Edge of Storm -->
+				<skillLvl>1</skillLvl>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="30612" toLevel="1" name="Cancel Edge of Storm">
@@ -207,6 +215,14 @@
 		<icon>icon.skill30610</icon>
 		<operateType>A1</operateType>
 		<effectPoint>2</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<effects>
+			<effect name="DispelBySlotProbability">
+				<!-- Sharpen/Edge of Storm -->
+				<dispel>POLEARM_ATTACK</dispel>
+				<rate>100</rate>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="30613" toLevel="1" name="Newbie's Rising Smash">
 		<!-- Attacks nearby targets with 2062 Power added to P. Atk. and Received Healing -45% for 5 sec. Can be used while a sword or blunt weapon is equipped. Over-hit. Critical. -->
@@ -249,7 +265,7 @@
 				<criticalChance>15</criticalChance>
 			</effect>
 			<effect name="HealEffect">
-				<amount>-50</amount> <!-- Guessing -->
+				<amount>-45</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
