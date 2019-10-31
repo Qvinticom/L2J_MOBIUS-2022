@@ -88,6 +88,8 @@ import org.l2jmobius.gameserver.network.clientpackets.pledgeV2.RequestExPledgeLe
 import org.l2jmobius.gameserver.network.clientpackets.pledgeV2.RequestExPledgeMasteryInfo;
 import org.l2jmobius.gameserver.network.clientpackets.pledgeV2.RequestExPledgeMasteryReset;
 import org.l2jmobius.gameserver.network.clientpackets.pledgeV2.RequestExPledgeMasterySet;
+import org.l2jmobius.gameserver.network.clientpackets.pledgeV2.RequestExPledgeMissionInfo;
+import org.l2jmobius.gameserver.network.clientpackets.pledgeV2.RequestExPledgeMissionReward;
 import org.l2jmobius.gameserver.network.clientpackets.pledgeV2.RequestExPledgeSkillActivate;
 import org.l2jmobius.gameserver.network.clientpackets.pledgeV2.RequestExPledgeSkillInfo;
 import org.l2jmobius.gameserver.network.clientpackets.primeshop.RequestBRBuyProduct;
@@ -424,8 +426,8 @@ public enum ExIncomingPackets implements IIncomingPackets<GameClient>
 	EX_PLEDGE_CONTRIBUTION_INFO(0x13F, null, ConnectionState.IN_GAME),
 	EX_PLEDGE_CONTRIBUTION_REWARD(0x140, null, ConnectionState.IN_GAME),
 	EX_PLEDGE_LEVEL_UP(0x141, RequestExPledgeLevelUp::new, ConnectionState.IN_GAME),
-	EX_PLEDGE_MISSION_INFO(0x142, null, ConnectionState.IN_GAME),
-	EX_PLEDGE_MISSION_REWARD(0x143, null, ConnectionState.IN_GAME),
+	EX_PLEDGE_MISSION_INFO(0x142, RequestExPledgeMissionInfo::new, ConnectionState.IN_GAME),
+	EX_PLEDGE_MISSION_REWARD(0x143, RequestExPledgeMissionReward::new, ConnectionState.IN_GAME),
 	EX_PLEDGE_MASTERY_INFO(0x144, RequestExPledgeMasteryInfo::new, ConnectionState.IN_GAME),
 	EX_PLEDGE_MASTERY_SET(0x145, RequestExPledgeMasterySet::new, ConnectionState.IN_GAME),
 	EX_PLEDGE_MASTERY_RESET(0x146, RequestExPledgeMasteryReset::new, ConnectionState.IN_GAME),

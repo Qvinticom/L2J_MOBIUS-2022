@@ -38,7 +38,7 @@ public class LevelDailyMissionHandler extends AbstractDailyMissionHandler
 	{
 		super(holder);
 		_level = holder.getParams().getInt("level");
-		_dualclass = holder.getParams().getBoolean("dualclass", false);
+		_dualclass = holder.isDualClassOnly();
 	}
 	
 	@Override
@@ -71,6 +71,12 @@ public class LevelDailyMissionHandler extends AbstractDailyMissionHandler
 			}
 		}
 		return false;
+	}
+	
+	@Override
+	public boolean isLevelUpMission()
+	{
+		return true;
 	}
 	
 	@Override

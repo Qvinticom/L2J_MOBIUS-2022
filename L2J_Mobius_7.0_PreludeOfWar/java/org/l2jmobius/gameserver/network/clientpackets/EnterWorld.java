@@ -626,9 +626,6 @@ public class EnterWorld implements IClientIncomingPacket
 		{
 			player.sendPacket(new ExWorldChatCnt(player));
 		}
-		// Removed used by new Clan system.
-		// player.sendPacket(new ExConnectedTimeAndGettableReward(player));
-		// player.sendPacket(new ExOneDayReceiveRewardList(player, true));
 		
 		// Handle soulshots, disable all on EnterWorld
 		player.sendPacket(new ExAutoSoulShot(0, true, 0));

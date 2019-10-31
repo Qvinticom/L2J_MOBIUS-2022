@@ -27,10 +27,12 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.enums.DailyMissionStatus;
+import org.l2jmobius.gameserver.enums.SpecialItemType;
 import org.l2jmobius.gameserver.model.DailyMissionDataHolder;
 import org.l2jmobius.gameserver.model.DailyMissionPlayerEntry;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.events.ListenersContainer;
+import org.l2jmobius.gameserver.model.holders.ItemHolder;
 
 /**
  * @author Sdw
@@ -54,6 +56,11 @@ public abstract class AbstractDailyMissionHandler extends ListenersContainer
 	}
 	
 	public abstract boolean isAvailable(PlayerInstance player);
+	
+	public boolean isLevelUpMission()
+	{
+		return false;
+	}
 	
 	public abstract void init();
 	
@@ -96,7 +103,7 @@ public abstract class AbstractDailyMissionHandler extends ListenersContainer
 	
 	public boolean requestReward(PlayerInstance player)
 	{
-		if (isAvailable(player))
+		if (isAvailable(player) || isLevelUpMission())
 		{
 			giveRewards(player);
 			
@@ -113,7 +120,22 @@ public abstract class AbstractDailyMissionHandler extends ListenersContainer
 	
 	protected void giveRewards(PlayerInstance player)
 	{
-		_holder.getRewards().forEach(i -> player.addItem("One Day Reward", i, player, true));
+		for (ItemHolder reward : _holder.getRewards())
+		{
+			if (reward.getId() == SpecialItemType.CLAN_REPUTATION.getClientId())
+			{
+				player.getClan().addReputationScore((int) reward.getCount(), true);
+			}
+			else if (reward.getId() == SpecialItemType.FAME.getClientId())
+			{
+				player.setFame(player.getFame() + (int) reward.getCount());
+				player.broadcastUserInfo();
+			}
+			else
+			{
+				player.addItem("Daily Reward", reward, player, true);
+			}
+		}
 	}
 	
 	protected void storePlayerEntry(DailyMissionPlayerEntry entry)

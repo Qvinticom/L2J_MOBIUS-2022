@@ -14,32 +14,37 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2jmobius.gameserver.network.clientpackets.dailymission;
+package org.l2jmobius.gameserver.network.clientpackets.pledgeV2;
 
 import org.l2jmobius.commons.network.PacketReader;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
+import org.l2jmobius.gameserver.network.serverpackets.pledgeV2.ExPledgeMissionInfo;
+import org.l2jmobius.gameserver.network.serverpackets.pledgeV2.ExPledgeMissionRewardCount;
 
 /**
- * @author Mobius
- */
-public class RequestTodoListHTML implements IClientIncomingPacket
+ * @author Bonux (bonuxq@gmail.com)
+ * @date 29.09.2019
+ **/
+public class RequestExPledgeMissionInfo implements IClientIncomingPacket
 {
-	@SuppressWarnings("unused")
-	private int _tab;
-	@SuppressWarnings("unused")
-	private String _linkName;
-	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
 	{
-		_tab = packet.readC();
-		_linkName = packet.readS();
 		return true;
 	}
 	
 	@Override
 	public void run(GameClient client)
 	{
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
+		{
+			return;
+		}
+		
+		client.sendPacket(new ExPledgeMissionRewardCount(player));
+		client.sendPacket(new ExPledgeMissionInfo(player));
 	}
 }

@@ -163,6 +163,11 @@ public class DailyMissionDataHolder
 		return (_handler != null) && _handler.getRecentlyCompleted(player);
 	}
 	
+	public boolean isLevelUpMission()
+	{
+		return (_handler != null) && _handler.isLevelUpMission();
+	}
+	
 	public void reset()
 	{
 		if (_handler != null)
