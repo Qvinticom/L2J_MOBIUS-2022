@@ -2,7 +2,7 @@ L2J-Mobius Grand Crusade
 
 Client: https://drive.google.com/uc?id=1MA8eTpTZHblC9Iki4xXdWWbS4HGednDq&export=download
 Mirror: https://mega.nz/#!0eB0RIZS!RGm506vctH72n7H9tCNpepWfIfs1AvFB5NkcsNcMYA4
-
+System: https://mega.nz/#!Fk0SAK6L!v3JSzKN6QuNzINgel0wp7zXovh0DOYzqxcm7etQOSLI
 Geodata: http://www.mediafire.com/file/gxjyde9ji7w0zs7/L2J_Mobius_4.0_GrandCrusade_Geodata.zip
 JDK: https://www.mediafire.com/file/k25pt0umuf16uoh/openjdk-12.0.2_windows-x64_bin.zip
 

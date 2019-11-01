@@ -3,6 +3,7 @@ L2J-Mobius Salvation
 Client: https://mega.nz/#!ROAm2A4I!yghC8lp3OJIkPsue7AK2h9PlVPklMmjTM9GKOi0h71E
 Use mega downloader to download https://megadownloader.en.softonic.com/
 
+System: https://mega.nz/#!ZgtSUQKR!CNGdlcf2TRiDKvH8NJowEQUfafoJyzsv-g2SM9kpOB4
 Geodata: http://www.mediafire.com/file/01pe89ct3834r51/L2J_Mobius_5.0_Salvation_Geodata.zip
 JDK: https://www.mediafire.com/file/k25pt0umuf16uoh/openjdk-12.0.2_windows-x64_bin.zip
 

@@ -3,6 +3,7 @@ L2J-Mobius Ertheia
 Client: https://mega.nz/#F!BxkyzLBA!CIuE1GQOO1JMel7S7UxPfQ
 Use mega downloader to download https://megadownloader.en.softonic.com/
 
+System: https://mega.nz/#!s8lghARA!f7Hi1Yx5JWrNjT3kMRaGK_StI1Tnrxnhia8kaG8edSs
 Geodata: http://www.mediafire.com/file/muge7mydml1en8t/L2J_Mobius_1.0_Ertheia_Geodata.zip
 JDK: https://www.mediafire.com/file/k25pt0umuf16uoh/openjdk-12.0.2_windows-x64_bin.zip
 
