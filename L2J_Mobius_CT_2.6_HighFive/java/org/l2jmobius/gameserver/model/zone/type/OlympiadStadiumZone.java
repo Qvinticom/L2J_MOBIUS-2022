@@ -282,6 +282,7 @@ public class OlympiadStadiumZone extends ZoneRespawn
 					creature.sendPacket(ExOlympiadMatchEnd.STATIC_PACKET);
 				}
 			}
+			creature.broadcastInfo();
 		}
 	}
 	
