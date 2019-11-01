@@ -1379,6 +1379,10 @@ class OlympiadGameTask implements Runnable
 			return false;
 		}
 		
+		// TODO: Check if this can be removed.
+		_game._playerOne.broadcastInfo();
+		_game._playerTwo.broadcastInfo();
+		
 		_game._playerOne.sendPacket(new ExOlympiadUserInfo(_game._playerOne));
 		_game._playerOne.sendPacket(new ExOlympiadUserInfo(_game._playerTwo));
 		_game._playerTwo.sendPacket(new ExOlympiadUserInfo(_game._playerTwo));
@@ -1412,6 +1416,10 @@ class OlympiadGameTask implements Runnable
 			{
 			}
 		}
+		
+		// TODO: Check if this can be removed.
+		_game._playerOne.broadcastInfo();
+		_game._playerTwo.broadcastInfo();
 		
 		return checkBattleStatus();
 	}

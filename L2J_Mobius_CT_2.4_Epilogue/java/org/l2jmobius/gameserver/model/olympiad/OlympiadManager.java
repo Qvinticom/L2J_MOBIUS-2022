@@ -145,7 +145,6 @@ class OlympiadManager implements Runnable
 									i--;
 								}
 							}
-							
 							else if ((readyClasses != null) && existNextOpponents(getRandomClassList(Olympiad.getRegisteredClassBased(), readyClasses)))
 							{
 								try
@@ -402,7 +401,6 @@ class OlympiadManager implements Runnable
 		list.remove(second);
 		
 		return opponents;
-		
 	}
 	
 	protected boolean existNextOpponents(List<PlayerInstance> list)
