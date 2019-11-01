@@ -36,8 +36,18 @@
 		<!-- Enchant scroll exclusively for Angel and Dragon accessories. The scroll can enchant an accessory up to +10.. <Warning>. The Angel Accessory may fail to enchant starting from +1, and it will be destroyed if it fails. -->
 		<set name="icon" val="icon.scrl_of_ench_acc" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_AM" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
+		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<skills>
+			<skill id="39247" level="1" /> <!-- Scroll: Enchant Angel Accessory -->
+		</skills>
 	</item>
 </list>

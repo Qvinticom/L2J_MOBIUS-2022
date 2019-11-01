@@ -1271,6 +1271,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true"/>
+		<set name="etcitem_type" val="POTION"/>
+		<set name="commissionItemType" val="POTION"/>
+		<set name="handler" val="ItemSkills"/>
+		<skills>
+			<skill id="39174" level="1"/> <!-- Valor Recovery Potion Lv1 -->
+		</skills>
 	</item>
 	<item id="48285" name="Scroll: PK" type="EtcItem">
 		<!-- Double-click to lower PK value by 1. Your PK value has to be at least 1. Cannot be used when the Demonic Sword Zariche or the Blood Sword Akamanah is in possession. -->

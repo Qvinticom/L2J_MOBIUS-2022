@@ -421,6 +421,19 @@
 	</skill>
 	<skill id="17263" toLevel="1" name="Hero's Quick Healing Potion">
 		<operateType>A1</operateType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<itemConsumeId>48624</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="HpCpHeal">
+				<power>7000</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17264" toLevel="1" name="Scroll of Escape: Hellbound">
 		<!-- Scroll to teleport to Hellbound. -->

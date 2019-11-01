@@ -201,10 +201,12 @@
 	<skill id="17913" toLevel="1" name="Supreme Windy Quick Healing Potion">
 		<!-- Restores 5000 HP and restores CP with remaining power. No cooldown. -->
 		<icon>icon.etc_potion_gold_i00</icon>
+		<operateType>A1</operateType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
-		<operateType>A1</operateType>
+		<itemConsumeId>37894</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<reuseDelay>500</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>

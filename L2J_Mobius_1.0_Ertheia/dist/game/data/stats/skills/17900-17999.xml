@@ -133,6 +133,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<reuseDelay>500</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -150,6 +151,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<reuseDelay>500</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -167,6 +169,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<reuseDelay>500</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -184,6 +187,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<reuseDelay>500</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -197,10 +201,13 @@
 	<skill id="17913" toLevel="1" name="Supreme Windy Quick Healing Potion">
 		<!-- Restores 5000 HP and restores CP with remaining power. No duration. -->
 		<icon>icon.etc_potion_gold_i00</icon>
+		<operateType>A1</operateType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
-		<operateType>A1</operateType>
+		<itemConsumeId>37894</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<reuseDelay>500</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -664,7 +671,6 @@
 		<!-- Teleports you to Talking Island Village. -->
 		<itemConsumeId>39553</itemConsumeId> <!-- Minstrel's Scroll of Escape: Talking Island -->
 		<itemConsumeCount>1</itemConsumeCount>
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -693,7 +699,6 @@
 			<value level="1">39554</value> <!-- Bard's Scroll of Escape - Hunter's Village -->
 		</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -722,7 +727,6 @@
 			<value level="1">39555</value> <!-- Minstrel's Scroll of Escape: Magmeld -->
 		</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>

@@ -108,7 +108,6 @@
 		<itemConsumeId>37560</itemConsumeId> <!-- Emperor's Vitality Tonic -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<reuseDelay>60000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -129,7 +128,6 @@
 		<itemConsumeId>37561</itemConsumeId> <!-- Emperor's Vitality Tonic -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<reuseDelay>60000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -150,7 +148,6 @@
 		<itemConsumeId>37562</itemConsumeId> <!-- Emperor's Vitality Tonic -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<reuseDelay>60000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -362,6 +359,19 @@
 	</skill>
 	<skill id="17153" toLevel="1" name="Heavenly Recovery Potion">
 		<operateType>A1</operateType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<itemConsumeId>37671</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="HpCpHeal">
+				<power>2500</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17154" toLevel="1" name="Love Potion">
 		<!-- A strange sensation fogs your brain. Your heart is racing. Your weapon seems to be changing shape. Is that a lady orc? Her muscles are mesmerizing...\nFor 2 minutes, P. Atk. / M. Atk. / Atk. Spd. / Casting Spd. x 2. Effect disappears upon logout. -->
@@ -1081,7 +1091,7 @@
 			<effect name="MagicMpCost">
 				<amount>-10</amount>
 				<mode>PER</mode>
-				<magicType>22</magicType>
+				<magicType>2</magicType>
 			</effect>
 		</effects>
 	</skill>

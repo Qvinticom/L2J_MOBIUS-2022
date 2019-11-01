@@ -919,6 +919,13 @@
 		<set name="icon" val="icon.bm_grankain_potion" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true"/>
+		<set name="etcitem_type" val="POTION"/>
+		<set name="commissionItemType" val="POTION"/>
+		<set name="handler" val="ItemSkills"/>
+		<skills>
+			<skill id="18670" level="1"/> <!-- Gran Kain's Miraculous Medicine -->
+		</skills>
 	</item>
 	<item id="47579" name="Christmas Party Herb" type="EtcItem">
 		<!-- Christmas Party Herb. P. Atk./M. Atk./P. Def./M. Def. are increased by 50%, and you are turned into Santa for 2 minutes. Effect disappears when restarted. -->

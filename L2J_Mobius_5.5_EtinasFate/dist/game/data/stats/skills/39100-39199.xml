@@ -129,6 +129,19 @@
 	</skill>
 	<skill id="39174" toLevel="1" name="Valor Recovery Potion">
 		<operateType>A1</operateType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<itemConsumeId>48284</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="HpCpHeal">
+				<power>5000</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39175" toLevel="1" name="Scroll: PK">
 		<operateType>A1</operateType>

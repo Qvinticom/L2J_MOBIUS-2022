@@ -359,6 +359,19 @@
 	</skill>
 	<skill id="17153" toLevel="1" name="Heavenly Recovery Potion">
 		<operateType>A1</operateType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<itemConsumeId>37671</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="HpCpHeal">
+				<power>2500</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17154" toLevel="1" name="Love Potion">
 		<!-- A strange sensation fogs your brain. Your heart is racing. Your weapon seems to be changing shape. Is that a lady orc? Her muscles are mesmerizing,. For 5 min., P. Atk. / M. Atk. / Atk. Spd. / Casting Spd. increases by 50%. Effect disappears upon logout. -->

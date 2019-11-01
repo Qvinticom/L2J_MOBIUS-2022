@@ -244,7 +244,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48623" name="Warrior's Ring" additionalName="30-day" type="Armor">
+	<item id="48623" name="Hero's Ring" additionalName="30-day" type="Armor">
 		<!-- A ring purchased with the Marks of Battle. Max MP +33, Max CP +10%, Stun/ Paralysis/ Knock Back/ Knock Down Success Rate and Resistance +15%, Standard/ P. Atk./ M. Atk. Critical Damage +15%, and Atk. Spd./ Casting Spd. +5%. These effects do not stack with identical rings. -->
 		<set name="icon" val="icon.accessory_ring_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -263,14 +263,21 @@
 			<stat type="maxMp">33</stat>
 		</stats>
 	</item>
-	<item id="48624" name="Warrior's Miracle Cure" type="EtcItem">
-		<!-- Warrior's Miracle Cure purchased with the Marks of Battle. When used, it restores HP by 7000, and the remaining power restores CP. Can be used even in Mesmerized state. Cannot be used in Olympiad. -->
+	<item id="48624" name="Hero's Miracle Cure" type="EtcItem">
+		<!-- Heros's Miracle Cure purchased with the Marks of Battle. When used, it restores HP by 7000, and the remaining power restores CP. Can be used even in Mesmerized state. Cannot be used in Olympiad. -->
 		<set name="icon" val="icon.pvp_battle_quick_healing_potion2" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true"/>
+		<set name="etcitem_type" val="POTION"/>
+		<set name="commissionItemType" val="POTION"/>
+		<set name="handler" val="ItemSkills"/>
+		<skills>
+			<skill id="17263" level="1"/> <!-- Hero's Quick Healing Potion -->
+		</skills>
 	</item>
-	<item id="48625" name="Warrior's Rune Box (1-hour)" type="EtcItem">
+	<item id="48625" name="Hero's Rune Box (1-hour)" type="EtcItem">
 		<!-- A box containing the Warrior's Rune (1-hour) purchased with the Marks of Battle. Double-click to obtain the Warrior's Rune (1-hour) that increases XP/ SP by 20%. -->
 		<set name="icon" val="BranchSys3.icon.g_cash_fortuna_box_r" />
 		<set name="default_action" val="PEEL" />
@@ -279,7 +286,7 @@
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48626" name="Warrior's Rune" additionalName="1-hour" type="EtcItem">
+	<item id="48626" name="Hero's Rune" additionalName="1-hour" type="EtcItem">
 		<!-- Warrior's Rune purchased with the Mark of Battle. If stored in the inventory, increases Hunting Acquired XP/ SP by 20%. -->
 		<set name="icon" val="icon.bm_freya_bloody_rune" />
 		<set name="material" val="PAPER" />
