@@ -703,7 +703,7 @@
 		<!-- Recovers HP by $s1, MP by $s2, and CP by $s3. -->
 		<icon>icon.bm_sayhas_talisman</icon>
 		<operateType>A1</operateType>
-		<targetType>TARGET</targetType>
+		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<hitTime>300</hitTime>
 		<coolTime>300</coolTime>

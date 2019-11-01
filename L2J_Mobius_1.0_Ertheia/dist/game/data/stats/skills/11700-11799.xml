@@ -107,7 +107,7 @@
 		<!-- Inflicts a powerful blow on target. -->
 		<icon>icon.skill10317</icon>
 		<operateType>DA1</operateType>
-		<castRange>10</castRange>
+		<castRange>900</castRange>
 		<coolTime>500</coolTime>
 		<effectPoint>-687</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -697,7 +697,6 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<affectRange>1000</affectRange>
-		<staticReuse>true</staticReuse>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<affectObject>FRIEND</affectObject>
@@ -722,13 +721,6 @@
 				<slot>INVINCIBILITY_SPECIAL</slot>
 			</effect>
 		</effects>
-		<endEffects>
-			<effect name="CallSkill">
-				<!-- Lingering Protection -->
-				<skillId>11833</skillId> <!-- Lingering Protection -->
-				<skillLevel>1</skillLevel>
-			</effect>
-		</endEffects>
 	</skill>
 	<skill id="11759" toLevel="1" name="Celestial Party Protection">
 		<!-- Renders all party members invincible for 10 seconds. -->
@@ -747,7 +739,6 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>87</magicLvl>
 		<affectRange>1000</affectRange>
-		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
@@ -767,13 +758,6 @@
 				<slot>INVINCIBILITY_SPECIAL</slot>
 			</effect>
 		</effects>
-		<endEffects>
-			<effect name="CallSkill">
-				<!-- Lingering Protection -->
-				<skillId>11834</skillId> <!-- Lingering Protection -->
-				<skillLevel>1</skillLevel>
-			</effect>
-		</endEffects>
 	</skill>
 	<skill id="11760" toLevel="11" name="Radiant Recharge">
 		<!-- Instantly recovers target's MP with a maximum of 166 Power depending on target's level. Also, for 10 seconds, recovers 12 MP per second. Ineffective on classes that have the Recharge skill. -->
@@ -1161,7 +1145,6 @@
 		<operateType>A2</operateType>
 		<hitTime>500</hitTime>
 		<reuseDelay>300000</reuseDelay>
-		<staticReuse>true</staticReuse>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">90</value>
@@ -1691,8 +1674,7 @@
 		<hitTime>4000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>600000</reuseDelay>
-		<staticReuse>true</staticReuse>
-		<isMagic>2</isMagic>
+		<isMagic>1</isMagic>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">90</value>
@@ -2275,7 +2257,6 @@
 	<skill id="11781" toLevel="6" name="Dark Devour">
 		<icon>icon.skill1367</icon>
 		<operateType>A1</operateType>
-		<castRange>0</castRange>
 		<effectPoint>-1</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>

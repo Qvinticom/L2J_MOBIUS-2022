@@ -242,6 +242,7 @@ public enum AbnormalType
 	SONG_WEAPON(-1), // TODO: need find proper name
 	HEAL_RESISTANCE(-1), // TODO: need find proper name
 	TRIAD(-1),
+	TALISMAN_SPECIAL(-1),
 	EXP_HERB(-1),
 	AURA_DEBUFF(-1),
 	AB_HAWK_EYE(0),

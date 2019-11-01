@@ -811,6 +811,33 @@
 		<!-- STR + 5, DEX +5, CON +5, INT +5, WIT +5, MEN +5 -->
 		<icon>icon.accessory_ornithomimus_cap_i00</icon>
 		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>MEN</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27748" toLevel="1" name="Special Treasure Chest">
 		<operateType>A1</operateType>
@@ -820,15 +847,61 @@
 	<skill id="27749" toLevel="6" name="Gran Kain's Necklace">
 		<!-- Ignores target's invincibility for $s1 seconds. -->
 		<icon>BranchIcon.Icon.necklace_of_grankein_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<reuseDelay>600000</reuseDelay>
+		<effectPoint>-1</effectPoint>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+			<value level="5">5</value>
+			<value level="6">6</value>
+		</abnormalLvl>
+		<abnormalTime>
+			<value level="1">6</value>
+			<value level="2">7</value>
+			<value level="3">8</value>
+			<value level="4">10</value>
+			<value level="5">12</value>
+			<value level="6">15</value>		
+		</abnormalTime>
+		<hitCancelTime>0</hitCancelTime>
+		<basicProperty>NONE</basicProperty>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="27750" toLevel="6" name="Einhasad's Necklace">
 		<!-- For 30 sec., Reflect damage resistance + $s1. -->
 		<icon>BranchIcon.Icon.necklace_of_einhasad_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<reuseDelay>300000</reuseDelay>
 		<effectPoint>1</effectPoint>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+			<value level="5">5</value>
+			<value level="6">6</value>
+		</abnormalLvl>
+		<abnormalTime>30</abnormalTime>
+		<hitCancelTime>0</hitCancelTime>
+		<basicProperty>NONE</basicProperty>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DamageShield">
+				<amount>
+					<value level="1">15</value>
+					<value level="2">20</value>
+					<value level="3">35</value>
+					<value level="4">60</value>
+					<value level="5">80</value>
+					<value level="6">100</value>
+				</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27751" toLevel="6" name="Pa'agrio's Earring">
 		<!-- $s1 chance when using regular skills and $s2 chance when casting skills to deal $s3 fixed damage. -->
@@ -838,12 +911,148 @@
 	<skill id="27752" toLevel="6" name="Eva's Earring">
 		<!-- For 40 sec., P./M. Def - $s1 -->
 		<icon>BranchIcon.Icon.earring_of_eva_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<isDebuff>true</isDebuff>
 		<castRange>600</castRange>
 		<reuseDelay>300000</reuseDelay>
 		<effectPoint>-379</effectPoint>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+			<value level="5">5</value>
+			<value level="6">6</value>
+		</abnormalLvl>
+		<abnormalTime>40</abnormalTime>
+		<hitCancelTime>0</hitCancelTime>
+		<basicProperty>NONE</basicProperty>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">15</value>
+					<value level="2">20</value>
+					<value level="3">25</value>
+					<value level="4">30</value>
+					<value level="5">40</value>
+					<value level="6">50</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">15</value>
+					<value level="2">20</value>
+					<value level="3">25</value>
+					<value level="4">30</value>
+					<value level="5">40</value>
+					<value level="6">50</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">10</value>
+					<value level="4">12</value>
+					<value level="5">15</value>
+					<value level="6">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">10</value>
+					<value level="4">12</value>
+					<value level="5">15</value>
+					<value level="6">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">10</value>
+					<value level="4">12</value>
+					<value level="5">15</value>
+					<value level="6">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">150</value>
+					<value level="6">300</value>
+				</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">150</value>
+					<value level="6">300</value>
+				</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">150</value>
+					<value level="6">300</value>
+				</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">150</value>
+					<value level="6">300</value>
+				</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">150</value>
+					<value level="6">300</value>
+				</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">150</value>
+					<value level="6">300</value>
+				</amount>
+				<attribute>DARK</attribute>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27753" toLevel="6" name="Sayha's Ring">
 		<!-- $s1 chance when using regular skills and $s2 chance when casting skills to seal P./M. skills. -->
@@ -858,7 +1067,7 @@
 	<skill id="27755" toLevel="1" name="Shilen's Necklace">
 		<!-- Goes into Hide when equipped. -->
 		<icon>BranchIcon.Icon.necklace_of_shilen_i00</icon>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
 		<reuseDelay>120000</reuseDelay>
 		<effectPoint>679</effectPoint>
 	</skill>
@@ -880,6 +1089,26 @@
 		<!-- Through the power of Eva, increases Max HP by 10% and decreases Cooldown by 20%. Reflects a portion of damage received back onto the enemy. -->
 		<icon>BranchSys.icon.br_rune_of_eva_i00</icon>
 		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="MaxHp">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DamageShield">
+				<amount>5</amount>
+			</effect>
+			<effect name="Reuse">
+				<amount>-20</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-20</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27760" toLevel="1" name="+10 Shiny Elemental Shirt Pack">
 		<operateType>A1</operateType>
@@ -965,7 +1194,7 @@
 	<skill id="27782" toLevel="1" name="Agathion's Blessing: Dash">
 		<!-- For 10sec., a Babayaga's power boosts Speed by 100%. Cooldown is 10min. -->
 		<icon>icon.skill_transform_buff</icon>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<reuseDelay>600000</reuseDelay>
 		<effectPoint>689</effectPoint>
@@ -1260,7 +1489,7 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>45</abnormalTime>
 		<operateType>A2</operateType>
-		<targetType>SELF</targetType>
+		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<hitTime>300</hitTime>
 		<coolTime>300</coolTime>
