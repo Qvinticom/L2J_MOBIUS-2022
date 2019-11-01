@@ -22,6 +22,7 @@ import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.model.Elementals;
 import org.l2jmobius.gameserver.model.PlayerCondOverride;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.actor.transform.Transform;
 import org.l2jmobius.gameserver.model.items.Weapon;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.skills.Skill;
@@ -92,9 +93,10 @@ public class CreatureStat
 		}
 		
 		// Apply transformation stats.
-		if (_creature.isPlayer() && _creature.isTransformed())
+		final Transform transform = _creature.getTransformation();
+		if (transform != null)
 		{
-			final double val = _creature.getTransformation().getStat(_creature.getActingPlayer(), stat);
+			final double val = transform.getStat(_creature.getActingPlayer(), stat);
 			if (val > 0)
 			{
 				value = val;
@@ -550,10 +552,12 @@ public class CreatureStat
 	public int getPhysicalAttackRange()
 	{
 		final Weapon weapon = _creature.getActiveWeaponItem();
+		final Transform transform = _creature.getTransformation();
+		
 		int baseAttackRange;
-		if (_creature.isTransformed() && _creature.isPlayer())
+		if (transform != null)
 		{
-			baseAttackRange = _creature.getTransformation().getBaseAttackRange(_creature.getActingPlayer());
+			baseAttackRange = transform.getBaseAttackRange(_creature.getActingPlayer());
 		}
 		else if (weapon != null)
 		{
