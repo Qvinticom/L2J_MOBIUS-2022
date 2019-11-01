@@ -59,6 +59,8 @@ public class ExAutoPlaySetting implements IClientIncomingPacket
 		
 		player.sendPacket(new ExAutoPlaySettingSend(_options, _active, _pickUp, _nextTargetMode, _longRange, _potionPercent, _respectfulHunting));
 		
+		player.setAutoPotionPercent(_potionPercent);
+		
 		if (_active)
 		{
 			player.startAutoPlayTask(_pickUp, _longRange, _respectfulHunting);

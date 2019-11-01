@@ -20,12 +20,13 @@ import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.model.Shortcut;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import org.l2jmobius.gameserver.network.serverpackets.autoplay.ExActivateAutoShortcut;
 
 /**
- * @author JoeAlisson
+ * @author JoeAlisson, Mobius
  */
 public class ExRequestActivateAutoShortcut implements IClientIncomingPacket
 {
@@ -49,36 +50,70 @@ public class ExRequestActivateAutoShortcut implements IClientIncomingPacket
 			return;
 		}
 		
+		final int slot = _room % 12;
+		final int page = _room / 12;
+		final Shortcut shortcut = player.getShortCut(slot, page);
+		if (shortcut == null)
+		{
+			return;
+		}
+		client.sendPacket(new ExActivateAutoShortcut(_room, _activate));
+		
+		final ItemInstance item = player.getInventory().getItemByObjectId(shortcut.getId());
+		Skill skill = null;
+		if (item == null)
+		{
+			skill = player.getKnownSkill(shortcut.getId());
+		}
+		
+		// stop
 		if (!_activate)
 		{
-			client.sendPacket(new ExActivateAutoShortcut(_room, _activate));
+			if (item != null)
+			{
+				// auto supply
+				if (_room == -1)
+				{
+					player.removeAutoSupplyItem(item.getId());
+				}
+				else // auto potion
+				{
+					player.removeAutoPotionItem(item.getId());
+				}
+			}
+			// TODO: auto skill
+			if (skill != null)
+			{
+				player.removeAutoSkill(skill.getId());
+			}
 			return;
 		}
 		
+		// start
 		if (_room == -1)
 		{
-			// TODO: auto supply
-			client.sendPacket(new ExActivateAutoShortcut(_room, _activate));
+			// auto supply
+			if (item != null)
+			{
+				player.addAutoSupplyItem(item.getId());
+				return;
+			}
 		}
 		else
 		{
-			final int slot = _room % 12;
-			final int page = _room / 12;
-			final Shortcut shortcut = player.getShortCut(slot, page);
-			if (shortcut != null)
+			// auto potion
+			if ((page == 23) && (slot == 1))
 			{
-				if ((page == 23) && (slot == 1))
+				if ((item != null) && item.isPotion())
 				{
-					// auto potion
-					final ItemInstance item = player.getInventory().getItemByObjectId(shortcut.getId());
-					if ((item == null) || !item.isPotion())
-					{
-						return;
-					}
+					player.addAutoPotionItem(item.getId());
+					return;
 				}
-				
-				// TODO: auto skill
-				client.sendPacket(new ExActivateAutoShortcut(_room, _activate));
+			}
+			// TODO: auto skill
+			if (skill != null)
+			{
+				player.addAutoSkill(skill.getId());
 			}
 		}
 	}

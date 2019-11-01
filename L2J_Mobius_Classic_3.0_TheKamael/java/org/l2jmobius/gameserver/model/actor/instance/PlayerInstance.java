@@ -852,6 +852,11 @@ public class PlayerInstance extends Playable
 	private ElementalType _activeElementalSpiritType;
 	
 	private ScheduledFuture<?> _autoPlayTask = null;
+	private ScheduledFuture<?> _autoUseTask = null;
+	private int _autoPotionPercent = 0;
+	private final Collection<Integer> _autoSupplyItems = ConcurrentHashMap.newKeySet();
+	private final Collection<Integer> _autoPotionItems = ConcurrentHashMap.newKeySet();
+	private final Collection<Integer> _autoSkills = ConcurrentHashMap.newKeySet();
 	
 	// Selling buffs system
 	private boolean _isSellingBuffs = false;
@@ -13998,8 +14003,8 @@ public class PlayerInstance extends Playable
 		if ((_autoPlayTask != null) && !_autoPlayTask.isCancelled() && !_autoPlayTask.isDone())
 		{
 			_autoPlayTask.cancel(true);
+			_autoPlayTask = null;
 		}
-		_autoPlayTask = null;
 	}
 	
 	public void startAutoPlayTask(boolean pickup, boolean longRange, boolean respectfulHunting)
@@ -14083,5 +14088,128 @@ public class PlayerInstance extends Playable
 				sendPacket(ExAutoPlayDoMacro.STATIC_PACKET);
 			}
 		}, 0, 1000);
+	}
+	
+	private void stopAutoUseTask()
+	{
+		if ((_autoUseTask != null) && !_autoUseTask.isCancelled() && !_autoUseTask.isDone() && _autoSupplyItems.isEmpty() && _autoPotionItems.isEmpty() && _autoSkills.isEmpty())
+		{
+			_autoUseTask.cancel(true);
+			_autoUseTask = null;
+		}
+	}
+	
+	private void startAutoUseTask()
+	{
+		if (_autoUseTask != null)
+		{
+			return;
+		}
+		
+		_autoUseTask = ThreadPool.scheduleAtFixedRate(() ->
+		{
+			if (hasBlockActions() || isControlBlocked() || isAlikeDead())
+			{
+				return;
+			}
+			
+			for (int itemId : _autoSupplyItems)
+			{
+				final ItemInstance item = _inventory.getItemByItemId(itemId);
+				if (item == null)
+				{
+					removeAutoSupplyItem(itemId);
+					continue;
+				}
+				final int reuseDelay = item.getReuseDelay();
+				if ((reuseDelay <= 0) || (getItemRemainingReuseTime(item.getObjectId()) <= 0))
+				{
+					final EtcItem etcItem = item.getEtcItem();
+					final IItemHandler handler = ItemHandler.getInstance().getHandler(etcItem);
+					if ((handler != null) && handler.useItem(this, item, false) && (reuseDelay > 0))
+					{
+						addTimeStampItem(item, reuseDelay);
+					}
+				}
+			}
+			
+			if (getCurrentHpPercent() <= _autoPotionPercent)
+			{
+				for (int itemId : _autoPotionItems)
+				{
+					final ItemInstance item = _inventory.getItemByItemId(itemId);
+					if (item == null)
+					{
+						removeAutoPotionItem(itemId);
+						continue;
+					}
+					final int reuseDelay = item.getReuseDelay();
+					if ((reuseDelay <= 0) || (getItemRemainingReuseTime(item.getObjectId()) <= 0))
+					{
+						final EtcItem etcItem = item.getEtcItem();
+						final IItemHandler handler = ItemHandler.getInstance().getHandler(etcItem);
+						if ((handler != null) && handler.useItem(this, item, false) && (reuseDelay > 0))
+						{
+							addTimeStampItem(item, reuseDelay);
+						}
+					}
+				}
+			}
+			
+			for (int skillId : _autoSkills)
+			{
+				final Skill skill = getKnownSkill(skillId);
+				if (skill == null)
+				{
+					removeAutoSkill(skillId);
+					continue;
+				}
+				if (!hasSkillReuse(skill.getReuseHashCode()))
+				{
+					doCast(skill);
+				}
+			}
+		}, 0, 1000);
+	}
+	
+	public void setAutoPotionPercent(int value)
+	{
+		_autoPotionPercent = value;
+	}
+	
+	public void addAutoSupplyItem(int itemId)
+	{
+		_autoSupplyItems.add(itemId);
+		startAutoUseTask();
+	}
+	
+	public void removeAutoSupplyItem(int itemId)
+	{
+		_autoSupplyItems.remove(itemId);
+		stopAutoUseTask();
+	}
+	
+	public void addAutoPotionItem(int itemId)
+	{
+		_autoPotionItems.add(itemId);
+		startAutoUseTask();
+	}
+	
+	public void removeAutoPotionItem(int itemId)
+	{
+		_autoPotionItems.remove(itemId);
+		stopAutoUseTask();
+	}
+	
+	public void addAutoSkill(int skillId)
+	{
+		_autoSkills.add(skillId);
+		startAutoUseTask();
+	}
+	
+	public void removeAutoSkill(int skillId)
+	{
+		_autoSkills.remove(skillId);
+		stopAutoUseTask();
 	}
 }
