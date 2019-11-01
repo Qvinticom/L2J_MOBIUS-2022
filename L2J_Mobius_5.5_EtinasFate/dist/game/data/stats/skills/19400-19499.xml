@@ -382,7 +382,7 @@
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>FREEZE</abnormalType>
 		<abnormalVisualEffect>FROZEN_PILLAR</abnormalVisualEffect>
-		<activateRate>20</activateRate> <!-- Guessed -->
+		<activateRate>80</activateRate>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">90</value>
@@ -395,7 +395,7 @@
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<trait>PARALYZE</trait>
+		<trait>DERANGEMENT</trait>
 		<isMagic>1</isMagic>
 		<isDebuff>true</isDebuff>
 		<effects>
