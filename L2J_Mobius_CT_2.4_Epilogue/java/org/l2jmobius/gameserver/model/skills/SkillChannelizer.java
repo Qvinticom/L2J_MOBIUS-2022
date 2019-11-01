@@ -193,8 +193,12 @@ public class SkillChannelizer implements Runnable
 					{
 						final int maxSkillLevel = SkillData.getInstance().getMaxLevel(skill.getChannelingSkillId());
 						final int skillLevel = Math.min(creature.getSkillChannelized().getChannerlizersSize(skill.getChannelingSkillId()), maxSkillLevel);
-						final BuffInfo info = creature.getEffectList().getBuffInfoBySkillId(skill.getChannelingSkillId());
+						if (skillLevel == 0)
+						{
+							continue;
+						}
 						
+						final BuffInfo info = creature.getEffectList().getBuffInfoBySkillId(skill.getChannelingSkillId());
 						if ((info == null) || (info.getSkill().getLevel() < skillLevel))
 						{
 							final Skill channelingSkill = SkillData.getInstance().getSkill(skill.getChannelingSkillId(), skillLevel);
