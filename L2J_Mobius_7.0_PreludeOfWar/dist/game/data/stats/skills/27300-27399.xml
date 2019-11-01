@@ -855,9 +855,6 @@
 			<value level="12">600000</value>
 		</reuseDelay>
 		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
-		<conditions>
-			<condition name="OpNeedAgathion" />
-		</conditions>
 		<effects>
 			<effect name="HealPercent">
 				<power>100</power>
@@ -902,9 +899,6 @@
 			<value level="11">38000</value>
 			<value level="12">30000</value>
 		</reuseDelay>
-		<conditions>
-			<condition name="OpNeedAgathion" />
-		</conditions>
 		<selfEffects>
 			<effect name="Blink">
 				<!-- Teleport to Front -->
@@ -945,9 +939,6 @@
 			<value level="11">38000</value>
 			<value level="12">30000</value>
 		</reuseDelay>
-		<conditions>
-			<condition name="OpNeedAgathion" />
-		</conditions>
 		<effects>
 			<effect name="RebalanceHP" />
 			<effect name="HealOverTime">
@@ -992,9 +983,6 @@
 			<value level="11">75000</value>
 			<value level="12">60000</value>
 		</reuseDelay>
-		<conditions>
-			<condition name="OpNeedAgathion" />
-		</conditions>
 		<effects>
 			<effect name="DispelBySlot">
 				<dispel>CHANGEBODY,9</dispel>
@@ -1037,9 +1025,6 @@
 			<value level="11">750000</value>
 			<value level="12">600000</value>
 		</reuseDelay>
-		<conditions>
-			<condition name="OpNeedAgathion" />
-		</conditions>
 		<effects>
 			<effect name="PAtk">
 				<amount>100</amount>
@@ -1088,9 +1073,6 @@
 			<value level="11">750000</value>
 			<value level="12">600000</value>
 		</reuseDelay>
-		<conditions>
-			<condition name="OpNeedAgathion" />
-		</conditions>
 		<effects>
 			<effect name="DamageBlock">
 				<type>BLOCK_HP</type>
@@ -1139,9 +1121,6 @@
 			<value level="11">4500000</value>
 			<value level="12">3600000</value>
 		</reuseDelay>
-		<conditions>
-			<condition name="OpNeedAgathion" />
-		</conditions>
 		<effects>
 			<effect name="ResurrectionSpecial">
 				<power>100</power>
@@ -1190,9 +1169,6 @@
 			<value level="11">38000</value>
 			<value level="12">30000</value>
 		</reuseDelay>
-		<conditions>
-			<condition name="OpNeedAgathion" />
-		</conditions>
 		<effects>
 			<effect name="BlockActions">
 				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
@@ -1252,7 +1228,6 @@
 			<value level="12">30000</value>
 		</reuseDelay>
 		<conditions>
-			<condition name="OpNeedAgathion" />
 			<condition name="OpCheckCrtEffect" />
 		</conditions>
 		<effects>
@@ -1316,9 +1291,6 @@
 			<value level="11">750000</value>
 			<value level="12">600000</value>
 		</reuseDelay>
-		<conditions>
-			<condition name="OpNeedAgathion" />
-		</conditions>
 		<effects>
 			<effect name="AbnormalShield">
 				<times>5</times>
@@ -1353,9 +1325,6 @@
 			<value level="11">2250000</value>
 			<value level="12">1800000</value>
 		</reuseDelay>
-		<conditions>
-			<condition name="OpNeedAgathion" />
-		</conditions>
 		<conditions>
 			<condition name="OpCallPc" />
 			<condition name="TargetMyParty">
@@ -1396,9 +1365,6 @@
 			<value level="11">1500000</value>
 			<value level="12">1200000</value>
 		</reuseDelay>
-		<conditions>
-			<condition name="OpNeedAgathion" />
-		</conditions>
 		<effects>
 			<effect name="DamageShield">
 				<amount>20</amount>

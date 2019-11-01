@@ -96,7 +96,6 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
-			<condition name="OpNeedAgathion" />
 			<condition name="RemainHpPer">
 				<amount>30</amount>
 				<percentType>LESS</percentType>
@@ -1024,9 +1023,6 @@
 		<abnormalVisualEffect>BR_SOUL_AVATAR</abnormalVisualEffect>
 		<hitTime>4000</hitTime>
 		<targetType>NONE</targetType>
-		<conditions>
-			<condition name="OpNeedAgathion" />
-		</conditions>
 	</skill>
 	<skill id="23348" toLevel="1" name="Transform Elpy">
 		<!-- Transforms into a game Master. -->

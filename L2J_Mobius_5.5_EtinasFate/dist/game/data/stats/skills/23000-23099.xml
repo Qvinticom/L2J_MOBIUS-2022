@@ -80,9 +80,6 @@
 		<trait>ETC</trait>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="OpNeedAgathion" />
-		</conditions>
 	</skill>
 	<skill id="23005" toLevel="1" name="Gold Majo Agathion Special Skill: Blessed Resurrection">
 		<!-- Blessed Resurrection is available. -->
@@ -100,7 +97,6 @@
 		<targetType>PC_BODY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
-			<condition name="OpNeedAgathion" />
 			<condition name="OpResurrection" />
 		</conditions>
 		<effects>
@@ -124,7 +120,6 @@
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="OpCanEscape" />
-			<condition name="OpNeedAgathion" />
 		</conditions>
 		<effects>
 			<effect name="Escape">
@@ -152,9 +147,6 @@
 		<trait>ETC</trait>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="OpNeedAgathion" />
-		</conditions>
 	</skill>
 	<skill id="23008" toLevel="1" name="Plaipitak Agathion Special Skill: Blessed Escape">
 		<!-- Blessed Escape is available. -->
@@ -171,7 +163,6 @@
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="OpCanEscape" />
-			<condition name="OpNeedAgathion" />
 		</conditions>
 		<effects>
 			<effect name="Escape">
@@ -195,7 +186,6 @@
 		<targetType>PC_BODY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
-			<condition name="OpNeedAgathion" />
 			<condition name="OpResurrection" />
 		</conditions>
 		<effects>
@@ -269,9 +259,6 @@
 		<trait>ETC</trait>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="OpNeedAgathion" />
-		</conditions>
 	</skill>
 	<skill id="23014" toLevel="1" name="Bamboo Panda Agathion Special Skill: Blessed Resurrection">
 		<!-- Bamboo Panda Agathion has the ability to use Blessed Resurrection. -->
@@ -289,7 +276,6 @@
 		<targetType>PC_BODY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
-			<condition name="OpNeedAgathion" />
 			<condition name="OpResurrection" />
 		</conditions>
 		<effects>
@@ -313,7 +299,6 @@
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="OpCanEscape" />
-			<condition name="OpNeedAgathion" />
 		</conditions>
 		<effects>
 			<effect name="Escape">
@@ -342,9 +327,6 @@
 		<trait>ETC</trait>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="OpNeedAgathion" />
-		</conditions>
 		<effects>
 			<effect name="VitalityPointsRate">
 				<amount>-10</amount>
@@ -627,9 +609,6 @@
 		<trait>ETC</trait>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="OpNeedAgathion" />
-		</conditions>
 		<effects>
 			<effect name="VitalityPointsRate">
 				<amount>-10</amount>
@@ -727,7 +706,6 @@
 		<targetType>PC_BODY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
-			<condition name="OpNeedAgathion" />
 			<condition name="OpResurrection" />
 		</conditions>
 		<effects>
@@ -751,7 +729,6 @@
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="OpCanEscape" />
-			<condition name="OpNeedAgathion" />
 		</conditions>
 		<effects>
 			<effect name="Escape">
@@ -781,9 +758,6 @@
 		<trait>ETC</trait>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="OpNeedAgathion" />
-		</conditions>
 		<effects>
 			<effect name="VitalityPointsRate">
 				<amount>-10</amount>
@@ -826,9 +800,6 @@
 		<trait>ETC</trait>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="OpNeedAgathion" />
-		</conditions>
 		<effects>
 			<effect name="DefenceAttribute">
 				<amount>30</amount>
@@ -858,9 +829,6 @@
 		<trait>ETC</trait>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="OpNeedAgathion" />
-		</conditions>
 		<effects>
 			<effect name="VitalityPointsRate">
 				<amount>-10</amount>
@@ -903,9 +871,6 @@
 		<trait>ETC</trait>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="OpNeedAgathion" />
-		</conditions>
 		<effects>
 			<effect name="Speed">
 				<amount>33</amount>
@@ -928,7 +893,6 @@
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="OpCanEscape" />
-			<condition name="OpNeedAgathion" />
 		</conditions>
 		<effects>
 			<effect name="Escape">
@@ -1002,9 +966,6 @@
 		<trait>ETC</trait>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="OpNeedAgathion" />
-		</conditions>
 		<effects>
 			<effect name="Heal">
 				<power>444</power>
@@ -1036,9 +997,6 @@
 		<trait>ETC</trait>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="OpNeedAgathion" />
-		</conditions>
 		<effects>
 			<effect name="DamageShield">
 				<amount>20</amount>
@@ -1066,9 +1024,6 @@
 		<trait>ETC</trait>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="OpNeedAgathion" />
-		</conditions>
 		<effects>
 			<effect name="MpRegen">
 				<amount>3</amount>
@@ -1274,9 +1229,6 @@
 		<irreplacableBuff>true</irreplacableBuff>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="OpNeedAgathion" />
-		</conditions>
 		<effects>
 			<effect name="CriticalDamage">
 				<amount>35</amount>
@@ -1302,9 +1254,6 @@
 		<irreplacableBuff>true</irreplacableBuff>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="OpNeedAgathion" />
-		</conditions>
 		<effects>
 			<effect name="MagicCriticalRate">
 				<amount>2</amount>
@@ -1333,9 +1282,6 @@
 		<trait>ETC</trait>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="OpNeedAgathion" />
-		</conditions>
 	</skill>
 	<skill id="23060" toLevel="1" name="Great Sumo Match Agathion Special Skill: Firecracker's Power">
 		<!-- Sets off firecrackers. -->
@@ -1349,9 +1295,6 @@
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="OpNeedAgathion" />
-		</conditions>
 	</skill>
 	<skill id="23061" toLevel="1" name="Button-eyed Bear Doll Agathion Special Skill: Ability of Blessed Escape">
 		<!-- Can use the ability of Blessed Escape. Cooldown is 12 hr. -->
@@ -1368,7 +1311,6 @@
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="OpCanEscape" />
-			<condition name="OpNeedAgathion" />
 		</conditions>
 		<effects>
 			<effect name="Escape">
@@ -1392,7 +1334,6 @@
 		<targetType>PC_BODY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
-			<condition name="OpNeedAgathion" />
 			<condition name="OpResurrection" />
 		</conditions>
 		<effects>
@@ -1423,9 +1364,6 @@
 		<trait>ETC</trait>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="OpNeedAgathion" />
-		</conditions>
 		<effects>
 			<effect name="VitalityPointsRate">
 				<amount>-10</amount>
@@ -1454,9 +1392,6 @@
 		<trait>ETC</trait>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="OpNeedAgathion" />
-		</conditions>
 		<effects>
 			<effect name="VitalityPointsRate">
 				<amount>-10</amount>
@@ -1481,9 +1416,6 @@
 		<irreplacableBuff>true</irreplacableBuff>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="OpNeedAgathion" />
-		</conditions>
 		<effects>
 			<effect name="Speed">
 				<amount>20</amount>
@@ -1558,9 +1490,6 @@
 		<irreplacableBuff>true</irreplacableBuff>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="OpNeedAgathion" />
-		</conditions>
 		<effects>
 			<effect name="DefenceTrait">
 				<HOLD>50</HOLD>
@@ -1809,9 +1738,6 @@
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
-		<conditions>
-			<condition name="OpNeedAgathion" />
-		</conditions>
 		<effects>
 			<effect name="MaxHp">
 				<amount>60</amount>
@@ -1884,9 +1810,6 @@
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
-		<conditions>
-			<condition name="OpNeedAgathion" />
-		</conditions>
 		<effects>
 			<effect name="MaxHp">
 				<amount>40</amount>
@@ -1966,9 +1889,6 @@
 		<irreplacableBuff>true</irreplacableBuff>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="OpNeedAgathion" />
-		</conditions>
 		<effects>
 			<effect name="PAtk">
 				<amount>10</amount>
@@ -2025,9 +1945,6 @@
 		<irreplacableBuff>true</irreplacableBuff>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="OpNeedAgathion" />
-		</conditions>
 		<effects>
 			<effect name="MAtk">
 				<amount>20</amount>
@@ -2084,9 +2001,6 @@
 		<irreplacableBuff>true</irreplacableBuff>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="OpNeedAgathion" />
-		</conditions>
 		<effects>
 			<effect name="MaxHp">
 				<amount>20</amount>
@@ -2143,9 +2057,6 @@
 		<irreplacableBuff>true</irreplacableBuff>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="OpNeedAgathion" />
-		</conditions>
 		<effects>
 			<effect name="MAtk">
 				<amount>20</amount>
@@ -2202,9 +2113,6 @@
 		<irreplacableBuff>true</irreplacableBuff>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="OpNeedAgathion" />
-		</conditions>
 		<effects>
 			<effect name="PAtk">
 				<amount>10</amount>
@@ -2261,9 +2169,6 @@
 		<irreplacableBuff>true</irreplacableBuff>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="OpNeedAgathion" />
-		</conditions>
 		<effects>
 			<effect name="MaxHp">
 				<amount>20</amount>

@@ -271,9 +271,6 @@
 		<hitTime>4000</hitTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="OpNeedAgathion" />
-		</conditions>
 	</skill>
 	<skill id="23119" toLevel="1" name="Bluebird Agathion Cute Trick">
 		<!-- See the summoned spirit perform cute tricks. -->
@@ -374,9 +371,6 @@
 		<staticReuse>true</staticReuse>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="OpNeedAgathion" />
-		</conditions>
 	</skill>
 	<skill id="23125" toLevel="1" name="Gwanseum Nyang Nyang Agathion Cute Trick">
 		<!-- See the summoned spirit perform cute tricks. -->
@@ -404,9 +398,6 @@
 		<castRange>600</castRange>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="OpNeedAgathion" />
-		</conditions>
 	</skill>
 	<skill id="23127" toLevel="1" name="Blue Opera Agathion Cute Trick">
 		<!-- See the summoned spirit perform cute tricks. -->
@@ -435,9 +426,6 @@
 		<castRange>600</castRange>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="OpNeedAgathion" />
-		</conditions>
 	</skill>
 	<skill id="23129" toLevel="1" name="Blue Opera Agathion Special Skill: Sword of Water">
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -448,9 +436,6 @@
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="OpNeedAgathion" />
-		</conditions>
 	</skill>
 	<skill id="23130" toLevel="1" name="Red Opera Agathion Cute Trick">
 		<!-- See the summoned spirit perform cute tricks. -->
@@ -476,9 +461,6 @@
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="OpNeedAgathion" />
-		</conditions>
 	</skill>
 	<skill id="23132" toLevel="1" name="Opera Agathion Cute Trick">
 		<!-- See the summoned spirit perform cute tricks. -->
@@ -529,9 +511,6 @@
 		<irreplacableBuff>true</irreplacableBuff>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="OpNeedAgathion" />
-		</conditions>
 		<effects>
 			<effect name="WeightPenalty">
 				<amount>9000</amount>
@@ -574,9 +553,6 @@
 		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="OpNeedAgathion" />
-		</conditions>
 		<effects>
 			<effect name="PhysicalAttackSpeed">
 				<amount>33</amount>
@@ -620,9 +596,6 @@
 		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="OpNeedAgathion" />
-		</conditions>
 		<effects>
 			<effect name="MagicalAttackSpeed">
 				<amount>30</amount>
@@ -667,9 +640,6 @@
 		<trait>ETC</trait>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="OpNeedAgathion" />
-		</conditions>
 		<effects>
 			<effect name="Speed">
 				<amount>20</amount>
@@ -876,9 +846,6 @@
 		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="OpNeedAgathion" />
-		</conditions>
 	</skill>
 	<skill id="23154" toLevel="1" name="Kadomas Special Skill: Fireworks">
 		<!-- Shoots flames up. -->
@@ -1321,7 +1288,6 @@
 		<targetType>PC_BODY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
-			<condition name="OpNeedAgathion" />
 			<condition name="OpResurrection" />
 		</conditions>
 	</skill>
@@ -1570,7 +1536,6 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
-			<condition name="OpNeedAgathion" />
 			<condition name="RemainHpPer">
 				<amount>30</amount>
 				<percentType>LESS</percentType>
@@ -1620,9 +1585,6 @@
 		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="OpNeedAgathion" />
-		</conditions>
 		<effects>
 			<effect name="DispelByCategory">
 				<slot>DEBUFF</slot>
@@ -1654,9 +1616,6 @@
 		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="OpNeedAgathion" />
-		</conditions>
 		<effects>
 			<effect name="ResurrectionSpecial">
 				<power>100</power>
@@ -1842,9 +1801,6 @@
 		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="OpNeedAgathion" />
-		</conditions>
 		<effects>
 			<effect name="Speed">
 				<amount>20</amount>

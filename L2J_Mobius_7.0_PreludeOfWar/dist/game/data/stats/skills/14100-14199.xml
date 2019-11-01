@@ -122,9 +122,6 @@
 		<reuseDelay>1800000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="OpNeedAgathion" />
-		</conditions>
 		<effects>
 			<effect name="Teleport">
 				<x>207528</x>
@@ -2642,7 +2639,6 @@
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="OpCanEscape" />
-			<condition name="OpNeedAgathion" />
 		</conditions>
 		<effects>
 			<effect name="Teleport">
