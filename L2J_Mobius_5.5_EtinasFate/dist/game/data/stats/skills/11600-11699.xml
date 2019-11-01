@@ -376,6 +376,12 @@
 				<amount>20</amount>
 				<attribute>DARK</attribute>
 			</effect>
+			<effect name="DefenceCriticalDamage" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">
+				<amount>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">{-1 - (subIndex - 1 * 0.5)}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="11606" toLevel="1" name="Sword Waltz">
