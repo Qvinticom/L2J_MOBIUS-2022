@@ -141,11 +141,12 @@
 	<skill id="30501" toLevel="27" name="Backspin Blow">
 		<!-- Attacks target with $s1 Power added to P. Atk. Ignores $s2 of target's P. Def. Requires a fist weapon. -->
 		<icon>icon.skill30501</icon>
-		<abnormalTime>9</abnormalTime>
+		<abnormalTime>3</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<activateRate>60</activateRate>
 		<trait>SHOCK</trait>
-		<castRange>40</castRange>
+		<castRange>600</castRange>
 		<coolTime>500</coolTime>
 		<effectPoint>-687</effectPoint>
 		<effectRange>600</effectRange>
@@ -210,6 +211,7 @@
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
 		<reuseDelay>5000</reuseDelay>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -606,8 +608,8 @@
 		<icon>icon.skill30506</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2</abnormalTime>
-		<abnormalType>STUN</abnormalType>
-		<abnormalVisualEffect>KNOCKBACK</abnormalVisualEffect>
+		<abnormalType>KNOCKDOWN</abnormalType>
+		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
 		<activateRate>
 			<value fromLevel="1" toLevel="14">80</value>
 			<value fromLevel="10" toLevel="14" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
@@ -658,7 +660,7 @@
 		<affectScope>FAN</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<isDebuff>true</isDebuff>
-		<trait>KNOCKBACK</trait>
+		<trait>KNOCKDOWN</trait>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -688,9 +690,9 @@
 				<criticalChance>15</criticalChance> <!-- Unconfirmed -->
 			</effect>
 			<effect name="KnockBack">
-				<type>THROW_UP</type>
+				<speed>400</speed>
 				<distance>100</distance>
-				<animationSpeed>0</animationSpeed>
+				<knockDown>true</knockDown>
 			</effect>
 			<effect name="PhysicalDefence" fromLevel="10" toLevel="14" fromSubLevel="3001" toSubLevel="3020">
 				<amount>
@@ -867,7 +869,7 @@
 		</conditions>
 		<effects>
 			<effect name="TargetCancel">
-				<chance>90</chance>
+				<chance>100</chance>
 			</effect>
 		</effects>
 		<selfEffects>
@@ -880,6 +882,10 @@
 					<value level="4">4</value>
 					<value level="5">5</value>
 				</skillLevel>
+			</effect>
+			<effect name="CallSkill">
+				<skillId>30533</skillId> <!-- Backside Purge -->
+				<skillLevel>1</skillLevel>
 			</effect>
 		</selfEffects>
 	</skill>
@@ -926,6 +932,8 @@
 			<value level="3">45</value>
 			<value level="4">45</value>
 			<value level="5">45</value>
+			<value level="6">45</value>
+			<value level="7">45</value>
 		</mpConsume>
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
@@ -1132,6 +1140,9 @@
 					<value level="3">70</value>
 				</amount>
 				<mode>DIFF</mode>
+			</effect>
+			<effect name="AbnormalShield">
+				<times>1</times>
 			</effect>
 		</effects>
 	</skill>
@@ -1677,6 +1688,13 @@
 	<skill id="30531" toLevel="1" name="Servitor's Rage">
 		<icon>icon.skill11351</icon>
 		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<isDebuff>true</isDebuff>
+		<castRange>1100</castRange>
+		<hitTime>500</hitTime>
+		<coolTime>100</coolTime>
+		<reuseDelay>3000</reuseDelay>
+		<effectPoint>-671</effectPoint>
 	</skill>
 	<skill id="30532" toLevel="3" name="Inside Position">
 		<!-- P. Critical Rate +$s1, P. Skill Critical Rate +$s2. -->
@@ -1695,6 +1713,34 @@
 		<effectPoint>2</effectPoint>
 		<isMagic>4</isMagic>
 		<effects>
+			<effect name="TriggerSkillBySkill">
+				<skillId>30532</skillId> <!-- Inside Position -->
+				<skillLevel>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">0</value>
+				</skillLevel>
+				<castSkillId>30507</castSkillId> <!-- Left Sidestep -->
+				<targetType>SELF</targetType>
+			</effect>
+			<effect name="TriggerSkillBySkill">
+				<skillId>30532</skillId> <!-- Inside Position -->
+				<skillLevel>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">0</value>
+				</skillLevel>
+				<castSkillId>30508</castSkillId> <!-- Right Sidestep -->
+				<targetType>SELF</targetType>
+			</effect>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">10</value>
+					<value level="3">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 			<effect name="CriticalRate">
 				<amount>
 					<value level="1">10</value>
@@ -1723,19 +1769,48 @@
 	</skill>
 	<skill id="30533" toLevel="1" name="Backside Purge">
 		<icon>icon.skill30509</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
+		<effectPoint>2</effectPoint>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<abnormalType>ABNORMAL_INVINCIBILITY</abnormalType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<effects>
+			<effect name="DispelByCategory">
+				<slot>DEBUFF</slot>
+				<rate>100</rate>
+				<max>10</max>
+			</effect>
+			<effect name="DebuffBlock"/>
+		</effects>
 	</skill>
 	<skill id="30534" toLevel="1" name="Transform Puppy 1">
 		<icon>icon.skilltransform1</icon>
 		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<hitTime>2500</hitTime>
+		<reuseDelay>14400000</reuseDelay>
+		<effectPoint>1</effectPoint>
+		<mpConsume>44</mpConsume>
 	</skill>
 	<skill id="30535" toLevel="1" name="Transform Puppy 2">
 		<icon>icon.skilltransform1</icon>
 		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<hitTime>2500</hitTime>
+		<reuseDelay>14400000</reuseDelay>
+		<effectPoint>1</effectPoint>
+		<mpConsume>44</mpConsume>
 	</skill>
 	<skill id="30536" toLevel="1" name="Transform Puppy 3">
 		<icon>icon.skilltransform1</icon>
 		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<hitTime>2500</hitTime>
+		<reuseDelay>14400000</reuseDelay>
+		<effectPoint>1</effectPoint>
+		<mpConsume>44</mpConsume>
 	</skill>
 	<skill id="30540" toLevel="17" name="Eminent Fist Weapon Mastery">
 		<!-- When equipped with a fist weapon, P. Atk. +$s1 and +$s2. -->

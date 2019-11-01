@@ -1320,6 +1320,9 @@
 		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="EquipShield" />
+		</conditions>
 		<effects>
 			<effect name="MagicalDefence">
 				<amount>

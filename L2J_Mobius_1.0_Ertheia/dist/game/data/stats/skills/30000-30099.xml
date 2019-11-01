@@ -475,7 +475,6 @@
 			<value level="10">145</value>
 			<value level="11">147</value>
 		</mpConsume>
-		<castRange>60</castRange>
 		<effectPoint>-687</effectPoint>
 		<hitTime>1800</hitTime>
 		<coolTime>500</coolTime>
@@ -1067,6 +1066,7 @@
 				<KNOCKBACK>90</KNOCKBACK>
 				<HATE>90</HATE>
 				<PULL>90</PULL>
+				<ZONE>90</ZONE>
 				<AIRBIND>90</AIRBIND>
 				<AGGRESSION>90</AGGRESSION>
 			</effect>
@@ -1474,7 +1474,7 @@
 		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>30000</reuseDelay>
-		<isMagic>7</isMagic>
+		<isMagic>1</isMagic>
 		<isDebuff>true</isDebuff>
 		<conditions>
 			<condition name="EquipWeapon">
@@ -1954,6 +1954,10 @@
 					<value level="1">0</value>
 					<value level="2">30</value>
 				</PULL>
+				<ZONE>
+					<value level="1">0</value>
+					<value level="2">30</value>
+				</ZONE>
 				<HATE>
 					<value level="1">0</value>
 					<value level="2">30</value>

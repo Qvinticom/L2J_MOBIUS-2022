@@ -1333,6 +1333,11 @@
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
+			<effect name="Blink">
+				<!-- Teleport to Front -->
+				<angle>180</angle>
+				<range>250</range>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="10518" toLevel="1" name="Assassin's Reflex">
@@ -2072,7 +2077,10 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="PhysicalSkillPower">
-				<amount>10</amount>
+				<amount>
+					<value level="1">10</value>
+					<value level="2">15</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="Accuracy">
@@ -2084,7 +2092,10 @@
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="AbnormalShield">
-				<times>5</times>
+				<times>
+					<value level="1">5</value>
+					<value level="2">7</value>
+				</times>
 			</effect>
 			<effect name="PAtk" fromLevel="1" toLevel="2" fromSubLevel="2001" toSubLevel="2020">
 				<amount>

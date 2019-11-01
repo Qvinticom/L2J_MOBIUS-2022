@@ -1105,7 +1105,7 @@
 		<affectLimit>5-12</affectLimit>
 		<affectRange>300</affectRange>
 		<activateRate>
-			<value fromLevel="1" toLevel="13">130</value>
+			<value fromLevel="1" toLevel="13">60</value>
 			<value fromLevel="7" toLevel="13" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<effectPoint>

@@ -141,10 +141,15 @@
 	<skill id="30501" toLevel="27" name="Backspin Blow">
 		<!-- Attacks target with $s1 Power added to P. Atk. Ignores $s2 of target's P. Def. Requires a fist weapon. -->
 		<icon>icon.skill30501</icon>
-		<castRange>40</castRange>
+		<abnormalTime>3</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<activateRate>60</activateRate>
+		<trait>SHOCK</trait>
+		<castRange>600</castRange>
 		<coolTime>500</coolTime>
 		<effectPoint>-687</effectPoint>
-		<effectRange>400</effectRange>
+		<effectRange>600</effectRange>
 		<hitTime>1000</hitTime>
 		<magicLvl>
 			<value level="1">20</value>
@@ -206,6 +211,7 @@
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
 		<reuseDelay>5000</reuseDelay>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -254,6 +260,9 @@
 					<value fromLevel="1" toLevel="27">15</value>
 					<value fromLevel="23" toLevel="27" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
 				</criticalChance>
+			</effect>
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
@@ -599,8 +608,8 @@
 		<icon>icon.skill30506</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2</abnormalTime>
-		<abnormalType>STUN</abnormalType>
-		<abnormalVisualEffect>KNOCKBACK</abnormalVisualEffect>
+		<abnormalType>KNOCKDOWN</abnormalType>
+		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
 		<activateRate>
 			<value fromLevel="1" toLevel="14">80</value>
 			<value fromLevel="10" toLevel="14" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
@@ -651,7 +660,7 @@
 		<affectScope>FAN</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<isDebuff>true</isDebuff>
-		<trait>KNOCKBACK</trait>
+		<trait>KNOCKDOWN</trait>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -681,9 +690,9 @@
 				<criticalChance>15</criticalChance> <!-- Unconfirmed -->
 			</effect>
 			<effect name="KnockBack">
-				<type>THROW_UP</type>
+				<speed>400</speed>
 				<distance>100</distance>
-				<animationSpeed>0</animationSpeed>
+				<knockDown>true</knockDown>
 			</effect>
 			<effect name="PhysicalDefence" fromLevel="10" toLevel="14" fromSubLevel="3001" toSubLevel="3030">
 				<amount>
@@ -860,7 +869,7 @@
 		</conditions>
 		<effects>
 			<effect name="TargetCancel">
-				<chance>90</chance>
+				<chance>100</chance>
 			</effect>
 		</effects>
 		<selfEffects>
@@ -873,6 +882,10 @@
 					<value level="4">4</value>
 					<value level="5">5</value>
 				</skillLevel>
+			</effect>
+			<effect name="CallSkill">
+				<skillId>30533</skillId> <!-- Backside Purge -->
+				<skillLevel>1</skillLevel>
 			</effect>
 		</selfEffects>
 	</skill>
@@ -1112,6 +1125,9 @@
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
+			<effect name="AbnormalShield">
+				<times>1</times>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="30515" toLevel="1" name="Spallation">
@@ -1143,6 +1159,10 @@
 		<effects>
 			<effect name="SphericBarrier">
 				<amount>150</amount>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>50</amount>
+				<mode>PER</mode>
 			</effect>
 			<effect name="Speed" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">
 				<amount>
@@ -1278,7 +1298,7 @@
 			<value level="10">1568</value>
 			<value level="11">1580</value>
 		</mpConsume>
-		<hitTime>2500</hitTime>
+		<hitTime>3000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>30000</reuseDelay>
 		<isMagic>6</isMagic>

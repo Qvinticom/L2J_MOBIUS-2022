@@ -1139,6 +1139,10 @@
 					<value fromLevel="7" toLevel="11" fromSubLevel="1020" toSubLevel="1020">{base + base / 100 * (8 + 0.1 * (subIndex - 19))}</value>
 				</power>
 			</effect>
+			<effect name="CallSkill">
+				<skillId>11139</skillId> <!-- Ignite -->
+				<skillLevel>1</skillLevel>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="11019" toLevel="11" name="Elemental Crash (Water)">
@@ -1228,6 +1232,10 @@
 					<value fromLevel="7" toLevel="11" fromSubLevel="1019" toSubLevel="1019">{base + base / 100 * (7 + 0.7 * (subIndex - 18))}</value>
 					<value fromLevel="7" toLevel="11" fromSubLevel="1020" toSubLevel="1020">{base + base / 100 * (8 + 0.1 * (subIndex - 19))}</value>
 				</power>
+			</effect>
+			<effect name="CallSkill">
+				<skillId>11141</skillId> <!-- Freezing Slow -->
+				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
@@ -1408,6 +1416,10 @@
 					<value fromLevel="7" toLevel="11" fromSubLevel="1019" toSubLevel="1019">{base + base / 100 * (7 + 0.7 * (subIndex - 18))}</value>
 					<value fromLevel="7" toLevel="11" fromSubLevel="1020" toSubLevel="1020">{base + base / 100 * (8 + 0.1 * (subIndex - 19))}</value>
 				</power>
+			</effect>
+			<effect name="CallSkill">
+				<skillId>11141</skillId> <!-- Freezing Slow -->
+				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
@@ -1623,6 +1635,7 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SQUARE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
+		<affectRange>1100</affectRange>
 		<fanRange>0;0;1100;50</fanRange> <!-- Guessed -->
 		<affectLimit>5-12</affectLimit>
 		<reuseDelayGroup>11023</reuseDelayGroup>
@@ -4559,7 +4572,7 @@
 			<value level="1">692</value>
 			<value level="2">700</value>
 			<value level="3">707</value>
-			<value level="4">707</value>
+			<value level="4">714</value>
 		</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>

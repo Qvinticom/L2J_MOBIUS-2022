@@ -708,7 +708,6 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<affectRange>1000</affectRange>
-		<staticReuse>true</staticReuse>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<affectObject>FRIEND</affectObject>
@@ -756,14 +755,8 @@
 					<value fromLevel="1" toLevel="1" fromSubLevel="1020" toSubLevel="1020">4504</value>
 				</power>
 			</effect>
+			<effect name="TrackLimitedSkill" />
 		</effects>
-		<endEffects>
-			<effect name="CallSkill">
-				<!-- Lingering Protection -->
-				<skillId>11833</skillId> <!-- Lingering Protection -->
-				<skillLevel>1</skillLevel>
-			</effect>
-		</endEffects>
 	</skill>
 	<skill id="11759" toLevel="1" name="Celestial Party Protection">
 		<!-- Renders all party members invincible for 10 seconds. -->
@@ -782,7 +775,6 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>87</magicLvl>
 		<affectRange>1000</affectRange>
-		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
@@ -825,14 +817,8 @@
 					<value fromLevel="1" toLevel="1" fromSubLevel="1020" toSubLevel="1020">4504</value>
 				</power>
 			</effect>
+			<effect name="TrackLimitedSkill" />
 		</effects>
-		<endEffects>
-			<effect name="CallSkill">
-				<!-- Lingering Protection -->
-				<skillId>11834</skillId> <!-- Lingering Protection -->
-				<skillLevel>1</skillLevel>
-			</effect>
-		</endEffects>
 	</skill>
 	<skill id="11760" toLevel="11" name="Radiant Recharge">
 		<!-- Instantly recovers target's MP with a maximum of $s1 Power depending on target's level. Also, for $s2, recovers $s3 MP per second. Ineffective on classes that have the Recharge skill. -->
@@ -1233,7 +1219,6 @@
 		<operateType>A2</operateType>
 		<hitTime>500</hitTime>
 		<reuseDelay>300000</reuseDelay>
-		<staticReuse>true</staticReuse>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">90</value>
@@ -1747,8 +1732,7 @@
 		<hitTime>4000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>600000</reuseDelay>
-		<staticReuse>true</staticReuse>
-		<isMagic>2</isMagic>
+		<isMagic>1</isMagic>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">90</value>
@@ -2476,7 +2460,6 @@
 		<reuseDelay>600000</reuseDelay>
 		<isMagic>4</isMagic>
 		<magicCriticalRate>5</magicCriticalRate>
-		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>
 			<value level="1">DEAD_PARTY</value>
@@ -2575,6 +2558,10 @@
 					<value level="10">9.4</value>
 				</amount>
 				<mode>DIFF</mode>
+				<armorType>
+					<item>LIGHT</item>
+					<item>MAGIC</item>
+				</armorType>
 			</effect>
 			<effect name="MpRegen">
 				<amount>
@@ -2590,6 +2577,10 @@
 					<value level="10">10.2</value>
 				</amount>
 				<mode>DIFF</mode>
+				<armorType>
+					<item>LIGHT</item>
+					<item>MAGIC</item>
+				</armorType>
 			</effect>
 			<effect name="StatUp">
 				<amount>2</amount>
@@ -2794,7 +2785,7 @@
 		<effects>
 			<effect name="MpRegen">
 				<amount>20</amount>
-				<mode>DIFF</mode>
+				<mode>PER</mode>
 				<armorType>
 					<item>SIGIL</item>
 				</armorType>

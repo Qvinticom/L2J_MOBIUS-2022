@@ -2270,6 +2270,11 @@
 		<castRange>400</castRange>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<reuseDelay>
+			<value level="1">30000</value>
+			<value level="2">10000</value>
+			<value level="3">5000</value>
+		</reuseDelay>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -2291,8 +2296,8 @@
 				<maxAttackerLevel>127</maxAttackerLevel>
 				<chance>
 					<value level="1">30</value>
-					<value level="2">20</value>
-					<value level="3">0</value>
+					<value level="2">10</value>
+					<value level="3">5</value>
 				</chance>
 				<targetType>SELF</targetType>
 				<minDamage>1</minDamage>
