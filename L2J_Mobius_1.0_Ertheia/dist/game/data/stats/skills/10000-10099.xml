@@ -1200,9 +1200,7 @@
 	<skill id="10016" toLevel="9" name="Chain Hydra">
 		<!-- Pulls target and nearby enemies to make them attack you. Requires a shield. -->
 		<icon>icon.skill10016</icon>
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>1</abnormalTime>
-		<abnormalType>STUN</abnormalType>
+		<operateType>A1</operateType>
 		<affectRange>200</affectRange>
 		<activateRate>
 			<value fromLevel="1" toLevel="9">150</value>
@@ -1220,7 +1218,6 @@
 			<value level="8">103</value>
 			<value level="9">105</value>
 		</magicLvl>
-		<operateType>A2</operateType>
 		<mpConsume>
 			<value level="1">123</value>
 			<value level="2">127</value>
@@ -1253,14 +1250,18 @@
 		<basicProperty>PHYSICAL</basicProperty>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>PULL</trait>
-		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
+		<nextAction>ATTACK</nextAction>
 		<conditions>
 			<condition name="EquipShield" />
 		</conditions>
 		<effects>
+			<effect name="AirBind" />
+			<effect name="Bluff">
+				<chance>100</chance>
+			</effect>
 			<effect name="PullBack">
 				<speed>600</speed>
 				<delay>650</delay>
