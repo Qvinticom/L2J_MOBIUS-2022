@@ -45,6 +45,8 @@ import org.l2jmobius.gameserver.network.clientpackets.attendance.RequestVipAtten
 import org.l2jmobius.gameserver.network.clientpackets.attributechange.RequestChangeAttributeCancel;
 import org.l2jmobius.gameserver.network.clientpackets.attributechange.RequestChangeAttributeItem;
 import org.l2jmobius.gameserver.network.clientpackets.attributechange.SendChangeAttributeTargetItem;
+import org.l2jmobius.gameserver.network.clientpackets.autoplay.ExAutoPlaySetting;
+import org.l2jmobius.gameserver.network.clientpackets.autoplay.ExRequestActivateAutoShortcut;
 import org.l2jmobius.gameserver.network.clientpackets.awakening.RequestCallToChangeClass;
 import org.l2jmobius.gameserver.network.clientpackets.ceremonyofchaos.RequestCancelCuriousHouse;
 import org.l2jmobius.gameserver.network.clientpackets.ceremonyofchaos.RequestCuriousHouseHtml;
@@ -476,7 +478,7 @@ public enum ExIncomingPackets implements IIncomingPackets<GameClient>
 	UNK_16E(0x16E, null, ConnectionState.IN_GAME), // 228
 	UNK_16F(0x16F, null, ConnectionState.IN_GAME), // 228
 	UNK_170(0x170, null, ConnectionState.IN_GAME), // 228
-	EX_REQUEST_AUTO_SUPPLY_SETTING(0x171, null, ConnectionState.IN_GAME), // 228
+	EX_ACTIVATE_AUTO_SHORTCUT(0x171, ExRequestActivateAutoShortcut::new, ConnectionState.IN_GAME), // 228
 	UNK_172(0x172, null, ConnectionState.IN_GAME), // 228
 	UNK_173(0x173, null, ConnectionState.IN_GAME), // 228
 	UNK_174(0x174, null, ConnectionState.IN_GAME), // 228
