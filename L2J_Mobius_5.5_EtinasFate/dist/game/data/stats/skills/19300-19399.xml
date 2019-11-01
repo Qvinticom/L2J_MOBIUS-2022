@@ -619,8 +619,8 @@
 				<attribute>HOLY</attribute>
 			</effect>
 			<effect name="CallSkill">
-				<skillId>19404</skillId> <!-- Fire Attribute -->
-				<skillLevel>5</skillLevel>
+				<skillId>19404</skillId>
+				<skillLevel>5</skillLevel> <!-- Holy Attribute -->
 			</effect>
 		</effects>
 	</skill>
@@ -644,8 +644,8 @@
 				<attribute>DARK</attribute>
 			</effect>
 			<effect name="CallSkill">
-				<skillId>19404</skillId> <!-- Fire Attribute -->
-				<skillLevel>6</skillLevel>
+				<skillId>19404</skillId>
+				<skillLevel>6</skillLevel> <!-- Dark Attribute -->
 			</effect>
 		</effects>
 	</skill>
@@ -706,7 +706,7 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<attributeType>DARK</attributeType>
-		<attributeValue>20</attributeValue>
+		<attributeValue>100</attributeValue>
 		<effects>
 			<effect name="MagicalAttack">
 				<power>
@@ -801,7 +801,7 @@
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
 		<attributeType>DARK</attributeType>
-		<attributeValue>10</attributeValue>
+		<attributeValue>100</attributeValue>
 		<operateType>A1</operateType>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>RANGE</affectScope>

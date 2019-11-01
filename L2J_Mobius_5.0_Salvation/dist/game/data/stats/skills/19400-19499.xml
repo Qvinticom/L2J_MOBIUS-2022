@@ -505,7 +505,7 @@
 		<abnormalTime>4</abnormalTime>
 		<abnormalType>FREEZE</abnormalType>
 		<abnormalVisualEffect>FROZEN_PILLAR</abnormalVisualEffect>
-		<activateRate>20</activateRate> <!-- Guessed -->
+		<activateRate>80</activateRate>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">90</value>
@@ -520,7 +520,7 @@
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<affectLimit>5-12</affectLimit>
-		<affectRange>60</affectRange>
+		<affectRange>40</affectRange>
 		<trait>PARALYZE</trait>
 		<isMagic>1</isMagic>
 		<isDebuff>true</isDebuff>
@@ -1979,7 +1979,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19444" toLevel="1" name="War Drumb">
+	<skill id="19444" toLevel="1" name="War Drum">
 		<!-- For 150 seconds, party members' Max HP +30%, P. Atk. +30%, M. Atk. +33%, and magic cancel rate -40. A chance to apply 8% Vampiric Rage effect. -->
 		<icon>icon.skill19444</icon>
 		<abnormalType>BUFF_SPECIAL_AURA</abnormalType>
@@ -2133,12 +2133,19 @@
 		<!-- For $s1, P. Atk. and M. Atk. +$s2. Canceled if Prophecy of Might is cast. -->
 		<icon>icon.skill11866</icon>
 		<operateType>A2</operateType>
-		<reuseDelay>3000</reuseDelay>
+		<reuseDelay>
+			<value level="1">600000</value>
+			<value level="2">3000</value>
+		</reuseDelay>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
 		</abnormalLvl>
-		<abnormalType>PD_UP_DMAGIC</abnormalType> <!-- NOT RETAIL: FIXME -->
+		<abnormalTime>
+			<value level="1">300</value>
+			<value level="2">1</value>		
+		</abnormalTime>
+		<abnormalType>PD_UP_DMAGIC</abnormalType>
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<effectPoint>707</effectPoint>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -2149,12 +2156,21 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="PAtk">
-				<amount>15</amount>
+				<amount>
+					<value level="1">20</value>
+					<value level="2">0</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MAtk">
-				<amount>15</amount>
+				<amount>
+					<value level="1">20</value>
+					<value level="2">0</value>
+				</amount>
 				<mode>PER</mode>
+			</effect>
+			<effect name="ReuseSkillById" fromLevel="1" toLevel="1">
+				<skillId>19204</skillId>
 			</effect>
 			<effect name="TriggerSkillBySkill">
 				<castSkillId>19204</castSkillId>
@@ -2168,8 +2184,10 @@
 	<skill id="19448" toLevel="11" name="Rampageous Beat">
 		<!-- Attacks the target with $s1 Power added to P. Atk. and resets the durations of nearby allies' War/ Marching/ Relax buffs with a certain probability. Requires a sword, blunt, dual sword, or dual blunt to be equipped. Over-hit. Critical. -->
 		<icon>icon.skill11511</icon>
+		<operateType>A1</operateType>
+		<coolTime>500</coolTime>
+		<reuseDelay>7000</reuseDelay>
 		<castRange>40</castRange>
-		<effectRange>400</effectRange>
 		<hitTime>1410</hitTime>
 		<magicLvl>
 			<value level="1">85</value>
@@ -2197,10 +2215,6 @@
 			<value level="10">168</value>
 			<value level="11">172</value>
 		</mpConsume>
-		<nextAction>ATTACK</nextAction>
-		<operateType>A1</operateType>
-		<coolTime>500</coolTime>
-		<reuseDelay>7000</reuseDelay>
 		<effectPoint>
 			<value level="1">-692</value>
 			<value level="2">-696</value>
@@ -2214,14 +2228,10 @@
 			<value level="10">-712</value>
 			<value level="11">-712</value>
 		</effectPoint>
+		<effectRange>400</effectRange>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<effectRange>400</effectRange>
 		<nextAction>ATTACK</nextAction>
-		<operateType>A1</operateType>
-		<coolTime>500</coolTime>
-		<reuseDelay>7000</reuseDelay>
-		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>

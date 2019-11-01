@@ -523,7 +523,7 @@
 		<abnormalTime>4</abnormalTime>
 		<abnormalType>FREEZE</abnormalType>
 		<abnormalVisualEffect>FROZEN_PILLAR</abnormalVisualEffect>
-		<activateRate>20</activateRate> <!-- Guessed -->
+		<activateRate>80</activateRate>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">90</value>
@@ -540,7 +540,7 @@
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<affectLimit>5-12</affectLimit>
-		<affectRange>60</affectRange>
+		<affectRange>40</affectRange>
 		<trait>PARALYZE</trait>
 		<isMagic>1</isMagic>
 		<isDebuff>true</isDebuff>
@@ -904,7 +904,7 @@
 		<effectPoint>566</effectPoint>
 		<effectRange>900</effectRange>
 		<attributeType>HOLY</attributeType>
-		<attributeValue>20</attributeValue>
+		<attributeValue>100</attributeValue>
 		<hitTime>1000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
@@ -2240,7 +2240,7 @@
 			<value level="1">300</value>
 			<value level="2">1</value>		
 		</abnormalTime>
-		<abnormalType>PD_UP_DMAGIC</abnormalType> <!-- NOT RETAIL: FIXME -->
+		<abnormalType>PD_UP_DMAGIC</abnormalType>
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<effectPoint>707</effectPoint>
 		<magicCriticalRate>-5</magicCriticalRate>

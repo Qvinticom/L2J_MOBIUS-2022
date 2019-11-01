@@ -99,8 +99,8 @@
 		<activateRate>80</activateRate> <!-- Guessed -->
 		<reuseDelayGroup>11106</reuseDelayGroup>
 		<operateType>A1</operateType>
-		<targetType>ENEMY</targetType>
-		<affectScope>RANGE</affectScope>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>RING_RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -201,10 +201,10 @@
 		<icon>icon.skill11865</icon>
 		<reuseDelayGroup>11106</reuseDelayGroup>
 		<attributeType>FIRE</attributeType>
-		<attributeValue>20</attributeValue>
+		<attributeValue>100</attributeValue>
 		<operateType>A1</operateType>
-		<targetType>ENEMY</targetType>
-		<affectScope>RANGE</affectScope>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>RING_RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -288,10 +288,10 @@
 		<icon>icon.skill11865</icon>
 		<reuseDelayGroup>11106</reuseDelayGroup>
 		<attributeType>WATER</attributeType>
-		<attributeValue>20</attributeValue>
+		<attributeValue>100</attributeValue>
 		<operateType>A1</operateType>
-		<targetType>ENEMY</targetType>
-		<affectScope>RANGE</affectScope>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>RING_RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -398,10 +398,10 @@
 		<icon>icon.skill11865</icon>
 		<reuseDelayGroup>11106</reuseDelayGroup>
 		<attributeType>WIND</attributeType>
-		<attributeValue>20</attributeValue>
+		<attributeValue>100</attributeValue>
 		<operateType>A1</operateType>
-		<targetType>ENEMY</targetType>
-		<affectScope>RANGE</affectScope>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>RING_RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -507,10 +507,10 @@
 		<icon>icon.skill11865</icon>
 		<reuseDelayGroup>11106</reuseDelayGroup>
 		<attributeType>EARTH</attributeType>
-		<attributeValue>20</attributeValue>
+		<attributeValue>100</attributeValue>
 		<operateType>A1</operateType>
-		<targetType>ENEMY</targetType>
-		<affectScope>RANGE</affectScope>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>RING_RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -626,11 +626,11 @@
 		<activateRate>80</activateRate> <!-- Guessed -->
 		<reuseDelayGroup>11106</reuseDelayGroup>
 		<attributeType>DARK</attributeType>
-		<attributeValue>20</attributeValue>
+		<attributeValue>100</attributeValue>
 		<operateType>A1</operateType>
 		<reuseDelay>6700</reuseDelay>
-		<targetType>ENEMY</targetType>
-		<affectScope>RANGE</affectScope>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>RING_RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -713,8 +713,8 @@
 		<attachToggleGroupId>1</attachToggleGroupId>
 		<reuseDelayGroup>11112</reuseDelayGroup>
 		<operateType>A1</operateType>
-		<targetType>ENEMY</targetType>
-		<affectScope>RANGE</affectScope>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>RING_RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -802,10 +802,10 @@
 		<icon>icon.skill11865</icon>
 		<reuseDelayGroup>11112</reuseDelayGroup>
 		<attributeType>HOLY</attributeType>
-		<attributeValue>20</attributeValue> <!-- Holy -->
+		<attributeValue>100</attributeValue> <!-- Holy -->
 		<operateType>A1</operateType>
-		<targetType>ENEMY</targetType>
-		<affectScope>RANGE</affectScope>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>RING_RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -911,10 +911,10 @@
 		<icon>icon.skill11865</icon>
 		<reuseDelayGroup>11112</reuseDelayGroup>
 		<attributeType>WATER</attributeType>
-		<attributeValue>20</attributeValue> <!-- Water -->
+		<attributeValue>100</attributeValue> <!-- Water -->
 		<operateType>A1</operateType>
-		<targetType>ENEMY</targetType>
-		<affectScope>RANGE</affectScope>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>RING_RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -1022,7 +1022,7 @@
 		<reuseDelayGroup>11115</reuseDelayGroup>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
-		<affectScope>RANGE</affectScope>
+		<affectScope>RING_RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -1110,10 +1110,10 @@
 		<icon>icon.skill11865</icon>
 		<reuseDelayGroup>11115</reuseDelayGroup>
 		<attributeType>FIRE</attributeType>
-		<attributeValue>20</attributeValue> <!-- Fire -->
+		<attributeValue>100</attributeValue> <!-- Fire -->
 		<operateType>A1</operateType>
-		<targetType>ENEMY</targetType>
-		<affectScope>RANGE</affectScope>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>RING_RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -1196,10 +1196,10 @@
 		<icon>icon.skill11865</icon>
 		<reuseDelayGroup>11115</reuseDelayGroup>
 		<attributeType>DARK</attributeType>
-		<attributeValue>20</attributeValue> <!-- Dark -->
+		<attributeValue>100</attributeValue> <!-- Dark -->
 		<operateType>A1</operateType>
-		<targetType>ENEMY</targetType>
-		<affectScope>RANGE</affectScope>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>RING_RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -1283,8 +1283,8 @@
 		<reuseDelayGroup>11118</reuseDelayGroup>
 		<operateType>A1</operateType>
 		<reuseDelay>6700</reuseDelay>
-		<targetType>ENEMY</targetType>
-		<affectScope>RANGE</affectScope>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>RING_RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -1371,10 +1371,10 @@
 		<icon>icon.skill11865</icon>
 		<reuseDelayGroup>11118</reuseDelayGroup>
 		<attributeType>WIND</attributeType>
-		<attributeValue>20</attributeValue> <!-- Wind -->
+		<attributeValue>100</attributeValue> <!-- Wind -->
 		<operateType>A1</operateType>
-		<targetType>ENEMY</targetType>
-		<affectScope>RANGE</affectScope>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>RING_RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -1480,11 +1480,11 @@
 		<icon>icon.skill11865</icon>
 		<reuseDelayGroup>11118</reuseDelayGroup>
 		<attributeType>DARK</attributeType> <!-- Dark -->
-		<attributeValue>20</attributeValue>
+		<attributeValue>100</attributeValue>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
-		<targetType>ENEMY</targetType>
-		<affectScope>RANGE</affectScope>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>RING_RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -1567,8 +1567,8 @@
 		<attachToggleGroupId>1</attachToggleGroupId>
 		<reuseDelayGroup>11121</reuseDelayGroup>
 		<operateType>A1</operateType>
-		<targetType>ENEMY</targetType>
-		<affectScope>RANGE</affectScope>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>RING_RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -1656,10 +1656,10 @@
 		<icon>icon.skill11865</icon>
 		<reuseDelayGroup>11121</reuseDelayGroup>
 		<attributeType>EARTH</attributeType> <!-- Earth -->
-		<attributeValue>20</attributeValue>
+		<attributeValue>100</attributeValue>
 		<operateType>A1</operateType>
-		<targetType>ENEMY</targetType>
-		<affectScope>RANGE</affectScope>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>RING_RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -1765,10 +1765,10 @@
 		<icon>icon.skill11865</icon>
 		<reuseDelayGroup>11121</reuseDelayGroup>
 		<attributeType>DARK</attributeType> <!-- Dark -->
-		<attributeValue>20</attributeValue>
+		<attributeValue>100</attributeValue>
 		<operateType>A1</operateType>
-		<targetType>ENEMY</targetType>
-		<affectScope>RANGE</affectScope>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>RING_RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -1927,7 +1927,7 @@
 		<activateRate>80</activateRate> <!-- Guessed -->
 		<basicProperty>MAGIC</basicProperty> <!-- Guessed -->
 		<attributeType>FIRE</attributeType>
-		<attributeValue>20</attributeValue>
+		<attributeValue>100</attributeValue>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1965,7 +1965,7 @@
 			<value level="3">icon.skill0000</value>
 		</icon>
 		<attributeType>DARK</attributeType>
-		<attributeValue>20</attributeValue>
+		<attributeValue>100</attributeValue>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2003,7 +2003,7 @@
 		<activateRate>80</activateRate> <!-- Guessed -->
 		<basicProperty>MAGIC</basicProperty> <!-- Guessed -->
 		<attributeType>WATER</attributeType>
-		<attributeValue>20</attributeValue>
+		<attributeValue>100</attributeValue>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2043,7 +2043,7 @@
 		<activateRate>80</activateRate> <!-- Guessed -->
 		<basicProperty>MAGIC</basicProperty> <!-- Guessed -->
 		<attributeType>WIND</attributeType>
-		<attributeValue>20</attributeValue>
+		<attributeValue>100</attributeValue>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2225,8 +2225,8 @@
 		<channelingTickInterval>2</channelingTickInterval>
 		<effectPoint>-676</effectPoint>
 		<attributeType>FIRE</attributeType>
-		<attributeValue>20</attributeValue>
-		<hitTime>15000</hitTime>
+		<attributeValue>100</attributeValue>
+		<hitTime>12000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>5</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
@@ -2235,7 +2235,7 @@
 		<mpInitialConsume>52</mpInitialConsume>
 		<mpPerChanneling>80</mpPerChanneling>
 		<operateType>CA1</operateType>
-		<reuseDelay>1800000</reuseDelay>
+		<reuseDelay>120000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>4</hitCancelTime>
@@ -2277,7 +2277,7 @@
 		<channelingTickInterval>1</channelingTickInterval>
 		<channelingStart>2</channelingStart>
 		<attributeType>DARK</attributeType>
-		<attributeValue>20</attributeValue>
+		<attributeValue>100</attributeValue>
 		<itemConsumeCount>5</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<operateType>CA1</operateType>
@@ -2319,7 +2319,7 @@
 		<channelingTickInterval>1</channelingTickInterval>
 		<channelingStart>2</channelingStart>
 		<attributeType>WATER</attributeType>
-		<attributeValue>20</attributeValue>
+		<attributeValue>100</attributeValue>
 		<itemConsumeCount>5</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<operateType>CA1</operateType>
@@ -2368,7 +2368,7 @@
 		<channelingTickInterval>1</channelingTickInterval>
 		<channelingStart>2</channelingStart>
 		<attributeType>WIND</attributeType>
-		<attributeValue>20</attributeValue>
+		<attributeValue>100</attributeValue>
 		<itemConsumeCount>5</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<operateType>CA1</operateType>
@@ -2457,7 +2457,7 @@
 		<activateRate>80</activateRate>
 		<basicProperty>MAGIC</basicProperty> <!-- Guessed -->
 		<attributeType>FIRE</attributeType>
-		<attributeValue>20</attributeValue>
+		<attributeValue>100</attributeValue>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2495,7 +2495,7 @@
 		<activateRate>80</activateRate> <!-- Guessed -->
 		<basicProperty>MAGIC</basicProperty> <!-- Guessed -->
 		<attributeType>DARK</attributeType>
-		<attributeValue>20</attributeValue>
+		<attributeValue>100</attributeValue>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2536,7 +2536,7 @@
 		<activateRate>80</activateRate>
 		<basicProperty>MAGIC</basicProperty> <!-- Guessed -->
 		<attributeType>WATER</attributeType>
-		<attributeValue>20</attributeValue>
+		<attributeValue>100</attributeValue>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2644,24 +2644,30 @@
 			<value level="5">5</value>
 		</abnormalLvl>
 		<abnormalTime>5</abnormalTime> <!-- Guessed -->
-		<abnormalType>SPEED_DOWN</abnormalType>
+		<abnormalType>AIRBIND</abnormalType>
 		<abnormalVisualEffect>
 			<value level="1">TORNADO_SLOW</value>
-			<value level="2">TORNADO_SLOW</value>
-			<value level="3">TORNADO_SLOW</value>
-			<value level="4">TORNADO_SLOW</value>
-			<value level="5">TORNADO</value>
+			<value level="2">TORNADO_SLOW;AIRBIND</value>
+			<value level="3">TORNADO_SLOW;AIRBIND</value>
+			<value level="4">TORNADO_SLOW;AIRBIND</value>
+			<value level="5">TORNADO;AIRBIND</value>
 		</abnormalVisualEffect>
-		<activateRate>80</activateRate>
+		<activateRate>30</activateRate>
 		<basicProperty>MAGIC</basicProperty> <!-- Guessed -->
 		<attributeType>WIND</attributeType>
-		<attributeValue>20</attributeValue>
+		<attributeValue>100</attributeValue>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<isMagic>4</isMagic>
 		<isDebuff>true</isDebuff>
+		<trait>AIRBIND</trait>
 		<effects>
+			<effect name="AirBind" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
+			<effect name="BlockControl" />
 			<effect name="Speed">
 				<amount>
 					<value level="1">-10</value>
@@ -2728,10 +2734,11 @@
 	<skill id="11150" toLevel="11" name="Elemental Crash (Dark)">
 		<!-- Deals M. Atk. of $s1 power added with attribute damage on the target and decreases M. Defense by $s2. -->
 		<icon>icon.skill11018</icon>
+		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>MD_DOWN_AWAKEN</abnormalType>
 		<attributeType>DARK</attributeType>
-		<attributeValue>20</attributeValue>
+		<attributeValue>100</attributeValue>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2971,7 +2978,7 @@
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
-		<affectScope>RANGE</affectScope>
+		<affectScope>RING_RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -3028,7 +3035,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<activateRate>100</activateRate>
+		<activateRate>90</activateRate>
 		<magicLvl>97</magicLvl>
 		<trait>SHOCK</trait>
 		<isMagic>2</isMagic>
@@ -3047,7 +3054,7 @@
 	<skill id="11175" toLevel="6" name="Shadow Snare Zone">
 		<operateType>A2</operateType>
 		<abnormalLvl>5</abnormalLvl>
-		<abnormalTime>1</abnormalTime>
+		<abnormalTime>7</abnormalTime>
 		<abnormalType>COMBINATION</abnormalType>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>300</affectRange>
@@ -3055,7 +3062,7 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<activateRate>100</activateRate>
+		<activateRate>90</activateRate>
 		<magicLvl>97</magicLvl>
 		<trait>SHOCK</trait>
 		<isMagic>2</isMagic>
@@ -3129,7 +3136,7 @@
 		<reuseDelayGroup>11177</reuseDelayGroup>
 		<allStanceSkillId>11189</allStanceSkillId> <!-- Double Casting skill Id -->
 		<attributeType>WATER</attributeType>
-		<attributeValue>20</attributeValue>
+		<attributeValue>100</attributeValue>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3597,7 +3604,7 @@
 		<icon>icon.skill10879</icon>
 		<reuseDelayGroup>11177</reuseDelayGroup>
 		<attributeType>WATER</attributeType>
-		<attributeValue>20</attributeValue>
+		<attributeValue>100</attributeValue>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">90</value>

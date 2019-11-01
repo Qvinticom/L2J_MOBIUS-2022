@@ -1242,8 +1242,8 @@
 		<reuseDelay>10000</reuseDelay>
 		<isMagic>1</isMagic>
 		<isDebuff>true</isDebuff>
-		<targetType>ENEMY</targetType>
-		<affectScope>SINGLE</affectScope>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>RANGE</affectScope>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>

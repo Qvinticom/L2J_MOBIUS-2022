@@ -651,39 +651,85 @@
 			<condition name="OpHaveSummon" />
 		</conditions>
 		<effects>
-			<!-- Pvp FIXME -->
-			<effect name="PvpPhysicalAttackDamageBonus">
+		<!-- FIX ME: EFFECT NOT REALIZED -->
+			<effect name="AttackAttributeAdd">
+				<amount>450</amount>
+			</effect>
+			<effect name="MaxHp">
+				<amount>25</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>25</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>25</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>25</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>25</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>25</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>25</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>25</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>25</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalSkillPower">
+				<amount>25</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
 				<amount>15</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpMagicalSkillDamageBonus">
+			<effect name="SkillCriticalDamage">
 				<amount>15</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpPhysicalSkillDamageBonus">
+			<effect name="MagicCriticalDamage">
 				<amount>15</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="DamageByAttack">
-				<amount>-5</amount>
-				<type>PK</type>
+			<effect name="DefenceAttribute">
+				<amount>300</amount>
+				<attribute>FIRE</attribute>
 			</effect>
-			<!-- Pve FIXME -->
-			<effect name="PveMagicalSkillDamageBonus">
-				<amount>15</amount>
-				<mode>PER</mode>
+			<effect name="DefenceAttribute">
+				<amount>300</amount>
+				<attribute>WATER</attribute>
 			</effect>
-			<effect name="PvePhysicalAttackDamageBonus">
-				<amount>15</amount>
-				<mode>PER</mode>
+			<effect name="DefenceAttribute">
+				<amount>300</amount>
+				<attribute>WIND</attribute>
 			</effect>
-			<effect name="PvePhysicalSkillDamageBonus">
-				<amount>15</amount>
-				<mode>PER</mode>
+			<effect name="DefenceAttribute">
+				<amount>300</amount>
+				<attribute>EARTH</attribute>
 			</effect>
-			<effect name="DamageByAttack">
-				<amount>-5</amount>
-				<type>ENEMY_ALL</type>
+			<effect name="DefenceAttribute">
+				<amount>300</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>300</amount>
+				<attribute>DARK</attribute>
 			</effect>
 		</effects>
 	</skill>

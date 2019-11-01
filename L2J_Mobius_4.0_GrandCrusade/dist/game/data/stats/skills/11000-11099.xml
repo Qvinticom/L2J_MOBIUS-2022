@@ -468,7 +468,7 @@
 		<!-- Deals M. Attack of $s1 power added with attribute damage on the target and decreases the corresponding attribute defense. Over-hit is possible. -->
 		<icon>icon.skill11011</icon>
 		<attributeType>FIRE</attributeType>
-		<attributeValue>20</attributeValue>
+		<attributeValue>100</attributeValue>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -562,7 +562,7 @@
 		<!-- Deals M. Attack of $s1 power added with attribute damage on the target and decreases the corresponding attribute defense. Over-hit is possible. -->
 		<icon>icon.skill11011</icon>
 		<attributeType>WATER</attributeType>
-		<attributeValue>20</attributeValue>
+		<attributeValue>100</attributeValue>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -656,7 +656,7 @@
 		<!-- Deals M. Attack of $s1 power added with attribute damage on the target and decreases the corresponding attribute defense. Over-hit is possible. -->
 		<icon>icon.skill11011</icon>
 		<attributeType>WIND</attributeType>
-		<attributeValue>20</attributeValue>
+		<attributeValue>100</attributeValue>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -750,7 +750,7 @@
 		<!-- Deals M. Attack of $s1 power added with attribute damage on the target and decreases the corresponding attribute defense. Over-hit is possible. -->
 		<icon>icon.skill11011</icon>
 		<attributeType>EARTH</attributeType>
-		<attributeValue>20</attributeValue>
+		<attributeValue>100</attributeValue>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -843,6 +843,8 @@
 	<skill id="11016" toLevel="11" name="Elemental Spike (Holy)">
 		<!-- Deals M. Attack of $s1 power added with attribute damage on the target and decreases the corresponding attribute defense. Over-hit is possible. -->
 		<icon>icon.skill11011</icon>
+		<attributeType>HOLY</attributeType>
+		<attributeValue>100</attributeValue>
 		<operateType>A1</operateType>
 		<reuseDelayGroup>11011</reuseDelayGroup>
 		<magicLvl>
@@ -896,8 +898,6 @@
 		<isMagic>1</isMagic>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<attributeType>HOLY</attributeType>
-		<attributeValue>20</attributeValue>
 		<effects>
 			<effect name="CallSkill">
 				<skillId>11081</skillId> <!-- Holy Attribute -->
@@ -1055,7 +1055,7 @@
 		<!-- Deals M. Attack of $s1 power added with attribute damage on the target and inflicts Ignite. Over-hit is possible. -->
 		<icon>icon.skill11018</icon>
 		<attributeType>FIRE</attributeType>
-		<attributeValue>20</attributeValue>
+		<attributeValue>100</attributeValue>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1145,7 +1145,7 @@
 		<!-- Deals M. Attack of $s1 power added with attribute damage on the target and inflicts Slow. Overlapped Slow effects result in Frozen. Over-hit is possible. -->
 		<icon>icon.skill11018</icon>
 		<attributeType>WATER</attributeType>
-		<attributeValue>20</attributeValue>
+		<attributeValue>100</attributeValue>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1235,7 +1235,7 @@
 		<!-- Deals M. Attack of $s1 power added with attribute damage on the target and pushes it. Over-hit is possible. -->
 		<icon>icon.skill11018</icon>
 		<attributeType>WIND</attributeType>
-		<attributeValue>20</attributeValue>
+		<attributeValue>100</attributeValue>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1325,7 +1325,7 @@
 		<!-- Deals M. Attack of $s1 power added with attribute damage on the target and inflicts Hold. Over-hit is possible. -->
 		<icon>icon.skill11018</icon>
 		<attributeType>EARTH</attributeType>
-		<attributeValue>20</attributeValue>
+		<attributeValue>100</attributeValue>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1414,6 +1414,8 @@
 	<skill id="11022" toLevel="11" name="Elemental Crash (Holy)">
 		<!-- Deals M. Attack of $s1 power added with attribute damage on the target and inflicts Stun. Over-hit is possible. -->
 		<icon>icon.skill11018</icon>
+		<attributeType>HOLY</attributeType>
+		<attributeValue>100</attributeValue>
 		<operateType>A1</operateType>
 		<reuseDelayGroup>11017</reuseDelayGroup>
 		<magicLvl>
@@ -1468,8 +1470,6 @@
 		<isMagic>1</isMagic>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<attributeType>HOLY</attributeType>
-		<attributeValue>20</attributeValue>
 		<effects>
 			<effect name="MagicalAttack">
 				<power>
@@ -1618,7 +1618,7 @@
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>BODY_DESTRUCTION</abnormalType>
 		<attributeType>FIRE</attributeType>
-		<attributeValue>20</attributeValue>
+		<attributeValue>100</attributeValue>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SQUARE</affectScope>
@@ -1726,7 +1726,7 @@
 		<abnormalType>BODY_DESTRUCTION</abnormalType>
 		<abnormalVisualEffect>ICE_ELEMENTALDESTROY</abnormalVisualEffect>
 		<attributeType>WATER</attributeType>
-		<attributeValue>20</attributeValue>
+		<attributeValue>100</attributeValue>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1833,12 +1833,12 @@
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>BODY_DESTRUCTION</abnormalType>
 		<attributeType>WIND</attributeType>
-		<attributeValue>20</attributeValue>
+		<attributeValue>100</attributeValue>
 		<operateType>A2</operateType>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
 		<targetType>ENEMY</targetType>
-		<affectScope>RANGE</affectScope>
+		<affectScope>RING_RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<reuseDelayGroup>11023</reuseDelayGroup>
 		<magicLvl>
@@ -1935,7 +1935,7 @@
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>BODY_DESTRUCTION</abnormalType>
 		<attributeType>EARTH</attributeType>
-		<attributeValue>20</attributeValue>
+		<attributeValue>100</attributeValue>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2058,7 +2058,7 @@
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>BODY_DESTRUCTION</abnormalType>
 		<attributeType>DARK</attributeType>
-		<attributeValue>20</attributeValue>
+		<attributeValue>100</attributeValue>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2245,7 +2245,7 @@
 			<value level="1">-696</value>
 			<value level="2">-704</value>
 			<value level="3">-709</value>
-			<value level="4">-709</value>
+			<value level="4">-714</value>
 		</effectPoint>
 		<magicCriticalRate>
 			<value fromLevel="1" toLevel="4">5</value>
@@ -2460,8 +2460,8 @@
 				<skillId>11038</skillId> <!-- Elemental Blast (Earth) -->
 			</item>
 		</attachSkillList>
-		<targetType>ENEMY</targetType>
-		<affectScope>RANGE</affectScope>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>RING_RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="MagicalAttack">
@@ -2499,10 +2499,10 @@
 		<affectLimit>5-12</affectLimit>
 		<affectRange>100</affectRange>
 		<attributeType>FIRE</attributeType>
-		<attributeValue>10</attributeValue>
+		<attributeValue>100</attributeValue>
 		<operateType>A1</operateType>
 		<targetType>ENEMY_ONLY</targetType>
-		<affectScope>RANGE</affectScope>
+		<affectScope>RING_RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<reuseDelayGroup>11034</reuseDelayGroup>
 		<magicLvl>
@@ -2582,10 +2582,10 @@
 		<affectLimit>5-12</affectLimit>
 		<affectRange>100</affectRange>
 		<attributeType>WATER</attributeType>
-		<attributeValue>10</attributeValue>
+		<attributeValue>100</attributeValue>
 		<operateType>A1</operateType>
 		<targetType>ENEMY_ONLY</targetType>
-		<affectScope>RANGE</affectScope>
+		<affectScope>RING_RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<reuseDelayGroup>11034</reuseDelayGroup>
 		<magicLvl>
@@ -2665,10 +2665,10 @@
 		<affectLimit>5-12</affectLimit>
 		<affectRange>100</affectRange>
 		<attributeType>WIND</attributeType>
-		<attributeValue>10</attributeValue>
+		<attributeValue>100</attributeValue>
 		<operateType>A1</operateType>
 		<targetType>ENEMY_ONLY</targetType>
-		<affectScope>RANGE</affectScope>
+		<affectScope>RING_RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<reuseDelayGroup>11034</reuseDelayGroup>
 		<magicLvl>
@@ -2748,10 +2748,10 @@
 		<affectLimit>5-12</affectLimit>
 		<affectRange>100</affectRange>
 		<attributeType>EARTH</attributeType>
-		<attributeValue>10</attributeValue>
+		<attributeValue>100</attributeValue>
 		<operateType>A1</operateType>
 		<targetType>ENEMY_ONLY</targetType>
-		<affectScope>RANGE</affectScope>
+		<affectScope>RING_RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<reuseDelayGroup>11034</reuseDelayGroup>
 		<magicLvl>
@@ -2875,8 +2875,8 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<canDoubleCast>true</canDoubleCast>
 		<isDebuff>true</isDebuff>
-		<targetType>ENEMY</targetType>
-		<affectScope>RANGE</affectScope>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>RING_RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="MagicalAttack">
@@ -2915,6 +2915,9 @@
 		<affectRange>150</affectRange>
 		<attachToggleGroupId>1</attachToggleGroupId>
 		<operateType>A1</operateType>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>RING_RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<reuseDelayGroup>11040</reuseDelayGroup>
 		<doubleCastSkill>11045</doubleCastSkill>
 		<magicLvl>
@@ -2975,9 +2978,6 @@
 				<skillId>11044</skillId> <!-- Elemental Final Storm (Earth) -->
 			</item>
 		</attachSkillList>
-		<targetType>ENEMY</targetType>
-		<affectScope>RANGE</affectScope>
-		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="MagicalAttack">
 				<power>
@@ -3014,10 +3014,10 @@
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
 		<attributeType>FIRE</attributeType>
-		<attributeValue>10</attributeValue> <!-- TODO : Check me, Glory days says no attribute -->
+		<attributeValue>100</attributeValue>
 		<operateType>A1</operateType>
 		<targetType>ENEMY_ONLY</targetType>
-		<affectScope>RANGE</affectScope>
+		<affectScope>RING_RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<reuseDelayGroup>11040</reuseDelayGroup>
 		<magicLvl>
@@ -3097,10 +3097,10 @@
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
 		<attributeType>WATER</attributeType>
-		<attributeValue>10</attributeValue><!-- TODO : Check me, Glory days says no attribute -->
+		<attributeValue>100</attributeValue>
 		<operateType>A1</operateType>
 		<targetType>ENEMY_ONLY</targetType>
-		<affectScope>RANGE</affectScope>
+		<affectScope>RING_RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<reuseDelayGroup>11040</reuseDelayGroup>
 		<magicLvl>
@@ -3180,10 +3180,10 @@
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
 		<attributeType>WIND</attributeType>
-		<attributeValue>10</attributeValue><!-- TODO : Check me, Glory days says no attribute -->
+		<attributeValue>100</attributeValue>
 		<operateType>A1</operateType>
 		<targetType>ENEMY_ONLY</targetType>
-		<affectScope>RANGE</affectScope>
+		<affectScope>RING_RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<reuseDelayGroup>11040</reuseDelayGroup>
 		<magicLvl>
@@ -3263,10 +3263,10 @@
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
 		<attributeType>EARTH</attributeType>
-		<attributeValue>10</attributeValue><!-- TODO : Check me, Glory days says no attribute -->
+		<attributeValue>100</attributeValue>
 		<operateType>A1</operateType>
 		<targetType>ENEMY_ONLY</targetType>
-		<affectScope>RANGE</affectScope>
+		<affectScope>RING_RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<reuseDelayGroup>11040</reuseDelayGroup>
 		<magicLvl>
@@ -3345,7 +3345,12 @@
 		<icon>icon.skill11040</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
+		<attributeType>HOLY</attributeType>
+		<attributeValue>100</attributeValue>
 		<operateType>A1</operateType>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>RING_RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<reuseDelayGroup>11040</reuseDelayGroup>
 		<magicLvl>
 			<value level="1">85</value>
@@ -3389,9 +3394,6 @@
 		</magicCriticalRate>
 		<canDoubleCast>true</canDoubleCast>
 		<isDebuff>true</isDebuff>
-		<targetType>ENEMY</targetType>
-		<affectScope>RANGE</affectScope>
-		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="MagicalAttack">
 				<power>
@@ -4303,7 +4305,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY_ONLY</targetType>
-		<affectScope>RANGE</affectScope>
+		<affectScope>RING_RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="BlockControl" />
@@ -4487,14 +4489,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonNpc">
-				<npcId>
-					<value level="1">13323</value>
-					<value level="2">13324</value>
-					<value level="3">13325</value>
-					<value level="4">13458</value>
-					<value level="5">13459</value>
-					<value level="6">13460</value>
-				</npcId>
+				<npcId>13323</npcId>
 				<npcCount>1</npcCount>
 			</effect>
 		</effects>
@@ -4503,11 +4498,11 @@
 		<!-- Pulls the enemies near you to the center. -->
 		<icon>icon.skill1469</icon>
 		<abnormalTime>1</abnormalTime>
-		<abnormalLvl>5</abnormalLvl>
-		<abnormalType>STUN</abnormalType>
-		<activateRate>100</activateRate>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalType>DERANGEMENT</abnormalType>
+		<activateRate>50</activateRate>
 		<affectLimit>5-12</affectLimit>
-		<affectRange>300</affectRange>
+		<affectRange>200</affectRange>
 		<operateType>A2</operateType>
 		<trait>PULL</trait>
 		<effectPoint>-709</effectPoint>
@@ -4523,9 +4518,17 @@
 		<effects>
 			<effect name="PullBack">
 				<speed>600</speed>
+				<delay>650</delay>
 			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			<effect name="AddHate">
+				<power>
+					<value level="1">586900</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">693700</value>
+					<value level="5">693700</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="6">693700</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+				</power>
 			</effect>
 		</effects>
 	</skill>
@@ -4756,7 +4759,6 @@
 		<hitTime>6750</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>30000</reuseDelay>
-		<staticReuse>true</staticReuse>
 		<isMagic>1</isMagic>
 		<effectPoint>-704</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -4834,13 +4836,12 @@
 		<hitTime>10000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>30000</reuseDelay>
-		<staticReuse>true</staticReuse>
 		<isMagic>1</isMagic>
 		<effectPoint>-709</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
 		<isDebuff>true</isDebuff>
-		<targetType>ENEMY</targetType>
-		<affectScope>RANGE</affectScope>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>RING_RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<conditions>
 			<condition name="OpCheckAbnormal">
@@ -5147,7 +5148,7 @@
 		<activateRate>100</activateRate>
 		<basicProperty>NONE</basicProperty>
 		<attributeType>FIRE</attributeType>
-		<attributeValue>20</attributeValue>
+		<attributeValue>100</attributeValue>
 		<operateType>A4</operateType>
 		<isMagic>4</isMagic>
 		<abnormalType>MULTI_DEBUFF_FIRE</abnormalType>
@@ -5183,7 +5184,7 @@
 		<activateRate>100</activateRate>
 		<basicProperty>NONE</basicProperty>
 		<attributeType>WATER</attributeType>
-		<attributeValue>20</attributeValue>
+		<attributeValue>100</attributeValue>
 		<operateType>A4</operateType>
 		<isMagic>4</isMagic>
 		<abnormalType>MULTI_DEBUFF_WATER</abnormalType>
@@ -5219,7 +5220,7 @@
 		<activateRate>100</activateRate>
 		<basicProperty>NONE</basicProperty>
 		<attributeType>WIND</attributeType>
-		<attributeValue>20</attributeValue>
+		<attributeValue>100</attributeValue>
 		<operateType>A4</operateType>
 		<isMagic>4</isMagic>
 		<abnormalType>MULTI_DEBUFF_WIND</abnormalType>
