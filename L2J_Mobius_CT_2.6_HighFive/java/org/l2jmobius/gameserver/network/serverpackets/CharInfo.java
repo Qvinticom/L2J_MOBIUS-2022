@@ -21,6 +21,7 @@ import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2jmobius.gameserver.model.actor.Decoy;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.skills.AbnormalVisualEffect;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
@@ -29,6 +30,7 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 public class CharInfo implements IClientOutgoingPacket
 {
 	private final PlayerInstance _player;
+	private final Clan _clan;
 	private int _objId;
 	private int _x;
 	private int _y;
@@ -76,6 +78,7 @@ public class CharInfo implements IClientOutgoingPacket
 	{
 		_player = player;
 		_objId = player.getObjectId();
+		_clan = player.getClan();
 		if ((_player.getVehicle() != null) && (_player.getInVehiclePosition() != null))
 		{
 			_x = _player.getInVehiclePosition().getX();
@@ -234,7 +237,7 @@ public class CharInfo implements IClientOutgoingPacket
 		
 		packet.writeD(_player.isCursedWeaponEquipped() ? CursedWeaponsManager.getInstance().getLevel(_player.getCursedWeaponEquippedId()) : 0);
 		
-		packet.writeD(_player.getClanId() > 0 ? _player.getClan().getReputationScore() : 0);
+		packet.writeD(_clan != null ? _clan.getReputationScore() : 0);
 		
 		// T1
 		packet.writeD(_player.getTransformationDisplayId());
