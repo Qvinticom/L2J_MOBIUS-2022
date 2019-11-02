@@ -142,6 +142,8 @@ import quests.Q00562_BasicMissionAltarOfEvil.Q00562_BasicMissionAltarOfEvil;
 import quests.Q00563_BasicMissionBloodySwampland.Q00563_BasicMissionBloodySwampland;
 import quests.Q00564_BasicMissionKartiasLabyrinthSolo.Q00564_BasicMissionKartiasLabyrinthSolo;
 import quests.Q00565_BasicMissionFairySettlementWest.Q00565_BasicMissionFairySettlementWest;
+import quests.Q00566_BasicMissionFairySettlementEast.Q00566_BasicMissionFairySettlementEast;
+import quests.Q00567_BasicMissionIsleOfSouls.Q00567_BasicMissionIsleOfSouls;
 import quests.Q00580_BeyondTheMemories.Q00580_BeyondTheMemories;
 import quests.Q00581_ThePurificationRitual.Q00581_ThePurificationRitual;
 import quests.Q00582_WashBloodWithBlood.Q00582_WashBloodWithBlood;
@@ -602,8 +604,8 @@ public class QuestMasterHandler
 		Q00563_BasicMissionBloodySwampland.class,
 		Q00564_BasicMissionKartiasLabyrinthSolo.class,
 		Q00565_BasicMissionFairySettlementWest.class,
-		Q00566_BasicMissionFairySettlementEast.class, // TODO: Not done.
-		Q00567_BasicMissionIsleOfSouls.class, // TODO: Not done.
+		Q00566_BasicMissionFairySettlementEast.class,
+		Q00567_BasicMissionIsleOfSouls.class,
 		Q00568_SpecialMissionNornilsCave.class, // TODO: Not done.
 		Q00569_BasicMissionSealOfShilen.class, // TODO: Not done.
 		Q00570_SpecialMissionKartiasLabyrinthParty.class, // TODO: Not done.

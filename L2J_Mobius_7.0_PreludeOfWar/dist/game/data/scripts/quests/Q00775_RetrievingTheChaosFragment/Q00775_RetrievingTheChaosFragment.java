@@ -16,6 +16,7 @@
  */
 package quests.Q00775_RetrievingTheChaosFragment;
 
+import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.enums.Faction;
 import org.l2jmobius.gameserver.enums.QuestType;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -29,7 +30,7 @@ import quests.Q10455_ElikiasLetter.Q10455_ElikiasLetter;
 /**
  * Retrieving the Fragment of Chaos (775)
  * @URL https://l2wiki.com/Retrieving_the_Fragment_of_Chaos
- * @author Gigi
+ * @author Dmitri
  */
 public class Q00775_RetrievingTheChaosFragment extends Quest
 {
@@ -64,9 +65,8 @@ public class Q00775_RetrievingTheChaosFragment extends Quest
 	};
 	// Misc
 	private static final int MIN_LEVEL = 99;
-	// Item
+	// Items
 	private static final int CHAOS_FRAGMENT = 37766;
-	private static final int BASIC_SUPPLY_BOX = 47172;
 	private static final int INTERMEDIATE_SUPPLY_BOX = 47173;
 	private static final int ADVANCED_SUPPLY_BOX = 47174;
 	
@@ -84,52 +84,164 @@ public class Q00775_RetrievingTheChaosFragment extends Quest
 	@Override
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
+		String htmltext = null;
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
 		{
-			return null;
+			return htmltext;
 		}
 		
-		String htmltext = event;
 		switch (event)
 		{
-			case "31595-05.html":
+			case "31595-02.htm":
+			case "31595-03.htm":
+			case "31595-04.htm":
+			case "31595-04a.htm":
+			case "31595-04b.htm":
+			case "31595-06.html":
+			case "31595-06a.html":
+			case "31595-06b.html":
 			{
 				htmltext = event;
 				break;
 			}
-			case "31595-06.htm":
+			case "select_mission":
 			{
 				qs.startQuest();
-				break;
-			}
-			case "31595-03.html":
-			{
-				if (qs.isCond(2))
+				if ((player.getFactionLevel(Faction.BLACKBIRD_CLAN) >= 1) && (player.getFactionLevel(Faction.BLACKBIRD_CLAN) < 2))
 				{
-					final int factionLevel = player.getFactionLevel(Faction.BLACKBIRD_CLAN);
-					if (factionLevel == 0)
-					{
-						addFactionPoints(player, Faction.BLACKBIRD_CLAN, 100);
-						giveItems(player, BASIC_SUPPLY_BOX, 1);
-						addExpAndSp(player, 4522369500L, 10853640);
-					}
-					else if (factionLevel == 1)
-					{
-						addFactionPoints(player, Faction.BLACKBIRD_CLAN, 200);
-						giveItems(player, INTERMEDIATE_SUPPLY_BOX, 1);
-						addExpAndSp(player, 9044739000L, 21707280);
-					}
-					else if (factionLevel > 1)
-					{
-						addFactionPoints(player, Faction.BLACKBIRD_CLAN, 300);
-						giveItems(player, ADVANCED_SUPPLY_BOX, 1);
-						addExpAndSp(player, 13567108500L, 32560920);
-					}
-					qs.exitQuest(QuestType.DAILY, true);
-					htmltext = event;
+					htmltext = "31595-04a.htm";
 					break;
 				}
+				else if (player.getFactionLevel(Faction.BLACKBIRD_CLAN) >= 2)
+				{
+					htmltext = "31595-04b.htm";
+					break;
+				}
+				htmltext = "31595-04.htm";
+				break;
+			}
+			case "return":
+			{
+				if ((player.getFactionLevel(Faction.BLACKBIRD_CLAN) >= 1) && (player.getFactionLevel(Faction.BLACKBIRD_CLAN) < 2))
+				{
+					htmltext = "31595-04a.htm";
+					break;
+				}
+				else if (player.getFactionLevel(Faction.BLACKBIRD_CLAN) >= 2)
+				{
+					htmltext = "31595-04b.htm";
+					break;
+				}
+				htmltext = "31595-04.htm";
+				break;
+			}
+			case "31595-07.html":
+			{
+				qs.setCond(2, true);
+				htmltext = event;
+				break;
+			}
+			case "31595-07a.html":
+			{
+				qs.setCond(3, true);
+				htmltext = event;
+				break;
+			}
+			case "31595-07b.html":
+			{
+				qs.setCond(4, true);
+				htmltext = event;
+				break;
+			}
+			case "31595-10.html":
+			{
+				final int chance = getRandom(100);
+				switch (qs.getCond())
+				{
+					case 5:
+					{
+						if ((getQuestItemsCount(player, CHAOS_FRAGMENT) == 250) && (player.getLevel() >= MIN_LEVEL))
+						{
+							if (chance < 2)
+							{
+								giveItems(player, ADVANCED_SUPPLY_BOX, 1);
+							}
+							else if (chance < 20)
+							{
+								giveItems(player, INTERMEDIATE_SUPPLY_BOX, 1);
+							}
+							else if (chance < 100)
+							{
+								giveItems(player, CHAOS_FRAGMENT, 1);
+							}
+							addExpAndSp(player, 12_113_489_880L, 12_113_460);
+							addFactionPoints(player, Faction.BLACKBIRD_CLAN, 100);
+							qs.exitQuest(QuestType.DAILY, true);
+							htmltext = event;
+						}
+						else
+						{
+							htmltext = getNoQuestLevelRewardMsg(player);
+						}
+						break;
+					}
+					case 6:
+					{
+						if ((getQuestItemsCount(player, CHAOS_FRAGMENT) == 500) && (player.getLevel() >= MIN_LEVEL))
+						{
+							if (chance < 2)
+							{
+								giveItems(player, ADVANCED_SUPPLY_BOX, 1);
+							}
+							else if (chance < 20)
+							{
+								giveItems(player, CHAOS_FRAGMENT, 1);
+							}
+							else if (chance < 100)
+							{
+								giveItems(player, INTERMEDIATE_SUPPLY_BOX, 1);
+							}
+							addExpAndSp(player, 24_226_979_760L, 24_226_920);
+							addFactionPoints(player, Faction.BLACKBIRD_CLAN, 200);
+							qs.exitQuest(QuestType.DAILY, true);
+							htmltext = event;
+						}
+						else
+						{
+							htmltext = getNoQuestLevelRewardMsg(player);
+						}
+						break;
+					}
+					case 7:
+					{
+						if ((getQuestItemsCount(player, CHAOS_FRAGMENT) == 750) && (player.getLevel() >= MIN_LEVEL))
+						{
+							if (chance < 2)
+							{
+								giveItems(player, CHAOS_FRAGMENT, 1);
+							}
+							else if (chance < 20)
+							{
+								giveItems(player, INTERMEDIATE_SUPPLY_BOX, 1);
+							}
+							else if (chance < 100)
+							{
+								giveItems(player, ADVANCED_SUPPLY_BOX, 1);
+							}
+							addExpAndSp(player, 36_340_469_640L, 36_340_380);
+							addFactionPoints(player, Faction.BLACKBIRD_CLAN, 300);
+							qs.exitQuest(QuestType.DAILY, true);
+							htmltext = event;
+						}
+						else
+						{
+							htmltext = getNoQuestLevelRewardMsg(player);
+						}
+						break;
+					}
+				}
+				break;
 			}
 		}
 		return htmltext;
@@ -141,84 +253,113 @@ public class Q00775_RetrievingTheChaosFragment extends Quest
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
-		if (npc.getId() == LEONA_BLACKBIRD)
+		switch (qs.getState())
 		{
-			switch (qs.getState())
+			case State.CREATED:
 			{
-				case State.COMPLETED:
+				htmltext = "31595-01.htm";
+			}
+			case State.STARTED:
+			{
+				switch (qs.getCond())
 				{
-					if (!qs.isNowAvailable())
+					case 1:
+					{
+						if ((player.getFactionLevel(Faction.BLACKBIRD_CLAN) >= 1) && (player.getFactionLevel(Faction.BLACKBIRD_CLAN) < 2))
+						{
+							htmltext = "31595-04a.htm";
+							break;
+						}
+						else if (player.getFactionLevel(Faction.BLACKBIRD_CLAN) >= 2)
+						{
+							htmltext = "31595-04b.htm";
+							break;
+						}
+						htmltext = "31595-04.htm";
+						break;
+					}
+					case 2:
 					{
 						htmltext = "31595-08.html";
 						break;
 					}
-					qs.setState(State.CREATED);
-				}
-				case State.CREATED:
-				{
-					htmltext = "31595-01.htm";
-					break;
-				}
-				case State.STARTED:
-				{
-					if (qs.isCond(1))
+					case 3:
 					{
-						htmltext = "31595-07.html";
+						htmltext = "31595-08a.html";
+						break;
 					}
-					else if (qs.isCond(2))
+					case 4:
 					{
-						if (getQuestItemsCount(player, CHAOS_FRAGMENT) < 200)
-						{
-							htmltext = "31595-02.html";
-						}
-						else
-						{
-							htmltext = "31595-09.html";
-						}
+						htmltext = "31595-08b.html";
+						break;
 					}
-					break;
+					case 5:
+					case 6:
+					case 7:
+					{
+						htmltext = "31595-09.html";
+						break;
+					}
 				}
+				break;
 			}
-		}
-		else if (qs.isCompleted() && !qs.isNowAvailable())
-		{
-			htmltext = "31595-08.html";
+			case State.COMPLETED:
+			{
+				if (!qs.isNowAvailable())
+				{
+					htmltext = getAlreadyCompletedMsg(player, QuestType.DAILY);
+				}
+				else
+				{
+					qs.setState(State.CREATED);
+					htmltext = "31595-01.htm";
+				}
+				break;
+			}
 		}
 		return htmltext;
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{
-		final QuestState qs = getRandomPartyMemberState(killer, -1, 3, npc);
-		if ((qs != null) && qs.isCond(1))
+		executeForEachPlayer(player, npc, isSummon, true, false);
+		return super.onKill(npc, player, isSummon);
+	}
+	
+	@Override
+	public void actionForEachPlayer(PlayerInstance player, Npc npc, boolean isSummon)
+	{
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && (qs.getCond() > 1) && player.isInsideRadius3D(npc, Config.ALT_PARTY_RANGE))
 		{
-			final int factionLevel = killer.getFactionLevel(Faction.BLACKBIRD_CLAN);
-			if (factionLevel == 0)
+			switch (qs.getCond())
 			{
-				giveItems(killer, CHAOS_FRAGMENT, 1, true);
-				if (getQuestItemsCount(killer, CHAOS_FRAGMENT) >= 300)
+				case 2:
 				{
-					qs.setCond(2, true);
+					if (giveItemRandomly(player, npc, CHAOS_FRAGMENT, 1, 250, 1, true))
+					{
+						qs.setCond(5, true);
+					}
+					break;
 				}
-			}
-			else if (factionLevel == 1)
-			{
-				giveItems(killer, CHAOS_FRAGMENT, 1, true);
-				if (getQuestItemsCount(killer, CHAOS_FRAGMENT) >= 600)
+				case 3:
 				{
-					qs.setCond(2, true);
+					if (giveItemRandomly(player, npc, CHAOS_FRAGMENT, 1, 500, 1, true))
+					{
+						qs.setCond(6, true);
+					}
+					break;
 				}
-			}
-			else if (factionLevel > 1)
-			{
-				giveItems(killer, CHAOS_FRAGMENT, 1, true);
-				if (getQuestItemsCount(killer, CHAOS_FRAGMENT) >= 900)
+				case 4:
 				{
-					qs.setCond(2, true);
+					if (giveItemRandomly(player, npc, CHAOS_FRAGMENT, 1, 750, 1, true))
+					{
+						qs.setCond(7, true);
+					}
+					break;
 				}
 			}
 		}
-		return super.onKill(npc, killer, isSummon);
 	}
 }

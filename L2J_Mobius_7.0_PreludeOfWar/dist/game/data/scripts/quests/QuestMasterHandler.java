@@ -55,6 +55,7 @@ import quests.Q00551_OlympiadStarter.Q00551_OlympiadStarter;
 import quests.Q00553_OlympiadUndefeated.Q00553_OlympiadUndefeated;
 import quests.Q00561_BasicMissionHarnakUndergroundRuins.Q00561_BasicMissionHarnakUndergroundRuins;
 import quests.Q00564_BasicMissionKartiasLabyrinthSolo.Q00564_BasicMissionKartiasLabyrinthSolo;
+import quests.Q00567_BasicMissionIsleOfSouls.Q00567_BasicMissionIsleOfSouls;
 import quests.Q00580_BeyondTheMemories.Q00580_BeyondTheMemories;
 import quests.Q00618_IntoTheFlame.Q00618_IntoTheFlame;
 import quests.Q00620_FourGoblets.Q00620_FourGoblets;
@@ -225,7 +226,7 @@ public class QuestMasterHandler
 		Q00560_HowToOvercomeFear.class, // FIXME: Custom.
 		Q00561_BasicMissionHarnakUndergroundRuins.class,
 		Q00564_BasicMissionKartiasLabyrinthSolo.class,
-		Q00567_BasicMissionIsleOfSouls.class, // TODO: Not done.
+		Q00567_BasicMissionIsleOfSouls.class,
 		Q00568_SpecialMissionNornilsCave.class, // TODO: Not done.
 		Q00569_BasicMissionSealOfShilen.class, // TODO: Not done.
 		Q00570_SpecialMissionKartiasLabyrinthParty.class, // TODO: Not done.
