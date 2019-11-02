@@ -709,6 +709,11 @@ public class LoginServerThread extends Thread
 		}
 	}
 	
+	public int getServerStatus()
+	{
+		return _status;
+	}
+	
 	/**
 	 * Gets the status string.
 	 * @return the status string

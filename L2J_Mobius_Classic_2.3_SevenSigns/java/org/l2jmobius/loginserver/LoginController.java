@@ -46,7 +46,6 @@ import org.l2jmobius.commons.util.crypt.ScrambledKeyPair;
 import org.l2jmobius.loginserver.GameServerTable.GameServerInfo;
 import org.l2jmobius.loginserver.model.data.AccountInfo;
 import org.l2jmobius.loginserver.network.LoginClient;
-import org.l2jmobius.loginserver.network.gameserverpackets.ServerStatus;
 import org.l2jmobius.loginserver.network.serverpackets.LoginFail.LoginFailReason;
 
 public class LoginController
@@ -398,11 +397,9 @@ public class LoginController
 	public boolean isLoginPossible(LoginClient client, int serverId)
 	{
 		final GameServerInfo gsi = GameServerTable.getInstance().getRegisteredGameServerById(serverId);
-		final int access = client.getAccessLevel();
 		if ((gsi != null) && gsi.isAuthed())
 		{
-			final boolean loginOk = ((gsi.getCurrentPlayerCount() < gsi.getMaxPlayers()) && (gsi.getStatus() != ServerStatus.STATUS_GM_ONLY)) || (access > 0);
-			
+			final boolean loginOk = gsi.canLogin(client);
 			if (loginOk && (client.getLastServer() != serverId))
 			{
 				try (Connection con = DatabaseFactory.getConnection();

@@ -276,7 +276,7 @@ public class Shutdown extends Thread
 		}
 		else
 		{
-			LOGGER.warning("Server scheduled restart issued shutdown command. Restart in " + seconds + " seconds!");
+			LOGGER.warning("Server scheduled restart issued shutdown command. " + (restart ? "Restart" : "Shutdown") + " in " + seconds + " seconds!");
 		}
 		
 		if (_shutdownMode > 0)
@@ -359,100 +359,47 @@ public class Shutdown extends Thread
 		{
 			while (_secondsShut > 0)
 			{
+				// Rehabilitate previous server status if shutdown is aborted.
+				if (_shutdownMode == ABORT)
+				{
+					if (LoginServerThread.getInstance().getServerStatus() == ServerStatus.STATUS_DOWN)
+					{
+						LoginServerThread.getInstance().setServerStatus((Config.SERVER_GMONLY) ? ServerStatus.STATUS_GM_ONLY : ServerStatus.STATUS_AUTO);
+					}
+					break;
+				}
+				
 				switch (_secondsShut)
 				{
 					case 540:
-					{
-						SendServerQuit(540);
-						break;
-					}
 					case 480:
-					{
-						SendServerQuit(480);
-						break;
-					}
 					case 420:
-					{
-						SendServerQuit(420);
-						break;
-					}
 					case 360:
-					{
-						SendServerQuit(360);
-						break;
-					}
 					case 300:
-					{
-						SendServerQuit(300);
-						break;
-					}
 					case 240:
-					{
-						SendServerQuit(240);
-						break;
-					}
 					case 180:
-					{
-						SendServerQuit(180);
-						break;
-					}
 					case 120:
-					{
-						SendServerQuit(120);
-						break;
-					}
 					case 60:
-					{
-						LoginServerThread.getInstance().setServerStatus(ServerStatus.STATUS_DOWN); // avoids new players from logging in
-						SendServerQuit(60);
-						break;
-					}
 					case 30:
-					{
-						SendServerQuit(30);
-						break;
-					}
 					case 10:
-					{
-						SendServerQuit(10);
-						break;
-					}
 					case 5:
-					{
-						SendServerQuit(5);
-						break;
-					}
 					case 4:
-					{
-						SendServerQuit(4);
-						break;
-					}
 					case 3:
-					{
-						SendServerQuit(3);
-						break;
-					}
 					case 2:
-					{
-						SendServerQuit(2);
-						break;
-					}
 					case 1:
-					{
-						SendServerQuit(1);
-						break;
-					}
+						SendServerQuit(_secondsShut);
+				}
+				
+				// Prevent players from logging in.
+				if ((_secondsShut <= 60) && (LoginServerThread.getInstance().getServerStatus() != ServerStatus.STATUS_DOWN))
+				{
+					LoginServerThread.getInstance().setServerStatus(ServerStatus.STATUS_DOWN);
 				}
 				
 				_secondsShut--;
 				
 				final int delay = 1000; // milliseconds
 				Thread.sleep(delay);
-				
-				if (_shutdownMode == ABORT)
-				{
-					break;
-				}
 			}
 		}
 		catch (InterruptedException e)

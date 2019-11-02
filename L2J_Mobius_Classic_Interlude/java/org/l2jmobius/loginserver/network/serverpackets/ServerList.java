@@ -105,7 +105,7 @@ public class ServerList implements IOutgoingPacket
 			_ageLimit = 0;
 			_brackets = gsi.isShowingBrackets();
 			// If server GM-only - show status only to GMs
-			_status = gsi.getStatus() != ServerStatus.STATUS_GM_ONLY ? gsi.getStatus() : client.getAccessLevel() > 0 ? gsi.getStatus() : ServerStatus.STATUS_DOWN;
+			_status = (client.getAccessLevel() < 0) || ((gsi.getStatus() == ServerStatus.STATUS_GM_ONLY) && (client.getAccessLevel() <= 0)) ? ServerStatus.STATUS_DOWN : gsi.getStatus();
 			_serverId = gsi.getId();
 		}
 	}

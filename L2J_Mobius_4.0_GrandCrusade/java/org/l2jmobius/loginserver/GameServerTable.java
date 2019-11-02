@@ -39,6 +39,7 @@ import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.util.IPSubnet;
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.commons.util.Rnd;
+import org.l2jmobius.loginserver.network.LoginClient;
 import org.l2jmobius.loginserver.network.gameserverpackets.ServerStatus;
 
 /**
@@ -478,6 +479,24 @@ public class GameServerTable implements IXmlReader
 				return 0;
 			}
 			return _gst.getPlayerCount();
+		}
+		
+		public boolean canLogin(LoginClient client)
+		{
+			// DOWN status doesn't allow anyone to login.
+			if (_status == ServerStatus.STATUS_DOWN)
+			{
+				return false;
+			}
+			
+			// GM_ONLY status or full server only allows superior access levels accounts to login.
+			if ((_status == ServerStatus.STATUS_GM_ONLY) || (getCurrentPlayerCount() >= getMaxPlayers()))
+			{
+				return client.getAccessLevel() > 0;
+			}
+			
+			// Otherwise, any positive access level account can login.
+			return client.getAccessLevel() >= 0;
 		}
 		
 		/**
