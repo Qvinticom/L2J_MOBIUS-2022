@@ -155,6 +155,72 @@
 		<node X="108816" Y="-40776" />
 		<node X="107856" Y="-40652" />
 	</zone>
+		<zone name="24_24_fire_telezone_01" type="TeleportZone" shape="NPoly" minZ="-12150" maxZ="-12050"> <!-- 24_24 -->
+		<stat name="oustX" val="147444" />
+		<stat name="oustY" val="218208" />
+		<stat name="oustZ" val="-12117" />
+		<stat name="instanceId" val="164" />
+		<stat name="targetClass" val="PlayerInstance" />
+		<node X="147204" Y="218138" />
+		<node X="147200" Y="218279" />
+		<node X="147138" Y="218278" />
+		<node X="147133" Y="218135" />
+	</zone>
+		<zone name="24_24_fire_telezone_02" type="TeleportZone" shape="NPoly" minZ="-12150" maxZ="-12050"> <!-- 24_24 -->
+		<stat name="oustX" val="150143" />
+		<stat name="oustY" val="218205" />
+		<stat name="oustZ" val="-12121" />
+		<stat name="instanceId" val="164" />
+		<stat name="targetClass" val="PlayerInstance" />
+		<node X="149886" Y="218138" />
+		<node X="149884" Y="218278" />
+		<node X="149822" Y="218274" />
+		<node X="149833" Y="218135" />
+	</zone>
+	<zone name="24_24_fire_telezone_03" type="TeleportZone" shape="NPoly" minZ="-12150" maxZ="-12050"> <!-- 24_24 -->
+		<stat name="oustX" val="145610" />
+		<stat name="oustY" val="220065" />
+		<stat name="oustZ" val="-12106" />
+		<stat name="instanceId" val="164" />
+		<stat name="targetClass" val="PlayerInstance" />
+		<node X="152585" Y="218139" />
+		<node X="152579" Y="218276" />
+		<node X="152514" Y="218272" />
+		<node X="152521" Y="218134" />
+	</zone>
+	<zone name="24_24_fire_telezone_04" type="TeleportZone" shape="NPoly" minZ="-12150" maxZ="-12050"> <!-- 24_24 -->
+		<stat name="oustX" val="148309" />
+		<stat name="oustY" val="220064" />
+		<stat name="oustZ" val="-12118" />
+		<stat name="instanceId" val="164" />
+		<stat name="targetClass" val="PlayerInstance" />
+		<node X="148064" Y="219993" />
+		<node X="148061" Y="220133" />
+		<node X="147999" Y="220129" />
+		<node X="148007" Y="219994" />
+	</zone>
+	<zone name="24_24_fire_telezone_05" type="TeleportZone" shape="NPoly" minZ="-12150" maxZ="-12050"> <!-- 24_24 -->
+		<stat name="oustX" val="149761" />
+		<stat name="oustY" val="215582" />
+		<stat name="oustZ" val="-12104" />
+		<stat name="instanceId" val="164" />
+		<stat name="targetClass" val="PlayerInstance" />
+		<node X="150747" Y="219991" />
+		<node X="150748" Y="220132" />
+		<node X="150688" Y="220134" />
+		<node X="150697" Y="219994" />
+	</zone>
+		<zone name="24_24_fire_telezone_06" type="TeleportZone" shape="NPoly" minZ="-12150" maxZ="-12050"> <!-- 24_24 -->
+		<stat name="oustX" val="153400" />
+		<stat name="oustY" val="215138" />
+		<stat name="oustZ" val="-12102" />
+		<stat name="instanceId" val="164" />
+		<stat name="targetClass" val="PlayerInstance" />
+		<node X="152267" Y="215518" />
+		<node X="152258" Y="215654" />
+		<node X="152173" Y="215653" />
+		<node X="152180" Y="215514" />
+	</zone>
 	<zone name="26_20_orbis_enter" type="TeleportZone" shape="NPoly" minZ="-458" maxZ="-158">
 		<stat name="oustX" val="213983" />
 		<stat name="oustY" val="53250" />

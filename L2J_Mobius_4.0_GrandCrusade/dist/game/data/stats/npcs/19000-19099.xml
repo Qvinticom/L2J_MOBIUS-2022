@@ -366,7 +366,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="19013" level="96" type="Npc" name="Crystalline Golem">
+	<npc id="19013" level="96" type="FriendlyNpc" name="Crystalline Golem" usingServerSideTitle="true">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Link_Skill_01" id="14283" level="1" />
@@ -403,7 +403,7 @@
 			<height normal="47" />
 		</collision>
 	</npc>
-	<npc id="19014" level="96" type="Npc" name="Crystalline Golem">
+	<npc id="19014" level="96" type="FriendlyNpc" name="Crystalline Golem" usingServerSideTitle="true">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Link_Skill_01" id="14283" level="1" />
