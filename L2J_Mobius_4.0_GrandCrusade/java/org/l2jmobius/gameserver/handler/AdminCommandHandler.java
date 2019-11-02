@@ -18,6 +18,7 @@ package org.l2jmobius.gameserver.handler;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
@@ -129,7 +130,7 @@ public class AdminCommandHandler implements IHandler<IAdminCommandHandler, Strin
 				catch (RuntimeException e)
 				{
 					player.sendMessage("Exception during execution of  '" + fullCommand + "': " + e.toString());
-					LOGGER.warning("Exception during execution of " + fullCommand + " " + e);
+					LOGGER.log(Level.WARNING, "Exception during execution of " + fullCommand, e);
 				}
 				finally
 				{
