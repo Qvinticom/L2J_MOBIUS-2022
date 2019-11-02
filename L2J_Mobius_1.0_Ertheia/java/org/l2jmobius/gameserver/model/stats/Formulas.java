@@ -950,16 +950,6 @@ public class Formulas
 		{
 			return false;
 		}
-		// Static skills are not affected by Skill Mastery.
-		if (skill.isStatic())
-		{
-			return false;
-		}
-		// Item skills are not affected by Skill Mastery.
-		if (skill.getReferenceItemId() > 0)
-		{
-			return false;
-		}
 		
 		final int val = (int) actor.getStat().getAdd(Stats.SKILL_CRITICAL, -1);
 		if (val == -1)

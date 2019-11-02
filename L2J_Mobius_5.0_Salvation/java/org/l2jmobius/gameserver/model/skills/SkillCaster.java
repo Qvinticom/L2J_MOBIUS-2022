@@ -251,7 +251,8 @@ public class SkillCaster implements Runnable
 		int reuseDelay = caster.getStat().getReuseTime(_skill);
 		if (reuseDelay > 10)
 		{
-			if (Formulas.calcSkillMastery(caster, _skill))
+			// Skill mastery doesn't affect static skills / A2 and item skills on reuse.
+			if (Formulas.calcSkillMastery(caster, _skill) && !_skill.isStatic() && (_skill.getReferenceItemId() == 0) && (_skill.getOperateType() == SkillOperateType.A1))
 			{
 				reuseDelay = 100;
 				caster.sendPacket(SystemMessageId.A_SKILL_IS_READY_TO_BE_USED_AGAIN);
