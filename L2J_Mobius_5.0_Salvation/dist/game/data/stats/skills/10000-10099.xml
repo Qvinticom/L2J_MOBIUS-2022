@@ -763,10 +763,9 @@
 	<skill id="10011" toLevel="8" name="Shield Impact">
 		<!-- With the wave of the shield, attacks enemies in front with $s1 Power added to P. Atk., pushes them away a short distance, and releases the target with a certain probability. Requires a shield to be equipped. -->
 		<icon>icon.skill10012</icon>
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>5</abnormalTime>
+		<operateType>A1</operateType>
 		<affectLimit>5-12</affectLimit>
-		<fanRange>0;0;150;180</fanRange>
+		<fanRange>0;0;350;180</fanRange>
 		<lvlBonusRate>30</lvlBonusRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<magicLvl>
@@ -779,7 +778,6 @@
 			<value level="7">103</value>
 			<value level="8">105</value>
 		</magicLvl>
-		<operateType>A2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<mpConsume>
 			<value level="1">49</value>
@@ -798,7 +796,6 @@
 		<reuseDelay>15000</reuseDelay>
 		<effectPoint>-5000</effectPoint>
 		<hitCancelTime>0</hitCancelTime>
-		<isDebuff>true</isDebuff>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>FAN</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>

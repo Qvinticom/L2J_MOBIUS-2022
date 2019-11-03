@@ -3805,7 +3805,7 @@
 			<value fromLevel="1" toLevel="11">90</value>
 			<value fromLevel="5" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
-		<affectRange>300</affectRange>
+		<affectRange>600</affectRange>
 		<operateType>A2</operateType>
 		<magicLvl>
 			<value level="1">85</value>
@@ -3834,7 +3834,7 @@
 			<value level="11">358</value>
 		</mpConsume>
 		<castRange>1100</castRange>
-		<effectRange>1400</effectRange>
+		<effectRange>1800</effectRange>
 		<hitTime>3500</hitTime>
 		<coolTime>580</coolTime>
 		<reuseDelay>30000</reuseDelay>
@@ -3852,12 +3852,13 @@
 			<value level="10">-709</value>
 			<value level="11">-709</value>
 		</effectPoint>
+		<affectLimit>5-12</affectLimit>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>DERANGEMENT</trait>
 		<isDebuff>true</isDebuff>
-		<targetType>ENEMY</targetType>
-		<affectScope>RANGE</affectScope>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>RING_RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="MagicalAttack">

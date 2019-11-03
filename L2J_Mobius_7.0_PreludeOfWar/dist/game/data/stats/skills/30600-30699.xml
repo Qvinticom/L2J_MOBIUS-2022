@@ -1595,27 +1595,28 @@
 	<skill id="30647" toLevel="1" name="Novice Mass Ruin">
 		<!-- Attacks the target and nearby enemies with 25 Power added to M. Atk. P./ M. Skill Power -7%, P./ M. Def. -15% and Speed -10% for 20 sec. -->
 		<icon>icon.skill11048</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>40</magicLvl>
 		<isDebuff>true</isDebuff>
 		<castRange>1100</castRange>
+		<effectRange>1800</effectRange>
 		<hitTime>3500</hitTime>
 		<coolTime>580</coolTime>
 		<reuseDelay>30000</reuseDelay>
 		<effectPoint>-687</effectPoint>
+		<affectLimit>5-12</affectLimit>
 		<mpConsume>20</mpConsume>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>MULTI_DEBUFF</abnormalType>
 		<activateRate>90</activateRate>
-		<affectRange>300</affectRange>
+		<affectRange>600</affectRange>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>DERANGEMENT</trait>
-		<isDebuff>true</isDebuff>
-		<targetType>ENEMY</targetType>
-		<affectScope>RANGE</affectScope>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>RING_RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="MagicalAttack">

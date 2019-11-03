@@ -1931,18 +1931,15 @@
 	<skill id="30739" toLevel="1" name="Novice Shield Impact">
 		<!-- Attacks enemies at the front with 2062 power and pushes them away for a short distance. Chance to cancel enemies' targets. Requires a shield. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10012</icon>
-		<operateType>A2</operateType>
-		<isDebuff>true</isDebuff>
+		<operateType>A1</operateType>
 		<castRange>300</castRange>
 		<hitTime>800</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>15000</reuseDelay>
 		<effectPoint>-5000</effectPoint>
 		<mpConsume>4</mpConsume>
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>5</abnormalTime>
 		<affectLimit>5-12</affectLimit>
-		<fanRange>0;0;150;180</fanRange>
+		<fanRange>0;0;350;180</fanRange>
 		<lvlBonusRate>5</lvlBonusRate> <!-- Guessing -->
 		<basicProperty>PHYSICAL</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1964,7 +1961,7 @@
 			</effect>
 			<effect name="KnockBack">
 				<speed>700</speed>
-				<distance>50</distance>
+				<distance>80</distance>
 				<knockDown>false</knockDown>
 			</effect>
 			<effect name="TargetCancel">
@@ -5212,6 +5209,11 @@
 		<reuseDelay>1200</reuseDelay>
 		<effectPoint>-92</effectPoint>
 		<mpConsume>9</mpConsume>
+		<attributeType>WIND</attributeType>
+		<attributeValue>20</attributeValue>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>3.5</hitCancelTime>
+		<magicLvl>1</magicLvl>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -5229,7 +5231,10 @@
 		<coolTime>720</coolTime>
 		<reuseDelay>3000</reuseDelay>
 		<effectPoint>-52</effectPoint>
+		<effectRange>200</effectRange>
 		<mpConsume>9</mpConsume>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
 		<nextAction>ATTACK</nextAction>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
