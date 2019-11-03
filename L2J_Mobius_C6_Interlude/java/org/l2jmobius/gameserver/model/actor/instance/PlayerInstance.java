@@ -922,12 +922,12 @@ public class PlayerInstance extends Playable
 	
 	public boolean isSpawnProtected()
 	{
-		return _protectEndTime > GameTimeController.getGameTicks();
+		return (_protectEndTime != 0) && (_protectEndTime > GameTimeController.getGameTicks());
 	}
 	
 	public boolean isTeleportProtected()
 	{
-		return _teleportProtectEndTime > GameTimeController.getGameTicks();
+		return (_teleportProtectEndTime != 0) && (_teleportProtectEndTime > GameTimeController.getGameTicks());
 	}
 	
 	/**

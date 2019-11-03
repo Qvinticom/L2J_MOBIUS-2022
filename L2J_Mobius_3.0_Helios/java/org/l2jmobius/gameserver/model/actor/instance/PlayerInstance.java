@@ -3903,12 +3903,12 @@ public class PlayerInstance extends Playable
 	
 	public boolean isSpawnProtected()
 	{
-		return _spawnProtectEndTime > System.currentTimeMillis();
+		return (_spawnProtectEndTime != 0) && (_spawnProtectEndTime > System.currentTimeMillis());
 	}
 	
 	public boolean isTeleportProtected()
 	{
-		return _teleportProtectEndTime > System.currentTimeMillis();
+		return (_teleportProtectEndTime != 0) && (_teleportProtectEndTime > System.currentTimeMillis());
 	}
 	
 	public void setSpawnProtection(boolean protect)
