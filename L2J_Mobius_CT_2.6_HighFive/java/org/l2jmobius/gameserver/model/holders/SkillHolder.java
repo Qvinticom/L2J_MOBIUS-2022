@@ -26,18 +26,21 @@ import org.l2jmobius.gameserver.model.skills.Skill;
 public class SkillHolder
 {
 	private final int _skillId;
-	private final int _skillLvl;
+	private final int _skillLevel;
+	private Skill _skill;
 	
-	public SkillHolder(int skillId, int skillLvl)
+	public SkillHolder(int skillId, int skillLevel)
 	{
 		_skillId = skillId;
-		_skillLvl = skillLvl;
+		_skillLevel = skillLevel;
+		_skill = null;
 	}
 	
 	public SkillHolder(Skill skill)
 	{
 		_skillId = skill.getId();
-		_skillLvl = skill.getLevel();
+		_skillLevel = skill.getLevel();
+		_skill = skill;
 	}
 	
 	public int getSkillId()
@@ -47,17 +50,48 @@ public class SkillHolder
 	
 	public int getSkillLevel()
 	{
-		return _skillLvl;
+		return _skillLevel;
 	}
 	
 	public Skill getSkill()
 	{
-		return SkillData.getInstance().getSkill(_skillId, Math.max(_skillLvl, 1));
+		if (_skill == null)
+		{
+			_skill = SkillData.getInstance().getSkill(_skillId, Math.max(_skillLevel, 1));
+		}
+		return _skill;
+	}
+	
+	@Override
+	public boolean equals(Object obj)
+	{
+		if (this == obj)
+		{
+			return true;
+		}
+		
+		if (!(obj instanceof SkillHolder))
+		{
+			return false;
+		}
+		
+		final SkillHolder holder = (SkillHolder) obj;
+		return (holder.getSkillId() == _skillId) && (holder.getSkillLevel() == _skillLevel);
+	}
+	
+	@Override
+	public int hashCode()
+	{
+		final int prime = 31;
+		int result = 1;
+		result = (prime * result) + _skillId;
+		result = (prime * result) + _skillLevel;
+		return result;
 	}
 	
 	@Override
 	public String toString()
 	{
-		return "[SkillId: " + _skillId + " Level: " + _skillLvl + "]";
+		return "[SkillId: " + _skillId + " Level: " + _skillLevel + "]";
 	}
 }

@@ -28,12 +28,14 @@ public class SkillHolder
 	private final int _skillId;
 	private final int _skillLevel;
 	private final int _skillSubLevel;
+	private Skill _skill;
 	
 	public SkillHolder(int skillId, int skillLevel)
 	{
 		_skillId = skillId;
 		_skillLevel = skillLevel;
 		_skillSubLevel = 0;
+		_skill = null;
 	}
 	
 	public SkillHolder(int skillId, int skillLevel, int skillSubLevel)
@@ -41,6 +43,7 @@ public class SkillHolder
 		_skillId = skillId;
 		_skillLevel = skillLevel;
 		_skillSubLevel = skillSubLevel;
+		_skill = null;
 	}
 	
 	public SkillHolder(Skill skill)
@@ -48,6 +51,7 @@ public class SkillHolder
 		_skillId = skill.getId();
 		_skillLevel = skill.getLevel();
 		_skillSubLevel = skill.getSubLevel();
+		_skill = skill;
 	}
 	
 	public int getSkillId()
@@ -67,7 +71,11 @@ public class SkillHolder
 	
 	public Skill getSkill()
 	{
-		return SkillData.getInstance().getSkill(_skillId, Math.max(_skillLevel, 1), _skillSubLevel);
+		if (_skill == null)
+		{
+			_skill = SkillData.getInstance().getSkill(_skillId, Math.max(_skillLevel, 1), _skillSubLevel);
+		}
+		return _skill;
 	}
 	
 	@Override
