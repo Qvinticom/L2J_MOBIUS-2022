@@ -246,7 +246,7 @@
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="false" undying="false" randomWalk="false" randomAnimation="false" />
 		<skillList>
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4444" level="5" /> <!-- Greater Bow/Crossbow Resistance -->
