@@ -74,7 +74,7 @@ public class ValidatePosition extends GameClientPacket
 			{
 				dx = _x - player.getInBoatPosition().getX();
 				dy = _y - player.getInBoatPosition().getY();
-				// dz = _z - activeChar.getInVehiclePosition().getZ();
+				// dz = _z - player.getInVehiclePosition().getZ();
 				diffSq = ((dx * dx) + (dy * dy));
 				if (diffSq > 250000)
 				{
@@ -95,11 +95,11 @@ public class ValidatePosition extends GameClientPacket
 		diffSq = ((dx * dx) + (dy * dy));
 		
 		// Zoey76: TODO: Implement or cleanup.
-		// Party party = activeChar.getParty();
-		// if ((party != null) && (activeChar.getLastPartyPositionDistance(_x, _y, _z) > 150))
+		// Party party = player.getParty();
+		// if ((party != null) && (player.getLastPartyPositionDistance(_x, _y, _z) > 150))
 		// {
 		// player.setLastPartyPosition(_x, _y, _z);
-		// party.broadcastToPartyMembers(activeChar, new PartyMemberPosition(activeChar));
+		// party.broadcastToPartyMembers(player, new PartyMemberPosition(player));
 		// }
 		
 		if (player.isFlying() || player.isInsideZone(ZoneId.WATER))
@@ -112,8 +112,7 @@ public class ValidatePosition extends GameClientPacket
 		}
 		else if (diffSq < 360000) // if too large, messes observation
 		{
-			if (Config.COORD_SYNCHRONIZE == -1) // Only Z coordinate synched to server,
-			// mainly used when no geodata but can be used also with geodata
+			if (Config.COORD_SYNCHRONIZE == -1) // Only Z coordinate synched to server, mainly used when no geodata but can be used also with geodata
 			{
 				player.setXYZ(realX, realY, _z);
 				return;
@@ -147,8 +146,6 @@ public class ValidatePosition extends GameClientPacket
 			// Important: this code part must work together with Creature.updatePosition
 			if ((diffSq > 250000) || (Math.abs(dz) > 200))
 			{
-				// if ((_z - activeChar.getClientZ()) < 200 && Math.abs(activeChar.getLastServerPosition().getZ()-realZ) > 70)
-				
 				if ((Math.abs(dz) > 200) && (Math.abs(dz) < 1500) && (Math.abs(_z - player.getClientZ()) < 800))
 				{
 					player.setXYZ(realX, realY, _z);
@@ -156,6 +153,10 @@ public class ValidatePosition extends GameClientPacket
 				}
 				else
 				{
+					if (player.isFalling(_z))
+					{
+						player.setXYZ(realX, realY, _z);
+					}
 					player.sendPacket(new ValidateLocation(player));
 				}
 			}

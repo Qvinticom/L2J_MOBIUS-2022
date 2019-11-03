@@ -61,12 +61,6 @@ public class ValidatePosition implements IClientIncomingPacket
 		final int realY = player.getY();
 		int realZ = player.getZ();
 		
-		if (Config.DEVELOPER)
-		{
-			LOGGER.finer("client pos: " + _x + " " + _y + " " + _z + " head " + _heading);
-			LOGGER.finer("server pos: " + realX + " " + realY + " " + realZ + " head " + player.getHeading());
-		}
-		
 		if ((_x == 0) && (_y == 0))
 		{
 			if (realX != 0)
@@ -86,7 +80,7 @@ public class ValidatePosition implements IClientIncomingPacket
 			{
 				dx = _x - player.getInVehiclePosition().getX();
 				dy = _y - player.getInVehiclePosition().getY();
-				// dz = _z - activeChar.getInVehiclePosition().getZ();
+				// dz = _z - player.getInVehiclePosition().getZ();
 				diffSq = ((dx * dx) + (dy * dy));
 				if (diffSq > 250000)
 				{
@@ -100,13 +94,13 @@ public class ValidatePosition implements IClientIncomingPacket
 			// Zoey76: TODO: Implement or cleanup.
 			// if (Config.COORD_SYNCHRONIZE == 2)
 			// {
-			// dx = _x - activeChar.getInVehiclePosition().getX();
-			// dy = _y - activeChar.getInVehiclePosition().getY();
-			// dz = _z - activeChar.getInVehiclePosition().getZ();
+			// dx = _x - player.getInVehiclePosition().getX();
+			// dy = _y - player.getInVehiclePosition().getY();
+			// dz = _z - player.getInVehiclePosition().getZ();
 			// diffSq = ((dx * dx) + (dy * dy));
 			// if (diffSq > 250000)
 			// {
-			// sendPacket(new GetOnVehicle(activeChar.getObjectId(), _data, activeChar.getInBoatPosition()));
+			// sendPacket(new GetOnVehicle(player.getObjectId(), _data, player.getInBoatPosition()));
 			// }
 			// }
 			return;
@@ -123,11 +117,11 @@ public class ValidatePosition implements IClientIncomingPacket
 		diffSq = ((dx * dx) + (dy * dy));
 		
 		// Zoey76: TODO: Implement or cleanup.
-		// Party party = activeChar.getParty();
-		// if ((party != null) && (activeChar.getLastPartyPositionDistance(_x, _y, _z) > 150))
+		// Party party = player.getParty();
+		// if ((party != null) && (player.getLastPartyPositionDistance(_x, _y, _z) > 150))
 		// {
 		// player.setLastPartyPosition(_x, _y, _z);
-		// party.broadcastToPartyMembers(activeChar, new PartyMemberPosition(activeChar));
+		// party.broadcastToPartyMembers(player, new PartyMemberPosition(player));
 		// }
 		
 		// Don't allow flying transformations outside gracia area!
@@ -146,8 +140,7 @@ public class ValidatePosition implements IClientIncomingPacket
 		}
 		else if (diffSq < 360000) // if too large, messes observation
 		{
-			if (Config.COORD_SYNCHRONIZE == -1) // Only Z coordinate synched to server,
-			// mainly used when no geodata but can be used also with geodata
+			if (Config.COORD_SYNCHRONIZE == -1) // Only Z coordinate synched to server, mainly used when no geodata but can be used also with geodata
 			{
 				player.setXYZ(realX, realY, _z);
 				return;
@@ -181,8 +174,6 @@ public class ValidatePosition implements IClientIncomingPacket
 			// Important: this code part must work together with Creature.updatePosition
 			if ((diffSq > 250000) || (Math.abs(dz) > 200))
 			{
-				// if ((_z - activeChar.getClientZ()) < 200 && Math.abs(activeChar.getLastServerPosition().getZ()-realZ) > 70)
-				
 				if ((Math.abs(dz) > 200) && (Math.abs(dz) < 1500) && (Math.abs(_z - player.getClientZ()) < 800))
 				{
 					player.setXYZ(realX, realY, _z);
@@ -190,11 +181,10 @@ public class ValidatePosition implements IClientIncomingPacket
 				}
 				else
 				{
-					if (Config.DEVELOPER)
+					if (player.isFalling(_z))
 					{
-						LOGGER.info(player.getName() + ": Synchronizing position Server --> Client");
+						player.setXYZ(realX, realY, _z);
 					}
-					
 					player.sendPacket(new ValidateLocation(player));
 				}
 			}
