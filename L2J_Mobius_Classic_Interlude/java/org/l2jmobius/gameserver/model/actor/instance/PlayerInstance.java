@@ -12561,7 +12561,7 @@ public class PlayerInstance extends Playable
 			return false;
 		}
 		
-		if (System.currentTimeMillis() < _fallingTimestamp)
+		if ((_fallingTimestamp != 0) && (System.currentTimeMillis() < _fallingTimestamp))
 		{
 			return true;
 		}
@@ -12569,12 +12569,14 @@ public class PlayerInstance extends Playable
 		final int deltaZ = getZ() - z;
 		if (deltaZ <= getBaseTemplate().getSafeFallHeight())
 		{
+			_fallingTimestamp = 0;
 			return false;
 		}
 		
-		// If there is no geodata loaded for the place we are client Z correction might cause falling damage.
+		// If there is no geodata loaded for the place we are, client Z correction might cause falling damage.
 		if (!GeoEngine.getInstance().hasGeo(getX(), getY()))
 		{
+			_fallingTimestamp = 0;
 			return false;
 		}
 		
