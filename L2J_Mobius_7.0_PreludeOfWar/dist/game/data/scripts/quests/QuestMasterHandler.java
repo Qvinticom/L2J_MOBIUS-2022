@@ -78,6 +78,7 @@ import quests.Q00778_OperationRoaringFlame.Q00778_OperationRoaringFlame;
 import quests.Q00779_UtilizeTheDarknessSeedOfDestruction.Q00779_UtilizeTheDarknessSeedOfDestruction;
 import quests.Q00783_VestigeOfTheMagicPower.Q00783_VestigeOfTheMagicPower;
 import quests.Q00790_ObtainingFerinsTrust.Q00790_ObtainingFerinsTrust;
+import quests.Q00792_TheSuperionGiants.Q00792_TheSuperionGiants;
 import quests.Q00823_DisappearedRaceNewFairy.Q00823_DisappearedRaceNewFairy;
 import quests.Q00826_InSearchOfTheSecretWeapon.Q00826_InSearchOfTheSecretWeapon;
 import quests.Q00827_EinhasadsOrder.Q00827_EinhasadsOrder;
@@ -294,7 +295,7 @@ public class QuestMasterHandler
 		Q00782_UtilizeTheDarknessSeedOfHellfire.class, // TODO: Not done.
 		Q00783_VestigeOfTheMagicPower.class,
 		Q00790_ObtainingFerinsTrust.class,
-		Q00792_TheSuperionGiants.class, // TODO: Not done.
+		Q00792_TheSuperionGiants.class,
 		Q00816_PlansToRepairTheStronghold.class, // TODO: Not done.
 		Q00823_DisappearedRaceNewFairy.class,
 		Q00824_AttackTheCommandPost.class, // TODO: Not done.

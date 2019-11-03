@@ -185,6 +185,7 @@ import quests.Q00779_UtilizeTheDarknessSeedOfDestruction.Q00779_UtilizeTheDarkne
 import quests.Q00783_VestigeOfTheMagicPower.Q00783_VestigeOfTheMagicPower;
 import quests.Q00787_TheRoleOfAWatcher.Q00787_TheRoleOfAWatcher;
 import quests.Q00790_ObtainingFerinsTrust.Q00790_ObtainingFerinsTrust;
+import quests.Q00792_TheSuperionGiants.Q00792_TheSuperionGiants;
 import quests.Q00817_BlackAteliaResearch.Q00817_BlackAteliaResearch;
 import quests.Q00823_DisappearedRaceNewFairy.Q00823_DisappearedRaceNewFairy;
 import quests.Q00826_InSearchOfTheSecretWeapon.Q00826_InSearchOfTheSecretWeapon;
@@ -476,7 +477,6 @@ import quests.not_done.Q00780_UtilizeTheDarknessSeedOfInfinity;
 import quests.not_done.Q00781_UtilizeTheDarknessSeedOfAnnihilation;
 import quests.not_done.Q00782_UtilizeTheDarknessSeedOfHellfire;
 import quests.not_done.Q00789_WaitingForPaagrio;
-import quests.not_done.Q00792_TheSuperionGiants;
 import quests.not_done.Q00816_PlansToRepairTheStronghold;
 import quests.not_done.Q00824_AttackTheCommandPost;
 import quests.not_done.Q00836_RequestFromTheBlackbirdClan;
@@ -721,7 +721,7 @@ public class QuestMasterHandler
 		Q00787_TheRoleOfAWatcher.class,
 		Q00789_WaitingForPaagrio.class, // TODO: Not done.
 		Q00790_ObtainingFerinsTrust.class,
-		Q00792_TheSuperionGiants.class, // TODO: Not done.
+		Q00792_TheSuperionGiants.class,
 		Q00816_PlansToRepairTheStronghold.class, // TODO: Not done.
 		Q00817_BlackAteliaResearch.class,
 		Q00823_DisappearedRaceNewFairy.class,
