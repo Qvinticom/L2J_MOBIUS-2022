@@ -208,6 +208,7 @@ import quests.Q00902_ReclaimOurEra.Q00902_ReclaimOurEra;
 import quests.Q00903_TheCallOfAntharas.Q00903_TheCallOfAntharas;
 import quests.Q00905_RefinedDragonBlood.Q00905_RefinedDragonBlood;
 import quests.Q00906_TheCallOfValakas.Q00906_TheCallOfValakas;
+import quests.Q00923_ShinedustExtraction.Q00923_ShinedustExtraction;
 import quests.Q00926_30DaySearchOperation.Q00926_30DaySearchOperation;
 import quests.Q00928_100DaySubjugationOperation.Q00928_100DaySubjugationOperation;
 import quests.Q00937_ToReviveTheFishingGuild.Q00937_ToReviveTheFishingGuild;
@@ -724,7 +725,7 @@ public class QuestMasterHandler
 		Q00903_TheCallOfAntharas.class,
 		Q00905_RefinedDragonBlood.class,
 		Q00906_TheCallOfValakas.class,
-		Q00923_ShinedustExtraction.class, // TODO: Not done.
+		Q00923_ShinedustExtraction.class,
 		Q00924_GiantOfTheRestorationRoom.class, // TODO: Not done.
 		Q00926_30DaySearchOperation.class,
 		Q00928_100DaySubjugationOperation.class,

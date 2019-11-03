@@ -203,6 +203,7 @@ import quests.Q00904_DragonTrophyAntharas.Q00904_DragonTrophyAntharas;
 import quests.Q00905_RefinedDragonBlood.Q00905_RefinedDragonBlood;
 import quests.Q00906_TheCallOfValakas.Q00906_TheCallOfValakas;
 import quests.Q00907_DragonTrophyValakas.Q00907_DragonTrophyValakas;
+import quests.Q00923_ShinedustExtraction.Q00923_ShinedustExtraction;
 import quests.Q00926_30DaySearchOperation.Q00926_30DaySearchOperation;
 import quests.Q00928_100DaySubjugationOperation.Q00928_100DaySubjugationOperation;
 import quests.Q00937_ToReviveTheFishingGuild.Q00937_ToReviveTheFishingGuild;
@@ -495,7 +496,6 @@ import quests.not_done.Q00911_RedLibraRequestLv2;
 import quests.not_done.Q00912_RedLibraRequestLv3;
 import quests.not_done.Q00913_RedLibraRequestLv4;
 import quests.not_done.Q00914_RedLibraRequestLv5;
-import quests.not_done.Q00923_ShinedustExtraction;
 import quests.not_done.Q00924_GiantOfTheRestorationRoom;
 import quests.not_done.Q00929_SeekerRescue;
 import quests.not_done.Q00930_DisparagingThePhantoms;
@@ -757,7 +757,7 @@ public class QuestMasterHandler
 		Q00912_RedLibraRequestLv3.class, // TODO: Not done.
 		Q00913_RedLibraRequestLv4.class, // TODO: Not done.
 		Q00914_RedLibraRequestLv5.class, // TODO: Not done.
-		Q00923_ShinedustExtraction.class, // TODO: Not done.
+		Q00923_ShinedustExtraction.class,
 		Q00924_GiantOfTheRestorationRoom.class, // TODO: Not done.
 		Q00926_30DaySearchOperation.class,
 		Q00928_100DaySubjugationOperation.class,
