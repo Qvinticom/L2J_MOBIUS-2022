@@ -90,9 +90,10 @@ public class SummonCubic extends AbstractEffect
 		{
 			// If maximum amount is reached, random cubic is removed.
 			// Players with no mastery can have only one cubic.
-			final double allowedCubicCount = effected.getActingPlayer().getStat().getValue(Stats.MAX_CUBIC, 0);
-			final int currentCubicCount = player.getCubics().size();
+			final double allowedCubicCount = player.getStat().getValue(Stats.MAX_CUBIC, 1);
+			
 			// Extra cubics are removed, one by one, randomly.
+			final int currentCubicCount = player.getCubics().size();
 			if (currentCubicCount >= allowedCubicCount)
 			{
 				player.getCubics().values().stream().skip((int) (currentCubicCount * Rnd.nextDouble())).findAny().get().deactivate();
@@ -107,7 +108,7 @@ public class SummonCubic extends AbstractEffect
 		}
 		
 		// Adding a new cubic.
-		player.addCubic(new CubicInstance(effected.getActingPlayer(), effector.getActingPlayer(), template));
+		player.addCubic(new CubicInstance(player, effector.getActingPlayer(), template));
 		player.sendPacket(new ExUserInfoCubic(player));
 		player.broadcastCharInfo();
 	}
