@@ -62,3 +62,4 @@ What is done
 -Older versions for quests 19, 631, 647.
 -Retail CP base stat values.
 -Retail recommendation system.
+-Removed AltarsOfSacrifice AI.
