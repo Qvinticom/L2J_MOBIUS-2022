@@ -66,6 +66,11 @@ public class PullBack extends AbstractEffect
 		{
 			return;
 		}
+		// Prevent pulling debuff blocked characters.
+		if ((effected.isDebuffBlocked()))
+		{
+			return;
+		}
 		
 		// In retail, you get debuff, but you are not even moved if there is obstacle. You are still disabled from using skills and moving though.
 		if (GeoEngine.getInstance().canMoveToTarget(effected.getX(), effected.getY(), effected.getZ(), effector.getX(), effector.getY(), effector.getZ(), effector.getInstanceWorld()))
