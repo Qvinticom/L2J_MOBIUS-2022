@@ -132,6 +132,8 @@ public class Action implements IClientIncomingPacket
 			return;
 		}
 		
+		player.onActionRequest();
+		
 		switch (_actionId)
 		{
 			case 0:

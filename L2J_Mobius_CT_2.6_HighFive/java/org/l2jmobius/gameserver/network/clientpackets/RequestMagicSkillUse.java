@@ -112,6 +112,8 @@ public class RequestMagicSkillUse implements IClientIncomingPacket
 			return;
 		}
 		
+		player.onActionRequest();
+		
 		// Stop if use self-buff (except if on AirShip or Boat).
 		if ((skill.isContinuous() && !skill.isDebuff() && (skill.getTargetType() == TargetType.SELF)) && (!player.isInAirShip() || !player.isInBoat()))
 		{

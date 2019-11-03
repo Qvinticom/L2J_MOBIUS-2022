@@ -170,6 +170,8 @@ public class UseItem implements IClientIncomingPacket
 			}
 		}
 		
+		player.onActionRequest();
+		
 		if (item.isEquipable())
 		{
 			// Don't allow to put formal wear while a cursed weapon is equipped.

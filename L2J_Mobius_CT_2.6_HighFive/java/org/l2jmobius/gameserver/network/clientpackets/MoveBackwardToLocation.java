@@ -228,9 +228,6 @@ public class MoveBackwardToLocation implements IClientIncomingPacket
 		player.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(_targetX, _targetY, _targetZ));
 		
 		// Mobius: Check spawn protections.
-		if (player.isSpawnProtected() || player.isTeleportProtected())
-		{
-			player.onActionRequest();
-		}
+		player.onActionRequest();
 	}
 }

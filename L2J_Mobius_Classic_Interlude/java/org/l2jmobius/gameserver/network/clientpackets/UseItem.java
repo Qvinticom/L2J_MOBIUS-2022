@@ -169,6 +169,8 @@ public class UseItem implements IClientIncomingPacket
 			}
 		}
 		
+		player.onActionRequest();
+		
 		if (item.isEquipable())
 		{
 			// Max equipable item grade configuration.

@@ -85,6 +85,8 @@ public class RequestMagicSkillUse implements IClientIncomingPacket
 			return;
 		}
 		
+		player.onActionRequest();
+		
 		player.useMagic(skill, null, _ctrlPressed, _shiftPressed);
 	}
 }

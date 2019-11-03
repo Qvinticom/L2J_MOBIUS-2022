@@ -124,6 +124,8 @@ public class Attack implements IClientIncomingPacket
 			return;
 		}
 		
+		player.onActionRequest();
+		
 		if (player.getTarget() != target)
 		{
 			target.onAction(player);
