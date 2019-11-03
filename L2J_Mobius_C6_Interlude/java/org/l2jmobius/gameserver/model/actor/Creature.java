@@ -2240,21 +2240,15 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	}
 	
 	/**
-	 * Return the CreatureAI of the Creature and if its null create a new one.
-	 * @return the aI
+	 * Gets this creature's AI.
+	 * @return the AI
 	 */
-	public CreatureAI getAI()
+	public synchronized CreatureAI getAI()
 	{
 		CreatureAI ai = _ai;
 		if (ai == null)
 		{
-			synchronized (this)
-			{
-				if (_ai == null)
-				{
-					_ai = new CreatureAI(new AIAccessor());
-				}
-			}
+			_ai = ai = new CreatureAI(new AIAccessor());
 		}
 		return ai;
 	}
@@ -2265,8 +2259,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder
 	 */
 	public void setAI(CreatureAI newAI)
 	{
-		CreatureAI oldAI = getAI();
-		
+		CreatureAI oldAI = _ai;
 		if ((oldAI != null) && (oldAI != newAI) && (oldAI instanceof AttackableAI))
 		{
 			((AttackableAI) oldAI).stopAITask();
