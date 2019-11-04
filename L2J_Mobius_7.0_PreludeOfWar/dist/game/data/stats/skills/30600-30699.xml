@@ -1616,7 +1616,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>DERANGEMENT</trait>
 		<targetType>ENEMY_ONLY</targetType>
-		<affectScope>RING_RANGE</affectScope>
+		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="MagicalAttack">
@@ -2476,7 +2476,7 @@
 		<reuseDelayGroup>11023</reuseDelayGroup>
 		<magicLvl>40</magicLvl>
 		<effectRange>1400</effectRange>
-		<magicCriticalRate>11</magicCriticalRate>
+		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>1</hitCancelTime>
 		<effects>
 			<effect name="MagicalAttack">

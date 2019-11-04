@@ -567,6 +567,11 @@
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
+		<selfEffects>
+			<effect name="DispelBySlot">
+				<dispel>SIGEL_SHIELD,9</dispel>
+			</effect>
+		</selfEffects>
 	</skill>
 	<skill id="10009" toLevel="13" name="Shield Bash">
 		<!-- Attacks target with $s1 Power added to P. Atk. and Stuns for $s2. In PVP, Restrains normal attacks. Can be used while a sword or blunt weapon is equipped. Over-hit. Critical. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
@@ -675,6 +680,11 @@
 				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
 			</effect>
 		</effects>
+		<selfEffects>
+			<effect name="DispelBySlot">
+				<dispel>SIGEL_SHIELD,1</dispel>
+			</effect>
+		</selfEffects>
 	</skill>
 	<skill id="10010" toLevel="13" name="Vanishing Stun">
 		<!-- Attacks the target with $s1 power. Their Atk. Spd./Casting Spd. -$s2 for $s3 Chance to silence the target. If in the Two-Hand Stance, decreases target's P. Def. Requires a sword or blunt weapon. Critical. Over-hit. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
@@ -1596,9 +1606,7 @@
 		<!-- For $s1, activates the Shield Block buff. M. Def. +$s2, Received M. Critical Rate -$s3. The effect is canceled when using Shield Charge, Shield Bash, or Shield Boomerang. Requires a shield. -->
 		<icon>icon.skill10020_2</icon>
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>
-			<value fromLevel="1" toLevel="7">10</value>
-		</abnormalTime>
+		<abnormalTime>10</abnormalTime>
 		<abnormalType>SIGEL_SHIELD</abnormalType>
 		<abnormalVisualEffect>FOCUS_SHIELD</abnormalVisualEffect>
 		<operateType>A2</operateType>
@@ -2082,7 +2090,7 @@
 		</effects>
 		<selfEffects>
 			<effect name="DispelBySlot">
-				<dispel>ABSORB,9</dispel>
+				<dispel>SIGEL_SHIELD,9</dispel>
 			</effect>
 			<effect name="CallSkill">
 				<skillId>10060</skillId> <!-- Aggression Attack -->
@@ -2998,6 +3006,11 @@
 				<mode>PER</mode>
 			</effect>
 		</effects>
+		<selfEffects>
+			<effect name="DispelBySlot">
+				<dispel>SIGEL_SHIELD,9</dispel>
+			</effect>
+		</selfEffects>
 	</skill>
 	<skill id="10046" toLevel="3" name="Shield Charge III">
 		<!-- Strikes with the shield. Attacks target with $s1 Power added to P. Atk. Decreases P. Def. by $s2 and Evasion by $s3. Increases Critical damage by $s4. -->
@@ -3066,6 +3079,11 @@
 				<mode>PER</mode>
 			</effect>
 		</effects>
+		<selfEffects>
+			<effect name="DispelBySlot">
+				<dispel>SIGEL_SHIELD,9</dispel>
+			</effect>
+		</selfEffects>
 	</skill>
 	<skill id="10047" toLevel="3" name="Shield Charge IV">
 		<!-- Strikes with the shield. Attacks target with $s1 Power added to P. Atk. Decreases P. Def. by $s2 and Evasion by $s3. Increases Critical damage by $s4. -->
@@ -3134,6 +3152,11 @@
 				<mode>PER</mode>
 			</effect>
 		</effects>
+		<selfEffects>
+			<effect name="DispelBySlot">
+				<dispel>SIGEL_SHIELD,9</dispel>
+			</effect>
+		</selfEffects>
 	</skill>
 	<skill id="10048" toLevel="3" name="Shield Charge V">
 		<!-- Strikes with the shield. Attacks target with $s1 Power added to P. Atk. Decreases P. Def. by $s2 and Evasion by $s3. Increases Critical damage by $s4. -->
@@ -3202,6 +3225,11 @@
 				<mode>PER</mode>
 			</effect>
 		</effects>
+		<selfEffects>
+			<effect name="DispelBySlot">
+				<dispel>SIGEL_SHIELD,9</dispel>
+			</effect>
+		</selfEffects>
 	</skill>
 	<skill id="10049" toLevel="3" name="Shield Charge VI">
 		<!-- Strikes with the shield. Attacks target with $s1 Power added to P. Atk. Decreases P. Def. by $s2 and Evasion by $s3. Increases Critical damage by $s4. -->
@@ -3270,6 +3298,11 @@
 				<mode>PER</mode>
 			</effect>
 		</effects>
+		<selfEffects>
+			<effect name="DispelBySlot">
+				<dispel>SIGEL_SHIELD,9</dispel>
+			</effect>
+		</selfEffects>
 	</skill>
 	<skill id="10050" toLevel="3" name="Shield Charge VII">
 		<!-- Strikes with the shield. Attacks target with $s1 Power added to P. Atk. Decreases P. Def. by $s2 and Evasion by $s3. Increases Critical damage by $s4. -->
@@ -3338,6 +3371,11 @@
 				<mode>PER</mode>
 			</effect>
 		</effects>
+		<selfEffects>
+			<effect name="DispelBySlot">
+				<dispel>SIGEL_SHIELD,9</dispel>
+			</effect>
+		</selfEffects>
 	</skill>
 	<skill id="10051" toLevel="6" name="Lion Roar">
 		<!-- Attacks nearby enemies and blocks all physical skills. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->

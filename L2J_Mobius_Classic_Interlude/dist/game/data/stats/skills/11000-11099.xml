@@ -1851,7 +1851,7 @@
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
 		<targetType>ENEMY</targetType>
-		<affectScope>RING_RANGE</affectScope>
+		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<reuseDelayGroup>11023</reuseDelayGroup>
 		<magicLvl>
@@ -2474,7 +2474,7 @@
 			</item>
 		</attachSkillList>
 		<targetType>ENEMY_ONLY</targetType>
-		<affectScope>RING_RANGE</affectScope>
+		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="MagicalAttack">
@@ -2515,7 +2515,7 @@
 		<attributeValue>100</attributeValue>
 		<operateType>A1</operateType>
 		<targetType>ENEMY_ONLY</targetType>
-		<affectScope>RING_RANGE</affectScope>
+		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<reuseDelayGroup>11034</reuseDelayGroup>
 		<magicLvl>
@@ -2598,7 +2598,7 @@
 		<attributeValue>100</attributeValue>
 		<operateType>A1</operateType>
 		<targetType>ENEMY_ONLY</targetType>
-		<affectScope>RING_RANGE</affectScope>
+		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<reuseDelayGroup>11034</reuseDelayGroup>
 		<magicLvl>
@@ -2681,7 +2681,7 @@
 		<attributeValue>100</attributeValue>
 		<operateType>A1</operateType>
 		<targetType>ENEMY_ONLY</targetType>
-		<affectScope>RING_RANGE</affectScope>
+		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<reuseDelayGroup>11034</reuseDelayGroup>
 		<magicLvl>
@@ -2764,7 +2764,7 @@
 		<attributeValue>100</attributeValue>
 		<operateType>A1</operateType>
 		<targetType>ENEMY_ONLY</targetType>
-		<affectScope>RING_RANGE</affectScope>
+		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<reuseDelayGroup>11034</reuseDelayGroup>
 		<magicLvl>
@@ -2889,7 +2889,7 @@
 		<canDoubleCast>true</canDoubleCast>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY_ONLY</targetType>
-		<affectScope>RING_RANGE</affectScope>
+		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="MagicalAttack">
@@ -2929,7 +2929,7 @@
 		<attachToggleGroupId>1</attachToggleGroupId>
 		<operateType>A1</operateType>
 		<targetType>ENEMY_ONLY</targetType>
-		<affectScope>RING_RANGE</affectScope>
+		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<reuseDelayGroup>11040</reuseDelayGroup>
 		<doubleCastSkill>11045</doubleCastSkill>
@@ -3030,7 +3030,7 @@
 		<attributeValue>100</attributeValue>
 		<operateType>A1</operateType>
 		<targetType>ENEMY_ONLY</targetType>
-		<affectScope>RING_RANGE</affectScope>
+		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<reuseDelayGroup>11040</reuseDelayGroup>
 		<magicLvl>
@@ -3113,7 +3113,7 @@
 		<attributeValue>100</attributeValue>
 		<operateType>A1</operateType>
 		<targetType>ENEMY_ONLY</targetType>
-		<affectScope>RING_RANGE</affectScope>
+		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<reuseDelayGroup>11040</reuseDelayGroup>
 		<magicLvl>
@@ -3196,7 +3196,7 @@
 		<attributeValue>100</attributeValue>
 		<operateType>A1</operateType>
 		<targetType>ENEMY_ONLY</targetType>
-		<affectScope>RING_RANGE</affectScope>
+		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<reuseDelayGroup>11040</reuseDelayGroup>
 		<magicLvl>
@@ -3279,7 +3279,7 @@
 		<attributeValue>100</attributeValue>
 		<operateType>A1</operateType>
 		<targetType>ENEMY_ONLY</targetType>
-		<affectScope>RING_RANGE</affectScope>
+		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<reuseDelayGroup>11040</reuseDelayGroup>
 		<magicLvl>
@@ -3362,7 +3362,7 @@
 		<attributeValue>100</attributeValue>
 		<operateType>A1</operateType>
 		<targetType>ENEMY_ONLY</targetType>
-		<affectScope>RING_RANGE</affectScope>
+		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<reuseDelayGroup>11040</reuseDelayGroup>
 		<magicLvl>
@@ -3698,7 +3698,7 @@
 		<trait>DERANGEMENT</trait>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY_ONLY</targetType>
-		<affectScope>RING_RANGE</affectScope>
+		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="MagicalAttack">
@@ -4319,7 +4319,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY_ONLY</targetType>
-		<affectScope>RING_RANGE</affectScope>
+		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="BlockControl" />
@@ -4856,7 +4856,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY_ONLY</targetType>
-		<affectScope>RING_RANGE</affectScope>
+		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<conditions>
 			<condition name="OpCheckAbnormal">
