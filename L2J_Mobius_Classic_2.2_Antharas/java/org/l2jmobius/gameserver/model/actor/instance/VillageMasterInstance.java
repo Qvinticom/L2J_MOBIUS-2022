@@ -840,17 +840,16 @@ public class VillageMasterInstance extends NpcInstance
 			subclasses = EnumSet.copyOf(mainSubclassSet);
 			subclasses.remove(pClass);
 			
-			// Kamaels can only take Kamael classes as subclasses.
-			for (ClassId cid : ClassId.values())
-			{
-				if ((cid.getRace() == Race.KAMAEL) && (player.getRace() != Race.KAMAEL))
-				{
-					subclasses.remove(cid);
-				}
-			}
-			
 			if (player.getRace() == Race.KAMAEL)
 			{
+				for (ClassId cid : ClassId.values())
+				{
+					if (cid.getRace() != Race.KAMAEL)
+					{
+						subclasses.remove(cid);
+					}
+				}
+				
 				if (player.getAppearance().isFemale())
 				{
 					subclasses.remove(ClassId.MALE_SOULBREAKER);
@@ -863,6 +862,37 @@ public class VillageMasterInstance extends NpcInstance
 				if (!player.getSubClasses().containsKey(2) || (player.getSubClasses().get(2).getLevel() < 75))
 				{
 					subclasses.remove(ClassId.INSPECTOR);
+				}
+			}
+			else
+			{
+				if (player.getRace() == Race.ELF)
+				{
+					for (ClassId cid : ClassId.values())
+					{
+						if (cid.getRace() == Race.DARK_ELF)
+						{
+							subclasses.remove(cid);
+						}
+					}
+				}
+				else if (player.getRace() == Race.DARK_ELF)
+				{
+					for (ClassId cid : ClassId.values())
+					{
+						if (cid.getRace() == Race.ELF)
+						{
+							subclasses.remove(cid);
+						}
+					}
+				}
+				
+				for (ClassId cid : ClassId.values())
+				{
+					if (cid.getRace() == Race.KAMAEL)
+					{
+						subclasses.remove(cid);
+					}
 				}
 			}
 			
