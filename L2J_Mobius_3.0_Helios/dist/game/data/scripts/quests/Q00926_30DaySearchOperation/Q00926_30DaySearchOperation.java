@@ -42,7 +42,9 @@ public class Q00926_30DaySearchOperation extends Quest
 	private static final int BELOAS_SUPPLY_ITEMS = 47043;
 	private static final int REMNANT_OF_THE_RIFT = 46787;
 	// Misc
+	private static final QuestType QUEST_TYPE = QuestType.DAILY; // REPEATABLE, ONE_TIME, DAILY
 	private static final int MIN_LEVEL = 95;
+	private static final int MAX_LEVEL = 102;
 	
 	public Q00926_30DaySearchOperation()
 	{
@@ -52,6 +54,7 @@ public class Q00926_30DaySearchOperation extends Quest
 		addKillId(WANDERING_OF_DIMENSION, LOST_SOUL_DIMENSION, ROAMING_VENGEANCE);
 		registerQuestItems(SPIRIT_FRAGMENTS);
 		addCondMinLevel(MIN_LEVEL, "34227-00.html");
+		addCondMaxLevel(MAX_LEVEL, getNoQuestMsg(null));
 	}
 	
 	@Override
@@ -63,19 +66,16 @@ public class Q00926_30DaySearchOperation extends Quest
 			return null;
 		}
 		
-		String htmltext = null;
 		switch (event)
 		{
 			case "34227-02.htm":
 			case "34227-03.htm":
 			{
-				htmltext = event;
-				break;
+				return event;
 			}
 			case "34227-04.htm":
 			{
 				qs.startQuest();
-				htmltext = event;
 				break;
 			}
 			case "34227-07.html":
@@ -87,24 +87,22 @@ public class Q00926_30DaySearchOperation extends Quest
 						giveItems(player, REMNANT_OF_THE_RIFT, 1);
 						giveItems(player, BELOAS_SUPPLY_ITEMS, 1);
 						addExpAndSp(player, 1507592779L, 3618222);
-						qs.exitQuest(QuestType.DAILY, true);
-						htmltext = event;
+						qs.exitQuest(QUEST_TYPE, true);
 						break;
 					}
 					addExpAndSp(player, 1507592779L, 3618222);
 					giveItems(player, REMNANT_OF_THE_RIFT, 1);
 					giveItems(player, BELOAS_SUPPLY_ITEMS, 1);
-					qs.exitQuest(QuestType.ONE_TIME, true);
-					htmltext = event;
-				}
-				else
-				{
-					htmltext = getNoQuestLevelRewardMsg(player);
+					qs.exitQuest(QUEST_TYPE, true);
 				}
 				break;
 			}
+			default:
+			{
+				return null;
+			}
 		}
-		return htmltext;
+		return event;
 	}
 	
 	@Override
@@ -118,7 +116,7 @@ public class Q00926_30DaySearchOperation extends Quest
 			{
 				if (!qs.isNowAvailable())
 				{
-					htmltext = getAlreadyCompletedMsg(player);
+					htmltext = getAlreadyCompletedMsg(player, QUEST_TYPE);
 					break;
 				}
 				qs.setState(State.CREATED);
@@ -143,9 +141,18 @@ public class Q00926_30DaySearchOperation extends Quest
 		final QuestState qs = getQuestState(killer, false);
 		if ((qs != null) && (qs.isCond(1)))
 		{
-			if (giveItemRandomly(killer, npc, SPIRIT_FRAGMENTS, 1, 100, 1.0, true))
+			switch (npc.getId())
 			{
-				qs.setCond(2, true);
+				case WANDERING_OF_DIMENSION:
+				case LOST_SOUL_DIMENSION:
+				case ROAMING_VENGEANCE:
+				{
+					if (giveItemRandomly(killer, npc, SPIRIT_FRAGMENTS, 1, 100, 1.0, true))
+					{
+						qs.setCond(2, true);
+					}
+					break;
+				}
 			}
 		}
 		return super.onKill(npc, killer, isSummon);
