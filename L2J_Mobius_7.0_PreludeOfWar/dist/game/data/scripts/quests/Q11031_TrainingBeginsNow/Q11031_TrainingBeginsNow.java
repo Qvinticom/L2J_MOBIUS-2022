@@ -239,7 +239,7 @@ public class Q11031_TrainingBeginsNow extends Quest
 		}
 		
 		final PlayerInstance player = event.getPlayer();
-		if (player == null)
+		if ((player == null) || (player.getLevel() > 20))
 		{
 			return;
 		}
