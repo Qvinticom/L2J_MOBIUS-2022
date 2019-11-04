@@ -18,35 +18,30 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.data.xml.impl.SkillData;
 import org.l2jmobius.gameserver.model.TimeStamp;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * Skill Cool Time server packet implementation.
- * @author KenM, Zoey76
+ * @author KenM, Zoey76, Mobius
  */
 public class SkillCoolTime implements IClientOutgoingPacket
 {
+	private final long _currentTime;
 	private final List<TimeStamp> _skillReuseTimeStamps = new ArrayList<>();
 	
 	public SkillCoolTime(PlayerInstance player)
 	{
-		final Map<Long, TimeStamp> skillReuseTimeStamps = player.getSkillReuseTimeStamps();
-		if (skillReuseTimeStamps != null)
+		_currentTime = System.currentTimeMillis();
+		for (TimeStamp ts : player.getSkillReuseTimeStamps().values())
 		{
-			for (TimeStamp ts : skillReuseTimeStamps.values())
+			if ((_currentTime < ts.getStamp()) && !SkillData.getInstance().getSkill(ts.getSkillId(), ts.getSkillLvl(), ts.getSkillSubLvl()).isNotBroadcastable())
 			{
-				final Skill skill = SkillData.getInstance().getSkill(ts.getSkillId(), ts.getSkillLvl(), ts.getSkillSubLvl());
-				if (ts.hasNotPassed() && !skill.isNotBroadcastable())
-				{
-					_skillReuseTimeStamps.add(ts);
-				}
+				_skillReuseTimeStamps.add(ts);
 			}
 		}
 	}
@@ -62,7 +57,7 @@ public class SkillCoolTime implements IClientOutgoingPacket
 			packet.writeD(ts.getSkillId());
 			packet.writeD(0x00); // ?
 			packet.writeD((int) ts.getReuse() / 1000);
-			packet.writeD((int) ts.getRemaining() / 1000);
+			packet.writeD((int) Math.max(ts.getStamp() - _currentTime, 0) / 1000);
 		}
 		return true;
 	}

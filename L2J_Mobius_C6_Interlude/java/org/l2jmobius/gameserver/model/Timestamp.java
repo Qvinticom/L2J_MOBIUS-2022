@@ -93,7 +93,16 @@ public class Timestamp
 	 */
 	public long getRemaining()
 	{
-		return Math.max(_stamp - System.currentTimeMillis(), 0);
+		if (_stamp == 0)
+		{
+			return 0;
+		}
+		final long remainingTime = Math.max(_stamp - System.currentTimeMillis(), 0);
+		if (remainingTime == 0)
+		{
+			_stamp = 0;
+		}
+		return remainingTime;
 	}
 	
 	/**
@@ -102,6 +111,15 @@ public class Timestamp
 	 */
 	public boolean hasNotPassed()
 	{
-		return System.currentTimeMillis() < _stamp;
+		if (_stamp == 0)
+		{
+			return false;
+		}
+		final boolean hasNotPassed = System.currentTimeMillis() < _stamp;
+		if (!hasNotPassed)
+		{
+			_stamp = 0;
+		}
+		return hasNotPassed;
 	}
 }

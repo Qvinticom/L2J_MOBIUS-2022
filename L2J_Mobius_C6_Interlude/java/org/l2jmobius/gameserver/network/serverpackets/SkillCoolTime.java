@@ -21,12 +21,18 @@ import java.util.Collection;
 import org.l2jmobius.gameserver.model.Timestamp;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
+/**
+ * Skill Cool Time server packet implementation.
+ * @author KenM, Zoey76, Mobius
+ */
 public class SkillCoolTime extends GameServerPacket
 {
+	private final long _currentTime;
 	public Collection<Timestamp> _reuseTimestamps;
 	
 	public SkillCoolTime(PlayerInstance player)
 	{
+		_currentTime = System.currentTimeMillis();
 		_reuseTimestamps = player.getReuseTimeStamps();
 	}
 	
@@ -40,12 +46,12 @@ public class SkillCoolTime extends GameServerPacket
 		}
 		writeC(0xc1);
 		writeD(_reuseTimestamps.size());
-		for (Timestamp reuseTimestamp : _reuseTimestamps)
+		for (Timestamp ts : _reuseTimestamps)
 		{
-			writeD(reuseTimestamp.getSkillId());
-			writeD(reuseTimestamp.getSkillLevel());
-			writeD((int) reuseTimestamp.getReuse() / 1000);
-			writeD((int) reuseTimestamp.getRemaining() / 1000);
+			writeD(ts.getSkillId());
+			writeD(ts.getSkillLevel());
+			writeD((int) ts.getReuse() / 1000);
+			writeD((int) Math.max(ts.getStamp() - _currentTime, 0) / 1000);
 		}
 	}
 }

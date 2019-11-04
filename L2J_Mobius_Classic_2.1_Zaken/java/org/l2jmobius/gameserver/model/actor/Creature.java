@@ -211,11 +211,11 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	/** Map containing all skills of this character. */
 	private final Map<Integer, Skill> _skills = new ConcurrentSkipListMap<>();
 	/** Map containing the skill reuse time stamps. */
-	private volatile Map<Long, TimeStamp> _reuseTimeStampsSkills = null;
+	private final Map<Long, TimeStamp> _reuseTimeStampsSkills = new ConcurrentHashMap<>();
 	/** Map containing the item reuse time stamps. */
-	private volatile Map<Integer, TimeStamp> _reuseTimeStampsItems = null;
+	private final Map<Integer, TimeStamp> _reuseTimeStampsItems = new ConcurrentHashMap<>();
 	/** Map containing all the disabled skills. */
-	private volatile Map<Long, Long> _disabledSkills = null;
+	private final Map<Long, Long> _disabledSkills = new ConcurrentHashMap<>();
 	private boolean _allSkillsDisabled;
 	
 	private final byte[] _zones = new byte[ZoneId.getZoneCount()];
@@ -1341,16 +1341,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 */
 	public void addTimeStampItem(ItemInstance item, long reuse, long systime)
 	{
-		if (_reuseTimeStampsItems == null)
-		{
-			synchronized (this)
-			{
-				if (_reuseTimeStampsItems == null)
-				{
-					_reuseTimeStampsItems = new ConcurrentHashMap<>();
-				}
-			}
-		}
 		_reuseTimeStampsItems.put(item.getObjectId(), new TimeStamp(item, reuse, systime));
 	}
 	
@@ -1359,9 +1349,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 * @param itemObjId the item object ID
 	 * @return if the item has a reuse time stamp, the remaining time, otherwise -1
 	 */
-	public synchronized long getItemRemainingReuseTime(int itemObjId)
+	public long getItemRemainingReuseTime(int itemObjId)
 	{
-		final TimeStamp reuseStamp = (_reuseTimeStampsItems != null) ? _reuseTimeStampsItems.get(itemObjId) : null;
+		final TimeStamp reuseStamp = _reuseTimeStampsItems.get(itemObjId);
 		return reuseStamp != null ? reuseStamp.getRemaining() : -1;
 	}
 	
@@ -1372,13 +1362,18 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 */
 	public long getReuseDelayOnGroup(int group)
 	{
-		if ((group > 0) && (_reuseTimeStampsItems != null))
+		if ((group > 0) && !_reuseTimeStampsItems.isEmpty())
 		{
+			final long currentTime = System.currentTimeMillis();
 			for (TimeStamp ts : _reuseTimeStampsItems.values())
 			{
-				if ((ts.getSharedReuseGroup() == group) && ts.hasNotPassed())
+				if (ts.getSharedReuseGroup() == group)
 				{
-					return ts.getRemaining();
+					final long stamp = ts.getStamp();
+					if (currentTime < stamp)
+					{
+						return Math.max(stamp - currentTime, 0);
+					}
 				}
 			}
 		}
@@ -1413,16 +1408,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 */
 	public void addTimeStamp(Skill skill, long reuse, long systime)
 	{
-		if (_reuseTimeStampsSkills == null)
-		{
-			synchronized (this)
-			{
-				if (_reuseTimeStampsSkills == null)
-				{
-					_reuseTimeStampsSkills = new ConcurrentHashMap<>();
-				}
-			}
-		}
 		_reuseTimeStampsSkills.put(skill.getReuseHashCode(), new TimeStamp(skill, reuse, systime));
 	}
 	
@@ -1430,23 +1415,17 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 * Removes a skill reuse time stamp.
 	 * @param skill the skill to remove
 	 */
-	public synchronized void removeTimeStamp(Skill skill)
+	public void removeTimeStamp(Skill skill)
 	{
-		if (_reuseTimeStampsSkills != null)
-		{
-			_reuseTimeStampsSkills.remove(skill.getReuseHashCode());
-		}
+		_reuseTimeStampsSkills.remove(skill.getReuseHashCode());
 	}
 	
 	/**
 	 * Removes all skill reuse time stamps.
 	 */
-	public synchronized void resetTimeStamps()
+	public void resetTimeStamps()
 	{
-		if (_reuseTimeStampsSkills != null)
-		{
-			_reuseTimeStampsSkills.clear();
-		}
+		_reuseTimeStampsSkills.clear();
 	}
 	
 	/**
@@ -1454,9 +1433,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 * @param hashCode the skill hash code
 	 * @return if the skill has a reuse time stamp, the remaining time, otherwise -1
 	 */
-	public synchronized long getSkillRemainingReuseTime(long hashCode)
+	public long getSkillRemainingReuseTime(long hashCode)
 	{
-		final TimeStamp reuseStamp = (_reuseTimeStampsSkills != null) ? _reuseTimeStampsSkills.get(hashCode) : null;
+		final TimeStamp reuseStamp = _reuseTimeStampsSkills.get(hashCode);
 		return reuseStamp != null ? reuseStamp.getRemaining() : -1;
 	}
 	
@@ -1465,9 +1444,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 * @param hashCode the skill hash code
 	 * @return {@code true} if the skill is under reuse time, {@code false} otherwise
 	 */
-	public synchronized boolean hasSkillReuse(long hashCode)
+	public boolean hasSkillReuse(long hashCode)
 	{
-		final TimeStamp reuseStamp = (_reuseTimeStampsSkills != null) ? _reuseTimeStampsSkills.get(hashCode) : null;
+		final TimeStamp reuseStamp = _reuseTimeStampsSkills.get(hashCode);
 		return (reuseStamp != null) && reuseStamp.hasNotPassed();
 	}
 	
@@ -1478,7 +1457,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 */
 	public synchronized TimeStamp getSkillReuseTimeStamp(long hashCode)
 	{
-		return _reuseTimeStampsSkills != null ? _reuseTimeStampsSkills.get(hashCode) : null;
+		return _reuseTimeStampsSkills.get(hashCode);
 	}
 	
 	/**
@@ -1496,7 +1475,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 */
 	public void enableSkill(Skill skill)
 	{
-		if ((skill == null) || (_disabledSkills == null))
+		if (skill == null)
 		{
 			return;
 		}
@@ -1515,30 +1494,15 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		{
 			return;
 		}
-		
-		if (_disabledSkills == null)
-		{
-			synchronized (this)
-			{
-				if (_disabledSkills == null)
-				{
-					_disabledSkills = new ConcurrentHashMap<>();
-				}
-			}
-		}
-		
 		_disabledSkills.put(skill.getReuseHashCode(), delay > 0 ? System.currentTimeMillis() + delay : Long.MAX_VALUE);
 	}
 	
 	/**
 	 * Removes all the disabled skills.
 	 */
-	public synchronized void resetDisabledSkills()
+	public void resetDisabledSkills()
 	{
-		if (_disabledSkills != null)
-		{
-			_disabledSkills.clear();
-		}
+		_disabledSkills.clear();
 	}
 	
 	/**
@@ -1569,7 +1533,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			return true;
 		}
 		
-		if (_disabledSkills == null)
+		if (_disabledSkills.isEmpty())
 		{
 			return false;
 		}

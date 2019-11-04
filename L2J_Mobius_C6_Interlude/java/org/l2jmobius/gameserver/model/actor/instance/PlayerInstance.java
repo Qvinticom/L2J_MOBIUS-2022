@@ -9693,9 +9693,9 @@ public class PlayerInstance extends Playable
 			final Effect[] effects = getAllEffects();
 			statement = con.prepareStatement(ADD_SKILL_SAVE);
 			
-			final List<Integer> storedSkills = new ArrayList<>();
-			
 			int buff_index = 0;
+			final List<Integer> storedSkills = new ArrayList<>();
+			final long currentTime = System.currentTimeMillis();
 			
 			for (Effect effect : effects)
 			{
@@ -9717,8 +9717,8 @@ public class PlayerInstance extends Playable
 					if (_reuseTimestamps.containsKey(effect.getSkill().getId()))
 					{
 						final Timestamp t = _reuseTimestamps.get(effect.getSkill().getId());
-						statement.setLong(6, t.hasNotPassed() ? t.getReuse() : 0);
-						statement.setLong(7, t.hasNotPassed() ? t.getStamp() : 0);
+						statement.setLong(6, currentTime < t.getStamp() ? t.getReuse() : 0);
+						statement.setLong(7, currentTime < t.getStamp() ? t.getStamp() : 0);
 					}
 					else
 					{
@@ -9734,7 +9734,7 @@ public class PlayerInstance extends Playable
 			// Store the reuse delays of remaining skills which lost effect but still under reuse delay. 'restore_type' 1.
 			for (Timestamp t : _reuseTimestamps.values())
 			{
-				if (t.hasNotPassed())
+				if (currentTime < t.getStamp())
 				{
 					final int skillId = t.getSkillId();
 					final int skillLvl = t.getSkillLevel();

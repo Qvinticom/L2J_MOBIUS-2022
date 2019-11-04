@@ -7467,6 +7467,7 @@ public class PlayerInstance extends Playable
 			
 			int buff_index = 0;
 			final List<Integer> storedSkills = new ArrayList<>();
+			final long currentTime = System.currentTimeMillis();
 			
 			// Store all effect data along with calulated remaining
 			// reuse delays for matching skills. 'restore_type'= 0.
@@ -7512,8 +7513,8 @@ public class PlayerInstance extends Playable
 						statement.setInt(4, info.getTime());
 						
 						final TimeStamp t = getSkillReuseTimeStamp(skill.getReuseHashCode());
-						statement.setLong(5, (t != null) && t.hasNotPassed() ? t.getReuse() : 0);
-						statement.setLong(6, (t != null) && t.hasNotPassed() ? t.getStamp() : 0);
+						statement.setLong(5, (t != null) && (currentTime < t.getStamp()) ? t.getReuse() : 0);
+						statement.setLong(6, (t != null) && (currentTime < t.getStamp()) ? t.getStamp() : 0);
 						
 						statement.setInt(7, 0); // Store type 0, active buffs/debuffs.
 						statement.setInt(8, _classIndex);
@@ -7523,33 +7524,29 @@ public class PlayerInstance extends Playable
 				}
 				
 				// Skills under reuse.
-				final Map<Integer, TimeStamp> reuseTimeStamps = getSkillReuseTimeStamps();
-				if (reuseTimeStamps != null)
+				for (Entry<Integer, TimeStamp> ts : getSkillReuseTimeStamps().entrySet())
 				{
-					for (Entry<Integer, TimeStamp> ts : reuseTimeStamps.entrySet())
+					final int hash = ts.getKey();
+					if (storedSkills.contains(hash))
 					{
-						final int hash = ts.getKey();
-						if (storedSkills.contains(hash))
-						{
-							continue;
-						}
+						continue;
+					}
+					
+					final TimeStamp t = ts.getValue();
+					if ((t != null) && (currentTime < t.getStamp()))
+					{
+						storedSkills.add(hash);
 						
-						final TimeStamp t = ts.getValue();
-						if ((t != null) && t.hasNotPassed())
-						{
-							storedSkills.add(hash);
-							
-							statement.setInt(1, getObjectId());
-							statement.setInt(2, t.getSkillId());
-							statement.setInt(3, t.getSkillLvl());
-							statement.setInt(4, -1);
-							statement.setLong(5, t.getReuse());
-							statement.setLong(6, t.getStamp());
-							statement.setInt(7, 1); // Restore type 1, skill reuse.
-							statement.setInt(8, _classIndex);
-							statement.setInt(9, ++buff_index);
-							statement.addBatch();
-						}
+						statement.setInt(1, getObjectId());
+						statement.setInt(2, t.getSkillId());
+						statement.setInt(3, t.getSkillLvl());
+						statement.setInt(4, -1);
+						statement.setLong(5, t.getReuse());
+						statement.setLong(6, t.getStamp());
+						statement.setInt(7, 1); // Restore type 1, skill reuse.
+						statement.setInt(8, _classIndex);
+						statement.setInt(9, ++buff_index);
+						statement.addBatch();
 					}
 				}
 				
@@ -7571,23 +7568,20 @@ public class PlayerInstance extends Playable
 			ps1.setInt(1, getObjectId());
 			ps1.execute();
 			
-			final Map<Integer, TimeStamp> itemReuseTimeStamps = getItemReuseTimeStamps();
-			if (itemReuseTimeStamps != null)
+			final long currentTime = System.currentTimeMillis();
+			for (TimeStamp ts : getItemReuseTimeStamps().values())
 			{
-				for (TimeStamp ts : itemReuseTimeStamps.values())
+				if ((ts != null) && (currentTime < ts.getStamp()))
 				{
-					if ((ts != null) && ts.hasNotPassed())
-					{
-						ps2.setInt(1, getObjectId());
-						ps2.setInt(2, ts.getItemId());
-						ps2.setInt(3, ts.getItemObjectId());
-						ps2.setLong(4, ts.getReuse());
-						ps2.setLong(5, ts.getStamp());
-						ps2.addBatch();
-					}
+					ps2.setInt(1, getObjectId());
+					ps2.setInt(2, ts.getItemId());
+					ps2.setInt(3, ts.getItemObjectId());
+					ps2.setLong(4, ts.getReuse());
+					ps2.setLong(5, ts.getStamp());
+					ps2.addBatch();
 				}
-				ps2.executeBatch();
 			}
+			ps2.executeBatch();
 		}
 		catch (Exception e)
 		{
