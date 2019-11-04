@@ -6,14 +6,53 @@
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
 		<effectPoint>408</effectPoint>
+		<magicLvl>40</magicLvl>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="HealPercent">
+				<power>2</power>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ManaHealPercent">
+				<power>2</power>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DispelByCategory">
+				<slot>DEBUFF</slot>
+				<rate>100</rate>
+				<max>10</max>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="30801" toLevel="1" name="Novice Cubic Gain Soul">
 		<!-- Removes debuffs. Heals 600 HP and increases Debuff Resistance by 3% for 6 sec. -->
 		<icon>icon.skill1206</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<reuseDelay>5000</reuseDelay>
 		<effectPoint>408</effectPoint>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>6</abnormalTime>
+		<magicLvl>40</magicLvl>
+		<activateRate>80</activateRate>
+		<basicProperty>MAGIC</basicProperty>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Heal">
+				<power>600</power>
+			</effect>
+			<effect name="DispelByCategory">
+				<slot>DEBUFF</slot>
+				<rate>100</rate>
+				<max>10</max>
+			</effect>
+			<effect name="ResistAbnormalByCategory">
+				<amount>3</amount>
+				<slot>DEBUFF</slot>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="30802" toLevel="1" name="Sword/ Blunt Weapon Mastery">
 		<!-- When a sword or blunt weapon is equipped, P. Atk. +5%+51, P. Accuracy + 4, and each normal attack increases the enmity toward you. In addition, STR increases by 1 and depending on your STR, the skill Cooldown resets or duration increases 2-fold. -->

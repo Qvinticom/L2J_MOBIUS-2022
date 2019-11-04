@@ -81,4 +81,13 @@
 			<skill id="10085" level="9" target="MASTER" /> <!-- Cubic Gain Soul -->
 		</skills>
 	</cubic>
+	<cubic id="25" level="101" slot="16" duration="900" delay="20" maxCount="50" useUp="0" power="2106.0" targetType="BY_SKILL">
+		<conditions>
+			<hp type="GREATER" percent="30" />
+			<range value="1000" />
+		</conditions>
+		<skills>
+			<skill id="30801" level="1" target="MASTER" /> <!-- Novice Cubic Gain Soul -->
+		</skills>
+	</cubic>
 </list>

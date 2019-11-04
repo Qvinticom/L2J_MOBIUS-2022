@@ -81,4 +81,13 @@
 			<skill id="10084" level="9" target="MASTER" /> <!-- Cubic Healing Wave -->
 		</skills>
 	</cubic>
+	<cubic id="23" level="101" slot="14" duration="900" delay="20" maxCount="50" useUp="0" power="2106.0" targetType="BY_SKILL">
+		<conditions>
+			<hp type="GREATER" percent="30" />
+			<range value="1000" />
+		</conditions>
+		<skills>
+			<skill id="30800" level="1" target="MASTER" /> <!--Novice Cubic Healing Wave -->
+		</skills>
+	</cubic>
 </list>

@@ -81,4 +81,13 @@
 			<skill id="19573" level="9" target="MASTER" /> <!-- Cubic Fire Bless -->
 		</skills>
 	</cubic>
+	<cubic id="24" level="101" slot="12" duration="900" delay="30" maxCount="50" useUp="0" power="2106.0" targetType="BY_SKILL">
+		<conditions>
+			<hp type="GREATER" percent="30" />
+			<range value="1000" />
+		</conditions>
+		<skills>
+			<skill id="30799" level="1" target="MASTER" /> <!-- Novice Cubic Fire Bless -->
+		</skills>
+	</cubic>
 </list>

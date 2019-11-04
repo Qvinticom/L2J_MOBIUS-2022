@@ -2319,9 +2319,7 @@
 		<effects>
 			<effect name="SummonCubic">
 				<cubicId>24</cubicId>
-				<cubicLvl>
-					<value level="1">1</value>
-				</cubicLvl>
+				<cubicLvl>101</cubicLvl>
 			</effect>
 		</effects>
 	</skill>
@@ -2789,9 +2787,7 @@
 		<effects>
 			<effect name="SummonCubic">
 				<cubicId>23</cubicId>
-				<cubicLvl>
-					<value level="1">1</value>
-				</cubicLvl>
+				<cubicLvl>101</cubicLvl>
 			</effect>
 		</effects>
 	</skill>
@@ -3159,7 +3155,7 @@
 		<effects>
 			<effect name="SummonCubic">
 				<cubicId>25</cubicId>
-				<cubicLvl>1</cubicLvl>
+				<cubicLvl>101</cubicLvl>
 			</effect>
 		</effects>
 	</skill>
@@ -3857,7 +3853,7 @@
 	<skill id="30699" toLevel="1" name="Novice Void Destruction">
 		<!-- Deals M. Atk. of 86 power added with Dark damage on the target. Additionally, decreases M. Def. by 10% and increases M. Critical Rate Received by 25% for 10 sec. Over-hit is possible. -->
 		<icon>icon.skill19316</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<isDebuff>true</isDebuff>
 		<castRange>1100</castRange>
@@ -3866,5 +3862,29 @@
 		<reuseDelay>6700</reuseDelay>
 		<effectPoint>-687</effectPoint>
 		<mpConsume>12</mpConsume>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>BODY_DESTRUCTION</abnormalType>
+		<attributeType>DARK</attributeType>
+		<attributeValue>20</attributeValue>
+		<magicLvl>40</magicLvl>
+		<effectRange>1800</effectRange>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>1</hitCancelTime>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>86</power>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>-10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceMagicCriticalRate">
+				<amount>-25</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 </list>
