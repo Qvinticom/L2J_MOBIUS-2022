@@ -2507,7 +2507,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		{
 			synchronized (this)
 			{
-				if (_ai == null)
+				ai = _ai;
+				if (ai == null)
 				{
 					_ai = ai = initAI();
 				}
