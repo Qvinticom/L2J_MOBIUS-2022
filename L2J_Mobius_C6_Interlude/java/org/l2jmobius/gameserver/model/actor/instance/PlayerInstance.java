@@ -114,6 +114,7 @@ import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.Skill.SkillTargetType;
 import org.l2jmobius.gameserver.model.Skill.SkillType;
 import org.l2jmobius.gameserver.model.SkillLearn;
+import org.l2jmobius.gameserver.model.Timestamp;
 import org.l2jmobius.gameserver.model.TradeList;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
@@ -148,7 +149,6 @@ import org.l2jmobius.gameserver.model.entity.siege.FortSiege;
 import org.l2jmobius.gameserver.model.entity.siege.Siege;
 import org.l2jmobius.gameserver.model.entity.siege.clanhalls.DevastatedCastle;
 import org.l2jmobius.gameserver.model.holders.PlayerStatsHolder;
-import org.l2jmobius.gameserver.model.holders.TimestampHolder;
 import org.l2jmobius.gameserver.model.items.Armor;
 import org.l2jmobius.gameserver.model.items.Henna;
 import org.l2jmobius.gameserver.model.items.Item;
@@ -527,7 +527,7 @@ public class PlayerInstance extends Playable
 	private final List<Integer> _selectedBlocksList = new ArrayList<>(); // Related to CB.
 	private int _mailPosition;
 	private FishData _fish;
-	private final Map<Integer, TimestampHolder> _reuseTimestamps = new ConcurrentHashMap<>();
+	private final Map<Integer, Timestamp> _reuseTimestamps = new ConcurrentHashMap<>();
 	boolean _gmStatus = true; // true by default since this is used by GMS
 	public WorldObject _saymode = null;
 	String Dropzor = "Coin of Luck";
@@ -9716,7 +9716,7 @@ public class PlayerInstance extends Playable
 					statement.setInt(5, effect.getTime());
 					if (_reuseTimestamps.containsKey(effect.getSkill().getId()))
 					{
-						final TimestampHolder t = _reuseTimestamps.get(effect.getSkill().getId());
+						final Timestamp t = _reuseTimestamps.get(effect.getSkill().getId());
 						statement.setLong(6, t.hasNotPassed() ? t.getReuse() : 0);
 						statement.setLong(7, t.hasNotPassed() ? t.getStamp() : 0);
 					}
@@ -9732,7 +9732,7 @@ public class PlayerInstance extends Playable
 				}
 			}
 			// Store the reuse delays of remaining skills which lost effect but still under reuse delay. 'restore_type' 1.
-			for (TimestampHolder t : _reuseTimestamps.values())
+			for (Timestamp t : _reuseTimestamps.values())
 			{
 				if (t.hasNotPassed())
 				{
@@ -10188,7 +10188,7 @@ public class PlayerInstance extends Playable
 					}
 					
 					disableSkill(skill, remainingTime);
-					addTimestamp(new TimestampHolder(skill, reuseDelay, systime));
+					addTimestamp(new Timestamp(skill, reuseDelay, systime));
 				}
 			}
 			rset.close();
@@ -10218,7 +10218,7 @@ public class PlayerInstance extends Playable
 					}
 					
 					disableSkill(skill, remainingTime);
-					addTimestamp(new TimestampHolder(skill, reuseDelay, systime));
+					addTimestamp(new Timestamp(skill, reuseDelay, systime));
 				}
 			}
 			rset.close();
@@ -16216,14 +16216,14 @@ public class PlayerInstance extends Playable
 	 */
 	public void addTimestamp(Skill s, int r)
 	{
-		_reuseTimestamps.put(s.getId(), new TimestampHolder(s, r));
+		_reuseTimestamps.put(s.getId(), new Timestamp(s, r));
 	}
 	
 	/**
 	 * Index according to skill this TimeStamp instance for restoration purposes only.
 	 * @param t the t
 	 */
-	private void addTimestamp(TimestampHolder t)
+	private void addTimestamp(Timestamp t)
 	{
 		_reuseTimestamps.put(t.getSkillId(), t);
 	}
@@ -16237,7 +16237,7 @@ public class PlayerInstance extends Playable
 		_reuseTimestamps.remove(skill.getId());
 	}
 	
-	public Collection<TimestampHolder> getReuseTimeStamps()
+	public Collection<Timestamp> getReuseTimeStamps()
 	{
 		return _reuseTimestamps.values();
 	}

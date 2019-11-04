@@ -18,12 +18,12 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.Collection;
 
+import org.l2jmobius.gameserver.model.Timestamp;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.holders.TimestampHolder;
 
 public class SkillCoolTime extends GameServerPacket
 {
-	public Collection<TimestampHolder> _reuseTimestamps;
+	public Collection<Timestamp> _reuseTimestamps;
 	
 	public SkillCoolTime(PlayerInstance player)
 	{
@@ -40,7 +40,7 @@ public class SkillCoolTime extends GameServerPacket
 		}
 		writeC(0xc1);
 		writeD(_reuseTimestamps.size());
-		for (TimestampHolder reuseTimestamp : _reuseTimestamps)
+		for (Timestamp reuseTimestamp : _reuseTimestamps)
 		{
 			writeD(reuseTimestamp.getSkillId());
 			writeD(reuseTimestamp.getSkillLevel());
