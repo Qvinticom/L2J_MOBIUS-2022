@@ -1742,12 +1742,18 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 * Gets this creature's AI.
 	 * @return the AI
 	 */
-	public synchronized CreatureAI getAI()
+	public CreatureAI getAI()
 	{
 		CreatureAI ai = _ai;
 		if (ai == null)
 		{
-			_ai = ai = initAI();
+			synchronized (this)
+			{
+				if (_ai == null)
+				{
+					_ai = ai = initAI();
+				}
+			}
 		}
 		return ai;
 	}
