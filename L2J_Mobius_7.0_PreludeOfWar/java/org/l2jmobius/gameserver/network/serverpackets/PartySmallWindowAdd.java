@@ -53,6 +53,7 @@ public class PartySmallWindowAdd implements IClientOutgoingPacket
 		packet.writeH(_member.getClassId().getId());
 		packet.writeC(0x00);
 		packet.writeH(_member.getRace().ordinal());
+		packet.writeD(0x00); // 228
 		return true;
 	}
 }
