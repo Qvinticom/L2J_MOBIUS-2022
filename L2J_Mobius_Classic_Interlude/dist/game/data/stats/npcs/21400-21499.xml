@@ -1,5 +1,2631 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
+	<npc id="21400" level="78" type="Monster" name="Hexa Beetle">
+		<!-- Interlude - C6 -->
+		<parameters>
+			<param name="MoveAroundSocial" value="80" />
+			<param name="MoveAroundSocial1" value="80" />
+			<param name="MoveAroundSocial2" value="80" />
+			<skill name="PhysicalSpecial" id="4573" level="8" /> <!-- NPC Sonic Blaster -->
+		</parameters>
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<equipment rhand="0" lhand="0" /> <!-- ... / ... -->
+		<acquire exp="32224" sp="3660" raidPoints="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2870.7774087" hpRegen="8.585" mp="1657.41" mpRegen="3.03" />
+			<attack physical="884.2525659" magical="609.868172336" random="30" critical="4" accuracy="5.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="340.4407808" magical="226.669315301277" evasion="1" />
+			<speed>
+				<walk ground="45" />
+				<run ground="145" />
+			</speed>
+			<hitTime>590</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4071" level="5" /> <!-- Resist Archery -->
+			<skill id="4274" level="1" /> <!-- Blunt Attack Weak Point -->
+			<skill id="4408" level="13" /> <!-- HP Modifiers -->
+			<skill id="4416" level="12" /> <!-- Bug -->
+			<skill id="4437" level="4" /> <!-- Greater Resist Bleeding -->
+			<skill id="4573" level="8" /> <!-- NPC Sonic Blaster -->
+		</skillList>
+		<shots shotChance="0" spiritChance="0" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>5</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="300">
+			<clanList>
+				<clan>TOMB</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="25" grown="30" />
+			<height normal="54.5" grown="67" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="4652" max="9494" chance="70"/> <!-- Adena -->
+				<item id="305" min="1" max="1" chance="0.0013"/> <!-- Tallum Glaive -->
+				<item id="959" min="1" max="1" chance="0.0023"/> <!-- Scroll: Enchant Weapon (Grade S) -->
+				<item id="1868" min="3" max="9" chance="14.2857"/> <!-- Thread -->
+				<item id="1873" min="1" max="1" chance="16.6667"/> <!-- Silver Nugget -->
+				<item id="1876" min="1" max="1" chance="8.3333"/> <!-- Mithril Ore -->
+				<item id="1895" min="1" max="1" chance="10.0000"/> <!-- Metallic Fiber -->
+				<item id="4042" min="1" max="1" chance="0.6061"/> <!-- Enria -->
+				<item id="5541" min="1" max="1" chance="0.4683"/> <!-- Tallum Glaive Edge -->
+				<item id="8732" min="1" max="1" chance="0.4717"/> <!-- Life Stone: level 76 -->
+				<item id="8742" min="1" max="1" chance="0.0225"/> <!-- Mid-Grade Life Stone: level 76 -->
+				<item id="8752" min="1" max="1" chance="0.0225"/> <!-- High-Grade Life Stone: level 76 -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="21401" level="78" type="Monster" name="Hexa Beetle">
+		<!-- Interlude - C6 -->
+		<parameters>
+			<param name="MoveAroundSocial" value="80" />
+			<param name="MoveAroundSocial1" value="80" />
+			<param name="MoveAroundSocial2" value="80" />
+			<skill name="W_LongRangeDDMagic" id="4573" level="8" /> <!-- NPC Sonic Blaster -->
+			<skill name="SelfRangeDDMagic" id="4072" level="8" /> <!-- Shock -->
+		</parameters>
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<equipment rhand="0" lhand="0" /> <!-- ... / ... -->
+		<acquire exp="28351" sp="3224" raidPoints="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2870.7774087" hpRegen="8.585" mp="1657.41" mpRegen="3.03" />
+			<attack physical="884.2525659" magical="609.868172336" random="30" critical="4" accuracy="5.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="340.4407808" magical="226.669315301277" evasion="1" />
+			<speed>
+				<walk ground="45" />
+				<run ground="145" />
+			</speed>
+			<hitTime>590</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4071" level="5" /> <!-- Resist Archery -->
+			<skill id="4072" level="8" /> <!-- Shock -->
+			<skill id="4274" level="1" /> <!-- Blunt Attack Weak Point -->
+			<skill id="4408" level="12" /> <!-- HP Modifiers -->
+			<skill id="4410" level="12" /> <!-- P. Atk. Modifiers -->
+			<skill id="4411" level="12" /> <!-- M. Atk. Modifiers -->
+			<skill id="4412" level="10" /> <!-- P. Def. Modifiers -->
+			<skill id="4413" level="10" /> <!-- M. Def. Modifiers -->
+			<skill id="4416" level="12" /> <!-- Bug -->
+			<skill id="4437" level="4" /> <!-- Greater Resist Bleeding -->
+			<skill id="4573" level="8" /> <!-- NPC Sonic Blaster -->
+		</skillList>
+		<shots shotChance="0" spiritChance="0" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="300">
+			<clanList>
+				<clan>TOMB</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="25" grown="30" />
+			<height normal="54.5" grown="67" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="4094" max="8354" chance="70"/> <!-- Adena -->
+				<item id="305" min="1" max="1" chance="0.0012"/> <!-- Tallum Glaive -->
+				<item id="959" min="1" max="1" chance="0.0021"/> <!-- Scroll: Enchant Weapon (Grade S) -->
+				<item id="1868" min="3" max="9" chance="11.1111"/> <!-- Thread -->
+				<item id="1873" min="1" max="1" chance="14.2857"/> <!-- Silver Nugget -->
+				<item id="1876" min="1" max="1" chance="10.0172"/> <!-- Mithril Ore -->
+				<item id="1895" min="1" max="1" chance="10.0000"/> <!-- Metallic Fiber -->
+				<item id="4042" min="1" max="1" chance="0.8348"/> <!-- Enria -->
+				<item id="5541" min="1" max="1" chance="0.4121"/> <!-- Tallum Glaive Edge -->
+			</drop>
+			<spoil>
+				<item id="1876" min="1" max="5" chance="67.8250"/> <!-- Mithril Ore -->
+				<item id="4042" min="1" max="1" chance="16.9563"/> <!-- Enria -->
+				<item id="5528" min="1" max="1" chance="12.1637"/> <!-- Sealed Majestic Circlet Design -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="21402" level="78" type="Monster" name="Katraxis">
+		<!-- Interlude - C6 -->
+		<parameters>
+			<param name="MoveAroundSocial" value="85" />
+			<param name="MoveAroundSocial1" value="85" />
+			<param name="MoveAroundSocial2" value="85" />
+			<skill name="SelfRangeDDMagic" id="4072" level="8" /> <!-- Shock -->
+			<skill name="SelfBuff" id="4090" level="1" /> <!-- NPC Wolf Spirit Totem -->
+			<skill name="PhysicalSpecial" id="4032" level="8" /> <!-- NPC Strike -->
+		</parameters>
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<equipment rhand="0" lhand="0" /> <!-- ... / ... -->
+		<acquire exp="29257" sp="3324" raidPoints="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2870.7774087" hpRegen="8.585" mp="1657.41" mpRegen="3.03" />
+			<attack physical="884.2525659" magical="609.868172336" random="10" critical="8" accuracy="1" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="340.4407808" magical="226.669315301277" evasion="1" />
+			<speed>
+				<walk ground="37" />
+				<run ground="165" />
+			</speed>
+			<hitTime>540</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4032" level="8" /> <!-- NPC Strike -->
+			<skill id="4071" level="5" /> <!-- Resist Archery -->
+			<skill id="4072" level="8" /> <!-- Shock -->
+			<skill id="4090" level="1" /> <!-- NPC Wolf Spirit Totem -->
+			<skill id="4274" level="1" /> <!-- Blunt Attack Weak Point -->
+			<skill id="4408" level="12" /> <!-- HP Modifiers -->
+			<skill id="4416" level="12" /> <!-- Bug -->
+			<skill id="4437" level="4" /> <!-- Greater Resist Bleeding -->
+		</skillList>
+		<shots shotChance="0" spiritChance="0" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+			<clanList>
+				<clan>TOMB</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="24" />
+			<height normal="52.8" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="4224" max="8620" chance="70"/> <!-- Adena -->
+				<item id="289" min="1" max="1" chance="0.0012"/> <!-- Soul Bow -->
+				<item id="959" min="1" max="1" chance="0.0021"/> <!-- Scroll: Enchant Weapon (Grade S) -->
+				<item id="1868" min="3" max="9" chance="12.5000"/> <!-- Thread -->
+				<item id="1873" min="1" max="1" chance="14.2857"/> <!-- Silver Nugget -->
+				<item id="1889" min="1" max="1" chance="2.0000"/> <!-- Compound Braid -->
+				<item id="4044" min="1" max="1" chance="1.0753"/> <!-- Thons -->
+				<item id="5534" min="1" max="1" chance="0.4257"/> <!-- Soul Bow Stave -->
+				<item id="5549" min="1" max="1" chance="3.0303"/> <!-- Metallic Thread -->
+				<item id="8732" min="1" max="1" chance="0.1080"/> <!-- Life Stone: level 76 -->
+				<item id="8742" min="1" max="1" chance="0.0360"/> <!-- Mid-Grade Life Stone: level 76 -->
+			</drop>
+			<spoil>
+				<item id="4044" min="1" max="1" chance="34.9920"/> <!-- Thons -->
+				<item id="5157" min="1" max="1" chance="0.4666"/> <!-- Recipe: Soulshot (S) Compressed Package (100%) -->
+				<item id="5534" min="1" max="1" chance="2.8820"/> <!-- Soul Bow Stave -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="21403" level="78" type="Monster" name="Katraxis">
+		<!-- Interlude - C6 -->
+		<parameters>
+			<param name="MoveAroundSocial" value="85" />
+			<param name="MoveAroundSocial1" value="85" />
+			<param name="MoveAroundSocial2" value="85" />
+			<skill name="PhysicalSpecial" id="4643" level="8" /> <!-- Decrease Speed -->
+		</parameters>
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<equipment rhand="0" lhand="0" /> <!-- ... / ... -->
+		<acquire exp="33769" sp="3835" raidPoints="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2870.7774087" hpRegen="8.585" mp="1657.41" mpRegen="3.03" />
+			<attack physical="884.2525659" magical="609.868172336" random="10" critical="8" accuracy="1" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="340.4407808" magical="226.669315301277" evasion="1" />
+			<speed>
+				<walk ground="37" />
+				<run ground="165" />
+			</speed>
+			<hitTime>540</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4071" level="5" /> <!-- Resist Archery -->
+			<skill id="4274" level="1" /> <!-- Blunt Attack Weak Point -->
+			<skill id="4408" level="13" /> <!-- HP Modifiers -->
+			<skill id="4416" level="12" /> <!-- Bug -->
+			<skill id="4437" level="4" /> <!-- Greater Resist Bleeding -->
+			<skill id="4643" level="8" /> <!-- Decrease Speed -->
+		</skillList>
+		<shots shotChance="0" spiritChance="0" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>5</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+			<clanList>
+				<clan>TOMB</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="24" />
+			<height normal="52.8" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="4875" max="9950" chance="70"/> <!-- Adena -->
+				<item id="289" min="1" max="1" chance="0.0014"/> <!-- Soul Bow -->
+				<item id="959" min="1" max="1" chance="0.0024"/> <!-- Scroll: Enchant Weapon (Grade S) -->
+				<item id="1868" min="3" max="9" chance="12.5000"/> <!-- Thread -->
+				<item id="1873" min="1" max="1" chance="16.6667"/> <!-- Silver Nugget -->
+				<item id="1889" min="1" max="1" chance="2.9412"/> <!-- Compound Braid -->
+				<item id="4044" min="1" max="1" chance="1.1628"/> <!-- Thons -->
+				<item id="5534" min="1" max="1" chance="0.4913"/> <!-- Soul Bow Stave -->
+				<item id="5549" min="1" max="1" chance="3.8462"/> <!-- Metallic Thread -->
+				<item id="8732" min="1" max="1" chance="0.2415"/> <!-- Life Stone: level 76 -->
+				<item id="8742" min="1" max="1" chance="0.0805"/> <!-- Mid-Grade Life Stone: level 76 -->
+				<item id="8752" min="1" max="1" chance="0.0147"/> <!-- High-Grade Life Stone: level 76 -->
+			</drop>
+			<spoil>
+				<item id="4044" min="1" max="1" chance="40.3892"/> <!-- Thons -->
+				<item id="5157" min="1" max="1" chance="0.5385"/> <!-- Recipe: Soulshot (S) Compressed Package (100%) -->
+				<item id="5534" min="1" max="1" chance="3.3265"/> <!-- Soul Bow Stave -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="21404" level="78" type="Monster" name="Tera Beetle">
+		<!-- Interlude - C6 -->
+		<parameters>
+			<param name="MoveAroundSocial" value="80" />
+			<param name="MoveAroundSocial1" value="80" />
+			<param name="MoveAroundSocial2" value="80" />
+			<skill name="W_LongRangeDDMagic" id="4157" level="9" /> <!-- NPC Blaze - Magic -->
+			<skill name="W_ShortRangeDDMagic" id="4561" level="9" /> <!-- NPC Fire Burn - Magic -->
+			<skill name="W_ClanBuff" id="4576" level="3" /> <!-- NPC Clan Buff - Damage Shield -->
+		</parameters>
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<equipment rhand="0" lhand="0" /> <!-- ... / ... -->
+		<acquire exp="56681" sp="6692" raidPoints="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2937.9838056" hpRegen="8.67" mp="1708.296" mpRegen="3.06" />
+			<attack physical="912.6537108" magical="635.688655236" random="30" critical="4" accuracy="6.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="348.2025" magical="231.837152158566" evasion="2" />
+			<speed>
+				<walk ground="45" />
+				<run ground="185" />
+			</speed>
+			<hitTime>590</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4071" level="5" /> <!-- Resist Archery -->
+			<skill id="4157" level="9" /> <!-- NPC Blaze - Magic -->
+			<skill id="4274" level="1" /> <!-- Blunt Attack Weak Point -->
+			<skill id="4408" level="12" /> <!-- HP Modifiers -->
+			<skill id="4410" level="10" /> <!-- P. Atk. Modifiers -->
+			<skill id="4411" level="10" /> <!-- M. Atk. Modifiers -->
+			<skill id="4412" level="20" /> <!-- P. Def. Modifiers -->
+			<skill id="4413" level="12" /> <!-- M. Def. Modifiers -->
+			<skill id="4416" level="12" /> <!-- Bug -->
+			<skill id="4437" level="4" /> <!-- Greater Resist Bleeding -->
+			<skill id="4561" level="9" /> <!-- NPC Fire Burn - Magic -->
+			<skill id="4576" level="3" /> <!-- NPC Clan Buff - Damage Shield -->
+		</skillList>
+		<shots shotChance="0" spiritChance="0" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clanList>
+				<clan>TOMB</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="25" grown="30" />
+			<height normal="54.5" grown="67" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="5642" max="11518" chance="70"/> <!-- Adena -->
+				<item id="5326" min="1" max="1" chance="0.0027"/> <!-- Sealed Nightmare Robe -->
+				<item id="5329" min="1" max="1" chance="0.0027"/> <!-- Sealed Majestic Robe -->
+				<item id="959" min="1" max="1" chance="0.0028"/> <!-- Scroll: Enchant Weapon (Grade S) -->
+				<item id="1867" min="1" max="3" chance="3.1250"/> <!-- Animal Skin -->
+				<item id="1869" min="2" max="6" chance="12.5000"/> <!-- Iron Ore -->
+				<item id="1870" min="2" max="6" chance="9.0909"/> <!-- Coal -->
+				<item id="1871" min="3" max="9" chance="10.0000"/> <!-- Charcoal -->
+				<item id="1872" min="7" max="21" chance="5.0000"/> <!-- Animal Bone -->
+				<item id="5487" min="1" max="1" chance="0.4665"/> <!-- Sealed Nightmare Robe Fabric -->
+				<item id="5488" min="1" max="1" chance="0.4665"/> <!-- Sealed Majestic Robe Fabric -->
+				<item id="8732" min="1" max="1" chance="0.5000"/> <!-- Life Stone: level 76 -->
+				<item id="8742" min="1" max="1" chance="0.0385"/> <!-- Mid-Grade Life Stone: level 76 -->
+			</drop>
+			<spoil>
+				<item id="5167" min="1" max="1" chance="0.6233"/> <!-- Recipe: Blessed Spiritshot (S) Compressed Package (100%) -->
+				<item id="5515" min="1" max="1" chance="23.6857"/> <!-- Sealed Majestic Gauntlets Design -->
+				<item id="6901" min="1" max="1" chance="1.4024"/> <!-- Recipe: Shining Arrow (100%) -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="21405" level="78" type="Monster" name="Tera Beetle">
+		<!-- Interlude - C6 -->
+		<parameters>
+			<param name="MoveAroundSocial" value="80" />
+			<param name="MoveAroundSocial1" value="80" />
+			<param name="MoveAroundSocial2" value="80" />
+			<skill name="DDMagic" id="4001" level="9" /> <!-- NPC Windstrike -->
+			<skill name="SelfBuff" id="4029" level="3" /> <!-- NPC Shield -->
+		</parameters>
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<equipment rhand="0" lhand="0" /> <!-- ... / ... -->
+		<acquire exp="27174" sp="3208" raidPoints="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2937.9838056" hpRegen="8.67" mp="1708.296" mpRegen="3.06" />
+			<attack physical="912.6537108" magical="635.688655236" random="30" critical="4" accuracy="6.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="348.2025" magical="231.837152158566" evasion="2" />
+			<speed>
+				<walk ground="45" />
+				<run ground="185" />
+			</speed>
+			<hitTime>590</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4001" level="9" /> <!-- NPC Windstrike -->
+			<skill id="4029" level="3" /> <!-- NPC Shield -->
+			<skill id="4071" level="5" /> <!-- Resist Archery -->
+			<skill id="4274" level="1" /> <!-- Blunt Attack Weak Point -->
+			<skill id="4408" level="12" /> <!-- HP Modifiers -->
+			<skill id="4416" level="12" /> <!-- Bug -->
+			<skill id="4437" level="4" /> <!-- Greater Resist Bleeding -->
+		</skillList>
+		<shots shotChance="0" spiritChance="0" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clanList>
+				<clan>TOMB</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="25" grown="30" />
+			<height normal="54.5" grown="67" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="4031" max="8230" chance="70"/> <!-- Adena -->
+				<item id="5326" min="1" max="1" chance="0.0020"/> <!-- Sealed Nightmare Robe -->
+				<item id="5329" min="1" max="1" chance="0.0020"/> <!-- Sealed Majestic Robe -->
+				<item id="959" min="1" max="1" chance="0.0970"/> <!-- Scroll: Enchant Weapon (Grade S) -->
+				<item id="1867" min="1" max="3" chance="12.5000"/> <!-- Animal Skin -->
+				<item id="1869" min="2" max="6" chance="9.0909"/> <!-- Iron Ore -->
+				<item id="1870" min="2" max="6" chance="8.3333"/> <!-- Coal -->
+				<item id="1871" min="3" max="9" chance="6.6667"/> <!-- Charcoal -->
+				<item id="1872" min="7" max="21" chance="2.7778"/> <!-- Animal Bone -->
+				<item id="5487" min="1" max="1" chance="0.3333"/> <!-- Sealed Nightmare Robe Fabric -->
+				<item id="5488" min="1" max="1" chance="0.3333"/> <!-- Sealed Majestic Robe Fabric -->
+				<item id="8732" min="1" max="1" chance="0.3636"/> <!-- Life Stone: level 76 -->
+				<item id="8742" min="1" max="1" chance="0.0970"/> <!-- Mid-Grade Life Stone: level 76 -->
+			</drop>
+			<spoil>
+				<item id="5167" min="1" max="1" chance="0.4454"/> <!-- Recipe: Blessed Spiritshot (S) Compressed Package (100%) -->
+				<item id="5515" min="1" max="1" chance="16.9243"/> <!-- Sealed Majestic Gauntlets Design -->
+				<item id="6901" min="1" max="1" chance="1.0021"/> <!-- Recipe: Shining Arrow (100%) -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="21406" level="78" type="Monster" name="Knight of Empire">
+		<!-- Interlude - C6 -->
+		<parameters>
+			<param name="MoveAroundSocial" value="215" />
+			<param name="MoveAroundSocial1" value="215" />
+			<param name="MoveAroundSocial2" value="215" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="30" />
+			<skill name="W_LongRangeDDMagic" id="4157" level="9" /> <!-- NPC Blaze - Magic -->
+			<skill name="W_ShortRangeDDMagic" id="4561" level="9" /> <!-- NPC Fire Burn - Magic -->
+			<skill name="DeBuff" id="4117" level="9" /> <!-- Paralysis -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="150" lhand="103" /> <!-- Elemental Sword / Tower Shield -->
+		<acquire exp="40182" sp="4745" raidPoints="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2937.9838056" hpRegen="8.67" mp="1708.296" mpRegen="3.06" />
+			<attack physical="912.6537108" magical="635.688655236" random="30" critical="4" accuracy="6.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="348.2025" magical="231.837152158566" evasion="2" shield="171" shieldRate="20" />
+			<attribute>
+				<attack type="DARK" value="20" />
+			</attribute>
+			<speed>
+				<walk ground="40" />
+				<run ground="145" />
+			</speed>
+			<hitTime>170</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4117" level="9" /> <!-- Paralysis -->
+			<skill id="4157" level="9" /> <!-- NPC Blaze - Magic -->
+			<skill id="4274" level="1" /> <!-- Blunt Attack Weak Point -->
+			<skill id="4275" level="2" /> <!-- Sacred Attack Weak Point -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4279" level="1" /> <!-- Fire Attack Weak Point -->
+			<skill id="4408" level="13" /> <!-- HP Modifiers -->
+			<skill id="4412" level="15" /> <!-- P. Def. Modifiers -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4561" level="9" /> <!-- NPC Fire Burn - Magic -->
+		</skillList>
+		<shots shotChance="30" spiritChance="30" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>5</sNpcPropHpRate>
+		<ai type="MAGE" aggroRange="300" clanHelpRange="300">
+			<clanList>
+				<clan>TOMB</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="10" />
+			<height normal="25" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="5491" max="11210" chance="70"/> <!-- Adena -->
+				<item id="5313" min="1" max="1" chance="0.0058"/> <!-- Sealed Gauntlets of Nightmare -->
+				<item id="5314" min="1" max="1" chance="0.0058"/> <!-- Sealed Boots of Nightmare -->
+				<item id="5318" min="1" max="1" chance="0.0058"/> <!-- Sealed Majestic Gauntlets -->
+				<item id="5319" min="1" max="1" chance="0.0058"/> <!-- Sealed Majestic Boots -->
+				<item id="959" min="1" max="1" chance="0.0027"/> <!-- Scroll: Enchant Weapon (Grade S) -->
+				<item id="1868" min="3" max="9" chance="16.6667"/> <!-- Thread -->
+				<item id="1873" min="2" max="6" chance="4.7619"/> <!-- Silver Nugget -->
+				<item id="1876" min="1" max="1" chance="8.3333"/> <!-- Mithril Ore -->
+				<item id="1895" min="1" max="1" chance="14.2857"/> <!-- Metallic Fiber -->
+				<item id="4042" min="1" max="1" chance="1.0204"/> <!-- Enria -->
+				<item id="5502" min="1" max="1" chance="0.8511"/> <!-- Sealed Boots of Nightmare Lining -->
+				<item id="5503" min="1" max="1" chance="0.8511"/> <!-- Sealed Majestic Boots Lining -->
+				<item id="5514" min="1" max="1" chance="0.8511"/> <!-- Sealed Gauntlets of Nightmare Design -->
+				<item id="5515" min="1" max="1" chance="0.8511"/> <!-- Sealed Majestic Gauntlets Design -->
+				<item id="8732" min="1" max="1" chance="0.4608"/> <!-- Life Stone: level 76 -->
+				<item id="8742" min="1" max="1" chance="0.0470"/> <!-- Mid-Grade Life Stone: level 76 -->
+			</drop>
+			<spoil>
+				<item id="5277" min="1" max="1" chance="0.6066"/> <!-- Recipe: Greater Spiritshot (S) Compressed Package(100%) -->
+				<item id="5523" min="1" max="1" chance="4.6482"/> <!-- Sealed Majestic Plate Armor Pattern -->
+				<item id="5527" min="1" max="2" chance="16.3187"/> <!-- Sealed Helm of Nightmare Design -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="21407" level="78" type="Monster" name="Knight of Empire">
+		<!-- Interlude - C6 -->
+		<parameters>
+			<param name="MoveAroundSocial" value="215" />
+			<param name="MoveAroundSocial1" value="215" />
+			<param name="MoveAroundSocial2" value="215" />
+			<skill name="PhysicalSpecial" id="4032" level="9" /> <!-- NPC Strike -->
+			<skill name="DeBuff" id="4663" level="1" /> <!-- NPC Hate -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="150" lhand="103" /> <!-- Elemental Sword / Tower Shield -->
+		<acquire exp="25715" sp="3036" raidPoints="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2937.9838056" hpRegen="8.67" mp="1708.296" mpRegen="3.06" />
+			<attack physical="912.6537108" magical="635.688655236" random="30" critical="4" accuracy="6.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="348.2025" magical="231.837152158566" evasion="2" shield="171" shieldRate="20" />
+			<attribute>
+				<attack type="DARK" value="20" />
+			</attribute>
+			<speed>
+				<walk ground="40" />
+				<run ground="145" />
+			</speed>
+			<hitTime>170</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4032" level="9" /> <!-- NPC Strike -->
+			<skill id="4274" level="1" /> <!-- Blunt Attack Weak Point -->
+			<skill id="4275" level="2" /> <!-- Sacred Attack Weak Point -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4279" level="1" /> <!-- Fire Attack Weak Point -->
+			<skill id="4408" level="11" /> <!-- HP Modifiers -->
+			<skill id="4412" level="15" /> <!-- P. Def. Modifiers -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4663" level="1" /> <!-- NPC Hate -->
+		</skillList>
+		<shots shotChance="0" spiritChance="0" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>3</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="300">
+			<clanList>
+				<clan>TOMB</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="10" />
+			<height normal="25" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="3520" max="7185" chance="70"/> <!-- Adena -->
+				<item id="5313" min="1" max="1" chance="0.0037"/> <!-- Sealed Gauntlets of Nightmare -->
+				<item id="5314" min="1" max="1" chance="0.0037"/> <!-- Sealed Boots of Nightmare -->
+				<item id="5318" min="1" max="1" chance="0.0037"/> <!-- Sealed Majestic Gauntlets -->
+				<item id="5319" min="1" max="1" chance="0.0037"/> <!-- Sealed Majestic Boots -->
+				<item id="959" min="1" max="1" chance="0.0063"/> <!-- Scroll: Enchant Weapon (Grade S) -->
+				<item id="1868" min="3" max="9" chance="9.0909"/> <!-- Thread -->
+				<item id="1873" min="2" max="6" chance="11.1111"/> <!-- Silver Nugget -->
+				<item id="1876" min="1" max="1" chance="5.8824"/> <!-- Mithril Ore -->
+				<item id="1895" min="1" max="1" chance="9.0909"/> <!-- Metallic Fiber -->
+				<item id="4042" min="1" max="1" chance="0.5714"/> <!-- Enria -->
+				<item id="5502" min="1" max="1" chance="0.5456"/> <!-- Sealed Boots of Nightmare Lining -->
+				<item id="5503" min="1" max="1" chance="0.5456"/> <!-- Sealed Majestic Boots Lining -->
+				<item id="5514" min="1" max="1" chance="0.5456"/> <!-- Sealed Gauntlets of Nightmare Design -->
+				<item id="5515" min="1" max="1" chance="0.5456"/> <!-- Sealed Majestic Gauntlets Design -->
+				<item id="8732" min="1" max="1" chance="0.3623"/> <!-- Life Stone: level 76 -->
+				<item id="8742" min="1" max="1" chance="0.0571"/> <!-- Mid-Grade Life Stone: level 76 -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="21408" level="78" type="Monster" name="Royal Guard of Empire">
+		<!-- Interlude - C6 -->
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<param name="IsTeleport" value="0" />
+			<skill name="PhysicalSpecial" id="4579" level="9" /> <!-- Bleed -->
+			<skill name="SelfRangeDeBuff" id="4036" level="9" /> <!-- Poison -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="304" lhand="0" /> <!-- Orcish Halberd / ... -->
+		<acquire exp="34974" sp="4125" raidPoints="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2937.9838056" hpRegen="8.67" mp="1708.296" mpRegen="3.06" />
+			<attack physical="912.6537108" magical="635.688655236" random="30" critical="4" accuracy="6.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="348.2025" magical="231.837152158566" evasion="2" />
+			<attribute>
+				<attack type="DARK" value="20" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="190" />
+			</speed>
+			<hitTime>210</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4036" level="9" /> <!-- Poison -->
+			<skill id="4274" level="1" /> <!-- Blunt Attack Weak Point -->
+			<skill id="4275" level="2" /> <!-- Sacred Attack Weak Point -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4279" level="1" /> <!-- Fire Attack Weak Point -->
+			<skill id="4408" level="13" /> <!-- HP Modifiers -->
+			<skill id="4410" level="12" /> <!-- P. Atk. Modifiers -->
+			<skill id="4411" level="12" /> <!-- M. Atk. Modifiers -->
+			<skill id="4412" level="10" /> <!-- P. Def. Modifiers -->
+			<skill id="4413" level="10" /> <!-- M. Def. Modifiers -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
+			<skill id="4579" level="9" /> <!-- Bleed -->
+		</skillList>
+		<shots shotChance="30" spiritChance="30" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>5</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clanList>
+				<clan>TOMB</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="10" grown="12" />
+			<height normal="28" grown="33" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="5188" max="10592" chance="70"/> <!-- Adena -->
+				<item id="81" min="1" max="1" chance="0.0005"/> <!-- Dragon Slayer -->
+				<item id="151" min="1" max="1" chance="0.0005"/> <!-- Sword of Miracles -->
+				<item id="2500" min="1" max="1" chance="0.0005"/> <!-- Dark Legion's Edge -->
+				<item id="959" min="1" max="1" chance="0.0025"/> <!-- Scroll: Enchant Weapon (Grade S) -->
+				<item id="1868" min="3" max="9" chance="14.2857"/> <!-- Thread -->
+				<item id="1873" min="1" max="1" chance="20.0000"/> <!-- Silver Nugget -->
+				<item id="1889" min="1" max="1" chance="2.6316"/> <!-- Compound Braid -->
+				<item id="4044" min="1" max="1" chance="1.3158"/> <!-- Thons -->
+				<item id="5529" min="1" max="1" chance="0.1743"/> <!-- Dragon Slayer Edge -->
+				<item id="5545" min="1" max="1" chance="0.1743"/> <!-- Dark Legion's Edge Blade -->
+				<item id="5546" min="1" max="1" chance="0.1914"/> <!-- Sword of Miracles Edge -->
+				<item id="5549" min="1" max="1" chance="4.5455"/> <!-- Metallic Thread -->
+				<item id="8732" min="1" max="1" chance="0.5525"/> <!-- Life Stone: level 76 -->
+				<item id="8742" min="1" max="1" chance="0.0346"/> <!-- Mid-Grade Life Stone: level 76 -->
+				<item id="8752" min="1" max="1" chance="0.0115"/> <!-- High-Grade Life Stone: level 76 -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="21409" level="78" type="Monster" name="Royal Guard of Empire">
+		<!-- Interlude - C6 -->
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<param name="IsTeleport" value="0" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="30" />
+			<skill name="DDMagic" id="4592" level="9" /> <!-- Decrease P. Def. -->
+			<skill name="SelfRangeDeBuff" id="4036" level="9" /> <!-- Poison -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="304" lhand="0" /> <!-- Orcish Halberd / ... -->
+		<acquire exp="39110" sp="4614" raidPoints="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2937.9838056" hpRegen="8.67" mp="1708.296" mpRegen="3.06" />
+			<attack physical="912.6537108" magical="635.688655236" random="30" critical="4" accuracy="6.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="348.2025" magical="231.837152158566" evasion="2" />
+			<attribute>
+				<attack type="DARK" value="20" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="190" />
+			</speed>
+			<hitTime>210</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4036" level="9" /> <!-- Poison -->
+			<skill id="4274" level="1" /> <!-- Blunt Attack Weak Point -->
+			<skill id="4275" level="2" /> <!-- Sacred Attack Weak Point -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4279" level="1" /> <!-- Fire Attack Weak Point -->
+			<skill id="4408" level="14" /> <!-- HP Modifiers -->
+			<skill id="4410" level="9" /> <!-- P. Atk. Modifiers -->
+			<skill id="4411" level="9" /> <!-- M. Atk. Modifiers -->
+			<skill id="4412" level="13" /> <!-- P. Def. Modifiers -->
+			<skill id="4413" level="13" /> <!-- M. Def. Modifiers -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4592" level="9" /> <!-- Decrease P. Def. -->
+		</skillList>
+		<shots shotChance="30" spiritChance="30" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clanList>
+				<clan>TOMB</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="10" grown="12" />
+			<height normal="28" grown="33" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="5802" max="11844" chance="70"/> <!-- Adena -->
+				<item id="81" min="1" max="1" chance="0.0006"/> <!-- Dragon Slayer -->
+				<item id="151" min="1" max="1" chance="0.0006"/> <!-- Sword of Miracles -->
+				<item id="2500" min="1" max="1" chance="0.0006"/> <!-- Dark Legion's Edge -->
+				<item id="959" min="1" max="1" chance="0.0028"/> <!-- Scroll: Enchant Weapon (Grade S) -->
+				<item id="1868" min="3" max="9" chance="16.6667"/> <!-- Thread -->
+				<item id="1873" min="1" max="1" chance="20.0000"/> <!-- Silver Nugget -->
+				<item id="1889" min="1" max="1" chance="2.7027"/> <!-- Compound Braid -->
+				<item id="4044" min="1" max="1" chance="1.6393"/> <!-- Thons -->
+				<item id="5529" min="1" max="1" chance="0.1949"/> <!-- Dragon Slayer Edge -->
+				<item id="5545" min="1" max="1" chance="0.1949"/> <!-- Dark Legion's Edge Blade -->
+				<item id="5546" min="1" max="1" chance="0.2140"/> <!-- Sword of Miracles Edge -->
+				<item id="5549" min="1" max="1" chance="4.0000"/> <!-- Metallic Thread -->
+				<item id="8732" min="1" max="1" chance="0.4237"/> <!-- Life Stone: level 76 -->
+				<item id="8742" min="1" max="1" chance="0.0943"/> <!-- Mid-Grade Life Stone: level 76 -->
+				<item id="8752" min="1" max="1" chance="0.0236"/> <!-- High-Grade Life Stone: level 76 -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="21410" level="78" type="Monster" name="Guardian Scarab">
+		<!-- Interlude - C6 -->
+		<parameters>
+			<param name="MoveAroundSocial" value="65" />
+			<param name="MoveAroundSocial1" value="65" />
+			<param name="MoveAroundSocial2" value="65" />
+			<param name="MaxRoarCount" value="3" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpeedBonus" value="40" />
+			<param name="HealBonus" value="2.4" />
+			<param name="SpiritShotRate" value="30" />
+			<skill name="Fury" id="4317" level="1" /> <!-- Increase Rage Might -->
+			<skill name="SelfRangePhysicalSpecial" id="4599" level="9" /> <!-- Decrease Speed -->
+			<skill name="PhysicalSpecial" id="4073" level="9" /> <!-- Shock -->
+			<skill name="DeBuff" id="4047" level="9" /> <!-- Hold -->
+		</parameters>
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<equipment rhand="0" lhand="0" /> <!-- ... / ... -->
+		<acquire exp="36133" sp="4315" raidPoints="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2975.2369188" hpRegen="8.721" mp="1742.976" mpRegen="3.0804" />
+			<attack physical="938.20801458" magical="656.66638089" random="30" critical="4" accuracy="7.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="354.8183475" magical="239.180922" evasion="3" />
+			<speed>
+				<walk ground="45" />
+				<run ground="195" />
+			</speed>
+			<hitTime>520</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4047" level="9" /> <!-- Hold -->
+			<skill id="4071" level="5" /> <!-- Resist Archery -->
+			<skill id="4073" level="9" /> <!-- Shock -->
+			<skill id="4274" level="1" /> <!-- Blunt Attack Weak Point -->
+			<skill id="4317" level="1" /> <!-- Increase Rage Might -->
+			<skill id="4408" level="13" /> <!-- HP Modifiers -->
+			<skill id="4416" level="12" /> <!-- Bug -->
+			<skill id="4437" level="4" /> <!-- Greater Resist Bleeding -->
+			<skill id="4599" level="9" /> <!-- Decrease Speed -->
+		</skillList>
+		<shots shotChance="30" spiritChance="30" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>5</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clanList>
+				<clan>TOMB</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="17" />
+			<height normal="26.5" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="5247" max="10744" chance="70"/> <!-- Adena -->
+				<item id="6326" min="1" max="1" chance="0.0050"/> <!-- Sealed Majestic Necklace -->
+				<item id="6327" min="1" max="1" chance="0.0066"/> <!-- Sealed Majestic Earring -->
+				<item id="6328" min="1" max="1" chance="0.0099"/> <!-- Sealed Majestic Ring -->
+				<item id="960" min="1" max="1" chance="0.0192"/> <!-- Scroll: Enchant Armor (Grade S) -->
+				<item id="1344" min="40" max="120" chance="12.5000"/> <!-- Mithril Arrow -->
+				<item id="1867" min="5" max="15" chance="5.0000"/> <!-- Animal Skin -->
+				<item id="1872" min="1" max="3" chance="10.0000"/> <!-- Animal Bone -->
+				<item id="1882" min="1" max="1" chance="7.6923"/> <!-- Leather -->
+				<item id="1894" min="1" max="1" chance="1.6949"/> <!-- Crafted Leather -->
+				<item id="4042" min="1" max="1" chance="0.7299"/> <!-- Enria -->
+				<item id="6342" min="1" max="1" chance="1.4574"/> <!-- Sealed Majestic Earring Gemstone -->
+				<item id="6344" min="1" max="1" chance="0.9432"/> <!-- Sealed Majestic Necklace Beads -->
+				<item id="6346" min="1" max="1" chance="2.0946"/> <!-- Sealed Majestic Ring Gemstone -->
+				<item id="8732" min="1" max="1" chance="0.3067"/> <!-- Life Stone: level 76 -->
+				<item id="8742" min="1" max="1" chance="0.0958"/> <!-- Mid-Grade Life Stone: level 76 -->
+			</drop>
+			<spoil>
+				<item id="5282" min="1" max="1" chance="0.5808"/> <!-- Recipe: Greater Blessed Spiritshot (S) Compressed Package(100%) -->
+				<item id="5538" min="1" max="1" chance="3.5845"/> <!-- Dragon Grinder Edge -->
+				<item id="5541" min="1" max="1" chance="3.5838"/> <!-- Tallum Glaive Edge -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="21411" level="78" type="Monster" name="Guardian Scarab">
+		<!-- Interlude - C6 -->
+		<parameters>
+			<param name="MoveAroundSocial" value="65" />
+			<param name="MoveAroundSocial1" value="65" />
+			<param name="MoveAroundSocial2" value="65" />
+			<skill name="PhysicalSpecial" id="4077" level="9" /> <!-- NPC Aura Burn -->
+		</parameters>
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<equipment rhand="0" lhand="0" /> <!-- ... / ... -->
+		<acquire exp="28838" sp="3444" raidPoints="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2975.2369188" hpRegen="8.721" mp="1742.976" mpRegen="3.0804" />
+			<attack physical="938.20801458" magical="656.66638089" random="30" critical="4" accuracy="7.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="354.8183475" magical="239.180922" evasion="3" />
+			<speed>
+				<walk ground="45" />
+				<run ground="195" />
+			</speed>
+			<hitTime>520</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4071" level="5" /> <!-- Resist Archery -->
+			<skill id="4077" level="9" /> <!-- NPC Aura Burn -->
+			<skill id="4274" level="1" /> <!-- Blunt Attack Weak Point -->
+			<skill id="4408" level="12" /> <!-- HP Modifiers -->
+			<skill id="4416" level="12" /> <!-- Bug -->
+			<skill id="4437" level="4" /> <!-- Greater Resist Bleeding -->
+		</skillList>
+		<shots shotChance="0" spiritChance="0" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clanList>
+				<clan>TOMB</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="17" />
+			<height normal="26.5" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="4277" max="8758" chance="70"/> <!-- Adena -->
+				<item id="6326" min="1" max="1" chance="0.0041"/> <!-- Sealed Majestic Necklace -->
+				<item id="6327" min="1" max="1" chance="0.0054"/> <!-- Sealed Majestic Earring -->
+				<item id="6328" min="1" max="1" chance="0.0081"/> <!-- Sealed Majestic Ring -->
+				<item id="960" min="1" max="1" chance="0.0180"/> <!-- Scroll: Enchant Armor (Grade S) -->
+				<item id="1344" min="40" max="120" chance="10.0000"/> <!-- Mithril Arrow -->
+				<item id="1867" min="5" max="15" chance="4.0000"/> <!-- Animal Skin -->
+				<item id="1872" min="1" max="3" chance="14.2857"/> <!-- Animal Bone -->
+				<item id="1882" min="1" max="1" chance="7.6923"/> <!-- Leather -->
+				<item id="1894" min="1" max="1" chance="1.0417"/> <!-- Crafted Leather -->
+				<item id="4042" min="1" max="1" chance="0.4878"/> <!-- Enria -->
+				<item id="6342" min="1" max="1" chance="1.1880"/> <!-- Sealed Majestic Earring Gemstone -->
+				<item id="6344" min="1" max="1" chance="0.7688"/> <!-- Sealed Majestic Necklace Beads -->
+				<item id="6346" min="1" max="1" chance="1.7074"/> <!-- Sealed Majestic Ring Gemstone -->
+				<item id="8732" min="1" max="1" chance="0.3279"/> <!-- Life Stone: level 76 -->
+				<item id="8742" min="1" max="1" chance="0.0375"/> <!-- Mid-Grade Life Stone: level 76 -->
+				<item id="8752" min="1" max="1" chance="0.0081"/> <!-- High-Grade Life Stone: level 76 -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="21412" level="78" type="Monster" name="Ustralith">
+		<!-- Interlude - C6 -->
+		<parameters>
+			<param name="MoveAroundSocial" value="85" />
+			<param name="MoveAroundSocial1" value="85" />
+			<param name="MoveAroundSocial2" value="85" />
+			<skill name="Heal" id="4613" level="9" /> <!-- NPC Clan Heal -->
+			<skill name="Buff" id="4575" level="2" /> <!-- NPC Clan Buff - Haste -->
+			<skill name="DeBuff" id="4577" level="9" /> <!-- Decrease Accuracy -->
+			<skill name="W_ShortRangeDDMagic" id="4077" level="9" /> <!-- NPC Aura Burn -->
+			<skill name="W_LongRangeDDMagic" id="4568" level="9" /> <!-- NPC AE Solar Flare -->
+		</parameters>
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<equipment rhand="0" lhand="0" /> <!-- ... / ... -->
+		<acquire exp="46019" sp="5495" raidPoints="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2975.2369188" hpRegen="8.721" mp="1742.976" mpRegen="3.0804" />
+			<attack physical="938.20801458" magical="656.66638089" random="10" critical="8" accuracy="3" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="354.8183475" magical="239.180922" evasion="3" />
+			<speed>
+				<walk ground="37" />
+				<run ground="130" />
+			</speed>
+			<hitTime>540</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4071" level="5" /> <!-- Resist Archery -->
+			<skill id="4274" level="1" /> <!-- Blunt Attack Weak Point -->
+			<skill id="4408" level="13" /> <!-- HP Modifiers -->
+			<skill id="4410" level="9" /> <!-- P. Atk. Modifiers -->
+			<skill id="4411" level="9" /> <!-- M. Atk. Modifiers -->
+			<skill id="4412" level="13" /> <!-- P. Def. Modifiers -->
+			<skill id="4413" level="13" /> <!-- M. Def. Modifiers -->
+			<skill id="4416" level="12" /> <!-- Bug -->
+			<skill id="4437" level="4" /> <!-- Greater Resist Bleeding -->
+			<skill id="4575" level="2" /> <!-- NPC Clan Buff - Haste -->
+			<skill id="4577" level="9" /> <!-- Decrease Accuracy -->
+			<skill id="4613" level="9" /> <!-- NPC Clan Heal -->
+		</skillList>
+		<shots shotChance="0" spiritChance="0" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>5</sNpcPropHpRate>
+		<ai type="MAGE" aggroRange="300" clanHelpRange="300">
+			<clanList>
+				<clan>TOMB</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="28" />
+			<height normal="66" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="6826" max="13977" chance="70"/> <!-- Adena -->
+				<item id="5312" min="1" max="1" chance="0.0064"/> <!-- Sealed Helm of Nightmare -->
+				<item id="5315" min="1" max="1" chance="0.0091"/> <!-- Sealed Shield of Nightmare -->
+				<item id="5317" min="1" max="1" chance="0.0064"/> <!-- Sealed Majestic Circlet -->
+				<item id="960" min="1" max="1" chance="0.0287"/> <!-- Scroll: Enchant Armor (Grade S) -->
+				<item id="1344" min="150" max="450" chance="4.3478"/> <!-- Mithril Arrow -->
+				<item id="1868" min="4" max="12" chance="12.5000"/> <!-- Thread -->
+				<item id="1873" min="3" max="9" chance="2.3810"/> <!-- Silver Nugget -->
+				<item id="1876" min="1" max="1" chance="11.1111"/> <!-- Mithril Ore -->
+				<item id="1895" min="1" max="1" chance="16.6667"/> <!-- Metallic Fiber -->
+				<item id="4042" min="1" max="1" chance="1.1236"/> <!-- Enria -->
+				<item id="5495" min="1" max="1" chance="1.2709"/> <!-- Sealed Shield of Nightmare Fragment -->
+				<item id="5527" min="1" max="1" chance="1.0007"/> <!-- Sealed Helm of Nightmare Design -->
+				<item id="5528" min="1" max="1" chance="1.0007"/> <!-- Sealed Majestic Circlet Design -->
+				<item id="8732" min="1" max="1" chance="0.2959"/> <!-- Life Stone: level 76 -->
+				<item id="8742" min="1" max="1" chance="0.0592"/> <!-- Mid-Grade Life Stone: level 76 -->
+			</drop>
+			<spoil>
+				<item id="1808" min="1" max="1" chance="0.7556"/> <!-- Recipe: Soulshot: S Grade -->
+				<item id="1876" min="1" max="5" chance="85.0033"/> <!-- Mithril Ore -->
+				<item id="5545" min="1" max="1" chance="4.6641"/> <!-- Dark Legion's Edge Blade -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="21413" level="78" type="Monster" name="Ustralith">
+		<!-- Interlude - C6 -->
+		<parameters>
+			<param name="MoveAroundSocial" value="85" />
+			<param name="MoveAroundSocial1" value="85" />
+			<param name="MoveAroundSocial2" value="85" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpeedBonus" value="40" />
+			<param name="HealBonus" value="2.4" />
+			<param name="SpiritShotRate" value="30" />
+			<skill name="PhysicalSpecial" id="4582" level="9" /> <!-- Poison -->
+			<skill name="DeBuff" id="4047" level="9" /> <!-- Hold -->
+		</parameters>
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<equipment rhand="0" lhand="0" /> <!-- ... / ... -->
+		<acquire exp="35388" sp="4225" raidPoints="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2975.2369188" hpRegen="8.721" mp="1742.976" mpRegen="3.0804" />
+			<attack physical="938.20801458" magical="656.66638089" random="10" critical="8" accuracy="3" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="354.8183475" magical="239.180922" evasion="3" />
+			<speed>
+				<walk ground="37" />
+				<run ground="130" />
+			</speed>
+			<hitTime>540</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4047" level="9" /> <!-- Hold -->
+			<skill id="4071" level="5" /> <!-- Resist Archery -->
+			<skill id="4274" level="1" /> <!-- Blunt Attack Weak Point -->
+			<skill id="4408" level="13" /> <!-- HP Modifiers -->
+			<skill id="4410" level="12" /> <!-- P. Atk. Modifiers -->
+			<skill id="4411" level="12" /> <!-- M. Atk. Modifiers -->
+			<skill id="4412" level="10" /> <!-- P. Def. Modifiers -->
+			<skill id="4413" level="10" /> <!-- M. Def. Modifiers -->
+			<skill id="4416" level="12" /> <!-- Bug -->
+			<skill id="4437" level="4" /> <!-- Greater Resist Bleeding -->
+			<skill id="4582" level="9" /> <!-- Poison -->
+		</skillList>
+		<shots shotChance="30" spiritChance="30" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>5</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+			<clanList>
+				<clan>TOMB</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="28" />
+			<height normal="66" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="5249" max="10748" chance="70"/> <!-- Adena -->
+				<item id="5312" min="1" max="1" chance="0.0049"/> <!-- Sealed Helm of Nightmare -->
+				<item id="5315" min="1" max="1" chance="0.0070"/> <!-- Sealed Shield of Nightmare -->
+				<item id="5317" min="1" max="1" chance="0.0049"/> <!-- Sealed Majestic Circlet -->
+				<item id="960" min="1" max="1" chance="0.0221"/> <!-- Scroll: Enchant Armor (Grade S) -->
+				<item id="1344" min="150" max="450" chance="2.8571"/> <!-- Mithril Arrow -->
+				<item id="1868" min="4" max="12" chance="9.0909"/> <!-- Thread -->
+				<item id="1873" min="3" max="9" chance="14.2857"/> <!-- Silver Nugget -->
+				<item id="1876" min="1" max="1" chance="6.6667"/> <!-- Mithril Ore -->
+				<item id="1895" min="1" max="1" chance="12.5000"/> <!-- Metallic Fiber -->
+				<item id="4042" min="1" max="1" chance="0.7874"/> <!-- Enria -->
+				<item id="5495" min="1" max="1" chance="0.9773"/> <!-- Sealed Shield of Nightmare Fragment -->
+				<item id="5527" min="1" max="1" chance="0.7695"/> <!-- Sealed Helm of Nightmare Design -->
+				<item id="5528" min="1" max="1" chance="0.7695"/> <!-- Sealed Majestic Circlet Design -->
+				<item id="8732" min="1" max="1" chance="0.1692"/> <!-- Life Stone: level 76 -->
+				<item id="8742" min="1" max="1" chance="0.1692"/> <!-- Mid-Grade Life Stone: level 76 -->
+			</drop>
+			<spoil>
+				<item id="1808" min="1" max="1" chance="0.5810"/> <!-- Recipe: Soulshot: S Grade -->
+				<item id="1876" min="1" max="5" chance="87.1537"/> <!-- Mithril Ore -->
+				<item id="5545" min="1" max="1" chance="3.5866"/> <!-- Dark Legion's Edge Blade -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="21414" level="78" type="Monster" name="Assassin of Empire">
+		<!-- Interlude - C6 -->
+		<parameters>
+			<param name="MoveAroundSocial" value="80" />
+			<param name="MoveAroundSocial1" value="80" />
+			<param name="MoveAroundSocial2" value="80" />
+			<skill name="W_LongRangeDDMagic" id="4603" level="9" /> <!-- Decrease P. Atk. -->
+			<skill name="W_ShortRangeDDMagic" id="4561" level="9" /> <!-- NPC Fire Burn - Magic -->
+			<skill name="MagicHeal" id="4613" level="9" /> <!-- NPC Clan Heal -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="946" lhand="945" /> <!-- Skeleton Dagger / Skeleton Buckler -->
+		<acquire exp="34393" sp="4105" raidPoints="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2975.2369188" hpRegen="8.721" mp="1742.976" mpRegen="3.0804" />
+			<attack physical="938.20801458" magical="656.66638089" random="10" critical="8" accuracy="3" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="354.8183475" magical="239.180922" evasion="3" shield="173" shieldRate="20" />
+			<attribute>
+				<attack type="DARK" value="20" />
+			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="175" />
+			</speed>
+			<hitTime>520</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4274" level="1" /> <!-- Blunt Attack Weak Point -->
+			<skill id="4275" level="2" /> <!-- Sacred Attack Weak Point -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4279" level="1" /> <!-- Fire Attack Weak Point -->
+			<skill id="4408" level="13" /> <!-- HP Modifiers -->
+			<skill id="4410" level="13" /> <!-- P. Atk. Modifiers -->
+			<skill id="4411" level="13" /> <!-- M. Atk. Modifiers -->
+			<skill id="4412" level="9" /> <!-- P. Def. Modifiers -->
+			<skill id="4413" level="9" /> <!-- M. Def. Modifiers -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4561" level="9" /> <!-- NPC Fire Burn - Magic -->
+			<skill id="4603" level="9" /> <!-- Decrease P. Atk. -->
+			<skill id="4613" level="9" /> <!-- NPC Clan Heal -->
+		</skillList>
+		<shots shotChance="0" spiritChance="0" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>5</sNpcPropHpRate>
+		<ai type="MAGE" aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clanList>
+				<clan>TOMB</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="11" />
+			<height normal="28.5" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="5101" max="10446" chance="70"/> <!-- Adena -->
+				<item id="164" min="1" max="1" chance="0.0007"/> <!-- Elysian -->
+				<item id="213" min="1" max="1" chance="0.0007"/> <!-- Branch of The Mother Tree -->
+				<item id="960" min="1" max="1" chance="0.0128"/> <!-- Scroll: Enchant Armor (Grade S) -->
+				<item id="1344" min="20" max="60" chance="25.0000"/> <!-- Mithril Arrow -->
+				<item id="1866" min="2" max="6" chance="6.6667"/> <!-- Suede -->
+				<item id="1871" min="1" max="3" chance="12.5000"/> <!-- Charcoal -->
+				<item id="1877" min="1" max="1" chance="1.4085"/> <!-- Adamantite Nugget -->
+				<item id="4040" min="1" max="1" chance="0.7299"/> <!-- Mold Lubricant -->
+				<item id="4041" min="1" max="1" chance="0.3448"/> <!-- Mold Hardener -->
+				<item id="5533" min="1" max="1" chance="0.2574"/> <!-- Elysian Head -->
+				<item id="5544" min="1" max="1" chance="0.2572"/> <!-- Branch of The Mother Tree Head -->
+				<item id="8342" min="1" max="1" chance="0.1818"/> <!-- Flaming Dragon Skull Piece -->
+				<item id="8349" min="1" max="1" chance="0.0605"/> <!-- Doom Crusher Head -->
+				<item id="8732" min="1" max="1" chance="0.3257"/> <!-- Life Stone: level 76 -->
+				<item id="8742" min="1" max="1" chance="0.0512"/> <!-- Mid-Grade Life Stone: level 76 -->
+				<item id="8752" min="1" max="1" chance="0.0064"/> <!-- High-Grade Life Stone: level 76 -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="21415" level="78" type="Monster" name="Assassin of Empire">
+		<!-- Interlude - C6 -->
+		<parameters>
+			<param name="MoveAroundSocial" value="80" />
+			<param name="MoveAroundSocial1" value="80" />
+			<param name="MoveAroundSocial2" value="80" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="30" />
+			<skill name="PhysicalSpecial" id="4579" level="9" /> <!-- Bleed -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="946" lhand="945" /> <!-- Skeleton Dagger / Skeleton Buckler -->
+		<acquire exp="34694" sp="4140" raidPoints="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2975.2369188" hpRegen="8.721" mp="1742.976" mpRegen="3.0804" />
+			<attack physical="938.20801458" magical="656.66638089" random="10" critical="8" accuracy="3" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="354.8183475" magical="239.180922" evasion="3" shield="173" shieldRate="20" />
+			<attribute>
+				<attack type="DARK" value="20" />
+			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="175" />
+			</speed>
+			<hitTime>520</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4274" level="1" /> <!-- Blunt Attack Weak Point -->
+			<skill id="4275" level="2" /> <!-- Sacred Attack Weak Point -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4279" level="1" /> <!-- Fire Attack Weak Point -->
+			<skill id="4408" level="13" /> <!-- HP Modifiers -->
+			<skill id="4410" level="10" /> <!-- P. Atk. Modifiers -->
+			<skill id="4411" level="10" /> <!-- M. Atk. Modifiers -->
+			<skill id="4412" level="12" /> <!-- P. Def. Modifiers -->
+			<skill id="4413" level="12" /> <!-- M. Def. Modifiers -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4579" level="9" /> <!-- Bleed -->
+		</skillList>
+		<shots shotChance="30" spiritChance="30" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>5</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clanList>
+				<clan>TOMB</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="11" />
+			<height normal="28.5" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="5146" max="10537" chance="70"/> <!-- Adena -->
+				<item id="164" min="1" max="1" chance="0.0008"/> <!-- Elysian -->
+				<item id="213" min="1" max="1" chance="0.0008"/> <!-- Branch of The Mother Tree -->
+				<item id="960" min="1" max="1" chance="0.0315"/> <!-- Scroll: Enchant Armor (Grade S) -->
+				<item id="1344" min="20" max="60" chance="25.0000"/> <!-- Mithril Arrow -->
+				<item id="1866" min="2" max="6" chance="5.8824"/> <!-- Suede -->
+				<item id="1871" min="1" max="3" chance="11.1111"/> <!-- Charcoal -->
+				<item id="1877" min="1" max="1" chance="1.7241"/> <!-- Adamantite Nugget -->
+				<item id="4040" min="1" max="1" chance="0.9804"/> <!-- Mold Lubricant -->
+				<item id="4041" min="1" max="1" chance="0.3460"/> <!-- Mold Hardener -->
+				<item id="5533" min="1" max="1" chance="0.2597"/> <!-- Elysian Head -->
+				<item id="5544" min="1" max="1" chance="0.2595"/> <!-- Branch of The Mother Tree Head -->
+				<item id="8342" min="1" max="1" chance="0.1818"/> <!-- Flaming Dragon Skull Piece -->
+				<item id="8349" min="1" max="1" chance="0.0605"/> <!-- Doom Crusher Head -->
+				<item id="8732" min="1" max="1" chance="0.1887"/> <!-- Life Stone: level 76 -->
+			</drop>
+			<spoil>
+				<item id="1877" min="1" max="2" chance="51.2669"/> <!-- Adamantite Nugget -->
+				<item id="4040" min="1" max="1" chance="25.6334"/> <!-- Mold Lubricant -->
+				<item id="6344" min="1" max="1" chance="18.7887"/> <!-- Sealed Majestic Necklace Beads -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="21416" level="78" type="Monster" name="Imperial Commander">
+		<!-- Interlude - C6 -->
+		<parameters>
+			<param name="MoveAroundSocial" value="85" />
+			<param name="MoveAroundSocial1" value="85" />
+			<param name="MoveAroundSocial2" value="85" />
+			<skill name="W_LongRangeDDMagic" id="4665" level="9" /> <!-- NPC 100% HP Drain - Magic -->
+			<skill name="W_ShortRangeDDMagic" id="4160" level="9" /> <!-- NPC Aura Burn - Magic -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="134" lhand="6721" /> <!-- Sword of Nightmare / Monster Only(Shield of Imperial Warlord Zombie) -->
+		<acquire exp="41052" sp="4900" raidPoints="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2975.2369188" hpRegen="8.721" mp="1742.976" mpRegen="3.0804" />
+			<attack physical="938.20801458" magical="656.66638089" random="30" critical="4" accuracy="7.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="354.8183475" magical="239.180922" evasion="3" shield="173" shieldRate="20" />
+			<attribute>
+				<attack type="DARK" value="20" />
+			</attribute>
+			<speed>
+				<walk ground="39" />
+				<run ground="140" />
+			</speed>
+			<hitTime>480</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4160" level="9" /> <!-- NPC Aura Burn - Magic -->
+			<skill id="4274" level="1" /> <!-- Blunt Attack Weak Point -->
+			<skill id="4275" level="2" /> <!-- Sacred Attack Weak Point -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4279" level="1" /> <!-- Fire Attack Weak Point -->
+			<skill id="4408" level="13" /> <!-- HP Modifiers -->
+			<skill id="4410" level="8" /> <!-- P. Atk. Modifiers -->
+			<skill id="4411" level="8" /> <!-- M. Atk. Modifiers -->
+			<skill id="4412" level="14" /> <!-- P. Def. Modifiers -->
+			<skill id="4413" level="17" /> <!-- M. Def. Modifiers -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4665" level="9" /> <!-- NPC 100% HP Drain - Magic -->
+		</skillList>
+		<shots shotChance="0" spiritChance="0" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>5</sNpcPropHpRate>
+		<ai type="MAGE" aggroRange="300" clanHelpRange="300">
+			<clanList>
+				<clan>TOMB</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="7" grown="8" />
+			<height normal="30" grown="36" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="5276" max="10804" chance="70"/> <!-- Adena -->
+				<item id="289" min="1" max="1" chance="0.0015"/> <!-- Soul Bow -->
+				<item id="960" min="1" max="1" chance="0.0222"/> <!-- Scroll: Enchant Armor (Grade S) -->
+				<item id="1344" min="100" max="300" chance="5.2632"/> <!-- Mithril Arrow -->
+				<item id="1866" min="2" max="6" chance="10.0000"/> <!-- Suede -->
+				<item id="1871" min="1" max="3" chance="11.1111"/> <!-- Charcoal -->
+				<item id="1885" min="1" max="1" chance="4.7619"/> <!-- High Grade Suede -->
+				<item id="4041" min="1" max="1" chance="0.4822"/> <!-- Mold Hardener -->
+				<item id="5220" min="1" max="1" chance="0.9346"/> <!-- Metal Hardener -->
+				<item id="5534" min="1" max="1" chance="0.5328"/> <!-- Soul Bow Stave -->
+				<item id="8732" min="1" max="1" chance="0.1408"/> <!-- Life Stone: level 76 -->
+				<item id="8752" min="1" max="1" chance="0.0469"/> <!-- High-Grade Life Stone: level 76 -->
+			</drop>
+			<spoil>
+				<item id="1885" min="1" max="3" chance="54.7540"/> <!-- High Grade Suede -->
+				<item id="4041" min="1" max="1" chance="11.4269"/> <!-- Mold Hardener -->
+				<item id="5480" min="1" max="1" chance="5.8966"/> <!-- Sealed Leather Armor of Nightmare Fabric -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="21417" level="78" type="Monster" name="Imperial Commander">
+		<!-- Interlude - C6 -->
+		<parameters>
+			<param name="MoveAroundSocial" value="85" />
+			<param name="MoveAroundSocial1" value="85" />
+			<param name="MoveAroundSocial2" value="85" />
+			<skill name="DDMagic" id="4002" level="9" /> <!-- NPC HP Drain -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="134" lhand="6721" /> <!-- Sword of Nightmare / Monster Only(Shield of Imperial Warlord Zombie) -->
+		<acquire exp="71621" sp="8550" raidPoints="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2975.2369188" hpRegen="8.721" mp="1742.976" mpRegen="3.0804" />
+			<attack physical="938.20801458" magical="656.66638089" random="30" critical="4" accuracy="7.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="354.8183475" magical="239.180922" evasion="3" shield="173" shieldRate="20" />
+			<attribute>
+				<attack type="DARK" value="20" />
+			</attribute>
+			<speed>
+				<walk ground="39" />
+				<run ground="140" />
+			</speed>
+			<hitTime>480</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4002" level="9" /> <!-- NPC HP Drain -->
+			<skill id="4274" level="1" /> <!-- Blunt Attack Weak Point -->
+			<skill id="4275" level="2" /> <!-- Sacred Attack Weak Point -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4279" level="1" /> <!-- Fire Attack Weak Point -->
+			<skill id="4408" level="14" /> <!-- HP Modifiers -->
+			<skill id="4410" level="13" /> <!-- P. Atk. Modifiers -->
+			<skill id="4411" level="13" /> <!-- M. Atk. Modifiers -->
+			<skill id="4412" level="18" /> <!-- P. Def. Modifiers -->
+			<skill id="4413" level="9" /> <!-- M. Def. Modifiers -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+		</skillList>
+		<shots shotChance="0" spiritChance="0" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+			<clanList>
+				<clan>TOMB</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="7" grown="8" />
+			<height normal="30" grown="36" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="8221" max="16836" chance="70"/> <!-- Adena -->
+				<item id="289" min="1" max="1" chance="0.0023"/> <!-- Soul Bow -->
+				<item id="960" min="1" max="1" chance="0.0346"/> <!-- Scroll: Enchant Armor (Grade S) -->
+				<item id="1344" min="100" max="300" chance="10.8012"/> <!-- Mithril Arrow -->
+				<item id="1866" min="2" max="6" chance="14.4016"/> <!-- Suede -->
+				<item id="1871" min="1" max="3" chance="25.0000"/> <!-- Charcoal -->
+				<item id="1885" min="1" max="1" chance="7.2008"/> <!-- High Grade Suede -->
+				<item id="4041" min="1" max="1" chance="0.7514"/> <!-- Mold Hardener -->
+				<item id="5220" min="1" max="1" chance="3.4564"/> <!-- Metal Hardener -->
+				<item id="5534" min="1" max="1" chance="0.8303"/> <!-- Soul Bow Stave -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="21418" level="78" type="Monster" name="Imperial Royal Guard">
+		<!-- Interlude - C6 -->
+		<parameters>
+			<param name="MoveAroundSocial" value="74" />
+			<param name="MoveAroundSocial1" value="74" />
+			<param name="MoveAroundSocial2" value="74" />
+			<param name="WeaponID" value="5286" /> <!-- Berserker Blade -->
+			<param name="SelfBuff" value="0" />
+			<skill name="PhysicalSpecial" id="4572" level="9" /> <!-- NPC Triple Sonic Slash -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="142" lhand="0" /> <!-- Keshanberk / ... -->
+		<acquire exp="30534" sp="3688" raidPoints="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="3010.8929976" hpRegen="8.772" mp="1777.86" mpRegen="3.1008" />
+			<attack physical="961.93701102" magical="677.644106544" random="30" critical="4" accuracy="8.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="361.0859925" magical="246.330714" evasion="4" />
+			<attribute>
+				<attack type="DARK" value="20" />
+			</attribute>
+			<speed>
+				<walk ground="27" />
+				<run ground="160" />
+			</speed>
+			<hitTime>710</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4274" level="1" /> <!-- Blunt Attack Weak Point -->
+			<skill id="4275" level="2" /> <!-- Sacred Attack Weak Point -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4408" level="12" /> <!-- HP Modifiers -->
+			<skill id="4412" level="13" /> <!-- P. Def. Modifiers -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4572" level="9" /> <!-- NPC Triple Sonic Slash -->
+		</skillList>
+		<shots shotChance="0" spiritChance="0" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clanList>
+				<clan>TOMB</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="12" grown="14.5" />
+			<height normal="31" grown="36" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="4369" max="8949" chance="70"/> <!-- Adena -->
+				<item id="5312" min="1" max="1" chance="0.0041"/> <!-- Sealed Helm of Nightmare -->
+				<item id="5315" min="1" max="1" chance="0.0058"/> <!-- Sealed Shield of Nightmare -->
+				<item id="5317" min="1" max="1" chance="0.0041"/> <!-- Sealed Majestic Circlet -->
+				<item id="959" min="1" max="1" chance="0.0022"/> <!-- Scroll: Enchant Weapon (Grade S) -->
+				<item id="1868" min="3" max="9" chance="12.5000"/> <!-- Thread -->
+				<item id="1873" min="1" max="1" chance="14.2857"/> <!-- Silver Nugget -->
+				<item id="1889" min="1" max="1" chance="2.3810"/> <!-- Compound Braid -->
+				<item id="4044" min="1" max="1" chance="1.2346"/> <!-- Thons -->
+				<item id="5495" min="1" max="1" chance="0.8136"/> <!-- Sealed Shield of Nightmare Fragment -->
+				<item id="5527" min="1" max="1" chance="0.6406"/> <!-- Sealed Helm of Nightmare Design -->
+				<item id="5528" min="1" max="1" chance="0.6406"/> <!-- Sealed Majestic Circlet Design -->
+				<item id="5549" min="1" max="1" chance="3.8462"/> <!-- Metallic Thread -->
+				<item id="8732" min="1" max="1" chance="0.2874"/> <!-- Life Stone: level 76 -->
+				<item id="8742" min="1" max="1" chance="0.0941"/> <!-- Mid-Grade Life Stone: level 76 -->
+				<item id="8752" min="1" max="1" chance="0.0157"/> <!-- High-Grade Life Stone: level 76 -->
+			</drop>
+			<spoil>
+				<item id="3036" min="1" max="1" chance="0.4837"/> <!-- Recipe: Spiritshot S -->
+				<item id="4044" min="1" max="1" chance="36.2779"/> <!-- Thons -->
+				<item id="5528" min="1" max="2" chance="13.0122"/> <!-- Sealed Majestic Circlet Design -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="21419" level="78" type="Monster" name="Imperial Royal Guard">
+		<!-- Interlude - C6 -->
+		<parameters>
+			<param name="MoveAroundSocial" value="74" />
+			<param name="MoveAroundSocial1" value="74" />
+			<param name="MoveAroundSocial2" value="74" />
+			<param name="WeaponID" value="5286" /> <!-- Berserker Blade -->
+			<skill name="PhysicalSpecial1" id="4573" level="9" /> <!-- NPC Sonic Blaster -->
+			<skill name="PhysicalSpecial2" id="4572" level="9" /> <!-- NPC Triple Sonic Slash -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="142" lhand="0" /> <!-- Keshanberk / ... -->
+		<acquire exp="31077" sp="3756" raidPoints="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="3010.8929976" hpRegen="8.772" mp="1777.86" mpRegen="3.1008" />
+			<attack physical="961.93701102" magical="677.644106544" random="30" critical="4" accuracy="8.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="361.0859925" magical="246.330714" evasion="4" />
+			<attribute>
+				<attack type="DARK" value="20" />
+			</attribute>
+			<speed>
+				<walk ground="27" />
+				<run ground="160" />
+			</speed>
+			<hitTime>710</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4274" level="1" /> <!-- Blunt Attack Weak Point -->
+			<skill id="4275" level="2" /> <!-- Sacred Attack Weak Point -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4408" level="12" /> <!-- HP Modifiers -->
+			<skill id="4412" level="13" /> <!-- P. Def. Modifiers -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4572" level="9" /> <!-- NPC Triple Sonic Slash -->
+			<skill id="4573" level="9" /> <!-- NPC Sonic Blaster -->
+		</skillList>
+		<shots shotChance="0" spiritChance="0" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clanList>
+				<clan>TOMB</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="12" grown="14.5" />
+			<height normal="31" grown="36" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="4450" max="9114" chance="70"/> <!-- Adena -->
+				<item id="5312" min="1" max="1" chance="0.0042"/> <!-- Sealed Helm of Nightmare -->
+				<item id="5315" min="1" max="1" chance="0.0059"/> <!-- Sealed Shield of Nightmare -->
+				<item id="5317" min="1" max="1" chance="0.0042"/> <!-- Sealed Majestic Circlet -->
+				<item id="959" min="1" max="1" chance="0.0022"/> <!-- Scroll: Enchant Weapon (Grade S) -->
+				<item id="1868" min="3" max="9" chance="18.1891"/> <!-- Thread -->
+				<item id="1873" min="1" max="1" chance="5.4568"/> <!-- Silver Nugget -->
+				<item id="1889" min="1" max="1" chance="3.6379"/> <!-- Compound Braid -->
+				<item id="4044" min="1" max="1" chance="1.8189"/> <!-- Thons -->
+				<item id="5495" min="1" max="1" chance="0.8286"/> <!-- Sealed Shield of Nightmare Fragment -->
+				<item id="5527" min="1" max="1" chance="0.6524"/> <!-- Sealed Helm of Nightmare Design -->
+				<item id="5528" min="1" max="1" chance="0.6524"/> <!-- Sealed Majestic Circlet Design -->
+				<item id="5549" min="1" max="1" chance="5.4568"/> <!-- Metallic Thread -->
+			</drop>
+			<spoil>
+				<item id="3036" min="1" max="1" chance="0.4926"/> <!-- Recipe: Spiritshot S -->
+				<item id="4044" min="1" max="1" chance="36.9466"/> <!-- Thons -->
+				<item id="5528" min="1" max="2" chance="13.2520"/> <!-- Sealed Majestic Circlet Design -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="21420" level="78" type="Monster" name="Ashuras">
+		<!-- Interlude - C6 -->
+		<parameters>
+			<param name="MoveAroundSocial" value="100" />
+			<param name="MoveAroundSocial1" value="100" />
+			<param name="MoveAroundSocial2" value="100" />
+			<param name="MaxRoarCount" value="3" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpeedBonus" value="40" />
+			<param name="HealBonus" value="2.4" />
+			<param name="SpiritShotRate" value="30" />
+			<skill name="Fury" id="4317" level="1" /> <!-- Increase Rage Might -->
+			<skill name="SelfRangePhysicalSpecial" id="4072" level="7" /> <!-- Shock -->
+			<skill name="PhysicalSpecial" id="4572" level="7" /> <!-- NPC Triple Sonic Slash -->
+			<skill name="DeBuff" id="4076" level="3" /> <!-- Decrease Speed -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<equipment rhand="0" lhand="0" /> <!-- ... / ... -->
+		<acquire exp="36620" sp="4425" raidPoints="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="3010.8929976" hpRegen="8.772" mp="1777.86" mpRegen="3.1008" />
+			<attack physical="961.93701102" magical="677.644106544" random="30" critical="4" accuracy="8.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="361.0859925" magical="246.330714" evasion="4" />
+			<attribute>
+				<attack type="DARK" value="20" />
+			</attribute>
+			<speed>
+				<walk ground="41" />
+				<run ground="200" />
+			</speed>
+			<hitTime>500</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4072" level="7" /> <!-- Shock -->
+			<skill id="4076" level="3" /> <!-- Decrease Speed -->
+			<skill id="4275" level="1" /> <!-- Sacred Attack Weak Point -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep -->
+			<skill id="4317" level="1" /> <!-- Increase Rage Might -->
+			<skill id="4333" level="5" /> <!-- Resist Dark Attack -->
+			<skill id="4408" level="13" /> <!-- HP Modifiers -->
+			<skill id="4416" level="9" /> <!-- Demonic -->
+			<skill id="4572" level="7" /> <!-- NPC Triple Sonic Slash -->
+		</skillList>
+		<shots shotChance="30" spiritChance="30" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>5</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+			<clanList>
+				<clan>TOMB</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="13" />
+			<height normal="37.5" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="5438" max="11138" chance="70"/> <!-- Adena -->
+				<item id="164" min="1" max="1" chance="0.0008"/> <!-- Elysian -->
+				<item id="213" min="1" max="1" chance="0.0008"/> <!-- Branch of The Mother Tree -->
+				<item id="959" min="1" max="1" chance="0.0027"/> <!-- Scroll: Enchant Weapon (Grade S) -->
+				<item id="1868" min="3" max="9" chance="14.2587"/> <!-- Thread -->
+				<item id="1873" min="2" max="6" chance="4.7619"/> <!-- Silver Nugget -->
+				<item id="1876" min="1" max="1" chance="9.0909"/> <!-- Mithril Ore -->
+				<item id="1895" min="1" max="1" chance="12.5000"/> <!-- Metallic Fiber -->
+				<item id="4042" min="1" max="1" chance="0.8403"/> <!-- Enria -->
+				<item id="5533" min="1" max="1" chance="0.2744"/> <!-- Elysian Head -->
+				<item id="5544" min="1" max="1" chance="0.2742"/> <!-- Branch of The Mother Tree Head -->
+				<item id="8342" min="1" max="1" chance="0.1639"/> <!-- Flaming Dragon Skull Piece -->
+				<item id="8349" min="1" max="1" chance="0.1474"/> <!-- Doom Crusher Head -->
+				<item id="8732" min="1" max="1" chance="0.2410"/> <!-- Life Stone: level 76 -->
+				<item id="8742" min="1" max="1" chance="0.0602"/> <!-- Mid-Grade Life Stone: level 76 -->
+			</drop>
+			<spoil>
+				<item id="5157" min="1" max="1" chance="0.6020"/> <!-- Recipe: Soulshot (S) Compressed Package (100%) -->
+				<item id="5533" min="1" max="1" chance="3.7153"/> <!-- Elysian Head -->
+				<item id="5534" min="1" max="1" chance="3.7186"/> <!-- Soul Bow Stave -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="21421" level="78" type="Monster" name="Ashuras">
+		<!-- Interlude - C6 -->
+		<parameters>
+			<param name="MoveAroundSocial" value="100" />
+			<param name="MoveAroundSocial1" value="100" />
+			<param name="MoveAroundSocial2" value="100" />
+			<skill name="DDMagic" id="4592" level="9" /> <!-- Decrease P. Def. -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<equipment rhand="0" lhand="0" /> <!-- ... / ... -->
+		<acquire exp="34369" sp="4150" raidPoints="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="3010.8929976" hpRegen="8.772" mp="1777.86" mpRegen="3.1008" />
+			<attack physical="961.93701102" magical="677.644106544" random="30" critical="4" accuracy="8.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="361.0859925" magical="246.330714" evasion="4" />
+			<attribute>
+				<attack type="DARK" value="20" />
+			</attribute>
+			<speed>
+				<walk ground="41" />
+				<run ground="200" />
+			</speed>
+			<hitTime>500</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4275" level="1" /> <!-- Sacred Attack Weak Point -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep -->
+			<skill id="4333" level="5" /> <!-- Resist Dark Attack -->
+			<skill id="4408" level="13" /> <!-- HP Modifiers -->
+			<skill id="4416" level="9" /> <!-- Demonic -->
+			<skill id="4592" level="9" /> <!-- Decrease P. Def. -->
+		</skillList>
+		<shots shotChance="0" spiritChance="0" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>5</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="300">
+			<clanList>
+				<clan>TOMB</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="13" />
+			<height normal="37.5" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="5104" max="10455" chance="70"/> <!-- Adena -->
+				<item id="164" min="1" max="1" chance="0.0007"/> <!-- Elysian -->
+				<item id="213" min="1" max="1" chance="0.0007"/> <!-- Branch of The Mother Tree -->
+				<item id="959" min="1" max="1" chance="0.0025"/> <!-- Scroll: Enchant Weapon (Grade S) -->
+				<item id="1868" min="3" max="9" chance="12.5000"/> <!-- Thread -->
+				<item id="1873" min="2" max="6" chance="4.5455"/> <!-- Silver Nugget -->
+				<item id="1876" min="1" max="1" chance="8.3333"/> <!-- Mithril Ore -->
+				<item id="1895" min="1" max="1" chance="11.1111"/> <!-- Metallic Fiber -->
+				<item id="4042" min="1" max="1" chance="0.9091"/> <!-- Enria -->
+				<item id="5533" min="1" max="1" chance="0.2576"/> <!-- Elysian Head -->
+				<item id="5544" min="1" max="1" chance="0.2574"/> <!-- Branch of The Mother Tree Head -->
+				<item id="8342" min="1" max="1" chance="0.1375"/> <!-- Flaming Dragon Skull Piece -->
+				<item id="8349" min="1" max="1" chance="0.1547"/> <!-- Doom Crusher Head -->
+				<item id="8732" min="1" max="1" chance="0.5435"/> <!-- Life Stone: level 76 -->
+				<item id="8742" min="1" max="1" chance="0.1209"/> <!-- Mid-Grade Life Stone: level 76 -->
+			</drop>
+			<spoil>
+				<item id="5157" min="1" max="1" chance="0.5651"/> <!-- Recipe: Soulshot (S) Compressed Package (100%) -->
+				<item id="5533" min="1" max="1" chance="3.4876"/> <!-- Elysian Head -->
+				<item id="5534" min="1" max="1" chance="3.4907"/> <!-- Soul Bow Stave -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="21422" level="78" type="Monster" name="Dancer of Empire">
+		<!-- Interlude - C6 -->
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpeedBonus" value="40" />
+			<param name="HealBonus" value="2.4" />
+			<param name="SpiritShotRate" value="30" />
+			<skill name="W_LongRangeDDMagic" id="4566" level="9" /> <!-- NPC Eruption - Magic -->
+			<skill name="W_ShortRangeDDMagic" id="4160" level="9" /> <!-- NPC Aura Burn - Magic -->
+			<skill name="DDMagic" id="4657" level="9" /> <!-- Hold -->
+			<skill name="DeBuff" id="4037" level="2" /> <!-- Decrease P. Atk. -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="0" lhand="0" /> <!-- ... / ... -->
+		<acquire exp="39432" sp="4764" raidPoints="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="3010.8929976" hpRegen="8.772" mp="1777.86" mpRegen="3.1008" />
+			<attack physical="961.93701102" magical="677.644106544" random="30" critical="4" accuracy="8.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="361.0859925" magical="246.330714" evasion="4" />
+			<attribute>
+				<attack type="DARK" value="20" />
+			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="120" />
+			</speed>
+			<hitTime>560</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4037" level="2" /> <!-- Decrease P. Atk. -->
+			<skill id="4160" level="9" /> <!-- NPC Aura Burn - Magic -->
+			<skill id="4233" level="1" /> <!-- Vampiric Attack -->
+			<skill id="4275" level="1" /> <!-- Sacred Attack Weak Point -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep -->
+			<skill id="4333" level="5" /> <!-- Resist Dark Attack -->
+			<skill id="4408" level="14" /> <!-- HP Modifiers -->
+			<skill id="4410" level="12" /> <!-- P. Atk. Modifiers -->
+			<skill id="4411" level="12" /> <!-- M. Atk. Modifiers -->
+			<skill id="4412" level="10" /> <!-- P. Def. Modifiers -->
+			<skill id="4413" level="10" /> <!-- M. Def. Modifiers -->
+			<skill id="4416" level="9" /> <!-- Demonic -->
+			<skill id="4566" level="9" /> <!-- NPC Eruption - Magic -->
+			<skill id="4657" level="9" /> <!-- Hold -->
+		</skillList>
+		<shots shotChance="30" spiritChance="30" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai type="MAGE" aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clanList>
+				<clan>TOMB</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="9" />
+			<height normal="23" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="5855" max="11994" chance="70"/> <!-- Adena -->
+				<item id="289" min="1" max="1" chance="0.0016"/> <!-- Soul Bow -->
+				<item id="959" min="1" max="1" chance="0.0029"/> <!-- Scroll: Enchant Weapon (Grade S) -->
+				<item id="1867" min="4" max="12" chance="8.3333"/> <!-- Animal Skin -->
+				<item id="1872" min="1" max="3" chance="20.0000"/> <!-- Animal Bone -->
+				<item id="1882" min="1" max="1" chance="11.1111"/> <!-- Leather -->
+				<item id="1894" min="1" max="1" chance="1.7241"/> <!-- Crafted Leather -->
+				<item id="4042" min="1" max="1" chance="0.7634"/> <!-- Enria -->
+				<item id="5534" min="1" max="1" chance="0.5915"/> <!-- Soul Bow Stave -->
+				<item id="8732" min="1" max="1" chance="0.4975"/> <!-- Life Stone: level 76 -->
+				<item id="8742" min="1" max="1" chance="0.1178"/> <!-- Mid-Grade Life Stone: level 76 -->
+				<item id="8752" min="1" max="1" chance="0.0214"/> <!-- High-Grade Life Stone: level 76 -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="21423" level="78" type="Monster" name="Dancer of Empire">
+		<!-- Interlude - C6 -->
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<skill name="W_LongRangeDDMagic" id="4566" level="9" /> <!-- NPC Eruption - Magic -->
+			<skill name="W_ShortRangeDDMagic" id="4160" level="9" /> <!-- NPC Aura Burn - Magic -->
+			<skill name="MagicHeal" id="4613" level="9" /> <!-- NPC Clan Heal -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="0" lhand="0" /> <!-- ... / ... -->
+		<acquire exp="41797" sp="5052" raidPoints="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="3010.8929976" hpRegen="8.772" mp="1777.86" mpRegen="3.1008" />
+			<attack physical="961.93701102" magical="677.644106544" random="30" critical="4" accuracy="8.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="361.0859925" magical="246.330714" evasion="4" />
+			<attribute>
+				<attack type="DARK" value="20" />
+			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="120" />
+			</speed>
+			<hitTime>560</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4160" level="9" /> <!-- NPC Aura Burn - Magic -->
+			<skill id="4233" level="1" /> <!-- Vampiric Attack -->
+			<skill id="4275" level="1" /> <!-- Sacred Attack Weak Point -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep -->
+			<skill id="4333" level="5" /> <!-- Resist Dark Attack -->
+			<skill id="4408" level="14" /> <!-- HP Modifiers -->
+			<skill id="4410" level="12" /> <!-- P. Atk. Modifiers -->
+			<skill id="4411" level="12" /> <!-- M. Atk. Modifiers -->
+			<skill id="4412" level="10" /> <!-- P. Def. Modifiers -->
+			<skill id="4413" level="10" /> <!-- M. Def. Modifiers -->
+			<skill id="4416" level="9" /> <!-- Demonic -->
+			<skill id="4566" level="9" /> <!-- NPC Eruption - Magic -->
+			<skill id="4613" level="9" /> <!-- NPC Clan Heal -->
+		</skillList>
+		<shots shotChance="0" spiritChance="0" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai type="MAGE" aggroRange="300" clanHelpRange="300">
+			<clanList>
+				<clan>TOMB</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="9" />
+			<height normal="23" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="6207" max="12714" chance="70"/> <!-- Adena -->
+				<item id="289" min="1" max="1" chance="0.0017"/> <!-- Soul Bow -->
+				<item id="959" min="1" max="1" chance="0.0031"/> <!-- Scroll: Enchant Weapon (Grade S) -->
+				<item id="1867" min="4" max="12" chance="8.3333"/> <!-- Animal Skin -->
+				<item id="1872" min="1" max="3" chance="25.0000"/> <!-- Animal Bone -->
+				<item id="1882" min="1" max="1" chance="11.1111"/> <!-- Leather -->
+				<item id="1894" min="1" max="1" chance="1.5625"/> <!-- Crafted Leather -->
+				<item id="4042" min="1" max="1" chance="0.9434"/> <!-- Enria -->
+				<item id="5534" min="1" max="1" chance="0.6270"/> <!-- Soul Bow Stave -->
+				<item id="8732" min="1" max="1" chance="0.4405"/> <!-- Life Stone: level 76 -->
+				<item id="8742" min="1" max="1" chance="0.1214"/> <!-- Mid-Grade Life Stone: level 76 -->
+				<item id="8752" min="1" max="1" chance="0.0110"/> <!-- High-Grade Life Stone: level 76 -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="21424" level="78" type="Monster" name="Ashkenas">
+		<!-- Interlude - C6 -->
+		<parameters>
+			<param name="MoveAroundSocial" value="100" />
+			<param name="MoveAroundSocial1" value="100" />
+			<param name="MoveAroundSocial2" value="100" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpeedBonus" value="40" />
+			<param name="HealBonus" value="2.4" />
+			<param name="SpiritShotRate" value="30" />
+			<skill name="PhysicalSpecial" id="4077" level="9" /> <!-- NPC Aura Burn -->
+			<skill name="DDMagic1" id="4596" level="9" /> <!-- Bleed -->
+			<skill name="DeBuff" id="4076" level="3" /> <!-- Decrease Speed -->
+			<skill name="SelfBuff" id="4633" level="3" /> <!-- NPC Buff - Acumen Empower Berserk -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<equipment rhand="0" lhand="0" /> <!-- ... / ... -->
+		<acquire exp="52978" sp="6402" raidPoints="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="3010.8929976" hpRegen="8.772" mp="1777.86" mpRegen="3.1008" />
+			<attack physical="961.93701102" magical="677.644106544" random="30" critical="4" accuracy="8.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="361.0859925" magical="246.330714" evasion="4" />
+			<attribute>
+				<attack type="DARK" value="20" />
+			</attribute>
+			<speed>
+				<walk ground="41" />
+				<run ground="190" />
+			</speed>
+			<hitTime>500</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4076" level="3" /> <!-- Decrease Speed -->
+			<skill id="4077" level="9" /> <!-- NPC Aura Burn -->
+			<skill id="4275" level="1" /> <!-- Sacred Attack Weak Point -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep -->
+			<skill id="4333" level="5" /> <!-- Resist Dark Attack -->
+			<skill id="4408" level="14" /> <!-- HP Modifiers -->
+			<skill id="4410" level="14" /> <!-- P. Atk. Modifiers -->
+			<skill id="4411" level="14" /> <!-- M. Atk. Modifiers -->
+			<skill id="4412" level="8" /> <!-- P. Def. Modifiers -->
+			<skill id="4413" level="8" /> <!-- M. Def. Modifiers -->
+			<skill id="4416" level="9" /> <!-- Demonic -->
+			<skill id="4596" level="9" /> <!-- Bleed -->
+			<skill id="4633" level="3" /> <!-- NPC Buff - Acumen Empower Berserk -->
+		</skillList>
+		<shots shotChance="30" spiritChance="30" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+			<clanList>
+				<clan>TOMB</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="13" />
+			<height normal="37.5" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="7867" max="16114" chance="70"/> <!-- Adena -->
+				<item id="305" min="1" max="1" chance="0.0022"/> <!-- Tallum Glaive -->
+				<item id="959" min="1" max="1" chance="0.0034"/> <!-- Scroll: Enchant Weapon (Grade S) -->
+				<item id="1868" min="15" max="45" chance="4.0000"/> <!-- Thread -->
+				<item id="1873" min="2" max="6" chance="5.5556"/> <!-- Silver Nugget -->
+				<item id="1876" min="1" max="1" chance="11.1111"/> <!-- Mithril Ore -->
+				<item id="1895" min="1" max="1" chance="16.6667"/> <!-- Metallic Fiber -->
+				<item id="4042" min="1" max="1" chance="1.0638"/> <!-- Enria -->
+				<item id="5541" min="1" max="1" chance="0.7937"/> <!-- Tallum Glaive Edge -->
+				<item id="6672" min="1" max="1" chance="4.7619"/> <!-- Deluxe Chest Key - Grade 8 -->
+				<item id="8732" min="1" max="1" chance="0.4444"/> <!-- Life Stone: level 76 -->
+				<item id="8742" min="1" max="1" chance="0.0871"/> <!-- Mid-Grade Life Stone: level 76 -->
+				<item id="8752" min="1" max="1" chance="0.0044"/> <!-- High-Grade Life Stone: level 76 -->
+			</drop>
+			<spoil>
+				<item id="5272" min="1" max="1" chance="0.8710"/> <!-- Recipe: Greater Soulshot (S) Compressed Package(100%) -->
+				<item id="5544" min="1" max="1" chance="5.3702"/> <!-- Branch of The Mother Tree Head -->
+				<item id="5545" min="1" max="1" chance="5.3765"/> <!-- Dark Legion's Edge Blade -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="21425" level="78" type="Monster" name="Ashkenas">
+		<!-- Interlude - C6 -->
+		<parameters>
+			<param name="MoveAroundSocial" value="100" />
+			<param name="MoveAroundSocial1" value="100" />
+			<param name="MoveAroundSocial2" value="100" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpeedBonus" value="40" />
+			<param name="HealBonus" value="2.4" />
+			<param name="SpiritShotRate" value="30" />
+			<skill name="PhysicalSpecial" id="4584" level="9" /> <!-- Reducing P. Def Stun -->
+			<skill name="DDMagic1" id="4565" level="9" /> <!-- NPC Eruption -->
+			<skill name="DeBuff" id="4098" level="9" /> <!-- Silence -->
+			<skill name="SelfBuff" id="4632" level="3" /> <!-- NPC Buff - Acumen Empower WildMagic -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<equipment rhand="0" lhand="0" /> <!-- ... / ... -->
+		<acquire exp="53865" sp="6510" raidPoints="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="3010.8929976" hpRegen="8.772" mp="1777.86" mpRegen="3.1008" />
+			<attack physical="961.93701102" magical="677.644106544" random="30" critical="4" accuracy="8.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="361.0859925" magical="246.330714" evasion="4" />
+			<attribute>
+				<attack type="DARK" value="20" />
+			</attribute>
+			<speed>
+				<walk ground="41" />
+				<run ground="190" />
+			</speed>
+			<hitTime>500</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4098" level="9" /> <!-- Silence -->
+			<skill id="4275" level="1" /> <!-- Sacred Attack Weak Point -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep -->
+			<skill id="4333" level="5" /> <!-- Resist Dark Attack -->
+			<skill id="4408" level="14" /> <!-- HP Modifiers -->
+			<skill id="4410" level="14" /> <!-- P. Atk. Modifiers -->
+			<skill id="4411" level="14" /> <!-- M. Atk. Modifiers -->
+			<skill id="4412" level="8" /> <!-- P. Def. Modifiers -->
+			<skill id="4413" level="8" /> <!-- M. Def. Modifiers -->
+			<skill id="4416" level="9" /> <!-- Demonic -->
+			<skill id="4565" level="9" /> <!-- NPC Eruption -->
+			<skill id="4584" level="9" /> <!-- Reducing P. Def Stun -->
+			<skill id="4632" level="3" /> <!-- NPC Buff - Acumen Empower WildMagic -->
+		</skillList>
+		<shots shotChance="30" spiritChance="30" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+			<clanList>
+				<clan>TOMB</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="13" />
+			<height normal="37.5" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="7999" max="16385" chance="70"/> <!-- Adena -->
+				<item id="305" min="1" max="1" chance="0.0022"/> <!-- Tallum Glaive -->
+				<item id="959" min="1" max="1" chance="0.0130"/> <!-- Scroll: Enchant Weapon (Grade S) -->
+				<item id="1868" min="15" max="45" chance="4.3478"/> <!-- Thread -->
+				<item id="1873" min="2" max="6" chance="6.6667"/> <!-- Silver Nugget -->
+				<item id="1876" min="1" max="1" chance="12.5000"/> <!-- Mithril Ore -->
+				<item id="1895" min="1" max="1" chance="20.0000"/> <!-- Metallic Fiber -->
+				<item id="4042" min="1" max="1" chance="1.1765"/> <!-- Enria -->
+				<item id="5541" min="1" max="1" chance="0.8071"/> <!-- Tallum Glaive Edge -->
+				<item id="8732" min="1" max="1" chance="0.5291"/> <!-- Life Stone: level 76 -->
+				<item id="8742" min="1" max="1" chance="0.1689"/> <!-- Mid-Grade Life Stone: level 76 -->
+				<item id="8752" min="1" max="1" chance="0.0043"/> <!-- High-Grade Life Stone: level 76 -->
+			</drop>
+			<spoil>
+				<item id="5272" min="1" max="1" chance="0.8856"/> <!-- Recipe: Greater Soulshot (S) Compressed Package(100%) -->
+				<item id="5544" min="1" max="1" chance="5.4603"/> <!-- Branch of The Mother Tree Head -->
+				<item id="5545" min="1" max="1" chance="5.4667"/> <!-- Dark Legion's Edge Blade -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="21426" level="78" type="Monster" name="Abraxion">
+		<!-- Interlude - C6 -->
+		<parameters>
+			<param name="MoveAroundSocial" value="90" />
+			<param name="MoveAroundSocial1" value="90" />
+			<param name="MoveAroundSocial2" value="90" />
+			<skill name="SelfBuff1" id="4576" level="3" /> <!-- NPC Clan Buff - Damage Shield -->
+			<skill name="SelfBuff2" id="4585" level="3" /> <!-- NPC Clan Buff - Berserk Might -->
+			<skill name="SelfBuff3" id="4595" level="3" /> <!-- NPC Clan Buff - Acumen Shield -->
+			<skill name="SelfBuff4" id="4609" level="4" /> <!-- NPC Clan Buff - Vampiric Rage -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<equipment rhand="0" lhand="0" /> <!-- ... / ... -->
+		<acquire exp="62028" sp="7584" raidPoints="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="3044.88717" hpRegen="8.823" mp="1812.948" mpRegen="3.111" />
+			<attack physical="985.66600746" magical="699.2575207596" random="50" critical="1" accuracy="14" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="367.3536375" magical="253.534464" evasion="5" />
+			<attribute>
+				<attack type="DARK" value="20" />
+			</attribute>
+			<speed>
+				<walk ground="31" />
+				<run ground="130" />
+			</speed>
+			<hitTime>480</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4275" level="1" /> <!-- Sacred Attack Weak Point -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep -->
+			<skill id="4333" level="5" /> <!-- Resist Dark Attack -->
+			<skill id="4408" level="12" /> <!-- HP Modifiers -->
+			<skill id="4412" level="15" /> <!-- P. Def. Modifiers -->
+			<skill id="4416" level="9" /> <!-- Demonic -->
+			<skill id="4576" level="3" /> <!-- NPC Clan Buff - Damage Shield -->
+			<skill id="4585" level="3" /> <!-- NPC Clan Buff - Berserk Might -->
+			<skill id="4595" level="3" /> <!-- NPC Clan Buff - Acumen Shield -->
+			<skill id="4609" level="4" /> <!-- NPC Clan Buff - Vampiric Rage -->
+		</skillList>
+		<shots shotChance="0" spiritChance="0" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="300">
+			<clanList>
+				<clan>TOMB</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="21" grown="24" />
+			<height normal="50" grown="60" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="7369" max="15040" chance="70"/> <!-- Adena -->
+				<item id="289" min="1" max="1" chance="0.0021"/> <!-- Soul Bow -->
+				<item id="960" min="1" max="1" chance="0.0194"/> <!-- Scroll: Enchant Armor (Grade S) -->
+				<item id="1344" min="150" max="450" chance="4.5455"/> <!-- Mithril Arrow -->
+				<item id="1868" min="4" max="12" chance="14.2857"/> <!-- Thread -->
+				<item id="1873" min="3" max="9" chance="3.7037"/> <!-- Silver Nugget -->
+				<item id="1876" min="1" max="1" chance="11.1111"/> <!-- Mithril Ore -->
+				<item id="1895" min="3" max="9" chance="2.0000"/> <!-- Metallic Fiber -->
+				<item id="4042" min="1" max="1" chance="1.0526"/> <!-- Enria -->
+				<item id="5534" min="1" max="1" chance="0.7425"/> <!-- Soul Bow Stave -->
+				<item id="8732" min="1" max="1" chance="0.5376"/> <!-- Life Stone: level 76 -->
+				<item id="8742" min="1" max="1" chance="0.1488"/> <!-- Mid-Grade Life Stone: level 76 -->
+				<item id="8752" min="1" max="1" chance="0.0129"/> <!-- High-Grade Life Stone: level 76 -->
+			</drop>
+			<spoil>
+				<item id="6698" min="1" max="2" chance="35.9685"/> <!-- Sealed Tateossian Earring Part -->
+				<item id="6699" min="1" max="1" chance="39.9119"/> <!-- Sealed Tateossian Ring Gem -->
+				<item id="6700" min="1" max="1" chance="21.9221"/> <!-- Sealed Tateossian Necklace Chain -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="21427" level="78" type="Monster" name="Abraxion">
+		<!-- Interlude - C6 -->
+		<parameters>
+			<param name="MoveAroundSocial" value="90" />
+			<param name="MoveAroundSocial1" value="90" />
+			<param name="MoveAroundSocial2" value="90" />
+			<skill name="PhysicalSpecial" id="4560" level="9" /> <!-- NPC Fire Burn -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<equipment rhand="0" lhand="0" /> <!-- ... / ... -->
+		<acquire exp="36455" sp="4456" raidPoints="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="3044.88717" hpRegen="8.823" mp="1812.948" mpRegen="3.111" />
+			<attack physical="985.66600746" magical="699.2575207596" random="50" critical="1" accuracy="14" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="367.3536375" magical="253.534464" evasion="5" />
+			<attribute>
+				<attack type="DARK" value="20" />
+			</attribute>
+			<speed>
+				<walk ground="31" />
+				<run ground="130" />
+			</speed>
+			<hitTime>480</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4275" level="1" /> <!-- Sacred Attack Weak Point -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep -->
+			<skill id="4333" level="5" /> <!-- Resist Dark Attack -->
+			<skill id="4408" level="12" /> <!-- HP Modifiers -->
+			<skill id="4412" level="15" /> <!-- P. Def. Modifiers -->
+			<skill id="4416" level="9" /> <!-- Demonic -->
+			<skill id="4560" level="9" /> <!-- NPC Fire Burn -->
+		</skillList>
+		<shots shotChance="0" spiritChance="0" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="300">
+			<clanList>
+				<clan>TOMB</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="21" grown="24" />
+			<height normal="50" grown="60" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="5017" max="10240" chance="70"/> <!-- Adena -->
+				<item id="289" min="1" max="1" chance="0.0014"/> <!-- Soul Bow -->
+				<item id="960" min="1" max="1" chance="0.0164"/> <!-- Scroll: Enchant Armor (Grade S) -->
+				<item id="1344" min="150" max="450" chance="3.2258"/> <!-- Mithril Arrow -->
+				<item id="1868" min="4" max="12" chance="9.0909"/> <!-- Thread -->
+				<item id="1873" min="1" max="1" chance="14.2857"/> <!-- Silver Nugget -->
+				<item id="1876" min="1" max="1" chance="7.1429"/> <!-- Mithril Ore -->
+				<item id="1895" min="1" max="1" chance="11.1111"/> <!-- Metallic Fiber -->
+				<item id="4042" min="1" max="1" chance="0.5556"/> <!-- Enria -->
+				<item id="5534" min="1" max="1" chance="0.5056"/> <!-- Soul Bow Stave -->
+				<item id="8732" min="1" max="1" chance="0.2451"/> <!-- Life Stone: level 76 -->
+				<item id="8742" min="1" max="1" chance="0.1391"/> <!-- Mid-Grade Life Stone: level 76 -->
+				<item id="8752" min="1" max="1" chance="0.0164"/> <!-- High-Grade Life Stone: level 76 -->
+			</drop>
+			<spoil>
+				<item id="6698" min="1" max="1" chance="24.4891"/> <!-- Sealed Tateossian Earring Part -->
+				<item id="6699" min="1" max="1" chance="27.1740"/> <!-- Sealed Tateossian Ring Gem -->
+				<item id="6700" min="1" max="1" chance="14.9257"/> <!-- Sealed Tateossian Necklace Chain -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="21428" level="78" type="Monster" name="Hasturan">
+		<!-- Interlude - C6 -->
+		<parameters>
+			<param name="MoveAroundSocial" value="90" />
+			<param name="MoveAroundSocial1" value="90" />
+			<param name="MoveAroundSocial2" value="90" />
+			<skill name="SelfRangeDDMagic" id="4571" level="9" /> <!-- NPC Blazing Circle -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<equipment rhand="0" lhand="0" /> <!-- ... / ... -->
+		<acquire exp="34813" sp="4255" raidPoints="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="3044.88717" hpRegen="8.823" mp="1812.948" mpRegen="3.111" />
+			<attack physical="985.66600746" magical="699.2575207596" random="50" critical="1" accuracy="14" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="367.3536375" magical="253.534464" evasion="5" />
+			<attribute>
+				<attack type="DARK" value="20" />
+			</attribute>
+			<speed>
+				<walk ground="31" />
+				<run ground="150" />
+			</speed>
+			<hitTime>480</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4233" level="1" /> <!-- Vampiric Attack -->
+			<skill id="4275" level="1" /> <!-- Sacred Attack Weak Point -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep -->
+			<skill id="4333" level="5" /> <!-- Resist Dark Attack -->
+			<skill id="4408" level="13" /> <!-- HP Modifiers -->
+			<skill id="4410" level="12" /> <!-- P. Atk. Modifiers -->
+			<skill id="4411" level="12" /> <!-- M. Atk. Modifiers -->
+			<skill id="4412" level="10" /> <!-- P. Def. Modifiers -->
+			<skill id="4413" level="10" /> <!-- M. Def. Modifiers -->
+			<skill id="4416" level="9" /> <!-- Demonic -->
+			<skill id="4571" level="9" /> <!-- NPC Blazing Circle -->
+		</skillList>
+		<shots shotChance="0" spiritChance="0" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>5</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+			<clanList>
+				<clan>TOMB</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="21" grown="24" />
+			<height normal="50" grown="60" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="5187" max="10587" chance="70"/> <!-- Adena -->
+				<item id="236" min="1" max="1" chance="0.0015"/> <!-- Soul Separator -->
+				<item id="960" min="1" max="1" chance="0.0126"/> <!-- Scroll: Enchant Armor (Grade S) -->
+				<item id="1344" min="30" max="90" chance="16.6667"/> <!-- Mithril Arrow -->
+				<item id="1868" min="4" max="12" chance="10.0000"/> <!-- Thread -->
+				<item id="1873" min="1" max="1" chance="16.6667"/> <!-- Silver Nugget -->
+				<item id="1889" min="1" max="1" chance="2.5000"/> <!-- Compound Braid -->
+				<item id="4044" min="1" max="1" chance="1.2500"/> <!-- Thons -->
+				<item id="5537" min="1" max="1" chance="0.5223"/> <!-- Soul Separator Head -->
+				<item id="5549" min="1" max="1" chance="4.3478"/> <!-- Metallic Thread -->
+				<item id="8732" min="1" max="1" chance="0.3401"/> <!-- Life Stone: level 76 -->
+				<item id="8742" min="1" max="1" chance="0.1261"/> <!-- Mid-Grade Life Stone: level 76 -->
+				<item id="8752" min="1" max="1" chance="0.0126"/> <!-- High-Grade Life Stone: level 76 -->
+			</drop>
+			<spoil>
+				<item id="6701" min="1" max="1" chance="6.8629"/> <!-- Sealed Imperial Crusader Breastplate Part -->
+				<item id="6702" min="1" max="1" chance="8.8343"/> <!-- Sealed Imperial Crusader Gaiters Pattern -->
+				<item id="6703" min="1" max="1" chance="18.3529"/> <!-- Sealed Imperial Crusader Gauntlets Design -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="21429" level="78" type="Monster" name="Hasturan">
+		<!-- Interlude - C6 -->
+		<parameters>
+			<param name="MoveAroundSocial" value="90" />
+			<param name="MoveAroundSocial1" value="90" />
+			<param name="MoveAroundSocial2" value="90" />
+			<skill name="W_LongRangeDDMagic" id="4151" level="9" /> <!-- NPC Windstrike - Magic -->
+			<skill name="PhysicalSpecialRange" id="4072" level="9" /> <!-- Shock -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<equipment rhand="0" lhand="0" /> <!-- ... / ... -->
+		<acquire exp="36346" sp="4445" raidPoints="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="3044.88717" hpRegen="8.823" mp="1812.948" mpRegen="3.111" />
+			<attack physical="985.66600746" magical="699.2575207596" random="50" critical="1" accuracy="14" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="367.3536375" magical="253.534464" evasion="5" />
+			<attribute>
+				<attack type="DARK" value="20" />
+			</attribute>
+			<speed>
+				<walk ground="31" />
+				<run ground="150" />
+			</speed>
+			<hitTime>480</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4072" level="9" /> <!-- Shock -->
+			<skill id="4151" level="9" /> <!-- NPC Windstrike - Magic -->
+			<skill id="4233" level="1" /> <!-- Vampiric Attack -->
+			<skill id="4275" level="1" /> <!-- Sacred Attack Weak Point -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep -->
+			<skill id="4333" level="5" /> <!-- Resist Dark Attack -->
+			<skill id="4408" level="13" /> <!-- HP Modifiers -->
+			<skill id="4410" level="10" /> <!-- P. Atk. Modifiers -->
+			<skill id="4411" level="10" /> <!-- M. Atk. Modifiers -->
+			<skill id="4412" level="12" /> <!-- P. Def. Modifiers -->
+			<skill id="4413" level="12" /> <!-- M. Def. Modifiers -->
+			<skill id="4416" level="9" /> <!-- Demonic -->
+		</skillList>
+		<shots shotChance="0" spiritChance="0" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>5</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+			<clanList>
+				<clan>TOMB</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="21" grown="24" />
+			<height normal="50" grown="60" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="5417" max="11055" chance="70"/> <!-- Adena -->
+				<item id="236" min="1" max="1" chance="0.0015"/> <!-- Soul Separator -->
+				<item id="960" min="1" max="1" chance="0.0170"/> <!-- Scroll: Enchant Armor (Grade S) -->
+				<item id="1344" min="150" max="450" chance="3.4483"/> <!-- Mithril Arrow -->
+				<item id="1868" min="4" max="12" chance="11.1111"/> <!-- Thread -->
+				<item id="1873" min="1" max="1" chance="16.6667"/> <!-- Silver Nugget -->
+				<item id="1889" min="1" max="1" chance="2.4390"/> <!-- Compound Braid -->
+				<item id="4044" min="1" max="1" chance="1.0870"/> <!-- Thons -->
+				<item id="5537" min="1" max="1" chance="0.5454"/> <!-- Soul Separator Head -->
+				<item id="5549" min="1" max="1" chance="4.1667"/> <!-- Metallic Thread -->
+				<item id="8732" min="1" max="1" chance="0.3559"/> <!-- Life Stone: level 76 -->
+				<item id="8742" min="1" max="1" chance="0.0339"/> <!-- Mid-Grade Life Stone: level 76 -->
+			</drop>
+			<spoil>
+				<item id="6701" min="1" max="1" chance="7.1661"/> <!-- Sealed Imperial Crusader Breastplate Part -->
+				<item id="6702" min="1" max="1" chance="9.2247"/> <!-- Sealed Imperial Crusader Gaiters Pattern -->
+				<item id="6703" min="1" max="1" chance="19.1638"/> <!-- Sealed Imperial Crusader Gauntlets Design -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="21430" level="78" type="Monster" name="Arimanes">
+		<!-- Interlude - C6 -->
+		<parameters>
+			<param name="MoveAroundSocial" value="100" />
+			<param name="MoveAroundSocial1" value="100" />
+			<param name="MoveAroundSocial2" value="100" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="30" />
+			<skill name="W_LongRangeDDMagic" id="4257" level="9" /> <!-- NPC Hydroblast - Magic -->
+			<skill name="W_ShortRangeDDMagic" id="4160" level="9" /> <!-- NPC Aura Burn - Magic -->
+			<skill name="Buff1" id="4585" level="3" /> <!-- NPC Clan Buff - Berserk Might -->
+			<skill name="Buff2" id="4601" level="3" /> <!-- NPC Clan Buff - Acumen Focus -->
+			<skill name="RangeDeBuff" id="4577" level="9" /> <!-- Decrease Accuracy -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<equipment rhand="6722" lhand="0" /> <!-- Monster Only(Ahrimanes) / ... -->
+		<acquire exp="50200" sp="6138" raidPoints="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="3044.88717" hpRegen="8.823" mp="1812.948" mpRegen="3.111" />
+			<attack physical="985.66600746" magical="699.2575207596" random="30" critical="4" accuracy="9.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="367.3536375" magical="253.534464" evasion="5" />
+			<attribute>
+				<attack type="DARK" value="20" />
+			</attribute>
+			<speed>
+				<walk ground="35" />
+				<run ground="210" />
+			</speed>
+			<hitTime>480</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4160" level="9" /> <!-- NPC Aura Burn - Magic -->
+			<skill id="4257" level="9" /> <!-- NPC Hydroblast - Magic -->
+			<skill id="4275" level="1" /> <!-- Sacred Attack Weak Point -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep -->
+			<skill id="4333" level="5" /> <!-- Resist Dark Attack -->
+			<skill id="4408" level="14" /> <!-- HP Modifiers -->
+			<skill id="4410" level="13" /> <!-- P. Atk. Modifiers -->
+			<skill id="4411" level="13" /> <!-- M. Atk. Modifiers -->
+			<skill id="4412" level="9" /> <!-- P. Def. Modifiers -->
+			<skill id="4413" level="9" /> <!-- M. Def. Modifiers -->
+			<skill id="4416" level="9" /> <!-- Demonic -->
+			<skill id="4577" level="9" /> <!-- Decrease Accuracy -->
+			<skill id="4585" level="3" /> <!-- NPC Clan Buff - Berserk Might -->
+			<skill id="4601" level="3" /> <!-- NPC Clan Buff - Acumen Focus -->
+		</skillList>
+		<shots shotChance="30" spiritChance="30" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai type="MAGE" aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clanList>
+				<clan>TOMB</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="14" grown="17" />
+			<height normal="57.75" grown="69" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="7481" max="15268" chance="70"/> <!-- Adena -->
+				<item id="5320" min="1" max="1" chance="0.0036"/> <!-- Sealed Leather Armor of Nightmare -->
+				<item id="5323" min="1" max="1" chance="0.0036"/> <!-- Sealed Majestic Leather Armor -->
+				<item id="960" min="1" max="1" chance="0.0431"/> <!-- Scroll: Enchant Armor (Grade S) -->
+				<item id="1344" min="150" max="450" chance="4.3478"/> <!-- Mithril Arrow -->
+				<item id="1868" min="4" max="12" chance="14.2857"/> <!-- Thread -->
+				<item id="1873" min="3" max="9" chance="3.8462"/> <!-- Silver Nugget -->
+				<item id="1876" min="1" max="1" chance="11.1111"/> <!-- Mithril Ore -->
+				<item id="1895" min="3" max="9" chance="2.3810"/> <!-- Metallic Fiber -->
+				<item id="4042" min="1" max="1" chance="0.8621"/> <!-- Enria -->
+				<item id="5480" min="1" max="1" chance="0.6161"/> <!-- Sealed Leather Armor of Nightmare Fabric -->
+				<item id="5481" min="1" max="1" chance="0.6161"/> <!-- Sealed Majestic Leather Armor Fabric -->
+				<item id="8732" min="1" max="1" chance="0.4310"/> <!-- Life Stone: level 76 -->
+				<item id="8742" min="1" max="1" chance="0.1439"/> <!-- Mid-Grade Life Stone: level 76 -->
+				<item id="8752" min="1" max="1" chance="0.0144"/> <!-- High-Grade Life Stone: level 76 -->
+			</drop>
+			<spoil>
+				<item id="6704" min="1" max="1" chance="26.4663"/> <!-- Sealed Imperial Crusader Boots Design -->
+				<item id="6705" min="1" max="1" chance="25.9237"/> <!-- Sealed Imperial Crusader Shield Part -->
+				<item id="6706" min="1" max="1" chance="30.1543"/> <!-- Sealed Imperial Crusader Helmet Pattern -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="21431" level="78" type="Monster" name="Arimanes">
+		<!-- Interlude - C6 -->
+		<parameters>
+			<param name="MoveAroundSocial" value="100" />
+			<param name="MoveAroundSocial1" value="100" />
+			<param name="MoveAroundSocial2" value="100" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="30" />
+			<skill name="PhysicalSpecial" id="4560" level="9" /> <!-- NPC Fire Burn -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<equipment rhand="6722" lhand="0" /> <!-- Monster Only(Ahrimanes) / ... -->
+		<acquire exp="42819" sp="5232" raidPoints="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="3044.88717" hpRegen="8.823" mp="1812.948" mpRegen="3.111" />
+			<attack physical="985.66600746" magical="699.2575207596" random="30" critical="4" accuracy="9.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="367.3536375" magical="253.534464" evasion="5" />
+			<attribute>
+				<attack type="DARK" value="20" />
+			</attribute>
+			<speed>
+				<walk ground="35" />
+				<run ground="210" />
+			</speed>
+			<hitTime>480</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4275" level="1" /> <!-- Sacred Attack Weak Point -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep -->
+			<skill id="4333" level="5" /> <!-- Resist Dark Attack -->
+			<skill id="4408" level="14" /> <!-- HP Modifiers -->
+			<skill id="4410" level="9" /> <!-- P. Atk. Modifiers -->
+			<skill id="4411" level="9" /> <!-- M. Atk. Modifiers -->
+			<skill id="4412" level="13" /> <!-- P. Def. Modifiers -->
+			<skill id="4413" level="13" /> <!-- M. Def. Modifiers -->
+			<skill id="4416" level="9" /> <!-- Demonic -->
+			<skill id="4560" level="9" /> <!-- NPC Fire Burn -->
+		</skillList>
+		<shots shotChance="30" spiritChance="30" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clanList>
+				<clan>TOMB</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="14" grown="17" />
+			<height normal="57.75" grown="69" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="6381" max="13023" chance="70"/> <!-- Adena -->
+				<item id="5320" min="1" max="1" chance="0.0031"/> <!-- Sealed Leather Armor of Nightmare -->
+				<item id="5323" min="1" max="1" chance="0.0031"/> <!-- Sealed Majestic Leather Armor -->
+				<item id="960" min="1" max="1" chance="0.0268"/> <!-- Scroll: Enchant Armor (Grade S) -->
+				<item id="1344" min="150" max="450" chance="3.4483"/> <!-- Mithril Arrow -->
+				<item id="1868" min="4" max="12" chance="12.5000"/> <!-- Thread -->
+				<item id="1873" min="3" max="9" chance="3.3333"/> <!-- Silver Nugget -->
+				<item id="1876" min="1" max="1" chance="11.1111"/> <!-- Mithril Ore -->
+				<item id="1895" min="3" max="9" chance="14.2857"/> <!-- Metallic Fiber -->
+				<item id="4042" min="1" max="1" chance="0.5051"/> <!-- Enria -->
+				<item id="5480" min="1" max="1" chance="0.5255"/> <!-- Sealed Leather Armor of Nightmare Fabric -->
+				<item id="5481" min="1" max="1" chance="0.5255"/> <!-- Sealed Majestic Leather Armor Fabric -->
+				<item id="8732" min="1" max="1" chance="0.4386"/> <!-- Life Stone: level 76 -->
+				<item id="8742" min="1" max="1" chance="0.0674"/> <!-- Mid-Grade Life Stone: level 76 -->
+				<item id="8752" min="1" max="1" chance="0.0337"/> <!-- High-Grade Life Stone: level 76 -->
+			</drop>
+			<spoil>
+				<item id="6704" min="1" max="1" chance="22.5750"/> <!-- Sealed Imperial Crusader Boots Design -->
+				<item id="6705" min="1" max="1" chance="22.1122"/> <!-- Sealed Imperial Crusader Shield Part -->
+				<item id="6706" min="1" max="1" chance="25.7207"/> <!-- Sealed Imperial Crusader Helmet Pattern -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="21432" level="78" type="Monster" name="Chakram Beetle">
+		<!-- Interlude - C6 -->
+		<parameters>
+			<param name="MoveAroundSocial" value="80" />
+			<param name="MoveAroundSocial1" value="80" />
+			<param name="MoveAroundSocial2" value="80" />
+			<minions name="Privates">
+				<npc id="21433" count="1" respawnTime="0" weightPoint="1" /> <!-- Jamadar Beetle -->
+			</minions>
+			<skill name="PhysicalSpecial" id="4040" level="9" /> <!-- NPC Bow Attack -->
+			<skill name="MagicHeal" id="4065" level="9" /> <!-- NPC Heal -->
+			<skill name="SelfBuff" id="4341" level="1" /> <!-- Ultimate Buff, 3rd -->
+		</parameters>
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<equipment rhand="0" lhand="0" /> <!-- ... / ... -->
+		<acquire exp="69328" sp="8184" raidPoints="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2937.9838056" hpRegen="8.67" mp="1708.296" mpRegen="3.06" />
+			<attack physical="912.6537108" magical="635.688655236" random="30" critical="4" accuracy="6.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="348.2025" magical="231.837152158566" evasion="2" />
+			<speed>
+				<walk ground="45" />
+				<run ground="170" />
+			</speed>
+			<hitTime>590</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4040" level="9" /> <!-- NPC Bow Attack -->
+			<skill id="4065" level="9" /> <!-- NPC Heal -->
+			<skill id="4071" level="5" /> <!-- Resist Archery -->
+			<skill id="4274" level="1" /> <!-- Blunt Attack Weak Point -->
+			<skill id="4341" level="1"/> <!-- Ultimate Buff, 3rd -->
+			<skill id="4408" level="14" /> <!-- HP Modifiers -->
+			<skill id="4412" level="15" /> <!-- P. Def. Modifiers -->
+			<skill id="4413" level="15" /> <!-- M. Def. Modifiers -->
+			<skill id="4416" level="12" /> <!-- Bug -->
+			<skill id="4437" level="4" /> <!-- Greater Resist Bleeding -->
+		</skillList>
+		<shots shotChance="0" spiritChance="0" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clanList>
+				<clan>TOMB</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="19" />
+			<height normal="54.5" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="8447" max="17245" chance="70"/> <!-- Adena -->
+				<item id="270" min="1" max="1" chance="0.0023"/> <!-- Dragon Grinder -->
+				<item id="959" min="1" max="1" chance="0.0042"/> <!-- Scroll: Enchant Weapon (Grade S) -->
+				<item id="1868" min="15" max="45" chance="6.8916"/> <!-- Thread -->
+				<item id="1873" min="2" max="6" chance="10.3374"/> <!-- Silver Nugget -->
+				<item id="1876" min="1" max="1" chance="20.6747"/> <!-- Mithril Ore -->
+				<item id="1895" min="3" max="9" chance="4.9226"/> <!-- Metallic Fiber -->
+				<item id="4042" min="1" max="1" chance="1.7229"/> <!-- Enria -->
+				<item id="5538" min="1" max="1" chance="0.8508"/> <!-- Dragon Grinder Edge -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="21433" level="78" type="Monster" name="Jamadar Beetle">
+		<!-- Interlude - C6 -->
+		<parameters>
+			<param name="MoveAroundSocial" value="80" />
+			<param name="MoveAroundSocial1" value="80" />
+			<param name="MoveAroundSocial2" value="80" />
+			<skill name="PhysicalSpecial" id="4579" level="8" /> <!-- Bleed -->
+			<skill name="MagicHeal" id="4065" level="7" /> <!-- NPC Heal -->
+			<skill name="SelfBuff" id="4340" level="1" /> <!-- Ultimate Buff, 2nd -->
+		</parameters>
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<equipment rhand="0" lhand="0" /> <!-- ... / ... -->
+		<acquire exp="68949" sp="7836" raidPoints="0" />
+	<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2870.7774087" hpRegen="8.585" mp="1657.41" mpRegen="3.03" />
+			<attack physical="884.2525659" magical="609.868172336" random="30" critical="4" accuracy="5.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="340.4407808" magical="226.669315301277" evasion="1" />
+			<speed>
+				<walk ground="45" />
+				<run ground="175" />
+			</speed>
+			<hitTime>590</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4065" level="9" /> <!-- NPC Heal -->
+			<skill id="4071" level="5" /> <!-- Resist Archery -->
+			<skill id="4340" level="1" /> <!-- Ultimate Buff, 2nd -->
+			<skill id="4408" level="14" /> <!-- HP Modifiers -->
+			<skill id="4412" level="15" /> <!-- P. Def. Modifiers -->
+			<skill id="4413" level="15" /> <!-- M. Def. Modifiers -->
+			<skill id="4416" level="12" /> <!-- Bug -->
+			<skill id="4437" level="4" /> <!-- Greater Resist Bleeding -->
+			<skill id="4579" level="8" /> <!-- Bleed -->
+		</skillList>
+		<shots shotChance="0" spiritChance="0" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="20" grown="25" />
+			<height normal="43.6" grown="52.5" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="8184" max="16701" chance="70"/> <!-- Adena -->
+				<item id="5311" min="1" max="1" chance="30"/> <!-- Sealed Armor of Nightmare -->
+				<item id="5316" min="1" max="1" chance="30"/> <!-- Sealed Majestic Plate Armor -->
+				<item id="959" min="1" max="1" chance="41"/> <!-- Scroll: Enchant Weapon (Grade S) -->
+				<item id="1868" min="15" max="45" chance="66754"/> <!-- Thread -->
+				<item id="1873" min="2" max="6" chance="100130"/> <!-- Silver Nugget -->
+				<item id="1876" min="1" max="1" chance="200259"/> <!-- Mithril Ore -->
+				<item id="1895" min="3" max="9" chance="47681"/> <!-- Metallic Fiber -->
+				<item id="4042" min="1" max="1" chance="16689"/> <!-- Enria -->
+				<item id="5522" min="1" max="1" chance="5115"/> <!-- Sealed Armor of Nightmare Pattern -->
+				<item id="5523" min="1" max="1" chance="5115"/> <!-- Sealed Majestic Plate Armor Pattern -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="21434" level="78" type="Monster" name="Seer of Blood">
+		<!-- Interlude - C6 -->
+		<parameters>
+			<param name="MoveAroundSocial" value="90" />
+			<param name="MoveAroundSocial1" value="90" />
+			<param name="MoveAroundSocial2" value="90" />
+			<param name="SummonSlave" value="21437" /> <!-- Offering Bug -->
+			<skill name="PhysicalSpecial1" id="4605" level="9" /> <!-- Surrender To Fire -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<equipment rhand="6722" lhand="0" /> <!-- Monster Only(Ahrimanes) / ... -->
+		<acquire exp="127910" sp="16242" raidPoints="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="3010.8929976" hpRegen="8.772" mp="1777.86" mpRegen="3.1008" />
+			<attack physical="961.93701102" magical="677.644106544" random="50" critical="1" accuracy="13" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="361.0859925" magical="246.330714" evasion="4" />
+			<attribute>
+				<attack type="DARK" value="20" />
+			</attribute>
+			<speed>
+				<walk ground="31" />
+				<run ground="150" />
+			</speed>
+			<hitTime>480</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4275" level="1" /> <!-- Sacred Attack Weak Point -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep -->
+			<skill id="4333" level="5" /> <!-- Resist Dark Attack -->
+			<skill id="4408" level="14" /> <!-- HP Modifiers -->
+			<skill id="4412" level="20" /> <!-- P. Def. Modifiers -->
+			<skill id="4416" level="9" /> <!-- Demonic -->
+			<skill id="4605" level="9" /> <!-- Surrender To Fire -->
+		</skillList>
+		<shots shotChance="0" spiritChance="0" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clanList>
+				<clan>TOMB</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="14" grown="17" />
+			<height normal="57.75" grown="69" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="15536" max="31822" chance="70"/> <!-- Adena -->
+				<item id="5320" min="1" max="1" chance="0.0074"/> <!-- Sealed Leather Armor of Nightmare -->
+				<item id="5323" min="1" max="1" chance="0.0074"/> <!-- Sealed Majestic Leather Armor -->
+				<item id="959" min="1" max="1" chance="77"/> <!-- Scroll: Enchant Weapon (Grade S) -->
+				<item id="1866" min="7" max="21" chance="66667"/> <!-- Suede -->
+				<item id="1871" min="4" max="12" chance="166667"/> <!-- Charcoal -->
+				<item id="1877" min="1" max="1" chance="50000"/> <!-- Adamantite Nugget -->
+				<item id="4040" min="1" max="1" chance="32258"/> <!-- Mold Lubricant -->
+				<item id="4041" min="1" max="1" chance="9259"/> <!-- Mold Hardener -->
+				<item id="5480" min="1" max="1" chance="12826"/> <!-- Sealed Leather Armor of Nightmare Fabric -->
+				<item id="5481" min="1" max="1" chance="12826"/> <!-- Sealed Majestic Leather Armor Fabric -->
+				<item id="8732" min="1" max="1" chance="10638"/> <!-- Life Stone: level 76 -->
+				<item id="8742" min="1" max="1" chance="2660"/> <!-- Mid-Grade Life Stone: level 76 -->
+			</drop>
+			<spoil>
+				<item id="1877" min="1" max="3" chance="773988"/> <!-- Adamantite Nugget -->
+				<item id="5282" min="1" max="1" chance="17200"/> <!-- Recipe: Greater Blessed Spiritshot (S) Compressed Package(100%) -->
+				<item id="6342" min="1" max="1" chance="876643"/> <!-- Sealed Majestic Earring Gemstone -->
+			</spoil>
+		</dropLists>
+	</npc>
 	<npc id="21438" level="65" type="Monster" name="Heathen Warrior">
 		<!-- Confirmed CT2.5 -->
 		<parameters>

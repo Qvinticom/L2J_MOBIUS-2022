@@ -8321,4 +8321,288 @@
 			<height normal="75" />
 		</collision>
 	</npc>
+	<npc id="21396" level="78" type="Monster" name="Carrion Scarab">
+		<!-- Interlude - C6 -->
+		<parameters>
+			<param name="MoveAroundSocial" value="65" />
+			<param name="MoveAroundSocial1" value="65" />
+			<param name="MoveAroundSocial2" value="65" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpeedBonus" value="40" />
+			<param name="HealBonus" value="2.4" />
+			<param name="SpiritShotRate" value="30" />
+			<skill name="DDMagic1" id="4001" level="8" /> <!-- NPC Windstrike -->
+			<skill name="DDMagic2" id="4002" level="8" /> <!-- NPC HP Drain -->
+			<skill name="DeBuff" id="4047" level="8" /> <!-- Hold -->
+		</parameters>
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<equipment rhand="0" lhand="0" /> <!-- ... / ... -->
+		<acquire exp="24545" sp="2685" raidPoints="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="855.81387" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="221.515820894982" />
+			<speed>
+				<walk ground="45" />
+				<run ground="130" />
+			</speed>
+			<hitTime>520</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4001" level="8" /> <!-- NPC Windstrike -->
+			<skill id="4002" level="8" /> <!-- NPC HP Drain -->
+			<skill id="4047" level="8" /> <!-- Hold -->
+			<skill id="4071" level="5" /> <!-- Resist Archery -->
+			<skill id="4274" level="1" /> <!-- Blunt Attack Weak Point -->
+			<skill id="4408" level="14" /> <!-- HP Modifiers -->
+			<skill id="4410" level="9" /> <!-- P. Atk. Modifiers -->
+			<skill id="4411" level="9" /> <!-- M. Atk. Modifiers -->
+			<skill id="4412" level="16" /> <!-- P. Def. Modifiers -->
+			<skill id="4413" level="13" /> <!-- M. Def. Modifiers -->
+			<skill id="4416" level="12" /> <!-- Bug -->
+			<skill id="4437" level="4" /> <!-- Greater Resist Bleeding -->
+			<skill id="4579" level="8" /> <!-- Bleed -->
+			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
+		</skillList>
+		<shots shotChance="20" spiritChance="20" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>3</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clanList>
+				<clan>TOMB</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="14" />
+			<height normal="22" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="3069" max="6264" chance="70"/> <!-- Adena -->
+				<item id="212" min="1" max="1" chance="0.0007"/> <!-- Dasparion's Staff -->
+				<item id="2504" min="1" max="1" chance="0.0007"/> <!-- Meteor Shower -->
+				<item id="1866" min="1" max="1" chance="25.0293"/> <!-- Suede -->
+				<item id="1871" min="1" max="3" chance="18.7720"/> <!-- Charcoal -->
+				<item id="1877" min="1" max="1" chance="1.5018"/> <!-- Adamantite Nugget -->
+				<item id="4040" min="1" max="1" chance="0.7509"/> <!-- Mold Lubricant -->
+				<item id="4041" min="1" max="1" chance="0.3265"/> <!-- Mold Hardener -->
+				<item id="5157" min="1" max="1" chance="0.0167"/> <!-- Recipe: Soulshot (S) Compressed Package (100%) -->
+				<item id="5532" min="1" max="1" chance="0.1899"/> <!-- Meteor Shower Head -->
+				<item id="5543" min="1" max="1" chance="0.1917"/> <!-- Dasparion's Staff Edge -->
+			</drop>
+			<spoil>
+				<item id="3036" min="1" max="1" chance="0.3389"/> <!-- Recipe: Spiritshot S -->
+				<item id="4040" min="1" max="1" chance="15.2522"/> <!-- Mold Lubricant -->
+				<item id="6342" min="1" max="1" chance="17.2751"/> <!-- Sealed Majestic Earring Gemstone -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="21397" level="78" type="Monster" name="Carrion Scarab">
+		<!-- Interlude - C6 -->
+		<parameters>
+			<param name="MoveAroundSocial" value="65" />
+			<param name="MoveAroundSocial1" value="65" />
+			<param name="MoveAroundSocial2" value="65" />
+			<skill name="PhysicalSpecial" id="4032" level="8" /> <!-- NPC Strike -->
+		</parameters>
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<equipment rhand="0" lhand="0" /> <!-- ... / ... -->
+		<acquire exp="21309" sp="2331" raidPoints="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="855.81387" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="221.515820894982" />
+			<speed>
+				<walk ground="45" />
+				<run ground="130" />
+			</speed>
+			<hitTime>520</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4032" level="8" /> <!-- NPC Strike -->
+			<skill id="4071" level="5" /> <!-- Resist Archery -->
+			<skill id="4274" level="1" /> <!-- Blunt Attack Weak Point -->
+			<skill id="4408" level="14" /> <!-- HP Modifiers -->
+			<skill id="4410" level="9" /> <!-- P. Atk. Modifiers -->
+			<skill id="4411" level="9" /> <!-- M. Atk. Modifiers -->
+			<skill id="4412" level="16" /> <!-- P. Def. Modifiers -->
+			<skill id="4413" level="13" /> <!-- M. Def. Modifiers -->
+			<skill id="4416" level="12" /> <!-- Bug -->
+			<skill id="4437" level="4" /> <!-- Greater Resist Bleeding -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
+		</skillList>
+		<shots shotChance="0" spiritChance="0" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>3</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clanList>
+				<clan>TOMB</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="14" />
+			<height normal="22" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="2992" max="6106" chance="70"/> <!-- Adena -->
+				<item id="212" min="1" max="1" chance="0.0006"/> <!-- Dasparion's Staff -->
+				<item id="2504" min="1" max="1" chance="0.0006"/> <!-- Meteor Shower -->
+				<item id="1866" min="1" max="1" chance="14.2857"/> <!-- Suede -->
+				<item id="1871" min="1" max="3" chance="25.0000"/> <!-- Charcoal -->
+				<item id="1877" min="1" max="1" chance="1.0989"/> <!-- Adamantite Nugget -->
+				<item id="4040" min="1" max="1" chance="0.2577"/> <!-- Mold Lubricant -->
+				<item id="4041" min="1" max="1" chance="0.0368"/> <!-- Mold Hardener -->
+				<item id="5157" min="1" max="1" chance="0.0368"/> <!-- Recipe: Soulshot (S) Compressed Package (100%) -->
+				<item id="5532" min="1" max="1" chance="0.1851"/> <!-- Meteor Shower Head -->
+				<item id="5543" min="1" max="1" chance="0.1869"/> <!-- Dasparion's Staff Edge -->
+				<item id="8341" min="1" max="1" chance="0.0938"/> <!-- Spiritual Eye Piece -->
+				<item id="8732" min="1" max="1" chance="0.2577"/> <!-- Life Stone: level 76 -->
+			</drop>
+			<spoil>
+				<item id="3036" min="1" max="1" chance="0.3304"/> <!-- Recipe: Spiritshot S -->
+				<item id="4040" min="1" max="1" chance="14.8684"/> <!-- Mold Lubricant -->
+				<item id="6342" min="1" max="1" chance="16.8404"/> <!-- Sealed Majestic Earring Gemstone -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="21398" level="78" type="Monster" name="Soldier Scarab">
+		<!-- Interlude - C6 -->
+		<parameters>
+			<param name="MoveAroundSocial" value="65" />
+			<param name="MoveAroundSocial1" value="65" />
+			<param name="MoveAroundSocial2" value="65" />
+			<skill name="PhysicalSpecial" id="4579" level="8" /> <!-- Bleed -->
+		</parameters>
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<equipment rhand="0" lhand="0" /> <!-- ... / ... -->
+		<acquire exp="40465" sp="4428" raidPoints="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="855.81387" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="221.515820894982" />
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<hitTime>520</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4071" level="5" /> <!-- Resist Archery -->
+			<skill id="4274" level="1" /> <!-- Blunt Attack Weak Point -->
+			<skill id="4408" level="14" /> <!-- HP Modifiers -->
+			<skill id="4416" level="12" /> <!-- Bug -->
+			<skill id="4437" level="4" /> <!-- Greater Resist Bleeding -->
+			<skill id="4579" level="8" /> <!-- Bleed -->
+		</skillList>
+		<shots shotChance="0" spiritChance="0" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>6</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="300">
+			<clanList>
+				<clan>TOMB</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="14" />
+			<height normal="22" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="5681" max="11595" chance="70"/> <!-- Adena -->
+				<item id="98" min="1" max="1" chance="0.0023"/> <!-- Halberd -->
+				<item id="1895" min="1" max="1" chance="14.2857"/> <!-- Metallic Fiber -->
+				<item id="4040" min="1" max="1" chance="1.0989"/> <!-- Mold Lubricant -->
+				<item id="4042" min="1" max="1" chance="0.8333"/> <!-- Enria -->
+				<item id="4043" min="1" max="1" chance="1.6949"/> <!-- Asofe -->
+				<item id="5167" min="1" max="1" chance="0.0232"/> <!-- Recipe: Blessed Spiritshot (S) Compressed Package (100%) -->
+				<item id="5542" min="1" max="1" chance="0.7032"/> <!-- Halberd Edge -->
+				<item id="8732" min="1" max="1" chance="0.4950"/> <!-- Life Stone: level 76 -->
+				<item id="8742" min="1" max="1" chance="0.1239"/> <!-- Mid-Grade Life Stone: level 76 -->
+			</drop>
+			<spoil>
+				<item id="5157" min="1" max="1" chance="0.6274"/> <!-- Recipe: Soulshot (S) Compressed Package (100%) -->
+				<item id="5480" min="1" max="1" chance="6.3343"/> <!-- Sealed Leather Armor of Nightmare Fabric -->
+				<item id="6346" min="1" max="2" chance="45.9587"/> <!-- Sealed Majestic Ring Gemstone -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="21399" level="78" type="Monster" name="Soldier Scarab">
+		<!-- Interlude - C6 -->
+		<parameters>
+			<param name="MoveAroundSocial" value="65" />
+			<param name="MoveAroundSocial1" value="65" />
+			<param name="MoveAroundSocial2" value="65" />
+			<skill name="W_LongRangeDDMagic" id="4157" level="8" /> <!-- NPC Blaze - Magic -->
+			<skill name="W_ShortRangeDDMagic" id="4160" level="8" /> <!-- NPC Aura Burn - Magic -->
+		</parameters>
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<equipment rhand="0" lhand="0" /> <!-- ... / ... -->
+		<acquire exp="38679" sp="4230" raidPoints="0" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="855.81387" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="221.515820894982" />
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<hitTime>520</hitTime>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4071" level="5" /> <!-- Resist Archery -->
+			<skill id="4157" level="8" /> <!-- NPC Blaze - Magic -->
+			<skill id="4160" level="8" /> <!-- NPC Aura Burn - Magic -->
+			<skill id="4274" level="1" /> <!-- Blunt Attack Weak Point -->
+			<skill id="4408" level="14" /> <!-- HP Modifiers -->
+			<skill id="4412" level="15" /> <!-- P. Def. Modifiers -->
+			<skill id="4416" level="12" /> <!-- Bug -->
+			<skill id="4437" level="4" /> <!-- Greater Resist Bleeding -->
+			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
+		</skillList>
+		<shots shotChance="0" spiritChance="0" />
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>5</sNpcPropHpRate>
+		<ai type="MAGE" aggroRange="300" clanHelpRange="300">
+			<clanList>
+				<clan>TOMB</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="14" />
+			<height normal="22" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="4986" max="10175" chance="70"/> <!-- Adena -->
+				<item id="98" min="1" max="1" chance="0.0020"/> <!-- Halberd -->
+				<item id="1895" min="1" max="1" chance="12.5000"/> <!-- Metallic Fiber -->
+				<item id="4040" min="1" max="1" chance="0.5102"/> <!-- Mold Lubricant -->
+				<item id="4042" min="1" max="1" chance="0.4484"/> <!-- Enria -->
+				<item id="4043" min="1" max="1" chance="1.2500"/> <!-- Asofe -->
+				<item id="5167" min="1" max="1" chance="0.1279"/> <!-- Recipe: Blessed Spiritshot (S) Compressed Package (100%) -->
+				<item id="5542" min="1" max="1" chance="0.6172"/> <!-- Halberd Edge -->
+				<item id="8732" min="1" max="1" chance="0.6410"/> <!-- Life Stone: level 76 -->
+				<item id="8742" min="1" max="1" chance="0.0320"/> <!-- Mid-Grade Life Stone: level 76 -->
+				<item id="8752" min="1" max="1" chance="0.0320"/> <!-- High-Grade Life Stone: level 76 -->
+			</drop>
+			<spoil>
+				<item id="5157" min="1" max="1" chance="0.5506"/> <!-- Recipe: Soulshot (S) Compressed Package (100%) -->
+				<item id="5480" min="1" max="1" chance="5.5588"/> <!-- Sealed Leather Armor of Nightmare Fabric -->
+				<item id="6346" min="1" max="1" chance="40.3326"/> <!-- Sealed Majestic Ring Gemstone -->
+			</spoil>
+		</dropLists>
+	</npc>
 </list>
