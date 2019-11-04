@@ -163,6 +163,7 @@ import quests.Q10839_BlackbirdsNameValue.Q10839_BlackbirdsNameValue;
 import quests.Q10840_TimeToRecover.Q10840_TimeToRecover;
 import quests.Q10843_AnomalyInTheEnchantedValley.Q10843_AnomalyInTheEnchantedValley;
 import quests.Q10851_ElvenBotany.Q10851_ElvenBotany;
+import quests.Q10856_SuperionAppears.Q10856_SuperionAppears;
 import quests.Q11031_TrainingBeginsNow.Q11031_TrainingBeginsNow;
 import quests.custom.Q00529_RegularBarrierMaintenance.Q00529_RegularBarrierMaintenance;
 import quests.custom.Q00560_HowToOvercomeFear.Q00560_HowToOvercomeFear;
@@ -451,7 +452,7 @@ public class QuestMasterHandler
 		Q10852_TheMotherTreeRevivalProject.class, // TODO: Not done.
 		Q10853_ToWeakenTheGiants.class, // TODO: Not done.
 		Q10854_ToSeizeTheFortress.class, // TODO: Not done.
-		Q10856_SuperionAppears.class, // TODO: Not done.
+		Q10856_SuperionAppears.class,
 		Q10857_SecretTeleport.class, // TODO: Not done.
 		Q10873_ExaltedReachingAnotherLevel.class, // TODO: Not done.
 		Q10874_AgainstTheNewEnemy.class, // TODO: Not done.

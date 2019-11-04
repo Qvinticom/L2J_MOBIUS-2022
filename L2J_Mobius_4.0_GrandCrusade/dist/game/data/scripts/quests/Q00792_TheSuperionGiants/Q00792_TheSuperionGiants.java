@@ -25,7 +25,7 @@ import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
 
-import quests.not_done.Q10856_SuperionAppears;
+import quests.Q10856_SuperionAppears.Q10856_SuperionAppears;
 
 /**
  * The Superion Giants (792)

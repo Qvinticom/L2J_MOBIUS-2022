@@ -471,6 +471,7 @@ import quests.Q10840_TimeToRecover.Q10840_TimeToRecover;
 import quests.Q10841_DeepInsideAteliaFortress.Q10841_DeepInsideAteliaFortress;
 import quests.Q10843_AnomalyInTheEnchantedValley.Q10843_AnomalyInTheEnchantedValley;
 import quests.Q10851_ElvenBotany.Q10851_ElvenBotany;
+import quests.Q10856_SuperionAppears.Q10856_SuperionAppears;
 import quests.not_done.*;
 
 /**
@@ -1049,7 +1050,7 @@ public class QuestMasterHandler
 		Q10852_TheMotherTreeRevivalProject.class, // TODO: Not done.
 		Q10853_ToWeakenTheGiants.class, // TODO: Not done.
 		Q10854_ToSeizeTheFortress.class, // TODO: Not done.
-		Q10856_SuperionAppears.class, // TODO: Not done.
+		Q10856_SuperionAppears.class,
 		Q10857_SecretTeleport.class, // TODO: Not done.
 		Q10858_QueenRamonaControllerOfTheVessel.class, // TODO: Not done.
 		Q10859_OwnTheEarthAndTheHeavens.class, // TODO: Not done.
