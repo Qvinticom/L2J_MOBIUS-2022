@@ -7971,6 +7971,7 @@ public class PlayerInstance extends Playable
 			ps.setInt(2, _classIndex);
 			try (ResultSet rs = ps.executeQuery())
 			{
+				final long currentTime = System.currentTimeMillis();
 				while (rs.next())
 				{
 					final int remainingTime = rs.getInt("remaining_time");
@@ -7984,7 +7985,7 @@ public class PlayerInstance extends Playable
 						continue;
 					}
 					
-					final long time = systime - System.currentTimeMillis();
+					final long time = systime - currentTime;
 					if (time > 10)
 					{
 						disableSkill(skill, time);
@@ -8029,16 +8030,14 @@ public class PlayerInstance extends Playable
 			try (ResultSet rs = ps.executeQuery())
 			{
 				int itemId;
-				@SuppressWarnings("unused")
-				int itemObjId;
 				long reuseDelay;
 				long systime;
 				boolean isInInventory;
 				long remainingTime;
+				final long currentTime = System.currentTimeMillis();
 				while (rs.next())
 				{
 					itemId = rs.getInt("itemId");
-					itemObjId = rs.getInt("itemObjId");
 					reuseDelay = rs.getLong("reuseDelay");
 					systime = rs.getLong("systime");
 					isInInventory = true;
@@ -8053,8 +8052,7 @@ public class PlayerInstance extends Playable
 					
 					if ((item != null) && (item.getId() == itemId) && (item.getReuseDelay() > 0))
 					{
-						remainingTime = systime - System.currentTimeMillis();
-						// Hardcoded to 10 seconds.
+						remainingTime = systime - currentTime;
 						if (remainingTime > 10)
 						{
 							addTimeStampItem(item, reuseDelay, systime);

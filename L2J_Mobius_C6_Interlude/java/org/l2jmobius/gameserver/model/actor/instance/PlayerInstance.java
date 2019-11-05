@@ -10139,6 +10139,7 @@ public class PlayerInstance extends Playable
 		{
 			PreparedStatement statement;
 			ResultSet rset;
+			final long currentTime = System.currentTimeMillis();
 			
 			// Restore Type 0 These skill were still in effect on the character upon logout. Some of which were self casted and might still have had a long reuse delay which also is restored.
 			statement = con.prepareStatement(RESTORE_SKILL_SAVE);
@@ -10178,7 +10179,7 @@ public class PlayerInstance extends Playable
 					}
 				}
 				
-				final long remainingTime = systime - System.currentTimeMillis();
+				final long remainingTime = systime - currentTime;
 				if (remainingTime > 10)
 				{
 					final Skill skill = SkillTable.getInstance().getInfo(skillId, skillLvl);
@@ -10208,7 +10209,7 @@ public class PlayerInstance extends Playable
 				final long reuseDelay = rset.getLong("reuse_delay");
 				final long systime = rset.getLong("systime");
 				
-				final long remainingTime = systime - System.currentTimeMillis();
+				final long remainingTime = systime - currentTime;
 				if (remainingTime > 0)
 				{
 					final Skill skill = SkillTable.getInstance().getInfo(skillId, skillLvl);

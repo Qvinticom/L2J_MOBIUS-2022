@@ -7664,6 +7664,7 @@ public class PlayerInstance extends Playable
 			statement.setInt(2, _classIndex);
 			try (ResultSet rset = statement.executeQuery())
 			{
+				final long currentTime = System.currentTimeMillis();
 				while (rset.next())
 				{
 					final int remainingTime = rset.getInt("remaining_time");
@@ -7677,7 +7678,7 @@ public class PlayerInstance extends Playable
 						continue;
 					}
 					
-					final long time = systime - System.currentTimeMillis();
+					final long time = systime - currentTime;
 					if (time > 10)
 					{
 						disableSkill(skill, time);
@@ -7722,16 +7723,14 @@ public class PlayerInstance extends Playable
 			try (ResultSet rset = statement.executeQuery())
 			{
 				int itemId;
-				@SuppressWarnings("unused")
-				int itemObjId;
 				long reuseDelay;
 				long systime;
 				boolean isInInventory;
 				long remainingTime;
+				final long currentTime = System.currentTimeMillis();
 				while (rset.next())
 				{
 					itemId = rset.getInt("itemId");
-					itemObjId = rset.getInt("itemObjId");
 					reuseDelay = rset.getLong("reuseDelay");
 					systime = rset.getLong("systime");
 					isInInventory = true;
@@ -7746,8 +7745,7 @@ public class PlayerInstance extends Playable
 					
 					if ((item != null) && (item.getId() == itemId) && (item.getReuseDelay() > 0))
 					{
-						remainingTime = systime - System.currentTimeMillis();
-						// Hardcoded to 10 seconds.
+						remainingTime = systime - currentTime;
 						if (remainingTime > 10)
 						{
 							addTimeStampItem(item, reuseDelay, systime);
@@ -7805,6 +7803,7 @@ public class PlayerInstance extends Playable
 			{
 				int slot;
 				int symbolId;
+				final long currentTime = System.currentTimeMillis();
 				while (rset.next())
 				{
 					slot = rset.getInt("slot");
@@ -7824,7 +7823,6 @@ public class PlayerInstance extends Playable
 					// Task for henna duration
 					if (henna.getDuration() > 0)
 					{
-						final long currentTime = System.currentTimeMillis();
 						final long remainingTime = getVariables().getLong("HennaDuration" + slot, currentTime) - currentTime;
 						if (remainingTime < 0)
 						{
@@ -7833,7 +7831,7 @@ public class PlayerInstance extends Playable
 						}
 						
 						// Add the new task.
-						_hennaRemoveSchedules.put(slot, ThreadPool.schedule(new HennaDurationTask(this, slot), System.currentTimeMillis() + remainingTime));
+						_hennaRemoveSchedules.put(slot, ThreadPool.schedule(new HennaDurationTask(this, slot), currentTime + remainingTime));
 					}
 					
 					_henna[slot - 1] = henna;
