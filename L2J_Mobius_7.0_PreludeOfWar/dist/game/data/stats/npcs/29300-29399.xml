@@ -3497,6 +3497,14 @@
 		</skillList>
 	</npc>
 	<npc id="29374" level="116" type="RaidBoss" name="Cyrax" title="Fafurion's High Priest">
+		<parameters>
+			<skill name="Critical_Slasher" id="32905" level="1" />
+			<skill name="Aqua_Arrow" id="32740" level="1" />
+			<skill name="Aqua_Flush" id="32741" level="1" />
+			<skill name="Aqua_Wave" id="32742" level="1" />
+			<skill name="Surge_Wave" id="32743" level="1" />
+			<param name="Attack_BoostValue" value="130" />
+		</parameters>
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<acquire exp="0" sp="0" raidPoints="0" />
@@ -3520,12 +3528,22 @@
 			<height normal="72" />
 		</collision>
 		<skillList>
+			<skill id="32905" level="1" /> <!-- Critical Slasher -->
+			<skill id="32740" level="1" /> <!-- Aqua Arrow -->
+			<skill id="32741" level="1" /> <!-- Aqua Flush -->
+			<skill id="32742" level="1" /> <!-- Aqua Wave -->
+			<skill id="32743" level="1" /> <!-- Surge Wave -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
 			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 			<skill id="32747" level="1" /> <!-- Cyrax -->
 		</skillList>
+		<ai type="MAGE" clanHelpRange="450" aggroRange="450" isAggressive="false">
+			<clanList>
+				<clan>CYRAX</clan>
+			</clanList>
+		</ai>
 	</npc>
 	<npc id="29375" level="115" type="Monster" name="Temple Elite Captain">
 		<race>DRAGON</race>

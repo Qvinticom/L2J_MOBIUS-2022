@@ -57,11 +57,25 @@
 	<skill id="32905" toLevel="1" name="Critical Slasher">
 		<icon>icon.skill16636</icon>
 		<operateType>A1</operateType>
-		<isDebuff>true</isDebuff>
 		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-2</effectPoint>
 		<mpConsume>1</mpConsume>
+		<affectLimit>150-200</affectLimit>
+		<affectRange>750</affectRange>
+		<attributeType>WATER</attributeType>
+		<attributeValue>250</attributeValue>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<reuseDelay>10000</reuseDelay>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>116</magicLvl>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>150000</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32906" toLevel="1" name="Berserk">
 		<!-- Continued battle has enhanced Physical Attack. -->

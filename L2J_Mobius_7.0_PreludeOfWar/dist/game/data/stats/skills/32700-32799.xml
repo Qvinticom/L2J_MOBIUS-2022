@@ -351,7 +351,7 @@
 	<skill id="32715" toLevel="1" name="Fafurion Water Wave">
 		<!-- Fafurion creates a huge wave which deals magic damage. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill32715</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<isDebuff>true</isDebuff>
 		<hitTime>3000</hitTime>
@@ -492,7 +492,7 @@
 	<skill id="32721" toLevel="1" name="Fafurion Wing Strike">
 		<!-- Fafurion attacks enemies in front with wind magic. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill32721</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<isDebuff>true</isDebuff>
 		<hitTime>5000</hitTime>
 		<coolTime>500</coolTime>
@@ -595,6 +595,18 @@
 		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
+		<affectLimit>150-200</affectLimit>
+		<attributeType>WATER</attributeType>
+		<attributeValue>250</attributeValue>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>553</power>
+				<criticalChance>5</criticalChance>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32731" toLevel="1" name="Water Wave">
 		<!-- Creates a wave around you to inflict damage. -->
@@ -603,15 +615,47 @@
 		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
+		<affectLimit>150-200</affectLimit>
+		<affectRange>1050</affectRange>
+		<attributeType>WATER</attributeType>
+		<attributeValue>250</attributeValue>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>553</power>
+				<criticalChance>5</criticalChance>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32732" toLevel="1" name="Tail Strike">
 		<!-- Attacks enemies in the back with the tail, dealing damage and stunning them. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill32713</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<isDebuff>true</isDebuff>
 		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<affectLimit>150-200</affectLimit>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<attributeType>WATER</attributeType>
+		<attributeValue>250</attributeValue>
+		<fanRange>0;180;1500;600</fanRange>
+		<magicLvl>-1</magicLvl>
+		<trait>SHOCK</trait>
+		<targetType>SELF</targetType>
+		<affectScope>SQUARE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>300000</power>
+			</effect>
+			<effect name="BlockActions" />
+		</effects>
 	</skill>
 	<skill id="32733" toLevel="1" name="Spine Attack">
 		<!-- Spreads wings to inflict damage. -->
@@ -621,6 +665,20 @@
 		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
+		<isMagic>1</isMagic> <!-- Static Skill -->
+		<affectLimit>150-200</affectLimit>
+		<attributeType>WATER</attributeType>
+		<attributeValue>250</attributeValue>
+		<targetType>SELF</targetType>
+		<affectScope>FAN</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<fanRange>0;0;500;90</fanRange>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>150000</power>
+				<criticalChance>5</criticalChance>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32734" toLevel="2" name="Spiral Shoot">
 		<!-- Slashes with its forelegs and appendages. -->
@@ -633,6 +691,22 @@
 		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
+		<affectLimit>150-200</affectLimit>
+		<affectRange>650</affectRange>
+		<attributeType>WATER</attributeType>
+		<attributeValue>250</attributeValue>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>
+					<value level="1">533</value>
+					<value level="2">585</value>
+				</power>
+				<criticalChance>5</criticalChance>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32735" toLevel="2" name="Sword Earthquake">
 		<!-- Strikes downward, causing great damage and Stun. -->
@@ -640,12 +714,32 @@
 			<value level="1">icon.skill0000</value>
 			<value level="2">icon.skill0003</value>
 		</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<isDebuff>true</isDebuff>
 		<castRange>100</castRange>
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<affectLimit>150-200</affectLimit>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<attributeType>WATER</attributeType>
+		<attributeValue>250</attributeValue>
+		<magicLvl>-1</magicLvl>
+		<trait>SHOCK</trait>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">150000</value>
+					<value level="2">300000</value>				
+				</power>
+			</effect>
+			<effect name="BlockActions" />
+		</effects>
 	</skill>
 	<skill id="32736" toLevel="2" name="Shield Bash">
 		<!-- Swings a shield to inflict damage on enemies in front and knock them down. -->
@@ -653,11 +747,37 @@
 			<value level="1">icon.skill0000</value>
 			<value level="2">icon.skill0352</value>
 		</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3</abnormalTime>
 		<isDebuff>true</isDebuff>
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
+		<isMagic>1</isMagic> <!-- Static Skill -->
+		<affectLimit>150-200</affectLimit>
+		<attributeType>WATER</attributeType>
+		<attributeValue>250</attributeValue>
+		<fanRange>0;0;200;90</fanRange>
+		<targetType>SELF</targetType>
+		<affectScope>FAN</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<trait>KNOCKDOWN</trait>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">150000</value>
+					<value level="2">300000</value>				
+				</power>
+				<criticalChance>5</criticalChance>
+			</effect>
+			<effect name="KnockBack">
+				<speed>600</speed>
+				<distance>100</distance>
+				<knockDown>true</knockDown>
+			</effect>
+			<effect name="BlockActions" />
+		</effects>
 	</skill>
 	<skill id="32737" toLevel="2" name="Shield Dash">
 		<!-- Dashes at the target in front, damaging and stunning it. -->
@@ -665,22 +785,62 @@
 			<value level="1">icon.skill0000</value>
 			<value level="2">icon.skill10008</value>
 		</icon>
-		<operateType>A1</operateType>
+		<operateType>DA2</operateType>
 		<isDebuff>true</isDebuff>
 		<castRange>400</castRange>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>		
+		</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<activateRate>80</activateRate>
+		<affectRange>600</affectRange>
+		<basicProperty>PHYSICAL</basicProperty>
+		<effectRange>800</effectRange>
+		<fanRange>0;0;600;60</fanRange>
+		<magicLvl>-1</magicLvl>
+		<nextAction>ATTACK</nextAction>
+		<trait>SHOCK</trait>
+		<targetType>ENEMY</targetType>
+		<affectScope>FAN</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">150000</value>
+					<value level="2">300000</value>				
+				</power>
+			</effect>
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32738" toLevel="1" name="Water Shield">
 		<!-- Uses water to sharply increase P. Def. -->
 		<icon>icon.skill1238</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>60</abnormalTime>
+		<abnormalVisualEffect>BLESS_AVE</abnormalVisualEffect>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<castRange>900</castRange>
 		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>100</effectPoint>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32739" toLevel="2" name="Water Spout">
 		<!-- Uses water to inflict damage on nearby enemies and pull them. -->
@@ -688,12 +848,38 @@
 			<value level="1">icon.skill0000</value>
 			<value level="2">icon.skill32709</value>
 		</icon>
-		<operateType>A1</operateType>
+		<operateType>A3</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<isDebuff>true</isDebuff>
 		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
+		<abnormalType>STUN</abnormalType>
 		<effectPoint>-100</effectPoint>
+		<attributeType>WATER</attributeType>
+		<attributeValue>250</attributeValue>
+		<activateRate>100</activateRate>
+		<affectLimit>5-12</affectLimit>
+		<affectHeight>-100;200</affectHeight>
+		<affectRange>450</affectRange>
+		<trait>PULL</trait>
+		<basicProperty>PHYSICAL</basicProperty>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">150000</value>
+					<value level="2">300000</value>				
+				</power>
+			</effect>
+			<effect name="PullBack">
+				<speed>600</speed>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32740" toLevel="1" name="Aqua Arrow">
 		<!-- Fires a giant magic water arrow at the target. -->
@@ -703,50 +889,133 @@
 		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
+		<mpConsume>1</mpConsume>
+		<attributeType>WATER</attributeType>
+		<attributeValue>250</attributeValue>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>585</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32741" toLevel="1" name="Arrow Flush">
 		<!-- Shoot several arrows, hits the target and nearby enemies, knocking them back. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11025</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3</abnormalTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<isDebuff>true</isDebuff>
 		<castRange>600</castRange>
 		<hitTime>3000</hitTime>
 		<coolTime>500</coolTime>
-		<reuseDelay>30000</reuseDelay>
 		<effectPoint>-100</effectPoint>
+		<mpConsume>1</mpConsume>
+		<attributeType>WATER</attributeType>
+		<attributeValue>250</attributeValue>
+		<affectLimit>150-200</affectLimit>
+		<effectRange>900</effectRange>
+		<affectRange>600</affectRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<trait>KNOCKDOWN</trait>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>585</power>
+			</effect>
+			<effect name="KnockBack">
+				<speed>600</speed>
+				<distance>100</distance>
+				<knockDown>true</knockDown>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32742" toLevel="1" name="Aqua Wave">
 		<!-- Causes a wave in front of you, dealing magic damage and decreasing Atk. Spd./ Casting Spd./ Speed. -->
 		<icon>icon.oasis_feel</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3</abnormalTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<isDebuff>true</isDebuff>
 		<hitTime>3000</hitTime>
 		<coolTime>500</coolTime>
-		<reuseDelay>30000</reuseDelay>
 		<effectPoint>-100</effectPoint>
+		<mpConsume>1</mpConsume>
+		<attributeType>WATER</attributeType>
+		<attributeValue>250</attributeValue>
+		<castRange>500</castRange>
+		<affectLimit>5-12</affectLimit>
+		<effectRange>700</effectRange>
+		<fanRange>0;0;600;100</fanRange>
+		<targetType>ENEMY</targetType>
+		<affectScope>SQUARE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>585</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32743" toLevel="1" name="Surge Wave">
 		<!-- Attacks the target and nearby enemies decreasing their MP continuously. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill5016</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<isDebuff>true</isDebuff>
-		<castRange>900</castRange>
 		<hitTime>3000</hitTime>
 		<coolTime>500</coolTime>
-		<reuseDelay>30000</reuseDelay>
 		<effectPoint>-100</effectPoint>
+		<mpConsume>1</mpConsume>
+		<affectLimit>150-200</affectLimit>
+		<affectRange>750</affectRange>
+		<attributeType>WATER</attributeType>
+		<attributeValue>250</attributeValue>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>553</power>
+			</effect>
+			<effect name="ManaDamOverTime">
+				<power>553</power>
+				<ticks>1</ticks>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32744" toLevel="1" name="Fafurion's Blessing">
 		<!-- The grace of the Water Dragon strengthens you, sharply increasing water attack attributes, and also increasing M. Atk./ Casting Spd./ M. Def. -->
 		<icon>icon.skill4280</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<hitTime>2500</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>100</effectPoint>
+		<mpConsume>1</mpConsume>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="AttackAttribute">
+				<amount>100</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>25</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>25</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32746" toLevel="1" name="Suicide Big Bomb">
 		<operateType>A1</operateType>
