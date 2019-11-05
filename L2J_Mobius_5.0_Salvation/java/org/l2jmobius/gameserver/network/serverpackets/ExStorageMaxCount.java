@@ -17,6 +17,7 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.stats.Stats;
@@ -27,34 +28,49 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExStorageMaxCount implements IClientOutgoingPacket
 {
-	private final int _inventory;
-	private final int _warehouse;
-	private final int _freight;
-	private final int _clan;
-	private final int _privateSell;
-	private final int _privateBuy;
-	private final int _receipeD;
-	private final int _recipe;
-	private final int _inventoryExtraSlots;
-	private final int _inventoryQuestItems;
+	private PlayerInstance _player;
+	private int _inventory;
+	private int _warehouse;
+	private int _freight;
+	private int _clan;
+	private int _privateSell;
+	private int _privateBuy;
+	private int _receipeD;
+	private int _recipe;
+	private int _inventoryExtraSlots;
+	private int _inventoryQuestItems;
 	
 	public ExStorageMaxCount(PlayerInstance player)
 	{
-		_inventory = player.getInventoryLimit();
-		_warehouse = player.getWareHouseLimit();
-		_freight = Config.ALT_FREIGHT_SLOTS;
-		_privateSell = player.getPrivateSellStoreLimit();
-		_privateBuy = player.getPrivateBuyStoreLimit();
-		_clan = Config.WAREHOUSE_SLOTS_CLAN;
-		_receipeD = player.getDwarfRecipeLimit();
-		_recipe = player.getCommonRecipeLimit();
-		_inventoryExtraSlots = (int) player.getStat().getValue(Stats.INVENTORY_NORMAL, 0);
-		_inventoryQuestItems = Config.INVENTORY_MAXIMUM_QUEST_ITEMS;
+		if (player.setStorageMaxCountPacketLock(true))
+		{
+			_player = player;
+			_inventory = player.getInventoryLimit();
+			_warehouse = player.getWareHouseLimit();
+			_freight = Config.ALT_FREIGHT_SLOTS;
+			_privateSell = player.getPrivateSellStoreLimit();
+			_privateBuy = player.getPrivateBuyStoreLimit();
+			_clan = Config.WAREHOUSE_SLOTS_CLAN;
+			_receipeD = player.getDwarfRecipeLimit();
+			_recipe = player.getCommonRecipeLimit();
+			_inventoryExtraSlots = (int) player.getStat().getValue(Stats.INVENTORY_NORMAL, 0);
+			_inventoryQuestItems = Config.INVENTORY_MAXIMUM_QUEST_ITEMS;
+			
+			ThreadPool.schedule(() ->
+			{
+				player.setStorageMaxCountPacketLock(false);
+			}, 1000);
+		}
 	}
 	
 	@Override
 	public boolean write(PacketWriter packet)
 	{
+		if (_player == null)
+		{
+			return false;
+		}
+		
 		OutgoingPackets.EX_STORAGE_MAX_COUNT.writeId(packet);
 		
 		packet.writeD(_inventory);

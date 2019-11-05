@@ -41,6 +41,7 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.ReentrantLock;
+import java.util.concurrent.locks.StampedLock;
 import java.util.logging.Level;
 import java.util.stream.Collectors;
 
@@ -717,7 +718,10 @@ public class PlayerInstance extends Playable
 	private ScheduledFuture<?> _taskRentPet;
 	private ScheduledFuture<?> _taskWater;
 	
-	private ScheduledFuture<?> _skillListRefreshTask;
+	/** Packet delay locks */
+	private final StampedLock _skillListPacketLock = new StampedLock();
+	private final StampedLock _userInfoPacketLock = new StampedLock();
+	private final StampedLock _storageMaxPacketLock = new StampedLock();
 	
 	/** Last Html Npcs, 0 = last html was not bound to an npc */
 	private final int[] _htmlActionOriginObjectIds = new int[HtmlActionScope.values().length];
@@ -2229,6 +2233,16 @@ public class PlayerInstance extends Playable
 		
 		// Notify to scripts
 		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerEquipItem(this, item), this);
+	}
+	
+	public boolean setStorageMaxCountPacketLock(boolean lock)
+	{
+		if (lock)
+		{
+			return _storageMaxPacketLock.tryWriteLock() != 0;
+		}
+		_storageMaxPacketLock.tryUnlockWrite();
+		return false;
 	}
 	
 	/**
@@ -4088,6 +4102,16 @@ public class PlayerInstance extends Playable
 		{
 			DuelManager.getInstance().broadcastToOppositTeam(this, new ExDuelUpdateUserInfo(this));
 		}
+	}
+	
+	public boolean setUserInfoPacketLock(boolean lock)
+	{
+		if (lock)
+		{
+			return _userInfoPacketLock.tryWriteLock() != 0;
+		}
+		_userInfoPacketLock.tryUnlockWrite();
+		return false;
 	}
 	
 	/**
@@ -9474,16 +9498,19 @@ public class PlayerInstance extends Playable
 		return _wantsPeace;
 	}
 	
+	public boolean setSkillListPacketLock(boolean lock)
+	{
+		if (lock)
+		{
+			return _skillListPacketLock.tryWriteLock() != 0;
+		}
+		_skillListPacketLock.tryUnlockWrite();
+		return false;
+	}
+	
 	public void sendSkillList()
 	{
-		if (_skillListRefreshTask == null)
-		{
-			_skillListRefreshTask = ThreadPool.schedule(() ->
-			{
-				sendSkillList(0);
-				_skillListRefreshTask = null;
-			}, 1000);
-		}
+		sendSkillList(0);
 	}
 	
 	public void sendSkillList(int lastLearnedSkillId)
@@ -9887,8 +9914,15 @@ public class PlayerInstance extends Playable
 				removeSkill(oldSkill, false, true);
 			}
 			
-			stopAllEffectsExceptThoseThatLastThroughDeath();
-			stopAllEffects();
+			// stopAllEffectsExceptThoseThatLastThroughDeath();
+			getEffectList().stopEffects(info -> !info.getSkill().isStayAfterDeath(), true, false);
+			
+			// stopAllEffects();
+			getEffectList().stopEffects(info -> !info.getSkill().isNecessaryToggle() && !info.getSkill().isIrreplacableBuff(), true, false);
+			
+			// Update abnormal visual effects.
+			sendPacket(new ExUserInfoAbnormalVisualEffect(this));
+			
 			stopCubics();
 			
 			restoreRecipeBook(false);

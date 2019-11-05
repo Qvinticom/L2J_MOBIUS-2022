@@ -20,6 +20,7 @@ import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
+import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
 import org.l2jmobius.gameserver.model.SkillLearn;
@@ -33,19 +34,32 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class AcquireSkillList implements IClientOutgoingPacket
 {
-	final PlayerInstance _player;
-	final List<SkillLearn> _learnable;
+	private PlayerInstance _player;
+	private List<SkillLearn> _learnable;
 	
 	public AcquireSkillList(PlayerInstance player)
 	{
-		_player = player;
-		_learnable = SkillTreesData.getInstance().getAvailableSkills(player, player.getClassId(), false, false);
-		_learnable.addAll(SkillTreesData.getInstance().getNextAvailableSkills(player, player.getClassId(), false, false));
+		if (player.setSkillListPacketLock(true))
+		{
+			_player = player;
+			_learnable = SkillTreesData.getInstance().getAvailableSkills(player, player.getClassId(), false, false);
+			_learnable.addAll(SkillTreesData.getInstance().getNextAvailableSkills(player, player.getClassId(), false, false));
+			
+			ThreadPool.schedule(() ->
+			{
+				player.setSkillListPacketLock(false);
+			}, 300);
+		}
 	}
 	
 	@Override
 	public boolean write(PacketWriter packet)
 	{
+		if (_player == null)
+		{
+			return false;
+		}
+		
 		OutgoingPackets.ACQUIRE_SKILL_LIST.writeId(packet);
 		
 		packet.writeH(_learnable.size());
