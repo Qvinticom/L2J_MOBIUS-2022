@@ -2588,4 +2588,34 @@
 		<point X="82815" Y="148840" Z="-3469" delay="3" run="true" />
 		<point X="83307" Y="148431" Z="-3405" delay="21" run="true" /> <!-- Training Camp Manager -->
 	</route>
+	<route name="employee_1" repeat="true" repeatStyle="back">
+		<target id="34205" spawnX="-50984" spawnY="-147336" spawnZ="-14945" />
+		<point X="-50984" Y="-147336" Z="-14945" delay="2" run="false" />
+		<point X="-51208" Y="-147704" Z="-14945" delay="2" run="false" />
+		<point X="-51160" Y="-148456" Z="-14946" delay="2" run="false" />
+		<point X="-50728" Y="-148952" Z="-14944" delay="2" run="false" />
+	</route>
+	<route name="employee_2" repeat="true" repeatStyle="cycle">
+		<target id="34204" spawnX="-50184" spawnY="-147864" spawnZ="-14158" />
+		<point X="-50184" Y="-147864" Z="-14158" delay="2" run="false" />
+		<point X="-50296" Y="-148104" Z="-14157" delay="2" run="false" />
+		<point X="-50056" Y="-148408" Z="-14158" delay="2" run="false" />
+		<point X="-49768" Y="-148232" Z="-14186" delay="2" run="false" />
+	</route>
+	<route name="employee_3" repeat="true" repeatStyle="cycle">
+		<target id="34206" spawnX="-50136" spawnY="-148568" spawnZ="-14157" />
+		<point X="-50136" Y="-148568" Z="-14157" delay="2" run="false" />
+		<point X="-50152" Y="-149032" Z="-14171" delay="2" run="false" />
+		<point X="-49784" Y="-148408" Z="-14186" delay="2" run="false" />
+		<point X="-49880" Y="-148348" Z="-14184" delay="2" run="false" />
+	</route>
+	<route name="employee_4" repeat="true" repeatStyle="cycle">
+		<target id="34207" spawnX="-49625" spawnY="-148723" spawnZ="-14152" />
+		<point X="-49625" Y="-148723" Z="-14152" delay="2" run="false" />
+		<point X="-49256" Y="-148680" Z="-14157" delay="2" run="false" />
+		<point X="-49272" Y="-148088" Z="-14157" delay="2" run="false" />
+		<point X="-49400" Y="-148024" Z="-14157" delay="2" run="false" />
+		<point X="-49736" Y="-148264" Z="-14186" delay="2" run="false" />
+		<point X="-49640" Y="-148360" Z="-14176" delay="0" run="false" />
+	</route>
 </routes>
