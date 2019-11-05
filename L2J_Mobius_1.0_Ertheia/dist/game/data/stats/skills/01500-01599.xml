@@ -3865,14 +3865,14 @@
 		<!-- Change the class. -->
 		<icon>icon.skill0810</icon>
 		<operateType>A1</operateType>
-		<hitTime>5000</hitTime>
+		<hitTime>2500</hitTime>
 		<effectPoint>1</effectPoint>
 		<reuseDelay>3000</reuseDelay>
 		<isMagic>2</isMagic>
 		<staticReuse>true</staticReuse>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
-		<hitCancelTime>5</hitCancelTime>
+		<hitCancelTime>0</hitCancelTime>
 		<reuseDelayGroup>1566</reuseDelayGroup>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3895,14 +3895,14 @@
 		<!-- Change the class. -->
 		<icon>icon.skill0810</icon>
 		<operateType>A1</operateType>
-		<hitTime>5000</hitTime>
+		<hitTime>2500</hitTime>
 		<effectPoint>1</effectPoint>
 		<reuseDelay>3000</reuseDelay>
 		<isMagic>2</isMagic>
 		<staticReuse>true</staticReuse>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
-		<hitCancelTime>5</hitCancelTime>
+		<hitCancelTime>0</hitCancelTime>
 		<reuseDelayGroup>1566</reuseDelayGroup>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3925,14 +3925,14 @@
 		<!-- Change the class. -->
 		<icon>icon.skill0810</icon>
 		<operateType>A1</operateType>
-		<hitTime>5000</hitTime>
+		<hitTime>2500</hitTime>
 		<effectPoint>1</effectPoint>
 		<reuseDelay>3000</reuseDelay>
 		<isMagic>2</isMagic>
 		<staticReuse>true</staticReuse>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
-		<hitCancelTime>5</hitCancelTime>
+		<hitCancelTime>0</hitCancelTime>
 		<reuseDelayGroup>1566</reuseDelayGroup>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3955,14 +3955,14 @@
 		<!-- Change the class. -->
 		<icon>icon.skill0810</icon>
 		<operateType>A1</operateType>
-		<hitTime>5000</hitTime>
+		<hitTime>2500</hitTime>
 		<effectPoint>1</effectPoint>
 		<reuseDelay>3000</reuseDelay>
 		<isMagic>2</isMagic>
 		<staticReuse>true</staticReuse>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
-		<hitCancelTime>5</hitCancelTime>
+		<hitCancelTime>0</hitCancelTime>
 		<reuseDelayGroup>1566</reuseDelayGroup>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3989,20 +3989,21 @@
 		<abnormalType>CLASS_CHANGE</abnormalType>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<isMagic>1</isMagic>
+		<isMagic>2</isMagic>
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
+		<magicCriticalRate>0</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>-2</magicLvl>
 		<irreplacableBuff>true</irreplacableBuff>
 		<isDebuff>true</isDebuff>
+		<canBeDispelled>false</canBeDispelled>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="BlockSkill">
-				<magicTypes>1;2;3;4;5</magicTypes>
+				<magicTypes>0;1;2;3;4;5;7;22;</magicTypes>
 			</effect>
 			<effect name="PAtk">
 				<amount>-70</amount>

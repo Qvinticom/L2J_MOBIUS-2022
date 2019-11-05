@@ -57,7 +57,7 @@ public class ClassChange extends AbstractEffect
 		if (effected.isPlayer())
 		{
 			final PlayerInstance player = effected.getActingPlayer();
-			// TODO: FIX ME - Executing 1 second later otherwise interupted exception during storeCharBase()
+			// TODO: FIX ME - Executing 100 ms later otherwise interupted exception during storeCharBase()
 			ThreadPool.schedule(() ->
 			{
 				final int activeClass = player.getClassId().getId();
@@ -88,7 +88,7 @@ public class ClassChange extends AbstractEffect
 				player.sendPacket(new AcquireSkillList(player));
 				player.sendPacket(new ExSubjobInfo(player, SubclassInfoType.CLASS_CHANGED));
 				player.sendPacket(new ExAcquireAPSkillList(player));
-			}, 1000);
+			}, 100);
 		}
 	}
 }
