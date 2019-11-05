@@ -2192,7 +2192,7 @@
 		</effects>
 	</skill>
 	<skill id="11526" toLevel="10" name="Superior Sword/ Blunt Weapon Mastery">
-		<!-- P. Atk. +$s1, additional P. Atk. +$s2, Atk. Spd. +$s3, P. Critical Damage +$s4 when a sword or blunt weapon is equipped. -->
+		<!-- P. Atk. +30%, additional P. Atk. +1689, Atk. Spd. +30%, P. Critical Damage +15% when a sword or blunt weapon is equipped. -->
 		<icon>icon.skill10001</icon>
 		<operateType>P</operateType>
 		<magicLvl>
@@ -2219,16 +2219,16 @@
 			</effect>
 			<effect name="PAtk">
 				<amount>
-					<value level="1">1027</value>
-					<value level="2">1191</value>
-					<value level="3">1381</value>
-					<value level="4">1554</value>
-					<value level="5">1761</value>
-					<value level="6">1869</value>
-					<value level="7">1982</value>
-					<value level="8">2103</value>
-					<value level="9">2231</value>
-					<value level="10">2367</value>
+					<value level="1">1689</value>
+					<value level="2">1958</value>
+					<value level="3">2270</value>
+					<value level="4">2555</value>
+					<value level="5">2895</value>
+					<value level="6">3071</value>
+					<value level="7">3258</value>
+					<value level="8">3457</value>
+					<value level="9">3667</value>
+					<value level="10">3890</value>
 				</amount>
 				<mode>DIFF</mode>
 				<weaponType>

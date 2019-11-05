@@ -1791,6 +1791,9 @@
 		<!-- For 10 seconds, P. Def +50% and reflects damage when hit. Cannot be applied together with any Shield Block skill. -->
 		<icon>icon.skill3584</icon>
 		<operateType>A2</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>DMG_SHIELD</abnormalType>
 		<effectPoint>379</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1798,10 +1801,6 @@
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<reuseDelay>60000</reuseDelay>
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>10</abnormalTime>
-		<abnormalType>DMG_SHIELD</abnormalType>
 		<effects>
 			<effect name="TriggerSkillByDamage">
 				<attackerType>Creature</attackerType>

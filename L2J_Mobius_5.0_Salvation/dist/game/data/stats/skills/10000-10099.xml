@@ -928,6 +928,12 @@
 				<mode>PER</mode>
 			</effect>
 		</effects>
+		<selfEffects>
+			<effect name="CallSkill">
+				<skillId>19564</skillId> <!-- Wave Barrier -->
+				<skillLevel>1</skillLevel>
+			</effect>
+		</selfEffects>
 	</skill>
 	<skill id="10013" toLevel="11" name="Rising Smash">
 		<!-- Attacks nearby targets with $s1 Power added to P. Atk and Heal Received is reduced by $s3 for $s2. Can be used while a sword or blunt weapon is equipped. Over-hit. Critical. -->
@@ -1586,6 +1592,12 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>DMG_SHIELD</slot>
+			</effect>
+			<effect name="DispelBySlot">
+				<dispel>DMG_SHIELD,9</dispel>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="10021" toLevel="7" name="Raise Shield">
@@ -1662,6 +1674,12 @@
 					<value fromLevel="3" toLevel="7" fromSubLevel="3001" toSubLevel="3020">{2 * subIndex}</value>
 				</amount>
 				<mode>DIFF</mode>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>DMG_SHIELD</slot>
+			</effect>
+			<effect name="DispelBySlot">
+				<dispel>DMG_SHIELD,9</dispel>
 			</effect>
 		</effects>
 	</skill>
