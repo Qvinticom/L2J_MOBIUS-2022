@@ -12863,7 +12863,7 @@ public class PlayerInstance extends Playable
 	
 	public void setPcCafePoints(int count)
 	{
-		_pcCafePoints = count < 200000 ? count : 200000;
+		_pcCafePoints = count < Config.PC_CAFE_MAX_POINTS ? count : Config.PC_CAFE_MAX_POINTS;
 	}
 	
 	/**
