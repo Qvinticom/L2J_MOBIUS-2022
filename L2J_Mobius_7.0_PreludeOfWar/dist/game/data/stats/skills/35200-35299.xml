@@ -1682,29 +1682,8 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
 		<effects>
-			<effect name="AttackAttribute">
+			<effect name="AttackAttributeAdd">
 				<amount>30</amount>
-				<attribute>HOLY</attribute>
-			</effect>
-			<effect name="AttackAttribute">
-				<amount>30</amount>
-				<attribute>DARK</attribute>
-			</effect>
-			<effect name="AttackAttribute">
-				<amount>30</amount>
-				<attribute>FIRE</attribute>
-			</effect>
-			<effect name="AttackAttribute">
-				<amount>30</amount>
-				<attribute>WIND</attribute>
-			</effect>
-			<effect name="AttackAttribute">
-				<amount>30</amount>
-				<attribute>WATER</attribute>
-			</effect>
-			<effect name="AttackAttribute">
-				<amount>30</amount>
-				<attribute>EARTH</attribute>
 			</effect>
 		</effects>
 	</skill>

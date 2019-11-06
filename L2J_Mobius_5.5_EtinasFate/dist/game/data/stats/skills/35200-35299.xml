@@ -945,42 +945,46 @@
 	<skill id="35219" toLevel="10" name="War">
 		<!-- P. Atk. +$s1. -->
 		<icon>icon.bm_ensoul_stone_shilen</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="35220" toLevel="10" name="Revelation">
 		<!-- M. Atk. +$s1. -->
 		<icon>icon.bm_ensoul_stone_shilen</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="35221" toLevel="10" name="Greed">
 		<!-- Normal Attack Critical Damage +$s1. -->
 		<icon>icon.bm_ensoul_stone_shilen</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="35222" toLevel="10" name="Punishment">
 		<!-- P. Skill Critical Damage +$s1. -->
 		<icon>icon.bm_ensoul_stone_shilen</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="35223" toLevel="10" name="Awakened">
 		<!-- M. Skill Critical Damage +$s1. -->
 		<icon>icon.bm_ensoul_stone_shilen</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="35224" toLevel="10" name="Disaster">
 		<!-- Skill Cooldown -$s1. -->
 		<icon>icon.bm_ensoul_stone_shilen</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="35225" toLevel="10" name="Advent">
 		<!-- Max HP +$s1. -->
 		<icon>icon.bm_ensoul_stone_shilen</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
 	</skill>
 	<skill id="35226" toLevel="10" name="Active Stun">
 		<!-- Momentarily immobile due to the Stun effect. Debuff resistance ignored. -->
 		<icon>icon.bm_ensoul_stone_shilen</icon>
 		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
+		<castRange>1000</castRange>
+		<reuseDelay>60000</reuseDelay>
+		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="35227" toLevel="1" name="Artifact Set Effect Level 1">
 		<!-- Damage +1%, Received Damage -5% -->
@@ -1678,29 +1682,8 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
 		<effects>
-			<effect name="AttackAttribute">
+			<effect name="AttackAttributeAdd">
 				<amount>30</amount>
-				<attribute>HOLY</attribute>
-			</effect>
-			<effect name="AttackAttribute">
-				<amount>30</amount>
-				<attribute>DARK</attribute>
-			</effect>
-			<effect name="AttackAttribute">
-				<amount>30</amount>
-				<attribute>FIRE</attribute>
-			</effect>
-			<effect name="AttackAttribute">
-				<amount>30</amount>
-				<attribute>WIND</attribute>
-			</effect>
-			<effect name="AttackAttribute">
-				<amount>30</amount>
-				<attribute>WATER</attribute>
-			</effect>
-			<effect name="AttackAttribute">
-				<amount>30</amount>
-				<attribute>EARTH</attribute>
 			</effect>
 		</effects>
 	</skill>

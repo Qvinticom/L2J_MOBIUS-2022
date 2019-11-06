@@ -2323,16 +2323,69 @@
 		<!-- Enchanting increases Attack Attributes -->
 		<icon>icon.artifact_a_pa</icon>
 		<operateType>P</operateType>
+		<effects>		
+			<effect name="AttackAttributeAdd">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">10</value>
+					<value level="3">20</value>
+					<value level="4">30</value>
+					<value level="5">50</value>
+					<value level="6">60</value>
+					<value level="7">70</value>
+					<value level="8">90</value>
+					<value level="9">110</value>
+					<value level="10">130</value>
+					<value level="11">150</value>
+				</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35368" toLevel="11" name="Artifact - P. Skill Power">
 		<!-- Enchanting increases P. Skill Power -->
 		<icon>icon.artifact_a_pa</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="PhysicalSkillPower">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">1</value>
+					<value level="3">2</value>
+					<value level="4">3</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">9</value>
+					<value level="9">10</value>
+					<value level="10">13</value>
+					<value level="11">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35369" toLevel="11" name="Artifact - M. Skill Power">
 		<!-- Enchanting increases M. Skill Power -->
 		<icon>icon.artifact_a_pa</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicalSkillPower">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">1</value>
+					<value level="3">2</value>
+					<value level="4">3</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">9</value>
+					<value level="9">10</value>
+					<value level="10">13</value>
+					<value level="11">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35370" toLevel="11" name="Artifact - Bow Resistance">
 		<!-- When enchanted, increases resistance to bow/ crossbow attacks. -->
@@ -2447,16 +2500,238 @@
 		<!-- Enchanting increases all Defense Attributes -->
 		<icon>icon.artifact_a_pa</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">10</value>
+					<value level="3">20</value>
+					<value level="4">30</value>
+					<value level="5">50</value>
+					<value level="6">60</value>
+					<value level="7">70</value>
+					<value level="8">90</value>
+					<value level="9">110</value>
+					<value level="10">130</value>
+					<value level="11">150</value>
+				</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">10</value>
+					<value level="3">20</value>
+					<value level="4">30</value>
+					<value level="5">50</value>
+					<value level="6">60</value>
+					<value level="7">70</value>
+					<value level="8">90</value>
+					<value level="9">110</value>
+					<value level="10">130</value>
+					<value level="11">150</value>
+				</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">10</value>
+					<value level="3">20</value>
+					<value level="4">30</value>
+					<value level="5">50</value>
+					<value level="6">60</value>
+					<value level="7">70</value>
+					<value level="8">90</value>
+					<value level="9">110</value>
+					<value level="10">130</value>
+					<value level="11">150</value>
+				</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">10</value>
+					<value level="3">20</value>
+					<value level="4">30</value>
+					<value level="5">50</value>
+					<value level="6">60</value>
+					<value level="7">70</value>
+					<value level="8">90</value>
+					<value level="9">110</value>
+					<value level="10">130</value>
+					<value level="11">150</value>
+				</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">10</value>
+					<value level="3">20</value>
+					<value level="4">30</value>
+					<value level="5">50</value>
+					<value level="6">60</value>
+					<value level="7">70</value>
+					<value level="8">90</value>
+					<value level="9">110</value>
+					<value level="10">130</value>
+					<value level="11">150</value>
+				</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">10</value>
+					<value level="3">20</value>
+					<value level="4">30</value>
+					<value level="5">50</value>
+					<value level="6">60</value>
+					<value level="7">70</value>
+					<value level="8">90</value>
+					<value level="9">110</value>
+					<value level="10">130</value>
+					<value level="11">150</value>
+				</amount>
+				<attribute>DARK</attribute>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35374" toLevel="11" name="Artifact - Received Damage When Immobilized">
 		<!-- Enchanting increases Received Damage Reduction When Immobilized -->
 		<icon>icon.artifact_a_pa</icon>
 		<operateType>P</operateType>
+		<passiveConditions>
+			<condition name="OpCheckAbnormal">
+				<type>STUN</type>
+				<level>1</level>
+				<hasAbnormal>true</hasAbnormal>
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">1</value>
+					<value level="3">2</value>
+					<value level="4">3</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">9</value>
+					<value level="9">11</value>
+					<value level="10">13</value>
+					<value level="11">15</value>				
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">1</value>
+					<value level="3">2</value>
+					<value level="4">3</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">9</value>
+					<value level="9">11</value>
+					<value level="10">13</value>
+					<value level="11">15</value>				
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">1</value>
+					<value level="3">2</value>
+					<value level="4">3</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">9</value>
+					<value level="9">11</value>
+					<value level="10">13</value>
+					<value level="11">15</value>				
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">1</value>
+					<value level="3">2</value>
+					<value level="4">3</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">9</value>
+					<value level="9">11</value>
+					<value level="10">13</value>
+					<value level="11">15</value>				
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDefenceBonus">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">1</value>
+					<value level="3">2</value>
+					<value level="4">3</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">9</value>
+					<value level="9">11</value>
+					<value level="10">13</value>
+					<value level="11">15</value>				
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">1</value>
+					<value level="3">2</value>
+					<value level="4">3</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">9</value>
+					<value level="9">11</value>
+					<value level="10">13</value>
+					<value level="11">15</value>				
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35375" toLevel="11" name="Artifact - Debuff Resistance">
 		<!-- Enchanting increases Debuff Resistance -->
 		<icon>icon.artifact_a_pa</icon>
 		<operateType>P</operateType>
+		<effects>		
+			<effect name="ResistAbnormalByCategory">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">-1</value>
+					<value level="3">-2</value>
+					<value level="4">-3</value>
+					<value level="5">-5</value>
+					<value level="6">-7</value>
+					<value level="7">-9</value>
+					<value level="8">-11</value>
+					<value level="9">-14</value>
+					<value level="10">-17</value>
+					<value level="11">-20</value>				
+				</amount>
+				<slot>DEBUFF</slot>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35376" toLevel="11" name="Artifact - Vitality Bonus">
 		<!-- Enchanting increases Vitality bonus -->
@@ -2549,11 +2824,97 @@
 		<!-- Enchanting reduces Skill Cooldown -->
 		<icon>icon.artifact_a_pa</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="Reuse">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">-1</value>
+					<value level="3">-1</value>
+					<value level="4">-2</value>
+					<value level="5">-3</value>
+					<value level="6">-4</value>
+					<value level="7">-5</value>
+					<value level="8">-6</value>
+					<value level="9">-7</value>
+					<value level="10">-8</value>
+					<value level="11">-10</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">-1</value>
+					<value level="3">-1</value>
+					<value level="4">-2</value>
+					<value level="5">-3</value>
+					<value level="6">-4</value>
+					<value level="7">-5</value>
+					<value level="8">-6</value>
+					<value level="9">-7</value>
+					<value level="10">-8</value>
+					<value level="11">-10</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35380" toLevel="11" name="Artifact - Recovery Potions' Effect">
 		<!-- Increases Recovery Potions' Effect when upgraded. -->
 		<icon>icon.artifact_a_pa</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="AdditionalPotionCp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">100</value>
+					<value level="3">200</value>
+					<value level="4">300</value>
+					<value level="5">500</value>
+					<value level="6">700</value>
+					<value level="7">900</value>
+					<value level="8">1100</value>
+					<value level="9">1400</value>
+					<value level="10">1700</value>
+					<value level="11">20000</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="AdditionalPotionHp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">100</value>
+					<value level="3">200</value>
+					<value level="4">300</value>
+					<value level="5">500</value>
+					<value level="6">700</value>
+					<value level="7">900</value>
+					<value level="8">1100</value>
+					<value level="9">1400</value>
+					<value level="10">1700</value>
+					<value level="11">20000</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="AdditionalPotionMp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">100</value>
+					<value level="3">200</value>
+					<value level="4">300</value>
+					<value level="5">500</value>
+					<value level="6">700</value>
+					<value level="7">900</value>
+					<value level="8">1100</value>
+					<value level="9">1400</value>
+					<value level="10">1700</value>
+					<value level="11">20000</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35381" toLevel="11" name="Artifact - Fixed Damage Resistance">
 		<!-- Fixed Damage Resistance increased when upgraded. -->
@@ -2725,36 +3086,194 @@
 		<!-- Speed increased when upgraded. -->
 		<icon>icon.artifact_a_pa</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="Speed">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">1</value>
+					<value level="3">1</value>
+					<value level="4">2</value>
+					<value level="5">3</value>
+					<value level="6">4</value>
+					<value level="7">5</value>
+					<value level="8">6</value>
+					<value level="9">7</value>
+					<value level="10">8</value>
+					<value level="11">10</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35390" toLevel="11" name="Artifact - Acquired XP/ SP">
 		<!-- Enchanting increases XP/SP Gain -->
 		<icon>icon.artifact_a_pa</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="ExpModify">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">1</value>
+					<value level="3">1</value>
+					<value level="4">2</value>
+					<value level="5">3</value>
+					<value level="6">4</value>
+					<value level="7">5</value>
+					<value level="8">6</value>
+					<value level="9">7</value>
+					<value level="10">8</value>
+					<value level="11">10</value>
+				</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">1</value>
+					<value level="3">1</value>
+					<value level="4">2</value>
+					<value level="5">3</value>
+					<value level="6">4</value>
+					<value level="7">5</value>
+					<value level="8">6</value>
+					<value level="9">7</value>
+					<value level="10">8</value>
+					<value level="11">10</value>
+				</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35391" toLevel="11" name="Artifact - Vitality Bonus">
 		<!-- Enchanting increases Vitality bonus -->
 		<icon>icon.artifact_a_pa</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="VitalityExpRate">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">1</value>
+					<value level="3">1</value>
+					<value level="4">2</value>
+					<value level="5">3</value>
+					<value level="6">4</value>
+					<value level="7">5</value>
+					<value level="8">6</value>
+					<value level="9">7</value>
+					<value level="10">8</value>
+					<value level="11">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35392" toLevel="11" name="Artifact - Vitality Consumption">
 		<!-- Enchanting reduces Vitality Consumption Rate -->
 		<icon>icon.artifact_a_pa</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="VitalityPointsRate">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">-1</value>
+					<value level="3">-1</value>
+					<value level="4">-2</value>
+					<value level="5">-3</value>
+					<value level="6">-4</value>
+					<value level="7">-5</value>
+					<value level="8">-6</value>
+					<value level="9">-7</value>
+					<value level="10">-8</value>
+					<value level="11">-10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35393" toLevel="11" name="Artifact - Debuff Resistance">
 		<!-- Enchanting increases Debuff Resistance -->
 		<icon>icon.artifact_a_pa</icon>
 		<operateType>P</operateType>
+		<effects>		
+			<effect name="ResistAbnormalByCategory">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">-1</value>
+					<value level="3">-2</value>
+					<value level="4">-3</value>
+					<value level="5">-5</value>
+					<value level="6">-6</value>
+					<value level="7">-7</value>
+					<value level="8">-9</value>
+					<value level="9">-11</value>
+					<value level="10">-13</value>
+					<value level="11">-15</value>
+				</amount>
+				<slot>DEBUFF</slot>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35394" toLevel="11" name="Artifact - Received Healing">
 		<!-- Received Healing increased when upgraded. -->
 		<icon>icon.artifact_a_pa</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="HealEffect">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">-1</value>
+					<value level="3">-2</value>
+					<value level="4">-3</value>
+					<value level="5">-5</value>
+					<value level="6">-6</value>
+					<value level="7">-7</value>
+					<value level="8">-9</value>
+					<value level="9">-11</value>
+					<value level="10">-13</value>
+					<value level="11">-15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35395" toLevel="11" name="Artifact - MP Consumption">
 		<!-- Enchanting reduces Skill MP Consumption -->
 		<icon>icon.artifact_a_pa</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicMpCost">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">-1</value>
+					<value level="3">-2</value>
+					<value level="4">-3</value>
+					<value level="5">-5</value>
+					<value level="6">-6</value>
+					<value level="7">-7</value>
+					<value level="8">-9</value>
+					<value level="9">-11</value>
+					<value level="10">-13</value>
+					<value level="11">-15</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">-1</value>
+					<value level="3">-2</value>
+					<value level="4">-3</value>
+					<value level="5">-5</value>
+					<value level="6">-6</value>
+					<value level="7">-7</value>
+					<value level="8">-9</value>
+					<value level="9">-11</value>
+					<value level="10">-13</value>
+					<value level="11">-15</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35396" toLevel="11" name="Artifact - Fishing XP">
 		<!-- Enchanting increases Successful Fishing XP bonus -->
@@ -2765,6 +3284,128 @@
 		<!-- P. Def. +$s1, M. Def. +$s2, and all Defense Attributes +$s3. -->
 		<icon>icon.bm_defend_talisman</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">220</value>
+					<value level="2">440</value>
+					<value level="3">890</value>
+					<value level="4">1340</value>
+					<value level="5">1790</value>
+					<value level="6">2240</value>
+					<value level="7">2690</value>
+					<value level="8">3140</value>
+					<value level="9">3590</value>
+					<value level="10">4040</value>				
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">146</value>
+					<value level="2">286</value>
+					<value level="3">578</value>
+					<value level="4">872</value>
+					<value level="5">1164</value>
+					<value level="6">1456</value>
+					<value level="7">1748</value>
+					<value level="8">2042</value>
+					<value level="9">2334</value>
+					<value level="10">2626</value>				
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">30</value>
+					<value level="4">40</value>
+					<value level="5">70</value>
+					<value level="6">80</value>
+					<value level="7">90</value>
+					<value level="8">100</value>
+					<value level="9">120</value>
+					<value level="10">150</value>				
+				</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">30</value>
+					<value level="4">40</value>
+					<value level="5">70</value>
+					<value level="6">80</value>
+					<value level="7">90</value>
+					<value level="8">100</value>
+					<value level="9">120</value>
+					<value level="10">150</value>
+				</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">30</value>
+					<value level="4">40</value>
+					<value level="5">70</value>
+					<value level="6">80</value>
+					<value level="7">90</value>
+					<value level="8">100</value>
+					<value level="9">120</value>
+					<value level="10">150</value>
+				</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">30</value>
+					<value level="4">40</value>
+					<value level="5">70</value>
+					<value level="6">80</value>
+					<value level="7">90</value>
+					<value level="8">100</value>
+					<value level="9">120</value>
+					<value level="10">150</value>
+				</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">30</value>
+					<value level="4">40</value>
+					<value level="5">70</value>
+					<value level="6">80</value>
+					<value level="7">90</value>
+					<value level="8">100</value>
+					<value level="9">120</value>
+					<value level="10">150</value>
+				</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">30</value>
+					<value level="4">40</value>
+					<value level="5">70</value>
+					<value level="6">80</value>
+					<value level="7">90</value>
+					<value level="8">100</value>
+					<value level="9">120</value>
+					<value level="10">150</value>
+				</amount>
+				<attribute>DARK</attribute>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35398" toLevel="1" name="Soul of Sword - Zariche">
 		<!-- Demonic Sword Zariche's soul has possessed you. PvP Damage +100%, PvP Def. +90%, Max HP/MP/CP +150000, P. Atk. +45717, M. Atk. +26586, Atk./Casting Spd. +1500, Normal Atk./M. Critical Rate +500, Speed +300, and Received Heal -90% -->

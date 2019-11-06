@@ -397,172 +397,244 @@
 	<item id="80637" name="Talisman of Protection Stage 1" type="Armor">
 		<!-- When equipped. P. Def. +220. M. Def. +146. all Attribute Defenses +10. Can be enchanted through the Black Marketeer of Mammon. If identical Talismans are equipped. only the effect of the highest level Talisman applies. -->
 		<set name="icon" val="icon.bm_defend_talisman" />
+		<set name="bodypart" val="deco1" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="35397" level="1" /> <!-- Talisman of Protection -->
+		</skills>
 	</item>
 	<item id="80638" name="Talisman of Protection Stage 2" type="Armor">
 		<!-- When equipped. P. Def. +440. M. Def. +286. all Attribute Defenses +20. Can be enchanted through the Black Marketeer of Mammon. If identical Talismans are equipped. only the effect of the highest level Talisman applies. -->
 		<set name="icon" val="icon.bm_defend_talisman" />
+		<set name="bodypart" val="deco1" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="35397" level="2" /> <!-- Talisman of Protection -->
+		</skills>
 	</item>
 	<item id="80639" name="Talisman of Protection Stage 3" type="Armor">
 		<!-- When equipped. P. Def. +890. M. Def. +578. all Attribute Defenses +30. Can be enchanted through the Black Marketeer of Mammon. If identical Talismans are equipped. only the effect of the highest level Talisman applies. -->
 		<set name="icon" val="icon.bm_defend_talisman" />
+		<set name="bodypart" val="deco1" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="35397" level="3" /> <!-- Talisman of Protection -->
+		</skills>
 	</item>
 	<item id="80640" name="Talisman of Protection Stage 4" type="Armor">
 		<!-- When equipped. P. Def. +1340. M. Def. +872. all Attribute Defenses +40. Can be enchanted through the Black Marketeer of Mammon. If identical Talismans are equipped. only the effect of the highest level Talisman applies. -->
 		<set name="icon" val="icon.bm_defend_talisman" />
+		<set name="bodypart" val="deco1" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="35397" level="4" /> <!-- Talisman of Protection -->
+		</skills>
 	</item>
 	<item id="80641" name="Talisman of Protection Stage 5" type="Armor">
 		<!-- When equipped. P. Def. +1790. M. Def. +1164. all Attribute Defenses +70. Can be enchanted through the Black Marketeer of Mammon. If identical Talismans are equipped. only the effect of the highest level Talisman applies. -->
 		<set name="icon" val="icon.bm_defend_talisman" />
+		<set name="bodypart" val="deco1" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="35397" level="5" /> <!-- Talisman of Protection -->
+		</skills>
 	</item>
 	<item id="80642" name="Talisman of Protection Stage 6" type="Armor">
 		<!-- When equipped. P. Def. +2240. M. Def. +1456. all Attribute Defenses +80. Can be enchanted through the Black Marketeer of Mammon. If identical Talismans are equipped. only the effect of the highest level Talisman applies. -->
 		<set name="icon" val="icon.bm_defend_talisman" />
+		<set name="bodypart" val="deco1" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="35397" level="6" /> <!-- Talisman of Protection -->
+		</skills>
 	</item>
 	<item id="80643" name="Talisman of Protection Stage 7" type="Armor">
 		<!-- When equipped. P. Def. +2690. M. Def. +1748. all Attribute Defenses +90. Can be enchanted through the Black Marketeer of Mammon. If identical Talismans are equipped. only the effect of the highest level Talisman applies. -->
 		<set name="icon" val="icon.bm_defend_talisman" />
+		<set name="bodypart" val="deco1" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="35397" level="7" /> <!-- Talisman of Protection -->
+		</skills>
 	</item>
 	<item id="80644" name="Talisman of Protection Stage 8" type="Armor">
 		<!-- When equipped. P. Def. +3140. M. Def. +2042. all Attribute Defenses +100. Can be enchanted through the Black Marketeer of Mammon. If identical Talismans are equipped. only the effect of the highest level Talisman applies. -->
 		<set name="icon" val="icon.bm_defend_talisman" />
+		<set name="bodypart" val="deco1" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="35397" level="8" /> <!-- Talisman of Protection -->
+		</skills>
 	</item>
 	<item id="80645" name="Talisman of Protection Stage 9" type="Armor">
 		<!-- When equipped. P. Def. +3590. M. Def. +2334. all Attribute Defenses +120. Can be enchanted through the Black Marketeer of Mammon. If identical Talismans are equipped. only the effect of the highest level Talisman applies. -->
 		<set name="icon" val="icon.bm_defend_talisman" />
+		<set name="bodypart" val="deco1" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="35397" level="9" /> <!-- Talisman of Protection -->
+		</skills>
 	</item>
 	<item id="80646" name="Talisman of Protection Stage 10" type="Armor">
 		<!-- When equipped. P. Def. +4040. M. Def. +2626. all Attribute Defenses +150. Can be enchanted through the Black Marketeer of Mammon. If identical Talismans are equipped. only the effect of the highest level Talisman applies. -->
 		<set name="icon" val="icon.bm_defend_talisman" />
+		<set name="bodypart" val="deco1" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="35397" level="10" /> <!-- Talisman of Protection -->
+		</skills>
 	</item>
 	<item id="80647" name="Artifact - Normal Attack Critical Damage" additionalName="Fighting Spirit" type="Armor">
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="artifact" />
 		<set name="is_sellable" val="false" />
+		<set name="artifactSlot" val="1" />
+		<!-- Skill add in option stat when enchant/upgrade -->
 	</item>
 	<item id="80648" name="Artifact - P. Skill Critical Damage" additionalName="Fighting Spirit" type="Armor">
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="artifact" />
 		<set name="is_sellable" val="false" />
+		<set name="artifactSlot" val="1" />
+		<!-- Skill add in option stat when enchant/upgrade -->
 	</item>
 	<item id="80649" name="Artifact - M. Skill Critical Damage" additionalName="Fighting Spirit" type="Armor">
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="artifact" />
 		<set name="is_sellable" val="false" />
+		<set name="artifactSlot" val="1" />
+		<!-- Skill add in option stat when enchant/upgrade -->
 	</item>
 	<item id="80650" name="Artifact - Bow Resistance" additionalName="Protection" type="Armor">
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="artifact" />
 		<set name="is_sellable" val="false" />
+		<set name="artifactSlot" val="2" />
+		<!-- Skill add in option stat when enchant/upgrade -->
 	</item>
 	<item id="80651" name="Artifact - Dagger Resistance" additionalName="Protection" type="Armor">
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="artifact" />
 		<set name="is_sellable" val="false" />
+		<set name="artifactSlot" val="2" />
+		<!-- Skill add in option stat when enchant/upgrade -->
 	</item>
 	<item id="80652" name="Artifact - Sword Resistance" additionalName="Protection" type="Armor">
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="artifact" />
 		<set name="is_sellable" val="false" />
+		<set name="artifactSlot" val="2" />
+		<!-- Skill add in option stat when enchant/upgrade -->
 	</item>
 	<item id="80653" name="Artifact - Vitality Bonus" additionalName="Support" type="Armor">
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="artifact" />
 		<set name="is_sellable" val="false" />
+		<set name="artifactSlot" val="3" />
+		<!-- Skill add in option stat when enchant/upgrade -->
 	</item>
 	<item id="80654" name="Artifact - Vitality Consumption Rate Reduction" additionalName="Support" type="Armor">
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="artifact" />
 		<set name="is_sellable" val="false" />
+		<set name="artifactSlot" val="3" />
+		<!-- Skill add in option stat when enchant/upgrade -->
 	</item>
 	<item id="80655" name="Artifact - Skill MP Consumption Reduction" additionalName="Support" type="Armor">
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="artifact" />
 		<set name="is_sellable" val="false" />
+		<set name="artifactSlot" val="3" />
+		<!-- Skill add in option stat when enchant/upgrade -->
 	</item>
 	<item id="80656" name="Artifact - P. Def." additionalName="Balance" type="Armor">
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="artifact" />
 		<set name="is_sellable" val="false" />
+		<set name="artifactSlot" val="4" />
+		<!-- Skill add in option stat when enchant/upgrade -->
 	</item>
 	<item id="80657" name="Artifact - M. Def." additionalName="Balance" type="Armor">
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="artifact" />
 		<set name="is_sellable" val="false" />
+		<set name="artifactSlot" val="4" />
+		<!-- Skill add in option stat when enchant/upgrade -->
 	</item>
 	<item id="80658" name="Artifact - Normal Attack Critical Damage" additionalName="Balance" type="Armor">
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="artifact" />
 		<set name="is_sellable" val="false" />
+		<set name="artifactSlot" val="4" />
+		<!-- Skill add in option stat when enchant/upgrade -->
 	</item>
 	<item id="80659" name="Artifact - P. Skill Critical Damage" additionalName="Balance" type="Armor">
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="artifact" />
 		<set name="is_sellable" val="false" />
+		<set name="artifactSlot" val="4" />
+		<!-- Skill add in option stat when enchant/upgrade -->
 	</item>
 	<item id="80660" name="Artifact - M. Skill Critical Damage" additionalName="Balance" type="Armor">
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="artifact" />
 		<set name="is_sellable" val="false" />
+		<set name="artifactSlot" val="4" />
+		<!-- Skill add in option stat when enchant/upgrade -->
 	</item>
 	<item id="80661" name="Artifact - Atk. Spd." additionalName="Balance" type="Armor">
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="artifact" />
 		<set name="is_sellable" val="false" />
+		<set name="artifactSlot" val="4" />
+		<!-- Skill add in option stat when enchant/upgrade -->
 	</item>
 	<item id="80662" name="Artifact - Casting Spd." additionalName="Balance" type="Armor">
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="artifact" />
 		<set name="is_sellable" val="false" />
+		<set name="artifactSlot" val="4" />
+		<!-- Skill add in option stat when enchant/upgrade -->
 	</item>
 	<item id="80663" name="Dragon Claw Box (Advanced)" type="EtcItem">
 		<!-- Use it to obtain an Advanced Antharas. Valakas. Lindvior or Fafurion weapon. -->
