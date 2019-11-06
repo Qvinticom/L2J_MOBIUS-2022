@@ -1,10 +1,15 @@
-L2J-Mobius The Kamael
-
+L2J-Mobius The Kamael (protocol 228)
 Client Mirror 1: https://drive.google.com/uc?id=1rXtgV9l67b5lBeK_wmCKITE1DQ7EgEJ8&export=download
 Client Mirror 2: https://drive.google.com/uc?id=1IugZjcpS5n9_EJPLCecB3H_tLmVlqo2L&export=download
 System: https://mega.nz/#!98likSra!vP3uaDwJs8oiY5q60UzBSXAbgNELWX_dycWb98Mz96U
+
+L2J-Mobius Essence (protocol 235) [Login support only!]
+Client: https://drive.google.com/uc?id=1MFxyk0upVRqW1HSnkgqvD3As2JAWEMGk&export=download
+System: https://mega.nz/#!IsEhQI4K!DkdkNgUmu79by1Ogc0qcAE5P4kJAVqzKhlhDL3iZTwA
+
 Geodata: http://www.mediafire.com/file/tas8fp9ee2r6mn9/L2J_Mobius_Classic_2.2_Antharas_Geodata.zip
 JDK: https://www.mediafire.com/file/k25pt0umuf16uoh/openjdk-12.0.2_windows-x64_bin.zip
+
 
 Saviors: https://eu.4game.com/lineage2classic/play/saviors/
 -Classic packet compatibility
@@ -97,6 +102,9 @@ Secret of Empire: https://eu.4game.com/patchnotes/lineage2classic/133/
 
 The Kamael: https://eu.4game.com/patchnotes/lineage2classic/154/
 -Kamael creation support
+
+Essence: https://eu.4game.com/patchnotes/lineage2essence/188/
+-Just enter game support.
 
 Customs:
 -Newbie Helper NPC location info
