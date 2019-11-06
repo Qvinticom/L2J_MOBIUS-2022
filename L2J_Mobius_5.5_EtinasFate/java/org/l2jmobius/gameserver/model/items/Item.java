@@ -175,6 +175,8 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 	private boolean _isAppearanceable;
 	private boolean _isBlessed;
 	
+	private int _artifactSlot;
+	
 	/**
 	 * Constructor of the Item that fill class variables.<BR>
 	 * <BR>
@@ -219,6 +221,7 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 		_for_npc = set.getBoolean("for_npc", false);
 		_isAppearanceable = set.getBoolean("isAppearanceable", false);
 		_isBlessed = set.getBoolean("blessed", false);
+		_artifactSlot = set.getInt("artifactSlot", 0);
 		
 		_immediate_effect = set.getBoolean("immediate_effect", false);
 		_ex_immediate_effect = set.getBoolean("ex_immediate_effect", false);
@@ -909,6 +912,11 @@ public abstract class Item extends ListenersContainer implements IIdentifiable
 	public boolean isBlessed()
 	{
 		return _isBlessed;
+	}
+	
+	public int getArtifactSlot()
+	{
+		return _artifactSlot;
 	}
 	
 	/**

@@ -458,7 +458,7 @@ public enum ExIncomingPackets implements IIncomingPackets<GameClient>
 	REQUEST_BLOCK_LIST_FOR_AD(0x15E, null, ConnectionState.IN_GAME),
 	REQUEST_USER_BAN_INFO(0x15F, null, ConnectionState.IN_GAME),
 	EX_INTERACT_MODIFY(0x160, null, ConnectionState.IN_GAME), // 152
-	EX_TRY_ENCHANT_ARTIFACT(0x161, null, ConnectionState.IN_GAME), // 152
+	EX_TRY_ENCHANT_ARTIFACT(0x161, RequestExTryEnchantArtifact::new, ConnectionState.IN_GAME), // 152
 	EX_XIGN_CODE(0x162, null, ConnectionState.IN_GAME); // 152
 	
 	public static final ExIncomingPackets[] PACKET_ARRAY;
