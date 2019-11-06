@@ -14120,7 +14120,6 @@ public class PlayerInstance extends Playable
 			// Skip thinking.
 			if ((getTarget() != null) && getTarget().isMonster() && (((MonsterInstance) getTarget()).getTarget() == this) && !((MonsterInstance) getTarget()).isAlikeDead())
 			{
-				sendPacket(ExAutoPlayDoMacro.STATIC_PACKET);
 				return;
 			}
 			
