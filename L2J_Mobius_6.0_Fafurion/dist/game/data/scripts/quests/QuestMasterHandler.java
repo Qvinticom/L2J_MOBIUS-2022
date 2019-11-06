@@ -140,6 +140,7 @@ import quests.Q00663_SeductiveWhispers.Q00663_SeductiveWhispers;
 import quests.Q00670_DefeatingTheLordOfSeed.Q00670_DefeatingTheLordOfSeed;
 import quests.Q00726_LightWithinTheDarkness.Q00726_LightWithinTheDarkness;
 import quests.Q00727_HopeWithinTheDarkness.Q00727_HopeWithinTheDarkness;
+import quests.Q00737_ASwordHiddenInASmile.Q00737_ASwordHiddenInASmile;
 import quests.Q00738_DimensionalExplorationOfTheUnworldlyVisitors.Q00738_DimensionalExplorationOfTheUnworldlyVisitors;
 import quests.Q00751_LiberatingTheSpirits.Q00751_LiberatingTheSpirits;
 import quests.Q00752_UncoverTheSecret.Q00752_UncoverTheSecret;
@@ -607,7 +608,7 @@ public class QuestMasterHandler
 		Q00684_DisturbedFields.class, // FIXME: Custom.
 		Q00726_LightWithinTheDarkness.class,
 		Q00727_HopeWithinTheDarkness.class,
-		Q00737_ASwordHiddenInASmile.class, // TODO: Not done.
+		Q00737_ASwordHiddenInASmile.class,
 		Q00738_DimensionalExplorationOfTheUnworldlyVisitors.class,
 		Q00743_AtTheAltarOfOblivion.class, // TODO: Not done.
 		Q00744_TheAlligatorHunterReturns.class, // TODO: Not done.

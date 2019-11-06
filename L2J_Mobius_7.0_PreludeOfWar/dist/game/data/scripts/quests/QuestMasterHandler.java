@@ -62,6 +62,7 @@ import quests.Q00620_FourGoblets.Q00620_FourGoblets;
 import quests.Q00670_DefeatingTheLordOfSeed.Q00670_DefeatingTheLordOfSeed;
 import quests.Q00726_LightWithinTheDarkness.Q00726_LightWithinTheDarkness;
 import quests.Q00727_HopeWithinTheDarkness.Q00727_HopeWithinTheDarkness;
+import quests.Q00737_ASwordHiddenInASmile.Q00737_ASwordHiddenInASmile;
 import quests.Q00738_DimensionalExplorationOfTheUnworldlyVisitors.Q00738_DimensionalExplorationOfTheUnworldlyVisitors;
 import quests.Q00752_UncoverTheSecret.Q00752_UncoverTheSecret;
 import quests.Q00753_ReactingToACrisis.Q00753_ReactingToACrisis;
@@ -273,7 +274,7 @@ public class QuestMasterHandler
 		Q00684_DisturbedFields.class, // FIXME: Custom.
 		Q00726_LightWithinTheDarkness.class,
 		Q00727_HopeWithinTheDarkness.class,
-		Q00737_ASwordHiddenInASmile.class, // TODO: Not done.
+		Q00737_ASwordHiddenInASmile.class,
 		Q00738_DimensionalExplorationOfTheUnworldlyVisitors.class,
 		Q00743_AtTheAltarOfOblivion.class, // TODO: Not done.
 		Q00749_TiesWithTheGuardians.class, // TODO: Not done.
