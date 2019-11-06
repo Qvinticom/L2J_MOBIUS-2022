@@ -57,6 +57,7 @@ public class ProtocolVersion implements IClientIncomingPacket
 		else
 		{
 			client.sendPacket(new KeyPacket(client.enableCrypt(), 1));
+			client.setProtocolVersion(_version);
 			client.setProtocolOk(true);
 		}
 	}

@@ -117,6 +117,8 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 	
 	private long _last_received_packet_action_time = 0;
 	
+	private int _protocolVersion;
+	
 	public GameClient(MMOConnection<GameClient> con)
 	{
 		super(con);
@@ -1021,5 +1023,15 @@ public class GameClient extends MMOClient<MMOConnection<GameClient>> implements 
 			return getConnection().isConnected() && !getConnection().isClosed();
 		}
 		return true;
+	}
+	
+	public void setProtocolVersion(int version)
+	{
+		_protocolVersion = version;
+	}
+	
+	public int getProtocolVersion()
+	{
+		return _protocolVersion;
 	}
 }

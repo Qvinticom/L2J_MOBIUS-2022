@@ -1087,6 +1087,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		adminReply.replace("%access%", player.getAccessLevel().getLevel() + " (" + player.getAccessLevel().getName() + ")");
 		adminReply.replace("%account%", player.getAccountName());
 		adminReply.replace("%ip%", ip);
+		adminReply.replace("%protocol%", String.valueOf(player.getClient() != null ? player.getClient().getProtocolVersion() : "NULL"));
 		adminReply.replace("%hwid%", hwid);
 		adminReply.replace("%ai%", player.getAI().getIntention().name());
 		adminReply.replace("%inst%", player.getInstanceId() > 0 ? "<tr><td>InstanceId:</td><td><a action=\"bypass -h admin_instance_spawns " + player.getInstanceId() + "\">" + player.getInstanceId() + "</a></td></tr>" : "");

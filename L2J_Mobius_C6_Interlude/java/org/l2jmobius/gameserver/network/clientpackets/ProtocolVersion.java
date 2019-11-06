@@ -48,6 +48,7 @@ public class ProtocolVersion extends GameClientPacket
 		}
 		else
 		{
+			getClient().setProtocolVersion(_version);
 			getClient().sendPacket(new KeyPacket(getClient().enableCrypt()));
 		}
 	}

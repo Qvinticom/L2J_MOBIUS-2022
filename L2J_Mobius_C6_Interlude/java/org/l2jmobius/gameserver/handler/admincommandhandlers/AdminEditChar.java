@@ -1072,6 +1072,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		adminReply.replace("%access%", String.valueOf(player.getAccessLevel().getLevel()));
 		adminReply.replace("%account%", account);
 		adminReply.replace("%ip%", ip);
+		adminReply.replace("%protocol%", String.valueOf(player.getClient() != null ? player.getClient().getProtocolVersion() : "NULL"));
 		activeChar.sendPacket(adminReply);
 	}
 	

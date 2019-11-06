@@ -82,7 +82,9 @@ public class GameClient extends ChannelInboundHandler<GameClient>
 	
 	private volatile boolean _isDetached = false;
 	
-	private boolean _protocol;
+	private int _protocolVersion;
+	
+	private boolean _protocolOk;
 	
 	private int[][] trace;
 	
@@ -664,14 +666,24 @@ public class GameClient extends ChannelInboundHandler<GameClient>
 		}
 	}
 	
+	public void setProtocolVersion(int version)
+	{
+		_protocolVersion = version;
+	}
+	
+	public int getProtocolVersion()
+	{
+		return _protocolVersion;
+	}
+	
 	public boolean isProtocolOk()
 	{
-		return _protocol;
+		return _protocolOk;
 	}
 	
 	public void setProtocolOk(boolean b)
 	{
-		_protocol = b;
+		_protocolOk = b;
 	}
 	
 	public void setClientTracert(int[][] tracert)
