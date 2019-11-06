@@ -14,14 +14,15 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package quests.Q11031_TrainingBeginsNow;
+package quests.Q11032_CurseOfUndying;
 
 import java.util.HashSet;
 import java.util.Set;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.gameserver.data.xml.impl.CategoryData;
+import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.enums.QuestSound;
-import org.l2jmobius.gameserver.instancemanager.QuestManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -38,46 +39,45 @@ import org.l2jmobius.gameserver.model.quest.State;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 import org.l2jmobius.gameserver.network.serverpackets.ExTutorialShowId;
+import org.l2jmobius.gameserver.network.serverpackets.classchange.ExRequestClassChangeUi;
 
-import quests.Q11032_CurseOfUndying.Q11032_CurseOfUndying;
+import quests.Q11031_TrainingBeginsNow.Q11031_TrainingBeginsNow;
 
 /**
- * Training Begins Now (11031)
- * @URL https://l2wiki.com/Training_Begins_Now
- * @author Mobius
+ * Curse of Undying (11032)
+ * @URL https://l2wiki.com/Curse_of_Undying
+ * @author Dmitri, Mobius
  */
-public class Q11031_TrainingBeginsNow extends Quest
+public class Q11032_CurseOfUndying extends Quest
 {
 	// NPCs
-	private static final int TARTI = 34505;
 	private static final int SILVAN = 33178;
-	private static final int NASTY_EYE = 24380;
-	private static final int NASTY_BUGGLE = 24381;
-	// Items
-	private static final ItemHolder NOVICE_SOULSHOTS = new ItemHolder(5789, 1500);
-	private static final ItemHolder NOVICE_SPIRITSHOTS = new ItemHolder(5790, 500); // TODO: Check guessed amount.
-	private static final ItemHolder SOE_SILVAN = new ItemHolder(80678, 1);
+	private static final int TARTI = 34505;
+	private static final int DISGUSTING_ZOMBIES = 24382;
+	private static final int THE_HIDEOUS_LORD_ZOMBIE = 24383;
+	// Item
+	private static final ItemHolder SOE_SILVAN = new ItemHolder(80677, 1);
 	// Location
-	private static final Location TRAINING_GROUNDS_TELEPORT = new Location(-17447, 145170, -3816);
+	private static final Location TRAINING_GROUNDS_TELEPORT = new Location(-19204, 138941, -3896);
 	// Misc
-	private static final String NOVICE_SHOTS_REWARDED_VAR = "NOVICE_SHOTS_REWARDED";
 	private static final String KILL_COUNT_VAR = "KillCount";
 	
-	public Q11031_TrainingBeginsNow()
+	public Q11032_CurseOfUndying()
 	{
-		super(11031);
-		addStartNpc(TARTI);
-		addTalkId(TARTI, SILVAN);
-		addKillId(NASTY_EYE, NASTY_BUGGLE);
+		super(11032);
+		addStartNpc(SILVAN);
+		addTalkId(SILVAN, TARTI);
+		addKillId(DISGUSTING_ZOMBIES, THE_HIDEOUS_LORD_ZOMBIE);
 		registerQuestItems(SOE_SILVAN.getId());
-		setQuestNameNpcStringId(NpcStringId.LV_1_20_TRAINING_BEGINS_NOW);
+		addCondCompletedQuest(Q11031_TrainingBeginsNow.class.getSimpleName(), getNoQuestMsg(null));
+		setQuestNameNpcStringId(NpcStringId.LV_1_20_CURSE_OF_UNDYING);
 	}
 	
 	@Override
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
-		final QuestState qs = getQuestState(player, false);
+		QuestState qs = getQuestState(player, false);
 		if (qs == null)
 		{
 			return htmltext;
@@ -85,64 +85,54 @@ public class Q11031_TrainingBeginsNow extends Quest
 		
 		switch (event)
 		{
-			case "34505-02.htm":
+			case "33178-03.html":
 			{
+				htmltext = event;
+				break;
+			}
+			case "33178-02.html":
+			{
+				qs.startQuest();
+				player.sendPacket(new ExTutorialShowId(23)); // Adventurers Guide
+				htmltext = event;
+				break;
+			}
+			case "34505-04.html":
+			{
+				qs.setCond(4, true);
+				showOnScreenMsg(player, NpcStringId.CLASS_TRANSFER_IS_AVAILABLE_NCLICK_THE_CLASS_TRANSFER_ICON_IN_THE_NOTIFICATION_WINDOW_TO_TRANSFER_YOUR_CLASS, ExShowScreenMessage.TOP_CENTER, 10000);
 				htmltext = event;
 				break;
 			}
 			case "34505-03.html":
 			{
-				qs.startQuest();
-				player.sendPacket(new ExTutorialShowId(9)); // Quest Progress
-				showOnScreenMsg(player, NpcStringId.TALK_TO_TARTI, ExShowScreenMessage.TOP_CENTER, 10000);
-				htmltext = event;
-				break;
-			}
-			case "reward_shots":
-			{
-				if (qs.isCond(1))
-				{
-					qs.setCond(2, true);
-					if (!player.getVariables().getBoolean(NOVICE_SHOTS_REWARDED_VAR, false))
-					{
-						player.getVariables().set(NOVICE_SHOTS_REWARDED_VAR, true);
-						giveItems(player, player.isMageClass() ? NOVICE_SPIRITSHOTS : NOVICE_SOULSHOTS);
-					}
-				}
-				break;
-			}
-			case "34505-05.html":
-			{
 				qs.setCond(3, true);
-				player.sendPacket(new ExTutorialShowId(25)); // Adventurers Guide
-				// TODO: Buff player support in Quest class.
+				player.sendPacket(new ExTutorialShowId(22)); // Adventurers Guide
 				htmltext = event;
 				break;
 			}
 			case "teleport":
 			{
-				if (qs.isCond(3))
+				if (qs.isCond(1))
 				{
 					player.teleToLocation(TRAINING_GROUNDS_TELEPORT);
 				}
 				break;
 			}
-			case "33178-02.html":
+			case "34505-02.html":
 			{
-				if (qs.isCond(4))
+				if (qs.isCond(2))
 				{
-					addExpAndSp(player, 48229, 43);
+					showOnScreenMsg(player, NpcStringId.FIRST_CLASS_TRANSFER_IS_AVAILABLE_NGO_SEE_TARTI_IN_THE_TOWN_OF_GLUDIO_TO_START_THE_CLASS_TRANSFER, ExShowScreenMessage.TOP_CENTER, 10000);
+					addExpAndSp(player, 787633, 708);
 					qs.exitQuest(false, true);
-					htmltext = event;
-					
-					// Initialize next quest.
-					final Quest nextQuest = QuestManager.getInstance().getQuest(Q11032_CurseOfUndying.class.getSimpleName());
-					if (nextQuest != null)
+					if (CategoryData.getInstance().isInCategory(CategoryType.FIRST_CLASS_GROUP, player.getClassId().getId()))
 					{
-						nextQuest.newQuestState(player);
+						player.sendPacket(ExRequestClassChangeUi.STATIC_PACKET);
 					}
+					htmltext = event;
+					break;
 				}
-				break;
 			}
 		}
 		return htmltext;
@@ -158,9 +148,9 @@ public class Q11031_TrainingBeginsNow extends Quest
 		{
 			case State.CREATED:
 			{
-				if (npc.getId() == TARTI)
+				if (npc.getId() == SILVAN)
 				{
-					htmltext = "34505-01.htm";
+					htmltext = "33178-01.html";
 				}
 				break;
 			}
@@ -168,25 +158,19 @@ public class Q11031_TrainingBeginsNow extends Quest
 			{
 				switch (npc.getId())
 				{
-					case TARTI:
+					case SILVAN:
 					{
 						if (qs.isCond(1))
 						{
-							startQuestTimer("reward_shots", 100, npc, player);
-							player.sendPacket(new ExTutorialShowId(14)); // Soulshots and Spiritshots
-							htmltext = "34505-04.html";
-						}
-						else
-						{
-							htmltext = "34505-05.html";
+							htmltext = "33178-02.html";
 						}
 						break;
 					}
-					case SILVAN:
+					case TARTI:
 					{
-						if (qs.isCond(4))
+						if (qs.isCond(2))
 						{
-							htmltext = "33178-01.html";
+							htmltext = "34505-01.html";
 						}
 						break;
 					}
@@ -206,10 +190,10 @@ public class Q11031_TrainingBeginsNow extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		if ((qs != null) && qs.isCond(3))
+		if ((qs != null) && qs.isCond(1))
 		{
 			final int killCount = qs.getInt(KILL_COUNT_VAR) + 1;
-			if (killCount < 15)
+			if (killCount < 30)
 			{
 				qs.set(KILL_COUNT_VAR, killCount);
 				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
@@ -217,10 +201,10 @@ public class Q11031_TrainingBeginsNow extends Quest
 			}
 			else
 			{
-				qs.setCond(4, true);
+				qs.setCond(2, true);
 				qs.unset(KILL_COUNT_VAR);
 				giveItems(killer, SOE_SILVAN);
-				showOnScreenMsg(killer, NpcStringId.USE_SCROLL_OF_ESCAPE_SILVAN_IN_YOUR_INVENTORY_NTALK_TO_SILVAN_TO_COMPLETE_THE_QUEST, ExShowScreenMessage.TOP_CENTER, 10000);
+				showOnScreenMsg(killer, NpcStringId.USE_SCROLL_OF_ESCAPE_TARTI_IN_YOUR_INVENTORY_NTALK_TO_TARTI_TO_COMPLETE_THE_QUEST, ExShowScreenMessage.TOP_CENTER, 10000);
 			}
 		}
 		return super.onKill(npc, killer, isSummon);
@@ -230,10 +214,10 @@ public class Q11031_TrainingBeginsNow extends Quest
 	public Set<NpcLogListHolder> getNpcLogList(PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
-		if ((qs != null) && qs.isCond(3))
+		if ((qs != null) && qs.isCond(1))
 		{
 			final Set<NpcLogListHolder> holder = new HashSet<>();
-			holder.add(new NpcLogListHolder(NpcStringId.COMBAT_TRAINING_AT_THE_RUINS_OF_DESPAIR.getId(), true, qs.getInt(KILL_COUNT_VAR)));
+			holder.add(new NpcLogListHolder(NpcStringId.DEFEAT_THE_SWARM_OF_ZOMBIES.getId(), true, qs.getInt(KILL_COUNT_VAR)));
 			return holder;
 		}
 		return super.getNpcLogList(player);
@@ -249,15 +233,15 @@ public class Q11031_TrainingBeginsNow extends Quest
 		}
 		
 		final PlayerInstance player = event.getPlayer();
-		if ((player == null) || (player.getLevel() > 20))
+		if ((player == null) || !CategoryData.getInstance().isInCategory(CategoryType.FIRST_CLASS_GROUP, player.getClassId().getId()))
 		{
 			return;
 		}
 		
 		final QuestState qs = getQuestState(player, false);
-		if (qs == null)
+		if ((qs != null) && qs.isCompleted())
 		{
-			showOnScreenMsg(player, NpcStringId.TARTI_IS_WORRIED_ABOUT_S1, ExShowScreenMessage.TOP_CENTER, 10000, player.getName());
+			player.sendPacket(ExRequestClassChangeUi.STATIC_PACKET);
 		}
 	}
 }

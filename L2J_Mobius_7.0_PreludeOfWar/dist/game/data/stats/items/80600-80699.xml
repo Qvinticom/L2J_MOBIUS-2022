@@ -706,6 +706,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39480" level="1" /> <!-- Scroll of Escape: Tarti -->
+		</skills>
 	</item>
 	<item id="80678" name="Scroll of Escape: Silvan" type="EtcItem">
 		<!-- Teleports you to Silvan. -->
@@ -718,6 +722,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39481" level="1" /> <!-- Scroll of Escape: Silvan -->
+		</skills>
 	</item>
 	<item id="80679" name="Scroll of Escape: Kallesin" type="EtcItem">
 		<!-- Teleports you to Kallesin. -->

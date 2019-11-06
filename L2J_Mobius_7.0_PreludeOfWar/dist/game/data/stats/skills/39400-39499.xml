@@ -898,11 +898,47 @@
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<hitTime>200</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeId>80677</itemConsumeId> <!-- Scroll of Escape: Tarti -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<conditions>
+			<condition name="OpAlignment">
+				<affectType>CASTER</affectType>
+				<alignment>LAWFUL</alignment>
+			</condition>
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Teleport">
+				<x>-14180</x>
+				<y>123840</y>
+				<z>-3120</z>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39481" toLevel="1" name="Scroll of Escape: Silvan">
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<hitTime>200</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeId>80678</itemConsumeId> <!-- Scroll of Escape: Silvan -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<conditions>
+			<condition name="OpAlignment">
+				<affectType>CASTER</affectType>
+				<alignment>LAWFUL</alignment>
+			</condition>
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Teleport">
+				<x>-19353</x>
+				<y>136854</y>
+				<z>-3760</z>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39482" toLevel="1" name="Scroll of Escape: Kallesin">
 		<operateType>A1</operateType>

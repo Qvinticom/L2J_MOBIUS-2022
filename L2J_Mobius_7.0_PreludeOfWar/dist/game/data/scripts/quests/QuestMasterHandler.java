@@ -165,6 +165,7 @@ import quests.Q10843_AnomalyInTheEnchantedValley.Q10843_AnomalyInTheEnchantedVal
 import quests.Q10851_ElvenBotany.Q10851_ElvenBotany;
 import quests.Q10856_SuperionAppears.Q10856_SuperionAppears;
 import quests.Q11031_TrainingBeginsNow.Q11031_TrainingBeginsNow;
+import quests.Q11032_CurseOfUndying.Q11032_CurseOfUndying;
 import quests.custom.Q00529_RegularBarrierMaintenance.Q00529_RegularBarrierMaintenance;
 import quests.custom.Q00560_HowToOvercomeFear.Q00560_HowToOvercomeFear;
 import quests.custom.Q00589_ASecretChange.Q00589_ASecretChange;
@@ -479,7 +480,7 @@ public class QuestMasterHandler
 		Q10900_PathToStrength.class, // TODO: Not done.
 		Q10901_AModelAdventurer.class, // TODO: Not done.
 		Q11031_TrainingBeginsNow.class,
-		Q11032_CurseOfUndying.class, // TODO: Not done.
+		Q11032_CurseOfUndying.class,
 		Q11034_ResurrectedOne.class, // TODO: Not done.
 		Q11035_DeathlyMischief.class, // TODO: Not done.
 		Q11037_WhyAreTheRatelHere.class, // TODO: Not done.
