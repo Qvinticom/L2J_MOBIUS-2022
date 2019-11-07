@@ -2017,7 +2017,7 @@
 		</effects>
 	</skill>
 	<skill id="10026" toLevel="11" name="Shield Boomerang">
-		<!-- Throws the shield at the target to attack it with $s1 power and provoke it into attacking you for $s2 Target's Speed in PvP -$s3. Requires a shield. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
+		<!-- Throws the shield at the target to attack it with 16433 power and provoke it into attacking you for 5 seconds Target's Speed in PvP -70. Requires a shield. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill10018</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -2074,6 +2074,8 @@
 		<effects>
 			<effect name="TargetMe" />
 			<effect name="GetAgro" />
+		</effects>
+		<pvpEffects>
 			<!-- TODO p_berserker -->
 			<effect name="AddHate">
 				<power>
@@ -2105,7 +2107,11 @@
 					<value level="11">30846</value>
 				</power>
 			</effect>
-		</effects>
+			<effect name="Speed">
+				<amount>-70</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</pvpEffects>
 		<selfEffects>
 			<effect name="DispelBySlot">
 				<dispel>SIGEL_SHIELD,9</dispel>

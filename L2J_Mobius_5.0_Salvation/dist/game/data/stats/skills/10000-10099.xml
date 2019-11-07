@@ -1995,6 +1995,8 @@
 		<effects>
 			<effect name="TargetMe" />
 			<effect name="GetAgro" />
+		</effects>
+		<pvpEffects>
 			<!-- TODO p_berserker -->
 			<effect name="AddHate">
 				<power>
@@ -2022,7 +2024,11 @@
 					<value level="9">19981</value>
 				</power>
 			</effect>
-		</effects>
+			<effect name="Speed">
+				<amount>-70</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</pvpEffects>
 		<selfEffects>
 			<effect name="DispelBySlot">
 				<dispel>SIGEL_SHIELD,9</dispel>
