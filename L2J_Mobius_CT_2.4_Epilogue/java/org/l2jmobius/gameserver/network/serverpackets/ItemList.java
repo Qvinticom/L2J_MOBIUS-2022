@@ -37,10 +37,7 @@ public class ItemList extends AbstractItemPacket
 		
 		for (ItemInstance item : player.getInventory().getItems())
 		{
-			if (!item.isQuestItem())
-			{
-				_items.add(item);
-			}
+			_items.add(item);
 		}
 	}
 	
