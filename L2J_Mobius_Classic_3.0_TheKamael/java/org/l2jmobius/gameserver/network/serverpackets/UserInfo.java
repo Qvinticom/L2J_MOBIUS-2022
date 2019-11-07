@@ -136,7 +136,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 			return false;
 		}
 		
-		final boolean isProtocol235 = _player.getClient().getProtocolVersion() == 235;
+		final boolean isProtocol235 = (_player.getClient() != null) && (_player.getClient().getProtocolVersion() == 235);
 		
 		OutgoingPackets.USER_INFO.writeId(packet);
 		
