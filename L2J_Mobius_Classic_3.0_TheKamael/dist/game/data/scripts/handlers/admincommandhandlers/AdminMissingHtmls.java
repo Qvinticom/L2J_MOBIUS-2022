@@ -26,7 +26,6 @@ import org.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Npc;
-import org.l2jmobius.gameserver.model.actor.instance.ArtefactInstance;
 import org.l2jmobius.gameserver.model.actor.instance.FishermanInstance;
 import org.l2jmobius.gameserver.model.actor.instance.FlyTerrainObjectInstance;
 import org.l2jmobius.gameserver.model.actor.instance.GuardInstance;
@@ -70,8 +69,8 @@ public class AdminMissingHtmls implements IAdminCommandHandler
 				{
 					if (obj.isNpc() //
 						&& !obj.isMonster() //
+						&& !(obj.isArtefact()) //
 						&& !(obj instanceof ObservationInstance) //
-						&& !(obj instanceof ArtefactInstance) //
 						&& !(obj instanceof FlyTerrainObjectInstance) //
 						&& !results.contains(obj.getId()))
 					{
@@ -105,8 +104,8 @@ public class AdminMissingHtmls implements IAdminCommandHandler
 				{
 					if (obj.isNpc() //
 						&& !obj.isMonster() //
+						&& !(obj.isArtefact()) //
 						&& !(obj instanceof ObservationInstance) //
-						&& !(obj instanceof ArtefactInstance) //
 						&& !(obj instanceof FlyTerrainObjectInstance) //
 						&& !results.contains(obj.getId()))
 					{
@@ -138,8 +137,8 @@ public class AdminMissingHtmls implements IAdminCommandHandler
 				{
 					if (obj.isNpc() //
 						&& !obj.isMonster() //
+						&& !(obj.isArtefact()) //
 						&& !(obj instanceof ObservationInstance) //
-						&& !(obj instanceof ArtefactInstance) //
 						&& !(obj instanceof FlyTerrainObjectInstance))
 					{
 						final Npc npc = (Npc) obj;

@@ -134,7 +134,7 @@ public class TakeCastle implements ISkillHandler
 		{
 			sm.addString("You must be on castle ground to use this skill");
 		}
-		else if ((player.getTarget() == null) || !(player.getTarget() instanceof ArtefactInstance))
+		else if ((player.getTarget() == null) || !player.getTarget().isArtefact())
 		{
 			sm.addString("You can only use this skill on an artifact");
 		}
@@ -142,7 +142,7 @@ public class TakeCastle implements ISkillHandler
 		{
 			sm.addString("You can only use this skill during a siege.");
 		}
-		else if (!Util.checkIfInRange(200, player, player.getTarget(), true))
+		else if (!Util.checkIfInRange(200, player, player.getTarget(), true) || (Math.abs(player.getZ() - player.getTarget().getZ()) > 40))
 		{
 			sm.addString("You are not in range of the artifact.");
 		}
@@ -186,7 +186,7 @@ public class TakeCastle implements ISkillHandler
 		{
 			sm.addString("You must be on fort ground to use this skill");
 		}
-		else if ((player.getTarget() == null) && !(player.getTarget() instanceof ArtefactInstance))
+		else if ((player.getTarget() == null) && !player.getTarget().isArtefact())
 		{
 			sm.addString("You can only use this skill on an flagpole");
 		}

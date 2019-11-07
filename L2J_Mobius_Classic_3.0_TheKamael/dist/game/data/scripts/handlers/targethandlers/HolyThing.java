@@ -19,7 +19,6 @@ package handlers.targethandlers;
 import org.l2jmobius.gameserver.handler.ITargetTypeHandler;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.ArtefactInstance;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.skills.targets.TargetType;
 import org.l2jmobius.gameserver.network.SystemMessageId;
@@ -39,9 +38,10 @@ public class HolyThing implements ITargetTypeHandler
 	@Override
 	public WorldObject getTarget(Creature creature, WorldObject selectedTarget, Skill skill, boolean forceUse, boolean dontMove, boolean sendMessage)
 	{
-		if (creature.getTarget() instanceof ArtefactInstance)
+		final WorldObject target = creature.getTarget();
+		if ((target != null) && target.isArtefact())
 		{
-			return creature.getTarget();
+			return target;
 		}
 		
 		if (sendMessage)

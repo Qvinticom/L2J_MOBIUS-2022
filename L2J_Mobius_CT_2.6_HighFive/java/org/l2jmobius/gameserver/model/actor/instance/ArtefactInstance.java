@@ -42,9 +42,12 @@ public class ArtefactInstance extends Npc
 		getCastle().registerArtefact(this);
 	}
 	
-	/**
-	 * Return False.
-	 */
+	@Override
+	public boolean isArtefact()
+	{
+		return true;
+	}
+	
 	@Override
 	public boolean isAutoAttackable(Creature attacker)
 	{

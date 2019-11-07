@@ -66,7 +66,7 @@ public class PossessHolythingSkillCondition implements ISkillCondition
 			player.sendPacket(SystemMessageId.INVALID_TARGET);
 			canTakeCastle = false;
 		}
-		else if (!Util.checkIfInRange(skill.getCastRange(), player, target, true))
+		else if (!Util.checkIfInRange(skill.getCastRange(), player, target, true) || (Math.abs(player.getZ() - target.getZ()) > 40))
 		{
 			player.sendPacket(SystemMessageId.THE_DISTANCE_IS_TOO_FAR_AND_SO_THE_CASTING_HAS_BEEN_STOPPED);
 			canTakeCastle = false;

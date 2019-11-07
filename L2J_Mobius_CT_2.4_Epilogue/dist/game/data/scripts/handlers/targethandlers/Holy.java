@@ -19,7 +19,6 @@ package handlers.targethandlers;
 import org.l2jmobius.gameserver.handler.ITargetTypeHandler;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.model.actor.instance.ArtefactInstance;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.skills.targets.TargetType;
 
@@ -31,7 +30,7 @@ public class Holy implements ITargetTypeHandler
 	@Override
 	public WorldObject[] getTargetList(Skill skill, Creature creature, boolean onlyFirst, Creature target)
 	{
-		if (!(target instanceof ArtefactInstance))
+		if ((target == null) || !target.isArtefact())
 		{
 			return EMPTY_TARGET_LIST;
 		}

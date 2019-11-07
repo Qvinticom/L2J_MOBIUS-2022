@@ -47,10 +47,12 @@ public class ArtefactInstance extends NpcInstance
 		super(objectId, template);
 	}
 	
-	/**
-	 * Return False.<BR>
-	 * <BR>
-	 */
+	@Override
+	public boolean isArtefact()
+	{
+		return true;
+	}
+	
 	@Override
 	public boolean isAutoAttackable(Creature attacker)
 	{
@@ -121,11 +123,5 @@ public class ArtefactInstance extends NpcInstance
 	public void onForcedAttack(PlayerInstance player)
 	{
 		player.sendPacket(ActionFailed.STATIC_PACKET);
-	}
-	
-	@Override
-	public boolean isArtefact()
-	{
-		return true;
 	}
 }

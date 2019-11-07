@@ -295,6 +295,15 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 	}
 	
 	/**
+	 * Verify if object is instance of ArtefactInstance.
+	 * @return {@code true} if object is instance of ArtefactInstance, {@code false} otherwise
+	 */
+	public boolean isArtefact()
+	{
+		return false;
+	}
+	
+	/**
 	 * Verify if object is instance of MonsterInstance.
 	 * @return {@code true} if object is instance of MonsterInstance, {@code false} otherwise
 	 */

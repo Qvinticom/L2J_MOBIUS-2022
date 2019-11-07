@@ -356,7 +356,7 @@ public class GeoEngine
 	 */
 	public boolean canSeeTarget(WorldObject origin, WorldObject target)
 	{
-		if (target.isDoor())
+		if (target.isDoor() || target.isArtefact())
 		{
 			return true;
 		}
