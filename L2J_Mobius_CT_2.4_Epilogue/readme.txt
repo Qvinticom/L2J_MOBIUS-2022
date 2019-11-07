@@ -63,3 +63,4 @@ What is done
 -Retail CP base stat values.
 -Retail recommendation system.
 -Removed AltarsOfSacrifice AI.
+-Removed non existent vesper shield set Verteidiger skill.
