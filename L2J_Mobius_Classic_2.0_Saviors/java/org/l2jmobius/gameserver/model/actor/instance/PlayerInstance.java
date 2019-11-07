@@ -9935,7 +9935,6 @@ public class PlayerInstance extends Playable
 			sendPacket(new ExStorageMaxCount(this));
 			
 			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerSubChange(this), this);
-			return;
 		}
 		finally
 		{

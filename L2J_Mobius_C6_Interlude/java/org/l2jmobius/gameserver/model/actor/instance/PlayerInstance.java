@@ -13415,18 +13415,16 @@ public class PlayerInstance extends Playable
 	
 	/**
 	 * Changes the character's class based on the given class index. <BR>
-	 * <BR>
 	 * An index of zero specifies the character's original (base) class, while indexes 1-3 specifies the character's sub-classes respectively.
 	 * @param classIndex the class index
-	 * @return true, if successful
 	 */
-	public synchronized boolean setActiveClass(int classIndex)
+	public synchronized void setActiveClass(int classIndex)
 	{
 		if (isInCombat() || (getAI().getIntention() == CtrlIntention.AI_INTENTION_ATTACK))
 		{
 			sendMessage("Impossible switch class if in combat");
 			sendPacket(ActionFailed.STATIC_PACKET);
-			return false;
+			return;
 		}
 		
 		// Delete a force buff upon class change.
@@ -13451,7 +13449,7 @@ public class PlayerInstance extends Playable
 			catch (Exception e)
 			{
 				LOGGER.info("Could not switch " + getName() + "'s sub class to class index " + classIndex + ": " + e);
-				return false;
+				return;
 			}
 		}
 		_classIndex = classIndex;
@@ -13623,8 +13621,6 @@ public class PlayerInstance extends Playable
 		{
 			getClan().broadcastToOnlineMembers(new PledgeShowMemberListUpdate(this));
 		}
-		
-		return true;
 	}
 	
 	/**
