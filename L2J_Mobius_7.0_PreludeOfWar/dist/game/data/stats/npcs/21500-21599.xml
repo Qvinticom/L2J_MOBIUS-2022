@@ -716,6 +716,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="235" /> <!-- Bloody Orchid -->
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1080.12758" hpRegen="8.5" mp="1424.116" mpRegen="3" />
 			<attack physical="646.17968" magical="441.25696" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="286.3615" magical="209.54692" />
 			<speed>
@@ -752,6 +753,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="235" /> <!-- Bloody Orchid -->
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1080.12758" hpRegen="8.5" mp="1424.116" mpRegen="3" />
 			<attack physical="731.52506" magical="499.53679" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="305.35947" magical="223.44881" />
 			<speed>
@@ -2534,6 +2536,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="326" /> <!-- Heathen's Book -->
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2037.224535" hpRegen="7.5" mp="1107.826" mpRegen="2.7" />
 			<attack physical="521.12391" magical="355.86007" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="257.34267" magical="188.3122" />
 			<speed>
@@ -2713,6 +2716,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="196" /> <!-- Stick of Eternity -->
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="2244.164655" hpRegen="7.5" mp="1231.098" mpRegen="2.7" />
 			<attack physical="603.79903" magical="412.31647" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="276.72752" magical="202.49719" />
 			<speed>
@@ -6416,8 +6420,7 @@
 			<param name="MoveAroundSocial1" value="140" />
 			<param name="MoveAroundSocial2" value="140" />
 			<minions name="Privates">
-				<npc id="21597" count="1" respawnTime="0" weightPoint="1" />
-				<npc id="21598" count="1" respawnTime="0" weightPoint="1" />
+				<npc id="21598" count="2" respawnTime="0" weightPoint="1" />
 			</minions>
 			<skill name="ClearCorpse" id="4672" level="1" />
 			<param name="SummonPrivate" value="21561" />
@@ -6562,6 +6565,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="4589.906625" hpRegen="7.5" mp="1263.538" mpRegen="2.7" />
 			<attack physical="624.93199" magical="426.74754" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="281.55251" magical="206.02791" />
 			<speed>

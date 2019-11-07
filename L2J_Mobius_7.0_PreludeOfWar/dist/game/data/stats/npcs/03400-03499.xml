@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="3401" level="23" type="Monster" name="Greyclaw Kutus" title="Lord of Destruction">
+	<npc id="3401" level="23" type="RaidBoss" name="Greyclaw Kutus" title="Lord of Destruction">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<minions name="Privates">
@@ -981,7 +981,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="3423" level="35" type="Monster" name="Soul Collector Acheron" title="Lord of Destruction">
+	<npc id="3423" level="35" type="RaidBoss" name="Soul Collector Acheron" title="Lord of Destruction">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<minions name="Privates">
@@ -2680,7 +2680,7 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="3460" level="75" type="Monster" name="Kernon" title="Lord of Destruction">
+	<npc id="3460" level="75" type="RideBoss" name="Kernon" title="Lord of Destruction">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<minions name="Privates">
@@ -2794,7 +2794,7 @@
 			<height normal="31" grown="36" />
 		</collision>
 	</npc>
-	<npc id="3463" level="70" type="Monster" name="Meanas Anor" title="Lord of Destruction">
+	<npc id="3463" level="70" type="RaidBossr" name="Meanas Anor" title="Lord of Destruction">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<minions name="Privates">

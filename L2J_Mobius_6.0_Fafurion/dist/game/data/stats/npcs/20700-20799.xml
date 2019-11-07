@@ -87,6 +87,7 @@
 		<race>BUG</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="572.23996" hpRegen="4.5" mp="406.311" mpRegen="1.8" />
 			<attack physical="129.32896" magical="88.31491" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="136.72948" magical="100.0527" />
 			<speed>
@@ -193,6 +194,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="73" /> <!-- Shamshir -->
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="572.23996" hpRegen="4.5" mp="406.311" mpRegen="1.8" />
 			<attack physical="86.42002" magical="59.01367" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="115.00598" magical="84.15638" />
 			<speed>
@@ -299,6 +301,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="14" /> <!-- Bow -->
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="845.74164" hpRegen="3.5" mp="317.912" mpRegen="1.5" />
 			<attack physical="86.42002" magical="59.01367" random="5" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="115.00598" magical="84.15638" />
 			<speed>

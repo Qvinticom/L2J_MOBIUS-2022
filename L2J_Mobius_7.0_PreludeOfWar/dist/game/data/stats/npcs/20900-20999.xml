@@ -1567,6 +1567,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="150" lhand="103" /> <!-- Elemental Sword / Tower Shield -->
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1018.29681" hpRegen="7.5" mp="1107.826" mpRegen="2.7" />
 			<attack physical="562.02275" magical="383.78868" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="267.04468" magical="195.41171" shield="134" shieldRate="20" />
 			<speed>
@@ -1731,6 +1732,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="124" /> <!-- Two-handed Sword -->
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1172.24007" hpRegen="7.5" mp="1295.167" mpRegen="2.7" />
 			<attack physical="688.86373" magical="470.40463" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
 			<speed>
@@ -1953,6 +1955,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="3939" /> <!-- Monster Only (Bensh) -->
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1121.76687" hpRegen="7.5" mp="1231.098" mpRegen="2.7" />
 			<attack physical="646.17968" magical="441.25696" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="286.3615" magical="209.54692" />
 			<speed>
@@ -2562,6 +2565,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="5129" lhand="5129" /> <!-- Doll Knife / Doll Knife -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="31026.506955" hpRegen="8.5" mp="2600.877" mpRegen="3" />
 			<attack physical="353.71092" magical="241.5387" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="214.18326" magical="142.605626325743" shield="111" />
 			<speed>
@@ -2673,6 +2677,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="94" /> <!-- Bec de Corbin -->
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1647.950255" hpRegen="5.5" mp="699.082" mpRegen="2.1" />
 			<attack physical="275.82705" magical="188.35412" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="191.12803" magical="139.8592" />
 			<speed>
