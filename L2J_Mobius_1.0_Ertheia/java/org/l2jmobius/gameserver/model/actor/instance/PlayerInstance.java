@@ -41,7 +41,6 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.ReentrantLock;
-import java.util.concurrent.locks.StampedLock;
 import java.util.logging.Level;
 import java.util.stream.Collectors;
 
@@ -719,11 +718,6 @@ public class PlayerInstance extends Playable
 	private final Map<Integer, Skill> _transformSkills = new ConcurrentHashMap<>();
 	private ScheduledFuture<?> _taskRentPet;
 	private ScheduledFuture<?> _taskWater;
-	
-	/** Packet delay locks */
-	private final StampedLock _skillListPacketLock = new StampedLock();
-	private final StampedLock _userInfoPacketLock = new StampedLock();
-	private final StampedLock _storageMaxPacketLock = new StampedLock();
 	
 	/** Last Html Npcs, 0 = last html was not bound to an npc */
 	private final int[] _htmlActionOriginObjectIds = new int[HtmlActionScope.values().length];
@@ -2252,16 +2246,6 @@ public class PlayerInstance extends Playable
 		
 		// Notify to scripts
 		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerEquipItem(this, item), this);
-	}
-	
-	public boolean setStorageMaxCountPacketLock(boolean lock)
-	{
-		if (lock)
-		{
-			return _storageMaxPacketLock.tryWriteLock() != 0;
-		}
-		_storageMaxPacketLock.tryUnlockWrite();
-		return false;
 	}
 	
 	/**
@@ -4129,16 +4113,6 @@ public class PlayerInstance extends Playable
 		}
 	}
 	
-	public boolean setUserInfoPacketLock(boolean lock)
-	{
-		if (lock)
-		{
-			return _userInfoPacketLock.tryWriteLock() != 0;
-		}
-		_userInfoPacketLock.tryUnlockWrite();
-		return false;
-	}
-	
 	/**
 	 * Send a Server->Client packet UserInfo to this PlayerInstance and CharInfo to all PlayerInstance in its _KnownPlayers. <B><U> Concept</U> :</B> Others PlayerInstance in the detection area of the PlayerInstance are identified in <B>_knownPlayers</B>. In order to inform other players of this
 	 * PlayerInstance state modifications, server just need to go through _knownPlayers to send Server->Client Packet <B><U> Actions</U> :</B>
@@ -4211,9 +4185,7 @@ public class PlayerInstance extends Playable
 	public void broadcastTitleInfo()
 	{
 		// Send a Server->Client packet UserInfo to this PlayerInstance
-		final UserInfo ui = new UserInfo(this, false);
-		ui.addComponentType(UserInfoType.CLAN);
-		sendPacket(ui);
+		broadcastUserInfo(UserInfoType.CLAN);
 		
 		// Send a Server->Client packet TitleUpdate to all PlayerInstance in _KnownPlayers of the PlayerInstance
 		broadcastPacket(new NicknameChanged(this));
@@ -5268,9 +5240,7 @@ public class PlayerInstance extends Playable
 			}
 		}
 		
-		final UserInfo ui = new UserInfo(this, false);
-		ui.addComponentType(UserInfoType.SOCIAL);
-		sendPacket(ui);
+		broadcastUserInfo(UserInfoType.SOCIAL);
 		checkItemRestriction();
 	}
 	
@@ -7944,9 +7914,7 @@ public class PlayerInstance extends Playable
 		sendPacket(new HennaInfo(this));
 		
 		// Send Server->Client UserInfo packet to this PlayerInstance
-		final UserInfo ui = new UserInfo(this, false);
-		ui.addComponentType(UserInfoType.BASE_STATS, UserInfoType.MAX_HPCPMP, UserInfoType.STATS, UserInfoType.SPEED);
-		sendPacket(ui);
+		broadcastUserInfo(UserInfoType.BASE_STATS, UserInfoType.MAX_HPCPMP, UserInfoType.STATS, UserInfoType.SPEED);
 		
 		final long currentTime = System.currentTimeMillis();
 		final long timeLeft = getVariables().getLong("HennaDuration" + slot, currentTime) - currentTime;
@@ -8055,9 +8023,7 @@ public class PlayerInstance extends Playable
 				sendPacket(new HennaInfo(this));
 				
 				// Send Server->Client UserInfo packet to this PlayerInstance
-				final UserInfo ui = new UserInfo(this, false);
-				ui.addComponentType(UserInfoType.BASE_STATS, UserInfoType.MAX_HPCPMP, UserInfoType.STATS, UserInfoType.SPEED);
-				sendPacket(ui);
+				broadcastUserInfo(UserInfoType.BASE_STATS, UserInfoType.MAX_HPCPMP, UserInfoType.STATS, UserInfoType.SPEED);
 				
 				// Notify to scripts
 				EventDispatcher.getInstance().notifyEventAsync(new OnPlayerHennaAdd(this, henna), this);
@@ -8186,7 +8152,7 @@ public class PlayerInstance extends Playable
 			return false;
 		}
 		
-		if (isLocked())
+		if (isSubclassLocked())
 		{
 			LOGGER.warning("Player " + getName() + " tried to restart/logout during class change.");
 			return false;
@@ -9563,16 +9529,6 @@ public class PlayerInstance extends Playable
 		return _wantsPeace;
 	}
 	
-	public boolean setSkillListPacketLock(boolean lock)
-	{
-		if (lock)
-		{
-			return _skillListPacketLock.tryWriteLock() != 0;
-		}
-		_skillListPacketLock.tryUnlockWrite();
-		return false;
-	}
-	
 	public void sendSkillList()
 	{
 		sendSkillList(0);
@@ -9885,13 +9841,12 @@ public class PlayerInstance extends Playable
 	 * An index of zero specifies the character's original (base) class, while indexes 1-3 specifies the character's sub-classes respectively.<br>
 	 * <font color="00FF00"/>WARNING: Use only on subclase change</font>
 	 * @param classIndex
-	 * @return
 	 */
-	public boolean setActiveClass(int classIndex)
+	public void setActiveClass(int classIndex)
 	{
 		if (!_subclassLock.tryLock())
 		{
-			return false;
+			return;
 		}
 		
 		try
@@ -9899,7 +9854,7 @@ public class PlayerInstance extends Playable
 			// Cannot switch or change subclasses while transformed
 			if (isTransformed())
 			{
-				return false;
+				return;
 			}
 			
 			// Remove active item skills before saving char to database
@@ -9954,7 +9909,7 @@ public class PlayerInstance extends Playable
 				catch (Exception e)
 				{
 					LOGGER.log(Level.WARNING, "Could not switch " + getName() + "'s sub class to class index " + classIndex + ": " + e.getMessage(), e);
-					return false;
+					return;
 				}
 			}
 			_classIndex = classIndex;
@@ -10039,7 +9994,6 @@ public class PlayerInstance extends Playable
 			sendPacket(new ExStorageMaxCount(this));
 			
 			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerSubChange(this), this);
-			return true;
 		}
 		finally
 		{
@@ -10047,7 +10001,7 @@ public class PlayerInstance extends Playable
 		}
 	}
 	
-	public boolean isLocked()
+	public boolean isSubclassLocked()
 	{
 		return _subclassLock.isLocked();
 	}
@@ -12416,7 +12370,7 @@ public class PlayerInstance extends Playable
 	
 	public boolean isAllowedToEnchantSkills()
 	{
-		if (isLocked())
+		if (isSubclassLocked())
 		{
 			return false;
 		}

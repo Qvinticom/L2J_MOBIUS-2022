@@ -20,7 +20,6 @@ import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
-import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
 import org.l2jmobius.gameserver.model.SkillLearn;
@@ -39,16 +38,11 @@ public class AcquireSkillList implements IClientOutgoingPacket
 	
 	public AcquireSkillList(PlayerInstance player)
 	{
-		if (player.setSkillListPacketLock(true))
+		if (!player.isSubclassLocked()) // Changing class.
 		{
 			_player = player;
 			_learnable = SkillTreesData.getInstance().getAvailableSkills(player, player.getClassId(), false, false);
 			_learnable.addAll(SkillTreesData.getInstance().getNextAvailableSkills(player, player.getClassId(), false, false));
-			
-			ThreadPool.schedule(() ->
-			{
-				player.setSkillListPacketLock(false);
-			}, 300);
 		}
 	}
 	

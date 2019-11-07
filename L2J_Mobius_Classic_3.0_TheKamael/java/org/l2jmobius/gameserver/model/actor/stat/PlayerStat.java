@@ -306,9 +306,7 @@ public class PlayerStat extends PlayableStat
 			return false;
 		}
 		
-		final UserInfo ui = new UserInfo(getActiveChar(), false);
-		ui.addComponentType(UserInfoType.CURRENT_HPMPCP_EXP_SP);
-		getActiveChar().sendPacket(ui);
+		getActiveChar().broadcastUserInfo(UserInfoType.CURRENT_HPMPCP_EXP_SP);
 		
 		return true;
 	}

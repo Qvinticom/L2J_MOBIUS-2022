@@ -42,7 +42,6 @@ import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ExChangeToAwakenedClass;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowUsm;
 import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
-import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 
 import ai.AbstractNpcAI;
 
@@ -292,10 +291,7 @@ public class AwakeningMaster extends AbstractNpcAI
 			player.setBaseClass(player.getActiveClass());
 		}
 		player.sendPacket(SystemMessageId.CONGRATULATIONS_YOU_VE_COMPLETED_A_CLASS_TRANSFER);
-		final UserInfo ui = new UserInfo(player, false);
-		ui.addComponentType(UserInfoType.BASIC_INFO);
-		ui.addComponentType(UserInfoType.MAX_HPCPMP);
-		player.sendPacket(ui);
+		player.broadcastUserInfo(UserInfoType.BASIC_INFO, UserInfoType.MAX_HPCPMP);
 		player.broadcastInfo();
 		
 		player.broadcastPacket(new SocialAction(player.getObjectId(), 20));

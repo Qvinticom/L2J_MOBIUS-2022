@@ -29,11 +29,11 @@ import org.l2jmobius.gameserver.datatables.ItemTable;
 import org.l2jmobius.gameserver.enums.AISkillScope;
 import org.l2jmobius.gameserver.enums.AIType;
 import org.l2jmobius.gameserver.enums.ChatType;
-import org.l2jmobius.gameserver.enums.RaidBossStatus;
 import org.l2jmobius.gameserver.enums.InstanceType;
 import org.l2jmobius.gameserver.enums.MpRewardAffectType;
 import org.l2jmobius.gameserver.enums.PrivateStoreType;
 import org.l2jmobius.gameserver.enums.Race;
+import org.l2jmobius.gameserver.enums.RaidBossStatus;
 import org.l2jmobius.gameserver.enums.ShotType;
 import org.l2jmobius.gameserver.enums.TaxType;
 import org.l2jmobius.gameserver.enums.Team;
@@ -97,7 +97,6 @@ import org.l2jmobius.gameserver.network.serverpackets.NpcSay;
 import org.l2jmobius.gameserver.network.serverpackets.ServerObjectInfo;
 import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 import org.l2jmobius.gameserver.taskmanager.DecayTaskManager;
 import org.l2jmobius.gameserver.util.Broadcast;
 
@@ -909,9 +908,7 @@ public class Npc extends Creature
 				{
 					player.setReputation(player.getReputation() - Formulas.calculateKarmaGain(player.getPkKills(), killer.isSummon()));
 					player.setPkKills(player.getPkKills() + 1);
-					final UserInfo ui = new UserInfo(player, false);
-					ui.addComponentType(UserInfoType.SOCIAL);
-					player.sendPacket(ui);
+					player.broadcastUserInfo(UserInfoType.SOCIAL);
 					player.checkItemRestriction();
 					// pk item rewards
 					if (Config.REWARD_PK_ITEM)
@@ -942,9 +939,7 @@ public class Npc extends Creature
 			else if (Config.FAKE_PLAYER_KILL_PVP)
 			{
 				player.setPvpKills(player.getPvpKills() + 1);
-				final UserInfo ui = new UserInfo(player, false);
-				ui.addComponentType(UserInfoType.SOCIAL);
-				player.sendPacket(ui);
+				player.broadcastUserInfo(UserInfoType.SOCIAL);
 				// pvp item rewards
 				if (Config.REWARD_PVP_ITEM)
 				{

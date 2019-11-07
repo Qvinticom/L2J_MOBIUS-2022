@@ -17,7 +17,6 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.stats.Stats;
@@ -42,7 +41,7 @@ public class ExStorageMaxCount implements IClientOutgoingPacket
 	
 	public ExStorageMaxCount(PlayerInstance player)
 	{
-		if (player.setStorageMaxCountPacketLock(true))
+		if (!player.isSubclassLocked()) // Changing class.
 		{
 			_player = player;
 			_inventory = player.getInventoryLimit();
@@ -55,11 +54,6 @@ public class ExStorageMaxCount implements IClientOutgoingPacket
 			_recipe = player.getCommonRecipeLimit();
 			_inventoryExtraSlots = (int) player.getStat().getValue(Stats.INVENTORY_NORMAL, 0);
 			_inventoryQuestItems = Config.INVENTORY_MAXIMUM_QUEST_ITEMS;
-			
-			ThreadPool.schedule(() ->
-			{
-				player.setStorageMaxCountPacketLock(false);
-			}, 1000);
 		}
 	}
 	

@@ -41,7 +41,6 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.ReentrantLock;
-import java.util.concurrent.locks.StampedLock;
 import java.util.logging.Level;
 import java.util.stream.Collectors;
 
@@ -718,11 +717,6 @@ public class PlayerInstance extends Playable
 	private final Map<Integer, Skill> _transformSkills = new ConcurrentHashMap<>();
 	private ScheduledFuture<?> _taskRentPet;
 	private ScheduledFuture<?> _taskWater;
-	
-	/** Packet delay locks */
-	private final StampedLock _skillListPacketLock = new StampedLock();
-	private final StampedLock _userInfoPacketLock = new StampedLock();
-	private final StampedLock _storageMaxPacketLock = new StampedLock();
 	
 	/** Last Html Npcs, 0 = last html was not bound to an npc */
 	private final int[] _htmlActionOriginObjectIds = new int[HtmlActionScope.values().length];
@@ -2145,16 +2139,6 @@ public class PlayerInstance extends Playable
 		
 		// Notify to scripts
 		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerEquipItem(this, item), this);
-	}
-	
-	public boolean setStorageMaxCountPacketLock(boolean lock)
-	{
-		if (lock)
-		{
-			return _storageMaxPacketLock.tryWriteLock() != 0;
-		}
-		_storageMaxPacketLock.tryUnlockWrite();
-		return false;
 	}
 	
 	/**
@@ -4002,16 +3986,6 @@ public class PlayerInstance extends Playable
 		}
 	}
 	
-	public boolean setUserInfoPacketLock(boolean lock)
-	{
-		if (lock)
-		{
-			return _userInfoPacketLock.tryWriteLock() != 0;
-		}
-		_userInfoPacketLock.tryUnlockWrite();
-		return false;
-	}
-	
 	/**
 	 * Send a Server->Client packet UserInfo to this PlayerInstance and CharInfo to all PlayerInstance in its _KnownPlayers. <B><U> Concept</U> :</B> Others PlayerInstance in the detection area of the PlayerInstance are identified in <B>_knownPlayers</B>. In order to inform other players of this
 	 * PlayerInstance state modifications, server just need to go through _knownPlayers to send Server->Client Packet <B><U> Actions</U> :</B>
@@ -4084,9 +4058,7 @@ public class PlayerInstance extends Playable
 	public void broadcastTitleInfo()
 	{
 		// Send a Server->Client packet UserInfo to this PlayerInstance
-		final UserInfo ui = new UserInfo(this, false);
-		ui.addComponentType(UserInfoType.CLAN);
-		sendPacket(ui);
+		broadcastUserInfo(UserInfoType.CLAN);
 		
 		// Send a Server->Client packet TitleUpdate to all PlayerInstance in _KnownPlayers of the PlayerInstance
 		broadcastPacket(new NicknameChanged(this));
@@ -8051,7 +8023,7 @@ public class PlayerInstance extends Playable
 			return false;
 		}
 		
-		if (isLocked())
+		if (isSubclassLocked())
 		{
 			LOGGER.warning("Player " + getName() + " tried to restart/logout during class change.");
 			return false;
@@ -9417,16 +9389,6 @@ public class PlayerInstance extends Playable
 		return _wantsPeace;
 	}
 	
-	public boolean setSkillListPacketLock(boolean lock)
-	{
-		if (lock)
-		{
-			return _skillListPacketLock.tryWriteLock() != 0;
-		}
-		_skillListPacketLock.tryUnlockWrite();
-		return false;
-	}
-	
 	public void sendSkillList()
 	{
 		sendSkillList(0);
@@ -9895,7 +9857,7 @@ public class PlayerInstance extends Playable
 		}
 	}
 	
-	public boolean isLocked()
+	public boolean isSubclassLocked()
 	{
 		return _subclassLock.isLocked();
 	}
@@ -12172,7 +12134,7 @@ public class PlayerInstance extends Playable
 	
 	public boolean isAllowedToEnchantSkills()
 	{
-		if (isLocked())
+		if (isSubclassLocked())
 		{
 			return false;
 		}

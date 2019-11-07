@@ -20,7 +20,6 @@ import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.enums.UserInfoType;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.GameClient;
-import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 
 /**
  * @author Sdw
@@ -42,8 +41,6 @@ public class NotifyExitBeautyShop implements IClientIncomingPacket
 			return;
 		}
 		
-		final UserInfo userInfo = new UserInfo(player, false);
-		userInfo.addComponentType(UserInfoType.APPAREANCE);
-		client.sendPacket(userInfo);
+		player.broadcastUserInfo(UserInfoType.APPAREANCE);
 	}
 }

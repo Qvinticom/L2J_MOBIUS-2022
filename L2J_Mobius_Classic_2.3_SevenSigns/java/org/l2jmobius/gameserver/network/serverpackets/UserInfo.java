@@ -17,7 +17,6 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.data.xml.impl.ExperienceData;
 import org.l2jmobius.gameserver.enums.UserInfoType;
@@ -61,31 +60,12 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 	
 	public UserInfo(PlayerInstance player)
 	{
-		_player = player;
-		
-		_relation = calculateRelation(player);
-		_moveMultiplier = player.getMovementSpeedMultiplier();
-		_runSpd = (int) Math.round(player.getRunSpeed() / _moveMultiplier);
-		_walkSpd = (int) Math.round(player.getWalkSpeed() / _moveMultiplier);
-		_swimRunSpd = (int) Math.round(player.getSwimRunSpeed() / _moveMultiplier);
-		_swimWalkSpd = (int) Math.round(player.getSwimWalkSpeed() / _moveMultiplier);
-		_flyRunSpd = player.isFlying() ? _runSpd : 0;
-		_flyWalkSpd = player.isFlying() ? _walkSpd : 0;
-		_enchantLevel = player.getInventory().getWeaponEnchant();
-		_armorEnchant = player.getInventory().getArmorMinEnchant();
-		
-		_title = player.getTitle();
-		if (player.isGM() && player.isInvisible())
-		{
-			_title = "[Invisible]";
-		}
-		
-		addComponentType(UserInfoType.values());
+		this(player, true);
 	}
 	
 	public UserInfo(PlayerInstance player, boolean addAll)
 	{
-		if (player.setUserInfoPacketLock(true))
+		if (!player.isSubclassLocked()) // Changing class.
 		{
 			_player = player;
 			
@@ -110,11 +90,6 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 			{
 				addComponentType(UserInfoType.values());
 			}
-			
-			ThreadPool.schedule(() ->
-			{
-				player.setUserInfoPacketLock(false);
-			}, 1000);
 		}
 	}
 	
