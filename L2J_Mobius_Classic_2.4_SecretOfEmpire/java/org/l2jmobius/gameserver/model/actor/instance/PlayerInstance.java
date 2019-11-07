@@ -9801,13 +9801,12 @@ public class PlayerInstance extends Playable
 	 * An index of zero specifies the character's original (base) class, while indexes 1-3 specifies the character's sub-classes respectively.<br>
 	 * <font color="00FF00"/>WARNING: Use only on subclase change</font>
 	 * @param classIndex
-	 * @return
 	 */
-	public boolean setActiveClass(int classIndex)
+	public void setActiveClass(int classIndex)
 	{
 		if (!_subclassLock.tryLock())
 		{
-			return false;
+			return;
 		}
 		
 		try
@@ -9815,7 +9814,7 @@ public class PlayerInstance extends Playable
 			// Cannot switch or change subclasses while transformed
 			if (isTransformed())
 			{
-				return false;
+				return;
 			}
 			
 			// Remove active item skills before saving char to database
@@ -9870,7 +9869,7 @@ public class PlayerInstance extends Playable
 				catch (Exception e)
 				{
 					LOGGER.log(Level.WARNING, "Could not switch " + getName() + "'s sub class to class index " + classIndex + ": " + e.getMessage(), e);
-					return false;
+					return;
 				}
 			}
 			_classIndex = classIndex;
@@ -9955,7 +9954,7 @@ public class PlayerInstance extends Playable
 			sendPacket(new ExStorageMaxCount(this));
 			
 			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerSubChange(this), this);
-			return true;
+			return;
 		}
 		finally
 		{
