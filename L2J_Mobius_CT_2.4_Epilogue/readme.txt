@@ -37,6 +37,7 @@ What is done
 -Adjusted NPC templates to match client.
 -Luxury shop reverted to older version.
 -Fantasy Island shop reverted to older version.
+-Removed Fantasy Isle Magic Zone.
 -Removed shots and keys from grocery shops.
 -Blacksmiths unseal B grade items.
 -Removed recipe traders.
