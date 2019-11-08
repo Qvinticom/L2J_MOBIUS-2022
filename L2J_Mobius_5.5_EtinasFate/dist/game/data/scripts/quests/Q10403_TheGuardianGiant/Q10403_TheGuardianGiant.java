@@ -159,7 +159,7 @@ public class Q10403_TheGuardianGiant extends Quest
 			}
 			else if (qs.isCond(1))
 			{
-				if (giveItemRandomly(killer, FRAGMENT, 1, 90, 1, true))
+				if (giveItemRandomly(killer, FRAGMENT, 1, 200, 1, true))
 				{
 					qs.setCond(2, true);
 					final Npc akum = addSpawn(AKUM, npc);
