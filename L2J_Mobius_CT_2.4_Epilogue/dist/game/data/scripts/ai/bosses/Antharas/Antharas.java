@@ -231,6 +231,7 @@ public class Antharas extends AbstractNpcAI
 					}
 					else
 					{
+						takeItems(player, STONE, 1);
 						for (PlayerInstance member : members)
 						{
 							if (member.isInsideRadius3D(npc, 1000))
