@@ -417,18 +417,50 @@
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="17304" min="1" max="1" chance="100" /> <!-- Immortal Helmet - Heavy Armor -->
+			<item id="17305" min="1" max="1" chance="100" /> <!-- Immortal Breastplate - Heavy Armor -->
+			<item id="17306" min="1" max="1" chance="100" /> <!-- Immortal Gaiters - Heavy Armor -->
+			<item id="17307" min="1" max="1" chance="100" /> <!-- Immortal Gauntlets - Heavy Armor -->
+			<item id="17308" min="1" max="1" chance="100" /> <!-- Immortal Boots - Heavy Armor -->
+			<item id="17309" min="1" max="1" chance="100" /> <!-- Immortal Shield - Heavy Armor -->
+		</capsuled_items>
 	</item>
 	<item id="27528" name="Immortal Light Armor Pack" type="EtcItem">
 		<!-- Can acquire immortal light armor. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="17310" min="1" max="1" chance="100" /> <!-- Immortal Leather Helmet - Light Armor -->
+			<item id="17311" min="1" max="1" chance="100" /> <!-- Immortal Leather Armor - Light Armor -->
+			<item id="17312" min="1" max="1" chance="100" /> <!-- Immortal Leather Leggings - Light Armor -->
+			<item id="17313" min="1" max="1" chance="100" /> <!-- Immortal Leather Gloves - Light Armor -->
+			<item id="17314" min="1" max="1" chance="100" /> <!-- Immortal Leather Boots - Light Armor -->
+		</capsuled_items>
 	</item>
 	<item id="27529" name="Immortal Robe Armor Pack" type="EtcItem">
 		<!-- Can acquire Immortal Robe Armor. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="17315" min="1" max="1" chance="100" /> <!-- Immortal Circlet - Robe -->
+			<item id="17316" min="1" max="1" chance="100" /> <!-- Immortal Tunic - Robe -->
+			<item id="17317" min="1" max="1" chance="100" /> <!-- Immortal Stockings - Robe -->
+			<item id="17318" min="1" max="1" chance="100" /> <!-- Immortal Gloves - Robe -->
+			<item id="17319" min="1" max="1" chance="100" /> <!-- Immortal Shoes - Robe -->
+			<item id="17320" min="1" max="1" chance="100" /> <!-- Immortal Sigil - Robe -->
+		</capsuled_items>
 	</item>
 	<item id="27530" name="Scroll of Escape Pack" type="EtcItem">
 		<!-- Pack containing Scrolls of Escape for Alligator Island/Outlaw Forest/Sea of Spores/Forsaken Plains/Fields of Massacre/Swamp of Screams/Forest of the Dead/Wall of Argos/Varka Silenos Barracks/Ketra Orc Outpost/Den of Evil/Sel Mahum Training Grounds/Plains of the Lizardmen/Field of Silence/ Field of Whispers. -->
@@ -694,6 +726,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="waist" />
 		<set name="time" val="43200" />
 		<skills>
 			<skill id="15145" level="1" /> <!-- Ruler's Authority -->

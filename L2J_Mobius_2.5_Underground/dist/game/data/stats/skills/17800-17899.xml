@@ -976,33 +976,751 @@
 	</skill>
 	<skill id="17840" toLevel="1" name="Eternal Crafting Pack">
 		<operateType>A1</operateType>
+		<itemConsumeId>39324</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<value level="1">
+						<item chance="5.88235">
+							<item id="38054" count="1" /> <!-- Eternal Helmet -->
+						</item>
+						<item chance="5.88235">
+							<item id="38055" count="1" /> <!-- Eternal Breastplate -->
+						</item>
+						<item chance="5.88235">
+							<item id="38056" count="1" /> <!-- Eternal Gaiters -->
+						</item>
+						<item chance="5.88235">
+							<item id="38057" count="1" /> <!-- Eternal Gauntlets -->
+						</item>
+						<item chance="5.88235">
+							<item id="38058" count="1" /> <!-- Eternal Boots -->
+						</item>
+						<item chance="5.88235">
+							<item id="38059" count="1" /> <!-- Eternal Shield -->
+						</item>
+						<item chance="5.88235">
+							<item id="38060" count="1" /> <!-- Eternal Leather Helmet -->
+						</item>
+						<item chance="5.88235">
+							<item id="38061" count="1" /> <!-- Eternal Leather Armor -->
+						</item>
+						<item chance="5.88235">
+							<item id="38062" count="1" /> <!-- Eternal Leather Leggings -->
+						</item>
+						<item chance="5.88235">
+							<item id="38063" count="1" /> <!-- Eternal Leather Gloves -->
+						</item>
+						<item chance="5.88235">
+							<item id="38064" count="1" /> <!-- Eternal Leather Boots -->
+						</item>
+						<item chance="5.88235">
+							<item id="38065" count="1" /> <!-- Eternal Circlet -->
+						</item>
+						<item chance="5.88235">
+							<item id="38066" count="1" /> <!-- Eternal Tunic -->
+						</item>
+						<item chance="5.88235">
+							<item id="38067" count="1" /> <!-- Eternal Stockings -->
+						</item>
+						<item chance="5.88235">
+							<item id="38068" count="1" /> <!-- Eternal Gloves -->
+						</item>
+						<item chance="5.88235">
+							<item id="38069" count="1" /> <!-- Eternal Shoes -->
+						</item>
+						<item chance="5.88235">
+							<item id="38070" count="1" /> <!-- Eternal Sigil -->
+						</item>
+					</value>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17841" toLevel="1" name="Eternal Completion Pack">
 		<operateType>A1</operateType>
+		<itemConsumeId>39325</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<value level="1">
+						<item chance="5.88235">
+							<item id="17430" count="1" /> <!-- Eternal Helmet -->
+						</item>
+						<item chance="5.88235">
+							<item id="17431" count="1" /> <!-- Eternal Breastplate -->
+						</item>
+						<item chance="5.88235">
+							<item id="17432" count="1" /> <!-- Eternal Gaiters -->
+						</item>
+						<item chance="5.88235">
+							<item id="17433" count="1" /> <!-- Eternal Gauntlets -->
+						</item>
+						<item chance="5.88235">
+							<item id="17434" count="1" /> <!-- Eternal Boots -->
+						</item>
+						<item chance="5.88235">
+							<item id="17435" count="1" /> <!-- Eternal Shield -->
+						</item>
+						<item chance="5.88235">
+							<item id="17436" count="1" /> <!-- Eternal Leather Helmet -->
+						</item>
+						<item chance="5.88235">
+							<item id="17437" count="1" /> <!-- Eternal Leather Armor -->
+						</item>
+						<item chance="5.88235">
+							<item id="17438" count="1" /> <!-- Eternal Leather Leggings -->
+						</item>
+						<item chance="5.88235">
+							<item id="17439" count="1" /> <!-- Eternal Leather Gloves -->
+						</item>
+						<item chance="5.88235">
+							<item id="17440" count="1" /> <!-- Eternal Leather Boots -->
+						</item>
+						<item chance="5.88235">
+							<item id="17441" count="1" /> <!-- Eternal Circlet -->
+						</item>
+						<item chance="5.88235">
+							<item id="17442" count="1" /> <!-- Eternal Tunic -->
+						</item>
+						<item chance="5.88235">
+							<item id="17443" count="1" /> <!-- Eternal Stockings -->
+						</item>
+						<item chance="5.88235">
+							<item id="17444" count="1" /> <!-- Eternal Gloves -->
+						</item>
+						<item chance="5.88235">
+							<item id="17445" count="1" /> <!-- Eternal Shoes -->
+						</item>
+						<item chance="5.88235">
+							<item id="17446" count="1" /> <!-- Eternal Sigil -->
+						</item>
+					</value>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17842" toLevel="1" name="+ 5 Eternal Pack">
 		<operateType>A1</operateType>
+		<itemConsumeId>39326</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="5.88235">
+						<item id="17430" count="1" minEnchant="5" maxEnchant="5" /> <!-- Eternal Helmet -->
+					</item>
+					<item chance="5.88235">
+						<item id="17431" count="1" minEnchant="5" maxEnchant="5" /> <!-- Eternal Breastplate -->
+					</item>
+					<item chance="5.88235">
+						<item id="17432" count="1" minEnchant="5" maxEnchant="5" /> <!-- Eternal Gaiters -->
+					</item>
+					<item chance="5.88235">
+						<item id="17433" count="1" minEnchant="5" maxEnchant="5" /> <!-- Eternal Gauntlets -->
+					</item>
+					<item chance="5.88235">
+						<item id="17434" count="1" minEnchant="5" maxEnchant="5" /> <!-- Eternal Boots -->
+					</item>
+					<item chance="5.88235">
+						<item id="17435" count="1" minEnchant="5" maxEnchant="5" /> <!-- Eternal Shield -->
+					</item>
+					<item chance="5.88235">
+						<item id="17436" count="1" minEnchant="5" maxEnchant="5" /> <!-- Eternal Leather Helmet -->
+					</item>
+					<item chance="5.88235">
+						<item id="17437" count="1" minEnchant="5" maxEnchant="5" /> <!-- Eternal Leather Armor -->
+					</item>
+					<item chance="5.88235">
+						<item id="17438" count="1" minEnchant="5" maxEnchant="5" /> <!-- Eternal Leather Leggings -->
+					</item>
+					<item chance="5.88235">
+						<item id="17439" count="1" minEnchant="5" maxEnchant="5" /> <!-- Eternal Leather Gloves -->
+					</item>
+					<item chance="5.88235">
+						<item id="17440" count="1" minEnchant="5" maxEnchant="5" /> <!-- Eternal Leather Boots -->
+					</item>
+					<item chance="5.88235">
+						<item id="17441" count="1" minEnchant="5" maxEnchant="5" /> <!-- Eternal Circlet -->
+					</item>
+					<item chance="5.88235">
+						<item id="17442" count="1" minEnchant="5" maxEnchant="5" /> <!-- Eternal Tunic -->
+					</item>
+					<item chance="5.88235">
+						<item id="17443" count="1" minEnchant="5" maxEnchant="5" /> <!-- Eternal Stockings -->
+					</item>
+					<item chance="5.88235">
+						<item id="17444" count="1" minEnchant="5" maxEnchant="5" /> <!-- Eternal Gloves -->
+					</item>
+					<item chance="5.88235">
+						<item id="17445" count="1" minEnchant="5" maxEnchant="5" /> <!-- Eternal Shoes -->
+					</item>
+					<item chance="5.88235">
+						<item id="17446" count="1" minEnchant="5" maxEnchant="5" /> <!-- Eternal Sigil -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17843" toLevel="1" name="+ 6 Eternal Pack">
 		<operateType>A1</operateType>
+		<itemConsumeId>39327</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="5.88235">
+						<item id="17430" count="1" minEnchant="6" maxEnchant="6" /> <!-- Eternal Helmet -->
+					</item>
+					<item chance="5.88235">
+						<item id="17431" count="1" minEnchant="6" maxEnchant="6" /> <!-- Eternal Breastplate -->
+					</item>
+					<item chance="5.88235">
+						<item id="17432" count="1" minEnchant="6" maxEnchant="6" /> <!-- Eternal Gaiters -->
+					</item>
+					<item chance="5.88235">
+						<item id="17433" count="1" minEnchant="6" maxEnchant="6" /> <!-- Eternal Gauntlets -->
+					</item>
+					<item chance="5.88235">
+						<item id="17434" count="1" minEnchant="6" maxEnchant="6" /> <!-- Eternal Boots -->
+					</item>
+					<item chance="5.88235">
+						<item id="17435" count="1" minEnchant="6" maxEnchant="6" /> <!-- Eternal Shield -->
+					</item>
+					<item chance="5.88235">
+						<item id="17436" count="1" minEnchant="6" maxEnchant="6" /> <!-- Eternal Leather Helmet -->
+					</item>
+					<item chance="5.88235">
+						<item id="17437" count="1" minEnchant="6" maxEnchant="6" /> <!-- Eternal Leather Armor -->
+					</item>
+					<item chance="5.88235">
+						<item id="17438" count="1" minEnchant="6" maxEnchant="6" /> <!-- Eternal Leather Leggings -->
+					</item>
+					<item chance="5.88235">
+						<item id="17439" count="1" minEnchant="6" maxEnchant="6" /> <!-- Eternal Leather Gloves -->
+					</item>
+					<item chance="5.88235">
+						<item id="17440" count="1" minEnchant="6" maxEnchant="6" /> <!-- Eternal Leather Boots -->
+					</item>
+					<item chance="5.88235">
+						<item id="17441" count="1" minEnchant="6" maxEnchant="6" /> <!-- Eternal Circlet -->
+					</item>
+					<item chance="5.88235">
+						<item id="17442" count="1" minEnchant="6" maxEnchant="6" /> <!-- Eternal Tunic -->
+					</item>
+					<item chance="5.88235">
+						<item id="17443" count="1" minEnchant="6" maxEnchant="6" /> <!-- Eternal Stockings -->
+					</item>
+					<item chance="5.88235">
+						<item id="17444" count="1" minEnchant="6" maxEnchant="6" /> <!-- Eternal Gloves -->
+					</item>
+					<item chance="5.88235">
+						<item id="17445" count="1" minEnchant="6" maxEnchant="6" /> <!-- Eternal Shoes -->
+					</item>
+					<item chance="5.88235">
+						<item id="17446" count="1" minEnchant="6" maxEnchant="6" /> <!-- Eternal Sigil -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17844" toLevel="1" name="+ 8 Eternal Pack">
 		<operateType>A1</operateType>
+		<itemConsumeId>39328</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="5.88235">
+						<item id="17430" count="1" minEnchant="8" maxEnchant="8" /> <!-- Eternal Helmet -->
+					</item>
+					<item chance="5.88235">
+						<item id="17431" count="1" minEnchant="8" maxEnchant="8" /> <!-- Eternal Breastplate -->
+					</item>
+					<item chance="5.88235">
+						<item id="17432" count="1" minEnchant="8" maxEnchant="8" /> <!-- Eternal Gaiters -->
+					</item>
+					<item chance="5.88235">
+						<item id="17433" count="1" minEnchant="8" maxEnchant="8" /> <!-- Eternal Gauntlets -->
+					</item>
+					<item chance="5.88235">
+						<item id="17434" count="1" minEnchant="8" maxEnchant="8" /> <!-- Eternal Boots -->
+					</item>
+					<item chance="5.88235">
+						<item id="17435" count="1" minEnchant="8" maxEnchant="8" /> <!-- Eternal Shield -->
+					</item>
+					<item chance="5.88235">
+						<item id="17436" count="1" minEnchant="8" maxEnchant="8" /> <!-- Eternal Leather Helmet -->
+					</item>
+					<item chance="5.88235">
+						<item id="17437" count="1" minEnchant="8" maxEnchant="8" /> <!-- Eternal Leather Armor -->
+					</item>
+					<item chance="5.88235">
+						<item id="17438" count="1" minEnchant="8" maxEnchant="8" /> <!-- Eternal Leather Leggings -->
+					</item>
+					<item chance="5.88235">
+						<item id="17439" count="1" minEnchant="8" maxEnchant="8" /> <!-- Eternal Leather Gloves -->
+					</item>
+					<item chance="5.88235">
+						<item id="17440" count="1" minEnchant="8" maxEnchant="8" /> <!-- Eternal Leather Boots -->
+					</item>
+					<item chance="5.88235">
+						<item id="17441" count="1" minEnchant="8" maxEnchant="8" /> <!-- Eternal Circlet -->
+					</item>
+					<item chance="5.88235">
+						<item id="17442" count="1" minEnchant="8" maxEnchant="8" /> <!-- Eternal Tunic -->
+					</item>
+					<item chance="5.88235">
+						<item id="17443" count="1" minEnchant="8" maxEnchant="8" /> <!-- Eternal Stockings -->
+					</item>
+					<item chance="5.88235">
+						<item id="17444" count="1" minEnchant="8" maxEnchant="8" /> <!-- Eternal Gloves -->
+					</item>
+					<item chance="5.88235">
+						<item id="17445" count="1" minEnchant="8" maxEnchant="8" /> <!-- Eternal Shoes -->
+					</item>
+					<item chance="5.88235">
+						<item id="17446" count="1" minEnchant="8" maxEnchant="8" /> <!-- Eternal Sigil -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17845" toLevel="1" name="Seraph Crafting Pack">
 		<operateType>A1</operateType>
+		<itemConsumeId>39330</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<value level="1">
+						<item chance="5.88235">
+							<item id="38023" count="1" /> <!-- Seraph Helmet Pack -->
+						</item>
+						<item chance="5.88235">
+							<item id="38024" count="1" /> <!-- Seraph Breastplate Pack -->
+						</item>
+						<item chance="5.88235">
+							<item id="38025" count="1" /> <!-- Seraph Gaiters Pack -->
+						</item>
+						<item chance="5.88235">
+							<item id="38026" count="1" /> <!-- Seraph Gauntlets Pack -->
+						</item>
+						<item chance="5.88235">
+							<item id="38027" count="1" /> <!-- Seraph Boots Pack -->
+						</item>
+						<item chance="5.88235">
+							<item id="38028" count="1" /> <!-- Seraph Shield Pack -->
+						</item>
+						<item chance="5.88235">
+							<item id="38029" count="1" /> <!-- Seraph Leather Helmet Pack -->
+						</item>
+						<item chance="5.88235">
+							<item id="38030" count="1" /> <!-- Seraph Leather Armor Pack -->
+						</item>
+						<item chance="5.88235">
+							<item id="38031" count="1" /> <!-- Seraph Leather Leggings Pack -->
+						</item>
+						<item chance="5.88235">
+							<item id="38032" count="1" /> <!-- Seraph Leather Gloves Pack -->
+						</item>
+						<item chance="5.88235">
+							<item id="38033" count="1" /> <!-- Seraph Leather Boots Pack -->
+						</item>
+						<item chance="5.88235">
+							<item id="38034" count="1" /> <!-- Seraph Circlet Pack -->
+						</item>
+						<item chance="5.88235">
+							<item id="38035" count="1" /> <!-- Seraph Tunic Pack -->
+						</item>
+						<item chance="5.88235">
+							<item id="38036" count="1" /> <!-- Seraph Stockings Pack -->
+						</item>
+						<item chance="5.88235">
+							<item id="38037" count="1" /> <!-- Seraph Gloves Pack -->
+						</item>
+						<item chance="5.88235">
+							<item id="38038" count="1" /> <!-- Seraph Shoes Pack -->
+						</item>
+						<item chance="5.88235">
+							<item id="38039" count="1" /> <!-- Seraph Sigil Pack -->
+						</item>
+					</value>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17846" toLevel="1" name="Seraph Completion Pack">
 		<operateType>A1</operateType>
+		<itemConsumeId>39331</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<value level="1">
+						<item chance="5.88235">
+							<item id="17396" count="1" /> <!-- Seraph Helmet -->
+						</item>
+						<item chance="5.88235">
+							<item id="17397" count="1" /> <!-- Seraph Breastplate -->
+						</item>
+						<item chance="5.88235">
+							<item id="17398" count="1" /> <!-- Seraph Gaiters -->
+						</item>
+						<item chance="5.88235">
+							<item id="17399" count="1" /> <!-- Seraph Gauntlets -->
+						</item>
+						<item chance="5.88235">
+							<item id="17400" count="1" /> <!-- Seraph Boots -->
+						</item>
+						<item chance="5.88235">
+							<item id="17401" count="1" /> <!-- Seraph Shield -->
+						</item>
+						<item chance="5.88235">
+							<item id="17402" count="1" /> <!-- Seraph Leather Helmet -->
+						</item>
+						<item chance="5.88235">
+							<item id="17403" count="1" /> <!-- Seraph Leather Armor -->
+						</item>
+						<item chance="5.88235">
+							<item id="17404" count="1" /> <!-- Seraph Leather Leggings -->
+						</item>
+						<item chance="5.88235">
+							<item id="17405" count="1" /> <!-- Seraph Leather Gloves -->
+						</item>
+						<item chance="5.88235">
+							<item id="17406" count="1" /> <!-- Seraph Leather Boots -->
+						</item>
+						<item chance="5.88235">
+							<item id="17407" count="1" /> <!-- Seraph Circlet -->
+						</item>
+						<item chance="5.88235">
+							<item id="17408" count="1" /> <!-- Seraph Tunic -->
+						</item>
+						<item chance="5.88235">
+							<item id="17409" count="1" /> <!-- Seraph Stockings -->
+						</item>
+						<item chance="5.88235">
+							<item id="17410" count="1" /> <!-- Seraph Gloves -->
+						</item>
+						<item chance="5.88235">
+							<item id="17411" count="1" /> <!-- Seraph Shoes -->
+						</item>
+						<item chance="5.88235">
+							<item id="17412" count="1" /> <!-- Seraph Sigil -->
+						</item>
+					</value>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17847" toLevel="1" name="+ 5 Seraph Pack">
 		<operateType>A1</operateType>
+		<itemConsumeId>39332</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="5.88235">
+						<item id="17396" count="1" minEnchant="5" maxEnchant="5" /> <!-- +5 Seraph Helmet -->
+					</item>
+					<item chance="5.88235">
+						<item id="17397" count="1" minEnchant="5" maxEnchant="5" /> <!-- +5 Seraph Breastplate -->
+					</item>
+					<item chance="5.88235">
+						<item id="17398" count="1" minEnchant="5" maxEnchant="5" /> <!-- +5 Seraph Gaiters -->
+					</item>
+					<item chance="5.88235">
+						<item id="17399" count="1" minEnchant="5" maxEnchant="5" /> <!-- +5 Seraph Gauntlets -->
+					</item>
+					<item chance="5.88235">
+						<item id="17400" count="1" minEnchant="5" maxEnchant="5" /> <!-- +5 Seraph Boots -->
+					</item>
+					<item chance="5.88235">
+						<item id="17401" count="1" minEnchant="5" maxEnchant="5" /> <!-- +5 Seraph Shield -->
+					</item>
+					<item chance="5.88235">
+						<item id="17402" count="1" minEnchant="5" maxEnchant="5" /> <!-- +5 Seraph Leather Helmet -->
+					</item>
+					<item chance="5.88235">
+						<item id="17403" count="1" minEnchant="5" maxEnchant="5" /> <!-- +5 Seraph Leather Armor -->
+					</item>
+					<item chance="5.88235">
+						<item id="17404" count="1" minEnchant="5" maxEnchant="5" /> <!-- +5 Seraph Leather Leggings -->
+					</item>
+					<item chance="5.88235">
+						<item id="17405" count="1" minEnchant="5" maxEnchant="5" /> <!-- +5 Seraph Leather Gloves -->
+					</item>
+					<item chance="5.88235">
+						<item id="17406" count="1" minEnchant="5" maxEnchant="5" /> <!-- +5 Seraph Leather Boots -->
+					</item>
+					<item chance="5.88235">
+						<item id="17407" count="1" minEnchant="5" maxEnchant="5" /> <!-- +5 Seraph Circlet -->
+					</item>
+					<item chance="5.88235">
+						<item id="17408" count="1" minEnchant="5" maxEnchant="5" /> <!-- +5 Seraph Tunic -->
+					</item>
+					<item chance="5.88235">
+						<item id="17409" count="1" minEnchant="5" maxEnchant="5" /> <!-- +5 Seraph Stockings -->
+					</item>
+					<item chance="5.88235">
+						<item id="17410" count="1" minEnchant="5" maxEnchant="5" /> <!-- +5 Seraph Gloves -->
+					</item>
+					<item chance="5.88235">
+						<item id="17411" count="1" minEnchant="5" maxEnchant="5" /> <!-- +5 Seraph Shoes -->
+					</item>
+					<item chance="5.88235">
+						<item id="17412" count="1" minEnchant="5" maxEnchant="5" /> <!-- +5 Seraph Sigil -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17848" toLevel="1" name="+ 6 Seraph Pack">
 		<operateType>A1</operateType>
+		<itemConsumeId>39333</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="5.88235">
+						<item id="17396" count="1" minEnchant="6" maxEnchant="6" /> <!-- +6 Seraph Helmet -->
+					</item>
+					<item chance="5.88235">
+						<item id="17397" count="1" minEnchant="6" maxEnchant="6" /> <!-- +6 Seraph Breastplate -->
+					</item>
+					<item chance="5.88235">
+						<item id="17398" count="1" minEnchant="6" maxEnchant="6" /> <!-- +6 Seraph Gaiters -->
+					</item>
+					<item chance="5.88235">
+						<item id="17399" count="1" minEnchant="6" maxEnchant="6" /> <!-- +6 Seraph Gauntlets -->
+					</item>
+					<item chance="5.88235">
+						<item id="17400" count="1" minEnchant="6" maxEnchant="6" /> <!-- +6 Seraph Boots -->
+					</item>
+					<item chance="5.88235">
+						<item id="17401" count="1" minEnchant="6" maxEnchant="6" /> <!-- +6 Seraph Shield -->
+					</item>
+					<item chance="5.88235">
+						<item id="17402" count="1" minEnchant="6" maxEnchant="6" /> <!-- +6 Seraph Leather Helmet -->
+					</item>
+					<item chance="5.88235">
+						<item id="17403" count="1" minEnchant="6" maxEnchant="6" /> <!-- +6 Seraph Leather Armor -->
+					</item>
+					<item chance="5.88235">
+						<item id="17404" count="1" minEnchant="6" maxEnchant="6" /> <!-- +6 Seraph Leather Leggings -->
+					</item>
+					<item chance="5.88235">
+						<item id="17405" count="1" minEnchant="6" maxEnchant="6" /> <!-- +6 Seraph Leather Gloves -->
+					</item>
+					<item chance="5.88235">
+						<item id="17406" count="1" minEnchant="6" maxEnchant="6" /> <!-- +6 Seraph Leather Boots -->
+					</item>
+					<item chance="5.88235">
+						<item id="17407" count="1" minEnchant="6" maxEnchant="6" /> <!-- +6 Seraph Circlet -->
+					</item>
+					<item chance="5.88235">
+						<item id="17408" count="1" minEnchant="6" maxEnchant="6" /> <!-- +6 Seraph Tunic -->
+					</item>
+					<item chance="5.88235">
+						<item id="17409" count="1" minEnchant="6" maxEnchant="6" /> <!-- +6 Seraph Stockings -->
+					</item>
+					<item chance="5.88235">
+						<item id="17410" count="1" minEnchant="6" maxEnchant="6" /> <!-- +6 Seraph Gloves -->
+					</item>
+					<item chance="5.88235">
+						<item id="17411" count="1" minEnchant="6" maxEnchant="6" /> <!-- +6 Seraph Shoes -->
+					</item>
+					<item chance="5.88235">
+						<item id="17412" count="1" minEnchant="6" maxEnchant="6" /> <!-- +6 Seraph Sigil -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17849" toLevel="1" name="+ 8 Seraph Pack">
 		<operateType>A1</operateType>
+		<itemConsumeId>39334</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="5.88235">
+						<item id="17396" count="1" minEnchant="8" maxEnchant="8" /> <!-- +8 Seraph Helmet -->
+					</item>
+					<item chance="5.88235">
+						<item id="17397" count="1" minEnchant="8" maxEnchant="8" /> <!-- +8 Seraph Breastplate -->
+					</item>
+					<item chance="5.88235">
+						<item id="17398" count="1" minEnchant="8" maxEnchant="8" /> <!-- +8 Seraph Gaiters -->
+					</item>
+					<item chance="5.88235">
+						<item id="17399" count="1" minEnchant="8" maxEnchant="8" /> <!-- +8 Seraph Gauntlets -->
+					</item>
+					<item chance="5.88235">
+						<item id="17400" count="1" minEnchant="8" maxEnchant="8" /> <!-- +8 Seraph Boots -->
+					</item>
+					<item chance="5.88235">
+						<item id="17401" count="1" minEnchant="8" maxEnchant="8" /> <!-- +8 Seraph Shield -->
+					</item>
+					<item chance="5.88235">
+						<item id="17402" count="1" minEnchant="8" maxEnchant="8" /> <!-- +8 Seraph Leather Helmet -->
+					</item>
+					<item chance="5.88235">
+						<item id="17403" count="1" minEnchant="8" maxEnchant="8" /> <!-- +8 Seraph Leather Armor -->
+					</item>
+					<item chance="5.88235">
+						<item id="17404" count="1" minEnchant="8" maxEnchant="8" /> <!-- +8 Seraph Leather Leggings -->
+					</item>
+					<item chance="5.88235">
+						<item id="17405" count="1" minEnchant="8" maxEnchant="8" /> <!-- +8 Seraph Leather Gloves -->
+					</item>
+					<item chance="5.88235">
+						<item id="17406" count="1" minEnchant="8" maxEnchant="8" /> <!-- +8 Seraph Leather Boots -->
+					</item>
+					<item chance="5.88235">
+						<item id="17407" count="1" minEnchant="8" maxEnchant="8" /> <!-- +8 Seraph Circlet -->
+					</item>
+					<item chance="5.88235">
+						<item id="17408" count="1" minEnchant="8" maxEnchant="8" /> <!-- +8 Seraph Tunic -->
+					</item>
+					<item chance="5.88235">
+						<item id="17409" count="1" minEnchant="8" maxEnchant="8" /> <!-- +8 Seraph Stockings -->
+					</item>
+					<item chance="5.88235">
+						<item id="17410" count="1" minEnchant="8" maxEnchant="8" /> <!-- +8 Seraph Gloves -->
+					</item>
+					<item chance="5.88235">
+						<item id="17411" count="1" minEnchant="8" maxEnchant="8" /> <!-- +8 Seraph Shoes -->
+					</item>
+					<item chance="5.88235">
+						<item id="17412" count="1" minEnchant="8" maxEnchant="8" /> <!-- +8 Seraph Sigil -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17850" toLevel="1" name="Twilight Crafting Pack">
 		<itemConsumeId>39336</itemConsumeId>
@@ -1383,27 +2101,445 @@
 	</skill>
 	<skill id="17856" toLevel="1" name="Apocalypse Pack">
 		<operateType>A1</operateType>
+		<itemConsumeId>39359</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<value level="1">
+						<item chance="14.28571">
+							<item id="39360" count="1" /> <!-- Apocalypse Weapon Crafting Pack -->
+						</item>
+						<item chance="14.28571">
+							<item id="39361" count="1" /> <!-- Apocalypse Weapon Pack -->
+						</item>
+						<item chance="14.28571">
+							<item id="39362" count="1" /> <!-- +4 Apocalypse Weapon Pack -->
+						</item>
+						<item chance="14.28571">
+							<item id="39363" count="1" /> <!-- +5 Apocalypse Weapon Pack -->
+						</item>
+						<item chance="14.28571">
+							<item id="39364" count="1" /> <!-- +6 Apocalypse Weapon Pack -->
+						</item>
+						<item chance="14.28571">
+							<item id="39365" count="1" /> <!-- +7 Apocalypse Weapon Pack -->
+						</item>
+						<item chance="14.28571">
+							<item id="39366" count="1" /> <!-- +8 Apocalypse Weapon Pack -->
+						</item>
+					</value>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17857" toLevel="1" name="Apocalypse Crafting Pack">
 		<operateType>A1</operateType>
+		<itemConsumeId>39360</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<value level="1">
+						<item chance="9.09090">
+							<item id="37981" count="1" /> <!-- Apocalypse Shaper Crafting Pack -->
+						</item>
+						<item chance="9.09090">
+							<item id="37982" count="1" /> <!-- Apocalypse Cutter Crafting Pack -->
+						</item>
+						<item chance="9.09090">
+							<item id="37983" count="1" /> <!-- Apocalypse Slasher Crafting Pack -->
+						</item>
+						<item chance="9.09090">
+							<item id="37984" count="1" /> <!-- Apocalypse Avenger Crafting Pack -->
+						</item>
+						<item chance="9.09090">
+							<item id="37985" count="1" /> <!-- Apocalypse Fighter Crafting Pack -->
+						</item>
+						<item chance="9.09090">
+							<item id="37986" count="1" /> <!-- Apocalypse Stormer Crafting Pack -->
+						</item>
+						<item chance="9.09090">
+							<item id="37987" count="1" /> <!-- Apocalypse Thrower Crafting Pack -->
+						</item>
+						<item chance="9.09090">
+							<item id="37988" count="1" /> <!-- Apocalypse Shooter Crafting Pack -->
+						</item>
+						<item chance="9.09090">
+							<item id="37989" count="1" /> <!-- Apocalypse Buster Crafting Pack -->
+						</item>
+						<item chance="9.09090">
+							<item id="37990" count="1" /> <!-- Apocalypse Caster Crafting Pack -->
+						</item>
+						<item chance="9.09090">
+							<item id="37991" count="1" /> <!-- Apocalypse Retributer Crafting Pack -->
+						</item>
+					</value>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17858" toLevel="1" name="Apocalypse Completion Pack">
 		<operateType>A1</operateType>
+		<itemConsumeId>39361</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<value level="1">
+						<item chance="9.09090">
+							<item id="17324" count="1" /> <!-- Apocalypse Shaper -->
+						</item>
+						<item chance="9.09090">
+							<item id="17325" count="1" /> <!-- Apocalypse Cutter -->
+						</item>
+						<item chance="9.09090">
+							<item id="17326" count="1" /> <!-- Apocalypse Slasher -->
+						</item>
+						<item chance="9.09090">
+							<item id="17327" count="1" /> <!-- Apocalypse Avenger -->
+						</item>
+						<item chance="9.09090">
+							<item id="17328" count="1" /> <!-- Apocalypse Fighter -->
+						</item>
+						<item chance="9.09090">
+							<item id="17329" count="1" /> <!-- Apocalypse Stormer -->
+						</item>
+						<item chance="9.09090">
+							<item id="17330" count="1" /> <!-- Apocalypse Thrower -->
+						</item>
+						<item chance="9.09090">
+							<item id="17331" count="1" /> <!-- Apocalypse Shooter -->
+						</item>
+						<item chance="9.09090">
+							<item id="17332" count="1" /> <!-- Apocalypse Buster -->
+						</item>
+						<item chance="9.09090">
+							<item id="17333" count="1" /> <!-- Apocalypse Caster -->
+						</item>
+						<item chance="9.09090">
+							<item id="17334" count="1" /> <!-- Apocalypse Retributer -->
+						</item>
+					</value>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17859" toLevel="1" name="+ 4 Apocalypse Pack">
 		<operateType>A1</operateType>
+		<itemConsumeId>39362</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="9.09090">
+						<item id="17324" count="1" minEnchant="4" maxEnchant="4" /> <!-- Apocalypse Shaper -->
+					</item>
+					<item chance="9.09090">
+						<item id="17325" count="1" minEnchant="4" maxEnchant="4" /> <!-- Apocalypse Cutter -->
+					</item>
+					<item chance="9.09090">
+						<item id="17326" count="1" minEnchant="4" maxEnchant="4" /> <!-- Apocalypse Slasher -->
+					</item>
+					<item chance="9.09090">
+						<item id="17327" count="1" minEnchant="4" maxEnchant="4" /> <!-- Apocalypse Avenger -->
+					</item>
+					<item chance="9.09090">
+						<item id="17328" count="1" minEnchant="4" maxEnchant="4" /> <!-- Apocalypse Fighter -->
+					</item>
+					<item chance="9.09090">
+						<item id="17329" count="1" minEnchant="4" maxEnchant="4" /> <!-- Apocalypse Stormer -->
+					</item>
+					<item chance="9.09090">
+						<item id="17330" count="1" minEnchant="4" maxEnchant="4" /> <!-- Apocalypse Thrower -->
+					</item>
+					<item chance="9.09090">
+						<item id="17331" count="1" minEnchant="4" maxEnchant="4" /> <!-- Apocalypse Shooter -->
+					</item>
+					<item chance="9.09090">
+						<item id="17332" count="1" minEnchant="4" maxEnchant="4" /> <!-- Apocalypse Buster -->
+					</item>
+					<item chance="9.09090">
+						<item id="17333" count="1" minEnchant="4" maxEnchant="4" /> <!-- Apocalypse Caster -->
+					</item>
+					<item chance="9.09090">
+						<item id="17334" count="1" minEnchant="4" maxEnchant="4" /> <!-- Apocalypse Retributer -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17860" toLevel="1" name="+ 5 Apocalypse Pack">
 		<operateType>A1</operateType>
+		<itemConsumeId>39363</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="9.09090">
+						<item id="17324" count="1" minEnchant="5" maxEnchant="5" /> <!-- Apocalypse Shaper -->
+					</item>
+					<item chance="9.09090">
+						<item id="17325" count="1" minEnchant="5" maxEnchant="5" /> <!-- Apocalypse Cutter -->
+					</item>
+					<item chance="9.09090">
+						<item id="17326" count="1" minEnchant="5" maxEnchant="5" /> <!-- Apocalypse Slasher -->
+					</item>
+					<item chance="9.09090">
+						<item id="17327" count="1" minEnchant="5" maxEnchant="5" /> <!-- Apocalypse Avenger -->
+					</item>
+					<item chance="9.09090">
+						<item id="17328" count="1" minEnchant="5" maxEnchant="5" /> <!-- Apocalypse Fighter -->
+					</item>
+					<item chance="9.09090">
+						<item id="17329" count="1" minEnchant="5" maxEnchant="5" /> <!-- Apocalypse Stormer -->
+					</item>
+					<item chance="9.09090">
+						<item id="17330" count="1" minEnchant="5" maxEnchant="5" /> <!-- Apocalypse Thrower -->
+					</item>
+					<item chance="9.09090">
+						<item id="17331" count="1" minEnchant="5" maxEnchant="5" /> <!-- Apocalypse Shooter -->
+					</item>
+					<item chance="9.09090">
+						<item id="17332" count="1" minEnchant="5" maxEnchant="5" /> <!-- Apocalypse Buster -->
+					</item>
+					<item chance="9.09090">
+						<item id="17333" count="1" minEnchant="5" maxEnchant="5" /> <!-- Apocalypse Caster -->
+					</item>
+					<item chance="9.09090">
+						<item id="17334" count="1" minEnchant="5" maxEnchant="5" /> <!-- Apocalypse Retributer -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17861" toLevel="1" name="+ 6 Apocalypse Pack">
 		<operateType>A1</operateType>
+		<itemConsumeId>39364</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="9.09090">
+						<item id="17324" count="1" minEnchant="6" maxEnchant="6" /> <!-- Apocalypse Shaper -->
+					</item>
+					<item chance="9.09090">
+						<item id="17325" count="1" minEnchant="6" maxEnchant="6" /> <!-- Apocalypse Cutter -->
+					</item>
+					<item chance="9.09090">
+						<item id="17326" count="1" minEnchant="6" maxEnchant="6" /> <!-- Apocalypse Slasher -->
+					</item>
+					<item chance="9.09090">
+						<item id="17327" count="1" minEnchant="6" maxEnchant="6" /> <!-- Apocalypse Avenger -->
+					</item>
+					<item chance="9.09090">
+						<item id="17328" count="1" minEnchant="6" maxEnchant="6" /> <!-- Apocalypse Fighter -->
+					</item>
+					<item chance="9.09090">
+						<item id="17329" count="1" minEnchant="6" maxEnchant="6" /> <!-- Apocalypse Stormer -->
+					</item>
+					<item chance="9.09090">
+						<item id="17330" count="1" minEnchant="6" maxEnchant="6" /> <!-- Apocalypse Thrower -->
+					</item>
+					<item chance="9.09090">
+						<item id="17331" count="1" minEnchant="6" maxEnchant="6" /> <!-- Apocalypse Shooter -->
+					</item>
+					<item chance="9.09090">
+						<item id="17332" count="1" minEnchant="6" maxEnchant="6" /> <!-- Apocalypse Buster -->
+					</item>
+					<item chance="9.09090">
+						<item id="17333" count="1" minEnchant="6" maxEnchant="6" /> <!-- Apocalypse Caster -->
+					</item>
+					<item chance="9.09090">
+						<item id="17334" count="1" minEnchant="6" maxEnchant="6" /> <!-- Apocalypse Retributer -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17862" toLevel="1" name="+ 7 Apocalypse Pack">
 		<operateType>A1</operateType>
+		<itemConsumeId>39365</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="9.09090">
+						<item id="17324" count="1" minEnchant="7" maxEnchant="7" /> <!-- Apocalypse Shaper -->
+					</item>
+					<item chance="9.09090">
+						<item id="17325" count="1" minEnchant="7" maxEnchant="7" /> <!-- Apocalypse Cutter -->
+					</item>
+					<item chance="9.09090">
+						<item id="17326" count="1" minEnchant="7" maxEnchant="7" /> <!-- Apocalypse Slasher -->
+					</item>
+					<item chance="9.09090">
+						<item id="17327" count="1" minEnchant="7" maxEnchant="7" /> <!-- Apocalypse Avenger -->
+					</item>
+					<item chance="9.09090">
+						<item id="17328" count="1" minEnchant="7" maxEnchant="7" /> <!-- Apocalypse Fighter -->
+					</item>
+					<item chance="9.09090">
+						<item id="17329" count="1" minEnchant="7" maxEnchant="7" /> <!-- Apocalypse Stormer -->
+					</item>
+					<item chance="9.09090">
+						<item id="17330" count="1" minEnchant="7" maxEnchant="7" /> <!-- Apocalypse Thrower -->
+					</item>
+					<item chance="9.09090">
+						<item id="17331" count="1" minEnchant="7" maxEnchant="7" /> <!-- Apocalypse Shooter -->
+					</item>
+					<item chance="9.09090">
+						<item id="17332" count="1" minEnchant="7" maxEnchant="7" /> <!-- Apocalypse Buster -->
+					</item>
+					<item chance="9.09090">
+						<item id="17333" count="1" minEnchant="7" maxEnchant="7" /> <!-- Apocalypse Caster -->
+					</item>
+					<item chance="9.09090">
+						<item id="17334" count="1" minEnchant="7" maxEnchant="7" /> <!-- Apocalypse Retributer -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17863" toLevel="1" name="+ 8 Apocalypse Pack">
 		<operateType>A1</operateType>
+		<itemConsumeId>39366</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="9.09090">
+						<item id="17324" count="1" minEnchant="8" maxEnchant="8" /> <!-- Apocalypse Shaper -->
+					</item>
+					<item chance="9.09090">
+						<item id="17325" count="1" minEnchant="8" maxEnchant="8" /> <!-- Apocalypse Cutter -->
+					</item>
+					<item chance="9.09090">
+						<item id="17326" count="1" minEnchant="8" maxEnchant="8" /> <!-- Apocalypse Slasher -->
+					</item>
+					<item chance="9.09090">
+						<item id="17327" count="1" minEnchant="8" maxEnchant="8" /> <!-- Apocalypse Avenger -->
+					</item>
+					<item chance="9.09090">
+						<item id="17328" count="1" minEnchant="8" maxEnchant="8" /> <!-- Apocalypse Fighter -->
+					</item>
+					<item chance="9.09090">
+						<item id="17329" count="1" minEnchant="8" maxEnchant="8" /> <!-- Apocalypse Stormer -->
+					</item>
+					<item chance="9.09090">
+						<item id="17330" count="1" minEnchant="8" maxEnchant="8" /> <!-- Apocalypse Thrower -->
+					</item>
+					<item chance="9.09090">
+						<item id="17331" count="1" minEnchant="8" maxEnchant="8" /> <!-- Apocalypse Shooter -->
+					</item>
+					<item chance="9.09090">
+						<item id="17332" count="1" minEnchant="8" maxEnchant="8" /> <!-- Apocalypse Buster -->
+					</item>
+					<item chance="9.09090">
+						<item id="17333" count="1" minEnchant="8" maxEnchant="8" /> <!-- Apocalypse Caster -->
+					</item>
+					<item chance="9.09090">
+						<item id="17334" count="1" minEnchant="8" maxEnchant="8" /> <!-- Apocalypse Retributer -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17864" toLevel="1" name="Specter Pack">
 		<isMagic>2</isMagic> <!-- Static Skill -->

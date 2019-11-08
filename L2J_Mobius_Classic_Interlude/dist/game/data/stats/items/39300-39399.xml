@@ -201,38 +201,32 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-	</item>
-	<item id="39324" name="Eternal Armor Crafting Pack" type="EtcItem">
-		<!-- Double-click to acquire a pack for crafting one Eternal armor piece. -->
-		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
 		<set name="extractableCountMin" val="1" />
 		<set name="extractableCountMax" val="1" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38058" min="1" max="1" chance="6" /> <!-- Eternal Boots Crafting Pack - Heavy Armor -->
-			<item id="38055" min="1" max="1" chance="6" /> <!-- Eternal Breastplate Crafting Pack - Heavy Armor -->
-			<item id="38065" min="1" max="1" chance="6" /> <!-- Eternal Circlet Crafting Pack - Robe -->
-			<item id="38056" min="1" max="1" chance="6" /> <!-- Eternal Gaiters Crafting Pack - Heavy Armor -->
-			<item id="38057" min="1" max="1" chance="6" /> <!-- Eternal Gauntlets Crafting Pack - Heavy Armor -->
-			<item id="38068" min="1" max="1" chance="6" /> <!-- Eternal Gloves Crafting Pack - Robe -->
-			<item id="38054" min="1" max="1" chance="6" /> <!-- Eternal Helmet Crafting Pack - Heavy Armor -->
-			<item id="38061" min="1" max="1" chance="6" /> <!-- Eternal Leather Armor Crafting Pack - Light Armor -->
-			<item id="38064" min="1" max="1" chance="6" /> <!-- Eternal Leather Boots Crafting Pack - Light Armor -->
-			<item id="38063" min="1" max="1" chance="6" /> <!-- Eternal Leather Gloves Crafting Pack - Light Armor -->
-			<item id="38060" min="1" max="1" chance="6" /> <!-- Eternal Leather Helmet Crafting Pack - Light Armor -->
-			<item id="38062" min="1" max="1" chance="6" /> <!-- Eternal Leather Leggings Crafting Pack - Light Armor -->
-			<item id="38059" min="1" max="1" chance="6" /> <!-- Eternal Shield Crafting Pack - Heavy Armor -->
-			<item id="38069" min="1" max="1" chance="6" /> <!-- Eternal Shoes Crafting Pack - Robe -->
-			<item id="38070" min="1" max="1" chance="6" /> <!-- Eternal Sigil Crafting Pack - Robe -->
-			<item id="38067" min="1" max="1" chance="6" /> <!-- Eternal Stockings Crafting Pack - Robe -->
-			<item id="38066" min="1" max="1" chance="6" /> <!-- Eternal Tunic Crafting Pack - Robe -->
+			<item id="39324" min="1" max="1" chance="20" /> <!-- Eternal Armor Crafting Pack -->
+			<item id="39325" min="1" max="1" chance="20" /> <!-- Eternal Armor Pack -->
+			<item id="39326" min="1" max="1" chance="20" /> <!-- +5 Eternal Armor Pack -->
+			<item id="39327" min="1" max="1" chance="20" /> <!-- +6 Eternal Armor Pack -->
+			<item id="39328" min="1" max="1" chance="20" /> <!-- +8 Eternal Armor Pack -->
 		</capsuled_items>
+	</item>
+	<item id="39324" name="Eternal Armor Crafting Pack" type="EtcItem">
+		<!-- Double-click to acquire a pack for crafting one Eternal armor piece. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="17840" level="1" /> <!-- Eternal Crafting Pack -->
+		</skills>
 	</item>
 	<item id="39325" name="Eternal Armor Pack" type="EtcItem">
 		<!-- Double-click to acquire one Eternal armor piece. -->
@@ -241,6 +235,12 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="17841" level="1" /> <!-- Eternal Completion Pack -->
+		</skills>
 	</item>
 	<item id="39326" name="+5 Eternal Armor Pack" type="EtcItem">
 		<!-- Double-click to acquire one Eternal armor piece that has been enchanted to + 5. -->
@@ -249,6 +249,12 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="17842" level="1" /> <!-- +5 Eternal Pack -->
+		</skills>
 	</item>
 	<item id="39327" name="+6 Eternal Armor Pack" type="EtcItem">
 		<!-- Double-click to acquire one Eternal armor piece that has been enchanted to + 6. -->
@@ -257,6 +263,12 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="17843" level="1" /> <!-- +6 Eternal Pack -->
+		</skills>
 	</item>
 	<item id="39328" name="+8 Eternal Armor Pack" type="EtcItem">
 		<!-- Double-click to acquire one Eternal armor piece that has been enchanted to + 8. -->
@@ -265,6 +277,12 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="17844" level="1" /> <!-- +8 Eternal Pack -->
+		</skills>
 	</item>
 	<item id="39329" name="Designer Seraph Armor Pack" type="EtcItem">
 		<!-- Double-click to acquire one of the following: Seraph Armor Crafting Pack, Seraph Armor Pack, or Seraph Armor Pack with an item enchanted to 5, 6, or 8. -->
@@ -273,6 +291,18 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="39330" min="1" max="1" chance="20" /> <!-- Seraph Armor Crafting Pack -->
+			<item id="39331" min="1" max="1" chance="20" /> <!-- Seraph Armor Pack -->
+			<item id="39332" min="1" max="1" chance="20" /> <!-- +5 Seraph Armor Pack -->
+			<item id="39333" min="1" max="1" chance="20" /> <!-- +6 Seraph Armor Pack -->
+			<item id="39334" min="1" max="1" chance="20" /> <!-- +8 Seraph Armor Pack -->
+		</capsuled_items>
 	</item>
 	<item id="39330" name="Seraph Armor Crafting Pack" type="EtcItem">
 		<!-- Double-click to acquire a pack for crafting one Seraph armor piece. -->
@@ -283,31 +313,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="handler" val="ExtractableItems" />
-		<set name="extractableCountMin" val="1" />
-		<set name="extractableCountMax" val="1" />
-		<capsuled_items>
-			<item id="38023" min="1" max="1" chance="4.7619" /> <!-- Seraph Helmet Crafting Pack (Heavy Armor) -->
-			<item id="38024" min="1" max="1" chance="4.7619" /> <!-- Seraph Breastplate Crafting Pack (Heavy Armor) -->
-			<item id="38025" min="1" max="1" chance="4.7619" /> <!-- Seraph Gaiters Crafting Pack (Heavy Armor) -->
-			<item id="38026" min="1" max="1" chance="4.7619" /> <!-- Seraph Gauntlets Crafting Pack (Heavy Armor) -->
-			<item id="38027" min="1" max="1" chance="4.7619" /> <!-- Seraph Boots Crafting Pack (Heavy Armor) -->
-			<item id="38028" min="1" max="1" chance="4.7619" /> <!-- Seraph Shield Crafting Pack (Heavy Armor) -->
-			<item id="38029" min="1" max="1" chance="4.7619" /> <!-- Seraph Leather Helmet Crafting Pack (Light Armor) -->
-			<item id="38030" min="1" max="1" chance="4.7619" /> <!-- Seraph Leather Armor Crafting Pack (Light Armor) -->
-			<item id="38031" min="1" max="1" chance="4.7619" /> <!-- Seraph Leather Leggings Crafting Pack (Light Armor) -->
-			<item id="38032" min="1" max="1" chance="4.7619" /> <!-- Seraph Leather Gloves Crafting Pack (Light Armor) -->
-			<item id="38033" min="1" max="1" chance="4.7619" /> <!-- Seraph Leather Boots Crafting Pack (Light Armor) -->
-			<item id="38034" min="1" max="1" chance="4.7619" /> <!-- Seraph Circlet Crafting Pack (Robe) -->
-			<item id="38035" min="1" max="1" chance="4.7619" /> <!-- Seraph Tunic Crafting Pack (Robe) -->
-			<item id="38036" min="1" max="1" chance="4.7619" /> <!-- Seraph Stockings Crafting Pack (Robe) -->
-			<item id="38037" min="1" max="1" chance="4.7619" /> <!-- Seraph Gloves Crafting Pack (Robe) -->
-			<item id="38038" min="1" max="1" chance="4.7619" /> <!-- Seraph Shoes Crafting Pack (Robe) -->
-			<item id="38039" min="1" max="1" chance="4.7619" /> <!-- Seraph Sigil Crafting Pack (Robe) -->
-			<item id="38040" min="1" max="1" chance="4.7619" /> <!-- Seraph Necklace Crafting Pack -->
-			<item id="38041" min="1" max="1" chance="4.7619" /> <!-- Seraph Earring Crafting Pack -->
-			<item id="38042" min="1" max="1" chance="4.7619" /> <!-- Seraph Ring Crafting Pack -->
-		</capsuled_items>
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="17845" level="1" /> <!-- Seraph Crafting Pack -->
+		</skills>
 	</item>
 	<item id="39331" name="Seraph Armor Pack" type="EtcItem">
 		<!-- Double-click to acquire one Seraph armor piece. -->
@@ -316,6 +325,12 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="17846" level="1" /> <!-- Seraph Completion Pack -->
+		</skills>
 	</item>
 	<item id="39332" name="+5 Seraph Armor Pack" type="EtcItem">
 		<!-- Double-click to acquire one Seraph armor piece that has been enchanted to + 5. -->
@@ -324,6 +339,12 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="17847" level="1" /> <!-- +5 Seraph Pack -->
+		</skills>
 	</item>
 	<item id="39333" name="+6 Seraph Armor Pack" type="EtcItem">
 		<!-- Double-click to acquire one Seraph armor piece that has been enchanted to + 6. -->
@@ -332,6 +353,12 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="17848" level="1" /> <!-- +6 Seraph Pack -->
+		</skills>
 	</item>
 	<item id="39334" name="+8 Seraph Armor Pack" type="EtcItem">
 		<!-- Double-click to acquire one Seraph armor piece that has been enchanted to + 8. -->
@@ -340,6 +367,12 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="17849" level="1" /> <!-- +8 Seraph Pack -->
+		</skills>
 	</item>
 	<item id="39335" name="Designer Twilight Armor Pack" type="EtcItem">
 		<!-- Double-click to acquire one of the following: Twilight Armor Crafting Pack, Twilight Armor Pack, or Twilight Armor Pack with an item enchanted to 5, 6, or 8. -->
@@ -729,6 +762,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="17857" level="1" /> <!-- Apocalypse Crafting Pack -->
 		</skills>
@@ -742,6 +776,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="17858" level="1" /> <!-- Apocalypse Completion Pack -->
 		</skills>
@@ -755,6 +790,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="17859" level="1" /> <!-- + 4 Apocalypse Pack -->
 		</skills>
@@ -768,6 +804,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="17860" level="1" /> <!-- + 5 Apocalypse Pack -->
 		</skills>
@@ -781,6 +818,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="17861" level="1" /> <!-- + 6 Apocalypse Pack -->
 		</skills>
@@ -794,6 +832,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="17862" level="1" /> <!-- + 7 Apocalypse Pack -->
 		</skills>
@@ -807,6 +846,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="17863" level="1" /> <!-- + 8 Apocalypse Pack -->
 		</skills>
