@@ -101,7 +101,7 @@ public class FriendPc implements IAffectObjectHandler
 			if (target.isInsideZone(ZoneId.SIEGE))
 			{
 				// Players in the same siege side at the same castle are considered friends.
-				if ((player.getSiegeState() > 0) && (player.getSiegeState() == targetPlayer.getSiegeState()) && (player.getSiegeSide() == targetPlayer.getSiegeSide()))
+				if (player.isSiegeFriend(targetPlayer))
 				{
 					return true;
 				}

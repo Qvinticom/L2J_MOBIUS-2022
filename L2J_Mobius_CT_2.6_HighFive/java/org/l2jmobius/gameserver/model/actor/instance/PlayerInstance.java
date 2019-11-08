@@ -1641,6 +1641,41 @@ public class PlayerInstance extends Playable
 		return _siegeSide;
 	}
 	
+	public boolean isSiegeFriend(WorldObject target)
+	{
+		// If i'm natural or not in siege zone, not friends.
+		if ((_siegeState == 0) || !isInsideZone(ZoneId.SIEGE))
+		{
+			return false;
+		}
+		
+		// If target isn't a player, is self, isn't on same siege or not on same state, not friends.
+		final PlayerInstance targetPlayer = target.getActingPlayer();
+		if ((targetPlayer == null) || (targetPlayer == this) || (targetPlayer.getSiegeSide() != _siegeSide) || (_siegeState != targetPlayer.getSiegeState()))
+		{
+			return false;
+		}
+		
+		// Attackers are considered friends only if castle has no owner.
+		if (_siegeState == 1)
+		{
+			final Castle castle = CastleManager.getInstance().getCastleById(_siegeSide);
+			if (castle == null)
+			{
+				return false;
+			}
+			if (castle.getOwner() == null)
+			{
+				return true;
+			}
+			
+			return false;
+		}
+		
+		// Both are defenders, friends.
+		return true;
+	}
+	
 	/**
 	 * Set the PvP Flag of the PlayerInstance.
 	 * @param pvpFlag
@@ -8807,7 +8842,7 @@ public class PlayerInstance extends Playable
 				return false;
 			}
 			
-			if ((target.getActingPlayer() != null) && (getSiegeState() > 0) && isInsideZone(ZoneId.SIEGE) && (target.getActingPlayer().getSiegeState() == getSiegeState()) && (target.getActingPlayer() != this) && (target.getActingPlayer().getSiegeSide() == getSiegeSide()))
+			if (isSiegeFriend(target))
 			{
 				if (TerritoryWarManager.getInstance().isTWInProgress())
 				{
@@ -9030,18 +9065,10 @@ public class PlayerInstance extends Playable
 			}
 			
 			// Siege
-			if ((getSiegeState() != 0) && (targetPlayer.getSiegeState() != 0))
+			if (isSiegeFriend(targetPlayer))
 			{
-				// Register for same siege
-				if (getSiegeSide() == targetPlayer.getSiegeSide())
-				{
-					// Same side
-					if (getSiegeState() == targetPlayer.getSiegeState())
-					{
-						sendPacket(SystemMessageId.FORCE_ATTACK_IS_IMPOSSIBLE_AGAINST_A_TEMPORARY_ALLIED_MEMBER_DURING_A_SIEGE);
-						return false;
-					}
-				}
+				sendPacket(SystemMessageId.FORCE_ATTACK_IS_IMPOSSIBLE_AGAINST_A_TEMPORARY_ALLIED_MEMBER_DURING_A_SIEGE);
+				return false;
 			}
 			
 			// Party

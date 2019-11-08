@@ -1637,6 +1637,41 @@ public class PlayerInstance extends Playable
 		return _siegeSide;
 	}
 	
+	public boolean isSiegeFriend(WorldObject target)
+	{
+		// If i'm natural or not in siege zone, not friends.
+		if ((_siegeState == 0) || !isInsideZone(ZoneId.SIEGE))
+		{
+			return false;
+		}
+		
+		// If target isn't a player, is self, isn't on same siege or not on same state, not friends.
+		final PlayerInstance targetPlayer = target.getActingPlayer();
+		if ((targetPlayer == null) || (targetPlayer == this) || (targetPlayer.getSiegeSide() != _siegeSide) || (_siegeState != targetPlayer.getSiegeState()))
+		{
+			return false;
+		}
+		
+		// Attackers are considered friends only if castle has no owner.
+		if (_siegeState == 1)
+		{
+			final Castle castle = CastleManager.getInstance().getCastleById(_siegeSide);
+			if (castle == null)
+			{
+				return false;
+			}
+			if (castle.getOwner() == null)
+			{
+				return true;
+			}
+			
+			return false;
+		}
+		
+		// Both are defenders, friends.
+		return true;
+	}
+	
 	/**
 	 * Set the PvP Flag of the PlayerInstance.
 	 * @param pvpFlag
@@ -5162,7 +5197,7 @@ public class PlayerInstance extends Playable
 		// If both players are in SIEGE zone just increase siege kills/deaths
 		if (isInsideZone(ZoneId.SIEGE) && killedPlayer.isInsideZone(ZoneId.SIEGE))
 		{
-			if ((getSiegeState() > 0) && (killedPlayer.getSiegeState() > 0) && (getSiegeState() != killedPlayer.getSiegeState()))
+			if (!isSiegeFriend(killedPlayer))
 			{
 				final Clan targetClan = killedPlayer.getClan();
 				if ((_clan != null) && (targetClan != null))

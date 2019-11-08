@@ -53,7 +53,6 @@ import org.l2jmobius.gameserver.model.items.type.ActionType;
 import org.l2jmobius.gameserver.model.olympiad.Olympiad;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.skills.targets.TargetType;
-import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.model.zone.ZoneRegion;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.AbstractNpcInfo.SummonInfo;
@@ -680,7 +679,7 @@ public abstract class Summon extends Playable
 				return false;
 			}
 			
-			if ((target.getActingPlayer() != null) && (_owner.getSiegeState() > 0) && _owner.isInsideZone(ZoneId.SIEGE) && (target.getActingPlayer().getSiegeState() == _owner.getSiegeState()) && (target.getActingPlayer() != _owner) && (target.getActingPlayer().getSiegeSide() == _owner.getSiegeSide()))
+			if (_owner.isSiegeFriend(target))
 			{
 				if (TerritoryWarManager.getInstance().isTWInProgress())
 				{
@@ -1019,7 +1018,7 @@ public abstract class Summon extends Playable
 			return false;
 		}
 		
-		if ((target.getActingPlayer() != null) && (_owner.getSiegeState() > 0) && _owner.isInsideZone(ZoneId.SIEGE) && (target.getActingPlayer().getSiegeSide() == _owner.getSiegeSide()))
+		if (_owner.isSiegeFriend(target))
 		{
 			if (TerritoryWarManager.getInstance().isTWInProgress())
 			{

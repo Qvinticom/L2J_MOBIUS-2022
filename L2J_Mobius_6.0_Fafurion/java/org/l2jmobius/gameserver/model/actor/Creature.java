@@ -950,7 +950,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 					sendPacket(ActionFailed.STATIC_PACKET);
 					return;
 				}
-				else if ((target.getActingPlayer() != null) && (getActingPlayer().getSiegeState() > 0) && isInsideZone(ZoneId.SIEGE) && (target.getActingPlayer().getSiegeState() == getActingPlayer().getSiegeState()) && (target.getActingPlayer() != this) && (target.getActingPlayer().getSiegeSide() == getActingPlayer().getSiegeSide()))
+				else if (getActingPlayer().isSiegeFriend(target))
 				{
 					sendPacket(SystemMessageId.FORCE_ATTACK_IS_IMPOSSIBLE_AGAINST_A_TEMPORARY_ALLIED_MEMBER_DURING_A_SIEGE);
 					sendPacket(ActionFailed.STATIC_PACKET);

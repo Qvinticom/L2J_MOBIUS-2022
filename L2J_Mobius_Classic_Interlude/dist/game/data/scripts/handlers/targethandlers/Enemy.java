@@ -22,7 +22,6 @@ import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.skills.targets.TargetType;
-import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 
 /**
@@ -127,7 +126,7 @@ public class Enemy implements ITargetTypeHandler
 			// Is this check still actual?
 			if (forceUse && (target.getActingPlayer() != null) && (creature.getActingPlayer() != null))
 			{
-				if ((creature.getActingPlayer().getSiegeState() > 0) && creature.isInsideZone(ZoneId.SIEGE) && (target.getActingPlayer().getSiegeState() == creature.getActingPlayer().getSiegeState()) && (target.getActingPlayer() != creature.getActingPlayer()) && (target.getActingPlayer().getSiegeSide() == creature.getActingPlayer().getSiegeSide()))
+				if (creature.getActingPlayer().isSiegeFriend(target))
 				{
 					if (sendMessage)
 					{
