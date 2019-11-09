@@ -141,12 +141,12 @@ public class AirShipInstance extends Vehicle
 	public void oustPlayer(PlayerInstance player)
 	{
 		super.oustPlayer(player);
+		
 		final Location loc = getOustLoc();
 		if (player.isOnline())
 		{
 			player.broadcastPacket(new ExGetOffAirShip(player, this, loc.getX(), loc.getY(), loc.getZ()));
-			player.setXYZ(loc.getX(), loc.getY(), loc.getZ());
-			player.revalidateZone(true);
+			player.teleToLocation(loc.getX(), loc.getY(), loc.getZ());
 		}
 		else
 		{
