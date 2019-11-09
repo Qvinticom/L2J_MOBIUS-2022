@@ -88,25 +88,6 @@
 				<despawnDelay>15000</despawnDelay>
 				<singleInstance>true</singleInstance>
 			</effect>
-			<effect name="MagicalDefence">
-				<amount>-30</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PhysicalDefence">
-				<amount>-30</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="Speed">
-				<amount>-50</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="ShieldDefence">
-				<amount>-50</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="BlockSkill">
-				<magicTypes>1</magicTypes>
-			</effect>
 		</effects>
 	</skill>
 	<skill id="19302" toLevel="11" name="Thrown Acid Swarm">
@@ -172,11 +153,12 @@
 				</power>
 				<ticks>1</ticks>
 			</effect>
+			<effect name="Mute" />
 			<effect name="BlockSkill">
 				<magicTypes>1</magicTypes>
 			</effect>
 			<effect name="PhysicalAttackSpeed">
-				<amount>-30</amount>
+				<amount>-50</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="Speed">

@@ -17,26 +17,54 @@
 		<!-- Creates Danger Zone for $s1 to decrease nearby enemies?? P. Attack/Defense, M. Defense, Speed and Shield Defense and block any magical skills. -->
 		<icon>icon.skill19301</icon>
 		<operateType>A1</operateType>
-		<targetType>GROUND</targetType>
-		<affectScope>SINGLE</affectScope>
-		<magicCriticalRate>5</magicCriticalRate>
-		<castRange>900</castRange>
-		<effectRange>1100</effectRange>
-		<mpConsume>
-			<value level="1">76</value>
-			<value level="2">79</value>
-			<value level="3">83</value>
-			<value level="4">87</value>
-			<value level="5">91</value>
-			<value level="6">95</value>
-			<value level="7">99</value>
-			<value level="8">103</value>
-			<value level="9">107</value>
-		</mpConsume>
-		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
+		<mpConsume>107</mpConsume>
+		<castRange>900</castRange>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+			<value level="5">5</value>
+			<value level="6">6</value>
+			<value level="7">7</value>
+			<value level="8">8</value>
+			<value level="9">9</value>
+		</abnormalLvl>
 		<reuseDelay>15000</reuseDelay>
+		<abnormalTime>15</abnormalTime>
+		<abnormalType>POISON</abnormalType>
+		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
+		<activateRate>130</activateRate>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
+		<operateType>A2</operateType>
+		<coolTime>500</coolTime>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">87</value>
+			<value level="3">90</value>
+			<value level="4">93</value>
+			<value level="5">96</value>
+			<value level="6">99</value>
+			<value level="7">101</value>
+			<value level="8">103</value>
+			<value level="9">105</value>
+		</magicLvl>
+		<lvlBonusRate>20</lvlBonusRate>
+		<mpConsume>1</mpConsume>
+		<effectPoint>-711</effectPoint>
+		<effectRange>900</effectRange>
 		<isDebuff>true</isDebuff>
+		<basicProperty>NONE</basicProperty>
+		<hitTime>2000</hitTime>
+		<hitCancelTime>0</hitCancelTime>
+		<trait>ZONE</trait>
+		<targetType>GROUND</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<channelingStart>1</channelingStart>
 		<effects>
 			<effect name="SummonNpc">
 				<npcId>
@@ -51,6 +79,8 @@
 					<value level="9">13549</value>
 				</npcId>
 				<npcCount>1</npcCount>
+				<despawnDelay>15000</despawnDelay>
+				<singleInstance>true</singleInstance>
 			</effect>
 		</effects>
 	</skill>
@@ -111,11 +141,12 @@
 				</power>
 				<ticks>1</ticks>
 			</effect>
+			<effect name="Mute" />
 			<effect name="BlockSkill">
 				<magicTypes>1</magicTypes>
 			</effect>
-			<effect name="PAtk">
-				<amount>-23</amount>
+			<effect name="PhysicalAttackSpeed">
+				<amount>-30</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="Speed">
@@ -126,15 +157,12 @@
 				<amount>-50</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="AddHate">
-				<power>1000</power>
-			</effect>
 			<effect name="MagicalDefence">
-				<amount>-10</amount>
+				<amount>-30</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PhysicalDefence">
-				<amount>-10</amount>
+				<amount>-30</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -151,11 +179,10 @@
 			<value level="6">6</value>
 			<value level="7">7</value>
 		</abnormalLvl>
-		<abnormalTime>15</abnormalTime>
-		<abnormalType>BLEEDING</abnormalType>
-		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
-		<activateRate>120</activateRate>
-		<trait>BLEED</trait>
+		<abnormalTime>3</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<activateRate>80</activateRate>
 		<operateType>DA5</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -180,7 +207,8 @@
 		</mpConsume>
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
-		<reuseDelay>5000</reuseDelay>
+		<reuseDelay>6000</reuseDelay>
+		<staticReuse>true</staticReuse>
 		<effectPoint>-709</effectPoint>
 		<isDebuff>true</isDebuff>
 		<nextAction>ATTACK</nextAction>
@@ -192,6 +220,12 @@
 				</weaponType>
 			</condition>
 		</conditions>
+		<selfEffects>
+			<effect name="CallSkill">
+				<skillId>19304</skillId> <!-- Easterly Wind Strike -->
+				<skillLevel>1</skillLevel>
+			</effect>
+		</selfEffects>
 		<effects>
 			<effect name="FatalBlow">
 				<power>
@@ -214,6 +248,9 @@
 				<power>-70</power>
 				<ticks>5</ticks>
 			</effect>
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;30516</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="19304" toLevel="1" name="Easterly Wind Strike">
@@ -227,6 +264,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<isTriggeredSkill>true</isTriggeredSkill>
+		<reuseDelayGroup>10705</reuseDelayGroup>
 		<effects>
 			<effect name="CriticalDamagePosition">
 				<amount>20</amount>
@@ -520,6 +558,14 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<isMagic>1</isMagic>
 		<effects>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
 			<effect name="PvpPhysicalAttackDefenceBonus">
 				<amount>5</amount>
 				<mode>PER</mode>

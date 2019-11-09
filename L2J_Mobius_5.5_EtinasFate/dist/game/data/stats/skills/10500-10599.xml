@@ -1305,7 +1305,6 @@
 		<coolTime>400</coolTime>
 		<effectPoint>687</effectPoint>
 		<reuseDelay>120000</reuseDelay>
-		<removedOnAnyActionExceptMove>true</removedOnAnyActionExceptMove>
 		<removedOnDamage>true</removedOnDamage>
 		<basicProperty>NONE</basicProperty>
 		<targetType>SELF</targetType>
@@ -1584,13 +1583,16 @@
 				<ticks>1</ticks>
 			</effect>
 			<effect name="Mute" />
+			<effect name="BlockSkill">
+				<magicTypes>1</magicTypes>
+			</effect>
 			<effect name="PAtk">
 				<amount>-23</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="Speed">
 				<amount>-50</amount>
-				<mode>PER</mode>
+				<mode>DIFF</mode>
 			</effect>
 			<effect name="MagicalDefence">
 				<amount>-10</amount>

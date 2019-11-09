@@ -487,8 +487,8 @@
 					<value level="6">0</value>
 					<value level="7">0</value>
 					<value level="8">0</value>
-					<value level="9">1000</value>
-					<value level="10">2000</value>
+					<value level="9">5000</value>
+					<value level="10">7000</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -552,7 +552,7 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>45</abnormalTime>
 		<operateType>A2</operateType>
-		<targetType>TARGET</targetType>
+		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<hitTime>300</hitTime>
 		<coolTime>300</coolTime>
@@ -602,7 +602,7 @@
 			<value level="4">600</value>
 		</abnormalTime>
 		<operateType>A2</operateType>
-		<targetType>TARGET</targetType>
+		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<hitTime>300</hitTime>
 		<coolTime>300</coolTime>
@@ -656,7 +656,7 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>45</abnormalTime>
 		<operateType>A2</operateType>
-		<targetType>TARGET</targetType>
+		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<hitTime>300</hitTime>
 		<coolTime>300</coolTime>
@@ -700,7 +700,7 @@
 		</effects>
 	</skill>
 	<skill id="28147" toLevel="3" name="Sayha's Support">
-		<!-- Recovers HP by $s1, MP by $s2, and CP by $s3. -->
+		<!-- Recovers HP by 20%, MP by 20%, and CP by 30%. -->
 		<icon>icon.bm_sayhas_talisman</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -722,14 +722,14 @@
 					<value level="3">30</value>
 				</power>
 			</effect>
-			<effect name="CpHealPercent">
+			<effect name="ManaHealPercent">
 				<power>
 					<value level="1">20</value>
 					<value level="2">20</value>
 					<value level="3">30</value>
 				</power>
 			</effect>
-			<effect name="ManaHealPercent">
+			<effect name="CpHealPercent">
 				<power>
 					<value level="1">30</value>
 					<value level="2">30</value>

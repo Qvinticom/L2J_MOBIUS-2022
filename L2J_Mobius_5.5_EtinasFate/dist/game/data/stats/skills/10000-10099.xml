@@ -4087,7 +4087,7 @@
 			<value level="9">9</value>
 			<value level="10">10</value>
 		</abnormalLvl>
-		<abnormalTime>10</abnormalTime>
+		<abnormalTime>5</abnormalTime>
 		<affectRange>1000</affectRange>
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<operateType>A2</operateType>
@@ -4139,8 +4139,13 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
+			<effect name="DispelByCategory">
+				<slot>DEBUFF</slot>
+				<rate>100</rate>
+				<max>10</max>
+			</effect>
 			<effect name="DamageShield">
-				<amount>25</amount>
+				<amount>5</amount>
 			</effect>
 		</effects>
 	</skill>
@@ -5609,51 +5614,67 @@
 		<operateType>P</operateType>
 		<isMagic>1</isMagic>
 		<effects>
+			<effect name="HealOverTime">
+				<power>25</power>
+				<ticks>1</ticks>
+			</effect>
+			<effect name="Speed">
+				<amount>150</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="ResistAbnormalByCategory">
+				<amount>-100</amount>
+				<slot>DEBUFF</slot>
+			</effect>
+			<effect name="DebuffBlock" />
+			<effect name="ResistDispelByCategory">
+				<amount>-100</amount>
+				<slot>ALL</slot>
+			</effect>
 			<effect name="TriggerSkillByAttack">
-				<!-- Guessed -->
-				<!-- Death Touch -->
+				<skillId>10096</skillId> <!-- Blood Chase -->
+				<skillLevel>1</skillLevel>
 				<isCritical>false</isCritical>
 				<chance>30</chance>
 				<targetType>ENEMY</targetType>
 				<affectScope>SINGLE</affectScope>
-				<skillId>10096</skillId> <!-- Blood Chase -->
-				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="TriggerSkillByAttack">
-				<!-- Guessed -->
-				<!-- Death Touch -->
 				<skillId>10096</skillId> <!-- Blood Chase -->
 				<skillLevel>1</skillLevel>
-				<targetType>ENEMY</targetType>
-				<affectScope>SINGLE</affectScope>
 				<isCritical>true</isCritical>
 				<chance>15</chance>
+				<targetType>ENEMY</targetType>
+				<affectScope>SINGLE</affectScope>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="10096" toLevel="1" name="Blood Chase">
 		<!-- For 3 sec., Movement Speed -80 as chased by the Blood Panther and P. Critical Damage Received +30%. -->
 		<icon>icon.skill11853</icon>
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>10</abnormalTime> <!-- Guessed -->
-		<abnormalType>T_CRT_DMG_UP</abnormalType>
-		<activateRate>90</activateRate> <!-- Guessed -->
-		<basicProperty>PHYSICAL</basicProperty> <!-- Guessed -->
-		<isTriggeredSkill>true</isTriggeredSkill>
 		<operateType>A2</operateType>
-		<targetType>ENEMY</targetType>
-		<affectScope>SINGLE</affectScope>
-		<mpConsume>1</mpConsume>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3</abnormalTime>
+		<abnormalType>T_CRT_DMG_UP</abnormalType>
+		<activateRate>80</activateRate>
+		<basicProperty>PHYSICAL</basicProperty>
+		<isTriggeredSkill>true</isTriggeredSkill>
 		<castRange>100</castRange>
 		<hitTime>500</hitTime>
 		<coolTime>100</coolTime>
 		<isMagic>4</isMagic>
 		<effectPoint>-671</effectPoint>
 		<isDebuff>true</isDebuff>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="DefenceCriticalDamage">
-				<amount>35</amount>
+				<amount>-35</amount>
 				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>-80</amount>
+				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
