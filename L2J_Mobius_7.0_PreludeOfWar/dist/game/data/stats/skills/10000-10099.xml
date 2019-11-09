@@ -6007,7 +6007,7 @@
 		</effects>
 	</skill>
 	<skill id="10099" toLevel="5" name="Avenger's Frenzy">
-		<!-- For $s1, Shield Def. +$s2, M. Def. +$s3, Atk. Spd. +$s4, Speed +$s5, P. Critical Rate/ P. Critical Damage +$s6, and Damage Reflectionion +$s7. -->
+		<!-- For 1 min., Shield Defense +90%, M. Def. +100%, Atk. Spd. +15%, Speed +70, P. Critical Rate/ Damage +60%, Damage Reflection +25%. -->
 		<icon>icon.skill10099</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -6071,10 +6071,6 @@
 					<value level="5">35</value>
 				</amount>
 				<mode>PER</mode>
-				<weaponType>
-					<item>SWORD</item>
-					<item>BLUNT</item>
-				</weaponType>
 			</effect>
 			<effect name="Speed">
 				<amount>70</amount>
@@ -6097,10 +6093,6 @@
 					<value level="5">65</value>
 				</amount>
 				<mode>PER</mode>
-				<weaponType>
-					<item>SWORD</item>
-					<item>BLUNT</item>
-				</weaponType>
 			</effect>
 			<effect name="CriticalDamage">
 				<amount>
