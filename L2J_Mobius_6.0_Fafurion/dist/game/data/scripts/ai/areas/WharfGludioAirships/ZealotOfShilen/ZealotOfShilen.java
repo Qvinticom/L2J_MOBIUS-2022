@@ -54,7 +54,7 @@ public class ZealotOfShilen extends AbstractNpcAI
 			return null;
 		}
 		
-		if (event.equals("WATCHING") && !npc.isAttackingNow() && !npc.isAlikeDead())
+		if (!npc.isAttackingNow() && !npc.isAlikeDead())
 		{
 			Npc nearby = null;
 			double maxDistance = Double.MAX_VALUE;
@@ -73,7 +73,6 @@ public class ZealotOfShilen extends AbstractNpcAI
 				((Attackable) npc).addDamageHate(nearby, 0, 999);
 				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, nearby, null);
 			}
-			startQuestTimer("WATCHING", 10000, npc, null);
 		}
 		
 		return super.onAdvEvent(event, npc, player);
@@ -97,7 +96,7 @@ public class ZealotOfShilen extends AbstractNpcAI
 			npc.setIsInvul(true);
 			((Attackable) npc).setCanReturnToSpawnPoint(false);
 			cancelQuestTimer("WATCHING", npc, null);
-			startQuestTimer("WATCHING", 10000, npc, null);
+			startQuestTimer("WATCHING", 10000, npc, null, true);
 		}
 		return super.onSpawn(npc);
 	}
