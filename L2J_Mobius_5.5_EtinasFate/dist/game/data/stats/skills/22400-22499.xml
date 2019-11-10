@@ -605,19 +605,19 @@
 	<skill id="22415" toLevel="1" name="Halloween Cookie">
 		<!-- Increases Speed by 33 for 60 min. -->
 		<icon>BranchSys3.Icon.ev_halloween_cookie</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>SIGNAL_D</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effectPoint>1</effectPoint>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
-		<effectPoint>100</effectPoint>
-		<abnormalType>PA_PD_UP</abnormalType>
+		<reuseDelay>7200000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
-		<specialLevel>-1</specialLevel>
-		<hitCancelTime>0</hitCancelTime>
-		<abnormalLvl>4</abnormalLvl>
-		<abnormalTime>3600</abnormalTime>
-		<irreplacableBuff>true</irreplacableBuff>
+		<hitTime>4000</hitTime>
 		<staticReuse>true</staticReuse>
-		<isMagic>2</isMagic>
-		<reuseDelay>3600000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<itemConsumeId>22385</itemConsumeId>

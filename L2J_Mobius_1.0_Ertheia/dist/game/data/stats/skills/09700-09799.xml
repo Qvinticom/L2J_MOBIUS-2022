@@ -1709,14 +1709,17 @@
 		</effects>
 	</skill>
 	<skill id="9750" toLevel="1" name="Vitality Replenishing Potion">
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>14055</itemConsumeId> <!-- Vitality Replenishing Potion -->
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<reuseDelay>3600000</reuseDelay>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>1</magicLvl>
 		<staticReuse>true</staticReuse>
-		<isMagic>2</isMagic>
-		<reuseDelay>3600000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -1724,8 +1727,8 @@
 			<condition name="CanUseVitalityConsumeItem" />
 		</conditions>
 		<effects>
-			<effect name="VitalityPointsRate">
-				<amount>-10</amount>
+			<effect name="VitalityPointUp">
+				<value>15000</value>
 			</effect>
 		</effects>
 	</skill>

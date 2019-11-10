@@ -764,21 +764,21 @@
 		<set name="blessed" val="2" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
+		<set name="is_destroyable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_premium" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_private_storeable" val="true" />
 		<set name="time" val="10080" />
 		<skills>
 			<skill id="839" level="1" type="ON_UNEQUIP" /> <!-- Dismount -->
 			<skill id="8246" level="1" /> <!-- Transform Pumpkin Ghost -->
 		</skills>
 		<stats>
-			<stat type="pAtk">1</stat>
-			<stat type="mAtk">1</stat>
+			<stat type="pAtk">454</stat> <!-- By retail 1. Increased to make it more interesting to players. -->
+			<stat type="mAtk">367</stat> <!-- By retail 1. Increased to make it more interesting to players. -->
 			<stat type="pAtkSpd">379</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="randomDamage">10</stat>
@@ -920,8 +920,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="240" />
 		<skills>
-			<skill id="8369" level="1" /> <!-- Halloween Pumpkin Card -->
-			<skill id="8370" level="1" /> <!-- Rotten Pumpkin Card -->
+		<!-- <skill id="8369" level="1" /> --> <!-- Halloween Pumpkin Card -->
+		<!-- <skill id="8370" level="1" /> --> <!-- Rotten Pumpkin Card -->
 			<skill id="8372" level="1" /> <!-- Super Strong Giant's Mask -->
 		</skills>
 	</item>
@@ -943,8 +943,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="240" />
 		<skills>
-			<skill id="8369" level="1" /> <!-- Halloween Pumpkin Card -->
-			<skill id="8370" level="1" /> <!-- Rotten Pumpkin Card -->
+		<!-- <skill id="8369" level="1" /> --> <!-- Halloween Pumpkin Card -->
+		<!-- <skill id="8370" level="1" /> --> <!-- Rotten Pumpkin Card -->
 			<skill id="8373" level="1" /> <!-- Shriek Mask -->
 		</skills>
 	</item>
@@ -966,8 +966,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="240" />
 		<skills>
-			<skill id="8369" level="1" /> <!-- Halloween Pumpkin Card -->
-			<skill id="8370" level="1" /> <!-- Rotten Pumpkin Card -->
+		<!-- <skill id="8369" level="1" /> --> <!-- Halloween Pumpkin Card -->
+		<!-- <skill id="8370" level="1" /> --> <!-- Rotten Pumpkin Card -->
 			<skill id="8374" level="1" /> <!-- Red Devil Mask -->
 		</skills>
 	</item>
@@ -989,8 +989,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="240" />
 		<skills>
-			<skill id="8369" level="1" /> <!-- Halloween Pumpkin Card -->
-			<skill id="8370" level="1" /> <!-- Rotten Pumpkin Card -->
+		<!-- <skill id="8369" level="1" /> --> <!-- Halloween Pumpkin Card -->
+		<!-- <skill id="8370" level="1" /> --> <!-- Rotten Pumpkin Card -->
 			<skill id="8375" level="1" /> <!-- Mummy Mask -->
 		</skills>
 	</item>
@@ -1012,8 +1012,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="240" />
 		<skills>
-			<skill id="8369" level="1" /> <!-- Halloween Pumpkin Card -->
-			<skill id="8370" level="1" /> <!-- Rotten Pumpkin Card -->
+		<!-- <skill id="8369" level="1" /> --> <!-- Halloween Pumpkin Card -->
+		<!-- <skill id="8370" level="1" /> --> <!-- Rotten Pumpkin Card -->
 			<skill id="8376" level="1" /> <!-- Planet X235 Alien Mask's Effect -->
 		</skills>
 	</item>
@@ -1303,7 +1303,6 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="is_stackable" val="true" />
 		<skills>
 			<skill id="9070" level="1" /> <!-- Halloween Pumpkin -->
 		</skills>
