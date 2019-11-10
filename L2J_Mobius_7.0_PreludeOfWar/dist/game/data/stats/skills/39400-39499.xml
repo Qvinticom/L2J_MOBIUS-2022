@@ -8,6 +8,18 @@
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>15000</reuseDelay>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ExpModify">
+				<amount>100</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>100</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39401" toLevel="1" name="White Potion">
 		<!-- For 30 min., Max HP/ MP/ CP +30%, P. Atk./ M. Atk./ P. Def./ M. Def. +30%, Atk./ Casting Spd. +10%, Speed +20, Attack Attribute/ Attribute Resistance +100, Skill MP Consumption -15%. Additionally acquired XP/ SP +30%. Cooldown is 5 min. The effect remains after dual class changing. Cannot be used in the Olympiad and the Ceremony of Chaos. -->
