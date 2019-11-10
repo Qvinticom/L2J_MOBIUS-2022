@@ -2455,6 +2455,8 @@ public class Config
 			ALT_OLY_BATTLE = Olympiad.getLong("AltOlyBattle", 360000);
 			ALT_OLY_WPERIOD = Olympiad.getLong("AltOlyWPeriod", 604800000);
 			ALT_OLY_VPERIOD = Olympiad.getLong("AltOlyVPeriod", 86400000);
+			ALT_OLY_START_POINTS = Olympiad.getInt("AltOlyStartPoints", 10);
+			ALT_OLY_WEEKLY_POINTS = Olympiad.getInt("AltOlyWeeklyPoints", 10);
 			ALT_OLY_CLASSED = Olympiad.getInt("AltOlyClassedParticipants", 5);
 			ALT_OLY_NONCLASSED = Olympiad.getInt("AltOlyNonClassedParticipants", 9);
 			ALT_OLY_REG_DISPLAY = Olympiad.getInt("AltOlyRegistrationDisplayNumber", 100);
