@@ -1477,8 +1477,13 @@
 		<basicProperty>NONE</basicProperty>
 		<hitCancelTime>0</hitCancelTime>
 		<reuseDelay>300000</reuseDelay>
-		<targetType>SELF</targetType>
+		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="TargetMyParty">
+				<includeMe>false</includeMe>
+			</condition>
+		</conditions>
 		<effects>
 			<effect name="TransferDamageToPlayer">
 				<amount>
@@ -1493,14 +1498,16 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
+		</effects>
+		<selfEffects>
 			<effect name="CallSkill">
 				<skillId>10022</skillId> <!-- Last Patience -->
 				<skillLevel>1</skillLevel>
 			</effect>
-		</effects>
+		</selfEffects>
 	</skill>
 	<skill id="10019" toLevel="7" name="Protection of Faith">
-		<!-- For $s1, reduces the maximum damage received by party members to approximately $s2 depending on your P. Def. Speed +$s3. Makes you immune to obstruction and confusion. The effect cannot be stacked with the same effect or Nine Aegis. When it is over, the Limit of Sigel effect is applied. Requires a shield. -->
+		<!-- For 15 sec., reduces the maximum damage received by party members to approximately 1000 depending on your P. Def. Speed +80. Makes you immune to obstruction and confusion. The effect cannot be stacked with the same effect or Nine Aegis. When it is over, the Limit of Sigel effect is applied. Requires a shield. -->
 		<icon>icon.skill10019</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>2</abnormalLvl>
@@ -1554,41 +1561,34 @@
 			<effect name="TransferDamageToPlayer">
 				<amount>90</amount>
 			</effect>
-			<effect name="MagicalDefence">
+			<effect name="GetDamageLimit">
 				<amount>
-					<value level="1">5000</value>
-					<value level="2">7000</value>
-					<value level="3">8000</value>
-					<value level="4">9000</value>
-					<value level="5">10000</value>
-					<value level="6">10000</value>
-					<value level="7">10000</value>
+					<value level="1">1000</value>
+					<value level="2">900</value>
+					<value level="3">850</value>
+					<value level="4">800</value>
+					<value level="5">750</value>
+					<value level="6">700</value>
+					<value level="7">650</value>
 				</amount>
-				<mode>DIFF</mode>
 			</effect>
-			<effect name="PhysicalDefence">
-				<amount>
-					<value level="1">5000</value>
-					<value level="2">10000</value>
-					<value level="3">11000</value>
-					<value level="4">12000</value>
-					<value level="5">13000</value>
-					<value level="6">14000</value>
-					<value level="7">15000</value>
-				</amount>
-				<mode>DIFF</mode>
+			<effect name="DefenceTrait"> <!-- CONFUSION RESISTANCE -->
+				<AGGRESSION>100</AGGRESSION>
+				<SHOCK>100</SHOCK>
+				<AIRBIND>100</AIRBIND>
+				<KNOCKDOWN>100</KNOCKDOWN>
+				<KNOCKBACK>100</KNOCKBACK>
+				<PARALYZE>100</PARALYZE>
+				<PULL>100</PULL>
 			</effect>
-			<effect name="ResistAbnormalByCategory">
-				<amount>
-					<value level="1">-50</value>
-					<value level="2">-70</value>
-					<value level="3">-70</value>
-					<value level="4">-70</value>
-					<value level="5">-70</value>
-					<value level="6">-70</value>
-					<value level="7">-70</value>
-				</amount>
-				<slot>DEBUFF</slot>
+			<effect name="DefenceTrait"> <!-- OBSTRUTION RESISTANCE -->
+				<DISARM>100</DISARM>
+				<DERANGEMENT>100</DERANGEMENT>
+				<DEPORT>100</DEPORT>
+			</effect>
+			<effect name="Speed">
+				<amount>80</amount>
+				<mode>DIFF</mode>
 			</effect>
 			<effect name="Speed" fromLevel="1" toLevel="7" fromSubLevel="2001" toSubLevel="2020">
 				<amount>
