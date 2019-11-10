@@ -329,8 +329,6 @@ public class AdminEditChar implements IAdminCommandHandler
 					final PlayerInstance player = (PlayerInstance) target;
 					player.setRecomHave(recVal);
 					player.broadcastUserInfo();
-					player.sendPacket(new UserInfo(player));
-					player.sendPacket(new ExBrExtraUserInfo(player));
 					if (Config.NEVIT_ENABLED)
 					{
 						player.sendPacket(new ExVoteSystemInfo(player));
