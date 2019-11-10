@@ -233,7 +233,8 @@
 		<!-- Dimensional item. a Helios Shaper whose grade penalty condition has been eased by Paulina's Blessing. No grade penalty from Lv. 85. <Special option>. Atk. Spd. +15%, P. Critical Rate +50, P. Critical Damage +10%, Max HP +15%, PvE Damage +10%. No Enchantment, Augment, Soul Crystal, Crystallization, Appearance Modification, or Attribute Assignment allowed. -->
 		<set name="icon" val="icon.bm_polyne_R99_1_dagger" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DUAL" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="DAGGER" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
@@ -244,6 +245,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="35266" level="1" /> <!-- Paulina's Battle Enhancement Blessing -->
+		</skills>
 		<stats>
 			<stat type="pAtk">629</stat>
 			<stat type="mAtk">312</stat>
@@ -258,6 +263,7 @@
 		<!-- Dimensional item. a Helios Cutter whose grade penalty condition has been eased by Paulina's Blessing. No grade penalty from Lv. 85. <Special option>. Atk. Spd. +15%, P. Critical Rate +100, P. Critical Damage +5%, Max HP +15%, PvE Damage +10%. No Enchantment, Augment, Soul Crystal, Crystallization, Appearance Modification, or Attribute Assignment allowed. -->
 		<set name="icon" val="icon.bm_polyne_R99_onehand_sword" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
@@ -269,6 +275,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="35267" level="1" /> <!-- Paulina's Battle Enhancement Blessing -->
+		</skills>
 		<stats>
 			<stat type="pAtk">719</stat>
 			<stat type="mAtk">312</stat>
@@ -282,8 +292,8 @@
 		<!-- Dimensional item. a Helios Slasher whose grade penalty condition has been eased by Paulina's Blessing. No grade penalty from Lv. 85. <Special option>. Atk. Spd. +15%, P. Critical Rate +100, P. Critical Damage +5%, Max HP +15%, PvE Damage +10%. No Enchantment, Augment, Soul Crystal, Crystallization, Appearance Modification, or Attribute Assignment allowed. -->
 		<set name="icon" val="icon.bm_polyne_R99_twohand_sword" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
@@ -294,6 +304,10 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="35267" level="1" /> <!-- Paulina's Battle Enhancement Blessing -->
+		</skills>
 		<stats>
 			<stat type="pAtk">875</stat>
 			<stat type="mAtk">312</stat>
@@ -307,7 +321,8 @@
 		<!-- Dimensional item. a Helios Avenger whose grade penalty condition has been eased by Paulina's Blessing. No grade penalty from Lv. 85. <Special option>. Atk. Spd. +15%, P. Critical Rate +100, P. Critical Damage +5%, Max HP +15%, PvE Damage +10%. No Enchantment, Augment, Soul Crystal, Crystallization, Appearance Modification, or Attribute Assignment allowed. -->
 		<set name="icon" val="icon.bm_polyne_R99_onehand_blunt" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="POLE" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="FINE_STEEL" />
@@ -318,9 +333,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="damage_range" val="0;0;66;120" />
+		<set name="damage_range" val="0;0;40;120" />
 		<skills>
-			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+			<skill id="35267" level="1" /> <!-- Paulina's Battle Enhancement Blessing -->
 		</skills>
 		<stats>
 			<stat type="pAtk">719</stat>
@@ -335,8 +350,8 @@
 		<!-- Dimensional item. a Helios Fighter whose grade penalty condition has been eased by Paulina's Blessing. No grade penalty from Lv. 85. <Special option>. Atk. Spd. +15%, P. Critical Rate +100, P. Critical Damage +5%, Max HP +15%, PvE Damage +10%. No Enchantment, Augment, Soul Crystal, Crystallization, Appearance Modification, or Attribute Assignment allowed. -->
 		<set name="icon" val="icon.bm_polyne_R99_fist" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DUALFIST" />
 		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
@@ -348,6 +363,10 @@
 		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="FIST_WEAPON" />
+		<set name="damage_range" val="0;0;32;120" />
+		<skills>
+			<skill id="35267" level="1" /> <!-- Paulina's Battle Enhancement Blessing -->
+		</skills>
 		<stats>
 			<stat type="pAtk">875</stat>
 			<stat type="mAtk">312</stat>
@@ -362,8 +381,8 @@
 		<!-- Dimensional item. a Helios Stormer whose grade penalty condition has been eased by Paulina's Blessing. No grade penalty from Lv. 85. <Special option>. Atk. Spd. +15%, P. Critical Rate +100, P. Critical Damage +5%, Max HP +15%, PvE Damage +10%. No Enchantment, Augment, Soul Crystal, Crystallization, Appearance Modification, or Attribute Assignment allowed. -->
 		<set name="icon" val="icon.bm_polyne_R99_spear" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="POLE" />
 		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="POLE" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="BRONZE" />
@@ -376,6 +395,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="SPEAR" />
 		<set name="damage_range" val="0;0;66;120" />
+		<skills>
+			<skill id="35267" level="1" /> <!-- Paulina's Battle Enhancement Blessing -->
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+		</skills>
 		<stats>
 			<stat type="pAtk">719</stat>
 			<stat type="mAtk">312</stat>
@@ -390,8 +413,8 @@
 		<!-- Dimensional item. a Helios Thrower whose grade penalty condition has been eased by Paulina's Blessing. No grade penalty from Lv. 85. <Special option>. Atk. Spd. +15%, P. Critical Rate +50, P. Critical Damage +10%, Max HP +15%, PvE Damage +10%. No Enchantment, Augment, Soul Crystal, Crystallization, Appearance Modification, or Attribute Assignment allowed. -->
 		<set name="icon" val="icon.bm_polyne_R99_bow" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BOW" />
 		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BOW" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
@@ -404,6 +427,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="reuse_delay" val="1500" />
 		<set name="commissionItemType" val="BOW" />
+		<set name="damage_range" val="0;0;10;0" />
+		<skills>
+			<skill id="35266" level="1" /> <!-- Paulina's Battle Enhancement Blessing -->
+		</skills>
 		<stats>
 			<stat type="pAtk">1415</stat>
 			<stat type="mAtk">312</stat>
@@ -418,8 +445,8 @@
 		<!-- Dimensional item. a Helios Shooter whose grade penalty condition has been eased by Paulina's Blessing. No grade penalty from Lv. 85. <Special option>. Atk. Spd. +15%, P. Critical Rate +50, P. Critical Damage +10%, Max HP +15%, PvE Damage +10%. No Enchantment, Augment, Soul Crystal, Crystallization, Appearance Modification, or Attribute Assignment allowed. -->
 		<set name="icon" val="icon.bm_polyne_R99_crossbow" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="TWOHANDCROSSBOW" />
 		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="TWOHANDCROSSBOW" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
@@ -430,6 +457,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="reuse_delay" val="1350" />
 		<set name="commissionItemType" val="CROSSBOW" />
+		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="35266" level="1" /> <!-- Paulina's Battle Enhancement Blessing -->
+		</skills>
 		<stats>
 			<stat type="pAtk">1274</stat>
 			<stat type="mAtk">312</stat>
@@ -444,6 +475,7 @@
 		<!-- Dimensional item. a Helios Buster whose grade penalty condition has been eased by Paulina's Blessing. No grade penalty from Lv. 85. <Special option>. Casting Spd. +15%, M. Critical Rate +50, M. Critical Damage +10%, Max HP +15%, PvE Damage +10%. No Enchantment, Augment, Soul Crystal, Crystallization, Appearance Modification, or Attribute Assignment allowed. -->
 		<set name="icon" val="icon.bm_polyne_R99_1_onehand_magic_sword" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
@@ -457,6 +489,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="35268" level="1" /> <!-- Paulina's Battle Enhancement Blessing -->
+		</skills>
 		<stats>
 			<stat type="pAtk">575</stat>
 			<stat type="mAtk">417</stat>
@@ -469,6 +505,7 @@
 		<!-- Dimensional item. a Helios Caster whose grade penalty condition has been eased by Paulina's Blessing. No grade penalty from Lv. 85. <Special option>. Casting Spd. +15%, M. Critical Rate +50, M. Critical Damage +10%, Max HP +15%, PvE Damage +10%. No Enchantment, Augment, Soul Crystal, Crystallization, Appearance Modification, or Attribute Assignment allowed. -->
 		<set name="icon" val="icon.bm_polyne_R99_onehand_magic_blunt" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
@@ -482,6 +519,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="35268" level="1" /> <!-- Paulina's Battle Enhancement Blessing -->
+		</skills>
 		<stats>
 			<stat type="pAtk">575</stat>
 			<stat type="mAtk">417</stat>
@@ -496,8 +537,8 @@
 		<!-- Dimensional item. a Helios Retributer whose grade penalty condition has been eased by Paulina's Blessing. No grade penalty from Lv. 85. <Special option>. Atk. Spd./ Casting Spd. +15%, P. Critical Damage +10%, M. Critical Damage +10%, Max HP +15%, PvE Damage +10%. No Enchantment, Augment, Soul Crystal, Crystallization, Appearance Modification, or Attribute Assignment allowed. -->
 		<set name="icon" val="icon.bm_polyne_R99_twohand_magic_blunt" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="WOOD" />
@@ -510,6 +551,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="TWO_HAND_BLUNT_WEAPON" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="35269" level="1" /> <!-- Paulina's Battle Enhancement Blessing -->
+		</skills>
 		<stats>
 			<stat type="pAtk">700</stat>
 			<stat type="mAtk">458</stat>
@@ -524,8 +569,8 @@
 		<!-- Dimensional item. a Helios Dual Sword whose grade penalty condition has been eased by Paulina's Blessing. No grade penalty from Lv. 85. <Special option>. Atk. Spd. +15%, P. Critical Rate +100, P. Critical Damage +5%, Max HP +15%, PvE Damage +10%. No Enchantment, Augment, Soul Crystal, Crystallization, Appearance Modification, or Attribute Assignment allowed. -->
 		<set name="icon" val="icon.bm_polyne_R99_dual_sword" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DUAL" />
 		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
@@ -537,6 +582,10 @@
 		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="35267" level="1" /> <!-- Paulina's Battle Enhancement Blessing -->
+		</skills>
 		<stats>
 			<stat type="pAtk">875</stat>
 			<stat type="mAtk">312</stat>
@@ -550,8 +599,8 @@
 		<!-- Dimensional item. a Helios Dual Dagger whose grade penalty condition has been eased by Paulina's Blessing Dual Dagger. No grade penalty from Lv. 85. <Special option>. Atk. Spd. +15%, P. Critical Rate +50, P. Critical Damage +10%, Max HP +15%, PvE Damage +10%. No Enchantment, Augment, Soul Crystal, Crystallization, Appearance Modification, or Attribute Assignment allowed. -->
 		<set name="icon" val="icon.bm_polyne_R99_dual_dagger" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
@@ -561,6 +610,10 @@
 		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="DUAL_DAGGER" />
+		<set name="damage_range" val="0;0;44;120" />
+		<skills>
+			<skill id="35266" level="1" /> <!-- Paulina's Battle Enhancement Blessing -->
+		</skills>
 		<stats>
 			<stat type="pAtk">719</stat>
 			<stat type="mAtk">312</stat>
@@ -575,8 +628,8 @@
 		<!-- Dimensional item. a Helios Dual Blunt Weapon whose grade penalty condition has been eased by Paulina's Blessing. No grade penalty from Lv. 85. <Special option>. Atk. Spd. +15%, P. Critical Rate +100, P. Critical Damage +5%, Max HP +15%, PvE Damage +10%. No Enchantment, Augment, Soul Crystal, Crystallization, Appearance Modification, or Attribute Assignment allowed. -->
 		<set name="icon" val="icon.bm_polyne_R99_1_dual_blunt" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DUALBLUNT" />
 		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUALBLUNT" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="FINE_STEEL" />
@@ -586,6 +639,10 @@
 		<set name="is_depositable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="DUAL_BLUNT_WEAPON" />
+		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="35267" level="1" /> <!-- Paulina's Battle Enhancement Blessing -->
+		</skills>
 		<stats>
 			<stat type="pAtk">875</stat>
 			<stat type="mAtk">312</stat>
