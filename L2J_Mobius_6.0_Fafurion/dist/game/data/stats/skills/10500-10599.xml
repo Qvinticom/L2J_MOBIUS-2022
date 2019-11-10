@@ -1626,8 +1626,8 @@
 					<value level="7">13452</value>
 					<value level="8">13453</value>
 					<value level="9">13454</value>
-					<value level="10">13454</value>
-					<value level="11">13454</value>
+					<value level="10">13576</value>
+					<value level="11">13577</value>
 				</npcId>
 				<npcCount>1</npcCount>
 			</effect>
@@ -2280,7 +2280,6 @@
 			<value level="8">55</value>
 			<value level="9">57</value>
 		</mpConsume>
-		<nextAction>ATTACK</nextAction>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
 		<hitTime>500</hitTime>
@@ -2321,11 +2320,11 @@
 					<value level="5">13455</value>
 					<value level="6">13456</value>
 					<value level="7">13457</value>
-					<value level="8">13457</value>
-					<value level="9">13457</value>
+					<value level="8">13578</value>
+					<value level="9">13579</value>
 				</npcId>
 				<npcCount>3</npcCount>
-				<despawnDelay>30000</despawnDelay>
+				<despawnDelay>17000</despawnDelay>
 			</effect>
 		</effects>
 		<endEffects>
@@ -3517,6 +3516,7 @@
 		<basicProperty>NONE</basicProperty>
 		<hitCancelTime>0</hitCancelTime>
 		<reuseDelay>1000</reuseDelay>
+		<nextAction>ATTACK</nextAction>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>

@@ -61,6 +61,19 @@ public class AreaSkillNpc extends AbstractNpcAI
 		13452, // Solo Dance
 		13453, // Solo Dance
 		13454, // Solo Dance
+		13576, // Solo Dance
+		13577, // Solo Dance
+		13541, // Solo Dance
+		13542, // Solo Dance
+		13543, // Solo Dance
+		13544, // Solo Dance
+		13545, // Solo Dance
+		13546, // Solo Dance
+		13547, // Solo Dance
+		13548, // Solo Dance
+		13549, // Solo Dance
+		13580, // Solo Dance
+		13581, // Solo Dance
 	};
 	private static final int[] DECOY = // ai_decoy
 	{

@@ -1611,6 +1611,12 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
+			<effect name="MagicalDefence" fromLevel="2" toLevel="3" fromSubLevel="3001" toSubLevel="3030">
+				<amount>
+					<value fromLevel="2" toLevel="3" fromSubLevel="3001" toSubLevel="3030">{0.6 + 0.4 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="10525" toLevel="7" name="Shadow Dash">
@@ -1879,7 +1885,7 @@
 			<value fromLevel="1" toLevel="4">600</value>
 			<value fromLevel="1" toLevel="4" fromSubLevel="2001" toSubLevel="2030">{base + 10 * subIndex}</value>
 		</castRange>
-		<castRange>1100</castRange>
+		<castRange>600</castRange>
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>300000</reuseDelay>
@@ -2063,7 +2069,6 @@
 			<value level="6">51</value>
 			<value level="7">53</value>
 		</mpConsume>
-		<nextAction>ATTACK</nextAction>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
 		<hitTime>3000</hitTime>
@@ -2079,7 +2084,6 @@
 		</effectPoint>
 		<reuseDelay>300000</reuseDelay>
 		<isMagic>4</isMagic>
-		<staticReuse>true</staticReuse>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -2105,7 +2109,7 @@
 					<value level="7">13457</value>
 				</npcId>
 				<npcCount>3</npcCount>
-				<despawnDelay>30000</despawnDelay>
+				<despawnDelay>17000</despawnDelay>
 			</effect>
 		</effects>
 		<endEffects>
@@ -2358,7 +2362,6 @@
 			<value level="11">-709</value>
 		</effectPoint>
 		<isDebuff>true</isDebuff>
-		<staticReuse>true</staticReuse>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -2419,6 +2422,7 @@
 			<value fromLevel="4" toLevel="8" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<operateType>A2</operateType>
+		<effectPoint>-709</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
 			<value level="1">85</value>
@@ -3295,6 +3299,7 @@
 		<basicProperty>NONE</basicProperty>
 		<hitCancelTime>0</hitCancelTime>
 		<reuseDelay>1000</reuseDelay>
+		<nextAction>ATTACK</nextAction>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -3342,7 +3347,7 @@
 			<effect name="CriticalRatePositionBonus">
 				<amount>
 					<value level="1">30</value>
-					<value level="1">40</value>
+					<value level="2">40</value>
 				</amount>
 				<mode>PER</mode>
 				<position>SIDE</position>
@@ -3350,7 +3355,7 @@
 			<effect name="CriticalRatePositionBonus">
 				<amount>
 					<value level="1">60</value>
-					<value level="1">70</value>
+					<value level="2">70</value>
 				</amount>
 				<mode>PER</mode>
 				<position>BACK</position>
@@ -3400,6 +3405,18 @@
 				<skillLevel>1</skillLevel>
 				<chance>80</chance>
 				<targetType>SELF</targetType>
+			</effect>
+			<effect name="PhysicalDefence" fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">
+				<amount>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{0.6 + 0.4 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">
+				<amount>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">{0.6 + 0.4 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -3453,6 +3470,18 @@
 		<effects>
 			<effect name="FatalBlowRate">
 				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence" fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">
+				<amount>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{0.6 + 0.4 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">
+				<amount>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">{0.6 + 0.4 * subIndex}</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>

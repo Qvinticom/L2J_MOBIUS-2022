@@ -2131,7 +2131,6 @@
 			<value level="6">51</value>
 			<value level="7">53</value>
 		</mpConsume>
-		<nextAction>ATTACK</nextAction>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
 		<hitTime>500</hitTime>
@@ -2172,7 +2171,7 @@
 					<value level="7">13457</value>
 				</npcId>
 				<npcCount>3</npcCount>
-				<despawnDelay>30000</despawnDelay>
+				<despawnDelay>17000</despawnDelay>
 			</effect>
 		</effects>
 		<endEffects>
@@ -3326,6 +3325,7 @@
 		<basicProperty>NONE</basicProperty>
 		<hitCancelTime>0</hitCancelTime>
 		<reuseDelay>1000</reuseDelay>
+		<nextAction>ATTACK</nextAction>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -3373,8 +3373,7 @@
 			<effect name="CriticalRatePositionBonus">
 				<amount>
 					<value level="1">30</value>
-					<value level="1">40</value>
-					<value level="2">40</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="2">40</value>
 				</amount>
 				<mode>PER</mode>
 				<position>SIDE</position>
@@ -3382,8 +3381,7 @@
 			<effect name="CriticalRatePositionBonus">
 				<amount>
 					<value level="1">60</value>
-					<value level="1">70</value>
-					<value level="2">70</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="2">70</value>
 				</amount>
 				<mode>PER</mode>
 				<position>BACK</position>

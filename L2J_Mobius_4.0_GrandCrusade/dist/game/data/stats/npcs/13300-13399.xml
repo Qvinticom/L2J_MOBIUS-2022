@@ -58,7 +58,6 @@
 		</collision>
 	</npc>
 	<npc id="13302" level="85" type="Doppelganger" name="Incarnation">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="10550" level="1" />
 			<skill name="Skill02_ID" id="10551" level="1" />
@@ -71,7 +70,7 @@
 				<walk ground="50" />
 				<run ground="131" />
 			</speed>
-			<attack physical="890.6666667" magical="247" critical="16" attackSpeed="623" range="40" type="FIST" distance="0" width="0" random="0" accuracy="4.75" />
+			<attack physical="890.6666667" magical="247" critical="16" attackSpeed="700" range="40" type="FIST" distance="5" width="5" random="0" accuracy="4.75" />
 			<defence physical="1120.6" magical="581.85" />
 			<attribute>
 				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
@@ -79,6 +78,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" hasSummoner="true" talkable="false" undying="false" />
+		<shots soul="1000" shotChance="100"/>
 		<skillList>
 			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
@@ -92,7 +92,6 @@
 		</collision>
 	</npc>
 	<npc id="13303" level="90" type="Doppelganger" name="Incarnation">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="10550" level="2" />
 			<skill name="Skill02_ID" id="10551" level="2" />
@@ -105,7 +104,7 @@
 				<walk ground="50" />
 				<run ground="131" />
 			</speed>
-			<attack physical="1076.566667" magical="301" critical="16" attackSpeed="623" range="40" type="FIST" distance="0" width="0" random="0" accuracy="4.75" />
+			<attack physical="1076.566667" magical="301" critical="16" attackSpeed="700" range="40" type="FIST" distance="5" width="5" random="0" accuracy="4.75" />
 			<defence physical="1236.65" magical="658.8" />
 			<attribute>
 				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
@@ -113,6 +112,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" hasSummoner="true" talkable="false" undying="false" />
+		<shots soul="1000" shotChance="100"/>
 		<skillList>
 			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
@@ -126,7 +126,6 @@
 		</collision>
 	</npc>
 	<npc id="13304" level="95" type="Doppelganger" name="Incarnation">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="10550" level="3" />
 			<skill name="Skill02_ID" id="10551" level="3" />
@@ -139,7 +138,7 @@
 				<walk ground="50" />
 				<run ground="131" />
 			</speed>
-			<attack physical="1320.9" magical="366" critical="16" attackSpeed="623" range="40" type="FIST" distance="0" width="0" random="0" accuracy="4.75" />
+			<attack physical="1320.9" magical="366" critical="16" attackSpeed="700" range="40" type="FIST" distance="5" width="5" random="0" accuracy="4.75" />
 			<defence physical="1364.85" magical="745.2" />
 			<attribute>
 				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
@@ -147,6 +146,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" hasSummoner="true" talkable="false" undying="false" />
+		<shots soul="1000" shotChance="100"/>
 		<skillList>
 			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
@@ -160,7 +160,6 @@
 		</collision>
 	</npc>
 	<npc id="13305" level="97" type="Doppelganger" name="Incarnation">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="10550" level="4" />
 			<skill name="Skill02_ID" id="10551" level="4" />
@@ -173,7 +172,7 @@
 				<walk ground="50" />
 				<run ground="131" />
 			</speed>
-			<attack physical="1487.133333" magical="396" critical="16" attackSpeed="623" range="40" type="FIST" distance="0" width="0" random="0" accuracy="4.75" />
+			<attack physical="1487.133333" magical="396" critical="16" attackSpeed="700" range="40" type="FIST" distance="5" width="5" random="0" accuracy="4.75" />
 			<defence physical="1419.5" magical="783" />
 			<attribute>
 				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
@@ -181,6 +180,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" hasSummoner="true" talkable="false" undying="false" />
+		<shots soul="1000" shotChance="100"/>
 		<skillList>
 			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
@@ -330,7 +330,6 @@
 		</collision>
 	</npc>
 	<npc id="13310" level="85" type="EffectPoint" name="Solo Dance">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="skill_delay" value="2" />
 			<param name="despawn_time" value="15" />
@@ -2416,7 +2415,6 @@
 		</collision>
 	</npc>
 	<npc id="13377" level="87" type="EffectPoint" name="Solo Dance">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="skill_delay" value="2" />
 			<param name="despawn_time" value="15" />
@@ -2451,7 +2449,6 @@
 		</collision>
 	</npc>
 	<npc id="13378" level="90" type="EffectPoint" name="Solo Dance">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="skill_delay" value="2" />
 			<param name="despawn_time" value="15" />
@@ -2486,7 +2483,6 @@
 		</collision>
 	</npc>
 	<npc id="13379" level="93" type="EffectPoint" name="Solo Dance">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="skill_delay" value="2" />
 			<param name="despawn_time" value="15" />
@@ -2521,7 +2517,6 @@
 		</collision>
 	</npc>
 	<npc id="13380" level="96" type="EffectPoint" name="Solo Dance">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="skill_delay" value="2" />
 			<param name="despawn_time" value="15" />
@@ -2556,7 +2551,6 @@
 		</collision>
 	</npc>
 	<npc id="13381" level="99" type="EffectPoint" name="Solo Dance">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="skill_delay" value="2" />
 			<param name="despawn_time" value="15" />

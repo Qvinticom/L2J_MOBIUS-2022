@@ -1209,87 +1209,129 @@
 			<height normal="9.5" />
 		</collision>
 	</npc>
-	<npc id="13576" level="85" type="Npc" name="Poison Swarm">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="1" />
-				<run ground="20" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="0.001" />
-			<height normal="0.001" />
-		</collision>
-	</npc>
-	<npc id="13577" level="85" type="Npc" name="Poison Swarm">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="1" />
-				<run ground="20" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="0.001" />
-			<height normal="0.001" />
-		</collision>
-	</npc>
-	<npc id="13578" level="85" type="Npc" name="Clone Attack">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="131" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="8.5" />
-			<height normal="25" />
-		</collision>
-	</npc>
-	<npc id="13579" level="85" type="Npc" name="Clone Attack">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="131" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="8.5" />
-			<height normal="25" />
-		</collision>
-	</npc>
-	<npc id="13580" level="107" type="EffectPoint" name="Istina Acid Swarm">
+	<npc id="13576" level="107" type="EffectPoint" name="Solo Dance">
 		<parameters>
 			<param name="skill_delay" value="2" />
 			<param name="despawn_time" value="15" />
-			<skill name="union_skill" id="19302" level="8" />
+			<skill name="union_skill" id="10523" level="10" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<speed>
+				<walk ground="1" />
+				<run ground="20" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" targetable="false" showName="false" />
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skillList>
+		<ai aggroRange="300" isAggressive="true" />
+		<collision>
+			<radius normal="0.001" />
+			<height normal="0.001" />
+		</collision>
+	</npc>
+	<npc id="13577" level="109" type="EffectPoint" name="Solo Dance">
+		<parameters>
+			<param name="skill_delay" value="2" />
+			<param name="despawn_time" value="15" />
+			<skill name="union_skill" id="10523" level="11" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<speed>
+				<walk ground="1" />
+				<run ground="20" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" targetable="false" showName="false" />
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skillList>
+		<ai aggroRange="300" isAggressive="true" />
+		<collision>
+			<radius normal="0.001" />
+			<height normal="0.001" />
+		</collision>
+	</npc>
+	<npc id="13578" level="107" type="Doppelganger" name="Incarnation">
+		<parameters>
+			<skill name="Skill01_ID" id="10550" level="8" />
+			<skill name="Skill02_ID" id="10551" level="8" />
+		</parameters>
+		<race>ETC</race>
+		<sex>ETC</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<speed>
+				<walk ground="50" />
+				<run ground="131" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="16" attackSpeed="700" range="40" type="FIST" distance="5" width="5" random="0" accuracy="4.75" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="true" hasSummoner="true" talkable="false" undying="false" />
+		<shots soul="1000" shotChance="100"/>
+		<skillList>
+			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="10550" level="8" /> <!-- Illusion Strike -->
+			<skill id="10551" level="8" /> <!-- Illusion Trick -->
+		</skillList>
+		<collision>
+			<radius normal="8.5" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="13579" level="109" type="Doppelganger" name="Incarnation">
+		<parameters>
+			<skill name="Skill01_ID" id="10550" level="9" />
+			<skill name="Skill02_ID" id="10551" level="9" />
+		</parameters>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<speed>
+				<walk ground="50" />
+				<run ground="131" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="16" attackSpeed="700" range="40" type="FIST" distance="5" width="5" random="0" accuracy="4.75" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="true" hasSummoner="true" talkable="false" undying="false" />
+		<shots soul="1000" shotChance="100"/>
+		<skillList>
+			<skill id="4416" level="19" /> <!-- Others -->
+			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="10550" level="9" /> <!-- Illusion Strike -->
+			<skill id="10551" level="9" /> <!-- Illusion Trick -->
+		</skillList>
+		<collision>
+			<radius normal="8.5" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="13580" level="107" type="EffectPoint" name="Solo Dance">
+		<parameters>
+			<param name="skill_delay" value="2" />
+			<param name="despawn_time" value="15" />
+			<skill name="union_skill" id="19302" level="10" />
 		</parameters>
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1311,18 +1353,18 @@
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="19302" level="8" /> <!-- Thrown Acid Sworm -->
+			<skill id="19302" level="10" /> <!-- Thrown Acid Sworm -->
 		</skillList>
 		<collision>
 			<radius normal="0.001" />
 			<height normal="0.001" />
 		</collision>
 	</npc>
-	<npc id="13581" level="109" type="EffectPoint" name="Istina Acid Swarm">
+	<npc id="13581" level="109" type="EffectPoint" name="Solo Dance">
 		<parameters>
 			<param name="skill_delay" value="2" />
 			<param name="despawn_time" value="15" />
-			<skill name="union_skill" id="19302" level="9" />
+			<skill name="union_skill" id="19302" level="11" />
 		</parameters>
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -1344,7 +1386,7 @@
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="19302" level="9" /> <!-- Thrown Acid Sworm -->
+			<skill id="19302" level="11" /> <!-- Thrown Acid Sworm -->
 		</skillList>
 		<collision>
 			<radius normal="0.001" />

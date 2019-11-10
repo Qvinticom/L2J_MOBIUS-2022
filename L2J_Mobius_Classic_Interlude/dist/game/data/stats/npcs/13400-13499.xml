@@ -1123,7 +1123,6 @@
 		</collision>
 	</npc>
 	<npc id="13452" level="101" type="EffectPoint" name="Solo Dance">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="skill_delay" value="2" />
 			<param name="despawn_time" value="15" />
@@ -1154,7 +1153,6 @@
 		</collision>
 	</npc>
 	<npc id="13453" level="103" type="EffectPoint" name="Solo Dance">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="skill_delay" value="2" />
 			<param name="despawn_time" value="15" />
@@ -1185,7 +1183,6 @@
 		</collision>
 	</npc>
 	<npc id="13454" level="105" type="EffectPoint" name="Solo Dance">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="skill_delay" value="2" />
 			<param name="despawn_time" value="15" />
@@ -1215,8 +1212,7 @@
 			<height normal="0.001" />
 		</collision>
 	</npc>
-	<npc id="13455" level="85" type="Doppelganger" name="Incarnation">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="13455" level="101" type="Doppelganger" name="Incarnation">
 		<parameters>
 			<skill name="Skill01_ID" id="10550" level="5" />
 			<skill name="Skill02_ID" id="10551" level="5" />
@@ -1229,11 +1225,12 @@
 				<walk ground="50" />
 				<run ground="131" />
 			</speed>
-			<attack physical="1487.133333" magical="396" critical="16" attackSpeed="623" range="40" type="FIST" distance="0" width="0" random="0" accuracy="4.75" />
+			<attack physical="1487.133333" magical="396" critical="16" attackSpeed="700" range="40" type="FIST" distance="5" width="5" random="0" accuracy="4.75" />
 			<defence physical="1419.5" magical="783" />
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" hasSummoner="true" talkable="false" />
+		<shots soul="1000" shotChance="100"/>
 		<skillList>
 			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
@@ -1246,8 +1243,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="13456" level="85" type="Doppelganger" name="Incarnation">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="13456" level="103" type="Doppelganger" name="Incarnation">
 		<parameters>
 			<skill name="Skill01_ID" id="10550" level="6" />
 			<skill name="Skill02_ID" id="10551" level="6" />
@@ -1260,11 +1256,12 @@
 				<walk ground="50" />
 				<run ground="131" />
 			</speed>
-			<attack physical="1487.133333" magical="396" critical="16" attackSpeed="623" range="40" type="FIST" distance="0" width="0" random="0" accuracy="4.75" />
+			<attack physical="1487.133333" magical="396" critical="16" attackSpeed="700" range="40" type="FIST" distance="5" width="5" random="0" accuracy="4.75" />
 			<defence physical="1419.5" magical="783" />
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" hasSummoner="true" talkable="false" />
+		<shots soul="1000" shotChance="100"/>
 		<skillList>
 			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
@@ -1277,11 +1274,10 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="13457" level="85" type="Doppelganger" name="Incarnation">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="13457" level="105" type="Doppelganger" name="Incarnation">
 		<parameters>
-			<skill name="Skill01_ID" id="10550" level="4" />
-			<skill name="Skill02_ID" id="10551" level="4" />
+			<skill name="Skill01_ID" id="10550" level="7" />
+			<skill name="Skill02_ID" id="10551" level="7" />
 		</parameters>
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -1291,11 +1287,12 @@
 				<walk ground="50" />
 				<run ground="131" />
 			</speed>
-			<attack physical="1487.133333" magical="396" critical="16" attackSpeed="623" range="40" type="FIST" distance="0" width="0" random="0" accuracy="4.75" />
+			<attack physical="1487.133333" magical="396" critical="16" attackSpeed="700" range="40" type="FIST" distance="5" width="5" random="0" accuracy="4.75" />
 			<defence physical="1419.5" magical="783" />
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="true" hasSummoner="true" talkable="false" />
+		<shots soul="1000" shotChance="100"/>
 		<skillList>
 			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->

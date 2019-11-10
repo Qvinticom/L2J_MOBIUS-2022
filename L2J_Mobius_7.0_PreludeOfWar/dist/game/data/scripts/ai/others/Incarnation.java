@@ -50,6 +50,8 @@ public class Incarnation extends AbstractNpcAI
 	@Id(13455)
 	@Id(13456)
 	@Id(13457)
+	@Id(13578)
+	@Id(13579)
 	public void onNpcSpawn(OnNpcSpawn event)
 	{
 		final Npc npc = event.getNpc();

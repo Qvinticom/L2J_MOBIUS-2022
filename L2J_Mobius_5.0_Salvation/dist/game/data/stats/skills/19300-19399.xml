@@ -18,29 +18,23 @@
 		<icon>icon.skill19301</icon>
 		<operateType>A1</operateType>
 		<coolTime>500</coolTime>
-		<mpConsume>107</mpConsume>
-		<castRange>900</castRange>
-		<abnormalLvl>
-			<value level="1">1</value>
-			<value level="2">2</value>
-			<value level="3">3</value>
-			<value level="4">4</value>
-			<value level="5">5</value>
-			<value level="6">6</value>
-			<value level="7">7</value>
-			<value level="8">8</value>
-			<value level="9">9</value>
-		</abnormalLvl>
-		<reuseDelay>15000</reuseDelay>
-		<abnormalTime>15</abnormalTime>
-		<abnormalType>POISON</abnormalType>
-		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
-		<activateRate>130</activateRate>
-		<affectLimit>5-12</affectLimit>
-		<affectRange>300</affectRange>
-		<operateType>A2</operateType>
-		<coolTime>500</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
+		<mpConsume>
+			<value level="1">76</value>
+			<value level="2">79</value>
+			<value level="3">83</value>
+			<value level="4">87</value>
+			<value level="5">91</value>
+			<value level="6">95</value>
+			<value level="7">99</value>
+			<value level="8">103</value>
+			<value level="9">107</value>
+		</mpConsume>
+		<castRange>900</castRange>
+		<effectRange>1100</effectRange>
+		<hitTime>2000</hitTime>
+		<reuseDelay>15000</reuseDelay>
+		<effectPoint>-711</effectPoint>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">87</value>
@@ -52,19 +46,9 @@
 			<value level="8">103</value>
 			<value level="9">105</value>
 		</magicLvl>
-		<lvlBonusRate>20</lvlBonusRate>
-		<mpConsume>1</mpConsume>
-		<effectPoint>-711</effectPoint>
-		<effectRange>900</effectRange>
 		<isDebuff>true</isDebuff>
-		<basicProperty>NONE</basicProperty>
-		<hitTime>2000</hitTime>
-		<hitCancelTime>0</hitCancelTime>
-		<trait>ZONE</trait>
 		<targetType>GROUND</targetType>
-		<affectScope>POINT_BLANK</affectScope>
-		<affectObject>NOT_FRIEND</affectObject>
-		<channelingStart>1</channelingStart>
+		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonNpc">
 				<npcId>
@@ -79,8 +63,6 @@
 					<value level="9">13549</value>
 				</npcId>
 				<npcCount>1</npcCount>
-				<despawnDelay>15000</despawnDelay>
-				<singleInstance>true</singleInstance>
 			</effect>
 		</effects>
 	</skill>
@@ -122,7 +104,7 @@
 		<isDebuff>true</isDebuff>
 		<basicProperty>NONE</basicProperty>
 		<hitCancelTime>0</hitCancelTime>
-		<trait>ZONE</trait>
+		<trait>POISON</trait>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
