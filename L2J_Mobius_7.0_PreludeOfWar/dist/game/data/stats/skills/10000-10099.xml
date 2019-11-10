@@ -1445,7 +1445,7 @@
 		</effects>
 	</skill>
 	<skill id="10018" toLevel="3" name="Noble Sacrifice">
-		<!-- For $s1, receives $s2 of the damage received by the ally and activates the Last Patience effect during that HP does not decrease below 1. -->
+		<!-- For 10 sec., receives 30% of the damage received by the ally and activates the Last Patience effect during that HP does not decrease below 1. -->
 		<icon>icon.skill10020</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -1477,13 +1477,8 @@
 		<basicProperty>NONE</basicProperty>
 		<hitCancelTime>0</hitCancelTime>
 		<reuseDelay>300000</reuseDelay>
-		<targetType>TARGET</targetType>
+		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="TargetMyParty">
-				<includeMe>false</includeMe>
-			</condition>
-		</conditions>
 		<effects>
 			<effect name="TransferDamageToPlayer">
 				<amount>
@@ -1498,13 +1493,11 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-		</effects>
-		<endEffects>
 			<effect name="CallSkill">
 				<skillId>10022</skillId> <!-- Last Patience -->
 				<skillLevel>1</skillLevel>
 			</effect>
-		</endEffects>
+		</effects>
 	</skill>
 	<skill id="10019" toLevel="7" name="Protection of Faith">
 		<!-- For $s1, reduces the maximum damage received by party members to approximately $s2 depending on your P. Def. Speed +$s3. Makes you immune to obstruction and confusion. The effect cannot be stacked with the same effect or Nine Aegis. When it is over, the Limit of Sigel effect is applied. Requires a shield. -->

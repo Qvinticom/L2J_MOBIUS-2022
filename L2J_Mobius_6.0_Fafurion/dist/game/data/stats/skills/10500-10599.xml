@@ -2057,13 +2057,14 @@
 		<magicLvl>93</magicLvl>
 		<operateType>T</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<mpInitialConsume>100</mpInitialConsume>
+		<mpConsume>200</mpConsume>
+		<mpInitialConsume>200</mpInitialConsume>
 		<hitTime>800</hitTime>
 		<targetType>NONE</targetType>
 		<effects>
 			<effect name="FakeDeath">
-				<power>20</power>
-				<ticks>5</ticks>
+				<power>100</power>
+				<ticks>1</ticks>
 			</effect>
 			<effect name="Untargetable" />
 		</effects>

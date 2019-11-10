@@ -455,29 +455,7 @@
 														<xs:element minOccurs="0" name="classIds">
 															<xs:complexType>
 																<xs:sequence>
-																	<xs:element minOccurs="0" maxOccurs="unbounded" name="item" type="xs:string" />
-																	<xs:element minOccurs="0" name="ARCANA_LORD" />
-																	<xs:element minOccurs="0" name="ELEMENTAL_MASTER" />
-																	<xs:element minOccurs="0" name="SPECTRAL_MASTER" />
-																	<xs:element minOccurs="0" name="DUELIST" />
-																	<xs:element minOccurs="0" name="DREADNOUGHT" />
-																	<xs:element minOccurs="0" name="TITAN" />
-																	<xs:element minOccurs="0" name="GRAND_KHAVATARI" />
-																	<xs:element minOccurs="0" name="FORTUNE_SEEKER" />
-																	<xs:element minOccurs="0" name="MAESTRO" />
-																	<xs:element minOccurs="0" name="PHOENIX_KNIGHT" />
-																	<xs:element minOccurs="0" name="HELL_KNIGHT" />
-																	<xs:element minOccurs="0" name="EVA_TEMPLAR" />
-																	<xs:element minOccurs="0" name="SHILLIEN_TEMPLAR" />
-																	<xs:element minOccurs="0" name="ADVENTURER" />
-																	<xs:element minOccurs="0" name="SWORD_MUSE" />
-																	<xs:element minOccurs="0" name="WIND_RIDER" />
-																	<xs:element minOccurs="0" name="SPECTRAL_DANCER" />
-																	<xs:element minOccurs="0" name="GHOST_HUNTER" />
-																	<xs:element minOccurs="0" name="MALE_SOUL_HOUND" />
-																	<xs:element minOccurs="0" name="FEMALE_SOUL_HOUND" />
-																	<xs:element minOccurs="0" name="DOOMBRINGER" />
-																	<xs:element minOccurs="0" name="TRICKSTER" />
+																	<xs:element maxOccurs="unbounded" name="item" type="xs:string" />
 																</xs:sequence>
 															</xs:complexType>
 														</xs:element>
@@ -2039,11 +2017,27 @@
 																</xs:complexType>
 															</xs:element>
 															<xs:element name="allowNormalAttack" type="xs:boolean" />
+															<xs:element name="disable" type="xs:unsignedShort" />
 															<xs:element name="saveHp" type="xs:unsignedByte" />
 															<xs:element name="attackSkillId" type="xs:unsignedShort" />
 															<xs:element name="summonPoints" type="xs:unsignedByte" />
 															<xs:element name="abnormalType" type="xs:string" />
 															<xs:element name="CRITICAL_DAMAGE" type="xs:unsignedByte" />
+															<xs:element name="AGGRESSION">
+																<xs:complexType mixed="true">
+																	<xs:sequence minOccurs="0">
+																		<xs:element maxOccurs="unbounded" name="value">
+																			<xs:complexType>
+																				<xs:simpleContent>
+																					<xs:extension base="xs:unsignedByte">
+																						<xs:attribute name="level" type="xs:unsignedByte" use="required" />
+																					</xs:extension>
+																				</xs:simpleContent>
+																			</xs:complexType>
+																		</xs:element>
+																	</xs:sequence>
+																</xs:complexType>
+															</xs:element>
 															<xs:element name="templates">
 																<xs:complexType>
 																	<xs:sequence>
@@ -2110,21 +2104,6 @@
 															<xs:element name="isSummonSpawn" type="xs:boolean" />
 															<xs:element name="randomOffset" type="xs:unsignedByte" />
 															<xs:element name="HATE">
-																<xs:complexType mixed="true">
-																	<xs:sequence minOccurs="0">
-																		<xs:element maxOccurs="unbounded" name="value">
-																			<xs:complexType>
-																				<xs:simpleContent>
-																					<xs:extension base="xs:unsignedByte">
-																						<xs:attribute name="level" type="xs:unsignedByte" use="required" />
-																					</xs:extension>
-																				</xs:simpleContent>
-																			</xs:complexType>
-																		</xs:element>
-																	</xs:sequence>
-																</xs:complexType>
-															</xs:element>
-															<xs:element name="AGGRESSION">
 																<xs:complexType mixed="true">
 																	<xs:sequence minOccurs="0">
 																		<xs:element maxOccurs="unbounded" name="value">

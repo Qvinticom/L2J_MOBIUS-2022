@@ -1414,13 +1414,8 @@
 		<basicProperty>NONE</basicProperty>
 		<hitCancelTime>0</hitCancelTime>
 		<reuseDelay>300000</reuseDelay>
-		<targetType>TARGET</targetType>
+		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="TargetMyParty">
-				<includeMe>false</includeMe>
-			</condition>
-		</conditions>
 		<effects>
 			<effect name="TransferDamageToPlayer">
 				<amount>
@@ -1435,13 +1430,11 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-		</effects>
-		<endEffects>
 			<effect name="CallSkill">
 				<skillId>10022</skillId> <!-- Last Patience -->
 				<skillLevel>1</skillLevel>
 			</effect>
-		</endEffects>
+		</effects>
 	</skill>
 	<skill id="10019" toLevel="5" name="Protection of Faith">
 		<!-- For $s1, reduces the maximum damage received by party members to approximately $s2 in inverse proportion to your P. Def and increases Speed by $s3. Makes you immune to Hold and Stun. This effect cannot be stacked with the same effect or Nigh Aegis, and a limit applies after its duration is over. Requires a shield to be equipped. -->

@@ -123,6 +123,7 @@ public class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("DeleteTopAgro", DeleteTopAgro::new);
 		EffectHandler.getInstance().registerHandler("DetectHiddenObjects", DetectHiddenObjects::new);
 		EffectHandler.getInstance().registerHandler("Detection", Detection::new);
+		EffectHandler.getInstance().registerHandler("DisableSkill", DisableSkill::new);
 		EffectHandler.getInstance().registerHandler("DisableTargeting", DisableTargeting::new);
 		EffectHandler.getInstance().registerHandler("Disarm", Disarm::new);
 		EffectHandler.getInstance().registerHandler("Disarmor", Disarmor::new);
