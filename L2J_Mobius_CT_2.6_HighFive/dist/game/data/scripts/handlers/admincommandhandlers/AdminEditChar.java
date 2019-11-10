@@ -335,6 +335,9 @@ public class AdminEditChar implements IAdminCommandHandler
 					}
 					player.sendMessage("A GM changed your Recommend points to " + recVal);
 					activeChar.sendMessage(player.getName() + "'s Recommend changed to " + recVal);
+					
+					// Store player recommendations to avoid reseting them with Nevit peace zone check.
+					player.storeRecommendations(false);
 				}
 				else
 				{

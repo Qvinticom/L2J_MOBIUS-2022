@@ -98,7 +98,7 @@ public class RequestVoteNew implements IClientIncomingPacket
 		sm.addPcName(player);
 		target.sendPacket(sm);
 		
-		player.sendPacket(new UserInfo(player));
+		client.sendPacket(new UserInfo(player));
 		client.sendPacket(new ExBrExtraUserInfo(player));
 		target.broadcastUserInfo();
 		
@@ -107,5 +107,8 @@ public class RequestVoteNew implements IClientIncomingPacket
 			player.sendPacket(new ExVoteSystemInfo(player));
 			target.sendPacket(new ExVoteSystemInfo(target));
 		}
+		
+		// Store player recommendations to avoid reseting them with Nevit peace zone check.
+		target.storeRecommendations(false);
 	}
 }
