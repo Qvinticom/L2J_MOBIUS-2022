@@ -49,7 +49,18 @@
 				<stat>STR</stat>
 			</effect>
 			<effect name="PAtk">
-				<amount>25</amount>
+				<amount>
+					<value level="1">25</value>
+					<value level="2">25</value>
+					<value level="3">25</value>
+					<value level="4">25</value>
+					<value level="5">25</value>
+					<value level="6">25</value>
+					<value level="7">25</value>
+					<value level="8">27</value>
+					<value level="9">28</value>
+					<value level="10">30</value>
+				</amount>
 				<mode>PER</mode>
 				<weaponType>
 					<item>DAGGER</item>
@@ -119,7 +130,18 @@
 		<operateType>P</operateType>
 		<effects>
 			<effect name="PAtk">
-				<amount>25</amount>
+				<amount>
+					<value level="1">25</value>
+					<value level="2">25</value>
+					<value level="3">25</value>
+					<value level="4">25</value>
+					<value level="5">25</value>
+					<value level="6">25</value>
+					<value level="7">25</value>
+					<value level="8">27</value>
+					<value level="9">28</value>
+					<value level="10">30</value>
+				</amount>
 				<mode>PER</mode>
 				<weaponType>
 					<item>DUALDAGGER</item>
@@ -209,6 +231,24 @@
 					<value level="10">2655</value>
 				</amount>
 				<mode>DIFF</mode>
+				<armorType>
+					<item>LIGHT</item>
+				</armorType>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">0</value>
+					<value level="7">0</value>
+					<value level="8">2</value>
+					<value level="9">3</value>
+					<value level="10">5</value>
+				</amount>
+				<mode>PER</mode>
 				<armorType>
 					<item>LIGHT</item>
 				</armorType>
@@ -331,6 +371,21 @@
 					<value level="10">1545</value>
 				</amount>
 				<mode>DIFF</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">0</value>
+					<value level="7">0</value>
+					<value level="8">2</value>
+					<value level="9">3</value>
+					<value level="10">5</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
 			<effect name="CriticalRate">
 				<amount>60</amount>
@@ -2146,6 +2201,7 @@
 		</effectPoint>
 		<reuseDelay>180000</reuseDelay>
 		<isMagic>4</isMagic>
+		<nextAction>ATTACK</nextAction>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -2174,13 +2230,13 @@
 				<despawnDelay>17000</despawnDelay>
 			</effect>
 		</effects>
-		<endEffects>
+		<selfEffects>
 			<effect name="CallSkill">
 				<!-- Illusion Hide -->
 				<skillId>10556</skillId> <!-- Illusion Hide -->
 				<skillLevel>1</skillLevel>
 			</effect>
-		</endEffects>
+		</selfEffects>
 	</skill>
 	<skill id="10534" toLevel="3" name="Trace of Dagger">
 		<!-- Critical damage has been boosted by $s1. -->
@@ -3310,22 +3366,19 @@
 	<skill id="10556" toLevel="1" name="Illusion Hide">
 		<!-- Becomes hidden momentarily. -->
 		<icon>icon.skill10517</icon>
+		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2</abnormalTime>
 		<abnormalType>HIDE</abnormalType>
 		<abnormalVisualEffect>STEALTH</abnormalVisualEffect>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
-		<operateType>A2</operateType>
-		<removedOnAnyActionExceptMove>true</removedOnAnyActionExceptMove>
-		<removedOnDamage>true</removedOnDamage>
 		<staticReuse>true</staticReuse>
 		<mpConsume>1</mpConsume>
 		<effectPoint>709</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<hitCancelTime>0</hitCancelTime>
 		<reuseDelay>1000</reuseDelay>
-		<nextAction>ATTACK</nextAction>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -3337,14 +3390,6 @@
 			</effect>
 			<effect name="DispelBySlot">
 				<dispel>ROOT_PHYSICALLY,3</dispel>
-			</effect>
-			<effect name="Speed">
-				<amount>-20</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="HpRegen">
-				<amount>15</amount>
-				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
