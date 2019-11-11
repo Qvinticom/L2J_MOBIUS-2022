@@ -722,6 +722,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
 	</item>
 	<item id="80673" name="Corrupted Energy" type="EtcItem">
 		<!-- It is what turned the relatively gentle Growlers into violent beasts. You can feel the miasma of the corrupted Wind Spirit Realm. Gather and take them to Researcher Pio. -->
@@ -733,6 +734,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
 	</item>
 	<item id="80674" name="Embedded Shard" type="EtcItem">
 		<!-- Shards embedded in Leaf and Arbor's bodies. There are lingering traces of Dark Arts. It might be the reason why Leaf and Arbor have been unintelligible. Gather and take them to Researcher Pio. -->
@@ -744,6 +746,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
 	</item>
 	<item id="80675" name="Orc Empowering Potion" type="EtcItem">
 		<!-- A potion that made the Turek Orcs become powerful. This could be the cause behind the Turek Orcs. hitherto one of the lesser orc tribes. suddenly becoming so strong. Gather and take them to Reclous the Hermit. -->
@@ -810,6 +813,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39482" level="1" /> <!-- Scroll of Escape: Kallesin -->
+		</skills>
 	</item>
 	<item id="80680" name="Scroll of Escape: Zenath" type="EtcItem">
 		<!-- Teleports you to Zenath. -->
@@ -822,6 +829,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39483" level="1" /> <!-- Scroll of Escape: Zenath -->
+		</skills>
 	</item>
 	<item id="80681" name="Scroll of Escape: Pio" type="EtcItem">
 		<!-- Teleports you to Pio. -->
@@ -834,6 +845,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39484" level="1" /> <!-- Scroll of Escape: Pio -->
+		</skills>
 	</item>
 	<item id="80682" name="Scroll of Escape: Reclous" type="EtcItem">
 		<!-- Teleports you to Reclous. -->

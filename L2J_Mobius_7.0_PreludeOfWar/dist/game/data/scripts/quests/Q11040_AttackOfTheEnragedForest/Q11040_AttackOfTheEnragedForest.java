@@ -14,24 +14,15 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package quests.Q11032_CurseOfUndying;
+package quests.Q11040_AttackOfTheEnragedForest;
 
 import java.util.HashSet;
 import java.util.Set;
 
-import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.data.xml.impl.CategoryData;
-import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.enums.QuestSound;
-import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.events.EventType;
-import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
-import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLogin;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.holders.NpcLogListHolder;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -39,46 +30,44 @@ import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
-import org.l2jmobius.gameserver.network.serverpackets.ExTutorialShowId;
-import org.l2jmobius.gameserver.network.serverpackets.classchange.ExRequestClassChangeUi;
 
-import quests.Q11031_TrainingBeginsNow.Q11031_TrainingBeginsNow;
+import quests.Q11039_CommunicationBreakdown.Q11039_CommunicationBreakdown;
 
 /**
- * Curse of Undying (11032)
- * @URL https://l2wiki.com/Curse_of_Undying
- * @author Dmitri, Mobius
+ * Attack of the Enraged Forest (11040)
+ * @URL https://l2wiki.com/Attack_of_the_Enraged_Forest
+ * @author Dmitri
  */
-public class Q11032_CurseOfUndying extends Quest
+public class Q11040_AttackOfTheEnragedForest extends Quest
 {
 	// NPCs
-	private static final int SILVAN = 33178;
+	private static final int PIO = 33963;
 	private static final int TARTI = 34505;
-	private static final int DISGUSTING_ZOMBIES = 24382;
-	private static final int THE_HIDEOUS_LORD_ZOMBIE = 24383;
-	// Item
-	private static final ItemHolder SOE_SILVAN = new ItemHolder(80677, 1);
+	private static final int TINY_WHIRLWIND = 24401;
+	private static final int GIANT_WHIRLWIND = 24402;
+	// Items
+	private static final ItemHolder SOE_TARTI = new ItemHolder(80677, 1);
 	// Location
-	private static final Location TRAINING_GROUNDS_TELEPORT = new Location(-19204, 138941, -3896);
+	private static final Location TRAINING_GROUNDS_TELEPORT = new Location(-91374, 92270, -3360);
 	// Misc
 	private static final String KILL_COUNT_VAR = "KillCount";
 	
-	public Q11032_CurseOfUndying()
+	public Q11040_AttackOfTheEnragedForest()
 	{
-		super(11032);
-		addStartNpc(SILVAN);
-		addTalkId(SILVAN, TARTI);
-		addKillId(DISGUSTING_ZOMBIES, THE_HIDEOUS_LORD_ZOMBIE);
-		registerQuestItems(SOE_SILVAN.getId());
-		addCondCompletedQuest(Q11031_TrainingBeginsNow.class.getSimpleName(), getNoQuestMsg(null));
-		setQuestNameNpcStringId(NpcStringId.LV_1_20_CURSE_OF_UNDYING);
+		super(11040);
+		addStartNpc(PIO);
+		addTalkId(PIO, TARTI);
+		addKillId(TINY_WHIRLWIND, GIANT_WHIRLWIND);
+		registerQuestItems(SOE_TARTI.getId());
+		addCondCompletedQuest(Q11039_CommunicationBreakdown.class.getSimpleName(), "33963-06");
+		setQuestNameNpcStringId(NpcStringId.LV_40_76_ATTACK_OF_THE_ENRAGED_FOREST);
 	}
 	
 	@Override
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
-		QuestState qs = getQuestState(player, false);
+		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
 		{
 			return htmltext;
@@ -86,29 +75,15 @@ public class Q11032_CurseOfUndying extends Quest
 		
 		switch (event)
 		{
-			case "33178-03.html":
+			case "33963-03.html":
+			case "33963-05.html":
 			{
 				htmltext = event;
 				break;
 			}
-			case "33178-02.html":
+			case "33963-02.html":
 			{
 				qs.startQuest();
-				player.sendPacket(new ExTutorialShowId(23)); // Adventurers Guide
-				htmltext = event;
-				break;
-			}
-			case "34505-04.html":
-			{
-				qs.setCond(4, true);
-				showOnScreenMsg(player, NpcStringId.CLASS_TRANSFER_IS_AVAILABLE_NCLICK_THE_CLASS_TRANSFER_ICON_IN_THE_NOTIFICATION_WINDOW_TO_TRANSFER_YOUR_CLASS, ExShowScreenMessage.TOP_CENTER, 10000);
-				htmltext = event;
-				break;
-			}
-			case "34505-03.html":
-			{
-				qs.setCond(3, true);
-				player.sendPacket(new ExTutorialShowId(22)); // Adventurers Guide
 				htmltext = event;
 				break;
 			}
@@ -124,20 +99,12 @@ public class Q11032_CurseOfUndying extends Quest
 			{
 				if (qs.isCond(2))
 				{
-					// Ertheias do not change.
-					if (player.getRace() != Race.ERTHEIA)
-					{
-						showOnScreenMsg(player, NpcStringId.FIRST_CLASS_TRANSFER_IS_AVAILABLE_NGO_SEE_TARTI_IN_THE_TOWN_OF_GLUDIO_TO_START_THE_CLASS_TRANSFER, ExShowScreenMessage.TOP_CENTER, 10000);
-						if (CategoryData.getInstance().isInCategory(CategoryType.FIRST_CLASS_GROUP, player.getClassId().getId()))
-						{
-							player.sendPacket(ExRequestClassChangeUi.STATIC_PACKET);
-						}
-					}
-					addExpAndSp(player, 787633, 708);
+					addExpAndSp(player, 834929477, 595042);
+					giveAdena(player, 240000, true);
 					qs.exitQuest(false, true);
 					htmltext = event;
-					break;
 				}
+				break;
 			}
 		}
 		return htmltext;
@@ -153,9 +120,9 @@ public class Q11032_CurseOfUndying extends Quest
 		{
 			case State.CREATED:
 			{
-				if (npc.getId() == SILVAN)
+				if (npc.getId() == PIO)
 				{
-					htmltext = "33178-01.html";
+					htmltext = "33963-01.html";
 				}
 				break;
 			}
@@ -163,11 +130,11 @@ public class Q11032_CurseOfUndying extends Quest
 			{
 				switch (npc.getId())
 				{
-					case SILVAN:
+					case PIO:
 					{
 						if (qs.isCond(1))
 						{
-							htmltext = "33178-02.html";
+							htmltext = "33963-02.html";
 						}
 						break;
 					}
@@ -208,7 +175,7 @@ public class Q11032_CurseOfUndying extends Quest
 			{
 				qs.setCond(2, true);
 				qs.unset(KILL_COUNT_VAR);
-				giveItems(killer, SOE_SILVAN);
+				giveItems(killer, SOE_TARTI);
 				showOnScreenMsg(killer, NpcStringId.USE_SCROLL_OF_ESCAPE_TARTI_IN_YOUR_INVENTORY_NTALK_TO_TARTI_TO_COMPLETE_THE_QUEST, ExShowScreenMessage.TOP_CENTER, 10000);
 			}
 		}
@@ -222,37 +189,9 @@ public class Q11032_CurseOfUndying extends Quest
 		if ((qs != null) && qs.isCond(1))
 		{
 			final Set<NpcLogListHolder> holder = new HashSet<>();
-			holder.add(new NpcLogListHolder(NpcStringId.DEFEAT_THE_SWARM_OF_ZOMBIES.getId(), true, qs.getInt(KILL_COUNT_VAR)));
+			holder.add(new NpcLogListHolder(NpcStringId.DEFEAT_THE_PACK_OF_WINDIMA_2.getId(), true, qs.getInt(KILL_COUNT_VAR)));
 			return holder;
 		}
 		return super.getNpcLogList(player);
-	}
-	
-	@RegisterEvent(EventType.ON_PLAYER_LOGIN)
-	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
-	public void OnPlayerLogin(OnPlayerLogin event)
-	{
-		if (Config.DISABLE_TUTORIAL)
-		{
-			return;
-		}
-		
-		final PlayerInstance player = event.getPlayer();
-		if ((player == null) || !CategoryData.getInstance().isInCategory(CategoryType.FIRST_CLASS_GROUP, player.getClassId().getId()))
-		{
-			return;
-		}
-		
-		// Ertheias do not change.
-		if (player.getRace() == Race.ERTHEIA)
-		{
-			return;
-		}
-		
-		final QuestState qs = getQuestState(player, false);
-		if ((qs != null) && qs.isCompleted())
-		{
-			player.sendPacket(ExRequestClassChangeUi.STATIC_PACKET);
-		}
 	}
 }

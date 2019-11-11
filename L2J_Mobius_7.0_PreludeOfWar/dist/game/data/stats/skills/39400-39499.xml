@@ -956,16 +956,70 @@
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<hitTime>200</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeId>80679</itemConsumeId> <!-- Scroll of Escape: Kallesin -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<conditions>
+			<condition name="OpAlignment">
+				<affectType>CASTER</affectType>
+				<alignment>LAWFUL</alignment>
+			</condition>
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Teleport">
+				<x>-41314</x>
+				<y>122982</y>
+				<z>-2904</z>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39483" toLevel="1" name="Scroll of Escape: Zenath">
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<hitTime>200</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeId>80680</itemConsumeId> <!-- Scroll of Escape: Zenath -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<conditions>
+			<condition name="OpAlignment">
+				<affectType>CASTER</affectType>
+				<alignment>LAWFUL</alignment>
+			</condition>
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Teleport">
+				<x>-46159</x>
+				<y>109438</y>
+				<z>-3808</z>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39484" toLevel="1" name="Scroll of Escape: Pio">
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<hitTime>200</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeId>80681</itemConsumeId> <!-- Scroll of Escape: Pio -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<conditions>
+			<condition name="OpAlignment">
+				<affectType>CASTER</affectType>
+				<alignment>LAWFUL</alignment>
+			</condition>
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Teleport">
+				<x>-93474</x>
+				<y>89730</y>
+				<z>-3208</z>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39485" toLevel="1" name="Scroll of Escape: Reclous">
 		<operateType>A1</operateType>

@@ -22,6 +22,7 @@ import org.l2jmobius.gameserver.data.xml.impl.CategoryData;
 import org.l2jmobius.gameserver.data.xml.impl.SkillData;
 import org.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
 import org.l2jmobius.gameserver.enums.CategoryType;
+import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.SkillLearn;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.base.ClassId;
@@ -73,7 +74,7 @@ public class ExRequestClassChange implements IClientIncomingPacket
 		final int playerLevel = player.getLevel();
 		if (player.isInCategory(CategoryType.FIRST_CLASS_GROUP) && (playerLevel >= 18))
 		{
-			canChange = CategoryData.getInstance().isInCategory(CategoryType.SECOND_CLASS_GROUP, _classId);
+			canChange = CategoryData.getInstance().isInCategory(player.getRace() == Race.ERTHEIA ? CategoryType.THIRD_CLASS_GROUP : CategoryType.SECOND_CLASS_GROUP, _classId);
 		}
 		else if (player.isInCategory(CategoryType.SECOND_CLASS_GROUP) && (playerLevel >= 38))
 		{

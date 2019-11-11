@@ -165,8 +165,17 @@ import quests.Q10840_TimeToRecover.Q10840_TimeToRecover;
 import quests.Q10843_AnomalyInTheEnchantedValley.Q10843_AnomalyInTheEnchantedValley;
 import quests.Q10851_ElvenBotany.Q10851_ElvenBotany;
 import quests.Q10856_SuperionAppears.Q10856_SuperionAppears;
+import quests.Q11025_PathOfDestinyProving.Q11025_PathOfDestinyProving;
 import quests.Q11031_TrainingBeginsNow.Q11031_TrainingBeginsNow;
 import quests.Q11032_CurseOfUndying.Q11032_CurseOfUndying;
+import quests.Q11033_AntidoteIngredients.Q11033_AntidoteIngredients;
+import quests.Q11034_ResurrectedOne.Q11034_ResurrectedOne;
+import quests.Q11035_DeathlyMischief.Q11035_DeathlyMischief;
+import quests.Q11036_ChangedSpirits.Q11036_ChangedSpirits;
+import quests.Q11037_WhyAreTheRatelHere.Q11037_WhyAreTheRatelHere;
+import quests.Q11038_GrowlersTurnedViolent.Q11038_GrowlersTurnedViolent;
+import quests.Q11039_CommunicationBreakdown.Q11039_CommunicationBreakdown;
+import quests.Q11040_AttackOfTheEnragedForest.Q11040_AttackOfTheEnragedForest;
 import quests.custom.Q00529_RegularBarrierMaintenance.Q00529_RegularBarrierMaintenance;
 import quests.custom.Q00560_HowToOvercomeFear.Q00560_HowToOvercomeFear;
 import quests.custom.Q00589_ASecretChange.Q00589_ASecretChange;
@@ -480,14 +489,17 @@ public class QuestMasterHandler
 		Q10899_VeteranAdventurer.class, // TODO: Not done.
 		Q10900_PathToStrength.class, // TODO: Not done.
 		Q10901_AModelAdventurer.class, // TODO: Not done.
+		Q11025_PathOfDestinyProving.class,
 		Q11031_TrainingBeginsNow.class,
 		Q11032_CurseOfUndying.class,
-		Q11034_ResurrectedOne.class, // TODO: Not done.
-		Q11035_DeathlyMischief.class, // TODO: Not done.
-		Q11037_WhyAreTheRatelHere.class, // TODO: Not done.
-		Q11038_GrowlersTurnedViolent.class, // TODO: Not done.
-		Q11039_CommunicationBreakdown.class, // TODO: Not done.
-		Q11040_AttackOfTheEnragedForest.class, // TODO: Not done.
+		Q11033_AntidoteIngredients.class,
+		Q11034_ResurrectedOne.class,
+		Q11035_DeathlyMischief.class,
+		Q11036_ChangedSpirits.class,
+		Q11037_WhyAreTheRatelHere.class,
+		Q11038_GrowlersTurnedViolent.class,
+		Q11039_CommunicationBreakdown.class,
+		Q11040_AttackOfTheEnragedForest.class,
 		Q11042_SuspiciousMovements.class, // TODO: Not done.
 		Q11043_SomeonesTrace.class, // TODO: Not done.
 		Q11044_KetraOrcs.class, // TODO: Not done.
