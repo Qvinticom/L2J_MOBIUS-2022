@@ -1775,71 +1775,390 @@
 		<!-- M. Def. +6%, Debuff Resistance +7% P. Atk./ M. Atk./ P. Def. +1%. -->
 		<icon>icon.accessory_worldcup_mask_i00</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="PAtk">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>6</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ResistDispelByCategory">
+				<amount>7</amount>
+				<slot>DEBUFF</slot>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35258" toLevel="1" name="Paulina's Eternal Necklace - Skill Cooldown">
 		<!-- Skill Cooldown -10%. -->
 		<icon>icon.skill5239</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="Reuse">
+				<amount>-10</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-10</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-10</amount>
+				<mode>PER</mode>
+				<magicType>2</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-10</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35259" toLevel="1" name="Paulina's Eternal Earring - MP Consumption">
 		<!-- Heal Received +10%, Skill MP Consumption -5%. -->
 		<icon>icon.skill1397</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="HealEffect">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>2</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35260" toLevel="1" name="Paulina's Eternal Earring - Vampiric Rage">
 		<!-- A chance to apply Vampiric Rage 5%. -->
 		<icon>icon.skill1268</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="VampiricAttack">
+				<amount>5</amount>
+				<chance>30</chance>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35261" toLevel="1" name="Paulina's Eternal Ring - Critical Rate">
 		<!-- P./ M. Critical Rate +50. -->
 		<icon>icon.skill0137</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="CriticalRate">
+				<amount>50</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>50</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35262" toLevel="1" name="Paulina's Eternal Ring - Critical Damage">
 		<!-- Normal/ P. Atk./ M. Atk. Skill Critical Damage +15%. -->
 		<icon>icon.skill0531</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="PAtk">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SkillCriticalDamage">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35263" toLevel="1" name="Set Effect - Paulina's Eternal Heavy Armor, 5-piece">
 		<!-- STR +3, CON +2, P. Atk. +7%, Skill Power +7%, P. Def. +7%, M. Def. +7%. -->
 		<icon>icon.m_class_heavy</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>2</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="PAtk">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35264" toLevel="1" name="Set Effect - Paulina's Eternal Light Armor, 5-piece">
 		<!-- STR +3, CON +2, P. Atk. +7%, Skill Power +7%, Attribute Resistance +30, Speed +14. -->
 		<icon>icon.m_class_light</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>2</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="PAtk">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>30</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>30</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>30</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>30</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>30</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>30</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="Speed">
+				<amount>14</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35265" toLevel="1" name="Set Effect - Paulina's Eternal Robe, 5-piece">
 		<!-- INT +3, CON +2, M. Atk. +7%, Skill Power +7%, Max HP/ MP +10%, Skill MP Consumption -7%. -->
 		<icon>icon.m_class_robe</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>2</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="MAtk">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalSkillPower">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-7</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-7</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-7</amount>
+				<mode>PER</mode>
+				<magicType>2</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-7</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35266" toLevel="1" name="Paulina's Battle Enhancement Blessing">
 		<!-- Max HP +15%, P. Critical Rate +50, P. Critical Damage +10%, Atk. Spd. +15% -->
 		<icon>icon.skill6319</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxHp">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>50</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35267" toLevel="1" name="Paulina's Battle Enhancement Blessing">
 		<!-- Max HP +15%, P. Critical Rate +100, P. Critical Damage +5%, Atk. Spd. +15% -->
 		<icon>icon.skill6319</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxHp">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>100</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35268" toLevel="1" name="Paulina's Magic Enhancement Blessing">
 		<!-- Max HP +15%, M. Skill Critical Rate +50, M. Skill Critical Damage +10%, Casting Spd. +15% -->
 		<icon>icon.skill6319</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxHp">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>50</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35269" toLevel="1" name="Paulina's Magic Enhancement Blessing">
 		<!-- Max HP +15%, P. Critical Damage +10%, M. Skill Critical Damage +10%, Atk. Spd./ Casting Spd. +15% -->
 		<icon>icon.skill6319</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxHp">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35270" toLevel="1" name="Paulina's Eternal Bracelet">
 		<!-- Can equip 5 talismans. Additionally increases P. Atk./ M. Atk./ P./ M. Def. by 3%. -->
 		<icon>icon.bm_polyne_R99_bracelet</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="TalismanSlot">
+				<slots>5</slots>
+			</effect>
+			<effect name="PAtk">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35271" toLevel="1" name="Fafurion's Breath">
 		<!-- Petrifies nearby enemies for 5 sec and then paralyzes them for 10 sec when fully petrified. Ignores debuff resistance. Consumes 1 Dragon Blood. Cannot be used in the Olympiad/ Ceremony of Chaos. -->
