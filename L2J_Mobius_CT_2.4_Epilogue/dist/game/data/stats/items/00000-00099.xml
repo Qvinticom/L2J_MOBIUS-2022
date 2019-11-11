@@ -1072,8 +1072,12 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="80" />
 		<set name="price" val="40" />
+		<set name="reuse_delay" val="10000" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="2031-1" /> <!-- Lesser Healing Potion -->
+		<set name="for_npc" val="true" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>

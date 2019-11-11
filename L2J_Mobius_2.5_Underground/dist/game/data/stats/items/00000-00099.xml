@@ -1179,15 +1179,18 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="80" />
 		<set name="price" val="40" />
+		<set name="reuse_delay" val="10000" />
 		<set name="is_stackable" val="true" />
-		<set name="commissionItemType" val="POTION" />
-		<set name="handler" val="ItemSkills" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="POTION" />
+		<set name="is_coc_restricted" val="true" />
+		<set name="for_npc" val="true" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
 		</cond>
 		<skills>
-			<skill id="2001" level="1" /> <!-- Red Potion -->
+			<skill id="2031" level="1" /> <!-- Healing Potion -->
 		</skills>
 	</item>
 	<item id="66" name="Gladius" type="Weapon">
