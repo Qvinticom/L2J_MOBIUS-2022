@@ -224,49 +224,64 @@
 	</skill>
 	<skill id="21014" levels="1" name="Scissors">
 		<!-- Attacks with scissors. Usable only on the crooked turkey. -->
+		<set name="icon" val="BranchSys.icon.br_xmas_gawi_i00" />
 		<set name="castRange" val="400" />
 		<set name="coolTime" val="500" />
 		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="500" />
 		<set name="hitTime" val="2000" />
-		<set name="icon" val="BranchSys.icon.br_xmas_gawi_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="SELF" />
 		<cond msgId="109">
 			<target npcId="13183" />
 		</cond>
+		<selfEffects>
+			<effect name="CallSkill">
+				<param skillId="23019" skillLevel="1" />
+			</effect>
+		</selfEffects>
 	</skill>
 	<skill id="21015" levels="1" name="Rock">
 		<!-- Challenge him with the rock. Usable only on the crooked turkey. -->
+		<set name="icon" val="BranchSys.icon.br_xmas_bawi_i00" />
 		<set name="castRange" val="400" />
 		<set name="coolTime" val="500" />
 		<set name="effectPoint" val="-1" />
 		<set name="hitTime" val="2000" />
-		<set name="icon" val="BranchSys.icon.br_xmas_bawi_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="SELF" />
 		<cond msgId="109">
 			<target npcId="13183" />
 		</cond>
+		<selfEffects>
+			<effect name="CallSkill">
+				<param skillId="23019" skillLevel="2" />
+			</effect>
+		</selfEffects>
 	</skill>
 	<skill id="21016" levels="1" name="Paper">
 		<!-- Challenge him with the paper. Usable only on the crooked turkey. -->
+		<set name="icon" val="BranchSys.icon.br_xmas_bo_i00" />
 		<set name="castRange" val="400" />
 		<set name="coolTime" val="500" />
 		<set name="effectPoint" val="-1" />
 		<set name="hitTime" val="2000" />
-		<set name="icon" val="BranchSys.icon.br_xmas_bo_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="SELF" />
 		<cond msgId="109">
 			<target npcId="13183" />
 		</cond>
+		<selfEffects>
+			<effect name="CallSkill">
+				<param skillId="23019" skillLevel="3" />
+			</effect>
+		</selfEffects>
 	</skill>
 	<skill id="21017" levels="1" name="Holiday Dream Weapon">
 		<!-- Increases Max CP. Increases critical rate. Bestows the ability to regenerate HP by using some of the damage inflicted on the enemy. Excludes damage caused by skills and long-range attack. -->

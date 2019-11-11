@@ -39,6 +39,7 @@ public class OpTargetNpcSkillCondition implements ISkillCondition
 	@Override
 	public boolean canUse(Creature caster, Skill skill, WorldObject target)
 	{
-		return (target != null) && target.isNpc() && _npcId.contains(target.getId());
+		final WorldObject actualTarget = (caster == null) || !caster.isPlayer() ? target : caster.getTarget();
+		return (actualTarget != null) && (actualTarget.isNpc() || actualTarget.isDoor()) && _npcId.contains(actualTarget.getId());
 	}
 }

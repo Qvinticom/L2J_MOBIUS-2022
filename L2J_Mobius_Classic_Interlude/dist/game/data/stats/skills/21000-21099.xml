@@ -305,15 +305,21 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>1</hitCancelTime>
 		<staticReuse>true</staticReuse>
-		<targetType>ENEMY</targetType>
+		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="OpTargetNpc">
 				<npcIds>
-					<item>100</item>
+					<item>13183</item>
 				</npcIds>
 			</condition>
 		</conditions>
+		<selfEffects>
+			<effect name="CallSkill">
+				<skillId>23019</skillId>
+				<skillLevel>1</skillLevel>
+			</effect>
+		</selfEffects>
 	</skill>
 	<skill id="21015" toLevel="1" name="Rock">
 		<!-- Challenge him with the rock. Usable only on the crooked turkey. -->
@@ -329,15 +335,21 @@
 		<hitCancelTime>1</hitCancelTime>
 		<effectRange>500</effectRange>
 		<staticReuse>true</staticReuse>
-		<targetType>ENEMY</targetType>
+		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="OpTargetNpc">
 				<npcIds>
-					<item>100</item>
+					<item>13183</item>
 				</npcIds>
 			</condition>
 		</conditions>
+		<selfEffects>
+			<effect name="CallSkill">
+				<skillId>23019</skillId>
+				<skillLevel>2</skillLevel>
+			</effect>
+		</selfEffects>
 	</skill>
 	<skill id="21016" toLevel="1" name="Paper">
 		<!-- Challenge him with the paper. Usable only on the crooked turkey. -->
@@ -353,15 +365,21 @@
 		<hitCancelTime>1</hitCancelTime>
 		<effectRange>500</effectRange>
 		<staticReuse>true</staticReuse>
-		<targetType>ENEMY</targetType>
+		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="OpTargetNpc">
 				<npcIds>
-					<item>100</item>
+					<item>13183</item>
 				</npcIds>
 			</condition>
 		</conditions>
+		<selfEffects>
+			<effect name="CallSkill">
+				<skillId>23019</skillId>
+				<skillLevel>3</skillLevel>
+			</effect>
+		</selfEffects>
 	</skill>
 	<skill id="21017" toLevel="1" name="Holiday Dream Weapon">
 		<!-- Increases Max CP. Increases Critical Rate. Increases the ability to restore some damage inflicted on the enemy as HP with a certain probability. Excludes damage by skill or ranged attacks. -->
