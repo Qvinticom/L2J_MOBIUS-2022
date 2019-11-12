@@ -148,13 +148,14 @@ public class Q11025_PathOfDestinyProving extends Quest
 				if (qs.isCond(6))
 				{
 					giveAdena(player, 5000, true);
-					showOnScreenMsg(player, NpcStringId.CLASS_TRANSFER_IS_AVAILABLE_NCLICK_THE_CLASS_TRANSFER_ICON_IN_THE_NOTIFICATION_WINDOW_TO_TRANSFER_YOUR_CLASS, ExShowScreenMessage.TOP_CENTER, 10000);
 					qs.exitQuest(false, true);
 					if (CategoryData.getInstance().isInCategory(CategoryType.SECOND_CLASS_GROUP, player.getClassId().getId()) || //
 						(CategoryData.getInstance().isInCategory(CategoryType.FIRST_CLASS_GROUP, player.getClassId().getId()) && (player.getRace() == Race.ERTHEIA)))
 					{
+						showOnScreenMsg(player, NpcStringId.CLASS_TRANSFER_IS_AVAILABLE_NCLICK_THE_CLASS_TRANSFER_ICON_IN_THE_NOTIFICATION_WINDOW_TO_TRANSFER_YOUR_CLASS, ExShowScreenMessage.TOP_CENTER, 10000);
 						player.sendPacket(ExRequestClassChangeUi.STATIC_PACKET);
 					}
+					giveStoryBuffReward(npc, player);
 					htmltext = event;
 					break;
 				}

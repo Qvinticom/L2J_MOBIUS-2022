@@ -124,6 +124,8 @@ public class Q11032_CurseOfUndying extends Quest
 			{
 				if (qs.isCond(2))
 				{
+					addExpAndSp(player, 787633, 708);
+					qs.exitQuest(false, true);
 					// Ertheias do not change.
 					if (player.getRace() != Race.ERTHEIA)
 					{
@@ -133,8 +135,7 @@ public class Q11032_CurseOfUndying extends Quest
 							player.sendPacket(ExRequestClassChangeUi.STATIC_PACKET);
 						}
 					}
-					addExpAndSp(player, 787633, 708);
-					qs.exitQuest(false, true);
+					giveStoryBuffReward(npc, player);
 					htmltext = event;
 					break;
 				}

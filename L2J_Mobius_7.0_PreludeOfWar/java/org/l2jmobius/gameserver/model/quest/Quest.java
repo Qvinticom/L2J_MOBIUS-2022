@@ -112,7 +112,17 @@ public class Quest extends AbstractScript implements IIdentifiable
 	private static final int RESET_HOUR = 6;
 	private static final int RESET_MINUTES = 30;
 	
-	private static final SkillHolder STORY_QUEST_BUFF_REWARD = new SkillHolder(27580, 1);
+	private static final SkillHolder[] STORY_QUEST_BUFFS =
+	{
+		new SkillHolder(15642, 1), // Horn Melody (Adventurer)
+		new SkillHolder(15643, 1), // Drum Melody (Adventurer)
+		new SkillHolder(15644, 1), // Pipe Organ Melody (Adventurer)
+		new SkillHolder(15645, 1), // Guitar Melody (Adventurer)
+		new SkillHolder(15651, 1), // Prevailing Sonata (Adventurer)
+		new SkillHolder(15652, 1), // Daring Sonata (Adventurer)
+		new SkillHolder(15653, 1), // Refreshing Sonata (Adventurer)
+		new SkillHolder(32840, 1), // Fantasia Harmony - Adventurer
+	};
 	
 	/**
 	 * @return the reset hour for a daily quest, could be overridden on a script.
@@ -3298,11 +3308,14 @@ public class Quest extends AbstractScript implements IIdentifiable
 		
 	}
 	
-	public void giveStoryQuestReward(Npc npc, PlayerInstance player)
+	public void giveStoryBuffReward(Npc npc, PlayerInstance player)
 	{
 		if (Config.ENABLE_STORY_QUEST_BUFF_REWARD)
 		{
-			SkillCaster.triggerCast(npc, player, STORY_QUEST_BUFF_REWARD.getSkill());
+			for (SkillHolder holder : STORY_QUEST_BUFFS)
+			{
+				SkillCaster.triggerCast(npc, player, holder.getSkill());
+			}
 		}
 	}
 }

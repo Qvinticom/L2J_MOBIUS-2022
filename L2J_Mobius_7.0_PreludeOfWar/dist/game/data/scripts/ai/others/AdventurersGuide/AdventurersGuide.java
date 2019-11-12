@@ -37,13 +37,11 @@ public class AdventurersGuide extends AbstractNpcAI
 		33950,
 	};
 	// Items
-    private static final int ADENA = 57;
-    private static final int GEMSTONE_R = 19440;
+	private static final int ADENA = 57;
+	private static final int GEMSTONE_R = 19440;
 	// Skills
 	private static final SkillHolder BLESS_PROTECTION = new SkillHolder(5182, 1); // Blessing of Protection
 	private static final SkillHolder FANTASIA = new SkillHolder(32840, 1); // Fantasia Harmony - Adventurer
-	
-	
 	private static final SkillHolder[] GROUP_BUFFS =
 	{
 		new SkillHolder(15642, 1), // Horn Melody (Adventurer)
@@ -54,16 +52,16 @@ public class AdventurersGuide extends AbstractNpcAI
 		new SkillHolder(15652, 1), // Daring Sonata (Adventurer)
 		new SkillHolder(15653, 1), // Refreshing Sonata (Adventurer)
 	};
-	 private static final SkillHolder[] DONATE_BUFFS =
-    {
-        new SkillHolder(15642, 4), // Horn Melody (Adventurer)
-        new SkillHolder(15643, 4), // Drum Melody (Adventurer)
-        new SkillHolder(15644, 4), // Pipe Organ Melody (Adventurer)
-        new SkillHolder(15645, 4), // Guitar Melody (Adventurer)
-        new SkillHolder(15651, 1), // Prevailing Sonata (Adventurer)
-        new SkillHolder(15652, 1), // Daring Sonata (Adventurer)
-        new SkillHolder(15653, 1), // Refreshing Sonata (Adventurer)
-    };
+	private static final SkillHolder[] DONATE_BUFFS =
+	{
+		new SkillHolder(15642, 4), // Horn Melody (Adventurer)
+		new SkillHolder(15643, 4), // Drum Melody (Adventurer)
+		new SkillHolder(15644, 4), // Pipe Organ Melody (Adventurer)
+		new SkillHolder(15645, 4), // Guitar Melody (Adventurer)
+		new SkillHolder(15651, 1), // Prevailing Sonata (Adventurer)
+		new SkillHolder(15652, 1), // Daring Sonata (Adventurer)
+		new SkillHolder(15653, 1), // Refreshing Sonata (Adventurer)
+	};
 	// Misc
 	private static int MAX_LEVEL_BUFFS = 99;
 	private static int MIN_LEVEL_PROTECTION = 40;
@@ -113,49 +111,49 @@ public class AdventurersGuide extends AbstractNpcAI
 			case "fantasia":
 			{
 				if (player.getLevel() > MAX_LEVEL_BUFFS)
-                {
-                    return "guide-noBuffs.html";
-                }
-                for (SkillHolder holder : GROUP_BUFFS)
-                {
-                    SkillCaster.triggerCast(npc, player, holder.getSkill());
-                }
+				{
+					return "guide-noBuffs.html";
+				}
+				for (SkillHolder holder : GROUP_BUFFS)
+				{
+					SkillCaster.triggerCast(npc, player, holder.getSkill());
+				}
 				htmltext = applyBuffs(npc, player, FANTASIA.getSkill());
 				break;
 			}
 			case "fantasia_donate_adena":
 			{
 				if (getQuestItemsCount(player, ADENA) >= 3000000)
-               {
-                   takeItems(player, ADENA, 3000000);
-                   for (SkillHolder holder : DONATE_BUFFS)
-                   {
-                       SkillCaster.triggerCast(npc, player, holder.getSkill());
-                   }
-				   htmltext = applyBuffs(npc, player, FANTASIA.getSkill());
-               }
-               else
-               {
-                   htmltext = "guide-noItems.html";
-               }
-               break;
+				{
+					takeItems(player, ADENA, 3000000);
+					for (SkillHolder holder : DONATE_BUFFS)
+					{
+						SkillCaster.triggerCast(npc, player, holder.getSkill());
+					}
+					htmltext = applyBuffs(npc, player, FANTASIA.getSkill());
+				}
+				else
+				{
+					htmltext = "guide-noItems.html";
+				}
+				break;
 			}
 			case "fantasia_donate_gemstones":
 			{
 				if (getQuestItemsCount(player, GEMSTONE_R) >= 5)
-               {
-                   takeItems(player, GEMSTONE_R, 5);
-                   for (SkillHolder holder : DONATE_BUFFS)
-                   {
-                       SkillCaster.triggerCast(npc, player, holder.getSkill());
-                   }
-				   htmltext = applyBuffs(npc, player, FANTASIA.getSkill());
-               }
-               else
-               {
-                   htmltext = "guide-noItems.html";
-               }
-               break;
+				{
+					takeItems(player, GEMSTONE_R, 5);
+					for (SkillHolder holder : DONATE_BUFFS)
+					{
+						SkillCaster.triggerCast(npc, player, holder.getSkill());
+					}
+					htmltext = applyBuffs(npc, player, FANTASIA.getSkill());
+				}
+				else
+				{
+					htmltext = "guide-noItems.html";
+				}
+				break;
 			}
 		}
 		return htmltext;

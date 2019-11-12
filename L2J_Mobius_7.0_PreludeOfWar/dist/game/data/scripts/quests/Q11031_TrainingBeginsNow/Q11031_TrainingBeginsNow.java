@@ -115,7 +115,7 @@ public class Q11031_TrainingBeginsNow extends Quest
 			{
 				qs.setCond(3, true);
 				player.sendPacket(new ExTutorialShowId(25)); // Adventurers Guide
-				// TODO: Buff player support in Quest class.
+				giveStoryBuffReward(npc, player);
 				htmltext = event;
 				break;
 			}
