@@ -621,6 +621,15 @@
 	</skill>
 	<skill id="39397" toLevel="6" name="+5 Radiant Warrior's Circlet Box">
 		<operateType>A1</operateType>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>
+			<value level="1">0</value>
+			<value level="2">0</value>
+			<value level="3">0</value>
+			<value level="4">0</value>
+			<value level="5">48996</value>
+			<value level="6">48997</value>
+		</itemConsumeId>
 		<coolTime>500</coolTime>
 		<reuseDelay>500</reuseDelay>
 		<targetType>SELF</targetType>
