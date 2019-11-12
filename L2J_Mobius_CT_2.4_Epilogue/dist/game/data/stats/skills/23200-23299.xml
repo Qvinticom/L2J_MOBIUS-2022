@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="23298" levels="1" name="Flame Hawk">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<!-- Envelops in flames to inflict 300 fire damage every second for 10 seconds. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="FLAME_HAWK" />
@@ -9,6 +9,7 @@
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="20" />
 		<set name="isTriggeredSkill" val="true" />
+		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="83" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="ONE" />
@@ -19,6 +20,7 @@
 		</for>
 	</skill>
 	<skill id="23299" levels="1" name="Arrow Rain">
+		<!-- Envelops in a hurricane to inflict 300 wind damage every second for 10 seconds. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="ARROW_RAIN" />
@@ -26,6 +28,7 @@
 		<set name="element" val="2" /> <!-- Wind -->
 		<set name="elementPower" val="20" />
 		<set name="isTriggeredSkill" val="true" />
+		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="83" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="ONE" />
