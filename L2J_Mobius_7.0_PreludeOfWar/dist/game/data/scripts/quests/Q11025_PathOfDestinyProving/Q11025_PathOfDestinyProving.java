@@ -124,7 +124,7 @@ public class Q11025_PathOfDestinyProving extends Quest
 			{
 				if (qs.isCond(4))
 				{
-					addSpawn(MYSTERIOUS_MAGE, npc, false, 300000);
+					addSpawn(MYSTERIOUS_MAGE, npc, true, 300000);
 					showOnScreenMsg(player, NpcStringId.TALK_TO_THE_MYSTERIOUS_WIZARD_2, ExShowScreenMessage.TOP_CENTER, 10000);
 					break;
 				}
@@ -259,7 +259,7 @@ public class Q11025_PathOfDestinyProving extends Quest
 		final QuestState qs = getQuestState(killer, true);
 		if ((qs != null) && qs.isCond(3))
 		{
-			addSpawn(TERESIA, npc, false, 300000);
+			addSpawn(TERESIA, npc, true, 300000);
 			showOnScreenMsg(killer, NpcStringId.CHECK_ON_TELESHA, ExShowScreenMessage.TOP_CENTER, 10000);
 			qs.setCond(4, true);
 		}
