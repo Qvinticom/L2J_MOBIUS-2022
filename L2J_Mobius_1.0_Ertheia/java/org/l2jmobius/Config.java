@@ -89,6 +89,7 @@ public class Config
 	public static final String OLYMPIAD_CONFIG_FILE = "./config/Olympiad.ini";
 	public static final String SIEGE_CONFIG_FILE = "./config/Siege.ini";
 	public static final String FORTSIEGE_CONFIG_FILE = "./config/FortSiege.ini";
+	private static final String ATTRIBUTE_SYSTEM_FILE = "./config/AttributeSystem.ini";
 	private static final String CHARACTER_CONFIG_FILE = "./config/Character.ini";
 	private static final String FEATURE_CONFIG_FILE = "./config/Feature.ini";
 	private static final String FLOOD_PROTECTOR_CONFIG_FILE = "./config/FloodProtector.ini";
@@ -1504,6 +1505,79 @@ public class Config
 			ALLOW_WYVERN_ALWAYS = Feature.getBoolean("AllowRideWyvernAlways", false);
 			ALLOW_WYVERN_DURING_SIEGE = Feature.getBoolean("AllowRideWyvernDuringSiege", true);
 			ALLOW_MOUNTS_DURING_SIEGE = Feature.getBoolean("AllowRideMountsDuringSiege", false);
+			
+			// Load AttributeSystem config file (if exists)
+			final PropertiesParser AttributeSystem = new PropertiesParser(ATTRIBUTE_SYSTEM_FILE);
+			
+			S_WEAPON_STONE = AttributeSystem.getInt("SWeaponStone", 50);
+			S80_WEAPON_STONE = AttributeSystem.getInt("S80WeaponStone", 50);
+			S84_WEAPON_STONE = AttributeSystem.getInt("S84WeaponStone", 50);
+			R_WEAPON_STONE = AttributeSystem.getInt("RWeaponStone", 50);
+			R95_WEAPON_STONE = AttributeSystem.getInt("R95WeaponStone", 50);
+			R99_WEAPON_STONE = AttributeSystem.getInt("R99WeaponStone", 50);
+			
+			S_ARMOR_STONE = AttributeSystem.getInt("SArmorStone", 60);
+			S80_ARMOR_STONE = AttributeSystem.getInt("S80ArmorStone", 80);
+			S84_ARMOR_STONE = AttributeSystem.getInt("S84ArmorStone", 80);
+			R_ARMOR_STONE = AttributeSystem.getInt("RArmorStone", 100);
+			R95_ARMOR_STONE = AttributeSystem.getInt("R95ArmorStone", 100);
+			R99_ARMOR_STONE = AttributeSystem.getInt("R99ArmorStone", 100);
+			
+			S_WEAPON_CRYSTAL = AttributeSystem.getInt("SWeaponCrystal", 30);
+			S80_WEAPON_CRYSTAL = AttributeSystem.getInt("S80WeaponCrystal", 40);
+			S84_WEAPON_CRYSTAL = AttributeSystem.getInt("S84WeaponCrystal", 50);
+			R_WEAPON_CRYSTAL = AttributeSystem.getInt("RWeaponCrystal", 60);
+			R95_WEAPON_CRYSTAL = AttributeSystem.getInt("R95WeaponCrystal", 60);
+			R99_WEAPON_CRYSTAL = AttributeSystem.getInt("R99WeaponCrystal", 60);
+			
+			S_ARMOR_CRYSTAL = AttributeSystem.getInt("SArmorCrystal", 50);
+			S80_ARMOR_CRYSTAL = AttributeSystem.getInt("S80ArmorCrystal", 70);
+			S84_ARMOR_CRYSTAL = AttributeSystem.getInt("S84ArmorCrystal", 80);
+			R_ARMOR_CRYSTAL = AttributeSystem.getInt("RArmorCrystal", 80);
+			R95_ARMOR_CRYSTAL = AttributeSystem.getInt("R95ArmorCrystal", 100);
+			R99_ARMOR_CRYSTAL = AttributeSystem.getInt("R99ArmorCrystal", 100);
+			
+			S_WEAPON_STONE_SUPER = AttributeSystem.getInt("SWeaponStoneSuper", 100);
+			S80_WEAPON_STONE_SUPER = AttributeSystem.getInt("S80WeaponStoneSuper", 100);
+			S84_WEAPON_STONE_SUPER = AttributeSystem.getInt("S84WeaponStoneSuper", 100);
+			R_WEAPON_STONE_SUPER = AttributeSystem.getInt("RWeaponStoneSuper", 100);
+			R95_WEAPON_STONE_SUPER = AttributeSystem.getInt("R95WeaponStoneSuper", 100);
+			R99_WEAPON_STONE_SUPER = AttributeSystem.getInt("R99WeaponStoneSuper", 100);
+			
+			S_ARMOR_STONE_SUPER = AttributeSystem.getInt("SArmorStoneSuper", 100);
+			S80_ARMOR_STONE_SUPER = AttributeSystem.getInt("S80ArmorStoneSuper", 100);
+			S84_ARMOR_STONE_SUPER = AttributeSystem.getInt("S84ArmorStoneSuper", 100);
+			R_ARMOR_STONE_SUPER = AttributeSystem.getInt("RArmorStoneSuper", 100);
+			R95_ARMOR_STONE_SUPER = AttributeSystem.getInt("R95ArmorStoneSuper", 100);
+			R99_ARMOR_STONE_SUPER = AttributeSystem.getInt("R99ArmorStoneSuper", 100);
+			
+			S_WEAPON_CRYSTAL_SUPER = AttributeSystem.getInt("SWeaponCrystalSuper", 80);
+			S80_WEAPON_CRYSTAL_SUPER = AttributeSystem.getInt("S80WeaponCrystalSuper", 90);
+			S84_WEAPON_CRYSTAL_SUPER = AttributeSystem.getInt("S84WeaponCrystalSuper", 100);
+			R_WEAPON_CRYSTAL_SUPER = AttributeSystem.getInt("RWeaponCrystalSuper", 100);
+			R95_WEAPON_CRYSTAL_SUPER = AttributeSystem.getInt("R95WeaponCrystalSuper", 100);
+			R99_WEAPON_CRYSTAL_SUPER = AttributeSystem.getInt("R99WeaponCrystalSuper", 100);
+			
+			S_ARMOR_CRYSTAL_SUPER = AttributeSystem.getInt("SArmorCrystalSuper", 100);
+			S80_ARMOR_CRYSTAL_SUPER = AttributeSystem.getInt("S80ArmorCrystalSuper", 100);
+			S84_ARMOR_CRYSTAL_SUPER = AttributeSystem.getInt("S84ArmorCrystalSuper", 100);
+			R_ARMOR_CRYSTAL_SUPER = AttributeSystem.getInt("RArmorCrystalSuper", 100);
+			R95_ARMOR_CRYSTAL_SUPER = AttributeSystem.getInt("R95ArmorCrystalSuper", 100);
+			R99_ARMOR_CRYSTAL_SUPER = AttributeSystem.getInt("R99ArmorCrystalSuper", 100);
+			
+			S_WEAPON_JEWEL = AttributeSystem.getInt("SWeaponJewel", 100);
+			S80_WEAPON_JEWEL = AttributeSystem.getInt("S80WeaponJewel", 100);
+			S84_WEAPON_JEWEL = AttributeSystem.getInt("S84WeaponJewel", 100);
+			R_WEAPON_JEWEL = AttributeSystem.getInt("RWeaponJewel", 100);
+			R95_WEAPON_JEWEL = AttributeSystem.getInt("R95WeaponJewel", 100);
+			R99_WEAPON_JEWEL = AttributeSystem.getInt("R99WeaponJewel", 100);
+			
+			S_ARMOR_JEWEL = AttributeSystem.getInt("SArmorJewel", 100);
+			S80_ARMOR_JEWEL = AttributeSystem.getInt("S80ArmorJewel", 100);
+			S84_ARMOR_JEWEL = AttributeSystem.getInt("S84ArmorJewel", 100);
+			R_ARMOR_JEWEL = AttributeSystem.getInt("RArmorJewel", 100);
+			R95_ARMOR_JEWEL = AttributeSystem.getInt("R95ArmorJewel", 100);
+			R99_ARMOR_JEWEL = AttributeSystem.getInt("R99ArmorJewel", 100);
 			
 			// Load Character config file (if exists)
 			final PropertiesParser Character = new PropertiesParser(CHARACTER_CONFIG_FILE);
