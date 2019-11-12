@@ -81,7 +81,6 @@ public class CubicInstance implements IIdentifiable
 	private final int _cubicDelay;
 	private final int _cubicSkillChance;
 	private final int _cubicMaxCount;
-	private boolean _active;
 	private final boolean _givenByOther;
 	
 	private final List<Skill> _skills = new ArrayList<>();
@@ -97,7 +96,6 @@ public class CubicInstance implements IIdentifiable
 		_cubicDelay = cubicDelay * 1000;
 		_cubicSkillChance = cubicSkillChance;
 		_cubicMaxCount = cubicMaxCount;
-		_active = false;
 		_givenByOther = givenByOther;
 		
 		switch (_cubicId)
@@ -185,37 +183,40 @@ public class CubicInstance implements IIdentifiable
 		_disappearTask = ThreadPool.schedule(new CubicDisappear(this), cubicDuration * 1000); // disappear
 	}
 	
-	public synchronized void doAction()
+	public void doAction()
 	{
-		if (_active)
+		if (_actionTask == null)
 		{
-			return;
-		}
-		_active = true;
-		
-		switch (_cubicId)
-		{
-			case AQUA_CUBIC:
-			case BINDING_CUBIC:
-			case SPARK_CUBIC:
-			case STORM_CUBIC:
-			case POLTERGEIST_CUBIC:
-			case VAMPIRIC_CUBIC:
-			case VIPER_CUBIC:
-			case ATTRACT_CUBIC:
-			case SMART_CUBIC_ARCANALORD:
-			case SMART_CUBIC_ELEMENTALMASTER:
-			case SMART_CUBIC_SPECTRALMASTER:
-			case SMART_CUBIC_EVATEMPLAR:
-			case SMART_CUBIC_SHILLIENTEMPLAR:
+			synchronized (this)
 			{
-				_actionTask = ThreadPool.scheduleAtFixedRate(new CubicAction(this, _cubicSkillChance), 0, _cubicDelay);
-				break;
-			}
-			case LIFE_CUBIC:
-			{
-				_actionTask = ThreadPool.scheduleAtFixedRate(new CubicHeal(this), 0, _cubicDelay);
-				break;
+				if (_actionTask == null)
+				{
+					switch (_cubicId)
+					{
+						case AQUA_CUBIC:
+						case BINDING_CUBIC:
+						case SPARK_CUBIC:
+						case STORM_CUBIC:
+						case POLTERGEIST_CUBIC:
+						case VAMPIRIC_CUBIC:
+						case VIPER_CUBIC:
+						case ATTRACT_CUBIC:
+						case SMART_CUBIC_ARCANALORD:
+						case SMART_CUBIC_ELEMENTALMASTER:
+						case SMART_CUBIC_SPECTRALMASTER:
+						case SMART_CUBIC_EVATEMPLAR:
+						case SMART_CUBIC_SHILLIENTEMPLAR:
+						{
+							_actionTask = ThreadPool.scheduleAtFixedRate(new CubicAction(this, _cubicSkillChance), 0, _cubicDelay);
+							break;
+						}
+						case LIFE_CUBIC:
+						{
+							_actionTask = ThreadPool.scheduleAtFixedRate(new CubicHeal(this), 0, _cubicDelay);
+							break;
+						}
+					}
+				}
 			}
 		}
 	}
@@ -264,7 +265,6 @@ public class CubicInstance implements IIdentifiable
 			_actionTask.cancel(true);
 			_actionTask = null;
 		}
-		_active = false;
 	}
 	
 	public void cancelDisappear()

@@ -74,7 +74,6 @@ public class CubicInstance
 	protected int _matk;
 	protected int _activationtime;
 	protected int _activationchance;
-	protected boolean _active;
 	private final boolean _givenByOther;
 	protected List<Skill> _skills = new ArrayList<>();
 	private Future<?> _disappearTask;
@@ -98,7 +97,6 @@ public class CubicInstance
 		_matk = mAtk;
 		_activationtime = activationtime * 1000;
 		_activationchance = activationchance;
-		_active = false;
 		_givenByOther = givenByOther;
 		
 		switch (_id)
@@ -241,40 +239,40 @@ public class CubicInstance
 		_disappearTask = ThreadPool.schedule(new Disappear(), totallifetime); // disappear
 	}
 	
-	/**
-	 * Do action.
-	 */
-	public synchronized void doAction()
+	public void doAction()
 	{
-		if (_active)
+		if (_actionTask == null)
 		{
-			return;
-		}
-		_active = true;
-		
-		switch (_id)
-		{
-			case AQUA_CUBIC:
-			case BINDING_CUBIC:
-			case SPARK_CUBIC:
-			case STORM_CUBIC:
-			case POLTERGEIST_CUBIC:
-			case VAMPIRIC_CUBIC:
-			case VIPER_CUBIC:
-			case ATTRACT_CUBIC:
-			case SMART_CUBIC_ARCANALORD:
-			case SMART_CUBIC_ELEMENTALMASTER:
-			case SMART_CUBIC_SPECTRALMASTER:
-			case SMART_CUBIC_EVATEMPLAR:
-			case SMART_CUBIC_SHILLIENTEMPLAR:
+			synchronized (this)
 			{
-				_actionTask = ThreadPool.scheduleAtFixedRate(new Action(_activationchance), 0, _activationtime);
-				break;
-			}
-			case LIFE_CUBIC:
-			{
-				_actionTask = ThreadPool.scheduleAtFixedRate(new Heal(), 0, _activationtime);
-				break;
+				if (_actionTask == null)
+				{
+					switch (_id)
+					{
+						case AQUA_CUBIC:
+						case BINDING_CUBIC:
+						case SPARK_CUBIC:
+						case STORM_CUBIC:
+						case POLTERGEIST_CUBIC:
+						case VAMPIRIC_CUBIC:
+						case VIPER_CUBIC:
+						case ATTRACT_CUBIC:
+						case SMART_CUBIC_ARCANALORD:
+						case SMART_CUBIC_ELEMENTALMASTER:
+						case SMART_CUBIC_SPECTRALMASTER:
+						case SMART_CUBIC_EVATEMPLAR:
+						case SMART_CUBIC_SHILLIENTEMPLAR:
+						{
+							_actionTask = ThreadPool.scheduleAtFixedRate(new Action(_activationchance), 0, _activationtime);
+							break;
+						}
+						case LIFE_CUBIC:
+						{
+							_actionTask = ThreadPool.scheduleAtFixedRate(new Heal(), 0, _activationtime);
+							break;
+						}
+					}
+				}
 			}
 		}
 	}
@@ -332,7 +330,6 @@ public class CubicInstance
 			}
 			_actionTask = null;
 		}
-		_active = false;
 	}
 	
 	/**
