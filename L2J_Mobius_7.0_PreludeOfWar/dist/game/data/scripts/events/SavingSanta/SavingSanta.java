@@ -69,7 +69,7 @@ public class SavingSanta extends LongTimeEvent
 	// Use Santa's Helpers Auto Buff?
 	private static boolean SANTAS_HELPER_AUTOBUFF = false;
 	
-	private static final ItemHolder[] REQUIRED_ITEMS =
+	private static final ItemHolder[] TREE_REQUIRED_ITEMS =
 	{
 		new ItemHolder(5556, 4),
 		new ItemHolder(5557, 4),
@@ -135,6 +135,11 @@ public class SavingSanta extends LongTimeEvent
 	
 	public SavingSanta()
 	{
+		if (!isEventPeriod())
+		{
+			return;
+		}
+		
 		addStartNpc(SANTA_TRAINEE_ID);
 		addFirstTalkId(SANTA_TRAINEE_ID);
 		addTalkId(SANTA_TRAINEE_ID);
@@ -145,17 +150,14 @@ public class SavingSanta extends LongTimeEvent
 		addSpellFinishedId(THOMAS_D_TURKEY_ID);
 		addSpawnId(SPECIAL_CHRISTMAS_TREE_ID);
 		
-		if (isEventPeriod())
+		startQuestTimer("SpecialTreeHeal", 5000, null, null);
+		if (SAVING_SANTA)
 		{
-			startQuestTimer("SpecialTreeHeal", 5000, null, null);
-			if (SAVING_SANTA)
-			{
-				startQuestTimer("ThomasQuest", 1000, null, null);
-			}
-			if (SANTAS_HELPER_AUTOBUFF)
-			{
-				startQuestTimer("SantaBlessings", 5000, null, null);
-			}
+			startQuestTimer("ThomasQuest", 1000, null, null);
+		}
+		if (SANTAS_HELPER_AUTOBUFF)
+		{
+			startQuestTimer("SantaBlessings", 5000, null, null);
 		}
 	}
 	
@@ -296,6 +298,11 @@ public class SavingSanta extends LongTimeEvent
 	@Override
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
+		if (!isEventPeriod())
+		{
+			return null;
+		}
+		
 		String htmltext = null;
 		if (event.equalsIgnoreCase("ThomasQuest"))
 		{
@@ -430,7 +437,7 @@ public class SavingSanta extends LongTimeEvent
 				player.addItem("SavingSantaPresent", BR_XMAS_PRESENT_NORMAL, 1, player, true);
 			}
 		}
-		else if (event.equalsIgnoreCase("SantaBlessings") && isEventPeriod())
+		else if (event.equalsIgnoreCase("SantaBlessings") && SANTAS_HELPER_AUTOBUFF)
 		{
 			startQuestTimer("SantaBlessings", 15000, null, null);
 			final long currentTime = System.currentTimeMillis();
@@ -522,7 +529,7 @@ public class SavingSanta extends LongTimeEvent
 				int itemsOk = 0;
 				htmltext = "<html><title>Christmas Event</title><body><br><br><table width=260><tr><td></td><td width=40></td><td width=40></td></tr><tr><td><font color=LEVEL>Christmas Tree</font></td><td width=40><img src=\"Icon.etc_x_mas_tree_i00\" width=32 height=32></td><td width=40></td></tr></table><br><br><table width=260>";
 				
-				for (ItemHolder item : REQUIRED_ITEMS)
+				for (ItemHolder item : TREE_REQUIRED_ITEMS)
 				{
 					long pieceCount = player.getInventory().getInventoryItemCount(item.getId(), -1);
 					if (pieceCount >= item.getCount())
@@ -551,7 +558,7 @@ public class SavingSanta extends LongTimeEvent
 			else if (event.equalsIgnoreCase("buyTree"))
 			{
 				playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-				for (ItemHolder item : REQUIRED_ITEMS)
+				for (ItemHolder item : TREE_REQUIRED_ITEMS)
 				{
 					if (player.getInventory().getInventoryItemCount(item.getId(), -1) < item.getCount())
 					{
@@ -560,13 +567,13 @@ public class SavingSanta extends LongTimeEvent
 					}
 				}
 				
-				for (ItemHolder item : REQUIRED_ITEMS)
+				for (ItemHolder item : TREE_REQUIRED_ITEMS)
 				{
 					player.destroyItemByItemId(event, item.getId(), item.getCount(), player, true);
 				}
 				player.addItem(event, X_MAS_TREE1, 1, player, true);
 			}
-			else if (event.equalsIgnoreCase("SpecialTree") && isEventPeriod())
+			else if (event.equalsIgnoreCase("SpecialTree"))
 			{
 				htmltext = "<html><title>Christmas Event</title><body><br><br><table width=260><tr><td></td><td width=40></td><td width=40></td></tr><tr><td><font color=LEVEL>Special Christmas Tree</font></td><td width=40><img src=\"Icon.etc_x_mas_tree_i00\" width=32 height=32></td><td width=40></td></tr></table><br><br><table width=260>";
 				long pieceCount = player.getInventory().getInventoryItemCount(X_MAS_TREE1, -1);
@@ -595,7 +602,7 @@ public class SavingSanta extends LongTimeEvent
 				
 				return htmltext;
 			}
-			else if (event.equalsIgnoreCase("buySpecialTree") && isEventPeriod())
+			else if (event.equalsIgnoreCase("buySpecialTree"))
 			{
 				playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 				if (player.getInventory().getInventoryItemCount(X_MAS_TREE1, -1) < 10)
@@ -644,7 +651,7 @@ public class SavingSanta extends LongTimeEvent
 				player.destroyItemByItemId(event, X_MAS_TREE1, 10, player, true);
 				player.addItem(event, SANTAS_HAT_ID, 1, player, true);
 			}
-			else if (event.equalsIgnoreCase("SavingSantaHat") && isEventPeriod())
+			else if (event.equalsIgnoreCase("SavingSantaHat"))
 			{
 				htmltext = "<html><title>Christmas Event</title><body><br><br><table width=260><tr><td></td><td width=40></td><td width=40></td></tr><tr><td><font color=LEVEL>Saving Santa's Hat</font></td><td width=40><img src=\"Icon.Accessory_santas_cap_i00\" width=32 height=32></td><td width=40></td></tr></table><br><br><table width=260>";
 				long pieceCount = player.getInventory().getAdena();
@@ -674,7 +681,7 @@ public class SavingSanta extends LongTimeEvent
 				
 				return htmltext;
 			}
-			else if (event.equalsIgnoreCase("buySavingHat") && isEventPeriod())
+			else if (event.equalsIgnoreCase("buySavingHat"))
 			{
 				playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 				if (player.getInventory().getAdena() < 50000)
@@ -684,7 +691,7 @@ public class SavingSanta extends LongTimeEvent
 				player.reduceAdena(event, 50000, player, true);
 				player.addItem(event, BR_XMAS_GAWIBAWIBO_CAP, 1, player, true);
 			}
-			else if (event.equalsIgnoreCase("HolidayFestival") && isEventPeriod())
+			else if (event.equalsIgnoreCase("HolidayFestival"))
 			{
 				if (_isSantaFree)
 				{
@@ -696,7 +703,7 @@ public class SavingSanta extends LongTimeEvent
 					return "savingsanta-nobuff.htm";
 				}
 			}
-			else if (event.equalsIgnoreCase("getWeapon") && isEventPeriod())
+			else if (event.equalsIgnoreCase("getWeapon"))
 			{
 				if ((player.getInventory().getInventoryItemCount(BR_XMAS_WPN_TICKET_NORMAL, -1) > 0) && (player.getInventory().getInventoryItemCount(BR_XMAS_WPN_TICKET_JACKPOT, -1) > 0))
 				{
@@ -704,7 +711,7 @@ public class SavingSanta extends LongTimeEvent
 				}
 				return "savingsanta-weapon.htm";
 			}
-			else if (event.startsWith("weapon_") && isEventPeriod())
+			else if (event.startsWith("weapon_"))
 			{
 				final int itemId = Integer.parseInt(event.split("weapon_")[1]) - 1;
 				if (player.getInventory().getInventoryItemCount(BR_XMAS_WPN_TICKET_JACKPOT, -1) > 0)
