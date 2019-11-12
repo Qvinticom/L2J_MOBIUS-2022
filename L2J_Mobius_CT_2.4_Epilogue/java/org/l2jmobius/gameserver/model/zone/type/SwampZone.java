@@ -124,7 +124,10 @@ public class SwampZone extends ZoneType
 				{
 					creature.sendPacket(new OnEventTrigger(_eventId, false));
 				}
-				creature.getActingPlayer().broadcastUserInfo();
+				if (!creature.isTeleporting())
+				{
+					creature.getActingPlayer().broadcastUserInfo();
+				}
 			}
 		}
 	}

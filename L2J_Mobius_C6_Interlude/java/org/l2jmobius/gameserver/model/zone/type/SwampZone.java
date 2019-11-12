@@ -64,7 +64,7 @@ public class SwampZone extends ZoneType
 	protected void onExit(Creature creature)
 	{
 		creature.setInsideZone(ZoneId.SWAMP, false);
-		if (creature instanceof PlayerInstance)
+		if (!creature.isTeleporting() && (creature instanceof PlayerInstance))
 		{
 			((PlayerInstance) creature).broadcastUserInfo();
 		}

@@ -64,7 +64,10 @@ public class WaterZone extends ZoneType
 			{
 				((PlayerInstance) creature).stopWaterTask();
 			}
-			((PlayerInstance) creature).broadcastUserInfo();
+			if (!creature.isTeleporting())
+			{
+				((PlayerInstance) creature).broadcastUserInfo();
+			}
 		}
 		else if (creature instanceof NpcInstance)
 		{
