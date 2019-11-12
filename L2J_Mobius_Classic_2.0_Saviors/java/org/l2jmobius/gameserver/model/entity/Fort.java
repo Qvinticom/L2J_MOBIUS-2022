@@ -398,6 +398,10 @@ public class Fort extends AbstractResidence
 			{
 				LOGGER.log(Level.WARNING, "Exception in setOwner: " + e.getMessage(), e);
 			}
+			if (getSiege().isInProgress())
+			{
+				getSiege().updatePlayerSiegeStateFlags(true);
+			}
 			removeOwner(true);
 		}
 		setFortState(0, 0); // initialize fort state

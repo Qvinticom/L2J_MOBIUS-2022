@@ -41,7 +41,6 @@ import org.l2jmobius.gameserver.network.serverpackets.PledgeShowInfoUpdate;
 /**
  * @author programmos
  */
-
 public class Fort
 {
 	protected static final Logger LOGGER = Logger.getLogger(Fort.class.getName());
