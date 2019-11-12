@@ -334,7 +334,6 @@
 		<trait>SHOCK</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>38940</power> <!-- Fix: Retail Missed -->
@@ -358,17 +357,26 @@
 		<coolTime>200</coolTime>
 		<reuseDelay>5000</reuseDelay>
 		<effectPoint>-1</effectPoint>
+		<activateRate>80</activateRate>
 		<isDebuff>true</isDebuff>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
-		<abnormalType>REAL_TARGET</abnormalType>
+		<abnormalType>PA_DOWN</abnormalType>
+		<abnormalVisualEffect>AURA_DEBUFF</abnormalVisualEffect>
 		<magicLvl>1</magicLvl>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<nextAction>ATTACK</nextAction>
 		<effects>
+			<effect name="GetAgro" />
+			<effect name="AddHate">
+				<power>500</power>
+			</effect>
+			<effect name="HateAttack">
+				<amount>500</amount>
+				<mode>PER</mode>
+			</effect>
 			<effect name="PhysicalDefence">
 				<amount>-35</amount>
 				<mode>PER</mode>
@@ -392,7 +400,6 @@
 		<isDebuff>true</isDebuff>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
-		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
 		<activateRate>80</activateRate>
@@ -403,7 +410,6 @@
 		<trait>BLEED</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>38940</power> <!-- Fix: Retail Missed -->
@@ -436,12 +442,15 @@
 		<effectRange>800</effectRange>
 		<fanRange>0;0;600;60</fanRange>
 		<magicLvl>1</magicLvl>
-		<nextAction>ATTACK</nextAction>
 		<trait>KNOCKDOWN</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>FAN</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
-		<nextAction>ATTACK</nextAction>
+		<conditions>
+			<condition name="OpCheckCastRange">
+				<distance>200</distance>
+			</condition>
+		</conditions>
 		<effects>
 			<effect name="KnockBack">
 				<speed>200</speed>
@@ -467,7 +476,6 @@
 		<magicLvl>1</magicLvl>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="HpDrain">
 				<power>553</power> <!-- Fix: Retail Missed -->
@@ -485,7 +493,7 @@
 		<reuseDelay>10000</reuseDelay>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
-		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
+		<abnormalType>PA_UP_SPECIAL</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -494,7 +502,6 @@
 		<magicLvl>1</magicLvl>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="PAtk">
 				<amount>50</amount>
@@ -521,7 +528,6 @@
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<activateRate>80</activateRate>
-		<lvlBonusRate>30</lvlBonusRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<magicLvl>1</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -530,7 +536,6 @@
 		<trait>PULL</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="PhysicalAttackSpeed">
 				<amount>-50</amount>
@@ -568,7 +573,6 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>FAN</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
-		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="HpDrain">
 				<power>553</power> <!-- Fix: Retail Missed -->
@@ -595,7 +599,6 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="VampiricAttack">
 				<amount>80</amount>
@@ -629,7 +632,6 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>FAN</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
-		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="MagicalAttack">
 				<power>550</power>
@@ -685,7 +687,6 @@
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
-		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="TargetCancel">
 				<chance>60</chance>
@@ -743,7 +744,6 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
-		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="MagicalAttack">
 				<power>553</power> <!-- Fix: Retail Missed -->
@@ -772,7 +772,6 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
-		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="MagicalAttack">
 				<power>553</power> <!-- Fix: Retail Missed -->
@@ -798,7 +797,6 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
-		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="HpDrain">
 				<power>553</power> <!-- Fix: Retail Missed -->
@@ -831,7 +829,6 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
-		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="TargetCancel">
 				<chance>60</chance>
@@ -877,7 +874,6 @@
 		<trait>KNOCKDOWN</trait>
 		<targetType>ENEMY</targetType>
 		<affectObject>NOT_FRIEND</affectObject>
-		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="KnockBack">
 				<speed>200</speed>
@@ -914,7 +910,6 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
-		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>38940</power> <!-- Fix: Retail Missed -->
@@ -955,7 +950,6 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
-		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="MagicalAttack">
 				<power>
@@ -983,7 +977,6 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
-		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="MagicalAttack">
 				<power>
@@ -1009,7 +1002,6 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>
@@ -1035,7 +1027,6 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>
@@ -1061,7 +1052,6 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>
@@ -1087,7 +1077,6 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>
@@ -1115,7 +1104,6 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
-		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="MagicalAttack">
 				<power>
@@ -1143,7 +1131,6 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
-		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="MagicalAttack">
 				<power>
@@ -1171,7 +1158,6 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
-		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="MagicalAttack">
 				<power>
@@ -1199,7 +1185,6 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
-		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="MagicalAttack">
 				<power>
@@ -1237,7 +1222,6 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>FAN</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
-		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="AirBind" />
 			<effect name="BlockActions" />
@@ -1419,7 +1403,6 @@
 		<effectRange>100</effectRange>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>38940</power> <!-- Fix: Retail Missed -->
@@ -1445,7 +1428,6 @@
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
-		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="MagicalAttack">
 				<power>157</power>
@@ -1474,7 +1456,6 @@
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
-		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>38940</power> <!-- Fix: Retail Missed -->
@@ -1663,7 +1644,6 @@
 		<trait>DERANGEMENT</trait>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<nextAction>ATTACK</nextAction>
 		<effects>
 			<effect name="Mute" />
 			<effect name="PhysicalAttack">

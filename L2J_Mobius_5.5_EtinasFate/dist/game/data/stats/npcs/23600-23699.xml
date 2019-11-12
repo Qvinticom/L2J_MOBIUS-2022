@@ -1,128 +1,137 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="23600" level="102" type="Monster" name="Atelia Flame Master">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="17425" />
+		<acquire exp="381103202" sp="381203" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="63066" hpRegen="7.5" mp="24690" mpRegen="2.7" />
+			<vitals hp="567903.626205" hpRegen="9.5" mp="30638.769" mpRegen="3.3" />
+			<attack physical="45713" magical="35171" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="4133" magical="2399" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
+			<attribute>
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
+				<attack type="DARK" value="330" />
+			</attribute>
 		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skillList>
+		<status attackable="true" />
 		<collision>
 			<radius normal="11" />
 			<height normal="25.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+		</skillList>
 		<dropLists>
 			<drop>
-				<item id="57" min="23299" max="54277" chance="70" /> <!-- Adena -->
-				<item id="35345" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Armor Ingredient -->
-				<item id="36520" min="1" max="1" chance="0.3" /> <!-- Exquisite Leather -->
-				<item id="36908" min="1" max="1" chance="0.03" /> <!-- Recipe: Adamantite Wire - Combination -->
-				<item id="35469" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Leather Armor (60%) -->
+				<item id="57" min="4675" max="10891" chance="70" /> <!-- Adena -->
+				<item id="35345" min="1" max="1" chance="0.075" /> <!-- Eternal Leather Armor Ingredient -->
+				<item id="36520" min="1" max="1" chance="0.03" /> <!-- Exquisite Leather -->
+				<item id="36908" min="1" max="1" chance="0.0075" /> <!-- Recipe: Adamantite Wire - Combination -->
+				<item id="35469" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Leather Armor (60%) -->
 			</drop>
 			<spoil>
-				<item id="36554" min="1" max="1" chance="1.682" /> <!-- Armor Fragment (High-grade) -->
+				<item id="36554" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (High-grade) -->
 			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
-			</lucky>
 		</dropLists>
 	</npc>
 	<npc id="23601" level="102" type="Monster" name="Fortress Archon">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
 		<equipment rhand="17392" />
+		<acquire exp="444700149" sp="444771" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="473004" hpRegen="7.5" mp="24690" mpRegen="2.7" />
+			<vitals hp="567903.626205" hpRegen="9.5" mp="30638.769" mpRegen="3.3" />
+			<attack physical="45713" magical="35171" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="4133" magical="2399" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
+			<attribute>
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
+				<attack type="DARK" value="330" />
+			</attribute>
 		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
-			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skillList>
+		<status attackable="true" />
 		<collision>
 			<radius normal="14" />
 			<height normal="29" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+		</skillList>
 		<dropLists>
 			<drop>
-				<item id="17438" min="1" max="1" chance="0.03" /> <!-- Eternal Leather Leggings - Light Armor -->
-				<item id="57" min="27280" max="63554" chance="70" /> <!-- Adena -->
-				<item id="36539" min="1" max="1" chance="1.456" /> <!-- Quality Leather Braid -->
-				<item id="35344" min="1" max="1" chance="0.75" /> <!-- Eternal Leather Helmet Ingredient -->
+				<item id="17438" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Leggings -->
+				<item id="57" min="4675" max="10891" chance="70" /> <!-- Adena -->
+				<item id="35344" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Helmet Ingredient -->
+				<item id="36539" min="1" max="1" chance="0.3" /> <!-- Quality Leather Braid -->
 				<item id="36912" min="1" max="1" chance="0.0009" /> <!-- Recipe: Durandil Wire - Upgrade -->
 			</drop>
 			<spoil>
-				<item id="36555" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (Top-grade) -->
+				<item id="36555" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (Top-grade) -->
 			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
-			</lucky>
 		</dropLists>
 	</npc>
 	<npc id="23602" level="102" type="Monster" name="Atelia High Priest">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
 		<equipment rhand="17426" />
+		<acquire exp="444700149" sp="444771" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="473004" hpRegen="7.5" mp="24690" mpRegen="2.7" />
+			<vitals hp="567903.626205" hpRegen="9.5" mp="30638.769" mpRegen="3.3" />
+			<attack physical="45713" magical="35171" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="4133" magical="2399" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
+			<attribute>
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
+				<attack type="DARK" value="330" />
+			</attribute>
 		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
-			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skillList>
+		<status attackable="true" />
 		<collision>
 			<radius normal="14" />
 			<height normal="29" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+		</skillList>
 		<dropLists>
 			<drop>
-				<item id="17437" min="1" max="1" chance="0.0075" /> <!-- Eternal Leather Armor - Light Armor -->
-				<item id="57" min="27280" max="63554" chance="70" /> <!-- Adena -->
-				<item id="36519" min="1" max="1" chance="5.78" /> <!-- Quality Leather -->
-				<item id="35344" min="1" max="1" chance="0.75" /> <!-- Eternal Leather Helmet Ingredient -->
+				<item id="17437" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Armor -->
+				<item id="57" min="4675" max="10891" chance="70" /> <!-- Adena -->
+				<item id="36519" min="1" max="1" chance="1.095" /> <!-- Quality Leather -->
+				<item id="35344" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Helmet Ingredient -->
 				<item id="36913" min="1" max="1" chance="0.0009" /> <!-- Recipe: Durandil Wire - Combination -->
 			</drop>
 			<spoil>
-				<item id="36555" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (Top-grade) -->
+				<item id="36555" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (Top-grade) -->
 			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
-			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23603" level="85" type="Monster" name="Guardian Sinistra" title="Burnstein's Servant">
+	<npc id="23603" level="102" type="Monster" name="Guardian Sinistra" title="Burnstein's Servant">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="473004" hpRegen="7.5" mp="24690" mpRegen="2.7" />
+			<vitals hp="4130206.183125" hpRegen="9.5" mp="30638.769" mpRegen="3.3" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
@@ -130,20 +139,21 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14818" level="1" /> <!-- Instant Kill Attack Resistance -->
 		</skillList>
 		<collision>
 			<radius normal="21" />
 			<height normal="52.5" />
 		</collision>
 	</npc>
-	<npc id="23604" level="85" type="Monster" name="Guardian Destra" title="Burnstein's Servant">
+	<npc id="23604" level="102" type="Monster" name="Guardian Destra" title="Burnstein's Servant">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="473004" hpRegen="7.5" mp="24690" mpRegen="2.7" />
+			<vitals hp="4130206.183125" hpRegen="9.5" mp="30638.769" mpRegen="3.3" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
@@ -151,8 +161,9 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14818" level="1" /> <!-- Instant Kill Attack Resistance -->
 		</skillList>
 		<collision>
 			<radius normal="21" />

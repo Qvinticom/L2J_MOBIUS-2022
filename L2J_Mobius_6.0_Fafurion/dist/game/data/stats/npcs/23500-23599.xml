@@ -284,7 +284,8 @@
 			<attack physical="42356" magical="31566" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3777" magical="3955" />
 			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
+				<attack type="DARK" value="330" />
 			</attribute>
 			<speed>
 				<walk ground="60" />
@@ -344,7 +345,8 @@
 			<attack physical="47356" magical="36566" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="4718" magical="4955" />
 			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
+				<attack type="DARK" value="330" />
 			</attribute>
 			<speed>
 				<walk ground="60" />
@@ -364,7 +366,7 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 		</skillList>
-		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
 				<clan>ATELIA_CLAN</clan>
 			</clanList>
@@ -407,7 +409,8 @@
 			<attack physical="42356" magical="31566" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3777" magical="3955" />
 			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
+				<attack type="DARK" value="330" />
 			</attribute>
 			<speed>
 				<walk ground="60" />
@@ -423,7 +426,7 @@
 			<skill id="16758" level="1" /> <!-- Embryo -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 		</skillList>
-		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
 				<clan>ATELIA_CLAN</clan>
 			</clanList>
@@ -465,7 +468,8 @@
 			<attack physical="47356" magical="36566" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="4718" magical="4955" />
 			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
+				<attack type="DARK" value="330" />
 			</attribute>
 			<speed>
 				<walk ground="60" />
@@ -484,7 +488,7 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 		</skillList>
-		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
 				<clan>ATELIA_CLAN</clan>
 			</clanList>
@@ -528,7 +532,8 @@
 			<attack physical="51396" magical="43516" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="5080" magical="5650" />
 			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
+				<attack type="DARK" value="330" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -546,7 +551,7 @@
 			<skill id="16758" level="1" /> <!-- Embryo -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 		</skillList>
-		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
 				<clan>ATELIA_CLAN</clan>
 			</clanList>
@@ -592,7 +597,8 @@
 			<attack physical="51396" magical="43516" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="5080" magical="5650" />
 			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
+				<attack type="DARK" value="330" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -611,7 +617,7 @@
 			<skill id="16758" level="1" /> <!-- Embryo -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 		</skillList>
-		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
 				<clan>ATELIA_CLAN</clan>
 			</clanList>
@@ -647,7 +653,8 @@
 			<attack physical="58229" magical="48516" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="5975" magical="6244" />
 			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
+				<attack type="DARK" value="330" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -664,7 +671,7 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 		</skillList>
-		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
 				<clan>ATELIA_CLAN</clan>
 			</clanList>
@@ -700,7 +707,8 @@
 			<attack physical="58229" magical="48516" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="5975" magical="6244" />
 			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
+				<attack type="DARK" value="330" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -717,7 +725,7 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 		</skillList>
-		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
 				<clan>ATELIA_CLAN</clan>
 			</clanList>
@@ -755,7 +763,8 @@
 			<attack physical="47356" magical="36566" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="4718" magical="4955" />
 			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
+				<attack type="DARK" value="330" />
 			</attribute>
 			<speed>
 				<walk ground="60" />
@@ -773,7 +782,7 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 		</skillList>
-		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
 				<clan>ATELIA_CLAN</clan>
 			</clanList>
@@ -809,7 +818,8 @@
 			<attack physical="47356" magical="36566" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="4718" magical="4955" />
 			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
+				<attack type="DARK" value="330" />
 			</attribute>
 			<speed>
 				<walk ground="60" />
@@ -826,7 +836,7 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 		</skillList>
-		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
 				<clan>ATELIA_CLAN</clan>
 			</clanList>
@@ -862,7 +872,8 @@
 			<attack physical="58229" magical="48516" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="5975" magical="6244" />
 			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
+				<attack type="DARK" value="330" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -879,7 +890,7 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 		</skillList>
-		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
 				<clan>ATELIA_CLAN</clan>
 			</clanList>
@@ -915,7 +926,8 @@
 			<attack physical="58229" magical="48516" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="5975" magical="6244" />
 			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
+				<attack type="DARK" value="330" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -932,7 +944,7 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 		</skillList>
-		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
 				<clan>ATELIA_CLAN</clan>
 			</clanList>
@@ -968,7 +980,8 @@
 			<attack physical="47356" magical="36566" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="4718" magical="4955" />
 			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
+				<attack type="DARK" value="330" />
 			</attribute>
 			<speed>
 				<walk ground="60" />
@@ -985,7 +998,7 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 		</skillList>
-		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
 				<clan>ATELIA_CLAN</clan>
 			</clanList>
@@ -1021,7 +1034,8 @@
 			<attack physical="58229" magical="48516" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="5975" magical="6244" />
 			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
+				<attack type="DARK" value="330" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -1038,7 +1052,7 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 		</skillList>
-		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
 				<clan>ATELIA_CLAN</clan>
 			</clanList>
@@ -1079,6 +1093,10 @@
 			<vitals hp="1995150.706395" hpRegen="9.5" mp="83501.371" mpRegen="3.3" />
 			<attack physical="63121" magical="68961" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="5921" magical="5405" />
+			<attribute>
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
+				<attack type="DARK" value="330" />
+			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
@@ -1107,7 +1125,8 @@
 			<attack physical="38999" magical="27961" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3421" magical="3605" />
 			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="250" dark="200" />
+				<attack type="HOLY" value="330" />
 			</attribute>
 			<speed>
 				<walk ground="60" />
@@ -1121,7 +1140,7 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
 		</skillList>
-		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
 				<clan>GARDEN_CLAN</clan>
 			</clanList>
@@ -1155,7 +1174,8 @@
 			<attack physical="32000" magical="44115" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="4431" magical="4000" />
 			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="250" dark="200" />
+				<attack type="HOLY" value="330" />
 			</attribute>
 			<speed>
 				<walk ground="60" />
@@ -1169,7 +1189,7 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
 		</skillList>
-		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
 				<clan>GARDEN_CLAN</clan>
 			</clanList>
@@ -1203,7 +1223,8 @@
 			<attack physical="38999" magical="27961" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3421" magical="3605" />
 			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+				<defence fire="250" water="250" wind="250" earth="200" holy="250" dark="250" />
+				<attack type="WIND" value="330" />
 			</attribute>
 			<speed>
 				<walk ground="60" />
@@ -1217,7 +1238,7 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
 		</skillList>
-		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
 				<clan>GARDEN_CLAN</clan>
 			</clanList>
@@ -1251,7 +1272,8 @@
 			<attack physical="32000" magical="44115" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="4431" magical="4000" />
 			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+				<defence fire="250" water="250" wind="250" earth="200" holy="250" dark="250" />
+				<attack type="WIND" value="330" />
 			</attribute>
 			<speed>
 				<walk ground="60" />
@@ -1265,7 +1287,7 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="14620" level="4" /> <!-- Aerial Yoke Resistance -->
 		</skillList>
-		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
 				<clan>GARDEN_CLAN</clan>
 			</clanList>
@@ -1298,7 +1320,8 @@
 			<attack physical="10561" magical="4115" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2431" magical="2000" />
 			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="250" dark="200" />
+				<attack type="HOLY" value="330" />
 			</attribute>
 			<speed>
 				<walk ground="39" />
@@ -1310,7 +1333,7 @@
 			<skill id="5466" level="1" /> <!-- Holy Attacks -->
 			<skill id="14817" level="1" /> <!-- Instant Kill Attack Resistance -->
 		</skillList>
-		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
 				<clan>GARDEN_CLAN</clan>
 			</clanList>
@@ -1343,7 +1366,8 @@
 			<attack physical="32000" magical="44115" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="4431" magical="4000" />
 			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+				<defence fire="250" water="250" wind="250" earth="200" holy="250" dark="250" />
+				<attack type="WIND" value="330" />
 			</attribute>
 			<speed>
 				<walk ground="60" />
@@ -1357,7 +1381,7 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="14620" level="4" /> <!-- Aerial Yoke Resistance -->
 		</skillList>
-		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
 				<clan>GARDEN_CLAN</clan>
 			</clanList>
@@ -1397,7 +1421,8 @@
 			<attack physical="32000" magical="44115" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="4431" magical="4000" />
 			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+				<defence fire="250" water="250" wind="250" earth="200" holy="250" dark="250" />
+				<attack type="WIND" value="330" />
 			</attribute>
 			<speed>
 				<walk ground="60" />
@@ -1413,7 +1438,7 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="14620" level="4" /> <!-- Aerial Yoke Resistance -->
 		</skillList>
-		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
 				<clan>GARDEN_CLAN</clan>
 			</clanList>
@@ -1446,7 +1471,8 @@
 			<attack physical="33999" magical="22961" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3021" magical="3105" />
 			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="250" dark="200" />
+				<attack type="HOLY" value="330" />
 			</attribute>
 			<speed>
 				<walk ground="60" />
@@ -1460,7 +1486,7 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
 		</skillList>
-		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
 				<clan>GARDEN_CLAN</clan>
 			</clanList>
@@ -1479,7 +1505,8 @@
 			<attack physical="33999" magical="22961" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3021" magical="3105" />
 			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+				<defence fire="250" water="250" wind="250" earth="200" holy="250" dark="250" />
+				<attack type="WIND" value="330" />
 			</attribute>
 			<speed>
 				<walk ground="60" />
@@ -1493,7 +1520,7 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
 		</skillList>
-		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
 				<clan>GARDEN_CLAN</clan>
 			</clanList>
@@ -1512,7 +1539,8 @@
 			<attack physical="38999" magical="27961" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3421" magical="3605" />
 			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
+				<attack type="DARK" value="330" />
 			</attribute>
 			<speed>
 				<walk ground="60" />
@@ -1526,7 +1554,7 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
 		</skillList>
-		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
 				<clan>GARDEN_CLAN</clan>
 			</clanList>
@@ -1559,7 +1587,8 @@
 			<attack physical="32000" magical="44115" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="4431" magical="4000" />
 			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
+				<attack type="DARK" value="330" />
 			</attribute>
 			<speed>
 				<walk ground="60" />
@@ -1573,7 +1602,7 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
 		</skillList>
-		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
 				<clan>GARDEN_CLAN</clan>
 			</clanList>
@@ -1609,7 +1638,8 @@
 			<attack physical="38999" magical="27961" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3421" magical="3605" />
 			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
+				<attack type="EARTH" value="330" />
 			</attribute>
 			<speed>
 				<walk ground="60" />
@@ -1623,7 +1653,7 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
 		</skillList>
-		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
 				<clan>GARDEN_CLAN</clan>
 			</clanList>
@@ -1657,7 +1687,8 @@
 			<attack physical="32000" magical="44115" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="4431" magical="4000" />
 			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
+				<attack type="EARTH" value="330" />
 			</attribute>
 			<speed>
 				<walk ground="60" />
@@ -1671,7 +1702,7 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="14620" level="4" /> <!-- Aerial Yoke Resistance -->
 		</skillList>
-		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
 				<clan>GARDEN_CLAN</clan>
 			</clanList>
@@ -1710,13 +1741,17 @@
 				<walk ground="39" />
 				<run ground="180" />
 			</speed>
+			<attribute>
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
+				<attack type="DARK" value="330" />
+			</attribute>
 		</stats>
 		<skillList>
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14817" level="1" /> <!-- Instant Kill Attack Resistance -->
 		</skillList>
-		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
 				<clan>GARDEN_CLAN</clan>
 			</clanList>
@@ -1749,7 +1784,8 @@
 			<attack physical="32000" magical="44115" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="4431" magical="4000" />
 			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
+				<attack type="EARTH" value="330" />
 			</attribute>
 			<speed>
 				<walk ground="60" />
@@ -1763,7 +1799,7 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="14620" level="4" /> <!-- Aerial Yoke Resistance -->
 		</skillList>
-		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
 				<clan>GARDEN_CLAN</clan>
 			</clanList>
@@ -1805,7 +1841,8 @@
 			<attack physical="32000" magical="44115" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="4431" magical="4000" />
 			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
+				<attack type="EARTH" value="330" />
 			</attribute>
 			<speed>
 				<walk ground="60" />
@@ -1821,7 +1858,7 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="14620" level="4" /> <!-- Aerial Yoke Resistance -->
 		</skillList>
-		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
 				<clan>GARDEN_CLAN</clan>
 			</clanList>
@@ -1857,7 +1894,8 @@
 			<attack physical="33999" magical="22961" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3021" magical="3105" />
 			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
+				<attack type="DARK" value="330" />
 			</attribute>
 			<speed>
 				<walk ground="60" />
@@ -1871,7 +1909,7 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
 		</skillList>
-		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
 				<clan>GARDEN_CLAN</clan>
 			</clanList>
@@ -1890,7 +1928,8 @@
 			<attack physical="33999" magical="22961" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3021" magical="3105" />
 			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
+				<attack type="EARTH" value="330" />
 			</attribute>
 			<speed>
 				<walk ground="60" />
@@ -1904,7 +1943,7 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
 		</skillList>
-		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
 				<clan>GARDEN_CLAN</clan>
 			</clanList>
@@ -1923,7 +1962,8 @@
 			<attack physical="9578" magical="5465" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3131" magical="2680" />
 			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+				<defence fire="250" water="250" wind="250" earth="200" holy="250" dark="250" />
+				<attack type="WIND" value="330" />
 			</attribute>
 			<speed>
 				<walk ground="39" />
@@ -1935,7 +1975,7 @@
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="14817" level="1" /> <!-- Instant Kill Attack Resistance -->
 		</skillList>
-		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
 				<clan>GARDEN_CLAN</clan>
 			</clanList>
@@ -1954,7 +1994,8 @@
 			<attack physical="9578" magical="5465" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3131" magical="2680" />
 			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
+				<attack type="EARTH" value="330" />
 			</attribute>
 			<speed>
 				<walk ground="39" />
@@ -1966,7 +2007,7 @@
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="14817" level="1" /> <!-- Instant Kill Attack Resistance -->
 		</skillList>
-		<ai aggroRange="500" clanHelpRange="500" isAggressive="true">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
 				<clan>GARDEN_CLAN</clan>
 			</clanList>
@@ -1984,7 +2025,8 @@
 			<attack physical="56121" magical="62961" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3021" magical="3105" />
 			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+				<defence fire="250" water="250" wind="250" earth="200" holy="250" dark="250" />
+				<attack type="WIND" value="330" />
 			</attribute>
 			<speed>
 				<walk ground="60" />
@@ -2022,7 +2064,8 @@
 			<attack physical="56121" magical="62961" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3021" magical="3105" />
 			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
+				<attack type="EARTH" value="330" />
 			</attribute>
 			<speed>
 				<walk ground="60" />
@@ -2060,6 +2103,10 @@
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
+			<attribute>
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
+				<attack type="EARTH" value="330" />
+			</attribute>
 		</stats>
 		<skillList>
 			<skill id="4416" level="7" /> <!-- Spirits -->
@@ -2079,6 +2126,10 @@
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
+			<attribute>
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
+				<attack type="EARTH" value="330" />
+			</attribute>
 		</stats>
 		<skillList>
 			<skill id="4416" level="7" /> <!-- Spirits -->
@@ -2098,6 +2149,10 @@
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
+			<attribute>
+				<defence fire="250" water="250" wind="250" earth="200" holy="250" dark="250" />
+				<attack type="WIND" value="330" />
+			</attribute>
 		</stats>
 		<skillList>
 			<skill id="4416" level="7" /> <!-- Spirits -->
@@ -2902,7 +2957,8 @@
 			<attack physical="59121" magical="64961" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="4321" magical="4105" />
 			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
+				<attack type="DARK" value="330" />
 			</attribute>
 			<speed>
 				<walk ground="60" />
@@ -2915,7 +2971,7 @@
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 		</skillList>
-		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
 				<clan>ATELIA_CLAN</clan>
 			</clanList>
@@ -2934,7 +2990,8 @@
 			<attack physical="63121" magical="68961" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="5921" magical="5405" />
 			<attribute>
-				<defence fire="280" water="280" wind="280" earth="280" holy="227" dark="313" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
+				<attack type="DARK" value="330" />
 			</attribute>
 			<speed>
 				<walk ground="60" />
@@ -2961,7 +3018,8 @@
 			<attack physical="59229" magical="49516" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="5975" magical="6244" />
 			<attribute>
-				<defence fire="180" water="180" wind="180" earth="280" holy="227" dark="313" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
+				<attack type="DARK" value="330" />
 			</attribute>
 			<speed>
 				<walk ground="60" />
@@ -2988,7 +3046,8 @@
 			<attack physical="59229" magical="49516" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="5975" magical="6244" />
 			<attribute>
-				<defence fire="180" water="180" wind="180" earth="280" holy="227" dark="313" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
+				<attack type="DARK" value="330" />
 			</attribute>
 			<speed>
 				<walk ground="60" />
@@ -3001,7 +3060,7 @@
 			<skill id="16758" level="1" /> <!-- Embryo -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 		</skillList>
-		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
 				<clan>ATELIA_CLAN</clan>
 			</clanList>
@@ -3029,6 +3088,10 @@
 				<walk ground="36" />
 				<run ground="190" />
 			</speed>
+			<attribute>
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
+				<attack type="DARK" value="330" />
+			</attribute>
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -3054,6 +3117,10 @@
 				<walk ground="40" />
 				<run ground="190" />
 			</speed>
+			<attribute>
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
+				<attack type="DARK" value="330" />
+			</attribute>
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -3079,6 +3146,10 @@
 				<walk ground="30" />
 				<run ground="190" />
 			</speed>
+			<attribute>
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
+				<attack type="DARK" value="330" />
+			</attribute>
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -3104,6 +3175,10 @@
 				<walk ground="36" />
 				<run ground="190" />
 			</speed>
+			<attribute>
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
+				<attack type="DARK" value="330" />
+			</attribute>
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -3129,6 +3204,10 @@
 				<walk ground="28" />
 				<run ground="190" />
 			</speed>
+			<attribute>
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
+				<attack type="DARK" value="330" />
+			</attribute>
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -3160,7 +3239,8 @@
 			<attack physical="42356" magical="31566" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3777" magical="3955" />
 			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
+				<attack type="DARK" value="330" />
 			</attribute>
 			<speed>
 				<walk ground="60" />
@@ -3204,7 +3284,8 @@
 			<attack physical="47356" magical="36566" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="4718" magical="4955" />
 			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
+				<attack type="DARK" value="330" />
 			</attribute>
 			<speed>
 				<walk ground="60" />
@@ -3220,7 +3301,7 @@
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 		</skillList>
-		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
 				<clan>ATELIA_CLAN</clan>
 			</clanList>
@@ -3248,7 +3329,8 @@
 			<attack physical="42356" magical="31566" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3777" magical="3955" />
 			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
+				<attack type="DARK" value="330" />
 			</attribute>
 			<speed>
 				<walk ground="60" />
@@ -3264,7 +3346,7 @@
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14817" level="1" /> <!-- Instant Kill Attack Resistance -->
 		</skillList>
-		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
 				<clan>ATELIA_CLAN</clan>
 			</clanList>
@@ -3290,7 +3372,8 @@
 			<attack physical="47356" magical="36566" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="4718" magical="4955" />
 			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
+				<attack type="DARK" value="330" />
 			</attribute>
 			<speed>
 				<walk ground="60" />
@@ -3305,7 +3388,7 @@
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 		</skillList>
-		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
 				<clan>ATELIA_CLAN</clan>
 			</clanList>
@@ -3334,7 +3417,8 @@
 			<attack physical="51396" magical="43516" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="5080" magical="5650" />
 			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
+				<attack type="DARK" value="330" />
 			</attribute>
 			<speed>
 				<walk ground="50" />
@@ -3350,7 +3434,7 @@
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14817" level="1" /> <!-- Instant Kill Attack Resistance -->
 		</skillList>
-		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<clanList>
 				<clan>ATELIA_CLAN</clan>
 			</clanList>

@@ -52,6 +52,8 @@
 			<value level="4">4</value>
 		</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
+		<activateRate>80</activateRate>
+		<abnormalType>PA_DOWN</abnormalType>
 		<isDebuff>true</isDebuff>
 		<basicProperty>MAGIC</basicProperty>
 		<effectRange>400</effectRange>
@@ -105,6 +107,8 @@
 			<value level="4">4</value>
 		</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
+		<activateRate>80</activateRate>
+		<abnormalType>PD_DOWN</abnormalType>
 		<isDebuff>true</isDebuff>
 		<basicProperty>MAGIC</basicProperty>
 		<effectRange>400</effectRange>
@@ -159,8 +163,10 @@
 			<value level="4">4</value>
 		</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
+		<activateRate>80</activateRate>
+		<abnormalType>PA_DOWN</abnormalType>
 		<isDebuff>true</isDebuff>
-		<basicProperty>PHYSICAL</basicProperty>
+		<basicProperty>MAGIC</basicProperty>
 		<effectRange>400</effectRange>
 		<magicLvl>1</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -213,8 +219,10 @@
 			<value level="4">4</value>
 		</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
+		<activateRate>80</activateRate>
+		<abnormalType>PA_DOWN</abnormalType>
 		<isDebuff>true</isDebuff>
-		<basicProperty>PHYSICAL</basicProperty>
+		<basicProperty>MAGIC</basicProperty>
 		<effectRange>400</effectRange>
 		<magicLvl>1</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
