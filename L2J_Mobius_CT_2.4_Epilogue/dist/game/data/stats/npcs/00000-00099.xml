@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="1" level="80" type="Npc" name="Spirit of Fire">
+	<npc id="1" level="80" type="Npc" name="Thomas D. Turkey" title="Misguided Holiday Scrooge">
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -35,7 +35,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="2" level="80" type="Npc" name="Spirit of Fire">
+	<npc id="2" level="80" type="Npc" name="">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -69,7 +69,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="3" level="70" type="Npc" name="Birthday Cake">
+	<npc id="3" level="70" type="Npc" name="Santa's Helper">
 		<race>DWARF</race>
 		<sex>MALE</sex>
 		<acquire exp="490" sp="10" />
@@ -105,7 +105,7 @@
 			<height normal="16.5" />
 		</collision>
 	</npc>
-	<npc id="4" level="70" type="Npc" name="Birthday Cake">
+	<npc id="4" level="70" type="Npc" name="Holiday Santa" title="Happy Holidays!">
 		<race>DWARF</race>
 		<sex>MALE</sex>
 		<acquire exp="490" sp="10" />
@@ -142,7 +142,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="5" level="70" type="Npc" name="Birthday Cake">
+	<npc id="5" level="70" type="Npc" name="Holiday Santa" title="Happy Holidays!">
 		<race>DWARF</race>
 		<sex>MALE</sex>
 		<acquire exp="490" sp="10" />
@@ -179,7 +179,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="6" level="70" type="Npc" name="Birthday Cake">
+	<npc id="6" level="70" type="Npc" name="Holiday Sled" title="Happy Holidays!">
 		<race>ETC</race>
 		<sex>MALE</sex>
 		<acquire exp="490" sp="10" />
