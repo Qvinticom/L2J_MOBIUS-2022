@@ -89,9 +89,14 @@ public class RequestRefineCancel implements IClientIncomingPacket
 		}
 		
 		// unequip item
+		final InventoryUpdate iu = new InventoryUpdate();
 		if (targetItem.isEquipped())
 		{
-			player.disarmWeapons();
+			final ItemInstance[] unequiped = player.getInventory().unEquipItemInSlotAndRecord(targetItem.getLocationSlot());
+			for (ItemInstance itm : unequiped)
+			{
+				iu.addModifiedItem(itm);
+			}
 		}
 		
 		// remove the augmentation
@@ -101,7 +106,6 @@ public class RequestRefineCancel implements IClientIncomingPacket
 		client.sendPacket(ExVariationCancelResult.STATIC_PACKET_SUCCESS);
 		
 		// send inventory update
-		InventoryUpdate iu = new InventoryUpdate();
 		iu.addModifiedItem(targetItem);
 		player.sendInventoryUpdate(iu);
 	}
