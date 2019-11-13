@@ -71,7 +71,7 @@ public class RequestGMCommand implements IClientIncomingPacket
 			case 1: // player status
 			{
 				client.sendPacket(new GMViewCharacterInfo(player));
-				// client.sendPacket(new GMHennaInfo(player)); HighFive
+				client.sendPacket(new GMHennaInfo(player));
 				break;
 			}
 			case 2: // player clan
