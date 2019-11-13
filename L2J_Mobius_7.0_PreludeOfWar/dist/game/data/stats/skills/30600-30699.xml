@@ -145,6 +145,7 @@
 		<mpConsume>32</mpConsume>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
+		<removedOnUnequipWeapon>true</removedOnUnequipWeapon>
 		<abnormalType>POLEARM_ATTACK</abnormalType>
 		<magicLvl>85</magicLvl>
 		<basicProperty>NONE</basicProperty>
@@ -165,10 +166,6 @@
 				<weaponType>
 					<item>POLE</item>
 				</weaponType>
-			</effect>
-			<effect name="SetSkill">
-				<skillId>30612</skillId> <!-- Cancel Edge of Storm -->
-				<skillLvl>1</skillLvl>
 			</effect>
 		</effects>
 	</skill>
@@ -183,6 +180,7 @@
 		<mpConsume>32</mpConsume>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
+		<removedOnUnequipWeapon>true</removedOnUnequipWeapon>
 		<abnormalType>POLEARM_ATTACK</abnormalType>
 		<magicLvl>85</magicLvl>
 		<basicProperty>NONE</basicProperty>
@@ -203,10 +201,6 @@
 				<weaponType>
 					<item>POLE</item>
 				</weaponType>
-			</effect>
-			<effect name="SetSkill">
-				<skillId>30612</skillId> <!-- Cancel Edge of Storm -->
-				<skillLvl>1</skillLvl>
 			</effect>
 		</effects>
 	</skill>
@@ -628,16 +622,14 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>ULTIMATE_DEBUFF</abnormalType>
-		<activateRate>90</activateRate>
-		<affectLimit>5-12</affectLimit>
+		<activateRate>80</activateRate>
 		<affectRange>200</affectRange>
 		<nextAction>ATTACK</nextAction>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>400</effectRange>
 		<targetType>ENEMY</targetType>
-		<affectScope>RANGE</affectScope>
-		<affectObject>NOT_FRIEND</affectObject>
+		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>

@@ -1860,6 +1860,7 @@
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + (0.5 * subIndex)}</value>
 		</abnormalTime>
 		<abnormalType>TRANSFER_DAMAGE</abnormalType>
+		<abnormalVisualEffect>SHIELD_WALL</abnormalVisualEffect>
 		<magicLevel>99</magicLevel>
 		<affectRange>1000</affectRange>
 		<operateType>A2</operateType>
@@ -2067,8 +2068,6 @@
 		<effects>
 			<effect name="TargetMe" />
 			<effect name="GetAgro" />
-		</effects>
-		<pvpEffects>
 			<!-- TODO p_berserker -->
 			<effect name="AddHate">
 				<power>
@@ -2100,6 +2099,8 @@
 					<value level="11">30846</value>
 				</power>
 			</effect>
+		</effects>
+		<pvpEffects>
 			<effect name="Speed">
 				<amount>-70</amount>
 				<mode>DIFF</mode>

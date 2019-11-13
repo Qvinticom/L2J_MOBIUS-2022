@@ -9,43 +9,35 @@
 			<value level="2">90</value>
 			<value level="3">95</value>
 		</magicLvl>
-		<operateType>T</operateType>
+		<operateType>AU</operateType>
+		<abnormalVisualEffect>TRUE_VANGUARD</abnormalVisualEffect>
 		<isMagic>6</isMagic>
 		<hitTime>1500</hitTime>
 		<coolTime>1000</coolTime>
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>2</effectPoint>
 		<mpConsume>20</mpConsume>
-		<targetType>NONE</targetType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="EquipShield" />
+		</conditions>
 		<effects>
-			<effect name="PveMagicalSkillDamageBonus">
-				<amount>
-					<value level="1">50</value>
-					<value level="2">55</value>
-					<value level="3">60</value>
-				</amount>
+			<effect name="CriticalDamage">
+				<amount>15</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvePhysicalAttackDamageBonus">
-				<amount>
-					<value level="1">50</value>
-					<value level="2">55</value>
-					<value level="3">60</value>
-				</amount>
+			<effect name="CriticalRate">
+				<amount>15</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvePhysicalAttackDamageBonus">
+			<effect name="PAtk">
 				<amount>
-					<value level="1">50</value>
-					<value level="2">55</value>
-					<value level="3">60</value>
+					<value level="1">100</value>
+					<value level="2">130</value>
+					<value level="3">150</value>
 				</amount>
 				<mode>PER</mode>
-			</effect>
-			<effect name="MagicMpCost">
-				<amount>30</amount>
-				<mode>PER</mode>
-				<magicType>0</magicType>
 			</effect>
 		</effects>
 	</skill>

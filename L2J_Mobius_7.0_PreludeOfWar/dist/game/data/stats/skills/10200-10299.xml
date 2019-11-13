@@ -10,13 +10,15 @@
 			<value level="3">95</value>
 		</magicLvl>
 		<operateType>AU</operateType>
+		<abnormalVisualEffect>TRUE_VANGUARD</abnormalVisualEffect>
 		<isMagic>6</isMagic>
 		<hitTime>1500</hitTime>
 		<coolTime>1000</coolTime>
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>2</effectPoint>
 		<mpConsume>20</mpConsume>
-		<targetType>NONE</targetType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="EquipShield" />
 		</conditions>
@@ -24,18 +26,10 @@
 			<effect name="CriticalDamage">
 				<amount>15</amount>
 				<mode>PER</mode>
-				<weaponType>
-					<item>SWORD</item>
-					<item>BLUNT</item>
-				</weaponType>
 			</effect>
 			<effect name="CriticalRate">
 				<amount>15</amount>
 				<mode>PER</mode>
-				<weaponType>
-					<item>SWORD</item>
-					<item>BLUNT</item>
-				</weaponType>
 			</effect>
 			<effect name="PAtk">
 				<amount>
@@ -44,10 +38,6 @@
 					<value level="3">150</value>
 				</amount>
 				<mode>PER</mode>
-				<weaponType>
-					<item>SWORD</item>
-					<item>BLUNT</item>
-				</weaponType>
 			</effect>
 		</effects>
 	</skill>
