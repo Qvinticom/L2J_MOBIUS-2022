@@ -151,6 +151,7 @@ public class Skill implements IIdentifiable
 	
 	private final boolean _removedOnAnyActionExceptMove;
 	private final boolean _removedOnDamage;
+	private final boolean _removedOnUnequipWeapon;
 	
 	private final boolean _blockedInOlympiad;
 	
@@ -345,6 +346,7 @@ public class Skill implements IIdentifiable
 		
 		_removedOnAnyActionExceptMove = set.getBoolean("removedOnAnyActionExceptMove", false);
 		_removedOnDamage = set.getBoolean("removedOnDamage", false);
+		_removedOnUnequipWeapon = set.getBoolean("removedOnUnequipWeapon", false);
 		
 		_blockedInOlympiad = set.getBoolean("blockedInOlympiad", false);
 		
@@ -585,6 +587,14 @@ public class Skill implements IIdentifiable
 	public boolean isRemovedOnDamage()
 	{
 		return _removedOnDamage;
+	}
+	
+	/**
+	 * @return {@code true} if skill effects should be removed on unequip weapon
+	 */
+	public boolean isRemovedOnUnequipWeapon()
+	{
+		return _removedOnUnequipWeapon;
 	}
 	
 	/**

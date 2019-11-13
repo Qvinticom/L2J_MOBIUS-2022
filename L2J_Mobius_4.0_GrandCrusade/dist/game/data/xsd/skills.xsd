@@ -2497,6 +2497,7 @@
 								<xs:element name="channelingStart" type="xs:decimal" />
 								<xs:element name="channelingTickInterval" type="xs:decimal" />
 								<xs:element name="removedOnDamage" type="xs:boolean" />
+								<xs:element name="removedOnUnequipWeapon" type="xs:boolean" />
 								<xs:element name="removedOnAnyActionExceptMove" type="xs:boolean" />
 								<xs:element name="itemConsumeSteps" type="xs:unsignedByte" />
 								<xs:element name="effect">

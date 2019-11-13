@@ -394,10 +394,11 @@ public abstract class Inventory extends ItemContainer
 					}
 				});
 			}
-			// Must check for toggle skill item conditions.
+			// Must check for toggle and isRemovedOnUnequipWeapon skill item conditions.
 			for (Skill skill : player.getAllSkills())
 			{
-				if (skill.isToggle() && player.isAffectedBySkill(skill.getId()) && !skill.checkConditions(SkillConditionScope.GENERAL, player, player))
+				if ((skill.isToggle() && player.isAffectedBySkill(skill.getId()) && !skill.checkConditions(SkillConditionScope.GENERAL, player, player)) //
+					|| (it.isWeapon() && skill.isRemovedOnUnequipWeapon()))
 				{
 					player.stopSkillEffects(true, skill.getId());
 					update.compareAndSet(false, true);
