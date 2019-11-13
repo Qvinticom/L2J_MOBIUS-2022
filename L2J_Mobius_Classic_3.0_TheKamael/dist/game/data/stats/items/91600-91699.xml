@@ -458,23 +458,37 @@
 	</item>
 	<item id="91646" name="Scroll of Escape: Unbearable Wolves' Howling" type="EtcItem">
 		<!-- Teleports to Jackson in the Talking Island Village. -->
-		<set name="icon" val="icon.etc_scroll_of_return_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="35000" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="51381" level="1" />
+		</skills>
 	</item>
 	<item id="91647" name="Scroll of Escape: Troubled Forest" type="EtcItem">
 		<!-- Teleports to Herbiel in Elven Village. -->
-		<set name="icon" val="icon.etc_scroll_of_return_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+		<set name="price" val="35000" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="51382" level="1" />
+		</skills>
 	</item>
 	<item id="91648" name="Scroll of Escape: Cleaning-up the Grounds" type="EtcItem">
 		<!-- Teleports to Vollodos in Dark Elf Village. -->
