@@ -53,6 +53,10 @@ public class Stun extends AbstractEffect
 	public void onExit(BuffInfo info)
 	{
 		final Creature effected = info.getEffected();
+		if ((effected == null) || effected.isRaid())
+		{
+			return;
+		}
 		effected.stopStunning(false);
 		if (effected.isSummon())
 		{
@@ -83,6 +87,6 @@ public class Stun extends AbstractEffect
 		{
 			return;
 		}
-		info.getEffected().startStunning();
+		effected.startStunning();
 	}
 }
