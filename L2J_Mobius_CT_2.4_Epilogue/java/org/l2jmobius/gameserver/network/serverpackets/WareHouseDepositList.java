@@ -67,8 +67,42 @@ public class WareHouseDepositList extends AbstractItemPacket
 		
 		for (ItemInstance item : _items)
 		{
-			writeItem(packet, item);
+			packet.writeH(item.getItem().getType1());
 			packet.writeD(item.getObjectId());
+			packet.writeD(item.getId());
+			packet.writeQ(item.getCount());
+			packet.writeH(item.getItem().getType2());
+			packet.writeH(item.getCustomType1());
+			packet.writeD(item.getItem().getBodyPart());
+			packet.writeH(item.getEnchantLevel());
+			packet.writeH(0x00);
+			packet.writeH(item.getCustomType2());
+			packet.writeD(item.getObjectId());
+			if (item.isAugmented())
+			{
+				packet.writeD(0x0000FFFF & item.getAugmentation().getAugmentationId());
+				packet.writeD(item.getAugmentation().getAugmentationId() >> 16);
+			}
+			else
+			{
+				packet.writeQ(0x00);
+			}
+			
+			packet.writeH(item.getAttackElementType());
+			packet.writeH(item.getAttackElementPower());
+			for (byte i = 0; i < 6; i++)
+			{
+				packet.writeH(item.getElementDefAttr(i));
+			}
+			
+			packet.writeD(item.getMana());
+			// T2
+			packet.writeD(item.isTimeLimitedItem() ? (int) (item.getRemainingTime() / 1000) : -1);
+			
+			for (int op : item.getEnchantOptions())
+			{
+				packet.writeH(op);
+			}
 		}
 		return true;
 	}
