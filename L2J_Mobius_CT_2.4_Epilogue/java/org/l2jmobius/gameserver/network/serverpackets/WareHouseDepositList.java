@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
-public class WareHouseDepositList extends AbstractItemPacket
+public class WareHouseDepositList implements IClientOutgoingPacket
 {
 	public static final int PRIVATE = 1;
 	public static final int CLAN = 4;

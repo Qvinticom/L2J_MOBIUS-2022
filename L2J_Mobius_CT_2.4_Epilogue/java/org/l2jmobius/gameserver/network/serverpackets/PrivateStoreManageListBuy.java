@@ -22,7 +22,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
-public class PrivateStoreManageListBuy extends AbstractItemPacket
+public class PrivateStoreManageListBuy implements IClientOutgoingPacket
 {
 	private final int _objId;
 	private final long _playerAdena;

@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 /**
  * @author ShanSoft
  */
-public class ExBuySellList extends AbstractItemPacket
+public class ExBuySellList implements IClientOutgoingPacket
 {
 	private final int _buyListId;
 	private final List<Product> _buyList = new ArrayList<>();

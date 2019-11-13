@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  * ExReplySentPost packet implementation.
  * @author Migi, DS
  */
-public class ExReplySentPost extends AbstractItemPacket
+public class ExReplySentPost implements IClientOutgoingPacket
 {
 	private final Message _msg;
 	private ItemInstance[] _items = null;

@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
-public class TradeStart extends AbstractItemPacket
+public class TradeStart implements IClientOutgoingPacket
 {
 	private final PlayerInstance _player;
 	private final ItemInstance[] _itemList;

@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 /**
  * @author Yme
  */
-public class TradeOtherAdd extends AbstractItemPacket
+public class TradeOtherAdd implements IClientOutgoingPacket
 {
 	private final TradeItem _item;
 	
