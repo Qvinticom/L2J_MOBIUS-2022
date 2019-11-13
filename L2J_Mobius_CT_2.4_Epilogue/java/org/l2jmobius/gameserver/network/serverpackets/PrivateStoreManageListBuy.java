@@ -49,18 +49,54 @@ public class PrivateStoreManageListBuy extends AbstractItemPacket
 		packet.writeD(_itemList.length); // inventory items for potential buy
 		for (ItemInstance item : _itemList)
 		{
-			writeItem(packet, item);
-			packet.writeQ(item.getItem().getReferencePrice() * 2);
+			packet.writeD(item.getId());
+			packet.writeH(0); // show enchant lvl as 0, as you can't buy enchanted weapons
+			packet.writeQ(item.getCount());
+			packet.writeQ(item.getReferencePrice());
+			packet.writeH(0x00);
+			packet.writeD(item.getItem().getBodyPart());
+			packet.writeH(item.getItem().getType2());
+			
+			// T1
+			packet.writeH(item.getAttackElementType());
+			packet.writeH(item.getAttackElementPower());
+			for (byte i = 0; i < 6; i++)
+			{
+				packet.writeH(item.getElementDefAttr(i));
+			}
+			
+			for (int op : item.getEnchantOptions())
+			{
+				packet.writeH(op);
+			}
 		}
 		
 		// section 3
 		packet.writeD(_buyList.length); // count for all items already added for buy
 		for (TradeItem item : _buyList)
 		{
-			writeItem(packet, item);
-			packet.writeQ(item.getPrice());
-			packet.writeQ(item.getItem().getReferencePrice() * 2);
+			packet.writeD(item.getItem().getId());
+			packet.writeH(0);
 			packet.writeQ(item.getCount());
+			packet.writeQ(item.getItem().getReferencePrice());
+			packet.writeH(0x00);
+			packet.writeD(item.getItem().getBodyPart());
+			packet.writeH(item.getItem().getType2());
+			packet.writeQ(item.getPrice());// your price
+			packet.writeQ(item.getItem().getReferencePrice());// fixed store price
+			
+			// T1
+			packet.writeH(item.getAttackElementType());
+			packet.writeH(item.getAttackElementPower());
+			for (byte i = 0; i < 6; i++)
+			{
+				packet.writeH(item.getElementDefAttr(i));
+			}
+			
+			for (int op : item.getEnchantOptions())
+			{
+				packet.writeH(op);
+			}
 		}
 		return true;
 	}

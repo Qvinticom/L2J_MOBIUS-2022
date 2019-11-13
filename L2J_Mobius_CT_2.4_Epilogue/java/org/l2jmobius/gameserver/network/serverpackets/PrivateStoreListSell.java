@@ -50,9 +50,29 @@ public class PrivateStoreListSell extends AbstractItemPacket
 			packet.writeD(_seller.getSellList().getItems().length);
 			for (TradeItem item : _seller.getSellList().getItems())
 			{
-				writeItem(packet, item);
-				packet.writeQ(item.getPrice());
-				packet.writeQ(item.getItem().getReferencePrice() * 2);
+				packet.writeD(item.getItem().getType2());
+				packet.writeD(item.getObjectId());
+				packet.writeD(item.getItem().getId());
+				packet.writeQ(item.getCount());
+				packet.writeH(0x00);
+				packet.writeH(item.getEnchant());
+				packet.writeH(item.getCustomType2());
+				packet.writeD(item.getItem().getBodyPart());
+				packet.writeQ(item.getPrice()); // your price
+				packet.writeQ(item.getItem().getReferencePrice()); // store price
+				
+				// T1
+				packet.writeH(item.getAttackElementType());
+				packet.writeH(item.getAttackElementPower());
+				for (byte i = 0; i < 6; i++)
+				{
+					packet.writeH(item.getElementDefAttr(i));
+				}
+				
+				for (int op : item.getEnchantOptions())
+				{
+					packet.writeH(op);
+				}
 			}
 		}
 		return true;

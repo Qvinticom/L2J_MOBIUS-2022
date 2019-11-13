@@ -52,16 +52,56 @@ public class PrivateStoreManageListSell extends AbstractItemPacket
 		packet.writeD(_itemList.length); // for potential sells
 		for (TradeItem item : _itemList)
 		{
-			writeItem(packet, item);
-			packet.writeQ(item.getItem().getReferencePrice() * 2);
+			packet.writeD(item.getItem().getType2());
+			packet.writeD(item.getObjectId());
+			packet.writeD(item.getItem().getId());
+			packet.writeQ(item.getCount());
+			packet.writeH(0);
+			packet.writeH(item.getEnchant());// enchant lvl
+			packet.writeH(item.getCustomType2());
+			packet.writeD(item.getItem().getBodyPart());
+			packet.writeQ(item.getPrice()); // store price
+			
+			// T1
+			packet.writeH(item.getAttackElementType());
+			packet.writeH(item.getAttackElementPower());
+			for (byte i = 0; i < 6; i++)
+			{
+				packet.writeH(item.getElementDefAttr(i));
+			}
+			
+			for (int op : item.getEnchantOptions())
+			{
+				packet.writeH(op);
+			}
 		}
 		// section 3
 		packet.writeD(_sellList.length); // count for any items already added for sell
 		for (TradeItem item : _sellList)
 		{
-			writeItem(packet, item);
-			packet.writeQ(item.getPrice());
-			packet.writeQ(item.getItem().getReferencePrice() * 2);
+			packet.writeD(item.getItem().getType2());
+			packet.writeD(item.getObjectId());
+			packet.writeD(item.getItem().getId());
+			packet.writeQ(item.getCount());
+			packet.writeH(0);
+			packet.writeH(item.getEnchant());// enchant lvl
+			packet.writeH(0x00);
+			packet.writeD(item.getItem().getBodyPart());
+			packet.writeQ(item.getPrice());// your price
+			packet.writeQ(item.getItem().getReferencePrice()); // store price
+			
+			// T1
+			packet.writeH(item.getAttackElementType());
+			packet.writeH(item.getAttackElementPower());
+			for (byte i = 0; i < 6; i++)
+			{
+				packet.writeH(item.getElementDefAttr(i));
+			}
+			
+			for (int op : item.getEnchantOptions())
+			{
+				packet.writeH(op);
+			}
 		}
 		return true;
 	}
