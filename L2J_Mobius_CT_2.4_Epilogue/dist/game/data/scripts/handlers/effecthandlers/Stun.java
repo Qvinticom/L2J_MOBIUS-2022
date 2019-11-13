@@ -78,6 +78,11 @@ public class Stun extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
+		final Creature effected = info.getEffected();
+		if ((effected == null) || effected.isRaid())
+		{
+			return;
+		}
 		info.getEffected().startStunning();
 	}
 }
