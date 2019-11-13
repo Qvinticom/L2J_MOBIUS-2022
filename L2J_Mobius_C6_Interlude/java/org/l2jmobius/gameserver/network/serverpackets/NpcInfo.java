@@ -208,7 +208,7 @@ public class NpcInfo extends GameServerPacket
 		
 		if (_creature instanceof Summon)
 		{
-			writeD(0x01);// Title color 0=client default
+			writeD(0x01); // Title color 0=client default
 			writeD(((Summon) _creature).getPvpFlag());
 			writeD(((Summon) _creature).getKarma());
 		}

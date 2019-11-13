@@ -124,34 +124,34 @@ public class PetInfo extends GameServerPacket
 		writeD(_summon.getOwner() != null ? _summon.getOwner().getKarma() : 0); // karma
 		writeD(_curFed); // how fed it is
 		writeD(_maxFed); // max fed it can be
-		writeD((int) _summon.getCurrentHp());// current hp
-		writeD(_maxHp);// max hp
-		writeD((int) _summon.getCurrentMp());// current mp
-		writeD(_maxMp);// max mp
+		writeD((int) _summon.getCurrentHp()); // current hp
+		writeD(_maxHp); // max hp
+		writeD((int) _summon.getCurrentMp()); // current mp
+		writeD(_maxMp); // max mp
 		writeD(_summon.getStat().getSp()); // sp
-		writeD(_summon.getLevel());// lvl
+		writeD(_summon.getLevel()); // lvl
 		writeQ(_summon.getStat().getExp());
-		writeQ(_summon.getExpForThisLevel());// 0% absolute value
-		writeQ(_summon.getExpForNextLevel());// 100% absoulte value
-		writeD(_summon instanceof PetInstance ? _summon.getInventory().getTotalWeight() : 0);// weight
-		writeD(_summon.getMaxLoad());// max weight it can carry
-		writeD(_summon.getPAtk(null));// patk
-		writeD(_summon.getPDef(null));// pdef
-		writeD(_summon.getMAtk(null, null));// matk
-		writeD(_summon.getMDef(null, null));// mdef
-		writeD(_summon.getAccuracy());// accuracy
-		writeD(_summon.getEvasionRate(null));// evasion
-		writeD(_summon.getCriticalHit(null, null));// critical
-		writeD(_runSpd);// speed
-		writeD(_summon.getPAtkSpd());// atkspeed
-		writeD(_summon.getMAtkSpd());// casting speed
+		writeQ(_summon.getExpForThisLevel()); // 0% absolute value
+		writeQ(_summon.getExpForNextLevel()); // 100% absoulte value
+		writeD(_summon instanceof PetInstance ? _summon.getInventory().getTotalWeight() : 0); // weight
+		writeD(_summon.getMaxLoad()); // max weight it can carry
+		writeD(_summon.getPAtk(null)); // patk
+		writeD(_summon.getPDef(null)); // pdef
+		writeD(_summon.getMAtk(null, null)); // matk
+		writeD(_summon.getMDef(null, null)); // mdef
+		writeD(_summon.getAccuracy()); // accuracy
+		writeD(_summon.getEvasionRate(null)); // evasion
+		writeD(_summon.getCriticalHit(null, null)); // critical
+		writeD(_runSpd); // speed
+		writeD(_summon.getPAtkSpd()); // atkspeed
+		writeD(_summon.getMAtkSpd()); // casting speed
 		
-		writeD(0);// c2 abnormal visual effect... bleed=1; poison=2; poison & bleed=3; flame=4;
+		writeD(0); // c2 abnormal visual effect... bleed=1; poison=2; poison & bleed=3; flame=4;
 		final int npcId = _summon.getTemplate().npcId;
 		
 		if ((npcId >= 12526) && (npcId <= 12528))
 		{
-			writeH(1);// c2 ride button
+			writeH(1); // c2 ride button
 		}
 		else
 		{

@@ -25,7 +25,7 @@ public class VehicleDeparture extends GameServerPacket
 {
 	private final BoatInstance _boat;
 	private final int _speed1;
-	private final int _speed2;// rotation
+	private final int _speed2; // rotation
 	private final int _x;
 	private final int _y;
 	private final int _z;

@@ -56,7 +56,7 @@ public class PartySmallWindowAll implements IClientOutgoingPacket
 				packet.writeD(member.getMaxMp());
 				packet.writeD(member.getLevel());
 				packet.writeD(member.getClassId().getId());
-				packet.writeD(0x00);// packet.writeD(0x01); ??
+				packet.writeD(0x00); // packet.writeD(0x01); ??
 				packet.writeD(member.getRace().ordinal());
 				packet.writeD(0x00); // T2.3
 				packet.writeD(0x00); // T2.3

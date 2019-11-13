@@ -39,7 +39,7 @@ public class RequestGetItemFromPet implements IClientIncomingPacket
 	{
 		_objectId = packet.readD();
 		_amount = packet.readQ();
-		_unknown = packet.readD();// = 0 for most trades
+		_unknown = packet.readD(); // = 0 for most trades
 		return true;
 	}
 	

@@ -86,7 +86,7 @@ public class PledgeShowMemberListAll implements IClientOutgoingPacket
 		packet.writeD(_clan.getAllyId());
 		packet.writeS(_clan.getAllyName());
 		packet.writeD(_clan.getAllyCrestId());
-		packet.writeD(_clan.isAtWar() ? 1 : 0);// new c3
+		packet.writeD(_clan.isAtWar() ? 1 : 0); // new c3
 		packet.writeD(0x00); // Territory castle ID
 		packet.writeD(_clan.getSubPledgeMembersCount(_pledgeType));
 		
@@ -103,7 +103,7 @@ public class PledgeShowMemberListAll implements IClientOutgoingPacket
 			if (player != null)
 			{
 				packet.writeD(player.getAppearance().isFemale() ? 1 : 0); // no visible effect
-				packet.writeD(player.getRace().ordinal());// packet.writeD(1);
+				packet.writeD(player.getRace().ordinal()); // packet.writeD(1);
 			}
 			else
 			{

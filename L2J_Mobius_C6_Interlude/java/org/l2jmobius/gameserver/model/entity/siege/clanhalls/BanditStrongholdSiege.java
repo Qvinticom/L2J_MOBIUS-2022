@@ -551,7 +551,7 @@ public class BanditStrongholdSiege extends ClanHallSiege
 			final Calendar siegeStart = Calendar.getInstance();
 			siegeStart.setTimeInMillis(getSiegeDate().getTimeInMillis());
 			final long registerTimeRemaining = siegeStart.getTimeInMillis() - System.currentTimeMillis();
-			siegeStart.add(Calendar.MINUTE, 60);// ////////////////////HOUR
+			siegeStart.add(Calendar.MINUTE, 60); // ////////////////////HOUR
 			final long siegeTimeRemaining = siegeStart.getTimeInMillis() - System.currentTimeMillis();
 			long remaining = registerTimeRemaining;
 			if (registerTimeRemaining <= 0)

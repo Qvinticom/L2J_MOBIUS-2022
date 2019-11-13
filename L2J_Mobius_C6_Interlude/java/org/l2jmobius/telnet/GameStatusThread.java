@@ -303,7 +303,7 @@ public class GameStatusThread extends Thread
 					final DecimalFormat df = new DecimalFormat(" (0.0000'%')");
 					final DecimalFormat df2 = new DecimalFormat(" # 'KB'");
 					
-					_print.println("+----");// ...
+					_print.println("+----"); // ...
 					_print.println("| Allowed Memory:" + df2.format(max));
 					_print.println("|    |= Allocated Memory:" + df2.format(allocated) + df.format((allocated / max) * 100));
 					_print.println("|    |= Non-Allocated Memory:" + df2.format(nonAllocated) + df.format((nonAllocated / max) * 100));

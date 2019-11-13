@@ -1182,14 +1182,14 @@ public class CTF implements EventTask
 						finishEvent();
 						
 						LOGGER.info(_eventName + ": waiting... delay for final messages ");
-						waiter(60000);// just a give a delay delay for final messages
+						waiter(60000); // just a give a delay delay for final messages
 						sendFinalMessages();
 						
 						if (!_started && !_aborted)
 						{ // if is not already started and it's not aborted
 							
 							LOGGER.info(_eventName + ": waiting.....delay for restart event  " + _intervalBetweenMatches + " minutes.");
-							waiter(60000);// just a give a delay to next restart
+							waiter(60000); // just a give a delay to next restart
 							
 							try
 							{
@@ -2140,7 +2140,7 @@ public class CTF implements EventTask
 				{
 					if (_teams.size() >= 2)
 					{
-						player.setTeam(0);// clear aura :P
+						player.setTeam(0); // clear aura :P
 					}
 				}
 				player.broadcastUserInfo();

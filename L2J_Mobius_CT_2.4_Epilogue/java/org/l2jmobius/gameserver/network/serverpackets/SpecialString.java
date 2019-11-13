@@ -45,7 +45,7 @@ public class SpecialString implements IClientOutgoingPacket
 	{
 		OutgoingPackets.SERVER_CLOSE_SOCKET.writeId(packet);
 		packet.writeC(_strId); // string ID
-		packet.writeC(_isDraw ? 1 : 0);// 1 - draw / 0 - hide
+		packet.writeC(_isDraw ? 1 : 0); // 1 - draw / 0 - hide
 		packet.writeC(_fontSize); // -1 to 3 (font size)
 		packet.writeD(_x); // ClientRight - x
 		packet.writeD(_y); // ClientTop + y

@@ -40,7 +40,7 @@ public class CustomWorldHandler
 		// Rebirth's skills must be actived only on main class
 		if (!player.isSubClassActive())
 		{
-			Rebirth.getInstance().grantRebirthSkills(player);// Rebirth Caller - if player has any skills, they will be granted them.
+			Rebirth.getInstance().grantRebirthSkills(player); // Rebirth Caller - if player has any skills, they will be granted them.
 		}
 	}
 	

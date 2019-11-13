@@ -31,7 +31,7 @@ public class PetDelete extends GameServerPacket
 	protected final void writeImpl()
 	{
 		writeC(0xb6);
-		writeD(_petId);// dont really know what these two are since i never needed them
-		writeD(_petObjId);// objectId
+		writeD(_petId); // dont really know what these two are since i never needed them
+		writeD(_petObjId); // objectId
 	}
 }

@@ -79,11 +79,11 @@ public class AteliaManager extends AbstractNpcAI
 	private static final int HAYUK = 34060; // Hayuk Aden Vanguard
 	private static final int HURAK = 34064; // Hurak Blackbird Clan Member
 	// Location Stronghold II
-	private static final Location HURAK_LOC = new Location(-41766, 50416, -2032, 54353);//
-	private static final Location HAYUK_LOC = new Location(-41879, 50389, -2032, 55286);//
+	private static final Location HURAK_LOC = new Location(-41766, 50416, -2032, 54353); //
+	private static final Location HAYUK_LOC = new Location(-41879, 50389, -2032, 55286); //
 	// Flag Stronghold II
-	private static final Location FLAG_3_LOC = new Location(-41962, 50182, -1988, 36407);//
-	private static final Location FLAG_4_LOC = new Location(-41631, 50246, -2001, 54421);//
+	private static final Location FLAG_3_LOC = new Location(-41962, 50182, -1988, 36407); //
+	private static final Location FLAG_4_LOC = new Location(-41631, 50246, -2001, 54421); //
 	// Npcs Stronghold III
 	private static final int ELISE = 34061; // Elise Aden Vanguard
 	private static final int LAFFIAN = 34065; // Laffian Blackbird Clan Member

@@ -107,11 +107,11 @@ public class Q00564_BasicMissionKartiasLabyrinthSolo extends Quest
 					}
 					if (str.charAt(1) == '1')
 					{
-						addFactionPoints(player, Faction.ADVENTURE_GUILD, 125);// add 125 points to ADVENTURE_GUILD Faction
+						addFactionPoints(player, Faction.ADVENTURE_GUILD, 125); // add 125 points to ADVENTURE_GUILD Faction
 					}
 					if (str.charAt(2) == '1')
 					{
-						addFactionPoints(player, Faction.ADVENTURE_GUILD, 150);// add 150 points to ADVENTURE_GUILD Faction
+						addFactionPoints(player, Faction.ADVENTURE_GUILD, 150); // add 150 points to ADVENTURE_GUILD Faction
 					}
 					giveItems(player, SCROLL_OF_ESCAPE_KARTIAS_LABYRINTH, 1);
 					addExpAndSp(player, EXP, SP);

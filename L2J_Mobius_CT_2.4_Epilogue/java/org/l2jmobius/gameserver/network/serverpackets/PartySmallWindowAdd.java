@@ -37,7 +37,7 @@ public class PartySmallWindowAdd implements IClientOutgoingPacket
 	{
 		OutgoingPackets.PARTY_SMALL_WINDOW_ADD.writeId(packet);
 		packet.writeD(_party.getLeaderObjectId()); // c3
-		packet.writeD(_party.getDistributionType().getId());// packet.writeD(0x04); ?? //c3
+		packet.writeD(_party.getDistributionType().getId()); // packet.writeD(0x04); ?? //c3
 		packet.writeD(_member.getObjectId());
 		packet.writeS(_member.getName());
 		packet.writeD((int) _member.getCurrentCp()); // c4

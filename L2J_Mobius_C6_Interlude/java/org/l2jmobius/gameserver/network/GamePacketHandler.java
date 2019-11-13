@@ -578,7 +578,7 @@ public class GamePacketHandler implements IPacketHandler<GameClient>, IClientFac
 					}
 					case 0x6b: // send when talking to trainer npc, to show list of available skills
 					{
-						msg = new RequestAquireSkillInfo();// --> [s] 0xa4;
+						msg = new RequestAquireSkillInfo(); // --> [s] 0xa4;
 						break;
 					}
 					case 0x6c: // send when a skill to be learned is selected

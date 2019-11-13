@@ -80,8 +80,8 @@ public class PrivateStoreManageListBuy extends GameServerPacket
 			writeH(0x00);
 			writeD(item.getItem().getBodyPart());
 			writeH(item.getItem().getType2());
-			writeD(item.getPrice());// your price
-			writeD(item.getItem().getReferencePrice());// fixed store price
+			writeD(item.getPrice()); // your price
+			writeD(item.getItem().getReferencePrice()); // fixed store price
 		}
 	}
 }

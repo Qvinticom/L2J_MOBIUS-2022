@@ -77,6 +77,6 @@ public class ShortCutRegister extends GameServerPacket
 			}
 		}
 		
-		writeD(1);// ??
+		writeD(1); // ??
 	}
 }

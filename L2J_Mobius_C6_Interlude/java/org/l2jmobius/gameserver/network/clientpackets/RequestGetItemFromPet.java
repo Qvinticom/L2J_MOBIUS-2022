@@ -41,7 +41,7 @@ public class RequestGetItemFromPet extends GameClientPacket
 	{
 		_objectId = readD();
 		_amount = readD();
-		_unknown = readD();// = 0 for most trades
+		_unknown = readD(); // = 0 for most trades
 	}
 	
 	@Override

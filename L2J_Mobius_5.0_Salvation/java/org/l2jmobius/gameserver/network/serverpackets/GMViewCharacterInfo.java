@@ -129,7 +129,7 @@ public class GMViewCharacterInfo implements IClientOutgoingPacket
 		packet.writeD(_flyRunSpd);
 		packet.writeD(_flyWalkSpd);
 		packet.writeF(_moveMultiplier);
-		packet.writeF(_player.getAttackSpeedMultiplier()); // 2.9);//
+		packet.writeF(_player.getAttackSpeedMultiplier()); // 2.9); //
 		packet.writeF(_player.getCollisionRadius()); // scale
 		packet.writeF(_player.getCollisionHeight()); // y offset ??!? fem dwarf 4033
 		packet.writeD(_player.getAppearance().getHairStyle());

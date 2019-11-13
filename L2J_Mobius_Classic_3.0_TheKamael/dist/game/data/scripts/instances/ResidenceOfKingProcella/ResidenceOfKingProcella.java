@@ -95,7 +95,7 @@ public class ResidenceOfKingProcella extends AbstractInstance
 					procellaStorm.setRandomWalking(true);
 					_procellaStormCount++;
 					startQuestTimer("SPAWN_STORM", 60000, _procella, null);
-					startQuestTimer("CHECK_CHAR_INSIDE_RADIUS_NPC", 100, procellaStorm, player);// All time checking
+					startQuestTimer("CHECK_CHAR_INSIDE_RADIUS_NPC", 100, procellaStorm, player); // All time checking
 				}
 				break;
 			}
@@ -126,7 +126,7 @@ public class ResidenceOfKingProcella extends AbstractInstance
 						if (plr.getAffectedSkillLevel(HURRICANE_BOLT) == 1)
 						{
 							npc.abortCast();
-							startQuestTimer("CHECK_CHAR_INSIDE_RADIUS_NPC", 100, npc, player);// All time checking
+							startQuestTimer("CHECK_CHAR_INSIDE_RADIUS_NPC", 100, npc, player); // All time checking
 						}
 						else
 						{
@@ -135,11 +135,11 @@ public class ResidenceOfKingProcella extends AbstractInstance
 								npc.doCast(HURRICANE_BOLT_LV_1.getSkill());
 							}
 						}
-						startQuestTimer("CHECK_CHAR_INSIDE_RADIUS_NPC", 100, npc, player);// All time checking
+						startQuestTimer("CHECK_CHAR_INSIDE_RADIUS_NPC", 100, npc, player); // All time checking
 					}
 					else
 					{
-						startQuestTimer("CHECK_CHAR_INSIDE_RADIUS_NPC", 100, npc, player);// All time checking
+						startQuestTimer("CHECK_CHAR_INSIDE_RADIUS_NPC", 100, npc, player); // All time checking
 					}
 				}
 				break;

@@ -62,7 +62,7 @@ public class PartySmallWindowAll extends GameServerPacket
 				writeD(member.getMaxMp());
 				writeD(member.getLevel());
 				writeD(member.getClassId().getId());
-				writeD(0);// writeD(0x01); ??
+				writeD(0); // writeD(0x01); ??
 				writeD(member.getRace().ordinal());
 			}
 		}

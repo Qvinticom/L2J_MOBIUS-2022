@@ -94,7 +94,7 @@ public class Q334_TheWishingPotion extends Quest
 		{3, 0, TYRANT_KINGPIN, 0, TYRANTS_CHITIN_ID, 1, 50, 1},
 		{3, 0, TURAK_BUGBEAR, 0, BUGBEAR_BLOOD_ID, 1, 15, 1},
 		{3, 0, TURAK_BUGBEAR_WARRIOR, 0, BUGBEAR_BLOOD_ID, 1, 25, 1}
-	};// @formatter:on
+	}; // @formatter:on
 	
 	public Q334_TheWishingPotion()
 	{

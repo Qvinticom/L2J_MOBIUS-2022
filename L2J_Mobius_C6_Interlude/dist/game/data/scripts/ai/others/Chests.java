@@ -40,7 +40,7 @@ public class Chests extends Quest
 		18298,21671,21694,21717,21740,21763,21786,21801,21802,21803,21804,
 		21805,21806,21807,21808,21809,21810,21811,21812,21813,21814,21815,
 		21816,21817,21818,21819,21820,21821,21822
-	};// @formatter:on
+	}; // @formatter:on
 	// Skill
 	private static final int SKILL_DELUXE_KEY = 2229;
 	// Misc

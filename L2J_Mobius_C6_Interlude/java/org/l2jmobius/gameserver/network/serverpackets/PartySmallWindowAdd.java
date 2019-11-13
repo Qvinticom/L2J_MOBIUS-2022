@@ -53,7 +53,7 @@ public class PartySmallWindowAdd extends GameServerPacket
 		writeD(_member.getMaxMp());
 		writeD(_member.getLevel());
 		writeD(_member.getClassId().getId());
-		writeD(0);// writeD(0x01); ??
+		writeD(0); // writeD(0x01); ??
 		writeD(0);
 	}
 }

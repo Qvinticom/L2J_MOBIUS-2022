@@ -35,6 +35,6 @@ public class RecipeShopMsg extends GameServerPacket
 	{
 		writeC(0xdb);
 		writeD(_player.getObjectId());
-		writeS(_player.getCreateList().getStoreName());// _activeChar.getTradeList().getSellStoreName());
+		writeS(_player.getCreateList().getStoreName()); // _activeChar.getTradeList().getSellStoreName());
 	}
 }

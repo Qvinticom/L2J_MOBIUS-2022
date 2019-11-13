@@ -120,10 +120,10 @@ public class CharacterCreate extends GameClientPacket
 			final int objectId = IdFactory.getInstance().getNextId();
 			newChar = PlayerInstance.create(objectId, template, getClient().getAccountName(), _name, _hairStyle, _hairColor, _face, _sex != 0);
 			
-			newChar.setCurrentHp(newChar.getMaxHp());// L2Off like
+			newChar.setCurrentHp(newChar.getMaxHp()); // L2Off like
 			// newChar.setCurrentCp(template.baseCpMax);
 			newChar.setCurrentCp(0); // L2Off like
-			newChar.setCurrentMp(newChar.getMaxMp());// L2Off like
+			newChar.setCurrentMp(newChar.getMaxMp()); // L2Off like
 			// newChar.setMaxLoad(template.baseLoad);
 			
 			// send acknowledgement

@@ -76,7 +76,7 @@ public class PrivateStoreManageListSell extends GameServerPacket
 			writeD(item.getItem().getItemId());
 			writeD(item.getCount());
 			writeH(0);
-			writeH(item.getEnchant());// enchant lvl
+			writeH(item.getEnchant()); // enchant lvl
 			writeH(0);
 			writeD(item.getItem().getBodyPart());
 			writeD(item.getPrice()); // store price
@@ -91,10 +91,10 @@ public class PrivateStoreManageListSell extends GameServerPacket
 			writeD(item.getItem().getItemId());
 			writeD(item.getCount());
 			writeH(0);
-			writeH(item.getEnchant());// enchant lvl
+			writeH(item.getEnchant()); // enchant lvl
 			writeH(0x00);
 			writeD(item.getItem().getBodyPart());
-			writeD(item.getPrice());// your price
+			writeD(item.getPrice()); // your price
 			writeD(item.getItem().getReferencePrice()); // store price
 		}
 	}

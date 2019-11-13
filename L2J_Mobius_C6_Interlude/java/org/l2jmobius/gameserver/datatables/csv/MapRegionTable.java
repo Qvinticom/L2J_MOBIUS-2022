@@ -232,12 +232,12 @@ public class MapRegionTable
 	
 	public int getMapRegionX(int posX)
 	{
-		return (posX >> 15) + 4;// + centerTileX;
+		return (posX >> 15) + 4; // + centerTileX;
 	}
 	
 	public int getMapRegionY(int posY)
 	{
-		return (posY >> 15) + 10;// + centerTileX;
+		return (posY >> 15) + 10; // + centerTileX;
 	}
 	
 	public int getAreaCastle(Creature creature)
@@ -250,7 +250,7 @@ public class MapRegionTable
 			case 0:
 			{
 				castle = 1;
-				break;// Talking Island Village
+				break; // Talking Island Village
 			}
 			case 1:
 			{
@@ -446,7 +446,7 @@ public class MapRegionTable
 			case 16:
 			{
 				nearestTown = "Town of Shuttgart";
-				break; // //TODO@ (Check mapregion table)[Luno]
+				break; // TODO: (Check mapregion table)[Luno]
 			}
 			case 18:
 			{

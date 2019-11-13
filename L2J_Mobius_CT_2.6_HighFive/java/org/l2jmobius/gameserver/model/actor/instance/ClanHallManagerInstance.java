@@ -1693,7 +1693,7 @@ public class ClanHallManagerInstance extends MerchantInstance
 			filename = "data/html/clanHallManager/chamberlain-" + getId() + ".htm";
 			if (!HtmCache.getInstance().isLoadable(filename))
 			{
-				filename = "data/html/clanHallManager/chamberlain.htm";// Owner message window
+				filename = "data/html/clanHallManager/chamberlain.htm"; // Owner message window
 			}
 		}
 		else if (condition == COND_OWNER_FALSE)

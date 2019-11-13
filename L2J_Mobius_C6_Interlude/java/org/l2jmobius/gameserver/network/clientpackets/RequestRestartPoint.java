@@ -201,7 +201,7 @@ public class RequestRestartPoint extends GameClientPacket
 					{
 						if ((player.getKarma() > 0) && Config.ALT_KARMA_TELEPORT_TO_FLORAN)
 						{
-							loc = new Location(17836, 170178, -3507);// Floran Village
+							loc = new Location(17836, 170178, -3507); // Floran Village
 							break;
 						}
 						loc = MapRegionTable.getInstance().getTeleToLocation(player, MapRegionTable.TeleportWhereType.Town);

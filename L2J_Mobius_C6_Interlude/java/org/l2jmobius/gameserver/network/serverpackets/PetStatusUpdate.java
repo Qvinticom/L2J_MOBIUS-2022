@@ -68,7 +68,7 @@ public class PetStatusUpdate extends GameServerPacket
 		writeD(_maxMp);
 		writeD(_summon.getLevel());
 		writeQ(_summon.getStat().getExp());
-		writeQ(_summon.getExpForThisLevel());// 0% absolute value
-		writeQ(_summon.getExpForNextLevel());// 100% absolute value
+		writeQ(_summon.getExpForThisLevel()); // 0% absolute value
+		writeQ(_summon.getExpForNextLevel()); // 100% absolute value
 	}
 }

@@ -382,7 +382,7 @@ public class Kamaloka extends AbstractInstance
 		public int index; // 0-18 index of the kama type in arrays
 		public int shaman = 0; // objectId of the shaman
 		public List<Spawn> firstRoom; // list of the spawns in the first room (excluding shaman)
-		public List<Integer> secondRoom;// list of objectIds mobs in the second room
+		public List<Integer> secondRoom; // list of objectIds mobs in the second room
 		public int miniBoss = 0; // objectId of the miniboss
 		public Npc boss = null; // boss
 	}

@@ -874,7 +874,7 @@ public class CrystalCaverns extends AbstractInstance
 				final CCWorld world = (CCWorld) tmpworld;
 				if ((world.getStatus() == 0) && world.oracle.contains(npc))
 				{
-					return "32281.htm";// TODO: Missing HTML.
+					return "32281.htm"; // TODO: Missing HTML.
 				}
 			}
 			npc.showChatWindow(player);

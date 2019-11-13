@@ -37,9 +37,9 @@ public class RecipeShopSellList implements IClientOutgoingPacket
 	{
 		OutgoingPackets.RECIPE_SHOP_SELL_LIST.writeId(packet);
 		packet.writeD(_manufacturer.getObjectId());
-		packet.writeD((int) _manufacturer.getCurrentMp());// Creator's MP
-		packet.writeD(_manufacturer.getMaxMp());// Creator's MP
-		packet.writeQ(_buyer.getAdena());// Buyer Adena
+		packet.writeD((int) _manufacturer.getCurrentMp()); // Creator's MP
+		packet.writeD(_manufacturer.getMaxMp()); // Creator's MP
+		packet.writeQ(_buyer.getAdena()); // Buyer Adena
 		if (!_manufacturer.hasManufactureShop())
 		{
 			packet.writeD(0x00);

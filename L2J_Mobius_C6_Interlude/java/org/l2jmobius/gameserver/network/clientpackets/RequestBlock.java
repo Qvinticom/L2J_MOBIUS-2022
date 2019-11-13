@@ -92,13 +92,13 @@ public class RequestBlock extends GameClientPacket
 			}
 			case ALLBLOCK:
 			{
-				player.sendPacket(SystemMessageId.MESSAGE_REFUSAL_MODE);// Update by rocknow
+				player.sendPacket(SystemMessageId.MESSAGE_REFUSAL_MODE); // Update by rocknow
 				BlockList.setBlockAll(player, true);
 				break;
 			}
 			case ALLUNBLOCK:
 			{
-				player.sendPacket(SystemMessageId.MESSAGE_ACCEPTANCE_MODE);// Update by rocknow
+				player.sendPacket(SystemMessageId.MESSAGE_ACCEPTANCE_MODE); // Update by rocknow
 				BlockList.setBlockAll(player, false);
 				break;
 			}

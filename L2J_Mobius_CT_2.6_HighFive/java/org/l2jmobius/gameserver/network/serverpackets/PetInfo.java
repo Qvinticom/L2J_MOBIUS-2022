@@ -132,39 +132,39 @@ public class PetInfo implements IClientOutgoingPacket
 		packet.writeD(_summon.getKarma()); // karma
 		packet.writeD(_curFed); // how fed it is
 		packet.writeD(_maxFed); // max fed it can be
-		packet.writeD((int) _summon.getCurrentHp());// current hp
-		packet.writeD(_maxHp);// max hp
-		packet.writeD((int) _summon.getCurrentMp());// current mp
-		packet.writeD(_maxMp);// max mp
+		packet.writeD((int) _summon.getCurrentHp()); // current hp
+		packet.writeD(_maxHp); // max hp
+		packet.writeD((int) _summon.getCurrentMp()); // current mp
+		packet.writeD(_maxMp); // max mp
 		packet.writeD((int) _summon.getStat().getSp()); // sp
-		packet.writeD(_summon.getLevel());// lvl
+		packet.writeD(_summon.getLevel()); // lvl
 		packet.writeQ(_summon.getStat().getExp());
 		
 		if (_summon.getExpForThisLevel() > _summon.getStat().getExp())
 		{
-			packet.writeQ(_summon.getStat().getExp());// 0% absolute value
+			packet.writeQ(_summon.getStat().getExp()); // 0% absolute value
 		}
 		else
 		{
-			packet.writeQ(_summon.getExpForThisLevel());// 0% absolute value
+			packet.writeQ(_summon.getExpForThisLevel()); // 0% absolute value
 		}
 		
-		packet.writeQ(_summon.getExpForNextLevel());// 100% absoulte value
-		packet.writeD(_summon.isPet() ? _summon.getInventory().getTotalWeight() : 0);// weight
-		packet.writeD(_summon.getMaxLoad());// max weight it can carry
-		packet.writeD((int) _summon.getPAtk(null));// patk
-		packet.writeD((int) _summon.getPDef(null));// pdef
-		packet.writeD((int) _summon.getMAtk(null, null));// matk
-		packet.writeD((int) _summon.getMDef(null, null));// mdef
-		packet.writeD(_summon.getAccuracy());// accuracy
-		packet.writeD(_summon.getEvasionRate(null));// evasion
-		packet.writeD(_summon.getCriticalHit(null, null));// critical
-		packet.writeD((int) _summon.getMoveSpeed());// speed
-		packet.writeD((int) _summon.getPAtkSpd());// atkspeed
-		packet.writeD(_summon.getMAtkSpd());// casting speed
+		packet.writeQ(_summon.getExpForNextLevel()); // 100% absoulte value
+		packet.writeD(_summon.isPet() ? _summon.getInventory().getTotalWeight() : 0); // weight
+		packet.writeD(_summon.getMaxLoad()); // max weight it can carry
+		packet.writeD((int) _summon.getPAtk(null)); // patk
+		packet.writeD((int) _summon.getPDef(null)); // pdef
+		packet.writeD((int) _summon.getMAtk(null, null)); // matk
+		packet.writeD((int) _summon.getMDef(null, null)); // mdef
+		packet.writeD(_summon.getAccuracy()); // accuracy
+		packet.writeD(_summon.getEvasionRate(null)); // evasion
+		packet.writeD(_summon.getCriticalHit(null, null)); // critical
+		packet.writeD((int) _summon.getMoveSpeed()); // speed
+		packet.writeD((int) _summon.getPAtkSpd()); // atkspeed
+		packet.writeD(_summon.getMAtkSpd()); // casting speed
 		
-		packet.writeD(_summon.getAbnormalVisualEffects());// c2 abnormal visual effect... bleed=1; poison=2; poison & bleed=3; flame=4;
-		packet.writeH(_summon.isMountable() ? 1 : 0);// c2 ride button
+		packet.writeD(_summon.getAbnormalVisualEffects()); // c2 abnormal visual effect... bleed=1; poison=2; poison & bleed=3; flame=4;
+		packet.writeH(_summon.isMountable() ? 1 : 0); // c2 ride button
 		
 		packet.writeC(_summon.isInsideZone(ZoneId.WATER) ? 1 : _summon.isFlying() ? 2 : 0); // c2
 		
@@ -173,7 +173,7 @@ public class PetInfo implements IClientOutgoingPacket
 		packet.writeC(_summon.getTeam().getId());
 		packet.writeD(_summon.getSoulShotsPerHit()); // How many soulshots this servitor uses per hit
 		packet.writeD(_summon.getSpiritShotsPerHit()); // How many spiritshots this servitor uses per hit
-		packet.writeD(_summon.getFormId());// CT1.5 Pet form and skills
+		packet.writeD(_summon.getFormId()); // CT1.5 Pet form and skills
 		packet.writeD(_summon.getAbnormalVisualEffectSpecial());
 		return true;
 	}

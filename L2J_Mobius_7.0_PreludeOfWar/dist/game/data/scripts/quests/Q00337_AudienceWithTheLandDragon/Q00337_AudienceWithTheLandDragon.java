@@ -53,7 +53,7 @@ public class Q00337_AudienceWithTheLandDragon extends Quest
 	private static final int REMAINS_OF_SACRIFIED = 3857; // Remains of Sacrifice
 	private static final int MARA_FANG = 3862; // Mara Fang
 	private static final int FIRST_FRAGMENT_OF_ABYSS_JEWEL = 3859; // 1st Fragment of Abyssal Jewel
-	private static final int MARK_OF_WATCHMAN = 3864;// Mark of Watchman
+	private static final int MARK_OF_WATCHMAN = 3864; // Mark of Watchman
 	private static final int SECOND_FRAGMENT_OF_ABYSS_JEWEL = 3860; // 2nd Fragment of Abyssal Jewel
 	private static final int MUSFEL_FANG = 3863; // Musfel Fang
 	private static final int HERALD_OF_SLAYER = 3890; // Badge of slayer

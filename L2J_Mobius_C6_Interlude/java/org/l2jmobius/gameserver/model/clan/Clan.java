@@ -1390,7 +1390,7 @@ public class Clan
 	public class RankPrivs
 	{
 		private final int _rankId;
-		private final int _party;//
+		private final int _party; //
 		private int _rankPrivs;
 		
 		public RankPrivs(int rank, int party, int privs)

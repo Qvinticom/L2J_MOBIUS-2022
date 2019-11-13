@@ -93,7 +93,7 @@ public class Rebirth
 			// Returns the skill based on next Birth and if isMage.
 			Skill skill = getRebirthSkill((currBirth + 1), isMage);
 			
-			String icon = "" + skill.getId();// Returns the skill's id.
+			String icon = "" + skill.getId(); // Returns the skill's id.
 			
 			// Incase the skill is only 3 digits.
 			if (icon.length() < 4)

@@ -111,8 +111,8 @@ public abstract class AbstractNpcInfo implements IClientOutgoingPacket
 			_rhand = cha.getRightHandItem(); // On every subclass
 			_lhand = cha.getLeftHandItem(); // On every subclass
 			_enchantEffect = cha.getEnchantEffect();
-			_collisionHeight = cha.getCollisionHeight();// On every subclass
-			_collisionRadius = cha.getCollisionRadius();// On every subclass
+			_collisionHeight = cha.getCollisionHeight(); // On every subclass
+			_collisionRadius = cha.getCollisionRadius(); // On every subclass
 			_isAttackable = cha.isAutoAttackable(attacker);
 			
 			// npc crest of owning clan/ally of castle
@@ -309,7 +309,7 @@ public abstract class AbstractNpcInfo implements IClientOutgoingPacket
 			packet.writeD(0x00); // C4
 			packet.writeD(0x00); // C6
 			packet.writeD(0x00);
-			packet.writeD(0);// CT1.5 Pet form and skills
+			packet.writeD(0); // CT1.5 Pet form and skills
 			packet.writeC(0x01);
 			packet.writeC(0x01);
 			packet.writeD(0x00);
@@ -382,7 +382,7 @@ public abstract class AbstractNpcInfo implements IClientOutgoingPacket
 			packet.writeC(_isSummoned ? 2 : _val); // invisible ?? 0=false 1=true 2=summoned (only works if model has a summon animation)
 			packet.writeS(_name);
 			packet.writeS(_title);
-			packet.writeD(0x01);// Title color 0=client default
+			packet.writeD(0x01); // Title color 0=client default
 			
 			packet.writeD(_summon.getPvpFlag());
 			packet.writeD(_summon.getKarma());

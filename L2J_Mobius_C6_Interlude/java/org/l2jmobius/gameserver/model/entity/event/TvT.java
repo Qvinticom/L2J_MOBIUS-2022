@@ -2038,7 +2038,7 @@ public class TvT implements EventTask
 				{
 					if (_teams.size() >= 2)
 					{
-						player.setTeam(0);// clear aura :P
+						player.setTeam(0); // clear aura :P
 					}
 				}
 				player.broadcastUserInfo();

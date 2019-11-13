@@ -69,7 +69,7 @@ public class RecipeShopManageList implements IClientOutgoingPacket
 		}
 		else
 		{
-			packet.writeD(_recipes.size());// number of items in recipe book
+			packet.writeD(_recipes.size()); // number of items in recipe book
 			
 			int i = 1;
 			for (RecipeHolder recipe : _recipes)

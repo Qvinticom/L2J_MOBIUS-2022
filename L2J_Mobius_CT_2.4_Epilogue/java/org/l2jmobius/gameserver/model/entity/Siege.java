@@ -459,7 +459,7 @@ public class Siege implements Siegable
 				getCastle().removeUpgrade(); // Remove all castle upgrade
 				getCastle().spawnDoor(true); // Respawn door to castle but make them weaker (50% hp)
 				removeTowers(); // Remove all towers from this castle
-				_controlTowerCount = 0;// Each new siege midvictory CT are completely respawned.
+				_controlTowerCount = 0; // Each new siege midvictory CT are completely respawned.
 				spawnControlTower();
 				spawnFlameTower();
 				updatePlayerSiegeStateFlags(false);

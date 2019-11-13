@@ -73,7 +73,7 @@ public class PrivateStoreListBuy extends GameServerPacket
 			
 			writeD(item.getItem().getBodyPart());
 			writeH(item.getItem().getType2());
-			writeD(item.getPrice());// buyers price
+			writeD(item.getPrice()); // buyers price
 			
 			writeD(item.getCount()); // maximum possible tradecount
 		}

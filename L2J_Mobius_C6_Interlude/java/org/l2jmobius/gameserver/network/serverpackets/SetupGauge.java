@@ -31,7 +31,7 @@ public class SetupGauge extends GameServerPacket
 	
 	public SetupGauge(int dat1, int time)
 	{
-		_dat1 = dat1;// color 0-blue 1-red 2-cyan 3-
+		_dat1 = dat1; // color 0-blue 1-red 2-cyan 3-
 		_time = time;
 	}
 	

@@ -102,7 +102,7 @@ public class CustomNpcInfo extends GameServerPacket
 		writeD((int) _activeChar.getStatus().getCurrentCp());
 		writeC(_activeChar.getCustomNpcInstance().getEnchantWeapon());
 		writeC(0x00);
-		writeD(0);// clan crest
+		writeD(0); // clan crest
 		writeC(_activeChar.getCustomNpcInstance().isNoble() ? 1 : 0);
 		writeC(_activeChar.getCustomNpcInstance().isHero() ? 1 : 0);
 		writeC(0);

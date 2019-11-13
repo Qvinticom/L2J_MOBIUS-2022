@@ -44,9 +44,9 @@ public class RecipeShopSellList extends GameServerPacket
 			// dddd d(ddd)
 			writeC(0xd9);
 			writeD(_manufacturer.getObjectId());
-			writeD((int) _manufacturer.getCurrentMp());// Creator's MP
-			writeD(_manufacturer.getMaxMp());// Creator's MP
-			writeD(_buyer.getAdena());// Buyer Adena
+			writeD((int) _manufacturer.getCurrentMp()); // Creator's MP
+			writeD(_manufacturer.getMaxMp()); // Creator's MP
+			writeD(_buyer.getAdena()); // Buyer Adena
 			
 			final int count = createList.size();
 			writeD(count);

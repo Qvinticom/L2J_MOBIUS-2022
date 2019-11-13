@@ -150,7 +150,7 @@ public class Q00296_TarantulasSpiderSilk extends Quest
 				{
 					giveAdena(talker, (silk * 5) + (silk >= 10 ? 1000 : 0), true);
 					takeItems(talker, TARANTULA_SPIDER_SILK, -1);
-					// Q00281_HeadForTheHills.giveNewbieReward(talker);// TODO: It's using wrong bitmask, need to create a general bitmask for this using EnumIntBitmask class inside Quest class for handling Quest rewards.
+					// Q00281_HeadForTheHills.giveNewbieReward(talker); // TODO: It's using wrong bitmask, need to create a general bitmask for this using EnumIntBitmask class inside Quest class for handling Quest rewards.
 					html = "30519-05.html";
 				}
 				else
