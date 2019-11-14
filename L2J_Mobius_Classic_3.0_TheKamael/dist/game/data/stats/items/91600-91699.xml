@@ -587,44 +587,48 @@
 		<set name="icon" val="icon.etc_crest_blue_i00" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="10" />
-		<set name="is_tradable" val="false" />
+		<set name="price" val="1" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="Book" />
 	</item>
 	<item id="91655" name="Adventurer's Mark Lv. 2" type="EtcItem">
 		<!-- Received after completing the Adventurer's Journey mission. When in inventory, HP Recovery Bonus +10%, MP Recovery Bonus +15%. The effect doesn't stack if several identical marks are in inventory, the higher-level mark takes precedence. Double-click to see the list of hunting zones for each character level. -->
 		<set name="icon" val="icon.etc_crest_blue_i00" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="10" />
-		<set name="is_tradable" val="false" />
+		<set name="price" val="1" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="Book" />
 	</item>
 	<item id="91656" name="Adventurer's Mark Lv. 3" type="EtcItem">
 		<!-- Received after completing the Adventurer's Journey mission. When in inventory, HP Recovery Bonus +15%, MP Recovery Bonus +20%. The effect doesn't stack if several identical marks are in inventory, the higher-level mark takes precedence. Double-click to see the list of hunting zones for each character level. -->
 		<set name="icon" val="icon.etc_crest_blue_i00" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="10" />
-		<set name="is_tradable" val="false" />
+		<set name="price" val="1" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="Book" />
 	</item>
 	<item id="91657" name="Adventurer's Mark Lv. 4" type="EtcItem">
 		<!-- Received after completing the Adventurer's Journey mission. When in inventory, HP Recovery Bonus +20%, MP Recovery Bonus +25%. Double-click to see the list of hunting zones for each character level. -->
 		<set name="icon" val="icon.etc_crest_blue_i00" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="10" />
-		<set name="is_tradable" val="false" />
+		<set name="price" val="1" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="Book" />
 	</item>
 	<item id="91658" name="Chicken Box" type="EtcItem">
 		<!-- Only for the Essence server. Double-click to obtain Shining Scroll of Mood Melody or Yummy Chicken. -->

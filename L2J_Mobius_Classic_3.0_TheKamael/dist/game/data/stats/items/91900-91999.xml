@@ -456,11 +456,12 @@
 		<set name="icon" val="icon.etc_crest_blue_i00" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="10" />
-		<set name="is_tradable" val="false" />
+		<set name="price" val="1" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="Book" />
 	</item>
 	<item id="91932" name="Adventurer's Brooch" type="Armor">
 		<!-- Activates 1 jewel slot. -->
