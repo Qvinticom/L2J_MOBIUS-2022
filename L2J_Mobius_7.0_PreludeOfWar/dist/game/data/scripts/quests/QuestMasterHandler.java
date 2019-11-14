@@ -166,6 +166,7 @@ import quests.Q10843_AnomalyInTheEnchantedValley.Q10843_AnomalyInTheEnchantedVal
 import quests.Q10851_ElvenBotany.Q10851_ElvenBotany;
 import quests.Q10856_SuperionAppears.Q10856_SuperionAppears;
 import quests.Q11025_PathOfDestinyProving.Q11025_PathOfDestinyProving;
+import quests.Q11026_PathOfDestinyConviction.Q11026_PathOfDestinyConviction;
 import quests.Q11031_TrainingBeginsNow.Q11031_TrainingBeginsNow;
 import quests.Q11032_CurseOfUndying.Q11032_CurseOfUndying;
 import quests.Q11033_AntidoteIngredients.Q11033_AntidoteIngredients;
@@ -490,6 +491,7 @@ public class QuestMasterHandler
 		Q10900_PathToStrength.class, // TODO: Not done.
 		Q10901_AModelAdventurer.class, // TODO: Not done.
 		Q11025_PathOfDestinyProving.class,
+		Q11026_PathOfDestinyConviction.class,
 		Q11031_TrainingBeginsNow.class,
 		Q11032_CurseOfUndying.class,
 		Q11033_AntidoteIngredients.class,
