@@ -41,6 +41,19 @@ import quests.Q00662_AGameOfCards.Q00662_AGameOfCards;
 import quests.Q00933_ExploringTheWestWingOfTheDungeonOfAbyss.Q00933_ExploringTheWestWingOfTheDungeonOfAbyss;
 import quests.Q00935_ExploringTheEastWingOfTheDungeonOfAbyss.Q00935_ExploringTheEastWingOfTheDungeonOfAbyss;
 import quests.Q10866_PunitiveOperationOnTheDevilIsle.Q10866_PunitiveOperationOnTheDevilIsle;
+import quests.Q10961_EffectiveTraining.Q10961_EffectiveTraining;
+import quests.Q10962_NewHorizons.Q10962_NewHorizons;
+import quests.Q10966_ATripBegins.Q10966_ATripBegins;
+import quests.Q10981_UnbearableWolvesHowling.Q10981_UnbearableWolvesHowling;
+import quests.Q10982_SpiderHunt.Q10982_SpiderHunt;
+import quests.Q10983_TroubledForest.Q10983_TroubledForest;
+import quests.Q10984_CollectSpiderweb.Q10984_CollectSpiderweb;
+import quests.Q10985_CleaningUpTheGround.Q10985_CleaningUpTheGround;
+import quests.Q10986_SwampMonster.Q10986_SwampMonster;
+import quests.Q10987_PlunderedGraves.Q10987_PlunderedGraves;
+import quests.Q10988_Conspiracy.Q10988_Conspiracy;
+import quests.Q10989_DangerousPredators.Q10989_DangerousPredators;
+import quests.Q10990_PoisonExtraction.Q10990_PoisonExtraction;
 import quests.not_done.Q00630_PirateTreasureHunt;
 import quests.not_done.Q00664_QuarrelsTime;
 import quests.not_done.Q00910_RequestFromTheRedLibraGuildLv1;
@@ -105,6 +118,19 @@ public class QuestMasterHandler
 		Q10868_TheDarkSideOfPower.class, // TODO: Not done.
 		Q10870_UnfinishedDevice.class, // TODO: Not done.
 		Q10871_DeathToThePirateKing.class, // TODO: Not done.
+		Q10961_EffectiveTraining.class,
+		Q10962_NewHorizons.class,
+		Q10966_ATripBegins.class,
+		Q10981_UnbearableWolvesHowling.class,
+		Q10982_SpiderHunt.class,
+		Q10983_TroubledForest.class,
+		Q10984_CollectSpiderweb.class,
+		Q10985_CleaningUpTheGround.class,
+		Q10986_SwampMonster.class,
+		Q10987_PlunderedGraves.class,
+		Q10988_Conspiracy.class,
+		Q10989_DangerousPredators.class,
+		Q10990_PoisonExtraction.class,
 	};
 	
 	public static void main(String[] args)
