@@ -61,18 +61,11 @@ public class ExPledgeMissionInfo implements IClientOutgoingPacket
 				progress = 1;
 				if (status == 2)
 				{
-					if (reward.getRequiredCompletions() <= _player.getLevel())
-					{
-						status = 3;
-					}
-					else
-					{
-						status = 1;
-					}
+					status = reward.getRequiredCompletions() > _player.getLevel() ? 1 : 3;
 				}
 				else
 				{
-					status = 0;
+					status = reward.getRecentlyCompleted(_player) ? 0 : 3;
 				}
 			}
 			else if (status == 1)
