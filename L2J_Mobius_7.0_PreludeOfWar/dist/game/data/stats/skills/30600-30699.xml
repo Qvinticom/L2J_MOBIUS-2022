@@ -221,7 +221,7 @@
 	<skill id="30613" toLevel="1" name="Newbie's Rising Smash">
 		<!-- Attacks nearby targets with 2062 Power added to P. Atk. and Received Healing -45% for 5 sec. Can be used while a sword or blunt weapon is equipped. Over-hit. Critical. -->
 		<icon>icon.skill10013</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<isDebuff>true</isDebuff>
 		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
@@ -267,7 +267,7 @@
 	<skill id="30614" toLevel="1" name="Novice Chain Gust">
 		<!-- Swings the chain to attack nearby enemies with 2860 power. Holds them for 5 sec. Requires a sword or a blunt weapon. Critical. Over-hit. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill10014</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<isDebuff>true</isDebuff>
 		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
@@ -731,7 +731,7 @@
 	<skill id="30626" toLevel="1" name="Novice Mark of Fire">
 		<!-- Carves a burning mark on the target dealing magic damage with 33 power. Speed -150. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill11298</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<isDebuff>true</isDebuff>
 		<castRange>900</castRange>
@@ -2446,7 +2446,7 @@
 	<skill id="30666" toLevel="1" name="Novice Volcanic Destruction">
 		<!-- Inflicts M. Atk. of 86 power added with Fire damage on the target and the enemies in the route and decreases M. Def. by 10% for 10 sec. Additionally, inflicts Ignite effect. Over-hit is possible. -->
 		<icon>icon.skill11024</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<isDebuff>true</isDebuff>
 		<castRange>1100</castRange>
@@ -2488,7 +2488,7 @@
 	<skill id="30667" toLevel="1" name="Novice Lockshard Destruction">
 		<!-- Inflicts earth damage on the target with 86 Power added to M. Atk. M. Def. -10% and all Attribute Resistances -10 for 10 sec. -->
 		<icon>icon.skill11027</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<isDebuff>true</isDebuff>
 		<castRange>1100</castRange>
@@ -3756,7 +3756,7 @@
 	<skill id="30697" toLevel="1" name="Novice Power Hammer Crush">
 		<!-- Attacks the target with 3601 power ignoring 15% of their P. Def. Stuns for 5 sec. Requires a blunt weapon. Critical. Over-hit. Inflicted status: Confusion (Fear, Aerial Yoke, Faint, Charm, Stun, Paralysis, Knockback, Knockdown, Pull). -->
 		<icon>icon.skill10330</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>STUN</abnormalType>
