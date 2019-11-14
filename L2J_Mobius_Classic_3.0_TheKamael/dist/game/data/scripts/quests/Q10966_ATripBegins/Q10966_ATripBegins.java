@@ -55,6 +55,7 @@ public class Q10966_ATripBegins extends Quest
 	private static final int TUMRAN_BUGBEAR = 20062;
 	private static final int TUMRAN_BUGBEAR_WARRIOR = 20064;
 	// Misc
+	private static final int MIN_LEVEL = 20;
 	private static final int MAX_LEVEL = 25;
 	private static final String KILL_COUNT_VAR = "KillCount";
 	
@@ -64,6 +65,7 @@ public class Q10966_ATripBegins extends Quest
 		addStartNpc(CAPTAIN_BATHIS);
 		addTalkId(CAPTAIN_BATHIS, BELLA);
 		addKillId(ARACHNID_PREDATOR, SKELETON_BOWMAN, RUIN_SPARTOI, RAGING_SPARTOI, RAGING_SPARTOI, TUMRAN_BUGBEAR, TUMRAN_BUGBEAR_WARRIOR);
+		addCondMinLevel(MIN_LEVEL, "no_lvl.html");
 		addCondMaxLevel(MAX_LEVEL, "no_lvl.html");
 		setQuestNameNpcStringId(NpcStringId.LV_20_25_A_TRIP_BEGINS);
 	}

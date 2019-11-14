@@ -19,15 +19,24 @@ package quests.Q10962_NewHorizons;
 import java.util.HashSet;
 import java.util.Set;
 
+import org.l2jmobius.Config;
+import org.l2jmobius.gameserver.data.xml.impl.CategoryData;
+import org.l2jmobius.gameserver.enums.CategoryType;
 import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.events.EventType;
+import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
+import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
+import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
+import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLogin;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.holders.NpcLogListHolder;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
+import org.l2jmobius.gameserver.network.serverpackets.classchange.ExRequestClassChangeUi;
 
 /**
  * New Horizons (10962)
@@ -39,14 +48,16 @@ public class Q10962_NewHorizons extends Quest
 	// NPCs
 	private static final int LEAHEN = 34111;
 	private static final int CAPTAIN_BATHIS = 30332;
-	// Misc
-	private static final int MAX_LEVEL = 20;
-	private static final String KILL_COUNT_VAR = "KillCount";
+	// Monsters
+	private static final int MOUNTAIN_WEREWORLF = 21985;
+	private static final int MOUNTAIN_FUNGUES = 21986;
+	private static final int MUERTOS_WARRIOR = 21987; // NOTE: Murtos Fighter in old client
+	private static final int MUERTOS_CAPTAIN = 21988;
 	// Items
 	private static final ItemHolder SOE_TO_CAPTAIN_BATHIS = new ItemHolder(91651, 1);
 	private static final ItemHolder SOE_NOVICE = new ItemHolder(10650, 20);
 	private static final ItemHolder SPIRIT_ORE = new ItemHolder(3031, 50);
-	private static final ItemHolder HP_POTS = new ItemHolder(91912, 50);// TODO: Finish Item
+	private static final ItemHolder HP_POTS = new ItemHolder(91912, 50); // TODO: Finish Item
 	private static final ItemHolder RICE_CAKE_OF_FLAMING_FIGHTING_SPIRIT_EVENT = new ItemHolder(91840, 1);
 	// HELMET FOR ALL ARMORS
 	private static final ItemHolder MOON_HELMET = new ItemHolder(7850, 1);
@@ -62,11 +73,9 @@ public class Q10962_NewHorizons extends Quest
 	private static final ItemHolder MOON_CAPE = new ItemHolder(7857, 1);
 	private static final ItemHolder MOON_SILK = new ItemHolder(7858, 1);
 	private static final ItemHolder MOON_SANDALS = new ItemHolder(7859, 1);
-	// Monsters
-	private static final int MOUNTAIN_WEREWORLF = 21985;
-	private static final int MOUNTAIN_FUNGUES = 21986;
-	private static final int MUERTOS_WARRIOR = 21987;// NOTE: Murtos Fighter in old client
-	private static final int MUERTOS_CAPTAIN = 21988;
+	// Misc
+	private static final int MAX_LEVEL = 20;
+	private static final String KILL_COUNT_VAR = "KillCount";
 	
 	public Q10962_NewHorizons()
 	{
@@ -147,8 +156,12 @@ public class Q10962_NewHorizons extends Quest
 					giveItems(player, MOON_ARMOR);
 					giveItems(player, MOON_GAUNTLETS);
 					giveItems(player, MOON_BOOTS);
-					player.sendPacket(new ExShowScreenMessage("Completed the tutorial.#Now try the first class transfer and as instructed by Bathis carry out the Adventurers Journey misions to grow your character.", 5000));
 					qs.exitQuest(false, true);
+					if (CategoryData.getInstance().isInCategory(CategoryType.FIRST_CLASS_GROUP, player.getClassId().getId()))
+					{
+						showOnScreenMsg(player, NpcStringId.YOU_VE_FINISHED_THE_TUTORIAL_NTAKE_YOUR_1ST_CLASS_TRANSFER_AND_COMPLETE_YOUR_TRAINING_WITH_BATHIS_TO_BECOME_STRONGER, ExShowScreenMessage.TOP_CENTER, 10000);
+						player.sendPacket(ExRequestClassChangeUi.STATIC_PACKET);
+					}
 					htmltext = event;
 					break;
 				}
@@ -166,8 +179,12 @@ public class Q10962_NewHorizons extends Quest
 					giveItems(player, MOON_SHELL);
 					giveItems(player, MOON_LEATHER_GLOVES);
 					giveItems(player, MOON_SHOES);
-					player.sendPacket(new ExShowScreenMessage("Completed the tutorial.#Now try the first class transfer and as instructed by Bathis carry out the Adventurers Journey misions to grow your character.", 5000));
 					qs.exitQuest(false, true);
+					if (CategoryData.getInstance().isInCategory(CategoryType.FIRST_CLASS_GROUP, player.getClassId().getId()))
+					{
+						showOnScreenMsg(player, NpcStringId.YOU_VE_FINISHED_THE_TUTORIAL_NTAKE_YOUR_1ST_CLASS_TRANSFER_AND_COMPLETE_YOUR_TRAINING_WITH_BATHIS_TO_BECOME_STRONGER, ExShowScreenMessage.TOP_CENTER, 10000);
+						player.sendPacket(ExRequestClassChangeUi.STATIC_PACKET);
+					}
 					htmltext = event;
 					break;
 				}
@@ -185,8 +202,12 @@ public class Q10962_NewHorizons extends Quest
 					giveItems(player, MOON_CAPE);
 					giveItems(player, MOON_SILK);
 					giveItems(player, MOON_SANDALS);
-					player.sendPacket(new ExShowScreenMessage("Completed the tutorial.#Now try the first class transfer and as instructed by Bathis carry out the Adventurers Journey misions to grow your character.", 5000));
 					qs.exitQuest(false, true);
+					if (CategoryData.getInstance().isInCategory(CategoryType.FIRST_CLASS_GROUP, player.getClassId().getId()))
+					{
+						showOnScreenMsg(player, NpcStringId.YOU_VE_FINISHED_THE_TUTORIAL_NTAKE_YOUR_1ST_CLASS_TRANSFER_AND_COMPLETE_YOUR_TRAINING_WITH_BATHIS_TO_BECOME_STRONGER, ExShowScreenMessage.TOP_CENTER, 10000);
+						player.sendPacket(ExRequestClassChangeUi.STATIC_PACKET);
+					}
 					htmltext = event;
 					break;
 				}
@@ -272,5 +293,32 @@ public class Q10962_NewHorizons extends Quest
 			}
 		}
 		return htmltext;
+	}
+	
+	@RegisterEvent(EventType.ON_PLAYER_LOGIN)
+	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
+	public void OnPlayerLogin(OnPlayerLogin event)
+	{
+		if (Config.DISABLE_TUTORIAL)
+		{
+			return;
+		}
+		
+		final PlayerInstance player = event.getPlayer();
+		if (player == null)
+		{
+			return;
+		}
+		
+		if (!CategoryData.getInstance().isInCategory(CategoryType.FIRST_CLASS_GROUP, player.getClassId().getId()))
+		{
+			return;
+		}
+		
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && qs.isCompleted())
+		{
+			player.sendPacket(ExRequestClassChangeUi.STATIC_PACKET);
+		}
 	}
 }
