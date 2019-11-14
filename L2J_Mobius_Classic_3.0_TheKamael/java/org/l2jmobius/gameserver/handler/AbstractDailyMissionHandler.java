@@ -77,21 +77,34 @@ public abstract class AbstractDailyMissionHandler extends ListenersContainer
 	
 	public synchronized void reset()
 	{
-		try (Connection con = DatabaseFactory.getConnection();
-			PreparedStatement ps = con.prepareStatement("DELETE FROM character_daily_rewards WHERE rewardId = ? AND status = ?"))
+		if (_holder.dailyReset())
 		{
-			ps.setInt(1, _holder.getId());
-			ps.setInt(2, DailyMissionStatus.COMPLETED.getClientId());
-			ps.execute();
+			try (Connection con = DatabaseFactory.getConnection();
+				PreparedStatement ps = con.prepareStatement("DELETE FROM character_daily_rewards WHERE rewardId = ? AND status = ?"))
+			{
+				ps.setInt(1, _holder.getId());
+				ps.setInt(2, DailyMissionStatus.COMPLETED.getClientId());
+				ps.execute();
+			}
+			catch (SQLException e)
+			{
+				LOGGER.log(Level.WARNING, "Error while clearing data for: " + getClass().getSimpleName(), e);
+			}
 		}
-		catch (SQLException e)
+		else
 		{
-			LOGGER.log(Level.WARNING, "Error while clearing data for: " + getClass().getSimpleName(), e);
+			try (Connection con = DatabaseFactory.getConnection();
+				PreparedStatement ps = con.prepareStatement("DELETE FROM character_daily_rewards WHERE rewardId = ? AND status = 3"))
+			{
+				ps.setInt(1, _holder.getId());
+				ps.execute();
+			}
+			catch (SQLException e)
+			{
+				LOGGER.log(Level.WARNING, "Error while clearing data for: " + getClass().getSimpleName(), e);
+			}
 		}
-		finally
-		{
-			_entries.clear();
-		}
+		_entries.clear();
 	}
 	
 	public boolean requestReward(PlayerInstance player)

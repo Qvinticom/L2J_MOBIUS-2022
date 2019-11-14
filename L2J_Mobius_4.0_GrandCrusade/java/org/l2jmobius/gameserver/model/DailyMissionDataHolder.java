@@ -37,6 +37,7 @@ public class DailyMissionDataHolder
 	private final List<ClassId> _classRestriction;
 	private final int _requiredCompletions;
 	private final StatsSet _params;
+	private final boolean _dailyReset;
 	private final boolean _isOneTime;
 	private final boolean _isMainClassOnly;
 	private final boolean _isDualClassOnly;
@@ -53,6 +54,7 @@ public class DailyMissionDataHolder
 		_rewardsItems = set.getList("items", ItemHolder.class);
 		_classRestriction = set.getList("classRestriction", ClassId.class);
 		_params = set.getObject("params", StatsSet.class);
+		_dailyReset = set.getBoolean("dailyReset", true);
 		_isOneTime = set.getBoolean("isOneTime", true);
 		_isMainClassOnly = set.getBoolean("isMainClassOnly", true);
 		_isDualClassOnly = set.getBoolean("isDualClassOnly", false);
@@ -88,6 +90,11 @@ public class DailyMissionDataHolder
 	public StatsSet getParams()
 	{
 		return _params;
+	}
+	
+	public boolean dailyReset()
+	{
+		return _dailyReset;
 	}
 	
 	public boolean isOneTime()

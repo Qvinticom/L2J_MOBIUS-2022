@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd/DailyMission.xsd">
-	<reward id="1001" name="Hunt Lv. 85+ monsters" requiredCompletion="500" isOneTime="false">
+	<reward id="1001" name="Hunt Lv. 85+ monsters" requiredCompletion="500" isOneTime="false" dailyReset="false">
 		<!-- Hunt 500 monsters in any hunting ground. (A monster kill is only valid when XP was gained from it.) -->
 		<handler name="monster">
 			<param name="minLevel">85</param>
@@ -20,7 +20,7 @@
 		</items>
 	</reward>
 	-->
-	<reward id="1006" name="Ashen Shadow and Mystic Tavern" requiredCompletion="2" isOneTime="false">
+	<reward id="1006" name="Ashen Shadow and Mystic Tavern" requiredCompletion="2" isOneTime="false" dailyReset="false">
 		<!-- Defeat any of the following instanced zone monsters twice. Ashen Shadow Revolutionaries: Final Phase Commander Mystic Tavern Tauti: Seal Angel Mystic Tavern Freya: Frost Glacier Golem Mystic Tavern Kelbim: Typhoon Mystic Tavern Kain: Alfred von Hellmann -->
 		<handler name="monster">
 			<param name="ids">23653,23654,23655,23656,23657,23658,23659,23660,23661,23662,23663,23664,23684,23685,23686</param> <!-- TODO: Check ids Typhoon (25539?) and Alfred von Hellmann -->
@@ -32,7 +32,7 @@
 			<item id="-300" count="2000" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="1007" name="Go Fishing" requiredCompletion="100" isOneTime="false">
+	<reward id="1007" name="Go Fishing" requiredCompletion="100" isOneTime="false" dailyReset="false">
 		<!-- Successfully catch any type of fish 100 times at the Fishing Dock. -->
 		<handler name="fishing" />
 		<items>
@@ -63,7 +63,7 @@
 		</items>
 	</reward>
 	-->
-	<reward id="1014" name="Command Channel Instance Zone - Stage 1" requiredCompletion="2" isOneTime="false">
+	<reward id="1014" name="Command Channel Instance Zone - Stage 1" requiredCompletion="2" isOneTime="false" dailyReset="false">
 		<!-- Defeat any of the following Instance Zone bosses twice while in command channel. Crystal Prison: Balok Octavis' Cavern: Octavis -->
 		<handler name="monster">
 			<param name="ids">29218,29194,29212</param>
@@ -96,7 +96,7 @@
 		</items>
 	</reward>
 	-->
-	<reward id="1017" name="Command Channel Instance Zone - Stage 2" requiredCompletion="2" isOneTime="false">
+	<reward id="1017" name="Command Channel Instance Zone - Stage 2" requiredCompletion="2" isOneTime="false" dailyReset="false">
 		<!-- Defeat any of the following Instance Zone bosses twice while in command channel. Octavis' Cavern (Epic): Octavis Tauti's Cavern: Tauti Tauti's Cavern (Epic): Tauti Inner Messiah's Castle: Camille -->
 		<handler name="monster">
 			<param name="ids">29194,29212,29236,29237,26236</param> <!-- TODO: Check Camille id 26236 -->
@@ -122,7 +122,7 @@
 		</items>
 	</reward>
 	-->
-	<reward id="2002" name="Lv. 100-105 Field Boss Hunt" requiredCompletion="2" isOneTime="false">
+	<reward id="2002" name="Lv. 100-105 Field Boss Hunt" requiredCompletion="1" isOneTime="false">
 		<!-- Defeat 1 of the following twice. Kelbim Ramona -->
 		<handler name="monster">
 			<param name="ids">26124,26143</param>
@@ -143,7 +143,7 @@
 		</items>
 	</reward>
 	-->
-	<reward id="2004" name="Catch Nimble Fish" requiredCompletion="2500" isOneTime="false">
+	<reward id="2004" name="Catch Nimble Fish" requiredCompletion="2500" isOneTime="false" dailyReset="false">
 		<!-- Catch 2500 Nimble Fish at the Fishing Dock. -->
 		<handler name="fishing" />
 		<items>
@@ -151,7 +151,7 @@
 			<item id="-300" count="1000" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="2005" name="Dimensional Warp Assault" requiredCompletion="100" isOneTime="false">
+	<reward id="2005" name="Dimensional Warp Assault" requiredCompletion="100" isOneTime="false" dailyReset="false">
 		<!-- Defeat the following monster 100 times in the Dimensional Warp. Dimensional Bugbear -->
 		<handler name="monster">
 			<param name="ids">23465</param>
@@ -573,7 +573,7 @@
 		</items>
 	</reward>
 	-->
-	<reward id="3027" name="Monster Hunting: First Steps" requiredCompletion="20000">
+	<reward id="3027" name="Monster Hunting: First Steps" requiredCompletion="20000" dailyReset="false">
 		<!-- Hunt 20000 monsters in any hunting ground. (A monster kill is only valid when XP was gained from it.) -->
 		<handler name="monster">
 			<param name="minLevel">1</param>
@@ -584,7 +584,7 @@
 			<item id="-300" count="3000" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="3028" name="Monster Hunting: Seasoned" requiredCompletion="60000">
+	<reward id="3028" name="Monster Hunting: Seasoned" requiredCompletion="60000" dailyReset="false">
 		<!-- Hunt 60000 monsters in any hunting ground. (A monster kill is only valid when XP was gained from it.) -->
 		<handler name="monster">
 			<param name="minLevel">1</param>
@@ -595,7 +595,7 @@
 			<item id="-300" count="9000" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="3029" name="Monster Hunting: Expert" requiredCompletion="120000">
+	<reward id="3029" name="Monster Hunting: Expert" requiredCompletion="120000" dailyReset="false">
 		<!-- Hunt 120000 monsters in any hunting ground. (A monster kill is only valid when XP was gained from it.) -->
 		<handler name="monster">
 			<param name="minLevel">1</param>
@@ -606,7 +606,7 @@
 			<item id="-300" count="18000" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="3030" name="Rare Tavern Monster Hunting" requiredCompletion="10">
+	<reward id="3030" name="Rare Tavern Monster Hunting" requiredCompletion="10" dailyReset="false">
 		<!-- Defeat any of the following monsters that appear rarely in the Mystic Tavern 10 times. Mystic Tavern Tauti: Ifrit Mystic Tavern Freya: Ice Knight Mystic Tavern Kelbim: Domithan Mystic Tavern Kain: Eilhalder von Hellmann -->
 		<handler name="monster">
 			<param name="ids">23704,23703,23696,24068</param>
@@ -630,7 +630,7 @@
 			<item id="-300" count="2000" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="3032" name="World Boss Raid: Seasoned" requiredCompletion="10">
+	<reward id="3032" name="World Boss Raid: Seasoned" requiredCompletion="10" dailyReset="false">
 		<!-- Defeat 1 of the following 10 times. Antharas Valakas Lindvior Fafurion Helios Etis van Etina -->
 		<handler name="monster">
 			<param name="ids">29068,29028,29240,29367,29305,29319</param>
@@ -642,7 +642,7 @@
 			<item id="-300" count="10000" /> <!-- Fame -->
 		</items>
 	</reward>
-	<reward id="3033" name="World Boss Raid: Expert" requiredCompletion="30">
+	<reward id="3033" name="World Boss Raid: Expert" requiredCompletion="30" dailyReset="false">
 		<!-- Defeat 1 of the following 30 times. Antharas Valakas Lindvior Fafurion Helios Etis van Etina -->
 		<handler name="monster">
 			<param name="ids">29068,29028,29240,29367,29305,29319</param>
@@ -757,7 +757,7 @@
 		</items>
 	</reward>
 	-->
-	<reward id="3047" name="Angler's Descendant" requiredCompletion="72000">
+	<reward id="3047" name="Angler's Descendant" requiredCompletion="72000" dailyReset="false">
 		<!-- Successfully catch any type of fish 72000 times at the Fishing Dock. -->
 		<handler name="fishing" />
 		<items>

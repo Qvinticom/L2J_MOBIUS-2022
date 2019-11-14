@@ -1997,7 +1997,7 @@
 			<item id="70024" count="15" />
 		</items>
 	</reward>
-	<reward id="250" reward_id="301" name="Explore the Devil's Isle!" requiredCompletion="100">
+	<reward id="250" reward_id="301" name="Explore the Devil's Isle!" requiredCompletion="100" isOneTime="false" dailyReset="false">
 		<!-- Receive it when you kill 100 monsters on the Devil's Isle. -->
 		<handler name="monster">
 			<param name="ids">24025,24026,24027,24028,24029,24030,24031,24032,24033,24035,24039,24040</param>
@@ -2184,7 +2184,7 @@
 			<item id="29650" count="1" />
 		</items>
 	</reward>
-	<reward id="1096" reward_id="303" name="Clan Raid Suppression" requiredCompletion="20">
+	<reward id="1096" reward_id="303" name="Clan Raid Suppression" requiredCompletion="20" isOneTime="true" dailyReset="false">
 		<!-- Receive it when you defeat 20 enemies on Clan Arena. You can get a reward only once. For characters that reached Lv. 40 or higher. -->
 		<handler name="monster">
 			<param name="ids">25794,25795,25796,25797,25798,25799,25800,25801,25802,25803,25804,25805,25806,25807,25808,25809,25810,25811,25812,25813</param>
@@ -2195,7 +2195,7 @@
 			<item id="90160" count="1" />
 		</items>
 	</reward>
-	<reward id="1097" reward_id="304" name="Expedition on the Forgotten Island" requiredCompletion="300">
+	<reward id="1097" reward_id="304" name="Expedition on the Forgotten Island" requiredCompletion="300" isOneTime="true" dailyReset="false">
 		<!-- Receive it when you kill any 300 monsters on the Forgotten Island. You can complete the quest for this reward only once. For characters that reached Lv. 74 or higher. -->
 		<handler name="monster">
 			<param name="ids">21733,21734,21735,21736,21742,21743,21744,21745</param>
@@ -2365,7 +2365,7 @@
 		</items>
 	</reward>
 	-->
-	<reward id="1117" reward_id="811" name="Exploration of Giant's Cave" requiredCompletion="200">
+	<reward id="1117" reward_id="811" name="Exploration of Giant's Cave" requiredCompletion="200" isOneTime="false" dailyReset="false">
 		<!-- Receive it when you kill 200 monsters at the top and lower levels of the Giant's Cave ex?ept the Giant's Cave entrance. (For characters that reached Lv. 76 or higher.) -->
 		<handler name="monster">
 			<param name="ids">20651,20652,20654,20656,20657,20658,24015,24016,24021,24022,20655,20771</param>
@@ -2377,7 +2377,7 @@
 			<item id="90917" count="3" />
 		</items>
 	</reward>
-	<reward id="1118" reward_id="812" name="Exploration of Forgotten Island" requiredCompletion="200">
+	<reward id="1118" reward_id="812" name="Exploration of Forgotten Island" requiredCompletion="200" isOneTime="false" dailyReset="false">
 		<!-- Receive it when you kill 200 monsters in inner part of Forgotten Island.  (For characters that reached Lv. 78 or higher.) -->
 		<handler name="monster">
 			<param name="ids">21737,21738,21739,21740,21741,21746,21747,21748,21749,21750,21752,21753</param>
@@ -2389,7 +2389,7 @@
 			<item id="90917" count="3" />
 		</items>
 	</reward>
-	<reward id="1119" reward_id="813" name="Exploration of Varka Silenos Barracks" requiredCompletion="300">
+	<reward id="1119" reward_id="813" name="Exploration of Varka Silenos Barracks" requiredCompletion="300" isOneTime="false" dailyReset="false">
 		<!-- Receive it when you kill 300 monsters in Varka Silenos Barracks. (For characters that reached Lv. 78 or higher.) -->
 		<handler name="monster">
 			<param name="ids">21869,21870,21871,21876,21877,21878,21879,21888</param>
@@ -2401,7 +2401,7 @@
 			<item id="90917" count="3" />
 		</items>
 	</reward>
-	<reward id="1120" reward_id="814" name="Exploration of Ketra Orc Outpost" requiredCompletion="300">
+	<reward id="1120" reward_id="814" name="Exploration of Ketra Orc Outpost" requiredCompletion="300" isOneTime="false" dailyReset="false">
 		<!-- Receive it when you kill 300 monsters in Ketra Orc Outpost. (For characters that reached Lv. 78 or higher.) -->
 		<handler name="monster">
 			<param name="ids">21854,21855,81856,21857,21866,21867</param>
@@ -2413,7 +2413,7 @@
 			<item id="90917" count="3" />
 		</items>
 	</reward>
-	<reward id="1121" reward_id="815" name="Killing of Spirit King Ignis" requiredCompletion="10">
+	<reward id="1121" reward_id="815" name="Killing of Spirit King Ignis" requiredCompletion="10" isOneTime="true" dailyReset="false">
 		<!-- You can get a reward once for killing of Spirit King Ignis in his residence 10 times. (Only for characters that reached Lv. 76 and higher). -->
 		<handler name="monster">
 			<param name="ids">29105</param>
@@ -2424,7 +2424,7 @@
 			<item id="91125" count="1" />
 		</items>
 	</reward>
-	<reward id="1122" reward_id="816" name="Killing of Spirit Queen Nebula" requiredCompletion="10">
+	<reward id="1122" reward_id="816" name="Killing of Spirit Queen Nebula" requiredCompletion="10" isOneTime="true" dailyReset="false">
 		<!-- You can get a reward once for killing of Spirit Queen Nebula in her Residence 10 times. (Only for characters that reached Lv. 76 and higher). -->
 		<handler name="monster">
 			<param name="ids">29106</param>
@@ -2435,7 +2435,7 @@
 			<item id="91126" count="1" />
 		</items>
 	</reward>
-	<reward id="1123" reward_id="817" name="Killing of Spirit King Procella" requiredCompletion="10">
+	<reward id="1123" reward_id="817" name="Killing of Spirit King Procella" requiredCompletion="10" isOneTime="true" dailyReset="false">
 		<!-- You can get a reward once for killing of Spirit King Procella in his Residence 10 times. (Only for characters that reached Lv. 76 and higher). -->
 		<handler name="monster">
 			<param name="ids">29107</param>
@@ -2446,7 +2446,7 @@
 			<item id="91127" count="1" />
 		</items>
 	</reward>
-	<reward id="1124" reward_id="818" name="Killing of Spirit King Petram" requiredCompletion="10">
+	<reward id="1124" reward_id="818" name="Killing of Spirit King Petram" requiredCompletion="10" isOneTime="true" dailyReset="false">
 		<!-- You can get a reward once for killing of Spirit King Petram in his Residence 10 times. (Only for characters that reached Lv. 76 and higher). -->
 		<handler name="monster">
 			<param name="ids">29108</param>
@@ -2481,7 +2481,7 @@
 			<item id="91393" count="1" />
 		</items>
 	</reward>
-	<reward id="1140" reward_id="826" name="Exploration of Imperial Tomb" requiredCompletion="500">
+	<reward id="1140" reward_id="826" name="Exploration of Imperial Tomb" requiredCompletion="500" isOneTime="false" dailyReset="false">
 		<!-- Receive it when you kill 500 monsters in Imperial Tomb. (For characters that reached Lv. 78 or higher.) -->
 		<handler name="monster">
 			<param name="ids">21396,21397,21398,21399,21400,21401,21402,21403,21404,21405,21406,21407,21408,21409,21410,21411,21412,21413,21414,21415,21416,21417,21418,21419,21420,21421,21422,21423,21424,21425,21426,21427,21428,21429,21430,21431,21432,21433,21434,21435,21436,21437,21438,21439,21440</param>

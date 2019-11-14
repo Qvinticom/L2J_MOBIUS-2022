@@ -131,7 +131,7 @@
 			<item id="91781" count="3" />
 		</items>
 	</reward>
-	<reward id="1096" reward_id="804" name="Clan Raid Suppression" requiredCompletion="20">
+	<reward id="1096" reward_id="804" name="Clan Raid Suppression" requiredCompletion="20" isOneTime="true" dailyReset="false">
 		<!-- One-time quest. A reward is given for defeating 20 enemies in the Clan Arena. Required level: 40. -->
 		<handler name="monster">
 			<param name="ids">25794,25795,25796,25797,25798,25799,25800,25801,25802,25803,25804,25805,25806,25807,25808,25809,25810,25811,25812,25813</param>
@@ -249,7 +249,7 @@
 		</items>
 	</reward>
 	-->
-	<reward id="1117" reward_id="811" name="Exploration of Giant's Cave" requiredCompletion="200">
+	<reward id="1117" reward_id="811" name="Exploration of Giant's Cave" requiredCompletion="200" isOneTime="false" dailyReset="false">
 		<!-- Receive it when you kill 200 monsters at the top and lower levels of the Giant's Cave except the Giant's Cave entrance. (For characters that reached Lv. 76 or higher.) -->
 		<handler name="monster">
 			<param name="ids">20651,20652,20654,20656,20657,20658,24015,24016,24021,24022,20655,20771</param>
@@ -261,7 +261,7 @@
 			<item id="90917" count="3" />
 		</items>
 	</reward>
-	<reward id="1118" reward_id="812" name="Exploration of Forgotten Island" requiredCompletion="200">
+	<reward id="1118" reward_id="812" name="Exploration of Forgotten Island" requiredCompletion="200" isOneTime="false" dailyReset="false">
 		<!-- Receive it when you kill 200 monsters in inner part of Forgotten Island. (For characters that reached Lv. 78 or higher.) -->
 		<handler name="monster">
 			<param name="ids">21737,21738,21739,21740,21741,21746,21747,21748,21749,21750,21752,21753</param>
@@ -273,7 +273,7 @@
 			<item id="90917" count="3" />
 		</items>
 	</reward>
-	<reward id="1119" reward_id="813" name="Exploration of Varka Silenos Barracks" requiredCompletion="300">
+	<reward id="1119" reward_id="813" name="Exploration of Varka Silenos Barracks" requiredCompletion="300" isOneTime="false" dailyReset="false">
 		<!-- Receive it when you kill 300 monsters in Varka Silenos Barracks. (For characters that reached Lv. 78 or higher.) -->
 		<handler name="monster">
 			<param name="ids">21869,21870,21871,21876,21877,21878,21879,21888</param>
@@ -285,7 +285,7 @@
 			<item id="90917" count="3" />
 		</items>
 	</reward>
-	<reward id="1120" reward_id="814" name="Exploration of Ketra Orc Outpost" requiredCompletion="300">
+	<reward id="1120" reward_id="814" name="Exploration of Ketra Orc Outpost" requiredCompletion="300" isOneTime="false" dailyReset="false">
 		<!-- Receive it when you kill 300 monsters in Ketra Orc Outpost. (For characters that reached Lv. 78 or higher.) -->
 		<handler name="monster">
 			<param name="ids">21854,21855,81856,21857,21866,21867</param>
@@ -297,7 +297,7 @@
 			<item id="90917" count="3" />
 		</items>
 	</reward>
-	<reward id="1121" reward_id="815" name="Killing of Spirit King Ignis" requiredCompletion="10">
+	<reward id="1121" reward_id="815" name="Killing of Spirit King Ignis" requiredCompletion="10" isOneTime="true" dailyReset="false">
 		<!-- You can get a reward once for killing of Spirit King Ignis in his residence 10 times. (Only for characters that reached Lv. 76 and higher). -->
 		<handler name="monster">
 			<param name="ids">29105</param>
@@ -308,7 +308,7 @@
 			<item id="91125" count="1" />
 		</items>
 	</reward>
-	<reward id="1122" reward_id="816" name="Killing Queen Nebula" requiredCompletion="10">
+	<reward id="1122" reward_id="816" name="Killing Queen Nebula" requiredCompletion="10" isOneTime="true" dailyReset="false">
 		<!-- One-time quest. A reward is given for killing Queen Nebula in her residence 10 times. Required level: 76. -->
 		<handler name="monster">
 			<param name="ids">29106</param>
@@ -319,7 +319,7 @@
 			<item id="91126" count="1" />
 		</items>
 	</reward>
-	<reward id="1123" reward_id="817" name="Killing King Procella" requiredCompletion="10">
+	<reward id="1123" reward_id="817" name="Killing King Procella" requiredCompletion="10" isOneTime="true" dailyReset="false">
 		<!-- One-time quest. A reward is given for killing King Procella in his residence 10 times. Required level: 76. -->
 		<handler name="monster">
 			<param name="ids">29107</param>
@@ -330,7 +330,7 @@
 			<item id="91127" count="1" />
 		</items>
 	</reward>
-	<reward id="1124" reward_id="818" name="Killing King Petram" requiredCompletion="10">
+	<reward id="1124" reward_id="818" name="Killing King Petram" requiredCompletion="10" isOneTime="true" dailyReset="false">
 		<!-- One-time quest. A reward is given for killing King Petram in his residence 10 times. Required level: 76. -->
 		<handler name="monster">
 			<param name="ids">29108</param>
@@ -485,7 +485,7 @@
 			<item id="49674" count="3" />
 		</items>
 	</reward>
-	<reward id="1140" reward_id="826" name="Exploration of Imperial Tomb" requiredCompletion="500">
+	<reward id="1140" reward_id="826" name="Exploration of Imperial Tomb" requiredCompletion="500" isOneTime="false" dailyReset="false">
 		<!-- Receive it when you kill 500 monsters in Imperial Tomb. (For characters that reached Lv. 78 or higher.) -->
 		<handler name="monster">
 			<param name="ids">21396,21397,21398,21399,21400,21401,21402,21403,21404,21405,21406,21407,21408,21409,21410,21411,21412,21413,21414,21415,21416,21417,21418,21419,21420,21421,21422,21423,21424,21425,21426,21427,21428,21429,21430,21431,21432,21433,21434,21435,21436,21437,21438,21439,21440</param>
@@ -496,7 +496,7 @@
 			<item id="91406" count="3" />
 		</items>
 	</reward>
-	<reward id="1141" reward_id="827" name="Adventurer's Journey I (Lv. 20-30)" requiredCompletion="100">
+	<reward id="1141" reward_id="827" name="Adventurer's Journey I (Lv. 20-30)" requiredCompletion="100" isOneTime="false" dailyReset="false">
 		<!--  Kill 100 monsters in the following hunting zones: Windmill Hill, Ruins of Agony, Abandoned Camp. -->
 		<handler name="monster">
 			<param name="ids">20017,20026,20029,20030,20035,20038,20042,20043,20045,20050,20051,20053,20054,20055,20058,20059,20060,20061,20062,20063,20064,20066,20076,20310,20359,20436,20437,20438,20439,20548,20782</param>
@@ -507,7 +507,7 @@
 			<item id="91654" count="1" />
 		</items>
 	</reward>
-	<reward id="1142" reward_id="828" name="Adventurer's Journey II (Lv. 31-40)" requiredCompletion="200">
+	<reward id="1142" reward_id="828" name="Adventurer's Journey II (Lv. 31-40)" requiredCompletion="200" isOneTime="false" dailyReset="false">
 		<!--  Kill 200 monsters in the following hunting zones: Gorgon Flower Garden, Ant Nest, Cruma Marshlands, Execution Grounds, Death Pass. -->
 		<handler name="monster">
 			<param name="ids">20075,20079,20080,20081,20082,20083,20084,20086,20087,20088,20089,20090,20144,20145,20156,20157,20158,20160,20171,20176,20197,20198,20199,20200,20201,20202,20199,20225,20226,20227,20228,20229,20230,20231,20232,20233,20234,20248,20249,20550,20551,20552,20553,20554</param>
@@ -518,7 +518,7 @@
 			<item id="91655" count="1" />
 		</items>
 	</reward>
-	<reward id="1143" reward_id="829" name="Adventurer's Journey III (Lv. 41-60)" requiredCompletion="500">
+	<reward id="1143" reward_id="829" name="Adventurer's Journey III (Lv. 41-60)" requiredCompletion="500" isOneTime="false" dailyReset="false">
 		<!-- Kill 500 monsters in the following hunting zones: Ivory Tower Crater, Sea of Spores, Cemetery, Enchanted Valley, Fields of Massacre.  -->
 		<handler name="monster">
 			<param name="ids">20555,20556,20557,20558,20559,20560,20561,20562,20563,20564,20565,20566,20567,20589,20590,20591,20592,20593,20594,20595,20596,20597,20598,20599,20666,20668,20669,20674,20675,20678,20974,20975,20976,20996,20997,20998,20999,21000,21001,21002,21003,21004,21005,21006,21007,21008,21009,21010</param>
@@ -529,7 +529,7 @@
 			<item id="91656" count="1" />
 		</items>
 	</reward>
-	<reward id="1144" reward_id="830" name="Adventurer's Journey IV (Lv. 61-75)" requiredCompletion="700">
+	<reward id="1144" reward_id="830" name="Adventurer's Journey IV (Lv. 61-75)" requiredCompletion="700" isOneTime="false" dailyReset="false">
 		<!-- Kill Kill 700 monsters in the following hunting zones: Plains of Glory, War-Torn Plains, Patriot's Necropolis, Necropolis of Devotion, Silent Valley. -->
 		<handler name="monster">
 			<param name="ids">20659,20660,20661,20662,20663,20664,20665,20667,20681,20682,20683,20684,20685,20686,20965,20966,20967,20968,20969,20970,20971,20972,20973,21620,21621,21622,21623,21624,21625,21626,21627,21628,21629,21630,21631,21632,21633,21634,21635,21636,21637</param>
@@ -540,7 +540,7 @@
 			<item id="91657" count="1" />
 		</items>
 	</reward>
-	<reward id="1145" reward_id="831" name="Adventurer's Journey V (Lv. 76+)" requiredCompletion="1000">
+	<reward id="1145" reward_id="831" name="Adventurer's Journey V (Lv. 76+)" requiredCompletion="1000" isOneTime="false" dailyReset="false">
 		<!-- Kill 1000 monsters in the following hunting zones: Land of Winds, Forge of the Gods, Wall of Argos, Garden of Eva. -->
 		<handler name="monster">
 			<param name="ids">20110,20792,20794,20795,20796,20797,20798,20799,20800,20801,20802,20803,20849,20994,20995,21661,21662,21663,21664,21665,21666,21667,21668,21669,21670,21671,21672,21673,21674,21675,21676,21678,21686,21761,21762,21763,21764,21765,21766,21768,21769,21774,21775,21777,21778,21779,21780,21781,21782,21783,21784,21813,21814,21815,21816,21817,21818,21819,21820,21821,21822,21823,21824,21825,21826,21827,21828,21829,21830,21831</param>
@@ -551,7 +551,7 @@
 			<item id="91931" count="1" />
 		</items>
 	</reward>
-	<reward id="1146" reward_id="2015" name="Daily Hunting IV (Lv. 1-20)" requiredCompletion="100" isOneTime="false">
+	<reward id="1146" reward_id="2015" name="Daily Hunting IV (Lv. 1-20)" requiredCompletion="100" isOneTime="false" dailyReset="false">
 		<!-- Daily quest. A reward is given for killing any 100 monsters. Monsters below character for 5 or more levels are not counted. -->
 		<handler name="monster">
 			<param name="minLevel">1</param>
@@ -561,7 +561,7 @@
 			<item id="49674" count="1" />
 		</items>
 	</reward>
-	<reward id="1147" reward_id="2016" name="Daily Hunting IV (Lv. 21-40)" requiredCompletion="130" isOneTime="false">
+	<reward id="1147" reward_id="2016" name="Daily Hunting IV (Lv. 21-40)" requiredCompletion="130" isOneTime="false" dailyReset="false">
 		<!-- Daily quest. A reward is given for killing any 130 monsters. Monsters below character for 5 or more levels are not counted. -->
 		<handler name="monster">
 			<param name="minLevel">21</param>
