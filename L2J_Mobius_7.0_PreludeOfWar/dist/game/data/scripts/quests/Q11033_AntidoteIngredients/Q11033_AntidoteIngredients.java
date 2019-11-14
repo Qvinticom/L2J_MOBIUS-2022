@@ -16,16 +16,11 @@
  */
 package quests.Q11033_AntidoteIngredients;
 
-import java.util.HashSet;
-import java.util.Set;
-
-import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.instancemanager.QuestManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
-import org.l2jmobius.gameserver.model.holders.NpcLogListHolder;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
@@ -38,7 +33,7 @@ import quests.Q11034_ResurrectedOne.Q11034_ResurrectedOne;
 /**
  * Antidote Ingredients (11033)
  * @URL https://l2wiki.com/Antidote_Ingredients
- * @author Dmitri
+ * @author Dmitri, Mobius
  */
 public class Q11033_AntidoteIngredients extends Quest
 {
@@ -48,11 +43,11 @@ public class Q11033_AntidoteIngredients extends Quest
 	private static final int KRAKOS_BAT = 24384;
 	private static final int A_VAMMPIRE = 24385;
 	// Items
-	private static final ItemHolder SOE_SILVAN = new ItemHolder(80679, 1);
+	private static final int SECRET_MATERIAL = 80671;
+	private static final ItemHolder SOE_KALESIN = new ItemHolder(80679, 1);
 	// Location
 	private static final Location TRAINING_GROUNDS_TELEPORT = new Location(-44121, 115926, -3624);
 	// Misc
-	private static final String KILL_COUNT_VAR = "KillCount";
 	private static final int MIN_LEVEL = 20;
 	
 	public Q11033_AntidoteIngredients()
@@ -61,8 +56,7 @@ public class Q11033_AntidoteIngredients extends Quest
 		addStartNpc(TARTI);
 		addTalkId(TARTI, KALESIN);
 		addKillId(KRAKOS_BAT, A_VAMMPIRE);
-		registerQuestItems(SOE_SILVAN.getId());
-		// addCondNotRace(Race.ERTHEIA, "34505-06.html");
+		registerQuestItems(SOE_KALESIN.getId(), SECRET_MATERIAL);
 		addCondMinLevel(MIN_LEVEL, "34505-06.html");
 		setQuestNameNpcStringId(NpcStringId.LV_20_40_ANTIDOTE_INGREDIENTS);
 	}
@@ -181,34 +175,13 @@ public class Q11033_AntidoteIngredients extends Quest
 		final QuestState qs = getQuestState(killer, false);
 		if ((qs != null) && qs.isCond(1))
 		{
-			final int killCount = qs.getInt(KILL_COUNT_VAR) + 1;
-			if (killCount < 15)
-			{
-				qs.set(KILL_COUNT_VAR, killCount);
-				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-				sendNpcLogList(killer);
-			}
-			else
+			if (giveItemRandomly(killer, SECRET_MATERIAL, 1, 15, 0.5, true))
 			{
 				qs.setCond(2, true);
-				qs.unset(KILL_COUNT_VAR);
-				giveItems(killer, SOE_SILVAN);
-				showOnScreenMsg(killer, NpcStringId.USE_SCROLL_OF_ESCAPE_KALLESIN_IN_YOUR_INVENTORY_NTALK_TO_KALLESIN_TO_COMPLETE_THE_QUEST, ExShowScreenMessage.TOP_CENTER, 10000);
+				giveItems(killer, SOE_KALESIN);
+				showOnScreenMsg(killer, NpcStringId.USE_SCROLL_OF_ESCAPE_PIO_IN_YOUR_INVENTORY_NTALK_TO_PIO_TO_COMPLETE_THE_QUEST, ExShowScreenMessage.TOP_CENTER, 10000);
 			}
 		}
 		return super.onKill(npc, killer, isSummon);
-	}
-	
-	@Override
-	public Set<NpcLogListHolder> getNpcLogList(PlayerInstance player)
-	{
-		final QuestState qs = getQuestState(player, false);
-		if ((qs != null) && qs.isCond(1))
-		{
-			final Set<NpcLogListHolder> holder = new HashSet<>();
-			holder.add(new NpcLogListHolder(NpcStringId.RUINS_OF_AGONY_BEND_LV_19.getId(), true, qs.getInt(KILL_COUNT_VAR)));
-			return holder;
-		}
-		return super.getNpcLogList(player);
 	}
 }

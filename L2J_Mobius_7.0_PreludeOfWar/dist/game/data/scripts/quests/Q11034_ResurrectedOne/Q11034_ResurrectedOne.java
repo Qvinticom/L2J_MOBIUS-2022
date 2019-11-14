@@ -44,12 +44,12 @@ public class Q11034_ResurrectedOne extends Quest
 {
 	// NPCs
 	private static final int KALESIN = 33177;
-	private static final int JENA = 33509;
+	private static final int ZENATH = 33509;
 	private static final int SKELETON_SCOUT = 24386;
 	private static final int SKELETON_ARCHER = 24387;
 	private static final int SKELETON_WARRIOR = 24388;
 	// Items
-	private static final ItemHolder SOE_SILVAN = new ItemHolder(80680, 1);
+	private static final ItemHolder SOE_ZENATH = new ItemHolder(80680, 1);
 	// Location
 	private static final Location TRAINING_GROUNDS_TELEPORT = new Location(-46169, 110937, -3808);
 	// Misc
@@ -60,10 +60,9 @@ public class Q11034_ResurrectedOne extends Quest
 	{
 		super(11034);
 		addStartNpc(KALESIN);
-		addTalkId(KALESIN, JENA);
+		addTalkId(KALESIN, ZENATH);
 		addKillId(SKELETON_SCOUT, SKELETON_ARCHER, SKELETON_WARRIOR);
-		registerQuestItems(SOE_SILVAN.getId());
-		// addCondNotRace(Race.ERTHEIA, "33177-05.html");
+		registerQuestItems(SOE_ZENATH.getId());
 		addCondMinLevel(MIN_LEVEL, "33177-05.html");
 		setQuestNameNpcStringId(NpcStringId.LV_20_40_THE_RESURRECTED_ONE);
 	}
@@ -150,7 +149,7 @@ public class Q11034_ResurrectedOne extends Quest
 						}
 						break;
 					}
-					case JENA:
+					case ZENATH:
 					{
 						if (qs.isCond(2))
 						{
@@ -187,7 +186,7 @@ public class Q11034_ResurrectedOne extends Quest
 			{
 				qs.setCond(2, true);
 				qs.unset(KILL_COUNT_VAR);
-				giveItems(killer, SOE_SILVAN);
+				giveItems(killer, SOE_ZENATH);
 				showOnScreenMsg(killer, NpcStringId.USE_SCROLL_OF_ESCAPE_ZENATH_IN_YOUR_INVENTORY_NTALK_TO_ZENATH_TO_COMPLETE_THE_QUEST, ExShowScreenMessage.TOP_CENTER, 10000);
 			}
 		}

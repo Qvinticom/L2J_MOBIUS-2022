@@ -54,7 +54,7 @@ public class Q11025_PathOfDestinyProving extends Quest
 	// Location
 	private static final Location TRAINING_GROUNDS_TELEPORT = new Location(-4983, 116607, -3344);
 	// Misc
-	private static final int MIN_LEVEL = 39;
+	private static final int MIN_LEVEL = 40;
 	
 	public Q11025_PathOfDestinyProving()
 	{
@@ -64,7 +64,6 @@ public class Q11025_PathOfDestinyProving extends Quest
 		addTalkId(TARTI, RAYMOND, TERESIA, MYSTERIOUS_MAGE);
 		addKillId(SKELETON_ARCHER, SKELETON_WARRIOR);
 		registerQuestItems(WIND_SPIRIT);
-		// addCondNotRace(Race.ERTHEIA, "34505-11.html");
 		addCondMinLevel(MIN_LEVEL, "34505-11.html");
 		setQuestNameNpcStringId(NpcStringId.LV_20_PATH_OF_DESTINY_PROVING);
 	}

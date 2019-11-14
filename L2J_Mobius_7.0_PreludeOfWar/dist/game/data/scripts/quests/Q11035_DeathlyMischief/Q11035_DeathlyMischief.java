@@ -38,13 +38,13 @@ import quests.Q11025_PathOfDestinyProving.Q11025_PathOfDestinyProving;
 public class Q11035_DeathlyMischief extends Quest
 {
 	// NPCs
-	private static final int JENA = 33509;
+	private static final int ZENATH = 33509;
 	private static final int TARTI = 34505;
 	private static final int PHANTOM_SKELETON_SOLDIER = 24389;
 	private static final int SKELETON_BERSERKER = 24390;
 	// Items
 	private static final int BREATH_OF_DEATH = 80672;
-	private static final ItemHolder SOE_SILVAN = new ItemHolder(80677, 1);
+	private static final ItemHolder SOE_TARTI = new ItemHolder(80677, 1);
 	// Location
 	private static final Location TRAINING_GROUNDS_TELEPORT = new Location(-51130, 110053, -3664);
 	// Misc
@@ -53,11 +53,10 @@ public class Q11035_DeathlyMischief extends Quest
 	public Q11035_DeathlyMischief()
 	{
 		super(11035);
-		addStartNpc(JENA);
-		addTalkId(JENA, TARTI);
+		addStartNpc(ZENATH);
+		addTalkId(ZENATH, TARTI);
 		addKillId(PHANTOM_SKELETON_SOLDIER, SKELETON_BERSERKER);
-		registerQuestItems(SOE_SILVAN.getId(), BREATH_OF_DEATH);
-		// addCondNotRace(Race.ERTHEIA, "33509-05.html");
+		registerQuestItems(SOE_TARTI.getId(), BREATH_OF_DEATH);
 		addCondMinLevel(MIN_LEVEL, "33509-05.html");
 		setQuestNameNpcStringId(NpcStringId.LV_20_40_DEATHLY_MISCHIEF);
 	}
@@ -128,7 +127,7 @@ public class Q11035_DeathlyMischief extends Quest
 		{
 			case State.CREATED:
 			{
-				if (npc.getId() == JENA)
+				if (npc.getId() == ZENATH)
 				{
 					htmltext = "33509-01.html";
 				}
@@ -138,7 +137,7 @@ public class Q11035_DeathlyMischief extends Quest
 			{
 				switch (npc.getId())
 				{
-					case JENA:
+					case ZENATH:
 					{
 						if (qs.isCond(1))
 						{
@@ -175,7 +174,7 @@ public class Q11035_DeathlyMischief extends Quest
 			if (giveItemRandomly(killer, BREATH_OF_DEATH, 1, 15, 0.5, true))
 			{
 				qs.setCond(2, true);
-				giveItems(killer, SOE_SILVAN);
+				giveItems(killer, SOE_TARTI);
 				showOnScreenMsg(killer, NpcStringId.USE_SCROLL_OF_ESCAPE_TARTI_IN_YOUR_INVENTORY_NTALK_TO_TARTI_TO_COMPLETE_THE_QUEST, ExShowScreenMessage.TOP_CENTER, 10000);
 			}
 		}

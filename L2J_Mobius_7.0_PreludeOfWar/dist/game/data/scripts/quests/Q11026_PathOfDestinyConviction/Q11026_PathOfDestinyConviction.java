@@ -68,6 +68,7 @@ public class Q11026_PathOfDestinyConviction extends Quest
 		addFirstTalkId(KAIN_VAN_HALTER, MYSTERIOUS_MAGE);
 		addKillId(VAMPIRE_SOLDIER, VON_HELLMANN);
 		registerQuestItems(WIND_SPIRIT);
+		addCondMinLevel(41, "33963-06.html");
 		addCondCompletedQuest(Q11025_PathOfDestinyProving.class.getSimpleName(), "33963-06.html");
 		setQuestNameNpcStringId(NpcStringId.LV_40_PATH_OF_DESTINY_CONVICTION);
 	}

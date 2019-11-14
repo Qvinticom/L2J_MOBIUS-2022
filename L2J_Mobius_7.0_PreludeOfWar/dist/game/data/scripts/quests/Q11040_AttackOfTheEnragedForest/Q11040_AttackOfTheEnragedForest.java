@@ -20,6 +20,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 import org.l2jmobius.gameserver.enums.QuestSound;
+import org.l2jmobius.gameserver.instancemanager.QuestManager;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -31,12 +32,13 @@ import org.l2jmobius.gameserver.model.quest.State;
 import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 
+import quests.Q11026_PathOfDestinyConviction.Q11026_PathOfDestinyConviction;
 import quests.Q11039_CommunicationBreakdown.Q11039_CommunicationBreakdown;
 
 /**
  * Attack of the Enraged Forest (11040)
  * @URL https://l2wiki.com/Attack_of_the_Enraged_Forest
- * @author Dmitri
+ * @author Dmitri, Mobius
  */
 public class Q11040_AttackOfTheEnragedForest extends Quest
 {
@@ -51,6 +53,7 @@ public class Q11040_AttackOfTheEnragedForest extends Quest
 	private static final Location TRAINING_GROUNDS_TELEPORT = new Location(-91374, 92270, -3360);
 	// Misc
 	private static final String KILL_COUNT_VAR = "KillCount";
+	private static final int MIN_LEVEL = 66;
 	
 	public Q11040_AttackOfTheEnragedForest()
 	{
@@ -59,6 +62,7 @@ public class Q11040_AttackOfTheEnragedForest extends Quest
 		addTalkId(PIO, TARTI);
 		addKillId(TINY_WHIRLWIND, GIANT_WHIRLWIND);
 		registerQuestItems(SOE_TARTI.getId());
+		addCondMinLevel(MIN_LEVEL, "33963-06.html");
 		addCondCompletedQuest(Q11039_CommunicationBreakdown.class.getSimpleName(), "33963-06");
 		setQuestNameNpcStringId(NpcStringId.LV_40_76_ATTACK_OF_THE_ENRAGED_FOREST);
 	}
@@ -76,6 +80,7 @@ public class Q11040_AttackOfTheEnragedForest extends Quest
 		switch (event)
 		{
 			case "33963-03.html":
+			case "33963-04.html":
 			case "33963-05.html":
 			{
 				htmltext = event;
@@ -103,6 +108,13 @@ public class Q11040_AttackOfTheEnragedForest extends Quest
 					giveAdena(player, 240000, true);
 					qs.exitQuest(false, true);
 					htmltext = event;
+					
+					// Initialize next quest.
+					final Quest nextQuest = QuestManager.getInstance().getQuest(Q11026_PathOfDestinyConviction.class.getSimpleName());
+					if (nextQuest != null)
+					{
+						nextQuest.newQuestState(player);
+					}
 				}
 				break;
 			}

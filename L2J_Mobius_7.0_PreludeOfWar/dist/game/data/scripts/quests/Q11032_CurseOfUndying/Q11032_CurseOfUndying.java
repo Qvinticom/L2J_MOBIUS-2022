@@ -62,6 +62,7 @@ public class Q11032_CurseOfUndying extends Quest
 	private static final Location TRAINING_GROUNDS_TELEPORT = new Location(-19204, 138941, -3896);
 	// Misc
 	private static final String KILL_COUNT_VAR = "KillCount";
+	private static final int MIN_LEVEL = 10;
 	
 	public Q11032_CurseOfUndying()
 	{
@@ -70,7 +71,8 @@ public class Q11032_CurseOfUndying extends Quest
 		addTalkId(SILVAN, TARTI);
 		addKillId(DISGUSTING_ZOMBIES, THE_HIDEOUS_LORD_ZOMBIE);
 		registerQuestItems(SOE_SILVAN.getId());
-		addCondCompletedQuest(Q11031_TrainingBeginsNow.class.getSimpleName(), getNoQuestMsg(null));
+		addCondMinLevel(MIN_LEVEL, "33178-04.html");
+		addCondCompletedQuest(Q11031_TrainingBeginsNow.class.getSimpleName(), "33178-04.html");
 		setQuestNameNpcStringId(NpcStringId.LV_1_20_CURSE_OF_UNDYING);
 	}
 	
@@ -78,7 +80,7 @@ public class Q11032_CurseOfUndying extends Quest
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
-		QuestState qs = getQuestState(player, false);
+		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
 		{
 			return htmltext;
@@ -94,7 +96,7 @@ public class Q11032_CurseOfUndying extends Quest
 			case "33178-02.html":
 			{
 				qs.startQuest();
-				player.sendPacket(new ExTutorialShowId(23)); // Adventurers Guide
+				player.sendPacket(new ExTutorialShowId(5)); // Adventurers Guide
 				htmltext = event;
 				break;
 			}

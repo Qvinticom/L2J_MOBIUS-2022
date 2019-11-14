@@ -79,6 +79,7 @@ public class Q11037_WhyAreTheRatelHere extends Quest
 		switch (event)
 		{
 			case "33963-03.html":
+			case "33963-05.html":
 			{
 				htmltext = event;
 				break;
@@ -97,7 +98,7 @@ public class Q11037_WhyAreTheRatelHere extends Quest
 				}
 				break;
 			}
-			case "33963-05.html":
+			case "33963-07.html":
 			{
 				if (qs.isCond(2))
 				{

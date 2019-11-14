@@ -49,7 +49,7 @@ public class Q11036_ChangedSpirits extends Quest
 	private static final int WHISPERING_BREEZE = 24392;
 	private static final int LAUGHING_BREEZE = 24393;
 	// Items
-	private static final ItemHolder SOE_SILVAN = new ItemHolder(80681, 1);
+	private static final ItemHolder SOE_PIO = new ItemHolder(80681, 1);
 	// Location
 	private static final Location TRAINING_GROUNDS_TELEPORT = new Location(-74631, 94630, -3736);
 	// Misc
@@ -62,7 +62,7 @@ public class Q11036_ChangedSpirits extends Quest
 		addStartNpc(TARTI);
 		addTalkId(TARTI, PIO);
 		addKillId(SOBBING_BREEZE, WHISPERING_BREEZE, LAUGHING_BREEZE);
-		registerQuestItems(SOE_SILVAN.getId());
+		registerQuestItems(SOE_PIO.getId());
 		addCondMinLevel(MIN_LEVEL, "34505-06.html");
 		addCondCompletedQuest(Q11025_PathOfDestinyProving.class.getSimpleName(), "34505-06.html");
 		setQuestNameNpcStringId(NpcStringId.LV_40_76_CHANGED_SPIRITS);
@@ -82,6 +82,7 @@ public class Q11036_ChangedSpirits extends Quest
 		{
 			case "34505-02.html":
 			case "34505-04.html":
+			case "33963-02.html":
 			{
 				htmltext = event;
 				break;
@@ -100,7 +101,7 @@ public class Q11036_ChangedSpirits extends Quest
 				}
 				break;
 			}
-			case "33963-02.html":
+			case "33963-03.html":
 			{
 				if (qs.isCond(2))
 				{
@@ -186,7 +187,7 @@ public class Q11036_ChangedSpirits extends Quest
 			{
 				qs.setCond(2, true);
 				qs.unset(KILL_COUNT_VAR);
-				giveItems(killer, SOE_SILVAN);
+				giveItems(killer, SOE_PIO);
 				showOnScreenMsg(killer, NpcStringId.USE_SCROLL_OF_ESCAPE_PIO_IN_YOUR_INVENTORY_NTALK_TO_PIO_TO_COMPLETE_THE_QUEST, ExShowScreenMessage.TOP_CENTER, 10000);
 			}
 		}
