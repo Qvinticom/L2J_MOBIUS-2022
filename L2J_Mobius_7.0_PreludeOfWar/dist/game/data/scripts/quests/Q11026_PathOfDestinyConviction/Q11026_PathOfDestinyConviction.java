@@ -68,7 +68,6 @@ public class Q11026_PathOfDestinyConviction extends Quest
 		addFirstTalkId(KAIN_VAN_HALTER, MYSTERIOUS_MAGE);
 		addKillId(VAMPIRE_SOLDIER, VON_HELLMANN);
 		registerQuestItems(WIND_SPIRIT);
-		addCondMinLevel(MIN_LEVEL, "34505-06.html");
 		addCondCompletedQuest(Q11025_PathOfDestinyProving.class.getSimpleName(), "33963-06.html");
 		setQuestNameNpcStringId(NpcStringId.LV_40_PATH_OF_DESTINY_CONVICTION);
 	}
@@ -111,11 +110,19 @@ public class Q11026_PathOfDestinyConviction extends Quest
 			case "34505-03.html":
 			{
 				htmltext = event;
-				if (player.getLevel() >= 76)
+				if (player.getLevel() >= MIN_LEVEL)
+				{
+					htmltext = "34505-04.htm";
+				}
+				break;
+			}
+			case "34505-05.html":
+			{
+				if (qs.isCond(1))
 				{
 					qs.setCond(2, true);
-					htmltext = "34505-04.html";
 				}
+				htmltext = event;
 				break;
 			}
 			case "30289-02.html":
@@ -169,6 +176,7 @@ public class Q11026_PathOfDestinyConviction extends Quest
 					{
 						player.sendPacket(ExRequestClassChangeUi.STATIC_PACKET);
 					}
+					giveStoryBuffReward(npc, player);
 					htmltext = event;
 				}
 				break;
@@ -201,13 +209,20 @@ public class Q11026_PathOfDestinyConviction extends Quest
 					{
 						if (qs.isCond(1))
 						{
-							qs.setCond(2, true);
-							htmltext = "34505-04.html";
+							if (player.getLevel() >= MIN_LEVEL)
+							{
+								qs.setCond(2, true);
+								htmltext = "34505-05.html";
+							}
+							else
+							{
+								htmltext = "34505-06.html";
+							}
 							break;
 						}
 						else if (qs.isCond(2))
 						{
-							htmltext = "34505-04.html"; // TODO: Proper second talk dialog.
+							htmltext = "34505-05.html"; // TODO: Proper second talk dialog.
 							break;
 						}
 						else if (qs.isCond(4))
