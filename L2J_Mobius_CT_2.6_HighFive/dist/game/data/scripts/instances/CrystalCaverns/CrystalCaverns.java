@@ -1732,12 +1732,17 @@ public class CrystalCaverns extends AbstractInstance
 			}
 			if (npc.getId() == ALARMID)
 			{
-				world._baylor.removeSkill(5244);
-				world._baylor.removeSkill(5245);
 				world._alarm = null;
-				if ((world._baylor.getMaxHp() * 0.3) < world._baylor.getStatus().getCurrentHp())
+				
+				if (world._baylor != null)
 				{
-					startQuestTimer("baylor_alarm", 40000, world._baylor, null);
+					world._baylor.removeSkill(5244);
+					world._baylor.removeSkill(5245);
+					
+					if ((world._baylor.getMaxHp() * 0.3) < world._baylor.getStatus().getCurrentHp())
+					{
+						startQuestTimer("baylor_alarm", 40000, world._baylor, null);
+					}
 				}
 			}
 			else if (npc.getId() == BAYLOR)
