@@ -14179,7 +14179,7 @@ public class PlayerInstance extends Playable
 		}, 0, 1000);
 	}
 	
-	private void stopAutoUseTask()
+	public void stopAutoUseTask()
 	{
 		if ((_autoUseTask != null) && !_autoUseTask.isCancelled() && !_autoUseTask.isDone() && _autoSupplyItems.isEmpty() && _autoPotionItems.isEmpty() && _autoSkills.isEmpty())
 		{
