@@ -109,6 +109,7 @@ public class RequestVoteNew implements IClientIncomingPacket
 		}
 		
 		// Store player recommendations to avoid reseting them with Nevit peace zone check.
+		player.storeRecommendationValues();
 		target.storeRecommendationValues();
 	}
 }
