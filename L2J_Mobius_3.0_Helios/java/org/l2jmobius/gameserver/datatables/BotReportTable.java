@@ -236,7 +236,7 @@ public class BotReportTable
 			return false;
 		}
 		
-		if ((bot.getClan() != null) && bot.getClan().isAtWarWith(reporter.getClan()))
+		if ((bot.getClan() != null) && (reporter.getClan() != null) && bot.getClan().isAtWarWith(reporter.getClan()))
 		{
 			reporter.sendPacket(SystemMessageId.YOU_CANNOT_REPORT_WHEN_A_CLAN_WAR_HAS_BEEN_DECLARED);
 			return false;
