@@ -14053,6 +14053,25 @@ public class PlayerInstance extends Playable
 		}
 	}
 	
+	/**
+	 * Store recommendation values without tapping into Nevit Hourglass task.
+	 */
+	public void storeRecommendationValues()
+	{
+		try (Connection con = DatabaseFactory.getConnection();
+			PreparedStatement ps = con.prepareStatement("REPLACE INTO character_reco_bonus (charId,rec_have,rec_left) VALUES (?,?,?)"))
+		{
+			ps.setInt(1, getObjectId());
+			ps.setInt(2, _recomHave);
+			ps.setInt(3, _recomLeft);
+			ps.execute();
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.SEVERE, "Could not update Recommendations for player: " + getObjectId(), e);
+		}
+	}
+	
 	public void checkRecoBonusTask()
 	{
 		// Create bonus task

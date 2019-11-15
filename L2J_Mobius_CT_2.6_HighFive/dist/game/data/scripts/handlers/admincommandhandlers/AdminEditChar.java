@@ -337,7 +337,7 @@ public class AdminEditChar implements IAdminCommandHandler
 					activeChar.sendMessage(player.getName() + "'s Recommend changed to " + recVal);
 					
 					// Store player recommendations to avoid reseting them with Nevit peace zone check.
-					player.storeRecommendations(false);
+					player.storeRecommendationValues();
 				}
 				else
 				{
