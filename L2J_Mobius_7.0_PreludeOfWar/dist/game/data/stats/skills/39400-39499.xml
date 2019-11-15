@@ -1025,6 +1025,24 @@
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<hitTime>200</hitTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeId>80681</itemConsumeId> <!-- Scroll of Escape: Pio -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<conditions>
+			<condition name="OpAlignment">
+				<affectType>CASTER</affectType>
+				<alignment>LAWFUL</alignment>
+			</condition>
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Teleport">
+				<x>-85049</x>
+				<y>105814</y>
+				<z>-3592</z>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39486" toLevel="4" name="Elite Monster Reward Box">
 			<!-- This Skill has no description -->

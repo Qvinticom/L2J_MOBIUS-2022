@@ -167,6 +167,7 @@ import quests.Q10851_ElvenBotany.Q10851_ElvenBotany;
 import quests.Q10856_SuperionAppears.Q10856_SuperionAppears;
 import quests.Q11025_PathOfDestinyProving.Q11025_PathOfDestinyProving;
 import quests.Q11026_PathOfDestinyConviction.Q11026_PathOfDestinyConviction;
+import quests.Q11027_PathOfDestinyOvercome.Q11027_PathOfDestinyOvercome;
 import quests.Q11031_TrainingBeginsNow.Q11031_TrainingBeginsNow;
 import quests.Q11032_CurseOfUndying.Q11032_CurseOfUndying;
 import quests.Q11033_AntidoteIngredients.Q11033_AntidoteIngredients;
@@ -177,6 +178,12 @@ import quests.Q11037_WhyAreTheRatelHere.Q11037_WhyAreTheRatelHere;
 import quests.Q11038_GrowlersTurnedViolent.Q11038_GrowlersTurnedViolent;
 import quests.Q11039_CommunicationBreakdown.Q11039_CommunicationBreakdown;
 import quests.Q11040_AttackOfTheEnragedForest.Q11040_AttackOfTheEnragedForest;
+import quests.Q11041_CheckOutTheSituation.Q11041_CheckOutTheSituation;
+import quests.Q11042_SuspiciousMovements.Q11042_SuspiciousMovements;
+import quests.Q11043_SomeonesTrace.Q11043_SomeonesTrace;
+import quests.Q11044_KetraOrcs.Q11044_KetraOrcs;
+import quests.Q11045_TheyMustBeUpToSomething.Q11045_TheyMustBeUpToSomething;
+import quests.Q11046_PrayingForSafety.Q11046_PrayingForSafety;
 import quests.custom.Q00529_RegularBarrierMaintenance.Q00529_RegularBarrierMaintenance;
 import quests.custom.Q00560_HowToOvercomeFear.Q00560_HowToOvercomeFear;
 import quests.custom.Q00589_ASecretChange.Q00589_ASecretChange;
@@ -492,6 +499,7 @@ public class QuestMasterHandler
 		Q10901_AModelAdventurer.class, // TODO: Not done.
 		Q11025_PathOfDestinyProving.class,
 		Q11026_PathOfDestinyConviction.class,
+		Q11027_PathOfDestinyOvercome.class,
 		Q11031_TrainingBeginsNow.class,
 		Q11032_CurseOfUndying.class,
 		Q11033_AntidoteIngredients.class,
@@ -502,11 +510,12 @@ public class QuestMasterHandler
 		Q11038_GrowlersTurnedViolent.class,
 		Q11039_CommunicationBreakdown.class,
 		Q11040_AttackOfTheEnragedForest.class,
-		Q11042_SuspiciousMovements.class, // TODO: Not done.
-		Q11043_SomeonesTrace.class, // TODO: Not done.
-		Q11044_KetraOrcs.class, // TODO: Not done.
-		Q11045_TheyMustBeUpToSomething.class, // TODO: Not done.
-		Q11046_PrayingForSafety.class, // TODO: Not done.
+		Q11041_CheckOutTheSituation.class,
+		Q11042_SuspiciousMovements.class,
+		Q11043_SomeonesTrace.class,
+		Q11044_KetraOrcs.class,
+		Q11045_TheyMustBeUpToSomething.class,
+		Q11046_PrayingForSafety.class,
 	};
 	
 	public static void main(String[] args)

@@ -759,6 +759,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
 	</item>
 	<item id="80676" name="Ketra Order" type="EtcItem">
 		<!-- An order sent secretly to the Ketra Orcs. It may be why some of the Ketra Orcs have come to the Orc Barracks. Gather and take them to Reclous the Hermit. -->
@@ -770,6 +771,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
 	</item>
 	<item id="80677" name="Scroll of Escape: Tarti" type="EtcItem">
 		<!-- Teleports you to Tarti. -->
@@ -862,6 +864,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39485" level="1" /> <!-- Scroll of Escape: Reclous -->
+		</skills>
 	</item>
 	<item id="80683" name="Sword Breaker" additionalName="For Apprentice Adventurer" type="Weapon">
 		<set name="icon" val="icon.weapon_sword_breaker_i00" />

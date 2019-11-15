@@ -48,7 +48,7 @@ public class Q11026_PathOfDestinyConviction extends Quest
 	// NPCs
 	private static final int TARTI = 34505;
 	private static final int RAYMOND = 30289;
-	private static final int KAIN_VAN_HALTER = 31639;
+	private static final int KAIN_VAN_HALTER = 34339;
 	private static final int MYSTERIOUS_MAGE = 31522;
 	private static final int VAMPIRE_SOLDIER = 21582;
 	private static final int VON_HELLMANN = 19566;
@@ -68,7 +68,7 @@ public class Q11026_PathOfDestinyConviction extends Quest
 		addFirstTalkId(KAIN_VAN_HALTER, MYSTERIOUS_MAGE);
 		addKillId(VAMPIRE_SOLDIER, VON_HELLMANN);
 		registerQuestItems(WIND_SPIRIT);
-		addCondMinLevel(41, "33963-06.html");
+		addCondMinLevel(41, "33963-06.html"); // Not retail, just don't want to see it as unavailable when picking up next quest.
 		addCondCompletedQuest(Q11025_PathOfDestinyProving.class.getSimpleName(), "33963-06.html");
 		setQuestNameNpcStringId(NpcStringId.LV_40_PATH_OF_DESTINY_CONVICTION);
 	}
@@ -89,15 +89,15 @@ public class Q11026_PathOfDestinyConviction extends Quest
 			case "34505-09.html":
 			case "34505-11.html":
 			case "30289-03.html":
-			case "31639-02.html":
-			case "31639-03.html":
-			case "31639-04.html":
-			case "31639-05.html":
-			case "31639-06.html":
-			case "31639-07.html":
-			case "31639-08.html":
-			case "31639-09.html":
-			case "31639-11.html":
+			case "34339-02.html":
+			case "34339-03.html":
+			case "34339-04.html":
+			case "34339-05.html":
+			case "34339-06.html":
+			case "34339-07.html":
+			case "34339-08.html":
+			case "34339-09.html":
+			case "34339-11.html":
 			{
 				htmltext = event;
 				break;
@@ -145,7 +145,7 @@ public class Q11026_PathOfDestinyConviction extends Quest
 				}
 				break;
 			}
-			case "31639-10.html":
+			case "34339-10.html":
 			{
 				if (qs.isCond(3))
 				{
@@ -244,7 +244,7 @@ public class Q11026_PathOfDestinyConviction extends Quest
 					{
 						if (qs.isCond(3))
 						{
-							htmltext = "31639-01.html";
+							htmltext = "34339-01.html";
 						}
 						break;
 					}
@@ -252,7 +252,7 @@ public class Q11026_PathOfDestinyConviction extends Quest
 					{
 						if (qs.isCond(3))
 						{
-							htmltext = "33980-01.html";
+							htmltext = "31522-01.html";
 						}
 						break;
 					}
