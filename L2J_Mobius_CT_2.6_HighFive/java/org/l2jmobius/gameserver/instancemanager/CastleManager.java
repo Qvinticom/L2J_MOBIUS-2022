@@ -20,10 +20,10 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -41,9 +41,9 @@ public class CastleManager implements InstanceListManager
 {
 	private static final Logger LOGGER = Logger.getLogger(CastleManager.class.getName());
 	
-	private final List<Castle> _castles = new ArrayList<>();
+	private static final List<Castle> _castles = new CopyOnWriteArrayList<>();
 	
-	private final Map<Integer, Long> _castleSiegeDate = new ConcurrentHashMap<>();
+	private static final Map<Integer, Long> _castleSiegeDate = new ConcurrentHashMap<>();
 	
 	private static final int _castleCirclets[] =
 	{

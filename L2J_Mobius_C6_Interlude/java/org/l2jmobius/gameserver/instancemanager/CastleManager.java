@@ -19,8 +19,8 @@ package org.l2jmobius.gameserver.instancemanager;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
@@ -42,7 +42,7 @@ public class CastleManager
 		return SingletonHolder.INSTANCE;
 	}
 	
-	private List<Castle> _castles;
+	private static final List<Castle> _castles = new CopyOnWriteArrayList<>();
 	
 	private static final int _castleCirclets[] =
 	{
@@ -223,10 +223,6 @@ public class CastleManager
 	
 	public List<Castle> getCastles()
 	{
-		if (_castles == null)
-		{
-			_castles = new ArrayList<>();
-		}
 		return _castles;
 	}
 	

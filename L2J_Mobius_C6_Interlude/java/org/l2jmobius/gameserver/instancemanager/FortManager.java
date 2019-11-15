@@ -19,8 +19,8 @@ package org.l2jmobius.gameserver.instancemanager;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
@@ -35,7 +35,7 @@ public class FortManager
 {
 	protected static final Logger LOGGER = Logger.getLogger(FortManager.class.getName());
 	
-	private static final List<Fort> _forts = new ArrayList<>();
+	private static final List<Fort> _forts = new CopyOnWriteArrayList<>();
 	
 	public FortManager()
 	{
