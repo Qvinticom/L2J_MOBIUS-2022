@@ -1728,12 +1728,13 @@
 	<skill id="345" toLevel="15" name="Sonic Rage">
 		<!-- Attacks the target with a deadly energy storm, lowers P. Def., and absorbs Momentum. Requires a sword, blunt weapon, fist weapon, dual blunt weapon, or dual sword. -->
 		<icon>icon.skill0345</icon>
+		<operateType>A2</operateType>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>PD_DOWN</abnormalType>
 		<activateRate>
 			<value fromLevel="1" toLevel="15">80</value>
-			<value fromLevel="11" toLevel="15" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
+			<value fromLevel="11" toLevel="15" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<castRange>600</castRange>
 		<coolTime>300</coolTime>
@@ -1791,7 +1792,6 @@
 			<value level="15">77</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
-		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
@@ -1822,7 +1822,7 @@
 					<value level="13">812</value>
 					<value level="14">844</value>
 					<value level="15">876</value>
-					<value fromLevel="11" toLevel="15" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
+					<value fromLevel="11" toLevel="15" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>10</criticalChance>
@@ -1854,7 +1854,7 @@
 		<abnormalType>PD_DOWN</abnormalType>
 		<activateRate>
 			<value fromLevel="1" toLevel="15">80</value>
-			<value fromLevel="11" toLevel="15" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
+			<value fromLevel="11" toLevel="15" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<castRange>600</castRange>
 		<effectPoint>
@@ -1943,7 +1943,7 @@
 					<value level="13">812</value>
 					<value level="14">844</value>
 					<value level="15">876</value>
-					<value fromLevel="11" toLevel="15" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
+					<value fromLevel="11" toLevel="15" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>10</criticalChance>
@@ -2785,7 +2785,7 @@
 		<abnormalVisualEffect>FLESH_STONE</abnormalVisualEffect>
 		<activateRate>
 			<value fromLevel="1" toLevel="11">40</value>
-			<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
+			<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<affectLimit>10-10</affectLimit>
 		<affectRange>150</affectRange>

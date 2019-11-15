@@ -3066,6 +3066,9 @@
 				<amount>4500</amount>
 				<mode>DIFF</mode>
 			</effect>
+			<effect name="BlockSkill">
+				<magicTypes>0;1;2;3;4;22</magicTypes>
+			</effect>
 			<effect name="Heal" fromLevel="1" toLevel="1" fromSubLevel="4001" toSubLevel="4020">
 				<power>
 					<value fromLevel="1" toLevel="1" fromSubLevel="4001" toSubLevel="4001">1936</value>

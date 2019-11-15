@@ -3800,7 +3800,7 @@
 		<abnormalType>ARMOR_ELEMENT_ALL</abnormalType>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">1800</value>
-			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{base + subIndex * 15}</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{base + subIndex * 90}</value>
 		</abnormalTime>
 		<operateType>A2</operateType>
 		<mpConsume>140</mpConsume>
@@ -3855,7 +3855,7 @@
 		<abnormalType>ARMOR_HOLY</abnormalType>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">1800</value>
-			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{base + subIndex * 15}</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{base + subIndex * 90}</value>
 		</abnormalTime>
 		<operateType>A2</operateType>
 		<mpConsume>140</mpConsume>
@@ -3906,7 +3906,7 @@
 		<abnormalType>RESIST_DERANGEMENT</abnormalType>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">1800</value>
-			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{base + subIndex * 15}</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{base + subIndex * 90}</value>
 		</abnormalTime>
 		<operateType>A2</operateType>
 		<mpConsume>140</mpConsume>
@@ -4895,7 +4895,7 @@
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="DefenceCriticalDamage">
-				<amount>30</amount>
+				<amount>-30</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>

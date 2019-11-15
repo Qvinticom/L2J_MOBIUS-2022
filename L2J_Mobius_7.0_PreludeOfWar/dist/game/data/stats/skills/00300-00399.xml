@@ -1736,6 +1736,7 @@
 	<skill id="345" toLevel="17" name="Sonic Rage">
 		<!-- Attacks the target with a deadly energy storm, lowers P. Def., and absorbs Momentum. Requires a sword, blunt weapon, fist weapon, dual blunt weapon, or dual sword. -->
 		<icon>icon.skill0345</icon>
+		<operateType>A2</operateType>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>PD_DOWN</abnormalType>
@@ -1805,7 +1806,6 @@
 			<value level="17">81</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
-		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>

@@ -108,9 +108,15 @@
 		<effects>
 			<effect name="CubicMastery">
 				<amount>3</amount>
+				<armorType>
+					<item>HEAVY</item>
+				</armorType>
 			</effect>
 			<effect name="BlockAbnormalSlot">
 				<slot>ABSORB</slot>
+				<armorType>
+					<item>HEAVY</item>
+				</armorType>
 			</effect>
 			<effect name="PhysicalDefence">
 				<amount>
@@ -136,14 +142,23 @@
 			<effect name="MpRegen">
 				<amount>8.4</amount>
 				<mode>DIFF</mode>
+				<armorType>
+					<item>HEAVY</item>
+				</armorType>
 			</effect>
 			<effect name="DefenceCriticalDamage">
 				<amount>-35</amount>
 				<mode>PER</mode>
+				<armorType>
+					<item>HEAVY</item>
+				</armorType>
 			</effect>
 			<effect name="StatUp">
 				<amount>2</amount>
 				<stat>STR</stat>
+				<armorType>
+					<item>HEAVY</item>
+				</armorType>
 			</effect>
 			<effect name="MaxHp">
 				<amount>6883</amount>
@@ -428,7 +443,7 @@
 		<icon>icon.skill10008</icon>
 		<activateRate>
 			<value fromLevel="1" toLevel="11">80</value>
-			<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
+			<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -517,7 +532,7 @@
 					<value level="9">22354</value>
 					<value level="10">23444</value>
 					<value level="11">24534</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
+					<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 				</power>
 			</effect>
 			<effect name="PhysicalDefence">
@@ -532,9 +547,10 @@
 				<amount>-10</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="Speed" fromLevel="7" toLevel="11" fromSubLevel="3001" toSubLevel="3020">
+			<effect name="Speed">
 				<amount>
-					<value fromLevel="7" toLevel="11" fromSubLevel="3001" toSubLevel="3020">{-2 * subIndex}</value>
+					<value fromLevel="1" toLevel="11">-120</value>
+					<value fromLevel="7" toLevel="11" fromSubLevel="3001" toSubLevel="3020">{base + (-2 * subIndex)}</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -548,7 +564,7 @@
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>
 			<value fromLevel="1" toLevel="11">100</value>
-			<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
+			<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<effectRange>400</effectRange>
 		<operateType>A2</operateType>
@@ -624,7 +640,7 @@
 					<value level="9">27148</value>
 					<value level="10">28472</value>
 					<value level="11">29796</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
+					<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>5</criticalChance>
@@ -635,7 +651,7 @@
 			</effect>
 			<effect name="PhysicalDefence" fromLevel="7" toLevel="11" fromSubLevel="3001" toSubLevel="3020">
 				<amount>
-					<value fromLevel="7" toLevel="11" fromSubLevel="3001" toSubLevel="3020">{-0.6 - 0.4 * subIndex}</value>
+					<value fromLevel="7" toLevel="11" fromSubLevel="3001" toSubLevel="3020">{-0.6 - (0.4 * subIndex)}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -649,7 +665,7 @@
 		<abnormalType>CRITICAL_DMG_DOWN</abnormalType>
 		<activateRate>
 			<value fromLevel="1" toLevel="11">200</value>
-			<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
+			<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<lvlBonusRate>30</lvlBonusRate>
 		<nextAction>ATTACK</nextAction>
@@ -728,7 +744,7 @@
 					<value level="9">34357</value>
 					<value level="10">35175</value>
 					<value level="11">36811</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
+					<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>5</criticalChance>
@@ -824,7 +840,7 @@
 					<value level="6">18453</value>
 					<value level="7">19353</value>
 					<value level="8">20253</value>
-					<value fromLevel="4" toLevel="8" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
+					<value fromLevel="4" toLevel="8" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 				</power>
 				<criticalChance>5</criticalChance>
 			</effect>
@@ -833,7 +849,7 @@
 			</effect>
 			<effect name="PhysicalDefence" fromLevel="4" toLevel="8" fromSubLevel="3001" toSubLevel="3020">
 				<amount>
-					<value fromLevel="4" toLevel="8" fromSubLevel="3001" toSubLevel="3020">{-0.6 - 0.4 * subIndex}</value>
+					<value fromLevel="4" toLevel="8" fromSubLevel="3001" toSubLevel="3020">{-0.6 - (0.4 * subIndex)}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -850,7 +866,7 @@
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<activateRate>
 			<value fromLevel="1" toLevel="10">70</value>
-			<value fromLevel="6" toLevel="10" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
+			<value fromLevel="6" toLevel="10" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<fanRange>0;0;150;180</fanRange>
@@ -920,7 +936,7 @@
 					<value level="8">14897</value>
 					<value level="9">15623</value>
 					<value level="10">16349</value>
-					<value fromLevel="6" toLevel="10" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
+					<value fromLevel="6" toLevel="10" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 				</power>
 				<criticalChance>5</criticalChance>
 			</effect>
@@ -1017,12 +1033,12 @@
 					<value level="9">18045</value>
 					<value level="10">19013</value>
 					<value level="11">19981</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
+					<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>
 					<value fromLevel="1" toLevel="11">5</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
+					<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 				</criticalChance>
 				<pDefMod>
 					<value fromLevel="1" toLevel="11">1</value>
@@ -1039,7 +1055,7 @@
 		<abnormalType>HEAL_EFFECT_DOWN</abnormalType>
 		<activateRate>
 			<value fromLevel="1" toLevel="11">80</value>
-			<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
+			<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -1109,7 +1125,7 @@
 					<value level="9">23468</value>
 					<value level="10">24612</value>
 					<value level="11">25756</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
+					<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 				</power>
 				<criticalChance>5</criticalChance>
 			</effect>
@@ -1119,7 +1135,7 @@
 			</effect>
 			<effect name="PhysicalDefence" fromLevel="7" toLevel="11" fromSubLevel="3001" toSubLevel="3020">
 				<amount>
-					<value fromLevel="7" toLevel="11" fromSubLevel="3001" toSubLevel="3020">{-0.6 - 0.4 * subIndex}</value>
+					<value fromLevel="7" toLevel="11" fromSubLevel="3001" toSubLevel="3020">{-0.6 - (0.4 * subIndex)}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1132,8 +1148,8 @@
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<activateRate>
-			<value fromLevel="1" toLevel="9">190</value>
-			<value fromLevel="5" toLevel="9" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
+			<value fromLevel="1" toLevel="9">90</value>
+			<value fromLevel="5" toLevel="9" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<lvlBonusRate>30</lvlBonusRate>
 		<basicProperty>PHYSICAL</basicProperty>
@@ -1163,7 +1179,7 @@
 		</mpConsume>
 		<castRange>
 			<value fromLevel="1" toLevel="9">600</value>
-			<value fromLevel="5" toLevel="9" fromSubLevel="2001" toSubLevel="2020">{base + 10 * subIndex}</value>
+			<value fromLevel="5" toLevel="9" fromSubLevel="2001" toSubLevel="2020">{base + (10 * subIndex)}</value>
 		</castRange>
 		<hitTime>500</hitTime>
 		<coolTime>1000</coolTime>
@@ -1204,7 +1220,7 @@
 		<affectRange>200</affectRange>
 		<activateRate>
 			<value fromLevel="1" toLevel="9">150</value>
-			<value fromLevel="5" toLevel="9" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
+			<value fromLevel="5" toLevel="9" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<lvlBonusRate>30</lvlBonusRate>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1232,7 +1248,7 @@
 		</mpConsume>
 		<castRange>
 			<value fromLevel="1" toLevel="9">600</value>
-			<value fromLevel="5" toLevel="9" fromSubLevel="2001" toSubLevel="2020">{base + 10 * subIndex}</value>
+			<value fromLevel="5" toLevel="9" fromSubLevel="2001" toSubLevel="2020">{base + (10 * subIndex)}</value>
 		</castRange>
 		<effectRange>1100</effectRange>
 		<hitTime>500</hitTime>
@@ -1279,7 +1295,7 @@
 		<abnormalTime>
 			<value fromLevel="1" toLevel="7">30</value>
 			<value fromLevel="3" toLevel="7" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
-			<value fromLevel="3" toLevel="7" fromSubLevel="1011" toSubLevel="1020">{base + 10 + 0.5 * subIndex}</value>
+			<value fromLevel="3" toLevel="7" fromSubLevel="1011" toSubLevel="1020">{base + 10 + (subIndex - 10 * 0.5)}</value>
 		</abnormalTime>
 		<abnormalType>PD_UP_SPECIAL</abnormalType>
 		<abnormalVisualEffect>ULTIMATE_DEFENCE</abnormalVisualEffect>
@@ -1376,7 +1392,7 @@
 			</effect>
 			<effect name="PAtk" fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2020">
 				<amount>
-					<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2020">{0.6 + 0.4 * subIndex}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2020">{0.6 + (0.4 * subIndex)}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1394,7 +1410,7 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="2">10</value>
-			<value fromLevel="1" toLevel="2" fromSubLevel="1001" toSubLevel="1020">{base + 0.5 * subIndex}</value>
+			<value fromLevel="1" toLevel="2" fromSubLevel="1001" toSubLevel="1020">{base + (0.5 * subIndex)}</value>
 		</abnormalTime>
 		<abnormalType>SACRIFICE</abnormalType>
 		<affectRange>1000</affectRange>
@@ -1448,7 +1464,7 @@
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="5">15</value>
-			<value fromLevel="1" toLevel="5" fromSubLevel="1001" toSubLevel="1020">{base + 0.5 * subIndex}</value>
+			<value fromLevel="1" toLevel="5" fromSubLevel="1001" toSubLevel="1020">{base + (0.5 * subIndex)}</value>
 		</abnormalTime>
 		<abnormalType>TRANSFER_DAMAGE</abnormalType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1517,9 +1533,10 @@
 				</amount>
 				<slot>DEBUFF</slot>
 			</effect>
-			<effect name="Speed" fromLevel="1" toLevel="5" fromSubLevel="2001" toSubLevel="2020">
+			<effect name="Speed">
 				<amount>
-					<value fromLevel="1" toLevel="5" fromSubLevel="2001" toSubLevel="2020">{2 * subIndex}</value>
+					<value fromLevel="1" toLevel="5">80</value>
+					<value fromLevel="1" toLevel="5" fromSubLevel="2001" toSubLevel="2020">{base + (2 * subIndex)}</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -1614,9 +1631,9 @@
 			<value level="2">90</value>
 			<value level="3">95</value>
 			<value level="4">99</value>
-			<value level="5">99</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="6">99</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="7">99</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="5">100</value>
+			<value level="6">102</value>
+			<value level="7">104</value>
 		</magicLvl>
 		<reuseDelay>60000</reuseDelay>
 		<targetType>SELF</targetType>
@@ -1660,7 +1677,7 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">10</value>
-			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + 0.5 * subIndex}</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + (0.5 * subIndex)}</value>
 		</abnormalTime>
 		<abnormalType>RESIST_DEATH</abnormalType>
 		<magicLvl>97</magicLvl>
@@ -1680,7 +1697,7 @@
 			<effect name="IgnoreDeath" />
 			<effect name="PAtk" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">
 				<amount>
-					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">{0.6 + 0.4 * subIndex}</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">{0.6 + (0.4 * subIndex)}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1922,7 +1939,7 @@
 		<abnormalType>TARGET_LOCK</abnormalType>
 		<activateRate>
 			<value fromLevel="1" toLevel="9">90</value>
-			<value fromLevel="5" toLevel="9" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
+			<value fromLevel="5" toLevel="9" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<affectHeight>-100;200</affectHeight>
 		<magicLvl>
@@ -1976,7 +1993,7 @@
 			</effect>
 			<effect name="PhysicalDefence" fromLevel="5" toLevel="9" fromSubLevel="2001" toSubLevel="3020">
 				<amount>
-					<value fromLevel="5" toLevel="9" fromSubLevel="2001" toSubLevel="2020">{-0.6 - 0.4 * subIndex}</value>
+					<value fromLevel="5" toLevel="9" fromSubLevel="2001" toSubLevel="2020">{-0.6 - (0.4 * subIndex)}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1996,7 +2013,7 @@
 		<abnormalType>TARGET_LOCK</abnormalType>
 		<activateRate>
 			<value fromLevel="1" toLevel="8">80</value>
-			<value fromLevel="4" toLevel="8" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
+			<value fromLevel="4" toLevel="8" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<affectLimit>10-10</affectLimit>
 		<affectRange>
@@ -2057,7 +2074,7 @@
 			</effect>
 			<effect name="PhysicalDefence" fromLevel="5" toLevel="9" fromSubLevel="2001" toSubLevel="3020">
 				<amount>
-					<value fromLevel="5" toLevel="8" fromSubLevel="2001" toSubLevel="2020">{-0.6 - 0.4 * subIndex}</value>
+					<value fromLevel="5" toLevel="8" fromSubLevel="2001" toSubLevel="2020">{-0.6 - (0.4 * subIndex)}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -3732,12 +3749,12 @@
 					<value level="2">2</value>
 					<value level="3">3</value>
 					<value level="4">4</value>
-					<value level="5">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="6">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="7">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="8">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="9">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="10">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+					<value level="9">9</value>
+					<value level="10">10</value>
 				</skillLevel>
 			</effect>
 			<effect name="MagicalDefence">
@@ -3746,12 +3763,12 @@
 					<value level="2">7</value>
 					<value level="3">8</value>
 					<value level="4">10</value>
-					<value level="5">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="6">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="7">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="8">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="9">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="10">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="5">11</value>
+					<value level="6">12</value>
+					<value level="7">13</value>
+					<value level="8">14</value>
+					<value level="9">15</value>
+					<value level="10">16</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -3761,12 +3778,12 @@
 					<value level="2">7</value>
 					<value level="3">8</value>
 					<value level="4">10</value>
-					<value level="5">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="6">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="7">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="8">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="9">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="10">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="5">11</value>
+					<value level="6">12</value>
+					<value level="7">13</value>
+					<value level="8">14</value>
+					<value level="9">15</value>
+					<value level="10">16</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -3780,12 +3797,12 @@
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
-			<value level="5">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="6">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="7">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="8">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="9">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="10">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="5">5</value>
+			<value level="6">6</value>
+			<value level="7">7</value>
+			<value level="8">8</value>
+			<value level="9">9</value>
+			<value level="10">10</value>
 		</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<affectRange>1000</affectRange>
@@ -3817,12 +3834,12 @@
 					<value level="2">7</value>
 					<value level="3">8</value>
 					<value level="4">10</value>
-					<value level="5">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="6">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="7">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="8">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="9">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="10">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="5">11</value>
+					<value level="6">12</value>
+					<value level="7">13</value>
+					<value level="8">14</value>
+					<value level="9">15</value>
+					<value level="10">16</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -3832,12 +3849,12 @@
 					<value level="2">7</value>
 					<value level="3">8</value>
 					<value level="4">10</value>
-					<value level="5">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="6">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="7">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="8">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="9">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="10">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="5">11</value>
+					<value level="6">12</value>
+					<value level="7">13</value>
+					<value level="8">14</value>
+					<value level="9">15</value>
+					<value level="10">16</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -3936,12 +3953,12 @@
 					<value level="2">2</value>
 					<value level="3">3</value>
 					<value level="4">4</value>
-					<value level="5">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="6">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="7">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="8">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="9">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="10">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+					<value level="9">9</value>
+					<value level="10">10</value>
 				</skillLevel>
 			</effect>
 			<effect name="PAtk">
@@ -3950,12 +3967,12 @@
 					<value level="2">3</value>
 					<value level="3">4</value>
 					<value level="4">6</value>
-					<value level="5">6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="6">6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="7">6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="8">6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="9">6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="10">6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="5">8</value>
+					<value level="6">10</value>
+					<value level="7">12</value>
+					<value level="8">14</value>
+					<value level="9">16</value>
+					<value level="10">18</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -3965,12 +3982,12 @@
 					<value level="2">3</value>
 					<value level="3">4</value>
 					<value level="4">6</value>
-					<value level="5">6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="6">6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="7">6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="8">6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="9">6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="10">6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="5">8</value>
+					<value level="6">10</value>
+					<value level="7">12</value>
+					<value level="8">14</value>
+					<value level="9">16</value>
+					<value level="10">18</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -3984,12 +4001,12 @@
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
-			<value level="5">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="6">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="7">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="8">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="9">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="10">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="5">5</value>
+			<value level="6">6</value>
+			<value level="7">7</value>
+			<value level="8">8</value>
+			<value level="9">9</value>
+			<value level="10">10</value>
 		</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<affectRange>1000</affectRange>
@@ -4019,12 +4036,12 @@
 					<value level="2">3</value>
 					<value level="3">4</value>
 					<value level="4">6</value>
-					<value level="5">6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="6">6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="7">6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="8">6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="9">6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="10">6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="5">8</value>
+					<value level="6">10</value>
+					<value level="7">12</value>
+					<value level="8">14</value>
+					<value level="9">16</value>
+					<value level="10">18</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -4034,12 +4051,12 @@
 					<value level="2">3</value>
 					<value level="3">4</value>
 					<value level="4">6</value>
-					<value level="5">6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="6">6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="7">6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="8">6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="9">6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="10">6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="5">8</value>
+					<value level="6">10</value>
+					<value level="7">12</value>
+					<value level="8">14</value>
+					<value level="9">16</value>
+					<value level="10">18</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -4178,12 +4195,12 @@
 					<value level="2">2</value>
 					<value level="3">3</value>
 					<value level="4">4</value>
-					<value level="5">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="6">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="7">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="8">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="9">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="10">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+					<value level="9">9</value>
+					<value level="10">10</value>
 				</skillLevel>
 			</effect>
 			<effect name="MagicalDefence">
@@ -4192,12 +4209,12 @@
 					<value level="2">7</value>
 					<value level="3">8</value>
 					<value level="4">10</value>
-					<value level="5">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="6">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="7">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="8">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="9">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="10">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="5">11</value>
+					<value level="6">12</value>
+					<value level="7">13</value>
+					<value level="8">14</value>
+					<value level="9">15</value>
+					<value level="10">16</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -4207,12 +4224,12 @@
 					<value level="2">7</value>
 					<value level="3">8</value>
 					<value level="4">10</value>
-					<value level="5">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="6">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="7">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="8">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="9">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="10">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="5">11</value>
+					<value level="6">12</value>
+					<value level="7">13</value>
+					<value level="8">14</value>
+					<value level="9">15</value>
+					<value level="10">16</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -4226,12 +4243,12 @@
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
-			<value level="5">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="6">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="7">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="8">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="9">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="10">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="5">5</value>
+			<value level="6">6</value>
+			<value level="7">7</value>
+			<value level="8">8</value>
+			<value level="9">9</value>
+			<value level="10">10</value>
 		</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<affectRange>450</affectRange> <!-- Unconfirmed -->
@@ -4262,12 +4279,12 @@
 					<value level="2">7</value>
 					<value level="3">8</value>
 					<value level="4">10</value>
-					<value level="5">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="6">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="7">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="8">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="9">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="10">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="5">11</value>
+					<value level="6">12</value>
+					<value level="7">13</value>
+					<value level="8">14</value>
+					<value level="9">15</value>
+					<value level="10">16</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -4277,12 +4294,12 @@
 					<value level="2">7</value>
 					<value level="3">8</value>
 					<value level="4">10</value>
-					<value level="5">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="6">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="7">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="8">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="9">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="10">10</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="5">11</value>
+					<value level="6">12</value>
+					<value level="7">13</value>
+					<value level="8">14</value>
+					<value level="9">15</value>
+					<value level="10">16</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -4413,12 +4430,12 @@
 					<value level="2">2</value>
 					<value level="3">3</value>
 					<value level="4">4</value>
-					<value level="5">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="6">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="7">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="8">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="9">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="10">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+					<value level="9">9</value>
+					<value level="10">10</value>
 				</skillLevel>
 			</effect>
 			<effect name="PAtk">
@@ -4427,12 +4444,12 @@
 					<value level="2">3</value>
 					<value level="3">4</value>
 					<value level="4">6</value>
-					<value level="5">6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="6">6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="7">6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="8">6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="9">6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="10">6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="5">7</value>
+					<value level="6">8</value>
+					<value level="7">9</value>
+					<value level="8">10</value>
+					<value level="9">11</value>
+					<value level="10">12</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -4442,12 +4459,12 @@
 					<value level="2">3</value>
 					<value level="3">4</value>
 					<value level="4">6</value>
-					<value level="5">6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="6">6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="7">6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="8">6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="9">6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="10">6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="5">7</value>
+					<value level="6">8</value>
+					<value level="7">9</value>
+					<value level="8">10</value>
+					<value level="9">11</value>
+					<value level="10">12</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -4461,12 +4478,12 @@
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
-			<value level="5">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="6">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="7">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="8">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="9">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-			<value level="10">4</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+			<value level="5">5</value>
+			<value level="6">6</value>
+			<value level="7">7</value>
+			<value level="8">8</value>
+			<value level="9">9</value>
+			<value level="10">10</value>
 		</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<affectRange>450</affectRange> <!-- Unconfirmed -->
@@ -4497,12 +4514,12 @@
 					<value level="2">3</value>
 					<value level="3">4</value>
 					<value level="4">6</value>
-					<value level="5">6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="6">6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="7">6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="8">6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="9">6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="10">6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="5">7</value>
+					<value level="6">8</value>
+					<value level="7">9</value>
+					<value level="8">10</value>
+					<value level="9">11</value>
+					<value level="10">12</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -4512,12 +4529,12 @@
 					<value level="2">3</value>
 					<value level="3">4</value>
 					<value level="4">6</value>
-					<value level="5">6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="6">6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="7">6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="8">6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="9">6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-					<value level="10">6</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+					<value level="5">7</value>
+					<value level="6">8</value>
+					<value level="7">9</value>
+					<value level="8">10</value>
+					<value level="9">11</value>
+					<value level="10">12</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -5227,7 +5244,7 @@
 		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
 		<activateRate>
 			<value fromLevel="1" toLevel="7">40</value>
-			<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
+			<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<affectLimit>10-10</affectLimit>
 		<affectRange>100</affectRange>
@@ -5286,7 +5303,7 @@
 					<value level="5">18973</value>
 					<value level="6">19845</value>
 					<value level="7">20717</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 				</power>
 			</effect>
 			<effect name="BlockActions">
@@ -5406,11 +5423,11 @@
 					<value level="4">19863</value>
 					<value level="5">20831</value>
 					<value level="6">21799</value>
-					<value fromLevel="2" toLevel="6" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="1001" toSubLevel="1020">{base + (base / 100 * subIndex)}</value>
 				</power>
 				<criticalChance>
 					<value fromLevel="1" toLevel="6">15</value>
-					<value fromLevel="2" toLevel="6" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 				</criticalChance>
 				<pDefMod>
 					<value fromLevel="1" toLevel="6">1</value>
@@ -5429,7 +5446,7 @@
 		<abnormalTime>
 			<value fromLevel="1" toLevel="4">60</value>
 			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
-			<value fromLevel="3" toLevel="4" fromSubLevel="1011" toSubLevel="1020">{base + 10 + 0.5 * subIndex}</value>
+			<value fromLevel="3" toLevel="4" fromSubLevel="1011" toSubLevel="1020">{base + 10 + (subIndex - 10 * 0.5)}</value>
 		</abnormalTime>
 		<abnormalType>POSSESSION</abnormalType>
 		<operateType>A2</operateType>
@@ -5555,7 +5572,7 @@
 		<abnormalTime>
 			<value fromLevel="1" toLevel="4">60</value>
 			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
-			<value fromLevel="3" toLevel="4" fromSubLevel="1011" toSubLevel="1020">{base + 10 + 0.5 * subIndex}</value>
+			<value fromLevel="3" toLevel="4" fromSubLevel="1011" toSubLevel="1020">{base + 10 + (subIndex - 10 * 0.5)}</value>
 		</abnormalTime>
 		<abnormalType>POSSESSION</abnormalType>
 		<operateType>A2</operateType>

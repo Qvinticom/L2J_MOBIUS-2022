@@ -1728,16 +1728,33 @@
 	<skill id="345" toLevel="15" name="Sonic Rage">
 		<!-- Attacks the target with a deadly energy storm, lowers P. Def., and absorbs Momentum. Requires a sword, blunt weapon,fist weapon, dual blunt weapon,or dualsword. -->
 		<icon>icon.skill0345</icon>
+		<operateType>A2</operateType>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>PD_DOWN</abnormalType>
 		<activateRate>
 			<value fromLevel="1" toLevel="15">80</value>
-			<value fromLevel="11" toLevel="15" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+			<value fromLevel="11" toLevel="15" fromSubLevel="2001" toSubLevel="2030">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<castRange>600</castRange>
 		<coolTime>300</coolTime>
-		<effectPoint>-709</effectPoint>
+		<effectPoint>
+			<value level="1">-340</value>
+			<value level="2">-360</value>
+			<value level="3">-380</value>
+			<value level="4">-400</value>
+			<value level="5">-692</value>
+			<value level="6">-696</value>
+			<value level="7">-700</value>
+			<value level="8">-704</value>
+			<value level="9">-707</value>
+			<value level="10">-709</value>
+			<value level="11">-709</value>
+			<value level="12">-709</value>
+			<value level="13">-709</value>
+			<value level="14">-709</value>
+			<value level="15">-709</value>
+		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>1200</hitTime>
 		<magicLvl>
@@ -1775,7 +1792,6 @@
 			<value level="15">77</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
-		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
@@ -1806,7 +1822,7 @@
 					<value level="13">812</value>
 					<value level="14">844</value>
 					<value level="15">876</value>
-					<value fromLevel="11" toLevel="15" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
+					<value fromLevel="11" toLevel="15" fromSubLevel="1001" toSubLevel="1030">{base + (base / 100 * subIndex)}</value>
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>10</criticalChance>
@@ -1838,10 +1854,26 @@
 		<abnormalType>PD_DOWN</abnormalType>
 		<activateRate>
 			<value fromLevel="1" toLevel="15">80</value>
-			<value fromLevel="11" toLevel="15" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+			<value fromLevel="11" toLevel="15" fromSubLevel="2001" toSubLevel="2030">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<castRange>600</castRange>
-		<effectPoint>-709</effectPoint>
+		<effectPoint>
+			<value level="1">-340</value>
+			<value level="2">-360</value>
+			<value level="3">-380</value>
+			<value level="4">-400</value>
+			<value level="5">-692</value>
+			<value level="6">-696</value>
+			<value level="7">-700</value>
+			<value level="8">-704</value>
+			<value level="9">-707</value>
+			<value level="10">-709</value>
+			<value level="11">-709</value>
+			<value level="12">-709</value>
+			<value level="13">-709</value>
+			<value level="14">-709</value>
+			<value level="15">-709</value>
+		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>1200</hitTime>
 		<hpConsume>50</hpConsume>
@@ -1911,7 +1943,7 @@
 					<value level="13">812</value>
 					<value level="14">844</value>
 					<value level="15">876</value>
-					<value fromLevel="11" toLevel="15" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
+					<value fromLevel="11" toLevel="15" fromSubLevel="1001" toSubLevel="1030">{base + (base / 100 * subIndex)}</value>
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>10</criticalChance>
@@ -2753,7 +2785,7 @@
 		<abnormalVisualEffect>FLESH_STONE</abnormalVisualEffect>
 		<activateRate>
 			<value fromLevel="1" toLevel="11">40</value>
-			<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
+			<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1030">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
 		<affectLimit>10-10</affectLimit>
 		<affectRange>150</affectRange>

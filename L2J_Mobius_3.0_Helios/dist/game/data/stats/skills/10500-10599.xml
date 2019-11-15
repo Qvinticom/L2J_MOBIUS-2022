@@ -1237,7 +1237,7 @@
 		<icon>icon.skill10517</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
-			<value fromLevel="1" toLevel="1">50</value>
+			<value fromLevel="1" toLevel="1">20</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1011" toSubLevel="1030">{base + 10 + 0.5 * subIndex}</value>
 		</abnormalTime>
@@ -1268,7 +1268,7 @@
 				<rate>100</rate>
 				<max>10</max>
 			</effect>
-			<effect name="Speed" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">
+			<effect name="Speed">
 				<amount>
 					<value fromLevel="1" toLevel="1">-50</value>
 					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">{base + (2 * subIndex)}</value>
@@ -1521,13 +1521,16 @@
 				<ticks>1</ticks>
 			</effect>
 			<effect name="Mute" />
+			<effect name="BlockSkill">
+				<magicTypes>1</magicTypes>
+			</effect>
 			<effect name="PAtk">
 				<amount>-23</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="Speed">
 				<amount>-50</amount>
-				<mode>PER</mode>
+				<mode>DIFF</mode>
 			</effect>
 			<effect name="MagicalDefence">
 				<amount>-10</amount>
@@ -1984,7 +1987,6 @@
 		</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<abnormalVisualEffect>ULTIMATE_DEFENCE</abnormalVisualEffect>
-		<isMagic>4</isMagic>
 		<reuseDelay>600000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1998,13 +2000,17 @@
 		</conditions>
 		<effects>
 			<effect name="FatalBlowRate">
-				<value level="1">40</value>
-				<value level="2">45</value>
+				<amount>
+					<value level="1">40</value>
+					<value level="2">45</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PhysicalSkillPower">
-				<value level="1">10</value>
-				<value level="2">15</value>
+				<amount>
+					<value level="1">10</value>
+					<value level="2">15</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="Accuracy">
@@ -2067,6 +2073,7 @@
 		</effectPoint>
 		<reuseDelay>300000</reuseDelay>
 		<isMagic>4</isMagic>
+		<nextAction>ATTACK</nextAction>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -2095,13 +2102,13 @@
 				<despawnDelay>17000</despawnDelay>
 			</effect>
 		</effects>
-		<endEffects>
+		<selfEffects>
 			<effect name="CallSkill">
 				<!-- Illusion Hide -->
 				<skillId>10556</skillId> <!-- Illusion Hide -->
 				<skillLevel>1</skillLevel>
 			</effect>
-		</endEffects>
+		</selfEffects>
 	</skill>
 	<skill id="10534" toLevel="1" name="Toad Poison">
 		<!-- During normal attacks, has a chance of inflicting Poison on the enemy and blocking the use of magic skills. -->

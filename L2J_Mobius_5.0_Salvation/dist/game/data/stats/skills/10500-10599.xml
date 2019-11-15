@@ -1380,7 +1380,7 @@
 				<rate>100</rate>
 				<max>10</max>
 			</effect>
-			<effect name="Speed" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">
+			<effect name="Speed">
 				<amount>
 					<value fromLevel="1" toLevel="1">-50</value>
 					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">{base + (2 * subIndex)}</value>

@@ -375,14 +375,14 @@
 			<effect name="PhysicalDefence">
 				<amount>
 					<value fromLevel="1" toLevel="1">30</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{0.6 + (0.4 * subIndex)}</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicalDefence">
 				<amount>
 					<value fromLevel="1" toLevel="1">30</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{0.6 + (0.4 * subIndex)}</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -447,14 +447,14 @@
 			<effect name="PhysicalDefence">
 				<amount>
 					<value fromLevel="1" toLevel="1">20</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{0.6 + (0.4 * subIndex)}</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicalDefence">
 				<amount>
 					<value fromLevel="1" toLevel="1">20</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{0.6 + (0.4 * subIndex)}</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -479,7 +479,7 @@
 			<effect name="DamageShield">
 				<amount>
 					<value fromLevel="1" toLevel="1">5</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">{0.6 + (0.4 * subIndex)}</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">{base + subIndex}</value>
 				</amount>
 			</effect>
 		</effects>
@@ -517,14 +517,14 @@
 			<effect name="PhysicalDefence">
 				<amount>
 					<value fromLevel="1" toLevel="1">20</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{0.6 + (0.4 * subIndex)}</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicalDefence">
 				<amount>
 					<value fromLevel="1" toLevel="1">20</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{0.6 + (0.4 * subIndex)}</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex}</value>
 					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">{subIndex}</value>
 				</amount>
 				<mode>PER</mode>
@@ -618,14 +618,14 @@
 			<effect name="PhysicalDefence">
 				<amount>
 					<value fromLevel="1" toLevel="1">10</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{0.6 + (0.4 * subIndex)}</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicalDefence">
 				<amount>
 					<value fromLevel="1" toLevel="1">10</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{0.6 + (0.4 * subIndex)}</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -686,14 +686,14 @@
 			<effect name="PhysicalDefence">
 				<amount>
 					<value fromLevel="1" toLevel="1">30</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{0.6 + (0.4 * subIndex)}</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicalDefence">
 				<amount>
 					<value fromLevel="1" toLevel="1">30</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{0.6 + (0.4 * subIndex)}</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -756,14 +756,14 @@
 			<effect name="PhysicalDefence">
 				<amount>
 					<value fromLevel="1" toLevel="1">20</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{0.6 + (0.4 * subIndex)}</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicalDefence">
 				<amount>
 					<value fromLevel="1" toLevel="1">20</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{0.6 + (0.4 * subIndex)}</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -788,7 +788,7 @@
 			<effect name="DamageShield">
 				<amount>
 					<value fromLevel="1" toLevel="1">5</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">{0.6 + (0.4 * subIndex)}</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">{base + subIndex}</value>
 				</amount>
 			</effect>
 		</effects>
@@ -814,14 +814,14 @@
 			<effect name="PhysicalDefence">
 				<amount>
 					<value fromLevel="1" toLevel="1">20</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{0.6 + (0.4 * subIndex)}</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicalDefence">
 				<amount>
 					<value fromLevel="1" toLevel="1">20</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{0.6 + (0.4 * subIndex)}</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex}</value>
 					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">{subIndex}</value>
 				</amount>
 				<mode>PER</mode>
@@ -914,14 +914,14 @@
 			<effect name="PhysicalDefence">
 				<amount>
 					<value fromLevel="1" toLevel="1">10</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{0.6 + (0.4 * subIndex)}</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicalDefence">
 				<amount>
 					<value fromLevel="1" toLevel="1">10</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{0.6 + (0.4 * subIndex)}</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
