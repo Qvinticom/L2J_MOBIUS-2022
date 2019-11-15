@@ -1145,7 +1145,8 @@ public class VillageMasterInstance extends NpcInstance
 		
 		if (pledgeType != Clan.SUBUNIT_ACADEMY)
 		{
-			if ((clan.getClanMember(leaderName) == null) || (clan.getClanMember(leaderName).getPledgeType() != 0))
+			final ClanMember member = clan.getClanMember(leaderName);
+			if ((member == null) || (member.getPledgeType() != 0) || (clan.getLeaderSubPledge(member.getObjectId()) > 0))
 			{
 				if (pledgeType >= Clan.SUBUNIT_KNIGHT1)
 				{
@@ -1260,7 +1261,9 @@ public class VillageMasterInstance extends NpcInstance
 			player.sendPacket(SystemMessageId.CLAN_NAME_IS_INVALID);
 			return;
 		}
-		if ((clan.getClanMember(leaderName) == null) || (clan.getClanMember(leaderName).getPledgeType() != 0))
+		
+		final ClanMember member = clan.getClanMember(leaderName);
+		if ((member == null) || (member.getPledgeType() != 0) || (clan.getLeaderSubPledge(member.getObjectId()) > 0))
 		{
 			if (subPledge.getId() >= Clan.SUBUNIT_KNIGHT1)
 			{
@@ -1274,11 +1277,10 @@ public class VillageMasterInstance extends NpcInstance
 			return;
 		}
 		
-		subPledge.setLeaderId(clan.getClanMember(leaderName).getObjectId());
+		subPledge.setLeaderId(member.getObjectId());
 		clan.updateSubPledgeInDB(subPledge.getId());
 		
-		final ClanMember leaderSubPledge = clan.getClanMember(leaderName);
-		final PlayerInstance leaderPlayer = leaderSubPledge.getPlayerInstance();
+		final PlayerInstance leaderPlayer = member.getPlayerInstance();
 		if (leaderPlayer != null)
 		{
 			leaderPlayer.setPledgeClass(ClanMember.calculatePledgeClass(leaderPlayer));
