@@ -2071,6 +2071,7 @@
 		<reuseDelay>7000</reuseDelay>
 		<effectPoint>-687</effectPoint>
 		<mpConsume>3</mpConsume>
+		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -2736,7 +2737,7 @@
 		<mpConsume>1</mpConsume>
 		<magicLvl>76</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>10</abnormalTime>
+		<abnormalTime>5</abnormalTime>
 		<abnormalType>INVINCIBILITY_SPECIAL</abnormalType>
 		<abnormalVisualEffect>ULTIMATE_DEFENCE</abnormalVisualEffect>
 		<effectRange>1100</effectRange>
@@ -3790,7 +3791,7 @@
 	<skill id="30778" toLevel="13" name="Sonic Rage">
 		<!-- Attacks the target with a deadly energy storm, lowers P. Def., and absorbs Momentum. Requires a sword, blunt weapon, fist weapon, dual blunt weapon, or dual sword. -->
 		<icon>icon.skill0345</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<isDebuff>true</isDebuff>
 		<castRange>600</castRange>
 		<hitTime>1200</hitTime>
@@ -4017,7 +4018,7 @@
 	<skill id="30780" toLevel="9" name="Dance of Medusa">
 		<!-- Dance that evokes the mirage of Medusa. Petrifies nearby enemies for $s1 Requires a dual sword. Inflicted status: Petrification. -->
 		<icon>icon.skill0367</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<isDebuff>true</isDebuff>
 		<hitTime>1800</hitTime>
 		<coolTime>500</coolTime>
@@ -4074,7 +4075,6 @@
 			<value level="12">218</value>
 			<value level="13">231</value>
 		</mpConsume>
-		<operateType>A2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>TURN_STONE</trait>
 		<targetType>SELF</targetType>
@@ -4382,7 +4382,7 @@
 	<skill id="30785" toLevel="9" name="Disarm">
 		<!-- Disarms the enemy for $s1 Requires an ancient sword, sword, blunt weapon, spear, fist weapon, dual blunt weapon, or dual sword. Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill0485</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<isDebuff>true</isDebuff>
 		<castRange>40</castRange>
 		<hitTime>1000</hitTime>
@@ -4421,7 +4421,6 @@
 			<value level="8">107</value>
 			<value level="9">109</value>
 		</magicLvl>
-		<operateType>A2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>DISARM</trait>
 		<targetType>ENEMY_ONLY</targetType>
