@@ -299,34 +299,27 @@ public class FortSiegeManager
 	
 	public boolean checkIfCanPickup(PlayerInstance player)
 	{
-		final SystemMessage sm = new SystemMessage(SystemMessageId.THE_FORTRESS_BATTLE_OF_S1_HAS_FINISHED);
-		sm.addItemName(9819);
-		// Cannot own 2 combat flag
 		if (player.isCombatFlagEquipped())
 		{
-			player.sendPacket(sm);
+			return false;
+		}
+		if (!player.isClanLeader())
+		{
+			player.sendMessage("The flag can only be picked up by a clan leader.");
 			return false;
 		}
 		
-		// here check if is siege is in progress
-		// here check if is siege is attacker
 		final Fort fort = FortManager.getInstance().getFort(player);
+		if ((fort == null) || (fort.getResidenceId() <= 0) || (fort.getSiege().getAttackerClan(player.getClan()) == null))
+		{
+			return false;
+		}
+		if (!fort.getSiege().isInProgress())
+		{
+			player.sendPacket(new SystemMessage(SystemMessageId.THE_FORTRESS_BATTLE_OF_S1_HAS_FINISHED).addItemName(9819));
+			return false;
+		}
 		
-		if ((fort == null) || (fort.getResidenceId() <= 0))
-		{
-			player.sendPacket(sm);
-			return false;
-		}
-		else if (!fort.getSiege().isInProgress())
-		{
-			player.sendPacket(sm);
-			return false;
-		}
-		else if (fort.getSiege().getAttackerClan(player.getClan()) == null)
-		{
-			player.sendPacket(sm);
-			return false;
-		}
 		return true;
 	}
 	
