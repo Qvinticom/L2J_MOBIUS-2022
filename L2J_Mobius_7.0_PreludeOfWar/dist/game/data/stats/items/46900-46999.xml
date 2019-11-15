@@ -376,8 +376,8 @@
 			<stat type="maxMp">31</stat>
 		</stats>
 	</item>
-	<item id="46919" name="Paulina's Equipment Set (R-grade)" additionalName="30-day" type="EtcItem">
-		<!-- Use to obtain a 30-day equipment set appropriate to your class. Can be used only by characters of Lv. 85 and above. -->
+	<item id="46919" name="Paulina's Equipment Set (R-grade)" type="EtcItem">
+		<!-- Use to obtain a Paulina's Equipment set (R-grade) that mamatches your class. Usable only by Lv. 40 and higher characters only. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -385,12 +385,13 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="is_stackable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="PaulinasSupportBox" />
 		<set name="is_private_storeable" val="false" />
 		<cond msgId="1902">
-			<player levelRange="85;105" />
+			<player levelRange="40;120" />
 		</cond>
 	</item>
 	<item id="46920" name="Paulina's Brigandine Shield" type="Armor">
@@ -480,7 +481,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_stackable" val="true" />
+		<set name="is_stackable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
@@ -507,7 +508,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_stackable" val="true" />
+		<set name="is_stackable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
@@ -534,7 +535,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="is_stackable" val="true" />
+		<set name="is_stackable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
