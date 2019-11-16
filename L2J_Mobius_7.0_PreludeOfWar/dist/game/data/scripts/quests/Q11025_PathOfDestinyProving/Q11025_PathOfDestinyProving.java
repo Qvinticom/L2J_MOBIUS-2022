@@ -141,10 +141,11 @@ public class Q11025_PathOfDestinyProving extends Quest
 			}
 			case "mega_menu":
 			{
-				if (qs.isCond(4))
+				if (qs.isCond(4) && (npc != null))
 				{
 					addSpawn(MYSTERIOUS_MAGE, npc, true, 300000);
 					showOnScreenMsg(player, NpcStringId.TALK_TO_THE_MYSTERIOUS_WIZARD_2, ExShowScreenMessage.TOP_CENTER, 10000);
+					npc.deleteMe();
 					break;
 				}
 			}
@@ -216,6 +217,14 @@ public class Q11025_PathOfDestinyProving extends Quest
 							htmltext = "34505-03.html"; // TODO: Proper second talk dialog.
 							break;
 						}
+						else if (qs.isCond(3))
+						{
+							htmltext = "34505-03.html";
+						}
+						else if (qs.isCond(5))
+						{
+							htmltext = "34505-03.html";
+						}
 						else if (qs.isCond(6))
 						{
 							htmltext = "34505-04.html";
@@ -227,6 +236,10 @@ public class Q11025_PathOfDestinyProving extends Quest
 						if (qs.isCond(2))
 						{
 							htmltext = "30289-01.html";
+						}
+						else if (qs.isCond(3))
+						{
+							htmltext = "30289-03.html";
 						}
 						else if (qs.isCond(5))
 						{
@@ -250,7 +263,11 @@ public class Q11025_PathOfDestinyProving extends Quest
 					{
 						if (qs.isCond(4))
 						{
-							htmltext = "33980-01.html";
+							htmltext = "1033980-01.html";
+						}
+						else if (qs.isCond(5))
+						{
+							htmltext = "1033980-03.html";
 						}
 						break;
 					}
