@@ -146,8 +146,10 @@ public abstract class ClanHallSiegeEngine extends Quest implements Siegable
 	{
 		if (_guards != null)
 		{
+			_guards.forEach(guard -> guard.startRespawn());
 			return;
 		}
+		
 		_guards = new ArrayList<>();
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement(SQL_LOAD_GUARDS))
