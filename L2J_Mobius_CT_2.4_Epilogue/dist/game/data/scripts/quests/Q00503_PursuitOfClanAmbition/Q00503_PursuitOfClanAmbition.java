@@ -310,9 +310,9 @@ public class Q00503_PursuitOfClanAmbition extends Quest
 			case "SPAWN_WITCH":
 			{
 				final Npc athrea = addSpawn(WITCH_ATHREA, 160688, 21296, -3714, 0, false, 180000);
-				athrea.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.WAR_AND_DEATH));
+				athrea.broadcastPacket(new NpcSay(athrea, ChatType.NPC_GENERAL, NpcStringId.WAR_AND_DEATH));
 				final Npc kalis = addSpawn(WITCH_KALIS, 160690, 21176, -3712, 0, false, 180000);
-				kalis.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.AMBITION_AND_POWER));
+				kalis.broadcastPacket(new NpcSay(kalis, ChatType.NPC_GENERAL, NpcStringId.AMBITION_AND_POWER));
 				break;
 			}
 			case "DESPAWN":
@@ -428,8 +428,8 @@ public class Q00503_PursuitOfClanAmbition extends Quest
 			{
 				if ((leaderQS.getMemoState() < 8511) || (leaderQS.getMemoState() >= 8500))
 				{
-					final Npc coffer = addSpawn(IMPERIAL_COFFER, npc.getX(), npc.getY(), npc.getZ(), 0, false, 180000);
-					coffer.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.CURSE_OF_THE_GODS_ON_THE_ONE_THAT_DEFILES_THE_PROPERTY_OF_THE_EMPIRE));
+					final Npc coffer = addSpawn(IMPERIAL_COFFER, npc.getX(), npc.getY(), npc.getZ(), 0, true, 180000);
+					coffer.broadcastPacket(new NpcSay(coffer, ChatType.NPC_GENERAL, NpcStringId.CURSE_OF_THE_GODS_ON_THE_ONE_THAT_DEFILES_THE_PROPERTY_OF_THE_EMPIRE));
 				}
 				break;
 			}
