@@ -391,7 +391,6 @@ public class TowerOfNaia extends AbstractNpcAI
 			}
 			return "18492-01.htm";
 		}
-		
 		else if ((npcId >= ROOM_MANAGER_FIRST) && (npcId <= ROOM_MANAGER_LAST))
 		{
 			if (_activeRooms.containsKey(npcId) && !_activeRooms.get(npcId))
@@ -500,13 +499,6 @@ public class TowerOfNaia extends AbstractNpcAI
 			if ((_lock == null) || (_lock.getCurrentHp() > (_lock.getMaxHp() / 10)))
 			{
 				htmltext = null;
-				if (_lock != null)
-				{
-					_lock.deleteMe();
-					_lock = null;
-				}
-				cancelQuestTimers("spawn_lock");
-				startQuestTimer("spawn_lock", 300000, null, null);
 				npc.setTarget(player);
 				npc.doCast(SkillData.getInstance().getSkill(5527, 1));
 			}
