@@ -51,7 +51,7 @@ public class Q10395_NotATraitor extends Quest
 	private static final int EAC = 952; // Scroll: Enchant Armor (C-grade)
 	// Misc
 	private static final int MIN_LEVEL = 46;
-	private static final int MAX_LEVEL = 52;
+	private static final int MAX_LEVEL = 56;
 	
 	public Q10395_NotATraitor()
 	{

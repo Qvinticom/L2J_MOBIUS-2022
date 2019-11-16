@@ -50,7 +50,7 @@ public class Q10707_FlamesOfSorrow extends Quest
 	private static final int SP = 756; // Skill Points
 	// Misc
 	private static final int MIN_LEVEL = 46;
-	private static final int MAX_LEVEL = 51;
+	private static final int MAX_LEVEL = 56;
 	private static final int NPCSTRING_ID = NpcStringId.LV_46_56_FLAMES_OF_SORROW_IN_PROGRESS.getId();
 	private static final NpcStringId[] RANDOM_MSGS =
 	{
