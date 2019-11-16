@@ -308,8 +308,10 @@ public class Q00503_PursuitOfClanAmbition extends Quest
 			}
 			case "SPAWN_WITCH":
 			{
-				addSpawn(WITCH_ATHREA, 160688, 21296, -3714, 0);
-				addSpawn(WITCH_KALIS, 160690, 21176, -3712, 0);
+				final Npc athrea = addSpawn(WITCH_ATHREA, 160688, 21296, -3714, 0, false, 0);
+				athrea.setScriptValue(50301);
+				final Npc kalis = addSpawn(WITCH_KALIS, 160690, 21176, -3712, 0, false, 0);
+				kalis.setScriptValue(50302);
 				break;
 			}
 		}
@@ -436,37 +438,34 @@ public class Q00503_PursuitOfClanAmbition extends Quest
 		String htmltext = getNoQuestMsg(player);
 		if (qs.isCreated() || qs.isCompleted())
 		{
-			if (npc.getId() == SIR_GUSTAV_ATHEBALDT)
+			if ((npc.getId() == SIR_GUSTAV_ATHEBALDT) && (lqs != null))
 			{
-				if (lqs != null)
+				if (player.isClanLeader())
 				{
-					if (player.isClanLeader())
+					final Clan clan = player.getClan();
+					if (clan != null)
 					{
-						final Clan clan = player.getClan();
-						if (clan != null)
+						if (clan.getLevel() < 4)
 						{
-							if (clan.getLevel() < 4)
-							{
-								htmltext = "30760-01.html";
-							}
-							else if (clan.getLevel() >= 5)
-							{
-								htmltext = "30760-02.html";
-							}
-							else if ((clan.getLevel() == 4) && hasQuestItems(player, SEAL_OF_ASPIRATION))
-							{
-								htmltext = "30760-03.html";
-							}
-							else if ((clan.getLevel() == 4) && !hasQuestItems(player, SEAL_OF_ASPIRATION))
-							{
-								htmltext = "30760-04.html";
-							}
+							htmltext = "30760-01.html";
+						}
+						else if (clan.getLevel() >= 5)
+						{
+							htmltext = "30760-02.html";
+						}
+						else if ((clan.getLevel() == 4) && hasQuestItems(player, SEAL_OF_ASPIRATION))
+						{
+							htmltext = "30760-03.html";
+						}
+						else if ((clan.getLevel() == 4) && !hasQuestItems(player, SEAL_OF_ASPIRATION))
+						{
+							htmltext = "30760-04.html";
 						}
 					}
-					else
-					{
-						htmltext = "30760-04t.html";
-					}
+				}
+				else
+				{
+					htmltext = "30760-04t.html";
 				}
 			}
 		}
@@ -570,7 +569,7 @@ public class Q00503_PursuitOfClanAmbition extends Quest
 				{
 					if (lqs != null)
 					{
-						if ((qs.getMemoState() == 1000))
+						if (qs.getMemoState() == 1000)
 						{
 							if (!player.isClanLeader())
 							{
@@ -598,11 +597,11 @@ public class Q00503_PursuitOfClanAmbition extends Quest
 								htmltext = "30645-05.html";
 							}
 						}
-						else if ((qs.getMemoState() == 3000))
+						else if (qs.getMemoState() == 3000)
 						{
 							htmltext = "30645-07.html";
 						}
-						else if ((qs.getMemoState() > 3000))
+						else if (qs.getMemoState() > 3000)
 						{
 							htmltext = "30645-08.html";
 						}
@@ -657,7 +656,7 @@ public class Q00503_PursuitOfClanAmbition extends Quest
 				{
 					if (lqs != null)
 					{
-						if ((qs.getMemoState() == 4000))
+						if (qs.getMemoState() == 4000)
 						{
 							if (!player.isClanLeader())
 							{
@@ -672,7 +671,7 @@ public class Q00503_PursuitOfClanAmbition extends Quest
 								htmltext = "30764-04.html";
 							}
 						}
-						else if ((qs.getMemoState() == 5000))
+						else if (qs.getMemoState() == 5000)
 						{
 							if (getQuestItemsCount(player, SPITEFUL_SOUL_ENERGY) < 10)
 							{
@@ -686,7 +685,7 @@ public class Q00503_PursuitOfClanAmbition extends Quest
 								htmltext = "30764-08a.html";
 							}
 						}
-						else if ((qs.getMemoState() >= 6000))
+						else if (qs.getMemoState() >= 6000)
 						{
 							htmltext = "30764-09.html";
 						}
@@ -804,14 +803,20 @@ public class Q00503_PursuitOfClanAmbition extends Quest
 		{
 			case WITCH_ATHREA:
 			{
-				startQuestTimer("DESPAWN_WITCH_ATHREA", 180000, npc, null);
-				npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.WAR_AND_DEATH));
+				if (npc.isScriptValue(50301))
+				{
+					startQuestTimer("DESPAWN_WITCH_ATHREA", 180000, npc, null);
+					npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.WAR_AND_DEATH));
+				}
 				break;
 			}
 			case WITCH_KALIS:
 			{
-				startQuestTimer("DESPAWN_WITCH_KALIS", 180000, npc, null);
-				npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.AMBITION_AND_POWER));
+				if (npc.isScriptValue(50302))
+				{
+					startQuestTimer("DESPAWN_WITCH_KALIS", 180000, npc, null);
+					npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.AMBITION_AND_POWER));
+				}
 				break;
 			}
 			case IMPERIAL_COFFER:
