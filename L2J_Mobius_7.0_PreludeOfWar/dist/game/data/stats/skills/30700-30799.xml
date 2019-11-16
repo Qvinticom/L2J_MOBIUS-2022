@@ -1801,6 +1801,7 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2</abnormalTime>
 		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<activateRate>80</activateRate>
 		<effectRange>1000</effectRange>
 		<attributeType>FIRE</attributeType>
@@ -1824,7 +1825,7 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="MagicalAttack">
+			<effect name="PhysicalAttack">
 				<power>2311</power>
 				<criticalChance>5</criticalChance>
 				<overHit>true</overHit>
