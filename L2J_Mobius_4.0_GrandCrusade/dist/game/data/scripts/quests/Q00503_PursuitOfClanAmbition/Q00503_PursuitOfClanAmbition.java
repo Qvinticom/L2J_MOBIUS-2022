@@ -81,19 +81,12 @@ public class Q00503_PursuitOfClanAmbition extends Quest
 		addStartNpc(SIR_GUSTAV_ATHEBALDT);
 		addTalkId(SIR_GUSTAV_ATHEBALDT, HEAD_BLACKSMITH_KUSTO, MARTIEN, WITCH_ATHREA, WITCH_KALIS, CORPSE_OF_FRITZ, CORPSE_OF_LUTZ, CORPSE_OF_KURTZ, BALTHAZAR, IMPERIAL_COFFER, WITCH_CLEO, SIR_ERIC_RODEMAI);
 		addKillId(DRAKE, DRAKE2, THUNDER_WYRM, THUNDER_WYRM2, GRAVE_GUARD, SPITEFUL_SOUL_LEADER, GRAVE_KEYMASTER, BLITZ_WYRM, IMPERIAL_GRAVEKEEPER);
-		addSpawnId(WITCH_ATHREA, WITCH_KALIS, IMPERIAL_COFFER, BLITZ_WYRM);
 		registerQuestItems(MIST_DRAKES_EGG, BLITZ_WYRM_EGG, DRAKES_EGG, THUNDER_WYRM_EGG, BROOCH_OF_THE_MAGPIE, IMPERIAL_KEY, GUSTAVS_1ST_LETTER, GUSTAVS_2ND_LETTER, GUSTAVS_3RD_LETTER, SCEPTER_OF_JUDGMENT, BLACK_ANVIL_COIN, RECIPE_SPITEFUL_SOUL_ENERGY, SPITEFUL_SOUL_ENERGY, SPITEFUL_SOUL_VENGEANCE);
 	}
 	
 	@Override
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		if (event.startsWith("DESPAWN"))
-		{
-			npc.deleteMe();
-			return super.onAdvEvent(event, npc, player);
-		}
-		
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
 		{
@@ -183,15 +176,19 @@ public class Q00503_PursuitOfClanAmbition extends Quest
 				{
 					giveItems(player, BLITZ_WYRM_EGG, 3);
 					qs.setMemoState(qs.getMemoState() + 100);
-					addAttackDesire(addSpawn(BLITZ_WYRM, npc, true, 0, false), player);
-					addAttackDesire(addSpawn(BLITZ_WYRM, npc, true, 0, false), player);
+					final Npc wyrm1 = addSpawn(BLITZ_WYRM, npc.getX(), npc.getY(), npc.getZ(), 0, true, 180000);
+					addAttackDesire(wyrm1, player);
+					final Npc wyrm2 = addSpawn(BLITZ_WYRM, npc.getX(), npc.getY(), npc.getZ(), 0, true, 180000);
+					addAttackDesire(wyrm2, player);
 					startQuestTimer("DESPAWN", 10000, npc, player);
 					htmltext = event;
 				}
 				else if (qs.isMemoState(2100) || qs.isMemoState(2111) || qs.isMemoState(2110) || qs.isMemoState(2101))
 				{
-					addAttackDesire(addSpawn(BLITZ_WYRM, npc, true, 0, false), player);
-					addAttackDesire(addSpawn(BLITZ_WYRM, npc, true, 0, false), player);
+					final Npc wyrm1 = addSpawn(BLITZ_WYRM, npc.getX(), npc.getY(), npc.getZ(), 0, true, 180000);
+					addAttackDesire(wyrm1, player);
+					final Npc wyrm2 = addSpawn(BLITZ_WYRM, npc.getX(), npc.getY(), npc.getZ(), 0, true, 180000);
+					addAttackDesire(wyrm2, player);
 					startQuestTimer("DESPAWN", 10000, npc, player);
 					htmltext = "30761-03.html";
 				}
@@ -204,15 +201,19 @@ public class Q00503_PursuitOfClanAmbition extends Quest
 					giveItems(player, BLITZ_WYRM_EGG, 3);
 					giveItems(player, MIST_DRAKES_EGG, 4);
 					qs.setMemoState(qs.getMemoState() + 10);
-					addAttackDesire(addSpawn(BLITZ_WYRM, npc, true, 0, false), player);
-					addAttackDesire(addSpawn(BLITZ_WYRM, npc, true, 0, false), player);
+					final Npc wyrm1 = addSpawn(BLITZ_WYRM, npc.getX(), npc.getY(), npc.getZ(), 0, true, 180000);
+					addAttackDesire(wyrm1, player);
+					final Npc wyrm2 = addSpawn(BLITZ_WYRM, npc.getX(), npc.getY(), npc.getZ(), 0, true, 180000);
+					addAttackDesire(wyrm2, player);
 					startQuestTimer("DESPAWN", 10000, npc, player);
 					htmltext = event;
 				}
 				else if (qs.isMemoState(2100) || qs.isMemoState(2111) || qs.isMemoState(2011) || qs.isMemoState(2110))
 				{
-					addAttackDesire(addSpawn(BLITZ_WYRM, npc, true, 0, false), player);
-					addAttackDesire(addSpawn(BLITZ_WYRM, npc, true, 0, false), player);
+					final Npc wyrm1 = addSpawn(BLITZ_WYRM, npc.getX(), npc.getY(), npc.getZ(), 0, true, 180000);
+					addAttackDesire(wyrm1, player);
+					final Npc wyrm2 = addSpawn(BLITZ_WYRM, npc.getX(), npc.getY(), npc.getZ(), 0, true, 180000);
+					addAttackDesire(wyrm2, player);
 					startQuestTimer("DESPAWN", 10000, npc, player);
 					htmltext = "30762-03.html";
 				}
@@ -308,10 +309,15 @@ public class Q00503_PursuitOfClanAmbition extends Quest
 			}
 			case "SPAWN_WITCH":
 			{
-				final Npc athrea = addSpawn(WITCH_ATHREA, 160688, 21296, -3714, 0, false, 0);
-				athrea.setScriptValue(50301);
-				final Npc kalis = addSpawn(WITCH_KALIS, 160690, 21176, -3712, 0, false, 0);
-				kalis.setScriptValue(50302);
+				final Npc athrea = addSpawn(WITCH_ATHREA, 160688, 21296, -3714, 0, false, 180000);
+				athrea.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.WAR_AND_DEATH));
+				final Npc kalis = addSpawn(WITCH_KALIS, 160690, 21176, -3712, 0, false, 180000);
+				kalis.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.AMBITION_AND_POWER));
+				break;
+			}
+			case "DESPAWN":
+			{
+				npc.deleteMe();
 				break;
 			}
 		}
@@ -422,7 +428,8 @@ public class Q00503_PursuitOfClanAmbition extends Quest
 			{
 				if ((leaderQS.getMemoState() < 8511) || (leaderQS.getMemoState() >= 8500))
 				{
-					addSpawn(IMPERIAL_COFFER, npc, true, 0, false);
+					final Npc coffer = addSpawn(IMPERIAL_COFFER, npc.getX(), npc.getY(), npc.getZ(), 0, false, 180000);
+					coffer.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.CURSE_OF_THE_GODS_ON_THE_ONE_THAT_DEFILES_THE_PROPERTY_OF_THE_EMPIRE));
 				}
 				break;
 			}
@@ -794,44 +801,6 @@ public class Q00503_PursuitOfClanAmbition extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	@Override
-	public String onSpawn(Npc npc)
-	{
-		switch (npc.getId())
-		{
-			case WITCH_ATHREA:
-			{
-				if (npc.isScriptValue(50301))
-				{
-					startQuestTimer("DESPAWN_WITCH_ATHREA", 180000, npc, null);
-					npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.WAR_AND_DEATH));
-				}
-				break;
-			}
-			case WITCH_KALIS:
-			{
-				if (npc.isScriptValue(50302))
-				{
-					startQuestTimer("DESPAWN_WITCH_KALIS", 180000, npc, null);
-					npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.AMBITION_AND_POWER));
-				}
-				break;
-			}
-			case IMPERIAL_COFFER:
-			{
-				startQuestTimer("DESPAWN_IMPERIAL_COFFER", 180000, npc, null);
-				npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.CURSE_OF_THE_GODS_ON_THE_ONE_THAT_DEFILES_THE_PROPERTY_OF_THE_EMPIRE));
-				break;
-			}
-			case BLITZ_WYRM:
-			{
-				startQuestTimer("DESPAWN_BLITZ_WYRM", 180000, npc, null);
-				break;
-			}
-		}
-		return super.onSpawn(npc);
 	}
 	
 	private static QuestState getLeaderQuestState(PlayerInstance player, String quest)
