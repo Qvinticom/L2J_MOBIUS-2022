@@ -43,6 +43,7 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.ai.AttackableAI;
 import org.l2jmobius.gameserver.ai.CreatureAI;
+import org.l2jmobius.gameserver.ai.CreatureAI.IntentionCommand;
 import org.l2jmobius.gameserver.ai.CtrlEvent;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.cache.RelationCache;
@@ -5522,7 +5523,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		// Attack target after skill use
 		if ((skill.nextActionIsAttack()) && (_target != this) && (target != null) && (_target == target) && _target.isCreature() && target.canBeAttacked())
 		{
-			if ((getAI().getNextIntention() == null) || (getAI().getNextIntention().getCtrlIntention() != CtrlIntention.AI_INTENTION_MOVE_TO))
+			final IntentionCommand nextIntention = getAI().getNextIntention();
+			if ((nextIntention == null) || (nextIntention.getCtrlIntention() != CtrlIntention.AI_INTENTION_MOVE_TO))
 			{
 				getAI().setIntention(AI_INTENTION_ATTACK, target);
 			}
