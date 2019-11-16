@@ -16,13 +16,12 @@
  */
 package conquerablehalls.DevastatedCastle;
 
-import java.util.HashMap;
+import java.util.Collections;
 import java.util.Map;
-import java.util.Map.Entry;
+import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.sql.impl.ClanTable;
-import org.l2jmobius.gameserver.data.xml.impl.NpcData;
 import org.l2jmobius.gameserver.data.xml.impl.SkillData;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -40,17 +39,22 @@ public class DevastatedCastle extends ClanHallSiegeEngine
 	private static final int GUSTAV = 35410;
 	private static final int MIKHAIL = 35409;
 	private static final int DIETRICH = 35408;
-	private static final double GUSTAV_TRIGGER_HP = NpcData.getInstance().getTemplate(GUSTAV).getBaseHpMax() / 12;
 	
-	private static Map<Integer, Integer> _damageToGustav = new HashMap<>();
+	private final Map<Integer, Integer> _damageToGustav = new ConcurrentHashMap<>();
 	
 	private DevastatedCastle()
 	{
 		super(DEVASTATED_CASTLE);
 		addKillId(GUSTAV);
-		addSpawnId(MIKHAIL);
-		addSpawnId(DIETRICH);
+		addSpawnId(MIKHAIL, DIETRICH);
 		addAttackId(GUSTAV);
+	}
+	
+	@Override
+	public void onSiegeStarts()
+	{
+		_damageToGustav.clear();
+		super.onSiegeStarts();
 	}
 	
 	@Override
@@ -75,31 +79,21 @@ public class DevastatedCastle extends ClanHallSiegeEngine
 			return null;
 		}
 		
+		final Clan clan = attacker.getClan();
+		if ((clan != null) && checkIsAttacker(clan))
+		{
+			_damageToGustav.merge(clan.getId(), damage, Integer::sum);
+		}
+		
 		synchronized (this)
 		{
-			final Clan clan = attacker.getClan();
-			
-			if ((clan != null) && checkIsAttacker(clan))
-			{
-				final int id = clan.getId();
-				if (_damageToGustav.containsKey(id))
-				{
-					int newDamage = _damageToGustav.get(id);
-					newDamage += damage;
-					_damageToGustav.put(id, newDamage);
-				}
-				else
-				{
-					_damageToGustav.put(id, damage);
-				}
-			}
-			
-			if ((npc.getCurrentHp() < GUSTAV_TRIGGER_HP) && (npc.getAI().getIntention() != CtrlIntention.AI_INTENTION_CAST))
+			if (!npc.isCastingNow() && (npc.getCurrentHp() < (npc.getMaxHp() / 12)))
 			{
 				npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.THIS_IS_UNBELIEVABLE_HAVE_I_REALLY_BEEN_DEFEATED_I_SHALL_RETURN_AND_TAKE_YOUR_HEAD);
 				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_CAST, SkillData.getInstance().getSkill(4235, 1), npc);
 			}
 		}
+		
 		return super.onAttack(npc, attacker, damage, isSummon);
 	}
 	
@@ -113,14 +107,8 @@ public class DevastatedCastle extends ClanHallSiegeEngine
 		
 		_missionAccomplished = true;
 		
-		if (npc.getId() == GUSTAV)
-		{
-			synchronized (this)
-			{
-				cancelSiegeTask();
-				endSiege();
-			}
-		}
+		cancelSiegeTask();
+		endSiege();
 		
 		return super.onKill(npc, killer, isSummon);
 	}
@@ -128,18 +116,13 @@ public class DevastatedCastle extends ClanHallSiegeEngine
 	@Override
 	public Clan getWinner()
 	{
-		int counter = 0;
-		int damagest = 0;
-		for (Entry<Integer, Integer> e : _damageToGustav.entrySet())
+		if (_damageToGustav.isEmpty())
 		{
-			final int damage = e.getValue();
-			if (damage > counter)
-			{
-				counter = damage;
-				damagest = e.getKey();
-			}
+			return null;
 		}
-		return ClanTable.getInstance().getClan(damagest);
+		
+		final int clanId = Collections.max(_damageToGustav.entrySet(), Map.Entry.comparingByValue()).getKey();
+		return ClanTable.getInstance().getClan(clanId);
 	}
 	
 	public static void main(String[] args)
