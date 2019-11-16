@@ -50,6 +50,8 @@ public class Q11027_PathOfDestinyOvercome extends Quest
 	// Items
 	private static final int PROPHECY_MACHINE = 39540;
 	private static final int ATELIA = 39542;
+	// Reward
+	private static final int CHAOS_POMANDER = 37374;
 	// Location
 	private static final Location TELEPORT_1 = new Location(-78670, 251026, -2960);
 	private static final Location TELEPORT_2 = new Location(-14180, 123840, -3120);
@@ -144,6 +146,7 @@ public class Q11027_PathOfDestinyOvercome extends Quest
 				if (qs.isCond(6))
 				{
 					addExpAndSp(player, 14281098, 12852);
+					giveItems(player, CHAOS_POMANDER, 2);
 					qs.exitQuest(false, true);
 					if (CategoryData.getInstance().isInCategory(CategoryType.FOURTH_CLASS_GROUP, player.getClassId().getId()) || //
 						(CategoryData.getInstance().isInCategory(CategoryType.THIRD_CLASS_GROUP, player.getClassId().getId()) && (player.getRace() == Race.ERTHEIA)))
@@ -199,6 +202,14 @@ public class Q11027_PathOfDestinyOvercome extends Quest
 							htmltext = "34505-05.html"; // TODO: Proper second talk dialog.
 							break;
 						}
+						else if (qs.isCond(3))
+						{
+							htmltext = "34505-05.html";
+						}
+						else if (qs.isCond(5))
+						{
+							htmltext = "34505-08.html";
+						}
 						else if (qs.isCond(6) && hasQuestItems(player, ATELIA))
 						{
 							htmltext = "34505-06.html";
@@ -207,9 +218,21 @@ public class Q11027_PathOfDestinyOvercome extends Quest
 					}
 					case RAYMOND:
 					{
-						if (qs.isCond(2))
+						if (qs.isCond(1))
+						{
+							htmltext = "30289-05.html";
+						}
+						else if (qs.isCond(2))
 						{
 							htmltext = "30289-01.html";
+						}
+						else if (qs.isCond(3))
+						{
+							htmltext = "30289-03.html";
+						}
+						else if (qs.isCond(5))
+						{
+							htmltext = "30289-04.html";
 						}
 						break;
 					}
@@ -223,6 +246,10 @@ public class Q11027_PathOfDestinyOvercome extends Quest
 						{
 							qs.setCond(6, true);
 							htmltext = "33932-07.html";
+						}
+						else if (qs.isCond(6))
+						{
+							htmltext = "33932-08.html";
 						}
 						break;
 					}
