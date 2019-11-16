@@ -23,11 +23,13 @@ import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.base.ClassId;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLogin;
+import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerProfessionChange;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
@@ -51,6 +53,24 @@ public class Q11025_PathOfDestinyProving extends Quest
 	private static final int SKELETON_WARRIOR = 27528;
 	// Items
 	private static final int WIND_SPIRIT = 80673;
+	// Class change rewards
+	private static final int SS_R = 33780;
+	private static final int BSS_R = 33794;
+	private static final int BOX_R_HEAVY = 46924;
+	private static final int BOX_R_LIGHT = 46925;
+	private static final int BOX_R_ROBE = 46926;
+	private static final int WEAPON_SWORD_R = 47008;
+	private static final int WEAPON_SHIELD_R = 47026;
+	private static final int WEAPON_GSWORD_R = 47009;
+	private static final int WEAPON_BLUNT_R = 47010;
+	private static final int WEAPON_FIST_R = 47011;
+	private static final int WEAPON_SPEAR_R = 47012;
+	private static final int WEAPON_BOW_R = 47013;
+	private static final int WEAPON_DUALDAGGER_R = 47019;
+	private static final int WEAPON_STAFF_R = 47017;
+	private static final int WEAPON_DUALSWORD_R = 47018;
+	private static final int WEAPON_CROSSBOW_R = 47014;
+	private static final int ORICHALCUM_BOLT_R = 19443;
 	// Location
 	private static final Location TRAINING_GROUNDS_TELEPORT = new Location(-4983, 116607, -3344);
 	// Misc
@@ -263,6 +283,192 @@ public class Q11025_PathOfDestinyProving extends Quest
 			qs.setCond(4, true);
 		}
 		return super.onKill(npc, killer, isSummon);
+	}
+	
+	@RegisterEvent(EventType.ON_PLAYER_PROFESSION_CHANGE)
+	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
+	public void onProfessionChange(OnPlayerProfessionChange event)
+	{
+		final PlayerInstance player = event.getPlayer();
+		if (player == null)
+		{
+			return;
+		}
+		
+		if (player.getRace() == Race.ERTHEIA)
+		{
+			if (!CategoryData.getInstance().isInCategory(CategoryType.SECOND_CLASS_GROUP, player.getClassId().getId()))
+			{
+				return;
+			}
+		}
+		else if (!CategoryData.getInstance().isInCategory(CategoryType.THIRD_CLASS_GROUP, player.getClassId().getId()))
+		{
+			return;
+		}
+		
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && qs.isCompleted())
+		{
+			giveItems(player, SS_R, 3000);
+			giveItems(player, BSS_R, 2000);
+			
+			final int classId = player.getClassId().getId();
+			switch (player.getRace())
+			{
+				case HUMAN:
+				case ELF:
+				case DARK_ELF:
+				{
+					if (CategoryData.getInstance().isInCategory(CategoryType.DIVISION_WIZARD, classId))
+					{
+						giveItems(player, BOX_R_ROBE, 1);
+						giveItems(player, WEAPON_STAFF_R, 1);
+					}
+					else if (CategoryData.getInstance().isInCategory(CategoryType.SUBJOB_GROUP_BOW, classId))
+					{
+						giveItems(player, BOX_R_LIGHT, 1);
+						giveItems(player, WEAPON_BOW_R, 1);
+					}
+					else if (CategoryData.getInstance().isInCategory(CategoryType.SUBJOB_GROUP_DAGGER, classId))
+					{
+						giveItems(player, BOX_R_LIGHT, 1);
+						giveItems(player, WEAPON_DUALDAGGER_R, 1);
+					}
+					else if (CategoryData.getInstance().isInCategory(CategoryType.SUBJOB_GROUP_DANCE, classId) || (player.getClassId() == ClassId.GLADIATOR))
+					{
+						giveItems(player, BOX_R_HEAVY, 1);
+						giveItems(player, WEAPON_DUALSWORD_R, 1);
+					}
+					else if (player.getClassId() == ClassId.WARLORD)
+					{
+						giveItems(player, BOX_R_HEAVY, 1);
+						giveItems(player, WEAPON_SPEAR_R, 1);
+					}
+					else if (player.getClassId() == ClassId.DUELIST)
+					{
+						giveItems(player, BOX_R_HEAVY, 1);
+						giveItems(player, WEAPON_DUALSWORD_R, 1);
+					}
+					else if (CategoryData.getInstance().isInCategory(CategoryType.TANKER_GROUP, classId))
+					{
+						giveItems(player, BOX_R_HEAVY, 1);
+						giveItems(player, WEAPON_SWORD_R, 1);
+						giveItems(player, WEAPON_SHIELD_R, 1);
+					}
+					else if (CategoryData.getInstance().isInCategory(CategoryType.RECOM_WARRIOR_GROUP, classId))
+					{
+						giveItems(player, BOX_R_HEAVY, 1);
+						giveItems(player, WEAPON_SWORD_R, 1);
+					}
+					else
+					{
+						giveItems(player, BOX_R_HEAVY, 1);
+						giveItems(player, WEAPON_SWORD_R, 1);
+						giveItems(player, WEAPON_GSWORD_R, 1);
+					}
+					break;
+				}
+				case DWARF:
+				{
+					if (CategoryData.getInstance().isInCategory(CategoryType.SIXTH_OTHEL_GROUP, classId))
+					{
+						giveItems(player, BOX_R_LIGHT, 1);
+						giveItems(player, WEAPON_DUALDAGGER_R, 1);
+					}
+					else if (CategoryData.getInstance().isInCategory(CategoryType.DWARF_BOUNTY_CLASS, classId))
+					{
+						giveItems(player, BOX_R_LIGHT, 1);
+						giveItems(player, WEAPON_DUALDAGGER_R, 1);
+					}
+					else
+					{
+						giveItems(player, BOX_R_HEAVY, 1);
+						giveItems(player, WEAPON_BLUNT_R, 1);
+					}
+					break;
+				}
+				case ORC:
+				{
+					if (CategoryData.getInstance().isInCategory(CategoryType.SIXTH_IS_GROUP, classId))
+					{
+						giveItems(player, BOX_R_LIGHT, 1);
+						giveItems(player, WEAPON_DUALSWORD_R, 1);
+					}
+					else if (player.getClassId() == ClassId.TYRR_GRAND_KHAVATARI)
+					{
+						giveItems(player, BOX_R_LIGHT, 1);
+						giveItems(player, WEAPON_FIST_R, 1);
+					}
+					else if (player.getClassId() == ClassId.TYRR_TITAN)
+					{
+						giveItems(player, BOX_R_HEAVY, 1);
+						giveItems(player, WEAPON_GSWORD_R, 1);
+					}
+					else if (player.isMageClass())
+					{
+						giveItems(player, BOX_R_LIGHT, 1);
+						giveItems(player, WEAPON_STAFF_R, 1);
+					}
+					else if (CategoryData.getInstance().isInCategory(CategoryType.LIGHT_ARMOR_CLASS, classId))
+					{
+						giveItems(player, BOX_R_LIGHT, 1);
+						giveItems(player, WEAPON_FIST_R, 1);
+					}
+					else
+					{
+						giveItems(player, BOX_R_HEAVY, 1);
+						giveItems(player, WEAPON_GSWORD_R, 1);
+					}
+					break;
+				}
+				case KAMAEL:
+				{
+					if (CategoryData.getInstance().isInCategory(CategoryType.SIXTH_FEOH_GROUP, classId))
+					{
+						giveItems(player, BOX_R_ROBE, 1);
+						giveItems(player, WEAPON_STAFF_R, 1);
+					}
+					else if (CategoryData.getInstance().isInCategory(CategoryType.SIXTH_YR_GROUP, classId))
+					{
+						giveItems(player, BOX_R_LIGHT, 1);
+						giveItems(player, ORICHALCUM_BOLT_R, 5000);
+						giveItems(player, WEAPON_CROSSBOW_R, 1);
+					}
+					else if (CategoryData.getInstance().isInCategory(CategoryType.DIVISION_WIZARD, classId))
+					{
+						giveItems(player, BOX_R_ROBE, 1);
+						giveItems(player, WEAPON_STAFF_R, 1);
+					}
+					else if (CategoryData.getInstance().isInCategory(CategoryType.DIVISION_ARCHER, classId))
+					{
+						giveItems(player, BOX_R_LIGHT, 1);
+						giveItems(player, ORICHALCUM_BOLT_R, 5000);
+						giveItems(player, WEAPON_CROSSBOW_R, 1);
+					}
+					else
+					{
+						giveItems(player, BOX_R_LIGHT, 1);
+						giveItems(player, WEAPON_GSWORD_R, 1);
+						break;
+					}
+				}
+				case ERTHEIA:
+				{
+					if (player.isMageClass())
+					{
+						giveItems(player, BOX_R_ROBE, 1);
+						giveItems(player, WEAPON_STAFF_R, 1);
+					}
+					else
+					{
+						giveItems(player, BOX_R_LIGHT, 1);
+						giveItems(player, WEAPON_FIST_R, 1);
+					}
+					break;
+				}
+			}
+		}
 	}
 	
 	@RegisterEvent(EventType.ON_PLAYER_LOGIN)
