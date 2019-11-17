@@ -19,9 +19,7 @@ package quests.Q11026_PathOfDestinyConviction;
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.data.xml.impl.CategoryData;
 import org.l2jmobius.gameserver.enums.CategoryType;
-import org.l2jmobius.gameserver.enums.Movie;
 import org.l2jmobius.gameserver.enums.Race;
-import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.events.EventType;
@@ -33,7 +31,6 @@ import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
 import org.l2jmobius.gameserver.network.NpcStringId;
-import org.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 import org.l2jmobius.gameserver.network.serverpackets.classchange.ExRequestClassChangeUi;
 
 import quests.Q11025_PathOfDestinyProving.Q11025_PathOfDestinyProving;
@@ -48,15 +45,8 @@ public class Q11026_PathOfDestinyConviction extends Quest
 	// NPCs
 	private static final int TARTI = 34505;
 	private static final int RAYMOND = 30289;
-	private static final int KAIN_VAN_HALTER = 34339;
-	private static final int MYSTERIOUS_MAGE = 31522;
-	private static final int VAMPIRE_SOLDIER = 21582;
-	private static final int VON_HELLMANN = 19566;
-	// Items
-	private static final int WIND_SPIRIT = 80673;
-	// Location
-	private static final Location TELEPORT_1 = new Location(57983, -28955, 568);
-	private static final Location TELEPORT_2 = new Location(-14180, 123840, -3120);
+	// Item
+	private static final int KAIN_PROPHECY_MACHINE_FRAGMENT = 39538;
 	// Misc
 	private static final int MIN_LEVEL = 76;
 	
@@ -64,12 +54,10 @@ public class Q11026_PathOfDestinyConviction extends Quest
 	{
 		super(11026);
 		addStartNpc(TARTI);
-		addTalkId(TARTI, RAYMOND, KAIN_VAN_HALTER, MYSTERIOUS_MAGE);
-		addFirstTalkId(KAIN_VAN_HALTER, MYSTERIOUS_MAGE);
-		addKillId(VAMPIRE_SOLDIER, VON_HELLMANN);
-		registerQuestItems(WIND_SPIRIT);
-		addCondMinLevel(41, "33963-06.html"); // Not retail, just don't want to see it as unavailable when picking up next quest.
-		addCondCompletedQuest(Q11025_PathOfDestinyProving.class.getSimpleName(), "33963-06.html");
+		addTalkId(TARTI, RAYMOND);
+		registerQuestItems(KAIN_PROPHECY_MACHINE_FRAGMENT);
+		addCondMinLevel(41, "34505-06.html"); // Not retail, just don't want to see it as unavailable when picking up next quest.
+		addCondCompletedQuest(Q11025_PathOfDestinyProving.class.getSimpleName(), "34505-06.html");
 		setQuestNameNpcStringId(NpcStringId.LV_40_PATH_OF_DESTINY_CONVICTION);
 	}
 	
@@ -89,15 +77,6 @@ public class Q11026_PathOfDestinyConviction extends Quest
 			case "34505-09.html":
 			case "34505-11.html":
 			case "30289-03.html":
-			case "34339-02.html":
-			case "34339-03.html":
-			case "34339-04.html":
-			case "34339-05.html":
-			case "34339-06.html":
-			case "34339-07.html":
-			case "34339-08.html":
-			case "34339-09.html":
-			case "34339-11.html":
 			{
 				htmltext = event;
 				break;
@@ -133,37 +112,6 @@ public class Q11026_PathOfDestinyConviction extends Quest
 					qs.setCond(3, true);
 				}
 				htmltext = event;
-				break;
-			}
-			case "teleport":
-			{
-				if (qs.isCond(3))
-				{
-					final Npc mob = addSpawn(VAMPIRE_SOLDIER, 57983, -28955, 568, 0, true, 180000);
-					addAttackPlayerDesire(mob, player);
-					player.teleToLocation(TELEPORT_1);
-				}
-				break;
-			}
-			case "34339-10.html":
-			{
-				if (qs.isCond(3))
-				{
-					addSpawn(MYSTERIOUS_MAGE, npc.getX() + 40, npc.getY() + 40, npc.getZ(), npc.getHeading(), false, 120000);
-					showOnScreenMsg(player, NpcStringId.TALK_TO_THE_MYSTERIOUS_WIZARD, ExShowScreenMessage.TOP_CENTER, 10000);
-					break;
-				}
-			}
-			case "falver":
-			{
-				if (qs.isCond(3))
-				{
-					qs.setCond(4, true);
-					playMovie(player, Movie.SI_CHOICE_OF_KAIN_A);
-					giveItems(player, WIND_SPIRIT, 1);
-					player.teleToLocation(TELEPORT_2);
-					htmltext = event;
-				}
 				break;
 			}
 			case "34505-10.html":
@@ -238,21 +186,13 @@ public class Q11026_PathOfDestinyConviction extends Quest
 						{
 							htmltext = "30289-01.html";
 						}
-						break;
-					}
-					case KAIN_VAN_HALTER:
-					{
-						if (qs.isCond(3))
+						else if (qs.isCond(3))
 						{
-							htmltext = "34339-01.html";
+							htmltext = "30289-03.html";
 						}
-						break;
-					}
-					case MYSTERIOUS_MAGE:
-					{
-						if (qs.isCond(3))
+						else if (qs.isCond(4))
 						{
-							htmltext = "31522-01.html";
+							htmltext = "30289-04.html";
 						}
 						break;
 					}
@@ -266,37 +206,6 @@ public class Q11026_PathOfDestinyConviction extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	@Override
-	public String onFirstTalk(Npc npc, PlayerInstance player)
-	{
-		return npc.getId() + "-01.html";
-	}
-	
-	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
-	{
-		final QuestState qs = getQuestState(killer, false);
-		if ((qs != null) && qs.isCond(3))
-		{
-			switch (npc.getId())
-			{
-				case VAMPIRE_SOLDIER:
-				{
-					final Npc mob = addSpawn(VON_HELLMANN, npc, false, 120000);
-					addAttackPlayerDesire(mob, killer);
-					break;
-				}
-				case VON_HELLMANN:
-				{
-					playMovie(killer, Movie.SI_CHOICE_OF_KAIN_B);
-					addSpawn(KAIN_VAN_HALTER, 57983, -28955, 568, 0, false, 120000);
-					break;
-				}
-			}
-		}
-		return super.onKill(npc, killer, isSummon);
 	}
 	
 	@RegisterEvent(EventType.ON_PLAYER_LOGIN)
