@@ -537,7 +537,7 @@ public class Config
 	public static boolean ALT_OLY_LOG_FIGHTS;
 	public static boolean ALT_OLY_SHOW_MONTHLY_WINNERS;
 	public static boolean ALT_OLY_ANNOUNCE_GAMES;
-	public static List<Integer> LIST_OLY_RESTRICTED_ITEMS;
+	public static List<Integer> LIST_OLY_RESTRICTED_ITEMS = new ArrayList<>();
 	public static int ALT_OLY_ENCHANT_LIMIT;
 	public static int ALT_OLY_WAIT_TIME;
 	public static String ALT_OLY_PERIOD;
@@ -2274,11 +2274,19 @@ public class Config
 			ALT_OLY_LOG_FIGHTS = Olympiad.getBoolean("AltOlyLogFights", false);
 			ALT_OLY_SHOW_MONTHLY_WINNERS = Olympiad.getBoolean("AltOlyShowMonthlyWinners", true);
 			ALT_OLY_ANNOUNCE_GAMES = Olympiad.getBoolean("AltOlyAnnounceGames", true);
-			final String[] olyRestrictedItems = Olympiad.getString("AltOlyRestrictedItems", "6611,6612,6613,6614,6615,6616,6617,6618,6619,6620,6621,9388,9389,9390,17049,17050,17051,17052,17053,17054,17055,17056,17057,17058,17059,17060,17061,20759,20775,20776,20777,20778,14774").split(",");
-			LIST_OLY_RESTRICTED_ITEMS = new ArrayList<>(olyRestrictedItems.length);
-			for (String id : olyRestrictedItems)
+			final String olyRestrictedItems = Olympiad.getString("AltOlyRestrictedItems", "").trim();
+			if (!olyRestrictedItems.isEmpty())
 			{
-				LIST_OLY_RESTRICTED_ITEMS.add(Integer.parseInt(id));
+				final String[] olyRestrictedItemsSplit = olyRestrictedItems.split(",");
+				LIST_OLY_RESTRICTED_ITEMS = new ArrayList<>(olyRestrictedItemsSplit.length);
+				for (String id : olyRestrictedItemsSplit)
+				{
+					LIST_OLY_RESTRICTED_ITEMS.add(Integer.parseInt(id));
+				}
+			}
+			else // In case of reload with removal of all items ids.
+			{
+				LIST_OLY_RESTRICTED_ITEMS.clear();
 			}
 			ALT_OLY_ENCHANT_LIMIT = Olympiad.getInt("AltOlyEnchantLimit", -1);
 			ALT_OLY_WAIT_TIME = Olympiad.getInt("AltOlyWaitTime", 60);
