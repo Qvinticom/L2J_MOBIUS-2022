@@ -174,7 +174,7 @@ public class GuardInstance extends Attackable
 		else if (interact)
 		{
 			// Check if the PlayerInstance is in the _aggroList of the GuardInstance
-			if (containsTarget(player))
+			if (isInAggroList(player))
 			{
 				// Set the PlayerInstance Intention to AI_INTENTION_ATTACK
 				player.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, this);

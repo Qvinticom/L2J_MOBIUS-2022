@@ -1142,10 +1142,11 @@ public class Attackable extends Npc
 	}
 	
 	/**
-	 * @param creature The Creature searched in the _aggroList of the Attackable
-	 * @return True if the _aggroList of this Attackable contains the Creature.
+	 * Verifies if the creature is in the aggro list.
+	 * @param creature the creature
+	 * @return {@code true} if the creature is in the aggro list, {@code false} otherwise
 	 */
-	public boolean containsTarget(Creature creature)
+	public boolean isInAggroList(Creature creature)
 	{
 		return _aggroList.containsKey(creature);
 	}
