@@ -1903,7 +1903,7 @@
 				<type>STUN</type>
 				<level>1</level>
 				<hasAbnormal>true</hasAbnormal>
-				<L2Object>target</L2Object>
+				<affectType>TARGET</affectType>
 			</condition>
 		</passiveConditions>
 		<effects>
@@ -2237,7 +2237,7 @@
 				<type>STUN</type>
 				<level>1</level>
 				<hasAbnormal>true</hasAbnormal>
-				<L2Object>target</L2Object>
+				<affectType>TARGET</affectType>
 			</condition>
 		</passiveConditions>
 		<effects>
