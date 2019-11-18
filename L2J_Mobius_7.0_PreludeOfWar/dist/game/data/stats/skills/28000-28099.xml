@@ -1150,6 +1150,7 @@
 			<value level="11">750000</value>
 			<value level="12">600000</value>
 		</reuseDelay>
+		<reuseDelayGroup>27349</reuseDelayGroup>
 		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
 		<effects>
 			<effect name="HealPercent">
@@ -1195,6 +1196,7 @@
 			<value level="11">38000</value>
 			<value level="12">30000</value>
 		</reuseDelay>
+		<reuseDelayGroup>27350</reuseDelayGroup>
 		<selfEffects>
 			<effect name="Blink">
 				<angle>180</angle>
@@ -1234,6 +1236,7 @@
 			<value level="11">38000</value>
 			<value level="12">30000</value>
 		</reuseDelay>
+		<reuseDelayGroup>27351</reuseDelayGroup>
 		<effects>
 			<effect name="RebalanceHP" />
 			<effect name="HealOverTime">
@@ -1275,6 +1278,7 @@
 			<value level="11">75000</value>
 			<value level="12">60000</value>
 		</reuseDelay>
+		<reuseDelayGroup>27352</reuseDelayGroup>
 		<effects>
 			<effect name="DispelBySlot">
 				<dispel>CHANGEBODY,9</dispel>
@@ -1317,6 +1321,7 @@
 			<value level="11">750000</value>
 			<value level="12">600000</value>
 		</reuseDelay>
+		<reuseDelayGroup>27353</reuseDelayGroup>
 		<effects>
 			<effect name="PAtk">
 				<amount>100</amount>
@@ -1365,6 +1370,7 @@
 			<value level="11">750000</value>
 			<value level="12">600000</value>
 		</reuseDelay>
+		<reuseDelayGroup>27354</reuseDelayGroup>
 		<effects>
 			<effect name="DamageBlock">
 				<type>BLOCK_HP</type>
@@ -1413,6 +1419,7 @@
 			<value level="11">4500000</value>
 			<value level="12">3600000</value>
 		</reuseDelay>
+		<reuseDelayGroup>27355</reuseDelayGroup>
 		<effects>
 			<effect name="ResurrectionSpecial">
 				<power>100</power>
@@ -1461,6 +1468,7 @@
 			<value level="11">38000</value>
 			<value level="12">30000</value>
 		</reuseDelay>
+		<reuseDelayGroup>27356</reuseDelayGroup>
 		<effects>
 			<effect name="BlockActions">
 				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
@@ -1519,6 +1527,7 @@
 			<value level="11">38000</value>
 			<value level="12">30000</value>
 		</reuseDelay>
+		<reuseDelayGroup>27357</reuseDelayGroup>
 		<conditions>
 			<condition name="OpCheckCrtEffect" />
 		</conditions>
@@ -1571,6 +1580,7 @@
 			<value level="11">750000</value>
 			<value level="12">600000</value>
 		</reuseDelay>
+		<reuseDelayGroup>27358</reuseDelayGroup>
 		<effects>
 			<effect name="AbnormalShield">
 				<times>5</times>
@@ -1605,6 +1615,7 @@
 			<value level="11">2250000</value>
 			<value level="12">1800000</value>
 		</reuseDelay>
+		<reuseDelayGroup>27359</reuseDelayGroup>
 		<conditions>
 			<condition name="OpCallPc" />
 			<condition name="TargetMyParty">
@@ -1645,6 +1656,7 @@
 			<value level="11">1500000</value>
 			<value level="12">1200000</value>
 		</reuseDelay>
+		<reuseDelayGroup>27360</reuseDelayGroup>
 		<effects>
 			<effect name="DamageShield">
 				<amount>20</amount>
@@ -1676,6 +1688,7 @@
 			<value level="11">750000</value>
 			<value level="12">600000</value>
 		</reuseDelay>
+		<reuseDelayGroup>27349</reuseDelayGroup>
 		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
 		<effects>
 			<effect name="HealPercent">
@@ -1721,6 +1734,7 @@
 			<value level="11">38000</value>
 			<value level="12">30000</value>
 		</reuseDelay>
+		<reuseDelayGroup>27350</reuseDelayGroup>
 		<selfEffects>
 			<effect name="Blink">
 				<angle>180</angle>
@@ -1760,6 +1774,7 @@
 			<value level="11">38000</value>
 			<value level="12">30000</value>
 		</reuseDelay>
+		<reuseDelayGroup>27351</reuseDelayGroup>
 		<effects>
 			<effect name="RebalanceHP" />
 			<effect name="HealOverTime">
@@ -1801,6 +1816,7 @@
 			<value level="11">75000</value>
 			<value level="12">60000</value>
 		</reuseDelay>
+		<reuseDelayGroup>27352</reuseDelayGroup>
 		<effects>
 			<effect name="DispelBySlot">
 				<dispel>CHANGEBODY,9</dispel>
@@ -1843,6 +1859,7 @@
 			<value level="11">750000</value>
 			<value level="12">600000</value>
 		</reuseDelay>
+		<reuseDelayGroup>27353</reuseDelayGroup>
 		<effects>
 			<effect name="PAtk">
 				<amount>100</amount>
@@ -1891,6 +1908,7 @@
 			<value level="11">750000</value>
 			<value level="12">600000</value>
 		</reuseDelay>
+		<reuseDelayGroup>27354</reuseDelayGroup>
 		<effects>
 			<effect name="DamageBlock">
 				<type>BLOCK_HP</type>
