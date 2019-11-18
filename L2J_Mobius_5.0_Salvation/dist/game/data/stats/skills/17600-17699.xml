@@ -55,7 +55,11 @@
 		<targetScope>SINGLE</targetScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13410</npcId> <!-- Virgo -->
+				<npcId>
+					<value level="1">13410</value>
+					<value level="2">13488</value>
+					<value level="3">13500</value>
+				</npcId>
 			</effect>
 		</effects>
 	</skill>
@@ -70,7 +74,11 @@
 		<targetScope>SINGLE</targetScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13412</npcId> <!-- Capricorn -->
+				<npcId>
+					<value level="1">13412</value>
+					<value level="2">13490</value>
+					<value level="3">13502</value>
+				</npcId>
 			</effect>
 		</effects>
 	</skill>
@@ -85,7 +93,11 @@
 		<targetScope>SINGLE</targetScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13415</npcId> <!-- Libra -->
+				<npcId>
+					<value level="1">13415</value>
+					<value level="2">13493</value>
+					<value level="3">13505</value>
+				</npcId>
 			</effect>
 		</effects>
 	</skill>
@@ -100,7 +112,11 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13411</npcId> <!-- Aries -->
+				<npcId>
+					<value level="1">13411</value>
+					<value level="2">13489</value>
+					<value level="3">13501</value>
+				</npcId>
 			</effect>
 		</effects>
 	</skill>
@@ -115,7 +131,11 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13418</npcId> <!-- Taurus -->
+				<npcId>
+					<value level="1">13418</value>
+					<value level="2">13496</value>
+					<value level="3">13508</value>
+				</npcId>
 			</effect>
 		</effects>
 	</skill>
@@ -130,7 +150,11 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13414</npcId> <!-- Leo -->
+				<npcId>
+					<value level="1">13414</value>
+					<value level="2">13492</value>
+					<value level="3">13504</value>
+				</npcId>
 			</effect>
 		</effects>
 	</skill>
@@ -145,7 +169,11 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13413</npcId> <!-- Gemini -->
+				<npcId>
+					<value level="1">13413</value>
+					<value level="2">13491</value>
+					<value level="3">13503</value>
+				</npcId>
 			</effect>
 		</effects>
 	</skill>
@@ -160,7 +188,11 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13417</npcId> <!-- Scorpio -->
+				<npcId>
+					<value level="1">13417</value>
+					<value level="2">13495</value>
+					<value level="3">13507</value>
+				</npcId>
 			</effect>
 		</effects>
 	</skill>
@@ -175,7 +207,11 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13408</npcId> <!-- Aquarius -->
+				<npcId>
+					<value level="1">13408</value>
+					<value level="2">13486</value>
+					<value level="3">13498</value>
+				</npcId>
 			</effect>
 		</effects>
 	</skill>
@@ -190,7 +226,11 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13407</npcId> <!-- Pisces -->
+				<npcId>
+					<value level="1">13407</value>
+					<value level="2">13485</value>
+					<value level="3">13497</value>
+				</npcId>
 			</effect>
 		</effects>
 	</skill>
@@ -205,7 +245,11 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13416</npcId> <!-- Sagittarius -->
+				<npcId>
+					<value level="1">13416</value>
+					<value level="2">13494</value>
+					<value level="3">13506</value>
+				</npcId>
 			</effect>
 		</effects>
 	</skill>
@@ -220,7 +264,11 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13409</npcId> <!-- Cancer -->
+				<npcId>
+					<value level="1">13409</value>
+					<value level="2">13499</value>
+					<value level="3">13511</value>
+				</npcId>
 			</effect>
 		</effects>
 	</skill>

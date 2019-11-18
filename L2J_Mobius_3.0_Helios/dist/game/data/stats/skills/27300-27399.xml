@@ -951,10 +951,7 @@
 		<effects>
 			<effect name="RebalanceHP" />
 			<effect name="HealOverTime">
-				<power>
-					<value fromLevel="1" toLevel="1">333</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
-				</power>
+				<power>333</power>
 				<ticks>1</ticks>
 			</effect>
 		</effects>
@@ -1272,18 +1269,6 @@
 				<KNOCKDOWN>100</KNOCKDOWN>
 				<SLEEP>100</SLEEP>
 				<AIRBIND>100</AIRBIND>
-			</effect>
-			<effect name="PhysicalDefence" fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2030">
-				<amount>
-					<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2030">{-0.6 - 0.4 * subIndex}</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MagicalDefence" fromLevel="3" toLevel="7" fromSubLevel="3001" toSubLevel="3030">
-				<amount>
-					<value fromLevel="3" toLevel="7" fromSubLevel="3001" toSubLevel="3030">{-0.6 - 0.4 * subIndex}</value>
-				</amount>
-				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>

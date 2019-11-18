@@ -666,35 +666,59 @@
 		<operateType>P</operateType>
 		<effects>
 			<effect name="StatUp">
-				<amount>1</amount>
+				<amount>
+					<value level="1">1</value>
+					<value level="2">1</value>
+				</amount>
 				<stat>STR</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>1</amount>
+				<amount>
+					<value level="1">1</value>
+					<value level="2">1</value>
+				</amount>
 				<stat>INT</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>1</amount>
+				<amount>
+					<value level="1">1</value>
+					<value level="2">1</value>
+				</amount>
 				<stat>CON</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>1</amount>
+				<amount>
+					<value level="1">1</value>
+					<value level="2">1</value>
+				</amount>
 				<stat>DEX</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>1</amount>
+				<amount>
+					<value level="1">1</value>
+					<value level="2">1</value>
+				</amount>
 				<stat>WIT</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>1</amount>
+				<amount>
+					<value level="1">1</value>
+					<value level="2">1</value>
+				</amount>
 				<stat>MEN</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>1</amount>
+				<amount>
+					<value level="1">0</value>
+					<value level="2">1</value>
+				</amount>
 				<stat>LUC</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>1</amount>
+				<amount>
+					<value level="1">0</value>
+					<value level="2">1</value>
+				</amount>
 				<stat>CHA</stat>
 			</effect>
 		</effects>

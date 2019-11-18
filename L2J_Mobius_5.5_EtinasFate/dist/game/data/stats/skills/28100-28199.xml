@@ -3,66 +3,272 @@
 	<skill id="28100" toLevel="12" name="Bountiful Resurrection">
 		<!-- Resurrects from death fully recovered. Buffs/ debuffs remain in death, but Noblesse Blessing and Lucky Charm disappear. -->
 		<icon>BranchIcon.Icon.accessary_sign_agathion_may_skill_i00</icon>
-		<operateType>A1</operateType>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<reuseDelay>13500000</reuseDelay>
+		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<abnormalType>RESURRECTION_SPECIAL</abnormalType>
+		<abnormalTime>3600</abnormalTime>
+		<effectRange>1100</effectRange>
+		<staticReuse>true</staticReuse>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
 		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
+		<reuseDelay>
+			<value level="1">13500000</value>
+			<value level="2">12600000</value>
+			<value level="3">11700000</value>
+			<value level="4">10800000</value>
+			<value level="5">9900000</value>
+			<value level="6">9000000</value>
+			<value level="7">8100000</value>
+			<value level="8">7200000</value>
+			<value level="9">6300000</value>
+			<value level="10">5400000</value>
+			<value level="11">4500000</value>
+			<value level="12">3600000</value>
+		</reuseDelay>
+		<effects>
+			<effect name="ResurrectionSpecial">
+				<power>100</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="28101" toLevel="12" name="Scorpion's Mass Exile">
 		<!-- Banishes enemies near target into another dimension. They become immobile and invincible against debuffs, skills, and standard attacks, and lose $s1 HP/ sec. -->
 		<icon>BranchIcon.Icon.accessary_sign_agathion_oct_i00</icon>
-		<operateType>A1</operateType>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<isDebuff>true</isDebuff>
+		<operateType>A2</operateType>
+		<trait>DEPORT</trait>
 		<castRange>600</castRange>
 		<hitTime>3000</hitTime>
 		<coolTime>500</coolTime>
-		<reuseDelay>118000</reuseDelay>
+		<isMagic>1</isMagic>
 		<effectPoint>-687</effectPoint>
+		<isDebuff>true</isDebuff>
+		<trait>DEPORT</trait>
+		<abnormalType>DEPORT</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<hitCancelTime>1</hitCancelTime>
+		<effectRange>1100</effectRange>
+		<activateRate>80</activateRate>
+		<magicLvl>85</magicLvl>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<affectRange>150</affectRange>
+		<affectLimit>10-10</affectLimit>
+		<abnormalVisualEffect>DEPORT</abnormalVisualEffect>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
+		<reuseDelay>
+			<value level="1">118000</value>
+			<value level="2">110000</value>
+			<value level="3">102000</value>
+			<value level="4">94000</value>
+			<value level="5">86000</value>
+			<value level="6">78000</value>
+			<value level="7">70000</value>
+			<value level="8">62000</value>
+			<value level="9">54000</value>
+			<value level="10">46000</value>
+			<value level="11">38000</value>
+			<value level="12">30000</value>
+		</reuseDelay>
+		<effects>
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
+			<effect name="DamOverTime">
+				<power>282</power>
+				<ticks>1</ticks>
+			</effect>
+			<effect name="DamageBlock">
+				<type>BLOCK_HP</type>
+			</effect>
+			<effect name="DamageBlock">
+				<type>BLOCK_MP</type>
+			</effect>
+			<effect name="BuffBlock" />
+			<effect name="DebuffBlock" />
+		</effects>
 	</skill>
 	<skill id="28102" toLevel="12" name="Mass Binding Flood">
 		<!-- Immobilizes target and nearby enemies midair for $s1 and inflicts $s2 damage per sec. -->
 		<icon>BranchIcon.Icon.accessary_sign_agathion_jan_i00</icon>
 		<operateType>A1</operateType>
-		<isDebuff>true</isDebuff>
 		<castRange>1100</castRange>
 		<hitTime>10000</hitTime>
-		<reuseDelay>118000</reuseDelay>
 		<effectPoint>-707</effectPoint>
+		<abnormalTime>9</abnormalTime>
+		<isDebuff>true</isDebuff>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalType>AIRBIND</abnormalType>
+		<abnormalVisualEffect>AIRBIND</abnormalVisualEffect>
+		<basicProperty>NONE</basicProperty>
+		<trait>AIRBIND</trait>
+		<castRange>1100</castRange>
+		<effectRange>1100</effectRange>
+		<abnormalResists>STUN;TURN_FLEE</abnormalResists>
+		<magicCriticalRate>5</magicCriticalRate>
+		<reuseDelayGroup>11052</reuseDelayGroup>
+		<affectRange>150</affectRange>
+		<affectLimit>5-12</affectLimit>
+		<isMagic>1</isMagic>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
+		<reuseDelay>
+			<value level="1">118000</value>
+			<value level="2">110000</value>
+			<value level="3">102000</value>
+			<value level="4">94000</value>
+			<value level="5">86000</value>
+			<value level="6">78000</value>
+			<value level="7">70000</value>
+			<value level="8">62000</value>
+			<value level="9">54000</value>
+			<value level="10">46000</value>
+			<value level="11">38000</value>
+			<value level="12">30000</value>
+		</reuseDelay>
+		<conditions>
+			<condition name="OpCheckCrtEffect" />
+		</conditions>
+		<effects>
+			<effect name="AirBind" />
+			<effect name="BlockActions" />
+			<effect name="BlockControl" />
+			<effect name="DamOverTime">
+				<power>100</power>
+				<ticks>1</ticks>
+			</effect>
+			<effect name="DefenceTrait">
+				<HOLD>100</HOLD>
+				<DERANGEMENT>100</DERANGEMENT>
+				<SHOCK>100</SHOCK>
+				<KNOCKBACK>100</KNOCKBACK>
+				<CHANGEBODY>100</CHANGEBODY>
+				<KNOCKDOWN>100</KNOCKDOWN>
+				<SLEEP>100</SLEEP>
+				<AIRBIND>100</AIRBIND>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="28103" toLevel="12" name="Slippery Scale">
 		<!-- For $s1, defends against debuffs $s2 times. -->
 		<icon>BranchIcon.Icon.accessary_sign_agathion_feb_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<hitTime>200</hitTime>
-		<reuseDelay>2250000</reuseDelay>
 		<effectPoint>2</effectPoint>
+		<abnormalType>RACE_KAMAEL1</abnormalType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>99</magicLvl>
+		<basicProperty>NONE</basicProperty>
+		<activateRate>0</activateRate>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
+		<reuseDelay>
+			<value level="1">2250000</value>
+			<value level="2">2100000</value>
+			<value level="3">1950000</value>
+			<value level="4">1800000</value>
+			<value level="5">1650000</value>
+			<value level="6">1500000</value>
+			<value level="7">1350000</value>
+			<value level="8">1200000</value>
+			<value level="9">1050000</value>
+			<value level="10">900000</value>
+			<value level="11">750000</value>
+			<value level="12">600000</value>
+		</reuseDelay>
+		<effects>
+			<effect name="AbnormalShield">
+				<times>5</times>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="28104" toLevel="12" name="Archer's Call">
 		<!-- Summons all party members to you. -->
 		<icon>BranchIcon.Icon.accessary_sign_agathion_nov_i00</icon>
 		<operateType>A1</operateType>
-		<isMagic>4</isMagic>
 		<hitTime>15000</hitTime>
-		<reuseDelay>6750000</reuseDelay>
 		<effectPoint>467</effectPoint>
+		<isMagic>4</isMagic>
+		<effectRange>-2</effectRange>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>OTHERS</targetType>
+		<affectScope>PARTY</affectScope>
+		<affectObject>FRIEND</affectObject>
 		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
+		<reuseDelay>
+			<value level="1">6750000</value>
+			<value level="2">6300000</value>
+			<value level="3">5850000</value>
+			<value level="4">5400000</value>
+			<value level="5">4950000</value>
+			<value level="6">4500000</value>
+			<value level="7">4050000</value>
+			<value level="8">3600000</value>
+			<value level="9">3150000</value>
+			<value level="10">2700000</value>
+			<value level="11">2250000</value>
+			<value level="12">1800000</value>
+		</reuseDelay>
+		<conditions>
+			<condition name="OpCallPc" />
+			<condition name="TargetMyParty">
+				<includeMe>false</includeMe>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="CallPc" />
+		</effects>
 	</skill>
 	<skill id="28105" toLevel="12" name="Exoskeletal Shield">
 		<!-- Reflects $s1 of received damage. -->
 		<icon>BranchIcon.Icon.accessary_sign_agathion_june_skill_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
-		<reuseDelay>4500000</reuseDelay>
 		<effectPoint>379</effectPoint>
+		<abnormalType>DMG_SHIELD</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>60</abnormalTime>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<blockedInOlympiad>true</blockedInOlympiad> <!-- Unconfirmed -->
+		<reuseDelay>
+			<value level="1">4500000</value>
+			<value level="2">4200000</value>
+			<value level="3">3900000</value>
+			<value level="4">3600000</value>
+			<value level="5">3300000</value>
+			<value level="6">3000000</value>
+			<value level="7">2700000</value>
+			<value level="8">2400000</value>
+			<value level="9">2100000</value>
+			<value level="10">1800000</value>
+			<value level="11">1500000</value>
+			<value level="12">1200000</value>
+		</reuseDelay>
+		<effects>
+			<effect name="DamageShield">
+				<amount>20</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="28106" toLevel="1" name="Summon Virgo Agathion">
-		<!-- Summons the Virgo Agathion. -->
+		<!-- Summons Agathion Virgo. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -72,12 +278,12 @@
 		<targetScope>SINGLE</targetScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13410</npcId> <!-- Virgo -->
+				<npcId>13512</npcId>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="28107" toLevel="1" name="Summon Capricorn Agathion">
-		<!-- Summons the Capricorn Agathion. -->
+		<!-- Summons Agathion Capricorn. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -87,12 +293,12 @@
 		<targetScope>SINGLE</targetScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13412</npcId> <!-- Capricorn -->
+				<npcId>13514</npcId>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="28108" toLevel="1" name="Summon Libra Agathion">
-		<!-- Summons the Libra Agathion. -->
+		<!-- Summons Agathion Libra. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -102,84 +308,42 @@
 		<targetScope>SINGLE</targetScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13415</npcId> <!-- Libra -->
+				<npcId>13517</npcId>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="28109" toLevel="1" name="Summon Aries Agathion">
-		<!-- Summons the Aries Agathion. -->
+		<!-- Summons Agathion Aries. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic>
 		<magicLvl>85</magicLvl>
 		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
+		<targetScope>SINGLE</targetScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13411</npcId> <!-- Aries -->
+				<npcId>13513</npcId>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="28110" toLevel="1" name="Summon Taurus Agathion">
-		<!-- Summons the Taurus Agathion. -->
+		<!-- Summons Agathion Taurus. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic>
 		<magicLvl>85</magicLvl>
 		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
+		<targetScope>SINGLE</targetScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13418</npcId> <!-- Taurus -->
+				<npcId>13520</npcId>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="28111" toLevel="1" name="Summon Leo Agathion">
-		<!-- Summons the Leo Agathion. -->
-		<icon>icon.etc_summon_aga_agit_i00</icon>
-		<operateType>A1</operateType>
-		<hitTime>3000</hitTime>
-	</skill>
-	<skill id="28112" toLevel="1" name="Summon Gemini Agathion">
-		<!-- Summons the Gemini Agathion. -->
-		<icon>icon.etc_summon_aga_agit_i00</icon>
-		<operateType>A1</operateType>
-		<hitTime>3000</hitTime>
-	</skill>
-	<skill id="28113" toLevel="1" name="Summon Scorpio Agathion">
-		<!-- Summons the Scorpio Agathion. -->
-		<icon>icon.etc_summon_aga_agit_i00</icon>
-		<operateType>A1</operateType>
-		<hitTime>3000</hitTime>
-	</skill>
-	<skill id="28114" toLevel="1" name="Summon Aquarius Agathion">
-		<!-- Summons the Aquarius Agathion. -->
-		<icon>icon.etc_summon_aga_agit_i00</icon>
-		<operateType>A1</operateType>
-		<hitTime>3000</hitTime>
-	</skill>
-	<skill id="28115" toLevel="1" name="Summon Pisces Agathion">
-		<!-- Summons the Pisces Agathion. -->
-		<icon>icon.etc_summon_aga_agit_i00</icon>
-		<operateType>A1</operateType>
-		<hitTime>3000</hitTime>
-	</skill>
-	<skill id="28116" toLevel="1" name="Summon Sagittarius Agathion">
-		<!-- Summons the Sagittarius Agathion. -->
-		<icon>icon.etc_summon_aga_agit_i00</icon>
-		<operateType>A1</operateType>
-		<hitTime>3000</hitTime>
-	</skill>
-	<skill id="28117" toLevel="1" name="Summon Cancer Agathion">
-		<!-- Summons the Cancer Agathion. -->
-		<icon>icon.etc_summon_aga_agit_i00</icon>
-		<operateType>A1</operateType>
-		<hitTime>3000</hitTime>
-	</skill>
-	<skill id="28118" toLevel="1" name="Summon Virgo Agathion">
-		<!-- Summons the Virgo Agathion. -->
+		<!-- Summons Agathion Leo. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -189,12 +353,117 @@
 		<targetScope>SINGLE</targetScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13410</npcId> <!-- Virgo -->
+				<npcId>13516</npcId>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="28112" toLevel="1" name="Summon Gemini Agathion">
+		<!-- Summons Agathion Gemini. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic>
+		<magicLvl>85</magicLvl>
+		<targetType>SELF</targetType>
+		<targetScope>SINGLE</targetScope>
+		<effects>
+			<effect name="SummonAgathion">
+				<npcId>13515</npcId>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="28113" toLevel="1" name="Summon Scorpio Agathion">
+		<!-- Summons Agathion Scorpio. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic>
+		<magicLvl>85</magicLvl>
+		<targetType>SELF</targetType>
+		<targetScope>SINGLE</targetScope>
+		<effects>
+			<effect name="SummonAgathion">
+				<npcId>13519</npcId>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="28114" toLevel="1" name="Summon Aquarius Agathion">
+		<!-- Summons Agathion Aquarius. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic>
+		<magicLvl>85</magicLvl>
+		<targetType>SELF</targetType>
+		<targetScope>SINGLE</targetScope>
+		<effects>
+			<effect name="SummonAgathion">
+				<npcId>13510</npcId>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="28115" toLevel="1" name="Summon Pisces Agathion">
+		<!-- Summons Agathion Pisces. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic>
+		<magicLvl>85</magicLvl>
+		<targetType>SELF</targetType>
+		<targetScope>SINGLE</targetScope>
+		<effects>
+			<effect name="SummonAgathion">
+				<npcId>13509</npcId>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="28116" toLevel="1" name="Summon Sagittarius Agathion">
+		<!-- Summons Agathion Sagittarius. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic>
+		<magicLvl>85</magicLvl>
+		<targetType>SELF</targetType>
+		<targetScope>SINGLE</targetScope>
+		<effects>
+			<effect name="SummonAgathion">
+				<npcId>13518</npcId>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="28117" toLevel="1" name="Summon Cancer Agathion">
+		<!-- Summons Agathion Cancer. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic>
+		<magicLvl>85</magicLvl>
+		<targetType>SELF</targetType>
+		<targetScope>SINGLE</targetScope>
+		<effects>
+			<effect name="SummonAgathion">
+				<npcId>13511</npcId>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="28118" toLevel="1" name="Summon Virgo Agathion">
+		<!-- Summons Agathion Virgo. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic>
+		<magicLvl>85</magicLvl>
+		<targetType>SELF</targetType>
+		<targetScope>SINGLE</targetScope>
+		<effects>
+			<effect name="SummonAgathion">
+				<npcId>13553</npcId>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="28119" toLevel="1" name="Summon Capricorn Agathion">
-		<!-- Summons the Capricorn Agathion. -->
+		<!-- Summons Agathion Capricorn. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -204,12 +473,12 @@
 		<targetScope>SINGLE</targetScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13412</npcId> <!-- Capricorn -->
+				<npcId>13554</npcId>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="28120" toLevel="1" name="Summon Libra Agathion">
-		<!-- Summons the Libra Agathion. -->
+		<!-- Summons Agathion Libra. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -219,84 +488,42 @@
 		<targetScope>SINGLE</targetScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13415</npcId> <!-- Libra -->
+				<npcId>13555</npcId>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="28121" toLevel="1" name="Summon Aries Agathion">
-		<!-- Summons the Aries Agathion. -->
+		<!-- Summons Agathion Aries. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic>
 		<magicLvl>85</magicLvl>
 		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
+		<targetScope>SINGLE</targetScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13411</npcId> <!-- Aries -->
+				<npcId>13556</npcId>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="28122" toLevel="1" name="Summon Taurus Agathion">
-		<!-- Summons the Taurus Agathion. -->
+		<!-- Summons Agathion Taurus. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic>
 		<magicLvl>85</magicLvl>
 		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
+		<targetScope>SINGLE</targetScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13418</npcId> <!-- Taurus -->
+				<npcId>13557</npcId>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="28123" toLevel="1" name="Summon Leo Agathion">
-		<!-- Summons the Leo Agathion. -->
-		<icon>icon.etc_summon_aga_agit_i00</icon>
-		<operateType>A1</operateType>
-		<hitTime>3000</hitTime>
-	</skill>
-	<skill id="28124" toLevel="1" name="Summon Gemini Agathion">
-		<!-- Summons the Gemini Agathion. -->
-		<icon>icon.etc_summon_aga_agit_i00</icon>
-		<operateType>A1</operateType>
-		<hitTime>3000</hitTime>
-	</skill>
-	<skill id="28125" toLevel="1" name="Summon Scorpio Agathion">
-		<!-- Summons the Scorpio Agathion. -->
-		<icon>icon.etc_summon_aga_agit_i00</icon>
-		<operateType>A1</operateType>
-		<hitTime>3000</hitTime>
-	</skill>
-	<skill id="28126" toLevel="1" name="Summon Aquarius Agathion">
-		<!-- Summons the Aquarius Agathion. -->
-		<icon>icon.etc_summon_aga_agit_i00</icon>
-		<operateType>A1</operateType>
-		<hitTime>3000</hitTime>
-	</skill>
-	<skill id="28127" toLevel="1" name="Summon Pisces Agathion">
-		<!-- Summons the Pisces Agathion. -->
-		<icon>icon.etc_summon_aga_agit_i00</icon>
-		<operateType>A1</operateType>
-		<hitTime>3000</hitTime>
-	</skill>
-	<skill id="28128" toLevel="1" name="Summon Sagittarius Agathion">
-		<!-- Summons the Sagittarius Agathion. -->
-		<icon>icon.etc_summon_aga_agit_i00</icon>
-		<operateType>A1</operateType>
-		<hitTime>3000</hitTime>
-	</skill>
-	<skill id="28129" toLevel="1" name="Summon Cancer Agathion">
-		<!-- Summons the Cancer Agathion. -->
-		<icon>icon.etc_summon_aga_agit_i00</icon>
-		<operateType>A1</operateType>
-		<hitTime>3000</hitTime>
-	</skill>
-	<skill id="28130" toLevel="1" name="Summon Virgo Agathion">
-		<!-- Summons the Virgo Agathion. -->
+		<!-- Summons Agathion Leo. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -306,12 +533,117 @@
 		<targetScope>SINGLE</targetScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13410</npcId> <!-- Virgo -->
+				<npcId>13558</npcId>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="28124" toLevel="1" name="Summon Gemini Agathion">
+		<!-- Summons Agathion Gemini. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic>
+		<magicLvl>85</magicLvl>
+		<targetType>SELF</targetType>
+		<targetScope>SINGLE</targetScope>
+		<effects>
+			<effect name="SummonAgathion">
+				<npcId>13559</npcId>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="28125" toLevel="1" name="Summon Scorpio Agathion">
+		<!-- Summons Agathion Scorpio. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic>
+		<magicLvl>85</magicLvl>
+		<targetType>SELF</targetType>
+		<targetScope>SINGLE</targetScope>
+		<effects>
+			<effect name="SummonAgathion">
+				<npcId>13560</npcId>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="28126" toLevel="1" name="Summon Aquarius Agathion">
+		<!-- Summons Agathion Aquarius. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic>
+		<magicLvl>85</magicLvl>
+		<targetType>SELF</targetType>
+		<targetScope>SINGLE</targetScope>
+		<effects>
+			<effect name="SummonAgathion">
+				<npcId>13561</npcId>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="28127" toLevel="1" name="Summon Pisces Agathion">
+		<!-- Summons Agathion Pisces. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic>
+		<magicLvl>85</magicLvl>
+		<targetType>SELF</targetType>
+		<targetScope>SINGLE</targetScope>
+		<effects>
+			<effect name="SummonAgathion">
+				<npcId>13562</npcId>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="28128" toLevel="1" name="Summon Sagittarius Agathion">
+		<!-- Summons Agathion Sagittarius. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic>
+		<magicLvl>85</magicLvl>
+		<targetType>SELF</targetType>
+		<targetScope>SINGLE</targetScope>
+		<effects>
+			<effect name="SummonAgathion">
+				<npcId>13563</npcId>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="28129" toLevel="1" name="Summon Cancer Agathion">
+		<!-- Summons Agathion Cancer. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic>
+		<magicLvl>85</magicLvl>
+		<targetType>SELF</targetType>
+		<targetScope>SINGLE</targetScope>
+		<effects>
+			<effect name="SummonAgathion">
+				<npcId>13564</npcId>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="28130" toLevel="1" name="Summon Virgo Agathion">
+		<!-- Summons Agathion Virgo. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic>
+		<magicLvl>85</magicLvl>
+		<targetType>SELF</targetType>
+		<targetScope>SINGLE</targetScope>
+		<effects>
+			<effect name="SummonAgathion">
+				<npcId>13591</npcId>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="28131" toLevel="1" name="Summon Capricorn Agathion">
-		<!-- Summons the Capricorn Agathion. -->
+		<!-- Summons Agathion Capricorn. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -321,12 +653,12 @@
 		<targetScope>SINGLE</targetScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13412</npcId> <!-- Capricorn -->
+				<npcId>13592</npcId>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="28132" toLevel="1" name="Summon Libra Agathion">
-		<!-- Summons the Libra Agathion. -->
+		<!-- Summons Agathion Libra. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
@@ -336,81 +668,144 @@
 		<targetScope>SINGLE</targetScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13415</npcId> <!-- Libra -->
+				<npcId>13593</npcId>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="28133" toLevel="1" name="Summon Aries Agathion">
-		<!-- Summons the Aries Agathion. -->
+		<!-- Summons Agathion Aries. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic>
 		<magicLvl>85</magicLvl>
 		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
+		<targetScope>SINGLE</targetScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13411</npcId> <!-- Aries -->
+				<npcId>13594</npcId>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="28134" toLevel="1" name="Summon Taurus Agathion">
-		<!-- Summons the Taurus Agathion. -->
+		<!-- Summons Agathion Taurus. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic>
 		<magicLvl>85</magicLvl>
 		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
+		<targetScope>SINGLE</targetScope>
 		<effects>
 			<effect name="SummonAgathion">
-				<npcId>13418</npcId> <!-- Taurus -->
+				<npcId>13595</npcId>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="28135" toLevel="1" name="Summon Leo Agathion">
-		<!-- Summons the Leo Agathion. -->
+		<!-- Summons Agathion Leo. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic>
+		<magicLvl>85</magicLvl>
+		<targetType>SELF</targetType>
+		<targetScope>SINGLE</targetScope>
+		<effects>
+			<effect name="SummonAgathion">
+				<npcId>13596</npcId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="28136" toLevel="1" name="Summon Gemini Agathion">
-		<!-- Summons the Gemini Agathion. -->
+		<!-- Summons Agathion Gemini. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic>
+		<magicLvl>85</magicLvl>
+		<targetType>SELF</targetType>
+		<targetScope>SINGLE</targetScope>
+		<effects>
+			<effect name="SummonAgathion">
+				<npcId>13597</npcId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="28137" toLevel="1" name="Summon Scorpio Agathion">
-		<!-- Summons the Scorpio Agathion. -->
+		<!-- Summons Agathion Scorpio. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic>
+		<magicLvl>85</magicLvl>
+		<targetType>SELF</targetType>
+		<targetScope>SINGLE</targetScope>
+		<effects>
+			<effect name="SummonAgathion">
+				<npcId>13598</npcId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="28138" toLevel="1" name="Summon Aquarius Agathion">
-		<!-- Summons the Aquarius Agathion. -->
+		<!-- Summons Agathion Aquarius. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic>
+		<magicLvl>85</magicLvl>
+		<targetType>SELF</targetType>
+		<targetScope>SINGLE</targetScope>
+		<effects>
+			<effect name="SummonAgathion">
+				<npcId>13599</npcId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="28139" toLevel="1" name="Summon Pisces Agathion">
-		<!-- Summons the Pisces Agathion. -->
+		<!-- Summons Agathion Pisces. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic>
+		<magicLvl>85</magicLvl>
+		<targetType>SELF</targetType>
+		<targetScope>SINGLE</targetScope>
+		<effects>
+			<effect name="SummonAgathion">
+				<npcId>13600</npcId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="28140" toLevel="1" name="Summon Sagittarius Agathion">
-		<!-- Summons the Sagittarius Agathion. -->
+		<!-- Summons Agathion Sagittarius. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic>
+		<magicLvl>85</magicLvl>
+		<targetType>SELF</targetType>
+		<targetScope>SINGLE</targetScope>
+		<effects>
+			<effect name="SummonAgathion">
+				<npcId>13601</npcId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="28141" toLevel="1" name="Summon Cancer Agathion">
-		<!-- Summons the Cancer Agathion. -->
+		<!-- Summons Agathion Cancer. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic>
+		<magicLvl>85</magicLvl>
+		<targetType>SELF</targetType>
+		<targetScope>SINGLE</targetScope>
+		<effects>
+			<effect name="SummonAgathion">
+				<npcId>13602</npcId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="28142" toLevel="10" name="Sayha's Talisman">
 		<!-- P. Def. +$s1, M. Def. +$s2, Acquired XP/ SP +$s3. -->
