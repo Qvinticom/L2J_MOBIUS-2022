@@ -1889,6 +1889,13 @@ public abstract class AbstractScript extends ManagedScript
 			{
 				summoner.addSummonedNpc(npc);
 			}
+			
+			// Make sure info is broadcasted in instances
+			if (npc.getInstanceId() > 0)
+			{
+				npc.broadcastInfo();
+			}
+			
 			return npc;
 		}
 		catch (Exception e)
