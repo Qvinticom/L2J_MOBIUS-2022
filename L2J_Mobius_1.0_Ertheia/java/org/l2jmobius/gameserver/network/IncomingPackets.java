@@ -186,7 +186,7 @@ public enum IncomingPackets implements IIncomingPackets<GameClient>
 	REQUEST_RECIPE_SHOP_MANAGE_LIST(0xB9, null, ConnectionState.IN_GAME),
 	REQUEST_RECIPE_SHOP_MESSAGE_SET(0xBA, RequestRecipeShopMessageSet::new, ConnectionState.IN_GAME),
 	REQUEST_RECIPE_SHOP_LIST_SET(0xBB, RequestRecipeShopListSet::new, ConnectionState.IN_GAME),
-	REQUEST_RECIPE_SHOP_MANAGE_QUIT(0xBC, RequestRecipeShopManageQuit::new, ConnectionState.IN_GAME),
+	REQUEST_RECIPE_SHOP_MANAGE_QUIT(0xBC, null, ConnectionState.IN_GAME),
 	REQUEST_RECIPE_SHOP_MANAGE_CANCEL(0xBD, null, ConnectionState.IN_GAME),
 	REQUEST_RECIPE_SHOP_MAKE_INFO(0xBE, RequestRecipeShopMakeInfo::new, ConnectionState.IN_GAME),
 	REQUEST_RECIPE_SHOP_MAKE_ITEM(0xBF, RequestRecipeShopMakeItem::new, ConnectionState.IN_GAME),
