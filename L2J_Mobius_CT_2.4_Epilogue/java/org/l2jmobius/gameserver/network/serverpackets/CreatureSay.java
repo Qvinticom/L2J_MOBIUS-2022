@@ -35,8 +35,6 @@ public class CreatureSay implements IClientOutgoingPacket
 	private int _charId = 0;
 	private String _text = null;
 	private int _msgId = 0;
-	@SuppressWarnings("unused")
-	private int _npcString = -1;
 	private List<String> _parameters;
 	
 	/**
@@ -74,7 +72,7 @@ public class CreatureSay implements IClientOutgoingPacket
 		_objectId = objectId;
 		_textType = messageType;
 		_charId = charId;
-		_npcString = npcString.getId();
+		_text = npcString.getText();
 	}
 	
 	public CreatureSay(int objectId, ChatType messageType, String charName, NpcStringId npcString)
@@ -82,7 +80,7 @@ public class CreatureSay implements IClientOutgoingPacket
 		_objectId = objectId;
 		_textType = messageType;
 		_charName = charName;
-		_npcString = npcString.getId();
+		_text = npcString.getText();
 	}
 	
 	public CreatureSay(int objectId, ChatType messageType, int charId, SystemMessageId sysString)
@@ -90,17 +88,7 @@ public class CreatureSay implements IClientOutgoingPacket
 		_objectId = objectId;
 		_textType = messageType;
 		_charId = charId;
-		_npcString = sysString.getId();
-	}
-	
-	// Old Epilogue method
-	// Using it for Boat/Vehicles
-	public CreatureSay(int objectId, ChatType messageType, int charId, int msgId)
-	{
-		_objectId = objectId;
-		_textType = messageType;
-		_charId = charId;
-		_msgId = msgId;
+		_msgId = sysString.getId();
 	}
 	
 	/**
@@ -133,7 +121,6 @@ public class CreatureSay implements IClientOutgoingPacket
 		if (_msgId != 0)
 		{
 			packet.writeD(_msgId);
-			// _msgId = 0;
 		}
 		else if (_text != null)
 		{

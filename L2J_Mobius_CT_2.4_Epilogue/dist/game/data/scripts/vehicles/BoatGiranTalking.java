@@ -24,6 +24,7 @@ import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.instancemanager.BoatManager;
 import org.l2jmobius.gameserver.model.VehiclePathPoint;
 import org.l2jmobius.gameserver.model.actor.instance.BoatInstance;
+import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
 
@@ -123,29 +124,29 @@ public class BoatGiranTalking implements Runnable
 	{
 		_boat = boat;
 		
-		ARRIVED_AT_GIRAN = new CreatureSay(0, ChatType.BOAT, 801, 992);
-		ARRIVED_AT_GIRAN_2 = new CreatureSay(0, ChatType.BOAT, 801, 987);
-		LEAVE_GIRAN5 = new CreatureSay(0, ChatType.BOAT, 801, 988);
-		LEAVE_GIRAN1 = new CreatureSay(0, ChatType.BOAT, 801, 989);
-		LEAVE_GIRAN0 = new CreatureSay(0, ChatType.BOAT, 801, 990);
-		LEAVING_GIRAN = new CreatureSay(0, ChatType.BOAT, 801, 991);
-		ARRIVED_AT_TALKING = new CreatureSay(0, ChatType.BOAT, 801, 979);
-		ARRIVED_AT_TALKING_2 = new CreatureSay(0, ChatType.BOAT, 801, 993);
-		LEAVE_TALKING5 = new CreatureSay(0, ChatType.BOAT, 801, 994);
-		LEAVE_TALKING1 = new CreatureSay(0, ChatType.BOAT, 801, 995);
-		LEAVE_TALKING0 = new CreatureSay(0, ChatType.BOAT, 801, 996);
-		LEAVING_TALKING = new CreatureSay(0, ChatType.BOAT, 801, 997);
-		BUSY_TALKING = new CreatureSay(0, ChatType.BOAT, 801, 1487);
+		ARRIVED_AT_GIRAN = new CreatureSay(0, ChatType.BOAT, 801, SystemMessageId.THE_FERRY_HAS_ARRIVED_AT_GIRAN_HARBOR);
+		ARRIVED_AT_GIRAN_2 = new CreatureSay(0, ChatType.BOAT, 801, SystemMessageId.THE_FERRY_WILL_LEAVE_FOR_TALKING_ISLAND_HARBOR_AFTER_ANCHORING_FOR_TEN_MINUTES);
+		LEAVE_GIRAN5 = new CreatureSay(0, ChatType.BOAT, 801, SystemMessageId.THE_FERRY_WILL_LEAVE_FOR_TALKING_ISLAND_HARBOR_IN_FIVE_MINUTES);
+		LEAVE_GIRAN1 = new CreatureSay(0, ChatType.BOAT, 801, SystemMessageId.THE_FERRY_WILL_LEAVE_FOR_TALKING_ISLAND_HARBOR_IN_ONE_MINUTE);
+		LEAVE_GIRAN0 = new CreatureSay(0, ChatType.BOAT, 801, SystemMessageId.THE_FERRY_WILL_BE_LEAVING_SOON_FOR_TALKING_ISLAND_HARBOR);
+		LEAVING_GIRAN = new CreatureSay(0, ChatType.BOAT, 801, SystemMessageId.THE_FERRY_IS_LEAVING_FOR_TALKING_ISLAND_HARBOR);
+		ARRIVED_AT_TALKING = new CreatureSay(0, ChatType.BOAT, 801, SystemMessageId.THE_FERRY_HAS_ARRIVED_AT_TALKING_ISLAND_HARBOR);
+		ARRIVED_AT_TALKING_2 = new CreatureSay(0, ChatType.BOAT, 801, SystemMessageId.THE_FERRY_WILL_LEAVE_FOR_GIRAN_HARBOR_AFTER_ANCHORING_FOR_TEN_MINUTES);
+		LEAVE_TALKING5 = new CreatureSay(0, ChatType.BOAT, 801, SystemMessageId.THE_FERRY_WILL_LEAVE_FOR_GIRAN_HARBOR_IN_FIVE_MINUTES);
+		LEAVE_TALKING1 = new CreatureSay(0, ChatType.BOAT, 801, SystemMessageId.THE_FERRY_WILL_LEAVE_FOR_GIRAN_HARBOR_IN_ONE_MINUTE);
+		LEAVE_TALKING0 = new CreatureSay(0, ChatType.BOAT, 801, SystemMessageId.THE_FERRY_WILL_BE_LEAVING_SOON_FOR_GIRAN_HARBOR);
+		LEAVING_TALKING = new CreatureSay(0, ChatType.BOAT, 801, SystemMessageId.THE_FERRY_IS_LEAVING_FOR_GIRAN_HARBOR);
+		BUSY_TALKING = new CreatureSay(0, ChatType.BOAT, 801, SystemMessageId.THE_FERRY_FROM_GIRAN_HARBOR_TO_TALKING_ISLAND_HAS_BEEN_DELAYED);
 		
-		ARRIVAL_TALKING15 = new CreatureSay(0, ChatType.BOAT, 801, 1162);
-		ARRIVAL_TALKING10 = new CreatureSay(0, ChatType.BOAT, 801, 1163);
-		ARRIVAL_TALKING5 = new CreatureSay(0, ChatType.BOAT, 801, 1164);
-		ARRIVAL_TALKING1 = new CreatureSay(0, ChatType.BOAT, 801, 1165);
-		ARRIVAL_GIRAN20 = new CreatureSay(0, ChatType.BOAT, 801, 1166);
-		ARRIVAL_GIRAN15 = new CreatureSay(0, ChatType.BOAT, 801, 1167);
-		ARRIVAL_GIRAN10 = new CreatureSay(0, ChatType.BOAT, 801, 1168);
-		ARRIVAL_GIRAN5 = new CreatureSay(0, ChatType.BOAT, 801, 1169);
-		ARRIVAL_GIRAN1 = new CreatureSay(0, ChatType.BOAT, 801, 1170);
+		ARRIVAL_TALKING15 = new CreatureSay(0, ChatType.BOAT, 801, SystemMessageId.THE_FERRY_FROM_GIRAN_HARBOR_WILL_BE_ARRIVING_AT_TALKING_ISLAND_IN_APPROXIMATELY_15_MINUTES);
+		ARRIVAL_TALKING10 = new CreatureSay(0, ChatType.BOAT, 801, SystemMessageId.THE_FERRY_FROM_GIRAN_HARBOR_WILL_BE_ARRIVING_AT_TALKING_ISLAND_IN_APPROXIMATELY_10_MINUTES);
+		ARRIVAL_TALKING5 = new CreatureSay(0, ChatType.BOAT, 801, SystemMessageId.THE_FERRY_FROM_GIRAN_HARBOR_WILL_BE_ARRIVING_AT_TALKING_ISLAND_IN_APPROXIMATELY_5_MINUTES);
+		ARRIVAL_TALKING1 = new CreatureSay(0, ChatType.BOAT, 801, SystemMessageId.THE_FERRY_FROM_GIRAN_HARBOR_WILL_BE_ARRIVING_AT_TALKING_ISLAND_IN_APPROXIMATELY_1_MINUTE);
+		ARRIVAL_GIRAN20 = new CreatureSay(0, ChatType.BOAT, 801, SystemMessageId.THE_FERRY_FROM_TALKING_ISLAND_WILL_BE_ARRIVING_AT_GIRAN_HARBOR_IN_APPROXIMATELY_20_MINUTES);
+		ARRIVAL_GIRAN15 = new CreatureSay(0, ChatType.BOAT, 801, SystemMessageId.THE_FERRY_FROM_TALKING_ISLAND_WILL_BE_ARRIVING_AT_GIRAN_HARBOR_IN_APPROXIMATELY_15_MINUTES);
+		ARRIVAL_GIRAN10 = new CreatureSay(0, ChatType.BOAT, 801, SystemMessageId.THE_FERRY_FROM_TALKING_ISLAND_WILL_BE_ARRIVING_AT_GIRAN_HARBOR_IN_APPROXIMATELY_10_MINUTES);
+		ARRIVAL_GIRAN5 = new CreatureSay(0, ChatType.BOAT, 801, SystemMessageId.THE_FERRY_FROM_TALKING_ISLAND_WILL_BE_ARRIVING_AT_GIRAN_HARBOR_IN_APPROXIMATELY_5_MINUTES);
+		ARRIVAL_GIRAN1 = new CreatureSay(0, ChatType.BOAT, 801, SystemMessageId.THE_FERRY_FROM_TALKING_ISLAND_WILL_BE_ARRIVING_AT_GIRAN_HARBOR_IN_APPROXIMATELY_1_MINUTE);
 		
 		GIRAN_SOUND = new PlaySound(0, "itemsound.ship_arrival_departure", 1, _boat.getObjectId(), GIRAN_DOCK.getX(), GIRAN_DOCK.getY(), GIRAN_DOCK.getZ());
 		TALKING_SOUND = new PlaySound(0, "itemsound.ship_arrival_departure", 1, _boat.getObjectId(), TALKING_DOCK[0].getX(), TALKING_DOCK[0].getY(), TALKING_DOCK[0].getZ());

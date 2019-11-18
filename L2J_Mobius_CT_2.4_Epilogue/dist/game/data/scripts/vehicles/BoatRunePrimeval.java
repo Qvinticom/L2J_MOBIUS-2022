@@ -24,6 +24,7 @@ import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.instancemanager.BoatManager;
 import org.l2jmobius.gameserver.model.VehiclePathPoint;
 import org.l2jmobius.gameserver.model.actor.instance.BoatInstance;
+import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
 
@@ -90,13 +91,13 @@ public class BoatRunePrimeval implements Runnable
 	{
 		_boat = boat;
 		
-		ARRIVED_AT_RUNE = new CreatureSay(0, ChatType.BOAT, 801, 1620);
-		ARRIVED_AT_RUNE_2 = new CreatureSay(0, ChatType.BOAT, 801, 1991);
-		LEAVING_RUNE = new CreatureSay(0, ChatType.BOAT, 801, 1992);
-		ARRIVED_AT_PRIMEVAL = new CreatureSay(0, ChatType.BOAT, 801, 1988);
-		ARRIVED_AT_PRIMEVAL_2 = new CreatureSay(0, ChatType.BOAT, 801, 1989);
-		LEAVING_PRIMEVAL = new CreatureSay(0, ChatType.BOAT, 801, 1990);
-		BUSY_RUNE = new CreatureSay(0, ChatType.BOAT, 801, 1993);
+		ARRIVED_AT_RUNE = new CreatureSay(0, ChatType.BOAT, 801, SystemMessageId.WELCOME_TO_RUNE_HARBOR);
+		ARRIVED_AT_RUNE_2 = new CreatureSay(0, ChatType.BOAT, 801, SystemMessageId.THE_FERRY_WILL_LEAVE_FOR_PRIMEVAL_ISLE_AFTER_ANCHORING_FOR_THREE_MINUTES);
+		LEAVING_RUNE = new CreatureSay(0, ChatType.BOAT, 801, SystemMessageId.THE_FERRY_IS_NOW_DEPARTING_RUNE_HARBOR_FOR_PRIMEVAL_ISLE);
+		ARRIVED_AT_PRIMEVAL = new CreatureSay(0, ChatType.BOAT, 801, SystemMessageId.THE_FERRY_HAS_ARRIVED_AT_PRIMEVAL_ISLE);
+		ARRIVED_AT_PRIMEVAL_2 = new CreatureSay(0, ChatType.BOAT, 801, SystemMessageId.THE_FERRY_WILL_LEAVE_FOR_RUNE_HARBOR_AFTER_ANCHORING_FOR_THREE_MINUTES);
+		LEAVING_PRIMEVAL = new CreatureSay(0, ChatType.BOAT, 801, SystemMessageId.THE_FERRY_IS_NOW_DEPARTING_PRIMEVAL_ISLE_FOR_RUNE_HARBOR);
+		BUSY_RUNE = new CreatureSay(0, ChatType.BOAT, 801, SystemMessageId.THE_FERRY_FROM_PRIMEVAL_ISLE_TO_RUNE_HARBOR_HAS_BEEN_DELAYED);
 		
 		RUNE_SOUND = new PlaySound(0, "itemsound.ship_arrival_departure", 1, _boat.getObjectId(), RUNE_DOCK[0].getX(), RUNE_DOCK[0].getY(), RUNE_DOCK[0].getZ());
 		PRIMEVAL_SOUND = new PlaySound(0, "itemsound.ship_arrival_departure", 1, _boat.getObjectId(), PRIMEVAL_DOCK.getX(), PRIMEVAL_DOCK.getY(), PRIMEVAL_DOCK.getZ());
