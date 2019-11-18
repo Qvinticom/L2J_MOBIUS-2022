@@ -16,9 +16,9 @@
  */
 package org.l2jmobius.gameserver.data.sql.impl;
 
-import java.util.HashMap;
-import java.util.List;
+import java.util.Collection;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.skills.Skill;
@@ -33,16 +33,16 @@ public class SummonEffectsTable
 	// -> key: charObjectId, value: classIndex Map
 	// --> key: classIndex, value: servitors Map
 	// ---> key: servitorSkillId, value: Effects list
-	private final Map<Integer, Map<Integer, Map<Integer, List<SummonEffect>>>> _servitorEffects = new HashMap<>();
+	private final Map<Integer, Map<Integer, Map<Integer, Collection<SummonEffect>>>> _servitorEffects = new ConcurrentHashMap<>();
 	
-	public Map<Integer, Map<Integer, Map<Integer, List<SummonEffect>>>> getServitorEffectsOwner()
+	public Map<Integer, Map<Integer, Map<Integer, Collection<SummonEffect>>>> getServitorEffectsOwner()
 	{
 		return _servitorEffects;
 	}
 	
-	public Map<Integer, List<SummonEffect>> getServitorEffects(PlayerInstance owner)
+	public Map<Integer, Collection<SummonEffect>> getServitorEffects(PlayerInstance owner)
 	{
-		final Map<Integer, Map<Integer, List<SummonEffect>>> servitorMap = _servitorEffects.get(owner.getObjectId());
+		final Map<Integer, Map<Integer, Collection<SummonEffect>>> servitorMap = _servitorEffects.get(owner.getObjectId());
 		if (servitorMap == null)
 		{
 			return null;
@@ -51,9 +51,9 @@ public class SummonEffectsTable
 	}
 	
 	/** Pets **/
-	private final Map<Integer, List<SummonEffect>> _petEffects = new HashMap<>(); // key: petItemObjectId, value: Effects list
+	private final Map<Integer, Collection<SummonEffect>> _petEffects = new ConcurrentHashMap<>(); // key: petItemObjectId, value: Effects list
 	
-	public Map<Integer, List<SummonEffect>> getPetEffects()
+	public Map<Integer, Collection<SummonEffect>> getPetEffects()
 	{
 		return _petEffects;
 	}

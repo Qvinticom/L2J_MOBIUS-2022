@@ -16,12 +16,10 @@
  */
 package org.l2jmobius.gameserver.data.sql.impl;
 
-import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
@@ -39,11 +37,11 @@ public class SummonEffectsTable
 	// -> key: charObjectId, value: classIndex Map
 	// --> key: classIndex, value: servitors Map
 	// ---> key: servitorSkillId, value: Effects list
-	private final Map<Integer, Map<Integer, Map<Integer, List<SummonEffect>>>> _servitorEffects = new HashMap<>();
+	private final Map<Integer, Map<Integer, Map<Integer, Collection<SummonEffect>>>> _servitorEffects = new ConcurrentHashMap<>();
 	
-	private Map<Integer, List<SummonEffect>> getServitorEffects(PlayerInstance owner)
+	private Map<Integer, Collection<SummonEffect>> getServitorEffects(PlayerInstance owner)
 	{
-		final Map<Integer, Map<Integer, List<SummonEffect>>> servitorMap = _servitorEffects.get(owner.getObjectId());
+		final Map<Integer, Map<Integer, Collection<SummonEffect>>> servitorMap = _servitorEffects.get(owner.getObjectId());
 		if (servitorMap == null)
 		{
 			return null;
@@ -51,7 +49,7 @@ public class SummonEffectsTable
 		return servitorMap.get(owner.getClassIndex());
 	}
 	
-	private List<SummonEffect> getServitorEffects(PlayerInstance owner, int referenceSkill)
+	private Collection<SummonEffect> getServitorEffects(PlayerInstance owner, int referenceSkill)
 	{
 		return containsOwner(owner) ? getServitorEffects(owner).get(referenceSkill) : null;
 	}
@@ -61,7 +59,7 @@ public class SummonEffectsTable
 		return _servitorEffects.getOrDefault(owner.getObjectId(), Collections.emptyMap()).containsKey(owner.getClassIndex());
 	}
 	
-	private void removeEffects(List<SummonEffect> effects, int skillId)
+	private void removeEffects(Collection<SummonEffect> effects, int skillId)
 	{
 		if ((effects != null) && !effects.isEmpty())
 		{
@@ -76,7 +74,7 @@ public class SummonEffectsTable
 		}
 	}
 	
-	private void applyEffects(Summon summon, List<SummonEffect> summonEffects)
+	private void applyEffects(Summon summon, Collection<SummonEffect> summonEffects)
 	{
 		if (summonEffects == null)
 		{
@@ -107,9 +105,9 @@ public class SummonEffectsTable
 	
 	public void addServitorEffect(PlayerInstance owner, int referenceSkill, Skill skill, int effectCurTime)
 	{
-		_servitorEffects.putIfAbsent(owner.getObjectId(), new HashMap<>());
-		_servitorEffects.get(owner.getObjectId()).putIfAbsent(owner.getClassIndex(), new HashMap<>());
-		getServitorEffects(owner).putIfAbsent(referenceSkill, new CopyOnWriteArrayList<>());
+		_servitorEffects.putIfAbsent(owner.getObjectId(), new ConcurrentHashMap<>());
+		_servitorEffects.get(owner.getObjectId()).putIfAbsent(owner.getClassIndex(), new ConcurrentHashMap<>());
+		getServitorEffects(owner).putIfAbsent(referenceSkill, ConcurrentHashMap.newKeySet());
 		getServitorEffects(owner).get(referenceSkill).add(new SummonEffect(skill, effectCurTime));
 	}
 	
@@ -124,11 +122,11 @@ public class SummonEffectsTable
 	}
 	
 	/** Pets **/
-	private final Map<Integer, List<SummonEffect>> _petEffects = new HashMap<>(); // key: petItemObjectId, value: Effects list
+	private final Map<Integer, Collection<SummonEffect>> _petEffects = new ConcurrentHashMap<>(); // key: petItemObjectId, value: Effects list
 	
 	public void addPetEffect(int controlObjectId, Skill skill, int effectCurTime)
 	{
-		_petEffects.computeIfAbsent(controlObjectId, k -> new ArrayList<>()).add(new SummonEffect(skill, effectCurTime));
+		_petEffects.computeIfAbsent(controlObjectId, k -> ConcurrentHashMap.newKeySet()).add(new SummonEffect(skill, effectCurTime));
 	}
 	
 	public boolean containsPetId(int controlObjectId)
