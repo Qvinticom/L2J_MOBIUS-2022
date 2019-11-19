@@ -12,6 +12,9 @@
 									<xs:attribute name="min" type="xs:positiveInteger" use="required" />
 									<xs:attribute name="max" type="xs:positiveInteger" use="required" />
 									<xs:attribute name="chance" type="xs:token" use="required" />
+									<xs:attribute name="minLevel" type="xs:positiveInteger" use="optional" />
+									<xs:attribute name="maxLevel" type="xs:positiveInteger" use="optional" />
+									<xs:attribute name="monsterIds" type="xs:string" use="optional" />
 								</xs:complexType>
 							</xs:element>
 						</xs:sequence>

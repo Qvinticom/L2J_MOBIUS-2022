@@ -38,7 +38,6 @@ import org.l2jmobius.gameserver.ai.CtrlEvent;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
 import org.l2jmobius.gameserver.data.xml.impl.ExtendDropData;
 import org.l2jmobius.gameserver.datatables.EventDroplist;
-import org.l2jmobius.gameserver.datatables.EventDroplist.DateDrop;
 import org.l2jmobius.gameserver.datatables.ItemTable;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.enums.DropType;
@@ -65,6 +64,7 @@ import org.l2jmobius.gameserver.model.events.EventDispatcher;
 import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnAttackableAggroRangeEnter;
 import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnAttackableAttack;
 import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnAttackableKill;
+import org.l2jmobius.gameserver.model.holders.EventDropHolder;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.items.Item;
@@ -1082,12 +1082,17 @@ public class Attackable extends Npc
 		}
 		
 		// Go through DateDrop of EventDroplist allNpcDateDrops within the date range
-		for (DateDrop drop : EventDroplist.getInstance().getAllDrops())
+		for (EventDropHolder drop : EventDroplist.getInstance().getAllDrops())
 		{
-			if (Rnd.get(1000000) < drop.getEventDrop().getDropChance())
+			if (!drop.getMonsterIds().isEmpty() && !drop.getMonsterIds().contains(getId()))
 			{
-				final int itemId = drop.getEventDrop().getItemIdList()[Rnd.get(drop.getEventDrop().getItemIdList().length)];
-				final long itemCount = Rnd.get(drop.getEventDrop().getMinCount(), drop.getEventDrop().getMaxCount());
+				continue;
+			}
+			final int monsterLevel = getLevel();
+			if ((monsterLevel >= drop.getMinLevel()) && (monsterLevel <= drop.getMaxLevel()) && (Rnd.get(100d) < drop.getChance()))
+			{
+				final int itemId = drop.getItemId();
+				final long itemCount = Rnd.get(drop.getMin(), drop.getMax());
 				if (Config.AUTO_LOOT_ITEM_IDS.contains(itemId) || Config.AUTO_LOOT || isFlying())
 				{
 					player.doAutoLoot(this, itemId, itemCount); // Give the item(s) to the PlayerInstance that has killed the Attackable

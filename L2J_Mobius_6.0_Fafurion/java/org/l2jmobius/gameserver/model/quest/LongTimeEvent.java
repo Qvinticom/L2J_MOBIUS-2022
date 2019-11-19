@@ -42,7 +42,7 @@ import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.announce.EventAnnouncement;
-import org.l2jmobius.gameserver.model.holders.DropHolder;
+import org.l2jmobius.gameserver.model.holders.EventDropHolder;
 import org.l2jmobius.gameserver.script.DateRange;
 import org.l2jmobius.gameserver.util.Broadcast;
 
@@ -58,8 +58,9 @@ public class LongTimeEvent extends Quest
 	boolean _enableShrines = false;
 	
 	// Messages
-	protected String _onEnterMsg = "Event is in process";
-	protected String _endMsg = "Event ends!";
+	protected String _onEnterMsg = "";
+	protected String _endMsg = "";
+	private int _enterAnnounceId = -1;
 	
 	protected DateRange _eventPeriod = null;
 	protected DateRange _dropPeriod;
@@ -68,7 +69,7 @@ public class LongTimeEvent extends Quest
 	protected final List<NpcSpawn> _spawnList = new ArrayList<>();
 	
 	// Drop data for event
-	protected final List<DropHolder> _dropList = new ArrayList<>();
+	protected final List<EventDropHolder> _dropList = new ArrayList<>();
 	
 	// Items to destroy when event ends.
 	protected final List<Integer> _destoyItemsOnEnd = new ArrayList<>();
@@ -165,8 +166,7 @@ public class LongTimeEvent extends Quest
 				
 				if (_eventPeriod.getStartDate().after(today) || _eventPeriod.isWithinRange(today))
 				{
-					final Node first = doc.getDocumentElement().getFirstChild();
-					for (Node n = first; n != null; n = n.getNextSibling())
+					for (Node n = doc.getDocumentElement().getFirstChild(); n != null; n = n.getNextSibling())
 					{
 						// Loading droplist
 						if (n.getNodeName().equalsIgnoreCase("droplist"))
@@ -181,11 +181,19 @@ public class LongTimeEvent extends Quest
 										final int minCount = Integer.parseInt(d.getAttributes().getNamedItem("min").getNodeValue());
 										final int maxCount = Integer.parseInt(d.getAttributes().getNamedItem("max").getNodeValue());
 										final String chance = d.getAttributes().getNamedItem("chance").getNodeValue();
-										int finalChance = 0;
-										
-										if (!chance.isEmpty() && chance.endsWith("%"))
+										final double finalChance = !chance.isEmpty() && chance.endsWith("%") ? Double.parseDouble(chance.substring(0, chance.length() - 1)) : 0;
+										final Node minLevelNode = d.getAttributes().getNamedItem("minLevel");
+										final int minLevel = minLevelNode == null ? 1 : Integer.parseInt(minLevelNode.getNodeValue());
+										final Node maxLevelNode = d.getAttributes().getNamedItem("maxLevel");
+										final int maxLevel = maxLevelNode == null ? Integer.MAX_VALUE : Integer.parseInt(maxLevelNode.getNodeValue());
+										final Node monsterIdsNode = d.getAttributes().getNamedItem("monsterIds");
+										final List<Integer> monsterIds = new ArrayList<>();
+										if (monsterIdsNode != null)
 										{
-											finalChance = Integer.parseInt(chance.substring(0, chance.length() - 1)) * 10000;
+											for (String id : monsterIdsNode.getNodeValue().split(","))
+											{
+												monsterIds.add(Integer.parseInt(id));
+											}
 										}
 										
 										if (ItemTable.getInstance().getTemplate(itemId) == null)
@@ -200,13 +208,13 @@ public class LongTimeEvent extends Quest
 											continue;
 										}
 										
-										if ((finalChance < 10000) || (finalChance > 1000000))
+										if ((finalChance < 0) || (finalChance > 100))
 										{
 											LOGGER.warning(getScriptName() + " event: item " + itemId + " - incorrect drop chance, item was not added in droplist");
 											continue;
 										}
 										
-										_dropList.add(new DropHolder(null, itemId, minCount, maxCount, finalChance));
+										_dropList.add(new EventDropHolder(itemId, minCount, maxCount, finalChance, minLevel, maxLevel, monsterIds));
 									}
 									catch (NumberFormatException nfe)
 									{
@@ -272,8 +280,7 @@ public class LongTimeEvent extends Quest
 				}
 				
 				// Load destroy item list at all times.
-				final Node first = doc.getDocumentElement().getFirstChild();
-				for (Node n = first; n != null; n = n.getNextSibling())
+				for (Node n = doc.getDocumentElement().getFirstChild(); n != null; n = n.getNextSibling())
 				{
 					if (n.getNodeName().equalsIgnoreCase("destoyItemsOnEnd"))
 					{
@@ -309,16 +316,16 @@ public class LongTimeEvent extends Quest
 	 */
 	protected void startEvent()
 	{
-		// Add drop
+		// Add drop.
 		if (_dropList != null)
 		{
-			for (DropHolder drop : _dropList)
+			for (EventDropHolder drop : _dropList)
 			{
-				EventDroplist.getInstance().addGlobalDrop(drop.getItemId(), drop.getMin(), drop.getMax(), (int) drop.getChance(), _dropPeriod);
+				EventDroplist.getInstance().addGlobalDrop(_dropPeriod, drop);
 			}
 		}
 		
-		// Add spawns
+		// Add spawns.
 		final Long millisToEventEnd = _eventPeriod.getEndDate().getTime() - System.currentTimeMillis();
 		if (_spawnList != null)
 		{
@@ -328,19 +335,25 @@ public class LongTimeEvent extends Quest
 			}
 		}
 		
-		// Enable town shrines
+		// Enable town shrines.
 		if (_enableShrines)
 		{
 			EventShrineManager.getInstance().setEnabled(true);
 		}
 		
-		// Send message on begin
-		Broadcast.toAllOnlinePlayers(_onEnterMsg);
+		// Event enter announcement.
+		if (!_onEnterMsg.isEmpty())
+		{
+			// Send message on begin.
+			Broadcast.toAllOnlinePlayers(_onEnterMsg);
+			
+			// Add announce for entering players.
+			final EventAnnouncement announce = new EventAnnouncement(_eventPeriod, _onEnterMsg);
+			AnnouncementsTable.getInstance().addAnnouncement(announce);
+			_enterAnnounceId = announce.getId();
+		}
 		
-		// Add announce for entering players
-		AnnouncementsTable.getInstance().addAnnouncement(new EventAnnouncement(_eventPeriod, _onEnterMsg));
-		
-		// Schedule event end (now only for message sending)
+		// Schedule event end.
 		ThreadPool.schedule(new ScheduleEnd(), millisToEventEnd);
 	}
 	
@@ -382,15 +395,26 @@ public class LongTimeEvent extends Quest
 		@Override
 		public void run()
 		{
-			// Disable town shrines
+			// Disable town shrines.
 			if (_enableShrines)
 			{
 				EventShrineManager.getInstance().setEnabled(false);
 			}
+			
 			// Destroy items that must exist only on event period.
 			destoyItemsOnEnd();
-			// Send message on end
-			Broadcast.toAllOnlinePlayers(_endMsg);
+			
+			// Send message on end.
+			if (!_endMsg.isEmpty())
+			{
+				Broadcast.toAllOnlinePlayers(_endMsg);
+			}
+			
+			// Remove announce for entering players.
+			if (_enterAnnounceId != -1)
+			{
+				AnnouncementsTable.getInstance().deleteAnnouncement(_enterAnnounceId);
+			}
 		}
 	}
 	
@@ -408,7 +432,7 @@ public class LongTimeEvent extends Quest
 						player.destroyItemByItemId(_eventName, itemId, -1, player, true);
 					}
 				}
-				// Update database
+				// Update database.
 				try (Connection con = DatabaseFactory.getConnection();
 					PreparedStatement statement = con.prepareStatement("DELETE FROM items WHERE item_id=?"))
 				{
