@@ -20,10 +20,10 @@
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>
-				<xs:element name="spawnlist" maxOccurs="1" minOccurs="1">
+				<xs:element name="spawnlist" maxOccurs="1" minOccurs="0">
 					<xs:complexType>
 						<xs:sequence maxOccurs="1" minOccurs="1">
-							<xs:element name="add" maxOccurs="unbounded" minOccurs="0">
+							<xs:element name="add" maxOccurs="unbounded" minOccurs="1">
 								<xs:complexType>
 									<xs:attribute name="npc" type="xs:positiveInteger" use="required" />
 									<xs:attribute name="x" type="xs:integer" use="required" />
@@ -50,9 +50,9 @@
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>
-				<xs:element name="messages" maxOccurs="1" minOccurs="1">
+				<xs:element name="messages" maxOccurs="1" minOccurs="0">
 					<xs:complexType>
-						<xs:sequence maxOccurs="1" minOccurs="0">
+						<xs:sequence maxOccurs="1" minOccurs="1">
 							<xs:element name="add" maxOccurs="2" minOccurs="2">
 								<xs:complexType>
 									<xs:attribute name="type" use="required">
