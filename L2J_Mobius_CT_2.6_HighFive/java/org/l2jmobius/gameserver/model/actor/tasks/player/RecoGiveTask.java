@@ -57,5 +57,8 @@ public class RecoGiveTask implements Runnable
 		sm.addInt(recoToGive);
 		_player.sendPacket(sm);
 		_player.sendPacket(new UserInfo(_player));
+		
+		// Store player recommendations to avoid reseting them with Nevit peace zone check.
+		_player.storeRecommendationValues();
 	}
 }
