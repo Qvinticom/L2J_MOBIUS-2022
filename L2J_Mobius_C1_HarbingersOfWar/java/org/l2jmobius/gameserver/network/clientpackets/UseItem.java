@@ -1,0 +1,110 @@
+/*
+ * This file is part of the L2J Mobius project.
+ * 
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+ */
+package org.l2jmobius.gameserver.network.clientpackets;
+
+import java.io.IOException;
+import java.util.List;
+
+import org.l2jmobius.gameserver.ClientThread;
+import org.l2jmobius.gameserver.handler.IItemHandler;
+import org.l2jmobius.gameserver.handler.ItemHandler;
+import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.serverpackets.CharInfo;
+import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
+import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
+
+public class UseItem extends ClientBasePacket
+{
+	private static final String _C__14_USEITEM = "[C] 14 UseItem";
+	
+	public UseItem(byte[] decrypt, ClientThread client) throws IOException
+	{
+		super(decrypt);
+		int objectId = readD();
+		_log.fine("use item:" + objectId);
+		PlayerInstance activeChar = client.getActiveChar();
+		ItemInstance item = activeChar.getInventory().getItem(objectId);
+		if ((item != null) && item.isEquipable() && !activeChar.isInCombat())
+		{
+			List<ItemInstance> items = activeChar.getInventory().equipItem(item);
+			if (item.getItem().getType2() == 0)
+			{
+				activeChar.updatePAtk();
+				activeChar.updateMAtk();
+			}
+			else if (item.getItem().getType2() == 1)
+			{
+				activeChar.updatePDef();
+			}
+			else if (item.getItem().getType2() == 2)
+			{
+				activeChar.updateMDef();
+			}
+			SystemMessage sm = new SystemMessage(49);
+			sm.addItemName(item.getItemId());
+			activeChar.sendPacket(sm);
+			InventoryUpdate iu = new InventoryUpdate(items);
+			activeChar.sendPacket(iu);
+			UserInfo ui = new UserInfo(activeChar);
+			activeChar.sendPacket(ui);
+			activeChar.setAttackStatus(false);
+			CharInfo info = new CharInfo(activeChar);
+			activeChar.broadcastPacket(info);
+		}
+		else if (item != null)
+		{
+			_log.fine("item not equipable id:" + item.getItemId());
+			IItemHandler handler = ItemHandler.getInstance().getItemHandler(item.getItemId());
+			if (handler == null)
+			{
+				_log.warning("no itemhandler registered for itemId:" + item.getItemId());
+			}
+			else
+			{
+				int count = handler.useItem(activeChar, item);
+				if (count > 0)
+				{
+					removeItemFromInventory(activeChar, item, count);
+				}
+			}
+		}
+	}
+	
+	private void removeItemFromInventory(PlayerInstance activeChar, ItemInstance item, int count)
+	{
+		ItemInstance item2 = activeChar.getInventory().destroyItem(item.getObjectId(), count);
+		InventoryUpdate iu = new InventoryUpdate();
+		if (item2.getCount() == 0)
+		{
+			iu.addRemovedItem(item2);
+		}
+		else
+		{
+			iu.addModifiedItem(item2);
+		}
+		activeChar.sendPacket(iu);
+	}
+	
+	@Override
+	public String getType()
+	{
+		return _C__14_USEITEM;
+	}
+}

@@ -1,0 +1,96 @@
+/*
+ * This file is part of the L2J Mobius project.
+ * 
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+ */
+package org.l2jmobius.gameserver.model.actor.instance;
+
+import java.util.logging.Logger;
+
+import org.l2jmobius.gameserver.data.TradeController;
+import org.l2jmobius.gameserver.model.TradeList;
+import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
+import org.l2jmobius.gameserver.network.serverpackets.BuyList;
+import org.l2jmobius.gameserver.network.serverpackets.SellList;
+import org.l2jmobius.gameserver.templates.L2Npc;
+
+public class MerchantInstance extends NpcInstance
+{
+	private static Logger _log = Logger.getLogger(MerchantInstance.class.getName());
+	
+	public MerchantInstance(L2Npc template)
+	{
+		super(template);
+	}
+	
+	@Override
+	public void onAction(PlayerInstance player)
+	{
+		// _log.fine("Merchant activated");
+		super.onAction(player);
+	}
+	
+	@Override
+	public String getHtmlPath(int npcId, int val)
+	{
+		String pom = "";
+		pom = val == 0 ? "" + npcId : npcId + "-" + val;
+		return "data/html/merchant/" + pom + ".htm";
+	}
+	
+	private void showBuyWindow(PlayerInstance player, int val)
+	{
+		_log.fine("Showing buylist");
+		TradeList list = TradeController.getInstance().getBuyList(val);
+		if (list != null)
+		{
+			BuyList bl = new BuyList(list, player.getAdena());
+			player.sendPacket(bl);
+		}
+		else
+		{
+			_log.warning("no buylist with id:" + val);
+		}
+		player.sendPacket(new ActionFailed());
+	}
+	
+	private void showSellWindow(PlayerInstance player)
+	{
+		// _log.fine("Showing selllist");
+		SellList sl = new SellList(player);
+		player.sendPacket(sl);
+		// _log.fine("Showing sell window");
+		player.sendPacket(new ActionFailed());
+	}
+	
+	@Override
+	public void onBypassFeedback(PlayerInstance player, String command)
+	{
+		super.onBypassFeedback(player, command);
+		if (command.startsWith("Buy"))
+		{
+			int val = Integer.parseInt(command.substring(4));
+			showBuyWindow(player, val);
+		}
+		else if (command.equals("Sell"))
+		{
+			showSellWindow(player);
+		}
+		else
+		{
+			super.onBypassFeedback(player, command);
+		}
+	}
+}

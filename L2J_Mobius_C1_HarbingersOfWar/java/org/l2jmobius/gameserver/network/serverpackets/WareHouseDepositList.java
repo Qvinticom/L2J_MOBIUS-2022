@@ -1,0 +1,85 @@
+/*
+ * This file is part of the L2J Mobius project.
+ * 
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+ */
+package org.l2jmobius.gameserver.network.serverpackets;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.logging.Logger;
+
+import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+
+public class WareHouseDepositList extends ServerBasePacket
+{
+	private static Logger _log = Logger.getLogger(WareHouseDepositList.class.getName());
+	private static final String _S__53_WAREHOUSEDEPOSITLIST = "[S] 53 WareHouseDepositList";
+	private final PlayerInstance _cha;
+	private final int _money;
+	
+	public WareHouseDepositList(PlayerInstance cha)
+	{
+		_cha = cha;
+		_money = cha.getAdena();
+	}
+	
+	@Override
+	public byte[] getContent()
+	{
+		int i;
+		writeC(83);
+		writeD(_money);
+		List<ItemInstance> itemlist = new ArrayList<>();
+		ItemInstance[] inventory = _cha.getInventory().getItems();
+		int count = _cha.getInventory().getSize();
+		for (i = 0; i < count; ++i)
+		{
+			ItemInstance item = inventory[i];
+			if (item.isEquipped() || (item.getItem().getType2() == 3))
+			{
+				continue;
+			}
+			itemlist.add(item);
+		}
+		count = itemlist.size();
+		_log.fine("count:" + count);
+		writeH(count);
+		for (i = 0; i < count; ++i)
+		{
+			ItemInstance temp = itemlist.get(i);
+			_log.fine("item:" + temp.getItem().getName() + " type1:" + temp.getItem().getType1() + " type2:" + temp.getItem().getType2());
+			writeH(temp.getItem().getType1());
+			writeD(temp.getObjectId());
+			writeD(temp.getItemId());
+			writeD(temp.getCount());
+			writeH(temp.getItem().getType2());
+			writeH(100);
+			writeD(400);
+			writeH(temp.getEnchantLevel());
+			writeH(300);
+			writeH(200);
+			writeD(temp.getItemId());
+		}
+		return getBytes();
+	}
+	
+	@Override
+	public String getType()
+	{
+		return _S__53_WAREHOUSEDEPOSITLIST;
+	}
+}

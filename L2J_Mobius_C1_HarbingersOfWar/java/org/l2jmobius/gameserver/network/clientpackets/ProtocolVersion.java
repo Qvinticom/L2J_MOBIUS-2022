@@ -1,0 +1,53 @@
+/*
+ * This file is part of the L2J Mobius project.
+ * 
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+ */
+package org.l2jmobius.gameserver.network.clientpackets;
+
+import java.io.IOException;
+
+import org.l2jmobius.Config;
+import org.l2jmobius.gameserver.ClientThread;
+import org.l2jmobius.gameserver.Connection;
+import org.l2jmobius.gameserver.network.serverpackets.KeyPacket;
+
+public class ProtocolVersion extends ClientBasePacket
+{
+	private static final String _C__00_PROTOCOLVERSION = "[C] 00 ProtocolVersion";
+	
+	public ProtocolVersion(byte[] rawPacket, ClientThread client) throws IOException
+	{
+		super(rawPacket);
+		int version = readD();
+		// _log.fine("Protocol Revision:" + version);
+		if (version != Config.CLIENT_PROTOCOL_VERSION)
+		{
+			_log.warning("Client " + client.getLoginName() + " tryied to login with client protocol " + version);
+			throw new IOException("Wrong Protocol Version: " + version);
+		}
+		Connection con = client.getConnection();
+		KeyPacket pk = new KeyPacket();
+		pk.setKey(con.getCryptKey());
+		con.sendPacket(pk);
+		con.activateCryptKey();
+	}
+	
+	@Override
+	public String getType()
+	{
+		return _C__00_PROTOCOLVERSION;
+	}
+}

@@ -1,0 +1,91 @@
+/*
+ * This file is part of the L2J Mobius project.
+ * 
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+ */
+package org.l2jmobius;
+
+import org.l2jmobius.util.PropertiesParser;
+
+/**
+ * @author Mobius
+ */
+public class Config
+{
+	// --------------------------------------------------
+	// Constants
+	// --------------------------------------------------
+	public static final String EOL = System.lineSeparator();
+	
+	// --------------------------------------------------
+	// Config File Definitions
+	// --------------------------------------------------
+	private static final String SERVER_CONFIG_FILE = "config/server.ini";
+	private static final String RATES_CONFIG_FILE = "config/rates.ini";
+	
+	// Game
+	public static String _ip;
+	public static int SERVER_PORT;
+	public static String SERVER_HOST_NAME;
+	public static int CLIENT_PROTOCOL_VERSION;
+	public static int MAXIMUM_ONLINE_PLAYERS;
+	// Login
+	public static String LOGIN_HOST_NAME;
+	public static String EXTERNAL_HOST_NAME;
+	public static String INTERNAL_HOST_NAME;
+	public static boolean AUTO_CREATE_ACCOUNTS;
+	// Other
+	public static boolean LOG_UNKNOWN_PACKETS;
+	// Rates
+	public static float RATE_XP;
+	public static float RATE_SP;
+	public static float RATE_DROP;
+	public static float RATE_ADENA;
+	
+	public static void load()
+	{
+		// Load server config file (if exists)
+		final PropertiesParser serverSettings = new PropertiesParser(SERVER_CONFIG_FILE);
+		
+		// Game
+		SERVER_HOST_NAME = serverSettings.getString("GameserverHostname", "*");
+		SERVER_PORT = serverSettings.getInt("GameserverPort", 7777);
+		CLIENT_PROTOCOL_VERSION = serverSettings.getInt("ClientProtocolVersion", 417);
+		MAXIMUM_ONLINE_PLAYERS = serverSettings.getInt("MaximumOnlineUsers", 2000);
+		// Login
+		LOGIN_HOST_NAME = serverSettings.getString("LoginserverHostname", "*");
+		EXTERNAL_HOST_NAME = serverSettings.getString("ExternalHostname", "127.0.0.1");
+		if (EXTERNAL_HOST_NAME == null)
+		{
+			EXTERNAL_HOST_NAME = "localhost";
+		}
+		INTERNAL_HOST_NAME = serverSettings.getString("InternalHostname", "127.0.0.1");
+		if (INTERNAL_HOST_NAME == null)
+		{
+			INTERNAL_HOST_NAME = "localhost";
+		}
+		AUTO_CREATE_ACCOUNTS = serverSettings.getBoolean("AutoCreateAccounts", true);
+		// Other
+		LOG_UNKNOWN_PACKETS = serverSettings.getBoolean("LogUnknownPackets", false);
+		
+		// Load rates config file (if exists)
+		final PropertiesParser ratesSettings = new PropertiesParser(RATES_CONFIG_FILE);
+		
+		RATE_XP = ratesSettings.getFloat("RateXp", 1);
+		RATE_SP = ratesSettings.getFloat("RateSp", 1);
+		RATE_DROP = ratesSettings.getFloat("RateDrop", 1);
+		RATE_ADENA = ratesSettings.getFloat("RateAdena", 1);
+	}
+}

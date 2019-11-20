@@ -1,0 +1,275 @@
+/*
+ * This file is part of the L2J Mobius project.
+ * 
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+ */
+package org.l2jmobius.gameserver.data;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.LineNumberReader;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.StringTokenizer;
+import java.util.logging.Logger;
+
+import org.l2jmobius.gameserver.model.DropData;
+import org.l2jmobius.gameserver.templates.L2Npc;
+
+public class NpcTable
+{
+	private static Logger _log = Logger.getLogger(NpcTable.class.getName());
+	private static NpcTable _instance;
+	private final Map<Integer, L2Npc> _npcs = new HashMap<>();
+	private boolean _initialized = true;
+	
+	public static NpcTable getInstance()
+	{
+		if (_instance == null)
+		{
+			_instance = new NpcTable();
+		}
+		return _instance;
+	}
+	
+	private NpcTable()
+	{
+		parseData();
+		parseAdditionalData();
+		parseDropData();
+	}
+	
+	public boolean isInitialized()
+	{
+		return _initialized;
+	}
+	
+	private void parseData()
+	{
+		BufferedReader lnr = null;
+		try
+		{
+			File skillData = new File("data/npc.csv");
+			lnr = new LineNumberReader(new BufferedReader(new FileReader(skillData)));
+			String line = null;
+			while ((line = ((LineNumberReader) lnr).readLine()) != null)
+			{
+				if ((line.trim().length() == 0) || line.startsWith("#"))
+				{
+					continue;
+				}
+				L2Npc npc = parseList(line);
+				_npcs.put(npc.getNpcId(), npc);
+			}
+			_log.config("Loaded " + _npcs.size() + " NPC templates.");
+		}
+		catch (FileNotFoundException e)
+		{
+			_initialized = false;
+			_log.warning("npc.csv is missing in data folder.");
+		}
+		catch (Exception e)
+		{
+			_initialized = false;
+			_log.warning("Error while creating npc table " + e);
+		}
+		finally
+		{
+			try
+			{
+				if (lnr != null)
+				{
+					lnr.close();
+				}
+			}
+			catch (Exception e1)
+			{
+			}
+		}
+	}
+	
+	private L2Npc parseList(String line)
+	{
+		StringTokenizer st = new StringTokenizer(line, ";");
+		L2Npc npc = new L2Npc();
+		int id = Integer.parseInt(st.nextToken());
+		if (id > 1000000)
+		{
+			id -= 1000000;
+		}
+		npc.setNpcId(id);
+		npc.setName(st.nextToken());
+		npc.setType(st.nextToken());
+		npc.setRadius(Double.parseDouble(st.nextToken()));
+		npc.setHeight(Double.parseDouble(st.nextToken()));
+		return npc;
+	}
+	
+	private void parseAdditionalData()
+	{
+		BufferedReader lnr = null;
+		try
+		{
+			File npcDataFile = new File("data/npc2.csv");
+			lnr = new LineNumberReader(new BufferedReader(new FileReader(npcDataFile)));
+			String line = null;
+			while ((line = ((LineNumberReader) lnr).readLine()) != null)
+			{
+				if ((line.trim().length() == 0) || line.startsWith("#"))
+				{
+					continue;
+				}
+				try
+				{
+					parseAdditionalDataLine(line);
+				}
+				catch (Exception e)
+				{
+					_log.warning("Parsing error in npc2.csv, line " + ((LineNumberReader) lnr).getLineNumber() + " / " + e.toString());
+				}
+			}
+		}
+		catch (FileNotFoundException e)
+		{
+			_log.warning("npc2.csv is missing in data folder.");
+		}
+		catch (Exception e)
+		{
+			_log.warning("Error while creating npc data table " + e);
+		}
+		finally
+		{
+			try
+			{
+				if (lnr != null)
+				{
+					lnr.close();
+				}
+			}
+			catch (Exception e1)
+			{
+			}
+		}
+	}
+	
+	private void parseAdditionalDataLine(String line)
+	{
+		StringTokenizer st = new StringTokenizer(line, ";");
+		int id = Integer.parseInt(st.nextToken());
+		L2Npc npcDat = _npcs.get(id);
+		if (npcDat == null)
+		{
+			_log.warning("Missing npc template id:" + id);
+			return;
+		}
+		st.nextToken();
+		npcDat.setLevel(Integer.parseInt(st.nextToken()));
+		npcDat.setSex(st.nextToken());
+		npcDat.setType(st.nextToken());
+		npcDat.setAttackRange(Integer.parseInt(st.nextToken()));
+		npcDat.setHp(Integer.parseInt(st.nextToken()));
+		npcDat.setMp(Integer.parseInt(st.nextToken()));
+		npcDat.setExp(Integer.parseInt(st.nextToken()));
+		npcDat.setSp(Integer.parseInt(st.nextToken()));
+		npcDat.setPatk(Integer.parseInt(st.nextToken()));
+		npcDat.setPdef(Integer.parseInt(st.nextToken()));
+		npcDat.setMatk(Integer.parseInt(st.nextToken()));
+		npcDat.setMdef(Integer.parseInt(st.nextToken()));
+		npcDat.setAtkspd(Integer.parseInt(st.nextToken()));
+		npcDat.setAgro(Integer.parseInt(st.nextToken()) == 1);
+		npcDat.setMatkspd(Integer.parseInt(st.nextToken()));
+		npcDat.setRhand(Integer.parseInt(st.nextToken()));
+		npcDat.setLhand(Integer.parseInt(st.nextToken()));
+		npcDat.setArmor(Integer.parseInt(st.nextToken()));
+		npcDat.setWalkSpeed(Integer.parseInt(st.nextToken()));
+		npcDat.setRunSpeed(Integer.parseInt(st.nextToken()));
+	}
+	
+	private void parseDropData()
+	{
+		BufferedReader lnr = null;
+		try
+		{
+			File dropDataFile = new File("data/droplist.csv");
+			lnr = new LineNumberReader(new BufferedReader(new FileReader(dropDataFile)));
+			String line = null;
+			int n = 0;
+			while ((line = ((LineNumberReader) lnr).readLine()) != null)
+			{
+				if ((line.trim().length() == 0) || line.startsWith("#"))
+				{
+					continue;
+				}
+				try
+				{
+					parseDropLine(line);
+					++n;
+				}
+				catch (Exception e)
+				{
+					_log.warning("Parsing error in droplist.csv, line " + ((LineNumberReader) lnr).getLineNumber() + " / " + e.toString());
+				}
+			}
+			_log.config("Loaded " + n + " drop data templates.");
+		}
+		catch (FileNotFoundException e)
+		{
+			_log.warning("droplist.csv is missing in data folder.");
+		}
+		catch (Exception e)
+		{
+			_log.warning("Error while creating drop data table " + e);
+		}
+		finally
+		{
+			try
+			{
+				if (lnr != null)
+				{
+					lnr.close();
+				}
+			}
+			catch (Exception e1)
+			{
+			}
+		}
+	}
+	
+	private void parseDropLine(String line)
+	{
+		StringTokenizer st = new StringTokenizer(line, ";");
+		int mobId = Integer.parseInt(st.nextToken());
+		L2Npc npc = _npcs.get(mobId);
+		if (npc == null)
+		{
+			_log.warning("Could not add drop data for npcid:" + mobId);
+			return;
+		}
+		DropData dropDat = new DropData();
+		dropDat.setItemId(Integer.parseInt(st.nextToken()));
+		dropDat.setMinDrop(Integer.parseInt(st.nextToken()));
+		dropDat.setMaxDrop(Integer.parseInt(st.nextToken()));
+		dropDat.setSweep(Integer.parseInt(st.nextToken()) == 1);
+		dropDat.setChance(Integer.parseInt(st.nextToken()));
+		npc.addDropData(dropDat);
+	}
+	
+	public L2Npc getTemplate(int id)
+	{
+		return _npcs.get(id);
+	}
+}

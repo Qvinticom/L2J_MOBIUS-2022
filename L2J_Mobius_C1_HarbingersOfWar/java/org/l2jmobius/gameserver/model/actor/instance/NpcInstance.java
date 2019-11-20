@@ -1,0 +1,361 @@
+/*
+ * This file is part of the L2J Mobius project.
+ * 
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+ */
+package org.l2jmobius.gameserver.model.actor.instance;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.util.Timer;
+import java.util.logging.Logger;
+
+import org.l2jmobius.Config;
+import org.l2jmobius.gameserver.ClientThread;
+import org.l2jmobius.gameserver.model.Spawn;
+import org.l2jmobius.gameserver.model.World;
+import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
+import org.l2jmobius.gameserver.network.serverpackets.ChangeMoveType;
+import org.l2jmobius.gameserver.network.serverpackets.MyTargetSelected;
+import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import org.l2jmobius.gameserver.network.serverpackets.SetToLocation;
+import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
+import org.l2jmobius.gameserver.templates.L2Npc;
+import org.l2jmobius.gameserver.templates.L2Weapon;
+
+public class NpcInstance extends Creature
+{
+	private static Logger _log = Logger.getLogger(NpcInstance.class.getName());
+	private static final int INTERACTION_DISTANCE = 150;
+	private final L2Npc _npcTemplate;
+	private boolean _attackable;
+	private int _rightHandItem;
+	private int _leftHandItem;
+	private int _expReward;
+	private int _spReward;
+	private int _attackRange;
+	private boolean _aggressive;
+	private Creature.DecayTask _decayTask;
+	private static Timer _decayTimer = new Timer(true);
+	private Spawn _spawn;
+	
+	public NpcInstance(L2Npc template)
+	{
+		_npcTemplate = template;
+		setCollisionHeight(template.getHeight());
+		setCollisionRadius(template.getRadius());
+	}
+	
+	public boolean isAggressive()
+	{
+		return _aggressive;
+	}
+	
+	@Override
+	public void startAttack(Creature target)
+	{
+		if (!isRunning())
+		{
+			setRunning(true);
+			ChangeMoveType move = new ChangeMoveType(this, ChangeMoveType.RUN);
+			broadcastPacket(move);
+		}
+		super.startAttack(target);
+	}
+	
+	public void setAggressive(boolean aggressive)
+	{
+		_aggressive = aggressive;
+	}
+	
+	public L2Npc getNpcTemplate()
+	{
+		return _npcTemplate;
+	}
+	
+	public boolean isAttackable()
+	{
+		return _attackable;
+	}
+	
+	public void setAttackable(boolean b)
+	{
+		_attackable = b;
+	}
+	
+	public int getLeftHandItem()
+	{
+		return _leftHandItem;
+	}
+	
+	public int getRightHandItem()
+	{
+		return _rightHandItem;
+	}
+	
+	public void setLeftHandItem(int i)
+	{
+		_leftHandItem = i;
+	}
+	
+	public void setRightHandItem(int i)
+	{
+		_rightHandItem = i;
+	}
+	
+	@Override
+	public void onAction(PlayerInstance player)
+	{
+		if (this != player.getTarget())
+		{
+			if (player.getCurrentState() == 2)
+			{
+				player.cancelCastMagic();
+			}
+			player.setCurrentState((byte) 0);
+			_log.fine("new target selected:" + getObjectId());
+			player.setTarget(this);
+			MyTargetSelected my = new MyTargetSelected(getObjectId(), player.getLevel() - getLevel());
+			player.sendPacket(my);
+			if (isAttackable())
+			{
+				StatusUpdate su = new StatusUpdate(getObjectId());
+				su.addAttribute(StatusUpdate.CUR_HP, (int) getCurrentHp());
+				su.addAttribute(StatusUpdate.MAX_HP, getMaxHp());
+				player.sendPacket(su);
+			}
+			player.sendPacket(new SetToLocation(this));
+		}
+		else
+		{
+			if (isAttackable() && !isDead() && !player.isInCombat() && (Math.abs(player.getZ() - getZ()) < 200))
+			{
+				player.startAttack(this);
+			}
+			if (!isAttackable())
+			{
+				double distance = getDistance(player.getX(), player.getY());
+				if (distance > INTERACTION_DISTANCE)
+				{
+					player.setCurrentState((byte) 7);
+					player.setInteractTarget(this);
+					player.moveTo(getX(), getY(), getZ(), 150);
+				}
+				else
+				{
+					showChatWindow(player, 0);
+					player.sendPacket(new ActionFailed());
+					player.setCurrentState((byte) 0);
+				}
+			}
+		}
+	}
+	
+	@Override
+	public void onActionShift(ClientThread client)
+	{
+		PlayerInstance player = client.getActiveChar();
+		if (client.getAccessLevel() >= 100)
+		{
+			NpcHtmlMessage html = new NpcHtmlMessage(1);
+			StringBuffer html1 = new StringBuffer("<html><body><table border=0>");
+			html1.append("<tr><td>Current Target:</td></tr>");
+			html1.append("<tr><td><br></td></tr>");
+			html1.append("<tr><td>Object ID: " + getObjectId() + "</td></tr>");
+			html1.append("<tr><td>Template ID: " + getNpcTemplate().getNpcId() + "</td></tr>");
+			html1.append("<tr><td><br></td></tr>");
+			html1.append("<tr><td>HP: " + getCurrentHp() + "</td></tr>");
+			html1.append("<tr><td>MP: " + getCurrentMp() + "</td></tr>");
+			html1.append("<tr><td>Level: " + getLevel() + "</td></tr>");
+			html1.append("<tr><td><br></td></tr>");
+			html1.append("<tr><td>Class: " + this.getClass().getName() + "</td></tr>");
+			html1.append("<tr><td><br></td></tr>");
+			html1.append("<tr><td><button value=\"Kill\" action=\"bypass -h admin_kill " + getObjectId() + "\" width=40 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td></tr>");
+			html1.append("<tr><td><button value=\"Delete\" action=\"bypass -h admin_delete " + getObjectId() + "\" width=40 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td></tr>");
+			html1.append("</table></body></html>");
+			html.setHtml(html1.toString());
+			player.sendPacket(html);
+		}
+		player.sendPacket(new ActionFailed());
+	}
+	
+	public void onBypassFeedback(PlayerInstance player, String command)
+	{
+		double distance = getDistance(player.getX(), player.getY());
+		if (distance > 150.0)
+		{
+			player.moveTo(getX(), getY(), getZ(), 150);
+		}
+		else if (command.startsWith("Quest"))
+		{
+			int val = Integer.parseInt(command.substring(6));
+			showQuestWindow(player, val);
+		}
+		else if (command.startsWith("Chat"))
+		{
+			int val = Integer.parseInt(command.substring(5));
+			showChatWindow(player, val);
+		}
+	}
+	
+	@Override
+	public L2Weapon getActiveWeapon()
+	{
+		return null;
+	}
+	
+	public void insertObjectIdAndShowChatWindow(PlayerInstance player, String content)
+	{
+		content = content.replaceAll("%objectId%", String.valueOf(getObjectId()));
+		NpcHtmlMessage npcReply = new NpcHtmlMessage(5);
+		npcReply.setHtml(content);
+		player.sendPacket(npcReply);
+	}
+	
+	protected void showQuestWindow(PlayerInstance player, int val)
+	{
+		_log.fine("Showing quest window");
+		NpcHtmlMessage html = new NpcHtmlMessage(1);
+		html.setHtml("<html><head><body>There is no quests here yet.</body></html>");
+		player.sendPacket(html);
+		player.sendPacket(new ActionFailed());
+	}
+	
+	public String getHtmlPath(int npcId, int val)
+	{
+		String pom = "";
+		pom = val == 0 ? "" + npcId : npcId + "-" + val;
+		String temp = "data/html/default/" + pom + ".htm";
+		File mainText = new File(temp);
+		if (mainText.exists())
+		{
+			return temp;
+		}
+		return "data/html/npcdefault.htm";
+	}
+	
+	public void showChatWindow(PlayerInstance player, int val)
+	{
+		int npcId = getNpcTemplate().getNpcId();
+		String filename = getHtmlPath(npcId, val);
+		File file = new File(filename);
+		if (!file.exists())
+		{
+			NpcHtmlMessage html = new NpcHtmlMessage(1);
+			html.setHtml("<html><head><body>My Text is missing:<br>" + filename + "</body></html>");
+			player.sendPacket(html);
+			player.sendPacket(new ActionFailed());
+		}
+		else
+		{
+			FileInputStream fis = null;
+			try
+			{
+				fis = new FileInputStream(file);
+				byte[] raw = new byte[fis.available()];
+				fis.read(raw);
+				String content = new String(raw, "UTF-8");
+				insertObjectIdAndShowChatWindow(player, content);
+			}
+			catch (Exception e)
+			{
+				_log.warning("problem with npc text " + e);
+			}
+			finally
+			{
+				try
+				{
+					if (fis != null)
+					{
+						fis.close();
+					}
+				}
+				catch (Exception e1)
+				{
+				}
+			}
+		}
+		player.sendPacket(new ActionFailed());
+	}
+	
+	public void setExpReward(int exp)
+	{
+		_expReward = exp;
+	}
+	
+	public void setSpReward(int sp)
+	{
+		_spReward = sp;
+	}
+	
+	public int getExpReward()
+	{
+		return (int) (_expReward * Config.RATE_XP);
+	}
+	
+	public int getSpReward()
+	{
+		return (int) (_spReward * Config.RATE_SP);
+	}
+	
+	@Override
+	public int getAttackRange()
+	{
+		return _attackRange;
+	}
+	
+	public void setAttackRange(int range)
+	{
+		_attackRange = range;
+	}
+	
+	@Override
+	public void reduceCurrentHp(int i, Creature attacker)
+	{
+		super.reduceCurrentHp(i, attacker);
+		if (isDead())
+		{
+			NpcInstance NpcInstance = this;
+			synchronized (NpcInstance)
+			{
+				if (_decayTask == null)
+				{
+					_decayTask = new Creature.DecayTask(this);
+					_decayTimer.schedule(_decayTask, 7000L);
+				}
+			}
+		}
+	}
+	
+	public void setSpawn(Spawn spawn)
+	{
+		_spawn = spawn;
+	}
+	
+	@Override
+	public void onDecay()
+	{
+		super.onDecay();
+		_spawn.decreaseCount(_npcTemplate.getNpcId());
+	}
+	
+	public void deleteMe()
+	{
+		World.getInstance().removeVisibleObject(this);
+		World.getInstance().removeObject(this);
+		removeAllKnownObjects();
+	}
+}

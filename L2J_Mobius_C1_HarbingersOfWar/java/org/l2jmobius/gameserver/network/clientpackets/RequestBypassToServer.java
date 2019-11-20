@@ -1,0 +1,84 @@
+/*
+ * This file is part of the L2J Mobius project.
+ * 
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+ */
+package org.l2jmobius.gameserver.network.clientpackets;
+
+import org.l2jmobius.gameserver.AdminCommands;
+import org.l2jmobius.gameserver.ClientThread;
+import org.l2jmobius.gameserver.CommunityBoard;
+import org.l2jmobius.gameserver.model.World;
+import org.l2jmobius.gameserver.model.WorldObject;
+import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+
+public class RequestBypassToServer extends ClientBasePacket
+{
+	private static final String _C__21_REQUESTBYPASSTOSERVER = "[C] 21 RequestBypassToServer";
+	
+	public RequestBypassToServer(byte[] decrypt, ClientThread client)
+	{
+		super(decrypt);
+		String command = readS();
+		try
+		{
+			if (command.startsWith("admin_") && (client.getAccessLevel() >= 100))
+			{
+				AdminCommands.getInstance().handleCommands(client, command);
+			}
+			else if (command.equals("come_here"))
+			{
+				comeHere(client);
+			}
+			else if (command.startsWith("npc_"))
+			{
+				int endOfId = command.indexOf(95, 5);
+				String id = command.substring(4, endOfId);
+				WorldObject object = World.getInstance().findObject(Integer.parseInt(id));
+				if (object instanceof NpcInstance)
+				{
+					((NpcInstance) object).onBypassFeedback(client.getActiveChar(), command.substring(endOfId + 1));
+				}
+			}
+			else if (command.startsWith("bbs_"))
+			{
+				CommunityBoard.getInstance().handleCommands(client, command);
+			}
+		}
+		catch (Exception e)
+		{
+			_log.warning("Bad RequestBypassToServer: " + e.toString());
+		}
+	}
+	
+	private void comeHere(ClientThread client)
+	{
+		WorldObject obj = client.getActiveChar().getTarget();
+		if (obj instanceof NpcInstance)
+		{
+			NpcInstance temp = (NpcInstance) obj;
+			PlayerInstance player = client.getActiveChar();
+			temp.setTarget(player);
+			temp.moveTo(player.getX(), player.getY(), player.getZ(), 0);
+		}
+	}
+	
+	@Override
+	public String getType()
+	{
+		return _C__21_REQUESTBYPASSTOSERVER;
+	}
+}
