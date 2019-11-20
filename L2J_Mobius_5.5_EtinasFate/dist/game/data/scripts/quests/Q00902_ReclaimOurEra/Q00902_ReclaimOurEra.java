@@ -62,6 +62,7 @@ public class Q00902_ReclaimOurEra extends Quest
 		addStartNpc(MATHIAS);
 		addTalkId(MATHIAS);
 		addKillId(MONSTER_DROPS.keySet());
+		addCondMinLevel(MIN_LVL, getNoQuestMsg(null));
 		registerQuestItems(SHATTERED_BONES, CANNIBALISTIC_STAKATO_LDR_CLAW, ANAIS_SCROLL);
 	}
 	
@@ -89,10 +90,7 @@ public class Q00902_ReclaimOurEra extends Quest
 		{
 			case "31340-04.htm":
 			{
-				if (qs.isCreated())
-				{
-					htmltext = event;
-				}
+				htmltext = event;
 				break;
 			}
 			case "31340-05.html":

@@ -60,6 +60,7 @@ public class Q00763_ADauntingTask extends Quest
 	private static final int SP = 5026;
 	// Misc
 	private static final int MIN_LEVEL = 70;
+	private static final int MAX_LEVEL = 75;
 	private static final QuestType QUEST_TYPE = QuestType.REPEATABLE; // REPEATABLE, ONE_TIME, DAILY
 	
 	public Q00763_ADauntingTask()
@@ -71,6 +72,7 @@ public class Q00763_ADauntingTask extends Quest
 		addKillId(MONSTERS_MALICE);
 		registerQuestItems(EYE.getId(), MALICE.getId());
 		addCondMinLevel(MIN_LEVEL, "noLevel.html");
+		addCondMaxLevel(MAX_LEVEL, "noLevel.html");
 	}
 	
 	@Override
