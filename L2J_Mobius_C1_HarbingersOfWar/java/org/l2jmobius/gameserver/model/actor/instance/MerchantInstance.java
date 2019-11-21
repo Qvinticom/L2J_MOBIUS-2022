@@ -24,13 +24,13 @@ import org.l2jmobius.gameserver.model.TradeList;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.BuyList;
 import org.l2jmobius.gameserver.network.serverpackets.SellList;
-import org.l2jmobius.gameserver.templates.L2Npc;
+import org.l2jmobius.gameserver.templates.Npc;
 
 public class MerchantInstance extends NpcInstance
 {
 	private static Logger _log = Logger.getLogger(MerchantInstance.class.getName());
 	
-	public MerchantInstance(L2Npc template)
+	public MerchantInstance(Npc template)
 	{
 		super(template);
 	}

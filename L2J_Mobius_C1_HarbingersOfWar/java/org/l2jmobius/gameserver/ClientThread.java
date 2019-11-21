@@ -41,7 +41,7 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.PacketHandler;
-import org.l2jmobius.gameserver.templates.L2Item;
+import org.l2jmobius.gameserver.templates.Item;
 import org.l2jmobius.loginserver.LoginController;
 
 public class ClientThread extends Thread
@@ -511,7 +511,7 @@ public class ClientThread extends Thread
 				ItemInstance item = new ItemInstance();
 				item.setObjectId(Integer.parseInt(st.nextToken()));
 				int itemId = Integer.parseInt(st.nextToken());
-				L2Item itemTemp = ItemTable.getInstance().getTemplate(itemId);
+				Item itemTemp = ItemTable.getInstance().getTemplate(itemId);
 				item.setItem(itemTemp);
 				st.nextToken();
 				item.setCount(Integer.parseInt(st.nextToken()));
@@ -588,7 +588,7 @@ public class ClientThread extends Thread
 				ItemInstance item = new ItemInstance();
 				item.setObjectId(Integer.parseInt(st.nextToken()));
 				int itemId = Integer.parseInt(st.nextToken());
-				L2Item itemTemp = ItemTable.getInstance().getTemplate(itemId);
+				Item itemTemp = ItemTable.getInstance().getTemplate(itemId);
 				item.setItem(itemTemp);
 				st.nextToken();
 				item.setCount(Integer.parseInt(st.nextToken()));

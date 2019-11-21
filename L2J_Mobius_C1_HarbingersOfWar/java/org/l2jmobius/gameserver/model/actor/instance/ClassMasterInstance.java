@@ -25,13 +25,13 @@ import org.l2jmobius.gameserver.network.serverpackets.MyTargetSelected;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.network.serverpackets.SetToLocation;
 import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
-import org.l2jmobius.gameserver.templates.L2Npc;
+import org.l2jmobius.gameserver.templates.Npc;
 
 public class ClassMasterInstance extends NpcInstance
 {
 	private static Logger _log = Logger.getLogger(ClassMasterInstance.class.getName());
 	
-	public ClassMasterInstance(L2Npc template)
+	public ClassMasterInstance(Npc template)
 	{
 		super(template);
 	}

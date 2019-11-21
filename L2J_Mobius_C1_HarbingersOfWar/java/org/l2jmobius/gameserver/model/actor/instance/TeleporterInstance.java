@@ -24,13 +24,13 @@ import org.l2jmobius.gameserver.model.TeleportLocation;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.TeleportToLocation;
-import org.l2jmobius.gameserver.templates.L2Npc;
+import org.l2jmobius.gameserver.templates.Npc;
 
 public class TeleporterInstance extends NpcInstance
 {
 	private static Logger _log = Logger.getLogger(TeleporterInstance.class.getName());
 	
-	public TeleporterInstance(L2Npc template)
+	public TeleporterInstance(Npc template)
 	{
 		super(template);
 	}

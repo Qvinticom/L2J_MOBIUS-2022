@@ -29,10 +29,10 @@ import java.util.logging.Logger;
 import org.l2jmobius.gameserver.IdFactory;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
-import org.l2jmobius.gameserver.templates.L2Armor;
-import org.l2jmobius.gameserver.templates.L2EtcItem;
-import org.l2jmobius.gameserver.templates.L2Item;
-import org.l2jmobius.gameserver.templates.L2Weapon;
+import org.l2jmobius.gameserver.templates.Armor;
+import org.l2jmobius.gameserver.templates.EtcItem;
+import org.l2jmobius.gameserver.templates.Item;
+import org.l2jmobius.gameserver.templates.Weapon;
 
 public class ItemTable
 {
@@ -121,10 +121,10 @@ public class ItemTable
 		_slots.put("lrhand", 16384);
 		_slots.put("fullarmor", 32768);
 	}
-	private L2Item[] _allTemplates;
-	private HashMap<Integer, L2Item> _etcItems;
-	private HashMap<Integer, L2Item> _armors;
-	private HashMap<Integer, L2Item> _weapons;
+	private Item[] _allTemplates;
+	private HashMap<Integer, Item> _etcItems;
+	private HashMap<Integer, Item> _armors;
+	private HashMap<Integer, Item> _weapons;
 	private boolean _initialized = true;
 	private static ItemTable _instance;
 	
@@ -172,13 +172,13 @@ public class ItemTable
 		fixEtcItems(_etcItems);
 	}
 	
-	private void fixEtcItems(HashMap<Integer, L2Item> items)
+	private void fixEtcItems(HashMap<Integer, Item> items)
 	{
 		Iterator<Integer> iter = items.keySet().iterator();
 		while (iter.hasNext())
 		{
 			Integer key = iter.next();
-			L2EtcItem item = (L2EtcItem) items.get(key);
+			EtcItem item = (EtcItem) items.get(key);
 			if ((item.getWeight() == 0) && (item.getEtcItemType() != 7) && !item.getName().startsWith("world_map") && !item.getName().startsWith("crystal_"))
 			{
 				item.setType2(3);
@@ -206,11 +206,11 @@ public class ItemTable
 		}
 	}
 	
-	private HashMap<Integer, L2Item> parseFile(File dataFile, int type)
+	private HashMap<Integer, Item> parseFile(File dataFile, int type)
 	{
-		HashMap<Integer, L2Item> result = new HashMap<>();
+		HashMap<Integer, Item> result = new HashMap<>();
 		LineNumberReader lnr = null;
-		L2Item temp = null;
+		Item temp = null;
 		try
 		{
 			lnr = new LineNumberReader(new BufferedReader(new FileReader(dataFile)));
@@ -258,9 +258,9 @@ public class ItemTable
 		return result;
 	}
 	
-	private L2EtcItem parseEtcLine(String line)
+	private EtcItem parseEtcLine(String line)
 	{
-		L2EtcItem result = new L2EtcItem();
+		EtcItem result = new EtcItem();
 		try
 		{
 			StringTokenizer st = new StringTokenizer(line, ";");
@@ -340,9 +340,9 @@ public class ItemTable
 		return result;
 	}
 	
-	private L2Armor parseArmorLine(String line)
+	private Armor parseArmorLine(String line)
 	{
-		L2Armor result = new L2Armor();
+		Armor result = new Armor();
 		try
 		{
 			StringTokenizer st = new StringTokenizer(line, ";");
@@ -383,9 +383,9 @@ public class ItemTable
 		return result;
 	}
 	
-	private L2Weapon parseWeaponLine(String line)
+	private Weapon parseWeaponLine(String line)
 	{
-		L2Weapon result = new L2Weapon();
+		Weapon result = new Weapon();
 		try
 		{
 			StringTokenizer st = new StringTokenizer(line, ";");
@@ -444,7 +444,7 @@ public class ItemTable
 	
 	private void buildFastLookupTable()
 	{
-		L2Item item;
+		Item item;
 		Integer id;
 		int highestId = 0;
 		Iterator<Integer> iter = _armors.keySet().iterator();
@@ -481,7 +481,7 @@ public class ItemTable
 			highestId = item.getItemId();
 		}
 		_log.fine("Highest item id used: " + highestId);
-		_allTemplates = new L2Item[highestId + 1];
+		_allTemplates = new Item[highestId + 1];
 		iter = _armors.keySet().iterator();
 		while (iter.hasNext())
 		{
@@ -502,7 +502,7 @@ public class ItemTable
 		}
 	}
 	
-	public L2Item getTemplate(int id)
+	public Item getTemplate(int id)
 	{
 		return _allTemplates[id];
 	}
@@ -521,7 +521,7 @@ public class ItemTable
 	{
 		ItemInstance temp = new ItemInstance();
 		temp.setObjectId(0);
-		L2Item item = null;
+		Item item = null;
 		try
 		{
 			item = getTemplate(itemId);

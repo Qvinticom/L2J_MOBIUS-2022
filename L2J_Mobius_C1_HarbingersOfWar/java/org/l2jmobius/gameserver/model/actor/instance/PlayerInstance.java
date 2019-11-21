@@ -77,10 +77,10 @@ import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.StopMove;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
-import org.l2jmobius.gameserver.templates.L2Armor;
-import org.l2jmobius.gameserver.templates.L2CharTemplate;
-import org.l2jmobius.gameserver.templates.L2Item;
-import org.l2jmobius.gameserver.templates.L2Weapon;
+import org.l2jmobius.gameserver.templates.Armor;
+import org.l2jmobius.gameserver.templates.CharTemplate;
+import org.l2jmobius.gameserver.templates.Item;
+import org.l2jmobius.gameserver.templates.Weapon;
 
 public class PlayerInstance extends Creature
 {
@@ -129,7 +129,7 @@ public class PlayerInstance extends Creature
 	private boolean _isGm = false;
 	private PlayerInstance _currentTransactionRequester;
 	private ItemInstance _arrowItem;
-	private L2Weapon _fistsWeaponItem;
+	private Weapon _fistsWeaponItem;
 	private long _uptime;
 	public byte updateKnownCounter = 0;
 	private Creature _interactTarget;
@@ -275,63 +275,63 @@ public class PlayerInstance extends Creature
 		_skill = skill;
 	}
 	
-	public void setFistsWeaponItem(L2Weapon weaponItem)
+	public void setFistsWeaponItem(Weapon weaponItem)
 	{
 		_fistsWeaponItem = weaponItem;
 	}
 	
-	public L2Weapon getFistsWeaponItem()
+	public Weapon getFistsWeaponItem()
 	{
 		return _fistsWeaponItem;
 	}
 	
-	public L2Weapon findFistsWeaponItem(int classId)
+	public Weapon findFistsWeaponItem(int classId)
 	{
-		L2Weapon weaponItem = null;
+		Weapon weaponItem = null;
 		if ((classId >= 0) && (classId <= 9))
 		{
-			L2Item temp = ItemTable.getInstance().getTemplate(246);
-			weaponItem = (L2Weapon) temp;
+			Item temp = ItemTable.getInstance().getTemplate(246);
+			weaponItem = (Weapon) temp;
 		}
 		else if ((classId >= 10) && (classId <= 17))
 		{
-			L2Item temp = ItemTable.getInstance().getTemplate(251);
-			weaponItem = (L2Weapon) temp;
+			Item temp = ItemTable.getInstance().getTemplate(251);
+			weaponItem = (Weapon) temp;
 		}
 		else if ((classId >= 18) && (classId <= 24))
 		{
-			L2Item temp = ItemTable.getInstance().getTemplate(244);
-			weaponItem = (L2Weapon) temp;
+			Item temp = ItemTable.getInstance().getTemplate(244);
+			weaponItem = (Weapon) temp;
 		}
 		else if ((classId >= 25) && (classId <= 30))
 		{
-			L2Item temp = ItemTable.getInstance().getTemplate(249);
-			weaponItem = (L2Weapon) temp;
+			Item temp = ItemTable.getInstance().getTemplate(249);
+			weaponItem = (Weapon) temp;
 		}
 		else if ((classId >= 31) && (classId <= 37))
 		{
-			L2Item temp = ItemTable.getInstance().getTemplate(245);
-			weaponItem = (L2Weapon) temp;
+			Item temp = ItemTable.getInstance().getTemplate(245);
+			weaponItem = (Weapon) temp;
 		}
 		else if ((classId >= 38) && (classId <= 43))
 		{
-			L2Item temp = ItemTable.getInstance().getTemplate(250);
-			weaponItem = (L2Weapon) temp;
+			Item temp = ItemTable.getInstance().getTemplate(250);
+			weaponItem = (Weapon) temp;
 		}
 		else if ((classId >= 44) && (classId <= 48))
 		{
-			L2Item temp = ItemTable.getInstance().getTemplate(248);
-			weaponItem = (L2Weapon) temp;
+			Item temp = ItemTable.getInstance().getTemplate(248);
+			weaponItem = (Weapon) temp;
 		}
 		else if ((classId >= 49) && (classId <= 52))
 		{
-			L2Item temp = ItemTable.getInstance().getTemplate(252);
-			weaponItem = (L2Weapon) temp;
+			Item temp = ItemTable.getInstance().getTemplate(252);
+			weaponItem = (Weapon) temp;
 		}
 		else if ((classId >= 53) && (classId <= 57))
 		{
-			L2Item temp = ItemTable.getInstance().getTemplate(247);
-			weaponItem = (L2Weapon) temp;
+			Item temp = ItemTable.getInstance().getTemplate(247);
+			weaponItem = (Weapon) temp;
 		}
 		return weaponItem;
 	}
@@ -772,14 +772,14 @@ public class PlayerInstance extends Creature
 	}
 	
 	@Override
-	public L2Weapon getActiveWeapon()
+	public Weapon getActiveWeapon()
 	{
 		ItemInstance weapon = getInventory().getPaperdollItem(7);
 		if (weapon == null)
 		{
 			return getFistsWeaponItem();
 		}
-		return (L2Weapon) weapon.getItem();
+		return (Weapon) weapon.getItem();
 	}
 	
 	@Override
@@ -966,7 +966,7 @@ public class PlayerInstance extends Creature
 	@Override
 	public int getAttackRange()
 	{
-		L2Weapon weapon = getActiveWeapon();
+		Weapon weapon = getActiveWeapon();
 		if ((weapon != null) && (weapon.getWeaponType() == 5))
 		{
 			return 500;
@@ -1037,7 +1037,7 @@ public class PlayerInstance extends Creature
 		{
 			_log.warning("Missing STR modifier for classId: " + getClassId());
 		}
-		L2CharTemplate template = CharTemplateTable.getInstance().getTemplate(getClassId());
+		CharTemplate template = CharTemplateTable.getInstance().getTemplate(getClassId());
 		double weapondmg = 1.0;
 		if (template != null)
 		{
@@ -1047,7 +1047,7 @@ public class PlayerInstance extends Creature
 		{
 			_log.warning("Missing template for classId: " + getClassId());
 		}
-		L2Weapon weapon = getActiveWeapon();
+		Weapon weapon = getActiveWeapon();
 		if (weapon != null)
 		{
 			weapondmg += weapon.getPDamage();
@@ -1059,9 +1059,9 @@ public class PlayerInstance extends Creature
 	
 	public void updatePDef()
 	{
-		L2Armor armorPiece;
+		Armor armorPiece;
 		double lvlmod = (89.0 + getLevel()) / 100.0;
-		L2CharTemplate template = CharTemplateTable.getInstance().getTemplate(getClassId());
+		CharTemplate template = CharTemplateTable.getInstance().getTemplate(getClassId());
 		double totalItemDef = 40.0;
 		if (template != null)
 		{
@@ -1074,37 +1074,37 @@ public class PlayerInstance extends Creature
 		ItemInstance dummy = getInventory().getPaperdollItem(13);
 		if (dummy != null)
 		{
-			armorPiece = (L2Armor) dummy.getItem();
+			armorPiece = (Armor) dummy.getItem();
 			totalItemDef += armorPiece.getPDef();
 		}
 		if ((dummy = getInventory().getPaperdollItem(10)) != null)
 		{
-			armorPiece = (L2Armor) dummy.getItem();
+			armorPiece = (Armor) dummy.getItem();
 			totalItemDef += armorPiece.getPDef();
 		}
 		if ((dummy = getInventory().getPaperdollItem(12)) != null)
 		{
-			armorPiece = (L2Armor) dummy.getItem();
+			armorPiece = (Armor) dummy.getItem();
 			totalItemDef += armorPiece.getPDef();
 		}
 		if ((dummy = getInventory().getPaperdollItem(9)) != null)
 		{
-			armorPiece = (L2Armor) dummy.getItem();
+			armorPiece = (Armor) dummy.getItem();
 			totalItemDef += armorPiece.getPDef();
 		}
 		if ((dummy = getInventory().getPaperdollItem(6)) != null)
 		{
-			armorPiece = (L2Armor) dummy.getItem();
+			armorPiece = (Armor) dummy.getItem();
 			totalItemDef += armorPiece.getPDef();
 		}
 		if ((dummy = getInventory().getPaperdollItem(11)) != null)
 		{
-			armorPiece = (L2Armor) dummy.getItem();
+			armorPiece = (Armor) dummy.getItem();
 			totalItemDef += armorPiece.getPDef();
 		}
 		if ((dummy = getInventory().getPaperdollItem(0)) != null)
 		{
-			armorPiece = (L2Armor) dummy.getItem();
+			armorPiece = (Armor) dummy.getItem();
 			totalItemDef += armorPiece.getPDef();
 		}
 		double pDef = totalItemDef * lvlmod;
@@ -1127,7 +1127,7 @@ public class PlayerInstance extends Creature
 			_log.warning("Missing INT modifier for classId: " + getClassId());
 		}
 		double intmod = Math.sqrt(imod);
-		L2CharTemplate template = CharTemplateTable.getInstance().getTemplate(getClassId());
+		CharTemplate template = CharTemplateTable.getInstance().getTemplate(getClassId());
 		double weapondmg = 1.0;
 		if (template != null)
 		{
@@ -1137,7 +1137,7 @@ public class PlayerInstance extends Creature
 		{
 			_log.warning("Missing template for classId: " + getClassId());
 		}
-		L2Weapon weapon = getActiveWeapon();
+		Weapon weapon = getActiveWeapon();
 		if (weapon != null)
 		{
 			weapondmg += weapon.getMDamage();
@@ -1149,7 +1149,7 @@ public class PlayerInstance extends Creature
 	
 	public void updateMDef()
 	{
-		L2Armor armorPiece;
+		Armor armorPiece;
 		double lvlBonus = (89.0 + getLevel()) / 100.0;
 		StatModifiers modifier = CharStatsTable.getInstance().getTemplate(getClassId());
 		double MENbonus = 1.0;
@@ -1161,7 +1161,7 @@ public class PlayerInstance extends Creature
 		{
 			_log.warning("Missing MEN modifier for classId: " + getClassId());
 		}
-		L2CharTemplate template = CharTemplateTable.getInstance().getTemplate(getClassId());
+		CharTemplate template = CharTemplateTable.getInstance().getTemplate(getClassId());
 		double totalItemDef = 40.0;
 		if (template != null)
 		{
@@ -1174,27 +1174,27 @@ public class PlayerInstance extends Creature
 		ItemInstance dummy = getInventory().getPaperdollItem(1);
 		if (dummy != null)
 		{
-			armorPiece = (L2Armor) dummy.getItem();
+			armorPiece = (Armor) dummy.getItem();
 			totalItemDef += armorPiece.getMDef();
 		}
 		if ((dummy = getInventory().getPaperdollItem(4)) != null)
 		{
-			armorPiece = (L2Armor) dummy.getItem();
+			armorPiece = (Armor) dummy.getItem();
 			totalItemDef += armorPiece.getMDef();
 		}
 		if ((dummy = getInventory().getPaperdollItem(3)) != null)
 		{
-			armorPiece = (L2Armor) dummy.getItem();
+			armorPiece = (Armor) dummy.getItem();
 			totalItemDef += armorPiece.getMDef();
 		}
 		if ((dummy = getInventory().getPaperdollItem(2)) != null)
 		{
-			armorPiece = (L2Armor) dummy.getItem();
+			armorPiece = (Armor) dummy.getItem();
 			totalItemDef += armorPiece.getMDef();
 		}
 		if ((dummy = getInventory().getPaperdollItem(5)) != null)
 		{
-			armorPiece = (L2Armor) dummy.getItem();
+			armorPiece = (Armor) dummy.getItem();
 			totalItemDef += armorPiece.getMDef();
 		}
 		double mDef = totalItemDef * lvlBonus * MENbonus;
@@ -1387,7 +1387,7 @@ public class PlayerInstance extends Creature
 	@Override
 	protected boolean isUsingDualWeapon()
 	{
-		L2Weapon weaponItem = getActiveWeapon();
+		Weapon weaponItem = getActiveWeapon();
 		if (weaponItem.getWeaponType() == 9)
 		{
 			return true;

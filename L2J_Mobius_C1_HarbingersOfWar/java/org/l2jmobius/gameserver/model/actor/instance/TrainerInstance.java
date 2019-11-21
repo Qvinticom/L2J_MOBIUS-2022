@@ -23,13 +23,13 @@ import org.l2jmobius.gameserver.data.SkillTreeTable;
 import org.l2jmobius.gameserver.model.SkillLearn;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.AquireSkillList;
-import org.l2jmobius.gameserver.templates.L2Npc;
+import org.l2jmobius.gameserver.templates.Npc;
 
 public class TrainerInstance extends NpcInstance
 {
 	private static Logger _log = Logger.getLogger(TrainerInstance.class.getName());
 	
-	public TrainerInstance(L2Npc template)
+	public TrainerInstance(Npc template)
 	{
 		super(template);
 	}

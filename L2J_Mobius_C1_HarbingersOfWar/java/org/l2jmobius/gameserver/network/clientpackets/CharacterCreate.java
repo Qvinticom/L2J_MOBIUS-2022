@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.serverpackets.CharCreateFail;
 import org.l2jmobius.gameserver.network.serverpackets.CharCreateOk;
 import org.l2jmobius.gameserver.network.serverpackets.CharSelectInfo;
-import org.l2jmobius.gameserver.templates.L2CharTemplate;
+import org.l2jmobius.gameserver.templates.CharTemplate;
 
 public class CharacterCreate extends ClientBasePacket
 {
@@ -100,7 +100,7 @@ public class CharacterCreate extends ClientBasePacket
 		_log.fine("Character init start");
 		newChar.setObjectId(IdFactory.getInstance().getNextId());
 		World.getInstance().storeObject(newChar);
-		L2CharTemplate template = CharTemplateTable.getInstance().getTemplate(newChar.getClassId());
+		CharTemplate template = CharTemplateTable.getInstance().getTemplate(newChar.getClassId());
 		newChar.setAccuracy(template.getAcc());
 		newChar.setCon(template.getCon());
 		newChar.setCriticalHit(template.getCrit());

@@ -44,8 +44,8 @@ import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.StopMove;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
-import org.l2jmobius.gameserver.templates.L2Npc;
-import org.l2jmobius.gameserver.templates.L2Weapon;
+import org.l2jmobius.gameserver.templates.Npc;
+import org.l2jmobius.gameserver.templates.Weapon;
 
 public class PetInstance extends Creature
 {
@@ -59,8 +59,8 @@ public class PetInstance extends Creature
 	private PlayerInstance _owner;
 	private int _karma = 0;
 	private final Inventory _inventory = new Inventory();
-	private L2Weapon _dummyWeapon;
-	private final L2Npc _template;
+	private Weapon _dummyWeapon;
+	private final Npc _template;
 	private int _attackRange = 36;
 	private boolean _follow = true;
 	private Creature.DecayTask _decayTask;
@@ -70,7 +70,7 @@ public class PetInstance extends Creature
 	private int _lastLevel;
 	private byte updateKnownCounter = 0;
 	
-	public PetInstance(L2Npc template)
+	public PetInstance(Npc template)
 	{
 		setCollisionHeight(template.getHeight());
 		setCollisionRadius(template.getRadius());
@@ -320,7 +320,7 @@ public class PetInstance extends Creature
 	}
 	
 	@Override
-	public L2Weapon getActiveWeapon()
+	public Weapon getActiveWeapon()
 	{
 		return _dummyWeapon;
 	}
@@ -333,7 +333,7 @@ public class PetInstance extends Creature
 			physicalAttack = 100;
 		}
 		super.setPhysicalAttack(physicalAttack);
-		_dummyWeapon = new L2Weapon();
+		_dummyWeapon = new Weapon();
 		_dummyWeapon.setPDamage(physicalAttack);
 		_dummyWeapon.setRandomDamage(getLevel());
 	}

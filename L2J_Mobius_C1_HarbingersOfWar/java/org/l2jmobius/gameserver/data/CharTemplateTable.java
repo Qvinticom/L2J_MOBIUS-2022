@@ -26,13 +26,13 @@ import java.util.Map;
 import java.util.StringTokenizer;
 import java.util.logging.Logger;
 
-import org.l2jmobius.gameserver.templates.L2CharTemplate;
+import org.l2jmobius.gameserver.templates.CharTemplate;
 
 public class CharTemplateTable
 {
 	private static Logger _log = Logger.getLogger(CharTemplateTable.class.getName());
 	private static CharTemplateTable _instance;
-	private final Map<Integer, L2CharTemplate> _templates = new HashMap<>();
+	private final Map<Integer, CharTemplate> _templates = new HashMap<>();
 	
 	public static CharTemplateTable getInstance()
 	{
@@ -58,7 +58,7 @@ public class CharTemplateTable
 					{
 						continue;
 					}
-					L2CharTemplate ct = new L2CharTemplate();
+					CharTemplate ct = new CharTemplate();
 					StringTokenizer st = new StringTokenizer(line, ";");
 					ct.setClassId(Integer.parseInt(st.nextToken()));
 					ct.setClassName(st.nextToken());
@@ -114,13 +114,13 @@ public class CharTemplateTable
 		}
 	}
 	
-	public L2CharTemplate getTemplate(int classId)
+	public CharTemplate getTemplate(int classId)
 	{
 		return _templates.get(classId);
 	}
 	
-	public L2CharTemplate[] getAllTemplates()
+	public CharTemplate[] getAllTemplates()
 	{
-		return _templates.values().toArray(new L2CharTemplate[_templates.size()]);
+		return _templates.values().toArray(new CharTemplate[_templates.size()]);
 	}
 }

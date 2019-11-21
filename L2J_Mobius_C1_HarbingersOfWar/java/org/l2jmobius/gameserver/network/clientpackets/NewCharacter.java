@@ -22,7 +22,7 @@ import java.io.IOException;
 import org.l2jmobius.gameserver.ClientThread;
 import org.l2jmobius.gameserver.data.CharTemplateTable;
 import org.l2jmobius.gameserver.network.serverpackets.CharTemplates;
-import org.l2jmobius.gameserver.templates.L2CharTemplate;
+import org.l2jmobius.gameserver.templates.CharTemplate;
 
 public class NewCharacter extends ClientBasePacket
 {
@@ -32,7 +32,7 @@ public class NewCharacter extends ClientBasePacket
 	{
 		super(rawPacket);
 		CharTemplates ct = new CharTemplates();
-		L2CharTemplate template = CharTemplateTable.getInstance().getTemplate(0);
+		CharTemplate template = CharTemplateTable.getInstance().getTemplate(0);
 		ct.addChar(template);
 		template = CharTemplateTable.getInstance().getTemplate(0);
 		ct.addChar(template);

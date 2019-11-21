@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUser;
 import org.l2jmobius.gameserver.network.serverpackets.NpcInfo;
 import org.l2jmobius.gameserver.network.serverpackets.PetInfo;
 import org.l2jmobius.gameserver.network.serverpackets.PetItemList;
-import org.l2jmobius.gameserver.templates.L2Npc;
+import org.l2jmobius.gameserver.templates.Npc;
 
 public class PetSummon implements IItemHandler
 {
@@ -81,7 +81,7 @@ public class PetSummon implements IItemHandler
 				return 0;
 			}
 		}
-		L2Npc petTemplate = NpcTable.getInstance().getTemplate(npcId);
+		Npc petTemplate = NpcTable.getInstance().getTemplate(npcId);
 		PetInstance newpet = new PetInstance(petTemplate);
 		newpet.setTitle(activeChar.getName());
 		newpet.setControlItemId(item.getObjectId());

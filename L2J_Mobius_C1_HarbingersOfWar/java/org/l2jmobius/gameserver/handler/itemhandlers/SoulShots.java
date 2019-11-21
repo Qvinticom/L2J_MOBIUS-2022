@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUser;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import org.l2jmobius.gameserver.templates.L2Weapon;
+import org.l2jmobius.gameserver.templates.Weapon;
 
 public class SoulShots implements IItemHandler
 {
@@ -45,7 +45,7 @@ public class SoulShots implements IItemHandler
 			return 0;
 		}
 		int SoulshotId = item.getItemId();
-		L2Weapon weapon = activeChar.getActiveWeapon();
+		Weapon weapon = activeChar.getActiveWeapon();
 		if (weapon == null)
 		{
 			activeChar.sendPacket(new SystemMessage(339));

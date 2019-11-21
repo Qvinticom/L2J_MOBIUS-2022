@@ -24,13 +24,13 @@ import org.l2jmobius.gameserver.model.Clan;
 import org.l2jmobius.gameserver.network.serverpackets.PledgeShowInfoUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
-import org.l2jmobius.gameserver.templates.L2Npc;
+import org.l2jmobius.gameserver.templates.Npc;
 
 public class VillageMasterInstance extends NpcInstance
 {
 	private static Logger _log = Logger.getLogger(VillageMasterInstance.class.getName());
 	
-	public VillageMasterInstance(L2Npc template)
+	public VillageMasterInstance(Npc template)
 	{
 		super(template);
 	}

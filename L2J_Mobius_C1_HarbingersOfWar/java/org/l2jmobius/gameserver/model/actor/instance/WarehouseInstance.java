@@ -24,13 +24,13 @@ import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.network.serverpackets.WareHouseDepositList;
 import org.l2jmobius.gameserver.network.serverpackets.WareHouseWithdrawalList;
-import org.l2jmobius.gameserver.templates.L2Npc;
+import org.l2jmobius.gameserver.templates.Npc;
 
 public class WarehouseInstance extends NpcInstance
 {
 	private static Logger _log = Logger.getLogger(WarehouseInstance.class.getName());
 	
-	public WarehouseInstance(L2Npc template)
+	public WarehouseInstance(Npc template)
 	{
 		super(template);
 	}

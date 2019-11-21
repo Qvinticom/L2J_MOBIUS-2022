@@ -38,8 +38,8 @@ import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.serverpackets.DropItem;
-import org.l2jmobius.gameserver.templates.L2Npc;
-import org.l2jmobius.gameserver.templates.L2Weapon;
+import org.l2jmobius.gameserver.templates.Npc;
+import org.l2jmobius.gameserver.templates.Weapon;
 import org.l2jmobius.util.Rnd;
 
 public class Attackable extends NpcInstance
@@ -53,11 +53,11 @@ public class Attackable extends NpcInstance
 	private static Timer _aiTimer = new Timer(true);
 	private static Timer _attackTimer = new Timer(true);
 	private final Map<WorldObject, Integer> _aggroList = new HashMap<>();
-	private L2Weapon _dummyWeapon;
+	private Weapon _dummyWeapon;
 	private boolean _sweepActive;
 	private boolean _killedAlready = false;
 	
-	public Attackable(L2Npc template)
+	public Attackable(Npc template)
 	{
 		super(template);
 	}
@@ -363,7 +363,7 @@ public class Attackable extends NpcInstance
 	}
 	
 	@Override
-	public L2Weapon getActiveWeapon()
+	public Weapon getActiveWeapon()
 	{
 		return _dummyWeapon;
 	}
@@ -372,7 +372,7 @@ public class Attackable extends NpcInstance
 	public void setPhysicalAttack(int physicalAttack)
 	{
 		super.setPhysicalAttack(physicalAttack);
-		_dummyWeapon = new L2Weapon();
+		_dummyWeapon = new Weapon();
 		_dummyWeapon.setPDamage(physicalAttack);
 		int randDmg = getLevel();
 		_dummyWeapon.setRandomDamage(randDmg);

@@ -18,14 +18,14 @@
 package org.l2jmobius.gameserver.model.actor.instance;
 
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.templates.L2EtcItem;
-import org.l2jmobius.gameserver.templates.L2Item;
+import org.l2jmobius.gameserver.templates.EtcItem;
+import org.l2jmobius.gameserver.templates.Item;
 
 public class ItemInstance extends WorldObject
 {
 	private int _count = 1;
 	private int _itemId;
-	private L2Item _item;
+	private Item _item;
 	private int _equippedSlot = -1;
 	private int _price;
 	private int _enchantLevel;
@@ -47,7 +47,7 @@ public class ItemInstance extends WorldObject
 	
 	public boolean isEquipable()
 	{
-		return (_item.getBodyPart() != 0) && !(_item instanceof L2EtcItem);
+		return (_item.getBodyPart() != 0) && !(_item instanceof EtcItem);
 	}
 	
 	public boolean isEquipped()
@@ -65,12 +65,12 @@ public class ItemInstance extends WorldObject
 		return _equippedSlot;
 	}
 	
-	public L2Item getItem()
+	public Item getItem()
 	{
 		return _item;
 	}
 	
-	public void setItem(L2Item item)
+	public void setItem(Item item)
 	{
 		_item = item;
 		_itemId = item.getItemId();

@@ -20,7 +20,7 @@ package org.l2jmobius.gameserver.templates;
 import java.util.ArrayList;
 import java.util.List;
 
-public class L2CharTemplate
+public class CharTemplate
 {
 	private int _classId;
 	private String _className;

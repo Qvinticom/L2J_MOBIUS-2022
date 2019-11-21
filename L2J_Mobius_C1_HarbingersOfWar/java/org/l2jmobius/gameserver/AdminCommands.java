@@ -48,7 +48,7 @@ import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.TeleportToLocation;
-import org.l2jmobius.gameserver.templates.L2Npc;
+import org.l2jmobius.gameserver.templates.Npc;
 
 public class AdminCommands extends Thread
 {
@@ -969,7 +969,7 @@ public class AdminCommands extends Thread
 		PlayerInstance activeChar = client.getActiveChar();
 		PlayerInstance targetPlayer = World.getInstance().getPlayer(CharName);
 		int monsterTemplate = Integer.parseInt(monsterId);
-		L2Npc template1 = NpcTable.getInstance().getTemplate(monsterTemplate);
+		Npc template1 = NpcTable.getInstance().getTemplate(monsterTemplate);
 		if (template1 == null)
 		{
 			return;

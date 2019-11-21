@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.templates;
 
 import java.io.Serializable;
 
-public abstract class L2Item implements Serializable
+public abstract class Item implements Serializable
 {
 	public static final int TYPE1_WEAPON_RING_EARRING_NECKLACE = 0;
 	public static final int TYPE1_SHIELD_ARMOR = 1;

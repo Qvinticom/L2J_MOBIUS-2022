@@ -25,8 +25,8 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
-import org.l2jmobius.gameserver.templates.L2Item;
-import org.l2jmobius.gameserver.templates.L2Weapon;
+import org.l2jmobius.gameserver.templates.Item;
+import org.l2jmobius.gameserver.templates.Weapon;
 
 public class Inventory
 {
@@ -256,7 +256,7 @@ public class Inventory
 				}
 				setPaperdollItem(7, item);
 				setPaperdollItem(14, item);
-				if ((((L2Weapon) item.getItem()).getWeaponType() != 5) || ((arrow = findArrowForBow(item.getItem())) == null))
+				if ((((Weapon) item.getItem()).getWeaponType() != 5) || ((arrow = findArrowForBow(item.getItem())) == null))
 				{
 					break;
 				}
@@ -578,7 +578,7 @@ public class Inventory
 		return _totalWeight;
 	}
 	
-	public ItemInstance findArrowForBow(L2Item bow)
+	public ItemInstance findArrowForBow(Item bow)
 	{
 		int arrowsId = 0;
 		switch (bow.getCrystalType())

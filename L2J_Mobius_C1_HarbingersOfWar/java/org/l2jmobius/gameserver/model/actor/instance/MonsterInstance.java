@@ -20,11 +20,11 @@ package org.l2jmobius.gameserver.model.actor.instance;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
-import org.l2jmobius.gameserver.templates.L2Npc;
+import org.l2jmobius.gameserver.templates.Npc;
 
 public class MonsterInstance extends Attackable
 {
-	public MonsterInstance(L2Npc template)
+	public MonsterInstance(Npc template)
 	{
 		super(template);
 		// this.setMoveRadius(2000);

@@ -24,7 +24,7 @@ import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.MyTargetSelected;
 import org.l2jmobius.gameserver.network.serverpackets.SetToLocation;
-import org.l2jmobius.gameserver.templates.L2Npc;
+import org.l2jmobius.gameserver.templates.Npc;
 
 public class GuardInstance extends Attackable
 {
@@ -35,7 +35,7 @@ public class GuardInstance extends Attackable
 	private int _homeZ;
 	private boolean _hasHome;
 	
-	public GuardInstance(L2Npc template)
+	public GuardInstance(Npc template)
 	{
 		super(template);
 		setCurrentState((byte) 0);

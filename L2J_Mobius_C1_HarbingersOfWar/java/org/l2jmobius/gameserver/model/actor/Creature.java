@@ -45,7 +45,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.StopMove;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import org.l2jmobius.gameserver.templates.L2Weapon;
+import org.l2jmobius.gameserver.templates.Weapon;
 import org.l2jmobius.util.Rnd;
 
 public abstract class Creature extends WorldObject
@@ -1138,7 +1138,7 @@ public abstract class Creature extends WorldObject
 		}
 		if ((getCurrentState() == 5) && !_currentlyAttacking)
 		{
-			L2Weapon weaponItem = getActiveWeapon();
+			Weapon weaponItem = getActiveWeapon();
 			if (weaponItem == null)
 			{
 				setInCombat(false);
@@ -1232,7 +1232,7 @@ public abstract class Creature extends WorldObject
 	{
 	}
 	
-	public abstract L2Weapon getActiveWeapon();
+	public abstract Weapon getActiveWeapon();
 	
 	protected void onHitTimer(Creature target, int damage, boolean crit, boolean miss, boolean soulshot)
 	{
@@ -1382,7 +1382,7 @@ public abstract class Creature extends WorldObject
 		return _effectiveSpeed;
 	}
 	
-	public int calculateAttackSpeed(L2Weapon weaponItem)
+	public int calculateAttackSpeed(Weapon weaponItem)
 	{
 		int atkspd = weaponItem.getAttackSpeed();
 		if (atkspd == 0)
@@ -1394,7 +1394,7 @@ public abstract class Creature extends WorldObject
 		return atkspd;
 	}
 	
-	public int calculateHitSpeed(L2Weapon weaponItem, int hit)
+	public int calculateHitSpeed(Weapon weaponItem, int hit)
 	{
 		int hitspd = weaponItem.getAttackSpeed();
 		if (hitspd == 0)

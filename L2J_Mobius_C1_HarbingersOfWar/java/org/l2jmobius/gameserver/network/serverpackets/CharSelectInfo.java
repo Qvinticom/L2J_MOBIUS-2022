@@ -27,7 +27,7 @@ import java.util.StringTokenizer;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.model.CharSelectInfoPackage;
 import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
-import org.l2jmobius.gameserver.templates.L2Item;
+import org.l2jmobius.gameserver.templates.Item;
 
 public class CharSelectInfo extends ServerBasePacket
 {
@@ -161,7 +161,7 @@ public class CharSelectInfo extends ServerBasePacket
 				ItemInstance item = new ItemInstance();
 				item.setObjectId(Integer.parseInt(st.nextToken()));
 				int itemId = Integer.parseInt(st.nextToken());
-				L2Item itemTemp = ItemTable.getInstance().getTemplate(itemId);
+				Item itemTemp = ItemTable.getInstance().getTemplate(itemId);
 				item.setItem(itemTemp);
 				st.nextToken();
 				item.setCount(Integer.parseInt(st.nextToken()));

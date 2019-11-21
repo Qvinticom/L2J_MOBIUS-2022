@@ -28,7 +28,7 @@ import java.util.StringTokenizer;
 import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.model.Spawn;
-import org.l2jmobius.gameserver.templates.L2Npc;
+import org.l2jmobius.gameserver.templates.Npc;
 
 public class SpawnTable
 {
@@ -96,7 +96,7 @@ public class SpawnTable
 		String location = st.nextToken();
 		int count = Integer.parseInt(st.nextToken());
 		int npcId = Integer.parseInt(st.nextToken());
-		L2Npc template1 = NpcTable.getInstance().getTemplate(npcId);
+		Npc template1 = NpcTable.getInstance().getTemplate(npcId);
 		if (template1 == null)
 		{
 			_log.warning("Monster data for id:" + npcId + " missing in npc.csv");

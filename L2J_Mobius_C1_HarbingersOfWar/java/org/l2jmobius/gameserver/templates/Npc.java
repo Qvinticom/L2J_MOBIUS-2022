@@ -22,7 +22,7 @@ import java.util.List;
 
 import org.l2jmobius.gameserver.model.DropData;
 
-public class L2Npc
+public class Npc
 {
 	private int _npcId;
 	private String _type;

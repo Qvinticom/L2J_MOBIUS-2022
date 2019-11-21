@@ -25,13 +25,13 @@ import java.util.logging.Logger;
 import org.l2jmobius.gameserver.IdFactory;
 import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
-import org.l2jmobius.gameserver.templates.L2Npc;
+import org.l2jmobius.gameserver.templates.Npc;
 import org.l2jmobius.util.Rnd;
 
 public class Spawn
 {
 	private static Logger _log = Logger.getLogger(Spawn.class.getName());
-	private final L2Npc _template;
+	private final Npc _template;
 	private int _id;
 	private String _location;
 	private int _maximumCount;
@@ -48,7 +48,7 @@ public class Spawn
 	private static Timer _spawnTimer = new Timer(true);
 	private final Constructor<?> _constructor;
 	
-	public Spawn(L2Npc mobTemplate) throws SecurityException, ClassNotFoundException
+	public Spawn(Npc mobTemplate) throws SecurityException, ClassNotFoundException
 	{
 		_template = mobTemplate;
 		String implementationName = _template.getType();

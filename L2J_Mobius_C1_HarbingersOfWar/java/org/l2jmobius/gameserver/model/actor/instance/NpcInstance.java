@@ -33,14 +33,14 @@ import org.l2jmobius.gameserver.network.serverpackets.MyTargetSelected;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.network.serverpackets.SetToLocation;
 import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
-import org.l2jmobius.gameserver.templates.L2Npc;
-import org.l2jmobius.gameserver.templates.L2Weapon;
+import org.l2jmobius.gameserver.templates.Npc;
+import org.l2jmobius.gameserver.templates.Weapon;
 
 public class NpcInstance extends Creature
 {
 	private static Logger _log = Logger.getLogger(NpcInstance.class.getName());
 	private static final int INTERACTION_DISTANCE = 150;
-	private final L2Npc _npcTemplate;
+	private final Npc _npcTemplate;
 	private boolean _attackable;
 	private int _rightHandItem;
 	private int _leftHandItem;
@@ -52,7 +52,7 @@ public class NpcInstance extends Creature
 	private static Timer _decayTimer = new Timer(true);
 	private Spawn _spawn;
 	
-	public NpcInstance(L2Npc template)
+	public NpcInstance(Npc template)
 	{
 		_npcTemplate = template;
 		setCollisionHeight(template.getHeight());
@@ -81,7 +81,7 @@ public class NpcInstance extends Creature
 		_aggressive = aggressive;
 	}
 	
-	public L2Npc getNpcTemplate()
+	public Npc getNpcTemplate()
 	{
 		return _npcTemplate;
 	}
@@ -212,7 +212,7 @@ public class NpcInstance extends Creature
 	}
 	
 	@Override
-	public L2Weapon getActiveWeapon()
+	public Weapon getActiveWeapon()
 	{
 		return null;
 	}

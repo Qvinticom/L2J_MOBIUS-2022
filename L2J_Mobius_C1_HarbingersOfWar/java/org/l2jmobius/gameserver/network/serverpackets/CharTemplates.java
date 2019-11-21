@@ -19,14 +19,14 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.Vector;
 
-import org.l2jmobius.gameserver.templates.L2CharTemplate;
+import org.l2jmobius.gameserver.templates.CharTemplate;
 
 public class CharTemplates extends ServerBasePacket
 {
 	private static final String _S__23_CHARTEMPLATES = "[S] 23 CharTemplates";
-	private final Vector<L2CharTemplate> _chars = new Vector<>();
+	private final Vector<CharTemplate> _chars = new Vector<>();
 	
-	public void addChar(L2CharTemplate template)
+	public void addChar(CharTemplate template)
 	{
 		_chars.add(template);
 	}
@@ -38,7 +38,7 @@ public class CharTemplates extends ServerBasePacket
 		writeD(_chars.size());
 		for (int i = 0; i < _chars.size(); ++i)
 		{
-			L2CharTemplate temp = _chars.get(i);
+			CharTemplate temp = _chars.get(i);
 			writeD(temp.getRaceId());
 			writeD(temp.getClassId());
 			writeD(70);
