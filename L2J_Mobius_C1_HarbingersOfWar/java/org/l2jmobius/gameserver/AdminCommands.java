@@ -20,6 +20,7 @@ package org.l2jmobius.gameserver;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.Collection;
 import java.util.StringTokenizer;
 import java.util.logging.Logger;
 
@@ -110,8 +111,7 @@ public class AdminCommands extends Thread
 		}
 		else if (command.equals("admin_announce_announcements"))
 		{
-			PlayerInstance[] players = World.getInstance().getAllPlayers();
-			for (PlayerInstance player : players)
+			for (PlayerInstance player : World.getInstance().getAllPlayers())
 			{
 				Announcements.getInstance().showAnnouncements(player);
 			}
@@ -460,12 +460,11 @@ public class AdminCommands extends Thread
 	public void showMainPage(ClientThread client)
 	{
 		PlayerInstance activeChar = client.getActiveChar();
-		PlayerInstance[] players = World.getInstance().getAllPlayers();
 		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		StringBuffer replyMSG = new StringBuffer("<html><title>Server Status</title>");
 		replyMSG.append("<body>");
 		replyMSG.append("<table>");
-		replyMSG.append("<tr><td>Players Online: " + players.length + "</td></tr>");
+		replyMSG.append("<tr><td>Players Online: " + World.getInstance().getAllPlayers().size() + "</td></tr>");
 		replyMSG.append("<tr><td>Used Memory: " + (Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory()));
 		replyMSG.append(" bytes</td></tr>");
 		replyMSG.append("</table>");
@@ -532,7 +531,8 @@ public class AdminCommands extends Thread
 	private void listCharacters(ClientThread client, int page)
 	{
 		PlayerInstance activeChar = client.getActiveChar();
-		PlayerInstance[] players = World.getInstance().getAllPlayers();
+		Collection<PlayerInstance> allWorldPlayers = World.getInstance().getAllPlayers();
+		PlayerInstance[] players = allWorldPlayers.toArray(new PlayerInstance[allWorldPlayers.size()]);
 		int MaxCharactersPerPage = 20;
 		int MaxPages = players.length / MaxCharactersPerPage;
 		int modulus = players.length % MaxCharactersPerPage;
@@ -823,7 +823,6 @@ public class AdminCommands extends Thread
 	private void findCharacter(ClientThread client, String CharacterToFind)
 	{
 		PlayerInstance activeChar = client.getActiveChar();
-		PlayerInstance[] players = World.getInstance().getAllPlayers();
 		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		int CharactersFound = 0;
 		StringBuffer replyMSG = new StringBuffer("<html><title>Character Search</title>");
@@ -831,7 +830,7 @@ public class AdminCommands extends Thread
 		replyMSG.append("<br>");
 		replyMSG.append("<table>");
 		replyMSG.append("<tr><td>Name</td><td>Class</td><td>Level</td></tr>");
-		for (PlayerInstance player : players)
+		for (PlayerInstance player : World.getInstance().getAllPlayers())
 		{
 			if (!player.getName().startsWith(CharacterToFind))
 			{
@@ -1002,8 +1001,7 @@ public class AdminCommands extends Thread
 	
 	private int disconnectAllCharacters()
 	{
-		PlayerInstance[] players = World.getInstance().getAllPlayers();
-		for (PlayerInstance player : players)
+		for (PlayerInstance player : World.getInstance().getAllPlayers())
 		{
 			LeaveWorld ql = new LeaveWorld();
 			player.sendPacket(ql);
@@ -1163,9 +1161,8 @@ public class AdminCommands extends Thread
 	
 	public void broadcastToAll(String message)
 	{
-		PlayerInstance[] players = World.getInstance().getAllPlayers();
 		CreatureSay cs = new CreatureSay(0, 9, "[Announcement]", message);
-		for (PlayerInstance player : players)
+		for (PlayerInstance player : World.getInstance().getAllPlayers())
 		{
 			player.sendPacket(cs);
 		}

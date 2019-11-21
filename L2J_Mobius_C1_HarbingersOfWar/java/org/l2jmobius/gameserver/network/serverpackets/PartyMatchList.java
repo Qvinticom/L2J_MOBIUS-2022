@@ -17,14 +17,16 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import java.util.Collection;
+
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 public class PartyMatchList extends ServerBasePacket
 {
 	private static final String _S__AF_PARTYMATCHLIST = "[S] AF PartyMatchList";
-	private final PlayerInstance[] _matchingPlayers;
+	private final Collection<PlayerInstance> _matchingPlayers;
 	
-	public PartyMatchList(PlayerInstance[] allPlayers)
+	public PartyMatchList(Collection<PlayerInstance> allPlayers)
 	{
 		_matchingPlayers = allPlayers;
 	}
@@ -33,24 +35,24 @@ public class PartyMatchList extends ServerBasePacket
 	public byte[] getContent()
 	{
 		writeC(175);
-		int size = _matchingPlayers.length;
+		int size = _matchingPlayers.size();
 		if (size > 40)
 		{
 			size = 40;
 		}
 		writeD(size);
-		for (int i = 0; i < size; ++i)
+		for (PlayerInstance player : _matchingPlayers)
 		{
-			writeD(_matchingPlayers[i].getObjectId());
-			writeS(_matchingPlayers[i].getName());
-			writeD(_matchingPlayers[i].getLevel());
-			writeD(_matchingPlayers[i].getClassId());
+			writeD(player.getObjectId());
+			writeS(player.getName());
+			writeD(player.getLevel());
+			writeD(player.getClassId());
 			writeD(0);
-			writeD(_matchingPlayers[i].getClanId());
+			writeD(player.getClanId());
 			writeD(0);
-			writeD(_matchingPlayers[i].getX());
-			writeD(_matchingPlayers[i].getY());
-			writeD(_matchingPlayers[i].getZ());
+			writeD(player.getX());
+			writeD(player.getY());
+			writeD(player.getZ());
 		}
 		return getBytes();
 	}

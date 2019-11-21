@@ -72,8 +72,7 @@ public class Say2 extends ClientBasePacket
 		}
 		else if ((type == 1) || (type == 8))
 		{
-			PlayerInstance[] players = World.getInstance().getAllPlayers();
-			for (PlayerInstance player : players)
+			for (PlayerInstance player : World.getInstance().getAllPlayers())
 			{
 				player.sendPacket(cs);
 			}

@@ -48,8 +48,7 @@ public class SendBypassBuildCmd extends ClientBasePacket
 				{
 					String text = command.substring(9);
 					CreatureSay cs = new CreatureSay(0, 10, activeChar.getName(), text);
-					PlayerInstance[] players = World.getInstance().getAllPlayers();
-					for (PlayerInstance player : players)
+					for (PlayerInstance player : World.getInstance().getAllPlayers())
 					{
 						player.sendPacket(cs);
 					}

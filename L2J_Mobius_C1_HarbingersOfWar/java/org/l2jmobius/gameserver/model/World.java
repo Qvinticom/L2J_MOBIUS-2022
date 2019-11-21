@@ -18,11 +18,11 @@
 package org.l2jmobius.gameserver.model;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.PlayerCountManager;
 import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
@@ -31,8 +31,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 public class World
 {
-	private static Logger _log = Logger.getLogger(World.class.getName());
-	private final Map<String, WorldObject> _allPlayers = new ConcurrentHashMap<>();
+	private final Map<String, PlayerInstance> _allPlayers = new ConcurrentHashMap<>();
 	private final Map<Integer, WorldObject> _allObjects = new ConcurrentHashMap<>();
 	private final Map<Integer, WorldObject> _visibleObjects = new ConcurrentHashMap<>();
 	private static World _instance;
@@ -69,10 +68,9 @@ public class World
 	{
 		if (object instanceof PlayerInstance)
 		{
-			_allPlayers.put(((PlayerInstance) object).getName().toLowerCase(), object);
-			WorldObject[] visible = getVisibleObjects(object, 2000);
-			_log.finest("Objects in range:" + visible.length);
-			for (WorldObject element : visible)
+			final PlayerInstance player = (PlayerInstance) object;
+			_allPlayers.put(player.getName().toLowerCase(), player);
+			for (WorldObject element : getVisibleObjects(object, 2000))
 			{
 				object.addKnownObject(element);
 				if ((object instanceof ItemInstance) && element.getKnownObjects().contains(object))
@@ -88,11 +86,11 @@ public class World
 			int x = object.getX();
 			int y = object.getY();
 			int sqRadius = 4000000;
-			Iterator<WorldObject> iter = _allPlayers.values().iterator();
+			Iterator<PlayerInstance> iter = _allPlayers.values().iterator();
 			while (iter.hasNext())
 			{
 				long dy;
-				PlayerInstance player = (PlayerInstance) iter.next();
+				PlayerInstance player = iter.next();
 				int x1 = player.getX();
 				long dx = x1 - x;
 				long sqDist = (dx * dx) + ((dy = player.getY() - y) * dy);
@@ -110,7 +108,6 @@ public class World
 	public void removeVisibleObject(WorldObject object)
 	{
 		_visibleObjects.remove(object.getObjectId());
-		// _log.fine("World has now " + this._visibleObjects.size() + " visible objects");
 		Object[] temp = object.getKnownObjects().toArray();
 		for (Object element : temp)
 		{
@@ -128,40 +125,29 @@ public class World
 		}
 	}
 	
-	public WorldObject[] getVisibleObjects(WorldObject object, int radius)
+	public Collection<WorldObject> getVisibleObjects(WorldObject object, int radius)
 	{
 		int x = object.getX();
 		int y = object.getY();
-		int sqRadius = radius * radius;
 		List<WorldObject> result = new ArrayList<>();
-		Iterator<WorldObject> iter = _visibleObjects.values().iterator();
-		while (iter.hasNext())
+		for (WorldObject worldObject : _visibleObjects.values())
 		{
-			@SuppressWarnings("unused")
-			int x1;
-			@SuppressWarnings("unused")
-			int y1;
-			long dx;
-			long dy;
-			@SuppressWarnings("unused")
-			long sqDist;
-			WorldObject element = iter.next();
-			if (element.equals(object) || ((sqDist = ((dx = (x1 = element.getX()) - x) * dx) + ((dy = (y1 = element.getY()) - y) * dy)) >= sqRadius))
+			if ((worldObject == null) || worldObject.equals(object) || (Math.sqrt(Math.pow(x - worldObject.getX(), 2) + Math.pow(y - worldObject.getY(), 2)) > radius))
 			{
 				continue;
 			}
-			result.add(element);
+			result.add(worldObject);
 		}
-		return result.toArray(new WorldObject[result.size()]);
+		return result;
 	}
 	
-	public PlayerInstance[] getAllPlayers()
+	public Collection<PlayerInstance> getAllPlayers()
 	{
-		return _allPlayers.values().toArray(new PlayerInstance[_allPlayers.size()]);
+		return _allPlayers.values();
 	}
 	
 	public PlayerInstance getPlayer(String name)
 	{
-		return (PlayerInstance) _allPlayers.get(name.toLowerCase());
+		return _allPlayers.get(name.toLowerCase());
 	}
 }

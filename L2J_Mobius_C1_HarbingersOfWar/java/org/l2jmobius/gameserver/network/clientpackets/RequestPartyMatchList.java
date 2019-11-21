@@ -21,7 +21,6 @@ import java.io.IOException;
 
 import org.l2jmobius.gameserver.ClientThread;
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.serverpackets.PartyMatchList;
 
 public class RequestPartyMatchList extends ClientBasePacket
@@ -34,8 +33,7 @@ public class RequestPartyMatchList extends ClientBasePacket
 		int status = readD();
 		if (status == 1)
 		{
-			PlayerInstance[] allPlayers = World.getInstance().getAllPlayers();
-			PartyMatchList matchList = new PartyMatchList(allPlayers);
+			PartyMatchList matchList = new PartyMatchList(World.getInstance().getAllPlayers());
 			client.getConnection().sendPacket(matchList);
 		}
 		else if (status == 3)

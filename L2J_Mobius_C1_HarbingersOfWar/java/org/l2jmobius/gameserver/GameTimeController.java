@@ -77,8 +77,7 @@ public class GameTimeController extends Thread
 	
 	private void broadcastToPlayers(ServerBasePacket packet)
 	{
-		PlayerInstance[] players = World.getInstance().getAllPlayers();
-		for (PlayerInstance player : players)
+		for (PlayerInstance player : World.getInstance().getAllPlayers())
 		{
 			player.sendPacket(packet);
 		}

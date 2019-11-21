@@ -116,7 +116,7 @@ public class SystemPanel extends JPanel
 			@Override
 			public void run()
 			{
-				lblConnected.setText("Connected: " + World.getInstance().getAllPlayers().length);
+				lblConnected.setText("Connected: " + World.getInstance().getAllPlayers().size());
 				lblMaxConnected.setText("Max connected: " + PlayerCountManager.getInstance().getMaxConnectedCount());
 				lblElapsedTime.setText("Elapsed: " + getDurationBreakdown(System.currentTimeMillis() - startTime));
 			}

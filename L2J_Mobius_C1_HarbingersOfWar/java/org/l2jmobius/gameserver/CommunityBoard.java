@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Collection;
 import java.util.StringTokenizer;
 
 import org.l2jmobius.Config;
@@ -52,7 +53,7 @@ public class CommunityBoard
 			StringBuffer htmlCode = new StringBuffer("<html imgsrc=\"sek.cbui353\"><body><br><table border=0><tr><td FIXWIDTH=15></td><td align=center>L2J Community Board<img src=\"sek.cbui355\" width=610 height=1></td></tr><tr><td FIXWIDTH=15></td><td>");
 			if (command.equals("bbs_default"))
 			{
-				PlayerInstance[] players = World.getInstance().getAllPlayers();
+				Collection<PlayerInstance> players = World.getInstance().getAllPlayers();
 				htmlCode.append("<table border=0>");
 				int t = GameTimeController.getInstance().getGameTime();
 				int h = t / 60;
@@ -67,7 +68,7 @@ public class CommunityBoard
 				htmlCode.append("<tr><td>Adena Rate: " + Config.RATE_ADENA + "</td></tr>");
 				htmlCode.append("<tr><td>Drop Rate: " + Config.RATE_DROP + "</td></tr>");
 				htmlCode.append("<tr><td><img src=\"sek.cbui355\" width=610 height=1><br></td></tr>");
-				htmlCode.append("<tr><td>" + players.length + " Player(s) Online:</td></tr><tr><td><table border=0><tr>");
+				htmlCode.append("<tr><td>" + players.size() + " Player(s) Online:</td></tr><tr><td><table border=0><tr>");
 				int n = 1;
 				for (PlayerInstance player : players)
 				{

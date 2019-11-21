@@ -45,40 +45,38 @@ public class Appearing extends ClientBasePacket
 		Connection con = client.getConnection();
 		UserInfo ui = new UserInfo(activeChar);
 		con.sendPacket(ui);
-		WorldObject[] visible = World.getInstance().getVisibleObjects(activeChar, 2000);
-		_log.fine("npc in range:" + visible.length);
-		for (int i = 0; i < visible.length; ++i)
+		for (WorldObject worldObject : World.getInstance().getVisibleObjects(activeChar, 2000))
 		{
 			NpcInfo ni;
 			Creature npc;
-			activeChar.addKnownObject(visible[i]);
-			if (visible[i] instanceof ItemInstance)
+			activeChar.addKnownObject(worldObject);
+			if (worldObject instanceof ItemInstance)
 			{
-				SpawnItem si = new SpawnItem((ItemInstance) visible[i]);
+				SpawnItem si = new SpawnItem((ItemInstance) worldObject);
 				con.sendPacket(si);
 				continue;
 			}
-			if (visible[i] instanceof NpcInstance)
+			if (worldObject instanceof NpcInstance)
 			{
-				ni = new NpcInfo((NpcInstance) visible[i]);
+				ni = new NpcInfo((NpcInstance) worldObject);
 				con.sendPacket(ni);
-				npc = (NpcInstance) visible[i];
+				npc = (NpcInstance) worldObject;
 				npc.addKnownObject(activeChar);
 				continue;
 			}
-			if (visible[i] instanceof PetInstance)
+			if (worldObject instanceof PetInstance)
 			{
-				ni = new NpcInfo((PetInstance) visible[i]);
+				ni = new NpcInfo((PetInstance) worldObject);
 				con.sendPacket(ni);
-				npc = (PetInstance) visible[i];
+				npc = (PetInstance) worldObject;
 				npc.addKnownObject(activeChar);
 				continue;
 			}
-			if (!(visible[i] instanceof PlayerInstance))
+			if (!(worldObject instanceof PlayerInstance))
 			{
 				continue;
 			}
-			PlayerInstance player = (PlayerInstance) visible[i];
+			PlayerInstance player = (PlayerInstance) worldObject;
 			con.sendPacket(new CharInfo(player));
 			player.addKnownObject(activeChar);
 			player.getNetConnection().sendPacket(new CharInfo(activeChar));

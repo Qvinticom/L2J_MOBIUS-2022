@@ -83,15 +83,14 @@ public class ValidatePosition extends ClientBasePacket
 					_log.fine("deleted " + delete + " objects");
 				}
 				int newObjects = 0;
-				WorldObject[] visible = World.getInstance().getVisibleObjects(activeChar, 3000);
-				for (WorldObject element : visible)
+				for (WorldObject worldObject : World.getInstance().getVisibleObjects(activeChar, 3000))
 				{
-					if (activeChar.knownsObject(element))
+					if (activeChar.knownsObject(worldObject))
 					{
 						continue;
 					}
-					activeChar.addKnownObject(element);
-					element.addKnownObject(activeChar);
+					activeChar.addKnownObject(worldObject);
+					worldObject.addKnownObject(activeChar);
 					++newObjects;
 				}
 				if (newObjects > 0)
