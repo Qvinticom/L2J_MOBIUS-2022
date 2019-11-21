@@ -114,7 +114,7 @@ public class Disconnection
 	{
 		try
 		{
-			if ((_player != null) && _player.isOnline())
+			if (_player != null)
 			{
 				_player.storeMe();
 			}
