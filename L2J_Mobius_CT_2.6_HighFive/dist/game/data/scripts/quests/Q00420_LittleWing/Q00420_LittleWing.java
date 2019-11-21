@@ -865,7 +865,7 @@ public class Q00420_LittleWing extends Quest
 						giveItems(player, DRAGONFLUTE_OF_TWILIGHT, 1);
 					}
 				}
-				if (random < (50 + mul))
+				else if (random < (50 + mul))
 				{
 					giveItems(player, DRAGONFLUTE_OF_WIND, 1);
 				}
