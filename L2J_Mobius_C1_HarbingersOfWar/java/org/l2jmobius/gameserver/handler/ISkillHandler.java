@@ -17,15 +17,13 @@
  */
 package org.l2jmobius.gameserver.handler;
 
-import java.io.IOException;
-
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 public interface ISkillHandler
 {
-	public void useSkill(PlayerInstance var1, Skill var2, WorldObject var3) throws IOException;
+	public void useSkill(PlayerInstance var1, Skill var2, WorldObject var3);
 	
 	public int[] getSkillIds();
 }

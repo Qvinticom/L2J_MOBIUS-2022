@@ -17,9 +17,6 @@
  */
 package org.l2jmobius.gameserver.model.actor.instance;
 
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.io.StringWriter;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -1326,7 +1323,7 @@ public class PlayerInstance extends Creature
 		int level = getSkillLevel(magicId);
 		ActionFailed af = new ActionFailed();
 		sendPacket(af);
-		MagicSkillUser msu = new MagicSkillUser(this, target, magicId, level, skill.getSkillTime(), skill.getReuseDelay());
+		MagicSkillUser msu = new MagicSkillUser(this, target, magicId, level, skill.getHitTime(), skill.getReuseDelay());
 		sendPacket(msu);
 		broadcastPacket(msu);
 		SetupGauge sg = new SetupGauge(0, skill.getSkillTime());
@@ -1339,8 +1336,9 @@ public class PlayerInstance extends Creature
 			disableSkill(skill.getId(), true);
 			_enableSkillTimer.schedule(new EnableSkill(skill.getId()), skill.getReuseDelay());
 			disableAllSkills();
-			_enableAllSkillsTimer.schedule(new EnableAllSkills(skill), skill.getSkillTime());
-			_magicUseTimer.schedule(new MagicUseTask(target, skill), skill.getSkillTime() - 300);
+			final int hittime = skill.getHitTime();
+			_enableAllSkillsTimer.schedule(new EnableAllSkills(skill), hittime + 5);
+			_magicUseTimer.schedule(new MagicUseTask(target, skill), hittime);
 		}
 	}
 	
@@ -1348,7 +1346,7 @@ public class PlayerInstance extends Creature
 	protected void reduceArrowCount()
 	{
 		ItemInstance arrows = getInventory().destroyItem(getInventory().getPaperdollObjectId(8), 1);
-		_log.info("arrow count:" + arrows.getCount());
+		// _log.info("arrow count:" + arrows.getCount());
 		if (arrows.getCount() == 0)
 		{
 			getInventory().unEquipItemOnPaperdoll(8);
@@ -1413,7 +1411,7 @@ public class PlayerInstance extends Creature
 		return System.currentTimeMillis() - _uptime;
 	}
 	
-	public void onMagicUseTimer(Creature target, Skill skill) throws IOException
+	public void onMagicUseTimer(Creature target, Skill skill)
 	{
 		if ((getCurrentState() == 2) && _allSkillsDisabled && isSkillDisabled(skill.getId()) && (getSkill() == skill))
 		{
@@ -1425,7 +1423,7 @@ public class PlayerInstance extends Creature
 				while (it.hasNext())
 				{
 					PlayerInstance player = it.next();
-					_log.fine("msl: " + getName() + " " + magicId + " " + level + " " + player.getName());
+					// _log.fine("msl: " + getName() + " " + magicId + " " + level + " " + player.getName());
 					MagicSkillLaunched msl = new MagicSkillLaunched(this, magicId, level, player);
 					sendPacket(msl);
 					broadcastPacket(msl);
@@ -1434,7 +1432,7 @@ public class PlayerInstance extends Creature
 			else
 			{
 				MagicSkillLaunched msl = new MagicSkillLaunched(this, magicId, level, target);
-				_log.fine("msl: " + getName() + " " + magicId + " " + level + " " + target.getName());
+				// _log.fine("msl: " + getName() + " " + magicId + " " + level + " " + target.getName());
 				sendPacket(msl);
 				broadcastPacket(msl);
 			}
@@ -1602,12 +1600,9 @@ public class PlayerInstance extends Creature
 			{
 				onMagicUseTimer(_target, _skill);
 			}
-			catch (Throwable e)
+			catch (Exception e)
 			{
-				StringWriter pw = new StringWriter();
-				PrintWriter prw = new PrintWriter(pw);
-				e.printStackTrace(prw);
-				_log.severe(pw.toString());
+				e.printStackTrace();
 			}
 		}
 	}

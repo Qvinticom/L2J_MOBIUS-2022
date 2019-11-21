@@ -1364,7 +1364,7 @@ public class AdminCommands extends Thread
 			if (skill.getTargetType() == 0)
 			{
 				activeChar.setTarget(activeChar);
-				MagicSkillUser msk = new MagicSkillUser(activeChar, skillid, 1, skill.getSkillTime(), skill.getReuseDelay());
+				MagicSkillUser msk = new MagicSkillUser(activeChar, skillid, 1, skill.getHitTime(), skill.getReuseDelay());
 				activeChar.sendPacket(msk);
 				activeChar.broadcastPacket(msk);
 				// ActionFailed af = new ActionFailed();
