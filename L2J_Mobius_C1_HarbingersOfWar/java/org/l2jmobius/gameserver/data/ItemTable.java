@@ -219,7 +219,7 @@ public class ItemTable
 			{
 				try
 				{
-					if ((line.trim().length() == 0) || line.startsWith("#"))
+					if (line.trim().isEmpty() || line.startsWith("#"))
 					{
 						continue;
 					}
@@ -334,7 +334,8 @@ public class ItemTable
 		}
 		catch (Exception e)
 		{
-			_log.warning("Data error on etc item:" + result + " " + e);
+			_log.warning("Data error on etc item:" + result + " line: " + line);
+			e.printStackTrace();
 		}
 		return result;
 	}

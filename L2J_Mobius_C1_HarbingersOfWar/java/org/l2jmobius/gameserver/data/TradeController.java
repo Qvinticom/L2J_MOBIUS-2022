@@ -17,9 +17,10 @@
  */
 package org.l2jmobius.gameserver.data;
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileReader;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStreamReader;
 import java.io.LineNumberReader;
 import java.util.HashMap;
 import java.util.Map;
@@ -47,31 +48,30 @@ public class TradeController
 	private TradeController()
 	{
 		String line = null;
-		LineNumberReader lnr = null;
 		int dummyItemCount = 0;
 		try
 		{
 			File buylistData = new File("data/buylists.csv");
-			lnr = new LineNumberReader(new BufferedReader(new FileReader(buylistData)));
+			LineNumberReader lnr = new LineNumberReader(new InputStreamReader(new FileInputStream(buylistData)));
 			while ((line = lnr.readLine()) != null)
 			{
-				if ((line.trim().length() == 0) || line.startsWith("#"))
+				if (line.trim().isEmpty() || line.startsWith("#"))
 				{
 					continue;
 				}
 				dummyItemCount += parseList(line);
 			}
+			lnr.close();
 			_log.fine("Created " + dummyItemCount + " Dummy-Items for buylists.");
 			_log.config("Loaded " + _lists.size() + " buylists.");
 		}
+		catch (FileNotFoundException e)
+		{
+			_log.warning("No buylists were found in data folder.");
+		}
 		catch (Exception e)
 		{
-			if (lnr != null)
-			{
-				_log.warning("Error while creating trade controller in linenr: " + lnr.getLineNumber());
-				e.printStackTrace();
-			}
-			_log.warning("No buylists were found in data folder.");
+			_log.warning("Error while creating buylists: " + e);
 		}
 	}
 	

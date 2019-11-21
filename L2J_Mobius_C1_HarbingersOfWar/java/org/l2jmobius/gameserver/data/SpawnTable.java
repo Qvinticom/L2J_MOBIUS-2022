@@ -17,10 +17,10 @@
  */
 package org.l2jmobius.gameserver.data;
 
-import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
+import java.io.InputStreamReader;
 import java.io.LineNumberReader;
 import java.util.HashMap;
 import java.util.Map;
@@ -49,17 +49,16 @@ public class SpawnTable
 	
 	private SpawnTable()
 	{
-		BufferedReader lnr = null;
 		try
 		{
 			File spawnDataFile = new File("data/spawnlist.csv");
-			lnr = new LineNumberReader(new BufferedReader(new FileReader(spawnDataFile)));
+			LineNumberReader lnr = new LineNumberReader(new InputStreamReader(new FileInputStream(spawnDataFile)));
 			String line = null;
-			while ((line = ((LineNumberReader) lnr).readLine()) != null)
+			while ((line = lnr.readLine()) != null)
 			{
 				try
 				{
-					if ((line.trim().length() == 0) || line.startsWith("#"))
+					if (line.trim().isEmpty() || line.startsWith("#"))
 					{
 						continue;
 					}
@@ -76,6 +75,7 @@ public class SpawnTable
 					_log.warning("Spawn could not be initialized: " + e1);
 				}
 			}
+			lnr.close();
 			_log.config("Created " + _spawntable.size() + " spawn handlers.");
 			_log.fine("Spawning completed, total number of NPCs in the world: " + _npcSpawnCount);
 		}
@@ -86,19 +86,6 @@ public class SpawnTable
 		catch (Exception e)
 		{
 			_log.warning("error while creating spawn list " + e);
-		}
-		finally
-		{
-			try
-			{
-				if (lnr != null)
-				{
-					lnr.close();
-				}
-			}
-			catch (Exception e1)
-			{
-			}
 		}
 	}
 	

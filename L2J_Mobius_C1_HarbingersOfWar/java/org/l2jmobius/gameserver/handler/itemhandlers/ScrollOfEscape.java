@@ -40,12 +40,7 @@ public class ScrollOfEscape implements IItemHandler
 	@Override
 	public int useItem(PlayerInstance activeChar, ItemInstance item)
 	{
-		String townCordsString = MapRegionTable.getInstance().getClosestTownCords(activeChar);
-		String[] temp = null;
-		temp = townCordsString.split("!");
-		int townX = Integer.parseInt(temp[0]);
-		int townY = Integer.parseInt(temp[1]);
-		int townZ = Integer.parseInt(temp[2]);
+		int[] townCords = MapRegionTable.getInstance().getClosestTownCords(activeChar);
 		activeChar.setTarget(activeChar);
 		Skill skill = SkillTable.getInstance().getInfo(1050, 1);
 		MagicSkillUser msk = new MagicSkillUser(activeChar, 1050, 1, 20000, 0);
@@ -71,12 +66,12 @@ public class ScrollOfEscape implements IItemHandler
 		activeChar.sendPacket(af);
 		World.getInstance().removeVisibleObject(activeChar);
 		activeChar.removeAllKnownObjects();
-		TeleportToLocation teleport = new TeleportToLocation(activeChar, townX, townY, townZ);
+		TeleportToLocation teleport = new TeleportToLocation(activeChar, townCords[0], townCords[1], townCords[2]);
 		activeChar.sendPacket(teleport);
 		activeChar.broadcastPacket(teleport);
-		activeChar.setX(townX);
-		activeChar.setY(townY);
-		activeChar.setZ(townZ);
+		activeChar.setX(townCords[0]);
+		activeChar.setY(townCords[1]);
+		activeChar.setZ(townCords[2]);
 		try
 		{
 			Thread.sleep(2000L);

@@ -17,11 +17,9 @@
  */
 package org.l2jmobius.gameserver.data;
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.FileInputStream;
+import java.io.InputStreamReader;
 import java.io.LineNumberReader;
 import java.util.StringTokenizer;
 import java.util.logging.Logger;
@@ -49,85 +47,39 @@ public class PriceListTable
 	
 	public void loadPriceList()
 	{
-		File file = new File("data/pricelist.csv");
-		if (file.exists())
-		{
-			try
-			{
-				readFromDisk(file);
-			}
-			catch (IOException e)
-			{
-			}
-		}
-		else
-		{
-			_log.config("data/pricelist.csv is missing!");
-		}
-	}
-	
-	private void readFromDisk(File file) throws IOException
-	{
-		BufferedReader lnr = null;
-		int i = 0;
-		String line = null;
-		lnr = new LineNumberReader(new FileReader(file));
-		while ((line = ((LineNumberReader) lnr).readLine()) != null)
-		{
-			if (line.startsWith("#"))
-			{
-				continue;
-			}
-			StringTokenizer st = new StringTokenizer(line, ";");
-			int itemId = Integer.parseInt(st.nextToken().toString());
-			int price = Integer.parseInt(st.nextToken().toString());
-			L2Item temp = ItemTable.getInstance().getTemplate(itemId);
-			temp.setItemId(itemId);
-			temp.setReferencePrice(price);
-			++i;
-		}
-		_log.config("Loaded " + i + " prices.");
 		try
 		{
-			lnr.close();
-			return;
-		}
-		catch (FileNotFoundException e)
-		{
-			try
+			File file = new File("data/pricelist.csv");
+			if (file.isFile() && file.exists())
 			{
+				int i = 0;
+				String line = null;
+				LineNumberReader lnr = new LineNumberReader(new InputStreamReader(new FileInputStream(file)));
+				while ((line = lnr.readLine()) != null)
+				{
+					if (line.startsWith("#"))
+					{
+						continue;
+					}
+					StringTokenizer st = new StringTokenizer(line, ";");
+					int itemId = Integer.parseInt(st.nextToken().toString());
+					int price = Integer.parseInt(st.nextToken().toString());
+					L2Item temp = ItemTable.getInstance().getTemplate(itemId);
+					temp.setItemId(itemId);
+					temp.setReferencePrice(price);
+					++i;
+				}
+				_log.config("Loaded " + i + " prices.");
 				lnr.close();
-				return;
 			}
-			catch (IOException e1)
+			else
 			{
-				try
-				{
-					e1.printStackTrace();
-				}
-				catch (Throwable throwable)
-				{
-					try
-					{
-						lnr.close();
-						throw throwable;
-					}
-					catch (Exception e2)
-					{
-						// empty catch block
-					}
-					throw throwable;
-				}
-				try
-				{
-					lnr.close();
-					return;
-				}
-				catch (Exception e2)
-				{
-					return;
-				}
+				_log.config("data/pricelist.csv is missing!");
 			}
+		}
+		catch (Exception e)
+		{
+			_log.warning("Error while loading price lists: " + e);
 		}
 	}
 }

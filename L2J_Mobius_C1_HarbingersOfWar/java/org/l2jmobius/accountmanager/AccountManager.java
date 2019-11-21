@@ -54,7 +54,7 @@ public class AccountManager
 		{
 			if (_mode.equals("1") || _mode.equals("2") || _mode.equals("3"))
 			{
-				while (_uname.length() == 0)
+				while (_uname.isEmpty())
 				{
 					System.out.print("username: ");
 					_uname = _in.readLine();
@@ -62,7 +62,7 @@ public class AccountManager
 			}
 			if (_mode.equals("1"))
 			{
-				while (_pass.length() == 0)
+				while (_pass.isEmpty())
 				{
 					System.out.print("password: ");
 					_pass = _in.readLine();
@@ -70,7 +70,7 @@ public class AccountManager
 			}
 			if (_mode.equals("1") || _mode.equals("2"))
 			{
-				while (_level.length() == 0)
+				while (_level.isEmpty())
 				{
 					System.out.print("access level: ");
 					_level = _in.readLine();

@@ -17,10 +17,10 @@
  */
 package org.l2jmobius.gameserver.data;
 
-import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
+import java.io.InputStreamReader;
 import java.io.LineNumberReader;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -170,20 +170,19 @@ public class SkillTreeTable
 	
 	private void readFile(File skillData, int classId, int parentClassId)
 	{
-		BufferedReader lnr = null;
 		String line = null;
 		try
 		{
-			lnr = new LineNumberReader(new BufferedReader(new FileReader(skillData)));
+			LineNumberReader lnr = new LineNumberReader(new InputStreamReader(new FileInputStream(skillData)));
 			List<SkillLearn> list = new ArrayList<>();
 			if (parentClassId != -1)
 			{
 				List<SkillLearn> parentList = _skillTrees.get(parentClassId);
 				list.addAll(parentList);
 			}
-			while ((line = ((LineNumberReader) lnr).readLine()) != null)
+			while ((line = lnr.readLine()) != null)
 			{
-				if ((line.trim().length() == 0) || line.startsWith("#"))
+				if (line.trim().isEmpty() || line.startsWith("#"))
 				{
 					continue;
 				}
@@ -191,6 +190,7 @@ public class SkillTreeTable
 				list.add(skill);
 			}
 			_skillTrees.put(classId, list);
+			lnr.close();
 			_log.config("Skill tree for class " + classId + " has " + list.size() + " skills.");
 		}
 		catch (FileNotFoundException e)
@@ -200,20 +200,6 @@ public class SkillTreeTable
 		catch (Exception e)
 		{
 			_log.warning("Error while creating skill tree for classId " + classId + "  " + line + " " + e);
-			e.printStackTrace();
-		}
-		finally
-		{
-			try
-			{
-				if (lnr != null)
-				{
-					lnr.close();
-				}
-			}
-			catch (Exception e1)
-			{
-			}
 		}
 	}
 	

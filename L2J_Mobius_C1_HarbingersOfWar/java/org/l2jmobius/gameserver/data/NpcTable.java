@@ -17,10 +17,10 @@
  */
 package org.l2jmobius.gameserver.data;
 
-import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
+import java.io.InputStreamReader;
 import java.io.LineNumberReader;
 import java.util.HashMap;
 import java.util.Map;
@@ -60,21 +60,21 @@ public class NpcTable
 	
 	private void parseData()
 	{
-		BufferedReader lnr = null;
 		try
 		{
-			File skillData = new File("data/npc.csv");
-			lnr = new LineNumberReader(new BufferedReader(new FileReader(skillData)));
+			File npcData = new File("data/npc.csv");
+			LineNumberReader lnr = new LineNumberReader(new InputStreamReader(new FileInputStream(npcData)));
 			String line = null;
-			while ((line = ((LineNumberReader) lnr).readLine()) != null)
+			while ((line = lnr.readLine()) != null)
 			{
-				if ((line.trim().length() == 0) || line.startsWith("#"))
+				if (line.trim().isEmpty() || line.startsWith("#"))
 				{
 					continue;
 				}
 				L2Npc npc = parseList(line);
 				_npcs.put(npc.getNpcId(), npc);
 			}
+			lnr.close();
 			_log.config("Loaded " + _npcs.size() + " NPC templates.");
 		}
 		catch (FileNotFoundException e)
@@ -86,19 +86,6 @@ public class NpcTable
 		{
 			_initialized = false;
 			_log.warning("Error while creating npc table " + e);
-		}
-		finally
-		{
-			try
-			{
-				if (lnr != null)
-				{
-					lnr.close();
-				}
-			}
-			catch (Exception e1)
-			{
-			}
 		}
 	}
 	
@@ -121,15 +108,14 @@ public class NpcTable
 	
 	private void parseAdditionalData()
 	{
-		BufferedReader lnr = null;
 		try
 		{
-			File npcDataFile = new File("data/npc2.csv");
-			lnr = new LineNumberReader(new BufferedReader(new FileReader(npcDataFile)));
+			File npcData2 = new File("data/npc2.csv");
+			LineNumberReader lnr = new LineNumberReader(new InputStreamReader(new FileInputStream(npcData2)));
 			String line = null;
-			while ((line = ((LineNumberReader) lnr).readLine()) != null)
+			while ((line = lnr.readLine()) != null)
 			{
-				if ((line.trim().length() == 0) || line.startsWith("#"))
+				if (line.trim().isEmpty() || line.startsWith("#"))
 				{
 					continue;
 				}
@@ -139,9 +125,10 @@ public class NpcTable
 				}
 				catch (Exception e)
 				{
-					_log.warning("Parsing error in npc2.csv, line " + ((LineNumberReader) lnr).getLineNumber() + " / " + e.toString());
+					_log.warning("Parsing error in npc2.csv, line " + lnr.getLineNumber() + " / " + e.toString());
 				}
 			}
+			lnr.close();
 		}
 		catch (FileNotFoundException e)
 		{
@@ -150,19 +137,6 @@ public class NpcTable
 		catch (Exception e)
 		{
 			_log.warning("Error while creating npc data table " + e);
-		}
-		finally
-		{
-			try
-			{
-				if (lnr != null)
-				{
-					lnr.close();
-				}
-			}
-			catch (Exception e1)
-			{
-			}
 		}
 	}
 	
@@ -201,16 +175,15 @@ public class NpcTable
 	
 	private void parseDropData()
 	{
-		BufferedReader lnr = null;
 		try
 		{
-			File dropDataFile = new File("data/droplist.csv");
-			lnr = new LineNumberReader(new BufferedReader(new FileReader(dropDataFile)));
+			File dropData = new File("data/droplist.csv");
+			LineNumberReader lnr = new LineNumberReader(new InputStreamReader(new FileInputStream(dropData)));
 			String line = null;
 			int n = 0;
-			while ((line = ((LineNumberReader) lnr).readLine()) != null)
+			while ((line = lnr.readLine()) != null)
 			{
-				if ((line.trim().length() == 0) || line.startsWith("#"))
+				if (line.trim().isEmpty() || line.startsWith("#"))
 				{
 					continue;
 				}
@@ -221,10 +194,11 @@ public class NpcTable
 				}
 				catch (Exception e)
 				{
-					_log.warning("Parsing error in droplist.csv, line " + ((LineNumberReader) lnr).getLineNumber() + " / " + e.toString());
+					_log.warning("Parsing error in droplist.csv, line " + lnr.getLineNumber() + " / " + e.toString());
 				}
 			}
 			_log.config("Loaded " + n + " drop data templates.");
+			lnr.close();
 		}
 		catch (FileNotFoundException e)
 		{
@@ -233,19 +207,6 @@ public class NpcTable
 		catch (Exception e)
 		{
 			_log.warning("Error while creating drop data table " + e);
-		}
-		finally
-		{
-			try
-			{
-				if (lnr != null)
-				{
-					lnr.close();
-				}
-			}
-			catch (Exception e1)
-			{
-			}
 		}
 	}
 	

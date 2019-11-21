@@ -19,8 +19,10 @@ package org.l2jmobius.gameserver.data;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.InputStreamReader;
 import java.io.LineNumberReader;
 import java.util.HashMap;
 import java.util.Map;
@@ -47,15 +49,14 @@ public class SkillTable
 	
 	private SkillTable()
 	{
-		BufferedReader lnr = null;
 		try
 		{
 			File skillData = new File("data/skills.csv");
-			lnr = new LineNumberReader(new BufferedReader(new FileReader(skillData)));
+			LineNumberReader lnr = new LineNumberReader(new InputStreamReader(new FileInputStream(skillData)));
 			String line = null;
-			while ((line = ((LineNumberReader) lnr).readLine()) != null)
+			while ((line = lnr.readLine()) != null)
 			{
-				if ((line.trim().length() == 0) || line.startsWith("#"))
+				if (line.trim().isEmpty() || line.startsWith("#"))
 				{
 					continue;
 				}
@@ -65,14 +66,15 @@ public class SkillTable
 			skillData = new File("data/skills2.csv");
 			lnr.close();
 			lnr = new LineNumberReader(new BufferedReader(new FileReader(skillData)));
-			while ((line = ((LineNumberReader) lnr).readLine()) != null)
+			while ((line = lnr.readLine()) != null)
 			{
-				if ((line.trim().length() == 0) || line.startsWith("#"))
+				if (line.trim().isEmpty() || line.startsWith("#"))
 				{
 					continue;
 				}
 				parseList2(line);
 			}
+			lnr.close();
 			_log.config("Loaded " + _skills.size() + " skills.");
 		}
 		catch (FileNotFoundException e)
@@ -84,19 +86,6 @@ public class SkillTable
 		{
 			_initialized = false;
 			_log.warning("Error while creating skill table: " + e.toString());
-		}
-		finally
-		{
-			try
-			{
-				if (lnr != null)
-				{
-					lnr.close();
-				}
-			}
-			catch (Exception e1)
-			{
-			}
 		}
 	}
 	

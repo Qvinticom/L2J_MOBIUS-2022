@@ -17,10 +17,9 @@
  */
 package org.l2jmobius.gameserver.data;
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
+import java.io.FileInputStream;
+import java.io.InputStreamReader;
 import java.io.LineNumberReader;
 import java.util.HashMap;
 import java.util.Map;
@@ -46,56 +45,40 @@ public class TeleportLocationTable
 	
 	private TeleportLocationTable()
 	{
-		BufferedReader lnr = null;
 		try
 		{
 			File teleData = new File("data/teleport.csv");
-			lnr = new LineNumberReader(new BufferedReader(new FileReader(teleData)));
-			String line = null;
-			while ((line = ((LineNumberReader) lnr).readLine()) != null)
+			if (teleData.isFile() && teleData.exists())
 			{
-				if ((line.trim().length() == 0) || line.startsWith("#"))
+				LineNumberReader lnr = new LineNumberReader(new InputStreamReader(new FileInputStream(teleData)));
+				String line = null;
+				while ((line = lnr.readLine()) != null)
 				{
-					continue;
+					if (line.trim().isEmpty() || line.startsWith("#"))
+					{
+						continue;
+					}
+					StringTokenizer st = new StringTokenizer(line, ";");
+					TeleportLocation teleport = new TeleportLocation();
+					teleport.setTeleId(Integer.parseInt(st.nextToken()));
+					teleport.setLocX(Integer.parseInt(st.nextToken()));
+					teleport.setLocY(Integer.parseInt(st.nextToken()));
+					teleport.setLocZ(Integer.parseInt(st.nextToken()));
+					teleport.setPrice(Integer.parseInt(st.nextToken()));
+					_teleports.put(teleport.getTeleId(), teleport);
 				}
-				TeleportLocation tele = parseList(line);
-				_teleports.put(tele.getTeleId(), tele);
+				lnr.close();
+				_log.config("Loaded " + _teleports.size() + " Teleport templates.");
 			}
-			_log.config("Loaded " + _teleports.size() + " Teleport templates.");
-		}
-		catch (FileNotFoundException e)
-		{
-			_log.warning("teleport.csv is missing in data folder.");
+			else
+			{
+				_log.warning("teleport.csv is missing in data folder.");
+			}
 		}
 		catch (Exception e)
 		{
 			_log.warning("Error while creating teleport table " + e);
 		}
-		finally
-		{
-			try
-			{
-				if (lnr != null)
-				{
-					lnr.close();
-				}
-			}
-			catch (Exception e1)
-			{
-			}
-		}
-	}
-	
-	private TeleportLocation parseList(String line)
-	{
-		StringTokenizer st = new StringTokenizer(line, ";");
-		TeleportLocation teleport = new TeleportLocation();
-		teleport.setTeleId(Integer.parseInt(st.nextToken()));
-		teleport.setLocX(Integer.parseInt(st.nextToken()));
-		teleport.setLocY(Integer.parseInt(st.nextToken()));
-		teleport.setLocZ(Integer.parseInt(st.nextToken()));
-		teleport.setPrice(Integer.parseInt(st.nextToken()));
-		return teleport;
 	}
 	
 	public TeleportLocation getTemplate(int id)

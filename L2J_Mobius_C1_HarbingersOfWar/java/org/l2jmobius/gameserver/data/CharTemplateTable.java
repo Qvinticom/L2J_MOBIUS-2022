@@ -17,10 +17,9 @@
  */
 package org.l2jmobius.gameserver.data;
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
+import java.io.FileInputStream;
+import java.io.InputStreamReader;
 import java.io.LineNumberReader;
 import java.util.HashMap;
 import java.util.Map;
@@ -46,83 +45,72 @@ public class CharTemplateTable
 	
 	private CharTemplateTable()
 	{
-		BufferedReader lnr = null;
 		try
 		{
-			File skillData = new File("data/char_templates.csv");
-			lnr = new LineNumberReader(new BufferedReader(new FileReader(skillData)));
-			String line = null;
-			while ((line = ((LineNumberReader) lnr).readLine()) != null)
+			File charTemplateData = new File("data/char_templates.csv");
+			if (charTemplateData.isFile() && charTemplateData.exists())
 			{
-				if ((line.trim().length() == 0) || line.startsWith("#"))
+				LineNumberReader lnr = new LineNumberReader(new InputStreamReader(new FileInputStream(charTemplateData)));
+				String line = null;
+				while ((line = lnr.readLine()) != null)
 				{
-					continue;
+					if (line.trim().isEmpty() || line.startsWith("#"))
+					{
+						continue;
+					}
+					L2CharTemplate ct = new L2CharTemplate();
+					StringTokenizer st = new StringTokenizer(line, ";");
+					ct.setClassId(Integer.parseInt(st.nextToken()));
+					ct.setClassName(st.nextToken());
+					ct.setRaceId(Integer.parseInt(st.nextToken()));
+					ct.setStr(Integer.parseInt(st.nextToken()));
+					ct.setCon(Integer.parseInt(st.nextToken()));
+					ct.setDex(Integer.parseInt(st.nextToken()));
+					ct.setInt(Integer.parseInt(st.nextToken()));
+					ct.setWit(Integer.parseInt(st.nextToken()));
+					ct.setMen(Integer.parseInt(st.nextToken()));
+					ct.setHp(Integer.parseInt(st.nextToken()));
+					ct.setMp(Integer.parseInt(st.nextToken()));
+					ct.setPatk(Integer.parseInt(st.nextToken()));
+					ct.setPdef(Integer.parseInt(st.nextToken()));
+					ct.setMatk(Integer.parseInt(st.nextToken()));
+					ct.setMdef(Integer.parseInt(st.nextToken()));
+					ct.setPspd(Integer.parseInt(st.nextToken()));
+					ct.setMspd(Integer.parseInt(st.nextToken()));
+					ct.setAcc(Integer.parseInt(st.nextToken()));
+					ct.setCrit(Integer.parseInt(st.nextToken()));
+					ct.setEvas(Integer.parseInt(st.nextToken()));
+					ct.setMoveSpd(Integer.parseInt(st.nextToken()));
+					ct.setLoad(Integer.parseInt(st.nextToken()));
+					ct.setX(Integer.parseInt(st.nextToken()));
+					ct.setY(Integer.parseInt(st.nextToken()));
+					ct.setZ(Integer.parseInt(st.nextToken()));
+					ct.setCanCraft(Integer.parseInt(st.nextToken()));
+					ct.setMUnk1(Double.parseDouble(st.nextToken()));
+					ct.setMUnk2(Double.parseDouble(st.nextToken()));
+					ct.setMColR(Double.parseDouble(st.nextToken()));
+					ct.setMColH(Double.parseDouble(st.nextToken()));
+					ct.setFUnk1(Double.parseDouble(st.nextToken()));
+					ct.setFUnk2(Double.parseDouble(st.nextToken()));
+					ct.setFColR(Double.parseDouble(st.nextToken()));
+					ct.setFColH(Double.parseDouble(st.nextToken()));
+					while (st.hasMoreTokens())
+					{
+						ct.addItem(Integer.parseInt(st.nextToken()));
+					}
+					_templates.put(ct.getClassId(), ct);
 				}
-				L2CharTemplate ct = new L2CharTemplate();
-				StringTokenizer st = new StringTokenizer(line, ";");
-				ct.setClassId(Integer.parseInt(st.nextToken()));
-				ct.setClassName(st.nextToken());
-				ct.setRaceId(Integer.parseInt(st.nextToken()));
-				ct.setStr(Integer.parseInt(st.nextToken()));
-				ct.setCon(Integer.parseInt(st.nextToken()));
-				ct.setDex(Integer.parseInt(st.nextToken()));
-				ct.setInt(Integer.parseInt(st.nextToken()));
-				ct.setWit(Integer.parseInt(st.nextToken()));
-				ct.setMen(Integer.parseInt(st.nextToken()));
-				ct.setHp(Integer.parseInt(st.nextToken()));
-				ct.setMp(Integer.parseInt(st.nextToken()));
-				ct.setPatk(Integer.parseInt(st.nextToken()));
-				ct.setPdef(Integer.parseInt(st.nextToken()));
-				ct.setMatk(Integer.parseInt(st.nextToken()));
-				ct.setMdef(Integer.parseInt(st.nextToken()));
-				ct.setPspd(Integer.parseInt(st.nextToken()));
-				ct.setMspd(Integer.parseInt(st.nextToken()));
-				ct.setAcc(Integer.parseInt(st.nextToken()));
-				ct.setCrit(Integer.parseInt(st.nextToken()));
-				ct.setEvas(Integer.parseInt(st.nextToken()));
-				ct.setMoveSpd(Integer.parseInt(st.nextToken()));
-				ct.setLoad(Integer.parseInt(st.nextToken()));
-				ct.setX(Integer.parseInt(st.nextToken()));
-				ct.setY(Integer.parseInt(st.nextToken()));
-				ct.setZ(Integer.parseInt(st.nextToken()));
-				ct.setCanCraft(Integer.parseInt(st.nextToken()));
-				ct.setMUnk1(Double.parseDouble(st.nextToken()));
-				ct.setMUnk2(Double.parseDouble(st.nextToken()));
-				ct.setMColR(Double.parseDouble(st.nextToken()));
-				ct.setMColH(Double.parseDouble(st.nextToken()));
-				ct.setFUnk1(Double.parseDouble(st.nextToken()));
-				ct.setFUnk2(Double.parseDouble(st.nextToken()));
-				ct.setFColR(Double.parseDouble(st.nextToken()));
-				ct.setFColH(Double.parseDouble(st.nextToken()));
-				while (st.hasMoreTokens())
-				{
-					ct.addItem(Integer.parseInt(st.nextToken()));
-				}
-				_templates.put(ct.getClassId(), ct);
+				lnr.close();
+				_log.config("Loaded " + _templates.size() + " char templates.");
 			}
-			_log.config("Loaded " + _templates.size() + " char templates.");
-		}
-		catch (FileNotFoundException e)
-		{
-			_log.warning("char_templates.csv is missing in data folder, char creation will fail.");
+			else
+			{
+				_log.warning("char_templates.csv is missing in data folder, char creation will fail.");
+			}
 		}
 		catch (Exception e)
 		{
 			_log.warning("Error while loading char templates " + e);
-			e.printStackTrace();
-		}
-		finally
-		{
-			try
-			{
-				if (lnr != null)
-				{
-					lnr.close();
-				}
-			}
-			catch (Exception e1)
-			{
-			}
 		}
 	}
 	

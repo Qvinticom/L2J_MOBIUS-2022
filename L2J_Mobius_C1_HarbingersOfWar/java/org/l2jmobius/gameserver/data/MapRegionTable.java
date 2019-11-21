@@ -17,11 +17,9 @@
  */
 package org.l2jmobius.gameserver.data;
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.FileInputStream;
+import java.io.InputStreamReader;
 import java.io.LineNumberReader;
 import java.util.StringTokenizer;
 import java.util.logging.Logger;
@@ -49,15 +47,14 @@ public class MapRegionTable
 		super();
 		int count = 0;
 		int count2 = 0;
-		LineNumberReader lnr = null;
 		try
 		{
 			File regionDataFile = new File("data/mapregion.csv");
-			lnr = new LineNumberReader(new BufferedReader(new FileReader(regionDataFile)));
+			LineNumberReader lnr = new LineNumberReader(new InputStreamReader(new FileInputStream(regionDataFile)));
 			String line = null;
 			while ((line = lnr.readLine()) != null)
 			{
-				if ((line.trim().length() == 0) || line.startsWith("#"))
+				if (line.trim().isEmpty() || line.startsWith("#"))
 				{
 					continue;
 				}
@@ -68,55 +65,12 @@ public class MapRegionTable
 				}
 				++count;
 			}
-			
-			try
-			{
-				_log.fine("Loaded " + count2 + " map regions.");
-				lnr.close();
-				return;
-			}
-			catch (FileNotFoundException e)
-			{
-				_log.warning("mapregion.csv is missing in data folder.");
-				try
-				{
-				}
-				catch (Exception e1)
-				{
-					return;
-				}
-				_log.fine("Loaded " + count2 + " map regions.");
-				lnr.close();
-				return;
-			}
-			catch (Exception e)
-			{
-				_log.warning("Rrror while creating map region data: " + e);
-				try
-				{
-				}
-				catch (Exception e1)
-				{
-					return;
-				}
-				_log.fine("Loaded " + count2 + " map regions.");
-				lnr.close();
-				return;
-			}
-		}
-		catch (Throwable throwable)
-		{
 			_log.fine("Loaded " + count2 + " map regions.");
-			try
-			{
-				if (lnr != null)
-				{
-					lnr.close();
-				}
-			}
-			catch (IOException e)
-			{
-			}
+			lnr.close();
+		}
+		catch (Exception e)
+		{
+			_log.fine("Error loading map regions. " + e);
 		}
 	}
 	
@@ -127,7 +81,7 @@ public class MapRegionTable
 		return _regions[tileX][tileY];
 	}
 	
-	public String getClosestTownCords(Creature activeChar)
+	public int[] getClosestTownCords(Creature activeChar)
 	{
 		int[][] pos = new int[13][3];
 		pos[0][0] = -84176;
@@ -170,7 +124,12 @@ public class MapRegionTable
 		pos[12][1] = 148497;
 		pos[12][2] = -3404;
 		int closest = getMapRegion(activeChar.getX(), activeChar.getY());
-		String ClosestTownCords = pos[closest][0] + "!" + pos[closest][1] + "!" + pos[closest][2];
+		int[] ClosestTownCords =
+		{
+			pos[closest][0],
+			pos[closest][1],
+			pos[closest][2]
+		};
 		return ClosestTownCords;
 	}
 }

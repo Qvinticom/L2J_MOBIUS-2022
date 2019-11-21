@@ -43,7 +43,7 @@ public class ExperienceTable
 				String line = null;
 				while ((line = lnr.readLine()) != null)
 				{
-					if ((line.trim().length() == 0) || line.startsWith("#"))
+					if (line.trim().isEmpty() || line.startsWith("#"))
 					{
 						continue;
 					}

@@ -17,10 +17,10 @@
  */
 package org.l2jmobius.gameserver.data;
 
-import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
+import java.io.InputStreamReader;
 import java.io.LineNumberReader;
 import java.util.HashMap;
 import java.util.Map;
@@ -47,21 +47,29 @@ public class LevelUpData
 	
 	private LevelUpData()
 	{
-		BufferedReader lnr = null;
 		try
 		{
 			File spawnDataFile = new File("data/lvlupgain.csv");
-			lnr = new LineNumberReader(new BufferedReader(new FileReader(spawnDataFile)));
+			LineNumberReader lnr = new LineNumberReader(new InputStreamReader(new FileInputStream(spawnDataFile)));
 			String line = null;
-			while ((line = ((LineNumberReader) lnr).readLine()) != null)
+			while ((line = lnr.readLine()) != null)
 			{
-				if ((line.trim().length() == 0) || line.startsWith("#"))
+				if (line.trim().isEmpty() || line.startsWith("#"))
 				{
 					continue;
 				}
-				LvlupData lvlupData = parseList(line);
+				StringTokenizer st = new StringTokenizer(line, ";");
+				LvlupData lvlupData = new LvlupData();
+				lvlupData.setClassid(Integer.parseInt(st.nextToken()));
+				lvlupData.setDefaulthp(Double.parseDouble(st.nextToken()));
+				lvlupData.setDefaulthpadd(Double.parseDouble(st.nextToken()));
+				lvlupData.setDefaulthpbonus(Double.parseDouble(st.nextToken()));
+				lvlupData.setDefaultmp(Double.parseDouble(st.nextToken()));
+				lvlupData.setDefaultmpadd(Double.parseDouble(st.nextToken()));
+				lvlupData.setDefaultmpbonus(Double.parseDouble(st.nextToken()));
 				_lvltable.put(lvlupData.getClassid(), lvlupData);
 			}
+			lnr.close();
 			_log.config("Loaded " + _lvltable.size() + " Lvl up data templates.");
 		}
 		catch (FileNotFoundException e)
@@ -72,33 +80,6 @@ public class LevelUpData
 		{
 			_log.warning("Error while creating npc data table " + e);
 		}
-		finally
-		{
-			try
-			{
-				if (lnr != null)
-				{
-					lnr.close();
-				}
-			}
-			catch (Exception e1)
-			{
-			}
-		}
-	}
-	
-	private LvlupData parseList(String line)
-	{
-		StringTokenizer st = new StringTokenizer(line, ";");
-		LvlupData lvlDat = new LvlupData();
-		lvlDat.setClassid(Integer.parseInt(st.nextToken()));
-		lvlDat.setDefaulthp(Double.parseDouble(st.nextToken()));
-		lvlDat.setDefaulthpadd(Double.parseDouble(st.nextToken()));
-		lvlDat.setDefaulthpbonus(Double.parseDouble(st.nextToken()));
-		lvlDat.setDefaultmp(Double.parseDouble(st.nextToken()));
-		lvlDat.setDefaultmpadd(Double.parseDouble(st.nextToken()));
-		lvlDat.setDefaultmpbonus(Double.parseDouble(st.nextToken()));
-		return lvlDat;
 	}
 	
 	public LvlupData getTemplate(int classId)

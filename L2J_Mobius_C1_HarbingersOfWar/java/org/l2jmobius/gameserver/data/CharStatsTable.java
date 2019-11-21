@@ -17,10 +17,9 @@
  */
 package org.l2jmobius.gameserver.data;
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
+import java.io.FileInputStream;
+import java.io.InputStreamReader;
 import java.io.LineNumberReader;
 import java.util.HashMap;
 import java.util.Map;
@@ -46,58 +45,42 @@ public class CharStatsTable
 	
 	private CharStatsTable()
 	{
-		BufferedReader lnr = null;
 		try
 		{
-			File ModifierData = new File("data/char_stats.csv");
-			lnr = new LineNumberReader(new BufferedReader(new FileReader(ModifierData)));
-			String line = null;
-			while ((line = ((LineNumberReader) lnr).readLine()) != null)
+			File modifierData = new File("data/char_stats.csv");
+			if (modifierData.isFile() && modifierData.exists())
 			{
-				if ((line.trim().length() == 0) || line.startsWith("#"))
+				LineNumberReader lnr = new LineNumberReader(new InputStreamReader(new FileInputStream(modifierData)));
+				String line = null;
+				while ((line = lnr.readLine()) != null)
 				{
-					continue;
+					if (line.trim().isEmpty() || line.startsWith("#"))
+					{
+						continue;
+					}
+					StringTokenizer st = new StringTokenizer(line, ";");
+					StatModifiers modifier = new StatModifiers();
+					modifier.setClassid(Integer.parseInt(st.nextToken()));
+					modifier.setModstr(Integer.parseInt(st.nextToken()));
+					modifier.setModcon(Integer.parseInt(st.nextToken()));
+					modifier.setModdex(Integer.parseInt(st.nextToken()));
+					modifier.setModint(Integer.parseInt(st.nextToken()));
+					modifier.setModmen(Integer.parseInt(st.nextToken()));
+					modifier.setModwit(Integer.parseInt(st.nextToken()));
+					_modifiers.put(modifier.getClassid(), modifier);
 				}
-				StatModifiers modif = parseList(line);
-				_modifiers.put(modif.getClassid(), modif);
+				lnr.close();
+				_log.config("Loaded " + _modifiers.size() + " character stat modifiers.");
 			}
-			_log.config("Loaded " + _modifiers.size() + " character stat modifiers.");
-		}
-		catch (FileNotFoundException e)
-		{
-			_log.warning("char_stats.csv is missing in data folder.");
+			else
+			{
+				_log.warning("char_stats.csv is missing in data folder.");
+			}
 		}
 		catch (Exception e)
 		{
 			_log.warning("Error while creating character modifier table " + e);
 		}
-		finally
-		{
-			try
-			{
-				if (lnr != null)
-				{
-					lnr.close();
-				}
-			}
-			catch (Exception e1)
-			{
-			}
-		}
-	}
-	
-	private StatModifiers parseList(String line)
-	{
-		StringTokenizer st = new StringTokenizer(line, ";");
-		StatModifiers modifier = new StatModifiers();
-		modifier.setClassid(Integer.parseInt(st.nextToken()));
-		modifier.setModstr(Integer.parseInt(st.nextToken()));
-		modifier.setModcon(Integer.parseInt(st.nextToken()));
-		modifier.setModdex(Integer.parseInt(st.nextToken()));
-		modifier.setModint(Integer.parseInt(st.nextToken()));
-		modifier.setModmen(Integer.parseInt(st.nextToken()));
-		modifier.setModwit(Integer.parseInt(st.nextToken()));
-		return modifier;
 	}
 	
 	public StatModifiers getTemplate(int id)

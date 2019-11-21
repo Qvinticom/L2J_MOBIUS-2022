@@ -17,11 +17,10 @@
  */
 package org.l2jmobius.gameserver.data;
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileReader;
+import java.io.FileInputStream;
 import java.io.FilenameFilter;
-import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.LineNumberReader;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -71,17 +70,16 @@ public class ClanTable
 	
 	private Clan restoreClan(File file)
 	{
-		BufferedReader lnr = null;
 		Clan clan = null;
 		try
 		{
-			lnr = new LineNumberReader(new BufferedReader(new FileReader(file)));
-			((LineNumberReader) lnr).readLine();
-			clan = parseClanData(((LineNumberReader) lnr).readLine());
-			((LineNumberReader) lnr).readLine();
+			LineNumberReader lnr = new LineNumberReader(new InputStreamReader(new FileInputStream(file)));
+			lnr.readLine();
+			clan = parseClanData(lnr.readLine());
+			lnr.readLine();
 			String line = null;
 			boolean first = true;
-			while ((line = ((LineNumberReader) lnr).readLine()) != null)
+			while ((line = lnr.readLine()) != null)
 			{
 				ClanMember member = parseMembers(line);
 				if (first)
@@ -92,23 +90,11 @@ public class ClanTable
 				}
 				clan.addClanMember(member);
 			}
+			lnr.close();
 		}
-		catch (IOException e)
+		catch (Exception e)
 		{
 			_log.warning("Could not read clan file:" + e.getMessage());
-		}
-		finally
-		{
-			try
-			{
-				if (lnr != null)
-				{
-					lnr.close();
-				}
-			}
-			catch (Exception e1)
-			{
-			}
 		}
 		return clan;
 	}
