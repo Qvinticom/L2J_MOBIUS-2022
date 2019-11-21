@@ -39,6 +39,13 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
+			<effect name="TriggerSkillBySkill">
+				<castSkillId>10010</castSkillId> <!-- Vanishing Stun -->
+				<skillId>19576</skillId> <!-- Two-Hand Smash -->
+				<skillLevel>1</skillLevel>
+				<chance>100</chance>
+				<targetType>TARGET</targetType>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="10245" toLevel="1" name="Wizard - Individual Passive">

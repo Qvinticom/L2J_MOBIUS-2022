@@ -215,6 +215,13 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
+			<effect name="TriggerSkillBySkillAttack">
+				<skillId>19571</skillId> <!-- Lightning Strike -->
+				<skillLevel>1</skillLevel>
+				<attackSkillId>10010</attackSkillId> <!-- Vanishing Stun -->
+				<chance>30</chance>
+				<targetType>TARGET</targetType>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="10102" toLevel="6" name="Shadow Hunt">

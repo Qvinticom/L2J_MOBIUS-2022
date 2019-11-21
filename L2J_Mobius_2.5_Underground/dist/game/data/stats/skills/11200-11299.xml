@@ -2101,9 +2101,6 @@
 		<staticReuse>true</staticReuse>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="OpCheckCrtEffect" />
-		</conditions>
 		<effects>
 			<effect name="AirBind" />
 			<effect name="BlockActions" />

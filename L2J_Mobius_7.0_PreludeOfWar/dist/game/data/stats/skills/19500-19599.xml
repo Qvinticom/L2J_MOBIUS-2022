@@ -206,27 +206,67 @@
 			<value level="12">176</value>
 			<value level="13">180</value>
 		</mpConsume>
-		<operateType>A2</operateType>
+		<operateType>DA3</operateType>
 		<effectPoint>-702</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<isDebuff>true</isDebuff>
-		<targetType>SELF</targetType>
+		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>DUAL</item>
+					<item>DUALBLUNT</item>
+					<item>SWORD</item>
+					<item>BLUNT</item>
+				</weaponType>
+			</condition>
+			<condition name="OpCheckAbnormal">
+				<type>TRIAD</type>
+				<level>3</level>
+				<hasAbnormal>true</hasAbnormal>
+				<affectType>CASTER</affectType>
+			</condition>
+		</conditions>
 		<effects>
-			<effect name="PhysicalDefence">
-				<amount>-20</amount>
-				<mode>PER</mode>
+			<effect name="PhysicalAttackWeaponBonus">
+				<power>
+					<value level="1">20668</value>
+					<value level="2">21494</value>
+					<value level="3">23146</value>
+					<value level="4">24798</value>
+					<value level="5">26450</value>
+					<value level="6">28102</value>
+					<value level="7">29754</value>
+					<value level="8">31406</value>
+					<value level="9">33884</value>
+					<value level="10">35536</value>
+					<value level="11">37188</value>
+					<value level="12">38939</value>
+					<value level="13">40690</value>
+				</power>
+				<overHit>true</overHit>
 			</effect>
 			<effect name="MagicalDefence">
 				<amount>-20</amount>
 				<mode>PER</mode>
 			</effect>
+			<effect name="PhysicalDefence">
+				<amount>-20</amount>
+				<mode>PER</mode>
+			</effect>
 			<effect name="Speed">
 				<amount>-150</amount>
-				<mode>DIFF</mode>
+				<mode>PER</mode>
 			</effect>
 		</effects>
+		<selfEffects>
+			<effect name="DispelBySlotMyself">
+				<dispel>TRIAD</dispel>
+			</effect>
+		</selfEffects>
 	</skill>
 	<skill id="19523" toLevel="1" name="Maximum Blow">
 		<!-- Resets the cooldown of Heart Breaker/ Chain Blow. -->
@@ -2083,18 +2123,26 @@
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
 		<effects>
-			<effect name="DefenceTrait">
-				<KNOCKBACK>100</KNOCKBACK>
-				<KNOCKDOWN>100</KNOCKDOWN>
-				<BOW>50</BOW>
-				<CROSSBOW>50</CROSSBOW>
-				<DERANGEMENT>50</DERANGEMENT>
+			<effect name="MagicalDefence">
+				<amount>50</amount>
+				<mode>PER</mode>
 			</effect>
-			<effect name="TransferDamageToPlayer">
+			<effect name="PhysicalDefence">
+				<amount>50</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ReflectMagic">
 				<amount>25</amount>
 			</effect>
-			<effect name="GetDamageLimit">
-				<amount>10</amount>
+			<effect name="DefenceTrait">
+				<BOW>50</BOW>
+				<CROSSBOW>50</CROSSBOW>
+			</effect>
+			<effect name="DefenceTrait">
+				<KNOCKBACK>100</KNOCKBACK>
+				<AIRBIND>100</AIRBIND>
+				<KNOCKDOWN>100</KNOCKDOWN>
+				<ZONE>100</ZONE>
 			</effect>
 		</effects>
 	</skill>
@@ -2201,9 +2249,8 @@
 		<icon>icon.skill0279</icon>
 		<operateType>A2</operateType>
 		<isDebuff>true</isDebuff>
-		<reuseDelay>10000</reuseDelay>
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>5</abnormalTime>
+		<abnormalTime>3</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
 		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
 		<activateRate>100</activateRate>
@@ -2293,14 +2340,36 @@
 	<skill id="19575" toLevel="13" name="Vanishing Stun">
 		<!-- Silenced by Vanishing Stun for $s1 Inflicted status: Obstruction (Disarm, Hold, Blind, Block, Aggression, Silence, Banishment, Bluff, Stealth). -->
 		<icon>icon.skill10010</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3</abnormalTime>
+		<activateRate>30</activateRate>
+		<abnormalType>SILENCE</abnormalType>
+		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
 		<isDebuff>true</isDebuff>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="BlockSkill">
+				<magicTypes>0;1;2;3;4;5;7;22;</magicTypes>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="19576" toLevel="1" name="Two-Hand Smash">
 		<!-- Strikes hard to decrease P. Def. by 30% for 7 sec. -->
 		<icon>icon.skill10009</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>7</abnormalTime>
 		<isDebuff>true</isDebuff>
 		<reuseDelay>1000</reuseDelay>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>-30</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 </list>

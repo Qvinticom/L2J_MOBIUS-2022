@@ -590,10 +590,7 @@
 	<skill id="10509" toLevel="11" name="Heart Breaker">
 		<!-- Stabs the target's heart with $s1 Power added to P. Atk. to inflict a powerful vital spot attack. Increases Speed by $s2, Evasion by $s3, Critical Damage from the flanks and rear by $s4. Half-kill, Over-hit, and Critical are possible. Requires a dagger or dual dagger. -->
 		<icon>icon.skill10509</icon>
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>5</abnormalTime>
-		<abnormalType>SPEED_UP_SPECIAL</abnormalType>
-		<operateType>A3</operateType>
+		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
 			<value level="1">85</value>
@@ -651,72 +648,37 @@
 				</weaponType>
 			</condition>
 		</conditions>
+		<effects>
+			<effect name="FatalBlow">
+				<power>
+					<value level="1">25610</value>
+					<value level="2">26490</value>
+					<value level="3">28270</value>
+					<value level="4">30040</value>
+					<value level="5">31810</value>
+					<value level="6">33590</value>
+					<value level="7">35360</value>
+					<value level="8">37130</value>
+					<value level="9">42360</value>
+					<value level="10">44430</value>
+					<value level="11">46490</value>
+					<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
+				</power>
+				<criticalChance>60</criticalChance>
+				<chanceBoost>365</chanceBoost>
+				<overHit>true</overHit>
+			</effect>
+			<effect name="Lethal">
+				<fullLethal>0</fullLethal>
+				<halfLethal>15</halfLethal>
+			</effect>
+		</effects>
 		<selfEffects>
-			<effect name="CriticalDamagePosition">
-				<amount>30</amount>
-				<mode>PER</mode>
-				<position>BACK</position>
-			</effect>
-			<effect name="Speed">
-				<amount>40</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="PhysicalEvasion">
-				<amount>5</amount>
-				<mode>DIFF</mode>
+			<effect name="CallSkill">
+				<skillId>23739</skillId> <!-- Heart Breaker -->
+				<skillLevel>1</skillLevel>
 			</effect>
 		</selfEffects>
-		<pveEffects>
-			<effect name="FatalBlow">
-				<power>
-					<value level="1">25610</value>
-					<value level="2">26490</value>
-					<value level="3">28270</value>
-					<value level="4">30040</value>
-					<value level="5">31810</value>
-					<value level="6">33590</value>
-					<value level="7">35360</value>
-					<value level="8">37130</value>
-					<value level="9">42360</value>
-					<value level="10">44430</value>
-					<value level="11">46490</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
-				</power>
-				<criticalChance>60</criticalChance>
-				<chanceBoost>365</chanceBoost>
-				<overHit>true</overHit>
-			</effect>
-			<effect name="Lethal">
-				<fullLethal>0</fullLethal>
-				<halfLethal>15</halfLethal>
-			</effect>
-		</pveEffects>
-		<pvpEffects>
-			<effect name="FatalBlow">
-				<power>
-					<value level="1">25610</value>
-					<value level="2">26490</value>
-					<value level="3">28270</value>
-					<value level="4">30040</value>
-					<value level="5">31810</value>
-					<value level="6">33590</value>
-					<value level="7">35360</value>
-					<value level="8">37130</value>
-					<value level="9">42360</value>
-					<value level="10">44430</value>
-					<value level="11">46490</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * (5 + subIndex)}</value>
-				</power>
-				<criticalChance>60</criticalChance>
-				<chanceBoost>365</chanceBoost>
-				<overHit>true</overHit>
-			</effect>
-			<effect name="Lethal">
-				<fullLethal>0</fullLethal>
-				<halfLethal>15</halfLethal>
-			</effect>
-		</pvpEffects>
 	</skill>
 	<skill id="10510" toLevel="11" name="Chain Blow">
 		<!-- Inflicts damage with $s1 Power added to P. Atk. Increases Skill Power by $s2 if used during Bleed. Half-kill, Over-hit, and Critical are possible. Requires a dagger or dual dagger. -->
@@ -1360,6 +1322,7 @@
 		<coolTime>400</coolTime>
 		<effectPoint>687</effectPoint>
 		<reuseDelay>120000</reuseDelay>
+		<removedOnAnyActionExceptMove>true</removedOnAnyActionExceptMove>
 		<removedOnDamage>true</removedOnDamage>
 		<basicProperty>NONE</basicProperty>
 		<targetType>SELF</targetType>
@@ -1920,7 +1883,6 @@
 		</activateRate>
 		<affectRange>80</affectRange>
 		<affectLimit>5-12</affectLimit>
-		<fanRange>0;0;80;150</fanRange>
 		<operateType>A2</operateType>
 		<trait>DERANGEMENT</trait>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1940,7 +1902,8 @@
 		<basicProperty>NONE</basicProperty>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
-		<affectScope>FAN</affectScope>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
 			<effect name="DeleteHateOfMe">
 				<chance>80</chance>
@@ -1952,7 +1915,12 @@
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="DefenceMagicCriticalRate">
-				<amount>-10</amount>
+				<amount>
+					<value level="1">-10</value>
+					<value level="2">-11</value>
+					<value level="3">-12</value>
+					<value level="4">-15</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PhysicalDefence" fromLevel="1" toLevel="4" fromSubLevel="2001" toSubLevel="2020">

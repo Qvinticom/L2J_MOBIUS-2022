@@ -128,7 +128,7 @@
 		</effects>
 	</skill>
 	<skill id="10101" toLevel="5" name="Templar's Frenzy">
-		<!-- For $s1, Shield Def. +$s2, M. Def. +$s3, Atk. Spd. +$s4, P. Critical Rate/ P. Critical Damage +$s5, and P. Skill Power +$s6. A chance to activate the Lightning Strike if the Vanishing Stun is additionally cast. -->
+		<!-- For 1 min., Shield Defense +85%, M. Def. +120%, Atk. Spd. +15%, P. Critical Rate/ Damage +60%, P. Skill Power +15%. With a certain chance, activates Lightning Strike when Vanishing Stun is applied. -->
 		<icon>icon.skill10101</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -228,6 +228,13 @@
 					<value fromLevel="3" toLevel="5" fromSubLevel="2001" toSubLevel="2020">{-1 - (subIndex - 1 * 0.5)}</value>
 				</amount>
 				<mode>PER</mode>
+			</effect>
+			<effect name="TriggerSkillBySkillAttack">
+				<skillId>19571</skillId> <!-- Lightning Strike -->
+				<skillLevel>1</skillLevel>
+				<attackSkillId>10010</attackSkillId> <!-- Vanishing Stun -->
+				<chance>30</chance>
+				<targetType>TARGET</targetType>
 			</effect>
 		</effects>
 	</skill>
