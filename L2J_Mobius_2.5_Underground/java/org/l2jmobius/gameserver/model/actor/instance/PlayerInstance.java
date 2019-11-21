@@ -8162,7 +8162,7 @@ public class PlayerInstance extends Playable
 	{
 		if ((Config.CHAR_DATA_STORE_INTERVAL > 0) && (_autoSaveTask == null))
 		{
-			_autoSaveTask = ThreadPool.scheduleAtFixedRate(this::autoSave, 300_000L, TimeUnit.MINUTES.toMillis(Config.CHAR_DATA_STORE_INTERVAL));
+			_autoSaveTask = ThreadPool.scheduleAtFixedRate(this::autoSave, Config.CHAR_DATA_STORE_INTERVAL, Config.CHAR_DATA_STORE_INTERVAL);
 		}
 	}
 	

@@ -38,7 +38,6 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentSkipListMap;
 import java.util.concurrent.Future;
 import java.util.concurrent.ScheduledFuture;
-import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.logging.Level;
@@ -8407,7 +8406,7 @@ public class PlayerInstance extends Playable
 	{
 		if ((Config.CHAR_DATA_STORE_INTERVAL > 0) && (_autoSaveTask == null))
 		{
-			_autoSaveTask = ThreadPool.scheduleAtFixedRate(this::autoSave, 300_000L, TimeUnit.MINUTES.toMillis(Config.CHAR_DATA_STORE_INTERVAL));
+			_autoSaveTask = ThreadPool.scheduleAtFixedRate(this::autoSave, Config.CHAR_DATA_STORE_INTERVAL, Config.CHAR_DATA_STORE_INTERVAL);
 		}
 	}
 	
