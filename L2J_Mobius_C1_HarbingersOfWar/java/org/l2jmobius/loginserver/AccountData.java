@@ -17,35 +17,35 @@
  */
 package org.l2jmobius.loginserver;
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileReader;
+import java.io.FileInputStream;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.LineNumberReader;
 import java.net.InetAddress;
 import java.security.MessageDigest;
 import java.util.Base64;
-import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.StringTokenizer;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
+
+import org.l2jmobius.Config;
 
 public class AccountData
 {
+	private static Logger _log = Logger.getLogger(AccountData.class.getName());
 	private static final String SHA = "SHA";
 	private static final String UTF_8 = "UTF-8";
-	private static Logger _log = Logger.getLogger(AccountData.class.getName());
-	private final Map<String, byte[]> _logPass = new HashMap<>();
-	private final Map<String, Integer> _accessLevels = new HashMap<>();
-	private final Map<String, Integer> _hackProtection = new HashMap<>();
-	private final boolean _autoCreate;
+	private static final Map<String, byte[]> _logPass = new ConcurrentHashMap<>();
+	private static final Map<String, Integer> _accessLevels = new ConcurrentHashMap<>();
+	private static final Map<String, Integer> _hackProtection = new ConcurrentHashMap<>();
 	
 	public AccountData(boolean autoCreate)
 	{
-		_autoCreate = autoCreate;
-		_log.config("Automatically creating new accounts: " + _autoCreate);
+		_log.config("Automatically creating new accounts: " + Config.AUTO_CREATE_ACCOUNTS);
 		File loginFile = new File("data/accounts.txt");
 		if (loginFile.exists())
 		{
@@ -74,6 +74,7 @@ public class AccountData
 			_log.warning("Hacking detected from ip:" + address.getHostAddress() + " .. adding IP to banlist.");
 			throw new HackingException(address.getHostAddress());
 		}
+		
 		try
 		{
 			MessageDigest md = MessageDigest.getInstance(SHA);
@@ -82,7 +83,7 @@ public class AccountData
 			byte[] expected = _logPass.get(user);
 			if (expected == null)
 			{
-				if (_autoCreate)
+				if (Config.AUTO_CREATE_ACCOUNTS)
 				{
 					_logPass.put(user, hash);
 					_accessLevels.put(user, 0);
@@ -109,6 +110,7 @@ public class AccountData
 			_log.warning("Could not check password:" + e);
 			ok = false;
 		}
+		
 		if (!ok)
 		{
 			int failedCount = 1;
@@ -122,17 +124,17 @@ public class AccountData
 		{
 			_hackProtection.remove(address.getHostAddress());
 		}
+		
 		return ok;
 	}
 	
 	private void readFromDisk(File loginFile) throws NumberFormatException, IOException
 	{
-		BufferedReader lnr = null;
 		_logPass.clear();
 		int i = 0;
 		String line = null;
-		lnr = new LineNumberReader(new FileReader(loginFile));
-		while ((line = ((LineNumberReader) lnr).readLine()) != null)
+		LineNumberReader lnr = new LineNumberReader(new InputStreamReader(new FileInputStream(loginFile)));
+		while ((line = lnr.readLine()) != null)
 		{
 			StringTokenizer st = new StringTokenizer(line, "\t\n\r");
 			if (!st.hasMoreTokens())
@@ -141,7 +143,7 @@ public class AccountData
 			}
 			String name = st.nextToken().toLowerCase();
 			String password = st.nextToken();
-			_logPass.put(name, java.util.Base64.getDecoder().decode(password));
+			_logPass.put(name, Base64.getDecoder().decode(password));
 			if (st.hasMoreTokens())
 			{
 				String access = st.nextToken();
@@ -154,25 +156,15 @@ public class AccountData
 			}
 			++i;
 		}
+		lnr.close();
 		_log.config("Found " + i + " accounts on disk.");
-		try
-		{
-			lnr.close();
-			return;
-		}
-		catch (Exception e)
-		{
-			return;
-		}
 	}
 	
 	public void saveToDisk()
 	{
-		File loginFile = new File("data/accounts.txt");
-		FileWriter save = null;
 		try
 		{
-			save = new FileWriter(loginFile);
+			FileWriter save = new FileWriter(new File("data/accounts.txt"));
 			Iterator<String> iter = _logPass.keySet().iterator();
 			while (iter.hasNext())
 			{
@@ -185,24 +177,11 @@ public class AccountData
 				save.write("" + _accessLevels.get(name));
 				save.write("\r\n");
 			}
+			save.close();
 		}
-		catch (IOException e)
+		catch (Exception e)
 		{
 			_log.warning("Could not store accouts file." + e);
-			e.printStackTrace();
-		}
-		finally
-		{
-			try
-			{
-				if (save != null)
-				{
-					save.close();
-				}
-			}
-			catch (Exception e1)
-			{
-			}
 		}
 	}
 }
