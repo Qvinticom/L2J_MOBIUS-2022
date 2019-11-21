@@ -2611,7 +2611,7 @@
 		</effects>
 	</skill>
 	<skill id="19299" toLevel="9" name="Reverse Mana">
-		<!-- Attempts Deadly Attack with $s1 power added to P. Attack and recovers your MP by $s2. Half-kill is possible. Requires dagger/ dual dagger. -->
+		<!-- Attempts Deadly Attack with 36840 power added to P. Attack and recovers your MP by 3%. Half-kill is possible. Requires dagger/ dual dagger. -->
 		<icon>icon.skill19299</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -2641,6 +2641,7 @@
 		</mpConsume>
 		<hitTime>2030</hitTime>
 		<coolTime>500</coolTime>
+		<staticReuse>true</staticReuse>
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>
 			<value level="1">-709</value>

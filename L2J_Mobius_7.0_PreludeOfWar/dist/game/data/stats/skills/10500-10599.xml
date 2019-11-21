@@ -3660,6 +3660,13 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
+			<effect name="TriggerSkillBySkill">
+				<castSkillId>19299</castSkillId> <!-- Reverse Mana -->
+				<skillId>19523</skillId> <!-- Maximum Blow -->
+				<skillLevel>1</skillLevel>
+				<chance>100</chance>
+				<targetType>SELF</targetType>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="10561" toLevel="4" name="Superior Fitness">

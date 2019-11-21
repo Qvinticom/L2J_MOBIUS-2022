@@ -3001,6 +3001,9 @@
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
+			<effect name="BlockSkill">
+				<magicTypes>0;1;2;3;4;22</magicTypes>
+			</effect>
 			<effect name="PhysicalDefence" fromLevel="3" toLevel="9" fromSubLevel="6001" toSubLevel="6020">
 				<amount>
 					<value fromLevel="3" toLevel="9" fromSubLevel="6001" toSubLevel="6020">{0.6 + (0.4 * subIndex)}</value>

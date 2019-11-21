@@ -2,11 +2,11 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="19300" toLevel="1" name="Reverse Mana Drain">
 		<icon>icon.skill19299</icon>
-		<operateType>A2</operateType>
-		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
+		<operateType>A1</operateType>
 		<effectPoint>-709</effectPoint>
 		<isTriggeredSkill>true</isTriggeredSkill>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="ManaHealPercent">
 				<power>3</power>
@@ -152,22 +152,10 @@
 	<skill id="19303" toLevel="7" name="Right Angle Reverse">
 		<!-- Moves to the right side of the target to attempt the Deadly Attack with $s1 Power added to P. Atk and stun the target for $s2. Half-kill is possible. Requires a dagger or dual dagger to be equipped. -->
 		<icon>icon.skill19303</icon>
-		<abnormalLvl>
-			<value level="1">1</value>
-			<value level="2">2</value>
-			<value level="3">3</value>
-			<value level="4">4</value>
-			<value level="5">5</value>
-			<value level="6">6</value>
-			<value level="7">7</value>
-		</abnormalLvl>
-		<abnormalTime>3</abnormalTime>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1</abnormalTime>
 		<abnormalType>STUN</abnormalType>
-		<abnormalVisualEffect>STUN</abnormalVisualEffect>
-		<activateRate>80</activateRate>
 		<operateType>DA5</operateType>
-		<targetType>ENEMY</targetType>
-		<affectScope>SINGLE</affectScope>
 		<castRange>80</castRange>
 		<magicLvl>
 			<value level="1">85</value>
@@ -187,13 +175,15 @@
 			<value level="6">105</value>
 			<value level="7">110</value>
 		</mpConsume>
+		<activateRate>0</activateRate>
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>6000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<effectPoint>-709</effectPoint>
-		<isDebuff>true</isDebuff>
 		<nextAction>ATTACK</nextAction>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -226,12 +216,9 @@
 				<fullLethal>0</fullLethal>
 				<halfLethal>15</halfLethal>
 			</effect>
-			<effect name="Heal">
-				<power>-70</power>
-				<ticks>5</ticks>
-			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;30516</allowedSkills>
+			<effect name="CallSkill">
+				<skillId>19528</skillId> <!-- Right Angle Reverse - Stun -->
+				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
@@ -270,6 +257,12 @@
 				<amount>10</amount>
 				<mode>PER</mode>
 				<position>BACK</position>
+			</effect>
+			<effect name="ReuseSkillById">
+				<skillId>19303</skillId>
+			</effect>
+			<effect name="ReuseSkillById">
+				<skillId>10705</skillId>
 			</effect>
 		</effects>
 	</skill>

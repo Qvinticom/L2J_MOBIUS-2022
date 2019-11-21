@@ -1213,6 +1213,7 @@
 			<effect name="CallSkill">
 				<skillId>19432</skillId> <!-- Swift Praise -->
 				<skillLevel>1</skillLevel>
+				<skillLevelScaleTo>2</skillLevelScaleTo>
 			</effect>
 		</selfEffects>
 	</skill>
@@ -1277,10 +1278,10 @@
 			<value fromLevel="1" toLevel="13">99</value>
 			<value fromLevel="7" toLevel="13" fromSubLevel="2001" toSubLevel="2020">{base + (base / 100 * subIndex)}</value>
 		</activateRate>
-		<castRange>100</castRange>
-		<coolTime>300</coolTime>
+		<castRange>80</castRange>
+		<coolTime>500</coolTime>
 		<effectRange>400</effectRange>
-		<hitTime>910</hitTime>
+		<hitTime>2000</hitTime>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">86</value>
@@ -1432,10 +1433,10 @@
 			<value level="13">13</value>
 		</abnormalLvl>
 		<abnormalType>ULTIMATE_DEBUFF</abnormalType>
-		<castRange>100</castRange>
-		<coolTime>300</coolTime>
+		<castRange>200</castRange>
+		<coolTime>1000</coolTime>
 		<effectRange>400</effectRange>
-		<hitTime>910</hitTime>
+		<hitTime>700</hitTime>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">86</value>
@@ -1533,52 +1534,30 @@
 					<value fromLevel="7" toLevel="13" fromSubLevel="3001" toSubLevel="3020">{0.99 - 0.006 * (subIndex - 1)}</value>
 				</pDefMod>
 			</effect>
+			<effect name="CallSkill">
+				<skillId>19522</skillId> <!-- Repeat Mark Somersault -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+					<value level="8">8</value>
+					<value level="9">9</value>
+					<value level="10">10</value>
+					<value level="11">11</value>
+					<value level="12">12</value>
+					<value level="13">13</value>
+				</skillLevel>
+			</effect>
 		</effects>
 		<selfEffects>
 			<effect name="DispelBySlotMyself">
 				<dispel>TRIAD</dispel>
 			</effect>
 		</selfEffects>
-		<pveEffects>
-			<effect name="CallSkill">
-				<skillId>19522</skillId> <!-- Repeat Mark Somersault -->
-				<skillLevel>
-					<value level="1">1</value>
-					<value level="2">2</value>
-					<value level="3">3</value>
-					<value level="4">4</value>
-					<value level="5">5</value>
-					<value level="6">6</value>
-					<value level="7">7</value>
-					<value level="8">8</value>
-					<value level="9">9</value>
-					<value level="10">10</value>
-					<value level="11">11</value>
-					<value level="12">12</value>
-					<value level="13">13</value>
-				</skillLevel>
-			</effect>
-		</pveEffects>
-		<pvpEffects>
-			<effect name="CallSkill">
-				<skillId>19522</skillId> <!-- Repeat Mark Somersault -->
-				<skillLevel>
-					<value level="1">1</value>
-					<value level="2">2</value>
-					<value level="3">3</value>
-					<value level="4">4</value>
-					<value level="5">5</value>
-					<value level="6">6</value>
-					<value level="7">7</value>
-					<value level="8">8</value>
-					<value level="9">9</value>
-					<value level="10">10</value>
-					<value level="11">11</value>
-					<value level="12">12</value>
-					<value level="13">13</value>
-				</skillLevel>
-			</effect>
-		</pvpEffects>
 	</skill>
 	<skill id="19435" toLevel="5" name="Spectral Slash">
 		<!-- The Spectral Sword attacks the target with $s1 Power added to P. Atk. and decreases P./ M. Def. by $s3 for $s2. -->
@@ -2033,7 +2012,7 @@
 			<value level="9">53</value>
 		</mpConsume>
 		<targetType>SELF</targetType>
-		<affectScope>PLEDGE</affectScope>
+		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
 		<affectRange>1000</affectRange>
 		<hitTime>2000</hitTime>

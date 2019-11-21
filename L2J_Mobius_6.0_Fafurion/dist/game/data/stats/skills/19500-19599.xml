@@ -157,6 +157,7 @@
 	<skill id="19522" toLevel="13" name="Repeat Mark Somersault">
 		<!-- Attacks the target with $s1 Power added to P. Atk., decreases P./ M. Def. by $s3 and Speed by $s4 for $s2, and moves $s5 back. Can be cast by consuming Triad. -->
 		<icon>icon.skill19434</icon>
+		<operateType>A2</operateType>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -173,7 +174,6 @@
 			<value level="13">13</value>
 		</abnormalLvl>
 		<abnormalTime>8</abnormalTime>
-		<abnormalType>ULTIMATE_DEBUFF</abnormalType>
 		<activateRate>100</activateRate>
 		<effectRange>400</effectRange>
 		<magicLvl>
@@ -191,22 +191,6 @@
 			<value level="12">107</value>
 			<value level="13">109</value>
 		</magicLvl>
-		<mpConsume>
-			<value level="1">130</value>
-			<value level="2">132</value>
-			<value level="3">136</value>
-			<value level="4">142</value>
-			<value level="5">146</value>
-			<value level="6">150</value>
-			<value level="7">156</value>
-			<value level="8">160</value>
-			<value level="9">164</value>
-			<value level="10">168</value>
-			<value level="11">172</value>
-			<value level="12">176</value>
-			<value level="13">180</value>
-		</mpConsume>
-		<operateType>DA3</operateType>
 		<effectPoint>-702</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -214,41 +198,7 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
-		<conditions>
-			<condition name="EquipWeapon">
-				<weaponType>
-					<item>DUAL</item>
-					<item>DUALBLUNT</item>
-					<item>SWORD</item>
-					<item>BLUNT</item>
-				</weaponType>
-			</condition>
-			<condition name="OpCheckAbnormal">
-				<type>TRIAD</type>
-				<level>3</level>
-				<hasAbnormal>true</hasAbnormal>
-				<affectType>CASTER</affectType>
-			</condition>
-		</conditions>
 		<effects>
-			<effect name="PhysicalAttackWeaponBonus">
-				<power>
-					<value level="1">20668</value>
-					<value level="2">21494</value>
-					<value level="3">23146</value>
-					<value level="4">24798</value>
-					<value level="5">26450</value>
-					<value level="6">28102</value>
-					<value level="7">29754</value>
-					<value level="8">31406</value>
-					<value level="9">33884</value>
-					<value level="10">35536</value>
-					<value level="11">37188</value>
-					<value level="12">38939</value>
-					<value level="13">40690</value>
-				</power>
-				<overHit>true</overHit>
-			</effect>
 			<effect name="MagicalDefence">
 				<amount>-20</amount>
 				<mode>PER</mode>
@@ -259,14 +209,9 @@
 			</effect>
 			<effect name="Speed">
 				<amount>-150</amount>
-				<mode>PER</mode>
+				<mode>DIFF</mode>
 			</effect>
 		</effects>
-		<selfEffects>
-			<effect name="DispelBySlotMyself">
-				<dispel>TRIAD</dispel>
-			</effect>
-		</selfEffects>
 	</skill>
 	<skill id="19523" toLevel="1" name="Maximum Blow">
 		<!-- Resets the cooldown of Heart Breaker/ Chain Blow. -->
@@ -275,6 +220,16 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<effectPoint>696</effectPoint>
 		<mpConsume>252</mpConsume>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ReuseSkillById">
+				<skillId>10509</skillId>	<!-- Heart Breaker -->
+			</effect>
+			<effect name="ReuseSkillById">
+				<skillId>10510</skillId>	<!-- Chain Blow -->
+			</effect>
+		</effects>
 	</skill>
 	<skill id="19524" toLevel="1" name="Immortal Soul">
 		<!-- Immune to damage caused by Soul Bomber. Cannot receive other Invincibility effects. -->
@@ -322,9 +277,31 @@
 	<skill id="19528" toLevel="9" name="Right Angle Reverse">
 		<!-- Stunned by the Right Angle Reverse for $s1. -->
 		<icon>icon.skill19303</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<isDebuff>true</isDebuff>
+		<abnormalLvl>
+			<value level="1">2</value>
+			<value level="2">3</value>
+			<value level="3">4</value>
+			<value level="4">5</value>
+			<value level="5">6</value>
+			<value level="6">7</value>
+			<value level="7">8</value>
+			<value level="8">9</value>
+			<value level="9">10</value>
+		</abnormalLvl>
+		<abnormalTime>3</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<activateRate>30</activateRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;30516</allowedSkills>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="19529" toLevel="1" name="Elemental Burst: Dark">
 		<!-- Resets the cooldown of Magical Evasion/ Warp. -->
@@ -332,6 +309,14 @@
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<effectPoint>696</effectPoint>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ReuseSkillById">
+				<skillId>11057</skillId>	<!-- M. Evasion -->
+			</effect>
+		</effects>
 	</skill>
 	<skill id="19530" toLevel="1" name="Battle Prelude">
 		<!-- For 15 sec., all party members' P. Atk., M. Atk., Atk. Spd. and Casting Spd. +150%. -->
@@ -1036,9 +1021,8 @@
 		<!-- Wields the Burning Chain to draw nearby enemies with $s1 Power added to P. Atk. and draw them to you. Also puts them into the Ignite state for $s2. Requires a sword/ blunt weapon to be equipped. Over-hit. Critical. -->
 		<icon>icon.skill19556</icon>
 		<abnormalLvl>5</abnormalLvl>
-		<abnormalTime>5</abnormalTime>
+		<abnormalTime>10</abnormalTime>
 		<abnormalType>STUN</abnormalType>
-		<activateRate>90</activateRate>
 		<activateRate>80</activateRate>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>

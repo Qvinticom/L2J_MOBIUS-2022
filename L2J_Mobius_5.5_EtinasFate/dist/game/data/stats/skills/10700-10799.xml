@@ -224,7 +224,11 @@
 		<!-- Raids the target in the distance of $s1 to inflict short stun and increase your P. Critical Damage by $s3 for $s2. Requires dagger/ dual dagger. Consumes $s4 Soulstones. -->
 		<icon>icon.skill10704</icon>
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>3</abnormalTime>
+		<abnormalTime>
+			<value level="1">3</value>
+			<value level="2">4</value>
+			<value level="3">5</value>
+		</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<activateRate>
@@ -281,8 +285,6 @@
 	<skill id="10705" toLevel="3" name="Easterly Wind Strike">
 		<!-- Moves to the left side of the target to attempt Deadly Attack with $s1 power added to P. Atk. Causes Bleed on the target for $s2. Adds the Easterly Wind effect to the caster, which resets cooldown of Right Angle Reverse and Easterly Wind Strike. Half-kill is possible. Requires dagger/ dual dagger to be equipped. -->
 		<icon>icon.skill10705</icon>
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Moves to the left side of the target to attempt Deadly Attack with 56030 power added to P. Atk. Causes Bleed on the target for 15 seconds. Adds the Easterly Wind effect to the caster, which resets cooldown of Right Angle Reverse and Easterly Wind Strike. Half-kill is possible. Requires dagger/dual dagger to be equipped -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -336,9 +338,12 @@
 					<value level="2">58530</value>
 					<value level="3">61030</value>
 				</power>
-				<criticalChance>15</criticalChance> <!-- Guessed -->
-				<chanceBoost>365</chanceBoost> <!-- Guessed -->
-				<overHit>true</overHit> <!-- Guessed -->
+				<criticalChance>15</criticalChance>
+				<chanceBoost>300</chanceBoost>
+			</effect>
+			<effect name="Lethal">
+				<fullLethal>0</fullLethal>
+				<halfLethal>15</halfLethal>
 			</effect>
 		</effects>
 	</skill>
