@@ -17,9 +17,9 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import org.l2jmobius.gameserver.ClientThread;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import org.l2jmobius.gameserver.network.ClientThread;
 
 public class RequestPetGetItem extends ClientBasePacket
 {

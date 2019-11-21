@@ -21,7 +21,6 @@ import java.io.IOException;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.ClientThread;
 import org.l2jmobius.gameserver.network.clientpackets.Action;
 import org.l2jmobius.gameserver.network.clientpackets.AddTradeItem;
 import org.l2jmobius.gameserver.network.clientpackets.AnswerTradeRequest;

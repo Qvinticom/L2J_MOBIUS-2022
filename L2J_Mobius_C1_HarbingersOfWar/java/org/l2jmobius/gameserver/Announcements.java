@@ -17,12 +17,12 @@
  */
 package org.l2jmobius.gameserver;
 
-import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.LineNumberReader;
 import java.util.ArrayList;
 import java.util.List;
@@ -59,14 +59,7 @@ public class Announcements
 		File file = new File("data/announcements.txt");
 		if (file.exists())
 		{
-			try
-			{
-				readFromDisk(file);
-			}
-			catch (IOException e)
-			{
-				e.printStackTrace();
-			}
+			readFromDisk(file);
 		}
 		else
 		{
@@ -118,15 +111,14 @@ public class Announcements
 		saveToDisk();
 	}
 	
-	private void readFromDisk(File file) throws IOException
+	private void readFromDisk(File file)
 	{
-		BufferedReader lnr = null;
 		int i = 0;
 		String line = null;
 		try
 		{
-			lnr = new LineNumberReader(new FileReader(file));
-			while ((line = ((LineNumberReader) lnr).readLine()) != null)
+			LineNumberReader lnr = new LineNumberReader(new InputStreamReader(new FileInputStream(file)));
+			while ((line = lnr.readLine()) != null)
 			{
 				StringTokenizer st = new StringTokenizer(line, "\n\r");
 				if (!st.hasMoreTokens())
@@ -139,80 +131,32 @@ public class Announcements
 			}
 			_log.config("Loaded " + i + " announcements.");
 			lnr.close();
-			return;
 		}
 		catch (FileNotFoundException e)
 		{
-			try
-			{
-				if (lnr != null)
-				{
-					lnr.close();
-				}
-				return;
-			}
-			catch (IOException e1)
-			{
-				try
-				{
-					e1.printStackTrace();
-				}
-				catch (Throwable throwable)
-				{
-					try
-					{
-						lnr.close();
-						throw throwable;
-					}
-					catch (Exception e2)
-					{
-						// empty catch block
-					}
-					throw throwable;
-				}
-				try
-				{
-					lnr.close();
-					return;
-				}
-				catch (Exception e2)
-				{
-					return;
-				}
-			}
+			_log.warning("File announcements.txt does not exist.");
+		}
+		catch (Exception e)
+		{
+			_log.warning("There was a problem loading annoucements.");
 		}
 	}
 	
 	private void saveToDisk()
 	{
-		File file = new File("data/announcements.txt");
-		FileWriter save = null;
 		try
 		{
-			save = new FileWriter(file);
+			FileWriter save = new FileWriter(new File("data/announcements.txt"));
 			for (int i = 0; i < _announcements.size(); ++i)
 			{
 				save.write(_announcements.get(i).toString());
 				save.write("\r\n");
 			}
+			save.close();
 		}
 		catch (IOException e)
 		{
 			_log.warning("Saving the announcements file has failed: " + e);
-			e.printStackTrace();
-		}
-		finally
-		{
-			try
-			{
-				if (save != null)
-				{
-					save.close();
-				}
-			}
-			catch (Exception e1)
-			{
-			}
 		}
 	}
 }

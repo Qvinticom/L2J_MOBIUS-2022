@@ -20,7 +20,6 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-import org.l2jmobius.gameserver.ClientThread;
 import org.l2jmobius.gameserver.IdFactory;
 import org.l2jmobius.gameserver.data.CharNameTable;
 import org.l2jmobius.gameserver.data.CharTemplateTable;
@@ -31,6 +30,7 @@ import org.l2jmobius.gameserver.model.SkillLearn;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.ClientThread;
 import org.l2jmobius.gameserver.network.serverpackets.CharCreateFail;
 import org.l2jmobius.gameserver.network.serverpackets.CharCreateOk;
 import org.l2jmobius.gameserver.network.serverpackets.CharSelectInfo;

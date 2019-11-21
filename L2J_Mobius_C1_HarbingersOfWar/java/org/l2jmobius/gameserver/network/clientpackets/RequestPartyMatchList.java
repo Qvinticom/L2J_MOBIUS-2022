@@ -19,8 +19,8 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import java.io.IOException;
 
-import org.l2jmobius.gameserver.ClientThread;
 import org.l2jmobius.gameserver.model.World;
+import org.l2jmobius.gameserver.network.ClientThread;
 import org.l2jmobius.gameserver.network.serverpackets.PartyMatchList;
 
 public class RequestPartyMatchList extends ClientBasePacket

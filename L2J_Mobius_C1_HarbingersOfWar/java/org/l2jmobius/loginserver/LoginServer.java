@@ -28,6 +28,8 @@ import java.net.Socket;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.loginserver.data.AccountData;
+import org.l2jmobius.loginserver.network.ClientThread;
 
 public class LoginServer extends Thread
 {

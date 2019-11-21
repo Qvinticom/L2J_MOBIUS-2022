@@ -15,7 +15,7 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
  */
-package org.l2jmobius.gameserver;
+package org.l2jmobius.gameserver.network;
 
 import java.io.BufferedOutputStream;
 import java.io.IOException;
@@ -58,7 +58,7 @@ public class Connection
 		length = (lengthHi * 256) + lengthLo;
 		if (lengthHi < 0)
 		{
-			_log.warning("client terminated connection");
+			// _log.warning("client terminated connection");
 			throw new IOException("EOF");
 		}
 		byte[] incoming = new byte[length];

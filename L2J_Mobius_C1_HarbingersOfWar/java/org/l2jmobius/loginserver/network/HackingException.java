@@ -15,30 +15,19 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
  */
-package org.l2jmobius.loginserver.serverpackets;
+package org.l2jmobius.loginserver.network;
 
-public class Init
+public class HackingException extends Exception
 {
-	private static byte[] _content = new byte[]
-	{
-		0,
-		-100,
-		119,
-		-19,
-		3,
-		90,
-		120,
-		0,
-		0
-	};
+	String _ip;
 	
-	public byte[] getContent()
+	public HackingException(String ip)
 	{
-		return _content;
+		_ip = ip;
 	}
 	
-	public int getLength()
+	public String getIP()
 	{
-		return _content.length + 2;
+		return _ip;
 	}
 }

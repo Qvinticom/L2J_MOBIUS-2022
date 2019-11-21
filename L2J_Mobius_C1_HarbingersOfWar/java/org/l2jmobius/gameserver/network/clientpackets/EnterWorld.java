@@ -20,13 +20,13 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import java.io.IOException;
 
 import org.l2jmobius.gameserver.Announcements;
-import org.l2jmobius.gameserver.ClientThread;
-import org.l2jmobius.gameserver.Connection;
-import org.l2jmobius.gameserver.GmListTable;
+import org.l2jmobius.gameserver.managers.GmListManager;
 import org.l2jmobius.gameserver.model.Clan;
 import org.l2jmobius.gameserver.model.ShortCut;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.ClientThread;
+import org.l2jmobius.gameserver.network.Connection;
 import org.l2jmobius.gameserver.network.serverpackets.Die;
 import org.l2jmobius.gameserver.network.serverpackets.ItemList;
 import org.l2jmobius.gameserver.network.serverpackets.ShortCutInit;
@@ -45,7 +45,7 @@ public class EnterWorld extends ClientBasePacket
 		if (client.getAccessLevel() >= 100)
 		{
 			activeChar.setIsGM(true);
-			GmListTable.getInstance().addGm(activeChar);
+			GmListManager.getInstance().addGm(activeChar);
 		}
 		SystemMessage sm = new SystemMessage(34);
 		con.sendPacket(sm);

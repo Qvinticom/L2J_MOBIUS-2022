@@ -26,8 +26,6 @@ import java.util.TimerTask;
 import java.util.TreeMap;
 import java.util.logging.Logger;
 
-import org.l2jmobius.gameserver.Connection;
-import org.l2jmobius.gameserver.GmListTable;
 import org.l2jmobius.gameserver.data.CharStatsTable;
 import org.l2jmobius.gameserver.data.CharTemplateTable;
 import org.l2jmobius.gameserver.data.ExperienceTable;
@@ -36,6 +34,7 @@ import org.l2jmobius.gameserver.data.LevelUpData;
 import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.handler.ISkillHandler;
 import org.l2jmobius.gameserver.handler.SkillHandler;
+import org.l2jmobius.gameserver.managers.GmListManager;
 import org.l2jmobius.gameserver.model.Clan;
 import org.l2jmobius.gameserver.model.Inventory;
 import org.l2jmobius.gameserver.model.LvlupData;
@@ -49,6 +48,7 @@ import org.l2jmobius.gameserver.model.Warehouse;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.network.Connection;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.ChangeWaitType;
 import org.l2jmobius.gameserver.network.serverpackets.CharInfo;
@@ -1014,7 +1014,7 @@ public class PlayerInstance extends Creature
 		}
 		if (isGM())
 		{
-			GmListTable.getInstance().deleteGm(this);
+			GmListManager.getInstance().deleteGm(this);
 		}
 		removeAllKnownObjects();
 		setNetConnection(null);

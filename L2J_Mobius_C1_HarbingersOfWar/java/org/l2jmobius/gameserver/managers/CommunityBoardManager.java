@@ -15,7 +15,7 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
  */
-package org.l2jmobius.gameserver;
+package org.l2jmobius.gameserver.managers;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -23,24 +23,26 @@ import java.util.Collection;
 import java.util.StringTokenizer;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.gameserver.GameTimeController;
 import org.l2jmobius.gameserver.data.CharTemplateTable;
 import org.l2jmobius.gameserver.data.ExperienceTable;
 import org.l2jmobius.gameserver.model.Clan;
 import org.l2jmobius.gameserver.model.ClanMember;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.ClientThread;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import org.l2jmobius.gameserver.network.serverpackets.ShowBoard;
 
-public class CommunityBoard
+public class CommunityBoardManager
 {
-	private static CommunityBoard _instance;
+	private static CommunityBoardManager _instance;
 	
-	public static CommunityBoard getInstance()
+	public static CommunityBoardManager getInstance()
 	{
 		if (_instance == null)
 		{
-			_instance = new CommunityBoard();
+			_instance = new CommunityBoardManager();
 		}
 		return _instance;
 	}

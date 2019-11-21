@@ -17,8 +17,8 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import org.l2jmobius.gameserver.ClientThread;
-import org.l2jmobius.gameserver.CommunityBoard;
+import org.l2jmobius.gameserver.managers.CommunityBoardManager;
+import org.l2jmobius.gameserver.network.ClientThread;
 
 public class RequestShowBoard extends ClientBasePacket
 {
@@ -29,7 +29,7 @@ public class RequestShowBoard extends ClientBasePacket
 		super(decrypt);
 		@SuppressWarnings("unused")
 		int unknown = readD();
-		CommunityBoard.getInstance().handleCommands(client, "bbs_default");
+		CommunityBoardManager.getInstance().handleCommands(client, "bbs_default");
 	}
 	
 	@Override

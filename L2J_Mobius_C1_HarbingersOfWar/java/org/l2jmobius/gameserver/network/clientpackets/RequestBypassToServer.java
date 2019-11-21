@@ -18,12 +18,12 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.gameserver.AdminCommands;
-import org.l2jmobius.gameserver.ClientThread;
-import org.l2jmobius.gameserver.CommunityBoard;
+import org.l2jmobius.gameserver.managers.CommunityBoardManager;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.ClientThread;
 
 public class RequestBypassToServer extends ClientBasePacket
 {
@@ -55,7 +55,7 @@ public class RequestBypassToServer extends ClientBasePacket
 			}
 			else if (command.startsWith("bbs_"))
 			{
-				CommunityBoard.getInstance().handleCommands(client, command);
+				CommunityBoardManager.getInstance().handleCommands(client, command);
 			}
 		}
 		catch (Exception e)

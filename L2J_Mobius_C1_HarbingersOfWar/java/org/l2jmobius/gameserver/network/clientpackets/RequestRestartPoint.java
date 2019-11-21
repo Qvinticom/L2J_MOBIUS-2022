@@ -19,11 +19,11 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import java.io.IOException;
 
-import org.l2jmobius.gameserver.ClientThread;
-import org.l2jmobius.gameserver.Connection;
 import org.l2jmobius.gameserver.data.MapRegionTable;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.ClientThread;
+import org.l2jmobius.gameserver.network.Connection;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.Revive;
 import org.l2jmobius.gameserver.network.serverpackets.SocialAction;

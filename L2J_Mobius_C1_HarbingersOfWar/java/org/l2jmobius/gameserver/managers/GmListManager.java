@@ -15,7 +15,7 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
  */
-package org.l2jmobius.gameserver;
+package org.l2jmobius.gameserver.managers;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,22 +25,22 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.serverpackets.ServerBasePacket;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public class GmListTable
+public class GmListManager
 {
-	private static Logger _log = Logger.getLogger(GmListTable.class.getName());
-	private static GmListTable _instance;
+	private static Logger _log = Logger.getLogger(GmListManager.class.getName());
+	private static GmListManager _instance;
 	private final List<PlayerInstance> _gmList = new ArrayList<>();
 	
-	public static GmListTable getInstance()
+	public static GmListManager getInstance()
 	{
 		if (_instance == null)
 		{
-			_instance = new GmListTable();
+			_instance = new GmListManager();
 		}
 		return _instance;
 	}
 	
-	private GmListTable()
+	private GmListManager()
 	{
 	}
 	

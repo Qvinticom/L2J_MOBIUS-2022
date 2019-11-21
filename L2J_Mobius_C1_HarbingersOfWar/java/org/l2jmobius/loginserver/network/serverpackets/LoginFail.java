@@ -15,20 +15,21 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
  */
-package org.l2jmobius.loginserver.serverpackets;
+package org.l2jmobius.loginserver.network.serverpackets;
 
-public class PlayFail extends ServerBasePacket
+public class LoginFail extends ServerBasePacket
 {
-	public static int REASON_TOO_MANY_PLAYERS = 15;
-	public static int REASON1 = 1;
-	public static int REASON2 = 2;
-	public static int REASON3 = 3;
-	public static int REASON4 = 4;
+	public static int REASON_ACCOUNT_BANNED = 9;
+	public static int REASON_ACCOUNT_IN_USE = 7;
+	public static int REASON_ACCESS_FAILED = 4;
+	public static int REASON_USER_OR_PASS_WRONG = 3;
+	public static int REASON_PASS_WRONG = 2;
+	public static int REASON_SYSTEM_ERROR = 1;
 	
-	public PlayFail(int reason)
+	public LoginFail(int reason)
 	{
-		writeC(6);
-		writeC(reason);
+		writeC(1);
+		writeD(reason);
 	}
 	
 	@Override

@@ -17,7 +17,7 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import org.l2jmobius.gameserver.ClientThread;
+import org.l2jmobius.gameserver.network.ClientThread;
 
 public class RequestPartyMatchConfig extends ClientBasePacket
 {

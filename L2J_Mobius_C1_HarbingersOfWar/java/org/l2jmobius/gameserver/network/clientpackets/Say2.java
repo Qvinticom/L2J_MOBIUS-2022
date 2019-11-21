@@ -20,9 +20,9 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import java.util.Iterator;
 import java.util.Set;
 
-import org.l2jmobius.gameserver.ClientThread;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.ClientThread;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 

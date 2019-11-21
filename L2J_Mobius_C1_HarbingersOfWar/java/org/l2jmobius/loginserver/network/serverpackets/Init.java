@@ -15,27 +15,30 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
  */
-package org.l2jmobius.loginserver.clientpackets;
+package org.l2jmobius.loginserver.network.serverpackets;
 
-public class RequestAuthLogin
+public class Init
 {
-	private String _user;
-	private final String _password;
-	
-	public String getPassword()
+	private static byte[] _content = new byte[]
 	{
-		return _password;
+		0,
+		-100,
+		119,
+		-19,
+		3,
+		90,
+		120,
+		0,
+		0
+	};
+	
+	public byte[] getContent()
+	{
+		return _content;
 	}
 	
-	public String getUser()
+	public int getLength()
 	{
-		return _user;
-	}
-	
-	public RequestAuthLogin(byte[] rawPacket)
-	{
-		_user = new String(rawPacket, 1, 14).trim();
-		_user = _user.toLowerCase();
-		_password = new String(rawPacket, 15, 14).trim();
+		return _content.length + 2;
 	}
 }

@@ -19,11 +19,11 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import java.io.IOException;
 
-import org.l2jmobius.gameserver.ClientThread;
-import org.l2jmobius.gameserver.Connection;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.ClientThread;
+import org.l2jmobius.gameserver.network.Connection;
 import org.l2jmobius.gameserver.network.serverpackets.ItemList;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 

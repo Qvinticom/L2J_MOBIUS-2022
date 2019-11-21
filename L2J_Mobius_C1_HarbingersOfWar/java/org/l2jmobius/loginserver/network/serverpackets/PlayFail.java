@@ -15,15 +15,20 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
  */
-package org.l2jmobius.loginserver.serverpackets;
+package org.l2jmobius.loginserver.network.serverpackets;
 
-public class PlayOk extends ServerBasePacket
+public class PlayFail extends ServerBasePacket
 {
-	public PlayOk(int sessionKey)
+	public static int REASON_TOO_MANY_PLAYERS = 15;
+	public static int REASON1 = 1;
+	public static int REASON2 = 2;
+	public static int REASON3 = 3;
+	public static int REASON4 = 4;
+	
+	public PlayFail(int reason)
 	{
-		writeC(7);
-		writeD(sessionKey);
-		writeD(1432778632);
+		writeC(6);
+		writeC(reason);
 	}
 	
 	@Override

@@ -15,19 +15,26 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
  */
-package org.l2jmobius.loginserver;
+package org.l2jmobius.loginserver.network.serverpackets;
 
-public class HackingException extends Exception
+public class LoginOk extends ServerBasePacket
 {
-	String _ip;
-	
-	public HackingException(String ip)
+	public LoginOk()
 	{
-		_ip = ip;
+		writeC(3);
+		writeD(1431655765);
+		writeD(1145324612);
+		writeD(0);
+		writeD(0);
+		writeD(1002);
+		writeD(0);
+		writeD(0);
+		writeD(2);
 	}
 	
-	public String getIP()
+	@Override
+	public byte[] getContent()
 	{
-		return _ip;
+		return getBytes();
 	}
 }

@@ -18,10 +18,10 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.gameserver.AdminCommands;
-import org.l2jmobius.gameserver.ClientThread;
-import org.l2jmobius.gameserver.GmListTable;
+import org.l2jmobius.gameserver.managers.GmListManager;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.ClientThread;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -63,7 +63,7 @@ public class SendBypassBuildCmd extends ClientBasePacket
 				{
 					String text = command.substring(7);
 					CreatureSay cs = new CreatureSay(0, 9, activeChar.getName(), text);
-					GmListTable.getInstance().broadcastToGMs(cs);
+					GmListManager.getInstance().broadcastToGMs(cs);
 				}
 				catch (StringIndexOutOfBoundsException e)
 				{

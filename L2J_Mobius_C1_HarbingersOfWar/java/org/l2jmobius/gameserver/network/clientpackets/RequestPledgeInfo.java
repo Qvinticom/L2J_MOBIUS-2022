@@ -17,10 +17,10 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import org.l2jmobius.gameserver.ClientThread;
 import org.l2jmobius.gameserver.data.ClanTable;
 import org.l2jmobius.gameserver.model.Clan;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.ClientThread;
 import org.l2jmobius.gameserver.network.serverpackets.PledgeInfo;
 import org.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListAll;
 

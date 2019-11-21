@@ -15,7 +15,7 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
  */
-package org.l2jmobius.loginserver;
+package org.l2jmobius.loginserver.network;
 
 import java.io.BufferedOutputStream;
 import java.io.IOException;
@@ -28,14 +28,16 @@ import java.util.List;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
-import org.l2jmobius.loginserver.clientpackets.RequestAuthLogin;
-import org.l2jmobius.loginserver.clientpackets.RequestServerLogin;
-import org.l2jmobius.loginserver.serverpackets.Init;
-import org.l2jmobius.loginserver.serverpackets.LoginFail;
-import org.l2jmobius.loginserver.serverpackets.LoginOk;
-import org.l2jmobius.loginserver.serverpackets.PlayOk;
-import org.l2jmobius.loginserver.serverpackets.ServerBasePacket;
-import org.l2jmobius.loginserver.serverpackets.ServerList;
+import org.l2jmobius.loginserver.LoginController;
+import org.l2jmobius.loginserver.data.AccountData;
+import org.l2jmobius.loginserver.network.clientpackets.RequestAuthLogin;
+import org.l2jmobius.loginserver.network.clientpackets.RequestServerLogin;
+import org.l2jmobius.loginserver.network.serverpackets.Init;
+import org.l2jmobius.loginserver.network.serverpackets.LoginFail;
+import org.l2jmobius.loginserver.network.serverpackets.LoginOk;
+import org.l2jmobius.loginserver.network.serverpackets.PlayOk;
+import org.l2jmobius.loginserver.network.serverpackets.ServerBasePacket;
+import org.l2jmobius.loginserver.network.serverpackets.ServerList;
 
 public class ClientThread extends Thread
 {

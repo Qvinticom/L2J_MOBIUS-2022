@@ -21,7 +21,7 @@ import java.net.Socket;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.l2jmobius.gameserver.Connection;
+import org.l2jmobius.gameserver.network.Connection;
 
 public class LoginController
 {

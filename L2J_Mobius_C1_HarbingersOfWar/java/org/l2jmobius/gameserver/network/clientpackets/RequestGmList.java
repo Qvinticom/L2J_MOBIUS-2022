@@ -17,8 +17,8 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import org.l2jmobius.gameserver.ClientThread;
-import org.l2jmobius.gameserver.GmListTable;
+import org.l2jmobius.gameserver.managers.GmListManager;
+import org.l2jmobius.gameserver.network.ClientThread;
 
 public class RequestGmList extends ClientBasePacket
 {
@@ -27,7 +27,7 @@ public class RequestGmList extends ClientBasePacket
 	public RequestGmList(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
-		GmListTable.getInstance().sendListToPlayer(client.getActiveChar());
+		GmListManager.getInstance().sendListToPlayer(client.getActiveChar());
 	}
 	
 	@Override

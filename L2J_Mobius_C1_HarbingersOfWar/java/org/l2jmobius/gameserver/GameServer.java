@@ -49,7 +49,9 @@ import org.l2jmobius.gameserver.handler.itemhandlers.SoulShots;
 import org.l2jmobius.gameserver.handler.itemhandlers.WorldMap;
 import org.l2jmobius.gameserver.handler.skillhandlers.DamageSkill;
 import org.l2jmobius.gameserver.handler.skillhandlers.HealSkill;
+import org.l2jmobius.gameserver.managers.GmListManager;
 import org.l2jmobius.gameserver.model.World;
+import org.l2jmobius.gameserver.network.ClientThread;
 import org.l2jmobius.loginserver.LoginController;
 
 public class GameServer extends Thread
@@ -81,7 +83,7 @@ public class GameServer extends Thread
 	protected final Announcements _announcements;
 	protected final MapRegionTable _mapRegions;
 	protected final PriceListTable _pricelist;
-	protected final GmListTable _gmList;
+	protected final GmListManager _gmList;
 	
 	public static void main(String[] args) throws Exception
 	{
@@ -185,6 +187,6 @@ public class GameServer extends Thread
 		_skillHandler = SkillHandler.getInstance();
 		_skillHandler.registerSkillHandler(new HealSkill());
 		_skillHandler.registerSkillHandler(new DamageSkill());
-		_gmList = GmListTable.getInstance();
+		_gmList = GmListManager.getInstance();
 	}
 }

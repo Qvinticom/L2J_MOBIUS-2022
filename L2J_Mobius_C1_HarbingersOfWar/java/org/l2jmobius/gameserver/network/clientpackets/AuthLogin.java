@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import java.io.IOException;
 
-import org.l2jmobius.gameserver.ClientThread;
+import org.l2jmobius.gameserver.network.ClientThread;
 import org.l2jmobius.gameserver.network.serverpackets.AuthLoginFail;
 import org.l2jmobius.gameserver.network.serverpackets.CharSelectInfo;
 import org.l2jmobius.loginserver.LoginController;

@@ -15,26 +15,27 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
  */
-package org.l2jmobius.loginserver.serverpackets;
+package org.l2jmobius.loginserver.network.clientpackets;
 
-public class LoginOk extends ServerBasePacket
+public class RequestAuthLogin
 {
-	public LoginOk()
+	private String _user;
+	private final String _password;
+	
+	public String getPassword()
 	{
-		writeC(3);
-		writeD(1431655765);
-		writeD(1145324612);
-		writeD(0);
-		writeD(0);
-		writeD(1002);
-		writeD(0);
-		writeD(0);
-		writeD(2);
+		return _password;
 	}
 	
-	@Override
-	public byte[] getContent()
+	public String getUser()
 	{
-		return getBytes();
+		return _user;
+	}
+	
+	public RequestAuthLogin(byte[] rawPacket)
+	{
+		_user = new String(rawPacket, 1, 14).trim();
+		_user = _user.toLowerCase();
+		_password = new String(rawPacket, 15, 14).trim();
 	}
 }

@@ -15,7 +15,7 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
  */
-package org.l2jmobius.loginserver;
+package org.l2jmobius.loginserver.data;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -33,6 +33,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.loginserver.network.HackingException;
 
 public class AccountData
 {

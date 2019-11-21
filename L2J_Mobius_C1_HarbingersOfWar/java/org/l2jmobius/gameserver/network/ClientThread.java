@@ -15,7 +15,7 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
  */
-package org.l2jmobius.gameserver;
+package org.l2jmobius.gameserver.network;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -30,6 +30,7 @@ import java.util.List;
 import java.util.StringTokenizer;
 import java.util.logging.Logger;
 
+import org.l2jmobius.gameserver.IdFactory;
 import org.l2jmobius.gameserver.data.CharNameTable;
 import org.l2jmobius.gameserver.data.ClanTable;
 import org.l2jmobius.gameserver.data.ItemTable;
@@ -40,7 +41,6 @@ import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.network.PacketHandler;
 import org.l2jmobius.gameserver.templates.Item;
 import org.l2jmobius.loginserver.LoginController;
 
