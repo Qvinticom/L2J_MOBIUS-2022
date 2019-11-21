@@ -32,17 +32,24 @@ public class ProtocolVersion extends ClientBasePacket
 	{
 		super(rawPacket);
 		int version = readD();
-		// _log.fine("Protocol Revision:" + version);
-		if (version != Config.CLIENT_PROTOCOL_VERSION)
+		
+		// this packet is never encrypted
+		if (version == -2)
 		{
-			_log.warning("Client " + client.getLoginName() + " tryied to login with client protocol " + version);
-			throw new IOException("Wrong Protocol Version: " + version);
+			// this is just a ping attempt from the client
 		}
-		Connection con = client.getConnection();
-		KeyPacket pk = new KeyPacket();
-		pk.setKey(con.getCryptKey());
-		con.sendPacket(pk);
-		con.activateCryptKey();
+		else if (version != Config.CLIENT_PROTOCOL_VERSION)
+		{
+			_log.warning("Wrong Protocol Version: " + version + ", " + client);
+		}
+		else
+		{
+			Connection con = client.getConnection();
+			KeyPacket pk = new KeyPacket();
+			pk.setKey(con.getCryptKey());
+			con.sendPacket(pk);
+			con.activateCryptKey();
+		}
 	}
 	
 	@Override
