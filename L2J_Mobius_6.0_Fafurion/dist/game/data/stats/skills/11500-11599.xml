@@ -3416,8 +3416,9 @@
 			</effect>
 		</effects>
 		<endEffects>
-			<effect name="Confuse" abnormalTime="3">
-				<chance>100</chance>
+			<effect name="CallSkill">
+				<skillId>19504</skillId> <!-- Tempted -->
+				<skillLevel>1</skillLevel>
 			</effect>
 		</endEffects>
 	</skill>

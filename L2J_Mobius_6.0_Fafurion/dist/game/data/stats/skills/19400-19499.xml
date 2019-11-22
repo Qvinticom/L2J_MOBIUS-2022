@@ -1943,6 +1943,13 @@
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
+			<effect name="TriggerSkillBySkillAttack">
+				<skillId>19440</skillId> <!-- Divine Strike -->
+				<skillLevel>1</skillLevel>
+				<attackSkillId>19448</attackSkillId> <!--  Rampageous Beat -->
+				<chance>80</chance>
+				<targetType>ENEMY</targetType>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="19442" toLevel="3" name="Single Note">

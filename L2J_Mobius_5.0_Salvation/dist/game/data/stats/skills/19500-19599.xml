@@ -83,10 +83,23 @@
 	<skill id="19504" toLevel="1" name="Tempted">
 		<!-- Seduction by the Chaos Symphony for 3 seconds. -->
 		<icon>icon.skill11533</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<isDebuff>true</isDebuff>
 		<effectPoint>-1371</effectPoint>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3</abnormalTime>
+		<abnormalType>TURN_FLEE</abnormalType>
+		<abnormalVisualEffect>PSY_POWER</abnormalVisualEffect>
+		<activateRate>100</activateRate>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<trait>PSYCHIC</trait>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Compelling" />
+			<effect name="BlockControl" />
+		</effects>
 	</skill>
 	<skill id="19506" toLevel="1" name="Spectral Wound">
 		<!-- The Spectral Sword attacks the target with 100 Power added to P. Atk. -->
