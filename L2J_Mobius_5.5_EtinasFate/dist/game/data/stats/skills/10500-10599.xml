@@ -1322,7 +1322,6 @@
 		<coolTime>400</coolTime>
 		<effectPoint>687</effectPoint>
 		<reuseDelay>120000</reuseDelay>
-		<removedOnAnyActionExceptMove>true</removedOnAnyActionExceptMove>
 		<removedOnDamage>true</removedOnDamage>
 		<basicProperty>NONE</basicProperty>
 		<targetType>SELF</targetType>
@@ -1354,6 +1353,17 @@
 				<!-- Teleport to Front -->
 				<angle>180</angle>
 				<range>250</range>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>127</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>100</chance>
+				<targetType>SELF</targetType>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>14839</skillId> <!-- Cancel Hide -->
+				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>

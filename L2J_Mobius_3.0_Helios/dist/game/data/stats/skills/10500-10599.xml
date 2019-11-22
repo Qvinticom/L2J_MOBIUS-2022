@@ -1292,21 +1292,24 @@
 		</abnormalTime>
 		<abnormalType>HIDE</abnormalType>
 		<abnormalVisualEffect>STEALTH</abnormalVisualEffect>
-		<operateType>A2</operateType>
+		<operateType>DA2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<mpConsume>38</mpConsume>
 		<hitTime>1000</hitTime>
 		<coolTime>400</coolTime>
 		<effectPoint>687</effectPoint>
-		<reuseDelay>180000</reuseDelay>
-		<removedOnAnyActionExceptMove>true</removedOnAnyActionExceptMove>
+		<reuseDelay>120000</reuseDelay>
 		<removedOnDamage>true</removedOnDamage>
-		<canCastWhileDisabled>true</canCastWhileDisabled>
 		<basicProperty>NONE</basicProperty>
-		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpBlink">
+				<direction>FRONT</direction>
+				<range>250</range>
+			</condition>
+		</conditions>
 		<effects>
 			<effect name="Hide" />
 			<effect name="DispelBySlot">
@@ -1323,6 +1326,22 @@
 					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">{base + (2 * subIndex)}</value>
 				</amount>
 				<mode>DIFF</mode>
+			</effect>
+			<effect name="Blink">
+				<!-- Teleport to Front -->
+				<angle>180</angle>
+				<range>250</range>
+			</effect>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>127</maxAttackerLevel>
+				<minDamage>1</minDamage>
+				<chance>100</chance>
+				<targetType>SELF</targetType>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>14839</skillId> <!-- Cancel Hide -->
+				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>

@@ -950,7 +950,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="DispelBySlot">
-				<dispel>INVINCIBILITY_SPECIAL,-1</dispel>
+				<dispel>INVINCIBILITY_SPECIAL,-1;HIDE,9</dispel>
 			</effect>
 		</effects>
 	</skill>

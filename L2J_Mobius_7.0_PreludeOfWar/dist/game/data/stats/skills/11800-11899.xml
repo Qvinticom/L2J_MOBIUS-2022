@@ -257,8 +257,9 @@
 		<effectRange>1100</effectRange>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<staticReuse>true</staticReuse>
 		<isMagic>1</isMagic>
+		<staticReuse>true</staticReuse>
+		<reuseDelay>5000</reuseDelay>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
