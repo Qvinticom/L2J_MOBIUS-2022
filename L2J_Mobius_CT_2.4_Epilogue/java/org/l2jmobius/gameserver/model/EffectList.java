@@ -1218,49 +1218,52 @@ public class EffectList
 		// Verify stacked skills.
 		else
 		{
-			if (_stackedEffects.containsKey(skill.getAbnormalType()))
+			synchronized (this)
 			{
-				BuffInfo stackedInfo = _stackedEffects.get(skill.getAbnormalType());
-				// Skills are only replaced if the incoming buff has greater or equal abnormal level.
-				if ((stackedInfo != null) && (skill.getAbnormalLvl() >= stackedInfo.getSkill().getAbnormalLvl()))
+				if (_stackedEffects.containsKey(skill.getAbnormalType()))
 				{
-					// If it is an herb, set as not in use the lesser buff.
-					// Effect will be present in the effect list.
-					// Effects stats are removed and onActionTime() is not called.
-					// But finish task continues to run, and ticks as well.
-					if (skill.isAbnormalInstant())
+					BuffInfo stackedInfo = _stackedEffects.get(skill.getAbnormalType());
+					// Skills are only replaced if the incoming buff has greater or equal abnormal level.
+					if ((stackedInfo != null) && (skill.getAbnormalLvl() >= stackedInfo.getSkill().getAbnormalLvl()))
 					{
-						if (stackedInfo.getSkill().isAbnormalInstant())
+						// If it is an herb, set as not in use the lesser buff.
+						// Effect will be present in the effect list.
+						// Effects stats are removed and onActionTime() is not called.
+						// But finish task continues to run, and ticks as well.
+						if (skill.isAbnormalInstant())
 						{
-							stopSkillEffects(false, skill.getAbnormalType());
-							stackedInfo = _stackedEffects.get(skill.getAbnormalType());
+							if (stackedInfo.getSkill().isAbnormalInstant())
+							{
+								stopSkillEffects(false, skill.getAbnormalType());
+								stackedInfo = _stackedEffects.get(skill.getAbnormalType());
+							}
+							
+							if (stackedInfo != null)
+							{
+								stackedInfo.setInUse(false);
+								// Remove stats
+								stackedInfo.removeStats();
+								_hiddenBuffs.incrementAndGet();
+							}
 						}
-						
-						if (stackedInfo != null)
+						// Remove buff that will stack with the abnormal type.
+						else
 						{
-							stackedInfo.setInUse(false);
-							// Remove stats
-							stackedInfo.removeStats();
-							_hiddenBuffs.incrementAndGet();
+							if (stackedInfo.getSkill().isAbnormalInstant())
+							{
+								stopSkillEffects(false, skill.getAbnormalType());
+							}
+							stopSkillEffects(false, skill.getAbnormalType());
 						}
 					}
-					// Remove buff that will stack with the abnormal type.
+					// If the new buff is a lesser buff, then don't add it.
 					else
 					{
-						if (stackedInfo.getSkill().isAbnormalInstant())
-						{
-							stopSkillEffects(false, skill.getAbnormalType());
-						}
-						stopSkillEffects(false, skill.getAbnormalType());
+						return;
 					}
 				}
-				// If the new buff is a lesser buff, then don't add it.
-				else
-				{
-					return;
-				}
+				_stackedEffects.put(skill.getAbnormalType(), info);
 			}
-			_stackedEffects.put(skill.getAbnormalType(), info);
 		}
 		
 		// Select the map that holds the effects related to this skill.
