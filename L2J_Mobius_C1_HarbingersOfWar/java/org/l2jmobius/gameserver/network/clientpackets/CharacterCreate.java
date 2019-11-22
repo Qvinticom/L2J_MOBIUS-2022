@@ -150,16 +150,14 @@ public class CharacterCreate extends ClientBasePacket
 			newChar.setCollisionHeight(template.getFColH());
 		}
 		ItemTable itemTable = ItemTable.getInstance();
-		Integer[] items = template.getItems();
-		for (Integer item2 : items)
+		for (Integer item2 : template.getItems())
 		{
 			ItemInstance item = itemTable.createItem(item2);
 			newChar.getInventory().addItem(item);
 		}
 		newChar.setTitle("");
 		newChar.setClanId(0);
-		SkillLearn[] startSkills = SkillTreeTable.getInstance().getAvailableSkills(newChar);
-		for (SkillLearn startSkill : startSkills)
+		for (SkillLearn startSkill : SkillTreeTable.getInstance().getAvailableSkills(newChar))
 		{
 			newChar.addSkill(SkillTable.getInstance().getInfo(startSkill.getId(), startSkill.getLevel()));
 			_log.fine("adding starter skill:" + startSkill.getId() + " / " + startSkill.getLevel());

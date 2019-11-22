@@ -17,6 +17,7 @@
  */
 package org.l2jmobius.gameserver.model.actor.instance;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -142,14 +143,14 @@ public class PlayerInstance extends Creature
 		return _skills.remove(skill.getId());
 	}
 	
-	public Skill[] getAllSkills()
+	public Collection<Skill> getAllSkills()
 	{
-		return _skills.values().toArray(new Skill[_skills.values().size()]);
+		return _skills.values();
 	}
 	
-	public ShortCut[] getAllShortCuts()
+	public Collection<ShortCut> getAllShortCuts()
 	{
-		return _shortCuts.values().toArray(new ShortCut[_shortCuts.values().size()]);
+		return _shortCuts.values();
 	}
 	
 	public ShortCut getShortCut(int slot)

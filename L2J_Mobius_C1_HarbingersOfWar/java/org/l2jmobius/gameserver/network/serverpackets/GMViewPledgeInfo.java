@@ -49,9 +49,8 @@ public class GMViewPledgeInfo extends ServerBasePacket
 		writeD(_activeChar.getLevel());
 		writeD(0);
 		writeD(0);
-		ClanMember[] members = _clan.getMembers();
-		writeD(members.length - 1);
-		for (ClanMember member : members)
+		writeD(_clan.getMembers().size() - 1);
+		for (ClanMember member : _clan.getMembers())
 		{
 			if (member.getName().equals(_activeChar.getName()))
 			{

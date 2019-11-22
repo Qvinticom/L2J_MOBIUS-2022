@@ -40,9 +40,8 @@ public class RequestAquireSkillInfo extends ClientBasePacket
 		int id = readD();
 		int level = readD();
 		Skill skill = SkillTable.getInstance().getInfo(id, level);
-		SkillLearn[] skills = SkillTreeTable.getInstance().getAvailableSkills(activeChar);
 		int requiredSp = 0;
-		for (SkillLearn skill2 : skills)
+		for (SkillLearn skill2 : SkillTreeTable.getInstance().getAvailableSkills(activeChar))
 		{
 			if (skill2.getId() != id)
 			{

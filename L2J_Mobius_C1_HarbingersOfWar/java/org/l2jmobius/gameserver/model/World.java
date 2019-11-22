@@ -108,8 +108,7 @@ public class World
 	public void removeVisibleObject(WorldObject object)
 	{
 		_visibleObjects.remove(object.getObjectId());
-		Object[] temp = object.getKnownObjects().toArray();
-		for (Object element : temp)
+		for (Object element : object.getKnownObjects())
 		{
 			WorldObject temp1 = (WorldObject) element;
 			temp1.removeKnownObject(object);

@@ -17,13 +17,15 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import java.util.Collection;
+
 import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 public class GMViewItemList extends ServerBasePacket
 {
 	private static final String _S__AD_GMVIEWITEMLIST = "[S] AD GMViewItemList";
-	private final ItemInstance[] _items;
+	private final Collection<ItemInstance> _items;
 	private final String _playerName;
 	
 	public GMViewItemList(PlayerInstance cha)
@@ -38,18 +40,16 @@ public class GMViewItemList extends ServerBasePacket
 		writeC(173);
 		writeS(_playerName);
 		writeH(1);
-		int count = _items.length;
-		writeH(count);
-		for (int i = 0; i < count; ++i)
+		writeH(_items.size());
+		for (ItemInstance item : _items)
 		{
-			ItemInstance temp = _items[i];
-			writeH(temp.getItem().getType1());
-			writeD(temp.getObjectId());
-			writeD(temp.getItemId());
-			writeD(temp.getCount());
-			writeH(temp.getItem().getType2());
+			writeH(item.getItem().getType1());
+			writeD(item.getObjectId());
+			writeD(item.getItemId());
+			writeD(item.getCount());
+			writeH(item.getItem().getType2());
 			writeH(255);
-			if (temp.isEquipped())
+			if (item.isEquipped())
 			{
 				writeH(1);
 			}
@@ -57,8 +57,8 @@ public class GMViewItemList extends ServerBasePacket
 			{
 				writeH(0);
 			}
-			writeD(temp.getItem().getBodyPart());
-			writeH(temp.getEnchantLevel());
+			writeD(item.getItem().getBodyPart());
+			writeH(item.getEnchantLevel());
 			writeH(0);
 		}
 		return getBytes();

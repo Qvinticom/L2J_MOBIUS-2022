@@ -20,6 +20,7 @@ package org.l2jmobius.gameserver.model;
 import java.io.File;
 import java.io.FileWriter;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -99,25 +100,23 @@ public class Clan
 		_members.remove(name);
 	}
 	
-	public ClanMember[] getMembers()
+	public Collection<ClanMember> getMembers()
 	{
-		return _members.values().toArray(new ClanMember[_members.size()]);
+		return _members.values();
 	}
 	
-	public PlayerInstance[] getOnlineMembers(String exclude)
+	public Collection<PlayerInstance> getOnlineMembers(String exclude)
 	{
 		List<PlayerInstance> result = new ArrayList<>();
-		Iterator<ClanMember> iter = _members.values().iterator();
-		while (iter.hasNext())
+		for (ClanMember member : _members.values())
 		{
-			ClanMember temp = iter.next();
-			if (!temp.isOnline() || temp.getName().equals(exclude))
+			if (!member.isOnline() || member.getName().equals(exclude))
 			{
 				continue;
 			}
-			result.add(temp.getPlayerInstance());
+			result.add(member.getPlayerInstance());
 		}
-		return result.toArray(new PlayerInstance[result.size()]);
+		return result;
 	}
 	
 	public int getAllyId()
@@ -191,7 +190,6 @@ public class Clan
 		FileWriter out = null;
 		try
 		{
-			int i;
 			out = new FileWriter(clanFile);
 			out.write("#clanId;clanName;clanLevel;hasCastle;hasHideout;allianceId;allianceName\r\n");
 			out.write(getClanId() + ";");
@@ -202,28 +200,27 @@ public class Clan
 			out.write(getAllyId() + ";");
 			out.write("none\r\n");
 			out.write("#memberName;memberLevel;classId;objectId\r\n");
-			ClanMember[] members = getMembers();
-			for (i = 0; i < members.length; ++i)
+			for (ClanMember member : getMembers())
 			{
-				if (members[i].getObjectId() != getLeaderId())
+				if (member.getObjectId() != getLeaderId())
 				{
 					continue;
 				}
-				out.write(members[i].getName() + ";");
-				out.write(members[i].getLevel() + ";");
-				out.write(members[i].getClassId() + ";");
-				out.write(members[i].getObjectId() + "\r\n");
+				out.write(member.getName() + ";");
+				out.write(member.getLevel() + ";");
+				out.write(member.getClassId() + ";");
+				out.write(member.getObjectId() + "\r\n");
 			}
-			for (i = 0; i < members.length; ++i)
+			for (ClanMember member : getMembers())
 			{
-				if (members[i].getObjectId() == getLeaderId())
+				if (member.getObjectId() == getLeaderId())
 				{
 					continue;
 				}
-				out.write(members[i].getName() + ";");
-				out.write(members[i].getLevel() + ";");
-				out.write(members[i].getClassId() + ";");
-				out.write(members[i].getObjectId() + "\r\n");
+				out.write(member.getName() + ";");
+				out.write(member.getLevel() + ";");
+				out.write(member.getClassId() + ";");
+				out.write(member.getObjectId() + "\r\n");
 			}
 		}
 		catch (Exception e)

@@ -20,6 +20,7 @@ package org.l2jmobius.gameserver.model.actor;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.Set;
 import java.util.Timer;
@@ -1024,16 +1025,14 @@ public abstract class Creature extends WorldObject
 		return distance;
 	}
 	
-	public Creature[] broadcastPacket(ServerBasePacket mov)
+	public Collection<PlayerInstance> broadcastPacket(ServerBasePacket mov)
 	{
-		Set<PlayerInstance> list = getKnownPlayers();
-		Creature[] players = list.toArray(new Creature[list.size()]);
-		// _log.fine("players to notify:" + players.length + " packet:" + mov.getType());
-		for (Creature player : players)
+		Set<PlayerInstance> nearby = getKnownPlayers();
+		for (Creature player : nearby)
 		{
 			player.sendPacket(mov);
 		}
-		return players;
+		return nearby;
 	}
 	
 	public void sendPacket(ServerBasePacket mov)

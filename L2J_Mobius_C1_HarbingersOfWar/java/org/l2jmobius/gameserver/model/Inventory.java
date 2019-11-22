@@ -18,6 +18,7 @@
 package org.l2jmobius.gameserver.model;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
@@ -56,9 +57,9 @@ public class Inventory
 		return _items.size();
 	}
 	
-	public ItemInstance[] getItems()
+	public Collection<ItemInstance> getItems()
 	{
-		return _items.toArray(new ItemInstance[_items.size()]);
+		return _items;
 	}
 	
 	public ItemInstance addItem(ItemInstance newItem)
@@ -131,7 +132,7 @@ public class Inventory
 		refreshWeight();
 	}
 	
-	public ItemInstance[] unEquipItemInBodySlot(int slot)
+	public Collection<ItemInstance> unEquipItemInBodySlot(int slot)
 	{
 		List<ItemInstance> unequipedItems = new ArrayList<>();
 		// _log.fine("--- unequip body slot:" + slot);
@@ -196,8 +197,8 @@ public class Inventory
 			}
 			case 16384:
 			{
-				this.unEquipSlot(unequipedItems, 8);
-				this.unEquipSlot(7);
+				unEquipSlot(unequipedItems, 8);
+				unEquipSlot(7);
 				pdollSlot = 14;
 				break;
 			}
@@ -216,21 +217,20 @@ public class Inventory
 				pdollSlot = 0;
 			}
 		}
-		this.unEquipSlot(unequipedItems, pdollSlot);
-		return unequipedItems.toArray(new ItemInstance[unequipedItems.size()]);
+		unEquipSlot(unequipedItems, pdollSlot);
+		return unequipedItems;
 	}
 	
-	public ItemInstance[] unEquipItemOnPaperdoll(int pdollSlot)
+	public Collection<ItemInstance> unEquipItemOnPaperdoll(int pdollSlot)
 	{
 		List<ItemInstance> unequipedItems = new ArrayList<>();
-		// _log.fine("--- unequip body slot:" + pdollSlot);
 		if (pdollSlot == 14)
 		{
-			this.unEquipSlot(unequipedItems, 8);
-			this.unEquipSlot(7);
+			unEquipSlot(unequipedItems, 8);
+			unEquipSlot(7);
 		}
-		this.unEquipSlot(unequipedItems, pdollSlot);
-		return unequipedItems.toArray(new ItemInstance[unequipedItems.size()]);
+		unEquipSlot(unequipedItems, pdollSlot);
+		return unequipedItems;
 	}
 	
 	public List<ItemInstance> equipItem(ItemInstance item)
@@ -242,17 +242,17 @@ public class Inventory
 			case 16384:
 			{
 				ItemInstance arrow;
-				this.unEquipSlot(changedItems, 8);
-				ItemInstance old1 = this.unEquipSlot(14);
+				unEquipSlot(changedItems, 8);
+				ItemInstance old1 = unEquipSlot(14);
 				if (old1 != null)
 				{
 					changedItems.add(old1);
-					this.unEquipSlot(7);
-					this.unEquipSlot(changedItems, 8);
+					unEquipSlot(7);
+					unEquipSlot(changedItems, 8);
 				}
 				else
 				{
-					this.unEquipSlot(changedItems, 7);
+					unEquipSlot(changedItems, 7);
 				}
 				setPaperdollItem(7, item);
 				setPaperdollItem(14, item);
@@ -267,25 +267,25 @@ public class Inventory
 			}
 			case 256:
 			{
-				ItemInstance old1 = this.unEquipSlot(14);
+				ItemInstance old1 = unEquipSlot(14);
 				if (old1 != null)
 				{
-					this.unEquipSlot(changedItems, 7);
+					unEquipSlot(changedItems, 7);
 				}
-				this.unEquipSlot(changedItems, 8);
+				unEquipSlot(changedItems, 8);
 				setPaperdollItem(8, item);
 				break;
 			}
 			case 128:
 			{
-				if (this.unEquipSlot(changedItems, 14))
+				if (unEquipSlot(changedItems, 14))
 				{
-					this.unEquipSlot(changedItems, 8);
-					this.unEquipSlot(7);
+					unEquipSlot(changedItems, 8);
+					unEquipSlot(7);
 				}
 				else
 				{
-					this.unEquipSlot(changedItems, 7);
+					unEquipSlot(changedItems, 7);
 				}
 				setPaperdollItem(7, item);
 				break;
@@ -302,7 +302,7 @@ public class Inventory
 					setPaperdollItem(2, item);
 					break;
 				}
-				this.unEquipSlot(changedItems, 1);
+				unEquipSlot(changedItems, 1);
 				setPaperdollItem(1, item);
 				break;
 			}
@@ -318,26 +318,26 @@ public class Inventory
 					setPaperdollItem(5, item);
 					break;
 				}
-				this.unEquipSlot(changedItems, 4);
+				unEquipSlot(changedItems, 4);
 				setPaperdollItem(4, item);
 				break;
 			}
 			case 8:
 			{
-				this.unEquipSlot(changedItems, 3);
+				unEquipSlot(changedItems, 3);
 				setPaperdollItem(3, item);
 				break;
 			}
 			case 32768:
 			{
-				this.unEquipSlot(changedItems, 10);
-				this.unEquipSlot(changedItems, 11);
+				unEquipSlot(changedItems, 10);
+				unEquipSlot(changedItems, 11);
 				setPaperdollItem(10, item);
 				break;
 			}
 			case 1024:
 			{
-				this.unEquipSlot(changedItems, 10);
+				unEquipSlot(changedItems, 10);
 				setPaperdollItem(10, item);
 				break;
 			}
@@ -346,39 +346,39 @@ public class Inventory
 				ItemInstance chest = getPaperdollItem(10);
 				if ((chest != null) && (chest.getItem().getBodyPart() == 32768))
 				{
-					this.unEquipSlot(changedItems, 10);
+					unEquipSlot(changedItems, 10);
 				}
-				this.unEquipSlot(changedItems, 11);
+				unEquipSlot(changedItems, 11);
 				setPaperdollItem(11, item);
 				break;
 			}
 			case 4096:
 			{
-				this.unEquipSlot(changedItems, 12);
+				unEquipSlot(changedItems, 12);
 				setPaperdollItem(12, item);
 				break;
 			}
 			case 512:
 			{
-				this.unEquipSlot(changedItems, 9);
+				unEquipSlot(changedItems, 9);
 				setPaperdollItem(9, item);
 				break;
 			}
 			case 64:
 			{
-				this.unEquipSlot(changedItems, 6);
+				unEquipSlot(changedItems, 6);
 				setPaperdollItem(6, item);
 				break;
 			}
 			case 1:
 			{
-				this.unEquipSlot(changedItems, 0);
+				unEquipSlot(changedItems, 0);
 				setPaperdollItem(0, item);
 				break;
 			}
 			case 8192:
 			{
-				this.unEquipSlot(changedItems, 13);
+				unEquipSlot(changedItems, 13);
 				setPaperdollItem(13, item);
 				break;
 			}

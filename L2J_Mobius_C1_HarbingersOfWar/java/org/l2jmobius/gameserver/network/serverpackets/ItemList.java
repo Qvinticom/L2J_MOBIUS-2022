@@ -17,13 +17,15 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import java.util.Collection;
+
 import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 public class ItemList extends ServerBasePacket
 {
 	private static final String _S__27_ITEMLIST = "[S] 27 ItemList";
-	private final ItemInstance[] _items;
+	private final Collection<ItemInstance> _items;
 	private final boolean _showWindow;
 	
 	public ItemList(PlayerInstance cha, boolean showWindow)
@@ -32,7 +34,7 @@ public class ItemList extends ServerBasePacket
 		_showWindow = showWindow;
 	}
 	
-	public ItemList(ItemInstance[] items, boolean showWindow)
+	public ItemList(Collection<ItemInstance> items, boolean showWindow)
 	{
 		_items = items;
 		_showWindow = showWindow;
@@ -50,19 +52,16 @@ public class ItemList extends ServerBasePacket
 		{
 			writeH(0);
 		}
-		int count = _items.length;
-		writeH(count);
-		for (int i = 0; i < count; ++i)
+		writeH(_items.size());
+		for (ItemInstance item : _items)
 		{
-			ItemInstance temp = _items[i];
-			// _log.fine("item:" + temp.getItem().getName() + " type1:" + temp.getItem().getType1() + " type2:" + temp.getItem().getType2());
-			writeH(temp.getItem().getType1());
-			writeD(temp.getObjectId());
-			writeD(temp.getItemId());
-			writeD(temp.getCount());
-			writeH(temp.getItem().getType2());
+			writeH(item.getItem().getType1());
+			writeD(item.getObjectId());
+			writeD(item.getItemId());
+			writeD(item.getCount());
+			writeH(item.getItem().getType2());
 			writeH(255);
-			if (temp.isEquipped())
+			if (item.isEquipped())
 			{
 				writeH(1);
 			}
@@ -70,8 +69,8 @@ public class ItemList extends ServerBasePacket
 			{
 				writeH(0);
 			}
-			writeD(temp.getItem().getBodyPart());
-			writeH(temp.getEnchantLevel());
+			writeD(item.getItem().getBodyPart());
+			writeH(item.getEnchantLevel());
 			writeH(0);
 		}
 		return getBytes();

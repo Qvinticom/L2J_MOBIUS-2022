@@ -114,11 +114,10 @@ public class WorldObject implements Serializable
 	
 	public void removeAllKnownObjects()
 	{
-		WorldObject[] notifyList = _knownObjects.toArray(new WorldObject[_knownObjects.size()]);
 		_knownObjects.clear();
-		for (WorldObject element : notifyList)
+		for (WorldObject object : _knownObjects)
 		{
-			element.removeKnownObject(this);
+			object.removeKnownObject(this);
 		}
 	}
 	

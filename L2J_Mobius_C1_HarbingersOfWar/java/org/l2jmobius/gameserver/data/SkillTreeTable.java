@@ -23,6 +23,8 @@ import java.io.FileNotFoundException;
 import java.io.InputStreamReader;
 import java.io.LineNumberReader;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -215,16 +217,18 @@ public class SkillTreeTable
 		return skill;
 	}
 	
-	public SkillLearn[] getAvailableSkills(PlayerInstance cha)
+	public Collection<SkillLearn> getAvailableSkills(PlayerInstance cha)
 	{
 		List<SkillLearn> result = new ArrayList<>();
 		List<SkillLearn> skills = _skillTrees.get(cha.getClassId());
 		if (skills == null)
 		{
 			_log.warning("Skilltree for class " + cha.getClassId() + " is not defined !");
-			return new SkillLearn[0];
+			return Collections.emptyList();
 		}
-		Skill[] oldSkills = cha.getAllSkills();
+		
+		// TODO: Remove toArray.
+		Skill[] oldSkills = cha.getAllSkills().toArray(new Skill[cha.getAllSkills().size()]);
 		for (int i = 0; i < skills.size(); ++i)
 		{
 			SkillLearn temp = skills.get(i);
@@ -252,6 +256,6 @@ public class SkillTreeTable
 			}
 			result.add(temp);
 		}
-		return result.toArray(new SkillLearn[result.size()]);
+		return result;
 	}
 }

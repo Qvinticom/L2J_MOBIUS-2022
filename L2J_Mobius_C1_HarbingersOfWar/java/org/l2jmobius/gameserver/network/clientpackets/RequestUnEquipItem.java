@@ -17,6 +17,8 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import java.util.Collection;
+
 import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.ClientThread;
@@ -35,7 +37,7 @@ public class RequestUnEquipItem extends ClientBasePacket
 		int slot = readD();
 		_log.fine("request unequip slot " + slot);
 		PlayerInstance activeChar = client.getActiveChar();
-		ItemInstance[] unequiped = activeChar.getInventory().unEquipItemInBodySlot(slot);
+		Collection<ItemInstance> unequiped = activeChar.getInventory().unEquipItemInBodySlot(slot);
 		InventoryUpdate iu = new InventoryUpdate();
 		for (ItemInstance element : unequiped)
 		{
@@ -51,10 +53,10 @@ public class RequestUnEquipItem extends ClientBasePacket
 		activeChar.setAttackStatus(false);
 		CharInfo info = new CharInfo(activeChar);
 		activeChar.broadcastPacket(info);
-		if (unequiped.length > 0)
+		if (unequiped.size() > 0)
 		{
 			SystemMessage sm = new SystemMessage(417);
-			sm.addItemName(unequiped[0].getItemId());
+			sm.addItemName(unequiped.stream().findFirst().get().getItemId());
 			activeChar.sendPacket(sm);
 		}
 	}

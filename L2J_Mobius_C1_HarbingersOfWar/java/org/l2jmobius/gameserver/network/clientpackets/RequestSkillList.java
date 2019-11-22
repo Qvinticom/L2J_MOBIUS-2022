@@ -20,7 +20,6 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import java.io.IOException;
 
 import org.l2jmobius.gameserver.model.Skill;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.ClientThread;
 import org.l2jmobius.gameserver.network.serverpackets.SkillList;
 
@@ -32,9 +31,7 @@ public class RequestSkillList extends ClientBasePacket
 	{
 		super(rawPacket);
 		SkillList response = new SkillList();
-		PlayerInstance cha = client.getActiveChar();
-		Skill[] skills = cha.getAllSkills();
-		for (Skill skill : skills)
+		for (Skill skill : client.getActiveChar().getAllSkills())
 		{
 			response.addSkill(skill.getId(), skill.getLevel(), skill.isPassive());
 		}

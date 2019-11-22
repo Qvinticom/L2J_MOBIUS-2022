@@ -58,7 +58,7 @@ public class AdminCommands extends Thread
 	private static AdminCommands _instance;
 	private static ClientThread clientShut;
 	private static int secondsShut;
-	private static Skill[] adminSkills;
+	private static Collection<Skill> adminSkills;
 	private static String _characterToManipulate;
 	
 	public static AdminCommands getInstance()
@@ -1173,7 +1173,6 @@ public class AdminCommands extends Thread
 	{
 		PlayerInstance activeChar = client.getActiveChar();
 		PlayerInstance player = World.getInstance().getPlayer(_characterToManipulate);
-		Skill[] skills = player.getAllSkills();
 		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		StringBuffer replyMSG = new StringBuffer("<html><title>Remove skills of " + player.getName() + "</title>");
 		replyMSG.append("<body>");
@@ -1184,7 +1183,7 @@ public class AdminCommands extends Thread
 		replyMSG.append("<center>Click on the skill you wish to remove:</center>");
 		replyMSG.append("<center><table>");
 		replyMSG.append("<tr><td><center>Name:</center></td><td></td><td>Lvl:</td><td></td><td>Id:</td></tr>");
-		for (Skill skill : skills)
+		for (Skill skill : player.getAllSkills())
 		{
 			replyMSG.append("<tr><td><a action=\"bypass -h admin_remove_skill " + skill.getId() + "\">" + skill.getName() + "</a></td><td></td><td>" + skill.getLevel() + "</td><td></td><td>" + skill.getId() + "</td></tr>");
 		}
@@ -1236,16 +1235,15 @@ public class AdminCommands extends Thread
 		}
 		else
 		{
-			int i;
-			Skill[] skills = player.getAllSkills();
+			Collection<Skill> skills = player.getAllSkills();
 			adminSkills = activeChar.getAllSkills();
-			for (i = 0; i < adminSkills.length; ++i)
+			for (Skill skill : adminSkills)
 			{
-				activeChar.removeSkill(adminSkills[i]);
+				activeChar.removeSkill(skill);
 			}
-			for (i = 0; i < skills.length; ++i)
+			for (Skill skill : skills)
 			{
-				activeChar.addSkill(skills[i]);
+				activeChar.addSkill(skill);
 			}
 			SystemMessage smA = new SystemMessage(614);
 			smA.addString("You now have all the skills of  " + player.getName() + ".");
@@ -1266,23 +1264,22 @@ public class AdminCommands extends Thread
 		}
 		else
 		{
-			int i;
-			Skill[] skills = player.getAllSkills();
-			for (i = 0; i < skills.length; ++i)
+			Collection<Skill> skills = player.getAllSkills();
+			for (Skill skill : skills)
 			{
-				player.removeSkill(skills[i]);
+				player.removeSkill(skill);
 			}
-			for (i = 0; i < activeChar.getAllSkills().length; ++i)
+			for (Skill skill : activeChar.getAllSkills())
 			{
-				player.addSkill(activeChar.getAllSkills()[i]);
+				player.addSkill(skill);
 			}
-			for (i = 0; i < skills.length; ++i)
+			for (Skill skill : skills)
 			{
-				activeChar.removeSkill(skills[i]);
+				activeChar.removeSkill(skill);
 			}
-			for (i = 0; i < adminSkills.length; ++i)
+			for (Skill skill : adminSkills)
 			{
-				activeChar.addSkill(adminSkills[i]);
+				activeChar.addSkill(skill);
 			}
 			SystemMessage sm = new SystemMessage(614);
 			sm.addString("[GM]" + activeChar.getName() + " has updated your skills.");

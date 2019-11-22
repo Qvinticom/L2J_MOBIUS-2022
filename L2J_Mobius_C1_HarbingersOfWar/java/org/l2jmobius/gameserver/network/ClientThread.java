@@ -221,10 +221,9 @@ public class ClientThread extends Thread
 		OutputStreamWriter out = null;
 		try
 		{
-			ShortCut[] scs = cha.getAllShortCuts();
 			out = new FileWriter(saveFile);
 			out.write("slot;type;id;level;unknown\r\n");
-			for (ShortCut sc : scs)
+			for (ShortCut sc : cha.getAllShortCuts())
 			{
 				out.write(sc.getSlot() + ";");
 				out.write(sc.getType() + ";");
@@ -350,10 +349,9 @@ public class ClientThread extends Thread
 		OutputStreamWriter out = null;
 		try
 		{
-			ItemInstance[] items = cha.getInventory().getItems();
 			out = new FileWriter(saveFile);
 			out.write("objectId;itemId;name;count;price;equipSlot;\r\n");
-			for (ItemInstance item : items)
+			for (ItemInstance item : cha.getInventory().getItems())
 			{
 				out.write(item.getObjectId() + ";");
 				out.write(item.getItemId() + ";");
@@ -392,10 +390,9 @@ public class ClientThread extends Thread
 		OutputStreamWriter out = null;
 		try
 		{
-			Skill[] skills = cha.getAllSkills();
 			out = new FileWriter(saveFile);
 			out.write("skillId;skillLevel;skillName\r\n");
-			for (Skill skill : skills)
+			for (Skill skill : cha.getAllSkills())
 			{
 				out.write(skill.getId() + ";");
 				out.write(skill.getLevel() + ";");

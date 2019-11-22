@@ -18,6 +18,7 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import java.io.IOException;
+import java.util.Collection;
 
 import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.data.SkillTreeTable;
@@ -39,11 +40,10 @@ public class RequestAquireSkill extends ClientBasePacket
 	{
 		super(rawPacket);
 		PlayerInstance player = client.getActiveChar();
-		// Connection con = client.getConnection();
 		int id = readD();
 		int level = readD();
 		Skill skill = SkillTable.getInstance().getInfo(id, level);
-		SkillLearn[] skills = SkillTreeTable.getInstance().getAvailableSkills(player);
+		Collection<SkillLearn> skills = SkillTreeTable.getInstance().getAvailableSkills(player);
 		int _requiredSp = 0;
 		for (SkillLearn skill2 : skills)
 		{

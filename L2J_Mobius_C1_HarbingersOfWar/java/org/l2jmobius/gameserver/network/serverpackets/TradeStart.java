@@ -39,11 +39,9 @@ public class TradeStart extends ServerBasePacket
 	{
 		writeC(46);
 		writeD(_me.getTransactionRequester().getObjectId());
-		ItemInstance[] inventory = _me.getInventory().getItems();
 		int count = _me.getInventory().getSize();
-		for (int i = 0; i < count; ++i)
+		for (ItemInstance item : _me.getInventory().getItems())
 		{
-			ItemInstance item = inventory[i];
 			if (item.isEquipped() || (item.getItem().getType2() == 3))
 			{
 				continue;

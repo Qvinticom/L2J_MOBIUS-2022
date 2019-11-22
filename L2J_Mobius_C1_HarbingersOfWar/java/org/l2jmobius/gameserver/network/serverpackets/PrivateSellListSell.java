@@ -43,13 +43,11 @@ public class PrivateSellListSell extends ServerBasePacket
 		writeC(179);
 		writeD(_seller.getObjectId());
 		writeD(_seller.getAdena());
-		ItemInstance[] inventory = _seller.getInventory().getItems();
 		TradeList list = new TradeList(0);
 		List<TradeItem> sellList = _seller.getSellList();
 		int count = _seller.getInventory().getSize();
-		for (i = 0; i < count; ++i)
+		for (ItemInstance item : _seller.getInventory().getItems())
 		{
-			ItemInstance item = inventory[i];
 			if (item.isEquipped() || (item.getItem().getType2() == 3) || ((item.getItem().getType2() == 4) && (item.getItem().getType1() == 4)) || ((item.getItem().getType2() == 1) && (item.getItem().getType1() == 1)) || item.isEquipped())
 			{
 				continue;

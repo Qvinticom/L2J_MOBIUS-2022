@@ -17,37 +17,38 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import java.util.Collection;
+
 import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
 
 public class PetItemList extends ServerBasePacket
 {
 	private static final String _S__cb_PETITEMLIST = "[S] cb  PetItemList";
+	
 	private final PetInstance _cha;
+	private final Collection<ItemInstance> _items;
 	
 	public PetItemList(PetInstance cha)
 	{
 		_cha = cha;
+		_items = _cha.getInventory().getItems();
 	}
 	
 	@Override
 	public byte[] getContent()
 	{
 		writeC(203);
-		ItemInstance[] items = _cha.getInventory().getItems();
-		int count = items.length;
-		writeH(count);
-		for (int i = 0; i < count; ++i)
+		writeH(_items.size());
+		for (ItemInstance item : _items)
 		{
-			ItemInstance temp = items[i];
-			// _log.fine("item:" + temp.getItem().getName() + " type1:" + temp.getItem().getType1() + " type2:" + temp.getItem().getType2());
-			writeH(temp.getItem().getType1());
-			writeD(temp.getObjectId());
-			writeD(temp.getItemId());
-			writeD(temp.getCount());
-			writeH(temp.getItem().getType2());
+			writeH(item.getItem().getType1());
+			writeD(item.getObjectId());
+			writeD(item.getItemId());
+			writeD(item.getCount());
+			writeH(item.getItem().getType2());
 			writeH(255);
-			if (temp.isEquipped())
+			if (item.isEquipped())
 			{
 				writeH(1);
 			}
@@ -55,8 +56,8 @@ public class PetItemList extends ServerBasePacket
 			{
 				writeH(0);
 			}
-			writeD(temp.getItem().getBodyPart());
-			writeH(temp.getEnchantLevel());
+			writeD(item.getItem().getBodyPart());
+			writeH(item.getEnchantLevel());
 			writeH(0);
 		}
 		return getBytes();

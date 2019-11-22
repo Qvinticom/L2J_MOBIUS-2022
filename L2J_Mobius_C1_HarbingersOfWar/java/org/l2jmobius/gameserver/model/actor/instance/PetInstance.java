@@ -426,8 +426,7 @@ public class PetInstance extends Creature
 		try
 		{
 			Inventory petInventory = getInventory();
-			ItemInstance[] items = petInventory.getItems();
-			for (ItemInstance giveit : items)
+			for (ItemInstance giveit : petInventory.getItems())
 			{
 				if (((giveit.getItem().getWeight() * giveit.getCount()) + _owner.getInventory().getTotalWeight()) < _owner.getMaxLoad())
 				{
@@ -515,8 +514,7 @@ public class PetInstance extends Creature
 	{
 		try
 		{
-			ItemInstance[] items = getInventory().getItems();
-			for (ItemInstance item : items)
+			for (ItemInstance item : getInventory().getItems())
 			{
 				dropItemHere(item);
 			}
@@ -538,8 +536,7 @@ public class PetInstance extends Creature
 			dropit.setZ(getZ() + 100);
 			dropit.setOnTheGround(true);
 			DropItem dis = new DropItem(dropit, getObjectId());
-			Creature[] players = broadcastPacket(dis);
-			for (Creature player : players)
+			for (Creature player : broadcastPacket(dis))
 			{
 				((PlayerInstance) player).addKnownObjectWithoutCreate(dropit);
 			}
@@ -596,21 +593,20 @@ public class PetInstance extends Creature
 		{
 			if (getKnownObjects().size() != 0)
 			{
-				WorldObject[] knownobjects = _knownObjects.toArray(new WorldObject[_knownObjects.size()]);
-				for (int x = 0; x < knownobjects.length; ++x)
+				for (WorldObject object : _knownObjects)
 				{
-					if (!(getDistance(knownobjects[x].getX(), knownobjects[x].getY()) > 4000.0))
+					if (!(getDistance(object.getX(), object.getY()) > 4000.0))
 					{
 						continue;
 					}
-					if (knownobjects[x] instanceof MonsterInstance)
+					if (object instanceof MonsterInstance)
 					{
-						removeKnownObject(knownobjects[x]);
-						((MonsterInstance) knownobjects[x]).removeKnownObject(this);
+						removeKnownObject(object);
+						((MonsterInstance) object).removeKnownObject(this);
 						continue;
 					}
-					removeKnownObject(knownobjects[x]);
-					knownobjects[x].removeKnownObject(this);
+					removeKnownObject(object);
+					object.removeKnownObject(this);
 				}
 			}
 			updateKnownCounter = 0;

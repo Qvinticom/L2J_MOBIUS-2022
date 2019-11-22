@@ -57,7 +57,7 @@ public class Party
 	
 	private PlayerInstance getRandomMember()
 	{
-		return (PlayerInstance) _members.toArray()[Rnd.get(_members.size())];
+		return _members.get(Rnd.get(_members.size()));
 	}
 	
 	public boolean isLeader(PlayerInstance player)
@@ -67,18 +67,16 @@ public class Party
 	
 	public void broadcastToPartyMembers(ServerBasePacket msg)
 	{
-		for (int i = 0; i < _members.size(); ++i)
+		for (PlayerInstance member : _members)
 		{
-			PlayerInstance member = _members.get(i);
 			member.sendPacket(msg);
 		}
 	}
 	
 	public void broadcastToPartyMembers(PlayerInstance player, ServerBasePacket msg)
 	{
-		for (int i = 0; i < _members.size(); ++i)
+		for (PlayerInstance member : _members)
 		{
-			PlayerInstance member = _members.get(i);
 			if (member.equals(player))
 			{
 				continue;

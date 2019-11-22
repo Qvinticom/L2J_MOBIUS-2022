@@ -51,9 +51,8 @@ public class PledgeShowMemberListAll extends ServerBasePacket
 		writeD(0);
 		writeS("");
 		writeD(0);
-		ClanMember[] members = _clan.getMembers();
-		writeD(members.length - 1);
-		for (ClanMember member : members)
+		writeD(_clan.getMembers().size() - 1);
+		for (ClanMember member : _clan.getMembers())
 		{
 			if (member.getName().equals(_activeChar.getName()))
 			{

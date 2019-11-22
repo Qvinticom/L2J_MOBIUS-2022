@@ -18,6 +18,7 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 import org.l2jmobius.gameserver.model.TradeItem;
@@ -45,7 +46,7 @@ public class PrivateBuyListBuy extends ServerBasePacket
 		writeD(_buyer.getObjectId());
 		writeD(_seller.getAdena());
 		List<TradeItem> buyerslist = _buyer.getBuyList();
-		ItemInstance[] sellerItems = _seller.getInventory().getItems();
+		Collection<ItemInstance> sellerItems = _seller.getInventory().getItems();
 		ArrayList<TradeItem> sellerslist = new ArrayList<>();
 		int count = buyerslist.size();
 		for (int i = 0; i < count; ++i)

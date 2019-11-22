@@ -18,6 +18,7 @@
 package org.l2jmobius.gameserver.templates;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 public class CharTemplate
@@ -393,9 +394,9 @@ public class CharTemplate
 		_items.add(itemId);
 	}
 	
-	public Integer[] getItems()
+	public Collection<Integer> getItems()
 	{
-		return _items.toArray(new Integer[_items.size()]);
+		return _items;
 	}
 	
 	public void setCanCraft(int b)

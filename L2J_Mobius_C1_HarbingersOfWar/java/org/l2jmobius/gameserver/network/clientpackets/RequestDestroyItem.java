@@ -48,9 +48,8 @@ public class RequestDestroyItem extends ClientBasePacket
 		}
 		if ((itemToRemove = activeChar.getInventory().getItem(objectId)).isEquipped())
 		{
-			ItemInstance[] unequiped = activeChar.getInventory().unEquipItemOnPaperdoll(itemToRemove.getEquipSlot());
 			iu = new InventoryUpdate();
-			for (ItemInstance element : unequiped)
+			for (ItemInstance element : activeChar.getInventory().unEquipItemOnPaperdoll(itemToRemove.getEquipSlot()))
 			{
 				iu.addModifiedItem(element);
 			}

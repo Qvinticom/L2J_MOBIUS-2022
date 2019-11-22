@@ -62,7 +62,7 @@ public class Action extends ClientBasePacket
 		}
 		else
 		{
-			_log.warning("object not found, oid " + objectId + " or player is dead");
+			// _log.warning("object not found, oid " + objectId + " or player is dead");
 			activeChar.sendPacket(new ActionFailed());
 		}
 	}

@@ -21,6 +21,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.io.LineNumberReader;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.StringTokenizer;
@@ -119,8 +120,8 @@ public class CharTemplateTable
 		return _templates.get(classId);
 	}
 	
-	public CharTemplate[] getAllTemplates()
+	public Collection<CharTemplate> getAllTemplates()
 	{
-		return _templates.values().toArray(new CharTemplate[_templates.size()]);
+		return _templates.values();
 	}
 }

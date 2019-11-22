@@ -39,28 +39,22 @@ public class SellList extends ServerBasePacket
 	@Override
 	public byte[] getContent()
 	{
-		ItemInstance item;
-		int i;
 		writeC(28);
 		writeD(_money);
 		writeD(0);
-		ItemInstance[] inventory = _char.getInventory().getItems();
 		int count = _char.getInventory().getSize();
-		for (i = 0; i < count; ++i)
+		for (ItemInstance item : _char.getInventory().getItems())
 		{
-			item = inventory[i];
 			if (item.isEquipped() || (item.getItemId() == 57) || (item.getItem().getType2() == 3))
 			{
 				continue;
 			}
 			_selllist.add(item);
-			// _log.fine("item added to selllist: " + item.getItem().getName());
 		}
 		count = _selllist.size();
 		writeH(count);
-		for (i = 0; i < count; ++i)
+		for (ItemInstance item : _selllist)
 		{
-			item = _selllist.get(i);
 			writeH(item.getItem().getType1());
 			writeD(item.getObjectId());
 			writeD(item.getItemId());

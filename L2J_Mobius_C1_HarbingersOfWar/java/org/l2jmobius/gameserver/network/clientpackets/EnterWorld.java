@@ -49,29 +49,31 @@ public class EnterWorld extends ClientBasePacket
 		}
 		SystemMessage sm = new SystemMessage(34);
 		con.sendPacket(sm);
+		
 		Announcements.getInstance().showAnnouncements(activeChar);
+		
 		ItemList il = new ItemList(activeChar, false);
 		activeChar.sendPacket(il);
+		
 		ShortCutInit sci = new ShortCutInit();
-		ShortCut[] shortcuts = activeChar.getAllShortCuts();
-		block5: for (ShortCut shortcut : shortcuts)
+		for (ShortCut shortcut : activeChar.getAllShortCuts())
 		{
 			switch (shortcut.getType())
 			{
 				case 3:
 				{
 					sci.addActionShotCut(shortcut.getSlot(), shortcut.getId(), shortcut.getUnk());
-					continue block5;
+					continue;
 				}
 				case 2:
 				{
 					sci.addSkillShotCut(shortcut.getSlot(), shortcut.getId(), shortcut.getLevel(), shortcut.getUnk());
-					continue block5;
+					continue;
 				}
 				case 1:
 				{
 					sci.addItemShotCut(shortcut.getSlot(), shortcut.getId(), shortcut.getUnk());
-					continue block5;
+					continue;
 				}
 				default:
 				{
@@ -80,6 +82,7 @@ public class EnterWorld extends ClientBasePacket
 			}
 		}
 		con.sendPacket(sci);
+		
 		UserInfo ui = new UserInfo(activeChar);
 		con.sendPacket(ui);
 		if (activeChar.isDead())
@@ -98,8 +101,7 @@ public class EnterWorld extends ClientBasePacket
 			clan.getClanMember(activeChar.getName()).setPlayerInstance(activeChar);
 			SystemMessage msg = new SystemMessage(304);
 			msg.addString(activeChar.getName());
-			PlayerInstance[] clanMembers = clan.getOnlineMembers(activeChar.getName());
-			for (PlayerInstance clanMember : clanMembers)
+			for (PlayerInstance clanMember : clan.getOnlineMembers(activeChar.getName()))
 			{
 				clanMember.sendPacket(msg);
 			}

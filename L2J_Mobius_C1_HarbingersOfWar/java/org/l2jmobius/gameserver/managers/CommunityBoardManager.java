@@ -120,8 +120,7 @@ public class CommunityBoardManager
 				}
 				htmlCode.append("<tr>" + title + "<td>" + name + "</td></tr>");
 				htmlCode.append("<tr><td><br></td></tr>");
-				ClanMember[] members = clan.getMembers();
-				for (ClanMember member : members)
+				for (ClanMember member : clan.getMembers())
 				{
 					if (member.getName() == clan.getLeaderName())
 					{

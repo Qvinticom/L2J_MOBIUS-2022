@@ -92,8 +92,7 @@ public class RequestDropItem extends ClientBasePacket
 			DropItem di = new DropItem(dropedItem, activeChar.getObjectId());
 			activeChar.sendPacket(di);
 			activeChar.addKnownObjectWithoutCreate(dropedItem);
-			Creature[] players = activeChar.broadcastPacket(di);
-			for (Creature player : players)
+			for (Creature player : activeChar.broadcastPacket(di))
 			{
 				((PlayerInstance) player).addKnownObjectWithoutCreate(dropedItem);
 			}
