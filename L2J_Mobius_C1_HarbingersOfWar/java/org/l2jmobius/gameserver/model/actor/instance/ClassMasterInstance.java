@@ -17,8 +17,6 @@
  */
 package org.l2jmobius.gameserver.model.actor.instance;
 
-import java.util.logging.Logger;
-
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.CharInfo;
 import org.l2jmobius.gameserver.network.serverpackets.MyTargetSelected;
@@ -29,8 +27,6 @@ import org.l2jmobius.gameserver.templates.Npc;
 
 public class ClassMasterInstance extends NpcInstance
 {
-	private static Logger _log = Logger.getLogger(ClassMasterInstance.class.getName());
-	
 	public ClassMasterInstance(Npc template)
 	{
 		super(template);
@@ -42,7 +38,6 @@ public class ClassMasterInstance extends NpcInstance
 		if (getObjectId() != player.getTargetId())
 		{
 			player.setCurrentState((byte) 0);
-			_log.fine("ClassMaster selected:" + getObjectId());
 			player.setTarget(this);
 			MyTargetSelected my = new MyTargetSelected(getObjectId(), player.getLevel() - getLevel());
 			player.sendPacket(my);
@@ -50,7 +45,6 @@ public class ClassMasterInstance extends NpcInstance
 		}
 		else
 		{
-			_log.fine("ClassMaster activated");
 			int classId = player.getClassId();
 			int jobLevel = 0;
 			int level = player.getLevel();
@@ -148,11 +142,7 @@ public class ClassMasterInstance extends NpcInstance
 	
 	private void changeClass(PlayerInstance player, int val)
 	{
-		// _log.fine("Changing class to ClassId:" + val);
 		player.setClassId(val);
-		// _log.fine("name:" + player.getName());
-		// _log.fine("level:" + player.getLevel());
-		// _log.fine("classId:" + player.getClassId());
 		UserInfo ui = new UserInfo(player);
 		player.sendPacket(ui);
 		CharInfo info = new CharInfo(player);

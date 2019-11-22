@@ -126,7 +126,6 @@ public class NpcInstance extends Creature
 				player.cancelCastMagic();
 			}
 			player.setCurrentState((byte) 0);
-			_log.fine("new target selected:" + getObjectId());
 			player.setTarget(this);
 			MyTargetSelected my = new MyTargetSelected(getObjectId(), player.getLevel() - getLevel());
 			player.sendPacket(my);
@@ -227,7 +226,6 @@ public class NpcInstance extends Creature
 	
 	protected void showQuestWindow(PlayerInstance player, int val)
 	{
-		_log.fine("Showing quest window");
 		NpcHtmlMessage html = new NpcHtmlMessage(1);
 		html.setHtml("<html><head><body>There is no quests here yet.</body></html>");
 		player.sendPacket(html);

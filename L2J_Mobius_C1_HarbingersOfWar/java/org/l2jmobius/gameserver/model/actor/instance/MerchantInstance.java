@@ -38,7 +38,6 @@ public class MerchantInstance extends NpcInstance
 	@Override
 	public void onAction(PlayerInstance player)
 	{
-		// _log.fine("Merchant activated");
 		super.onAction(player);
 	}
 	
@@ -52,7 +51,6 @@ public class MerchantInstance extends NpcInstance
 	
 	private void showBuyWindow(PlayerInstance player, int val)
 	{
-		_log.fine("Showing buylist");
 		TradeList list = TradeController.getInstance().getBuyList(val);
 		if (list != null)
 		{
@@ -68,10 +66,8 @@ public class MerchantInstance extends NpcInstance
 	
 	private void showSellWindow(PlayerInstance player)
 	{
-		// _log.fine("Showing selllist");
 		SellList sl = new SellList(player);
 		player.sendPacket(sl);
-		// _log.fine("Showing sell window");
 		player.sendPacket(new ActionFailed());
 	}
 	

@@ -42,7 +42,6 @@ public class AquireSkillList extends ServerBasePacket
 			writeD(temp.maxLevel);
 			writeD(temp.spCost);
 			writeD(temp.requirements);
-			// _log.fine("skill: " + temp.id + " " + temp.nextLevel + " " + temp.maxLevel + " " + temp.spCost + " " + temp.requirements);
 		}
 		return getBytes();
 	}

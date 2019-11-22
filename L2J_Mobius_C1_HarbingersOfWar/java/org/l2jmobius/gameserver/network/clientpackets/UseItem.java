@@ -38,7 +38,6 @@ public class UseItem extends ClientBasePacket
 	{
 		super(decrypt);
 		int objectId = readD();
-		_log.fine("use item:" + objectId);
 		PlayerInstance activeChar = client.getActiveChar();
 		ItemInstance item = activeChar.getInventory().getItem(objectId);
 		if ((item != null) && item.isEquipable() && !activeChar.isInCombat())
@@ -70,7 +69,6 @@ public class UseItem extends ClientBasePacket
 		}
 		else if (item != null)
 		{
-			_log.fine("item not equipable id:" + item.getItemId());
 			IItemHandler handler = ItemHandler.getInstance().getItemHandler(item.getItemId());
 			if (handler == null)
 			{

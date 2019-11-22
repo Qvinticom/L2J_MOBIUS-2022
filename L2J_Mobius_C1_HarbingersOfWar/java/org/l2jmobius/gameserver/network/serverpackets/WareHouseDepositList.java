@@ -19,14 +19,12 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 public class WareHouseDepositList extends ServerBasePacket
 {
-	private static Logger _log = Logger.getLogger(WareHouseDepositList.class.getName());
 	private static final String _S__53_WAREHOUSEDEPOSITLIST = "[S] 53 WareHouseDepositList";
 	private final PlayerInstance _cha;
 	private final int _money;
@@ -54,12 +52,10 @@ public class WareHouseDepositList extends ServerBasePacket
 			itemlist.add(item);
 		}
 		count = itemlist.size();
-		_log.fine("count:" + count);
 		writeH(count);
 		for (i = 0; i < count; ++i)
 		{
 			ItemInstance temp = itemlist.get(i);
-			_log.fine("item:" + temp.getItem().getName() + " type1:" + temp.getItem().getType1() + " type2:" + temp.getItem().getType2());
 			writeH(temp.getItem().getType1());
 			writeD(temp.getObjectId());
 			writeD(temp.getItemId());

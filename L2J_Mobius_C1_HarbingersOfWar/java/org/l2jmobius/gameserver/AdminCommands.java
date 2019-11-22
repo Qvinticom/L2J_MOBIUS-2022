@@ -679,7 +679,6 @@ public class AdminCommands extends Thread
 			SystemMessage smA = new SystemMessage(614);
 			smA.addString("Added " + expval + " xp and " + spval + " sp to " + player.getName() + ".");
 			activeChar.sendPacket(smA);
-			_log.fine("[GM]" + activeChar.getName() + " added " + expval + " xp and " + spval + " sp to " + player.getName() + ".");
 			showCharacterList(client, _characterToManipulate);
 		}
 	}
@@ -737,7 +736,6 @@ public class AdminCommands extends Thread
 			SystemMessage smA = new SystemMessage(614);
 			smA.addString("Changed stats of " + player.getName() + ". " + " Hp: " + hpval + " HpMax: " + hpmaxval + " Mp: " + mpval + " MpMax: " + mpmaxval + " MaxLoad: " + loadval + " Karma: " + karmaval + " Pvp: " + pvpflagval + " / " + pvpkillsval + " ClassId: " + classidval);
 			activeChar.sendPacket(smA);
-			_log.fine("[GM]" + activeChar.getName() + " changed stats of " + player.getName() + ". " + " Hp: " + hpval + " HpMax: " + hpmaxval + " Mp: " + mpval + " MpMax: " + mpmaxval + " MaxLoad: " + loadval + " Karma: " + karmaval + " Pvp: " + pvpflagval + " / " + pvpkillsval + " ClassId: " + classidval);
 			showCharacterList(client, _characterToManipulate);
 		}
 	}
@@ -1047,8 +1045,6 @@ public class AdminCommands extends Thread
 		}
 		else
 		{
-			_log.fine("An administrator resquested server shutdown.");
-			
 			try
 			{
 				broadcastToAll("The server will shutdown in " + ((secondsShut - (secondsShut % 60)) / 60) + " minutes and " + (secondsShut % 60) + " seconds.");
@@ -1094,7 +1090,6 @@ public class AdminCommands extends Thread
 				}
 				if (disconnectAllCharacters() == 1)
 				{
-					_log.fine("All players disconnected, shutting down.");
 					System.exit(0);
 				}
 				else
@@ -1317,7 +1312,6 @@ public class AdminCommands extends Thread
 				SystemMessage smA = new SystemMessage(614);
 				smA.addString("You gave the skill " + skill.getName() + " to " + player.getName() + ".");
 				activeChar.sendPacket(smA);
-				_log.fine("[GM]" + activeChar.getName() + "gave the skill " + skill.getName() + " to " + player.getName() + ".");
 			}
 			else
 			{
@@ -1342,7 +1336,6 @@ public class AdminCommands extends Thread
 			SystemMessage smA = new SystemMessage(614);
 			smA.addString("You removed the skill " + skill.getName() + " from " + player.getName() + ".");
 			activeChar.sendPacket(smA);
-			_log.fine("[GM]" + activeChar.getName() + "removed the skill " + skill.getName() + " from " + player.getName() + ".");
 		}
 		else
 		{
@@ -1366,18 +1359,15 @@ public class AdminCommands extends Thread
 				activeChar.sendPacket(msk);
 				activeChar.broadcastPacket(msk);
 				// ActionFailed af = new ActionFailed();
-				_log.fine("showing self skill, id: " + skill.getId() + " named: " + skill.getName());
 			}
-			else if (skill.getTargetType() == 1)
-			{
-				// ActionFailed af = new ActionFailed();
-				_log.fine("showing attack skill, id: " + skill.getId() + " named: " + skill.getName());
-			}
-		}
-		else
-		{
+			// else if (skill.getTargetType() == 1)
+			// {
 			// ActionFailed af = new ActionFailed();
-			_log.fine("no such skill id: " + skillid);
+			// }
 		}
+		// else
+		// {
+		// ActionFailed af = new ActionFailed();
+		// }
 	}
 }

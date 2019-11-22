@@ -134,7 +134,6 @@ public class Inventory
 	public Collection<ItemInstance> unEquipItemInBodySlot(int slot)
 	{
 		List<ItemInstance> unequipedItems = new ArrayList<>();
-		// _log.fine("--- unequip body slot:" + slot);
 		int pdollSlot = -1;
 		switch (slot)
 		{
@@ -393,7 +392,6 @@ public class Inventory
 	
 	private ItemInstance unEquipSlot(int slot)
 	{
-		_log.fine("--- unEquipSlot: " + slot);
 		ItemInstance item = _paperdoll[slot];
 		if (item != null)
 		{
@@ -545,13 +543,11 @@ public class Inventory
 		}
 		if (oldItem.getCount() == count)
 		{
-			_log.fine(" count = count  --> remove");
 			_items.remove(oldItem);
 			oldItem.setLastChange(3);
 			refreshWeight();
 			return oldItem;
 		}
-		_log.fine(" count != count  --> reduce");
 		oldItem.setCount(oldItem.getCount() - count);
 		oldItem.setLastChange(2);
 		ItemInstance newItem = ItemTable.getInstance().createItem(oldItem.getItemId());

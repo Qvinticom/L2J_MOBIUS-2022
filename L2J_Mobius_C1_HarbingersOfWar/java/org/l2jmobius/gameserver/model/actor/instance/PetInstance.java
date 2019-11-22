@@ -89,7 +89,6 @@ public class PetInstance extends Creature
 			player.sendPacket(new ActionFailed());
 		}
 		player.setCurrentState((byte) 0);
-		_log.fine("new target selected:" + getObjectId());
 		player.setTarget(this);
 		MyTargetSelected my = new MyTargetSelected(getObjectId(), player.getLevel() - getLevel());
 		player.sendPacket(my);
@@ -256,7 +255,6 @@ public class PetInstance extends Creature
 	@Override
 	public void addExpAndSp(int addToExp, int addToSp)
 	{
-		_log.fine("adding " + addToExp + " exp and " + addToSp + " sp to " + getName());
 		_exp += addToExp;
 		_sp += addToSp;
 		PetStatusUpdate su = new PetStatusUpdate(this);
@@ -270,7 +268,6 @@ public class PetInstance extends Creature
 	@Override
 	public void increaseLevel()
 	{
-		_log.finest("Increasing level of " + getName());
 		setLastLevel(getNextLevel());
 		setLevel(getLevel() + 1);
 		setNextLevel(ExperienceTable.getInstance().getExp(getLevel() + 1));
@@ -346,7 +343,6 @@ public class PetInstance extends Creature
 	private void doPickupItem()
 	{
 		StopMove sm = new StopMove(getObjectId(), getX(), getY(), getZ(), getHeading());
-		_log.fine("Pet pickup pos: " + getTarget().getX() + " " + getTarget().getY() + " " + getTarget().getZ());
 		broadcastPacket(sm);
 		if (!(getTarget() instanceof ItemInstance))
 		{
@@ -396,10 +392,10 @@ public class PetInstance extends Creature
 			{
 				startAttack(attacker);
 			}
-			else
-			{
-				_log.fine("already attacking");
-			}
+			// else
+			// {
+			// _log.fine("already attacking");
+			// }
 		}
 		if (isDead())
 		{
@@ -438,7 +434,7 @@ public class PetInstance extends Creature
 		}
 		catch (Exception e)
 		{
-			_log.fine("Give all items error " + e);
+			_log.warning("Give all items error " + e);
 		}
 	}
 	
@@ -456,7 +452,7 @@ public class PetInstance extends Creature
 		}
 		catch (Exception e)
 		{
-			_log.fine("Error while giving item to owner: " + e);
+			_log.warning("Error while giving item to owner: " + e);
 		}
 	}
 	
@@ -506,7 +502,7 @@ public class PetInstance extends Creature
 		}
 		catch (Exception e)
 		{
-			_log.fine("Error while destroying control item: " + e);
+			_log.warning("Error while destroying control item: " + e);
 		}
 	}
 	
@@ -521,7 +517,7 @@ public class PetInstance extends Creature
 		}
 		catch (Exception e)
 		{
-			_log.fine("Pet Drop Error: " + e);
+			_log.warning("Pet Drop Error: " + e);
 		}
 	}
 	
@@ -530,7 +526,6 @@ public class PetInstance extends Creature
 		dropit = getInventory().dropItem(dropit.getObjectId(), dropit.getCount());
 		if (dropit != null)
 		{
-			_log.fine("Item id to drop: " + dropit.getItemId() + " amount: " + dropit.getCount());
 			dropit.setX(getX());
 			dropit.setY(getY());
 			dropit.setZ(getZ() + 100);

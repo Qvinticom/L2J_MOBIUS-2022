@@ -17,8 +17,6 @@
  */
 package org.l2jmobius.gameserver.model.actor.instance;
 
-import java.util.logging.Logger;
-
 import org.l2jmobius.gameserver.data.ClanTable;
 import org.l2jmobius.gameserver.model.Clan;
 import org.l2jmobius.gameserver.network.serverpackets.PledgeShowInfoUpdate;
@@ -28,8 +26,6 @@ import org.l2jmobius.gameserver.templates.Npc;
 
 public class VillageMasterInstance extends NpcInstance
 {
-	private static Logger _log = Logger.getLogger(VillageMasterInstance.class.getName());
-	
 	public VillageMasterInstance(Npc template)
 	{
 		super(template);
@@ -57,13 +53,11 @@ public class VillageMasterInstance extends NpcInstance
 	@Override
 	public void onAction(PlayerInstance player)
 	{
-		_log.fine("Village Master activated");
 		super.onAction(player);
 	}
 	
 	public void createClan(PlayerInstance player, String clanName)
 	{
-		_log.fine(player.getObjectId() + "(" + player.getName() + ") requested clan creation from " + getObjectId() + "(" + getName() + ")");
 		if (player.getLevel() < 10)
 		{
 			SystemMessage sm = new SystemMessage(190);

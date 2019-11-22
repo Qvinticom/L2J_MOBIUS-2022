@@ -22,7 +22,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.Socket;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.network.serverpackets.ServerBasePacket;
@@ -86,10 +85,7 @@ public class Connection
 		Connection connection = this;
 		synchronized (connection)
 		{
-			if (_log.isLoggable(Level.FINEST))
-			{
-				_log.finest("\n" + printData(data, data.length));
-			}
+			// _log.config("\n" + printData(data, data.length));
 			_outCrypt.encrypt(data);
 			int length = data.length + 2;
 			_out.write(length & 0xFF);
@@ -122,6 +118,7 @@ public class Connection
 		_csocket.close();
 	}
 	
+	@SuppressWarnings("unused")
 	private String printData(byte[] data, int len)
 	{
 		int a;

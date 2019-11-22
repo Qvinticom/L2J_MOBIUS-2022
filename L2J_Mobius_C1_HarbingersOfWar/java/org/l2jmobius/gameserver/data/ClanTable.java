@@ -145,7 +145,6 @@ public class ClanTable
 		clan.setHasHideout(0);
 		clan.setAllyId(0);
 		clan.setAllyName(" ");
-		_log.fine("New clan created: " + clan.getClanId());
 		ClanMember leader = new ClanMember(player.getName(), player.getLevel(), player.getClassId(), player.getObjectId());
 		clan.setLeader(leader);
 		_clans.put(clan.getClanId(), clan);

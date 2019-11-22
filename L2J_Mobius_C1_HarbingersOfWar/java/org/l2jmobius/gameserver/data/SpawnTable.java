@@ -35,7 +35,6 @@ public class SpawnTable
 	private static Logger _log = Logger.getLogger(SpawnTable.class.getName());
 	private static SpawnTable _instance;
 	private final Map<Integer, Spawn> _spawntable = new HashMap<>();
-	private int _npcSpawnCount;
 	private int _highestId;
 	
 	public static SpawnTable getInstance()
@@ -77,7 +76,6 @@ public class SpawnTable
 			}
 			lnr.close();
 			_log.config("Created " + _spawntable.size() + " spawn handlers.");
-			_log.fine("Spawning completed, total number of NPCs in the world: " + _npcSpawnCount);
 		}
 		catch (FileNotFoundException e)
 		{
@@ -113,7 +111,7 @@ public class SpawnTable
 		spawnDat.setRandomy(Integer.parseInt(st.nextToken()));
 		spawnDat.setHeading(Integer.parseInt(st.nextToken()));
 		spawnDat.setRespawnDelay(Integer.parseInt(st.nextToken()));
-		_npcSpawnCount += spawnDat.init();
+		spawnDat.init();
 		return spawnDat;
 	}
 	

@@ -93,14 +93,9 @@ public class Attackable extends NpcInstance
 	{
 		if (_active)
 		{
-			_log.fine(getObjectId() + ": target reached ! new target calculated.");
 			int wait = (10 + Rnd.get(120)) * 1000;
 			_currentAiTask = new AITask(this);
 			_aiTimer.schedule(_currentAiTask, wait);
-		}
-		else
-		{
-			_log.fine(getObjectId() + ": target reached ! noone around .. cancel movement.");
 		}
 	}
 	
@@ -167,10 +162,6 @@ public class Attackable extends NpcInstance
 			{
 				stopRandomWalking();
 				startAttack(attacker);
-			}
-			else
-			{
-				_log.fine("already attacking");
 			}
 		}
 		else if (isDead())
@@ -309,7 +300,6 @@ public class Attackable extends NpcInstance
 			if (itemCount != 0)
 			{
 				dropit.setCount(itemCount);
-				_log.fine("Item id to drop: " + drop.getItemId() + " amount: " + dropit.getCount());
 				dropit.setX(getX());
 				dropit.setY(getY());
 				dropit.setZ(getZ() + 100);
@@ -322,7 +312,6 @@ public class Attackable extends NpcInstance
 				World.getInstance().addVisibleObject(dropit);
 				continue;
 			}
-			_log.finer("Roll produced 0 items to drop... Cancelling.");
 		}
 	}
 	
@@ -427,14 +416,12 @@ public class Attackable extends NpcInstance
 			{
 				if (!isInCombat())
 				{
-					_log.finer(getObjectId() + ": monster knows " + getKnownPlayers().size() + " players");
 					for (PlayerInstance player : getKnownPlayers())
 					{
 						if (!getCondition2(player) || !(getDistance(player.getX(), player.getY()) <= (getCollisionRadius() + 200.0)))
 						{
 							continue;
 						}
-						_log.fine(getObjectId() + ": Player " + player.getObjectId() + " in aggro range. Attacking!");
 						if (_currentAiTask != null)
 						{
 							_currentAiTask.cancel();

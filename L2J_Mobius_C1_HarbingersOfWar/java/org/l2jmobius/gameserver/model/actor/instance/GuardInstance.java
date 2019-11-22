@@ -17,8 +17,6 @@
  */
 package org.l2jmobius.gameserver.model.actor.instance;
 
-import java.util.logging.Logger;
-
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -28,7 +26,6 @@ import org.l2jmobius.gameserver.templates.Npc;
 
 public class GuardInstance extends Attackable
 {
-	private static Logger _log = Logger.getLogger(GuardInstance.class.getName());
 	private static final int INTERACTION_DISTANCE = 150;
 	private int _homeX;
 	private int _homeY;
@@ -44,15 +41,13 @@ public class GuardInstance extends Attackable
 	@Override
 	public void addKnownObject(WorldObject object)
 	{
-		PlayerInstance player;
 		if (!_hasHome)
 		{
 			getHomeLocation();
 		}
 		super.addKnownObject(object);
-		if ((object instanceof PlayerInstance) && ((player = (PlayerInstance) object).getKarma() > 0) && !isTargetScanActive())
+		if ((object instanceof PlayerInstance) && (((PlayerInstance) object).getKarma() > 0) && !isTargetScanActive())
 		{
-			_log.fine(getObjectId() + ": PK " + player.getObjectId() + " entered scan range");
 			startTargetScan();
 		}
 	}
@@ -80,12 +75,10 @@ public class GuardInstance extends Attackable
 		_homeX = getX();
 		_homeY = getY();
 		_homeZ = getZ();
-		_log.finer(getObjectId() + ": Home location set to X:" + _homeX + " Y:" + _homeY + " Z:" + _homeZ);
 	}
 	
 	private void returnHome()
 	{
-		_log.fine(getObjectId() + ": moving home");
 		clearAggroList();
 		moveTo(_homeX, _homeY, _homeZ, 0);
 	}
@@ -110,7 +103,6 @@ public class GuardInstance extends Attackable
 		if (getObjectId() != player.getTargetId())
 		{
 			player.setCurrentState((byte) 0);
-			_log.fine(player.getObjectId() + ": Targetted guard " + getObjectId());
 			player.setTarget(this);
 			MyTargetSelected my = new MyTargetSelected(getObjectId(), 0);
 			player.sendPacket(my);
@@ -118,7 +110,6 @@ public class GuardInstance extends Attackable
 		}
 		else if (containsTarget(player))
 		{
-			_log.fine(player.getObjectId() + ": Attacked guard " + getObjectId());
 			player.startAttack(this);
 		}
 		else

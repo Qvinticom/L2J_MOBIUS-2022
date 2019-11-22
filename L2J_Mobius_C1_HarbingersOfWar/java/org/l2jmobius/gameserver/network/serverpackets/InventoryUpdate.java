@@ -65,7 +65,6 @@ public class InventoryUpdate extends ServerBasePacket
 		for (int i = 0; i < count; ++i)
 		{
 			ItemInstance temp = _items.get(i);
-			// _log.fine("oid:" + Integer.toHexString(temp.getObjectId()) + " item:" + temp.getItem().getName() + " last change:" + temp.getLastChange());
 			writeH(temp.getLastChange());
 			writeH(temp.getItem().getType1());
 			writeD(temp.getObjectId());

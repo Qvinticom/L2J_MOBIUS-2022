@@ -57,7 +57,6 @@ public class RequestAquireSkill extends ClientBasePacket
 		if (player.getSp() >= _requiredSp)
 		{
 			player.addSkill(skill);
-			_log.fine("Learned skill " + id + " for " + _requiredSp + " SP.");
 			player.setSp(player.getSp() - _requiredSp);
 			StatusUpdate su = new StatusUpdate(player.getObjectId());
 			su.addAttribute(StatusUpdate.SP, player.getSp());
@@ -82,7 +81,6 @@ public class RequestAquireSkill extends ClientBasePacket
 		{
 			SystemMessage sm = new SystemMessage(278);
 			player.sendPacket(sm);
-			_log.fine("Not enough SP!");
 		}
 		skills = SkillTreeTable.getInstance().getAvailableSkills(player);
 		AquireSkillList asl = new AquireSkillList();

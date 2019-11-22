@@ -110,7 +110,6 @@ public class EquipUpdate extends ServerBasePacket
 				bodypart = 14;
 			}
 		}
-		// _log.fine("body:" + bodypart);
 		writeD(bodypart);
 		return _bao.toByteArray();
 	}

@@ -21,11 +21,9 @@ import java.io.File;
 import java.io.FilenameFilter;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Logger;
 
 public class CharNameTable
 {
-	private static Logger _log = Logger.getLogger(CharNameTable.class.getName());
 	private static CharNameTable _instance;
 	private final List<String> _charNames;
 	
@@ -61,18 +59,15 @@ public class CharNameTable
 				// empty catch block
 			}
 		}
-		_log.fine("Loaded " + _charNames.size() + " charnames to the memory.");
 	}
 	
 	public void addCharName(String name)
 	{
-		_log.fine("Added charname: " + name + " to the memory.");
 		_charNames.add(name.toLowerCase());
 	}
 	
 	public void deleteCharName(String name)
 	{
-		_log.fine("Deleted charname: " + name + " from the memory.");
 		_charNames.remove(name.toLowerCase());
 	}
 	

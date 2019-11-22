@@ -57,15 +57,15 @@ public class LoginServer extends Thread
 				{
 					// _log.fine("Waiting for client connection...");
 					Socket connection = _serverSocket.accept();
-					_log.fine("Connection from " + connection.getInetAddress());
+					// _log.fine("Connection from " + connection.getInetAddress());
 					String connectedIp = connection.getInetAddress().getHostAddress();
 					if (connectedIp.startsWith("192.168.") || connectedIp.startsWith("10."))
 					{
-						_log.fine("Using internal ip as server ip " + Config.INTERNAL_HOST_NAME);
+						// _log.fine("Using internal ip as server ip " + Config.INTERNAL_HOST_NAME);
 						new ClientThread(connection, _logins, Config.INTERNAL_HOST_NAME, _gamePort);
 						continue;
 					}
-					_log.fine("Using external ip as server ip " + Config.EXTERNAL_HOST_NAME);
+					// _log.fine("Using external ip as server ip " + Config.EXTERNAL_HOST_NAME);
 					new ClientThread(connection, _logins, Config.EXTERNAL_HOST_NAME, _gamePort);
 				}
 				while (true);

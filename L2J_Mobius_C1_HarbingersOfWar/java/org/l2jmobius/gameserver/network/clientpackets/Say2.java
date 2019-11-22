@@ -48,7 +48,6 @@ public class Say2 extends ClientBasePacket
 		{
 			target = readS();
 		}
-		_log.fine("Say type:" + type);
 		PlayerInstance activeChar = client.getActiveChar();
 		// Connection con = client.getConnection();
 		CreatureSay cs = new CreatureSay(activeChar.getObjectId(), type, activeChar.getName(), text);

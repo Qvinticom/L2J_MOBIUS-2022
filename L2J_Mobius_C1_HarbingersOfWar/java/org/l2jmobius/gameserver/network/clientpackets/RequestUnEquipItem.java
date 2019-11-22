@@ -35,7 +35,6 @@ public class RequestUnEquipItem extends ClientBasePacket
 	{
 		super(decrypt);
 		int slot = readD();
-		_log.fine("request unequip slot " + slot);
 		PlayerInstance activeChar = client.getActiveChar();
 		Collection<ItemInstance> unequiped = activeChar.getInventory().unEquipItemInBodySlot(slot);
 		InventoryUpdate iu = new InventoryUpdate();

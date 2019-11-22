@@ -101,7 +101,6 @@ public class GameServer extends Thread
 			{
 				do
 				{
-					_log.fine("Used mem:" + getUsedMemoryMB() + "MB");
 					// _log.info("Waiting for client connection...");
 					Socket connection = _serverSocket.accept();
 					new ClientThread(connection);
@@ -138,7 +137,6 @@ public class GameServer extends Thread
 			_log.config("GameServer listening on all available IPs on Port " + Config.SERVER_PORT);
 		}
 		
-		_log.finest("Used mem:" + getUsedMemoryMB() + "MB");
 		_log.config("Maximum Numbers of Connected Players: " + Config.MAXIMUM_ONLINE_PLAYERS);
 		new File("data/clans").mkdirs();
 		new File("data/crests").mkdirs();

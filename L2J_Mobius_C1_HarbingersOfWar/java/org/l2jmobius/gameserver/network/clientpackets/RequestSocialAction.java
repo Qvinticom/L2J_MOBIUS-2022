@@ -32,7 +32,6 @@ public class RequestSocialAction extends ClientBasePacket
 		PlayerInstance activeChar = client.getActiveChar();
 		if ((activeChar.getPrivateStoreType() == 0) && (activeChar.getTransactionRequester() == null) && (activeChar.getCurrentState() == 0))
 		{
-			_log.fine("Social Action:" + actionId);
 			SocialAction atk = new SocialAction(client.getActiveChar().getObjectId(), actionId);
 			activeChar.sendPacket(atk);
 			activeChar.broadcastPacket(atk);

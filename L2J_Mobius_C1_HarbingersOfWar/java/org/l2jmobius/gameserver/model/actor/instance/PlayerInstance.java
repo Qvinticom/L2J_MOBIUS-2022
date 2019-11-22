@@ -336,7 +336,6 @@ public class PlayerInstance extends Creature
 	@Override
 	public void addExpAndSp(int addToExp, int addToSp)
 	{
-		_log.fine("adding " + addToExp + " exp and " + addToSp + " sp to " + getName());
 		_exp += addToExp;
 		_sp += addToSp;
 		StatusUpdate su = new StatusUpdate(getObjectId());
@@ -367,29 +366,21 @@ public class PlayerInstance extends Creature
 		{
 			Skill skill = SkillTable.getInstance().getInfo(194, 1);
 			removeSkill(skill);
-			_log.fine("removed skill 'Lucky' from " + getName());
 		}
 		else if (lvl == 20)
 		{
 			Skill skill = SkillTable.getInstance().getInfo(239, 1);
 			addSkill(skill);
-			_log.fine("awarded " + getName() + " with expertise D.");
 		}
 		else if (lvl == 40)
 		{
 			Skill skill = SkillTable.getInstance().getInfo(239, 2);
 			addSkill(skill);
-			_log.fine("awarded " + getName() + " with expertise C.");
 		}
 		else if (lvl == 52)
 		{
 			Skill skill = SkillTable.getInstance().getInfo(239, 3);
 			addSkill(skill);
-			_log.fine("awarded " + getName() + " with expertise B.");
-		}
-		else
-		{
-			_log.fine("No skills awarded at lvl: " + lvl);
 		}
 	}
 	
@@ -610,7 +601,6 @@ public class PlayerInstance extends Creature
 		}
 		else
 		{
-			_log.fine("starting combat");
 			super.startCombat();
 		}
 	}
@@ -679,7 +669,6 @@ public class PlayerInstance extends Creature
 		ItemInstance target = (ItemInstance) getTarget();
 		sendPacket(new ActionFailed());
 		StopMove sm = new StopMove(getObjectId(), getX(), getY(), getZ(), getHeading());
-		_log.fine("pickup pos: " + target.getX() + " " + target.getY() + " " + target.getZ());
 		sendPacket(sm);
 		boolean pickupOk = false;
 		ItemInstance ItemInstance = target;
@@ -794,11 +783,9 @@ public class PlayerInstance extends Creature
 		if (attacker != null)
 		{
 			SystemMessage smsg = new SystemMessage(36);
-			_log.fine("Attacker:" + attacker.getName());
 			if ((attacker instanceof MonsterInstance) || (attacker instanceof NpcInstance))
 			{
 				int mobId = ((NpcInstance) attacker).getNpcTemplate().getNpcId();
-				_log.fine("mob id:" + mobId);
 				smsg.addNpcName(mobId);
 			}
 			else
@@ -906,13 +893,11 @@ public class PlayerInstance extends Creature
 			Creature obj = (Creature) object;
 			if (obj.isMoving())
 			{
-				_log.fine("Spotted object in movement, updating status");
 				CharMoveToLocation mov = new CharMoveToLocation(obj);
 				sendPacket(mov);
 			}
 			else if (obj.isMovingToPawn())
 			{
-				_log.fine("Spotted object in movement to pawn, updating status");
 				MoveToPawn mov = new MoveToPawn(obj, obj.getPawnTarget(), obj.getPawnOffset());
 				sendPacket(mov);
 			}
@@ -1051,7 +1036,6 @@ public class PlayerInstance extends Creature
 		}
 		double pAtk = weapondmg * lvlmod * strmod;
 		setPhysicalAttack((int) Math.rint(pAtk));
-		_log.fine("new patk: " + pAtk + " weapon patk: " + weapondmg);
 	}
 	
 	public void updatePDef()
@@ -1106,7 +1090,6 @@ public class PlayerInstance extends Creature
 		}
 		double pDef = totalItemDef * lvlmod;
 		setPhysicalDefense((int) Math.round(pDef));
-		_log.fine(getObjectId() + ": new pdef: " + pDef);
 	}
 	
 	public void updateMAtk()
@@ -1141,7 +1124,6 @@ public class PlayerInstance extends Creature
 		}
 		double mAtk = weapondmg * lvlmod * intmod;
 		setMagicalAttack((int) Math.rint(mAtk));
-		_log.fine("new matk: " + mAtk + " weapon matk: " + weapondmg);
 	}
 	
 	public void updateMDef()
@@ -1196,7 +1178,6 @@ public class PlayerInstance extends Creature
 		}
 		double mDef = totalItemDef * lvlBonus * MENbonus;
 		setMagicalDefense((int) Math.round(mDef));
-		_log.fine(getObjectId() + ": new mdef: " + mDef);
 	}
 	
 	public void setTradeList(TradeList x)
@@ -1269,7 +1250,6 @@ public class PlayerInstance extends Creature
 		}
 		if ((skill.getTargetType() == Skill.TARGET_ONE) && (target == this))
 		{
-			_log.fine("Attack magic has no target or target oneself.");
 			return;
 		}
 		if (isDead() || target.isDead() || _allSkillsDisabled || isSkillDisabled(skill.getId()) || skill.isPassive())
@@ -1419,7 +1399,6 @@ public class PlayerInstance extends Creature
 			{
 				for (PlayerInstance player : getParty().getPartyMembers())
 				{
-					// _log.fine("msl: " + getName() + " " + magicId + " " + level + " " + player.getName());
 					MagicSkillLaunched msl = new MagicSkillLaunched(this, magicId, level, player);
 					sendPacket(msl);
 					broadcastPacket(msl);
@@ -1428,7 +1407,6 @@ public class PlayerInstance extends Creature
 			else
 			{
 				MagicSkillLaunched msl = new MagicSkillLaunched(this, magicId, level, target);
-				// _log.fine("msl: " + getName() + " " + magicId + " " + level + " " + target.getName());
 				sendPacket(msl);
 				broadcastPacket(msl);
 			}
@@ -1468,14 +1446,12 @@ public class PlayerInstance extends Creature
 	
 	public void disableAllSkills()
 	{
-		_log.fine("all skills disabled");
 		_allSkillsDisabled = true;
 	}
 	
 	@Override
 	protected void enableAllSkills()
 	{
-		_log.fine("all skills enabled");
 		_allSkillsDisabled = false;
 	}
 	

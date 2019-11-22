@@ -352,13 +352,11 @@ public abstract class Creature extends WorldObject
 			_hpRegTask.cancel();
 			_hpRegTask = null;
 			_hpRegenActive = false;
-			_log.fine("HP regen stop");
 		}
 	}
 	
 	private void startHpRegeneration()
 	{
-		_log.fine("HP regen started");
 		_hpRegTask = new HpRegenTask(this);
 		_regenTimer.scheduleAtFixedRate(_hpRegTask, 3000L, 3000L);
 		_hpRegenActive = true;
@@ -387,7 +385,6 @@ public abstract class Creature extends WorldObject
 	private void startMpRegeneration()
 	{
 		_mpRegTask = new MpRegenTask(this);
-		_log.fine("MP regen started");
 		_regenTimer.scheduleAtFixedRate(_mpRegTask, 3000L, 3000L);
 		_mpRegenActive = true;
 	}
@@ -398,7 +395,6 @@ public abstract class Creature extends WorldObject
 		{
 			_mpRegTask.cancel();
 			_mpRegTask = null;
-			_log.fine("Mp regen stopped");
 			_mpRegenActive = false;
 		}
 	}
@@ -520,7 +516,6 @@ public abstract class Creature extends WorldObject
 	
 	public void increaseLevel()
 	{
-		_log.finest("increasing level of " + getName());
 		++_level;
 		StatusUpdate su = new StatusUpdate(getObjectId());
 		su.addAttribute(StatusUpdate.LEVEL, _level);
@@ -533,7 +528,6 @@ public abstract class Creature extends WorldObject
 	
 	public void decreaseLevel()
 	{
-		_log.finest("increasing level of " + getName());
 		--_level;
 		StatusUpdate su = new StatusUpdate(getObjectId());
 		su.addAttribute(StatusUpdate.LEVEL, _level);
@@ -814,7 +808,6 @@ public abstract class Creature extends WorldObject
 			_currentHp -= i;
 			if (_currentHp <= 0.0)
 			{
-				_log.fine("char is dead.");
 				_currentHp = 0.0;
 				stopHpRegeneration();
 				stopMpRegeneration();
@@ -859,7 +852,6 @@ public abstract class Creature extends WorldObject
 		{
 			if (offset == 0)
 			{
-				_log.fine("moveToLoc: x:" + x + " y:" + y + " from x:" + getX() + " y:" + getY() + " z:" + getZ());
 				if (isMovingToPawn())
 				{
 					setMovingToPawn(false);
@@ -884,7 +876,6 @@ public abstract class Creature extends WorldObject
 				}
 				if ((getPawnTarget() == null) || (getPawnTarget() != getTarget()))
 				{
-					_log.fine("moveToPawn: x:" + x + " y:" + y + " from x:" + getX() + " y:" + getY() + " z:" + getZ());
 					setMovingToPawn(true);
 					setPawnTarget((Creature) getTarget());
 					setPawnOffset(offset);
@@ -909,7 +900,6 @@ public abstract class Creature extends WorldObject
 	{
 		if (isMoving())
 		{
-			_log.fine(getName() + " ::current movement interrupted .. setting new target");
 			stopMove();
 		}
 		if ((getPawnTarget() != null) && (distance <= getAttackRange()) && (getCurrentState() == 8))
@@ -919,7 +909,6 @@ public abstract class Creature extends WorldObject
 			_currentMoveTask = newMoveTask;
 			return;
 		}
-		_log.fine("distance to target:" + distance);
 		int dx = x - getX();
 		int dy = y - getY();
 		if (_moveOffset > 0)
@@ -927,7 +916,6 @@ public abstract class Creature extends WorldObject
 			if ((distance - _moveOffset) <= 0.0)
 			{
 				distance = 0.0;
-				_log.fine("already in range, no movement needed.");
 			}
 			else
 			{
@@ -950,7 +938,6 @@ public abstract class Creature extends WorldObject
 			_yAddition = ((dy / distance) * speed) / 1000.0;
 			int heading = (int) (Math.atan2(-dy, -dx) * 10430.378350470453);
 			setHeading(heading += 32768);
-			_log.fine("dist:" + distance + "speed:" + speed + " ttt:" + _timeToTarget + " dx:" + _xAddition + " dy:" + _yAddition + " heading:" + heading);
 			int destinationX = getX() + (int) (_xAddition * _timeToTarget);
 			int destinationY = getY() + (int) (_yAddition * _timeToTarget);
 			setXdestination(destinationX);
@@ -961,7 +948,6 @@ public abstract class Creature extends WorldObject
 			{
 				_timeToTarget = 0L;
 			}
-			_log.fine("time to target:" + _timeToTarget);
 			ArriveTask newMoveTask = new ArriveTask(this);
 			if (getPawnTarget() != null)
 			{
@@ -1059,7 +1045,6 @@ public abstract class Creature extends WorldObject
 			}
 		}
 		stopMove();
-		_log.fine(getName() + ":: target reached at: x " + getX() + " y " + getY() + " z:" + getZ());
 		if (getPawnTarget() != null)
 		{
 			setPawnTarget(null);
@@ -1103,14 +1088,13 @@ public abstract class Creature extends WorldObject
 		}
 		else
 		{
-			_log.warning("multiple attacks want to start in parallel. prevented.");
+			_log.warning("Multiple attacks want to start in parallel. Prevented.");
 		}
 	}
 	
 	private void onAttackTimer()
 	{
 		_currentAttackTask = null;
-		_log.fine("onAttack: state=" + getCurrentState() + "  target=" + _attackTarget.getObjectId());
 		Creature target = (Creature) _attackTarget;
 		if (isDead() || (target == null) || target.isDead() || ((getCurrentState() != 5) && (getCurrentState() != 2)) || !target.knownsObject(this) || !knownsObject(target))
 		{
@@ -1317,7 +1301,6 @@ public abstract class Creature extends WorldObject
 	{
 		if (target == null)
 		{
-			_log.fine("no target ??");
 			setInCombat(false);
 			setCurrentState((byte) 0);
 			ActionFailed af = new ActionFailed();

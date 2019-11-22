@@ -31,7 +31,6 @@ import org.l2jmobius.Config;
 import org.l2jmobius.loginserver.LoginController;
 import org.l2jmobius.loginserver.data.AccountData;
 import org.l2jmobius.loginserver.network.clientpackets.RequestAuthLogin;
-import org.l2jmobius.loginserver.network.clientpackets.RequestServerLogin;
 import org.l2jmobius.loginserver.network.serverpackets.Init;
 import org.l2jmobius.loginserver.network.serverpackets.LoginFail;
 import org.l2jmobius.loginserver.network.serverpackets.LoginOk;
@@ -71,7 +70,6 @@ public class ClientThread extends Thread
 	@Override
 	public void run()
 	{
-		_log.fine("loginserver thread[C] started");
 		int lengthHi = 0;
 		int lengthLo = 0;
 		int length = 0;
@@ -96,7 +94,6 @@ public class ClientThread extends Thread
 				length = (lengthHi * 256) + lengthLo;
 				if (lengthHi < 0)
 				{
-					// _log.finer("Client terminated the connection.");
 					break;
 				}
 				byte[] incoming = new byte[length];
@@ -117,7 +114,6 @@ public class ClientThread extends Thread
 				System.arraycopy(incoming, 2, decrypt, 0, decrypt.length);
 				decrypt = _crypt.decrypt(decrypt);
 				checksumOk = _crypt.checksum(decrypt);
-				_log.finest("[C]\n" + printData(decrypt, decrypt.length));
 				int packetType = decrypt[0] & 255;
 				switch (packetType)
 				{
@@ -125,7 +121,6 @@ public class ClientThread extends Thread
 					{
 						RequestAuthLogin ral = new RequestAuthLogin(decrypt);
 						account = ral.getUser().toLowerCase();
-						_log.fine("RequestAuthLogin from user:" + account);
 						LoginController lc = LoginController.getInstance();
 						if (_logins.loginValid(account, ral.getPassword(), _csocket.getInetAddress()))
 						{
@@ -139,12 +134,10 @@ public class ClientThread extends Thread
 									break;
 								}
 								sessionKey = lc.assignSessionKeyToLogin(account, accessLevel, _csocket);
-								_log.fine("assigned SessionKey:" + Integer.toHexString(sessionKey));
 								LoginOk lok = new LoginOk();
 								sendPacket(lok);
 								break;
 							}
-							_log.fine("KICKING!");
 							if (lc.isAccountInLoginServer(account))
 							{
 								_log.warning("account is in use on Login server (kicking off):" + account);
@@ -167,16 +160,13 @@ public class ClientThread extends Thread
 					}
 					case 2:
 					{
-						_log.fine("RequestServerLogin");
-						RequestServerLogin rsl = new RequestServerLogin(decrypt);
-						_log.fine("login to server:" + rsl.getData3());
+						// RequestServerLogin rsl = new RequestServerLogin(decrypt);
 						PlayOk po = new PlayOk(sessionKey);
 						sendPacket(po);
 						break;
 					}
 					case 5:
 					{
-						_log.fine("RequestServerList");
 						// RequestServerList rsl = new RequestServerList(decrypt);
 						ServerList sl = new ServerList();
 						int current = LoginController.getInstance().getOnlinePlayerCount();
@@ -202,7 +192,6 @@ public class ClientThread extends Thread
 			{
 			}
 			LoginController.getInstance().removeLoginServerLogin(account);
-			_log.fine("loginserver thread[C] stopped");
 			return;
 		}
 		catch (HackingException e)
@@ -216,7 +205,6 @@ public class ClientThread extends Thread
 			{
 			}
 			LoginController.getInstance().removeLoginServerLogin(account);
-			_log.fine("loginserver thread[C] stopped");
 			return;
 		}
 		catch (Exception e)
@@ -231,7 +219,6 @@ public class ClientThread extends Thread
 				// empty catch block
 			}
 			LoginController.getInstance().removeLoginServerLogin(account);
-			_log.fine("loginserver thread[C] stopped");
 			return;
 		}
 	}
@@ -240,7 +227,6 @@ public class ClientThread extends Thread
 	{
 		byte[] data = sl.getContent();
 		_crypt.checksum(data);
-		_log.finest("[S]\n" + printData(data, data.length));
 		data = _crypt.crypt(data);
 		int len = data.length + 2;
 		_out.write(len & 0xFF);

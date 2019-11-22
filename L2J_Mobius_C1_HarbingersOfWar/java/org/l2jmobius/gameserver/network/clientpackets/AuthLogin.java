@@ -32,8 +32,10 @@ public class AuthLogin extends ClientBasePacket
 	{
 		super(decrypt);
 		String loginName = readS().toLowerCase();
+		@SuppressWarnings("unused")
 		long key1 = readD();
 		long key2 = readD();
+		
 		int access = LoginController.getInstance().getGmAccessLevel(loginName);
 		if (!LoginController.getInstance().loginPossible(access))
 		{
@@ -41,8 +43,6 @@ public class AuthLogin extends ClientBasePacket
 			client.getConnection().sendPacket(new AuthLoginFail(AuthLoginFail.SYSTEM_ERROR_LOGIN_LATER));
 			return;
 		}
-		_log.fine("user:" + loginName);
-		_log.fine("key:" + Long.toHexString(key1) + " " + Long.toHexString(key2));
 		client.setLoginName(loginName);
 		client.setLoginFolder(loginName);
 		int sessionKey = LoginController.getInstance().getKeyForAccount(loginName);
@@ -58,7 +58,6 @@ public class AuthLogin extends ClientBasePacket
 			client.getConnection().sendPacket(cl);
 		}
 		client.setAccessLevel(access);
-		_log.fine("access level is set to " + access);
 	}
 	
 	@Override

@@ -31,7 +31,6 @@ public class RequestPledgeCrest extends ClientBasePacket
 	{
 		super(rawPacket);
 		int crestId = readD();
-		_log.fine("crestid " + crestId + " requested");
 		File crestFile = new File("data/crests/Pledge_" + crestId + ".bmp");
 		if (crestFile.exists())
 		{

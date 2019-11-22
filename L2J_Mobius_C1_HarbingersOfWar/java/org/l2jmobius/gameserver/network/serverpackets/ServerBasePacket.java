@@ -19,17 +19,16 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
-import java.util.logging.Logger;
 
 public abstract class ServerBasePacket
 {
-	private static Logger _log = Logger.getLogger(ServerBasePacket.class.getName());
+	// private static Logger _log = Logger.getLogger(ServerBasePacket.class.getName());
 	
 	ByteArrayOutputStream _bao = new ByteArrayOutputStream();
 	
 	protected ServerBasePacket()
 	{
-		_log.finest(getType());
+		// _log.finest(getType());
 	}
 	
 	protected void writeD(int value)

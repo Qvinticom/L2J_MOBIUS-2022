@@ -57,7 +57,6 @@ public class TeleporterInstance extends NpcInstance
 	@Override
 	public void onAction(PlayerInstance player)
 	{
-		_log.fine("Teleporter activated");
 		super.onAction(player);
 	}
 	
@@ -68,15 +67,12 @@ public class TeleporterInstance extends NpcInstance
 		{
 			if (player.getAdena() >= list.getPrice())
 			{
-				_log.fine("Teleporting to new location: " + list.getLocX() + ":" + list.getLocY() + ":" + list.getLocZ());
 				player.reduceAdena(list.getPrice());
-				_log.fine("Took: " + list.getPrice() + " Adena from player for teleport");
 				TeleportToLocation Tloc = new TeleportToLocation(player, list.getLocX(), list.getLocY(), list.getLocZ());
 				player.sendPacket(Tloc);
 			}
 			else
 			{
-				_log.fine("Not enough adena to teleport");
 				SystemMessage sm = new SystemMessage(279);
 				player.sendPacket(sm);
 			}

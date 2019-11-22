@@ -32,7 +32,6 @@ public class RequestPledgeInfo extends ClientBasePacket
 	{
 		super(rawPacket);
 		int clanId = readD();
-		_log.fine("infos for clan " + clanId + " requested");
 		PlayerInstance activeChar = client.getActiveChar();
 		Clan clan = ClanTable.getInstance().getClan(clanId);
 		if (clan == null)

@@ -48,7 +48,6 @@ public class TradeController
 	private TradeController()
 	{
 		String line = null;
-		int dummyItemCount = 0;
 		try
 		{
 			File buylistData = new File("data/buylists.csv");
@@ -59,10 +58,9 @@ public class TradeController
 				{
 					continue;
 				}
-				dummyItemCount += parseList(line);
+				parseList(line);
 			}
 			lnr.close();
-			_log.fine("Created " + dummyItemCount + " Dummy-Items for buylists.");
 			_log.config("Loaded " + _lists.size() + " buylists.");
 		}
 		catch (FileNotFoundException e)
@@ -75,9 +73,8 @@ public class TradeController
 		}
 	}
 	
-	private int parseList(String line)
+	private void parseList(String line)
 	{
-		int itemCreated = 0;
 		StringTokenizer st = new StringTokenizer(line, ";");
 		int listId = Integer.parseInt(st.nextToken());
 		TradeList buy1 = new TradeList(listId);
@@ -88,10 +85,8 @@ public class TradeController
 			ItemInstance item = ItemTable.getInstance().createDummyItem(itemId);
 			item.setPrice(price);
 			buy1.addItem(item);
-			++itemCreated;
 		}
 		_lists.put(buy1.getListId(), buy1);
-		return itemCreated;
 	}
 	
 	public TradeList getBuyList(int listId)

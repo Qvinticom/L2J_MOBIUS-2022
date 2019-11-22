@@ -36,14 +36,14 @@ public class RequestPartyMatchList extends ClientBasePacket
 			PartyMatchList matchList = new PartyMatchList(World.getInstance().getAllPlayers());
 			client.getConnection().sendPacket(matchList);
 		}
-		else if (status == 3)
-		{
-			_log.fine("PartyMatch window was closed.");
-		}
-		else
-		{
-			_log.fine("party match status: " + status);
-		}
+		// else if (status == 3)
+		// {
+		// _log.fine("PartyMatch window was closed.");
+		// }
+		// else
+		// {
+		// _log.fine("Party match status: " + status);
+		// }
 	}
 	
 	@Override

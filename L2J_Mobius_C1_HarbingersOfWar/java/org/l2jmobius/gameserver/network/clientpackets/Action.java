@@ -17,8 +17,6 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import java.util.logging.Logger;
-
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -28,7 +26,6 @@ import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 public class Action extends ClientBasePacket
 {
 	private static final String ACTION__C__04 = "[C] 04 Action";
-	private static Logger _log = Logger.getLogger(Action.class.getName());
 	
 	public Action(byte[] decrypt, ClientThread client)
 	{
@@ -41,8 +38,6 @@ public class Action extends ClientBasePacket
 		@SuppressWarnings("unused")
 		int originZ = readD();
 		int actionId = readC();
-		_log.fine("Action:" + actionId);
-		_log.fine("oid:" + objectId);
 		PlayerInstance activeChar = client.getActiveChar();
 		WorldObject obj = World.getInstance().findObject(objectId);
 		if ((obj != null) && !activeChar.isDead() && (activeChar.getPrivateStoreType() == 0) && (activeChar.getTransactionRequester() == null))
@@ -62,7 +57,6 @@ public class Action extends ClientBasePacket
 		}
 		else
 		{
-			// _log.warning("object not found, oid " + objectId + " or player is dead");
 			activeChar.sendPacket(new ActionFailed());
 		}
 	}

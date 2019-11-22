@@ -59,13 +59,11 @@ public class CharacterCreate extends ClientBasePacket
 		newChar.setFace(readD());
 		if (CharNameTable.getInstance().doesCharNameExist(newChar.getName()))
 		{
-			_log.fine("charname: " + newChar.getName() + " already exists. creation failed.");
 			CharCreateFail ccf = new CharCreateFail(CharCreateFail.REASON_NAME_ALREADY_EXISTS);
 			client.getConnection().sendPacket(ccf);
 		}
 		else if ((newChar.getName().length() <= 16) && isAlphaNumeric(newChar.getName()))
 		{
-			_log.fine("charname: " + newChar.getName() + " classId: " + newChar.getClassId());
 			CharCreateOk cco = new CharCreateOk();
 			client.getConnection().sendPacket(cco);
 			initNewChar(client, newChar);
@@ -73,7 +71,6 @@ public class CharacterCreate extends ClientBasePacket
 		}
 		else
 		{
-			_log.fine("charname: " + newChar.getName() + " is invalid. creation failed.");
 			CharCreateFail ccf = new CharCreateFail(CharCreateFail.REASON_16_ENG_CHARS);
 			client.getConnection().sendPacket(ccf);
 		}
@@ -97,7 +94,6 @@ public class CharacterCreate extends ClientBasePacket
 	
 	private void initNewChar(ClientThread client, PlayerInstance newChar) throws FileNotFoundException, IOException
 	{
-		_log.fine("Character init start");
 		newChar.setObjectId(IdFactory.getInstance().getNextId());
 		World.getInstance().storeObject(newChar);
 		CharTemplate template = CharTemplateTable.getInstance().getTemplate(newChar.getClassId());
@@ -160,12 +156,10 @@ public class CharacterCreate extends ClientBasePacket
 		for (SkillLearn startSkill : SkillTreeTable.getInstance().getAvailableSkills(newChar))
 		{
 			newChar.addSkill(SkillTable.getInstance().getInfo(startSkill.getId(), startSkill.getLevel()));
-			_log.fine("adding starter skill:" + startSkill.getId() + " / " + startSkill.getLevel());
 		}
 		client.saveCharToDisk(newChar);
 		CharSelectInfo cl = new CharSelectInfo(client.getLoginName(), client.getSessionId());
 		client.getConnection().sendPacket(cl);
-		_log.fine("Character init end");
 	}
 	
 	@Override

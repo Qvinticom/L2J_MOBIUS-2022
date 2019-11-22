@@ -29,13 +29,16 @@ public class StopMove extends ClientBasePacket
 	public StopMove(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
+		@SuppressWarnings("unused")
 		int x = readD();
+		@SuppressWarnings("unused")
 		int y = readD();
+		@SuppressWarnings("unused")
 		int z = readD();
 		int heading = readD();
+		
 		PlayerInstance player = client.getActiveChar();
 		player.stopMove();
-		_log.fine("client: x:" + x + " y:" + y + " z:" + z + " server x:" + player.getX() + " y:" + player.getZ() + " z:" + player.getZ());
 		StopMoveWithLocation smwl = new StopMoveWithLocation(player);
 		client.getActiveChar().sendPacket(smwl);
 		client.getActiveChar().broadcastPacket(smwl);

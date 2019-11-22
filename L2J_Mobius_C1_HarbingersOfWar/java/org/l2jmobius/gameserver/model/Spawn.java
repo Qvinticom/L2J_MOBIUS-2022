@@ -166,13 +166,12 @@ public class Spawn
 		}
 	}
 	
-	public int init()
+	public void init()
 	{
 		while (_currentCount < _maximumCount)
 		{
 			doSpawn();
 		}
-		return _currentCount;
 	}
 	
 	public void doSpawn()
@@ -244,7 +243,6 @@ public class Spawn
 			mob.setSpawn(this);
 			World.getInstance().storeObject(mob);
 			World.getInstance().addVisibleObject(mob);
-			_log.finest("spawned Mob ID: " + _template.getNpcId() + " ,at: " + mob.getX() + " x, " + mob.getY() + " y, " + mob.getZ() + " z");
 			++_currentCount;
 		}
 		catch (Exception e)

@@ -19,13 +19,11 @@ package org.l2jmobius.gameserver.model;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 
 public class Warehouse
 {
-	private static Logger _log = Logger.getLogger(Warehouse.class.getName());
 	private final List<ItemInstance> _items = new ArrayList<>();
 	
 	public int getSize()
@@ -102,10 +100,6 @@ public class Warehouse
 				item.setCount(item.getCount() - count);
 				item.setLastChange(2);
 			}
-		}
-		else
-		{
-			_log.fine("can't destroy " + count + " item(s) " + itemId);
 		}
 		return item;
 	}

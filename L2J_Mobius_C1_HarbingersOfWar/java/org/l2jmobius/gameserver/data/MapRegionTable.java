@@ -22,14 +22,11 @@ import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.io.LineNumberReader;
 import java.util.StringTokenizer;
-import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.model.actor.Creature;
 
 public class MapRegionTable
 {
-	private static Logger _log = Logger.getLogger(MapRegionTable.class.getName());
-	
 	private static int[][] _regions = new int[19][21];
 	private static MapRegionTable _instance;
 	
@@ -46,7 +43,6 @@ public class MapRegionTable
 	{
 		super();
 		int count = 0;
-		int count2 = 0;
 		try
 		{
 			File regionDataFile = new File("data/mapregion.csv");
@@ -59,18 +55,16 @@ public class MapRegionTable
 					continue;
 				}
 				StringTokenizer st = new StringTokenizer(line, ";");
-				for (int j = 0; j < 10; ++count2, ++j)
+				for (int j = 0; j < 10; ++j)
 				{
 					MapRegionTable._regions[j][count] = Integer.parseInt(st.nextToken());
 				}
 				++count;
 			}
-			_log.fine("Loaded " + count2 + " map regions.");
 			lnr.close();
 		}
 		catch (Exception e)
 		{
-			_log.fine("Error loading map regions. " + e);
 		}
 	}
 	

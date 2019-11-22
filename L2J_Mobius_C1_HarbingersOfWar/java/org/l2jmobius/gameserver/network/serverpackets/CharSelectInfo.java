@@ -128,7 +128,6 @@ public class CharSelectInfo extends ServerBasePacket
 		File _charFolder = new File("data/accounts", _loginName);
 		_charFolder.mkdirs();
 		File[] chars = _charFolder.listFiles((FilenameFilter) (dir, name) -> name.endsWith("_char.csv"));
-		// _log.fine("found " + chars.length + " characters on disk.");
 		_charNameList = new String[chars.length];
 		CharSelectInfoPackage[] characters = new CharSelectInfoPackage[chars.length];
 		for (int i = 0; i < chars.length; ++i)

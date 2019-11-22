@@ -42,7 +42,6 @@ public class TradeRequest extends ClientBasePacket
 		}
 		if (client.getActiveChar().getTransactionRequester() != null)
 		{
-			_log.fine("already trading with someone");
 			player.sendPacket(new SystemMessage(142));
 			return;
 		}

@@ -81,7 +81,6 @@ public class ClientThread extends Thread
 	@Override
 	public void run()
 	{
-		_log.fine("thread[C] started");
 		long starttime = System.currentTimeMillis();
 		try
 		{
@@ -195,7 +194,6 @@ public class ClientThread extends Thread
 			}
 			throw throwable;
 		}
-		_log.fine("gameserver thread[C] stopped");
 	}
 	
 	public void saveCharToDisk(PlayerInstance cha)
@@ -256,7 +254,6 @@ public class ClientThread extends Thread
 		if (getActiveChar() != null)
 		{
 			saveCharToDisk(getActiveChar());
-			_log.fine("active Char saved");
 			_activeChar = null;
 		}
 		File[] chars = _charFolder.listFiles((FilenameFilter) (dir, name) -> name.endsWith("_char.csv"));

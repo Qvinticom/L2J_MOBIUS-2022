@@ -31,7 +31,6 @@ public class RequestAllyCrest extends ClientBasePacket
 	{
 		super(rawPacket);
 		int crestId = readD();
-		// _log.fine("allycrestid " + crestId + " requested");
 		File crestFile = new File("data/allycrest_" + crestId + ".bmp");
 		if (crestFile.exists())
 		{

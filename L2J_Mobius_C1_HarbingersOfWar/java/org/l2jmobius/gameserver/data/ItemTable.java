@@ -466,7 +466,6 @@ public class ItemTable
 			}
 			highestId = id;
 		}
-		_log.fine("Highest item id used: " + highestId);
 		
 		// Create a FastLookUp Table called _allTemplates of size : value of the highest item ID
 		_allTemplates = new Item[highestId + 1];
@@ -500,7 +499,6 @@ public class ItemTable
 		ItemInstance temp = new ItemInstance();
 		temp.setObjectId(IdFactory.getInstance().getNextId());
 		temp.setItem(getTemplate(itemId));
-		_log.fine("Item created  oid: " + temp.getObjectId() + " itemid: " + itemId);
 		World.getInstance().storeObject(temp);
 		return temp;
 	}

@@ -17,8 +17,6 @@
  */
 package org.l2jmobius.gameserver.handler.itemhandlers;
 
-import java.util.logging.Logger;
-
 import org.l2jmobius.gameserver.IdFactory;
 import org.l2jmobius.gameserver.data.ExperienceTable;
 import org.l2jmobius.gameserver.data.NpcTable;
@@ -36,7 +34,6 @@ import org.l2jmobius.gameserver.templates.Npc;
 
 public class PetSummon implements IItemHandler
 {
-	private static Logger _log = Logger.getLogger(PetSummon.class.getName());
 	private static int[] _itemIds = new int[]
 	{
 		2375,
@@ -51,7 +48,6 @@ public class PetSummon implements IItemHandler
 		int npcId;
 		if (activeChar.getPet() != null)
 		{
-			_log.fine("player has a pet already. ignore use item");
 			return 0;
 		}
 		switch (item.getItemId())

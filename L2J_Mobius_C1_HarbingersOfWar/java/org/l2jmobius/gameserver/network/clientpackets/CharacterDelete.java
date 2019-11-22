@@ -32,7 +32,6 @@ public class CharacterDelete extends ClientBasePacket
 	{
 		super(decrypt);
 		int charSlot = readD();
-		_log.fine("deleting slot:" + charSlot);
 		Connection con = client.getConnection();
 		client.deleteCharFromDisk(charSlot);
 		CharDeleteOk ccf = new CharDeleteOk();

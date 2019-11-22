@@ -52,7 +52,6 @@ public class Potion extends WorldObject
 		_potionhpRegTask = new PotionHpHealing(activeChar);
 		_regenTimer.schedule(_potionhpRegTask, 1000L, _seconds);
 		// this._potionhpRegenActive = true;
-		// _log.fine("Potion HP regen Started");
 	}
 	
 	public void stopPotionHpRegeneration()
@@ -63,7 +62,6 @@ public class Potion extends WorldObject
 		}
 		_potionhpRegTask = null;
 		// this._potionhpRegenActive = false;
-		// _log.fine("Potion HP regen stop");
 	}
 	
 	public void setCurrentHpPotion2(Creature activeChar)
@@ -154,7 +152,6 @@ public class Potion extends WorldObject
 		_potionmpRegTask = new PotionMpHealing(activeChar);
 		_regenTimer.schedule(_potionmpRegTask, 1000L, _seconds);
 		// this._potionmpRegenActive = true;
-		// _log.fine("Potion MP regen Started");
 	}
 	
 	public void stopPotionMpRegeneration()
@@ -165,7 +162,6 @@ public class Potion extends WorldObject
 		}
 		_potionmpRegTask = null;
 		// this._potionmpRegenActive = false;
-		// _log.fine("Potion MP regen stop");
 	}
 	
 	public void setCurrentMpPotion2(Creature activeChar)

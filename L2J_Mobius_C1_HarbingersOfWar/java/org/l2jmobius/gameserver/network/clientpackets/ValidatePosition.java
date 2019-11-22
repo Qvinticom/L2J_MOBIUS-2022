@@ -80,9 +80,7 @@ public class ValidatePosition extends ClientBasePacket
 						}
 						toBeDeleted.get(i).removeKnownObject(activeChar);
 					}
-					_log.fine("deleted " + delete + " objects");
 				}
-				int newObjects = 0;
 				for (WorldObject worldObject : World.getInstance().getVisibleObjects(activeChar, 3000))
 				{
 					if (activeChar.knownsObject(worldObject))
@@ -91,11 +89,6 @@ public class ValidatePosition extends ClientBasePacket
 					}
 					activeChar.addKnownObject(worldObject);
 					worldObject.addKnownObject(activeChar);
-					++newObjects;
-				}
-				if (newObjects > 0)
-				{
-					_log.fine("added " + newObjects + " new objects");
 				}
 				activeChar.updateKnownCounter = 0;
 			}

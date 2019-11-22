@@ -39,7 +39,6 @@ public class RequestJoinParty extends ClientBasePacket
 		{
 			SystemMessage msg = new SystemMessage(164);
 			requestor.sendPacket(msg);
-			_log.fine("player already invited someone.");
 			return;
 		}
 		if (target.isInParty())
@@ -79,7 +78,6 @@ public class RequestJoinParty extends ClientBasePacket
 				requestor.setTransactionRequester(target);
 				AskJoinParty ask = new AskJoinParty(requestor.getObjectId(), itemDistribution);
 				target.sendPacket(ask);
-				_log.fine("sent out a party invitation to:" + target.getName());
 				SystemMessage msg = new SystemMessage(105);
 				msg.addString(target.getName());
 				requestor.sendPacket(msg);
@@ -108,7 +106,6 @@ public class RequestJoinParty extends ClientBasePacket
 				requestor.setTransactionRequester(target);
 				AskJoinParty ask = new AskJoinParty(requestor.getObjectId(), itemDistribution);
 				target.sendPacket(ask);
-				_log.fine("sent out a party invitation to:" + target.getName());
 				SystemMessage msg = new SystemMessage(105);
 				msg.addString(target.getName());
 				requestor.sendPacket(msg);

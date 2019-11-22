@@ -19,7 +19,6 @@ package org.l2jmobius.gameserver.managers;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.serverpackets.ServerBasePacket;
@@ -27,7 +26,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class GmListManager
 {
-	private static Logger _log = Logger.getLogger(GmListManager.class.getName());
 	private static GmListManager _instance;
 	private final List<PlayerInstance> _gmList = new ArrayList<>();
 	
@@ -46,13 +44,11 @@ public class GmListManager
 	
 	public void addGm(PlayerInstance player)
 	{
-		_log.fine("added gm: " + player.getName());
 		_gmList.add(player);
 	}
 	
 	public void deleteGm(PlayerInstance player)
 	{
-		_log.fine("deleted gm: " + player.getName());
 		_gmList.remove(player);
 	}
 	

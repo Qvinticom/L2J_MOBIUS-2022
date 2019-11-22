@@ -38,7 +38,6 @@ public class WarehouseInstance extends NpcInstance
 	@Override
 	public void onAction(PlayerInstance player)
 	{
-		_log.fine("Warehouse activated");
 		super.onAction(player);
 	}
 	
@@ -52,7 +51,6 @@ public class WarehouseInstance extends NpcInstance
 	
 	private void showRetrieveWindow(PlayerInstance player)
 	{
-		_log.fine("Showing stored items");
 		Warehouse list = player.getWarehouse();
 		if (list != null)
 		{
@@ -68,7 +66,6 @@ public class WarehouseInstance extends NpcInstance
 	
 	private void showDepositWindow(PlayerInstance player)
 	{
-		_log.fine("Showing items to deposit");
 		WareHouseDepositList dl = new WareHouseDepositList(player);
 		player.sendPacket(dl);
 		player.sendPacket(new ActionFailed());
@@ -79,7 +76,6 @@ public class WarehouseInstance extends NpcInstance
 		NpcHtmlMessage html = new NpcHtmlMessage(1);
 		html.setHtml("<html><body>Clans are not supported yet.</body></html>");
 		player.sendPacket(html);
-		_log.fine("Showing items to deposit - clan");
 		player.sendPacket(new ActionFailed());
 	}
 	
@@ -88,7 +84,6 @@ public class WarehouseInstance extends NpcInstance
 		NpcHtmlMessage html = new NpcHtmlMessage(1);
 		html.setHtml("<html><body>Clans are not supported yet.</body></html>");
 		player.sendPacket(html);
-		_log.fine("Showing items to deposit - clan");
 		player.sendPacket(new ActionFailed());
 	}
 	

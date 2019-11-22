@@ -17,8 +17,6 @@
  */
 package org.l2jmobius.gameserver;
 
-import java.util.logging.Logger;
-
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.serverpackets.ServerBasePacket;
@@ -27,7 +25,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SunSet;
 
 public class GameTimeController extends Thread
 {
-	private static Logger _log = Logger.getLogger(GameTimeController.class.getName());
 	private static GameTimeController _instance;
 	private long _gameStartTime = System.currentTimeMillis() - 3600000L;
 	
@@ -60,11 +57,9 @@ public class GameTimeController extends Thread
 			do
 			{
 				broadcastToPlayers(new SunRise());
-				_log.fine("SunRise");
 				Thread.sleep(21600000L);
 				_gameStartTime = System.currentTimeMillis();
 				broadcastToPlayers(new SunSet());
-				_log.fine("SunSet");
 				Thread.sleep(3600000L);
 			}
 			while (true);

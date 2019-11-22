@@ -57,16 +57,13 @@ public class RequestDropItem extends ClientBasePacket
 				return;
 			}
 			int oldCount = oldItem.getCount();
-			_log.fine("requested drop item " + objectId + "(" + oldCount + ") at " + x + "/" + y + "/" + z);
 			ItemInstance dropedItem = null;
 			if (oldCount < count)
 			{
-				_log.finest(activeChar.getObjectId() + ":player tried to drop more items than he has");
 				return;
 			}
 			if ((activeChar.getDistance(x, y) > 150.0) || (Math.abs(z - activeChar.getZ()) > 50))
 			{
-				_log.finest(activeChar.getObjectId() + ": trying to drop too far away");
 				SystemMessage sm = new SystemMessage(151);
 				activeChar.sendPacket(sm);
 				return;
@@ -88,7 +85,6 @@ public class RequestDropItem extends ClientBasePacket
 			dropedItem.setY(y);
 			dropedItem.setZ(z);
 			dropedItem.setOnTheGround(true);
-			_log.fine("dropping " + objectId + " item(" + count + ") at: " + x + " " + y + " " + z);
 			DropItem di = new DropItem(dropedItem, activeChar.getObjectId());
 			activeChar.sendPacket(di);
 			activeChar.addKnownObjectWithoutCreate(dropedItem);
@@ -99,12 +95,10 @@ public class RequestDropItem extends ClientBasePacket
 			InventoryUpdate iu = new InventoryUpdate();
 			if (oldCount == dropedItem.getCount())
 			{
-				_log.finest("remove item from inv");
 				iu.addRemovedItem(oldItem);
 			}
 			else
 			{
-				_log.finest("reducing item in inv");
 				iu.addModifiedItem(oldItem);
 			}
 			con.sendPacket(iu);

@@ -17,8 +17,6 @@
  */
 package org.l2jmobius.gameserver.model.actor.instance;
 
-import java.util.logging.Logger;
-
 import org.l2jmobius.gameserver.data.SkillTreeTable;
 import org.l2jmobius.gameserver.model.SkillLearn;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -27,8 +25,6 @@ import org.l2jmobius.gameserver.templates.Npc;
 
 public class TrainerInstance extends NpcInstance
 {
-	private static Logger _log = Logger.getLogger(TrainerInstance.class.getName());
-	
 	public TrainerInstance(Npc template)
 	{
 		super(template);
@@ -37,7 +33,6 @@ public class TrainerInstance extends NpcInstance
 	@Override
 	public void onAction(PlayerInstance player)
 	{
-		_log.fine("Trainer activated");
 		super.onAction(player);
 	}
 	

@@ -17,13 +17,10 @@
  */
 package org.l2jmobius.gameserver.model.actor.instance;
 
-import java.util.logging.Logger;
-
 import org.l2jmobius.gameserver.model.WorldObject;
 
 public class DoorInstance extends WorldObject
 {
-	private static Logger _log = Logger.getLogger(DoorInstance.class.getName());
 	private int _damage;
 	private int _open;
 	private int _enemy;
@@ -32,7 +29,7 @@ public class DoorInstance extends WorldObject
 	@Override
 	public void onAction(PlayerInstance player)
 	{
-		_log.fine("Door activated");
+		// _log.fine("Door activated");
 	}
 	
 	public int getDamage()

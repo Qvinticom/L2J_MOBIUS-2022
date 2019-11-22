@@ -38,7 +38,6 @@ public class RequestJoinPledge extends ClientBasePacket
 		if (activeChar.isTransactionInProgress())
 		{
 			activeChar.sendPacket(new SystemMessage(164));
-			_log.fine("player is already doing some other action");
 			return;
 		}
 		if (target == activeChar.getObjectId())
