@@ -23,7 +23,6 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.logging.Logger;
@@ -192,10 +191,9 @@ public class Attackable extends NpcInstance
 	
 	private void calculateRewards(Creature lastAttacker)
 	{
+		// TODO: Figure iterator logic and replace with for, if possible.
 		Iterator<WorldObject> it = _aggroList.keySet().iterator();
-		// int numberOfAttackers = this._aggroList.size();
 		int npcID = getNpcTemplate().getNpcId();
-		// int npcLvl = this.getLevel();
 		while (it.hasNext())
 		{
 			PlayerInstance temp;
@@ -293,12 +291,8 @@ public class Attackable extends NpcInstance
 	
 	public void doItemDrop()
 	{
-		List<DropData> drops = getNpcTemplate().getDropData();
-		_log.finer("This npc has " + drops.size() + " drops defined.");
-		Iterator<DropData> iter = drops.iterator();
-		while (iter.hasNext())
+		for (DropData drop : getNpcTemplate().getDropData())
 		{
-			DropData drop = iter.next();
 			if (drop.isSweep() || (Rnd.get(1000000) >= (drop.getChance() * Config.RATE_DROP)))
 			{
 				continue;
@@ -434,11 +428,8 @@ public class Attackable extends NpcInstance
 				if (!isInCombat())
 				{
 					_log.finer(getObjectId() + ": monster knows " + getKnownPlayers().size() + " players");
-					Set<PlayerInstance> knownPlayers = getKnownPlayers();
-					Iterator<PlayerInstance> iter = knownPlayers.iterator();
-					while (iter.hasNext())
+					for (PlayerInstance player : getKnownPlayers())
 					{
-						PlayerInstance player = iter.next();
 						if (!getCondition2(player) || !(getDistance(player.getX(), player.getY()) <= (getCollisionRadius() + 200.0)))
 						{
 							continue;

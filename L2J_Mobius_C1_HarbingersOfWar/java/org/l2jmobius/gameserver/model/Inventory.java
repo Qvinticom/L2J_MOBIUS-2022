@@ -19,7 +19,6 @@ package org.l2jmobius.gameserver.model;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.logging.Logger;
@@ -564,11 +563,9 @@ public class Inventory
 	private void refreshWeight()
 	{
 		int weight = 0;
-		Iterator<ItemInstance> iter = _items.iterator();
-		while (iter.hasNext())
+		for (ItemInstance item : _items)
 		{
-			ItemInstance element = iter.next();
-			weight += element.getItem().getWeight() * element.getCount();
+			weight += item.getItem().getWeight() * item.getCount();
 		}
 		_totalWeight = weight;
 	}

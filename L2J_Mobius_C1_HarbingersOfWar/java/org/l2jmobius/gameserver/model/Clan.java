@@ -21,7 +21,6 @@ import java.io.File;
 import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
@@ -244,10 +243,8 @@ public class Clan
 	
 	public void broadcastToOnlineMembers(ServerBasePacket packet)
 	{
-		Iterator<ClanMember> iter = _members.values().iterator();
-		while (iter.hasNext())
+		for (ClanMember member : _members.values())
 		{
-			ClanMember member = iter.next();
 			if (!member.isOnline())
 			{
 				continue;

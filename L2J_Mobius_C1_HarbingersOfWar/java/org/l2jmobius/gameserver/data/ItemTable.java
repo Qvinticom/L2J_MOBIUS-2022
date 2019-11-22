@@ -22,7 +22,6 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.LineNumberReader;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.StringTokenizer;
 import java.util.logging.Logger;
 
@@ -174,10 +173,8 @@ public class ItemTable
 	
 	private void fixEtcItems(HashMap<Integer, Item> items)
 	{
-		Iterator<Integer> iter = items.keySet().iterator();
-		while (iter.hasNext())
+		for (int key : items.keySet())
 		{
-			Integer key = iter.next();
 			EtcItem item = (EtcItem) items.get(key);
 			if ((item.getWeight() == 0) && (item.getEtcItemType() != 7) && !item.getName().startsWith("world_map") && !item.getName().startsWith("crystal_"))
 			{
@@ -444,61 +441,52 @@ public class ItemTable
 	
 	private void buildFastLookupTable()
 	{
-		Item item;
-		Integer id;
 		int highestId = 0;
-		Iterator<Integer> iter = _armors.keySet().iterator();
-		while (iter.hasNext())
+		for (int id : _armors.keySet())
 		{
-			id = iter.next();
-			item = _armors.get(id);
-			if (item.getItemId() <= highestId)
+			if (id <= highestId)
 			{
 				continue;
 			}
-			highestId = item.getItemId();
+			highestId = id;
 		}
-		iter = _weapons.keySet().iterator();
-		while (iter.hasNext())
+		for (int id : _weapons.keySet())
 		{
-			id = iter.next();
-			item = _weapons.get(id);
-			if (item.getItemId() <= highestId)
+			if (id <= highestId)
 			{
 				continue;
 			}
-			highestId = item.getItemId();
+			highestId = id;
 		}
-		iter = _etcItems.keySet().iterator();
-		while (iter.hasNext())
+		for (int id : _etcItems.keySet())
 		{
-			id = iter.next();
-			item = _etcItems.get(id);
-			if (item.getItemId() <= highestId)
+			if (id <= highestId)
 			{
 				continue;
 			}
-			highestId = item.getItemId();
+			highestId = id;
 		}
 		_log.fine("Highest item id used: " + highestId);
+		
+		// Create a FastLookUp Table called _allTemplates of size : value of the highest item ID
 		_allTemplates = new Item[highestId + 1];
-		iter = _armors.keySet().iterator();
-		while (iter.hasNext())
+		
+		// Insert armor item in Fast Look Up Table
+		for (Item armor : _armors.values())
 		{
-			id = iter.next();
-			_allTemplates[id.intValue()] = item = _armors.get(id);
+			_allTemplates[armor.getItemId()] = armor;
 		}
-		iter = _weapons.keySet().iterator();
-		while (iter.hasNext())
+		
+		// Insert weapon item in Fast Look Up Table
+		for (Item weapon : _weapons.values())
 		{
-			id = iter.next();
-			_allTemplates[id.intValue()] = item = _weapons.get(id);
+			_allTemplates[weapon.getItemId()] = weapon;
 		}
-		iter = _etcItems.keySet().iterator();
-		while (iter.hasNext())
+		
+		// Insert etcItem item in Fast Look Up Table
+		for (Item etcItem : _etcItems.values())
 		{
-			id = iter.next();
-			_allTemplates[id.intValue()] = item = _etcItems.get(id);
+			_allTemplates[etcItem.getItemId()] = etcItem;
 		}
 	}
 	

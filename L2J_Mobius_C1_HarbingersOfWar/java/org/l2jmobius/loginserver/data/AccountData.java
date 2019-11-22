@@ -26,7 +26,6 @@ import java.io.LineNumberReader;
 import java.net.InetAddress;
 import java.security.MessageDigest;
 import java.util.Base64;
-import java.util.Iterator;
 import java.util.Map;
 import java.util.StringTokenizer;
 import java.util.concurrent.ConcurrentHashMap;
@@ -165,20 +164,17 @@ public class AccountData
 	{
 		try
 		{
-			FileWriter save = new FileWriter(new File("data/accounts.txt"));
-			Iterator<String> iter = _logPass.keySet().iterator();
-			while (iter.hasNext())
+			FileWriter writer = new FileWriter(new File("data/accounts.txt"));
+			for (String name : _logPass.keySet())
 			{
-				String name = iter.next();
-				byte[] pass = _logPass.get(name);
-				save.write(name);
-				save.write("\t");
-				save.write(Base64.getEncoder().encodeToString(pass));
-				save.write("\t");
-				save.write("" + _accessLevels.get(name));
-				save.write("\r\n");
+				writer.write(name);
+				writer.write("\t");
+				writer.write(Base64.getEncoder().encodeToString(_logPass.get(name)));
+				writer.write("\t");
+				writer.write("" + _accessLevels.get(name));
+				writer.write("\r\n");
 			}
-			save.close();
+			writer.close();
 		}
 		catch (Exception e)
 		{

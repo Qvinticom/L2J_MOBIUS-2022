@@ -19,7 +19,6 @@ package org.l2jmobius.gameserver.model.actor.instance;
 
 import java.util.Collection;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Timer;
@@ -1418,10 +1417,8 @@ public class PlayerInstance extends Creature
 			int level = getSkillLevel(magicId);
 			if ((skill.getTargetType() == Skill.TARGET_PARTY) && isInParty())
 			{
-				Iterator<PlayerInstance> it = getParty().getPartyMembers().iterator();
-				while (it.hasNext())
+				for (PlayerInstance player : getParty().getPartyMembers())
 				{
-					PlayerInstance player = it.next();
 					// _log.fine("msl: " + getName() + " " + magicId + " " + level + " " + player.getName());
 					MagicSkillLaunched msl = new MagicSkillLaunched(this, magicId, level, player);
 					sendPacket(msl);

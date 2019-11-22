@@ -23,7 +23,6 @@ import java.io.FilenameFilter;
 import java.io.InputStreamReader;
 import java.io.LineNumberReader;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Map;
 import java.util.StringTokenizer;
 import java.util.logging.Logger;
@@ -130,10 +129,8 @@ public class ClanTable
 	
 	public Clan createClan(PlayerInstance player, String clanName)
 	{
-		Iterator<Clan> iter = _clans.values().iterator();
-		while (iter.hasNext())
+		for (Clan oldClans : _clans.values())
 		{
-			Clan oldClans = iter.next();
 			if (!oldClans.getName().equalsIgnoreCase(clanName))
 			{
 				continue;

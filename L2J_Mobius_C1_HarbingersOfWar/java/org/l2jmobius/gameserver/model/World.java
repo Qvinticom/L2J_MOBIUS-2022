@@ -19,7 +19,6 @@ package org.l2jmobius.gameserver.model;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -86,11 +85,9 @@ public class World
 			int x = object.getX();
 			int y = object.getY();
 			int sqRadius = 4000000;
-			Iterator<PlayerInstance> iter = _allPlayers.values().iterator();
-			while (iter.hasNext())
+			for (PlayerInstance player : _allPlayers.values())
 			{
 				long dy;
-				PlayerInstance player = iter.next();
 				int x1 = player.getX();
 				long dx = x1 - x;
 				long sqDist = (dx * dx) + ((dy = player.getY() - y) * dy);

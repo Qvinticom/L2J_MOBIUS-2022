@@ -17,9 +17,6 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import java.util.Iterator;
-import java.util.Set;
-
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.ClientThread;
@@ -79,11 +76,8 @@ public class Say2 extends ClientBasePacket
 		}
 		else if (type == 0)
 		{
-			Set<PlayerInstance> players = activeChar.getKnownPlayers();
-			Iterator<PlayerInstance> iter = players.iterator();
-			while (iter.hasNext())
+			for (PlayerInstance player : activeChar.getKnownPlayers())
 			{
-				PlayerInstance player = iter.next();
 				player.sendPacket(cs);
 			}
 			activeChar.sendPacket(cs);
