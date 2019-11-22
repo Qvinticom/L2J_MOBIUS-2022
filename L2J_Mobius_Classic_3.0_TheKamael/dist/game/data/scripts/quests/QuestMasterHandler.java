@@ -43,7 +43,9 @@ import quests.Q00935_ExploringTheEastWingOfTheDungeonOfAbyss.Q00935_ExploringThe
 import quests.Q10866_PunitiveOperationOnTheDevilIsle.Q10866_PunitiveOperationOnTheDevilIsle;
 import quests.Q10961_EffectiveTraining.Q10961_EffectiveTraining;
 import quests.Q10962_NewHorizons.Q10962_NewHorizons;
+import quests.Q10963_ExploringTheAntNest.Q10963_ExploringTheAntNest;
 import quests.Q10966_ATripBegins.Q10966_ATripBegins;
+import quests.Q10967_CulturedAdventurer.Q10967_CulturedAdventurer;
 import quests.Q10981_UnbearableWolvesHowling.Q10981_UnbearableWolvesHowling;
 import quests.Q10982_SpiderHunt.Q10982_SpiderHunt;
 import quests.Q10983_TroubledForest.Q10983_TroubledForest;
@@ -120,7 +122,9 @@ public class QuestMasterHandler
 		Q10871_DeathToThePirateKing.class, // TODO: Not done.
 		Q10961_EffectiveTraining.class,
 		Q10962_NewHorizons.class,
+		Q10963_ExploringTheAntNest.class,
 		Q10966_ATripBegins.class,
+		Q10967_CulturedAdventurer.class,
 		Q10981_UnbearableWolvesHowling.class,
 		Q10982_SpiderHunt.class,
 		Q10983_TroubledForest.class,

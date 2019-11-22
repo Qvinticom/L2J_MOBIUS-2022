@@ -471,14 +471,15 @@
 		<!-- Activates 1 jewel slot. -->
 		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="brooch" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="10" />
-		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="50183" level="1"/> <!-- Activates 2 jewel slots. -->
+		</skills>
 	</item>
 	<item id="91933" name="Adventurer's Agathion Bracelet" type="Armor">
 		<!-- Activates 1 Agathion slot. -->
@@ -532,6 +533,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="50187" level="1"/> <!-- Adventurer's Rough Jewel -->
+		</skills>
 	</item>
 	<item id="91937" name="Adventurer's Talisman" type="Armor">
 		<!-- M. Def. +5. The effect doesn't stack if two identical talismans are equipped. -->

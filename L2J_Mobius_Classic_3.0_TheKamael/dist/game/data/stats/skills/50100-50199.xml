@@ -662,6 +662,11 @@
 		<!-- 1 gemstone can be equipped. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i00</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="JewelSlot">
+				<amount>1</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50184" toLevel="1" name="Adventurer's Agathion Bracelet">
 		<!-- Activates the main agathion slot. -->

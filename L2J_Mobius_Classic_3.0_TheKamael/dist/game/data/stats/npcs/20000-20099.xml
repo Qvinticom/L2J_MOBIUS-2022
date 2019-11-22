@@ -3543,10 +3543,10 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="14" /> <!-- Bow -->
-		<acquire exp="1157" sp="34" />
+		<acquire exp="1390" sp="42" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="178.57475" hpRegen="3.5" mp="267.27" mpRegen="1.5" />
-			<attack physical="133.7574451" magical="41.10666" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
+			<vitals hp="458.925" hpRegen="3.5" mp="272.706" mpRegen="1.5" />
+			<attack physical="60.19687" magical="41.10666" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="98.70919" magical="72.2311" />
 			<speed>
 				<walk ground="50" />
@@ -3727,11 +3727,11 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="69" /> <!-- Bastard Sword -->
-		<acquire exp="1232" sp="36" />
+		<acquire exp="1479" sp="45" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="189.16608" hpRegen="3.5" mp="282.315" mpRegen="1.5" />
-			<attack physical="71.315233" magical="44.27187" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="92.57757273" magical="74.51868" />
+			<vitals hp="486.144" hpRegen="3.5" mp="288.057" mpRegen="1.5" />
+			<attack physical="64.83203" magical="44.27187" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="101.83533" magical="74.51868" />
 			<speed>
 				<walk ground="50" />
 				<run ground="110" />
@@ -4318,11 +4318,11 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="69" /> <!-- Bastard Sword -->
-		<acquire exp="2867" sp="86" />
+		<acquire exp="3442" sp="104" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="235.102895" hpRegen="3.5" mp="343.38" mpRegen="1.5" />
-			<attack physical="95.062022" magical="59.01367" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="104.5508909" magical="84.15638" />
+			<vitals hp="302.09925" hpRegen="3.5" mp="350.364" mpRegen="1.5" />
+			<attack physical="86.42002" magical="59.01367" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="115.00598" magical="84.15638" />
 			<speed>
 				<walk ground="50" />
 				<run ground="110" />

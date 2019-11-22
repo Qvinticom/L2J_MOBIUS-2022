@@ -1854,11 +1854,11 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="67" lhand="102" /> <!-- Orcish Sword / Round Shield -->
-		<acquire exp="2437" sp="73" />
+		<acquire exp="2925" sp="88" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="200.00372" hpRegen="3.5" mp="297.36" mpRegen="1.5" />
-			<attack physical="76.735186" magical="47.63653" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="95.48016364" magical="76.85506" shield="53" shieldRate="20" />
+			<vitals hp="256.998" hpRegen="3.5" mp="303.408" mpRegen="1.5" />
+			<attack physical="69.75926" magical="47.63653" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="105.02818" magical="76.85506" shield="53" shieldRate="20"/>
 			<speed>
 				<walk ground="50" />
 				<run ground="110" />
@@ -1916,11 +1916,11 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="66" /> <!-- Gladius -->
-		<acquire exp="2148" sp="64" />
+		<acquire exp="2578" sp="78" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="178.57475" hpRegen="3.5" mp="267.27" mpRegen="1.5" />
-			<attack physical="54.72442727" magical="41.10666" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="108.580109" magical="72.2311" />
+			<vitals hp="229.4625" hpRegen="3.5" mp="272.706" mpRegen="1.5" />
+			<attack physical="60.19687" magical="41.10666" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="98.70919" magical="72.2311" />
 			<speed>
 				<walk ground="50" />
 				<run ground="110" />
