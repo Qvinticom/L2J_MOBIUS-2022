@@ -1326,8 +1326,7 @@ public class PlayerInstance extends Creature
 		MagicSkillUser msu = new MagicSkillUser(this, target, magicId, level, skill.getHitTime(), skill.getReuseDelay());
 		sendPacket(msu);
 		broadcastPacket(msu);
-		SetupGauge sg = new SetupGauge(0, skill.getSkillTime());
-		sendPacket(sg);
+		sendPacket(new SetupGauge(0, skill.getHitTime()));
 		SystemMessage sm = new SystemMessage(46);
 		sm.addSkillName(magicId);
 		sendPacket(sm);
@@ -1336,9 +1335,8 @@ public class PlayerInstance extends Creature
 			disableSkill(skill.getId(), true);
 			_enableSkillTimer.schedule(new EnableSkill(skill.getId()), skill.getReuseDelay());
 			disableAllSkills();
-			final int hittime = skill.getHitTime();
-			_enableAllSkillsTimer.schedule(new EnableAllSkills(skill), hittime + 5);
-			_magicUseTimer.schedule(new MagicUseTask(target, skill), hittime);
+			_enableAllSkillsTimer.schedule(new EnableAllSkills(skill), skill.getSkillTime());
+			_magicUseTimer.schedule(new MagicUseTask(target, skill), skill.getHitTime());
 		}
 	}
 	
