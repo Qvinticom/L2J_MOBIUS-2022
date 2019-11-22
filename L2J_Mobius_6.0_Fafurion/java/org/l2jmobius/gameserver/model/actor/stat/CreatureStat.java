@@ -102,6 +102,21 @@ public class CreatureStat
 		return (int) getValue(Stats.ACCURACY_COMBAT);
 	}
 	
+	public int getCpRegen()
+	{
+		return (int) getValue(Stats.REGENERATE_CP_RATE);
+	}
+	
+	public int getHpRegen()
+	{
+		return (int) getValue(Stats.REGENERATE_HP_RATE);
+	}
+	
+	public int getMpRegen()
+	{
+		return (int) getValue(Stats.REGENERATE_MP_RATE);
+	}
+	
 	/**
 	 * @return the Magic Accuracy (base+modifier) of the Creature
 	 */
