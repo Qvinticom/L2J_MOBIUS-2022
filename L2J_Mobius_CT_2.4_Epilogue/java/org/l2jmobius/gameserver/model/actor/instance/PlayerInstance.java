@@ -4177,11 +4177,12 @@ public class PlayerInstance extends Playable
 		
 		final boolean needCpUpdate = needCpUpdate();
 		final boolean needHpUpdate = needHpUpdate();
+		final Party party = getParty();
 		
 		// Check if a party is in progress and party window update is usefull
-		if (isInParty() && (needCpUpdate || needHpUpdate || needMpUpdate()))
+		if ((party != null) && (needCpUpdate || needHpUpdate || needMpUpdate()))
 		{
-			_party.broadcastToPartyMembers(this, new PartySmallWindowUpdate(this));
+			party.broadcastToPartyMembers(this, new PartySmallWindowUpdate(this));
 		}
 		
 		if (_inOlympiadMode && _OlympiadStart && (needCpUpdate || needHpUpdate))
