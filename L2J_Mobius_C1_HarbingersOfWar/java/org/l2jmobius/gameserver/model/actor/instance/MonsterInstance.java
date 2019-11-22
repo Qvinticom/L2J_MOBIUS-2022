@@ -17,6 +17,7 @@
  */
 package org.l2jmobius.gameserver.model.actor.instance;
 
+import org.l2jmobius.gameserver.enums.CreatureState;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -28,7 +29,7 @@ public class MonsterInstance extends Attackable
 	{
 		super(template);
 		// this.setMoveRadius(2000);
-		setCurrentState((byte) 6);
+		setCurrentState(CreatureState.RANDOM_WALK);
 	}
 	
 	@Override
@@ -70,7 +71,7 @@ public class MonsterInstance extends Attackable
 			}
 			return;
 		}
-		if ((getCurrentState() != 6) && !isDead() && (getTarget() == null))
+		if ((getCurrentState() != CreatureState.RANDOM_WALK) && !isDead() && (getTarget() == null))
 		{
 			startRandomWalking();
 			if (isAggressive())

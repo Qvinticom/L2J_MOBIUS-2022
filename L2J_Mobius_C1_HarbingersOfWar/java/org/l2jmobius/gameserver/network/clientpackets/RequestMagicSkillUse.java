@@ -34,6 +34,7 @@ public class RequestMagicSkillUse extends ClientBasePacket
 		int data2 = readD();
 		@SuppressWarnings("unused")
 		int data3 = readC();
+		
 		PlayerInstance activeChar = client.getActiveChar();
 		int level = activeChar.getSkillLevel(magicId);
 		Skill skill = SkillTable.getInstance().getInfo(magicId, level);
@@ -44,7 +45,7 @@ public class RequestMagicSkillUse extends ClientBasePacket
 		}
 		else
 		{
-			_log.warning("No skill found!!");
+			_log.warning(activeChar + " tried to cast skill " + magicId);
 		}
 	}
 	

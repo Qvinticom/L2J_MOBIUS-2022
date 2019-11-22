@@ -21,6 +21,7 @@ import java.util.Timer;
 import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.data.ExperienceTable;
+import org.l2jmobius.gameserver.enums.CreatureState;
 import org.l2jmobius.gameserver.model.Inventory;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
@@ -74,7 +75,7 @@ public class PetInstance extends Creature
 	{
 		setCollisionHeight(template.getHeight());
 		setCollisionRadius(template.getRadius());
-		setCurrentState((byte) 0);
+		setCurrentState(CreatureState.IDLE);
 		setPhysicalAttack(9999);
 		_template = template;
 	}
@@ -88,7 +89,7 @@ public class PetInstance extends Creature
 			player.sendPacket(new PetStatusUpdate(this));
 			player.sendPacket(new ActionFailed());
 		}
-		player.setCurrentState((byte) 0);
+		player.setCurrentState(CreatureState.IDLE);
 		player.setTarget(this);
 		MyTargetSelected my = new MyTargetSelected(getObjectId(), player.getLevel() - getLevel());
 		player.sendPacket(my);
@@ -283,7 +284,7 @@ public class PetInstance extends Creature
 	
 	public void followOwner(PlayerInstance owner)
 	{
-		setCurrentState((byte) 8);
+		setCurrentState(CreatureState.FOLLOW);
 		setTarget(owner);
 		moveTo(owner.getX(), owner.getY(), owner.getZ(), 30);
 		broadcastPacket(new PetStatusUpdate(this));
@@ -298,12 +299,12 @@ public class PetInstance extends Creature
 		{
 			switch (getCurrentState())
 			{
-				case 1:
+				case PICKUP_ITEM:
 				{
 					doPickupItem();
 					break;
 				}
-				case 5:
+				case ATTACKING:
 				{
 					startCombat();
 					break;
@@ -364,7 +365,7 @@ public class PetInstance extends Creature
 		if (!pickupOk)
 		{
 			_owner.sendPacket(new ActionFailed());
-			setCurrentState((byte) 0);
+			setCurrentState(CreatureState.IDLE);
 			return;
 		}
 		GetItem gi = new GetItem(target, getObjectId());
@@ -375,7 +376,7 @@ public class PetInstance extends Creature
 		getInventory().addItem(target);
 		PetItemList iu = new PetItemList(this);
 		_owner.sendPacket(iu);
-		setCurrentState((byte) 0);
+		setCurrentState(CreatureState.IDLE);
 		if (getFollowStatus())
 		{
 			followOwner(_owner);

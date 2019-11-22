@@ -17,6 +17,7 @@
  */
 package org.l2jmobius.gameserver.model.actor.instance;
 
+import org.l2jmobius.gameserver.enums.CreatureState;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.templates.EtcItem;
 import org.l2jmobius.gameserver.templates.Item;
@@ -109,7 +110,7 @@ public class ItemInstance extends WorldObject
 	@Override
 	public void onAction(PlayerInstance player)
 	{
-		player.setCurrentState((byte) 1);
+		player.setCurrentState(CreatureState.PICKUP_ITEM);
 		player.setTarget(this);
 		player.moveTo(getX(), getY(), getZ(), 0);
 	}

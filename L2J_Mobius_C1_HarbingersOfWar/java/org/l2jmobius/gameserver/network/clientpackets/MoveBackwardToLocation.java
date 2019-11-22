@@ -17,6 +17,7 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.gameserver.enums.CreatureState;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.ClientThread;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -36,20 +37,20 @@ public class MoveBackwardToLocation extends ClientBasePacket
 		int originY = readD();
 		int originZ = readD();
 		PlayerInstance activeChar = client.getActiveChar();
-		if (activeChar.getCurrentState() == 2)
+		if (activeChar.getCurrentState() == CreatureState.CASTING)
 		{
 			activeChar.sendPacket(new ActionFailed());
 		}
 		else
 		{
-			if (activeChar.getCurrentState() == 5)
+			if (activeChar.getCurrentState() == CreatureState.ATTACKING)
 			{
 				AttackCanceld ac = new AttackCanceld(activeChar.getObjectId());
 				activeChar.sendPacket(ac);
 				activeChar.broadcastPacket(ac);
 			}
 			activeChar.setInCombat(false);
-			activeChar.setCurrentState((byte) 0);
+			activeChar.setCurrentState(CreatureState.IDLE);
 			activeChar.setX(originX);
 			activeChar.setY(originY);
 			activeChar.setZ(originZ);

@@ -17,6 +17,7 @@
  */
 package org.l2jmobius.gameserver.model.actor.instance;
 
+import org.l2jmobius.gameserver.enums.CreatureState;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -35,7 +36,7 @@ public class GuardInstance extends Attackable
 	public GuardInstance(Npc template)
 	{
 		super(template);
-		setCurrentState((byte) 0);
+		setCurrentState(CreatureState.IDLE);
 	}
 	
 	@Override
@@ -102,7 +103,7 @@ public class GuardInstance extends Attackable
 	{
 		if (getObjectId() != player.getTargetId())
 		{
-			player.setCurrentState((byte) 0);
+			player.setCurrentState(CreatureState.IDLE);
 			player.setTarget(this);
 			MyTargetSelected my = new MyTargetSelected(getObjectId(), 0);
 			player.sendPacket(my);
@@ -117,14 +118,14 @@ public class GuardInstance extends Attackable
 			double distance = getDistance(player.getX(), player.getY());
 			if (distance > INTERACTION_DISTANCE)
 			{
-				player.setCurrentState((byte) 7);
+				player.setCurrentState(CreatureState.INTERACT);
 				player.moveTo(getX(), getY(), getZ(), 150);
 			}
 			else
 			{
 				showChatWindow(player, 0);
 				player.sendPacket(new ActionFailed());
-				player.setCurrentState((byte) 0);
+				player.setCurrentState(CreatureState.IDLE);
 			}
 		}
 	}

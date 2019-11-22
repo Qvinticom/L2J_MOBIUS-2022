@@ -26,21 +26,14 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class DamageSkill implements ISkillHandler
 {
-	public static final int POWER_STRIKE = 3;
-	public static final int WIND_STRIKE = 1177;
-	public static final int FLAME_STRIKE = 1181;
-	public static final int MORTAL_BLOW = 16;
-	public static final int POWER_SHOT = 56;
-	public static final int IRON_PUNCH = 29;
-	
 	private static int[] _skillIds = new int[]
 	{
-		3,
-		1177,
-		1181,
-		16,
-		56,
-		29
+		3, // Power Strike
+		16, // Mortal Blow
+		29, // Iron Punch
+		56, // Power Shot
+		1177, // Wind Strike
+		1181, // Flame Strike
 	};
 	
 	@Override
@@ -48,8 +41,8 @@ public class DamageSkill implements ISkillHandler
 	{
 		if (target instanceof Creature)
 		{
-			Creature targetChar = (Creature) target;
-			int mdef = targetChar.getMagicalDefense();
+			Creature creature = (Creature) target;
+			int mdef = creature.getMagicalDefense();
 			if (mdef == 0)
 			{
 				mdef = 350;
@@ -58,11 +51,11 @@ public class DamageSkill implements ISkillHandler
 			SystemMessage sm = new SystemMessage(35);
 			sm.addNumber(dmg);
 			activeChar.sendPacket(sm);
-			targetChar.reduceCurrentHp(dmg, activeChar);
-			if (targetChar.getCurrentHp() > targetChar.getMaxHp())
+			if (creature.getCurrentHp() > creature.getMaxHp())
 			{
-				targetChar.setCurrentHp(targetChar.getMaxHp());
+				creature.setCurrentHp(creature.getMaxHp());
 			}
+			creature.reduceCurrentHp(dmg, activeChar);
 		}
 	}
 	

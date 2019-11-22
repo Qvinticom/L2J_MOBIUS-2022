@@ -17,6 +17,7 @@
  */
 package org.l2jmobius.gameserver.model.actor.instance;
 
+import org.l2jmobius.gameserver.enums.CreatureState;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.CharInfo;
 import org.l2jmobius.gameserver.network.serverpackets.MyTargetSelected;
@@ -37,7 +38,7 @@ public class ClassMasterInstance extends NpcInstance
 	{
 		if (getObjectId() != player.getTargetId())
 		{
-			player.setCurrentState((byte) 0);
+			player.setCurrentState(CreatureState.IDLE);
 			player.setTarget(this);
 			MyTargetSelected my = new MyTargetSelected(getObjectId(), player.getLevel() - getLevel());
 			player.sendPacket(my);

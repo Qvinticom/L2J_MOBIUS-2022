@@ -29,6 +29,7 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.data.ItemTable;
+import org.l2jmobius.gameserver.enums.CreatureState;
 import org.l2jmobius.gameserver.model.DropData;
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.World;
@@ -48,7 +49,7 @@ public class Attackable extends NpcInstance
 	// private int _moveRadius;
 	private boolean _active;
 	private AITask _currentAiTask;
-	private AIAttackeTask _currentAIAttackeTask;
+	private AIAttackeTask _currentAIAttackTask;
 	private static Timer _aiTimer = new Timer(true);
 	private static Timer _attackTimer = new Timer(true);
 	private final Map<WorldObject, Integer> _aggroList = new HashMap<>();
@@ -72,16 +73,12 @@ public class Attackable extends NpcInstance
 		super.onTargetReached();
 		switch (getCurrentState())
 		{
-			case 1:
-			{
-				break;
-			}
-			case 5:
+			case ATTACKING:
 			{
 				startCombat();
 				break;
 			}
-			case 6:
+			case RANDOM_WALK:
 			{
 				randomWalk();
 				break;
@@ -104,15 +101,15 @@ public class Attackable extends NpcInstance
 		_currentAiTask = new AITask(this);
 		int wait = (10 + Rnd.get(120)) * 1000;
 		_aiTimer.schedule(_currentAiTask, wait);
-		setCurrentState((byte) 6);
+		setCurrentState(CreatureState.RANDOM_WALK);
 	}
 	
 	protected synchronized void startTargetScan()
 	{
-		if ((_currentAIAttackeTask == null) && (getTarget() == null))
+		if ((_currentAIAttackTask == null) && (getTarget() == null))
 		{
-			_currentAIAttackeTask = new AIAttackeTask(this);
-			_attackTimer.scheduleAtFixedRate(_currentAIAttackeTask, 100L, 1000L);
+			_currentAIAttackTask = new AIAttackeTask(this);
+			_attackTimer.scheduleAtFixedRate(_currentAIAttackTask, 100L, 1000L);
 		}
 	}
 	
@@ -326,15 +323,15 @@ public class Attackable extends NpcInstance
 	
 	protected boolean isTargetScanActive()
 	{
-		return _currentAIAttackeTask != null;
+		return _currentAIAttackTask != null;
 	}
 	
 	protected synchronized void stopTargetScan()
 	{
-		if (_currentAIAttackeTask != null)
+		if (_currentAIAttackTask != null)
 		{
-			_currentAIAttackeTask.cancel();
-			_currentAIAttackeTask = null;
+			_currentAIAttackTask.cancel();
+			_currentAIAttackTask = null;
 		}
 	}
 	
@@ -430,9 +427,9 @@ public class Attackable extends NpcInstance
 						startAttack(player);
 					}
 				}
-				else if (_currentAIAttackeTask != null)
+				else if (_currentAIAttackTask != null)
 				{
-					_currentAIAttackeTask.cancel();
+					_currentAIAttackTask.cancel();
 				}
 			}
 			catch (Throwable e)

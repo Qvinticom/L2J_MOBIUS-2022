@@ -17,6 +17,7 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.gameserver.enums.CreatureState;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.ClientThread;
@@ -70,14 +71,14 @@ public class RequestActionUse extends ClientBasePacket
 				{
 					break;
 				}
-				if (activeChar.getPet().getCurrentState() != 8)
+				if (activeChar.getPet().getCurrentState() != CreatureState.FOLLOW)
 				{
-					activeChar.getPet().setCurrentState((byte) 8);
+					activeChar.getPet().setCurrentState(CreatureState.FOLLOW);
 					activeChar.getPet().setFollowStatus(true);
 					activeChar.getPet().followOwner(activeChar);
 					break;
 				}
-				activeChar.getPet().setCurrentState((byte) 0);
+				activeChar.getPet().setCurrentState(CreatureState.IDLE);
 				activeChar.getPet().setFollowStatus(false);
 				activeChar.getPet().setMovingToPawn(false);
 				activeChar.getPet().setPawnTarget(null);
@@ -100,13 +101,13 @@ public class RequestActionUse extends ClientBasePacket
 				{
 					break;
 				}
-				if (activeChar.getPet().getCurrentState() == 8)
+				if (activeChar.getPet().getCurrentState() == CreatureState.FOLLOW)
 				{
 					activeChar.getPet().setFollowStatus(false);
 					activeChar.getPet().setMovingToPawn(false);
 					activeChar.getPet().setPawnTarget(null);
 				}
-				activeChar.getPet().setCurrentState((byte) 0);
+				activeChar.getPet().setCurrentState(CreatureState.IDLE);
 				activeChar.getPet().stopMove();
 				activeChar.getPet().broadcastPacket(new StopMove(activeChar.getPet()));
 				break;

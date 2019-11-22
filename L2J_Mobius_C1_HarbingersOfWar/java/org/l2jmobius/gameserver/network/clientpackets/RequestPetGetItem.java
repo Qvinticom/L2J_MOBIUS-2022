@@ -17,6 +17,7 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.gameserver.enums.CreatureState;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 import org.l2jmobius.gameserver.network.ClientThread;
@@ -32,7 +33,7 @@ public class RequestPetGetItem extends ClientBasePacket
 		World world = World.getInstance();
 		ItemInstance item = (ItemInstance) world.findObject(objectId);
 		client.getActiveChar().getPet().setTarget(item);
-		client.getActiveChar().getPet().setCurrentState((byte) 1);
+		client.getActiveChar().getPet().setCurrentState(CreatureState.PICKUP_ITEM);
 		client.getActiveChar().getPet().moveTo(item.getX(), item.getY(), item.getZ(), 0);
 	}
 	

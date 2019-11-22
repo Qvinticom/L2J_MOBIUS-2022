@@ -29,24 +29,16 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class HealSkill implements ISkillHandler
 {
-	private static final int SELF_HEAL = 1216;
-	private static final int DEVINE_HEAL = 45;
-	private static final int ELEMENTAL_HEAL = 58;
-	private static final int HEAL = 1011;
-	private static final int BATTLE_HEAL = 1015;
-	private static final int GROUP_HEAL = 1027;
-	private static final int SERVITOR_HEAL = 1127;
-	private static final int GREATER_GROUP_HEAL = 1219;
 	private static int[] _skillIds = new int[]
 	{
-		SELF_HEAL,
-		DEVINE_HEAL,
-		ELEMENTAL_HEAL,
-		HEAL,
-		BATTLE_HEAL,
-		GROUP_HEAL,
-		SERVITOR_HEAL,
-		GREATER_GROUP_HEAL
+		45, // Divine Heal
+		58, // Elemental Heal
+		1011, // Heal
+		1015, // Battle Heal
+		1027, // Group Heal
+		1127, // Servitor Heal
+		1216, // Self Heal
+		1219, // Greater Group Heal
 	};
 	
 	@Override

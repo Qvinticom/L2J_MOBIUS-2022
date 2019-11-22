@@ -23,6 +23,7 @@ import java.util.Timer;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.gameserver.enums.CreatureState;
 import org.l2jmobius.gameserver.model.Spawn;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Creature;
@@ -121,11 +122,11 @@ public class NpcInstance extends Creature
 	{
 		if (this != player.getTarget())
 		{
-			if (player.getCurrentState() == 2)
+			if (player.getCurrentState() == CreatureState.CASTING)
 			{
 				player.cancelCastMagic();
 			}
-			player.setCurrentState((byte) 0);
+			player.setCurrentState(CreatureState.IDLE);
 			player.setTarget(this);
 			MyTargetSelected my = new MyTargetSelected(getObjectId(), player.getLevel() - getLevel());
 			player.sendPacket(my);
@@ -149,7 +150,7 @@ public class NpcInstance extends Creature
 				double distance = getDistance(player.getX(), player.getY());
 				if (distance > INTERACTION_DISTANCE)
 				{
-					player.setCurrentState((byte) 7);
+					player.setCurrentState(CreatureState.INTERACT);
 					player.setInteractTarget(this);
 					player.moveTo(getX(), getY(), getZ(), 150);
 				}
@@ -157,7 +158,7 @@ public class NpcInstance extends Creature
 				{
 					showChatWindow(player, 0);
 					player.sendPacket(new ActionFailed());
-					player.setCurrentState((byte) 0);
+					player.setCurrentState(CreatureState.IDLE);
 				}
 			}
 		}

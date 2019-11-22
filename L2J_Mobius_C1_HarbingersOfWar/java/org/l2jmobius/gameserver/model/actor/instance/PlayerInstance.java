@@ -32,6 +32,7 @@ import org.l2jmobius.gameserver.data.ExperienceTable;
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.data.LevelUpData;
 import org.l2jmobius.gameserver.data.SkillTable;
+import org.l2jmobius.gameserver.enums.CreatureState;
 import org.l2jmobius.gameserver.handler.ISkillHandler;
 import org.l2jmobius.gameserver.handler.SkillHandler;
 import org.l2jmobius.gameserver.managers.GmListManager;
@@ -511,10 +512,10 @@ public class PlayerInstance extends Creature
 		}
 		else
 		{
-			player.setCurrentState((byte) 8);
+			player.setCurrentState(CreatureState.FOLLOW);
 			if (getPrivateStoreType() != 0)
 			{
-				player.setCurrentState((byte) 7);
+				player.setCurrentState(CreatureState.INTERACT);
 			}
 			player.moveTo(getX(), getY(), getZ(), 36);
 		}
@@ -613,21 +614,21 @@ public class PlayerInstance extends Creature
 		{
 			switch (getCurrentState())
 			{
-				case 1:
+				case PICKUP_ITEM:
 				{
 					doPickupItem();
 					break;
 				}
-				case 5:
+				case ATTACKING:
 				{
 					startCombat();
 					break;
 				}
-				case 2:
+				case CASTING:
 				{
 					useMagic(_skill);
 				}
-				case 7:
+				case INTERACT:
 				{
 					if (getTarget() instanceof PlayerInstance)
 					{
@@ -641,7 +642,7 @@ public class PlayerInstance extends Creature
 						{
 							sendPacket(new PrivateBuyListBuy(temp, this));
 						}
-						setCurrentState((byte) 0);
+						setCurrentState(CreatureState.IDLE);
 						break;
 					}
 					if (_interactTarget == null)
@@ -660,7 +661,7 @@ public class PlayerInstance extends Creature
 	
 	private void doPickupItem()
 	{
-		setCurrentState((byte) 0);
+		setCurrentState(CreatureState.IDLE);
 		if (!(getTarget() instanceof ItemInstance))
 		{
 			_log.warning("trying to pickup wrong target." + getTarget());
@@ -735,7 +736,7 @@ public class PlayerInstance extends Creature
 	public void setTarget(WorldObject newTarget)
 	{
 		WorldObject oldTarget;
-		if (getCurrentState() == 2)
+		if (getCurrentState() == CreatureState.CASTING)
 		{
 			cancelCastMagic();
 		}
@@ -1244,6 +1245,7 @@ public class PlayerInstance extends Creature
 	{
 		Creature target = null;
 		target = getTarget() instanceof Creature ? (Creature) getTarget() : this;
+		
 		if ((skill.getTargetType() == Skill.TARGET_SELF) || (skill.getTargetType() == Skill.TARGET_PARTY))
 		{
 			target = this;
@@ -1256,6 +1258,7 @@ public class PlayerInstance extends Creature
 		{
 			return;
 		}
+		
 		int weaponType = getActiveWeapon().getWeaponType();
 		int skillId = skill.getId();
 		if ((skillId == 56) && (weaponType != 5))
@@ -1274,10 +1277,11 @@ public class PlayerInstance extends Creature
 		{
 			return;
 		}
+		
 		if (SkillHandler.getInstance().getSkillHandler(skill.getId()) == null)
 		{
 			SystemMessage sm = new SystemMessage(614);
-			sm.addString("This skill is not implemented yet");
+			sm.addString("This skill is not implemented yet.");
 			sendPacket(sm);
 			return;
 		}
@@ -1291,7 +1295,7 @@ public class PlayerInstance extends Creature
 			sendPacket(new SystemMessage(23));
 			return;
 		}
-		setCurrentState((byte) 2);
+		setCurrentState(CreatureState.CASTING);
 		setSkill(skill);
 		double distance = getDistance(target.getX(), target.getY());
 		if ((skill.getCastRange() > 0) && (distance > skill.getCastRange()))
@@ -1313,10 +1317,10 @@ public class PlayerInstance extends Creature
 		if (skill.getSkillTime() > 300)
 		{
 			disableSkill(skill.getId(), true);
-			_enableSkillTimer.schedule(new EnableSkill(skill.getId()), skill.getReuseDelay());
 			disableAllSkills();
-			_enableAllSkillsTimer.schedule(new EnableAllSkills(skill), skill.getSkillTime());
 			_magicUseTimer.schedule(new MagicUseTask(target, skill), skill.getHitTime());
+			_enableSkillTimer.schedule(new EnableSkill(skill.getId()), skill.getReuseDelay());
+			_enableAllSkillsTimer.schedule(new EnableAllSkills(skill), skill.getSkillTime());
 		}
 	}
 	
@@ -1391,7 +1395,7 @@ public class PlayerInstance extends Creature
 	
 	public void onMagicUseTimer(Creature target, Skill skill)
 	{
-		if ((getCurrentState() == 2) && _allSkillsDisabled && isSkillDisabled(skill.getId()) && (getSkill() == skill))
+		if ((getCurrentState() == CreatureState.CASTING) && (getSkill() == skill))
 		{
 			int magicId = skill.getId();
 			int level = getSkillLevel(magicId);
@@ -1417,13 +1421,13 @@ public class PlayerInstance extends Creature
 			ISkillHandler handler = SkillHandler.getInstance().getSkillHandler(skill.getId());
 			if (handler == null)
 			{
-				_log.warning("no skillhandler registered for skillId:" + skill.getId());
+				_log.warning("No skillhandler registered for skillId: " + skill.getId());
 			}
 			else
 			{
 				handler.useSkill(this, skill, target);
 			}
-			setCurrentState((byte) 0);
+			setCurrentState(CreatureState.IDLE);
 		}
 	}
 	
@@ -1512,7 +1516,7 @@ public class PlayerInstance extends Creature
 	
 	public void cancelCastMagic()
 	{
-		setCurrentState((byte) 0);
+		setCurrentState(CreatureState.IDLE);
 		enableAllSkills();
 		MagicSkillCanceld msc = new MagicSkillCanceld(getObjectId());
 		sendPacket(msc);
@@ -1578,5 +1582,4 @@ public class PlayerInstance extends Creature
 			}
 		}
 	}
-	
 }
