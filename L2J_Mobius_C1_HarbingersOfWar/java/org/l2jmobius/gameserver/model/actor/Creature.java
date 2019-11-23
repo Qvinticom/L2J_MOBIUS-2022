@@ -819,6 +819,7 @@ public abstract class Creature extends WorldObject
 				{
 					_currentMoveTask.cancel();
 				}
+				broadcastStatusUpdate();
 				final StopMove stop = new StopMove(this);
 				final Die die = new Die(this);
 				broadcastPacket(stop);
@@ -829,6 +830,7 @@ public abstract class Creature extends WorldObject
 				{
 					attacker.setTarget(null);
 				}
+				return;
 			}
 		}
 		broadcastStatusUpdate();
