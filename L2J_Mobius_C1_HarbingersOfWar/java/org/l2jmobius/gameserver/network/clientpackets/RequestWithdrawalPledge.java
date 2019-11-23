@@ -43,7 +43,7 @@ public class RequestWithdrawalPledge extends ClientBasePacket
 		ClanMember member = clan.getClanMember(activeChar.getName());
 		clan.removeClanMember(activeChar.getName());
 		clan.store();
-		activeChar.sendPacket(new SystemMessage(199));
+		activeChar.sendPacket(new SystemMessage(SystemMessage.CLAN_MEMBERSHIP_TERMINATED));
 		PlayerInstance player = member.getPlayerInstance();
 		player.setClan(null);
 		player.setClanId(0);

@@ -68,7 +68,7 @@ public class RequestBuyItem extends ClientBasePacket
 		}
 		if ((neededMoney > currentMoney) || (neededMoney < 0.0) || (currentMoney <= 0L))
 		{
-			SystemMessage sm = new SystemMessage(279);
+			SystemMessage sm = new SystemMessage(SystemMessage.YOU_NOT_ENOUGH_ADENA);
 			con.sendPacket(sm);
 			return;
 		}

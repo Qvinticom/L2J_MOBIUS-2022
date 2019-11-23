@@ -48,7 +48,7 @@ public class SoulShots implements IItemHandler
 		Weapon weapon = activeChar.getActiveWeapon();
 		if (weapon == null)
 		{
-			activeChar.sendPacket(new SystemMessage(339));
+			activeChar.sendPacket(new SystemMessage(SystemMessage.CANNOT_USE_SOULSHOTS));
 			return 0;
 		}
 		int grade = weapon.getCrystalType();
@@ -56,21 +56,21 @@ public class SoulShots implements IItemHandler
 		int count = item.getCount();
 		if (soulShotConsumption == 0)
 		{
-			activeChar.sendPacket(new SystemMessage(339));
+			activeChar.sendPacket(new SystemMessage(SystemMessage.CANNOT_USE_SOULSHOTS));
 			return 0;
 		}
 		if (((grade == 1) && (SoulshotId != 1835)) || ((grade == 2) && (SoulshotId != 1463)) || ((grade == 3) && (SoulshotId != 1464)) || ((grade == 4) && (SoulshotId != 1465)) || ((grade == 5) && (SoulshotId != 1466)) || ((grade == 6) && (SoulshotId != 1467)))
 		{
-			activeChar.sendPacket(new SystemMessage(337));
+			activeChar.sendPacket(new SystemMessage(SystemMessage.SOULSHOTS_GRADE_MISMATCH));
 			return 0;
 		}
 		if (count < soulShotConsumption)
 		{
-			activeChar.sendPacket(new SystemMessage(338));
+			activeChar.sendPacket(new SystemMessage(SystemMessage.NOT_ENOUGH_SOULSHOTS));
 			return 0;
 		}
 		activeChar.setActiveSoulshotGrade(grade);
-		activeChar.sendPacket(new SystemMessage(342));
+		activeChar.sendPacket(new SystemMessage(SystemMessage.ENABLED_SOULSHOT));
 		WorldObject OldTarget = activeChar.getTarget();
 		activeChar.setTarget(activeChar);
 		MagicSkillUser MSU = new MagicSkillUser(activeChar, 2039, 1, 0, 0);

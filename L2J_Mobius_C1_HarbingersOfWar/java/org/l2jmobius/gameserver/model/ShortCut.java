@@ -22,6 +22,7 @@ public class ShortCut
 	public static final int TYPE_SKILL = 2;
 	public static final int TYPE_ACTION = 3;
 	public static final int TYPE_ITEM = 1;
+	
 	private int _slot;
 	private int _type;
 	private int _id;

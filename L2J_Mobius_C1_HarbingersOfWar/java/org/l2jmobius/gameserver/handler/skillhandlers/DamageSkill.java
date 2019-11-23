@@ -62,7 +62,7 @@ public class DamageSkill implements ISkillHandler
 				mdef = 350;
 			}
 			int dmg = (int) ((91 * skill.getPower() * Math.sqrt(activeChar.getMagicalAttack())) / mdef);
-			SystemMessage sm = new SystemMessage(35);
+			SystemMessage sm = new SystemMessage(SystemMessage.YOU_DID_S1_DMG);
 			sm.addNumber(dmg);
 			activeChar.sendPacket(sm);
 			if (creature.getCurrentHp() > creature.getMaxHp())

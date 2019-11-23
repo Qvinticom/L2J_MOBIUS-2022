@@ -54,7 +54,7 @@ public class RequestUnEquipItem extends ClientBasePacket
 		activeChar.broadcastPacket(info);
 		if (unequiped.size() > 0)
 		{
-			SystemMessage sm = new SystemMessage(417);
+			SystemMessage sm = new SystemMessage(SystemMessage.S1_DISARMED);
 			sm.addItemName(unequiped.stream().findFirst().get().getItemId());
 			activeChar.sendPacket(sm);
 		}

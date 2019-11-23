@@ -60,7 +60,7 @@ public class SetPrivateStoreListBuy extends ClientBasePacket
 			if (cost > player.getAdena())
 			{
 				count = 0;
-				SystemMessage msg = new SystemMessage(720);
+				SystemMessage msg = new SystemMessage(SystemMessage.THE_PURCHASE_PRICE_IS_HIGHER_THAN_MONEY);
 				player.sendPacket(msg);
 			}
 			if (count != 0)

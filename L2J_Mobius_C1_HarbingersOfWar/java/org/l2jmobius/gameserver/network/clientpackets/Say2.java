@@ -61,7 +61,7 @@ public class Say2 extends ClientBasePacket
 			}
 			else
 			{
-				SystemMessage sm = new SystemMessage(3);
+				SystemMessage sm = new SystemMessage(SystemMessage.S1_IS_NOT_ONLINE);
 				sm.addString(target);
 				activeChar.sendPacket(sm);
 			}

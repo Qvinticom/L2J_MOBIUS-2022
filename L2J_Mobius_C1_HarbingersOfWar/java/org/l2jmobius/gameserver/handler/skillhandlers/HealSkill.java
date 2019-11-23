@@ -69,7 +69,7 @@ public class HealSkill implements ISkillHandler
 				StatusUpdate su = new StatusUpdate(player.getObjectId());
 				su.addAttribute(StatusUpdate.CUR_HP, (int) hp);
 				player.sendPacket(su);
-				player.sendPacket(new SystemMessage(25));
+				player.sendPacket(new SystemMessage(SystemMessage.REJUVENATING_HP));
 			}
 		}
 		else
@@ -79,7 +79,7 @@ public class HealSkill implements ISkillHandler
 			StatusUpdate su = new StatusUpdate(activeChar.getObjectId());
 			su.addAttribute(StatusUpdate.CUR_HP, (int) hp);
 			activeChar.sendPacket(su);
-			activeChar.sendPacket(new SystemMessage(25));
+			activeChar.sendPacket(new SystemMessage(SystemMessage.REJUVENATING_HP));
 		}
 	}
 	

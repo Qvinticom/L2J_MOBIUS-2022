@@ -52,11 +52,11 @@ public class RequestAnswerJoinPledge extends ClientBasePacket
 			activeChar.sendPacket(pu);
 			activeChar.sendPacket(new UserInfo(activeChar));
 			activeChar.broadcastPacket(new CharInfo(activeChar));
-			SystemMessage sm = new SystemMessage(195);
+			SystemMessage sm = new SystemMessage(SystemMessage.ENTERED_THE_CLAN);
 			activeChar.sendPacket(sm);
 			// ClanMember[] members = clan.getMembers();
 			PledgeShowMemberListAdd la = new PledgeShowMemberListAdd(activeChar);
-			sm = new SystemMessage(222);
+			sm = new SystemMessage(SystemMessage.S1_HAS_JOINED_CLAN);
 			sm.addString(activeChar.getName());
 			clan.broadcastToOnlineMembers(la);
 			clan.broadcastToOnlineMembers(sm);
@@ -64,7 +64,7 @@ public class RequestAnswerJoinPledge extends ClientBasePacket
 		}
 		else
 		{
-			SystemMessage sm = new SystemMessage(196);
+			SystemMessage sm = new SystemMessage(SystemMessage.S1_REFUSED_TO_JOIN_CLAN);
 			sm.addString(activeChar.getName());
 			requestor.sendPacket(sm);
 		}

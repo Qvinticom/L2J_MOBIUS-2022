@@ -279,7 +279,7 @@ public class PetInstance extends Creature
 		broadcastPacket(su);
 		SocialAction sa = new SocialAction(getObjectId(), 15);
 		broadcastPacket(sa);
-		_owner.sendPacket(new SystemMessage(96));
+		_owner.sendPacket(new SystemMessage(SystemMessage.YOU_INCREASED_YOUR_LEVEL));
 	}
 	
 	public void followOwner(PlayerInstance owner)

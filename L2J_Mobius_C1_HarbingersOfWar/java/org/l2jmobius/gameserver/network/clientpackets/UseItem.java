@@ -56,7 +56,7 @@ public class UseItem extends ClientBasePacket
 			{
 				activeChar.updateMDef();
 			}
-			SystemMessage sm = new SystemMessage(49);
+			SystemMessage sm = new SystemMessage(SystemMessage.S1_EQUIPPED);
 			sm.addItemName(item.getItemId());
 			activeChar.sendPacket(sm);
 			InventoryUpdate iu = new InventoryUpdate(items);

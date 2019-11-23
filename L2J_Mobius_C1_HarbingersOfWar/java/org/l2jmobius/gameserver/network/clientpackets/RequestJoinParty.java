@@ -37,13 +37,13 @@ public class RequestJoinParty extends ClientBasePacket
 		PlayerInstance requestor = client.getActiveChar();
 		if (requestor.isTransactionInProgress())
 		{
-			SystemMessage msg = new SystemMessage(164);
+			SystemMessage msg = new SystemMessage(SystemMessage.WAITING_FOR_REPLY);
 			requestor.sendPacket(msg);
 			return;
 		}
 		if (target.isInParty())
 		{
-			SystemMessage msg = new SystemMessage(160);
+			SystemMessage msg = new SystemMessage(SystemMessage.S1_IS_ALREADY_IN_PARTY);
 			msg.addString(target.getName());
 			requestor.sendPacket(msg);
 			return;
@@ -62,12 +62,12 @@ public class RequestJoinParty extends ClientBasePacket
 	{
 		if (requestor.getParty().getMemberCount() >= 9)
 		{
-			requestor.sendPacket(new SystemMessage(155));
+			requestor.sendPacket(new SystemMessage(SystemMessage.PARTY_FULL));
 			return;
 		}
 		if (!requestor.getParty().isLeader(requestor))
 		{
-			requestor.sendPacket(new SystemMessage(154));
+			requestor.sendPacket(new SystemMessage(SystemMessage.ONLY_LEADER_CAN_INVITE));
 			return;
 		}
 		if (target.getKnownPlayers().contains(requestor))
@@ -78,13 +78,13 @@ public class RequestJoinParty extends ClientBasePacket
 				requestor.setTransactionRequester(target);
 				AskJoinParty ask = new AskJoinParty(requestor.getObjectId(), itemDistribution);
 				target.sendPacket(ask);
-				SystemMessage msg = new SystemMessage(105);
+				SystemMessage msg = new SystemMessage(SystemMessage.YOU_INVITED_S1_TO_PARTY);
 				msg.addString(target.getName());
 				requestor.sendPacket(msg);
 			}
 			else
 			{
-				SystemMessage msg = new SystemMessage(153);
+				SystemMessage msg = new SystemMessage(SystemMessage.S1_IS_BUSY_TRY_LATER);
 				requestor.sendPacket(msg);
 				_log.warning(requestor.getName() + " already received a party invitation");
 			}
@@ -106,13 +106,13 @@ public class RequestJoinParty extends ClientBasePacket
 				requestor.setTransactionRequester(target);
 				AskJoinParty ask = new AskJoinParty(requestor.getObjectId(), itemDistribution);
 				target.sendPacket(ask);
-				SystemMessage msg = new SystemMessage(105);
+				SystemMessage msg = new SystemMessage(SystemMessage.YOU_INVITED_S1_TO_PARTY);
 				msg.addString(target.getName());
 				requestor.sendPacket(msg);
 			}
 			else
 			{
-				SystemMessage msg = new SystemMessage(153);
+				SystemMessage msg = new SystemMessage(SystemMessage.S1_IS_BUSY_TRY_LATER);
 				msg.addString(target.getName());
 				requestor.sendPacket(msg);
 				_log.warning(requestor.getName() + " already received a party invitation");

@@ -43,7 +43,7 @@ public class SendWareHouseDepositList extends ClientBasePacket
 		int currentMoney = activeChar.getAdena();
 		if (neededMoney > currentMoney)
 		{
-			SystemMessage sm = new SystemMessage(279);
+			SystemMessage sm = new SystemMessage(SystemMessage.YOU_NOT_ENOUGH_ADENA);
 			con.sendPacket(sm);
 			return;
 		}

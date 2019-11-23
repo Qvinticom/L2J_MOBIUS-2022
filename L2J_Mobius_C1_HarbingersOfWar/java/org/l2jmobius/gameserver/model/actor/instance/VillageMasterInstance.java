@@ -60,26 +60,26 @@ public class VillageMasterInstance extends NpcInstance
 	{
 		if (player.getLevel() < 10)
 		{
-			SystemMessage sm = new SystemMessage(190);
+			SystemMessage sm = new SystemMessage(SystemMessage.FAILED_TO_CREATE_CLAN);
 			player.sendPacket(sm);
 			return;
 		}
 		if (player.getClanId() != 0)
 		{
-			SystemMessage sm = new SystemMessage(190);
+			SystemMessage sm = new SystemMessage(SystemMessage.FAILED_TO_CREATE_CLAN);
 			player.sendPacket(sm);
 			return;
 		}
 		if (clanName.length() > 16)
 		{
-			SystemMessage sm = new SystemMessage(262);
+			SystemMessage sm = new SystemMessage(SystemMessage.CLAN_NAME_TOO_LONG);
 			player.sendPacket(sm);
 			return;
 		}
 		Clan clan = ClanTable.getInstance().createClan(player, clanName);
 		if (clan == null)
 		{
-			SystemMessage sm = new SystemMessage(261);
+			SystemMessage sm = new SystemMessage(SystemMessage.CLAN_NAME_INCORRECT);
 			player.sendPacket(sm);
 			return;
 		}
@@ -90,7 +90,7 @@ public class VillageMasterInstance extends NpcInstance
 		player.sendPacket(pu);
 		UserInfo ui = new UserInfo(player);
 		player.sendPacket(ui);
-		SystemMessage sm = new SystemMessage(189);
+		SystemMessage sm = new SystemMessage(SystemMessage.CLAN_CREATED);
 		player.sendPacket(sm);
 	}
 }

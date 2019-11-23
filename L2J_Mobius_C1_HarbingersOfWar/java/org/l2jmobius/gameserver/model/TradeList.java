@@ -269,23 +269,23 @@ public class TradeList
 			ItemInstance temp = buyerInv.addItem(newitem);
 			if (amount == 1)
 			{
-				msg = new SystemMessage(378);
+				msg = new SystemMessage(SystemMessage.S1_PURCHASED_S2);
 				msg.addString(buyer.getName());
 				msg.addItemName(((ItemInstance) sellerItem).getItemId());
 				sysmsgs.add(msg);
-				msg = new SystemMessage(378);
+				msg = new SystemMessage(SystemMessage.S1_PURCHASED_S2);
 				msg.addString("You");
 				msg.addItemName(((ItemInstance) sellerItem).getItemId());
 				sysmsgs.add(msg);
 			}
 			else
 			{
-				msg = new SystemMessage(380);
+				msg = new SystemMessage(SystemMessage.S1_PURCHASED_S3_S2_s);
 				msg.addString(buyer.getName());
 				msg.addItemName(((ItemInstance) sellerItem).getItemId());
 				msg.addNumber(amount);
 				sysmsgs.add(msg);
-				msg = new SystemMessage(380);
+				msg = new SystemMessage(SystemMessage.S1_PURCHASED_S3_S2_s);
 				msg.addString("You");
 				msg.addItemName(((ItemInstance) sellerItem).getItemId());
 				msg.addNumber(amount);

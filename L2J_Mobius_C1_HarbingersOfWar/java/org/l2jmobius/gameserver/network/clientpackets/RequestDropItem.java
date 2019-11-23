@@ -64,7 +64,7 @@ public class RequestDropItem extends ClientBasePacket
 			}
 			if ((activeChar.getDistance(x, y) > 150.0) || (Math.abs(z - activeChar.getZ()) > 50))
 			{
-				SystemMessage sm = new SystemMessage(151);
+				SystemMessage sm = new SystemMessage(SystemMessage.CANNOT_DISCARD_DISTANCE_TOO_FAR);
 				activeChar.sendPacket(sm);
 				return;
 			}
@@ -102,7 +102,7 @@ public class RequestDropItem extends ClientBasePacket
 				iu.addModifiedItem(oldItem);
 			}
 			con.sendPacket(iu);
-			SystemMessage sm = new SystemMessage(298);
+			SystemMessage sm = new SystemMessage(SystemMessage.YOU_DROPPED_S1);
 			sm.addItemName(dropedItem.getItemId());
 			con.sendPacket(sm);
 			con.sendPacket(new UserInfo(activeChar));
@@ -110,7 +110,7 @@ public class RequestDropItem extends ClientBasePacket
 		}
 		else
 		{
-			SystemMessage msg = new SystemMessage(61);
+			SystemMessage msg = new SystemMessage(SystemMessage.NOTHING_HAPPENED);
 			client.getActiveChar().sendPacket(msg);
 		}
 	}

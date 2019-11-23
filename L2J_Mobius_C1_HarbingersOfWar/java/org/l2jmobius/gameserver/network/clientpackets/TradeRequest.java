@@ -37,12 +37,12 @@ public class TradeRequest extends ClientBasePacket
 		WorldObject target = world.findObject(objectId);
 		if ((target == null) || !(target instanceof PlayerInstance) || (target.getObjectId() != objectId))
 		{
-			player.sendPacket(new SystemMessage(144));
+			player.sendPacket(new SystemMessage(SystemMessage.TARGET_IS_INCORRECT));
 			return;
 		}
 		if (client.getActiveChar().getTransactionRequester() != null)
 		{
-			player.sendPacket(new SystemMessage(142));
+			player.sendPacket(new SystemMessage(SystemMessage.ALREADY_TRADING));
 			return;
 		}
 		PlayerInstance pcTarget = (PlayerInstance) target;
@@ -51,13 +51,13 @@ public class TradeRequest extends ClientBasePacket
 			pcTarget.setTransactionRequester(player);
 			player.setTransactionRequester(pcTarget);
 			pcTarget.sendPacket(new SendTradeRequest(player.getObjectId()));
-			SystemMessage sm = new SystemMessage(118);
+			SystemMessage sm = new SystemMessage(SystemMessage.REQUEST_S1_FOR_TRADE);
 			sm.addString(pcTarget.getName());
 			player.sendPacket(sm);
 		}
 		else
 		{
-			SystemMessage sm = new SystemMessage(153);
+			SystemMessage sm = new SystemMessage(SystemMessage.S1_IS_BUSY_TRY_LATER);
 			sm.addString(pcTarget.getName());
 			player.sendPacket(sm);
 			_log.info("transaction already in progress.");

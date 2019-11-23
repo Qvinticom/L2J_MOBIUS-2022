@@ -38,7 +38,7 @@ public class AnswerTradeRequest extends ClientBasePacket
 		{
 			if (response == 1)
 			{
-				SystemMessage msg = new SystemMessage(120);
+				SystemMessage msg = new SystemMessage(SystemMessage.BEGIN_TRADE_WITH_S1);
 				msg.addString(player.getName());
 				requestor.sendPacket(msg);
 				requestor.sendPacket(new TradeStart(requestor));
@@ -46,7 +46,7 @@ public class AnswerTradeRequest extends ClientBasePacket
 				{
 					requestor.setTradeList(new TradeList(0));
 				}
-				msg = new SystemMessage(120);
+				msg = new SystemMessage(SystemMessage.BEGIN_TRADE_WITH_S1);
 				msg.addString(requestor.getName());
 				player.sendPacket(msg);
 				player.sendPacket(new TradeStart(player));
@@ -57,7 +57,7 @@ public class AnswerTradeRequest extends ClientBasePacket
 			}
 			else
 			{
-				SystemMessage msg = new SystemMessage(119);
+				SystemMessage msg = new SystemMessage(SystemMessage.S1_DENIED_TRADE_REQUEST);
 				msg.addString(player.getName());
 				requestor.sendPacket(msg);
 				requestor.setTransactionRequester(null);
@@ -67,7 +67,7 @@ public class AnswerTradeRequest extends ClientBasePacket
 		else if (response != 0)
 		{
 			player.sendPacket(new SendTradeDone(0));
-			SystemMessage msg = new SystemMessage(145);
+			SystemMessage msg = new SystemMessage(SystemMessage.TARGET_IS_NOT_FOUND_IN_THE_GAME);
 			player.sendPacket(msg);
 			player.setTransactionRequester(null);
 		}

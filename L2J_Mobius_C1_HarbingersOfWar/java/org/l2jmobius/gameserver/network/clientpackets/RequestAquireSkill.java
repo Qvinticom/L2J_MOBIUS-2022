@@ -61,7 +61,7 @@ public class RequestAquireSkill extends ClientBasePacket
 			StatusUpdate su = new StatusUpdate(player.getObjectId());
 			su.addAttribute(StatusUpdate.SP, player.getSp());
 			player.sendPacket(su);
-			SystemMessage sm = new SystemMessage(277);
+			SystemMessage sm = new SystemMessage(SystemMessage.LEARNED_SKILL_S1);
 			sm.addSkillName(id);
 			player.sendPacket(sm);
 			if (level > 1)
@@ -79,7 +79,7 @@ public class RequestAquireSkill extends ClientBasePacket
 		}
 		else
 		{
-			SystemMessage sm = new SystemMessage(278);
+			SystemMessage sm = new SystemMessage(SystemMessage.NOT_ENOUGH_SP_TO_LEARN_SKILL);
 			player.sendPacket(sm);
 		}
 		skills = SkillTreeTable.getInstance().getAvailableSkills(player);

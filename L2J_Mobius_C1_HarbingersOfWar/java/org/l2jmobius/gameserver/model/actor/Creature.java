@@ -511,7 +511,7 @@ public abstract class Creature extends WorldObject
 		StatusUpdate su = new StatusUpdate(getObjectId());
 		su.addAttribute(StatusUpdate.LEVEL, _level);
 		sendPacket(su);
-		sendPacket(new SystemMessage(96));
+		sendPacket(new SystemMessage(SystemMessage.YOU_INCREASED_YOUR_LEVEL));
 		SocialAction sa = new SocialAction(getObjectId(), 15);
 		broadcastPacket(sa);
 		sendPacket(sa);
@@ -1099,7 +1099,7 @@ public abstract class Creature extends WorldObject
 			setCurrentState(CreatureState.IDLE);
 			ActionFailed af = new ActionFailed();
 			sendPacket(af);
-			sendPacket(new SystemMessage(112));
+			sendPacket(new SystemMessage(SystemMessage.NOT_ENOUGH_ARROWS));
 			return;
 		}
 		double distance = getDistance(target.getX(), target.getY());
@@ -1170,7 +1170,7 @@ public abstract class Creature extends WorldObject
 				{
 					if (getCurrentMp() < weaponItem.getMpConsume())
 					{
-						sendPacket(new SystemMessage(24));
+						sendPacket(new SystemMessage(SystemMessage.NOT_ENOUGH_MP));
 						setInCombat(false);
 						setCurrentState(CreatureState.IDLE);
 						ActionFailed af = new ActionFailed();
@@ -1178,7 +1178,7 @@ public abstract class Creature extends WorldObject
 						return;
 					}
 					reduceCurrentMp(weaponItem.getMpConsume());
-					sendPacket(new SystemMessage(41));
+					sendPacket(new SystemMessage(SystemMessage.GETTING_READY_TO_SHOOT_AN_ARROW));
 					SetupGauge sg = new SetupGauge(1, calculateAttackSpeed(weaponItem) * 2);
 					sendPacket(sg);
 					_hitTimer.schedule(new HitTask(this, target, damage, crit, miss, false), calculateHitSpeed(weaponItem, 1));

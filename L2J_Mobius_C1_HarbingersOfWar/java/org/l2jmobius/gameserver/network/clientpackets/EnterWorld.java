@@ -47,7 +47,7 @@ public class EnterWorld extends ClientBasePacket
 			activeChar.setIsGM(true);
 			GmListManager.getInstance().addGm(activeChar);
 		}
-		SystemMessage sm = new SystemMessage(34);
+		SystemMessage sm = new SystemMessage(SystemMessage.WELCOME_TO_LINEAGE);
 		con.sendPacket(sm);
 		
 		Announcements.getInstance().showAnnouncements(activeChar);
@@ -60,17 +60,17 @@ public class EnterWorld extends ClientBasePacket
 		{
 			switch (shortcut.getType())
 			{
-				case 3:
+				case ShortCut.TYPE_ACTION:
 				{
 					sci.addActionShotCut(shortcut.getSlot(), shortcut.getId(), shortcut.getUnk());
 					continue;
 				}
-				case 2:
+				case ShortCut.TYPE_SKILL:
 				{
 					sci.addSkillShotCut(shortcut.getSlot(), shortcut.getId(), shortcut.getLevel(), shortcut.getUnk());
 					continue;
 				}
-				case 1:
+				case ShortCut.TYPE_ITEM:
 				{
 					sci.addItemShotCut(shortcut.getSlot(), shortcut.getId(), shortcut.getUnk());
 					continue;
@@ -99,7 +99,7 @@ public class EnterWorld extends ClientBasePacket
 		if (clan != null)
 		{
 			clan.getClanMember(activeChar.getName()).setPlayerInstance(activeChar);
-			SystemMessage msg = new SystemMessage(304);
+			SystemMessage msg = new SystemMessage(SystemMessage.CLAN_MEMBER_S1_LOGGED_IN);
 			msg.addString(activeChar.getName());
 			for (PlayerInstance clanMember : clan.getOnlineMembers(activeChar.getName()))
 			{

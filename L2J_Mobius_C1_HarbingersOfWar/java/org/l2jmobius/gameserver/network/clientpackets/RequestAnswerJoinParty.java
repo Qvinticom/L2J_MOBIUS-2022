@@ -40,7 +40,7 @@ public class RequestAnswerJoinParty extends ClientBasePacket
 		}
 		else
 		{
-			SystemMessage msg = new SystemMessage(305);
+			SystemMessage msg = new SystemMessage(SystemMessage.PLAYER_DECLINED);
 			requestor.sendPacket(msg);
 			if (requestor.getParty().getMemberCount() == 1)
 			{

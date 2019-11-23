@@ -37,12 +37,12 @@ public class RequestJoinPledge extends ClientBasePacket
 		PlayerInstance activeChar = client.getActiveChar();
 		if (activeChar.isTransactionInProgress())
 		{
-			activeChar.sendPacket(new SystemMessage(164));
+			activeChar.sendPacket(new SystemMessage(SystemMessage.WAITING_FOR_REPLY));
 			return;
 		}
 		if (target == activeChar.getObjectId())
 		{
-			SystemMessage sm = new SystemMessage(4);
+			SystemMessage sm = new SystemMessage(SystemMessage.CANNOT_INVITE_YOURSELF);
 			activeChar.sendPacket(sm);
 			return;
 		}
@@ -51,14 +51,14 @@ public class RequestJoinPledge extends ClientBasePacket
 			PlayerInstance member = (PlayerInstance) object;
 			if (member.getClanId() != 0)
 			{
-				SystemMessage sm = new SystemMessage(10);
+				SystemMessage sm = new SystemMessage(SystemMessage.S1_WORKING_WITH_ANOTHER_CLAN);
 				sm.addString(member.getName());
 				activeChar.sendPacket(sm);
 				return;
 			}
 			if (member.isTransactionInProgress())
 			{
-				SystemMessage sm = new SystemMessage(153);
+				SystemMessage sm = new SystemMessage(SystemMessage.S1_IS_BUSY_TRY_LATER);
 				sm.addString(member.getName());
 				activeChar.sendPacket(sm);
 				return;

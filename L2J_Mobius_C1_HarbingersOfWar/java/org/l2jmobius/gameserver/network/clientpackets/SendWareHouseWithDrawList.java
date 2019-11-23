@@ -66,7 +66,7 @@ public class SendWareHouseWithDrawList extends ClientBasePacket
 			{
 				World.getInstance().removeVisibleObject(items[i]);
 			}
-			SystemMessage sm = new SystemMessage(422);
+			SystemMessage sm = new SystemMessage(SystemMessage.WEIGHT_LIMIT_EXCEEDED);
 			activeChar.sendPacket(sm);
 		}
 	}

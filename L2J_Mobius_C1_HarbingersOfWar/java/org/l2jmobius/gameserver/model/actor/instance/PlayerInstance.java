@@ -342,7 +342,7 @@ public class PlayerInstance extends Creature
 		su.addAttribute(StatusUpdate.EXP, _exp);
 		su.addAttribute(StatusUpdate.SP, _sp);
 		sendPacket(su);
-		SystemMessage sm = new SystemMessage(95);
+		SystemMessage sm = new SystemMessage(SystemMessage.YOU_EARNED_S1_EXP_AND_S2_SP);
 		sm.addNumber(addToExp);
 		sm.addNumber(addToSp);
 		sendPacket(sm);
@@ -653,15 +653,15 @@ public class PlayerInstance extends Creature
 	{
 		if (crit)
 		{
-			sendPacket(new SystemMessage(44));
+			sendPacket(new SystemMessage(SystemMessage.CRITICAL_HIT));
 		}
 		if (miss)
 		{
-			sendPacket(new SystemMessage(43));
+			sendPacket(new SystemMessage(SystemMessage.MISSED_TARGET));
 		}
 		else
 		{
-			SystemMessage sm = new SystemMessage(35);
+			SystemMessage sm = new SystemMessage(SystemMessage.YOU_DID_S1_DMG);
 			sm.addNumber(damage);
 			sendPacket(sm);
 		}
@@ -797,13 +797,13 @@ public class PlayerInstance extends Creature
 			SystemMessage smsg;
 			if (target.getItemId() == 57)
 			{
-				smsg = new SystemMessage(28);
+				smsg = new SystemMessage(SystemMessage.YOU_PICKED_UP_S1_ADENA);
 				smsg.addNumber(target.getCount());
 				sendPacket(smsg);
 			}
 			else
 			{
-				smsg = new SystemMessage(29);
+				smsg = new SystemMessage(SystemMessage.YOU_PICKED_UP_S1_S2);
 				smsg.addNumber(target.getCount());
 				smsg.addItemName(target.getItemId());
 				sendPacket(smsg);
@@ -889,7 +889,7 @@ public class PlayerInstance extends Creature
 		}
 		
 		// Damage message.
-		SystemMessage smsg = new SystemMessage(36);
+		SystemMessage smsg = new SystemMessage(SystemMessage.S1_GAVE_YOU_S2_DMG);
 		if ((attacker instanceof MonsterInstance) || (attacker instanceof NpcInstance))
 		{
 			int mobId = ((NpcInstance) attacker).getNpcTemplate().getNpcId();
@@ -1504,12 +1504,12 @@ public class PlayerInstance extends Creature
 		}
 		if (getCurrentMp() < skill.getMpConsume())
 		{
-			sendPacket(new SystemMessage(24));
+			sendPacket(new SystemMessage(SystemMessage.NOT_ENOUGH_MP));
 			return;
 		}
 		if (getCurrentHp() < skill.getHpConsume())
 		{
-			sendPacket(new SystemMessage(23));
+			sendPacket(new SystemMessage(SystemMessage.NOT_ENOUGH_HP));
 			return;
 		}
 		setCurrentState(CreatureState.CASTING);
@@ -1528,7 +1528,7 @@ public class PlayerInstance extends Creature
 		sendPacket(msu);
 		broadcastPacket(msu);
 		sendPacket(new SetupGauge(0, skill.getHitTime()));
-		SystemMessage sm = new SystemMessage(46);
+		SystemMessage sm = new SystemMessage(SystemMessage.USE_S1);
 		sm.addSkillName(magicId);
 		sendPacket(sm);
 		if (skill.getSkillTime() > 300)

@@ -90,10 +90,10 @@ public class Party
 		PartySmallWindowAll window = new PartySmallWindowAll();
 		window.setPartyList(_members);
 		player.sendPacket(window);
-		SystemMessage msg = new SystemMessage(106);
+		SystemMessage msg = new SystemMessage(SystemMessage.YOU_JOINED_S1_PARTY);
 		msg.addString(_members.get(0).getName());
 		player.sendPacket(msg);
-		msg = new SystemMessage(107);
+		msg = new SystemMessage(SystemMessage.S1_JOINED_PARTY);
 		msg.addString(player.getName());
 		this.broadcastToPartyMembers(msg);
 		this.broadcastToPartyMembers(new PartySmallWindowAdd(player));
@@ -107,11 +107,11 @@ public class Party
 		{
 			_members.remove(player);
 			_partyLvl -= player.getLevel() * player.getLevel();
-			SystemMessage msg = new SystemMessage(200);
+			SystemMessage msg = new SystemMessage(SystemMessage.YOU_LEFT_PARTY);
 			player.sendPacket(msg);
 			player.sendPacket(new PartySmallWindowDeleteAll());
 			player.setParty(null);
-			msg = new SystemMessage(108);
+			msg = new SystemMessage(SystemMessage.S1_LEFT_PARTY);
 			msg.addString(player.getName());
 			this.broadcastToPartyMembers(msg);
 			this.broadcastToPartyMembers(new PartySmallWindowDelete(player));
@@ -169,7 +169,7 @@ public class Party
 	
 	private void dissolveParty()
 	{
-		SystemMessage msg = new SystemMessage(203);
+		SystemMessage msg = new SystemMessage(SystemMessage.PARTY_DISPERSED);
 		for (int i = 0; i < _members.size(); ++i)
 		{
 			PlayerInstance temp = _members.get(i);
@@ -186,21 +186,21 @@ public class Party
 		target = _randomLoot ? getRandomMember() : player;
 		if (item.getCount() == 1)
 		{
-			smsg = new SystemMessage(30);
+			smsg = new SystemMessage(SystemMessage.YOU_PICKED_UP_S1);
 			smsg.addItemName(item.getItemId());
 			target.sendPacket(smsg);
-			smsg = new SystemMessage(300);
+			smsg = new SystemMessage(SystemMessage.S1_PICKED_UP_S2);
 			smsg.addString(target.getName());
 			smsg.addItemName(item.getItemId());
 			this.broadcastToPartyMembers(target, smsg);
 		}
 		else
 		{
-			smsg = new SystemMessage(29);
+			smsg = new SystemMessage(SystemMessage.YOU_PICKED_UP_S1_S2);
 			smsg.addNumber(item.getCount());
 			smsg.addItemName(item.getItemId());
 			target.sendPacket(smsg);
-			smsg = new SystemMessage(299);
+			smsg = new SystemMessage(SystemMessage.S1_PICKED_UP_S2_S3);
 			smsg.addString(target.getName());
 			smsg.addNumber(item.getCount());
 			smsg.addItemName(item.getItemId());
@@ -224,7 +224,7 @@ public class Party
 	public void distributeAdena(ItemInstance adena)
 	{
 		adena.setCount(adena.getCount() / _members.size());
-		SystemMessage smsg = new SystemMessage(28);
+		SystemMessage smsg = new SystemMessage(SystemMessage.YOU_PICKED_UP_S1_ADENA);
 		smsg.addNumber(adena.getCount());
 		for (int i = 0; i < _members.size(); ++i)
 		{

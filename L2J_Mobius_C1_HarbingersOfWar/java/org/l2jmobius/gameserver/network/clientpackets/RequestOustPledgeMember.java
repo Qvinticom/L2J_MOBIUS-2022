@@ -50,7 +50,7 @@ public class RequestOustPledgeMember extends ClientBasePacket
 		}
 		clan.removeClanMember(target);
 		clan.store();
-		SystemMessage msg = new SystemMessage(191);
+		SystemMessage msg = new SystemMessage(SystemMessage.CLAN_MEMBER_S1_EXPELLED);
 		msg.addString(member.getName());
 		clan.broadcastToOnlineMembers(msg);
 		clan.broadcastToOnlineMembers(new PledgeShowMemberListDelete(target));
@@ -60,7 +60,7 @@ public class RequestOustPledgeMember extends ClientBasePacket
 			player.setClan(null);
 			player.setClanId(0);
 			player.setTitle("");
-			player.sendPacket(new SystemMessage(199));
+			player.sendPacket(new SystemMessage(SystemMessage.CLAN_MEMBERSHIP_TERMINATED));
 			player.sendPacket(new UserInfo(player));
 			player.broadcastPacket(new CharInfo(player));
 			player.sendPacket(new PledgeShowMemberListDeleteAll());

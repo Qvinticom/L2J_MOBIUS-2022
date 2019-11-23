@@ -89,7 +89,7 @@ public class AddTradeItem extends ClientBasePacket
 		else
 		{
 			player.sendPacket(new SendTradeDone(0));
-			SystemMessage msg = new SystemMessage(145);
+			SystemMessage msg = new SystemMessage(SystemMessage.TARGET_IS_NOT_FOUND_IN_THE_GAME);
 			player.sendPacket(msg);
 			player.setTransactionRequester(null);
 			requestor.getTradeList().getItems().clear();
