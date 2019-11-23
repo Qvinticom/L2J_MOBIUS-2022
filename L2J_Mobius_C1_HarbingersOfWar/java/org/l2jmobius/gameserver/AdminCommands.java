@@ -456,7 +456,7 @@ public class AdminCommands extends Thread
 		replyMSG.append("<center><button value=\"Move to Location\" action=\"bypass -h admin_show_moves\" width=110 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></center>");
 		replyMSG.append("<center><button value=\"Spawn a Monster\" action=\"bypass -h admin_show_spawns\" width=110 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></center>");
 		replyMSG.append("<center><button value=\"Item Creation\" action=\"bypass -h admin_itemcreate\" width=110 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></center>");
-		replyMSG.append("<center><button value=\"GM Shops\" action=\"bypass -h admin_gm_shops\" width=110 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></center>");
+		replyMSG.append("<center><button value=\"GM Shop\" action=\"bypass -h admin_gm_shops\" width=110 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></center>");
 		replyMSG.append("<center><button value=\"Announcements\" action=\"bypass -h admin_list_announcements\" width=110 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></center>");
 		replyMSG.append("<br><br>");
 		replyMSG.append("<right><button value=\"Close\" action=\"bypass -h admin_close_window\" width=100 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></right>");
@@ -492,7 +492,7 @@ public class AdminCommands extends Thread
 		activeChar.sendPacket(il);
 		activeChar.sendMessage("You have spawned " + num + " item(s) number " + id + " in your inventory.");
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
-		final StringBuffer replyMSG = new StringBuffer("<html><title>Item Creation Complete(I Hope)</title>");
+		final StringBuffer replyMSG = new StringBuffer("<html><title>Item Creation Complete</title>");
 		replyMSG.append("<body>");
 		replyMSG.append("<center><button value=\"Back\" action=\"bypass -h admin_show\" width=40 height=15></center>");
 		replyMSG.append("</body></html>");
@@ -738,8 +738,6 @@ public class AdminCommands extends Thread
 		replyMSG.append("<td><edit var=\"load\" width=110></td></tr>");
 		replyMSG.append("<tr><td>Karma:</td>");
 		replyMSG.append("<td><edit var=\"karma\" width=110></td></tr>");
-		replyMSG.append("<tr><td>PvpFlag:</td>");
-		replyMSG.append("<td><edit var=\"pvpflag\" width=110></td></tr>");
 		replyMSG.append("<tr><td>PvpKills:</td>");
 		replyMSG.append("<td><edit var=\"pvpkills\" width=110></td></tr>");
 		replyMSG.append("<tr><td>ClassId:</td>");

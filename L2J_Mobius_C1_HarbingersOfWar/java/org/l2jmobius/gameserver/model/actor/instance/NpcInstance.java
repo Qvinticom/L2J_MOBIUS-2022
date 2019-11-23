@@ -181,7 +181,7 @@ public class NpcInstance extends Creature
 			html1.append("<tr><td>MP: " + getCurrentMp() + "</td></tr>");
 			html1.append("<tr><td>Level: " + getLevel() + "</td></tr>");
 			html1.append("<tr><td><br></td></tr>");
-			html1.append("<tr><td>Class: " + this.getClass().getName() + "</td></tr>");
+			html1.append("<tr><td>Class: " + getClass().getSimpleName() + "</td></tr>");
 			html1.append("<tr><td><br></td></tr>");
 			html1.append("<tr><td><button value=\"Kill\" action=\"bypass -h admin_kill " + getObjectId() + "\" width=40 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td></tr>");
 			html1.append("<tr><td><button value=\"Delete\" action=\"bypass -h admin_delete " + getObjectId() + "\" width=40 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td></tr>");
