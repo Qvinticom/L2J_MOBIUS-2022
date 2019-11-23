@@ -487,12 +487,13 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="SILVER" />
-		<set name="weight" val="100" />
-		<set name="is_tradable" val="false" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="50184" level="1" /> <!-- Expand Agathion Slots -->
+		</skills>
 	</item>
 	<item id="91934" name="Adventurer's Bracelet" type="Armor">
 		<!-- When equipped, opens up 1 Talisman slot. -->
@@ -512,14 +513,17 @@
 		<!-- Can be used to obtain the power of Agathion Griffin. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. P. Def. increased. <Unique Abilities>. P. Def. +5. -->
 		<set name="icon" val="icon.griffin_vehicle" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="SILVER" />
-		<set name="weight" val="5" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="50186" level="1" /> <!-- Adventurer's Agathion Griffin -->
+		</skills>
 	</item>
 	<item id="91936" name="Jewel of Adventurer Fragment" type="Armor">
 		<!-- Fragment of an unknown jewel. Max HP +5. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. -->

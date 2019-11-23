@@ -44,6 +44,8 @@ import quests.Q10866_PunitiveOperationOnTheDevilIsle.Q10866_PunitiveOperationOnT
 import quests.Q10961_EffectiveTraining.Q10961_EffectiveTraining;
 import quests.Q10962_NewHorizons.Q10962_NewHorizons;
 import quests.Q10963_ExploringTheAntNest.Q10963_ExploringTheAntNest;
+import quests.Q10964_SecretGarden.Q10964_SecretGarden;
+import quests.Q10965_DeathMysteries.Q10965_DeathMysteries;
 import quests.Q10966_ATripBegins.Q10966_ATripBegins;
 import quests.Q10967_CulturedAdventurer.Q10967_CulturedAdventurer;
 import quests.Q10981_UnbearableWolvesHowling.Q10981_UnbearableWolvesHowling;
@@ -123,6 +125,8 @@ public class QuestMasterHandler
 		Q10961_EffectiveTraining.class,
 		Q10962_NewHorizons.class,
 		Q10963_ExploringTheAntNest.class,
+		Q10964_SecretGarden.class,
+		Q10965_DeathMysteries.class,
 		Q10966_ATripBegins.class,
 		Q10967_CulturedAdventurer.class,
 		Q10981_UnbearableWolvesHowling.class,

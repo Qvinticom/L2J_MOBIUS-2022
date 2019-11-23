@@ -672,6 +672,11 @@
 		<!-- Activates the main agathion slot. -->
 		<icon>icon.agathion_magmeld_teleport</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="AgathionSlot">
+				<amount>1</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50185" toLevel="1" name="Summon Agathion - Griffin">
 		<!-- Summons Agathion. -->
