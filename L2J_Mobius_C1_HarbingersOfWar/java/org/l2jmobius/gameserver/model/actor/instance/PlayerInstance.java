@@ -135,6 +135,7 @@ public class PlayerInstance extends Creature
 	private long _uptime;
 	public byte updateKnownCounter = 0;
 	private Creature _interactTarget;
+	private static Timer _waterTimer = null;
 	
 	public Skill addSkill(Skill newSkill)
 	{
@@ -872,6 +873,11 @@ public class PlayerInstance extends Creature
 	@Override
 	public void reduceCurrentHp(int amount, Creature attacker)
 	{
+		reduceCurrentHp(amount, attacker, true);
+	}
+	
+	public void reduceCurrentHp(int amount, Creature attacker, boolean sendMessage)
+	{
 		if (isInvul())
 		{
 			return;
@@ -889,23 +895,30 @@ public class PlayerInstance extends Creature
 		}
 		
 		// Damage message.
-		final SystemMessage smsg = new SystemMessage(SystemMessage.S1_GAVE_YOU_S2_DMG);
-		if ((attacker instanceof MonsterInstance) || (attacker instanceof NpcInstance))
+		if (sendMessage)
 		{
-			final int mobId = ((NpcInstance) attacker).getNpcTemplate().getNpcId();
-			smsg.addNpcName(mobId);
+			final SystemMessage msg = new SystemMessage(SystemMessage.S1_GAVE_YOU_S2_DMG);
+			if ((attacker instanceof MonsterInstance) || (attacker instanceof NpcInstance))
+			{
+				final int mobId = ((NpcInstance) attacker).getNpcTemplate().getNpcId();
+				msg.addNpcName(mobId);
+			}
+			else
+			{
+				msg.addString(attacker.getName());
+			}
+			msg.addNumber(amount);
+			sendPacket(msg);
 		}
-		else
-		{
-			smsg.addString(attacker.getName());
-		}
-		smsg.addNumber(amount);
-		sendPacket(smsg);
 		
+		// Dead check.
 		if (!isDead())
 		{
 			return;
 		}
+		
+		// Stop water task.
+		stopWaterTask();
 		
 		// Calculate Karma lost.
 		if (getKarma() > 0)
@@ -921,12 +934,17 @@ public class PlayerInstance extends Creature
 					getInventory().dropItem(item, 1);
 				}
 			}
-			decreaseKarma();
+			
+			// Not self inflicted damage.
+			if (attacker != this)
+			{
+				decreaseKarma();
+			}
 		}
 		
 		// Died from player.
 		final PlayerInstance killer = attacker.getActingPlayer();
-		if (killer != null)
+		if ((killer != null) && (killer != this))
 		{
 			if (_pvpFlag > 0)
 			{
@@ -936,7 +954,6 @@ public class PlayerInstance extends Creature
 			else if (_karma == 0)
 			{
 				killer.increasePkKillsAndKarma(getLevel());
-				killer.sendPacket(new UserInfo(killer));
 			}
 		}
 	}
@@ -1802,6 +1819,95 @@ public class PlayerInstance extends Creature
 			catch (Exception e)
 			{
 				e.printStackTrace();
+			}
+		}
+	}
+	
+	public void checkWaterState()
+	{
+		// Water level.
+		if (getZ() < -3779) // TODO: Water zones.
+		{
+			// Banned "underwater" map regions.
+			final int regionX = ((getX() - World.MAP_MIN_X) >> 15) + World.TILE_X_MIN;
+			final int regionY = ((getY() - World.MAP_MIN_Y) >> 15) + World.TILE_Y_MIN;
+			// TODO: Check for more?
+			if (((regionX == 18) && (regionY == 19)) // School of Dark Arts
+				|| ((regionX == 18) && (regionY == 23)) // Forgotten Temple
+				|| ((regionX == 19) && (regionY == 23)) // Ant Nest
+				|| ((regionX == 20) && (regionY == 18)) // Dark Elf Village
+				|| ((regionX == 20) && (regionY == 21)) // Cruma Tower
+				|| ((regionX == 21) && (regionY == 18)) // Sea of Spores
+				|| ((regionX == 22) && (regionY == 18)) // Ivory Tower
+				|| ((regionX == 24) && (regionY == 21)) // Lair of Antharas
+				|| ((regionX == 25) && (regionY == 12)) // Mithril Mines
+				|| ((regionX == 25) && (regionY == 19)) // Giant's Cave
+				|| ((regionX == 25) && (regionY == 21)) // Antharas Nest
+			)
+			{
+				return;
+			}
+			
+			startWaterTask();
+		}
+		else
+		{
+			stopWaterTask();
+		}
+	}
+	
+	public boolean isInWater()
+	{
+		return _waterTimer != null;
+	}
+	
+	private void startWaterTask()
+	{
+		if ((_waterTimer == null) && !isDead())
+		{
+			_waterTimer = new Timer();
+			_waterTimer.schedule(new waterTask(this), 86000, 1000);
+			sendPacket(new SetupGauge(SetupGauge.CYAN, 86000));
+		}
+	}
+	
+	private void stopWaterTask()
+	{
+		if (_waterTimer != null)
+		{
+			_waterTimer.cancel();
+			_waterTimer = null;
+			sendPacket(new SetupGauge(SetupGauge.CYAN, 0));
+		}
+	}
+	
+	class waterTask extends TimerTask
+	{
+		private final PlayerInstance _player;
+		
+		public waterTask(PlayerInstance player)
+		{
+			_player = player;
+		}
+		
+		@Override
+		public void run()
+		{
+			try
+			{
+				int reduceHp = (int) (getMaxHp() / 100.0);
+				if (reduceHp < 1)
+				{
+					reduceHp = 1;
+				}
+				
+				reduceCurrentHp(reduceHp, _player, false);
+				final SystemMessage sm = new SystemMessage(SystemMessage.DROWN_DAMAGE_S1);
+				sm.addNumber(reduceHp);
+				sendPacket(sm);
+			}
+			catch (Throwable e)
+			{
 			}
 		}
 	}

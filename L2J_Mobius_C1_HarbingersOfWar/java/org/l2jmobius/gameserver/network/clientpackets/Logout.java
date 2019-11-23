@@ -41,6 +41,13 @@ public class Logout extends ClientBasePacket
 				player.sendPacket(new ActionFailed());
 				return;
 			}
+			if (player.isInWater() && (player.getZ() > -16000))
+			{
+				player.sendMessage("You cannot exit the game under water.");
+				player.sendPacket(new ActionFailed());
+				return;
+			}
+			
 			final LeaveWorld ql = new LeaveWorld();
 			client.getConnection().sendPacket(ql);
 			player.deleteMe();

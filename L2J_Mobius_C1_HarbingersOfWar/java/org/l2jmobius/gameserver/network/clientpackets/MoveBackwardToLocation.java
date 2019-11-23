@@ -18,6 +18,7 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.gameserver.enums.CreatureState;
+import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.ClientThread;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -49,12 +50,20 @@ public class MoveBackwardToLocation extends ClientBasePacket
 				activeChar.sendPacket(ac);
 				activeChar.broadcastPacket(ac);
 			}
+			
 			activeChar.setInCombat(false);
 			activeChar.setCurrentState(CreatureState.IDLE);
 			activeChar.setX(originX);
 			activeChar.setY(originY);
 			activeChar.setZ(originZ);
 			activeChar.moveTo(targetX, targetY, targetZ, 0);
+			
+			final int x = ((activeChar.getX() - World.MAP_MIN_X) >> 15) + World.TILE_X_MIN;
+			final int y = ((activeChar.getY() - World.MAP_MIN_Y) >> 15) + World.TILE_Y_MIN;
+			System.out.println(x + " " + y);
+			
+			// Water check.
+			activeChar.checkWaterState();
 		}
 	}
 	

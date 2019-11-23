@@ -1,5 +1,5 @@
 /*
- * This file is part of the L2J Mobius project.
+lo * This file is part of the L2J Mobius project.
  * 
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -42,6 +42,13 @@ public class RequestRestart extends ClientBasePacket
 				player.sendPacket(new ActionFailed());
 				return;
 			}
+			if (player.isInWater() && (player.getZ() > -16000))
+			{
+				player.sendMessage("You cannot exit the game under water.");
+				player.sendPacket(new ActionFailed());
+				return;
+			}
+			
 			player.deleteMe();
 			final RestartResponse response = new RestartResponse();
 			client.getConnection().sendPacket(response);

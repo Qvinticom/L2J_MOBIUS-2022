@@ -92,6 +92,9 @@ public class ValidatePosition extends ClientBasePacket
 				}
 				activeChar.updateKnownCounter = 0;
 			}
+			
+			// Water check.
+			activeChar.checkWaterState();
 		}
 	}
 	

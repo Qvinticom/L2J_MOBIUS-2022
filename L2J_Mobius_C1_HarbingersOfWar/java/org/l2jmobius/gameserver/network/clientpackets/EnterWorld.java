@@ -20,6 +20,7 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import java.io.IOException;
 
 import org.l2jmobius.gameserver.Announcements;
+import org.l2jmobius.gameserver.data.MapRegionTable;
 import org.l2jmobius.gameserver.managers.GmListManager;
 import org.l2jmobius.gameserver.model.Clan;
 import org.l2jmobius.gameserver.model.ShortCut;
@@ -31,6 +32,7 @@ import org.l2jmobius.gameserver.network.serverpackets.Die;
 import org.l2jmobius.gameserver.network.serverpackets.ItemList;
 import org.l2jmobius.gameserver.network.serverpackets.ShortCutInit;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2jmobius.gameserver.network.serverpackets.TeleportToLocation;
 import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 
 public class EnterWorld extends ClientBasePacket
@@ -91,6 +93,29 @@ public class EnterWorld extends ClientBasePacket
 		}
 		World.getInstance().addVisibleObject(activeChar);
 		notifyClanMembers(activeChar);
+		
+		// Fallen in game graphics?
+		if (activeChar.getZ() < -16000)
+		{
+			final int[] townCords = MapRegionTable.getInstance().getClosestTownCords(activeChar);
+			activeChar.sendPacket(new TeleportToLocation(activeChar, townCords[0], townCords[1], townCords[2]));
+			World.getInstance().removeVisibleObject(activeChar);
+			activeChar.removeAllKnownObjects();
+			activeChar.setX(townCords[0]);
+			activeChar.setY(townCords[1]);
+			activeChar.setZ(townCords[2]);
+			try
+			{
+				Thread.sleep(2000L);
+			}
+			catch (InterruptedException e)
+			{
+			}
+			World.getInstance().addVisibleObject(activeChar);
+		}
+		
+		// Water check.
+		activeChar.checkWaterState();
 	}
 	
 	private void notifyClanMembers(PlayerInstance activeChar)

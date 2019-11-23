@@ -30,6 +30,16 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 public class World
 {
+	public static final int TILE_SIZE = 32768;
+	public static final int TILE_X_MIN = 11;
+	public static final int TILE_Y_MIN = 10;
+	// public static final int TILE_X_MAX = 26;
+	// public static final int TILE_Y_MAX = 26;
+	public static final int TILE_ZERO_COORD_X = 20;
+	public static final int TILE_ZERO_COORD_Y = 18;
+	public static final int MAP_MIN_X = (TILE_X_MIN - TILE_ZERO_COORD_X) * TILE_SIZE;
+	public static final int MAP_MIN_Y = (TILE_Y_MIN - TILE_ZERO_COORD_Y) * TILE_SIZE;
+	
 	private final Map<String, PlayerInstance> _allPlayers = new ConcurrentHashMap<>();
 	private final Map<Integer, WorldObject> _allObjects = new ConcurrentHashMap<>();
 	private final Map<Integer, WorldObject> _visibleObjects = new ConcurrentHashMap<>();
