@@ -140,13 +140,13 @@ public class ClientThread extends Thread
 							}
 							if (lc.isAccountInLoginServer(account))
 							{
-								_log.warning("account is in use on Login server (kicking off):" + account);
+								_log.warning("Account is in use on Login server (kicking off):" + account);
 								lc.getLoginServerConnection(account).close();
 								lc.removeLoginServerLogin(account);
 							}
 							if (lc.isAccountInGameServer(account))
 							{
-								_log.warning("account is in use on Gamea server (kicking off):" + account);
+								_log.warning("Account is in use on Game server (kicking off):" + account);
 								lc.getClientConnection(account).close();
 								lc.removeGameServerLogin(account);
 							}

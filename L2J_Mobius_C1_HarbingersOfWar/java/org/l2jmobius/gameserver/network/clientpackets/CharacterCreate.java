@@ -125,7 +125,6 @@ public class CharacterCreate extends ClientBasePacket
 		newChar.setRunSpeed(template.getMoveSpd());
 		newChar.setWalkSpeed((int) (template.getMoveSpd() * 0.7));
 		newChar.setWit(template.getWit());
-		newChar.setPvpFlag(0);
 		newChar.addAdena(5000);
 		newChar.setCanCraft(template.getCanCraft());
 		newChar.setX(template.getX());

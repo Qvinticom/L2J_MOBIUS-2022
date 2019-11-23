@@ -20,7 +20,7 @@ package org.l2jmobius.gameserver.model;
 public class CharSelectInfoPackage
 {
 	private String _name;
-	private int _charId = 199546;
+	private int _charId = 0;
 	private int _exp = 0;
 	private int _sp = 0;
 	private int _clanId = 0;
@@ -37,6 +37,7 @@ public class CharSelectInfoPackage
 	private int _maxMp = 0;
 	private double _currentMp = 0.0;
 	private Inventory _inventory = new Inventory();
+	private int _karma;
 	
 	public int getCharId()
 	{
@@ -216,5 +217,15 @@ public class CharSelectInfoPackage
 	public void setSp(int sp)
 	{
 		_sp = sp;
+	}
+	
+	public int getKarma()
+	{
+		return _karma;
+	}
+	
+	public void setKarma(int karma)
+	{
+		_karma = karma;
 	}
 }

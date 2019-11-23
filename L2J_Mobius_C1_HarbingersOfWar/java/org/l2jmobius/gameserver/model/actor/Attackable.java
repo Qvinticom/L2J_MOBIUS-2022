@@ -172,6 +172,12 @@ public class Attackable extends NpcInstance
 					stopRandomWalking();
 					stopTargetScan();
 					calculateRewards(attacker);
+					
+					final PlayerInstance killer = attacker.getActingPlayer();
+					if ((killer != null) && (killer.getKarma() > 0))
+					{
+						killer.decreaseKarma();
+					}
 				}
 			}
 		}

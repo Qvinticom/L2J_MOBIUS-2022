@@ -23,12 +23,14 @@ import java.io.InputStreamReader;
 import java.io.LineNumberReader;
 import java.util.StringTokenizer;
 
-import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 public class MapRegionTable
 {
 	private static int[][] _regions = new int[19][21];
 	private static MapRegionTable _instance;
+	private static int[][] _townPositions = new int[13][3];
+	private static int[][] _karmaPositions = new int[13][3];
 	
 	public static MapRegionTable getInstance()
 	{
@@ -41,7 +43,6 @@ public class MapRegionTable
 	
 	private MapRegionTable()
 	{
-		super();
 		int count = 0;
 		try
 		{
@@ -66,6 +67,87 @@ public class MapRegionTable
 		catch (Exception e)
 		{
 		}
+		
+		_townPositions[0][0] = -84176;
+		_townPositions[0][1] = 243382;
+		_townPositions[0][2] = -3126;
+		_townPositions[1][0] = 45525;
+		_townPositions[1][1] = 48376;
+		_townPositions[1][2] = -3059;
+		_townPositions[2][0] = 12181;
+		_townPositions[2][1] = 16675;
+		_townPositions[2][2] = -4580;
+		_townPositions[3][0] = -45232;
+		_townPositions[3][1] = -113603;
+		_townPositions[3][2] = -224;
+		_townPositions[4][0] = 115074;
+		_townPositions[4][1] = -178115;
+		_townPositions[4][2] = -880;
+		_townPositions[5][0] = -14138;
+		_townPositions[5][1] = 122042;
+		_townPositions[5][2] = -2988;
+		_townPositions[6][0] = -82856;
+		_townPositions[6][1] = 150901;
+		_townPositions[6][2] = -3128;
+		_townPositions[7][0] = 18823;
+		_townPositions[7][1] = 145048;
+		_townPositions[7][2] = -3126;
+		_townPositions[8][0] = 83235;
+		_townPositions[8][1] = 148497;
+		_townPositions[8][2] = -3404;
+		_townPositions[9][0] = 80853;
+		_townPositions[9][1] = 54653;
+		_townPositions[9][2] = -1524;
+		_townPositions[10][0] = 147391;
+		_townPositions[10][1] = 25967;
+		_townPositions[10][2] = -2012;
+		_townPositions[11][0] = 117163;
+		_townPositions[11][1] = 76511;
+		_townPositions[11][2] = -2712;
+		_townPositions[12][0] = 83235;
+		_townPositions[12][1] = 148497;
+		_townPositions[12][2] = -3404;
+		
+		// FIXME: Custom locations.
+		_karmaPositions[0][0] = -88708;
+		_karmaPositions[0][1] = 237685;
+		_karmaPositions[0][2] = -3672;
+		_karmaPositions[1][0] = 40659;
+		_karmaPositions[1][1] = 56770;
+		_karmaPositions[1][2] = -3651;
+		_karmaPositions[2][0] = -346;
+		_karmaPositions[2][1] = 21889;
+		_karmaPositions[2][2] = -3256;
+		_karmaPositions[3][0] = -48359;
+		_karmaPositions[3][1] = -108190;
+		_karmaPositions[3][2] = -371;
+		_karmaPositions[4][0] = 119952;
+		_karmaPositions[4][1] = -188167;
+		_karmaPositions[4][2] = -3320;
+		_karmaPositions[5][0] = -9643;
+		_karmaPositions[5][1] = 130653;
+		_karmaPositions[5][2] = -3542;
+		_karmaPositions[6][0] = -82930;
+		_karmaPositions[6][1] = 156775;
+		_karmaPositions[6][2] = -3156;
+		_karmaPositions[7][0] = 15436;
+		_karmaPositions[7][1] = 148426;
+		_karmaPositions[7][2] = -3371;
+		_karmaPositions[8][0] = 78274;
+		_karmaPositions[8][1] = 145178;
+		_karmaPositions[8][2] = -3598;
+		_karmaPositions[9][0] = 76658;
+		_karmaPositions[9][1] = 56229;
+		_karmaPositions[9][2] = -2980;
+		_karmaPositions[10][0] = 152543;
+		_karmaPositions[10][1] = 29202;
+		_karmaPositions[10][2] = -2337;
+		_karmaPositions[11][0] = 111115;
+		_karmaPositions[11][1] = 66811;
+		_karmaPositions[11][2] = -2764;
+		_karmaPositions[12][0] = 79253;
+		_karmaPositions[12][1] = 159441;
+		_karmaPositions[12][2] = -3207;
 	}
 	
 	public int getMapRegion(int posX, int posY)
@@ -75,55 +157,28 @@ public class MapRegionTable
 		return _regions[tileX][tileY];
 	}
 	
-	public int[] getClosestTownCords(Creature activeChar)
+	public int[] getClosestTownCords(PlayerInstance player)
 	{
-		int[][] pos = new int[13][3];
-		pos[0][0] = -84176;
-		pos[0][1] = 243382;
-		pos[0][2] = -3126;
-		pos[1][0] = 45525;
-		pos[1][1] = 48376;
-		pos[1][2] = -3059;
-		pos[2][0] = 12181;
-		pos[2][1] = 16675;
-		pos[2][2] = -4580;
-		pos[3][0] = -45232;
-		pos[3][1] = -113603;
-		pos[3][2] = -224;
-		pos[4][0] = 115074;
-		pos[4][1] = -178115;
-		pos[4][2] = -880;
-		pos[5][0] = -14138;
-		pos[5][1] = 122042;
-		pos[5][2] = -2988;
-		pos[6][0] = -82856;
-		pos[6][1] = 150901;
-		pos[6][2] = -3128;
-		pos[7][0] = 18823;
-		pos[7][1] = 145048;
-		pos[7][2] = -3126;
-		pos[8][0] = 83235;
-		pos[8][1] = 148497;
-		pos[8][2] = -3404;
-		pos[9][0] = 80853;
-		pos[9][1] = 54653;
-		pos[9][2] = -1524;
-		pos[10][0] = 147391;
-		pos[10][1] = 25967;
-		pos[10][2] = -2012;
-		pos[11][0] = 117163;
-		pos[11][1] = 76511;
-		pos[11][2] = -2712;
-		pos[12][0] = 83235;
-		pos[12][1] = 148497;
-		pos[12][2] = -3404;
-		int closest = getMapRegion(activeChar.getX(), activeChar.getY());
-		int[] ClosestTownCords =
+		int closest = getMapRegion(player.getX(), player.getY());
+		int[] closestCords;
+		if (player.getKarma() > 0)
 		{
-			pos[closest][0],
-			pos[closest][1],
-			pos[closest][2]
-		};
-		return ClosestTownCords;
+			closestCords = new int[]
+			{
+				_karmaPositions[closest][0],
+				_karmaPositions[closest][1],
+				_karmaPositions[closest][2]
+			};
+		}
+		else
+		{
+			closestCords = new int[]
+			{
+				_townPositions[closest][0],
+				_townPositions[closest][1],
+				_townPositions[closest][2]
+			};
+		}
+		return closestCords;
 	}
 }

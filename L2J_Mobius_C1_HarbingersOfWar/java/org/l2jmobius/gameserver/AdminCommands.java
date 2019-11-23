@@ -721,7 +721,6 @@ public class AdminCommands extends Thread
 			player.setMaxMp(mpmaxval);
 			player.setMaxLoad(loadval);
 			player.setKarma(karmaval);
-			player.setPvpFlag(pvpflagval);
 			player.setPvpKills(pvpkillsval);
 			player.setClassId(classidval);
 			StatusUpdate su = new StatusUpdate(player.getObjectId());

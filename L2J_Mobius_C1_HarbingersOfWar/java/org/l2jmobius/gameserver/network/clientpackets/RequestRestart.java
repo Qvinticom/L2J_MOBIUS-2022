@@ -21,6 +21,7 @@ import java.io.IOException;
 
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.ClientThread;
+import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.CharSelectInfo;
 import org.l2jmobius.gameserver.network.serverpackets.RestartResponse;
 
@@ -31,14 +32,24 @@ public class RequestRestart extends ClientBasePacket
 	public RequestRestart(byte[] decrypt, ClientThread client) throws IOException
 	{
 		super(decrypt);
+		
 		PlayerInstance player = client.getActiveChar();
-		player.deleteMe();
-		RestartResponse response = new RestartResponse();
-		client.getConnection().sendPacket(response);
-		client.saveCharToDisk(client.getActiveChar());
-		client.setActiveChar(null);
-		CharSelectInfo cl = new CharSelectInfo(client.getLoginName(), client.getSessionId());
-		client.getConnection().sendPacket(cl);
+		if (player != null)
+		{
+			if ((player.getPvpFlag() > 0) || player.isInCombat())
+			{
+				player.sendMessage("You cannot exit the game while in combat.");
+				player.sendPacket(new ActionFailed());
+				return;
+			}
+			player.deleteMe();
+			RestartResponse response = new RestartResponse();
+			client.getConnection().sendPacket(response);
+			client.saveCharToDisk(client.getActiveChar());
+			client.setActiveChar(null);
+			CharSelectInfo cl = new CharSelectInfo(client.getLoginName(), client.getSessionId());
+			client.getConnection().sendPacket(cl);
+		}
 	}
 	
 	@Override

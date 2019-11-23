@@ -17,6 +17,10 @@
  */
 package org.l2jmobius;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
 import org.l2jmobius.util.PropertiesParser;
 
 /**
@@ -34,6 +38,7 @@ public class Config
 	// --------------------------------------------------
 	private static final String SERVER_CONFIG_FILE = "config/server.ini";
 	private static final String RATES_CONFIG_FILE = "config/rates.ini";
+	private static final String KARMA_CONFIG_FILE = "config/karma.ini";
 	
 	// Game
 	public static String _ip;
@@ -53,6 +58,12 @@ public class Config
 	public static float RATE_SP;
 	public static float RATE_DROP;
 	public static float RATE_ADENA;
+	// Karma
+	public static int KARMA_MIN_KARMA;
+	public static int KARMA_MAX_KARMA;
+	public static float KARMA_LOST_MULTIPLIER;
+	public static int KARMA_DROP_CHANCE;
+	public static List<Integer> KARMA_PROTECTED_ITEMS;
 	
 	public static void load()
 	{
@@ -87,5 +98,14 @@ public class Config
 		RATE_SP = ratesSettings.getFloat("RateSp", 1);
 		RATE_DROP = ratesSettings.getFloat("RateDrop", 1);
 		RATE_ADENA = ratesSettings.getFloat("RateAdena", 1);
+		
+		// Load karma config file (if exists)
+		final PropertiesParser karmaSettings = new PropertiesParser(KARMA_CONFIG_FILE);
+		
+		KARMA_MIN_KARMA = karmaSettings.getInt("KarmaMin", 240);
+		KARMA_MAX_KARMA = karmaSettings.getInt("KarmaMax", 10000);
+		KARMA_LOST_MULTIPLIER = karmaSettings.getFloat("KarmaLostMultiplier", 1);
+		KARMA_DROP_CHANCE = karmaSettings.getInt("KarmaDropChance", 5);
+		KARMA_PROTECTED_ITEMS = Arrays.stream(karmaSettings.getIntArray("KarmaProtectedItems", ";")).boxed().collect(Collectors.toList());
 	}
 }

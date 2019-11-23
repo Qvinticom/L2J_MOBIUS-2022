@@ -17,6 +17,7 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.gameserver.model.Inventory;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 public class CharInfo extends ServerBasePacket
@@ -32,7 +33,7 @@ public class CharInfo extends ServerBasePacket
 	@Override
 	public byte[] getContent()
 	{
-		_bao.write(3);
+		writeC(0x03);
 		writeD(_cha.getX());
 		writeD(_cha.getY());
 		writeD(_cha.getZ());
@@ -43,16 +44,16 @@ public class CharInfo extends ServerBasePacket
 		writeD(_cha.getSex());
 		writeD(_cha.getClassId());
 		writeD(0);
-		writeD(_cha.getInventory().getPaperdollItemId(6));
-		writeD(_cha.getInventory().getPaperdollItemId(7));
-		writeD(_cha.getInventory().getPaperdollItemId(8));
-		writeD(_cha.getInventory().getPaperdollItemId(9));
-		writeD(_cha.getInventory().getPaperdollItemId(10));
-		writeD(_cha.getInventory().getPaperdollItemId(11));
-		writeD(_cha.getInventory().getPaperdollItemId(12));
-		writeD(_cha.getInventory().getPaperdollItemId(13));
-		writeD(_cha.getInventory().getPaperdollItemId(14));
-		writeD(_cha.getInventory().getPaperdollItemId(0));
+		writeD(_cha.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_HEAD));
+		writeD(_cha.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_RHAND));
+		writeD(_cha.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_LHAND));
+		writeD(_cha.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_GLOVES));
+		writeD(_cha.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_CHEST));
+		writeD(_cha.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_LEGS));
+		writeD(_cha.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_FEET));
+		writeD(_cha.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_BACK));
+		writeD(_cha.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_LRHAND));
+		writeD(_cha.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_UNDER));
 		writeD(0);
 		writeD(_cha.getMagicalSpeed());
 		writeD(_cha.getPhysicalSpeed());

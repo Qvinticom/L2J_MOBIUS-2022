@@ -21,6 +21,7 @@ import java.io.IOException;
 
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.ClientThread;
+import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.LeaveWorld;
 
 public class Logout extends ClientBasePacket
@@ -30,11 +31,18 @@ public class Logout extends ClientBasePacket
 	public Logout(byte[] decrypt, ClientThread client) throws IOException
 	{
 		super(decrypt);
-		LeaveWorld ql = new LeaveWorld();
-		client.getConnection().sendPacket(ql);
+		
 		PlayerInstance player = client.getActiveChar();
 		if (player != null)
 		{
+			if ((player.getPvpFlag() > 0) || player.isInCombat())
+			{
+				player.sendMessage("You cannot exit the game while in combat.");
+				player.sendPacket(new ActionFailed());
+				return;
+			}
+			LeaveWorld ql = new LeaveWorld();
+			client.getConnection().sendPacket(ql);
 			player.deleteMe();
 			client.saveCharToDisk(player);
 		}

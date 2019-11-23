@@ -17,6 +17,7 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.gameserver.model.Inventory;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 public class UserInfo extends ServerBasePacket
@@ -32,7 +33,7 @@ public class UserInfo extends ServerBasePacket
 	@Override
 	public byte[] getContent()
 	{
-		_bao.write(4);
+		writeC(0x04);
 		writeD(_cha.getX());
 		writeD(_cha.getY());
 		writeD(_cha.getZ());
@@ -58,36 +59,39 @@ public class UserInfo extends ServerBasePacket
 		writeD(_cha.getCurrentLoad());
 		writeD(_cha.getMaxLoad());
 		writeD(40);
-		writeD(_cha.getInventory().getPaperdollObjectId(0));
-		writeD(_cha.getInventory().getPaperdollObjectId(2));
-		writeD(_cha.getInventory().getPaperdollObjectId(1));
-		writeD(_cha.getInventory().getPaperdollObjectId(3));
-		writeD(_cha.getInventory().getPaperdollObjectId(5));
-		writeD(_cha.getInventory().getPaperdollObjectId(4));
-		writeD(_cha.getInventory().getPaperdollObjectId(6));
-		writeD(_cha.getInventory().getPaperdollObjectId(7));
-		writeD(_cha.getInventory().getPaperdollObjectId(8));
-		writeD(_cha.getInventory().getPaperdollObjectId(9));
-		writeD(_cha.getInventory().getPaperdollObjectId(10));
-		writeD(_cha.getInventory().getPaperdollObjectId(11));
-		writeD(_cha.getInventory().getPaperdollObjectId(12));
-		writeD(_cha.getInventory().getPaperdollObjectId(13));
-		writeD(_cha.getInventory().getPaperdollObjectId(14));
-		writeD(_cha.getInventory().getPaperdollItemId(0));
-		writeD(_cha.getInventory().getPaperdollItemId(2));
-		writeD(_cha.getInventory().getPaperdollItemId(1));
-		writeD(_cha.getInventory().getPaperdollItemId(3));
-		writeD(_cha.getInventory().getPaperdollItemId(5));
-		writeD(_cha.getInventory().getPaperdollItemId(4));
-		writeD(_cha.getInventory().getPaperdollItemId(6));
-		writeD(_cha.getInventory().getPaperdollItemId(7));
-		writeD(_cha.getInventory().getPaperdollItemId(8));
-		writeD(_cha.getInventory().getPaperdollItemId(9));
-		writeD(_cha.getInventory().getPaperdollItemId(10));
-		writeD(_cha.getInventory().getPaperdollItemId(11));
-		writeD(_cha.getInventory().getPaperdollItemId(12));
-		writeD(_cha.getInventory().getPaperdollItemId(13));
-		writeD(_cha.getInventory().getPaperdollItemId(14));
+		
+		writeD(_cha.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_UNDER));
+		writeD(_cha.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_REAR));
+		writeD(_cha.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_LEAR));
+		writeD(_cha.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_NECK));
+		writeD(_cha.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_RFINGER));
+		writeD(_cha.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_LFINGER));
+		writeD(_cha.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_HEAD));
+		writeD(_cha.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_RHAND));
+		writeD(_cha.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_LHAND));
+		writeD(_cha.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_GLOVES));
+		writeD(_cha.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_CHEST));
+		writeD(_cha.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_LEGS));
+		writeD(_cha.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_FEET));
+		writeD(_cha.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_BACK));
+		writeD(_cha.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_LRHAND));
+		
+		writeD(_cha.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_UNDER));
+		writeD(_cha.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_REAR));
+		writeD(_cha.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_LEAR));
+		writeD(_cha.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_NECK));
+		writeD(_cha.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_RFINGER));
+		writeD(_cha.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_LFINGER));
+		writeD(_cha.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_HEAD));
+		writeD(_cha.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_RHAND));
+		writeD(_cha.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_LHAND));
+		writeD(_cha.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_GLOVES));
+		writeD(_cha.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_CHEST));
+		writeD(_cha.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_LEGS));
+		writeD(_cha.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_FEET));
+		writeD(_cha.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_BACK));
+		writeD(_cha.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_LRHAND));
+		
 		writeD(_cha.getPhysicalAttack());
 		writeD(_cha.getPhysicalSpeed());
 		writeD(_cha.getPhysicalDefense());

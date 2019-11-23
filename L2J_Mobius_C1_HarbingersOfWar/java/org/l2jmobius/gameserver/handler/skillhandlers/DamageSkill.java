@@ -39,6 +39,20 @@ public class DamageSkill implements ISkillHandler
 	@Override
 	public void useSkill(PlayerInstance activeChar, Skill skill, WorldObject target)
 	{
+		// PvP flag.
+		final boolean isEnemy = activeChar.isEnemy(target);
+		if (isEnemy)
+		{
+			if (target.getActingPlayer() != null)
+			{
+				activeChar.updatePvPFlag(1);
+			}
+		}
+		else // TODO: Target handlers.
+		{
+			return;
+		}
+		
 		if (target instanceof Creature)
 		{
 			Creature creature = (Creature) target;

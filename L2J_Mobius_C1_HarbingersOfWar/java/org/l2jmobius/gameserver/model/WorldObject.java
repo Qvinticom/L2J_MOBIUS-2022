@@ -125,4 +125,9 @@ public class WorldObject implements Serializable
 	{
 		return _knownPlayer;
 	}
+	
+	public PlayerInstance getActingPlayer()
+	{
+		return null;
+	}
 }

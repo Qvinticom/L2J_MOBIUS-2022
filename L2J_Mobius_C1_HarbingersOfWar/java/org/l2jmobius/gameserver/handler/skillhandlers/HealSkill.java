@@ -17,11 +17,10 @@
  */
 package org.l2jmobius.gameserver.handler.skillhandlers;
 
-import java.util.List;
-
 import org.l2jmobius.gameserver.handler.ISkillHandler;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.WorldObject;
+import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
@@ -44,6 +43,17 @@ public class HealSkill implements ISkillHandler
 	@Override
 	public void useSkill(PlayerInstance activeChar, Skill skill, WorldObject target)
 	{
+		// PvP flag.
+		if (target instanceof MonsterInstance)
+		{
+			activeChar.updatePvPFlag(1);
+		}
+		final PlayerInstance enemyPlayer = target.getActingPlayer();
+		if ((enemyPlayer != null) && ((enemyPlayer.getPvpFlag() > 0) || (enemyPlayer.getKarma() > 0)))
+		{
+			activeChar.updatePvPFlag(1);
+		}
+		
 		if (skill.getTargetType() == Skill.TARGET_PET)
 		{
 			PetInstance pet = activeChar.getPet();
@@ -52,10 +62,8 @@ public class HealSkill implements ISkillHandler
 		}
 		else if ((skill.getTargetType() == Skill.TARGET_PARTY) && activeChar.isInParty())
 		{
-			List<PlayerInstance> players = activeChar.getParty().getPartyMembers();
-			for (int i = 0; i < players.size(); ++i)
+			for (PlayerInstance player : activeChar.getParty().getPartyMembers())
 			{
-				PlayerInstance player = players.get(i);
 				double hp = player.getCurrentHp();
 				player.setCurrentHp(hp += skill.getPower());
 				StatusUpdate su = new StatusUpdate(player.getObjectId());

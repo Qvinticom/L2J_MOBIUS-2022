@@ -26,6 +26,7 @@ import java.util.TimerTask;
 import java.util.TreeMap;
 import java.util.logging.Logger;
 
+import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.data.CharStatsTable;
 import org.l2jmobius.gameserver.data.CharTemplateTable;
 import org.l2jmobius.gameserver.data.ExperienceTable;
@@ -79,6 +80,7 @@ import org.l2jmobius.gameserver.templates.Armor;
 import org.l2jmobius.gameserver.templates.CharTemplate;
 import org.l2jmobius.gameserver.templates.Item;
 import org.l2jmobius.gameserver.templates.Weapon;
+import org.l2jmobius.util.Rnd;
 
 public class PlayerInstance extends Creature
 {
@@ -96,7 +98,9 @@ public class PlayerInstance extends Creature
 	private int _karma;
 	private int _pvpKills;
 	private int _pkKills;
-	private int _pvpFlag;
+	private int _pvpFlag = 0;
+	private long _lastPvpTime;
+	private static Timer _pvpTimer = null;
 	private int _maxLoad;
 	private int _race;
 	private int _classId;
@@ -109,7 +113,7 @@ public class PlayerInstance extends Creature
 	private final Map<Integer, Skill> _skills = new HashMap<>();
 	private Skill _skill;
 	private final Map<Integer, ShortCut> _shortCuts = new TreeMap<>();
-	private int _allyId;
+	private int _allyId = 0;
 	private TradeList _tradeList;
 	private List<TradeItem> _sellList;
 	private List<TradeItem> _buyList;
@@ -120,7 +124,7 @@ public class PlayerInstance extends Creature
 	private boolean _partyMatchingShowClass;
 	private String _partyMatchingMemo;
 	private Party _party = null;
-	private int _clanId;
+	private int _clanId = 0;
 	private Clan _clan;
 	private boolean _clanLeader;
 	private boolean _isInvul = false;
@@ -176,11 +180,6 @@ public class PlayerInstance extends Creature
 			return -1;
 		}
 		return skill.getLevel();
-	}
-	
-	public void setPvpFlag(int pvpFlag)
-	{
-		_pvpFlag = pvpFlag;
 	}
 	
 	public int getCanCraft()
@@ -415,6 +414,88 @@ public class PlayerInstance extends Creature
 		return _pvpFlag;
 	}
 	
+	private void stopPvPFlag()
+	{
+		if (_pvpTimer != null)
+		{
+			_pvpTimer.cancel();
+			_pvpTimer = null;
+		}
+		updatePvPFlag(0);
+	}
+	
+	public void updatePvPFlag(int value)
+	{
+		if (_karma > 0)
+		{
+			return;
+		}
+		if (value == 1)
+		{
+			if (_pvpTimer == null)
+			{
+				_pvpTimer = new Timer();
+				_pvpTimer.schedule(new pvpTask(), 1000, 1000);
+			}
+			_lastPvpTime = System.currentTimeMillis() + 30000;
+		}
+		if (_pvpFlag == value)
+		{
+			return;
+		}
+		_pvpFlag = value;
+		final UserInfo userInfo = new UserInfo(this);
+		sendPacket(userInfo);
+		broadcastPacket(userInfo);
+	}
+	
+	class pvpTask extends TimerTask
+	{
+		@Override
+		public void run()
+		{
+			try
+			{
+				final long currentTime = System.currentTimeMillis();
+				if (currentTime > _lastPvpTime)
+				{
+					stopPvPFlag();
+				}
+				else if (currentTime > (_lastPvpTime - 5000))
+				{
+					updatePvPFlag(2);
+				}
+			}
+			catch (Throwable e)
+			{
+			}
+		}
+	}
+	
+	public boolean isEnemy(WorldObject target)
+	{
+		if ((target == null) || (target == this))
+		{
+			return false;
+		}
+		
+		final PlayerInstance targetPlayer = target.getActingPlayer();
+		if ((_party != null) && (_party == targetPlayer.getParty()))
+		{
+			return false;
+		}
+		if ((_clanId != 0) && (_clanId == targetPlayer.getClanId()))
+		{
+			return false;
+		}
+		if ((_allyId != 0) && (_allyId == targetPlayer.getAllyId()))
+		{
+			return false;
+		}
+		
+		return true;
+	}
+	
 	public int getClanId()
 	{
 		return _clanId;
@@ -552,6 +633,18 @@ public class PlayerInstance extends Creature
 	@Override
 	protected void onHitTimer(Creature target, int damage, boolean crit, boolean miss, boolean soulshot)
 	{
+		final boolean isEnemy = isEnemy(target);
+		if (isEnemy)
+		{
+			if (target.getActingPlayer() != null)
+			{
+				updatePvPFlag(1);
+			}
+		}
+		else // TODO: Target handlers.
+		{
+			return;
+		}
 		super.onHitTimer(target, damage, crit, miss, soulshot);
 	}
 	
@@ -587,13 +680,20 @@ public class PlayerInstance extends Creature
 		}
 	}
 	
+	public void sendMessage(String message)
+	{
+		SystemMessage sm = new SystemMessage(SystemMessage.S1_S2);
+		sm.addString(message);
+		sendPacket(sm);
+	}
+	
 	@Override
 	protected void startCombat()
 	{
 		Creature target = (Creature) getTarget();
 		if (target == null)
 		{
-			_log.warning("failed to start combat without target.");
+			_log.warning("Failed to start combat without target.");
 			sendPacket(new ActionFailed());
 		}
 		else if (getAttackRange() < getDistance(target.getX(), target.getY()))
@@ -770,32 +870,151 @@ public class PlayerInstance extends Creature
 	}
 	
 	@Override
-	public void reduceCurrentHp(int i, Creature attacker)
+	public void reduceCurrentHp(int ammount, Creature attacker)
 	{
 		if (isInvul())
 		{
 			return;
 		}
-		super.reduceCurrentHp(i, attacker);
+		
+		super.reduceCurrentHp(ammount, attacker);
 		if (isDead() && (getPet() != null))
 		{
 			getPet().unSummon(this);
 		}
-		if (attacker != null)
+		
+		if (attacker == null)
 		{
-			SystemMessage smsg = new SystemMessage(36);
-			if ((attacker instanceof MonsterInstance) || (attacker instanceof NpcInstance))
-			{
-				int mobId = ((NpcInstance) attacker).getNpcTemplate().getNpcId();
-				smsg.addNpcName(mobId);
-			}
-			else
-			{
-				smsg.addString(attacker.getName());
-			}
-			smsg.addNumber(i);
-			sendPacket(smsg);
+			return;
 		}
+		
+		// Damage message.
+		SystemMessage smsg = new SystemMessage(36);
+		if ((attacker instanceof MonsterInstance) || (attacker instanceof NpcInstance))
+		{
+			int mobId = ((NpcInstance) attacker).getNpcTemplate().getNpcId();
+			smsg.addNpcName(mobId);
+		}
+		else
+		{
+			smsg.addString(attacker.getName());
+		}
+		smsg.addNumber(ammount);
+		sendPacket(smsg);
+		
+		if (!isDead())
+		{
+			return;
+		}
+		
+		// Calculate Karma lost.
+		if (getKarma() > 0)
+		{
+			for (ItemInstance item : getInventory().getItems())
+			{
+				if (Config.KARMA_PROTECTED_ITEMS.contains(item.getItemId()))
+				{
+					continue;
+				}
+				if (Rnd.get(100) < Config.KARMA_DROP_CHANCE)
+				{
+					getInventory().dropItem(item, 1);
+				}
+			}
+			decreaseKarma();
+		}
+		
+		// Died from player.
+		final PlayerInstance killer = attacker.getActingPlayer();
+		if (killer != null)
+		{
+			if ((_pvpFlag == 0) && (_karma == 0))
+			{
+				killer.increasePkKillsAndKarma(getLevel());
+			}
+		}
+	}
+	
+	public void decreaseKarma()
+	{
+		float karmaLost = _karma / (getLevel() * 10);
+		if (karmaLost < 0)
+		{
+			karmaLost = 1;
+		}
+		karmaLost *= Config.KARMA_LOST_MULTIPLIER;
+		
+		if (_karma > karmaLost)
+		{
+			setKarma(_karma - (int) karmaLost);
+		}
+		else
+		{
+			setKarma(0);
+		}
+		
+		final UserInfo userInfo = new UserInfo(this);
+		sendPacket(userInfo);
+		broadcastPacket(userInfo);
+	}
+	
+	public void increasePkKillsAndKarma(int level)
+	{
+		int newKarma = Config.KARMA_MIN_KARMA;
+		int pkLevel = getLevel();
+		
+		final int pkPKCount = getPkKills();
+		int pkCountMulti = 0;
+		if (pkPKCount > 0)
+		{
+			pkCountMulti = pkPKCount / 2;
+		}
+		else
+		{
+			pkCountMulti = 1;
+		}
+		if (pkCountMulti < 1)
+		{
+			pkCountMulti = 1;
+		}
+		newKarma *= pkCountMulti;
+		
+		int lvlDiffMulti = 0;
+		if (pkLevel > level)
+		{
+			lvlDiffMulti = pkLevel / level;
+		}
+		else
+		{
+			lvlDiffMulti = 1;
+		}
+		if (lvlDiffMulti < 1)
+		{
+			lvlDiffMulti = 1;
+		}
+		newKarma *= lvlDiffMulti;
+		
+		if (newKarma < Config.KARMA_MIN_KARMA)
+		{
+			newKarma = Config.KARMA_MIN_KARMA;
+		}
+		if (newKarma > Config.KARMA_MAX_KARMA)
+		{
+			newKarma = Config.KARMA_MAX_KARMA;
+		}
+		if (_karma > (Integer.MAX_VALUE - newKarma))
+		{
+			newKarma = Integer.MAX_VALUE - getKarma();
+		}
+		
+		stopPvPFlag();
+		
+		setPkKills(_pkKills + 1);
+		setKarma(_karma + newKarma);
+		
+		final UserInfo userInfo = new UserInfo(this);
+		sendPacket(userInfo);
+		broadcastPacket(userInfo);
 	}
 	
 	public void setPartyMatchingAutomaticRegistration(boolean b)
@@ -1581,5 +1800,11 @@ public class PlayerInstance extends Creature
 				e.printStackTrace();
 			}
 		}
+	}
+	
+	@Override
+	public PlayerInstance getActingPlayer()
+	{
+		return this;
 	}
 }

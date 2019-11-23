@@ -213,7 +213,7 @@ public class PetInstance extends Creature
 		_owner = owner;
 	}
 	
-	public Creature getOwner()
+	public PlayerInstance getOwner()
 	{
 		return _owner;
 	}
@@ -607,5 +607,11 @@ public class PetInstance extends Creature
 			}
 			updateKnownCounter = 0;
 		}
+	}
+	
+	@Override
+	public PlayerInstance getActingPlayer()
+	{
+		return _owner;
 	}
 }
