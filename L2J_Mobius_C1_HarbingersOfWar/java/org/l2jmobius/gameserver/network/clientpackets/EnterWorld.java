@@ -40,22 +40,22 @@ public class EnterWorld extends ClientBasePacket
 	public EnterWorld(byte[] decrypt, ClientThread client) throws IOException
 	{
 		super(decrypt);
-		PlayerInstance activeChar = client.getActiveChar();
-		Connection con = client.getConnection();
+		final PlayerInstance activeChar = client.getActiveChar();
+		final Connection con = client.getConnection();
 		if (client.getAccessLevel() >= 100)
 		{
 			activeChar.setIsGM(true);
 			GmListManager.getInstance().addGm(activeChar);
 		}
-		SystemMessage sm = new SystemMessage(SystemMessage.WELCOME_TO_LINEAGE);
+		final SystemMessage sm = new SystemMessage(SystemMessage.WELCOME_TO_LINEAGE);
 		con.sendPacket(sm);
 		
 		Announcements.getInstance().showAnnouncements(activeChar);
 		
-		ItemList il = new ItemList(activeChar, false);
+		final ItemList il = new ItemList(activeChar, false);
 		activeChar.sendPacket(il);
 		
-		ShortCutInit sci = new ShortCutInit();
+		final ShortCutInit sci = new ShortCutInit();
 		for (ShortCut shortcut : activeChar.getAllShortCuts())
 		{
 			switch (shortcut.getType())
@@ -83,7 +83,7 @@ public class EnterWorld extends ClientBasePacket
 		}
 		con.sendPacket(sci);
 		
-		UserInfo ui = new UserInfo(activeChar);
+		final UserInfo ui = new UserInfo(activeChar);
 		con.sendPacket(ui);
 		if (activeChar.isDead())
 		{
@@ -95,11 +95,11 @@ public class EnterWorld extends ClientBasePacket
 	
 	private void notifyClanMembers(PlayerInstance activeChar)
 	{
-		Clan clan = activeChar.getClan();
+		final Clan clan = activeChar.getClan();
 		if (clan != null)
 		{
 			clan.getClanMember(activeChar.getName()).setPlayerInstance(activeChar);
-			SystemMessage msg = new SystemMessage(SystemMessage.CLAN_MEMBER_S1_LOGGED_IN);
+			final SystemMessage msg = new SystemMessage(SystemMessage.CLAN_MEMBER_S1_LOGGED_IN);
 			msg.addString(activeChar.getName());
 			for (PlayerInstance clanMember : clan.getOnlineMembers(activeChar.getName()))
 			{

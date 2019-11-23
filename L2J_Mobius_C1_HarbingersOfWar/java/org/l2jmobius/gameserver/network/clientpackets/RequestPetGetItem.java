@@ -29,9 +29,9 @@ public class RequestPetGetItem extends ClientBasePacket
 	public RequestPetGetItem(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
-		int objectId = readD();
-		World world = World.getInstance();
-		ItemInstance item = (ItemInstance) world.findObject(objectId);
+		final int objectId = readD();
+		final World world = World.getInstance();
+		final ItemInstance item = (ItemInstance) world.findObject(objectId);
 		client.getActiveChar().getPet().setTarget(item);
 		client.getActiveChar().getPet().setCurrentState(CreatureState.PICKUP_ITEM);
 		client.getActiveChar().getPet().moveTo(item.getX(), item.getY(), item.getZ(), 0);

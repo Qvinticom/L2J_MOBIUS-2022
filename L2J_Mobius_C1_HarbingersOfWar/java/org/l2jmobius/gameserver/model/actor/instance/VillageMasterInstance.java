@@ -37,7 +37,7 @@ public class VillageMasterInstance extends NpcInstance
 		super.onBypassFeedback(player, command);
 		if (command.startsWith("create_clan"))
 		{
-			String val = command.substring(12);
+			final String val = command.substring(12);
 			createClan(player, val);
 		}
 	}
@@ -60,37 +60,37 @@ public class VillageMasterInstance extends NpcInstance
 	{
 		if (player.getLevel() < 10)
 		{
-			SystemMessage sm = new SystemMessage(SystemMessage.FAILED_TO_CREATE_CLAN);
+			final SystemMessage sm = new SystemMessage(SystemMessage.FAILED_TO_CREATE_CLAN);
 			player.sendPacket(sm);
 			return;
 		}
 		if (player.getClanId() != 0)
 		{
-			SystemMessage sm = new SystemMessage(SystemMessage.FAILED_TO_CREATE_CLAN);
+			final SystemMessage sm = new SystemMessage(SystemMessage.FAILED_TO_CREATE_CLAN);
 			player.sendPacket(sm);
 			return;
 		}
 		if (clanName.length() > 16)
 		{
-			SystemMessage sm = new SystemMessage(SystemMessage.CLAN_NAME_TOO_LONG);
+			final SystemMessage sm = new SystemMessage(SystemMessage.CLAN_NAME_TOO_LONG);
 			player.sendPacket(sm);
 			return;
 		}
-		Clan clan = ClanTable.getInstance().createClan(player, clanName);
+		final Clan clan = ClanTable.getInstance().createClan(player, clanName);
 		if (clan == null)
 		{
-			SystemMessage sm = new SystemMessage(SystemMessage.CLAN_NAME_INCORRECT);
+			final SystemMessage sm = new SystemMessage(SystemMessage.CLAN_NAME_INCORRECT);
 			player.sendPacket(sm);
 			return;
 		}
 		player.setClan(clan);
 		player.setClanId(clan.getClanId());
 		player.setIsClanLeader(true);
-		PledgeShowInfoUpdate pu = new PledgeShowInfoUpdate(clan, player);
+		final PledgeShowInfoUpdate pu = new PledgeShowInfoUpdate(clan, player);
 		player.sendPacket(pu);
-		UserInfo ui = new UserInfo(player);
+		final UserInfo ui = new UserInfo(player);
 		player.sendPacket(ui);
-		SystemMessage sm = new SystemMessage(SystemMessage.CLAN_CREATED);
+		final SystemMessage sm = new SystemMessage(SystemMessage.CLAN_CREATED);
 		player.sendPacket(sm);
 	}
 }

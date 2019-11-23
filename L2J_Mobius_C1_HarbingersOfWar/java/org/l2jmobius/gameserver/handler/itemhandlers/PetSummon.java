@@ -77,8 +77,8 @@ public class PetSummon implements IItemHandler
 				return 0;
 			}
 		}
-		Npc petTemplate = NpcTable.getInstance().getTemplate(npcId);
-		PetInstance newpet = new PetInstance(petTemplate);
+		final Npc petTemplate = NpcTable.getInstance().getTemplate(npcId);
+		final PetInstance newpet = new PetInstance(petTemplate);
 		newpet.setTitle(activeChar.getName());
 		newpet.setControlItemId(item.getObjectId());
 		newpet.setObjectId(IdFactory.getInstance().getNextId());
@@ -102,10 +102,10 @@ public class PetSummon implements IItemHandler
 		newpet.setRunning(true);
 		World.getInstance().storeObject(newpet);
 		World.getInstance().addVisibleObject(newpet);
-		MagicSkillUser msk = new MagicSkillUser(activeChar, 2046, 1, 1000, 600000);
+		final MagicSkillUser msk = new MagicSkillUser(activeChar, 2046, 1, 1000, 600000);
 		activeChar.sendPacket(msk);
-		PetInfo ownerni = new PetInfo(newpet);
-		NpcInfo ni = new NpcInfo(newpet);
+		final PetInfo ownerni = new PetInfo(newpet);
+		final NpcInfo ni = new NpcInfo(newpet);
 		activeChar.broadcastPacket(ni);
 		activeChar.sendPacket(ownerni);
 		activeChar.sendPacket(new PetItemList(newpet));

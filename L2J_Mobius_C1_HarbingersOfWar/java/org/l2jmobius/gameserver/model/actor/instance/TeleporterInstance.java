@@ -41,7 +41,7 @@ public class TeleporterInstance extends NpcInstance
 		super.onBypassFeedback(player, command);
 		if (command.startsWith("goto"))
 		{
-			int val = Integer.parseInt(command.substring(5));
+			final int val = Integer.parseInt(command.substring(5));
 			doTeleport(player, val);
 		}
 	}
@@ -62,18 +62,18 @@ public class TeleporterInstance extends NpcInstance
 	
 	private void doTeleport(PlayerInstance player, int val)
 	{
-		TeleportLocation list = TeleportLocationTable.getInstance().getTemplate(val);
+		final TeleportLocation list = TeleportLocationTable.getInstance().getTemplate(val);
 		if (list != null)
 		{
 			if (player.getAdena() >= list.getPrice())
 			{
 				player.reduceAdena(list.getPrice());
-				TeleportToLocation Tloc = new TeleportToLocation(player, list.getLocX(), list.getLocY(), list.getLocZ());
+				final TeleportToLocation Tloc = new TeleportToLocation(player, list.getLocX(), list.getLocY(), list.getLocZ());
 				player.sendPacket(Tloc);
 			}
 			else
 			{
-				SystemMessage sm = new SystemMessage(SystemMessage.YOU_NOT_ENOUGH_ADENA);
+				final SystemMessage sm = new SystemMessage(SystemMessage.YOU_NOT_ENOUGH_ADENA);
 				player.sendPacket(sm);
 			}
 		}

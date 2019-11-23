@@ -49,8 +49,8 @@ public class LevelUpData
 	{
 		try
 		{
-			File spawnDataFile = new File("data/lvlupgain.csv");
-			LineNumberReader lnr = new LineNumberReader(new InputStreamReader(new FileInputStream(spawnDataFile)));
+			final File spawnDataFile = new File("data/lvlupgain.csv");
+			final LineNumberReader lnr = new LineNumberReader(new InputStreamReader(new FileInputStream(spawnDataFile)));
 			String line = null;
 			while ((line = lnr.readLine()) != null)
 			{
@@ -58,8 +58,8 @@ public class LevelUpData
 				{
 					continue;
 				}
-				StringTokenizer st = new StringTokenizer(line, ";");
-				LvlupData lvlupData = new LvlupData();
+				final StringTokenizer st = new StringTokenizer(line, ";");
+				final LvlupData lvlupData = new LvlupData();
 				lvlupData.setClassid(Integer.parseInt(st.nextToken()));
 				lvlupData.setDefaulthp(Double.parseDouble(st.nextToken()));
 				lvlupData.setDefaulthpadd(Double.parseDouble(st.nextToken()));

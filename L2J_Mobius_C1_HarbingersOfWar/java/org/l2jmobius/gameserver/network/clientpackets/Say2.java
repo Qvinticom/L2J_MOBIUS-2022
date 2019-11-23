@@ -41,19 +41,19 @@ public class Say2 extends ClientBasePacket
 	public Say2(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
-		String text = readS();
-		int type = readD();
+		final String text = readS();
+		final int type = readD();
 		String target = null;
 		if (type == 2)
 		{
 			target = readS();
 		}
-		PlayerInstance activeChar = client.getActiveChar();
+		final PlayerInstance activeChar = client.getActiveChar();
 		// Connection con = client.getConnection();
-		CreatureSay cs = new CreatureSay(activeChar.getObjectId(), type, activeChar.getName(), text);
+		final CreatureSay cs = new CreatureSay(activeChar.getObjectId(), type, activeChar.getName(), text);
 		if (type == 2)
 		{
-			PlayerInstance receiver = World.getInstance().getPlayer(target);
+			final PlayerInstance receiver = World.getInstance().getPlayer(target);
 			if (receiver != null)
 			{
 				receiver.sendPacket(cs);
@@ -61,7 +61,7 @@ public class Say2 extends ClientBasePacket
 			}
 			else
 			{
-				SystemMessage sm = new SystemMessage(SystemMessage.S1_IS_NOT_ONLINE);
+				final SystemMessage sm = new SystemMessage(SystemMessage.S1_IS_NOT_ONLINE);
 				sm.addString(target);
 				activeChar.sendPacket(sm);
 			}

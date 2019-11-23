@@ -46,8 +46,8 @@ public class MapRegionTable
 		int count = 0;
 		try
 		{
-			File regionDataFile = new File("data/mapregion.csv");
-			LineNumberReader lnr = new LineNumberReader(new InputStreamReader(new FileInputStream(regionDataFile)));
+			final File regionDataFile = new File("data/mapregion.csv");
+			final LineNumberReader lnr = new LineNumberReader(new InputStreamReader(new FileInputStream(regionDataFile)));
 			String line = null;
 			while ((line = lnr.readLine()) != null)
 			{
@@ -55,7 +55,7 @@ public class MapRegionTable
 				{
 					continue;
 				}
-				StringTokenizer st = new StringTokenizer(line, ";");
+				final StringTokenizer st = new StringTokenizer(line, ";");
 				for (int j = 0; j < 10; ++j)
 				{
 					MapRegionTable._regions[j][count] = Integer.parseInt(st.nextToken());
@@ -152,14 +152,14 @@ public class MapRegionTable
 	
 	public int getMapRegion(int posX, int posY)
 	{
-		int tileX = (posX >> 15) + 4;
-		int tileY = (posY >> 15) + 10;
+		final int tileX = (posX >> 15) + 4;
+		final int tileY = (posY >> 15) + 10;
 		return _regions[tileX][tileY];
 	}
 	
 	public int[] getClosestTownCords(PlayerInstance player)
 	{
-		int closest = getMapRegion(player.getX(), player.getY());
+		final int closest = getMapRegion(player.getX(), player.getY());
 		int[] closestCords;
 		if (player.getKarma() > 0)
 		{

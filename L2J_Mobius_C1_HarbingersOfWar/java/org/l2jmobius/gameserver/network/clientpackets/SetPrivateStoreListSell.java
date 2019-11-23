@@ -34,14 +34,14 @@ public class SetPrivateStoreListSell extends ClientBasePacket
 	public SetPrivateStoreListSell(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
-		int count = readD();
-		PlayerInstance player = client.getActiveChar();
+		final int count = readD();
+		final PlayerInstance player = client.getActiveChar();
 		// TradeList tradelist = player.getTradeList();
 		player.setSellList(new ArrayList<>());
 		List<TradeItem> listsell = player.getSellList();
 		for (int x = 0; x < count; ++x)
 		{
-			TradeItem temp = new TradeItem();
+			final TradeItem temp = new TradeItem();
 			temp.setObjectId(readD());
 			temp.setCount(readD());
 			temp.setOwnersPrice(readD());

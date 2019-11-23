@@ -79,7 +79,7 @@ public class TradeList
 	{
 		for (int i = 0; i < _items.size(); ++i)
 		{
-			ItemInstance item = _items.get(i);
+			final ItemInstance item = _items.get(i);
 			if (item.getItemId() != itemId)
 			{
 				continue;
@@ -93,7 +93,7 @@ public class TradeList
 	{
 		for (int i = 0; i < _items.size(); ++i)
 		{
-			ItemInstance item = _items.get(i);
+			final ItemInstance item = _items.get(i);
 			if (item.getObjectId() != ObjectId)
 			{
 				continue;
@@ -117,7 +117,7 @@ public class TradeList
 	{
 		for (int y = 0; y < _items.size(); ++y)
 		{
-			ItemInstance temp = _items.get(y);
+			final ItemInstance temp = _items.get(y);
 			if (temp.getObjectId() != objId)
 			{
 				continue;
@@ -136,7 +136,7 @@ public class TradeList
 		boolean bool = false;
 		for (int y = 0; y < _items.size(); ++y)
 		{
-			ItemInstance temp = _items.get(y);
+			final ItemInstance temp = _items.get(y);
 			if (temp.getObjectId() != objId)
 			{
 				continue;
@@ -149,25 +149,25 @@ public class TradeList
 	
 	public void tradeItems(PlayerInstance player, PlayerInstance reciever)
 	{
-		Inventory playersInv = player.getInventory();
-		Inventory recieverInv = reciever.getInventory();
+		final Inventory playersInv = player.getInventory();
+		final Inventory recieverInv = reciever.getInventory();
 		InventoryUpdate update = new InventoryUpdate();
-		ItemTable itemTable = ItemTable.getInstance();
+		final ItemTable itemTable = ItemTable.getInstance();
 		for (int y = 0; y < _items.size(); ++y)
 		{
-			ItemInstance temp = _items.get(y);
+			final ItemInstance temp = _items.get(y);
 			ItemInstance playerItem = playersInv.getItem(temp.getObjectId());
-			ItemInstance newitem = itemTable.createItem(playerItem.getItemId());
+			final ItemInstance newitem = itemTable.createItem(playerItem.getItemId());
 			newitem.setCount(temp.getCount());
 			playerItem = playersInv.destroyItem(playerItem.getObjectId(), temp.getCount());
-			ItemInstance recieverItem = recieverInv.addItem(newitem);
+			final ItemInstance recieverItem = recieverInv.addItem(newitem);
 			if (playerItem.getLastChange() == 2)
 			{
 				update.addModifiedItem(playerItem);
 			}
 			else
 			{
-				World world = World.getInstance();
+				final World world = World.getInstance();
 				world.removeObject(playerItem);
 				update.addRemovedItem(playerItem);
 			}
@@ -187,11 +187,11 @@ public class TradeList
 	
 	public void updateBuyList(PlayerInstance player, List<TradeItem> list)
 	{
-		Inventory playersInv = player.getInventory();
+		final Inventory playersInv = player.getInventory();
 		for (int count = 0; count != list.size(); ++count)
 		{
-			TradeItem temp = list.get(count);
-			ItemInstance temp2 = playersInv.findItemByItemId(temp.getItemId());
+			final TradeItem temp = list.get(count);
+			final ItemInstance temp2 = playersInv.findItemByItemId(temp.getItemId());
 			if (temp2 == null)
 			{
 				list.remove(count);
@@ -209,11 +209,11 @@ public class TradeList
 	
 	public void updateSellList(PlayerInstance player, List<TradeItem> list)
 	{
-		Inventory playersInv = player.getInventory();
+		final Inventory playersInv = player.getInventory();
 		for (int count = 0; count != list.size(); ++count)
 		{
-			TradeItem temp = list.get(count);
-			ItemInstance temp2 = playersInv.getItem(temp.getObjectId());
+			final TradeItem temp = list.get(count);
+			final ItemInstance temp2 = playersInv.getItem(temp.getObjectId());
 			if (temp2 == null)
 			{
 				list.remove(count);
@@ -232,20 +232,20 @@ public class TradeList
 	{
 		int x;
 		int y;
-		Inventory sellerInv = seller.getInventory();
-		Inventory buyerInv = buyer.getInventory();
+		final Inventory sellerInv = seller.getInventory();
+		final Inventory buyerInv = buyer.getInventory();
 		TradeItem temp2 = null;
 		WorldObject sellerItem = null;
 		ItemInstance newitem = null;
-		InventoryUpdate buyerupdate = new InventoryUpdate();
-		InventoryUpdate sellerupdate = new InventoryUpdate();
-		ItemTable itemTable = ItemTable.getInstance();
+		final InventoryUpdate buyerupdate = new InventoryUpdate();
+		final InventoryUpdate sellerupdate = new InventoryUpdate();
+		final ItemTable itemTable = ItemTable.getInstance();
 		int cost = 0;
-		List<SystemMessage> sysmsgs = new ArrayList<>();
+		final List<SystemMessage> sysmsgs = new ArrayList<>();
 		for (y = 0; y < buyerlist.size(); ++y)
 		{
 			SystemMessage msg;
-			TradeItem buyerItem = buyerlist.get(y);
+			final TradeItem buyerItem = buyerlist.get(y);
 			for (x = 0; x < sellerlist.size(); ++x)
 			{
 				temp2 = sellerlist.get(x);
@@ -260,13 +260,13 @@ public class TradeList
 			{
 				continue;
 			}
-			int amount = buyerItem.getCount() > temp2.getCount() ? temp2.getCount() : buyerItem.getCount();
+			final int amount = buyerItem.getCount() > temp2.getCount() ? temp2.getCount() : buyerItem.getCount();
 			sellerItem = sellerInv.destroyItem(sellerItem.getObjectId(), amount);
 			cost = buyerItem.getCount() * buyerItem.getOwnersPrice();
 			seller.addAdena(cost);
 			newitem = itemTable.createItem(((ItemInstance) sellerItem).getItemId());
 			newitem.setCount(amount);
-			ItemInstance temp = buyerInv.addItem(newitem);
+			final ItemInstance temp = buyerInv.addItem(newitem);
 			if (amount == 1)
 			{
 				msg = new SystemMessage(SystemMessage.S1_PURCHASED_S2);
@@ -311,7 +311,7 @@ public class TradeList
 			}
 			else
 			{
-				World world = World.getInstance();
+				final World world = World.getInstance();
 				world.removeObject(sellerItem);
 				sellerupdate.addRemovedItem((ItemInstance) sellerItem);
 			}

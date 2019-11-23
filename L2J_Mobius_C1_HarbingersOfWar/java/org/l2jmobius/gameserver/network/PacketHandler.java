@@ -115,7 +115,7 @@ public class PacketHandler
 	
 	public void handlePacket(byte[] data) throws IOException
 	{
-		int id = data[0] & 0xFF;
+		final int id = data[0] & 0xFF;
 		switch (id)
 		{
 			case 0:
@@ -544,7 +544,7 @@ public class PacketHandler
 		int a;
 		int charpoint;
 		byte t1;
-		StringBuffer result = new StringBuffer();
+		final StringBuffer result = new StringBuffer();
 		int counter = 0;
 		for (int i = 0; i < len; ++i)
 		{
@@ -571,7 +571,7 @@ public class PacketHandler
 			result.append("\n");
 			counter = 0;
 		}
-		int rest = data.length % 16;
+		final int rest = data.length % 16;
 		if (rest > 0)
 		{
 			for (int i = 0; i < (17 - rest); ++i)

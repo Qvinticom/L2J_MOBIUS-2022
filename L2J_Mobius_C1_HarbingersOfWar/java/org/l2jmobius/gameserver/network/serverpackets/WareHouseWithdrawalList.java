@@ -39,12 +39,12 @@ public class WareHouseWithdrawalList extends ServerBasePacket
 	{
 		writeC(84);
 		writeD(_money);
-		int count = _cha.getWarehouse().getSize();
+		final int count = _cha.getWarehouse().getSize();
 		writeH(count);
-		List<ItemInstance> items = _cha.getWarehouse().getItems();
+		final List<ItemInstance> items = _cha.getWarehouse().getItems();
 		for (int i = 0; i < count; ++i)
 		{
-			ItemInstance temp = items.get(i);
+			final ItemInstance temp = items.get(i);
 			writeH(temp.getItem().getType1());
 			writeD(temp.getObjectId());
 			writeD(temp.getItemId());

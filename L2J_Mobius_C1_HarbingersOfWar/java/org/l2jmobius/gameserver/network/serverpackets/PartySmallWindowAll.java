@@ -39,7 +39,7 @@ public class PartySmallWindowAll extends ServerBasePacket
 		writeD(_partyMembers.size());
 		for (int i = 0; i < _partyMembers.size(); ++i)
 		{
-			PlayerInstance member = _partyMembers.get(i);
+			final PlayerInstance member = _partyMembers.get(i);
 			writeD(member.getObjectId());
 			writeS(member.getName());
 			writeD((int) member.getCurrentHp());

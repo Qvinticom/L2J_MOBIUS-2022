@@ -92,7 +92,7 @@ public class LoginController
 	public int getKeyForAccount(String account)
 	{
 		int key = 0;
-		Integer result = _logins.get(account);
+		final Integer result = _logins.get(account);
 		if (result != null)
 		{
 			key = result;

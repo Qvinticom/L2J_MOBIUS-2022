@@ -87,7 +87,7 @@ public class GameServer extends Thread
 	
 	public static void main(String[] args) throws Exception
 	{
-		GameServer server = new GameServer();
+		final GameServer server = new GameServer();
 		_log.config("GameServer Listening on port 7777");
 		server.start();
 	}
@@ -102,7 +102,7 @@ public class GameServer extends Thread
 				do
 				{
 					// _log.info("Waiting for client connection...");
-					Socket connection = _serverSocket.accept();
+					final Socket connection = _serverSocket.accept();
 					new ClientThread(connection);
 				}
 				while (true);
@@ -126,7 +126,7 @@ public class GameServer extends Thread
 		
 		if (!Config.SERVER_HOST_NAME.equals("*"))
 		{
-			InetAddress adr = InetAddress.getByName(Config.SERVER_HOST_NAME);
+			final InetAddress adr = InetAddress.getByName(Config.SERVER_HOST_NAME);
 			Config._ip = adr.getHostAddress();
 			_serverSocket = new ServerSocket(Config.SERVER_PORT, 50, adr);
 			_log.config("GameServer listening on IP:" + Config._ip + " Port " + Config.SERVER_PORT);

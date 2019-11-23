@@ -34,21 +34,21 @@ public class AddTradeItem extends ClientBasePacket
 	{
 		super(decrypt);
 		@SuppressWarnings("unused")
-		int tradeId = readD();
-		int objectId = readD();
-		int amount = readD();
-		PlayerInstance player = client.getActiveChar();
-		PlayerInstance requestor = player.getTransactionRequester();
+		final int tradeId = readD();
+		final int objectId = readD();
+		final int amount = readD();
+		final PlayerInstance player = client.getActiveChar();
+		final PlayerInstance requestor = player.getTransactionRequester();
 		if (requestor.getTransactionRequester() != null)
 		{
-			TradeList playerItemList = player.getTradeList();
+			final TradeList playerItemList = player.getTradeList();
 			player.getTradeList().setConfirmedTrade(false);
 			requestor.getTradeList().setConfirmedTrade(false);
 			if (playerItemList.getItems().size() > 0)
 			{
 				if (!playerItemList.contains(objectId))
 				{
-					ItemInstance temp = new ItemInstance();
+					final ItemInstance temp = new ItemInstance();
 					temp.setObjectId(player.getInventory().getItem(objectId).getObjectId());
 					temp.setCount(amount);
 					playerItemList.addItem(temp);
@@ -58,7 +58,7 @@ public class AddTradeItem extends ClientBasePacket
 				else
 				{
 					ItemInstance tempTradeItem;
-					int InvItemCount = player.getInventory().getItem(objectId).getCount();
+					final int InvItemCount = player.getInventory().getItem(objectId).getCount();
 					if (InvItemCount != (tempTradeItem = playerItemList.getItem(objectId)).getCount())
 					{
 						if ((amount + tempTradeItem.getCount()) >= InvItemCount)
@@ -78,7 +78,7 @@ public class AddTradeItem extends ClientBasePacket
 			}
 			else
 			{
-				ItemInstance temp = new ItemInstance();
+				final ItemInstance temp = new ItemInstance();
 				temp.setObjectId(objectId);
 				temp.setCount(amount);
 				playerItemList.addItem(temp);
@@ -89,7 +89,7 @@ public class AddTradeItem extends ClientBasePacket
 		else
 		{
 			player.sendPacket(new SendTradeDone(0));
-			SystemMessage msg = new SystemMessage(SystemMessage.TARGET_IS_NOT_FOUND_IN_THE_GAME);
+			final SystemMessage msg = new SystemMessage(SystemMessage.TARGET_IS_NOT_FOUND_IN_THE_GAME);
 			player.sendPacket(msg);
 			player.setTransactionRequester(null);
 			requestor.getTradeList().getItems().clear();

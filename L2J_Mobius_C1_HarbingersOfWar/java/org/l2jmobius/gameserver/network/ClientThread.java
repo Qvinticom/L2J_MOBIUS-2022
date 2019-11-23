@@ -93,7 +93,7 @@ public class ClientThread extends Thread
 						saveCharToDisk(_activeChar);
 						starttime = System.currentTimeMillis();
 					}
-					byte[] decrypt = _connection.getPacket();
+					final byte[] decrypt = _connection.getPacket();
 					_handler.handlePacket(decrypt);
 				}
 				while (true);
@@ -272,7 +272,7 @@ public class ClientThread extends Thread
 	public PlayerInstance loadCharFromDisk(int charslot)
 	{
 		PlayerInstance character = new PlayerInstance();
-		File[] chars = _charFolder.listFiles((FilenameFilter) (dir, name) -> name.endsWith("_char.csv"));
+		final File[] chars = _charFolder.listFiles((FilenameFilter) (dir, name) -> name.endsWith("_char.csv"));
 		character = restoreChar(chars[charslot]);
 		if (character != null)
 		{
@@ -282,7 +282,7 @@ public class ClientThread extends Thread
 			restoreWarehouse(new File(_charFolder, character.getName() + "_warehouse.csv"), character);
 			if (character.getClanId() != 0)
 			{
-				Clan clan = ClanTable.getInstance().getClan(character.getClanId());
+				final Clan clan = ClanTable.getInstance().getClan(character.getClanId());
 				if (!clan.isMember(character.getName()))
 				{
 					character.setClanId(0);
@@ -312,13 +312,13 @@ public class ClientThread extends Thread
 			String line = null;
 			while ((line = ((LineNumberReader) lnr).readLine()) != null)
 			{
-				StringTokenizer st = new StringTokenizer(line, ";");
-				int slot = Integer.parseInt(st.nextToken());
-				int type = Integer.parseInt(st.nextToken());
-				int id = Integer.parseInt(st.nextToken());
-				int level = Integer.parseInt(st.nextToken());
-				int unk = Integer.parseInt(st.nextToken());
-				ShortCut sc = new ShortCut(slot, type, id, level, unk);
+				final StringTokenizer st = new StringTokenizer(line, ";");
+				final int slot = Integer.parseInt(st.nextToken());
+				final int type = Integer.parseInt(st.nextToken());
+				final int id = Integer.parseInt(st.nextToken());
+				final int level = Integer.parseInt(st.nextToken());
+				final int unk = Integer.parseInt(st.nextToken());
+				final ShortCut sc = new ShortCut(slot, type, id, level, unk);
 				restored.registerShortCut(sc);
 			}
 		}
@@ -501,11 +501,11 @@ public class ClientThread extends Thread
 			String line = null;
 			while ((line = ((LineNumberReader) lnr).readLine()) != null)
 			{
-				StringTokenizer st = new StringTokenizer(line, ";");
-				ItemInstance item = new ItemInstance();
+				final StringTokenizer st = new StringTokenizer(line, ";");
+				final ItemInstance item = new ItemInstance();
 				item.setObjectId(Integer.parseInt(st.nextToken()));
-				int itemId = Integer.parseInt(st.nextToken());
-				Item itemTemp = ItemTable.getInstance().getTemplate(itemId);
+				final int itemId = Integer.parseInt(st.nextToken());
+				final Item itemTemp = ItemTable.getInstance().getTemplate(itemId);
 				item.setItem(itemTemp);
 				st.nextToken();
 				item.setCount(Integer.parseInt(st.nextToken()));
@@ -537,12 +537,12 @@ public class ClientThread extends Thread
 		OutputStreamWriter out = null;
 		try
 		{
-			List<ItemInstance> items = cha.getWarehouse().getItems();
+			final List<ItemInstance> items = cha.getWarehouse().getItems();
 			out = new FileWriter(saveFile);
 			out.write("#objectId;itemId;name;count;\n");
 			for (int i = 0; i < items.size(); ++i)
 			{
-				ItemInstance item = items.get(i);
+				final ItemInstance item = items.get(i);
 				out.write(item.getObjectId() + ";");
 				out.write(item.getItemId() + ";");
 				out.write(item.getItem().getName() + ";");
@@ -578,11 +578,11 @@ public class ClientThread extends Thread
 			String line = null;
 			while ((line = ((LineNumberReader) lnr).readLine()) != null)
 			{
-				StringTokenizer st = new StringTokenizer(line, ";");
-				ItemInstance item = new ItemInstance();
+				final StringTokenizer st = new StringTokenizer(line, ";");
+				final ItemInstance item = new ItemInstance();
 				item.setObjectId(Integer.parseInt(st.nextToken()));
-				int itemId = Integer.parseInt(st.nextToken());
-				Item itemTemp = ItemTable.getInstance().getTemplate(itemId);
+				final int itemId = Integer.parseInt(st.nextToken());
+				final Item itemTemp = ItemTable.getInstance().getTemplate(itemId);
 				item.setItem(itemTemp);
 				st.nextToken();
 				item.setCount(Integer.parseInt(st.nextToken()));
@@ -625,11 +625,11 @@ public class ClientThread extends Thread
 			String line = null;
 			while ((line = ((LineNumberReader) lnr).readLine()) != null)
 			{
-				StringTokenizer st = new StringTokenizer(line, ";");
-				int id = Integer.parseInt(st.nextToken());
-				int level = Integer.parseInt(st.nextToken());
+				final StringTokenizer st = new StringTokenizer(line, ";");
+				final int id = Integer.parseInt(st.nextToken());
+				final int level = Integer.parseInt(st.nextToken());
 				st.nextToken();
-				Skill skill = SkillTable.getInstance().getInfo(id, level);
+				final Skill skill = SkillTable.getInstance().getInfo(id, level);
 				cha.addSkill(skill);
 			}
 		}
@@ -654,14 +654,14 @@ public class ClientThread extends Thread
 	
 	private PlayerInstance restoreChar(File charFile)
 	{
-		PlayerInstance oldChar = new PlayerInstance();
+		final PlayerInstance oldChar = new PlayerInstance();
 		BufferedReader lnr = null;
 		try
 		{
 			lnr = new LineNumberReader(new BufferedReader(new FileReader(charFile)));
 			((LineNumberReader) lnr).readLine();
-			String line = ((LineNumberReader) lnr).readLine();
-			StringTokenizer st = new StringTokenizer(line, ";");
+			final String line = ((LineNumberReader) lnr).readLine();
+			final StringTokenizer st = new StringTokenizer(line, ";");
 			oldChar.setObjectId(Integer.parseInt(st.nextToken()));
 			oldChar.setName(st.nextToken());
 			oldChar.setLevel(Integer.parseInt(st.nextToken()));

@@ -30,13 +30,13 @@ public class MoveBackwardToLocation extends ClientBasePacket
 	public MoveBackwardToLocation(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
-		int targetX = readD();
-		int targetY = readD();
-		int targetZ = readD();
-		int originX = readD();
-		int originY = readD();
-		int originZ = readD();
-		PlayerInstance activeChar = client.getActiveChar();
+		final int targetX = readD();
+		final int targetY = readD();
+		final int targetZ = readD();
+		final int originX = readD();
+		final int originY = readD();
+		final int originZ = readD();
+		final PlayerInstance activeChar = client.getActiveChar();
 		if (activeChar.getCurrentState() == CreatureState.CASTING)
 		{
 			activeChar.sendPacket(new ActionFailed());
@@ -45,7 +45,7 @@ public class MoveBackwardToLocation extends ClientBasePacket
 		{
 			if (activeChar.getCurrentState() == CreatureState.ATTACKING)
 			{
-				AttackCanceld ac = new AttackCanceld(activeChar.getObjectId());
+				final AttackCanceld ac = new AttackCanceld(activeChar.getObjectId());
 				activeChar.sendPacket(ac);
 				activeChar.broadcastPacket(ac);
 			}

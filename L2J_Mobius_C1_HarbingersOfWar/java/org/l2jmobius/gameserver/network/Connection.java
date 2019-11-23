@@ -60,7 +60,7 @@ public class Connection
 			// _log.warning("client terminated connection");
 			throw new IOException("EOF");
 		}
-		byte[] incoming = new byte[length];
+		final byte[] incoming = new byte[length];
 		incoming[0] = (byte) lengthLo;
 		incoming[1] = (byte) lengthHi;
 		int newBytes = 0;
@@ -73,7 +73,7 @@ public class Connection
 			_log.warning("Incomplete Packet is sent to the server, closing connection.");
 			throw new IOException();
 		}
-		byte[] decrypt = new byte[incoming.length - 2];
+		final byte[] decrypt = new byte[incoming.length - 2];
 		System.arraycopy(incoming, 2, decrypt, 0, decrypt.length);
 		_inCrypt.decrypt(decrypt);
 		// int packetType = decrypt[0] & 0xFF;
@@ -82,12 +82,12 @@ public class Connection
 	
 	public void sendPacket(byte[] data) throws IOException
 	{
-		Connection connection = this;
+		final Connection connection = this;
 		synchronized (connection)
 		{
 			// _log.config("\n" + printData(data, data.length));
 			_outCrypt.encrypt(data);
-			int length = data.length + 2;
+			final int length = data.length + 2;
 			_out.write(length & 0xFF);
 			_out.write((length >> 8) & 0xFF);
 			_out.flush();
@@ -98,7 +98,7 @@ public class Connection
 	
 	public void sendPacket(ServerBasePacket bp) throws IOException
 	{
-		byte[] data = bp.getContent();
+		final byte[] data = bp.getContent();
 		this.sendPacket(data);
 	}
 	
@@ -124,7 +124,7 @@ public class Connection
 		int a;
 		int charpoint;
 		byte t1;
-		StringBuffer result = new StringBuffer();
+		final StringBuffer result = new StringBuffer();
 		int counter = 0;
 		for (int i = 0; i < len; ++i)
 		{
@@ -151,7 +151,7 @@ public class Connection
 			result.append("\n");
 			counter = 0;
 		}
-		int rest = data.length % 16;
+		final int rest = data.length % 16;
 		if (rest > 0)
 		{
 			for (int i = 0; i < (17 - rest); ++i)

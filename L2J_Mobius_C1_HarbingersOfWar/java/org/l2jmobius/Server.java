@@ -52,11 +52,11 @@ public class Server
 		}
 		
 		// Start game server.
-		GameServer gameServer = new GameServer();
+		final GameServer gameServer = new GameServer();
 		gameServer.start();
 		
 		// Start login server.
-		LoginServer loginServer = new LoginServer();
+		final LoginServer loginServer = new LoginServer();
 		loginServer.start();
 	}
 }

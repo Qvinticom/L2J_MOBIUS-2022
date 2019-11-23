@@ -40,7 +40,7 @@ public class ItemHandler
 	
 	public void registerItemHandler(IItemHandler handler)
 	{
-		int[] ids = handler.getItemIds();
+		final int[] ids = handler.getItemIds();
 		for (int id : ids)
 		{
 			_datatable.put(id, handler);

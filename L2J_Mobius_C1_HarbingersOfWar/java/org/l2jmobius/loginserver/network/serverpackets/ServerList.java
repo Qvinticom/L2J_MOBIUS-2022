@@ -39,12 +39,12 @@ public class ServerList extends ServerBasePacket
 		writeC(0);
 		for (int i = 0; i < _servers.size(); ++i)
 		{
-			ServerData server = _servers.get(i);
+			final ServerData server = _servers.get(i);
 			writeC(i + 1);
 			try
 			{
-				InetAddress i4 = InetAddress.getByName(server.ip);
-				byte[] raw = i4.getAddress();
+				final InetAddress i4 = InetAddress.getByName(server.ip);
+				final byte[] raw = i4.getAddress();
 				writeC(raw[0] & 0xFF);
 				writeC(raw[1] & 0xFF);
 				writeC(raw[2] & 0xFF);

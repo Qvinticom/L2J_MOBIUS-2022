@@ -27,8 +27,8 @@ public class ChangeMoveType2 extends ClientBasePacket
 	public ChangeMoveType2(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
-		int type = readD();
-		ChangeMoveType cmt = new ChangeMoveType(client.getActiveChar(), type);
+		final int type = readD();
+		final ChangeMoveType cmt = new ChangeMoveType(client.getActiveChar(), type);
 		client.getActiveChar().setMoveType(type);
 		client.getActiveChar().sendPacket(cmt);
 		client.getActiveChar().broadcastPacket(cmt);

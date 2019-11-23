@@ -26,10 +26,10 @@ public class RequestPartyMatchConfig extends ClientBasePacket
 	public RequestPartyMatchConfig(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
-		int automaticRegistration = readD();
-		int showLevel = readD();
-		int showClass = readD();
-		String memo = readS();
+		final int automaticRegistration = readD();
+		final int showLevel = readD();
+		final int showClass = readD();
+		final String memo = readS();
 		client.getActiveChar().setPartyMatchingAutomaticRegistration(automaticRegistration == 1);
 		client.getActiveChar().setPartyMatchingShowLevel(showLevel == 1);
 		client.getActiveChar().setPartyMatchingShowClass(showClass == 1);

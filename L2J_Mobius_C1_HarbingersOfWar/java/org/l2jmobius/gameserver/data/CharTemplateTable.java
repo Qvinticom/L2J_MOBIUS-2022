@@ -48,10 +48,10 @@ public class CharTemplateTable
 	{
 		try
 		{
-			File charTemplateData = new File("data/char_templates.csv");
+			final File charTemplateData = new File("data/char_templates.csv");
 			if (charTemplateData.isFile() && charTemplateData.exists())
 			{
-				LineNumberReader lnr = new LineNumberReader(new InputStreamReader(new FileInputStream(charTemplateData)));
+				final LineNumberReader lnr = new LineNumberReader(new InputStreamReader(new FileInputStream(charTemplateData)));
 				String line = null;
 				while ((line = lnr.readLine()) != null)
 				{
@@ -59,8 +59,8 @@ public class CharTemplateTable
 					{
 						continue;
 					}
-					CharTemplate ct = new CharTemplate();
-					StringTokenizer st = new StringTokenizer(line, ";");
+					final CharTemplate ct = new CharTemplate();
+					final StringTokenizer st = new StringTokenizer(line, ";");
 					ct.setClassId(Integer.parseInt(st.nextToken()));
 					ct.setClassName(st.nextToken());
 					ct.setRaceId(Integer.parseInt(st.nextToken()));

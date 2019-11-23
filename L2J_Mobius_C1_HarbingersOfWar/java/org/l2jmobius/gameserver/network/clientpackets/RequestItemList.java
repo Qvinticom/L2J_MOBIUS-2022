@@ -29,7 +29,7 @@ public class RequestItemList extends ClientBasePacket
 	public RequestItemList(byte[] rawPacket, ClientThread client) throws IOException
 	{
 		super(rawPacket);
-		ItemList il = new ItemList(client.getActiveChar(), true);
+		final ItemList il = new ItemList(client.getActiveChar(), true);
 		client.getConnection().sendPacket(il);
 	}
 	

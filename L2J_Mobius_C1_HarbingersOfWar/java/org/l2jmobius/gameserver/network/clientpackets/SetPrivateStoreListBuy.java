@@ -38,14 +38,14 @@ public class SetPrivateStoreListBuy extends ClientBasePacket
 		int count = readD();
 		if (count <= 10)
 		{
-			PlayerInstance player = client.getActiveChar();
+			final PlayerInstance player = client.getActiveChar();
 			// TradeList tradelist = player.getTradeList();
 			player.setBuyList(new ArrayList<>());
 			List<TradeItem> listbuy = player.getBuyList();
 			int cost = 0;
 			for (int x = 0; x < count; ++x)
 			{
-				TradeItem temp = new TradeItem();
+				final TradeItem temp = new TradeItem();
 				temp.setItemId(readD());
 				readH();
 				temp.setCount(readD());
@@ -60,7 +60,7 @@ public class SetPrivateStoreListBuy extends ClientBasePacket
 			if (cost > player.getAdena())
 			{
 				count = 0;
-				SystemMessage msg = new SystemMessage(SystemMessage.THE_PURCHASE_PRICE_IS_HIGHER_THAN_MONEY);
+				final SystemMessage msg = new SystemMessage(SystemMessage.THE_PURCHASE_PRICE_IS_HIGHER_THAN_MONEY);
 				player.sendPacket(msg);
 			}
 			if (count != 0)
@@ -82,7 +82,7 @@ public class SetPrivateStoreListBuy extends ClientBasePacket
 		}
 		else
 		{
-			PlayerInstance player = client.getActiveChar();
+			final PlayerInstance player = client.getActiveChar();
 			player.setPrivateStoreType(0);
 			player.sendPacket(new UserInfo(player));
 			player.broadcastPacket(new UserInfo(player));

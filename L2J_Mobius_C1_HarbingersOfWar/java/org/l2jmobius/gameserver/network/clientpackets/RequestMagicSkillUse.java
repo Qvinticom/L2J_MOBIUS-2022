@@ -29,15 +29,15 @@ public class RequestMagicSkillUse extends ClientBasePacket
 	public RequestMagicSkillUse(byte[] rawPacket, ClientThread client)
 	{
 		super(rawPacket);
-		int magicId = readD();
+		final int magicId = readD();
 		@SuppressWarnings("unused")
-		int data2 = readD();
+		final int data2 = readD();
 		@SuppressWarnings("unused")
-		int data3 = readC();
+		final int data3 = readC();
 		
-		PlayerInstance activeChar = client.getActiveChar();
-		int level = activeChar.getSkillLevel(magicId);
-		Skill skill = SkillTable.getInstance().getInfo(magicId, level);
+		final PlayerInstance activeChar = client.getActiveChar();
+		final int level = activeChar.getSkillLevel(magicId);
+		final Skill skill = SkillTable.getInstance().getInfo(magicId, level);
 		if (skill != null)
 		{
 			activeChar.stopMove();

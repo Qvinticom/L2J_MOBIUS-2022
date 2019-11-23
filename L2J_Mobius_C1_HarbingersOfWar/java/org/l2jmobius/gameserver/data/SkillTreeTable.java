@@ -175,11 +175,11 @@ public class SkillTreeTable
 		String line = null;
 		try
 		{
-			LineNumberReader lnr = new LineNumberReader(new InputStreamReader(new FileInputStream(skillData)));
-			List<SkillLearn> list = new ArrayList<>();
+			final LineNumberReader lnr = new LineNumberReader(new InputStreamReader(new FileInputStream(skillData)));
+			final List<SkillLearn> list = new ArrayList<>();
 			if (parentClassId != -1)
 			{
-				List<SkillLearn> parentList = _skillTrees.get(parentClassId);
+				final List<SkillLearn> parentList = _skillTrees.get(parentClassId);
 				list.addAll(parentList);
 			}
 			while ((line = lnr.readLine()) != null)
@@ -188,7 +188,7 @@ public class SkillTreeTable
 				{
 					continue;
 				}
-				SkillLearn skill = parseList(line);
+				final SkillLearn skill = parseList(line);
 				list.add(skill);
 			}
 			_skillTrees.put(classId, list);
@@ -207,8 +207,8 @@ public class SkillTreeTable
 	
 	private SkillLearn parseList(String line)
 	{
-		StringTokenizer st = new StringTokenizer(line, ";");
-		SkillLearn skill = new SkillLearn();
+		final StringTokenizer st = new StringTokenizer(line, ";");
+		final SkillLearn skill = new SkillLearn();
 		skill.setId(Integer.parseInt(st.nextToken()));
 		skill.setName(st.nextToken());
 		skill.setLevel(Integer.parseInt(st.nextToken()));
@@ -219,8 +219,8 @@ public class SkillTreeTable
 	
 	public Collection<SkillLearn> getAvailableSkills(PlayerInstance cha)
 	{
-		List<SkillLearn> result = new ArrayList<>();
-		List<SkillLearn> skills = _skillTrees.get(cha.getClassId());
+		final List<SkillLearn> result = new ArrayList<>();
+		final List<SkillLearn> skills = _skillTrees.get(cha.getClassId());
 		if (skills == null)
 		{
 			_log.warning("Skilltree for class " + cha.getClassId() + " is not defined !");
@@ -228,10 +228,10 @@ public class SkillTreeTable
 		}
 		
 		// TODO: Remove toArray.
-		Skill[] oldSkills = cha.getAllSkills().toArray(new Skill[cha.getAllSkills().size()]);
+		final Skill[] oldSkills = cha.getAllSkills().toArray(new Skill[cha.getAllSkills().size()]);
 		for (int i = 0; i < skills.size(); ++i)
 		{
-			SkillLearn temp = skills.get(i);
+			final SkillLearn temp = skills.get(i);
 			if (temp.getMinLevel() > cha.getLevel())
 			{
 				continue;

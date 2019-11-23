@@ -36,10 +36,10 @@ public class ExperienceTable
 	{
 		try
 		{
-			File expData = new File("data/exp.csv");
+			final File expData = new File("data/exp.csv");
 			if (expData.isFile() && expData.exists())
 			{
-				LineNumberReader lnr = new LineNumberReader(new InputStreamReader(new FileInputStream(expData)));
+				final LineNumberReader lnr = new LineNumberReader(new InputStreamReader(new FileInputStream(expData)));
 				String line = null;
 				while ((line = lnr.readLine()) != null)
 				{
@@ -47,9 +47,9 @@ public class ExperienceTable
 					{
 						continue;
 					}
-					StringTokenizer expLine = new StringTokenizer(line, ";");
-					String level = expLine.nextToken().trim();
-					String exp = expLine.nextToken().trim();
+					final StringTokenizer expLine = new StringTokenizer(line, ";");
+					final String level = expLine.nextToken().trim();
+					final String exp = expLine.nextToken().trim();
 					_exp.put(Integer.parseInt(level), Integer.parseInt(exp));
 				}
 				lnr.close();

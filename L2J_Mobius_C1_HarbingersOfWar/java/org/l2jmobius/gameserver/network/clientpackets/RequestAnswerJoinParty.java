@@ -29,10 +29,10 @@ public class RequestAnswerJoinParty extends ClientBasePacket
 	public RequestAnswerJoinParty(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
-		int response = readD();
-		PlayerInstance player = client.getActiveChar();
-		PlayerInstance requestor = player.getTransactionRequester();
-		JoinParty join = new JoinParty(response);
+		final int response = readD();
+		final PlayerInstance player = client.getActiveChar();
+		final PlayerInstance requestor = player.getTransactionRequester();
+		final JoinParty join = new JoinParty(response);
 		requestor.sendPacket(join);
 		if (response == 1)
 		{
@@ -40,7 +40,7 @@ public class RequestAnswerJoinParty extends ClientBasePacket
 		}
 		else
 		{
-			SystemMessage msg = new SystemMessage(SystemMessage.PLAYER_DECLINED);
+			final SystemMessage msg = new SystemMessage(SystemMessage.PLAYER_DECLINED);
 			requestor.sendPacket(msg);
 			if (requestor.getParty().getMemberCount() == 1)
 			{

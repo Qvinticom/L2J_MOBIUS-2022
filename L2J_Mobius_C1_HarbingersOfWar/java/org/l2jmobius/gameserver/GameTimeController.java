@@ -45,7 +45,7 @@ public class GameTimeController extends Thread
 	
 	public int getGameTime()
 	{
-		long time = (System.currentTimeMillis() - _gameStartTime) / 10000L;
+		final long time = (System.currentTimeMillis() - _gameStartTime) / 10000L;
 		return (int) time;
 	}
 	

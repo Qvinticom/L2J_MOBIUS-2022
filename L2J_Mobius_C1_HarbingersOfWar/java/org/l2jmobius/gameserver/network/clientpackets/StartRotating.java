@@ -27,9 +27,9 @@ public class StartRotating extends ClientBasePacket
 	public StartRotating(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
-		int degree = readD();
-		int side = readD();
-		BeginRotation br = new BeginRotation(client.getActiveChar(), degree, side);
+		final int degree = readD();
+		final int side = readD();
+		final BeginRotation br = new BeginRotation(client.getActiveChar(), degree, side);
 		client.getActiveChar().sendPacket(br);
 		client.getActiveChar().broadcastPacket(br);
 	}

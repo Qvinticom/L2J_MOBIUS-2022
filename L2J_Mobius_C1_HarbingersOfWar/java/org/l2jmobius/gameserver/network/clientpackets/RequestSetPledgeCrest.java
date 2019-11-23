@@ -34,22 +34,22 @@ public class RequestSetPledgeCrest extends ClientBasePacket
 	public RequestSetPledgeCrest(byte[] rawPacket, ClientThread client) throws IOException
 	{
 		super(rawPacket);
-		int length = readD();
-		byte[] data = readB(length);
+		final int length = readD();
+		final byte[] data = readB(length);
 		// Connection con = client.getConnection();
-		PlayerInstance activeChar = client.getActiveChar();
+		final PlayerInstance activeChar = client.getActiveChar();
 		if (!activeChar.isClanLeader())
 		{
 			return;
 		}
-		Clan clan = activeChar.getClan();
-		File crestFile = new File("data/crests/Pledge_" + clan.getClanId() + ".bmp");
-		FileOutputStream out = new FileOutputStream(crestFile);
+		final Clan clan = activeChar.getClan();
+		final File crestFile = new File("data/crests/Pledge_" + clan.getClanId() + ".bmp");
+		final FileOutputStream out = new FileOutputStream(crestFile);
 		out.write(data);
 		out.close();
-		UserInfo ui = new UserInfo(activeChar);
+		final UserInfo ui = new UserInfo(activeChar);
 		activeChar.sendPacket(ui);
-		CharInfo ci = new CharInfo(activeChar);
+		final CharInfo ci = new CharInfo(activeChar);
 		activeChar.broadcastPacket(ci);
 	}
 	

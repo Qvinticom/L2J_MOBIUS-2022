@@ -27,8 +27,8 @@ public class RequestOustPartyMember extends ClientBasePacket
 	public RequestOustPartyMember(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
-		String name = readS();
-		PlayerInstance activeChar = client.getActiveChar();
+		final String name = readS();
+		final PlayerInstance activeChar = client.getActiveChar();
 		if (activeChar.isInParty() && activeChar.getParty().isLeader(activeChar))
 		{
 			activeChar.getParty().oustPartyMember(name);

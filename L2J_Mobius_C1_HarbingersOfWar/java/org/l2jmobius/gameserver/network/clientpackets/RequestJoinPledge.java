@@ -32,9 +32,9 @@ public class RequestJoinPledge extends ClientBasePacket
 	{
 		super(rawPacket);
 		WorldObject object;
-		int target = readD();
+		final int target = readD();
 		// Connection con = client.getConnection();
-		PlayerInstance activeChar = client.getActiveChar();
+		final PlayerInstance activeChar = client.getActiveChar();
 		if (activeChar.isTransactionInProgress())
 		{
 			activeChar.sendPacket(new SystemMessage(SystemMessage.WAITING_FOR_REPLY));
@@ -42,30 +42,30 @@ public class RequestJoinPledge extends ClientBasePacket
 		}
 		if (target == activeChar.getObjectId())
 		{
-			SystemMessage sm = new SystemMessage(SystemMessage.CANNOT_INVITE_YOURSELF);
+			final SystemMessage sm = new SystemMessage(SystemMessage.CANNOT_INVITE_YOURSELF);
 			activeChar.sendPacket(sm);
 			return;
 		}
 		if (activeChar.isClanLeader() && ((object = World.getInstance().findObject(target)) instanceof PlayerInstance))
 		{
-			PlayerInstance member = (PlayerInstance) object;
+			final PlayerInstance member = (PlayerInstance) object;
 			if (member.getClanId() != 0)
 			{
-				SystemMessage sm = new SystemMessage(SystemMessage.S1_WORKING_WITH_ANOTHER_CLAN);
+				final SystemMessage sm = new SystemMessage(SystemMessage.S1_WORKING_WITH_ANOTHER_CLAN);
 				sm.addString(member.getName());
 				activeChar.sendPacket(sm);
 				return;
 			}
 			if (member.isTransactionInProgress())
 			{
-				SystemMessage sm = new SystemMessage(SystemMessage.S1_IS_BUSY_TRY_LATER);
+				final SystemMessage sm = new SystemMessage(SystemMessage.S1_IS_BUSY_TRY_LATER);
 				sm.addString(member.getName());
 				activeChar.sendPacket(sm);
 				return;
 			}
 			member.setTransactionRequester(activeChar);
 			activeChar.setTransactionRequester(member);
-			AskJoinPledge ap = new AskJoinPledge(activeChar.getObjectId(), activeChar.getClan().getName());
+			final AskJoinPledge ap = new AskJoinPledge(activeChar.getObjectId(), activeChar.getClan().getName());
 			member.sendPacket(ap);
 		}
 	}

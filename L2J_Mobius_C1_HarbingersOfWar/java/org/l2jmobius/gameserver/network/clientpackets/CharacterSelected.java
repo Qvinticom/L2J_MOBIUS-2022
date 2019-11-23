@@ -30,11 +30,11 @@ public class CharacterSelected extends ClientBasePacket
 	public CharacterSelected(byte[] decrypt, ClientThread client) throws IOException
 	{
 		super(decrypt);
-		int charSlot = readD();
-		PlayerInstance cha = client.loadCharFromDisk(charSlot);
+		final int charSlot = readD();
+		final PlayerInstance cha = client.loadCharFromDisk(charSlot);
 		cha.setMoveType(1);
 		cha.setWaitType(1);
-		CharSelected cs = new CharSelected(cha, client.getSessionId());
+		final CharSelected cs = new CharSelected(cha, client.getSessionId());
 		client.getConnection().sendPacket(cs);
 		client.setActiveChar(cha);
 	}

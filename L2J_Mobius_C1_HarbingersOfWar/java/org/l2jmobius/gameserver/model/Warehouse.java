@@ -60,7 +60,7 @@ public class Warehouse
 	{
 		for (int i = 0; i < _items.size(); ++i)
 		{
-			ItemInstance temp = _items.get(i);
+			final ItemInstance temp = _items.get(i);
 			if (temp.getItemId() != itemId)
 			{
 				continue;
@@ -74,7 +74,7 @@ public class Warehouse
 	{
 		for (int i = 0; i < _items.size(); ++i)
 		{
-			ItemInstance temp = _items.get(i);
+			final ItemInstance temp = _items.get(i);
 			if (temp.getObjectId() != objectId)
 			{
 				continue;
@@ -86,7 +86,7 @@ public class Warehouse
 	
 	public ItemInstance destroyItem(int itemId, int count)
 	{
-		ItemInstance item = findItemId(itemId);
+		final ItemInstance item = findItemId(itemId);
 		if (item != null)
 		{
 			if (item.getCount() == count)

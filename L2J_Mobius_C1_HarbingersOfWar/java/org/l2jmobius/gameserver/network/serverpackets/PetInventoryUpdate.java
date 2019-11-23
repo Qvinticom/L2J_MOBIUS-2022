@@ -60,11 +60,11 @@ public class PetInventoryUpdate extends ServerBasePacket
 	public byte[] getContent()
 	{
 		writeC(204);
-		int count = _items.size();
+		final int count = _items.size();
 		writeH(count);
 		for (int i = 0; i < count; ++i)
 		{
-			ItemInstance temp = _items.get(i);
+			final ItemInstance temp = _items.get(i);
 			writeH(temp.getLastChange());
 			writeH(temp.getItem().getType1());
 			writeD(temp.getObjectId());

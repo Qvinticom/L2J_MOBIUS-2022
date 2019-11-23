@@ -40,13 +40,13 @@ public class BuyList extends ServerBasePacket
 		writeC(29);
 		writeD(_money);
 		writeD(_list.getListId());
-		int count = _list.getItems().size();
+		final int count = _list.getItems().size();
 		writeH(count);
-		List<ItemInstance> items = _list.getItems();
+		final List<ItemInstance> items = _list.getItems();
 		for (int i = 0; i < count; ++i)
 		{
-			ItemInstance temp = items.get(i);
-			int type = temp.getItem().getType1();
+			final ItemInstance temp = items.get(i);
+			final int type = temp.getItem().getType1();
 			writeH(type);
 			writeD(temp.getObjectId());
 			writeD(temp.getItemId());

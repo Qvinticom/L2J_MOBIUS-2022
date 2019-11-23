@@ -46,7 +46,7 @@ public class TrainerInstance extends NpcInstance
 	
 	public void showSkillList(PlayerInstance player)
 	{
-		AquireSkillList asl = new AquireSkillList();
+		final AquireSkillList asl = new AquireSkillList();
 		for (SkillLearn skill : SkillTreeTable.getInstance().getAvailableSkills(player))
 		{
 			asl.addSkill(skill.getId(), skill.getLevel(), skill.getLevel(), skill.getSpCost(), 0);

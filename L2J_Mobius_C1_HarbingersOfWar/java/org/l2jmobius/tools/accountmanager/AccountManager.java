@@ -44,7 +44,7 @@ public class AccountManager
 		System.out.println("3 - Delete existing account (this option _keeps_ character files)");
 		System.out.println("4 - List accounts & access levels");
 		System.out.println("5 - exit");
-		LineNumberReader _in = new LineNumberReader(new InputStreamReader(System.in));
+		final LineNumberReader _in = new LineNumberReader(new InputStreamReader(System.in));
 		while (!(_mode.equals("1") || _mode.equals("2") || _mode.equals("3") || _mode.equals("4") || _mode.equals("5")))
 		{
 			System.out.print("Your choice: ");
@@ -80,7 +80,7 @@ public class AccountManager
 		if (_mode.equals("3"))
 		{
 			System.out.print("Do you really want to delete this account ? Y/N : ");
-			String yesno = _in.readLine();
+			final String yesno = _in.readLine();
 			if (!yesno.equals("Y"))
 			{
 				_mode = "5";
@@ -99,14 +99,14 @@ public class AccountManager
 	
 	private static void printAccInfo(String fin) throws FileNotFoundException, IOException
 	{
-		File _test = new File(fin);
+		final File _test = new File(fin);
 		if (!_test.exists())
 		{
 			_test.createNewFile();
 		}
-		FileInputStream in = new FileInputStream(fin);
+		final FileInputStream in = new FileInputStream(fin);
 		@SuppressWarnings("resource")
-		LineNumberReader lnr = new LineNumberReader(new InputStreamReader(in));
+		final LineNumberReader lnr = new LineNumberReader(new InputStreamReader(in));
 		String line = null;
 		int count = 0;
 		System.out.println("--------------");
@@ -121,20 +121,20 @@ public class AccountManager
 	
 	private static void updateAccounts(String fin, String fout) throws FileNotFoundException, IOException, NoSuchAlgorithmException
 	{
-		File _test = new File(fin);
+		final File _test = new File(fin);
 		if (!_test.exists())
 		{
 			_test.createNewFile();
 		}
-		FileInputStream in = new FileInputStream(fin);
-		FileWriter out = new FileWriter(fout);
-		MessageDigest md = MessageDigest.getInstance("SHA");
+		final FileInputStream in = new FileInputStream(fin);
+		final FileWriter out = new FileWriter(fout);
+		final MessageDigest md = MessageDigest.getInstance("SHA");
 		byte[] newpass = _pass.getBytes("UTF-8");
 		newpass = md.digest(newpass);
 		try
 		{
 			@SuppressWarnings("resource")
-			LineNumberReader lnr = new LineNumberReader(new InputStreamReader(in));
+			final LineNumberReader lnr = new LineNumberReader(new InputStreamReader(in));
 			String line = null;
 			boolean added = false;
 			while ((line = lnr.readLine()) != null)
@@ -177,8 +177,8 @@ public class AccountManager
 			{
 				out.close();
 				in.close();
-				File _fin = new File(fin);
-				File _fout = new File(fout);
+				final File _fin = new File(fin);
+				final File _fout = new File(fout);
 				_fin.delete();
 				_fout.renameTo(_fin);
 			}
@@ -191,8 +191,8 @@ public class AccountManager
 		{
 			out.close();
 			in.close();
-			File _fin = new File(fin);
-			File _fout = new File(fout);
+			final File _fin = new File(fin);
+			final File _fout = new File(fout);
 			_fin.delete();
 			_fout.renameTo(_fin);
 		}

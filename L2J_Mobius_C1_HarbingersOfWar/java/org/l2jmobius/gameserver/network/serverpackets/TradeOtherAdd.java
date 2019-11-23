@@ -36,7 +36,7 @@ public class TradeOtherAdd extends ServerBasePacket
 	{
 		writeC(49);
 		writeH(1);
-		int type = temp.getItem().getType1();
+		final int type = temp.getItem().getType1();
 		writeH(type);
 		writeD(temp.getObjectId());
 		writeD(temp.getItemId());

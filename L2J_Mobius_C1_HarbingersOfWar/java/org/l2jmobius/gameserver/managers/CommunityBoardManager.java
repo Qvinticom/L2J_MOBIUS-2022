@@ -49,19 +49,19 @@ public class CommunityBoardManager
 	
 	public void handleCommands(ClientThread client, String command)
 	{
-		PlayerInstance activeChar = client.getActiveChar();
+		final PlayerInstance activeChar = client.getActiveChar();
 		if (command.startsWith("bbs_"))
 		{
-			StringBuffer htmlCode = new StringBuffer("<html imgsrc=\"sek.cbui353\"><body><br><table border=0><tr><td FIXWIDTH=15></td><td align=center>L2J Community Board<img src=\"sek.cbui355\" width=610 height=1></td></tr><tr><td FIXWIDTH=15></td><td>");
+			final StringBuffer htmlCode = new StringBuffer("<html imgsrc=\"sek.cbui353\"><body><br><table border=0><tr><td FIXWIDTH=15></td><td align=center>L2J Community Board<img src=\"sek.cbui355\" width=610 height=1></td></tr><tr><td FIXWIDTH=15></td><td>");
 			if (command.equals("bbs_default"))
 			{
-				Collection<PlayerInstance> players = World.getInstance().getAllPlayers();
+				final Collection<PlayerInstance> players = World.getInstance().getAllPlayers();
 				htmlCode.append("<table border=0>");
-				int t = GameTimeController.getInstance().getGameTime();
-				int h = t / 60;
-				int m = t % 60;
-				SimpleDateFormat format = new SimpleDateFormat("h:mm a");
-				Calendar cal = Calendar.getInstance();
+				final int t = GameTimeController.getInstance().getGameTime();
+				final int h = t / 60;
+				final int m = t % 60;
+				final SimpleDateFormat format = new SimpleDateFormat("h:mm a");
+				final Calendar cal = Calendar.getInstance();
 				cal.set(11, h);
 				cal.set(12, m);
 				htmlCode.append("<tr><td>Game Time: " + format.format(cal.getTime()) + "</td></tr>");
@@ -106,7 +106,7 @@ public class CommunityBoardManager
 			}
 			else if (command.equals("bbs_clan"))
 			{
-				Clan clan = activeChar.getClan();
+				final Clan clan = activeChar.getClan();
 				htmlCode.append("<table border=0><tr><td>" + clan.getName() + " (Level " + clan.getLevel() + "):</td></tr><tr><td><table border=0>");
 				String title = "";
 				if (!clan.getClanMember(clan.getLeaderName()).getTitle().equals(""))
@@ -142,8 +142,8 @@ public class CommunityBoardManager
 			}
 			else if (command.startsWith("bbs_player_info"))
 			{
-				String name = command.substring(16);
-				PlayerInstance player = World.getInstance().getPlayer(name);
+				final String name = command.substring(16);
+				final PlayerInstance player = World.getInstance().getPlayer(name);
 				String sex = "Male";
 				if (player.getSex() == 1)
 				{
@@ -162,10 +162,10 @@ public class CommunityBoardManager
 				htmlCode.append("<tr><td>Experience: " + player.getExp() + "/" + nextLevelExp + "</td></tr>");
 				htmlCode.append("<tr><td>Experience needed for level up: " + nextLevelExpNeeded + "</td></tr>");
 				htmlCode.append("<tr><td><br></td></tr>");
-				int uptime = (int) player.getUptime() / 1000;
-				int h = uptime / 3600;
-				int m = (uptime - (h * 3600)) / 60;
-				int s = uptime - (h * 3600) - (m * 60);
+				final int uptime = (int) player.getUptime() / 1000;
+				final int h = uptime / 3600;
+				final int m = (uptime - (h * 3600)) / 60;
+				final int s = uptime - (h * 3600) - (m * 60);
 				htmlCode.append("<tr><td>Uptime: " + h + "h " + m + "m " + s + "s</td></tr>");
 				htmlCode.append("<tr><td><br></td></tr>");
 				if (player.getClan() != null)
@@ -179,12 +179,12 @@ public class CommunityBoardManager
 			{
 				try
 				{
-					String val = command.substring(14);
-					StringTokenizer st = new StringTokenizer(val);
-					String name = st.nextToken();
-					String message = val.substring(name.length() + 1);
-					PlayerInstance reciever = World.getInstance().getPlayer(name);
-					CreatureSay cs = new CreatureSay(activeChar.getObjectId(), 2, activeChar.getName(), message);
+					final String val = command.substring(14);
+					final StringTokenizer st = new StringTokenizer(val);
+					final String name = st.nextToken();
+					final String message = val.substring(name.length() + 1);
+					final PlayerInstance reciever = World.getInstance().getPlayer(name);
+					final CreatureSay cs = new CreatureSay(activeChar.getObjectId(), 2, activeChar.getName(), message);
 					reciever.sendPacket(cs);
 					activeChar.sendPacket(cs);
 					htmlCode.append("Message Sent<br><button value=\"Back\" action=\"bypass bbs_player_info " + reciever.getName() + "\" width=40 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\">");
@@ -195,7 +195,7 @@ public class CommunityBoardManager
 				}
 			}
 			htmlCode.append("</td></tr></table></body></html>");
-			ShowBoard sb = new ShowBoard(activeChar, htmlCode.toString());
+			final ShowBoard sb = new ShowBoard(activeChar, htmlCode.toString());
 			activeChar.sendPacket(sb);
 		}
 	}

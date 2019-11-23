@@ -51,7 +51,7 @@ public class MonsterInstance extends Attackable
 	public void removeKnownObject(WorldObject object)
 	{
 		super.removeKnownObject(object);
-		Creature temp = (Creature) object;
+		final Creature temp = (Creature) object;
 		if (getTarget() == temp)
 		{
 			setTarget(null);

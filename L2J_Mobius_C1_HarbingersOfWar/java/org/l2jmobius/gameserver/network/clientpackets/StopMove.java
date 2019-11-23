@@ -30,19 +30,19 @@ public class StopMove extends ClientBasePacket
 	{
 		super(decrypt);
 		@SuppressWarnings("unused")
-		int x = readD();
+		final int x = readD();
 		@SuppressWarnings("unused")
-		int y = readD();
+		final int y = readD();
 		@SuppressWarnings("unused")
-		int z = readD();
-		int heading = readD();
+		final int z = readD();
+		final int heading = readD();
 		
-		PlayerInstance player = client.getActiveChar();
+		final PlayerInstance player = client.getActiveChar();
 		player.stopMove();
-		StopMoveWithLocation smwl = new StopMoveWithLocation(player);
+		final StopMoveWithLocation smwl = new StopMoveWithLocation(player);
 		client.getActiveChar().sendPacket(smwl);
 		client.getActiveChar().broadcastPacket(smwl);
-		StopRotation sr = new StopRotation(client.getActiveChar(), heading);
+		final StopRotation sr = new StopRotation(client.getActiveChar(), heading);
 		client.getActiveChar().sendPacket(sr);
 		client.getActiveChar().broadcastPacket(sr);
 	}

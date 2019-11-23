@@ -33,7 +33,7 @@ public class RequestRestart extends ClientBasePacket
 	{
 		super(decrypt);
 		
-		PlayerInstance player = client.getActiveChar();
+		final PlayerInstance player = client.getActiveChar();
 		if (player != null)
 		{
 			if ((player.getPvpFlag() > 0) || player.isInCombat())
@@ -43,11 +43,11 @@ public class RequestRestart extends ClientBasePacket
 				return;
 			}
 			player.deleteMe();
-			RestartResponse response = new RestartResponse();
+			final RestartResponse response = new RestartResponse();
 			client.getConnection().sendPacket(response);
 			client.saveCharToDisk(client.getActiveChar());
 			client.setActiveChar(null);
-			CharSelectInfo cl = new CharSelectInfo(client.getLoginName(), client.getSessionId());
+			final CharSelectInfo cl = new CharSelectInfo(client.getLoginName(), client.getSessionId());
 			client.getConnection().sendPacket(cl);
 		}
 	}

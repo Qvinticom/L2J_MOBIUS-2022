@@ -123,11 +123,11 @@ public class CharSelectInfo extends ServerBasePacket
 	
 	public CharSelectInfoPackage[] loadCharacterSelectInfoFromDisk()
 	{
-		File _charFolder = new File("data/accounts", _loginName);
+		final File _charFolder = new File("data/accounts", _loginName);
 		_charFolder.mkdirs();
-		File[] chars = _charFolder.listFiles((FilenameFilter) (dir, name) -> name.endsWith("_char.csv"));
+		final File[] chars = _charFolder.listFiles((FilenameFilter) (dir, name) -> name.endsWith("_char.csv"));
 		_charNameList = new String[chars.length];
-		CharSelectInfoPackage[] characters = new CharSelectInfoPackage[chars.length];
+		final CharSelectInfoPackage[] characters = new CharSelectInfoPackage[chars.length];
 		for (int i = 0; i < chars.length; ++i)
 		{
 			_charInfopackage = new CharSelectInfoPackage();
@@ -154,11 +154,11 @@ public class CharSelectInfo extends ServerBasePacket
 			String line = null;
 			while ((line = ((LineNumberReader) lnr).readLine()) != null)
 			{
-				StringTokenizer st = new StringTokenizer(line, ";");
-				ItemInstance item = new ItemInstance();
+				final StringTokenizer st = new StringTokenizer(line, ";");
+				final ItemInstance item = new ItemInstance();
 				item.setObjectId(Integer.parseInt(st.nextToken()));
-				int itemId = Integer.parseInt(st.nextToken());
-				Item itemTemp = ItemTable.getInstance().getTemplate(itemId);
+				final int itemId = Integer.parseInt(st.nextToken());
+				final Item itemTemp = ItemTable.getInstance().getTemplate(itemId);
 				item.setItem(itemTemp);
 				st.nextToken();
 				item.setCount(Integer.parseInt(st.nextToken()));
@@ -198,8 +198,8 @@ public class CharSelectInfo extends ServerBasePacket
 		{
 			lnr = new LineNumberReader(new BufferedReader(new FileReader(charFile)));
 			((LineNumberReader) lnr).readLine();
-			String line = ((LineNumberReader) lnr).readLine();
-			StringTokenizer st = new StringTokenizer(line, ";");
+			final String line = ((LineNumberReader) lnr).readLine();
+			final StringTokenizer st = new StringTokenizer(line, ";");
 			st.nextToken();
 			_charInfopackage.setName(st.nextToken());
 			_charInfopackage.setLevel(Integer.parseInt(st.nextToken()));

@@ -28,7 +28,7 @@ public class RequestShowBoard extends ClientBasePacket
 	{
 		super(decrypt);
 		@SuppressWarnings("unused")
-		int unknown = readD();
+		final int unknown = readD();
 		CommunityBoardManager.getInstance().handleCommands(client, "bbs_default");
 	}
 	

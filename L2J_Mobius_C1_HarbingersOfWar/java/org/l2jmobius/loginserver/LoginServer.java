@@ -41,7 +41,7 @@ public class LoginServer extends Thread
 	
 	public static void main(String[] args) throws IOException
 	{
-		LoginServer server = new LoginServer();
+		final LoginServer server = new LoginServer();
 		_log.config("LoginServer Listening on port 2106");
 		server.start();
 	}
@@ -56,9 +56,9 @@ public class LoginServer extends Thread
 				do
 				{
 					// _log.fine("Waiting for client connection...");
-					Socket connection = _serverSocket.accept();
+					final Socket connection = _serverSocket.accept();
 					// _log.fine("Connection from " + connection.getInetAddress());
-					String connectedIp = connection.getInetAddress().getHostAddress();
+					final String connectedIp = connection.getInetAddress().getHostAddress();
 					if (connectedIp.startsWith("192.168.") || connectedIp.startsWith("10."))
 					{
 						// _log.fine("Using internal ip as server ip " + Config.INTERNAL_HOST_NAME);
@@ -84,7 +84,7 @@ public class LoginServer extends Thread
 		
 		if (!Config.LOGIN_HOST_NAME.equals("*"))
 		{
-			InetAddress adr = InetAddress.getByName(Config.LOGIN_HOST_NAME);
+			final InetAddress adr = InetAddress.getByName(Config.LOGIN_HOST_NAME);
 			_ip = adr.getHostAddress();
 			_log.config("LoginServer listening on IP:" + _ip + " Port 2106");
 			_serverSocket = new ServerSocket(2106, 50, adr);
@@ -101,11 +101,11 @@ public class LoginServer extends Thread
 		
 		try
 		{
-			File bannedFile = new File("banned_ip.cfg");
+			final File bannedFile = new File("banned_ip.cfg");
 			if (bannedFile.isFile() && bannedFile.exists())
 			{
 				int count = 0;
-				LineNumberReader lnr = new LineNumberReader(new InputStreamReader(new FileInputStream(bannedFile)));
+				final LineNumberReader lnr = new LineNumberReader(new InputStreamReader(new FileInputStream(bannedFile)));
 				String line = null;
 				while ((line = lnr.readLine()) != null)
 				{

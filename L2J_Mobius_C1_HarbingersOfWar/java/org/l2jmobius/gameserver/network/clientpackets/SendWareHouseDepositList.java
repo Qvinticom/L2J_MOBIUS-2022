@@ -35,24 +35,24 @@ public class SendWareHouseDepositList extends ClientBasePacket
 	{
 		super(decrypt);
 		int i;
-		PlayerInstance activeChar = client.getActiveChar();
-		Connection con = client.getConnection();
-		int count = readD();
-		int price = 30;
+		final PlayerInstance activeChar = client.getActiveChar();
+		final Connection con = client.getConnection();
+		final int count = readD();
+		final int price = 30;
 		int neededMoney = count * price;
-		int currentMoney = activeChar.getAdena();
+		final int currentMoney = activeChar.getAdena();
 		if (neededMoney > currentMoney)
 		{
-			SystemMessage sm = new SystemMessage(SystemMessage.YOU_NOT_ENOUGH_ADENA);
+			final SystemMessage sm = new SystemMessage(SystemMessage.YOU_NOT_ENOUGH_ADENA);
 			con.sendPacket(sm);
 			return;
 		}
-		ItemInstance[] items = new ItemInstance[count];
+		final ItemInstance[] items = new ItemInstance[count];
 		for (i = 0; i < count; ++i)
 		{
-			int itemId = readD();
-			int cnt = readD();
-			ItemInstance inst = ItemTable.getInstance().createItem(itemId);
+			final int itemId = readD();
+			final int cnt = readD();
+			final ItemInstance inst = ItemTable.getInstance().createItem(itemId);
 			inst.setCount(cnt);
 			items[i] = inst;
 		}
@@ -68,7 +68,7 @@ public class SendWareHouseDepositList extends ClientBasePacket
 			neededMoney += price;
 		}
 		activeChar.reduceAdena(neededMoney);
-		ItemList il = new ItemList(activeChar, false);
+		final ItemList il = new ItemList(activeChar, false);
 		con.sendPacket(il);
 	}
 	

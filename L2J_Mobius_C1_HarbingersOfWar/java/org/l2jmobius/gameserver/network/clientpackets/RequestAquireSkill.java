@@ -39,10 +39,10 @@ public class RequestAquireSkill extends ClientBasePacket
 	public RequestAquireSkill(byte[] rawPacket, ClientThread client) throws IOException
 	{
 		super(rawPacket);
-		PlayerInstance player = client.getActiveChar();
-		int id = readD();
-		int level = readD();
-		Skill skill = SkillTable.getInstance().getInfo(id, level);
+		final PlayerInstance player = client.getActiveChar();
+		final int id = readD();
+		final int level = readD();
+		final Skill skill = SkillTable.getInstance().getInfo(id, level);
 		Collection<SkillLearn> skills = SkillTreeTable.getInstance().getAvailableSkills(player);
 		int _requiredSp = 0;
 		for (SkillLearn skill2 : skills)
@@ -58,10 +58,10 @@ public class RequestAquireSkill extends ClientBasePacket
 		{
 			player.addSkill(skill);
 			player.setSp(player.getSp() - _requiredSp);
-			StatusUpdate su = new StatusUpdate(player.getObjectId());
+			final StatusUpdate su = new StatusUpdate(player.getObjectId());
 			su.addAttribute(StatusUpdate.SP, player.getSp());
 			player.sendPacket(su);
-			SystemMessage sm = new SystemMessage(SystemMessage.LEARNED_SKILL_S1);
+			final SystemMessage sm = new SystemMessage(SystemMessage.LEARNED_SKILL_S1);
 			sm.addSkillName(id);
 			player.sendPacket(sm);
 			if (level > 1)
@@ -79,11 +79,11 @@ public class RequestAquireSkill extends ClientBasePacket
 		}
 		else
 		{
-			SystemMessage sm = new SystemMessage(SystemMessage.NOT_ENOUGH_SP_TO_LEARN_SKILL);
+			final SystemMessage sm = new SystemMessage(SystemMessage.NOT_ENOUGH_SP_TO_LEARN_SKILL);
 			player.sendPacket(sm);
 		}
 		skills = SkillTreeTable.getInstance().getAvailableSkills(player);
-		AquireSkillList asl = new AquireSkillList();
+		final AquireSkillList asl = new AquireSkillList();
 		for (SkillLearn skill2 : skills)
 		{
 			asl.addSkill(skill2.getId(), skill2.getLevel(), skill2.getLevel(), skill2.getSpCost(), 0);

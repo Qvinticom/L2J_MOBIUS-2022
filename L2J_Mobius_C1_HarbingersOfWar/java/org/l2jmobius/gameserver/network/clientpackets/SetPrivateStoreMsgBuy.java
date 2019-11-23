@@ -27,8 +27,8 @@ public class SetPrivateStoreMsgBuy extends ClientBasePacket
 	public SetPrivateStoreMsgBuy(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
-		String storename = readS();
-		PlayerInstance player = client.getActiveChar();
+		final String storename = readS();
+		final PlayerInstance player = client.getActiveChar();
 		player.getTradeList().setBuyStoreName(storename);
 	}
 	

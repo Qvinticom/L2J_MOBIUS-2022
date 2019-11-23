@@ -31,10 +31,10 @@ public class RequestTargetCanceld extends ClientBasePacket
 	public RequestTargetCanceld(byte[] rawPacket, ClientThread client) throws IOException
 	{
 		super(rawPacket);
-		PlayerInstance activeChar = client.getActiveChar();
+		final PlayerInstance activeChar = client.getActiveChar();
 		if (activeChar.getTarget() != null)
 		{
-			TargetUnselected atk = new TargetUnselected(activeChar);
+			final TargetUnselected atk = new TargetUnselected(activeChar);
 			client.getConnection().sendPacket(atk);
 			((Creature) activeChar).setTarget(null);
 		}

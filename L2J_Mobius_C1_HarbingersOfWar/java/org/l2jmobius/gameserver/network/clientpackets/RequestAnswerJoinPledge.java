@@ -35,27 +35,27 @@ public class RequestAnswerJoinPledge extends ClientBasePacket
 	public RequestAnswerJoinPledge(byte[] rawPacket, ClientThread client)
 	{
 		super(rawPacket);
-		int answer = readD();
+		final int answer = readD();
 		// Connection con = client.getConnection();
-		PlayerInstance activeChar = client.getActiveChar();
-		PlayerInstance requestor = activeChar.getTransactionRequester();
+		final PlayerInstance activeChar = client.getActiveChar();
+		final PlayerInstance requestor = activeChar.getTransactionRequester();
 		if (answer == 1)
 		{
-			JoinPledge jp = new JoinPledge(requestor.getClanId());
+			final JoinPledge jp = new JoinPledge(requestor.getClanId());
 			activeChar.sendPacket(jp);
-			Clan clan = requestor.getClan();
+			final Clan clan = requestor.getClan();
 			clan.addClanMember(activeChar);
 			clan.store();
 			activeChar.setClanId(clan.getClanId());
 			activeChar.setClan(clan);
-			PledgeShowInfoUpdate pu = new PledgeShowInfoUpdate(clan, activeChar);
+			final PledgeShowInfoUpdate pu = new PledgeShowInfoUpdate(clan, activeChar);
 			activeChar.sendPacket(pu);
 			activeChar.sendPacket(new UserInfo(activeChar));
 			activeChar.broadcastPacket(new CharInfo(activeChar));
 			SystemMessage sm = new SystemMessage(SystemMessage.ENTERED_THE_CLAN);
 			activeChar.sendPacket(sm);
 			// ClanMember[] members = clan.getMembers();
-			PledgeShowMemberListAdd la = new PledgeShowMemberListAdd(activeChar);
+			final PledgeShowMemberListAdd la = new PledgeShowMemberListAdd(activeChar);
 			sm = new SystemMessage(SystemMessage.S1_HAS_JOINED_CLAN);
 			sm.addString(activeChar.getName());
 			clan.broadcastToOnlineMembers(la);
@@ -64,7 +64,7 @@ public class RequestAnswerJoinPledge extends ClientBasePacket
 		}
 		else
 		{
-			SystemMessage sm = new SystemMessage(SystemMessage.S1_REFUSED_TO_JOIN_CLAN);
+			final SystemMessage sm = new SystemMessage(SystemMessage.S1_REFUSED_TO_JOIN_CLAN);
 			sm.addString(activeChar.getName());
 			requestor.sendPacket(sm);
 		}

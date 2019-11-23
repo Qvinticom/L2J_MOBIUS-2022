@@ -28,7 +28,7 @@ public class RequestPrivateStoreQuitSell extends ClientBasePacket
 	public RequestPrivateStoreQuitSell(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
-		PlayerInstance player = client.getActiveChar();
+		final PlayerInstance player = client.getActiveChar();
 		player.setPrivateStoreType(0);
 		player.sendPacket(new UserInfo(player));
 		player.broadcastPacket(new UserInfo(player));

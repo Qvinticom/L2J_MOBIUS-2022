@@ -47,10 +47,10 @@ public class TeleportLocationTable
 	{
 		try
 		{
-			File teleData = new File("data/teleport.csv");
+			final File teleData = new File("data/teleport.csv");
 			if (teleData.isFile() && teleData.exists())
 			{
-				LineNumberReader lnr = new LineNumberReader(new InputStreamReader(new FileInputStream(teleData)));
+				final LineNumberReader lnr = new LineNumberReader(new InputStreamReader(new FileInputStream(teleData)));
 				String line = null;
 				while ((line = lnr.readLine()) != null)
 				{
@@ -58,8 +58,8 @@ public class TeleportLocationTable
 					{
 						continue;
 					}
-					StringTokenizer st = new StringTokenizer(line, ";");
-					TeleportLocation teleport = new TeleportLocation();
+					final StringTokenizer st = new StringTokenizer(line, ";");
+					final TeleportLocation teleport = new TeleportLocation();
 					teleport.setTeleId(Integer.parseInt(st.nextToken()));
 					teleport.setLocX(Integer.parseInt(st.nextToken()));
 					teleport.setLocY(Integer.parseInt(st.nextToken()));

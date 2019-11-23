@@ -34,15 +34,15 @@ public class SendWareHouseWithDrawList extends ClientBasePacket
 	{
 		super(decrypt);
 		int i;
-		PlayerInstance activeChar = client.getActiveChar();
-		int itemCount = readD();
+		final PlayerInstance activeChar = client.getActiveChar();
+		final int itemCount = readD();
 		int weight = 0;
-		ItemInstance[] items = new ItemInstance[itemCount];
+		final ItemInstance[] items = new ItemInstance[itemCount];
 		for (i = 0; i < itemCount; ++i)
 		{
-			int itemId = readD();
-			int count = readD();
-			ItemInstance inst = ItemTable.getInstance().createItem(itemId);
+			final int itemId = readD();
+			final int count = readD();
+			final ItemInstance inst = ItemTable.getInstance().createItem(itemId);
 			inst.setCount(count);
 			items[i] = inst;
 			weight += items[i].getItem().getWeight() * count;
@@ -54,10 +54,10 @@ public class SendWareHouseWithDrawList extends ClientBasePacket
 				activeChar.getInventory().addItem(items[i]);
 				activeChar.getWarehouse().destroyItem(items[i].getItemId(), items[i].getCount());
 			}
-			StatusUpdate su = new StatusUpdate(activeChar.getObjectId());
+			final StatusUpdate su = new StatusUpdate(activeChar.getObjectId());
 			su.addAttribute(StatusUpdate.CUR_LOAD, activeChar.getCurrentLoad());
 			activeChar.sendPacket(su);
-			ItemList il = new ItemList(activeChar, false);
+			final ItemList il = new ItemList(activeChar, false);
 			activeChar.sendPacket(il);
 		}
 		else
@@ -66,7 +66,7 @@ public class SendWareHouseWithDrawList extends ClientBasePacket
 			{
 				World.getInstance().removeVisibleObject(items[i]);
 			}
-			SystemMessage sm = new SystemMessage(SystemMessage.WEIGHT_LIMIT_EXCEEDED);
+			final SystemMessage sm = new SystemMessage(SystemMessage.WEIGHT_LIMIT_EXCEEDED);
 			activeChar.sendPacket(sm);
 		}
 	}

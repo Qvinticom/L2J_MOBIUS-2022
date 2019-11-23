@@ -44,16 +44,16 @@ public class SoulShots implements IItemHandler
 		{
 			return 0;
 		}
-		int SoulshotId = item.getItemId();
-		Weapon weapon = activeChar.getActiveWeapon();
+		final int SoulshotId = item.getItemId();
+		final Weapon weapon = activeChar.getActiveWeapon();
 		if (weapon == null)
 		{
 			activeChar.sendPacket(new SystemMessage(SystemMessage.CANNOT_USE_SOULSHOTS));
 			return 0;
 		}
-		int grade = weapon.getCrystalType();
-		int soulShotConsumption = weapon.getSoulShotCount();
-		int count = item.getCount();
+		final int grade = weapon.getCrystalType();
+		final int soulShotConsumption = weapon.getSoulShotCount();
+		final int count = item.getCount();
 		if (soulShotConsumption == 0)
 		{
 			activeChar.sendPacket(new SystemMessage(SystemMessage.CANNOT_USE_SOULSHOTS));
@@ -71,9 +71,9 @@ public class SoulShots implements IItemHandler
 		}
 		activeChar.setActiveSoulshotGrade(grade);
 		activeChar.sendPacket(new SystemMessage(SystemMessage.ENABLED_SOULSHOT));
-		WorldObject OldTarget = activeChar.getTarget();
+		final WorldObject OldTarget = activeChar.getTarget();
 		activeChar.setTarget(activeChar);
-		MagicSkillUser MSU = new MagicSkillUser(activeChar, 2039, 1, 0, 0);
+		final MagicSkillUser MSU = new MagicSkillUser(activeChar, 2039, 1, 0, 0);
 		activeChar.sendPacket(MSU);
 		activeChar.broadcastPacket(MSU);
 		activeChar.setTarget(OldTarget);

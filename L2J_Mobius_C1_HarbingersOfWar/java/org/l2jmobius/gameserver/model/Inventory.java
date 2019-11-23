@@ -91,7 +91,7 @@ public class Inventory
 	{
 		for (int i = 0; i < _items.size(); ++i)
 		{
-			ItemInstance temp = _items.get(i);
+			final ItemInstance temp = _items.get(i);
 			if (temp.getItemId() != itemId)
 			{
 				continue;
@@ -133,7 +133,7 @@ public class Inventory
 	
 	public Collection<ItemInstance> unEquipItemInBodySlot(int slot)
 	{
-		List<ItemInstance> unequipedItems = new ArrayList<>();
+		final List<ItemInstance> unequipedItems = new ArrayList<>();
 		int pdollSlot = -1;
 		switch (slot)
 		{
@@ -221,7 +221,7 @@ public class Inventory
 	
 	public Collection<ItemInstance> unEquipItemOnPaperdoll(int pdollSlot)
 	{
-		List<ItemInstance> unequipedItems = new ArrayList<>();
+		final List<ItemInstance> unequipedItems = new ArrayList<>();
 		if (pdollSlot == 14)
 		{
 			unEquipSlot(unequipedItems, 8);
@@ -233,15 +233,15 @@ public class Inventory
 	
 	public List<ItemInstance> equipItem(ItemInstance item)
 	{
-		ArrayList<ItemInstance> changedItems = new ArrayList<>();
-		int targetSlot = item.getItem().getBodyPart();
+		final ArrayList<ItemInstance> changedItems = new ArrayList<>();
+		final int targetSlot = item.getItem().getBodyPart();
 		switch (targetSlot)
 		{
 			case 16384:
 			{
 				ItemInstance arrow;
 				unEquipSlot(changedItems, 8);
-				ItemInstance old1 = unEquipSlot(14);
+				final ItemInstance old1 = unEquipSlot(14);
 				if (old1 != null)
 				{
 					changedItems.add(old1);
@@ -265,7 +265,7 @@ public class Inventory
 			}
 			case 256:
 			{
-				ItemInstance old1 = unEquipSlot(14);
+				final ItemInstance old1 = unEquipSlot(14);
 				if (old1 != null)
 				{
 					unEquipSlot(changedItems, 7);
@@ -341,7 +341,7 @@ public class Inventory
 			}
 			case 2048:
 			{
-				ItemInstance chest = getPaperdollItem(10);
+				final ItemInstance chest = getPaperdollItem(10);
 				if ((chest != null) && (chest.getItem().getBodyPart() == 32768))
 				{
 					unEquipSlot(changedItems, 10);
@@ -392,7 +392,7 @@ public class Inventory
 	
 	private ItemInstance unEquipSlot(int slot)
 	{
-		ItemInstance item = _paperdoll[slot];
+		final ItemInstance item = _paperdoll[slot];
 		if (item != null)
 		{
 			item.setEquipSlot(-1);
@@ -408,7 +408,7 @@ public class Inventory
 		{
 			return false;
 		}
-		ItemInstance item = _paperdoll[slot];
+		final ItemInstance item = _paperdoll[slot];
 		if (item != null)
 		{
 			item.setEquipSlot(-1);
@@ -423,7 +423,7 @@ public class Inventory
 	{
 		for (int i = 0; i < _items.size(); ++i)
 		{
-			ItemInstance temp = _items.get(i);
+			final ItemInstance temp = _items.get(i);
 			if (temp.getObjectId() != objectId)
 			{
 				continue;
@@ -483,7 +483,7 @@ public class Inventory
 	
 	public ItemInstance destroyItem(int objectId, int count)
 	{
-		ItemInstance item = getItem(objectId);
+		final ItemInstance item = getItem(objectId);
 		if (item.getCount() == count)
 		{
 			_items.remove(item);
@@ -501,7 +501,7 @@ public class Inventory
 	
 	public ItemInstance destroyItemByItemId(int itemId, int count)
 	{
-		ItemInstance item = findItemByItemId(itemId);
+		final ItemInstance item = findItemByItemId(itemId);
 		if (item.getCount() == count)
 		{
 			_items.remove(item);
@@ -519,7 +519,7 @@ public class Inventory
 	
 	public ItemInstance dropItem(int objectId, int count)
 	{
-		ItemInstance oldItem = getItem(objectId);
+		final ItemInstance oldItem = getItem(objectId);
 		return this.dropItem(oldItem, count);
 	}
 	
@@ -537,7 +537,7 @@ public class Inventory
 		if (oldItem.getItemId() == 57)
 		{
 			reduceAdena(count);
-			ItemInstance adena = ItemTable.getInstance().createItem(oldItem.getItemId());
+			final ItemInstance adena = ItemTable.getInstance().createItem(oldItem.getItemId());
 			adena.setCount(count);
 			return adena;
 		}
@@ -550,7 +550,7 @@ public class Inventory
 		}
 		oldItem.setCount(oldItem.getCount() - count);
 		oldItem.setLastChange(2);
-		ItemInstance newItem = ItemTable.getInstance().createItem(oldItem.getItemId());
+		final ItemInstance newItem = ItemTable.getInstance().createItem(oldItem.getItemId());
 		newItem.setCount(count);
 		refreshWeight();
 		return newItem;

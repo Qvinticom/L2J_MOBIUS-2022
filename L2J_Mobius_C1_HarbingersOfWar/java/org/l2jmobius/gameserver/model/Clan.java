@@ -85,7 +85,7 @@ public class Clan
 	
 	public void addClanMember(PlayerInstance player)
 	{
-		ClanMember member = new ClanMember(player);
+		final ClanMember member = new ClanMember(player);
 		this.addClanMember(member);
 	}
 	
@@ -106,7 +106,7 @@ public class Clan
 	
 	public Collection<PlayerInstance> getOnlineMembers(String exclude)
 	{
-		List<PlayerInstance> result = new ArrayList<>();
+		final List<PlayerInstance> result = new ArrayList<>();
 		for (ClanMember member : _members.values())
 		{
 			if (!member.isOnline() || member.getName().equals(exclude))
@@ -185,7 +185,7 @@ public class Clan
 	
 	public void store()
 	{
-		File clanFile = new File("data/clans/" + getName() + ".csv");
+		final File clanFile = new File("data/clans/" + getName() + ".csv");
 		FileWriter out = null;
 		try
 		{

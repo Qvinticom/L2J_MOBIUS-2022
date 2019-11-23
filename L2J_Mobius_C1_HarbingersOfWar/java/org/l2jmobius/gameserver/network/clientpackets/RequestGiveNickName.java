@@ -31,16 +31,16 @@ public class RequestGiveNickName extends ClientBasePacket
 	public RequestGiveNickName(byte[] rawPacket, ClientThread client)
 	{
 		super(rawPacket);
-		String target = readS();
-		String title = readS();
+		final String target = readS();
+		final String title = readS();
 		// Connection con = client.getConnection();
-		PlayerInstance activeChar = client.getActiveChar();
+		final PlayerInstance activeChar = client.getActiveChar();
 		if (activeChar.isClanLeader())
 		{
 			PlayerInstance member;
 			if (activeChar.getClan().getLevel() < 3)
 			{
-				SystemMessage sm = new SystemMessage(SystemMessage.CLAN_LVL_3_NEEDED_TO_ENDOVE_TITLE);
+				final SystemMessage sm = new SystemMessage(SystemMessage.CLAN_LVL_3_NEEDED_TO_ENDOVE_TITLE);
 				activeChar.sendPacket(sm);
 				activeChar.sendMessage("But you can do it freely for now ;)");
 				activeChar.sendPacket(sm);
@@ -48,9 +48,9 @@ public class RequestGiveNickName extends ClientBasePacket
 			if ((member = World.getInstance().getPlayer(target)).getClanId() == activeChar.getClanId())
 			{
 				member.setTitle(title);
-				UserInfo ui = new UserInfo(member);
+				final UserInfo ui = new UserInfo(member);
 				member.sendPacket(ui);
-				CharInfo ci = new CharInfo(member);
+				final CharInfo ci = new CharInfo(member);
 				member.broadcastPacket(ci);
 			}
 		}

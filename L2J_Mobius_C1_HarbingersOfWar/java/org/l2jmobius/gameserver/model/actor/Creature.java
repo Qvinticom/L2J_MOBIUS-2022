@@ -201,9 +201,9 @@ public abstract class Creature extends WorldObject
 		{
 			return super.getX();
 		}
-		long elapsed = System.currentTimeMillis() - _moveStartTime;
-		int diff = (int) (elapsed * _xAddition);
-		int remain = Math.abs(getXdestination() - super.getX()) - Math.abs(diff);
+		final long elapsed = System.currentTimeMillis() - _moveStartTime;
+		final int diff = (int) (elapsed * _xAddition);
+		final int remain = Math.abs(getXdestination() - super.getX()) - Math.abs(diff);
 		if (remain > 0)
 		{
 			return super.getX() + diff;
@@ -218,9 +218,9 @@ public abstract class Creature extends WorldObject
 		{
 			return super.getY();
 		}
-		long elapsed = System.currentTimeMillis() - _moveStartTime;
-		int diff = (int) (elapsed * _yAddition);
-		int remain = Math.abs(getYdestination() - super.getY()) - Math.abs(diff);
+		final long elapsed = System.currentTimeMillis() - _moveStartTime;
+		final int diff = (int) (elapsed * _yAddition);
+		final int remain = Math.abs(getYdestination() - super.getY()) - Math.abs(diff);
 		if (remain > 0)
 		{
 			return super.getY() + diff;
@@ -392,22 +392,22 @@ public abstract class Creature extends WorldObject
 	
 	public void broadcastStatusUpdate()
 	{
-		List<Creature> list = getStatusListener();
+		final List<Creature> list = getStatusListener();
 		if (list.isEmpty())
 		{
 			return;
 		}
-		StatusUpdate su = new StatusUpdate(getObjectId());
+		final StatusUpdate su = new StatusUpdate(getObjectId());
 		su.addAttribute(StatusUpdate.CUR_HP, (int) getCurrentHp());
 		su.addAttribute(StatusUpdate.CUR_MP, (int) getCurrentMp());
 		for (int i = 0; i < list.size(); ++i)
 		{
-			Creature temp = list.get(i);
+			final Creature temp = list.get(i);
 			if (!(temp instanceof PlayerInstance))
 			{
 				continue;
 			}
-			PlayerInstance player = (PlayerInstance) temp;
+			final PlayerInstance player = (PlayerInstance) temp;
 			try
 			{
 				player.sendPacket(su);
@@ -508,11 +508,11 @@ public abstract class Creature extends WorldObject
 	public void increaseLevel()
 	{
 		++_level;
-		StatusUpdate su = new StatusUpdate(getObjectId());
+		final StatusUpdate su = new StatusUpdate(getObjectId());
 		su.addAttribute(StatusUpdate.LEVEL, _level);
 		sendPacket(su);
 		sendPacket(new SystemMessage(SystemMessage.YOU_INCREASED_YOUR_LEVEL));
-		SocialAction sa = new SocialAction(getObjectId(), 15);
+		final SocialAction sa = new SocialAction(getObjectId(), 15);
 		broadcastPacket(sa);
 		sendPacket(sa);
 	}
@@ -520,7 +520,7 @@ public abstract class Creature extends WorldObject
 	public void decreaseLevel()
 	{
 		--_level;
-		StatusUpdate su = new StatusUpdate(getObjectId());
+		final StatusUpdate su = new StatusUpdate(getObjectId());
 		su.addAttribute(StatusUpdate.LEVEL, _level);
 		sendPacket(su);
 	}
@@ -779,7 +779,7 @@ public abstract class Creature extends WorldObject
 	
 	public void reduceCurrentMp(int i)
 	{
-		Object object = _mpLock;
+		final Object object = _mpLock;
 		synchronized (object)
 		{
 			_currentMp -= i;
@@ -818,8 +818,8 @@ public abstract class Creature extends WorldObject
 				{
 					_currentMoveTask.cancel();
 				}
-				StopMove stop = new StopMove(this);
-				Die die = new Die(this);
+				final StopMove stop = new StopMove(this);
+				final Die die = new Die(this);
 				broadcastPacket(stop);
 				sendPacket(stop);
 				broadcastPacket(die);
@@ -836,7 +836,7 @@ public abstract class Creature extends WorldObject
 	public void moveTo(int x, int y, int z, int offset)
 	{
 		_moveOffset = offset;
-		double distance = getDistance(x, y);
+		final double distance = getDistance(x, y);
 		if ((distance > 0.0) || (offset > 0))
 		{
 			if (offset == 0)
@@ -847,7 +847,7 @@ public abstract class Creature extends WorldObject
 					setPawnTarget(null);
 				}
 				calculateMovement(x, y, z, distance);
-				CharMoveToLocation mov = new CharMoveToLocation(this);
+				final CharMoveToLocation mov = new CharMoveToLocation(this);
 				if (getCurrentState() == CreatureState.CASTING)
 				{
 					setCurrentState(CreatureState.IDLE);
@@ -869,7 +869,7 @@ public abstract class Creature extends WorldObject
 					setPawnTarget((Creature) getTarget());
 					setPawnOffset(offset);
 					calculateMovement(x, y, z, distance);
-					MoveToPawn mov = new MoveToPawn(this, getTarget(), offset);
+					final MoveToPawn mov = new MoveToPawn(this, getTarget(), offset);
 					broadcastPacket(mov);
 					sendPacket(mov);
 					return;
@@ -893,7 +893,7 @@ public abstract class Creature extends WorldObject
 		}
 		if ((getPawnTarget() != null) && (distance <= getAttackRange()) && (getCurrentState() == CreatureState.FOLLOW))
 		{
-			ArriveTask newMoveTask = new ArriveTask(this);
+			final ArriveTask newMoveTask = new ArriveTask(this);
 			_moveTimer.schedule(newMoveTask, 3000L);
 			_currentMoveTask = newMoveTask;
 			return;
@@ -910,13 +910,13 @@ public abstract class Creature extends WorldObject
 			{
 				distance -= _moveOffset - 5;
 			}
-			double angle = Math.atan2(-dy, -dx);
+			final double angle = Math.atan2(-dy, -dx);
 			dy = (int) (-(Math.sin(angle) * distance));
 			dx = (int) (-(Math.cos(angle) * distance));
 		}
 		if ((distance > 0.0) || (getPawnTarget() != null))
 		{
-			float speed = _effectiveSpeed;
+			final float speed = _effectiveSpeed;
 			if (speed == 0.0f)
 			{
 				_log.warning("speed is 0 for Character oid:" + getObjectId() + " movement canceld");
@@ -927,8 +927,8 @@ public abstract class Creature extends WorldObject
 			_yAddition = ((dy / distance) * speed) / 1000.0;
 			int heading = (int) (Math.atan2(-dy, -dx) * 10430.378350470453);
 			setHeading(heading += 32768);
-			int destinationX = getX() + (int) (_xAddition * _timeToTarget);
-			int destinationY = getY() + (int) (_yAddition * _timeToTarget);
+			final int destinationX = getX() + (int) (_xAddition * _timeToTarget);
+			final int destinationY = getY() + (int) (_yAddition * _timeToTarget);
 			setXdestination(destinationX);
 			setYdestination(destinationY);
 			setZdestination(z);
@@ -937,7 +937,7 @@ public abstract class Creature extends WorldObject
 			{
 				_timeToTarget = 0L;
 			}
-			ArriveTask newMoveTask = new ArriveTask(this);
+			final ArriveTask newMoveTask = new ArriveTask(this);
 			if (getPawnTarget() != null)
 			{
 				if (getCurrentState() == CreatureState.INTERACT)
@@ -994,15 +994,15 @@ public abstract class Creature extends WorldObject
 	
 	public double getDistance(int x, int y)
 	{
-		long dx = x - getX();
-		long dy = y - getY();
-		double distance = Math.sqrt((dx * dx) + (dy * dy));
+		final long dx = x - getX();
+		final long dy = y - getY();
+		final double distance = Math.sqrt((dx * dx) + (dy * dy));
 		return distance;
 	}
 	
 	public Collection<PlayerInstance> broadcastPacket(ServerBasePacket mov)
 	{
-		Set<PlayerInstance> nearby = getKnownPlayers();
+		final Set<PlayerInstance> nearby = getKnownPlayers();
 		for (Creature player : nearby)
 		{
 			player.sendPacket(mov);
@@ -1018,10 +1018,10 @@ public abstract class Creature extends WorldObject
 	{
 		if (getPawnTarget() != null)
 		{
-			int x = getPawnTarget().getX();
-			int y = getPawnTarget().getY();
-			int z = getPawnTarget().getZ();
-			double distance = getDistance(x, y);
+			final int x = getPawnTarget().getX();
+			final int y = getPawnTarget().getY();
+			final int z = getPawnTarget().getZ();
+			final double distance = getDistance(x, y);
 			if (getCurrentState() == CreatureState.FOLLOW)
 			{
 				calculateMovement(x, y, z, distance);
@@ -1059,7 +1059,7 @@ public abstract class Creature extends WorldObject
 			setto = new SetToLocation(this);
 			broadcastPacket(setto);
 		}
-		FinishRotation fr = new FinishRotation(this);
+		final FinishRotation fr = new FinishRotation(this);
 		broadcastPacket(fr);
 	}
 	
@@ -1084,12 +1084,12 @@ public abstract class Creature extends WorldObject
 	private void onAttackTimer()
 	{
 		_currentAttackTask = null;
-		Creature target = (Creature) _attackTarget;
+		final Creature target = (Creature) _attackTarget;
 		if (isDead() || (target == null) || target.isDead() || ((getCurrentState() != CreatureState.ATTACKING) && (getCurrentState() != CreatureState.CASTING)) || !target.knownsObject(this) || !knownsObject(target))
 		{
 			setInCombat(false);
 			setCurrentState(CreatureState.IDLE);
-			ActionFailed af = new ActionFailed();
+			final ActionFailed af = new ActionFailed();
 			sendPacket(af);
 			return;
 		}
@@ -1097,12 +1097,12 @@ public abstract class Creature extends WorldObject
 		{
 			setInCombat(false);
 			setCurrentState(CreatureState.IDLE);
-			ActionFailed af = new ActionFailed();
+			final ActionFailed af = new ActionFailed();
 			sendPacket(af);
 			sendPacket(new SystemMessage(SystemMessage.NOT_ENOUGH_ARROWS));
 			return;
 		}
-		double distance = getDistance(target.getX(), target.getY());
+		final double distance = getDistance(target.getX(), target.getY());
 		if (distance > getAttackRange())
 		{
 			moveTo(_attackTarget.getX(), _attackTarget.getY(), _attackTarget.getZ(), getAttackRange());
@@ -1110,24 +1110,24 @@ public abstract class Creature extends WorldObject
 		}
 		if ((getCurrentState() == CreatureState.ATTACKING) && !_currentlyAttacking)
 		{
-			Weapon weaponItem = getActiveWeapon();
+			final Weapon weaponItem = getActiveWeapon();
 			if (weaponItem == null)
 			{
 				setInCombat(false);
 				setCurrentState(CreatureState.IDLE);
-				ActionFailed af = new ActionFailed();
+				final ActionFailed af = new ActionFailed();
 				sendPacket(af);
 				return;
 			}
 			if (!_currentlyAttacking)
 			{
 				_currentlyAttacking = true;
-				int baseDamage = weaponItem.getPDamage();
-				int randomDamage = weaponItem.getRandomDamage();
+				final int baseDamage = weaponItem.getPDamage();
+				final int randomDamage = weaponItem.getRandomDamage();
 				int damage = 0;
 				boolean crit = false;
 				// int hitTarget = Creature.getRnd().nextInt(100);
-				boolean miss = false;
+				final boolean miss = false;
 				boolean soulShotUse = false;
 				if (!miss)
 				{
@@ -1145,7 +1145,7 @@ public abstract class Creature extends WorldObject
 						}
 					}
 					damage = ((baseDamage + Rnd.get(randomDamage)) * 70) / pDef;
-					int critHit = Rnd.get(100);
+					final int critHit = Rnd.get(100);
 					crit = getCriticalHit() > critHit;
 					if (crit)
 					{
@@ -1173,13 +1173,13 @@ public abstract class Creature extends WorldObject
 						sendPacket(new SystemMessage(SystemMessage.NOT_ENOUGH_MP));
 						setInCombat(false);
 						setCurrentState(CreatureState.IDLE);
-						ActionFailed af = new ActionFailed();
+						final ActionFailed af = new ActionFailed();
 						sendPacket(af);
 						return;
 					}
 					reduceCurrentMp(weaponItem.getMpConsume());
 					sendPacket(new SystemMessage(SystemMessage.GETTING_READY_TO_SHOOT_AN_ARROW));
-					SetupGauge sg = new SetupGauge(1, calculateAttackSpeed(weaponItem) * 2);
+					final SetupGauge sg = new SetupGauge(1, calculateAttackSpeed(weaponItem) * 2);
 					sendPacket(sg);
 					_hitTimer.schedule(new HitTask(this, target, damage, crit, miss, false), calculateHitSpeed(weaponItem, 1));
 				}
@@ -1187,7 +1187,7 @@ public abstract class Creature extends WorldObject
 				{
 					_hitTimer.schedule(new HitTask(this, target, damage, crit, miss, false), calculateHitSpeed(weaponItem, 1));
 				}
-				Attack attack = new Attack(getObjectId(), _attackTarget.getObjectId(), damage, miss, crit, soulShotUse, getX(), getY(), getZ());
+				final Attack attack = new Attack(getObjectId(), _attackTarget.getObjectId(), damage, miss, crit, soulShotUse, getX(), getY(), getZ());
 				setActiveSoulshotGrade(0);
 				broadcastPacket(attack);
 				sendPacket(attack);
@@ -1213,7 +1213,7 @@ public abstract class Creature extends WorldObject
 			setInCombat(false);
 			setTarget(null);
 			setCurrentState(CreatureState.IDLE);
-			ActionFailed af = new ActionFailed();
+			final ActionFailed af = new ActionFailed();
 			sendPacket(af);
 			return;
 		}
@@ -1292,7 +1292,7 @@ public abstract class Creature extends WorldObject
 		{
 			setInCombat(false);
 			setCurrentState(CreatureState.IDLE);
-			ActionFailed af = new ActionFailed();
+			final ActionFailed af = new ActionFailed();
 			sendPacket(af);
 			return;
 		}
@@ -1421,7 +1421,7 @@ public abstract class Creature extends WorldObject
 		{
 			try
 			{
-				Object object = _mpLock;
+				final Object object = _mpLock;
 				synchronized (object)
 				{
 					double nowMp = _instance.getCurrentMp();

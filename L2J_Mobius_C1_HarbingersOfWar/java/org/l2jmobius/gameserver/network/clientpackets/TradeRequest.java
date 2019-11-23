@@ -31,10 +31,10 @@ public class TradeRequest extends ClientBasePacket
 	public TradeRequest(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
-		int objectId = readD();
-		PlayerInstance player = client.getActiveChar();
-		World world = World.getInstance();
-		WorldObject target = world.findObject(objectId);
+		final int objectId = readD();
+		final PlayerInstance player = client.getActiveChar();
+		final World world = World.getInstance();
+		final WorldObject target = world.findObject(objectId);
 		if ((target == null) || !(target instanceof PlayerInstance) || (target.getObjectId() != objectId))
 		{
 			player.sendPacket(new SystemMessage(SystemMessage.TARGET_IS_INCORRECT));
@@ -45,19 +45,19 @@ public class TradeRequest extends ClientBasePacket
 			player.sendPacket(new SystemMessage(SystemMessage.ALREADY_TRADING));
 			return;
 		}
-		PlayerInstance pcTarget = (PlayerInstance) target;
+		final PlayerInstance pcTarget = (PlayerInstance) target;
 		if (player.knownsObject(target) && !pcTarget.isTransactionInProgress())
 		{
 			pcTarget.setTransactionRequester(player);
 			player.setTransactionRequester(pcTarget);
 			pcTarget.sendPacket(new SendTradeRequest(player.getObjectId()));
-			SystemMessage sm = new SystemMessage(SystemMessage.REQUEST_S1_FOR_TRADE);
+			final SystemMessage sm = new SystemMessage(SystemMessage.REQUEST_S1_FOR_TRADE);
 			sm.addString(pcTarget.getName());
 			player.sendPacket(sm);
 		}
 		else
 		{
-			SystemMessage sm = new SystemMessage(SystemMessage.S1_IS_BUSY_TRY_LATER);
+			final SystemMessage sm = new SystemMessage(SystemMessage.S1_IS_BUSY_TRY_LATER);
 			sm.addString(pcTarget.getName());
 			player.sendPacket(sm);
 			_log.info("transaction already in progress.");

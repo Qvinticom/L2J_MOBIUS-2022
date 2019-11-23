@@ -31,9 +31,9 @@ public class RequestPartyMatchDetail extends ClientBasePacket
 	public RequestPartyMatchDetail(byte[] decrypt, ClientThread client) throws IOException
 	{
 		super(decrypt);
-		int objectId = readD();
-		PlayerInstance player = (PlayerInstance) World.getInstance().findObject(objectId);
-		PartyMatchDetail details = new PartyMatchDetail(player);
+		final int objectId = readD();
+		final PlayerInstance player = (PlayerInstance) World.getInstance().findObject(objectId);
+		final PartyMatchDetail details = new PartyMatchDetail(player);
 		client.getConnection().sendPacket(details);
 	}
 	

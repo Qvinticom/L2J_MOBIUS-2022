@@ -40,7 +40,7 @@ public class SkillHandler
 	
 	public void registerSkillHandler(ISkillHandler handler)
 	{
-		int[] ids = handler.getSkillIds();
+		final int[] ids = handler.getSkillIds();
 		for (int id : ids)
 		{
 			_datatable.put(id, handler);

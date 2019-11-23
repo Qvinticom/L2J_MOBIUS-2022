@@ -30,16 +30,16 @@ public class Action extends ClientBasePacket
 	public Action(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
-		int objectId = readD();
+		final int objectId = readD();
 		@SuppressWarnings("unused")
-		int originX = readD();
+		final int originX = readD();
 		@SuppressWarnings("unused")
-		int originY = readD();
+		final int originY = readD();
 		@SuppressWarnings("unused")
-		int originZ = readD();
-		int actionId = readC();
-		PlayerInstance activeChar = client.getActiveChar();
-		WorldObject obj = World.getInstance().findObject(objectId);
+		final int originZ = readD();
+		final int actionId = readC();
+		final PlayerInstance activeChar = client.getActiveChar();
+		final WorldObject obj = World.getInstance().findObject(objectId);
 		if ((obj != null) && !activeChar.isDead() && (activeChar.getPrivateStoreType() == 0) && (activeChar.getTransactionRequester() == null))
 		{
 			switch (actionId)

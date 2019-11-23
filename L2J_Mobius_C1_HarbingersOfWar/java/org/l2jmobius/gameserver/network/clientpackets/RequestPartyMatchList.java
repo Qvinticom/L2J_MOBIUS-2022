@@ -30,10 +30,10 @@ public class RequestPartyMatchList extends ClientBasePacket
 	public RequestPartyMatchList(byte[] decrypt, ClientThread client) throws IOException
 	{
 		super(decrypt);
-		int status = readD();
+		final int status = readD();
 		if (status == 1)
 		{
-			PartyMatchList matchList = new PartyMatchList(World.getInstance().getAllPlayers());
+			final PartyMatchList matchList = new PartyMatchList(World.getInstance().getAllPlayers());
 			client.getConnection().sendPacket(matchList);
 		}
 		// else if (status == 3)

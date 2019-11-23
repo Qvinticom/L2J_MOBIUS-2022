@@ -88,7 +88,7 @@ public class Attackable extends NpcInstance
 	{
 		if (_active)
 		{
-			int wait = (10 + Rnd.get(120)) * 1000;
+			final int wait = (10 + Rnd.get(120)) * 1000;
 			_currentAiTask = new AITask(this);
 			_aiTimer.schedule(_currentAiTask, wait);
 		}
@@ -97,7 +97,7 @@ public class Attackable extends NpcInstance
 	protected void startRandomWalking()
 	{
 		_currentAiTask = new AITask(this);
-		int wait = (10 + Rnd.get(120)) * 1000;
+		final int wait = (10 + Rnd.get(120)) * 1000;
 		_aiTimer.schedule(_currentAiTask, wait);
 		setCurrentState(CreatureState.RANDOM_WALK);
 	}
@@ -161,7 +161,7 @@ public class Attackable extends NpcInstance
 		}
 		else if (isDead())
 		{
-			Attackable Attackable = this;
+			final Attackable Attackable = this;
 			synchronized (Attackable)
 			{
 				if (!_killedAlready)
@@ -185,12 +185,12 @@ public class Attackable extends NpcInstance
 	{
 		// TODO: Figure iterator logic and replace with for, if possible.
 		Iterator<WorldObject> it = _aggroList.keySet().iterator();
-		int npcID = getNpcTemplate().getNpcId();
+		final int npcID = getNpcTemplate().getNpcId();
 		while (it.hasNext())
 		{
 			PlayerInstance temp;
-			Creature attacker = (Creature) it.next();
-			Integer value = _aggroList.get(attacker);
+			final Creature attacker = (Creature) it.next();
+			final Integer value = _aggroList.get(attacker);
 			Party attackerParty = null;
 			if ((attacker instanceof PlayerInstance) && (temp = (PlayerInstance) attacker).isInParty())
 			{
@@ -240,10 +240,10 @@ public class Attackable extends NpcInstance
 			int partyDmg = 0;
 			if (attackerParty != null)
 			{
-				List<PlayerInstance> members = attackerParty.getPartyMembers();
+				final List<PlayerInstance> members = attackerParty.getPartyMembers();
 				for (int i = 0; i < members.size(); ++i)
 				{
-					PlayerInstance tmp = members.get(i);
+					final PlayerInstance tmp = members.get(i);
 					if (!_aggroList.containsKey(tmp))
 					{
 						continue;
@@ -265,7 +265,7 @@ public class Attackable extends NpcInstance
 	private void calculateAggro(int damage, Creature attacker)
 	{
 		int newAggro = damage;
-		Integer aggroValue = _aggroList.get(attacker);
+		final Integer aggroValue = _aggroList.get(attacker);
 		if (aggroValue != null)
 		{
 			newAggro += aggroValue.intValue();
@@ -289,9 +289,9 @@ public class Attackable extends NpcInstance
 			{
 				continue;
 			}
-			ItemInstance dropit = ItemTable.getInstance().createItem(drop.getItemId());
-			int min = drop.getMinDrop();
-			int max = drop.getMaxDrop();
+			final ItemInstance dropit = ItemTable.getInstance().createItem(drop.getItemId());
+			final int min = drop.getMinDrop();
+			final int max = drop.getMaxDrop();
 			int itemCount = 0;
 			itemCount = min < max ? Rnd.get(max - min) + min : 1;
 			if (dropit.getItemId() == 57)
@@ -305,7 +305,7 @@ public class Attackable extends NpcInstance
 				dropit.setY(getY());
 				dropit.setZ(getZ() + 100);
 				dropit.setOnTheGround(true);
-				DropItem dis = new DropItem(dropit, getObjectId());
+				final DropItem dis = new DropItem(dropit, getObjectId());
 				for (Creature player : broadcastPacket(dis))
 				{
 					((PlayerInstance) player).addKnownObjectWithoutCreate(dropit);
@@ -357,7 +357,7 @@ public class Attackable extends NpcInstance
 		super.setPhysicalAttack(physicalAttack);
 		_dummyWeapon = new Weapon();
 		_dummyWeapon.setPDamage(physicalAttack);
-		int randDmg = getLevel();
+		final int randDmg = getLevel();
 		_dummyWeapon.setRandomDamage(randDmg);
 	}
 	
@@ -457,8 +457,8 @@ public class Attackable extends NpcInstance
 		{
 			try
 			{
-				int x1 = (getX() + Rnd.get(500)) - 250;
-				int y1 = (getY() + Rnd.get(500)) - 250;
+				final int x1 = (getX() + Rnd.get(500)) - 250;
+				final int y1 = (getY() + Rnd.get(500)) - 250;
 				moveTo(x1, y1, getZ(), 0);
 			}
 			catch (Exception e)

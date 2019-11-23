@@ -32,12 +32,12 @@ public class RequestShortCutReg extends ClientBasePacket
 	public RequestShortCutReg(byte[] rawPacket, ClientThread client) throws IOException
 	{
 		super(rawPacket);
-		PlayerInstance activeChar = client.getActiveChar();
-		Connection con = client.getConnection();
-		int type = readD();
-		int slot = readD();
-		int id = readD();
-		int unk = readD();
+		final PlayerInstance activeChar = client.getActiveChar();
+		final Connection con = client.getConnection();
+		final int type = readD();
+		final int slot = readD();
+		final int id = readD();
+		final int unk = readD();
 		switch (type)
 		{
 			case 1:
@@ -49,7 +49,7 @@ public class RequestShortCutReg extends ClientBasePacket
 			}
 			case 2:
 			{
-				int level = activeChar.getSkillLevel(id);
+				final int level = activeChar.getSkillLevel(id);
 				if (level <= 0)
 				{
 					break;

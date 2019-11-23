@@ -43,7 +43,7 @@ public class CharacterCreate extends ClientBasePacket
 	public CharacterCreate(byte[] decrypt, ClientThread client) throws IOException
 	{
 		super(decrypt);
-		PlayerInstance newChar = new PlayerInstance();
+		final PlayerInstance newChar = new PlayerInstance();
 		newChar.setName(readS());
 		newChar.setRace(readD());
 		newChar.setSex(readD());
@@ -59,19 +59,19 @@ public class CharacterCreate extends ClientBasePacket
 		newChar.setFace(readD());
 		if (CharNameTable.getInstance().doesCharNameExist(newChar.getName()))
 		{
-			CharCreateFail ccf = new CharCreateFail(CharCreateFail.REASON_NAME_ALREADY_EXISTS);
+			final CharCreateFail ccf = new CharCreateFail(CharCreateFail.REASON_NAME_ALREADY_EXISTS);
 			client.getConnection().sendPacket(ccf);
 		}
 		else if ((newChar.getName().length() <= 16) && isAlphaNumeric(newChar.getName()))
 		{
-			CharCreateOk cco = new CharCreateOk();
+			final CharCreateOk cco = new CharCreateOk();
 			client.getConnection().sendPacket(cco);
 			initNewChar(client, newChar);
 			CharNameTable.getInstance().addCharName(newChar.getName());
 		}
 		else
 		{
-			CharCreateFail ccf = new CharCreateFail(CharCreateFail.REASON_16_ENG_CHARS);
+			final CharCreateFail ccf = new CharCreateFail(CharCreateFail.REASON_16_ENG_CHARS);
 			client.getConnection().sendPacket(ccf);
 		}
 	}
@@ -79,7 +79,7 @@ public class CharacterCreate extends ClientBasePacket
 	private boolean isAlphaNumeric(String text)
 	{
 		boolean result = true;
-		char[] chars = text.toCharArray();
+		final char[] chars = text.toCharArray();
 		for (char c : chars)
 		{
 			if (Character.isLetterOrDigit(c))
@@ -96,7 +96,7 @@ public class CharacterCreate extends ClientBasePacket
 	{
 		newChar.setObjectId(IdFactory.getInstance().getNextId());
 		World.getInstance().storeObject(newChar);
-		CharTemplate template = CharTemplateTable.getInstance().getTemplate(newChar.getClassId());
+		final CharTemplate template = CharTemplateTable.getInstance().getTemplate(newChar.getClassId());
 		newChar.setAccuracy(template.getAcc());
 		newChar.setCon(template.getCon());
 		newChar.setCriticalHit(template.getCrit());
@@ -144,10 +144,10 @@ public class CharacterCreate extends ClientBasePacket
 			newChar.setCollisionRadius(template.getFColR());
 			newChar.setCollisionHeight(template.getFColH());
 		}
-		ItemTable itemTable = ItemTable.getInstance();
+		final ItemTable itemTable = ItemTable.getInstance();
 		for (Integer item2 : template.getItems())
 		{
-			ItemInstance item = itemTable.createItem(item2);
+			final ItemInstance item = itemTable.createItem(item2);
 			newChar.getInventory().addItem(item);
 		}
 		newChar.setTitle("");
@@ -157,7 +157,7 @@ public class CharacterCreate extends ClientBasePacket
 			newChar.addSkill(SkillTable.getInstance().getInfo(startSkill.getId(), startSkill.getLevel()));
 		}
 		client.saveCharToDisk(newChar);
-		CharSelectInfo cl = new CharSelectInfo(client.getLoginName(), client.getSessionId());
+		final CharSelectInfo cl = new CharSelectInfo(client.getLoginName(), client.getSessionId());
 		client.getConnection().sendPacket(cl);
 	}
 	

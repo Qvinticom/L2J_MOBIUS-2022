@@ -46,7 +46,7 @@ public class AccountData
 	public AccountData(boolean autoCreate)
 	{
 		_log.config("Automatically creating new accounts: " + Config.AUTO_CREATE_ACCOUNTS);
-		File loginFile = new File("data/accounts.txt");
+		final File loginFile = new File("data/accounts.txt");
 		if (loginFile.exists())
 		{
 			try
@@ -68,7 +68,7 @@ public class AccountData
 	public boolean loginValid(String user, String password, InetAddress address) throws HackingException
 	{
 		boolean ok = false;
-		Integer failedConnects = _hackProtection.get(address.getHostAddress());
+		final Integer failedConnects = _hackProtection.get(address.getHostAddress());
 		if ((failedConnects != null) && (failedConnects > 2))
 		{
 			_log.warning("Hacking detected from ip:" + address.getHostAddress() + " .. adding IP to banlist.");
@@ -77,10 +77,10 @@ public class AccountData
 		
 		try
 		{
-			MessageDigest md = MessageDigest.getInstance(SHA);
-			byte[] raw = password.getBytes(UTF_8);
-			byte[] hash = md.digest(raw);
-			byte[] expected = _logPass.get(user);
+			final MessageDigest md = MessageDigest.getInstance(SHA);
+			final byte[] raw = password.getBytes(UTF_8);
+			final byte[] hash = md.digest(raw);
+			final byte[] expected = _logPass.get(user);
 			if (expected == null)
 			{
 				if (Config.AUTO_CREATE_ACCOUNTS)
@@ -133,21 +133,21 @@ public class AccountData
 		_logPass.clear();
 		int i = 0;
 		String line = null;
-		LineNumberReader lnr = new LineNumberReader(new InputStreamReader(new FileInputStream(loginFile)));
+		final LineNumberReader lnr = new LineNumberReader(new InputStreamReader(new FileInputStream(loginFile)));
 		while ((line = lnr.readLine()) != null)
 		{
-			StringTokenizer st = new StringTokenizer(line, "\t\n\r");
+			final StringTokenizer st = new StringTokenizer(line, "\t\n\r");
 			if (!st.hasMoreTokens())
 			{
 				continue;
 			}
-			String name = st.nextToken().toLowerCase();
-			String password = st.nextToken();
+			final String name = st.nextToken().toLowerCase();
+			final String password = st.nextToken();
 			_logPass.put(name, Base64.getDecoder().decode(password));
 			if (st.hasMoreTokens())
 			{
-				String access = st.nextToken();
-				Integer level = Integer.parseInt(access);
+				final String access = st.nextToken();
+				final Integer level = Integer.parseInt(access);
 				_accessLevels.put(name, level);
 			}
 			else
@@ -164,7 +164,7 @@ public class AccountData
 	{
 		try
 		{
-			FileWriter writer = new FileWriter(new File("data/accounts.txt"));
+			final FileWriter writer = new FileWriter(new File("data/accounts.txt"));
 			for (String name : _logPass.keySet())
 			{
 				writer.write(name);

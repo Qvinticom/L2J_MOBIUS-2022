@@ -38,7 +38,7 @@ public class CharTemplates extends ServerBasePacket
 		writeD(_chars.size());
 		for (int i = 0; i < _chars.size(); ++i)
 		{
-			CharTemplate temp = _chars.get(i);
+			final CharTemplate temp = _chars.get(i);
 			writeD(temp.getRaceId());
 			writeD(temp.getClassId());
 			writeD(70);

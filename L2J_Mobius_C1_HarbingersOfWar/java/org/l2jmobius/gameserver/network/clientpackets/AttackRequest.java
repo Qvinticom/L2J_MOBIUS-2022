@@ -30,17 +30,17 @@ public class AttackRequest extends ClientBasePacket
 	public AttackRequest(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
-		int objectId = readD();
+		final int objectId = readD();
 		@SuppressWarnings("unused")
-		int originX = readD();
+		final int originX = readD();
 		@SuppressWarnings("unused")
-		int originY = readD();
+		final int originY = readD();
 		@SuppressWarnings("unused")
-		int originZ = readD();
+		final int originZ = readD();
 		@SuppressWarnings("unused")
-		int attackId = readC();
-		PlayerInstance activeChar = client.getActiveChar();
-		WorldObject target = World.getInstance().findObject(objectId);
+		final int attackId = readC();
+		final PlayerInstance activeChar = client.getActiveChar();
+		final WorldObject target = World.getInstance().findObject(objectId);
 		if ((target != null) && (activeChar.getTarget() != target))
 		{
 			target.onAction(activeChar);

@@ -52,7 +52,7 @@ public abstract class ServerBasePacket
 	
 	protected void writeF(double org)
 	{
-		long value = Double.doubleToRawLongBits(org);
+		final long value = Double.doubleToRawLongBits(org);
 		_bao.write((int) (value & 0xFFL));
 		_bao.write((int) ((value >> 8) & 0xFFL));
 		_bao.write((int) ((value >> 16) & 0xFFL));

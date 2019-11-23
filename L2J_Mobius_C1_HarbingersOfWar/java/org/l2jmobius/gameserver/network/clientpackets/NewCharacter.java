@@ -31,7 +31,7 @@ public class NewCharacter extends ClientBasePacket
 	public NewCharacter(byte[] rawPacket, ClientThread client) throws IOException
 	{
 		super(rawPacket);
-		CharTemplates ct = new CharTemplates();
+		final CharTemplates ct = new CharTemplates();
 		CharTemplate template = CharTemplateTable.getInstance().getTemplate(0);
 		ct.addChar(template);
 		template = CharTemplateTable.getInstance().getTemplate(0);

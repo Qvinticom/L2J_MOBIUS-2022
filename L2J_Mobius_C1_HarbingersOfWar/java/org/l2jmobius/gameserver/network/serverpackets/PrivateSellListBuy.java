@@ -41,8 +41,8 @@ public class PrivateSellListBuy extends ServerBasePacket
 		writeC(208);
 		writeD(_buyer.getObjectId());
 		writeD(_buyer.getAdena());
-		TradeList list = new TradeList(0);
-		List<TradeItem> buyList = _buyer.getBuyList();
+		final TradeList list = new TradeList(0);
+		final List<TradeItem> buyList = _buyer.getBuyList();
 		int count = _buyer.getInventory().getSize();
 		for (ItemInstance item : _buyer.getInventory().getItems())
 		{
@@ -56,7 +56,7 @@ public class PrivateSellListBuy extends ServerBasePacket
 		writeD(count);
 		for (i = 0; i < count; ++i)
 		{
-			ItemInstance temp = list.getItems().get(i);
+			final ItemInstance temp = list.getItems().get(i);
 			writeD(temp.getItemId());
 			writeH(0);
 			writeD(temp.getCount());
@@ -71,7 +71,7 @@ public class PrivateSellListBuy extends ServerBasePacket
 		{
 			for (i = 0; i < count; ++i)
 			{
-				TradeItem temp2 = buyList.get(i);
+				final TradeItem temp2 = buyList.get(i);
 				writeD(temp2.getItemId());
 				writeH(0);
 				writeD(temp2.getCount());

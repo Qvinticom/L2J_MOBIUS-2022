@@ -47,10 +47,10 @@ public class CharStatsTable
 	{
 		try
 		{
-			File modifierData = new File("data/char_stats.csv");
+			final File modifierData = new File("data/char_stats.csv");
 			if (modifierData.isFile() && modifierData.exists())
 			{
-				LineNumberReader lnr = new LineNumberReader(new InputStreamReader(new FileInputStream(modifierData)));
+				final LineNumberReader lnr = new LineNumberReader(new InputStreamReader(new FileInputStream(modifierData)));
 				String line = null;
 				while ((line = lnr.readLine()) != null)
 				{
@@ -58,8 +58,8 @@ public class CharStatsTable
 					{
 						continue;
 					}
-					StringTokenizer st = new StringTokenizer(line, ";");
-					StatModifiers modifier = new StatModifiers();
+					final StringTokenizer st = new StringTokenizer(line, ";");
+					final StatModifiers modifier = new StatModifiers();
 					modifier.setClassid(Integer.parseInt(st.nextToken()));
 					modifier.setModstr(Integer.parseInt(st.nextToken()));
 					modifier.setModcon(Integer.parseInt(st.nextToken()));

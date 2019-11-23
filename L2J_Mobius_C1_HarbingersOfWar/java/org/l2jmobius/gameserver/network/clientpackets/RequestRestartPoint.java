@@ -37,15 +37,15 @@ public class RequestRestartPoint extends ClientBasePacket
 	public RequestRestartPoint(byte[] decrypt, ClientThread client) throws IOException
 	{
 		super(decrypt);
-		Connection con = client.getConnection();
-		PlayerInstance activeChar = client.getActiveChar();
-		int[] townCords = MapRegionTable.getInstance().getClosestTownCords(activeChar);
-		StopMove stopMove = new StopMove(activeChar);
+		final Connection con = client.getConnection();
+		final PlayerInstance activeChar = client.getActiveChar();
+		final int[] townCords = MapRegionTable.getInstance().getClosestTownCords(activeChar);
+		final StopMove stopMove = new StopMove(activeChar);
 		con.sendPacket(stopMove);
-		ActionFailed actionFailed = new ActionFailed();
+		final ActionFailed actionFailed = new ActionFailed();
 		con.sendPacket(actionFailed);
 		activeChar.broadcastPacket(stopMove);
-		TeleportToLocation teleport = new TeleportToLocation(activeChar, townCords[0], townCords[1], townCords[2]);
+		final TeleportToLocation teleport = new TeleportToLocation(activeChar, townCords[0], townCords[1], townCords[2]);
 		activeChar.sendPacket(teleport);
 		World.getInstance().removeVisibleObject(activeChar);
 		activeChar.removeAllKnownObjects();
@@ -54,7 +54,7 @@ public class RequestRestartPoint extends ClientBasePacket
 		activeChar.setZ(townCords[2]);
 		activeChar.setCurrentHp(0.6 * activeChar.getMaxHp());
 		activeChar.setCurrentMp(0.6 * activeChar.getMaxMp());
-		Revive revive = new Revive(activeChar);
+		final Revive revive = new Revive(activeChar);
 		try
 		{
 			Thread.sleep(2000L);
@@ -64,7 +64,7 @@ public class RequestRestartPoint extends ClientBasePacket
 			// empty catch block
 		}
 		World.getInstance().addVisibleObject(activeChar);
-		SocialAction sa = new SocialAction(activeChar.getObjectId(), 15);
+		final SocialAction sa = new SocialAction(activeChar.getObjectId(), 15);
 		activeChar.broadcastPacket(sa);
 		activeChar.sendPacket(sa);
 		activeChar.sendPacket(revive);

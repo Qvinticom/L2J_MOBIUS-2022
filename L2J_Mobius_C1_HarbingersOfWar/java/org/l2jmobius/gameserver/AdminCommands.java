@@ -74,15 +74,15 @@ public class AdminCommands extends Thread
 		StringTokenizer st;
 		NpcInstance target;
 		String id;
-		PlayerInstance activeChar = client.getActiveChar();
+		final PlayerInstance activeChar = client.getActiveChar();
 		if (command.equals("admin_show"))
 		{
 			showMainPage(client);
 		}
 		else if (command.startsWith("admin_kill"))
 		{
-			int objectId = Integer.parseInt(command.substring(11));
-			WorldObject temp = World.getInstance().findObject(objectId);
+			final int objectId = Integer.parseInt(command.substring(11));
+			final WorldObject temp = World.getInstance().findObject(objectId);
 			if (temp instanceof NpcInstance)
 			{
 				target = (NpcInstance) temp;
@@ -91,8 +91,8 @@ public class AdminCommands extends Thread
 		}
 		else if (command.startsWith("admin_delete"))
 		{
-			int objectId = Integer.parseInt(command.substring(13));
-			WorldObject temp = World.getInstance().findObject(objectId);
+			final int objectId = Integer.parseInt(command.substring(13));
+			final WorldObject temp = World.getInstance().findObject(objectId);
 			if (temp instanceof NpcInstance)
 			{
 				target = (NpcInstance) temp;
@@ -122,7 +122,7 @@ public class AdminCommands extends Thread
 			{
 				try
 				{
-					String val = command.substring(23);
+					final String val = command.substring(23);
 					Announcements.getInstance().addAnnouncement(val);
 					Announcements.getInstance().listAnnouncements(activeChar);
 				}
@@ -133,7 +133,7 @@ public class AdminCommands extends Thread
 		}
 		else if (command.startsWith("admin_del_announcement"))
 		{
-			int val = Integer.parseInt(command.substring(23));
+			final int val = Integer.parseInt(command.substring(23));
 			Announcements.getInstance().delAnnouncement(val);
 			Announcements.getInstance().listAnnouncements(activeChar);
 		}
@@ -163,12 +163,12 @@ public class AdminCommands extends Thread
 		}
 		else if (command.startsWith("admin_skill_index"))
 		{
-			String val = command.substring(18);
+			final String val = command.substring(18);
 			showHelpPage(client, "skills/" + val + ".htm");
 		}
 		else if (command.startsWith("admin_spawn_index"))
 		{
-			String val = command.substring(18);
+			final String val = command.substring(18);
 			showHelpPage(client, "spawns/" + val + ".htm");
 		}
 		else if (command.equals("admin_character_disconnect"))
@@ -207,7 +207,7 @@ public class AdminCommands extends Thread
 		{
 			try
 			{
-				String val = command.substring(14);
+				final String val = command.substring(14);
 				teleportTo(client, val);
 			}
 			catch (StringIndexOutOfBoundsException e)
@@ -220,7 +220,7 @@ public class AdminCommands extends Thread
 		{
 			try
 			{
-				String val = command.substring(11);
+				final String val = command.substring(11);
 				showHelpPage(client, val);
 			}
 			catch (StringIndexOutOfBoundsException e)
@@ -231,7 +231,7 @@ public class AdminCommands extends Thread
 		{
 			try
 			{
-				String val = command.substring(21);
+				final String val = command.substring(21);
 				showCharacterList(client, val);
 			}
 			catch (StringIndexOutOfBoundsException e)
@@ -242,8 +242,8 @@ public class AdminCommands extends Thread
 		{
 			try
 			{
-				String val = command.substring(22);
-				int page = Integer.parseInt(val);
+				final String val = command.substring(22);
+				final int page = Integer.parseInt(val);
 				listCharacters(client, page);
 			}
 			catch (StringIndexOutOfBoundsException e)
@@ -254,7 +254,7 @@ public class AdminCommands extends Thread
 		{
 			try
 			{
-				String val = command.substring(21);
+				final String val = command.substring(21);
 				findCharacter(client, val);
 			}
 			catch (StringIndexOutOfBoundsException e)
@@ -267,7 +267,7 @@ public class AdminCommands extends Thread
 		{
 			try
 			{
-				String val = command.substring(16);
+				final String val = command.substring(16);
 				adminAddExpSp(client, val);
 			}
 			catch (StringIndexOutOfBoundsException e)
@@ -280,7 +280,7 @@ public class AdminCommands extends Thread
 		{
 			try
 			{
-				String val = command.substring(15);
+				final String val = command.substring(15);
 				adminAddSkill(client, val);
 			}
 			catch (StringIndexOutOfBoundsException e)
@@ -293,8 +293,8 @@ public class AdminCommands extends Thread
 		{
 			try
 			{
-				String id2 = command.substring(19);
-				int idval = Integer.parseInt(id2);
+				final String id2 = command.substring(19);
+				final int idval = Integer.parseInt(id2);
 				adminRemoveSkill(client, idval);
 			}
 			catch (StringIndexOutOfBoundsException e)
@@ -307,7 +307,7 @@ public class AdminCommands extends Thread
 		{
 			try
 			{
-				String val = command.substring(24);
+				final String val = command.substring(24);
 				adminModifyCharacter(client, val);
 			}
 			catch (StringIndexOutOfBoundsException e)
@@ -320,7 +320,7 @@ public class AdminCommands extends Thread
 		{
 			try
 			{
-				String val = command.substring(25);
+				final String val = command.substring(25);
 				teleportCharacter(client, val);
 			}
 			catch (StringIndexOutOfBoundsException e)
@@ -333,7 +333,7 @@ public class AdminCommands extends Thread
 		{
 			try
 			{
-				String val = command.substring(20);
+				final String val = command.substring(20);
 				spawnMenu(client, val);
 			}
 			catch (StringIndexOutOfBoundsException e)
@@ -344,7 +344,7 @@ public class AdminCommands extends Thread
 		{
 			try
 			{
-				String val = command.substring(20);
+				final String val = command.substring(20);
 				st = new StringTokenizer(val);
 				if (st.countTokens() != 2)
 				{
@@ -353,7 +353,7 @@ public class AdminCommands extends Thread
 					return;
 				}
 				id = st.nextToken();
-				String targetName = st.nextToken();
+				final String targetName = st.nextToken();
 				spawnMonster(client, id, targetName);
 			}
 			catch (StringIndexOutOfBoundsException e)
@@ -364,7 +364,7 @@ public class AdminCommands extends Thread
 		{
 			try
 			{
-				int val = Integer.parseInt(command.substring(22));
+				final int val = Integer.parseInt(command.substring(22));
 				serverShutdown(client, val);
 			}
 			catch (StringIndexOutOfBoundsException e)
@@ -385,20 +385,20 @@ public class AdminCommands extends Thread
 		{
 			try
 			{
-				String val = command.substring(17);
+				final String val = command.substring(17);
 				st = new StringTokenizer(val);
 				if (st.countTokens() == 2)
 				{
 					id = st.nextToken();
-					int idval = Integer.parseInt(id);
-					String num = st.nextToken();
-					int numval = Integer.parseInt(num);
+					final int idval = Integer.parseInt(id);
+					final String num = st.nextToken();
+					final int numval = Integer.parseInt(num);
 					createItem(client, idval, numval);
 				}
 				else if (st.countTokens() == 1)
 				{
 					id = st.nextToken();
-					int idval = Integer.parseInt(id);
+					final int idval = Integer.parseInt(id);
 					createItem(client, idval, 1);
 				}
 				else
@@ -415,7 +415,7 @@ public class AdminCommands extends Thread
 	
 	private void handleBuyRequest(ClientThread client, String command)
 	{
-		PlayerInstance player = client.getActiveChar();
+		final PlayerInstance player = client.getActiveChar();
 		int val = -1;
 		try
 		{
@@ -425,10 +425,10 @@ public class AdminCommands extends Thread
 		{
 			_log.warning("admin buylist failed:" + command);
 		}
-		TradeList list = TradeController.getInstance().getBuyList(val);
+		final TradeList list = TradeController.getInstance().getBuyList(val);
 		if (list != null)
 		{
-			BuyList bl = new BuyList(list, player.getAdena());
+			final BuyList bl = new BuyList(list, player.getAdena());
 			player.sendPacket(bl);
 		}
 		else
@@ -440,9 +440,9 @@ public class AdminCommands extends Thread
 	
 	public void showMainPage(ClientThread client)
 	{
-		PlayerInstance activeChar = client.getActiveChar();
-		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
-		StringBuffer replyMSG = new StringBuffer("<html><title>Server Status</title>");
+		final PlayerInstance activeChar = client.getActiveChar();
+		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+		final StringBuffer replyMSG = new StringBuffer("<html><title>Server Status</title>");
 		replyMSG.append("<body>");
 		replyMSG.append("<table>");
 		replyMSG.append("<tr><td>Players Online: " + World.getInstance().getAllPlayers().size() + "</td></tr>");
@@ -468,15 +468,15 @@ public class AdminCommands extends Thread
 	
 	private void teleportTo(ClientThread client, String coords)
 	{
-		PlayerInstance activeChar = client.getActiveChar();
-		StringTokenizer st = new StringTokenizer(coords);
-		String x1 = st.nextToken();
-		int x = Integer.parseInt(x1);
-		String y1 = st.nextToken();
-		int y = Integer.parseInt(y1);
-		String z1 = st.nextToken();
-		int z = Integer.parseInt(z1);
-		TeleportToLocation tele = new TeleportToLocation(activeChar, x, y, z);
+		final PlayerInstance activeChar = client.getActiveChar();
+		final StringTokenizer st = new StringTokenizer(coords);
+		final String x1 = st.nextToken();
+		final int x = Integer.parseInt(x1);
+		final String y1 = st.nextToken();
+		final int y = Integer.parseInt(y1);
+		final String z1 = st.nextToken();
+		final int z = Integer.parseInt(z1);
+		final TeleportToLocation tele = new TeleportToLocation(activeChar, x, y, z);
 		activeChar.sendPacket(tele);
 		activeChar.setX(x);
 		activeChar.setY(y);
@@ -487,17 +487,17 @@ public class AdminCommands extends Thread
 	
 	private void createItem(ClientThread client, int id, int num)
 	{
-		PlayerInstance activeChar = client.getActiveChar();
-		ItemInstance createditem = ItemTable.getInstance().createItem(id);
+		final PlayerInstance activeChar = client.getActiveChar();
+		final ItemInstance createditem = ItemTable.getInstance().createItem(id);
 		for (int i = 0; i < num; ++i)
 		{
 			activeChar.getInventory().addItem(createditem);
 		}
-		ItemList il = new ItemList(activeChar, true);
+		final ItemList il = new ItemList(activeChar, true);
 		activeChar.sendPacket(il);
 		activeChar.sendMessage("You have spawned " + num + " item(s) number " + id + " in your inventory.");
-		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
-		StringBuffer replyMSG = new StringBuffer("<html><title>Item Creation Complete(I Hope)</title>");
+		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+		final StringBuffer replyMSG = new StringBuffer("<html><title>Item Creation Complete(I Hope)</title>");
 		replyMSG.append("<body>");
 		replyMSG.append("<center><button value=\"Back\" action=\"bypass -h admin_show\" width=40 height=15></center>");
 		replyMSG.append("</body></html>");
@@ -507,12 +507,12 @@ public class AdminCommands extends Thread
 	
 	private void listCharacters(ClientThread client, int page)
 	{
-		PlayerInstance activeChar = client.getActiveChar();
-		Collection<PlayerInstance> allWorldPlayers = World.getInstance().getAllPlayers();
-		PlayerInstance[] players = allWorldPlayers.toArray(new PlayerInstance[allWorldPlayers.size()]);
-		int MaxCharactersPerPage = 20;
+		final PlayerInstance activeChar = client.getActiveChar();
+		final Collection<PlayerInstance> allWorldPlayers = World.getInstance().getAllPlayers();
+		final PlayerInstance[] players = allWorldPlayers.toArray(new PlayerInstance[allWorldPlayers.size()]);
+		final int MaxCharactersPerPage = 20;
 		int MaxPages = players.length / MaxCharactersPerPage;
-		int modulus = players.length % MaxCharactersPerPage;
+		final int modulus = players.length % MaxCharactersPerPage;
 		if (modulus != 0)
 		{
 			++MaxPages;
@@ -521,10 +521,10 @@ public class AdminCommands extends Thread
 		{
 			page = MaxPages;
 		}
-		int CharactersStart = MaxCharactersPerPage * page;
-		int CharactersEnd = players.length - CharactersStart;
-		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
-		StringBuffer replyMSG = new StringBuffer("<html><title>Characters List</title>");
+		final int CharactersStart = MaxCharactersPerPage * page;
+		final int CharactersEnd = players.length - CharactersStart;
+		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+		final StringBuffer replyMSG = new StringBuffer("<html><title>Characters List</title>");
 		replyMSG.append("<body>");
 		for (int x = 0; x < MaxPages; ++x)
 		{
@@ -550,10 +550,10 @@ public class AdminCommands extends Thread
 	
 	private void showCharacterList(ClientThread client, String CharName)
 	{
-		PlayerInstance activeChar = client.getActiveChar();
-		PlayerInstance player = World.getInstance().getPlayer(CharName);
-		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
-		StringBuffer replyMSG = new StringBuffer("<html><title>Character Information</title>");
+		final PlayerInstance activeChar = client.getActiveChar();
+		final PlayerInstance player = World.getInstance().getPlayer(CharName);
+		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+		final StringBuffer replyMSG = new StringBuffer("<html><title>Character Information</title>");
 		replyMSG.append("<body>");
 		replyMSG.append("<br>");
 		replyMSG.append("<center>" + player.getName() + "</center><p>");
@@ -611,10 +611,10 @@ public class AdminCommands extends Thread
 	
 	private void addExpSp(ClientThread client)
 	{
-		PlayerInstance activeChar = client.getActiveChar();
-		PlayerInstance player = World.getInstance().getPlayer(_characterToManipulate);
-		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
-		StringBuffer replyMSG = new StringBuffer("<html><title>Add Exp-Sp to " + player.getName() + "</title>");
+		final PlayerInstance activeChar = client.getActiveChar();
+		final PlayerInstance player = World.getInstance().getPlayer(_characterToManipulate);
+		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+		final StringBuffer replyMSG = new StringBuffer("<html><title>Add Exp-Sp to " + player.getName() + "</title>");
 		replyMSG.append("<body>");
 		replyMSG.append("<br>");
 		replyMSG.append("<center>Lv: " + player.getLevel() + " " + CharTemplateTable.getInstance().getTemplate(player.getClassId()).getClassName() + "<p>");
@@ -635,19 +635,19 @@ public class AdminCommands extends Thread
 	
 	private void adminAddExpSp(ClientThread client, String ExpSp)
 	{
-		PlayerInstance activeChar = client.getActiveChar();
-		PlayerInstance player = World.getInstance().getPlayer(_characterToManipulate);
-		StringTokenizer st = new StringTokenizer(ExpSp);
+		final PlayerInstance activeChar = client.getActiveChar();
+		final PlayerInstance player = World.getInstance().getPlayer(_characterToManipulate);
+		final StringTokenizer st = new StringTokenizer(ExpSp);
 		if (st.countTokens() != 2)
 		{
 			addExpSp(client);
 		}
 		else
 		{
-			String exp = st.nextToken();
-			String sp = st.nextToken();
-			int expval = Integer.parseInt(exp);
-			int spval = Integer.parseInt(sp);
+			final String exp = st.nextToken();
+			final String sp = st.nextToken();
+			final int expval = Integer.parseInt(exp);
+			final int spval = Integer.parseInt(sp);
 			player.sendMessage("Admin is adding you " + expval + " xp and " + spval + " sp.");
 			player.addExpAndSp(expval, spval);
 			activeChar.sendMessage("Added " + expval + " xp and " + spval + " sp to " + player.getName() + ".");
@@ -657,33 +657,33 @@ public class AdminCommands extends Thread
 	
 	private void adminModifyCharacter(ClientThread client, String modifications)
 	{
-		PlayerInstance activeChar = client.getActiveChar();
-		PlayerInstance player = World.getInstance().getPlayer(_characterToManipulate);
-		StringTokenizer st = new StringTokenizer(modifications);
+		final PlayerInstance activeChar = client.getActiveChar();
+		final PlayerInstance player = World.getInstance().getPlayer(_characterToManipulate);
+		final StringTokenizer st = new StringTokenizer(modifications);
 		if (st.countTokens() != 9)
 		{
 			editCharacter(client);
 		}
 		else
 		{
-			String hp = st.nextToken();
-			String hpmax = st.nextToken();
-			String mp = st.nextToken();
-			String mpmax = st.nextToken();
-			String load = st.nextToken();
-			String karma = st.nextToken();
-			String pvpflag = st.nextToken();
-			String pvpkills = st.nextToken();
-			String classid = st.nextToken();
-			int hpval = Integer.parseInt(hp);
-			int hpmaxval = Integer.parseInt(hpmax);
-			int mpval = Integer.parseInt(mp);
-			int mpmaxval = Integer.parseInt(mpmax);
-			int loadval = Integer.parseInt(load);
-			int karmaval = Integer.parseInt(karma);
-			int pvpflagval = Integer.parseInt(pvpflag);
-			int pvpkillsval = Integer.parseInt(pvpkills);
-			int classidval = Integer.parseInt(classid);
+			final String hp = st.nextToken();
+			final String hpmax = st.nextToken();
+			final String mp = st.nextToken();
+			final String mpmax = st.nextToken();
+			final String load = st.nextToken();
+			final String karma = st.nextToken();
+			final String pvpflag = st.nextToken();
+			final String pvpkills = st.nextToken();
+			final String classid = st.nextToken();
+			final int hpval = Integer.parseInt(hp);
+			final int hpmaxval = Integer.parseInt(hpmax);
+			final int mpval = Integer.parseInt(mp);
+			final int mpmaxval = Integer.parseInt(mpmax);
+			final int loadval = Integer.parseInt(load);
+			final int karmaval = Integer.parseInt(karma);
+			final int pvpflagval = Integer.parseInt(pvpflag);
+			final int pvpkillsval = Integer.parseInt(pvpkills);
+			final int classidval = Integer.parseInt(classid);
 			player.sendMessage("Admin has changed your stats. Hp: " + hpval + " HpMax: " + hpmaxval + " Mp: " + mpval + " MpMax: " + mpmaxval + " MaxLoad: " + loadval + " Karma: " + karmaval + " Pvp: " + pvpflagval + " / " + pvpkillsval + " ClassId: " + classidval);
 			player.setCurrentHp(hpval);
 			player.setCurrentMp(mpval);
@@ -693,7 +693,7 @@ public class AdminCommands extends Thread
 			player.setKarma(karmaval);
 			player.setPvpKills(pvpkillsval);
 			player.setClassId(classidval);
-			StatusUpdate su = new StatusUpdate(player.getObjectId());
+			final StatusUpdate su = new StatusUpdate(player.getObjectId());
 			su.addAttribute(StatusUpdate.CUR_HP, hpval);
 			su.addAttribute(StatusUpdate.MAX_HP, hpmaxval);
 			su.addAttribute(StatusUpdate.CUR_MP, mpval);
@@ -709,10 +709,10 @@ public class AdminCommands extends Thread
 	
 	private void editCharacter(ClientThread client)
 	{
-		PlayerInstance activeChar = client.getActiveChar();
-		PlayerInstance player = World.getInstance().getPlayer(_characterToManipulate);
-		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
-		StringBuffer replyMSG = new StringBuffer("<html><title>Editing character " + player.getName() + "</title>");
+		final PlayerInstance activeChar = client.getActiveChar();
+		final PlayerInstance player = World.getInstance().getPlayer(_characterToManipulate);
+		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+		final StringBuffer replyMSG = new StringBuffer("<html><title>Editing character " + player.getName() + "</title>");
 		replyMSG.append("<body>");
 		replyMSG.append("<br><center>Caution ! Dont forget that modifying players stats can ruin the game...</center><br>");
 		replyMSG.append("Note: you must type all values to confirm modifications.</center><br>");
@@ -759,8 +759,8 @@ public class AdminCommands extends Thread
 	
 	private void disconnectCharacter(ClientThread client)
 	{
-		PlayerInstance activeChar = client.getActiveChar();
-		PlayerInstance player = World.getInstance().getPlayer(_characterToManipulate);
+		final PlayerInstance activeChar = client.getActiveChar();
+		final PlayerInstance player = World.getInstance().getPlayer(_characterToManipulate);
 		if (player.getName().equals(activeChar.getName()))
 		{
 			activeChar.sendMessage("You cannot logout your character.");
@@ -768,7 +768,7 @@ public class AdminCommands extends Thread
 		else
 		{
 			activeChar.sendMessage("Character " + player.getName() + " disconnected from server.");
-			LeaveWorld ql = new LeaveWorld();
+			final LeaveWorld ql = new LeaveWorld();
 			player.sendPacket(ql);
 			try
 			{
@@ -784,10 +784,10 @@ public class AdminCommands extends Thread
 	
 	private void findCharacter(ClientThread client, String CharacterToFind)
 	{
-		PlayerInstance activeChar = client.getActiveChar();
-		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+		final PlayerInstance activeChar = client.getActiveChar();
+		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		int CharactersFound = 0;
-		StringBuffer replyMSG = new StringBuffer("<html><title>Character Search</title>");
+		final StringBuffer replyMSG = new StringBuffer("<html><title>Character Search</title>");
 		replyMSG.append("<body>");
 		replyMSG.append("<br>");
 		replyMSG.append("<table>");
@@ -830,10 +830,10 @@ public class AdminCommands extends Thread
 	
 	private void showTeleportCharWindow(ClientThread client)
 	{
-		PlayerInstance activeChar = client.getActiveChar();
-		PlayerInstance player = World.getInstance().getPlayer(_characterToManipulate);
-		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
-		StringBuffer replyMSG = new StringBuffer("<html><title>Teleport Character</title>");
+		final PlayerInstance activeChar = client.getActiveChar();
+		final PlayerInstance player = World.getInstance().getPlayer(_characterToManipulate);
+		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+		final StringBuffer replyMSG = new StringBuffer("<html><title>Teleport Character</title>");
 		replyMSG.append("<body>");
 		replyMSG.append("The character you will teleport is " + player.getName() + ".");
 		replyMSG.append("<br>");
@@ -853,23 +853,23 @@ public class AdminCommands extends Thread
 	
 	private void teleportCharacter(ClientThread client, String Cords)
 	{
-		PlayerInstance activeChar = client.getActiveChar();
-		PlayerInstance player = World.getInstance().getPlayer(_characterToManipulate);
+		final PlayerInstance activeChar = client.getActiveChar();
+		final PlayerInstance player = World.getInstance().getPlayer(_characterToManipulate);
 		if (player.getName().equals(activeChar.getName()))
 		{
 			player.sendMessage("You cannot teleport your character.");
 		}
 		else
 		{
-			StringTokenizer st = new StringTokenizer(Cords);
-			String x1 = st.nextToken();
-			int x = Integer.parseInt(x1);
-			String y1 = st.nextToken();
-			int y = Integer.parseInt(y1);
-			String z1 = st.nextToken();
-			int z = Integer.parseInt(z1);
+			final StringTokenizer st = new StringTokenizer(Cords);
+			final String x1 = st.nextToken();
+			final int x = Integer.parseInt(x1);
+			final String y1 = st.nextToken();
+			final int y = Integer.parseInt(y1);
+			final String z1 = st.nextToken();
+			final int z = Integer.parseInt(z1);
 			player.sendMessage("Admin is teleporting you.");
-			TeleportToLocation tele = new TeleportToLocation(player, x, y, z);
+			final TeleportToLocation tele = new TeleportToLocation(player, x, y, z);
 			player.sendPacket(tele);
 			player.setX(x);
 			player.setY(y);
@@ -881,18 +881,18 @@ public class AdminCommands extends Thread
 	
 	private void teleportToCharacter(ClientThread client)
 	{
-		PlayerInstance activeChar = client.getActiveChar();
-		PlayerInstance player = World.getInstance().getPlayer(_characterToManipulate);
+		final PlayerInstance activeChar = client.getActiveChar();
+		final PlayerInstance player = World.getInstance().getPlayer(_characterToManipulate);
 		if (player.getName().equals(activeChar.getName()))
 		{
 			activeChar.sendMessage("You cannot self teleport.");
 		}
 		else
 		{
-			int x = player.getX();
-			int y = player.getY();
-			int z = player.getZ();
-			TeleportToLocation tele = new TeleportToLocation(activeChar, x, y, z);
+			final int x = player.getX();
+			final int y = player.getY();
+			final int z = player.getZ();
+			final TeleportToLocation tele = new TeleportToLocation(activeChar, x, y, z);
 			activeChar.sendPacket(tele);
 			activeChar.setX(x);
 			activeChar.setY(y);
@@ -904,9 +904,9 @@ public class AdminCommands extends Thread
 	
 	private void spawnMenu(ClientThread client, String monsterId)
 	{
-		PlayerInstance activeChar = client.getActiveChar();
-		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
-		StringBuffer replyMSG = new StringBuffer("<html><title>Custom Spawn Menu</title>");
+		final PlayerInstance activeChar = client.getActiveChar();
+		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+		final StringBuffer replyMSG = new StringBuffer("<html><title>Custom Spawn Menu</title>");
 		replyMSG.append("<body><br>Enter target player's name below.<br>You may leave the field blank for self-spawn.<br><br>");
 		replyMSG.append("<center><edit var=\"targetname\" width=160></center><br><br>");
 		replyMSG.append("<center><button value=\"Spawn on self\" action=\"bypass -h admin_spawn_confirm " + monsterId + " " + activeChar.getName() + "\" width=160 height=15></center><br>");
@@ -917,17 +917,17 @@ public class AdminCommands extends Thread
 	
 	private void spawnMonster(ClientThread client, String monsterId, String CharName)
 	{
-		PlayerInstance activeChar = client.getActiveChar();
-		PlayerInstance targetPlayer = World.getInstance().getPlayer(CharName);
-		int monsterTemplate = Integer.parseInt(monsterId);
-		Npc template1 = NpcTable.getInstance().getTemplate(monsterTemplate);
+		final PlayerInstance activeChar = client.getActiveChar();
+		final PlayerInstance targetPlayer = World.getInstance().getPlayer(CharName);
+		final int monsterTemplate = Integer.parseInt(monsterId);
+		final Npc template1 = NpcTable.getInstance().getTemplate(monsterTemplate);
 		if (template1 == null)
 		{
 			return;
 		}
 		try
 		{
-			Spawn spawn = new Spawn(template1);
+			final Spawn spawn = new Spawn(template1);
 			spawn.setLocx(targetPlayer.getX());
 			spawn.setLocy(targetPlayer.getY());
 			spawn.setLocz(targetPlayer.getZ());
@@ -951,7 +951,7 @@ public class AdminCommands extends Thread
 	{
 		for (PlayerInstance player : World.getInstance().getAllPlayers())
 		{
-			LeaveWorld ql = new LeaveWorld();
+			final LeaveWorld ql = new LeaveWorld();
 			player.sendPacket(ql);
 			try
 			{
@@ -970,7 +970,7 @@ public class AdminCommands extends Thread
 	{
 		secondsShut = seconds;
 		clientShut = client;
-		AdminCommands ShutDownThread = new AdminCommands();
+		final AdminCommands ShutDownThread = new AdminCommands();
 		ShutDownThread.start();
 	}
 	
@@ -979,9 +979,9 @@ public class AdminCommands extends Thread
 	{
 		if ((secondsShut == 0) && (clientShut != null))
 		{
-			PlayerInstance activeChar = clientShut.getActiveChar();
-			NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
-			StringBuffer replyMSG = new StringBuffer("<html><title>Shutdown Server</title>");
+			final PlayerInstance activeChar = clientShut.getActiveChar();
+			final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+			final StringBuffer replyMSG = new StringBuffer("<html><title>Shutdown Server</title>");
 			replyMSG.append("<body><br>");
 			replyMSG.append("Enter in seconds the time till the server<p> shutdowns bellow:");
 			replyMSG.append("<edit var=\"shutdown_time\" width=110>");
@@ -1034,7 +1034,7 @@ public class AdminCommands extends Thread
 							}
 						}
 					}
-					int delay = 1000;
+					final int delay = 1000;
 					Thread.sleep(delay);
 				}
 				if (disconnectAllCharacters() == 1)
@@ -1058,13 +1058,13 @@ public class AdminCommands extends Thread
 		FileInputStream fis = null;
 		try
 		{
-			File file = new File("data/html/admin/" + filename);
+			final File file = new File("data/html/admin/" + filename);
 			fis = new FileInputStream(file);
-			byte[] raw = new byte[fis.available()];
+			final byte[] raw = new byte[fis.available()];
 			fis.read(raw);
-			String content = new String(raw, "UTF-8");
-			PlayerInstance activeChar = client.getActiveChar();
-			NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+			final String content = new String(raw, "UTF-8");
+			final PlayerInstance activeChar = client.getActiveChar();
+			final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 			adminReply.setHtml(content);
 			activeChar.sendPacket(adminReply);
 			
@@ -1106,7 +1106,7 @@ public class AdminCommands extends Thread
 	
 	public void broadcastToAll(String message)
 	{
-		CreatureSay cs = new CreatureSay(0, 9, "[Announcement]", message);
+		final CreatureSay cs = new CreatureSay(0, 9, "[Announcement]", message);
 		for (PlayerInstance player : World.getInstance().getAllPlayers())
 		{
 			player.sendPacket(cs);
@@ -1115,10 +1115,10 @@ public class AdminCommands extends Thread
 	
 	private void removeSkillsPage(ClientThread client)
 	{
-		PlayerInstance activeChar = client.getActiveChar();
-		PlayerInstance player = World.getInstance().getPlayer(_characterToManipulate);
-		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
-		StringBuffer replyMSG = new StringBuffer("<html><title>Remove skills of " + player.getName() + "</title>");
+		final PlayerInstance activeChar = client.getActiveChar();
+		final PlayerInstance player = World.getInstance().getPlayer(_characterToManipulate);
+		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+		final StringBuffer replyMSG = new StringBuffer("<html><title>Remove skills of " + player.getName() + "</title>");
 		replyMSG.append("<body>");
 		replyMSG.append("<br>");
 		replyMSG.append("<center>Lv: " + player.getLevel() + " " + CharTemplateTable.getInstance().getTemplate(player.getClassId()).getClassName() + "<p>");
@@ -1146,10 +1146,10 @@ public class AdminCommands extends Thread
 	
 	private void showSkillsPage(ClientThread client)
 	{
-		PlayerInstance activeChar = client.getActiveChar();
-		PlayerInstance player = World.getInstance().getPlayer(_characterToManipulate);
-		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
-		StringBuffer replyMSG = new StringBuffer("<html><title>Modify skills of " + player.getName() + "</title>");
+		final PlayerInstance activeChar = client.getActiveChar();
+		final PlayerInstance player = World.getInstance().getPlayer(_characterToManipulate);
+		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+		final StringBuffer replyMSG = new StringBuffer("<html><title>Modify skills of " + player.getName() + "</title>");
 		replyMSG.append("<body>");
 		replyMSG.append("<br>");
 		replyMSG.append("<center>Lv: " + player.getLevel() + " " + CharTemplateTable.getInstance().getTemplate(player.getClassId()).getClassName() + "<p>");
@@ -1169,15 +1169,15 @@ public class AdminCommands extends Thread
 	
 	private void adminGetSkills(ClientThread client)
 	{
-		PlayerInstance activeChar = client.getActiveChar();
-		PlayerInstance player = World.getInstance().getPlayer(_characterToManipulate);
+		final PlayerInstance activeChar = client.getActiveChar();
+		final PlayerInstance player = World.getInstance().getPlayer(_characterToManipulate);
 		if (player.getName().equals(activeChar.getName()))
 		{
 			player.sendMessage("There is no point in doing it on your character...");
 		}
 		else
 		{
-			Collection<Skill> skills = player.getAllSkills();
+			final Collection<Skill> skills = player.getAllSkills();
 			adminSkills = activeChar.getAllSkills();
 			for (Skill skill : adminSkills)
 			{
@@ -1194,15 +1194,15 @@ public class AdminCommands extends Thread
 	
 	private void adminResetSkills(ClientThread client)
 	{
-		PlayerInstance activeChar = client.getActiveChar();
-		PlayerInstance player = World.getInstance().getPlayer(_characterToManipulate);
+		final PlayerInstance activeChar = client.getActiveChar();
+		final PlayerInstance player = World.getInstance().getPlayer(_characterToManipulate);
 		if (adminSkills == null)
 		{
 			activeChar.sendMessage("You must first get the skills of someone to do this.");
 		}
 		else
 		{
-			Collection<Skill> skills = player.getAllSkills();
+			final Collection<Skill> skills = player.getAllSkills();
 			for (Skill skill : skills)
 			{
 				player.removeSkill(skill);
@@ -1228,20 +1228,20 @@ public class AdminCommands extends Thread
 	
 	private void adminAddSkill(ClientThread client, String val)
 	{
-		PlayerInstance activeChar = client.getActiveChar();
-		PlayerInstance player = World.getInstance().getPlayer(_characterToManipulate);
-		StringTokenizer st = new StringTokenizer(val);
+		final PlayerInstance activeChar = client.getActiveChar();
+		final PlayerInstance player = World.getInstance().getPlayer(_characterToManipulate);
+		final StringTokenizer st = new StringTokenizer(val);
 		if (st.countTokens() != 2)
 		{
 			showSkillsPage(client);
 		}
 		else
 		{
-			String id = st.nextToken();
-			String level = st.nextToken();
-			int idval = Integer.parseInt(id);
-			int levelval = Integer.parseInt(level);
-			Skill skill = SkillTable.getInstance().getInfo(idval, levelval);
+			final String id = st.nextToken();
+			final String level = st.nextToken();
+			final int idval = Integer.parseInt(id);
+			final int levelval = Integer.parseInt(level);
+			final Skill skill = SkillTable.getInstance().getInfo(idval, levelval);
 			if (skill != null)
 			{
 				player.sendMessage("Admin gave you the skill " + skill.getName() + ".");
@@ -1258,9 +1258,9 @@ public class AdminCommands extends Thread
 	
 	private void adminRemoveSkill(ClientThread client, int idval)
 	{
-		PlayerInstance activeChar = client.getActiveChar();
-		PlayerInstance player = World.getInstance().getPlayer(_characterToManipulate);
-		Skill skill = SkillTable.getInstance().getInfo(idval, player.getSkillLevel(idval));
+		final PlayerInstance activeChar = client.getActiveChar();
+		final PlayerInstance player = World.getInstance().getPlayer(_characterToManipulate);
+		final Skill skill = SkillTable.getInstance().getInfo(idval, player.getSkillLevel(idval));
 		if (skill != null)
 		{
 			player.sendMessage("Admin removed the skill " + skill.getName() + ".");
@@ -1276,15 +1276,15 @@ public class AdminCommands extends Thread
 	
 	public void showSkill(ClientThread client, String val)
 	{
-		PlayerInstance activeChar = client.getActiveChar();
-		int skillid = Integer.parseInt(val);
-		Skill skill = SkillTable.getInstance().getInfo(skillid, 1);
+		final PlayerInstance activeChar = client.getActiveChar();
+		final int skillid = Integer.parseInt(val);
+		final Skill skill = SkillTable.getInstance().getInfo(skillid, 1);
 		if (skill != null)
 		{
 			if (skill.getTargetType() == 0)
 			{
 				activeChar.setTarget(activeChar);
-				MagicSkillUser msk = new MagicSkillUser(activeChar, skillid, 1, skill.getHitTime(), skill.getReuseDelay());
+				final MagicSkillUser msk = new MagicSkillUser(activeChar, skillid, 1, skill.getHitTime(), skill.getReuseDelay());
 				activeChar.sendPacket(msk);
 				activeChar.broadcastPacket(msk);
 				// ActionFailed af = new ActionFailed();

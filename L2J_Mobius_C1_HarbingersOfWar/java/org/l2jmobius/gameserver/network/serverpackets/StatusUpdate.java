@@ -69,7 +69,7 @@ public class StatusUpdate extends ServerBasePacket
 		writeD(_attributes.size());
 		for (int i = 0; i < _attributes.size(); ++i)
 		{
-			Attribute temp = _attributes.get(i);
+			final Attribute temp = _attributes.get(i);
 			writeD(temp.id);
 			writeD(temp.value);
 		}

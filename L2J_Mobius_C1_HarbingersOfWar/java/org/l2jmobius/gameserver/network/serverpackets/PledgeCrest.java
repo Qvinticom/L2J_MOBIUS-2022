@@ -39,9 +39,9 @@ public class PledgeCrest extends ServerBasePacket
 		writeD(_crestId);
 		try
 		{
-			FileInputStream fis = new FileInputStream(_crestFile);
+			final FileInputStream fis = new FileInputStream(_crestFile);
 			// BufferedInputStream bfis = new BufferedInputStream(fis);
-			int crestSize = fis.available();
+			final int crestSize = fis.available();
 			writeD(crestSize);
 			int temp = -1;
 			while ((temp = fis.read()) != -1)

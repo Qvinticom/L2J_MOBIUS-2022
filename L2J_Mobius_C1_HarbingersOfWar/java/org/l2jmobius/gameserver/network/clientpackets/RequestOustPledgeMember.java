@@ -34,15 +34,15 @@ public class RequestOustPledgeMember extends ClientBasePacket
 	public RequestOustPledgeMember(byte[] rawPacket, ClientThread client)
 	{
 		super(rawPacket);
-		String target = readS();
+		final String target = readS();
 		// Connection con = client.getConnection();
-		PlayerInstance activeChar = client.getActiveChar();
+		final PlayerInstance activeChar = client.getActiveChar();
 		if (!activeChar.isClanLeader())
 		{
 			return;
 		}
-		Clan clan = activeChar.getClan();
-		ClanMember member = clan.getClanMember(target);
+		final Clan clan = activeChar.getClan();
+		final ClanMember member = clan.getClanMember(target);
 		if (member == null)
 		{
 			_log.warning("target is not member of the clan");
@@ -50,13 +50,13 @@ public class RequestOustPledgeMember extends ClientBasePacket
 		}
 		clan.removeClanMember(target);
 		clan.store();
-		SystemMessage msg = new SystemMessage(SystemMessage.CLAN_MEMBER_S1_EXPELLED);
+		final SystemMessage msg = new SystemMessage(SystemMessage.CLAN_MEMBER_S1_EXPELLED);
 		msg.addString(member.getName());
 		clan.broadcastToOnlineMembers(msg);
 		clan.broadcastToOnlineMembers(new PledgeShowMemberListDelete(target));
 		if (member.isOnline())
 		{
-			PlayerInstance player = member.getPlayerInstance();
+			final PlayerInstance player = member.getPlayerInstance();
 			player.setClan(null);
 			player.setClanId(0);
 			player.setTitle("");

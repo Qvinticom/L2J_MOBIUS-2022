@@ -30,8 +30,8 @@ public class CharacterRestore extends ClientBasePacket
 	{
 		super(decrypt);
 		@SuppressWarnings("unused")
-		int charSlot = readD();
-		CharSelectInfo cl = new CharSelectInfo(client.getLoginName(), client.getSessionId());
+		final int charSlot = readD();
+		final CharSelectInfo cl = new CharSelectInfo(client.getLoginName(), client.getSessionId());
 		client.getConnection().sendPacket(cl);
 	}
 	

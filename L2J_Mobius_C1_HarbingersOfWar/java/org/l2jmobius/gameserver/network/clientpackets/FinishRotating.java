@@ -27,10 +27,10 @@ public class FinishRotating extends ClientBasePacket
 	public FinishRotating(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
-		int degree = readD();
+		final int degree = readD();
 		@SuppressWarnings("unused")
-		int unknown = readD();
-		StopRotation sr = new StopRotation(client.getActiveChar(), degree);
+		final int unknown = readD();
+		final StopRotation sr = new StopRotation(client.getActiveChar(), degree);
 		client.getActiveChar().sendPacket(sr);
 		client.getActiveChar().broadcastPacket(sr);
 	}

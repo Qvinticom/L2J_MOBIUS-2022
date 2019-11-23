@@ -30,24 +30,24 @@ public class RequestSellItem extends ClientBasePacket
 	{
 		super(decrypt);
 		@SuppressWarnings("unused")
-		int listId = readD();
-		int count = readD();
-		PlayerInstance activeChar = client.getActiveChar();
+		final int listId = readD();
+		final int count = readD();
+		final PlayerInstance activeChar = client.getActiveChar();
 		// ItemInstance[] items = new ItemInstance[count];
 		for (int i = 0; i < count; ++i)
 		{
-			int objectId = readD();
-			int itemId = readD();
-			int cnt = readD();
+			final int objectId = readD();
+			final int itemId = readD();
+			final int cnt = readD();
 			if ((activeChar.getInventory().getItem(objectId).getItemId() != itemId) || (activeChar.getInventory().getItem(objectId).getCount() < cnt))
 			{
 				continue;
 			}
-			ItemInstance item = activeChar.getInventory().getItem(objectId);
+			final ItemInstance item = activeChar.getInventory().getItem(objectId);
 			activeChar.addAdena((item.getItem().getReferencePrice() / 2) * cnt);
 			activeChar.getInventory().destroyItem(objectId, cnt);
 		}
-		StatusUpdate su = new StatusUpdate(activeChar.getObjectId());
+		final StatusUpdate su = new StatusUpdate(activeChar.getObjectId());
 		su.addAttribute(StatusUpdate.CUR_LOAD, activeChar.getCurrentLoad());
 		activeChar.sendPacket(su);
 	}

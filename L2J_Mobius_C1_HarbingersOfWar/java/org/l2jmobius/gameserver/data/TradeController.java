@@ -50,8 +50,8 @@ public class TradeController
 		String line = null;
 		try
 		{
-			File buylistData = new File("data/buylists.csv");
-			LineNumberReader lnr = new LineNumberReader(new InputStreamReader(new FileInputStream(buylistData)));
+			final File buylistData = new File("data/buylists.csv");
+			final LineNumberReader lnr = new LineNumberReader(new InputStreamReader(new FileInputStream(buylistData)));
 			while ((line = lnr.readLine()) != null)
 			{
 				if (line.trim().isEmpty() || line.startsWith("#"))
@@ -75,14 +75,14 @@ public class TradeController
 	
 	private void parseList(String line)
 	{
-		StringTokenizer st = new StringTokenizer(line, ";");
-		int listId = Integer.parseInt(st.nextToken());
-		TradeList buy1 = new TradeList(listId);
+		final StringTokenizer st = new StringTokenizer(line, ";");
+		final int listId = Integer.parseInt(st.nextToken());
+		final TradeList buy1 = new TradeList(listId);
 		while (st.hasMoreTokens())
 		{
-			int itemId = Integer.parseInt(st.nextToken());
-			int price = Integer.parseInt(st.nextToken());
-			ItemInstance item = ItemTable.getInstance().createDummyItem(itemId);
+			final int itemId = Integer.parseInt(st.nextToken());
+			final int price = Integer.parseInt(st.nextToken());
+			final ItemInstance item = ItemTable.getInstance().createDummyItem(itemId);
 			item.setPrice(price);
 			buy1.addItem(item);
 		}

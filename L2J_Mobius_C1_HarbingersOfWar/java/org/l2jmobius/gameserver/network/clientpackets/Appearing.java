@@ -40,10 +40,10 @@ public class Appearing extends ClientBasePacket
 	public Appearing(byte[] decrypt, ClientThread client) throws IOException
 	{
 		super(decrypt);
-		PlayerInstance activeChar = client.getActiveChar();
+		final PlayerInstance activeChar = client.getActiveChar();
 		activeChar.removeAllKnownObjects();
-		Connection con = client.getConnection();
-		UserInfo ui = new UserInfo(activeChar);
+		final Connection con = client.getConnection();
+		final UserInfo ui = new UserInfo(activeChar);
 		con.sendPacket(ui);
 		for (WorldObject worldObject : World.getInstance().getVisibleObjects(activeChar, 2000))
 		{
@@ -52,7 +52,7 @@ public class Appearing extends ClientBasePacket
 			activeChar.addKnownObject(worldObject);
 			if (worldObject instanceof ItemInstance)
 			{
-				SpawnItem si = new SpawnItem((ItemInstance) worldObject);
+				final SpawnItem si = new SpawnItem((ItemInstance) worldObject);
 				con.sendPacket(si);
 				continue;
 			}
@@ -76,7 +76,7 @@ public class Appearing extends ClientBasePacket
 			{
 				continue;
 			}
-			PlayerInstance player = (PlayerInstance) worldObject;
+			final PlayerInstance player = (PlayerInstance) worldObject;
 			con.sendPacket(new CharInfo(player));
 			player.addKnownObject(activeChar);
 			player.getNetConnection().sendPacket(new CharInfo(activeChar));

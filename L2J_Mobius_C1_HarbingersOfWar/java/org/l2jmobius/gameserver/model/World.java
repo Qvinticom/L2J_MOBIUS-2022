@@ -82,15 +82,15 @@ public class World
 		}
 		else if ((_allPlayers.size() != 0) && !(object instanceof PetInstance) && !(object instanceof ItemInstance))
 		{
-			int x = object.getX();
-			int y = object.getY();
-			int sqRadius = 4000000;
+			final int x = object.getX();
+			final int y = object.getY();
+			final int sqRadius = 4000000;
 			for (PlayerInstance player : _allPlayers.values())
 			{
 				long dy;
-				int x1 = player.getX();
-				long dx = x1 - x;
-				long sqDist = (dx * dx) + ((dy = player.getY() - y) * dy);
+				final int x1 = player.getX();
+				final long dx = x1 - x;
+				final long sqDist = (dx * dx) + ((dy = player.getY() - y) * dy);
 				if (sqDist >= sqRadius)
 				{
 					continue;
@@ -107,7 +107,7 @@ public class World
 		_visibleObjects.remove(object.getObjectId());
 		for (Object element : object.getKnownObjects())
 		{
-			WorldObject temp1 = (WorldObject) element;
+			final WorldObject temp1 = (WorldObject) element;
 			temp1.removeKnownObject(object);
 			object.removeKnownObject(temp1);
 		}
@@ -123,9 +123,9 @@ public class World
 	
 	public Collection<WorldObject> getVisibleObjects(WorldObject object, int radius)
 	{
-		int x = object.getX();
-		int y = object.getY();
-		List<WorldObject> result = new ArrayList<>();
+		final int x = object.getX();
+		final int y = object.getY();
+		final List<WorldObject> result = new ArrayList<>();
 		for (WorldObject worldObject : _visibleObjects.values())
 		{
 			if ((worldObject == null) || worldObject.equals(object) || (Math.sqrt(Math.pow(x - worldObject.getX(), 2) + Math.pow(y - worldObject.getY(), 2)) > radius))

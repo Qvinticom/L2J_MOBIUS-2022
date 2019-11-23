@@ -34,10 +34,10 @@ public class RequestUnEquipItem extends ClientBasePacket
 	public RequestUnEquipItem(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
-		int slot = readD();
-		PlayerInstance activeChar = client.getActiveChar();
-		Collection<ItemInstance> unequiped = activeChar.getInventory().unEquipItemInBodySlot(slot);
-		InventoryUpdate iu = new InventoryUpdate();
+		final int slot = readD();
+		final PlayerInstance activeChar = client.getActiveChar();
+		final Collection<ItemInstance> unequiped = activeChar.getInventory().unEquipItemInBodySlot(slot);
+		final InventoryUpdate iu = new InventoryUpdate();
 		for (ItemInstance element : unequiped)
 		{
 			iu.addModifiedItem(element);
@@ -47,14 +47,14 @@ public class RequestUnEquipItem extends ClientBasePacket
 		activeChar.updatePAtk();
 		activeChar.updateMDef();
 		activeChar.updateMAtk();
-		UserInfo ui = new UserInfo(activeChar);
+		final UserInfo ui = new UserInfo(activeChar);
 		activeChar.sendPacket(ui);
 		activeChar.setAttackStatus(false);
-		CharInfo info = new CharInfo(activeChar);
+		final CharInfo info = new CharInfo(activeChar);
 		activeChar.broadcastPacket(info);
 		if (unequiped.size() > 0)
 		{
-			SystemMessage sm = new SystemMessage(SystemMessage.S1_DISARMED);
+			final SystemMessage sm = new SystemMessage(SystemMessage.S1_DISARMED);
 			sm.addItemName(unequiped.stream().findFirst().get().getItemId());
 			activeChar.sendPacket(sm);
 		}

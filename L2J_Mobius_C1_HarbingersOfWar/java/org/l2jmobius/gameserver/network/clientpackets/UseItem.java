@@ -37,12 +37,12 @@ public class UseItem extends ClientBasePacket
 	public UseItem(byte[] decrypt, ClientThread client) throws IOException
 	{
 		super(decrypt);
-		int objectId = readD();
-		PlayerInstance activeChar = client.getActiveChar();
-		ItemInstance item = activeChar.getInventory().getItem(objectId);
+		final int objectId = readD();
+		final PlayerInstance activeChar = client.getActiveChar();
+		final ItemInstance item = activeChar.getInventory().getItem(objectId);
 		if ((item != null) && item.isEquipable() && !activeChar.isInCombat())
 		{
-			List<ItemInstance> items = activeChar.getInventory().equipItem(item);
+			final List<ItemInstance> items = activeChar.getInventory().equipItem(item);
 			if (item.getItem().getType2() == 0)
 			{
 				activeChar.updatePAtk();
@@ -56,27 +56,27 @@ public class UseItem extends ClientBasePacket
 			{
 				activeChar.updateMDef();
 			}
-			SystemMessage sm = new SystemMessage(SystemMessage.S1_EQUIPPED);
+			final SystemMessage sm = new SystemMessage(SystemMessage.S1_EQUIPPED);
 			sm.addItemName(item.getItemId());
 			activeChar.sendPacket(sm);
-			InventoryUpdate iu = new InventoryUpdate(items);
+			final InventoryUpdate iu = new InventoryUpdate(items);
 			activeChar.sendPacket(iu);
-			UserInfo ui = new UserInfo(activeChar);
+			final UserInfo ui = new UserInfo(activeChar);
 			activeChar.sendPacket(ui);
 			activeChar.setAttackStatus(false);
-			CharInfo info = new CharInfo(activeChar);
+			final CharInfo info = new CharInfo(activeChar);
 			activeChar.broadcastPacket(info);
 		}
 		else if (item != null)
 		{
-			IItemHandler handler = ItemHandler.getInstance().getItemHandler(item.getItemId());
+			final IItemHandler handler = ItemHandler.getInstance().getItemHandler(item.getItemId());
 			if (handler == null)
 			{
 				_log.warning("no itemhandler registered for itemId:" + item.getItemId());
 			}
 			else
 			{
-				int count = handler.useItem(activeChar, item);
+				final int count = handler.useItem(activeChar, item);
 				if (count > 0)
 				{
 					removeItemFromInventory(activeChar, item, count);
@@ -87,8 +87,8 @@ public class UseItem extends ClientBasePacket
 	
 	private void removeItemFromInventory(PlayerInstance activeChar, ItemInstance item, int count)
 	{
-		ItemInstance item2 = activeChar.getInventory().destroyItem(item.getObjectId(), count);
-		InventoryUpdate iu = new InventoryUpdate();
+		final ItemInstance item2 = activeChar.getInventory().destroyItem(item.getObjectId(), count);
+		final InventoryUpdate iu = new InventoryUpdate();
 		if (item2.getCount() == 0)
 		{
 			iu.addRemovedItem(item2);

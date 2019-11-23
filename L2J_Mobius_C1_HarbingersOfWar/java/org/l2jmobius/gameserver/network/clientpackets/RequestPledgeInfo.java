@@ -31,19 +31,19 @@ public class RequestPledgeInfo extends ClientBasePacket
 	public RequestPledgeInfo(byte[] rawPacket, ClientThread client)
 	{
 		super(rawPacket);
-		int clanId = readD();
-		PlayerInstance activeChar = client.getActiveChar();
-		Clan clan = ClanTable.getInstance().getClan(clanId);
+		final int clanId = readD();
+		final PlayerInstance activeChar = client.getActiveChar();
+		final Clan clan = ClanTable.getInstance().getClan(clanId);
 		if (clan == null)
 		{
 			_log.warning("Clan data for clanId " + clanId + " is missing");
 			return;
 		}
-		PledgeInfo pc = new PledgeInfo(clan);
+		final PledgeInfo pc = new PledgeInfo(clan);
 		activeChar.sendPacket(pc);
 		if (clan.getClanId() == activeChar.getClanId())
 		{
-			PledgeShowMemberListAll pm = new PledgeShowMemberListAll(clan, activeChar);
+			final PledgeShowMemberListAll pm = new PledgeShowMemberListAll(clan, activeChar);
 			activeChar.sendPacket(pm);
 		}
 	}

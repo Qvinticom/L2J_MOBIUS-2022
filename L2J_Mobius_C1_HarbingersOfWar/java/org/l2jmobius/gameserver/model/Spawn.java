@@ -51,7 +51,7 @@ public class Spawn
 	public Spawn(Npc mobTemplate) throws SecurityException, ClassNotFoundException
 	{
 		_template = mobTemplate;
-		String implementationName = _template.getType();
+		final String implementationName = _template.getType();
 		_constructor = Class.forName("org.l2jmobius.gameserver.model.actor.instance." + implementationName + "Instance").getConstructors()[0];
 	}
 	
@@ -161,7 +161,7 @@ public class Spawn
 		if ((_scheduledCount + _currentCount) < _maximumCount)
 		{
 			++_scheduledCount;
-			SpawnTask task = new SpawnTask(npcId);
+			final SpawnTask task = new SpawnTask(npcId);
 			_spawnTimer.schedule(task, _respawnDelay);
 		}
 	}
@@ -179,7 +179,7 @@ public class Spawn
 		NpcInstance mob = null;
 		try
 		{
-			Object[] parameters = new Object[]
+			final Object[] parameters = new Object[]
 			{
 				_template
 			};
@@ -195,8 +195,8 @@ public class Spawn
 			}
 			if (getRandomx() > 0)
 			{
-				int random1 = Rnd.get(getRandomx());
-				int newlocx = (getLocx() + Rnd.get(getRandomx())) - random1;
+				final int random1 = Rnd.get(getRandomx());
+				final int newlocx = (getLocx() + Rnd.get(getRandomx())) - random1;
 				mob.setX(newlocx);
 			}
 			else
@@ -205,8 +205,8 @@ public class Spawn
 			}
 			if (getRandomy() > 0)
 			{
-				int random2 = Rnd.get(getRandomy());
-				int newlocy = (getLocy() + Rnd.get(getRandomy())) - random2;
+				final int random2 = Rnd.get(getRandomy());
+				final int newlocy = (getLocy() + Rnd.get(getRandomy())) - random2;
 				mob.setY(newlocy);
 			}
 			else

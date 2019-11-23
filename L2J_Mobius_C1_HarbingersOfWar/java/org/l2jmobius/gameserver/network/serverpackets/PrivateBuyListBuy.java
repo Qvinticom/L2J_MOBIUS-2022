@@ -45,9 +45,9 @@ public class PrivateBuyListBuy extends ServerBasePacket
 		writeC(209);
 		writeD(_buyer.getObjectId());
 		writeD(_seller.getAdena());
-		List<TradeItem> buyerslist = _buyer.getBuyList();
-		Collection<ItemInstance> sellerItems = _seller.getInventory().getItems();
-		ArrayList<TradeItem> sellerslist = new ArrayList<>();
+		final List<TradeItem> buyerslist = _buyer.getBuyList();
+		final Collection<ItemInstance> sellerItems = _seller.getInventory().getItems();
+		final ArrayList<TradeItem> sellerslist = new ArrayList<>();
 		int count = buyerslist.size();
 		for (int i = 0; i < count; ++i)
 		{
@@ -90,8 +90,8 @@ public class PrivateBuyListBuy extends ServerBasePacket
 		{
 			temp2 = buyerslist.get(i);
 			temp3 = sellerslist.get(i);
-			int buyCount = temp2.getCount();
-			int sellCount = temp3.getCount();
+			final int buyCount = temp2.getCount();
+			final int sellCount = temp3.getCount();
 			writeD(temp3.getObjectId());
 			writeD(temp3.getItemId());
 			writeH(1);

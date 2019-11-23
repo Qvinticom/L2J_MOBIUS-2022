@@ -87,7 +87,7 @@ public class Party
 	
 	public void addPartyMember(PlayerInstance player)
 	{
-		PartySmallWindowAll window = new PartySmallWindowAll();
+		final PartySmallWindowAll window = new PartySmallWindowAll();
 		window.setPartyList(_members);
 		player.sendPacket(window);
 		SystemMessage msg = new SystemMessage(SystemMessage.YOU_JOINED_S1_PARTY);
@@ -126,7 +126,7 @@ public class Party
 	{
 		for (int i = 0; i < _members.size(); ++i)
 		{
-			PlayerInstance temp = _members.get(i);
+			final PlayerInstance temp = _members.get(i);
 			if (!temp.getName().equals(name))
 			{
 				continue;
@@ -153,7 +153,7 @@ public class Party
 	
 	public void oustPartyMember(String name)
 	{
-		PlayerInstance player = getPlayerByName(name);
+		final PlayerInstance player = getPlayerByName(name);
 		if (player != null)
 		{
 			if (isLeader(player))
@@ -169,10 +169,10 @@ public class Party
 	
 	private void dissolveParty()
 	{
-		SystemMessage msg = new SystemMessage(SystemMessage.PARTY_DISPERSED);
+		final SystemMessage msg = new SystemMessage(SystemMessage.PARTY_DISPERSED);
 		for (int i = 0; i < _members.size(); ++i)
 		{
-			PlayerInstance temp = _members.get(i);
+			final PlayerInstance temp = _members.get(i);
 			temp.sendPacket(msg);
 			temp.sendPacket(new PartySmallWindowDeleteAll());
 			temp.setParty(null);
@@ -206,8 +206,8 @@ public class Party
 			smsg.addItemName(item.getItemId());
 			this.broadcastToPartyMembers(target, smsg);
 		}
-		ItemInstance item2 = target.getInventory().addItem(item);
-		InventoryUpdate iu = new InventoryUpdate();
+		final ItemInstance item2 = target.getInventory().addItem(item);
+		final InventoryUpdate iu = new InventoryUpdate();
 		if (item2.getLastChange() == 1)
 		{
 			iu.addNewItem(item);
@@ -217,20 +217,20 @@ public class Party
 			iu.addModifiedItem(item2);
 		}
 		target.sendPacket(iu);
-		UserInfo ci = new UserInfo(target);
+		final UserInfo ci = new UserInfo(target);
 		target.sendPacket(ci);
 	}
 	
 	public void distributeAdena(ItemInstance adena)
 	{
 		adena.setCount(adena.getCount() / _members.size());
-		SystemMessage smsg = new SystemMessage(SystemMessage.YOU_PICKED_UP_S1_ADENA);
+		final SystemMessage smsg = new SystemMessage(SystemMessage.YOU_PICKED_UP_S1_ADENA);
 		smsg.addNumber(adena.getCount());
 		for (int i = 0; i < _members.size(); ++i)
 		{
-			PlayerInstance member = _members.get(i);
-			ItemInstance item2 = member.getInventory().addItem(adena);
-			InventoryUpdate iu = new InventoryUpdate();
+			final PlayerInstance member = _members.get(i);
+			final ItemInstance item2 = member.getInventory().addItem(adena);
+			final InventoryUpdate iu = new InventoryUpdate();
 			if (item2.getLastChange() == 1)
 			{
 				iu.addNewItem(adena);
@@ -247,14 +247,14 @@ public class Party
 	public void distributeXpAndSp(int partyDmg, int maxHp, int xpReward, int spReward)
 	{
 		double mul = (Math.pow(1.07, _members.size() - 1) * partyDmg) / maxHp;
-		double xpTotal = mul * xpReward;
-		double spTotal = mul * spReward;
+		final double xpTotal = mul * xpReward;
+		final double spTotal = mul * spReward;
 		for (int i = 0; i < _members.size(); ++i)
 		{
-			PlayerInstance player = _members.get(i);
+			final PlayerInstance player = _members.get(i);
 			mul = ((double) player.getLevel() * (double) player.getLevel()) / _partyLvl;
-			int xp = (int) (mul * xpTotal);
-			int sp = (int) (mul * spTotal);
+			final int xp = (int) (mul * xpTotal);
+			final int sp = (int) (mul * spTotal);
 			player.addExpAndSp(xp, sp);
 		}
 	}
@@ -264,7 +264,7 @@ public class Party
 		int newlevel = 0;
 		for (int i = 0; i < _members.size(); ++i)
 		{
-			int plLevel = _members.get(i).getLevel();
+			final int plLevel = _members.get(i).getLevel();
 			newlevel += plLevel * plLevel;
 		}
 		_partyLvl = newlevel;

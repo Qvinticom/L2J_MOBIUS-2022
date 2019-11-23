@@ -43,13 +43,13 @@ public class Potions implements IItemHandler
 	@Override
 	public int useItem(PlayerInstance activeChar, ItemInstance item)
 	{
-		Potion Potion = new Potion();
-		int itemId = item.getItemId();
+		final Potion Potion = new Potion();
+		final int itemId = item.getItemId();
 		if ((itemId == 65) || (itemId == 725) || (itemId == 727) || (itemId == 1060) || (itemId == 1061) || (itemId == 1539) || (itemId == 1540) || (itemId == 1073))
 		{
-			WorldObject OldTarget = activeChar.getTarget();
+			final WorldObject OldTarget = activeChar.getTarget();
 			activeChar.setTarget(activeChar);
-			MagicSkillUser MSU = new MagicSkillUser(activeChar, 2038, 1, 0, 0);
+			final MagicSkillUser MSU = new MagicSkillUser(activeChar, 2038, 1, 0, 0);
 			activeChar.sendPacket(MSU);
 			activeChar.broadcastPacket(MSU);
 			activeChar.setTarget(OldTarget);
@@ -57,9 +57,9 @@ public class Potions implements IItemHandler
 		}
 		else if ((itemId == 726) || (itemId == 728))
 		{
-			WorldObject OldTarget = activeChar.getTarget();
+			final WorldObject OldTarget = activeChar.getTarget();
 			activeChar.setTarget(activeChar);
-			MagicSkillUser MSU = new MagicSkillUser(activeChar, 2038, 1, 0, 0);
+			final MagicSkillUser MSU = new MagicSkillUser(activeChar, 2038, 1, 0, 0);
 			activeChar.sendPacket(MSU);
 			activeChar.broadcastPacket(MSU);
 			activeChar.setTarget(OldTarget);

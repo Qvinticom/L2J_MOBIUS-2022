@@ -56,7 +56,7 @@ public class Announcements
 	public void loadAnnouncements()
 	{
 		_announcements.clear();
-		File file = new File("data/announcements.txt");
+		final File file = new File("data/announcements.txt");
 		if (file.exists())
 		{
 			readFromDisk(file);
@@ -71,15 +71,15 @@ public class Announcements
 	{
 		for (int i = 0; i < _announcements.size(); ++i)
 		{
-			CreatureSay cs = new CreatureSay(0, 10, activeChar.getName(), _announcements.get(i).toString());
+			final CreatureSay cs = new CreatureSay(0, 10, activeChar.getName(), _announcements.get(i).toString());
 			activeChar.sendPacket(cs);
 		}
 	}
 	
 	public void listAnnouncements(PlayerInstance activeChar)
 	{
-		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
-		StringBuffer replyMSG = new StringBuffer("<html><title>Announcements:</title>");
+		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+		final StringBuffer replyMSG = new StringBuffer("<html><title>Announcements:</title>");
 		replyMSG.append("<body>");
 		for (int i = 0; i < _announcements.size(); ++i)
 		{
@@ -117,15 +117,15 @@ public class Announcements
 		String line = null;
 		try
 		{
-			LineNumberReader lnr = new LineNumberReader(new InputStreamReader(new FileInputStream(file)));
+			final LineNumberReader lnr = new LineNumberReader(new InputStreamReader(new FileInputStream(file)));
 			while ((line = lnr.readLine()) != null)
 			{
-				StringTokenizer st = new StringTokenizer(line, "\n\r");
+				final StringTokenizer st = new StringTokenizer(line, "\n\r");
 				if (!st.hasMoreTokens())
 				{
 					continue;
 				}
-				String announcement = st.nextToken();
+				final String announcement = st.nextToken();
 				_announcements.add(announcement);
 				++i;
 			}
@@ -146,7 +146,7 @@ public class Announcements
 	{
 		try
 		{
-			FileWriter save = new FileWriter(new File("data/announcements.txt"));
+			final FileWriter save = new FileWriter(new File("data/announcements.txt"));
 			for (int i = 0; i < _announcements.size(); ++i)
 			{
 				save.write(_announcements.get(i).toString());

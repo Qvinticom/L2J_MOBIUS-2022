@@ -29,11 +29,11 @@ public class RequestSocialAction extends ClientBasePacket
 	public RequestSocialAction(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
-		int actionId = readD();
-		PlayerInstance activeChar = client.getActiveChar();
+		final int actionId = readD();
+		final PlayerInstance activeChar = client.getActiveChar();
 		if ((activeChar.getPrivateStoreType() == 0) && (activeChar.getTransactionRequester() == null) && (activeChar.getCurrentState() == CreatureState.IDLE))
 		{
-			SocialAction atk = new SocialAction(client.getActiveChar().getObjectId(), actionId);
+			final SocialAction atk = new SocialAction(client.getActiveChar().getObjectId(), actionId);
 			activeChar.sendPacket(atk);
 			activeChar.broadcastPacket(atk);
 		}

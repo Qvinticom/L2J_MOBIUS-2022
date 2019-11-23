@@ -31,12 +31,12 @@ public class AuthLogin extends ClientBasePacket
 	public AuthLogin(byte[] decrypt, ClientThread client) throws IOException
 	{
 		super(decrypt);
-		String loginName = readS().toLowerCase();
+		final String loginName = readS().toLowerCase();
 		@SuppressWarnings("unused")
-		long key1 = readD();
-		long key2 = readD();
+		final long key1 = readD();
+		final long key2 = readD();
 		
-		int access = LoginController.getInstance().getGmAccessLevel(loginName);
+		final int access = LoginController.getInstance().getGmAccessLevel(loginName);
 		if (!LoginController.getInstance().loginPossible(access))
 		{
 			_log.warning("Server is full. client is blocked: " + loginName);
@@ -45,7 +45,7 @@ public class AuthLogin extends ClientBasePacket
 		}
 		client.setLoginName(loginName);
 		client.setLoginFolder(loginName);
-		int sessionKey = LoginController.getInstance().getKeyForAccount(loginName);
+		final int sessionKey = LoginController.getInstance().getKeyForAccount(loginName);
 		if (sessionKey != key2)
 		{
 			_log.warning("session key is not correct. closing connection");
@@ -54,7 +54,7 @@ public class AuthLogin extends ClientBasePacket
 		else
 		{
 			LoginController.getInstance().addGameServerLogin(loginName, client.getConnection());
-			CharSelectInfo cl = new CharSelectInfo(loginName, client.getSessionId());
+			final CharSelectInfo cl = new CharSelectInfo(loginName, client.getSessionId());
 			client.getConnection().sendPacket(cl);
 		}
 		client.setAccessLevel(access);

@@ -36,7 +36,7 @@ public class SkillList extends ServerBasePacket
 		writeD(_skills.size());
 		for (int i = 0; i < _skills.size(); ++i)
 		{
-			Skill temp = _skills.get(i);
+			final Skill temp = _skills.get(i);
 			if (temp.passive)
 			{
 				writeD(1);

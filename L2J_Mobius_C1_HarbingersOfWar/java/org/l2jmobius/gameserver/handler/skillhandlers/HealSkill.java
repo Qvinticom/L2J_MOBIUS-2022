@@ -56,7 +56,7 @@ public class HealSkill implements ISkillHandler
 		
 		if (skill.getTargetType() == Skill.TARGET_PET)
 		{
-			PetInstance pet = activeChar.getPet();
+			final PetInstance pet = activeChar.getPet();
 			double hp = pet.getCurrentHp();
 			pet.setCurrentHp(hp += skill.getPower());
 		}
@@ -66,7 +66,7 @@ public class HealSkill implements ISkillHandler
 			{
 				double hp = player.getCurrentHp();
 				player.setCurrentHp(hp += skill.getPower());
-				StatusUpdate su = new StatusUpdate(player.getObjectId());
+				final StatusUpdate su = new StatusUpdate(player.getObjectId());
 				su.addAttribute(StatusUpdate.CUR_HP, (int) hp);
 				player.sendPacket(su);
 				player.sendPacket(new SystemMessage(SystemMessage.REJUVENATING_HP));
@@ -76,7 +76,7 @@ public class HealSkill implements ISkillHandler
 		{
 			double hp = activeChar.getCurrentHp();
 			activeChar.setCurrentHp(hp += skill.getPower());
-			StatusUpdate su = new StatusUpdate(activeChar.getObjectId());
+			final StatusUpdate su = new StatusUpdate(activeChar.getObjectId());
 			su.addAttribute(StatusUpdate.CUR_HP, (int) hp);
 			activeChar.sendPacket(su);
 			activeChar.sendPacket(new SystemMessage(SystemMessage.REJUVENATING_HP));

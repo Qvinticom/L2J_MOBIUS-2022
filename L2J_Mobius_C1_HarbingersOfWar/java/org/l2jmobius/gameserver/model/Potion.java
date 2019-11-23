@@ -213,7 +213,7 @@ public class Potion extends WorldObject
 		{
 			try
 			{
-				Object object = _mpLock;
+				final Object object = _mpLock;
 				synchronized (object)
 				{
 					double nowMp = _instance.getCurrentMp();
@@ -250,7 +250,7 @@ public class Potion extends WorldObject
 		{
 			try
 			{
-				Object object = _hpLock;
+				final Object object = _hpLock;
 				synchronized (object)
 				{
 					double nowHp = _instance.getCurrentHp();

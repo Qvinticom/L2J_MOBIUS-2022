@@ -105,7 +105,7 @@ public class GuardInstance extends Attackable
 		{
 			player.setCurrentState(CreatureState.IDLE);
 			player.setTarget(this);
-			MyTargetSelected my = new MyTargetSelected(getObjectId(), 0);
+			final MyTargetSelected my = new MyTargetSelected(getObjectId(), 0);
 			player.sendPacket(my);
 			player.sendPacket(new SetToLocation(this));
 		}
@@ -115,7 +115,7 @@ public class GuardInstance extends Attackable
 		}
 		else
 		{
-			double distance = getDistance(player.getX(), player.getY());
+			final double distance = getDistance(player.getX(), player.getY());
 			if (distance > INTERACTION_DISTANCE)
 			{
 				player.setCurrentState(CreatureState.INTERACT);

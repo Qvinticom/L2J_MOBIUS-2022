@@ -27,9 +27,9 @@ public class RequestShortCutDel extends ClientBasePacket
 	public RequestShortCutDel(byte[] rawPacket, ClientThread client)
 	{
 		super(rawPacket);
-		PlayerInstance activeChar = client.getActiveChar();
+		final PlayerInstance activeChar = client.getActiveChar();
 		// Connection con = client.getConnection();
-		int slot = readD();
+		final int slot = readD();
 		activeChar.deleteShortCut(slot);
 	}
 	

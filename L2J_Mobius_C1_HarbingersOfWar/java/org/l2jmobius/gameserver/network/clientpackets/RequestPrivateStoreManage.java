@@ -33,8 +33,8 @@ public class RequestPrivateStoreManage extends ClientBasePacket
 	public RequestPrivateStoreManage(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
-		PlayerInstance player = client.getActiveChar();
-		int privatetype = player.getPrivateStoreType();
+		final PlayerInstance player = client.getActiveChar();
+		final int privatetype = player.getPrivateStoreType();
 		if (privatetype == 0)
 		{
 			if (player.getWaitType() != 1)

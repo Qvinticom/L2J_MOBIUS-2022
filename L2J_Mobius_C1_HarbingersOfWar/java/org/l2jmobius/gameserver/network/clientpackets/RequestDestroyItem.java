@@ -35,9 +35,9 @@ public class RequestDestroyItem extends ClientBasePacket
 		super(decrypt);
 		InventoryUpdate iu;
 		ItemInstance itemToRemove;
-		int objectId = readD();
+		final int objectId = readD();
 		int count = readD();
-		PlayerInstance activeChar = client.getActiveChar();
+		final PlayerInstance activeChar = client.getActiveChar();
 		if (count == 0)
 		{
 			return;
@@ -59,7 +59,7 @@ public class RequestDestroyItem extends ClientBasePacket
 			activeChar.updateMDef();
 			activeChar.updateMAtk();
 		}
-		ItemInstance removedItem = activeChar.getInventory().destroyItem(objectId, count);
+		final ItemInstance removedItem = activeChar.getInventory().destroyItem(objectId, count);
 		iu = new InventoryUpdate();
 		if (removedItem.getCount() == 0)
 		{
@@ -70,14 +70,14 @@ public class RequestDestroyItem extends ClientBasePacket
 			iu.addModifiedItem(removedItem);
 		}
 		activeChar.sendPacket(iu);
-		StatusUpdate su = new StatusUpdate(activeChar.getObjectId());
+		final StatusUpdate su = new StatusUpdate(activeChar.getObjectId());
 		su.addAttribute(StatusUpdate.CUR_LOAD, activeChar.getCurrentLoad());
 		activeChar.sendPacket(su);
-		UserInfo ui = new UserInfo(activeChar);
+		final UserInfo ui = new UserInfo(activeChar);
 		activeChar.sendPacket(ui);
-		CharInfo info = new CharInfo(activeChar);
+		final CharInfo info = new CharInfo(activeChar);
 		activeChar.broadcastPacket(info);
-		World world = World.getInstance();
+		final World world = World.getInstance();
 		world.removeObject(removedItem);
 	}
 	

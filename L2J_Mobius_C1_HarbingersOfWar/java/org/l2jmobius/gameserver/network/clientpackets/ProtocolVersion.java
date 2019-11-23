@@ -31,7 +31,7 @@ public class ProtocolVersion extends ClientBasePacket
 	public ProtocolVersion(byte[] rawPacket, ClientThread client) throws IOException
 	{
 		super(rawPacket);
-		int version = readD();
+		final int version = readD();
 		
 		// this packet is never encrypted
 		if (version == -2)
@@ -44,8 +44,8 @@ public class ProtocolVersion extends ClientBasePacket
 		}
 		else
 		{
-			Connection con = client.getConnection();
-			KeyPacket pk = new KeyPacket();
+			final Connection con = client.getConnection();
+			final KeyPacket pk = new KeyPacket();
 			pk.setKey(con.getCryptKey());
 			con.sendPacket(pk);
 			con.activateCryptKey();

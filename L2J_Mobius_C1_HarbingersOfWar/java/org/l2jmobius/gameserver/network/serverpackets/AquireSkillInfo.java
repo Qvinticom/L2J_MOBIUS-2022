@@ -49,7 +49,7 @@ public class AquireSkillInfo extends ServerBasePacket
 		writeD(_reqs.size());
 		for (int i = 0; i < _reqs.size(); ++i)
 		{
-			Req temp = _reqs.get(i);
+			final Req temp = _reqs.get(i);
 			writeD(temp.type);
 			writeD(temp.id);
 			writeD(temp.count);

@@ -41,7 +41,7 @@ public class WareHouseDepositList extends ServerBasePacket
 		int i;
 		writeC(83);
 		writeD(_money);
-		List<ItemInstance> itemlist = new ArrayList<>();
+		final List<ItemInstance> itemlist = new ArrayList<>();
 		int count = _cha.getInventory().getSize();
 		for (ItemInstance item : _cha.getInventory().getItems())
 		{
@@ -55,7 +55,7 @@ public class WareHouseDepositList extends ServerBasePacket
 		writeH(count);
 		for (i = 0; i < count; ++i)
 		{
-			ItemInstance temp = itemlist.get(i);
+			final ItemInstance temp = itemlist.get(i);
 			writeH(temp.getItem().getType1());
 			writeD(temp.getObjectId());
 			writeD(temp.getItemId());

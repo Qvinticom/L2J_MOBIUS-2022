@@ -51,10 +51,10 @@ public class WarehouseInstance extends NpcInstance
 	
 	private void showRetrieveWindow(PlayerInstance player)
 	{
-		Warehouse list = player.getWarehouse();
+		final Warehouse list = player.getWarehouse();
 		if (list != null)
 		{
-			WareHouseWithdrawalList wl = new WareHouseWithdrawalList(player);
+			final WareHouseWithdrawalList wl = new WareHouseWithdrawalList(player);
 			player.sendPacket(wl);
 		}
 		else
@@ -66,14 +66,14 @@ public class WarehouseInstance extends NpcInstance
 	
 	private void showDepositWindow(PlayerInstance player)
 	{
-		WareHouseDepositList dl = new WareHouseDepositList(player);
+		final WareHouseDepositList dl = new WareHouseDepositList(player);
 		player.sendPacket(dl);
 		player.sendPacket(new ActionFailed());
 	}
 	
 	private void showDepositWindowClan(PlayerInstance player)
 	{
-		NpcHtmlMessage html = new NpcHtmlMessage(1);
+		final NpcHtmlMessage html = new NpcHtmlMessage(1);
 		html.setHtml("<html><body>Clans are not supported yet.</body></html>");
 		player.sendPacket(html);
 		player.sendPacket(new ActionFailed());
@@ -81,7 +81,7 @@ public class WarehouseInstance extends NpcInstance
 	
 	private void showWithdrawWindowClan(PlayerInstance player)
 	{
-		NpcHtmlMessage html = new NpcHtmlMessage(1);
+		final NpcHtmlMessage html = new NpcHtmlMessage(1);
 		html.setHtml("<html><body>Clans are not supported yet.</body></html>");
 		player.sendPacket(html);
 		player.sendPacket(new ActionFailed());

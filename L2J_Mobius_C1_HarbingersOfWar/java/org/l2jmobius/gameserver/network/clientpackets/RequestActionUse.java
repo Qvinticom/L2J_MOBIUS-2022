@@ -33,13 +33,13 @@ public class RequestActionUse extends ClientBasePacket
 	public RequestActionUse(byte[] rawPacket, ClientThread client)
 	{
 		super(rawPacket);
-		int actionId = readD();
+		final int actionId = readD();
 		@SuppressWarnings("unused")
-		int data2 = readD();
+		final int data2 = readD();
 		@SuppressWarnings("unused")
-		int data3 = readC();
+		final int data3 = readC();
 		
-		PlayerInstance activeChar = client.getActiveChar();
+		final PlayerInstance activeChar = client.getActiveChar();
 		if (activeChar.isDead())
 		{
 			activeChar.sendPacket(new ActionFailed());
@@ -49,8 +49,8 @@ public class RequestActionUse extends ClientBasePacket
 		{
 			case 0:
 			{
-				int waitType = activeChar.getWaitType() ^ 1;
-				ChangeWaitType cmt = new ChangeWaitType(activeChar, waitType);
+				final int waitType = activeChar.getWaitType() ^ 1;
+				final ChangeWaitType cmt = new ChangeWaitType(activeChar, waitType);
 				activeChar.setWaitType(waitType);
 				activeChar.sendPacket(cmt);
 				activeChar.broadcastPacket(cmt);
@@ -58,8 +58,8 @@ public class RequestActionUse extends ClientBasePacket
 			}
 			case 1:
 			{
-				int moveType = activeChar.getMoveType() ^ 1;
-				ChangeMoveType cmt = new ChangeMoveType(activeChar, moveType);
+				final int moveType = activeChar.getMoveType() ^ 1;
+				final ChangeMoveType cmt = new ChangeMoveType(activeChar, moveType);
 				activeChar.setMoveType(moveType);
 				activeChar.sendPacket(cmt);
 				activeChar.broadcastPacket(cmt);

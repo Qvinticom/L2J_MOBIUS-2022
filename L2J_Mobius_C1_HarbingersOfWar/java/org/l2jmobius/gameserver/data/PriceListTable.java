@@ -49,22 +49,22 @@ public class PriceListTable
 	{
 		try
 		{
-			File file = new File("data/pricelist.csv");
+			final File file = new File("data/pricelist.csv");
 			if (file.isFile() && file.exists())
 			{
 				int i = 0;
 				String line = null;
-				LineNumberReader lnr = new LineNumberReader(new InputStreamReader(new FileInputStream(file)));
+				final LineNumberReader lnr = new LineNumberReader(new InputStreamReader(new FileInputStream(file)));
 				while ((line = lnr.readLine()) != null)
 				{
 					if (line.startsWith("#"))
 					{
 						continue;
 					}
-					StringTokenizer st = new StringTokenizer(line, ";");
-					int itemId = Integer.parseInt(st.nextToken().toString());
-					int price = Integer.parseInt(st.nextToken().toString());
-					Item temp = ItemTable.getInstance().getTemplate(itemId);
+					final StringTokenizer st = new StringTokenizer(line, ";");
+					final int itemId = Integer.parseInt(st.nextToken().toString());
+					final int price = Integer.parseInt(st.nextToken().toString());
+					final Item temp = ItemTable.getInstance().getTemplate(itemId);
 					temp.setItemId(itemId);
 					temp.setReferencePrice(price);
 					++i;

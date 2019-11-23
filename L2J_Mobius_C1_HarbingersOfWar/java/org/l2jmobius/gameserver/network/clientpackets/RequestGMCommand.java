@@ -31,11 +31,11 @@ public class RequestGMCommand extends ClientBasePacket
 	public RequestGMCommand(byte[] rawPacket, ClientThread client)
 	{
 		super(rawPacket);
-		String targetName = readS();
-		int command = readD();
+		final String targetName = readS();
+		final int command = readD();
 		@SuppressWarnings("unused")
-		int unknown = readD();
-		PlayerInstance player = World.getInstance().getPlayer(targetName);
+		final int unknown = readD();
+		final PlayerInstance player = World.getInstance().getPlayer(targetName);
 		if (player == null)
 		{
 			return;

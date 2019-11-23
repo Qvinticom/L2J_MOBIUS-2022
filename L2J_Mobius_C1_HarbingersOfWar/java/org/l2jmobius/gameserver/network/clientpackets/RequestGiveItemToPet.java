@@ -30,27 +30,27 @@ public class RequestGiveItemToPet extends ClientBasePacket
 	public RequestGiveItemToPet(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
-		int objectId = readD();
-		int amount = readD();
-		Inventory petInventory = client.getActiveChar().getPet().getInventory();
-		Inventory playerInventory = client.getActiveChar().getInventory();
-		ItemInstance playerItem = playerInventory.getItem(objectId);
+		final int objectId = readD();
+		final int amount = readD();
+		final Inventory petInventory = client.getActiveChar().getPet().getInventory();
+		final Inventory playerInventory = client.getActiveChar().getInventory();
+		final ItemInstance playerItem = playerInventory.getItem(objectId);
 		if (amount >= playerItem.getCount())
 		{
 			playerInventory.dropItem(objectId, playerItem.getCount());
 			petInventory.addItem(playerItem);
-			InventoryUpdate playerUI = new InventoryUpdate();
+			final InventoryUpdate playerUI = new InventoryUpdate();
 			playerUI.addRemovedItem(playerItem);
 			client.getActiveChar().sendPacket(playerUI);
-			PetItemList petiu = new PetItemList(client.getActiveChar().getPet());
+			final PetItemList petiu = new PetItemList(client.getActiveChar().getPet());
 			client.getActiveChar().sendPacket(petiu);
 		}
 		else
 		{
-			ItemInstance newPetItem = playerInventory.dropItem(objectId, amount);
+			final ItemInstance newPetItem = playerInventory.dropItem(objectId, amount);
 			petInventory.addItem(newPetItem);
-			PetItemList petiu = new PetItemList(client.getActiveChar().getPet());
-			InventoryUpdate playerUI = new InventoryUpdate();
+			final PetItemList petiu = new PetItemList(client.getActiveChar().getPet());
+			final InventoryUpdate playerUI = new InventoryUpdate();
 			playerUI.addModifiedItem(playerItem);
 			client.getActiveChar().sendPacket(petiu);
 			client.getActiveChar().sendPacket(playerUI);

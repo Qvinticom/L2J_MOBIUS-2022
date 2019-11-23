@@ -50,8 +50,8 @@ public class SpawnTable
 	{
 		try
 		{
-			File spawnDataFile = new File("data/spawnlist.csv");
-			LineNumberReader lnr = new LineNumberReader(new InputStreamReader(new FileInputStream(spawnDataFile)));
+			final File spawnDataFile = new File("data/spawnlist.csv");
+			final LineNumberReader lnr = new LineNumberReader(new InputStreamReader(new FileInputStream(spawnDataFile)));
 			String line = null;
 			while ((line = lnr.readLine()) != null)
 			{
@@ -61,7 +61,7 @@ public class SpawnTable
 					{
 						continue;
 					}
-					Spawn spawn = parseList(line);
+					final Spawn spawn = parseList(line);
 					_spawntable.put(spawn.getId(), spawn);
 					if (spawn.getId() <= _highestId)
 					{
@@ -89,18 +89,18 @@ public class SpawnTable
 	
 	private Spawn parseList(String line) throws SecurityException, ClassNotFoundException
 	{
-		StringTokenizer st = new StringTokenizer(line, ";");
-		int spawnId = Integer.parseInt(st.nextToken());
-		String location = st.nextToken();
-		int count = Integer.parseInt(st.nextToken());
-		int npcId = Integer.parseInt(st.nextToken());
-		Npc template1 = NpcTable.getInstance().getTemplate(npcId);
+		final StringTokenizer st = new StringTokenizer(line, ";");
+		final int spawnId = Integer.parseInt(st.nextToken());
+		final String location = st.nextToken();
+		final int count = Integer.parseInt(st.nextToken());
+		final int npcId = Integer.parseInt(st.nextToken());
+		final Npc template1 = NpcTable.getInstance().getTemplate(npcId);
 		if (template1 == null)
 		{
 			_log.warning("Monster data for id:" + npcId + " missing in npc.csv");
 			return null;
 		}
-		Spawn spawnDat = new Spawn(template1);
+		final Spawn spawnDat = new Spawn(template1);
 		spawnDat.setId(spawnId);
 		spawnDat.setLocation(location); // ?
 		spawnDat.setAmount(count);

@@ -60,7 +60,7 @@ public class SkillTable
 				{
 					continue;
 				}
-				Skill skill = parseList(line);
+				final Skill skill = parseList(line);
 				_skills.put((skill.getId() * 100) + skill.getLevel(), skill);
 			}
 			skillData = new File("data/skills2.csv");
@@ -96,17 +96,17 @@ public class SkillTable
 	
 	private void parseList2(String line)
 	{
-		StringTokenizer st = new StringTokenizer(line, ";");
-		int id = Integer.parseInt(st.nextToken());
+		final StringTokenizer st = new StringTokenizer(line, ";");
+		final int id = Integer.parseInt(st.nextToken());
 		st.nextToken();
-		int level = Integer.parseInt(st.nextToken());
-		int key = (id * 100) + level;
-		Skill skill = _skills.get(key);
+		final int level = Integer.parseInt(st.nextToken());
+		final int key = (id * 100) + level;
+		final Skill skill = _skills.get(key);
 		if (skill == null)
 		{
 			return;
 		}
-		String target = st.nextToken();
+		final String target = st.nextToken();
 		if (target.equalsIgnoreCase("self"))
 		{
 			skill.setTargetType(Skill.TARGET_SELF);
@@ -132,12 +132,12 @@ public class SkillTable
 	
 	private Skill parseList(String line)
 	{
-		StringTokenizer st = new StringTokenizer(line, ";");
-		Skill skill = new Skill();
+		final StringTokenizer st = new StringTokenizer(line, ";");
+		final Skill skill = new Skill();
 		skill.setId(Integer.parseInt(st.nextToken()));
 		skill.setName(st.nextToken());
 		skill.setLevel(Integer.parseInt(st.nextToken()));
-		String opType = st.nextToken();
+		final String opType = st.nextToken();
 		if (opType.equalsIgnoreCase("once"))
 		{
 			skill.setOperateType(Skill.OP_ONCE);

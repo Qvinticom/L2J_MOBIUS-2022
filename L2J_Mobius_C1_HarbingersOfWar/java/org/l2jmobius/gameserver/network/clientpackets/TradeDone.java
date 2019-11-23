@@ -29,9 +29,9 @@ public class TradeDone extends ClientBasePacket
 	public TradeDone(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
-		int response = readD();
-		PlayerInstance player = client.getActiveChar();
-		PlayerInstance requestor = player.getTransactionRequester();
+		final int response = readD();
+		final PlayerInstance player = client.getActiveChar();
+		final PlayerInstance requestor = player.getTransactionRequester();
 		if (requestor.getTransactionRequester() != null)
 		{
 			if (response == 1)
@@ -45,7 +45,7 @@ public class TradeDone extends ClientBasePacket
 					player.sendPacket(new SendTradeDone(1));
 					requestor.getTradeList().getItems().clear();
 					player.getTradeList().getItems().clear();
-					SystemMessage msg = new SystemMessage(SystemMessage.TRADE_SUCCESSFUL);
+					final SystemMessage msg = new SystemMessage(SystemMessage.TRADE_SUCCESSFUL);
 					requestor.sendPacket(msg);
 					player.sendPacket(msg);
 					requestor.setTransactionRequester(null);
@@ -53,7 +53,7 @@ public class TradeDone extends ClientBasePacket
 				}
 				else
 				{
-					SystemMessage msg = new SystemMessage(SystemMessage.S1_CONFIRMED_TRADE);
+					final SystemMessage msg = new SystemMessage(SystemMessage.S1_CONFIRMED_TRADE);
 					msg.addString(player.getName());
 					requestor.sendPacket(msg);
 				}
@@ -64,7 +64,7 @@ public class TradeDone extends ClientBasePacket
 				requestor.sendPacket(new SendTradeDone(0));
 				player.setTradeList(null);
 				requestor.setTradeList(null);
-				SystemMessage msg = new SystemMessage(SystemMessage.S1_CANCELED_TRADE);
+				final SystemMessage msg = new SystemMessage(SystemMessage.S1_CANCELED_TRADE);
 				msg.addString(player.getName());
 				requestor.sendPacket(msg);
 				requestor.setTransactionRequester(null);
@@ -74,7 +74,7 @@ public class TradeDone extends ClientBasePacket
 		else
 		{
 			player.sendPacket(new SendTradeDone(0));
-			SystemMessage msg = new SystemMessage(SystemMessage.TARGET_IS_NOT_FOUND_IN_THE_GAME);
+			final SystemMessage msg = new SystemMessage(SystemMessage.TARGET_IS_NOT_FOUND_IN_THE_GAME);
 			player.sendPacket(msg);
 			player.setTransactionRequester(null);
 			requestor.setTradeList(null);

@@ -46,7 +46,7 @@ public class ShortCutInit extends ServerBasePacket
 		writeD(_shortCuts.size());
 		for (int i = 0; i < _shortCuts.size(); ++i)
 		{
-			ShortCut temp = _shortCuts.get(i);
+			final ShortCut temp = _shortCuts.get(i);
 			writeD(temp.type);
 			writeD(temp.slot);
 			writeD(temp.typeId);

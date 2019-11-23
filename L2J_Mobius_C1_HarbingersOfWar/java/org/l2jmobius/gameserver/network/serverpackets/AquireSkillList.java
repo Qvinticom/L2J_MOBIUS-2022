@@ -36,7 +36,7 @@ public class AquireSkillList extends ServerBasePacket
 		writeD(_skills.size());
 		for (int i = 0; i < _skills.size(); ++i)
 		{
-			Skill temp = _skills.get(i);
+			final Skill temp = _skills.get(i);
 			writeD(temp.id);
 			writeD(temp.nextLevel);
 			writeD(temp.maxLevel);

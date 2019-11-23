@@ -35,11 +35,11 @@ public class RequestAquireSkillInfo extends ClientBasePacket
 	public RequestAquireSkillInfo(byte[] rawPacket, ClientThread client) throws IOException
 	{
 		super(rawPacket);
-		PlayerInstance activeChar = client.getActiveChar();
-		Connection con = client.getConnection();
-		int id = readD();
-		int level = readD();
-		Skill skill = SkillTable.getInstance().getInfo(id, level);
+		final PlayerInstance activeChar = client.getActiveChar();
+		final Connection con = client.getConnection();
+		final int id = readD();
+		final int level = readD();
+		final Skill skill = SkillTable.getInstance().getInfo(id, level);
 		int requiredSp = 0;
 		for (SkillLearn skill2 : SkillTreeTable.getInstance().getAvailableSkills(activeChar))
 		{
@@ -50,7 +50,7 @@ public class RequestAquireSkillInfo extends ClientBasePacket
 			requiredSp = skill2.getSpCost();
 			break;
 		}
-		AquireSkillInfo asi = new AquireSkillInfo(skill.getId(), skill.getLevel(), requiredSp);
+		final AquireSkillInfo asi = new AquireSkillInfo(skill.getId(), skill.getLevel(), requiredSp);
 		con.sendPacket(asi);
 	}
 	

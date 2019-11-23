@@ -37,7 +37,7 @@ public class Crypt
 		int j = 0;
 		for (int i = 0; i < raw.length; ++i)
 		{
-			int temp2 = raw[i] & 0xFF;
+			final int temp2 = raw[i] & 0xFF;
 			raw[i] = (byte) (temp2 ^ (_key[j++] & 0xFF) ^ temp);
 			temp = temp2;
 			if (j <= 7)
@@ -67,7 +67,7 @@ public class Crypt
 		int j = 0;
 		for (int i = 0; i < raw.length; ++i)
 		{
-			int temp2 = raw[i] & 0xFF;
+			final int temp2 = raw[i] & 0xFF;
 			raw[i] = (byte) (temp2 ^ (_key[j++] & 0xFF) ^ temp);
 			temp = raw[i];
 			if (j <= 7)

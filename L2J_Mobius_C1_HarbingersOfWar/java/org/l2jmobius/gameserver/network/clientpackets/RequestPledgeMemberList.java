@@ -29,11 +29,11 @@ public class RequestPledgeMemberList extends ClientBasePacket
 	public RequestPledgeMemberList(byte[] rawPacket, ClientThread client)
 	{
 		super(rawPacket);
-		PlayerInstance activeChar = client.getActiveChar();
-		Clan clan = activeChar.getClan();
+		final PlayerInstance activeChar = client.getActiveChar();
+		final Clan clan = activeChar.getClan();
 		if (clan != null)
 		{
-			PledgeShowMemberListAll pm = new PledgeShowMemberListAll(clan, activeChar);
+			final PledgeShowMemberListAll pm = new PledgeShowMemberListAll(clan, activeChar);
 			activeChar.sendPacket(pm);
 		}
 	}

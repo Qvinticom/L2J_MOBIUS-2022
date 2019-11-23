@@ -40,15 +40,15 @@ public class ClassMasterInstance extends NpcInstance
 		{
 			player.setCurrentState(CreatureState.IDLE);
 			player.setTarget(this);
-			MyTargetSelected my = new MyTargetSelected(getObjectId(), player.getLevel() - getLevel());
+			final MyTargetSelected my = new MyTargetSelected(getObjectId(), player.getLevel() - getLevel());
 			player.sendPacket(my);
 			player.sendPacket(new SetToLocation(this));
 		}
 		else
 		{
-			int classId = player.getClassId();
+			final int classId = player.getClassId();
 			int jobLevel = 0;
-			int level = player.getLevel();
+			final int level = player.getLevel();
 			switch (classId)
 			{
 				case 0:
@@ -97,7 +97,7 @@ public class ClassMasterInstance extends NpcInstance
 			}
 			else
 			{
-				NpcHtmlMessage html = new NpcHtmlMessage(1);
+				final NpcHtmlMessage html = new NpcHtmlMessage(1);
 				switch (jobLevel)
 				{
 					case 1:
@@ -132,7 +132,7 @@ public class ClassMasterInstance extends NpcInstance
 	{
 		if (command.startsWith("change_class"))
 		{
-			int val = Integer.parseInt(command.substring(13));
+			final int val = Integer.parseInt(command.substring(13));
 			changeClass(player, val);
 		}
 		else
@@ -144,9 +144,9 @@ public class ClassMasterInstance extends NpcInstance
 	private void changeClass(PlayerInstance player, int val)
 	{
 		player.setClassId(val);
-		UserInfo ui = new UserInfo(player);
+		final UserInfo ui = new UserInfo(player);
 		player.sendPacket(ui);
-		CharInfo info = new CharInfo(player);
+		final CharInfo info = new CharInfo(player);
 		player.broadcastPacket(info);
 	}
 }

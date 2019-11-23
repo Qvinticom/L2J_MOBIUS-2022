@@ -31,9 +31,9 @@ public class AnswerTradeRequest extends ClientBasePacket
 	public AnswerTradeRequest(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
-		int response = readD();
-		PlayerInstance player = client.getActiveChar();
-		PlayerInstance requestor = player.getTransactionRequester();
+		final int response = readD();
+		final PlayerInstance player = client.getActiveChar();
+		final PlayerInstance requestor = player.getTransactionRequester();
 		if (requestor.getTransactionRequester() != null)
 		{
 			if (response == 1)
@@ -57,7 +57,7 @@ public class AnswerTradeRequest extends ClientBasePacket
 			}
 			else
 			{
-				SystemMessage msg = new SystemMessage(SystemMessage.S1_DENIED_TRADE_REQUEST);
+				final SystemMessage msg = new SystemMessage(SystemMessage.S1_DENIED_TRADE_REQUEST);
 				msg.addString(player.getName());
 				requestor.sendPacket(msg);
 				requestor.setTransactionRequester(null);
@@ -67,7 +67,7 @@ public class AnswerTradeRequest extends ClientBasePacket
 		else if (response != 0)
 		{
 			player.sendPacket(new SendTradeDone(0));
-			SystemMessage msg = new SystemMessage(SystemMessage.TARGET_IS_NOT_FOUND_IN_THE_GAME);
+			final SystemMessage msg = new SystemMessage(SystemMessage.TARGET_IS_NOT_FOUND_IN_THE_GAME);
 			player.sendPacket(msg);
 			player.setTransactionRequester(null);
 		}

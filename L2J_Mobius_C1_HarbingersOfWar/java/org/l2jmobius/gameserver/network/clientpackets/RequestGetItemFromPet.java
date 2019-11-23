@@ -30,13 +30,13 @@ public class RequestGetItemFromPet extends ClientBasePacket
 	public RequestGetItemFromPet(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
-		int objectId = readD();
-		int amount = readD();
+		final int objectId = readD();
+		final int amount = readD();
 		@SuppressWarnings("unused")
-		int noidea = readD();
-		Inventory petInventory = client.getActiveChar().getPet().getInventory();
-		Inventory playerInventory = client.getActiveChar().getInventory();
-		ItemInstance petItem = petInventory.getItem(objectId);
+		final int noidea = readD();
+		final Inventory petInventory = client.getActiveChar().getPet().getInventory();
+		final Inventory playerInventory = client.getActiveChar().getInventory();
+		final ItemInstance petItem = petInventory.getItem(objectId);
 		if (petItem == null)
 		{
 			_log.warning("item requested from pet, but its not there.");
@@ -46,20 +46,20 @@ public class RequestGetItemFromPet extends ClientBasePacket
 		{
 			playerInventory.addItem(petItem);
 			petInventory.destroyItem(objectId, petItem.getCount());
-			PetInventoryUpdate petiu = new PetInventoryUpdate();
+			final PetInventoryUpdate petiu = new PetInventoryUpdate();
 			petiu.addRemovedItem(petItem);
 			client.getActiveChar().sendPacket(petiu);
-			ItemList playerUI = new ItemList(client.getActiveChar(), false);
+			final ItemList playerUI = new ItemList(client.getActiveChar(), false);
 			client.getActiveChar().sendPacket(playerUI);
 		}
 		else
 		{
-			int total = petItem.getCount();
-			ItemInstance newPlayerItem = petInventory.dropItem(objectId, total);
-			PetInventoryUpdate petiu = new PetInventoryUpdate();
+			final int total = petItem.getCount();
+			final ItemInstance newPlayerItem = petInventory.dropItem(objectId, total);
+			final PetInventoryUpdate petiu = new PetInventoryUpdate();
 			petiu.addModifiedItem(petItem);
 			playerInventory.addItem(newPlayerItem);
-			ItemList playerUI = new ItemList(client.getActiveChar(), false);
+			final ItemList playerUI = new ItemList(client.getActiveChar(), false);
 			client.getActiveChar().sendPacket(petiu);
 			client.getActiveChar().sendPacket(playerUI);
 		}

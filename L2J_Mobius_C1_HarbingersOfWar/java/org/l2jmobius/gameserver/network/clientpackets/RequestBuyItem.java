@@ -38,26 +38,26 @@ public class RequestBuyItem extends ClientBasePacket
 	{
 		super(decrypt);
 		int i;
-		int listId = readD();
-		int count = readD();
-		ItemInstance[] items = new ItemInstance[count];
+		final int listId = readD();
+		final int count = readD();
+		final ItemInstance[] items = new ItemInstance[count];
 		for (int i2 = 0; i2 < count; ++i2)
 		{
-			int itemId = readD();
-			int cnt = readD();
-			ItemInstance inst = ItemTable.getInstance().createItem(itemId);
+			final int itemId = readD();
+			final int cnt = readD();
+			final ItemInstance inst = ItemTable.getInstance().createItem(itemId);
 			inst.setCount(cnt);
 			items[i2] = inst;
 		}
-		PlayerInstance activeChar = client.getActiveChar();
-		Connection con = client.getConnection();
+		final PlayerInstance activeChar = client.getActiveChar();
+		final Connection con = client.getConnection();
 		double neededMoney = 0.0;
-		long currentMoney = activeChar.getAdena();
-		TradeList list = TradeController.getInstance().getBuyList(listId);
+		final long currentMoney = activeChar.getAdena();
+		final TradeList list = TradeController.getInstance().getBuyList(listId);
 		for (i = 0; i < items.length; ++i)
 		{
-			double count2 = items[i].getCount();
-			int id = items[i].getItemId();
+			final double count2 = items[i].getCount();
+			final int id = items[i].getItemId();
 			int price = list.getPriceForItemId(id);
 			if (price == -1)
 			{
@@ -68,7 +68,7 @@ public class RequestBuyItem extends ClientBasePacket
 		}
 		if ((neededMoney > currentMoney) || (neededMoney < 0.0) || (currentMoney <= 0L))
 		{
-			SystemMessage sm = new SystemMessage(SystemMessage.YOU_NOT_ENOUGH_ADENA);
+			final SystemMessage sm = new SystemMessage(SystemMessage.YOU_NOT_ENOUGH_ADENA);
 			con.sendPacket(sm);
 			return;
 		}
@@ -77,9 +77,9 @@ public class RequestBuyItem extends ClientBasePacket
 		{
 			activeChar.getInventory().addItem(items[i]);
 		}
-		ItemList il = new ItemList(activeChar, false);
+		final ItemList il = new ItemList(activeChar, false);
 		con.sendPacket(il);
-		StatusUpdate su = new StatusUpdate(activeChar.getObjectId());
+		final StatusUpdate su = new StatusUpdate(activeChar.getObjectId());
 		su.addAttribute(StatusUpdate.CUR_LOAD, activeChar.getCurrentLoad());
 		activeChar.sendPacket(su);
 	}

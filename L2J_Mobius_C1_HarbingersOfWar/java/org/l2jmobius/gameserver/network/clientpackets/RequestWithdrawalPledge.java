@@ -34,17 +34,17 @@ public class RequestWithdrawalPledge extends ClientBasePacket
 	{
 		super(rawPacket);
 		// Connection con = client.getConnection();
-		PlayerInstance activeChar = client.getActiveChar();
+		final PlayerInstance activeChar = client.getActiveChar();
 		if (activeChar.getClanId() == 0)
 		{
 			return;
 		}
-		Clan clan = activeChar.getClan();
-		ClanMember member = clan.getClanMember(activeChar.getName());
+		final Clan clan = activeChar.getClan();
+		final ClanMember member = clan.getClanMember(activeChar.getName());
 		clan.removeClanMember(activeChar.getName());
 		clan.store();
 		activeChar.sendPacket(new SystemMessage(SystemMessage.CLAN_MEMBERSHIP_TERMINATED));
-		PlayerInstance player = member.getPlayerInstance();
+		final PlayerInstance player = member.getPlayerInstance();
 		player.setClan(null);
 		player.setClanId(0);
 		player.setTitle("");

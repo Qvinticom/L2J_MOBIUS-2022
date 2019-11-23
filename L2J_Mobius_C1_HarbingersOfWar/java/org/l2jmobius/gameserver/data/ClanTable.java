@@ -51,12 +51,12 @@ public class ClanTable
 	{
 		try
 		{
-			File clanFolder = new File("data/clans");
+			final File clanFolder = new File("data/clans");
 			clanFolder.mkdirs();
-			File[] clans = clanFolder.listFiles((FilenameFilter) (dir, name) -> name.endsWith(".csv"));
+			final File[] clans = clanFolder.listFiles((FilenameFilter) (dir, name) -> name.endsWith(".csv"));
 			for (File clan2 : clans)
 			{
-				Clan clan = restoreClan(clan2);
+				final Clan clan = restoreClan(clan2);
 				_clans.put(clan.getClanId(), clan);
 			}
 			_log.config("Restored " + _clans.size() + " clans.");
@@ -72,7 +72,7 @@ public class ClanTable
 		Clan clan = null;
 		try
 		{
-			LineNumberReader lnr = new LineNumberReader(new InputStreamReader(new FileInputStream(file)));
+			final LineNumberReader lnr = new LineNumberReader(new InputStreamReader(new FileInputStream(file)));
 			lnr.readLine();
 			clan = parseClanData(lnr.readLine());
 			lnr.readLine();
@@ -80,7 +80,7 @@ public class ClanTable
 			boolean first = true;
 			while ((line = lnr.readLine()) != null)
 			{
-				ClanMember member = parseMembers(line);
+				final ClanMember member = parseMembers(line);
 				if (first)
 				{
 					clan.setLeader(member);
@@ -100,8 +100,8 @@ public class ClanTable
 	
 	private Clan parseClanData(String line)
 	{
-		Clan clan = new Clan();
-		StringTokenizer st = new StringTokenizer(line, ";");
+		final Clan clan = new Clan();
+		final StringTokenizer st = new StringTokenizer(line, ";");
 		clan.setClanId(Integer.parseInt(st.nextToken()));
 		clan.setName(st.nextToken());
 		clan.setLevel(Integer.parseInt(st.nextToken()));
@@ -114,11 +114,11 @@ public class ClanTable
 	
 	private ClanMember parseMembers(String line)
 	{
-		StringTokenizer st = new StringTokenizer(line, ";");
-		String name = st.nextToken();
-		int level = Integer.parseInt(st.nextToken());
-		int classId = Integer.parseInt(st.nextToken());
-		int objectId = Integer.parseInt(st.nextToken());
+		final StringTokenizer st = new StringTokenizer(line, ";");
+		final String name = st.nextToken();
+		final int level = Integer.parseInt(st.nextToken());
+		final int classId = Integer.parseInt(st.nextToken());
+		final int objectId = Integer.parseInt(st.nextToken());
 		return new ClanMember(name, level, classId, objectId);
 	}
 	
@@ -137,7 +137,7 @@ public class ClanTable
 			}
 			return null;
 		}
-		Clan clan = new Clan();
+		final Clan clan = new Clan();
 		clan.setClanId(IdFactory.getInstance().getNextId());
 		clan.setName(clanName);
 		clan.setLevel(0);
@@ -145,7 +145,7 @@ public class ClanTable
 		clan.setHasHideout(0);
 		clan.setAllyId(0);
 		clan.setAllyName(" ");
-		ClanMember leader = new ClanMember(player.getName(), player.getLevel(), player.getClassId(), player.getObjectId());
+		final ClanMember leader = new ClanMember(player.getName(), player.getLevel(), player.getClassId(), player.getObjectId());
 		clan.setLeader(leader);
 		_clans.put(clan.getClanId(), clan);
 		clan.store();

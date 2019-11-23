@@ -30,7 +30,7 @@ public class RequestSkillList extends ClientBasePacket
 	public RequestSkillList(byte[] rawPacket, ClientThread client) throws IOException
 	{
 		super(rawPacket);
-		SkillList response = new SkillList();
+		final SkillList response = new SkillList();
 		for (Skill skill : client.getActiveChar().getAllSkills())
 		{
 			response.addSkill(skill.getId(), skill.getLevel(), skill.isPassive());

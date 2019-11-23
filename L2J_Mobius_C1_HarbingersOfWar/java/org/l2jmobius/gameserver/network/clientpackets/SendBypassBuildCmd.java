@@ -33,8 +33,8 @@ public class SendBypassBuildCmd extends ClientBasePacket
 	public SendBypassBuildCmd(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
-		PlayerInstance activeChar = client.getActiveChar();
-		String command = readS();
+		final PlayerInstance activeChar = client.getActiveChar();
+		final String command = readS();
 		if (client.getAccessLevel() >= 100)
 		{
 			if (command.equals("admin"))
@@ -45,8 +45,8 @@ public class SendBypassBuildCmd extends ClientBasePacket
 			{
 				try
 				{
-					String text = command.substring(9);
-					CreatureSay cs = new CreatureSay(0, 10, activeChar.getName(), text);
+					final String text = command.substring(9);
+					final CreatureSay cs = new CreatureSay(0, 10, activeChar.getName(), text);
 					for (PlayerInstance player : World.getInstance().getAllPlayers())
 					{
 						player.sendPacket(cs);
@@ -60,8 +60,8 @@ public class SendBypassBuildCmd extends ClientBasePacket
 			{
 				try
 				{
-					String text = command.substring(7);
-					CreatureSay cs = new CreatureSay(0, 9, activeChar.getName(), text);
+					final String text = command.substring(7);
+					final CreatureSay cs = new CreatureSay(0, 9, activeChar.getName(), text);
 					GmListManager.getInstance().broadcastToGMs(cs);
 				}
 				catch (StringIndexOutOfBoundsException e)

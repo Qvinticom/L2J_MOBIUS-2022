@@ -71,7 +71,7 @@ public class NpcInstance extends Creature
 		if (!isRunning())
 		{
 			setRunning(true);
-			ChangeMoveType move = new ChangeMoveType(this, ChangeMoveType.RUN);
+			final ChangeMoveType move = new ChangeMoveType(this, ChangeMoveType.RUN);
 			broadcastPacket(move);
 		}
 		super.startAttack(target);
@@ -128,11 +128,11 @@ public class NpcInstance extends Creature
 			}
 			player.setCurrentState(CreatureState.IDLE);
 			player.setTarget(this);
-			MyTargetSelected my = new MyTargetSelected(getObjectId(), player.getLevel() - getLevel());
+			final MyTargetSelected my = new MyTargetSelected(getObjectId(), player.getLevel() - getLevel());
 			player.sendPacket(my);
 			if (isAttackable())
 			{
-				StatusUpdate su = new StatusUpdate(getObjectId());
+				final StatusUpdate su = new StatusUpdate(getObjectId());
 				su.addAttribute(StatusUpdate.CUR_HP, (int) getCurrentHp());
 				su.addAttribute(StatusUpdate.MAX_HP, getMaxHp());
 				player.sendPacket(su);
@@ -147,7 +147,7 @@ public class NpcInstance extends Creature
 			}
 			if (!isAttackable())
 			{
-				double distance = getDistance(player.getX(), player.getY());
+				final double distance = getDistance(player.getX(), player.getY());
 				if (distance > INTERACTION_DISTANCE)
 				{
 					player.setCurrentState(CreatureState.INTERACT);
@@ -167,11 +167,11 @@ public class NpcInstance extends Creature
 	@Override
 	public void onActionShift(ClientThread client)
 	{
-		PlayerInstance player = client.getActiveChar();
+		final PlayerInstance player = client.getActiveChar();
 		if (client.getAccessLevel() >= 100)
 		{
-			NpcHtmlMessage html = new NpcHtmlMessage(1);
-			StringBuffer html1 = new StringBuffer("<html><body><table border=0>");
+			final NpcHtmlMessage html = new NpcHtmlMessage(1);
+			final StringBuffer html1 = new StringBuffer("<html><body><table border=0>");
 			html1.append("<tr><td>Current Target:</td></tr>");
 			html1.append("<tr><td><br></td></tr>");
 			html1.append("<tr><td>Object ID: " + getObjectId() + "</td></tr>");
@@ -194,19 +194,19 @@ public class NpcInstance extends Creature
 	
 	public void onBypassFeedback(PlayerInstance player, String command)
 	{
-		double distance = getDistance(player.getX(), player.getY());
+		final double distance = getDistance(player.getX(), player.getY());
 		if (distance > 150.0)
 		{
 			player.moveTo(getX(), getY(), getZ(), 150);
 		}
 		else if (command.startsWith("Quest"))
 		{
-			int val = Integer.parseInt(command.substring(6));
+			final int val = Integer.parseInt(command.substring(6));
 			showQuestWindow(player, val);
 		}
 		else if (command.startsWith("Chat"))
 		{
-			int val = Integer.parseInt(command.substring(5));
+			final int val = Integer.parseInt(command.substring(5));
 			showChatWindow(player, val);
 		}
 	}
@@ -220,14 +220,14 @@ public class NpcInstance extends Creature
 	public void insertObjectIdAndShowChatWindow(PlayerInstance player, String content)
 	{
 		content = content.replaceAll("%objectId%", String.valueOf(getObjectId()));
-		NpcHtmlMessage npcReply = new NpcHtmlMessage(5);
+		final NpcHtmlMessage npcReply = new NpcHtmlMessage(5);
 		npcReply.setHtml(content);
 		player.sendPacket(npcReply);
 	}
 	
 	protected void showQuestWindow(PlayerInstance player, int val)
 	{
-		NpcHtmlMessage html = new NpcHtmlMessage(1);
+		final NpcHtmlMessage html = new NpcHtmlMessage(1);
 		html.setHtml("<html><head><body>There is no quests here yet.</body></html>");
 		player.sendPacket(html);
 		player.sendPacket(new ActionFailed());
@@ -237,8 +237,8 @@ public class NpcInstance extends Creature
 	{
 		String pom = "";
 		pom = val == 0 ? "" + npcId : npcId + "-" + val;
-		String temp = "data/html/default/" + pom + ".htm";
-		File mainText = new File(temp);
+		final String temp = "data/html/default/" + pom + ".htm";
+		final File mainText = new File(temp);
 		if (mainText.exists())
 		{
 			return temp;
@@ -248,12 +248,12 @@ public class NpcInstance extends Creature
 	
 	public void showChatWindow(PlayerInstance player, int val)
 	{
-		int npcId = getNpcTemplate().getNpcId();
-		String filename = getHtmlPath(npcId, val);
-		File file = new File(filename);
+		final int npcId = getNpcTemplate().getNpcId();
+		final String filename = getHtmlPath(npcId, val);
+		final File file = new File(filename);
 		if (!file.exists())
 		{
-			NpcHtmlMessage html = new NpcHtmlMessage(1);
+			final NpcHtmlMessage html = new NpcHtmlMessage(1);
 			html.setHtml("<html><head><body>My Text is missing:<br>" + filename + "</body></html>");
 			player.sendPacket(html);
 			player.sendPacket(new ActionFailed());
@@ -264,9 +264,9 @@ public class NpcInstance extends Creature
 			try
 			{
 				fis = new FileInputStream(file);
-				byte[] raw = new byte[fis.available()];
+				final byte[] raw = new byte[fis.available()];
 				fis.read(raw);
-				String content = new String(raw, "UTF-8");
+				final String content = new String(raw, "UTF-8");
 				insertObjectIdAndShowChatWindow(player, content);
 			}
 			catch (Exception e)
@@ -327,7 +327,7 @@ public class NpcInstance extends Creature
 		super.reduceCurrentHp(i, attacker);
 		if (isDead())
 		{
-			NpcInstance NpcInstance = this;
+			final NpcInstance NpcInstance = this;
 			synchronized (NpcInstance)
 			{
 				if (_decayTask == null)

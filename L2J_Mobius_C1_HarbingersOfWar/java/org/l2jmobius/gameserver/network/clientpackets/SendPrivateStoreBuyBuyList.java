@@ -34,17 +34,17 @@ public class SendPrivateStoreBuyBuyList extends ClientBasePacket
 	public SendPrivateStoreBuyBuyList(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
-		int buyerID = readD();
-		int count = readD();
-		World world = World.getInstance();
-		PlayerInstance seller = client.getActiveChar();
-		PlayerInstance buyer = (PlayerInstance) world.findObject(buyerID);
-		List<TradeItem> buyerlist = buyer.getBuyList();
-		List<TradeItem> sellerlist = new ArrayList<>();
+		final int buyerID = readD();
+		final int count = readD();
+		final World world = World.getInstance();
+		final PlayerInstance seller = client.getActiveChar();
+		final PlayerInstance buyer = (PlayerInstance) world.findObject(buyerID);
+		final List<TradeItem> buyerlist = buyer.getBuyList();
+		final List<TradeItem> sellerlist = new ArrayList<>();
 		int cost = 0;
 		for (int i = 0; i < count; ++i)
 		{
-			TradeItem temp = new TradeItem();
+			final TradeItem temp = new TradeItem();
 			temp.setObjectId(readD());
 			temp.setItemId(readD());
 			readH();

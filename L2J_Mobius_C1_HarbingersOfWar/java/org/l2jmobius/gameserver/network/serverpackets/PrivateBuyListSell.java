@@ -38,11 +38,11 @@ public class PrivateBuyListSell extends ServerBasePacket
 		writeC(180);
 		writeD(_seller.getObjectId());
 		writeD(_buyer.getAdena());
-		int count = _seller.getSellList().size();
+		final int count = _seller.getSellList().size();
 		writeD(count);
 		for (int i = 0; i < count; ++i)
 		{
-			TradeItem temp2 = _seller.getSellList().get(i);
+			final TradeItem temp2 = _seller.getSellList().get(i);
 			writeD(0);
 			writeD(temp2.getObjectId());
 			writeD(temp2.getItemId());

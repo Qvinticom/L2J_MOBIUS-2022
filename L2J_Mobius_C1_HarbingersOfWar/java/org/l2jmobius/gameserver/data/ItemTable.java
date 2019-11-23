@@ -140,7 +140,7 @@ public class ItemTable
 	{
 		File weaponFile;
 		File armorFile;
-		File etcItemFile = new File("data/etcitem.csv");
+		final File etcItemFile = new File("data/etcitem.csv");
 		if (!etcItemFile.isFile() && !etcItemFile.canRead())
 		{
 			_initialized = false;
@@ -175,7 +175,7 @@ public class ItemTable
 	{
 		for (int key : items.keySet())
 		{
-			EtcItem item = (EtcItem) items.get(key);
+			final EtcItem item = (EtcItem) items.get(key);
 			if ((item.getWeight() == 0) && (item.getEtcItemType() != 7) && !item.getName().startsWith("world_map") && !item.getName().startsWith("crystal_"))
 			{
 				item.setType2(3);
@@ -205,7 +205,7 @@ public class ItemTable
 	
 	private HashMap<Integer, Item> parseFile(File dataFile, int type)
 	{
-		HashMap<Integer, Item> result = new HashMap<>();
+		final HashMap<Integer, Item> result = new HashMap<>();
 		LineNumberReader lnr = null;
 		Item temp = null;
 		try
@@ -257,14 +257,14 @@ public class ItemTable
 	
 	private EtcItem parseEtcLine(String line)
 	{
-		EtcItem result = new EtcItem();
+		final EtcItem result = new EtcItem();
 		try
 		{
-			StringTokenizer st = new StringTokenizer(line, ";");
+			final StringTokenizer st = new StringTokenizer(line, ";");
 			result.setItemId(Integer.parseInt(st.nextToken()));
 			result.setName(st.nextToken());
 			result.setCrystallizable(Boolean.valueOf(st.nextToken()));
-			String itemType = st.nextToken();
+			final String itemType = st.nextToken();
 			result.setType1(4);
 			if (itemType.equals("none"))
 			{
@@ -312,7 +312,7 @@ public class ItemTable
 				_log.warning("Unknown etcitem type:" + itemType);
 			}
 			result.setWeight(Integer.parseInt(st.nextToken()));
-			String consume = st.nextToken();
+			final String consume = st.nextToken();
 			if (consume.equals("asset"))
 			{
 				result.setStackable(true);
@@ -323,9 +323,9 @@ public class ItemTable
 			{
 				result.setStackable(true);
 			}
-			Integer material = _materials.get(st.nextToken());
+			final Integer material = _materials.get(st.nextToken());
 			result.setMaterialType(material);
-			Integer crystal = _crystalTypes.get(st.nextToken());
+			final Integer crystal = _crystalTypes.get(st.nextToken());
 			result.setCrystalType(crystal);
 			result.setDurability(Integer.parseInt(st.nextToken()));
 		}
@@ -339,18 +339,18 @@ public class ItemTable
 	
 	private Armor parseArmorLine(String line)
 	{
-		Armor result = new Armor();
+		final Armor result = new Armor();
 		try
 		{
-			StringTokenizer st = new StringTokenizer(line, ";");
+			final StringTokenizer st = new StringTokenizer(line, ";");
 			result.setItemId(Integer.parseInt(st.nextToken()));
 			result.setName(st.nextToken());
-			Integer bodyPart = _slots.get(st.nextToken());
+			final Integer bodyPart = _slots.get(st.nextToken());
 			result.setBodyPart(bodyPart);
 			result.setCrystallizable(Boolean.valueOf(st.nextToken()));
-			Integer armor = _armorTypes.get(st.nextToken());
+			final Integer armor = _armorTypes.get(st.nextToken());
 			result.setArmorType(armor);
-			int slot = result.getBodyPart();
+			final int slot = result.getBodyPart();
 			if ((slot == 8) || ((slot & 4) != 0) || ((slot & 0x20) != 0))
 			{
 				result.setType1(0);
@@ -362,9 +362,9 @@ public class ItemTable
 				result.setType2(1);
 			}
 			result.setWeight(Integer.parseInt(st.nextToken()));
-			Integer material = _materials.get(st.nextToken());
+			final Integer material = _materials.get(st.nextToken());
 			result.setMaterialType(material);
-			Integer crystal = _crystalTypes.get(st.nextToken());
+			final Integer crystal = _crystalTypes.get(st.nextToken());
 			result.setCrystalType(crystal);
 			result.setAvoidModifier(Integer.parseInt(st.nextToken()));
 			result.setDurability(Integer.parseInt(st.nextToken()));
@@ -382,27 +382,27 @@ public class ItemTable
 	
 	private Weapon parseWeaponLine(String line)
 	{
-		Weapon result = new Weapon();
+		final Weapon result = new Weapon();
 		try
 		{
-			StringTokenizer st = new StringTokenizer(line, ";");
+			final StringTokenizer st = new StringTokenizer(line, ";");
 			result.setItemId(Integer.parseInt(st.nextToken()));
 			result.setName(st.nextToken());
 			result.setType1(0);
 			result.setType2(0);
-			Integer bodyPart = _slots.get(st.nextToken());
+			final Integer bodyPart = _slots.get(st.nextToken());
 			result.setBodyPart(bodyPart);
 			result.setCrystallizable(Boolean.valueOf(st.nextToken()));
 			result.setWeight(Integer.parseInt(st.nextToken()));
 			result.setSoulShotCount(Integer.parseInt(st.nextToken()));
 			result.setSpiritShotCount(Integer.parseInt(st.nextToken()));
-			Integer material = _materials.get(st.nextToken());
+			final Integer material = _materials.get(st.nextToken());
 			result.setMaterialType(material);
-			Integer crystal = _crystalTypes.get(st.nextToken());
+			final Integer crystal = _crystalTypes.get(st.nextToken());
 			result.setCrystalType(crystal);
 			result.setPDamage(Integer.parseInt(st.nextToken()));
 			result.setRandomDamage(Integer.parseInt(st.nextToken()));
-			Integer weapon = _weaponTypes.get(st.nextToken());
+			final Integer weapon = _weaponTypes.get(st.nextToken());
 			result.setWeaponType(weapon);
 			if (weapon == 1)
 			{
@@ -496,7 +496,7 @@ public class ItemTable
 	
 	public ItemInstance createItem(int itemId)
 	{
-		ItemInstance temp = new ItemInstance();
+		final ItemInstance temp = new ItemInstance();
 		temp.setObjectId(IdFactory.getInstance().getNextId());
 		temp.setItem(getTemplate(itemId));
 		World.getInstance().storeObject(temp);
@@ -505,7 +505,7 @@ public class ItemTable
 	
 	public ItemInstance createDummyItem(int itemId)
 	{
-		ItemInstance temp = new ItemInstance();
+		final ItemInstance temp = new ItemInstance();
 		temp.setObjectId(0);
 		Item item = null;
 		try

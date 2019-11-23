@@ -166,7 +166,7 @@ public class SystemMessage extends ServerBasePacket
 		writeD(_types.size());
 		block5: for (int i = 0; i < _types.size(); ++i)
 		{
-			int t = _types.get(i);
+			final int t = _types.get(i);
 			writeD(t);
 			switch (t)
 			{
@@ -179,13 +179,13 @@ public class SystemMessage extends ServerBasePacket
 				case 2:
 				case 3:
 				{
-					int t1 = (Integer) _values.get(i);
+					final int t1 = (Integer) _values.get(i);
 					writeD(t1);
 					continue block5;
 				}
 				case 4:
 				{
-					int t1 = (Integer) _values.get(i);
+					final int t1 = (Integer) _values.get(i);
 					writeD(t1);
 					writeD(1);
 				}

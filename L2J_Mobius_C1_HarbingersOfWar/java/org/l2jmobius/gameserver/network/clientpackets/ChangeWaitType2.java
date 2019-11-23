@@ -27,8 +27,8 @@ public class ChangeWaitType2 extends ClientBasePacket
 	public ChangeWaitType2(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
-		int type = readD();
-		ChangeWaitType cwt = new ChangeWaitType(client.getActiveChar(), type);
+		final int type = readD();
+		final ChangeWaitType cwt = new ChangeWaitType(client.getActiveChar(), type);
 		client.getActiveChar().setWaitType(type);
 		client.getActiveChar().sendPacket(cwt);
 		client.getActiveChar().broadcastPacket(cwt);

@@ -40,9 +40,9 @@ public class IdFactory
 	{
 		try
 		{
-			FileInputStream fis = new FileInputStream("data/idstate.dat");
-			BufferedInputStream bis = new BufferedInputStream(fis);
-			ObjectInputStream oos = new ObjectInputStream(bis);
+			final FileInputStream fis = new FileInputStream("data/idstate.dat");
+			final BufferedInputStream bis = new BufferedInputStream(fis);
+			final ObjectInputStream oos = new ObjectInputStream(bis);
 			_curOID = (Integer) oos.readObject();
 			_oldOIDs = (Stack<Integer>) oos.readObject();
 			oos.close();
@@ -81,9 +81,9 @@ public class IdFactory
 	{
 		try
 		{
-			FileOutputStream fos = new FileOutputStream("data/idstate.dat");
-			BufferedOutputStream bos = new BufferedOutputStream(fos);
-			ObjectOutputStream oos = new ObjectOutputStream(bos);
+			final FileOutputStream fos = new FileOutputStream("data/idstate.dat");
+			final BufferedOutputStream bos = new BufferedOutputStream(fos);
+			final ObjectOutputStream oos = new ObjectOutputStream(bos);
 			oos.writeObject(_curOID);
 			oos.writeObject(_oldOIDs);
 			oos.close();

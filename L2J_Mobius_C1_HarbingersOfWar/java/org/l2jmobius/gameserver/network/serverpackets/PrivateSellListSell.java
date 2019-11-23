@@ -43,8 +43,8 @@ public class PrivateSellListSell extends ServerBasePacket
 		writeC(179);
 		writeD(_seller.getObjectId());
 		writeD(_seller.getAdena());
-		TradeList list = new TradeList(0);
-		List<TradeItem> sellList = _seller.getSellList();
+		final TradeList list = new TradeList(0);
+		final List<TradeItem> sellList = _seller.getSellList();
 		int count = _seller.getInventory().getSize();
 		for (ItemInstance item : _seller.getInventory().getItems())
 		{
@@ -66,7 +66,7 @@ public class PrivateSellListSell extends ServerBasePacket
 		writeD(count);
 		for (i2 = 0; i2 < count; ++i2)
 		{
-			ItemInstance temp = list.getItems().get(i2);
+			final ItemInstance temp = list.getItems().get(i2);
 			writeD(0);
 			writeD(temp.getObjectId());
 			writeD(temp.getItemId());

@@ -93,7 +93,7 @@ public class BlowfishEngine
 	
 	private void processTable(int xl, int xr, int[] table)
 	{
-		int size = table.length;
+		final int size = table.length;
 		for (int s = 0; s < size; s += 2)
 		{
 			xl ^= P[0];
@@ -115,7 +115,7 @@ public class BlowfishEngine
 		System.arraycopy(KS2, 0, S2, 0, 256);
 		System.arraycopy(KS3, 0, S3, 0, 256);
 		System.arraycopy(KP, 0, P, 0, 18);
-		int keyLength = key.length;
+		final int keyLength = key.length;
 		int keyIndex = 0;
 		int i = 0;
 		while (i < 18)
@@ -130,7 +130,7 @@ public class BlowfishEngine
 				}
 				keyIndex = 0;
 			}
-			int n = i++;
+			final int n = i++;
 			P[n] = P[n] ^ data;
 		}
 		processTable(0, 0, P);

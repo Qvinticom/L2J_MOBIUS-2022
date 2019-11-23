@@ -40,13 +40,13 @@ public class ScrollOfEscape implements IItemHandler
 	@Override
 	public int useItem(PlayerInstance activeChar, ItemInstance item)
 	{
-		int[] townCords = MapRegionTable.getInstance().getClosestTownCords(activeChar);
+		final int[] townCords = MapRegionTable.getInstance().getClosestTownCords(activeChar);
 		activeChar.setTarget(activeChar);
-		Skill skill = SkillTable.getInstance().getInfo(1050, 1);
-		MagicSkillUser msk = new MagicSkillUser(activeChar, 1050, 1, 20000, 0);
+		final Skill skill = SkillTable.getInstance().getInfo(1050, 1);
+		final MagicSkillUser msk = new MagicSkillUser(activeChar, 1050, 1, 20000, 0);
 		activeChar.sendPacket(msk);
 		activeChar.broadcastPacket(msk);
-		SetupGauge sg = new SetupGauge(0, skill.getSkillTime());
+		final SetupGauge sg = new SetupGauge(0, skill.getSkillTime());
 		activeChar.sendPacket(sg);
 		if (skill.getSkillTime() > 200)
 		{
@@ -59,14 +59,14 @@ public class ScrollOfEscape implements IItemHandler
 				// empty catch block
 			}
 		}
-		StopMove sm = new StopMove(activeChar);
+		final StopMove sm = new StopMove(activeChar);
 		activeChar.sendPacket(sm);
 		activeChar.broadcastPacket(sm);
-		ActionFailed af = new ActionFailed();
+		final ActionFailed af = new ActionFailed();
 		activeChar.sendPacket(af);
 		World.getInstance().removeVisibleObject(activeChar);
 		activeChar.removeAllKnownObjects();
-		TeleportToLocation teleport = new TeleportToLocation(activeChar, townCords[0], townCords[1], townCords[2]);
+		final TeleportToLocation teleport = new TeleportToLocation(activeChar, townCords[0], townCords[1], townCords[2]);
 		activeChar.sendPacket(teleport);
 		activeChar.broadcastPacket(teleport);
 		activeChar.setX(townCords[0]);

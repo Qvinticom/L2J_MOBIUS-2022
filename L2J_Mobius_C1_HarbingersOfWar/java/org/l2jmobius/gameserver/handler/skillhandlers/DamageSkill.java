@@ -55,14 +55,14 @@ public class DamageSkill implements ISkillHandler
 		
 		if (target instanceof Creature)
 		{
-			Creature creature = (Creature) target;
+			final Creature creature = (Creature) target;
 			int mdef = creature.getMagicalDefense();
 			if (mdef == 0)
 			{
 				mdef = 350;
 			}
-			int dmg = (int) ((91 * skill.getPower() * Math.sqrt(activeChar.getMagicalAttack())) / mdef);
-			SystemMessage sm = new SystemMessage(SystemMessage.YOU_DID_S1_DMG);
+			final int dmg = (int) ((91 * skill.getPower() * Math.sqrt(activeChar.getMagicalAttack())) / mdef);
+			final SystemMessage sm = new SystemMessage(SystemMessage.YOU_DID_S1_DMG);
 			sm.addNumber(dmg);
 			activeChar.sendPacket(sm);
 			if (creature.getCurrentHp() > creature.getMaxHp())

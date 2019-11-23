@@ -30,11 +30,11 @@ public class RequestPledgeCrest extends ClientBasePacket
 	public RequestPledgeCrest(byte[] rawPacket, ClientThread client) throws IOException
 	{
 		super(rawPacket);
-		int crestId = readD();
-		File crestFile = new File("data/crests/Pledge_" + crestId + ".bmp");
+		final int crestId = readD();
+		final File crestFile = new File("data/crests/Pledge_" + crestId + ".bmp");
 		if (crestFile.exists())
 		{
-			PledgeCrest pc = new PledgeCrest(crestId, crestFile);
+			final PledgeCrest pc = new PledgeCrest(crestId, crestFile);
 			client.getConnection().sendPacket(pc);
 		}
 		else

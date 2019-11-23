@@ -32,7 +32,7 @@ public class RequestBypassToServer extends ClientBasePacket
 	public RequestBypassToServer(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
-		String command = readS();
+		final String command = readS();
 		try
 		{
 			if (command.startsWith("admin_") && (client.getAccessLevel() >= 100))
@@ -45,9 +45,9 @@ public class RequestBypassToServer extends ClientBasePacket
 			}
 			else if (command.startsWith("npc_"))
 			{
-				int endOfId = command.indexOf(95, 5);
-				String id = command.substring(4, endOfId);
-				WorldObject object = World.getInstance().findObject(Integer.parseInt(id));
+				final int endOfId = command.indexOf(95, 5);
+				final String id = command.substring(4, endOfId);
+				final WorldObject object = World.getInstance().findObject(Integer.parseInt(id));
 				if (object instanceof NpcInstance)
 				{
 					((NpcInstance) object).onBypassFeedback(client.getActiveChar(), command.substring(endOfId + 1));
@@ -66,11 +66,11 @@ public class RequestBypassToServer extends ClientBasePacket
 	
 	private void comeHere(ClientThread client)
 	{
-		WorldObject obj = client.getActiveChar().getTarget();
+		final WorldObject obj = client.getActiveChar().getTarget();
 		if (obj instanceof NpcInstance)
 		{
-			NpcInstance temp = (NpcInstance) obj;
-			PlayerInstance player = client.getActiveChar();
+			final NpcInstance temp = (NpcInstance) obj;
+			final PlayerInstance player = client.getActiveChar();
 			temp.setTarget(player);
 			temp.moveTo(player.getX(), player.getY(), player.getZ(), 0);
 		}

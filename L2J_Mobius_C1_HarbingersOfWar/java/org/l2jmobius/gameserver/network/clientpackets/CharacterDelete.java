@@ -31,12 +31,12 @@ public class CharacterDelete extends ClientBasePacket
 	public CharacterDelete(byte[] decrypt, ClientThread client) throws IOException
 	{
 		super(decrypt);
-		int charSlot = readD();
-		Connection con = client.getConnection();
+		final int charSlot = readD();
+		final Connection con = client.getConnection();
 		client.deleteCharFromDisk(charSlot);
-		CharDeleteOk ccf = new CharDeleteOk();
+		final CharDeleteOk ccf = new CharDeleteOk();
 		con.sendPacket(ccf);
-		CharSelectInfo cl = new CharSelectInfo(client.getLoginName(), client.getSessionId());
+		final CharSelectInfo cl = new CharSelectInfo(client.getLoginName(), client.getSessionId());
 		con.sendPacket(cl);
 	}
 	

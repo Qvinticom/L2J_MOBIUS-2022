@@ -37,26 +37,26 @@ public class RequestDropItem extends ClientBasePacket
 	public RequestDropItem(byte[] decrypt, ClientThread client) throws IOException
 	{
 		super(decrypt);
-		int objectId = readD();
-		int count = readD();
-		int x = readD();
-		int y = readD();
-		int z = readD();
+		final int objectId = readD();
+		final int count = readD();
+		final int x = readD();
+		final int y = readD();
+		final int z = readD();
 		if (count == 0)
 		{
 			return;
 		}
 		if ((client.getActiveChar().getPrivateStoreType() == 0) && (client.getActiveChar().getTransactionRequester() == null))
 		{
-			Connection con = client.getConnection();
-			PlayerInstance activeChar = client.getActiveChar();
-			ItemInstance oldItem = activeChar.getInventory().getItem(objectId);
+			final Connection con = client.getConnection();
+			final PlayerInstance activeChar = client.getActiveChar();
+			final ItemInstance oldItem = activeChar.getInventory().getItem(objectId);
 			if (oldItem == null)
 			{
 				_log.warning("tried to drop an item that is not in the inventory ?!?:" + objectId);
 				return;
 			}
-			int oldCount = oldItem.getCount();
+			final int oldCount = oldItem.getCount();
 			ItemInstance dropedItem = null;
 			if (oldCount < count)
 			{
@@ -64,17 +64,17 @@ public class RequestDropItem extends ClientBasePacket
 			}
 			if ((activeChar.getDistance(x, y) > 150.0) || (Math.abs(z - activeChar.getZ()) > 50))
 			{
-				SystemMessage sm = new SystemMessage(SystemMessage.CANNOT_DISCARD_DISTANCE_TOO_FAR);
+				final SystemMessage sm = new SystemMessage(SystemMessage.CANNOT_DISCARD_DISTANCE_TOO_FAR);
 				activeChar.sendPacket(sm);
 				return;
 			}
 			if (oldItem.isEquipped())
 			{
 				dropedItem = activeChar.getInventory().dropItem(objectId, count);
-				InventoryUpdate iu = new InventoryUpdate();
+				final InventoryUpdate iu = new InventoryUpdate();
 				iu.addModifiedItem(oldItem);
 				con.sendPacket(iu);
-				UserInfo ui = new UserInfo(activeChar);
+				final UserInfo ui = new UserInfo(activeChar);
 				con.sendPacket(ui);
 			}
 			else
@@ -85,14 +85,14 @@ public class RequestDropItem extends ClientBasePacket
 			dropedItem.setY(y);
 			dropedItem.setZ(z);
 			dropedItem.setOnTheGround(true);
-			DropItem di = new DropItem(dropedItem, activeChar.getObjectId());
+			final DropItem di = new DropItem(dropedItem, activeChar.getObjectId());
 			activeChar.sendPacket(di);
 			activeChar.addKnownObjectWithoutCreate(dropedItem);
 			for (Creature player : activeChar.broadcastPacket(di))
 			{
 				((PlayerInstance) player).addKnownObjectWithoutCreate(dropedItem);
 			}
-			InventoryUpdate iu = new InventoryUpdate();
+			final InventoryUpdate iu = new InventoryUpdate();
 			if (oldCount == dropedItem.getCount())
 			{
 				iu.addRemovedItem(oldItem);
@@ -102,7 +102,7 @@ public class RequestDropItem extends ClientBasePacket
 				iu.addModifiedItem(oldItem);
 			}
 			con.sendPacket(iu);
-			SystemMessage sm = new SystemMessage(SystemMessage.YOU_DROPPED_S1);
+			final SystemMessage sm = new SystemMessage(SystemMessage.YOU_DROPPED_S1);
 			sm.addItemName(dropedItem.getItemId());
 			con.sendPacket(sm);
 			con.sendPacket(new UserInfo(activeChar));
@@ -110,7 +110,7 @@ public class RequestDropItem extends ClientBasePacket
 		}
 		else
 		{
-			SystemMessage msg = new SystemMessage(SystemMessage.NOTHING_HAPPENED);
+			final SystemMessage msg = new SystemMessage(SystemMessage.NOTHING_HAPPENED);
 			client.getActiveChar().sendPacket(msg);
 		}
 	}

@@ -52,8 +52,8 @@ public class TradeStart extends ServerBasePacket
 		writeH(count);
 		for (int i = 0; i < count; ++i)
 		{
-			ItemInstance temp = _tradelist.get(i);
-			int type = temp.getItem().getType1();
+			final ItemInstance temp = _tradelist.get(i);
+			final int type = temp.getItem().getType1();
 			writeH(type);
 			writeD(temp.getObjectId());
 			writeD(temp.getItemId());

@@ -62,8 +62,8 @@ public class NpcTable
 	{
 		try
 		{
-			File npcData = new File("data/npc.csv");
-			LineNumberReader lnr = new LineNumberReader(new InputStreamReader(new FileInputStream(npcData)));
+			final File npcData = new File("data/npc.csv");
+			final LineNumberReader lnr = new LineNumberReader(new InputStreamReader(new FileInputStream(npcData)));
 			String line = null;
 			while ((line = lnr.readLine()) != null)
 			{
@@ -71,7 +71,7 @@ public class NpcTable
 				{
 					continue;
 				}
-				Npc npc = parseList(line);
+				final Npc npc = parseList(line);
 				_npcs.put(npc.getNpcId(), npc);
 			}
 			lnr.close();
@@ -91,8 +91,8 @@ public class NpcTable
 	
 	private Npc parseList(String line)
 	{
-		StringTokenizer st = new StringTokenizer(line, ";");
-		Npc npc = new Npc();
+		final StringTokenizer st = new StringTokenizer(line, ";");
+		final Npc npc = new Npc();
 		int id = Integer.parseInt(st.nextToken());
 		if (id > 1000000)
 		{
@@ -110,8 +110,8 @@ public class NpcTable
 	{
 		try
 		{
-			File npcData2 = new File("data/npc2.csv");
-			LineNumberReader lnr = new LineNumberReader(new InputStreamReader(new FileInputStream(npcData2)));
+			final File npcData2 = new File("data/npc2.csv");
+			final LineNumberReader lnr = new LineNumberReader(new InputStreamReader(new FileInputStream(npcData2)));
 			String line = null;
 			while ((line = lnr.readLine()) != null)
 			{
@@ -142,9 +142,9 @@ public class NpcTable
 	
 	private void parseAdditionalDataLine(String line)
 	{
-		StringTokenizer st = new StringTokenizer(line, ";");
-		int id = Integer.parseInt(st.nextToken());
-		Npc npcDat = _npcs.get(id);
+		final StringTokenizer st = new StringTokenizer(line, ";");
+		final int id = Integer.parseInt(st.nextToken());
+		final Npc npcDat = _npcs.get(id);
 		if (npcDat == null)
 		{
 			_log.warning("Missing npc template id:" + id);
@@ -177,8 +177,8 @@ public class NpcTable
 	{
 		try
 		{
-			File dropData = new File("data/droplist.csv");
-			LineNumberReader lnr = new LineNumberReader(new InputStreamReader(new FileInputStream(dropData)));
+			final File dropData = new File("data/droplist.csv");
+			final LineNumberReader lnr = new LineNumberReader(new InputStreamReader(new FileInputStream(dropData)));
 			String line = null;
 			int n = 0;
 			while ((line = lnr.readLine()) != null)
@@ -212,15 +212,15 @@ public class NpcTable
 	
 	private void parseDropLine(String line)
 	{
-		StringTokenizer st = new StringTokenizer(line, ";");
-		int mobId = Integer.parseInt(st.nextToken());
-		Npc npc = _npcs.get(mobId);
+		final StringTokenizer st = new StringTokenizer(line, ";");
+		final int mobId = Integer.parseInt(st.nextToken());
+		final Npc npc = _npcs.get(mobId);
 		if (npc == null)
 		{
 			_log.warning("Could not add drop data for npcid:" + mobId);
 			return;
 		}
-		DropData dropDat = new DropData();
+		final DropData dropDat = new DropData();
 		dropDat.setItemId(Integer.parseInt(st.nextToken()));
 		dropDat.setMinDrop(Integer.parseInt(st.nextToken()));
 		dropDat.setMaxDrop(Integer.parseInt(st.nextToken()));

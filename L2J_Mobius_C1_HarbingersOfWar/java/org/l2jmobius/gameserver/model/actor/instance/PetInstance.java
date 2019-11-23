@@ -91,7 +91,7 @@ public class PetInstance extends Creature
 		}
 		player.setCurrentState(CreatureState.IDLE);
 		player.setTarget(this);
-		MyTargetSelected my = new MyTargetSelected(getObjectId(), player.getLevel() - getLevel());
+		final MyTargetSelected my = new MyTargetSelected(getObjectId(), player.getLevel() - getLevel());
 		player.sendPacket(my);
 	}
 	
@@ -258,7 +258,7 @@ public class PetInstance extends Creature
 	{
 		_exp += addToExp;
 		_sp += addToSp;
-		PetStatusUpdate su = new PetStatusUpdate(this);
+		final PetStatusUpdate su = new PetStatusUpdate(this);
 		_owner.sendPacket(su);
 		while (_exp >= getNextLevel())
 		{
@@ -272,12 +272,12 @@ public class PetInstance extends Creature
 		setLastLevel(getNextLevel());
 		setLevel(getLevel() + 1);
 		setNextLevel(ExperienceTable.getInstance().getExp(getLevel() + 1));
-		PetStatusUpdate ps = new PetStatusUpdate(this);
+		final PetStatusUpdate ps = new PetStatusUpdate(this);
 		_owner.sendPacket(ps);
-		StatusUpdate su = new StatusUpdate(getObjectId());
+		final StatusUpdate su = new StatusUpdate(getObjectId());
 		su.addAttribute(StatusUpdate.LEVEL, getLevel());
 		broadcastPacket(su);
-		SocialAction sa = new SocialAction(getObjectId(), 15);
+		final SocialAction sa = new SocialAction(getObjectId(), 15);
 		broadcastPacket(sa);
 		_owner.sendPacket(new SystemMessage(SystemMessage.YOU_INCREASED_YOUR_LEVEL));
 	}
@@ -343,7 +343,7 @@ public class PetInstance extends Creature
 	
 	private void doPickupItem()
 	{
-		StopMove sm = new StopMove(getObjectId(), getX(), getY(), getZ(), getHeading());
+		final StopMove sm = new StopMove(getObjectId(), getX(), getY(), getZ(), getHeading());
 		broadcastPacket(sm);
 		if (!(getTarget() instanceof ItemInstance))
 		{
@@ -351,9 +351,9 @@ public class PetInstance extends Creature
 			_owner.sendPacket(new ActionFailed());
 			return;
 		}
-		ItemInstance target = (ItemInstance) getTarget();
+		final ItemInstance target = (ItemInstance) getTarget();
 		boolean pickupOk = false;
-		ItemInstance ItemInstance = target;
+		final ItemInstance ItemInstance = target;
 		synchronized (ItemInstance)
 		{
 			if (target.isOnTheGround())
@@ -368,13 +368,13 @@ public class PetInstance extends Creature
 			setCurrentState(CreatureState.IDLE);
 			return;
 		}
-		GetItem gi = new GetItem(target, getObjectId());
+		final GetItem gi = new GetItem(target, getObjectId());
 		broadcastPacket(gi);
 		World.getInstance().removeVisibleObject(target);
-		DeleteObject del = new DeleteObject(target);
+		final DeleteObject del = new DeleteObject(target);
 		broadcastPacket(del);
 		getInventory().addItem(target);
-		PetItemList iu = new PetItemList(this);
+		final PetItemList iu = new PetItemList(this);
 		_owner.sendPacket(iu);
 		setCurrentState(CreatureState.IDLE);
 		if (getFollowStatus())
@@ -400,7 +400,7 @@ public class PetInstance extends Creature
 		}
 		if (isDead())
 		{
-			PetInstance PetInstance = this;
+			final PetInstance PetInstance = this;
 			synchronized (PetInstance)
 			{
 				if (_decayTask == null)
@@ -422,7 +422,7 @@ public class PetInstance extends Creature
 	{
 		try
 		{
-			Inventory petInventory = getInventory();
+			final Inventory petInventory = getInventory();
 			for (ItemInstance giveit : petInventory.getItems())
 			{
 				if (((giveit.getItem().getWeight() * giveit.getCount()) + _owner.getInventory().getTotalWeight()) < _owner.getMaxLoad())
@@ -445,8 +445,8 @@ public class PetInstance extends Creature
 		{
 			_owner.getInventory().addItem(item);
 			getInventory().dropItem(item, item.getCount());
-			PetInventoryUpdate petiu = new PetInventoryUpdate();
-			ItemList PlayerUI = new ItemList(_owner, false);
+			final PetInventoryUpdate petiu = new PetInventoryUpdate();
+			final ItemList PlayerUI = new ItemList(_owner, false);
 			petiu.addRemovedItem(item);
 			_owner.sendPacket(petiu);
 			_owner.sendPacket(PlayerUI);
@@ -487,18 +487,18 @@ public class PetInstance extends Creature
 	{
 		try
 		{
-			ItemInstance removedItem = owner.getInventory().destroyItem(getControlItemId(), 1);
-			InventoryUpdate iu = new InventoryUpdate();
+			final ItemInstance removedItem = owner.getInventory().destroyItem(getControlItemId(), 1);
+			final InventoryUpdate iu = new InventoryUpdate();
 			iu.addRemovedItem(removedItem);
 			owner.sendPacket(iu);
-			StatusUpdate su = new StatusUpdate(owner.getObjectId());
+			final StatusUpdate su = new StatusUpdate(owner.getObjectId());
 			su.addAttribute(StatusUpdate.CUR_LOAD, owner.getCurrentLoad());
 			owner.sendPacket(su);
-			UserInfo ui = new UserInfo(owner);
+			final UserInfo ui = new UserInfo(owner);
 			owner.sendPacket(ui);
-			CharInfo info = new CharInfo(owner);
+			final CharInfo info = new CharInfo(owner);
 			owner.broadcastPacket(info);
-			World world = World.getInstance();
+			final World world = World.getInstance();
 			world.removeObject(removedItem);
 		}
 		catch (Exception e)
@@ -531,7 +531,7 @@ public class PetInstance extends Creature
 			dropit.setY(getY());
 			dropit.setZ(getZ() + 100);
 			dropit.setOnTheGround(true);
-			DropItem dis = new DropItem(dropit, getObjectId());
+			final DropItem dis = new DropItem(dropit, getObjectId());
 			for (Creature player : broadcastPacket(dis))
 			{
 				((PlayerInstance) player).addKnownObjectWithoutCreate(dropit);
@@ -551,7 +551,7 @@ public class PetInstance extends Creature
 		if (!isRunning())
 		{
 			setRunning(true);
-			ChangeMoveType move = new ChangeMoveType(this, ChangeMoveType.RUN);
+			final ChangeMoveType move = new ChangeMoveType(this, ChangeMoveType.RUN);
 			broadcastPacket(move);
 		}
 		super.startAttack(target);

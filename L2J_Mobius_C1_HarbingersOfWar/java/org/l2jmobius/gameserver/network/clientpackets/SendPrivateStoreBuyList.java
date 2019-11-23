@@ -35,17 +35,17 @@ public class SendPrivateStoreBuyList extends ClientBasePacket
 	public SendPrivateStoreBuyList(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
-		int sellerID = readD();
-		int count = readD();
-		World world = World.getInstance();
-		PlayerInstance seller = (PlayerInstance) world.findObject(sellerID);
-		PlayerInstance buyer = client.getActiveChar();
-		List<TradeItem> buyerlist = new ArrayList<>();
-		List<TradeItem> sellerlist = seller.getSellList();
+		final int sellerID = readD();
+		final int count = readD();
+		final World world = World.getInstance();
+		final PlayerInstance seller = (PlayerInstance) world.findObject(sellerID);
+		final PlayerInstance buyer = client.getActiveChar();
+		final List<TradeItem> buyerlist = new ArrayList<>();
+		final List<TradeItem> sellerlist = seller.getSellList();
 		int cost = 0;
 		for (int i = 0; i < count; ++i)
 		{
-			TradeItem temp = new TradeItem();
+			final TradeItem temp = new TradeItem();
 			temp.setObjectId(readD());
 			temp.setCount(readD());
 			temp.setOwnersPrice(readD());
@@ -67,7 +67,7 @@ public class SendPrivateStoreBuyList extends ClientBasePacket
 		}
 		else
 		{
-			SystemMessage msg = new SystemMessage(SystemMessage.YOU_NOT_ENOUGH_ADENA);
+			final SystemMessage msg = new SystemMessage(SystemMessage.YOU_NOT_ENOUGH_ADENA);
 			buyer.sendPacket(msg);
 		}
 	}

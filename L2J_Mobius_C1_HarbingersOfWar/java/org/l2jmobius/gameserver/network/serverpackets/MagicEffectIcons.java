@@ -36,7 +36,7 @@ public class MagicEffectIcons extends ServerBasePacket
 		writeH(_effects.size());
 		for (int i = 0; i < _effects.size(); ++i)
 		{
-			Effect temp = _effects.get(i);
+			final Effect temp = _effects.get(i);
 			writeD(temp.skillId);
 			writeH(temp.dat);
 			writeD(temp.duration / 1000);

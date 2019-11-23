@@ -30,11 +30,11 @@ public class RequestAllyCrest extends ClientBasePacket
 	public RequestAllyCrest(byte[] rawPacket, ClientThread client) throws IOException
 	{
 		super(rawPacket);
-		int crestId = readD();
-		File crestFile = new File("data/allycrest_" + crestId + ".bmp");
+		final int crestId = readD();
+		final File crestFile = new File("data/allycrest_" + crestId + ".bmp");
 		if (crestFile.exists())
 		{
-			AllyCrest ac = new AllyCrest(crestId, crestFile);
+			final AllyCrest ac = new AllyCrest(crestId, crestFile);
 			client.getConnection().sendPacket(ac);
 		}
 		else

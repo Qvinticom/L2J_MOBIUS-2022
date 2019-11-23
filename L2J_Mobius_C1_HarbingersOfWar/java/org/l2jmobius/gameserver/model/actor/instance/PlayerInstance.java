@@ -138,7 +138,7 @@ public class PlayerInstance extends Creature
 	
 	public Skill addSkill(Skill newSkill)
 	{
-		Skill oldSkill = _skills.put(newSkill.getId(), newSkill);
+		final Skill oldSkill = _skills.put(newSkill.getId(), newSkill);
 		return oldSkill;
 	}
 	
@@ -174,7 +174,7 @@ public class PlayerInstance extends Creature
 	
 	public int getSkillLevel(int skillId)
 	{
-		Skill skill = _skills.get(skillId);
+		final Skill skill = _skills.get(skillId);
 		if (skill == null)
 		{
 			return -1;
@@ -287,47 +287,47 @@ public class PlayerInstance extends Creature
 		Weapon weaponItem = null;
 		if ((classId >= 0) && (classId <= 9))
 		{
-			Item temp = ItemTable.getInstance().getTemplate(246);
+			final Item temp = ItemTable.getInstance().getTemplate(246);
 			weaponItem = (Weapon) temp;
 		}
 		else if ((classId >= 10) && (classId <= 17))
 		{
-			Item temp = ItemTable.getInstance().getTemplate(251);
+			final Item temp = ItemTable.getInstance().getTemplate(251);
 			weaponItem = (Weapon) temp;
 		}
 		else if ((classId >= 18) && (classId <= 24))
 		{
-			Item temp = ItemTable.getInstance().getTemplate(244);
+			final Item temp = ItemTable.getInstance().getTemplate(244);
 			weaponItem = (Weapon) temp;
 		}
 		else if ((classId >= 25) && (classId <= 30))
 		{
-			Item temp = ItemTable.getInstance().getTemplate(249);
+			final Item temp = ItemTable.getInstance().getTemplate(249);
 			weaponItem = (Weapon) temp;
 		}
 		else if ((classId >= 31) && (classId <= 37))
 		{
-			Item temp = ItemTable.getInstance().getTemplate(245);
+			final Item temp = ItemTable.getInstance().getTemplate(245);
 			weaponItem = (Weapon) temp;
 		}
 		else if ((classId >= 38) && (classId <= 43))
 		{
-			Item temp = ItemTable.getInstance().getTemplate(250);
+			final Item temp = ItemTable.getInstance().getTemplate(250);
 			weaponItem = (Weapon) temp;
 		}
 		else if ((classId >= 44) && (classId <= 48))
 		{
-			Item temp = ItemTable.getInstance().getTemplate(248);
+			final Item temp = ItemTable.getInstance().getTemplate(248);
 			weaponItem = (Weapon) temp;
 		}
 		else if ((classId >= 49) && (classId <= 52))
 		{
-			Item temp = ItemTable.getInstance().getTemplate(252);
+			final Item temp = ItemTable.getInstance().getTemplate(252);
 			weaponItem = (Weapon) temp;
 		}
 		else if ((classId >= 53) && (classId <= 57))
 		{
-			Item temp = ItemTable.getInstance().getTemplate(247);
+			final Item temp = ItemTable.getInstance().getTemplate(247);
 			weaponItem = (Weapon) temp;
 		}
 		return weaponItem;
@@ -338,11 +338,11 @@ public class PlayerInstance extends Creature
 	{
 		_exp += addToExp;
 		_sp += addToSp;
-		StatusUpdate su = new StatusUpdate(getObjectId());
+		final StatusUpdate su = new StatusUpdate(getObjectId());
 		su.addAttribute(StatusUpdate.EXP, _exp);
 		su.addAttribute(StatusUpdate.SP, _sp);
 		sendPacket(su);
-		SystemMessage sm = new SystemMessage(SystemMessage.YOU_EARNED_S1_EXP_AND_S2_SP);
+		final SystemMessage sm = new SystemMessage(SystemMessage.YOU_EARNED_S1_EXP_AND_S2_SP);
 		sm.addNumber(addToExp);
 		sm.addNumber(addToSp);
 		sendPacket(sm);
@@ -361,25 +361,25 @@ public class PlayerInstance extends Creature
 	private void rewardSkills()
 	{
 		// int charclass = this.getClassId();
-		int lvl = getLevel();
+		final int lvl = getLevel();
 		if (lvl == 5)
 		{
-			Skill skill = SkillTable.getInstance().getInfo(194, 1);
+			final Skill skill = SkillTable.getInstance().getInfo(194, 1);
 			removeSkill(skill);
 		}
 		else if (lvl == 20)
 		{
-			Skill skill = SkillTable.getInstance().getInfo(239, 1);
+			final Skill skill = SkillTable.getInstance().getInfo(239, 1);
 			addSkill(skill);
 		}
 		else if (lvl == 40)
 		{
-			Skill skill = SkillTable.getInstance().getInfo(239, 2);
+			final Skill skill = SkillTable.getInstance().getInfo(239, 2);
 			addSkill(skill);
 		}
 		else if (lvl == 52)
 		{
-			Skill skill = SkillTable.getInstance().getInfo(239, 3);
+			final Skill skill = SkillTable.getInstance().getInfo(239, 3);
 			addSkill(skill);
 		}
 	}
@@ -588,7 +588,7 @@ public class PlayerInstance extends Creature
 		if (player.getTarget() != this)
 		{
 			player.setTarget(this);
-			MyTargetSelected my = new MyTargetSelected(getObjectId(), 0);
+			final MyTargetSelected my = new MyTargetSelected(getObjectId(), 0);
 			player.sendPacket(my);
 		}
 		else
@@ -605,7 +605,7 @@ public class PlayerInstance extends Creature
 	@Override
 	public void broadcastStatusUpdate()
 	{
-		StatusUpdate su = new StatusUpdate(getObjectId());
+		final StatusUpdate su = new StatusUpdate(getObjectId());
 		su.addAttribute(StatusUpdate.CUR_HP, (int) getCurrentHp());
 		su.addAttribute(StatusUpdate.CUR_MP, (int) getCurrentMp());
 		super.broadcastStatusUpdate();
@@ -615,7 +615,7 @@ public class PlayerInstance extends Creature
 		}
 		if (isInParty())
 		{
-			PartySmallWindowUpdate update = new PartySmallWindowUpdate(this);
+			final PartySmallWindowUpdate update = new PartySmallWindowUpdate(this);
 			getParty().broadcastToPartyMembers(this, update);
 		}
 	}
@@ -661,7 +661,7 @@ public class PlayerInstance extends Creature
 		}
 		else
 		{
-			SystemMessage sm = new SystemMessage(SystemMessage.YOU_DID_S1_DMG);
+			final SystemMessage sm = new SystemMessage(SystemMessage.YOU_DID_S1_DMG);
 			sm.addNumber(damage);
 			sendPacket(sm);
 		}
@@ -682,7 +682,7 @@ public class PlayerInstance extends Creature
 	
 	public void sendMessage(String message)
 	{
-		SystemMessage sm = new SystemMessage(SystemMessage.S1_S2);
+		final SystemMessage sm = new SystemMessage(SystemMessage.S1_S2);
 		sm.addString(message);
 		sendPacket(sm);
 	}
@@ -690,7 +690,7 @@ public class PlayerInstance extends Creature
 	@Override
 	protected void startCombat()
 	{
-		Creature target = (Creature) getTarget();
+		final Creature target = (Creature) getTarget();
 		if (target == null)
 		{
 			_log.warning("Failed to start combat without target.");
@@ -732,7 +732,7 @@ public class PlayerInstance extends Creature
 				{
 					if (getTarget() instanceof PlayerInstance)
 					{
-						PlayerInstance temp = (PlayerInstance) getTarget();
+						final PlayerInstance temp = (PlayerInstance) getTarget();
 						sendPacket(new ActionFailed());
 						if (temp.getPrivateStoreType() == 1)
 						{
@@ -767,12 +767,12 @@ public class PlayerInstance extends Creature
 			_log.warning("trying to pickup wrong target." + getTarget());
 			return;
 		}
-		ItemInstance target = (ItemInstance) getTarget();
+		final ItemInstance target = (ItemInstance) getTarget();
 		sendPacket(new ActionFailed());
-		StopMove sm = new StopMove(getObjectId(), getX(), getY(), getZ(), getHeading());
+		final StopMove sm = new StopMove(getObjectId(), getX(), getY(), getZ(), getHeading());
 		sendPacket(sm);
 		boolean pickupOk = false;
-		ItemInstance ItemInstance = target;
+		final ItemInstance ItemInstance = target;
 		synchronized (ItemInstance)
 		{
 			if (target.isOnTheGround())
@@ -786,10 +786,10 @@ public class PlayerInstance extends Creature
 			return;
 		}
 		World.getInstance().removeVisibleObject(target);
-		GetItem gi = new GetItem(target, getObjectId());
+		final GetItem gi = new GetItem(target, getObjectId());
 		sendPacket(gi);
 		broadcastPacket(gi);
-		DeleteObject del = new DeleteObject(target);
+		final DeleteObject del = new DeleteObject(target);
 		sendPacket(del);
 		broadcastPacket(del);
 		if (!isInParty())
@@ -808,8 +808,8 @@ public class PlayerInstance extends Creature
 				smsg.addItemName(target.getItemId());
 				sendPacket(smsg);
 			}
-			ItemInstance target2 = getInventory().addItem(target);
-			InventoryUpdate iu = new InventoryUpdate();
+			final ItemInstance target2 = getInventory().addItem(target);
+			final InventoryUpdate iu = new InventoryUpdate();
 			if (target2.getLastChange() == 1)
 			{
 				iu.addNewItem(target);
@@ -819,7 +819,7 @@ public class PlayerInstance extends Creature
 				iu.addModifiedItem(target2);
 			}
 			sendPacket(iu);
-			UserInfo ci = new UserInfo(this);
+			final UserInfo ci = new UserInfo(this);
 			sendPacket(ci);
 		}
 		else if (target.getItemId() == 57)
@@ -861,7 +861,7 @@ public class PlayerInstance extends Creature
 	@Override
 	public Weapon getActiveWeapon()
 	{
-		ItemInstance weapon = getInventory().getPaperdollItem(7);
+		final ItemInstance weapon = getInventory().getPaperdollItem(7);
 		if (weapon == null)
 		{
 			return getFistsWeaponItem();
@@ -889,10 +889,10 @@ public class PlayerInstance extends Creature
 		}
 		
 		// Damage message.
-		SystemMessage smsg = new SystemMessage(SystemMessage.S1_GAVE_YOU_S2_DMG);
+		final SystemMessage smsg = new SystemMessage(SystemMessage.S1_GAVE_YOU_S2_DMG);
 		if ((attacker instanceof MonsterInstance) || (attacker instanceof NpcInstance))
 		{
-			int mobId = ((NpcInstance) attacker).getNpcTemplate().getNpcId();
+			final int mobId = ((NpcInstance) attacker).getNpcTemplate().getNpcId();
 			smsg.addNpcName(mobId);
 		}
 		else
@@ -965,7 +965,7 @@ public class PlayerInstance extends Creature
 	public void increasePkKillsAndKarma(int level)
 	{
 		int newKarma = Config.KARMA_MIN_KARMA;
-		int pkLevel = getLevel();
+		final int pkLevel = getLevel();
 		
 		final int pkPKCount = getPkKills();
 		int pkCountMulti = 0;
@@ -1088,7 +1088,7 @@ public class PlayerInstance extends Creature
 		super.addKnownObject(object);
 		if (object instanceof ItemInstance)
 		{
-			SpawnItem si = new SpawnItem((ItemInstance) object);
+			final SpawnItem si = new SpawnItem((ItemInstance) object);
 			sendPacket(si);
 		}
 		else if (object instanceof NpcInstance)
@@ -1103,7 +1103,7 @@ public class PlayerInstance extends Creature
 		}
 		else if (object instanceof PlayerInstance)
 		{
-			PlayerInstance otherPlayer = (PlayerInstance) object;
+			final PlayerInstance otherPlayer = (PlayerInstance) object;
 			sendPacket(new CharInfo(otherPlayer));
 			if ((otherPlayer.getPrivateStoreType() == 1) || (otherPlayer.getPrivateStoreType() == 3))
 			{
@@ -1114,15 +1114,15 @@ public class PlayerInstance extends Creature
 		}
 		if (object instanceof Creature)
 		{
-			Creature obj = (Creature) object;
+			final Creature obj = (Creature) object;
 			if (obj.isMoving())
 			{
-				CharMoveToLocation mov = new CharMoveToLocation(obj);
+				final CharMoveToLocation mov = new CharMoveToLocation(obj);
 				sendPacket(mov);
 			}
 			else if (obj.isMovingToPawn())
 			{
-				MoveToPawn mov = new MoveToPawn(obj, obj.getPawnTarget(), obj.getPawnOffset());
+				final MoveToPawn mov = new MoveToPawn(obj, obj.getPawnTarget(), obj.getPawnOffset());
 				sendPacket(mov);
 			}
 		}
@@ -1139,18 +1139,18 @@ public class PlayerInstance extends Creature
 	public void increaseLevel()
 	{
 		super.increaseLevel();
-		LvlupData lvlData = LevelUpData.getInstance().getTemplate(getClassId());
+		final LvlupData lvlData = LevelUpData.getInstance().getTemplate(getClassId());
 		if (lvlData != null)
 		{
-			double hp1 = (getLevel() - 1) * lvlData.getDefaulthpadd();
-			double hp2 = (getLevel() - 2) * lvlData.getDefaulthpbonus();
-			double mp1 = (getLevel() - 1) * lvlData.getDefaultmpadd();
-			double mp2 = (getLevel() - 2) * lvlData.getDefaultmpbonus();
-			int newhp = (int) Math.rint(lvlData.getDefaulthp() + hp1 + hp2);
-			int newmp = (int) Math.rint(lvlData.getDefaultmp() + mp1 + mp2);
+			final double hp1 = (getLevel() - 1) * lvlData.getDefaulthpadd();
+			final double hp2 = (getLevel() - 2) * lvlData.getDefaulthpbonus();
+			final double mp1 = (getLevel() - 1) * lvlData.getDefaultmpadd();
+			final double mp2 = (getLevel() - 2) * lvlData.getDefaultmpbonus();
+			final int newhp = (int) Math.rint(lvlData.getDefaulthp() + hp1 + hp2);
+			final int newmp = (int) Math.rint(lvlData.getDefaultmp() + mp1 + mp2);
 			setMaxHp(newhp);
 			setCurrentHp(newhp);
-			StatusUpdate su = new StatusUpdate(getObjectId());
+			final StatusUpdate su = new StatusUpdate(getObjectId());
 			su.addAttribute(StatusUpdate.MAX_HP, newhp);
 			su.addAttribute(StatusUpdate.CUR_HP, newhp);
 			setMaxMp(newmp);
@@ -1172,7 +1172,7 @@ public class PlayerInstance extends Creature
 	@Override
 	public int getAttackRange()
 	{
-		Weapon weapon = getActiveWeapon();
+		final Weapon weapon = getActiveWeapon();
 		if ((weapon != null) && (weapon.getWeaponType() == 5))
 		{
 			return 500;
@@ -1203,7 +1203,7 @@ public class PlayerInstance extends Creature
 	{
 		stopAllTimers();
 		setTarget(null);
-		World world = World.getInstance();
+		final World world = World.getInstance();
 		world.removeVisibleObject(this);
 		if (isInParty())
 		{
@@ -1232,8 +1232,8 @@ public class PlayerInstance extends Creature
 	
 	public void updatePAtk()
 	{
-		double lvlmod = (89.0 + getLevel()) / 100.0;
-		StatModifiers modifier = CharStatsTable.getInstance().getTemplate(getClassId());
+		final double lvlmod = (89.0 + getLevel()) / 100.0;
+		final StatModifiers modifier = CharStatsTable.getInstance().getTemplate(getClassId());
 		double strmod = 1.0;
 		if (modifier != null)
 		{
@@ -1243,7 +1243,7 @@ public class PlayerInstance extends Creature
 		{
 			_log.warning("Missing STR modifier for classId: " + getClassId());
 		}
-		CharTemplate template = CharTemplateTable.getInstance().getTemplate(getClassId());
+		final CharTemplate template = CharTemplateTable.getInstance().getTemplate(getClassId());
 		double weapondmg = 1.0;
 		if (template != null)
 		{
@@ -1253,20 +1253,20 @@ public class PlayerInstance extends Creature
 		{
 			_log.warning("Missing template for classId: " + getClassId());
 		}
-		Weapon weapon = getActiveWeapon();
+		final Weapon weapon = getActiveWeapon();
 		if (weapon != null)
 		{
 			weapondmg += weapon.getPDamage();
 		}
-		double pAtk = weapondmg * lvlmod * strmod;
+		final double pAtk = weapondmg * lvlmod * strmod;
 		setPhysicalAttack((int) Math.rint(pAtk));
 	}
 	
 	public void updatePDef()
 	{
 		Armor armorPiece;
-		double lvlmod = (89.0 + getLevel()) / 100.0;
-		CharTemplate template = CharTemplateTable.getInstance().getTemplate(getClassId());
+		final double lvlmod = (89.0 + getLevel()) / 100.0;
+		final CharTemplate template = CharTemplateTable.getInstance().getTemplate(getClassId());
 		double totalItemDef = 40.0;
 		if (template != null)
 		{
@@ -1312,15 +1312,15 @@ public class PlayerInstance extends Creature
 			armorPiece = (Armor) dummy.getItem();
 			totalItemDef += armorPiece.getPDef();
 		}
-		double pDef = totalItemDef * lvlmod;
+		final double pDef = totalItemDef * lvlmod;
 		setPhysicalDefense((int) Math.round(pDef));
 	}
 	
 	public void updateMAtk()
 	{
-		double lmod = (89.0 + getLevel()) / 100.0;
-		double lvlmod = Math.sqrt(lmod);
-		StatModifiers modifier = CharStatsTable.getInstance().getTemplate(getClassId());
+		final double lmod = (89.0 + getLevel()) / 100.0;
+		final double lvlmod = Math.sqrt(lmod);
+		final StatModifiers modifier = CharStatsTable.getInstance().getTemplate(getClassId());
 		double imod = 1.0;
 		if (modifier != null)
 		{
@@ -1330,8 +1330,8 @@ public class PlayerInstance extends Creature
 		{
 			_log.warning("Missing INT modifier for classId: " + getClassId());
 		}
-		double intmod = Math.sqrt(imod);
-		CharTemplate template = CharTemplateTable.getInstance().getTemplate(getClassId());
+		final double intmod = Math.sqrt(imod);
+		final CharTemplate template = CharTemplateTable.getInstance().getTemplate(getClassId());
 		double weapondmg = 1.0;
 		if (template != null)
 		{
@@ -1341,20 +1341,20 @@ public class PlayerInstance extends Creature
 		{
 			_log.warning("Missing template for classId: " + getClassId());
 		}
-		Weapon weapon = getActiveWeapon();
+		final Weapon weapon = getActiveWeapon();
 		if (weapon != null)
 		{
 			weapondmg += weapon.getMDamage();
 		}
-		double mAtk = weapondmg * lvlmod * intmod;
+		final double mAtk = weapondmg * lvlmod * intmod;
 		setMagicalAttack((int) Math.rint(mAtk));
 	}
 	
 	public void updateMDef()
 	{
 		Armor armorPiece;
-		double lvlBonus = (89.0 + getLevel()) / 100.0;
-		StatModifiers modifier = CharStatsTable.getInstance().getTemplate(getClassId());
+		final double lvlBonus = (89.0 + getLevel()) / 100.0;
+		final StatModifiers modifier = CharStatsTable.getInstance().getTemplate(getClassId());
 		double MENbonus = 1.0;
 		if (modifier != null)
 		{
@@ -1364,7 +1364,7 @@ public class PlayerInstance extends Creature
 		{
 			_log.warning("Missing MEN modifier for classId: " + getClassId());
 		}
-		CharTemplate template = CharTemplateTable.getInstance().getTemplate(getClassId());
+		final CharTemplate template = CharTemplateTable.getInstance().getTemplate(getClassId());
 		double totalItemDef = 40.0;
 		if (template != null)
 		{
@@ -1400,7 +1400,7 @@ public class PlayerInstance extends Creature
 			armorPiece = (Armor) dummy.getItem();
 			totalItemDef += armorPiece.getMDef();
 		}
-		double mDef = totalItemDef * lvlBonus * MENbonus;
+		final double mDef = totalItemDef * lvlBonus * MENbonus;
 		setMagicalDefense((int) Math.round(mDef));
 	}
 	
@@ -1482,8 +1482,8 @@ public class PlayerInstance extends Creature
 			return;
 		}
 		
-		int weaponType = getActiveWeapon().getWeaponType();
-		int skillId = skill.getId();
+		final int weaponType = getActiveWeapon().getWeaponType();
+		final int skillId = skill.getId();
 		if ((skillId == 56) && (weaponType != 5))
 		{
 			return;
@@ -1518,21 +1518,21 @@ public class PlayerInstance extends Creature
 		}
 		setCurrentState(CreatureState.CASTING);
 		setSkill(skill);
-		double distance = getDistance(target.getX(), target.getY());
+		final double distance = getDistance(target.getX(), target.getY());
 		if ((skill.getCastRange() > 0) && (distance > skill.getCastRange()))
 		{
 			moveTo(target.getX(), target.getY(), target.getZ(), skill.getCastRange());
 			return;
 		}
-		int magicId = skill.getId();
-		int level = getSkillLevel(magicId);
-		ActionFailed af = new ActionFailed();
+		final int magicId = skill.getId();
+		final int level = getSkillLevel(magicId);
+		final ActionFailed af = new ActionFailed();
 		sendPacket(af);
-		MagicSkillUser msu = new MagicSkillUser(this, target, magicId, level, skill.getHitTime(), skill.getReuseDelay());
+		final MagicSkillUser msu = new MagicSkillUser(this, target, magicId, level, skill.getHitTime(), skill.getReuseDelay());
 		sendPacket(msu);
 		broadcastPacket(msu);
 		sendPacket(new SetupGauge(0, skill.getHitTime()));
-		SystemMessage sm = new SystemMessage(SystemMessage.USE_S1);
+		final SystemMessage sm = new SystemMessage(SystemMessage.USE_S1);
 		sm.addSkillName(magicId);
 		sendPacket(sm);
 		if (skill.getSkillTime() > 300)
@@ -1548,7 +1548,7 @@ public class PlayerInstance extends Creature
 	@Override
 	protected void reduceArrowCount()
 	{
-		ItemInstance arrows = getInventory().destroyItem(getInventory().getPaperdollObjectId(8), 1);
+		final ItemInstance arrows = getInventory().destroyItem(getInventory().getPaperdollObjectId(8), 1);
 		// _log.info("arrow count:" + arrows.getCount());
 		if (arrows.getCount() == 0)
 		{
@@ -1559,7 +1559,7 @@ public class PlayerInstance extends Creature
 		}
 		else
 		{
-			InventoryUpdate iu = new InventoryUpdate();
+			final InventoryUpdate iu = new InventoryUpdate();
 			iu.addModifiedItem(arrows);
 			sendPacket(iu);
 		}
@@ -1574,7 +1574,7 @@ public class PlayerInstance extends Creature
 			if (_arrowItem != null)
 			{
 				getInventory().setPaperdollItem(8, _arrowItem);
-				ItemList il = new ItemList(this, false);
+				final ItemList il = new ItemList(this, false);
 				sendPacket(il);
 			}
 		}
@@ -1588,7 +1588,7 @@ public class PlayerInstance extends Creature
 	@Override
 	protected boolean isUsingDualWeapon()
 	{
-		Weapon weaponItem = getActiveWeapon();
+		final Weapon weaponItem = getActiveWeapon();
 		if (weaponItem.getWeaponType() == 9)
 		{
 			return true;
@@ -1618,28 +1618,28 @@ public class PlayerInstance extends Creature
 	{
 		if ((getCurrentState() == CreatureState.CASTING) && (getSkill() == skill))
 		{
-			int magicId = skill.getId();
-			int level = getSkillLevel(magicId);
+			final int magicId = skill.getId();
+			final int level = getSkillLevel(magicId);
 			if ((skill.getTargetType() == Skill.TARGET_PARTY) && isInParty())
 			{
 				for (PlayerInstance player : getParty().getPartyMembers())
 				{
-					MagicSkillLaunched msl = new MagicSkillLaunched(this, magicId, level, player);
+					final MagicSkillLaunched msl = new MagicSkillLaunched(this, magicId, level, player);
 					sendPacket(msl);
 					broadcastPacket(msl);
 				}
 			}
 			else
 			{
-				MagicSkillLaunched msl = new MagicSkillLaunched(this, magicId, level, target);
+				final MagicSkillLaunched msl = new MagicSkillLaunched(this, magicId, level, target);
 				sendPacket(msl);
 				broadcastPacket(msl);
 			}
 			reduceCurrentMp(skill.getMpConsume());
-			StatusUpdate su = new StatusUpdate(getObjectId());
+			final StatusUpdate su = new StatusUpdate(getObjectId());
 			su.addAttribute(StatusUpdate.CUR_MP, (int) getCurrentMp());
 			sendPacket(su);
-			ISkillHandler handler = SkillHandler.getInstance().getSkillHandler(skill.getId());
+			final ISkillHandler handler = SkillHandler.getInstance().getSkillHandler(skill.getId());
 			if (handler == null)
 			{
 				_log.warning("No skillhandler registered for skillId: " + skill.getId());
@@ -1739,7 +1739,7 @@ public class PlayerInstance extends Creature
 	{
 		setCurrentState(CreatureState.IDLE);
 		enableAllSkills();
-		MagicSkillCanceld msc = new MagicSkillCanceld(getObjectId());
+		final MagicSkillCanceld msc = new MagicSkillCanceld(getObjectId());
 		sendPacket(msc);
 		broadcastPacket(msc);
 	}

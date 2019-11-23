@@ -53,7 +53,7 @@ public class ClientThread extends Thread
 	public ClientThread(Socket client, AccountData logins, String host, int port) throws IOException
 	{
 		_csocket = client;
-		String ip = client.getInetAddress().getHostAddress();
+		final String ip = client.getInetAddress().getHostAddress();
 		if (_bannedIPs.contains(ip))
 		{
 			throw new IOException("banned IP");
@@ -80,9 +80,9 @@ public class ClientThread extends Thread
 		String gameServerIp = null;
 		try
 		{
-			InetAddress adr = InetAddress.getByName(_gameServerHost);
+			final InetAddress adr = InetAddress.getByName(_gameServerHost);
 			gameServerIp = adr.getHostAddress();
-			Init startPacket = new Init();
+			final Init startPacket = new Init();
 			_out.write(startPacket.getLength() & 255);
 			_out.write((startPacket.getLength() >> 8) & 255);
 			_out.write(startPacket.getContent());
@@ -96,7 +96,7 @@ public class ClientThread extends Thread
 				{
 					break;
 				}
-				byte[] incoming = new byte[length];
+				final byte[] incoming = new byte[length];
 				incoming[0] = (byte) lengthLo;
 				incoming[1] = (byte) lengthHi;
 				int newBytes = 0;
@@ -114,27 +114,27 @@ public class ClientThread extends Thread
 				System.arraycopy(incoming, 2, decrypt, 0, decrypt.length);
 				decrypt = _crypt.decrypt(decrypt);
 				checksumOk = _crypt.checksum(decrypt);
-				int packetType = decrypt[0] & 255;
+				final int packetType = decrypt[0] & 255;
 				switch (packetType)
 				{
 					case 0:
 					{
-						RequestAuthLogin ral = new RequestAuthLogin(decrypt);
+						final RequestAuthLogin ral = new RequestAuthLogin(decrypt);
 						account = ral.getUser().toLowerCase();
-						LoginController lc = LoginController.getInstance();
+						final LoginController lc = LoginController.getInstance();
 						if (_logins.loginValid(account, ral.getPassword(), _csocket.getInetAddress()))
 						{
 							if (!lc.isAccountInGameServer(account) && !lc.isAccountInLoginServer(account))
 							{
-								int accessLevel = _logins.getAccessLevel(account);
+								final int accessLevel = _logins.getAccessLevel(account);
 								if (accessLevel < 0)
 								{
-									LoginFail lok = new LoginFail(LoginFail.REASON_ACCOUNT_BANNED);
+									final LoginFail lok = new LoginFail(LoginFail.REASON_ACCOUNT_BANNED);
 									sendPacket(lok);
 									break;
 								}
 								sessionKey = lc.assignSessionKeyToLogin(account, accessLevel, _csocket);
-								LoginOk lok = new LoginOk();
+								final LoginOk lok = new LoginOk();
 								sendPacket(lok);
 								break;
 							}
@@ -150,27 +150,27 @@ public class ClientThread extends Thread
 								lc.getClientConnection(account).close();
 								lc.removeGameServerLogin(account);
 							}
-							LoginFail lok = new LoginFail(LoginFail.REASON_ACCOUNT_IN_USE);
+							final LoginFail lok = new LoginFail(LoginFail.REASON_ACCOUNT_IN_USE);
 							sendPacket(lok);
 							break;
 						}
-						LoginFail lok = new LoginFail(LoginFail.REASON_USER_OR_PASS_WRONG);
+						final LoginFail lok = new LoginFail(LoginFail.REASON_USER_OR_PASS_WRONG);
 						sendPacket(lok);
 						break;
 					}
 					case 2:
 					{
 						// RequestServerLogin rsl = new RequestServerLogin(decrypt);
-						PlayOk po = new PlayOk(sessionKey);
+						final PlayOk po = new PlayOk(sessionKey);
 						sendPacket(po);
 						break;
 					}
 					case 5:
 					{
 						// RequestServerList rsl = new RequestServerList(decrypt);
-						ServerList sl = new ServerList();
-						int current = LoginController.getInstance().getOnlinePlayerCount();
-						int max = LoginController.getInstance().getMaxAllowedOnlinePlayers();
+						final ServerList sl = new ServerList();
+						final int current = LoginController.getInstance().getOnlinePlayerCount();
+						final int max = LoginController.getInstance().getMaxAllowedOnlinePlayers();
 						sl.addServer(gameServerIp, _gameServerPort, true, false, current, max);
 						sendPacket(sl);
 						break;
@@ -228,7 +228,7 @@ public class ClientThread extends Thread
 		byte[] data = sl.getContent();
 		_crypt.checksum(data);
 		data = _crypt.crypt(data);
-		int len = data.length + 2;
+		final int len = data.length + 2;
 		_out.write(len & 0xFF);
 		_out.write((len >> 8) & 0xFF);
 		_out.write(data);
@@ -240,7 +240,7 @@ public class ClientThread extends Thread
 		int a;
 		int charpoint;
 		byte t1;
-		StringBuffer result = new StringBuffer();
+		final StringBuffer result = new StringBuffer();
 		int counter = 0;
 		for (int i = 0; i < len; ++i)
 		{
@@ -267,7 +267,7 @@ public class ClientThread extends Thread
 			result.append("\n");
 			counter = 0;
 		}
-		int rest = data.length % 16;
+		final int rest = data.length % 16;
 		if (rest > 0)
 		{
 			for (int i = 0; i < (17 - rest); ++i)
@@ -302,7 +302,7 @@ public class ClientThread extends Thread
 	@SuppressWarnings("unused")
 	private String getTerminatedString(byte[] data, int offset)
 	{
-		StringBuffer result = new StringBuffer();
+		final StringBuffer result = new StringBuffer();
 		for (int i = offset; (i < data.length) && (data[i] != 0); ++i)
 		{
 			result.append((char) data[i]);

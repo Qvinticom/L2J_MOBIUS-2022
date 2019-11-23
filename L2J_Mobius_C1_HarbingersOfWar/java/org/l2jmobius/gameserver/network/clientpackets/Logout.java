@@ -32,7 +32,7 @@ public class Logout extends ClientBasePacket
 	{
 		super(decrypt);
 		
-		PlayerInstance player = client.getActiveChar();
+		final PlayerInstance player = client.getActiveChar();
 		if (player != null)
 		{
 			if ((player.getPvpFlag() > 0) || player.isInCombat())
@@ -41,7 +41,7 @@ public class Logout extends ClientBasePacket
 				player.sendPacket(new ActionFailed());
 				return;
 			}
-			LeaveWorld ql = new LeaveWorld();
+			final LeaveWorld ql = new LeaveWorld();
 			client.getConnection().sendPacket(ql);
 			player.deleteMe();
 			client.saveCharToDisk(player);

@@ -26,7 +26,7 @@ public class NewCrypt
 	
 	public NewCrypt(String key)
 	{
-		byte[] keybytes = key.getBytes();
+		final byte[] keybytes = key.getBytes();
 		_crypt = new BlowfishEngine();
 		_crypt.init(true, keybytes);
 		_decrypt = new BlowfishEngine();
@@ -37,7 +37,7 @@ public class NewCrypt
 	{
 		long ecx;
 		long chksum = 0L;
-		int count = raw.length - 8;
+		final int count = raw.length - 8;
 		int i = 0;
 		for (i = 0; i < count; i += 4)
 		{
@@ -58,8 +58,8 @@ public class NewCrypt
 	
 	public byte[] decrypt(byte[] raw) throws IOException
 	{
-		byte[] result = new byte[raw.length];
-		int count = raw.length / 8;
+		final byte[] result = new byte[raw.length];
+		final int count = raw.length / 8;
 		for (int i = 0; i < count; ++i)
 		{
 			_decrypt.processBlock(raw, i * 8, result, i * 8);
@@ -69,8 +69,8 @@ public class NewCrypt
 	
 	public byte[] crypt(byte[] raw) throws IOException
 	{
-		int count = raw.length / 8;
-		byte[] result = new byte[raw.length];
+		final int count = raw.length / 8;
+		final byte[] result = new byte[raw.length];
 		for (int i = 0; i < count; ++i)
 		{
 			_crypt.processBlock(raw, i * 8, result, i * 8);

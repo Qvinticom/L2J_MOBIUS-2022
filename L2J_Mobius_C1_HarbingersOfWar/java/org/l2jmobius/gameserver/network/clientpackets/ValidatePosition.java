@@ -35,15 +35,15 @@ public class ValidatePosition extends ClientBasePacket
 	{
 		super(decrypt);
 		@SuppressWarnings("unused")
-		int x = readD();
+		final int x = readD();
 		@SuppressWarnings("unused")
-		int y = readD();
-		int z = readD();
+		final int y = readD();
+		final int z = readD();
 		@SuppressWarnings("unused")
-		int heading = readD();
+		final int heading = readD();
 		@SuppressWarnings("unused")
-		int data = readD();
-		PlayerInstance activeChar = client.getActiveChar();
+		final int data = readD();
+		final PlayerInstance activeChar = client.getActiveChar();
 		if (activeChar != null)
 		{
 			// Connection con = client.getConnection();
@@ -57,8 +57,8 @@ public class ValidatePosition extends ClientBasePacket
 			{
 				int i;
 				int delete = 0;
-				Set<WorldObject> known = activeChar.getKnownObjects();
-				List<WorldObject> toBeDeleted = new ArrayList<>();
+				final Set<WorldObject> known = activeChar.getKnownObjects();
+				final List<WorldObject> toBeDeleted = new ArrayList<>();
 				for (WorldObject obj : known)
 				{
 					if (distance(activeChar, obj) <= 16000000L)
@@ -97,8 +97,8 @@ public class ValidatePosition extends ClientBasePacket
 	
 	private long distance(WorldObject a, WorldObject b)
 	{
-		long dX = a.getX() - b.getX();
-		long dY = a.getY() - b.getY();
+		final long dX = a.getX() - b.getX();
+		final long dY = a.getY() - b.getY();
 		return (dX * dX) + (dY * dY);
 	}
 	
