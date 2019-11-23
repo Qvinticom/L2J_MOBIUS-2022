@@ -932,6 +932,10 @@ public class PlayerInstance extends Creature
 			{
 				killer.increasePkKillsAndKarma(getLevel());
 			}
+			if (_pvpFlag > 0)
+			{
+				killer.setPvpKills(killer.getPvpKills() + 1);
+			}
 		}
 	}
 	
