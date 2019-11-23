@@ -45,9 +45,14 @@ public class ConditionUsingItemType extends Condition
 	@Override
 	public boolean testImpl(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		if ((effector == null) || !effector.isPlayer())
+		if (effector == null)
 		{
 			return false;
+		}
+		
+		if (!effector.isPlayer())
+		{
+			return _armor ? false : (_mask & effector.getAttackType().mask()) != 0;
 		}
 		
 		final Inventory inv = effector.getInventory();
