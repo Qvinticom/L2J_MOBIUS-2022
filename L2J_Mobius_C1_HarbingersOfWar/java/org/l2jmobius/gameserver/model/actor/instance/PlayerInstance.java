@@ -1550,7 +1550,7 @@ public class PlayerInstance extends Creature
 		final MagicSkillUser msu = new MagicSkillUser(this, target, magicId, level, skill.getHitTime(), skill.getReuseDelay());
 		sendPacket(msu);
 		broadcastPacket(msu);
-		sendPacket(new SetupGauge(0, skill.getHitTime()));
+		sendPacket(new SetupGauge(SetupGauge.BLUE, skill.getHitTime()));
 		final SystemMessage sm = new SystemMessage(SystemMessage.USE_S1);
 		sm.addSkillName(magicId);
 		sendPacket(sm);

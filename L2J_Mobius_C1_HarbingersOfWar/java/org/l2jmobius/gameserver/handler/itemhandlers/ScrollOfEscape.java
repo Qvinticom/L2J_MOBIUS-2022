@@ -44,8 +44,7 @@ public class ScrollOfEscape implements IItemHandler
 		final MagicSkillUser msk = new MagicSkillUser(activeChar, 1050, 1, 20000, 0);
 		activeChar.sendPacket(msk);
 		activeChar.broadcastPacket(msk);
-		final SetupGauge sg = new SetupGauge(0, skill.getSkillTime());
-		activeChar.sendPacket(sg);
+		activeChar.sendPacket(new SetupGauge(SetupGauge.BLUE, skill.getSkillTime()));
 		if (skill.getSkillTime() > 200)
 		{
 			try
@@ -63,6 +62,7 @@ public class ScrollOfEscape implements IItemHandler
 		final ActionFailed af = new ActionFailed();
 		activeChar.sendPacket(af);
 		activeChar.teleToLocation(townCords[0], townCords[1], townCords[2]);
+		
 		return 1;
 	}
 	

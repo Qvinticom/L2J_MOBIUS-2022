@@ -1182,8 +1182,7 @@ public abstract class Creature extends WorldObject
 					}
 					reduceCurrentMp(weaponItem.getMpConsume());
 					sendPacket(new SystemMessage(SystemMessage.GETTING_READY_TO_SHOOT_AN_ARROW));
-					final SetupGauge sg = new SetupGauge(1, calculateAttackSpeed(weaponItem) * 2);
-					sendPacket(sg);
+					sendPacket(new SetupGauge(SetupGauge.RED, calculateAttackSpeed(weaponItem) * 2));
 					_hitTimer.schedule(new HitTask(this, target, damage, crit, miss, false), calculateHitSpeed(weaponItem, 1));
 				}
 				else
