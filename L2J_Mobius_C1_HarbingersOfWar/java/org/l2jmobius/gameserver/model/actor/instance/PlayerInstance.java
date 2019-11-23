@@ -928,13 +928,15 @@ public class PlayerInstance extends Creature
 		final PlayerInstance killer = attacker.getActingPlayer();
 		if (killer != null)
 		{
-			if ((_pvpFlag == 0) && (_karma == 0))
-			{
-				killer.increasePkKillsAndKarma(getLevel());
-			}
 			if (_pvpFlag > 0)
 			{
 				killer.setPvpKills(killer.getPvpKills() + 1);
+				killer.sendPacket(new UserInfo(killer));
+			}
+			else if (_karma == 0)
+			{
+				killer.increasePkKillsAndKarma(getLevel());
+				killer.sendPacket(new UserInfo(killer));
 			}
 		}
 	}
