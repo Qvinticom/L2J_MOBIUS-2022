@@ -32,7 +32,6 @@ import org.l2jmobius.gameserver.network.serverpackets.Die;
 import org.l2jmobius.gameserver.network.serverpackets.ItemList;
 import org.l2jmobius.gameserver.network.serverpackets.ShortCutInit;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import org.l2jmobius.gameserver.network.serverpackets.TeleportToLocation;
 import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 
 public class EnterWorld extends ClientBasePacket
@@ -98,20 +97,7 @@ public class EnterWorld extends ClientBasePacket
 		if (activeChar.getZ() < -16000)
 		{
 			final int[] townCords = MapRegionTable.getInstance().getClosestTownCords(activeChar);
-			activeChar.sendPacket(new TeleportToLocation(activeChar, townCords[0], townCords[1], townCords[2]));
-			World.getInstance().removeVisibleObject(activeChar);
-			activeChar.removeAllKnownObjects();
-			activeChar.setX(townCords[0]);
-			activeChar.setY(townCords[1]);
-			activeChar.setZ(townCords[2]);
-			try
-			{
-				Thread.sleep(2000L);
-			}
-			catch (InterruptedException e)
-			{
-			}
-			World.getInstance().addVisibleObject(activeChar);
+			activeChar.teleToLocation(townCords[0], townCords[1], townCords[2]);
 		}
 		
 		// Water check.

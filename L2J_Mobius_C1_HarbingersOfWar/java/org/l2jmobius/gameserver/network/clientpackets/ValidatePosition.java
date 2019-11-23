@@ -46,11 +46,6 @@ public class ValidatePosition extends ClientBasePacket
 		final PlayerInstance activeChar = client.getActiveChar();
 		if (activeChar != null)
 		{
-			// Connection con = client.getConnection();
-			// int realX = activeChar.getX();
-			// int realY = activeChar.getY();
-			// int realZ = activeChar.getZ();
-			// int realHeading = activeChar.getHeading();
 			activeChar.setZ(z);
 			activeChar.updateKnownCounter = (byte) (activeChar.updateKnownCounter + 1);
 			if (activeChar.updateKnownCounter > 3)

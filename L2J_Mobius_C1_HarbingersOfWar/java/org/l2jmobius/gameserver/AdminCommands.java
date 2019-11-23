@@ -48,7 +48,6 @@ import org.l2jmobius.gameserver.network.serverpackets.LeaveWorld;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUser;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
-import org.l2jmobius.gameserver.network.serverpackets.TeleportToLocation;
 import org.l2jmobius.gameserver.templates.Npc;
 
 public class AdminCommands extends Thread
@@ -476,11 +475,7 @@ public class AdminCommands extends Thread
 		final int y = Integer.parseInt(y1);
 		final String z1 = st.nextToken();
 		final int z = Integer.parseInt(z1);
-		final TeleportToLocation tele = new TeleportToLocation(activeChar, x, y, z);
-		activeChar.sendPacket(tele);
-		activeChar.setX(x);
-		activeChar.setY(y);
-		activeChar.setZ(z);
+		activeChar.teleToLocation(x, y, z);
 		activeChar.sendMessage("You have been teleported to " + coords);
 		showMainPage(client);
 	}
@@ -869,11 +864,7 @@ public class AdminCommands extends Thread
 			final String z1 = st.nextToken();
 			final int z = Integer.parseInt(z1);
 			player.sendMessage("Admin is teleporting you.");
-			final TeleportToLocation tele = new TeleportToLocation(player, x, y, z);
-			player.sendPacket(tele);
-			player.setX(x);
-			player.setY(y);
-			player.setZ(z);
+			player.teleToLocation(x, y, z);
 			activeChar.sendMessage("Character " + player.getName() + " teleported to " + x + " " + y + " " + z);
 		}
 		showMainPage(client);
@@ -889,14 +880,7 @@ public class AdminCommands extends Thread
 		}
 		else
 		{
-			final int x = player.getX();
-			final int y = player.getY();
-			final int z = player.getZ();
-			final TeleportToLocation tele = new TeleportToLocation(activeChar, x, y, z);
-			activeChar.sendPacket(tele);
-			activeChar.setX(x);
-			activeChar.setY(y);
-			activeChar.setZ(z);
+			player.teleToLocation(player.getX(), player.getY(), player.getZ());
 			activeChar.sendMessage("You have teleported to character " + player.getName() + ".");
 		}
 		showMainPage(client);

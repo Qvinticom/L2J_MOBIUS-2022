@@ -45,6 +45,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.StopMove;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2jmobius.gameserver.network.serverpackets.TeleportToLocation;
 import org.l2jmobius.gameserver.templates.Weapon;
 import org.l2jmobius.util.Rnd;
 
@@ -1552,4 +1553,23 @@ public abstract class Creature extends WorldObject
 		}
 	}
 	
+	public void teleToLocation(int x, int y, int z)
+	{
+		final TeleportToLocation teleportToLocation = new TeleportToLocation(this, x, y, z);
+		sendPacket(teleportToLocation);
+		broadcastPacket(teleportToLocation);
+		World.getInstance().removeVisibleObject(this);
+		removeAllKnownObjects();
+		setX(x);
+		setY(y);
+		setZ(z);
+		try
+		{
+			Thread.sleep(2000);
+		}
+		catch (InterruptedException e)
+		{
+		}
+		World.getInstance().addVisibleObject(this);
+	}
 }

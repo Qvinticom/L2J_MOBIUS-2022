@@ -21,10 +21,8 @@ import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.data.TeleportLocationTable;
 import org.l2jmobius.gameserver.model.TeleportLocation;
-import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import org.l2jmobius.gameserver.network.serverpackets.TeleportToLocation;
 import org.l2jmobius.gameserver.templates.Npc;
 
 public class TeleporterInstance extends NpcInstance
@@ -69,21 +67,7 @@ public class TeleporterInstance extends NpcInstance
 			if (player.getAdena() >= list.getPrice())
 			{
 				player.reduceAdena(list.getPrice());
-				final TeleportToLocation Tloc = new TeleportToLocation(player, list.getLocX(), list.getLocY(), list.getLocZ());
-				player.sendPacket(Tloc);
-				World.getInstance().removeVisibleObject(player);
-				player.removeAllKnownObjects();
-				player.setX(list.getLocX());
-				player.setY(list.getLocY());
-				player.setZ(list.getLocZ());
-				try
-				{
-					Thread.sleep(2000L);
-				}
-				catch (InterruptedException e)
-				{
-				}
-				World.getInstance().addVisibleObject(player);
+				player.teleToLocation(list.getLocX(), list.getLocY(), list.getLocZ());
 			}
 			else
 			{

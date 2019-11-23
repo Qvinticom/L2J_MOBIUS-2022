@@ -21,14 +21,12 @@ import org.l2jmobius.gameserver.data.MapRegionTable;
 import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.model.Skill;
-import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUser;
 import org.l2jmobius.gameserver.network.serverpackets.SetupGauge;
 import org.l2jmobius.gameserver.network.serverpackets.StopMove;
-import org.l2jmobius.gameserver.network.serverpackets.TeleportToLocation;
 
 public class ScrollOfEscape implements IItemHandler
 {
@@ -64,22 +62,7 @@ public class ScrollOfEscape implements IItemHandler
 		activeChar.broadcastPacket(sm);
 		final ActionFailed af = new ActionFailed();
 		activeChar.sendPacket(af);
-		World.getInstance().removeVisibleObject(activeChar);
-		activeChar.removeAllKnownObjects();
-		final TeleportToLocation teleport = new TeleportToLocation(activeChar, townCords[0], townCords[1], townCords[2]);
-		activeChar.sendPacket(teleport);
-		activeChar.broadcastPacket(teleport);
-		activeChar.setX(townCords[0]);
-		activeChar.setY(townCords[1]);
-		activeChar.setZ(townCords[2]);
-		try
-		{
-			Thread.sleep(2000L);
-		}
-		catch (InterruptedException e)
-		{
-			// empty catch block
-		}
+		activeChar.teleToLocation(townCords[0], townCords[1], townCords[2]);
 		return 1;
 	}
 	

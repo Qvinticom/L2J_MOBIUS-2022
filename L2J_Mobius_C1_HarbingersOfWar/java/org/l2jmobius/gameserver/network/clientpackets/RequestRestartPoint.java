@@ -20,7 +20,6 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import java.io.IOException;
 
 import org.l2jmobius.gameserver.data.MapRegionTable;
-import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.ClientThread;
 import org.l2jmobius.gameserver.network.Connection;
@@ -28,7 +27,6 @@ import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.Revive;
 import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import org.l2jmobius.gameserver.network.serverpackets.StopMove;
-import org.l2jmobius.gameserver.network.serverpackets.TeleportToLocation;
 
 public class RequestRestartPoint extends ClientBasePacket
 {
@@ -45,25 +43,10 @@ public class RequestRestartPoint extends ClientBasePacket
 		final ActionFailed actionFailed = new ActionFailed();
 		con.sendPacket(actionFailed);
 		activeChar.broadcastPacket(stopMove);
-		final TeleportToLocation teleport = new TeleportToLocation(activeChar, townCords[0], townCords[1], townCords[2]);
-		activeChar.sendPacket(teleport);
-		World.getInstance().removeVisibleObject(activeChar);
-		activeChar.removeAllKnownObjects();
-		activeChar.setX(townCords[0]);
-		activeChar.setY(townCords[1]);
-		activeChar.setZ(townCords[2]);
+		activeChar.teleToLocation(townCords[0], townCords[1], townCords[2]);
 		activeChar.setCurrentHp(0.6 * activeChar.getMaxHp());
 		activeChar.setCurrentMp(0.6 * activeChar.getMaxMp());
 		final Revive revive = new Revive(activeChar);
-		try
-		{
-			Thread.sleep(2000L);
-		}
-		catch (InterruptedException e)
-		{
-			// empty catch block
-		}
-		World.getInstance().addVisibleObject(activeChar);
 		final SocialAction sa = new SocialAction(activeChar.getObjectId(), 15);
 		activeChar.broadcastPacket(sa);
 		activeChar.sendPacket(sa);

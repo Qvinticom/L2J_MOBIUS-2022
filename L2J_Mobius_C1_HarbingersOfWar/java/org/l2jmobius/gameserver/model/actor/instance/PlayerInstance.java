@@ -1834,7 +1834,8 @@ public class PlayerInstance extends Creature
 			// TODO: Check for more?
 			if (((regionX == 18) && (regionY == 19)) // School of Dark Arts
 				|| ((regionX == 18) && (regionY == 23)) // Forgotten Temple
-				|| ((regionX == 19) && (regionY == 23)) // Ant Nest
+				|| ((regionX == 19) && (regionY == 23)) // Wastelands - Ant Nest
+				|| ((regionX == 19) && (regionY == 24)) // Wastelands - Southern Entrance
 				|| ((regionX == 20) && (regionY == 18)) // Dark Elf Village
 				|| ((regionX == 20) && (regionY == 21)) // Cruma Tower
 				|| ((regionX == 21) && (regionY == 18)) // Sea of Spores
