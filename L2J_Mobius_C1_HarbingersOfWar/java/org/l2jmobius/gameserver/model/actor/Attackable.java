@@ -17,8 +17,6 @@
  */
 package org.l2jmobius.gameserver.model.actor;
 
-import java.io.PrintWriter;
-import java.io.StringWriter;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -438,13 +436,9 @@ public class Attackable extends NpcInstance
 					_currentAIAttackTask.cancel();
 				}
 			}
-			catch (Throwable e)
+			catch (Exception e)
 			{
-				_log.warning(getObjectId() + ": Problem occured in AiAttackTask:" + e);
-				StringWriter pw = new StringWriter();
-				PrintWriter prw = new PrintWriter(pw);
-				e.printStackTrace(prw);
-				_log.severe(pw.toString());
+				_log.severe(e.toString());
 			}
 		}
 	}
@@ -467,13 +461,9 @@ public class Attackable extends NpcInstance
 				int y1 = (getY() + Rnd.get(500)) - 250;
 				moveTo(x1, y1, getZ(), 0);
 			}
-			catch (Throwable e)
+			catch (Exception e)
 			{
-				_log.warning(getObjectId() + ": Problem occured in AiTask:" + e);
-				StringWriter pw = new StringWriter();
-				PrintWriter prw = new PrintWriter(pw);
-				e.printStackTrace(prw);
-				_log.severe(pw.toString());
+				_log.severe(e.toString());
 			}
 		}
 	}

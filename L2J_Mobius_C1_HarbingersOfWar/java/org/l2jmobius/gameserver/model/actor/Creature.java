@@ -17,8 +17,6 @@
  */
 package org.l2jmobius.gameserver.model.actor;
 
-import java.io.PrintWriter;
-import java.io.StringWriter;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -1433,12 +1431,9 @@ public abstract class Creature extends WorldObject
 					}
 				}
 			}
-			catch (Throwable e)
+			catch (Exception e)
 			{
-				StringWriter pw = new StringWriter();
-				PrintWriter prw = new PrintWriter(pw);
-				e.printStackTrace(prw);
-				_log.severe(pw.toString());
+				_log.severe(e.toString());
 			}
 		}
 	}
@@ -1470,12 +1465,9 @@ public abstract class Creature extends WorldObject
 					}
 				}
 			}
-			catch (Throwable e)
+			catch (Exception e)
 			{
-				StringWriter pw = new StringWriter();
-				PrintWriter prw = new PrintWriter(pw);
-				e.printStackTrace(prw);
-				_log.severe(pw.toString());
+				_log.severe(e.toString());
 			}
 		}
 	}
@@ -1506,12 +1498,9 @@ public abstract class Creature extends WorldObject
 			{
 				_instance.onHitTimer(_target, _damage, _crit, _miss, _soulshot);
 			}
-			catch (Throwable e)
+			catch (Exception e)
 			{
-				StringWriter pw = new StringWriter();
-				PrintWriter prw = new PrintWriter(pw);
-				e.printStackTrace(prw);
-				_log.severe(pw.toString());
+				_log.severe(e.toString());
 			}
 		}
 	}
@@ -1532,12 +1521,9 @@ public abstract class Creature extends WorldObject
 			{
 				_instance.onAttackTimer();
 			}
-			catch (Throwable e)
+			catch (Exception e)
 			{
-				StringWriter pw = new StringWriter();
-				PrintWriter prw = new PrintWriter(pw);
-				e.printStackTrace(prw);
-				_log.severe(pw.toString());
+				_log.severe(e.toString());
 			}
 		}
 	}
@@ -1558,12 +1544,9 @@ public abstract class Creature extends WorldObject
 			{
 				_instance.onTargetReached();
 			}
-			catch (Throwable e)
+			catch (Exception e)
 			{
-				StringWriter pw = new StringWriter();
-				PrintWriter prw = new PrintWriter(pw);
-				e.printStackTrace(prw);
-				_log.severe(pw.toString());
+				_log.severe(e.toString());
 			}
 			_currentMoveTask = null;
 		}
