@@ -42,9 +42,7 @@ public class RequestGiveNickName extends ClientBasePacket
 			{
 				SystemMessage sm = new SystemMessage(271);
 				activeChar.sendPacket(sm);
-				sm = new SystemMessage(614);
-				sm.addString("But you can do it freely");
-				sm.addString("for now ;)");
+				activeChar.sendMessage("But you can do it freely for now ;)");
 				activeChar.sendPacket(sm);
 			}
 			if ((member = World.getInstance().getPlayer(target)).getClanId() == activeChar.getClanId())

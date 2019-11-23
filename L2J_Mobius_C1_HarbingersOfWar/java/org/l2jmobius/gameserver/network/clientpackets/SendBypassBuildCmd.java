@@ -23,7 +23,6 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.ClientThread;
 import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
-import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class SendBypassBuildCmd extends ClientBasePacket
 {
@@ -74,18 +73,12 @@ public class SendBypassBuildCmd extends ClientBasePacket
 				if (activeChar.isInvul())
 				{
 					activeChar.setIsInvul(false);
-					String text = "Your status is set back to mortal.";
-					SystemMessage sm = new SystemMessage(614);
-					sm.addString(text);
-					activeChar.sendPacket(sm);
+					activeChar.sendMessage("Your status is set back to mortal.");
 				}
 				else
 				{
 					activeChar.setIsInvul(true);
-					String text = "You are now Invulnerable";
-					SystemMessage sm = new SystemMessage(614);
-					sm.addString(text);
-					activeChar.sendPacket(sm);
+					activeChar.sendMessage("You are now Invulnerable.");
 				}
 			}
 		}

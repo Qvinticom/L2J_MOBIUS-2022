@@ -48,7 +48,6 @@ import org.l2jmobius.gameserver.network.serverpackets.LeaveWorld;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUser;
 import org.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
-import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.TeleportToLocation;
 import org.l2jmobius.gameserver.templates.Npc;
 
@@ -72,7 +71,6 @@ public class AdminCommands extends Thread
 	
 	public void handleCommands(ClientThread client, String command)
 	{
-		SystemMessage sm;
 		StringTokenizer st;
 		NpcInstance target;
 		String id;
@@ -214,9 +212,7 @@ public class AdminCommands extends Thread
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
-				sm = new SystemMessage(614);
-				sm.addString("Wrong or no Co-ordinates given.");
-				activeChar.sendPacket(sm);
+				activeChar.sendMessage("Wrong or no Co-ordinates given.");
 				showMainPage(client);
 			}
 		}
@@ -263,9 +259,7 @@ public class AdminCommands extends Thread
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
-				sm = new SystemMessage(614);
-				sm.addString("You didnt enter a character name to find.");
-				activeChar.sendPacket(sm);
+				activeChar.sendMessage("You didnt enter a character name to find.");
 				listCharacters(client, 0);
 			}
 		}
@@ -278,9 +272,7 @@ public class AdminCommands extends Thread
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
-				sm = new SystemMessage(614);
-				sm.addString("Error while adding Exp-Sp.");
-				activeChar.sendPacket(sm);
+				activeChar.sendMessage("Error while adding Exp-Sp.");
 				listCharacters(client, 0);
 			}
 		}
@@ -293,9 +285,7 @@ public class AdminCommands extends Thread
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
-				sm = new SystemMessage(614);
-				sm.addString("Error while adding skill.");
-				activeChar.sendPacket(sm);
+				activeChar.sendMessage("Error while adding skill.");
 				listCharacters(client, 0);
 			}
 		}
@@ -309,9 +299,7 @@ public class AdminCommands extends Thread
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
-				sm = new SystemMessage(614);
-				sm.addString("Error while removing skill.");
-				activeChar.sendPacket(sm);
+				activeChar.sendMessage("Error while removing skill.");
 				listCharacters(client, 0);
 			}
 		}
@@ -324,9 +312,7 @@ public class AdminCommands extends Thread
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
-				sm = new SystemMessage(614);
-				sm.addString("Error while modifying character.");
-				activeChar.sendPacket(sm);
+				activeChar.sendMessage("Error while modifying character.");
 				listCharacters(client, 0);
 			}
 		}
@@ -339,9 +325,7 @@ public class AdminCommands extends Thread
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
-				sm = new SystemMessage(614);
-				sm.addString("Wrong or no Co-ordinates given.");
-				activeChar.sendPacket(sm);
+				activeChar.sendMessage("Wrong or no Co-ordinates given.");
 				showTeleportCharWindow(client);
 			}
 		}
@@ -385,9 +369,7 @@ public class AdminCommands extends Thread
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
-				sm = new SystemMessage(614);
-				sm.addString("You didnt enter the seconds untill server shutdowns.");
-				activeChar.sendPacket(sm);
+				activeChar.sendMessage("You didnt enter the seconds untill server shutdowns.");
 				serverShutdown(client, 0);
 			}
 		}
@@ -426,9 +408,7 @@ public class AdminCommands extends Thread
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
-				sm = new SystemMessage(614);
-				sm.addString("Error while creating item.");
-				activeChar.sendPacket(sm);
+				activeChar.sendMessage("Error while creating item.");
 			}
 		}
 	}
@@ -486,10 +466,10 @@ public class AdminCommands extends Thread
 		activeChar.sendPacket(adminReply);
 	}
 	
-	private void teleportTo(ClientThread client, String Cords)
+	private void teleportTo(ClientThread client, String coords)
 	{
 		PlayerInstance activeChar = client.getActiveChar();
-		StringTokenizer st = new StringTokenizer(Cords);
+		StringTokenizer st = new StringTokenizer(coords);
 		String x1 = st.nextToken();
 		int x = Integer.parseInt(x1);
 		String y1 = st.nextToken();
@@ -501,9 +481,7 @@ public class AdminCommands extends Thread
 		activeChar.setX(x);
 		activeChar.setY(y);
 		activeChar.setZ(z);
-		SystemMessage sm = new SystemMessage(614);
-		sm.addString("You have been teleported to " + Cords);
-		activeChar.sendPacket(sm);
+		activeChar.sendMessage("You have been teleported to " + coords);
 		showMainPage(client);
 	}
 	
@@ -517,9 +495,7 @@ public class AdminCommands extends Thread
 		}
 		ItemList il = new ItemList(activeChar, true);
 		activeChar.sendPacket(il);
-		SystemMessage sm = new SystemMessage(614);
-		sm.addString("You have spawned " + num + " item(s) number " + id + " in your inventory.");
-		activeChar.sendPacket(sm);
+		activeChar.sendMessage("You have spawned " + num + " item(s) number " + id + " in your inventory.");
 		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		StringBuffer replyMSG = new StringBuffer("<html><title>Item Creation Complete(I Hope)</title>");
 		replyMSG.append("<body>");
@@ -672,13 +648,9 @@ public class AdminCommands extends Thread
 			String sp = st.nextToken();
 			int expval = Integer.parseInt(exp);
 			int spval = Integer.parseInt(sp);
-			SystemMessage sm = new SystemMessage(614);
-			sm.addString("Admin is adding you " + expval + " xp and " + spval + " sp.");
-			player.sendPacket(sm);
+			player.sendMessage("Admin is adding you " + expval + " xp and " + spval + " sp.");
 			player.addExpAndSp(expval, spval);
-			SystemMessage smA = new SystemMessage(614);
-			smA.addString("Added " + expval + " xp and " + spval + " sp to " + player.getName() + ".");
-			activeChar.sendPacket(smA);
+			activeChar.sendMessage("Added " + expval + " xp and " + spval + " sp to " + player.getName() + ".");
 			showCharacterList(client, _characterToManipulate);
 		}
 	}
@@ -712,9 +684,7 @@ public class AdminCommands extends Thread
 			int pvpflagval = Integer.parseInt(pvpflag);
 			int pvpkillsval = Integer.parseInt(pvpkills);
 			int classidval = Integer.parseInt(classid);
-			SystemMessage sm = new SystemMessage(614);
-			sm.addString("Admin has changed your stats. Hp: " + hpval + " HpMax: " + hpmaxval + " Mp: " + mpval + " MpMax: " + mpmaxval + " MaxLoad: " + loadval + " Karma: " + karmaval + " Pvp: " + pvpflagval + " / " + pvpkillsval + " ClassId: " + classidval);
-			player.sendPacket(sm);
+			player.sendMessage("Admin has changed your stats. Hp: " + hpval + " HpMax: " + hpmaxval + " Mp: " + mpval + " MpMax: " + mpmaxval + " MaxLoad: " + loadval + " Karma: " + karmaval + " Pvp: " + pvpflagval + " / " + pvpkillsval + " ClassId: " + classidval);
 			player.setCurrentHp(hpval);
 			player.setCurrentMp(mpval);
 			player.setMaxHp(hpmaxval);
@@ -732,9 +702,7 @@ public class AdminCommands extends Thread
 			su.addAttribute(StatusUpdate.KARMA, karmaval);
 			su.addAttribute(StatusUpdate.PVP_FLAG, pvpflagval);
 			player.sendPacket(su);
-			SystemMessage smA = new SystemMessage(614);
-			smA.addString("Changed stats of " + player.getName() + ". " + " Hp: " + hpval + " HpMax: " + hpmaxval + " Mp: " + mpval + " MpMax: " + mpmaxval + " MaxLoad: " + loadval + " Karma: " + karmaval + " Pvp: " + pvpflagval + " / " + pvpkillsval + " ClassId: " + classidval);
-			activeChar.sendPacket(smA);
+			activeChar.sendMessage("Changed stats of " + player.getName() + ". " + " Hp: " + hpval + " HpMax: " + hpmaxval + " Mp: " + mpval + " MpMax: " + mpmaxval + " MaxLoad: " + loadval + " Karma: " + karmaval + " Pvp: " + pvpflagval + " / " + pvpkillsval + " ClassId: " + classidval);
 			showCharacterList(client, _characterToManipulate);
 		}
 	}
@@ -795,15 +763,11 @@ public class AdminCommands extends Thread
 		PlayerInstance player = World.getInstance().getPlayer(_characterToManipulate);
 		if (player.getName().equals(activeChar.getName()))
 		{
-			SystemMessage sm = new SystemMessage(614);
-			sm.addString("You cannot logout your character.");
-			activeChar.sendPacket(sm);
+			activeChar.sendMessage("You cannot logout your character.");
 		}
 		else
 		{
-			SystemMessage sm = new SystemMessage(614);
-			sm.addString("Character " + player.getName() + " disconnected from server.");
-			activeChar.sendPacket(sm);
+			activeChar.sendMessage("Character " + player.getName() + " disconnected from server.");
 			LeaveWorld ql = new LeaveWorld();
 			player.sendPacket(ql);
 			try
@@ -893,9 +857,7 @@ public class AdminCommands extends Thread
 		PlayerInstance player = World.getInstance().getPlayer(_characterToManipulate);
 		if (player.getName().equals(activeChar.getName()))
 		{
-			SystemMessage sm = new SystemMessage(614);
-			sm.addString("You cannot teleport your character.");
-			player.sendPacket(sm);
+			player.sendMessage("You cannot teleport your character.");
 		}
 		else
 		{
@@ -906,17 +868,13 @@ public class AdminCommands extends Thread
 			int y = Integer.parseInt(y1);
 			String z1 = st.nextToken();
 			int z = Integer.parseInt(z1);
-			SystemMessage sm = new SystemMessage(614);
-			sm.addString("Admin is teleporting you.");
-			player.sendPacket(sm);
+			player.sendMessage("Admin is teleporting you.");
 			TeleportToLocation tele = new TeleportToLocation(player, x, y, z);
 			player.sendPacket(tele);
 			player.setX(x);
 			player.setY(y);
 			player.setZ(z);
-			SystemMessage smA = new SystemMessage(614);
-			smA.addString("Character " + player.getName() + " teleported to " + x + " " + y + " " + z);
-			activeChar.sendPacket(smA);
+			activeChar.sendMessage("Character " + player.getName() + " teleported to " + x + " " + y + " " + z);
 		}
 		showMainPage(client);
 	}
@@ -927,9 +885,7 @@ public class AdminCommands extends Thread
 		PlayerInstance player = World.getInstance().getPlayer(_characterToManipulate);
 		if (player.getName().equals(activeChar.getName()))
 		{
-			SystemMessage sm = new SystemMessage(614);
-			sm.addString("You cannot self teleport.");
-			activeChar.sendPacket(sm);
+			activeChar.sendMessage("You cannot self teleport.");
 		}
 		else
 		{
@@ -941,9 +897,7 @@ public class AdminCommands extends Thread
 			activeChar.setX(x);
 			activeChar.setY(y);
 			activeChar.setZ(z);
-			SystemMessage sm = new SystemMessage(614);
-			sm.addString("You have teleported to character " + player.getName() + ".");
-			activeChar.sendPacket(sm);
+			activeChar.sendMessage("You have teleported to character " + player.getName() + ".");
 		}
 		showMainPage(client);
 	}
@@ -984,15 +938,11 @@ public class AdminCommands extends Thread
 			spawn.setRespawnDelay(15);
 			SpawnTable.getInstance().addNewSpawn(spawn);
 			spawn.init();
-			SystemMessage sm = new SystemMessage(614);
-			sm.addString("Created " + template1.getName() + " on " + targetPlayer.getName() + ".");
-			activeChar.sendPacket(sm);
+			activeChar.sendMessage("Created " + template1.getName() + " on " + targetPlayer.getName() + ".");
 		}
 		catch (Exception e)
 		{
-			SystemMessage sm = new SystemMessage(614);
-			sm.addString("Target player is offline.");
-			activeChar.sendPacket(sm);
+			activeChar.sendMessage("Target player is offline.");
 		}
 		showHelpPage(client, "spawns.htm");
 	}
@@ -1223,9 +1173,7 @@ public class AdminCommands extends Thread
 		PlayerInstance player = World.getInstance().getPlayer(_characterToManipulate);
 		if (player.getName().equals(activeChar.getName()))
 		{
-			SystemMessage sm = new SystemMessage(614);
-			sm.addString("There is no point in doing it on your character...");
-			player.sendPacket(sm);
+			player.sendMessage("There is no point in doing it on your character...");
 		}
 		else
 		{
@@ -1239,9 +1187,7 @@ public class AdminCommands extends Thread
 			{
 				activeChar.addSkill(skill);
 			}
-			SystemMessage smA = new SystemMessage(614);
-			smA.addString("You now have all the skills of  " + player.getName() + ".");
-			activeChar.sendPacket(smA);
+			activeChar.sendMessage("You now have all the skills of  " + player.getName() + ".");
 		}
 		showSkillsPage(client);
 	}
@@ -1252,9 +1198,7 @@ public class AdminCommands extends Thread
 		PlayerInstance player = World.getInstance().getPlayer(_characterToManipulate);
 		if (adminSkills == null)
 		{
-			SystemMessage smA = new SystemMessage(614);
-			smA.addString("You must first get the skills of someone to do this.");
-			activeChar.sendPacket(smA);
+			activeChar.sendMessage("You must first get the skills of someone to do this.");
 		}
 		else
 		{
@@ -1275,12 +1219,8 @@ public class AdminCommands extends Thread
 			{
 				activeChar.addSkill(skill);
 			}
-			SystemMessage sm = new SystemMessage(614);
-			sm.addString("[GM]" + activeChar.getName() + " has updated your skills.");
-			player.sendPacket(sm);
-			SystemMessage smA = new SystemMessage(614);
-			smA.addString("You now have all your skills back.");
-			activeChar.sendPacket(smA);
+			player.sendMessage("[GM]" + activeChar.getName() + " has updated your skills.");
+			activeChar.sendMessage("You now have all your skills back.");
 			adminSkills = null;
 		}
 		showSkillsPage(client);
@@ -1304,18 +1244,13 @@ public class AdminCommands extends Thread
 			Skill skill = SkillTable.getInstance().getInfo(idval, levelval);
 			if (skill != null)
 			{
-				SystemMessage sm = new SystemMessage(614);
-				sm.addString("Admin gave you the skill " + skill.getName() + ".");
-				player.sendPacket(sm);
+				player.sendMessage("Admin gave you the skill " + skill.getName() + ".");
 				player.addSkill(skill);
-				SystemMessage smA = new SystemMessage(614);
-				smA.addString("You gave the skill " + skill.getName() + " to " + player.getName() + ".");
-				activeChar.sendPacket(smA);
+				activeChar.sendMessage("You gave the skill " + skill.getName() + " to " + player.getName() + ".");
 			}
 			else
 			{
-				SystemMessage smA = new SystemMessage(614);
-				smA.addString("Error: there is no such skill.");
+				activeChar.sendMessage("Error: there is no such skill.");
 			}
 			showSkillsPage(client);
 		}
@@ -1328,18 +1263,13 @@ public class AdminCommands extends Thread
 		Skill skill = SkillTable.getInstance().getInfo(idval, player.getSkillLevel(idval));
 		if (skill != null)
 		{
-			SystemMessage sm = new SystemMessage(614);
-			sm.addString("Admin removed the skill " + skill.getName() + ".");
-			player.sendPacket(sm);
+			player.sendMessage("Admin removed the skill " + skill.getName() + ".");
 			player.removeSkill(skill);
-			SystemMessage smA = new SystemMessage(614);
-			smA.addString("You removed the skill " + skill.getName() + " from " + player.getName() + ".");
-			activeChar.sendPacket(smA);
+			activeChar.sendMessage("You removed the skill " + skill.getName() + " from " + player.getName() + ".");
 		}
 		else
 		{
-			SystemMessage smA = new SystemMessage(614);
-			smA.addString("Error: there is no such skill.");
+			activeChar.sendMessage("Error: there is no such skill.");
 		}
 		removeSkillsPage(client);
 	}

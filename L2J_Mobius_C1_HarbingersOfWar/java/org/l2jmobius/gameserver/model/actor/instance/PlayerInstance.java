@@ -1499,9 +1499,7 @@ public class PlayerInstance extends Creature
 		
 		if (SkillHandler.getInstance().getSkillHandler(skill.getId()) == null)
 		{
-			SystemMessage sm = new SystemMessage(614);
-			sm.addString("This skill is not implemented yet.");
-			sendPacket(sm);
+			sendMessage("This skill is not implemented yet.");
 			return;
 		}
 		if (getCurrentMp() < skill.getMpConsume())

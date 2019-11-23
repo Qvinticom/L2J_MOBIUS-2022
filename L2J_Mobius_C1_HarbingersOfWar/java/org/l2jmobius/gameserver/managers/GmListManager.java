@@ -22,7 +22,6 @@ import java.util.List;
 
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.serverpackets.ServerBasePacket;
-import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class GmListManager
 {
@@ -56,19 +55,14 @@ public class GmListManager
 	{
 		if (_gmList.isEmpty())
 		{
-			SystemMessage sm = new SystemMessage(614);
-			sm.addString("No GM online");
+			player.sendMessage("No GM online.");
 		}
 		else
 		{
-			SystemMessage sm = new SystemMessage(614);
-			sm.addString("" + _gmList.size() + " GM's online:");
-			player.sendPacket(sm);
+			player.sendMessage(_gmList.size() + " GM's online:");
 			for (int i = 0; i < _gmList.size(); ++i)
 			{
-				sm = new SystemMessage(614);
-				sm.addString(_gmList.get(i).getName());
-				player.sendPacket(sm);
+				player.sendMessage(_gmList.get(i).getName());
 			}
 		}
 	}
