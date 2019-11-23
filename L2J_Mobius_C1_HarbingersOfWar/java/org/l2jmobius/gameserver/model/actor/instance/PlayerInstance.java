@@ -870,14 +870,14 @@ public class PlayerInstance extends Creature
 	}
 	
 	@Override
-	public void reduceCurrentHp(int ammount, Creature attacker)
+	public void reduceCurrentHp(int amount, Creature attacker)
 	{
 		if (isInvul())
 		{
 			return;
 		}
 		
-		super.reduceCurrentHp(ammount, attacker);
+		super.reduceCurrentHp(amount, attacker);
 		if (isDead() && (getPet() != null))
 		{
 			getPet().unSummon(this);
@@ -899,7 +899,7 @@ public class PlayerInstance extends Creature
 		{
 			smsg.addString(attacker.getName());
 		}
-		smsg.addNumber(ammount);
+		smsg.addNumber(amount);
 		sendPacket(smsg);
 		
 		if (!isDead())
