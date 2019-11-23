@@ -1223,10 +1223,10 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="156" /> <!-- Hand Axe -->
-		<acquire exp="264" sp="7" />
+		<acquire exp="265" sp="8" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="38.17805" hpRegen="2" mp="84.075" mpRegen="0.9" />
-			<attack physical="13.52471" magical="9.23562" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<vitals hp="98.115" hpRegen="2" mp="85.785" mpRegen="0.9" />
+			<attack physical="13.52471" magical="9.23562" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="53.53373" magical="39.17366" />
 			<speed>
 				<walk ground="45" />
@@ -1277,7 +1277,7 @@
 		<equipment rhand="4" /> <!-- rhand: Club -->
 		<acquire exp="309" sp="10" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="44.3358" hpRegen="2" mp="92.04" mpRegen="0.9" />
+			<vitals hp="113.94" hpRegen="2" mp="93.912" mpRegen="0.9" />
 			<attack physical="14.80956" magical="10.11301" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="55.51894" magical="40.62635" />
 			<speed>

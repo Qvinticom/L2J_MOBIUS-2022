@@ -132,10 +132,10 @@
 		</parameters>
 		<race>FAIRY</race>
 		<sex>MALE</sex>
-		<acquire exp="264" sp="7" />
+		<acquire exp="265" sp="8" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="38.17805" hpRegen="2" mp="84.075" mpRegen="0.9" />
-			<attack physical="13.52471" magical="9.23562" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<vitals hp="98.115" hpRegen="2" mp="85.785" mpRegen="0.9" />
+			<attack physical="13.52471" magical="9.23562" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="53.53373" magical="39.17366" />
 			<speed>
 				<walk ground="60" />
@@ -184,11 +184,11 @@
 		</parameters>
 		<race>FAIRY</race>
 		<sex>MALE</sex>
-		<acquire exp="309" sp="9" />
+		<acquire exp="310" sp="10" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="44.3358" hpRegen="2" mp="92.04" mpRegen="0.9" />
-			<attack physical="16.290516" magical="10.11301" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="50.47176364" magical="40.62635" />
+			<vitals hp="113.94" hpRegen="2" mp="93.912" mpRegen="0.9" />
+			<attack physical="14.80956" magical="10.11301" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="55.51894" magical="40.62635" />
 			<speed>
 				<walk ground="60" />
 				<run ground="80" />
@@ -232,7 +232,6 @@
 		</dropLists>
 	</npc>
 	<npc id="20006" level="8" type="Monster" name="Orc Archer">
-	<!-- L2wiki: https://l2wiki.com/classic/Orc_Archer -->
 		<parameters>
 			<param name="MoveAroundSocial" value="104" />
 			<param name="MoveAroundSocial1" value="104" />
@@ -243,10 +242,10 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="14" /> <!-- Bow -->
-		<acquire exp="352" sp="10" />
+		<acquire exp="353" sp="11" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="50.98617" hpRegen="2" mp="100.005" mpRegen="0.9" />
-			<attack physical="36.0000663" magical="11.06363" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
+			<vitals hp="131.031" hpRegen="2" mp="102.039" mpRegen="0.9" />
+			<attack physical="16.20165" magical="11.06363" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="57.56203" magical="42.1214" />
 			<speed>
 				<walk ground="45" />
@@ -5362,7 +5361,6 @@
 		</collision>
 	</npc>
 	<npc id="20092" level="10" type="Monster" name="Monster Eye">
-		<!-- L2wiki: https://l2wiki.com/classic/Monster_Eye -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -5372,16 +5370,16 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<acquire exp="449" sp="13" />
+		<acquire exp="450" sp="14" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="66.99632" hpRegen="2" mp="117.705" mpRegen="0.9" />
+			<vitals hp="172.176" hpRegen="2" mp="120.099" mpRegen="0.9" />
+			<attack physical="19.33758" magical="13.20506" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="61.82527" magical="45.24105" />
 			<speed>
 				<walk ground="90" />
 				<run ground="134" />
 			</speed>
 			<hitTime>300</hitTime>
-			<attack physical="19.33758" magical="13.20506" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="61.82527" magical="45.24105" />
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
@@ -5428,10 +5426,10 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="1" /> <!-- Short Sword -->
-		<acquire exp="441" sp="13" />
+		<acquire exp="441" sp="14" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="66.99632" hpRegen="2" mp="117.705" mpRegen="0.9" />
-			<attack physical="19.33758" magical="13.20506" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<vitals hp="172.176" hpRegen="2" mp="120.099" mpRegen="0.9" />
+			<attack physical="19.33758" magical="13.20506" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="61.82527" magical="45.24105" />
 			<speed>
 				<walk ground="45" />
@@ -5520,7 +5518,6 @@
 		</collision>
 	</npc>
 	<npc id="20095" level="10" type="Monster" name="Vampire Bat">
-		<!-- L2wiki: https://l2wiki.com/classic/Vampire_Bat -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -5529,16 +5526,16 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<acquire exp="449" sp="13" />
+		<acquire exp="450" sp="14" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="66.99632" hpRegen="2" mp="117.705" mpRegen="0.9" />
+			<vitals hp="172.176" hpRegen="2" mp="120.099" mpRegen="0.9" />
+			<attack physical="19.33758" magical="13.20506" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="61.82527" magical="45.24105" />
 			<speed>
 				<walk ground="60" />
 				<run ground="80" />
 			</speed>
 			<hitTime>500</hitTime>
-			<attack physical="19.33758" magical="13.20506" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="61.82527" magical="45.24105" />
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
