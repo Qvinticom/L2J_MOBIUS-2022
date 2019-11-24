@@ -25,7 +25,9 @@ import org.l2jmobius.gameserver.data.SkillTreeTable;
 import org.l2jmobius.gameserver.model.ShortCut;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.SkillLearn;
+import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.actor.instance.TrainerInstance;
 import org.l2jmobius.gameserver.network.ClientThread;
 import org.l2jmobius.gameserver.network.serverpackets.AquireSkillList;
 import org.l2jmobius.gameserver.network.serverpackets.ShortCutRegister;
@@ -39,25 +41,47 @@ public class RequestAquireSkill extends ClientBasePacket
 	public RequestAquireSkill(byte[] rawPacket, ClientThread client) throws IOException
 	{
 		super(rawPacket);
-		final PlayerInstance player = client.getActiveChar();
 		final int id = readD();
 		final int level = readD();
+		
+		final PlayerInstance player = client.getActiveChar();
+		
+		// Prevent learning skills far from trainer.
+		if (!(player.getTarget() instanceof TrainerInstance))
+		{
+			return;
+		}
+		boolean found = false;
+		for (WorldObject object : player.getKnownObjects())
+		{
+			if ((object instanceof TrainerInstance) && (player.calculateDistance2D(object) < 250))
+			{
+				found = true;
+				break;
+			}
+		}
+		if (!found)
+		{
+			return;
+		}
+		
 		final Skill skill = SkillTable.getInstance().getInfo(id, level);
 		Collection<SkillLearn> skills = SkillTreeTable.getInstance().getAvailableSkills(player);
-		int _requiredSp = 0;
-		for (SkillLearn skill2 : skills)
+		
+		int requiredSp = 0;
+		for (SkillLearn skillLearn : skills)
 		{
-			if (skill2.getId() != id)
+			if (skillLearn.getId() != id)
 			{
 				continue;
 			}
-			_requiredSp = skill2.getSpCost();
+			requiredSp = skillLearn.getSpCost();
 			break;
 		}
-		if (player.getSp() >= _requiredSp)
+		if (player.getSp() >= requiredSp)
 		{
 			player.addSkill(skill);
-			player.setSp(player.getSp() - _requiredSp);
+			player.setSp(player.getSp() - requiredSp);
 			final StatusUpdate su = new StatusUpdate(player.getObjectId());
 			su.addAttribute(StatusUpdate.SP, player.getSp());
 			player.sendPacket(su);
@@ -79,14 +103,13 @@ public class RequestAquireSkill extends ClientBasePacket
 		}
 		else
 		{
-			final SystemMessage sm = new SystemMessage(SystemMessage.NOT_ENOUGH_SP_TO_LEARN_SKILL);
-			player.sendPacket(sm);
+			player.sendPacket(new SystemMessage(SystemMessage.NOT_ENOUGH_SP_TO_LEARN_SKILL));
 		}
 		skills = SkillTreeTable.getInstance().getAvailableSkills(player);
 		final AquireSkillList asl = new AquireSkillList();
-		for (SkillLearn skill2 : skills)
+		for (SkillLearn skillLearn : skills)
 		{
-			asl.addSkill(skill2.getId(), skill2.getLevel(), skill2.getLevel(), skill2.getSpCost(), 0);
+			asl.addSkill(skillLearn.getId(), skillLearn.getLevel(), skillLearn.getLevel(), skillLearn.getSpCost(), 0);
 		}
 		player.getNetConnection().sendPacket(asl);
 	}
