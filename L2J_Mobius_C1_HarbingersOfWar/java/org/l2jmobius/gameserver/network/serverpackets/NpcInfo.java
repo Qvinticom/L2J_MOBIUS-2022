@@ -44,7 +44,7 @@ public class NpcInfo extends ServerBasePacket
 			writeC(34);
 			writeD(_cha.getObjectId());
 			writeD(_cha.getNpcTemplate().getNpcId() + 1000000);
-			if (_cha.isAttackable())
+			if (_cha.isAutoAttackable())
 			{
 				writeD(1);
 			}

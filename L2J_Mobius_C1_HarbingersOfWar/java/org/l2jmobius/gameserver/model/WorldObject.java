@@ -32,7 +32,7 @@ public class WorldObject implements Serializable
 	private int _y;
 	private int _z;
 	protected Set<WorldObject> _knownObjects = ConcurrentHashMap.newKeySet();
-	private final Set<PlayerInstance> _knownPlayer = ConcurrentHashMap.newKeySet();
+	private final Set<PlayerInstance> _knownPlayers = ConcurrentHashMap.newKeySet();
 	
 	public int getObjectId()
 	{
@@ -87,7 +87,7 @@ public class WorldObject implements Serializable
 	}
 	
 	/**
-	 * Calculates the 2D distance between this WorldObject and given location.
+	 * Calculates the 2D distance between this WorldObject and given object.
 	 * @param obj the location object
 	 * @return distance between object and given location.
 	 */
@@ -109,7 +109,7 @@ public class WorldObject implements Serializable
 	}
 	
 	/**
-	 * Calculates 3D distance between this WorldObject and given location.
+	 * Calculates 3D distance between this WorldObject and given object.
 	 * @param obj the location object
 	 * @return distance between object and given location.
 	 */
@@ -143,7 +143,7 @@ public class WorldObject implements Serializable
 		_knownObjects.add(object);
 		if (object instanceof PlayerInstance)
 		{
-			_knownPlayer.add((PlayerInstance) object);
+			_knownPlayers.add((PlayerInstance) object);
 		}
 	}
 	
@@ -152,7 +152,7 @@ public class WorldObject implements Serializable
 		_knownObjects.remove(object);
 		if (object instanceof PlayerInstance)
 		{
-			_knownPlayer.remove(object);
+			_knownPlayers.remove(object);
 		}
 	}
 	
@@ -167,11 +167,83 @@ public class WorldObject implements Serializable
 	
 	public Set<PlayerInstance> getKnownPlayers()
 	{
-		return _knownPlayer;
+		return _knownPlayers;
 	}
 	
 	public PlayerInstance getActingPlayer()
 	{
 		return null;
+	}
+	
+	/**
+	 * Verify if object is instance of Attackable.
+	 * @return {@code true} if object is instance of Attackable, {@code false} otherwise
+	 */
+	public boolean isAttackable()
+	{
+		return false;
+	}
+	
+	/**
+	 * Verify if object is instance of Creature.
+	 * @return {@code true} if object is instance of Creature, {@code false} otherwise
+	 */
+	public boolean isCreature()
+	{
+		return false;
+	}
+	
+	/**
+	 * Verify if object is instance of DoorInstance.
+	 * @return {@code true} if object is instance of DoorInstance, {@code false} otherwise
+	 */
+	public boolean isDoor()
+	{
+		return false;
+	}
+	
+	/**
+	 * Verify if object is instance of ItemInstance.
+	 * @return {@code true} if object is instance of ItemInstance, {@code false} otherwise
+	 */
+	public boolean isItem()
+	{
+		return false;
+	}
+	
+	/**
+	 * Verify if object is instance of MonsterInstance.
+	 * @return {@code true} if object is instance of MonsterInstance, {@code false} otherwise
+	 */
+	public boolean isMonster()
+	{
+		return false;
+	}
+	
+	/**
+	 * Verify if object is instance of Npc.
+	 * @return {@code true} if object is instance of Npc, {@code false} otherwise
+	 */
+	public boolean isNpc()
+	{
+		return false;
+	}
+	
+	/**
+	 * Verify if object is instance of PetInstance.
+	 * @return {@code true} if object is instance of PetInstance, {@code false} otherwise
+	 */
+	public boolean isPet()
+	{
+		return false;
+	}
+	
+	/**
+	 * Verify if object is instance of PlayerInstance.
+	 * @return {@code true} if object is instance of PlayerInstance, {@code false} otherwise
+	 */
+	public boolean isPlayer()
+	{
+		return false;
 	}
 }

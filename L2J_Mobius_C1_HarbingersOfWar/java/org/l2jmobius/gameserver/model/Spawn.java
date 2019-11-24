@@ -184,11 +184,11 @@ public class Spawn
 			mob.setObjectId(IdFactory.getInstance().getNextId());
 			if (mob instanceof MonsterInstance)
 			{
-				mob.setAttackable(true);
+				mob.setAutoAttackable(true);
 			}
 			else
 			{
-				mob.setAttackable(false);
+				mob.setAutoAttackable(false);
 			}
 			if (getRandomx() > 0)
 			{

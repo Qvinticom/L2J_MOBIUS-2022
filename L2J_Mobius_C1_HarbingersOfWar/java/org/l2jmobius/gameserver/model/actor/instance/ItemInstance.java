@@ -134,4 +134,10 @@ public class ItemInstance extends WorldObject
 	{
 		_onTheGround = b;
 	}
+	
+	@Override
+	public boolean isItem()
+	{
+		return true;
+	}
 }

@@ -445,4 +445,10 @@ public class Attackable extends NpcInstance
 			moveTo(x1, y1, getZ(), 0);
 		}
 	}
+	
+	@Override
+	public boolean isAttackable()
+	{
+		return true;
+	}
 }

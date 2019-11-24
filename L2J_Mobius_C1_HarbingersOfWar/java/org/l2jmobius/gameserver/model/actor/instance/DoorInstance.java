@@ -71,4 +71,10 @@ public class DoorInstance extends WorldObject
 	{
 		_unknown = unknown;
 	}
+	
+	@Override
+	public boolean isDoor()
+	{
+		return true;
+	}
 }

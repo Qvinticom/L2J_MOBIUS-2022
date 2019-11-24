@@ -1894,6 +1894,12 @@ public class PlayerInstance extends Creature
 	}
 	
 	@Override
+	public boolean isPlayer()
+	{
+		return true;
+	}
+	
+	@Override
 	public PlayerInstance getActingPlayer()
 	{
 		return this;

@@ -1524,4 +1524,10 @@ public abstract class Creature extends WorldObject
 			World.getInstance().addVisibleObject(this);
 		}, 2000);
 	}
+	
+	@Override
+	public boolean isCreature()
+	{
+		return true;
+	}
 }

@@ -86,4 +86,10 @@ public class MonsterInstance extends Attackable
 	{
 		return !player.isInvul() && !player.isDead() && (Math.abs(getZ() - player.getZ()) <= 100);
 	}
+	
+	@Override
+	public boolean isMonster()
+	{
+		return true;
+	}
 }

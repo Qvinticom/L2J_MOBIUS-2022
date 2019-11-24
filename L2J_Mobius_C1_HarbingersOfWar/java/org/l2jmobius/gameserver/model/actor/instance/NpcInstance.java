@@ -87,14 +87,14 @@ public class NpcInstance extends Creature
 		return _npcTemplate;
 	}
 	
-	public boolean isAttackable()
+	public boolean isAutoAttackable()
 	{
 		return _attackable;
 	}
 	
-	public void setAttackable(boolean b)
+	public void setAutoAttackable(boolean value)
 	{
-		_attackable = b;
+		_attackable = value;
 	}
 	
 	public int getLeftHandItem()
@@ -130,7 +130,7 @@ public class NpcInstance extends Creature
 			player.setTarget(this);
 			final MyTargetSelected my = new MyTargetSelected(getObjectId(), player.getLevel() - getLevel());
 			player.sendPacket(my);
-			if (isAttackable())
+			if (isAutoAttackable())
 			{
 				final StatusUpdate su = new StatusUpdate(getObjectId());
 				su.addAttribute(StatusUpdate.CUR_HP, (int) getCurrentHp());
@@ -141,11 +141,11 @@ public class NpcInstance extends Creature
 		}
 		else
 		{
-			if (isAttackable() && !isDead() && !player.isInCombat() && (Math.abs(player.getZ() - getZ()) < 200))
+			if (isAutoAttackable() && !isDead() && !player.isInCombat() && (Math.abs(player.getZ() - getZ()) < 200))
 			{
 				player.startAttack(this);
 			}
-			if (!isAttackable())
+			if (!isAutoAttackable())
 			{
 				final double distance = getDistance(player.getX(), player.getY());
 				if (distance > INTERACTION_DISTANCE)
@@ -342,5 +342,11 @@ public class NpcInstance extends Creature
 		World.getInstance().removeVisibleObject(this);
 		World.getInstance().removeObject(this);
 		removeAllKnownObjects();
+	}
+	
+	@Override
+	public boolean isNpc()
+	{
+		return true;
 	}
 }

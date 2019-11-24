@@ -613,4 +613,10 @@ public class PetInstance extends Creature
 	{
 		return _owner;
 	}
+	
+	@Override
+	public boolean isPet()
+	{
+		return true;
+	}
 }
