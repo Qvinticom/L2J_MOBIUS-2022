@@ -52,7 +52,7 @@ import org.l2jmobius.util.Rnd;
 public abstract class Creature extends WorldObject
 {
 	private static final Logger _log = Logger.getLogger(Creature.class.getName());
-	public long serialVersionUID = 305402420L;
+	
 	private final List<Creature> _statusListener = new ArrayList<>();
 	private ScheduledFuture<?> _attackTask;
 	private ScheduledFuture<?> _hitTask;
