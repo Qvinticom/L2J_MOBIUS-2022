@@ -377,8 +377,11 @@ public abstract class Creature extends WorldObject
 	{
 		if (_mpRegenActive)
 		{
-			_regenTask.cancel(true);
-			_regenTask = null;
+			if (_regenTask != null)
+			{
+				_regenTask.cancel(true);
+				_regenTask = null;
+			}
 			_mpRegenActive = false;
 		}
 	}
