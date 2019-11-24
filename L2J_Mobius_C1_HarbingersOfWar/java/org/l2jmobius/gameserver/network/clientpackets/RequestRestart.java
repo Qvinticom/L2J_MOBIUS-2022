@@ -47,11 +47,11 @@ public class RequestRestart extends ClientBasePacket
 				return;
 			}
 			
-			player.deleteMe();
 			player.sendPacket(new RestartResponse());
-			client.saveCharToDisk(client.getActiveChar());
-			client.setActiveChar(null);
+			client.saveCharToDisk(player);
 			player.sendPacket(new CharSelectInfo(client.getLoginName(), client.getSessionId()));
+			player.deleteMe();
+			client.setActiveChar(null);
 		}
 	}
 	

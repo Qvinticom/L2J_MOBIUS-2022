@@ -24,8 +24,8 @@ public class LeaveWorld extends ServerBasePacket
 	@Override
 	public byte[] getContent()
 	{
-		_bao.write(150);
-		return _bao.toByteArray();
+		writeC(0x96);
+		return getBytes();
 	}
 	
 	@Override

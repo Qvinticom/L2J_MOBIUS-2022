@@ -36,7 +36,13 @@ public class MoveBackwardToLocation extends ClientBasePacket
 		final int originX = readD();
 		final int originY = readD();
 		final int originZ = readD();
+		
 		final PlayerInstance activeChar = client.getActiveChar();
+		if (activeChar == null)
+		{
+			return;
+		}
+		
 		if (activeChar.getCurrentState() == CreatureState.CASTING)
 		{
 			activeChar.sendPacket(new ActionFailed());

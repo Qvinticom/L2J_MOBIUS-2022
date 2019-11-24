@@ -28,6 +28,7 @@ import java.util.List;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.gameserver.network.serverpackets.LeaveWorld;
 import org.l2jmobius.loginserver.LoginController;
 import org.l2jmobius.loginserver.data.AccountData;
 import org.l2jmobius.loginserver.network.clientpackets.RequestAuthLogin;
@@ -140,13 +141,14 @@ public class ClientThread extends Thread
 							}
 							if (lc.isAccountInLoginServer(account))
 							{
-								_log.warning("Account is in use on Login server (kicking off):" + account);
+								// _log.warning("Account is in use on Login server (kicking off):" + account);
 								lc.getLoginServerConnection(account).close();
 								lc.removeLoginServerLogin(account);
 							}
 							if (lc.isAccountInGameServer(account))
 							{
-								_log.warning("Account is in use on Game server (kicking off):" + account);
+								// _log.warning("Account is in use on Game server (kicking off):" + account);
+								lc.getClientConnection(account).sendPacket(new LeaveWorld());
 								lc.getClientConnection(account).close();
 								lc.removeGameServerLogin(account);
 							}
