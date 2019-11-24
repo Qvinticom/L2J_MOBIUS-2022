@@ -1086,7 +1086,7 @@ public abstract class Creature extends WorldObject
 			sendPacket(af);
 			return;
 		}
-		if ((getActiveWeapon().getWeaponType() == 5) && !checkAndEquipArrows())
+		if ((getActiveWeapon().getWeaponType() == Weapon.WEAPON_TYPE_BOW) && !checkAndEquipArrows())
 		{
 			setInCombat(false);
 			setCurrentState(CreatureState.IDLE);
@@ -1159,7 +1159,7 @@ public abstract class Creature extends WorldObject
 					_hitTask = ThreadPool.schedule(new HitTask(this, target, damage, crit, miss, false), calculateHitSpeed(weaponItem, 1));
 					_hitTask = ThreadPool.schedule(new HitTask(this, target, damage, crit, miss, false), calculateHitSpeed(weaponItem, 2));
 				}
-				else if (getActiveWeapon().getWeaponType() == 5)
+				else if (getActiveWeapon().getWeaponType() == Weapon.WEAPON_TYPE_BOW)
 				{
 					if (getCurrentMp() < weaponItem.getMpConsume())
 					{
@@ -1211,7 +1211,7 @@ public abstract class Creature extends WorldObject
 		}
 		if (_currentlyAttacking)
 		{
-			if (getActiveWeapon().getWeaponType() == 5)
+			if (getActiveWeapon().getWeaponType() == Weapon.WEAPON_TYPE_BOW)
 			{
 				reduceArrowCount();
 				_attackTask = ThreadPool.schedule(new AttackTask(this), calculateAttackSpeed(getActiveWeapon()));
@@ -1353,7 +1353,7 @@ public abstract class Creature extends WorldObject
 			atkspd = 325;
 		}
 		atkspd = ((886 - atkspd) * 5) / 2;
-		atkspd = weaponItem.getWeaponType() == 4 ? (atkspd += 50) : (weaponItem.getWeaponType() == 10 ? (atkspd += 100) : (weaponItem.getWeaponType() == 9 ? (atkspd += 100) : ((weaponItem.getItemId() == 248) || (weaponItem.getItemId() == 252) ? (atkspd += 100) : (atkspd += 50))));
+		atkspd = weaponItem.getWeaponType() == Weapon.WEAPON_TYPE_DAGGER ? (atkspd += 50) : (weaponItem.getWeaponType() == Weapon.WEAPON_TYPE_DUALFIST ? (atkspd += 100) : (weaponItem.getWeaponType() == Weapon.WEAPON_TYPE_DUAL ? (atkspd += 100) : ((weaponItem.getItemId() == 248) || (weaponItem.getItemId() == 252) ? (atkspd += 100) : (atkspd += 50))));
 		return atkspd;
 	}
 	
@@ -1365,7 +1365,7 @@ public abstract class Creature extends WorldObject
 			hitspd = 325;
 		}
 		hitspd = ((886 - hitspd) * 5) / 2;
-		hitspd = weaponItem.getWeaponType() == 4 ? (hitspd -= 50) : (weaponItem.getWeaponType() == 10 ? (hit == 1 ? (hitspd -= 750) : (hitspd -= 100)) : (weaponItem.getWeaponType() == 9 ? (hit == 1 ? (hitspd -= 750) : (hitspd -= 100)) : (((weaponItem.getItemId() == 248) || (weaponItem.getItemId() == 252)) && (weaponItem.getWeaponType() == 8) ? (hit == 1 ? (hitspd -= 750) : (hitspd -= 150)) : ((weaponItem.getItemId() != 248) && (weaponItem.getItemId() != 252) && (weaponItem.getWeaponType() == 8) ? (hitspd -= 250) : (hitspd -= 200)))));
+		hitspd = weaponItem.getWeaponType() == Weapon.WEAPON_TYPE_DAGGER ? (hitspd -= 50) : (weaponItem.getWeaponType() == Weapon.WEAPON_TYPE_DUALFIST ? (hit == 1 ? (hitspd -= 750) : (hitspd -= 100)) : (weaponItem.getWeaponType() == Weapon.WEAPON_TYPE_DUAL ? (hit == 1 ? (hitspd -= 750) : (hitspd -= 100)) : (((weaponItem.getItemId() == 248) || (weaponItem.getItemId() == 252)) && (weaponItem.getWeaponType() == Weapon.WEAPON_TYPE_FIST) ? (hit == 1 ? (hitspd -= 750) : (hitspd -= 150)) : ((weaponItem.getItemId() != 248) && (weaponItem.getItemId() != 252) && (weaponItem.getWeaponType() == Weapon.WEAPON_TYPE_FIST) ? (hitspd -= 250) : (hitspd -= 200)))));
 		return hitspd;
 	}
 	

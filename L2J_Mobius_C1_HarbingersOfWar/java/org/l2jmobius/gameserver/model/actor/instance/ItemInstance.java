@@ -48,7 +48,7 @@ public class ItemInstance extends WorldObject
 	
 	public boolean isEquipable()
 	{
-		return (_item.getBodyPart() != 0) && !(_item instanceof EtcItem);
+		return (_item.getBodyPart() != Item.SLOT_NONE) && !(_item instanceof EtcItem);
 	}
 	
 	public boolean isEquipped()

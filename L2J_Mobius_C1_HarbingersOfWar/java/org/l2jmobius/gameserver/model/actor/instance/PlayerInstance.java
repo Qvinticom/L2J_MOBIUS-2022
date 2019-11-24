@@ -1184,7 +1184,7 @@ public class PlayerInstance extends Creature
 	public int getAttackRange()
 	{
 		final Weapon weapon = getActiveWeapon();
-		if ((weapon != null) && (weapon.getWeaponType() == 5))
+		if ((weapon != null) && (weapon.getWeaponType() == Weapon.WEAPON_TYPE_BOW))
 		{
 			return 500;
 		}
@@ -1495,19 +1495,19 @@ public class PlayerInstance extends Creature
 		
 		final int weaponType = getActiveWeapon().getWeaponType();
 		final int skillId = skill.getId();
-		if ((skillId == 56) && (weaponType != 5))
+		if ((skillId == 56) && (weaponType != Weapon.WEAPON_TYPE_BOW))
 		{
 			return;
 		}
-		if ((skillId == 16) && (weaponType != 4))
+		if ((skillId == 16) && (weaponType != Weapon.WEAPON_TYPE_DAGGER))
 		{
 			return;
 		}
-		if ((skillId == 3) && (weaponType != 3) && (weaponType != 2))
+		if ((skillId == 3) && (weaponType != Weapon.WEAPON_TYPE_BLUNT) && (weaponType != Weapon.WEAPON_TYPE_SWORD))
 		{
 			return;
 		}
-		if ((skillId == 29) && (weaponType != 10))
+		if ((skillId == 29) && (weaponType != Weapon.WEAPON_TYPE_DUALFIST))
 		{
 			return;
 		}
@@ -1653,11 +1653,11 @@ public class PlayerInstance extends Creature
 	protected boolean isUsingDualWeapon()
 	{
 		final Weapon weaponItem = getActiveWeapon();
-		if (weaponItem.getWeaponType() == 9)
+		if (weaponItem.getWeaponType() == Weapon.WEAPON_TYPE_DUAL)
 		{
 			return true;
 		}
-		if (weaponItem.getWeaponType() == 10)
+		if (weaponItem.getWeaponType() == Weapon.WEAPON_TYPE_DUALFIST)
 		{
 			return true;
 		}

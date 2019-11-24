@@ -29,6 +29,7 @@ public class Weapon extends Item
 	public static final int WEAPON_TYPE_FIST = 8;
 	public static final int WEAPON_TYPE_DUAL = 9;
 	public static final int WEAPON_TYPE_DUALFIST = 10;
+	
 	private int _soulShotCount;
 	private int _spiritShotCount;
 	private int _pDam;

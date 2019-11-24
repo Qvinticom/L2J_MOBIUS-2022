@@ -23,12 +23,13 @@ public class EtcItem extends Item
 	public static final int TYPE_MATERIAL = 1;
 	public static final int TYPE_PET_COLLAR = 2;
 	public static final int TYPE_POTION = 3;
-	public static final int TYPE_RECEIPE = 4;
+	public static final int TYPE_RECIPE = 4;
 	public static final int TYPE_SCROLL = 5;
 	public static final int TYPE_QUEST = 6;
 	public static final int TYPE_MONEY = 7;
 	public static final int TYPE_OTHER = 8;
 	public static final int TYPE_SPELLBOOK = 9;
+	
 	private int _type;
 	
 	public int getEtcItemType()

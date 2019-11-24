@@ -23,6 +23,7 @@ public class Armor extends Item
 	public static final int ARMORTYPE_LIGHT = 2;
 	public static final int ARMORTYPE_HEAVY = 3;
 	public static final int ARMORTYPE_MAGIC = 4;
+	
 	private int _armorType;
 	private int _avoidModifier;
 	private int _pDef;

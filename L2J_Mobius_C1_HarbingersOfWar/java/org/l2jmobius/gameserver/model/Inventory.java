@@ -31,6 +31,7 @@ import org.l2jmobius.gameserver.templates.Weapon;
 public class Inventory
 {
 	private static Logger _log = Logger.getLogger(Inventory.class.getName());
+	
 	public static final int PAPERDOLL_UNDER = 0;
 	public static final int PAPERDOLL_LEAR = 1;
 	public static final int PAPERDOLL_REAR = 2;
@@ -46,6 +47,7 @@ public class Inventory
 	public static final int PAPERDOLL_FEET = 12;
 	public static final int PAPERDOLL_BACK = 13;
 	public static final int PAPERDOLL_LRHAND = 14;
+	
 	private final ItemInstance[] _paperdoll = new ItemInstance[16];
 	private ItemInstance _adena;
 	private final List<ItemInstance> _items = new CopyOnWriteArrayList<>();
@@ -133,102 +135,102 @@ public class Inventory
 	
 	public Collection<ItemInstance> unEquipItemInBodySlot(int slot)
 	{
-		final List<ItemInstance> unequipedItems = new ArrayList<>();
+		final List<ItemInstance> changedItems = new ArrayList<>();
 		int pdollSlot = -1;
 		switch (slot)
 		{
-			case 4:
+			case Item.SLOT_L_EAR:
 			{
-				pdollSlot = 1;
+				pdollSlot = PAPERDOLL_LEAR;
 				break;
 			}
-			case 2:
+			case Item.SLOT_R_EAR:
 			{
-				pdollSlot = 2;
+				pdollSlot = PAPERDOLL_REAR;
 				break;
 			}
-			case 8:
+			case Item.SLOT_NECK:
 			{
-				pdollSlot = 3;
+				pdollSlot = PAPERDOLL_NECK;
 				break;
 			}
-			case 16:
+			case Item.SLOT_R_FINGER:
 			{
-				pdollSlot = 5;
+				pdollSlot = PAPERDOLL_RFINGER;
 				break;
 			}
-			case 32:
+			case Item.SLOT_L_FINGER:
 			{
-				pdollSlot = 4;
+				pdollSlot = PAPERDOLL_LFINGER;
 				break;
 			}
-			case 64:
+			case Item.SLOT_HEAD:
 			{
-				pdollSlot = 6;
+				pdollSlot = PAPERDOLL_HEAD;
 				break;
 			}
-			case 128:
+			case Item.SLOT_R_HAND:
 			{
-				pdollSlot = 7;
+				pdollSlot = PAPERDOLL_RHAND;
 				break;
 			}
-			case 256:
+			case Item.SLOT_L_HAND:
 			{
-				pdollSlot = 8;
+				pdollSlot = PAPERDOLL_LHAND;
 				break;
 			}
-			case 512:
+			case Item.SLOT_GLOVES:
 			{
-				pdollSlot = 9;
+				pdollSlot = PAPERDOLL_GLOVES;
 				break;
 			}
-			case 1024:
-			case 32768:
+			case Item.SLOT_CHEST:
+			case Item.SLOT_FULL_ARMOR:
 			{
-				pdollSlot = 10;
+				pdollSlot = PAPERDOLL_CHEST;
 				break;
 			}
-			case 2048:
+			case Item.SLOT_LEGS:
 			{
-				pdollSlot = 11;
+				pdollSlot = PAPERDOLL_LEGS;
 				break;
 			}
-			case 16384:
+			case Item.SLOT_LR_HAND:
 			{
-				unEquipSlot(unequipedItems, 8);
-				unEquipSlot(7);
-				pdollSlot = 14;
+				unEquipSlot(changedItems, PAPERDOLL_LHAND);
+				unEquipSlot(PAPERDOLL_RHAND);
+				pdollSlot = PAPERDOLL_LRHAND;
 				break;
 			}
-			case 8192:
+			case Item.SLOT_BACK:
 			{
-				pdollSlot = 13;
+				pdollSlot = PAPERDOLL_BACK;
 				break;
 			}
-			case 4096:
+			case Item.SLOT_FEET:
 			{
-				pdollSlot = 12;
+				pdollSlot = PAPERDOLL_FEET;
 				break;
 			}
-			case 1:
+			case Item.SLOT_UNDERWEAR:
 			{
-				pdollSlot = 0;
+				pdollSlot = PAPERDOLL_UNDER;
 			}
 		}
-		unEquipSlot(unequipedItems, pdollSlot);
-		return unequipedItems;
+		unEquipSlot(changedItems, pdollSlot);
+		return changedItems;
 	}
 	
 	public Collection<ItemInstance> unEquipItemOnPaperdoll(int pdollSlot)
 	{
-		final List<ItemInstance> unequipedItems = new ArrayList<>();
+		final List<ItemInstance> changedItems = new ArrayList<>();
 		if (pdollSlot == 14)
 		{
-			unEquipSlot(unequipedItems, 8);
-			unEquipSlot(7);
+			unEquipSlot(changedItems, PAPERDOLL_LHAND);
+			unEquipSlot(PAPERDOLL_RHAND);
 		}
-		unEquipSlot(unequipedItems, pdollSlot);
-		return unequipedItems;
+		unEquipSlot(changedItems, pdollSlot);
+		return changedItems;
 	}
 	
 	public List<ItemInstance> equipItem(ItemInstance item)
@@ -237,147 +239,151 @@ public class Inventory
 		final int targetSlot = item.getItem().getBodyPart();
 		switch (targetSlot)
 		{
-			case 16384:
+			case Item.SLOT_LR_HAND:
 			{
 				ItemInstance arrow;
-				unEquipSlot(changedItems, 8);
-				final ItemInstance old1 = unEquipSlot(14);
+				unEquipSlot(changedItems, PAPERDOLL_LHAND);
+				final ItemInstance old1 = unEquipSlot(PAPERDOLL_LRHAND);
 				if (old1 != null)
 				{
 					changedItems.add(old1);
-					unEquipSlot(7);
-					unEquipSlot(changedItems, 8);
+					unEquipSlot(PAPERDOLL_RHAND);
+					unEquipSlot(changedItems, PAPERDOLL_LHAND);
 				}
 				else
 				{
-					unEquipSlot(changedItems, 7);
+					unEquipSlot(changedItems, PAPERDOLL_RHAND);
 				}
-				setPaperdollItem(7, item);
-				setPaperdollItem(14, item);
-				if ((((Weapon) item.getItem()).getWeaponType() != 5) || ((arrow = findArrowForBow(item.getItem())) == null))
+				setPaperdollItem(PAPERDOLL_RHAND, item);
+				setPaperdollItem(PAPERDOLL_LRHAND, item);
+				if ((((Weapon) item.getItem()).getWeaponType() != Weapon.WEAPON_TYPE_BOW) || ((arrow = findArrowForBow(item.getItem())) == null))
 				{
 					break;
 				}
-				setPaperdollItem(8, arrow);
+				setPaperdollItem(PAPERDOLL_LHAND, arrow);
 				arrow.setLastChange(2);
 				changedItems.add(arrow);
 				break;
 			}
-			case 256:
+			case Item.SLOT_L_HAND:
 			{
-				final ItemInstance old1 = unEquipSlot(14);
+				final ItemInstance old1 = unEquipSlot(PAPERDOLL_LRHAND);
 				if (old1 != null)
 				{
-					unEquipSlot(changedItems, 7);
+					unEquipSlot(changedItems, PAPERDOLL_RHAND);
 				}
-				unEquipSlot(changedItems, 8);
-				setPaperdollItem(8, item);
+				unEquipSlot(changedItems, PAPERDOLL_LHAND);
+				setPaperdollItem(PAPERDOLL_LHAND, item);
 				break;
 			}
-			case 128:
+			case Item.SLOT_R_HAND:
 			{
-				if (unEquipSlot(changedItems, 14))
+				if (unEquipSlot(changedItems, PAPERDOLL_LRHAND))
 				{
-					unEquipSlot(changedItems, 8);
-					unEquipSlot(7);
+					unEquipSlot(changedItems, PAPERDOLL_LHAND);
+					unEquipSlot(PAPERDOLL_RHAND);
 				}
 				else
 				{
-					unEquipSlot(changedItems, 7);
+					unEquipSlot(changedItems, PAPERDOLL_RHAND);
 				}
-				setPaperdollItem(7, item);
+				setPaperdollItem(PAPERDOLL_RHAND, item);
 				break;
 			}
-			case 6:
+			case Item.SLOT_R_EAR:
+			case Item.SLOT_L_EAR:
+			case Item.SLOT_R_EAR + Item.SLOT_L_EAR:
 			{
 				if (_paperdoll[1] == null)
 				{
-					setPaperdollItem(1, item);
+					setPaperdollItem(PAPERDOLL_LEAR, item);
 					break;
 				}
 				if (_paperdoll[2] == null)
 				{
-					setPaperdollItem(2, item);
+					setPaperdollItem(PAPERDOLL_REAR, item);
 					break;
 				}
-				unEquipSlot(changedItems, 1);
-				setPaperdollItem(1, item);
+				unEquipSlot(changedItems, PAPERDOLL_LEAR);
+				setPaperdollItem(PAPERDOLL_LEAR, item);
 				break;
 			}
-			case 48:
+			case Item.SLOT_R_FINGER:
+			case Item.SLOT_L_FINGER:
+			case Item.SLOT_R_FINGER + Item.SLOT_L_FINGER:
 			{
 				if (_paperdoll[4] == null)
 				{
-					setPaperdollItem(4, item);
+					setPaperdollItem(PAPERDOLL_LFINGER, item);
 					break;
 				}
 				if (_paperdoll[5] == null)
 				{
-					setPaperdollItem(5, item);
+					setPaperdollItem(PAPERDOLL_RFINGER, item);
 					break;
 				}
-				unEquipSlot(changedItems, 4);
-				setPaperdollItem(4, item);
+				unEquipSlot(changedItems, PAPERDOLL_LFINGER);
+				setPaperdollItem(PAPERDOLL_LFINGER, item);
 				break;
 			}
-			case 8:
+			case Item.SLOT_NECK:
 			{
-				unEquipSlot(changedItems, 3);
-				setPaperdollItem(3, item);
+				unEquipSlot(changedItems, PAPERDOLL_NECK);
+				setPaperdollItem(PAPERDOLL_NECK, item);
 				break;
 			}
-			case 32768:
+			case Item.SLOT_FULL_ARMOR:
 			{
-				unEquipSlot(changedItems, 10);
-				unEquipSlot(changedItems, 11);
-				setPaperdollItem(10, item);
+				unEquipSlot(changedItems, PAPERDOLL_CHEST);
+				unEquipSlot(changedItems, PAPERDOLL_LEGS);
+				setPaperdollItem(PAPERDOLL_CHEST, item);
 				break;
 			}
-			case 1024:
+			case Item.SLOT_CHEST:
 			{
-				unEquipSlot(changedItems, 10);
-				setPaperdollItem(10, item);
+				unEquipSlot(changedItems, PAPERDOLL_CHEST);
+				setPaperdollItem(PAPERDOLL_CHEST, item);
 				break;
 			}
-			case 2048:
+			case Item.SLOT_LEGS:
 			{
 				final ItemInstance chest = getPaperdollItem(10);
-				if ((chest != null) && (chest.getItem().getBodyPart() == 32768))
+				if ((chest != null) && (chest.getItem().getBodyPart() == Item.SLOT_FULL_ARMOR))
 				{
-					unEquipSlot(changedItems, 10);
+					unEquipSlot(changedItems, PAPERDOLL_CHEST);
 				}
-				unEquipSlot(changedItems, 11);
-				setPaperdollItem(11, item);
+				unEquipSlot(changedItems, PAPERDOLL_LEGS);
+				setPaperdollItem(PAPERDOLL_LEGS, item);
 				break;
 			}
-			case 4096:
+			case Item.SLOT_FEET:
 			{
-				unEquipSlot(changedItems, 12);
-				setPaperdollItem(12, item);
+				unEquipSlot(changedItems, PAPERDOLL_FEET);
+				setPaperdollItem(PAPERDOLL_FEET, item);
 				break;
 			}
-			case 512:
+			case Item.SLOT_GLOVES:
 			{
-				unEquipSlot(changedItems, 9);
-				setPaperdollItem(9, item);
+				unEquipSlot(changedItems, PAPERDOLL_GLOVES);
+				setPaperdollItem(PAPERDOLL_GLOVES, item);
 				break;
 			}
-			case 64:
+			case Item.SLOT_HEAD:
 			{
-				unEquipSlot(changedItems, 6);
-				setPaperdollItem(6, item);
+				unEquipSlot(changedItems, PAPERDOLL_HEAD);
+				setPaperdollItem(PAPERDOLL_HEAD, item);
 				break;
 			}
-			case 1:
+			case Item.SLOT_UNDERWEAR:
 			{
-				unEquipSlot(changedItems, 0);
-				setPaperdollItem(0, item);
+				unEquipSlot(changedItems, PAPERDOLL_UNDER);
+				setPaperdollItem(PAPERDOLL_UNDER, item);
 				break;
 			}
-			case 8192:
+			case Item.SLOT_BACK:
 			{
-				unEquipSlot(changedItems, 13);
-				setPaperdollItem(13, item);
+				unEquipSlot(changedItems, PAPERDOLL_BACK);
+				setPaperdollItem(PAPERDOLL_BACK, item);
 				break;
 			}
 			default:
@@ -576,32 +582,32 @@ public class Inventory
 		int arrowsId = 0;
 		switch (bow.getCrystalType())
 		{
-			case 1:
+			case Item.CRYSTAL_NONE:
 			{
 				arrowsId = 17;
 				break;
 			}
-			case 2:
+			case Item.CRYSTAL_D:
 			{
 				arrowsId = 1341;
 				break;
 			}
-			case 3:
+			case Item.CRYSTAL_C:
 			{
 				arrowsId = 1342;
 				break;
 			}
-			case 4:
+			case Item.CRYSTAL_B:
 			{
 				arrowsId = 1343;
 				break;
 			}
-			case 5:
+			case Item.CRYSTAL_A:
 			{
 				arrowsId = 1344;
 				break;
 			}
-			case 6:
+			case Item.CRYSTAL_S:
 			{
 				arrowsId = 1345;
 				break;

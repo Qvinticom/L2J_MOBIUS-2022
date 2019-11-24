@@ -24,12 +24,14 @@ public abstract class Item implements Serializable
 	public static final int TYPE1_WEAPON_RING_EARRING_NECKLACE = 0;
 	public static final int TYPE1_SHIELD_ARMOR = 1;
 	public static final int TYPE1_ITEM_QUESTITEM_ADENA = 4;
+	
 	public static final int TYPE2_WEAPON = 0;
 	public static final int TYPE2_SHIELD_ARMOR = 1;
 	public static final int TYPE2_ACCESSORY = 2;
 	public static final int TYPE2_QUEST = 3;
 	public static final int TYPE2_MONEY = 4;
 	public static final int TYPE2_OTHER = 5;
+	
 	public static final int SLOT_NONE = 0;
 	public static final int SLOT_UNDERWEAR = 1;
 	public static final int SLOT_R_EAR = 2;
@@ -47,6 +49,7 @@ public abstract class Item implements Serializable
 	public static final int SLOT_BACK = 8192;
 	public static final int SLOT_LR_HAND = 16384;
 	public static final int SLOT_FULL_ARMOR = 32768;
+	
 	public static final int MATERIAL_STEEL = 0;
 	public static final int MATERIAL_FINE_STEEL = 1;
 	public static final int MATERIAL_BLOOD_STEEL = 2;
@@ -69,12 +72,14 @@ public abstract class Item implements Serializable
 	public static final int MATERIAL_SCALE_OF_DRAGON = 19;
 	public static final int MATERIAL_DYESTUFF = 20;
 	public static final int MATERIAL_COBWEB = 21;
+	
 	public static final int CRYSTAL_NONE = 1;
 	public static final int CRYSTAL_D = 2;
 	public static final int CRYSTAL_C = 3;
 	public static final int CRYSTAL_B = 4;
 	public static final int CRYSTAL_A = 5;
 	public static final int CRYSTAL_S = 6;
+	
 	private int _itemId;
 	private String _name;
 	private int _type1;

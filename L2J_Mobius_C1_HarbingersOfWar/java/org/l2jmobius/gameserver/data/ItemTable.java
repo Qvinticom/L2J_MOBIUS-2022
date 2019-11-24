@@ -37,89 +37,90 @@ public class ItemTable
 {
 	private static Logger _log = Logger.getLogger(ItemTable.class.getName());
 	
-	// private static final int TYPE_ETC_ITEM = 0;
-	// private static final int TYPE_ARMOR = 1;
-	// private static final int TYPE_WEAPON = 2;
+	private static final int TYPE_ETC_ITEM = 0;
+	private static final int TYPE_ARMOR = 1;
+	private static final int TYPE_WEAPON = 2;
 	
 	private static final HashMap<String, Integer> _materials = new HashMap<>();
 	static
 	{
-		_materials.put("steel", 0);
-		_materials.put("fine_steel", 1);
-		_materials.put("cotton", 1);
-		_materials.put("blood_steel", 2);
-		_materials.put("bronze", 3);
-		_materials.put("silver", 4);
-		_materials.put("gold", 5);
-		_materials.put("mithril", 6);
-		_materials.put("oriharukon", 7);
-		_materials.put("paper", 8);
-		_materials.put("wood", 9);
-		_materials.put("cloth", 10);
-		_materials.put("leather", 11);
-		_materials.put("bone", 12);
-		_materials.put("horn", 13);
-		_materials.put("damascus", 14);
-		_materials.put("adamantaite", 15);
-		_materials.put("chrysolite", 16);
-		_materials.put("crystal", 17);
-		_materials.put("liquid", 18);
-		_materials.put("scale_of_dragon", 19);
-		_materials.put("dyestuff", 20);
-		_materials.put("cobweb", 21);
+		_materials.put("steel", Item.MATERIAL_STEEL);
+		_materials.put("fine_steel", Item.MATERIAL_FINE_STEEL);
+		_materials.put("cotton", Item.MATERIAL_FINE_STEEL);
+		_materials.put("blood_steel", Item.MATERIAL_BLOOD_STEEL);
+		_materials.put("bronze", Item.MATERIAL_BRONZE);
+		_materials.put("silver", Item.MATERIAL_SILVER);
+		_materials.put("gold", Item.MATERIAL_GOLD);
+		_materials.put("mithril", Item.MATERIAL_MITHRIL);
+		_materials.put("oriharukon", Item.MATERIAL_ORIHARUKON);
+		_materials.put("paper", Item.MATERIAL_PAPER);
+		_materials.put("wood", Item.MATERIAL_WOOD);
+		_materials.put("cloth", Item.MATERIAL_CLOTH);
+		_materials.put("leather", Item.MATERIAL_LEATHER);
+		_materials.put("bone", Item.MATERIAL_BONE);
+		_materials.put("horn", Item.MATERIAL_HORN);
+		_materials.put("damascus", Item.MATERIAL_DAMASCUS);
+		_materials.put("adamantaite", Item.MATERIAL_ADAMANTAITE);
+		_materials.put("chrysolite", Item.MATERIAL_CHRYSOLITE);
+		_materials.put("crystal", Item.MATERIAL_CRYSTAL);
+		_materials.put("liquid", Item.MATERIAL_LIQUID);
+		_materials.put("scale_of_dragon", Item.MATERIAL_SCALE_OF_DRAGON);
+		_materials.put("dyestuff", Item.MATERIAL_DYESTUFF);
+		_materials.put("cobweb", Item.MATERIAL_COBWEB);
 	}
 	private static final HashMap<String, Integer> _crystalTypes = new HashMap<>();
 	static
 	{
-		_crystalTypes.put("none", 1);
-		_crystalTypes.put("d", 2);
-		_crystalTypes.put("c", 3);
-		_crystalTypes.put("b", 4);
-		_crystalTypes.put("a", 5);
-		_crystalTypes.put("s", 6);
+		_crystalTypes.put("none", Item.CRYSTAL_NONE);
+		_crystalTypes.put("d", Item.CRYSTAL_D);
+		_crystalTypes.put("c", Item.CRYSTAL_C);
+		_crystalTypes.put("b", Item.CRYSTAL_B);
+		_crystalTypes.put("a", Item.CRYSTAL_A);
+		_crystalTypes.put("s", Item.CRYSTAL_S);
 	}
 	private static final HashMap<String, Integer> _weaponTypes = new HashMap<>();
 	static
 	{
-		_weaponTypes.put("none", 1);
-		_weaponTypes.put("sword", 2);
-		_weaponTypes.put("blunt", 3);
-		_weaponTypes.put("dagger", 4);
-		_weaponTypes.put("bow", 5);
-		_weaponTypes.put("pole", 6);
-		_weaponTypes.put("etc", 7);
-		_weaponTypes.put("fist", 8);
-		_weaponTypes.put("dual", 9);
-		_weaponTypes.put("dualfist", 10);
+		_weaponTypes.put("none", Weapon.WEAPON_TYPE_NONE);
+		_weaponTypes.put("sword", Weapon.WEAPON_TYPE_SWORD);
+		_weaponTypes.put("blunt", Weapon.WEAPON_TYPE_BLUNT);
+		_weaponTypes.put("dagger", Weapon.WEAPON_TYPE_DAGGER);
+		_weaponTypes.put("bow", Weapon.WEAPON_TYPE_BOW);
+		_weaponTypes.put("pole", Weapon.WEAPON_TYPE_POLE);
+		_weaponTypes.put("etc", Weapon.WEAPON_TYPE_ETC);
+		_weaponTypes.put("fist", Weapon.WEAPON_TYPE_FIST);
+		_weaponTypes.put("dual", Weapon.WEAPON_TYPE_DUAL);
+		_weaponTypes.put("dualfist", Weapon.WEAPON_TYPE_DUALFIST);
 	}
 	private static final HashMap<String, Integer> _armorTypes = new HashMap<>();
 	static
 	{
-		_armorTypes.put("none", 1);
-		_armorTypes.put("light", 2);
-		_armorTypes.put("heavy", 3);
-		_armorTypes.put("magic", 4);
+		_armorTypes.put("none", Armor.ARMORTYPE_NONE);
+		_armorTypes.put("light", Armor.ARMORTYPE_LIGHT);
+		_armorTypes.put("heavy", Armor.ARMORTYPE_HEAVY);
+		_armorTypes.put("magic", Armor.ARMORTYPE_MAGIC);
 	}
 	private static final HashMap<String, Integer> _slots = new HashMap<>();
 	static
 	{
-		_slots.put("none", 0);
-		_slots.put("underwear", 1);
-		_slots.put("rear,lear", 6);
-		_slots.put("neck", 8);
-		_slots.put("rfinger,lfinger", 48);
-		_slots.put("head", 64);
-		_slots.put("rhand", 128);
-		_slots.put("lhand", 256);
-		_slots.put("gloves", 512);
-		_slots.put("chest", 1024);
-		_slots.put("legs", 2048);
-		_slots.put("chest,legs", 3072);
-		_slots.put("feet", 4096);
-		_slots.put("back", 8192);
-		_slots.put("lrhand", 16384);
-		_slots.put("fullarmor", 32768);
+		_slots.put("none", Item.SLOT_NONE);
+		_slots.put("underwear", Item.SLOT_UNDERWEAR);
+		_slots.put("rear,lear", Item.SLOT_R_EAR + Item.SLOT_L_EAR);
+		_slots.put("neck", Item.SLOT_NECK);
+		_slots.put("rfinger,lfinger", Item.SLOT_R_FINGER + Item.SLOT_L_FINGER);
+		_slots.put("head", Item.SLOT_HEAD);
+		_slots.put("rhand", Item.SLOT_R_HAND);
+		_slots.put("lhand", Item.SLOT_L_HAND);
+		_slots.put("gloves", Item.SLOT_GLOVES);
+		_slots.put("chest", Item.SLOT_CHEST);
+		_slots.put("legs", Item.SLOT_LEGS);
+		_slots.put("chest,legs", Item.SLOT_CHEST + Item.SLOT_LEGS);
+		_slots.put("feet", Item.SLOT_FEET);
+		_slots.put("back", Item.SLOT_BACK);
+		_slots.put("lrhand", Item.SLOT_LR_HAND);
+		_slots.put("fullarmor", Item.SLOT_FULL_ARMOR);
 	}
+	
 	private Item[] _allTemplates;
 	private HashMap<Integer, Item> _etcItems;
 	private HashMap<Integer, Item> _armors;
@@ -134,6 +135,11 @@ public class ItemTable
 			_instance = new ItemTable();
 		}
 		return _instance;
+	}
+	
+	public boolean isInitialized()
+	{
+		return _initialized;
 	}
 	
 	public ItemTable()
@@ -159,16 +165,23 @@ public class ItemTable
 		buildFastLookupTable();
 	}
 	
-	public boolean isInitialized()
-	{
-		return _initialized;
-	}
-	
 	private void parseEtcItems(File data)
 	{
-		_etcItems = parseFile(data, 0);
+		_etcItems = parseFile(data, TYPE_ETC_ITEM);
 		_log.config("Loaded " + _etcItems.size() + " etc items.");
 		fixEtcItems(_etcItems);
+	}
+	
+	private void parseArmors(File data)
+	{
+		_armors = parseFile(data, TYPE_ARMOR);
+		_log.config("Loaded " + _armors.size() + " armors.");
+	}
+	
+	private void parseWeapons(File data)
+	{
+		_weapons = parseFile(data, TYPE_WEAPON);
+		_log.config("Laoded " + _weapons.size() + " weapons.");
 	}
 	
 	private void fixEtcItems(HashMap<Integer, Item> items)
@@ -176,30 +189,30 @@ public class ItemTable
 		for (int key : items.keySet())
 		{
 			final EtcItem item = (EtcItem) items.get(key);
-			if ((item.getWeight() == 0) && (item.getEtcItemType() != 7) && !item.getName().startsWith("world_map") && !item.getName().startsWith("crystal_"))
+			if ((item.getWeight() == 0) && (item.getEtcItemType() != EtcItem.TYPE_MONEY) && !item.getName().startsWith("world_map") && !item.getName().startsWith("crystal_"))
 			{
-				item.setType2(3);
-				item.setEtcItemType(6);
+				item.setType2(Item.TYPE2_QUEST);
+				item.setEtcItemType(EtcItem.TYPE_QUEST);
 				continue;
 			}
 			if (item.getName().startsWith("sb_"))
 			{
-				item.setType2(5);
-				item.setEtcItemType(9);
+				item.setType2(Item.TYPE2_OTHER);
+				item.setEtcItemType(EtcItem.TYPE_SPELLBOOK);
 				continue;
 			}
 			if (item.getName().startsWith("rp_"))
 			{
-				item.setType2(5);
-				item.setEtcItemType(4);
+				item.setType2(Item.TYPE2_OTHER);
+				item.setEtcItemType(EtcItem.TYPE_RECIPE);
 				continue;
 			}
 			if (!item.getName().startsWith("q_"))
 			{
 				continue;
 			}
-			item.setType2(3);
-			item.setEtcItemType(6);
+			item.setType2(Item.TYPE2_QUEST);
+			item.setEtcItemType(EtcItem.TYPE_QUEST);
 		}
 	}
 	
@@ -222,17 +235,17 @@ public class ItemTable
 					}
 					switch (type)
 					{
-						case 0:
+						case TYPE_ETC_ITEM:
 						{
 							temp = parseEtcLine(line);
 							break;
 						}
-						case 1:
+						case TYPE_ARMOR:
 						{
 							temp = parseArmorLine(line);
 							break;
 						}
-						case 2:
+						case TYPE_WEAPON:
 						{
 							temp = parseWeaponLine(line);
 						}
@@ -265,47 +278,47 @@ public class ItemTable
 			result.setName(st.nextToken());
 			result.setCrystallizable(Boolean.valueOf(st.nextToken()));
 			final String itemType = st.nextToken();
-			result.setType1(4);
+			result.setType1(Item.TYPE1_ITEM_QUESTITEM_ADENA);
 			if (itemType.equals("none"))
 			{
-				result.setType2(5);
-				result.setEtcItemType(8);
+				result.setType2(Item.TYPE2_OTHER);
+				result.setEtcItemType(EtcItem.TYPE_OTHER);
 			}
 			else if (itemType.equals("arrow"))
 			{
-				result.setType2(5);
-				result.setEtcItemType(0);
-				result.setBodyPart(256);
+				result.setType2(Item.TYPE2_OTHER);
+				result.setEtcItemType(EtcItem.TYPE_ARROW);
+				result.setBodyPart(Item.SLOT_L_HAND);
 			}
 			else if (itemType.equals("castle_guard"))
 			{
-				result.setType2(5);
-				result.setEtcItemType(5);
+				result.setType2(Item.TYPE2_OTHER);
+				result.setEtcItemType(EtcItem.TYPE_SCROLL);
 			}
 			else if (itemType.equals("material"))
 			{
-				result.setType2(5);
-				result.setEtcItemType(1);
+				result.setType2(Item.TYPE2_OTHER);
+				result.setEtcItemType(EtcItem.TYPE_MATERIAL);
 			}
 			else if (itemType.equals("pet_collar"))
 			{
-				result.setType2(5);
-				result.setEtcItemType(2);
+				result.setType2(Item.TYPE2_OTHER);
+				result.setEtcItemType(EtcItem.TYPE_PET_COLLAR);
 			}
 			else if (itemType.equals("potion"))
 			{
-				result.setType2(5);
-				result.setEtcItemType(3);
+				result.setType2(Item.TYPE2_OTHER);
+				result.setEtcItemType(EtcItem.TYPE_POTION);
 			}
 			else if (itemType.equals("recipe"))
 			{
-				result.setType2(5);
-				result.setEtcItemType(4);
+				result.setType2(Item.TYPE2_OTHER);
+				result.setEtcItemType(EtcItem.TYPE_RECIPE);
 			}
 			else if (itemType.equals("scroll"))
 			{
-				result.setType2(5);
-				result.setEtcItemType(5);
+				result.setType2(Item.TYPE2_OTHER);
+				result.setEtcItemType(EtcItem.TYPE_SCROLL);
 			}
 			else
 			{
@@ -316,8 +329,8 @@ public class ItemTable
 			if (consume.equals("asset"))
 			{
 				result.setStackable(true);
-				result.setEtcItemType(7);
-				result.setType2(4);
+				result.setEtcItemType(EtcItem.TYPE_MONEY);
+				result.setType2(Item.TYPE2_MONEY);
 			}
 			else if (consume.equals("stackable"))
 			{
@@ -331,8 +344,7 @@ public class ItemTable
 		}
 		catch (Exception e)
 		{
-			_log.warning("Data error on etc item:" + result + " line: " + line);
-			e.printStackTrace();
+			_log.warning("Data error on etc item:" + result + " line: " + line + " " + e);
 		}
 		return result;
 	}
@@ -351,15 +363,15 @@ public class ItemTable
 			final Integer armor = _armorTypes.get(st.nextToken());
 			result.setArmorType(armor);
 			final int slot = result.getBodyPart();
-			if ((slot == 8) || ((slot & 4) != 0) || ((slot & 0x20) != 0))
+			if ((slot == Item.SLOT_NECK) || ((slot & Item.SLOT_L_EAR) != 0) || ((slot & Item.SLOT_L_FINGER) != 0))
 			{
-				result.setType1(0);
-				result.setType2(2);
+				result.setType1(Item.TYPE1_WEAPON_RING_EARRING_NECKLACE);
+				result.setType2(Item.TYPE2_ACCESSORY);
 			}
 			else
 			{
-				result.setType1(1);
-				result.setType2(1);
+				result.setType1(Item.TYPE1_SHIELD_ARMOR);
+				result.setType2(Item.TYPE2_SHIELD_ARMOR);
 			}
 			result.setWeight(Integer.parseInt(st.nextToken()));
 			final Integer material = _materials.get(st.nextToken());
@@ -374,8 +386,7 @@ public class ItemTable
 		}
 		catch (Exception e)
 		{
-			_log.warning("Data error on armor:" + result + " line: " + line);
-			e.printStackTrace();
+			_log.warning("Data error on armor:" + result + " line: " + line + " " + e);
 		}
 		return result;
 	}
@@ -388,8 +399,8 @@ public class ItemTable
 			final StringTokenizer st = new StringTokenizer(line, ";");
 			result.setItemId(Integer.parseInt(st.nextToken()));
 			result.setName(st.nextToken());
-			result.setType1(0);
-			result.setType2(0);
+			result.setType1(Item.TYPE1_WEAPON_RING_EARRING_NECKLACE);
+			result.setType2(Item.TYPE2_WEAPON);
 			final Integer bodyPart = _slots.get(st.nextToken());
 			result.setBodyPart(bodyPart);
 			result.setCrystallizable(Boolean.valueOf(st.nextToken()));
@@ -406,8 +417,8 @@ public class ItemTable
 			result.setWeaponType(weapon);
 			if (weapon == 1)
 			{
-				result.setType1(1);
-				result.setType2(1);
+				result.setType1(Item.TYPE1_SHIELD_ARMOR);
+				result.setType2(Item.TYPE2_SHIELD_ARMOR);
 			}
 			result.setCritical(Integer.parseInt(st.nextToken()));
 			result.setHitModifier(Double.parseDouble(st.nextToken()));
@@ -421,22 +432,9 @@ public class ItemTable
 		}
 		catch (Exception e)
 		{
-			_log.warning("Data error on weapon:" + result + " line: " + line);
-			e.printStackTrace();
+			_log.warning("Data error on weapon:" + result + " line: " + line + " " + e);
 		}
 		return result;
-	}
-	
-	private void parseArmors(File data)
-	{
-		_armors = parseFile(data, 1);
-		_log.config("Loaded " + _armors.size() + " armors.");
-	}
-	
-	private void parseWeapons(File data)
-	{
-		_weapons = parseFile(data, 2);
-		_log.config("Laoded " + _weapons.size() + " weapons.");
 	}
 	
 	private void buildFastLookupTable()

@@ -23,6 +23,7 @@ import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUser;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2jmobius.gameserver.templates.Item;
 import org.l2jmobius.gameserver.templates.Weapon;
 
 public class SoulShots implements IItemHandler
@@ -59,7 +60,7 @@ public class SoulShots implements IItemHandler
 			activeChar.sendPacket(new SystemMessage(SystemMessage.CANNOT_USE_SOULSHOTS));
 			return 0;
 		}
-		if (((grade == 1) && (SoulshotId != 1835)) || ((grade == 2) && (SoulshotId != 1463)) || ((grade == 3) && (SoulshotId != 1464)) || ((grade == 4) && (SoulshotId != 1465)) || ((grade == 5) && (SoulshotId != 1466)) || ((grade == 6) && (SoulshotId != 1467)))
+		if (((grade == Item.CRYSTAL_NONE) && (SoulshotId != 1835)) || ((grade == Item.CRYSTAL_D) && (SoulshotId != 1463)) || ((grade == Item.CRYSTAL_C) && (SoulshotId != 1464)) || ((grade == Item.CRYSTAL_B) && (SoulshotId != 1465)) || ((grade == Item.CRYSTAL_A) && (SoulshotId != 1466)) || ((grade == Item.CRYSTAL_S) && (SoulshotId != 1467)))
 		{
 			activeChar.sendPacket(new SystemMessage(SystemMessage.SOULSHOTS_GRADE_MISMATCH));
 			return 0;
