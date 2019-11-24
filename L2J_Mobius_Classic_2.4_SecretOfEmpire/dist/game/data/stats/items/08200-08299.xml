@@ -33,14 +33,18 @@
 		</stats>
 	</item>
 	<item id="8222" name="Monster Only (Follower of Frintezza Tran Calibur)" type="Weapon">
-		<set name="icon" val="icon.weapon_monster_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="FINE_STEEL" />
-		<set name="weight" val="1560" />
-		<set name="soulshots" val="2" />
-		<set name="spiritshots" val="2" />
+		<set name="icon" val="icon.weapon_monster_i00"/>
+		<set name="default_action" val="EQUIP"/>
+		<set name="weapon_type" val="SWORD"/>
+		<set name="bodypart" val="rhand"/>
+		<set name="damage_range" val="0;0;40;120"/>
+		<set name="immediate_effect" val="true"/>
+		<set name="material" val="FINE_STEEL"/>
+		<set name="weight" val="1560"/>
+		<set name="soulshots" val="2"/>
+		<set name="spiritshots" val="2"/>
+		<set name="commissionItemType" val="ONE_HAND_SWORD"/>
+		<set name="isAppearanceable" val="true"/>
 		<stats>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkSpd">379</stat>

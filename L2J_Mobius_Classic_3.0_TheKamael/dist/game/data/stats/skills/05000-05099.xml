@@ -453,6 +453,57 @@
 			</effect>
 		</effects>
 	</skill>
+	<skill id="5015" toLevel="6" name="Frintezza Charge">
+	<!--  Demon $s1 charge.  -->
+	<affectRange>
+		<value level="1">400</value>
+		<value level="2">500</value>
+		<value level="3">700</value>
+		<value level="4">400</value>
+		<value level="5">500</value>
+		<value level="6">700</value>
+	</affectRange>
+	<castRange>150</castRange>
+	<coolTime>
+		<value level="1">0</value>
+		<value level="2">0</value>
+		<value level="3">0</value>
+		<value level="4">1500</value>
+		<value level="5">1500</value>
+		<value level="6">1500</value>
+	</coolTime>
+	<effectPoint>-100</effectPoint>
+	<effectRange>650</effectRange>
+	<attributeType>DARK</attributeType>
+	<attributeValue>180</attributeValue>
+	<fanRange>
+		<value level="1">0;0;400;150</value>
+		<value level="2">0;0;500;170</value>
+		<value level="3">0;0;700;200</value>
+		<value level="4">0;0;400;150</value>
+		<value level="5">0;0;500;170</value>
+		<value level="6">0;0;700;200</value>
+	</fanRange>
+	<hitTime>1500</hitTime>
+	<magicLvl>85</magicLvl>
+	<operateType>A1</operateType>
+	<magicCriticalRate>-5</magicCriticalRate>
+	<targetType>ENEMY</targetType>
+	<affectScope>SQUARE</affectScope>
+	<affectObject>NOT_FRIEND</affectObject>
+	<effects>
+		<effect name="PhysicalAttack">
+			<power>
+				<value level="1">48761</value>
+				<value level="2">52970</value>
+				<value level="3">68074</value>
+				<value level="4">48761</value>
+				<value level="5">52970</value>
+				<value level="6">68074</value>
+			</power>
+		</effect>
+	</effects>
+	</skill>
 	<skill id="5016" toLevel="1" name="Yoke of Scarlet">
 		<!-- Yoked status. -->
 		<icon>icon.skill5016</icon>
