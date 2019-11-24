@@ -39,6 +39,7 @@ public class Config
 	private static final String SERVER_CONFIG_FILE = "config/server.ini";
 	private static final String RATES_CONFIG_FILE = "config/rates.ini";
 	private static final String KARMA_CONFIG_FILE = "config/karma.ini";
+	private static final String THREADPOOL_CONFIG_FILE = "config/threadpool.ini";
 	
 	// Game
 	public static String _ip;
@@ -64,6 +65,9 @@ public class Config
 	public static float KARMA_LOST_MULTIPLIER;
 	public static int KARMA_DROP_CHANCE;
 	public static List<Integer> KARMA_PROTECTED_ITEMS;
+	// ThreadPool
+	public static int SCHEDULED_THREAD_POOL_COUNT;
+	public static int INSTANT_THREAD_POOL_COUNT;
 	
 	public static void load()
 	{
@@ -107,5 +111,11 @@ public class Config
 		KARMA_LOST_MULTIPLIER = karmaSettings.getFloat("KarmaLostMultiplier", 1);
 		KARMA_DROP_CHANCE = karmaSettings.getInt("KarmaDropChance", 5);
 		KARMA_PROTECTED_ITEMS = Arrays.stream(karmaSettings.getIntArray("KarmaProtectedItems", ";")).boxed().collect(Collectors.toList());
+		
+		// Load threadpool config file (if exists)
+		final PropertiesParser threadpoolSettings = new PropertiesParser(THREADPOOL_CONFIG_FILE);
+		
+		SCHEDULED_THREAD_POOL_COUNT = threadpoolSettings.getInt("ScheduledThreadPoolCount", 40);
+		INSTANT_THREAD_POOL_COUNT = threadpoolSettings.getInt("InstantThreadPoolCount", 20);
 	}
 }

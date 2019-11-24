@@ -17,7 +17,7 @@
  */
 package org.l2jmobius.gameserver.model.actor.instance;
 
-import java.util.Timer;
+import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.data.ExperienceTable;
@@ -47,6 +47,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 import org.l2jmobius.gameserver.templates.Npc;
 import org.l2jmobius.gameserver.templates.Weapon;
+import org.l2jmobius.gameserver.threadpool.ThreadPool;
 
 public class PetInstance extends Creature
 {
@@ -64,8 +65,7 @@ public class PetInstance extends Creature
 	private final Npc _template;
 	private int _attackRange = 36;
 	private boolean _follow = true;
-	private Creature.DecayTask _decayTask;
-	private static Timer _decayTimer = new Timer(true);
+	private ScheduledFuture<?> _decayTask;
 	private int _controlItemId;
 	private int _nextLevel;
 	private int _lastLevel;
@@ -403,10 +403,9 @@ public class PetInstance extends Creature
 			final PetInstance PetInstance = this;
 			synchronized (PetInstance)
 			{
-				if (_decayTask == null)
+				if ((_decayTask == null) || _decayTask.isCancelled() || _decayTask.isDone())
 				{
-					_decayTask = new Creature.DecayTask(this);
-					_decayTimer.schedule(_decayTask, 10000L);
+					_decayTask = ThreadPool.schedule(new Creature.DecayTask(this), 7000);
 				}
 			}
 		}

@@ -21,8 +21,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Set;
-import java.util.Timer;
-import java.util.TimerTask;
+import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.enums.CreatureState;
@@ -47,6 +46,7 @@ import org.l2jmobius.gameserver.network.serverpackets.StopMove;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.TeleportToLocation;
 import org.l2jmobius.gameserver.templates.Weapon;
+import org.l2jmobius.gameserver.threadpool.ThreadPool;
 import org.l2jmobius.util.Rnd;
 
 public abstract class Creature extends WorldObject
@@ -54,29 +54,20 @@ public abstract class Creature extends WorldObject
 	private static final Logger _log = Logger.getLogger(Creature.class.getName());
 	public long serialVersionUID = 305402420L;
 	private final List<Creature> _statusListener = new ArrayList<>();
-	private static Timer _attackTimer = new Timer(true);
-	private AttackTask _currentAttackTask;
-	private static Timer _hitTimer = new Timer(true);
-	private HitTask _currentHitTask;
-	private static Timer _regenTimer = new Timer(true);
-	private MpRegenTask _mpRegTask;
+	private ScheduledFuture<?> _attackTask;
+	private ScheduledFuture<?> _hitTask;
+	private ScheduledFuture<?> _regenTask;
 	private final Object _mpLock = new Object();
 	private boolean _mpRegenActive;
-	private HpRegenTask _hpRegTask = new HpRegenTask(this);
 	private final Object _hpLock = new Object();
 	private boolean _hpRegenActive;
-	// private static Timer _bowAttack = new Timer(true);
 	private int _moveOffset;
 	private float _effectiveSpeed;
-	// private float _dx;
-	// private float _dy;
-	// private float _dz;
 	private long _moveStartTime;
 	private double _xAddition;
 	private double _yAddition;
 	private long _timeToTarget;
-	private static Timer _moveTimer = new Timer(true);
-	private ArriveTask _currentMoveTask;
+	private ScheduledFuture<?> _moveTask;
 	private String _name;
 	private int _level = 1;
 	private int _maxHp;
@@ -246,10 +237,10 @@ public abstract class Creature extends WorldObject
 	
 	public void stopMove()
 	{
-		if (_currentMoveTask != null)
+		if (_moveTask != null)
 		{
-			_currentMoveTask.cancel();
-			_currentMoveTask = null;
+			_moveTask.cancel(true);
+			_moveTask = null;
 		}
 		setX(getX());
 		setY(getY());
@@ -341,16 +332,18 @@ public abstract class Creature extends WorldObject
 	{
 		if (_hpRegenActive)
 		{
-			_hpRegTask.cancel();
-			_hpRegTask = null;
+			if (_regenTask != null)
+			{
+				_regenTask.cancel(true);
+				_regenTask = null;
+			}
 			_hpRegenActive = false;
 		}
 	}
 	
 	private void startHpRegeneration()
 	{
-		_hpRegTask = new HpRegenTask(this);
-		_regenTimer.scheduleAtFixedRate(_hpRegTask, 3000L, 3000L);
+		_regenTask = ThreadPool.scheduleAtFixedRate(new HpRegenTask(this), 3000, 3000);
 		_hpRegenActive = true;
 	}
 	
@@ -376,8 +369,7 @@ public abstract class Creature extends WorldObject
 	
 	private void startMpRegeneration()
 	{
-		_mpRegTask = new MpRegenTask(this);
-		_regenTimer.scheduleAtFixedRate(_mpRegTask, 3000L, 3000L);
+		_regenTask = ThreadPool.scheduleAtFixedRate(new MpRegenTask(this), 3000, 3000);
 		_mpRegenActive = true;
 	}
 	
@@ -385,8 +377,8 @@ public abstract class Creature extends WorldObject
 	{
 		if (_mpRegenActive)
 		{
-			_mpRegTask.cancel();
-			_mpRegTask = null;
+			_regenTask.cancel(true);
+			_regenTask = null;
 			_mpRegenActive = false;
 		}
 	}
@@ -807,17 +799,17 @@ public abstract class Creature extends WorldObject
 				_currentHp = 0.0;
 				stopHpRegeneration();
 				stopMpRegeneration();
-				if (_currentAttackTask != null)
+				if (_attackTask != null)
 				{
-					_currentAttackTask.cancel();
+					_attackTask.cancel(true);
 				}
-				if (_currentHitTask != null)
+				if (_hitTask != null)
 				{
-					_currentHitTask.cancel();
+					_hitTask.cancel(true);
 				}
-				if (_currentMoveTask != null)
+				if (_moveTask != null)
 				{
-					_currentMoveTask.cancel();
+					_moveTask.cancel(true);
 				}
 				broadcastStatusUpdate();
 				final StopMove stop = new StopMove(this);
@@ -840,7 +832,7 @@ public abstract class Creature extends WorldObject
 	{
 		_moveOffset = offset;
 		final double distance = getDistance(x, y);
-		if ((distance > 0.0) || (offset > 0))
+		if ((distance > 0) || (offset > 0))
 		{
 			if (offset == 0)
 			{
@@ -896,9 +888,7 @@ public abstract class Creature extends WorldObject
 		}
 		if ((getPawnTarget() != null) && (distance <= getAttackRange()) && (getCurrentState() == CreatureState.FOLLOW))
 		{
-			final ArriveTask newMoveTask = new ArriveTask(this);
-			_moveTimer.schedule(newMoveTask, 3000L);
-			_currentMoveTask = newMoveTask;
+			_moveTask = ThreadPool.schedule(new ArriveTask(this), 3000);
 			return;
 		}
 		int dx = x - getX();
@@ -945,48 +935,46 @@ public abstract class Creature extends WorldObject
 			{
 				if (getCurrentState() == CreatureState.INTERACT)
 				{
-					_moveTimer.schedule(newMoveTask, _timeToTarget);
-					_currentMoveTask = newMoveTask;
+					_moveTask = ThreadPool.schedule(newMoveTask, _timeToTarget);
 					setIsMoving(true);
 					return;
 				}
 				if ((_timeToTarget < 2000L) && (distance > getAttackRange()))
 				{
-					_moveTimer.schedule(newMoveTask, _timeToTarget);
+					_moveTask = ThreadPool.schedule(newMoveTask, _timeToTarget);
 				}
 				else if (getPawnTarget().isMoving())
 				{
-					_moveTimer.schedule(newMoveTask, 2000L);
+					_moveTask = ThreadPool.schedule(newMoveTask, 2000);
 				}
 				else
 				{
-					_moveTimer.schedule(newMoveTask, 3000L);
+					_moveTask = ThreadPool.schedule(newMoveTask, 3000);
 				}
 			}
 			else
 			{
-				_moveTimer.schedule(newMoveTask, _timeToTarget);
+				_moveTask = ThreadPool.schedule(newMoveTask, _timeToTarget);
 			}
-			_currentMoveTask = newMoveTask;
 			setIsMoving(true);
 		}
 	}
 	
 	protected void stopHitTask()
 	{
-		if (_currentHitTask != null)
+		if (_hitTask != null)
 		{
-			_currentHitTask.cancel();
-			_currentHitTask = null;
+			_hitTask.cancel(true);
+			_hitTask = null;
 		}
 	}
 	
 	protected void stopAttackTask()
 	{
-		if (_currentAttackTask != null)
+		if (_attackTask != null)
 		{
-			_currentAttackTask.cancel();
-			_currentAttackTask = null;
+			_attackTask.cancel(true);
+			_attackTask = null;
 		}
 	}
 	
@@ -1073,20 +1061,19 @@ public abstract class Creature extends WorldObject
 	
 	protected void startCombat()
 	{
-		if (_currentAttackTask == null)
+		if (_attackTask == null)
 		{
-			_currentAttackTask = new AttackTask(this);
-			_attackTimer.schedule(_currentAttackTask, 0L);
+			_attackTask = ThreadPool.schedule(new AttackTask(this), 0);
 		}
-		else
-		{
-			_log.warning("Multiple attacks want to start in parallel. Prevented.");
-		}
+		// else
+		// {
+		// _log.warning("Multiple attacks want to start in parallel. Prevented.");
+		// }
 	}
 	
 	private void onAttackTimer()
 	{
-		_currentAttackTask = null;
+		_attackTask = null;
 		final Creature target = (Creature) _attackTarget;
 		if (isDead() || (target == null) || target.isDead() || ((getCurrentState() != CreatureState.ATTACKING) && (getCurrentState() != CreatureState.CASTING)) || !target.knownsObject(this) || !knownsObject(target))
 		{
@@ -1166,8 +1153,8 @@ public abstract class Creature extends WorldObject
 				}
 				if (isUsingDualWeapon())
 				{
-					_hitTimer.schedule(new HitTask(this, target, damage, crit, miss, false), calculateHitSpeed(weaponItem, 1));
-					_hitTimer.schedule(new HitTask(this, target, damage, crit, miss, false), calculateHitSpeed(weaponItem, 2));
+					_hitTask = ThreadPool.schedule(new HitTask(this, target, damage, crit, miss, false), calculateHitSpeed(weaponItem, 1));
+					_hitTask = ThreadPool.schedule(new HitTask(this, target, damage, crit, miss, false), calculateHitSpeed(weaponItem, 2));
 				}
 				else if (getActiveWeapon().getWeaponType() == 5)
 				{
@@ -1183,11 +1170,11 @@ public abstract class Creature extends WorldObject
 					reduceCurrentMp(weaponItem.getMpConsume());
 					sendPacket(new SystemMessage(SystemMessage.GETTING_READY_TO_SHOOT_AN_ARROW));
 					sendPacket(new SetupGauge(SetupGauge.RED, calculateAttackSpeed(weaponItem) * 2));
-					_hitTimer.schedule(new HitTask(this, target, damage, crit, miss, false), calculateHitSpeed(weaponItem, 1));
+					_hitTask = ThreadPool.schedule(new HitTask(this, target, damage, crit, miss, false), calculateHitSpeed(weaponItem, 1));
 				}
 				else
 				{
-					_hitTimer.schedule(new HitTask(this, target, damage, crit, miss, false), calculateHitSpeed(weaponItem, 1));
+					_hitTask = ThreadPool.schedule(new HitTask(this, target, damage, crit, miss, false), calculateHitSpeed(weaponItem, 1));
 				}
 				final Attack attack = new Attack(getObjectId(), _attackTarget.getObjectId(), damage, miss, crit, soulShotUse, getX(), getY(), getZ());
 				setActiveSoulshotGrade(0);
@@ -1224,7 +1211,7 @@ public abstract class Creature extends WorldObject
 			if (getActiveWeapon().getWeaponType() == 5)
 			{
 				reduceArrowCount();
-				_attackTimer.schedule(new AttackTask(this), calculateAttackSpeed(getActiveWeapon()));
+				_attackTask = ThreadPool.schedule(new AttackTask(this), calculateAttackSpeed(getActiveWeapon()));
 			}
 			displayHitMessage(damage, crit, miss);
 			if (!miss)
@@ -1237,7 +1224,7 @@ public abstract class Creature extends WorldObject
 				{
 					_2ndHit = false;
 					_currentlyAttacking = false;
-					_attackTimer.schedule(new AttackTask(this), calculateAttackSpeed(getActiveWeapon()));
+					_attackTask = ThreadPool.schedule(new AttackTask(this), calculateAttackSpeed(getActiveWeapon()));
 				}
 				else
 				{
@@ -1247,7 +1234,7 @@ public abstract class Creature extends WorldObject
 			if (!isUsingDualWeapon())
 			{
 				_currentlyAttacking = false;
-				_attackTimer.schedule(new AttackTask(this), calculateAttackSpeed(getActiveWeapon()));
+				_attackTask = ThreadPool.schedule(new AttackTask(this), calculateAttackSpeed(getActiveWeapon()));
 			}
 		}
 	}
@@ -1389,11 +1376,11 @@ public abstract class Creature extends WorldObject
 		_currentlyAttacking = status;
 	}
 	
-	protected void enableAllSkills()
+	public void enableAllSkills()
 	{
 	}
 	
-	public class DecayTask extends TimerTask
+	public class DecayTask implements Runnable
 	{
 		Creature _instance;
 		
@@ -1409,7 +1396,7 @@ public abstract class Creature extends WorldObject
 		}
 	}
 	
-	class MpRegenTask extends TimerTask
+	class MpRegenTask implements Runnable
 	{
 		Creature _instance;
 		
@@ -1421,26 +1408,19 @@ public abstract class Creature extends WorldObject
 		@Override
 		public void run()
 		{
-			try
+			final Object object = _mpLock;
+			synchronized (object)
 			{
-				final Object object = _mpLock;
-				synchronized (object)
+				double nowMp = _instance.getCurrentMp();
+				if (_instance.getCurrentMp() < _instance.getMaxMp())
 				{
-					double nowMp = _instance.getCurrentMp();
-					if (_instance.getCurrentMp() < _instance.getMaxMp())
-					{
-						_instance.setCurrentMp(nowMp += _instance.getMaxMp() * 0.014);
-					}
+					_instance.setCurrentMp(nowMp += _instance.getMaxMp() * 0.014);
 				}
-			}
-			catch (Exception e)
-			{
-				_log.severe(e.toString());
 			}
 		}
 	}
 	
-	class HpRegenTask extends TimerTask
+	class HpRegenTask implements Runnable
 	{
 		Creature _instance;
 		
@@ -1452,29 +1432,22 @@ public abstract class Creature extends WorldObject
 		@Override
 		public void run()
 		{
-			try
+			synchronized (_hpLock)
 			{
-				synchronized (_hpLock)
+				double nowHp = _instance.getCurrentHp();
+				if (_instance.getCurrentHp() < _instance.getMaxHp())
 				{
-					double nowHp = _instance.getCurrentHp();
-					if (_instance.getCurrentHp() < _instance.getMaxHp())
+					if ((nowHp += _instance.getMaxHp() * 0.018) > _instance.getMaxHp())
 					{
-						if ((nowHp += _instance.getMaxHp() * 0.018) > _instance.getMaxHp())
-						{
-							nowHp = _instance.getMaxHp();
-						}
-						_instance.setCurrentHp(nowHp);
+						nowHp = _instance.getMaxHp();
 					}
+					_instance.setCurrentHp(nowHp);
 				}
-			}
-			catch (Exception e)
-			{
-				_log.severe(e.toString());
 			}
 		}
 	}
 	
-	class HitTask extends TimerTask
+	class HitTask implements Runnable
 	{
 		Creature _instance;
 		Creature _target;
@@ -1496,18 +1469,11 @@ public abstract class Creature extends WorldObject
 		@Override
 		public void run()
 		{
-			try
-			{
-				_instance.onHitTimer(_target, _damage, _crit, _miss, _soulshot);
-			}
-			catch (Exception e)
-			{
-				_log.severe(e.toString());
-			}
+			_instance.onHitTimer(_target, _damage, _crit, _miss, _soulshot);
 		}
 	}
 	
-	class AttackTask extends TimerTask
+	class AttackTask implements Runnable
 	{
 		Creature _instance;
 		
@@ -1519,18 +1485,11 @@ public abstract class Creature extends WorldObject
 		@Override
 		public void run()
 		{
-			try
-			{
-				_instance.onAttackTimer();
-			}
-			catch (Exception e)
-			{
-				_log.severe(e.toString());
-			}
+			_instance.onAttackTimer();
 		}
 	}
 	
-	class ArriveTask extends TimerTask
+	class ArriveTask implements Runnable
 	{
 		Creature _instance;
 		
@@ -1542,15 +1501,8 @@ public abstract class Creature extends WorldObject
 		@Override
 		public void run()
 		{
-			try
-			{
-				_instance.onTargetReached();
-			}
-			catch (Exception e)
-			{
-				_log.severe(e.toString());
-			}
-			_currentMoveTask = null;
+			_instance.onTargetReached();
+			_moveTask = null;
 		}
 	}
 	
@@ -1564,13 +1516,9 @@ public abstract class Creature extends WorldObject
 		setX(x);
 		setY(y);
 		setZ(z);
-		try
+		ThreadPool.schedule(() ->
 		{
-			Thread.sleep(2000);
-		}
-		catch (InterruptedException e)
-		{
-		}
-		World.getInstance().addVisibleObject(this);
+			World.getInstance().addVisibleObject(this);
+		}, 2000);
 	}
 }

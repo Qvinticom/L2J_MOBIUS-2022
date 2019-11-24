@@ -18,14 +18,13 @@
 package org.l2jmobius.gameserver.model;
 
 import java.lang.reflect.Constructor;
-import java.util.Timer;
-import java.util.TimerTask;
 import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.IdFactory;
 import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.templates.Npc;
+import org.l2jmobius.gameserver.threadpool.ThreadPool;
 import org.l2jmobius.util.Rnd;
 
 public class Spawn
@@ -45,7 +44,6 @@ public class Spawn
 	private int _randomy;
 	private int _heading;
 	private int _respawnDelay;
-	private static Timer _spawnTimer = new Timer(true);
 	private final Constructor<?> _constructor;
 	
 	public Spawn(Npc mobTemplate) throws SecurityException, ClassNotFoundException
@@ -161,8 +159,7 @@ public class Spawn
 		if ((_scheduledCount + _currentCount) < _maximumCount)
 		{
 			++_scheduledCount;
-			final SpawnTask task = new SpawnTask(npcId);
-			_spawnTimer.schedule(task, _respawnDelay);
+			ThreadPool.schedule(new SpawnTask(npcId), _respawnDelay);
 		}
 	}
 	
@@ -256,7 +253,7 @@ public class Spawn
 		_respawnDelay = i * 1000;
 	}
 	
-	class SpawnTask extends TimerTask
+	class SpawnTask implements Runnable
 	{
 		NpcInstance _instance;
 		int _objId;
@@ -269,14 +266,7 @@ public class Spawn
 		@Override
 		public void run()
 		{
-			try
-			{
-				doSpawn();
-			}
-			catch (Exception e)
-			{
-				e.printStackTrace();
-			}
+			doSpawn();
 			_scheduledCount--;
 		}
 	}

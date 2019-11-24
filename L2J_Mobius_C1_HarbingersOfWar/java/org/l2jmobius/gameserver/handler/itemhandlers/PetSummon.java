@@ -31,6 +31,7 @@ import org.l2jmobius.gameserver.network.serverpackets.NpcInfo;
 import org.l2jmobius.gameserver.network.serverpackets.PetInfo;
 import org.l2jmobius.gameserver.network.serverpackets.PetItemList;
 import org.l2jmobius.gameserver.templates.Npc;
+import org.l2jmobius.gameserver.threadpool.ThreadPool;
 
 public class PetSummon implements IItemHandler
 {
@@ -109,20 +110,17 @@ public class PetSummon implements IItemHandler
 		activeChar.broadcastPacket(ni);
 		activeChar.sendPacket(ownerni);
 		activeChar.sendPacket(new PetItemList(newpet));
-		try
+		
+		ThreadPool.schedule(() ->
 		{
-			Thread.sleep(900L);
-		}
-		catch (InterruptedException e)
-		{
-			// empty catch block
-		}
-		activeChar.sendPacket(new MagicSkillLaunched(activeChar, 2046, 1));
-		activeChar.setPet(newpet);
-		newpet.setOwner(activeChar);
-		newpet.addKnownObject(activeChar);
-		newpet.setFollowStatus(true);
-		newpet.followOwner(activeChar);
+			activeChar.sendPacket(new MagicSkillLaunched(activeChar, 2046, 1));
+			activeChar.setPet(newpet);
+			newpet.setOwner(activeChar);
+			newpet.addKnownObject(activeChar);
+			newpet.setFollowStatus(true);
+			newpet.followOwner(activeChar);
+		}, 900);
+		
 		return 0;
 	}
 	

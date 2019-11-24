@@ -17,21 +17,16 @@
  */
 package org.l2jmobius.gameserver.model;
 
-import java.util.Timer;
-import java.util.TimerTask;
-import java.util.logging.Logger;
+import java.util.concurrent.ScheduledFuture;
 
 import org.l2jmobius.gameserver.model.actor.Creature;
+import org.l2jmobius.gameserver.threadpool.ThreadPool;
 
 public class Potion extends WorldObject
 {
-	private static final Logger _log = Logger.getLogger(Potion.class.getName());
 	Creature _target;
-	private static Timer _regenTimer = new Timer(true);
-	private PotionHpHealing _potionhpRegTask;
-	// private boolean _potionhpRegenActive;
-	private PotionMpHealing _potionmpRegTask;
-	// private boolean _potionmpRegenActive;
+	private ScheduledFuture<?> _potionhpRegTask;
+	private ScheduledFuture<?> _potionmpRegTask;
 	private int _seconds;
 	private double _effect;
 	private int _duration;
@@ -41,27 +36,22 @@ public class Potion extends WorldObject
 	
 	public Potion()
 	{
-		_potionhpRegTask = new PotionHpHealing(_target);
-		_potionmpRegTask = new PotionMpHealing(_target);
 		_mpLock = new Object();
 		_hpLock = new Object();
 	}
 	
 	private void startPotionHpRegeneration(Creature activeChar)
 	{
-		_potionhpRegTask = new PotionHpHealing(activeChar);
-		_regenTimer.schedule(_potionhpRegTask, 1000L, _seconds);
-		// this._potionhpRegenActive = true;
+		_potionhpRegTask = ThreadPool.scheduleAtFixedRate(new PotionHpHealing(activeChar), 1000, _seconds);
 	}
 	
 	public void stopPotionHpRegeneration()
 	{
 		if (_potionhpRegTask != null)
 		{
-			_potionhpRegTask.cancel();
+			_potionhpRegTask.cancel(true);
 		}
 		_potionhpRegTask = null;
-		// this._potionhpRegenActive = false;
 	}
 	
 	public void setCurrentHpPotion2(Creature activeChar)
@@ -149,19 +139,16 @@ public class Potion extends WorldObject
 	
 	private void startPotionMpRegeneration(Creature activeChar)
 	{
-		_potionmpRegTask = new PotionMpHealing(activeChar);
-		_regenTimer.schedule(_potionmpRegTask, 1000L, _seconds);
-		// this._potionmpRegenActive = true;
+		_potionmpRegTask = ThreadPool.scheduleAtFixedRate(new PotionMpHealing(activeChar), 1000, _seconds);
 	}
 	
 	public void stopPotionMpRegeneration()
 	{
 		if (_potionmpRegTask != null)
 		{
-			_potionmpRegTask.cancel();
+			_potionmpRegTask.cancel(true);
 		}
 		_potionmpRegTask = null;
-		// this._potionmpRegenActive = false;
 	}
 	
 	public void setCurrentMpPotion2(Creature activeChar)
@@ -199,7 +186,7 @@ public class Potion extends WorldObject
 		}
 	}
 	
-	class PotionMpHealing extends TimerTask
+	class PotionMpHealing implements Runnable
 	{
 		Creature _instance;
 		
@@ -211,32 +198,25 @@ public class Potion extends WorldObject
 		@Override
 		public void run()
 		{
-			try
+			final Object object = _mpLock;
+			synchronized (object)
 			{
-				final Object object = _mpLock;
-				synchronized (object)
+				double nowMp = _instance.getCurrentMp();
+				if (_duration == 0)
 				{
-					double nowMp = _instance.getCurrentMp();
-					if (_duration == 0)
-					{
-						stopPotionMpRegeneration();
-					}
-					if (_duration != 0)
-					{
-						_instance.setCurrentMp(nowMp += _effect);
-						_duration = _duration - (_seconds / 1000);
-						setCurrentMpPotion2(_instance);
-					}
+					stopPotionMpRegeneration();
 				}
-			}
-			catch (Exception e)
-			{
-				_log.warning("error in mp potion task:" + e);
+				if (_duration != 0)
+				{
+					_instance.setCurrentMp(nowMp += _effect);
+					_duration = _duration - (_seconds / 1000);
+					setCurrentMpPotion2(_instance);
+				}
 			}
 		}
 	}
 	
-	class PotionHpHealing extends TimerTask
+	class PotionHpHealing implements Runnable
 	{
 		Creature _instance;
 		
@@ -248,29 +228,21 @@ public class Potion extends WorldObject
 		@Override
 		public void run()
 		{
-			try
+			final Object object = _hpLock;
+			synchronized (object)
 			{
-				final Object object = _hpLock;
-				synchronized (object)
+				double nowHp = _instance.getCurrentHp();
+				if (_duration == 0)
 				{
-					double nowHp = _instance.getCurrentHp();
-					if (_duration == 0)
-					{
-						stopPotionHpRegeneration();
-					}
-					if (_duration != 0)
-					{
-						_instance.setCurrentHp(nowHp += _effect);
-						_duration = _duration - (_seconds / 1000);
-						setCurrentHpPotion2(_instance);
-					}
+					stopPotionHpRegeneration();
 				}
-			}
-			catch (Exception e)
-			{
-				_log.warning("Error in hp potion task:" + e);
+				if (_duration != 0)
+				{
+					_instance.setCurrentHp(nowHp += _effect);
+					_duration = _duration - (_seconds / 1000);
+					setCurrentHpPotion2(_instance);
+				}
 			}
 		}
 	}
-	
 }

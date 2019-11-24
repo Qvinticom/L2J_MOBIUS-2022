@@ -21,9 +21,9 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Timer;
-import java.util.TimerTask;
 import java.util.TreeMap;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
@@ -80,16 +80,15 @@ import org.l2jmobius.gameserver.templates.Armor;
 import org.l2jmobius.gameserver.templates.CharTemplate;
 import org.l2jmobius.gameserver.templates.Item;
 import org.l2jmobius.gameserver.templates.Weapon;
+import org.l2jmobius.gameserver.threadpool.ThreadPool;
 import org.l2jmobius.util.Rnd;
 
 public class PlayerInstance extends Creature
 {
 	private static Logger _log = Logger.getLogger(PlayerInstance.class.getName());
-	private static Timer _magicUseTimer = new Timer(true);
-	private static Timer _enableSkillTimer = new Timer(true);
-	private static Timer _enableAllSkillsTimer = new Timer(true);
-	private final Map<Integer, Boolean> _disabledSkills = new HashMap<>();
-	private boolean _allSkillsDisabled = false;
+	
+	private final Map<Integer, Boolean> _disabledSkills = new ConcurrentHashMap<>();
+	private volatile boolean _allSkillsDisabled = false;
 	private Connection _netConnection;
 	private int _charId = 199546;
 	private int _canCraft = 0;
@@ -100,7 +99,7 @@ public class PlayerInstance extends Creature
 	private int _pkKills;
 	private int _pvpFlag = 0;
 	private long _lastPvpTime;
-	private static Timer _pvpTimer = null;
+	private ScheduledFuture<?> _pvpTask;
 	private int _maxLoad;
 	private int _race;
 	private int _classId;
@@ -135,7 +134,7 @@ public class PlayerInstance extends Creature
 	private long _uptime;
 	public byte updateKnownCounter = 0;
 	private Creature _interactTarget;
-	private static Timer _waterTimer = null;
+	private ScheduledFuture<?> _waterTask;
 	
 	public Skill addSkill(Skill newSkill)
 	{
@@ -417,10 +416,10 @@ public class PlayerInstance extends Creature
 	
 	private void stopPvPFlag()
 	{
-		if (_pvpTimer != null)
+		if (_pvpTask != null)
 		{
-			_pvpTimer.cancel();
-			_pvpTimer = null;
+			_pvpTask.cancel(true);
+			_pvpTask = null;
 		}
 		updatePvPFlag(0);
 	}
@@ -433,10 +432,9 @@ public class PlayerInstance extends Creature
 		}
 		if (value == 1)
 		{
-			if (_pvpTimer == null)
+			if (_pvpTask == null)
 			{
-				_pvpTimer = new Timer();
-				_pvpTimer.schedule(new pvpTask(), 1000, 1000);
+				_pvpTask = ThreadPool.scheduleAtFixedRate(new pvpTask(), 1000, 1000);
 			}
 			_lastPvpTime = System.currentTimeMillis() + 30000;
 		}
@@ -450,25 +448,19 @@ public class PlayerInstance extends Creature
 		broadcastPacket(userInfo);
 	}
 	
-	class pvpTask extends TimerTask
+	class pvpTask implements Runnable
 	{
 		@Override
 		public void run()
 		{
-			try
+			final long currentTime = System.currentTimeMillis();
+			if (currentTime > _lastPvpTime)
 			{
-				final long currentTime = System.currentTimeMillis();
-				if (currentTime > _lastPvpTime)
-				{
-					stopPvPFlag();
-				}
-				else if (currentTime > (_lastPvpTime - 5000))
-				{
-					updatePvPFlag(2);
-				}
+				stopPvPFlag();
 			}
-			catch (Throwable e)
+			else if (currentTime > (_lastPvpTime - 5000))
 			{
+				updatePvPFlag(2);
 			}
 		}
 	}
@@ -1558,9 +1550,62 @@ public class PlayerInstance extends Creature
 		{
 			disableSkill(skill.getId(), true);
 			disableAllSkills();
-			_magicUseTimer.schedule(new MagicUseTask(target, skill), skill.getHitTime());
-			_enableSkillTimer.schedule(new EnableSkill(skill.getId()), skill.getReuseDelay());
-			_enableAllSkillsTimer.schedule(new EnableAllSkills(skill), skill.getSkillTime());
+			ThreadPool.schedule(new MagicUseTask(target, skill), skill.getHitTime());
+			ThreadPool.schedule(new EnableSkill(skill.getId()), skill.getReuseDelay());
+			ThreadPool.schedule(new EnableAllSkills(skill), skill.getSkillTime());
+		}
+	}
+	
+	private class MagicUseTask implements Runnable
+	{
+		Creature _target;
+		Skill _skill;
+		
+		public MagicUseTask(Creature target, Skill skill)
+		{
+			_target = target;
+			_skill = skill;
+		}
+		
+		@Override
+		public void run()
+		{
+			onMagicUseTimer(_target, _skill);
+		}
+	}
+	
+	private class EnableSkill implements Runnable
+	{
+		int _skillId;
+		
+		public EnableSkill(int skillId)
+		{
+			_skillId = skillId;
+		}
+		
+		@Override
+		public void run()
+		{
+			disableSkill(_skillId, false);
+		}
+	}
+	
+	private class EnableAllSkills implements Runnable
+	{
+		Skill _skill;
+		
+		public EnableAllSkills(Skill skill)
+		{
+			_skill = skill;
+		}
+		
+		@Override
+		public void run()
+		{
+			if (getSkill() == _skill)
+			{
+				enableAllSkills();
+			}
 		}
 	}
 	
@@ -1678,14 +1723,16 @@ public class PlayerInstance extends Creature
 	
 	public boolean isSkillDisabled(int skillId)
 	{
-		try
-		{
-			return _disabledSkills.get(skillId);
-		}
-		catch (NullPointerException e)
+		if (!_disabledSkills.containsKey(skillId))
 		{
 			return false;
 		}
+		return _disabledSkills.get(skillId);
+	}
+	
+	public boolean isAllSkillsDisabled()
+	{
+		return _allSkillsDisabled;
 	}
 	
 	public void disableAllSkills()
@@ -1694,7 +1741,7 @@ public class PlayerInstance extends Creature
 	}
 	
 	@Override
-	protected void enableAllSkills()
+	public void enableAllSkills()
 	{
 		_allSkillsDisabled = false;
 	}
@@ -1763,66 +1810,6 @@ public class PlayerInstance extends Creature
 		broadcastPacket(msc);
 	}
 	
-	class EnableAllSkills extends TimerTask
-	{
-		Skill _skill;
-		
-		public EnableAllSkills(Skill skill)
-		{
-			_skill = skill;
-		}
-		
-		@Override
-		public void run()
-		{
-			if (getSkill() == _skill)
-			{
-				enableAllSkills();
-			}
-		}
-	}
-	
-	class EnableSkill extends TimerTask
-	{
-		int _skillId;
-		
-		public EnableSkill(int skillId)
-		{
-			_skillId = skillId;
-		}
-		
-		@Override
-		public void run()
-		{
-			disableSkill(_skillId, false);
-		}
-	}
-	
-	class MagicUseTask extends TimerTask
-	{
-		Creature _target;
-		Skill _skill;
-		
-		public MagicUseTask(Creature target, Skill skill)
-		{
-			_target = target;
-			_skill = skill;
-		}
-		
-		@Override
-		public void run()
-		{
-			try
-			{
-				onMagicUseTimer(_target, _skill);
-			}
-			catch (Exception e)
-			{
-				e.printStackTrace();
-			}
-		}
-	}
-	
 	public void checkWaterState()
 	{
 		// Water level.
@@ -1859,30 +1846,29 @@ public class PlayerInstance extends Creature
 	
 	public boolean isInWater()
 	{
-		return _waterTimer != null;
+		return _waterTask != null;
 	}
 	
 	private void startWaterTask()
 	{
-		if ((_waterTimer == null) && !isDead())
+		if ((_waterTask == null) && !isDead())
 		{
-			_waterTimer = new Timer();
-			_waterTimer.schedule(new waterTask(this), 86000, 1000);
+			_waterTask = ThreadPool.scheduleAtFixedRate(new waterTask(this), 86000, 1000);
 			sendPacket(new SetupGauge(SetupGauge.CYAN, 86000));
 		}
 	}
 	
 	private void stopWaterTask()
 	{
-		if (_waterTimer != null)
+		if (_waterTask != null)
 		{
-			_waterTimer.cancel();
-			_waterTimer = null;
+			_waterTask.cancel(true);
+			_waterTask = null;
 			sendPacket(new SetupGauge(SetupGauge.CYAN, 0));
 		}
 	}
 	
-	class waterTask extends TimerTask
+	class waterTask implements Runnable
 	{
 		private final PlayerInstance _player;
 		
@@ -1894,22 +1880,16 @@ public class PlayerInstance extends Creature
 		@Override
 		public void run()
 		{
-			try
+			int reduceHp = (int) (getMaxHp() / 100.0);
+			if (reduceHp < 1)
 			{
-				int reduceHp = (int) (getMaxHp() / 100.0);
-				if (reduceHp < 1)
-				{
-					reduceHp = 1;
-				}
-				
-				reduceCurrentHp(reduceHp, _player, false);
-				final SystemMessage sm = new SystemMessage(SystemMessage.DROWN_DAMAGE_S1);
-				sm.addNumber(reduceHp);
-				sendPacket(sm);
+				reduceHp = 1;
 			}
-			catch (Throwable e)
-			{
-			}
+			
+			reduceCurrentHp(reduceHp, _player, false);
+			final SystemMessage sm = new SystemMessage(SystemMessage.DROWN_DAMAGE_S1);
+			sm.addNumber(reduceHp);
+			sendPacket(sm);
 		}
 	}
 	

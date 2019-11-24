@@ -21,9 +21,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import java.util.Timer;
-import java.util.TimerTask;
-import java.util.logging.Logger;
+import java.util.concurrent.ScheduledFuture;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.data.ItemTable;
@@ -38,18 +36,15 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.serverpackets.DropItem;
 import org.l2jmobius.gameserver.templates.Npc;
 import org.l2jmobius.gameserver.templates.Weapon;
+import org.l2jmobius.gameserver.threadpool.ThreadPool;
 import org.l2jmobius.util.Rnd;
 
 public class Attackable extends NpcInstance
 {
-	private static Logger _log = Logger.getLogger(Attackable.class.getName());
-	
 	// private int _moveRadius;
 	private boolean _active;
-	private AITask _currentAiTask;
-	private AIAttackeTask _currentAIAttackTask;
-	private static Timer _aiTimer = new Timer(true);
-	private static Timer _attackTimer = new Timer(true);
+	private ScheduledFuture<?> _currentAiTask;
+	private ScheduledFuture<?> _currentAIAttackTask;
 	private final Map<WorldObject, Integer> _aggroList = new HashMap<>();
 	private Weapon _dummyWeapon;
 	private boolean _sweepActive;
@@ -89,16 +84,14 @@ public class Attackable extends NpcInstance
 		if (_active)
 		{
 			final int wait = (10 + Rnd.get(120)) * 1000;
-			_currentAiTask = new AITask(this);
-			_aiTimer.schedule(_currentAiTask, wait);
+			_currentAiTask = ThreadPool.schedule(new AITask(this), wait);
 		}
 	}
 	
 	protected void startRandomWalking()
 	{
-		_currentAiTask = new AITask(this);
 		final int wait = (10 + Rnd.get(120)) * 1000;
-		_aiTimer.schedule(_currentAiTask, wait);
+		_currentAiTask = ThreadPool.schedule(new AITask(this), wait);
 		setCurrentState(CreatureState.RANDOM_WALK);
 	}
 	
@@ -106,8 +99,7 @@ public class Attackable extends NpcInstance
 	{
 		if ((_currentAIAttackTask == null) && (getTarget() == null))
 		{
-			_currentAIAttackTask = new AIAttackeTask(this);
-			_attackTimer.scheduleAtFixedRate(_currentAIAttackTask, 100L, 1000L);
+			_currentAIAttackTask = ThreadPool.scheduleAtFixedRate(new AIAttackeTask(this), 100, 1000);
 		}
 	}
 	
@@ -320,7 +312,7 @@ public class Attackable extends NpcInstance
 	{
 		if (_currentAiTask != null)
 		{
-			_currentAiTask.cancel();
+			_currentAiTask.cancel(true);
 			_currentAiTask = null;
 		}
 	}
@@ -334,7 +326,7 @@ public class Attackable extends NpcInstance
 	{
 		if (_currentAIAttackTask != null)
 		{
-			_currentAIAttackTask.cancel();
+			_currentAIAttackTask.cancel(true);
 			_currentAIAttackTask = null;
 		}
 	}
@@ -401,7 +393,7 @@ public class Attackable extends NpcInstance
 		_sweepActive = sweepActive;
 	}
 	
-	class AIAttackeTask extends TimerTask
+	class AIAttackeTask implements Runnable
 	{
 		Creature _instance;
 		
@@ -413,37 +405,30 @@ public class Attackable extends NpcInstance
 		@Override
 		public void run()
 		{
-			try
+			if (!isInCombat())
 			{
-				if (!isInCombat())
+				for (PlayerInstance player : getKnownPlayers())
 				{
-					for (PlayerInstance player : getKnownPlayers())
+					if (!getCondition2(player) || !(getDistance(player.getX(), player.getY()) <= (getCollisionRadius() + 200.0)))
 					{
-						if (!getCondition2(player) || !(getDistance(player.getX(), player.getY()) <= (getCollisionRadius() + 200.0)))
-						{
-							continue;
-						}
-						if (_currentAiTask != null)
-						{
-							_currentAiTask.cancel();
-						}
-						setTarget(player);
-						startAttack(player);
+						continue;
 					}
-				}
-				else if (_currentAIAttackTask != null)
-				{
-					_currentAIAttackTask.cancel();
+					if (_currentAiTask != null)
+					{
+						_currentAiTask.cancel(true);
+					}
+					setTarget(player);
+					startAttack(player);
 				}
 			}
-			catch (Exception e)
+			else if (_currentAIAttackTask != null)
 			{
-				_log.severe(e.toString());
+				_currentAIAttackTask.cancel(true);
 			}
 		}
 	}
 	
-	class AITask extends TimerTask
+	class AITask implements Runnable
 	{
 		Creature _instance;
 		
@@ -455,17 +440,9 @@ public class Attackable extends NpcInstance
 		@Override
 		public void run()
 		{
-			try
-			{
-				final int x1 = (getX() + Rnd.get(500)) - 250;
-				final int y1 = (getY() + Rnd.get(500)) - 250;
-				moveTo(x1, y1, getZ(), 0);
-			}
-			catch (Exception e)
-			{
-				_log.severe(e.toString());
-			}
+			final int x1 = (getX() + Rnd.get(500)) - 250;
+			final int y1 = (getY() + Rnd.get(500)) - 250;
+			moveTo(x1, y1, getZ(), 0);
 		}
 	}
-	
 }

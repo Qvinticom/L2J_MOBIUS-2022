@@ -23,10 +23,9 @@ import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUser;
 import org.l2jmobius.gameserver.network.serverpackets.SetupGauge;
-import org.l2jmobius.gameserver.network.serverpackets.StopMove;
+import org.l2jmobius.gameserver.threadpool.ThreadPool;
 
 public class ScrollOfEscape implements IItemHandler
 {
@@ -38,30 +37,28 @@ public class ScrollOfEscape implements IItemHandler
 	@Override
 	public int useItem(PlayerInstance activeChar, ItemInstance item)
 	{
-		final int[] townCords = MapRegionTable.getInstance().getClosestTownCords(activeChar);
+		if (activeChar.isAllSkillsDisabled())
+		{
+			return 0;
+		}
+		
+		activeChar.disableAllSkills();
 		activeChar.setTarget(activeChar);
 		final Skill skill = SkillTable.getInstance().getInfo(1050, 1);
 		final MagicSkillUser msk = new MagicSkillUser(activeChar, 1050, 1, 20000, 0);
 		activeChar.sendPacket(msk);
 		activeChar.broadcastPacket(msk);
 		activeChar.sendPacket(new SetupGauge(SetupGauge.BLUE, skill.getSkillTime()));
-		if (skill.getSkillTime() > 200)
+		
+		ThreadPool.schedule(() ->
 		{
-			try
+			if (activeChar.isAllSkillsDisabled())
 			{
-				Thread.sleep(skill.getSkillTime() - 200);
+				final int[] townCords = MapRegionTable.getInstance().getClosestTownCords(activeChar);
+				activeChar.teleToLocation(townCords[0], townCords[1], townCords[2]);
+				activeChar.enableAllSkills();
 			}
-			catch (InterruptedException e)
-			{
-				// empty catch block
-			}
-		}
-		final StopMove sm = new StopMove(activeChar);
-		activeChar.sendPacket(sm);
-		activeChar.broadcastPacket(sm);
-		final ActionFailed af = new ActionFailed();
-		activeChar.sendPacket(af);
-		activeChar.teleToLocation(townCords[0], townCords[1], townCords[2]);
+		}, skill.getSkillTime() > 200 ? skill.getSkillTime() - 200 : 0);
 		
 		return 1;
 	}

@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.model.actor.instance;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.util.Timer;
+import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
@@ -36,6 +36,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SetToLocation;
 import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 import org.l2jmobius.gameserver.templates.Npc;
 import org.l2jmobius.gameserver.templates.Weapon;
+import org.l2jmobius.gameserver.threadpool.ThreadPool;
 
 public class NpcInstance extends Creature
 {
@@ -49,8 +50,7 @@ public class NpcInstance extends Creature
 	private int _spReward;
 	private int _attackRange;
 	private boolean _aggressive;
-	private Creature.DecayTask _decayTask;
-	private static Timer _decayTimer = new Timer(true);
+	private ScheduledFuture<?> _decayTask;
 	private Spawn _spawn;
 	
 	public NpcInstance(Npc template)
@@ -260,31 +260,18 @@ public class NpcInstance extends Creature
 		}
 		else
 		{
-			FileInputStream fis = null;
 			try
 			{
-				fis = new FileInputStream(file);
+				FileInputStream fis = new FileInputStream(file);
 				final byte[] raw = new byte[fis.available()];
 				fis.read(raw);
 				final String content = new String(raw, "UTF-8");
 				insertObjectIdAndShowChatWindow(player, content);
+				fis.close();
 			}
 			catch (Exception e)
 			{
 				_log.warning("problem with npc text " + e);
-			}
-			finally
-			{
-				try
-				{
-					if (fis != null)
-					{
-						fis.close();
-					}
-				}
-				catch (Exception e1)
-				{
-				}
 			}
 		}
 		player.sendPacket(new ActionFailed());
@@ -330,10 +317,9 @@ public class NpcInstance extends Creature
 			final NpcInstance NpcInstance = this;
 			synchronized (NpcInstance)
 			{
-				if (_decayTask == null)
+				if ((_decayTask == null) || _decayTask.isCancelled() || _decayTask.isDone())
 				{
-					_decayTask = new Creature.DecayTask(this);
-					_decayTimer.schedule(_decayTask, 7000L);
+					_decayTask = ThreadPool.schedule(new Creature.DecayTask(this), 7000);
 				}
 			}
 		}

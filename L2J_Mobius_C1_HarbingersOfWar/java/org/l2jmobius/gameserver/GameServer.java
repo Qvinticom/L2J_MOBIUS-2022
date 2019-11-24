@@ -52,6 +52,7 @@ import org.l2jmobius.gameserver.handler.skillhandlers.HealSkill;
 import org.l2jmobius.gameserver.managers.GmListManager;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.network.ClientThread;
+import org.l2jmobius.gameserver.threadpool.ThreadPool;
 import org.l2jmobius.loginserver.LoginController;
 
 public class GameServer extends Thread
@@ -123,6 +124,8 @@ public class GameServer extends Thread
 	public GameServer() throws Exception
 	{
 		super("GameServer");
+		
+		ThreadPool.init();
 		
 		if (!Config.SERVER_HOST_NAME.equals("*"))
 		{
