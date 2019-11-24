@@ -41,6 +41,8 @@ public class SystemMessage extends ServerBasePacket
 	public static final int CRITICAL_HIT = 44;
 	public static final int USE_S1 = 46;
 	public static final int S1_EQUIPPED = 49;
+	public static final int EARNED_S2_S1_S = 53;
+	public static final int EARNED_ITEM = 54;
 	public static final int NOTHING_HAPPENED = 61;
 	public static final int S1_INVITED_YOU_TO_PARTY = 66;
 	public static final int EFFECT_S1_DISAPPEARED = 92;
@@ -109,6 +111,7 @@ public class SystemMessage extends ServerBasePacket
 	public static final int S1_INVITED_YOU_TO_PARTY_FINDER_KEEPER = 572;
 	public static final int S1_INVITED_YOU_TO_PARTY_RANDOM = 573;
 	public static final int S1_S2 = 614;
+	public static final int DISSAPEARED_ADENA = 672;
 	public static final int OTHER_PARTY_IS_DROZEN = 692;
 	public static final int THE_PURCHASE_IS_COMPLETE = 700;
 	public static final int THE_PURCHASE_PRICE_IS_HIGHER_THAN_MONEY = 720;

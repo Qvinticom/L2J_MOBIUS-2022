@@ -17,15 +17,14 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import java.io.IOException;
-
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.data.TradeController;
 import org.l2jmobius.gameserver.model.TradeList;
+import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
+import org.l2jmobius.gameserver.model.actor.instance.MerchantInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.ClientThread;
-import org.l2jmobius.gameserver.network.Connection;
 import org.l2jmobius.gameserver.network.serverpackets.ItemList;
 import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -34,54 +33,89 @@ public class RequestBuyItem extends ClientBasePacket
 {
 	private static final String _C__1F_REQUESTBUYITEM = "[C] 1F RequestBuyItem";
 	
-	public RequestBuyItem(byte[] decrypt, ClientThread client) throws IOException
+	public RequestBuyItem(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
-		int i;
 		final int listId = readD();
 		final int count = readD();
 		final ItemInstance[] items = new ItemInstance[count];
-		for (int i2 = 0; i2 < count; ++i2)
+		for (int i = 0; i < count; ++i)
 		{
 			final int itemId = readD();
 			final int cnt = readD();
 			final ItemInstance inst = ItemTable.getInstance().createItem(itemId);
 			inst.setCount(cnt);
-			items[i2] = inst;
+			items[i] = inst;
 		}
-		final PlayerInstance activeChar = client.getActiveChar();
-		final Connection con = client.getConnection();
-		double neededMoney = 0.0;
-		final long currentMoney = activeChar.getAdena();
-		final TradeList list = TradeController.getInstance().getBuyList(listId);
-		for (i = 0; i < items.length; ++i)
+		
+		final PlayerInstance player = client.getActiveChar();
+		
+		// Prevent buying items far from merchant.
+		if (!(player.getTarget() instanceof MerchantInstance))
 		{
-			final double count2 = items[i].getCount();
-			final int id = items[i].getItemId();
+			return;
+		}
+		boolean found = false;
+		for (WorldObject object : player.getKnownObjects())
+		{
+			if ((object instanceof MerchantInstance) && (player.calculateDistance2D(object) < 250))
+			{
+				found = true;
+				break;
+			}
+		}
+		if (!found)
+		{
+			return;
+		}
+		
+		double neededMoney = 0;
+		final long currentMoney = player.getAdena();
+		final TradeList list = TradeController.getInstance().getBuyList(listId);
+		for (ItemInstance item : items)
+		{
+			final double itemCount = item.getCount();
+			final int id = item.getItemId();
 			int price = list.getPriceForItemId(id);
 			if (price == -1)
 			{
 				_log.warning("ERROR, no price found .. wrong buylist ??");
 				price = 1000000;
 			}
-			neededMoney += Math.abs(count2) * price;
+			neededMoney += Math.abs(itemCount) * price;
 		}
-		if ((neededMoney > currentMoney) || (neededMoney < 0.0) || (currentMoney <= 0L))
+		if ((neededMoney > currentMoney) || (neededMoney < 0) || (currentMoney <= 0))
 		{
-			final SystemMessage sm = new SystemMessage(SystemMessage.YOU_NOT_ENOUGH_ADENA);
-			con.sendPacket(sm);
+			player.sendPacket(new SystemMessage(SystemMessage.YOU_NOT_ENOUGH_ADENA));
 			return;
 		}
-		activeChar.reduceAdena((int) neededMoney);
-		for (i = 0; i < items.length; ++i)
+		player.reduceAdena((int) neededMoney);
+		final SystemMessage sma = new SystemMessage(SystemMessage.DISSAPEARED_ADENA);
+		sma.addNumber((int) neededMoney);
+		player.sendPacket(sma);
+		
+		for (ItemInstance item : items)
 		{
-			activeChar.getInventory().addItem(items[i]);
+			player.getInventory().addItem(item);
+			if (item.getCount() > 1)
+			{
+				final SystemMessage sm = new SystemMessage(SystemMessage.EARNED_S2_S1_S);
+				sm.addItemName(item.getItemId());
+				sm.addNumber(item.getCount());
+				player.sendPacket(sm);
+			}
+			else
+			{
+				final SystemMessage sm = new SystemMessage(SystemMessage.EARNED_ITEM);
+				sm.addItemName(item.getItemId());
+				player.sendPacket(sm);
+			}
 		}
-		final ItemList il = new ItemList(activeChar, false);
-		con.sendPacket(il);
-		final StatusUpdate su = new StatusUpdate(activeChar.getObjectId());
-		su.addAttribute(StatusUpdate.CUR_LOAD, activeChar.getCurrentLoad());
-		activeChar.sendPacket(su);
+		
+		player.sendPacket(new ItemList(player, false));
+		final StatusUpdate su = new StatusUpdate(player.getObjectId());
+		su.addAttribute(StatusUpdate.CUR_LOAD, player.getCurrentLoad());
+		player.sendPacket(su);
 	}
 	
 	@Override

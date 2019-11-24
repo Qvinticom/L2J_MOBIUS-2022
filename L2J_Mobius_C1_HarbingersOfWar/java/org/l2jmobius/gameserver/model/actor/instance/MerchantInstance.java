@@ -54,8 +54,7 @@ public class MerchantInstance extends NpcInstance
 		final TradeList list = TradeController.getInstance().getBuyList(val);
 		if (list != null)
 		{
-			final BuyList bl = new BuyList(list, player.getAdena());
-			player.sendPacket(bl);
+			player.sendPacket(new BuyList(list, player.getAdena()));
 		}
 		else
 		{
@@ -66,8 +65,7 @@ public class MerchantInstance extends NpcInstance
 	
 	private void showSellWindow(PlayerInstance player)
 	{
-		final SellList sl = new SellList(player);
-		player.sendPacket(sl);
+		player.sendPacket(new SellList(player));
 		player.sendPacket(new ActionFailed());
 	}
 	
@@ -77,8 +75,7 @@ public class MerchantInstance extends NpcInstance
 		super.onBypassFeedback(player, command);
 		if (command.startsWith("Buy"))
 		{
-			final int val = Integer.parseInt(command.substring(4));
-			showBuyWindow(player, val);
+			showBuyWindow(player, Integer.parseInt(command.substring(4)));
 		}
 		else if (command.equals("Sell"))
 		{
