@@ -74,6 +74,50 @@ public class WorldObject implements Serializable
 		_z = z;
 	}
 	
+	/**
+	 * Calculates 2D distance between this WorldObject and given x, y, z.
+	 * @param x the X coordinate
+	 * @param y the Y coordinate
+	 * @param z the Z coordinate
+	 * @return distance between object and given x, y, z.
+	 */
+	public double calculateDistance2D(int x, int y, int z)
+	{
+		return Math.sqrt(Math.pow(x - _x, 2) + Math.pow(y - _y, 2));
+	}
+	
+	/**
+	 * Calculates the 2D distance between this WorldObject and given location.
+	 * @param obj the location object
+	 * @return distance between object and given location.
+	 */
+	public double calculateDistance2D(WorldObject obj)
+	{
+		return calculateDistance2D(obj.getX(), obj.getY(), obj.getZ());
+	}
+	
+	/**
+	 * Calculates the 3D distance between this WorldObject and given x, y, z.
+	 * @param x the X coordinate
+	 * @param y the Y coordinate
+	 * @param z the Z coordinate
+	 * @return distance between object and given x, y, z.
+	 */
+	public double calculateDistance3D(int x, int y, int z)
+	{
+		return Math.sqrt(Math.pow(x - _x, 2) + Math.pow(y - _y, 2) + Math.pow(z - _z, 2));
+	}
+	
+	/**
+	 * Calculates 3D distance between this WorldObject and given location.
+	 * @param obj the location object
+	 * @return distance between object and given location.
+	 */
+	public double calculateDistance3D(WorldObject obj)
+	{
+		return calculateDistance3D(obj.getX(), obj.getY(), obj.getZ());
+	}
+	
 	public void onAction(PlayerInstance player)
 	{
 		player.sendPacket(new ActionFailed());
