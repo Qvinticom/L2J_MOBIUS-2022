@@ -17,14 +17,11 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import java.io.IOException;
-
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.ClientThread;
-import org.l2jmobius.gameserver.network.Connection;
 import org.l2jmobius.gameserver.network.serverpackets.DropItem;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -34,7 +31,7 @@ public class RequestDropItem extends ClientBasePacket
 {
 	private static final String _C__12_REQUESTDROPITEM = "[C] 12 RequestDropItem";
 	
-	public RequestDropItem(byte[] decrypt, ClientThread client) throws IOException
+	public RequestDropItem(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
 		final int objectId = readD();
@@ -42,14 +39,15 @@ public class RequestDropItem extends ClientBasePacket
 		final int x = readD();
 		final int y = readD();
 		final int z = readD();
+		
 		if (count == 0)
 		{
 			return;
 		}
-		if ((client.getActiveChar().getPrivateStoreType() == 0) && (client.getActiveChar().getTransactionRequester() == null))
+		
+		final PlayerInstance activeChar = client.getActiveChar();
+		if ((activeChar.getPrivateStoreType() == 0) && (activeChar.getTransactionRequester() == null))
 		{
-			final Connection con = client.getConnection();
-			final PlayerInstance activeChar = client.getActiveChar();
 			final ItemInstance oldItem = activeChar.getInventory().getItem(objectId);
 			if (oldItem == null)
 			{
@@ -73,9 +71,8 @@ public class RequestDropItem extends ClientBasePacket
 				dropedItem = activeChar.getInventory().dropItem(objectId, count);
 				final InventoryUpdate iu = new InventoryUpdate();
 				iu.addModifiedItem(oldItem);
-				con.sendPacket(iu);
-				final UserInfo ui = new UserInfo(activeChar);
-				con.sendPacket(ui);
+				activeChar.sendPacket(iu);
+				activeChar.sendPacket(new UserInfo(activeChar));
 			}
 			else
 			{
@@ -101,17 +98,17 @@ public class RequestDropItem extends ClientBasePacket
 			{
 				iu.addModifiedItem(oldItem);
 			}
-			con.sendPacket(iu);
+			activeChar.sendPacket(iu);
 			final SystemMessage sm = new SystemMessage(SystemMessage.YOU_DROPPED_S1);
 			sm.addItemName(dropedItem.getItemId());
-			con.sendPacket(sm);
-			con.sendPacket(new UserInfo(activeChar));
+			activeChar.sendPacket(sm);
+			activeChar.sendPacket(new UserInfo(activeChar));
 			World.getInstance().addVisibleObject(dropedItem);
 		}
 		else
 		{
 			final SystemMessage msg = new SystemMessage(SystemMessage.NOTHING_HAPPENED);
-			client.getActiveChar().sendPacket(msg);
+			activeChar.sendPacket(msg);
 		}
 	}
 	

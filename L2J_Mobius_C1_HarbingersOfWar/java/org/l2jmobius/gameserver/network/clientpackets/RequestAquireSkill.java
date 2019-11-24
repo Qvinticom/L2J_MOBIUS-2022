@@ -17,7 +17,6 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import java.io.IOException;
 import java.util.Collection;
 
 import org.l2jmobius.gameserver.data.SkillTable;
@@ -38,7 +37,7 @@ public class RequestAquireSkill extends ClientBasePacket
 {
 	private static final String _C__6C_REQUESTAQUIRESKILL = "[C] 6C RequestAquireSkill";
 	
-	public RequestAquireSkill(byte[] rawPacket, ClientThread client) throws IOException
+	public RequestAquireSkill(byte[] rawPacket, ClientThread client)
 	{
 		super(rawPacket);
 		final int id = readD();
@@ -111,7 +110,7 @@ public class RequestAquireSkill extends ClientBasePacket
 		{
 			asl.addSkill(skillLearn.getId(), skillLearn.getLevel(), skillLearn.getLevel(), skillLearn.getSpCost(), 0);
 		}
-		player.getNetConnection().sendPacket(asl);
+		player.sendPacket(asl);
 	}
 	
 	@Override

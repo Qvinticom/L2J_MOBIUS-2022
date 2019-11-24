@@ -17,8 +17,7 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import java.io.IOException;
-
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.ClientThread;
 import org.l2jmobius.gameserver.network.serverpackets.ItemList;
 
@@ -26,11 +25,12 @@ public class RequestItemList extends ClientBasePacket
 {
 	private static final String _C__0F_REQUESTITEMLIST = "[C] 0F RequestItemList";
 	
-	public RequestItemList(byte[] rawPacket, ClientThread client) throws IOException
+	public RequestItemList(byte[] rawPacket, ClientThread client)
 	{
 		super(rawPacket);
-		final ItemList il = new ItemList(client.getActiveChar(), true);
-		client.getConnection().sendPacket(il);
+		
+		final PlayerInstance activeChar = client.getActiveChar();
+		activeChar.sendPacket(new ItemList(activeChar, true));
 	}
 	
 	@Override

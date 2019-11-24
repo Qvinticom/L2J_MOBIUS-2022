@@ -17,9 +17,6 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import java.io.IOException;
-
-import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.ClientThread;
 import org.l2jmobius.gameserver.network.serverpackets.TargetUnselected;
@@ -28,20 +25,15 @@ public class RequestTargetCanceld extends ClientBasePacket
 {
 	private static final String _C__37_REQUESTTARGETCANCELD = "[C] 37 RequestTargetCanceld";
 	
-	public RequestTargetCanceld(byte[] rawPacket, ClientThread client) throws IOException
+	public RequestTargetCanceld(byte[] rawPacket, ClientThread client)
 	{
 		super(rawPacket);
 		final PlayerInstance activeChar = client.getActiveChar();
 		if (activeChar.getTarget() != null)
 		{
-			final TargetUnselected atk = new TargetUnselected(activeChar);
-			client.getConnection().sendPacket(atk);
-			((Creature) activeChar).setTarget(null);
+			activeChar.sendPacket(new TargetUnselected(activeChar));
+			activeChar.setTarget(null);
 		}
-		// else
-		// {
-		// _log.warning("we have no target to cancel ??");
-		// }
 	}
 	
 	@Override

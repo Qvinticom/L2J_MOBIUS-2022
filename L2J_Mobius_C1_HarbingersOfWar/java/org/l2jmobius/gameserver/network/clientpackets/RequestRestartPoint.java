@@ -17,12 +17,9 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import java.io.IOException;
-
 import org.l2jmobius.gameserver.data.MapRegionTable;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.ClientThread;
-import org.l2jmobius.gameserver.network.Connection;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import org.l2jmobius.gameserver.network.serverpackets.Revive;
 import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
@@ -32,16 +29,15 @@ public class RequestRestartPoint extends ClientBasePacket
 {
 	private static final String _C__6d_REQUESTRESTARTPOINT = "[C] 6d RequestRestartPoint";
 	
-	public RequestRestartPoint(byte[] decrypt, ClientThread client) throws IOException
+	public RequestRestartPoint(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
-		final Connection con = client.getConnection();
+		
 		final PlayerInstance activeChar = client.getActiveChar();
 		final int[] townCords = MapRegionTable.getInstance().getClosestTownCords(activeChar);
 		final StopMove stopMove = new StopMove(activeChar);
-		con.sendPacket(stopMove);
-		final ActionFailed actionFailed = new ActionFailed();
-		con.sendPacket(actionFailed);
+		activeChar.sendPacket(stopMove);
+		activeChar.sendPacket(new ActionFailed());
 		activeChar.broadcastPacket(stopMove);
 		activeChar.teleToLocation(townCords[0], townCords[1], townCords[2]);
 		activeChar.setCurrentHp(0.6 * activeChar.getMaxHp());

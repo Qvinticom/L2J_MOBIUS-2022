@@ -29,8 +29,7 @@ public class RequestQuestList extends ClientBasePacket
 	public RequestQuestList(byte[] decrypt, ClientThread client) throws IOException
 	{
 		super(decrypt);
-		final QuestList ql = new QuestList();
-		client.getConnection().sendPacket(ql);
+		client.getConnection().sendPacket(new QuestList());
 	}
 	
 	@Override

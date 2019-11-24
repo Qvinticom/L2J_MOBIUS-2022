@@ -17,14 +17,12 @@
  */
 package org.l2jmobius.gameserver.handler;
 
-import java.io.IOException;
-
 import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 public interface IItemHandler
 {
-	public int useItem(PlayerInstance var1, ItemInstance var2) throws IOException;
+	public int useItem(PlayerInstance var1, ItemInstance item);
 	
 	public int[] getItemIds();
 }

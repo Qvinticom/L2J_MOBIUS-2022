@@ -17,28 +17,25 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import java.io.IOException;
-
 import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.data.SkillTreeTable;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.SkillLearn;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.ClientThread;
-import org.l2jmobius.gameserver.network.Connection;
 import org.l2jmobius.gameserver.network.serverpackets.AquireSkillInfo;
 
 public class RequestAquireSkillInfo extends ClientBasePacket
 {
 	private static final String _C__6B_REQUESTAQUIRESKILLINFO = "[C] 6B RequestAquireSkillInfo";
 	
-	public RequestAquireSkillInfo(byte[] rawPacket, ClientThread client) throws IOException
+	public RequestAquireSkillInfo(byte[] rawPacket, ClientThread client)
 	{
 		super(rawPacket);
-		final PlayerInstance activeChar = client.getActiveChar();
-		final Connection con = client.getConnection();
 		final int id = readD();
 		final int level = readD();
+		
+		final PlayerInstance activeChar = client.getActiveChar();
 		final Skill skill = SkillTable.getInstance().getInfo(id, level);
 		int requiredSp = 0;
 		for (SkillLearn skill2 : SkillTreeTable.getInstance().getAvailableSkills(activeChar))
@@ -50,8 +47,7 @@ public class RequestAquireSkillInfo extends ClientBasePacket
 			requiredSp = skill2.getSpCost();
 			break;
 		}
-		final AquireSkillInfo asi = new AquireSkillInfo(skill.getId(), skill.getLevel(), requiredSp);
-		con.sendPacket(asi);
+		activeChar.sendPacket(new AquireSkillInfo(skill.getId(), skill.getLevel(), requiredSp));
 	}
 	
 	@Override

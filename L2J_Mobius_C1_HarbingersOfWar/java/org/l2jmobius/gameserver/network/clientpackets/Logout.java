@@ -17,8 +17,6 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import java.io.IOException;
-
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.ClientThread;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -28,7 +26,7 @@ public class Logout extends ClientBasePacket
 {
 	private static final String _C__09_LOGOUT = "[C] 09 Logout";
 	
-	public Logout(byte[] decrypt, ClientThread client) throws IOException
+	public Logout(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
 		
@@ -48,8 +46,7 @@ public class Logout extends ClientBasePacket
 				return;
 			}
 			
-			final LeaveWorld ql = new LeaveWorld();
-			client.getConnection().sendPacket(ql);
+			player.sendPacket(new LeaveWorld());
 			player.deleteMe();
 			client.saveCharToDisk(player);
 		}

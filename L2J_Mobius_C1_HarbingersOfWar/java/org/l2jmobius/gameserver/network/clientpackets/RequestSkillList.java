@@ -17,9 +17,8 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import java.io.IOException;
-
 import org.l2jmobius.gameserver.model.Skill;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.ClientThread;
 import org.l2jmobius.gameserver.network.serverpackets.SkillList;
 
@@ -27,15 +26,16 @@ public class RequestSkillList extends ClientBasePacket
 {
 	private static final String _C__3F_REQUESTSKILLLIST = "[C] 3F RequestSkillList";
 	
-	public RequestSkillList(byte[] rawPacket, ClientThread client) throws IOException
+	public RequestSkillList(byte[] rawPacket, ClientThread client)
 	{
 		super(rawPacket);
 		final SkillList response = new SkillList();
-		for (Skill skill : client.getActiveChar().getAllSkills())
+		final PlayerInstance activeChar = client.getActiveChar();
+		for (Skill skill : activeChar.getAllSkills())
 		{
 			response.addSkill(skill.getId(), skill.getLevel(), skill.isPassive());
 		}
-		client.getConnection().sendPacket(response);
+		activeChar.sendPacket(response);
 	}
 	
 	@Override

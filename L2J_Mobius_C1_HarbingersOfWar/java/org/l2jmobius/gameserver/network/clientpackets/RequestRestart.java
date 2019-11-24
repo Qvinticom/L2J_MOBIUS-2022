@@ -17,8 +17,6 @@ lo * This file is part of the L2J Mobius project.
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import java.io.IOException;
-
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.ClientThread;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -29,7 +27,7 @@ public class RequestRestart extends ClientBasePacket
 {
 	private static final String _C__46_REQUESTRESTART = "[C] 46 RequestRestart";
 	
-	public RequestRestart(byte[] decrypt, ClientThread client) throws IOException
+	public RequestRestart(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
 		
@@ -50,12 +48,10 @@ public class RequestRestart extends ClientBasePacket
 			}
 			
 			player.deleteMe();
-			final RestartResponse response = new RestartResponse();
-			client.getConnection().sendPacket(response);
+			player.sendPacket(new RestartResponse());
 			client.saveCharToDisk(client.getActiveChar());
 			client.setActiveChar(null);
-			final CharSelectInfo cl = new CharSelectInfo(client.getLoginName(), client.getSessionId());
-			client.getConnection().sendPacket(cl);
+			player.sendPacket(new CharSelectInfo(client.getLoginName(), client.getSessionId()));
 		}
 	}
 	

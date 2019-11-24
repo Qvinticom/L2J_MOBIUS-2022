@@ -17,44 +17,41 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import java.io.IOException;
-
 import org.l2jmobius.gameserver.model.ShortCut;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.ClientThread;
-import org.l2jmobius.gameserver.network.Connection;
 import org.l2jmobius.gameserver.network.serverpackets.ShortCutRegister;
 
 public class RequestShortCutReg extends ClientBasePacket
 {
 	private static final String _C__33_REQUESTSHORTCUTREG = "[C] 33 RequestShortCutReg";
 	
-	public RequestShortCutReg(byte[] rawPacket, ClientThread client) throws IOException
+	public RequestShortCutReg(byte[] rawPacket, ClientThread client)
 	{
 		super(rawPacket);
-		final PlayerInstance activeChar = client.getActiveChar();
-		final Connection con = client.getConnection();
 		final int type = readD();
 		final int slot = readD();
 		final int id = readD();
 		final int unk = readD();
+		
+		final PlayerInstance activeChar = client.getActiveChar();
 		switch (type)
 		{
-			case 1:
-			case 3:
+			case ShortCut.TYPE_ITEM:
+			case ShortCut.TYPE_ACTION:
 			{
-				con.sendPacket(new ShortCutRegister(slot, type, id, unk));
+				activeChar.sendPacket(new ShortCutRegister(slot, type, id, unk));
 				activeChar.registerShortCut(new ShortCut(slot, type, id, -1, unk));
 				break;
 			}
-			case 2:
+			case ShortCut.TYPE_SKILL:
 			{
 				final int level = activeChar.getSkillLevel(id);
 				if (level <= 0)
 				{
 					break;
 				}
-				con.sendPacket(new ShortCutRegister(slot, type, id, level, unk));
+				activeChar.sendPacket(new ShortCutRegister(slot, type, id, level, unk));
 				activeChar.registerShortCut(new ShortCut(slot, type, id, level, unk));
 				break;
 			}

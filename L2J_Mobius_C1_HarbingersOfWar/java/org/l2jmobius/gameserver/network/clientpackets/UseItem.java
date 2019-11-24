@@ -17,7 +17,6 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import java.io.IOException;
 import java.util.List;
 
 import org.l2jmobius.gameserver.handler.IItemHandler;
@@ -34,7 +33,7 @@ public class UseItem extends ClientBasePacket
 {
 	private static final String _C__14_USEITEM = "[C] 14 UseItem";
 	
-	public UseItem(byte[] decrypt, ClientThread client) throws IOException
+	public UseItem(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
 		final int objectId = readD();

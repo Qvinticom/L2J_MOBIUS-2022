@@ -17,8 +17,6 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import java.io.IOException;
-
 import org.l2jmobius.gameserver.Announcements;
 import org.l2jmobius.gameserver.data.MapRegionTable;
 import org.l2jmobius.gameserver.managers.GmListManager;
@@ -27,7 +25,6 @@ import org.l2jmobius.gameserver.model.ShortCut;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.ClientThread;
-import org.l2jmobius.gameserver.network.Connection;
 import org.l2jmobius.gameserver.network.serverpackets.Die;
 import org.l2jmobius.gameserver.network.serverpackets.ItemList;
 import org.l2jmobius.gameserver.network.serverpackets.ShortCutInit;
@@ -38,19 +35,17 @@ public class EnterWorld extends ClientBasePacket
 {
 	private static final String _C__03_ENTERWORLD = "[C] 03 EnterWorld";
 	
-	public EnterWorld(byte[] decrypt, ClientThread client) throws IOException
+	public EnterWorld(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
 		final PlayerInstance activeChar = client.getActiveChar();
-		final Connection con = client.getConnection();
 		if (client.getAccessLevel() >= 100)
 		{
 			activeChar.setIsGM(true);
 			GmListManager.getInstance().addGm(activeChar);
 		}
-		final SystemMessage sm = new SystemMessage(SystemMessage.WELCOME_TO_LINEAGE);
-		con.sendPacket(sm);
 		
+		activeChar.sendPacket(new SystemMessage(SystemMessage.WELCOME_TO_LINEAGE));
 		Announcements.getInstance().showAnnouncements(activeChar);
 		
 		final ItemList il = new ItemList(activeChar, false);
@@ -82,10 +77,9 @@ public class EnterWorld extends ClientBasePacket
 				}
 			}
 		}
-		con.sendPacket(sci);
+		activeChar.sendPacket(sci);
 		
-		final UserInfo ui = new UserInfo(activeChar);
-		con.sendPacket(ui);
+		activeChar.sendPacket(new UserInfo(activeChar));
 		if (activeChar.isDead())
 		{
 			activeChar.sendPacket(new Die(activeChar));

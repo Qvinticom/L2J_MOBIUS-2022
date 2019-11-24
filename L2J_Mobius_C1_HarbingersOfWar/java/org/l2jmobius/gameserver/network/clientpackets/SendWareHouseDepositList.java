@@ -17,13 +17,10 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import java.io.IOException;
-
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.ClientThread;
-import org.l2jmobius.gameserver.network.Connection;
 import org.l2jmobius.gameserver.network.serverpackets.ItemList;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -31,20 +28,18 @@ public class SendWareHouseDepositList extends ClientBasePacket
 {
 	private static final String _C__31_SENDWAREHOUSEDEPOSITLIST = "[C] 31 SendWareHouseDepositList";
 	
-	public SendWareHouseDepositList(byte[] decrypt, ClientThread client) throws IOException
+	public SendWareHouseDepositList(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
 		int i;
 		final PlayerInstance activeChar = client.getActiveChar();
-		final Connection con = client.getConnection();
 		final int count = readD();
 		final int price = 30;
 		int neededMoney = count * price;
 		final int currentMoney = activeChar.getAdena();
 		if (neededMoney > currentMoney)
 		{
-			final SystemMessage sm = new SystemMessage(SystemMessage.YOU_NOT_ENOUGH_ADENA);
-			con.sendPacket(sm);
+			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_NOT_ENOUGH_ADENA));
 			return;
 		}
 		final ItemInstance[] items = new ItemInstance[count];
@@ -68,8 +63,7 @@ public class SendWareHouseDepositList extends ClientBasePacket
 			neededMoney += price;
 		}
 		activeChar.reduceAdena(neededMoney);
-		final ItemList il = new ItemList(activeChar, false);
-		con.sendPacket(il);
+		activeChar.sendPacket(new ItemList(activeChar, false));
 	}
 	
 	@Override

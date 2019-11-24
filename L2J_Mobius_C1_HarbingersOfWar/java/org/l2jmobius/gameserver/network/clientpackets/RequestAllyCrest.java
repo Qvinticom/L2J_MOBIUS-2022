@@ -34,8 +34,7 @@ public class RequestAllyCrest extends ClientBasePacket
 		final File crestFile = new File("data/allycrest_" + crestId + ".bmp");
 		if (crestFile.exists())
 		{
-			final AllyCrest ac = new AllyCrest(crestId, crestFile);
-			client.getConnection().sendPacket(ac);
+			client.getConnection().sendPacket(new AllyCrest(crestId, crestFile));
 		}
 		else
 		{
