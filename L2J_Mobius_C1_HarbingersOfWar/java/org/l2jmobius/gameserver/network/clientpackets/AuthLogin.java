@@ -50,7 +50,7 @@ public class AuthLogin extends ClientBasePacket
 		if (sessionKey != key2)
 		{
 			_log.warning("session key is not correct. closing connection");
-			client.getConnection().sendPacket(new AuthLoginFail(1));
+			client.getConnection().sendPacket(new AuthLoginFail(AuthLoginFail.SYSTEM_ERROR_LOGIN_LATER));
 		}
 		else
 		{

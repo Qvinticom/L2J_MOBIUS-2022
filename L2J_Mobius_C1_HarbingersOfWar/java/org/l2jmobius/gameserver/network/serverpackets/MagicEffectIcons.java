@@ -17,11 +17,12 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import java.util.Vector;
+import java.util.ArrayList;
+import java.util.List;
 
 public class MagicEffectIcons extends ServerBasePacket
 {
-	private final Vector<Effect> _effects = new Vector<>();
+	private final List<Effect> _effects = new ArrayList<>();
 	
 	public void addEffect(int skillId, int dat, int duration)
 	{
@@ -33,12 +34,11 @@ public class MagicEffectIcons extends ServerBasePacket
 	{
 		writeC(0x97);
 		writeH(_effects.size());
-		for (int i = 0; i < _effects.size(); ++i)
+		for (Effect effect : _effects)
 		{
-			final Effect temp = _effects.get(i);
-			writeD(temp.skillId);
-			writeH(temp.dat);
-			writeD(temp.duration / 1000);
+			writeD(effect.skillId);
+			writeH(effect.dat);
+			writeD(effect.duration / 1000);
 		}
 	}
 	

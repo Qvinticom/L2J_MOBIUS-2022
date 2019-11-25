@@ -17,11 +17,12 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import java.util.Vector;
+import java.util.ArrayList;
+import java.util.List;
 
 public class AquireSkillList extends ServerBasePacket
 {
-	private final Vector<Skill> _skills = new Vector<>();
+	private final List<Skill> _skills = new ArrayList<>();
 	
 	public void addSkill(int id, int nextLevel, int maxLevel, int spCost, int requirements)
 	{
@@ -33,14 +34,13 @@ public class AquireSkillList extends ServerBasePacket
 	{
 		writeC(0xA3);
 		writeD(_skills.size());
-		for (int i = 0; i < _skills.size(); ++i)
+		for (Skill skill : _skills)
 		{
-			final Skill temp = _skills.get(i);
-			writeD(temp.id);
-			writeD(temp.nextLevel);
-			writeD(temp.maxLevel);
-			writeD(temp.spCost);
-			writeD(temp.requirements);
+			writeD(skill.id);
+			writeD(skill.nextLevel);
+			writeD(skill.maxLevel);
+			writeD(skill.spCost);
+			writeD(skill.requirements);
 		}
 	}
 	

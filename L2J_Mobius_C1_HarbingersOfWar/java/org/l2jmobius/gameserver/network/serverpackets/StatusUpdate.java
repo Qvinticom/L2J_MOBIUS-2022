@@ -17,7 +17,8 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import java.util.Vector;
+import java.util.ArrayList;
+import java.util.List;
 
 public class StatusUpdate extends ServerBasePacket
 {
@@ -49,7 +50,7 @@ public class StatusUpdate extends ServerBasePacket
 	public static int KARMA = 27;
 	
 	private final int _objectId;
-	private final Vector<Attribute> _attributes = new Vector<>();
+	private final List<Attribute> _attributes = new ArrayList<>();
 	
 	public StatusUpdate(int objectId)
 	{
@@ -67,11 +68,10 @@ public class StatusUpdate extends ServerBasePacket
 		writeC(0x1A);
 		writeD(_objectId);
 		writeD(_attributes.size());
-		for (int i = 0; i < _attributes.size(); ++i)
+		for (Attribute att : _attributes)
 		{
-			final Attribute temp = _attributes.get(i);
-			writeD(temp.id);
-			writeD(temp.value);
+			writeD(att.id);
+			writeD(att.value);
 		}
 	}
 	

@@ -17,11 +17,12 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import java.util.Vector;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ShortCutInit extends ServerBasePacket
 {
-	private final Vector<ShortCut> _shortCuts = new Vector<>();
+	private final List<ShortCut> _shortCuts = new ArrayList<>();
 	
 	public void addSkillShotCut(int slot, int skillId, int level, int dat2)
 	{
@@ -43,17 +44,16 @@ public class ShortCutInit extends ServerBasePacket
 	{
 		writeC(0x57);
 		writeD(_shortCuts.size());
-		for (int i = 0; i < _shortCuts.size(); ++i)
+		for (ShortCut shortcut : _shortCuts)
 		{
-			final ShortCut temp = _shortCuts.get(i);
-			writeD(temp.type);
-			writeD(temp.slot);
-			writeD(temp.typeId);
-			if (temp.level > -1)
+			writeD(shortcut.type);
+			writeD(shortcut.slot);
+			writeD(shortcut.typeId);
+			if (shortcut.level > -1)
 			{
-				writeD(temp.level);
+				writeD(shortcut.level);
 			}
-			writeD(temp.dat2);
+			writeD(shortcut.dat2);
 		}
 	}
 	

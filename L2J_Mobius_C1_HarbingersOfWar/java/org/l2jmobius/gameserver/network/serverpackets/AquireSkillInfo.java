@@ -17,11 +17,12 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import java.util.Vector;
+import java.util.ArrayList;
+import java.util.List;
 
 public class AquireSkillInfo extends ServerBasePacket
 {
-	private final Vector<Req> _reqs = new Vector<>();
+	private final List<Req> _reqs = new ArrayList<>();
 	private final int _id;
 	private final int _level;
 	private final int _spCost;
@@ -46,13 +47,12 @@ public class AquireSkillInfo extends ServerBasePacket
 		writeD(_level);
 		writeD(_spCost);
 		writeD(_reqs.size());
-		for (int i = 0; i < _reqs.size(); ++i)
+		for (Req req : _reqs)
 		{
-			final Req temp = _reqs.get(i);
-			writeD(temp.type);
-			writeD(temp.id);
-			writeD(temp.count);
-			writeD(temp.unk);
+			writeD(req.type);
+			writeD(req.id);
+			writeD(req.count);
+			writeD(req.unk);
 		}
 	}
 	

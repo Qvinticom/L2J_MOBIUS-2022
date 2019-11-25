@@ -17,7 +17,8 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import java.util.Vector;
+import java.util.ArrayList;
+import java.util.List;
 
 public class SystemMessage extends ServerBasePacket
 {
@@ -121,8 +122,8 @@ public class SystemMessage extends ServerBasePacket
 	private static final int TYPE_SKILL_NAME = 4;
 	
 	private final int _messageId;
-	private final Vector<Integer> _types = new Vector<>();
-	private final Vector<Object> _values = new Vector<>();
+	private final List<Integer> _types = new ArrayList<>();
+	private final List<Object> _values = new ArrayList<>();
 	
 	public SystemMessage(int messageId)
 	{

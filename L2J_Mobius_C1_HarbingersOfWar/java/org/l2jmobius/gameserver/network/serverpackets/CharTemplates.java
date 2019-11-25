@@ -17,13 +17,14 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
-import java.util.Vector;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.l2jmobius.gameserver.templates.CharTemplate;
 
 public class CharTemplates extends ServerBasePacket
 {
-	private final Vector<CharTemplate> _chars = new Vector<>();
+	private final List<CharTemplate> _chars = new ArrayList<>();
 	
 	public void addChar(CharTemplate template)
 	{
@@ -35,28 +36,27 @@ public class CharTemplates extends ServerBasePacket
 	{
 		writeC(0x23);
 		writeD(_chars.size());
-		for (int i = 0; i < _chars.size(); ++i)
+		for (CharTemplate charTemplate : _chars)
 		{
-			final CharTemplate temp = _chars.get(i);
-			writeD(temp.getRaceId());
-			writeD(temp.getClassId());
+			writeD(charTemplate.getRaceId());
+			writeD(charTemplate.getClassId());
 			writeD(70);
-			writeD(temp.getStr());
+			writeD(charTemplate.getStr());
 			writeD(10);
 			writeD(70);
-			writeD(temp.getDex());
+			writeD(charTemplate.getDex());
 			writeD(10);
 			writeD(70);
-			writeD(temp.getCon());
+			writeD(charTemplate.getCon());
 			writeD(10);
 			writeD(70);
-			writeD(temp.getInt());
+			writeD(charTemplate.getInt());
 			writeD(10);
 			writeD(70);
-			writeD(temp.getWit());
+			writeD(charTemplate.getWit());
 			writeD(10);
 			writeD(70);
-			writeD(temp.getMen());
+			writeD(charTemplate.getMen());
 			writeD(10);
 		}
 	}
