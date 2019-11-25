@@ -32,7 +32,7 @@ import quests.Q10817_ExaltedOneWhoOvercomesTheLimit.Q10817_ExaltedOneWhoOvercome
 public class Q10821_HelpingOthers extends Quest
 {
 	// NPC
-	private static final int SIR_ERIC_RODEMAI = 30868;
+	private static final int SIR_ERIC_RODEMAI = 30756;
 	// Items
 	private static final int MENTEE_MARK = 33804;
 	private static final int DAICHIR_SERTIFICATE = 45628;
@@ -49,8 +49,8 @@ public class Q10821_HelpingOthers extends Quest
 		super(10821);
 		addStartNpc(SIR_ERIC_RODEMAI);
 		addTalkId(SIR_ERIC_RODEMAI);
-		addCondMinLevel(MIN_LEVEL, "30868-02.html");
-		addCondStartedQuest(Q10817_ExaltedOneWhoOvercomesTheLimit.class.getSimpleName(), "30868-03.html");
+		addCondMinLevel(MIN_LEVEL, "30756-02.html");
+		addCondStartedQuest(Q10817_ExaltedOneWhoOvercomesTheLimit.class.getSimpleName(), "30756-03.html");
 		// registerQuestItems(MENTEE_MARK); Should they be removed when abandoning quest?
 	}
 	
@@ -66,19 +66,19 @@ public class Q10821_HelpingOthers extends Quest
 		
 		switch (event)
 		{
-			case "30868-04.htm":
-			case "30868-05.htm":
+			case "30756-04.htm":
+			case "30756-05.htm":
 			{
 				htmltext = event;
 				break;
 			}
-			case "30868-06.html":
+			case "30756-06.html":
 			{
 				qs.startQuest();
 				htmltext = event;
 				break;
 			}
-			case "30868-09.html":
+			case "30756-09.html":
 			{
 				if (qs.isCond(1) && (getQuestItemsCount(player, MENTEE_MARK) >= 45000))
 				{
@@ -86,7 +86,7 @@ public class Q10821_HelpingOthers extends Quest
 					{
 						if (hasQuestItems(player, DAICHIR_SERTIFICATE, ISHUMA_CERTIFICATE, OLYMPIAD_MANAGER_CERTIFICATE))
 						{
-							htmltext = "30868-10.html";
+							htmltext = "30756-10.html";
 						}
 						else
 						{
@@ -118,18 +118,18 @@ public class Q10821_HelpingOthers extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = "30868-01.htm";
+				htmltext = "30756-01.htm";
 				break;
 			}
 			case State.STARTED:
 			{
 				if (getQuestItemsCount(player, MENTEE_MARK) >= 45000)
 				{
-					htmltext = "30868-08.html";
+					htmltext = "30756-08.html";
 				}
 				else
 				{
-					htmltext = "30868-07.html";
+					htmltext = "30756-07.html";
 				}
 				break;
 			}
