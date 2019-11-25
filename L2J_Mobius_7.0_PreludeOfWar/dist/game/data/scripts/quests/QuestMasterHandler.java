@@ -128,6 +128,8 @@ import quests.Q10577_TemperARustingBlade.Q10577_TemperARustingBlade;
 import quests.Q10578_TheSoulOfASword.Q10578_TheSoulOfASword;
 import quests.Q10579_ContainingTheAttributePower.Q10579_ContainingTheAttributePower;
 import quests.Q10589_WhereFatesIntersect.Q10589_WhereFatesIntersect;
+import quests.Q10590_ReawakenedFate.Q10590_ReawakenedFate;
+import quests.Q10591_NobleMaterial.Q10591_NobleMaterial;
 import quests.Q10658_MakkumInTheDimension.Q10658_MakkumInTheDimension;
 import quests.Q10701_TheRoadToDestruction.Q10701_TheRoadToDestruction;
 import quests.Q10702_TheRoadToInfinity.Q10702_TheRoadToInfinity;
@@ -417,8 +419,8 @@ public class QuestMasterHandler
 		Q10578_TheSoulOfASword.class,
 		Q10579_ContainingTheAttributePower.class,
 		Q10589_WhereFatesIntersect.class,
-		Q10590_ReawakenedFate.class, // TODO: Not done.
-		Q10591_NobleMaterial.class, // TODO: Not done.
+		Q10590_ReawakenedFate.class,
+		Q10591_NobleMaterial.class,
 		Q10594_FergasonsScheme.class, // TODO: Not done.
 		Q10595_TheDimensionalWarpPart8.class, // TODO: Not done.
 		Q10596_TheDimensionalWarpPart9.class, // TODO: Not done.
