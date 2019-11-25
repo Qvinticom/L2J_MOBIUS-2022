@@ -50,16 +50,16 @@ public class ClientThread extends Thread
 	private String _loginName;
 	private PlayerInstance _activeChar;
 	private final int _sessionId;
-	private final byte[] _cryptkey = new byte[]
+	private final byte[] _cryptkey =
 	{
-		-108,
-		53,
-		0,
-		0,
-		-95,
-		108,
-		84,
-		-121
+		(byte) 0x94,
+		(byte) 0x35,
+		(byte) 0x00,
+		(byte) 0x00,
+		(byte) 0xa1,
+		(byte) 0x6c,
+		(byte) 0x54,
+		(byte) 0x87
 	};
 	private File _charFolder;
 	private final long _autoSaveTime;
@@ -84,21 +84,84 @@ public class ClientThread extends Thread
 		long starttime = System.currentTimeMillis();
 		try
 		{
-			do
+			try
 			{
-				if ((_activeChar != null) && (_autoSaveTime < (System.currentTimeMillis() - starttime)))
+				do
 				{
-					saveCharToDisk(_activeChar);
-					starttime = System.currentTimeMillis();
+					if ((_activeChar != null) && (_autoSaveTime < (System.currentTimeMillis() - starttime)))
+					{
+						saveCharToDisk(_activeChar);
+						starttime = System.currentTimeMillis();
+					}
+					final byte[] decrypt = _connection.getPacket();
+					_handler.handlePacket(decrypt);
 				}
-				final byte[] decrypt = _connection.getPacket();
-				_handler.handlePacket(decrypt);
+				while (true);
 			}
-			while (true);
+			catch (IOException io)
+			{
+				try
+				{
+					if (_activeChar != null)
+					{
+						_activeChar.deleteMe();
+						try
+						{
+							saveCharToDisk(_activeChar);
+						}
+						catch (Exception se)
+						{
+							// empty catch block
+						}
+					}
+					_connection.close();
+				}
+				catch (Exception ioe)
+				{
+					_log.warning(ioe.toString());
+				}
+				finally
+				{
+					LoginController.getInstance().removeGameServerLogin(getLoginName());
+				}
+			}
+			catch (Exception e)
+			{
+				_log.warning(e.toString());
+				try
+				{
+					if (_activeChar != null)
+					{
+						_activeChar.deleteMe();
+						try
+						{
+							saveCharToDisk(_activeChar);
+						}
+						catch (Exception se)
+						{
+							// empty catch block
+						}
+					}
+					_connection.close();
+					LoginController.getInstance().removeGameServerLogin(getLoginName());
+				}
+				catch (Exception ex)
+				{
+					try
+					{
+					}
+					catch (Throwable throwable)
+					{
+						LoginController.getInstance().removeGameServerLogin(getLoginName());
+						throw throwable;
+					}
+					_log.warning(ex.toString());
+					LoginController.getInstance().removeGameServerLogin(getLoginName());
+				}
+			}
 		}
-		catch (Exception e)
+		catch (Throwable throwable)
 		{
-			_log.warning(e.toString());
 			try
 			{
 				if (_activeChar != null)
@@ -108,7 +171,7 @@ public class ClientThread extends Thread
 					{
 						saveCharToDisk(_activeChar);
 					}
-					catch (Exception e2)
+					catch (Exception se)
 					{
 						// empty catch block
 					}
@@ -116,19 +179,20 @@ public class ClientThread extends Thread
 				_connection.close();
 				LoginController.getInstance().removeGameServerLogin(getLoginName());
 			}
-			catch (Exception e1)
+			catch (Exception e)
 			{
 				try
 				{
 				}
-				catch (Throwable throwable)
+				catch (Throwable t)
 				{
 					LoginController.getInstance().removeGameServerLogin(getLoginName());
-					throw throwable;
+					throw t;
 				}
-				_log.warning(e1.toString());
+				_log.warning(e.toString());
 				LoginController.getInstance().removeGameServerLogin(getLoginName());
 			}
+			throw throwable;
 		}
 	}
 	
