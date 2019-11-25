@@ -16,28 +16,31 @@
  */
 package quests.Q10589_WhereFatesIntersect;
 
-import org.l2jmobius.Config;
-import org.l2jmobius.gameserver.enums.QuestSound;
+import java.util.HashSet;
+import java.util.Set;
+
+import org.l2jmobius.gameserver.enums.QuestType;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.holders.NpcLogListHolder;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
+import org.l2jmobius.gameserver.network.NpcStringId;
 import org.l2jmobius.gameserver.network.serverpackets.ExTutorialShowId;
-import org.l2jmobius.gameserver.util.Util;
 
 /**
  * Where Fates Intersect (10589)
  * @URL https://l2wiki.com/Where_Fates_Intersect
- * @author Dmitri
+ * @author NightBR
  */
 public class Q10589_WhereFatesIntersect extends Quest
 {
 	// NPCs
 	private static final int TARTI = 34505;
-	private static final int HERPA = 34362;
-	private static final int WALLODOS = 30137;
+	private static final int HERPHAH = 34362;
+	private static final int VOLLODOS = 30137;
 	private static final int JOACHIM = 34513;
 	private static final int[] MONSTERS =
 	{
@@ -47,33 +50,38 @@ public class Q10589_WhereFatesIntersect extends Quest
 		24455, // Doom Seer
 	};
 	// Item
-	private static final int MONSTER_DROP = 80853; // Traces of Evil Spirit
-	// Rewards
-	private static final long EXP = 1;
-	private static final int SP = 1;
-	private static final int ADENA_AMOUNT = 5050;
-	private static final int ACHIEVEMENT_BOX = 80908;
+	private static final int MONSTER_DROP = 80853; // Undead Blood
 	// Misc
-	private static final int MIN_LEVEL = 95;
+	private static final int REQUIRED_DROP_COUNT = 200;
+	private static final int KILLING_NPCSTRING_ID1 = NpcStringId.LV_85_WHERE_FATES_INTERSECT_IN_PROGRESS.getId();
+	private static final int KILLING_NPCSTRING_ID2 = NpcStringId.LV_85_WHERE_FATES_INTERSECT_2.getId();
+	private static final int REACH_LV_95 = NpcStringId.REACH_LV_95.getId();
+	private static final QuestType QUEST_TYPE = QuestType.ONE_TIME; // REPEATABLE, ONE_TIME, DAILY
+	private static final boolean PARTY_QUEST = true;
+	private static final int KILLING_COND = 3;
+	private static final int FINISH_COND = 4;
+	private static final int MIN_LEVEL = 85;
+	// Rewards
+	private static final int REWARD_ITEM1 = 80908; // Lv. 95 Achievement Reward Box
+	private static final int REWARD_ITEM1_AMOUNT = 1;
 	// Location
-	private static final Location ALTAR_OF_EVIL = new Location(-13982, 22124, -3611);
-	private static final Location TOWN_OF_ADEN = new Location(146632, 26760, -2213);
+	private static final Location TOWN_OF_ADEN = new Location(146568, 26808, -2208);
+	private static final Location ALTAR_OF_EVIL = new Location(-14088, 22168, -3626);
 	
 	public Q10589_WhereFatesIntersect()
 	{
 		super(10589);
 		addStartNpc(TARTI);
-		addTalkId(TARTI, HERPA, WALLODOS, JOACHIM);
+		addTalkId(TARTI, HERPHAH, VOLLODOS, JOACHIM);
 		addKillId(MONSTERS);
 		registerQuestItems(MONSTER_DROP);
-		addCondMinLevel(85, "34505-06.html");
+		addCondMinLevel(MIN_LEVEL, getNoQuestMsg(null));
 	}
 	
 	@Override
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
-		
 		if (qs == null)
 		{
 			return null;
@@ -82,60 +90,69 @@ public class Q10589_WhereFatesIntersect extends Quest
 		String htmltext = null;
 		switch (event)
 		{
+			case "34505-01.htm": // TARTI
+			case "34505-02.htm":
 			case "34505-04.html":
-			case "34505-02.html":
-			case "30137-03.html":
-			case "30137-02.html":
-			case "34362-03.html":
+			case "34362-02.html": // HERPHAH
 			case "34362-05.html":
+			case "30137-02.html": // VOLLODOS
+			case "34513-02.html": // JOACHIM
 			{
 				htmltext = event;
 				break;
 			}
-			case "34505-03.html":
+			case "34505-03.htm":
 			{
+				// Show Service/Help/View Map page
+				player.sendPacket(new ExTutorialShowId(12));
 				qs.startQuest();
 				htmltext = event;
 				break;
 			}
-			case "teleport":
+			case "34362-03.html":
 			{
-				if (qs.isCond(1))
-				{
-					player.teleToLocation(TOWN_OF_ADEN);
-				}
-				break;
-			}
-			case "34362-02.html":
-			{
+				// Show Service/Help/Adventure's Guide page
+				player.sendPacket(new ExTutorialShowId(25));
 				qs.setCond(2, true);
-				player.sendPacket(new ExTutorialShowId(37)); // Adventurers Guide
 				htmltext = event;
 				break;
 			}
-			case "teleport_d":
+			case "34362-06.html":
 			{
-				if (qs.isCond(2))
+				if (qs.isCond(4))
 				{
-					player.teleToLocation(ALTAR_OF_EVIL);
+					// Check player level it must be 95+
+					qs.setCond(5, true);
+					htmltext = event;
 				}
 				break;
 			}
-			case "34513-02.html":
+			case "30137-03.html":
+			{
+				qs.setCond(3, true);
+				htmltext = event;
+				break;
+			}
+			case "34513-03.html":
 			{
 				if (qs.isCond(5))
 				{
-					if (player.getLevel() >= MIN_LEVEL)
-					{
-						// Reward.
-						addExpAndSp(player, EXP, SP);
-						giveAdena(player, ADENA_AMOUNT, false);
-						giveItems(player, ACHIEVEMENT_BOX, 1);
-						qs.exitQuest(false, true);
-						htmltext = event;
-					}
-					break;
+					takeItems(player, MONSTER_DROP, -1);
+					// Reward.
+					rewardItems(player, REWARD_ITEM1, REWARD_ITEM1_AMOUNT);
+					qs.exitQuest(QUEST_TYPE, true);
 				}
+				break;
+			}
+			case "townofaden":
+			{
+				player.teleToLocation(TOWN_OF_ADEN); // Town of Aden near Npc Herphah
+				break;
+			}
+			case "altarofevil":
+			{
+				player.teleToLocation(ALTAR_OF_EVIL); // Altar of Evil near Npc Vollodos
+				break;
 			}
 		}
 		return htmltext;
@@ -151,10 +168,7 @@ public class Q10589_WhereFatesIntersect extends Quest
 		{
 			case State.CREATED:
 			{
-				if (npc.getId() == TARTI)
-				{
-					htmltext = "34505-01.html";
-				}
+				htmltext = "34505-00.htm";
 				break;
 			}
 			case State.STARTED:
@@ -165,15 +179,11 @@ public class Q10589_WhereFatesIntersect extends Quest
 					{
 						if (qs.isCond(1))
 						{
-							htmltext = "34505-03.html";
-						}
-						else if (qs.isCond(5))
-						{
-							htmltext = "34505-05.html";
+							htmltext = "34505-04.html";
 						}
 						break;
 					}
-					case HERPA:
+					case HERPHAH:
 					{
 						if (qs.isCond(1))
 						{
@@ -181,11 +191,10 @@ public class Q10589_WhereFatesIntersect extends Quest
 						}
 						else if (qs.isCond(2))
 						{
-							htmltext = "34362-03.html";
+							htmltext = "34362-07.html";
 						}
 						else if (qs.isCond(4))
 						{
-							qs.setCond(5, true);
 							htmltext = "34362-04.html";
 						}
 						else if (qs.isCond(5))
@@ -194,49 +203,40 @@ public class Q10589_WhereFatesIntersect extends Quest
 						}
 						break;
 					}
-					case WALLODOS:
+					case VOLLODOS:
 					{
 						if (qs.isCond(2))
 						{
-							qs.setCond(3, true);
 							htmltext = "30137-01.html";
 						}
 						else if (qs.isCond(3))
 						{
 							htmltext = "30137-04.html";
 						}
-						else if (qs.isCond(4))
-						{
-							htmltext = "30137-05.html";
-						}
 						break;
 					}
 					case JOACHIM:
 					{
-						if (qs.isCond(2))
-						{
-							htmltext = "34513-03.html";
-						}
-						else if (qs.isCond(3))
-						{
-							htmltext = "34513-04.html";
-						}
-						else if (qs.isCond(4))
-						{
-							htmltext = "34513-05.html";
-						}
-						else if (qs.isCond(5))
+						if (qs.isCond(5))
 						{
 							htmltext = "34513-01.html";
+							break;
 						}
-						break;
 					}
 				}
 				break;
 			}
 			case State.COMPLETED:
 			{
-				htmltext = getAlreadyCompletedMsg(player);
+				if (qs.isNowAvailable())
+				{
+					qs.setState(State.CREATED);
+					htmltext = "34505-00.htm";
+				}
+				else
+				{
+					htmltext = getAlreadyCompletedMsg(player, QUEST_TYPE);
+				}
 				break;
 			}
 		}
@@ -244,27 +244,41 @@ public class Q10589_WhereFatesIntersect extends Quest
 	}
 	
 	@Override
-	public void actionForEachPlayer(PlayerInstance player, Npc npc, boolean isSummon)
+	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
-		final QuestState qs = getQuestState(player, false);
-		if ((qs != null) && qs.isCond(3) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, player, false))
+		QuestState qs = PARTY_QUEST ? getRandomPartyMemberState(killer, -1, 3, npc) : getQuestState(killer, false);
+		if ((qs != null) && qs.isCond(KILLING_COND))
 		{
-			if ((getQuestItemsCount(player, MONSTER_DROP) < 200) && (getRandom(100) < 90))
+			final PlayerInstance player = qs.getPlayer();
+			giveItemRandomly(player, npc, MONSTER_DROP, 1, REQUIRED_DROP_COUNT, 1, true);
+			
+			if ((getQuestItemsCount(player, MONSTER_DROP) >= REQUIRED_DROP_COUNT) && (player.getLevel() >= 95))
 			{
-				giveItems(player, MONSTER_DROP, 1);
-				playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+				qs.setCond(FINISH_COND, true);
 			}
-			if ((getQuestItemsCount(player, MONSTER_DROP) >= 200) && (player.getLevel() >= MIN_LEVEL))
-			{
-				qs.setCond(4, true);
-			}
+			
+			sendNpcLogList(player);
 		}
+		
+		return super.onKill(npc, killer, isSummon);
 	}
 	
 	@Override
-	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
+	public Set<NpcLogListHolder> getNpcLogList(PlayerInstance player)
 	{
-		executeForEachPlayer(killer, npc, isSummon, true, false);
-		return super.onKill(npc, killer, isSummon);
+		final QuestState qs = getQuestState(player, false);
+		
+		if ((qs != null) && qs.isCond(KILLING_COND))
+		{
+			final Set<NpcLogListHolder> holder = new HashSet<>();
+			if (player.getLevel() >= 95)
+			{
+				holder.add(new NpcLogListHolder(REACH_LV_95, true, 1));
+			}
+			holder.add(new NpcLogListHolder(KILLING_NPCSTRING_ID1, true, (int) getQuestItemsCount(player, MONSTER_DROP)));
+			holder.add(new NpcLogListHolder(KILLING_NPCSTRING_ID2, true, (int) getQuestItemsCount(player, MONSTER_DROP)));
+			return holder;
+		}
+		return super.getNpcLogList(player);
 	}
 }
