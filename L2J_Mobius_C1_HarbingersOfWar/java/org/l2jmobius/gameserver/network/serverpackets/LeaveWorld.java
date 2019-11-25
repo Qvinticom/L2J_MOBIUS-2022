@@ -19,18 +19,9 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 public class LeaveWorld extends ServerBasePacket
 {
-	private static final String _S__96_LEAVEWORLD = "[S] 96 LeaveWorld";
-	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
 		writeC(0x96);
-		return getBytes();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__96_LEAVEWORLD;
 	}
 }

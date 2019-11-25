@@ -25,15 +25,17 @@ public class PlayFail extends ServerBasePacket
 	public static int REASON3 = 3;
 	public static int REASON4 = 4;
 	
+	private final int _reason;
+	
 	public PlayFail(int reason)
 	{
-		writeC(6);
-		writeC(reason);
+		_reason = reason;
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		return getBytes();
+		writeC(0x06);
+		writeC(_reason);
 	}
 }

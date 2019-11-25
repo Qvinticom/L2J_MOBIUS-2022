@@ -19,9 +19,10 @@ package org.l2jmobius.loginserver.network.serverpackets;
 
 public class LoginOk extends ServerBasePacket
 {
-	public LoginOk()
+	@Override
+	public void writeImpl()
 	{
-		writeC(3);
+		writeC(0x03);
 		writeD(1431655765);
 		writeD(1145324612);
 		writeD(0);
@@ -30,11 +31,5 @@ public class LoginOk extends ServerBasePacket
 		writeD(0);
 		writeD(0);
 		writeD(2);
-	}
-	
-	@Override
-	public byte[] getContent()
-	{
-		return getBytes();
 	}
 }

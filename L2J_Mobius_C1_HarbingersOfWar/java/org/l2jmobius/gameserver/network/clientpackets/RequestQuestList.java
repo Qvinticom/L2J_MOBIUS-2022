@@ -24,17 +24,9 @@ import org.l2jmobius.gameserver.network.serverpackets.QuestList;
 
 public class RequestQuestList extends ClientBasePacket
 {
-	private static final String _C__63_REQUESTQUESTLIST = "[C] 63 RequestQuestList";
-	
 	public RequestQuestList(byte[] decrypt, ClientThread client) throws IOException
 	{
 		super(decrypt);
 		client.getConnection().sendPacket(new QuestList());
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__63_REQUESTQUESTLIST;
 	}
 }

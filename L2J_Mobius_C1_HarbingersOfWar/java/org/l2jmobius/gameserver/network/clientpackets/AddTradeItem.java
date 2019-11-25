@@ -28,8 +28,6 @@ import org.l2jmobius.gameserver.network.serverpackets.TradeOwnAdd;
 
 public class AddTradeItem extends ClientBasePacket
 {
-	private static final String _C__16_ADDTRADEITEM = "[C] 16 AddTradeItem";
-	
 	public AddTradeItem(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
@@ -95,11 +93,5 @@ public class AddTradeItem extends ClientBasePacket
 			requestor.getTradeList().getItems().clear();
 			player.getTradeList().getItems().clear();
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__16_ADDTRADEITEM;
 	}
 }

@@ -29,8 +29,6 @@ import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 
 public class SetPrivateStoreListSell extends ClientBasePacket
 {
-	private static final String _C__74_SETPRIVATESTORELISTSELL = "[C] 74 SetPrivateStoreListSell";
-	
 	public SetPrivateStoreListSell(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
@@ -68,11 +66,5 @@ public class SetPrivateStoreListSell extends ClientBasePacket
 			player.sendPacket(new UserInfo(player));
 			player.broadcastPacket(new UserInfo(player));
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__74_SETPRIVATESTORELISTSELL;
 	}
 }

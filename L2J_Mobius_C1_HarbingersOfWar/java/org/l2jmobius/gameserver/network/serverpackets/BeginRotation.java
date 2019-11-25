@@ -21,7 +21,6 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 public class BeginRotation extends ServerBasePacket
 {
-	private static final String _S__77_BEGINROTATION = "[S] 77 BeginRotation";
 	private final PlayerInstance _char;
 	private final int _degree;
 	private final int _side;
@@ -34,18 +33,11 @@ public class BeginRotation extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		writeC(119);
+		writeC(0x77);
 		writeD(_char.getObjectId());
 		writeD(_degree);
 		writeD(_side);
-		return getBytes();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__77_BEGINROTATION;
 	}
 }

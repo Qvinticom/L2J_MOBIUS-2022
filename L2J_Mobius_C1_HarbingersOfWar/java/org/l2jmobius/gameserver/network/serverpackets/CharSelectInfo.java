@@ -32,7 +32,6 @@ import org.l2jmobius.gameserver.templates.Item;
 
 public class CharSelectInfo extends ServerBasePacket
 {
-	private static final String _S__1F_CHARSELECTINFO = "[S] 1F CharSelectInfo";
 	private final String _loginName;
 	private final int _sessionId;
 	private CharSelectInfoPackage _charInfopackage;
@@ -47,7 +46,7 @@ public class CharSelectInfo extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
 		writeC(0x1F);
 		writeD(_characterPackage.length);
@@ -118,7 +117,6 @@ public class CharSelectInfo extends ServerBasePacket
 			writeF(info.getMaxMp());
 			writeD(info.getDeleteTimer());
 		}
-		return _bao.toByteArray();
 	}
 	
 	public CharSelectInfoPackage[] loadCharacterSelectInfoFromDisk()
@@ -272,11 +270,5 @@ public class CharSelectInfo extends ServerBasePacket
 	public String[] getCharacterlist()
 	{
 		return _charNameList;
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__1F_CHARSELECTINFO;
 	}
 }

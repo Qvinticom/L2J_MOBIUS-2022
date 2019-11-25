@@ -21,7 +21,6 @@ import org.l2jmobius.gameserver.model.WorldObject;
 
 public class Revive extends ServerBasePacket
 {
-	private static final String _S__0C_REVIVE = "[S] 0c Revive";
 	private final int _objectId;
 	
 	public Revive(WorldObject obj)
@@ -30,16 +29,9 @@ public class Revive extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		writeC(12);
+		writeC(0x0C);
 		writeD(_objectId);
-		return _bao.toByteArray();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__0C_REVIVE;
 	}
 }

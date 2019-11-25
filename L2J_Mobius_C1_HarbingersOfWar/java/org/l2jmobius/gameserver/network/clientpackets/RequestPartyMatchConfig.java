@@ -21,8 +21,6 @@ import org.l2jmobius.gameserver.network.ClientThread;
 
 public class RequestPartyMatchConfig extends ClientBasePacket
 {
-	private static final String _C__6F_REQUESTPARTYMATCHCONFIG = "[C] 6F RequestPartyMatchConfig";
-	
 	public RequestPartyMatchConfig(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
@@ -34,11 +32,5 @@ public class RequestPartyMatchConfig extends ClientBasePacket
 		client.getActiveChar().setPartyMatchingShowLevel(showLevel == 1);
 		client.getActiveChar().setPartyMatchingShowClass(showClass == 1);
 		client.getActiveChar().setPartyMatchingMemo(memo);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__6F_REQUESTPARTYMATCHCONFIG;
 	}
 }

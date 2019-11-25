@@ -17,6 +17,8 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import java.util.logging.Logger;
+
 import org.l2jmobius.gameserver.Announcements;
 import org.l2jmobius.gameserver.data.MapRegionTable;
 import org.l2jmobius.gameserver.managers.GmListManager;
@@ -33,7 +35,7 @@ import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 
 public class EnterWorld extends ClientBasePacket
 {
-	private static final String _C__03_ENTERWORLD = "[C] 03 EnterWorld";
+	final static Logger _log = Logger.getLogger(EnterWorld.class.getName());
 	
 	public EnterWorld(byte[] decrypt, ClientThread client)
 	{
@@ -111,11 +113,5 @@ public class EnterWorld extends ClientBasePacket
 				clanMember.sendPacket(msg);
 			}
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__03_ENTERWORLD;
 	}
 }

@@ -25,8 +25,6 @@ import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
 public class Action extends ClientBasePacket
 {
-	private static final String ACTION__C__04 = "[C] 04 Action";
-	
 	public Action(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
@@ -59,11 +57,5 @@ public class Action extends ClientBasePacket
 		{
 			activeChar.sendPacket(new ActionFailed());
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return ACTION__C__04;
 	}
 }

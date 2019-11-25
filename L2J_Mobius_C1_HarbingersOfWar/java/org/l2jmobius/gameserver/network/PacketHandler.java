@@ -118,412 +118,412 @@ public class PacketHandler
 		final int id = data[0] & 0xFF;
 		switch (id)
 		{
-			case 0:
+			case 0x00:
 			{
 				new ProtocolVersion(data, _client);
 				break;
 			}
-			case 1:
+			case 0x01:
 			{
 				new MoveBackwardToLocation(data, _client);
 				break;
 			}
-			case 3:
+			case 0x03:
 			{
 				new EnterWorld(data, _client);
 				break;
 			}
-			case 4:
+			case 0x04:
 			{
 				new Action(data, _client);
 				break;
 			}
-			case 8:
+			case 0x08:
 			{
 				new AuthLogin(data, _client);
 				break;
 			}
-			case 9:
+			case 0x09:
 			{
 				new Logout(data, _client);
 				break;
 			}
-			case 10:
+			case 0x0A:
 			{
 				new AttackRequest(data, _client);
 				break;
 			}
-			case 11:
+			case 0x0B:
 			{
 				new CharacterCreate(data, _client);
 				break;
 			}
-			case 12:
+			case 0x0C:
 			{
 				new CharacterDelete(data, _client);
 				break;
 			}
-			case 13:
+			case 0x0D:
 			{
 				new CharacterSelected(data, _client);
 				break;
 			}
-			case 14:
+			case 0x0E:
 			{
 				new NewCharacter(data, _client);
 				break;
 			}
-			case 15:
+			case 0x0F:
 			{
 				new RequestItemList(data, _client);
 				break;
 			}
-			case 17:
+			case 0x11:
 			{
 				new RequestUnEquipItem(data, _client);
 				break;
 			}
-			case 18:
+			case 0x12:
 			{
 				new RequestDropItem(data, _client);
 				break;
 			}
-			case 20:
+			case 0x14:
 			{
 				new UseItem(data, _client);
 				break;
 			}
-			case 21:
+			case 0x15:
 			{
 				new TradeRequest(data, _client);
 				break;
 			}
-			case 22:
+			case 0x16:
 			{
 				new AddTradeItem(data, _client);
 				break;
 			}
-			case 23:
+			case 0x17:
 			{
 				new TradeDone(data, _client);
 				break;
 			}
-			case 27:
+			case 0x1B:
 			{
 				new RequestSocialAction(data, _client);
 				break;
 			}
-			case 28:
+			case 0x1C:
 			{
 				new ChangeMoveType2(data, _client);
 				break;
 			}
-			case 29:
+			case 0x1D:
 			{
 				new ChangeWaitType2(data, _client);
 				break;
 			}
-			case 30:
+			case 0x1E:
 			{
 				new RequestSellItem(data, _client);
 				break;
 			}
-			case 31:
+			case 0x1F:
 			{
 				new RequestBuyItem(data, _client);
 				break;
 			}
-			case 33:
+			case 0x21:
 			{
 				new RequestBypassToServer(data, _client);
 				break;
 			}
-			case 36:
+			case 0x24:
 			{
 				new RequestJoinPledge(data, _client);
 				break;
 			}
-			case 37:
+			case 0x25:
 			{
 				new RequestAnswerJoinPledge(data, _client);
 				break;
 			}
-			case 38:
+			case 0x26:
 			{
 				new RequestWithdrawalPledge(data, _client);
 				break;
 			}
-			case 39:
+			case 0x27:
 			{
 				new RequestOustPledgeMember(data, _client);
 				break;
 			}
-			case 41:
+			case 0x29:
 			{
 				new RequestJoinParty(data, _client);
 				break;
 			}
-			case 42:
+			case 0x2A:
 			{
 				new RequestAnswerJoinParty(data, _client);
 				break;
 			}
-			case 43:
+			case 0x2B:
 			{
-				new RequestWithDrawalParty(data, _client.getActiveChar());
+				new RequestWithDrawalParty(data, _client);
 				break;
 			}
-			case 44:
+			case 0x2C:
 			{
 				new RequestOustPartyMember(data, _client);
 				break;
 			}
-			case 47:
+			case 0x2F:
 			{
 				new RequestMagicSkillUse(data, _client);
 				break;
 			}
-			case 48:
+			case 0x30:
 			{
 				new Appearing(data, _client);
 				break;
 			}
-			case 49:
+			case 0x31:
 			{
 				new SendWareHouseDepositList(data, _client);
 				break;
 			}
-			case 50:
+			case 0x32:
 			{
 				new SendWareHouseWithDrawList(data, _client);
 				break;
 			}
-			case 51:
+			case 0x33:
 			{
 				new RequestShortCutReg(data, _client);
 				break;
 			}
-			case 53:
+			case 0x35:
 			{
 				new RequestShortCutDel(data, _client);
 				break;
 			}
-			case 54:
+			case 0x36:
 			{
 				new StopMove(data, _client);
 				break;
 			}
-			case 55:
+			case 0x37:
 			{
 				new RequestTargetCanceld(data, _client);
 				break;
 			}
-			case 56:
+			case 0x38:
 			{
 				new Say2(data, _client);
 				break;
 			}
-			case 60:
+			case 0x3C:
 			{
 				new RequestPledgeMemberList(data, _client);
 				break;
 			}
-			case 63:
+			case 0x3F:
 			{
 				new RequestSkillList(data, _client);
 				break;
 			}
-			case 68:
+			case 0x44:
 			{
 				new AnswerTradeRequest(data, _client);
 				break;
 			}
-			case 69:
+			case 0x45:
 			{
 				new RequestActionUse(data, _client);
 				break;
 			}
-			case 70:
+			case 0x46:
 			{
 				new RequestRestart(data, _client);
 				break;
 			}
-			case 72:
+			case 0x48:
 			{
 				new ValidatePosition(data, _client);
 				break;
 			}
-			case 74:
+			case 0x4A:
 			{
 				new StartRotating(data, _client);
 				break;
 			}
-			case 75:
+			case 0x4B:
 			{
 				new FinishRotating(data, _client);
 				break;
 			}
-			case 83:
+			case 0x53:
 			{
 				new RequestSetPledgeCrest(data, _client);
 				break;
 			}
-			case 85:
+			case 0x55:
 			{
 				new RequestGiveNickName(data, _client);
 				break;
 			}
-			case 87:
+			case 0x57:
 			{
 				new RequestShowBoard(data, _client);
 				break;
 			}
-			case 89:
+			case 0x59:
 			{
 				new RequestDestroyItem(data, _client);
 				break;
 			}
-			case 91:
+			case 0x5B:
 			{
 				new SendBypassBuildCmd(data, _client);
 				break;
 			}
-			case 98:
+			case 0x62:
 			{
 				new CharacterRestore(data, _client);
 				break;
 			}
-			case 99:
+			case 0x63:
 			{
 				new RequestQuestList(data, _client);
 				break;
 			}
-			case 102:
+			case 0x66:
 			{
 				new RequestPledgeInfo(data, _client);
 				break;
 			}
-			case 104:
+			case 0x68:
 			{
 				new RequestPledgeCrest(data, _client);
 				break;
 			}
-			case 107:
+			case 0x6B:
 			{
 				new RequestAquireSkillInfo(data, _client);
 				break;
 			}
-			case 108:
+			case 0x6C:
 			{
 				new RequestAquireSkill(data, _client);
 				break;
 			}
-			case 109:
+			case 0x6D:
 			{
 				new RequestRestartPoint(data, _client);
 				break;
 			}
-			case 110:
+			case 0x6E:
 			{
 				new RequestGMCommand(data, _client);
 				break;
 			}
-			case 111:
+			case 0x6F:
 			{
 				new RequestPartyMatchConfig(data, _client);
 				break;
 			}
-			case 112:
+			case 0x70:
 			{
 				new RequestPartyMatchList(data, _client);
 				break;
 			}
-			case 113:
+			case 0x71:
 			{
 				new RequestPartyMatchDetail(data, _client);
 				break;
 			}
-			case 115:
+			case 0x73:
 			{
 				new RequestPrivateStoreManage(data, _client);
 				break;
 			}
-			case 116:
+			case 0x74:
 			{
 				new SetPrivateStoreListSell(data, _client);
 				break;
 			}
-			case 118:
+			case 0x76:
 			{
 				new RequestPrivateStoreQuitSell(data, _client);
 				break;
 			}
-			case 119:
+			case 0x77:
 			{
 				new SetPrivateStoreMsgSell(data, _client);
 				break;
 			}
-			case 121:
+			case 0x79:
 			{
 				new SendPrivateStoreBuyList(data, _client);
 				break;
 			}
-			case 129:
+			case 0x81:
 			{
 				new RequestGmList(data, _client);
 				break;
 			}
-			case 136:
+			case 0x88:
 			{
 				new RequestAllyCrest(data, _client);
 				break;
 			}
-			case 137:
+			case 0x89:
 			{
 				new RequestChangePetName(data, _client);
 				break;
 			}
-			case 139:
+			case 0x8B:
 			{
 				new RequestGiveItemToPet(data, _client);
 				break;
 			}
-			case 140:
+			case 0x8C:
 			{
 				new RequestGetItemFromPet(data, _client);
 				break;
 			}
-			case 143:
+			case 0x8F:
 			{
 				new RequestPetGetItem(data, _client);
 				break;
 			}
-			case 144:
+			case 0x90:
 			{
 				new RequestPrivateStoreBuyManage(data, _client);
 				break;
 			}
-			case 145:
+			case 0x91:
 			{
 				new SetPrivateStoreListBuy(data, _client);
 				break;
 			}
-			case 147:
+			case 0x93:
 			{
 				new RequestPrivateStoreQuitBuy(data, _client);
 				break;
 			}
-			case 148:
+			case 0x94:
 			{
 				new SetPrivateStoreMsgBuy(data, _client);
 				break;
 			}
-			case 150:
+			case 0x96:
 			{
 				new SendPrivateStoreBuyBuyList(data, _client);
 				break;
 			}
-			case 157:
+			case 0x9D:
 			{
 				// _log.warning("Request Skill Cool Time .. ignored");
 				break;

@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.network.serverpackets.LeaveWorld;
 
 public class Logout extends ClientBasePacket
 {
-	private static final String _C__09_LOGOUT = "[C] 09 Logout";
-	
 	public Logout(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
@@ -50,11 +48,5 @@ public class Logout extends ClientBasePacket
 			player.deleteMe();
 			client.saveCharToDisk(player);
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__09_LOGOUT;
 	}
 }

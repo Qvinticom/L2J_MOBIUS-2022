@@ -17,6 +17,8 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import java.util.logging.Logger;
+
 import org.l2jmobius.gameserver.data.ClanTable;
 import org.l2jmobius.gameserver.model.Clan;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -26,7 +28,7 @@ import org.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListAll;
 
 public class RequestPledgeInfo extends ClientBasePacket
 {
-	private static final String _C__66_REQUESTPLEDGEINFO = "[C] 66 RequestPledgeInfo";
+	final static Logger _log = Logger.getLogger(RequestPledgeInfo.class.getName());
 	
 	public RequestPledgeInfo(byte[] rawPacket, ClientThread client)
 	{
@@ -46,11 +48,5 @@ public class RequestPledgeInfo extends ClientBasePacket
 			final PledgeShowMemberListAll pm = new PledgeShowMemberListAll(clan, activeChar);
 			activeChar.sendPacket(pm);
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__66_REQUESTPLEDGEINFO;
 	}
 }

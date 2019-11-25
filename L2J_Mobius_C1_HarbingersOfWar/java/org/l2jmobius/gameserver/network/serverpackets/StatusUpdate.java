@@ -21,7 +21,6 @@ import java.util.Vector;
 
 public class StatusUpdate extends ServerBasePacket
 {
-	private static final String _S__1A_STATUSUPDATE = "[S] 1A StatusUpdate";
 	public static int LEVEL = 1;
 	public static int EXP = 2;
 	public static int STR = 3;
@@ -48,6 +47,7 @@ public class StatusUpdate extends ServerBasePacket
 	public static int M_DEF = 25;
 	public static int PVP_FLAG = 26;
 	public static int KARMA = 27;
+	
 	private final int _objectId;
 	private final Vector<Attribute> _attributes = new Vector<>();
 	
@@ -62,9 +62,9 @@ public class StatusUpdate extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		writeC(26);
+		writeC(0x1A);
 		writeD(_objectId);
 		writeD(_attributes.size());
 		for (int i = 0; i < _attributes.size(); ++i)
@@ -73,13 +73,6 @@ public class StatusUpdate extends ServerBasePacket
 			writeD(temp.id);
 			writeD(temp.value);
 		}
-		return getBytes();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__1A_STATUSUPDATE;
 	}
 	
 	class Attribute
@@ -93,5 +86,4 @@ public class StatusUpdate extends ServerBasePacket
 			this.value = value;
 		}
 	}
-	
 }

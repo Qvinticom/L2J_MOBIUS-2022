@@ -25,8 +25,6 @@ import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
 public class AttackRequest extends ClientBasePacket
 {
-	private static final String _C__0A_ATTACKREQUEST = "[C] 0A AttackRequest";
-	
 	public AttackRequest(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
@@ -39,6 +37,7 @@ public class AttackRequest extends ClientBasePacket
 		final int originZ = readD();
 		@SuppressWarnings("unused")
 		final int attackId = readC();
+		
 		final PlayerInstance activeChar = client.getActiveChar();
 		final WorldObject target = World.getInstance().findObject(objectId);
 		if ((target != null) && (activeChar.getTarget() != target))
@@ -53,11 +52,5 @@ public class AttackRequest extends ClientBasePacket
 		{
 			activeChar.sendPacket(new ActionFailed());
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__0A_ATTACKREQUEST;
 	}
 }

@@ -17,6 +17,8 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import java.util.logging.Logger;
+
 import org.l2jmobius.gameserver.data.ItemTable;
 import org.l2jmobius.gameserver.data.TradeController;
 import org.l2jmobius.gameserver.model.TradeList;
@@ -31,7 +33,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class RequestBuyItem extends ClientBasePacket
 {
-	private static final String _C__1F_REQUESTBUYITEM = "[C] 1F RequestBuyItem";
+	final static Logger _log = Logger.getLogger(RequestBuyItem.class.getName());
 	
 	public RequestBuyItem(byte[] decrypt, ClientThread client)
 	{
@@ -116,11 +118,5 @@ public class RequestBuyItem extends ClientBasePacket
 		final StatusUpdate su = new StatusUpdate(player.getObjectId());
 		su.addAttribute(StatusUpdate.CUR_LOAD, player.getCurrentLoad());
 		player.sendPacket(su);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__1F_REQUESTBUYITEM;
 	}
 }

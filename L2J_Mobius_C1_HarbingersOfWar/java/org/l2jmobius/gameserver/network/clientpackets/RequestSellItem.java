@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 
 public class RequestSellItem extends ClientBasePacket
 {
-	private static final String _C__1E_REQUESTSELLITEM = "[C] 1E RequestSellItem";
-	
 	public RequestSellItem(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
@@ -50,11 +48,5 @@ public class RequestSellItem extends ClientBasePacket
 		final StatusUpdate su = new StatusUpdate(activeChar.getObjectId());
 		su.addAttribute(StatusUpdate.CUR_LOAD, activeChar.getCurrentLoad());
 		activeChar.sendPacket(su);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__1E_REQUESTSELLITEM;
 	}
 }

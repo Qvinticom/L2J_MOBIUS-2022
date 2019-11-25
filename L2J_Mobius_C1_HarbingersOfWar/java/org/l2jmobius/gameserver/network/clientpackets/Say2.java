@@ -25,8 +25,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class Say2 extends ClientBasePacket
 {
-	private static final String _C__38_SAY2 = "[C] 38 Say2";
-	
 	public static final int ALL = 0;
 	public static final int SHOUT = 1;
 	public static final int TELL = 2;
@@ -89,11 +87,5 @@ public class Say2 extends ClientBasePacket
 		{
 			activeChar.getParty().broadcastToPartyMembers(cs);
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__38_SAY2;
 	}
 }

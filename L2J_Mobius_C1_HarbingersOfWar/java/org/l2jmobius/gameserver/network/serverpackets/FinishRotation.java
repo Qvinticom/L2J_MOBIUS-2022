@@ -21,7 +21,6 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 
 public class FinishRotation extends ServerBasePacket
 {
-	private static final String _S__78_FINISHROTATION = "[S] 78 FinishRotation";
 	private final int _heading;
 	private final int _objectId;
 	
@@ -32,17 +31,10 @@ public class FinishRotation extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		writeC(120);
+		writeC(0x78);
 		writeD(_objectId);
 		writeD(_heading);
-		return _bao.toByteArray();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__78_FINISHROTATION;
 	}
 }

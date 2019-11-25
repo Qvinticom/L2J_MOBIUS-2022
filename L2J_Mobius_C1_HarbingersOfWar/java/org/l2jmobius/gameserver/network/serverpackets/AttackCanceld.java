@@ -19,7 +19,6 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 public class AttackCanceld extends ServerBasePacket
 {
-	private static final String _S__0A_MAGICSKILLCANCELD = "[S] 0a AttackCanceld";
 	private final int _objectId;
 	
 	public AttackCanceld(int objectId)
@@ -28,16 +27,9 @@ public class AttackCanceld extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		writeC(10);
+		writeC(0x0A);
 		writeD(_objectId);
-		return _bao.toByteArray();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__0A_MAGICSKILLCANCELD;
 	}
 }

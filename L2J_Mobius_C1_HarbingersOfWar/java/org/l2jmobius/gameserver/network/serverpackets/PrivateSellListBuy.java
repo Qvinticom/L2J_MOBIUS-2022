@@ -26,7 +26,6 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 public class PrivateSellListBuy extends ServerBasePacket
 {
-	private static final String _S__D0_PRIVATESELLLISTBUY = "[S] D0 PrivateSellListBuy";
 	private final PlayerInstance _buyer;
 	
 	public PrivateSellListBuy(PlayerInstance buyer)
@@ -35,10 +34,9 @@ public class PrivateSellListBuy extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		int i;
-		writeC(208);
+		writeC(0xD0);
 		writeD(_buyer.getObjectId());
 		writeD(_buyer.getAdena());
 		final TradeList list = new TradeList(0);
@@ -54,13 +52,12 @@ public class PrivateSellListBuy extends ServerBasePacket
 		}
 		count = list.getItems().size();
 		writeD(count);
-		for (i = 0; i < count; ++i)
+		for (ItemInstance item : list.getItems())
 		{
-			final ItemInstance temp = list.getItems().get(i);
-			writeD(temp.getItemId());
+			writeD(item.getItemId());
 			writeH(0);
-			writeD(temp.getCount());
-			writeD(temp.getPrice());
+			writeD(item.getCount());
+			writeD(item.getPrice());
 			writeH(0);
 			writeD(0);
 			writeH(0);
@@ -69,26 +66,18 @@ public class PrivateSellListBuy extends ServerBasePacket
 		writeD(count);
 		if (count != 0)
 		{
-			for (i = 0; i < count; ++i)
+			for (TradeItem tradeItem : buyList)
 			{
-				final TradeItem temp2 = buyList.get(i);
-				writeD(temp2.getItemId());
+				writeD(tradeItem.getItemId());
 				writeH(0);
-				writeD(temp2.getCount());
-				writeD(temp2.getStorePrice());
+				writeD(tradeItem.getCount());
+				writeD(tradeItem.getStorePrice());
 				writeH(0);
 				writeD(0);
 				writeH(0);
-				writeD(temp2.getOwnersPrice());
+				writeD(tradeItem.getOwnersPrice());
 				writeD(55);
 			}
 		}
-		return getBytes();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__D0_PRIVATESELLLISTBUY;
 	}
 }

@@ -19,11 +19,11 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 public class CharCreateFail extends ServerBasePacket
 {
-	private static final String _S__26_CHARCREATEFAIL = "[S] 26 CharCreateFail";
 	public static int REASON_CREATION_FAILED = 0;
 	public static int REASON_TOO_MANY_CHARACTERS = 1;
 	public static int REASON_NAME_ALREADY_EXISTS = 2;
 	public static int REASON_16_ENG_CHARS = 3;
+	
 	private final int _error;
 	
 	public CharCreateFail(int errorCode)
@@ -32,16 +32,9 @@ public class CharCreateFail extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		_bao.write(38);
+		writeC(0x26);
 		writeD(_error);
-		return _bao.toByteArray();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__26_CHARCREATEFAIL;
 	}
 }

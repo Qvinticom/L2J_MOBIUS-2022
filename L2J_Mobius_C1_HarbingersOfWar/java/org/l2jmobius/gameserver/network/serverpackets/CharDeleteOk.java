@@ -19,18 +19,9 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 public class CharDeleteOk extends ServerBasePacket
 {
-	private static final String _S__33_CHARDELETEOK = "[S] 33 CharDeleteOk";
-	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		_bao.write(51);
-		return _bao.toByteArray();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__33_CHARDELETEOK;
+		writeC(0x33);
 	}
 }

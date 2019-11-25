@@ -21,7 +21,6 @@ import java.util.Vector;
 
 public class ShortCutInit extends ServerBasePacket
 {
-	private static final String _S__57_SHORTCUTINIT = "[S] 57 ShortCutInit";
 	private final Vector<ShortCut> _shortCuts = new Vector<>();
 	
 	public void addSkillShotCut(int slot, int skillId, int level, int dat2)
@@ -40,9 +39,9 @@ public class ShortCutInit extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		writeC(87);
+		writeC(0x57);
 		writeD(_shortCuts.size());
 		for (int i = 0; i < _shortCuts.size(); ++i)
 		{
@@ -56,13 +55,6 @@ public class ShortCutInit extends ServerBasePacket
 			}
 			writeD(temp.dat2);
 		}
-		return getBytes();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__57_SHORTCUTINIT;
 	}
 	
 	class ShortCut
@@ -82,5 +74,4 @@ public class ShortCutInit extends ServerBasePacket
 			this.dat2 = dat2;
 		}
 	}
-	
 }

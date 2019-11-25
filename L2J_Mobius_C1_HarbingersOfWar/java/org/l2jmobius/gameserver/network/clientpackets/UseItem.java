@@ -18,6 +18,7 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import java.util.List;
+import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.handler.IItemHandler;
 import org.l2jmobius.gameserver.handler.ItemHandler;
@@ -31,12 +32,13 @@ import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 
 public class UseItem extends ClientBasePacket
 {
-	private static final String _C__14_USEITEM = "[C] 14 UseItem";
+	final static Logger _log = Logger.getLogger(UseItem.class.getName());
 	
 	public UseItem(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
 		final int objectId = readD();
+		
 		final PlayerInstance activeChar = client.getActiveChar();
 		final ItemInstance item = activeChar.getInventory().getItem(objectId);
 		if ((item != null) && item.isEquipable() && !activeChar.isInCombat())
@@ -78,30 +80,19 @@ public class UseItem extends ClientBasePacket
 				final int count = handler.useItem(activeChar, item);
 				if (count > 0)
 				{
-					removeItemFromInventory(activeChar, item, count);
+					final ItemInstance itemInstance = activeChar.getInventory().destroyItem(item.getObjectId(), count);
+					final InventoryUpdate iu = new InventoryUpdate();
+					if (itemInstance.getCount() == 0)
+					{
+						iu.addRemovedItem(itemInstance);
+					}
+					else
+					{
+						iu.addModifiedItem(itemInstance);
+					}
+					activeChar.sendPacket(iu);
 				}
 			}
 		}
-	}
-	
-	private void removeItemFromInventory(PlayerInstance activeChar, ItemInstance item, int count)
-	{
-		final ItemInstance item2 = activeChar.getInventory().destroyItem(item.getObjectId(), count);
-		final InventoryUpdate iu = new InventoryUpdate();
-		if (item2.getCount() == 0)
-		{
-			iu.addRemovedItem(item2);
-		}
-		else
-		{
-			iu.addModifiedItem(item2);
-		}
-		activeChar.sendPacket(iu);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__14_USEITEM;
 	}
 }

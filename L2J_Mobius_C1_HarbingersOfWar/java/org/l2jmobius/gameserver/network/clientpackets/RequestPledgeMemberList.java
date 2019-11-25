@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListAll;
 
 public class RequestPledgeMemberList extends ClientBasePacket
 {
-	private static final String _C__3C_REQUESTPLEDGEMEMBERLIST = "[C] 3C RequestPledgeMemberList";
-	
 	public RequestPledgeMemberList(byte[] rawPacket, ClientThread client)
 	{
 		super(rawPacket);
@@ -36,11 +34,5 @@ public class RequestPledgeMemberList extends ClientBasePacket
 			final PledgeShowMemberListAll pm = new PledgeShowMemberListAll(clan, activeChar);
 			activeChar.sendPacket(pm);
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__3C_REQUESTPLEDGEMEMBERLIST;
 	}
 }

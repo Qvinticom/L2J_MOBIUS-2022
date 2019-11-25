@@ -29,8 +29,6 @@ import org.l2jmobius.gameserver.network.ClientThread;
 
 public class ValidatePosition extends ClientBasePacket
 {
-	private static final String _C__48_VALIDATEPOSITION = "[C] 48 ValidatePosition";
-	
 	public ValidatePosition(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
@@ -98,11 +96,5 @@ public class ValidatePosition extends ClientBasePacket
 		final long dX = a.getX() - b.getX();
 		final long dY = a.getY() - b.getY();
 		return (dX * dX) + (dY * dY);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__48_VALIDATEPOSITION;
 	}
 }

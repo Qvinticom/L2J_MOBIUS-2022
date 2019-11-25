@@ -19,7 +19,6 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 public class Attack extends ServerBasePacket
 {
-	private static final String _S__06_ATTACK = "[S] 06 Attack";
 	private final int _attackerId;
 	private final int _defenderId;
 	private final int _damage;
@@ -44,9 +43,9 @@ public class Attack extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		writeC(6);
+		writeC(0x06);
 		writeD(_attackerId);
 		writeD(_defenderId);
 		writeD(_damage);
@@ -68,12 +67,5 @@ public class Attack extends ServerBasePacket
 		writeD(_y);
 		writeD(_z);
 		writeH(0);
-		return getBytes();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__06_ATTACK;
 	}
 }

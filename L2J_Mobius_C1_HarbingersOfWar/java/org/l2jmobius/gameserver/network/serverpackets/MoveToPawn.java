@@ -22,7 +22,6 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 
 public class MoveToPawn extends ServerBasePacket
 {
-	private static final String _S__75_MOVETOPAWN = "[S] 75 MoveToPawn";
 	private final Creature _cha;
 	private final WorldObject _target;
 	private final int _distance;
@@ -35,21 +34,14 @@ public class MoveToPawn extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		_bao.write(117);
+		writeC(0x75);
 		writeD(_cha.getObjectId());
 		writeD(_target.getObjectId());
 		writeD(_distance);
 		writeD(_cha.getX());
 		writeD(_cha.getY());
 		writeD(_cha.getZ());
-		return _bao.toByteArray();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__75_MOVETOPAWN;
 	}
 }

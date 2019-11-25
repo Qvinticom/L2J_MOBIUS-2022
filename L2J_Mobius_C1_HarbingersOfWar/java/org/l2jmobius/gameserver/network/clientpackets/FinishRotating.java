@@ -22,8 +22,6 @@ import org.l2jmobius.gameserver.network.serverpackets.StopRotation;
 
 public class FinishRotating extends ClientBasePacket
 {
-	private static final String _C__4B_FINISHROTATING = "[C] 4B FinishRotating";
-	
 	public FinishRotating(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
@@ -33,11 +31,5 @@ public class FinishRotating extends ClientBasePacket
 		final StopRotation sr = new StopRotation(client.getActiveChar(), degree);
 		client.getActiveChar().sendPacket(sr);
 		client.getActiveChar().broadcastPacket(sr);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__4B_FINISHROTATING;
 	}
 }

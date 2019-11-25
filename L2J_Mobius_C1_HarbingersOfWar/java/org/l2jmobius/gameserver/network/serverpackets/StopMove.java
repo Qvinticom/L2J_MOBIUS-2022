@@ -21,7 +21,6 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 
 public class StopMove extends ServerBasePacket
 {
-	private static final String _S__59_STOPMOVE = "[S] 59 StopMove";
 	private final int _objectId;
 	private final int _x;
 	private final int _y;
@@ -43,20 +42,13 @@ public class StopMove extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		writeC(89);
+		writeC(0x59);
 		writeD(_objectId);
 		writeD(_x);
 		writeD(_y);
 		writeD(_z);
 		writeD(_heading);
-		return getBytes();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__59_STOPMOVE;
 	}
 }

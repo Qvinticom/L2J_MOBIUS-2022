@@ -19,22 +19,14 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 public class QuestList extends ServerBasePacket
 {
-	private static final String _S__98_QUESTLIST = "[S] 98 QuestList";
 	private int _questCount;
 	private int _itemCount;
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		writeC(152);
+		writeC(0x98);
 		writeH(_questCount);
 		writeH(_itemCount);
-		return getBytes();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__98_QUESTLIST;
 	}
 }

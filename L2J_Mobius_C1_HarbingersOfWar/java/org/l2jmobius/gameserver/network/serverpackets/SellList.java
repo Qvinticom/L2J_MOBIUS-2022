@@ -25,7 +25,6 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 public class SellList extends ServerBasePacket
 {
-	private static final String _S__1C_SELLLIST = "[S] 1C SellList";
 	private final PlayerInstance _char;
 	private final int _money;
 	private final List<ItemInstance> _selllist = new ArrayList<>();
@@ -37,9 +36,9 @@ public class SellList extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		writeC(28);
+		writeC(0x1C);
 		writeD(_money);
 		writeD(0);
 		int count = _char.getInventory().getSize();
@@ -70,12 +69,5 @@ public class SellList extends ServerBasePacket
 			}
 			writeD(item.getItem().getReferencePrice() / 2);
 		}
-		return getBytes();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__1C_SELLLIST;
 	}
 }

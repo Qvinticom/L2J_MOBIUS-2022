@@ -19,7 +19,6 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 public class MagicSkillCanceld extends ServerBasePacket
 {
-	private static final String _S__5B_MAGICSKILLCANCELD = "[S] 5B MagicSkillCanceld";
 	private final int _objectId;
 	
 	public MagicSkillCanceld(int objectId)
@@ -28,16 +27,9 @@ public class MagicSkillCanceld extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		writeC(91);
+		writeC(0x5B);
 		writeD(_objectId);
-		return _bao.toByteArray();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__5B_MAGICSKILLCANCELD;
 	}
 }

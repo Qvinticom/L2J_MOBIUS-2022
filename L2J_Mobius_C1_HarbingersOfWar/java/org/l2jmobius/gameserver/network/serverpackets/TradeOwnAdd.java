@@ -21,7 +21,6 @@ import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 
 public class TradeOwnAdd extends ServerBasePacket
 {
-	private static final String _S__30_TRADEOWNADD = "[S] 30 TradeOwnAdd";
 	private final ItemInstance temp;
 	private final int _amount;
 	
@@ -32,9 +31,9 @@ public class TradeOwnAdd extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		writeC(48);
+		writeC(0x30);
 		writeH(1);
 		final int type = temp.getItem().getType1();
 		writeH(type);
@@ -47,12 +46,5 @@ public class TradeOwnAdd extends ServerBasePacket
 		writeH(temp.getEnchantLevel());
 		writeH(0);
 		writeH(0);
-		return getBytes();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__30_TRADEOWNADD;
 	}
 }

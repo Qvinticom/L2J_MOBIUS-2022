@@ -22,7 +22,6 @@ import java.io.FileInputStream;
 
 public class PledgeCrest extends ServerBasePacket
 {
-	private static final String _S__84_PLEDGECREST = "[S] 84 PledgeCrest";
 	private final File _crestFile;
 	private final int _crestId;
 	
@@ -33,14 +32,13 @@ public class PledgeCrest extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		writeC(132);
+		writeC(0x84);
 		writeD(_crestId);
 		try
 		{
 			final FileInputStream fis = new FileInputStream(_crestFile);
-			// BufferedInputStream bfis = new BufferedInputStream(fis);
 			final int crestSize = fis.available();
 			writeD(crestSize);
 			int temp = -1;
@@ -54,12 +52,5 @@ public class PledgeCrest extends ServerBasePacket
 		{
 			e.printStackTrace();
 		}
-		return getBytes();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__84_PLEDGECREST;
 	}
 }

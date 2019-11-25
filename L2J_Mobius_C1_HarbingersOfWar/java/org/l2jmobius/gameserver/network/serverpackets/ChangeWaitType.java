@@ -21,7 +21,6 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 
 public class ChangeWaitType extends ServerBasePacket
 {
-	private static final String _S__3F_CHANGEWAITTYPE = "[S] 3F ChangeWaitType";
 	private final Creature _cha;
 	private final int _moveType;
 	
@@ -32,20 +31,13 @@ public class ChangeWaitType extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		_bao.write(63);
+		writeC(0x3F);
 		writeD(_cha.getObjectId());
 		writeD(_moveType);
 		writeD(_cha.getX());
 		writeD(_cha.getY());
 		writeD(_cha.getZ());
-		return _bao.toByteArray();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__3F_CHANGEWAITTYPE;
 	}
 }

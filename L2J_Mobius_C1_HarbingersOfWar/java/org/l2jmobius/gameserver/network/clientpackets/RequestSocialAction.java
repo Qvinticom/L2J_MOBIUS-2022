@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class RequestSocialAction extends ClientBasePacket
 {
-	private static final String _C__1B_REQUESTSOCIALACTION = "[C] 1B RequestSocialAction";
-	
 	public RequestSocialAction(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
@@ -37,11 +35,5 @@ public class RequestSocialAction extends ClientBasePacket
 			activeChar.sendPacket(atk);
 			activeChar.broadcastPacket(atk);
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__1B_REQUESTSOCIALACTION;
 	}
 }

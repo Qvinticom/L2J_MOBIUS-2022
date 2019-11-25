@@ -26,8 +26,6 @@ import org.l2jmobius.gameserver.templates.CharTemplate;
 
 public class NewCharacter extends ClientBasePacket
 {
-	private static final String _C__0E_NEWCHARACTER = "[C] 0E NewCharacter";
-	
 	public NewCharacter(byte[] rawPacket, ClientThread client) throws IOException
 	{
 		super(rawPacket);
@@ -53,11 +51,5 @@ public class NewCharacter extends ClientBasePacket
 		template = CharTemplateTable.getInstance().getTemplate(53);
 		ct.addChar(template);
 		client.getConnection().sendPacket(ct);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__0E_NEWCHARACTER;
 	}
 }

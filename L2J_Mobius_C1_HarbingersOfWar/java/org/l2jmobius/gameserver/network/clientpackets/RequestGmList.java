@@ -22,17 +22,9 @@ import org.l2jmobius.gameserver.network.ClientThread;
 
 public class RequestGmList extends ClientBasePacket
 {
-	private static final String _C__81_REQUESTGMLIST = "[C] 81 RequestGmList";
-	
 	public RequestGmList(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
 		GmListManager.getInstance().sendListToPlayer(client.getActiveChar());
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__81_REQUESTGMLIST;
 	}
 }

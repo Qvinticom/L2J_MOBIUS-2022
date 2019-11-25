@@ -25,8 +25,6 @@ import org.l2jmobius.gameserver.network.serverpackets.AttackCanceld;
 
 public class MoveBackwardToLocation extends ClientBasePacket
 {
-	private static final String _C__01_MOVEBACKWARDTOLOC = "[C] 01 MoveBackwardToLoc";
-	
 	public MoveBackwardToLocation(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
@@ -66,11 +64,5 @@ public class MoveBackwardToLocation extends ClientBasePacket
 			// Water check.
 			activeChar.checkWaterState();
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__01_MOVEBACKWARDTOLOC;
 	}
 }

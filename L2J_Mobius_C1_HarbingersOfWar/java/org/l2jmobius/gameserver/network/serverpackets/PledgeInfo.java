@@ -21,7 +21,6 @@ import org.l2jmobius.gameserver.model.Clan;
 
 public class PledgeInfo extends ServerBasePacket
 {
-	private static final String _S__9C_PLEDGEINFO = "[S] 9C PledgeInfo";
 	private final Clan _clan;
 	
 	public PledgeInfo(Clan clan)
@@ -30,18 +29,11 @@ public class PledgeInfo extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		writeC(156);
+		writeC(0x9C);
 		writeD(_clan.getClanId());
 		writeS(_clan.getName());
 		writeS(_clan.getAllyName());
-		return getBytes();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__9C_PLEDGEINFO;
 	}
 }

@@ -19,7 +19,6 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 public class ShortCutRegister extends ServerBasePacket
 {
-	private static final String _S__56_SHORTCUTREGISTER = "[S] 56 ShortCutRegister";
 	public int _slot;
 	public int _type;
 	public int _typeId;
@@ -41,9 +40,9 @@ public class ShortCutRegister extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		writeC(86);
+		writeC(0x56);
 		writeD(_type);
 		writeD(_slot);
 		writeD(_typeId);
@@ -52,12 +51,5 @@ public class ShortCutRegister extends ServerBasePacket
 			writeD(_level);
 		}
 		writeD(_dat2);
-		return getBytes();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__56_SHORTCUTREGISTER;
 	}
 }

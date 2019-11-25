@@ -22,8 +22,6 @@ import org.l2jmobius.gameserver.network.ClientThread;
 
 public class RequestOustPartyMember extends ClientBasePacket
 {
-	private static final String _C__2C_REQUESTOUSTPARTYMEMBER = "[C] 2C RequestOustPartyMember";
-	
 	public RequestOustPartyMember(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
@@ -33,11 +31,5 @@ public class RequestOustPartyMember extends ClientBasePacket
 		{
 			activeChar.getParty().oustPartyMember(name);
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__2C_REQUESTOUSTPARTYMEMBER;
 	}
 }

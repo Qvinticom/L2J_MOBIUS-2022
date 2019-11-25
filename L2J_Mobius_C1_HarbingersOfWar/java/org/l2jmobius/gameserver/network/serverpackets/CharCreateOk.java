@@ -19,19 +19,10 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 public class CharCreateOk extends ServerBasePacket
 {
-	private static final String _S__25_CHARCREATEOK = "[S] 25 CharCreateOk";
-	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		_bao.write(37);
+		writeC(0x25);
 		writeD(1);
-		return _bao.toByteArray();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__25_CHARCREATEOK;
 	}
 }

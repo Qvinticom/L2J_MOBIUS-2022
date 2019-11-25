@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.network.serverpackets.ShortCutRegister;
 
 public class RequestShortCutReg extends ClientBasePacket
 {
-	private static final String _C__33_REQUESTSHORTCUTREG = "[C] 33 RequestShortCutReg";
-	
 	public RequestShortCutReg(byte[] rawPacket, ClientThread client)
 	{
 		super(rawPacket);
@@ -56,11 +54,5 @@ public class RequestShortCutReg extends ClientBasePacket
 				break;
 			}
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__33_REQUESTSHORTCUTREG;
 	}
 }

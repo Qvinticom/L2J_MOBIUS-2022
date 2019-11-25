@@ -96,10 +96,10 @@ public class Connection
 		}
 	}
 	
-	public void sendPacket(ServerBasePacket bp) throws IOException
+	public void sendPacket(ServerBasePacket packet) throws IOException
 	{
-		final byte[] data = bp.getContent();
-		this.sendPacket(data);
+		packet.writeImpl();
+		sendPacket(packet.getBytes());
 	}
 	
 	public void activateCryptKey()

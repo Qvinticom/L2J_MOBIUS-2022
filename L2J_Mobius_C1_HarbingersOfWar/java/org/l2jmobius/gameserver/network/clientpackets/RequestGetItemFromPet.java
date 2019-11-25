@@ -17,6 +17,8 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import java.util.logging.Logger;
+
 import org.l2jmobius.gameserver.model.Inventory;
 import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 import org.l2jmobius.gameserver.network.ClientThread;
@@ -25,7 +27,7 @@ import org.l2jmobius.gameserver.network.serverpackets.PetInventoryUpdate;
 
 public class RequestGetItemFromPet extends ClientBasePacket
 {
-	private static final String REQUESTGETITEMFROMPET__C__8C = "[C] 8C RequestGetItemFromPet";
+	final static Logger _log = Logger.getLogger(RequestGetItemFromPet.class.getName());
 	
 	public RequestGetItemFromPet(byte[] decrypt, ClientThread client)
 	{
@@ -63,11 +65,5 @@ public class RequestGetItemFromPet extends ClientBasePacket
 			client.getActiveChar().sendPacket(petiu);
 			client.getActiveChar().sendPacket(playerUI);
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return REQUESTGETITEMFROMPET__C__8C;
 	}
 }

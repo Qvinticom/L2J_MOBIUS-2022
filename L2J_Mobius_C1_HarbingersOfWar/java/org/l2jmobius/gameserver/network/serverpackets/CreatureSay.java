@@ -19,7 +19,6 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 public class CreatureSay extends ServerBasePacket
 {
-	private static final String _S__5D_CREATURESAY = "[S] 5D CreatureSay";
 	private final int _objectId;
 	private final int _textType;
 	private final String _charName;
@@ -34,19 +33,12 @@ public class CreatureSay extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		_bao.write(93);
+		writeC(0x5D);
 		writeD(_objectId);
 		writeD(_textType);
 		writeS(_charName);
 		writeS(_text);
-		return _bao.toByteArray();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__5D_CREATURESAY;
 	}
 }

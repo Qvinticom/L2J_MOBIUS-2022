@@ -17,26 +17,21 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.ClientThread;
 import org.l2jmobius.gameserver.network.serverpackets.BeginRotation;
 
 public class StartRotating extends ClientBasePacket
 {
-	private static final String _C__4A_STARTROTATING = "[C] 4A StartRotating";
-	
 	public StartRotating(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
 		final int degree = readD();
 		final int side = readD();
-		final BeginRotation br = new BeginRotation(client.getActiveChar(), degree, side);
-		client.getActiveChar().sendPacket(br);
-		client.getActiveChar().broadcastPacket(br);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__4A_STARTROTATING;
+		
+		final PlayerInstance activeChar = client.getActiveChar();
+		final BeginRotation br = new BeginRotation(activeChar, degree, side);
+		activeChar.sendPacket(br);
+		activeChar.broadcastPacket(br);
 	}
 }

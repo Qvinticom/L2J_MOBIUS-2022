@@ -21,7 +21,6 @@ import java.util.Vector;
 
 public class MagicEffectIcons extends ServerBasePacket
 {
-	private static final String _S__97_MAGICEFFECTICONS = "[S] 97 MagicEffectIcons";
 	private final Vector<Effect> _effects = new Vector<>();
 	
 	public void addEffect(int skillId, int dat, int duration)
@@ -30,9 +29,9 @@ public class MagicEffectIcons extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		_bao.write(151);
+		writeC(0x97);
 		writeH(_effects.size());
 		for (int i = 0; i < _effects.size(); ++i)
 		{
@@ -41,13 +40,6 @@ public class MagicEffectIcons extends ServerBasePacket
 			writeH(temp.dat);
 			writeD(temp.duration / 1000);
 		}
-		return _bao.toByteArray();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__97_MAGICEFFECTICONS;
 	}
 	
 	class Effect
@@ -63,5 +55,4 @@ public class MagicEffectIcons extends ServerBasePacket
 			this.duration = duration;
 		}
 	}
-	
 }

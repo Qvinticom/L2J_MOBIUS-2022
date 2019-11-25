@@ -18,6 +18,7 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import java.io.IOException;
+import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.network.ClientThread;
 import org.l2jmobius.gameserver.network.serverpackets.AuthLoginFail;
@@ -26,7 +27,7 @@ import org.l2jmobius.loginserver.LoginController;
 
 public class AuthLogin extends ClientBasePacket
 {
-	private static final String _C__08_AUTHLOGIN = "[C] 08 AuthLogin";
+	final static Logger _log = Logger.getLogger(AuthLogin.class.getName());
 	
 	public AuthLogin(byte[] decrypt, ClientThread client) throws IOException
 	{
@@ -58,11 +59,5 @@ public class AuthLogin extends ClientBasePacket
 			client.getConnection().sendPacket(cl);
 		}
 		client.setAccessLevel(access);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__08_AUTHLOGIN;
 	}
 }

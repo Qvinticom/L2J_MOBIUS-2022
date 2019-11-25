@@ -29,8 +29,6 @@ import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 
 public class RequestSetPledgeCrest extends ClientBasePacket
 {
-	private static final String _C__53_REQUESTSETPLEDGECREST = "[C] 53 RequestSetPledgeCrest";
-	
 	public RequestSetPledgeCrest(byte[] rawPacket, ClientThread client) throws IOException
 	{
 		super(rawPacket);
@@ -51,11 +49,5 @@ public class RequestSetPledgeCrest extends ClientBasePacket
 		activeChar.sendPacket(ui);
 		final CharInfo ci = new CharInfo(activeChar);
 		activeChar.broadcastPacket(ci);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__53_REQUESTSETPLEDGECREST;
 	}
 }

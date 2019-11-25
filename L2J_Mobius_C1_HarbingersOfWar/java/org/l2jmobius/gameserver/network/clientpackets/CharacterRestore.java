@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.network.serverpackets.CharSelectInfo;
 
 public class CharacterRestore extends ClientBasePacket
 {
-	private static final String _C__62_CHARACTERRESTORE = "[C] 62 CharacterRestore";
-	
 	public CharacterRestore(byte[] decrypt, ClientThread client) throws IOException
 	{
 		super(decrypt);
@@ -33,11 +31,5 @@ public class CharacterRestore extends ClientBasePacket
 		final int charSlot = readD();
 		final CharSelectInfo cl = new CharSelectInfo(client.getLoginName(), client.getSessionId());
 		client.getConnection().sendPacket(cl);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__62_CHARACTERRESTORE;
 	}
 }

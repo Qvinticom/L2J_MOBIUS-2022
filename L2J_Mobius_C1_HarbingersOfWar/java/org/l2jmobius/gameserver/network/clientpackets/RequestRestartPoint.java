@@ -27,8 +27,6 @@ import org.l2jmobius.gameserver.network.serverpackets.StopMove;
 
 public class RequestRestartPoint extends ClientBasePacket
 {
-	private static final String _C__6d_REQUESTRESTARTPOINT = "[C] 6d RequestRestartPoint";
-	
 	public RequestRestartPoint(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
@@ -49,11 +47,5 @@ public class RequestRestartPoint extends ClientBasePacket
 		activeChar.sendPacket(revive);
 		activeChar.broadcastPacket(revive);
 		activeChar.setTarget(activeChar);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__6d_REQUESTRESTARTPOINT;
 	}
 }

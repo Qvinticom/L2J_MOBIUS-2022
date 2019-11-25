@@ -17,25 +17,14 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.ClientThread;
 
 public class RequestShortCutDel extends ClientBasePacket
 {
-	private static final String _C__35_REQUESTSHORTCUTDEL = "[C] 35 RequestShortCutDel";
-	
 	public RequestShortCutDel(byte[] rawPacket, ClientThread client)
 	{
 		super(rawPacket);
-		final PlayerInstance activeChar = client.getActiveChar();
-		// Connection con = client.getConnection();
 		final int slot = readD();
-		activeChar.deleteShortCut(slot);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__35_REQUESTSHORTCUTDEL;
+		client.getActiveChar().deleteShortCut(slot);
 	}
 }

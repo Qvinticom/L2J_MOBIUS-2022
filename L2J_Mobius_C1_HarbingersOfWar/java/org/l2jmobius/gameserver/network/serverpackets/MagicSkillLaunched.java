@@ -21,7 +21,6 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 
 public class MagicSkillLaunched extends ServerBasePacket
 {
-	private static final String _S__8E_MAGICSKILLLAUNCHED = "[S] 8E MagicSkillLaunched";
 	private final Creature _cha;
 	private final int _skillId;
 	private final int _skillLevel;
@@ -47,20 +46,13 @@ public class MagicSkillLaunched extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		_bao.write(142);
+		writeC(0x8E);
 		writeD(_cha.getObjectId());
 		writeD(_skillId);
 		writeD(_skillLevel);
 		writeD(_dat2);
 		writeD(_targetId);
-		return _bao.toByteArray();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__8E_MAGICSKILLLAUNCHED;
 	}
 }

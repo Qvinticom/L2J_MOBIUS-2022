@@ -17,6 +17,8 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import java.util.logging.Logger;
+
 import org.l2jmobius.gameserver.AdminCommands;
 import org.l2jmobius.gameserver.managers.CommunityBoardManager;
 import org.l2jmobius.gameserver.model.World;
@@ -27,7 +29,7 @@ import org.l2jmobius.gameserver.network.ClientThread;
 
 public class RequestBypassToServer extends ClientBasePacket
 {
-	private static final String _C__21_REQUESTBYPASSTOSERVER = "[C] 21 RequestBypassToServer";
+	final static Logger _log = Logger.getLogger(RequestBypassToServer.class.getName());
 	
 	public RequestBypassToServer(byte[] decrypt, ClientThread client)
 	{
@@ -41,7 +43,14 @@ public class RequestBypassToServer extends ClientBasePacket
 			}
 			else if (command.equals("come_here"))
 			{
-				comeHere(client);
+				final WorldObject obj = client.getActiveChar().getTarget();
+				if (obj instanceof NpcInstance)
+				{
+					final NpcInstance temp = (NpcInstance) obj;
+					final PlayerInstance player = client.getActiveChar();
+					temp.setTarget(player);
+					temp.moveTo(player.getX(), player.getY(), player.getZ(), 0);
+				}
 			}
 			else if (command.startsWith("npc_"))
 			{
@@ -62,23 +71,5 @@ public class RequestBypassToServer extends ClientBasePacket
 		{
 			_log.warning("Bad RequestBypassToServer: " + e.toString());
 		}
-	}
-	
-	private void comeHere(ClientThread client)
-	{
-		final WorldObject obj = client.getActiveChar().getTarget();
-		if (obj instanceof NpcInstance)
-		{
-			final NpcInstance temp = (NpcInstance) obj;
-			final PlayerInstance player = client.getActiveChar();
-			temp.setTarget(player);
-			temp.moveTo(player.getX(), player.getY(), player.getZ(), 0);
-		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__21_REQUESTBYPASSTOSERVER;
 	}
 }

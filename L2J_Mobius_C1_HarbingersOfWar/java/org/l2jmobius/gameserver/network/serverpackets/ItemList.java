@@ -24,7 +24,6 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 public class ItemList extends ServerBasePacket
 {
-	private static final String _S__27_ITEMLIST = "[S] 27 ItemList";
 	private final Collection<ItemInstance> _items;
 	private final boolean _showWindow;
 	
@@ -41,9 +40,9 @@ public class ItemList extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		writeC(39);
+		writeC(0x27);
 		if (_showWindow)
 		{
 			writeH(1);
@@ -73,12 +72,5 @@ public class ItemList extends ServerBasePacket
 			writeH(item.getEnchantLevel());
 			writeH(0);
 		}
-		return getBytes();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__27_ITEMLIST;
 	}
 }

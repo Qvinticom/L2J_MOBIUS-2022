@@ -25,7 +25,6 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 public class WareHouseDepositList extends ServerBasePacket
 {
-	private static final String _S__53_WAREHOUSEDEPOSITLIST = "[S] 53 WareHouseDepositList";
 	private final PlayerInstance _cha;
 	private final int _money;
 	
@@ -36,10 +35,10 @@ public class WareHouseDepositList extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
 		int i;
-		writeC(83);
+		writeC(0x53);
 		writeD(_money);
 		final List<ItemInstance> itemlist = new ArrayList<>();
 		int count = _cha.getInventory().getSize();
@@ -68,12 +67,5 @@ public class WareHouseDepositList extends ServerBasePacket
 			writeH(200);
 			writeD(temp.getItemId());
 		}
-		return getBytes();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__53_WAREHOUSEDEPOSITLIST;
 	}
 }

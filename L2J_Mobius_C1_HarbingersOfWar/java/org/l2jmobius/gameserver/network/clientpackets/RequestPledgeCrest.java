@@ -19,13 +19,14 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.network.ClientThread;
 import org.l2jmobius.gameserver.network.serverpackets.PledgeCrest;
 
 public class RequestPledgeCrest extends ClientBasePacket
 {
-	private static final String _C__68_REQUESTPLEDGECREST = "[C] 68 RequestPledgeCrest";
+	final static Logger _log = Logger.getLogger(RequestPledgeCrest.class.getName());
 	
 	public RequestPledgeCrest(byte[] rawPacket, ClientThread client) throws IOException
 	{
@@ -41,11 +42,5 @@ public class RequestPledgeCrest extends ClientBasePacket
 		{
 			_log.warning("crest file is missing:" + crestFile.getAbsolutePath());
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__68_REQUESTPLEDGECREST;
 	}
 }

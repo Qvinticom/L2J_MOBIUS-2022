@@ -21,7 +21,6 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 
 public class TargetUnselected extends ServerBasePacket
 {
-	private static final String _S__3A_TARGETUNSELECTED = "[S] 3A TargetUnselected";
 	private final Creature _target;
 	private final int _x;
 	private final int _y;
@@ -36,20 +35,13 @@ public class TargetUnselected extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		writeC(58);
+		writeC(0x3A);
 		writeD(_target.getObjectId());
 		writeD(_x);
 		writeD(_y);
 		writeD(_z);
 		writeD(_target.getTargetId());
-		return getBytes();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__3A_TARGETUNSELECTED;
 	}
 }

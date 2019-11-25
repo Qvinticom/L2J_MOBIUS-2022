@@ -19,25 +19,17 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 public class PledgeShowMemberListDelete extends ServerBasePacket
 {
-	private static final String _S__6B_PLEDGESHOWMEMBERLISTDELETE = "[S] 6b PledgeShowMemberListDelete";
 	private final String _player;
 	
-	public PledgeShowMemberListDelete(String playerName)
+	public PledgeShowMemberListDelete(String player)
 	{
-		_player = playerName;
+		_player = player;
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		writeC(107);
+		writeC(0x6B);
 		writeS(_player);
-		return getBytes();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__6B_PLEDGESHOWMEMBERLISTDELETE;
 	}
 }

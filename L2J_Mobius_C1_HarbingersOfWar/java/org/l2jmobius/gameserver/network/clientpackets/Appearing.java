@@ -31,8 +31,6 @@ import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 
 public class Appearing extends ClientBasePacket
 {
-	private static final String _C__30_APPEARING = "[C] 30 Appearing";
-	
 	public Appearing(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
@@ -71,11 +69,5 @@ public class Appearing extends ClientBasePacket
 			}
 		}
 		World.getInstance().addVisibleObject(activeChar);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__30_APPEARING;
 	}
 }

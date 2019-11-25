@@ -26,8 +26,6 @@ import org.l2jmobius.gameserver.network.serverpackets.TradeStart;
 
 public class AnswerTradeRequest extends ClientBasePacket
 {
-	private static final String _C__40_ANSWERTRADEREQUEST = "[C] 40 AnswerTradeRequest";
-	
 	public AnswerTradeRequest(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
@@ -71,11 +69,5 @@ public class AnswerTradeRequest extends ClientBasePacket
 			player.sendPacket(msg);
 			player.setTransactionRequester(null);
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__40_ANSWERTRADEREQUEST;
 	}
 }

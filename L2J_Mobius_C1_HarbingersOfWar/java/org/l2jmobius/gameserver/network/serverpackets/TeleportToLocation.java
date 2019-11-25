@@ -21,7 +21,6 @@ import org.l2jmobius.gameserver.model.WorldObject;
 
 public class TeleportToLocation extends ServerBasePacket
 {
-	private static final String _S__38_TELEPORTTOLOCATION = "[S] 38 TeleportToLocation";
 	private final int _targetId;
 	private final int _x;
 	private final int _y;
@@ -36,19 +35,12 @@ public class TeleportToLocation extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		writeC(56);
+		writeC(0x38);
 		writeD(_targetId);
 		writeD(_x);
 		writeD(_y);
 		writeD(_z);
-		return getBytes();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__38_TELEPORTTOLOCATION;
 	}
 }

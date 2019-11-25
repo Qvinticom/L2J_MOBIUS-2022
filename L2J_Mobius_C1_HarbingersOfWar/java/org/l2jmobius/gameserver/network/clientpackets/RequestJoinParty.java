@@ -17,6 +17,8 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import java.util.logging.Logger;
+
 import org.l2jmobius.gameserver.model.Party;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -26,7 +28,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class RequestJoinParty extends ClientBasePacket
 {
-	private static final String _C__29_REQUESTJOINPARTY = "[C] 29 RequestJoinParty";
+	final static Logger _log = Logger.getLogger(RequestJoinParty.class.getName());
 	
 	public RequestJoinParty(byte[] decrypt, ClientThread client)
 	{
@@ -122,11 +124,5 @@ public class RequestJoinParty extends ClientBasePacket
 		{
 			_log.warning(client.getActiveChar().getName() + " invited someone who doesn't know him.");
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__29_REQUESTJOINPARTY;
 	}
 }

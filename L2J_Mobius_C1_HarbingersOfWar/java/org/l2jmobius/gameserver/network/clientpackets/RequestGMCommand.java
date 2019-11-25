@@ -26,8 +26,6 @@ import org.l2jmobius.gameserver.network.serverpackets.GMViewPledgeInfo;
 
 public class RequestGMCommand extends ClientBasePacket
 {
-	private static final String _C__6E_REQUESTGMCOMMAND = "[C] 6e RequestGMCommand";
-	
 	public RequestGMCommand(byte[] rawPacket, ClientThread client)
 	{
 		super(rawPacket);
@@ -70,11 +68,5 @@ public class RequestGMCommand extends ClientBasePacket
 				break;
 			}
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__6E_REQUESTGMCOMMAND;
 	}
 }

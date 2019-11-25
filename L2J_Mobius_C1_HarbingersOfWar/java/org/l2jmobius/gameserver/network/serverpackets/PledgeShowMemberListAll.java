@@ -23,7 +23,6 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 public class PledgeShowMemberListAll extends ServerBasePacket
 {
-	private static final String _S__68_PLEDGESHOWMEMBERLISTALL = "[S] 68 PledgeShowMemberListAll";
 	private final Clan _clan;
 	private final PlayerInstance _activeChar;
 	
@@ -34,9 +33,9 @@ public class PledgeShowMemberListAll extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		writeC(104);
+		writeC(0x68);
 		writeD(_clan.getClanId());
 		writeS(_clan.getName());
 		writeS(_clan.getLeaderName());
@@ -70,12 +69,5 @@ public class PledgeShowMemberListAll extends ServerBasePacket
 			}
 			writeD(0);
 		}
-		return getBytes();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__68_PLEDGESHOWMEMBERLISTALL;
 	}
 }

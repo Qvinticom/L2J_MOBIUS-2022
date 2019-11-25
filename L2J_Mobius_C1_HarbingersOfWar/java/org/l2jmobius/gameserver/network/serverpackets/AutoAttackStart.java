@@ -19,7 +19,6 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 public class AutoAttackStart extends ServerBasePacket
 {
-	private static final String _S__3B_AUTOATTACKSTART = "[S] 3B AutoAttackStart";
 	private final int _targetId;
 	
 	public AutoAttackStart(int targetId)
@@ -28,16 +27,9 @@ public class AutoAttackStart extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		_bao.write(59);
+		writeC(0x3B);
 		writeD(_targetId);
-		return _bao.toByteArray();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__3B_AUTOATTACKSTART;
 	}
 }

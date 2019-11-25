@@ -19,7 +19,6 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 public class SendTradeRequest extends ServerBasePacket
 {
-	private static final String _S__73_SENDTRADEREQUEST = "[S] 73 SendTradeRequest";
 	private final int _senderID;
 	
 	public SendTradeRequest(int senderID)
@@ -28,16 +27,9 @@ public class SendTradeRequest extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		writeC(115);
+		writeC(0x73);
 		writeD(_senderID);
-		return getBytes();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__73_SENDTRADEREQUEST;
 	}
 }

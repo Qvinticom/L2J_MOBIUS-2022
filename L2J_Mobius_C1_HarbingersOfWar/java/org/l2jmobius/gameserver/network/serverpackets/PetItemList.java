@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
 
 public class PetItemList extends ServerBasePacket
 {
-	private static final String _S__cb_PETITEMLIST = "[S] cb  PetItemList";
-	
 	private final PetInstance _cha;
 	private final Collection<ItemInstance> _items;
 	
@@ -36,9 +34,9 @@ public class PetItemList extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		writeC(203);
+		writeC(0xCB);
 		writeH(_items.size());
 		for (ItemInstance item : _items)
 		{
@@ -60,12 +58,5 @@ public class PetItemList extends ServerBasePacket
 			writeH(item.getEnchantLevel());
 			writeH(0);
 		}
-		return getBytes();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__cb_PETITEMLIST;
 	}
 }

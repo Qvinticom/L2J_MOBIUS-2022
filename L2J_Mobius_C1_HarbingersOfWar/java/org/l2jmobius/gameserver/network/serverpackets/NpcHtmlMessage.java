@@ -19,7 +19,6 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 public class NpcHtmlMessage extends ServerBasePacket
 {
-	private static final String _S__1B_NPCHTMLMESSAGE = "[S] 1B NpcHtmlMessage";
 	private final int _messageId;
 	private String _html;
 	
@@ -34,17 +33,10 @@ public class NpcHtmlMessage extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		writeC(27);
+		writeC(0x1B);
 		writeD(_messageId);
 		writeS(_html);
-		return getBytes();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__1B_NPCHTMLMESSAGE;
 	}
 }

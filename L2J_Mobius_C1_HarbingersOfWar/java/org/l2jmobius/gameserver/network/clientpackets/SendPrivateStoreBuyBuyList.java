@@ -29,8 +29,6 @@ import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 
 public class SendPrivateStoreBuyBuyList extends ClientBasePacket
 {
-	private static final String _C__96_SENDPRIVATESTOREBUYBUYLIST = "[C] 96 SendPrivateStoreBuyBuyList";
-	
 	public SendPrivateStoreBuyBuyList(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
@@ -70,11 +68,5 @@ public class SendPrivateStoreBuyBuyList extends ClientBasePacket
 		{
 			buyer.getTradeList().updateBuyList(buyer, buyerlist);
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__96_SENDPRIVATESTOREBUYBUYLIST;
 	}
 }

@@ -21,7 +21,6 @@ import java.util.Vector;
 
 public class SkillList extends ServerBasePacket
 {
-	private static final String _S__6D_SKILLLIST = "[S] 6D SkillList";
 	private final Vector<Skill> _skills = new Vector<>();
 	
 	public void addSkill(int id, int level, boolean passive)
@@ -30,9 +29,9 @@ public class SkillList extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		writeC(109);
+		writeC(0x6D);
 		writeD(_skills.size());
 		for (int i = 0; i < _skills.size(); ++i)
 		{
@@ -48,13 +47,6 @@ public class SkillList extends ServerBasePacket
 			writeD(temp.level);
 			writeD(temp.id);
 		}
-		return getBytes();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__6D_SKILLLIST;
 	}
 	
 	class Skill
@@ -70,5 +62,4 @@ public class SkillList extends ServerBasePacket
 			this.passive = passive;
 		}
 	}
-	
 }

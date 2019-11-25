@@ -21,7 +21,6 @@ import java.util.Vector;
 
 public class AquireSkillInfo extends ServerBasePacket
 {
-	private static final String _S__A4_AQUIRESKILLINFO = "[S] A4 AquireSkillInfo";
 	private final Vector<Req> _reqs = new Vector<>();
 	private final int _id;
 	private final int _level;
@@ -40,9 +39,9 @@ public class AquireSkillInfo extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		writeC(164);
+		writeC(0xA4);
 		writeD(_id);
 		writeD(_level);
 		writeD(_spCost);
@@ -55,13 +54,6 @@ public class AquireSkillInfo extends ServerBasePacket
 			writeD(temp.count);
 			writeD(temp.unk);
 		}
-		return getBytes();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__A4_AQUIRESKILLINFO;
 	}
 	
 	class Req
@@ -79,5 +71,4 @@ public class AquireSkillInfo extends ServerBasePacket
 			this.unk = unk;
 		}
 	}
-	
 }

@@ -17,18 +17,13 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import java.util.logging.Logger;
-
 public abstract class ClientBasePacket
 {
-	static Logger _log = Logger.getLogger(ClientBasePacket.class.getName());
-	
 	private final byte[] _decrypt;
 	private int _off;
 	
 	public ClientBasePacket(byte[] decrypt)
 	{
-		_log.finest(getType());
 		_decrypt = decrypt;
 		_off = 1;
 	}
@@ -88,6 +83,4 @@ public abstract class ClientBasePacket
 		_off += length;
 		return result;
 	}
-	
-	public abstract String getType();
 }

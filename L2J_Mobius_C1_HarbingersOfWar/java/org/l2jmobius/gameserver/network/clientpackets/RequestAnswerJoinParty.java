@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class RequestAnswerJoinParty extends ClientBasePacket
 {
-	private static final String _C__2A_REQUESTANSWERPARTY = "[C] 2A RequestAnswerParty";
-	
 	public RequestAnswerJoinParty(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
@@ -49,11 +47,5 @@ public class RequestAnswerJoinParty extends ClientBasePacket
 		}
 		player.setTransactionRequester(null);
 		requestor.setTransactionRequester(null);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__2A_REQUESTANSWERPARTY;
 	}
 }

@@ -21,7 +21,6 @@ import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 
 public class TradeOtherAdd extends ServerBasePacket
 {
-	private static final String _S__31_TRADEOTHERADD = "[S] 31 TradeOtherAdd";
 	private final ItemInstance temp;
 	private final int _amount;
 	
@@ -32,9 +31,9 @@ public class TradeOtherAdd extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		writeC(49);
+		writeC(0x31);
 		writeH(1);
 		final int type = temp.getItem().getType1();
 		writeH(type);
@@ -47,12 +46,5 @@ public class TradeOtherAdd extends ServerBasePacket
 		writeH(temp.getEnchantLevel());
 		writeH(0);
 		writeH(0);
-		return getBytes();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__31_TRADEOTHERADD;
 	}
 }

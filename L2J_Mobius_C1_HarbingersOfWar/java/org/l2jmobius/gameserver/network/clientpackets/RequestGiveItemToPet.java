@@ -25,8 +25,6 @@ import org.l2jmobius.gameserver.network.serverpackets.PetItemList;
 
 public class RequestGiveItemToPet extends ClientBasePacket
 {
-	private static final String REQUESTGETITEMFROMPET__C__8C = "[C] 8C RequestGetItemFromPet";
-	
 	public RequestGiveItemToPet(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
@@ -55,11 +53,5 @@ public class RequestGiveItemToPet extends ClientBasePacket
 			client.getActiveChar().sendPacket(petiu);
 			client.getActiveChar().sendPacket(playerUI);
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return REQUESTGETITEMFROMPET__C__8C;
 	}
 }

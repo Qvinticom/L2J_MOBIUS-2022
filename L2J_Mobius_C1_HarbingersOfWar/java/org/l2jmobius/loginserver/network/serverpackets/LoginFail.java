@@ -26,15 +26,17 @@ public class LoginFail extends ServerBasePacket
 	public static int REASON_PASS_WRONG = 2;
 	public static int REASON_SYSTEM_ERROR = 1;
 	
+	private final int _reason;
+	
 	public LoginFail(int reason)
 	{
-		writeC(1);
-		writeD(reason);
+		_reason = reason;
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		return getBytes();
+		writeC(0x01);
+		writeD(_reason);
 	}
 }

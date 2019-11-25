@@ -25,8 +25,6 @@ import org.l2jmobius.gameserver.network.serverpackets.RestartResponse;
 
 public class RequestRestart extends ClientBasePacket
 {
-	private static final String _C__46_REQUESTRESTART = "[C] 46 RequestRestart";
-	
 	public RequestRestart(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
@@ -53,11 +51,5 @@ public class RequestRestart extends ClientBasePacket
 			player.deleteMe();
 			client.setActiveChar(null);
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__46_REQUESTRESTART;
 	}
 }

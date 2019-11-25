@@ -21,7 +21,6 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 public class StopRotation extends ServerBasePacket
 {
-	private static final String _S__78_STOPROTATION = "[S] 78 StopRotation";
 	private final PlayerInstance _char;
 	private final int _degree;
 	
@@ -32,17 +31,10 @@ public class StopRotation extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		writeC(120);
+		writeC(0x78);
 		writeD(_char.getObjectId());
 		writeD(_degree);
-		return getBytes();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__78_STOPROTATION;
 	}
 }

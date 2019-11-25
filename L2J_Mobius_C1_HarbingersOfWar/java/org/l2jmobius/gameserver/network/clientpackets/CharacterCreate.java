@@ -38,8 +38,6 @@ import org.l2jmobius.gameserver.templates.CharTemplate;
 
 public class CharacterCreate extends ClientBasePacket
 {
-	private static final String _C__0B_CHARACTERCREATE = "[C] 0B CharacterCreate";
-	
 	public CharacterCreate(byte[] decrypt, ClientThread client) throws IOException
 	{
 		super(decrypt);
@@ -57,6 +55,7 @@ public class CharacterCreate extends ClientBasePacket
 		newChar.setHairStyle(readD());
 		newChar.setHairColor(readD());
 		newChar.setFace(readD());
+		
 		if (CharNameTable.getInstance().doesCharNameExist(newChar.getName()))
 		{
 			final CharCreateFail ccf = new CharCreateFail(CharCreateFail.REASON_NAME_ALREADY_EXISTS);
@@ -159,11 +158,5 @@ public class CharacterCreate extends ClientBasePacket
 		client.saveCharToDisk(newChar);
 		final CharSelectInfo cl = new CharSelectInfo(client.getLoginName(), client.getSessionId());
 		client.getConnection().sendPacket(cl);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__0B_CHARACTERCREATE;
 	}
 }

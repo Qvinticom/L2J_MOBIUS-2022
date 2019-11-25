@@ -35,8 +35,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class RequestAquireSkill extends ClientBasePacket
 {
-	private static final String _C__6C_REQUESTAQUIRESKILL = "[C] 6C RequestAquireSkill";
-	
 	public RequestAquireSkill(byte[] rawPacket, ClientThread client)
 	{
 		super(rawPacket);
@@ -111,11 +109,5 @@ public class RequestAquireSkill extends ClientBasePacket
 			asl.addSkill(skillLearn.getId(), skillLearn.getLevel(), skillLearn.getLevel(), skillLearn.getSpCost(), 0);
 		}
 		player.sendPacket(asl);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__6C_REQUESTAQUIRESKILL;
 	}
 }

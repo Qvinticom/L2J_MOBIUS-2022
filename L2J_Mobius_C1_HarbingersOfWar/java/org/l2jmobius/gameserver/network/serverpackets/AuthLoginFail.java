@@ -19,7 +19,6 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 public class AuthLoginFail extends ServerBasePacket
 {
-	private static final String _S__12_AUTHLOGINFAIL = "[S] 12 AuthLoginFail";
 	public static int NO_TEXT = 0;
 	public static int SYSTEM_ERROR_LOGIN_LATER = 1;
 	public static int PASSWORD_DOES_NOT_MATCH_THIS_ACCOUNT = 2;
@@ -39,16 +38,9 @@ public class AuthLoginFail extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		_bao.write(18);
+		writeC(0x12);
 		writeD(_reason);
-		return _bao.toByteArray();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__12_AUTHLOGINFAIL;
 	}
 }

@@ -19,18 +19,9 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 public class CharDeleteFail extends ServerBasePacket
 {
-	private static final String _S__34_CHARDELETEFAIL = "[S] 34 CharDeleteFail";
-	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		_bao.write(52);
-		return _bao.toByteArray();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__34_CHARDELETEFAIL;
+		writeC(0x34);
 	}
 }

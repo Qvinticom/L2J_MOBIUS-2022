@@ -26,7 +26,6 @@ import org.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 
 public class SendBypassBuildCmd extends ClientBasePacket
 {
-	private static final String _C__5B_SENDBYPASSBUILDCMD = "[C] 5b SendBypassBuildCmd";
 	public static final int GM_MESSAGE = 9;
 	public static final int ANNOUNCEMENT = 10;
 	
@@ -82,11 +81,5 @@ public class SendBypassBuildCmd extends ClientBasePacket
 				}
 			}
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__5B_SENDBYPASSBUILDCMD;
 	}
 }

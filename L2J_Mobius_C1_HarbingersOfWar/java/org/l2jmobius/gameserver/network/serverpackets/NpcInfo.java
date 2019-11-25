@@ -22,7 +22,6 @@ import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
 
 public class NpcInfo extends ServerBasePacket
 {
-	private static final String _S__22_NPCINFO = "[S] 22 NpcInfo";
 	private NpcInstance _cha;
 	private PetInstance _chaPet;
 	
@@ -37,11 +36,11 @@ public class NpcInfo extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
 		if (_chaPet == null)
 		{
-			writeC(34);
+			writeC(0x22);
 			writeD(_cha.getObjectId());
 			writeD(_cha.getNpcTemplate().getNpcId() + 1000000);
 			if (_cha.isAutoAttackable())
@@ -108,7 +107,7 @@ public class NpcInfo extends ServerBasePacket
 		}
 		else
 		{
-			writeC(34);
+			writeC(0x22);
 			writeD(_chaPet.getObjectId());
 			writeD(_chaPet.getNpcId() + 1000000);
 			if (_chaPet.getKarma() > 0)
@@ -180,12 +179,5 @@ public class NpcInfo extends ServerBasePacket
 			writeD(0);
 			writeD(0);
 		}
-		return getBytes();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__22_NPCINFO;
 	}
 }

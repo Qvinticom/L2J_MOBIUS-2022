@@ -21,7 +21,6 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 public class PartySmallWindowDelete extends ServerBasePacket
 {
-	private static final String _S__66_PARTYSMALLWINDOWDELETE = "[S] 66 PartySmallWindowDelete";
 	private final PlayerInstance _member;
 	
 	public PartySmallWindowDelete(PlayerInstance member)
@@ -30,17 +29,10 @@ public class PartySmallWindowDelete extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		writeC(102);
+		writeC(0x66);
 		writeD(_member.getObjectId());
 		writeS(_member.getName());
-		return getBytes();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__66_PARTYSMALLWINDOWDELETE;
 	}
 }

@@ -29,8 +29,6 @@ import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 
 public class RequestUnEquipItem extends ClientBasePacket
 {
-	private static final String _C__11_REQUESTUNEQUIPITEM = "[C] 11 RequestUnequipItem";
-	
 	public RequestUnEquipItem(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
@@ -58,11 +56,5 @@ public class RequestUnEquipItem extends ClientBasePacket
 			sm.addItemName(unequiped.stream().findFirst().get().getItemId());
 			activeChar.sendPacket(sm);
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__11_REQUESTUNEQUIPITEM;
 	}
 }

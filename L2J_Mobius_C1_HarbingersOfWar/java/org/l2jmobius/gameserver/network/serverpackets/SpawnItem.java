@@ -21,7 +21,6 @@ import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 
 public class SpawnItem extends ServerBasePacket
 {
-	private static final String _S__15_SPAWNITEM = "[S] 15 SpawnItem";
 	private final ItemInstance _item;
 	
 	public SpawnItem(ItemInstance item)
@@ -30,9 +29,9 @@ public class SpawnItem extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		writeC(21);
+		writeC(0x15);
 		writeD(_item.getObjectId());
 		writeD(_item.getItemId());
 		writeD(_item.getX());
@@ -47,12 +46,5 @@ public class SpawnItem extends ServerBasePacket
 			writeD(0);
 		}
 		writeD(_item.getCount());
-		return _bao.toByteArray();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__15_SPAWNITEM;
 	}
 }

@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.network.serverpackets.StopRotation;
 
 public class StopMove extends ClientBasePacket
 {
-	private static final String _C__36_STOPMOVE = "[C] 36 StopMove";
-	
 	public StopMove(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
@@ -45,11 +43,5 @@ public class StopMove extends ClientBasePacket
 		final StopRotation sr = new StopRotation(client.getActiveChar(), heading);
 		client.getActiveChar().sendPacket(sr);
 		client.getActiveChar().broadcastPacket(sr);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__36_STOPMOVE;
 	}
 }

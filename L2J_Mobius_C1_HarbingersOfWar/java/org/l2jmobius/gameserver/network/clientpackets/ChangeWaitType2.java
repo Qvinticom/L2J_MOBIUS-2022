@@ -22,8 +22,6 @@ import org.l2jmobius.gameserver.network.serverpackets.ChangeWaitType;
 
 public class ChangeWaitType2 extends ClientBasePacket
 {
-	private static final String _C__1D_CHANGEWAITTYPE2 = "[C] 1D ChangeWaitType2";
-	
 	public ChangeWaitType2(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
@@ -32,11 +30,5 @@ public class ChangeWaitType2 extends ClientBasePacket
 		client.getActiveChar().setWaitType(type);
 		client.getActiveChar().sendPacket(cwt);
 		client.getActiveChar().broadcastPacket(cwt);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__1D_CHANGEWAITTYPE2;
 	}
 }

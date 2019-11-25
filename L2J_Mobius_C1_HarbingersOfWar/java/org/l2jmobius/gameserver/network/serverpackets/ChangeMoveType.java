@@ -21,9 +21,9 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 
 public class ChangeMoveType extends ServerBasePacket
 {
-	private static final String _S__3E_CHANGEMOVETYPE = "[S] 3E ChangeMoveType";
 	public static int WALK = 0;
 	public static int RUN = 1;
+	
 	private final Creature _cha;
 	private final int _moveType;
 	
@@ -34,17 +34,10 @@ public class ChangeMoveType extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		_bao.write(62);
+		writeC(0x3E);
 		writeD(_cha.getObjectId());
 		writeD(_moveType);
-		return _bao.toByteArray();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__3E_CHANGEMOVETYPE;
 	}
 }

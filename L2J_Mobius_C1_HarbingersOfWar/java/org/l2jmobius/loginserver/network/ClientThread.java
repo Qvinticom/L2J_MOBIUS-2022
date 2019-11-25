@@ -118,7 +118,7 @@ public class ClientThread extends Thread
 				final int packetType = decrypt[0] & 255;
 				switch (packetType)
 				{
-					case 0:
+					case 0x00:
 					{
 						final RequestAuthLogin ral = new RequestAuthLogin(decrypt);
 						account = ral.getUser().toLowerCase();
@@ -160,14 +160,14 @@ public class ClientThread extends Thread
 						sendPacket(lok);
 						break;
 					}
-					case 2:
+					case 0x02:
 					{
 						// RequestServerLogin rsl = new RequestServerLogin(decrypt);
 						final PlayOk po = new PlayOk(sessionKey);
 						sendPacket(po);
 						break;
 					}
-					case 5:
+					case 0x05:
 					{
 						// RequestServerList rsl = new RequestServerList(decrypt);
 						final ServerList sl = new ServerList();
@@ -225,9 +225,10 @@ public class ClientThread extends Thread
 		}
 	}
 	
-	private void sendPacket(ServerBasePacket sl) throws IOException
+	private void sendPacket(ServerBasePacket packet) throws IOException
 	{
-		byte[] data = sl.getContent();
+		packet.writeImpl();
+		byte[] data = packet.getBytes();
 		_crypt.checksum(data);
 		data = _crypt.crypt(data);
 		final int len = data.length + 2;

@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SkillList;
 
 public class RequestSkillList extends ClientBasePacket
 {
-	private static final String _C__3F_REQUESTSKILLLIST = "[C] 3F RequestSkillList";
-	
 	public RequestSkillList(byte[] rawPacket, ClientThread client)
 	{
 		super(rawPacket);
@@ -36,11 +34,5 @@ public class RequestSkillList extends ClientBasePacket
 			response.addSkill(skill.getId(), skill.getLevel(), skill.isPassive());
 		}
 		activeChar.sendPacket(response);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__3F_REQUESTSKILLLIST;
 	}
 }

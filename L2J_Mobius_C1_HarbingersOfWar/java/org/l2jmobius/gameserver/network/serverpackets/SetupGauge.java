@@ -19,7 +19,6 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 public class SetupGauge extends ServerBasePacket
 {
-	private static final String _S__85_SETUPGAUGE = "[S] 85 SetupGauge";
 	public static final int BLUE = 0;
 	public static final int RED = 1;
 	public static final int CYAN = 2;
@@ -33,17 +32,10 @@ public class SetupGauge extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		writeC(133);
+		writeC(0x85);
 		writeD(_dat1);
 		writeD(_time);
-		return getBytes();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__85_SETUPGAUGE;
 	}
 }

@@ -22,7 +22,6 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 public class PledgeShowInfoUpdate extends ServerBasePacket
 {
-	private static final String _S__A1_PLEDGESHOWINFOUPDATE = "[S] a1 PledgeShowInfoUpdate";
 	private final Clan _clan;
 	private final PlayerInstance _activeChar;
 	
@@ -33,9 +32,9 @@ public class PledgeShowInfoUpdate extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		writeC(161);
+		writeC(0xA1);
 		writeD(_clan.getClanId());
 		writeS("");
 		writeS("");
@@ -49,12 +48,5 @@ public class PledgeShowInfoUpdate extends ServerBasePacket
 		writeD(0);
 		writeD(0);
 		writeS("");
-		return getBytes();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__A1_PLEDGESHOWINFOUPDATE;
 	}
 }

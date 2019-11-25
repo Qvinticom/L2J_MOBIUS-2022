@@ -19,7 +19,6 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 public class JoinParty extends ServerBasePacket
 {
-	private static final String _S__4C_JOINPARTY = "[S] 4C JoinParty";
 	private final int _response;
 	
 	public JoinParty(int response)
@@ -28,16 +27,9 @@ public class JoinParty extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		_bao.write(76);
+		writeC(0x4C);
 		writeD(_response);
-		return _bao.toByteArray();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__4C_JOINPARTY;
 	}
 }

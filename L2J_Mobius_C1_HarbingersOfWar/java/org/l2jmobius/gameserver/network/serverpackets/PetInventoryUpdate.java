@@ -24,9 +24,7 @@ import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 
 public class PetInventoryUpdate extends ServerBasePacket
 {
-	private static final String _S__37_INVENTORYUPDATE = "[S] 37 InventoryUpdate";
 	private final List<ItemInstance> _items;
-	// private boolean _showWindow;
 	
 	public PetInventoryUpdate()
 	{
@@ -57,9 +55,9 @@ public class PetInventoryUpdate extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		writeC(204);
+		writeC(0xCC);
 		final int count = _items.size();
 		writeH(count);
 		for (int i = 0; i < count; ++i)
@@ -84,12 +82,5 @@ public class PetInventoryUpdate extends ServerBasePacket
 			writeH(temp.getEnchantLevel());
 			writeH(0);
 		}
-		return getBytes();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__37_INVENTORYUPDATE;
 	}
 }

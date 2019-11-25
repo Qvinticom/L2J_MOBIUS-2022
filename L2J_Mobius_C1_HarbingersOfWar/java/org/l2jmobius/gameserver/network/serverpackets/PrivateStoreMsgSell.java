@@ -21,7 +21,6 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 public class PrivateStoreMsgSell extends ServerBasePacket
 {
-	private static final String _S__B5_PRIVATESTOREMSGSELL = "[S] B5 PrivateStoreMsgSell";
 	private final PlayerInstance _cha;
 	
 	public PrivateStoreMsgSell(PlayerInstance player)
@@ -30,17 +29,10 @@ public class PrivateStoreMsgSell extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		writeC(181);
+		writeC(0xB5);
 		writeD(_cha.getObjectId());
 		writeS(_cha.getTradeList().getSellStoreName());
-		return getBytes();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__B5_PRIVATESTOREMSGSELL;
 	}
 }

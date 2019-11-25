@@ -19,7 +19,6 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 public class SocialAction extends ServerBasePacket
 {
-	private static final String _S__3D_SOCIALACTION = "[S] 3D SocialAction";
 	private final int _playerId;
 	private final int _actionId;
 	
@@ -30,17 +29,10 @@ public class SocialAction extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		writeC(61);
+		writeC(0x3D);
 		writeD(_playerId);
 		writeD(_actionId);
-		return getBytes();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__3D_SOCIALACTION;
 	}
 }

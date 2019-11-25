@@ -18,6 +18,7 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import java.io.IOException;
+import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.network.ClientThread;
@@ -26,7 +27,7 @@ import org.l2jmobius.gameserver.network.serverpackets.KeyPacket;
 
 public class ProtocolVersion extends ClientBasePacket
 {
-	private static final String _C__00_PROTOCOLVERSION = "[C] 00 ProtocolVersion";
+	final static Logger _log = Logger.getLogger(ProtocolVersion.class.getName());
 	
 	public ProtocolVersion(byte[] rawPacket, ClientThread client) throws IOException
 	{
@@ -45,16 +46,8 @@ public class ProtocolVersion extends ClientBasePacket
 		else
 		{
 			final Connection con = client.getConnection();
-			final KeyPacket pk = new KeyPacket();
-			pk.setKey(con.getCryptKey());
-			con.sendPacket(pk);
+			con.sendPacket(new KeyPacket(con.getCryptKey()));
 			con.activateCryptKey();
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__00_PROTOCOLVERSION;
 	}
 }

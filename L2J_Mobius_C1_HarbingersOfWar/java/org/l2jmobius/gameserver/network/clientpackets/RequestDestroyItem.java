@@ -28,8 +28,6 @@ import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 
 public class RequestDestroyItem extends ClientBasePacket
 {
-	private static final String _C__59_REQUESTDESTROYITEM = "[C] 59 RequestDestroyItem";
-	
 	public RequestDestroyItem(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
@@ -79,11 +77,5 @@ public class RequestDestroyItem extends ClientBasePacket
 		activeChar.broadcastPacket(info);
 		final World world = World.getInstance();
 		world.removeObject(removedItem);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__59_REQUESTDESTROYITEM;
 	}
 }

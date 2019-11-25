@@ -24,22 +24,14 @@ import org.l2jmobius.gameserver.network.ClientThread;
 
 public class RequestPetGetItem extends ClientBasePacket
 {
-	private static final String _C__8f_REQUESTPETGETITEM = "[C] 8F RequestPetGetItem";
-	
 	public RequestPetGetItem(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
 		final int objectId = readD();
-		final World world = World.getInstance();
-		final ItemInstance item = (ItemInstance) world.findObject(objectId);
+		
+		final ItemInstance item = (ItemInstance) World.getInstance().findObject(objectId);
 		client.getActiveChar().getPet().setTarget(item);
 		client.getActiveChar().getPet().setCurrentState(CreatureState.PICKUP_ITEM);
 		client.getActiveChar().getPet().moveTo(item.getX(), item.getY(), item.getZ(), 0);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__8f_REQUESTPETGETITEM;
 	}
 }

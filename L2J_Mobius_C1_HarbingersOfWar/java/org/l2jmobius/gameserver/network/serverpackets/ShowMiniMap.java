@@ -19,7 +19,6 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 public class ShowMiniMap extends ServerBasePacket
 {
-	private static final String _S__b6_SHOWMINIMAP = "[S] B6 ShowMiniMap";
 	private final int _mapId;
 	
 	public ShowMiniMap(int mapId)
@@ -28,16 +27,9 @@ public class ShowMiniMap extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		writeC(182);
+		writeC(0xB6);
 		writeD(_mapId);
-		return getBytes();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__b6_SHOWMINIMAP;
 	}
 }

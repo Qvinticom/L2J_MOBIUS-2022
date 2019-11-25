@@ -22,19 +22,11 @@ import org.l2jmobius.gameserver.network.ClientThread;
 
 public class RequestShowBoard extends ClientBasePacket
 {
-	private static final String _C__57_REQUESTSHOWBOARD = "[C] 57 RequestShowBoard";
-	
 	public RequestShowBoard(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
 		@SuppressWarnings("unused")
 		final int unknown = readD();
 		CommunityBoardManager.getInstance().handleCommands(client, "bbs_default");
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__57_REQUESTSHOWBOARD;
 	}
 }

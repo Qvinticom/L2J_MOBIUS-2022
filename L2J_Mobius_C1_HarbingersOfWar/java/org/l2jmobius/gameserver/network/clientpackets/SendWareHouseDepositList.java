@@ -26,8 +26,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class SendWareHouseDepositList extends ClientBasePacket
 {
-	private static final String _C__31_SENDWAREHOUSEDEPOSITLIST = "[C] 31 SendWareHouseDepositList";
-	
 	public SendWareHouseDepositList(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
@@ -64,11 +62,5 @@ public class SendWareHouseDepositList extends ClientBasePacket
 		}
 		activeChar.reduceAdena(neededMoney);
 		activeChar.sendPacket(new ItemList(activeChar, false));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__31_SENDWAREHOUSEDEPOSITLIST;
 	}
 }

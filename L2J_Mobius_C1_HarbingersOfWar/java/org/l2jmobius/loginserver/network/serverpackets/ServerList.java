@@ -32,9 +32,9 @@ public class ServerList extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		writeC(4);
+		writeC(0x04);
 		writeC(_servers.size());
 		writeC(0);
 		for (int i = 0; i < _servers.size(); ++i)
@@ -78,7 +78,6 @@ public class ServerList extends ServerBasePacket
 			}
 			writeD(0);
 		}
-		return getBytes();
 	}
 	
 	class ServerData

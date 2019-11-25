@@ -21,7 +21,6 @@ import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 
 public class GetItem extends ServerBasePacket
 {
-	private static final String _S__17_GETITEM = "[S] 17 GetItem";
 	private final ItemInstance _item;
 	private final int _playerId;
 	
@@ -32,20 +31,13 @@ public class GetItem extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		writeC(23);
+		writeC(0x17);
 		writeD(_playerId);
 		writeD(_item.getObjectId());
 		writeD(_item.getX());
 		writeD(_item.getY());
 		writeD(_item.getZ());
-		return _bao.toByteArray();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__17_GETITEM;
 	}
 }

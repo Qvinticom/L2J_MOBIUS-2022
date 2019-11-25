@@ -25,7 +25,6 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 public class TradeStart extends ServerBasePacket
 {
-	private static final String _S__2E_TRADESTART = "[S] 2E TradeStart";
 	private final PlayerInstance _me;
 	private final List<ItemInstance> _tradelist = new ArrayList<>();
 	
@@ -35,9 +34,9 @@ public class TradeStart extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		writeC(46);
+		writeC(0x2E);
 		writeD(_me.getTransactionRequester().getObjectId());
 		int count = _me.getInventory().getSize();
 		for (ItemInstance item : _me.getInventory().getItems())
@@ -65,12 +64,5 @@ public class TradeStart extends ServerBasePacket
 			writeH(0);
 			writeH(0);
 		}
-		return getBytes();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__2E_TRADESTART;
 	}
 }

@@ -21,7 +21,6 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 
 public class StopMoveWithLocation extends ServerBasePacket
 {
-	private static final String _S__5F_STOPMOVEWITHLOCATION = "[S] 5F StopMoveWithLocation";
 	private final Creature _char;
 	
 	public StopMoveWithLocation(Creature player)
@@ -30,19 +29,12 @@ public class StopMoveWithLocation extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		writeC(95);
+		writeC(0x5F);
 		writeD(_char.getObjectId());
 		writeD(_char.getX());
 		writeD(_char.getY());
 		writeD(_char.getZ());
-		return getBytes();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__5F_STOPMOVEWITHLOCATION;
 	}
 }

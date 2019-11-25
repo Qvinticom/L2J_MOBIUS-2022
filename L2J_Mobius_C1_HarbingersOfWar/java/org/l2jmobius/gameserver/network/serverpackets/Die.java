@@ -21,9 +21,7 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 
 public class Die extends ServerBasePacket
 {
-	private static final String _S__0B_DIE = "[S] 0B Die";
 	private final Creature _cha;
-	// private int _sessionId;
 	
 	public Die(Creature cha)
 	{
@@ -31,9 +29,9 @@ public class Die extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		_bao.write(11);
+		writeC(0x0B);
 		writeD(_cha.getObjectId());
 		writeD(1);
 		writeD(1);
@@ -41,12 +39,5 @@ public class Die extends ServerBasePacket
 		writeD(1);
 		writeD(0);
 		writeD(1);
-		return _bao.toByteArray();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__0B_DIE;
 	}
 }

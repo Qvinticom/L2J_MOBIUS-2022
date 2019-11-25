@@ -22,7 +22,6 @@ import java.io.FileInputStream;
 
 public class AllyCrest extends ServerBasePacket
 {
-	private static final String _S__C7_ALLYCREST = "[S] C7 AllyCrest";
 	private final File _crestFile;
 	private final int _crestId;
 	
@@ -33,9 +32,9 @@ public class AllyCrest extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		writeC(199);
+		writeC(0xC7);
 		writeD(_crestId);
 		try
 		{
@@ -54,12 +53,5 @@ public class AllyCrest extends ServerBasePacket
 		{
 			e.printStackTrace();
 		}
-		return getBytes();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__C7_ALLYCREST;
 	}
 }

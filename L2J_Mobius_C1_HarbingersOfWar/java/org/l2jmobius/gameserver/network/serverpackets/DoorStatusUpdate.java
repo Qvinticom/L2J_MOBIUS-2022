@@ -21,7 +21,6 @@ import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
 
 public class DoorStatusUpdate extends ServerBasePacket
 {
-	private static final String _S__61_DOORSTATUSUPDATE = "[S] 61 DoorStatusUpdate";
 	private final DoorInstance _door;
 	
 	public DoorStatusUpdate(DoorInstance door)
@@ -30,20 +29,13 @@ public class DoorStatusUpdate extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		writeC(97);
+		writeC(0x61);
 		writeD(_door.getObjectId());
 		writeD(_door.getOpen());
 		writeD(_door.getDamage());
 		writeD(_door.getEnemy());
 		writeD(0);
-		return _bao.toByteArray();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__61_DOORSTATUSUPDATE;
 	}
 }

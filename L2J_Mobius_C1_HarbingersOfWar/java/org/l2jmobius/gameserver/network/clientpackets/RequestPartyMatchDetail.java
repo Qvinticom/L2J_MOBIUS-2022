@@ -26,8 +26,6 @@ import org.l2jmobius.gameserver.network.serverpackets.PartyMatchDetail;
 
 public class RequestPartyMatchDetail extends ClientBasePacket
 {
-	private static final String _C__71_REQUESTPARTYMATCHDETAIL = "[C] 71 RequestPartyMatchDetail";
-	
 	public RequestPartyMatchDetail(byte[] decrypt, ClientThread client) throws IOException
 	{
 		super(decrypt);
@@ -35,11 +33,5 @@ public class RequestPartyMatchDetail extends ClientBasePacket
 		final PlayerInstance player = (PlayerInstance) World.getInstance().findObject(objectId);
 		final PartyMatchDetail details = new PartyMatchDetail(player);
 		client.getConnection().sendPacket(details);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__71_REQUESTPARTYMATCHDETAIL;
 	}
 }

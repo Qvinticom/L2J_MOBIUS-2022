@@ -24,7 +24,6 @@ import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 
 public class BuyList extends ServerBasePacket
 {
-	private static final String _S__1D_BUYLIST = "[S] 1D BuyList";
 	private final TradeList _list;
 	private final int _money;
 	
@@ -35,9 +34,9 @@ public class BuyList extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		writeC(29);
+		writeC(0x1D);
 		writeD(_money);
 		writeD(_list.getListId());
 		final int count = _list.getItems().size();
@@ -62,12 +61,5 @@ public class BuyList extends ServerBasePacket
 			}
 			writeD(temp.getPrice());
 		}
-		return getBytes();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__1D_BUYLIST;
 	}
 }

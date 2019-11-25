@@ -22,7 +22,6 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 public class PrivateBuyListSell extends ServerBasePacket
 {
-	private static final String _S__B4_PRIVATEBUYLISTSELL = "[S] B4 PrivateBuyListSell";
 	private final PlayerInstance _buyer;
 	private final PlayerInstance _seller;
 	
@@ -33,9 +32,9 @@ public class PrivateBuyListSell extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		writeC(180);
+		writeC(0xB4);
 		writeD(_seller.getObjectId());
 		writeD(_buyer.getAdena());
 		final int count = _seller.getSellList().size();
@@ -54,12 +53,5 @@ public class PrivateBuyListSell extends ServerBasePacket
 			writeD(temp2.getOwnersPrice());
 			writeD(temp2.getStorePrice());
 		}
-		return getBytes();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__B4_PRIVATEBUYLISTSELL;
 	}
 }

@@ -25,8 +25,6 @@ import org.l2jmobius.gameserver.network.serverpackets.PartyMatchList;
 
 public class RequestPartyMatchList extends ClientBasePacket
 {
-	private static final String _C__70_REQUESTPARTYMATCHLIST = "[C] 70 RequestPartyMatchList";
-	
 	public RequestPartyMatchList(byte[] decrypt, ClientThread client) throws IOException
 	{
 		super(decrypt);
@@ -44,11 +42,5 @@ public class RequestPartyMatchList extends ClientBasePacket
 		// {
 		// _log.fine("Party match status: " + status);
 		// }
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__70_REQUESTPARTYMATCHLIST;
 	}
 }

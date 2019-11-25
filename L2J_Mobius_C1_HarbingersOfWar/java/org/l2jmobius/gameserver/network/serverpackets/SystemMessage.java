@@ -21,8 +21,6 @@ import java.util.Vector;
 
 public class SystemMessage extends ServerBasePacket
 {
-	private static final String _S__7A_SYSTEMMESSAGE = "[S] 7A SystemMessage";
-	
 	public static final int S1_IS_NOT_ONLINE = 3;
 	public static final int CANNOT_INVITE_YOURSELF = 4;
 	public static final int S1_WORKING_WITH_ANOTHER_CLAN = 10;
@@ -162,44 +160,35 @@ public class SystemMessage extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		writeC(122);
+		writeC(0x7A);
 		writeD(_messageId);
 		writeD(_types.size());
-		block5: for (int i = 0; i < _types.size(); ++i)
+		for (int i = 0; i < _types.size(); ++i)
 		{
 			final int t = _types.get(i);
 			writeD(t);
 			switch (t)
 			{
-				case 0:
+				case TYPE_TEXT:
 				{
 					writeS("" + _values.get(i));
-					continue block5;
+					continue;
 				}
-				case 1:
-				case 2:
-				case 3:
+				case TYPE_NUMBER:
+				case TYPE_NPC_NAME:
+				case TYPE_ITEM_NAME:
 				{
-					final int t1 = (Integer) _values.get(i);
-					writeD(t1);
-					continue block5;
+					writeD((Integer) _values.get(i));
+					continue;
 				}
-				case 4:
+				case TYPE_SKILL_NAME:
 				{
-					final int t1 = (Integer) _values.get(i);
-					writeD(t1);
+					writeD((Integer) _values.get(i));
 					writeD(1);
 				}
 			}
 		}
-		return getBytes();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__7A_SYSTEMMESSAGE;
 	}
 }

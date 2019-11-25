@@ -28,8 +28,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class SendWareHouseWithDrawList extends ClientBasePacket
 {
-	private static final String _C__32_SENDWAREHOUSEWITHDRAWLIST = "[C] 32 SendWareHouseWithDrawList";
-	
 	public SendWareHouseWithDrawList(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
@@ -69,11 +67,5 @@ public class SendWareHouseWithDrawList extends ClientBasePacket
 			final SystemMessage sm = new SystemMessage(SystemMessage.WEIGHT_LIMIT_EXCEEDED);
 			activeChar.sendPacket(sm);
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__32_SENDWAREHOUSEWITHDRAWLIST;
 	}
 }

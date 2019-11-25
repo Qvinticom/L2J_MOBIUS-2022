@@ -21,7 +21,6 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 public class ShowBoard extends ServerBasePacket
 {
-	private static final String _S__86_SHOWBOARD = "[S] 86 ShowBoard";
 	private final PlayerInstance _player;
 	private final String _htmlCode;
 	
@@ -32,9 +31,9 @@ public class ShowBoard extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		writeC(134);
+		writeC(0x86);
 		writeS("");
 		writeS("");
 		writeS("");
@@ -47,12 +46,5 @@ public class ShowBoard extends ServerBasePacket
 		}
 		writeS(clan);
 		writeS(_htmlCode);
-		return getBytes();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__86_SHOWBOARD;
 	}
 }

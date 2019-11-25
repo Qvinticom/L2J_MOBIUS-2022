@@ -21,7 +21,6 @@ import java.util.Vector;
 
 public class AquireSkillList extends ServerBasePacket
 {
-	private static final String _S__A3_AQUIRESKILLLIST = "[S] A3 AquireSkillList";
 	private final Vector<Skill> _skills = new Vector<>();
 	
 	public void addSkill(int id, int nextLevel, int maxLevel, int spCost, int requirements)
@@ -30,9 +29,9 @@ public class AquireSkillList extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		writeC(163);
+		writeC(0xA3);
 		writeD(_skills.size());
 		for (int i = 0; i < _skills.size(); ++i)
 		{
@@ -43,13 +42,6 @@ public class AquireSkillList extends ServerBasePacket
 			writeD(temp.spCost);
 			writeD(temp.requirements);
 		}
-		return getBytes();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__A3_AQUIRESKILLLIST;
 	}
 	
 	class Skill
@@ -69,5 +61,4 @@ public class AquireSkillList extends ServerBasePacket
 			this.requirements = requirements;
 		}
 	}
-	
 }

@@ -18,18 +18,10 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import java.io.ByteArrayOutputStream;
-import java.io.IOException;
 
 public abstract class ServerBasePacket
 {
-	// private static Logger _log = Logger.getLogger(ServerBasePacket.class.getName());
-	
-	ByteArrayOutputStream _bao = new ByteArrayOutputStream();
-	
-	protected ServerBasePacket()
-	{
-		// _log.finest(getType());
-	}
+	private final ByteArrayOutputStream _bao = new ByteArrayOutputStream();
 	
 	protected void writeD(int value)
 	{
@@ -85,7 +77,5 @@ public abstract class ServerBasePacket
 		return _bao.toByteArray();
 	}
 	
-	public abstract byte[] getContent() throws IOException;
-	
-	public abstract String getType();
+	public abstract void writeImpl();
 }

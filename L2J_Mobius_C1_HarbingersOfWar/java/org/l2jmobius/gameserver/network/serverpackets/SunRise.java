@@ -19,18 +19,9 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 public class SunRise extends ServerBasePacket
 {
-	private static final String _S__28_SUNRISE = "[S] 28 SunRise";
-	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		_bao.write(40);
-		return _bao.toByteArray();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__28_SUNRISE;
+		writeC(0x28);
 	}
 }

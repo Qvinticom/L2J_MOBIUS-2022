@@ -19,7 +19,6 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 public class TargetSelected extends ServerBasePacket
 {
-	private static final String _S__39_TARGETSELECTED = "[S] 39 TargetSelected";
 	private final int _objectId;
 	private final int _targetId;
 	private final int _x;
@@ -36,20 +35,13 @@ public class TargetSelected extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		writeC(57);
+		writeC(0x39);
 		writeD(_objectId);
 		writeD(_targetId);
 		writeD(_x);
 		writeD(_y);
 		writeD(_z);
-		return getBytes();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__39_TARGETSELECTED;
 	}
 }

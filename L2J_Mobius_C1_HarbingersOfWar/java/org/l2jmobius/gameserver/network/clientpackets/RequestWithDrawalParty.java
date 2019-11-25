@@ -18,23 +18,18 @@
 package org.l2jmobius.gameserver.network.clientpackets;
 
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.network.ClientThread;
 
 public class RequestWithDrawalParty extends ClientBasePacket
 {
-	private static final String _C__2B_REQUESTWITHDRAWALPARTY = "[C] 2B RequestWithDrawalParty";
-	
-	public RequestWithDrawalParty(byte[] decrypt, PlayerInstance player)
+	public RequestWithDrawalParty(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
-		if (player.isInParty())
+		
+		final PlayerInstance player = client.getActiveChar();
+		if ((player != null) && player.isInParty())
 		{
 			player.getParty().oustPartyMember(player);
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__2B_REQUESTWITHDRAWALPARTY;
 	}
 }

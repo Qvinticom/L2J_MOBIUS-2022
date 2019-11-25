@@ -21,7 +21,6 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 
 public class SetToLocation extends ServerBasePacket
 {
-	private static final String _S__76_SETTOLOCATION = "[S] 76 SetToLocation";
 	private final Creature _cha;
 	
 	public SetToLocation(Creature cha)
@@ -30,20 +29,13 @@ public class SetToLocation extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		_bao.write(118);
+		writeC(0x76);
 		writeD(_cha.getObjectId());
 		writeD(_cha.getX());
 		writeD(_cha.getY());
 		writeD(_cha.getZ());
 		writeD(_cha.getHeading());
-		return _bao.toByteArray();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__76_SETTOLOCATION;
 	}
 }

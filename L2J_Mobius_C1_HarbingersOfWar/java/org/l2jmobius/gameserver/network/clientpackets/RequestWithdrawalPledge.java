@@ -28,8 +28,6 @@ import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 
 public class RequestWithdrawalPledge extends ClientBasePacket
 {
-	private static final String _C__26_REQUESTWITHDRAWALPLEDGE = "[C] 26 RequestWithdrawalPledge";
-	
 	public RequestWithdrawalPledge(byte[] rawPacket, ClientThread client)
 	{
 		super(rawPacket);
@@ -51,11 +49,5 @@ public class RequestWithdrawalPledge extends ClientBasePacket
 		player.sendPacket(new UserInfo(player));
 		player.broadcastPacket(new CharInfo(player));
 		player.sendPacket(new PledgeShowMemberListDeleteAll());
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__26_REQUESTWITHDRAWALPLEDGE;
 	}
 }

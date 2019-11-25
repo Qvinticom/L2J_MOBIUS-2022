@@ -19,7 +19,6 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 public class AskJoinParty extends ServerBasePacket
 {
-	private static final String _S__4B_ASKJOINPARTY_0X4B = "[S] 4B AskJoinParty 0x4b";
 	private final int _requestorId;
 	private final int _itemDistribution;
 	
@@ -30,17 +29,10 @@ public class AskJoinParty extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		_bao.write(75);
+		writeC(0x4B);
 		writeD(_requestorId);
 		writeD(_itemDistribution);
-		return _bao.toByteArray();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__4B_ASKJOINPARTY_0X4B;
 	}
 }

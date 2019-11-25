@@ -30,8 +30,6 @@ import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 
 public class SendPrivateStoreBuyList extends ClientBasePacket
 {
-	private static final String _C__79_SENDPRIVATESTOREBUYLIST = "[C] 79 SendPrivateStoreBuyList";
-	
 	public SendPrivateStoreBuyList(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
@@ -70,11 +68,5 @@ public class SendPrivateStoreBuyList extends ClientBasePacket
 			final SystemMessage msg = new SystemMessage(SystemMessage.YOU_NOT_ENOUGH_ADENA);
 			buyer.sendPacket(msg);
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__79_SENDPRIVATESTOREBUYLIST;
 	}
 }

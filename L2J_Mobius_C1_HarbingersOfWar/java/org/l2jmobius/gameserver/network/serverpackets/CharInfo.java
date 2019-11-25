@@ -22,7 +22,6 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 public class CharInfo extends ServerBasePacket
 {
-	private static final String _S__03_CHARINFO = "[S] 03 CharInfo";
 	private final PlayerInstance _cha;
 	
 	public CharInfo(PlayerInstance cha)
@@ -31,7 +30,7 @@ public class CharInfo extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
 		writeC(0x03);
 		writeD(_cha.getX());
@@ -103,12 +102,5 @@ public class CharInfo extends ServerBasePacket
 		writeC(0);
 		writeH(0);
 		writeC(0);
-		return _bao.toByteArray();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__03_CHARINFO;
 	}
 }

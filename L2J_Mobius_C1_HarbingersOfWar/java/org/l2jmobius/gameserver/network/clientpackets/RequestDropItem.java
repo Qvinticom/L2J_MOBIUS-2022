@@ -17,6 +17,8 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import java.util.logging.Logger;
+
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
@@ -29,7 +31,7 @@ import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 
 public class RequestDropItem extends ClientBasePacket
 {
-	private static final String _C__12_REQUESTDROPITEM = "[C] 12 RequestDropItem";
+	final static Logger _log = Logger.getLogger(RequestDropItem.class.getName());
 	
 	public RequestDropItem(byte[] decrypt, ClientThread client)
 	{
@@ -110,11 +112,5 @@ public class RequestDropItem extends ClientBasePacket
 			final SystemMessage msg = new SystemMessage(SystemMessage.NOTHING_HAPPENED);
 			activeChar.sendPacket(msg);
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__12_REQUESTDROPITEM;
 	}
 }

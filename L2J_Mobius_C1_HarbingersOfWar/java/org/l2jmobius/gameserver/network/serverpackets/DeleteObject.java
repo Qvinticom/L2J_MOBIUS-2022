@@ -21,7 +21,6 @@ import org.l2jmobius.gameserver.model.WorldObject;
 
 public class DeleteObject extends ServerBasePacket
 {
-	private static final String _S__1E_DELETEOBJECT = "[S] 1E DeleteObject";
 	private final int _objectId;
 	
 	public DeleteObject(WorldObject obj)
@@ -30,16 +29,9 @@ public class DeleteObject extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		writeC(30);
+		writeC(0x1E);
 		writeD(_objectId);
-		return _bao.toByteArray();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__1E_DELETEOBJECT;
 	}
 }

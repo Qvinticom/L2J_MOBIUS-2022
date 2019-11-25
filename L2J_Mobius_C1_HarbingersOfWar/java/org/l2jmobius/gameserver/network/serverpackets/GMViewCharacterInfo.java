@@ -21,9 +21,7 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 public class GMViewCharacterInfo extends ServerBasePacket
 {
-	private static final String _S__04_USERINFO = "[S] A8 GMViewCharacterInfo";
 	private final PlayerInstance _cha;
-	// private static int _test = 1;
 	
 	public GMViewCharacterInfo(PlayerInstance cha)
 	{
@@ -31,9 +29,9 @@ public class GMViewCharacterInfo extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		_bao.write(168);
+		writeC(0xA8);
 		writeD(_cha.getX());
 		writeD(_cha.getY());
 		writeD(_cha.getZ());
@@ -137,12 +135,5 @@ public class GMViewCharacterInfo extends ServerBasePacket
 		{
 			writeD(0);
 		}
-		return _bao.toByteArray();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__04_USERINFO;
 	}
 }

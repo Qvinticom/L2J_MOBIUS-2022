@@ -17,6 +17,8 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import java.util.logging.Logger;
+
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -26,7 +28,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class TradeRequest extends ClientBasePacket
 {
-	private static final String TRADEREQUEST__C__15 = "[C] 15 TradeRequest";
+	final static Logger _log = Logger.getLogger(TradeRequest.class.getName());
 	
 	public TradeRequest(byte[] decrypt, ClientThread client)
 	{
@@ -62,11 +64,5 @@ public class TradeRequest extends ClientBasePacket
 			player.sendPacket(sm);
 			_log.info("transaction already in progress.");
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return TRADEREQUEST__C__15;
 	}
 }

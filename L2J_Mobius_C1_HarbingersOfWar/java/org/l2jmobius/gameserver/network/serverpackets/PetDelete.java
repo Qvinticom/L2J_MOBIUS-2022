@@ -19,7 +19,6 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 public class PetDelete extends ServerBasePacket
 {
-	private static final String _S__CF_PETDELETE = "[S] CF PetDelete";
 	private final int _petId;
 	private final int _petnum;
 	
@@ -30,17 +29,10 @@ public class PetDelete extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		writeC(207);
+		writeC(0xCF);
 		writeD(_petId);
 		writeD(_petnum);
-		return getBytes();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__CF_PETDELETE;
 	}
 }

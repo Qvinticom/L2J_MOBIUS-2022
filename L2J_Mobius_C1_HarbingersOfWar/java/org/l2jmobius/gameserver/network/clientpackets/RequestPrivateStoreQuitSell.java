@@ -23,8 +23,6 @@ import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 
 public class RequestPrivateStoreQuitSell extends ClientBasePacket
 {
-	private static final String _C__76_REQUESTPRIVATESTOREQUITSELL = "[C] 76 RequestPrivateStoreQuitSell";
-	
 	public RequestPrivateStoreQuitSell(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
@@ -32,11 +30,5 @@ public class RequestPrivateStoreQuitSell extends ClientBasePacket
 		player.setPrivateStoreType(0);
 		player.sendPacket(new UserInfo(player));
 		player.broadcastPacket(new UserInfo(player));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__76_REQUESTPRIVATESTOREQUITSELL;
 	}
 }

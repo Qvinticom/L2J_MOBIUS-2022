@@ -19,7 +19,6 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 public class AskJoinPledge extends ServerBasePacket
 {
-	private static final String _S__44_ASKJOINPLEDGE = "[S] 44 AskJoinPledge";
 	private final int _requestorId;
 	private final String _pledgeName;
 	
@@ -30,17 +29,10 @@ public class AskJoinPledge extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		_bao.write(68);
+		writeC(0x44);
 		writeD(_requestorId);
 		writeS(_pledgeName);
-		return _bao.toByteArray();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__44_ASKJOINPLEDGE;
 	}
 }

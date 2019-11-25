@@ -22,7 +22,6 @@ import org.l2jmobius.gameserver.templates.Item;
 
 public class EquipUpdate extends ServerBasePacket
 {
-	private static final String _S__5E_EQUIPUPDATE = "[S] 5E EquipUpdate";
 	private final ItemInstance _item;
 	private final int _change;
 	
@@ -33,10 +32,10 @@ public class EquipUpdate extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
 		int bodypart = 0;
-		writeC(94);
+		writeC(0x5E);
 		writeD(_change);
 		writeD(_item.getObjectId());
 		switch (_item.getItem().getBodyPart())
@@ -112,12 +111,5 @@ public class EquipUpdate extends ServerBasePacket
 			}
 		}
 		writeD(bodypart);
-		return _bao.toByteArray();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__5E_EQUIPUPDATE;
 	}
 }

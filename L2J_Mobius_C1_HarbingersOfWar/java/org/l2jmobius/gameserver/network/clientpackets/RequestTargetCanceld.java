@@ -23,8 +23,6 @@ import org.l2jmobius.gameserver.network.serverpackets.TargetUnselected;
 
 public class RequestTargetCanceld extends ClientBasePacket
 {
-	private static final String _C__37_REQUESTTARGETCANCELD = "[C] 37 RequestTargetCanceld";
-	
 	public RequestTargetCanceld(byte[] rawPacket, ClientThread client)
 	{
 		super(rawPacket);
@@ -34,11 +32,5 @@ public class RequestTargetCanceld extends ClientBasePacket
 			activeChar.sendPacket(new TargetUnselected(activeChar));
 			activeChar.setTarget(null);
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__37_REQUESTTARGETCANCELD;
 	}
 }

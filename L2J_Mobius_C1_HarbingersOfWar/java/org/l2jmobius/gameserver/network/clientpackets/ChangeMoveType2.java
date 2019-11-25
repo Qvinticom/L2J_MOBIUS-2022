@@ -22,21 +22,14 @@ import org.l2jmobius.gameserver.network.serverpackets.ChangeMoveType;
 
 public class ChangeMoveType2 extends ClientBasePacket
 {
-	private static final String _C__1C_CHANGEMOVETYPE2 = "[C] 1C ChangeMoveType2";
-	
 	public ChangeMoveType2(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
 		final int type = readD();
+		
 		final ChangeMoveType cmt = new ChangeMoveType(client.getActiveChar(), type);
 		client.getActiveChar().setMoveType(type);
 		client.getActiveChar().sendPacket(cmt);
 		client.getActiveChar().broadcastPacket(cmt);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__1C_CHANGEMOVETYPE2;
 	}
 }

@@ -19,7 +19,6 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 public class AutoAttackStop extends ServerBasePacket
 {
-	private static final String _S__3C_AUTOATTACKSTOP = "[S] 3C AutoAttackStop";
 	private final int _targetId;
 	
 	public AutoAttackStop(int targetId)
@@ -28,16 +27,9 @@ public class AutoAttackStop extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		_bao.write(60);
+		writeC(0x3C);
 		writeD(_targetId);
-		return _bao.toByteArray();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__3C_AUTOATTACKSTOP;
 	}
 }

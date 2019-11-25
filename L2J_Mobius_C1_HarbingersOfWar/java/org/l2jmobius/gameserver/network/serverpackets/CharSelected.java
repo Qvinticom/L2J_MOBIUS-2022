@@ -22,7 +22,6 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 public class CharSelected extends ServerBasePacket
 {
-	private static final String _S__21_CHARSELECTED = "[S] 21 CharSelected";
 	private final PlayerInstance _cha;
 	private final int _sessionId;
 	
@@ -33,9 +32,9 @@ public class CharSelected extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		_bao.write(33);
+		writeC(0x21);
 		writeS(_cha.getName());
 		writeD(_cha.getCharId());
 		writeS(_cha.getTitle());
@@ -67,12 +66,5 @@ public class CharSelected extends ServerBasePacket
 			writeD(0);
 		}
 		writeD(GameTimeController.getInstance().getGameTime());
-		return _bao.toByteArray();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__21_CHARSELECTED;
 	}
 }

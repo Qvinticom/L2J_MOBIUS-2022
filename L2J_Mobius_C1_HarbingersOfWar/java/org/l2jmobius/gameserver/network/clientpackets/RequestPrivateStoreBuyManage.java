@@ -27,8 +27,6 @@ import org.l2jmobius.gameserver.network.serverpackets.PrivateSellListBuy;
 
 public class RequestPrivateStoreBuyManage extends ClientBasePacket
 {
-	private static final String _C__90_REQUESTPRIVATESTOREBUYMANAGE = "[C] 90 RequestPrivateStoreBuyManage";
-	
 	public RequestPrivateStoreBuyManage(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
@@ -61,11 +59,5 @@ public class RequestPrivateStoreBuyManage extends ClientBasePacket
 			player.sendPacket(new ChangeWaitType(player, 1));
 			player.broadcastPacket(new ChangeWaitType(player, 1));
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__90_REQUESTPRIVATESTOREBUYMANAGE;
 	}
 }

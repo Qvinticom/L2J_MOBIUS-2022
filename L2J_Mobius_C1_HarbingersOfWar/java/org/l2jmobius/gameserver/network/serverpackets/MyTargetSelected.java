@@ -19,7 +19,6 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 public class MyTargetSelected extends ServerBasePacket
 {
-	private static final String _S__BF_MYTARGETSELECTED = "[S] BF MyTargetSelected";
 	private final int _objectId;
 	private final int _color;
 	
@@ -30,17 +29,10 @@ public class MyTargetSelected extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		_bao.write(191);
+		writeC(0xBF);
 		writeD(_objectId);
 		writeH(_color);
-		return _bao.toByteArray();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__BF_MYTARGETSELECTED;
 	}
 }

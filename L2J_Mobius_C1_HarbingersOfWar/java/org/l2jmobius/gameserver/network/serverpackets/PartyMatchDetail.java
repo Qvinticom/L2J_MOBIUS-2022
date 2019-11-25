@@ -21,7 +21,6 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 public class PartyMatchDetail extends ServerBasePacket
 {
-	private static final String _S__B0_PARTYMATCHDETAIL = "[S] B0 PartyMatchDetail";
 	private final PlayerInstance _player;
 	
 	public PartyMatchDetail(PlayerInstance player)
@@ -30,9 +29,9 @@ public class PartyMatchDetail extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		writeC(176);
+		writeC(0xB0);
 		writeD(_player.getObjectId());
 		if (_player.isPartyMatchingShowLevel())
 		{
@@ -51,12 +50,5 @@ public class PartyMatchDetail extends ServerBasePacket
 			writeD(0);
 		}
 		writeS("  " + _player.getPartyMatchingMemo());
-		return getBytes();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__B0_PARTYMATCHDETAIL;
 	}
 }

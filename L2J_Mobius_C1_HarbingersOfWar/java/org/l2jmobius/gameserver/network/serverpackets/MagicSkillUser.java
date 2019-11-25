@@ -21,7 +21,6 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 
 public class MagicSkillUser extends ServerBasePacket
 {
-	private static final String _S__5A_MAGICSKILLUSER = "[S] 5A MagicSkillUser";
 	private final Creature _cha;
 	private final int _targetId;
 	private final int _skillId;
@@ -50,9 +49,9 @@ public class MagicSkillUser extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		_bao.write(90);
+		writeC(0x5A);
 		writeD(_cha.getObjectId());
 		writeD(_targetId);
 		writeD(_skillId);
@@ -63,12 +62,5 @@ public class MagicSkillUser extends ServerBasePacket
 		writeD(_cha.getY());
 		writeD(_cha.getZ());
 		writeH(0);
-		return _bao.toByteArray();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__5A_MAGICSKILLUSER;
 	}
 }

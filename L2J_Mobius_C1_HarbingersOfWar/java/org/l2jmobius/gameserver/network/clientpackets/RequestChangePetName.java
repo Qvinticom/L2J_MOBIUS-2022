@@ -17,28 +17,23 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.ClientThread;
 import org.l2jmobius.gameserver.network.serverpackets.NpcInfo;
 import org.l2jmobius.gameserver.network.serverpackets.PetInfo;
 
 public class RequestChangePetName extends ClientBasePacket
 {
-	private static final String REQUESTCHANGEPETNAME__C__89 = "[C] 89 RequestChangePetName";
-	
 	public RequestChangePetName(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
-		if ((client.getActiveChar().getPet() != null) && (client.getActiveChar().getPet().getName() == null))
+		
+		final PlayerInstance activeChar = client.getActiveChar();
+		if ((activeChar.getPet() != null) && (activeChar.getName() == null))
 		{
-			client.getActiveChar().getPet().setName(readS());
-			client.getActiveChar().getPet().broadcastPacket(new NpcInfo(client.getActiveChar().getPet()));
-			client.getActiveChar().sendPacket(new PetInfo(client.getActiveChar().getPet()));
+			activeChar.getPet().setName(readS());
+			activeChar.getPet().broadcastPacket(new NpcInfo(activeChar.getPet()));
+			activeChar.sendPacket(new PetInfo(activeChar.getPet()));
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return REQUESTCHANGEPETNAME__C__89;
 	}
 }

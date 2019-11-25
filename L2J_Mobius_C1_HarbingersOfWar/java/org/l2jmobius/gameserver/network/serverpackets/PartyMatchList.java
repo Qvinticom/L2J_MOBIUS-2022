@@ -23,7 +23,6 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 public class PartyMatchList extends ServerBasePacket
 {
-	private static final String _S__AF_PARTYMATCHLIST = "[S] AF PartyMatchList";
 	private final Collection<PlayerInstance> _matchingPlayers;
 	
 	public PartyMatchList(Collection<PlayerInstance> allPlayers)
@@ -32,9 +31,9 @@ public class PartyMatchList extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		writeC(175);
+		writeC(0xAF);
 		int size = _matchingPlayers.size();
 		if (size > 40)
 		{
@@ -54,12 +53,5 @@ public class PartyMatchList extends ServerBasePacket
 			writeD(player.getY());
 			writeD(player.getZ());
 		}
-		return getBytes();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__AF_PARTYMATCHLIST;
 	}
 }

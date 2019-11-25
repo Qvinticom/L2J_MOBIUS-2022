@@ -19,13 +19,14 @@ package org.l2jmobius.gameserver.network.clientpackets;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.network.ClientThread;
 import org.l2jmobius.gameserver.network.serverpackets.AllyCrest;
 
 public class RequestAllyCrest extends ClientBasePacket
 {
-	private static final String _C__88_REQUESTALLYCREST = "[C] 88 RequestAllyCrest";
+	final static Logger _log = Logger.getLogger(RequestAllyCrest.class.getName());
 	
 	public RequestAllyCrest(byte[] rawPacket, ClientThread client) throws IOException
 	{
@@ -40,11 +41,5 @@ public class RequestAllyCrest extends ClientBasePacket
 		{
 			_log.warning("allycrest file is missing:" + crestFile.getAbsolutePath());
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__88_REQUESTALLYCREST;
 	}
 }

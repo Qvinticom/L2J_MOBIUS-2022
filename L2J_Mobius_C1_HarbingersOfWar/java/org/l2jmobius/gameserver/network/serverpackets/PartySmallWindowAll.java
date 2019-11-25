@@ -24,7 +24,6 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 public class PartySmallWindowAll extends ServerBasePacket
 {
-	private static final String _S__63_PARTYSMALLWINDOWALL = "[S] 63 PartySmallWindowAll";
 	private List<PlayerInstance> _partyMembers = new ArrayList<>();
 	
 	public void setPartyList(List<PlayerInstance> party)
@@ -33,9 +32,9 @@ public class PartySmallWindowAll extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		writeC(99);
+		writeC(0x63);
 		writeD(_partyMembers.size());
 		for (int i = 0; i < _partyMembers.size(); ++i)
 		{
@@ -51,12 +50,5 @@ public class PartySmallWindowAll extends ServerBasePacket
 			writeD(0);
 			writeD(0);
 		}
-		return getBytes();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__63_PARTYSMALLWINDOWALL;
 	}
 }

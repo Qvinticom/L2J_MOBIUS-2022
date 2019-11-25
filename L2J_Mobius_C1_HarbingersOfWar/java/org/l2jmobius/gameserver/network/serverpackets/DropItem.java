@@ -21,7 +21,6 @@ import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 
 public class DropItem extends ServerBasePacket
 {
-	private static final String _S__16_DROPITEM = "[S] 16 DropItem";
 	private final ItemInstance _item;
 	private final int _playerId;
 	
@@ -32,9 +31,9 @@ public class DropItem extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		writeC(22);
+		writeC(0x16);
 		writeD(_playerId);
 		writeD(_item.getObjectId());
 		writeD(_item.getItemId());
@@ -51,12 +50,5 @@ public class DropItem extends ServerBasePacket
 		}
 		writeD(_item.getCount());
 		writeD(1);
-		return _bao.toByteArray();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__16_DROPITEM;
 	}
 }

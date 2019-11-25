@@ -30,8 +30,6 @@ import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 
 public class RequestAnswerJoinPledge extends ClientBasePacket
 {
-	private static final String _C__25_REQUESTANSWERJOINPLEDGE = "[C] 25 RequestAnswerJoinPledge";
-	
 	public RequestAnswerJoinPledge(byte[] rawPacket, ClientThread client)
 	{
 		super(rawPacket);
@@ -70,11 +68,5 @@ public class RequestAnswerJoinPledge extends ClientBasePacket
 		}
 		requestor.setTransactionRequester(null);
 		activeChar.setTransactionRequester(null);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__25_REQUESTANSWERJOINPLEDGE;
 	}
 }

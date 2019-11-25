@@ -21,7 +21,6 @@ import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
 
 public class PetStatusUpdate extends ServerBasePacket
 {
-	private static final String _S__CE_PETSTATUSSHOW = "[S] CE PetStatusShow";
 	private final PetInstance _pet;
 	
 	public PetStatusUpdate(PetInstance pet)
@@ -30,9 +29,9 @@ public class PetStatusUpdate extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		writeC(206);
+		writeC(0xCE);
 		writeD(_pet.getPetId());
 		writeD(_pet.getObjectId());
 		writeD(_pet.getX());
@@ -49,12 +48,5 @@ public class PetStatusUpdate extends ServerBasePacket
 		writeD(_pet.getExp());
 		writeD(_pet.getLastLevel());
 		writeD(_pet.getNextLevel());
-		return getBytes();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__CE_PETSTATUSSHOW;
 	}
 }

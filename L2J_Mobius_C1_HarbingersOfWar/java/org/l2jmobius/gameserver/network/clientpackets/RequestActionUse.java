@@ -17,6 +17,8 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import java.util.logging.Logger;
+
 import org.l2jmobius.gameserver.enums.CreatureState;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -28,7 +30,7 @@ import org.l2jmobius.gameserver.network.serverpackets.StopMove;
 
 public class RequestActionUse extends ClientBasePacket
 {
-	private static final String _C__45_REQUESTACTIONUSE = "[C] 45 RequestActionUse";
+	final static Logger _log = Logger.getLogger(RequestActionUse.class.getName());
 	
 	public RequestActionUse(byte[] rawPacket, ClientThread client)
 	{
@@ -131,11 +133,5 @@ public class RequestActionUse extends ClientBasePacket
 				_log.warning("unhandled action type 20");
 			}
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__45_REQUESTACTIONUSE;
 	}
 }

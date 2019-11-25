@@ -18,15 +18,10 @@
 package org.l2jmobius.loginserver.network.serverpackets;
 
 import java.io.ByteArrayOutputStream;
-import java.io.IOException;
 
 public abstract class ServerBasePacket
 {
-	ByteArrayOutputStream _bao = new ByteArrayOutputStream();
-	
-	protected ServerBasePacket()
-	{
-	}
+	private final ByteArrayOutputStream _bao = new ByteArrayOutputStream();
 	
 	protected void writeD(int value)
 	{
@@ -96,5 +91,5 @@ public abstract class ServerBasePacket
 		return _bao.toByteArray();
 	}
 	
-	public abstract byte[] getContent() throws IOException;
+	public abstract void writeImpl();
 }

@@ -21,7 +21,6 @@ import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
 
 public class PetInfo extends ServerBasePacket
 {
-	private static final String _S__CA_PETINFO = "[S] CA PetInfo";
 	private final PetInstance _cha;
 	
 	public PetInfo(PetInstance cha)
@@ -30,9 +29,9 @@ public class PetInfo extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		writeC(202);
+		writeC(0xCA);
 		writeD(_cha.getPetId());
 		writeD(_cha.getObjectId());
 		writeD(_cha.getNpcId() + 1000000);
@@ -120,12 +119,5 @@ public class PetInfo extends ServerBasePacket
 		writeD((int) _cha.getEffectiveSpeed());
 		writeD(80);
 		writeD(_cha.getMagicalSpeed());
-		return getBytes();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__CA_PETINFO;
 	}
 }

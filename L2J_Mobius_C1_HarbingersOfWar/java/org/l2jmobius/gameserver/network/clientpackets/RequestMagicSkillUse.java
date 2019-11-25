@@ -17,6 +17,8 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import java.util.logging.Logger;
+
 import org.l2jmobius.gameserver.data.SkillTable;
 import org.l2jmobius.gameserver.model.Skill;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -24,7 +26,7 @@ import org.l2jmobius.gameserver.network.ClientThread;
 
 public class RequestMagicSkillUse extends ClientBasePacket
 {
-	private static final String _C__2F_REQUESTMAGICSKILLUSE = "[C] 2F RequestMagicSkillUse";
+	final static Logger _log = Logger.getLogger(RequestMagicSkillUse.class.getName());
 	
 	public RequestMagicSkillUse(byte[] rawPacket, ClientThread client)
 	{
@@ -47,11 +49,5 @@ public class RequestMagicSkillUse extends ClientBasePacket
 		{
 			_log.warning(activeChar + " tried to cast skill " + magicId);
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__2F_REQUESTMAGICSKILLUSE;
 	}
 }

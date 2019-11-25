@@ -17,6 +17,8 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import java.util.logging.Logger;
+
 import org.l2jmobius.gameserver.model.Clan;
 import org.l2jmobius.gameserver.model.ClanMember;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -29,7 +31,7 @@ import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 
 public class RequestOustPledgeMember extends ClientBasePacket
 {
-	private static final String _C__27_REQUESTOUSTPLEDGEMEMBER = "[C] 27 RequestOustPledgeMember";
+	final static Logger _log = Logger.getLogger(RequestOustPledgeMember.class.getName());
 	
 	public RequestOustPledgeMember(byte[] rawPacket, ClientThread client)
 	{
@@ -65,11 +67,5 @@ public class RequestOustPledgeMember extends ClientBasePacket
 			player.broadcastPacket(new CharInfo(player));
 			player.sendPacket(new PledgeShowMemberListDeleteAll());
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__27_REQUESTOUSTPLEDGEMEMBER;
 	}
 }

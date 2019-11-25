@@ -24,7 +24,6 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 public class WareHouseWithdrawalList extends ServerBasePacket
 {
-	private static final String _S__54_WAREHOUSEWITHDRAWALLIST = "[S] 54 WareHouseWithdrawalList";
 	private final PlayerInstance _cha;
 	private final int _money;
 	
@@ -35,9 +34,9 @@ public class WareHouseWithdrawalList extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		writeC(84);
+		writeC(0x54);
 		writeD(_money);
 		final int count = _cha.getWarehouse().getSize();
 		writeH(count);
@@ -57,12 +56,5 @@ public class WareHouseWithdrawalList extends ServerBasePacket
 			writeH(200);
 			writeD(temp.getItemId());
 		}
-		return getBytes();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__54_WAREHOUSEWITHDRAWALLIST;
 	}
 }

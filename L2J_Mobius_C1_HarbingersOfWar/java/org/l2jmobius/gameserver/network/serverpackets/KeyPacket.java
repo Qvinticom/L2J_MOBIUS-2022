@@ -19,31 +19,25 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 public class KeyPacket extends ServerBasePacket
 {
-	private static final String _S__01_KEYPACKET = "[S] 01 KeyPacket";
+	final private byte[] _key;
 	
-	public void setKey(byte[] key)
+	public KeyPacket(byte[] key)
+	{
+		_key = key;
+	}
+	
+	@Override
+	public void writeImpl()
 	{
 		writeC(0);
 		writeC(1);
-		writeC(key[0]);
-		writeC(key[1]);
-		writeC(key[2]);
-		writeC(key[3]);
-		writeC(key[4]);
-		writeC(key[5]);
-		writeC(key[6]);
-		writeC(key[7]);
-	}
-	
-	@Override
-	public byte[] getContent()
-	{
-		return getBytes();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__01_KEYPACKET;
+		writeC(_key[0]);
+		writeC(_key[1]);
+		writeC(_key[2]);
+		writeC(_key[3]);
+		writeC(_key[4]);
+		writeC(_key[5]);
+		writeC(_key[6]);
+		writeC(_key[7]);
 	}
 }

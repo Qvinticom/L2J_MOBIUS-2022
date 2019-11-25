@@ -25,8 +25,6 @@ import org.l2jmobius.gameserver.network.serverpackets.CharSelected;
 
 public class CharacterSelected extends ClientBasePacket
 {
-	private static final String _C__0D_CHARACTERSELECTED = "[C] 0D CharacterSelected";
-	
 	public CharacterSelected(byte[] decrypt, ClientThread client) throws IOException
 	{
 		super(decrypt);
@@ -37,11 +35,5 @@ public class CharacterSelected extends ClientBasePacket
 		final CharSelected cs = new CharSelected(cha, client.getSessionId());
 		client.getConnection().sendPacket(cs);
 		client.setActiveChar(cha);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__0D_CHARACTERSELECTED;
 	}
 }

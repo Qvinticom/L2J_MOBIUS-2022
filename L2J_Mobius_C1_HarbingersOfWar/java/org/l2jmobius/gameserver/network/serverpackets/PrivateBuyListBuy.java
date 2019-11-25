@@ -27,7 +27,6 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 public class PrivateBuyListBuy extends ServerBasePacket
 {
-	private static final String _S__D1_PRIVATEBUYLISTBUY = "[S] D1 PrivateBuyListBuy";
 	private final PlayerInstance _buyer;
 	private final PlayerInstance _seller;
 	
@@ -38,11 +37,11 @@ public class PrivateBuyListBuy extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
 		TradeItem temp3;
 		TradeItem temp2;
-		writeC(209);
+		writeC(0xD1);
 		writeD(_buyer.getObjectId());
 		writeD(_seller.getAdena());
 		final List<TradeItem> buyerslist = _buyer.getBuyList();
@@ -122,12 +121,5 @@ public class PrivateBuyListBuy extends ServerBasePacket
 			}
 			writeD(buyCount);
 		}
-		return getBytes();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__D1_PRIVATEBUYLISTBUY;
 	}
 }

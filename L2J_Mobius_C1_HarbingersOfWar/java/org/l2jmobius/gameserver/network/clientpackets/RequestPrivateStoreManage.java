@@ -28,8 +28,6 @@ import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 
 public class RequestPrivateStoreManage extends ClientBasePacket
 {
-	private static final String _C__73_REQUESTPRIVATESTOREMANAGE = "[C] 73 RequestPrivateStoreManage";
-	
 	public RequestPrivateStoreManage(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
@@ -64,11 +62,5 @@ public class RequestPrivateStoreManage extends ClientBasePacket
 			player.sendPacket(new ChangeWaitType(player, 1));
 			player.broadcastPacket(new ChangeWaitType(player, 1));
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__73_REQUESTPRIVATESTOREMANAGE;
 	}
 }

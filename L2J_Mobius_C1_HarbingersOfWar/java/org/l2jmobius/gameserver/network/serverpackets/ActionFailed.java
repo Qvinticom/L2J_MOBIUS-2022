@@ -19,18 +19,9 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 public class ActionFailed extends ServerBasePacket
 {
-	private static final String _S__35_ACTIONFAILED = "[S] 35 ActionFailed";
-	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		_bao.write(53);
-		return _bao.toByteArray();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__35_ACTIONFAILED;
+		writeC(0x35);
 	}
 }

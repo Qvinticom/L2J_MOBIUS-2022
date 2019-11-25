@@ -19,16 +19,18 @@ package org.l2jmobius.loginserver.network.serverpackets;
 
 public class PlayOk extends ServerBasePacket
 {
+	private final int _sessionKey;
+	
 	public PlayOk(int sessionKey)
 	{
-		writeC(7);
-		writeD(sessionKey);
-		writeD(1432778632);
+		_sessionKey = sessionKey;
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		return getBytes();
+		writeC(0x07);
+		writeD(_sessionKey);
+		writeD(1432778632);
 	}
 }

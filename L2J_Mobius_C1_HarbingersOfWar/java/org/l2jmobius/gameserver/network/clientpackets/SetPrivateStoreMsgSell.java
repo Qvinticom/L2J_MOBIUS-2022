@@ -17,24 +17,14 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.ClientThread;
 
 public class SetPrivateStoreMsgSell extends ClientBasePacket
 {
-	private static final String _C__77_SETPRIVATESTOREMSGSELL = "[C] 77 SetPrivateStoreMsgSell";
-	
 	public SetPrivateStoreMsgSell(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
 		final String storename = readS();
-		final PlayerInstance player = client.getActiveChar();
-		player.getTradeList().setSellStoreName(storename);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__77_SETPRIVATESTOREMSGSELL;
+		client.getActiveChar().getTradeList().setSellStoreName(storename);
 	}
 }

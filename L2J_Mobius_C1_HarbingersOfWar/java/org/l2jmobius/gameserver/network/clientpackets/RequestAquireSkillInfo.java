@@ -27,8 +27,6 @@ import org.l2jmobius.gameserver.network.serverpackets.AquireSkillInfo;
 
 public class RequestAquireSkillInfo extends ClientBasePacket
 {
-	private static final String _C__6B_REQUESTAQUIRESKILLINFO = "[C] 6B RequestAquireSkillInfo";
-	
 	public RequestAquireSkillInfo(byte[] rawPacket, ClientThread client)
 	{
 		super(rawPacket);
@@ -48,11 +46,5 @@ public class RequestAquireSkillInfo extends ClientBasePacket
 			break;
 		}
 		activeChar.sendPacket(new AquireSkillInfo(skill.getId(), skill.getLevel(), requiredSp));
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__6B_REQUESTAQUIRESKILLINFO;
 	}
 }

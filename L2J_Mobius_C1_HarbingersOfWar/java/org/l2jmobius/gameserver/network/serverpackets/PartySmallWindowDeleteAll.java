@@ -19,18 +19,9 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 public class PartySmallWindowDeleteAll extends ServerBasePacket
 {
-	private static final String _S__65_PARTYSMALLWINDOWDELETEALL = "[S] 65 PartySmallWindowDeleteAll";
-	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		writeC(101);
-		return getBytes();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__65_PARTYSMALLWINDOWDELETEALL;
+		writeC(0x65);
 	}
 }

@@ -19,7 +19,6 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 public class PetStatusShow extends ServerBasePacket
 {
-	private static final String _S__C9_PETSTATUSSHOW = "[S] C9 PetStatusShow";
 	private final int _petId;
 	
 	public PetStatusShow(int petId)
@@ -28,16 +27,9 @@ public class PetStatusShow extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		writeC(201);
+		writeC(0xC9);
 		writeD(_petId);
-		return getBytes();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__C9_PETSTATUSSHOW;
 	}
 }

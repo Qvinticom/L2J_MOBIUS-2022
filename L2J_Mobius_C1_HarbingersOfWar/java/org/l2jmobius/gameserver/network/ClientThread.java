@@ -84,84 +84,21 @@ public class ClientThread extends Thread
 		long starttime = System.currentTimeMillis();
 		try
 		{
-			try
+			do
 			{
-				do
+				if ((_activeChar != null) && (_autoSaveTime < (System.currentTimeMillis() - starttime)))
 				{
-					if ((_activeChar != null) && (_autoSaveTime < (System.currentTimeMillis() - starttime)))
-					{
-						saveCharToDisk(_activeChar);
-						starttime = System.currentTimeMillis();
-					}
-					final byte[] decrypt = _connection.getPacket();
-					_handler.handlePacket(decrypt);
+					saveCharToDisk(_activeChar);
+					starttime = System.currentTimeMillis();
 				}
-				while (true);
+				final byte[] decrypt = _connection.getPacket();
+				_handler.handlePacket(decrypt);
 			}
-			catch (IOException io)
-			{
-				try
-				{
-					if (_activeChar != null)
-					{
-						_activeChar.deleteMe();
-						try
-						{
-							saveCharToDisk(_activeChar);
-						}
-						catch (Exception e2)
-						{
-							// empty catch block
-						}
-					}
-					_connection.close();
-				}
-				catch (Exception e1)
-				{
-					_log.warning(e1.toString());
-				}
-				finally
-				{
-					LoginController.getInstance().removeGameServerLogin(getLoginName());
-				}
-			}
-			catch (Exception e)
-			{
-				e.printStackTrace();
-				try
-				{
-					if (_activeChar != null)
-					{
-						_activeChar.deleteMe();
-						try
-						{
-							saveCharToDisk(_activeChar);
-						}
-						catch (Exception e2)
-						{
-							// empty catch block
-						}
-					}
-					_connection.close();
-					LoginController.getInstance().removeGameServerLogin(getLoginName());
-				}
-				catch (Exception e1)
-				{
-					try
-					{
-					}
-					catch (Throwable throwable)
-					{
-						LoginController.getInstance().removeGameServerLogin(getLoginName());
-						throw throwable;
-					}
-					_log.warning(e1.toString());
-					LoginController.getInstance().removeGameServerLogin(getLoginName());
-				}
-			}
+			while (true);
 		}
-		catch (Throwable throwable)
+		catch (Exception e)
 		{
+			_log.warning(e.toString());
 			try
 			{
 				if (_activeChar != null)
@@ -184,15 +121,14 @@ public class ClientThread extends Thread
 				try
 				{
 				}
-				catch (Throwable throwable2)
+				catch (Throwable throwable)
 				{
 					LoginController.getInstance().removeGameServerLogin(getLoginName());
-					throw throwable2;
+					throw throwable;
 				}
 				_log.warning(e1.toString());
 				LoginController.getInstance().removeGameServerLogin(getLoginName());
 			}
-			throw throwable;
 		}
 	}
 	
@@ -216,10 +152,9 @@ public class ClientThread extends Thread
 	
 	private void storeShortcuts(PlayerInstance cha, File saveFile)
 	{
-		OutputStreamWriter out = null;
 		try
 		{
-			out = new FileWriter(saveFile);
+			final OutputStreamWriter out = new FileWriter(saveFile);
 			out.write("slot;type;id;level;unknown\r\n");
 			for (ShortCut sc : cha.getAllShortCuts())
 			{
@@ -229,23 +164,11 @@ public class ClientThread extends Thread
 				out.write(sc.getLevel() + ";");
 				out.write(sc.getUnk() + "\r\n");
 			}
+			out.close();
 		}
 		catch (Exception e)
 		{
 			_log.warning("could not store shortcuts:" + e.toString());
-		}
-		finally
-		{
-			try
-			{
-				if (out != null)
-				{
-					out.close();
-				}
-			}
-			catch (Exception e1)
-			{
-			}
 		}
 	}
 	
@@ -304,13 +227,12 @@ public class ClientThread extends Thread
 	
 	private void restoreShortCuts(File file, PlayerInstance restored)
 	{
-		BufferedReader lnr = null;
 		try
 		{
-			lnr = new LineNumberReader(new BufferedReader(new FileReader(file)));
-			((LineNumberReader) lnr).readLine();
+			final LineNumberReader lnr = new LineNumberReader(new BufferedReader(new FileReader(file)));
+			lnr.readLine();
 			String line = null;
-			while ((line = ((LineNumberReader) lnr).readLine()) != null)
+			while ((line = lnr.readLine()) != null)
 			{
 				final StringTokenizer st = new StringTokenizer(line, ";");
 				final int slot = Integer.parseInt(st.nextToken());
@@ -321,32 +243,19 @@ public class ClientThread extends Thread
 				final ShortCut sc = new ShortCut(slot, type, id, level, unk);
 				restored.registerShortCut(sc);
 			}
+			lnr.close();
 		}
 		catch (Exception e)
 		{
 			_log.warning("could not restore shortcuts:" + e);
 		}
-		finally
-		{
-			try
-			{
-				if (lnr != null)
-				{
-					lnr.close();
-				}
-			}
-			catch (Exception e1)
-			{
-			}
-		}
 	}
 	
 	private void storeInventory(PlayerInstance cha, File saveFile)
 	{
-		OutputStreamWriter out = null;
 		try
 		{
-			out = new FileWriter(saveFile);
+			final OutputStreamWriter out = new FileWriter(saveFile);
 			out.write("objectId;itemId;name;count;price;equipSlot;\r\n");
 			for (ItemInstance item : cha.getInventory().getItems())
 			{
@@ -362,32 +271,19 @@ public class ClientThread extends Thread
 				}
 				out.write(item.getEquipSlot() + "\r\n");
 			}
+			out.close();
 		}
 		catch (Exception e)
 		{
 			_log.warning("could not store inventory:" + e);
 		}
-		finally
-		{
-			try
-			{
-				if (out != null)
-				{
-					out.close();
-				}
-			}
-			catch (Exception e1)
-			{
-			}
-		}
 	}
 	
 	private void storeSkills(PlayerInstance cha, File saveFile)
 	{
-		OutputStreamWriter out = null;
 		try
 		{
-			out = new FileWriter(saveFile);
+			final OutputStreamWriter out = new FileWriter(saveFile);
 			out.write("skillId;skillLevel;skillName\r\n");
 			for (Skill skill : cha.getAllSkills())
 			{
@@ -395,32 +291,19 @@ public class ClientThread extends Thread
 				out.write(skill.getLevel() + ";");
 				out.write(skill.getName() + "\r\n");
 			}
+			out.close();
 		}
 		catch (Exception e)
 		{
 			_log.warning("could not store skills:" + e);
 		}
-		finally
-		{
-			try
-			{
-				if (out != null)
-				{
-					out.close();
-				}
-			}
-			catch (Exception e1)
-			{
-			}
-		}
 	}
 	
 	private void storeChar(PlayerInstance cha, File charFile)
 	{
-		FileWriter out = null;
 		try
 		{
-			out = new FileWriter(charFile);
+			final FileWriter out = new FileWriter(charFile);
 			out.write("objId;charName;level;maxHp;curHp;maxMp;curMp;acc;crit;evasion;mAtk;mDef;mSpd;pAtk;pDef;pSpd;runSpd;walkSpd;str;con;dex;int;men;wit;face;hairStyle;hairColor;sex;heading;x;y;z;unk1;unk2;colRad;colHeight;exp;sp;karma;pvpkills;pkkills;clanid;maxload;race;classid;deletetime;cancraft;title;allyId\r\n");
 			out.write(cha.getObjectId() + ";");
 			out.write(cha.getName() + ";");
@@ -471,35 +354,22 @@ public class ClientThread extends Thread
 			out.write(cha.getCanCraft() + ";");
 			out.write(" " + cha.getTitle() + ";");
 			out.write(cha.getAllyId() + ";");
+			out.close();
 		}
 		catch (IOException e)
 		{
 			_log.warning("could not store char data:" + e);
 		}
-		finally
-		{
-			try
-			{
-				if (out != null)
-				{
-					out.close();
-				}
-			}
-			catch (Exception e1)
-			{
-			}
-		}
 	}
 	
 	private void restoreWarehouse(File wfile, PlayerInstance cha)
 	{
-		BufferedReader lnr = null;
 		try
 		{
-			lnr = new LineNumberReader(new BufferedReader(new FileReader(wfile)));
-			((LineNumberReader) lnr).readLine();
+			final LineNumberReader lnr = new LineNumberReader(new BufferedReader(new FileReader(wfile)));
+			lnr.readLine();
 			String line = null;
-			while ((line = ((LineNumberReader) lnr).readLine()) != null)
+			while ((line = lnr.readLine()) != null)
 			{
 				final StringTokenizer st = new StringTokenizer(line, ";");
 				final ItemInstance item = new ItemInstance();
@@ -512,33 +382,20 @@ public class ClientThread extends Thread
 				cha.getWarehouse().addItem(item);
 				_world.storeObject(item);
 			}
+			lnr.close();
 		}
 		catch (Exception e)
 		{
 			_log.warning("could not restore warehouse:" + e);
 		}
-		finally
-		{
-			try
-			{
-				if (lnr != null)
-				{
-					lnr.close();
-				}
-			}
-			catch (Exception e1)
-			{
-			}
-		}
 	}
 	
 	private void storeWarehouse(PlayerInstance cha, File saveFile)
 	{
-		OutputStreamWriter out = null;
 		try
 		{
 			final List<ItemInstance> items = cha.getWarehouse().getItems();
-			out = new FileWriter(saveFile);
+			final OutputStreamWriter out = new FileWriter(saveFile);
 			out.write("#objectId;itemId;name;count;\n");
 			for (int i = 0; i < items.size(); ++i)
 			{
@@ -548,35 +405,22 @@ public class ClientThread extends Thread
 				out.write(item.getItem().getName() + ";");
 				out.write(item.getCount() + "\n");
 			}
+			out.close();
 		}
 		catch (Exception e)
 		{
 			_log.warning("could not store warehouse:" + e);
 		}
-		finally
-		{
-			try
-			{
-				if (out != null)
-				{
-					out.close();
-				}
-			}
-			catch (Exception e1)
-			{
-			}
-		}
 	}
 	
 	private void restoreInventory(File inventory, PlayerInstance cha)
 	{
-		BufferedReader lnr = null;
 		try
 		{
-			lnr = new LineNumberReader(new BufferedReader(new FileReader(inventory)));
-			((LineNumberReader) lnr).readLine();
+			final LineNumberReader lnr = new LineNumberReader(new BufferedReader(new FileReader(inventory)));
+			lnr.readLine();
 			String line = null;
-			while ((line = ((LineNumberReader) lnr).readLine()) != null)
+			while ((line = lnr.readLine()) != null)
 			{
 				final StringTokenizer st = new StringTokenizer(line, ";");
 				final ItemInstance item = new ItemInstance();
@@ -595,35 +439,22 @@ public class ClientThread extends Thread
 				}
 				_world.storeObject(item);
 			}
+			lnr.close();
 		}
 		catch (Exception e)
 		{
 			_log.warning("could not restore inventory:" + e);
 		}
-		finally
-		{
-			try
-			{
-				if (lnr != null)
-				{
-					lnr.close();
-				}
-			}
-			catch (Exception e1)
-			{
-			}
-		}
 	}
 	
 	private void restoreSkills(File inventory, PlayerInstance cha)
 	{
-		BufferedReader lnr = null;
 		try
 		{
-			lnr = new LineNumberReader(new BufferedReader(new FileReader(inventory)));
-			((LineNumberReader) lnr).readLine();
+			final LineNumberReader lnr = new LineNumberReader(new BufferedReader(new FileReader(inventory)));
+			lnr.readLine();
 			String line = null;
-			while ((line = ((LineNumberReader) lnr).readLine()) != null)
+			while ((line = lnr.readLine()) != null)
 			{
 				final StringTokenizer st = new StringTokenizer(line, ";");
 				final int id = Integer.parseInt(st.nextToken());
@@ -632,35 +463,22 @@ public class ClientThread extends Thread
 				final Skill skill = SkillTable.getInstance().getInfo(id, level);
 				cha.addSkill(skill);
 			}
+			lnr.close();
 		}
 		catch (Exception e)
 		{
 			_log.warning("could not restore skills:" + e);
-		}
-		finally
-		{
-			try
-			{
-				if (lnr != null)
-				{
-					lnr.close();
-				}
-			}
-			catch (Exception e1)
-			{
-			}
 		}
 	}
 	
 	private PlayerInstance restoreChar(File charFile)
 	{
 		final PlayerInstance oldChar = new PlayerInstance();
-		BufferedReader lnr = null;
 		try
 		{
-			lnr = new LineNumberReader(new BufferedReader(new FileReader(charFile)));
-			((LineNumberReader) lnr).readLine();
-			final String line = ((LineNumberReader) lnr).readLine();
+			final LineNumberReader lnr = new LineNumberReader(new BufferedReader(new FileReader(charFile)));
+			lnr.readLine();
+			final String line = lnr.readLine();
 			final StringTokenizer st = new StringTokenizer(line, ";");
 			oldChar.setObjectId(Integer.parseInt(st.nextToken()));
 			oldChar.setName(st.nextToken());
@@ -714,23 +532,11 @@ public class ClientThread extends Thread
 			oldChar.setAllyId(Integer.parseInt(st.nextToken()));
 			World.getInstance().storeObject(oldChar);
 			oldChar.setUptime(System.currentTimeMillis());
+			lnr.close();
 		}
 		catch (Exception e)
 		{
 			_log.warning("could not restore char data:" + e);
-		}
-		finally
-		{
-			try
-			{
-				if (lnr != null)
-				{
-					lnr.close();
-				}
-			}
-			catch (Exception e1)
-			{
-			}
 		}
 		return oldChar;
 	}

@@ -26,8 +26,6 @@ import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 
 public class RequestGiveNickName extends ClientBasePacket
 {
-	private static final String _C__55_REQUESTGIVENICKNAME = "[C] 55 RequestGiveNickName";
-	
 	public RequestGiveNickName(byte[] rawPacket, ClientThread client)
 	{
 		super(rawPacket);
@@ -54,11 +52,5 @@ public class RequestGiveNickName extends ClientBasePacket
 				member.broadcastPacket(ci);
 			}
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__55_REQUESTGIVENICKNAME;
 	}
 }

@@ -21,7 +21,6 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 public class PartySmallWindowUpdate extends ServerBasePacket
 {
-	private static final String _S__67_PARTYSMALLWINDOWUPDATE = "[S] 67 PartySmallWindowUpdate";
 	private final PlayerInstance _member;
 	
 	public PartySmallWindowUpdate(PlayerInstance member)
@@ -30,9 +29,9 @@ public class PartySmallWindowUpdate extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		writeC(103);
+		writeC(0x67);
 		writeD(_member.getObjectId());
 		writeS(_member.getName());
 		writeD((int) _member.getCurrentHp());
@@ -41,12 +40,5 @@ public class PartySmallWindowUpdate extends ServerBasePacket
 		writeD(_member.getMaxMp());
 		writeD(_member.getClassId());
 		writeD(_member.getLevel());
-		return getBytes();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__67_PARTYSMALLWINDOWUPDATE;
 	}
 }

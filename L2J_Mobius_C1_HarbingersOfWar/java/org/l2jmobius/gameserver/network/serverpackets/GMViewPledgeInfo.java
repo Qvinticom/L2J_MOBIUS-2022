@@ -23,7 +23,6 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 public class GMViewPledgeInfo extends ServerBasePacket
 {
-	private static final String _S__A9_GMVIEWPLEDGEINFO = "[S] A9 GMViewPledgeInfo";
 	private final Clan _clan;
 	private final PlayerInstance _activeChar;
 	
@@ -34,9 +33,9 @@ public class GMViewPledgeInfo extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		writeC(169);
+		writeC(0xA9);
 		writeS(_activeChar.getName());
 		writeD(_clan.getClanId());
 		writeS(_clan.getName());
@@ -68,12 +67,5 @@ public class GMViewPledgeInfo extends ServerBasePacket
 			}
 			writeD(0);
 		}
-		return getBytes();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__A9_GMVIEWPLEDGEINFO;
 	}
 }

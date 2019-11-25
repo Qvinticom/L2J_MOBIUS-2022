@@ -19,7 +19,6 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 public class SendTradeDone extends ServerBasePacket
 {
-	private static final String _S__32_SENDTRADEDONE = "[S] 32 SendTradeDone";
 	private final int _num;
 	
 	public SendTradeDone(int num)
@@ -28,16 +27,9 @@ public class SendTradeDone extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		writeC(50);
+		writeC(0x32);
 		writeD(_num);
-		return getBytes();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__32_SENDTRADEDONE;
 	}
 }

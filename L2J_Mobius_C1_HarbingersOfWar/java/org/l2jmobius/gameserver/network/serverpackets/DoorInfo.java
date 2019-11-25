@@ -21,7 +21,6 @@ import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
 
 public class DoorInfo extends ServerBasePacket
 {
-	private static final String _S__60_DOORINFO = "[S] 60 DoorInfo";
 	private final DoorInstance _door;
 	
 	public DoorInfo(DoorInstance door)
@@ -30,20 +29,13 @@ public class DoorInfo extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		writeC(96);
+		writeC(0x60);
 		writeD(_door.getObjectId());
 		writeD(_door.getX());
 		writeD(_door.getY());
 		writeD(_door.getZ());
 		writeD(0);
-		return _bao.toByteArray();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__60_DOORINFO;
 	}
 }

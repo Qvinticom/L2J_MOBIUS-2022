@@ -21,7 +21,6 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 public class PledgeShowMemberListAdd extends ServerBasePacket
 {
-	private static final String _S__6A_PLEDGESHOWMEMBERLISTADD = "[S] 6a PledgeShowMemberListAdd";
 	private final PlayerInstance _player;
 	
 	public PledgeShowMemberListAdd(PlayerInstance player)
@@ -30,21 +29,14 @@ public class PledgeShowMemberListAdd extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		writeC(106);
+		writeC(0x6A);
 		writeS(_player.getName());
 		writeD(_player.getLevel());
 		writeD(_player.getClassId());
 		writeD(0);
 		writeD(1);
 		writeD(1);
-		return getBytes();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__6A_PLEDGESHOWMEMBERLISTADD;
 	}
 }

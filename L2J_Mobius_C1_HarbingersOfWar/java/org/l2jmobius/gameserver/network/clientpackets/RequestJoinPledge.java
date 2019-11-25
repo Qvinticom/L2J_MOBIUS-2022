@@ -26,8 +26,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class RequestJoinPledge extends ClientBasePacket
 {
-	private static final String _C__24_REQUESTJOINPLEDGE = "[C] 24 RequestJoinPledge";
-	
 	public RequestJoinPledge(byte[] rawPacket, ClientThread client)
 	{
 		super(rawPacket);
@@ -68,11 +66,5 @@ public class RequestJoinPledge extends ClientBasePacket
 			final AskJoinPledge ap = new AskJoinPledge(activeChar.getObjectId(), activeChar.getClan().getName());
 			member.sendPacket(ap);
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__24_REQUESTJOINPLEDGE;
 	}
 }

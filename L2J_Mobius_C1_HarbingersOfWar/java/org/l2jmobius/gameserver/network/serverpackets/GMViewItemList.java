@@ -24,7 +24,6 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 public class GMViewItemList extends ServerBasePacket
 {
-	private static final String _S__AD_GMVIEWITEMLIST = "[S] AD GMViewItemList";
 	private final Collection<ItemInstance> _items;
 	private final String _playerName;
 	
@@ -35,9 +34,9 @@ public class GMViewItemList extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		writeC(173);
+		writeC(0xAD);
 		writeS(_playerName);
 		writeH(1);
 		writeH(_items.size());
@@ -61,12 +60,5 @@ public class GMViewItemList extends ServerBasePacket
 			writeH(item.getEnchantLevel());
 			writeH(0);
 		}
-		return getBytes();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__AD_GMVIEWITEMLIST;
 	}
 }

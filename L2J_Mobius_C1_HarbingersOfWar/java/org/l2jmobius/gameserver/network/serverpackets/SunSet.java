@@ -19,18 +19,9 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 public class SunSet extends ServerBasePacket
 {
-	private static final String _S__29_SUNSET = "[S] 29 SunSet";
-	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		_bao.write(41);
-		return _bao.toByteArray();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__29_SUNSET;
+		writeC(0x29);
 	}
 }

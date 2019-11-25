@@ -26,8 +26,6 @@ import org.l2jmobius.gameserver.network.serverpackets.CharSelectInfo;
 
 public class CharacterDelete extends ClientBasePacket
 {
-	private static final String _C__0C_CHARACTERDELETE = "[C] 0C CharacterDelete";
-	
 	public CharacterDelete(byte[] decrypt, ClientThread client) throws IOException
 	{
 		super(decrypt);
@@ -38,11 +36,5 @@ public class CharacterDelete extends ClientBasePacket
 		con.sendPacket(ccf);
 		final CharSelectInfo cl = new CharSelectInfo(client.getLoginName(), client.getSessionId());
 		con.sendPacket(cl);
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__0C_CHARACTERDELETE;
 	}
 }

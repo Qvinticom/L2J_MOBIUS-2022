@@ -21,7 +21,6 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 public class PartySmallWindowAdd extends ServerBasePacket
 {
-	private static final String _S__64_PARTYSMALLWINDOWADD = "[S] 64 PartySmallWindowAdd";
 	private final PlayerInstance _member;
 	
 	public PartySmallWindowAdd(PlayerInstance member)
@@ -30,9 +29,9 @@ public class PartySmallWindowAdd extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		writeC(100);
+		writeC(0x64);
 		writeD(_member.getObjectId());
 		writeS(_member.getName());
 		writeD((int) _member.getCurrentHp());
@@ -43,12 +42,5 @@ public class PartySmallWindowAdd extends ServerBasePacket
 		writeD(_member.getLevel());
 		writeD(0);
 		writeD(0);
-		return getBytes();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__64_PARTYSMALLWINDOWADD;
 	}
 }

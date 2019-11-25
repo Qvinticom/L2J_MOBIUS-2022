@@ -21,26 +21,18 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 public class PrivateStoreMsgBuy extends ServerBasePacket
 {
-	private static final String _S__D2_PRIVATESTOREMSGBUY = "[S] D2 PrivateStoreMsgBuy";
-	private final PlayerInstance _cha;
+	private final PlayerInstance _player;
 	
 	public PrivateStoreMsgBuy(PlayerInstance player)
 	{
-		_cha = player;
+		_player = player;
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		writeC(210);
-		writeD(_cha.getObjectId());
-		writeS(_cha.getTradeList().getBuyStoreName());
-		return getBytes();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__D2_PRIVATESTOREMSGBUY;
+		writeC(0xD2);
+		writeD(_player.getObjectId());
+		writeS(_player.getTradeList().getBuyStoreName());
 	}
 }

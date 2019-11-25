@@ -23,7 +23,6 @@ import org.l2jmobius.gameserver.templates.CharTemplate;
 
 public class CharTemplates extends ServerBasePacket
 {
-	private static final String _S__23_CHARTEMPLATES = "[S] 23 CharTemplates";
 	private final Vector<CharTemplate> _chars = new Vector<>();
 	
 	public void addChar(CharTemplate template)
@@ -32,9 +31,9 @@ public class CharTemplates extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		_bao.write(35);
+		writeC(0x23);
 		writeD(_chars.size());
 		for (int i = 0; i < _chars.size(); ++i)
 		{
@@ -60,12 +59,5 @@ public class CharTemplates extends ServerBasePacket
 			writeD(temp.getMen());
 			writeD(10);
 		}
-		return _bao.toByteArray();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__23_CHARTEMPLATES;
 	}
 }

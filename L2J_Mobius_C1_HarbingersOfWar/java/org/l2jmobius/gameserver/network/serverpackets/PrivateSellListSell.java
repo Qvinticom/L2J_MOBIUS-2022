@@ -26,7 +26,6 @@ import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 
 public class PrivateSellListSell extends ServerBasePacket
 {
-	private static final String _S__B3_PRIVATESELLLISTSELL = "[S] B3 PrivateSellListSell";
 	private final PlayerInstance _seller;
 	
 	public PrivateSellListSell(PlayerInstance seller)
@@ -35,12 +34,9 @@ public class PrivateSellListSell extends ServerBasePacket
 	}
 	
 	@Override
-	public byte[] getContent()
+	public void writeImpl()
 	{
-		TradeItem temp2;
-		int i;
-		int i2;
-		writeC(179);
+		writeC(0xB3);
 		writeD(_seller.getObjectId());
 		writeD(_seller.getAdena());
 		final TradeList list = new TradeList(0);
@@ -56,21 +52,19 @@ public class PrivateSellListSell extends ServerBasePacket
 		}
 		if (sellList.size() != 0)
 		{
-			for (i = 0; i < sellList.size(); ++i)
+			for (TradeItem tradeItem : sellList)
 			{
-				temp2 = sellList.get(i);
-				list.removeItem(temp2.getObjectId(), temp2.getCount());
+				list.removeItem(tradeItem.getObjectId(), tradeItem.getCount());
 			}
 		}
 		count = list.getItems().size();
 		writeD(count);
-		for (i2 = 0; i2 < count; ++i2)
+		for (ItemInstance item : list.getItems())
 		{
-			final ItemInstance temp = list.getItems().get(i2);
 			writeD(0);
-			writeD(temp.getObjectId());
-			writeD(temp.getItemId());
-			writeD(temp.getCount());
+			writeD(item.getObjectId());
+			writeD(item.getItemId());
+			writeD(item.getCount());
 			writeD(0);
 			writeH(0);
 			writeH(0);
@@ -81,28 +75,19 @@ public class PrivateSellListSell extends ServerBasePacket
 		writeD(count);
 		if (count != 0)
 		{
-			for (i2 = 0; i2 < count; ++i2)
+			for (TradeItem tradeItem : sellList)
 			{
-				temp2 = sellList.get(i2);
-				System.out.println("item:" + temp2.getObjectId());
 				writeD(0);
-				writeD(temp2.getObjectId());
-				writeD(temp2.getItemId());
-				writeD(temp2.getCount());
+				writeD(tradeItem.getObjectId());
+				writeD(tradeItem.getItemId());
+				writeD(tradeItem.getCount());
 				writeD(0);
 				writeH(0);
 				writeH(0);
 				writeH(0);
-				writeD(temp2.getOwnersPrice());
-				writeD(temp2.getStorePrice());
+				writeD(tradeItem.getOwnersPrice());
+				writeD(tradeItem.getStorePrice());
 			}
 		}
-		return getBytes();
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _S__B3_PRIVATESELLLISTSELL;
 	}
 }

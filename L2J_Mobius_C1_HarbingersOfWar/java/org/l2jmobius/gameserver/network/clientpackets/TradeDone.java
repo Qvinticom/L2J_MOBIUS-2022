@@ -24,8 +24,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class TradeDone extends ClientBasePacket
 {
-	private static final String _C__17_TRADEDONE = "[C] 17 TradeDone";
-	
 	public TradeDone(byte[] decrypt, ClientThread client)
 	{
 		super(decrypt);
@@ -80,11 +78,5 @@ public class TradeDone extends ClientBasePacket
 			requestor.setTradeList(null);
 			player.setTradeList(null);
 		}
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__17_TRADEDONE;
 	}
 }
