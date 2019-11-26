@@ -2348,13 +2348,16 @@
 	<skill id="1996" toLevel="2" name="Hurricane Shackle">
 		<!-- For $s1, blocks target from using escape items and skills. -->
 		<icon>icon.skill1996</icon>
-		<operateType>A2</operateType>
+		<operateType>A3</operateType>
 		<castRange>600</castRange>
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>600000</reuseDelay>
 		<effectPoint>-100</effectPoint>
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+		</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>BLOCK_ESCAPE</abnormalType>
 		<isDebuff>true</isDebuff>
@@ -2362,20 +2365,16 @@
 		<affectScope>SINGLE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<excludedFromCheck>true</excludedFromCheck>
-		<conditions>
-			<condition name="OpTargetPc" />
-		</conditions>
+		<magicLvl>4</magicLvl>
 		<effects>
 			<effect name="BlockEscape" />
-			<effect name="PAtk" fromLevel="2" toLevel="2">
-				<amount>10</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MAtk" fromLevel="2" toLevel="2">
-				<amount>10</amount>
-				<mode>PER</mode>
-			</effect>
 		</effects>
+		<selfEffects>
+			<effect name="CallSkill">
+				<skillId>19199</skillId> <!-- Hurricane Sign -->
+				<skillLevel>1</skillLevel>
+			</effect>
+		</selfEffects>
 	</skill>
 	<skill id="1997" toLevel="2" name="Gravity Exile">
 		<!-- For $s1, blocks target from being resurrected by another character. -->

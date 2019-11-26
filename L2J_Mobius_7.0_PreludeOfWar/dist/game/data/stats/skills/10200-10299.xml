@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="10244" toLevel="3" name="Two-Hand Stance">
-		<!-- Holds a weapon with both hands. If the weapon is a sword or blunt weapon, this stance increases P. Critical Rate/ P. Critical Damage by $s1 and P. Atk. by $s2 of Shield Def. but disables you to cast shield skills or defend with the shield. Use the stance again to cancel it. Requires a shield to be equipped. -->
+		<!-- Holds a weapon with both hands. When using a sword or a blunt weapon, P. Critical Rate/ Damage +15%, P. Skill Critical Rate/ Damage +15%, P. Atk. +100% of Shield Defense. You can't cast shield skills or defend with the shield. Using the skill again cancels the effect. Requires a shield. -->
 		<icon>icon.skill10244</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -45,6 +45,9 @@
 				<skillLevel>1</skillLevel>
 				<chance>100</chance>
 				<targetType>TARGET</targetType>
+			</effect>
+			<effect name="DisableSkill">
+				<disable>10008;10009;10011;10012;10017;10019;10020;10021;10024;10026</disable>
 			</effect>
 		</effects>
 	</skill>

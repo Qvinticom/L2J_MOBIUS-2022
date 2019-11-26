@@ -255,32 +255,86 @@
 		<!-- Teleports nearby clan members to town. Cannot be used in special places such as GM Consultation Services. Consumes 50 Spirit Ores and 2000 Individual Fame. Viscount or above only. -->
 		<icon>icon.skill_pledge_party_recall</icon>
 		<operateType>A1</operateType>
-		<hitTime>3500</hitTime>
+		<coolTime>500</coolTime>
+		<hitTime>2000</hitTime>
 		<reuseDelay>1800000</reuseDelay>
 		<effectPoint>100</effectPoint>
 		<isMagic>1</isMagic>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<itemConsumeCount>300</itemConsumeCount>
+		<targetType>SELF</targetType>
+		<affectScope>PLEDGE</affectScope>
+		<affectObject>FRIEND</affectObject>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<conditions>
+			<condition name="OpCanEscape" />
+			<condition name="OpSocialClass">
+				<socialClass>8</socialClass>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Escape">
+				<escapeType>TOWN</escapeType>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="19113" toLevel="1" name="Clan Escape Lock">
 		<!-- For 60 sec., blocks target's Escape. Consumes 100 Spirit Ores and 3000 Individual Fame. Marquis or above only. -->
 		<icon>icon.skill_recall</icon>
 		<operateType>A2</operateType>
+		<coolTime>500</coolTime>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>60</abnormalTime>
+		<abnormalType>BLOCK_ESCAPE</abnormalType>
+		<effectRange>600</effectRange>
 		<castRange>600</castRange>
-		<hitTime>2000</hitTime>
+		<hitTime>1000</hitTime>
 		<reuseDelay>1800000</reuseDelay>
 		<effectPoint>-100</effectPoint>
 		<isDebuff>true</isDebuff>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<itemConsumeCount>300</itemConsumeCount>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<stayAfterDeath>true</stayAfterDeath>
+		<conditions>
+			<condition name="OpTargetPc" />
+			<condition name="OpSocialClass">
+				<socialClass>8</socialClass>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="BlockEscape" />
+		</effects>
 	</skill>
 	<skill id="19114" toLevel="1" name="Clan Resurrection Lock">
 		<!-- For 60 sec., blocks target's Resurrection. Consumes 150 Spirit Ores and 1000 Clan Reputation. Marquis or above only. -->
 		<icon>icon.skill_resurrection</icon>
 		<operateType>A2</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>60</abnormalTime>
+		<abnormalType>BLOCK_RESURRECTION</abnormalType>
 		<castRange>600</castRange>
-		<hitTime>2000</hitTime>
+		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>1800000</reuseDelay>
 		<isMagic>1</isMagic>
 		<effectPoint>-100</effectPoint>
 		<isDebuff>true</isDebuff>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<itemConsumeCount>300</itemConsumeCount>
+		<targetType>PC_BODY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<conditions>
+			<condition name="OpSocialClass">
+				<socialClass>8</socialClass>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="BlockResurrection" />
+		</effects>
 	</skill>
 	<skill id="19115" toLevel="1" name="Air Bike">
 		<!-- Can mount the Air Bike. Must belong to a clan Lv. 5 or above. -->
@@ -1602,7 +1656,21 @@
 		<!-- For 60 sec., P./M. Atk. + 10%. -->
 		<icon>icon.skill1996</icon>
 		<operateType>A2</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>60</abnormalTime>
 		<effectPoint>2</effectPoint>
 		<isMagic>4</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PAtk">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 </list>

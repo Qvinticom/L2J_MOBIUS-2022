@@ -1656,7 +1656,21 @@
 		<!-- For 60 sec., P./ M. Atk. +10%. -->
 		<icon>icon.skill1996</icon>
 		<operateType>A2</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>60</abnormalTime>
 		<effectPoint>2</effectPoint>
 		<isMagic>4</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PAtk">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 </list>
