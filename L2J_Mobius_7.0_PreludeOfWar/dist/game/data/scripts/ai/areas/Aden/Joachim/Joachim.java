@@ -29,13 +29,13 @@ import ai.AbstractNpcAI;
 public class Joachim extends AbstractNpcAI
 {
 	// NPC
-	private static final int Joachim = 34513;
+	private static final int JOACHIM = 34513;
 	
 	private Joachim()
 	{
-		addStartNpc(Joachim);
-		addTalkId(Joachim);
-		addFirstTalkId(Joachim);
+		addStartNpc(JOACHIM);
+		addTalkId(JOACHIM);
+		addFirstTalkId(JOACHIM);
 	}
 	
 	@Override
@@ -45,7 +45,6 @@ public class Joachim extends AbstractNpcAI
 		{
 			case "34513-01.html":
 			case "34513-02.html":
-			case "34513-03.html":
 			{
 				return event;
 			}
