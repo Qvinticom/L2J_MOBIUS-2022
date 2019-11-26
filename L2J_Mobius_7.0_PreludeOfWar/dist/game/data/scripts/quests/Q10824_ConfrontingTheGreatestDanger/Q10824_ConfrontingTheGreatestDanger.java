@@ -32,7 +32,7 @@ import quests.Q10823_ExaltedOneWhoShattersTheLimit.Q10823_ExaltedOneWhoShattersT
 public class Q10824_ConfrontingTheGreatestDanger extends Quest
 {
 	// NPC
-	private static final int MERLOT = 34019;
+	private static final int MERLOT = 34018;
 	// Items
 	private static final int MARK_OF_ADVANCE = 46058;
 	private static final int KURTIZ_CERTIFICATE = 46057;
@@ -49,8 +49,8 @@ public class Q10824_ConfrontingTheGreatestDanger extends Quest
 		super(10824);
 		addStartNpc(MERLOT);
 		addTalkId(MERLOT);
-		addCondMinLevel(MIN_LEVEL, "34019-02.html");
-		addCondStartedQuest(Q10823_ExaltedOneWhoShattersTheLimit.class.getSimpleName(), "34019-03.html");
+		addCondMinLevel(MIN_LEVEL, "34018-02.html");
+		addCondStartedQuest(Q10823_ExaltedOneWhoShattersTheLimit.class.getSimpleName(), "34018-03.html");
 		registerQuestItems(MARK_OF_ADVANCE);
 	}
 	
@@ -66,19 +66,19 @@ public class Q10824_ConfrontingTheGreatestDanger extends Quest
 		
 		switch (event)
 		{
-			case "34019-04.htm":
-			case "34019-05.htm":
+			case "34018-04.htm":
+			case "34018-05.htm":
 			{
 				htmltext = event;
 				break;
 			}
-			case "34019-06.html":
+			case "34018-06.html":
 			{
 				qs.startQuest();
 				htmltext = event;
 				break;
 			}
-			case "34019-09.html":
+			case "34018-09.html":
 			{
 				if (qs.isCond(1) && (getQuestItemsCount(player, MARK_OF_ADVANCE) >= 3))
 				{
@@ -86,7 +86,7 @@ public class Q10824_ConfrontingTheGreatestDanger extends Quest
 					{
 						if (hasQuestItems(player, KURTIZ_CERTIFICATE, MAMMON_CERTIFICATE, GUSTAV_CERTIFICATE))
 						{
-							htmltext = "34019-10.html";
+							htmltext = "34018-10.html";
 						}
 						else
 						{
@@ -118,18 +118,18 @@ public class Q10824_ConfrontingTheGreatestDanger extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = "34019-01.htm";
+				htmltext = "34018-01.htm";
 				break;
 			}
 			case State.STARTED:
 			{
 				if (getQuestItemsCount(player, MARK_OF_ADVANCE) >= 3)
 				{
-					htmltext = "34019-08.html";
+					htmltext = "34018-08.html";
 				}
 				else
 				{
-					htmltext = "34019-07.html";
+					htmltext = "34018-07.html";
 				}
 				break;
 			}
