@@ -2359,7 +2359,7 @@
 			<effect name="BlockEscape" />
 		</effects>
 		<selfEffects>
-			<effect name="CallSkill">
+			<effect name="CallSkill" fromLevel="2" toLevel="2">
 				<skillId>19199</skillId> <!-- Hurricane Sign -->
 				<skillLevel>1</skillLevel>
 			</effect>
