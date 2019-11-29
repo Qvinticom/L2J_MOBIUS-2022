@@ -17,6 +17,7 @@
 package org.l2jmobius.gameserver.data.xml.impl;
 
 import java.io.File;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Level;
@@ -128,6 +129,11 @@ public class EnchantItemData implements IXmlReader
 				}
 			}
 		}
+	}
+	
+	public Collection<EnchantScroll> getScrolls()
+	{
+		return _scrolls.values();
 	}
 	
 	/**

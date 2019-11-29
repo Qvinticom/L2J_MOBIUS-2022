@@ -21,6 +21,7 @@ import java.util.Set;
 import java.util.logging.Level;
 
 import org.l2jmobius.commons.util.Rnd;
+import org.l2jmobius.gameserver.data.xml.impl.EnchantItemData;
 import org.l2jmobius.gameserver.data.xml.impl.EnchantItemGroupsData;
 import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -93,6 +94,11 @@ public class EnchantScroll extends AbstractEnchantItem
 		_items.add(itemId);
 	}
 	
+	public Set<Integer> getItems()
+	{
+		return _items;
+	}
+	
 	/**
 	 * @param itemToEnchant the item to be enchanted
 	 * @param supportItem the support item used when enchanting (can be null)
@@ -101,6 +107,18 @@ public class EnchantScroll extends AbstractEnchantItem
 	@Override
 	public boolean isValid(ItemInstance itemToEnchant, EnchantSupportItem supportItem)
 	{
+		for (EnchantScroll scroll : EnchantItemData.getInstance().getScrolls())
+		{
+			if (scroll.getId() == getId())
+			{
+				continue;
+			}
+			final Set<Integer> scrollItems = scroll.getItems();
+			if ((scrollItems != null) && scrollItems.contains(itemToEnchant.getId()))
+			{
+				return false;
+			}
+		}
 		if ((_items != null) && !_items.contains(itemToEnchant.getId()))
 		{
 			return false;
