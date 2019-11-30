@@ -5009,8 +5009,8 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
-		<affectScope>PARTY_PLEDGE</affectScope>
-		<affectObject>FRIEND</affectObject>
+		<affectScope>PLEDGE</affectScope>
+		<affectObject>FRIEND_PC</affectObject>
 		<effects>
 			<effect name="CpHealPercent">
 				<power>

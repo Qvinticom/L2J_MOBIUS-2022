@@ -2504,7 +2504,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY_PLEDGE</affectScope>
-		<affectObject>FRIEND</affectObject>
+		<affectObject>FRIEND_PC</affectObject>
 		<effects>
 			<effect name="MaxCp">
 				<amount>10</amount>
@@ -2569,7 +2569,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY_PLEDGE</affectScope>
-		<affectObject>FRIEND</affectObject>
+		<affectObject>FRIEND_PC</affectObject>
 		<effects>
 			<effect name="DispelBySlot">
 				<dispel>PA_UP,9;PD_UP,9</dispel>
@@ -2607,7 +2607,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY_PLEDGE</affectScope>
-		<affectObject>FRIEND</affectObject>
+		<affectObject>FRIEND_PC</affectObject>
 		<effects>
 			<effect name="DispelBySlot">
 				<dispel>CRITICAL_PROB_UP,9;CRITICAL_DMG_UP,9</dispel>
@@ -2645,7 +2645,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY_PLEDGE</affectScope>
-		<affectObject>FRIEND</affectObject>
+		<affectObject>FRIEND_PC</affectObject>
 		<effects>
 			<effect name="DispelBySlot">
 				<dispel>MAX_HP_UP,9;MAX_MP_UP,9</dispel>
@@ -3803,7 +3803,7 @@
 		<affectLimit>50-50</affectLimit>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY_PLEDGE</affectScope>
-		<affectObject>FRIEND</affectObject>
+		<affectObject>FRIEND_PC</affectObject>
 		<effects>
 			<effect name="PhysicalAttackSpeed">
 				<amount>

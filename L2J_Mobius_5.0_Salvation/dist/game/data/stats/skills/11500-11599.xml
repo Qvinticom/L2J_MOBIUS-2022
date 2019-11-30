@@ -3660,8 +3660,11 @@
 		<isMagic>1</isMagic>
 		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
-		<affectScope>PARTY</affectScope>
-		<affectObject>FRIEND</affectObject>
+		<affectScope>
+			<value level="1">PARTY</value>
+			<value level="2">PARTY_PLEDGE</value>
+		</affectScope>
+		<affectObject>FRIEND_PC</affectObject>
 		<removedOnAnyActionExceptMove>true</removedOnAnyActionExceptMove>
 		<effects>
 			<effect name="DispelBySlotMyself">
@@ -4521,8 +4524,8 @@
 		<affectRange>1000</affectRange> <!-- Custom -->
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
-		<affectScope>PARTY_PLEDGE</affectScope>
-		<affectObject>FRIEND</affectObject>
+		<affectScope>PLEDGE</affectScope>
+		<affectObject>FRIEND_PC</affectObject>
 		<mpConsume>
 			<value level="1">126</value>
 			<value level="2">139</value>
@@ -4661,7 +4664,7 @@
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>PLEDGE</affectScope>
-		<affectObject>FRIEND</affectObject>
+		<affectObject>FRIEND_PC</affectObject>
 		<mpConsume>
 			<value level="1">140</value>
 			<value level="2">151</value>
@@ -4751,7 +4754,7 @@
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>PLEDGE</affectScope>
-		<affectObject>FRIEND</affectObject>
+		<affectObject>FRIEND_PC</affectObject>
 		<mpConsume>
 			<value level="1">140</value>
 			<value level="2">151</value>
@@ -4853,7 +4856,7 @@
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>PLEDGE</affectScope>
-		<affectObject>FRIEND</affectObject>
+		<affectObject>FRIEND_PC</affectObject>
 		<mpConsume>
 			<value level="1">140</value>
 			<value level="2">151</value>
@@ -4953,7 +4956,7 @@
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>PLEDGE</affectScope>
-		<affectObject>FRIEND</affectObject>
+		<affectObject>FRIEND_PC</affectObject>
 		<mpConsume>
 			<value level="1">140</value>
 			<value level="2">151</value>
@@ -5048,7 +5051,7 @@
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>PLEDGE</affectScope>
-		<affectObject>FRIEND</affectObject>
+		<affectObject>FRIEND_PC</affectObject>
 		<mpConsume>
 			<value level="1">140</value>
 			<value level="2">151</value>
@@ -5141,7 +5144,7 @@
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>PLEDGE</affectScope>
-		<affectObject>FRIEND</affectObject>
+		<affectObject>FRIEND_PC</affectObject>
 		<mpConsume>
 			<value level="1">140</value>
 			<value level="2">151</value>
@@ -5208,7 +5211,7 @@
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>PLEDGE</affectScope>
-		<affectObject>FRIEND</affectObject>
+		<affectObject>FRIEND_PC</affectObject>
 		<affectLimit>50-50</affectLimit> <!-- Custom -->
 		<affectRange>1000</affectRange> <!-- Custom -->
 		<mpConsume>140</mpConsume>
@@ -5265,7 +5268,7 @@
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>PLEDGE</affectScope>
-		<affectObject>FRIEND</affectObject>
+		<affectObject>FRIEND_PC</affectObject>
 		<affectLimit>50-50</affectLimit> <!-- Custom -->
 		<affectRange>1000</affectRange> <!-- Custom -->
 		<mpConsume>140</mpConsume>
@@ -5326,7 +5329,7 @@
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>PLEDGE</affectScope>
-		<affectObject>FRIEND</affectObject>
+		<affectObject>FRIEND_PC</affectObject>
 		<affectLimit>50-50</affectLimit> <!-- Custom -->
 		<affectRange>1000</affectRange> <!-- Custom -->
 		<mpConsume>140</mpConsume>

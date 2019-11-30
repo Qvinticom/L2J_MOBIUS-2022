@@ -628,7 +628,6 @@
 		<icon>icon.skill11817</icon>
 		<affectLimit>10-10</affectLimit>
 		<affectRange>300</affectRange>
-		<castRange>900</castRange>
 		<effectPoint>
 			<value level="1">-1733</value>
 			<value level="2">-1747</value>
@@ -1441,12 +1440,15 @@
 		</effects>
 	</skill>
 	<skill id="11850" toLevel="4" name="Miraculous Benediction">
-		<!-- Restores clan members' CP/HP. Can only be used when MP is 50% or below. -->
+		<!-- Restores clan members' CP/ HP. Can only be used when MP is 50% or below. -->
+		<!-- Restores clan members' CP/ HP. Can only be used when MP is 60% or below. -->
+		<!-- Restores clan members' CP/ HP. Can only be used when MP is 70% or below. -->
+		<!-- Restores clan members' CP/ HP. -->
 		<icon>icon.skill11850new</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
-		<affectScope>PARTY_PLEDGE</affectScope>
-		<affectObject>FRIEND</affectObject>
+		<affectScope>PLEDGE</affectScope>
+		<affectObject>FRIEND_PC</affectObject>
 		<mpConsume>
 			<value level="1">148</value>
 			<value level="2">164</value>
@@ -1463,6 +1465,8 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>600000</reuseDelay>
 		<isMagic>1</isMagic>
+		<affectLimit>50-50</affectLimit>
+		<affectRange>1000</affectRange>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">90</value>
@@ -1472,7 +1476,12 @@
 		<effectPoint>560</effectPoint>
 		<conditions>
 			<condition name="RemainMpPer">
-				<amount>50</amount>
+				<amount>
+					<value level="1">50</value>
+					<value level="2">60</value>
+					<value level="3">70</value>
+					<value level="4">100</value>
+				</amount>
 				<percentType>LESS</percentType>
 			</condition>
 		</conditions>
