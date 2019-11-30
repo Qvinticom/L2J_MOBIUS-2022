@@ -41,6 +41,7 @@ import org.l2jmobius.gameserver.network.serverpackets.ExItemAnnounce;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2jmobius.gameserver.util.Broadcast;
 import org.l2jmobius.gameserver.util.Util;
 
 public class RequestEnchantItem implements IClientIncomingPacket
@@ -237,7 +238,7 @@ public class RequestEnchantItem implements IClientIncomingPacket
 						sm.addInt(item.getEnchantLevel());
 						sm.addItemName(item);
 						player.broadcastPacket(sm);
-						player.broadcastPacket(new ExItemAnnounce(item, player));
+						Broadcast.toAllOnlinePlayers(new ExItemAnnounce(item, player));
 						
 						final Skill skill = CommonSkill.FIREWORK.getSkill();
 						if (skill != null)

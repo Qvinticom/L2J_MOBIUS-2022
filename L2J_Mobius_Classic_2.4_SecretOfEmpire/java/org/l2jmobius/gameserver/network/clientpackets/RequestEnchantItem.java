@@ -37,9 +37,11 @@ import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.EnchantResult;
+import org.l2jmobius.gameserver.network.serverpackets.ExItemAnnounce;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import org.l2jmobius.gameserver.util.Broadcast;
 import org.l2jmobius.gameserver.util.Util;
 
 public class RequestEnchantItem implements IClientIncomingPacket
@@ -228,15 +230,15 @@ public class RequestEnchantItem implements IClientIncomingPacket
 					}
 					
 					// announce the success
-					final int minEnchantAnnounce = item.isArmor() ? 6 : 7;
-					final int maxEnchantAnnounce = item.isArmor() ? 0 : 15;
-					if ((item.getEnchantLevel() == minEnchantAnnounce) || (item.getEnchantLevel() == maxEnchantAnnounce))
+					if ((item.getEnchantLevel() >= (item.isArmor() ? Config.MIN_ARMOR_ENCHANT_ANNOUNCE : Config.MIN_WEAPON_ENCHANT_ANNOUNCE)) //
+						&& (item.getEnchantLevel() <= (item.isArmor() ? Config.MAX_ARMOR_ENCHANT_ANNOUNCE : Config.MAX_WEAPON_ENCHANT_ANNOUNCE)))
 					{
 						final SystemMessage sm = new SystemMessage(SystemMessageId.C1_HAS_SUCCESSFULLY_ENCHANTED_A_S2_S3);
 						sm.addString(player.getName());
 						sm.addInt(item.getEnchantLevel());
 						sm.addItemName(item);
 						player.broadcastPacket(sm);
+						Broadcast.toAllOnlinePlayers(new ExItemAnnounce(item, player));
 						
 						final Skill skill = CommonSkill.FIREWORK.getSkill();
 						if (skill != null)
