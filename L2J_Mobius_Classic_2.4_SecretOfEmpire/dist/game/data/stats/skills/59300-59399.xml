@@ -198,16 +198,107 @@
 		<effectPoint>-5</effectPoint>
 	</skill>
 	<skill id="59326" toLevel="1" name="Radiant Jewelry Box">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<hitTime>500</hitTime>
-		<coolTime>500</coolTime>
-		<reuseDelay>1000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<itemConsumeId>71436</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+			<weightPercent>10</weightPercent>
+			<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="8.3333333333333">
+						<item id="70525" count="1" /> <!-- Aquamarine Chest -->
+					</item>
+					<item chance="8.3333333333333">
+						<item id="70825" count="1" /> <!-- Blue Cat's Eye Chest -->
+					</item>
+					<item chance="8.3333333333333">
+						<item id="70492" count="1" /> <!-- Diamond Chest -->
+					</item>
+					<item chance="8.3333333333333">
+						<item id="71435" count="1" /> <!-- Emerald Chest -->
+					</item>
+					<item chance="8.3333333333333">
+						<item id="70488" count="1" /> <!-- Garnet Chest -->
+					</item>
+					<item chance="8.3333333333333">
+						<item id="70489" count="1" /> <!-- Jade Chest -->
+					</item>
+					<item chance="8.3333333333333">
+						<item id="70493" count="1" /> <!-- Pearl Chest -->
+					</item>
+					<item chance="8.3333333333333">
+						<item id="70821" count="1" /> <!-- Red Cat's Eye Chest -->
+					</item>
+					<item chance="8.3333333333333">
+						<item id="70490" count="1" /> <!-- Ruby Chest -->
+					</item>
+					<item chance="8.3333333333333">
+						<item id="70491" count="1" /> <!-- Sapphire Chest -->
+					</item>
+					<item chance="8.3333333333333">
+						<item id="70487" count="1" /> <!-- Topaz Chest -->
+					</item>
+					<item chance="8.3333333333333">
+						<item id="70494" count="1" /> <!-- Vital Stone Chest -->
+					</item>
+				</items>
+			</effect>	
+		</effects>
 	</skill>
 	<skill id="59327" toLevel="1" name="Shining Jewel Box">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<hitTime>500</hitTime>
-		<coolTime>500</coolTime>
-		<reuseDelay>1000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<itemConsumeId>71437</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+			<weightPercent>10</weightPercent>
+			<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="14.285714285714">
+						<item id="70461" count="1" /> <!-- Diamond Lv. 1 -->
+					</item>
+					<item chance="14.285714285714">
+						<item id="70441" count="1" /> <!-- Garnet Lv. 1 -->
+					</item>
+					<item chance="14.285714285714">
+						<item id="70446" count="1" /> <!-- Jade Lv. 1 -->
+					</item>
+					<item chance="14.285714285714">
+						<item id="70466" count="1" /> <!-- Pearl Lv. 1 -->
+					</item>
+					<item chance="14.285714285714">
+						<item id="70451" count="1" /> <!-- Ruby Lv. 1 -->
+					</item>
+					<item chance="14.285714285714">
+						<item id="70456" count="1" /> <!-- Sapphire Lv. 1 -->
+					</item>
+					<item chance="14.285714285714">
+						<item id="70471" count="1" /> <!-- Vital Stone Lv. 1 -->
+					</item>
+				</items>
+			</effect>	
+		</effects>
 	</skill>
 	<skill id="59328" toLevel="4" name="Clan Luck">
 		<!-- When killed by an ordinary monster, XP decrease rate and item drop rate -$s1. Cannot be used by chaotic characters. -->

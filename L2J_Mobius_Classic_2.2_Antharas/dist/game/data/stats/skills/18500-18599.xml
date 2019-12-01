@@ -10,6 +10,34 @@
 		<!-- Stun/ Pulling/ Silence/ Petrification/ Fear Resistance +$s1. -->
 		<icon>icon.etc_bm_jewel_garnet</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DefenceTrait">
+				<SHOCK>
+					<value level="1">3</value>
+					<value level="2">5</value>
+					<value level="3">8</value>
+					<value level="4">11</value>
+					<value level="5">20</value>
+				</SHOCK>
+				<PULL>
+					<value level="1">3</value>
+					<value level="2">5</value>
+					<value level="3">8</value>
+					<value level="4">11</value>
+					<value level="5">20</value>
+				</PULL>
+				<PARALYZE>
+					<value level="1">3</value>
+					<value level="2">5</value>
+					<value level="3">8</value>
+					<value level="4">11</value>
+					<value level="5">20</value>
+				</PARALYZE>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18567" toLevel="2" name="Garnet - Special Ability">
 		<!-- Becomes invincible from debuffs for 5 seconds. -->

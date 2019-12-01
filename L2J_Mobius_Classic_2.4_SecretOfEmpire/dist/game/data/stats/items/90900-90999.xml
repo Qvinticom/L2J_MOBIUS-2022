@@ -399,9 +399,14 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="GOLD" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55510" level="1"/> <!-- Activates 4 jewel slots. -->
+			<skill id="55511" level="1"/> <!-- Inventory Slot +12. -->
+		</skills>
 	</item>
 	<item id="90935" name="Greater Jewel Box" additionalName="Lv. 4" type="EtcItem">
 		<!-- Double-click to obtain Vital Stone, Diamond, Pearl, Aquamarine, Sapphire, Ruby, Jade, Garnet, Topaz or Cat's Eye Lv. 4. Cannot be dropped. -->

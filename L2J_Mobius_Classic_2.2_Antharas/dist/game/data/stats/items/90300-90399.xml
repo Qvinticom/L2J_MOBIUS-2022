@@ -255,6 +255,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55485" level="1"/> <!-- Greater Garnet -->
+		</skills>
 	</item>
 	<item id="90319" name="Garnet" additionalName="Lv. 2" type="Armor">
 		<!-- Stun/ Pulling/ Silence/ Petrification/ Fear Resistance +5%, when equipped. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
@@ -268,6 +271,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55485" level="2"/> <!-- Greater Garnet -->
+		</skills>
 	</item>
 	<item id="90320" name="Garnet" additionalName="Lv. 3" type="Armor">
 		<!-- Stun/ Pulling/ Silence/ Petrification/ Fear Resistance +8%, when equipped. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
@@ -281,6 +287,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55485" level="3"/> <!-- Greater Garnet -->
+		</skills>
 	</item>
 	<item id="90321" name="Garnet" additionalName="Lv. 4" type="Armor">
 		<!-- Stun/ Pulling/ Silence/ Petrification/ Fear Resistance +11%, when equipped. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
@@ -294,6 +303,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55485" level="4"/> <!-- Greater Garnet -->
+		</skills>
 	</item>
 	<item id="90322" name="Garnet" additionalName="Lv. 5" type="Armor">
 		<!-- Stun/ Pulling/ Silence/ Petrification/ Fear Resistance +15%, when equipped. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
@@ -307,9 +319,12 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55485" level="5"/> <!-- Greater Garnet -->
+		</skills>
 	</item>
 	<item id="90323" name="Jade" additionalName="Lv. 1" type="Armor">
-		<!-- Atk. Spd./Casting Spd. +1%, when equipped. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<!-- Atk. Spd./ Casting Spd. +1%, when equipped. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_bm_jewel_jade_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -320,9 +335,12 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55474" level="1"/> <!-- Jade -->
+		</skills>
 	</item>
 	<item id="90324" name="Jade" additionalName="Lv. 2" type="Armor">
-		<!-- Atk. Spd./Casting Spd. +2%, when equipped. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<!-- Atk. Spd./ Casting Spd. +2%, when equipped. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_bm_jewel_jade_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -333,9 +351,12 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55474" level="2"/> <!-- Jade -->
+		</skills>
 	</item>
 	<item id="90325" name="Jade" additionalName="Lv. 3" type="Armor">
-		<!-- Atk. Spd./Casting Spd. +4%, when equipped. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<!-- Atk. Spd./ Casting Spd. +4%, when equipped. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_bm_jewel_jade_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -346,9 +367,12 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55474" level="3"/> <!-- Jade -->
+		</skills>
 	</item>
 	<item id="90326" name="Jade" additionalName="Lv. 4" type="Armor">
-		<!-- Atk. Spd./Casting Spd. +7%, when equipped. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<!-- Atk. Spd./ Casting Spd. +7%, when equipped. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_bm_jewel_jade_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -359,9 +383,12 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55474" level="4"/> <!-- Jade -->
+		</skills>
 	</item>
 	<item id="90327" name="Jade" additionalName="Lv. 5" type="Armor">
-		<!-- Atk. Spd./Casting Spd. +10%, when equipped. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
+		<!-- Atk. Spd./ Casting Spd. +10%, when equipped. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_bm_jewel_jade_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -372,6 +399,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55474" level="5"/> <!-- Jade -->
+		</skills>
 	</item>
 	<item id="90328" name="Ruby" additionalName="Lv. 1" type="Armor">
 		<!-- When equipped, increases Soulshot, Blessed Soulshot and Beast Soulshot damage 2%. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
@@ -385,6 +415,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55477" level="1"/> <!-- Ruby -->
+		</skills>
 	</item>
 	<item id="90329" name="Ruby" additionalName="Lv. 2" type="Armor">
 		<!-- When equipped, increases Soulshot, Blessed Soulshot and Beast Soulshot damage +3%. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
@@ -398,6 +431,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55477" level="2"/> <!-- Ruby -->
+		</skills>
 	</item>
 	<item id="90330" name="Ruby" additionalName="Lv. 3" type="Armor">
 		<!-- When equipped, increases Soulshot, Blessed Soulshot and Beast Soulshot damage +5%. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
@@ -411,6 +447,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55477" level="3"/> <!-- Ruby -->
+		</skills>
 	</item>
 	<item id="90331" name="Ruby" additionalName="Lv. 4" type="Armor">
 		<!-- When equipped, increases Soulshot, Blessed Soulshot and Beast Soulshot damage +8%. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
@@ -424,6 +463,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55477" level="4"/> <!-- Ruby -->
+		</skills>
 	</item>
 	<item id="90332" name="Ruby" additionalName="Lv. 5" type="Armor">
 		<!-- When equipped, increases Soulshot, Blessed Soulshot and Beast Soulshot damage +12%. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
@@ -437,6 +479,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55477" level="5"/> <!-- Ruby -->
+		</skills>
 	</item>
 	<item id="90333" name="Sapphire" additionalName="Lv. 1" type="Armor">
 		<!-- When equipped, increases Spiritshot, Blessed Spiritshot and Beast Spiritshot damage +2%. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
@@ -450,6 +495,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55481" level="1"/> <!-- Sapphire -->
+		</skills>
 	</item>
 	<item id="90334" name="Sapphire" additionalName="Lv. 2" type="Armor">
 		<!-- When equipped, increases Spiritshot, Blessed Spiritshot and Beast Spiritshot damage +3%. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
@@ -463,6 +511,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55481" level="2"/> <!-- Sapphire -->
+		</skills>
 	</item>
 	<item id="90335" name="Sapphire" additionalName="Lv. 3" type="Armor">
 		<!-- When equipped, increases Spiritshot, Blessed Spiritshot and Beast Spiritshot damage +5%. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
@@ -476,6 +527,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55481" level="3"/> <!-- Sapphire -->
+		</skills>
 	</item>
 	<item id="90336" name="Sapphire" additionalName="Lv. 4" type="Armor">
 		<!-- When equipped, increases Spiritshot, Blessed Spiritshot and Beast Spiritshot damage +8%. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
@@ -489,6 +543,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55481" level="4"/> <!-- Sapphire -->
+		</skills>
 	</item>
 	<item id="90337" name="Sapphire" additionalName="Lv. 5" type="Armor">
 		<!-- When equipped, increases Spiritshot, Blessed Spiritshot and Beast Spiritshot damage +12%. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
@@ -502,6 +559,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55481" level="5"/> <!-- Sapphire -->
+		</skills>
 	</item>
 	<item id="90338" name="Diamond" additionalName="Lv. 1" type="Armor">
 		<!-- P. Def. +11, when equipped. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
@@ -515,6 +575,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55475" level="1"/> <!-- Diamond -->
+		</skills>
 	</item>
 	<item id="90339" name="Diamond" additionalName="Lv. 2" type="Armor">
 		<!-- P. Def. +25, when equipped. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
@@ -528,6 +591,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55475" level="2"/> <!-- Diamond -->
+		</skills>
 	</item>
 	<item id="90340" name="Diamond" additionalName="Lv. 3" type="Armor">
 		<!-- P. Def. +50, when equipped. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
@@ -541,6 +607,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55475" level="3"/> <!-- Diamond -->
+		</skills>
 	</item>
 	<item id="90341" name="Diamond" additionalName="Lv. 4" type="Armor">
 		<!-- P. Def. +81, Received P. Critical Damage -4%, when equipped. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
@@ -554,6 +623,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55475" level="4"/> <!-- Diamond -->
+		</skills>
 	</item>
 	<item id="90342" name="Diamond" additionalName="Lv. 5" type="Armor">
 		<!-- P. Def. +112, Received P. Critical Damage -7%, when equipped. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
@@ -567,6 +639,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55475" level="5"/> <!-- Diamond -->
+		</skills>
 	</item>
 	<item id="90343" name="Pearl" additionalName="Lv. 1" type="Armor">
 		<!-- M. Def. +7, when equipped. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
@@ -580,6 +655,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55476" level="1"/> <!-- Pearl -->
+		</skills>
 	</item>
 	<item id="90344" name="Pearl" additionalName="Lv. 2" type="Armor">
 		<!-- M. Def. +14, when equipped. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
@@ -593,6 +671,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55476" level="2"/> <!-- Pearl -->
+		</skills>
 	</item>
 	<item id="90345" name="Pearl" additionalName="Lv. 3" type="Armor">
 		<!-- M. Def. +28, when equipped. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
@@ -606,6 +687,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55476" level="3"/> <!-- Pearl -->
+		</skills>
 	</item>
 	<item id="90346" name="Pearl" additionalName="Lv. 4" type="Armor">
 		<!-- M. Def. +46, Received M. Critical Damage -4%, when equipped. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
@@ -619,6 +703,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55476" level="4"/> <!-- Pearl -->
+		</skills>
 	</item>
 	<item id="90347" name="Pearl" additionalName="Lv. 5" type="Armor">
 		<!-- M. Def. +64, Received M. Critical Damage -7%, when equipped. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
@@ -632,6 +719,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55476" level="5"/> <!-- Pearl -->
+		</skills>
 	</item>
 	<item id="90353" name="Vital Stone" additionalName="Lv. 1" type="Armor">
 		<!-- Sayha Grace XP/SP +3%, while hunting. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
@@ -645,6 +735,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55472" level="1"/> <!-- Vital Stone -->
+		</skills>
 	</item>
 	<item id="90354" name="Vital Stone" additionalName="Lv. 2" type="Armor">
 		<!-- Sayha Grace XP/SP +4%, while hunting. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
@@ -658,6 +751,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55472" level="2"/> <!-- Vital Stone -->
+		</skills>
 	</item>
 	<item id="90355" name="Vital Stone" additionalName="Lv. 3" type="Armor">
 		<!-- Sayha Grace XP/SP +6%, while hunting. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
@@ -671,6 +767,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55472" level="3"/> <!-- Vital Stone -->
+		</skills>
 	</item>
 	<item id="90356" name="Vital Stone" additionalName="Lv. 4" type="Armor">
 		<!-- Sayha Grace XP/SP +8%, Sayha Grace Consumption -10% while hunting. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
@@ -684,6 +783,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55472" level="4"/> <!-- Vital Stone -->
+		</skills>
 	</item>
 	<item id="90357" name="Vital Stone" additionalName="Lv. 5" type="Armor">
 		<!-- Sayha Grace XP/SP +15%, Sayha Grace Consumption -20% while hunting. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
@@ -697,6 +799,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55472" level="5"/> <!-- Vital Stone -->
+		</skills>
 	</item>
 	<item id="90358" name="Shine Ore" type="EtcItem">
 		<!-- You can exchange some amount of Ore for Lv. 1 Brooch, Lv. 3-5 jewels or Jewelry Box through Dimensional Merchant. Cannot be dropped. -->

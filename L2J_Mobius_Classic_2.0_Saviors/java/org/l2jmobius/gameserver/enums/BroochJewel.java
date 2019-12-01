@@ -18,19 +18,33 @@ package org.l2jmobius.gameserver.enums;
 
 /**
  * @author Mobius
+ * @implNote Update by RobikBobik
  */
 public enum BroochJewel
 {
-	RUBY_LV1(38855, 17814, 0.01, true),
-	RUBY_LV2(38856, 17814, 0.035, true),
-	RUBY_LV3(38857, 17815, 0.075, true),
-	RUBY_LV4(38858, 17816, 0.125, true),
-	RUBY_LV5(38859, 17817, 0.2, true),
-	SHAPPHIRE_LV1(38927, 17818, 0.01, false),
-	SHAPPHIRE_LV2(38928, 17818, 0.035, false),
-	SHAPPHIRE_LV3(38929, 17819, 0.075, false),
-	SHAPPHIRE_LV4(38930, 17820, 0.125, false),
-	SHAPPHIRE_LV5(38931, 17821, 0.2, false);
+	// Working effect
+	RUBY_LV1(70451, 17817, 0.02, true),
+	RUBY_LV2(70452, 17817, 0.03, true),
+	RUBY_LV3(70453, 17817, 0.05, true),
+	RUBY_LV4(70454, 17817, 0.08, true),
+	RUBY_LV5(70455, 17817, 0.16, true),
+	GREATER_RUBY_LV1(71368, 17817, 0.17, true), // + 1% p atk
+	GREATER_RUBY_LV2(71369, 17817, 0.18, true), // + 2% p atk
+	GREATER_RUBY_LV3(71370, 17817, 0.19, true), // + 3% p atk
+	GREATER_RUBY_LV4(71371, 17817, 0.20, true), // + 5% p atk
+	GREATER_RUBY_LV5(71372, 17817, 0.20, true), // + 7% p atk + crit. p. rate +10%
+	
+	// Working effect
+	SHAPPHIRE_LV1(70456, 17821, 0.02, false),
+	SHAPPHIRE_LV2(70457, 17821, 0.03, false),
+	SHAPPHIRE_LV3(70458, 17821, 0.05, false),
+	SHAPPHIRE_LV4(70459, 17821, 0.08, false),
+	SHAPPHIRE_LV5(70460, 17821, 0.16, false),
+	GREATER_SHAPPHIRE_LV1(71373, 17821, 00.17, false), // + 2 % m attack
+	GREATER_SHAPPHIRE_LV2(71374, 17821, 00.18, false), // + 4 % m attack
+	GREATER_SHAPPHIRE_LV3(71375, 17821, 00.19, false), // + 6 % m attack
+	GREATER_SHAPPHIRE_LV4(71376, 17821, 00.20, false), // + 10 % m attack
+	GREATER_SHAPPHIRE_LV5(71377, 17821, 00.20, false); // + 14 % m attack + crit. m. rate +10%
 	
 	private int _itemId;
 	private int _effectId;

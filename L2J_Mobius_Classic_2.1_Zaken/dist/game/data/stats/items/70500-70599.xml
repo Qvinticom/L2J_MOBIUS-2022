@@ -275,30 +275,47 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="70525" name="NoItemName" type="EtcItem">
+	<item id="70525" name="Aquamarine Box" type="EtcItem">
 		<!-- Double-click to obtain Lv. 1 Aquamarine. Cannot be dropped. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_aquamarine_i00" />
-		<set name="material" val="PAPER" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="0" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<capsuled_items>
+			<item id="70520" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="70526" name="NoItemName" type="Armor">
-		<!-- Activates 4 jewel slots when equipped. Inventory Slot + 12. -->
+		<!-- Activates 4 jewel slots when equipped. Inventory Slot +12. -->
 		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i02" />
-		<set name="bodypart" val="brooch" />
-		<set name="material" val="SILVER" />
-		<set name="weight" val="10" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="0" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<capsuled_items>
+			<item id="70522" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
-	<item id="70527" name="NoItemName" type="EtcItem">
+	<item id="70527" name="Aquamarine Box" type="EtcItem">
 		<!-- Double-click to obtain Lv. 1-5 Aquamarine. Cannot be dropped. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_aquamarine_i00" />
 		<set name="material" val="PAPER" />
@@ -309,38 +326,65 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="70528" name="NoItemName" type="EtcItem">
+	<item id="70528" name="Aquamarine Box" additionalName="Lv. 3"  type="EtcItem">
 		<!-- Double-click to obtain Lv. 3 Aquamarine. Cannot be dropped. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_aquamarine_i00" />
-		<set name="material" val="PAPER" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="0" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<capsuled_items>
+			<item id="70522" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
-	<item id="70529" name="NoItemName" type="EtcItem">
+	<item id="70529" name="Aquamarine Box" additionalName="Lv. 4"  type="EtcItem">
 		<!-- Double-click to obtain Lv. 4 Aquamarine. Cannot be dropped. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_aquamarine_i00" />
-		<set name="material" val="PAPER" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="0" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<capsuled_items>
+			<item id="70523" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
-	<item id="70530" name="NoItemName" type="EtcItem">
-		<!-- Double-click to obtain Lv. 5Aquamarine. Cannot be dropped. -->
+	<item id="70530" name="Aquamarine Box" additionalName="Lv. 5" type="EtcItem">
+		<!-- Double-click to obtain Lv. 5 Aquamarine. Cannot be dropped. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_aquamarine_i00" />
-		<set name="material" val="PAPER" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="weight" val="0" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<capsuled_items>
+			<item id="70524" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="70531" name="NoItemName" type="EtcItem">
 		<!-- Double-click to get Lv. 1 Brooch (30-day), Lv. 5 Jade (3-day) and Lv. 5 Vital Stone (3-day). -->

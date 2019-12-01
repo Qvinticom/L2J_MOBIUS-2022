@@ -283,6 +283,25 @@
 			<value level="10">icon.bm_jewel_ssdmg_high_lv1_lavianrose</value>
 		</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="PAtk">
+				<amount>
+					<value level="6">1</value>
+					<value level="7">2</value>
+					<value level="8">3</value>
+					<value level="9">5</value>
+					<value level="10">7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>
+					<value level="9">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="59151" toLevel="10" name="Sapphire">
 		<!-- Spiritshot, Blessed Spiritshot and Beast Spiritshot damage +$s1. -->
@@ -299,6 +318,25 @@
 			<value level="10">icon.bm_jewel_spsdmg_high_lv1_lavianrose</value>
 		</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MAtk">
+				<amount>
+					<value level="6">2</value>
+					<value level="7">4</value>
+					<value level="8">6</value>
+					<value level="9">10</value>
+					<value level="10">14</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>
+					<value level="10">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="59152" toLevel="10" name="Emerald">
 		<!-- CON +1. -->
@@ -320,11 +358,22 @@
 		<!-- Activates 6 jewel slots. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i04</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="JewelSlot">
+				<amount>6</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="59154" toLevel="1" name="Lv. 5 Brooch - Additional Effect">
 		<!-- Inventory Slot +15. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i04</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="EnlargeSlot">
+				<amount>15</amount>
+				<type>INVENTORY_NORMAL</type>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="59155" toLevel="1" name="Greater Topaz - Special Ability">
 		<!-- Cancels up to 3 debuffs. -->

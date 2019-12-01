@@ -18,19 +18,57 @@ package org.l2jmobius.gameserver.enums;
 
 /**
  * @author Mobius
+ * @implNote Update by RobikBobik
  */
 public enum BroochJewel
 {
-	RUBY_LV1(38855, 17814, 0.01, true),
-	RUBY_LV2(38856, 17814, 0.035, true),
-	RUBY_LV3(38857, 17815, 0.075, true),
-	RUBY_LV4(38858, 17816, 0.125, true),
-	RUBY_LV5(38859, 17817, 0.2, true),
-	SHAPPHIRE_LV1(38927, 17818, 0.01, false),
-	SHAPPHIRE_LV2(38928, 17818, 0.035, false),
-	SHAPPHIRE_LV3(38929, 17819, 0.075, false),
-	SHAPPHIRE_LV4(38930, 17820, 0.125, false),
-	SHAPPHIRE_LV5(38931, 17821, 0.2, false);
+	// Working effect
+	RUBY_LV1(70451, 17817, 0.02, true),
+	RUBY_LV2(70452, 17817, 0.03, true),
+	RUBY_LV3(70453, 17817, 0.05, true),
+	RUBY_LV4(70454, 17817, 0.08, true),
+	RUBY_LV5(70455, 17817, 0.16, true),
+	GREATER_RUBY_LV1(71368, 17817, 0.17, true), // + 1% p atk
+	GREATER_RUBY_LV2(71369, 17817, 0.18, true), // + 2% p atk
+	GREATER_RUBY_LV3(71370, 17817, 0.19, true), // + 3% p atk
+	GREATER_RUBY_LV4(71371, 17817, 0.20, true), // + 5% p atk
+	GREATER_RUBY_LV5(71372, 17817, 0.20, true), // + 7% p atk + crit. p. rate +10%
+	
+	// Not show recharge effect - not used in classics maybe
+	RUBY_LV1_2(90328, 59150, 0.02, true),
+	RUBY_LV2_2(90329, 59150, 0.03, true),
+	RUBY_LV3_2(90330, 59150, 0.05, true),
+	RUBY_LV4_2(90331, 59150, 0.08, true),
+	RUBY_LV5_2(90332, 59150, 0.16, true),
+	GREATER_RUBY_LV1_2(91320, 59150, 0.17, true), // + 1% p atk
+	GREATER_RUBY_LV2_2(91321, 59150, 0.18, true), // + 2% p atk
+	GREATER_RUBY_LV3_2(91322, 59150, 0.19, true), // + 3% p atk
+	GREATER_RUBY_LV4_2(91323, 59150, 0.20, true), // + 5% p atk
+	GREATER_RUBY_LV5_2(91324, 59150, 0.20, true), // + 7% p atk + crit. p. rate +10%
+	
+	// Working effect
+	SHAPPHIRE_LV1(70456, 17821, 0.02, false),
+	SHAPPHIRE_LV2(70457, 17821, 0.03, false),
+	SHAPPHIRE_LV3(70458, 17821, 0.05, false),
+	SHAPPHIRE_LV4(70459, 17821, 0.08, false),
+	SHAPPHIRE_LV5(70460, 17821, 0.16, false),
+	GREATER_SHAPPHIRE_LV1(71373, 17821, 00.17, false), // + 2 % m attack
+	GREATER_SHAPPHIRE_LV2(71374, 17821, 00.18, false), // + 4 % m attack
+	GREATER_SHAPPHIRE_LV3(71375, 17821, 00.19, false), // + 6 % m attack
+	GREATER_SHAPPHIRE_LV4(71376, 17821, 00.20, false), // + 10 % m attack
+	GREATER_SHAPPHIRE_LV5(71377, 17821, 00.20, false), // + 14 % m attack + crit. m. rate +10%
+	
+	// Not show recharge effect - not used in classics maybe
+	SHAPPHIRE_LV1_2(90333, 59151, 0.02, false),
+	SHAPPHIRE_LV2_2(90334, 59151, 0.03, false),
+	SHAPPHIRE_LV3_2(90335, 59151, 0.05, false),
+	SHAPPHIRE_LV4_2(90336, 59151, 0.08, false),
+	SHAPPHIRE_LV5_2(90337, 59151, 0.16, false),
+	GREATER_SHAPPHIRE_LV1_2(91325, 59151, 0.17, false), // + 2 % m attack
+	GREATER_SHAPPHIRE_LV2_2(91326, 59151, 0.18, false), // + 4 % m attack
+	GREATER_SHAPPHIRE_LV3_2(91327, 59151, 0.19, false), // + 6 % m attack
+	GREATER_SHAPPHIRE_LV4_2(91328, 59151, 0.20, false), // + 10 % m attack
+	GREATER_SHAPPHIRE_LV5_2(91329, 59151, 0.20, false);// + 14 % m attack + crit. m. ata +10%
 	
 	private int _itemId;
 	private int _effectId;

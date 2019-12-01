@@ -875,19 +875,19 @@
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 	</skill>
-	<skill id="55466" toLevel="1" name="null">
-		<!-- null -->
+	<skill id="55466" toLevel="1" name="Put on Lv. 2 Brooch">
+		<!-- Brooch radiates bright light. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i01</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="55467" toLevel="1" name="null">
-		<!-- null -->
+	<skill id="55467" toLevel="1" name="Remove Lv. 2 Brooch">
+		<!-- Bright light fades. -->
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="55468" toLevel="1" name="null">
-		<!-- null -->
+	<skill id="55468" toLevel="1" name="Lv. 1 Brooch">
+		<!-- Activates 2 jewel slots. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -896,8 +896,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="55469" toLevel="1" name="null">
-		<!-- null -->
+	<skill id="55469" toLevel="1" name="Lv. 2 Brooch">
+		<!-- Activates 3 jewel slots. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i01</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -906,8 +906,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="55470" toLevel="2" name="null">
-		<!-- null -->
+	<skill id="55470" toLevel="2" name="Lv. 2 Brooch - Additional Effect">
+		<!-- Inventory Slot + 5. -->
 		<icon>
 			<value level="1">icon.etc_bm_brooch_lavianrose_i00</value>
 			<value level="2">icon.etc_bm_brooch_lavianrose_i01</value>
@@ -922,8 +922,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="55471" toLevel="5" name="null">
-		<!-- null -->
+	<skill id="55471" toLevel="5" name="Topaz">
+		<!-- Interrupts target's skill casting. In PvP, ignores CP and inflicts a fixed damage of $s1. -->
 		<icon>icon.etc_bm_jewel_topaz_i00</icon>
 		<operateType>A1</operateType>
 		<castRange>600</castRange>
@@ -932,155 +932,254 @@
 		<reuseDelay>30000</reuseDelay>
 		<effectPoint>-1000</effectPoint>
 	</skill>
-	<skill id="55472" toLevel="5" name="null">
-		<!-- null -->
+	<skill id="55472" toLevel="5" name="Vital Stone">
+		<!-- XP / SP +$s1, while hunting. -->
 		<icon>icon.etc_bm_jewel_vital</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="ExpModify">
+				<amount>
+					<value level="1">3</value>
+					<value level="2">4</value>
+					<value level="3">6</value>
+					<value level="4">8</value>
+					<value level="5">15</value>
+				</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>
+					<value level="1">3</value>
+					<value level="2">4</value>
+					<value level="3">6</value>
+					<value level="4">8</value>
+					<value level="5">15</value>
+				</amount>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="55473" toLevel="3" name="null">
-		<!-- null -->
+	<skill id="55473" toLevel="3" name="Vital Stone - Vital Wind">
+		<!-- For 15 sec., XP / SP +50%, while hunting. Cooldown: 20 min. -->
 		<icon>icon.etc_bm_jewel_vital</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<reuseDelay>1200000</reuseDelay>
 	</skill>
-	<skill id="55474" toLevel="5" name="null">
-		<!-- null -->
+	<skill id="55474" toLevel="5" name="Jade">
+		<!-- Atk. Spd./Casting Spd. +$s1. -->
 		<icon>icon.etc_bm_jewel_jade_i00</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MagicalAttackSpeed">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">4</value>
+					<value level="4">7</value>
+					<value level="5">14</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">4</value>
+					<value level="4">7</value>
+					<value level="5">14</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="55475" toLevel="5" name="null">
-		<!-- null -->
+	<skill id="55475" toLevel="5" name="Diamond">
+		<!-- P. Def. +$s1, when equipped. -->
 		<icon>icon.etc_bm_jewel_diamond_i00</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+		<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">11</value>
+					<value level="2">25</value>
+					<value level="3">50</value>
+					<value level="4">81</value>
+					<value level="5">130</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="DefenceCriticalDamage">
+				<amount>
+					<value level="4">4</value>
+					<value level="5">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="55476" toLevel="5" name="null">
-		<!-- null -->
+	<skill id="55476" toLevel="5" name="Pearl">
+		<!-- M. Def. +$s1. -->
 		<icon>icon.etc_bm_jewel_pearl_i00</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+		<effect name="MagicalDefence">
+				<amount>
+					<value level="1">7</value>
+					<value level="2">14</value>
+					<value level="3">28</value>
+					<value level="4">46</value>
+					<value level="5">74</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="DefenceMagicCriticalDamage">
+				<amount>
+					<value level="4">4</value>
+					<value level="5">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			</effects>
 	</skill>
-	<skill id="55477" toLevel="4" name="null">
-		<!-- null -->
+	<skill id="55477" toLevel="4" name="Ruby">
+		<!-- Damage received from Soulshots +$s1. -->
 		<icon>icon.etc_bm_jewel_ruby_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="55478" toLevel="2" name="null">
-		<!-- null -->
+	<skill id="55478" toLevel="2" name="Ruby">
+		<!-- Damage received from Soulshots +5%. -->
 		<icon>icon.etc_bm_jewel_ruby_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="55479" toLevel="2" name="null">
-		<!-- null -->
+	<skill id="55479" toLevel="2" name="Ruby">
+		<!-- Damage received from Soulshots +8%. -->
 		<icon>icon.etc_bm_jewel_ruby_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="55480" toLevel="2" name="null">
-		<!-- null -->
+	<skill id="55480" toLevel="2" name="Ruby">
+		<!-- Damage received from Soulshots +12%. -->
 		<icon>icon.etc_bm_jewel_ruby_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="55481" toLevel="4" name="null">
-		<!-- null -->
+	<skill id="55481" toLevel="4" name="Sapphire">
+		<!-- Damage received from Spiritshots +$s1. -->
 		<icon>icon.etc_bm_jewel_sapphire_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="55482" toLevel="2" name="null">
-		<!-- null -->
+	<skill id="55482" toLevel="2" name="Sapphire">
+		<!-- Damage received from Spiritshots +5%. -->
 		<icon>icon.etc_bm_jewel_sapphire_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="55483" toLevel="2" name="null">
-		<!-- null -->
+	<skill id="55483" toLevel="2" name="Sapphire">
+		<!-- Damage received from Spiritshots +8%. -->
 		<icon>icon.etc_bm_jewel_sapphire_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="55484" toLevel="2" name="null">
-		<!-- null -->
+	<skill id="55484" toLevel="2" name="Sapphire">
+		<!-- Damage received from Spiritshots +12%. -->
 		<icon>icon.etc_bm_jewel_sapphire_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="55485" toLevel="5" name="null">
-		<!-- null -->
+	<skill id="55485" toLevel="5" name="Garnet">
+		<!-- Stun / Pulling / Silence / Petrification / Fear Resistance +$s1. -->
 		<icon>icon.etc_bm_jewel_garnet</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceTrait">
+				<SHOCK>
+					<value level="1">3</value>
+					<value level="2">5</value>
+					<value level="3">8</value>
+					<value level="4">11</value>
+					<value level="5">20</value>
+				</SHOCK>
+				<PULL>
+					<value level="1">3</value>
+					<value level="2">5</value>
+					<value level="3">8</value>
+					<value level="4">11</value>
+					<value level="5">20</value>
+				</PULL>
+				<PARALYZE>
+					<value level="1">3</value>
+					<value level="2">5</value>
+					<value level="3">8</value>
+					<value level="4">11</value>
+					<value level="5">20</value>
+				</PARALYZE>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="55486" toLevel="2" name="null">
-		<!-- null -->
+	<skill id="55486" toLevel="2" name="Garnet - Special Ability">
+		<!-- Becomes invincible from debuffs for 5 seconds. -->
 		<icon>icon.etc_bm_jewel_garnet</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>300000</reuseDelay>
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="55487" toLevel="2" name="null">
-		<!-- null -->
+	<skill id="55487" toLevel="2" name="Ruby">
+		<!-- Damage from Beast Soulshot +$s1. -->
 		<icon>icon.etc_bm_jewel_ruby_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="55488" toLevel="1" name="null">
-		<!-- null -->
+	<skill id="55488" toLevel="1" name="Ruby">
 		<icon>icon.etc_bm_jewel_ruby_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="55489" toLevel="1" name="null">
-		<!-- null -->
+	<skill id="55489" toLevel="1" name="Ruby">
 		<icon>icon.etc_bm_jewel_ruby_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="55490" toLevel="1" name="null">
-		<!-- null -->
+	<skill id="55490" toLevel="1" name="Ruby">
 		<icon>icon.etc_bm_jewel_ruby_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="55491" toLevel="2" name="null">
-		<!-- null -->
+	<skill id="55491" toLevel="2" name="Sapphire">
+		<!-- Damage from Beast Spiritshot +$s1. -->
 		<icon>icon.etc_bm_jewel_ruby_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="55492" toLevel="1" name="null">
-		<!-- null -->
+	<skill id="55492" toLevel="1" name="Sapphire">
 		<icon>icon.etc_bm_jewel_ruby_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="55493" toLevel="1" name="null">
-		<!-- null -->
+	<skill id="55493" toLevel="1" name="Sapphire">
 		<icon>icon.etc_bm_jewel_ruby_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="55494" toLevel="1" name="null">
-		<!-- null -->
+	<skill id="55494" toLevel="1" name="Sapphire">
 		<icon>icon.etc_bm_jewel_ruby_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="55495" toLevel="1" name="null">
-		<!-- null -->
+	<skill id="55495" toLevel="1" name="Fortune Brooch">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>1000</reuseDelay>
 	</skill>
-	<skill id="55496" toLevel="1" name="null">
-		<!-- null -->
+	<skill id="55496" toLevel="1" name="Topaz Jewelry Box">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>1000</reuseDelay>
 	</skill>
-	<skill id="55497" toLevel="1" name="null">
-		<!-- null -->
+	<skill id="55497" toLevel="1" name="Garnet Jewelry Box">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>1000</reuseDelay>
 	</skill>
-	<skill id="55498" toLevel="1" name="null">
-		<!-- null -->
+	<skill id="55498" toLevel="1" name="Jade Jewelry Box">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>1000</reuseDelay>
 	</skill>
-	<skill id="55499" toLevel="1" name="null">
-		<!-- null -->
+	<skill id="55499" toLevel="1" name="Ruby Jewelry Box">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>

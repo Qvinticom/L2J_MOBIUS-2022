@@ -1420,7 +1420,21 @@
 															<xs:element name="id" type="xs:unsignedShort" />
 															<xs:element name="PHYSICAL_BLOCKADE" type="xs:unsignedByte" />
 															<xs:element name="KNOCKBACK" type="xs:unsignedByte" />
-															<xs:element name="PULL" type="xs:unsignedByte" />
+															<xs:element name="PULL">
+																<xs:complexType mixed="true">
+																	<xs:sequence minOccurs="0">
+																		<xs:element maxOccurs="unbounded" name="value">
+																			<xs:complexType>
+																				<xs:simpleContent>
+																					<xs:extension base="xs:unsignedByte">
+																						<xs:attribute name="level" type="xs:unsignedByte" use="required" />
+																					</xs:extension>
+																				</xs:simpleContent>
+																			</xs:complexType>
+																		</xs:element>
+																	</xs:sequence>
+																</xs:complexType>
+															</xs:element>
 															<xs:element name="DISARM" type="xs:unsignedByte" />
 															<xs:element name="BOSS" type="xs:unsignedByte" />
 															<xs:element name="AIRBIND" type="xs:unsignedByte" />

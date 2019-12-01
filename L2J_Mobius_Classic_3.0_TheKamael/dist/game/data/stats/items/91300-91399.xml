@@ -35,23 +35,31 @@
 		<!-- Activates 5 jewel slots when equipped. Inventory Slots +12. -->
 		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i05" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="brooch" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55712" level="1"/> <!-- Activates 5 jewel slots. -->
+			<skill id="55713" level="1"/> <!-- Inventory Slot +12. -->
+		</skills>
 	</item>
 	<item id="91304" name="Brooch" additionalName="Lv. 5" type="Armor">
 		<!-- Activates 6 jewel slots when equipped. Inventory Slots +15. Cannot be dropped. -->
 		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i06" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="brooch" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="59153" level="1"/> <!-- Activates 6 jewel slots. -->
+			<skill id="59154" level="1"/> <!-- Inventory Slot +15. -->
+		</skills>
 	</item>
 	<item id="91305" name="Greater Topaz" additionalName="Lv. 1" type="Armor">
 		<!-- When equipped, cancels casting of target. In PvP deals fixed damage 2500. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. Cannot be dropped. -->
@@ -118,6 +126,9 @@
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55485" level="6"/> <!-- Greater Garnet -->
+		</skills>
 	</item>
 	<item id="91311" name="Greater Garnet" additionalName="Lv. 2" type="Armor">
 		<!-- When equipped, Stun/ Pull/ Silence/ Paralysis/ Fear Resistance +24%. For 17 sec. grants immunity to debuffs in case of using skill. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
@@ -129,6 +140,9 @@
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55485" level="7"/> <!-- Greater Garnet -->
+		</skills>
 	</item>
 	<item id="91312" name="Greater Garnet" additionalName="Lv. 3" type="Armor">
 		<!-- When equipped, Stun/ Pull/ Silence/ Paralysis/ Fear Resistance +26%. For 18 sec. grants immunity to debuffs in case of using skill. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
@@ -140,6 +154,9 @@
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55485" level="8"/> <!-- Greater Garnet -->
+		</skills>
 	</item>
 	<item id="91313" name="Greater Garnet" additionalName="Lv. 4" type="Armor">
 		<!-- When equipped, Stun/ Pull/ Silence/ Paralysis/ Fear Resistance +30%. For 20 sec. grants immunity to debuffs in case of using skill. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
@@ -151,6 +168,9 @@
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55485" level="9"/> <!-- Greater Garnet -->
+		</skills>
 	</item>
 	<item id="91314" name="Greater Garnet" additionalName="Lv. 5" type="Armor">
 		<!-- When equipped, Stun/ Pull/ Silence/ Paralysis/ Fear/ Resistance +40%, Sleep/ Poison Resistance +10%. For 25 sec. grants immunity to debuffs in case of using skill. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. Cannot be dropped. -->
@@ -162,6 +182,9 @@
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55485" level="10"/> <!-- Greater Garnet -->
+		</skills>
 	</item>
 	<item id="91315" name="Greater Jade" additionalName="Lv. 1" type="Armor">
 		<!-- When equipped, Atk. Spd./ Casting Spd. +15%, Speed +1%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. Cannot be dropped. -->
@@ -173,6 +196,9 @@
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55474" level="6"/> <!-- Greater Jade -->
+		</skills>
 	</item>
 	<item id="91316" name="Greater Jade" additionalName="Lv. 2" type="Armor">
 		<!-- When equipped, Atk. Spd./ Casting Spd. +16%, Speed +2%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
@@ -184,6 +210,9 @@
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55474" level="7"/> <!-- Greater Jade -->
+		</skills>
 	</item>
 	<item id="91317" name="Greater Jade" additionalName="Lv. 3" type="Armor">
 		<!-- When equipped, Atk. Spd./ Casting Spd. +17%, Speed +3%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
@@ -195,6 +224,9 @@
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55474" level="8"/> <!-- Greater Jade -->
+		</skills>
 	</item>
 	<item id="91318" name="Greater Jade" additionalName="Lv. 4" type="Armor">
 		<!-- When equipped, Atk. Spd./ Casting Spd. +18%, Speed +5%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
@@ -206,6 +238,9 @@
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55474" level="9"/> <!-- Greater Jade -->
+		</skills>
 	</item>
 	<item id="91319" name="Greater Jade" additionalName="Lv. 5" type="Armor">
 		<!-- When equipped, Atk. Spd./ Casting Spd. +20%, Speed +7%, weapon attack Resistance +10%. Effect does not stack with additional jewels of the same type. Cannot be dropped. -->
@@ -217,6 +252,9 @@
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55474" level="10"/> <!-- Greater Jade -->
+		</skills>
 	</item>
 	<item id="91320" name="Greater Ruby" additionalName="Lv. 1" type="Armor">
 		<!-- When equipped, Soulshot, Blessed Soulshot and Beast Soulshot damage +17%, P. Atk. +1%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. Cannot be dropped. -->
@@ -228,6 +266,9 @@
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55477" level="6"/> <!-- Greater Ruby -->
+		</skills>
 	</item>
 	<item id="91321" name="Greater Ruby" additionalName="Lv. 2" type="Armor">
 		<!-- When equipped, Soulshot, Blessed Soulshot and Beast Soulshot damage +18%, P. Atk. +2%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
@@ -239,6 +280,9 @@
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55477" level="7"/> <!-- Greater Ruby -->
+		</skills>
 	</item>
 	<item id="91322" name="Greater Ruby" additionalName="Lv. 3" type="Armor">
 		<!-- When equipped, Soulshot, Blessed Soulshot and Beast Soulshot damage +19%, P. Atk. +3%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
@@ -250,6 +294,9 @@
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55477" level="8"/> <!-- Greater Ruby -->
+		</skills>
 	</item>
 	<item id="91323" name="Greater Ruby" additionalName="Lv. 4" type="Armor">
 		<!-- When equipped, Soulshot, Blessed Soulshot and Beast Soulshot damage +20%, P. Atk. +5%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
@@ -261,6 +308,9 @@
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55477" level="9"/> <!-- Greater Ruby -->
+		</skills>
 	</item>
 	<item id="91324" name="Greater Ruby" additionalName="Lv. 5" type="Armor">
 		<!-- When equipped, Soulshot, Blessed Soulshot and Beast Soulshot damage +20%, P. Atk. +7%, P. Critical Rate +5%. Effect does not stack with additional jewels of the same type. Cannot be dropped. -->
@@ -272,6 +322,9 @@
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55477" level="10"/> <!-- Greater Ruby -->
+		</skills>
 	</item>
 	<item id="91325" name="Greater Sapphire" additionalName="Lv. 1" type="Armor">
 		<!-- When equipped, Spiritshot, Blessed Spiritshot and Beast Spiritshot damage +17%, M. Atk. +2%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. Cannot be dropped. -->
@@ -283,6 +336,9 @@
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55481" level="6"/> <!-- Greater Sapphire -->
+		</skills>
 	</item>
 	<item id="91326" name="Greater Sapphire" additionalName="Lv. 2" type="Armor">
 		<!-- When equipped, Spiritshot, Blessed Spiritshot and Beast Spiritshot damage +18%, M. Atk. +4%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
@@ -294,6 +350,9 @@
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55481" level="7"/> <!-- Greater Sapphire -->
+		</skills>
 	</item>
 	<item id="91327" name="Greater Sapphire" additionalName="Lv. 3" type="Armor">
 		<!-- When equipped, Spiritshot, Blessed Spiritshot and Beast Spiritshot damage +19%, M. Atk. +6%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
@@ -305,6 +364,9 @@
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55481" level="8"/> <!-- Greater Sapphire -->
+		</skills>
 	</item>
 	<item id="91328" name="Greater Sapphire" additionalName="Lv. 4" type="Armor">
 		<!-- When equipped, Spiritshot, Blessed Spiritshot and Beast Spiritshot damage +20%, M. Atk. +10%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
@@ -316,6 +378,9 @@
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55481" level="9"/> <!-- Greater Sapphire -->
+		</skills>
 	</item>
 	<item id="91329" name="Greater Sapphire" additionalName="Lv. 5" type="Armor">
 		<!-- When equipped, Spiritshot, Blessed Spiritshot and Beast Spiritshot damage +20%, M. Atk. +14%, M. Critical Rate +10%. Effect does not stack with additional jewels of the same type. Cannot be dropped. -->
@@ -327,6 +392,9 @@
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55481" level="10"/> <!-- Greater Sapphire -->
+		</skills>
 	</item>
 	<item id="91330" name="Greater Diamond" additionalName="Lv. 1" type="Armor">
 		<!-- When equipped, P. Def. +150, Received P. Critical Damage -11%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. Cannot be dropped. -->
@@ -338,6 +406,9 @@
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55475" level="6"/> <!-- Greater Diamond -->
+		</skills>
 	</item>
 	<item id="91331" name="Greater Diamond" additionalName="Lv. 2" type="Armor">
 		<!-- When equipped, P. Def. +180, Received P. Critical Damage -12%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
@@ -349,6 +420,9 @@
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55475" level="7"/> <!-- Greater Diamond -->
+		</skills>
 	</item>
 	<item id="91332" name="Greater Diamond" additionalName="Lv. 3" type="Armor">
 		<!-- When equipped, P. Def. +220, Received P. Critical Damage -14%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
@@ -360,6 +434,9 @@
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55475" level="8"/> <!-- Greater Diamond -->
+		</skills>
 	</item>
 	<item id="91333" name="Greater Diamond" additionalName="Lv. 4" type="Armor">
 		<!-- When equipped, P. Def. +280, Received P. Critical Damage -16%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
@@ -371,6 +448,9 @@
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55475" level="9"/> <!-- Greater Diamond -->
+		</skills>
 	</item>
 	<item id="91334" name="Greater Diamond" additionalName="Lv. 5" type="Armor">
 		<!-- When equipped, P. Def. +400, Received P. Critical Damage -20%, chance of receiving P. Critical Attack -10%. Effect does not stack with additional jewels of the same type. Cannot be dropped. -->
@@ -382,6 +462,9 @@
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55475" level="10"/> <!-- Greater Diamond -->
+		</skills>
 	</item>
 	<item id="91335" name="Greater Pearl" additionalName="Lv. 1" type="Armor">
 		<!-- When equipped, M. Def. +85, Received M. Critical Damage -11%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. Cannot be dropped. -->
@@ -393,6 +476,9 @@
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55476" level="6"/> <!-- Greater Pearl -->
+		</skills>
 	</item>
 	<item id="91336" name="Greater Pearl" additionalName="Lv. 2" type="Armor">
 		<!-- When equipped, M. Def. +100, Received M. Critical Damage -12%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
@@ -404,6 +490,9 @@
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55476" level="7"/> <!-- Greater Pearl -->
+		</skills>
 	</item>
 	<item id="91337" name="Greater Pearl" additionalName="Lv. 3" type="Armor">
 		<!-- When equipped, M. Def. +125, Received M. Critical Damage -14%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
@@ -415,6 +504,9 @@
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55476" level="8"/> <!-- Greater Pearl -->
+		</skills>
 	</item>
 	<item id="91338" name="Greater Pearl" additionalName="Lv. 4" type="Armor">
 		<!-- When equipped, M. Def. +160, Received M. Critical Damage -16%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
@@ -426,6 +518,9 @@
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55476" level="9"/> <!-- Greater Pearl -->
+		</skills>
 	</item>
 	<item id="91339" name="Greater Pearl" additionalName="Lv. 5" type="Armor">
 		<!-- When equipped, M. Def. +250, Received M. Critical Damage -20%, chance of receiving M. Critical Attack -10%. Effect does not stack with additional jewels of the same type. Cannot be dropped. -->
@@ -437,6 +532,9 @@
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55476" level="10"/> <!-- Greater Pearl -->
+		</skills>
 	</item>
 	<item id="91340" name="Greater Vital Stone" additionalName="Lv. 1" type="Armor">
 		<!-- When equipped, Acquired XP/ SP +17% during effect of Sayha Grace and while hunting, Sayha Grace Consumption -30%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. Cannot be dropped. -->
@@ -448,6 +546,9 @@
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55472" level="6"/> <!-- Greater Vital Stone -->
+		</skills>
 	</item>
 	<item id="91341" name="Greater Vital Stone" additionalName="Lv. 2" type="Armor">
 		<!-- When equipped, Acquired XP/ SP +19% during effect of Sayha Grace and while hunting, Sayha Grace Consumption -32%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
@@ -459,6 +560,9 @@
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55472" level="7"/> <!-- Greater Vital Stone -->
+		</skills>
 	</item>
 	<item id="91342" name="Greater Vital Stone" additionalName="Lv. 3" type="Armor">
 		<!-- When equipped, Acquired XP/ SP +21% during effect of Sayha Grace and while hunting, Sayha Grace Consumption -32%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
@@ -470,6 +574,9 @@
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55472" level="8"/> <!-- Greater Vital Stone -->
+		</skills>
 	</item>
 	<item id="91343" name="Greater Vital Stone" additionalName="Lv. 4" type="Armor">
 		<!-- When equipped, Acquired XP/ SP +23% during effect of Sayha Grace and while hunting, Sayha Grace Consumption -32%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
@@ -481,6 +588,9 @@
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55472" level="9"/> <!-- Greater Vital Stone -->
+		</skills>
 	</item>
 	<item id="91344" name="Greater Vital Stone" additionalName="Lv. 5" type="Armor">
 		<!-- When equipped, Acquired XP/ SP +30% during effect of Sayha Grace and while hunting, Acquired XP +50% for elemental monsters, Sayha Grace Consumption -35%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. Cannot be dropped. -->
@@ -492,6 +602,9 @@
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="55472" level="10"/> <!-- Greater Vital Stone -->
+		</skills>
 	</item>
 	<item id="91345" name="Greater Aquamarine" additionalName="Lv. 1" type="Armor">
 		<!-- When equipped, Max. MP +2%, when using a skill there is a chance of recovering 60 MP. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. Cannot be dropped. -->
