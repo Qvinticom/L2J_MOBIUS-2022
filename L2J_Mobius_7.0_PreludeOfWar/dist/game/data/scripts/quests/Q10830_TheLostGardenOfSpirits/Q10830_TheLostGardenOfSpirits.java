@@ -16,6 +16,7 @@
  */
 package quests.Q10830_TheLostGardenOfSpirits;
 
+import org.l2jmobius.gameserver.enums.Faction;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -49,7 +50,7 @@ public class Q10830_TheLostGardenOfSpirits extends Quest
 	private static final int UNSTABLE_SPIRITS_ENERGY = 45821;
 	private static final int SOE = 46158;
 	// Misc
-	private static final int MIN_LEVEL = 100;
+	private static final int MIN_LEVEL = 102;
 	
 	public Q10830_TheLostGardenOfSpirits()
 	{
@@ -60,6 +61,7 @@ public class Q10830_TheLostGardenOfSpirits extends Quest
 		registerQuestItems(UNSTABLE_SPIRITS_ENERGY);
 		addCondMinLevel(MIN_LEVEL, "34055-00.htm");
 		addCondCompletedQuest(Q10829_InSearchOfTheCause.class.getSimpleName(), "34055-00.htm");
+		addFactionLevel(Faction.UNWORLDLY_VISITORS, 1, "34055-00.htm");
 	}
 	
 	@Override
@@ -89,7 +91,7 @@ public class Q10830_TheLostGardenOfSpirits extends Quest
 			case "34055-07.html":
 			{
 				giveItems(player, SOE, 1);
-				addExpAndSp(player, 1637472704L, 14237820);
+				addExpAndSp(player, 44442855900L, 44442720);
 				qs.exitQuest(false, true);
 				htmltext = event;
 				break;
