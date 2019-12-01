@@ -25,7 +25,6 @@ import org.l2jmobius.gameserver.model.holders.ItemHolder;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
-import org.l2jmobius.gameserver.util.Util;
 
 import quests.Q10823_ExaltedOneWhoShattersTheLimit.Q10823_ExaltedOneWhoShattersTheLimit;
 
@@ -239,6 +238,7 @@ public class Q10824_ConfrontingTheGreatestDanger extends Quest
 		}
 		return htmltext;
 	}
+	
 	@Override
 	public String onKill(Npc npc, PlayerInstance player, boolean isSummon)
 	{

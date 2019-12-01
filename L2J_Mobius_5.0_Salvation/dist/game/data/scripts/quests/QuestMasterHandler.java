@@ -212,6 +212,7 @@ import quests.Q00906_TheCallOfValakas.Q00906_TheCallOfValakas;
 import quests.Q00923_ShinedustExtraction.Q00923_ShinedustExtraction;
 import quests.Q00926_30DaySearchOperation.Q00926_30DaySearchOperation;
 import quests.Q00928_100DaySubjugationOperation.Q00928_100DaySubjugationOperation;
+import quests.Q00931_MemoriesOfTheWind.Q00931_MemoriesOfTheWind;
 import quests.Q00937_ToReviveTheFishingGuild.Q00937_ToReviveTheFishingGuild;
 import quests.Q10273_GoodDayToFly.Q10273_GoodDayToFly;
 import quests.Q10274_CollectingInTheAir.Q10274_CollectingInTheAir;
@@ -733,7 +734,7 @@ public class QuestMasterHandler
 		Q00928_100DaySubjugationOperation.class,
 		Q00929_SeekerRescue.class, // TODO: Not done.
 		Q00930_DisparagingThePhantoms.class, // TODO: Not done.
-		Q00931_MemoriesOfTheWind.class, // TODO: Not done.
+		Q00931_MemoriesOfTheWind.class,
 		Q00932_SayhasEnergy.class, // TODO: Not done.
 		Q00937_ToReviveTheFishingGuild.class,
 		Q00985_AdventureGuildsSpecialRequestLv1.class, // TODO: Not done.
