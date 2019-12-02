@@ -40,7 +40,7 @@
 		<set name="trait" val="SHOCK" />
 	</skill>
 	<skill id="5803" levels="3" name="Green Chili">
-		<table name="#effectPoints">-659 -669 -676 </table>
+		<table name="#effectPoints">-659 -669 -676</table>
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -50,7 +50,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5804" levels="3" name="Fireball">
-		<table name="#effectPoints">-635 -659 -676 </table>
+		<table name="#effectPoints">-635 -659 -676</table>
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -151,7 +151,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5814" levels="3" name="Self-Destruction">
-		<table name="#effectPoints">-635 -659 -676 </table>
+		<table name="#effectPoints">-635 -659 -676</table>
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="magicLvl" val="70" />
 		<set name="operateType" val="A1" />
@@ -242,10 +242,10 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5826" levels="3" name="Fire Breath">
-		<table name="#effectPoints">-684 -687 -689 </table>
-		<table name="#magicLvl">83 84 85 </table>
-		<table name="#mpConsume">59 60 60 </table>
-		<table name="#power">60 61 61 </table>
+		<table name="#effectPoints">-684 -687 -689</table>
+		<table name="#magicLvl">83 84 85</table>
+		<table name="#mpConsume">59 60 60</table>
+		<table name="#power">60 61 61</table>
 		<set name="affectLimit" val="5-15" />
 		<set name="affectRange" val="600" />
 		<set name="castRange" val="600" />
@@ -268,10 +268,10 @@
 		</for>
 	</skill>
 	<skill id="5827" levels="6" name="Fireball">
-		<table name="#magicLvl">75 77 79 81 83 85 </table>
-		<table name="#mpConsume">55 56 58 58 59 60 </table>
-		<table name="#mpInitialConsume">14 14 15 15 15 15 </table>
-		<table name="#power">55 56 58 59 60 61 </table>
+		<table name="#magicLvl">75 77 79 81 83 85</table>
+		<table name="#mpConsume">55 56 58 58 59 60</table>
+		<table name="#mpInitialConsume">14 14 15 15 15 15</table>
+		<table name="#power">55 56 58 59 60 61</table>
 		<set name="affectLimit" val="10-10" />
 		<set name="affectRange" val="150" />
 		<set name="castRange" val="600" />
@@ -293,11 +293,11 @@
 		</for>
 	</skill>
 	<skill id="5828" levels="6" name="Unholy Flare">
-		<table name="#effectPoints">-659 -666 -673 -681 -684 -689 </table>
-		<table name="#magicLvl">75 77 79 81 83 85 </table>
-		<table name="#mpConsume">55 56 58 58 59 60 </table>
-		<table name="#mpInitialConsume">14 14 15 15 15 15 </table>
-		<table name="#power">55 56 58 59 60 61 </table>
+		<table name="#effectPoints">-659 -666 -673 -681 -684 -689</table>
+		<table name="#magicLvl">75 77 79 81 83 85</table>
+		<table name="#mpConsume">55 56 58 58 59 60</table>
+		<table name="#mpInitialConsume">14 14 15 15 15 15</table>
+		<table name="#power">55 56 58 59 60 61</table>
 		<set name="castRange" val="150" />
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="650" />
@@ -317,11 +317,11 @@
 		</for>
 	</skill>
 	<skill id="5829" levels="6" name="Fire Flare">
-		<table name="#effectPoints">-659 -666 -673 -681 -684 -689 </table>
-		<table name="#magicLvl">75 77 79 81 83 85 </table>
-		<table name="#mpConsume">55 56 58 58 59 60 </table>
-		<table name="#mpInitialConsume">14 14 15 15 15 15 </table>
-		<table name="#power">55 56 58 59 60 61 </table>
+		<table name="#effectPoints">-659 -666 -673 -681 -684 -689</table>
+		<table name="#magicLvl">75 77 79 81 83 85</table>
+		<table name="#mpConsume">55 56 58 58 59 60</table>
+		<table name="#mpInitialConsume">14 14 15 15 15 15</table>
+		<table name="#power">55 56 58 59 60 61</table>
 		<set name="castRange" val="150" />
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="650" />
@@ -641,8 +641,8 @@
 		</for>
 	</skill>
 	<skill id="5845" levels="12" name="NPC Trigger Bleed">
-		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<table name="#skillLevel">1 2 3 4 5 6 7 8 9 10 11 12 </table>
+		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#skillLevel">1 2 3 4 5 6 7 8 9 10 11 12</table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<for>
@@ -658,9 +658,9 @@
 	</skill>
 	<skill id="5846" levels="12" name="Bleed">
 		<!-- HP is decreased momentarily from bleeding. Effect 2. -->
-		<table name="#abnormalLvls">2 3 4 5 6 7 8 8 9 9 10 10 </table>
-		<table name="#dot">18 25 34 44 54 62 67 67 70 70 71 71 </table>
-		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95 </table>
+		<table name="#abnormalLvls">2 3 4 5 6 7 8 8 9 9 10 10</table>
+		<table name="#dot">18 25 34 44 54 62 67 67 70 70 71 71</table>
+		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="BLEEDING" />
@@ -955,8 +955,8 @@
 	</skill>
 	<skill id="5866" levels="10" name="Soul Worm">
 		<!-- Mental blow is received. Current MP, Max MP, and MP recovery bonus are decreased. Inflicted with poison and HP is temporarily decreased. Effect 8. -->
-		<table name="#abnormalLvls">8 8 8 9 9 9 9 10 10 10 </table>
-		<table name="#magicLvl">76 77 78 79 80 81 82 83 84 85 </table>
+		<table name="#abnormalLvls">8 8 8 9 9 9 9 10 10 10</table>
+		<table name="#magicLvl">76 77 78 79 80 81 82 83 84 85</table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="POISON" />
@@ -975,8 +975,8 @@
 	</skill>
 	<skill id="5867" levels="10" name="Soul Worm">
 		<!-- Mental blow is received. Current MP, Max MP, and MP recovery bonus are decreased. Inflicted with poison and HP is temporarily decreased. Effect 8. -->
-		<table name="#abnormalLvls">8 8 8 9 9 9 9 10 10 10 </table>
-		<table name="#magicLvl">76 77 78 79 80 81 82 83 84 85 </table>
+		<table name="#abnormalLvls">8 8 8 9 9 9 9 10 10 10</table>
+		<table name="#magicLvl">76 77 78 79 80 81 82 83 84 85</table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="POISON" />
@@ -998,8 +998,8 @@
 	</skill>
 	<skill id="5868" levels="10" name="Soul Worm">
 		<!-- Mental blow is received. Current MP, Max MP, and MP recovery bonus are decreased. Inflicted with poison and HP is temporarily decreased. Effect 8. -->
-		<table name="#abnormalLvls">8 8 8 9 9 9 9 10 10 10 </table>
-		<table name="#magicLvl">76 77 78 79 80 81 82 83 84 85 </table>
+		<table name="#abnormalLvls">8 8 8 9 9 9 9 10 10 10</table>
+		<table name="#magicLvl">76 77 78 79 80 81 82 83 84 85</table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="POISON" />
@@ -1019,8 +1019,8 @@
 	</skill>
 	<skill id="5869" levels="10" name="Soul Worm">
 		<!-- Mental blow is received. Current MP, Max MP, and MP recovery bonus are decreased. Inflicted with poison and HP is temporarily decreased. Effect 8. -->
-		<table name="#abnormalLvls">8 8 8 9 9 9 9 10 10 10 </table>
-		<table name="#magicLvl">76 77 78 79 80 81 82 83 84 85 </table>
+		<table name="#abnormalLvls">8 8 8 9 9 9 9 10 10 10</table>
+		<table name="#magicLvl">76 77 78 79 80 81 82 83 84 85</table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="POISON" />
@@ -1040,8 +1040,8 @@
 	</skill>
 	<skill id="5870" levels="10" name="Flash Worm">
 		<!-- Physical blow is received. P. Def., Max HP, and HP regeneration bonus are decreased. Inflicted with bleed and HP is temporarily decreased. Effect 8. -->
-		<table name="#abnormalLvls">8 8 8 9 9 9 9 10 10 10 </table>
-		<table name="#magicLvl">76 77 78 79 80 81 82 83 84 85 </table>
+		<table name="#abnormalLvls">8 8 8 9 9 9 9 10 10 10</table>
+		<table name="#magicLvl">76 77 78 79 80 81 82 83 84 85</table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="BLEEDING" />
@@ -1059,8 +1059,8 @@
 	</skill>
 	<skill id="5871" levels="10" name="Flash Worm">
 		<!-- Physical blow is received. P. Def., Max HP, and HP regeneration bonus are decreased. Inflicted with bleed and HP is temporarily decreased. Effect 8. -->
-		<table name="#abnormalLvls">8 8 8 9 9 9 9 10 10 10 </table>
-		<table name="#magicLvl">76 77 78 79 80 81 82 83 84 85 </table>
+		<table name="#abnormalLvls">8 8 8 9 9 9 9 10 10 10</table>
+		<table name="#magicLvl">76 77 78 79 80 81 82 83 84 85</table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="BLEEDING" />
@@ -1080,8 +1080,8 @@
 	</skill>
 	<skill id="5872" levels="10" name="Flash Worm">
 		<!-- Physical blow is received. P. Def., Max HP, and HP regeneration bonus are decreased. Inflicted with bleed and HP is temporarily decreased. Effect 8. -->
-		<table name="#abnormalLvls">8 8 8 9 9 9 9 10 10 10 </table>
-		<table name="#magicLvl">76 77 78 79 80 81 82 83 84 85 </table>
+		<table name="#abnormalLvls">8 8 8 9 9 9 9 10 10 10</table>
+		<table name="#magicLvl">76 77 78 79 80 81 82 83 84 85</table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="BLEEDING" />
@@ -1100,7 +1100,7 @@
 	</skill>
 	<skill id="5873" levels="5" name="Death Worm">
 		<!-- Life force is being sapped out by the Leech of Darkness. -->
-		<table name="#abnormalLvls">1 2 3 4 5 </table>
+		<table name="#abnormalLvls">1 2 3 4 5</table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="DEATHWORM" />
@@ -1116,7 +1116,7 @@
 	</skill>
 	<skill id="5874" levels="5" name="Death Worm">
 		<!-- Life force is being sapped out by the Leech of Darkness. -->
-		<table name="#abnormalLvls">1 2 3 4 5 </table>
+		<table name="#abnormalLvls">1 2 3 4 5</table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="DEATHWORM" />
@@ -1133,8 +1133,8 @@
 	</skill>
 	<skill id="5875" levels="5" name="Death Worm">
 		<!-- Life force is being sapped out by the Leech of Darkness. -->
-		<table name="#abnormalLvls">1 2 3 4 5 </table>
-		<table name="#affectLimits">0-0 10-10 10-10 10-10 10-10 </table>
+		<table name="#abnormalLvls">1 2 3 4 5</table>
+		<table name="#affectLimits">0-0 10-10 10-10 10-10 10-10</table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="DEATHWORM" />
@@ -1263,8 +1263,8 @@
 	</skill>
 	<skill id="5882" levels="2" name="Weakened Pommel">
 		<!-- A state of instant paralysis caused by the shock -->
-		<table name="#magicLvl">79 83 </table>
-		<table name="#mpConsume">79 82 </table>
+		<table name="#magicLvl">79 83</table>
+		<table name="#mpConsume">79 82</table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="STUN" />
@@ -1320,7 +1320,7 @@
 	</skill>
 	<skill id="5884" levels="2" name="Weakened Sweep">
 		<!-- Equipment are removed. Unable to use weapons while the effect lasts. -->
-		<table name="#power">2319 18664 </table>
+		<table name="#power">2319 18664</table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="DISARM" />
@@ -1351,8 +1351,8 @@
 	</skill>
 	<skill id="5885" levels="2" name="Weakened Sweep">
 		<!-- A state of instant paralysis caused by the shock -->
-		<table name="#icons">icon.skill0100 icon.skill0000 </table>
-		<table name="#power">2319 18664 </table>
+		<table name="#icons">icon.skill0100 icon.skill0000</table>
+		<table name="#power">2319 18664</table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="STUN" />
@@ -1428,8 +1428,8 @@
 	</skill>
 	<skill id="5888" levels="2" name="Earth Shaker">
 		<!-- Temporarily cannot move due to shock and has lost the target. -->
-		<table name="#magicLvl">83 85 </table>
-		<table name="#mpConsume">82 83 </table>
+		<table name="#magicLvl">83 85</table>
+		<table name="#mpConsume">82 83</table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="STUN" />
@@ -1504,7 +1504,7 @@
 	</skill>
 	<skill id="5892" levels="2" name="Cunning Coercion">
 		<!-- Makes the enemy show his back, removes its desire for attack, and cancels its target state. Temporarily inflicts mental shock on the enemy. -->
-		<table name="#hitTime">1000 11470 </table>
+		<table name="#hitTime">1000 11470</table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="STUN" />
@@ -1606,7 +1606,7 @@
 		</for>
 	</skill>
 	<skill id="5896" levels="2" name="Soulless">
-		<table name="#hitTime">2000 22940 </table>
+		<table name="#hitTime">2000 22940</table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="MA_UP" />
@@ -1648,8 +1648,8 @@
 	</skill>
 	<skill id="5898" levels="2" name="Blast of Anger">
 		<!-- P. Def., M. Def., Evasion, and Speed are decreased. -->
-		<table name="#hitTime">2000 22940 </table>
-		<table name="#mpConsume">140 150 </table>
+		<table name="#hitTime">2000 22940</table>
+		<table name="#mpConsume">140 150</table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="SPEED_DOWN" />
@@ -1678,7 +1678,7 @@
 		</for>
 	</skill>
 	<skill id="5899" levels="2" name="Burst of Pain">
-		<table name="#hitTime">2000 22940 </table>
+		<table name="#hitTime">2000 22940</table>
 		<set name="affectLimit" val="5-15" />
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-100" />

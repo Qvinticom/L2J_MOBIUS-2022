@@ -11,8 +11,8 @@
 	</skill>
 	<skill id="6103" levels="5" name="Showdown with the Turkey - 1 Win">
 		<!-- 1st win. -->
-		<table name="#abnormalLvls"> 1 2 3 4 5 </table>
-		<table name="#icons"> icon.xmas_pcwin1_i00 icon.xmas_pcwin2_i00 icon.xmas_pcwin3_i00 icon.xmas_pcwin4_i00 icon.xmas_pcwin5_i00 </table>
+		<table name="#abnormalLvls">1 2 3 4 5</table>
+		<table name="#icons">icon.xmas_pcwin1_i00 icon.xmas_pcwin2_i00 icon.xmas_pcwin3_i00 icon.xmas_pcwin4_i00 icon.xmas_pcwin5_i00</table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="EVENT_WIN" />
@@ -175,8 +175,8 @@
 	</skill>
 	<skill id="6117" levels="3" name="Choice - Scissors">
 		<!-- You have selected Scissors. You cannot move for 30 seconds. -->
-		<table name="#abnormalLvls"> 1 2 3 </table>
-		<table name="#icons"> icon.xmas_gawi_i00 icon.xmas_bawi_i00 icon.xmas_bo_i00 </table>
+		<table name="#abnormalLvls">1 2 3</table>
+		<table name="#icons">icon.xmas_gawi_i00 icon.xmas_bawi_i00 icon.xmas_bo_i00</table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="EVENT_GAWI" />
@@ -517,7 +517,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6140" levels="3" name="Bog Stride">
-		<table name="#abnormalLvls"> 1 2 3 </table>
+		<table name="#abnormalLvls">1 2 3</table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="SPEED_DOWN" />
@@ -541,9 +541,9 @@
 	</skill>
 	<skill id="6142" levels="3" name="Tar Spite">
 		<!-- Covered in hot and sticky tar. Movement is impaired. Due to the burning tar, for 5 minbutes, moving speed is decreased 30% and P. Def. and evasion are decreased 10%. -->
-		<table name="#abnormalLvls"> 1 2 3 </table>
-		<table name="#pDef"> 0.9 0.8 0.7 </table>
-		<table name="#speed"> 0.7 0.4 0.1 </table>
+		<table name="#abnormalLvls">1 2 3</table>
+		<table name="#pDef">0.9 0.8 0.7</table>
+		<table name="#speed">0.7 0.4 0.1</table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="SPEED_DOWN" />
@@ -678,8 +678,8 @@
 	</skill>
 	<skill id="6150" levels="4" name="Kasha's Curse">
 		<!-- Kasha's Curse. Atk. Spd. increases. -->
-		<table name="#icons"> icon.skill6151_1 icon.skill6151_2 icon.skill6151_3 icon.skill6151_4 </table>
-		<table name="#pAtkSpd"> 1.02 1.04 1.06 1.08 </table>
+		<table name="#icons">icon.skill6151_1 icon.skill6151_2 icon.skill6151_3 icon.skill6151_4</table>
+		<table name="#pAtkSpd">1.02 1.04 1.06 1.08</table>
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="11" />
 		<set name="abnormalType" val="PD_DOWN" />
@@ -698,7 +698,7 @@
 	</skill>
 	<skill id="6151" levels="4" name="Kasha's Curse">
 		<!-- Kasha's Curse. Atk. Spd. increases and P. Def. decreases. -->
-		<table name="#icons"> icon.skill6151_1 icon.skill6151_2 icon.skill6151_3 icon.skill6151_4 </table>
+		<table name="#icons">icon.skill6151_1 icon.skill6151_2 icon.skill6151_3 icon.skill6151_4</table>
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="11" />
 		<set name="abnormalType" val="PD_DOWN" />
@@ -711,8 +711,8 @@
 	</skill>
 	<skill id="6152" levels="4" name="Kasha's Yearning">
 		<!-- Kasha's Yearning. P. Atk. increases. -->
-		<table name="#icons"> icon.skill6152_1 icon.skill6152_2 icon.skill6152_3 icon.skill6152_4 </table>
-		<table name="#pAtk"> 1.02 1.04 1.06 1.08 </table>
+		<table name="#icons">icon.skill6152_1 icon.skill6152_2 icon.skill6152_3 icon.skill6152_4</table>
+		<table name="#pAtk">1.02 1.04 1.06 1.08</table>
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="11" />
 		<set name="abnormalType" val="SIGNAL_A" />
@@ -731,7 +731,7 @@
 	</skill>
 	<skill id="6153" levels="4" name="Kasha's Yearning">
 		<!-- Kasha's Yearning. P. Atk. increases and P. Def. decreases. -->
-		<table name="#icons"> icon.skill6152_1 icon.skill6152_2 icon.skill6152_3 icon.skill6152_4 </table>
+		<table name="#icons">icon.skill6152_1 icon.skill6152_2 icon.skill6152_3 icon.skill6152_4</table>
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="11" />
 		<set name="abnormalType" val="SIGNAL_A" />
@@ -744,8 +744,8 @@
 	</skill>
 	<skill id="6154" levels="4" name="Kasha's Despair">
 		<!-- Kasha's Despair. Critical rate increases. -->
-		<table name="#icons"> icon.skill6154_1 icon.skill6154_2 icon.skill6154_3 icon.skill6154_4 </table>
-		<table name="#rCrit"> 150 200 520 750 </table>
+		<table name="#icons">icon.skill6154_1 icon.skill6154_2 icon.skill6154_3 icon.skill6154_4</table>
+		<table name="#rCrit">150 200 520 750</table>
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="11" />
 		<set name="abnormalType" val="MAX_HP_DOWN" />
@@ -766,7 +766,7 @@
 	</skill>
 	<skill id="6155" levels="4" name="Kasha's Despair">
 		<!-- Kasha's Despair. Critical rate increases and P. Def. decreases. -->
-		<table name="#icons"> icon.skill6154_1 icon.skill6154_2 icon.skill6154_3 icon.skill6154_4 </table>
+		<table name="#icons">icon.skill6154_1 icon.skill6154_2 icon.skill6154_3 icon.skill6154_4</table>
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="11" />
 		<set name="abnormalType" val="MAX_HP_DOWN" />
@@ -1156,10 +1156,10 @@
 	</skill>
 	<skill id="6199" levels="7" name="Tail Strike">
 		<!-- Tail Strike -->
-		<table name="#effectPoints"> -1044 -1130 -1206 -1268 -1315 -1349 -1349 </table>
-		<table name="#magicLvl"> 55 60 65 70 75 80 85 </table>
-		<table name="#mpConsume"> 109 121 131 142 151 159 165 </table>
-		<table name="#power"> 1832 2272 2751 3252 3752 4224 4640 </table>
+		<table name="#effectPoints">-1044 -1130 -1206 -1268 -1315 -1349 -1349</table>
+		<table name="#magicLvl">55 60 65 70 75 80 85</table>
+		<table name="#mpConsume">109 121 131 142 151 159 165</table>
+		<table name="#power">1832 2272 2751 3252 3752 4224 4640</table>
 		<set name="castRange" val="150" />
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="500" />

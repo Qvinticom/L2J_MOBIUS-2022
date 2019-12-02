@@ -267,8 +267,8 @@
 	</skill>
 	<skill id="8312" levels="2" name="Special Ability Cheap Shot">
 		<!-- MP consumption is decreased. -->
-		<table name="#magicLvl"> 80 84 </table>
-		<table name="#MpConsumeRate"> 0.96 0.92 </table>
+		<table name="#magicLvl">80 84</table>
+		<table name="#MpConsumeRate">0.96 0.92</table>
 		<set name="icon" val="icon.skill0198" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
@@ -675,8 +675,8 @@
 	</skill>
 	<skill id="8338" levels="4" name="Low-grade Magic Rune Clip Iron Belt">
 		<!-- Increases HP regeneration when the belt is equipped. -->
-		<table name="#hp"> 0.4 1 1.4 2 </table>
-		<table name="#hpsit"> 0.3 0.75 1.05 1.5 </table>
+		<table name="#hp">0.4 1 1.4 2</table>
+		<table name="#hpsit">0.3 0.75 1.05 1.5</table>
 		<set name="icon" val="icon.skill0332" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -692,8 +692,8 @@
 	</skill>
 	<skill id="8339" levels="4" name="Low-grade Magic Rune Clip Mithril Belt">
 		<!-- Increases HP regeneration when the belt is equipped. -->
-		<table name="#hp"> 0.78 1.95 2.73 3.9 </table>
-		<table name="#hpsit"> 0.6 1.5 2.1 3 </table>
+		<table name="#hp">0.78 1.95 2.73 3.9</table>
+		<table name="#hpsit">0.6 1.5 2.1 3</table>
 		<set name="icon" val="icon.skill0332" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -709,8 +709,8 @@
 	</skill>
 	<skill id="8340" levels="4" name="Low-grade Magic Rune Clip Iron Belt">
 		<!-- Increases MP regeneration when the belt is equipped. -->
-		<table name="#mp"> 0.14 0.35 0.49 0.7 </table>
-		<table name="#mpsit"> 0.16 0.4 0.56 0.8 </table>
+		<table name="#mp">0.14 0.35 0.49 0.7</table>
+		<table name="#mpsit">0.16 0.4 0.56 0.8</table>
 		<set name="icon" val="icon.skill0332" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -726,7 +726,7 @@
 	</skill>
 	<skill id="8341" levels="4" name="Low-grade Magic Rune Clip Mithril Belt">
 		<!-- Increases MP regeneration when the belt is equipped. -->
-		<table name="#amount"> 0.3 0.75 1.05 1.5 </table>
+		<table name="#amount">0.3 0.75 1.05 1.5</table>
 		<set name="icon" val="icon.skill0332" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -742,7 +742,7 @@
 	</skill>
 	<skill id="8342" levels="4" name="Low-grade Magic Ornament Iron Belt">
 		<!-- Ordinary damage is increase during PVP when the belt is equipped. -->
-		<table name="#pvp"> 1.006 1.015 1.021 1.03 </table>
+		<table name="#pvp">1.006 1.015 1.021 1.03</table>
 		<set name="icon" val="icon.skill0332" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -755,7 +755,7 @@
 	</skill>
 	<skill id="8343" levels="4" name="Low-grade Magic Ornament Iron Belt">
 		<!-- Skill/magic damage is increased during PVP when the belt is equipped. -->
-		<table name="#pvp"> 1.006 1.015 1.021 1.03 </table>
+		<table name="#pvp">1.006 1.015 1.021 1.03</table>
 		<set name="icon" val="icon.skill0332" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -769,7 +769,7 @@
 	</skill>
 	<skill id="8344" levels="4" name="Low-grade Magic Ornament Iron Belt">
 		<!-- Received damage is decreased during PVP when the belt is equipped. -->
-		<table name="#pvp"> 1.006 1.015 1.021 1.03 </table>
+		<table name="#pvp">1.006 1.015 1.021 1.03</table>
 		<set name="icon" val="icon.skill0332" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -784,7 +784,7 @@
 	</skill>
 	<skill id="8345" levels="4" name="Low-grade Magic Ornament Mithril Belt">
 		<!-- Ordinary damage is increase during PVP when the belt is equipped. -->
-		<table name="#pvp"> 1.01 1.025 1.035 1.05 </table>
+		<table name="#pvp">1.01 1.025 1.035 1.05</table>
 		<set name="icon" val="icon.skill0332" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -797,7 +797,7 @@
 	</skill>
 	<skill id="8346" levels="4" name="Low-grade Magic Ornament Mithril Belt">
 		<!-- Skill/magic damage is increased during PVP when the belt is equipped. -->
-		<table name="#pvp"> 1.01 1.025 1.035 1.05 </table>
+		<table name="#pvp">1.01 1.025 1.035 1.05</table>
 		<set name="icon" val="icon.skill0332" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -811,7 +811,7 @@
 	</skill>
 	<skill id="8347" levels="4" name="Low-grade Magic Ornament Mithril Belt">
 		<!-- Received damage is decreased during PVP when the belt is equipped. -->
-		<table name="#pvp"> 1.012 1.03 1.042 1.06 </table>
+		<table name="#pvp">1.012 1.03 1.042 1.06</table>
 		<set name="icon" val="icon.skill0332" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -826,8 +826,8 @@
 	</skill>
 	<skill id="8348" levels="2" name="Royal Guard Earring - Gludio">
 		<!-- Increases resistance to bleed attacks by 15%. Increases bonus for shock attacks by 15%. -->
-		<table name="#icons"> icon.accessary_inferno_earing_i00 icon.accessory_earring_of_domi_protection_i00 </table>
-		<table name="#maxCp"> 1 1.05 </table>
+		<table name="#icons">icon.accessary_inferno_earing_i00 icon.accessory_earring_of_domi_protection_i00</table>
+		<table name="#maxCp">1 1.05</table>
 		<set name="icon" val="#icons" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
@@ -844,8 +844,8 @@
 	</skill>
 	<skill id="8349" levels="2" name="Royal Guard Earring - Dion">
 		<!-- Increases resistance to poison attacks by 15%. Increases bonus for hold attacks by 15%. -->
-		<table name="#icons"> icon.accessary_inferno_earing_i00 icon.accessory_earring_of_domi_protection_i00 </table>
-		<table name="#maxCp"> 1 1.05 </table>
+		<table name="#icons">icon.accessary_inferno_earing_i00 icon.accessory_earring_of_domi_protection_i00</table>
+		<table name="#maxCp">1 1.05</table>
 		<set name="icon" val="#icons" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
@@ -862,8 +862,8 @@
 	</skill>
 	<skill id="8350" levels="2" name="Royal Guard Earring - Giran">
 		<!-- Increases resistance to paralysis attacks by 15%. Increases bonus for hold bleed attacks by 15%. -->
-		<table name="#icons"> icon.accessary_inferno_earing_i00 icon.accessory_earring_of_domi_protection_i00 </table>
-		<table name="#maxCp"> 1 1.05 </table>
+		<table name="#icons">icon.accessary_inferno_earing_i00 icon.accessory_earring_of_domi_protection_i00</table>
+		<table name="#maxCp">1 1.05</table>
 		<set name="icon" val="#icons" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
@@ -880,8 +880,8 @@
 	</skill>
 	<skill id="8351" levels="2" name="Royal Guard Earring - Oren">
 		<!-- Increases resistance to hold attacks by 15%. Increases bonus for bleed attacks by 15%. -->
-		<table name="#icons"> icon.accessary_inferno_earing_i00 icon.accessory_earring_of_domi_protection_i00 </table>
-		<table name="#maxCp"> 1 1.05 </table>
+		<table name="#icons">icon.accessary_inferno_earing_i00 icon.accessory_earring_of_domi_protection_i00</table>
+		<table name="#maxCp">1 1.05</table>
 		<set name="icon" val="#icons" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
@@ -898,8 +898,8 @@
 	</skill>
 	<skill id="8352" levels="2" name="Royal Guard Earring - Aden">
 		<!-- Increases resistance to shock attacks by 15%. Increases bonus for abnormal mind attacks by 15%. -->
-		<table name="#icons"> icon.accessary_inferno_earing_i00 icon.accessory_earring_of_domi_protection_i00 </table>
-		<table name="#maxCp"> 1 1.05 </table>
+		<table name="#icons">icon.accessary_inferno_earing_i00 icon.accessory_earring_of_domi_protection_i00</table>
+		<table name="#maxCp">1 1.05</table>
 		<set name="icon" val="#icons" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
@@ -916,8 +916,8 @@
 	</skill>
 	<skill id="8353" levels="2" name="Royal Guard Earring - Innadril">
 		<!-- Increases resistance to shock attacks by 15%. Increases bonus for sleep attacks by 15%. -->
-		<table name="#icons"> icon.accessary_inferno_earing_i00 icon.accessory_earring_of_domi_protection_i00 </table>
-		<table name="#maxCp"> 1 1.05 </table>
+		<table name="#icons">icon.accessary_inferno_earing_i00 icon.accessory_earring_of_domi_protection_i00</table>
+		<table name="#maxCp">1 1.05</table>
 		<set name="icon" val="#icons" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
@@ -934,8 +934,8 @@
 	</skill>
 	<skill id="8354" levels="2" name="Royal Guard Earring - Goddard">
 		<!-- Increases resistance to sleep attacks by 15%. Increases bonus for shock attacks by 15%. -->
-		<table name="#icons"> icon.accessary_inferno_earing_i00 icon.accessory_earring_of_domi_protection_i00 </table>
-		<table name="#maxCp"> 1 1.05 </table>
+		<table name="#icons">icon.accessary_inferno_earing_i00 icon.accessory_earring_of_domi_protection_i00</table>
+		<table name="#maxCp">1 1.05</table>
 		<set name="icon" val="#icons" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
@@ -952,8 +952,8 @@
 	</skill>
 	<skill id="8355" levels="2" name="Royal Guard Earring - Rune">
 		<!-- Increases resistance to hold attacks by 15%. Increases bonus for poison attacks by 15%. -->
-		<table name="#icons"> icon.accessary_inferno_earing_i00 icon.accessory_earring_of_domi_protection_i00 </table>
-		<table name="#maxCp"> 1 1.05 </table>
+		<table name="#icons">icon.accessary_inferno_earing_i00 icon.accessory_earring_of_domi_protection_i00</table>
+		<table name="#maxCp">1 1.05</table>
 		<set name="icon" val="#icons" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
@@ -970,8 +970,8 @@
 	</skill>
 	<skill id="8356" levels="2" name="Royal Guard Earring - Schuttgart">
 		<!-- Increases resistance to abnormal mind attacks by 15%. Increases bonus for hold attacks by 15%. -->
-		<table name="#icons"> icon.accessary_inferno_earing_i00 icon.accessory_earring_of_domi_protection_i00 </table>
-		<table name="#maxCp"> 1 1.05 </table>
+		<table name="#icons">icon.accessary_inferno_earing_i00 icon.accessory_earring_of_domi_protection_i00</table>
+		<table name="#maxCp">1 1.05</table>
 		<set name="icon" val="#icons" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
@@ -1216,8 +1216,8 @@
 	</skill>
 	<skill id="8379" levels="2" name="Royal Guard Ring - Gludio">
 		<!-- Increases earth type defense by 12. -->
-		<table name="#earthRes"> 12 15 </table>
-		<table name="#icons"> icon.accessary_inferno_ring_i00 icon.accessory_ring_of_domi_protection_i00 </table>
+		<table name="#earthRes">12 15</table>
+		<table name="#icons">icon.accessary_inferno_ring_i00 icon.accessory_ring_of_domi_protection_i00</table>
 		<set name="icon" val="#icons" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
@@ -1230,8 +1230,8 @@
 	</skill>
 	<skill id="8380" levels="2" name="Royal Guard Ring - Dion">
 		<!-- Increases water type defense by 12. -->
-		<table name="#icons"> icon.accessary_inferno_ring_i00 icon.accessory_ring_of_domi_protection_i00 </table>
-		<table name="#waterRes"> 12 15 </table>
+		<table name="#icons">icon.accessary_inferno_ring_i00 icon.accessory_ring_of_domi_protection_i00</table>
+		<table name="#waterRes">12 15</table>
 		<set name="icon" val="#icons" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
@@ -1244,8 +1244,8 @@
 	</skill>
 	<skill id="8381" levels="2" name="Royal Guard Ring - Giran">
 		<!-- Increases fire type defense by 12. -->
-		<table name="#fireRes"> 12 15 </table>
-		<table name="#icons"> icon.accessary_inferno_ring_i00 icon.accessory_ring_of_domi_protection_i00 </table>
+		<table name="#fireRes">12 15</table>
+		<table name="#icons">icon.accessary_inferno_ring_i00 icon.accessory_ring_of_domi_protection_i00</table>
 		<set name="icon" val="#icons" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
@@ -1258,8 +1258,8 @@
 	</skill>
 	<skill id="8382" levels="2" name="Royal Guard Ring - Oren">
 		<!-- Increases earth type defense by 12. -->
-		<table name="#earthRes"> 12 15 </table>
-		<table name="#icons"> icon.accessary_inferno_ring_i00 icon.accessory_ring_of_domi_protection_i00 </table>
+		<table name="#earthRes">12 15</table>
+		<table name="#icons">icon.accessary_inferno_ring_i00 icon.accessory_ring_of_domi_protection_i00</table>
 		<set name="icon" val="#icons" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
@@ -1272,8 +1272,8 @@
 	</skill>
 	<skill id="8383" levels="2" name="Royal Guard Ring - Aden">
 		<!-- Increases divinity type defense by 12. -->
-		<table name="#holyRes"> 12 15 </table>
-		<table name="#icons"> icon.accessary_inferno_ring_i00 icon.accessory_ring_of_domi_protection_i00 </table>
+		<table name="#holyRes">12 15</table>
+		<table name="#icons">icon.accessary_inferno_ring_i00 icon.accessory_ring_of_domi_protection_i00</table>
 		<set name="icon" val="#icons" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
@@ -1286,8 +1286,8 @@
 	</skill>
 	<skill id="8384" levels="2" name="Royal Guard Ring - Innadril">
 		<!-- Increases divinity type defense by 12. -->
-		<table name="#holyRes"> 12 15 </table>
-		<table name="#icons"> icon.accessary_inferno_ring_i00 icon.accessory_ring_of_domi_protection_i00 </table>
+		<table name="#holyRes">12 15</table>
+		<table name="#icons">icon.accessary_inferno_ring_i00 icon.accessory_ring_of_domi_protection_i00</table>
 		<set name="icon" val="#icons" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
@@ -1300,8 +1300,8 @@
 	</skill>
 	<skill id="8385" levels="2" name="Royal Guard Ring - Goddard">
 		<!-- Increases darkness type defense by 12. -->
-		<table name="#darkRes"> 12 15 </table>
-		<table name="#icons"> icon.accessary_inferno_ring_i00 icon.accessory_ring_of_domi_protection_i00 </table>
+		<table name="#darkRes">12 15</table>
+		<table name="#icons">icon.accessary_inferno_ring_i00 icon.accessory_ring_of_domi_protection_i00</table>
 		<set name="icon" val="#icons" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
@@ -1314,8 +1314,8 @@
 	</skill>
 	<skill id="8386" levels="2" name="Royal Guard Ring - Rune">
 		<!-- Increases wind type defense by 12. -->
-		<table name="#icons"> icon.accessary_inferno_ring_i00 icon.accessory_ring_of_domi_protection_i00 </table>
-		<table name="#windRes"> 12 15 </table>
+		<table name="#icons">icon.accessary_inferno_ring_i00 icon.accessory_ring_of_domi_protection_i00</table>
+		<table name="#windRes">12 15</table>
 		<set name="icon" val="#icons" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
@@ -1328,8 +1328,8 @@
 	</skill>
 	<skill id="8387" levels="2" name="Royal Guard Ring - Schuttgart">
 		<!-- Increases darkness type defense by 12. -->
-		<table name="#darkRes"> 12 15 </table>
-		<table name="#icons"> icon.accessary_inferno_ring_i00 icon.accessory_ring_of_domi_protection_i00 </table>
+		<table name="#darkRes">12 15</table>
+		<table name="#icons">icon.accessary_inferno_ring_i00 icon.accessory_ring_of_domi_protection_i00</table>
 		<set name="icon" val="#icons" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
@@ -1342,8 +1342,8 @@
 	</skill>
 	<skill id="8388" levels="2" name="Royal Guard Necklace - Gludio">
 		<!-- Increases water type defense by 26. -->
-		<table name="#icons"> icon.accessary_inferno_necklace_i00 icon.accessory_nectklace_of_domi_protection_i00 </table>
-		<table name="#waterRes"> 26 30 </table>
+		<table name="#icons">icon.accessary_inferno_necklace_i00 icon.accessory_nectklace_of_domi_protection_i00</table>
+		<table name="#waterRes">26 30</table>
 		<set name="icon" val="#icons" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
@@ -1356,8 +1356,8 @@
 	</skill>
 	<skill id="8389" levels="2" name="Royal Guard Necklace - Dion">
 		<!-- Increases divinity type defense by 26. -->
-		<table name="#holyRes"> 26 30 </table>
-		<table name="#icons"> icon.accessary_inferno_necklace_i00 icon.accessory_nectklace_of_domi_protection_i00 </table>
+		<table name="#holyRes">26 30</table>
+		<table name="#icons">icon.accessary_inferno_necklace_i00 icon.accessory_nectklace_of_domi_protection_i00</table>
 		<set name="icon" val="#icons" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
@@ -1370,8 +1370,8 @@
 	</skill>
 	<skill id="8390" levels="2" name="Royal Guard Necklace - Giran">
 		<!-- Increases wind type defense by 26. -->
-		<table name="#icons"> icon.accessary_inferno_necklace_i00 icon.accessory_nectklace_of_domi_protection_i00 </table>
-		<table name="#windRes"> 26 30 </table>
+		<table name="#icons">icon.accessary_inferno_necklace_i00 icon.accessory_nectklace_of_domi_protection_i00</table>
+		<table name="#windRes">26 30</table>
 		<set name="icon" val="#icons" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
@@ -1384,8 +1384,8 @@
 	</skill>
 	<skill id="8391" levels="2" name="Royal Guard Necklace - Oren">
 		<!-- Increases darkness type defense by 26. -->
-		<table name="#darkRes"> 26 30 </table>
-		<table name="#icons"> icon.accessary_inferno_necklace_i00 icon.accessory_nectklace_of_domi_protection_i00 </table>
+		<table name="#darkRes">26 30</table>
+		<table name="#icons">icon.accessary_inferno_necklace_i00 icon.accessory_nectklace_of_domi_protection_i00</table>
 		<set name="icon" val="#icons" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
@@ -1398,8 +1398,8 @@
 	</skill>
 	<skill id="8392" levels="2" name="Royal Guard Necklace - Aden">
 		<!-- Increases earth type defense by 26. -->
-		<table name="#earthRes"> 26 30 </table>
-		<table name="#icons"> icon.accessary_inferno_necklace_i00 icon.accessory_nectklace_of_domi_protection_i00 </table>
+		<table name="#earthRes">26 30</table>
+		<table name="#icons">icon.accessary_inferno_necklace_i00 icon.accessory_nectklace_of_domi_protection_i00</table>
 		<set name="icon" val="#icons" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
@@ -1412,8 +1412,8 @@
 	</skill>
 	<skill id="8393" levels="2" name="Royal Guard Necklace - Innadril">
 		<!-- Increases water type defense by 26. -->
-		<table name="#icons"> icon.accessary_inferno_necklace_i00 icon.accessory_nectklace_of_domi_protection_i00 </table>
-		<table name="#waterRes"> 26 30 </table>
+		<table name="#icons">icon.accessary_inferno_necklace_i00 icon.accessory_nectklace_of_domi_protection_i00</table>
+		<table name="#waterRes">26 30</table>
 		<set name="icon" val="#icons" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
@@ -1426,8 +1426,8 @@
 	</skill>
 	<skill id="8394" levels="2" name="Royal Guard Necklace - Goddard">
 		<!-- Increases fire type defense by 26. -->
-		<table name="#fireRes"> 26 30 </table>
-		<table name="#icons"> icon.accessary_inferno_necklace_i00 icon.accessory_nectklace_of_domi_protection_i00 </table>
+		<table name="#fireRes">26 30</table>
+		<table name="#icons">icon.accessary_inferno_necklace_i00 icon.accessory_nectklace_of_domi_protection_i00</table>
 		<set name="icon" val="#icons" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
@@ -1440,8 +1440,8 @@
 	</skill>
 	<skill id="8395" levels="2" name="Royal Guard Necklace - Rune">
 		<!-- Increases fire type defense by 26. -->
-		<table name="#fireRes"> 26 30 </table>
-		<table name="#icons"> icon.accessary_inferno_necklace_i00 icon.accessory_nectklace_of_domi_protection_i00 </table>
+		<table name="#fireRes">26 30</table>
+		<table name="#icons">icon.accessary_inferno_necklace_i00 icon.accessory_nectklace_of_domi_protection_i00</table>
 		<set name="icon" val="#icons" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
@@ -1454,8 +1454,8 @@
 	</skill>
 	<skill id="8396" levels="2" name="Royal Guard Necklace - Schuttgart">
 		<!-- Increases wind type defense by 26. -->
-		<table name="#icons"> icon.accessary_inferno_necklace_i00 icon.accessory_nectklace_of_domi_protection_i00 </table>
-		<table name="#windRes"> 26 30 </table>
+		<table name="#icons">icon.accessary_inferno_necklace_i00 icon.accessory_nectklace_of_domi_protection_i00</table>
+		<table name="#windRes">26 30</table>
 		<set name="icon" val="#icons" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />

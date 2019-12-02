@@ -283,7 +283,7 @@
 	<appearance_stone id="37854" targetType="WEAPON" type="FIXED" visualId="37694" weaponType="BOW" lifeTime="30days" /> <!-- Valentine Appearance Stone: Bow ( 30 days ) -->
 	<appearance_stone id="38195" targetType="WEAPON" type="FIXED" visualId="38217" weaponType="BOW" lifeTime="30days" /> <!-- Giant Crab Appearance Stone: Bow ( 30 days ) -->
 	<appearance_stone id="38206" targetType="WEAPON" type="FIXED" visualId="38217" weaponType="BOW" /> <!-- Giant Crab Appearance Stone: Bow -->
-	<!-- <appearance_stone id="40297" targetType="WEAPON" type="FIXED" visualId="?" weaponType="BOW" />--> <!-- Monster Weapon Appearance Stone: Tayga Archer's Bow //TODO: Missing VisualID -->
+	<!-- <appearance_stone id="40297" targetType="WEAPON" type="FIXED" visualId="?" weaponType="BOW" /> --> <!-- Monster Weapon Appearance Stone: Tayga Archer's Bow //TODO: Missing VisualID -->
 
 	<appearance_stone id="22672" targetType="WEAPON" type="FIXED" visualId="22656" weaponType="CROSSBOW" /> <!-- Emerald Weapon Appearance Stone: Crossbow -->
 	<appearance_stone id="22733" targetType="WEAPON" type="FIXED" visualId="22717" weaponType="CROSSBOW" /> <!-- Japanese Crossbow Appearance Stone -->
@@ -315,7 +315,7 @@
 	<appearance_stone id="22674" targetType="WEAPON" type="FIXED" visualId="22658" weaponType="BLUNT" handType="TWO_HANDED" /> <!-- Emerald Weapon Appearance Stone: Two-handed Blunt Weapon -->
 	<appearance_stone id="37408" targetType="WEAPON" type="FIXED" visualId="22658" weaponType="BLUNT" handType="TWO_HANDED" lifeTime="15days" /> <!-- Emerald Weapon Appearance Stone: Two-handed Blunt Weapon ( 15 days ) -->
 	<appearance_stone id="36656" targetType="WEAPON" type="FIXED" visualId="22658" weaponType="BLUNT" handType="TWO_HANDED" lifeTime="7days" /> <!-- Emerald Weapon Appearance Stone: Two-handed Blunt Weapon ( 7 days ) -->
-	<!-- <appearance_stone id="22735" targetType="WEAPON" type="FIXED" visualId="22719" weaponType="BLUNT" handType="TWO_HANDED" />--> <!-- Japanese Giant Blunt Appearance Stone //TODO: Holding of this weapon is like Two-Handed Magic Blunt -->
+	<!-- <appearance_stone id="22735" targetType="WEAPON" type="FIXED" visualId="22719" weaponType="BLUNT" handType="TWO_HANDED" /> --> <!-- Japanese Giant Blunt Appearance Stone //TODO: Holding of this weapon is like Two-Handed Magic Blunt -->
 
 	<appearance_stone id="22676" targetType="WEAPON" type="FIXED" visualId="22660" weaponType="BLUNT" handType="TWO_HANDED" magicType="MAGICAL" /> <!-- Emerald Weapon Appearance Stone: Two-handed Magic Blunt Weapon -->
 	<appearance_stone id="37410" targetType="WEAPON" type="FIXED" visualId="22660" weaponType="BLUNT" handType="TWO_HANDED" magicType="MAGICAL" lifeTime="15days" /> <!-- Emerald Weapon Appearance Stone: Two-handed Magic Blunt Weapon ( 15 days ) -->
@@ -3894,7 +3894,7 @@
 		<visual id="22717" weaponType="CROSSBOW" /> <!-- Japanese Crossbow -->
 		<visual id="22718" weaponType="BLUNT" handType="ONE_HANDED" /> <!-- Japanese One-handed Blunt Weapon -->
 		<visual id="22711" weaponType="SWORD" handType="ONE_HANDED" magicType="MAGICAL" /> <!-- Japanese One-handed Magic Sword (Not-retail) -->
-		<!-- <visual id="22719" weaponType="BLUNT" handType="TWO_HANDED" />--> <!-- Japanese Two-handed Blunt Weapon //TODO: Holding of this weapon is like Two-Handed Magic Blunt -->
+		<!-- <visual id="22719" weaponType="BLUNT" handType="TWO_HANDED" /> --> <!-- Japanese Two-handed Blunt Weapon //TODO: Holding of this weapon is like Two-Handed Magic Blunt -->
 		<visual id="22720" weaponType="BLUNT" handType="ONE_HANDED" magicType="MAGICAL" /> <!-- Japanese One-handed Magic Blunt Weapon -->
 		<visual id="22721" weaponType="BLUNT" handType="TWO_HANDED" magicType="MAGICAL" /> <!-- Japanese Two-handed Magic Blunt Weapon -->
 		<visual id="22722" weaponType="DUAL" /> <!-- Japanese rald Dualsword -->

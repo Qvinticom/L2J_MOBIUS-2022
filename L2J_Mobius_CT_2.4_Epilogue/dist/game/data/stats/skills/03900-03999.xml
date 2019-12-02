@@ -2,8 +2,8 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="3900" levels="2" name="Staff of Divine Power">
 		<!-- Increases one's own recovery magic power. -->
-		<table name="#healEffect"> 33 43 </table>
-		<table name="#magicLvl"> 61 80 </table>
+		<table name="#healEffect">33 43</table>
+		<table name="#magicLvl">61 80</table>
 		<set name="icon" val="icon.skill1459" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
@@ -16,8 +16,8 @@
 	</skill>
 	<skill id="3901" levels="2" name="Staff of Mana Boost">
 		<!-- Increases maximum MP. -->
-		<table name="#magicLvl"> 67 75 </table>
-		<table name="#maxMp"> 239 289 </table>
+		<table name="#magicLvl">67 75</table>
+		<table name="#maxMp">239 289</table>
 		<set name="icon" val="icon.skill0213" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />

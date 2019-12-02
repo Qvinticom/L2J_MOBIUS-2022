@@ -214,8 +214,8 @@
 		</for>
 	</skill>
 	<skill id="6813" levels="8" name="Focus Sonic">
-		<table name="#magicLvl">40 43 49 55 60 66 70 79 </table>
-		<table name="#maxCharges">1 2 3 4 5 6 7 8 </table>
+		<table name="#magicLvl">40 43 49 55 60 66 70 79</table>
+		<table name="#maxCharges">1 2 3 4 5 6 7 8</table>
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A1" />
@@ -233,8 +233,8 @@
 		</for>
 	</skill>
 	<skill id="6814" levels="8" name="Focus Force">
-		<table name="#magicLvl">24 32 40 52 60 66 72 79 </table>
-		<table name="#maxCharges">1 2 3 4 5 6 7 8 </table>
+		<table name="#magicLvl">24 32 40 52 60 66 72 79</table>
+		<table name="#maxCharges">1 2 3 4 5 6 7 8</table>
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A1" />
@@ -459,9 +459,9 @@
 	</skill>
 	<skill id="6842" levels="2" name="Enhance">
 		<!-- Increases P. Atk. by 12% and Atk. Spd. by 15%. -->
-		<table name="#abnormalLvls">2 3 </table>
-		<table name="#pAtk">1.12 1 </table>
-		<table name="#pAtkSpd">1.15 1.4 </table>
+		<table name="#abnormalLvls">2 3</table>
+		<table name="#pAtk">1.12 1</table>
+		<table name="#pAtkSpd">1.15 1.4</table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="PA_UP" />
@@ -967,8 +967,8 @@
 	</skill>
 	<skill id="6873" levels="2" name="Hex">
 		<!-- P. Def. is decreased by 23%. -->
-		<table name="#abnormalLvls">3 4 </table>
-		<table name="#pDef">0.77 0.67 </table>
+		<table name="#abnormalLvls">3 4</table>
+		<table name="#pDef">0.77 0.67</table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="PD_DOWN" />
@@ -1009,7 +1009,7 @@
 	</skill>
 	<skill id="6875" levels="2" name="Poison">
 		<!-- For 8 seconds, inflicts bleed and decreases 120 HP every second. -->
-		<table name="#dmg">120 140 </table>
+		<table name="#dmg">120 140</table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="8" />
 		<set name="abnormalType" val="POISON" />
@@ -1188,12 +1188,12 @@
 	</skill>
 	<skill id="6885" levels="3" name="Morale Boost">
 		<!-- The persistence of the brave who fight together in Dragon Valley receive Resistance to Paralysis/Bleed/Poison/Stun +50, Critical Rate +10%, and Critical Damage +10%. -->
-		<table name="#abnormalLvl">2 3 4 </table>
-		<table name="#critDmg">1.1 1.15 1.2 </table>
-		<table name="#pmAtk">1 1.15 1.15 </table>
-		<table name="#pmAtkSpd">1 1 1.15 </table>
-		<table name="#critRate">1.1 1.3 1.5 </table>
-		<table name="#traits">50 80 90 </table>
+		<table name="#abnormalLvl">2 3 4</table>
+		<table name="#critDmg">1.1 1.15 1.2</table>
+		<table name="#pmAtk">1 1.15 1.15</table>
+		<table name="#pmAtkSpd">1 1 1.15</table>
+		<table name="#critRate">1.1 1.3 1.5</table>
+		<table name="#traits">50 80 90</table>
 		<set name="abnormalLvl" val="#abnormalLvl" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="DRAGON_BUFF" />

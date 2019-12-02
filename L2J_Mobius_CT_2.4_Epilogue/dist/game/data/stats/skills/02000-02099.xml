@@ -357,7 +357,7 @@
 		</for>
 	</skill>
 	<skill id="2036" levels="2" name="Blessed Scroll of Escape">
-		<table name="#itemConsumeId">1538 3958 </table>
+		<table name="#itemConsumeId">1538 3958</table>
 		<set name="hitTime" val="200" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -798,7 +798,7 @@
 		</for>
 	</skill>
 	<skill id="2065" levels="8" name="Box Key">
-		<table name="#effectPoints">-1 -2 -3 -4 -5 -6 -7 -8 </table>
+		<table name="#effectPoints">-1 -2 -3 -4 -5 -6 -7 -8</table>
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="500" />
@@ -1250,8 +1250,8 @@
 		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="2097" levels="3" name="Sowing">
-		<table name="#magicLvl">10 20 30 </table>
-		<table name="#mpConsume">4 6 8 </table>
+		<table name="#magicLvl">10 20 30</table>
+		<table name="#mpConsume">4 6 8</table>
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1800" />

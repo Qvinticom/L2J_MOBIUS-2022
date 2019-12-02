@@ -317,8 +317,8 @@
 	</skill>
 	<skill id="3825" levels="3" name="Sword of Might">
 		<!-- Increases P. Atk. when a sword is equipped. -->
-		<table name="#magicLvl"> 58 64 82 </table>
-		<table name="#pAtk"> 17.42 22.1 42.12 </table>
+		<table name="#magicLvl">58 64 82</table>
+		<table name="#pAtk">17.42 22.1 42.12</table>
 		<set name="icon" val="icon.skill1068" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
@@ -331,8 +331,8 @@
 	</skill>
 	<skill id="3826" levels="2" name="Sword of Boost HP">
 		<!-- Increases Max. HP. -->
-		<table name="#magicLvl"> 61 80 </table>
-		<table name="#maxHp"> 319 492 </table>
+		<table name="#magicLvl">61 80</table>
+		<table name="#maxHp">319 492</table>
 		<set name="icon" val="icon.skill0211" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
@@ -385,8 +385,8 @@
 	</skill>
 	<skill id="3830" levels="3" name="Rapier of Might">
 		<!-- Increases P. Atk. when a short sword is equipped. -->
-		<table name="#magicLvl"> 58 64 82 </table>
-		<table name="#pAtk"> 16.25 20.62 39.3 </table>
+		<table name="#magicLvl">58 64 82</table>
+		<table name="#pAtk">16.25 20.62 39.3</table>
 		<set name="icon" val="icon.skill1068" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
@@ -399,8 +399,8 @@
 	</skill>
 	<skill id="3831" levels="2" name="Rapier of Boost HP">
 		<!-- Increases Max. HP. -->
-		<table name="#magicLvl"> 61 80 </table>
-		<table name="#maxHp"> 319 444 </table>
+		<table name="#magicLvl">61 80</table>
+		<table name="#maxHp">319 444</table>
 		<set name="icon" val="icon.skill0211" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
@@ -453,8 +453,8 @@
 	</skill>
 	<skill id="3835" levels="3" name="Dual-Blade Weapon of Might">
 		<!-- Increases P. Atk. when a dual-blade weapon is equipped. -->
-		<table name="#magicLvl"> 58 64 82 </table>
-		<table name="#pAtk"> 21.2 26.9 51.26 </table>
+		<table name="#magicLvl">58 64 82</table>
+		<table name="#pAtk">21.2 26.9 51.26</table>
 		<set name="icon" val="icon.skill1068" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
@@ -467,8 +467,8 @@
 	</skill>
 	<skill id="3836" levels="2" name="Dual-Blade Weapon of Boost HP">
 		<!-- Increases Max. HP. -->
-		<table name="#magicLvl"> 61 80 </table>
-		<table name="#maxHp"> 319 444 </table>
+		<table name="#magicLvl">61 80</table>
+		<table name="#maxHp">319 444</table>
 		<set name="icon" val="icon.skill0211" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
@@ -521,7 +521,7 @@
 	</skill>
 	<skill id="3840" levels="2" name="Two-handed Sword of Haste">
 		<!-- Increases Atk. Spd. when a two-handed sword is equipped. -->
-		<table name="#magicLvl"> 61 80 </table>
+		<table name="#magicLvl">61 80</table>
 		<set name="icon" val="icon.skill1086" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
@@ -582,7 +582,7 @@
 	</skill>
 	<skill id="3845" levels="2" name="Two-handed Sword of Critical Chance">
 		<!-- Critical rate increases. -->
-		<table name="#magicLvl"> 58 82 </table>
+		<table name="#magicLvl">58 82</table>
 		<set name="icon" val="icon.skill1077" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
@@ -595,7 +595,7 @@
 	</skill>
 	<skill id="3846" levels="2" name="Ancient Sword of Haste">
 		<!-- Increases Atk. Spd. when an ancient sword is equipped. -->
-		<table name="#magicLvl"> 61 80 </table>
+		<table name="#magicLvl">61 80</table>
 		<set name="icon" val="icon.skill1086" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
@@ -656,7 +656,7 @@
 	</skill>
 	<skill id="3851" levels="2" name="Ancient Sword of Critical Chance">
 		<!-- Critical rate increases. -->
-		<table name="#magicLvl"> 58 82 </table>
+		<table name="#magicLvl">58 82</table>
 		<set name="icon" val="icon.skill1077" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
@@ -669,8 +669,8 @@
 	</skill>
 	<skill id="3852" levels="3" name="Sword of Mana Boost">
 		<!-- Increases maximum MP. -->
-		<table name="#magicLvl"> 58 75 82 </table>
-		<table name="#maxMp"> 187 289 334 </table>
+		<table name="#magicLvl">58 75 82</table>
+		<table name="#maxMp">187 289 334</table>
 		<set name="icon" val="icon.skill0213" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
@@ -683,7 +683,7 @@
 	</skill>
 	<skill id="3853" levels="2" name="Sword of Mana Regeneration">
 		<!-- Increases MP recovery bonus. -->
-		<table name="#magicLvl"> 61 70 </table>
+		<table name="#magicLvl">61 70</table>
 		<set name="icon" val="icon.skill1047" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
@@ -739,7 +739,7 @@
 	</skill>
 	<skill id="3858" levels="3" name="Dagger of Avoid">
 		<!-- Increases Evasion when a dagger is equipped. -->
-		<table name="#magicLvl"> 58 64 82 </table>
+		<table name="#magicLvl">58 64 82</table>
 		<set name="icon" val="icon.skill1087" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
@@ -752,7 +752,7 @@
 	</skill>
 	<skill id="3859" levels="2" name="Dagger of Haste">
 		<!-- Increases Atk. Spd. when a dagger is equipped. -->
-		<table name="#magicLvl"> 61 80 </table>
+		<table name="#magicLvl">61 80</table>
 		<set name="icon" val="icon.skill1086" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
@@ -805,7 +805,7 @@
 	</skill>
 	<skill id="3863" levels="4" name="Bow of Guidance">
 		<!-- Increases accuracy. -->
-		<table name="#magicLvl"> 58 64 70 82 </table>
+		<table name="#magicLvl">58 64 70 82</table>
 		<set name="icon" val="icon.skill1240" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
@@ -818,7 +818,7 @@
 	</skill>
 	<skill id="3864" levels="2" name="Bow of Haste">
 		<!-- Increases Atk. Spd. -->
-		<table name="#magicLvl"> 61 80 </table>
+		<table name="#magicLvl">61 80</table>
 		<set name="icon" val="icon.skill1086" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
@@ -873,7 +873,7 @@
 	</skill>
 	<skill id="3868" levels="4" name="Crossbow of Guidance">
 		<!-- Increases accuracy. -->
-		<table name="#magicLvl"> 58 64 70 82 </table>
+		<table name="#magicLvl">58 64 70 82</table>
 		<set name="icon" val="icon.skill1240" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
@@ -886,7 +886,7 @@
 	</skill>
 	<skill id="3869" levels="2" name="Crossbow of Haste">
 		<!-- Increases Atk. Spd. -->
-		<table name="#magicLvl"> 61 80 </table>
+		<table name="#magicLvl">61 80</table>
 		<set name="icon" val="icon.skill1086" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
@@ -930,8 +930,8 @@
 	</skill>
 	<skill id="3873" levels="2" name="Polearm of Critical Power">
 		<!-- Increases critical attack power. -->
-		<table name="#cAtkAdd"> 156 377 </table>
-		<table name="#magicLvl"> 58 82 </table>
+		<table name="#cAtkAdd">156 377</table>
+		<table name="#magicLvl">58 82</table>
 		<set name="icon" val="icon.skill0193" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
@@ -984,8 +984,8 @@
 	</skill>
 	<skill id="3877" levels="2" name="Polearm of Boost HP">
 		<!-- Increases Max. HP. -->
-		<table name="#magicLvl"> 61 80 </table>
-		<table name="#maxHp"> 319 492 </table>
+		<table name="#magicLvl">61 80</table>
+		<table name="#maxHp">319 492</table>
 		<set name="icon" val="icon.skill0211" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
@@ -1010,8 +1010,8 @@
 	</skill>
 	<skill id="3879" levels="3" name="Fist Weapon of Might">
 		<!-- Attack power is increased. -->
-		<table name="#magicLvl"> 58 64 82 </table>
-		<table name="#pAtk"> 21.2 26.9 51.26 </table>
+		<table name="#magicLvl">58 64 82</table>
+		<table name="#pAtk">21.2 26.9 51.26</table>
 		<set name="icon" val="icon.skill1068" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
@@ -1024,7 +1024,7 @@
 	</skill>
 	<skill id="3880" levels="2" name="Fist Weapon of Haste">
 		<!-- Increases Atk. Spd. -->
-		<table name="#magicLvl"> 61 80 </table>
+		<table name="#magicLvl">61 80</table>
 		<set name="icon" val="icon.skill1086" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
@@ -1077,8 +1077,8 @@
 	</skill>
 	<skill id="3884" levels="3" name="Blunt Weapon of Boost HP">
 		<!-- Increases Max. HP. -->
-		<table name="#magicLvl"> 58 64 82 </table>
-		<table name="#maxHp"> 294 345 511 </table>
+		<table name="#magicLvl">58 64 82</table>
+		<table name="#maxHp">294 345 511</table>
 		<set name="icon" val="icon.skill0211" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
@@ -1091,8 +1091,8 @@
 	</skill>
 	<skill id="3885" levels="2" name="Blunt Weapon of Stun">
 		<!-- Has a chance to stun the enemy during a regular attack. -->
-		<table name="#activationChance"> 5 8 </table>
-		<table name="#triggeredId"> 5671 5672 </table>
+		<table name="#activationChance">5 8</table>
+		<table name="#triggeredId">5671 5672</table>
 		<set name="icon" val="icon.skill0100" />
 		<set name="magicLvl" val="61" />
 		<set name="operateType" val="P" />
@@ -1145,8 +1145,8 @@
 	</skill>
 	<skill id="3889" levels="3" name="Blunt Weapon of Empower">
 		<!-- Increases M. Atk. -->
-		<table name="#magicLvl"> 58 64 82 </table>
-		<table name="#mAtk"> 21.77 27.63 45.81 </table>
+		<table name="#magicLvl">58 64 82</table>
+		<table name="#mAtk">21.77 27.63 45.81</table>
 		<set name="icon" val="icon.skill1059" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
@@ -1171,8 +1171,8 @@
 	</skill>
 	<skill id="3891" levels="2" name="Blunt Weapon of Boost HP">
 		<!-- Increases Max. HP. -->
-		<table name="#magicLvl"> 61 80 </table>
-		<table name="#maxHp"> 319 492 </table>
+		<table name="#magicLvl">61 80</table>
+		<table name="#maxHp">319 492</table>
 		<set name="icon" val="icon.skill0211" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
@@ -1221,7 +1221,7 @@
 	</skill>
 	<skill id="3895" levels="3" name="Two-handed Blunt Weapon of Critical Chance">
 		<!-- Critical rate increases. -->
-		<table name="#magicLvl"> 58 64 82 </table>
+		<table name="#magicLvl">58 64 82</table>
 		<set name="icon" val="icon.skill1077" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
@@ -1234,7 +1234,7 @@
 	</skill>
 	<skill id="3896" levels="2" name="Two-handed Blunt Weapon of Haste">
 		<!-- Increases Atk. Spd. -->
-		<table name="#magicLvl"> 61 80 </table>
+		<table name="#magicLvl">61 80</table>
 		<set name="icon" val="icon.skill1086" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
@@ -1271,8 +1271,8 @@
 	</skill>
 	<skill id="3899" levels="3" name="Staff of Empower">
 		<!-- Increases M. Atk. -->
-		<table name="#magicLvl"> 58 64 82 </table>
-		<table name="#mAtk"> 21.77 27.63 45.81 </table>
+		<table name="#magicLvl">58 64 82</table>
+		<table name="#mAtk">21.77 27.63 45.81</table>
 		<set name="icon" val="icon.skill1059" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />

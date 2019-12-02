@@ -1534,7 +1534,7 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="2586" levels="2" name="Energy Replenishing Potion">
-		<table name="#value">10000 20000 </table>
+		<table name="#value">10000 20000</table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />

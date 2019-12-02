@@ -580,8 +580,8 @@
 	</skill>
 	<skill id="3542" levels="6" name="Special Ability: Critical Damage">
 		<!-- Increases Critical Damage. -->
-		<table name="#cAtkAdd">203.97 226.51 248.71 269.91 289.4 306.42 </table>
-		<table name="#magicLvl">46 49 52 55 58 61 </table>
+		<table name="#cAtkAdd">203.97 226.51 248.71 269.91 289.4 306.42</table>
+		<table name="#magicLvl">46 49 52 55 58 61</table>
 		<set name="icon" val="icon.skill0193" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
@@ -702,9 +702,9 @@
 	</skill>
 	<skill id="3552" levels="4" name="Special Ability: PvP Damage">
 		<!-- Inflicts additional damage during PvP. -->
-		<table name="#atkCountMax">0 4 0 4 </table>
-		<table name="#bonus">1.05 1.05 1.1 1.1 </table>
-		<table name="#magicLvl">64 64 72 72 </table>
+		<table name="#atkCountMax">0 4 0 4</table>
+		<table name="#bonus">1.05 1.05 1.1 1.1</table>
+		<table name="#magicLvl">64 64 72 72</table>
 		<set name="icon" val="icon.skill0297" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
@@ -834,10 +834,10 @@
 	</skill>
 	<skill id="3559" levels="2" name="Earring of Zaken">
 		<!-- Bleed/shock/mental attacks, and improves the effectiveness of HP recovery magic and restores HP by using some of the damage inflicted upon the enemy. Excludes damage from skill or ranged attacks. -->
-		<table name="#darkRes">0 15 </table>
-		<table name="#healEffect">1.1 1.15 </table>
-		<table name="#magicLvl">75 80 </table>
-		<table name="#traits">20 30 </table>
+		<table name="#darkRes">0 15</table>
+		<table name="#healEffect">1.1 1.15</table>
+		<table name="#magicLvl">75 80</table>
+		<table name="#traits">20 30</table>
 		<set name="icon" val="icon.accessory_earring_of_zaken_i00" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
@@ -942,8 +942,8 @@
 	</skill>
 	<skill id="3564" levels="3" name="Special Ability: Haste">
 		<!-- Increases Atk. Spd. Inflicts additional damage during PvP. -->
-		<table name="#magicLvl">75 80 84 </table>
-		<table name="#pAtkSpd">1.07 1.1 1.11 </table>
+		<table name="#magicLvl">75 80 84</table>
+		<table name="#pAtkSpd">1.07 1.1 1.11</table>
 		<set name="icon" val="icon.skill1086" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
@@ -959,8 +959,8 @@
 	</skill>
 	<skill id="3565" levels="5" name="Special Ability: Focus">
 		<!-- Increases critical rate. Inflicts additional damage during PvP. -->
-		<table name="#magicLvl">75 80 84 85 86 </table>
-		<table name="#rCrit">80.6 107 123.5 129 129 </table>
+		<table name="#magicLvl">75 80 84 85 86</table>
+		<table name="#rCrit">80.6 107 123.5 129 129</table>
 		<set name="icon" val="icon.skill1077" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
@@ -976,8 +976,8 @@
 	</skill>
 	<skill id="3566" levels="5" name="Special Ability: Focus">
 		<!-- Increases critical rate. Inflicts additional damage during PvP. -->
-		<table name="#magicLvl">75 80 84 85 86 </table>
-		<table name="#rCrit">84.3 111.5 133.3 134.4 134.4 </table>
+		<table name="#magicLvl">75 80 84 85 86</table>
+		<table name="#rCrit">84.3 111.5 133.3 134.4 134.4</table>
 		<set name="icon" val="icon.skill1077" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
@@ -993,8 +993,8 @@
 	</skill>
 	<skill id="3567" levels="5" name="Special Ability: Focus">
 		<!-- Increases critical rate. Inflicts additional damage during PvP. -->
-		<table name="#magicLvl">75 80 84 85 86 </table>
-		<table name="#rCrit">88.1 116 133.9 139.9 139.9 </table>
+		<table name="#magicLvl">75 80 84 85 86</table>
+		<table name="#rCrit">88.1 116 133.9 139.9 139.9</table>
 		<set name="icon" val="icon.skill1077" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
@@ -1010,8 +1010,8 @@
 	</skill>
 	<skill id="3568" levels="2" name="Special Ability: HP Drain">
 		<!-- Partially restores HP using damage inflicted upon the enemy. Excludes damage from skill or range attack. Inflicts additional damage during PvP. -->
-		<table name="#absorbDam">3 4 </table>
-		<table name="#magicLvl">75 84 </table>
+		<table name="#absorbDam">3 4</table>
+		<table name="#magicLvl">75 84</table>
 		<set name="icon" val="icon.skill1268" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
@@ -1027,8 +1027,8 @@
 	</skill>
 	<skill id="3569" levels="4" name="Special Ability: HP Regeneration">
 		<!-- Increases HP Recovery Bonus. Inflicts additional damage during PvP. -->
-		<table name="#magicLvl">75 84 84 84 </table>
-		<table name="#regHp">2.04 4.92 5.15 5.18 </table>
+		<table name="#magicLvl">75 84 84 84</table>
+		<table name="#regHp">2.04 4.92 5.15 5.18</table>
 		<set name="icon" val="icon.skill1044" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
@@ -1061,8 +1061,8 @@
 	</skill>
 	<skill id="3571" levels="2" name="Special Ability: Critical Stun">
 		<!-- Instantly stuns and paralyzes target. -->
-		<table name="#activateRates">27 43 </table>
-		<table name="#magicLvl">75 84 </table>
+		<table name="#activateRates">27 43</table>
+		<table name="#magicLvl">75 84</table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
@@ -1083,8 +1083,8 @@
 	</skill>
 	<skill id="3572" levels="4" name="Special Ability: Critical Damage">
 		<!-- Increases Critical Damage. Inflicts additional damage during PvP. -->
-		<table name="#cAtkAdd">265 906 999 1059 </table>
-		<table name="#magicLvl">75 84 85 86 </table>
+		<table name="#cAtkAdd">265 906 999 1059</table>
+		<table name="#magicLvl">75 84 85 86</table>
 		<set name="icon" val="icon.skill0193" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
@@ -1100,8 +1100,8 @@
 	</skill>
 	<skill id="3573" levels="3" name="Special Ability: Guidance">
 		<!-- Increases Accuracy. Inflicts additional damage during PvP. -->
-		<table name="#accCombat">5.27 5.32 7.5 </table>
-		<table name="#magicLvl">75 80 84 </table>
+		<table name="#accCombat">5.27 5.32 7.5</table>
+		<table name="#magicLvl">75 80 84</table>
 		<set name="icon" val="icon.skill1240" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
@@ -1117,8 +1117,8 @@
 	</skill>
 	<skill id="3574" levels="3" name="Special Ability: Critical Slow">
 		<!-- Temporarily decreases Speed. Effect 3. -->
-		<table name="#activateRates">16 24 33 </table>
-		<table name="#magicLvl">75 84 84 </table>
+		<table name="#activateRates">16 24 33</table>
+		<table name="#magicLvl">75 84 84</table>
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="SPEED_DOWN" />
@@ -1141,8 +1141,8 @@
 	</skill>
 	<skill id="3575" levels="4" name="Special Ability: Empower">
 		<!-- Increases M. Atk. Inflicts additional damage during PvP. -->
-		<table name="#magicLvl">75 84 85 86 </table>
-		<table name="#mAtk">60.09 151.09 166.54 176.53 </table>
+		<table name="#magicLvl">75 84 85 86</table>
+		<table name="#mAtk">60.09 151.09 166.54 176.53</table>
 		<set name="icon" val="icon.skill1059" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
@@ -1158,8 +1158,8 @@
 	</skill>
 	<skill id="3576" levels="4" name="Special Ability: MP Regeneration">
 		<!-- Increases MP Recovery Bonus. Inflicts additional damage during PvP. -->
-		<table name="#magicLvl">75 84 85 86 </table>
-		<table name="#regMp">0.54 1.95 2.04 2.05 </table>
+		<table name="#magicLvl">75 84 85 86</table>
+		<table name="#regMp">0.54 1.95 2.04 2.05</table>
 		<set name="icon" val="icon.skill1047" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />

@@ -196,9 +196,9 @@
 	</skill>
 	<skill id="5422" levels="12" name="Flame">
 		<!-- Body is on fire. HP continually decreases. -->
-		<table name="#dot"> 6.45 11.1 20.39 30.49 30.49 60.43 77 85.7 94.66 103.89 113.38 123.15 </table>
-		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<table name="#mAtk"> 9.16 15.36 27.82 41.49 61.66 84.61 111.26 126.31 142.73 160.7 180.46 201.65 </table>
+		<table name="#dot">6.45 11.1 20.39 30.49 30.49 60.43 77 85.7 94.66 103.89 113.38 123.15</table>
+		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mAtk">9.16 15.36 27.82 41.49 61.66 84.61 111.26 126.31 142.73 160.7 180.46 201.65</table>
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="FIRE_DOT" />
@@ -225,8 +225,8 @@
 	</skill>
 	<skill id="5423" levels="12" name="Poison">
 		<!-- A toxin that gradually reduces HP. -->
-		<table name="#dot"> 8 21 57 91 133 179 223 251 289 318 324 354 </table>
-		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
+		<table name="#dot">8 21 57 91 133 179 223 251 289 318 324 354</table>
+		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="POISON" />
@@ -252,8 +252,8 @@
 	</skill>
 	<skill id="5424" levels="12" name="Bleed">
 		<!-- Inflicts a wound that reduces HP. Effect 2. -->
-		<table name="#dot"> 15 21 43 55 89 103 140 168 174 232 265 295 </table>
-		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
+		<table name="#dot">15 21 43 55 89 103 140 168 174 232 265 295</table>
+		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="BLEEDING" />
@@ -474,8 +474,8 @@
 	</skill>
 	<skill id="5437" levels="2" name="Dissonance">
 		<!-- A dissonance of body and soul that causes a condition rendering you unable to control your body. -->
-		<table name="#avoid"> 50 0 </table>
-		<table name="#def"> 0.4 1 </table>
+		<table name="#avoid">50 0</table>
+		<table name="#def">0.4 1</table>
 		<set name="icon" val="icon.skilltransform3" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -492,10 +492,10 @@
 		</for>
 	</skill>
 	<skill id="5438" levels="9" name="NPC party 30 Clan Heal">
-		<table name="#amount"> 1419 1458 1503 1548 1584 1611 1630 1651 1678 </table>
-		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
-		<table name="#mpConsume"> 20 35 53 73 96 117 136 145 151 </table>
-		<table name="#mpInitialConsume"> 5 9 14 19 24 39 34 37 38 </table>
+		<table name="#amount">1419 1458 1503 1548 1584 1611 1630 1651 1678</table>
+		<table name="#magicLvl">75 78 81 84 87 90 93 96 99</table>
+		<table name="#mpConsume">20 35 53 73 96 117 136 145 151</table>
+		<table name="#mpInitialConsume">5 9 14 19 24 39 34 37 38</table>
 		<set name="affectRange" val="900" />
 		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="2000" />
@@ -513,10 +513,10 @@
 		</for>
 	</skill>
 	<skill id="5439" levels="9" name="NPC party 60 Clan Heal">
-		<table name="#amount"> 1971 2025 2088 2150 2200 2237 2263 2294 2331 </table>
-		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
-		<table name="#mpConsume"> 20 35 53 73 96 117 136 145 151 </table>
-		<table name="#mpInitialConsume"> 5 9 14 19 24 39 34 37 38 </table>
+		<table name="#amount">1971 2025 2088 2150 2200 2237 2263 2294 2331</table>
+		<table name="#magicLvl">75 78 81 84 87 90 93 96 99</table>
+		<table name="#mpConsume">20 35 53 73 96 117 136 145 151</table>
+		<table name="#mpInitialConsume">5 9 14 19 24 39 34 37 38</table>
 		<set name="affectRange" val="900" />
 		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="2000" />
@@ -547,10 +547,10 @@
 	</skill>
 	<skill id="5442" levels="4" name="Bite Attack">
 		<!-- Bite ferociously with sharp teeth. -->
-		<table name="#effectPoints"> -475 -530 -580 -628 </table>
-		<table name="#magicLvl"> 55 60 65 70 </table>
-		<table name="#mpConsume"> 55 61 66 71 </table>
-		<table name="#power"> 916 1136 1376 1626 </table>
+		<table name="#effectPoints">-475 -530 -580 -628</table>
+		<table name="#magicLvl">55 60 65 70</table>
+		<table name="#mpConsume">55 61 66 71</table>
+		<table name="#power">916 1136 1376 1626</table>
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="720" />
 		<set name="effectPoint" val="#effectPoints" />
@@ -568,8 +568,8 @@
 	</skill>
 	<skill id="5443" levels="4" name="Cry of the Wolf">
 		<!-- Dominate nearby enemies with a mighty roar. -->
-		<table name="#magicLvl"> 55 60 65 70 </table>
-		<table name="#mpConsume"> 55 61 66 71 </table>
+		<table name="#magicLvl">55 60 65 70</table>
+		<table name="#mpConsume">55 61 66 71</table>
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="PA_DOWN" />
@@ -595,10 +595,10 @@
 	</skill>
 	<skill id="5444" levels="2" name="Maul">
 		<!-- Attacks with fore-claws to create wound. Power 1. Effect 3. -->
-		<table name="#dot"> 62 67 </table>
-		<table name="#magicLvl"> 65 70 </table>
-		<table name="#mpConsume"> 66 71 </table>
-		<table name="#power"> 917 1084 </table>
+		<table name="#dot">62 67</table>
+		<table name="#magicLvl">65 70</table>
+		<table name="#mpConsume">66 71</table>
+		<table name="#power">917 1084</table>
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="BLEEDING" />
@@ -656,7 +656,7 @@
 	</skill>
 	<skill id="5446" levels="45" name="Soul Expansion">
 		<!-- Soul increased to level 1. -->
-		<table name="#icons"> icon.skill5446_1 icon.skill5446_2 icon.skill5446_3 icon.skill5446_4 icon.skill5446_5 icon.skill5446_6 icon.skill5446_7 icon.skill5446_8 icon.skill5446_9 icon.skill5446_10 icon.skill5446_11 icon.skill5446_12 icon.skill5446_13 icon.skill5446_14 icon.skill5446_15 icon.skill5446_16 icon.skill5446_17 icon.skill5446_18 icon.skill5446_19 icon.skill5446_20 icon.skill5446_21 icon.skill5446_22 icon.skill5446_23 icon.skill5446_24 icon.skill5446_25 icon.skill5446_26 icon.skill5446_27 icon.skill5446_28 icon.skill5446_29 icon.skill5446_30 icon.skill5446_31 icon.skill5446_32 icon.skill5446_33 icon.skill5446_34 icon.skill5446_35 icon.skill5446_36 icon.skill5446_37 icon.skill5446_38 icon.skill5446_39
+		<table name="#icons">icon.skill5446_1 icon.skill5446_2 icon.skill5446_3 icon.skill5446_4 icon.skill5446_5 icon.skill5446_6 icon.skill5446_7 icon.skill5446_8 icon.skill5446_9 icon.skill5446_10 icon.skill5446_11 icon.skill5446_12 icon.skill5446_13 icon.skill5446_14 icon.skill5446_15 icon.skill5446_16 icon.skill5446_17 icon.skill5446_18 icon.skill5446_19 icon.skill5446_20 icon.skill5446_21 icon.skill5446_22 icon.skill5446_23 icon.skill5446_24 icon.skill5446_25 icon.skill5446_26 icon.skill5446_27 icon.skill5446_28 icon.skill5446_29 icon.skill5446_30 icon.skill5446_31 icon.skill5446_32 icon.skill5446_33 icon.skill5446_34 icon.skill5446_35 icon.skill5446_36 icon.skill5446_37 icon.skill5446_38 icon.skill5446_39
 			icon.skill5446_40 icon.skill5446_41 icon.skill5446_42 icon.skill5446_43 icon.skill5446_44 icon.skill5446_45
 		</table>
 		<set name="icon" val="#icons" />
@@ -666,7 +666,7 @@
 	</skill>
 	<skill id="5447" levels="7" name="Paralysis">
 		<!-- You are stunned and temporarily prohibited from movement. -->
-		<table name="#magicLvl"> 62 64 66 68 70 72 74 </table>
+		<table name="#magicLvl">62 64 66 68 70 72 74</table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="PARALYZE" />
@@ -711,9 +711,9 @@
 	</skill>
 	<skill id="5450" levels="7" name="Thin Skin">
 		<!-- Instantly decreases HP due to Bleed Attack. Effect 4. -->
-		<table name="#abnormalLvls"> 4 5 5 6 7 8 8 </table>
-		<table name="#dot"> 218 266 266 307 307 335 335 </table>
-		<table name="#magicLvl"> 46 52 58 62 66 70 74 </table>
+		<table name="#abnormalLvls">4 5 5 6 7 8 8</table>
+		<table name="#dot">218 266 266 307 307 335 335</table>
+		<table name="#magicLvl">46 52 58 62 66 70 74</table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="BLEEDING" />
@@ -748,8 +748,8 @@
 	</skill>
 	<skill id="5452" levels="3" name="Spite">
 		<!-- Greatly increases the amount of critical damage received -->
-		<table name="#defCritDamage"> 1.4 1.5 1.6 </table>
-		<table name="#magicLvl"> 66 70 74 </table>
+		<table name="#defCritDamage">1.4 1.5 1.6</table>
+		<table name="#magicLvl">66 70 74</table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="T_CRT_DMG_UP" />
@@ -764,8 +764,8 @@
 		</for>
 	</skill>
 	<skill id="5453" levels="4" name="Mental Impoverish">
-		<table name="#magicLvl"> 68 70 72 74 </table>
-		<table name="#power"> 148 153 157 162 </table>
+		<table name="#magicLvl">68 70 72 74</table>
+		<table name="#power">148 153 157 162</table>
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A1" />
@@ -873,9 +873,9 @@
 		<set name="trait" val="DERANGEMENT" />
 	</skill>
 	<skill id="5461" levels="12" name="Castle Gunner Shot">
-		<table name="#magicLvl"> 40 45 50 55 60 65 70 75 80 85 90 95 </table>
-		<table name="#mpConsume"> 19 22 25 28 31 33 36 38 40 42 42 43 </table>
-		<table name="#power"> 1110 1479 1923 2443 3030 3668 4336 5002 5632 6187 6632 6978 </table>
+		<table name="#magicLvl">40 45 50 55 60 65 70 75 80 85 90 95</table>
+		<table name="#mpConsume">19 22 25 28 31 33 36 38 40 42 42 43</table>
+		<table name="#power">1110 1479 1923 2443 3030 3668 4336 5002 5632 6187 6632 6978</table>
 		<set name="castRange" val="900" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1400" />
@@ -933,9 +933,9 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5468" levels="12" name="Castle Gunner Fire">
-		<table name="#magicLvl"> 40 45 50 55 60 65 70 75 80 85 90 95 </table>
-		<table name="#mpConsume"> 19 22 25 28 31 33 36 38 40 42 42 43 </table>
-		<table name="#power"> 1110 1479 1923 2443 3030 3668 4336 5002 5632 6187 6632 6978 </table>
+		<table name="#magicLvl">40 45 50 55 60 65 70 75 80 85 90 95</table>
+		<table name="#mpConsume">19 22 25 28 31 33 36 38 40 42 42 43</table>
+		<table name="#power">1110 1479 1923 2443 3030 3668 4336 5002 5632 6187 6632 6978</table>
 		<set name="affectRange" val="80" />
 		<set name="castRange" val="300" />
 		<set name="effectPoint" val="-100" />
@@ -1170,9 +1170,9 @@
 		</for>
 	</skill>
 	<skill id="5492" levels="12" name="NPC CrossBow Attack">
-		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<table name="#mpConsume"> 25 40 56 76 99 121 142 151 159 165 168 170 </table>
-		<table name="#power"> 122 279 584 1110 1923 3030 4336 5002 5632 6187 6632 6978 </table>
+		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">25 40 56 76 99 121 142 151 159 165 168 170</table>
+		<table name="#power">122 279 584 1110 1923 3030 4336 5002 5632 6187 6632 6978</table>
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1100" />

@@ -43,8 +43,8 @@
 	</skill>
 	<skill id="6402" levels="5" name="Torumba Poison Strike">
 		<!-- You are afflicted with acute poisoning. You will lose 100 HP every second for 60 seconds. -->
-		<table name="#abnormalLvls">11 12 13 14 15 </table>
-		<table name="#dot">100 220 440 880 1600 </table>
+		<table name="#abnormalLvls">11 12 13 14 15</table>
+		<table name="#dot">100 220 440 880 1600</table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="POISON" />
@@ -724,10 +724,10 @@
 	</skill>
 	<skill id="6435" levels="3" name="Curse of the Plains">
 		<!-- Max HP decreases by 0.5%, Bow/Crossbow Critical Rate increases by 20% and Critical Damage increases by 20% per second. -->
-		<table name="#abnormalLvls">7 8 9 </table>
-		<table name="#cAtk">1.2 1.3 1.4 </table>
-		<table name="#dot">0.005 0.01 0.02 </table>
-		<table name="#rCrit">1.2 1.5 1.75 </table>
+		<table name="#abnormalLvls">7 8 9</table>
+		<table name="#cAtk">1.2 1.3 1.4</table>
+		<table name="#dot">0.005 0.01 0.02</table>
+		<table name="#rCrit">1.2 1.5 1.75</table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="MULTI_DEBUFF" />
@@ -780,7 +780,7 @@
 	</skill>
 	<skill id="6437" levels="7" name="Area of Freezing Core">
 		<!-- Decreases 30 HP by cold. -->
-		<table name="#dot">30 60 90 150 250 350 500 </table>
+		<table name="#dot">30 60 90 150 250 350 500</table>
 		<set name="abnormalLvl" val="10" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="POISON" />
@@ -1355,7 +1355,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6492" levels="28" name="NPC holy attack">
-		<table name="#effectPoints">-138 -204 -285 -379 -477 -566 -597 -624 -646 -655 -662 -669 -676 -679 -681 -684 -687 -689 -692 -694 -696 -698 -700 -702 -704 -706 -707 -709 </table>
+		<table name="#effectPoints">-138 -204 -285 -379 -477 -566 -597 -624 -646 -655 -662 -669 -676 -679 -681 -684 -687 -689 -692 -694 -696 -698 -700 -702 -704 -706 -707 -709</table>
 		<set name="coolTime" val="500" />
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="magicLvl" val="10" />
@@ -1363,7 +1363,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6493" levels="28" name="Jack's game - Target">
-		<table name="#effectPoints">-138 -204 -285 -379 -477 -566 -597 -624 -646 -655 -662 -669 -676 -679 -681 -684 -687 -689 -692 -694 -696 -698 -700 -702 -704 -706 -707 -709 </table>
+		<table name="#effectPoints">-138 -204 -285 -379 -477 -566 -597 -624 -646 -655 -662 -669 -676 -679 -681 -684 -687 -689 -692 -694 -696 -698 -700 -702 -704 -706 -707 -709</table>
 		<set name="coolTime" val="500" />
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="magicLvl" val="10" />
@@ -1371,7 +1371,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6494" levels="28" name="NPC holy attack">
-		<table name="#effectPoints">-138 -204 -285 -379 -477 -566 -597 -624 -646 -655 -662 -669 -676 -679 -681 -684 -687 -689 -692 -694 -696 -698 -700 -702 -704 -706 -707 -709 </table>
+		<table name="#effectPoints">-138 -204 -285 -379 -477 -566 -597 -624 -646 -655 -662 -669 -676 -679 -681 -684 -687 -689 -692 -694 -696 -698 -700 -702 -704 -706 -707 -709</table>
 		<set name="coolTime" val="500" />
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="magicLvl" val="10" />
@@ -1379,7 +1379,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6495" levels="28" name="NPC holy attack">
-		<table name="#effectPoints">-138 -204 -285 -379 -477 -566 -597 -624 -646 -655 -662 -669 -676 -679 -681 -684 -687 -689 -692 -694 -696 -698 -700 -702 -704 -706 -707 -709 </table>
+		<table name="#effectPoints">-138 -204 -285 -379 -477 -566 -597 -624 -646 -655 -662 -669 -676 -679 -681 -684 -687 -689 -692 -694 -696 -698 -700 -702 -704 -706 -707 -709</table>
 		<set name="coolTime" val="500" />
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="magicLvl" val="10" />
@@ -1387,7 +1387,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6496" levels="28" name="NPC holy attack">
-		<table name="#effectPoints">-138 -204 -285 -379 -477 -566 -597 -624 -646 -655 -662 -669 -676 -679 -681 -684 -687 -689 -692 -694 -696 -698 -700 -702 -704 -706 -707 -709 </table>
+		<table name="#effectPoints">-138 -204 -285 -379 -477 -566 -597 -624 -646 -655 -662 -669 -676 -679 -681 -684 -687 -689 -692 -694 -696 -698 -700 -702 -704 -706 -707 -709</table>
 		<set name="coolTime" val="500" />
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="magicLvl" val="10" />
@@ -1395,7 +1395,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6497" levels="28" name="NPC holy attack">
-		<table name="#effectPoints">-138 -204 -285 -379 -477 -566 -597 -624 -646 -655 -662 -669 -676 -679 -681 -684 -687 -689 -692 -694 -696 -698 -700 -702 -704 -706 -707 -709 </table>
+		<table name="#effectPoints">-138 -204 -285 -379 -477 -566 -597 -624 -646 -655 -662 -669 -676 -679 -681 -684 -687 -689 -692 -694 -696 -698 -700 -702 -704 -706 -707 -709</table>
 		<set name="coolTime" val="500" />
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="magicLvl" val="10" />
@@ -1403,7 +1403,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6498" levels="28" name="NPC holy shot">
-		<table name="#effectPoints">-138 -204 -285 -379 -477 -566 -597 -624 -646 -655 -662 -669 -676 -679 -681 -684 -687 -689 -692 -694 -696 -698 -700 -702 -704 -706 -707 -709 </table>
+		<table name="#effectPoints">-138 -204 -285 -379 -477 -566 -597 -624 -646 -655 -662 -669 -676 -679 -681 -684 -687 -689 -692 -694 -696 -698 -700 -702 -704 -706 -707 -709</table>
 		<set name="coolTime" val="500" />
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="magicLvl" val="10" />
@@ -1411,7 +1411,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6499" levels="28" name="NPC holy shot">
-		<table name="#effectPoints">-138 -204 -285 -379 -477 -566 -597 -624 -646 -655 -662 -669 -676 -679 -681 -684 -687 -689 -692 -694 -696 -698 -700 -702 -704 -706 -707 -709 </table>
+		<table name="#effectPoints">-138 -204 -285 -379 -477 -566 -597 -624 -646 -655 -662 -669 -676 -679 -681 -684 -687 -689 -692 -694 -696 -698 -700 -702 -704 -706 -707 -709</table>
 		<set name="coolTime" val="500" />
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="magicLvl" val="10" />

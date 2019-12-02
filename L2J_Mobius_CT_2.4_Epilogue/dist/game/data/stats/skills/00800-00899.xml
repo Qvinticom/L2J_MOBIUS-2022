@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="800" levels="3" name="Master Ability - Magic Defense">
 		<!-- M. Def. is increased. -->
-		<table name="#mDef">50.4 100.8 151.2 </table>
+		<table name="#mDef">50.4 100.8 151.2</table>
 		<set name="excludedFromCheck" val="true" />
 		<set name="icon" val="icon.skill0142" />
 		<set name="magicLvl" val="75" />
@@ -275,10 +275,10 @@
 	</skill>
 	<skill id="814" levels="43" name="Full Swing">
 		<!-- Widely swings a two-handed weapon to attack nearby enemies with 893 Power added to P. Atk. Requires a two-handed sword/two-handed blunt to be equipped. Ignores Shield Defense. Over-hit and critical hit are possible. -->
-		<table name="#effectPoints">-208 -213 -218 -223 -228 -233 -237 -242 -247 -252 -257 -261 -266 -271 -275 -279 -284 -288 -292 -296 -300 -304 -307 -311 -314 -317 -320 -323 -326 -328 -331 -333 -335 -337 -338 -340 -341 -342 -343 -344 -345 -346 -347 </table>
-		<table name="#magicLvl">43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 </table>
-		<table name="#mpConsume">41 42 43 44 46 47 48 50 50 51 52 53 55 56 57 58 60 61 61 62 63 65 66 67 68 69 70 71 72 73 74 75 76 77 78 78 79 80 80 81 82 82 83 </table>
-		<table name="#power">893 945 998 1054 1112 1172 1234 1298 1365 1433 1503 1575 1649 1725 1803 1882 1963 2045 2129 2214 2301 2388 2476 2565 2655 2745 2836 2927 3018 3108 3198 3288 3376 3464 3551 3636 3720 3801 3881 3959 4034 4107 4176 </table>
+		<table name="#effectPoints">-208 -213 -218 -223 -228 -233 -237 -242 -247 -252 -257 -261 -266 -271 -275 -279 -284 -288 -292 -296 -300 -304 -307 -311 -314 -317 -320 -323 -326 -328 -331 -333 -335 -337 -338 -340 -341 -342 -343 -344 -345 -346 -347</table>
+		<table name="#magicLvl">43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85</table>
+		<table name="#mpConsume">41 42 43 44 46 47 48 50 50 51 52 53 55 56 57 58 60 61 61 62 63 65 66 67 68 69 70 71 72 73 74 75 76 77 78 78 79 80 80 81 82 82 83</table>
+		<table name="#power">893 945 998 1054 1112 1172 1234 1298 1365 1433 1503 1575 1649 1725 1803 1882 1963 2045 2129 2214 2301 2388 2476 2565 2655 2745 2836 2927 3018 3108 3198 3288 3376 3464 3551 3636 3720 3801 3881 3959 4034 4107 4176</table>
 		<set name="affectLimit" val="6-12" />
 		<set name="affectRange" val="200" />
 		<set name="baseCritRate" val="15" />
@@ -306,10 +306,10 @@
 	</skill>
 	<skill id="815" levels="43" name="Blade Hurricane">
 		<!-- Attacks nearby enemies with 893 Power added to P. Atk. Requires a dualsword. Ignores Shield Defense. Over-hit and critical hit are possible. -->
-		<table name="#effectPoints">-208 -213 -218 -223 -228 -233 -237 -242 -247 -252 -257 -261 -266 -271 -275 -279 -284 -288 -292 -296 -300 -304 -307 -311 -314 -317 -320 -323 -326 -328 -331 -333 -335 -337 -338 -340 -341 -342 -343 -344 -345 -346 -347 </table>
-		<table name="#magicLvl">43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 </table>
-		<table name="#mpConsume">41 42 43 44 46 47 48 50 50 51 52 53 55 56 57 58 60 61 61 62 63 65 66 67 68 69 70 71 72 73 74 75 76 77 78 78 79 80 80 81 82 82 83 </table>
-		<table name="#power">893 945 998 1054 1112 1172 1234 1298 1365 1433 1503 1575 1649 1725 1803 1882 1963 2045 2129 2214 2301 2388 2476 2565 2655 2745 2836 2927 3018 3108 3198 3288 3376 3464 3551 3636 3720 3801 3881 3959 4034 4107 4176 </table>
+		<table name="#effectPoints">-208 -213 -218 -223 -228 -233 -237 -242 -247 -252 -257 -261 -266 -271 -275 -279 -284 -288 -292 -296 -300 -304 -307 -311 -314 -317 -320 -323 -326 -328 -331 -333 -335 -337 -338 -340 -341 -342 -343 -344 -345 -346 -347</table>
+		<table name="#magicLvl">43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85</table>
+		<table name="#mpConsume">41 42 43 44 46 47 48 50 50 51 52 53 55 56 57 58 60 61 61 62 63 65 66 67 68 69 70 71 72 73 74 75 76 77 78 78 79 80 80 81 82 82 83</table>
+		<table name="#power">893 945 998 1054 1112 1172 1234 1298 1365 1433 1503 1575 1649 1725 1803 1882 1963 2045 2129 2214 2301 2388 2476 2565 2655 2745 2836 2927 3018 3108 3198 3288 3376 3464 3551 3636 3720 3801 3881 3959 4034 4107 4176</table>
 		<set name="affectLimit" val="6-12" />
 		<set name="affectRange" val="200" />
 		<set name="baseCritRate" val="15" />
@@ -334,10 +334,10 @@
 	</skill>
 	<skill id="816" levels="43" name="Cleave">
 		<!-- Inflicts a powerful blow on the enemy with 992 Power added to P. Atk. Requires a two-handed sword/two-handed blunt weapon to be equipped. Ignores Shield Defense. Over-hit and Critical are possible. -->
-		<table name="#effectPoints">-311 -319 -326 -334 -341 -349 -356 -363 -370 -378 -385 -392 -399 -406 -412 -419 -425 -431 -438 -444 -449 -455 -460 -466 -471 -475 -480 -484 -488 -492 -496 -499 -502 -505 -507 -509 -511 -513 -515 -516 -518 -519 -521 </table>
-		<table name="#magicLvl">43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 </table>
-		<table name="#mpConsume">41 42 43 44 46 47 48 50 50 51 52 53 55 56 57 58 60 61 61 62 63 65 66 67 68 69 70 71 72 73 74 75 76 77 78 78 79 80 80 81 82 82 83 </table>
-		<table name="#power">992 1049 1109 1171 1236 1302 1371 1443 1516 1592 1670 1750 1832 1917 2003 2091 2181 2272 2366 2460 2556 2653 2751 2850 2950 3050 3151 3252 3353 3453 3553 3653 3752 3849 3945 4040 4133 4224 4312 4399 4482 4563 4640 </table>
+		<table name="#effectPoints">-311 -319 -326 -334 -341 -349 -356 -363 -370 -378 -385 -392 -399 -406 -412 -419 -425 -431 -438 -444 -449 -455 -460 -466 -471 -475 -480 -484 -488 -492 -496 -499 -502 -505 -507 -509 -511 -513 -515 -516 -518 -519 -521</table>
+		<table name="#magicLvl">43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85</table>
+		<table name="#mpConsume">41 42 43 44 46 47 48 50 50 51 52 53 55 56 57 58 60 61 61 62 63 65 66 67 68 69 70 71 72 73 74 75 76 77 78 78 79 80 80 81 82 82 83</table>
+		<table name="#power">992 1049 1109 1171 1236 1302 1371 1443 1516 1592 1670 1750 1832 1917 2003 2091 2181 2272 2366 2460 2556 2653 2751 2850 2950 3050 3151 3252 3353 3453 3553 3653 3752 3849 3945 4040 4133 4224 4312 4399 4482 4563 4640</table>
 		<set name="baseCritRate" val="15" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="1080" />
@@ -367,10 +367,10 @@
 	</skill>
 	<skill id="817" levels="43" name="Double Strike">
 		<!-- Uses two swords to inflict a powerful blow on the enemy with 992 Power added to P. Atk. Requires a dualsword. Ignores Shield Defense. Over-hit and Critical hit are possible. -->
-		<table name="#effectPoints">-311 -319 -326 -334 -341 -349 -356 -363 -370 -378 -385 -392 -399 -406 -412 -419 -425 -431 -438 -444 -449 -455 -460 -466 -471 -475 -480 -484 -488 -492 -496 -499 -502 -505 -507 -509 -511 -513 -515 -516 -518 -519 -521 </table>
-		<table name="#magicLvl">43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 </table>
-		<table name="#mpConsume">41 42 43 44 46 47 48 50 50 51 52 53 55 56 57 58 60 61 61 62 63 65 66 67 68 69 70 71 72 73 74 75 76 77 78 78 79 80 80 81 82 82 83 </table>
-		<table name="#power">992 1049 1109 1171 1236 1302 1371 1443 1516 1592 1670 1750 1832 1917 2003 2091 2181 2272 2366 2460 2556 2653 2751 2850 2950 3050 3151 3252 3353 3453 3553 3653 3752 3849 3945 4040 4133 4224 4312 4399 4482 4563 4640 </table>
+		<table name="#effectPoints">-311 -319 -326 -334 -341 -349 -356 -363 -370 -378 -385 -392 -399 -406 -412 -419 -425 -431 -438 -444 -449 -455 -460 -466 -471 -475 -480 -484 -488 -492 -496 -499 -502 -505 -507 -509 -511 -513 -515 -516 -518 -519 -521</table>
+		<table name="#magicLvl">43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85</table>
+		<table name="#mpConsume">41 42 43 44 46 47 48 50 50 51 52 53 55 56 57 58 60 61 61 62 63 65 66 67 68 69 70 71 72 73 74 75 76 77 78 78 79 80 80 81 82 82 83</table>
+		<table name="#power">992 1049 1109 1171 1236 1302 1371 1443 1516 1592 1670 1750 1832 1917 2003 2091 2181 2272 2366 2460 2556 2653 2751 2850 2950 3050 3151 3252 3353 3453 3553 3653 3752 3849 3945 4040 4133 4224 4312 4399 4482 4563 4640</table>
 		<set name="baseCritRate" val="15" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="167" />
@@ -453,10 +453,10 @@
 	</skill>
 	<skill id="822" levels="3" name="Repair Golem">
 		<!-- Repairs the summoned golem to recover the golem's HP by 8%. -->
-		<table name="#amount">8 12 15 </table>
-		<table name="#effectPoints">362 481 562 </table>
-		<table name="#magicLvl">40 49 55 </table>
-		<table name="#mpConsume">61 78 88 </table>
+		<table name="#amount">8 12 15</table>
+		<table name="#effectPoints">362 481 562</table>
+		<table name="#magicLvl">40 49 55</table>
+		<table name="#mpConsume">61 78 88</table>
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="500" />
 		<set name="effectPoint" val="#effectPoints" />
@@ -479,11 +479,11 @@
 	</skill>
 	<skill id="823" levels="3" name="Strengthen Golem">
 		<!-- Increases the summoned golem's P. Atk. by 8% and Atk. Spd. by 3% for 20 minutes. -->
-		<table name="#effectPoints">408 495 549 </table>
-		<table name="#magicLvl">43 52 58 </table>
-		<table name="#mpConsume">24 36 42 </table>
-		<table name="#pAtk">1.08 1.12 1.15 </table>
-		<table name="#pAtkSpd">1.03 1.06 1.09 </table>
+		<table name="#effectPoints">408 495 549</table>
+		<table name="#magicLvl">43 52 58</table>
+		<table name="#mpConsume">24 36 42</table>
+		<table name="#pAtk">1.08 1.12 1.15</table>
+		<table name="#pAtkSpd">1.03 1.06 1.09</table>
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="PA_UP" />
@@ -510,11 +510,11 @@
 	</skill>
 	<skill id="824" levels="3" name="Golem Reinforcement">
 		<!-- For 20 minutes, equips a summoned golem with an additional armor plate to increase P. Def. by 8% and maximum HP by 5%. -->
-		<table name="#effectPoints">379 467 523 </table>
-		<table name="#magicLvl">40 49 55 </table>
-		<table name="#maxHp">1.05 1.08 1.1 </table>
-		<table name="#mpConsume">35 44 44 </table>
-		<table name="#pDef">1.08 1.12 1.15 </table>
+		<table name="#effectPoints">379 467 523</table>
+		<table name="#magicLvl">40 49 55</table>
+		<table name="#maxHp">1.05 1.08 1.1</table>
+		<table name="#mpConsume">35 44 44</table>
+		<table name="#pDef">1.08 1.12 1.15</table>
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="PD_UP" />
@@ -718,9 +718,9 @@
 	</skill>
 	<skill id="832" levels="2" name="Fast Recovery">
 		<!-- Increases HP/MP/CP Recovery Bonus. -->
-		<table name="#magicLvl">43 49 </table>
-		<table name="#regHpCp">4 6 </table>
-		<table name="#regMp">2 4 </table>
+		<table name="#magicLvl">43 49</table>
+		<table name="#regHpCp">4 6</table>
+		<table name="#regMp">2 4</table>
 		<set name="icon" val="icon.skill0832" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
@@ -772,10 +772,10 @@
 	</skill>
 	<skill id="835" levels="4" name="Imbue Seed of Destruction">
 		<!-- Plants a Seed of Destruction in the enemy's body. The seed grows inside the body, sucking up the enemy's mana, and blocks the enemy's skill use when it becomes fully grown. Consumes 1 Dark Seed. -->
-		<table name="#calledSkillLevel">1 2 3 4 </table>
-		<table name="#effectPoints">-317 -323 -328 -333 </table>
-		<table name="#magicLvl">68 70 72 74 </table>
-		<table name="#mdot">16 17 17 17 </table>
+		<table name="#calledSkillLevel">1 2 3 4</table>
+		<table name="#effectPoints">-317 -323 -328 -333</table>
+		<table name="#magicLvl">68 70 72 74</table>
+		<table name="#mdot">16 17 17 17</table>
 		<set name="abnormalLvl" val="8" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="DARK_SEED" />
@@ -812,8 +812,8 @@
 	</skill>
 	<skill id="836" levels="3" name="Oblivion Trap">
 		<!-- Creates a trap that when triggered makes the enemy lose focus, potentially causing them to lose their target when attacking. -->
-		<table name="#magicLvl">64 68 72 </table>
-		<table name="#npcId">13125 13126 13127 </table>
+		<table name="#magicLvl">64 68 72</table>
+		<table name="#npcId">13125 13126 13127</table>
 		<set name="effectPoint" val="-1" />
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill0836" />
@@ -1464,8 +1464,8 @@
 	</skill>
 	<skill id="869" levels="9" name="Mercenary Power Strike">
 		<!-- Delivers a powerful blow that strikes the target with 2272 Power added to P. Atk. -->
-		<table name="#magicLvl">60 70 80 81 82 83 84 85 86 </table>
-		<table name="#power">2272 3252 4224 4312 4399 4482 4563 4640 4715 </table>
+		<table name="#magicLvl">60 70 80 81 82 83 84 85 86</table>
+		<table name="#power">2272 3252 4224 4312 4399 4482 4563 4640 4715</table>
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="720" />
 		<set name="effectPoint" val="-1" />
@@ -1485,9 +1485,9 @@
 	</skill>
 	<skill id="870" levels="8" name="Knight Mercenary Power Strike">
 		<!-- Delivers a strong, crushing attack on your opponent with 3252 Power added to P. Atk. -->
-		<table name="#effectPoints">-321 -342 -343 -344 -345 -346 -347 -348 </table>
-		<table name="#magicLvl">70 80 81 82 83 84 85 86 </table>
-		<table name="#power">3252 4224 4312 4399 4482 4563 4640 4715 </table>
+		<table name="#effectPoints">-321 -342 -343 -344 -345 -346 -347 -348</table>
+		<table name="#magicLvl">70 80 81 82 83 84 85 86</table>
+		<table name="#power">3252 4224 4312 4399 4482 4563 4640 4715</table>
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="720" />
 		<set name="effectPoint" val="#effectPoints" />
@@ -1530,9 +1530,9 @@
 	</skill>
 	<skill id="872" levels="8" name="Archer Mercenary Power Shot">
 		<!-- Uses a bow to attack a distant opponent with 4336 Power added to P. Atk. Over-hit is possible. -->
-		<table name="#effectPoints">-646 -684 -686 -688 -690 -692 -694 -696 </table>
-		<table name="#magicLvl">70 80 81 82 83 84 85 86 </table>
-		<table name="#power">4336 5632 5750 5865 5976 6084 6187 6286 </table>
+		<table name="#effectPoints">-646 -684 -686 -688 -690 -692 -694 -696</table>
+		<table name="#magicLvl">70 80 81 82 83 84 85 86</table>
+		<table name="#power">4336 5632 5750 5865 5976 6084 6187 6286</table>
 		<set name="castRange" val="700" />
 		<set name="coolTime" val="800" />
 		<set name="effectPoint" val="#effectPoints" />
@@ -1573,10 +1573,10 @@
 	</skill>
 	<skill id="874" levels="8" name="Wizard Mercenary Flame Strike">
 		<!-- Launches a flaming swath of energy that inflicts Fire damage on the enemy with 68 Power. -->
-		<table name="#effectPoints">-676 -679 -681 -684 -687 -689 -692 -694 </table>
-		<table name="#elementPower">20 25 30 35 40 45 50 55 </table>
-		<table name="#magicLvl">70 80 81 82 83 84 85 86 </table>
-		<table name="#power">68 78 78 79 80 81 81 82 </table>
+		<table name="#effectPoints">-676 -679 -681 -684 -687 -689 -692 -694</table>
+		<table name="#elementPower">20 25 30 35 40 45 50 55</table>
+		<table name="#magicLvl">70 80 81 82 83 84 85 86</table>
+		<table name="#power">68 78 78 79 80 81 81 82</table>
 		<set name="affectLimit" val="5-12" />
 		<set name="affectRange" val="200" />
 		<set name="castRange" val="500" />
@@ -1623,9 +1623,9 @@
 	</skill>
 	<skill id="876" levels="8" name="Kamael Captain Mercenary Enuma Elish">
 		<!-- Attacks the opponent using the mighty Sword of Creation with 4878 Power added to P. Atk. -->
-		<table name="#effectPoints">-646 -684 -686 -688 -690 -692 -694 -696 </table>
-		<table name="#magicLvl">70 80 81 82 83 84 85 86 </table>
-		<table name="#power">4878 6335 6468 6598 6723 6844 6960 7072 </table>
+		<table name="#effectPoints">-646 -684 -686 -688 -690 -692 -694 -696</table>
+		<table name="#magicLvl">70 80 81 82 83 84 85 86</table>
+		<table name="#power">4878 6335 6468 6598 6723 6844 6960 7072</table>
 		<set name="affectLimit" val="5-12" />
 		<set name="affectRange" val="400" />
 		<set name="castRange" val="40" />
@@ -1649,8 +1649,8 @@
 	</skill>
 	<skill id="877" levels="8" name="Kamael Captain Mercenary Disarm">
 		<!-- Disarms the enemy and prevents him from equipping a weapon for 5 seconds. -->
-		<table name="#effectPoints">-646 -684 -686 -688 -690 -692 -694 -696 </table>
-		<table name="#magicLvl">70 80 81 82 83 84 85 86 </table>
+		<table name="#effectPoints">-646 -684 -686 -688 -690 -692 -694 -696</table>
+		<table name="#magicLvl">70 80 81 82 83 84 85 86</table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="DISARM" />
@@ -1678,9 +1678,9 @@
 	</skill>
 	<skill id="878" levels="7" name="Knight Captain Mercenary Power Strike">
 		<!-- Inflicts a pounding attack on your enemy with 5068 Power added to P. Atk. -->
-		<table name="#effectPoints">-323 -342 -343 -344 -345 -346 -347 </table>
-		<table name="#magicLvl">80 81 82 83 84 85 86 </table>
-		<table name="#power">5068 5175 5278 5379 5475 5568 5658 </table>
+		<table name="#effectPoints">-323 -342 -343 -344 -345 -346 -347</table>
+		<table name="#magicLvl">80 81 82 83 84 85 86</table>
+		<table name="#power">5068 5175 5278 5379 5475 5568 5658</table>
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="720" />
 		<set name="effectPoint" val="#effectPoints" />
@@ -1700,7 +1700,7 @@
 	</skill>
 	<skill id="879" levels="7" name="Knight Captain Mercenary Curse Fear">
 		<!-- Causes your enemy to flee in fear. -->
-		<table name="#magicLvl">80 81 82 83 84 85 86 </table>
+		<table name="#magicLvl">80 81 82 83 84 85 86</table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="TURN_FLEE" />
@@ -1750,9 +1750,9 @@
 	</skill>
 	<skill id="881" levels="7" name="Commander Mercenary Twister">
 		<!-- Supplements the user's M. Atk. with 116 Power to create a powerful cyclone that inflicts Wind damage on the enemy. -->
-		<table name="#elementPower">25 30 35 40 45 50 55 </table>
-		<table name="#magicLvl">80 81 82 83 84 85 86 </table>
-		<table name="#power">116 117 119 120 121 122 123 </table>
+		<table name="#elementPower">25 30 35 40 45 50 55</table>
+		<table name="#magicLvl">80 81 82 83 84 85 86</table>
+		<table name="#power">116 117 119 120 121 122 123</table>
 		<set name="castRange" val="750" />
 		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="1250" />
@@ -1774,9 +1774,9 @@
 	</skill>
 	<skill id="882" levels="7" name="Commander Mercenary Blaze">
 		<!-- Ignites flames on the user's body. Power 116. -->
-		<table name="#elementPower">25 30 35 40 45 50 55 </table>
-		<table name="#magicLvl">80 81 82 83 84 85 86 </table>
-		<table name="#power">116 117 119 120 121 122 123 </table>
+		<table name="#elementPower">25 30 35 40 45 50 55</table>
+		<table name="#magicLvl">80 81 82 83 84 85 86</table>
+		<table name="#power">116 117 119 120 121 122 123</table>
 		<set name="castRange" val="750" />
 		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="1250" />
@@ -1798,7 +1798,7 @@
 	</skill>
 	<skill id="883" levels="7" name="Commander Mercenary Seal of Binding">
 		<!-- Holds nearby enemies for 30 seconds. -->
-		<table name="#magicLvl">80 81 82 83 84 85 86 </table>
+		<table name="#magicLvl">80 81 82 83 84 85 86</table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ROOT_MAGICALLY" />
@@ -1829,7 +1829,7 @@
 	</skill>
 	<skill id="884" levels="11" name="Air Assault">
 		<!-- Moves forward quickly and inflicts damage on nearby enemies. -->
-		<table name="#magicLvl">75 76 77 78 79 80 81 82 83 84 85 </table>
+		<table name="#magicLvl">75 76 77 78 79 80 81 82 83 84 85</table>
 		<set name="affectRange" val="100" />
 		<set name="castRange" val="2500" />
 		<set name="coolTime" val="200" />
@@ -1881,10 +1881,10 @@
 	</skill>
 	<skill id="886" levels="11" name="Air Shock Bomb">
 		<!-- Damages and stuns the target with 2251 Power, temporarily preventing movement. -->
-		<table name="#effectPoints">-659 -662 -666 -669 -673 -676 -679 -681 -684 -687 -689 </table>
-		<table name="#magicLvl">75 76 77 78 79 80 81 82 83 84 85 </table>
-		<table name="#mpConsume">69 70 70 71 72 72 73 74 74 75 75 </table>
-		<table name="#power">2251 2310 2367 2424 2480 2534 2588 2639 2690 2738 2784 </table>
+		<table name="#effectPoints">-659 -662 -666 -669 -673 -676 -679 -681 -684 -687 -689</table>
+		<table name="#magicLvl">75 76 77 78 79 80 81 82 83 84 85</table>
+		<table name="#mpConsume">69 70 70 71 72 72 73 74 74 75 75</table>
+		<table name="#power">2251 2310 2367 2424 2480 2534 2588 2639 2690 2738 2784</table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
@@ -1912,10 +1912,10 @@
 	</skill>
 	<skill id="887" levels="11" name="Sky Clutch">
 		<!-- Inflicts damage and simultaneously holds the targeted enemy with 110 Power. Only one root effect can be used at a time. -->
-		<table name="#effectPoints">-659 -662 -666 -669 -673 -676 -679 -681 -684 -687 -689 </table>
-		<table name="#magicLvl">75 76 77 78 79 80 81 82 83 84 85 </table>
-		<table name="#mpConsume">69 70 70 71 72 72 73 74 74 75 75 </table>
-		<table name="#power">110 111 112 114 115 116 117 119 120 121 122 </table>
+		<table name="#effectPoints">-659 -662 -666 -669 -673 -676 -679 -681 -684 -687 -689</table>
+		<table name="#magicLvl">75 76 77 78 79 80 81 82 83 84 85</table>
+		<table name="#mpConsume">69 70 70 71 72 72 73 74 74 75 75</table>
+		<table name="#power">110 111 112 114 115 116 117 119 120 121 122</table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="ROOT_MAGICALLY" />
@@ -1944,10 +1944,10 @@
 	</skill>
 	<skill id="888" levels="11" name="Energy Storm">
 		<!-- Delivers a powerful strike with 3752 Power. -->
-		<table name="#effectPoints">-659 -662 -666 -669 -673 -676 -679 -681 -684 -687 -689 </table>
-		<table name="#magicLvl">75 76 77 78 79 80 81 82 83 84 85 </table>
-		<table name="#mpConsume">69 70 70 71 72 72 73 74 74 75 75 </table>
-		<table name="#power">3752 3849 3945 4040 4133 4224 4312 4399 4482 4563 4640 </table>
+		<table name="#effectPoints">-659 -662 -666 -669 -673 -676 -679 -681 -684 -687 -689</table>
+		<table name="#magicLvl">75 76 77 78 79 80 81 82 83 84 85</table>
+		<table name="#mpConsume">69 70 70 71 72 72 73 74 74 75 75</table>
+		<table name="#power">3752 3849 3945 4040 4133 4224 4312 4399 4482 4563 4640</table>
 		<set name="castRange" val="200" />
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="500" />
@@ -1965,10 +1965,10 @@
 	</skill>
 	<skill id="889" levels="11" name="Energy Storm">
 		<!-- Delivers a powerful strike with 3752 Power. -->
-		<table name="#effectPoints">-659 -662 -666 -669 -673 -676 -679 -681 -684 -687 -689 </table>
-		<table name="#magicLvl">75 76 77 78 79 80 81 82 83 84 85 </table>
-		<table name="#mpConsume">69 70 70 71 72 72 73 74 74 75 75 </table>
-		<table name="#power">3752 3849 3945 4040 4133 4224 4312 4399 4482 4563 4640 </table>
+		<table name="#effectPoints">-659 -662 -666 -669 -673 -676 -679 -681 -684 -687 -689</table>
+		<table name="#magicLvl">75 76 77 78 79 80 81 82 83 84 85</table>
+		<table name="#mpConsume">69 70 70 71 72 72 73 74 74 75 75</table>
+		<table name="#power">3752 3849 3945 4040 4133 4224 4312 4399 4482 4563 4640</table>
 		<set name="castRange" val="200" />
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="500" />
@@ -1986,10 +1986,10 @@
 	</skill>
 	<skill id="890" levels="11" name="Prodigious Flare">
 		<!-- Delivers a powerful strike with 5627 Power. -->
-		<table name="#effectPoints">-659 -662 -666 -669 -673 -676 -679 -681 -684 -687 -689 </table>
-		<table name="#magicLvl">75 76 77 78 79 80 81 82 83 84 85 </table>
-		<table name="#mpConsume">69 70 70 71 72 72 73 74 74 75 75 </table>
-		<table name="#power">5627 5773 5918 6060 6199 6335 6468 6598 6723 6844 6960 </table>
+		<table name="#effectPoints">-659 -662 -666 -669 -673 -676 -679 -681 -684 -687 -689</table>
+		<table name="#magicLvl">75 76 77 78 79 80 81 82 83 84 85</table>
+		<table name="#mpConsume">69 70 70 71 72 72 73 74 74 75 75</table>
+		<table name="#power">5627 5773 5918 6060 6199 6335 6468 6598 6723 6844 6960</table>
 		<set name="castRange" val="200" />
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="500" />
@@ -2007,10 +2007,10 @@
 	</skill>
 	<skill id="891" levels="11" name="Energy Shot">
 		<!-- Inflicts a powerful long-range attack with 88 Power. -->
-		<table name="#effectPoints">-659 -662 -666 -669 -673 -676 -679 -681 -684 -687 -689 </table>
-		<table name="#magicLvl">75 76 77 78 79 80 81 82 83 84 85 </table>
-		<table name="#mpConsume">69 70 70 71 72 72 73 74 74 75 75 </table>
-		<table name="#power">88 89 90 91 92 93 94 95 96 97 98 </table>
+		<table name="#effectPoints">-659 -662 -666 -669 -673 -676 -679 -681 -684 -687 -689</table>
+		<table name="#magicLvl">75 76 77 78 79 80 81 82 83 84 85</table>
+		<table name="#mpConsume">69 70 70 71 72 72 73 74 74 75 75</table>
+		<table name="#power">88 89 90 91 92 93 94 95 96 97 98</table>
 		<set name="castRange" val="900" />
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="1800" />
@@ -2029,10 +2029,10 @@
 	</skill>
 	<skill id="892" levels="11" name="Energy Shot">
 		<!-- Inflicts a powerful long-range attack with 131 Power. -->
-		<table name="#effectPoints">-659 -662 -666 -669 -673 -676 -679 -681 -684 -687 -689 </table>
-		<table name="#magicLvl">75 76 77 78 79 80 81 82 83 84 85 </table>
-		<table name="#mpConsume">69 70 70 71 72 72 73 74 74 75 75 </table>
-		<table name="#power">131 133 135 136 138 139 141 142 144 145 146 </table>
+		<table name="#effectPoints">-659 -662 -666 -669 -673 -676 -679 -681 -684 -687 -689</table>
+		<table name="#magicLvl">75 76 77 78 79 80 81 82 83 84 85</table>
+		<table name="#mpConsume">69 70 70 71 72 72 73 74 74 75 75</table>
+		<table name="#power">131 133 135 136 138 139 141 142 144 145 146</table>
 		<set name="castRange" val="900" />
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="1800" />
@@ -2051,10 +2051,10 @@
 	</skill>
 	<skill id="893" levels="11" name="Concentrated Energy Shot">
 		<!-- Gathers strength to inflict a powerful long-range attack with 197 Power. -->
-		<table name="#effectPoints">-659 -662 -666 -669 -673 -676 -679 -681 -684 -687 -689 </table>
-		<table name="#magicLvl">75 76 77 78 79 80 81 82 83 84 85 </table>
-		<table name="#mpConsume">69 70 70 71 72 72 73 74 74 75 75 </table>
-		<table name="#power">197 199 202 204 206 209 211 213 215 217 219 </table>
+		<table name="#effectPoints">-659 -662 -666 -669 -673 -676 -679 -681 -684 -687 -689</table>
+		<table name="#magicLvl">75 76 77 78 79 80 81 82 83 84 85</table>
+		<table name="#mpConsume">69 70 70 71 72 72 73 74 74 75 75</table>
+		<table name="#power">197 199 202 204 206 209 211 213 215 217 219</table>
 		<set name="castRange" val="900" />
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="1800" />
@@ -2120,10 +2120,10 @@
 	</skill>
 	<skill id="896" levels="6" name="Rolling Step">
 		<!-- Inflicts a powerful blow with 9503 Power. -->
-		<table name="#effectPoints">-676 -679 -681 -684 -687 -689 </table>
-		<table name="#mpConsume">72 73 74 74 75 75 </table>
-		<table name="#pvePower">9503 9702 9896 10084 10266 10440 </table>
-		<table name="#pvpPower">3168 3234 3299 3362 3422 3480 </table>
+		<table name="#effectPoints">-676 -679 -681 -684 -687 -689</table>
+		<table name="#mpConsume">72 73 74 74 75 75</table>
+		<table name="#pvePower">9503 9702 9896 10084 10266 10440</table>
+		<table name="#pvpPower">3168 3234 3299 3362 3422 3480</table>
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="400" />
@@ -2143,10 +2143,10 @@
 	</skill>
 	<skill id="897" levels="6" name="Double Blast">
 		<!-- Inflicts a powerful long-range attack with 9503 Power. -->
-		<table name="#effectPoints">-676 -679 -681 -684 -687 -689 </table>
-		<table name="#mpConsume">72 73 74 74 75 75 </table>
-		<table name="#pvePower">9503 9702 9896 10084 10266 10440 </table>
-		<table name="#pvpPower">3168 3234 3299 3362 3422 3480 </table>
+		<table name="#effectPoints">-676 -679 -681 -684 -687 -689</table>
+		<table name="#mpConsume">72 73 74 74 75 75</table>
+		<table name="#pvePower">9503 9702 9896 10084 10266 10440</table>
+		<table name="#pvpPower">3168 3234 3299 3362 3422 3480</table>
 		<set name="castRange" val="900" />
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="1500" />
@@ -2165,10 +2165,10 @@
 	</skill>
 	<skill id="898" levels="6" name="Tornado Slash">
 		<!-- Inflicts a powerful blow on nearby enemies with 5068 Power. -->
-		<table name="#effectPoints">-676 -679 -681 -684 -687 -689 </table>
-		<table name="#mpConsume">72 73 74 74 75 75 </table>
-		<table name="#pvePower">5068 5175 5278 5379 5475 5568 </table>
-		<table name="#pvpPower">1690 1725 1760 1793 1825 1856 </table>
+		<table name="#effectPoints">-676 -679 -681 -684 -687 -689</table>
+		<table name="#mpConsume">72 73 74 74 75 75</table>
+		<table name="#pvePower">5068 5175 5278 5379 5475 5568</table>
+		<table name="#pvpPower">1690 1725 1760 1793 1825 1856</table>
 		<set name="affectLimit" val="6-12" />
 		<set name="affectRange" val="100" />
 		<set name="effectPoint" val="#effectPoints" />
@@ -2187,10 +2187,10 @@
 	</skill>
 	<skill id="899" levels="6" name="Cat Roar">
 		<!-- Uses the cry of danger to decrease P. Def./M. Def./Speed/Atk. Spd. of nearby enemies and decreases Magic Spd. Power 3168. -->
-		<table name="#effectPoints">-676 -679 -681 -684 -687 -689 </table>
-		<table name="#mpConsume">72 73 74 74 75 75 </table>
-		<table name="#pvePower">3168 3234 3299 3362 3422 3480 </table>
-		<table name="#pvpPower">1056 1078 1100 1121 1141 1160 </table>
+		<table name="#effectPoints">-676 -679 -681 -684 -687 -689</table>
+		<table name="#mpConsume">72 73 74 74 75 75</table>
+		<table name="#pvePower">3168 3234 3299 3362 3422 3480</table>
+		<table name="#pvpPower">1056 1078 1100 1121 1141 1160</table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="MULTI_DEBUFF" />

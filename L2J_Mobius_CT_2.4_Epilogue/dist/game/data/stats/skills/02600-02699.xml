@@ -82,8 +82,8 @@
 		</for>
 	</skill>
 	<skill id="2608" levels="3" name="Crystal of Fantasy">
-		<table name="#amount">50000 100000 200000 </table>
-		<table name="#itemConsumeId">13386 13387 13388 </table>
+		<table name="#amount">50000 100000 200000</table>
+		<table name="#itemConsumeId">13386 13387 13388</table>
 		<set name="hitTime" val="200" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -102,10 +102,10 @@
 		</for>
 	</skill>
 	<skill id="2609" levels="20" name="Escape">
-		<table name="#coordX">-84200 46915 9723 -45208 115158 -80831 -12728 15633 17860 83378 105760 111388 82916 85289 117052 146818 147922 43840 87326 -118092 </table>
-		<table name="#coordY">244566 51441 15576 -112502 -178170 149808 122726 142962 170191 147999 113064 219331 53210 16225 76884 25807 -55316 -47779 -143370 46955 </table>
-		<table name="#coordZ">-3728 -2976 -4568 -240 -880 -3040 -3112 -2696 -3496 -3400 -3176 -3544 -1488 -3672 -2688 -2008 -2728 -792 -1319 342 </table>
-		<table name="#itemConsumeId">13395 13396 13397 13398 13399 13400 13401 13402 13403 13404 13405 13406 13407 13408 13409 13410 13411 13412 13413 13414 </table>
+		<table name="#coordX">-84200 46915 9723 -45208 115158 -80831 -12728 15633 17860 83378 105760 111388 82916 85289 117052 146818 147922 43840 87326 -118092</table>
+		<table name="#coordY">244566 51441 15576 -112502 -178170 149808 122726 142962 170191 147999 113064 219331 53210 16225 76884 25807 -55316 -47779 -143370 46955</table>
+		<table name="#coordZ">-3728 -2976 -4568 -240 -880 -3040 -3112 -2696 -3496 -3400 -3176 -3544 -1488 -3672 -2688 -2008 -2728 -792 -1319 342</table>
+		<table name="#itemConsumeId">13395 13396 13397 13398 13399 13400 13401 13402 13403 13404 13405 13406 13407 13408 13409 13410 13411 13412 13413 13414</table>
 		<set name="hitTime" val="20000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeId" val="#itemConsumeId" />
@@ -667,10 +667,10 @@
 		</for>
 	</skill>
 	<skill id="2649" levels="9" name="Escape - Gludin Village">
-		<table name="#coordX">-80831 15633 83378 111388 82916 146818 147922 43840 87326 </table>
-		<table name="#coordY">149808 142962 147999 219331 53210 25807 -55316 -47779 -143370 </table>
-		<table name="#coordZ">-3040 -2696 -3400 -3544 -1488 -2008 -2728 -792 -1319 </table>
-		<table name="#itemConsumeId">13731 13732 13733 13736 13734 13735 13737 13738 13739 </table>
+		<table name="#coordX">-80831 15633 83378 111388 82916 146818 147922 43840 87326</table>
+		<table name="#coordY">149808 142962 147999 219331 53210 25807 -55316 -47779 -143370</table>
+		<table name="#coordZ">-3040 -2696 -3400 -3544 -1488 -2008 -2728 -792 -1319</table>
+		<table name="#itemConsumeId">13731 13732 13733 13736 13734 13735 13737 13738 13739</table>
 		<set name="hitTime" val="200" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />

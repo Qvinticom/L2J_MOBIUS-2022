@@ -43,31 +43,31 @@
 	</route>
 	<!-- Hellbound Town routes for Patrols -->
 	<route name="castletownguard01" repeat="true" repeatStyle="random">
-		<target id="22360" spawnX="14840" spawnY="251949" spawnZ="-2009" />	<!-- Town Patrolman -->
+		<target id="22360" spawnX="14840" spawnY="251949" spawnZ="-2009" /> <!-- Town Patrolman -->
 		<point X="14840" Y="251949" Z="-1992" delay="0" run="false" />
 		<point X="14679" Y="253399" Z="-2016" delay="0" run="false" />
 	</route>
 	<route name="castletownguard02" repeat="true" repeatStyle="random">
-		<target id="22360" spawnX="16082" spawnY="251790" spawnZ="-2000" />	<!-- Town Patrolman -->
+		<target id="22360" spawnX="16082" spawnY="251790" spawnZ="-2000" /> <!-- Town Patrolman -->
 		<point X="16082" Y="251790" Z="-1992" delay="0" run="false" />
 		<point X="16388" Y="252456" Z="-2000" delay="0" run="false" />
 		<point X="16093" Y="254443" Z="-2064" delay="0" run="false" />
 	</route>
 	<route name="castletownguard03" repeat="true" repeatStyle="random">
-		<target id="22360" spawnX="16524" spawnY="255244" spawnZ="-2080" />	<!-- Town Patrolman -->
+		<target id="22360" spawnX="16524" spawnY="255244" spawnZ="-2080" /> <!-- Town Patrolman -->
 		<point X="16524" Y="255244" Z="-2072" delay="0" run="false" />
 		<point X="17211" Y="256290" Z="-2064" delay="0" run="false" />
 		<point X="18805" Y="256302" Z="-2088" delay="0" run="false" />
 	</route>
 	<route name="castletownguard04" repeat="true" repeatStyle="random">
-		<target id="22360" spawnX="17670" spawnY="252256" spawnZ="-2022" />	<!-- Town Patrolman -->
+		<target id="22360" spawnX="17670" spawnY="252256" spawnZ="-2022" /> <!-- Town Patrolman -->
 		<point X="17344" Y="251070" Z="-1952" delay="0" run="false" />
 		<point X="18708" Y="250659" Z="-1992" delay="0" run="false" />
 		<point X="19533" Y="250667" Z="-2016" delay="0" run="false" />
 	</route>
 	<!-- Anomic Foundry routes for Lesser and Greater Evil -->
 	<route name="malign_conveyor_1_1" repeat="true" repeatStyle="conveyor">
-		<target id="22398" spawnX="27883" spawnY="248613" spawnZ="-3209" />	<!-- Lesser Evil -->
+		<target id="22398" spawnX="27883" spawnY="248613" spawnZ="-3209" /> <!-- Lesser Evil -->
 		<point X="27886" Y="248609" Z="-3208" delay="0" run="true" />
 		<point X="28150" Y="247726" Z="-3272" delay="0" run="true" />
 		<point X="27340" Y="246649" Z="-3680" delay="0" run="true" />
@@ -81,7 +81,7 @@
 		<!-- <point X="28770" Y="244248" Z="-2496" delay="0" run="true" /> --> <!-- retail -->
 	</route>
 	<route name="malign_conveyor_1_2" repeat="true" repeatStyle="conveyor">
-		<target id="22398" spawnX="26142" spawnY="246442" spawnZ="-3216" />	<!-- Lesser Evil -->
+		<target id="22398" spawnX="26142" spawnY="246442" spawnZ="-3216" /> <!-- Lesser Evil -->
 		<point X="26144" Y="246444" Z="-3208" delay="0" run="true" />
 		<point X="28063" Y="247940" Z="-3248" delay="0" run="true" />
 		<point X="28276" Y="247756" Z="-3272" delay="0" run="true" />
@@ -91,21 +91,21 @@
 		<point X="28058" Y="245915" Z="-3701" delay="0" run="true" /> <!-- custom -->
 	</route>
 	<route name="malign_conveyor_1_3" repeat="true" repeatStyle="conveyor">
-		<target id="22398" spawnX="27335" spawnY="246217" spawnZ="-3668" />	<!-- Lesser Evil -->
+		<target id="22398" spawnX="27335" spawnY="246217" spawnZ="-3668" /> <!-- Lesser Evil -->
 		<point X="27336" Y="246216" Z="-3656" delay="0" run="true" />
 		<point X="27645" Y="245921" Z="-3672" delay="0" run="true" />
 		<!-- <point X="28245" Y="245904" Z="-2552" delay="0" run="true" /> --> <!-- retail -->
 		<point X="28058" Y="245915" Z="-3701" delay="0" run="true" /> <!-- custom -->
 	</route>
 	<route name="malign_conveyor_1_4" repeat="true" repeatStyle="conveyor">
-		<target id="22398" spawnX="28486" spawnY="245913" spawnZ="-3698" />	<!-- Lesser Evil -->
+		<target id="22398" spawnX="28486" spawnY="245913" spawnZ="-3698" /> <!-- Lesser Evil -->
 		<point X="28476" Y="245914" Z="-3696" delay="0" run="true" />
 		<point X="29058" Y="245894" Z="-3672" delay="0" run="true" />
 		<point X="29433" Y="245216" Z="-3688" delay="0" run="true" />
 		<point X="28942" Y="244492" Z="-3696" delay="0" run="true" />
 	</route>
 	<route name="malign_conveyor_2_1" repeat="true" repeatStyle="conveyor">
-		<target id="22399" spawnX="28684" spawnY="244118" spawnZ="-3700" />	<!-- Greater Evil -->
+		<target id="22399" spawnX="28684" spawnY="244118" spawnZ="-3700" /> <!-- Greater Evil -->
 		<point X="28771" Y="244251" Z="-2496" delay="0" run="true" />
 		<point X="28495" Y="243839" Z="-3696" delay="0" run="true" />
 		<point X="28727" Y="242939" Z="-3592" delay="0" run="true" />

@@ -569,8 +569,8 @@
 	</skill>
 	<skill id="22128" levels="3" name="Rudolph's Joy">
 		<!-- For 5 minutes, raises Atk. Spd. by 10% and magic Casting Spd. by 10%. -->
-		<table name="#abnormalLvls">1 2 3 </table>
-		<table name="#AtkSpd">1.1 1.15 1.2 </table>
+		<table name="#abnormalLvls">1 2 3</table>
+		<table name="#AtkSpd">1.1 1.15 1.2</table>
 		<set name="abnormalInstant" val="true" />
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="300" />
@@ -1092,8 +1092,8 @@
 	</skill>
 	<skill id="22158" levels="10" name="Rose Petal">
 		<!-- Increases HP/MP Regeneration by 20% for 5 minutes. When the herb effect reaches level 10, the rose spirit consumes a red rose herb effect and replenishes some Vitality. -->
-		<table name="#abnormalLvls">1 2 3 4 5 6 7 8 9 10 </table>
-		<table name="#icons">BranchSys2.icon.Br_herb_rose_red_i00 BranchSys2.icon.Br_herb_rose_red_i01 BranchSys2.icon.Br_herb_rose_red_i02 BranchSys2.icon.Br_herb_rose_red_i03 BranchSys2.icon.Br_herb_rose_red_i04 BranchSys2.icon.Br_herb_rose_red_i05 BranchSys2.icon.Br_herb_rose_red_i06 BranchSys2.icon.Br_herb_rose_red_i07 BranchSys2.icon.Br_herb_rose_red_i08 BranchSys2.icon.Br_herb_rose_red_i09 </table>
+		<table name="#abnormalLvls">1 2 3 4 5 6 7 8 9 10</table>
+		<table name="#icons">BranchSys2.icon.Br_herb_rose_red_i00 BranchSys2.icon.Br_herb_rose_red_i01 BranchSys2.icon.Br_herb_rose_red_i02 BranchSys2.icon.Br_herb_rose_red_i03 BranchSys2.icon.Br_herb_rose_red_i04 BranchSys2.icon.Br_herb_rose_red_i05 BranchSys2.icon.Br_herb_rose_red_i06 BranchSys2.icon.Br_herb_rose_red_i07 BranchSys2.icon.Br_herb_rose_red_i08 BranchSys2.icon.Br_herb_rose_red_i09</table>
 		<set name="abnormalInstant" val="true" />
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="300" />

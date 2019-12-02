@@ -117,7 +117,7 @@
 	</skill>
 	<skill id="5007" levels="5" name="Frintezza's Songs">
 		<!-- Music to soothe the soul. -->
-		<table name="#hitTime">32000 32000 32000 31000 35000 </table>
+		<table name="#hitTime">32000 32000 32000 31000 35000</table>
 		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="#hitTime" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -127,22 +127,22 @@
 	</skill>
 	<skill id="5008" levels="5" name="Frintezza's Songs">
 		<!-- Music that makes you feel oh so good inside. -->
-		<table name="#abnormalTypes">NONE NONE ULTIMATE_BUFF HEAL_EFFECT_DOWN STUN </table>
-		<table name="#activateRate">0 0 0 10 10 </table>
-		<table name="#attackAndSpeed">1 1 1.2 1 1 </table>
-		<table name="#basicProperties">NONE NONE NONE MEN MEN </table>
-		<table name="#effectname1">Buff Buff Buff Buff Stun </table>
-		<table name="#effectPoints">100 100 100 -100 -100 </table>
-		<table name="#healEffect">1 1 1 0.5 1 </table>
-		<table name="#healPercent">3 0 0 0 0 </table>
-		<table name="#icons">icon.skill0000 icon.skill0000 icon.skill0000 icon.skill5008_plague icon.skill5008_psycho </table>
-		<table name="#isDebuff">false false false true true </table>
-		<table name="#isMagic">1 0 0 1 1 </table>
-		<table name="#lvlDepend">0 0 0 1 1 </table>
-		<table name="#maxNegated">0 0 0 0 10 </table>
-		<table name="#power">0 0 0 10 10 </table>
-		<table name="#time">0 0 5 5 5 </table>
-		<table name="#traits">NONE NONE NONE DERANGEMENT DERANGEMENT </table>
+		<table name="#abnormalTypes">NONE NONE ULTIMATE_BUFF HEAL_EFFECT_DOWN STUN</table>
+		<table name="#activateRate">0 0 0 10 10</table>
+		<table name="#attackAndSpeed">1 1 1.2 1 1</table>
+		<table name="#basicProperties">NONE NONE NONE MEN MEN</table>
+		<table name="#effectname1">Buff Buff Buff Buff Stun</table>
+		<table name="#effectPoints">100 100 100 -100 -100</table>
+		<table name="#healEffect">1 1 1 0.5 1</table>
+		<table name="#healPercent">3 0 0 0 0</table>
+		<table name="#icons">icon.skill0000 icon.skill0000 icon.skill0000 icon.skill5008_plague icon.skill5008_psycho</table>
+		<table name="#isDebuff">false false false true true</table>
+		<table name="#isMagic">1 0 0 1 1</table>
+		<table name="#lvlDepend">0 0 0 1 1</table>
+		<table name="#maxNegated">0 0 0 0 10</table>
+		<table name="#power">0 0 0 10 10</table>
+		<table name="#time">0 0 5 5 5</table>
+		<table name="#traits">NONE NONE NONE DERANGEMENT DERANGEMENT</table>
 		<set name="abnormalType" val="#abnormalTypes" />
 		<set name="basicProperty" val="#basicProperties" />
 		<set name="effectPoint" val="#effectPoints" />
@@ -266,9 +266,9 @@
 	</skill>
 	<skill id="5014" levels="3" name="Frintezza's Daemon Attack">
 		<!-- Demon 1 general attack. -->
-		<table name="#baseCritRate">6 8 10 </table>
-		<table name="#magicLvl">85 85 90 </table>
-		<table name="#power">15835 19096 16176 </table>
+		<table name="#baseCritRate">6 8 10</table>
+		<table name="#magicLvl">85 85 90</table>
+		<table name="#power">15835 19096 16176</table>
 		<set name="affectRange" val="150" />
 		<set name="baseCritRate" val="#baseCritRate" />
 		<set name="castRange" val="150" />
@@ -289,10 +289,10 @@
 	</skill>
 	<skill id="5015" levels="6" name="Frintezza's Daemon Charge">
 		<!-- Demon 1 charge. -->
-		<table name="#coolTime">0 0 0 1500 1500 1500 </table>
-		<table name="#fanRange">0,0,400,150 0,0,500,170 0,0,700,200 0,0,400,150 0,0,500,170 0,0,700,200 </table>
-		<table name="#power">48761 52970 68074 48761 52970 68074 </table>
-		<table name="#radius">400 500 700 400 500 700 </table>
+		<table name="#coolTime">0 0 0 1500 1500 1500</table>
+		<table name="#fanRange">0,0,400,150 0,0,500,170 0,0,700,200 0,0,400,150 0,0,500,170 0,0,700,200</table>
+		<table name="#power">48761 52970 68074 48761 52970 68074</table>
+		<table name="#radius">400 500 700 400 500 700</table>
 		<set name="affectRange" val="#radius" />
 		<set name="castRange" val="150" />
 		<set name="coolTime" val="#coolTime" />
@@ -365,8 +365,8 @@
 	</skill>
 	<skill id="5018" levels="2" name="Frintezza's Daemon Field">
 		<!-- Demon 2 magic field. -->
-		<table name="#power">607 754 </table>
-		<table name="#skillRadius">700 1000 </table>
+		<table name="#power">607 754</table>
+		<table name="#skillRadius">700 1000</table>
 		<set name="affectRange" val="#skillRadius" />
 		<set name="coolTime" val="1000" />
 		<set name="effectPoint" val="-100" />
@@ -433,8 +433,8 @@
 	</skill>
 	<skill id="5022" levels="12" name="Decrease Speed">
 		<!-- Instantly reduces Speed. Effect 1. -->
-		<table name="#abnormalLvls">1 2 3 3 3 3 3 3 3 3 3 3 </table>
-		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95 </table>
+		<table name="#abnormalLvls">1 2 3 3 3 3 3 3 3 3 3 3</table>
+		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="SPEED_DOWN" />
@@ -469,8 +469,8 @@
 	</skill>
 	<skill id="5024" levels="12" name="Decrease Atk. Spd.">
 		<!-- Instantly reduces Atk. Spd. Effect 1. -->
-		<table name="#abnormalLvls">1 2 2 3 3 3 3 3 3 3 3 3 </table>
-		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95 </table>
+		<table name="#abnormalLvls">1 2 2 3 3 3 3 3 3 3 3 3</table>
+		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="ATTACK_TIME_UP" />
@@ -571,7 +571,7 @@
 	</skill>
 	<skill id="5037" levels="3" name="Decrease Casting Spd">
 		<!-- Instantly reduces Casting Speed. Effect 1. -->
-		<table name="#abnormalLvls">1 2 3 </table>
+		<table name="#abnormalLvls">1 2 3</table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="CASTING_TIME_UP" />
@@ -586,7 +586,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5038" levels="16" name="Summon PVP Penalty">
-		<table name="#pvpDmg">0.98 0.96 0.94 0.92 0.9 0.88 0.86 0.84 0.82 0.8 0.78 0.76 0.74 0.72 0.7 0.5 </table>
+		<table name="#pvpDmg">0.98 0.96 0.94 0.92 0.9 0.88 0.86 0.84 0.82 0.8 0.78 0.76 0.74 0.72 0.7 0.5</table>
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -606,11 +606,11 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5040" levels="12" name="NPC - Healing Potion">
-		<table name="#abnormalLvls">1 2 3 4 5 6 7 8 9 10 11 12 </table>
-		<table name="#hot">7 12 18 27 37 46 55 58 61 64 66 67 </table>
-		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<table name="#mpConsume">1 1 1 1 1 1 1 193 201 207 209 209 </table>
-		<table name="#mpInitialConsume">1 1 1 1 1 1 1 49 51 52 53 53 </table>
+		<table name="#abnormalLvls">1 2 3 4 5 6 7 8 9 10 11 12</table>
+		<table name="#hot">7 12 18 27 37 46 55 58 61 64 66 67</table>
+		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">1 1 1 1 1 1 1 193 201 207 209 209</table>
+		<table name="#mpInitialConsume">1 1 1 1 1 1 1 49 51 52 53 53</table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="LIFE_FORCE_OTHERS" />
@@ -639,9 +639,9 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5042" levels="12" name="NPC Dispel Bomb">
-		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<table name="#mpConsume">19 30 42 57 74 91 106 114 119 124 126 128 </table>
-		<table name="#power">52 78 112 155 203 255 305 328 348 364 377 378 </table>
+		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">19 30 42 57 74 91 106 114 119 124 126 128</table>
+		<table name="#power">52 78 112 155 203 255 305 328 348 364 377 378</table>
 		<set name="affectRange" val="150" />
 		<set name="effectPoint" val="-100" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -657,9 +657,9 @@
 		</for>
 	</skill>
 	<skill id="5043" levels="12" name="NPC Super Sonic Blaster">
-		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<table name="#mpConsume">7 10 14 19 25 31 36 38 40 42 42 43 </table>
-		<table name="#power">137 314 656 1249 2164 3408 4878 5627 6335 6960 7461 7850 </table>
+		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">7 10 14 19 25 31 36 38 40 42 42 43</table>
+		<table name="#power">137 314 656 1249 2164 3408 4878 5627 6335 6960 7461 7850</table>
 		<set name="castRange" val="1200" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1700" />
@@ -675,14 +675,14 @@
 		</for>
 	</skill>
 	<skill id="5044" levels="3" name="NPC Ultimate Defense">
-		<table name="#abnormalLvls">1 2 2 </table>
-		<table name="#abnormalTime">30 30 5 </table>
-		<table name="#magicLvl">20 46 1 </table>
-		<table name="#mDef">1350 2700 9000 </table>
-		<table name="#mpConsume">10 21 0 </table>
-		<table name="#pDef">1800 3600 9000 </table>
-		<table name="#reuseDelay">1800000 1800000 5000 </table>
-		<table name="#time">30 30 5 </table>
+		<table name="#abnormalLvls">1 2 2</table>
+		<table name="#abnormalTime">30 30 5</table>
+		<table name="#magicLvl">20 46 1</table>
+		<table name="#mDef">1350 2700 9000</table>
+		<table name="#mpConsume">10 21 0</table>
+		<table name="#pDef">1800 3600 9000</table>
+		<table name="#reuseDelay">1800000 1800000 5000</table>
+		<table name="#time">30 30 5</table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="#abnormalTime" />
 		<set name="abnormalType" val="PD_UP_SPECIAL" />
@@ -703,9 +703,9 @@
 		</for>
 	</skill>
 	<skill id="5045" levels="12" name="Castle Power Strike">
-		<table name="#magicLvl">40 45 50 55 60 65 70 75 80 85 90 95 </table>
-		<table name="#mpConsume">19 22 25 28 31 33 36 38 40 42 42 43 </table>
-		<table name="#power">65 164 451 1121 2992 5736 8832 10130 11982 13131 14865 16351 </table>
+		<table name="#magicLvl">40 45 50 55 60 65 70 75 80 85 90 95</table>
+		<table name="#mpConsume">19 22 25 28 31 33 36 38 40 42 42 43</table>
+		<table name="#power">65 164 451 1121 2992 5736 8832 10130 11982 13131 14865 16351</table>
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="200" />
@@ -722,9 +722,9 @@
 		</for>
 	</skill>
 	<skill id="5046" levels="12" name="Castle Power Shot">
-		<table name="#magicLvl">40 45 50 55 60 65 70 75 80 85 90 95 </table>
-		<table name="#mpConsume">19 22 25 28 31 33 36 38 40 42 42 43 </table>
-		<table name="#power">65 164 451 1121 2992 5736 8832 10130 11982 13131 14865 16351 </table>
+		<table name="#magicLvl">40 45 50 55 60 65 70 75 80 85 90 95</table>
+		<table name="#mpConsume">19 22 25 28 31 33 36 38 40 42 42 43</table>
+		<table name="#power">65 164 451 1121 2992 5736 8832 10130 11982 13131 14865 16351</table>
 		<set name="castRange" val="1500" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="2100" />
@@ -774,10 +774,10 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5051" levels="12" name="Castle Self AE Fire">
-		<table name="#magicLvl">40 45 50 55 60 65 70 75 80 85 90 95 </table>
-		<table name="#mpConsume">5 8 11 14 18 22 26 28 29 30 31 31 </table>
-		<table name="#mpInitialConsume">2 2 3 4 5 6 7 7 8 8 8 8 </table>
-		<table name="#power">31 36 41 46 51 57 61 66 70 73 76 78 </table>
+		<table name="#magicLvl">40 45 50 55 60 65 70 75 80 85 90 95</table>
+		<table name="#mpConsume">5 8 11 14 18 22 26 28 29 30 31 31</table>
+		<table name="#mpInitialConsume">2 2 3 4 5 6 7 7 8 8 8 8</table>
+		<table name="#power">31 36 41 46 51 57 61 66 70 73 76 78</table>
 		<set name="affectRange" val="200" />
 		<set name="effectPoint" val="-100" />
 		<set name="element" val="0" /> <!-- Fire -->
@@ -795,10 +795,10 @@
 		</for>
 	</skill>
 	<skill id="5052" levels="12" name="Castle Long AE Fire">
-		<table name="#magicLvl">40 45 50 55 60 65 70 75 80 85 90 95 </table>
-		<table name="#mpConsume">5 8 11 14 18 22 26 28 29 30 31 31 </table>
-		<table name="#mpInitialConsume">2 2 3 4 5 6 7 7 8 8 8 8 </table>
-		<table name="#power">26 30 34 39 43 47 51 55 58 61 63 65 </table>
+		<table name="#magicLvl">40 45 50 55 60 65 70 75 80 85 90 95</table>
+		<table name="#mpConsume">5 8 11 14 18 22 26 28 29 30 31 31</table>
+		<table name="#mpInitialConsume">2 2 3 4 5 6 7 7 8 8 8 8</table>
+		<table name="#power">26 30 34 39 43 47 51 55 58 61 63 65</table>
 		<set name="affectRange" val="200" />
 		<set name="castRange" val="1500" />
 		<set name="effectPoint" val="-100" />
@@ -818,9 +818,9 @@
 		</for>
 	</skill>
 	<skill id="5053" levels="12" name="Castle DD Water">
-		<table name="#magicLvl">40 45 50 55 60 65 70 75 80 85 90 95 </table>
-		<table name="#mpConsume">7 10 14 18 23 28 33 35 37 38 39 39 </table>
-		<table name="#power">18 26 38 52 68 85 102 110 116 122 126 129 </table>
+		<table name="#magicLvl">40 45 50 55 60 65 70 75 80 85 90 95</table>
+		<table name="#mpConsume">7 10 14 18 23 28 33 35 37 38 39 39</table>
+		<table name="#power">18 26 38 52 68 85 102 110 116 122 126 129</table>
 		<set name="castRange" val="1500" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="2100" />
@@ -854,10 +854,10 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5056" levels="12" name="Castle DD Wind">
-		<table name="#magicLvl">40 45 50 55 60 65 70 75 80 85 90 95 </table>
-		<table name="#mpConsume">5 8 11 14 18 22 26 28 29 30 31 31 </table>
-		<table name="#mpInitialConsume">2 2 3 4 5 6 7 7 8 8 8 8 </table>
-		<table name="#power">52 60 68 77 85 94 102 110 116 122 126 129 </table>
+		<table name="#magicLvl">40 45 50 55 60 65 70 75 80 85 90 95</table>
+		<table name="#mpConsume">5 8 11 14 18 22 26 28 29 30 31 31</table>
+		<table name="#mpInitialConsume">2 2 3 4 5 6 7 7 8 8 8 8</table>
+		<table name="#power">52 60 68 77 85 94 102 110 116 122 126 129</table>
 		<set name="castRange" val="1500" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="2000" />
@@ -940,9 +940,9 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5065" levels="12" name="Castle DD Unholy">
-		<table name="#magicLvl">40 45 50 55 60 65 70 75 80 85 90 95 </table>
-		<table name="#mpConsume">7 10 14 18 23 28 33 35 37 38 39 39 </table>
-		<table name="#power">18 26 38 52 68 85 102 110 116 122 126 129 </table>
+		<table name="#magicLvl">40 45 50 55 60 65 70 75 80 85 90 95</table>
+		<table name="#mpConsume">7 10 14 18 23 28 33 35 37 38 39 39</table>
+		<table name="#power">18 26 38 52 68 85 102 110 116 122 126 129</table>
 		<set name="castRange" val="1500" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="2100" />
@@ -1065,8 +1065,8 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5073" levels="12" name="Quest Trap - Power Shot">
-		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<table name="#power">18 26 38 52 68 85 102 110 116 122 126 129 </table>
+		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#power">18 26 38 52 68 85 102 110 116 122 126 129</table>
 		<set name="castRange" val="1500" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1500" />
@@ -1107,11 +1107,11 @@
 	</skill>
 	<skill id="5076" levels="15" name="Death Penalty">
 		<!-- Combat ability is decreased due to death. Effect 1. -->
-		<table name="#accCombatrEvas">5 9 13 17 21 25 29 33 37 40 42 44 46 48 50 </table>
-		<table name="#icons">icon.skill5076_a icon.skill5076_a icon.skill5076_a icon.skill5076_a icon.skill5076_a icon.skill5076_b icon.skill5076_b icon.skill5076_b icon.skill5076_b icon.skill5076_b icon.skill5076_c icon.skill5076_c icon.skill5076_c icon.skill5076_c icon.skill5076_c </table>
-		<table name="#pAtkpAtkSpdmAtkmAtkSpd">0.9 0.81 0.73 0.66 0.6 0.55 0.51 0.47 0.44 0.41 0.38 0.35 0.32 0.28 0.25 </table>
-		<table name="#pDefmDef">0.91 0.83 0.77 0.72 0.68 0.65 0.62 0.59 0.56 0.53 0.5 0.47 0.44 0.42 0.4 </table>
-		<table name="#runSpd">0.95 0.9 0.87 0.83 0.8 0.77 0.74 0.71 0.68 0.66 0.64 0.63 0.62 0.61 0.6 </table>
+		<table name="#accCombatrEvas">5 9 13 17 21 25 29 33 37 40 42 44 46 48 50</table>
+		<table name="#icons">icon.skill5076_a icon.skill5076_a icon.skill5076_a icon.skill5076_a icon.skill5076_a icon.skill5076_b icon.skill5076_b icon.skill5076_b icon.skill5076_b icon.skill5076_b icon.skill5076_c icon.skill5076_c icon.skill5076_c icon.skill5076_c icon.skill5076_c</table>
+		<table name="#pAtkpAtkSpdmAtkmAtkSpd">0.9 0.81 0.73 0.66 0.6 0.55 0.51 0.47 0.44 0.41 0.38 0.35 0.32 0.28 0.25</table>
+		<table name="#pDefmDef">0.91 0.83 0.77 0.72 0.68 0.65 0.62 0.59 0.56 0.53 0.5 0.47 0.44 0.42 0.4</table>
+		<table name="#runSpd">0.95 0.9 0.87 0.83 0.8 0.77 0.74 0.71 0.68 0.66 0.64 0.63 0.62 0.61 0.6</table>
 		<set name="icon" val="#icons" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -1191,8 +1191,8 @@
 	</skill>
 	<skill id="5081" levels="4" name="Silence">
 		<!-- Blocks the ability to use physical skills. -->
-		<table name="#mpConsume">75 75 75 20 </table>
-		<table name="#power">1715 3540 7306 8602 </table>
+		<table name="#mpConsume">75 75 75 20</table>
+		<table name="#power">1715 3540 7306 8602</table>
 		<set name="abnormalLvl" val="0" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="SILENCE_PHYSICAL" />
@@ -1217,7 +1217,7 @@
 		</for>
 	</skill>
 	<skill id="5082" levels="4" name="NPC Spinning, Slashing Trick">
-		<table name="#mpConsume">60 60 60 5 </table>
+		<table name="#mpConsume">60 60 60 5</table>
 		<set name="affectRange" val="150" />
 		<set name="coolTime" val="800" />
 		<set name="effectPoint" val="-100" />
@@ -1233,8 +1233,8 @@
 	</skill>
 	<skill id="5083" levels="4" name="Stun">
 		<!-- You are stunned and temporarily prohibited from movement. -->
-		<table name="#mpConsume">93 93 93 5 </table>
-		<table name="#power">1715 3540 7305 8602 </table>
+		<table name="#mpConsume">93 93 93 5</table>
+		<table name="#power">1715 3540 7305 8602</table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
@@ -1338,9 +1338,9 @@
 		</for>
 	</skill>
 	<skill id="5087" levels="2" name="Berserk">
-		<table name="#pAtk">1.9 2.8 </table>
-		<table name="#pAtkSpd">1.15 1.33 </table>
-		<table name="#pDef">1 2.8 </table>
+		<table name="#pAtk">1.9 2.8</table>
+		<table name="#pAtkSpd">1.15 1.33</table>
+		<table name="#pDef">1 2.8</table>
 		<set name="abnormalVisualEffect" val="NONE" />
 		<set name="hitTime" val="4000" />
 		<set name="magicLvl" val="85" />
@@ -1486,8 +1486,8 @@
 		</for>
 	</skill>
 	<skill id="5098" levels="2" name="Capture Penalty">
-		<table name="#abnormalLvls">1 2 </table>
-		<table name="#abnormalVisualEffects">SEIZURE1 SEIZURE2 </table>
+		<table name="#abnormalLvls">1 2</table>
+		<table name="#abnormalVisualEffects">SEIZURE1 SEIZURE2</table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SEIZURE_PENALTY" />

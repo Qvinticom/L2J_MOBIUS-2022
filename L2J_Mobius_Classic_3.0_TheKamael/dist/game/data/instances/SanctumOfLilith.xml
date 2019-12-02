@@ -21,10 +21,10 @@
 		<condition type="Distance" />
 		<condition type="Reenter" />
 	</conditions>
-	<!--<reenter apply="ON_ENTER">
+	<!-- <reenter apply="ON_ENTER">
 		<reset day="TUESDAY" hour="9" minute="00" />
 		<reset day="FRIDAY" hour="9" minute="00" />
-	</reenter>-->
+	</reenter> -->
 	<spawnlist>
 		<group>
 			<npc id="25283" x="185067" y="-9616" z="-5493" heading="48103" /> <!-- Lilith -->

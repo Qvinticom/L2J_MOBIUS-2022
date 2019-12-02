@@ -480,7 +480,7 @@
 	<skill id="39043" toLevel="1" name="Side Effect">
 		<!-- Enlarges the user's head for 10 min. Cooldown - 30 min. -->
 		<icon>icon.skill2513</icon>
-		<!--	Side Effect: makes character's head bigger for 10 minutes. Reuse Time: 30 minutes. -->
+		<!-- Side Effect: makes character's head bigger for 10 minutes. Reuse Time: 30 minutes. -->
 		<abnormalLvl>0</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>BIG_HEAD</abnormalType>
@@ -505,7 +505,7 @@
 	<skill id="39044" toLevel="1" name="Holiday Hat">
 		<!-- Resurrects a dead target and restores 50% XP. Consumes 1 Spirit Ore. -->
 		<icon>icon.bm_romantic_chaperon_gold</icon>
-		<!--	Holiday Hat: resurrects a dead target and restores 50% XP. Consumes 1 Spirit Ore(s). Reuse Time: 30 minutes. -->
+		<!-- Holiday Hat: resurrects a dead target and restores 50% XP. Consumes 1 Spirit Ore(s). Reuse Time: 30 minutes. -->
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<blockedInOlympiad>true</blockedInOlympiad>

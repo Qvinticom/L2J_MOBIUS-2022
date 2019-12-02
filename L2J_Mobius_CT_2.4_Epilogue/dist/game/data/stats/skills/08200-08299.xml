@@ -994,8 +994,8 @@
 	</skill>
 	<skill id="8240" levels="3" name="Obliteration Storm">
 		<!-- Delivers a powerful range attack, shocking the target. Consumes all accumulated critical hits. Requires a Stage 3 critical hit. -->
-		<table name="#abnormalLvl"> 4 6 8 </table>
-		<table name="#power"> 9132 12784 16436 </table>
+		<table name="#abnormalLvl">4 6 8</table>
+		<table name="#power">9132 12784 16436</table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
@@ -1195,7 +1195,7 @@
 	</skill>
 	<skill id="8250" levels="2" name="Summon Tigress">
 		<!-- Summons Tigress. -->
-		<table name="#npcIds"> 14916 14917 </table>
+		<table name="#npcIds">14916 14917</table>
 		<set name="hitTime" val="15000" />
 		<set name="icon" val="icon.skill0283" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1733,8 +1733,8 @@
 	</skill>
 	<skill id="8289" levels="3" name="Special Ability Focus">
 		<!-- Increases critical attack rate and damage inflicted during PvP. -->
-		<table name="#magicLvl"> 84 85 86 </table>
-		<table name="#rCrit"> 128.7 137.1 137.1 </table>
+		<table name="#magicLvl">84 85 86</table>
+		<table name="#rCrit">128.7 137.1 137.1</table>
 		<set name="icon" val="icon.skill1077" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
@@ -1750,7 +1750,7 @@
 	</skill>
 	<skill id="8290" levels="12" name="Add Belt Inventory Slot">
 		<!-- Increases inventory size when wearing a belt. -->
-		<table name="#inventoryLimit"> 3 6 9 12 15 18 21 24 27 30 33 36 </table>
+		<table name="#inventoryLimit">3 6 9 12 15 18 21 24 27 30 33 36</table>
 		<set name="icon" val="icon.skill0332" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -1763,7 +1763,7 @@
 	</skill>
 	<skill id="8291" levels="12" name="Add Belt Weight Gauge">
 		<!-- Increases the weight gauge when wearing a belt. -->
-		<table name="#weightPenalty"> 1000 2000 3000 4000 5000 6000 7000 8000 9000 10000 11000 12000 </table>
+		<table name="#weightPenalty">1000 2000 3000 4000 5000 6000 7000 8000 9000 10000 11000 12000</table>
 		<set name="icon" val="icon.skill0150" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />

@@ -248,13 +248,13 @@
 	</skill>
 	<skill id="7029" levels="4" name="Super Haste">
 		<!-- Speed is increased. -->
-		<table name="#amount">1 1 1 1 </table>
-		<table name="#mAtkSpd">2 3 4 5 </table>
-		<table name="#pAtk">250 500 750 1500 </table>
-		<table name="#mAtk">250 500 750 1500 </table>
-		<table name="#pAtkSpd">2 3 4 5 </table>
-		<table name="#reuse">0.01 0.01 0.01 0.01 </table>
-		<table name="#runSpd">2 3 4 5 </table>
+		<table name="#amount">1 1 1 1</table>
+		<table name="#mAtkSpd">2 3 4 5</table>
+		<table name="#pAtk">250 500 750 1500</table>
+		<table name="#mAtk">250 500 750 1500</table>
+		<table name="#pAtkSpd">2 3 4 5</table>
+		<table name="#reuse">0.01 0.01 0.01 0.01</table>
+		<table name="#runSpd">2 3 4 5</table>
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skill7029" />
 		<set name="magicLvl" val="1" />

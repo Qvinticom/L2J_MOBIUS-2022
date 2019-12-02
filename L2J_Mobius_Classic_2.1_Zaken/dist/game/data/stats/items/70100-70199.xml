@@ -32,9 +32,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="10080" />
 		<skills>
-			<skill id="39043" level="1" />	<!--	Side Effect	-->
-			<skill id="39044" level="1" />	<!--	Ability of Resurrection	-->
-			<skill id="39045" level="1" />	<!--	Holiday Hat	-->
+			<skill id="39043" level="1" /> <!-- Side Effect -->
+			<skill id="39044" level="1" /> <!-- Ability of Resurrection -->
+			<skill id="39045" level="1" /> <!-- Holiday Hat -->
 		</skills>
 	</item>
 	<item id="70102" name="Adventurer’s Potion - Atk. Spd." type="EtcItem">
@@ -59,7 +59,7 @@
 			<player flyMounted="false" />
 		</cond>
 		<skills>
-			<skill id="55235" level="1" />	<!--	Adventurer Potion Atk. Spd. lvl 1	-->
+			<skill id="55235" level="1" /> <!-- Adventurer Potion Atk. Spd. lvl 1 -->
 		</skills>
 	</item>
 	<item id="70103" name="Adventurer’s Potion - Casting Spd." type="EtcItem">
@@ -84,7 +84,7 @@
 			<player flyMounted="false" />
 		</cond>
 		<skills>
-			<skill id="55236" level="1" />	<!--	Adventurer Potion Casting Speed lvl 1	-->
+			<skill id="55236" level="1" /> <!-- Adventurer Potion Casting Speed lvl 1 -->
 		</skills>
 	</item>
 	<item id="70104" name="Scroll: Vampiric Rage" type="EtcItem">
@@ -103,7 +103,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<skills>
-			<skill id="55237" level="1" /> <!-- Vampiric Rage	-->
+			<skill id="55237" level="1" /> <!-- Vampiric Rage -->
 		</skills>
 	</item>
 	<item id="70105" name="Scroll of Mana" type="EtcItem">
@@ -122,7 +122,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<skills>
-			<skill id="55241" level="1" /> <!-- Mana Regeneration	-->
+			<skill id="55241" level="1" /> <!-- Mana Regeneration -->
 		</skills>
 	</item>
 	<item id="70106" name="Rune of Boost" additionalName="7-day" type="EtcItem">
@@ -140,7 +140,7 @@
 		<set name="time" val="10080" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="55246" level="1" /> <!-- Rune of Boost	-->
+			<skill id="55246" level="1" /> <!-- Rune of Boost -->
 		</skills>
 	</item>
 	<item id="70107" name="Scroll: Berserker Spirit" type="EtcItem">
@@ -160,7 +160,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<skills>
-			<skill id="55242" level="1" /> <!-- Scroll: Berserker Spirit	-->
+			<skill id="55242" level="1" /> <!-- Scroll: Berserker Spirit -->
 		</skills>
 	</item>
 	<item id="70108" name="Fire Dragon Pendant - Lv. 3" additionalName="7-day" type="Armor">
@@ -178,7 +178,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="time" val="10080" />
 		<skills>
-			<skill id="55094" level="1" /> <!-- Fire Dragon Pendant - Lv. 3	-->
+			<skill id="55094" level="1" /> <!-- Fire Dragon Pendant - Lv. 3 -->
 		</skills>
 		<stats>
 			<stat type="pDef">28</stat>
@@ -199,7 +199,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="time" val="10080" />
 		<skills>
-			<skill id="55104" level="1" /> <!-- Water Dragon Pendant Basic Effect Lv. 3	-->
+			<skill id="55104" level="1" /> <!-- Water Dragon Pendant Basic Effect Lv. 3 -->
 		</skills>
 		<stats>
 			<stat type="pDef">28</stat>

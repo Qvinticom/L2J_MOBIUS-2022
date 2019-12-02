@@ -1111,7 +1111,7 @@
 			<add order="0x40" stat="cAtkAdd" val="#cAtkAdd"/>
 			<mul order="0x30" stat="pvpPhysDmg" val="1.05"/>
 			<mul order="0x30" stat="pvpMagicalDmg" val="1.05"/>
-			<!-- <target pvp="1"/> </add> <mul order="0x30" stat="pvpPhysDmg" val="1.05"/> <mul order="0x50" stat="mAtk" val="1.05"> <target pvp="1"/> </mul> -->
+			<!-- <target pvp="1"/> </add> <mul order="0x30" stat="pvpPhysDmg" val="1.05"/> <mul order="0x50" stat="mAtk" val="1.05"><target pvp="1"/> </mul> -->
 		</for>
 	</skill>
 	<skill id="3573" levels="1" name="Special Ability: Guidance">

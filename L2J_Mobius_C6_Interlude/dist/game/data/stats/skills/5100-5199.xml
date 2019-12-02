@@ -112,7 +112,7 @@
 		<set name="castRange" val="40"/>
 		<set name="effectRange" val="400"/>
 		<for>
-			<!-- <effect self="1" count="1" name="Buff" time="10" val="0" stackOrder="40" stackType="SpeedUpS"> <mul order="0x30" stat="runSpd" val="1.4"/> </effect> -->
+			<!-- <effect self="1" count="1" name="Buff" time="10" val="0" stackOrder="40" stackType="SpeedUpS"><mul order="0x30" stat="runSpd" val="1.4"/> </effect> -->
 			<effect count="0x7fffffff" name="Fusion" time="600" val="15" stackOrder="0" stackType="Capture">
 				<mul order="0x30" stat="runSpd" val="0.7"/>
 				<mul order="0x30" stat="pAtkSpd" val="0.7"/>

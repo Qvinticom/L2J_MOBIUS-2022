@@ -145,11 +145,11 @@
 	</skill>
 	<skill id="6205" levels="19" name="Strider Bite">
 		<!-- Commands the mounted strider to bite the enemies at the front. Attacks the enemy with 1649 Power added to P. Atk., causes bleed for 20 seconds, and makes him consume 67 HP every second. Over-hit and Critical are possible. -->
-		<table name="#dot">65 75 75 82 82 82 82 82 85 85 85 85 85 85 85 85 85 85 87 </table>
-		<table name="#effectPoints">-523 -566 -604 -635 -646 -655 -662 -669 -676 -679 -681 -684 -687 -689 -692 -694 -696 -698 -700 </table>
-		<table name="#magicLvl">55 60 65 70 72 74 76 78 80 81 82 83 84 85 86 87 88 89 90 </table>
-		<table name="#mpConsume">68 76 82 89 91 94 96 98 100 100 101 102 103 103 104 104 105 105 105 </table>
-		<table name="#power">1649 2045 2476 2927 3108 3288 3464 3636 3801 3881 3959 4034 4107 4176 4243 4307 4367 4424 4477 </table>
+		<table name="#dot">65 75 75 82 82 82 82 82 85 85 85 85 85 85 85 85 85 85 87</table>
+		<table name="#effectPoints">-523 -566 -604 -635 -646 -655 -662 -669 -676 -679 -681 -684 -687 -689 -692 -694 -696 -698 -700</table>
+		<table name="#magicLvl">55 60 65 70 72 74 76 78 80 81 82 83 84 85 86 87 88 89 90</table>
+		<table name="#mpConsume">68 76 82 89 91 94 96 98 100 100 101 102 103 103 104 104 105 105 105</table>
+		<table name="#power">1649 2045 2476 2927 3108 3288 3464 3636 3801 3881 3959 4034 4107 4176 4243 4307 4367 4424 4477</table>
 		<set name="abnormalLvl" val="6" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="BLEEDING" />
@@ -181,10 +181,10 @@
 	</skill>
 	<skill id="6206" levels="19" name="Strider Fear">
 		<!-- Frightens the enemy and causes him to flee for 10 seconds. -->
-		<table name="#effectPoints">-523 -566 -604 -635 -646 -655 -662 -669 -676 -679 -681 -684 -687 -689 -692 -694 -696 -698 -700 </table>
-		<table name="#magicLvl">55 60 65 70 72 74 76 78 80 81 82 83 84 85 86 87 88 89 90 </table>
-		<table name="#mpConsume">40 44 48 52 53 55 56 57 58 58 59 59 60 60 60 61 61 61 61 </table>
-		<table name="#mpInitialConsume">10 11 12 13 14 14 14 15 15 15 15 15 15 15 15 16 16 16 16 </table>
+		<table name="#effectPoints">-523 -566 -604 -635 -646 -655 -662 -669 -676 -679 -681 -684 -687 -689 -692 -694 -696 -698 -700</table>
+		<table name="#magicLvl">55 60 65 70 72 74 76 78 80 81 82 83 84 85 86 87 88 89 90</table>
+		<table name="#mpConsume">40 44 48 52 53 55 56 57 58 58 59 59 60 60 60 61 61 61 61</table>
+		<table name="#mpInitialConsume">10 11 12 13 14 14 14 15 15 15 15 15 15 15 15 16 16 16 16</table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="TURN_FLEE" />
@@ -240,9 +240,9 @@
 	</skill>
 	<skill id="6209" levels="4" name="Weapon Grade Penalty">
 		<!-- The equipped weapon's grade doesn't match your level, so the following penalties are incurred: Decrease in accuracy by 16, Critical Rate by 10%, Critical Damage by 10%, Atk. Spd. by 10%, and P. Atk. by 10%. -->
-		<table name="#cAtk">0.9 0.8 0.7 0.6 </table>
-		<table name="#icons">icon.skill6209_1 icon.skill6209_2 icon.skill6209_3 icon.skill6209_4 </table>
-		<table name="#rCrit">0.9 0.8 0.7 0.6 </table>
+		<table name="#cAtk">0.9 0.8 0.7 0.6</table>
+		<table name="#icons">icon.skill6209_1 icon.skill6209_2 icon.skill6209_3 icon.skill6209_4</table>
+		<table name="#rCrit">0.9 0.8 0.7 0.6</table>
 		<set name="icon" val="#icons" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -260,9 +260,9 @@
 	</skill>
 	<skill id="6213" levels="4" name="Armor Grade Penalty">
 		<!-- When equipped with armor or accessories whose grade doesn't fit with your level, a penalty is incurred with decreases in evasion by 2.5, Atk. Spd./Casting Spd./Speed by 16.67%. -->
-		<table name="#amount">0.8333 0.6944 0.5787 0.4823 </table>
-		<table name="#icons">icon.skill6213_1 icon.skill6213_2 icon.skill6213_3 icon.skill6213_4 </table>
-		<table name="#rEvas">2.5 5 7.5 10 </table>
+		<table name="#amount">0.8333 0.6944 0.5787 0.4823</table>
+		<table name="#icons">icon.skill6213_1 icon.skill6213_2 icon.skill6213_3 icon.skill6213_4</table>
+		<table name="#rEvas">2.5 5 7.5 10</table>
 		<set name="icon" val="#icons" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -488,7 +488,7 @@
 	</skill>
 	<skill id="6240" levels="5" name="Heatstroke">
 		<!-- Heatstroke stage 1. Inflicted with heatstroke. You are extremely hot and fatigued. -->
-		<table name="#abnormalLvls">1 2 3 4 5 </table>
+		<table name="#abnormalLvls">1 2 3 4 5</table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="86400" />
 		<set name="abnormalType" val="SIGNAL_D" />
@@ -850,7 +850,7 @@
 	</skill>
 	<skill id="6271" levels="5" name="Grima Power Up">
 		<!-- Increase Physical Attack by 10%. -->
-		<table name="#abnormalLvls">1 2 3 4 5 </table>
+		<table name="#abnormalLvls">1 2 3 4 5</table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="PA_UP" />

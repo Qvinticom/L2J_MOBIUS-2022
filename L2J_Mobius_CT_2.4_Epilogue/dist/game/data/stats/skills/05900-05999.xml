@@ -33,7 +33,7 @@
 	</skill>
 	<skill id="5901" levels="2" name="Mist of Oblivion">
 		<!-- When a blow is incurred, the target is continuously removed, and skills and magic cannot be used. -->
-		<table name="#hitTime">2000 22940 </table>
+		<table name="#hitTime">2000 22940</table>
 		<set name="abnormalLvl" val="8" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="OBLIVION" />
@@ -99,11 +99,11 @@
 		</for>
 	</skill>
 	<skill id="5904" levels="3" name="Mist of Souleater">
-		<table name="#hitTime">2000 22940 22940 </table>
-		<table name="#magicLvl">77 81 83 </table>
-		<table name="#mpConsume">146 150 153 </table>
-		<table name="#mpInitialConsume">37 38 39 </table>
-		<table name="#power">112 117 120 </table>
+		<table name="#hitTime">2000 22940 22940</table>
+		<table name="#magicLvl">77 81 83</table>
+		<table name="#mpConsume">146 150 153</table>
+		<table name="#mpInitialConsume">37 38 39</table>
+		<table name="#power">112 117 120</table>
 		<set name="affectLimit" val="10-10" />
 		<set name="affectRange" val="300" />
 		<set name="castRange" val="900" />
@@ -153,7 +153,7 @@
 	</skill>
 	<skill id="5907" levels="2" name="Ritual of Entombment">
 		<!-- ????? ?? ?? ??? ????. ??? ???? ?? ??? ??? ??? ???. -->
-		<table name="#hitTime">3000 34400 </table>
+		<table name="#hitTime">3000 34400</table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="ROOT_MAGICALLY" />
@@ -177,7 +177,7 @@
 	</skill>
 	<skill id="5908" levels="2" name="Ritual of Entombment">
 		<!-- Temporarily inflicts Hold on the enemy. Additional Hold is not available while effects last. -->
-		<table name="#hitTime">3000 34400 </table>
+		<table name="#hitTime">3000 34400</table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="ROOT_MAGICALLY" />
@@ -281,7 +281,7 @@
 		<set name="trait" val="DERANGEMENT" />
 	</skill>
 	<skill id="5915" levels="9" name="Mummifying Aura">
-		<table name="#abnormalLvls">1 2 3 4 5 6 7 8 9 </table>
+		<table name="#abnormalLvls">1 2 3 4 5 6 7 8 9</table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="PD_UP" />
@@ -292,7 +292,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5916" levels="9" name="Cruising Aura">
-		<table name="#abnormalLvls">1 2 3 4 5 6 7 8 9 </table>
+		<table name="#abnormalLvls">1 2 3 4 5 6 7 8 9</table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="PA_UP" />
@@ -303,7 +303,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5917" levels="9" name="Shrouding Aura">
-		<table name="#abnormalLvls">1 2 3 4 5 6 7 8 9 </table>
+		<table name="#abnormalLvls">1 2 3 4 5 6 7 8 9</table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="AVOID_SKILL" />
@@ -315,8 +315,8 @@
 	</skill>
 	<skill id="5918" levels="10" name="Physical Root Weakness">
 		<!-- Physical Root Weakness -->
-		<table name="#trait_root_physically">-10 -20 -30 -40 -50 -60 -70 -80 -90 -99 </table>
-		<table name="#magicLvl">10 20 30 40 50 60 70 80 90 95 </table>
+		<table name="#trait_root_physically">-10 -20 -30 -40 -50 -60 -70 -80 -90 -99</table>
+		<table name="#magicLvl">10 20 30 40 50 60 70 80 90 95</table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<for>
@@ -487,7 +487,7 @@
 		<set name="targetType" val="FRONT_AREA" />
 	</skill>
 	<skill id="5927" levels="4" name="Immortal Frenzy">
-		<table name="#abnormalLvls">1 2 3 4 </table>
+		<table name="#abnormalLvls">1 2 3 4</table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="PA_UP" />
@@ -497,7 +497,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5928" levels="4" name="Immortal Resilience">
-		<table name="#abnormalLvls">1 2 3 4 </table>
+		<table name="#abnormalLvls">1 2 3 4</table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="PD_UP" />
@@ -660,8 +660,8 @@
 	</skill>
 	<skill id="5940" levels="12" name="Energy of Generation">
 		<!-- HP recovery bonus and MP recovery bonus are increased. -->
-		<table name="#abnormalLvls">3 4 5 6 7 8 9 10 11 12 13 14 </table>
-		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95 </table>
+		<table name="#abnormalLvls">3 4 5 6 7 8 9 10 11 12 13 14</table>
+		<table name="#magicLvl">10 20 30 40 50 60 70 75 80 85 90 95</table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MP_REGEN_UP" />
@@ -971,9 +971,9 @@
 	</skill>
 	<skill id="5968" levels="2" name="Rapid Shot">
 		<!-- Temporarily increases your own bow Atk. Spd. Effect 1. -->
-		<table name="#abnormalLvls">1 2 </table>
-		<table name="#effectPoints">303 549 </table>
-		<table name="#magicLvl">32 55 </table>
+		<table name="#abnormalLvls">1 2</table>
+		<table name="#effectPoints">303 549</table>
+		<table name="#magicLvl">32 55</table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="ATTACK_SPEED_UP_BOW" />
@@ -987,7 +987,7 @@
 	</skill>
 	<skill id="5969" levels="2" name="Punch of Doom">
 		<!-- Becomes shocked momentarily while propelling a powerful iron-fist to enemy that gives significant damage. Requires a hand-to-hand combat weapon. Ignores shield defense. Over-hit is possible. Power 10331. -->
-		<table name="#effectPoints">-674 -698 </table>
+		<table name="#effectPoints">-674 -698</table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
@@ -1076,10 +1076,10 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5975" levels="3" name="Dark Attack">
-		<table name="#effectPoints">-484 -572 -653 </table>
-		<table name="#magicLvl">51 61 79 </table>
-		<table name="#mpConsume">50 61 75 </table>
-		<table name="#power">1515 2365 6059 </table>
+		<table name="#effectPoints">-484 -572 -653</table>
+		<table name="#magicLvl">51 61 79</table>
+		<table name="#mpConsume">50 61 75</table>
+		<table name="#power">1515 2365 6059</table>
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="400" />
@@ -1095,10 +1095,10 @@
 		</for>
 	</skill>
 	<skill id="5976" levels="3" name="Dark Storm">
-		<table name="#effectPoints">-484 -572 -653 </table>
-		<table name="#magicLvl">51 61 79 </table>
-		<table name="#mpConsume">50 61 75 </table>
-		<table name="#power">757 1182 4039 </table>
+		<table name="#effectPoints">-484 -572 -653</table>
+		<table name="#magicLvl">51 61 79</table>
+		<table name="#mpConsume">50 61 75</table>
+		<table name="#power">757 1182 4039</table>
 		<set name="affectLimit" val="10-10" />
 		<set name="affectRange" val="100" />
 		<set name="effectPoint" val="#effectPoints" />
@@ -1114,7 +1114,7 @@
 		</for>
 	</skill>
 	<skill id="5977" levels="3" name="Dark Strike">
-		<table name="#effectPoints">-484 -572 -653 </table>
+		<table name="#effectPoints">-484 -572 -653</table>
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="1000" />
 		<set name="magicLvl" val="51" />
@@ -1138,10 +1138,10 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5980" levels="3" name="Seal Isolation">
-		<table name="#effectPoints">-484 -572 -653 </table>
-		<table name="#magicLvl">51 61 79 </table>
-		<table name="#mpConsume">50 61 75 </table>
-		<table name="#power">2273 3547 6059 </table>
+		<table name="#effectPoints">-484 -572 -653</table>
+		<table name="#magicLvl">51 61 79</table>
+		<table name="#mpConsume">50 61 75</table>
+		<table name="#power">2273 3547 6059</table>
 		<set name="affectLimit" val="10-10" />
 		<set name="affectRange" val="300" />
 		<set name="effectPoint" val="#effectPoints" />
@@ -1245,7 +1245,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5985" levels="9" name="Decaying Aura">
-		<table name="#abnormalLvls">1 2 3 4 5 6 7 8 9 </table>
+		<table name="#abnormalLvls">1 2 3 4 5 6 7 8 9</table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="DMG_SHIELD" />
@@ -1255,7 +1255,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5986" levels="9" name="Vampiric Aura">
-		<table name="#abnormalLvls">1 2 3 4 5 6 7 8 9 </table>
+		<table name="#abnormalLvls">1 2 3 4 5 6 7 8 9</table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="VAMPIRIC_ATTACK" />
@@ -1346,7 +1346,7 @@
 	</skill>
 	<skill id="5990" levels="3" name="Lesser Heal">
 		<!-- Quickly restores HP. Power 817. -->
-		<table name="#effectPoints">595 610 631 </table>
+		<table name="#effectPoints">595 610 631</table>
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="2000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1363,7 +1363,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5992" levels="12" name="NPC Hate">
-		<table name="#effectPoints">-1371 -2031 -2850 -3787 -4761 -5657 -6349 -6582 -6752 -6887 -6997 -7082 </table>
+		<table name="#effectPoints">-1371 -2031 -2850 -3787 -4761 -5657 -6349 -6582 -6752 -6887 -6997 -7082</table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="TARGET_LOCK" />
