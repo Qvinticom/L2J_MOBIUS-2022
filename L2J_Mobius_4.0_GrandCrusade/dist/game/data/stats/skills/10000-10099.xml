@@ -823,7 +823,7 @@
 		</effectPoint>
 		<hitCancelTime>0</hitCancelTime>
 		<isDebuff>true</isDebuff>
-		<targetType>ENEMY</targetType>
+		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<conditions>
@@ -1435,8 +1435,9 @@
 		<basicProperty>NONE</basicProperty>
 		<hitCancelTime>0</hitCancelTime>
 		<reuseDelay>60000</reuseDelay>
-		<targetType>TARGET</targetType>
-		<affectScope>SINGLE</affectScope>
+		<targetType>OTHERS</targetType>
+		<affectScope>PARTY</affectScope>
+		<affectObject>FRIEND_PC</affectObject>
 		<conditions>
 			<condition name="TargetMyParty">
 				<includeMe>false</includeMe>
