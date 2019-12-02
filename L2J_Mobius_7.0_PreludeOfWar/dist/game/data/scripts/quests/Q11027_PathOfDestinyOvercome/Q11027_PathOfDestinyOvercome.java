@@ -16,6 +16,10 @@
  */
 package quests.Q11027_PathOfDestinyOvercome;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Map.Entry;
+
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.data.xml.impl.CategoryData;
 import org.l2jmobius.gameserver.enums.CategoryType;
@@ -28,6 +32,7 @@ import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterType;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerLogin;
+import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerProfessionChange;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
@@ -52,10 +57,23 @@ public class Q11027_PathOfDestinyOvercome extends Quest
 	private static final int ATELIA = 39542;
 	// Reward
 	private static final int CHAOS_POMANDER = 37374;
+	private static final Map<CategoryType, Integer> AWAKE_POWER = new HashMap<>();
+	static
+	{
+		AWAKE_POWER.put(CategoryType.SIXTH_SIGEL_GROUP, 32264);
+		AWAKE_POWER.put(CategoryType.SIXTH_TIR_GROUP, 32265);
+		AWAKE_POWER.put(CategoryType.SIXTH_OTHEL_GROUP, 32266);
+		AWAKE_POWER.put(CategoryType.SIXTH_YR_GROUP, 32267);
+		AWAKE_POWER.put(CategoryType.SIXTH_FEOH_GROUP, 32268);
+		AWAKE_POWER.put(CategoryType.SIXTH_WYNN_GROUP, 32269);
+		AWAKE_POWER.put(CategoryType.SIXTH_IS_GROUP, 32270);
+		AWAKE_POWER.put(CategoryType.SIXTH_EOLH_GROUP, 32271);
+	}
 	// Location
 	private static final Location TELEPORT_1 = new Location(-78670, 251026, -2960);
 	private static final Location TELEPORT_2 = new Location(-14180, 123840, -3120);
 	// Misc
+	private static final String AWAKE_POWER_REWARDED_VAR = "AWAKE_POWER_REWARDED";
 	private static final int MIN_LEVEL = 85;
 	
 	public Q11027_PathOfDestinyOvercome()
@@ -269,6 +287,43 @@ public class Q11027_PathOfDestinyOvercome extends Quest
 	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		return npc.getId() + "-01.html";
+	}
+	
+	@RegisterEvent(EventType.ON_PLAYER_PROFESSION_CHANGE)
+	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
+	public void onProfessionChange(OnPlayerProfessionChange event)
+	{
+		final PlayerInstance player = event.getPlayer();
+		if (player == null)
+		{
+			return;
+		}
+		
+		// Not for Ertheias.
+		if (player.getRace() == Race.ERTHEIA)
+		{
+			return;
+		}
+		
+		// Avoid reward more than once.
+		if (player.getVariables().getBoolean(AWAKE_POWER_REWARDED_VAR, false))
+		{
+			return;
+		}
+		
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && qs.isCompleted())
+		{
+			for (Entry<CategoryType, Integer> ent : AWAKE_POWER.entrySet())
+			{
+				if (player.isInCategory(ent.getKey()))
+				{
+					player.getVariables().set(AWAKE_POWER_REWARDED_VAR, true);
+					giveItems(player, ent.getValue(), 1);
+					break;
+				}
+			}
+		}
 	}
 	
 	@RegisterEvent(EventType.ON_PLAYER_LOGIN)
