@@ -29,7 +29,7 @@ import quests.Q10831_UnbelievableSight.Q10831_UnbelievableSight;
 
 /**
  * Memories of the Wind (931)
- * @URL: https://l2wiki.com/Memories_of_the_Wind
+ * @URL https://l2wiki.com/Memories_of_the_Wind
  * @author Dmitri
  */
 public class Q00931_MemoriesOfTheWind extends Quest
@@ -70,7 +70,7 @@ public class Q00931_MemoriesOfTheWind extends Quest
 		addStartNpc(CYPHONA);
 		addTalkId(CYPHONA);
 		addKillId(EL_FERA, EL_FLOATO);
-		addKillId(ENERGY_OF_WIND, KERBEROS_LAGER, KERBEROS_FORT, KERBEROS_NERO, FURY_SYLPH_BARRENA, FURY_SYLPH_TEMPTRESS, FURY_SYLPH_PURKA, FURY_KERBEROS_LEGER, FURY_KERBEROS_NERO);
+		addKillId(ENERGY_OF_WIND, KERBEROS_LAGER, KERBEROS_LAGER_N, KERBEROS_FORT, KERBEROS_FORT_N, KERBEROS_NERO, KERBEROS_NERO_N, FURY_SYLPH_BARRENA, FURY_SYLPH_BARRENA_N, FURY_SYLPH_TEMPTRESS, FURY_SYLPH_TEMPTRESS_N, FURY_SYLPH_PURKA, FURY_SYLPH_PURKA_N, FURY_KERBEROS_LEGER, FURY_KERBEROS_LEGER_N, FURY_KERBEROS_NERO, FURY_KERBEROS_NERO_N);
 		registerQuestItems(MEMORIES_OF_THE_WIND);
 		addCondMinLevel(MIN_LEVEL, "34055-00.htm");
 		addCondCompletedQuest(Q10831_UnbelievableSight.class.getSimpleName(), "34055-00.htm");

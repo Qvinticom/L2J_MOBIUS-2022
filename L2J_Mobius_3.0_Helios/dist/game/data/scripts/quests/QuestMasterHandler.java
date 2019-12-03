@@ -207,6 +207,7 @@ import quests.Q00923_ShinedustExtraction.Q00923_ShinedustExtraction;
 import quests.Q00926_30DaySearchOperation.Q00926_30DaySearchOperation;
 import quests.Q00928_100DaySubjugationOperation.Q00928_100DaySubjugationOperation;
 import quests.Q00931_MemoriesOfTheWind.Q00931_MemoriesOfTheWind;
+import quests.Q00932_SayhasEnergy.Q00932_SayhasEnergy;
 import quests.Q00937_ToReviveTheFishingGuild.Q00937_ToReviveTheFishingGuild;
 import quests.Q10273_GoodDayToFly.Q10273_GoodDayToFly;
 import quests.Q10274_CollectingInTheAir.Q10274_CollectingInTheAir;
@@ -501,7 +502,6 @@ import quests.not_done.Q00914_RedLibraRequestLv5;
 import quests.not_done.Q00924_GiantOfTheRestorationRoom;
 import quests.not_done.Q00929_SeekerRescue;
 import quests.not_done.Q00930_DisparagingThePhantoms;
-import quests.not_done.Q00932_SayhasEnergy;
 import quests.not_done.Q00938_TheFishermansOtherHobby;
 import quests.not_done.Q10298_WastelandQueen;
 import quests.not_done.Q10357_AltarOfBloodThatAwakensDestruction;
@@ -764,7 +764,7 @@ public class QuestMasterHandler
 		Q00929_SeekerRescue.class, // TODO: Not done.
 		Q00930_DisparagingThePhantoms.class, // TODO: Not done.
 		Q00931_MemoriesOfTheWind.class,
-		Q00932_SayhasEnergy.class, // TODO: Not done.
+		Q00932_SayhasEnergy.class,
 		Q00937_ToReviveTheFishingGuild.class,
 		Q00938_TheFishermansOtherHobby.class, // TODO: Not done.
 		Q10273_GoodDayToFly.class,
