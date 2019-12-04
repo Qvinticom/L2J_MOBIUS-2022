@@ -3083,19 +3083,26 @@ public class Attackable extends NpcInstance
 		setWalking();
 		
 		// Check the region where this mob is, do not activate the AI if region is inactive.
-		if (hasAI() && !isInActiveRegion())
+		if (hasAI())
 		{
-			if (this instanceof SiegeGuardInstance)
+			// Set the intention of the Attackable to AI_INTENTION_ACTIVE
+			getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
+			
+			// Check the region where this mob is, do not activate the AI if region is inactive.
+			if (!isInActiveRegion())
 			{
-				((SiegeGuardAI) getAI()).stopAITask();
-			}
-			else if (this instanceof FortSiegeGuardInstance)
-			{
-				((FortSiegeGuardAI) getAI()).stopAITask();
-			}
-			else
-			{
-				((AttackableAI) getAI()).stopAITask();
+				if (this instanceof SiegeGuardInstance)
+				{
+					((SiegeGuardAI) getAI()).stopAITask();
+				}
+				else if (this instanceof FortSiegeGuardInstance)
+				{
+					((FortSiegeGuardAI) getAI()).stopAITask();
+				}
+				else
+				{
+					((AttackableAI) getAI()).stopAITask();
+				}
 			}
 		}
 	}
