@@ -19,10 +19,7 @@ package org.l2jmobius.gameserver.taskmanager.tasks;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 
-import org.l2jmobius.Config;
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.taskmanager.Task;
 import org.l2jmobius.gameserver.taskmanager.TaskManager;
 import org.l2jmobius.gameserver.taskmanager.TaskManager.ExecutedTask;
@@ -65,18 +62,6 @@ public class TaskRecom extends Task
 			LOGGER.severe(getClass().getSimpleName() + ": Could not reset Recommendations System: " + e);
 		}
 		
-		// Refresh reco bonus for online players
-		if (Config.NEVIT_ENABLED)
-		{
-			for (PlayerInstance player : World.getInstance().getPlayers())
-			{
-				if (player != null)
-				{
-					player.stopNevitHourglassTask();
-					player.startNevitHourglassTask();
-				}
-			}
-		}
 		LOGGER.info("Recommendations System reseted.");
 	}
 	

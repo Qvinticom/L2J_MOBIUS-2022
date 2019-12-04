@@ -38,6 +38,7 @@ import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.gameserver.taskmanager.tasks.TaskBirthday;
 import org.l2jmobius.gameserver.taskmanager.tasks.TaskCleanUp;
+import org.l2jmobius.gameserver.taskmanager.tasks.TaskRecom;
 import org.l2jmobius.gameserver.taskmanager.tasks.TaskRestart;
 import org.l2jmobius.gameserver.taskmanager.tasks.TaskShutdown;
 
@@ -166,6 +167,7 @@ public class TaskManager
 	{
 		registerTask(new TaskBirthday());
 		registerTask(new TaskCleanUp());
+		registerTask(new TaskRecom());
 		registerTask(new TaskRestart());
 		registerTask(new TaskShutdown());
 	}

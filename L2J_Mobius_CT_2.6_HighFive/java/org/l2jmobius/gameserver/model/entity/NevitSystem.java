@@ -91,7 +91,7 @@ public class NevitSystem implements IUniqueId
 		}
 		else if (percent >= 75)
 		{
-			_player.sendPacket(SystemMessageId.YOUR_CLOAK_HAS_BEEN_UNEQUIPPED_BECAUSE_YOUR_ARMOR_SET_IS_NO_LONGER_COMPLETE);
+			_player.sendPacket(SystemMessageId.NEVIT_S_ADVENT_BLESSING_SHINES_STRONGLY_FROM_ABOVE_YOU_CAN_ALMOST_SEE_HIS_DIVINE_AURA);
 		}
 	}
 	
