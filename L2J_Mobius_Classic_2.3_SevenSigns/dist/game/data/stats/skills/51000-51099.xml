@@ -191,42 +191,156 @@
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic>
+		<magicLvl>85</magicLvl>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="SummonAgathion">
+				<npcId>13562</npcId> <!-- Agathion Pisces -->
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51029" toLevel="1" name="Summon Cancer Agathion">
 		<!-- Release Agathion's Seal - Cancer. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic>
+		<magicLvl>85</magicLvl>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="SummonAgathion">
+				<npcId>13564</npcId> <!-- Agathion Cancer -->
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51030" toLevel="1" name="Teleport: Gludio">
 		<!-- Teleports to Gludio. -->
-		<operateType>A1</operateType>
-		<hitTime>3000</hitTime>
+		<hitTime>30000</hitTime>
 		<reuseDelay>600000</reuseDelay>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpAlignment">
+				<affectType>CASTER</affectType>
+				<alignment>LAWFUL</alignment>
+			</condition>
+			<condition name="OpNeedAgathion" />
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Teleport">
+				<x>-14225</x>
+				<y>123540</y>
+				<z>-3121</z>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51031" toLevel="1" name="Teleport: Dion">
-		<!-- Teleports to Dion. -->
-		<operateType>A1</operateType>
-		<hitTime>3000</hitTime>
+		<hitTime>30000</hitTime>
 		<reuseDelay>600000</reuseDelay>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpAlignment">
+				<affectType>CASTER</affectType>
+				<alignment>LAWFUL</alignment>
+			</condition>
+			<condition name="OpNeedAgathion" />
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Teleport">
+				<x>18748</x>
+				<y>145437</y>
+				<z>-3132</z>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51032" toLevel="1" name="Teleport: Giran">
-		<!-- Teleports to Giran. -->
-		<operateType>A1</operateType>
-		<hitTime>3000</hitTime>
+		<hitTime>30000</hitTime>
 		<reuseDelay>600000</reuseDelay>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpAlignment">
+				<affectType>CASTER</affectType>
+				<alignment>LAWFUL</alignment>
+			</condition>
+			<condition name="OpNeedAgathion" />
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Teleport">
+				<x>82698</x>
+				<y>148638</y>
+				<z>-3473</z>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51033" toLevel="1" name="Teleport: Oren">
-		<!-- Teleports to Oren. -->
-		<operateType>A1</operateType>
-		<hitTime>3000</hitTime>
+		<hitTime>30000</hitTime>
 		<reuseDelay>600000</reuseDelay>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpAlignment">
+				<affectType>CASTER</affectType>
+				<alignment>LAWFUL</alignment>
+			</condition>
+			<condition name="OpNeedAgathion" />
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Teleport">
+				<x>82321</x>
+				<y>55139</y>
+				<z>-1529</z>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51034" toLevel="1" name="Teleport: Hunter's Village">
-		<!-- Teleports to Hunter's Village. -->
-		<operateType>A1</operateType>
-		<hitTime>3000</hitTime>
+		<hitTime>30000</hitTime>
 		<reuseDelay>600000</reuseDelay>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpAlignment">
+				<affectType>CASTER</affectType>
+				<alignment>LAWFUL</alignment>
+			</condition>
+			<condition name="OpNeedAgathion" />
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Teleport">
+				<x>116589</x>
+				<y>76268</y>
+				<z>-2734</z>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51035" toLevel="1" name="Summon Rudolph Agathion">
 		<!-- Release Agathion's Seal - Rudolph. -->
@@ -786,27 +900,107 @@
 	</skill>
 	<skill id="51089" toLevel="1" name="Teleport to Forge of the Gods">
 		<!-- Teleports you to Forge of the Gods. -->
-		<operateType>A1</operateType>
-		<hitTime>3000</hitTime>
+		<hitTime>30000</hitTime>
 		<reuseDelay>600000</reuseDelay>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpAlignment">
+				<affectType>CASTER</affectType>
+				<alignment>LAWFUL</alignment>
+			</condition>
+			<condition name="OpNeedAgathion" />
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Teleport">
+				<x>169091</x>
+				<y>-116162</y>
+				<z>-2456</z>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51090" toLevel="1" name="Teleport to Garden of Eva">
 		<!-- Teleports you to Garden of Eva. -->
-		<operateType>A1</operateType>
-		<hitTime>3000</hitTime>
+		<hitTime>30000</hitTime>
 		<reuseDelay>600000</reuseDelay>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpAlignment">
+				<affectType>CASTER</affectType>
+				<alignment>LAWFUL</alignment>
+			</condition>
+			<condition name="OpNeedAgathion" />
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Teleport">
+				<x>82103</x>
+				<y>252409</y>
+				<z>-10588</z>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51091" toLevel="1" name="Teleport to Land of Winds">
 		<!-- Teleports you to Land of Winds. -->
-		<operateType>A1</operateType>
-		<hitTime>3000</hitTime>
+		<hitTime>30000</hitTime>
 		<reuseDelay>600000</reuseDelay>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpAlignment">
+				<affectType>CASTER</affectType>
+				<alignment>LAWFUL</alignment>
+			</condition>
+			<condition name="OpNeedAgathion" />
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Teleport">
+				<x>177347</x>
+				<y>173049</y>
+				<z>-1915</z>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51092" toLevel="1" name="Teleport to Wall of Argos">
 		<!-- Teleports you to Wall of Argos. -->
-		<operateType>A1</operateType>
-		<hitTime>3000</hitTime>
+		<hitTime>30000</hitTime>
 		<reuseDelay>600000</reuseDelay>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpAlignment">
+				<affectType>CASTER</affectType>
+				<alignment>LAWFUL</alignment>
+			</condition>
+			<condition name="OpNeedAgathion" />
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Teleport">
+				<x>165054</x>
+				<y>-47861</y>
+				<z>-3560</z>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51093" toLevel="1" name="Fire Attribute Attack">
 		<!-- Fire Attribute Attack +100. -->
@@ -818,6 +1012,9 @@
 		<stayAfterDeath>true</stayAfterDeath>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpNeedAgathion" />
+		</conditions>
 		<effects>
 			<effect name="ElementalSpiritAttack">
 				<amount>100</amount>
@@ -835,6 +1032,9 @@
 		<stayAfterDeath>true</stayAfterDeath>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpNeedAgathion" />
+		</conditions>
 		<effects>
 			<effect name="ElementalSpiritAttack">
 				<amount>100</amount>
@@ -852,6 +1052,9 @@
 		<stayAfterDeath>true</stayAfterDeath>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpNeedAgathion" />
+		</conditions>
 		<effects>
 			<effect name="ElementalSpiritAttack">
 				<amount>100</amount>
@@ -869,6 +1072,9 @@
 		<stayAfterDeath>true</stayAfterDeath>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpNeedAgathion" />
+		</conditions>
 		<effects>
 			<effect name="ElementalSpiritAttack">
 				<amount>100</amount>

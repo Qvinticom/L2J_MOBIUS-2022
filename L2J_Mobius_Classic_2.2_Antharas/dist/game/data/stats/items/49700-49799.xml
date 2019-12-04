@@ -29,14 +29,14 @@
 		<!-- When equipped, opens up 4 Talisman slots. HP/MP Recovery +7%, Accuracy +1, M. Accuracy +1, Weight Limit +7,000. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
 		<set name="icon" val="icon.dimension_bracelet_i05" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="rbracelet" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="53" />
+		<set name="crystal_type" val="B" />
 		<set name="material" val="SILVER" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_freightable" val="true" />
+		<set name="weight" val="150" />
+		<set name="price" val="5400000" />
+		<set name="commissionItemType" val="BRACELET" />
 	</item>
 	<item id="49704" name="Talisman of Border’s Fragment" type="EtcItem">
 		<!-- Used to create Talisman of Border. Give this item to Baggins along with a low-grade Talisman of Border, and you will receive a high-grade Talisman of Border. Cannot be dropped. -->

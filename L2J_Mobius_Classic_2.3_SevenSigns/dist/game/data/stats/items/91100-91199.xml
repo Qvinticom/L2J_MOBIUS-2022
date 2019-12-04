@@ -380,8 +380,9 @@
 		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="51101" level="1"/> <!-- Summon Agathion Ignis -->
-			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+			<skill id="3267" level="1"/> <!-- Seal Agathion -->
 			<skill id="51093" level="1"/> <!-- Fire Attack +100 -->
+			<skill id="51089" level="1"/>
 		</skills>
 	</item>
 	<item id="91130" name="Agathion Nebula" type="Armor">
@@ -396,8 +397,9 @@
 		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="51102" level="1"/> <!-- Summon Agathion Nebula -->
-			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+			<skill id="3267" level="1"/> <!-- Seal Agathion -->
 			<skill id="51094" level="1"/> <!-- Water Attack +100 -->
+			<skill id="51090" level="1"/>
 		</skills>
 	</item>
 	<item id="91131" name="Agathion Procella" type="Armor">
@@ -412,8 +414,9 @@
 		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="51103" level="1"/> <!-- Summon Agathion Procella -->
-			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+			<skill id="3267" level="1"/> <!-- Seal Agathion -->
 			<skill id="51095" level="1"/> <!-- Wind Attack +100 -->
+			<skill id="51091" level="1"/>
 		</skills>
 	</item>
 	<item id="91132" name="Agathion Petram" type="Armor">
@@ -428,8 +431,9 @@
 		<set name="is_sellable" val="false" />
 		<skills>
 			<skill id="51101" level="1"/> <!-- Summon Agathion Petram -->
-			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+			<skill id="3267" level="1"/> <!-- Seal Agathion -->
 			<skill id="51096" level="1"/> <!-- Earth Attack +100 -->
+			<skill id="51092" level="1"/>
 		</skills>
 	</item>
 	<item id="91133" name="Improved Master Fisherman's Blessing (2 h.)" type="EtcItem">

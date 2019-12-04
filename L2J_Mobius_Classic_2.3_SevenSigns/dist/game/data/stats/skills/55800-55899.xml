@@ -477,20 +477,44 @@
 		<operateType>P</operateType>
 		<effects>
 			<effect name="StatUp">
-				<amount>1</amount>
+				<amount>
+					<value level="1">1</value>
+					<value level="2">1</value>
+				</amount>
 				<stat>CON</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>1</amount>
+				<amount>
+					<value level="1">1</value>
+					<value level="2">1</value>
+				</amount>
 				<stat>MEN</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>1</amount>
+				<amount>
+					<value level="1">1</value>
+					<value level="2">1</value>
+				</amount>
 				<stat>STR</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>1</amount>
+				<amount>
+					<value level="1">1</value>
+					<value level="2">1</value>
+				</amount>
 				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="2">1</value>
+				</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="2">1</value>
+				</amount>
+				<stat>WIT</stat>
 			</effect>
 		</effects>
 	</skill>
@@ -502,15 +526,19 @@
 		<effect name="DefenceTrait">
 			<DERANGEMENT>
 				<value level="1">5</value>
+				<value level="2">8</value>
 			</DERANGEMENT>
 			<SHOCK>
 				<value level="1">5</value>
+				<value level="2">8</value>
 			</SHOCK>
 			<SLEEP>
 				<value level="1">5</value>
+				<value level="2">8</value>
 			</SLEEP>
 			<PARALYZE>
 				<value level="1">5</value>
+				<value level="2">8</value>
 			</PARALYZE>
 		</effect>
 		</effects>

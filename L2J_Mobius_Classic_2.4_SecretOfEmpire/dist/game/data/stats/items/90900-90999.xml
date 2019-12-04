@@ -36,6 +36,14 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
+		<skills>
+			<skill id="51028" level="1"/> <!-- Release Agathion's Seal - Pisces -->
+			<skill id="3267" level="1" /> <!-- Seal Agathion -->
+			<skill id="51030" level="1"/>
+			<skill id="51031" level="1"/>
+			<skill id="51032" level="1"/>
+			<skill id="51033" level="1"/>
+		</skills>
 	</item>
 	<item id="90903" name="Agathion Cancer" additionalName="15-day" type="Armor">
 		<!-- A 15-day item. Equipping it in the Bracelet's main slot summons the Agathion Cancer and activates the Special Ability option. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
@@ -50,9 +58,14 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
-		<stats>
-			<stat type="maxMp">34</stat>
-		</stats>
+		<skills>
+			<skill id="51029" level="1"/> <!-- Release Agathion's Seal - Cancer -->
+			<skill id="3267" level="1"/> <!-- Seal Agathion -->
+			<skill id="51030" level="1"/>
+			<skill id="51031" level="1"/>
+			<skill id="51032" level="1"/>
+			<skill id="51033" level="1"/>
+		</skills>
 	</item>
 	<item id="90904" name="Agathion Box: Aries" additionalName="60-day" type="EtcItem">
 		<!-- Double-click to obtain Agathion Bracelet - Lv. 3 (60-day) and Agathion Aries (60-day). <Note>. For items obtained from a box, there are restrictions regarding movement. -->
