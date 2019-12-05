@@ -16,11 +16,15 @@
  */
 package quests.Q10590_ReawakenedFate;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.enums.QuestSound;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.holders.NpcLogListHolder;
 import org.l2jmobius.gameserver.model.quest.Quest;
 import org.l2jmobius.gameserver.model.quest.QuestState;
 import org.l2jmobius.gameserver.model.quest.State;
@@ -31,46 +35,45 @@ import org.l2jmobius.gameserver.util.Util;
 import quests.Q10589_WhereFatesIntersect.Q10589_WhereFatesIntersect;
 
 /**
- * Q10590_ReawakenedFate
- * @URL https://www.youtube.com/watch?v=HCd784Gnguw
- * @author NightBR
+ * Reawakened Fate (10590)
+ * @URL https://l2wiki.com/Reawakened_Fate
+ * @author Dmitri
+ * @author NightBR (fixes and standardization)
  */
 public class Q10590_ReawakenedFate extends Quest
 {
 	// NPCs
 	private static final int JOACHIM = 34513;
-	private static final int RAFLASIA = 34414;
-	private static final int HERPA = 34362;
-	private static final int ORWEN = 30857;
+	private static final int LAPATHIA = 34414;
+	private static final int HERPHAH = 34362;
+	private static final int ORVEN = 30857;
 	private static final int[] MONSTERS =
 	{
-		24457, // Swamp Vampire Rogue
-		24458, // Swamp Vampire Warrior
-		24459, // Swamp Vampire Wizard
-		24460 // Swamp Vampire Shooter
+		24457, // Marsh Vampire Rogue
+		24458, // Marsh Vampire Warrior
+		24459, // Marsh Vampire Wizard
+		24460 // Marsh Vampire Shooter
 	};
 	// Item
-	private static final int IHOR_VAMPIRE = 80854; // Ihor Vampire - monster drop
+	private static final int VAMPIRE_ICHOR = 80854; // Vampire Ichor - monster drop
 	// Rewards
-	private static final long EXP = 1;
-	private static final int SP = 1;
-	private static final int ADENA_AMOUNT = 5050;
 	private static final int ACHIEVEMENT_BOX = 80909;
 	private static final int RUBIN_LV2 = 38856;
 	private static final int SAPPHIRE_LV2 = 38928;
 	// Misc
-	private static final int MIN_LEVEL = 99;
+	private static final int MIN_LEVEL = 95;
+	private static final int REACH_LV_99 = NpcStringId.REACH_LV_99.getId();
 	// Location
-	private static final Location ALTAR_OF_EVIL = new Location(-14467, 44242, -3673);
+	private static final Location BLOODY_SWAMPLAND = new Location(-14467, 44242, -3673);
 	
 	public Q10590_ReawakenedFate()
 	{
 		super(10590);
 		addStartNpc(JOACHIM);
-		addTalkId(JOACHIM, RAFLASIA, HERPA, ORWEN);
+		addTalkId(JOACHIM, LAPATHIA, HERPHAH, ORVEN);
 		addKillId(MONSTERS);
-		registerQuestItems(IHOR_VAMPIRE);
-		addCondMinLevel(95, "34513-16.html");
+		registerQuestItems(VAMPIRE_ICHOR);
+		addCondMinLevel(MIN_LEVEL, "34513-16.html");
 		addCondCompletedQuest(Q10589_WhereFatesIntersect.class.getSimpleName(), "34513-16.html");
 	}
 	
@@ -87,19 +90,18 @@ public class Q10590_ReawakenedFate extends Quest
 		String htmltext = null;
 		switch (event)
 		{
-			case "34513-02.html":
-			case "34513-04.html":
-			case "34513-07.html":
-			case "34362-03.html":
-			case "30857-03.html":
+			case "34513-02.htm":
+			case "34513-03.htm":
+			case "34513-06.html":
+			case "34414-02.html":
+			case "34362-02.html":
+			case "30857-02.html":
 			case "34513-09.html":
-			case "34513-12.html":
-			case "34513-13.html":
 			{
 				htmltext = event;
 				break;
 			}
-			case "34513-03.html":
+			case "34513-04.htm":
 			{
 				qs.startQuest();
 				htmltext = event;
@@ -109,40 +111,31 @@ public class Q10590_ReawakenedFate extends Quest
 			{
 				if (qs.isCond(1))
 				{
-					player.teleToLocation(ALTAR_OF_EVIL);
+					player.teleToLocation(BLOODY_SWAMPLAND); // Teleport to Bloody Swampland near npc Lapathia
 				}
 				break;
 			}
-			case "34414-02.html":
+			case "34414-03.html":
 			{
 				qs.setCond(2, true);
 				htmltext = event;
 				break;
 			}
-			case "34513-06.html":
+			case "34513-07.html":
 			{
 				qs.setCond(4, true);
 				htmltext = event;
 				break;
 			}
-			case "34362-02.html":
+			case "34362-03.html":
 			{
 				qs.setCond(5, true);
 				htmltext = event;
 				break;
 			}
-			case "30857-02.html":
+			case "30857-03.html":
 			{
 				qs.setCond(6, true);
-				htmltext = event;
-				break;
-			}
-			case "30857-04.html":
-			{
-				if (qs.isCond(6))
-				{
-					qs.setCond(7, true);
-				}
 				htmltext = event;
 				break;
 			}
@@ -150,11 +143,10 @@ public class Q10590_ReawakenedFate extends Quest
 			{
 				if (qs.isCond(7))
 				{
-					if (player.getLevel() >= MIN_LEVEL)
+					if (player.getLevel() >= 99)
 					{
 						// Reward №1
-						addExpAndSp(player, EXP, SP);
-						giveAdena(player, ADENA_AMOUNT, false);
+						takeItems(player, VAMPIRE_ICHOR, -1);
 						giveItems(player, ACHIEVEMENT_BOX, 1);
 						giveItems(player, RUBIN_LV2, 1);
 						showOnScreenMsg(player, NpcStringId.YOU_ARE_READY_TO_ADD_A_DUAL_CLASS_NTALK_TO_THE_DUAL_CLASS_MASTER, ExShowScreenMessage.TOP_CENTER, 10000);
@@ -168,11 +160,10 @@ public class Q10590_ReawakenedFate extends Quest
 			{
 				if (qs.isCond(7))
 				{
-					if (player.getLevel() >= MIN_LEVEL)
+					if (player.getLevel() >= 99)
 					{
 						// Reward №2
-						addExpAndSp(player, EXP, SP);
-						giveAdena(player, ADENA_AMOUNT, false);
+						takeItems(player, VAMPIRE_ICHOR, -1);
 						giveItems(player, ACHIEVEMENT_BOX, 1);
 						giveItems(player, SAPPHIRE_LV2, 1);
 						showOnScreenMsg(player, NpcStringId.YOU_ARE_READY_TO_ADD_A_DUAL_CLASS_NTALK_TO_THE_DUAL_CLASS_MASTER, ExShowScreenMessage.TOP_CENTER, 10000);
@@ -181,6 +172,15 @@ public class Q10590_ReawakenedFate extends Quest
 					}
 					break;
 				}
+			}
+			case "34513-12.html":
+			{
+				if (player.hasDualClass())
+				{
+					htmltext = "34513-13.html";
+				}
+				// TODO: We need info about what to do, when player does not have dual class yet.
+				// else {}
 			}
 		}
 		return htmltext;
@@ -198,7 +198,7 @@ public class Q10590_ReawakenedFate extends Quest
 			{
 				if (npc.getId() == JOACHIM)
 				{
-					htmltext = "34513-01.html";
+					htmltext = "34513-01.htm";
 				}
 				break;
 			}
@@ -210,7 +210,7 @@ public class Q10590_ReawakenedFate extends Quest
 					{
 						if (qs.isCond(1))
 						{
-							htmltext = "34513-03.html";
+							htmltext = "34513-03.htm";
 						}
 						else if (qs.isCond(2))
 						{
@@ -230,7 +230,7 @@ public class Q10590_ReawakenedFate extends Quest
 						}
 						break;
 					}
-					case RAFLASIA:
+					case LAPATHIA:
 					{
 						if (qs.isCond(1))
 						{
@@ -246,7 +246,7 @@ public class Q10590_ReawakenedFate extends Quest
 						}
 						break;
 					}
-					case HERPA:
+					case HERPHAH:
 					{
 						if (qs.isCond(4))
 						{
@@ -258,7 +258,7 @@ public class Q10590_ReawakenedFate extends Quest
 						}
 						break;
 					}
-					case ORWEN:
+					case ORVEN:
 					{
 						if (qs.isCond(5))
 						{
@@ -293,15 +293,16 @@ public class Q10590_ReawakenedFate extends Quest
 		final QuestState qs = getQuestState(player, false);
 		if ((qs != null) && qs.isCond(2) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, player, false))
 		{
-			if ((getQuestItemsCount(player, IHOR_VAMPIRE) < 500) && (getRandom(100) < 90))
+			if ((getQuestItemsCount(player, VAMPIRE_ICHOR) < 500) && (getRandom(100) < 90))
 			{
-				giveItems(player, IHOR_VAMPIRE, 1);
+				giveItems(player, VAMPIRE_ICHOR, 1);
 				playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
-			if ((getQuestItemsCount(player, IHOR_VAMPIRE) >= 500) && (player.getLevel() >= MIN_LEVEL))
+			if ((getQuestItemsCount(player, VAMPIRE_ICHOR) >= 500) && (player.getLevel() >= 99))
 			{
 				qs.setCond(3, true);
 			}
+			sendNpcLogList(player);
 		}
 	}
 	
@@ -310,5 +311,22 @@ public class Q10590_ReawakenedFate extends Quest
 	{
 		executeForEachPlayer(killer, npc, isSummon, true, false);
 		return super.onKill(npc, killer, isSummon);
+	}
+	
+	@Override
+	public Set<NpcLogListHolder> getNpcLogList(PlayerInstance player)
+	{
+		final QuestState qs = getQuestState(player, false);
+		
+		if ((qs != null) && qs.isCond(2))
+		{
+			final Set<NpcLogListHolder> holder = new HashSet<>();
+			if (player.getLevel() >= 99)
+			{
+				holder.add(new NpcLogListHolder(REACH_LV_99, true, 1));
+			}
+			return holder;
+		}
+		return super.getNpcLogList(player);
 	}
 }
