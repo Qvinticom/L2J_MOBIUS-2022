@@ -27,6 +27,7 @@ import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.base.ClassId;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
@@ -299,12 +300,6 @@ public class Q11027_PathOfDestinyOvercome extends Quest
 			return;
 		}
 		
-		// Not for Ertheias.
-		if (player.getRace() == Race.ERTHEIA)
-		{
-			return;
-		}
-		
 		// Avoid reward more than once.
 		if (player.getVariables().getBoolean(AWAKE_POWER_REWARDED_VAR, false))
 		{
@@ -314,13 +309,29 @@ public class Q11027_PathOfDestinyOvercome extends Quest
 		final QuestState qs = getQuestState(player, false);
 		if ((qs != null) && qs.isCompleted())
 		{
-			for (Entry<CategoryType, Integer> ent : AWAKE_POWER.entrySet())
+			if (player.getRace() == Race.ERTHEIA)
 			{
-				if (player.isInCategory(ent.getKey()))
+				if (player.getClassId() == ClassId.EVISCERATOR)
 				{
 					player.getVariables().set(AWAKE_POWER_REWARDED_VAR, true);
-					giveItems(player, ent.getValue(), 1);
-					break;
+					giveItems(player, 40268, 1);
+				}
+				if (player.getClassId() == ClassId.SAYHA_SEER)
+				{
+					player.getVariables().set(AWAKE_POWER_REWARDED_VAR, true);
+					giveItems(player, 40269, 1);
+				}
+			}
+			else
+			{
+				for (Entry<CategoryType, Integer> ent : AWAKE_POWER.entrySet())
+				{
+					if (player.isInCategory(ent.getKey()))
+					{
+						player.getVariables().set(AWAKE_POWER_REWARDED_VAR, true);
+						giveItems(player, ent.getValue(), 1);
+						break;
+					}
 				}
 			}
 		}
