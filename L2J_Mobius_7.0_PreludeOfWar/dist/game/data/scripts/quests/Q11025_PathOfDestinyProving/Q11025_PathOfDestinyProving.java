@@ -78,6 +78,7 @@ public class Q11025_PathOfDestinyProving extends Quest
 	// Location
 	private static final Location TRAINING_GROUNDS_TELEPORT = new Location(-4983, 116607, -3344);
 	// Misc
+	private static final String R_GRADE_ITEMS_REWARDED_VAR = "R_GRADE_ITEMS_REWARDED";
 	private static final int MIN_LEVEL = 40;
 	
 	public Q11025_PathOfDestinyProving()
@@ -321,9 +322,17 @@ public class Q11025_PathOfDestinyProving extends Quest
 			return;
 		}
 		
+		// Avoid reward more than once.
+		if (player.getVariables().getBoolean(R_GRADE_ITEMS_REWARDED_VAR, false))
+		{
+			return;
+		}
+		
 		final QuestState qs = getQuestState(player, false);
 		if ((qs != null) && qs.isCompleted())
 		{
+			player.getVariables().set(R_GRADE_ITEMS_REWARDED_VAR, true);
+			
 			giveItems(player, SS_R, 3000);
 			giveItems(player, BSS_R, 2000);
 			
