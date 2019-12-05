@@ -4,86 +4,187 @@
 		<!-- Passive: Water Resistance + 20. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>20</amount>
+				<attribute>WATER</attribute>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13601" toLevel="1" name="Augment Option - Wind Resistance">
 		<!-- Passive: Wind Resistance + 20. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>20</amount>
+				<attribute>WIND</attribute>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13602" toLevel="1" name="Augment Option - Earth Resistance">
 		<!-- Passive: Earth Resistance + 20. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>20</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13603" toLevel="1" name="Augment Option - Holy Resistance">
 		<!-- Passive: Holy Resistance + 20. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>20</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13604" toLevel="1" name="Augment Option - Dark Resistance">
 		<!-- Passive: Dark Resistance + 20. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>20</amount>
+				<attribute>DARK</attribute>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13605" toLevel="1" name="Augment Option - Fire Resistance">
 		<!-- Passive: Fire Resistance + 10. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>10</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13606" toLevel="1" name="Augment Option - Water Resistance">
 		<!-- Passive: Water Resistance + 10. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>10</amount>
+				<attribute>WATER</attribute>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13607" toLevel="1" name="Augment Option - Wind Resistance">
 		<!-- Passive: Wind Resistance + 10. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>10</amount>
+				<attribute>WIND</attribute>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13608" toLevel="1" name="Augment Option - Earth Resistance">
 		<!-- Passive: Earth Resistance + 10. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>10</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13609" toLevel="1" name="Augment Option - Holy Resistance">
 		<!-- Passive: Holy Resistance + 10. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>10</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13610" toLevel="1" name="Augment Option - Dark Resistance">
 		<!-- Passive: Dark Resistance + 10. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>10</amount>
+				<attribute>DARK</attribute>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13611" toLevel="1" name="Augment Option - P. Atk.">
 		<!-- Passive: P. Atk. + 212. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="PAtk">
+				<amount>212</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13612" toLevel="1" name="Augment Option - M. Atk.">
 		<!-- Passive: M. Atk. + 498. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MAtk">
+				<amount>498</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13613" toLevel="1" name="Augment Option - P. Accuracy">
 		<!-- Passive: P. Accuracy + 2. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="Accuracy">
+				<amount>2</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>	
 	</skill>
 	<skill id="13614" toLevel="1" name="Augment Option - M. Accuracy">
 		<!-- Passive: M. Accuracy + 2. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicAccuracy">
+				<amount>2</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13615" toLevel="1" name="Augment Option - M. Def.">
 		<!-- Passive: M. Def. 5%. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>	
 	</skill>
 	<skill id="13616" toLevel="1" name="Augment Option - Stun/ Knock Back/ Knock Down Resistance">
 		<!-- Passive: Stun/ Knock Back/Knock Down Resistance + 10. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceTrait">
+				<SHOCK>10</SHOCK>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13617" toLevel="1" name="Augment Option - Petrify/ Hold Resistance">
 		<!-- Passive: Petrify/ Hold Resistance + 10. -->
@@ -94,71 +195,148 @@
 		<!-- Passive: Mental/ Aerial Yoke Resistance + 10. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceTrait">
+				<SHOCK>10</SHOCK>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13619" toLevel="1" name="Augment Option - Paralysis/ Pull Resistance">
 		<!-- Passive: Paralysis/ Pull Resistance + 10. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceTrait">
+				<SHOCK>10</SHOCK>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13620" toLevel="1" name="Augment Option - STR">
 		<!-- Passive: STR + 1. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>STR</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13621" toLevel="1" name="Augment Option - DEX">
 		<!-- Passive: DEX + 1. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>DEX</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13622" toLevel="1" name="Augment Option - CON">
 		<!-- Passive: CON + 1. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CON</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13623" toLevel="1" name="Augment Option - INT">
 		<!-- Passive: INT + 1. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>INT</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13624" toLevel="1" name="Augment Option - WIT">
 		<!-- Passive: WIT + 1. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>WIT</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13625" toLevel="1" name="Augment Option - MEN">
 		<!-- Passive: MEN + 1. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>MEN</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13626" toLevel="1" name="Augment Option - Speed">
 		<!-- Passive: Speed + 7. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="Speed">
+				<amount>7</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>	
 	</skill>
 	<skill id="13627" toLevel="1" name="Augment Option - Stun Resistance">
 		<!-- Passive: Stun Resistance + 10. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceTrait">
+				<SHOCK>10</SHOCK>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13628" toLevel="1" name="Augment Option - Hold Resistance">
 		<!-- Passive: Hold Resistance + 10. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceTrait">
+				<HOLD>10</HOLD>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13629" toLevel="1" name="Augment Option - Bleed Resistance">
 		<!-- Passive: Bleed Resistance + 10. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="AttackTrait">
+				<BLEED>10</BLEED>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13630" toLevel="1" name="Augment Option - Paralysis Resistance">
 		<!-- Passive: Paralysis Resistance + 10. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceTrait">
+				<PARALYZE>10</PARALYZE>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13631" toLevel="1" name="Augment Option - Mental Resistance">
 		<!-- Passive: Mental Resistance + 10. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceTrait">
+				<SHOCK>10</SHOCK>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13632" toLevel="1" name="Augment Option - Sleep Resistance">
 		<!-- Passive: Sleep Resistance + 10. -->
@@ -174,16 +352,31 @@
 		<!-- Passive: Knock Back/Knock Down Resistance + 10. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceTrait">
+				<SHOCK>10</SHOCK>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13635" toLevel="1" name="Augment Option - Aerial Yoke Resistance">
 		<!-- Passive: Aerial Yoke Resistance + 10. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceTrait">
+				<SHOCK>10</SHOCK>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13636" toLevel="1" name="Augment Option - Pull Resistance">
 		<!-- Passive: Pull Resistance + 10. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceTrait">
+				<SHOCK>10</SHOCK>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13637" toLevel="1" name="Augment Option - Petrify Resistance">
 		<!-- Passive: Petrify Resistance + 10. -->
@@ -194,6 +387,11 @@
 		<!-- Passive: Stun Resistance + 5. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceTrait">
+				<SHOCK>5</SHOCK>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13639" toLevel="1" name="Augment Option - Hold Resistance">
 		<!-- Passive: Hold Resistance + 5. -->
@@ -214,6 +412,11 @@
 		<!-- Passive: Mental Resistance + 5. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceTrait">
+				<SHOCK>5</SHOCK>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13643" toLevel="1" name="Augment Option - Sleep Resistance">
 		<!-- Passive: Sleep Resistance + 5. -->
@@ -229,16 +432,31 @@
 		<!-- Passive: Knock Back/Knock Down Resistance + 5. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceTrait">
+				<SHOCK>5</SHOCK>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13646" toLevel="1" name="Augment Option - Aerial Yoke Resistance">
 		<!-- Passive: Aerial Yoke Resistance + 5. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceTrait">
+				<SHOCK>5</SHOCK>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13647" toLevel="1" name="Augment Option - Pull Resistance">
 		<!-- Passive: Pull Resistance + 5. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceTrait">
+				<SHOCK>5</SHOCK>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13648" toLevel="1" name="Augment Option - Petrify Resistance">
 		<!-- Passive: Petrify Resistance + 5. -->
@@ -249,16 +467,46 @@
 		<!-- Passive: Max HP + 266/ HP Recovery Bonus + 8. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxHp">
+				<amount>266</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>8</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13650" toLevel="1" name="Augment Option - MP">
 		<!-- Passive: Max MP + 117/ MP Recovery Bonus + 4. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxMp">
+				<amount>117</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>4</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13651" toLevel="1" name="Augment Option - CP">
 		<!-- Passive: Max CP + 266/ CP Recovery Bonus + 8. -->
 		<icon>icon.skill4416_dwarf</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxCp">
+				<amount>266</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CpRegen">
+				<amount>8</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13652" toLevel="1" name="Tiat's Belt">
 		<!-- Max HP/CP + 398, Max MP + 176, weight gauge + 12800, additional damage + 5%, inventory slots + 18. Received damage - 6%. -->
