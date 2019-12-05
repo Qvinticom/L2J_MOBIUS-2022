@@ -23,7 +23,6 @@ import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.base.ClassId;
 import org.l2jmobius.gameserver.model.events.EventType;
 import org.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import org.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
@@ -56,6 +55,7 @@ public class Q11025_PathOfDestinyProving extends Quest
 	// Class change rewards
 	private static final int SS_R = 33780;
 	private static final int BSS_R = 33794;
+	private static final int BS_R = 6645;
 	private static final int BOX_R_HEAVY = 46924;
 	private static final int BOX_R_LIGHT = 46925;
 	private static final int BOX_R_ROBE = 46926;
@@ -70,7 +70,11 @@ public class Q11025_PathOfDestinyProving extends Quest
 	private static final int WEAPON_STAFF_R = 47017;
 	private static final int WEAPON_DUALSWORD_R = 47018;
 	private static final int WEAPON_CROSSBOW_R = 47014;
+	private static final int WEAPON_BUSTER_R = 47015;
+	private static final int WEAPON_CASTER_R = 47016;
+	private static final int WEAPON_SIGIL_R = 47037;
 	private static final int ORICHALCUM_BOLT_R = 19443;
+	private static final int ORICHALCUM_ARROW_R = 18550;
 	// Location
 	private static final Location TRAINING_GROUNDS_TELEPORT = new Location(-4983, 116607, -3344);
 	// Misc
@@ -312,14 +316,7 @@ public class Q11025_PathOfDestinyProving extends Quest
 			return;
 		}
 		
-		if (player.getRace() == Race.ERTHEIA)
-		{
-			if (!CategoryData.getInstance().isInCategory(CategoryType.SECOND_CLASS_GROUP, player.getClassId().getId()))
-			{
-				return;
-			}
-		}
-		else if (!CategoryData.getInstance().isInCategory(CategoryType.THIRD_CLASS_GROUP, player.getClassId().getId()))
+		if (!CategoryData.getInstance().isInCategory(CategoryType.THIRD_CLASS_GROUP, player.getClassId().getId()))
 		{
 			return;
 		}
@@ -330,158 +327,120 @@ public class Q11025_PathOfDestinyProving extends Quest
 			giveItems(player, SS_R, 3000);
 			giveItems(player, BSS_R, 2000);
 			
-			final int classId = player.getClassId().getId();
-			switch (player.getRace())
+			switch (player.getClassId())
 			{
-				case HUMAN:
-				case ELF:
-				case DARK_ELF:
+				case WARLORD:
 				{
-					if (CategoryData.getInstance().isInCategory(CategoryType.DIVISION_WIZARD, classId))
-					{
-						giveItems(player, BOX_R_ROBE, 1);
-						giveItems(player, WEAPON_STAFF_R, 1);
-					}
-					else if (CategoryData.getInstance().isInCategory(CategoryType.SUBJOB_GROUP_BOW, classId))
-					{
-						giveItems(player, BOX_R_LIGHT, 1);
-						giveItems(player, WEAPON_BOW_R, 1);
-					}
-					else if (CategoryData.getInstance().isInCategory(CategoryType.SUBJOB_GROUP_DAGGER, classId))
-					{
-						giveItems(player, BOX_R_LIGHT, 1);
-						giveItems(player, WEAPON_DUALDAGGER_R, 1);
-					}
-					else if (CategoryData.getInstance().isInCategory(CategoryType.SUBJOB_GROUP_DANCE, classId) || (player.getClassId() == ClassId.GLADIATOR))
-					{
-						giveItems(player, BOX_R_HEAVY, 1);
-						giveItems(player, WEAPON_DUALSWORD_R, 1);
-					}
-					else if (player.getClassId() == ClassId.WARLORD)
-					{
-						giveItems(player, BOX_R_HEAVY, 1);
-						giveItems(player, WEAPON_SPEAR_R, 1);
-					}
-					else if (player.getClassId() == ClassId.DUELIST)
-					{
-						giveItems(player, BOX_R_HEAVY, 1);
-						giveItems(player, WEAPON_DUALSWORD_R, 1);
-					}
-					else if (CategoryData.getInstance().isInCategory(CategoryType.TANKER_GROUP, classId))
-					{
-						giveItems(player, BOX_R_HEAVY, 1);
-						giveItems(player, WEAPON_SWORD_R, 1);
-						giveItems(player, WEAPON_SHIELD_R, 1);
-					}
-					else if (CategoryData.getInstance().isInCategory(CategoryType.RECOM_WARRIOR_GROUP, classId))
-					{
-						giveItems(player, BOX_R_HEAVY, 1);
-						giveItems(player, WEAPON_SWORD_R, 1);
-					}
-					else
-					{
-						giveItems(player, BOX_R_HEAVY, 1);
-						giveItems(player, WEAPON_SWORD_R, 1);
-						giveItems(player, WEAPON_GSWORD_R, 1);
-					}
+					giveItems(player, BOX_R_HEAVY, 1);
+					giveItems(player, WEAPON_SPEAR_R, 1);
 					break;
 				}
-				case DWARF:
+				case GLADIATOR:
+				case WARCRYER:
+				case PROPHET:
+				case BLADEDANCER:
 				{
-					if (CategoryData.getInstance().isInCategory(CategoryType.SIXTH_OTHEL_GROUP, classId))
-					{
-						giveItems(player, BOX_R_LIGHT, 1);
-						giveItems(player, WEAPON_DUALDAGGER_R, 1);
-					}
-					else if (CategoryData.getInstance().isInCategory(CategoryType.DWARF_BOUNTY_CLASS, classId))
-					{
-						giveItems(player, BOX_R_LIGHT, 1);
-						giveItems(player, WEAPON_DUALDAGGER_R, 1);
-					}
-					else
-					{
-						giveItems(player, BOX_R_HEAVY, 1);
-						giveItems(player, WEAPON_BLUNT_R, 1);
-					}
+					giveItems(player, BOX_R_HEAVY, 1);
+					giveItems(player, WEAPON_DUALSWORD_R, 1);
 					break;
 				}
-				case ORC:
+				case PALADIN:
+				case DARK_AVENGER:
+				case TEMPLE_KNIGHT:
+				case SWORDSINGER:
+				case SHILLIEN_KNIGHT:
+				case OVERLORD:
 				{
-					if (CategoryData.getInstance().isInCategory(CategoryType.SIXTH_IS_GROUP, classId))
-					{
-						giveItems(player, BOX_R_LIGHT, 1);
-						giveItems(player, WEAPON_DUALSWORD_R, 1);
-					}
-					else if (player.getClassId() == ClassId.TYRR_GRAND_KHAVATARI)
-					{
-						giveItems(player, BOX_R_LIGHT, 1);
-						giveItems(player, WEAPON_FIST_R, 1);
-					}
-					else if (player.getClassId() == ClassId.TYRR_TITAN)
-					{
-						giveItems(player, BOX_R_HEAVY, 1);
-						giveItems(player, WEAPON_GSWORD_R, 1);
-					}
-					else if (player.isMageClass())
-					{
-						giveItems(player, BOX_R_LIGHT, 1);
-						giveItems(player, WEAPON_STAFF_R, 1);
-					}
-					else if (CategoryData.getInstance().isInCategory(CategoryType.LIGHT_ARMOR_CLASS, classId))
-					{
-						giveItems(player, BOX_R_LIGHT, 1);
-						giveItems(player, WEAPON_FIST_R, 1);
-					}
-					else
-					{
-						giveItems(player, BOX_R_HEAVY, 1);
-						giveItems(player, WEAPON_GSWORD_R, 1);
-					}
+					giveItems(player, BOX_R_HEAVY, 1);
+					giveItems(player, WEAPON_SWORD_R, 1);
+					giveItems(player, WEAPON_SHIELD_R, 1);
 					break;
 				}
-				case KAMAEL:
+				case TREASURE_HUNTER:
+				case PLAINS_WALKER:
+				case ABYSS_WALKER:
+				case BOUNTY_HUNTER:
 				{
-					if (CategoryData.getInstance().isInCategory(CategoryType.SIXTH_FEOH_GROUP, classId))
-					{
-						giveItems(player, BOX_R_ROBE, 1);
-						giveItems(player, WEAPON_STAFF_R, 1);
-					}
-					else if (CategoryData.getInstance().isInCategory(CategoryType.SIXTH_YR_GROUP, classId))
-					{
-						giveItems(player, BOX_R_LIGHT, 1);
-						giveItems(player, ORICHALCUM_BOLT_R, 5000);
-						giveItems(player, WEAPON_CROSSBOW_R, 1);
-					}
-					else if (CategoryData.getInstance().isInCategory(CategoryType.DIVISION_WIZARD, classId))
-					{
-						giveItems(player, BOX_R_ROBE, 1);
-						giveItems(player, WEAPON_STAFF_R, 1);
-					}
-					else if (CategoryData.getInstance().isInCategory(CategoryType.DIVISION_ARCHER, classId))
-					{
-						giveItems(player, BOX_R_LIGHT, 1);
-						giveItems(player, ORICHALCUM_BOLT_R, 5000);
-						giveItems(player, WEAPON_CROSSBOW_R, 1);
-					}
-					else
-					{
-						giveItems(player, BOX_R_LIGHT, 1);
-						giveItems(player, WEAPON_GSWORD_R, 1);
-						break;
-					}
+					giveItems(player, BOX_R_LIGHT, 1);
+					giveItems(player, WEAPON_DUALDAGGER_R, 1);
+					break;
 				}
-				case ERTHEIA:
+				case HAWKEYE:
+				case SILVER_RANGER:
+				case PHANTOM_RANGER:
 				{
-					if (player.isMageClass())
-					{
-						giveItems(player, BOX_R_ROBE, 1);
-						giveItems(player, WEAPON_STAFF_R, 1);
-					}
-					else
-					{
-						giveItems(player, BOX_R_LIGHT, 1);
-						giveItems(player, WEAPON_FIST_R, 1);
-					}
+					giveItems(player, BOX_R_LIGHT, 1);
+					giveItems(player, WEAPON_BOW_R, 1);
+					giveItems(player, ORICHALCUM_ARROW_R, 20000);
+					break;
+				}
+				case SORCERER:
+				case NECROMANCER:
+				case SPELLSINGER:
+				case SPELLHOWLER:
+				case MALE_SOULBREAKER:
+				case FEMALE_SOULBREAKER:
+				{
+					giveItems(player, BOX_R_ROBE, 1);
+					giveItems(player, WEAPON_BUSTER_R, 1);
+					giveItems(player, WEAPON_SIGIL_R, 1);
+					break;
+				}
+				case WARLOCK:
+				case ELEMENTAL_SUMMONER:
+				case PHANTOM_SUMMONER:
+				{
+					giveItems(player, BOX_R_LIGHT, 1);
+					giveItems(player, WEAPON_STAFF_R, 1);
+					giveItems(player, BS_R, 1000); // TODO: Confirm.
+					break;
+				}
+				case BISHOP:
+				case ELDER:
+				case SHILLIEN_ELDER:
+				{
+					giveItems(player, BOX_R_ROBE, 1);
+					giveItems(player, WEAPON_CASTER_R, 1);
+					giveItems(player, WEAPON_SIGIL_R, 1);
+					break;
+				}
+				case WARSMITH:
+				{
+					giveItems(player, BOX_R_HEAVY, 1);
+					giveItems(player, WEAPON_BLUNT_R, 1);
+					giveItems(player, WEAPON_SHIELD_R, 1);
+					break;
+				}
+				case DESTROYER:
+				case BERSERKER:
+				{
+					giveItems(player, BOX_R_HEAVY, 1);
+					giveItems(player, WEAPON_GSWORD_R, 1);
+					break;
+				}
+				case TYRANT:
+				{
+					giveItems(player, BOX_R_HEAVY, 1);
+					giveItems(player, WEAPON_FIST_R, 1);
+					break;
+				}
+				case ARBALESTER:
+				{
+					giveItems(player, BOX_R_LIGHT, 1);
+					giveItems(player, ORICHALCUM_BOLT_R, 20000);
+					giveItems(player, WEAPON_CROSSBOW_R, 1);
+					break;
+				}
+				case MARAUDER:
+				{
+					giveItems(player, BOX_R_LIGHT, 1);
+					giveItems(player, WEAPON_FIST_R, 1);
+					break;
+				}
+				case CLOUD_BREAKER:
+				{
+					giveItems(player, BOX_R_ROBE, 1);
+					giveItems(player, WEAPON_STAFF_R, 1);
 					break;
 				}
 			}
