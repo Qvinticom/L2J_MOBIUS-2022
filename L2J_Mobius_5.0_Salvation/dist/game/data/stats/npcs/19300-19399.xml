@@ -1129,7 +1129,7 @@
 			</attribute>
 			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="false" undying="false" talkable="false" targetable="false" showName="false" />
 		<skillList>
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
