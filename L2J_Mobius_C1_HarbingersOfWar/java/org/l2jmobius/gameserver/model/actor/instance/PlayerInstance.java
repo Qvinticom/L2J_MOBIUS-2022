@@ -1824,8 +1824,10 @@ public class PlayerInstance extends Creature
 				|| ((regionX == 19) && (regionY == 23)) // Wastelands - Ant Nest
 				|| ((regionX == 19) && (regionY == 24)) // Wastelands - Southern Entrance
 				|| ((regionX == 20) && (regionY == 18)) // Dark Elf Village
+				|| ((regionX == 20) && (regionY == 20)) // Elven Fortress
 				|| ((regionX == 20) && (regionY == 21)) // Cruma Tower
 				|| ((regionX == 21) && (regionY == 18)) // Sea of Spores
+				|| ((regionX == 21) && (regionY == 25)) // Elven Ruins
 				|| ((regionX == 22) && (regionY == 18)) // Ivory Tower
 				|| ((regionX == 24) && (regionY == 21)) // Lair of Antharas
 				|| ((regionX == 25) && (regionY == 12)) // Mithril Mines
