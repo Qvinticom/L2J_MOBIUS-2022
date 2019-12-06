@@ -40,6 +40,7 @@ public class Config
 	private static final String RATES_CONFIG_FILE = "config/rates.ini";
 	private static final String KARMA_CONFIG_FILE = "config/karma.ini";
 	private static final String THREADPOOL_CONFIG_FILE = "config/threadpool.ini";
+	private static final String NPC_CONFIG_FILE = "./config/npc.ini";
 	
 	// Game
 	public static String _ip;
@@ -68,6 +69,9 @@ public class Config
 	// ThreadPool
 	public static int SCHEDULED_THREAD_POOL_COUNT;
 	public static int INSTANT_THREAD_POOL_COUNT;
+	// Npc
+	public static boolean SHOW_NPC_LVL;
+	public static boolean SHOW_NPC_AGGRESSION;
 	
 	public static void load()
 	{
@@ -117,5 +121,11 @@ public class Config
 		
 		SCHEDULED_THREAD_POOL_COUNT = threadpoolSettings.getInt("ScheduledThreadPoolCount", 40);
 		INSTANT_THREAD_POOL_COUNT = threadpoolSettings.getInt("InstantThreadPoolCount", 20);
+		
+		// Load NPC config file (if exists)
+		final PropertiesParser npcSettings = new PropertiesParser(NPC_CONFIG_FILE);
+		
+		SHOW_NPC_LVL = npcSettings.getBoolean("ShowNpcLevel", false);
+		SHOW_NPC_AGGRESSION = npcSettings.getBoolean("ShowNpcAggression", false);
 	}
 }

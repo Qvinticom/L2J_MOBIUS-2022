@@ -186,6 +186,7 @@ public class Config
 	public static int LINKED_NODE_ID;
 	public static String NEW_NODE_TYPE;
 	public static boolean SHOW_NPC_LVL;
+	public static boolean SHOW_NPC_AGGRESSION;
 	public static int ZONE_TOWN;
 	public static boolean COUNT_PACKETS = false;
 	public static boolean DUMP_PACKET_COUNTS = false;
@@ -1687,6 +1688,7 @@ public class Config
 			MAX_MONSTER_ANIMATION = Integer.parseInt(generalSettings.getProperty("MaxMonsterAnimation", "60"));
 			
 			SHOW_NPC_LVL = Boolean.valueOf(generalSettings.getProperty("ShowNpcLevel", "false"));
+			SHOW_NPC_AGGRESSION = Boolean.valueOf(generalSettings.getProperty("ShowNpcAggression", "false"));
 			
 			FORCE_INVENTORY_UPDATE = Boolean.valueOf(generalSettings.getProperty("ForceInventoryUpdate", "false"));
 			

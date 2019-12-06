@@ -608,6 +608,7 @@ public class Config
 	public static boolean ALT_GAME_VIEWNPC;
 	public static int MAX_DRIFT_RANGE;
 	public static boolean SHOW_NPC_LVL;
+	public static boolean SHOW_NPC_AGGRESSION;
 	public static boolean SHOW_CREST_WITHOUT_QUEST;
 	public static boolean ENABLE_RANDOM_ENCHANT_EFFECT;
 	public static int MIN_NPC_LVL_DMG_PENALTY;
@@ -2010,6 +2011,7 @@ public class Config
 			ALT_GAME_VIEWNPC = NPC.getBoolean("AltGameViewNpc", false);
 			MAX_DRIFT_RANGE = NPC.getInt("MaxDriftRange", 300);
 			SHOW_NPC_LVL = NPC.getBoolean("ShowNpcLevel", false);
+			SHOW_NPC_AGGRESSION = NPC.getBoolean("ShowNpcAggression", false);
 			SHOW_CREST_WITHOUT_QUEST = NPC.getBoolean("ShowCrestWithoutQuest", false);
 			ENABLE_RANDOM_ENCHANT_EFFECT = NPC.getBoolean("EnableRandomEnchantEffect", false);
 			MIN_NPC_LVL_DMG_PENALTY = NPC.getInt("MinNPCLevelForDmgPenalty", 78);

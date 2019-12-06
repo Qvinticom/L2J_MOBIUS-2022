@@ -17,6 +17,8 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import org.l2jmobius.Config;
+import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
 import org.l2jmobius.gameserver.model.actor.instance.NpcInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PetInstance;
 
@@ -24,6 +26,7 @@ public class NpcInfo extends ServerBasePacket
 {
 	private NpcInstance _cha;
 	private PetInstance _chaPet;
+	protected String _title = "";
 	
 	public NpcInfo(NpcInstance cha)
 	{
@@ -100,7 +103,37 @@ public class NpcInfo extends ServerBasePacket
 			}
 			writeC(0);
 			writeS(_cha.getName());
-			writeS(_cha.getTitle());
+			
+			_title = _cha.getTitle();
+			// Custom level titles
+			if (_cha.isMonster() && (Config.SHOW_NPC_LVL || Config.SHOW_NPC_AGGRESSION))
+			{
+				String t1 = "";
+				if (Config.SHOW_NPC_LVL)
+				{
+					t1 += "Lv " + _cha.getLevel();
+				}
+				String t2 = "";
+				if (Config.SHOW_NPC_AGGRESSION)
+				{
+					if (!t1.isEmpty())
+					{
+						t2 += " ";
+					}
+					if (((MonsterInstance) _cha).isAggressive())
+					{
+						t2 += "[A]"; // Aggressive.
+					}
+				}
+				t1 += t2;
+				if ((_title != null) && !_title.isEmpty())
+				{
+					t1 += " " + _title;
+				}
+				_title = t1;
+			}
+			
+			writeS(_title);
 			writeD(0);
 			writeD(0);
 			writeD(0);

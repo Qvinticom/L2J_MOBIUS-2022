@@ -2215,20 +2215,42 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 */
 	public String getTitle()
 	{
+		// Custom level titles
+		if (isMonster() && (Config.SHOW_NPC_LVL || Config.SHOW_NPC_AGGRESSION))
+		{
+			String t1 = "";
+			if (Config.SHOW_NPC_LVL)
+			{
+				t1 += "Lv " + getLevel();
+			}
+			String t2 = "";
+			if (Config.SHOW_NPC_AGGRESSION)
+			{
+				if (!t1.isEmpty())
+				{
+					t2 += " ";
+				}
+				final MonsterInstance monster = (MonsterInstance) this;
+				if (monster.isAggressive())
+				{
+					t2 += "[A]"; // Aggressive.
+				}
+				if ((monster.getTemplate().getClans() != null) && (monster.getTemplate().getClanHelpRange() > 0))
+				{
+					t2 += "[G]"; // Group.
+				}
+			}
+			t1 += t2;
+			if ((_title != null) && !_title.isEmpty())
+			{
+				t1 += " " + _title;
+			}
+			return isChampion() ? Config.CHAMP_TITLE + " " + t1 : t1;
+		}
 		// Champion titles
 		if (isChampion())
 		{
 			return Config.CHAMP_TITLE;
-		}
-		// Custom level titles
-		if (Config.SHOW_NPC_LVL && isMonster())
-		{
-			String t = "Lv " + getLevel() + (((MonsterInstance) this).isAggressive() ? "*" : "");
-			if (_title != null)
-			{
-				t += " " + _title;
-			}
-			return t;
 		}
 		// Set trap title
 		if (isTrap() && (((TrapInstance) this).getOwner() != null))

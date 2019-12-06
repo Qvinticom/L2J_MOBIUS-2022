@@ -96,15 +96,33 @@ public class NpcInfo extends GameServerPacket
 			_title = cha.getTitle();
 		}
 		
-		if (Config.SHOW_NPC_LVL && (_creature instanceof MonsterInstance))
+		// Custom level titles
+		if (cha.isMonster() && (Config.SHOW_NPC_LVL || Config.SHOW_NPC_AGGRESSION))
 		{
-			String t = "Lv " + cha.getLevel() + (cha.getAggroRange() > 0 ? "*" : "");
-			if (_title != null)
+			String t1 = "";
+			if (Config.SHOW_NPC_LVL)
 			{
-				t += " " + _title;
+				t1 += "Lv " + cha.getLevel();
 			}
-			
-			_title = t;
+			String t2 = "";
+			if (Config.SHOW_NPC_AGGRESSION)
+			{
+				if (!t1.isEmpty())
+				{
+					t2 += " ";
+				}
+				final MonsterInstance monster = (MonsterInstance) cha;
+				if (monster.isAggressive())
+				{
+					t2 += "[A]"; // Aggressive.
+				}
+			}
+			t1 += t2;
+			if ((_title != null) && !_title.isEmpty())
+			{
+				t1 += " " + _title;
+			}
+			_title = cha.isChampion() ? Config.L2JMOD_CHAMP_TITLE + " " + t1 : t1;
 		}
 		
 		_x = _creature.getX();

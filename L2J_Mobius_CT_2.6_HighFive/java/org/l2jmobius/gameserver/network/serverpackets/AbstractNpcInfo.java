@@ -25,6 +25,7 @@ import org.l2jmobius.gameserver.model.PlayerCondOverride;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Summon;
+import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
 import org.l2jmobius.gameserver.model.actor.instance.TrapInstance;
 import org.l2jmobius.gameserver.model.clan.Clan;
 import org.l2jmobius.gameserver.model.skills.AbnormalVisualEffect;
@@ -181,10 +182,6 @@ public abstract class AbstractNpcInfo implements IClientOutgoingPacket
 			{
 				_title = "Invisible";
 			}
-			else if (Config.CHAMPION_ENABLE && _npc.isChampion())
-			{
-				_title = (Config.CHAMP_TITLE); // On every subclass
-			}
 			else if (_localisation == null)
 			{
 				if (_npc.getTemplate().isUsingServerSideTitle())
@@ -196,14 +193,41 @@ public abstract class AbstractNpcInfo implements IClientOutgoingPacket
 					_title = _npc.getTitle(); // On every subclass
 				}
 			}
-			if (Config.SHOW_NPC_LVL && _npc.isMonster())
+			// Custom level titles
+			if (_npc.isMonster() && (Config.SHOW_NPC_LVL || Config.SHOW_NPC_AGGRESSION))
 			{
-				String t = "Lv " + _npc.getLevel() + (_npc.isAggressive() ? "*" : "");
-				if (_title != null)
+				String t1 = "";
+				if (Config.SHOW_NPC_LVL)
 				{
-					t += " " + _title;
+					t1 += "Lv " + _npc.getLevel();
 				}
-				_title = t;
+				String t2 = "";
+				if (Config.SHOW_NPC_AGGRESSION)
+				{
+					if (!t1.isEmpty())
+					{
+						t2 += " ";
+					}
+					final MonsterInstance monster = (MonsterInstance) _npc;
+					if (monster.isAggressive())
+					{
+						t2 += "[A]"; // Aggressive.
+					}
+					if ((monster.getTemplate().getClans() != null) && (monster.getTemplate().getClanHelpRange() > 0))
+					{
+						t2 += "[G]"; // Group.
+					}
+				}
+				t1 += t2;
+				if ((_title != null) && !_title.isEmpty())
+				{
+					t1 += " " + _title;
+				}
+				_title = _npc.isChampion() ? Config.CHAMP_TITLE + " " + t1 : t1;
+			}
+			else if (Config.CHAMPION_ENABLE && _npc.isChampion())
+			{
+				_title = (Config.CHAMP_TITLE); // On every subclass
 			}
 			packet.writeS(_title);
 			packet.writeD(0x00); // Title color 0=client default
