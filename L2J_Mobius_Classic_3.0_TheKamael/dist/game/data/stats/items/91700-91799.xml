@@ -473,12 +473,14 @@
 		<set name="icon" val="icon.bm_ensoul_stone_pvp" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="talisman" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="1" />
 	</item>
 	<item id="91746" name="Rudolph Costume" type="Armor">
 		<!-- When equipped, it is impossible to wear armor. Hats, weapons and accessories are not removed. -->
@@ -590,6 +592,11 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="etcitem_type" val="BLESS_ENCHT_AM" />
+		<set name="handler" val="EnchantScrolls" />
+		<skills>
+			<skill id="40056" level="1" /> <!-- Scroll: Enchant Talisman of Eva -->
+		</skills>
 	</item>
 	<item id="91757" name="Magic Lantern Acceleration Potion" type="EtcItem">
 		<!-- For 1 h., magic lantern recharge rate +20%. Cooldown: 1 min. -->
