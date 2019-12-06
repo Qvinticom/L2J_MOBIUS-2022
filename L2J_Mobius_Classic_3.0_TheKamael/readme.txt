@@ -87,6 +87,7 @@ Seven Signs: https://eu.4gameforum.com/threads/658543/
 -Updated skiltrees and skills from L2Wiki
 -Updated experience values from L2Wiki
 -Elemental Spirits
+-Elementas Spirit boss instances
 -Land of Winds spawns
 -Goddard territory spawns
 -Goddard clanhalls
@@ -102,9 +103,14 @@ Secret of Empire: https://eu.4game.com/patchnotes/lineage2classic/133/
 
 The Kamael: https://eu.4game.com/patchnotes/lineage2classic/154/
 -Kamael creation support
+-Teleport list system
+-Removed item grade penalty
+-New starting quests
+-Auto attack system
+-Auto potion system
 
 Essence: https://eu.4game.com/patchnotes/lineage2essence/188/
--Just enter game support.
+-Just enter game support
 
 Customs:
 -Newbie Helper NPC location info
@@ -114,4 +120,3 @@ Customs:
 
 TODO:
 -Provisional Clan Halls
--Elements system.

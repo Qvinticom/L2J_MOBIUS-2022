@@ -84,6 +84,7 @@ Seven Signs: https://eu.4gameforum.com/threads/658543/
 -Updated skiltrees and skills from L2Wiki
 -Updated experience values from L2Wiki
 -Elemental Spirits
+-Elementas Spirit boss instances
 -Land of Winds spawns
 -Goddard territory spawns
 -Goddard clanhalls
@@ -105,4 +106,3 @@ Customs:
 
 TODO:
 -Provisional Clan Halls
--Elements system.
