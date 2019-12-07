@@ -23,7 +23,7 @@ import org.l2jmobius.gameserver.model.items.Weapon;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.SystemMessageId;
-import org.l2jmobius.gameserver.network.serverpackets.ExBaseAttributeCancelResult;
+import org.l2jmobius.gameserver.network.serverpackets.ExShowBaseAttributeCancelWindow;
 import org.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
@@ -32,7 +32,6 @@ public class RequestExRemoveItemAttribute implements IClientIncomingPacket
 {
 	private int _objectId;
 	private long _price;
-	private byte _element;
 	
 	public RequestExRemoveItemAttribute()
 	{
@@ -42,7 +41,6 @@ public class RequestExRemoveItemAttribute implements IClientIncomingPacket
 	public boolean read(GameClient client, PacketReader packet)
 	{
 		_objectId = packet.readD();
-		_element = (byte) packet.readD();
 		return true;
 	}
 	
@@ -62,7 +60,7 @@ public class RequestExRemoveItemAttribute implements IClientIncomingPacket
 			return;
 		}
 		
-		if ((targetItem.getElementals() == null) || (targetItem.getElemental(_element) == null))
+		if (targetItem.getElementals() == null)
 		{
 			return;
 		}
@@ -71,57 +69,26 @@ public class RequestExRemoveItemAttribute implements IClientIncomingPacket
 		{
 			if (targetItem.isEquipped())
 			{
-				targetItem.getElemental(_element).removeBonus(player);
+				targetItem.removeElementAttrBonus(player);
 			}
-			targetItem.clearElementAttr(_element);
+			for (Elementals element : targetItem.getElementals())
+			{
+				targetItem.clearElementAttr(element.getElement());
+			}
 			player.sendPacket(new UserInfo(player));
 			
-			final InventoryUpdate iu = new InventoryUpdate();
+			InventoryUpdate iu = new InventoryUpdate();
 			iu.addModifiedItem(targetItem);
 			player.sendPacket(iu);
-			SystemMessage sm;
-			final byte realElement = targetItem.isArmor() ? Elementals.getOppositeElement(_element) : _element;
-			if (targetItem.getEnchantLevel() > 0)
-			{
-				if (targetItem.isArmor())
-				{
-					sm = new SystemMessage(SystemMessageId.S1_S2_S_S3_ATTRIBUTE_WAS_REMOVED_SO_RESISTANCE_TO_S4_WAS_DECREASED);
-				}
-				else
-				{
-					sm = new SystemMessage(SystemMessageId.S1_S2_S_S3_ATTRIBUTE_HAS_BEEN_REMOVED);
-				}
-				sm.addInt(targetItem.getEnchantLevel());
-				sm.addItemName(targetItem);
-				sm.addElemental(realElement);
-				if (targetItem.isArmor())
-				{
-					sm.addElemental(Elementals.getOppositeElement(realElement));
-				}
-			}
-			else
-			{
-				if (targetItem.isArmor())
-				{
-					sm = new SystemMessage(SystemMessageId.S1_S_S2_ATTRIBUTE_WAS_REMOVED_AND_RESISTANCE_TO_S3_WAS_DECREASED);
-				}
-				else
-				{
-					sm = new SystemMessage(SystemMessageId.S1_S_S2_ATTRIBUTE_HAS_BEEN_REMOVED);
-				}
-				sm.addItemName(targetItem);
-				sm.addElemental(realElement);
-				if (targetItem.isArmor())
-				{
-					sm.addElemental(Elementals.getOppositeElement(realElement));
-				}
-			}
-			player.sendPacket(sm);
-			player.sendPacket(new ExBaseAttributeCancelResult(targetItem.getObjectId(), _element));
+			
+			// Retail message.
+			player.sendMessage(targetItem.getName() + "'s elemental power was removed.");
+			
+			player.sendPacket(new ExShowBaseAttributeCancelWindow(player));
 		}
 		else
 		{
-			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_FUNDS_TO_CANCEL_THIS_ATTRIBUTE);
+			player.sendPacket(new SystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 		}
 	}
 	
