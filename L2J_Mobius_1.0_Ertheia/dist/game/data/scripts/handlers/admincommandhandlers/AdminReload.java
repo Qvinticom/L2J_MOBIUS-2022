@@ -30,6 +30,7 @@ import org.l2jmobius.gameserver.data.xml.impl.AdminData;
 import org.l2jmobius.gameserver.data.xml.impl.AppearanceItemData;
 import org.l2jmobius.gameserver.data.xml.impl.ArmorSetsData;
 import org.l2jmobius.gameserver.data.xml.impl.BuyListData;
+import org.l2jmobius.gameserver.data.xml.impl.CombinationItemsData;
 import org.l2jmobius.gameserver.data.xml.impl.DoorData;
 import org.l2jmobius.gameserver.data.xml.impl.EnchantItemData;
 import org.l2jmobius.gameserver.data.xml.impl.EnchantItemGroupsData;
@@ -344,6 +345,12 @@ public class AdminReload implements IAdminCommandHandler
 				{
 					InstanceManager.getInstance().load();
 					AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Instances data.");
+					break;
+				}
+				case "combination":
+				{
+					CombinationItemsData.getInstance().load();
+					AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Combination data.");
 					break;
 				}
 				default:
