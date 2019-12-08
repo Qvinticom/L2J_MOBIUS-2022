@@ -142,6 +142,7 @@ import quests.Q00726_LightWithinTheDarkness.Q00726_LightWithinTheDarkness;
 import quests.Q00727_HopeWithinTheDarkness.Q00727_HopeWithinTheDarkness;
 import quests.Q00737_ASwordHiddenInASmile.Q00737_ASwordHiddenInASmile;
 import quests.Q00738_DimensionalExplorationOfTheUnworldlyVisitors.Q00738_DimensionalExplorationOfTheUnworldlyVisitors;
+import quests.Q00743_AtTheAltarOfOblivion.Q00743_AtTheAltarOfOblivion;
 import quests.Q00751_LiberatingTheSpirits.Q00751_LiberatingTheSpirits;
 import quests.Q00752_UncoverTheSecret.Q00752_UncoverTheSecret;
 import quests.Q00753_ReactingToACrisis.Q00753_ReactingToACrisis;
@@ -181,6 +182,7 @@ import quests.Q00903_TheCallOfAntharas.Q00903_TheCallOfAntharas;
 import quests.Q00905_RefinedDragonBlood.Q00905_RefinedDragonBlood;
 import quests.Q00906_TheCallOfValakas.Q00906_TheCallOfValakas;
 import quests.Q00923_ShinedustExtraction.Q00923_ShinedustExtraction;
+import quests.Q00924_GiantOfTheRestorationRoom.Q00924_GiantOfTheRestorationRoom;
 import quests.Q00926_30DaySearchOperation.Q00926_30DaySearchOperation;
 import quests.Q00928_100DaySubjugationOperation.Q00928_100DaySubjugationOperation;
 import quests.Q00931_MemoriesOfTheWind.Q00931_MemoriesOfTheWind;
@@ -310,6 +312,7 @@ import quests.Q10527_TheAssassinationOfTheKetraOrcCommander.Q10527_TheAssassinat
 import quests.Q10528_TheAssassinationOfTheKetraOrcChief.Q10528_TheAssassinationOfTheKetraOrcChief;
 import quests.Q10530_KekropusLetterTheDragonsTransition.Q10530_KekropusLetterTheDragonsTransition;
 import quests.Q10534_HatchlingResearch.Q10534_HatchlingResearch;
+import quests.Q10540_ThwartingMimirsPlan.Q10540_ThwartingMimirsPlan;
 import quests.Q10541_TrainLikeTheRealThing.Q10541_TrainLikeTheRealThing;
 import quests.Q10542_SearchingForNewPower.Q10542_SearchingForNewPower;
 import quests.Q10543_SheddingWeight.Q10543_SheddingWeight;
@@ -422,6 +425,7 @@ import quests.Q10839_BlackbirdsNameValue.Q10839_BlackbirdsNameValue;
 import quests.Q10840_TimeToRecover.Q10840_TimeToRecover;
 import quests.Q10841_DeepInsideAteliaFortress.Q10841_DeepInsideAteliaFortress;
 import quests.Q10843_AnomalyInTheEnchantedValley.Q10843_AnomalyInTheEnchantedValley;
+import quests.Q10849_TrialsForAdaptation.Q10849_TrialsForAdaptation;
 import quests.Q10851_ElvenBotany.Q10851_ElvenBotany;
 import quests.Q10856_SuperionAppears.Q10856_SuperionAppears;
 import quests.custom.Q00529_RegularBarrierMaintenance.Q00529_RegularBarrierMaintenance;
@@ -612,7 +616,7 @@ public class QuestMasterHandler
 		Q00727_HopeWithinTheDarkness.class,
 		Q00737_ASwordHiddenInASmile.class,
 		Q00738_DimensionalExplorationOfTheUnworldlyVisitors.class,
-		Q00743_AtTheAltarOfOblivion.class, // TODO: Not done.
+		Q00743_AtTheAltarOfOblivion.class,
 		Q00744_TheAlligatorHunterReturns.class, // TODO: Not done.
 		Q00745_TheOutlawsAreIncoming.class, // TODO: Not done.
 		Q00747_DefendingTheForsakenPlains.class, // TODO: Not done.
@@ -678,7 +682,7 @@ public class QuestMasterHandler
 		Q00905_RefinedDragonBlood.class,
 		Q00906_TheCallOfValakas.class,
 		Q00923_ShinedustExtraction.class,
-		Q00924_GiantOfTheRestorationRoom.class, // TODO: Not done.
+		Q00924_GiantOfTheRestorationRoom.class,
 		Q00926_30DaySearchOperation.class,
 		Q00928_100DaySubjugationOperation.class,
 		Q00929_SeekerRescue.class, // TODO: Not done.
@@ -836,7 +840,7 @@ public class QuestMasterHandler
 		Q10537_KamaelDisarray.class, // TODO: Not done.
 		Q10538_GiantsEvolution.class, // TODO: Not done.
 		Q10539_EnergySupplyCutoffPlan.class, // TODO: Not done.
-		Q10540_ThwartingMimirsPlan.class, // TODO: Not done.
+		Q10540_ThwartingMimirsPlan.class,
 		Q10541_TrainLikeTheRealThing.class,
 		Q10542_SearchingForNewPower.class,
 		Q10543_SheddingWeight.class,
@@ -979,7 +983,7 @@ public class QuestMasterHandler
 		Q10845_BloodyBattleRescueTheSmiths.class, // TODO: Not done.
 		Q10846_BloodyBattleMeetingTheCommander.class, // TODO: Not done.
 		Q10848_TrialsBeforeTheBattle.class, // TODO: Not done.
-		Q10849_TrialsForAdaptation.class, // TODO: Not done.
+		Q10849_TrialsForAdaptation.class,
 		Q10851_ElvenBotany.class,
 		Q10852_TheMotherTreeRevivalProject.class, // TODO: Not done.
 		Q10853_ToWeakenTheGiants.class, // TODO: Not done.

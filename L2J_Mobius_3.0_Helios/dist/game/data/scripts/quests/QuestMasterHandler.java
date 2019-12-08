@@ -204,6 +204,7 @@ import quests.Q00905_RefinedDragonBlood.Q00905_RefinedDragonBlood;
 import quests.Q00906_TheCallOfValakas.Q00906_TheCallOfValakas;
 import quests.Q00907_DragonTrophyValakas.Q00907_DragonTrophyValakas;
 import quests.Q00923_ShinedustExtraction.Q00923_ShinedustExtraction;
+import quests.Q00924_GiantOfTheRestorationRoom.Q00924_GiantOfTheRestorationRoom;
 import quests.Q00926_30DaySearchOperation.Q00926_30DaySearchOperation;
 import quests.Q00928_100DaySubjugationOperation.Q00928_100DaySubjugationOperation;
 import quests.Q00931_MemoriesOfTheWind.Q00931_MemoriesOfTheWind;
@@ -357,6 +358,7 @@ import quests.Q10527_TheAssassinationOfTheKetraOrcCommander.Q10527_TheAssassinat
 import quests.Q10528_TheAssassinationOfTheKetraOrcChief.Q10528_TheAssassinationOfTheKetraOrcChief;
 import quests.Q10530_KekropusLetterTheDragonsTransition.Q10530_KekropusLetterTheDragonsTransition;
 import quests.Q10534_HatchlingResearch.Q10534_HatchlingResearch;
+import quests.Q10540_ThwartingMimirsPlan.Q10540_ThwartingMimirsPlan;
 import quests.Q10541_TrainLikeTheRealThing.Q10541_TrainLikeTheRealThing;
 import quests.Q10542_SearchingForNewPower.Q10542_SearchingForNewPower;
 import quests.Q10543_SheddingWeight.Q10543_SheddingWeight;
@@ -463,6 +465,7 @@ import quests.Q10839_BlackbirdsNameValue.Q10839_BlackbirdsNameValue;
 import quests.Q10840_TimeToRecover.Q10840_TimeToRecover;
 import quests.Q10841_DeepInsideAteliaFortress.Q10841_DeepInsideAteliaFortress;
 import quests.Q10843_AnomalyInTheEnchantedValley.Q10843_AnomalyInTheEnchantedValley;
+import quests.Q10849_TrialsForAdaptation.Q10849_TrialsForAdaptation;
 import quests.Q10851_ElvenBotany.Q10851_ElvenBotany;
 import quests.Q10856_SuperionAppears.Q10856_SuperionAppears;
 import quests.not_done.Q00504_CompetitionForTheBanditStronghold;
@@ -499,7 +502,6 @@ import quests.not_done.Q00911_RedLibraRequestLv2;
 import quests.not_done.Q00912_RedLibraRequestLv3;
 import quests.not_done.Q00913_RedLibraRequestLv4;
 import quests.not_done.Q00914_RedLibraRequestLv5;
-import quests.not_done.Q00924_GiantOfTheRestorationRoom;
 import quests.not_done.Q00929_SeekerRescue;
 import quests.not_done.Q00930_DisparagingThePhantoms;
 import quests.not_done.Q00938_TheFishermansOtherHobby;
@@ -515,14 +517,12 @@ import quests.not_done.Q10532_UncoveringTheConspiracy;
 import quests.not_done.Q10537_KamaelDisarray;
 import quests.not_done.Q10538_GiantsEvolution;
 import quests.not_done.Q10539_EnergySupplyCutoffPlan;
-import quests.not_done.Q10540_ThwartingMimirsPlan;
 import quests.not_done.Q10748_MysteriousSuggestion1;
 import quests.not_done.Q10749_MysteriousSuggestion2;
 import quests.not_done.Q10844_BloodyBattleSeizingSupplies;
 import quests.not_done.Q10845_BloodyBattleRescueTheSmiths;
 import quests.not_done.Q10846_BloodyBattleMeetingTheCommander;
 import quests.not_done.Q10848_TrialsBeforeTheBattle;
-import quests.not_done.Q10849_TrialsForAdaptation;
 import quests.not_done.Q10852_TheMotherTreeRevivalProject;
 import quests.not_done.Q10853_ToWeakenTheGiants;
 import quests.not_done.Q10854_ToSeizeTheFortress;
@@ -758,7 +758,7 @@ public class QuestMasterHandler
 		Q00913_RedLibraRequestLv4.class, // TODO: Not done.
 		Q00914_RedLibraRequestLv5.class, // TODO: Not done.
 		Q00923_ShinedustExtraction.class,
-		Q00924_GiantOfTheRestorationRoom.class, // TODO: Not done.
+		Q00924_GiantOfTheRestorationRoom.class,
 		Q00926_30DaySearchOperation.class,
 		Q00928_100DaySubjugationOperation.class,
 		Q00929_SeekerRescue.class, // TODO: Not done.
@@ -927,7 +927,7 @@ public class QuestMasterHandler
 		Q10537_KamaelDisarray.class, // TODO: Not done.
 		Q10538_GiantsEvolution.class, // TODO: Not done.
 		Q10539_EnergySupplyCutoffPlan.class, // TODO: Not done.
-		Q10540_ThwartingMimirsPlan.class, // TODO: Not done.
+		Q10540_ThwartingMimirsPlan.class,
 		Q10541_TrainLikeTheRealThing.class,
 		Q10542_SearchingForNewPower.class,
 		Q10543_SheddingWeight.class,
@@ -1040,7 +1040,7 @@ public class QuestMasterHandler
 		Q10845_BloodyBattleRescueTheSmiths.class, // TODO: Not done.
 		Q10846_BloodyBattleMeetingTheCommander.class, // TODO: Not done.
 		Q10848_TrialsBeforeTheBattle.class, // TODO: Not done.
-		Q10849_TrialsForAdaptation.class, // TODO: Not done.
+		Q10849_TrialsForAdaptation.class,
 		Q10851_ElvenBotany.class,
 		Q10852_TheMotherTreeRevivalProject.class, // TODO: Not done.
 		Q10853_ToWeakenTheGiants.class, // TODO: Not done.

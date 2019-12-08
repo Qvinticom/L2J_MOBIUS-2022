@@ -16,6 +16,7 @@
  */
 package quests.Q10833_PutTheQueenOfSpiritsToSleep;
 
+import org.l2jmobius.gameserver.enums.Faction;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.quest.Quest;
@@ -35,13 +36,12 @@ public class Q10833_PutTheQueenOfSpiritsToSleep extends Quest
 	private static final int FERIN = 34054;
 	private static final int ISABELLA = 26131;
 	// Items
-	private static final int MARK_OF_TRUST_HIGH_GRADE = 45848;
 	private static final int ISABELLAS_EVIL_THOUGHTS = 45839;
 	private static final int SOE = 46158;
 	private static final int ELCYUM_CRYSTAL = 36514;
 	private static final int GIANTS_CODEX = 46152;
 	// Misc
-	private static final int MIN_LEVEL = 100;
+	private static final int MIN_LEVEL = 102;
 	
 	public Q10833_PutTheQueenOfSpiritsToSleep()
 	{
@@ -52,6 +52,7 @@ public class Q10833_PutTheQueenOfSpiritsToSleep extends Quest
 		registerQuestItems(ISABELLAS_EVIL_THOUGHTS);
 		addCondMinLevel(MIN_LEVEL, "34054-00.htm");
 		addCondCompletedQuest(Q10832_EnergyOfSadnessAndAnger.class.getSimpleName(), "34054-00.htm");
+		addFactionLevel(Faction.UNWORLDLY_VISITORS, 6, "34054-00.htm");
 	}
 	
 	@Override
@@ -83,7 +84,7 @@ public class Q10833_PutTheQueenOfSpiritsToSleep extends Quest
 				giveItems(player, GIANTS_CODEX, 1);
 				giveItems(player, ELCYUM_CRYSTAL, 1);
 				giveItems(player, SOE, 1);
-				addExpAndSp(player, 1637472704L, 14237820);
+				addExpAndSp(player, 22221427950L, 22221360);
 				qs.exitQuest(false, true);
 				htmltext = event;
 				break;
@@ -101,11 +102,6 @@ public class Q10833_PutTheQueenOfSpiritsToSleep extends Quest
 		{
 			case State.CREATED:
 			{
-				if (!hasQuestItems(player, MARK_OF_TRUST_HIGH_GRADE))
-				{
-					htmltext = "noItem.htm";
-					break;
-				}
 				htmltext = "34054-01.htm";
 				break;
 			}
