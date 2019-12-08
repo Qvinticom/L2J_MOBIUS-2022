@@ -1,6 +1,6 @@
 L2J-Mobius Classic Zaken
 
-Client: https://drive.google.com/uc?id=1Cyfb_OumjhPS9NFcLDMY11_s_ktH0kDk&export=download
+Client: https://drive.google.com/uc?id=1_kioRKR5FTOmINAtUQe0KCxrvPzY18Nd&export=download
 System: https://mega.nz/#!os8HRShC!5JbEmWEugMyssgE-lWgBxJj_zC63gXX-ogBh-A3arX8
 Geodata: http://www.mediafire.com/file/cqrcj73pntv82d8/L2J_Mobius_Classic_2.1_Zaken_Geodata.zip
 JDK: https://www.mediafire.com/file/k25pt0umuf16uoh/openjdk-12.0.2_windows-x64_bin.zip
