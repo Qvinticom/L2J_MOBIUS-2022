@@ -53,7 +53,7 @@ public class Q00823_DisappearedRaceNewFairy extends Quest
 	private static final int INTERMEDIATE_SUPPLY_BOX = 47179;
 	private static final int ADVANCED_SUPPLY_BOX = 47180;
 	// Misc
-	private static final int MIN_LEVEL = 100;
+	private static final int MIN_LEVEL = 102;
 	
 	public Q00823_DisappearedRaceNewFairy()
 	{
@@ -145,7 +145,7 @@ public class Q00823_DisappearedRaceNewFairy extends Quest
 				{
 					case 5:
 					{
-						if ((getQuestItemsCount(player, NYMPH_STAMEN) == 200) && (player.getLevel() >= MIN_LEVEL))
+						if ((getQuestItemsCount(player, NYMPH_STAMEN) == 100) && (player.getLevel() >= MIN_LEVEL))
 						{
 							if (chance < 2)
 							{
@@ -172,7 +172,7 @@ public class Q00823_DisappearedRaceNewFairy extends Quest
 					}
 					case 6:
 					{
-						if ((getQuestItemsCount(player, NYMPH_STAMEN) == 400) && (player.getLevel() >= MIN_LEVEL))
+						if ((getQuestItemsCount(player, NYMPH_STAMEN) == 200) && (player.getLevel() >= MIN_LEVEL))
 						{
 							if (chance < 2)
 							{
@@ -199,7 +199,7 @@ public class Q00823_DisappearedRaceNewFairy extends Quest
 					}
 					case 7:
 					{
-						if ((getQuestItemsCount(player, NYMPH_STAMEN) == 600) && (player.getLevel() >= MIN_LEVEL))
+						if ((getQuestItemsCount(player, NYMPH_STAMEN) == 300) && (player.getLevel() >= MIN_LEVEL))
 						{
 							if (chance < 2)
 							{
@@ -321,7 +321,7 @@ public class Q00823_DisappearedRaceNewFairy extends Quest
 			{
 				case 2:
 				{
-					if (giveItemRandomly(player, npc, NYMPH_STAMEN, 1, 200, 1, true))
+					if (giveItemRandomly(player, npc, NYMPH_STAMEN, 1, 100, 1, true))
 					{
 						qs.setCond(5, true);
 					}
@@ -329,7 +329,7 @@ public class Q00823_DisappearedRaceNewFairy extends Quest
 				}
 				case 3:
 				{
-					if (giveItemRandomly(player, npc, NYMPH_STAMEN, 1, 400, 1, true))
+					if (giveItemRandomly(player, npc, NYMPH_STAMEN, 1, 200, 1, true))
 					{
 						qs.setCond(6, true);
 					}
@@ -337,7 +337,7 @@ public class Q00823_DisappearedRaceNewFairy extends Quest
 				}
 				case 4:
 				{
-					if (giveItemRandomly(player, npc, NYMPH_STAMEN, 1, 600, 1, true))
+					if (giveItemRandomly(player, npc, NYMPH_STAMEN, 1, 300, 1, true))
 					{
 						qs.setCond(7, true);
 					}
