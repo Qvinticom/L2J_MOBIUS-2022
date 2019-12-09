@@ -1175,6 +1175,11 @@
 				<mode>PER</mode>
 			</effect>
 		</effects>
+		<selfEffects>
+			<effect name="DispelBySlot">
+				<dispel>HIDE,-1</dispel>
+			</effect>
+		</selfEffects>
 		<endEffects>
 			<effect name="CallSkill">
 				<skillId>10515</skillId> <!-- Paralyzed -->
@@ -1302,6 +1307,11 @@
 				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
 			</effect>
 		</effects>
+		<selfEffects>
+			<effect name="DispelBySlot">
+				<dispel>HIDE,-1</dispel>
+			</effect>
+		</selfEffects>
 	</skill>
 	<skill id="10517" toLevel="1" name="Shadow Hide">
 		<!-- Cancels all debuff effects inflicted on you by teleporting to the front a distance of 250 and enter the Stealth mode for 20 seconds. Additionally, decreases Speed by 50. -->
@@ -1361,7 +1371,10 @@
 				<minDamage>1</minDamage>
 				<chance>100</chance>
 				<targetType>SELF</targetType>
-				<allowWeapons>ALL</allowWeapons>
+				<allowNormalAttack>true</allowNormalAttack>
+				<allowSkillAttack>true</allowSkillAttack>
+				<isCritical>true</isCritical>
+				<allowWeapons>DAGGER,DUALDAGGER</allowWeapons>
 				<skillId>14839</skillId> <!-- Cancel Hide -->
 				<skillLevel>1</skillLevel>
 			</effect>
@@ -1541,6 +1554,11 @@
 				<npcCount>1</npcCount>
 			</effect>
 		</effects>
+		<selfEffects>
+			<effect name="DispelBySlot">
+				<dispel>HIDE,-1</dispel>
+			</effect>
+		</selfEffects>
 	</skill>
 	<skill id="10523" toLevel="9" name="Thrown Poison Swarm">
 		<!-- Poisoned. Decreases Speed/Attack/P. Defense/M. Defense/Shield Defense, blocks magical skills and drains HP by $s1 every second. -->
@@ -1940,6 +1958,11 @@
 				<mode>PER</mode>
 			</effect>
 		</effects>
+		<selfEffects>
+			<effect name="DispelBySlot">
+				<dispel>HIDE,-1</dispel>
+			</effect>
+		</selfEffects>
 	</skill>
 	<skill id="10528" toLevel="1" name="Shadow Fake Death">
 		<!-- The player feigns death to prevent monsters from attacking. The player is not detected by the target until further movement. Consumes 100 MP per second. -->
@@ -1948,6 +1971,8 @@
 		<operateType>T</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<mpConsume>200</mpConsume>
+		<reuseDelay>1500</reuseDelay>
+		<staticReuse>true</staticReuse>
 		<mpInitialConsume>200</mpInitialConsume>
 		<hitTime>800</hitTime>
 		<targetType>NONE</targetType>
@@ -2009,6 +2034,11 @@
 				<slot>HIDE</slot>
 			</effect>
 		</effects>
+		<selfEffects>
+			<effect name="DispelBySlot">
+				<dispel>HIDE,-1</dispel>
+			</effect>
+		</selfEffects>
 	</skill>
 	<skill id="10530" toLevel="1" name="Blind Spot">
 		<!-- Increases P. Atk., Critical Rate, Critical Damage and Vital Spot Attack Rate. -->
@@ -2483,6 +2513,11 @@
 				<mode>PER</mode>
 			</effect>
 		</effects>
+		<selfEffects>
+			<effect name="DispelBySlot">
+				<dispel>HIDE,-1</dispel>
+			</effect>
+		</selfEffects>
 	</skill>
 	<skill id="10540" toLevel="8" name="Throw Sand">
 		<!-- Hurls poisonous sand at the enemy. For$s1, greatly decreases P. accuracy and lures the enemy to you. Requires a dagger/dual dagger to be equipped. -->
@@ -2627,6 +2662,11 @@
 				<chance>100</chance>
 			</effect>
 		</effects>
+		<selfEffects>
+			<effect name="DispelBySlot">
+				<dispel>HIDE,-1</dispel>
+			</effect>
+		</selfEffects>
 	</skill>
 	<skill id="10542" toLevel="1" name="Maximum Critical">
 		<!-- Critical Damage + 609 and vital spot attack success rate + 10%. Side Critical Rate + 30% and Critical Damage + 40%. Rear Critical Rate + 60% and Critical Damage + 70%. -->
@@ -2849,6 +2889,11 @@
 			</effect>
 			<effect name="BlockActions" />
 		</effects>
+		<selfEffects>
+			<effect name="DispelBySlot">
+				<dispel>HIDE,-1</dispel>
+			</effect>
+		</selfEffects>
 	</skill>
 	<skill id="10547" toLevel="1" name="Shadow Attack">
 		<!-- Not in use. -->

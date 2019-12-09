@@ -3959,7 +3959,7 @@
 		<removedOnDamage>true</removedOnDamage>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
-		<affectObject>FRIEND</affectObject>
+		<affectObject>FRIEND_PC</affectObject>
 		<effects>
 			<effect name="SilentMove" />
 			<effect name="DispelBySlot">

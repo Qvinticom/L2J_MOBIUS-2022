@@ -65,6 +65,11 @@
 				<npcCount>1</npcCount>
 			</effect>
 		</effects>
+		<selfEffects>
+			<effect name="DispelBySlot">
+				<dispel>HIDE,-1</dispel>
+			</effect>
+		</selfEffects>
 	</skill>
 	<skill id="19302" toLevel="9" name="Thrown Acid Sworm">
 		<!-- Poisoned. Decreases Speed/Attack/P. Defense/M. Defense/Shield Defense, blocks magical skills and drains HP by $s1 every second. -->
@@ -148,6 +153,11 @@
 				<mode>PER</mode>
 			</effect>
 		</effects>
+		<selfEffects>
+			<effect name="DispelBySlot">
+				<dispel>HIDE,-1</dispel>
+			</effect>
+		</selfEffects>
 	</skill>
 	<skill id="19303" toLevel="7" name="Right Angle Reverse">
 		<!-- Moves to the right side of the target to attempt Deadly Attack with $s1 power added to P. Attack. Causes Bleed on the target for $s2. Half-kill is possible. Requires dagger/dual dagger. -->

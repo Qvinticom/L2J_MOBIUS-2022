@@ -71,6 +71,11 @@
 				<npcCount>1</npcCount>
 			</effect>
 		</effects>
+		<selfEffects>
+			<effect name="DispelBySlot">
+				<dispel>HIDE,-1</dispel>
+			</effect>
+		</selfEffects>
 	</skill>
 	<skill id="19302" toLevel="11" name="Thrown Acid Swarm">
 		<!-- Creates a poisonous area. Enemies' P./ M. Def. -$s1, Atk. Spd./ Speed/ Shield Defense -$s2, HP -$s3 per sec. Prevents the enemies from using M. skills. Inflicted status: Danger Zone. -->
@@ -160,6 +165,11 @@
 				<mode>PER</mode>
 			</effect>
 		</effects>
+		<selfEffects>
+			<effect name="DispelBySlot">
+				<dispel>HIDE,-1</dispel>
+			</effect>
+		</selfEffects>
 	</skill>
 	<skill id="19303" toLevel="9" name="Right Angle Reverse">
 		<!-- Moves to the right side of the target to attempt the Deadly Attack with $s1 Power added to P. Atk. and stun the target for $s2 Half-kill is possible. Requires a dagger or dual dagger to be equipped. -->

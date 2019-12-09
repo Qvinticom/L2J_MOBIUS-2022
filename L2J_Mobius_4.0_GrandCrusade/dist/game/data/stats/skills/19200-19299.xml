@@ -2456,6 +2456,11 @@
 			</effect>
 			<effect name="BlockActions" />
 		</effects>
+		<selfEffects>
+			<effect name="DispelBySlot">
+				<dispel>HIDE,-1</dispel>
+			</effect>
+		</selfEffects>
 	</skill>
 	<skill id="19299" toLevel="7" name="Reverse Mana">
 		<!-- Attempts Deadly Attack with $s1 power added to P. Attack and recovers your MP by $s2. Half-kill is possible. Requires dagger/dual dagger. -->

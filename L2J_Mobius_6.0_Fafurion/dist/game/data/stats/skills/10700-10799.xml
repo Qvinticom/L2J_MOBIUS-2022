@@ -292,6 +292,9 @@
 			<effect name="CallSkill">
 				<skillId>7014</skillId> 
 			</effect>
+			<effect name="DispelBySlot">
+				<dispel>HIDE,-1</dispel>
+			</effect>
 		</selfEffects>
 	</skill>
 	<skill id="10705" toLevel="5" name="Easterly Wind Strike">
