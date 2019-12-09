@@ -39,7 +39,6 @@ public class Q00931_MemoriesOfTheWind extends Quest
 	// Monsters
 	private static final int EL_FERA = 23797;
 	private static final int EL_FLOATO = 23559;
-	private static final int ENERGY_OF_WIND = 19647;
 	private static final int KERBEROS_LAGER_N = 23550; // (night)
 	private static final int KERBEROS_LAGER = 23541;
 	private static final int KERBEROS_FORT_N = 23551; // (night)
@@ -70,7 +69,7 @@ public class Q00931_MemoriesOfTheWind extends Quest
 		addStartNpc(CYPHONA);
 		addTalkId(CYPHONA);
 		addKillId(EL_FERA, EL_FLOATO);
-		addKillId(ENERGY_OF_WIND, KERBEROS_LAGER, KERBEROS_LAGER_N, KERBEROS_FORT, KERBEROS_FORT_N, KERBEROS_NERO, KERBEROS_NERO_N, FURY_SYLPH_BARRENA, FURY_SYLPH_BARRENA_N, FURY_SYLPH_TEMPTRESS, FURY_SYLPH_TEMPTRESS_N, FURY_SYLPH_PURKA, FURY_SYLPH_PURKA_N, FURY_KERBEROS_LEGER, FURY_KERBEROS_LEGER_N, FURY_KERBEROS_NERO, FURY_KERBEROS_NERO_N);
+		addKillId(KERBEROS_LAGER, KERBEROS_LAGER_N, KERBEROS_FORT, KERBEROS_FORT_N, KERBEROS_NERO, KERBEROS_NERO_N, FURY_SYLPH_BARRENA, FURY_SYLPH_BARRENA_N, FURY_SYLPH_TEMPTRESS, FURY_SYLPH_TEMPTRESS_N, FURY_SYLPH_PURKA, FURY_SYLPH_PURKA_N, FURY_KERBEROS_LEGER, FURY_KERBEROS_LEGER_N, FURY_KERBEROS_NERO, FURY_KERBEROS_NERO_N);
 		registerQuestItems(MEMORIES_OF_THE_WIND);
 		addCondMinLevel(MIN_LEVEL, "34055-00.htm");
 		addCondCompletedQuest(Q10831_UnbelievableSight.class.getSimpleName(), "34055-00.htm");
@@ -285,23 +284,9 @@ public class Q00931_MemoriesOfTheWind extends Quest
 				case FURY_KERBEROS_LEGER_N:
 				case FURY_KERBEROS_NERO_N:
 				{
-					if (getRandom(100) < 50)
-					{
-						final Npc mob = addSpawn(ENERGY_OF_WIND, npc.getX(), npc.getY(), npc.getZ(), 0, true, 120000);
-						addAttackPlayerDesire(mob, killer, 5);
-					}
-					else if (getRandom(100) < 25)
+					if (getRandom(100) < 25)
 					{
 						final Npc mob = addSpawn(EL_FERA, npc.getX(), npc.getY(), npc.getZ(), 0, true, 120000);
-						addAttackPlayerDesire(mob, killer, 5);
-					}
-					break;
-				}
-				case ENERGY_OF_WIND:
-				{
-					if (getRandom(100) < 50)
-					{
-						final Npc mob = addSpawn(EL_FLOATO, npc.getX(), npc.getY(), npc.getZ(), 0, true, 120000);
 						addAttackPlayerDesire(mob, killer, 5);
 					}
 					break;

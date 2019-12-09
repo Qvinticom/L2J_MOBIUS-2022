@@ -34,7 +34,7 @@ public class Q10540_ThwartingMimirsPlan extends Quest
 	// NPCs
 	private static final int KRENAHT = 34237;
 	// Boss
-	private static final int MIMIR = 26137;
+	private static final int MIMIR = 26148;
 	// Misc
 	private static final int MIN_LEVEL = 100;
 	private static final int GIANTS_SCROLL_R_GRADE_WEAPON = 36386;
