@@ -85,40 +85,6 @@
 		<skill skillName="Superior Sixth Sense" skillId="11554" skillLvl="1" getLevel="85" levelUpSp="10000" />
 		<skill skillName="Dissonance Wave" skillId="11536" skillLvl="1" getLevel="85" levelUpSp="10000" />
 		<skill skillName="Angel's Resurrection" skillId="11564" skillLvl="1" getLevel="85" levelUpSp="10000" />
-		<skill skillName="Warrior's Harmony" skillId="11524" skillLvl="1" getLevel="85" levelUpSp="10000">
-			<removeSkill id="1062" /> <!-- Berserker Spirit -->
-			<removeSkill id="1562" /> <!-- Chant of Berserker -->
-			<removeSkill id="274" /> <!-- Dance of Fire -->
-			<removeSkill id="1388" /> <!-- Greater Might -->
-			<removeSkill id="269" /> <!-- Hunter's Song -->
-			<removeSkill id="1261" /> <!-- Pa'agrio's Rage -->
-			<removeSkill id="1586" /> <!-- Rhythm of Critical -->
-			<removeSkill id="1585" /> <!-- Rhythm of Critical Dark -->
-			<removeSkill id="1390" /> <!-- War Chant -->
-		</skill>
-		<skill skillName="Wizard's Harmony" skillId="11525" skillLvl="1" getLevel="85" levelUpSp="10000">
-			<removeSkill id="337" /> <!-- Arcane Power -->
-			<removeSkill id="336" /> <!-- Arcane Wisdom -->
-			<removeSkill id="1078" /> <!-- Concentration -->
-			<removeSkill id="365" /> <!-- Dance of Siren -->
-			<removeSkill id="273" /> <!-- Dance of the Mystic -->
-			<removeSkill id="1588" /> <!-- Rhythm of Magic -->
-			<removeSkill id="1587" /> <!-- Rhythm of Magic Dark -->
-			<removeSkill id="1596" /> <!-- Rhythm of Start -->
-			<removeSkill id="1595" /> <!-- Rhythm of Start Dark -->
-			<removeSkill id="349" /> <!-- Song of Renewal -->
-			<removeSkill id="267" /> <!-- Song of Warding -->
-		</skill>
-		<skill skillName="Knight's Harmony" skillId="11523" skillLvl="1" getLevel="85" levelUpSp="10000">
-			<removeSkill id="1243" /> <!-- Blessed Shield -->
-			<removeSkill id="1391" /> <!-- Chant of Earth -->
-			<removeSkill id="271" /> <!-- Dance of the Warrior -->
-			<removeSkill id="1389" /> <!-- Greater Shield -->
-			<removeSkill id="1590" /> <!-- Rhythm of Combat -->
-			<removeSkill id="1589" /> <!-- Rhythm of Combat Dark -->
-			<removeSkill id="264" /> <!-- Song of Earth -->
-			<removeSkill id="1283" /> <!-- Soul Guard -->
-		</skill>
 		<skill skillName="Giant Root" skillId="11561" skillLvl="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="402" /> <!-- Arrest -->
 			<removeSkill id="1201" /> <!-- Dryad Root -->
@@ -330,7 +296,39 @@
 			<removeSkill id="1099" /> <!-- Seal of Slow -->
 			<removeSkill id="505" /> <!-- Shining Edge -->
 		</skill>
-		<skill skillName="Fantasia Harmony" skillId="30812" skillLvl="1" getLevel="85" levelUpSp="10000" />
+		<skill skillName="Fantasia Harmony" skillId="30812" skillLvl="1" getLevel="85" levelUpSp="10000">
+			<removeSkill id="11523" /> <!-- Knight's Harmony -->
+			<removeSkill id="11524" /> <!-- Warrior's Harmony -->
+			<removeSkill id="11525" /> <!-- Wizard's Harmony -->
+			<removeSkill id="19503" /> <!-- Crier's Harmony -->
+			<removeSkill id="1062" /> <!-- Berserker Spirit -->
+			<removeSkill id="1562" /> <!-- Chant of Berserker -->
+			<removeSkill id="274" /> <!-- Dance of Fire -->
+			<removeSkill id="1388" /> <!-- Greater Might -->
+			<removeSkill id="269" /> <!-- Hunter's Song -->
+			<removeSkill id="1261" /> <!-- Pa'agrio's Rage -->
+			<removeSkill id="1586" /> <!-- Rhythm of Critical -->
+			<removeSkill id="1585" /> <!-- Rhythm of Critical Dark -->
+			<removeSkill id="1390" /> <!-- War Chant -->
+			<removeSkill id="337" /> <!-- Arcane Power -->
+			<removeSkill id="336" /> <!-- Arcane Wisdom -->
+			<removeSkill id="1078" /> <!-- Concentration -->
+			<removeSkill id="365" /> <!-- Dance of Siren -->
+			<removeSkill id="273" /> <!-- Dance of the Mystic -->
+			<removeSkill id="1588" /> <!-- Rhythm of Magic -->
+			<removeSkill id="1587" /> <!-- Rhythm of Magic Dark -->
+			<removeSkill id="1596" /> <!-- Rhythm of Start -->
+			<removeSkill id="1595" /> <!-- Rhythm of Start Dark -->
+			<removeSkill id="349" /> <!-- Song of Renewal -->
+			<removeSkill id="1243" /> <!-- Blessed Shield -->
+			<removeSkill id="1391" /> <!-- Chant of Earth -->
+			<removeSkill id="271" /> <!-- Dance of the Warrior -->
+			<removeSkill id="1389" /> <!-- Greater Shield -->
+			<removeSkill id="1590" /> <!-- Rhythm of Combat -->
+			<removeSkill id="1589" /> <!-- Rhythm of Combat Dark -->
+			<removeSkill id="264" /> <!-- Song of Earth -->
+			<removeSkill id="1283" /> <!-- Soul Guard -->
+		</skill>
 
 		<skill skillName="Dissonance Wave" skillId="11536" skillLvl="2" getLevel="86" levelUpSp="50000" />
 		<skill skillName="Transform" skillId="11537" skillLvl="2" getLevel="86" levelUpSp="50000" />
@@ -556,7 +554,6 @@
 		<skill skillName="Superior HP Boost" skillId="11506" skillLvl="6" getLevel="102" levelUpSp="507455418" />
 		
 		<skill skillName="Dissonance Wave" skillId="11536" skillLvl="8" getLevel="103" levelUpSp="608946501" />
-		<skill skillName="Wizard's Harmony" skillId="11525" skillLvl="2" getLevel="103" levelUpSp="608946501" />
 		<skill skillName="Giant Root" skillId="11561" skillLvl="6" getLevel="103" levelUpSp="608946501" />
 		<skill skillName="Sforzando Sting" skillId="19431" skillLvl="8" getLevel="103" levelUpSp="608946501" />
 		<skill skillName="Transform" skillId="11537" skillLvl="9" getLevel="103" levelUpSp="608946501" />
