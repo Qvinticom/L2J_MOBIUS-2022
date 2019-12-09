@@ -457,13 +457,9 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<castRange>900</castRange>
 		<effectRange>1100</effectRange>
-		<targetType>TARGET</targetType>
-		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="TargetMyParty">
-				<includeMe>true</includeMe>
-			</condition>
-		</conditions>
+		<targetType>SELF</targetType>
+		<affectScope>PARTY</affectScope>
+		<affectObject>FRIEND</affectObject>
 		<effects>
 			<effect name="PAtk">
 				<amount>
