@@ -34,7 +34,7 @@ public class Q10856_SuperionAppears extends Quest
 	private static final int MELDINA = 32214;
 	private static final int HISTY = 34243;
 	// Misc
-	private static final int MIN_LEVEL = 100;
+	private static final int MIN_LEVEL = 102;
 	
 	public Q10856_SuperionAppears()
 	{
