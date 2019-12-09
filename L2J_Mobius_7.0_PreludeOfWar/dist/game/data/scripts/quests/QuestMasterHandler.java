@@ -90,6 +90,7 @@ import quests.Q00830_TheWayOfTheGiantsPawn.Q00830_TheWayOfTheGiantsPawn;
 import quests.Q00831_SayhasScheme.Q00831_SayhasScheme;
 import quests.Q00833_DevilsTreasureTauti.Q00833_DevilsTreasureTauti;
 import quests.Q00835_PitiableMelisa.Q00835_PitiableMelisa;
+import quests.Q00842_CaptiveDemons.Q00842_CaptiveDemons;
 import quests.Q00901_HowLavasaurusesAreMade.Q00901_HowLavasaurusesAreMade;
 import quests.Q00903_TheCallOfAntharas.Q00903_TheCallOfAntharas;
 import quests.Q00905_RefinedDragonBlood.Q00905_RefinedDragonBlood;
@@ -342,7 +343,7 @@ public class QuestMasterHandler
 		Q00838_RequestFromTheMotherTreeGuardians.class, // TODO: Not done.
 		Q00839_RequestFromTheUnworldlyVisitors.class, // TODO: Not done.
 		Q00840_RequestFromTheKingdomsRoyalGuard.class, // TODO: Not done.
-		Q00842_CaptiveDemons.class, // TODO: Not done.
+		Q00842_CaptiveDemons.class,
 		Q00843_GiantEvolutionControl.class, // TODO: Not done.
 		Q00844_GiantsTreasure.class, // TODO: Not done.
 		Q00845_SabotageTheEmbryoSupplies.class, // TODO: Not done.
