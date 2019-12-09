@@ -1647,130 +1647,37 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1435" toLevel="10" name="Death Mark">
+	<skill id="1435" toLevel="5" name="Death Mark">
 		<!-- Marks the enemy with a Death Mark. For $s1, P. Def. and M. Def. -$s2 and consumes $s3 HP per sec. -->
 		<icon>icon.skill1435</icon>
-		<abnormalLvl>
-			<value level="1">1</value>
-			<value level="2">2</value>
-			<value level="3">3</value>
-			<value level="4">4</value>
-			<value level="5">5</value>
-			<value level="6">6</value>
-			<value level="7">7</value>
-			<value level="8">8</value>
-			<value level="9">9</value>
-			<value level="10">10</value>
-		</abnormalLvl>
-		<abnormalTime>30</abnormalTime>
-		<abnormalType>DEATH_MARK</abnormalType>
-		<abnormalVisualEffect>DEATH_MARK</abnormalVisualEffect>
-		<activateRate>70</activateRate>
-		<basicProperty>PHYSICAL</basicProperty>
-		<castRange>600</castRange>
-		<effectPoint>
-			<value level="1">-235</value>
-			<value level="2">-303</value>
-			<value level="3">-379</value>
-			<value level="4">-438</value>
-			<value level="5">-495</value>
-			<value level="6">-549</value>
-			<value level="7">-582</value>
-			<value level="8">-611</value>
-			<value level="9">-635</value>
-			<value level="10">-655</value>
-		</effectPoint>
-		<effectRange>1100</effectRange>
-		<hitTime>1200</hitTime>
-		<isDebuff>true</isDebuff>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<lvlBonusRate>20</lvlBonusRate>
-		<magicLvl>
-			<value level="1">24</value>
-			<value level="2">32</value>
-			<value level="3">40</value>
-			<value level="4">46</value>
-			<value level="5">52</value>
-			<value level="6">58</value>
-			<value level="7">62</value>
-			<value level="8">66</value>
-			<value level="9">70</value>
-			<value level="10">74</value>
-		</magicLvl>
-		<mpConsume>
-			<value level="1">9</value>
-			<value level="2">11</value>
-			<value level="3">14</value>
-			<value level="4">17</value>
-			<value level="5">19</value>
-			<value level="6">22</value>
-			<value level="7">23</value>
-			<value level="8">25</value>
-			<value level="9">26</value>
-			<value level="10">28</value>
-		</mpConsume>
-		<mpInitialConsume>
-			<value level="1">3</value>
-			<value level="2">3</value>
-			<value level="3">4</value>
-			<value level="4">5</value>
-			<value level="5">5</value>
-			<value level="6">6</value>
-			<value level="7">6</value>
-			<value level="8">7</value>
-			<value level="9">7</value>
-			<value level="10">7</value>
-		</mpInitialConsume>
-		<operateType>A2</operateType>
-		<reuseDelay>11000</reuseDelay>
+		<excludedFromCheck>true</excludedFromCheck>
+		<magicLvl>75</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
-		<targetType>ENEMY_ONLY</targetType>
-		<affectScope>SINGLE</affectScope>
+		<operateType>P</operateType>
 		<effects>
-			<effect name="DamOverTime">
-				<power>
-					<value level="1">24</value>
-					<value level="2">32</value>
-					<value level="3">41</value>
-					<value level="4">41</value>
-					<value level="5">50</value>
-					<value level="6">50</value>
-					<value level="7">58</value>
-					<value level="8">58</value>
-					<value level="9">63</value>
-					<value level="10">63</value>
-				</power>
-				<ticks>5</ticks>
-			</effect>
-			<effect name="MagicalDefence">
-				<amount>
-					<value level="1">-20</value>
-					<value level="2">-20</value>
-					<value level="3">-23</value>
-					<value level="4">-23</value>
-					<value level="5">-23</value>
-					<value level="6">-23</value>
-					<value level="7">-23</value>
-					<value level="8">-23</value>
-					<value level="9">-23</value>
-					<value level="10">-23</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PhysicalDefence">
-				<amount>
-					<value level="1">-20</value>
-					<value level="2">-20</value>
-					<value level="3">-23</value>
-					<value level="4">-23</value>
-					<value level="5">-23</value>
-					<value level="6">-23</value>
-					<value level="7">-23</value>
-					<value level="8">-23</value>
-					<value level="9">-23</value>
-					<value level="10">-23</value>
-				</amount>
-				<mode>PER</mode>
+			<effect name="TriggerSkillByAttack">
+				<attackerType>Creature</attackerType>
+				<minAttackerLevel>1</minAttackerLevel>
+				<maxAttackerLevel>99</maxAttackerLevel>
+				<chance>
+					<value level="1">15</value>
+					<value level="2">20</value>
+					<value level="3">23</value>
+					<value level="4">28</value>
+					<value level="5">35</value>
+				</chance>
+				<targetType>ENEMY</targetType>
+				<minDamage>1</minDamage>
+				<isCritical>false</isCritical>
+				<allowWeapons>ALL</allowWeapons>
+				<skillId>45154</skillId> <!-- Death Mark Stage -->
+				<skillLevel>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+				</skillLevel>
 			</effect>
 		</effects>
 	</skill>

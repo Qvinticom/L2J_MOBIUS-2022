@@ -404,13 +404,59 @@
 	<skill id="45154" toLevel="5" name="Death Mark Lv. 1">
 		<!-- P./ M. Critical Damage +$s1 when attacking enemies with the applied Death Mark. -->
 		<icon>icon.skill1435</icon>
-		<operateType>A1</operateType>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+			<value level="5">5</value>
+		</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>DEATH_MARK</abnormalType>
+		<abnormalVisualEffect>DEATH_MARK</abnormalVisualEffect>
+		<operateType>A2</operateType>
+		<effectPoint>
+			<value level="1">-235</value>
+			<value level="2">-303</value>
+			<value level="3">-379</value>
+			<value level="4">-438</value>
+			<value level="5">-495</value>
+		</effectPoint>
+		<hitTime>100</hitTime>
 		<isDebuff>true</isDebuff>
-		<castRange>900</castRange>
-		<hitTime>1200</hitTime>
-		<reuseDelay>10000</reuseDelay>
-		<effectPoint>-655</effectPoint>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>
+			<value level="1">15</value>
+			<value level="2">32</value>
+			<value level="3">56</value>
+			<value level="4">78</value>
+			<value level="5">85</value>
+		</magicLvl>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DefenceCriticalDamage">
+				<amount>
+					<value level="1">-10</value>
+					<value level="2">-12</value>
+					<value level="3">-15</value>
+					<value level="4">-20</value>
+					<value level="5">-25</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceMagicCriticalDamage">
+				<amount>
+					<value level="1">-10</value>
+					<value level="2">-12</value>
+					<value level="3">-15</value>
+					<value level="4">-20</value>
+					<value level="5">-25</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="45155" toLevel="8" name="Soul Impulse">
 		<!-- Strikes the target with $s1 power added to P. Atk. Requires an ancient sword or a two-handed sword. Ignores Shield Defense. Over-hit. -->
