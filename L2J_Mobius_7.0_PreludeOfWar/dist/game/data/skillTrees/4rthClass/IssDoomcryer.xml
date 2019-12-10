@@ -452,12 +452,6 @@
 		<skill skillName="Immune Derangement" skillId="19425" skillLvl="1" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Transform" skillId="11537" skillLvl="7" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Mass Giant Root" skillId="11538" skillLvl="4" getLevel="99" levelUpSp="5000000" />
-		<skill skillName="Battle Ditty" skillId="11615" skillLvl="1" getLevel="99" levelUpSp="5000000">
-			<item id="39738" count="4" /> <!-- Rune Stone -->
-		</skill>
-		<skill skillName="Protective Ditty" skillId="11616" skillLvl="1" getLevel="99" levelUpSp="5000000">
-			<item id="39738" count="4" /> <!-- Rune Stone -->
-		</skill>
 		<skill skillName="Quick Escape" skillId="11540" skillLvl="4" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Celestial Aegis" skillId="11560" skillLvl="2" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Drum Melody" skillId="11518" skillLvl="4" getLevel="99" levelUpSp="5000000" />
@@ -473,6 +467,8 @@
 		</skill>
 		<skill skillName="Trace of Twin Edges" skillId="11508" skillLvl="6" getLevel="99" levelUpSp="5000000" />
 		<skill skillName="Fantasia Melody" skillId="30815" skillLvl="1" getLevel="99" levelUpSp="5000000">
+			<removeSkill id="11615" /> <!-- Battle Ditty -->
+			<removeSkill id="11616" /> <!-- Protective Ditty -->
 			<item id="39738" count="8" /> <!-- Rune Stone -->
 		</skill>
 
