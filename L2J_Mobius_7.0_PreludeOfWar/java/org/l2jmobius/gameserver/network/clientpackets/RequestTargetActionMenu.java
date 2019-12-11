@@ -50,7 +50,7 @@ public class RequestTargetActionMenu implements IClientIncomingPacket
 		{
 			if (_objectId == object.getObjectId())
 			{
-				if (object.isAutoAttackable(player))
+				if (object.isTargetable() && object.isAutoAttackable(player))
 				{
 					player.setTarget(object);
 				}
