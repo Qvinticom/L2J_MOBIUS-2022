@@ -45,6 +45,8 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.clan.Clan;
+import org.l2jmobius.gameserver.model.events.EventDispatcher;
+import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerTakeHero;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.olympiad.Olympiad;
@@ -948,6 +950,7 @@ public class Hero
 		loadFights(player.getObjectId());
 		loadDiary(player.getObjectId());
 		HERO_MESSAGE.put(player.getObjectId(), "");
+		EventDispatcher.getInstance().notifyEvent(new OnPlayerTakeHero(player));
 		
 		updateHeroes(false);
 	}

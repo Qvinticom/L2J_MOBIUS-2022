@@ -40,6 +40,6 @@ public class OnPlayerTakeHero implements IBaseEvent
 	@Override
 	public EventType getType()
 	{
-		return EventType.ON_PLAYER_TRANSFORM;
+		return EventType.ON_PLAYER_TAKE_HERO;
 	}
 }

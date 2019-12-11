@@ -111,6 +111,7 @@ import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerSubCha
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerSummonAgathion;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerSummonSpawn;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerSummonTalk;
+import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerTakeHero;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerTransform;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerUnsummonAgathion;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnTrapAction;
@@ -266,6 +267,7 @@ public enum EventType
 	ON_PLAYER_SKILL_LEARN(OnPlayerSkillLearn.class, void.class),
 	ON_PLAYER_SUMMON_SPAWN(OnPlayerSummonSpawn.class, void.class),
 	ON_PLAYER_SUMMON_TALK(OnPlayerSummonTalk.class, void.class),
+	ON_PLAYER_TAKE_HERO(OnPlayerTakeHero.class, void.class),
 	ON_PLAYER_TRANSFORM(OnPlayerTransform.class, void.class),
 	ON_PLAYER_SUB_CHANGE(OnPlayerSubChange.class, void.class),
 	ON_PLAYER_QUEST_ABORT(OnPlayerQuestAbort.class, void.class),

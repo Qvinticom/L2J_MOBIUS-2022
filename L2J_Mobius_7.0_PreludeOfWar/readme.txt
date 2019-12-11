@@ -107,9 +107,11 @@ Fafurion: https://eu.4game.com/patchnotes/lineage2/132/
 Prelude of War: https://eu.4game.com/patchnotes/lineage2/176/
 -Teleport list system
 -Removed item grade penalty
+-New henna system
 -New starting quests
 -Auto attack system
 -Auto potion system
+-Rank system
 
 Prelude of War - Part 2: https://eu.4game.com/patchnotes/lineage2/186/
 -Just enter game support.

@@ -108,6 +108,7 @@ The Kamael: https://eu.4game.com/patchnotes/lineage2classic/154/
 -New starting quests
 -Auto attack system
 -Auto potion system
+-Rank system
 
 Essence: https://eu.4game.com/patchnotes/lineage2essence/188/
 -Just enter game support
