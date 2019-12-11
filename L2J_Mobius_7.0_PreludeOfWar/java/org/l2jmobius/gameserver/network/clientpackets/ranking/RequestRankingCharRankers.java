@@ -19,12 +19,12 @@ package org.l2jmobius.gameserver.network.clientpackets.ranking;
 import org.l2jmobius.commons.network.PacketReader;
 import org.l2jmobius.gameserver.network.GameClient;
 import org.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
-import org.l2jmobius.gameserver.network.serverpackets.ranking.ExRankList;
+import org.l2jmobius.gameserver.network.serverpackets.ranking.ExRankingCharRankers;
 
 /**
  * @author JoeAlisson
  */
-public class ExRankingCharRankers implements IClientIncomingPacket
+public class RequestRankingCharRankers implements IClientIncomingPacket
 {
 	private int _group;
 	private int _scope;
@@ -33,8 +33,8 @@ public class ExRankingCharRankers implements IClientIncomingPacket
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
 	{
-		_group = packet.readC();
-		_scope = packet.readC();
+		_group = packet.readC(); // Tab Id
+		_scope = packet.readC(); // All or personal
 		_race = packet.readD();
 		return true;
 	}
@@ -42,6 +42,6 @@ public class ExRankingCharRankers implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		client.sendPacket(new ExRankList(_group, _scope, _race));
+		client.sendPacket(new ExRankingCharRankers(client.getPlayer(), _group, _scope, _race));
 	}
 }

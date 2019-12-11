@@ -45,6 +45,8 @@ import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
 import org.l2jmobius.gameserver.model.clan.Clan;
+import org.l2jmobius.gameserver.model.events.EventDispatcher;
+import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerTakeHero;
 import org.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.olympiad.Olympiad;
@@ -63,11 +65,11 @@ public class Hero
 {
 	private static final Logger LOGGER = Logger.getLogger(Hero.class.getName());
 	
-	private static final String GET_HEROES = "SELECT heroes.charId, characters.char_name, heroes.class_id, heroes.count, heroes.played, heroes.claimed FROM heroes, characters WHERE characters.charId = heroes.charId AND heroes.played = 1";
-	private static final String GET_ALL_HEROES = "SELECT heroes.charId, characters.char_name, heroes.class_id, heroes.count, heroes.played, heroes.claimed FROM heroes, characters WHERE characters.charId = heroes.charId";
+	private static final String GET_HEROES = "SELECT heroes.charId, characters.char_name, heroes.class_id, heroes.count, heroes.legend_count, heroes.played, heroes.claimed FROM heroes, characters WHERE characters.charId = heroes.charId AND heroes.played = 1";
+	private static final String GET_ALL_HEROES = "SELECT heroes.charId, characters.char_name, heroes.class_id, heroes.count, heroes.legend_count, heroes.played, heroes.claimed FROM heroes, characters WHERE characters.charId = heroes.charId";
 	private static final String UPDATE_ALL = "UPDATE heroes SET played = 0";
-	private static final String INSERT_HERO = "INSERT INTO heroes (charId, class_id, count, played, claimed) VALUES (?,?,?,?,?)";
-	private static final String UPDATE_HERO = "UPDATE heroes SET count = ?, played = ?, claimed = ? WHERE charId = ?";
+	private static final String INSERT_HERO = "INSERT INTO heroes (charId, class_id, count, legend_count, played, claimed) VALUES (?,?,?,?,?,?)";
+	private static final String UPDATE_HERO = "UPDATE heroes SET count = ?, legend_count = ?, played = ?, claimed = ? WHERE charId = ?";
 	private static final String GET_CLAN_ALLY = "SELECT characters.clanid AS clanid, coalesce(clan_data.ally_Id, 0) AS allyId FROM characters LEFT JOIN clan_data ON clan_data.clan_id = characters.clanid WHERE characters.charId = ?";
 	// delete hero items
 	private static final String DELETE_ITEMS = "DELETE FROM items WHERE item_id IN (30392, 30393, 30394, 30395, 30396, 30397, 30398, 30399, 30400, 30401, 30402, 30403, 30404, 30405, 30372, 30373, 6842, 6611, 6612, 6613, 6614, 6615, 6616, 6617, 6618, 6619, 6620, 6621, 9388, 9389, 9390) AND owner_id NOT IN (SELECT charId FROM characters WHERE accesslevel > 0)";
@@ -82,6 +84,7 @@ public class Hero
 	private static final Map<Integer, String> HERO_MESSAGE = new ConcurrentHashMap<>();
 	
 	public static final String COUNT = "count";
+	public static final String LEGEND_COUNT = "legend_count";
 	public static final String PLAYED = "played";
 	public static final String CLAIMED = "claimed";
 	public static final String CLAN_NAME = "clan_name";
@@ -121,6 +124,7 @@ public class Hero
 				hero.set(Olympiad.CHAR_NAME, rset.getString(Olympiad.CHAR_NAME));
 				hero.set(Olympiad.CLASS_ID, rset.getInt(Olympiad.CLASS_ID));
 				hero.set(COUNT, rset.getInt(COUNT));
+				hero.set(LEGEND_COUNT, rset.getInt(LEGEND_COUNT));
 				hero.set(PLAYED, rset.getInt(PLAYED));
 				hero.set(CLAIMED, Boolean.parseBoolean(rset.getString(CLAIMED)));
 				
@@ -140,6 +144,7 @@ public class Hero
 				hero.set(Olympiad.CHAR_NAME, rset2.getString(Olympiad.CHAR_NAME));
 				hero.set(Olympiad.CLASS_ID, rset2.getInt(Olympiad.CLASS_ID));
 				hero.set(COUNT, rset2.getInt(COUNT));
+				hero.set(LEGEND_COUNT, rset2.getInt(LEGEND_COUNT));
 				hero.set(PLAYED, rset2.getInt(PLAYED));
 				hero.set(CLAIMED, Boolean.parseBoolean(rset2.getString(CLAIMED)));
 				
@@ -413,6 +418,11 @@ public class Hero
 		return HEROES;
 	}
 	
+	public Map<Integer, StatsSet> getCompleteHeroes()
+	{
+		return COMPLETE_HEROS;
+	}
+	
 	public int getHeroByClass(int classid)
 	{
 		for (Entry<Integer, StatsSet> e : HEROES.entrySet())
@@ -664,8 +674,16 @@ public class Hero
 			if (COMPLETE_HEROS.containsKey(charId))
 			{
 				final StatsSet oldHero = COMPLETE_HEROS.get(charId);
-				final int count = oldHero.getInt(COUNT);
-				oldHero.set(COUNT, count + 1);
+				if (hero.getInt(LEGEND_COUNT) == 1)
+				{
+					final int count = oldHero.getInt(LEGEND_COUNT);
+					oldHero.set(LEGEND_COUNT, count + 1);
+				}
+				else
+				{
+					final int count = oldHero.getInt(COUNT);
+					oldHero.set(COUNT, count + 1);
+				}
 				oldHero.set(PLAYED, 1);
 				oldHero.set(CLAIMED, false);
 				HEROES.put(charId, oldHero);
@@ -675,7 +693,14 @@ public class Hero
 				final StatsSet newHero = new StatsSet();
 				newHero.set(Olympiad.CHAR_NAME, hero.getString(Olympiad.CHAR_NAME));
 				newHero.set(Olympiad.CLASS_ID, hero.getInt(Olympiad.CLASS_ID));
-				newHero.set(COUNT, 1);
+				if (hero.getInt(LEGEND_COUNT) == 1)
+				{
+					newHero.set(LEGEND_COUNT, 1);
+				}
+				else
+				{
+					newHero.set(COUNT, 1);
+				}
 				newHero.set(PLAYED, 1);
 				newHero.set(CLAIMED, false);
 				HEROES.put(charId, newHero);
@@ -711,8 +736,9 @@ public class Hero
 							insert.setInt(1, heroId);
 							insert.setInt(2, hero.getInt(Olympiad.CLASS_ID));
 							insert.setInt(3, hero.getInt(COUNT));
-							insert.setInt(4, hero.getInt(PLAYED));
-							insert.setString(5, String.valueOf(hero.getBoolean(CLAIMED)));
+							insert.setInt(4, hero.getInt(LEGEND_COUNT));
+							insert.setInt(5, hero.getInt(PLAYED));
+							insert.setString(6, String.valueOf(hero.getBoolean(CLAIMED)));
 							insert.execute();
 							insert.close();
 						}
@@ -760,6 +786,7 @@ public class Hero
 						try (PreparedStatement statement = con.prepareStatement(UPDATE_HERO))
 						{
 							statement.setInt(1, hero.getInt(COUNT));
+							statement.setInt(2, hero.getInt(LEGEND_COUNT));
 							statement.setInt(2, hero.getInt(PLAYED));
 							statement.setString(3, String.valueOf(hero.getBoolean(CLAIMED)));
 							statement.setInt(4, heroId);
@@ -948,6 +975,7 @@ public class Hero
 		loadFights(player.getObjectId());
 		loadDiary(player.getObjectId());
 		HERO_MESSAGE.put(player.getObjectId(), "");
+		EventDispatcher.getInstance().notifyEvent(new OnPlayerTakeHero(player));
 		
 		updateHeroes(false);
 	}

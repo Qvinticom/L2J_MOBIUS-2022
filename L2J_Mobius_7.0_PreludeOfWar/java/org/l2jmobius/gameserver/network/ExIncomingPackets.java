@@ -104,8 +104,11 @@ import org.l2jmobius.gameserver.network.clientpackets.primeshop.RequestBRProduct
 import org.l2jmobius.gameserver.network.clientpackets.primeshop.RequestBRRecentProductList;
 import org.l2jmobius.gameserver.network.clientpackets.raidbossinfo.RequestRaidBossSpawnInfo;
 import org.l2jmobius.gameserver.network.clientpackets.raidbossinfo.RequestRaidServerInfo;
-import org.l2jmobius.gameserver.network.clientpackets.ranking.ExRankCharInfo;
-import org.l2jmobius.gameserver.network.clientpackets.ranking.ExRankingCharRankers;
+import org.l2jmobius.gameserver.network.clientpackets.ranking.RequestOlympiadHeroAndLegendInfo;
+import org.l2jmobius.gameserver.network.clientpackets.ranking.RequestOlympiadMyRankingInfo;
+import org.l2jmobius.gameserver.network.clientpackets.ranking.RequestOlympiadRankingInfo;
+import org.l2jmobius.gameserver.network.clientpackets.ranking.RequestRankingCharInfo;
+import org.l2jmobius.gameserver.network.clientpackets.ranking.RequestRankingCharRankers;
 import org.l2jmobius.gameserver.network.clientpackets.sayune.RequestFlyMove;
 import org.l2jmobius.gameserver.network.clientpackets.sayune.RequestFlyMoveStart;
 import org.l2jmobius.gameserver.network.clientpackets.sessionzones.ExTimedHuntingZoneList;
@@ -175,6 +178,7 @@ public enum ExIncomingPackets implements IIncomingPackets<GameClient>
 	ANSWER_JOIN_PARTY_ROOM(0x30, AnswerJoinPartyRoom::new, ConnectionState.IN_GAME),
 	REQUEST_LIST_PARTY_MATCHING_WAITING_ROOM(0x31, RequestListPartyMatchingWaitingRoom::new, ConnectionState.IN_GAME),
 	REQUEST_EX_ENCHANT_ITEM_ATTRIBUTE(0x32, RequestExEnchantItemAttribute::new, ConnectionState.IN_GAME),
+	CANNOT_AIRSHIP_MOVE_ANYMORE(0x34, null, ConnectionState.IN_GAME),
 	MOVE_TO_LOCATION_AIR_SHIP(0x35, MoveToLocationAirShip::new, ConnectionState.IN_GAME),
 	REQUEST_BID_ITEM_AUCTION(0x36, RequestBidItemAuction::new, ConnectionState.IN_GAME),
 	REQUEST_INFO_ITEM_AUCTION(0x37, RequestInfoItemAuction::new, ConnectionState.IN_GAME),
@@ -190,6 +194,7 @@ public enum ExIncomingPackets implements IIncomingPackets<GameClient>
 	REQUEST_EX_MAGIC_SKILL_USE_GROUND(0x41, RequestExMagicSkillUseGround::new, ConnectionState.IN_GAME),
 	REQUEST_DUEL_SURRENDER(0x42, RequestDuelSurrender::new, ConnectionState.IN_GAME),
 	REQUEST_EX_ENCHANT_SKILL_INFO_DETAIL(0x43, RequestExEnchantSkillInfoDetail::new, ConnectionState.IN_GAME),
+	REQUEST_ANTI_FREE_SERVER(0x44, null, ConnectionState.IN_GAME),
 	REQUEST_FORTRESS_MAP_INFO(0x45, RequestFortressMapInfo::new, ConnectionState.IN_GAME),
 	REQUEST_PVP_MATCH_RECORD(0x46, RequestPVPMatchRecord::new, ConnectionState.IN_GAME),
 	SET_PRIVATE_STORE_WHOLE_MSG(0x47, SetPrivateStoreWholeMsg::new, ConnectionState.IN_GAME),
@@ -292,6 +297,7 @@ public enum ExIncomingPackets implements IIncomingPackets<GameClient>
 	REQUEST_FIRST_PLAY_START(0xAC, null, ConnectionState.IN_GAME),
 	REQUEST_FLY_MOVE_START(0xAD, RequestFlyMoveStart::new, ConnectionState.IN_GAME),
 	REQUEST_HARDWARE_INFO(0xAE, RequestHardWareInfo::new, ConnectionState.values()),
+	USER_INTERFACE_INFO(0xAF, null, ConnectionState.IN_GAME),
 	SEND_CHANGE_ATTRIBUTE_TARGET_ITEM(0xB0, SendChangeAttributeTargetItem::new, ConnectionState.IN_GAME),
 	REQUEST_CHANGE_ATTRIBUTE_ITEM(0xB1, RequestChangeAttributeItem::new, ConnectionState.IN_GAME),
 	REQUEST_CHANGE_ATTRIBUTE_CANCEL(0xB2, RequestChangeAttributeCancel::new, ConnectionState.IN_GAME),
@@ -320,10 +326,12 @@ public enum ExIncomingPackets implements IIncomingPackets<GameClient>
 	REQUEST_EVENT_KALIE_TOKEN(0xC9, null, ConnectionState.IN_GAME),
 	REQUEST_SHOW_BEAUTY_LIST(0xCA, RequestShowBeautyList::new, ConnectionState.IN_GAME),
 	REQUEST_REGIST_BEAUTY(0xCB, RequestRegistBeauty::new, ConnectionState.IN_GAME),
+	REQUEST_SHOW_RESET_BEAUTY(0xCC, null, ConnectionState.IN_GAME),
 	REQUEST_SHOW_RESET_SHOP_LIST(0xCD, RequestShowResetShopList::new, ConnectionState.IN_GAME),
 	NET_PING(0xCE, null, ConnectionState.IN_GAME),
 	REQUEST_BR_ADD_BASKET_PRODUCT_INFO(0xCF, null, ConnectionState.IN_GAME),
 	REQUEST_BR_DELETE_BASKET_PRODUCT_INFO(0xD0, null, ConnectionState.IN_GAME),
+	REQUEST_BR_EXIST_NEW_PRODUCT(0xD1, null, ConnectionState.IN_GAME),
 	REQUEST_EX_EVENT_CAMPAIGN_INFO(0xD2, null, ConnectionState.IN_GAME),
 	REQUEST_PLEDGE_RECRUIT_INFO(0xD3, RequestPledgeRecruitInfo::new, ConnectionState.IN_GAME),
 	REQUEST_PLEDGE_RECRUIT_BOARD_SEARCH(0xD4, RequestPledgeRecruitBoardSearch::new, ConnectionState.IN_GAME),
@@ -462,51 +470,78 @@ public enum ExIncomingPackets implements IIncomingPackets<GameClient>
 	EX_REQUEST_UNLOCKED_ITEM(0x159, null, ConnectionState.IN_GAME),
 	EX_LOCKED_ITEM_CANCEL(0x15A, null, ConnectionState.IN_GAME),
 	EX_UNLOCKED_ITEM_CANCEL(0x15B, null, ConnectionState.IN_GAME),
-	EX_ELEMENTAL_SPIRIT_CHANGE_TYPE(0x15C, null, ConnectionState.IN_GAME), // 152
+	// 152
+	EX_ELEMENTAL_SPIRIT_CHANGE_TYPE(0x15C, null, ConnectionState.IN_GAME),
 	REQUEST_BLOCK_LIST_FOR_AD(0x15D, null, ConnectionState.IN_GAME),
 	REQUEST_USER_BAN_INFO(0x15E, null, ConnectionState.IN_GAME),
-	EX_INTERACT_MODIFY(0x15F, null, ConnectionState.IN_GAME), // 152
-	EX_TRY_ENCHANT_ARTIFACT(0x160, RequestExTryEnchantArtifact::new, ConnectionState.IN_GAME), // 152
-	EX_XIGN_CODE(0x161, null, ConnectionState.IN_GAME), // 152
-	EX_OPEN_HTML(0x164, ExOpenDimensionalHtml::new, ConnectionState.IN_GAME), // 228
-	EX_REQUEST_CLASS_CHANGE(0x165, ExRequestClassChange::new, ConnectionState.IN_GAME), // 228
-	EX_REQUEST_CLASS_CHANGE_VERIFYING(0x166, null, ConnectionState.IN_GAME), // 228
-	EX_REQUEST_TELEPORT(0x167, ExRequestTeleport::new, ConnectionState.IN_GAME), // 228
-	EX_COSTUME_COLLECTION_SKILL_ACTIVE(0x16B, null, ConnectionState.IN_GAME), // 228
-	UNK_16C(0x16C, null, ConnectionState.IN_GAME), // 228
-	UNK_16D(0x16D, null, ConnectionState.IN_GAME), // 228
-	UNK_16E(0x16E, null, ConnectionState.IN_GAME), // 228
-	UNK_16F(0x16F, null, ConnectionState.IN_GAME), // 228
-	UNK_170(0x170, null, ConnectionState.IN_GAME), // 228
-	EX_ACTIVATE_AUTO_SHORTCUT(0x171, ExRequestActivateAutoShortcut::new, ConnectionState.IN_GAME), // 228
-	UNK_172(0x172, null, ConnectionState.IN_GAME), // 228
-	UNK_173(0x173, null, ConnectionState.IN_GAME), // 228
-	UNK_174(0x174, null, ConnectionState.IN_GAME), // 228
-	UNK_175(0x175, null, ConnectionState.IN_GAME), // 228
-	UNK_176(0x176, null, ConnectionState.IN_GAME), // 228
-	EX_AUTOPLAY_SETTING(0x177, ExAutoPlaySetting::new, ConnectionState.IN_GAME), // 228
-	UNK_178(0x178, null, ConnectionState.IN_GAME), // 228
-	UNK_179(0x179, null, ConnectionState.IN_GAME), // 228
-	UNK_17A(0x17A, null, ConnectionState.IN_GAME), // 228
-	UNK_17B(0x17B, null, ConnectionState.IN_GAME), // 228
-	UNK_17C(0x17C, null, ConnectionState.IN_GAME), // 228
-	UNK_17D(0x17D, null, ConnectionState.IN_GAME), // 228
-	UNK_17E(0x17E, null, ConnectionState.IN_GAME), // 228
-	EX_TIME_RESTRICT_FIELD_LIST(0x17F, ExTimedHuntingZoneList::new, ConnectionState.IN_GAME), // 228
-	EX_TIME_RESTRICT_FIELD_USER_ENTER(0x180, null, ConnectionState.IN_GAME), // 228
-	EX_RANKING_CHAR_INFO(0x181, ExRankCharInfo::new, ConnectionState.IN_GAME), // 228
-	EX_RANKING_CHAR_HISTORY(0x182, null, ConnectionState.IN_GAME), // 228
-	EX_RANKING_CHAR_RANKERS(0x183, ExRankingCharRankers::new, ConnectionState.IN_GAME), // 228
-	UNK_184(0x184, null, ConnectionState.IN_GAME), // 228
-	UNK_185(0x185, null, ConnectionState.IN_GAME), // 228
-	EX_MERCENARY_CASTLEWAR_CASTLE_SIEGE_ATTACKER_LIST(0x186, null, ConnectionState.IN_GAME), // 228
-	UNK_187(0x187, null, ConnectionState.IN_GAME), // 228
-	UNK_188(0x188, null, ConnectionState.IN_GAME), // 228
-	UNK_189(0x189, null, ConnectionState.IN_GAME), // 228
-	UNK_18A(0x18A, null, ConnectionState.IN_GAME), // 228
-	EX_PVP_BOOK_LIST(0x18B, ExPvpBookList::new, ConnectionState.IN_GAME), // 228
-	UNK_18C(0x18C, null, ConnectionState.IN_GAME), // 228
-	EX_LETTER_COLLECTOR_TAKE_REWARD(0x18D, null, ConnectionState.IN_GAME); // 228
+	EX_INTERACT_MODIFY(0x15F, null, ConnectionState.IN_GAME),
+	EX_TRY_ENCHANT_ARTIFACT(0x160, RequestExTryEnchantArtifact::new, ConnectionState.IN_GAME),
+	EX_UPGRADE_SYSTEM_NORMAL_REQUEST(0x161, null, ConnectionState.IN_GAME),
+	EX_PURCHASE_LIMIT_SHOP_ITEM_LIST(0x162, null, ConnectionState.IN_GAME),
+	EX_PURCHASE_LIMIT_SHOP_ITEM_BUY(0x163, null, ConnectionState.IN_GAME),
+	// 228
+	EX_OPEN_HTML(0x164, ExOpenDimensionalHtml::new, ConnectionState.IN_GAME),
+	EX_REQUEST_CLASS_CHANGE(0x165, ExRequestClassChange::new, ConnectionState.IN_GAME),
+	EX_REQUEST_CLASS_CHANGE_VERIFYING(0x166, null, ConnectionState.IN_GAME),
+	EX_REQUEST_TELEPORT(0x167, ExRequestTeleport::new, ConnectionState.IN_GAME),
+	EX_COSTUME_USE_ITEM(0x168, null, ConnectionState.IN_GAME),
+	EX_COSTUME_LIST(0x169, null, ConnectionState.IN_GAME),
+	EX_COSTUME_COLLECTION_SKILL_ACTIVE(0x16A, null, ConnectionState.IN_GAME),
+	EX_COSTUME_EVOLUTION(0x16B, null, ConnectionState.IN_GAME),
+	EX_COSTUME_EXTRACT(0x16C, null, ConnectionState.IN_GAME),
+	EX_COSTUME_LOCK(0x16D, null, ConnectionState.IN_GAME),
+	EX_COSTUME_CHANGE_SHORTCUT(0x16E, null, ConnectionState.IN_GAME),
+	EX_MAGICLAMP_GAME_INFO(0x16F, null, ConnectionState.IN_GAME),
+	EX_MAGICLAMP_GAME_START(0x170, null, ConnectionState.IN_GAME),
+	EX_ACTIVATE_AUTO_SHORTCUT(0x171, ExRequestActivateAutoShortcut::new, ConnectionState.IN_GAME),
+	EX_PREMIUM_MANAGER_LINK_HTML(0x172, null, ConnectionState.IN_GAME),
+	EX_PREMIUM_MANAGER_PASS_CMD_TO_SERVER(0x173, null, ConnectionState.IN_GAME),
+	EX_ACTIVATED_CURSED_TREASURE_BOX_LOCATION(0x174, null, ConnectionState.IN_GAME),
+	EX_PAYBACK_LIST(0x175, null, ConnectionState.IN_GAME),
+	EX_PAYBACK_GIVE_REWARD(0x176, null, ConnectionState.IN_GAME),
+	EX_AUTOPLAY_SETTING(0x177, ExAutoPlaySetting::new, ConnectionState.IN_GAME),
+	EX_OLYMPIAD_MATCH_MAKING(0x178, null, ConnectionState.IN_GAME),
+	EX_OLYMPIAD_MATCH_MAKING_CANCEL(0x179, null, ConnectionState.IN_GAME),
+	EX_FESTIVAL_BM_INFO(0x17A, null, ConnectionState.IN_GAME),
+	EX_FESTIVAL_BM_GAME(0x17B, null, ConnectionState.IN_GAME),
+	EX_GACHA_SHOP_INFO(0x17C, null, ConnectionState.IN_GAME),
+	EX_GACHA_SHOP_GACHA_GROUP(0x17D, null, ConnectionState.IN_GAME),
+	EX_GACHA_SHOP_GACHA_ITEM(0x17E, null, ConnectionState.IN_GAME),
+	EX_TIME_RESTRICT_FIELD_LIST(0x17F, ExTimedHuntingZoneList::new, ConnectionState.IN_GAME),
+	EX_TIME_RESTRICT_FIELD_USER_ENTER(0x180, null, ConnectionState.IN_GAME),
+	EX_RANKING_CHAR_INFO(0x181, RequestRankingCharInfo::new, ConnectionState.IN_GAME),
+	EX_RANKING_CHAR_HISTORY(0x182, null, ConnectionState.IN_GAME),
+	EX_RANKING_CHAR_RANKERS(0x183, RequestRankingCharRankers::new, ConnectionState.IN_GAME),
+	EX_PLEDGE_MERCENARY_RECRUIT_INFO_SET(0x184, null, ConnectionState.IN_GAME),
+	EX_PLEDGE_MERCENARY_CASTLEWAR_CASTLE_INFO(0x185, null, ConnectionState.IN_GAME),
+	EX_MERCENARY_CASTLEWAR_CASTLE_SIEGE_INFO(0x186, null, ConnectionState.IN_GAME),
+	EX_MERCENARY_CASTLEWAR_CASTLE_SIEGE_ATTACKER_LIST(0x187, null, ConnectionState.IN_GAME),
+	EX_MERCENARY_CASTLEWAR_CASTLE_SIEGE_DEFENDER_LIST(0x188, null, ConnectionState.IN_GAME),
+	EX_PLEDGE_MERCENARY_MEMBER_LIST(0x189, null, ConnectionState.IN_GAME),
+	EX_PLEDGE_MERCENARY_MEMBER_JOIN(0x18A, null, ConnectionState.IN_GAME),
+	EX_PVP_BOOK_LIST(0x18B, ExPvpBookList::new, ConnectionState.IN_GAME),
+	EX_PVP_BOOK_KILLER_LOCATION(0x18C, null, ConnectionState.IN_GAME),
+	EX_PVP_BOOK_TELEPORT_TO_KILLER(0x18D, null, ConnectionState.IN_GAME),
+	EX_LETTER_COLLECTOR_TAKE_REWARD(0x18E, null, ConnectionState.IN_GAME),
+	EX_SET_STATUS_BONUS(0x18F, null, ConnectionState.IN_GAME),
+	EX_RESET_STATUS_BONUS(0x190, null, ConnectionState.IN_GAME),
+	EX_OLYMPIAD_MY_RANKING_INFO(0x191, RequestOlympiadMyRankingInfo::new, ConnectionState.IN_GAME),
+	EX_OLYMPIAD_RANKING_INFO(0x192, RequestOlympiadRankingInfo::new, ConnectionState.IN_GAME),
+	EX_OLYMPIAD_HERO_AND_LEGEND_INFO(0x193, RequestOlympiadHeroAndLegendInfo::new, ConnectionState.IN_GAME),
+	EX_CASTLEWAR_OBSERVER_START(0x194, null, ConnectionState.IN_GAME),
+	EX_RAID_TELEPORT_INFO(0x195, null, ConnectionState.IN_GAME),
+	EX_TELEPORT_TO_RAID_POSITION(0x196, null, ConnectionState.IN_GAME),
+	EX_CRAFT_EXTRACT(0x197, null, ConnectionState.IN_GAME),
+	EX_CRAFT_RANDOM_INFO(0x198, null, ConnectionState.IN_GAME),
+	EX_CRAFT_RANDOM_LOCK_SLOT(0x199, null, ConnectionState.IN_GAME),
+	EX_CRAFT_RANDOM_REFRESH(0x19A, null, ConnectionState.IN_GAME),
+	EX_CRAFT_RANDOM_MAKE(0x19B, null, ConnectionState.IN_GAME),
+	EX_MULTI_SELL_LIST(0x19C, null, ConnectionState.IN_GAME),
+	EX_SAVE_ITEM_ANNOUNCE_SETTING(0x19D, null, ConnectionState.IN_GAME),
+	EX_ANTIBOT(0x19E, null, ConnectionState.IN_GAME),
+	EX_DPSVR(0x19F, null, ConnectionState.IN_GAME),
+	EX_TENPROTECT_DECRYPT_ERROR(0x1A0, null, ConnectionState.IN_GAME),
+	EX_MAX(0x1A1, null, ConnectionState.IN_GAME);
 	
 	public static final ExIncomingPackets[] PACKET_ARRAY;
 	
