@@ -1106,7 +1106,8 @@
 		<set name="material" val="CRYSTAL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
+		<set name="is_clan_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="enchant_enabled" val="10" />
 		<stats>
@@ -1133,17 +1134,35 @@
 		<!-- Polish that enhances characteristics of a Pendant. Maximum Enchant Level is +10. If the enchant fails, pendant disappears. -->
 		<set name="icon" val="icon.bm_pendant_varnish" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="BLESS_ENCHT_AM" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="is_sellable" val="false" />
+		<set name="weight" val="0" />
+		<set name="price" val="0" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
+		<skills>
+			<skill id="2209" level="1" /> <!-- Blessed Scroll: Enchant Armor (A-grade) -->
+		</skills>
 	</item>
 	<item id="49470" name="Shining Pendant Polish" type="EtcItem">
 		<!-- Shiny Polish, enhancing pendants characteristics. Can be used on a pendant enchanted up to +8. If an enchantment is failed, the pendent doesn't disappear and has the previous level of enchantment. -->
 		<set name="icon" val="icon.bm_pendant_varnish_premium" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="is_sellable" val="false" />
+		<set name="weight" val="0" />
+		<set name="price" val="0" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
+		<skills>
+			<skill id="39063" level="1" /> <!-- Solid Scroll -->
+		</skills>
 	</item>
 	<item id="49471" name="Fire Dragon Pendant Chest" type="EtcItem">
 		<!-- Double-click the chest to get 1 Fire Dragon Pendant and 10 Pendant Polishes. -->
@@ -1266,49 +1285,103 @@
 		<!-- P. Def. +1 for D-grade armor and accessories. Starting from +4, P. Def. +3. If an item is enchanted up to more than +4, HP is increased proportionally. Safe enchantment. If enchantment is failed, the item is not broken into crystals and preserves the enchantment level. Cannot be applied to armor enchanted by 6 and higher. -->
 		<set name="icon" val="icon.giant_scrl_of_ench_am_d" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="is_sellable" val="false" />
+		<set name="weight" val="0" />
+		<set name="price" val="0" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
+		<skills>
+			<skill id="39063" level="1" /> <!-- Solid Scroll -->
+		</skills>
 	</item>
 	<item id="49482" name="Solid Scroll: Enchant Weapon (D-grade)" type="EtcItem">
 		<!-- When enchanted, P. Atk. +4 for D-grade one-handed swords, one-handed blunts, daggers, and spears. P. Atk. +5 for two-handed swords, two-handed blunts, dual swords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./ M. Atk. bonus is doubled. Enchanting is safe. If enchanting is failed, items are not broken into crystals and remain enchanted to prior level. Cannot be applied to items enchanted to +7 or higher. -->
 		<set name="icon" val="icon.giant_scrl_of_ench_wp_d" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WP" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="is_sellable" val="false" />
+		<set name="weight" val="0" />
+		<set name="price" val="0" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
+		<skills>
+			<skill id="39064" level="1" /> <!-- Solid Scroll -->
+		</skills>
 	</item>
 	<item id="49483" name="Solid Scroll: Enchant Armor (C-grade)" type="EtcItem">
 		<!-- P. Def. +1 for C-grade armor and accessories. Starting from +4, P. Def. +3. If an item is enchanted up to more than +4, HP is increased proportionally. Safe enchantment. If enchantment is failed, the item is not broken into crystals and preserves the enchantment level. Cannot be applied to armor enchanted by 6 and higher. -->
 		<set name="icon" val="icon.giant_scrl_of_ench_am_c" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="is_sellable" val="false" />
+		<set name="weight" val="0" />
+		<set name="price" val="0" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
+		<skills>
+			<skill id="39065" level="1" /> <!-- Solid Scroll -->
+		</skills>
 	</item>
 	<item id="49484" name="Solid Scroll: Enchant Weapon (C-grade)" type="EtcItem">
 		<!-- When enchanted, P. Atk. +4 for C-grade one-handed swords, one-handed blunts, daggers, and spears. P. Atk. +5 for two-handed swords, two-handed blunts, dual swords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk./ M. Atk. bonus is doubled. Enchanting is safe. If enchanting is failed, items are not broken into crystals and remain enchanted to prior level. Cannot be applied to items enchanted to +7 or higher. -->
 		<set name="icon" val="icon.giant_scrl_of_ench_wp_c" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WP" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="is_sellable" val="false" />
+		<set name="weight" val="0" />
+		<set name="price" val="0" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
+		<skills>
+			<skill id="39066" level="1" /> <!-- Solid Scroll -->
+		</skills>
 	</item>
 	<item id="49485" name="Solid Scroll: Enchant Armor (B-grade)" type="EtcItem">
 		<!-- P. Def. +1 for B-grade armor and accessories. Starting from +4, P. Def. +3. If an item is enchanted up to more than +4, HP is increased proportionally. Safe enchantment. If enchantment is failed, the item is not broken into crystals and preserves the enchantment level. Cannot be applied to armor enchanted by 6 and higher. -->
 		<set name="icon" val="icon.giant_scrl_of_ench_am_b" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="is_sellable" val="false" />
+		<set name="weight" val="0" />
+		<set name="price" val="0" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
+		<skills>
+			<skill id="39067" level="1" /> <!-- Solid Scroll -->
+		</skills>
 	</item>
 	<item id="49486" name="Solid Scroll: Enchant Weapon (B-grade)" type="EtcItem">
 		<!-- When enchanted, P. Atk. +2 for B-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +2 for two-handed swords, two-handed blunts, dual swords, and two-handed fist weapons. P. Atk. +4 for bows. M. Atk. +2 for all weapons. Starting at +4, P. Atk./ M. Atk. bonus is doubled. Enchanting is safe. If enchanting is failed, items are not broken into crystals and remain enchanted to prior level. Cannot be applied to items enchanted to +7 or higher. -->
 		<set name="icon" val="icon.giant_scrl_of_ench_wp_b" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WP" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="is_sellable" val="false" />
+		<set name="weight" val="0" />
+		<set name="price" val="0" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
+		<skills>
+			<skill id="39068" level="1" /> <!-- Solid Scroll -->
+		</skills>
 	</item>
 	<item id="49487" name="Soulshot Ticket" type="EtcItem">
 		<!-- Can be exchanged through Dimensional Merchant to get Soulshot (No-grade/D-grade/C-grade/ B-grade), Spiritshot, Blessed Soulshot, Blessed Spiritshot, Beast Soulshot. Cannot be exchanged, dropped, sold, or stored in private warehouse. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
