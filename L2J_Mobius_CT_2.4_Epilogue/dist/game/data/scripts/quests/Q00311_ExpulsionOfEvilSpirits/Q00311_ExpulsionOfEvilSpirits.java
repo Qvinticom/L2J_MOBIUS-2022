@@ -163,7 +163,7 @@ public class Q00311_ExpulsionOfEvilSpirits extends Quest
 		}
 		else if (qs.isStarted())
 		{
-			htmltext = !hasQuestItems(player, SOUL_CORE_CONTAINING_EVIL_SPIRIT, RAGNA_ORCS_AMULET) ? "32655-05.html" : "32655-06.html";
+			htmltext = hasAtLeastOneQuestItem(player, RAGNA_ORCS_AMULET, SOUL_CORE_CONTAINING_EVIL_SPIRIT) ? "32655-06.html" : "32655-05.html";
 		}
 		return htmltext;
 	}
