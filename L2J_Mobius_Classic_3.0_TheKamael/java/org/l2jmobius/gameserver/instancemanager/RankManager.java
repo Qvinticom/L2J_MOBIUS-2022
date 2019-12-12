@@ -37,11 +37,13 @@ public class RankManager
 {
 	private static final Logger LOGGER = Logger.getLogger(RankManager.class.getName());
 	
-	private static final String SELECT_CHARACTERS = "SELECT charId,char_name,level,race,base_class, clanid FROM characters WHERE level > 84 ORDER BY exp DESC";
-	private static final String SELECT_CHARACTERS_BY_RACE = "SELECT charId FROM characters WHERE level > 84 AND race = ? ORDER BY exp DESC";
+	public static final int PLAYER_LIMIT = 100;
 	
-	private static final String GET_CURRENT_CYCLE_DATA = "SELECT characters.char_name, characters.level, characters.base_class, characters.clanid, olympiad_nobles.charId, olympiad_nobles.olympiad_points, olympiad_nobles.competitions_won, olympiad_nobles.competitions_lost FROM characters, olympiad_nobles WHERE characters.charId = olympiad_nobles.charId ORDER BY olympiad_nobles.olympiad_points DESC";
-	private static final String GET_CHARACTERS_BY_CLASS = "SELECT characters.charId, olympiad_nobles.olympiad_points FROM characters, olympiad_nobles WHERE olympiad_nobles.charId = characters.charId AND characters.base_class = ? ORDER BY olympiad_nobles.olympiad_points DESC";
+	private static final String SELECT_CHARACTERS = "SELECT charId,char_name,level,race,base_class, clanid FROM characters WHERE level > 84 ORDER BY exp DESC LIMIT " + PLAYER_LIMIT;
+	private static final String SELECT_CHARACTERS_BY_RACE = "SELECT charId FROM characters WHERE level > 84 AND race = ? ORDER BY exp DESC LIMIT " + PLAYER_LIMIT;
+	
+	private static final String GET_CURRENT_CYCLE_DATA = "SELECT characters.char_name, characters.level, characters.base_class, characters.clanid, olympiad_nobles.charId, olympiad_nobles.olympiad_points, olympiad_nobles.competitions_won, olympiad_nobles.competitions_lost FROM characters, olympiad_nobles WHERE characters.charId = olympiad_nobles.charId ORDER BY olympiad_nobles.olympiad_points DESC LIMIT " + PLAYER_LIMIT;
+	private static final String GET_CHARACTERS_BY_CLASS = "SELECT characters.charId, olympiad_nobles.olympiad_points FROM characters, olympiad_nobles WHERE olympiad_nobles.charId = characters.charId AND characters.base_class = ? ORDER BY olympiad_nobles.olympiad_points DESC LIMIT " + PLAYER_LIMIT;
 	
 	private final Map<Integer, StatsSet> _mainList = new ConcurrentHashMap<>();
 	private Map<Integer, StatsSet> _snapshotList = new ConcurrentHashMap<>();
@@ -53,26 +55,6 @@ public class RankManager
 		ThreadPool.scheduleAtFixedRate(this::update, 0, 1800000);
 	}
 	
-	public Map<Integer, StatsSet> getRankList()
-	{
-		return _mainList;
-	}
-	
-	public Map<Integer, StatsSet> getSnapshotList()
-	{
-		return _snapshotList;
-	}
-	
-	public Map<Integer, StatsSet> getOlyRankList()
-	{
-		return _mainOlyList;
-	}
-	
-	public Map<Integer, StatsSet> getSnapshotOlyList()
-	{
-		return _snapshotOlyList;
-	}
-	
 	private synchronized void update()
 	{
 		// Load charIds All
@@ -80,6 +62,7 @@ public class RankManager
 		_mainList.clear();
 		_snapshotOlyList = _mainOlyList;
 		_mainOlyList.clear();
+		
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement(SELECT_CHARACTERS))
 		{
@@ -117,6 +100,7 @@ public class RankManager
 		{
 			LOGGER.log(Level.WARNING, "Could not load chars total rank data: " + this + " - " + e.getMessage(), e);
 		}
+		
 		// load olympiad data.
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement(GET_CURRENT_CYCLE_DATA))
@@ -237,13 +221,33 @@ public class RankManager
 		}
 	}
 	
-	private static class SingletonHolder
+	public Map<Integer, StatsSet> getRankList()
 	{
-		protected static final RankManager INSTANCE = new RankManager();
+		return _mainList;
+	}
+	
+	public Map<Integer, StatsSet> getSnapshotList()
+	{
+		return _snapshotList;
+	}
+	
+	public Map<Integer, StatsSet> getOlyRankList()
+	{
+		return _mainOlyList;
+	}
+	
+	public Map<Integer, StatsSet> getSnapshotOlyList()
+	{
+		return _snapshotOlyList;
 	}
 	
 	public static RankManager getInstance()
 	{
 		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final RankManager INSTANCE = new RankManager();
 	}
 }

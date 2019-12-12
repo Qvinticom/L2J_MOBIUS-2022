@@ -48,5 +48,4 @@ public class RequestOlympiadRankingInfo implements IClientIncomingPacket
 	{
 		client.sendPacket(new ExOlympiadRankingInfo(client.getPlayer(), _tabId, _rankingType, _unk, _classId, _serverId));
 	}
-	
 }

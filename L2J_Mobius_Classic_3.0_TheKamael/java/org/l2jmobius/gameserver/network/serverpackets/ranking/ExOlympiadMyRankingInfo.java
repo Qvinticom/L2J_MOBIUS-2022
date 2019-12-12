@@ -26,6 +26,7 @@ import java.util.GregorianCalendar;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.network.PacketWriter;
+import org.l2jmobius.gameserver.instancemanager.RankManager;
 import org.l2jmobius.gameserver.model.StatsSet;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.entity.Hero;
@@ -38,8 +39,10 @@ import org.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
  */
 public class ExOlympiadMyRankingInfo implements IClientOutgoingPacket
 {
-	private static final String GET_CURRENT_CYCLE_DATA = "SELECT charId, olympiad_points, competitions_won, competitions_lost FROM olympiad_nobles WHERE class_id = ?";
-	private static final String GET_PREVIOUS_CYCLE_DATA = "SELECT charId, olympiad_points, competitions_won, competitions_lost FROM olympiad_nobles_eom WHERE class_id = ?";
+	// TODO: Move query and store data at RankManager.
+	private static final String GET_CURRENT_CYCLE_DATA = "SELECT charId, olympiad_points, competitions_won, competitions_lost FROM olympiad_nobles WHERE class_id = ? ORDER BY olympiad_points DESC LIMIT " + RankManager.PLAYER_LIMIT;
+	private static final String GET_PREVIOUS_CYCLE_DATA = "SELECT charId, olympiad_points, competitions_won, competitions_lost FROM olympiad_nobles_eom WHERE class_id = ? ORDER BY olympiad_points DESC LIMIT " + RankManager.PLAYER_LIMIT;
+	
 	private final PlayerInstance _player;
 	
 	public ExOlympiadMyRankingInfo(PlayerInstance player)
@@ -98,6 +101,7 @@ public class ExOlympiadMyRankingInfo implements IClientOutgoingPacket
 			{
 				LOGGER.warning("Olympiad my ranking: Couldnt load data: " + e.getMessage());
 			}
+			
 			int previousPlace = 0;
 			int previousWins = 0;
 			int previousLoses = 0;
@@ -126,6 +130,7 @@ public class ExOlympiadMyRankingInfo implements IClientOutgoingPacket
 			{
 				LOGGER.warning("Olympiad my ranking: Couldnt load data: " + e.getMessage());
 			}
+			
 			int heroCount = 0;
 			int legendCount = 0;
 			if (Hero.getInstance().getCompleteHeroes().containsKey(_player.getObjectId()))

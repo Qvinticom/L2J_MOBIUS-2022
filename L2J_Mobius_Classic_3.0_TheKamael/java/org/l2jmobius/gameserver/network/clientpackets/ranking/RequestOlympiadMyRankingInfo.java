@@ -37,5 +37,4 @@ public class RequestOlympiadMyRankingInfo implements IClientIncomingPacket
 	{
 		client.sendPacket(new ExOlympiadMyRankingInfo(client.getPlayer()));
 	}
-	
 }

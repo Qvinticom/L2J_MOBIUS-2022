@@ -141,6 +141,7 @@ import org.l2jmobius.gameserver.instancemanager.PetitionManager;
 import org.l2jmobius.gameserver.instancemanager.PremiumManager;
 import org.l2jmobius.gameserver.instancemanager.PunishmentManager;
 import org.l2jmobius.gameserver.instancemanager.QuestManager;
+import org.l2jmobius.gameserver.instancemanager.RankManager;
 import org.l2jmobius.gameserver.instancemanager.SellBuffsManager;
 import org.l2jmobius.gameserver.instancemanager.ServerRestartManager;
 import org.l2jmobius.gameserver.instancemanager.SiegeGuardManager;
@@ -351,6 +352,7 @@ public class GameServer
 		CursedWeaponsManager.getInstance();
 		TransformData.getInstance();
 		BotReportTable.getInstance();
+		RankManager.getInstance();
 		if (Config.SELLBUFF_ENABLED)
 		{
 			SellBuffsManager.getInstance();
