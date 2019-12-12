@@ -41,7 +41,7 @@ public class RequestTargetActionMenu implements IClientIncomingPacket
 	public void run(GameClient client)
 	{
 		final PlayerInstance player = client.getPlayer();
-		if (player == null)
+		if ((player == null) || player.isTargetingDisabled())
 		{
 			return;
 		}
