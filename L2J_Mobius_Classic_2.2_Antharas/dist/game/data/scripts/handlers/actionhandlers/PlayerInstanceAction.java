@@ -22,13 +22,14 @@ import org.l2jmobius.gameserver.enums.PrivateStoreType;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
 import org.l2jmobius.gameserver.handler.IActionHandler;
 import org.l2jmobius.gameserver.model.WorldObject;
-import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.SystemMessageId;
 import org.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
 public class PlayerInstanceAction implements IActionHandler
 {
+	private static final int CURSED_WEAPON_VICTIM_MIN_LEVEL = 21;
+	
 	/**
 	 * Manage actions when a player click on this PlayerInstance.<BR>
 	 * <BR>
@@ -76,7 +77,8 @@ public class PlayerInstanceAction implements IActionHandler
 		else if (interact)
 		{
 			// Check if this PlayerInstance has a Private Store
-			if (((PlayerInstance) target).getPrivateStoreType() != PrivateStoreType.NONE)
+			final PlayerInstance targetPlayer = target.getActingPlayer();
+			if (targetPlayer.getPrivateStoreType() != PrivateStoreType.NONE)
 			{
 				player.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, target);
 			}
@@ -85,9 +87,10 @@ public class PlayerInstanceAction implements IActionHandler
 				// Check if this PlayerInstance is autoAttackable
 				if (target.isAutoAttackable(player))
 				{
-					// player with lvl < 21 can't attack a cursed weapon holder
+					// Player with lvl < 21 can't attack a cursed weapon holder
 					// And a cursed weapon holder can't attack players with lvl < 21
-					if ((((PlayerInstance) target).isCursedWeaponEquipped() && (player.getLevel() < 21)) || (player.isCursedWeaponEquipped() && (((Creature) target).getLevel() < 21)))
+					if ((targetPlayer.isCursedWeaponEquipped() && (player.getLevel() < CURSED_WEAPON_VICTIM_MIN_LEVEL)) //
+						|| (player.isCursedWeaponEquipped() && (targetPlayer.getLevel() < CURSED_WEAPON_VICTIM_MIN_LEVEL)))
 					{
 						player.sendPacket(ActionFailed.STATIC_PACKET);
 					}

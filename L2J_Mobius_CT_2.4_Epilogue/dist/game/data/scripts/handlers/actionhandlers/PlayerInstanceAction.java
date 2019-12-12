@@ -51,70 +51,72 @@ public class PlayerInstanceAction implements IActionHandler
 	 * <BR>
 	 * <li>Client packet : Action, AttackRequest</li><BR>
 	 * <BR>
-	 * @param activeChar The player that start an action on target PlayerInstance
+	 * @param player The player that start an action on target PlayerInstance
 	 */
 	@Override
-	public boolean action(PlayerInstance activeChar, WorldObject target, boolean interact)
+	public boolean action(PlayerInstance player, WorldObject target, boolean interact)
 	{
 		// See description in TvTEvent.java
-		if (!TvTEvent.onAction(activeChar, target.getObjectId()))
+		if (!TvTEvent.onAction(player, target.getObjectId()))
 		{
 			return false;
 		}
 		
 		// Check if the PlayerInstance is confused
-		if (activeChar.isOutOfControl())
+		if (player.isOutOfControl())
 		{
 			return false;
 		}
 		
 		// Aggression target lock effect
-		if (activeChar.isLockedTarget() && (activeChar.getLockedTarget() != target))
+		if (player.isLockedTarget() && (player.getLockedTarget() != target))
 		{
-			activeChar.sendPacket(SystemMessageId.FAILED_TO_CHANGE_ATTACK_TARGET);
+			player.sendPacket(SystemMessageId.FAILED_TO_CHANGE_ATTACK_TARGET);
 			return false;
 		}
 		
-		// Check if the activeChar already target this PlayerInstance
-		if (activeChar.getTarget() != target)
+		// Check if the player already target this PlayerInstance
+		if (player.getTarget() != target)
 		{
-			// Set the target of the activeChar
-			activeChar.setTarget(target);
+			// Set the target of the player
+			player.setTarget(target);
 		}
 		else if (interact)
 		{
-			final PlayerInstance player = target.getActingPlayer();
 			// Check if this PlayerInstance has a Private Store
-			if (player.getPrivateStoreType() != PrivateStoreType.NONE)
+			final PlayerInstance targetPlayer = target.getActingPlayer();
+			if (targetPlayer.getPrivateStoreType() != PrivateStoreType.NONE)
 			{
-				activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, player);
+				player.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, target);
 			}
 			else
 			{
 				// Check if this PlayerInstance is autoAttackable
-				if (player.isAutoAttackable(activeChar))
+				if (target.isAutoAttackable(player))
 				{
-					if ((player.isCursedWeaponEquipped() && (activeChar.getLevel() < CURSED_WEAPON_VICTIM_MIN_LEVEL)) //
-						|| (activeChar.isCursedWeaponEquipped() && (player.getLevel() < CURSED_WEAPON_VICTIM_MIN_LEVEL)))
+					// Player with lvl < 21 can't attack a cursed weapon holder
+					// And a cursed weapon holder can't attack players with lvl < 21
+					if ((targetPlayer.isCursedWeaponEquipped() && (player.getLevel() < CURSED_WEAPON_VICTIM_MIN_LEVEL)) //
+						|| (player.isCursedWeaponEquipped() && (targetPlayer.getLevel() < CURSED_WEAPON_VICTIM_MIN_LEVEL)))
 					{
-						activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+						player.sendPacket(ActionFailed.STATIC_PACKET);
 					}
 					else
 					{
-						if (GeoEngine.getInstance().canSeeTarget(activeChar, player))
+						if (GeoEngine.getInstance().canSeeTarget(player, target))
 						{
-							activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
-							activeChar.onActionRequest();
+							player.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
+							player.onActionRequest();
 						}
 					}
 				}
 				else
 				{
-					// This Action Failed packet avoids activeChar getting stuck when clicking three or more times
-					activeChar.sendPacket(ActionFailed.STATIC_PACKET);
-					if (GeoEngine.getInstance().canSeeTarget(activeChar, player))
+					// This Action Failed packet avoids player getting stuck when clicking three or more times
+					player.sendPacket(ActionFailed.STATIC_PACKET);
+					if (GeoEngine.getInstance().canSeeTarget(player, target))
 					{
-						activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, player);
+						player.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, target);
 					}
 				}
 			}
