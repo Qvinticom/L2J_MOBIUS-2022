@@ -107,18 +107,6 @@ public class EnchantScroll extends AbstractEnchantItem
 	@Override
 	public boolean isValid(ItemInstance itemToEnchant, EnchantSupportItem supportItem)
 	{
-		for (EnchantScroll scroll : EnchantItemData.getInstance().getScrolls())
-		{
-			if (scroll.getId() == getId())
-			{
-				continue;
-			}
-			final Set<Integer> scrollItems = scroll.getItems();
-			if ((scrollItems != null) && scrollItems.contains(itemToEnchant.getId()))
-			{
-				return false;
-			}
-		}
 		if ((_items != null) && !_items.contains(itemToEnchant.getId()))
 		{
 			return false;
@@ -136,6 +124,21 @@ public class EnchantScroll extends AbstractEnchantItem
 			else if (supportItem.isWeapon() != isWeapon())
 			{
 				return false;
+			}
+		}
+		if (_items == null)
+		{
+			for (EnchantScroll scroll : EnchantItemData.getInstance().getScrolls())
+			{
+				if (scroll.getId() == getId())
+				{
+					continue;
+				}
+				final Set<Integer> scrollItems = scroll.getItems();
+				if ((scrollItems != null) && scrollItems.contains(itemToEnchant.getId()))
+				{
+					return false;
+				}
 			}
 		}
 		return super.isValid(itemToEnchant, supportItem);
