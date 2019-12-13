@@ -126,7 +126,7 @@ public class RequestBRPresentBuyProduct implements IClientIncomingPacket
 			final Mail attachement = mail.createAttachments();
 			for (PrimeShopItem subItem : item.getItems())
 			{
-				attachement.addItem("Prime Shop Gift", subItem.getId(), subItem.getCount(), player, this);
+				attachement.addItem("Prime Shop Gift", subItem.getId(), subItem.getCount() * _count, player, this);
 			}
 			MailManager.getInstance().sendMessage(mail);
 		}
