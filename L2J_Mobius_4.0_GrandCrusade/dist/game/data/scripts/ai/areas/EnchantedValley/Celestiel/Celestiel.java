@@ -16,6 +16,7 @@
  */
 package ai.areas.EnchantedValley.Celestiel;
 
+import org.l2jmobius.gameserver.enums.Faction;
 import org.l2jmobius.gameserver.model.Location;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -64,12 +65,26 @@ public class Celestiel extends AbstractNpcAI
 			}
 			case "south":
 			{
-				player.teleToLocation(SOUTH_LOCATION);
+				if (player.getFactionLevel(Faction.MOTHER_TREE_GUARDIANS) < 2)
+				{
+					htmltext = "34234-5.html";
+				}
+				else
+				{
+					player.teleToLocation(SOUTH_LOCATION);
+				}
 				break;
 			}
 			case "north":
 			{
-				player.teleToLocation(NORTH_LOCATION);
+				if (player.getFactionLevel(Faction.MOTHER_TREE_GUARDIANS) < 2)
+				{
+					htmltext = "34234-5.html";
+				}
+				else
+				{
+					player.teleToLocation(NORTH_LOCATION);
+				}
 				break;
 			}
 		}
@@ -79,7 +94,6 @@ public class Celestiel extends AbstractNpcAI
 	@Override
 	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
-		
 		player.sendPacket(new PlaySound(3, CELESTIEL_VOICE[getRandom(2)], 0, 0, 0, 0, 0));
 		return "34234.html";
 	}
@@ -88,5 +102,4 @@ public class Celestiel extends AbstractNpcAI
 	{
 		new Celestiel();
 	}
-	
 }
