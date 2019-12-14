@@ -1030,7 +1030,7 @@ public class Npc extends Creature
 		_spiritshotamount = getTemplate().getSpiritShot();
 		_killingBlowWeaponId = 0;
 		_isRandomAnimationEnabled = getTemplate().isRandomAnimationEnabled();
-		_isRandomWalkingEnabled = getTemplate().isRandomWalkEnabled();
+		_isRandomWalkingEnabled = !WalkingManager.getInstance().isTargeted(this) && getTemplate().isRandomWalkEnabled();
 		
 		if (isTeleporting())
 		{

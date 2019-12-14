@@ -29,6 +29,7 @@ import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.data.xml.impl.NpcData;
 import org.l2jmobius.gameserver.datatables.NpcPersonalAIData;
 import org.l2jmobius.gameserver.geoengine.GeoEngine;
+import org.l2jmobius.gameserver.instancemanager.WalkingManager;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
@@ -386,7 +387,7 @@ public class Spawn extends Location implements IIdentifiable, INamable
 			final int randX = newlocx + Rnd.get(Config.MOB_MIN_SPAWN_RANGE, Config.MOB_MAX_SPAWN_RANGE);
 			final int randY = newlocy + Rnd.get(Config.MOB_MIN_SPAWN_RANGE, Config.MOB_MAX_SPAWN_RANGE);
 			
-			if (npc.isMonster() && !npc.isQuestMonster() && !npc.isWalker() && !npc.isInsideZone(ZoneId.NO_BOOKMARK) && (getInstanceId() == 0) && GeoEngine.getInstance().canMoveToTarget(newlocx, newlocy, newlocz, randX, randY, newlocz, getInstanceId()) && !getTemplate().isUndying() && !npc.isRaid() && !npc.isRaidMinion() && !Config.MOBS_LIST_NOT_RANDOM.contains(npc.getId()))
+			if (npc.isMonster() && !npc.isQuestMonster() && !WalkingManager.getInstance().isTargeted(npc) && !npc.isInsideZone(ZoneId.NO_BOOKMARK) && (getInstanceId() == 0) && GeoEngine.getInstance().canMoveToTarget(newlocx, newlocy, newlocz, randX, randY, newlocz, getInstanceId()) && !getTemplate().isUndying() && !npc.isRaid() && !npc.isRaidMinion() && !Config.MOBS_LIST_NOT_RANDOM.contains(npc.getId()))
 			{
 				newlocx = randX;
 				newlocy = randY;

@@ -23,6 +23,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
+import java.util.logging.Logger;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
@@ -31,6 +32,7 @@ import org.w3c.dom.Node;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.util.IXmlReader;
 import org.l2jmobius.gameserver.ai.CtrlIntention;
+import org.l2jmobius.gameserver.data.xml.impl.NpcData;
 import org.l2jmobius.gameserver.enums.ChatType;
 import org.l2jmobius.gameserver.instancemanager.tasks.StartMovingTask;
 import org.l2jmobius.gameserver.model.Location;
@@ -51,6 +53,8 @@ import org.l2jmobius.gameserver.network.NpcStringId;
  */
 public class WalkingManager implements IXmlReader
 {
+	private static final Logger LOGGER = Logger.getLogger(WalkingManager.class.getName());
+	
 	// Repeat style:
 	// -1 - no repeat
 	// 0 - go back
@@ -63,6 +67,7 @@ public class WalkingManager implements IXmlReader
 	public static final byte REPEAT_TELE_FIRST = 2;
 	public static final byte REPEAT_RANDOM = 3;
 	
+	private final List<Integer> _targetedNpcIds = new ArrayList<>();
 	private final Map<String, WalkRoute> _routes = new HashMap<>(); // all available routes
 	private final Map<Integer, WalkInfo> _activeRoutes = new HashMap<>(); // each record represents NPC, moving by predefined route from _routes, and moving progress
 	private final Map<Integer, NpcRoutesHolder> _routesToAttach = new HashMap<>(); // each record represents NPC and all available routes for it
@@ -181,9 +186,21 @@ public class WalkingManager implements IXmlReader
 							final int y = Integer.parseInt(attrs.getNamedItem("spawnY").getNodeValue());
 							final int z = Integer.parseInt(attrs.getNamedItem("spawnZ").getNodeValue());
 							
-							final NpcRoutesHolder holder = _routesToAttach.containsKey(npcId) ? _routesToAttach.get(npcId) : new NpcRoutesHolder();
-							holder.addRoute(routeName, new Location(x, y, z));
-							_routesToAttach.put(npcId, holder);
+							if (NpcData.getInstance().getTemplate(npcId) != null)
+							{
+								final NpcRoutesHolder holder = _routesToAttach.containsKey(npcId) ? _routesToAttach.get(npcId) : new NpcRoutesHolder();
+								holder.addRoute(routeName, new Location(x, y, z));
+								_routesToAttach.put(npcId, holder);
+								
+								if (!_targetedNpcIds.contains(npcId))
+								{
+									_targetedNpcIds.add(npcId);
+								}
+							}
+							else
+							{
+								LOGGER.warning(getClass().getSimpleName() + ": NPC with id " + npcId + " for route '" + routeName + "' does not exist.");
+							}
 						}
 						catch (Exception e)
 						{
@@ -215,6 +232,15 @@ public class WalkingManager implements IXmlReader
 	public WalkRoute getRoute(String route)
 	{
 		return _routes.get(route);
+	}
+	
+	/**
+	 * @param npc NPC to check
+	 * @return {@code true} if given NPC id is registered as a route target.
+	 */
+	public boolean isTargeted(Npc npc)
+	{
+		return _targetedNpcIds.contains(npc.getId());
 	}
 	
 	/**
@@ -278,7 +304,7 @@ public class WalkingManager implements IXmlReader
 					final ScheduledFuture<?> task = _repeatMoveTasks.get(npc);
 					if ((task == null) || task.isCancelled() || task.isDone())
 					{
-						final ScheduledFuture<?> newTask = ThreadPool.scheduleAtFixedRate(new StartMovingTask(npc, routeName), 60000, 60000);
+						final ScheduledFuture<?> newTask = ThreadPool.scheduleAtFixedRate(new StartMovingTask(npc, routeName), 10000, 10000);
 						_repeatMoveTasks.put(npc, newTask);
 						walk.setWalkCheckTask(newTask); // start walk check task, for resuming walk after fight
 					}
@@ -290,7 +316,7 @@ public class WalkingManager implements IXmlReader
 					final ScheduledFuture<?> task = _startMoveTasks.get(npc);
 					if ((task == null) || task.isCancelled() || task.isDone())
 					{
-						_startMoveTasks.put(npc, ThreadPool.schedule(new StartMovingTask(npc, routeName), 60000));
+						_startMoveTasks.put(npc, ThreadPool.schedule(new StartMovingTask(npc, routeName), 10000));
 					}
 				}
 			}

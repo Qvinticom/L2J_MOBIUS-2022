@@ -42,6 +42,8 @@ import org.l2jmobius.gameserver.model.WalkRoute;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
 import org.l2jmobius.gameserver.model.actor.tasks.npc.walker.ArrivedTask;
+import org.l2jmobius.gameserver.model.events.EventDispatcher;
+import org.l2jmobius.gameserver.model.events.impl.creature.npc.OnNpcMoveNodeArrived;
 import org.l2jmobius.gameserver.model.holders.NpcRoutesHolder;
 import org.l2jmobius.gameserver.network.NpcStringId;
 
@@ -65,6 +67,7 @@ public class WalkingManager implements IXmlReader
 	public static final byte REPEAT_TELE_FIRST = 2;
 	public static final byte REPEAT_RANDOM = 3;
 	
+	private final List<Integer> _targetedNpcIds = new ArrayList<>();
 	private final Map<String, WalkRoute> _routes = new HashMap<>(); // all available routes
 	private final Map<Integer, WalkInfo> _activeRoutes = new HashMap<>(); // each record represents NPC, moving by predefined route from _routes, and moving progress
 	private final Map<Integer, NpcRoutesHolder> _routesToAttach = new HashMap<>(); // each record represents NPC and all available routes for it
@@ -87,8 +90,7 @@ public class WalkingManager implements IXmlReader
 	@Override
 	public void parseDocument(Document doc, File f)
 	{
-		final Node n = doc.getFirstChild();
-		for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
+		for (Node d = doc.getFirstChild().getFirstChild(); d != null; d = d.getNextSibling())
 		{
 			if (d.getNodeName().equals("route"))
 			{
@@ -189,6 +191,11 @@ public class WalkingManager implements IXmlReader
 								final NpcRoutesHolder holder = _routesToAttach.containsKey(npcId) ? _routesToAttach.get(npcId) : new NpcRoutesHolder();
 								holder.addRoute(routeName, new Location(x, y, z));
 								_routesToAttach.put(npcId, holder);
+								
+								if (!_targetedNpcIds.contains(npcId))
+								{
+									_targetedNpcIds.add(npcId);
+								}
 							}
 							else
 							{
@@ -212,36 +219,28 @@ public class WalkingManager implements IXmlReader
 	 */
 	public boolean isOnWalk(Npc npc)
 	{
-		MonsterInstance monster = null;
-		
-		if (npc.isMonster())
-		{
-			if (((MonsterInstance) npc).getLeader() == null)
-			{
-				monster = (MonsterInstance) npc;
-			}
-			else
-			{
-				monster = ((MonsterInstance) npc).getLeader();
-			}
-		}
-		
+		final MonsterInstance monster = npc.isMonster() ? ((MonsterInstance) npc).getLeader() == null ? (MonsterInstance) npc : ((MonsterInstance) npc).getLeader() : null;
 		if (((monster != null) && !isRegistered(monster)) || !isRegistered(npc))
 		{
 			return false;
 		}
 		
 		final WalkInfo walk = monster != null ? _activeRoutes.get(monster.getObjectId()) : _activeRoutes.get(npc.getObjectId());
-		if (walk.isStoppedByAttack() || walk.isSuspended())
-		{
-			return false;
-		}
-		return true;
+		return !walk.isStoppedByAttack() && !walk.isSuspended();
 	}
 	
 	public WalkRoute getRoute(String route)
 	{
 		return _routes.get(route);
+	}
+	
+	/**
+	 * @param npc NPC to check
+	 * @return {@code true} if given NPC id is registered as a route target.
+	 */
+	public boolean isTargeted(Npc npc)
+	{
+		return _targetedNpcIds.contains(npc.getId());
 	}
 	
 	/**
@@ -288,7 +287,7 @@ public class WalkingManager implements IXmlReader
 					
 					if (!npc.isInsideRadius3D(node, 3000))
 					{
-						LOGGER.warning("Route '" + routeName + "': NPC (id=" + npc.getId() + ", x=" + npc.getX() + ", y=" + npc.getY() + ", z=" + npc.getZ() + ") is too far from starting point (node x=" + node.getX() + ", y=" + node.getY() + ", z=" + node.getZ() + ", range=" + npc.calculateDistance3D(node) + "). Teleporting to proper location.");
+						LOGGER.warning(getClass().getSimpleName() + ": " + "Route '" + routeName + "': NPC (id=" + npc.getId() + ", x=" + npc.getX() + ", y=" + npc.getY() + ", z=" + npc.getZ() + ") is too far from starting point (node x=" + node.getX() + ", y=" + node.getY() + ", z=" + node.getZ() + ", range=" + npc.calculateDistance3D(node) + "). Teleporting to proper location.");
 						npc.teleToLocation(node);
 					}
 					
@@ -305,7 +304,7 @@ public class WalkingManager implements IXmlReader
 					final ScheduledFuture<?> task = _repeatMoveTasks.get(npc);
 					if ((task == null) || task.isCancelled() || task.isDone())
 					{
-						final ScheduledFuture<?> newTask = ThreadPool.scheduleAtFixedRate(new StartMovingTask(npc, routeName), 60000, 60000);
+						final ScheduledFuture<?> newTask = ThreadPool.scheduleAtFixedRate(new StartMovingTask(npc, routeName), 10000, 10000);
 						_repeatMoveTasks.put(npc, newTask);
 						walk.setWalkCheckTask(newTask); // start walk check task, for resuming walk after fight
 					}
@@ -317,7 +316,7 @@ public class WalkingManager implements IXmlReader
 					final ScheduledFuture<?> task = _startMoveTasks.get(npc);
 					if ((task == null) || task.isCancelled() || task.isDone())
 					{
-						_startMoveTasks.put(npc, ThreadPool.schedule(new StartMovingTask(npc, routeName), 60000));
+						_startMoveTasks.put(npc, ThreadPool.schedule(new StartMovingTask(npc, routeName), 10000));
 					}
 				}
 			}
@@ -391,19 +390,7 @@ public class WalkingManager implements IXmlReader
 	 */
 	public void stopMoving(Npc npc, boolean suspend, boolean stoppedByAttack)
 	{
-		MonsterInstance monster = null;
-		
-		if (npc.isMonster())
-		{
-			if (((MonsterInstance) npc).getLeader() == null)
-			{
-				monster = (MonsterInstance) npc;
-			}
-			else
-			{
-				monster = ((MonsterInstance) npc).getLeader();
-			}
-		}
+		final MonsterInstance monster = npc.isMonster() ? ((MonsterInstance) npc).getLeader() == null ? (MonsterInstance) npc : ((MonsterInstance) npc).getLeader() : null;
 		
 		if (((monster != null) && !isRegistered(monster)) || !isRegistered(npc))
 		{
@@ -433,35 +420,43 @@ public class WalkingManager implements IXmlReader
 	 */
 	public void onArrived(Npc npc)
 	{
-		if (_activeRoutes.containsKey(npc.getObjectId()))
+		if (!_activeRoutes.containsKey(npc.getObjectId()))
 		{
-			final WalkInfo walk = _activeRoutes.get(npc.getObjectId());
-			
-			// Opposite should not happen... but happens sometime
-			if ((walk.getCurrentNodeId() >= 0) && (walk.getCurrentNodeId() < walk.getRoute().getNodesCount()))
-			{
-				final NpcWalkerNode node = walk.getRoute().getNodeList().get(walk.getCurrentNodeId());
-				if (npc.isInsideRadius2D(node, 10))
-				{
-					walk.calculateNextNode(npc);
-					walk.setBlocked(true); // prevents to be ran from walk check task, if there is delay in this node.
-					
-					if (node.getNpcString() != null)
-					{
-						npc.broadcastSay(ChatType.NPC_GENERAL, node.getNpcString());
-					}
-					else if (!node.getChatText().isEmpty())
-					{
-						npc.broadcastSay(ChatType.NPC_GENERAL, node.getChatText());
-					}
-					
-					final ScheduledFuture<?> task = _arriveTasks.get(npc);
-					if ((task == null) || task.isCancelled() || task.isDone())
-					{
-						_arriveTasks.put(npc, ThreadPool.schedule(new ArrivedTask(npc, walk), 100 + (node.getDelay() * 1000)));
-					}
-				}
-			}
+			return;
+		}
+		
+		// Notify quest
+		EventDispatcher.getInstance().notifyEventAsync(new OnNpcMoveNodeArrived(npc), npc);
+		
+		final WalkInfo walk = _activeRoutes.get(npc.getObjectId());
+		// Opposite should not happen... but happens sometime
+		if ((walk.getCurrentNodeId() < 0) || (walk.getCurrentNodeId() >= walk.getRoute().getNodesCount()))
+		{
+			return;
+		}
+		
+		final NpcWalkerNode node = walk.getRoute().getNodeList().get(walk.getCurrentNodeId());
+		if (!npc.isInsideRadius2D(node, 10))
+		{
+			return;
+		}
+		
+		walk.calculateNextNode(npc);
+		walk.setBlocked(true); // prevents to be ran from walk check task, if there is delay in this node.
+		
+		if (node.getNpcString() != null)
+		{
+			npc.broadcastSay(ChatType.NPC_GENERAL, node.getNpcString());
+		}
+		else if (!node.getChatText().isEmpty())
+		{
+			npc.broadcastSay(ChatType.NPC_GENERAL, node.getChatText());
+		}
+		
+		final ScheduledFuture<?> task = _arriveTasks.get(npc);
+		if ((task == null) || task.isCancelled() || task.isDone())
+		{
+			_arriveTasks.put(npc, ThreadPool.schedule(new ArrivedTask(npc, walk), 100 + (node.getDelay() * 1000)));
 		}
 	}
 	
