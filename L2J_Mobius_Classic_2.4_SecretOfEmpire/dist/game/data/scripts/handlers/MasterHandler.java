@@ -106,6 +106,7 @@ import handlers.admincommandhandlers.AdminMessages;
 import handlers.admincommandhandlers.AdminMissingHtmls;
 import handlers.admincommandhandlers.AdminMobGroup;
 import handlers.admincommandhandlers.AdminOlympiad;
+import handlers.admincommandhandlers.AdminOnline;
 import handlers.admincommandhandlers.AdminPForge;
 import handlers.admincommandhandlers.AdminPathNode;
 import handlers.admincommandhandlers.AdminPcCafePoints;
@@ -444,6 +445,7 @@ public class MasterHandler
 			AdminMissingHtmls.class,
 			AdminMobGroup.class,
 			AdminOlympiad.class,
+			AdminOnline.class,
 			AdminPathNode.class,
 			AdminPcCafePoints.class,
 			AdminPetition.class,
