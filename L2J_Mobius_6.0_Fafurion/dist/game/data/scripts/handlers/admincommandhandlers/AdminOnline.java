@@ -63,14 +63,13 @@ public class AdminOnline implements IAdminCommandHandler
 				
 				total++;
 				
-				if (player.isOnline())
-				{
-					online++;
-				}
-				
 				if (player.isInOfflineMode())
 				{
 					offline++;
+				}
+				else if (player.isOnline())
+				{
+					online++;
 				}
 				
 				if (player.isInsideZone(ZoneId.PEACE))
