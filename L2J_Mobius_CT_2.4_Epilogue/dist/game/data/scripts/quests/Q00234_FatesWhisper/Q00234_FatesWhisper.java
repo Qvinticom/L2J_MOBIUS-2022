@@ -1030,87 +1030,87 @@ public class Q00234_FatesWhisper extends Quest
 		return htmltext;
 	}
 	
-	private boolean calculateReward(QuestState qs, PlayerInstance player, int REWARD)
+	private boolean calculateReward(QuestState qs, PlayerInstance player, int reward)
 	{
 		switch (qs.getMemoState())
 		{
 			case 11:
 			{
-				return getReward(qs, player, SWORD_OF_DAMASCUS, SWORD_OF_DAMASCUS_FOCUS, SWORD_OF_DAMASCUS_CRT_DAMAGE, SWORD_OF_DAMASCUS_HASTE, REWARD);
+				return getReward(qs, player, SWORD_OF_DAMASCUS, SWORD_OF_DAMASCUS_FOCUS, SWORD_OF_DAMASCUS_CRT_DAMAGE, SWORD_OF_DAMASCUS_HASTE, reward);
 			}
 			case 12:
 			{
-				return getReward(qs, player, HAZARD_BOW, HAZARD_BOW_GUIDENCE, HAZARD_BOW_QUICKRECOVERY, HAZARD_BOW_CHEAPSHOT, REWARD);
+				return getReward(qs, player, HAZARD_BOW, HAZARD_BOW_GUIDENCE, HAZARD_BOW_QUICKRECOVERY, HAZARD_BOW_CHEAPSHOT, reward);
 			}
 			case 13:
 			{
-				return getReward(qs, player, LANCIA, LANCIA_ANGER, LANCIA_CRT_STUN, LANCIA_LONGBLOW, REWARD);
+				return getReward(qs, player, LANCIA, LANCIA_ANGER, LANCIA_CRT_STUN, LANCIA_LONGBLOW, reward);
 			}
 			case 14:
 			{
-				return getReward(qs, player, ART_OF_BATTLE_AXE, ART_OF_BATTLE_AXE_HEALTH, ART_OF_BATTLE_AXE_RSK_FOCUS, ART_OF_BATTLE_AXE_HASTE, REWARD);
+				return getReward(qs, player, ART_OF_BATTLE_AXE, ART_OF_BATTLE_AXE_HEALTH, ART_OF_BATTLE_AXE_RSK_FOCUS, ART_OF_BATTLE_AXE_HASTE, reward);
 			}
 			case 15:
 			{
-				return getReward(qs, player, STAFF_OF_EVIL_SPRIT, STAFF_OF_EVIL_SPRIT_MAGICFOCUS, STAFF_OF_EVIL_SPRIT_MAGICBLESSTHEBODY, STAFF_OF_EVIL_SPRIT_MAGICPOISON, REWARD);
+				return getReward(qs, player, STAFF_OF_EVIL_SPRIT, STAFF_OF_EVIL_SPRIT_MAGICFOCUS, STAFF_OF_EVIL_SPRIT_MAGICBLESSTHEBODY, STAFF_OF_EVIL_SPRIT_MAGICPOISON, reward);
 			}
 			case 16:
 			{
-				return getReward(qs, player, DEMONS_SWORD, DEMONS_SWORD_CRT_BLEED, DEMONS_SWORD_CRT_POISON, DEMONS_SWORD_MIGHTMOTAL, REWARD);
+				return getReward(qs, player, DEMONS_SWORD, DEMONS_SWORD_CRT_BLEED, DEMONS_SWORD_CRT_POISON, DEMONS_SWORD_MIGHTMOTAL, reward);
 			}
 			case 17:
 			{
-				return getReward(qs, player, BELLION_CESTUS, BELLION_CESTUS_CRT_DRAIN, BELLION_CESTUS_CRT_POISON, BELLION_CESTUS_RSK_HASTE, REWARD);
+				return getReward(qs, player, BELLION_CESTUS, BELLION_CESTUS_CRT_DRAIN, BELLION_CESTUS_CRT_POISON, BELLION_CESTUS_RSK_HASTE, reward);
 			}
 			case 18:
 			{
-				return getReward(qs, player, DEADMANS_GLORY, DEADMANS_GLORY_ANGER, DEADMANS_GLORY_HEALTH, DEADMANS_GLORY_HASTE, REWARD);
+				return getReward(qs, player, DEADMANS_GLORY, DEADMANS_GLORY_ANGER, DEADMANS_GLORY_HEALTH, DEADMANS_GLORY_HASTE, reward);
 			}
 			case 19:
 			{
-				return getReward(qs, player, SAMURAI_LONGSWORD_SAMURAI_LONGSWORD, 0, 0, 0, REWARD);
+				return getReward(qs, player, SAMURAI_LONGSWORD_SAMURAI_LONGSWORD, 0, 0, 0, reward);
 			}
 			case 41:
 			{
-				return getReward(qs, player, GUARDIANS_SWORD, GUARDIANS_SWORD_CRT_DRAIN, GUARDIANS_SWORD_HEALTH, GUARDIANS_SWORD_CRT_BLEED, REWARD);
+				return getReward(qs, player, GUARDIANS_SWORD, GUARDIANS_SWORD_CRT_DRAIN, GUARDIANS_SWORD_HEALTH, GUARDIANS_SWORD_CRT_BLEED, reward);
 			}
 			case 42:
 			{
-				return getReward(qs, player, TEARS_OF_WIZARD, TEARS_OF_WIZARD_ACUMEN, TEARS_OF_WIZARD_MAGICPOWER, TEARS_OF_WIZARD_UPDOWN, REWARD);
+				return getReward(qs, player, TEARS_OF_WIZARD, TEARS_OF_WIZARD_ACUMEN, TEARS_OF_WIZARD_MAGICPOWER, TEARS_OF_WIZARD_UPDOWN, reward);
 			}
 			case 43:
 			{
-				return getReward(qs, player, STAR_BUSTER, STAR_BUSTER_HEALTH, STAR_BUSTER_HASTE, STAR_BUSTER_RSK_FOCUS, REWARD);
+				return getReward(qs, player, STAR_BUSTER, STAR_BUSTER_HEALTH, STAR_BUSTER_HASTE, STAR_BUSTER_RSK_FOCUS, reward);
 			}
 			case 44:
 			{
-				return getReward(qs, player, BONE_OF_KAIM_VANUL, BONE_OF_KAIM_VANUL_MANAUP, BONE_OF_KAIM_VANUL_MAGICSILENCE, BONE_OF_KAIM_VANUL_UPDOWN, REWARD);
+				return getReward(qs, player, BONE_OF_KAIM_VANUL, BONE_OF_KAIM_VANUL_MANAUP, BONE_OF_KAIM_VANUL_MAGICSILENCE, BONE_OF_KAIM_VANUL_UPDOWN, reward);
 			}
 		}
 		return false;
 	}
 	
-	private boolean getReward(QuestState qs, PlayerInstance player, int ITEM1, int ITEM2, int ITEM3, int ITEM4, int REWARD)
+	private boolean getReward(QuestState qs, PlayerInstance player, int item1, int item2, int item3, int item4, int reward)
 	{
-		if (hasAtLeastOneQuestItem(player, ITEM1, ITEM2, ITEM3, ITEM4))
+		if (hasAtLeastOneQuestItem(player, item1, item2, item3, item4))
 		{
-			giveItems(player, REWARD, 1);
+			giveItems(player, reward, 1);
 			giveItems(player, Q_STAR_OF_DESTINY, 1);
-			if (hasQuestItems(player, ITEM1))
+			if (hasQuestItems(player, item1))
 			{
-				takeItems(player, ITEM1, 1);
+				takeItems(player, item1, 1);
 			}
-			else if (hasQuestItems(player, ITEM2))
+			else if (hasQuestItems(player, item2))
 			{
-				takeItems(player, ITEM2, 1);
+				takeItems(player, item2, 1);
 			}
-			else if (hasQuestItems(player, ITEM3))
+			else if (hasQuestItems(player, item3))
 			{
-				takeItems(player, ITEM3, 1);
+				takeItems(player, item3, 1);
 			}
-			else if (hasQuestItems(player, ITEM4))
+			else if (hasQuestItems(player, item4))
 			{
-				takeItems(player, ITEM4, 1);
+				takeItems(player, item4, 1);
 			}
 			qs.exitQuest(false, true);
 			player.broadcastSocialAction(3);
@@ -1204,7 +1204,7 @@ public class Q00234_FatesWhisper extends Quest
 		final QuestState qs = getQuestState(player, false);
 		final List<QuestState> candidates = new ArrayList<>();
 		
-		if ((qs != null) && qs.isStarted() && (qs.getMemoState() == memoState) && !hasQuestItems(player, Q_WHITE_FABRIC_Q0234))
+		if ((qs != null) && qs.isStarted() && (qs.getMemoState() == memoState) && hasQuestItems(player, Q_WHITE_FABRIC_Q0234))
 		{
 			candidates.add(qs);
 			candidates.add(qs);
@@ -1216,12 +1216,12 @@ public class Q00234_FatesWhisper extends Quest
 			{
 				
 				final QuestState qss = getQuestState(pm, false);
-				if ((qss != null) && qss.isStarted() && (qss.getMemoState() == memoState) && !hasQuestItems(player, Q_WHITE_FABRIC_Q0234) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, pm, true))
+				if ((qss != null) && qss.isStarted() && (qss.getMemoState() == memoState) && hasQuestItems(player, Q_WHITE_FABRIC_Q0234) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, pm, true))
 				{
 					candidates.add(qss);
 				}
 			});
 		}
-		return candidates.isEmpty() ? null : candidates.get(getRandom(candidates.size()));
+		return getRandomEntry(candidates);
 	}
 }
