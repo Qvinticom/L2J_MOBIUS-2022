@@ -1166,7 +1166,7 @@ public class Q00234_FatesWhisper extends Quest
 					if (member != null)
 					{
 						takeItems(member, Q_WHITE_FABRIC_Q0234, 1);
-						giveItemRandomly(member, npc, Q_BLOODY_FABRIC_Q0234, 1, 0, 1, false);
+						giveItems(member, Q_BLOODY_FABRIC_Q0234, 1);
 						if (getQuestItemsCount(member, Q_BLOODY_FABRIC_Q0234) >= 30)
 						{
 							qs.setCond(9, true);
