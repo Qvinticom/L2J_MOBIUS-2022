@@ -16,6 +16,8 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import java.util.Collection;
+
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.instance.ItemInstance;
@@ -26,8 +28,8 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExBuySellList extends AbstractItemPacket
 {
-	private ItemInstance[] _sellList = null;
-	private ItemInstance[] _refundList = null;
+	private Collection<ItemInstance> _sellList = null;
+	private Collection<ItemInstance> _refundList = null;
 	private final boolean _done;
 	
 	public ExBuySellList(PlayerInstance player, boolean done)
@@ -48,7 +50,7 @@ public class ExBuySellList extends AbstractItemPacket
 		
 		if ((_sellList != null))
 		{
-			packet.writeH(_sellList.length);
+			packet.writeH(_sellList.size());
 			for (ItemInstance item : _sellList)
 			{
 				writeItem(packet, item);
@@ -60,9 +62,9 @@ public class ExBuySellList extends AbstractItemPacket
 			packet.writeH(0x00);
 		}
 		
-		if ((_refundList != null) && (_refundList.length > 0))
+		if ((_refundList != null) && (!_refundList.isEmpty()))
 		{
-			packet.writeH(_refundList.length);
+			packet.writeH(_refundList.size());
 			int i = 0;
 			for (ItemInstance item : _refundList)
 			{

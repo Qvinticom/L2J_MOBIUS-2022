@@ -41,11 +41,11 @@ public class ConditionTargetInvSize extends Condition
 	@Override
 	public boolean testImpl(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		if ((effected == null) || !effected.isPlayer())
+		if ((effected != null) && effected.isPlayer())
 		{
-			return false;
+			final PlayerInstance target = effected.getActingPlayer();
+			return target.getInventory().getSize(i -> !i.isQuestItem()) <= (target.getInventoryLimit() - _size);
 		}
-		final PlayerInstance target = effected.getActingPlayer();
-		return target.getInventory().getSize(false) <= (target.getInventoryLimit() - _size);
+		return false;
 	}
 }

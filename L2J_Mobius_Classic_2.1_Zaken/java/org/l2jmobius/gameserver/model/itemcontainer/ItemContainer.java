@@ -544,11 +544,7 @@ public abstract class ItemContainer
 	public ItemInstance destroyItem(String process, int objectId, long count, PlayerInstance actor, Object reference)
 	{
 		final ItemInstance item = getItemByObjectId(objectId);
-		if (item == null)
-		{
-			return null;
-		}
-		return destroyItem(process, item, count, actor, reference);
+		return item == null ? null : destroyItem(process, item, count, actor, reference);
 	}
 	
 	/**
@@ -563,11 +559,7 @@ public abstract class ItemContainer
 	public ItemInstance destroyItemByItemId(String process, int itemId, long count, PlayerInstance actor, Object reference)
 	{
 		final ItemInstance item = getItemByItemId(itemId);
-		if (item == null)
-		{
-			return null;
-		}
-		return destroyItem(process, item, count, actor, reference);
+		return item == null ? null : destroyItem(process, item, count, actor, reference);
 	}
 	
 	/**

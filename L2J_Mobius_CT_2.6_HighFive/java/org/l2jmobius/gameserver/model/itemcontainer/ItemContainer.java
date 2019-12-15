@@ -19,9 +19,11 @@ package org.l2jmobius.gameserver.model.itemcontainer;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.function.Predicate;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -45,8 +47,6 @@ public abstract class ItemContainer
 	
 	protected final List<ItemInstance> _items = new CopyOnWriteArrayList<>();
 	
-	int _ownerId = 0;
-	
 	protected ItemContainer()
 	{
 	}
@@ -65,12 +65,7 @@ public abstract class ItemContainer
 	 */
 	public int getOwnerId()
 	{
-		return getOwner() == null ? _ownerId : getOwner().getObjectId();
-	}
-	
-	public void setOwnerId(int id)
-	{
-		_ownerId = id;
+		return getOwner() == null ? 0 : getOwner().getObjectId();
 	}
 	
 	/**
@@ -82,11 +77,27 @@ public abstract class ItemContainer
 	}
 	
 	/**
-	 * @return the items in inventory
+	 * @param filter
+	 * @param filters
+	 * @return the quantity of items in the inventory
 	 */
-	public ItemInstance[] getItems()
+	@SafeVarargs
+	public final int getSize(Predicate<ItemInstance> filter, Predicate<ItemInstance>... filters)
 	{
-		return _items.toArray(new ItemInstance[_items.size()]);
+		for (Predicate<ItemInstance> additionalFilter : filters)
+		{
+			filter = filter.and(additionalFilter);
+		}
+		return (int) _items.stream().filter(filter).count();
+	}
+	
+	/**
+	 * Gets the items in inventory.
+	 * @return the items in inventory.
+	 */
+	public Collection<ItemInstance> getItems()
+	{
+		return _items;
 	}
 	
 	/**

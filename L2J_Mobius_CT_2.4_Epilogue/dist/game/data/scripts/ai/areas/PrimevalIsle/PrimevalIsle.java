@@ -462,7 +462,7 @@ public class PrimevalIsle extends AbstractNpcAI
 		if ((npc.getId() == SAILREN) || (getRandom(100) < 3))
 		{
 			final PlayerInstance player = npc.getId() == SAILREN ? getRandomPartyMember(killer) : killer;
-			if (player.getInventory().getSize(false) <= (player.getInventoryLimit() * 0.8))
+			if (player.isInventoryUnder80(false))
 			{
 				giveItems(player, DEINONYCHUS, 1);
 				final ItemInstance summonItem = player.getInventory().getItemByItemId(DEINONYCHUS);

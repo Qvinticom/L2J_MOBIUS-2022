@@ -17,6 +17,7 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 import org.l2jmobius.Config;
@@ -37,8 +38,8 @@ public class ExBuySellList implements IClientOutgoingPacket
 	private final List<Product> _buyList = new ArrayList<>();
 	private final long _money;
 	private double _taxRate = 0;
-	private ItemInstance[] _sellList = null;
-	private ItemInstance[] _refundList = null;
+	private Collection<ItemInstance> _sellList = null;
+	private Collection<ItemInstance> _refundList = null;
 	private final boolean _done;
 	
 	public ExBuySellList(PlayerInstance player, BuyListHolder list, boolean done)
@@ -53,7 +54,7 @@ public class ExBuySellList implements IClientOutgoingPacket
 			}
 			_buyList.add(item);
 		}
-		_sellList = player.getInventory().getAvailableItems(true, false, false);
+		_sellList = player.getInventory().getAvailableItems(false, false, false);
 		if (player.hasRefund())
 		{
 			_refundList = player.getRefund().getItems();
@@ -132,9 +133,9 @@ public class ExBuySellList implements IClientOutgoingPacket
 			packet.writeH(0x00); // Enchant effect 3
 		}
 		
-		if ((_sellList != null) && (_sellList.length > 0))
+		if ((_sellList != null) && !_sellList.isEmpty())
 		{
-			packet.writeH(_sellList.length);
+			packet.writeH(_sellList.size());
 			for (ItemInstance item : _sellList)
 			{
 				packet.writeH(item.getItem().getType1());
@@ -166,9 +167,9 @@ public class ExBuySellList implements IClientOutgoingPacket
 			packet.writeH(0x00);
 		}
 		
-		if ((_refundList != null) && (_refundList.length > 0))
+		if ((_refundList != null) && !_refundList.isEmpty())
 		{
-			packet.writeH(_refundList.length);
+			packet.writeH(_refundList.size());
 			int idx = 0;
 			for (ItemInstance item : _refundList)
 			{
@@ -199,6 +200,7 @@ public class ExBuySellList implements IClientOutgoingPacket
 		}
 		
 		packet.writeC(_done ? 0x01 : 0x00);
+		
 		return true;
 	}
 }

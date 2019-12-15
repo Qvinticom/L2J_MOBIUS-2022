@@ -17,6 +17,7 @@
 package org.l2jmobius.gameserver.model.multisell;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.LinkedList;
 
 import org.l2jmobius.gameserver.model.actor.Npc;
@@ -50,7 +51,7 @@ public class PreparedListContainer extends ListContainer
 				return;
 			}
 			
-			final ItemInstance[] items;
+			final Collection<ItemInstance> items;
 			if (getMaintainEnchantment())
 			{
 				items = player.getInventory().getUniqueItemsByEnchantLevel(false, false, false);

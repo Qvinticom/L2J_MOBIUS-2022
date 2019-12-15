@@ -79,13 +79,7 @@ public class RequestRefundItem implements IClientIncomingPacket
 			return;
 		}
 		
-		if (_items == null)
-		{
-			client.sendPacket(ActionFailed.STATIC_PACKET);
-			return;
-		}
-		
-		if (!player.hasRefund())
+		if ((_items == null) || !player.hasRefund())
 		{
 			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
@@ -126,7 +120,7 @@ public class RequestRefundItem implements IClientIncomingPacket
 		long adena = 0;
 		long slots = 0;
 		
-		final ItemInstance[] refund = player.getRefund().getItems();
+		final ItemInstance[] refund = player.getRefund().getItems().toArray(new ItemInstance[0]);
 		final int[] objectIds = new int[_items.length];
 		
 		for (int i = 0; i < _items.length; i++)
@@ -177,21 +171,21 @@ public class RequestRefundItem implements IClientIncomingPacket
 		
 		if ((weight > Integer.MAX_VALUE) || (weight < 0) || !player.getInventory().validateWeight((int) weight))
 		{
-			player.sendPacket(SystemMessageId.YOU_HAVE_EXCEEDED_THE_WEIGHT_LIMIT);
+			client.sendPacket(SystemMessageId.YOU_HAVE_EXCEEDED_THE_WEIGHT_LIMIT);
 			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		if ((slots > Integer.MAX_VALUE) || (slots < 0) || !player.getInventory().validateCapacity((int) slots))
 		{
-			player.sendPacket(SystemMessageId.YOUR_INVENTORY_IS_FULL);
+			client.sendPacket(SystemMessageId.YOUR_INVENTORY_IS_FULL);
 			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		if ((adena < 0) || !player.reduceAdena("Refund", adena, player.getLastFolkNPC(), false))
 		{
-			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+			client.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
 			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
@@ -209,7 +203,7 @@ public class RequestRefundItem implements IClientIncomingPacket
 		// Update current load status on player
 		final StatusUpdate su = new StatusUpdate(player);
 		su.addAttribute(StatusUpdate.CUR_LOAD, player.getCurrentLoad());
-		player.sendPacket(su);
-		player.sendPacket(new ExBuySellList(player, true));
+		client.sendPacket(su);
+		client.sendPacket(new ExBuySellList(player, true));
 	}
 }

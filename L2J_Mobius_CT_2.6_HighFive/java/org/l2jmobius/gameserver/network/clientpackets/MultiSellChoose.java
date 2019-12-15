@@ -300,18 +300,18 @@ public class MultiSellChoose implements IClientIncomingPacket
 								if (list.getMaintainEnchantment() || (e.getEnchantLevel() > 0))
 								{
 									// loop through this list and remove (one by one) each item until the required amount is taken.
-									final ItemInstance[] inventoryContents = inv.getAllItemsByItemId(e.getItemId(), e.getEnchantLevel(), false);
+									final List<ItemInstance> inventoryContents = inv.getAllItemsByItemId(e.getItemId(), e.getEnchantLevel(), false);
 									for (int i = 0; i < (e.getItemCount() * _amount); i++)
 									{
-										if (inventoryContents[i].isAugmented())
+										if (inventoryContents.get(i).isAugmented())
 										{
-											augmentation.add(inventoryContents[i].getAugmentation());
+											augmentation.add(inventoryContents.get(i).getAugmentation());
 										}
-										if (inventoryContents[i].getElementals() != null)
+										if (inventoryContents.get(i).getElementals() != null)
 										{
-											elemental = inventoryContents[i].getElementals();
+											elemental = inventoryContents.get(i).getElementals();
 										}
-										if (!player.destroyItem("Multisell", inventoryContents[i].getObjectId(), 1, player.getTarget(), true))
+										if (!player.destroyItem("Multisell", inventoryContents.get(i).getObjectId(), 1, player.getTarget(), true))
 										{
 											player.setMultiSell(null);
 											return;
@@ -358,9 +358,9 @@ public class MultiSellChoose implements IClientIncomingPacket
 									// choice 1. Small number of items exchanged. No sorting.
 									for (int i = 1; i <= (e.getItemCount() * _amount); i++)
 									{
-										final ItemInstance[] inventoryContents = inv.getAllItemsByItemId(e.getItemId(), false);
+										final List<ItemInstance> inventoryContents = inv.getAllItemsByItemId(e.getItemId(), false);
 										
-										itemToTake = inventoryContents[0];
+										itemToTake = inventoryContents.get(0);
 										// get item with the LOWEST enchantment level from the inventory...
 										// +0 is lowest by default...
 										if (itemToTake.getEnchantLevel() > 0)

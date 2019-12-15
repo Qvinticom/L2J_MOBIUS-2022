@@ -26,7 +26,6 @@ import org.l2jmobius.gameserver.model.skills.Skill;
  */
 public class ConditionPlayerInvSize extends Condition
 {
-	
 	private final int _size;
 	
 	/**

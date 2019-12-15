@@ -16,6 +16,8 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import java.util.Collection;
+
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.PlayerCondOverride;
@@ -26,7 +28,7 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 public class TradeStart extends AbstractItemPacket
 {
 	private final PlayerInstance _player;
-	private final ItemInstance[] _itemList;
+	private final Collection<ItemInstance> _itemList;
 	
 	public TradeStart(PlayerInstance player)
 	{
@@ -44,7 +46,7 @@ public class TradeStart extends AbstractItemPacket
 		
 		OutgoingPackets.TRADE_START.writeId(packet);
 		packet.writeD(_player.getActiveTradeList().getPartner().getObjectId());
-		packet.writeH(_itemList.length);
+		packet.writeH(_itemList.size());
 		for (ItemInstance item : _itemList)
 		{
 			writeItem(packet, item);

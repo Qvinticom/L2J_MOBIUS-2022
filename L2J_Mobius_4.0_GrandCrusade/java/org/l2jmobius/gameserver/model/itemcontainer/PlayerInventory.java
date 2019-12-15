@@ -19,9 +19,9 @@ package org.l2jmobius.gameserver.model.itemcontainer;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Objects;
 import java.util.logging.Level;
@@ -130,7 +130,7 @@ public class PlayerInventory extends Inventory
 	
 	public Collection<ItemInstance> getUniqueItems(boolean allowAdena, boolean allowAncientAdena, boolean onlyAvailable)
 	{
-		final Collection<ItemInstance> list = new LinkedList<>();
+		final List<ItemInstance> list = new ArrayList<>();
 		for (ItemInstance item : _items.values())
 		{
 			if (!allowAdena && (item.getId() == ADENA_ID))
@@ -172,7 +172,7 @@ public class PlayerInventory extends Inventory
 	 * Returns the list of all items in inventory that have a given item id.
 	 * @param itemId : ID of item
 	 * @param includeEquipped : include equipped items
-	 * @return ItemInstance[] : matching items from inventory
+	 * @return Collection<ItemInstance> : matching items from inventory
 	 */
 	public Collection<ItemInstance> getAllItemsByItemId(int itemId, boolean includeEquipped)
 	{
@@ -194,7 +194,7 @@ public class PlayerInventory extends Inventory
 	 * @param itemId : ID of item
 	 * @param enchantment : enchant level of item
 	 * @param includeEquipped : include equipped items
-	 * @return ItemInstance[] : matching items from inventory
+	 * @return Collection<ItemInstance> : matching items from inventory
 	 */
 	public Collection<ItemInstance> getAllItemsByItemId(int itemId, int enchantment, boolean includeEquipped)
 	{
@@ -235,7 +235,7 @@ public class PlayerInventory extends Inventory
 			.filter(i -> i.isAvailable(_owner, false, false))
 			.map(tradeList::adjustAvailableItem)
 			.filter(Objects::nonNull)
-			.collect(Collectors.toCollection(LinkedList::new));
+			.collect(Collectors.toCollection(ArrayList::new));
 		//@formatter:on
 	}
 	
@@ -367,11 +367,7 @@ public class PlayerInventory extends Inventory
 	 */
 	public boolean reduceAncientAdena(String process, long count, PlayerInstance actor, Object reference)
 	{
-		if (count > 0)
-		{
-			return destroyItemByItemId(process, ANCIENT_ADENA_ID, count, actor, reference) != null;
-		}
-		return false;
+		return (count > 0) && (destroyItemByItemId(process, ANCIENT_ADENA_ID, count, actor, reference) != null);
 	}
 	
 	/**
@@ -591,11 +587,7 @@ public class PlayerInventory extends Inventory
 	public ItemInstance destroyItem(String process, int objectId, long count, PlayerInstance actor, Object reference)
 	{
 		final ItemInstance item = getItemByObjectId(objectId);
-		if (item == null)
-		{
-			return null;
-		}
-		return destroyItem(process, item, count, actor, reference);
+		return item == null ? null : destroyItem(process, item, count, actor, reference);
 	}
 	
 	/**
@@ -611,11 +603,7 @@ public class PlayerInventory extends Inventory
 	public ItemInstance destroyItemByItemId(String process, int itemId, long count, PlayerInstance actor, Object reference)
 	{
 		final ItemInstance item = getItemByItemId(itemId);
-		if (item == null)
-		{
-			return null;
-		}
-		return destroyItem(process, item, count, actor, reference);
+		return item == null ? null : destroyItem(process, item, count, actor, reference);
 	}
 	
 	/**

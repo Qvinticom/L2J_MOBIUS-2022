@@ -17,6 +17,7 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
@@ -452,13 +453,13 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 	 * <li>Weapon</li>
 	 * <li>Arrow</li>
 	 * <li>Money</li>
-	 * @param _items complete Warehouse List
+	 * @param items complete Warehouse List
 	 * @return limited Item List
 	 */
-	private List<WarehouseItem> createWeaponList(ItemInstance[] _items)
+	private List<WarehouseItem> createWeaponList(Collection<ItemInstance> items)
 	{
 		final List<WarehouseItem> list = new ArrayList<>();
-		for (ItemInstance item : _items)
+		for (ItemInstance item : items)
 		{
 			if (item.isWeapon() || (item.getItem().getType2() == Item.TYPE2_WEAPON) || (item.isEtcItem() && (item.getItemType() == EtcItemType.ARROW)) || (item.getItem().getType2() == Item.TYPE2_MONEY))
 			{
@@ -479,13 +480,13 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 	 * This method is used to limit the given Warehouse List to:
 	 * <li>Armor</li>
 	 * <li>Money</li>
-	 * @param _items complete Warehouse List
+	 * @param items complete Warehouse List
 	 * @return limited Item List
 	 */
-	private List<WarehouseItem> createArmorList(ItemInstance[] _items)
+	private List<WarehouseItem> createArmorList(Collection<ItemInstance> items)
 	{
 		final List<WarehouseItem> list = new ArrayList<>();
-		for (ItemInstance item : _items)
+		for (ItemInstance item : items)
 		{
 			if (item.isArmor() || (item.getItem().getType2() == Item.TYPE2_MONEY))
 			{
@@ -506,13 +507,13 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 	 * This method is used to limit the given Warehouse List to:
 	 * <li>Everything which is no Weapon/Armor</li>
 	 * <li>Money</li>
-	 * @param _items complete Warehouse List
+	 * @param items complete Warehouse List
 	 * @return limited Item List
 	 */
-	private List<WarehouseItem> createEtcItemList(ItemInstance[] _items)
+	private List<WarehouseItem> createEtcItemList(Collection<ItemInstance> items)
 	{
 		final List<WarehouseItem> list = new ArrayList<>();
-		for (ItemInstance item : _items)
+		for (ItemInstance item : items)
 		{
 			if (item.isEtcItem() || (item.getItem().getType2() == Item.TYPE2_MONEY))
 			{
@@ -533,13 +534,13 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 	 * This method is used to limit the given Warehouse List to:
 	 * <li>Materials</li>
 	 * <li>Money</li>
-	 * @param _items complete Warehouse List
+	 * @param items complete Warehouse List
 	 * @return limited Item List
 	 */
-	private List<WarehouseItem> createMatList(ItemInstance[] _items)
+	private List<WarehouseItem> createMatList(Collection<ItemInstance> items)
 	{
 		final List<WarehouseItem> list = new ArrayList<>();
-		for (ItemInstance item : _items)
+		for (ItemInstance item : items)
 		{
 			if ((item.isEtcItem() && (item.getEtcItem().getItemType() == EtcItemType.MATERIAL)) || (item.getItem().getType2() == Item.TYPE2_MONEY))
 			{
@@ -560,13 +561,13 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 	 * This method is used to limit the given Warehouse List to:
 	 * <li>Recipes</li>
 	 * <li>Money</li>
-	 * @param _items complete Warehouse List
+	 * @param items complete Warehouse List
 	 * @return limited Item List
 	 */
-	private List<WarehouseItem> createRecipeList(ItemInstance[] _items)
+	private List<WarehouseItem> createRecipeList(Collection<ItemInstance> items)
 	{
 		final List<WarehouseItem> list = new ArrayList<>();
-		for (ItemInstance item : _items)
+		for (ItemInstance item : items)
 		{
 			if ((item.isEtcItem() && (item.getEtcItem().getItemType() == EtcItemType.RECIPE)) || (item.getItem().getType2() == Item.TYPE2_MONEY))
 			{
@@ -587,13 +588,13 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 	 * This method is used to limit the given Warehouse List to:
 	 * <li>Amulett</li>
 	 * <li>Money</li>
-	 * @param _items complete Warehouse List
+	 * @param items complete Warehouse List
 	 * @return limited Item List
 	 */
-	private List<WarehouseItem> createAmulettList(ItemInstance[] _items)
+	private List<WarehouseItem> createAmulettList(Collection<ItemInstance> items)
 	{
 		final List<WarehouseItem> list = new ArrayList<>();
-		for (ItemInstance item : _items)
+		for (ItemInstance item : items)
 		{
 			if ((item.isEtcItem() && (item.getItemName().toUpperCase().startsWith("AMULET"))) || (item.getItem().getType2() == Item.TYPE2_MONEY))
 			{
@@ -614,13 +615,13 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 	 * This method is used to limit the given Warehouse List to:
 	 * <li>Spellbook & Dwarven Drafts</li>
 	 * <li>Money</li>
-	 * @param _items complete Warehouse List
+	 * @param items complete Warehouse List
 	 * @return limited Item List
 	 */
-	private List<WarehouseItem> createSpellbookList(ItemInstance[] _items)
+	private List<WarehouseItem> createSpellbookList(Collection<ItemInstance> items)
 	{
 		final List<WarehouseItem> list = new ArrayList<>();
-		for (ItemInstance item : _items)
+		for (ItemInstance item : items)
 		{
 			if ((item.isEtcItem() && (!item.getItemName().toUpperCase().startsWith("AMULET"))) || (item.getItem().getType2() == Item.TYPE2_MONEY))
 			{
@@ -641,13 +642,13 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 	 * This method is used to limit the given Warehouse List to:
 	 * <li>Consumables (Potions, Shots, ...)</li>
 	 * <li>Money</li>
-	 * @param _items complete Warehouse List
+	 * @param items complete Warehouse List
 	 * @return limited Item List
 	 */
-	private List<WarehouseItem> createConsumableList(ItemInstance[] _items)
+	private List<WarehouseItem> createConsumableList(Collection<ItemInstance> items)
 	{
 		final List<WarehouseItem> list = new ArrayList<>();
-		for (ItemInstance item : _items)
+		for (ItemInstance item : items)
 		{
 			if ((item.isEtcItem() && ((item.getEtcItem().getItemType() == EtcItemType.SCROLL) || (item.getEtcItem().getItemType() == EtcItemType.SHOT))) || (item.getItem().getType2() == Item.TYPE2_MONEY))
 			{
@@ -668,13 +669,13 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 	 * This method is used to limit the given Warehouse List to:
 	 * <li>Shots</li>
 	 * <li>Money</li>
-	 * @param _items complete Warehouse List
+	 * @param items complete Warehouse List
 	 * @return limited Item List
 	 */
-	private List<WarehouseItem> createShotList(ItemInstance[] _items)
+	private List<WarehouseItem> createShotList(Collection<ItemInstance> items)
 	{
 		final List<WarehouseItem> list = new ArrayList<>();
-		for (ItemInstance item : _items)
+		for (ItemInstance item : items)
 		{
 			if ((item.isEtcItem() && (item.getEtcItem().getItemType() == EtcItemType.SHOT)) || (item.getItem().getType2() == Item.TYPE2_MONEY))
 			{
@@ -695,13 +696,13 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 	 * This method is used to limit the given Warehouse List to:
 	 * <li>Scrolls/Potions</li>
 	 * <li>Money</li>
-	 * @param _items complete Warehouse List
+	 * @param items complete Warehouse List
 	 * @return limited Item List
 	 */
-	private List<WarehouseItem> createScrollList(ItemInstance[] _items)
+	private List<WarehouseItem> createScrollList(Collection<ItemInstance> items)
 	{
 		final List<WarehouseItem> list = new ArrayList<>();
-		for (ItemInstance item : _items)
+		for (ItemInstance item : items)
 		{
 			if ((item.isEtcItem() && (item.getEtcItem().getItemType() == EtcItemType.SCROLL)) || (item.getItem().getType2() == Item.TYPE2_MONEY))
 			{
@@ -722,13 +723,13 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 	 * This method is used to limit the given Warehouse List to:
 	 * <li>Seeds</li>
 	 * <li>Money</li>
-	 * @param _items complete Warehouse List
+	 * @param items complete Warehouse List
 	 * @return limited Item List
 	 */
-	private List<WarehouseItem> createSeedList(ItemInstance[] _items)
+	private List<WarehouseItem> createSeedList(Collection<ItemInstance> items)
 	{
 		final List<WarehouseItem> list = new ArrayList<>();
-		for (ItemInstance item : _items)
+		for (ItemInstance item : items)
 		{
 			if ((item.isEtcItem() && (item.getEtcItem().getItemType() == EtcItemType.SEED)) || (item.getItem().getType2() == Item.TYPE2_MONEY))
 			{
@@ -749,13 +750,13 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 	 * This method is used to limit the given Warehouse List to:
 	 * <li>Everything which is no Weapon/Armor, Material, Recipe, Spellbook, Scroll or Shot</li>
 	 * <li>Money</li>
-	 * @param _items complete Warehouse List
+	 * @param items complete Warehouse List
 	 * @return limited Item List
 	 */
-	private List<WarehouseItem> createOtherList(ItemInstance[] _items)
+	private List<WarehouseItem> createOtherList(Collection<ItemInstance> items)
 	{
 		final List<WarehouseItem> list = new ArrayList<>();
-		for (ItemInstance item : _items)
+		for (ItemInstance item : items)
 		{
 			if ((item.isEtcItem() && ((item.getEtcItem().getItemType() != EtcItemType.MATERIAL) && (item.getEtcItem().getItemType() != EtcItemType.RECIPE) && (item.getEtcItem().getItemType() != EtcItemType.SCROLL) && (item.getEtcItem().getItemType() != EtcItemType.SHOT))) || (item.getItem().getType2() == Item.TYPE2_MONEY))
 			{
@@ -775,13 +776,13 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 	/**
 	 * This method is used to limit the given Warehouse List to:
 	 * <li>no limit</li> This may sound strange but we return the given Array as a List<L2WarehouseItem>
-	 * @param _items complete Warehouse List
+	 * @param items complete Warehouse List
 	 * @return limited Item List
 	 */
-	private List<WarehouseItem> createAllList(ItemInstance[] _items)
+	private List<WarehouseItem> createAllList(Collection<ItemInstance> items)
 	{
 		final List<WarehouseItem> list = new ArrayList<>();
-		for (ItemInstance item : _items)
+		for (ItemInstance item : items)
 		{
 			if (list.size() < MAX_SORT_LIST_ITEMS)
 			{

@@ -19,7 +19,8 @@ package org.l2jmobius.gameserver.model.itemcontainer;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.LinkedList;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -54,9 +55,6 @@ public class PlayerInventory extends Inventory
 	
 	private int[] _blockItems = null;
 	
-	private int _questSlots;
-	
-	private final Object _lock;
 	/**
 	 * Block modes:
 	 * <UL>
@@ -70,7 +68,6 @@ public class PlayerInventory extends Inventory
 	public PlayerInventory(PlayerInstance owner)
 	{
 		_owner = owner;
-		_lock = new Object();
 	}
 	
 	@Override
@@ -118,14 +115,14 @@ public class PlayerInventory extends Inventory
 	 * @param allowAncientAdena
 	 * @return ItemInstance : items in inventory
 	 */
-	public ItemInstance[] getUniqueItems(boolean allowAdena, boolean allowAncientAdena)
+	public Collection<ItemInstance> getUniqueItems(boolean allowAdena, boolean allowAncientAdena)
 	{
 		return getUniqueItems(allowAdena, allowAncientAdena, true);
 	}
 	
-	public ItemInstance[] getUniqueItems(boolean allowAdena, boolean allowAncientAdena, boolean onlyAvailable)
+	public Collection<ItemInstance> getUniqueItems(boolean allowAdena, boolean allowAncientAdena, boolean onlyAvailable)
 	{
-		final List<ItemInstance> list = new LinkedList<>();
+		final List<ItemInstance> list = new ArrayList<>();
 		for (ItemInstance item : _items)
 		{
 			if ((item == null) || (!allowAdena && (item.getId() == ADENA_ID)) || (!allowAncientAdena && (item.getId() == ANCIENT_ADENA_ID)))
@@ -146,7 +143,7 @@ public class PlayerInventory extends Inventory
 				list.add(item);
 			}
 		}
-		return list.toArray(new ItemInstance[list.size()]);
+		return list;
 	}
 	
 	/**
@@ -155,14 +152,14 @@ public class PlayerInventory extends Inventory
 	 * @param allowAncientAdena
 	 * @return ItemInstance : items in inventory
 	 */
-	public ItemInstance[] getUniqueItemsByEnchantLevel(boolean allowAdena, boolean allowAncientAdena)
+	public Collection<ItemInstance> getUniqueItemsByEnchantLevel(boolean allowAdena, boolean allowAncientAdena)
 	{
 		return getUniqueItemsByEnchantLevel(allowAdena, allowAncientAdena, true);
 	}
 	
-	public ItemInstance[] getUniqueItemsByEnchantLevel(boolean allowAdena, boolean allowAncientAdena, boolean onlyAvailable)
+	public Collection<ItemInstance> getUniqueItemsByEnchantLevel(boolean allowAdena, boolean allowAncientAdena, boolean onlyAvailable)
 	{
-		final List<ItemInstance> list = new LinkedList<>();
+		final List<ItemInstance> list = new ArrayList<>();
 		for (ItemInstance item : _items)
 		{
 			if ((item == null) || (!allowAdena && (item.getId() == ADENA_ID)) || (!allowAncientAdena && (item.getId() == ANCIENT_ADENA_ID)))
@@ -185,14 +182,14 @@ public class PlayerInventory extends Inventory
 				list.add(item);
 			}
 		}
-		return list.toArray(new ItemInstance[list.size()]);
+		return list;
 	}
 	
 	/**
 	 * @param itemId
 	 * @return
 	 */
-	public ItemInstance[] getAllItemsByItemId(int itemId)
+	public Collection<ItemInstance> getAllItemsByItemId(int itemId)
 	{
 		return getAllItemsByItemId(itemId, true);
 	}
@@ -201,11 +198,11 @@ public class PlayerInventory extends Inventory
 	 * Returns the list of all items in inventory that have a given item id.
 	 * @param itemId : ID of item
 	 * @param includeEquipped : include equipped items
-	 * @return ItemInstance[] : matching items from inventory
+	 * @return List<ItemInstance> : matching items from inventory
 	 */
-	public ItemInstance[] getAllItemsByItemId(int itemId, boolean includeEquipped)
+	public List<ItemInstance> getAllItemsByItemId(int itemId, boolean includeEquipped)
 	{
-		final List<ItemInstance> list = new LinkedList<>();
+		final List<ItemInstance> list = new ArrayList<>();
 		for (ItemInstance item : _items)
 		{
 			if (item == null)
@@ -218,7 +215,7 @@ public class PlayerInventory extends Inventory
 				list.add(item);
 			}
 		}
-		return list.toArray(new ItemInstance[list.size()]);
+		return list;
 	}
 	
 	/**
@@ -226,7 +223,7 @@ public class PlayerInventory extends Inventory
 	 * @param enchantment
 	 * @return
 	 */
-	public ItemInstance[] getAllItemsByItemId(int itemId, int enchantment)
+	public Collection<ItemInstance> getAllItemsByItemId(int itemId, int enchantment)
 	{
 		return getAllItemsByItemId(itemId, enchantment, true);
 	}
@@ -236,11 +233,11 @@ public class PlayerInventory extends Inventory
 	 * @param itemId : ID of item
 	 * @param enchantment : enchant level of item
 	 * @param includeEquipped : include equipped items
-	 * @return ItemInstance[] : matching items from inventory
+	 * @return List<ItemInstance> : matching items from inventory
 	 */
-	public ItemInstance[] getAllItemsByItemId(int itemId, int enchantment, boolean includeEquipped)
+	public List<ItemInstance> getAllItemsByItemId(int itemId, int enchantment, boolean includeEquipped)
 	{
-		final List<ItemInstance> list = new LinkedList<>();
+		final List<ItemInstance> list = new ArrayList<>();
 		for (ItemInstance item : _items)
 		{
 			if (item == null)
@@ -253,7 +250,7 @@ public class PlayerInventory extends Inventory
 				list.add(item);
 			}
 		}
-		return list.toArray(new ItemInstance[list.size()]);
+		return list;
 	}
 	
 	/**
@@ -262,9 +259,9 @@ public class PlayerInventory extends Inventory
 	 * @param feightable
 	 * @return the list of items in inventory available for transaction
 	 */
-	public ItemInstance[] getAvailableItems(boolean allowAdena, boolean allowNonTradeable, boolean feightable)
+	public Collection<ItemInstance> getAvailableItems(boolean allowAdena, boolean allowNonTradeable, boolean feightable)
 	{
-		final List<ItemInstance> list = new LinkedList<>();
+		final List<ItemInstance> list = new ArrayList<>();
 		for (ItemInstance item : _items)
 		{
 			if ((item == null) || !item.isAvailable(_owner, allowAdena, allowNonTradeable) || !canManipulateWithItemId(item.getId()))
@@ -283,16 +280,16 @@ public class PlayerInventory extends Inventory
 				list.add(item);
 			}
 		}
-		return list.toArray(new ItemInstance[list.size()]);
+		return list;
 	}
 	
 	/**
 	 * Get all augmented items
 	 * @return
 	 */
-	public ItemInstance[] getAugmentedItems()
+	public Collection<ItemInstance> getAugmentedItems()
 	{
-		final List<ItemInstance> list = new LinkedList<>();
+		final List<ItemInstance> list = new ArrayList<>();
 		for (ItemInstance item : _items)
 		{
 			if ((item != null) && item.isAugmented())
@@ -300,16 +297,16 @@ public class PlayerInventory extends Inventory
 				list.add(item);
 			}
 		}
-		return list.toArray(new ItemInstance[list.size()]);
+		return list;
 	}
 	
 	/**
 	 * Get all element items
 	 * @return
 	 */
-	public ItemInstance[] getElementItems()
+	public Collection<ItemInstance> getElementItems()
 	{
-		final List<ItemInstance> list = new LinkedList<>();
+		final List<ItemInstance> list = new ArrayList<>();
 		for (ItemInstance item : _items)
 		{
 			if ((item != null) && (item.getElementals() != null))
@@ -317,7 +314,7 @@ public class PlayerInventory extends Inventory
 				list.add(item);
 			}
 		}
-		return list.toArray(new ItemInstance[list.size()]);
+		return list;
 	}
 	
 	/**
@@ -325,9 +322,9 @@ public class PlayerInventory extends Inventory
 	 * @param tradeList
 	 * @return ItemInstance : items in inventory
 	 */
-	public TradeItem[] getAvailableItems(TradeList tradeList)
+	public Collection<TradeItem> getAvailableItems(TradeList tradeList)
 	{
-		final List<TradeItem> list = new LinkedList<>();
+		final List<TradeItem> list = new ArrayList<>();
 		for (ItemInstance item : _items)
 		{
 			if ((item != null) && item.isAvailable(_owner, false, false))
@@ -339,7 +336,7 @@ public class PlayerInventory extends Inventory
 				}
 			}
 		}
-		return list.toArray(new TradeItem[list.size()]);
+		return list;
 	}
 	
 	/**
@@ -714,18 +711,6 @@ public class PlayerInventory extends Inventory
 			_ancientAdena = null;
 		}
 		
-		if (item.isQuestItem())
-		{
-			synchronized (_lock)
-			{
-				_questSlots--;
-				if (_questSlots < 0)
-				{
-					_questSlots = 0;
-					LOGGER.warning(this + ": QuestInventory size < 0!");
-				}
-			}
-		}
 		return super.removeItem(item);
 	}
 	
@@ -852,7 +837,7 @@ public class PlayerInventory extends Inventory
 	
 	public boolean validateCapacity(long slots, boolean questItem)
 	{
-		return ((slots == 0) && !Config.AUTO_LOOT_SLOT_LIMIT) || questItem ? (_questSlots + slots) <= _owner.getQuestInventoryLimit() : ((_items.size() - _questSlots) + slots) <= _owner.getInventoryLimit();
+		return ((slots == 0) && !Config.AUTO_LOOT_SLOT_LIMIT) || questItem ? (getSize(item -> item.isQuestItem()) + slots) <= _owner.getQuestInventoryLimit() : (getSize(item -> !item.isQuestItem()) + slots) <= _owner.getInventoryLimit();
 	}
 	
 	@Override
@@ -934,24 +919,6 @@ public class PlayerInventory extends Inventory
 	public boolean canManipulateWithItemId(int itemId)
 	{
 		return ((_blockMode != 0) || !CommonUtil.contains(_blockItems, itemId)) && ((_blockMode != 1) || CommonUtil.contains(_blockItems, itemId));
-	}
-	
-	@Override
-	protected void addItem(ItemInstance item)
-	{
-		if (item.isQuestItem())
-		{
-			synchronized (_lock)
-			{
-				_questSlots++;
-			}
-		}
-		super.addItem(item);
-	}
-	
-	public int getSize(boolean quest)
-	{
-		return quest ? _questSlots : getSize() - _questSlots;
 	}
 	
 	@Override

@@ -16,6 +16,8 @@
  */
 package org.l2jmobius.gameserver.network.serverpackets;
 
+import java.util.Collection;
+
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.items.Weapon;
@@ -24,7 +26,7 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class ExShowBaseAttributeCancelWindow implements IClientOutgoingPacket
 {
-	private final ItemInstance[] _items;
+	private final Collection<ItemInstance> _items;
 	private long _price;
 	
 	public ExShowBaseAttributeCancelWindow(PlayerInstance player)
@@ -36,7 +38,7 @@ public class ExShowBaseAttributeCancelWindow implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_SHOW_BASE_ATTRIBUTE_CANCEL_WINDOW.writeId(packet);
-		packet.writeD(_items.length);
+		packet.writeD(_items.size());
 		for (ItemInstance item : _items)
 		{
 			packet.writeD(item.getObjectId());

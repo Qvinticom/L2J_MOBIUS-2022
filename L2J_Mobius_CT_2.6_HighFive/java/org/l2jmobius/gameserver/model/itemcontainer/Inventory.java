@@ -21,6 +21,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -107,7 +109,7 @@ public abstract class Inventory extends ItemContainer
 	private static final class ChangeRecorder implements PaperdollListener
 	{
 		private final Inventory _inventory;
-		private final List<ItemInstance> _changed;
+		private final Set<ItemInstance> _changed = ConcurrentHashMap.newKeySet();
 		
 		/**
 		 * Constructor of the ChangeRecorder
@@ -116,7 +118,6 @@ public abstract class Inventory extends ItemContainer
 		ChangeRecorder(Inventory inventory)
 		{
 			_inventory = inventory;
-			_changed = new ArrayList<>();
 			_inventory.addPaperdollListener(this);
 		}
 		
@@ -129,10 +130,7 @@ public abstract class Inventory extends ItemContainer
 		@Override
 		public void notifyEquiped(int slot, ItemInstance item, Inventory inventory)
 		{
-			if (!_changed.contains(item))
-			{
-				_changed.add(item);
-			}
+			_changed.add(item);
 		}
 		
 		/**
@@ -144,10 +142,7 @@ public abstract class Inventory extends ItemContainer
 		@Override
 		public void notifyUnequiped(int slot, ItemInstance item, Inventory inventory)
 		{
-			if (!_changed.contains(item))
-			{
-				_changed.add(item);
-			}
+			_changed.add(item);
 		}
 		
 		/**
@@ -180,7 +175,6 @@ public abstract class Inventory extends ItemContainer
 			if (item.getItemType() == WeaponType.BOW)
 			{
 				final ItemInstance arrow = inventory.getPaperdollItem(PAPERDOLL_LHAND);
-				
 				if (arrow != null)
 				{
 					inventory.setPaperdollItem(PAPERDOLL_LHAND, null);
@@ -189,7 +183,6 @@ public abstract class Inventory extends ItemContainer
 			else if (item.getItemType() == WeaponType.CROSSBOW)
 			{
 				final ItemInstance bolts = inventory.getPaperdollItem(PAPERDOLL_LHAND);
-				
 				if (bolts != null)
 				{
 					inventory.setPaperdollItem(PAPERDOLL_LHAND, null);
@@ -198,7 +191,6 @@ public abstract class Inventory extends ItemContainer
 			else if (item.getItemType() == WeaponType.FISHINGROD)
 			{
 				final ItemInstance lure = inventory.getPaperdollItem(PAPERDOLL_LHAND);
-				
 				if (lure != null)
 				{
 					inventory.setPaperdollItem(PAPERDOLL_LHAND, null);
@@ -217,7 +209,6 @@ public abstract class Inventory extends ItemContainer
 			if (item.getItemType() == WeaponType.BOW)
 			{
 				final ItemInstance arrow = inventory.findArrowForBow(item.getItem());
-				
 				if (arrow != null)
 				{
 					inventory.setPaperdollItem(PAPERDOLL_LHAND, arrow);
@@ -226,7 +217,6 @@ public abstract class Inventory extends ItemContainer
 			else if (item.getItemType() == WeaponType.CROSSBOW)
 			{
 				final ItemInstance bolts = inventory.findBoltForCrossBow(item.getItem());
-				
 				if (bolts != null)
 				{
 					inventory.setPaperdollItem(PAPERDOLL_LHAND, bolts);
@@ -273,8 +263,8 @@ public abstract class Inventory extends ItemContainer
 			{
 				return;
 			}
-			final PlayerInstance player = (PlayerInstance) inventory.getOwner();
 			
+			final PlayerInstance player = (PlayerInstance) inventory.getOwner();
 			Skill enchant4Skill;
 			Skill itemSkill;
 			final Item it = item.getItem();

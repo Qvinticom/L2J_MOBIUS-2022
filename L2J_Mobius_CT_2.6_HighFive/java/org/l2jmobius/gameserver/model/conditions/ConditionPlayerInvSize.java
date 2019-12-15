@@ -40,6 +40,10 @@ public class ConditionPlayerInvSize extends Condition
 	@Override
 	public boolean testImpl(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		return (effector.getActingPlayer() == null) || (effector.getActingPlayer().getInventory().getSize(false) <= (effector.getActingPlayer().getInventoryLimit() - _size));
+		if (effector.getActingPlayer() != null)
+		{
+			return effector.getActingPlayer().getInventory().getSize(i -> !i.isQuestItem()) <= (effector.getActingPlayer().getInventoryLimit() - _size);
+		}
+		return true;
 	}
 }
