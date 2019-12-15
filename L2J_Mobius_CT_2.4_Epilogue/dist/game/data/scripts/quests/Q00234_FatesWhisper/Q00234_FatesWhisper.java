@@ -233,11 +233,14 @@ public class Q00234_FatesWhisper extends Quest
 				{
 					return "30833-01.html";
 				}
-				if (qs.isMemoState(8) && !hasQuestItems(player, Q_RED_PIPETTE_KNIFE) && !hasQuestItems(player, Q_BLOODY_FABRIC_Q0234, Q_WHITE_FABRIC_Q0234))
+				final long bloodyFabricCount = getQuestItemsCount(player, Q_BLOODY_FABRIC_Q0234);
+				final long whiteFabricCount = getQuestItemsCount(player, Q_WHITE_FABRIC_Q0234);
+				final long whiteBloodyFabricCount = bloodyFabricCount + whiteFabricCount;
+				if (qs.isMemoState(8) && !hasQuestItems(player, Q_RED_PIPETTE_KNIFE) && (whiteBloodyFabricCount <= 0))
 				{
 					return "30833-03.html";
 				}
-				if (qs.isMemoState(8) && hasQuestItems(player, Q_RED_PIPETTE_KNIFE) && !hasQuestItems(player, Q_BLOODY_FABRIC_Q0234, Q_WHITE_FABRIC_Q0234))
+				if (qs.isMemoState(8) && hasQuestItems(player, Q_RED_PIPETTE_KNIFE) && (whiteBloodyFabricCount <= 0))
 				{
 					giveItems(player, Q_MAESTRO_REORINS_MOLD, 1);
 					takeItems(player, Q_RED_PIPETTE_KNIFE, 1);
@@ -246,11 +249,11 @@ public class Q00234_FatesWhisper extends Quest
 					qs.showQuestionMark(234);
 					return "30833-04.html";
 				}
-				if (qs.isMemoState(8) && !hasQuestItems(player, Q_RED_PIPETTE_KNIFE) && (getQuestItemsCount(player, Q_BLOODY_FABRIC_Q0234) < 30) && ((getQuestItemsCount(player, Q_BLOODY_FABRIC_Q0234) + getQuestItemsCount(player, Q_WHITE_FABRIC_Q0234)) >= 30))
+				if (qs.isMemoState(8) && !hasQuestItems(player, Q_RED_PIPETTE_KNIFE) && (bloodyFabricCount < 30) && (whiteBloodyFabricCount >= 30))
 				{
 					return "30833-03c.html";
 				}
-				if (qs.isMemoState(8) && !hasQuestItems(player, Q_RED_PIPETTE_KNIFE) && (getQuestItemsCount(player, Q_BLOODY_FABRIC_Q0234) >= 30) && ((getQuestItemsCount(player, Q_BLOODY_FABRIC_Q0234) + getQuestItemsCount(player, Q_WHITE_FABRIC_Q0234)) >= 30))
+				if (qs.isMemoState(8) && !hasQuestItems(player, Q_RED_PIPETTE_KNIFE) && (bloodyFabricCount >= 30) && (whiteBloodyFabricCount >= 30))
 				{
 					giveItems(player, Q_MAESTRO_REORINS_MOLD, 1);
 					takeItems(player, Q_BLOODY_FABRIC_Q0234, -1);
@@ -259,9 +262,9 @@ public class Q00234_FatesWhisper extends Quest
 					qs.showQuestionMark(234);
 					return "30833-03d.html";
 				}
-				if (qs.isMemoState(8) && !hasQuestItems(player, Q_RED_PIPETTE_KNIFE) && ((getQuestItemsCount(player, Q_BLOODY_FABRIC_Q0234) + getQuestItemsCount(player, Q_WHITE_FABRIC_Q0234)) < 30) && ((getQuestItemsCount(player, Q_BLOODY_FABRIC_Q0234) + getQuestItemsCount(player, Q_WHITE_FABRIC_Q0234)) > 0))
+				if (qs.isMemoState(8) && !hasQuestItems(player, Q_RED_PIPETTE_KNIFE) && (whiteBloodyFabricCount < 30) && (whiteBloodyFabricCount > 0))
 				{
-					giveItems(player, Q_WHITE_FABRIC_Q0234, 30 - getQuestItemsCount(player, Q_WHITE_FABRIC_Q0234));
+					giveItems(player, Q_WHITE_FABRIC_Q0234, 30 - whiteFabricCount);
 					takeItems(player, Q_BLOODY_FABRIC_Q0234, -1);
 					return "30833-03e.html";
 				}
@@ -1160,11 +1163,11 @@ public class Q00234_FatesWhisper extends Quest
 				case SEAL_ANGEL_R:
 				{
 					final PlayerInstance member = qs.getPlayer();
-					if ((member != null) && (getQuestItemsCount(member, Q_WHITE_FABRIC_Q0234) != 0))
+					if (member != null)
 					{
 						takeItems(member, Q_WHITE_FABRIC_Q0234, 1);
 						giveItemRandomly(member, npc, Q_BLOODY_FABRIC_Q0234, 1, 0, 1, false);
-						if (getQuestItemsCount(member, Q_BLOODY_FABRIC_Q0234) >= 29)
+						if (getQuestItemsCount(member, Q_BLOODY_FABRIC_Q0234) >= 30)
 						{
 							qs.setCond(9, true);
 							qs.showQuestionMark(234);
@@ -1201,24 +1204,20 @@ public class Q00234_FatesWhisper extends Quest
 	
 	private QuestState getRandomPlayerFromParty(PlayerInstance player, Npc npc, int memoState)
 	{
-		final QuestState qs = getQuestState(player, false);
 		final List<QuestState> candidates = new ArrayList<>();
-		
+		final QuestState qs = getQuestState(player, false);
 		if ((qs != null) && qs.isStarted() && (qs.getMemoState() == memoState) && hasQuestItems(player, Q_WHITE_FABRIC_Q0234))
 		{
 			candidates.add(qs);
-			candidates.add(qs);
 		}
-		
 		if (player.isInParty())
 		{
 			player.getParty().getMembers().stream().forEach(pm ->
 			{
-				
-				final QuestState qss = getQuestState(pm, false);
-				if ((qss != null) && qss.isStarted() && (qss.getMemoState() == memoState) && hasQuestItems(player, Q_WHITE_FABRIC_Q0234) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, pm, true))
+				final QuestState qs2 = getQuestState(pm, false);
+				if ((qs2 != null) && qs2.isStarted() && (qs2.getMemoState() == memoState) && hasQuestItems(player, Q_WHITE_FABRIC_Q0234) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, pm, true))
 				{
-					candidates.add(qss);
+					candidates.add(qs2);
 				}
 			});
 		}
