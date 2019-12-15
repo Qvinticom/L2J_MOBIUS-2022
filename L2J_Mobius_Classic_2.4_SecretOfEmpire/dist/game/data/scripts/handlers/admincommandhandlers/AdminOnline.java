@@ -37,8 +37,6 @@ public class AdminOnline implements IAdminCommandHandler
 		"admin_online"
 	};
 	
-	protected static int state = -1;
-	
 	@Override
 	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
