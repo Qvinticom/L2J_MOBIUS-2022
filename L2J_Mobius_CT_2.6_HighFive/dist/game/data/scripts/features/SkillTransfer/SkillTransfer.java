@@ -23,6 +23,7 @@ import org.l2jmobius.gameserver.enums.IllegalActionPunishmentType;
 import org.l2jmobius.gameserver.model.PlayerCondOverride;
 import org.l2jmobius.gameserver.model.SkillLearn;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
+import org.l2jmobius.gameserver.model.base.ClassId;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerProfessionCancel;
 import org.l2jmobius.gameserver.model.events.impl.creature.player.OnPlayerProfessionChange;
 import org.l2jmobius.gameserver.model.holders.ItemHolder;
@@ -77,7 +78,8 @@ public class SkillTransfer extends AbstractNpcAI
 	public void onProfessionCancel(OnPlayerProfessionCancel event)
 	{
 		final PlayerInstance player = event.getPlayer();
-		final int index = getTransferClassIndex(player);
+		final ClassId classId = ClassId.getClassId(event.getClassId());
+		final int index = getTransferClassIndex(classId);
 		
 		// is a transfer class
 		if (index < 0)
@@ -144,7 +146,12 @@ public class SkillTransfer extends AbstractNpcAI
 	
 	private static int getTransferClassIndex(PlayerInstance player)
 	{
-		switch (player.getClassId())
+		return getTransferClassIndex(player.getClassId());
+	}
+	
+	private static int getTransferClassIndex(ClassId classId)
+	{
+		switch (classId)
 		{
 			case CARDINAL:
 			{
