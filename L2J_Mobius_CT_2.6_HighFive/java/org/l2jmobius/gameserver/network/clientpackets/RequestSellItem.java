@@ -136,13 +136,10 @@ public class RequestSellItem implements IClientIncomingPacket
 			return;
 		}
 		
-		if (merchant != null)
+		if ((merchant != null) && !buyList.isNpcAllowed(merchant.getId()))
 		{
-			if (!buyList.isNpcAllowed(merchant.getId()))
-			{
-				client.sendPacket(ActionFailed.STATIC_PACKET);
-				return;
-			}
+			client.sendPacket(ActionFailed.STATIC_PACKET);
+			return;
 		}
 		
 		long totalPrice = 0;

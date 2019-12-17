@@ -109,20 +109,17 @@ public class BleedingFly extends AbstractNpcAI
 				}
 			}
 		}
-		else if (TIMER_LOW_HP.equals(event))
+		else if (TIMER_LOW_HP.equals(event) && (npc.getVariables().getInt(LOW_HP_MINION_COUNT) > 0))
 		{
-			if (npc.getVariables().getInt(LOW_HP_MINION_COUNT) > 0)
+			npc.getVariables().set(LOW_HP_MINION_COUNT, npc.getVariables().getInt(LOW_HP_MINION_COUNT) - 1);
+			addSkillCastDesire(npc, npc, SUMMON_PARASITE_LEECH, 99999);
+			addSkillCastDesire(npc, npc, NPC_ACUMEN_LVL_3, 99999);
+			addSpawn(PARASITIC_LEECH, npc.getX() + getRandom(150), npc.getY() + getRandom(150), npc.getZ(), npc.getHeading(), false, 0);
+			addSpawn(PARASITIC_LEECH, npc.getX() + getRandom(150), npc.getY() + getRandom(150), npc.getZ(), npc.getHeading(), false, 0);
+			
+			if (npc.getVariables().getBoolean(LOW_HP_FLAG, false))
 			{
-				npc.getVariables().set(LOW_HP_MINION_COUNT, npc.getVariables().getInt(LOW_HP_MINION_COUNT) - 1);
-				addSkillCastDesire(npc, npc, SUMMON_PARASITE_LEECH, 99999);
-				addSkillCastDesire(npc, npc, NPC_ACUMEN_LVL_3, 99999);
-				addSpawn(PARASITIC_LEECH, npc.getX() + getRandom(150), npc.getY() + getRandom(150), npc.getZ(), npc.getHeading(), false, 0);
-				addSpawn(PARASITIC_LEECH, npc.getX() + getRandom(150), npc.getY() + getRandom(150), npc.getZ(), npc.getHeading(), false, 0);
-				
-				if (npc.getVariables().getBoolean(LOW_HP_FLAG, false))
-				{
-					startQuestTimer(TIMER_LOW_HP, 80000, npc, null);
-				}
+				startQuestTimer(TIMER_LOW_HP, 80000, npc, null);
 			}
 		}
 		return super.onAdvEvent(event, npc, player);

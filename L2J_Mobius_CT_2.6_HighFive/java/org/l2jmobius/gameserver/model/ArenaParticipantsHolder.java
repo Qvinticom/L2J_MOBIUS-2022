@@ -153,7 +153,7 @@ public class ArenaParticipantsHolder
 				{
 					continue;
 				}
-				HandysBlockCheckerManager.getInstance().changePlayerToTeam(plr, _arena, 1);
+				HandysBlockCheckerManager.getInstance().changePlayerToTeam(plr, _arena);
 			}
 		}
 		else if (blueSize > (redSize + 1))
@@ -166,7 +166,7 @@ public class ArenaParticipantsHolder
 				{
 					continue;
 				}
-				HandysBlockCheckerManager.getInstance().changePlayerToTeam(plr, _arena, 0);
+				HandysBlockCheckerManager.getInstance().changePlayerToTeam(plr, _arena);
 			}
 		}
 	}

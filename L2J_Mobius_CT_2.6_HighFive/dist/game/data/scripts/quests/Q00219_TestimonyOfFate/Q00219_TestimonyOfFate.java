@@ -227,6 +227,7 @@ public class Q00219_TestimonyOfFate extends Quest
 						giveItems(killer, KASANDRAS_REMAINS, 1);
 						qs.setCond(3, true);
 					}
+					break;
 				}
 				case MARSH_STAKATO:
 				case MARSH_STAKATO_WORKER:
@@ -339,49 +340,37 @@ public class Q00219_TestimonyOfFate extends Quest
 				}
 				case BREKA_ORC_OVERLORD:
 				{
-					if (hasQuestItems(killer, PALUS_CHARM, ARKENIAS_NOTE, PIXY_GARNET) && !hasQuestItems(killer, RED_FAIRY_DUST, BREKA_OVERLORD_SKULL))
+					if (hasQuestItems(killer, PALUS_CHARM, ARKENIAS_NOTE, PIXY_GARNET) && !hasQuestItems(killer, RED_FAIRY_DUST, BREKA_OVERLORD_SKULL) && !hasQuestItems(killer, BREKA_OVERLORD_SKULL))
 					{
-						if (!hasQuestItems(killer, BREKA_OVERLORD_SKULL))
-						{
-							giveItems(killer, BREKA_OVERLORD_SKULL, 1);
-							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-						}
+						giveItems(killer, BREKA_OVERLORD_SKULL, 1);
+						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 					}
 					break;
 				}
 				case GRANDIS:
 				{
-					if (hasQuestItems(killer, PALUS_CHARM, ARKENIAS_NOTE, PIXY_GARNET) && !hasQuestItems(killer, RED_FAIRY_DUST, GRANDISS_SKULL))
+					if (hasQuestItems(killer, PALUS_CHARM, ARKENIAS_NOTE, PIXY_GARNET) && !hasQuestItems(killer, RED_FAIRY_DUST, GRANDISS_SKULL) && !hasQuestItems(killer, GRANDISS_SKULL))
 					{
-						if (!hasQuestItems(killer, GRANDISS_SKULL))
-						{
-							giveItems(killer, GRANDISS_SKULL, 1);
-							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-						}
+						giveItems(killer, GRANDISS_SKULL, 1);
+						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 					}
 					break;
 				}
 				case LETO_LIZARDMAN_OVERLORD:
 				{
-					if (hasQuestItems(killer, PALUS_CHARM, ARKENIAS_NOTE, PIXY_GARNET) && !hasQuestItems(killer, RED_FAIRY_DUST, LETO_OVERLORD_SKULL))
+					if (hasQuestItems(killer, PALUS_CHARM, ARKENIAS_NOTE, PIXY_GARNET) && !hasQuestItems(killer, RED_FAIRY_DUST, LETO_OVERLORD_SKULL) && !hasQuestItems(killer, LETO_OVERLORD_SKULL))
 					{
-						if (!hasQuestItems(killer, LETO_OVERLORD_SKULL))
-						{
-							giveItems(killer, LETO_OVERLORD_SKULL, 1);
-							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-						}
+						giveItems(killer, LETO_OVERLORD_SKULL, 1);
+						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 					}
 					break;
 				}
 				case KARUL_BUGBEAR:
 				{
-					if (hasQuestItems(killer, PALUS_CHARM, ARKENIAS_NOTE, PIXY_GARNET) && !hasQuestItems(killer, RED_FAIRY_DUST, KARUL_BUGBEAR_SKULL))
+					if (hasQuestItems(killer, PALUS_CHARM, ARKENIAS_NOTE, PIXY_GARNET) && !hasQuestItems(killer, RED_FAIRY_DUST, KARUL_BUGBEAR_SKULL) && !hasQuestItems(killer, KARUL_BUGBEAR_SKULL))
 					{
-						if (!hasQuestItems(killer, KARUL_BUGBEAR_SKULL))
-						{
-							giveItems(killer, KARUL_BUGBEAR_SKULL, 1);
-							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-						}
+						giveItems(killer, KARUL_BUGBEAR_SKULL, 1);
+						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 					}
 					break;
 				}
@@ -587,6 +576,7 @@ public class Q00219_TestimonyOfFate extends Quest
 					{
 						htmltext = "30210-02.html";
 					}
+					break;
 				}
 				case TETRARCH_THIFIELL:
 				{

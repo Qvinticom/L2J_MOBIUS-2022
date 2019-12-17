@@ -297,12 +297,9 @@ public class Q00337_AudienceWithTheLandDragon extends Quest
 				case CAVE_KEEPER_HOLD:
 				case CAVE_MAIDEN_HOLD:
 				{
-					if (qs.isMemoState(70000) && !hasQuestItems(killer, FRAGMENT_OF_ABYSS_JEWEL_3RD))
+					if (qs.isMemoState(70000) && !hasQuestItems(killer, FRAGMENT_OF_ABYSS_JEWEL_3RD) && (getRandom(5) == 0))
 					{
-						if (getRandom(5) == 0)
-						{
-							addSpawn(ABYSSAL_JEWEL_3, npc, true, 180000);
-						}
+						addSpawn(ABYSSAL_JEWEL_3, npc, true, 180000);
 					}
 					break;
 				}
@@ -343,14 +340,11 @@ public class Q00337_AudienceWithTheLandDragon extends Quest
 						case 20010:
 						case 20000:
 						{
-							if (!hasQuestItems(killer, TOTEM_OF_LAND_DRAGON))
+							if (!hasQuestItems(killer, TOTEM_OF_LAND_DRAGON) && (getRandom(5) == 0))
 							{
-								if (getRandom(5) == 0)
-								{
-									addAttackDesire(addSpawn(HARIT_LIZARDMAN_ZEALOT, npc, true, 180000), killer);
-									addAttackDesire(addSpawn(HARIT_LIZARDMAN_ZEALOT, npc, true, 180000), killer);
-									addAttackDesire(addSpawn(HARIT_LIZARDMAN_ZEALOT, npc, true, 180000), killer);
-								}
+								addAttackDesire(addSpawn(HARIT_LIZARDMAN_ZEALOT, npc, true, 180000), killer);
+								addAttackDesire(addSpawn(HARIT_LIZARDMAN_ZEALOT, npc, true, 180000), killer);
+								addAttackDesire(addSpawn(HARIT_LIZARDMAN_ZEALOT, npc, true, 180000), killer);
 							}
 							break;
 						}
@@ -451,25 +445,19 @@ public class Q00337_AudienceWithTheLandDragon extends Quest
 				}
 				case JEWEL_GUARDIAN_MARA:
 				{
-					if (qs.isMemoState(40000) || (qs.isMemoState(40001)))
+					if ((qs.isMemoState(40000) || (qs.isMemoState(40001))) && !hasQuestItems(killer, MARA_FANG))
 					{
-						if (!hasQuestItems(killer, MARA_FANG))
-						{
-							giveItems(killer, MARA_FANG, 1);
-							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-						}
+						giveItems(killer, MARA_FANG, 1);
+						playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 					}
 					break;
 				}
 				case JEWEL_GUARDIAN_MUSFEL:
 				{
-					if (qs.isMemoState(40000) || (qs.isMemoState(40010)))
+					if ((qs.isMemoState(40000) || (qs.isMemoState(40010))) && !hasQuestItems(killer, MUSFEL_FANG))
 					{
-						if (!hasQuestItems(killer, MUSFEL_FANG))
-						{
-							giveItems(killer, MUSFEL_FANG, 1);
-							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-						}
+						giveItems(killer, MUSFEL_FANG, 1);
+						playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 					}
 					break;
 				}

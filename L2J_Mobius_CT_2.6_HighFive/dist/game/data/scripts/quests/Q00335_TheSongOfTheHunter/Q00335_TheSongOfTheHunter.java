@@ -1260,12 +1260,9 @@ public class Q00335_TheSongOfTheHunter extends Quest
 			for (int i = DROPLIST.length - 1; i >= 0; i--)
 			{
 				final int[] droplist = DROPLIST[i];
-				if (npc.getId() == droplist[0])
+				if ((npc.getId() == droplist[0]) && hasQuestItems(qs.getPlayer(), droplist[1]) && giveItemRandomly(qs.getPlayer(), npc, droplist[2], droplist[3], droplist[4], droplist[5] / 100d, true))
 				{
-					if (hasQuestItems(qs.getPlayer(), droplist[1]) && giveItemRandomly(qs.getPlayer(), npc, droplist[2], droplist[3], droplist[4], droplist[5] / 100d, true))
-					{
-						playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-					}
+					playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 				}
 			}
 			
@@ -1273,22 +1270,19 @@ public class Q00335_TheSongOfTheHunter extends Quest
 			{
 				case BREKA_ORC_WARRIOR:
 				{
-					if (hasQuestItems(qs.getPlayer(), TEST_INSTRUCTIONS_1) && ((getQuestItemsCount(qs.getPlayer(), HAKAS_HEAD) + getQuestItemsCount(qs.getPlayer(), JAKAS_HEAD) + getQuestItemsCount(qs.getPlayer(), MARKAS_HEAD)) < 3))
+					if (hasQuestItems(qs.getPlayer(), TEST_INSTRUCTIONS_1) && ((getQuestItemsCount(qs.getPlayer(), HAKAS_HEAD) + getQuestItemsCount(qs.getPlayer(), JAKAS_HEAD) + getQuestItemsCount(qs.getPlayer(), MARKAS_HEAD)) < 3) && (getRandom(10) < 2))
 					{
-						if (getRandom(10) < 2)
+						if (!hasQuestItems(qs.getPlayer(), HAKAS_HEAD))
 						{
-							if (!hasQuestItems(qs.getPlayer(), HAKAS_HEAD))
-							{
-								addSpawn(BREKA_OVERLORD_HAKA, npc.getX(), npc.getY(), npc.getZ() + 10, npc.getHeading(), false, 0, true);
-							}
-							else if (!hasQuestItems(qs.getPlayer(), JAKAS_HEAD))
-							{
-								addSpawn(BREKA_OVERLORD_JAKA, npc.getX(), npc.getY(), npc.getZ() + 10, npc.getHeading(), false, 0, true);
-							}
-							else if (!hasQuestItems(qs.getPlayer(), MARKAS_HEAD))
-							{
-								addSpawn(BREKA_OVERLORD_MARKA, npc.getX(), npc.getY(), npc.getZ() + 10, npc.getHeading(), false, 0, true);
-							}
+							addSpawn(BREKA_OVERLORD_HAKA, npc.getX(), npc.getY(), npc.getZ() + 10, npc.getHeading(), false, 0, true);
+						}
+						else if (!hasQuestItems(qs.getPlayer(), JAKAS_HEAD))
+						{
+							addSpawn(BREKA_OVERLORD_JAKA, npc.getX(), npc.getY(), npc.getZ() + 10, npc.getHeading(), false, 0, true);
+						}
+						else if (!hasQuestItems(qs.getPlayer(), MARKAS_HEAD))
+						{
+							addSpawn(BREKA_OVERLORD_MARKA, npc.getX(), npc.getY(), npc.getZ() + 10, npc.getHeading(), false, 0, true);
 						}
 					}
 					break;
@@ -1311,30 +1305,27 @@ public class Q00335_TheSongOfTheHunter extends Quest
 				}
 				case TARLK_BUGBEAR_WARRIOR:
 				{
-					if (hasQuestItems(qs.getPlayer(), TEST_INSTRUCTIONS_2) && ((getQuestItemsCount(qs.getPlayer(), ATHUS_HEAD) + getQuestItemsCount(qs.getPlayer(), LANKAS_HEAD) + getQuestItemsCount(qs.getPlayer(), TRISKAS_HEAD) + getQuestItemsCount(qs.getPlayer(), MOTURAS_HEAD) + getQuestItemsCount(qs.getPlayer(), KALATHS_HEAD)) < 5))
+					if (hasQuestItems(qs.getPlayer(), TEST_INSTRUCTIONS_2) && ((getQuestItemsCount(qs.getPlayer(), ATHUS_HEAD) + getQuestItemsCount(qs.getPlayer(), LANKAS_HEAD) + getQuestItemsCount(qs.getPlayer(), TRISKAS_HEAD) + getQuestItemsCount(qs.getPlayer(), MOTURAS_HEAD) + getQuestItemsCount(qs.getPlayer(), KALATHS_HEAD)) < 5) && (getRandom(10) < 2))
 					{
-						if (getRandom(10) < 2)
+						if (!hasQuestItems(qs.getPlayer(), ATHUS_HEAD))
 						{
-							if (!hasQuestItems(qs.getPlayer(), ATHUS_HEAD))
-							{
-								addSpawn(TARLK_RAIDER_ATHU, npc.getX(), npc.getY(), npc.getZ() + 10, npc.getHeading(), false, 0, true);
-							}
-							else if (!hasQuestItems(qs.getPlayer(), LANKAS_HEAD))
-							{
-								addSpawn(TARLK_RAIDER_LANKA, npc.getX(), npc.getY(), npc.getZ() + 10, npc.getHeading(), false, 0, true);
-							}
-							else if (!hasQuestItems(qs.getPlayer(), TRISKAS_HEAD))
-							{
-								addSpawn(TARLK_RAIDER_TRISKA, npc.getX(), npc.getY(), npc.getZ() + 10, npc.getHeading(), false, 0, true);
-							}
-							else if (!hasQuestItems(qs.getPlayer(), MOTURAS_HEAD))
-							{
-								addSpawn(TARLK_RAIDER_MOTURA, npc.getX(), npc.getY(), npc.getZ() + 10, npc.getHeading(), false, 0, true);
-							}
-							else if (!hasQuestItems(qs.getPlayer(), KALATHS_HEAD))
-							{
-								addSpawn(TARLK_RAIDER_KALATH, npc.getX(), npc.getY(), npc.getZ() + 10, npc.getHeading(), false, 0, true);
-							}
+							addSpawn(TARLK_RAIDER_ATHU, npc.getX(), npc.getY(), npc.getZ() + 10, npc.getHeading(), false, 0, true);
+						}
+						else if (!hasQuestItems(qs.getPlayer(), LANKAS_HEAD))
+						{
+							addSpawn(TARLK_RAIDER_LANKA, npc.getX(), npc.getY(), npc.getZ() + 10, npc.getHeading(), false, 0, true);
+						}
+						else if (!hasQuestItems(qs.getPlayer(), TRISKAS_HEAD))
+						{
+							addSpawn(TARLK_RAIDER_TRISKA, npc.getX(), npc.getY(), npc.getZ() + 10, npc.getHeading(), false, 0, true);
+						}
+						else if (!hasQuestItems(qs.getPlayer(), MOTURAS_HEAD))
+						{
+							addSpawn(TARLK_RAIDER_MOTURA, npc.getX(), npc.getY(), npc.getZ() + 10, npc.getHeading(), false, 0, true);
+						}
+						else if (!hasQuestItems(qs.getPlayer(), KALATHS_HEAD))
+						{
+							addSpawn(TARLK_RAIDER_KALATH, npc.getX(), npc.getY(), npc.getZ() + 10, npc.getHeading(), false, 0, true);
 						}
 					}
 					break;

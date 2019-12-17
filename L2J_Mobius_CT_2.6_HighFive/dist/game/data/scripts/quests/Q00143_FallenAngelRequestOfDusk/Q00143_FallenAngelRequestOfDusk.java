@@ -154,6 +154,8 @@ public class Q00143_FallenAngelRequestOfDusk extends Quest
 				{
 					isAngelSpawned = false;
 				}
+				htmltext = null;
+				break;
 			}
 			default:
 			{

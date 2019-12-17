@@ -44,8 +44,8 @@ public class RequestSurrenderPledgeWar implements IClientIncomingPacket
 		{
 			return;
 		}
-		final Clan _clan = player.getClan();
-		if (_clan == null)
+		final Clan playerClan = player.getClan();
+		if (playerClan == null)
 		{
 			return;
 		}
@@ -60,7 +60,7 @@ public class RequestSurrenderPledgeWar implements IClientIncomingPacket
 		
 		LOGGER.info("RequestSurrenderPledgeWar by " + client.getPlayer().getClan().getName() + " with " + _pledgeName);
 		
-		if (!_clan.isAtWarWith(clan.getId()))
+		if (!playerClan.isAtWarWith(clan.getId()))
 		{
 			player.sendMessage("You aren't at war with this clan.");
 			player.sendPacket(ActionFailed.STATIC_PACKET);
@@ -70,7 +70,7 @@ public class RequestSurrenderPledgeWar implements IClientIncomingPacket
 		final SystemMessage msg = new SystemMessage(SystemMessageId.YOU_HAVE_SURRENDERED_TO_THE_S1_CLAN);
 		msg.addString(_pledgeName);
 		player.sendPacket(msg);
-		ClanTable.getInstance().deleteClanWars(_clan.getId(), clan.getId());
+		ClanTable.getInstance().deleteClanWars(playerClan.getId(), clan.getId());
 		// Zoey76: TODO: Implement or cleanup.
 		// PlayerInstance leader = World.getInstance().getPlayer(clan.getLeaderName());
 		// if ((leader != null) && (leader.isOnline() == 0))

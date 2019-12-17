@@ -1050,7 +1050,7 @@ public class Q00333_HuntOfTheBlackLion extends Quest
 						final long itemcount = getQuestItemsCount(player, UNDEAD_ASH) + getQuestItemsCount(player, BLOODY_AXE_INSIGNIA) + getQuestItemsCount(player, DELU_LIZARDMAN_FANG) + getQuestItemsCount(player, STAKATO_TALON);
 						if (itemcount < 20)
 						{
-							
+							// Do nothing.
 						}
 						else if (itemcount < 50)
 						{
@@ -1068,7 +1068,7 @@ public class Q00333_HuntOfTheBlackLion extends Quest
 						final long insignia = getQuestItemsCount(player, BLOODY_AXE_INSIGNIA);
 						final long fang = getQuestItemsCount(player, DELU_LIZARDMAN_FANG);
 						final long talon = getQuestItemsCount(player, STAKATO_TALON);
-						giveAdena(player, ((ash * 35) + (insignia * 35) + (((fang + 35) + (talon * 35)))), true);
+						giveAdena(player, ((ash * 35) + (insignia * 35) + ((fang + 35) + (talon * 35))), true);
 						takeItems(player, UNDEAD_ASH, -1);
 						takeItems(player, BLOODY_AXE_INSIGNIA, -1);
 						takeItems(player, DELU_LIZARDMAN_FANG, -1);
@@ -1081,7 +1081,7 @@ public class Q00333_HuntOfTheBlackLion extends Quest
 						final long itemcount = getQuestItemsCount(player, UNDEAD_ASH) + getQuestItemsCount(player, BLOODY_AXE_INSIGNIA) + getQuestItemsCount(player, DELU_LIZARDMAN_FANG) + getQuestItemsCount(player, STAKATO_TALON);
 						if (itemcount < 20)
 						{
-							
+							// Do nothing.
 						}
 						else if (itemcount < 50)
 						{

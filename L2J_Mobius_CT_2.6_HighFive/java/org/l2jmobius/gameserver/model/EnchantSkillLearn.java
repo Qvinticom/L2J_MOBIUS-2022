@@ -93,12 +93,7 @@ public class EnchantSkillLearn
 			return false;
 		}
 		final int index = getEnchantIndex(level);
-		
-		if ((index + 1) >= EnchantSkillGroupsData.getInstance().getEnchantSkillGroupById(_enchantRoutes.get(enchantType)).getEnchantGroupDetails().size())
-		{
-			return true;
-		}
-		return false;
+		return (index + 1) >= EnchantSkillGroupsData.getInstance().getEnchantSkillGroupById(_enchantRoutes.get(enchantType)).getEnchantGroupDetails().size();
 	}
 	
 	public EnchantSkillHolder getEnchantSkillHolder(int level)

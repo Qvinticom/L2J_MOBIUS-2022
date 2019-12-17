@@ -18,7 +18,6 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.model.PartyMatchRoom;
-import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -28,11 +27,7 @@ public class PartyMatchDetail implements IClientOutgoingPacket
 {
 	private final PartyMatchRoom _room;
 	
-	/**
-	 * @param player
-	 * @param room
-	 */
-	public PartyMatchDetail(PlayerInstance player, PartyMatchRoom room)
+	public PartyMatchDetail(PartyMatchRoom room)
 	{
 		_room = room;
 	}

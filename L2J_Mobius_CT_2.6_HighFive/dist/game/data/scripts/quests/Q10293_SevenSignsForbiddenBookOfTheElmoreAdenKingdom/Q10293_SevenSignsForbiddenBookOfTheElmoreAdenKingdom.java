@@ -203,7 +203,7 @@ public class Q10293_SevenSignsForbiddenBookOfTheElmoreAdenKingdom extends Quest
 	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
-		String htmltext = getNoQuestMsg(player);
+		String htmltext;
 		if ((qs.getCond() >= 1) && (qs.getCond() < 8))
 		{
 			htmltext = "32863-01.html";

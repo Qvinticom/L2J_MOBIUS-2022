@@ -39,7 +39,8 @@ public class Q00661_MakingTheHarvestGroundsSafe extends Quest
 	private static final int CLOUD_GEM = 8284;
 	private static final int YOUNG_ARANEID_CLAW = 8285;
 	// Monsters
-	private final Map<Integer, ItemChanceHolder> MONSTER_CHANCES = new HashMap<>();
+	private static final Map<Integer, ItemChanceHolder> MONSTER_CHANCES = new HashMap<>();
+	static
 	{
 		MONSTER_CHANCES.put(21095, new ItemChanceHolder(BIG_HORNET_STING, 0.508)); // Giant Poison Bee
 		MONSTER_CHANCES.put(21096, new ItemChanceHolder(CLOUD_GEM, 0.5)); // Cloudy Beast

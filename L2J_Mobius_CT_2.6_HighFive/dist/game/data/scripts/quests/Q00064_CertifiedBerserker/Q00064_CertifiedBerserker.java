@@ -205,38 +205,32 @@ public class Q00064_CertifiedBerserker extends Quest
 			{
 				case DEAD_SEEKER:
 				{
-					if (qs.isMemoState(7) && !hasQuestItems(killer, REPORT_EAST))
+					if (qs.isMemoState(7) && !hasQuestItems(killer, REPORT_EAST) && (getRandom(100) < 20))
 					{
-						if (getRandom(100) < 20)
+						giveItems(killer, REPORT_EAST, 1);
+						if (hasQuestItems(killer, REPORT_NORTH))
 						{
-							giveItems(killer, REPORT_EAST, 1);
-							if (hasQuestItems(killer, REPORT_NORTH))
-							{
-								qs.setCond(10, true);
-							}
-							else
-							{
-								playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-							}
+							qs.setCond(10, true);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;
 				}
 				case MARSH_STAKATO_DRONE:
 				{
-					if (qs.isMemoState(7) && !hasQuestItems(killer, REPORT_NORTH))
+					if (qs.isMemoState(7) && !hasQuestItems(killer, REPORT_NORTH) && (getRandom(100) < 20))
 					{
-						if (getRandom(100) < 20)
+						giveItems(killer, REPORT_NORTH, 1);
+						if (hasQuestItems(killer, REPORT_EAST))
 						{
-							giveItems(killer, REPORT_NORTH, 1);
-							if (hasQuestItems(killer, REPORT_EAST))
-							{
-								qs.setCond(10, true);
-							}
-							else
-							{
-								playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-							}
+							qs.setCond(10, true);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;
@@ -264,26 +258,20 @@ public class Q00064_CertifiedBerserker extends Quest
 				}
 				case ROAD_SCAVENGER:
 				{
-					if (qs.isMemoState(4) && !hasQuestItems(killer, MESSAGE_PLATE))
+					if (qs.isMemoState(4) && !hasQuestItems(killer, MESSAGE_PLATE) && (getRandom(100) < 20))
 					{
-						if (getRandom(100) < 20)
-						{
-							giveItems(killer, MESSAGE_PLATE, 1);
-							qs.setCond(6, true);
-						}
+						giveItems(killer, MESSAGE_PLATE, 1);
+						qs.setCond(6, true);
 					}
 					break;
 				}
 				case DIVINE_EMISSARY:
 				{
-					if (qs.isMemoState(9))
+					if (qs.isMemoState(9) && (getRandom(100) < 20))
 					{
-						if (getRandom(100) < 20)
-						{
-							final Npc kamael = addSpawn(HARKILGAMED, npc, true, 60000);
-							kamael.broadcastPacket(new NpcSay(kamael, ChatType.NPC_GENERAL, NpcStringId.S1_DID_YOU_COME_TO_HELP_ME).addStringParameter(killer.getAppearance().getVisibleName()));
-							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-						}
+						final Npc kamael = addSpawn(HARKILGAMED, npc, true, 60000);
+						kamael.broadcastPacket(new NpcSay(kamael, ChatType.NPC_GENERAL, NpcStringId.S1_DID_YOU_COME_TO_HELP_ME).addStringParameter(killer.getAppearance().getVisibleName()));
+						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 					}
 					break;
 				}

@@ -51,8 +51,8 @@ import org.l2jmobius.gameserver.model.zone.type.RespawnZone;
  */
 public class MapRegionManager implements IXmlReader
 {
-	private static final Map<String, MapRegion> _regions = new ConcurrentHashMap<>();
-	private static final String defaultRespawn = "talking_island_town";
+	private static final Map<String, MapRegion> REGIONS = new ConcurrentHashMap<>();
+	private static final String DEFAULT_RESPAWN = "talking_island_town";
 	
 	protected MapRegionManager()
 	{
@@ -62,9 +62,9 @@ public class MapRegionManager implements IXmlReader
 	@Override
 	public void load()
 	{
-		_regions.clear();
+		REGIONS.clear();
 		parseDatapackDirectory("data/mapregion", false);
-		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _regions.size() + " map regions.");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + REGIONS.size() + " map regions.");
 	}
 	
 	@Override
@@ -128,7 +128,7 @@ public class MapRegionManager implements IXmlReader
 								region.addBannedRace(attrs.getNamedItem("race").getNodeValue(), attrs.getNamedItem("point").getNodeValue());
 							}
 						}
-						_regions.put(name, region);
+						REGIONS.put(name, region);
 					}
 				}
 			}
@@ -142,7 +142,7 @@ public class MapRegionManager implements IXmlReader
 	 */
 	public MapRegion getMapRegion(int locX, int locY)
 	{
-		for (MapRegion region : _regions.values())
+		for (MapRegion region : REGIONS.values())
 		{
 			if (region.isZoneInRegion(getMapRegionX(locX), getMapRegionY(locY)))
 			{
@@ -317,10 +317,10 @@ public class MapRegionManager implements IXmlReader
 					castle = CastleManager.getInstance().getCastle(player);
 					fort = FortManager.getInstance().getFort(player);
 					clanhall = ClanHallManager.getInstance().getNearbyAbstractHall(creature.getX(), creature.getY(), 10000);
-					final SiegeFlagInstance tw_flag = TerritoryWarManager.getInstance().getHQForClan(player.getClan());
-					if (tw_flag != null)
+					final SiegeFlagInstance twFlag = TerritoryWarManager.getInstance().getHQForClan(player.getClan());
+					if (twFlag != null)
 					{
-						return tw_flag.getLocation();
+						return twFlag.getLocation();
 					}
 					else if (castle != null)
 					{
@@ -373,7 +373,7 @@ public class MapRegionManager implements IXmlReader
 					// Opposing race check.
 					if (getMapRegion(creature).getBannedRace().containsKey(creature.getRace()))
 					{
-						return _regions.get(getMapRegion(creature).getBannedRace().get(creature.getRace())).getChaoticSpawnLoc();
+						return REGIONS.get(getMapRegion(creature).getBannedRace().get(creature.getRace())).getChaoticSpawnLoc();
 					}
 					return getMapRegion(creature).getChaoticSpawnLoc();
 				}
@@ -381,24 +381,17 @@ public class MapRegionManager implements IXmlReader
 				{
 					if (player.isFlyingMounted())
 					{
-						return _regions.get("union_base_of_kserth").getChaoticSpawnLoc();
+						return REGIONS.get("union_base_of_kserth").getChaoticSpawnLoc();
 					}
-					return _regions.get(defaultRespawn).getChaoticSpawnLoc();
+					return REGIONS.get(DEFAULT_RESPAWN).getChaoticSpawnLoc();
 				}
 			}
 			
-			// Checking if needed to be respawned in "far" town from the castle;
+			// Checking if needed to be respawned in "far" town from the castle; and if player's clan is participating
 			castle = CastleManager.getInstance().getCastle(player);
-			if (castle != null)
+			if ((castle != null) && castle.getSiege().isInProgress() && (castle.getSiege().checkIsDefender(player.getClan()) || castle.getSiege().checkIsAttacker(player.getClan())) && (SevenSigns.getInstance().getSealOwner(SevenSigns.SEAL_STRIFE) == SevenSigns.CABAL_DAWN))
 			{
-				if (castle.getSiege().isInProgress())
-				{
-					// Check if player's clan is participating
-					if ((castle.getSiege().checkIsDefender(player.getClan()) || castle.getSiege().checkIsAttacker(player.getClan())) && (SevenSigns.getInstance().getSealOwner(SevenSigns.SEAL_STRIFE) == SevenSigns.CABAL_DAWN))
-					{
-						return castle.getResidenceZone().getOtherSpawnLoc();
-					}
-				}
+				return castle.getResidenceZone().getOtherSpawnLoc();
 			}
 			
 			// Checking if in an instance
@@ -439,14 +432,14 @@ public class MapRegionManager implements IXmlReader
 			// Opposing race check.
 			if (getMapRegion(creature).getBannedRace().containsKey(creature.getRace()))
 			{
-				return _regions.get(getMapRegion(creature).getBannedRace().get(creature.getRace())).getChaoticSpawnLoc();
+				return REGIONS.get(getMapRegion(creature).getBannedRace().get(creature.getRace())).getChaoticSpawnLoc();
 			}
 			return getMapRegion(creature).getSpawnLoc();
 		}
 		catch (Exception e)
 		{
 			// Port to the default respawn if no closest town found.
-			return _regions.get(defaultRespawn).getSpawnLoc();
+			return REGIONS.get(DEFAULT_RESPAWN).getSpawnLoc();
 		}
 	}
 	
@@ -460,7 +453,7 @@ public class MapRegionManager implements IXmlReader
 		try
 		{
 			final PlayerInstance player = (PlayerInstance) creature;
-			final MapRegion region = _regions.get(point);
+			final MapRegion region = REGIONS.get(point);
 			
 			if (region.getBannedRace().containsKey(player.getRace()))
 			{
@@ -470,7 +463,7 @@ public class MapRegionManager implements IXmlReader
 		}
 		catch (Exception e)
 		{
-			return _regions.get(defaultRespawn);
+			return REGIONS.get(DEFAULT_RESPAWN);
 		}
 	}
 	
@@ -480,7 +473,7 @@ public class MapRegionManager implements IXmlReader
 	 */
 	public MapRegion getMapRegionByName(String regionName)
 	{
-		return _regions.get(regionName);
+		return REGIONS.get(regionName);
 	}
 	
 	/**

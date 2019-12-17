@@ -23,6 +23,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Calendar;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Level;
@@ -323,15 +324,15 @@ public class RaidBossSpawnManager
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("UPDATE raidboss_spawnlist SET respawn_time = ?, currentHP = ?, currentMP = ? WHERE boss_id = ?"))
 		{
-			for (Integer bossId : _storedInfo.keySet())
+			for (Entry<Integer, StatsSet> entry : _storedInfo.entrySet())
 			{
+				Integer bossId = entry.getKey();
 				if (bossId == null)
 				{
 					continue;
 				}
 				
 				final RaidBossInstance boss = _bosses.get(bossId);
-				
 				if (boss == null)
 				{
 					continue;
@@ -342,8 +343,7 @@ public class RaidBossSpawnManager
 					updateStatus(boss, false);
 				}
 				
-				final StatsSet info = _storedInfo.get(bossId);
-				
+				final StatsSet info = entry.getValue();
 				if (info == null)
 				{
 					continue;
@@ -377,23 +377,12 @@ public class RaidBossSpawnManager
 	 */
 	public String[] getAllRaidBossStatus()
 	{
-		final String[] msg = new String[(_bosses == null) ? 0 : _bosses.size()];
-		
-		if (_bosses == null)
-		{
-			msg[0] = "None";
-			return msg;
-		}
-		
+		final String[] msg = new String[_bosses.size()];
 		int index = 0;
-		
-		for (int i : _bosses.keySet())
+		for (RaidBossInstance boss : _bosses.values())
 		{
-			final RaidBossInstance boss = _bosses.get(i);
-			
 			msg[index++] = boss.getName() + ": " + boss.getRaidStatus().name();
 		}
-		
 		return msg;
 	}
 	
@@ -405,19 +394,11 @@ public class RaidBossSpawnManager
 	public String getRaidBossStatus(int bossId)
 	{
 		String msg = "RaidBoss Status..." + Config.EOL;
-		
-		if (_bosses == null)
-		{
-			return msg += "None";
-		}
-		
 		if (_bosses.containsKey(bossId))
 		{
 			final RaidBossInstance boss = _bosses.get(bossId);
-			
 			msg += boss.getName() + ": " + boss.getRaidStatus().name();
 		}
-		
 		return msg;
 	}
 	
@@ -508,14 +489,11 @@ public class RaidBossSpawnManager
 		
 		_bosses.clear();
 		
-		if (_schedules != null)
+		for (ScheduledFuture<?> schedule : _schedules.values())
 		{
-			for (Integer bossId : _schedules.keySet())
-			{
-				_schedules.get(bossId).cancel(true);
-			}
-			_schedules.clear();
+			schedule.cancel(true);
 		}
+		_schedules.clear();
 		
 		_storedInfo.clear();
 		_spawns.clear();

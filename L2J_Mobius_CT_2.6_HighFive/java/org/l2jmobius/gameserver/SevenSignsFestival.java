@@ -19,7 +19,6 @@ package org.l2jmobius.gameserver;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -969,7 +968,7 @@ public class SevenSignsFestival implements SpawnListener
 				_festivalData.put(festivalCycle, tempData);
 			}
 		}
-		catch (SQLException e)
+		catch (Exception e)
 		{
 			LOGGER.log(Level.SEVERE, "SevenSignsFestival: Failed to load configuration: " + e.getMessage(), e);
 		}
@@ -1003,7 +1002,7 @@ public class SevenSignsFestival implements SpawnListener
 				}
 			}
 		}
-		catch (SQLException e)
+		catch (Exception e)
 		{
 			LOGGER.log(Level.SEVERE, "SevenSignsFestival: Failed to load configuration: " + e.getMessage(), e);
 		}
@@ -1033,7 +1032,7 @@ public class SevenSignsFestival implements SpawnListener
 			}
 			psInsert.executeBatch();
 		}
-		catch (SQLException e)
+		catch (Exception e)
 		{
 			LOGGER.log(Level.SEVERE, "SevenSignsFestival: Failed to save configuration: " + e.getMessage(), e);
 		}
@@ -1804,8 +1803,9 @@ public class SevenSignsFestival implements SpawnListener
 				{
 					wait(FESTIVAL_SIGNUP_TIME);
 				}
-				catch (InterruptedException e)
+				catch (Exception e)
 				{
+					// Ignore.
 				}
 				
 				// Clear past participants, they can no longer register their score if not done so already.
@@ -1838,8 +1838,9 @@ public class SevenSignsFestival implements SpawnListener
 								}
 							}
 						}
-						catch (InterruptedException e)
+						catch (Exception e)
 						{
+							// Ignore.
 						}
 					}
 					else
@@ -1878,8 +1879,9 @@ public class SevenSignsFestival implements SpawnListener
 				{
 					wait(Config.ALT_FESTIVAL_FIRST_SPAWN);
 				}
-				catch (InterruptedException e)
+				catch (Exception e)
 				{
+					// Ignore.
 				}
 				
 				elapsedTime = Config.ALT_FESTIVAL_FIRST_SPAWN;
@@ -1900,8 +1902,9 @@ public class SevenSignsFestival implements SpawnListener
 				{
 					wait(Config.ALT_FESTIVAL_FIRST_SWARM - Config.ALT_FESTIVAL_FIRST_SPAWN);
 				}
-				catch (InterruptedException e)
+				catch (Exception e)
 				{
+					// Ignore.
 				}
 				
 				elapsedTime += Config.ALT_FESTIVAL_FIRST_SWARM - Config.ALT_FESTIVAL_FIRST_SPAWN;
@@ -1916,8 +1919,9 @@ public class SevenSignsFestival implements SpawnListener
 				{
 					wait(Config.ALT_FESTIVAL_SECOND_SPAWN - Config.ALT_FESTIVAL_FIRST_SWARM);
 				}
-				catch (InterruptedException e)
+				catch (Exception e)
 				{
+					// Ignore.
 				}
 				
 				// Spawn an extra set of monsters (archers) on the free platforms with
@@ -1944,8 +1948,9 @@ public class SevenSignsFestival implements SpawnListener
 				{
 					wait(Config.ALT_FESTIVAL_SECOND_SWARM - Config.ALT_FESTIVAL_SECOND_SPAWN);
 				}
-				catch (InterruptedException e)
+				catch (Exception e)
 				{
+					// Ignore.
 				}
 				
 				for (DarknessFestival festivalInst : _festivalInstances.values())
@@ -1960,8 +1965,9 @@ public class SevenSignsFestival implements SpawnListener
 				{
 					wait(Config.ALT_FESTIVAL_CHEST_SPAWN - Config.ALT_FESTIVAL_SECOND_SWARM);
 				}
-				catch (InterruptedException e)
+				catch (Exception e)
 				{
+					// Ignore.
 				}
 				
 				// Spawn the festival chests, which enable the team to gain greater rewards
@@ -1979,8 +1985,9 @@ public class SevenSignsFestival implements SpawnListener
 				{
 					wait(Config.ALT_FESTIVAL_LENGTH - elapsedTime);
 				}
-				catch (InterruptedException e)
+				catch (Exception e)
 				{
+					// Ignore.
 				}
 				
 				// Participants can no longer opt to increase the challenge, as the festival will soon close.
@@ -2218,24 +2225,24 @@ public class SevenSignsFestival implements SpawnListener
 		 */
 		protected void spawnFestivalMonsters(int respawnDelay, int spawnType)
 		{
-			int[][] _npcSpawns = null;
+			int[][] npcSpawns = null;
 			
 			switch (spawnType)
 			{
 				case 0:
 				case 1:
 				{
-					_npcSpawns = (_cabal == SevenSigns.CABAL_DAWN) ? FESTIVAL_DAWN_PRIMARY_SPAWNS[_levelRange] : FESTIVAL_DUSK_PRIMARY_SPAWNS[_levelRange];
+					npcSpawns = (_cabal == SevenSigns.CABAL_DAWN) ? FESTIVAL_DAWN_PRIMARY_SPAWNS[_levelRange] : FESTIVAL_DUSK_PRIMARY_SPAWNS[_levelRange];
 					break;
 				}
 				case 2:
 				{
-					_npcSpawns = (_cabal == SevenSigns.CABAL_DAWN) ? FESTIVAL_DAWN_SECONDARY_SPAWNS[_levelRange] : FESTIVAL_DUSK_SECONDARY_SPAWNS[_levelRange];
+					npcSpawns = (_cabal == SevenSigns.CABAL_DAWN) ? FESTIVAL_DAWN_SECONDARY_SPAWNS[_levelRange] : FESTIVAL_DUSK_SECONDARY_SPAWNS[_levelRange];
 					break;
 				}
 				case 3:
 				{
-					_npcSpawns = (_cabal == SevenSigns.CABAL_DAWN) ? FESTIVAL_DAWN_CHEST_SPAWNS[_levelRange] : FESTIVAL_DUSK_CHEST_SPAWNS[_levelRange];
+					npcSpawns = (_cabal == SevenSigns.CABAL_DAWN) ? FESTIVAL_DAWN_CHEST_SPAWNS[_levelRange] : FESTIVAL_DUSK_CHEST_SPAWNS[_levelRange];
 					break;
 				}
 				default:
@@ -2244,9 +2251,9 @@ public class SevenSignsFestival implements SpawnListener
 				}
 			}
 			
-			for (int[] _npcSpawn : _npcSpawns)
+			for (int[] spawn : npcSpawns)
 			{
-				final FestivalSpawn currSpawn = new FestivalSpawn(_npcSpawn);
+				final FestivalSpawn currSpawn = new FestivalSpawn(spawn);
 				
 				// Only spawn archers/marksmen if specified to do so.
 				if ((spawnType == 1) && isFestivalArcher(currSpawn._npcId))
@@ -2337,8 +2344,9 @@ public class SevenSignsFestival implements SpawnListener
 						relocatePlayer(participant, false);
 						participant.sendMessage("The festival has ended. Your party leader must now register your score before the next festival takes place.");
 					}
-					catch (NullPointerException e)
+					catch (Exception e)
 					{
+						// Ignore.
 					}
 				}
 				
@@ -2400,8 +2408,9 @@ public class SevenSignsFestival implements SpawnListener
 					participant.teleToLocation(TeleportWhereType.TOWN);
 					participant.sendMessage("You have been removed from the festival arena.");
 				}
-				catch (NullPointerException e2)
+				catch (Exception e2)
 				{
+					// Ignore.
 				}
 			}
 		}

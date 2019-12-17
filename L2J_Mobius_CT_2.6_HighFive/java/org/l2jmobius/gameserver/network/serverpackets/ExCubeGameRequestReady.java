@@ -25,13 +25,6 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExCubeGameRequestReady implements IClientOutgoingPacket
 {
-	/**
-	 * Show Confirm Dialog for 10 seconds
-	 */
-	public ExCubeGameRequestReady()
-	{
-	}
-	
 	@Override
 	public boolean write(PacketWriter packet)
 	{

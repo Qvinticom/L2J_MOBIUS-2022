@@ -268,13 +268,10 @@ public class Q00625_TheFinestIngredientsPart2 extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getRandomPartyMemberState(killer, 1, 2, npc);
-		if ((qs != null) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, true))
+		if ((qs != null) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, true) && (npc.getSummoner() == killer))
 		{
-			if (npc.getSummoner() == killer)
-			{
-				qs.setCond(3, true);
-				giveItems(qs.getPlayer(), SPECIAL_YETI_MEAT);
-			}
+			qs.setCond(3, true);
+			giveItems(qs.getPlayer(), SPECIAL_YETI_MEAT);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}

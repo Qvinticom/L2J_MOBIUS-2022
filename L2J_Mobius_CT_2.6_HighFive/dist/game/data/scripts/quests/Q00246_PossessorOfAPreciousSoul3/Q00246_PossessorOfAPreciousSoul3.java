@@ -87,13 +87,16 @@ public class Q00246_PossessorOfAPreciousSoul3 extends Quest
 		switch (event)
 		{
 			case "31740-4.html":
+			{
 				if (st.isCreated())
 				{
 					takeItems(player, CARADINE_LETTER, -1);
 					st.startQuest();
 				}
 				break;
+			}
 			case "31741-2.html":
+			{
 				if (st.isStarted() && st.isCond(1))
 				{
 					st.set("awaitsWaterbinder", "1");
@@ -101,7 +104,9 @@ public class Q00246_PossessorOfAPreciousSoul3 extends Quest
 					st.setCond(2, true);
 				}
 				break;
+			}
 			case "31741-5.html":
+			{
 				if (st.isCond(3) && hasQuestItems(player, WATERBINDER) && hasQuestItems(player, EVERGREEN))
 				{
 					takeItems(player, WATERBINDER, 1);
@@ -109,7 +114,9 @@ public class Q00246_PossessorOfAPreciousSoul3 extends Quest
 					st.setCond(4, true);
 				}
 				break;
+			}
 			case "31741-9.html":
+			{
 				if (st.isCond(5) && (hasQuestItems(player, RAIN_SONG) || (getQuestItemsCount(player, FRAGMENTS) >= 100)))
 				{
 					takeItems(player, RAIN_SONG, -1);
@@ -122,7 +129,9 @@ public class Q00246_PossessorOfAPreciousSoul3 extends Quest
 					return "31741-8.html";
 				}
 				break;
+			}
 			case "30721-2.html":
+			{
 				if (st.isCond(6) && hasQuestItems(player, RELIC_BOX))
 				{
 					takeItems(player, RELIC_BOX, -1);
@@ -131,6 +140,7 @@ public class Q00246_PossessorOfAPreciousSoul3 extends Quest
 					st.exitQuest(false, true);
 				}
 				break;
+			}
 		}
 		return event;
 	}
@@ -143,107 +153,100 @@ public class Q00246_PossessorOfAPreciousSoul3 extends Quest
 		switch (npc.getId())
 		{
 			case PILGRIM_OF_SPLENDOR:
+			{
 				partyMember = getRandomPartyMember(player, "awaitsWaterbinder", "1");
 				if (partyMember != null)
 				{
 					st = getQuestState(partyMember, false);
 					final int chance = getRandom(100);
-					if (st.isCond(2) && !hasQuestItems(partyMember, WATERBINDER))
+					if (st.isCond(2) && !hasQuestItems(partyMember, WATERBINDER) && (chance < CHANCE_FOR_DROP))
 					{
-						if (chance < CHANCE_FOR_DROP)
+						giveItems(partyMember, WATERBINDER, 1);
+						st.unset("awaitsWaterbinder");
+						if (hasQuestItems(partyMember, EVERGREEN))
 						{
-							giveItems(partyMember, WATERBINDER, 1);
-							st.unset("awaitsWaterbinder");
-							if (hasQuestItems(partyMember, EVERGREEN))
-							{
-								st.setCond(3, true);
-								
-							}
-							else
-							{
-								playSound(partyMember, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-							}
+							st.setCond(3, true);
+							
+						}
+						else
+						{
+							playSound(partyMember, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 				}
 				break;
+			}
 			case JUDGE_OF_SPLENDOR:
+			{
 				partyMember = getRandomPartyMember(player, "awaitsEvergreen", "1");
 				if (partyMember != null)
 				{
 					st = getQuestState(partyMember, false);
 					final long chance = getRandom(100);
-					if (st.isCond(2) && !hasQuestItems(partyMember, EVERGREEN))
+					if (st.isCond(2) && !hasQuestItems(partyMember, EVERGREEN) && (chance < CHANCE_FOR_DROP))
 					{
-						if (chance < CHANCE_FOR_DROP)
+						giveItems(partyMember, EVERGREEN, 1);
+						st.unset("awaitsEvergreen");
+						if (hasQuestItems(partyMember, WATERBINDER))
 						{
-							giveItems(partyMember, EVERGREEN, 1);
-							st.unset("awaitsEvergreen");
-							if (hasQuestItems(partyMember, WATERBINDER))
-							{
-								st.setCond(3, true);
-							}
-							else
-							{
-								playSound(partyMember, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-							}
+							st.setCond(3, true);
+						}
+						else
+						{
+							playSound(partyMember, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 				}
 				break;
+			}
 			case BARAKIEL:
+			{
 				QuestState pst;
 				if ((player.getParty() != null) && !player.getParty().getMembers().isEmpty())
 				{
 					for (PlayerInstance member : player.getParty().getMembers())
 					{
 						pst = getQuestState(member, false);
-						if (pst != null)
+						if ((pst != null) && pst.isCond(4) && !hasQuestItems(member, RAIN_SONG))
 						{
-							if (pst.isCond(4) && !hasQuestItems(member, RAIN_SONG))
-							{
-								giveItems(member, RAIN_SONG, 1);
-								pst.setCond(5, true);
-							}
+							giveItems(member, RAIN_SONG, 1);
+							pst.setCond(5, true);
 						}
 					}
 				}
 				else
 				{
 					pst = player.getQuestState(getName());
-					if (pst != null)
+					if ((pst != null) && pst.isCond(4) && !hasQuestItems(player, RAIN_SONG))
 					{
-						if (pst.isCond(4) && !hasQuestItems(player, RAIN_SONG))
-						{
-							giveItems(player, RAIN_SONG, 1);
-							pst.setCond(5, true);
-						}
+						giveItems(player, RAIN_SONG, 1);
+						pst.setCond(5, true);
 					}
 				}
 				break;
+			}
 			default:
+			{
 				st = player.getQuestState(getName());
 				if ((st == null))
 				{
 					return super.onKill(npc, player, isSummon);
 				}
 				
-				if (CommonUtil.contains(MOBS, npc.getId()) && (getQuestItemsCount(player, FRAGMENTS) < 100) && (st.isCond(4)))
+				if (CommonUtil.contains(MOBS, npc.getId()) && (getQuestItemsCount(player, FRAGMENTS) < 100) && (st.isCond(4)) && (getRandom(100) < CHANCE_FOR_DROP_FRAGMENTS))
 				{
-					if (getRandom(100) < CHANCE_FOR_DROP_FRAGMENTS)
+					giveItems(player, FRAGMENTS, 1);
+					if (getQuestItemsCount(player, FRAGMENTS) < 100)
 					{
-						giveItems(player, FRAGMENTS, 1);
-						if (getQuestItemsCount(player, FRAGMENTS) < 100)
-						{
-							playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-						}
-						else
-						{
-							st.setCond(5, true);
-						}
+						playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+					}
+					else
+					{
+						st.setCond(5, true);
 					}
 				}
 				break;
+			}
 		}
 		return super.onKill(npc, player, isSummon);
 	}
@@ -261,39 +264,56 @@ public class Q00246_PossessorOfAPreciousSoul3 extends Quest
 		switch (npc.getId())
 		{
 			case CARADINE:
+			{
 				switch (st.getState())
 				{
 					case State.CREATED:
+					{
 						final QuestState qs = player.getQuestState(Q00242_PossessorOfAPreciousSoul2.class.getSimpleName());
 						htmltext = ((player.getLevel() >= 65) && (qs != null) && qs.isCompleted()) ? "31740-1.htm" : "31740-2.html";
 						break;
+					}
 					case State.STARTED:
+					{
 						htmltext = "31740-5.html";
 						break;
+					}
 				}
 				break;
+			}
 			case OSSIAN:
+			{
 				switch (st.getState())
 				{
 					case State.STARTED:
+					{
 						switch (st.getCond())
 						{
 							case 1:
+							{
 								htmltext = "31741-1.html";
 								break;
+							}
 							case 2:
+							{
 								htmltext = "31741-4.html";
 								break;
+							}
 							case 3:
+							{
 								if (hasQuestItems(player, WATERBINDER) && hasQuestItems(player, EVERGREEN))
 								{
 									htmltext = "31741-3.html";
 								}
 								break;
+							}
 							case 4:
+							{
 								htmltext = "31741-8.html";
 								break;
+							}
 							case 5:
+							{
 								if (hasQuestItems(player, RAIN_SONG) || (getQuestItemsCount(player, FRAGMENTS) >= 100))
 								{
 									htmltext = "31741-7.html";
@@ -303,28 +323,41 @@ public class Q00246_PossessorOfAPreciousSoul3 extends Quest
 									htmltext = "31741-8.html";
 								}
 								break;
+							}
 							case 6:
+							{
 								if (getQuestItemsCount(player, RELIC_BOX) == 1)
 								{
 									htmltext = "31741-11.html";
 								}
 								break;
+							}
 						}
+						break;
+					}
 				}
 				break;
+			}
 			case LADD:
+			{
 				switch (st.getState())
 				{
 					case State.STARTED:
+					{
 						if (st.isCond(6))
 						{
 							htmltext = "30721-1.html";
 						}
 						break;
+					}
 					case State.COMPLETED:
+					{
 						htmltext = getAlreadyCompletedMsg(player);
 						break;
+					}
 				}
+				break;
+			}
 		}
 		return htmltext;
 	}

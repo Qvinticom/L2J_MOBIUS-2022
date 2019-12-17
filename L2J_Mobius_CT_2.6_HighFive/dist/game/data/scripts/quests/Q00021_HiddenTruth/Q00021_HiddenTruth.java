@@ -267,11 +267,11 @@ public class Q00021_HiddenTruth extends Quest
 						{
 							if (PAGE_COUNT < 5)
 							{
-								final Npc PAGE = addSpawn(GHOST_OF_VON_HELLMANS_PAGE, PAGE_LOC, true, 0);
+								final Npc page = addSpawn(GHOST_OF_VON_HELLMANS_PAGE, PAGE_LOC, true, 0);
 								PAGE_COUNT++;
 								PAGE_SPAWNED = true;
-								PAGE.setScriptValue(player.getObjectId());
-								WalkingManager.getInstance().startMoving(PAGE, PAGE_ROUTE_NAME);
+								page.setScriptValue(player.getObjectId());
+								WalkingManager.getInstance().startMoving(page, PAGE_ROUTE_NAME);
 								htmltext = "31524-07.html";
 							}
 							else

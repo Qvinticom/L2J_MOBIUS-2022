@@ -91,24 +91,23 @@ public class Wedding implements IVoicedCommandHandler
 			return false;
 		}
 		
-		final int _partnerId = activeChar.getPartnerId();
-		final int _coupleId = activeChar.getCoupleId();
-		long AdenaAmount = 0;
+		final int partnerId = activeChar.getPartnerId();
+		final int coupleId = activeChar.getCoupleId();
+		long adenaAmount = 0;
 		
 		if (activeChar.isMarried())
 		{
 			activeChar.sendMessage("You are now divorced.");
 			
-			AdenaAmount = (activeChar.getAdena() / 100) * Config.WEDDING_DIVORCE_COSTS;
-			activeChar.getInventory().reduceAdena("Wedding", AdenaAmount, activeChar, null);
-			
+			adenaAmount = (activeChar.getAdena() / 100) * Config.WEDDING_DIVORCE_COSTS;
+			activeChar.getInventory().reduceAdena("Wedding", adenaAmount, activeChar, null);
 		}
 		else
 		{
 			activeChar.sendMessage("You have broken up as a couple.");
 		}
 		
-		final PlayerInstance partner = World.getInstance().getPlayer(_partnerId);
+		final PlayerInstance partner = World.getInstance().getPlayer(partnerId);
 		if (partner != null)
 		{
 			partner.setPartnerId(0);
@@ -122,12 +121,12 @@ public class Wedding implements IVoicedCommandHandler
 			}
 			
 			// give adena
-			if (AdenaAmount > 0)
+			if (adenaAmount > 0)
 			{
-				partner.addAdena("WEDDING", AdenaAmount, null, false);
+				partner.addAdena("WEDDING", adenaAmount, null, false);
 			}
 		}
-		CoupleManager.getInstance().deleteCouple(_coupleId);
+		CoupleManager.getInstance().deleteCouple(coupleId);
 		return true;
 	}
 	
@@ -209,7 +208,7 @@ public class Wedding implements IVoicedCommandHandler
 		}
 		
 		// check if target has player on friendlist
-		boolean FoundOnFriendList = false;
+		boolean foundOnFriendList = false;
 		int objectId;
 		try (Connection con = DatabaseFactory.getConnection())
 		{
@@ -221,7 +220,7 @@ public class Wedding implements IVoicedCommandHandler
 				objectId = rset.getInt("friendId");
 				if (objectId == activeChar.getObjectId())
 				{
-					FoundOnFriendList = true;
+					foundOnFriendList = true;
 				}
 			}
 			statement.close();
@@ -231,7 +230,7 @@ public class Wedding implements IVoicedCommandHandler
 			LOGGER.warning("could not read friend data:" + e);
 		}
 		
-		if (!FoundOnFriendList)
+		if (!foundOnFriendList)
 		{
 			activeChar.sendMessage("The player you want to ask is not on your friends list, you must first be on each others friends list before you choose to engage.");
 			return false;

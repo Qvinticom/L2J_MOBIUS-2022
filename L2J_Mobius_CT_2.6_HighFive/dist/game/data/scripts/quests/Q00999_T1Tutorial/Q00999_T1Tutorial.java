@@ -20,6 +20,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.l2jmobius.Config;
+import org.l2jmobius.gameserver.enums.Race;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.instance.MonsterInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -67,17 +68,17 @@ public class Q00999_T1Tutorial extends Quest
 	
 	private static class Talk
 	{
-		public int raceId;
-		public String[] htmlfiles;
-		public int npcTyp;
-		public int item;
+		public int _raceId;
+		public String[] _htmlfiles;
+		public int _npcType;
+		public int _item;
 		
-		public Talk(int _raceId, String[] _htmlfiles, int _npcTyp, int _item)
+		public Talk(int raceId, String[] htmlfiles, int npcType, int item)
 		{
-			raceId = _raceId;
-			htmlfiles = _htmlfiles;
-			npcTyp = _npcTyp;
-			item = _item;
+			_raceId = raceId;
+			_htmlfiles = htmlfiles;
+			_npcType = npcType;
+			_item = item;
 		}
 	}
 	
@@ -236,13 +237,10 @@ public class Q00999_T1Tutorial extends Quest
 						st.playTutorialVoice("tutorial_voice_026");
 					}
 				}
-				else if (player.getClassId().getId() == classId2)
+				else if ((player.getClassId().getId() == classId2) && (gift2 != 0))
 				{
-					if (gift2 != 0)
-					{
-						giveItems(player, gift2, count2);
-						st.playTutorialVoice("tutorial_voice_026");
-					}
+					giveItems(player, gift2, count2);
+					st.playTutorialVoice("tutorial_voice_026");
 				}
 				st.set("step", "4");
 				st.set("onlyone", "1");
@@ -279,16 +277,16 @@ public class Q00999_T1Tutorial extends Quest
 		final int step = st.getInt("step");
 		final Talk talk = Talks.get(npc.getId());
 		
-		if (((player.getLevel() >= 10) || (onlyone != 0)) && (talk.npcTyp == 1))
+		if (((player.getLevel() >= 10) || (onlyone != 0)) && (talk._npcType == 1))
 		{
 			htmltext = "30575-05.htm";
 		}
 		else if ((onlyone == 0) && (player.getLevel() < 10))
 		{
-			if ((talk != null) && (player.getRace().ordinal() == talk.raceId))
+			if ((talk != null) && (player.getRace().ordinal() == talk._raceId))
 			{
-				htmltext = talk.htmlfiles[0];
-				if (talk.npcTyp == 1)
+				htmltext = talk._htmlfiles[0];
+				if (talk._npcType == 1)
 				{
 					if ((step == 0) && (Ex < 0))
 					{
@@ -306,12 +304,12 @@ public class Q00999_T1Tutorial extends Quest
 							st.setState(State.STARTED);
 						}
 					}
-					else if ((step == 1) && !hasQuestItems(player, talk.item) && (Ex <= 2))
+					else if ((step == 1) && !hasQuestItems(player, talk._item) && (Ex <= 2))
 					{
 						if (hasQuestItems(player, BLUE_GEM))
 						{
 							takeItems(player, BLUE_GEM, -1);
-							giveItems(player, talk.item, 1);
+							giveItems(player, talk._item, 1);
 							st.set("step", "2");
 							qs.set("Ex", "3");
 							startQuestTimer("TimerEx_NewbieHelper", 30000, npc, player);
@@ -320,7 +318,7 @@ public class Q00999_T1Tutorial extends Quest
 							{
 								st.playTutorialVoice("tutorial_voice_027");
 								giveItems(player, SPIRITSHOT_NOVICE, 100);
-								htmltext = talk.htmlfiles[2];
+								htmltext = talk._htmlfiles[2];
 								if (htmltext.equals(""))
 								{
 									htmltext = "<html><body>I`m sorry. I only help warriors. Please go to another Newbie Helper who may assist you.</body></html>";
@@ -330,7 +328,7 @@ public class Q00999_T1Tutorial extends Quest
 							{
 								st.playTutorialVoice("tutorial_voice_026");
 								giveItems(player, SOULSHOT_NOVICE, 200);
-								htmltext = talk.htmlfiles[1];
+								htmltext = talk._htmlfiles[1];
 								if (htmltext.equals(""))
 								{
 									htmltext = "<html><body>I`m sorry. I only help mystics. Please go to another Newbie Helper who may assist you.</body></html>";
@@ -341,11 +339,14 @@ public class Q00999_T1Tutorial extends Quest
 						{
 							if (player.getClassId().isMage())
 							{
-								htmltext = "30131-02.htm";
-							}
-							if (player.getRace().ordinal() == 3)
-							{
-								htmltext = "30575-02.htm";
+								if (player.getRace() == Race.ORC)
+								{
+									htmltext = "30575-02.htm";
+								}
+								else
+								{
+									htmltext = "30131-02.htm";
+								}
 							}
 							else
 							{
@@ -355,32 +356,29 @@ public class Q00999_T1Tutorial extends Quest
 					}
 					else if (step == 2)
 					{
-						htmltext = talk.htmlfiles[3];
+						htmltext = talk._htmlfiles[3];
 					}
 				}
-				else if (talk.npcTyp == 0)
+				else if (talk._npcType == 0)
 				{
 					if (step == 1)
 					{
-						htmltext = talk.htmlfiles[0];
+						htmltext = talk._htmlfiles[0];
 					}
 					else if (step == 2)
 					{
-						htmltext = talk.htmlfiles[1];
+						htmltext = talk._htmlfiles[1];
 					}
 					else if (step == 3)
 					{
-						htmltext = talk.htmlfiles[2];
+						htmltext = talk._htmlfiles[2];
 					}
 				}
 			}
 		}
-		else if (step == 4)
+		else if ((step == 4) && (player.getLevel() < 10))
 		{
-			if (player.getLevel() < 10)
-			{
-				htmltext = npc.getId() + "-04.htm";
-			}
+			htmltext = npc.getId() + "-04.htm";
 		}
 		
 		if ((htmltext == null) || htmltext.equals(""))

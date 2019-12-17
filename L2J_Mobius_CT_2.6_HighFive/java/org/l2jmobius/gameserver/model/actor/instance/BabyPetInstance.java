@@ -285,26 +285,20 @@ public class BabyPetInstance extends PetInstance
 				if ((isImprovedBaby && (hpPercent < 0.3)) || (!isImprovedBaby && (hpPercent < 0.15)))
 				{
 					skill = _majorHeal.getSkill();
-					if (!_baby.isSkillDisabled(skill) && (Rnd.get(100) <= 75))
+					if (!_baby.isSkillDisabled(skill) && (Rnd.get(100) <= 75) && (_baby.getCurrentMp() >= skill.getMpConsume()))
 					{
-						if (_baby.getCurrentMp() >= skill.getMpConsume())
-						{
-							castSkill(skill);
-							return;
-						}
+						castSkill(skill);
+						return;
 					}
 				}
 				else if ((_majorHeal.getSkill() != _minorHeal.getSkill()) && ((isImprovedBaby && (hpPercent < 0.7)) || (!isImprovedBaby && (hpPercent < 0.8))))
 				{
 					// Cast _minorHeal only if it's different than _majorHeal, then pet has two heals available.
 					skill = _minorHeal.getSkill();
-					if (!_baby.isSkillDisabled(skill) && (Rnd.get(100) <= 25))
+					if (!_baby.isSkillDisabled(skill) && (Rnd.get(100) <= 25) && (_baby.getCurrentMp() >= skill.getMpConsume()))
 					{
-						if (_baby.getCurrentMp() >= skill.getMpConsume())
-						{
-							castSkill(skill);
-							return;
-						}
+						castSkill(skill);
+						return;
 					}
 				}
 			}

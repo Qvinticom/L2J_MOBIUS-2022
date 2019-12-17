@@ -135,7 +135,7 @@ public class MobGroup
 	
 	public void spawnGroup(int x, int y, int z)
 	{
-		if (getMobs().size() > 0)
+		if (!getMobs().isEmpty())
 		{
 			return;
 		}
@@ -158,11 +158,9 @@ public class MobGroup
 				getMobs().add((ControllableMobInstance) spawn.doGroupSpawn());
 			}
 		}
-		catch (ClassNotFoundException e)
+		catch (Exception e)
 		{
-		}
-		catch (NoSuchMethodException e2)
-		{
+			// Ignore.
 		}
 	}
 	
@@ -196,14 +194,14 @@ public class MobGroup
 	public ControllableMobInstance getRandomMob()
 	{
 		removeDead();
-		return getMobs().size() == 0 ? null : getMobs().get(Rnd.get(getMobs().size()));
+		return getMobs().isEmpty() ? null : getMobs().get(Rnd.get(getMobs().size()));
 	}
 	
 	public void unspawnGroup()
 	{
 		removeDead();
 		
-		if (getMobs().size() == 0)
+		if (getMobs().isEmpty())
 		{
 			return;
 		}

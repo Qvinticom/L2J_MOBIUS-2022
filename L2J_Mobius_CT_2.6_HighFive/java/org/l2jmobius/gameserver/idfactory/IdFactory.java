@@ -290,6 +290,7 @@ public abstract class IdFactory
 		}
 		catch (SQLException e)
 		{
+			// Ignore.
 		}
 	}
 	

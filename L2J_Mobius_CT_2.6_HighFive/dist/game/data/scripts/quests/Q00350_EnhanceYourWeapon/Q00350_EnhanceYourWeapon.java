@@ -251,18 +251,18 @@ public class Q00350_EnhanceYourWeapon extends Quest
 		return false;
 	}
 	
-	private static void exchangeCrystal(PlayerInstance player, Attackable mob, int takeid, int giveid, boolean broke)
+	private static void exchangeCrystal(PlayerInstance player, Attackable mob, int takeId, int giveId, boolean broke)
 	{
-		ItemInstance Item = player.getInventory().destroyItemByItemId("SoulCrystal", takeid, 1, player, mob);
-		if (Item != null)
+		ItemInstance item = player.getInventory().destroyItemByItemId("SoulCrystal", takeId, 1, player, mob);
+		if (item != null)
 		{
 			// Prepare inventory update packet
 			final InventoryUpdate playerIU = new InventoryUpdate();
-			playerIU.addRemovedItem(Item);
+			playerIU.addRemovedItem(item);
 			
 			// Add new crystal to the killer's inventory
-			Item = player.getInventory().addItem("SoulCrystal", giveid, 1, player, mob);
-			playerIU.addItem(Item);
+			item = player.getInventory().addItem("SoulCrystal", giveId, 1, player, mob);
+			playerIU.addItem(item);
 			
 			// Send a sound event and text message to the player
 			if (broke)
@@ -276,7 +276,7 @@ public class Q00350_EnhanceYourWeapon extends Quest
 			
 			// Send system message
 			final SystemMessage sms = new SystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1);
-			sms.addItemName(giveid);
+			sms.addItemName(giveId);
 			player.sendPacket(sms);
 			
 			// Send inventory update packet

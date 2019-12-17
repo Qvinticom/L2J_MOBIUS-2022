@@ -62,12 +62,9 @@ public class EmeraldHorn extends AbstractNpcAI
 			npc.teleToLocation(npc.getSpawn().getX(), npc.getSpawn().getY(), npc.getSpawn().getZ());
 		}
 		
-		if (npc.isAffectedBySkill(REFLECT_ATTACK.getSkillId()))
+		if (npc.isAffectedBySkill(REFLECT_ATTACK.getSkillId()) && npc.getVariables().getBoolean(CAST_FLAG, false))
 		{
-			if (npc.getVariables().getBoolean(CAST_FLAG, false))
-			{
-				npc.getVariables().set(TOTAL_DAMAGE_COUNT, npc.getVariables().getInt(TOTAL_DAMAGE_COUNT) + damage);
-			}
+			npc.getVariables().set(TOTAL_DAMAGE_COUNT, npc.getVariables().getInt(TOTAL_DAMAGE_COUNT) + damage);
 		}
 		
 		if (npc.getVariables().getInt(TOTAL_DAMAGE_COUNT) > 5000)

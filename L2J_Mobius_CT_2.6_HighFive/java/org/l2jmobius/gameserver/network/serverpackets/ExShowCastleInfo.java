@@ -29,11 +29,6 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExShowCastleInfo implements IClientOutgoingPacket
 {
-	public ExShowCastleInfo()
-	{
-		
-	}
-	
 	@Override
 	public boolean write(PacketWriter packet)
 	{

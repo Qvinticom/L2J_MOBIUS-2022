@@ -71,12 +71,9 @@ public class Q00636_TruthBeyond extends Quest
 	public String onEnterZone(Creature creature, ZoneType zone)
 	{
 		// QuestState already null on enter because quest is finished
-		if (creature.isPlayer())
+		if (creature.isPlayer() && creature.getActingPlayer().destroyItemByItemId("Mark", VISITOR_MARK, 1, creature, false))
 		{
-			if (creature.getActingPlayer().destroyItemByItemId("Mark", VISITOR_MARK, 1, creature, false))
-			{
-				creature.getActingPlayer().addItem("Mark", FADED_MARK, 1, creature, true);
-			}
+			creature.getActingPlayer().addItem("Mark", FADED_MARK, 1, creature, true);
 		}
 		return null;
 	}

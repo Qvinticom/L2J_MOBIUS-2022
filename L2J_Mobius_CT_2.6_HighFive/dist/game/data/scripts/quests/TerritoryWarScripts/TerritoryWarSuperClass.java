@@ -103,7 +103,7 @@ public class TerritoryWarSuperClass extends Quest
 	
 	public int getTerritoryIdForThisNPCId(int npcid)
 	{
-		return 0;
+		return 0; // TODO: Implement this.
 	}
 	
 	private void handleKillTheQuest(PlayerInstance player)

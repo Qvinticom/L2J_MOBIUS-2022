@@ -20,6 +20,7 @@ import org.l2jmobius.gameserver.handler.ITargetTypeHandler;
 import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Summon;
+import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.model.skills.Skill;
 import org.l2jmobius.gameserver.model.skills.targets.TargetType;
 
@@ -33,12 +34,12 @@ public class OwnerPet implements ITargetTypeHandler
 	{
 		if (creature.isSummon())
 		{
-			target = ((Summon) creature).getOwner();
-			if ((target != null) && !target.isDead())
+			final PlayerInstance owner = ((Summon) creature).getOwner();
+			if ((owner != null) && !owner.isDead())
 			{
 				return new Creature[]
 				{
-					target
+					owner
 				};
 			}
 		}

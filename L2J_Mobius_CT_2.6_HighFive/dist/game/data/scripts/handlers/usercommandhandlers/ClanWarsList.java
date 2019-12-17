@@ -93,12 +93,12 @@ public class ClanWarsList implements IUserCommandHandler
 				try (ResultSet rs = ps.executeQuery())
 				{
 					String clanName;
-					int ally_id;
+					int allyId;
 					while (rs.next())
 					{
 						clanName = rs.getString("clan_name");
-						ally_id = rs.getInt("ally_id");
-						if (ally_id > 0)
+						allyId = rs.getInt("ally_id");
+						if (allyId > 0)
 						{
 							// Target With Ally
 							sm = new SystemMessage(SystemMessageId.S1_S2_ALLIANCE);

@@ -129,6 +129,7 @@ public class AdminTeleport implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
+				// Not important.
 			}
 		}
 		else if (command.startsWith("admin_move_to"))
@@ -174,6 +175,7 @@ public class AdminTeleport implements IAdminCommandHandler
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
+				// Not important.
 			}
 		}
 		else if (command.startsWith("admin_recall "))
@@ -199,6 +201,7 @@ public class AdminTeleport implements IAdminCommandHandler
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
+				// Not important.
 			}
 		}
 		else if (command.equals("admin_tele"))
@@ -339,11 +342,11 @@ public class AdminTeleport implements IAdminCommandHandler
 		player.setIsIn7sDungeon(false);
 	}
 	
-	private void teleportTo(PlayerInstance activeChar, String Coords)
+	private void teleportTo(PlayerInstance activeChar, String coords)
 	{
 		try
 		{
-			final StringTokenizer st = new StringTokenizer(Coords);
+			final StringTokenizer st = new StringTokenizer(coords);
 			final String x1 = st.nextToken();
 			final int x = Integer.parseInt(x1);
 			final String y1 = st.nextToken();
@@ -354,7 +357,7 @@ public class AdminTeleport implements IAdminCommandHandler
 			activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 			activeChar.teleToLocation(x, y, z);
 			
-			BuilderUtil.sendSysMessage(activeChar, "You have been teleported to " + Coords);
+			BuilderUtil.sendSysMessage(activeChar, "You have been teleported to " + coords);
 		}
 		catch (NoSuchElementException nsee)
 		{
@@ -387,7 +390,7 @@ public class AdminTeleport implements IAdminCommandHandler
 		activeChar.sendPacket(adminReply);
 	}
 	
-	private void teleportCharacter(PlayerInstance activeChar, String Cords)
+	private void teleportCharacter(PlayerInstance activeChar, String coords)
 	{
 		final WorldObject target = activeChar.getTarget();
 		PlayerInstance player = null;
@@ -409,7 +412,7 @@ public class AdminTeleport implements IAdminCommandHandler
 		{
 			try
 			{
-				final StringTokenizer st = new StringTokenizer(Cords);
+				final StringTokenizer st = new StringTokenizer(coords);
 				final String x1 = st.nextToken();
 				final int x = Integer.parseInt(x1);
 				final String y1 = st.nextToken();
@@ -420,6 +423,7 @@ public class AdminTeleport implements IAdminCommandHandler
 			}
 			catch (NoSuchElementException nsee)
 			{
+				// Not important.
 			}
 		}
 	}

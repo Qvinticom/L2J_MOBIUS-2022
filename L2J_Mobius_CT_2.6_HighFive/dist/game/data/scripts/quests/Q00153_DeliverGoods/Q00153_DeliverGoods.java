@@ -59,16 +59,13 @@ public class Q00153_DeliverGoods extends Quest
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
-		if ((qs != null) && (npc.getId() == ARNOLD_ID))
+		if ((qs != null) && (npc.getId() == ARNOLD_ID) && event.equalsIgnoreCase("30041-02.html"))
 		{
-			if (event.equalsIgnoreCase("30041-02.html"))
-			{
-				qs.startQuest();
-				giveItems(player, DELIVERY_LIST_ID, 1);
-				giveItems(player, HEAVY_WOOD_BOX_ID, 1);
-				giveItems(player, CLOTH_BUNDLE_ID, 1);
-				giveItems(player, CLAY_POT_ID, 1);
-			}
+			qs.startQuest();
+			giveItems(player, DELIVERY_LIST_ID, 1);
+			giveItems(player, HEAVY_WOOD_BOX_ID, 1);
+			giveItems(player, CLOTH_BUNDLE_ID, 1);
+			giveItems(player, CLAY_POT_ID, 1);
 		}
 		return event;
 	}

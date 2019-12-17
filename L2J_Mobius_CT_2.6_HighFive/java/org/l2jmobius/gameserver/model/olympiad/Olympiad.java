@@ -203,10 +203,10 @@ public class Olympiad extends ListenersContainer
 		{
 			LOGGER.info("Olympiad System: Failed to load data from database, trying to load from file.");
 			
-			final Properties OlympiadProperties = new Properties();
+			final Properties olympiadProperties = new Properties();
 			try (InputStream is = new FileInputStream(Config.OLYMPIAD_CONFIG_FILE))
 			{
-				OlympiadProperties.load(is);
+				olympiadProperties.load(is);
 			}
 			catch (Exception e)
 			{
@@ -214,11 +214,11 @@ public class Olympiad extends ListenersContainer
 				return;
 			}
 			
-			_currentCycle = Integer.parseInt(OlympiadProperties.getProperty("CurrentCycle", "1"));
-			_period = Integer.parseInt(OlympiadProperties.getProperty("Period", "0"));
-			_olympiadEnd = Long.parseLong(OlympiadProperties.getProperty("OlympiadEnd", "0"));
-			_validationEnd = Long.parseLong(OlympiadProperties.getProperty("ValidationEnd", "0"));
-			_nextWeeklyChange = Long.parseLong(OlympiadProperties.getProperty("NextWeeklyChange", "0"));
+			_currentCycle = Integer.parseInt(olympiadProperties.getProperty("CurrentCycle", "1"));
+			_period = Integer.parseInt(olympiadProperties.getProperty("Period", "0"));
+			_olympiadEnd = Long.parseLong(olympiadProperties.getProperty("OlympiadEnd", "0"));
+			_validationEnd = Long.parseLong(olympiadProperties.getProperty("ValidationEnd", "0"));
+			_nextWeeklyChange = Long.parseLong(olympiadProperties.getProperty("NextWeeklyChange", "0"));
 		}
 		
 		switch (_period)
@@ -594,11 +594,12 @@ public class Olympiad extends ListenersContainer
 				{
 					try
 					{
-						// wait 1 minutes for end of pendings games
+						// wait 1 minutes for end of pending games
 						Thread.sleep(60000);
 					}
-					catch (InterruptedException e)
+					catch (Exception e)
 					{
+						// Ignore.
 					}
 				}
 				

@@ -231,16 +231,13 @@ public class OlympiadStadiumZone extends ZoneRespawn
 	@Override
 	protected final void onExit(Creature creature)
 	{
-		if (getSettings().getOlympiadTask() != null)
+		if ((getSettings().getOlympiadTask() != null) && getSettings().getOlympiadTask().isBattleStarted())
 		{
-			if (getSettings().getOlympiadTask().isBattleStarted())
+			creature.setInsideZone(ZoneId.PVP, false);
+			if (creature.isPlayer())
 			{
-				creature.setInsideZone(ZoneId.PVP, false);
-				if (creature.isPlayer())
-				{
-					creature.sendPacket(SystemMessageId.YOU_HAVE_LEFT_A_COMBAT_ZONE);
-					creature.sendPacket(ExOlympiadMatchEnd.STATIC_PACKET);
-				}
+				creature.sendPacket(SystemMessageId.YOU_HAVE_LEFT_A_COMBAT_ZONE);
+				creature.sendPacket(ExOlympiadMatchEnd.STATIC_PACKET);
 			}
 		}
 	}

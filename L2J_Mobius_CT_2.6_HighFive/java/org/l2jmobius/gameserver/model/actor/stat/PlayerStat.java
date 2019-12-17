@@ -61,7 +61,7 @@ public class PlayerStat extends PlayableStat
 	private boolean _cloakSlot = false;
 	private boolean _pausedNevitHourglass = false;
 	
-	public static final int VITALITY_LEVELS[] =
+	public static final int[] VITALITY_LEVELS =
 	{
 		240,
 		2000,

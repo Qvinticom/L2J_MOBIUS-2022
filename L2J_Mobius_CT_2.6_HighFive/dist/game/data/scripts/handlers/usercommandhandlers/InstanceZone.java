@@ -17,6 +17,7 @@
 package handlers.usercommandhandlers;
 
 import java.util.Map;
+import java.util.Map.Entry;
 
 import org.l2jmobius.gameserver.handler.IUserCommandHandler;
 import org.l2jmobius.gameserver.instancemanager.InstanceManager;
@@ -62,9 +63,9 @@ public class InstanceZone implements IUserCommandHandler
 		boolean firstMessage = true;
 		if (instanceTimes != null)
 		{
-			for (int instanceId : instanceTimes.keySet())
+			for (Entry<Integer, Long> entry : instanceTimes.entrySet())
 			{
-				final long remainingTime = (instanceTimes.get(instanceId) - System.currentTimeMillis()) / 1000;
+				final long remainingTime = (entry.getValue() - System.currentTimeMillis()) / 1000;
 				if (remainingTime > 60)
 				{
 					if (firstMessage)
@@ -75,14 +76,14 @@ public class InstanceZone implements IUserCommandHandler
 					final int hours = (int) (remainingTime / 3600);
 					final int minutes = (int) ((remainingTime % 3600) / 60);
 					final SystemMessage sm = new SystemMessage(SystemMessageId.S1_WILL_BE_AVAILABLE_FOR_RE_USE_AFTER_S2_HOUR_S_S3_MINUTE_S);
-					sm.addInstanceName(instanceId);
+					sm.addInstanceName(entry.getKey());
 					sm.addInt(hours);
 					sm.addInt(minutes);
 					player.sendPacket(sm);
 				}
 				else
 				{
-					InstanceManager.getInstance().deleteInstanceTime(player.getObjectId(), instanceId);
+					InstanceManager.getInstance().deleteInstanceTime(player.getObjectId(), entry.getKey());
 				}
 			}
 		}

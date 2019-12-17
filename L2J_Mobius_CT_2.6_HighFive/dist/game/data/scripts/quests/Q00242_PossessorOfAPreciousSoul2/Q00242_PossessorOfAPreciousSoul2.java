@@ -79,41 +79,54 @@ public class Q00242_PossessorOfAPreciousSoul2 extends Quest
 		switch (event)
 		{
 			case "31742-02.html":
+			{
 				st.startQuest();
 				takeItems(player, VIRGILS_LETTER, -1);
 				break;
+			}
 			case "31743-05.html":
+			{
 				if (st.isCond(1))
 				{
 					st.setCond(2, true);
 				}
 				break;
+			}
 			case "31744-02.html":
+			{
 				if (st.isCond(2))
 				{
 					st.setCond(3, true);
 				}
 				break;
+			}
 			case "31751-02.html":
+			{
 				if (st.isCond(3))
 				{
 					st.setCond(4, true);
 				}
 				break;
+			}
 			case "30759-02.html":
+			{
 				if (st.isCond(6))
 				{
 					st.setCond(7, true);
 				}
 				break;
+			}
 			case "30738-02.html":
+			{
 				if (st.isCond(7))
 				{
 					st.setCond(8, true);
 					giveItems(player, SORCERY_INGREDIENT, 1);
 				}
 				break;
+			}
 			case "30759-05.html":
+			{
 				if (st.isCond(8))
 				{
 					takeItems(player, GOLDEN_HAIR, -1);
@@ -123,16 +136,21 @@ public class Q00242_PossessorOfAPreciousSoul2 extends Quest
 					st.set("cornerstones", "0");
 				}
 				break;
+			}
 			case "PURE_UNICORN":
+			{
 				npc.getSpawn().stopRespawn();
 				npc.deleteMe();
-				final Npc npc_pure = addSpawn(PURE_UNICORN, 85884, -76588, -3470, 30000);
-				startQuestTimer("FALLEN_UNICORN", 30000, npc_pure, player);
+				final Npc pure = addSpawn(PURE_UNICORN, 85884, -76588, -3470, 30000);
+				startQuestTimer("FALLEN_UNICORN", 30000, pure, player);
 				return null;
+			}
 			case "FALLEN_UNICORN":
-				final Npc npc_fallen = addSpawn(FALLEN_UNICORN, 85884, -76588, -3470, 0);
-				npc_fallen.getSpawn().startRespawn();
+			{
+				final Npc fallen = addSpawn(FALLEN_UNICORN, 85884, -76588, -3470, 0);
+				fallen.getSpawn().startRespawn();
 				return null;
+			}
 		}
 		return event;
 	}
@@ -172,84 +190,122 @@ public class Q00242_PossessorOfAPreciousSoul2 extends Quest
 		switch (npc.getId())
 		{
 			case VIRGIL:
+			{
 				switch (st.getState())
 				{
 					case State.CREATED:
+					{
 						final QuestState qs = player.getQuestState(Q00241_PossessorOfAPreciousSoul1.class.getSimpleName());
 						if ((qs != null) && qs.isCompleted())
 						{
 							htmltext = (player.isSubClassActive() && (player.getLevel() >= 60)) ? "31742-01.htm" : "31742-00.htm";
 						}
 						break;
+					}
 					case State.STARTED:
+					{
 						switch (st.getCond())
 						{
 							case 1:
+							{
 								htmltext = "31742-03.html";
 								break;
+							}
 							case 11:
+							{
 								htmltext = "31742-04.html";
 								giveItems(player, CARADINE_LETTER, 1);
 								addExpAndSp(player, 455764, 0);
 								st.exitQuest(false, true);
 								break;
+							}
 						}
 						break;
+					}
 					case State.COMPLETED:
+					{
 						htmltext = getAlreadyCompletedMsg(player);
 						break;
+					}
 				}
 				break;
+			}
 			case KASSANDRA:
+			{
 				switch (st.getCond())
 				{
 					case 1:
+					{
 						htmltext = "31743-01.html";
 						break;
+					}
 					case 2:
+					{
 						htmltext = "31743-06.html";
 						break;
+					}
 					case 11:
+					{
 						htmltext = "31743-07.html";
 						break;
+					}
 				}
 				break;
+			}
 			case OGMAR:
+			{
 				switch (st.getCond())
 				{
 					case 2:
+					{
 						htmltext = "31744-01.html";
 						break;
+					}
 					case 3:
+					{
 						htmltext = "31744-03.html";
 						break;
+					}
 				}
 				break;
+			}
 			case MYSTERIOUS_KNIGHT:
+			{
 				switch (st.getCond())
 				{
 					case 3:
+					{
 						htmltext = "31751-01.html";
 						break;
+					}
 					case 4:
+					{
 						htmltext = "31751-03.html";
 						break;
+					}
 					case 5:
+					{
 						if (hasQuestItems(player, GOLDEN_HAIR))
 						{
 							st.setCond(6, true);
 							htmltext = "31751-04.html";
 						}
 						break;
+					}
 					case 6:
+					{
 						htmltext = "31751-05.html";
 						break;
+					}
 				}
 				break;
+			}
 			case ANGEL_CORPSE:
+			{
 				switch (st.getCond())
 				{
 					case 4:
+					{
 						npc.doDie(npc);
 						if (CHANCE_FOR_HAIR >= getRandom(100))
 						{
@@ -262,43 +318,64 @@ public class Q00242_PossessorOfAPreciousSoul2 extends Quest
 							htmltext = "31752-02.html";
 						}
 						break;
+					}
 					case 5:
+					{
 						htmltext = "31752-02.html";
 						break;
+					}
 				}
 				break;
+			}
 			case KALIS:
+			{
 				switch (st.getCond())
 				{
 					case 6:
+					{
 						htmltext = "30759-01.html";
 						break;
+					}
 					case 7:
+					{
 						htmltext = "30759-03.html";
 						break;
+					}
 					case 8:
+					{
 						if (hasQuestItems(player, SORCERY_INGREDIENT))
 						{
 							htmltext = "30759-04.html";
 						}
 						break;
+					}
 					case 9:
+					{
 						htmltext = "30759-06.html";
 						break;
+					}
 				}
 				break;
+			}
 			case MATILD:
+			{
 				switch (st.getCond())
 				{
 					case 7:
+					{
 						htmltext = "30738-01.html";
 						break;
+					}
 					case 8:
+					{
 						htmltext = "30738-03.html";
 						break;
+					}
 				}
 				break;
+			}
 			case CORNERSTONE:
+			{
 				if (st.isCond(9))
 				{
 					if (hasQuestItems(player, ORB_OF_BINDING))
@@ -322,30 +399,43 @@ public class Q00242_PossessorOfAPreciousSoul2 extends Quest
 					}
 				}
 				break;
+			}
 			case FALLEN_UNICORN:
+			{
 				switch (st.getCond())
 				{
 					case 9:
+					{
 						htmltext = "31746-01.html";
 						break;
+					}
 					case 10:
+					{
 						htmltext = "31746-02.html";
 						startQuestTimer("PURE_UNICORN", 3000, npc, player);
 						break;
+					}
 				}
 				break;
+			}
 			case PURE_UNICORN:
+			{
 				switch (st.getCond())
 				{
 					case 10:
+					{
 						st.setCond(11, true);
 						htmltext = "31747-01.html";
 						break;
+					}
 					case 11:
+					{
 						htmltext = "31747-02.html";
 						break;
+					}
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}

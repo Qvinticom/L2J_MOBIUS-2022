@@ -230,12 +230,9 @@ public class BeastFarm extends AbstractNpcAI
 	public void spawnNext(Npc npc, PlayerInstance player, int nextNpcId, int food)
 	{
 		// remove the feedinfo of the mob that got despawned, if any
-		if (FEED_INFO.containsKey(npc.getObjectId()))
+		if (FEED_INFO.containsKey(npc.getObjectId()) && (FEED_INFO.get(npc.getObjectId()) == player.getObjectId()))
 		{
-			if (FEED_INFO.get(npc.getObjectId()) == player.getObjectId())
-			{
-				FEED_INFO.remove(npc.getObjectId());
-			}
+			FEED_INFO.remove(npc.getObjectId());
 		}
 		// despawn the old mob
 		// TODO: same code? FIXED?

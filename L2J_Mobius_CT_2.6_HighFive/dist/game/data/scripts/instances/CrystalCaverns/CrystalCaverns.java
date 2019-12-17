@@ -168,7 +168,7 @@ public class CrystalCaverns extends AbstractInstance
 	private static final int KECHIS_HENCHMAN = 25533;
 	private static final int BAYLOR = 29099;
 	private static final int DARNEL = 25531;
-	private final static int ALARM = 18474;
+	private static final int ALARM = 18474;
 	private static final int[] CGMOBS =
 	{
 		22311,
@@ -1090,13 +1090,10 @@ public class CrystalCaverns extends AbstractInstance
 					world.copys.add(copy);
 				}
 			}
-			else if ((nowHp < (maxHp * 0.15)) && !world.isUsedInvulSkill)
+			else if ((nowHp < (maxHp * 0.15)) && !world.isUsedInvulSkill && ((rand > 994) || (nowHp < (maxHp * 0.1))))
 			{
-				if ((rand > 994) || (nowHp < (maxHp * 0.1)))
-				{
-					world.isUsedInvulSkill = true;
-					npc.setIsInvul(true);
-				}
+				world.isUsedInvulSkill = true;
+				npc.setIsInvul(true);
 			}
 		}
 		return null;
@@ -1619,7 +1616,7 @@ public class CrystalCaverns extends AbstractInstance
 				{
 					world.setStatus(8);
 					// first door opener trap
-					Npc trap = addTrap(DOOR_OPENING_TRAP[0], DOOR_OPENING_TRAP[1], DOOR_OPENING_TRAP[2], DOOR_OPENING_TRAP[3], DOOR_OPENING_TRAP[4], null, world.getInstanceId());
+					Npc trap = addTrap(DOOR_OPENING_TRAP[0], DOOR_OPENING_TRAP[1], DOOR_OPENING_TRAP[2], DOOR_OPENING_TRAP[3], DOOR_OPENING_TRAP[4], world.getInstanceId());
 					trap.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.YOU_HAVE_FINALLY_COME_HERE_BUT_YOU_WILL_NOT_BE_ABLE_TO_FIND_THE_SECRET_ROOM);
 				}
 			}
@@ -1804,6 +1801,7 @@ public class CrystalCaverns extends AbstractInstance
 			final CCWorld world = (CCWorld) tmpworld;
 			if (npcId == CRYSTALLINE_GOLEM)
 			{
+				return null;
 			}
 			else if ((npc.getId() >= 32275) && (npc.getId() <= 32277) && world.OracleTriggered[npc.getId() - 32275])
 			{

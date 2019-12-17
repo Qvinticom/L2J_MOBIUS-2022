@@ -44,7 +44,7 @@ public class Q00070_SagaOfThePhoenixKnight extends AbstractSagaQuest
 			31657,
 			31277
 		};
-		Items = new int[]
+		_items = new int[]
 		{
 			7080,
 			7534,
@@ -59,27 +59,27 @@ public class Q00070_SagaOfThePhoenixKnight extends AbstractSagaQuest
 			7093,
 			6482
 		};
-		Mob = new int[]
+		_mob = new int[]
 		{
 			27286,
 			27219,
 			27278
 		};
-		classid = new int[]
+		_classId = new int[]
 		{
 			90
 		};
-		prevclass = new int[]
+		_prevClass = new int[]
 		{
 			0x05
 		};
-		npcSpawnLocations = new Location[]
+		_npcSpawnLocations = new Location[]
 		{
 			new Location(191046, -40640, -3042),
 			new Location(46087, -36372, -1685),
 			new Location(46066, -36396, -1685)
 		};
-		Text = new String[]
+		_text = new String[]
 		{
 			"PLAYERNAME! Pursued to here! However, I jumped out of the Banshouren boundaries! You look at the giant as the sign of power!",
 			"... Oh ... good! So it was ... let's begin!",

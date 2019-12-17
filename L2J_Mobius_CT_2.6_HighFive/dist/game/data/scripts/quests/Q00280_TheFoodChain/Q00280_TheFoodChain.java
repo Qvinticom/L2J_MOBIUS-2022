@@ -111,6 +111,7 @@ public class Q00280_TheFoodChain extends Quest
 				{
 					htmltext = "32175-07.html";
 				}
+				break;
 			}
 			case "32175-08.html":
 			{

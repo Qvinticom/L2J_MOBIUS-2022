@@ -44,8 +44,8 @@ public class ChatPartyMatchRoom implements IChatHandler
 		{
 			return;
 		}
-		final PartyMatchRoom _room = PartyMatchRoomList.getInstance().getPlayerRoom(activeChar);
-		if (_room == null)
+		final PartyMatchRoom room = PartyMatchRoomList.getInstance().getPlayerRoom(activeChar);
+		if (room == null)
 		{
 			return;
 		}
@@ -61,25 +61,25 @@ public class ChatPartyMatchRoom implements IChatHandler
 		}
 		
 		final CreatureSay cs = new CreatureSay(activeChar.getObjectId(), type, activeChar.getName(), text);
-		for (PlayerInstance _member : _room.getPartyMembers())
+		for (PlayerInstance member : room.getPartyMembers())
 		{
 			if (Config.FACTION_SYSTEM_ENABLED)
 			{
 				if (Config.FACTION_SPECIFIC_CHAT)
 				{
-					if ((activeChar.isGood() && _member.isGood()) || (activeChar.isEvil() && _member.isEvil()))
+					if ((activeChar.isGood() && member.isGood()) || (activeChar.isEvil() && member.isEvil()))
 					{
-						_member.sendPacket(cs);
+						member.sendPacket(cs);
 					}
 				}
 				else
 				{
-					_member.sendPacket(cs);
+					member.sendPacket(cs);
 				}
 			}
 			else
 			{
-				_member.sendPacket(cs);
+				member.sendPacket(cs);
 			}
 		}
 	}

@@ -83,19 +83,16 @@ public class Q00319_ScentOfDeath extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		if ((qs != null) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, false) && (getQuestItemsCount(killer, ZOMBIES_SKIN) < REQUIRED_ITEM_COUNT))
+		if ((qs != null) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, false) && (getQuestItemsCount(killer, ZOMBIES_SKIN) < REQUIRED_ITEM_COUNT) && (getRandom(10) > MIN_CHANCE))
 		{
-			if (getRandom(10) > MIN_CHANCE)
+			giveItems(killer, ZOMBIES_SKIN, 1);
+			if (getQuestItemsCount(killer, ZOMBIES_SKIN) < REQUIRED_ITEM_COUNT)
 			{
-				giveItems(killer, ZOMBIES_SKIN, 1);
-				if (getQuestItemsCount(killer, ZOMBIES_SKIN) < REQUIRED_ITEM_COUNT)
-				{
-					playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-				}
-				else
-				{
-					qs.setCond(2, true);
-				}
+				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+			}
+			else
+			{
+				qs.setCond(2, true);
 			}
 		}
 		return super.onKill(npc, killer, isSummon);

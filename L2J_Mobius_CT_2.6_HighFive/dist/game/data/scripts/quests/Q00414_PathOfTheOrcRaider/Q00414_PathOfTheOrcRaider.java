@@ -227,13 +227,10 @@ public class Q00414_PathOfTheOrcRaider extends Quest
 				}
 				case TIMORA_ORC:
 				{
-					if (qs.isMemoState(3) && !hasQuestItems(killer, TIMORA_ORC_HEAD))
+					if (qs.isMemoState(3) && !hasQuestItems(killer, TIMORA_ORC_HEAD) && (getRandom(100) < 60))
 					{
-						if (getRandom(100) < 60)
-						{
-							giveItems(killer, TIMORA_ORC_HEAD, 1);
-							qs.setCond(7, true);
-						}
+						giveItems(killer, TIMORA_ORC_HEAD, 1);
+						qs.setCond(7, true);
 					}
 					break;
 				}

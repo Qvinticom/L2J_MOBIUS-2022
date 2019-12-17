@@ -118,13 +118,9 @@ public class ShortCuts implements IRestorable
 		if (old.getType() == ShortcutType.ITEM)
 		{
 			final ItemInstance item = _owner.getInventory().getItemByObjectId(old.getId());
-			
-			if ((item != null) && (item.getItemType() == EtcItemType.SHOT))
+			if ((item != null) && (item.getItemType() == EtcItemType.SHOT) && _owner.removeAutoSoulShot(item.getId()))
 			{
-				if (_owner.removeAutoSoulShot(item.getId()))
-				{
-					_owner.sendPacket(new ExAutoSoulShot(item.getId(), 0));
-				}
+				_owner.sendPacket(new ExAutoSoulShot(item.getId(), 0));
 			}
 		}
 		

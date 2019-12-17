@@ -95,14 +95,12 @@ public class DrChaos extends AbstractNpcAI
 			final GrandBossInstance golem = (GrandBossInstance) addSpawn(CHAOS_GOLEM, loc_x, loc_y, loc_z, heading, false, 0, false);
 			GrandBossManager.getInstance().addBoss(golem);
 			
-			final Npc _golem = golem;
-			
-			_golem.setCurrentHpMp(hp, mp);
-			_golem.setRunning();
+			golem.setCurrentHpMp(hp, mp);
+			golem.setRunning();
 			
 			// start monitoring Dr. Chaos's inactivity
 			_lastAttackVsGolem = System.currentTimeMillis();
-			startQuestTimer("golem_despawn", 60000, _golem, null, true);
+			startQuestTimer("golem_despawn", 60000, golem, null, true);
 		}
 		// Spawn the regular NPC.
 		else
@@ -122,17 +120,14 @@ public class DrChaos extends AbstractNpcAI
 		// despawn the live Dr. Chaos after 30 minutes of inactivity
 		else if (event.equalsIgnoreCase("golem_despawn") && (npc != null))
 		{
-			if (npc.getId() == CHAOS_GOLEM)
+			if ((npc.getId() == CHAOS_GOLEM) && ((_lastAttackVsGolem + 1800000) < System.currentTimeMillis()))
 			{
-				if ((_lastAttackVsGolem + 1800000) < System.currentTimeMillis())
-				{
-					// Despawn the war golem.
-					npc.deleteMe();
-					
-					addSpawn(DOCTOR_CHAOS, 96320, -110912, -3328, 8191, false, 0, false); // spawn Dr. Chaos
-					GrandBossManager.getInstance().setBossStatus(CHAOS_GOLEM, NORMAL); // mark Dr. Chaos is not crazy any more
-					cancelQuestTimer("golem_despawn", npc, null);
-				}
+				// Despawn the war golem.
+				npc.deleteMe();
+				
+				addSpawn(DOCTOR_CHAOS, 96320, -110912, -3328, 8191, false, 0, false); // spawn Dr. Chaos
+				GrandBossManager.getInstance().setBossStatus(CHAOS_GOLEM, NORMAL); // mark Dr. Chaos is not crazy any more
+				cancelQuestTimer("golem_despawn", npc, null);
 			}
 		}
 		else if (event.equalsIgnoreCase("1"))
@@ -171,30 +166,27 @@ public class DrChaos extends AbstractNpcAI
 			startQuestTimer("golem_despawn", 60000, npc, null, true);
 		}
 		// Check every sec if someone is in range, if found, launch one task to decrease the timer.
-		else if (event.equalsIgnoreCase("paranoia_activity"))
+		else if (event.equalsIgnoreCase("paranoia_activity") && (GrandBossManager.getInstance().getBossStatus(CHAOS_GOLEM) == NORMAL))
 		{
-			if (GrandBossManager.getInstance().getBossStatus(CHAOS_GOLEM) == NORMAL)
+			for (PlayerInstance obj : World.getInstance().getVisibleObjectsInRange(npc, PlayerInstance.class, 500))
 			{
-				for (PlayerInstance obj : World.getInstance().getVisibleObjectsInRange(npc, PlayerInstance.class, 500))
+				if (obj.isDead())
 				{
-					if (obj.isDead())
-					{
-						continue;
-					}
-					
-					_pissedOffTimer -= 1;
-					
-					// Make him speak.
-					if (_pissedOffTimer == 15)
-					{
-						npc.broadcastSay(ChatType.NPC_GENERAL, "How dare you trespass into my territory! Have you no fear?");
-					}
-					
-					// That was "too much" for that time.
-					if (_pissedOffTimer <= 0)
-					{
-						crazyMidgetBecomesAngry(npc);
-					}
+					continue;
+				}
+				
+				_pissedOffTimer -= 1;
+				
+				// Make him speak.
+				if (_pissedOffTimer == 15)
+				{
+					npc.broadcastSay(ChatType.NPC_GENERAL, "How dare you trespass into my territory! Have you no fear?");
+				}
+				
+				// That was "too much" for that time.
+				if (_pissedOffTimer <= 0)
+				{
+					crazyMidgetBecomesAngry(npc);
 				}
 			}
 		}

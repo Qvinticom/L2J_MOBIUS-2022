@@ -85,7 +85,7 @@ public class Wedding extends AbstractNpcAI
 				player.setMarryRequest(false);
 				partner.setMarryRequest(false);
 				htmltext = getHtm(player, "Ask.html");
-				htmltext = htmltext.replaceAll("%player%", partner.getName());
+				htmltext = htmltext.replace("%player%", partner.getName());
 			}
 			return htmltext;
 		}
@@ -106,7 +106,7 @@ public class Wedding extends AbstractNpcAI
 					sendHtml(partner, "Ask.html", "%player%", player.getName());
 					
 					htmltext = getHtm(player, "Requested.html");
-					htmltext = htmltext.replaceAll("%player%", partner.getName());
+					htmltext = htmltext.replace("%player%", partner.getName());
 				}
 				break;
 			}

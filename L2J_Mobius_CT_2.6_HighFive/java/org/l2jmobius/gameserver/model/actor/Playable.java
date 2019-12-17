@@ -141,7 +141,7 @@ public abstract class Playable extends Creature
 			{
 				if (player.isInSiege())
 				{
-					getActingPlayer().reviveRequest(getActingPlayer(), null, false, 0);
+					getActingPlayer().reviveRequest(getActingPlayer(), false, 0);
 				}
 				player.setCharmOfCourage(false);
 				player.sendPacket(new EtcStatusUpdate(player));

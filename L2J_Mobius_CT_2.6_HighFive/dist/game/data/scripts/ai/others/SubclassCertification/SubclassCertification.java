@@ -148,27 +148,27 @@ public class SubclassCertification extends AbstractNpcAI
 			}
 			case "lvl65Emergent":
 			{
-				htmltext = doCertification(player, qs, "EmergentAbility", CERTIFICATE_EMERGENT_ABILITY, 65);
+				htmltext = doCertification(player, "EmergentAbility", CERTIFICATE_EMERGENT_ABILITY, 65);
 				break;
 			}
 			case "lvl70Emergent":
 			{
-				htmltext = doCertification(player, qs, "EmergentAbility", CERTIFICATE_EMERGENT_ABILITY, 70);
+				htmltext = doCertification(player, "EmergentAbility", CERTIFICATE_EMERGENT_ABILITY, 70);
 				break;
 			}
 			case "lvl75Master":
 			{
-				htmltext = doCertification(player, qs, "ClassAbility", CERTIFICATE_MASTER_ABILITY, 75);
+				htmltext = doCertification(player, "ClassAbility", CERTIFICATE_MASTER_ABILITY, 75);
 				break;
 			}
 			case "lvl75Class":
 			{
-				htmltext = doCertification(player, qs, "ClassAbility", ABILITY_CERTIFICATES.get(getClassIndex(player)), 75);
+				htmltext = doCertification(player, "ClassAbility", ABILITY_CERTIFICATES.get(getClassIndex(player)), 75);
 				break;
 			}
 			case "lvl80Class":
 			{
-				htmltext = doCertification(player, qs, "ClassAbility", TRANSFORMATION_SEALBOOKS.get(getClassIndex(player)), 80);
+				htmltext = doCertification(player, "ClassAbility", TRANSFORMATION_SEALBOOKS.get(getClassIndex(player)), 80);
 				break;
 			}
 			case "Main.html":
@@ -230,7 +230,7 @@ public class SubclassCertification extends AbstractNpcAI
 		return -1;
 	}
 	
-	private String doCertification(PlayerInstance player, QuestState qs, String variable, Integer itemId, int level)
+	private String doCertification(PlayerInstance player, String variable, Integer itemId, int level)
 	{
 		if (itemId == null)
 		{

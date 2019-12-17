@@ -198,19 +198,16 @@ public class Q00401_PathOfTheWarrior extends Quest
 				case TRACKER_SKELETON:
 				case TRACKER_SKELETON_LIDER:
 				{
-					if (hasQuestItems(killer, WARRIOR_GUILD_MARK) && (getQuestItemsCount(killer, RUSTED_BRONZE_SWORD1) < 10))
+					if (hasQuestItems(killer, WARRIOR_GUILD_MARK) && (getQuestItemsCount(killer, RUSTED_BRONZE_SWORD1) < 10) && (getRandom(10) < 4))
 					{
-						if (getRandom(10) < 4)
+						giveItems(killer, RUSTED_BRONZE_SWORD1, 1);
+						if (getQuestItemsCount(killer, RUSTED_BRONZE_SWORD1) == 10)
 						{
-							giveItems(killer, RUSTED_BRONZE_SWORD1, 1);
-							if (getQuestItemsCount(killer, RUSTED_BRONZE_SWORD1) == 10)
-							{
-								qs.setCond(3, true);
-							}
-							else
-							{
-								playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-							}
+							qs.setCond(3, true);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;
@@ -337,6 +334,6 @@ public class Q00401_PathOfTheWarrior extends Quest
 	private static boolean checkWeapon(PlayerInstance player)
 	{
 		final ItemInstance weapon = player.getActiveWeaponInstance();
-		return ((weapon != null) && ((weapon.getId() == RUSTED_BRONZE_SWORD3)));
+		return ((weapon != null) && (weapon.getId() == RUSTED_BRONZE_SWORD3));
 	}
 }

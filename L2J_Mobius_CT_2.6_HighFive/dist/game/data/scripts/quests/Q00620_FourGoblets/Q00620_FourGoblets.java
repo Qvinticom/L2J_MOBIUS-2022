@@ -391,9 +391,8 @@ public class Q00620_FourGoblets extends Quest
 				{
 					if (getRandom(100) < 100) // TODO (Adry_85): Check random function.
 					{
-						
-						boolean i2 = getReward(player);
-						htmltext = ((i2 == true) ? event : "31454-08.html");
+						final boolean i2 = getReward(player);
+						htmltext = (i2 ? event : "31454-08.html");
 					}
 					else
 					{
@@ -415,9 +414,8 @@ public class Q00620_FourGoblets extends Quest
 				{
 					if (getRandom(100) < 50)
 					{
-						
-						boolean i2 = getReward(player);
-						htmltext = ((i2 == true) ? event : "31919-03.html");
+						final boolean i2 = getReward(player);
+						htmltext = (i2 ? event : "31919-03.html");
 					}
 					else
 					{

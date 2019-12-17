@@ -47,7 +47,6 @@ public class OlympiadObservation implements IBypassHandler
 		try
 		{
 			final Npc olymanager = player.getLastFolkNPC();
-			
 			if (command.startsWith(COMMANDS[0])) // list
 			{
 				if (!Olympiad.getInstance().inCompPeriod())
@@ -84,7 +83,7 @@ public class OlympiadObservation implements IBypassHandler
 				
 				if (player.isOnEvent())
 				{
-					player.sendMessage("You can not observe games while registered on an event");
+					player.sendMessage("You can not observe games while registered on an event.");
 					return false;
 				}
 				
@@ -96,13 +95,14 @@ public class OlympiadObservation implements IBypassHandler
 					player.enterOlympiadObserverMode(nextArena.getZone().getSpectatorSpawns().get(0), arenaId, instanceId);
 				}
 			}
-			return true;
 			
+			return true;
 		}
 		catch (Exception e)
 		{
 			LOGGER.log(Level.WARNING, "Exception in " + getClass().getSimpleName(), e);
 		}
+		
 		return false;
 	}
 	

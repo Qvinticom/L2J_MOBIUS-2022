@@ -27,8 +27,8 @@ import org.l2jmobius.gameserver.model.interfaces.IIdentifiable;
 public class DoorTemplate extends CreatureTemplate implements IIdentifiable
 {
 	private final int _doorId;
-	private final int _nodeX[];
-	private final int _nodeY[];
+	private final int[] _nodeX;
+	private final int[] _nodeY;
 	private final int _nodeZ;
 	private final int _height;
 	private final int _posX;
@@ -71,7 +71,7 @@ public class DoorTemplate extends CreatureTemplate implements IIdentifiable
 		_nodeY = new int[4]; // 4 * y
 		for (int i = 0; i < 4; i++)
 		{
-			final String split[] = set.getString("node" + (i + 1)).split(",");
+			final String[] split = set.getString("node" + (i + 1)).split(",");
 			_nodeX[i] = Integer.parseInt(split[0]);
 			_nodeY[i] = Integer.parseInt(split[1]);
 		}

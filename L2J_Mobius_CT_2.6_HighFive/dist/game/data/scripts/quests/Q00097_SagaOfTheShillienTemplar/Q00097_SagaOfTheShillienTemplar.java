@@ -44,7 +44,7 @@ public class Q00097_SagaOfTheShillienTemplar extends AbstractSagaQuest
 			31659,
 			31285
 		};
-		Items = new int[]
+		_items = new int[]
 		{
 			7080,
 			7526,
@@ -59,27 +59,27 @@ public class Q00097_SagaOfTheShillienTemplar extends AbstractSagaQuest
 			7091,
 			0
 		};
-		Mob = new int[]
+		_mob = new int[]
 		{
 			27271,
 			27246,
 			27273
 		};
-		classid = new int[]
+		_classId = new int[]
 		{
 			106
 		};
-		prevclass = new int[]
+		_prevClass = new int[]
 		{
 			0x21
 		};
-		npcSpawnLocations = new Location[]
+		_npcSpawnLocations = new Location[]
 		{
 			new Location(161719, -92823, -1893),
 			new Location(124355, 82155, -2803),
 			new Location(124376, 82127, -2796)
 		};
-		Text = new String[]
+		_text = new String[]
 		{
 			"PLAYERNAME! Pursued to here! However, I jumped out of the Banshouren boundaries! You look at the giant as the sign of power!",
 			"... Oh ... good! So it was ... let's begin!",

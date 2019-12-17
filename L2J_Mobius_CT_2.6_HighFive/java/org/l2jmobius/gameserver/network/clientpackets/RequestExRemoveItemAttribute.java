@@ -34,10 +34,6 @@ public class RequestExRemoveItemAttribute implements IClientIncomingPacket
 	private long _price;
 	private byte _element;
 	
-	public RequestExRemoveItemAttribute()
-	{
-	}
-	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
 	{

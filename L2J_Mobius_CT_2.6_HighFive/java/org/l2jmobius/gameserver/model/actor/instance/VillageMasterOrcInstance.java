@@ -32,13 +32,12 @@ public class VillageMasterOrcInstance extends VillageMasterInstance
 	}
 	
 	@Override
-	protected final boolean checkVillageMasterRace(ClassId pclass)
+	protected final boolean checkVillageMasterRace(ClassId pClass)
 	{
-		if (pclass == null)
+		if (pClass == null)
 		{
 			return false;
 		}
-		
-		return pclass.getRace() == Race.ORC;
+		return pClass.getRace() == Race.ORC;
 	}
 }

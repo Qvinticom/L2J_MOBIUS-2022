@@ -44,7 +44,7 @@ public class Q00071_SagaOfEvasTemplar extends AbstractSagaQuest
 			31658,
 			31281
 		};
-		Items = new int[]
+		_items = new int[]
 		{
 			7080,
 			7535,
@@ -59,27 +59,27 @@ public class Q00071_SagaOfEvasTemplar extends AbstractSagaQuest
 			7094,
 			6482
 		};
-		Mob = new int[]
+		_mob = new int[]
 		{
 			27287,
 			27220,
 			27279
 		};
-		classid = new int[]
+		_classId = new int[]
 		{
 			99
 		};
-		prevclass = new int[]
+		_prevClass = new int[]
 		{
 			0x14
 		};
-		npcSpawnLocations = new Location[]
+		_npcSpawnLocations = new Location[]
 		{
 			new Location(119518, -28658, -3811),
 			new Location(181215, 36676, -4812),
 			new Location(181227, 36703, -4816)
 		};
-		Text = new String[]
+		_text = new String[]
 		{
 			"PLAYERNAME! Pursued to here! However, I jumped out of the Banshouren boundaries! You look at the giant as the sign of power!",
 			"... Oh ... good! So it was ... let's begin!",

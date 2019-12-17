@@ -61,12 +61,9 @@ public class AbyssGaze extends AbstractNpcAI
 				htmltext = "32539-1.htm";
 			}
 		}
-		else if (event.equals("enter_seed"))
+		else if (event.equals("enter_seed") && (SoIManager.getCurrentStage() == 3))
 		{
-			if (SoIManager.getCurrentStage() == 3)
-			{
-				return null;
-			}
+			return null;
 		}
 		return htmltext;
 	}

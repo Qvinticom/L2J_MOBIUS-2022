@@ -55,18 +55,18 @@ public class NornilsGarden extends AbstractInstance
 	}
 	
 	// NPCs
-	private static final int _garden_guard = 32330;
-	private static final int[] _final_gates =
+	private static final int GARDEN_GUARD = 32330;
+	private static final int[] FINAL_GATES =
 	{
 		32260,
 		32261,
 		32262
 	};
 	// Skills
-	private static final Skill skill1 = SkillData.getInstance().getSkill(4322, 1);
-	private static final Skill skill2 = SkillData.getInstance().getSkill(4327, 1);
-	private static final Skill skill3 = SkillData.getInstance().getSkill(4329, 1);
-	private static final Skill skill4 = SkillData.getInstance().getSkill(4324, 1);
+	private static final Skill SKILL_1 = SkillData.getInstance().getSkill(4322, 1);
+	private static final Skill SKILL_2 = SkillData.getInstance().getSkill(4327, 1);
+	private static final Skill SKILL_3 = SkillData.getInstance().getSkill(4329, 1);
+	private static final Skill SKILL_4 = SkillData.getInstance().getSkill(4324, 1);
 	// Locations
 	private static final Location SPAWN_PPL = new Location(-111184, 74540, -12430);
 	private static final Location EXIT_PPL = new Location(-74058, 52040, -3680);
@@ -76,7 +76,7 @@ public class NornilsGarden extends AbstractInstance
 	private static final int EMPTY_DESTROY_TIME = 5;
 	private static final int INSTANCE_LVL_MIN = 18;
 	private static final int INSTANCE_LVL_MAX = 22;
-	private static final int[][] _auto_gates =
+	private static final int[][] AUTO_GATES =
 	{
 		// Warriors gate
 		{
@@ -94,9 +94,9 @@ public class NornilsGarden extends AbstractInstance
 			16200013
 		}
 	};
-	private static final int _herb_jar = 18478;
+	private static final int HERB_JAR = 18478;
 	// @formatter:off
-	private static final int[][] _gatekeepers =
+	private static final int[][] GATEKEEPERS =
 	{
 		{ 18352, 9703, 0 }, // Kamael Guard
 		{ 18353, 9704, 0 }, // Guardian of Records
@@ -117,7 +117,7 @@ public class NornilsGarden extends AbstractInstance
 		{ 8601, 2, 40 },
 		{ 8600, 3, 70 }
 	};
-	private static final int[][] _group_1 = 
+	private static final int[][] GROUP_1 = 
 	{
 		{ 18363, -109899, 74431, -12528, 16488 },
 		{ 18483, -109701, 74501, -12528, 24576 },
@@ -125,7 +125,7 @@ public class NornilsGarden extends AbstractInstance
 		{ 18363, -109703, 74879, -12528, 49336 }
 
 	};
-	private static final int[][] _group_2 = 
+	private static final int[][] GROUP_2 = 
 	{
 		{ 18363, -110393, 78276, -12848, 49152 },
 		{ 18363, -110561, 78276, -12848, 49152 },
@@ -136,7 +136,7 @@ public class NornilsGarden extends AbstractInstance
 		{ 18483, -110389, 79131, -12915, 48539 },
 		{ 18483, -110551, 79134, -12915, 49151 }
 	};
-	private static final int[][] _group_3 =
+	private static final int[][] GROUP_3 =
 	{
 		{ 18483, -107798, 80721, -12912, 0 },
 		{ 18483, -107798, 80546, -12912, 0 },
@@ -146,7 +146,7 @@ public class NornilsGarden extends AbstractInstance
 		{ 18363, -109016, 80642, -12912, 0 },
 		{ 18483, -108740, 80546, -12912, 0 }
 	};	
-	private static final int[][] _group_4 =
+	private static final int[][] GROUP_4 =
 	{
 		{ 18362, -110082, 83998, -12928, 0 },
 		{ 18362, -110082, 84210, -12928, 0 },
@@ -181,39 +181,39 @@ public class NornilsGarden extends AbstractInstance
 	
 	private void giveBuffs(Creature ch)
 	{
-		if (skill1 != null)
+		if (SKILL_1 != null)
 		{
-			skill1.applyEffects(ch, ch);
+			SKILL_1.applyEffects(ch, ch);
 		}
-		if (skill2 != null)
+		if (SKILL_2 != null)
 		{
-			skill2.applyEffects(ch, ch);
+			SKILL_2.applyEffects(ch, ch);
 		}
-		if (skill3 != null)
+		if (SKILL_3 != null)
 		{
-			skill3.applyEffects(ch, ch);
+			SKILL_3.applyEffects(ch, ch);
 		}
-		if (skill4 != null)
+		if (SKILL_4 != null)
 		{
-			skill4.applyEffects(ch, ch);
+			SKILL_4.applyEffects(ch, ch);
 		}
 	}
 	
 	private NornilsGarden()
 	{
-		addStartNpc(_garden_guard);
-		addFirstTalkId(_garden_guard);
-		addTalkId(_garden_guard);
-		for (int i[] : _gatekeepers)
+		addStartNpc(GARDEN_GUARD);
+		addFirstTalkId(GARDEN_GUARD);
+		addTalkId(GARDEN_GUARD);
+		for (int[] i : GATEKEEPERS)
 		{
 			addKillId(i[0]);
 		}
-		for (int i[] : _auto_gates)
+		for (int[] i : AUTO_GATES)
 		{
 			addEnterZoneId(i[0]);
 		}
-		addTalkId(_final_gates);
-		addAttackId(_herb_jar);
+		addTalkId(FINAL_GATES);
+		addAttackId(HERB_JAR);
 		addAttackId(18362); // first garden guard
 	}
 	
@@ -314,7 +314,7 @@ public class NornilsGarden extends AbstractInstance
 			{
 				world.spawned_1 = true;
 				
-				for (int mob[] : _group_1)
+				for (int[] mob : GROUP_1)
 				{
 					addSpawn(mob[0], mob[1], mob[2], mob[3], mob[4], false, 0, false, world.getInstanceId());
 				}
@@ -332,7 +332,7 @@ public class NornilsGarden extends AbstractInstance
 			{
 				world.spawned_2 = true;
 				
-				for (int mob[] : _group_2)
+				for (int[] mob : GROUP_2)
 				{
 					addSpawn(mob[0], mob[1], mob[2], mob[3], mob[4], false, 0, false, world.getInstanceId());
 				}
@@ -350,7 +350,7 @@ public class NornilsGarden extends AbstractInstance
 			{
 				world.spawned_3 = true;
 				
-				for (int mob[] : _group_3)
+				for (int[] mob : GROUP_3)
 				{
 					addSpawn(mob[0], mob[1], mob[2], mob[3], mob[4], false, 0, false, world.getInstanceId());
 				}
@@ -368,7 +368,7 @@ public class NornilsGarden extends AbstractInstance
 			{
 				world.spawned_4 = true;
 				
-				for (int mob[] : _group_4)
+				for (int[] mob : GROUP_4)
 				{
 					addSpawn(mob[0], mob[1], mob[2], mob[3], mob[4], false, 0, false, world.getInstanceId());
 				}
@@ -401,7 +401,7 @@ public class NornilsGarden extends AbstractInstance
 			player.sendPacket(SystemMessageId.ONLY_A_PARTY_LEADER_CAN_MAKE_THE_REQUEST_TO_ENTER);
 			return "32330-08.html";
 		}
-		boolean _kamael = false;
+		boolean kamael = false;
 		// for each party member
 		for (PlayerInstance partyMember : party.getMembers())
 		{
@@ -440,7 +440,7 @@ public class NornilsGarden extends AbstractInstance
 				final QuestState checkst = partyMember.getQuestState(Q00179_IntoTheLargeCavern.class.getSimpleName());
 				if ((checkst != null) && (checkst.getState() == State.STARTED))
 				{
-					_kamael = true;
+					kamael = true;
 				}
 				else
 				{
@@ -451,7 +451,7 @@ public class NornilsGarden extends AbstractInstance
 				}
 			}
 		}
-		if (!_kamael)
+		if (!kamael)
 		{
 			return "32330-08.html";
 		}
@@ -466,11 +466,11 @@ public class NornilsGarden extends AbstractInstance
 			final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(creature);
 			if (tmpworld instanceof NornilsWorld)
 			{
-				for (int _auto[] : _auto_gates)
+				for (int[] auto : AUTO_GATES)
 				{
-					if (zone.getId() == _auto[0])
+					if (zone.getId() == auto[0])
 					{
-						tmpworld.openDoor(_auto[1]);
+						tmpworld.openDoor(auto[1]);
 					}
 					if (zone.getId() == 20111)
 					{
@@ -497,7 +497,7 @@ public class NornilsGarden extends AbstractInstance
 			return getNoQuestMsg(player);
 		}
 		
-		if ((npc.getId() == _garden_guard) && event.equalsIgnoreCase("enter_instance"))
+		if ((npc.getId() == GARDEN_GUARD) && event.equalsIgnoreCase("enter_instance"))
 		{
 			try
 			{
@@ -505,6 +505,7 @@ public class NornilsGarden extends AbstractInstance
 			}
 			catch (Exception e)
 			{
+				// Not Important.
 			}
 		}
 		else if ((npc.getId() == 32258) && event.equalsIgnoreCase("exit"))
@@ -515,9 +516,10 @@ public class NornilsGarden extends AbstractInstance
 			}
 			catch (Exception e)
 			{
+				// Not Important.
 			}
 		}
-		else if (CommonUtil.contains(_final_gates, npc.getId()))
+		else if (CommonUtil.contains(FINAL_GATES, npc.getId()))
 		{
 			if (event.equalsIgnoreCase("32260-02.html") || event.equalsIgnoreCase("32261-02.html") || event.equalsIgnoreCase("32262-02.html"))
 			{
@@ -557,7 +559,7 @@ public class NornilsGarden extends AbstractInstance
 	@Override
 	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		if (CommonUtil.contains(_final_gates, npc.getId()))
+		if (CommonUtil.contains(FINAL_GATES, npc.getId()))
 		{
 			final QuestState cst = player.getQuestState(Q00179_IntoTheLargeCavern.class.getSimpleName());
 			if ((cst != null) && (cst.getState() == State.STARTED))
@@ -580,7 +582,7 @@ public class NornilsGarden extends AbstractInstance
 	@Override
 	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
 	{
-		if ((npc.getId() == _herb_jar) && !npc.isDead())
+		if ((npc.getId() == HERB_JAR) && !npc.isDead())
 		{
 			dropHerb(npc, attacker, HP_HERBS_DROPLIST);
 			dropHerb(npc, attacker, MP_HERBS_DROPLIST);
@@ -602,20 +604,20 @@ public class NornilsGarden extends AbstractInstance
 			return null;
 		}
 		
-		for (int _gk[] : _gatekeepers)
+		for (int[] gk : GATEKEEPERS)
 		{
-			if (npc.getId() == _gk[0])
+			if (npc.getId() == gk[0])
 			{
 				// Drop key
-				npc.dropItem(player, _gk[1], 1);
+				npc.dropItem(player, gk[1], 1);
 				
 				// Check if gatekeeper should open bridge, and open it
-				if (_gk[2] > 0)
+				if (gk[2] > 0)
 				{
 					final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(player);
 					if (tmpworld instanceof NornilsWorld)
 					{
-						tmpworld.openDoor(_gk[2]);
+						tmpworld.openDoor(gk[2]);
 					}
 				}
 			}
@@ -630,7 +632,7 @@ public class NornilsGarden extends AbstractInstance
 	@Override
 	public void onEnterInstance(PlayerInstance player, InstanceWorld world, boolean firstEntrance)
 	{
-		
+		// Managed by script.
 	}
 	
 	public static void main(String[] args)

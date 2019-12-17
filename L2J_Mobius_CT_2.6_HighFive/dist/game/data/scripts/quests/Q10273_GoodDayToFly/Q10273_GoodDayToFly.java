@@ -132,7 +132,7 @@ public class Q10273_GoodDayToFly extends Quest
 	public String onTalk(Npc npc, PlayerInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
-		String htmltext = getNoQuestMsg(player);
+		String htmltext;
 		
 		final int transform = qs.getInt("transform");
 		switch (qs.getState())

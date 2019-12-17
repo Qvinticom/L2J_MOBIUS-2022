@@ -23,10 +23,6 @@ public class NormalCamera implements IClientOutgoingPacket
 {
 	public static final NormalCamera STATIC_PACKET = new NormalCamera();
 	
-	public NormalCamera()
-	{
-	}
-	
 	@Override
 	public boolean write(PacketWriter packet)
 	{

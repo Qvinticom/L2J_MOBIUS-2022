@@ -94,22 +94,16 @@ public class RequestDestroyItem implements IClientIncomingPacket
 		}
 		
 		// Cannot discard item that the skill is consuming
-		if (player.isCastingNow())
+		if (player.isCastingNow() && (player.getCurrentSkill() != null) && (player.getCurrentSkill().getSkill().getItemConsumeId() == itemToRemove.getId()))
 		{
-			if ((player.getCurrentSkill() != null) && (player.getCurrentSkill().getSkill().getItemConsumeId() == itemToRemove.getId()))
-			{
-				player.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DISCARDED);
-				return;
-			}
+			player.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DISCARDED);
+			return;
 		}
 		// Cannot discard item that the skill is consuming
-		if (player.isCastingSimultaneouslyNow())
+		if (player.isCastingSimultaneouslyNow() && (player.getLastSimultaneousSkillCast() != null) && (player.getLastSimultaneousSkillCast().getItemConsumeId() == itemToRemove.getId()))
 		{
-			if ((player.getLastSimultaneousSkillCast() != null) && (player.getLastSimultaneousSkillCast().getItemConsumeId() == itemToRemove.getId()))
-			{
-				player.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DISCARDED);
-				return;
-			}
+			player.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DISCARDED);
+			return;
 		}
 		
 		final int itemId = itemToRemove.getId();

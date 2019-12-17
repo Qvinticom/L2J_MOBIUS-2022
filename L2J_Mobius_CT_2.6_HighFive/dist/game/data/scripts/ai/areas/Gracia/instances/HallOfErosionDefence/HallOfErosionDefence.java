@@ -57,10 +57,6 @@ public class HallOfErosionDefence extends AbstractNpcAI
 		protected Npc deadTumor;
 		public long startTime = 0;
 		public ScheduledFuture<?> finishTask = null;
-		
-		public HEDWorld()
-		{
-		}
 	}
 	
 	private static final int INSTANCEID = 120;

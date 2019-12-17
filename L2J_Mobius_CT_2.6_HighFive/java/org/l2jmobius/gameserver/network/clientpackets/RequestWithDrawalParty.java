@@ -61,14 +61,14 @@ public class RequestWithDrawalParty implements IClientIncomingPacket
 				
 				if (player.isInPartyMatchRoom())
 				{
-					final PartyMatchRoom _room = PartyMatchRoomList.getInstance().getPlayerRoom(player);
-					if (_room != null)
+					final PartyMatchRoom room = PartyMatchRoomList.getInstance().getPlayerRoom(player);
+					if (room != null)
 					{
-						player.sendPacket(new PartyMatchDetail(player, _room));
-						player.sendPacket(new ExPartyRoomMember(player, _room, 0));
+						player.sendPacket(new PartyMatchDetail(room));
+						player.sendPacket(new ExPartyRoomMember(room, 0));
 						player.sendPacket(new ExClosePartyRoom());
 						
-						_room.deleteMember(player);
+						room.deleteMember(player);
 					}
 					player.setPartyRoom(0);
 					// player.setPartyMatching(0);

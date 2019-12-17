@@ -180,6 +180,7 @@ public class Q00902_ReclaimOurEra extends Quest
 					break;
 				}
 				qs.setState(State.CREATED);
+				// fallthrough
 			}
 			case State.CREATED:
 			{

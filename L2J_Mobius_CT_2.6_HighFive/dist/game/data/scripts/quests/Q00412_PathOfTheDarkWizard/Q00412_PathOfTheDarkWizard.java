@@ -180,19 +180,16 @@ public class Q00412_PathOfTheDarkWizard extends Quest
 			{
 				case MARSH_ZOMBIE:
 				{
-					if (hasQuestItems(killer, LUCKY_KEY) && (getQuestItemsCount(killer, FAMILYS_REMAINS) < 3))
+					if (hasQuestItems(killer, LUCKY_KEY) && (getQuestItemsCount(killer, FAMILYS_REMAINS) < 3) && (getRandom(2) == 0))
 					{
-						if (getRandom(2) == 0)
+						giveItems(killer, FAMILYS_REMAINS, 1);
+						if (getQuestItemsCount(killer, FAMILYS_REMAINS) == 3)
 						{
-							giveItems(killer, FAMILYS_REMAINS, 1);
-							if (getQuestItemsCount(killer, FAMILYS_REMAINS) == 3)
-							{
-								playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-							}
-							else
-							{
-								playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-							}
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;
@@ -201,38 +198,32 @@ public class Q00412_PathOfTheDarkWizard extends Quest
 				case SKELETON_HUNTER:
 				case SKELETON_HUNTER_ARCHER:
 				{
-					if (hasQuestItems(killer, CANDLE) && (getQuestItemsCount(killer, KNEE_BONE) < 2))
+					if (hasQuestItems(killer, CANDLE) && (getQuestItemsCount(killer, KNEE_BONE) < 2) && (getRandom(2) == 0))
 					{
-						if (getRandom(2) == 0)
+						giveItems(killer, KNEE_BONE, 1);
+						if (getQuestItemsCount(killer, KNEE_BONE) == 2)
 						{
-							giveItems(killer, KNEE_BONE, 1);
-							if (getQuestItemsCount(killer, KNEE_BONE) == 2)
-							{
-								playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-							}
-							else
-							{
-								playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-							}
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;
 				}
 				case SKELETON_SCOUT:
 				{
-					if (hasQuestItems(killer, HUB_SCENT) && (getQuestItemsCount(killer, HEART_OF_LUNACY) < 3))
+					if (hasQuestItems(killer, HUB_SCENT) && (getQuestItemsCount(killer, HEART_OF_LUNACY) < 3) && (getRandom(2) == 0))
 					{
-						if (getRandom(2) == 0)
+						giveItems(killer, HEART_OF_LUNACY, 1);
+						if (getQuestItemsCount(killer, HEART_OF_LUNACY) == 3)
 						{
-							giveItems(killer, HEART_OF_LUNACY, 1);
-							if (getQuestItemsCount(killer, HEART_OF_LUNACY) == 3)
-							{
-								playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-							}
-							else
-							{
-								playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-							}
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;

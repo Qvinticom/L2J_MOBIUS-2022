@@ -78,11 +78,11 @@ public class FreyaCelebration extends LongTimeEvent
 		{
 			if (getQuestItemsCount(player, Inventory.ADENA_ID) > 1)
 			{
-				final long _curr_time = System.currentTimeMillis();
+				final long currTime = System.currentTimeMillis();
 				final String value = player.getVariables().getString("FreyaCelebration");
-				final long _reuse_time = value == "" ? 0 : Long.parseLong(value);
+				final long reuseTime = value.equals("") ? 0 : Long.parseLong(value);
 				
-				if (_curr_time > _reuse_time)
+				if (currTime > reuseTime)
 				{
 					takeItems(player, Inventory.ADENA_ID, 1);
 					giveItems(player, FREYA_POTION, 1);
@@ -90,7 +90,7 @@ public class FreyaCelebration extends LongTimeEvent
 				}
 				else
 				{
-					final long remainingTime = (_reuse_time - System.currentTimeMillis()) / 1000;
+					final long remainingTime = (reuseTime - System.currentTimeMillis()) / 1000;
 					final int hours = (int) (remainingTime / 3600);
 					final int minutes = (int) ((remainingTime % 3600) / 60);
 					final SystemMessage sm = new SystemMessage(SystemMessageId.S1_WILL_BE_AVAILABLE_FOR_RE_USE_AFTER_S2_HOUR_S_S3_MINUTE_S);

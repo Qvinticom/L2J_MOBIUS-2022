@@ -116,13 +116,10 @@ public class Q00250_WatchWhatYouEat extends Quest
 		{
 			for (int[] mob : MOBS)
 			{
-				if (npc.getId() == mob[0])
+				if ((npc.getId() == mob[0]) && !hasQuestItems(player, mob[1]))
 				{
-					if (!hasQuestItems(player, mob[1]))
-					{
-						giveItems(player, mob[1], 1);
-						playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-					}
+					giveItems(player, mob[1], 1);
+					playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 			}
 			if (hasQuestItems(player, MOBS[0][1]) && hasQuestItems(player, MOBS[1][1]) && hasQuestItems(player, MOBS[2][1]))
@@ -159,7 +156,7 @@ public class Q00250_WatchWhatYouEat extends Quest
 						if (hasQuestItems(player, MOBS[0][1]) && hasQuestItems(player, MOBS[1][1]) && hasQuestItems(player, MOBS[2][1]))
 						{
 							htmltext = "32743-05.htm";
-							for (int items[] : MOBS)
+							for (int[] items : MOBS)
 							{
 								takeItems(player, items[1], -1);
 							}

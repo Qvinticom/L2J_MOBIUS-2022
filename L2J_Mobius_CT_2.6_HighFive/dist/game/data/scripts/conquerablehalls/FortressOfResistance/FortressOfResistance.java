@@ -37,8 +37,8 @@ import org.l2jmobius.gameserver.util.Util;
  */
 public class FortressOfResistance extends ClanHallSiegeEngine
 {
-	private final int MESSENGER = 35382;
-	private final int BLOODY_LORD_NURKA = 35375;
+	private static final int MESSENGER = 35382;
+	private static final int BLOODY_LORD_NURKA = 35375;
 	
 	private final Location[] NURKA_COORDS =
 	{
@@ -84,8 +84,7 @@ public class FortressOfResistance extends ClanHallSiegeEngine
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning(getName() + ": Couldnt set the Bloody Lord Nurka spawn");
-			e.printStackTrace();
+			LOGGER.warning(getName() + ": Couldnt set the Bloody Lord Nurka spawn " + e);
 		}
 	}
 	

@@ -69,7 +69,7 @@ public class Orfen extends AbstractNpcAI
 	// private static final int RIBA = 29017;
 	private static final int RIBA_IREN = 29018;
 	
-	private static boolean _IsTeleported;
+	private static boolean _hasTeleported;
 	private static final Collection<Attackable> MINIONS = ConcurrentHashMap.newKeySet();
 	private static BossZone ZONE;
 	
@@ -85,7 +85,7 @@ public class Orfen extends AbstractNpcAI
 			RIBA_IREN
 		};
 		registerMobs(mobs);
-		_IsTeleported = false;
+		_hasTeleported = false;
 		ZONE = GrandBossManager.getInstance().getZone(POS[0]);
 		final StatsSet info = GrandBossManager.getInstance().getStatsSet(ORFEN);
 		if (GrandBossManager.getInstance().getBossStatus(ORFEN) == DEAD)
@@ -192,12 +192,12 @@ public class Orfen extends AbstractNpcAI
 		}
 		else if (event.equalsIgnoreCase("check_orfen_pos"))
 		{
-			if ((_IsTeleported && (npc.getCurrentHp() > (npc.getMaxHp() * 0.95))) || (!ZONE.isInsideZone(npc) && !_IsTeleported))
+			if ((_hasTeleported && (npc.getCurrentHp() > (npc.getMaxHp() * 0.95))) || (!ZONE.isInsideZone(npc) && !_hasTeleported))
 			{
 				setSpawnPoint(npc, getRandom(3) + 1);
-				_IsTeleported = false;
+				_hasTeleported = false;
 			}
-			else if (_IsTeleported && !ZONE.isInsideZone(npc))
+			else if (_hasTeleported && !ZONE.isInsideZone(npc))
 			{
 				setSpawnPoint(npc, 0);
 			}
@@ -290,9 +290,9 @@ public class Orfen extends AbstractNpcAI
 		final int npcId = npc.getId();
 		if (npcId == ORFEN)
 		{
-			if (!_IsTeleported && ((npc.getCurrentHp() - damage) < (npc.getMaxHp() / 2)))
+			if (!_hasTeleported && ((npc.getCurrentHp() - damage) < (npc.getMaxHp() / 2)))
 			{
-				_IsTeleported = true;
+				_hasTeleported = true;
 				setSpawnPoint(npc, 0);
 			}
 			else if (npc.isInsideRadius2D(attacker, 1000) && !npc.isInsideRadius2D(attacker, 300) && (getRandom(10) == 0))

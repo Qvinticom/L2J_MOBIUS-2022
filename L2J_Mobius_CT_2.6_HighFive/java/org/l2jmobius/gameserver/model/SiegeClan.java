@@ -60,7 +60,7 @@ public class SiegeClan
 	
 	public void removeFlags()
 	{
-		_flag.forEach(f -> f.decayMe());
+		_flag.forEach(Npc::decayMe);
 		_flag.clear();
 	}
 	

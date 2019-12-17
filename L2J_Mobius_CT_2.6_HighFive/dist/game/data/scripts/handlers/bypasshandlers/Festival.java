@@ -329,7 +329,7 @@ public class Festival implements IBypassHandler
 	
 	private final String calculateDate(String milliFromEpoch)
 	{
-		final long numMillis = Long.valueOf(milliFromEpoch);
+		final long numMillis = Long.parseLong(milliFromEpoch);
 		final Calendar calCalc = Calendar.getInstance();
 		calCalc.setTimeInMillis(numMillis);
 		return calCalc.get(Calendar.YEAR) + "/" + calCalc.get(Calendar.MONTH) + "/" + calCalc.get(Calendar.DAY_OF_MONTH);

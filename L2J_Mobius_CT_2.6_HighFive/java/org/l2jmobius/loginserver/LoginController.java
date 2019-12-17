@@ -628,9 +628,9 @@ public class LoginController
 				{
 					Thread.sleep(LOGIN_TIMEOUT / 2);
 				}
-				catch (InterruptedException e)
+				catch (Exception e)
 				{
-					return;
+					// Ignore.
 				}
 			}
 		}

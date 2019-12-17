@@ -439,7 +439,7 @@ public class EnterWorld implements IClientIncomingPacket
 		if (Config.ALLOW_WEDDING)
 		{
 			engage(player);
-			notifyPartner(player, player.getPartnerId());
+			notifyPartner(player);
 		}
 		
 		if (player.isCursedWeaponEquipped())
@@ -578,12 +578,9 @@ public class EnterWorld implements IClientIncomingPacket
 			player.destroyItem("Akamanah", player.getInventory().getItemByItemId(8689), null, true);
 		}
 		
-		if (Config.ALLOW_MAIL)
+		if (Config.ALLOW_MAIL && MailManager.getInstance().hasUnreadPost(player))
 		{
-			if (MailManager.getInstance().hasUnreadPost(player))
-			{
-				client.sendPacket(ExNoticePostArrived.valueOf(false));
-			}
+			client.sendPacket(ExNoticePostArrived.valueOf(false));
 		}
 		
 		TvTEvent.onLogin(player);
@@ -652,11 +649,7 @@ public class EnterWorld implements IClientIncomingPacket
 		}
 	}
 	
-	/**
-	 * @param player
-	 * @param partnerId
-	 */
-	private void notifyPartner(PlayerInstance player, int partnerId)
+	private void notifyPartner(PlayerInstance player)
 	{
 		final int objId = player.getPartnerId();
 		if (objId != 0)

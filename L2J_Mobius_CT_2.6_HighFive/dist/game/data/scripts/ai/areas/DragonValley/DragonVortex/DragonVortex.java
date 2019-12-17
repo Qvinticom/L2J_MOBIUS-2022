@@ -99,33 +99,33 @@ public class DragonVortex extends AbstractNpcAI
 							raid = EMERALD_HORN;
 						}
 						
-						Location LOC = null;
+						Location loc = null;
 						switch (npc.getX())
 						{
 							case 92225:
 							{
-								LOC = SPOT_1;
+								loc = SPOT_1;
 								break;
 							}
 							case 110116:
 							{
-								LOC = SPOT_2;
+								loc = SPOT_2;
 								break;
 							}
 							case 121172:
 							{
-								LOC = SPOT_3;
+								loc = SPOT_3;
 								break;
 							}
 							case 108924:
 							{
-								LOC = SPOT_4;
+								loc = SPOT_4;
 								break;
 							}
 						}
 						
 						npc.getVariables().set(I_QUEST0, true);
-						addSpawn(raid, LOC, false, 0, true);
+						addSpawn(raid, loc, false, 0, true);
 						startQuestTimer("CANSPAWN", 60000, npc, null);
 					}
 					else

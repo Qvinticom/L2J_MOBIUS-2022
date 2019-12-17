@@ -125,7 +125,7 @@ public class RequestActionUse implements IClientIncomingPacket
 		if (player.isTransformed())
 		{
 			final int[] allowedActions = player.isTransformed() ? ExBasicActionList.ACTIONS_ON_TRANSFORM : ExBasicActionList.DEFAULT_ACTION_LIST;
-			if (!(Arrays.binarySearch(allowedActions, _actionId) >= 0))
+			if (Arrays.binarySearch(allowedActions, _actionId) < 0)
 			{
 				client.sendPacket(ActionFailed.STATIC_PACKET);
 				LOGGER.warning("Player " + player + " used action which he does not have! Id = " + _actionId + " transform: " + player.getTransformation().getId());
@@ -180,12 +180,9 @@ public class RequestActionUse implements IClientIncomingPacket
 			}
 			case 16: // Attack (Pets)
 			{
-				if (validateSummon(summon, true))
+				if (validateSummon(summon, true) && summon.canAttack(_ctrlPressed))
 				{
-					if (summon.canAttack(_ctrlPressed))
-					{
-						summon.doSummonAttack(target);
-					}
+					summon.doSummonAttack(target);
 				}
 				break;
 			}
@@ -238,12 +235,9 @@ public class RequestActionUse implements IClientIncomingPacket
 			}
 			case 22: // Attack (Servitors)
 			{
-				if (validateSummon(summon, false))
+				if (validateSummon(summon, false) && summon.canAttack(_ctrlPressed))
 				{
-					if (summon.canAttack(_ctrlPressed))
-					{
-						summon.doSummonAttack(target);
-					}
+					summon.doSummonAttack(target);
 				}
 				break;
 			}
@@ -384,25 +378,19 @@ public class RequestActionUse implements IClientIncomingPacket
 			}
 			case 53: // Move to target (Servitors)
 			{
-				if (validateSummon(summon, false))
+				if (validateSummon(summon, false) && (target != null) && (summon != target) && !summon.isMovementDisabled())
 				{
-					if ((target != null) && (summon != target) && !summon.isMovementDisabled())
-					{
-						summon.setFollowStatus(false);
-						summon.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, target.getLocation());
-					}
+					summon.setFollowStatus(false);
+					summon.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, target.getLocation());
 				}
 				break;
 			}
 			case 54: // Move to target (Pets)
 			{
-				if (validateSummon(summon, true))
+				if (validateSummon(summon, true) && (target != null) && (summon != target) && !summon.isMovementDisabled())
 				{
-					if ((target != null) && (summon != target) && !summon.isMovementDisabled())
-					{
-						summon.setFollowStatus(false);
-						summon.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, target.getLocation());
-					}
+					summon.setFollowStatus(false);
+					summon.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, target.getLocation());
 				}
 				break;
 			}
@@ -425,23 +413,17 @@ public class RequestActionUse implements IClientIncomingPacket
 			}
 			case 67: // Steer
 			{
-				if (player.isInAirShip())
+				if (player.isInAirShip() && player.getAirShip().setCaptain(player))
 				{
-					if (player.getAirShip().setCaptain(player))
-					{
-						player.broadcastUserInfo();
-					}
+					player.broadcastUserInfo();
 				}
 				break;
 			}
 			case 68: // Cancel Control
 			{
-				if (player.isInAirShip() && player.getAirShip().isCaptain(player))
+				if (player.isInAirShip() && player.getAirShip().isCaptain(player) && player.getAirShip().setCaptain(null))
 				{
-					if (player.getAirShip().setCaptain(null))
-					{
-						player.broadcastUserInfo();
-					}
+					player.broadcastUserInfo();
 				}
 				break;
 			}
@@ -1162,13 +1144,10 @@ public class RequestActionUse implements IClientIncomingPacket
 			return;
 		}
 		
-		if (summon instanceof BabyPetInstance)
+		if ((summon instanceof BabyPetInstance) && !((BabyPetInstance) summon).isInSupportMode())
 		{
-			if (!((BabyPetInstance) summon).isInSupportMode())
-			{
-				_client.sendPacket(SystemMessageId.A_PET_ON_AUXILIARY_MODE_CANNOT_USE_SKILLS);
-				return;
-			}
+			_client.sendPacket(SystemMessageId.A_PET_ON_AUXILIARY_MODE_CANNOT_USE_SKILLS);
+			return;
 		}
 		
 		final SkillHolder skillHolder = summon.getTemplate().getParameters().getSkillHolder(skillName);
@@ -1192,23 +1171,18 @@ public class RequestActionUse implements IClientIncomingPacket
 	
 	private boolean canControl(Summon summon)
 	{
-		if (summon instanceof BabyPetInstance)
+		if ((summon instanceof BabyPetInstance) && !((BabyPetInstance) summon).isInSupportMode())
 		{
-			if (!((BabyPetInstance) summon).isInSupportMode())
-			{
-				_client.sendPacket(SystemMessageId.A_PET_ON_AUXILIARY_MODE_CANNOT_USE_SKILLS);
-				return false;
-			}
+			_client.sendPacket(SystemMessageId.A_PET_ON_AUXILIARY_MODE_CANNOT_USE_SKILLS);
+			return false;
 		}
 		
-		if (summon.isPet())
+		if (summon.isPet() && ((summon.getLevel() - _client.getPlayer().getLevel()) > 20))
 		{
-			if ((summon.getLevel() - _client.getPlayer().getLevel()) > 20)
-			{
-				_client.sendPacket(SystemMessageId.YOUR_PET_IS_TOO_HIGH_LEVEL_TO_CONTROL);
-				return false;
-			}
+			_client.sendPacket(SystemMessageId.YOUR_PET_IS_TOO_HIGH_LEVEL_TO_CONTROL);
+			return false;
 		}
+		
 		return true;
 	}
 	

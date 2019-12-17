@@ -43,6 +43,7 @@ public class ConsoleLogFormatter extends Formatter
 			}
 			catch (Exception ex)
 			{
+				// Ignore.
 			}
 		}
 		return output.toString();

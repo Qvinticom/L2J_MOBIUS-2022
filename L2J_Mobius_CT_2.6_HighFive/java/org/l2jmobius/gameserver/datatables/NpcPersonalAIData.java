@@ -18,6 +18,7 @@ package org.l2jmobius.gameserver.datatables;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Map.Entry;
 
 import org.l2jmobius.commons.util.Rnd;
 import org.l2jmobius.gameserver.model.Spawn;
@@ -94,19 +95,21 @@ public class NpcPersonalAIData
 			
 			try
 			{
-				for (String key : map.keySet())
+				// for (String key : map.keySet())
+				for (Entry<String, Integer> entry : map.entrySet())
 				{
-					switch (key)
+					switch (entry.getKey())
 					{
 						case "disableRandomAnimation":
 						{
-							npc.setRandomAnimationEnabled((map.get(key) == 0));
+							npc.setRandomAnimationEnabled((entry.getValue() == 0));
 							break;
 						}
 						case "disableRandomWalk":
 						{
-							npc.setRandomWalking((map.get(key) == 0));
-							spawn.setRandomWalking((map.get(key) == 0));
+							final boolean enable = entry.getValue() == 0;
+							npc.setRandomWalking(enable);
+							spawn.setRandomWalking(enable);
 							break;
 						}
 					}

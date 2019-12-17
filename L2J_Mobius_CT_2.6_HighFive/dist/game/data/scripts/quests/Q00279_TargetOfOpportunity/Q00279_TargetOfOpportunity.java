@@ -99,19 +99,16 @@ public class Q00279_TargetOfOpportunity extends Quest
 		}
 		
 		final QuestState qs = getQuestState(pl, false);
-		if (getRandom(1000) < (int) (311 * Config.RATE_QUEST_DROP))
+		if ((getRandom(1000) < (int) (311 * Config.RATE_QUEST_DROP)) && !hasQuestItems(player, SEAL_COMPONENTS[idx]))
 		{
-			if (!hasQuestItems(player, SEAL_COMPONENTS[idx]))
+			giveItems(player, SEAL_COMPONENTS[idx], 1);
+			if (haveAllExceptThis(player, idx))
 			{
-				giveItems(player, SEAL_COMPONENTS[idx], 1);
-				if (haveAllExceptThis(player, idx))
-				{
-					qs.setCond(2, true);
-				}
-				else
-				{
-					playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-				}
+				qs.setCond(2, true);
+			}
+			else
+			{
+				playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 		}
 		return null;

@@ -105,29 +105,17 @@ public class Q00252_ItSmellsDelicious extends Quest
 		if (npc.getId() == CHEF) // only the killer gets quest items from the chef
 		{
 			qs = getQuestState(killer, false);
-			if ((qs != null) && qs.isCond(1))
+			if ((qs != null) && qs.isCond(1) && giveItemRandomly(killer, npc, COOKBOOK_PAGE, 1, COOKBOOK_PAGE_MAX_COUNT, COOKBOOK_PAGE_CHANCE, true) && hasMaxDiaries(qs))
 			{
-				if (giveItemRandomly(killer, npc, COOKBOOK_PAGE, 1, COOKBOOK_PAGE_MAX_COUNT, COOKBOOK_PAGE_CHANCE, true))
-				{
-					if (hasMaxDiaries(qs))
-					{
-						qs.setCond(2, true);
-					}
-				}
+				qs.setCond(2, true);
 			}
 		}
 		else
 		{
 			qs = getRandomPartyMemberState(killer, 1, 3, npc);
-			if (qs != null)
+			if ((qs != null) && giveItemRandomly(qs.getPlayer(), npc, DIARY, 1, DIARY_MAX_COUNT, DIARY_CHANCE, true) && hasMaxCookbookPages(qs))
 			{
-				if (giveItemRandomly(qs.getPlayer(), npc, DIARY, 1, DIARY_MAX_COUNT, DIARY_CHANCE, true))
-				{
-					if (hasMaxCookbookPages(qs))
-					{
-						qs.setCond(2, true);
-					}
-				}
+				qs.setCond(2, true);
 			}
 		}
 		return super.onKill(npc, killer, isSummon);

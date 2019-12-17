@@ -52,15 +52,12 @@ public class CannotMoveAnymoreInVehicle implements IClientIncomingPacket
 		{
 			return;
 		}
-		if (player.isInBoat())
+		if (player.isInBoat() && (player.getBoat().getObjectId() == _boatId))
 		{
-			if (player.getBoat().getObjectId() == _boatId)
-			{
-				player.setInVehiclePosition(new Location(_x, _y, _z));
-				player.setHeading(_heading);
-				final StopMoveInVehicle msg = new StopMoveInVehicle(player, _boatId);
-				player.broadcastPacket(msg);
-			}
+			player.setInVehiclePosition(new Location(_x, _y, _z));
+			player.setHeading(_heading);
+			final StopMoveInVehicle msg = new StopMoveInVehicle(player, _boatId);
+			player.broadcastPacket(msg);
 		}
 	}
 }

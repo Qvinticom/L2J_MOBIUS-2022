@@ -88,8 +88,7 @@ public class ClanWarehouse implements IBypassHandler
 			}
 			else if (command.toLowerCase().startsWith(COMMANDS[1])) // WithdrawSortedC
 			{
-				final String param[] = command.split(" ");
-				
+				final String[] param = command.split(" ");
 				if (param.length > 2)
 				{
 					showWithdrawWindow(player, WarehouseListType.valueOf(param[1]), SortedWareHouseWithdrawalList.getOrder(param[2]));

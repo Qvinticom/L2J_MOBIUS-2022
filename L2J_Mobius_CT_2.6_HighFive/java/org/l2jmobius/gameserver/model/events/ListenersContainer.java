@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.model.events.listeners.AbstractEventListener;
  */
 public class ListenersContainer
 {
-	private volatile Map<EventType, Queue<AbstractEventListener>> _listeners = new ConcurrentHashMap<>();
+	private final Map<EventType, Queue<AbstractEventListener>> _listeners = new ConcurrentHashMap<>();
 	
 	/**
 	 * Registers listener for a callback when specified event is executed.

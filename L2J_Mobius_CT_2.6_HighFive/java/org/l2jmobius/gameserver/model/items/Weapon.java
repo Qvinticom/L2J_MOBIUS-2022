@@ -99,13 +99,13 @@ public class Weapon extends Item
 			_baseAttackAngle = 240; // 360 - 120
 		}
 		
-		final String[] reduced_soulshots = set.getString("reduced_soulshot", "").split(",");
-		_reducedSoulshotChance = (reduced_soulshots.length == 2) ? Integer.parseInt(reduced_soulshots[0]) : 0;
-		_reducedSoulshot = (reduced_soulshots.length == 2) ? Integer.parseInt(reduced_soulshots[1]) : 0;
+		final String[] reducedSoulshots = set.getString("reduced_soulshot", "").split(",");
+		_reducedSoulshotChance = (reducedSoulshots.length == 2) ? Integer.parseInt(reducedSoulshots[0]) : 0;
+		_reducedSoulshot = (reducedSoulshots.length == 2) ? Integer.parseInt(reducedSoulshots[1]) : 0;
 		
-		final String[] reduced_mpconsume = set.getString("reduced_mp_consume", "").split(",");
-		_reducedMpConsumeChance = (reduced_mpconsume.length == 2) ? Integer.parseInt(reduced_mpconsume[0]) : 0;
-		_reducedMpConsume = (reduced_mpconsume.length == 2) ? Integer.parseInt(reduced_mpconsume[1]) : 0;
+		final String[] reducedMpConsume = set.getString("reduced_mp_consume", "").split(",");
+		_reducedMpConsumeChance = (reducedMpConsume.length == 2) ? Integer.parseInt(reducedMpConsume[0]) : 0;
+		_reducedMpConsume = (reducedMpConsume.length == 2) ? Integer.parseInt(reducedMpConsume[1]) : 0;
 		
 		String skill = set.getString("enchant4_skill", null);
 		if (skill != null)
@@ -436,10 +436,7 @@ public class Weapon extends Item
 				target
 			};
 			
-			World.getInstance().forEachVisibleObjectInRange(caster, Npc.class, 1000, npc ->
-			{
-				EventDispatcher.getInstance().notifyEventAsync(new OnNpcSkillSee(npc, caster.getActingPlayer(), onMagicSkill, targets, false), npc);
-			});
+			World.getInstance().forEachVisibleObjectInRange(caster, Npc.class, 1000, npc -> EventDispatcher.getInstance().notifyEventAsync(new OnNpcSkillSee(npc, caster.getActingPlayer(), onMagicSkill, targets, false), npc));
 		}
 		if (caster.isPlayer())
 		{

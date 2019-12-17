@@ -298,11 +298,9 @@ public class SepulcherNpcInstance extends Npc
 			{
 				val = Integer.parseInt(command.substring(5));
 			}
-			catch (IndexOutOfBoundsException ioobe)
+			catch (Exception e)
 			{
-			}
-			catch (NumberFormatException nfe)
-			{
+				// Handled above.
 			}
 			showChatWindow(player, val);
 		}
@@ -323,6 +321,7 @@ public class SepulcherNpcInstance extends Npc
 					case 31944:
 					{
 						FourSepulchersManager.getInstance().spawnShadow(getId());
+						// Fallthrou?
 					}
 					default:
 					{
@@ -354,9 +353,7 @@ public class SepulcherNpcInstance extends Npc
 	public void openNextDoor(int npcId)
 	{
 		final int doorId = FourSepulchersManager.getInstance().getHallGateKeepers().get(npcId);
-		final DoorData _doorTable = DoorData.getInstance();
-		_doorTable.getDoor(doorId).openMe();
-		
+		DoorData.getInstance().getDoor(doorId).openMe();
 		if (_closeTask != null)
 		{
 			_closeTask.cancel(true);

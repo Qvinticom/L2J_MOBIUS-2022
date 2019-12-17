@@ -68,7 +68,7 @@ public class Q00331_ArrowOfVengeance extends Quest
 	{
 		final QuestState qs = getQuestState(player, false);
 		String htmltext = null;
-		if(qs != null)
+		if (qs != null)
 		{
 			switch (event)
 			{
@@ -132,30 +132,27 @@ public class Q00331_ArrowOfVengeance extends Quest
 	public String onKill(Npc npc, PlayerInstance player, boolean isPet)
 	{
 		final QuestState qs = getQuestState(player, false);
-		if(qs != null)
+		if ((qs != null) && (getRandom(100) < MONSTERS.get(npc.getId())))
 		{
-			if (getRandom(100) < MONSTERS.get(npc.getId()))
+			switch (npc.getId())
 			{
-				switch (npc.getId())
+				case 20145:
 				{
-					case 20145:
-					{
-						giveItems(player, HARPY_FEATHER, 1);
-						break;
-					}
-					case 20158:
-					{
-						giveItems(player, MEDUSA_VENOM, 1);
-						break;
-					}
-					case 20176:
-					{
-						giveItems(player, WYRMS_TOOTH, 1);
-						break;
-					}
+					giveItems(player, HARPY_FEATHER, 1);
+					break;
 				}
-				playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+				case 20158:
+				{
+					giveItems(player, MEDUSA_VENOM, 1);
+					break;
+				}
+				case 20176:
+				{
+					giveItems(player, WYRMS_TOOTH, 1);
+					break;
+				}
 			}
+			playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
 		return super.onKill(npc, player, isPet);
 	}

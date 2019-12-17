@@ -18,7 +18,7 @@ package org.l2jmobius.gameserver.data.xml.impl;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.EnumMap;
 import java.util.List;
 import java.util.Map;
 
@@ -39,7 +39,8 @@ import org.l2jmobius.gameserver.model.items.PlayerItemTemplate;
  */
 public class InitialEquipmentData implements IXmlReader
 {
-	private final Map<ClassId, List<PlayerItemTemplate>> _initialEquipmentList = new HashMap<>();
+	private final Map<ClassId, List<PlayerItemTemplate>> _initialEquipmentList = new EnumMap<>(ClassId.class);
+	
 	private static final String NORMAL = "data/stats/initialEquipment.xml";
 	private static final String EVENT = "data/stats/initialEquipmentEvent.xml";
 	

@@ -28,7 +28,6 @@ import java.util.logging.Logger;
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.concurrent.ThreadPool;
 import org.l2jmobius.commons.database.DatabaseFactory;
-import org.l2jmobius.gameserver.instancemanager.ItemAuctionManager;
 import org.l2jmobius.gameserver.model.ItemInfo;
 import org.l2jmobius.gameserver.model.World;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
@@ -42,7 +41,8 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public class ItemAuction
 {
-	static final Logger LOGGER = Logger.getLogger(ItemAuctionManager.class.getName());
+	static final Logger LOGGER = Logger.getLogger(ItemAuction.class.getName());
+	
 	private static final long ENDING_TIME_EXTEND_5 = TimeUnit.MILLISECONDS.convert(5, TimeUnit.MINUTES);
 	private static final long ENDING_TIME_EXTEND_3 = TimeUnit.MILLISECONDS.convert(3, TimeUnit.MINUTES);
 	
@@ -54,9 +54,9 @@ public class ItemAuction
 	private final List<ItemAuctionBid> _auctionBids;
 	private final Object _auctionStateLock;
 	
-	private volatile ItemAuctionState _auctionState;
-	private volatile ItemAuctionExtendState _scheduledAuctionEndingExtendState;
-	private volatile ItemAuctionExtendState _auctionEndingExtendState;
+	private ItemAuctionState _auctionState;
+	private ItemAuctionExtendState _scheduledAuctionEndingExtendState;
+	private ItemAuctionExtendState _auctionEndingExtendState;
 	
 	private final ItemInfo _itemInfo;
 	
@@ -219,7 +219,6 @@ public class ItemAuction
 	
 	private final void updatePlayerBid(ItemAuctionBid bid, boolean delete)
 	{
-		// TODO nBd maybe move such stuff to you db updater :D
 		updatePlayerBidInternal(bid, delete);
 	}
 	
@@ -321,7 +320,6 @@ public class ItemAuction
 			final SystemMessage sm = new SystemMessage(SystemMessageId.YOU_HAVE_SUBMITTED_A_BID_FOR_THE_AUCTION_OF_S1);
 			sm.addLong(newBid);
 			player.sendPacket(sm);
-			return;
 		}
 	}
 	

@@ -51,17 +51,16 @@ public class Bernarde extends AbstractNpcAI
 		{
 			case "HolyWater":
 			{
-				if (HellboundEngine.getInstance().getLevel() == 2)
+				if ((HellboundEngine.getInstance().getLevel() == 2) //
+					&& (player.getInventory().getInventoryItemCount(DARION_BADGE, -1, false) >= 5) //
+					&& player.exchangeItemsById("Quest", npc, DARION_BADGE, 5, HOLY_WATER, 1, true))
 				{
-					if (player.getInventory().getInventoryItemCount(DARION_BADGE, -1, false) >= 5)
-					{
-						if (player.exchangeItemsById("Quest", npc, DARION_BADGE, 5, HOLY_WATER, 1, true))
-						{
-							return "32300-02b.htm";
-						}
-					}
+					event = "32300-02b.htm";
 				}
-				event = "32300-02c.htm";
+				else
+				{
+					event = "32300-02c.htm";
+				}
 				break;
 			}
 			case "Treasure":

@@ -185,11 +185,7 @@ public class Q00605_AllianceWithKetraOrcs extends Quest
 				break;
 			}
 		}
-		if (getQuestItemsCount(qs.getPlayer(), itemId) < count)
-		{
-			return true;
-		}
-		return false;
+		return getQuestItemsCount(qs.getPlayer(), itemId) < count;
 	}
 	
 	@Override

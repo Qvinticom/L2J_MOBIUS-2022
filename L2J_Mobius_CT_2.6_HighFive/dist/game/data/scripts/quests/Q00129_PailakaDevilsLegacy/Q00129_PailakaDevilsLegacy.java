@@ -210,6 +210,7 @@ public class Q00129_PailakaDevilsLegacy extends Quest
 						takeItems(player, SCROLL_2, -1);
 						giveItems(player, ENH_SWORD2, 1);
 						htmltext = "32508-05.htm";
+						break;
 					}
 					htmltext = "32508-04.htm";
 				}
@@ -221,7 +222,6 @@ public class Q00129_PailakaDevilsLegacy extends Quest
 				{
 					htmltext = "32508-00.htm";
 				}
-				
 				break;
 			}
 			case ADVENTURER2:

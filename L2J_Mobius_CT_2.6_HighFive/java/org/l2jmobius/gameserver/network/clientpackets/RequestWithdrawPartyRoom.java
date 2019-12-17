@@ -44,36 +44,35 @@ public class RequestWithdrawPartyRoom implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance _player = client.getPlayer();
-		
-		if (_player == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		final PartyMatchRoom _room = PartyMatchRoomList.getInstance().getRoom(_roomid);
-		if (_room == null)
+		final PartyMatchRoom room = PartyMatchRoomList.getInstance().getRoom(_roomid);
+		if (room == null)
 		{
 			return;
 		}
 		
-		if ((_player.isInParty() && _room.getOwner().isInParty()) && (_player.getParty().getLeaderObjectId() == _room.getOwner().getParty().getLeaderObjectId()))
+		if ((player.isInParty() && room.getOwner().isInParty()) && (player.getParty().getLeaderObjectId() == room.getOwner().getParty().getLeaderObjectId()))
 		{
 			// If user is in party with Room Owner
 			// is not removed from Room
 			
 			// _activeChar.setPartyMatching(0);
-			_player.broadcastUserInfo();
+			player.broadcastUserInfo();
 		}
 		else
 		{
-			_room.deleteMember(_player);
+			room.deleteMember(player);
 			
-			_player.setPartyRoom(0);
+			player.setPartyRoom(0);
 			// _activeChar.setPartyMatching(0);
 			
-			_player.sendPacket(new ExClosePartyRoom());
-			_player.sendPacket(SystemMessageId.YOU_HAVE_EXITED_THE_PARTY_ROOM);
+			player.sendPacket(new ExClosePartyRoom());
+			player.sendPacket(SystemMessageId.YOU_HAVE_EXITED_THE_PARTY_ROOM);
 		}
 	}
 }

@@ -341,7 +341,7 @@ public class Q00024_InhabitantsOfTheForestOfTheDead extends Quest
 				else if (st.isCompleted())
 				{
 					final QuestState qs = player.getQuestState(Q00025_HidingBehindTheTruth.class.getSimpleName());
-					if (!((qs != null) && (qs.isStarted() || qs.isStarted())))
+					if (!((qs != null) && qs.isStarted()))
 					{
 						htmltext = "31522-22.html";
 					}

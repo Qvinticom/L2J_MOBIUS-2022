@@ -130,9 +130,9 @@ public class HomeBoard implements IParseBoardHandler
 			returnHtml = HtmCache.getInstance().getHtm(player, "data/html/CommunityBoard/" + customPath + "home.html");
 			if (!Config.CUSTOM_CB_ENABLED)
 			{
-				returnHtml = returnHtml.replaceAll("%fav_count%", Integer.toString(getFavoriteCount(player)));
-				returnHtml = returnHtml.replaceAll("%region_count%", Integer.toString(getRegionCount(player)));
-				returnHtml = returnHtml.replaceAll("%clan_count%", Integer.toString(ClanTable.getInstance().getClanCount()));
+				returnHtml = returnHtml.replace("%fav_count%", Integer.toString(getFavoriteCount(player)));
+				returnHtml = returnHtml.replace("%region_count%", Integer.toString(getRegionCount(player)));
+				returnHtml = returnHtml.replace("%clan_count%", Integer.toString(ClanTable.getInstance().getClanCount()));
 			}
 		}
 		else if (command.startsWith("_bbstop;"))
@@ -184,10 +184,7 @@ public class HomeBoard implements IParseBoardHandler
 				player.setIsIn7sDungeon(false);
 				player.setInstanceId(0);
 				player.teleToLocation(Config.COMMUNITY_AVAILABLE_TELEPORTS.get(teleBuypass), 0);
-				ThreadPool.schedule(() ->
-				{
-					player.enableAllSkills();
-				}, 3000);
+				ThreadPool.schedule(player::enableAllSkills, 3000);
 			}
 		}
 		else if (command.startsWith("_bbsbuff"))

@@ -380,7 +380,7 @@ public class Minigame extends AbstractNpcAI
 		private boolean _started;
 		private int _attemptNumber;
 		private int _currentPot;
-		private final int _order[];
+		private final int[] _order;
 		private ConsumerEventListener _listener;
 		
 		public MinigameRoom(Npc[] burners, Npc manager)

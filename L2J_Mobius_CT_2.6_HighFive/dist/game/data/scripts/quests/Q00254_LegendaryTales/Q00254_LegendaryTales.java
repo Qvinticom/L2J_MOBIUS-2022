@@ -126,6 +126,8 @@ public class Q00254_LegendaryTales extends Quest
 			case "30754-05.html":
 			{
 				qs.startQuest();
+				htmltext = event;
+				break;
 			}
 			case "25718": // Emerald Horn
 			{

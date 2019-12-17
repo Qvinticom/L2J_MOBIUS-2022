@@ -36,7 +36,7 @@ public class Time implements IUserCommandHandler
 		77
 	};
 	
-	private static final SimpleDateFormat fmt = new SimpleDateFormat("H:mm.");
+	private static final SimpleDateFormat SDF = new SimpleDateFormat("H:mm.");
 	
 	@Override
 	public boolean useUserCommand(int id, PlayerInstance player)
@@ -74,7 +74,7 @@ public class Time implements IUserCommandHandler
 		player.sendPacket(sm);
 		if (Config.DISPLAY_SERVER_TIME)
 		{
-			player.sendMessage("Server time is " + fmt.format(new Date(System.currentTimeMillis())));
+			player.sendMessage("Server time is " + SDF.format(new Date(System.currentTimeMillis())));
 		}
 		return true;
 	}

@@ -153,6 +153,7 @@ public class ClassMasterInstance extends MerchantInstance
 		}
 		catch (NumberFormatException e)
 		{
+			// Ignore.
 		}
 		player.sendPacket(TutorialCloseHtml.STATIC_PACKET);
 	}
@@ -326,7 +327,7 @@ public class ClassMasterInstance extends MerchantInstance
 		}
 		
 		String msg = HtmCache.getInstance().getHtm(player, "data/html/classmaster/tutorialtemplate.htm");
-		msg = msg.replaceAll("%name%", ClassListData.getInstance().getClass(currentClassId).getEscapedClientCode());
+		msg = msg.replace("%name%", ClassListData.getInstance().getClass(currentClassId).getEscapedClientCode());
 		
 		final StringBuilder menu = new StringBuilder(100);
 		for (ClassId cid : ClassId.values())
@@ -341,7 +342,7 @@ public class ClassMasterInstance extends MerchantInstance
 			}
 		}
 		
-		msg = msg.replaceAll("%menu%", menu.toString());
+		msg = msg.replace("%menu%", menu.toString());
 		msg = msg.replace("%req_items%", getRequiredItems(currentClassId.level() + 1));
 		player.sendPacket(new TutorialShowHtml(msg));
 	}

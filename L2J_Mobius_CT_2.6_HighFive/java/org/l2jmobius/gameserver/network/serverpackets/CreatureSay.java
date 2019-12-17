@@ -40,12 +40,11 @@ public class CreatureSay implements IClientOutgoingPacket
 	/**
 	 * Used by fake players.
 	 * @param sender
-	 * @param receiver
 	 * @param name
 	 * @param messageType
 	 * @param text
 	 */
-	public CreatureSay(Npc sender, PlayerInstance receiver, String name, ChatType messageType, String text)
+	public CreatureSay(Npc sender, String name, ChatType messageType, String text)
 	{
 		_objectId = sender.getObjectId();
 		_textType = messageType;

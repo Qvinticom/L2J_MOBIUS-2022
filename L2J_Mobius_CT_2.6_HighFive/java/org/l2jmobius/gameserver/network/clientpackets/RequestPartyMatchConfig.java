@@ -49,51 +49,50 @@ public class RequestPartyMatchConfig implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance _player = client.getPlayer();
-		
-		if (_player == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		if (!_player.isInPartyMatchRoom() && (_player.getParty() != null) && (_player.getParty().getLeader() != _player))
+		if (!player.isInPartyMatchRoom() && (player.getParty() != null) && (player.getParty().getLeader() != player))
 		{
-			_player.sendPacket(SystemMessageId.THE_LIST_OF_PARTY_ROOMS_CAN_ONLY_BE_VIEWED_BY_A_PERSON_WHO_IS_NOT_PART_OF_A_PARTY);
-			_player.sendPacket(ActionFailed.STATIC_PACKET);
+			player.sendPacket(SystemMessageId.THE_LIST_OF_PARTY_ROOMS_CAN_ONLY_BE_VIEWED_BY_A_PERSON_WHO_IS_NOT_PART_OF_A_PARTY);
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		if (_player.isInPartyMatchRoom())
+		if (player.isInPartyMatchRoom())
 		{
 			// If Player is in Room show him room, not list
-			final PartyMatchRoomList _list = PartyMatchRoomList.getInstance();
-			if (_list == null)
+			final PartyMatchRoomList list = PartyMatchRoomList.getInstance();
+			if (list == null)
 			{
 				return;
 			}
 			
-			final PartyMatchRoom _room = _list.getPlayerRoom(_player);
-			if (_room == null)
+			final PartyMatchRoom room = list.getPlayerRoom(player);
+			if (room == null)
 			{
 				return;
 			}
 			
-			_player.sendPacket(new PartyMatchDetail(_player, _room));
-			_player.sendPacket(new ExPartyRoomMember(_player, _room, 2));
+			player.sendPacket(new PartyMatchDetail(room));
+			player.sendPacket(new ExPartyRoomMember(room, 2));
 			
-			_player.setPartyRoom(_room.getId());
+			player.setPartyRoom(room.getId());
 			// _activeChar.setPartyMatching(1);
-			_player.broadcastUserInfo();
+			player.broadcastUserInfo();
 		}
 		else
 		{
 			// Add to waiting list
-			PartyMatchWaitingList.getInstance().addPlayer(_player);
+			PartyMatchWaitingList.getInstance().addPlayer(player);
 			
 			// Send Room list
-			final ListPartyWating matchList = new ListPartyWating(_player, _auto, _loc, _lvl);
+			final ListPartyWating matchList = new ListPartyWating(player, _auto, _loc, _lvl);
 			
-			_player.sendPacket(matchList);
+			player.sendPacket(matchList);
 		}
 	}
 }

@@ -32,8 +32,7 @@ public class RequestReplyStartPledgeWar implements IClientIncomingPacket
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
 	{
-		@SuppressWarnings("unused")
-		final String _reqName = packet.readS();
+		packet.readS(); // _reqName
 		_answer = packet.readD();
 		return true;
 	}

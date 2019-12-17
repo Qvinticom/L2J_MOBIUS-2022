@@ -45,8 +45,6 @@ public class AdminCursedWeapons implements IAdminCommandHandler
 		"admin_cw_info_menu"
 	};
 	
-	private int itemId;
-	
 	@Override
 	public boolean useAdminCommand(String command, PlayerInstance activeChar)
 	{
@@ -94,7 +92,7 @@ public class AdminCursedWeapons implements IAdminCommandHandler
 				adminReply.setFile(activeChar, "data/html/admin/cwinfo.htm");
 				for (CursedWeapon cw : cwm.getCursedWeapons())
 				{
-					itemId = cw.getItemId();
+					final int itemId = cw.getItemId();
 					
 					replyMSG.append("<table width=270><tr><td>Name:</td><td>");
 					replyMSG.append(cw.getName());

@@ -65,18 +65,15 @@ public class Falk extends AbstractNpcAI
 	@Override
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		if (event.equalsIgnoreCase("badges"))
+		if (event.equalsIgnoreCase("badges") && !hasAtLeastOneQuestItem(player, BASIC_CERT, STANDART_CERT, PREMIUM_CERT))
 		{
-			if (!hasAtLeastOneQuestItem(player, BASIC_CERT, STANDART_CERT, PREMIUM_CERT))
+			if (getQuestItemsCount(player, DARION_BADGE) >= 20)
 			{
-				if (getQuestItemsCount(player, DARION_BADGE) >= 20)
-				{
-					takeItems(player, DARION_BADGE, 20);
-					giveItems(player, BASIC_CERT, 1);
-					return "32297-02a.htm";
-				}
-				return "32297-02b.htm";
+				takeItems(player, DARION_BADGE, 20);
+				giveItems(player, BASIC_CERT, 1);
+				return "32297-02a.htm";
 			}
+			return "32297-02b.htm";
 		}
 		return super.onAdvEvent(event, npc, player);
 	}

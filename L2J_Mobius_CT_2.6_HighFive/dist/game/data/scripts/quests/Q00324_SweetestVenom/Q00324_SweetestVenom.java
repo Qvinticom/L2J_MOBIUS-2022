@@ -63,13 +63,10 @@ public class Q00324_SweetestVenom extends Quest
 	{
 		final QuestState qs = getQuestState(player, false);
 		String htmltext = null;
-		if(qs != null)
+		if ((qs != null) && event.equals("30351-04.htm"))
 		{
-			if (event.equals("30351-04.htm"))
-			{
-				qs.startQuest();
-				htmltext = event;
-			}
+			qs.startQuest();
+			htmltext = event;
 		}
 		return htmltext;
 	}
@@ -112,19 +109,16 @@ public class Q00324_SweetestVenom extends Quest
 		if ((qs != null) && qs.isCond(1))
 		{
 			long sacs = getQuestItemsCount(player, VENOM_SAC);
-			if (sacs < REQUIRED_COUNT)
+			if ((sacs < REQUIRED_COUNT) && (getRandom(100) < MONSTERS.get(npc.getId())))
 			{
-				if (getRandom(100) < MONSTERS.get(npc.getId()))
+				giveItems(player, VENOM_SAC, 1);
+				if ((++sacs) < REQUIRED_COUNT)
 				{
-					giveItems(player, VENOM_SAC, 1);
-					if ((++sacs) < REQUIRED_COUNT)
-					{
-						playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-					}
-					else
-					{
-						qs.setCond(2, true);
-					}
+					playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+				}
+				else
+				{
+					qs.setCond(2, true);
 				}
 			}
 		}

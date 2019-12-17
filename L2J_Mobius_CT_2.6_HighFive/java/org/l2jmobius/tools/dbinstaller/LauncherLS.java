@@ -47,6 +47,7 @@ public class LauncherLS extends AbstractDBLauncher
 		}
 		catch (Exception e)
 		{
+			// Ignore.
 		}
 		
 		try

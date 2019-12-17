@@ -24,10 +24,6 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExClosePartyRoom implements IClientOutgoingPacket
 {
-	public ExClosePartyRoom()
-	{
-	}
-	
 	@Override
 	public boolean write(PacketWriter packet)
 	{

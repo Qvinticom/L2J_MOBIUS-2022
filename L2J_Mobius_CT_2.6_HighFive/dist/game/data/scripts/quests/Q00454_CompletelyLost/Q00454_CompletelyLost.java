@@ -215,12 +215,12 @@ public class Q00454_CompletelyLost extends Quest
 							qs.startQuest();
 							qs.setMemoState(1);
 							htmltext = getHtm(player, "32738-04a.htm");
-							htmltext = htmltext.replaceAll("leader", leader.getName());
+							htmltext = htmltext.replace("%leader%", leader.getName());
 						}
 						else
 						{
 							htmltext = getHtm(player, "32738-01b.htm");
-							htmltext = htmltext.replaceAll("leader", leader.getName());
+							htmltext = htmltext.replace("%leader%", leader.getName());
 						}
 					}
 				}
@@ -457,6 +457,7 @@ public class Q00454_CompletelyLost extends Quest
 					break;
 				}
 				qs.setState(State.CREATED);
+				// break; fallthrough
 			}
 			case State.CREATED:
 			{
@@ -477,13 +478,13 @@ public class Q00454_CompletelyLost extends Quest
 						if (leader.isInParty() && leader.getParty().containsPlayer(player))
 						{
 							htmltext = getHtm(player, "32738-01a.htm");
-							htmltext = htmltext.replaceAll("leader", leader.getName());
-							htmltext = htmltext.replaceAll("name", player.getName());
+							htmltext = htmltext.replace("%leader%", leader.getName());
+							htmltext = htmltext.replace("%name%", player.getName());
 						}
 						else
 						{
 							htmltext = getHtm(player, "32738-01b.htm");
-							htmltext = htmltext.replaceAll("leader", leader.getName());
+							htmltext = htmltext.replace("%leader%", leader.getName());
 						}
 					}
 				}

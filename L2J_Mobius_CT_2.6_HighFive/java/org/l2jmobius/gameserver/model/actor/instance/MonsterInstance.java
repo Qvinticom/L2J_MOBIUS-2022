@@ -39,7 +39,7 @@ public class MonsterInstance extends Attackable
 	protected boolean _enableMinions = true;
 	
 	private MonsterInstance _master = null;
-	private volatile MinionList _minionList = null;
+	private MinionList _minionList = null;
 	
 	/**
 	 * Creates a monster.
@@ -95,14 +95,11 @@ public class MonsterInstance extends Attackable
 	@Override
 	public void onSpawn()
 	{
-		if (!isTeleporting())
+		if (!isTeleporting() && (_master != null))
 		{
-			if (_master != null)
-			{
-				setRandomWalking(false);
-				setIsRaidMinion(_master.isRaid());
-				_master.getMinionList().onMinionSpawn(this);
-			}
+			setRandomWalking(false);
+			setIsRaidMinion(_master.isRaid());
+			_master.getMinionList().onMinionSpawn(this);
 		}
 		
 		// dynamic script-based minions spawned here, after all preparations.
@@ -110,7 +107,7 @@ public class MonsterInstance extends Attackable
 	}
 	
 	@Override
-	public void onTeleported()
+	public synchronized void onTeleported()
 	{
 		super.onTeleported();
 		
@@ -118,17 +115,6 @@ public class MonsterInstance extends Attackable
 		{
 			getMinionList().onMasterTeleported();
 		}
-	}
-	
-	@Override
-	public boolean doDie(Creature killer)
-	{
-		if (!super.doDie(killer))
-		{
-			return false;
-		}
-		
-		return true;
 	}
 	
 	@Override

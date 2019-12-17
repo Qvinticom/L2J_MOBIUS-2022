@@ -116,7 +116,7 @@ public class Q00511_AwlUnderFoot extends Quest
 		}
 	}
 	
-	private static final boolean debug = false;
+	private static final boolean DEBUG = false;
 	private static final long REENTERTIME = 14400000;
 	
 	private static final long RAID_SPAWN_DELAY = 120000;
@@ -193,7 +193,7 @@ public class Q00511_AwlUnderFoot extends Quest
 	
 	private String checkConditions(PlayerInstance player)
 	{
-		if (debug)
+		if (DEBUG)
 		{
 			return null;
 		}

@@ -258,6 +258,7 @@ public class AdminEffects implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
+				// Managed bellow.
 			}
 			try
 			{
@@ -280,6 +281,7 @@ public class AdminEffects implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
+				// Not important.
 			}
 		}
 		else if (command.startsWith("admin_unpara")) // || command.startsWith("admin_unpara_menu"))
@@ -291,6 +293,7 @@ public class AdminEffects implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
+				// Managed bellow.
 			}
 			try
 			{
@@ -312,6 +315,7 @@ public class AdminEffects implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
+				// Not important.
 			}
 		}
 		else if (command.startsWith("admin_bighead"))
@@ -328,6 +332,7 @@ public class AdminEffects implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
+				// Not important.
 			}
 		}
 		else if (command.startsWith("admin_shrinkhead"))
@@ -344,6 +349,7 @@ public class AdminEffects implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
+				// Not important.
 			}
 		}
 		else if (command.equals("admin_clearteams"))
@@ -453,6 +459,7 @@ public class AdminEffects implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
+				// Not important.
 			}
 		}
 		else if (command.startsWith("admin_ave_abnormal") || command.startsWith("admin_ave_special") || command.startsWith("admin_ave_event"))
@@ -639,6 +646,7 @@ public class AdminEffects implements IAdminCommandHandler
 		}
 		catch (Exception e)
 		{
+			// Not important.
 		}
 		return true;
 	}
@@ -698,9 +706,9 @@ public class AdminEffects implements IAdminCommandHandler
 	
 	private void playAdminSound(PlayerInstance activeChar, String sound)
 	{
-		final PlaySound _snd = new PlaySound(1, sound, 0, 0, 0, 0, 0);
-		activeChar.sendPacket(_snd);
-		activeChar.broadcastPacket(_snd);
+		final PlaySound snd = new PlaySound(1, sound, 0, 0, 0, 0, 0);
+		activeChar.sendPacket(snd);
+		activeChar.broadcastPacket(snd);
 		BuilderUtil.sendSysMessage(activeChar, "Playing " + sound + ".");
 	}
 	

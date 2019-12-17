@@ -44,7 +44,7 @@ public class Q00089_SagaOfTheMysticMuse extends AbstractSagaQuest
 			31658,
 			31283
 		};
-		Items = new int[]
+		_items = new int[]
 		{
 			7080,
 			7530,
@@ -59,27 +59,27 @@ public class Q00089_SagaOfTheMysticMuse extends AbstractSagaQuest
 			7083,
 			0
 		};
-		Mob = new int[]
+		_mob = new int[]
 		{
 			27251,
 			27238,
 			27255
 		};
-		classid = new int[]
+		_classId = new int[]
 		{
 			103
 		};
-		prevclass = new int[]
+		_prevClass = new int[]
 		{
 			0x1b
 		};
-		npcSpawnLocations = new Location[]
+		_npcSpawnLocations = new Location[]
 		{
 			new Location(119518, -28658, -3811),
 			new Location(181227, 36703, -4816),
 			new Location(181215, 36676, -4812)
 		};
-		Text = new String[]
+		_text = new String[]
 		{
 			"PLAYERNAME! Pursued to here! However, I jumped out of the Banshouren boundaries! You look at the giant as the sign of power!",
 			"... Oh ... good! So it was ... let's begin!",

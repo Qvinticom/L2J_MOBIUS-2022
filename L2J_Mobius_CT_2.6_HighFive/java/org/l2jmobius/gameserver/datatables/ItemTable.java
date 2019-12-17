@@ -58,11 +58,6 @@ public class ItemTable
 	private static Logger LOGGER_ITEMS = Logger.getLogger("item");
 	
 	public static final Map<String, Integer> SLOTS = new HashMap<>();
-	
-	private Item[] _allTemplates;
-	private final Map<Integer, EtcItem> _etcItems = new HashMap<>();
-	private final Map<Integer, Armor> _armors = new HashMap<>();
-	private final Map<Integer, Weapon> _weapons = new HashMap<>();
 	static
 	{
 		SLOTS.put("shirt", Item.SLOT_UNDERWEAR);
@@ -93,7 +88,6 @@ public class ItemTable
 		SLOTS.put("strider", Item.SLOT_STRIDER);
 		SLOTS.put("babypet", Item.SLOT_BABYPET);
 		SLOTS.put("none", Item.SLOT_NONE);
-		
 		// retail compatibility
 		SLOTS.put("onepiece", Item.SLOT_FULL_ARMOR);
 		SLOTS.put("hair2", Item.SLOT_HAIR2);
@@ -102,6 +96,10 @@ public class ItemTable
 		SLOTS.put("deco1", Item.SLOT_DECO);
 		SLOTS.put("waist", Item.SLOT_BELT);
 	}
+	private Item[] _allTemplates;
+	private final Map<Integer, EtcItem> _etcItems = new HashMap<>();
+	private final Map<Integer, Armor> _armors = new HashMap<>();
+	private final Map<Integer, Weapon> _weapons = new HashMap<>();
 	
 	/**
 	 * @return a reference to this ItemTable object
@@ -240,29 +238,26 @@ public class ItemTable
 			item.setCount(count);
 		}
 		
-		if (Config.LOG_ITEMS && !process.equals("Reset"))
+		if (Config.LOG_ITEMS && !process.equals("Reset") && (!Config.LOG_ITEMS_SMALL_LOG || (Config.LOG_ITEMS_SMALL_LOG && (item.isEquipable() || (item.getId() == ADENA_ID)))))
 		{
-			if (!Config.LOG_ITEMS_SMALL_LOG || (Config.LOG_ITEMS_SMALL_LOG && (item.isEquipable() || (item.getId() == ADENA_ID))))
+			if (item.getEnchantLevel() > 0)
 			{
-				if (item.getEnchantLevel() > 0)
-				{
-					LOGGER_ITEMS.info("CREATE:" + String.valueOf(process) // in case of null
-						+ ", item " + item.getObjectId() //
-						+ ":+" + item.getEnchantLevel() //
-						+ " " + item.getItem().getName() //
-						+ "(" + item.getCount() //
-						+ "), " + String.valueOf(actor) // in case of null
-						+ ", " + String.valueOf(reference)); // in case of null
-				}
-				else
-				{
-					LOGGER_ITEMS.info("CREATE:" + String.valueOf(process) // in case of null
-						+ ", item " + item.getObjectId() //
-						+ ":" + item.getItem().getName() //
-						+ "(" + item.getCount() //
-						+ "), " + String.valueOf(actor) // in case of null
-						+ ", " + String.valueOf(reference)); // in case of null
-				}
+				LOGGER_ITEMS.info("CREATE:" + String.valueOf(process) // in case of null
+					+ ", item " + item.getObjectId() //
+					+ ":+" + item.getEnchantLevel() //
+					+ " " + item.getItem().getName() //
+					+ "(" + item.getCount() //
+					+ "), " + String.valueOf(actor) // in case of null
+					+ ", " + String.valueOf(reference)); // in case of null
+			}
+			else
+			{
+				LOGGER_ITEMS.info("CREATE:" + String.valueOf(process) // in case of null
+					+ ", item " + item.getObjectId() //
+					+ ":" + item.getItem().getName() //
+					+ "(" + item.getCount() //
+					+ "), " + String.valueOf(actor) // in case of null
+					+ ", " + String.valueOf(reference)); // in case of null
 			}
 		}
 		

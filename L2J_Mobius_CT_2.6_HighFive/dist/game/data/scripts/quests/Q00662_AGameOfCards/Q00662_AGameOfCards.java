@@ -495,52 +495,52 @@ public class Q00662_AGameOfCards extends Quest
 				{
 					if ((i9 % 2) < 1)
 					{
-						htmltext = htmltext.replaceAll("FontColor1", "FFFF00");
-						htmltext = htmltext.replaceAll("Cell1", "?");
+						htmltext = htmltext.replace("FontColor1", "FFFF00");
+						htmltext = htmltext.replace("Cell1", "?");
 					}
 					else
 					{
-						htmltext = htmltext.replaceAll("FontColor1", "FF6F6F");
+						htmltext = htmltext.replace("FontColor1", "FF6F6F");
 						htmltext = setHtml(htmltext, i1, "Cell1");
 					}
 					if ((i9 % 4) < 2)
 					{
-						htmltext = htmltext.replaceAll("FontColor2", "FFFF00");
-						htmltext = htmltext.replaceAll("Cell2", "?");
+						htmltext = htmltext.replace("FontColor2", "FFFF00");
+						htmltext = htmltext.replace("Cell2", "?");
 					}
 					else
 					{
-						htmltext = htmltext.replaceAll("FontColor2", "FF6F6F");
+						htmltext = htmltext.replace("FontColor2", "FF6F6F");
 						htmltext = setHtml(htmltext, i2, "Cell2");
 					}
 					if ((i9 % 8) < 4)
 					{
-						htmltext = htmltext.replaceAll("FontColor3", "FFFF00");
-						htmltext = htmltext.replaceAll("Cell3", "?");
+						htmltext = htmltext.replace("FontColor3", "FFFF00");
+						htmltext = htmltext.replace("Cell3", "?");
 					}
 					else
 					{
-						htmltext = htmltext.replaceAll("FontColor3", "FF6F6F");
+						htmltext = htmltext.replace("FontColor3", "FF6F6F");
 						htmltext = setHtml(htmltext, i3, "Cell3");
 					}
 					if ((i9 % 16) < 8)
 					{
-						htmltext = htmltext.replaceAll("FontColor4", "FFFF00");
-						htmltext = htmltext.replaceAll("Cell4", "?");
+						htmltext = htmltext.replace("FontColor4", "FFFF00");
+						htmltext = htmltext.replace("Cell4", "?");
 					}
 					else
 					{
-						htmltext = htmltext.replaceAll("FontColor4", "FF6F6F");
+						htmltext = htmltext.replace("FontColor4", "FF6F6F");
 						htmltext = setHtml(htmltext, i4, "Cell4");
 					}
 					if ((i9 % 32) < 16)
 					{
-						htmltext = htmltext.replaceAll("FontColor5", "FFFF00");
-						htmltext = htmltext.replaceAll("Cell5", "?");
+						htmltext = htmltext.replace("FontColor5", "FFFF00");
+						htmltext = htmltext.replace("Cell5", "?");
 					}
 					else
 					{
-						htmltext = htmltext.replaceAll("FontColor5", "FF6F6F");
+						htmltext = htmltext.replace("FontColor5", "FF6F6F");
 						htmltext = setHtml(htmltext, i5, "Cell5");
 					}
 				}
@@ -588,54 +588,54 @@ public class Q00662_AGameOfCards extends Quest
 					
 					if ((i9 % 2) < 1)
 					{
-						htmltext = htmltext.replaceAll("FontColor1", "FFFF00");
-						htmltext = htmltext.replaceAll("Cell1", "?");
+						htmltext = htmltext.replace("FontColor1", "FFFF00");
+						htmltext = htmltext.replace("Cell1", "?");
 					}
 					else
 					{
-						htmltext = htmltext.replaceAll("FontColor1", "FF6F6F");
+						htmltext = htmltext.replace("FontColor1", "FF6F6F");
 						htmltext = setHtml(htmltext, i1, "Cell1");
 					}
 					
 					if ((i9 % 4) < 2)
 					{
-						htmltext = htmltext.replaceAll("FontColor2", "FFFF00");
-						htmltext = htmltext.replaceAll("Cell2", "?");
+						htmltext = htmltext.replace("FontColor2", "FFFF00");
+						htmltext = htmltext.replace("Cell2", "?");
 					}
 					else
 					{
-						htmltext = htmltext.replaceAll("FontColor2", "FF6F6F");
+						htmltext = htmltext.replace("FontColor2", "FF6F6F");
 						htmltext = setHtml(htmltext, i2, "Cell2");
 					}
 					
 					if ((i9 % 8) < 4)
 					{
-						htmltext = htmltext.replaceAll("FontColor3", "FFFF00");
-						htmltext = htmltext.replaceAll("Cell3", "?");
+						htmltext = htmltext.replace("FontColor3", "FFFF00");
+						htmltext = htmltext.replace("Cell3", "?");
 					}
 					else
 					{
-						htmltext = htmltext.replaceAll("FontColor3", "FF6F6F");
+						htmltext = htmltext.replace("FontColor3", "FF6F6F");
 						htmltext = setHtml(htmltext, i3, "Cell3");
 					}
 					if ((i9 % 16) < 8)
 					{
-						htmltext = htmltext.replaceAll("FontColor4", "FFFF00");
-						htmltext = htmltext.replaceAll("Cell4", "?");
+						htmltext = htmltext.replace("FontColor4", "FFFF00");
+						htmltext = htmltext.replace("Cell4", "?");
 					}
 					else
 					{
-						htmltext = htmltext.replaceAll("FontColor4", "FF6F6F");
+						htmltext = htmltext.replace("FontColor4", "FF6F6F");
 						htmltext = setHtml(htmltext, i4, "Cell4");
 					}
 					if ((i9 % 32) < 16)
 					{
-						htmltext = htmltext.replaceAll("FontColor5", "FFFF00");
-						htmltext = htmltext.replaceAll("Cell5", "?");
+						htmltext = htmltext.replace("FontColor5", "FFFF00");
+						htmltext = htmltext.replace("Cell5", "?");
 					}
 					else
 					{
-						htmltext = htmltext.replaceAll("FontColor5", "FF6F6F");
+						htmltext = htmltext.replace("FontColor5", "FF6F6F");
 						htmltext = setHtml(htmltext, i5, "Cell5");
 					}
 				}

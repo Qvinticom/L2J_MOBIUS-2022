@@ -279,7 +279,7 @@ public class FortManagerInstance extends MerchantInstance
 			}
 			else if (actualCommand.startsWith("WithdrawSortedC"))
 			{
-				final String param[] = command.split("_");
+				final String[] param = command.split("_");
 				if (param.length > 2)
 				{
 					showVaultWindowWithdraw(player, WarehouseListType.valueOf(param[1]), SortedWareHouseWithdrawalList.getOrder(param[2]));
@@ -487,15 +487,12 @@ public class FortManagerInstance extends MerchantInstance
 									val = st.nextToken();
 									final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 									html.setFile(player, "data/html/fortress/functions-apply_confirmed.htm");
-									if (getFort().getFunction(Fort.FUNC_RESTORE_HP) != null)
+									if ((getFort().getFunction(Fort.FUNC_RESTORE_HP) != null) && (getFort().getFunction(Fort.FUNC_RESTORE_HP).getLvl() == Integer.parseInt(val)))
 									{
-										if (getFort().getFunction(Fort.FUNC_RESTORE_HP).getLvl() == Integer.parseInt(val))
-										{
-											html.setFile(player, "data/html/fortress/functions-used.htm");
-											html.replace("%val%", val + "%");
-											sendHtmlMessage(player, html);
-											return;
-										}
+										html.setFile(player, "data/html/fortress/functions-used.htm");
+										html.replace("%val%", val + "%");
+										sendHtmlMessage(player, html);
+										return;
 									}
 									final int percent = Integer.parseInt(val);
 									switch (percent)
@@ -534,15 +531,12 @@ public class FortManagerInstance extends MerchantInstance
 									val = st.nextToken();
 									final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 									html.setFile(player, "data/html/fortress/functions-apply_confirmed.htm");
-									if (getFort().getFunction(Fort.FUNC_RESTORE_MP) != null)
+									if ((getFort().getFunction(Fort.FUNC_RESTORE_MP) != null) && (getFort().getFunction(Fort.FUNC_RESTORE_MP).getLvl() == Integer.parseInt(val)))
 									{
-										if (getFort().getFunction(Fort.FUNC_RESTORE_MP).getLvl() == Integer.parseInt(val))
-										{
-											html.setFile(player, "data/html/fortress/functions-used.htm");
-											html.replace("%val%", val + "%");
-											sendHtmlMessage(player, html);
-											return;
-										}
+										html.setFile(player, "data/html/fortress/functions-used.htm");
+										html.replace("%val%", val + "%");
+										sendHtmlMessage(player, html);
+										return;
 									}
 									final int percent = Integer.parseInt(val);
 									switch (percent)
@@ -581,15 +575,12 @@ public class FortManagerInstance extends MerchantInstance
 									val = st.nextToken();
 									final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 									html.setFile(player, "data/html/fortress/functions-apply_confirmed.htm");
-									if (getFort().getFunction(Fort.FUNC_RESTORE_EXP) != null)
+									if ((getFort().getFunction(Fort.FUNC_RESTORE_EXP) != null) && (getFort().getFunction(Fort.FUNC_RESTORE_EXP).getLvl() == Integer.parseInt(val)))
 									{
-										if (getFort().getFunction(Fort.FUNC_RESTORE_EXP).getLvl() == Integer.parseInt(val))
-										{
-											html.setFile(player, "data/html/fortress/functions-used.htm");
-											html.replace("%val%", val + "%");
-											sendHtmlMessage(player, html);
-											return;
-										}
+										html.setFile(player, "data/html/fortress/functions-used.htm");
+										html.replace("%val%", val + "%");
+										sendHtmlMessage(player, html);
+										return;
 									}
 									final int percent = Integer.parseInt(val);
 									switch (percent)
@@ -752,15 +743,12 @@ public class FortManagerInstance extends MerchantInstance
 									val = st.nextToken();
 									final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 									html.setFile(player, "data/html/fortress/functions-apply_confirmed.htm");
-									if (getFort().getFunction(Fort.FUNC_TELEPORT) != null)
+									if ((getFort().getFunction(Fort.FUNC_TELEPORT) != null) && (getFort().getFunction(Fort.FUNC_TELEPORT).getLvl() == Integer.parseInt(val)))
 									{
-										if (getFort().getFunction(Fort.FUNC_TELEPORT).getLvl() == Integer.parseInt(val))
-										{
-											html.setFile(player, "data/html/fortress/functions-used.htm");
-											html.replace("%val%", "Stage " + val);
-											sendHtmlMessage(player, html);
-											return;
-										}
+										html.setFile(player, "data/html/fortress/functions-used.htm");
+										html.replace("%val%", "Stage " + val);
+										sendHtmlMessage(player, html);
+										return;
 									}
 									final int lvl = Integer.parseInt(val);
 									switch (lvl)
@@ -799,15 +787,12 @@ public class FortManagerInstance extends MerchantInstance
 									val = st.nextToken();
 									final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 									html.setFile(player, "data/html/fortress/functions-apply_confirmed.htm");
-									if (getFort().getFunction(Fort.FUNC_SUPPORT) != null)
+									if ((getFort().getFunction(Fort.FUNC_SUPPORT) != null) && (getFort().getFunction(Fort.FUNC_SUPPORT).getLvl() == Integer.parseInt(val)))
 									{
-										if (getFort().getFunction(Fort.FUNC_SUPPORT).getLvl() == Integer.parseInt(val))
-										{
-											html.setFile(player, "data/html/fortress/functions-used.htm");
-											html.replace("%val%", "Stage " + val);
-											sendHtmlMessage(player, html);
-											return;
-										}
+										html.setFile(player, "data/html/fortress/functions-used.htm");
+										html.replace("%val%", "Stage " + val);
+										sendHtmlMessage(player, html);
+										return;
 									}
 									final int lvl = Integer.parseInt(val);
 									switch (lvl)
@@ -902,7 +887,7 @@ public class FortManagerInstance extends MerchantInstance
 				
 				try
 				{
-					final int skill_id = Integer.parseInt(val);
+					final int skillId = Integer.parseInt(val);
 					try
 					{
 						if (getFort().getFunction(Fort.FUNC_SUPPORT) == null)
@@ -914,19 +899,19 @@ public class FortManagerInstance extends MerchantInstance
 							return;
 						}
 						final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-						int skill_lvl = 0;
+						int skillLevel = 0;
 						if (st.countTokens() >= 1)
 						{
-							skill_lvl = Integer.parseInt(st.nextToken());
+							skillLevel = Integer.parseInt(st.nextToken());
 						}
-						skill = SkillData.getInstance().getSkill(skill_id, skill_lvl);
+						skill = SkillData.getInstance().getSkill(skillId, skillLevel);
 						if (skill.hasEffectType(EffectType.SUMMON))
 						{
 							player.doCast(skill);
 						}
 						else
 						{
-							if (!((skill.getMpConsume() + skill.getMpInitialConsume()) > getCurrentMp()))
+							if ((skill.getMpConsume() + skill.getMpInitialConsume()) <= getCurrentMp())
 							{
 								doCast(skill);
 							}
@@ -1020,18 +1005,15 @@ public class FortManagerInstance extends MerchantInstance
 	
 	protected int validateCondition(PlayerInstance player)
 	{
-		if ((getFort() != null) && (getFort().getResidenceId() > 0))
+		if ((getFort() != null) && (getFort().getResidenceId() > 0) && (player.getClan() != null))
 		{
-			if (player.getClan() != null)
+			if (getFort().getZone().isActive())
 			{
-				if (getFort().getZone().isActive())
-				{
-					return COND_BUSY_BECAUSE_OF_SIEGE; // Busy because of siege
-				}
-				else if ((getFort().getOwnerClan() != null) && (getFort().getOwnerClan().getId() == player.getClanId()))
-				{
-					return COND_OWNER; // Owner
-				}
+				return COND_BUSY_BECAUSE_OF_SIEGE; // Busy because of siege
+			}
+			else if ((getFort().getOwnerClan() != null) && (getFort().getOwnerClan().getId() == player.getClanId()))
+			{
+				return COND_OWNER; // Owner
 			}
 		}
 		return COND_ALL_FALSE;

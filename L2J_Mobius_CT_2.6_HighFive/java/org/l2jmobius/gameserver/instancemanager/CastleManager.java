@@ -45,7 +45,7 @@ public class CastleManager implements InstanceListManager
 	
 	private static final Map<Integer, Long> _castleSiegeDate = new ConcurrentHashMap<>();
 	
-	private static final int _castleCirclets[] =
+	private static final int[] _castleCirclets =
 	{
 		0,
 		6838,

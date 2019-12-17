@@ -56,24 +56,24 @@ public abstract class BaseBBSManager
 	 */
 	protected void send1002(PlayerInstance player, String string, String string2, String string3)
 	{
-		final List<String> _arg = new ArrayList<>(20);
-		_arg.add("0");
-		_arg.add("0");
-		_arg.add("0");
-		_arg.add("0");
-		_arg.add("0");
-		_arg.add("0");
-		_arg.add(player.getName());
-		_arg.add(Integer.toString(player.getObjectId()));
-		_arg.add(player.getAccountName());
-		_arg.add("9");
-		_arg.add(string2); // subject?
-		_arg.add(string2); // subject?
-		_arg.add(string); // text
-		_arg.add(string3); // date?
-		_arg.add(string3); // date?
-		_arg.add("0");
-		_arg.add("0");
-		player.sendPacket(new ShowBoard(_arg));
+		final List<String> arg = new ArrayList<>(20);
+		arg.add("0");
+		arg.add("0");
+		arg.add("0");
+		arg.add("0");
+		arg.add("0");
+		arg.add("0");
+		arg.add(player.getName());
+		arg.add(Integer.toString(player.getObjectId()));
+		arg.add(player.getAccountName());
+		arg.add("9");
+		arg.add(string2); // subject?
+		arg.add(string2); // subject?
+		arg.add(string); // text
+		arg.add(string3); // date?
+		arg.add(string3); // date?
+		arg.add("0");
+		arg.add("0");
+		player.sendPacket(new ShowBoard(arg));
 	}
 }

@@ -116,101 +116,101 @@ public class AugmentationData
 	
 	public class AugmentationChance
 	{
-		private final String _WeaponType;
-		private final int _StoneId;
-		private final int _VariationId;
-		private final int _CategoryChance;
-		private final int _AugmentId;
-		private final float _AugmentChance;
+		private final String _weaponType;
+		private final int _stoneId;
+		private final int _variationId;
+		private final int _categoryChance;
+		private final int _augmentId;
+		private final float _augmentChance;
 		
-		public AugmentationChance(String WeaponType, int StoneId, int VariationId, int CategoryChance, int AugmentId, float AugmentChance)
+		public AugmentationChance(String weaponType, int stoneId, int variationId, int categoryChance, int augmentId, float augmentChance)
 		{
-			_WeaponType = WeaponType;
-			_StoneId = StoneId;
-			_VariationId = VariationId;
-			_CategoryChance = CategoryChance;
-			_AugmentId = AugmentId;
-			_AugmentChance = AugmentChance;
+			_weaponType = weaponType;
+			_stoneId = stoneId;
+			_variationId = variationId;
+			_categoryChance = categoryChance;
+			_augmentId = augmentId;
+			_augmentChance = augmentChance;
 		}
 		
 		public String getWeaponType()
 		{
-			return _WeaponType;
+			return _weaponType;
 		}
 		
 		public int getStoneId()
 		{
-			return _StoneId;
+			return _stoneId;
 		}
 		
 		public int getVariationId()
 		{
-			return _VariationId;
+			return _variationId;
 		}
 		
 		public int getCategoryChance()
 		{
-			return _CategoryChance;
+			return _categoryChance;
 		}
 		
 		public int getAugmentId()
 		{
-			return _AugmentId;
+			return _augmentId;
 		}
 		
 		public float getAugmentChance()
 		{
-			return _AugmentChance;
+			return _augmentChance;
 		}
 	}
 	
 	public class augmentationChanceAcc
 	{
-		private final String _WeaponType;
-		private final int _StoneId;
-		private final int _VariationId;
-		private final int _CategoryChance;
-		private final int _AugmentId;
-		private final float _AugmentChance;
+		private final String _weaponType;
+		private final int _stoneId;
+		private final int _variationId;
+		private final int _categoryChance;
+		private final int _augmentId;
+		private final float _augmentChance;
 		
-		public augmentationChanceAcc(String WeaponType, int StoneId, int VariationId, int CategoryChance, int AugmentId, float AugmentChance)
+		public augmentationChanceAcc(String weaponType, int stoneId, int variationId, int categoryChance, int augmentId, float augmentChance)
 		{
-			_WeaponType = WeaponType;
-			_StoneId = StoneId;
-			_VariationId = VariationId;
-			_CategoryChance = CategoryChance;
-			_AugmentId = AugmentId;
-			_AugmentChance = AugmentChance;
+			_weaponType = weaponType;
+			_stoneId = stoneId;
+			_variationId = variationId;
+			_categoryChance = categoryChance;
+			_augmentId = augmentId;
+			_augmentChance = augmentChance;
 		}
 		
 		public String getWeaponType()
 		{
-			return _WeaponType;
+			return _weaponType;
 		}
 		
 		public int getStoneId()
 		{
-			return _StoneId;
+			return _stoneId;
 		}
 		
 		public int getVariationId()
 		{
-			return _VariationId;
+			return _variationId;
 		}
 		
 		public int getCategoryChance()
 		{
-			return _CategoryChance;
+			return _categoryChance;
 		}
 		
 		public int getAugmentId()
 		{
-			return _AugmentId;
+			return _augmentId;
 		}
 		
 		public float getAugmentChance()
 		{
-			return _AugmentChance;
+			return _augmentChance;
 		}
 	}
 	
@@ -333,7 +333,7 @@ public class AugmentationData
 				}
 				catch (Exception e)
 				{
-					e.printStackTrace();
+					LOGGER.warning("Problem with AugmentationData: " + e.getMessage());
 					return;
 				}
 				String aWeaponType = null;
@@ -430,7 +430,7 @@ public class AugmentationData
 				}
 				catch (Exception e)
 				{
-					e.printStackTrace();
+					LOGGER.warning("Problem with AugmentationData: " + e.getMessage());
 					return;
 				}
 				String aWeaponType = null;
@@ -503,7 +503,6 @@ public class AugmentationData
 			else
 			{
 				LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": ERROR The retailchances_accessory.xml data file is missing.");
-				return;
 			}
 		}
 	}
@@ -542,25 +541,25 @@ public class AugmentationData
 		{
 			if (item.getItem().isMagicWeapon())
 			{
-				final List<AugmentationChance> _selectedChances12 = new ArrayList<>();
-				final List<AugmentationChance> _selectedChances34 = new ArrayList<>();
+				final List<AugmentationChance> selectedChances12 = new ArrayList<>();
+				final List<AugmentationChance> selectedChances34 = new ArrayList<>();
 				for (AugmentationChance ac : _augmentationChances)
 				{
 					if (ac.getWeaponType().equals("mage") && (ac.getStoneId() == lifeStoneId))
 					{
 						if (ac.getVariationId() == 1)
 						{
-							_selectedChances12.add(ac);
+							selectedChances12.add(ac);
 						}
 						else
 						{
-							_selectedChances34.add(ac);
+							selectedChances34.add(ac);
 						}
 					}
 				}
 				int r = Rnd.get(10000);
 				float s = 10000;
-				for (AugmentationChance ac : _selectedChances12)
+				for (AugmentationChance ac : selectedChances12)
 				{
 					if (s > r)
 					{
@@ -614,19 +613,19 @@ public class AugmentationData
 				{
 					c = 3;
 				}
-				final List<AugmentationChance> _selectedChances34final = new ArrayList<>();
-				for (AugmentationChance ac : _selectedChances34)
+				final List<AugmentationChance> selectedChances34final = new ArrayList<>();
+				for (AugmentationChance ac : selectedChances34)
 				{
 					if (ac.getCategoryChance() == c)
 					{
-						_selectedChances34final.add(ac);
+						selectedChances34final.add(ac);
 					}
 				}
 				
 				r = Rnd.get(10000);
 				s = 10000;
 				
-				for (AugmentationChance ac : _selectedChances34final)
+				for (AugmentationChance ac : selectedChances34final)
 				{
 					if (s > r)
 					{
@@ -637,25 +636,25 @@ public class AugmentationData
 			}
 			else
 			{
-				final List<AugmentationChance> _selectedChances12 = new ArrayList<>();
-				final List<AugmentationChance> _selectedChances34 = new ArrayList<>();
+				final List<AugmentationChance> selectedChances12 = new ArrayList<>();
+				final List<AugmentationChance> selectedChances34 = new ArrayList<>();
 				for (AugmentationChance ac : _augmentationChances)
 				{
 					if (ac.getWeaponType().equals("warrior") && (ac.getStoneId() == lifeStoneId))
 					{
 						if (ac.getVariationId() == 1)
 						{
-							_selectedChances12.add(ac);
+							selectedChances12.add(ac);
 						}
 						else
 						{
-							_selectedChances34.add(ac);
+							selectedChances34.add(ac);
 						}
 					}
 				}
 				int r = Rnd.get(10000);
 				float s = 10000;
-				for (AugmentationChance ac : _selectedChances12)
+				for (AugmentationChance ac : selectedChances12)
 				{
 					if (s > r)
 					{
@@ -709,17 +708,17 @@ public class AugmentationData
 				{
 					c = 3;
 				}
-				final List<AugmentationChance> _selectedChances34final = new ArrayList<>();
-				for (AugmentationChance ac : _selectedChances34)
+				final List<AugmentationChance> selectedChances34final = new ArrayList<>();
+				for (AugmentationChance ac : selectedChances34)
 				{
 					if (ac.getCategoryChance() == c)
 					{
-						_selectedChances34final.add(ac);
+						selectedChances34final.add(ac);
 					}
 				}
 				r = Rnd.get(10000);
 				s = 10000;
-				for (AugmentationChance ac : _selectedChances34final)
+				for (AugmentationChance ac : selectedChances34final)
 				{
 					if (s > r)
 					{
@@ -916,25 +915,25 @@ public class AugmentationData
 		int stat34 = 0;
 		if (Config.RETAIL_LIKE_AUGMENTATION_ACCESSORY)
 		{
-			final List<augmentationChanceAcc> _selectedChances12 = new ArrayList<>();
-			final List<augmentationChanceAcc> _selectedChances34 = new ArrayList<>();
+			final List<augmentationChanceAcc> selectedChances12 = new ArrayList<>();
+			final List<augmentationChanceAcc> selectedChances34 = new ArrayList<>();
 			for (augmentationChanceAcc ac : _augmentationChancesAcc)
 			{
 				if (ac.getWeaponType().equals("warrior") && (ac.getStoneId() == lifeStoneId))
 				{
 					if (ac.getVariationId() == 1)
 					{
-						_selectedChances12.add(ac);
+						selectedChances12.add(ac);
 					}
 					else
 					{
-						_selectedChances34.add(ac);
+						selectedChances34.add(ac);
 					}
 				}
 			}
 			int r = Rnd.get(10000);
 			float s = 10000;
-			for (augmentationChanceAcc ac : _selectedChances12)
+			for (augmentationChanceAcc ac : selectedChances12)
 			{
 				if (s > r)
 				{
@@ -959,17 +958,17 @@ public class AugmentationData
 			{
 				c = 1;
 			}
-			final List<augmentationChanceAcc> _selectedChances34final = new ArrayList<>();
-			for (augmentationChanceAcc ac : _selectedChances34)
+			final List<augmentationChanceAcc> selectedChances34final = new ArrayList<>();
+			for (augmentationChanceAcc ac : selectedChances34)
 			{
 				if (ac.getCategoryChance() == c)
 				{
-					_selectedChances34final.add(ac);
+					selectedChances34final.add(ac);
 				}
 			}
 			r = Rnd.get(10000);
 			s = 10000;
-			for (augmentationChanceAcc ac : _selectedChances34final)
+			for (augmentationChanceAcc ac : selectedChances34final)
 			{
 				if (s > r)
 				{

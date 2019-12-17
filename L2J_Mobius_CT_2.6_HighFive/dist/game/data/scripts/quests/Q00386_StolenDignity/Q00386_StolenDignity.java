@@ -193,7 +193,7 @@ public class Q00386_StolenDignity extends Quest
 				case 18:
 				{
 					selectBingoNumber(qs, (ask - 10) + 1);
-					return fillBoard(player, qs, getHtm(player, "30843-13.html"));
+					return fillBoard(qs, getHtm(player, "30843-13.html"));
 				}
 				case 19:
 				{
@@ -297,7 +297,7 @@ public class Q00386_StolenDignity extends Quest
 			{
 				html = getHtm(player, "30843-20.html");
 			}
-			return fillBoard(player, qs, html);
+			return fillBoard(qs, html);
 		}
 		i3 = getBingoSelectCount(qs);
 		if (i3 == 1)
@@ -316,10 +316,10 @@ public class Q00386_StolenDignity extends Quest
 		{
 			html = getHtm(player, "30843-21.html");
 		}
-		return fillBoard(player, qs, html);
+		return fillBoard(qs, html);
 	}
 	
-	private String fillBoard(PlayerInstance player, QuestState qs, String html)
+	private String fillBoard(QuestState qs, String html)
 	{
 		for (int i0 = 0; i0 < 9; i0 += 1)
 		{
@@ -336,7 +336,7 @@ public class Q00386_StolenDignity extends Quest
 		return html;
 	}
 	
-	private String colorBoard(PlayerInstance player, QuestState qs, String html)
+	private String colorBoard(QuestState qs, String html)
 	{
 		for (int i0 = 0; i0 < 9; i0 += 1)
 		{
@@ -368,9 +368,9 @@ public class Q00386_StolenDignity extends Quest
 			{
 				html = getHtm(player, "30843-23.html");
 			}
-			return colorBoard(player, qs, html);
+			return colorBoard(qs, html);
 		}
-		return fillBoard(player, qs, getHtm(player, "30843-25.html"));
+		return fillBoard(qs, getHtm(player, "30843-25.html"));
 	}
 	
 	private void reward(PlayerInstance player, QuestState qs, int count)
@@ -626,7 +626,6 @@ public class Q00386_StolenDignity extends Quest
 			if (i == pos)
 			{
 				selected[i] = Integer.toString(num);
-				continue;
 			}
 		}
 		String result = selected[0];

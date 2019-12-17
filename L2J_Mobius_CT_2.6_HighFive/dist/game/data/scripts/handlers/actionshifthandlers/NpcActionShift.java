@@ -142,7 +142,7 @@ public class NpcActionShift implements IActionShiftHandler
 				}
 				
 				final String spawnFile = SpawnTable.getInstance().getSpawnFile(((Npc) target).getSpawn().getNpcSpawnTemplateId());
-				html.replace("%spawnfile%", spawnFile.substring(spawnFile.lastIndexOf("\\") + 1));
+				html.replace("%spawnfile%", spawnFile.substring(spawnFile.lastIndexOf('\\') + 1));
 			}
 			else
 			{

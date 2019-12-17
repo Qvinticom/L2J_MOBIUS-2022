@@ -22,7 +22,6 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
 /**
  * @author Kerberos
  */
-@Deprecated
 public class GMHide implements IClientOutgoingPacket
 {
 	private final int _mode;

@@ -717,21 +717,18 @@ public class Q00334_TheWishingPotion extends Quest
 			{
 				case WHISPERING_WIND:
 				{
-					if (hasQuestItems(killer, Q_POTION_RECIPE_1, Q_POTION_RECIPE_2) && !hasQuestItems(killer, Q_WIND_SOULSTONE))
+					if (hasQuestItems(killer, Q_POTION_RECIPE_1, Q_POTION_RECIPE_2) && !hasQuestItems(killer, Q_WIND_SOULSTONE) && (getRandom(10) == 0))
 					{
-						if (getRandom(10) == 0)
+						giveItems(killer, Q_WIND_SOULSTONE, 1);
+						playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+						if (hasQuestItems(killer, Q_AMBER_SCALE, Q_GLASS_EYE, Q_HORROR_ECTOPLASM, Q_SILENOS_HORN, Q_ANT_SOLDIER_APHID, Q_TYRANTS_CHITIN, Q_BUGBEAR_BLOOD))
 						{
-							giveItems(killer, Q_WIND_SOULSTONE, 1);
+							qs.setCond(4, true);
+							qs.showQuestionMark(334);
+						}
+						else
+						{
 							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-							if (hasQuestItems(killer, Q_AMBER_SCALE, Q_GLASS_EYE, Q_HORROR_ECTOPLASM, Q_SILENOS_HORN, Q_ANT_SOLDIER_APHID, Q_TYRANTS_CHITIN, Q_BUGBEAR_BLOOD))
-							{
-								qs.setCond(4, true);
-								qs.showQuestionMark(334);
-							}
-							else
-							{
-								playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-							}
 						}
 					}
 					break;
@@ -739,42 +736,36 @@ public class Q00334_TheWishingPotion extends Quest
 				case ANT_SOLDIER:
 				case ANT_WARRIOR_CAPTAIN:
 				{
-					if (hasQuestItems(killer, Q_POTION_RECIPE_1, Q_POTION_RECIPE_2) && !hasQuestItems(killer, Q_ANT_SOLDIER_APHID))
+					if (hasQuestItems(killer, Q_POTION_RECIPE_1, Q_POTION_RECIPE_2) && !hasQuestItems(killer, Q_ANT_SOLDIER_APHID) && (getRandom(10) == 0))
 					{
-						if (getRandom(10) == 0)
+						giveItems(killer, Q_ANT_SOLDIER_APHID, 1);
+						playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+						if (hasQuestItems(killer, Q_AMBER_SCALE, Q_WIND_SOULSTONE, Q_GLASS_EYE, Q_HORROR_ECTOPLASM, Q_SILENOS_HORN, Q_ANT_SOLDIER_APHID, Q_TYRANTS_CHITIN, Q_BUGBEAR_BLOOD))
 						{
-							giveItems(killer, Q_ANT_SOLDIER_APHID, 1);
+							qs.setCond(4, true);
+							qs.showQuestionMark(334);
+						}
+						else
+						{
 							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-							if (hasQuestItems(killer, Q_AMBER_SCALE, Q_WIND_SOULSTONE, Q_GLASS_EYE, Q_HORROR_ECTOPLASM, Q_SILENOS_HORN, Q_ANT_SOLDIER_APHID, Q_TYRANTS_CHITIN, Q_BUGBEAR_BLOOD))
-							{
-								qs.setCond(4, true);
-								qs.showQuestionMark(334);
-							}
-							else
-							{
-								playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-							}
 						}
 					}
 					break;
 				}
 				case SILENOS:
 				{
-					if (hasQuestItems(killer, Q_POTION_RECIPE_1, Q_POTION_RECIPE_2) && !hasQuestItems(killer, Q_SILENOS_HORN))
+					if (hasQuestItems(killer, Q_POTION_RECIPE_1, Q_POTION_RECIPE_2) && !hasQuestItems(killer, Q_SILENOS_HORN) && (getRandom(10) == 0))
 					{
-						if (getRandom(10) == 0)
+						giveItems(killer, Q_SILENOS_HORN, 1);
+						playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+						if (hasQuestItems(killer, Q_AMBER_SCALE, Q_WIND_SOULSTONE, Q_GLASS_EYE, Q_HORROR_ECTOPLASM, Q_ANT_SOLDIER_APHID, Q_TYRANTS_CHITIN, Q_BUGBEAR_BLOOD))
 						{
-							giveItems(killer, Q_SILENOS_HORN, 1);
+							qs.setCond(4, true);
+							qs.showQuestionMark(334);
+						}
+						else
+						{
 							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-							if (hasQuestItems(killer, Q_AMBER_SCALE, Q_WIND_SOULSTONE, Q_GLASS_EYE, Q_HORROR_ECTOPLASM, Q_ANT_SOLDIER_APHID, Q_TYRANTS_CHITIN, Q_BUGBEAR_BLOOD))
-							{
-								qs.setCond(4, true);
-								qs.showQuestionMark(334);
-							}
-							else
-							{
-								playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-							}
 						}
 					}
 					break;
@@ -782,63 +773,54 @@ public class Q00334_TheWishingPotion extends Quest
 				case TYRANT:
 				case TYRANT_KINGPIN:
 				{
-					if (hasQuestItems(killer, Q_POTION_RECIPE_1, Q_POTION_RECIPE_2) && !hasQuestItems(killer, Q_TYRANTS_CHITIN))
+					if (hasQuestItems(killer, Q_POTION_RECIPE_1, Q_POTION_RECIPE_2) && !hasQuestItems(killer, Q_TYRANTS_CHITIN) && (getRandom(10) == 0))
 					{
-						if (getRandom(10) == 0)
+						giveItems(killer, Q_TYRANTS_CHITIN, 1);
+						playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+						if (hasQuestItems(killer, Q_AMBER_SCALE, Q_WIND_SOULSTONE, Q_GLASS_EYE, Q_HORROR_ECTOPLASM, Q_SILENOS_HORN, Q_ANT_SOLDIER_APHID, Q_TYRANTS_CHITIN, Q_BUGBEAR_BLOOD))
 						{
-							giveItems(killer, Q_TYRANTS_CHITIN, 1);
+							qs.setCond(4, true);
+							qs.showQuestionMark(334);
+						}
+						else
+						{
 							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-							if (hasQuestItems(killer, Q_AMBER_SCALE, Q_WIND_SOULSTONE, Q_GLASS_EYE, Q_HORROR_ECTOPLASM, Q_SILENOS_HORN, Q_ANT_SOLDIER_APHID, Q_TYRANTS_CHITIN, Q_BUGBEAR_BLOOD))
-							{
-								qs.setCond(4, true);
-								qs.showQuestionMark(334);
-							}
-							else
-							{
-								playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-							}
 						}
 					}
 					break;
 				}
 				case AMBER_BASILISK:
 				{
-					if (hasQuestItems(killer, Q_POTION_RECIPE_1, Q_POTION_RECIPE_2) && !hasQuestItems(killer, Q_AMBER_SCALE))
+					if (hasQuestItems(killer, Q_POTION_RECIPE_1, Q_POTION_RECIPE_2) && !hasQuestItems(killer, Q_AMBER_SCALE) && (getRandom(10) == 0))
 					{
-						if (getRandom(10) == 0)
+						giveItems(killer, Q_AMBER_SCALE, 1);
+						playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+						if (hasQuestItems(killer, Q_WIND_SOULSTONE, Q_GLASS_EYE, Q_HORROR_ECTOPLASM, Q_SILENOS_HORN, Q_ANT_SOLDIER_APHID, Q_TYRANTS_CHITIN, Q_BUGBEAR_BLOOD))
 						{
-							giveItems(killer, Q_AMBER_SCALE, 1);
+							qs.setCond(4, true);
+							qs.showQuestionMark(334);
+						}
+						else
+						{
 							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-							if (hasQuestItems(killer, Q_WIND_SOULSTONE, Q_GLASS_EYE, Q_HORROR_ECTOPLASM, Q_SILENOS_HORN, Q_ANT_SOLDIER_APHID, Q_TYRANTS_CHITIN, Q_BUGBEAR_BLOOD))
-							{
-								qs.setCond(4, true);
-								qs.showQuestionMark(334);
-							}
-							else
-							{
-								playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-							}
 						}
 					}
 					break;
 				}
 				case MIST_HORROR_RIPPER:
 				{
-					if (hasQuestItems(killer, Q_POTION_RECIPE_1, Q_POTION_RECIPE_2) && !hasQuestItems(killer, Q_HORROR_ECTOPLASM))
+					if (hasQuestItems(killer, Q_POTION_RECIPE_1, Q_POTION_RECIPE_2) && !hasQuestItems(killer, Q_HORROR_ECTOPLASM) && (getRandom(10) == 0))
 					{
-						if (getRandom(10) == 0)
+						giveItems(killer, Q_HORROR_ECTOPLASM, 1);
+						playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+						if (hasQuestItems(killer, Q_AMBER_SCALE, Q_WIND_SOULSTONE, Q_GLASS_EYE, Q_HORROR_ECTOPLASM, Q_SILENOS_HORN, Q_ANT_SOLDIER_APHID, Q_TYRANTS_CHITIN, Q_BUGBEAR_BLOOD))
 						{
-							giveItems(killer, Q_HORROR_ECTOPLASM, 1);
+							qs.setCond(4, true);
+							qs.showQuestionMark(334);
+						}
+						else
+						{
 							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-							if (hasQuestItems(killer, Q_AMBER_SCALE, Q_WIND_SOULSTONE, Q_GLASS_EYE, Q_HORROR_ECTOPLASM, Q_SILENOS_HORN, Q_ANT_SOLDIER_APHID, Q_TYRANTS_CHITIN, Q_BUGBEAR_BLOOD))
-							{
-								qs.setCond(4, true);
-								qs.showQuestionMark(334);
-							}
-							else
-							{
-								playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-							}
 						}
 					}
 					break;
@@ -846,63 +828,54 @@ public class Q00334_TheWishingPotion extends Quest
 				case TURAK_BUGBEAR:
 				case TURAK_BUGBEAR_WARRIOR:
 				{
-					if (hasQuestItems(killer, Q_POTION_RECIPE_1, Q_POTION_RECIPE_2) && !hasQuestItems(killer, Q_BUGBEAR_BLOOD))
+					if (hasQuestItems(killer, Q_POTION_RECIPE_1, Q_POTION_RECIPE_2) && !hasQuestItems(killer, Q_BUGBEAR_BLOOD) && (getRandom(10) == 0))
 					{
-						if (getRandom(10) == 0)
+						giveItems(killer, Q_BUGBEAR_BLOOD, 1);
+						playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+						if (hasQuestItems(killer, Q_AMBER_SCALE, Q_WIND_SOULSTONE, Q_GLASS_EYE, Q_HORROR_ECTOPLASM, Q_SILENOS_HORN, Q_ANT_SOLDIER_APHID, Q_TYRANTS_CHITIN, Q_BUGBEAR_BLOOD))
 						{
-							giveItems(killer, Q_BUGBEAR_BLOOD, 1);
+							qs.setCond(4, true);
+							qs.showQuestionMark(334);
+						}
+						else
+						{
 							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-							if (hasQuestItems(killer, Q_AMBER_SCALE, Q_WIND_SOULSTONE, Q_GLASS_EYE, Q_HORROR_ECTOPLASM, Q_SILENOS_HORN, Q_ANT_SOLDIER_APHID, Q_TYRANTS_CHITIN, Q_BUGBEAR_BLOOD))
-							{
-								qs.setCond(4, true);
-								qs.showQuestionMark(334);
-							}
-							else
-							{
-								playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-							}
 						}
 					}
 					break;
 				}
 				case GLASS_JAGUAR:
 				{
-					if (hasQuestItems(killer, Q_POTION_RECIPE_1, Q_POTION_RECIPE_2) && !hasQuestItems(killer, Q_GLASS_EYE))
+					if (hasQuestItems(killer, Q_POTION_RECIPE_1, Q_POTION_RECIPE_2) && !hasQuestItems(killer, Q_GLASS_EYE) && (getRandom(10) == 0))
 					{
-						if (getRandom(10) == 0)
+						giveItems(killer, Q_GLASS_EYE, 1);
+						playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+						if (hasQuestItems(killer, Q_AMBER_SCALE, Q_WIND_SOULSTONE, Q_GLASS_EYE, Q_HORROR_ECTOPLASM, Q_SILENOS_HORN, Q_ANT_SOLDIER_APHID, Q_TYRANTS_CHITIN, Q_BUGBEAR_BLOOD))
 						{
-							giveItems(killer, Q_GLASS_EYE, 1);
+							qs.setCond(4, true);
+							qs.showQuestionMark(334);
+						}
+						else
+						{
 							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-							if (hasQuestItems(killer, Q_AMBER_SCALE, Q_WIND_SOULSTONE, Q_GLASS_EYE, Q_HORROR_ECTOPLASM, Q_SILENOS_HORN, Q_ANT_SOLDIER_APHID, Q_TYRANTS_CHITIN, Q_BUGBEAR_BLOOD))
-							{
-								qs.setCond(4, true);
-								qs.showQuestionMark(334);
-							}
-							else
-							{
-								playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-							}
 						}
 					}
 					break;
 				}
 				case GRIMA:
 				{
-					if (qs.isMemoState(2) && (qs.getInt(FLAG) == 2))
+					if (qs.isMemoState(2) && (qs.getInt(FLAG) == 2) && (getRandom(1000) < 33))
 					{
-						if (getRandom(1000) < 33)
+						if (getRandom(1000) == 0)
 						{
-							if (getRandom(1000) == 0)
-							{
-								giveAdena(killer, 100_000_000, true);
-							}
-							else
-							{
-								giveAdena(killer, 900_000, true);
-							}
-							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-							qs.set(FLAG, 0);
+							giveAdena(killer, 100_000_000, true);
 						}
+						else
+						{
+							giveAdena(killer, 900_000, true);
+						}
+						playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+						qs.set(FLAG, 0);
 					}
 					break;
 				}
@@ -971,8 +944,8 @@ public class Q00334_TheWishingPotion extends Quest
 								}
 							}
 						}
-						break;
 					}
+					break;
 				}
 				case ABYSSKING_BONAPARTERIUS:
 				{

@@ -40,7 +40,7 @@ public class AuctionDateGenerator
 	private int _hour_of_day;
 	private int _minute_of_hour;
 	
-	public AuctionDateGenerator(StatsSet config) throws IllegalArgumentException
+	public AuctionDateGenerator(StatsSet config)
 	{
 		_calendar = Calendar.getInstance();
 		_interval = config.getInt(FIELD_INTERVAL, -1);

@@ -196,7 +196,6 @@ public class RequestRefundItem implements IClientIncomingPacket
 			if (item == null)
 			{
 				LOGGER.warning("Error refunding object for char " + player.getName() + " (newitem == null)");
-				continue;
 			}
 		}
 		

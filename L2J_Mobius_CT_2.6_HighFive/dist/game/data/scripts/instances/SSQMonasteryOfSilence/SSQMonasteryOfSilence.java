@@ -273,13 +273,13 @@ public class SSQMonasteryOfSilence extends AbstractInstance
 				}
 				case "DIALOG":
 				{
-					final QuestState st_Q10294 = player.getQuestState(Q10294_SevenSignsToTheMonasteryOfSilence.class.getSimpleName());
-					final QuestState st_Q10295 = player.getQuestState(Q10295_SevenSignsSolinasTomb.class.getSimpleName());
-					if ((st_Q10294 != null) && st_Q10294.isStarted())
+					final QuestState qs10294 = player.getQuestState(Q10294_SevenSignsToTheMonasteryOfSilence.class.getSimpleName());
+					final QuestState qs10295 = player.getQuestState(Q10295_SevenSignsSolinasTomb.class.getSimpleName());
+					if ((qs10294 != null) && qs10294.isStarted())
 					{
 						npc.broadcastSay(ChatType.NPC_GENERAL, getRandomEntry(ELCADIA_DIALOGS_Q010294));
 					}
-					if ((st_Q10295 != null) && st_Q10295.isMemoState(1))
+					if ((qs10295 != null) && qs10295.isMemoState(1))
 					{
 						npc.broadcastSay(ChatType.NPC_GENERAL, getRandomEntry(ELCADIA_DIALOGS_Q010295));
 					}

@@ -78,6 +78,7 @@ public class Q00616_MagicalPowerOfFirePart2 extends Quest
 					case 1: // take the item and give the heart
 					{
 						takeItems(player, RED_TOTEM, 1);
+						// break; fallthrough
 					}
 					case 2:
 					{

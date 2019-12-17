@@ -16,18 +16,19 @@
  */
 package org.l2jmobius.gameserver.script;
 
-import java.util.Hashtable;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @author Luis Arias
  */
 public class ScriptEngine
 {
-	public static final Hashtable<String, ParserFactory> parserFactories = new Hashtable<>();
+	public static final Map<String, ParserFactory> PARSER_FACTORIES = new HashMap<>();
 	
 	protected static Parser createParser(String name) throws ParserNotCreatedException
 	{
-		ParserFactory s = parserFactories.get(name);
+		ParserFactory s = PARSER_FACTORIES.get(name);
 		if (s == null) // shape not found
 		{
 			try
@@ -38,7 +39,7 @@ public class ScriptEngine
 				// the shape is expected to have put its factory
 				// in the hashtable.
 				
-				s = parserFactories.get(name);
+				s = PARSER_FACTORIES.get(name);
 				if (s == null) // if the shape factory is not there even now
 				{
 					throw new ParserNotCreatedException();

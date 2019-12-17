@@ -126,8 +126,8 @@ public class Q00423_TakeYourBestShot extends Quest
 				{
 					case State.CREATED:
 					{
-						final QuestState _prev = player.getQuestState(Q00249_PoisonedPlainsOfTheLizardmen.class.getSimpleName());
-						if ((_prev != null) && _prev.isCompleted() && (player.getLevel() >= MIN_LEVEL))
+						final QuestState prev = player.getQuestState(Q00249_PoisonedPlainsOfTheLizardmen.class.getSimpleName());
+						if ((prev != null) && prev.isCompleted() && (player.getLevel() >= MIN_LEVEL))
 						{
 							htmltext = (hasQuestItems(player, SEER_UGOROS_PASS)) ? "32744-07.htm" : "32744-01.htm";
 						}

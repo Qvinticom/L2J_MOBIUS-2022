@@ -32,8 +32,8 @@ public class Q00073_SagaOfTheDuelist extends AbstractSagaQuest
 	/**
 	 * Third Class Transfer Quest - Duelist: The quest asks for "Top-grade Meat" which can now be acquired directly through NPC Tunatun, instead of through an additional quest from NPC Tunatun.
 	 */
-	private final int TUNATUN = 31537;
-	private final int TOPQUALITYMEAT = 7546;
+	private static final int TUNATUN = 31537;
+	private static final int TOPQUALITYMEAT = 7546;
 	
 	public Q00073_SagaOfTheDuelist()
 	{
@@ -53,7 +53,7 @@ public class Q00073_SagaOfTheDuelist extends AbstractSagaQuest
 			31656,
 			31277
 		};
-		Items = new int[]
+		_items = new int[]
 		{
 			7080,
 			7537,
@@ -68,27 +68,27 @@ public class Q00073_SagaOfTheDuelist extends AbstractSagaQuest
 			7096,
 			7546
 		};
-		Mob = new int[]
+		_mob = new int[]
 		{
 			27289,
 			27222,
 			27281
 		};
-		classid = new int[]
+		_classId = new int[]
 		{
 			88
 		};
-		prevclass = new int[]
+		_prevClass = new int[]
 		{
 			0x02
 		};
-		npcSpawnLocations = new Location[]
+		_npcSpawnLocations = new Location[]
 		{
 			new Location(164650, -74121, -2871),
 			new Location(47429, -56923, -2383),
 			new Location(47391, -56929, -2370)
 		};
-		Text = new String[]
+		_text = new String[]
 		{
 			"PLAYERNAME! Pursued to here! However, I jumped out of the Banshouren boundaries! You look at the giant as the sign of power!",
 			"... Oh ... good! So it was ... let's begin!",

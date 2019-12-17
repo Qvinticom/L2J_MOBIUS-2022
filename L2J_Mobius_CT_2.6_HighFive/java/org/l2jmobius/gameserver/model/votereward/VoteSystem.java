@@ -21,6 +21,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
@@ -156,9 +157,9 @@ public abstract class VoteSystem implements Runnable
 				}
 				if (canReward)
 				{
-					for (int i : rewards.keySet())
+					for (Entry<Integer, Integer> entry : rewards.entrySet())
 					{
-						p.addItem("Vote reward.", i, rewards.get(i), p, true);
+						p.addItem("Vote reward.", entry.getKey(), entry.getValue(), p, true);
 					}
 				}
 				else

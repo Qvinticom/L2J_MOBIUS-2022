@@ -16,7 +16,6 @@
  */
 package handlers.admincommandhandlers;
 
-import java.util.NoSuchElementException;
 import java.util.StringTokenizer;
 
 import org.l2jmobius.commons.concurrent.ThreadPool;
@@ -57,20 +56,9 @@ public class AdminTest implements IAdminCommandHandler
 				final StringTokenizer st = new StringTokenizer(command);
 				st.nextToken();
 				final int id = Integer.parseInt(st.nextToken());
-				if (command.startsWith("admin_skill_test"))
-				{
-					adminTestSkill(activeChar, id, true);
-				}
-				else
-				{
-					adminTestSkill(activeChar, id, false);
-				}
+				adminTestSkill(activeChar, id, command.startsWith("admin_skill_test"));
 			}
-			catch (NumberFormatException e)
-			{
-				BuilderUtil.sendSysMessage(activeChar, "Command format is //skill_test <ID>");
-			}
-			catch (NoSuchElementException nsee)
+			catch (Exception e)
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Command format is //skill_test <ID>");
 			}
@@ -96,17 +84,17 @@ public class AdminTest implements IAdminCommandHandler
 			caster = (Creature) target;
 		}
 		
-		final Skill _skill = SkillData.getInstance().getSkill(id, 1);
-		if (_skill != null)
+		final Skill skill = SkillData.getInstance().getSkill(id, 1);
+		if (skill != null)
 		{
 			caster.setTarget(activeChar);
 			if (msu)
 			{
-				caster.broadcastPacket(new MagicSkillUse(caster, activeChar, id, 1, _skill.getHitTime(), _skill.getReuseDelay()));
+				caster.broadcastPacket(new MagicSkillUse(caster, activeChar, id, 1, skill.getHitTime(), skill.getReuseDelay()));
 			}
 			else
 			{
-				caster.doCast(_skill);
+				caster.doCast(skill);
 			}
 		}
 	}

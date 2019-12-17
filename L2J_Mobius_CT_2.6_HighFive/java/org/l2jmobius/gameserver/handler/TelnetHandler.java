@@ -54,7 +54,7 @@ public class TelnetHandler implements IHandler<ITelnetHandler, String>
 	{
 		if (command.contains(" "))
 		{
-			command = command.substring(0, command.indexOf(" "));
+			command = command.substring(0, command.indexOf(' '));
 		}
 		
 		return _telnetHandlers.get(command.toLowerCase());

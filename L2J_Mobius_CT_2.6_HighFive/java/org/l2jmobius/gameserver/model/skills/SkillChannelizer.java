@@ -45,7 +45,7 @@ public class SkillChannelizer implements Runnable
 	private List<Creature> _channelized;
 	
 	private Skill _skill;
-	private volatile ScheduledFuture<?> _task = null;
+	private ScheduledFuture<?> _task = null;
 	
 	public SkillChannelizer(Creature channelizer)
 	{

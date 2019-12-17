@@ -68,11 +68,13 @@ public class Q00698_BlockTheLordsEscape extends Quest
 				{
 					htmltext = "32603-00.html";
 					qs.exitQuest(true);
+					break;
 				}
 				if (SoIManager.getCurrentStage() != 5)
 				{
 					htmltext = "32603-00a.html";
 					qs.exitQuest(true);
+					break;
 				}
 				htmltext = "32603-01.htm";
 				break;

@@ -715,7 +715,7 @@ public class CreatureAI extends AbstractAI
 	 * </ul>
 	 */
 	@Override
-	protected void onEvtArrivedBlocked(Location blocked_at_loc)
+	protected void onEvtArrivedBlocked(Location location)
 	{
 		// If the Intention was AI_INTENTION_MOVE_TO, set the Intention to AI_INTENTION_ACTIVE
 		if ((getIntention() == AI_INTENTION_MOVE_TO) || (getIntention() == AI_INTENTION_CAST))
@@ -724,7 +724,7 @@ public class CreatureAI extends AbstractAI
 		}
 		
 		// Stop the actor movement server side AND client side by sending Server->Client packet StopMove/StopRotation (broadcast)
-		clientStopMoving(blocked_at_loc);
+		clientStopMoving(location);
 		
 		// Launch actions corresponding to the Event Think
 		onEvtThink();

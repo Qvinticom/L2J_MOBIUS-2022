@@ -24,10 +24,6 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class AcquireSkillDone implements IClientOutgoingPacket
 {
-	public AcquireSkillDone()
-	{
-	}
-	
 	@Override
 	public boolean write(PacketWriter packet)
 	{

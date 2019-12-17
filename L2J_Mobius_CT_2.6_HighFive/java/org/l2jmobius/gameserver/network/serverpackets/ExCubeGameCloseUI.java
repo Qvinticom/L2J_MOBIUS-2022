@@ -24,14 +24,6 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExCubeGameCloseUI implements IClientOutgoingPacket
 {
-	/**
-	 * Close Minigame Waiting List
-	 */
-	public ExCubeGameCloseUI()
-	{
-		
-	}
-	
 	@Override
 	public boolean write(PacketWriter packet)
 	{

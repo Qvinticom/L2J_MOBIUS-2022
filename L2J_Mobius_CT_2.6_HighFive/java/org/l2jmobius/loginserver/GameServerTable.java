@@ -305,7 +305,7 @@ public class GameServerTable implements IXmlReader
 		private final ArrayList<GameServerAddress> _addrs = new ArrayList<>(5);
 		private int _port;
 		// config
-		private final boolean _isPvp = true;
+		private static final boolean IS_PVP = true;
 		private int _serverType;
 		private int _ageLimit;
 		private boolean _isShowingBrackets;
@@ -511,6 +511,7 @@ public class GameServerTable implements IXmlReader
 			}
 			catch (Exception e)
 			{
+				// Ignore.
 			}
 			return null;
 		}
@@ -557,7 +558,7 @@ public class GameServerTable implements IXmlReader
 		 */
 		public boolean isPvp()
 		{
-			return _isPvp;
+			return IS_PVP;
 		}
 		
 		/**

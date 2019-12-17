@@ -109,9 +109,9 @@ public class PriestOfBlessing extends AbstractNpcAI
 			if (player.getAdena() >= PRICE_VOICE)
 			{
 				final String value = player.getVariables().getString("PriestOfBlessing_voice", "");
-				final long _reuse_time = value.isEmpty() ? 0 : Long.parseLong(value);
+				final long reuseTime = value.isEmpty() ? 0 : Long.parseLong(value);
 				
-				if (System.currentTimeMillis() > _reuse_time)
+				if (System.currentTimeMillis() > reuseTime)
 				{
 					takeItems(player, Inventory.ADENA_ID, PRICE_VOICE);
 					giveItems(player, NEVIT_VOICE, 1);
@@ -119,7 +119,7 @@ public class PriestOfBlessing extends AbstractNpcAI
 				}
 				else
 				{
-					final long remainingTime = (_reuse_time - System.currentTimeMillis()) / 1000;
+					final long remainingTime = (reuseTime - System.currentTimeMillis()) / 1000;
 					final int hours = (int) (remainingTime / 3600);
 					final int minutes = (int) ((remainingTime % 3600) / 60);
 					final SystemMessage sm = new SystemMessage(SystemMessageId.S1_WILL_BE_AVAILABLE_FOR_RE_USE_AFTER_S2_HOUR_S_S3_MINUTE_S);
@@ -134,25 +134,25 @@ public class PriestOfBlessing extends AbstractNpcAI
 		}
 		else if (event.equalsIgnoreCase("buy_hourglass"))
 		{
-			final int _index = getHGIndex(player.getLevel());
-			final int _price_hourglass = PRICE_HOURGLASS[_index];
+			final int index = getHGIndex(player.getLevel());
+			final int priceHourglass = PRICE_HOURGLASS[index];
 			
-			if (player.getAdena() >= _price_hourglass)
+			if (player.getAdena() >= priceHourglass)
 			{
-				final String value = player.getVariables().getString("PriestOfBlessing_hg_" + _index, "");
-				final long _reuse_time = value.isEmpty() ? 0 : Long.parseLong(value);
+				final String value = player.getVariables().getString("PriestOfBlessing_hg_" + index, "");
+				final long reuseTime = value.isEmpty() ? 0 : Long.parseLong(value);
 				
-				if (System.currentTimeMillis() > _reuse_time)
+				if (System.currentTimeMillis() > reuseTime)
 				{
-					final int[] _hg = HOURGLASSES[_index];
-					final int _nevit_hourglass = _hg[getRandom(0, _hg.length - 1)];
-					takeItems(player, Inventory.ADENA_ID, _price_hourglass);
-					giveItems(player, _nevit_hourglass, 1);
-					player.getVariables().set("PriestOfBlessing_hg_" + _index, Long.toString(System.currentTimeMillis() + (20 * 3600000)));
+					final int[] hg = HOURGLASSES[index];
+					final int nevitHourglass = hg[getRandom(0, hg.length - 1)];
+					takeItems(player, Inventory.ADENA_ID, priceHourglass);
+					giveItems(player, nevitHourglass, 1);
+					player.getVariables().set("PriestOfBlessing_hg_" + index, Long.toString(System.currentTimeMillis() + (20 * 3600000)));
 				}
 				else
 				{
-					final long remainingTime = (_reuse_time - System.currentTimeMillis()) / 1000;
+					final long remainingTime = (reuseTime - System.currentTimeMillis()) / 1000;
 					final int hours = (int) (remainingTime / 3600);
 					final int minutes = (int) ((remainingTime % 3600) / 60);
 					final SystemMessage sm = new SystemMessage(SystemMessageId.S1_WILL_BE_AVAILABLE_FOR_RE_USE_AFTER_S2_HOUR_S_S3_MINUTE_S);

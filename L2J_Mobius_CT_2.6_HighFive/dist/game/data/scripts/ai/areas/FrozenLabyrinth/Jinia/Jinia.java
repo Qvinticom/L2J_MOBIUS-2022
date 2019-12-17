@@ -48,34 +48,24 @@ public class Jinia extends AbstractNpcAI
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		String htmltext = event;
-		switch (event)
+		if ("check".equals(event))
 		{
-			case "32781-10.html":
-			case "32781-11.html":
+			if (hasAtLeastOneQuestItem(player, FROZEN_CORE, BLACK_FROZEN_CORE))
 			{
-				htmltext = event;
-				break;
+				htmltext = "32781-03.html";
 			}
-			case "check":
+			else
 			{
-				if (hasAtLeastOneQuestItem(player, FROZEN_CORE, BLACK_FROZEN_CORE))
+				final QuestState qs = player.getQuestState(Q10286_ReunionWithSirra.class.getSimpleName());
+				if ((qs != null) && qs.isCompleted())
 				{
-					htmltext = "32781-03.html";
+					giveItems(player, FROZEN_CORE, 1);
 				}
 				else
 				{
-					final QuestState qs = player.getQuestState(Q10286_ReunionWithSirra.class.getSimpleName());
-					if ((qs != null) && qs.isCompleted())
-					{
-						giveItems(player, FROZEN_CORE, 1);
-					}
-					else
-					{
-						giveItems(player, BLACK_FROZEN_CORE, 1);
-					}
-					htmltext = "32781-04.html";
+					giveItems(player, BLACK_FROZEN_CORE, 1);
 				}
-				break;
+				htmltext = "32781-04.html";
 			}
 		}
 		return htmltext;

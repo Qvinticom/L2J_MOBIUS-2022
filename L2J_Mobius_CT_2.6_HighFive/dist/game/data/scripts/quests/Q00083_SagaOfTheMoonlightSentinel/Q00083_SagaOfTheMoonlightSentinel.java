@@ -44,7 +44,7 @@ public class Q00083_SagaOfTheMoonlightSentinel extends AbstractSagaQuest
 			31658,
 			31641
 		};
-		Items = new int[]
+		_items = new int[]
 		{
 			7080,
 			7520,
@@ -59,27 +59,27 @@ public class Q00083_SagaOfTheMoonlightSentinel extends AbstractSagaQuest
 			7106,
 			0
 		};
-		Mob = new int[]
+		_mob = new int[]
 		{
 			27297,
 			27232,
 			27306
 		};
-		classid = new int[]
+		_classId = new int[]
 		{
 			102
 		};
-		prevclass = new int[]
+		_prevClass = new int[]
 		{
 			0x18
 		};
-		npcSpawnLocations = new Location[]
+		_npcSpawnLocations = new Location[]
 		{
 			new Location(161719, -92823, -1893),
 			new Location(181227, 36703, -4816),
 			new Location(181215, 36676, -4812)
 		};
-		Text = new String[]
+		_text = new String[]
 		{
 			"PLAYERNAME! Pursued to here! However, I jumped out of the Banshouren boundaries! You look at the giant as the sign of power!",
 			"... Oh ... good! So it was ... let's begin!",

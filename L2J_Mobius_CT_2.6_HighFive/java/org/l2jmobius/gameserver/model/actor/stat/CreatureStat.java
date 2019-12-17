@@ -653,7 +653,7 @@ public class CreatureStat
 		
 		// temp fix starts
 		int tempVal = 0;
-		final int stats[] =
+		final int[] stats =
 		{
 			0,
 			0,

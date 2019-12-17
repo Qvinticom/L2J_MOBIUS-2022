@@ -69,10 +69,6 @@ public class HeartInfinityAttack extends AbstractNpcAI
 		{
 			tumorCount += value;
 		}
-		
-		public HIAWorld()
-		{
-		}
 	}
 	
 	private static final String qn = "HeartInfinityAttack";

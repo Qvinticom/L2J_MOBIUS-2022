@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.security;
 
-import java.io.UnsupportedEncodingException;
+import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.sql.Connection;
@@ -253,17 +253,13 @@ public class SecondaryPasswordAuth
 		try
 		{
 			final MessageDigest md = MessageDigest.getInstance("SHA");
-			final byte[] raw = password.getBytes("UTF-8");
+			final byte[] raw = password.getBytes(StandardCharsets.UTF_8);
 			final byte[] hash = md.digest(raw);
 			return Base64.getEncoder().encodeToString(hash);
 		}
 		catch (NoSuchAlgorithmException e)
 		{
 			LOGGER.severe("[SecondaryPasswordAuth]Unsupported Algorythm");
-		}
-		catch (UnsupportedEncodingException e)
-		{
-			LOGGER.severe("[SecondaryPasswordAuth]Unsupported Encoding");
 		}
 		return null;
 	}

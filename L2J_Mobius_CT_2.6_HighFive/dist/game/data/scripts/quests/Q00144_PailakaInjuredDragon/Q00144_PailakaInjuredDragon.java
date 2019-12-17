@@ -481,6 +481,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 						{
 							return "32499-09.html";
 						}
+						break;
 					}
 					case State.COMPLETED:
 					{
@@ -491,7 +492,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 						return "32499-no.html";
 					}
 				}
-				// break;
+				break;
 			}
 			case KETRA_ORC_SUPPORTER:
 			{

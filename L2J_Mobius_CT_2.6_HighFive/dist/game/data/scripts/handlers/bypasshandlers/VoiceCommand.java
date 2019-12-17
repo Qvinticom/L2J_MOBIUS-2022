@@ -40,7 +40,7 @@ public class VoiceCommand implements IBypassHandler
 		{
 			final String vc;
 			final String vparams;
-			final int endOfCommand = command.indexOf(" ", 7);
+			final int endOfCommand = command.indexOf(' ', 7);
 			if (endOfCommand > 0)
 			{
 				vc = command.substring(7, endOfCommand).trim();

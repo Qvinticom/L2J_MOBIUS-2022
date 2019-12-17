@@ -90,59 +90,69 @@ public final class Q00709_PathToBecomingALordDion extends Quest
 		}
 		
 		final PlayerInstance castleOwner = castle.getOwner().getLeader().getPlayerInstance();
-		if (event.equals("35142-03.html"))
+		switch (event)
 		{
-			qs.startQuest();
-		}
-		else if (event.equals("35142-06.html"))
-		{
-			if (isLordAvailable(2, qs))
+			case "35142-03.html":
 			{
-				castleOwner.getQuestState(getName()).set("confidant", String.valueOf(qs.getPlayer().getObjectId()));
-				castleOwner.getQuestState(getName()).setCond(3);
-				qs.setState(State.STARTED);
+				qs.startQuest();
+				break;
 			}
-			else
+			case "35142-06.html":
 			{
-				htmltext = "35142-05a.html";
+				if (isLordAvailable(2, qs))
+				{
+					castleOwner.getQuestState(getName()).set("confidant", String.valueOf(qs.getPlayer().getObjectId()));
+					castleOwner.getQuestState(getName()).setCond(3);
+					qs.setState(State.STARTED);
+				}
+				else
+				{
+					htmltext = "35142-05a.html";
+				}
+				break;
 			}
-		}
-		else if (event.equals("31418-03.html"))
-		{
-			if (isLordAvailable(3, qs))
+			case "31418-03.html":
 			{
-				castleOwner.getQuestState(getName()).setCond(4);
+				if (isLordAvailable(3, qs))
+				{
+					castleOwner.getQuestState(getName()).setCond(4);
+				}
+				else
+				{
+					htmltext = "35142-05a.html";
+				}
+				break;
 			}
-			else
+			case "30735-02.html":
 			{
-				htmltext = "35142-05a.html";
+				qs.set("cond", "6");
+				break;
 			}
-		}
-		else if (event.equals("30735-02.html"))
-		{
-			qs.set("cond", "6");
-		}
-		else if (event.equals("30735-05.html"))
-		{
-			takeItems(player, BLOODY_AXE_BLACK_EPAULETTE, 1);
-			qs.set("cond", "8");
-		}
-		else if (event.equals("31418-05.html"))
-		{
-			if (isLordAvailable(8, qs))
+			case "30735-05.html":
 			{
-				takeItems(player, MANDRAGORA_ROOT, -1);
-				castleOwner.getQuestState(getName()).setCond(9);
+				takeItems(player, BLOODY_AXE_BLACK_EPAULETTE, 1);
+				qs.set("cond", "8");
+				break;
 			}
-		}
-		else if (event.equals("35142-10.html"))
-		{
-			if (castleOwner != null)
+			case "31418-05.html":
 			{
-				final NpcSay packet = new NpcSay(npc.getObjectId(), ChatType.NPC_SHOUT, npc.getId(), NpcStringId.S1_HAS_BECOME_LORD_OF_THE_TOWN_OF_DION_LONG_MAY_HE_REIGN);
-				packet.addStringParameter(player.getName());
-				npc.broadcastPacket(packet);
-				qs.exitQuest(true, true);
+				if (isLordAvailable(8, qs))
+				{
+					takeItems(player, MANDRAGORA_ROOT, -1);
+					castleOwner.getQuestState(getName()).setCond(9);
+				}
+				break;
+			}
+			case "35142-10.html":
+			{
+				if (castleOwner != null)
+				{
+					final NpcSay packet = new NpcSay(npc.getObjectId(), ChatType.NPC_SHOUT, npc.getId(), NpcStringId.S1_HAS_BECOME_LORD_OF_THE_TOWN_OF_DION_LONG_MAY_HE_REIGN);
+					packet.addStringParameter(player.getName());
+					npc.broadcastPacket(packet);
+					qs.exitQuest(true, true);
+				}
+				break;
 			}
 		}
 		return htmltext;
@@ -165,12 +175,9 @@ public final class Q00709_PathToBecomingALordDion extends Quest
 			}
 		}
 		
-		if ((qs != null) && (qs.getState() == State.STARTED) && qs.isCond(0) && isLordAvailable(8, qs) && CommonUtil.contains(MANDRAGORAS, npc.getId()))
+		if ((qs != null) && (qs.getState() == State.STARTED) && qs.isCond(0) && isLordAvailable(8, qs) && CommonUtil.contains(MANDRAGORAS, npc.getId()) && (getQuestItemsCount(killer, MANDRAGORA_ROOT) < 100))
 		{
-			if (getQuestItemsCount(killer, MANDRAGORA_ROOT) < 100)
-			{
-				giveItems(killer, MANDRAGORA_ROOT, 1);
-			}
+			giveItems(killer, MANDRAGORA_ROOT, 1);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}
@@ -318,13 +325,6 @@ public final class Q00709_PathToBecomingALordDion extends Quest
 		final Castle castle = CastleManager.getInstance().getCastleById(DION_CASTLE);
 		final Clan owner = castle.getOwner();
 		final PlayerInstance castleOwner = castle.getOwner().getLeader().getPlayerInstance();
-		if (owner != null)
-		{
-			if ((castleOwner != null) && (castleOwner != qs.getPlayer()) && (owner == qs.getPlayer().getClan()) && (castleOwner.getQuestState(getName()) != null) && castleOwner.getQuestState(getName()).isCond(cond))
-			{
-				return true;
-			}
-		}
-		return false;
+		return (owner != null) && (castleOwner != null) && (castleOwner != qs.getPlayer()) && (owner == qs.getPlayer().getClan()) && (castleOwner.getQuestState(getName()) != null) && castleOwner.getQuestState(getName()).isCond(cond);
 	}
 }

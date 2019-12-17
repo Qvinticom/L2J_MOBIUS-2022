@@ -213,13 +213,11 @@ public class SignsPriestInstance extends Npc
 					
 					if (player.getClassId().level() >= 1)
 					{
-						if ((cabal == SevenSigns.CABAL_DUSK) && Config.ALT_GAME_CASTLE_DUSK)
+						// even if in htmls is said that ally can have castle too, but its not
+						if ((cabal == SevenSigns.CABAL_DUSK) && Config.ALT_GAME_CASTLE_DUSK && (player.getClan() != null) && (player.getClan().getCastleId() > 0))
 						{
-							if ((player.getClan() != null) && (player.getClan().getCastleId() > 0)) // even if in htmls is said that ally can have castle too, but its not
-							{
-								showChatWindow(player, SevenSigns.SEVEN_SIGNS_HTML_PATH + "signs_33_dusk_no.htm");
-								return;
-							}
+							showChatWindow(player, SevenSigns.SEVEN_SIGNS_HTML_PATH + "signs_33_dusk_no.htm");
+							return;
 						}
 						// If the player is trying to join the Lords of Dawn, check if they are carrying a Lord's certificate. If not then try to take the required amount of adena instead.
 						if (Config.ALT_GAME_CASTLE_DAWN && (cabal == SevenSigns.CABAL_DAWN))
@@ -331,7 +329,7 @@ public class SignsPriestInstance extends Npc
 					{
 						contributionCount = Long.parseLong(command.substring(19).trim());
 					}
-					catch (Exception NumberFormatException)
+					catch (Exception nfe)
 					{
 						if (this instanceof DawnPriestInstance)
 						{
@@ -375,38 +373,29 @@ public class SignsPriestInstance extends Npc
 						}
 					}
 					
-					if (redContrib > 0)
+					if ((redContrib > 0) && player.destroyItemByItemId("SevenSigns", SevenSigns.SEAL_STONE_RED_ID, redContrib, this, false))
 					{
-						if (player.destroyItemByItemId("SevenSigns", SevenSigns.SEAL_STONE_RED_ID, redContrib, this, false))
-						{
-							contribStonesFound = true;
-							final SystemMessage msg = new SystemMessage(SystemMessageId.S2_S1_HAS_DISAPPEARED);
-							msg.addItemName(SevenSigns.SEAL_STONE_RED_ID);
-							msg.addLong(redContrib);
-							player.sendPacket(msg);
-						}
+						contribStonesFound = true;
+						final SystemMessage msg = new SystemMessage(SystemMessageId.S2_S1_HAS_DISAPPEARED);
+						msg.addItemName(SevenSigns.SEAL_STONE_RED_ID);
+						msg.addLong(redContrib);
+						player.sendPacket(msg);
 					}
-					if (greenContrib > 0)
+					if ((greenContrib > 0) && player.destroyItemByItemId("SevenSigns", SevenSigns.SEAL_STONE_GREEN_ID, greenContrib, this, false))
 					{
-						if (player.destroyItemByItemId("SevenSigns", SevenSigns.SEAL_STONE_GREEN_ID, greenContrib, this, false))
-						{
-							contribStonesFound = true;
-							final SystemMessage msg = new SystemMessage(SystemMessageId.S2_S1_HAS_DISAPPEARED);
-							msg.addItemName(SevenSigns.SEAL_STONE_GREEN_ID);
-							msg.addLong(greenContrib);
-							player.sendPacket(msg);
-						}
+						contribStonesFound = true;
+						final SystemMessage msg = new SystemMessage(SystemMessageId.S2_S1_HAS_DISAPPEARED);
+						msg.addItemName(SevenSigns.SEAL_STONE_GREEN_ID);
+						msg.addLong(greenContrib);
+						player.sendPacket(msg);
 					}
-					if (blueContrib > 0)
+					if ((blueContrib > 0) && player.destroyItemByItemId("SevenSigns", SevenSigns.SEAL_STONE_BLUE_ID, blueContrib, this, false))
 					{
-						if (player.destroyItemByItemId("SevenSigns", SevenSigns.SEAL_STONE_BLUE_ID, blueContrib, this, false))
-						{
-							contribStonesFound = true;
-							final SystemMessage msg = new SystemMessage(SystemMessageId.S2_S1_HAS_DISAPPEARED);
-							msg.addItemName(SevenSigns.SEAL_STONE_BLUE_ID);
-							msg.addLong(blueContrib);
-							player.sendPacket(msg);
-						}
+						contribStonesFound = true;
+						final SystemMessage msg = new SystemMessage(SystemMessageId.S2_S1_HAS_DISAPPEARED);
+						msg.addItemName(SevenSigns.SEAL_STONE_BLUE_ID);
+						msg.addLong(blueContrib);
+						player.sendPacket(msg);
 					}
 					
 					if (!contribStonesFound)
@@ -518,38 +507,29 @@ public class SignsPriestInstance extends Npc
 									blueContribCount = blueStoneCount;
 								}
 								
-								if (redContribCount > 0)
+								if ((redContribCount > 0) && player.destroyItemByItemId("SevenSigns", SevenSigns.SEAL_STONE_RED_ID, redContribCount, this, false))
 								{
-									if (player.destroyItemByItemId("SevenSigns", SevenSigns.SEAL_STONE_RED_ID, redContribCount, this, false))
-									{
-										stonesFound = true;
-										final SystemMessage msg = new SystemMessage(SystemMessageId.S2_S1_HAS_DISAPPEARED);
-										msg.addItemName(SevenSigns.SEAL_STONE_RED_ID);
-										msg.addLong(redContribCount);
-										player.sendPacket(msg);
-									}
+									stonesFound = true;
+									final SystemMessage msg = new SystemMessage(SystemMessageId.S2_S1_HAS_DISAPPEARED);
+									msg.addItemName(SevenSigns.SEAL_STONE_RED_ID);
+									msg.addLong(redContribCount);
+									player.sendPacket(msg);
 								}
-								if (greenContribCount > 0)
+								if ((greenContribCount > 0) && player.destroyItemByItemId("SevenSigns", SevenSigns.SEAL_STONE_GREEN_ID, greenContribCount, this, false))
 								{
-									if (player.destroyItemByItemId("SevenSigns", SevenSigns.SEAL_STONE_GREEN_ID, greenContribCount, this, false))
-									{
-										stonesFound = true;
-										final SystemMessage msg = new SystemMessage(SystemMessageId.S2_S1_HAS_DISAPPEARED);
-										msg.addItemName(SevenSigns.SEAL_STONE_GREEN_ID);
-										msg.addLong(greenContribCount);
-										player.sendPacket(msg);
-									}
+									stonesFound = true;
+									final SystemMessage msg = new SystemMessage(SystemMessageId.S2_S1_HAS_DISAPPEARED);
+									msg.addItemName(SevenSigns.SEAL_STONE_GREEN_ID);
+									msg.addLong(greenContribCount);
+									player.sendPacket(msg);
 								}
-								if (blueContribCount > 0)
+								if ((blueContribCount > 0) && player.destroyItemByItemId("SevenSigns", SevenSigns.SEAL_STONE_BLUE_ID, blueContribCount, this, false))
 								{
-									if (player.destroyItemByItemId("SevenSigns", SevenSigns.SEAL_STONE_BLUE_ID, blueContribCount, this, false))
-									{
-										stonesFound = true;
-										final SystemMessage msg = new SystemMessage(SystemMessageId.S2_S1_HAS_DISAPPEARED);
-										msg.addItemName(SevenSigns.SEAL_STONE_BLUE_ID);
-										msg.addLong(blueContribCount);
-										player.sendPacket(msg);
-									}
+									stonesFound = true;
+									final SystemMessage msg = new SystemMessage(SystemMessageId.S2_S1_HAS_DISAPPEARED);
+									msg.addItemName(SevenSigns.SEAL_STONE_BLUE_ID);
+									msg.addLong(blueContribCount);
+									player.sendPacket(msg);
 								}
 								
 								if (!stonesFound)
@@ -596,11 +576,11 @@ public class SignsPriestInstance extends Npc
 						
 						if (contentContr != null)
 						{
-							contentContr = contentContr.replaceAll("%contribStoneColor%", contribStoneColor);
-							contentContr = contentContr.replaceAll("%stoneColor%", stoneColorContr);
-							contentContr = contentContr.replaceAll("%stoneCount%", String.valueOf(stoneCountContr));
-							contentContr = contentContr.replaceAll("%stoneItemId%", String.valueOf(stoneIdContr));
-							contentContr = contentContr.replaceAll("%objectId%", String.valueOf(getObjectId()));
+							contentContr = contentContr.replace("%contribStoneColor%", contribStoneColor);
+							contentContr = contentContr.replace("%stoneColor%", stoneColorContr);
+							contentContr = contentContr.replace("%stoneCount%", String.valueOf(stoneCountContr));
+							contentContr = contentContr.replace("%stoneItemId%", String.valueOf(stoneIdContr));
+							contentContr = contentContr.replace("%objectId%", String.valueOf(getObjectId()));
 							
 							final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 							html.setHtml(contentContr);
@@ -696,13 +676,9 @@ public class SignsPriestInstance extends Npc
 						final int z = Integer.parseInt(st.nextToken());
 						
 						final long ancientAdenaCost = Long.parseLong(st.nextToken());
-						
-						if (ancientAdenaCost > 0)
+						if ((ancientAdenaCost > 0) && !player.reduceAncientAdena("SevenSigns", ancientAdenaCost, this, true))
 						{
-							if (!player.reduceAncientAdena("SevenSigns", ancientAdenaCost, this, true))
-							{
-								break;
-							}
+							break;
 						}
 						
 						player.teleToLocation(x, y, z);
@@ -831,11 +807,11 @@ public class SignsPriestInstance extends Npc
 					
 					if (content != null)
 					{
-						content = content.replaceAll("%stoneColor%", stoneColor);
-						content = content.replaceAll("%stoneValue%", String.valueOf(stoneValue));
-						content = content.replaceAll("%stoneCount%", String.valueOf(stoneCount));
-						content = content.replaceAll("%stoneItemId%", String.valueOf(stoneId));
-						content = content.replaceAll("%objectId%", String.valueOf(getObjectId()));
+						content = content.replace("%stoneColor%", stoneColor);
+						content = content.replace("%stoneValue%", String.valueOf(stoneValue));
+						content = content.replace("%stoneCount%", String.valueOf(stoneCount));
+						content = content.replace("%stoneItemId%", String.valueOf(stoneId));
+						content = content.replace("%objectId%", String.valueOf(getObjectId()));
 						
 						final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 						html.setHtml(content);
@@ -856,7 +832,7 @@ public class SignsPriestInstance extends Npc
 					{
 						convertCount = Long.parseLong(command.substring(19).trim());
 					}
-					catch (Exception NumberFormatException)
+					catch (Exception nfe)
 					{
 						if (this instanceof DawnPriestInstance)
 						{

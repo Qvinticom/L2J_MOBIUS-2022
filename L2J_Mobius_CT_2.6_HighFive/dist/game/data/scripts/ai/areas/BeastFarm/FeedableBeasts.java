@@ -145,9 +145,9 @@ public class FeedableBeasts extends AbstractNpcAI
 			_chance = chance;
 		}
 		
-		public void addMobs(int spice, int[][] Mobs)
+		public void addMobs(int spice, int[][] mobs)
 		{
-			_spiceToMob.put(spice, Mobs);
+			_spiceToMob.put(spice, mobs);
 		}
 		
 		public Integer getMob(int spice, int mobType, int classType)
@@ -395,12 +395,9 @@ public class FeedableBeasts extends AbstractNpcAI
 		}
 		
 		// remove the feedinfo of the mob that got despawned, if any
-		if (FEED_INFO.containsKey(npc.getObjectId()))
+		if (FEED_INFO.containsKey(npc.getObjectId()) && (FEED_INFO.get(npc.getObjectId()) == player.getObjectId()))
 		{
-			if (FEED_INFO.get(npc.getObjectId()) == player.getObjectId())
-			{
-				FEED_INFO.remove(npc.getObjectId());
-			}
+			FEED_INFO.remove(npc.getObjectId());
 		}
 		// despawn the old mob
 		// TODO: same code? FIXED?
@@ -484,26 +481,23 @@ public class FeedableBeasts extends AbstractNpcAI
 	@Override
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
-		if (event.equalsIgnoreCase("polymorph Mad Cow") && (npc != null) && (player != null))
+		if (event.equalsIgnoreCase("polymorph Mad Cow") && (npc != null) && (player != null) && MAD_COW_POLYMORPH.containsKey(npc.getId()))
 		{
-			if (MAD_COW_POLYMORPH.containsKey(npc.getId()))
+			// remove the feed info from the previous mob
+			if (FEED_INFO.get(npc.getObjectId()) == player.getObjectId())
 			{
-				// remove the feed info from the previous mob
-				if (FEED_INFO.get(npc.getObjectId()) == player.getObjectId())
-				{
-					FEED_INFO.remove(npc.getObjectId());
-				}
-				// despawn the mad cow
-				npc.deleteMe();
-				// spawn the new mob
-				final Attackable nextNpc = (Attackable) addSpawn(MAD_COW_POLYMORPH.get(npc.getId()), npc);
-				
-				// register the player in the feedinfo for the mob that just spawned
-				FEED_INFO.put(nextNpc.getObjectId(), player.getObjectId());
-				nextNpc.setRunning();
-				nextNpc.addDamageHate(player, 0, 99999);
-				nextNpc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
+				FEED_INFO.remove(npc.getObjectId());
 			}
+			// despawn the mad cow
+			npc.deleteMe();
+			// spawn the new mob
+			final Attackable nextNpc = (Attackable) addSpawn(MAD_COW_POLYMORPH.get(npc.getId()), npc);
+			
+			// register the player in the feedinfo for the mob that just spawned
+			FEED_INFO.put(nextNpc.getObjectId(), player.getObjectId());
+			nextNpc.setRunning();
+			nextNpc.addDamageHate(player, 0, 99999);
+			nextNpc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
 		}
 		return super.onAdvEvent(event, npc, player);
 	}
@@ -548,7 +542,7 @@ public class FeedableBeasts extends AbstractNpcAI
 		{
 			food = GOLDEN_SPICE;
 		}
-		else if (skillId == SKILL_CRYSTAL_SPICE)
+		else // if (skillId == SKILL_CRYSTAL_SPICE)
 		{
 			food = CRYSTAL_SPICE;
 		}

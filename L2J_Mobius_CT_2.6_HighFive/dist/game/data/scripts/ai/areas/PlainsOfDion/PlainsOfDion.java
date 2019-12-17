@@ -33,7 +33,7 @@ import ai.AbstractNpcAI;
  */
 public class PlainsOfDion extends AbstractNpcAI
 {
-	private static final int DELU_LIZARDMEN[] =
+	private static final int[] DELU_LIZARDMEN =
 	{
 		21104, // Delu Lizardman Supplier
 		21105, // Delu Lizardman Special Agent

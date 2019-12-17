@@ -30,12 +30,12 @@ public interface ITelnetHandler
 	/**
 	 * this is the worker method that is called when someone uses an bypass command
 	 * @param command
-	 * @param _print
-	 * @param _cSocket
-	 * @param __uptime
+	 * @param print
+	 * @param cSocket
+	 * @param uptime
 	 * @return success
 	 */
-	boolean useCommand(String command, PrintWriter _print, Socket _cSocket, int __uptime);
+	boolean useCommand(String command, PrintWriter print, Socket cSocket, int uptime);
 	
 	/**
 	 * this method is called at initialization to register all bypasses automatically

@@ -56,7 +56,7 @@ public class TalentShow extends AbstractNpcAI
 		32424, 32425, 32426, 32427, 32428
 	};
 	// @formatter:on
-	private static boolean IS_STARTED = false;
+	private static boolean HAS_STARTED = false;
 	private static NpcStringId[] MESSAGES =
 	{
 		NpcStringId.HOW_COME_PEOPLE_ARE_NOT_HERE_WE_ARE_ABOUT_TO_START_THE_SHOW_HMM,
@@ -173,7 +173,7 @@ public class TalentShow extends AbstractNpcAI
 	
 	private void load()
 	{
-		// TODO put this stuff in Routes.xml
+		// TODO: Put this stuff in Routes.xml
 		TALKS.put("1", new ShoutInfo(MESSAGES[1], "2", 1000));
 		TALKS.put("2", new ShoutInfo(MESSAGES[2], "3", 6000));
 		TALKS.put("3", new ShoutInfo(MESSAGES[3], "4", 4000));
@@ -310,7 +310,7 @@ public class TalentShow extends AbstractNpcAI
 	@Override
 	public String onSpawn(Npc npc)
 	{
-		if (IS_STARTED)
+		if (HAS_STARTED)
 		{
 			switch (npc.getId())
 			{
@@ -369,11 +369,11 @@ public class TalentShow extends AbstractNpcAI
 		
 		if (event.equalsIgnoreCase("Start"))
 		{
-			IS_STARTED = true;
+			HAS_STARTED = true;
 			addSpawn(MC, -56698, -56430, -2008, 32768, false, 0);
 			startQuestTimer("Start", 14400000L, null, null); // repeat
 		}
-		else if ((npc != null) && IS_STARTED)
+		else if ((npc != null) && HAS_STARTED)
 		{
 			// TODO switch on event
 			if (event.equalsIgnoreCase("6"))
@@ -485,7 +485,7 @@ public class TalentShow extends AbstractNpcAI
 			}
 			else if (event.equalsIgnoreCase("clean_npc"))
 			{
-				IS_STARTED = false;
+				HAS_STARTED = false;
 				npc.deleteMe();
 			}
 			else if (TALKS.containsKey(event))

@@ -343,11 +343,11 @@ public class ItemInstance extends WorldObject
 	
 	/**
 	 * Sets the ownerID of the item
-	 * @param owner_id : int designating the ID of the owner
+	 * @param ownerId : int designating the ID of the owner
 	 */
-	public void setOwnerId(int owner_id)
+	public void setOwnerId(int ownerId)
 	{
-		if (owner_id == _ownerId)
+		if (ownerId == _ownerId)
 		{
 			return;
 		}
@@ -355,7 +355,7 @@ public class ItemInstance extends WorldObject
 		// Remove any inventory skills from the old owner.
 		removeSkillsFromOwner();
 		
-		_ownerId = owner_id;
+		_ownerId = ownerId;
 		_storedInDb = false;
 		
 		// Give any inventory skills to the new owner only if the item is in inventory
@@ -386,11 +386,11 @@ public class ItemInstance extends WorldObject
 	 * <BR>
 	 * <U><I>Remark :</I></U> If loc and loc_data different from database, say datas not up-to-date
 	 * @param loc : ItemLocation (enumeration)
-	 * @param loc_data : int designating the slot where the item is stored or the village for freights
+	 * @param locData : int designating the slot where the item is stored or the village for freights
 	 */
-	public void setItemLocation(ItemLocation loc, int loc_data)
+	public void setItemLocation(ItemLocation loc, int locData)
 	{
-		if ((loc == _loc) && (loc_data == _locData))
+		if ((loc == _loc) && (locData == _locData))
 		{
 			return;
 		}
@@ -399,7 +399,7 @@ public class ItemInstance extends WorldObject
 		removeSkillsFromOwner();
 		
 		_loc = loc;
-		_locData = loc_data;
+		_locData = locData;
 		_storedInDb = false;
 		
 		// Give any inventory skills to the new owner only if the item is in inventory
@@ -999,7 +999,7 @@ public class ItemInstance extends WorldObject
 		try (PreparedStatement ps = con.prepareStatement("REPLACE INTO item_attributes VALUES(?,?)"))
 		{
 			ps.setInt(1, getObjectId());
-			ps.setInt(2, _augmentation != null ? _augmentation.getAttributes() : -1);
+			ps.setInt(2, _augmentation != null ? _augmentation.getAugmentationId() : -1);
 			ps.executeUpdate();
 		}
 		catch (SQLException e)
@@ -1473,11 +1473,11 @@ public class ItemInstance extends WorldObject
 	{
 		ItemInstance inst = null;
 		int objectId;
-		int item_id;
-		int loc_data;
-		int enchant_level;
-		int custom_type1;
-		int custom_type2;
+		int itemId;
+		int locData;
+		int enchantLevel;
+		int customType1;
+		int customType2;
 		int manaLeft;
 		long time;
 		long count;
@@ -1485,13 +1485,13 @@ public class ItemInstance extends WorldObject
 		try
 		{
 			objectId = rs.getInt(1);
-			item_id = rs.getInt("item_id");
+			itemId = rs.getInt("item_id");
 			count = rs.getLong("count");
 			loc = ItemLocation.valueOf(rs.getString("loc"));
-			loc_data = rs.getInt("loc_data");
-			enchant_level = rs.getInt("enchant_level");
-			custom_type1 = rs.getInt("custom_type1");
-			custom_type2 = rs.getInt("custom_type2");
+			locData = rs.getInt("loc_data");
+			enchantLevel = rs.getInt("enchant_level");
+			customType1 = rs.getInt("custom_type1");
+			customType2 = rs.getInt("custom_type2");
 			manaLeft = rs.getInt("mana_left");
 			time = rs.getLong("time");
 		}
@@ -1500,20 +1500,20 @@ public class ItemInstance extends WorldObject
 			LOGGER.log(Level.SEVERE, "Could not restore an item owned by " + ownerId + " from DB:", e);
 			return null;
 		}
-		final Item item = ItemTable.getInstance().getTemplate(item_id);
+		final Item item = ItemTable.getInstance().getTemplate(itemId);
 		if (item == null)
 		{
-			LOGGER.severe("Item item_id=" + item_id + " not known, object_id=" + objectId);
+			LOGGER.severe("Item item_id=" + itemId + " not known, object_id=" + objectId);
 			return null;
 		}
 		inst = new ItemInstance(objectId, item);
 		inst._ownerId = ownerId;
 		inst.setCount(count);
-		inst._enchantLevel = enchant_level;
-		inst._type1 = custom_type1;
-		inst._type2 = custom_type2;
+		inst._enchantLevel = enchantLevel;
+		inst._type1 = customType1;
+		inst._type2 = customType2;
 		inst._loc = loc;
-		inst._locData = loc_data;
+		inst._locData = locData;
 		inst._existsInDb = true;
 		inst._storedInDb = true;
 		
@@ -1782,9 +1782,9 @@ public class ItemInstance extends WorldObject
 		return _decrease;
 	}
 	
-	public void setInitCount(int InitCount)
+	public void setInitCount(int initCount)
 	{
-		_initCount = InitCount;
+		_initCount = initCount;
 	}
 	
 	public long getInitCount()

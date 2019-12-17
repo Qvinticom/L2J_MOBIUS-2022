@@ -742,7 +742,7 @@ public class Q00025_HidingBehindTheTruth extends Quest
 			{
 				if (npc.getId() == PRIEST_BENEDICT)
 				{
-					htmltext = super.getAlreadyCompletedMsg(talker);
+					htmltext = getAlreadyCompletedMsg(talker);
 				}
 				break;
 			}

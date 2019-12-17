@@ -44,13 +44,12 @@ public class RequestListPartyMatchingWaitingRoom implements IClientIncomingPacke
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance _player = client.getPlayer();
-		
-		if (_player == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		_player.sendPacket(new ExListPartyMatchingWaitingRoom(_player, _page, _minlvl, _maxlvl, _mode));
+		player.sendPacket(new ExListPartyMatchingWaitingRoom(player, _page, _minlvl, _maxlvl, _mode));
 	}
 }

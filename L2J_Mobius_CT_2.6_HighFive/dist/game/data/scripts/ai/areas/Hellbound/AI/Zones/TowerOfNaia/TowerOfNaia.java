@@ -21,6 +21,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -391,17 +392,14 @@ public class TowerOfNaia extends AbstractNpcAI
 			}
 			return "18492-01.htm";
 		}
-		else if ((npcId >= ROOM_MANAGER_FIRST) && (npcId <= ROOM_MANAGER_LAST))
+		else if ((npcId >= ROOM_MANAGER_FIRST) && (npcId <= ROOM_MANAGER_LAST) && _activeRooms.containsKey(npcId) && !_activeRooms.get(npcId))
 		{
-			if (_activeRooms.containsKey(npcId) && !_activeRooms.get(npcId))
+			if (player.getParty() == null)
 			{
-				if (player.getParty() == null)
-				{
-					player.sendPacket(SystemMessageId.YOU_MUST_BE_IN_A_PARTY_IN_ORDER_TO_OPERATE_THE_MACHINE);
-					return null;
-				}
-				return "manager.htm";
+				player.sendPacket(SystemMessageId.YOU_MUST_BE_IN_A_PARTY_IN_ORDER_TO_OPERATE_THE_MACHINE);
+				return null;
 			}
+			return "manager.htm";
 		}
 		return super.onFirstTalk(npc, player);
 	}
@@ -603,11 +601,11 @@ public class TowerOfNaia extends AbstractNpcAI
 			{
 				if (ZONES.containsValue(zone.getId()))
 				{
-					for (int i : ZONES.keySet())
+					for (Entry<Integer, Integer> entry : ZONES.entrySet())
 					{
-						if (ZONES.get(i) == zone.getId())
+						if (entry.getValue() == zone.getId())
 						{
-							managerId = i;
+							managerId = entry.getKey();
 							break;
 						}
 					}

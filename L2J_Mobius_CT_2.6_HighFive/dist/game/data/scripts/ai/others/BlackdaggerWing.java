@@ -77,12 +77,9 @@ public class BlackdaggerWing extends AbstractNpcAI
 		if (npc.getVariables().getBoolean(MID_HP_FLAG, false))
 		{
 			final Creature mostHated = ((Attackable) npc).getMostHated();
-			if ((mostHated != null) && mostHated.isPlayer() && (mostHated != creature))
+			if ((mostHated != null) && mostHated.isPlayer() && (mostHated != creature) && (getRandom(5) < 1))
 			{
-				if (getRandom(5) < 1)
-				{
-					addSkillCastDesire(npc, creature, RANGE_MAGIC_ATTACK, 99999);
-				}
+				addSkillCastDesire(npc, creature, RANGE_MAGIC_ATTACK, 99999);
 			}
 		}
 		return super.onSeeCreature(npc, creature, isSummon);

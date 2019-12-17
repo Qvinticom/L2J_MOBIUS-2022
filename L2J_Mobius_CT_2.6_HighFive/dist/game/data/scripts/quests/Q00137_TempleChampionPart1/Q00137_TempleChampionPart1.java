@@ -30,7 +30,7 @@ public class Q00137_TempleChampionPart1 extends Quest
 {
 	// NPCs
 	private static final int SYLVAIN = 30070;
-	private static final int MOBS[] =
+	private static final int[] MOBS =
 	{
 		20083, // Granite Golem
 		20144, // Hangman Tree

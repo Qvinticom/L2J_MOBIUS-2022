@@ -410,6 +410,7 @@ public class Q00060_GoodWorksReward extends Quest
 					}
 					qs.exitQuest(false, true);
 				}
+				break; // Original script did not have this brake.
 			}
 			case "REPLY_5":
 			{
@@ -488,6 +489,7 @@ public class Q00060_GoodWorksReward extends Quest
 						htmltext = "31092-22a.html";
 					}
 				}
+				break; // Original script did not have this brake.
 			}
 			case "REPLY_6":
 			{
@@ -1156,20 +1158,17 @@ public class Q00060_GoodWorksReward extends Quest
 		final QuestState qs = getQuestState(killer, false);
 		if ((qs != null) && qs.isStarted() && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, true))
 		{
-			if (qs.isMemoState(1))
+			if (qs.isMemoState(1) && killer.isPlayer())
 			{
-				if (killer.isPlayer())
+				if (killer.getObjectId() == npc.getVariables().getInt("PLAYER_ID", 0))
 				{
-					if (killer.getObjectId() == npc.getVariables().getInt("PLAYER_ID", 0))
-					{
-						qs.setMemoState(2);
-						qs.setCond(2, true);
-						npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.YOU_ARE_STRONG_THIS_WAS_A_MISTAKE));
-					}
-					else
-					{
-						npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.WHO_ARE_YOU_TO_JOIN_IN_THE_BATTLE_HOW_UPSETTING));
-					}
+					qs.setMemoState(2);
+					qs.setCond(2, true);
+					npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.YOU_ARE_STRONG_THIS_WAS_A_MISTAKE));
+				}
+				else
+				{
+					npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.WHO_ARE_YOU_TO_JOIN_IN_THE_BATTLE_HOW_UPSETTING));
 				}
 			}
 			final Npc npc0 = npc.getVariables().getObject("npc0", Npc.class);
@@ -1354,12 +1353,9 @@ public class Q00060_GoodWorksReward extends Quest
 	{
 		startQuestTimer("DESPAWN", 60000, npc, null);
 		final PlayerInstance player = npc.getVariables().getObject("player0", PlayerInstance.class);
-		if (player != null)
+		if ((player != null) && player.isPlayer())
 		{
-			if (player.isPlayer())
-			{
-				npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.S1_I_MUST_KILL_YOU_BLAME_YOUR_OWN_CURIOSITY).addStringParameter(player.getAppearance().getVisibleName()));
-			}
+			npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.S1_I_MUST_KILL_YOU_BLAME_YOUR_OWN_CURIOSITY).addStringParameter(player.getAppearance().getVisibleName()));
 		}
 		return super.onSpawn(npc);
 	}

@@ -94,13 +94,10 @@ public class AdminShowQuests implements IAdminCommandHandler
 					val[0] = "name";
 					val[1] = cmdParams[2];
 				}
-				if (cmdParams.length > 3)
+				if ((cmdParams.length > 3) && cmdParams[3].equals("custom"))
 				{
-					if (cmdParams[3].equals("custom"))
-					{
-						val[0] = "custom";
-						val[1] = cmdParams[2];
-					}
+					val[0] = "custom";
+					val[1] = cmdParams[2];
 				}
 			}
 		}
@@ -327,7 +324,7 @@ public class AdminShowQuests implements IAdminCommandHandler
 			{
 				case "COMPLETED":
 				{
-					qs.exitQuest((val[3].equals("1")) ? true : false);
+					qs.exitQuest(val[3].equals("1"));
 					break;
 				}
 				case "DELETE":

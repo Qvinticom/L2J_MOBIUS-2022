@@ -216,7 +216,7 @@ public class Parade extends AbstractNpcAI
 		@Override
 		public void run()
 		{
-			if (spawns.size() <= 0)
+			if (spawns.isEmpty())
 			{
 				return;
 			}
@@ -235,7 +235,7 @@ public class Parade extends AbstractNpcAI
 					}
 				}
 			}
-			if ((spawns.size() == 0) && (deleteTask != null))
+			if ((spawns.isEmpty()) && (deleteTask != null))
 			{
 				deleteTask.cancel(false);
 			}

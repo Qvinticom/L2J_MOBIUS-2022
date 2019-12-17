@@ -77,20 +77,19 @@ import org.l2jmobius.gameserver.util.Util;
 public class Quest extends AbstractScript implements IIdentifiable
 {
 	/** Map containing lists of timers from the name of the timer. */
-	private volatile Map<String, List<QuestTimer>> _questTimers = null;
+	private Map<String, List<QuestTimer>> _questTimers = null;
 	private final ReentrantReadWriteLock _rwLock = new ReentrantReadWriteLock();
 	private final WriteLock _writeLock = _rwLock.writeLock();
 	private final ReadLock _readLock = _rwLock.readLock();
 	/** Map containing all the start conditions. */
-	private volatile Map<Predicate<PlayerInstance>, String> _startCondition = null;
+	private Map<Predicate<PlayerInstance>, String> _startCondition = null;
 	
 	private final int _questId;
-	private final byte _initialState = State.CREATED;
 	protected boolean _onEnterWorld = false;
 	private boolean _isCustom = false;
-	
 	public int[] _questItemIds = null;
 	
+	private static final byte INITIAL_STATE = State.CREATED;
 	private static final String DEFAULT_NO_QUEST_MSG = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>";
 	private static final String DEFAULT_ALREADY_COMPLETED_MSG = "<html><body>This quest has already been completed.</body></html>";
 	
@@ -180,7 +179,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 */
 	public QuestState newQuestState(PlayerInstance player)
 	{
-		return new QuestState(this, player, _initialState);
+		return new QuestState(this, player, INITIAL_STATE);
 	}
 	
 	/**
@@ -207,7 +206,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 */
 	public byte getInitialState()
 	{
-		return _initialState;
+		return INITIAL_STATE;
 	}
 	
 	/**
@@ -705,12 +704,9 @@ public class Quest extends AbstractScript implements IIdentifiable
 		try
 		{
 			res = onItemEvent(item, player, event);
-			if (res != null)
+			if ((res != null) && (res.equalsIgnoreCase("true") || res.equalsIgnoreCase("false")))
 			{
-				if (res.equalsIgnoreCase("true") || res.equalsIgnoreCase("false"))
-				{
-					return;
-				}
+				return;
 			}
 		}
 		catch (Exception e)
@@ -2454,7 +2450,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 		{
 			if (npc != null)
 			{
-				content = content.replaceAll("%objectId%", String.valueOf(npc.getObjectId()));
+				content = content.replace("%objectId%", String.valueOf(npc.getObjectId()));
 			}
 			
 			if (questwindow && (_questId > 0) && (_questId < 20000) && (_questId != 999))

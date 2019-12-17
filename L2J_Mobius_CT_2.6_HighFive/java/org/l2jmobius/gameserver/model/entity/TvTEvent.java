@@ -71,27 +71,13 @@ public class TvTEvent
 	}
 	
 	protected static final Logger LOGGER = Logger.getLogger(TvTEvent.class.getName());
-	/** html path **/
-	private static final String htmlPath = "data/scripts/custom/events/TvT/TvTManager/";
-	/**
-	 * The teams of the TvTEvent<br>
-	 */
+	
+	private static final String HTML_PATH = "data/scripts/custom/events/TvT/TvTManager/";
+	
 	private static TvTEventTeam[] _teams = new TvTEventTeam[2];
-	/**
-	 * The state of the TvTEvent<br>
-	 */
 	private static EventState _state = EventState.INACTIVE;
-	/**
-	 * The spawn of the participation npc<br>
-	 */
 	private static Spawn _npcSpawn = null;
-	/**
-	 * the npc instance of the participation npc<br>
-	 */
 	private static Npc _lastNpcSpawn = null;
-	/**
-	 * Instance id<br>
-	 */
 	private static int _TvTEventInstance = 0;
 	
 	private TvTEvent()
@@ -196,7 +182,7 @@ public class TvTEvent
 			}
 		}
 		
-		final int balance[] =
+		final int[] balance =
 		{
 			0,
 			0
@@ -405,7 +391,7 @@ public class TvTEvent
 			final NpcHtmlMessage npcHtmlMessage = new NpcHtmlMessage();
 			
 			statusUpdate.addAttribute(StatusUpdate.CUR_LOAD, playerInstance.getCurrentLoad());
-			npcHtmlMessage.setHtml(HtmCache.getInstance().getHtm(playerInstance, htmlPath + "Reward.html"));
+			npcHtmlMessage.setHtml(HtmCache.getInstance().getHtm(playerInstance, HTML_PATH + "Reward.html"));
 			playerInstance.sendPacket(statusUpdate);
 			playerInstance.sendPacket(npcHtmlMessage);
 		}

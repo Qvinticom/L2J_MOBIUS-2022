@@ -132,7 +132,6 @@ import handlers.admincommandhandlers.AdminTerritoryWar;
 import handlers.admincommandhandlers.AdminTest;
 import handlers.admincommandhandlers.AdminTransform;
 import handlers.admincommandhandlers.AdminTvTEvent;
-import handlers.admincommandhandlers.AdminUnblockIp;
 import handlers.admincommandhandlers.AdminVitality;
 import handlers.admincommandhandlers.AdminZone;
 import handlers.admincommandhandlers.AdminZones;
@@ -434,7 +433,6 @@ public class MasterHandler
 			AdminTest.class,
 			AdminTransform.class,
 			AdminTvTEvent.class,
-			AdminUnblockIp.class,
 			AdminVitality.class,
 			AdminZone.class,
 		},
@@ -629,12 +627,9 @@ public class MasterHandler
 			}
 		}
 		
-		registerHandlerMethods.entrySet().stream().filter(e -> e.getValue() == null).forEach(e ->
-		{
-			LOGGER.log(Level.WARNING, "Failed loading handlers of: " + e.getKey().getClass().getSimpleName() + " seems registerHandler function does not exist.");
-		});
+		registerHandlerMethods.entrySet().stream().filter(e -> e.getValue() == null).forEach(e -> LOGGER.log(Level.WARNING, "Failed loading handlers of: " + e.getKey().getClass().getSimpleName() + " seems registerHandler function does not exist."));
 		
-		for (Class<?> classes[] : HANDLERS)
+		for (Class<?>[] classes : HANDLERS)
 		{
 			for (Class<?> c : classes)
 			{
@@ -657,7 +652,6 @@ public class MasterHandler
 				catch (Exception e)
 				{
 					LOGGER.log(Level.WARNING, "Failed loading handler: " + c.getSimpleName(), e);
-					continue;
 				}
 			}
 		}

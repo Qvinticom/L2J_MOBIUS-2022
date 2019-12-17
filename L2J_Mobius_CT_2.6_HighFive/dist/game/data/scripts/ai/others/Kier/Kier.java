@@ -43,24 +43,24 @@ public class Kier extends AbstractNpcAI
 	public String onFirstTalk(Npc npc, PlayerInstance player)
 	{
 		String htmltext = null;
-		final QuestState st_Q00115 = player.getQuestState(Q00115_TheOtherSideOfTruth.class.getSimpleName());
-		if (st_Q00115 == null)
+		final QuestState qs115 = player.getQuestState(Q00115_TheOtherSideOfTruth.class.getSimpleName());
+		if (qs115 == null)
 		{
 			htmltext = "32022-02.html";
 		}
-		else if (!st_Q00115.isCompleted())
+		else if (!qs115.isCompleted())
 		{
 			htmltext = "32022-01.html";
 		}
 		
-		final QuestState st_Q10283 = player.getQuestState(Q10283_RequestOfIceMerchant.class.getSimpleName());
-		if (st_Q10283 != null)
+		final QuestState qs10283 = player.getQuestState(Q10283_RequestOfIceMerchant.class.getSimpleName());
+		if (qs10283 != null)
 		{
-			if (st_Q10283.isMemoState(2))
+			if (qs10283.isMemoState(2))
 			{
 				htmltext = "32022-03.html";
 			}
-			else if (st_Q10283.isCompleted())
+			else if (qs10283.isCompleted())
 			{
 				htmltext = "32022-04.html";
 			}

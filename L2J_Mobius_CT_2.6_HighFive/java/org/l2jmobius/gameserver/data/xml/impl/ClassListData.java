@@ -17,7 +17,7 @@
 package org.l2jmobius.gameserver.data.xml.impl;
 
 import java.io.File;
-import java.util.HashMap;
+import java.util.EnumMap;
 import java.util.Map;
 
 import org.w3c.dom.Document;
@@ -34,7 +34,7 @@ import org.l2jmobius.gameserver.model.base.ClassInfo;
  */
 public class ClassListData implements IXmlReader
 {
-	private final Map<ClassId, ClassInfo> _classData = new HashMap<>();
+	private final Map<ClassId, ClassInfo> _classData = new EnumMap<>(ClassId.class);
 	
 	/**
 	 * Instantiates a new class list data.

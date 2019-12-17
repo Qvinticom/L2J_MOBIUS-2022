@@ -1440,7 +1440,7 @@ public class BlowfishEngine
 	 */
 	private int bytesTo32bits(byte[] src, int srcIndex)
 	{
-		return ((src[srcIndex + 3] & 0xff) << 24) | ((src[srcIndex + 2] & 0xff) << 16) | ((src[srcIndex + 1] & 0xff) << 8) | ((src[srcIndex] & 0xff));
+		return ((src[srcIndex + 3] & 0xff) << 24) | ((src[srcIndex + 2] & 0xff) << 16) | ((src[srcIndex + 1] & 0xff) << 8) | (src[srcIndex] & 0xff);
 	}
 	
 	/**

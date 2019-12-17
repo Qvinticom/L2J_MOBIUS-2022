@@ -142,7 +142,7 @@ public class NpcSay implements IClientOutgoingPacket
 				if (nsl != null)
 				{
 					packet.writeD(-1);
-					packet.writeS(nsl.getLocalisation(_parameters != null ? _parameters : Collections.EMPTY_LIST));
+					packet.writeS(nsl.getLocalisation(_parameters != null ? _parameters : Collections.emptyList()));
 					return true;
 				}
 			}

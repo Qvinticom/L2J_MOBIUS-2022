@@ -47,10 +47,6 @@ public class Lindvior extends AbstractNpcAI
 	private static boolean ALT_MODE = false;
 	private static int ALT_MODE_MIN = 60; // schedule delay in minutes if ALT_MODE enabled
 	
-	private Npc _lindviorCamera = null;
-	private Npc _tomaris = null;
-	private Npc _artius = null;
-	
 	public Lindvior()
 	{
 		scheduleNextLindviorVisit();
@@ -92,13 +88,13 @@ public class Lindvior extends AbstractNpcAI
 			}
 			case "start":
 			{
-				_lindviorCamera = SpawnTable.getInstance().getAnySpawn(LINDVIOR_CAMERA).getLastSpawn();
-				_tomaris = SpawnTable.getInstance().getAnySpawn(TOMARIS).getLastSpawn();
-				_artius = SpawnTable.getInstance().getAnySpawn(ARTIUS).getLastSpawn();
-				startQuestTimer("tomaris_shout1", 1000, _tomaris, null);
-				startQuestTimer("artius_shout", 60000, _artius, null);
-				startQuestTimer("tomaris_shout2", 90000, _tomaris, null);
-				startQuestTimer("lindvior_scene", 120000, _lindviorCamera, null);
+				final Npc lindviorCamera = SpawnTable.getInstance().getAnySpawn(LINDVIOR_CAMERA).getLastSpawn();
+				final Npc tomaris = SpawnTable.getInstance().getAnySpawn(TOMARIS).getLastSpawn();
+				final Npc artius = SpawnTable.getInstance().getAnySpawn(ARTIUS).getLastSpawn();
+				startQuestTimer("tomaris_shout1", 1000, tomaris, null);
+				startQuestTimer("artius_shout", 60000, artius, null);
+				startQuestTimer("tomaris_shout2", 90000, tomaris, null);
+				startQuestTimer("lindvior_scene", 120000, lindviorCamera, null);
 				scheduleNextLindviorVisit();
 				break;
 			}

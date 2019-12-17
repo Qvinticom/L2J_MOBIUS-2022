@@ -74,7 +74,7 @@ import instances.AbstractInstance;
  */
 public class FinalEmperialTomb extends AbstractInstance implements IXmlReader
 {
-	Logger LOGGER = Logger.getLogger(FinalEmperialTomb.class.getName());
+	final Logger LOGGER = Logger.getLogger(FinalEmperialTomb.class.getName());
 	
 	protected static class FETSpawn
 	{
@@ -156,7 +156,7 @@ public class FinalEmperialTomb extends AbstractInstance implements IXmlReader
 	private static final int MAX_PLAYERS = 27;
 	private static final int TIME_BETWEEN_DEMON_SPAWNS = 20000;
 	private static final int MAX_DEMONS = 24;
-	private static final boolean debug = false;
+	private static final boolean DEBUG = false;
 	private final Map<Integer, Territory> _spawnZoneList = new HashMap<>();
 	private final Map<Integer, List<FETSpawn>> _spawnList = new HashMap<>();
 	private int _spawnCount = 0;
@@ -432,7 +432,7 @@ public class FinalEmperialTomb extends AbstractInstance implements IXmlReader
 	@Override
 	protected boolean checkConditions(PlayerInstance player)
 	{
-		if (debug || player.canOverrideCond(PlayerCondOverride.INSTANCE_CONDITIONS))
+		if (DEBUG || player.canOverrideCond(PlayerCondOverride.INSTANCE_CONDITIONS))
 		{
 			return true;
 		}
@@ -565,7 +565,7 @@ public class FinalEmperialTomb extends AbstractInstance implements IXmlReader
 	
 	protected synchronized void controlStatus(InstanceWorld world)
 	{
-		if (debug)
+		if (DEBUG)
 		{
 			LOGGER.info("[Final Emperial Tomb] Starting " + world.getStatus() + ". status.");
 		}
@@ -711,7 +711,7 @@ public class FinalEmperialTomb extends AbstractInstance implements IXmlReader
 			Map<Npc, Integer> portraits = _world.getParameters().getMap("portraits", Npc.class, Integer.class);
 			if ((InstanceManager.getInstance().getWorld(_world.getInstanceId()) != _world) || (portraits == null) || portraits.isEmpty())
 			{
-				if (debug)
+				if (DEBUG)
 				{
 					LOGGER.info("[Final Emperial Tomb] Instance is deleted or all Portraits is killed.");
 				}
@@ -1444,21 +1444,18 @@ public class FinalEmperialTomb extends AbstractInstance implements IXmlReader
 	public String onSkillSee(Npc npc, PlayerInstance caster, Skill skill, WorldObject[] targets, boolean isSummon)
 	{
 		final InstanceWorld world = InstanceManager.getInstance().getWorld(npc);
-		if (world != null)
+		if ((world != null) && (skill != null))
 		{
-			if (skill != null)
+			// When Dewdrop of Destruction is used on Portraits they suicide.
+			if (CommonUtil.contains(PORTRAITS, npc.getId()) && (skill.getId() == DEWDROP_OF_DESTRUCTION_SKILL_ID))
 			{
-				// When Dewdrop of Destruction is used on Portraits they suicide.
-				if (CommonUtil.contains(PORTRAITS, npc.getId()) && (skill.getId() == DEWDROP_OF_DESTRUCTION_SKILL_ID))
-				{
-					npc.doDie(caster);
-				}
-				else if ((npc.getId() == FRINTEZZA) && (skill.getId() == SOUL_BREAKING_ARROW_SKILL_ID))
-				{
-					npc.setScriptValue(1);
-					npc.setTarget(null);
-					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-				}
+				npc.doDie(caster);
+			}
+			else if ((npc.getId() == FRINTEZZA) && (skill.getId() == SOUL_BREAKING_ARROW_SKILL_ID))
+			{
+				npc.setScriptValue(1);
+				npc.setTarget(null);
+				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 			}
 		}
 		return null;
@@ -1483,7 +1480,7 @@ public class FinalEmperialTomb extends AbstractInstance implements IXmlReader
 			if (npc.getId() == HALL_ALARM)
 			{
 				ThreadPool.schedule(new StatusTask(world, 0), 2000);
-				if (debug)
+				if (DEBUG)
 				{
 					LOGGER.info("[Final Emperial Tomb] Hall alarm is disabled, doors will open!");
 				}
@@ -1495,7 +1492,7 @@ public class FinalEmperialTomb extends AbstractInstance implements IXmlReader
 				if (darkChoirPlayerCount < 1)
 				{
 					ThreadPool.schedule(new StatusTask(world, 2), 2000);
-					if (debug)
+					if (DEBUG)
 					{
 						LOGGER.info("[Final Emperial Tomb] All Dark Choir Players are killed, doors will open!");
 					}
@@ -1507,12 +1504,9 @@ public class FinalEmperialTomb extends AbstractInstance implements IXmlReader
 			}
 			else if (world.getStatus() <= 2)
 			{
-				if (npc.getId() == HALL_KEEPER_CAPTAIN)
+				if ((npc.getId() == HALL_KEEPER_CAPTAIN) && (getRandom(100) < 5))
 				{
-					if (getRandom(100) < 5)
-					{
-						npc.dropItem(player, DEWDROP_OF_DESTRUCTION_ITEM_ID, 1);
-					}
+					npc.dropItem(player, DEWDROP_OF_DESTRUCTION_ITEM_ID, 1);
 				}
 				
 				if (checkKillProgress(npc, world))

@@ -45,8 +45,7 @@ public class DimensionalRift
 	protected byte _type;
 	protected Party _party;
 	protected List<Byte> _completedRooms = new ArrayList<>();
-	private static final long seconds_5 = 5000;
-	// private static final int MILLISECONDS_IN_MINUTE = 60000;
+	private static final long FIVE_SECONDS = 5000;
 	protected byte jumps_current = 0;
 	
 	private Timer teleporterTimer;
@@ -187,7 +186,7 @@ public class DimensionalRift
 		}
 		else
 		{
-			teleporterTimer.schedule(teleporterTimerTask, seconds_5); // incorrect party member invited.
+			teleporterTimer.schedule(teleporterTimerTask, FIVE_SECONDS); // incorrect party member invited.
 		}
 	}
 	

@@ -51,7 +51,7 @@ public class BuffInfo
 	private final List<AbstractEffect> _effects = new ArrayList<>(1);
 	// Tasks
 	/** Effect tasks for ticks. */
-	private volatile Map<AbstractEffect, EffectTaskInfo> _tasks = new ConcurrentHashMap<>();
+	private final Map<AbstractEffect, EffectTaskInfo> _tasks = new ConcurrentHashMap<>();
 	// Time and ticks
 	/** Abnormal time. */
 	private int _abnormalTime;

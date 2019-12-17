@@ -55,13 +55,10 @@ public class FakeDeath extends AbstractEffect
 		}
 		
 		final double manaDam = _power * getTicksMultiplier();
-		if (manaDam > info.getEffected().getCurrentMp())
+		if ((manaDam > info.getEffected().getCurrentMp()) && info.getSkill().isToggle())
 		{
-			if (info.getSkill().isToggle())
-			{
-				info.getEffected().sendPacket(SystemMessageId.YOUR_SKILL_WAS_DEACTIVATED_DUE_TO_LACK_OF_MP);
-				return false;
-			}
+			info.getEffected().sendPacket(SystemMessageId.YOUR_SKILL_WAS_DEACTIVATED_DUE_TO_LACK_OF_MP);
+			return false;
 		}
 		
 		info.getEffected().reduceCurrentMp(manaDam);

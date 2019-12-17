@@ -21,7 +21,7 @@ import java.util.logging.FileHandler;
 
 public class MDamageLogHandler extends FileHandler
 {
-	public MDamageLogHandler() throws IOException, SecurityException
+	public MDamageLogHandler() throws IOException
 	{
 		super();
 	}

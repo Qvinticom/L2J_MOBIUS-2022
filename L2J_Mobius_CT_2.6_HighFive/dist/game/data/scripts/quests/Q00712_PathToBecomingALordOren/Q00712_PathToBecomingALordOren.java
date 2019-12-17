@@ -74,47 +74,57 @@ public final class Q00712_PathToBecomingALordOren extends Quest
 		}
 		
 		final PlayerInstance castleOwner = castle.getOwner().getLeader().getPlayerInstance();
-		if (event.equals("35226-03.html"))
+		switch (event)
 		{
-			qs.startQuest();
-		}
-		else if (event.equals("30676-03.html"))
-		{
-			qs.setCond(3);
-		}
-		else if (event.equals("30169-02.html"))
-		{
-			if (isLordAvailable(3, qs))
+			case "35226-03.html":
 			{
-				castleOwner.getQuestState(getName()).setCond(4);
-				qs.setState(State.STARTED);
+				qs.startQuest();
+				break;
 			}
-		}
-		else if (event.equals("30176-02.html"))
-		{
-			if (isLordAvailable(4, qs))
+			case "30676-03.html":
 			{
-				castleOwner.getQuestState(getName()).setCond(5);
-				qs.exitQuest(true);
+				qs.setCond(3);
+				break;
 			}
-		}
-		else if (event.equals("30676-05.html"))
-		{
-			qs.setCond(6);
-		}
-		else if (event.equals("30676-07.html"))
-		{
-			takeItems(player, NEBULITE_ORB, -1);
-			qs.setCond(8);
-		}
-		else if (event.equals("35226-06.html"))
-		{
-			if (castleOwner != null)
+			case "30169-02.html":
 			{
-				final NpcSay packet = new NpcSay(npc.getObjectId(), ChatType.NPC_SHOUT, npc.getId(), NpcStringId.S1_HAS_BECOME_THE_LORD_OF_THE_TOWN_OF_OREN_MAY_THERE_BE_GLORY_IN_THE_TERRITORY_OF_OREN);
-				packet.addStringParameter(player.getName());
-				npc.broadcastPacket(packet);
-				qs.exitQuest(true, true);
+				if (isLordAvailable(3, qs))
+				{
+					castleOwner.getQuestState(getName()).setCond(4);
+					qs.setState(State.STARTED);
+				}
+				break;
+			}
+			case "30176-02.html":
+			{
+				if (isLordAvailable(4, qs))
+				{
+					castleOwner.getQuestState(getName()).setCond(5);
+					qs.exitQuest(true);
+				}
+				break;
+			}
+			case "30676-05.html":
+			{
+				qs.setCond(6);
+				break;
+			}
+			case "30676-07.html":
+			{
+				takeItems(player, NEBULITE_ORB, -1);
+				qs.setCond(8);
+				break;
+			}
+			case "35226-06.html":
+			{
+				if (castleOwner != null)
+				{
+					final NpcSay packet = new NpcSay(npc.getObjectId(), ChatType.NPC_SHOUT, npc.getId(), NpcStringId.S1_HAS_BECOME_THE_LORD_OF_THE_TOWN_OF_OREN_MAY_THERE_BE_GLORY_IN_THE_TERRITORY_OF_OREN);
+					packet.addStringParameter(player.getName());
+					npc.broadcastPacket(packet);
+					qs.exitQuest(true, true);
+				}
+				break;
 			}
 		}
 		return event;
@@ -262,13 +272,6 @@ public final class Q00712_PathToBecomingALordOren extends Quest
 		final Castle castle = CastleManager.getInstance().getCastleById(OREN_CASTLE);
 		final Clan owner = castle.getOwner();
 		final PlayerInstance castleOwner = castle.getOwner().getLeader().getPlayerInstance();
-		if (owner != null)
-		{
-			if ((castleOwner != null) && (castleOwner != qs.getPlayer()) && (owner == qs.getPlayer().getClan()) && (castleOwner.getQuestState(getName()) != null) && (castleOwner.getQuestState(getName()).isCond(cond)))
-			{
-				return true;
-			}
-		}
-		return false;
+		return (owner != null) && (castleOwner != null) && (castleOwner != qs.getPlayer()) && (owner == qs.getPlayer().getClan()) && (castleOwner.getQuestState(getName()) != null) && (castleOwner.getQuestState(getName()).isCond(cond));
 	}
 }

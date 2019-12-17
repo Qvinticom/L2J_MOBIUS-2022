@@ -644,10 +644,7 @@ public class IceQueensCastleBattle extends AbstractInstance
 						final Attackable mob = (Attackable) npc;
 						mob.clearAggroList();
 						
-						World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, 1000, characters ->
-						{
-							mob.addDamageHate(characters, 0, getRandom(10000, 20000));
-						});
+						World.getInstance().forEachVisibleObjectInRange(npc, PlayerInstance.class, 1000, character -> mob.addDamageHate(character, 0, getRandom(10000, 20000)));
 						startQuestTimer("LEADER_RANDOMIZE", 25000, npc, null);
 						break;
 					}
@@ -791,13 +788,10 @@ public class IceQueensCastleBattle extends AbstractInstance
 					}
 					else
 					{
-						if ((attacker.getMountType() == MountType.STRIDER) && !attacker.isAffectedBySkill(ANTI_STRIDER.getSkillId()) && !npc.isCastingNow())
+						if ((attacker.getMountType() == MountType.STRIDER) && !attacker.isAffectedBySkill(ANTI_STRIDER.getSkillId()) && !npc.isCastingNow() && !npc.isSkillDisabled(ANTI_STRIDER.getSkill()))
 						{
-							if (!npc.isSkillDisabled(ANTI_STRIDER.getSkill()))
-							{
-								npc.setTarget(attacker);
-								npc.doCast(ANTI_STRIDER.getSkill());
-							}
+							npc.setTarget(attacker);
+							npc.doCast(ANTI_STRIDER.getSkill());
 						}
 						
 						final Creature mostHated = ((Attackable) npc).getMostHated();
@@ -841,13 +835,10 @@ public class IceQueensCastleBattle extends AbstractInstance
 								}
 							}
 						}
-						else if (getRandom(10000) < 1500)
+						else if ((getRandom(10000) < 1500) && !npc.isAffectedBySkill(SELF_NOVA.getSkillId()) && npc.checkDoCastConditions(SELF_NOVA.getSkill()) && !npc.isCastingNow())
 						{
-							if (!npc.isAffectedBySkill(SELF_NOVA.getSkillId()) && npc.checkDoCastConditions(SELF_NOVA.getSkill()) && !npc.isCastingNow())
-							{
-								npc.setTarget(npc);
-								npc.doCast(SELF_NOVA.getSkill());
-							}
+							npc.setTarget(npc);
+							npc.doCast(SELF_NOVA.getSkill());
 						}
 					}
 					break;
@@ -881,13 +872,10 @@ public class IceQueensCastleBattle extends AbstractInstance
 						startQuestTimer("SPAWN_SUPPORT", 27000, controller, null);
 					}
 					
-					if ((attacker.getMountType() == MountType.STRIDER) && !attacker.isAffectedBySkill(ANTI_STRIDER.getSkillId()) && !npc.isCastingNow())
+					if ((attacker.getMountType() == MountType.STRIDER) && !attacker.isAffectedBySkill(ANTI_STRIDER.getSkillId()) && !npc.isCastingNow() && !npc.isSkillDisabled(ANTI_STRIDER.getSkill()))
 					{
-						if (!npc.isSkillDisabled(ANTI_STRIDER.getSkill()))
-						{
-							npc.setTarget(attacker);
-							npc.doCast(ANTI_STRIDER.getSkill());
-						}
+						npc.setTarget(attacker);
+						npc.doCast(ANTI_STRIDER.getSkill());
 					}
 					
 					final Creature mostHated = ((Attackable) npc).getMostHated();

@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver.cache;
 import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.FileInputStream;
+import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -122,7 +123,7 @@ public class HtmCache
 			byte[] raw = new byte[bytes];
 			
 			bis.read(raw);
-			content = new String(raw, "UTF-8");
+			content = new String(raw, StandardCharsets.UTF_8);
 			content = content.replaceAll("(?s)<!--.*?-->", ""); // Remove html comments
 			
 			final String oldContent = HTML_CACHE.put(file.toURI().getPath().substring(Config.DATAPACK_ROOT.toURI().getPath().length()), content);

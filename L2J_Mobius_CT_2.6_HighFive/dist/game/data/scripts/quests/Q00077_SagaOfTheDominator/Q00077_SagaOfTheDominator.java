@@ -44,7 +44,7 @@ public class Q00077_SagaOfTheDominator extends AbstractSagaQuest
 			31656,
 			31290
 		};
-		Items = new int[]
+		_items = new int[]
 		{
 			7080,
 			7539,
@@ -59,27 +59,27 @@ public class Q00077_SagaOfTheDominator extends AbstractSagaQuest
 			7100,
 			0
 		};
-		Mob = new int[]
+		_mob = new int[]
 		{
 			27294,
 			27226,
 			27262
 		};
-		classid = new int[]
+		_classId = new int[]
 		{
 			115
 		};
-		prevclass = new int[]
+		_prevClass = new int[]
 		{
 			0x33
 		};
-		npcSpawnLocations = new Location[]
+		_npcSpawnLocations = new Location[]
 		{
 			new Location(162898, -76492, -3096),
 			new Location(47429, -56923, -2383),
 			new Location(47391, -56929, -2370)
 		};
-		Text = new String[]
+		_text = new String[]
 		{
 			"PLAYERNAME! Pursued to here! However, I jumped out of the Banshouren boundaries! You look at the giant as the sign of power!",
 			"... Oh ... good! So it was ... let's begin!",

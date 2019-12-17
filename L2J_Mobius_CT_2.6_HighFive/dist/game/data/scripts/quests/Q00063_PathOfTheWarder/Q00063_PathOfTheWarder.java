@@ -524,12 +524,9 @@ public class Q00063_PathOfTheWarder extends Quest
 		}
 		else if (qs.isCompleted())
 		{
-			if (npc.getId() == MASTER_GOBIE)
+			if ((npc.getId() == MASTER_GOBIE) && hasQuestItems(player, STEELRAZOR_EVALUTION))
 			{
-				if (hasQuestItems(player, STEELRAZOR_EVALUTION))
-				{
-					htmltext = "32198-20.html";
-				}
+				htmltext = "32198-20.html";
 			}
 		}
 		return htmltext;

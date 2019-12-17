@@ -63,10 +63,6 @@ public class HallOfErosionAttack extends AbstractNpcAI
 		{
 			tumorCount += value;
 		}
-		
-		public HEAWorld()
-		{
-		}
 	}
 	
 	private static final int INSTANCEID = 119;

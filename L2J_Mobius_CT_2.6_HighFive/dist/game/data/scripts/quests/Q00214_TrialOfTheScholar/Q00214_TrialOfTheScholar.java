@@ -566,7 +566,7 @@ public class Q00214_TrialOfTheScholar extends Quest
 		{
 			if (npc.getId() == MAGISTER_MIRIEN)
 			{
-				if ((player.getClassId() == ClassId.WIZARD) || (player.getClassId() == ClassId.ELVEN_WIZARD) || ((player.getClassId() == ClassId.DARK_WIZARD)))
+				if ((player.getClassId() == ClassId.WIZARD) || (player.getClassId() == ClassId.ELVEN_WIZARD) || (player.getClassId() == ClassId.DARK_WIZARD))
 				{
 					if (player.getLevel() < MIN_LVL)
 					{

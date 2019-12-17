@@ -162,7 +162,7 @@ public class Core extends AbstractNpcAI
 		}
 		else if (event.equalsIgnoreCase("despawn_minions"))
 		{
-			_minions.forEach(m -> m.decayMe());
+			_minions.forEach(Attackable::decayMe);
 			_minions.clear();
 		}
 		return super.onAdvEvent(event, npc, player);

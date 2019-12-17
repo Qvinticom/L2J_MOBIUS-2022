@@ -61,6 +61,7 @@ public class AccountingFormatter extends Formatter
 					}
 					catch (Exception e)
 					{
+						// Ignore.
 					}
 					
 					switch ((ConnectionState) client.getConnectionState())

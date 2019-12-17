@@ -66,7 +66,7 @@ public class ExBrRecentProductList implements IClientOutgoingPacket
 	@Override
 	public boolean write(PacketWriter packet)
 	{
-		if ((_itemList == null) || _itemList.isEmpty())
+		if (_itemList.isEmpty())
 		{
 			return false;
 		}

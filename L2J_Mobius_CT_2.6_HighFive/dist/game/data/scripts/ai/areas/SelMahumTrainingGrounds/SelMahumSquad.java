@@ -42,8 +42,8 @@ public class SelMahumSquad extends AbstractNpcAI
 	private static final int FIRE = 18927;
 	private static final int STOVE = 18933;
 	
-	private static final int OHS_Weapon = 15280;
-	private static final int THS_Weapon = 15281;
+	private static final int OHS_WEAPON = 15280;
+	private static final int THS_WEAPON = 15281;
 	
 	// Sel Mahum Squad Leaders
 	private static final int[] SQUAD_LEADERS =
@@ -255,7 +255,7 @@ public class SelMahumSquad extends AbstractNpcAI
 				{
 					receiver.setRandomWalking(true);
 					receiver.getVariables().remove("BUSY_STATE");
-					receiver.setRHandId(THS_Weapon);
+					receiver.setRHandId(THS_WEAPON);
 					startQuestTimer("return_from_fire", 3000, receiver, null);
 				}
 				break;
@@ -266,7 +266,7 @@ public class SelMahumSquad extends AbstractNpcAI
 				{
 					if (!receiver.isRandomWalkingEnabled()) // i_ai0 == 1
 					{
-						receiver.setRHandId(THS_Weapon);
+						receiver.setRHandId(THS_WEAPON);
 					}
 					receiver.setRandomWalking(false); // Moving to fire - i_ai0 = 1
 					receiver.getVariables().set("BUSY_STATE", 1); // Eating - i_ai3 = 1
@@ -314,7 +314,7 @@ public class SelMahumSquad extends AbstractNpcAI
 		// NPC moves to fire
 		if (!npc.isRandomWalkingEnabled() && (npc.getX() == npc.getVariables().getInt("DESTINATION_X")) && (npc.getY() == npc.getVariables().getInt("DESTINATION_Y")))
 		{
-			npc.setRHandId(OHS_Weapon);
+			npc.setRHandId(OHS_WEAPON);
 			startQuestTimer("fire_arrived", 3000, npc, null);
 		}
 	}
@@ -388,9 +388,9 @@ public class SelMahumSquad extends AbstractNpcAI
 		attacked.getVariables().remove("BUSY_STATE");
 		attacked.setRandomWalking(true);
 		attacked.setDisplayEffect(MAHUM_EFFECT_NONE);
-		if (attacked.getRightHandItem() == OHS_Weapon)
+		if (attacked.getRightHandItem() == OHS_WEAPON)
 		{
-			attacked.setRHandId(THS_Weapon);
+			attacked.setRHandId(THS_WEAPON);
 		}
 		// TODO: Check about i_quest0
 	}

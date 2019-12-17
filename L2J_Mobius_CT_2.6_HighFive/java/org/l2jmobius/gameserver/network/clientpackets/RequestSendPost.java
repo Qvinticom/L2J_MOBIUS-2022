@@ -61,12 +61,8 @@ public class RequestSendPost implements IClientIncomingPacket
 	private boolean _isCod;
 	private String _subject;
 	private String _text;
-	private AttachmentItem _items[] = null;
+	private AttachmentItem[] _items = null;
 	private long _reqAdena;
-	
-	public RequestSendPost()
-	{
-	}
 	
 	@Override
 	public boolean read(GameClient client, PacketReader packet)

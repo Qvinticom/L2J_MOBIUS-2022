@@ -353,16 +353,13 @@ public class SSQDisciplesNecropolisPast extends AbstractInstance
 		final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
 		if (world != null)
 		{
-			if (npc.isScriptValue(0))
+			if (npc.isScriptValue(0) && (npc.getCurrentHp() < (npc.getMaxHp() * 0.1)))
 			{
-				if (npc.getCurrentHp() < (npc.getMaxHp() * 0.1))
-				{
-					giveItems(player, SEAL_OF_BINDING, 1);
-					player.sendPacket(SystemMessageId.THE_SEALING_DEVICE_GLITTERS_AND_MOVES_ACTIVATION_COMPLETE_NORMALLY);
-					npc.setScriptValue(1);
-					startQuestTimer("FINISH", 1000, npc, player);
-					cancelQuestTimer("FIGHT", npc, player);
-				}
+				giveItems(player, SEAL_OF_BINDING, 1);
+				player.sendPacket(SystemMessageId.THE_SEALING_DEVICE_GLITTERS_AND_MOVES_ACTIVATION_COMPLETE_NORMALLY);
+				npc.setScriptValue(1);
+				startQuestTimer("FINISH", 1000, npc, player);
+				cancelQuestTimer("FIGHT", npc, player);
 			}
 			if (getRandom(100) < 50)
 			{

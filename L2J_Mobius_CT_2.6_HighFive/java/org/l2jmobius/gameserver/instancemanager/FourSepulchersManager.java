@@ -150,7 +150,7 @@ public class FourSepulchersManager
 	private long _entryTimeEnd = 0;
 	private long _warmUpTimeEnd = 0;
 	
-	private final byte _newCycleMin = 55;
+	private static final byte NEW_CYCLE_MIN = 55;
 	
 	public void init()
 	{
@@ -231,11 +231,11 @@ public class FourSepulchersManager
 	protected void timeCalculator()
 	{
 		final Calendar tmp = Calendar.getInstance();
-		if (tmp.get(Calendar.MINUTE) < _newCycleMin)
+		if (tmp.get(Calendar.MINUTE) < NEW_CYCLE_MIN)
 		{
 			tmp.set(Calendar.HOUR, Calendar.getInstance().get(Calendar.HOUR) - 1);
 		}
-		tmp.set(Calendar.MINUTE, _newCycleMin);
+		tmp.set(Calendar.MINUTE, NEW_CYCLE_MIN);
 		_coolDownTimeEnd = tmp.getTimeInMillis();
 		_entryTimeEnd = _coolDownTimeEnd + (Config.FS_TIME_ENTRY * 60000);
 		_warmUpTimeEnd = _entryTimeEnd + (Config.FS_TIME_WARMUP * 60000);
@@ -246,8 +246,8 @@ public class FourSepulchersManager
 	{
 		for (int i = 31921; i < 31925; i++)
 		{
-			final int[] Location = _startHallSpawns.get(i);
-			GrandBossManager.getInstance().getZone(Location[0], Location[1], Location[2]).oustAllPlayers();
+			final int[] loc = _startHallSpawns.get(i);
+			GrandBossManager.getInstance().getZone(loc[0], loc[1], loc[2]).oustAllPlayers();
 		}
 		
 		deleteAllMobs();
@@ -672,17 +672,17 @@ public class FourSepulchersManager
 	
 	protected void initExecutionerSpawns()
 	{
-		for (int keyNpcId : _victim.keySet())
+		for (Entry<Integer, Integer> entry : _victim.entrySet())
 		{
 			try
 			{
-				final Spawn spawnDat = new Spawn(_victim.get(keyNpcId));
+				final Spawn spawnDat = new Spawn(entry.getValue());
 				spawnDat.setAmount(1);
 				spawnDat.setXYZ(0, 0, 0);
 				spawnDat.setHeading(0);
 				spawnDat.setRespawnDelay(3600);
 				SpawnTable.getInstance().addNewSpawn(spawnDat, false);
-				_executionerSpawns.put(keyNpcId, spawnDat);
+				_executionerSpawns.put(entry.getKey(), spawnDat);
 			}
 			catch (Exception e)
 			{
@@ -743,7 +743,7 @@ public class FourSepulchersManager
 	
 	public byte getCycleMin()
 	{
-		return _newCycleMin;
+		return NEW_CYCLE_MIN;
 	}
 	
 	public long getEntrytTimeEnd()
@@ -950,7 +950,7 @@ public class FourSepulchersManager
 	
 	private void entry(int npcId, PlayerInstance player)
 	{
-		final int[] Location = _startHallSpawns.get(npcId);
+		final int[] loc = _startHallSpawns.get(npcId);
 		int driftx;
 		int drifty;
 		
@@ -967,10 +967,10 @@ public class FourSepulchersManager
 			
 			for (PlayerInstance mem : members)
 			{
-				GrandBossManager.getInstance().getZone(Location[0], Location[1], Location[2]).allowPlayerEntry(mem, 30);
+				GrandBossManager.getInstance().getZone(loc[0], loc[1], loc[2]).allowPlayerEntry(mem, 30);
 				driftx = Rnd.get(-80, 80);
 				drifty = Rnd.get(-80, 80);
-				mem.teleToLocation(Location[0] + driftx, Location[1] + drifty, Location[2]);
+				mem.teleToLocation(loc[0] + driftx, loc[1] + drifty, loc[2]);
 				mem.destroyItemByItemId("Quest", ENTRANCE_PASS, 1, mem, true);
 				if (mem.getInventory().getItemByItemId(ANTIQUE_BROOCH) == null)
 				{
@@ -1001,10 +1001,10 @@ public class FourSepulchersManager
 			
 			for (PlayerInstance mem : members)
 			{
-				GrandBossManager.getInstance().getZone(Location[0], Location[1], Location[2]).allowPlayerEntry(mem, 30);
+				GrandBossManager.getInstance().getZone(loc[0], loc[1], loc[2]).allowPlayerEntry(mem, 30);
 				driftx = Rnd.get(-80, 80);
 				drifty = Rnd.get(-80, 80);
-				mem.teleToLocation(Location[0] + driftx, Location[1] + drifty, Location[2]);
+				mem.teleToLocation(loc[0] + driftx, loc[1] + drifty, loc[2]);
 				mem.destroyItemByItemId("Quest", ENTRANCE_PASS, 1, mem, true);
 				if (mem.getInventory().getItemByItemId(ANTIQUE_BROOCH) == null)
 				{
@@ -1020,10 +1020,10 @@ public class FourSepulchersManager
 		}
 		else
 		{
-			GrandBossManager.getInstance().getZone(Location[0], Location[1], Location[2]).allowPlayerEntry(player, 30);
+			GrandBossManager.getInstance().getZone(loc[0], loc[1], loc[2]).allowPlayerEntry(player, 30);
 			driftx = Rnd.get(-80, 80);
 			drifty = Rnd.get(-80, 80);
-			player.teleToLocation(Location[0] + driftx, Location[1] + drifty, Location[2]);
+			player.teleToLocation(loc[0] + driftx, loc[1] + drifty, loc[2]);
 			player.destroyItemByItemId("Quest", ENTRANCE_PASS, 1, player, true);
 			if (player.getInventory().getItemByItemId(ANTIQUE_BROOCH) == null)
 			{

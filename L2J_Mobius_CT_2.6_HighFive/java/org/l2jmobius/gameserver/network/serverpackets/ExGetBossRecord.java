@@ -17,6 +17,7 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.Map;
+import java.util.Map.Entry;
 
 import org.l2jmobius.commons.network.PacketWriter;
 import org.l2jmobius.gameserver.network.OutgoingPackets;
@@ -53,10 +54,10 @@ public class ExGetBossRecord implements IClientOutgoingPacket
 		else
 		{
 			packet.writeD(_bossRecordInfo.size()); // list size
-			for (int bossId : _bossRecordInfo.keySet())
+			for (Entry<Integer, Integer> entry : _bossRecordInfo.entrySet())
 			{
-				packet.writeD(bossId);
-				packet.writeD(_bossRecordInfo.get(bossId));
+				packet.writeD(entry.getKey());
+				packet.writeD(entry.getValue());
 				packet.writeD(0x00); // ??
 			}
 		}

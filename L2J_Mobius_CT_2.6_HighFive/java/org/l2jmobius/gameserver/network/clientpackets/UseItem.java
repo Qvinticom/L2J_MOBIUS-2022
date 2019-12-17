@@ -340,13 +340,10 @@ public class UseItem implements IClientIncomingPacket
 			
 			// Item reuse time should be added if the item is successfully used.
 			// Skill reuse delay is done at handlers.itemhandlers.ItemSkillsTemplate;
-			if (handler.useItem(player, item, _ctrlPressed))
+			if (handler.useItem(player, item, _ctrlPressed) && (reuseDelay > 0))
 			{
-				if (reuseDelay > 0)
-				{
-					player.addTimeStampItem(item, reuseDelay);
-					sendSharedGroupUpdate(player, sharedReuseGroup, reuseDelay, reuseDelay);
-				}
+				player.addTimeStampItem(item, reuseDelay);
+				sendSharedGroupUpdate(player, sharedReuseGroup, reuseDelay, reuseDelay);
 			}
 		}
 	}

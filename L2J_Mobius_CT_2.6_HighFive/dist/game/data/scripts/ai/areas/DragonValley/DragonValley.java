@@ -86,6 +86,7 @@ public class DragonValley extends AbstractNpcAI
 	private static final int MIN_LVL = 80;
 	private static final int CLASS_LVL = 3;
 	private static final EnumMap<ClassId, Double> CLASS_POINTS = new EnumMap<>(ClassId.class);
+	static
 	{
 		CLASS_POINTS.put(ClassId.ADVENTURER, 0.2);
 		CLASS_POINTS.put(ClassId.ARCANA_LORD, 1.5);

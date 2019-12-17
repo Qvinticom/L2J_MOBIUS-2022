@@ -43,8 +43,8 @@ public class NevitSystem implements IUniqueId
 {
 	public PlayerInstance _player;
 	
-	private volatile ScheduledFuture<?> _adventTask;
-	private volatile ScheduledFuture<?> _nevitEffectTask;
+	private ScheduledFuture<?> _adventTask;
+	private ScheduledFuture<?> _nevitEffectTask;
 	
 	public NevitSystem(PlayerInstance player)
 	{

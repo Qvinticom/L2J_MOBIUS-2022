@@ -44,7 +44,7 @@ public class Q00096_SagaOfTheSpectralDancer extends AbstractSagaQuest
 			31656,
 			31284
 		};
-		Items = new int[]
+		_items = new int[]
 		{
 			7080,
 			7527,
@@ -59,27 +59,27 @@ public class Q00096_SagaOfTheSpectralDancer extends AbstractSagaQuest
 			7092,
 			0
 		};
-		Mob = new int[]
+		_mob = new int[]
 		{
 			27272,
 			27245,
 			27264
 		};
-		classid = new int[]
+		_classId = new int[]
 		{
 			107
 		};
-		prevclass = new int[]
+		_prevClass = new int[]
 		{
 			0x22
 		};
-		npcSpawnLocations = new Location[]
+		_npcSpawnLocations = new Location[]
 		{
 			new Location(164650, -74121, -2871),
 			new Location(47429, -56923, -2383),
 			new Location(47391, -56929, -2370)
 		};
-		Text = new String[]
+		_text = new String[]
 		{
 			"PLAYERNAME! Pursued to here! However, I jumped out of the Banshouren boundaries! You look at the giant as the sign of power!",
 			"... Oh ... good! So it was ... let's begin!",

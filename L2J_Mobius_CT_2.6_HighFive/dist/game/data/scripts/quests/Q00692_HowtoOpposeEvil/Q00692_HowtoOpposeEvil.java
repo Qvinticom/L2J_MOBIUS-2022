@@ -116,54 +116,65 @@ public class Q00692_HowtoOpposeEvil extends Quest
 		{
 			return getNoQuestMsg(player);
 		}
-		if (event.equalsIgnoreCase("32549-03.htm"))
+		switch (event)
 		{
-			qs.startQuest();
-		}
-		else if (event.equalsIgnoreCase("32550-04.htm"))
-		{
-			qs.setCond(3);
-		}
-		else if (event.equalsIgnoreCase("32550-07.htm"))
-		{
-			if (!giveReward(player, 13863, 5, 13796, 1))
+			case "32549-03.htm":
 			{
-				return "32550-08.htm";
+				qs.startQuest();
+				break;
 			}
-		}
-		else if (event.equalsIgnoreCase("32550-09.htm"))
-		{
-			if (!giveReward(player, 13798, 1, 57, 5000))
+			case "32550-04.htm":
 			{
-				return "32550-10.htm";
+				qs.setCond(3);
+				break;
 			}
-		}
-		else if (event.equalsIgnoreCase("32550-12.htm"))
-		{
-			if (!giveReward(player, 13865, 5, 13841, 1))
+			case "32550-07.htm":
 			{
-				return "32550-13.htm";
+				if (!giveReward(player, 13863, 5, 13796, 1))
+				{
+					return "32550-08.htm";
+				}
+				break;
 			}
-		}
-		else if (event.equalsIgnoreCase("32550-14.htm"))
-		{
-			if (!giveReward(player, 13867, 1, 57, 5000))
+			case "32550-09.htm":
 			{
-				return "32550-15.htm";
+				if (!giveReward(player, 13798, 1, 57, 5000))
+				{
+					return "32550-10.htm";
+				}
+				break;
 			}
-		}
-		else if (event.equalsIgnoreCase("32550-17.htm"))
-		{
-			if (!giveReward(player, 15536, 5, 15486, 1))
+			case "32550-12.htm":
 			{
-				return "32550-18.htm";
+				if (!giveReward(player, 13865, 5, 13841, 1))
+				{
+					return "32550-13.htm";
+				}
+				break;
 			}
-		}
-		else if (event.equalsIgnoreCase("32550-19.htm"))
-		{
-			if (!giveReward(player, 15535, 1, 57, 5000))
+			case "32550-14.htm":
 			{
-				return "32550-20.htm";
+				if (!giveReward(player, 13867, 1, 57, 5000))
+				{
+					return "32550-15.htm";
+				}
+				break;
+			}
+			case "32550-17.htm":
+			{
+				if (!giveReward(player, 15536, 5, 15486, 1))
+				{
+					return "32550-18.htm";
+				}
+				break;
+			}
+			case "32550-19.htm":
+			{
+				if (!giveReward(player, 15535, 1, 57, 5000))
+				{
+					return "32550-20.htm";
+				}
+				break;
 			}
 		}
 		return event;

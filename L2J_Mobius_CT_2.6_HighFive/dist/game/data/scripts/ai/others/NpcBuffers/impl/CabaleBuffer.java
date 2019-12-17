@@ -38,14 +38,14 @@ public class CabaleBuffer extends AbstractNpcAI
 	private static final int DISTANCE_TO_WATCH_OBJECT = 900;
 	
 	// Messages
-	public static final NpcStringId[] ORATOR_MSG =
+	protected static final NpcStringId[] ORATOR_MSG =
 	{
 		NpcStringId.THE_DAY_OF_JUDGMENT_IS_NEAR,
 		NpcStringId.THE_PROPHECY_OF_DARKNESS_HAS_BEEN_FULFILLED,
 		NpcStringId.AS_FORETOLD_IN_THE_PROPHECY_OF_DARKNESS_THE_ERA_OF_CHAOS_HAS_BEGUN,
 		NpcStringId.THE_PROPHECY_OF_DARKNESS_HAS_COME_TO_PASS
 	};
-	public static final NpcStringId[] PREACHER_MSG =
+	protected static final NpcStringId[] PREACHER_MSG =
 	{
 		NpcStringId.THIS_WORLD_WILL_SOON_BE_ANNIHILATED,
 		NpcStringId.ALL_IS_LOST_PREPARE_TO_MEET_THE_GODDESS_OF_DEATH,

@@ -52,9 +52,6 @@ public class RequestAuthLogin implements IIncomingPacket<LoginClient>
 	private final byte[] _raw2 = new byte[128];
 	private boolean _newAuthMethod = false;
 	
-	private String _user;
-	private String _password;
-	
 	@Override
 	public boolean read(LoginClient client, PacketReader packet)
 	{
@@ -93,17 +90,19 @@ public class RequestAuthLogin implements IIncomingPacket<LoginClient>
 			return;
 		}
 		
+		final String user;
+		final String password;
 		try
 		{
 			if (_newAuthMethod)
 			{
-				_user = new String(decrypted, 0x4E, 50).trim() + new String(decrypted, 0xCE, 14).trim();
-				_password = new String(decrypted, 0xDC, 16).trim();
+				user = new String(decrypted, 0x4E, 50).trim() + new String(decrypted, 0xCE, 14).trim();
+				password = new String(decrypted, 0xDC, 16).trim();
 			}
 			else
 			{
-				_user = new String(decrypted, 0x5E, 14).trim();
-				_password = new String(decrypted, 0x6C, 16).trim();
+				user = new String(decrypted, 0x5E, 14).trim();
+				password = new String(decrypted, 0x6C, 16).trim();
 			}
 		}
 		catch (Exception e)
@@ -114,7 +113,7 @@ public class RequestAuthLogin implements IIncomingPacket<LoginClient>
 		
 		final InetAddress clientAddr = client.getConnectionAddress();
 		final LoginController lc = LoginController.getInstance();
-		final AccountInfo info = lc.retriveAccountInfo(clientAddr, _user, _password);
+		final AccountInfo info = lc.retriveAccountInfo(clientAddr, user, password);
 		if (info == null)
 		{
 			// user or pass wrong
