@@ -45,14 +45,11 @@ public class Jude extends AbstractNpcAI
 	{
 		if ("TreasureSacks".equalsIgnoreCase(event))
 		{
-			if (HellboundEngine.getInstance().getLevel() == 3)
+			if ((HellboundEngine.getInstance().getLevel() == 3) && (getQuestItemsCount(player, NATIVE_TREASURE) >= 40))
 			{
-				if (getQuestItemsCount(player, NATIVE_TREASURE) >= 40)
-				{
-					takeItems(player, NATIVE_TREASURE, 40);
-					giveItems(player, RING_OF_WIND_MASTERY, 1);
-					return "32356-02.htm";
-				}
+				takeItems(player, NATIVE_TREASURE, 40);
+				giveItems(player, RING_OF_WIND_MASTERY, 1);
+				return "32356-02.htm";
 			}
 			return "32356-02a.htm";
 		}

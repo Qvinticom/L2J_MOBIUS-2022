@@ -25,6 +25,7 @@ import java.io.FileOutputStream;
 import java.io.InputStreamReader;
 import java.io.PrintStream;
 import java.util.StringTokenizer;
+import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.commons.util.Rnd;
@@ -45,6 +46,7 @@ import org.l2jmobius.gameserver.util.Broadcast;
  */
 public class AdminEventEngine implements IAdminCommandHandler
 {
+	private static final Logger LOGGER = Logger.getLogger(AdminEventEngine.class.getName());
 	
 	private static final String[] ADMIN_COMMANDS =
 	{
@@ -129,11 +131,8 @@ public class AdminEventEngine implements IAdminCommandHandler
 				}
 				catch (Exception e)
 				{
-					
-					e.printStackTrace();
-					
+					LOGGER.warning("Problem with AdminEventEngine: " + e.getMessage());
 				}
-				
 			}
 			else if (actualCommand.startsWith("admin_event_del"))
 			{
@@ -167,7 +166,7 @@ public class AdminEventEngine implements IAdminCommandHandler
 				}
 				catch (Exception e)
 				{
-					e.printStackTrace();
+					LOGGER.warning("Problem with AdminEventEngine: " + e.getMessage());
 				}
 				
 				tempBuffer = "";
@@ -379,7 +378,6 @@ public class AdminEventEngine implements IAdminCommandHandler
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
 			AdminData.getInstance().broadcastMessageToGMs("EventEngine: Error! Possible blank boxes while executing a command which requires a value in the box?");
 		}
 		return true;
@@ -564,7 +562,7 @@ public class AdminEventEngine implements IAdminCommandHandler
 			player.addItem("Event", id, num, activeChar, true);
 			
 			final NpcHtmlMessage adminReply = new NpcHtmlMessage();
-			adminReply.setHtml("<html><body> CONGRATULATIONS! You should have been rewarded. </body></html>");
+			adminReply.setHtml("<html><body>CONGRATULATIONS! You should have been rewarded.</body></html>");
 			player.sendPacket(adminReply);
 		}
 	}

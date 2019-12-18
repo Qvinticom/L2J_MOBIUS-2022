@@ -53,17 +53,14 @@ public class TargetMeProbability extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		if (info.getEffected().isPlayable())
+		if (info.getEffected().isPlayable() && (info.getEffected().getTarget() != info.getEffector()))
 		{
-			if (info.getEffected().getTarget() != info.getEffector())
+			final PlayerInstance effector = info.getEffector().getActingPlayer();
+			// If effector is null, then its not a player, but NPC. If its not null, then it should check if the skill is pvp skill.
+			if ((effector == null) || effector.checkPvpSkill(info.getEffected(), info.getSkill()))
 			{
-				final PlayerInstance effector = info.getEffector().getActingPlayer();
-				// If effector is null, then its not a player, but NPC. If its not null, then it should check if the skill is pvp skill.
-				if ((effector == null) || effector.checkPvpSkill(info.getEffected(), info.getSkill()))
-				{
-					// Target is different
-					info.getEffected().setTarget(info.getEffector());
-				}
+				// Target is different
+				info.getEffected().setTarget(info.getEffector());
 			}
 		}
 	}

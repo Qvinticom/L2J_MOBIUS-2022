@@ -217,12 +217,9 @@ public class Q00638_SeekersOfTheHolyGrail extends Quest
 		if (qs != null)
 		{
 			final DropInfo info = MOBS_DROP_CHANCES.get(npc.getId());
-			if (giveItemRandomly(qs.getPlayer(), npc, info.getId(), 1, 0, info.getChance(), true))
+			if (giveItemRandomly(qs.getPlayer(), npc, info.getId(), 1, 0, info.getChance(), true) && (info.getKeyId() > 0) && (getRandom(100) < info.getKeyChance()))
 			{
-				if ((info.getKeyId() > 0) && (getRandom(100) < info.getKeyChance()))
-				{
-					npc.dropItem(qs.getPlayer(), info.getKeyId(), info.getKeyCount());
-				}
+				npc.dropItem(qs.getPlayer(), info.getKeyId(), info.getKeyCount());
 			}
 		}
 		return super.onKill(npc, killer, isSummon);

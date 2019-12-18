@@ -371,11 +371,11 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 						{
 							break;
 						}
-						final WorldObject OldTarget = _actor.getTarget();
+						final WorldObject oldTarget = _actor.getTarget();
 						_actor.setTarget(creature);
 						clientStopMoving(null);
 						_actor.doCast(sk);
-						_actor.setTarget(OldTarget);
+						_actor.setTarget(oldTarget);
 						return;
 					}
 				}
@@ -415,11 +415,11 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 						{
 							break;
 						}
-						final WorldObject OldTarget = _actor.getTarget();
+						final WorldObject oldTarget = _actor.getTarget();
 						_actor.setTarget(npc);
 						clientStopMoving(null);
 						_actor.doCast(sk);
-						_actor.setTarget(OldTarget);
+						_actor.setTarget(oldTarget);
 						return;
 					}
 				}
@@ -431,7 +431,7 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 	{
 		// Get all information needed to choose between physical or magical attack
 		Collection<Skill> skills = null;
-		double dist_2 = 0;
+		double dist2 = 0;
 		int range = 0;
 		final DefenderInstance sGuard = (DefenderInstance) _actor;
 		Creature attackTarget = getAttackTarget();
@@ -440,7 +440,7 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 		{
 			_actor.setTarget(attackTarget);
 			skills = _actor.getAllSkills();
-			dist_2 = _actor.calculateDistanceSq2D(attackTarget);
+			dist2 = _actor.calculateDistanceSq2D(attackTarget);
 			range = _actor.getPhysicalAttackRange() + _actor.getTemplate().getCollisionRadius() + attackTarget.getTemplate().getCollisionRadius();
 			if (attackTarget.isMoving())
 			{
@@ -475,16 +475,16 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 		}
 		
 		// Check if the actor isn't muted and if it is far from target
-		if (!_actor.isMuted() && (dist_2 > (range * range)))
+		if (!_actor.isMuted() && (dist2 > (range * range)))
 		{
 			// check for long ranged skills and heal/buff skills
 			for (Skill sk : skills)
 			{
 				final int castRange = sk.getCastRange();
 				
-				if ((dist_2 <= (castRange * castRange)) && (castRange > 70) && !_actor.isSkillDisabled(sk) && (_actor.getCurrentMp() >= _actor.getStat().getMpConsume(sk)) && !sk.isPassive())
+				if ((dist2 <= (castRange * castRange)) && (castRange > 70) && !_actor.isSkillDisabled(sk) && (_actor.getCurrentMp() >= _actor.getStat().getMpConsume(sk)) && !sk.isPassive())
 				{
-					final WorldObject OldTarget = _actor.getTarget();
+					final WorldObject oldTarget = _actor.getTarget();
 					if ((sk.isContinuous() && !sk.isDebuff()) || sk.hasEffectType(EffectType.HEAL))
 					{
 						boolean useSkillSelf = true;
@@ -507,7 +507,7 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 					
 					clientStopMoving(null);
 					_actor.doCast(sk);
-					_actor.setTarget(OldTarget);
+					_actor.setTarget(oldTarget);
 					return;
 				}
 			}
@@ -553,7 +553,7 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 		}
 		else
 		{
-			if (_actor.isMuted() && (dist_2 > (range * range)) && !_selfAnalysis.isHealer)
+			if (_actor.isMuted() && (dist2 > (range * range)) && !_selfAnalysis.isHealer)
 			{
 				// Temporary hack for preventing guards jumping off towers,
 				// before replacing this with effective geodata checks and AI modification
@@ -568,7 +568,7 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 				}
 				return;
 			}
-			if (dist_2 <= (range * range))
+			if (dist2 <= (range * range))
 			{
 				final Creature hated = _actor.isConfused() ? attackTarget : ((Attackable) _actor).getMostHated();
 				if (hated == null)
@@ -590,9 +590,9 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 					{
 						final int castRange = sk.getCastRange();
 						
-						if (((castRange * castRange) >= dist_2) && !sk.isPassive() && (_actor.getCurrentMp() >= _actor.getStat().getMpConsume(sk)) && !_actor.isSkillDisabled(sk))
+						if (((castRange * castRange) >= dist2) && !sk.isPassive() && (_actor.getCurrentMp() >= _actor.getStat().getMpConsume(sk)) && !_actor.isSkillDisabled(sk))
 						{
-							final WorldObject OldTarget = _actor.getTarget();
+							final WorldObject oldTarget = _actor.getTarget();
 							if ((sk.isContinuous() && !sk.isDebuff()) || sk.hasEffectType(EffectType.HEAL))
 							{
 								boolean useSkillSelf = true;
@@ -615,7 +615,7 @@ public class SiegeGuardAI extends CreatureAI implements Runnable
 							
 							clientStopMoving(null);
 							_actor.doCast(sk);
-							_actor.setTarget(OldTarget);
+							_actor.setTarget(oldTarget);
 							return;
 						}
 					}

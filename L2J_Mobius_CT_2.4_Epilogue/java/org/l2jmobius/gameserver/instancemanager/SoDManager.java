@@ -28,7 +28,7 @@ public class SoDManager
 {
 	private static final Logger LOGGER = Logger.getLogger(SoDManager.class.getName());
 	
-	public static String ENERGY_SEEDS = "EnergySeeds";
+	public static final String ENERGY_SEEDS = "EnergySeeds";
 	
 	private static final byte SOITYPE = 2;
 	

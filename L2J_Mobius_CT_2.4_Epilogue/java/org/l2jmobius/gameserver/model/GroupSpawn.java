@@ -30,7 +30,7 @@ public class GroupSpawn extends Spawn
 {
 	private final NpcTemplate _template;
 	
-	public GroupSpawn(NpcTemplate mobTemplate) throws SecurityException, ClassNotFoundException, NoSuchMethodException
+	public GroupSpawn(NpcTemplate mobTemplate) throws ClassNotFoundException, NoSuchMethodException
 	{
 		super(mobTemplate);
 		_template = mobTemplate;

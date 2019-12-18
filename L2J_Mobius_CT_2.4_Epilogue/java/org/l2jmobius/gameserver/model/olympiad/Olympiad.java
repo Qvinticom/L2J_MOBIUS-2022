@@ -208,12 +208,12 @@ public class Olympiad extends ListenersContainer
 		{
 			LOGGER.log(Level.INFO, "Olympiad System: failed to load data from database, trying to load from file.");
 			
-			Properties OlympiadProperties = new Properties();
+			Properties olympiadProperties = new Properties();
 			InputStream is = null;
 			try
 			{
 				is = new FileInputStream(new File("./" + Config.OLYMPIAD_CONFIG_FILE));
-				OlympiadProperties.load(is);
+				olympiadProperties.load(is);
 			}
 			catch (Exception e)
 			{
@@ -221,11 +221,11 @@ public class Olympiad extends ListenersContainer
 				return;
 			}
 			
-			_currentCycle = Integer.parseInt(OlympiadProperties.getProperty("CurrentCycle", "1"));
-			_period = Integer.parseInt(OlympiadProperties.getProperty("Period", "0"));
-			_olympiadEnd = Long.parseLong(OlympiadProperties.getProperty("OlympiadEnd", "0"));
-			_validationEnd = Long.parseLong(OlympiadProperties.getProperty("ValidationEnd", "0"));
-			_nextWeeklyChange = Long.parseLong(OlympiadProperties.getProperty("NextWeeklyChange", "0"));
+			_currentCycle = Integer.parseInt(olympiadProperties.getProperty("CurrentCycle", "1"));
+			_period = Integer.parseInt(olympiadProperties.getProperty("Period", "0"));
+			_olympiadEnd = Long.parseLong(olympiadProperties.getProperty("OlympiadEnd", "0"));
+			_validationEnd = Long.parseLong(olympiadProperties.getProperty("ValidationEnd", "0"));
+			_nextWeeklyChange = Long.parseLong(olympiadProperties.getProperty("NextWeeklyChange", "0"));
 		}
 		
 		switch (_period)
@@ -898,8 +898,9 @@ public class Olympiad extends ListenersContainer
 						// wait 1 minutes for end of pendings games
 						Thread.sleep(60000);
 					}
-					catch (InterruptedException e)
+					catch (Exception e)
 					{
+						// Ignore.
 					}
 				}
 				saveOlympiadStatus();
@@ -1134,30 +1135,29 @@ public class Olympiad extends ListenersContainer
 			return;
 		}
 		
-		for (Integer nobleId : NOBLES.keySet())
+		for (Entry<Integer, StatsSet> entry : NOBLES.entrySet())
 		{
-			StatsSet nobleInfo = NOBLES.get(nobleId);
+			StatsSet nobleInfo = entry.getValue();
 			int currentPoints = nobleInfo.getInt(POINTS);
 			currentPoints += WEEKLY_POINTS;
 			nobleInfo.set(POINTS, currentPoints);
-			
-			updateNobleStats(nobleId, nobleInfo);
+			updateNobleStats(entry.getKey(), nobleInfo);
 		}
 	}
 	
-	public HashMap<Integer, String> getMatchList()
+	public Map<Integer, String> getMatchList()
 	{
 		return OlympiadManager.getInstance().getAllTitles();
 	}
 	
 	// returns the players for the given olympiad game Id
-	public PlayerInstance[] getPlayers(int Id)
+	public PlayerInstance[] getPlayers(int id)
 	{
-		if (OlympiadManager.getInstance().getOlympiadGame(Id) == null)
+		if (OlympiadManager.getInstance().getOlympiadGame(id) == null)
 		{
 			return null;
 		}
-		return OlympiadManager.getInstance().getOlympiadGame(Id).getPlayers();
+		return OlympiadManager.getInstance().getOlympiadGame(id).getPlayers();
 	}
 	
 	public int getCurrentCycle()
@@ -1266,7 +1266,7 @@ public class Olympiad extends ListenersContainer
 	 */
 	protected synchronized void saveNobleData()
 	{
-		if ((NOBLES == null) || NOBLES.isEmpty())
+		if (NOBLES.isEmpty())
 		{
 			return;
 		}
@@ -1649,9 +1649,8 @@ public class Olympiad extends ListenersContainer
 		{
 			return 0;
 		}
-		int points = noble.getInt(POINTS);
 		
-		return points;
+		return noble.getInt(POINTS);
 	}
 	
 	public int getLastNobleOlympiadPoints(int objId)
@@ -1688,9 +1687,8 @@ public class Olympiad extends ListenersContainer
 		{
 			return 0;
 		}
-		int points = noble.getInt(COMP_DONE);
 		
-		return points;
+		return noble.getInt(COMP_DONE);
 	}
 	
 	public int getCompetitionWon(int objId)
@@ -1705,9 +1703,8 @@ public class Olympiad extends ListenersContainer
 		{
 			return 0;
 		}
-		int points = noble.getInt(COMP_WON);
 		
-		return points;
+		return noble.getInt(COMP_WON);
 	}
 	
 	public int getCompetitionLost(int objId)
@@ -1722,9 +1719,8 @@ public class Olympiad extends ListenersContainer
 		{
 			return 0;
 		}
-		int points = noble.getInt(COMP_LOST);
 		
-		return points;
+		return noble.getInt(COMP_LOST);
 	}
 	
 	protected void deleteNobles()
@@ -1746,7 +1742,7 @@ public class Olympiad extends ListenersContainer
 		NpcHtmlMessage message = new NpcHtmlMessage(0);
 		message.setFile(player, Olympiad.OLYMPIAD_HTML_PATH + "olympiad_observe2.htm");
 		
-		HashMap<Integer, String> matches = getInstance().getMatchList();
+		Map<Integer, String> matches = getInstance().getMatchList();
 		for (int i = 0; i < Olympiad.getStadiumCount(); i++)
 		{
 			int arenaId = i + 1;

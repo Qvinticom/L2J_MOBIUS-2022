@@ -303,7 +303,7 @@ public class AirShipGludioGracia extends AbstractNpcAI implements Runnable
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			LOGGER.warning(e.toString());
 		}
 	}
 	

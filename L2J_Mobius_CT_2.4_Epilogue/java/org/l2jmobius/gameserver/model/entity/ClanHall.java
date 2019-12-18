@@ -20,6 +20,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
@@ -41,7 +42,7 @@ public abstract class ClanHall
 	protected static final Logger LOGGER = Logger.getLogger(ClanHall.class.getName());
 	
 	final int _clanHallId;
-	private ArrayList<DoorInstance> _doors;
+	private List<DoorInstance> _doors;
 	private final String _name;
 	private int _ownerId;
 	private final String _desc;
@@ -266,7 +267,7 @@ public abstract class ClanHall
 	/**
 	 * @return all DoorInstance
 	 */
-	public ArrayList<DoorInstance> getDoors()
+	public List<DoorInstance> getDoors()
 	{
 		if (_doors == null)
 		{

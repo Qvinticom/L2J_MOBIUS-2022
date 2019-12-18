@@ -77,7 +77,7 @@ public class Locator
 			final String u = url.toString();
 			if (u.startsWith("jar:file:"))
 			{
-				final int pling = u.indexOf("!");
+				final int pling = u.indexOf('!');
 				final String jarName = u.substring(4, pling);
 				return new File(fromURI(jarName));
 			}
@@ -118,7 +118,7 @@ public class Locator
 		{
 			throw new IllegalArgumentException("Can only handle valid file: URIs");
 		}
-		final StringBuffer buf = new StringBuffer(url.getHost());
+		final StringBuilder buf = new StringBuilder(url.getHost());
 		if (buf.length() > 0)
 		{
 			buf.insert(0, File.separatorChar).insert(0, File.separatorChar);
@@ -133,8 +133,7 @@ public class Locator
 		{
 			uri = uri.substring(1);
 		}
-		final String path = decodeUri(uri);
-		return path;
+		return decodeUri(uri);
 	}
 	
 	/**
@@ -148,7 +147,7 @@ public class Locator
 		{
 			return uri;
 		}
-		final StringBuffer sb = new StringBuffer();
+		final StringBuilder sb = new StringBuilder();
 		final CharacterIterator iter = new StringCharacterIterator(uri);
 		for (char c = iter.first(); c != CharacterIterator.DONE; c = iter.next())
 		{
@@ -171,8 +170,7 @@ public class Locator
 				sb.append(c);
 			}
 		}
-		final String path = sb.toString();
-		return path;
+		return sb.toString();
 	}
 	
 	/**

@@ -54,10 +54,9 @@ public class AuctioneerInstance extends Npc
 	@Override
 	public void onBypassFeedback(PlayerInstance player, String command)
 	{
-		final int condition = validateCondition(player);
+		final int condition = validateCondition();
 		if (condition <= COND_ALL_FALSE)
 		{
-			// TODO: html
 			player.sendMessage("Wrong conditions.");
 			return;
 		}
@@ -259,7 +258,6 @@ public class AuctioneerInstance extends Npc
 					html.replace("%AGIT_AUCTION_MINBID%", String.valueOf(minimumBid));
 					html.replace("npc_%objectId%_bid", "npc_" + getObjectId() + "_bid " + val);
 					player.sendPacket(html);
-					return;
 				}
 				catch (Exception e)
 				{
@@ -632,9 +630,9 @@ public class AuctioneerInstance extends Npc
 	@Override
 	public void showChatWindow(PlayerInstance player)
 	{
-		String filename = "data/html/auction/auction-no.htm";
+		String filename; // = "data/html/auction/auction-no.htm";
 		
-		final int condition = validateCondition(player);
+		final int condition = validateCondition();
 		if (condition == COND_BUSY_BECAUSE_OF_SIEGE)
 		{
 			filename = "data/html/auction/auction-busy.htm"; // Busy because of siege
@@ -652,7 +650,7 @@ public class AuctioneerInstance extends Npc
 		player.sendPacket(html);
 	}
 	
-	private int validateCondition(PlayerInstance player)
+	private int validateCondition()
 	{
 		if ((getCastle() != null) && (getCastle().getResidenceId() > 0))
 		{

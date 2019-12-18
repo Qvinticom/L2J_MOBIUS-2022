@@ -109,7 +109,7 @@ public class Gui
 					final String input = ((String) answer).trim();
 					if (Util.isDigit(input))
 					{
-						final int delay = Integer.valueOf(input);
+						final int delay = Integer.parseInt(input);
 						if (delay > 0)
 						{
 							AdminCommands.getInstance().serverShutdown(null, delay);
@@ -170,10 +170,7 @@ public class Gui
 		{
 			final JMenuItem mntmFont = new JMenuItem(font);
 			mntmFont.setFont(new Font("Segoe UI", Font.PLAIN, 13));
-			mntmFont.addActionListener(arg0 ->
-			{
-				txtrConsole.setFont(new Font("Monospaced", Font.PLAIN, Integer.parseInt(font)));
-			});
+			mntmFont.addActionListener(arg0 -> txtrConsole.setFont(new Font("Monospaced", Font.PLAIN, Integer.parseInt(font))));
 			mnFont.add(mntmFont);
 		}
 		
@@ -183,10 +180,7 @@ public class Gui
 		
 		final JMenuItem mntmAbout = new JMenuItem("About");
 		mntmAbout.setFont(new Font("Segoe UI", Font.PLAIN, 13));
-		mntmAbout.addActionListener(arg0 ->
-		{
-			new frmAbout();
-		});
+		mntmAbout.addActionListener(arg0 -> new frmAbout());
 		mnHelp.add(mntmAbout);
 		
 		// Set icons.

@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.model.actor.templates.NpcTemplate;
  */
 public class ControlTowerInstance extends Tower
 {
-	private volatile Collection<Spawn> _guards;
+	private Collection<Spawn> _guards;
 	
 	/**
 	 * Creates a control tower.
@@ -48,7 +48,7 @@ public class ControlTowerInstance extends Tower
 	{
 		if (getCastle().getSiege().isInProgress())
 		{
-			getCastle().getSiege().killedCT(this);
+			getCastle().getSiege().killedCT();
 			
 			if ((_guards != null) && !_guards.isEmpty())
 			{

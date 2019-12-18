@@ -173,44 +173,41 @@ public class UrbanArea extends AbstractInstance
 	public String onAdvEvent(String event, Npc npc, PlayerInstance player)
 	{
 		final InstanceWorld world = InstanceManager.getInstance().getWorld(npc);
-		if (world != null)
+		if ((world != null) && (npc.getId() == DOWNTOWN_NATIVE))
 		{
-			if (npc.getId() == DOWNTOWN_NATIVE)
+			if (event.equalsIgnoreCase("rebuff") && !world.getParameters().getBoolean("isAmaskariDead", false))
 			{
-				if (event.equalsIgnoreCase("rebuff") && !world.getParameters().getBoolean("isAmaskariDead", false))
+				STONE.getSkill().applyEffects(npc, npc);
+			}
+			else if (event.equalsIgnoreCase("break_chains"))
+			{
+				if (!npc.isAffectedBySkill(STONE.getSkillId()) || world.getParameters().getBoolean("isAmaskariDead", false))
 				{
-					STONE.getSkill().applyEffects(npc, npc);
+					npc.broadcastSay(ChatType.NPC_GENERAL, NATIVES_NPCSTRING_ID[0]);
+					npc.broadcastSay(ChatType.NPC_GENERAL, NATIVES_NPCSTRING_ID[2]);
 				}
-				else if (event.equalsIgnoreCase("break_chains"))
+				else
 				{
-					if (!npc.isAffectedBySkill(STONE.getSkillId()) || world.getParameters().getBoolean("isAmaskariDead", false))
+					cancelQuestTimer("rebuff", npc, null);
+					if (npc.isAffectedBySkill(STONE.getSkillId()))
 					{
-						npc.broadcastSay(ChatType.NPC_GENERAL, NATIVES_NPCSTRING_ID[0]);
-						npc.broadcastSay(ChatType.NPC_GENERAL, NATIVES_NPCSTRING_ID[2]);
+						npc.stopSkillEffects(false, STONE.getSkillId());
 					}
-					else
+					
+					npc.broadcastSay(ChatType.NPC_GENERAL, NATIVES_NPCSTRING_ID[0]);
+					npc.broadcastSay(ChatType.NPC_GENERAL, NATIVES_NPCSTRING_ID[1]);
+					HellboundEngine.getInstance().updateTrust(10, true);
+					npc.scheduleDespawn(3000);
+					// Try to call Amaskari
+					final Npc spawnedAmaskari = world.getParameters().getObject("spawnedAmaskari", Npc.class);
+					if ((spawnedAmaskari != null) && !spawnedAmaskari.isDead() && (getRandom(1000) < 25) && Util.checkIfInRange(5000, npc, spawnedAmaskari, false))
 					{
-						cancelQuestTimer("rebuff", npc, null);
-						if (npc.isAffectedBySkill(STONE.getSkillId()))
+						final ScheduledFuture<?> activeAmaskariCall = world.getParameters().getObject("activeAmaskariCall", ScheduledFuture.class);
+						if (activeAmaskariCall != null)
 						{
-							npc.stopSkillEffects(false, STONE.getSkillId());
+							activeAmaskariCall.cancel(true);
 						}
-						
-						npc.broadcastSay(ChatType.NPC_GENERAL, NATIVES_NPCSTRING_ID[0]);
-						npc.broadcastSay(ChatType.NPC_GENERAL, NATIVES_NPCSTRING_ID[1]);
-						HellboundEngine.getInstance().updateTrust(10, true);
-						npc.scheduleDespawn(3000);
-						// Try to call Amaskari
-						final Npc spawnedAmaskari = world.getParameters().getObject("spawnedAmaskari", Npc.class);
-						if ((spawnedAmaskari != null) && !spawnedAmaskari.isDead() && (getRandom(1000) < 25) && Util.checkIfInRange(5000, npc, spawnedAmaskari, false))
-						{
-							final ScheduledFuture<?> activeAmaskariCall = world.getParameters().getObject("activeAmaskariCall", ScheduledFuture.class);
-							if (activeAmaskariCall != null)
-							{
-								activeAmaskariCall.cancel(true);
-							}
-							world.setParameter("activeAmaskariCall", ThreadPool.schedule(new CallAmaskari(npc), 25000));
-						}
+						world.setParameter("activeAmaskariCall", ThreadPool.schedule(new CallAmaskari(npc), 25000));
 					}
 				}
 			}
@@ -240,23 +237,20 @@ public class UrbanArea extends AbstractInstance
 	public String onAggroRangeEnter(Npc npc, PlayerInstance player, boolean isSummon)
 	{
 		final InstanceWorld world = InstanceManager.getInstance().getWorld(npc);
-		if (world != null)
+		if ((world != null) && !npc.isBusy())
 		{
-			if (!npc.isBusy())
+			npc.broadcastSay(ChatType.NPC_GENERAL, NPCSTRING_ID[0]);
+			npc.setBusy(true);
+			
+			final Npc spawnedAmaskari = world.getParameters().getObject("spawnedAmaskari", Npc.class);
+			if ((spawnedAmaskari != null) && !spawnedAmaskari.isDead() && (getRandom(1000) < 25) && Util.checkIfInRange(1000, npc, spawnedAmaskari, false))
 			{
-				npc.broadcastSay(ChatType.NPC_GENERAL, NPCSTRING_ID[0]);
-				npc.setBusy(true);
-				
-				final Npc spawnedAmaskari = world.getParameters().getObject("spawnedAmaskari", Npc.class);
-				if ((spawnedAmaskari != null) && !spawnedAmaskari.isDead() && (getRandom(1000) < 25) && Util.checkIfInRange(1000, npc, spawnedAmaskari, false))
+				final ScheduledFuture<?> activeAmaskariCall = world.getParameters().getObject("activeAmaskariCall", ScheduledFuture.class);
+				if (activeAmaskariCall != null)
 				{
-					final ScheduledFuture<?> activeAmaskariCall = world.getParameters().getObject("activeAmaskariCall", ScheduledFuture.class);
-					if (activeAmaskariCall != null)
-					{
-						activeAmaskariCall.cancel(true);
-					}
-					world.setParameter("activeAmaskariCall", ThreadPool.schedule(new CallAmaskari(npc), 25000));
+					activeAmaskariCall.cancel(true);
 				}
+				world.setParameter("activeAmaskariCall", ThreadPool.schedule(new CallAmaskari(npc), 25000));
 			}
 		}
 		return super.onAggroRangeEnter(npc, player, isSummon);
@@ -266,49 +260,46 @@ public class UrbanArea extends AbstractInstance
 	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon, Skill skill)
 	{
 		final InstanceWorld world = InstanceManager.getInstance().getWorld(npc);
-		if (world != null)
+		if ((world != null) && !world.getParameters().getBoolean("isAmaskariDead", false) && !(npc.getBusyMessage().equalsIgnoreCase("atk") || npc.isBusy()))
 		{
-			if (!world.getParameters().getBoolean("isAmaskariDead", false) && !(npc.getBusyMessage().equalsIgnoreCase("atk") || npc.isBusy()))
+			int msgId;
+			int range;
+			switch (npc.getId())
 			{
-				int msgId;
-				int range;
-				switch (npc.getId())
+				case TOWN_GUARD:
 				{
-					case TOWN_GUARD:
-					{
-						msgId = 0;
-						range = 1000;
-						break;
-					}
-					case KEYMASTER:
-					{
-						msgId = 1;
-						range = 5000;
-						break;
-					}
-					default:
-					{
-						msgId = -1;
-						range = 0;
-					}
+					msgId = 0;
+					range = 1000;
+					break;
 				}
-				if (msgId >= 0)
+				case KEYMASTER:
 				{
-					npc.broadcastSay(ChatType.NPC_GENERAL, NPCSTRING_ID[msgId], range);
+					msgId = 1;
+					range = 5000;
+					break;
 				}
-				npc.setBusy(true);
-				npc.setBusyMessage("atk");
-				
-				final Npc spawnedAmaskari = world.getParameters().getObject("spawnedAmaskari", Npc.class);
-				if ((spawnedAmaskari != null) && !spawnedAmaskari.isDead() && (getRandom(1000) < 25) && Util.checkIfInRange(range, npc, spawnedAmaskari, false))
+				default:
 				{
-					final ScheduledFuture<?> activeAmaskariCall = world.getParameters().getObject("activeAmaskariCall", ScheduledFuture.class);
-					if (activeAmaskariCall != null)
-					{
-						activeAmaskariCall.cancel(true);
-					}
-					world.setParameter("activeAmaskariCall", ThreadPool.schedule(new CallAmaskari(npc), 25000));
+					msgId = -1;
+					range = 0;
 				}
+			}
+			if (msgId >= 0)
+			{
+				npc.broadcastSay(ChatType.NPC_GENERAL, NPCSTRING_ID[msgId], range);
+			}
+			npc.setBusy(true);
+			npc.setBusyMessage("atk");
+			
+			final Npc spawnedAmaskari = world.getParameters().getObject("spawnedAmaskari", Npc.class);
+			if ((spawnedAmaskari != null) && !spawnedAmaskari.isDead() && (getRandom(1000) < 25) && Util.checkIfInRange(range, npc, spawnedAmaskari, false))
+			{
+				final ScheduledFuture<?> activeAmaskariCall = world.getParameters().getObject("activeAmaskariCall", ScheduledFuture.class);
+				if (activeAmaskariCall != null)
+				{
+					activeAmaskariCall.cancel(true);
+				}
+				world.setParameter("activeAmaskariCall", ThreadPool.schedule(new CallAmaskari(npc), 25000));
 			}
 		}
 		return super.onAttack(npc, attacker, damage, isSummon, skill);

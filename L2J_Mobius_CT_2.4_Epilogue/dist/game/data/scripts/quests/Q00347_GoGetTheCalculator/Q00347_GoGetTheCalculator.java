@@ -261,12 +261,9 @@ public class Q00347_GoGetTheCalculator extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getRandomPartyMemberState(killer, 4, 3, npc);
-		if (qs != null)
+		if ((qs != null) && giveItemRandomly(qs.getPlayer(), npc, GEMSTONE, 1, 10, 0.4, true))
 		{
-			if (giveItemRandomly(qs.getPlayer(), npc, GEMSTONE, 1, 10, 0.4, true))
-			{
-				qs.setCond(5);
-			}
+			qs.setCond(5);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}

@@ -226,6 +226,7 @@ public class Q00234_FatesWhisper extends Quest
 				{
 					return "30182-06.html";
 				}
+				break;
 			}
 			case MASTER_KASPAR:
 			{
@@ -573,6 +574,7 @@ public class Q00234_FatesWhisper extends Quest
 						return "30178-02.html";
 					}
 				}
+				break;
 			}
 			case CLIFF:
 			{
@@ -1189,15 +1191,12 @@ public class Q00234_FatesWhisper extends Quest
 	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(attacker, false);
-		if ((qs != null) && (npc.getId() == BAIUM))
+		if ((qs != null) && (attacker.getActiveWeaponItem() != null) && (attacker.getActiveWeaponItem().getId() == Q_PIPETTE_KNIFE))
 		{
-			if ((attacker.getActiveWeaponItem() != null) && (attacker.getActiveWeaponItem().getId() == Q_PIPETTE_KNIFE))
-			{
-				takeItems(attacker, Q_PIPETTE_KNIFE, 1);
-				giveItems(attacker, Q_RED_PIPETTE_KNIFE, 1);
-				playSound(attacker, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-				npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.GENERAL, npc.getId(), NpcStringId.WHO_DARES_TO_TRY_AND_STEAL_MY_NOBLE_BLOOD));
-			}
+			takeItems(attacker, Q_PIPETTE_KNIFE, 1);
+			giveItems(attacker, Q_RED_PIPETTE_KNIFE, 1);
+			playSound(attacker, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+			npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.GENERAL, npc.getId(), NpcStringId.WHO_DARES_TO_TRY_AND_STEAL_MY_NOBLE_BLOOD));
 		}
 		return super.onAttack(npc, attacker, damage, isSummon);
 	}

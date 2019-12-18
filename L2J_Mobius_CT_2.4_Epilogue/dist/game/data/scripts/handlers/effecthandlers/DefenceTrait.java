@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import java.util.HashMap;
+import java.util.EnumMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.model.stats.TraitType;
  */
 public class DefenceTrait extends AbstractEffect
 {
-	private final Map<TraitType, Float> _defenceTraits = new HashMap<>();
+	private final Map<TraitType, Float> _defenceTraits = new EnumMap<>(TraitType.class);
 	
 	public DefenceTrait(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{

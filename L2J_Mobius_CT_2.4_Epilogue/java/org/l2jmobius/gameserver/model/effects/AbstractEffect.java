@@ -44,15 +44,9 @@ public abstract class AbstractEffect
 {
 	protected static final Logger LOGGER = Logger.getLogger(AbstractEffect.class.getName());
 	
-	// Conditions
-	/** Attach condition. */
 	private final Condition _attachCond;
-	// Apply condition
-	// private final Condition _applyCond; // TODO: Use or cleanup.
 	private List<FuncTemplate> _funcTemplates;
-	/** Effect name. */
 	private final String _name;
-	/** Ticks. */
 	private final int _ticks;
 	
 	/**
@@ -65,7 +59,6 @@ public abstract class AbstractEffect
 	protected AbstractEffect(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
 		_attachCond = attachCond;
-		// _applyCond = applyCond;
 		_name = set.getString("name");
 		_ticks = set.getInt("ticks", 0);
 	}
@@ -178,7 +171,6 @@ public abstract class AbstractEffect
 	
 	/**
 	 * Get this effect's type.<br>
-	 * TODO: Remove.
 	 * @return the effect type
 	 */
 	public EffectType getEffectType()

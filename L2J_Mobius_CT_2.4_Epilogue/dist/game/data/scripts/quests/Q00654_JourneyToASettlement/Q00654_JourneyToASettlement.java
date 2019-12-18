@@ -83,6 +83,7 @@ public class Q00654_JourneyToASettlement extends Quest
 					qs.setCond(2, true);
 					htmltext = event;
 				}
+				break;
 			}
 			case "31453-07.html":
 			{
@@ -92,6 +93,7 @@ public class Q00654_JourneyToASettlement extends Quest
 					qs.exitQuest(true, true);
 					htmltext = event;
 				}
+				break;
 			}
 		}
 		return htmltext;

@@ -353,8 +353,7 @@ public class PetInstance extends Creature
 		}
 		final ItemInstance target = (ItemInstance) getTarget();
 		boolean pickupOk = false;
-		final ItemInstance ItemInstance = target;
-		synchronized (ItemInstance)
+		synchronized (target)
 		{
 			if (target.isOnTheGround())
 			{
@@ -387,21 +386,13 @@ public class PetInstance extends Creature
 	public void reduceCurrentHp(int damage, Creature attacker)
 	{
 		super.reduceCurrentHp(damage, attacker);
-		if (!isDead() && (attacker != null))
+		if (!isDead() && (attacker != null) && !isInCombat())
 		{
-			if (!isInCombat())
-			{
-				startAttack(attacker);
-			}
-			// else
-			// {
-			// _log.fine("already attacking");
-			// }
+			startAttack(attacker);
 		}
 		if (isDead())
 		{
-			final PetInstance PetInstance = this;
-			synchronized (PetInstance)
+			synchronized (this)
 			{
 				if ((_decayTask == null) || _decayTask.isCancelled() || _decayTask.isDone())
 				{
@@ -445,10 +436,10 @@ public class PetInstance extends Creature
 			_owner.getInventory().addItem(item);
 			getInventory().dropItem(item, item.getCount());
 			final PetInventoryUpdate petiu = new PetInventoryUpdate();
-			final ItemList PlayerUI = new ItemList(_owner, false);
+			final ItemList playerUI = new ItemList(_owner, false);
 			petiu.addRemovedItem(item);
 			_owner.sendPacket(petiu);
-			_owner.sendPacket(PlayerUI);
+			_owner.sendPacket(playerUI);
 		}
 		catch (Exception e)
 		{
@@ -531,9 +522,9 @@ public class PetInstance extends Creature
 			dropit.setZ(getZ() + 100);
 			dropit.setOnTheGround(true);
 			final DropItem dis = new DropItem(dropit, getObjectId());
-			for (Creature player : broadcastPacket(dis))
+			for (PlayerInstance player : broadcastPacket(dis))
 			{
-				((PlayerInstance) player).addKnownObjectWithoutCreate(dropit);
+				player.addKnownObjectWithoutCreate(dropit);
 			}
 			World.getInstance().addVisibleObject(dropit);
 		}
@@ -586,11 +577,11 @@ public class PetInstance extends Creature
 		updateKnownCounter = (byte) (updateKnownCounter + 1);
 		if (updateKnownCounter > 3)
 		{
-			if (getKnownObjects().size() != 0)
+			if (!getKnownObjects().isEmpty())
 			{
 				for (WorldObject object : _knownObjects)
 				{
-					if (!(getDistance(object.getX(), object.getY()) > 4000.0))
+					if (getDistance(object.getX(), object.getY()) <= 4000.0)
 					{
 						continue;
 					}

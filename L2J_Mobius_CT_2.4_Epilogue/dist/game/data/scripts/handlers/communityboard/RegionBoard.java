@@ -63,7 +63,7 @@ public class RegionBoard implements IWriteBoardHandler
 			{
 				final Castle castle = castles.get(i);
 				final Clan clan = ClanTable.getInstance().getClan(castle.getOwnerId());
-				String link = list.replaceAll("%region_id%", String.valueOf(i));
+				String link = list.replace("%region_id%", String.valueOf(i));
 				link = link.replace("%region_name%", String.valueOf(REGIONS[i]));
 				link = link.replace("%region_owning_clan%", (clan != null ? clan.getName() : "NPC"));
 				link = link.replace("%region_owning_clan_alliance%", ((clan != null) && (clan.getAllyName() != null) ? clan.getAllyName() : ""));

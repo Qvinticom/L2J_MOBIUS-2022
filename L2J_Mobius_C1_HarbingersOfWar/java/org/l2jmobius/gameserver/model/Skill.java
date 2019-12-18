@@ -19,17 +19,18 @@ package org.l2jmobius.gameserver.model;
 
 public class Skill
 {
-	public static int OP_ALWAYS = 1;
-	public static int OP_ONCE = 2;
-	public static int OP_DURATION = 3;
-	public static int OP_TOGGLE = 4;
-	public static int TARGET_SELF = 0;
-	public static int TARGET_ONE = 1;
-	public static int TARGET_PARTY = 2;
-	public static int TARGET_CLAN = 3;
-	public static int TARGET_PET = 4;
-	public static int TARGET_ENEMY = 5;
-	public static int TARGET_FRIEND = 6;
+	public static final int OP_ALWAYS = 1;
+	public static final int OP_ONCE = 2;
+	public static final int OP_DURATION = 3;
+	public static final int OP_TOGGLE = 4;
+	public static final int TARGET_SELF = 0;
+	public static final int TARGET_ONE = 1;
+	public static final int TARGET_PARTY = 2;
+	public static final int TARGET_CLAN = 3;
+	public static final int TARGET_PET = 4;
+	public static final int TARGET_ENEMY = 5;
+	public static final int TARGET_FRIEND = 6;
+	
 	private int _id;
 	private int _level;
 	private String _name;

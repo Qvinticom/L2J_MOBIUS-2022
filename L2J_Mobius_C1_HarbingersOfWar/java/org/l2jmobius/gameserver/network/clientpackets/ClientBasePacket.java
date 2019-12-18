@@ -17,6 +17,8 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
+import java.nio.charset.StandardCharsets;
+
 public abstract class ClientBasePacket
 {
 	private final byte[] _decrypt;
@@ -65,7 +67,7 @@ public abstract class ClientBasePacket
 		String result = null;
 		try
 		{
-			result = new String(_decrypt, _off, _decrypt.length - _off, "UTF-16LE");
+			result = new String(_decrypt, _off, _decrypt.length - _off, StandardCharsets.UTF_16LE);
 			result = result.substring(0, result.indexOf(0));
 		}
 		catch (Exception e)

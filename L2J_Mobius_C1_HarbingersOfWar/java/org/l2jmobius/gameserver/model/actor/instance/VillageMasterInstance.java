@@ -50,12 +50,6 @@ public class VillageMasterInstance extends NpcInstance
 		return "data/html/villagemaster/" + pom + ".htm";
 	}
 	
-	@Override
-	public void onAction(PlayerInstance player)
-	{
-		super.onAction(player);
-	}
-	
 	public void createClan(PlayerInstance player, String clanName)
 	{
 		if (player.getLevel() < 10)

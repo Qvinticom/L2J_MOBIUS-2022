@@ -62,21 +62,21 @@ public class EffectList
 {
 	private static final Logger LOGGER = Logger.getLogger(EffectList.class.getName());
 	/** Queue containing all effects from buffs for this effect list. */
-	private volatile Queue<BuffInfo> _buffs = new ConcurrentLinkedQueue<>();
+	private final Queue<BuffInfo> _buffs = new ConcurrentLinkedQueue<>();
 	/** Queue containing all triggered skills for this effect list. */
-	private volatile Queue<BuffInfo> _triggered = new ConcurrentLinkedQueue<>();
+	private final Queue<BuffInfo> _triggered = new ConcurrentLinkedQueue<>();
 	/** Queue containing all dances/songs for this effect list. */
-	private volatile Queue<BuffInfo> _dances = new ConcurrentLinkedQueue<>();
+	private final Queue<BuffInfo> _dances = new ConcurrentLinkedQueue<>();
 	/** Queue containing all toggle for this effect list. */
-	private volatile Queue<BuffInfo> _toggles = new ConcurrentLinkedQueue<>();
+	private final Queue<BuffInfo> _toggles = new ConcurrentLinkedQueue<>();
 	/** Queue containing all debuffs for this effect list. */
-	private volatile Queue<BuffInfo> _debuffs = new ConcurrentLinkedQueue<>();
+	private final Queue<BuffInfo> _debuffs = new ConcurrentLinkedQueue<>();
 	/** Queue containing all passives for this effect list. They bypass most of the actions and they are not included in most operations. */
-	private volatile Queue<BuffInfo> _passives = new ConcurrentLinkedQueue<>();
+	private final Queue<BuffInfo> _passives = new ConcurrentLinkedQueue<>();
 	/** Map containing the all stacked effect in progress for each abnormal type. */
-	private volatile Map<AbnormalType, BuffInfo> _stackedEffects = new ConcurrentHashMap<>();
+	private final Map<AbnormalType, BuffInfo> _stackedEffects = new ConcurrentHashMap<>();
 	/** Set containing all abnormal types that shouldn't be added to this creature effect list. */
-	private volatile Set<AbnormalType> _blockedBuffSlots = new CopyOnWriteArraySet<>();
+	private final Set<AbnormalType> _blockedBuffSlots = new CopyOnWriteArraySet<>();
 	/** Short buff skill ID. */
 	private BuffInfo _shortBuff = null;
 	/** If {@code true} this effect list has buffs removed on any action. */
@@ -394,7 +394,7 @@ public class EffectList
 	 */
 	public BuffInfo getBuffInfoByAbnormalType(AbnormalType type)
 	{
-		return (_stackedEffects != null) ? _stackedEffects.get(type) : null;
+		return _stackedEffects.get(type);
 	}
 	
 	/**
@@ -413,7 +413,7 @@ public class EffectList
 	 */
 	public boolean removeBlockedBuffSlots(Set<AbnormalType> blockedBuffSlots)
 	{
-		return (_blockedBuffSlots != null) && _blockedBuffSlots.removeAll(blockedBuffSlots);
+		return _blockedBuffSlots.removeAll(blockedBuffSlots);
 	}
 	
 	/**
@@ -561,7 +561,7 @@ public class EffectList
 			_hiddenBuffs.decrementAndGet();
 		}
 		// Removes the buff from the stack.
-		else if (_stackedEffects != null)
+		else
 		{
 			_stackedEffects.remove(info.getSkill().getAbnormalType());
 		}
@@ -578,10 +578,7 @@ public class EffectList
 					// Adds the stats.
 					buff.addStats();
 					// Adds the buff to the stack.
-					if (_stackedEffects != null)
-					{
-						_stackedEffects.put(buff.getSkill().getAbnormalType(), buff);
-					}
+					_stackedEffects.put(buff.getSkill().getAbnormalType(), buff);
 					// If it's a hidden buff that gets activated, then decrease hidden buff count.
 					_hiddenBuffs.decrementAndGet();
 					break;
@@ -610,10 +607,7 @@ public class EffectList
 		// Stop debuffs.
 		stopAllDebuffs(false);
 		
-		if (_stackedEffects != null)
-		{
-			_stackedEffects.clear();
-		}
+		_stackedEffects.clear();
 		
 		// Update effect flags, icons and ave.
 		updateEffectList(true);
@@ -898,14 +892,11 @@ public class EffectList
 	 */
 	public boolean stopSkillEffects(boolean removed, AbnormalType type)
 	{
-		if (_stackedEffects != null)
+		final BuffInfo old = _stackedEffects.remove(type);
+		if (old != null)
 		{
-			final BuffInfo old = _stackedEffects.remove(type);
-			if (old != null)
-			{
-				stopSkillEffects(removed, old.getSkill());
-				return true;
-			}
+			stopSkillEffects(removed, old.getSkill());
+			return true;
 		}
 		return false;
 	}
@@ -1030,7 +1021,7 @@ public class EffectList
 	 */
 	public boolean hasBuffs()
 	{
-		return (_buffs != null) && !_buffs.isEmpty();
+		return !_buffs.isEmpty();
 	}
 	
 	/**
@@ -1040,7 +1031,7 @@ public class EffectList
 	 */
 	public boolean hasTriggered()
 	{
-		return (_triggered != null) && !_triggered.isEmpty();
+		return !_triggered.isEmpty();
 	}
 	
 	/**
@@ -1050,7 +1041,7 @@ public class EffectList
 	 */
 	public boolean hasDances()
 	{
-		return (_dances != null) && !_dances.isEmpty();
+		return !_dances.isEmpty();
 	}
 	
 	/**
@@ -1060,7 +1051,7 @@ public class EffectList
 	 */
 	public boolean hasToggles()
 	{
-		return (_toggles != null) && !_toggles.isEmpty();
+		return !_toggles.isEmpty();
 	}
 	
 	/**
@@ -1070,7 +1061,7 @@ public class EffectList
 	 */
 	public boolean hasDebuffs()
 	{
-		return (_debuffs != null) && !_debuffs.isEmpty();
+		return !_debuffs.isEmpty();
 	}
 	
 	/**
@@ -1080,7 +1071,7 @@ public class EffectList
 	 */
 	public boolean hasPassives()
 	{
-		return (_passives != null) && !_passives.isEmpty();
+		return !_passives.isEmpty();
 	}
 	
 	/**
@@ -1166,7 +1157,7 @@ public class EffectList
 		
 		// Support for blocked buff slots.
 		final Skill skill = info.getSkill();
-		if ((_blockedBuffSlots != null) && _blockedBuffSlots.contains(skill.getAbnormalType()))
+		if (_blockedBuffSlots.contains(skill.getAbnormalType()))
 		{
 			return;
 		}
@@ -1249,10 +1240,6 @@ public class EffectList
 						// Remove buff that will stack with the abnormal type.
 						else
 						{
-							if (stackedInfo.getSkill().isAbnormalInstant())
-							{
-								stopSkillEffects(false, skill.getAbnormalType());
-							}
 							stopSkillEffects(false, skill.getAbnormalType());
 						}
 					}

@@ -18,6 +18,7 @@ package org.l2jmobius.commons.network;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.util.logging.Logger;
 
 /**
@@ -72,7 +73,7 @@ public abstract class BaseSendablePacket
 		{
 			if (text != null)
 			{
-				_bao.write(text.getBytes("UTF-16LE"));
+				_bao.write(text.getBytes(StandardCharsets.UTF_16LE));
 			}
 		}
 		catch (Exception e)

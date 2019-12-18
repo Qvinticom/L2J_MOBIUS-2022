@@ -89,12 +89,12 @@ public class TradeList
 		return -1;
 	}
 	
-	public ItemInstance getItem(int ObjectId)
+	public ItemInstance getItem(int objectId)
 	{
 		for (int i = 0; i < _items.size(); ++i)
 		{
 			final ItemInstance item = _items.get(i);
-			if (item.getObjectId() != ObjectId)
+			if (item.getObjectId() != objectId)
 			{
 				continue;
 			}
@@ -280,12 +280,12 @@ public class TradeList
 			}
 			else
 			{
-				msg = new SystemMessage(SystemMessage.S1_PURCHASED_S3_S2_s);
+				msg = new SystemMessage(SystemMessage.S1_PURCHASED_S3_S2_S);
 				msg.addString(buyer.getName());
 				msg.addItemName(((ItemInstance) sellerItem).getItemId());
 				msg.addNumber(amount);
 				sysmsgs.add(msg);
-				msg = new SystemMessage(SystemMessage.S1_PURCHASED_S3_S2_s);
+				msg = new SystemMessage(SystemMessage.S1_PURCHASED_S3_S2_S);
 				msg.addString("You");
 				msg.addItemName(((ItemInstance) sellerItem).getItemId());
 				msg.addNumber(amount);

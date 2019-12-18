@@ -41,7 +41,6 @@ public class SellList extends ServerBasePacket
 		writeC(0x1C);
 		writeD(_money);
 		writeD(0);
-		int count = _char.getInventory().getSize();
 		for (ItemInstance item : _char.getInventory().getItems())
 		{
 			if (item.isEquipped() || (item.getItemId() == 57) || (item.getItem().getType2() == 3))
@@ -50,8 +49,7 @@ public class SellList extends ServerBasePacket
 			}
 			_selllist.add(item);
 		}
-		count = _selllist.size();
-		writeH(count);
+		writeH(_selllist.size());
 		for (ItemInstance item : _selllist)
 		{
 			writeH(item.getItem().getType1());

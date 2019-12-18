@@ -26,6 +26,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.concurrent.ScheduledFuture;
 
 import org.l2jmobius.Config;
@@ -88,16 +89,16 @@ public class RainbowSpringsChateau extends ClanHallSiegeEngine
 				{
 					long counter = 0;
 					Clan clan = null;
-					for (int clanId : _warDecreesCount.keySet())
+					for (Entry<Integer, Long> entry : _warDecreesCount.entrySet())
 					{
-						final Clan actingClan = ClanTable.getInstance().getClan(clanId);
+						final Clan actingClan = ClanTable.getInstance().getClan(entry.getKey());
 						if ((actingClan == null) || (actingClan.getDissolvingExpiryTime() > 0))
 						{
-							_warDecreesCount.remove(clanId);
+							_warDecreesCount.remove(entry.getKey());
 							continue;
 						}
 						
-						final long count = _warDecreesCount.get(clanId);
+						final long count = entry.getValue();
 						if (count > counter)
 						{
 							counter = count;
@@ -144,7 +145,7 @@ public class RainbowSpringsChateau extends ClanHallSiegeEngine
 		}
 	}
 	
-	public static Clan _winner;
+	public static final Clan _winner = null;
 	
 	@Override
 	public Clan getWinner()
@@ -643,7 +644,7 @@ public class RainbowSpringsChateau extends ClanHallSiegeEngine
 		
 		final WorldObject target = player.getTarget();
 		
-		if ((target == null) || !(target instanceof Npc))
+		if (!(target instanceof Npc))
 		{
 			return null;
 		}
@@ -724,7 +725,7 @@ public class RainbowSpringsChateau extends ClanHallSiegeEngine
 				}
 				catch (Exception e)
 				{
-					e.printStackTrace();
+					LOGGER.warning("Problem at RainbowSpringsChateau: " + e.getMessage());
 				}
 			}
 			SpawnTable.getInstance().addNewSpawn(_gourds[i], false);
@@ -884,7 +885,7 @@ public class RainbowSpringsChateau extends ClanHallSiegeEngine
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			LOGGER.warning("Problem at RainbowSpringsChateau: " + e.getMessage());
 		}
 	}
 	

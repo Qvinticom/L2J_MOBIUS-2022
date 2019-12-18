@@ -43,27 +43,27 @@ public class Potions implements IItemHandler
 	@Override
 	public int useItem(PlayerInstance activeChar, ItemInstance item)
 	{
-		final Potion Potion = new Potion();
+		final Potion potion = new Potion();
 		final int itemId = item.getItemId();
 		if ((itemId == 65) || (itemId == 725) || (itemId == 727) || (itemId == 1060) || (itemId == 1061) || (itemId == 1539) || (itemId == 1540) || (itemId == 1073))
 		{
-			final WorldObject OldTarget = activeChar.getTarget();
+			final WorldObject oldTarget = activeChar.getTarget();
 			activeChar.setTarget(activeChar);
-			final MagicSkillUser MSU = new MagicSkillUser(activeChar, 2038, 1, 0, 0);
-			activeChar.sendPacket(MSU);
-			activeChar.broadcastPacket(MSU);
-			activeChar.setTarget(OldTarget);
-			Potion.setCurrentHpPotion1(activeChar, itemId);
+			final MagicSkillUser msu = new MagicSkillUser(activeChar, 2038, 1, 0, 0);
+			activeChar.sendPacket(msu);
+			activeChar.broadcastPacket(msu);
+			activeChar.setTarget(oldTarget);
+			potion.setCurrentHpPotion1(activeChar, itemId);
 		}
 		else if ((itemId == 726) || (itemId == 728))
 		{
-			final WorldObject OldTarget = activeChar.getTarget();
+			final WorldObject oldTarget = activeChar.getTarget();
 			activeChar.setTarget(activeChar);
-			final MagicSkillUser MSU = new MagicSkillUser(activeChar, 2038, 1, 0, 0);
-			activeChar.sendPacket(MSU);
-			activeChar.broadcastPacket(MSU);
-			activeChar.setTarget(OldTarget);
-			Potion.setCurrentMpPotion1(activeChar, itemId);
+			final MagicSkillUser msu = new MagicSkillUser(activeChar, 2038, 1, 0, 0);
+			activeChar.sendPacket(msu);
+			activeChar.broadcastPacket(msu);
+			activeChar.setTarget(oldTarget);
+			potion.setCurrentMpPotion1(activeChar, itemId);
 		}
 		return 1;
 	}

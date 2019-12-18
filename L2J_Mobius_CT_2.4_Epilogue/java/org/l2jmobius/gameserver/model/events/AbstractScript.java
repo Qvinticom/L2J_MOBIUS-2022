@@ -1252,7 +1252,7 @@ public abstract class AbstractScript extends ManagedScript
 	 */
 	protected final List<AbstractEventListener> registerConsumer(Consumer<? extends IBaseEvent> callback, EventType type, ListenerRegisterType registerType, int... npcIds)
 	{
-		return registerListener((container) -> new ConsumerEventListener(container, type, callback, this), registerType, npcIds);
+		return registerListener(container -> new ConsumerEventListener(container, type, callback, this), registerType, npcIds);
 	}
 	
 	/**
@@ -1265,7 +1265,7 @@ public abstract class AbstractScript extends ManagedScript
 	 */
 	protected final List<AbstractEventListener> registerConsumer(Consumer<? extends IBaseEvent> callback, EventType type, ListenerRegisterType registerType, Collection<Integer> npcIds)
 	{
-		return registerListener((container) -> new ConsumerEventListener(container, type, callback, this), registerType, npcIds);
+		return registerListener(container -> new ConsumerEventListener(container, type, callback, this), registerType, npcIds);
 	}
 	
 	/**
@@ -1278,7 +1278,7 @@ public abstract class AbstractScript extends ManagedScript
 	 */
 	protected final List<AbstractEventListener> registerFunction(Function<? extends IBaseEvent, ? extends AbstractEventReturn> callback, EventType type, ListenerRegisterType registerType, int... npcIds)
 	{
-		return registerListener((container) -> new FunctionEventListener(container, type, callback, this), registerType, npcIds);
+		return registerListener(container -> new FunctionEventListener(container, type, callback, this), registerType, npcIds);
 	}
 	
 	/**
@@ -1291,7 +1291,7 @@ public abstract class AbstractScript extends ManagedScript
 	 */
 	protected final List<AbstractEventListener> registerFunction(Function<? extends IBaseEvent, ? extends AbstractEventReturn> callback, EventType type, ListenerRegisterType registerType, Collection<Integer> npcIds)
 	{
-		return registerListener((container) -> new FunctionEventListener(container, type, callback, this), registerType, npcIds);
+		return registerListener(container -> new FunctionEventListener(container, type, callback, this), registerType, npcIds);
 	}
 	
 	/**
@@ -1304,7 +1304,7 @@ public abstract class AbstractScript extends ManagedScript
 	 */
 	protected final List<AbstractEventListener> registerRunnable(Runnable callback, EventType type, ListenerRegisterType registerType, int... npcIds)
 	{
-		return registerListener((container) -> new RunnableEventListener(container, type, callback, this), registerType, npcIds);
+		return registerListener(container -> new RunnableEventListener(container, type, callback, this), registerType, npcIds);
 	}
 	
 	/**
@@ -1317,7 +1317,7 @@ public abstract class AbstractScript extends ManagedScript
 	 */
 	protected final List<AbstractEventListener> registerRunnable(Runnable callback, EventType type, ListenerRegisterType registerType, Collection<Integer> npcIds)
 	{
-		return registerListener((container) -> new RunnableEventListener(container, type, callback, this), registerType, npcIds);
+		return registerListener(container -> new RunnableEventListener(container, type, callback, this), registerType, npcIds);
 	}
 	
 	/**
@@ -1331,7 +1331,7 @@ public abstract class AbstractScript extends ManagedScript
 	 */
 	protected final List<AbstractEventListener> registerAnnotation(Method callback, EventType type, ListenerRegisterType registerType, int priority, int... npcIds)
 	{
-		return registerListener((container) -> new AnnotationEventListener(container, type, callback, this, priority), registerType, npcIds);
+		return registerListener(container -> new AnnotationEventListener(container, type, callback, this, priority), registerType, npcIds);
 	}
 	
 	/**
@@ -1345,7 +1345,7 @@ public abstract class AbstractScript extends ManagedScript
 	 */
 	protected final List<AbstractEventListener> registerAnnotation(Method callback, EventType type, ListenerRegisterType registerType, int priority, Collection<Integer> npcIds)
 	{
-		return registerListener((container) -> new AnnotationEventListener(container, type, callback, this, priority), registerType, npcIds);
+		return registerListener(container -> new AnnotationEventListener(container, type, callback, this, priority), registerType, npcIds);
 	}
 	
 	/**
@@ -1357,7 +1357,7 @@ public abstract class AbstractScript extends ManagedScript
 	 */
 	protected final List<AbstractEventListener> registerDummy(EventType type, ListenerRegisterType registerType, int... npcIds)
 	{
-		return registerListener((container) -> new DummyEventListener(container, type, this), registerType, npcIds);
+		return registerListener(container -> new DummyEventListener(container, type, this), registerType, npcIds);
 	}
 	
 	/**
@@ -1369,7 +1369,7 @@ public abstract class AbstractScript extends ManagedScript
 	 */
 	protected final List<AbstractEventListener> registerDummy(EventType type, ListenerRegisterType registerType, Collection<Integer> npcIds)
 	{
-		return registerListener((container) -> new DummyEventListener(container, type, this), registerType, npcIds);
+		return registerListener(container -> new DummyEventListener(container, type, this), registerType, npcIds);
 	}
 	
 	// --------------------------------------------------------------------------------------------------
@@ -1912,11 +1912,10 @@ public abstract class AbstractScript extends ManagedScript
 	 * @param y
 	 * @param z
 	 * @param heading
-	 * @param skill
 	 * @param instanceId
 	 * @return
 	 */
-	public TrapInstance addTrap(int trapId, int x, int y, int z, int heading, Skill skill, int instanceId)
+	public TrapInstance addTrap(int trapId, int x, int y, int z, int heading, int instanceId)
 	{
 		final NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(trapId);
 		final TrapInstance trap = new TrapInstance(npcTemplate, instanceId, -1);

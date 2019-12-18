@@ -127,7 +127,7 @@ public class NpcSay implements IClientOutgoingPacket
 				final NSLocalisation nsl = ns.getLocalisation(_lang);
 				if (nsl != null)
 				{
-					_text = nsl.getLocalisation(_parameters != null ? _parameters : Collections.EMPTY_LIST);
+					_text = nsl.getLocalisation(_parameters != null ? _parameters : Collections.emptyList());
 				}
 			}
 		}

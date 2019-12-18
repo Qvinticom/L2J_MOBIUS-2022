@@ -42,7 +42,7 @@ public class AddTradeItem extends ClientBasePacket
 			final TradeList playerItemList = player.getTradeList();
 			player.getTradeList().setConfirmedTrade(false);
 			requestor.getTradeList().setConfirmedTrade(false);
-			if (playerItemList.getItems().size() > 0)
+			if (!playerItemList.getItems().isEmpty())
 			{
 				if (!playerItemList.contains(objectId))
 				{

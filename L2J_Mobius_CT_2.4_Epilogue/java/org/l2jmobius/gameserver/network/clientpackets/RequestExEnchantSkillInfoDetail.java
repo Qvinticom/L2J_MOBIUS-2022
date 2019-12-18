@@ -98,13 +98,10 @@ public class RequestExEnchantSkillInfoDetail implements IClientIncomingPacket
 				return;
 			}
 		}
-		else if (playerSkillLvl != reqSkillLvl)
+		// change route is different skill lvl but same enchant
+		else if ((playerSkillLvl != reqSkillLvl) && (_type == 3) && ((playerSkillLvl % 100) != (_skillLvl % 100)))
 		{
-			// change route is different skill lvl but same enchant
-			if ((_type == 3) && ((playerSkillLvl % 100) != (_skillLvl % 100)))
-			{
-				return;
-			}
+			return;
 		}
 		
 		// send skill enchantment detail

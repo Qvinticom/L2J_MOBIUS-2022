@@ -32,14 +32,12 @@ import org.l2jmobius.gameserver.instancemanager.InstanceManager;
 import org.l2jmobius.gameserver.instancemanager.SoDManager;
 import org.l2jmobius.gameserver.model.CommandChannel;
 import org.l2jmobius.gameserver.model.Location;
-import org.l2jmobius.gameserver.model.WorldObject;
 import org.l2jmobius.gameserver.model.actor.Attackable;
 import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Npc;
 import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.actor.instance.DoorInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import org.l2jmobius.gameserver.model.holders.SkillHolder;
 import org.l2jmobius.gameserver.model.instancezone.Instance;
 import org.l2jmobius.gameserver.model.instancezone.InstanceWorld;
 import org.l2jmobius.gameserver.model.quest.QuestState;
@@ -96,11 +94,6 @@ public class SeedOfDestruction extends AbstractNpcAI
 	private static final int[] MOB_IDS = {22536, 22537, 22538, 22539, 22540, 22541, 22542, 22543, 22544, 22547, 22550, 22551, 22552, 22596, 29162};
 	private static final Location MOVE_TO_TIAT = new Location(-250403, 207273, -11952, 16384);
 	
-    // Traps/Skills
-    private static final SkillHolder TRAP_HOLD = new SkillHolder(4186, 9); // 18720-18728
-    private static final SkillHolder TRAP_STUN = new SkillHolder(4072, 10); // 18729-18736
-    private static final SkillHolder TRAP_DAMAGE = new SkillHolder(5340, 4); // 18737-18774
-    
 	// Doors/Walls/Zones
 	private static final int[] ATTACKABLE_DOORS = {12240005, 12240006, 12240007, 12240008, 12240009, 12240010, 12240013, 12240014, 12240015, 12240016, 12240017, 12240018, 12240021, 12240022, 12240023, 12240024, 12240025, 12240026, 12240028, 12240029, 12240030};
 	private static final int[] ENTRANCE_ROOM_DOORS = {12240001, 12240002};
@@ -971,7 +964,6 @@ public class SeedOfDestruction extends AbstractNpcAI
 		player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		player.setInstanceId(teleto.instanceId);
 		player.teleToLocation(teleto.x, teleto.y, teleto.z);
-		return;
 	}
 	
 	private void teleportplayer(PlayerInstance player, teleCoord teleto, SODWorld world)
@@ -1092,21 +1084,7 @@ public class SeedOfDestruction extends AbstractNpcAI
 			// traps
 			if ((mob[0] >= 18720) && (mob[0] <= 18774))
 			{
-				Skill skill = null;
-				if (mob[0] <= 18728)
-				{
-					skill = TRAP_HOLD.getSkill();
-				}
-				else if (mob[0] <= 18736)
-				{
-					skill = TRAP_STUN.getSkill();
-				}
-				else
-				// if (mob[0] <= 18774)
-				{
-					skill = TRAP_DAMAGE.getSkill();
-				}
-				addTrap(mob[0], mob[1], mob[2], mob[3], mob[4], skill, world.getInstanceId());
+				addTrap(mob[0], mob[1], mob[2], mob[3], mob[4], world.getInstanceId());
 				continue;
 			}
 			
@@ -1172,12 +1150,6 @@ public class SeedOfDestruction extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSkillSee(Npc npc, PlayerInstance caster, Skill skill, WorldObject[] targets, boolean isPet)
-	{
-		return super.onSkillSee(npc, caster, skill, targets, isPet);
-	}
-	
-	@Override
 	public String onSpawn(Npc npc)
 	{
 		npc.disableCoreAI(true);
@@ -1203,18 +1175,15 @@ public class SeedOfDestruction extends AbstractNpcAI
 			}
 			else if ((world.getStatus() <= 8) && (npc.getId() == TIAT))
 			{
-				if (npc.getCurrentHp() < (npc.getMaxHp() / 2))
+				if ((npc.getCurrentHp() < (npc.getMaxHp() / 2)) && (_numAtk < 1))
 				{
-					if (_numAtk < 1)
-					{
-						final ExShowScreenMessage message4 = new ExShowScreenMessage(NpcStringId.COME_OUT_WARRIORS_PROTECT_SEED_OF_DESTRUCTION, 5, 5000);
-						sendScreenMessage(world, message4);
-						world._tiat.doCast(SkillData.getInstance().getSkill(5818, 1));
-						world._tiat.doCast(SkillData.getInstance().getSkill(181, 1));
-						world.deviceSpawnedMobCount = 0;
-						spawn(world, THRONE_PORTALS, false, true);
-						_numAtk++;
-					}
+					final ExShowScreenMessage message4 = new ExShowScreenMessage(NpcStringId.COME_OUT_WARRIORS_PROTECT_SEED_OF_DESTRUCTION, 5, 5000);
+					sendScreenMessage(world, message4);
+					world._tiat.doCast(SkillData.getInstance().getSkill(5818, 1));
+					world._tiat.doCast(SkillData.getInstance().getSkill(181, 1));
+					world.deviceSpawnedMobCount = 0;
+					spawn(world, THRONE_PORTALS, false, true);
+					_numAtk++;
 				}
 			}
 		}
@@ -1228,60 +1197,64 @@ public class SeedOfDestruction extends AbstractNpcAI
 		if (tmpworld instanceof SODWorld)
 		{
 			final SODWorld world = (SODWorld) tmpworld;
-			if (event.equals("ThroneSpawn"))
+			switch (event)
 			{
-				world._tiat = addSpawn(TIAT, -250400, 207271, -11961, 16285, false, 0, false, world.getInstanceId());
-				world._tiat.setRandomWalking(false);
-				world._naezdTR1 = addSpawn(NAEZD, -250154, 207203, -11970, 33818, false, 0, false, world.getInstanceId());
-				world._naezdTR1.setRandomWalking(false);
-				world._naezdTR2 = addSpawn(NAEZD, -250209, 206941, -11966, 27379, false, 0, false, world.getInstanceId());
-				world._naezdTR2.setRandomWalking(false);
-				world._naezdTL1 = addSpawn(NAEZD, -250652, 207203, -11970, 0, false, 0, false, world.getInstanceId());
-				world._naezdTL1.setRandomWalking(false);
-				world._naezdTL2 = addSpawn(NAEZD, -250597, 206941, -11966, 6867, false, 0, false, world.getInstanceId());
-				world._naezdTL2.setRandomWalking(false);
-				
-				for (int i = 0; i < 12; i++)
+				case "ThroneSpawn":
 				{
-					final Npc npc1 = addSpawn(22543, ONETR[i][0], ONETR[i][1], ONETR[i][2], 16285, false, 0, false, world.getInstanceId());
-					npc1.setRandomWalking(false);
-					world._mags.add(npc1);
-					
-					final Npc npc2 = addSpawn(22541, TWOTR[i][0], TWOTR[i][1], TWOTR[i][2], 16285, false, 0, false, world.getInstanceId());
-					npc2.setRandomWalking(false);
-				}
-				for (int i = 0; i < 6; i++)
-				{
-					final Npc npc3 = addSpawn(FRETR[i][0], FRETR[i][1], FRETR[i][2], FRETR[i][3], 16285, false, 0, false, world.getInstanceId());
-					npc3.setRandomWalking(false);
-					
-					final Npc npc4 = addSpawn(22536, FORTR[i][0], FORTR[i][1], FORTR[i][2], 16285, false, 0, false, world.getInstanceId());
-					npc4.setRandomWalking(false);
-					
-					final Npc npc5 = addSpawn(22537, FIVETR[i][0], FIVETR[i][1], FIVETR[i][2], 16285, false, 0, false, world.getInstanceId());
-					npc5.setRandomWalking(false);
-				}
-				
-				spawn(world, FORT_PORTALS, false, true);
-			}
-			else if (event.equals("KillTiatPart1"))
-			{
-				playMovie(world, Movie.SC_BOSS_TIAT_ENDING_SUCCES);
-				InstanceManager.getInstance().getInstance(world.getInstanceId()).getNpcs().forEach(Npc::deleteMe);
-			}
-			else if (event.equals("Spawn"))
-			{
-				if (world.getStatus() <= 7)
-				{
-					final PlayerInstance target = world.getAllowed().stream().findAny().get();
-					if ((world.deviceSpawnedMobCount < MAX_DEVICE_SPAWNED_MOB_COUNT) && (target != null) && ((npc != null) && (target.getInstanceId() == npc.getInstanceId())) && !target.isDead())
+					world._tiat = addSpawn(TIAT, -250400, 207271, -11961, 16285, false, 0, false, world.getInstanceId());
+					world._tiat.setRandomWalking(false);
+					world._naezdTR1 = addSpawn(NAEZD, -250154, 207203, -11970, 33818, false, 0, false, world.getInstanceId());
+					world._naezdTR1.setRandomWalking(false);
+					world._naezdTR2 = addSpawn(NAEZD, -250209, 206941, -11966, 27379, false, 0, false, world.getInstanceId());
+					world._naezdTR2.setRandomWalking(false);
+					world._naezdTL1 = addSpawn(NAEZD, -250652, 207203, -11970, 0, false, 0, false, world.getInstanceId());
+					world._naezdTL1.setRandomWalking(false);
+					world._naezdTL2 = addSpawn(NAEZD, -250597, 206941, -11966, 6867, false, 0, false, world.getInstanceId());
+					world._naezdTL2.setRandomWalking(false);
+					for (int i = 0; i < 12; i++)
 					{
-						final Attackable mob = (Attackable) addSpawn(SPAWN_MOB_IDS[Rnd.get(SPAWN_MOB_IDS.length)], npc.getSpawn().getX(), npc.getSpawn().getY(), npc.getSpawn().getZ(), npc.getSpawn().getHeading(), false, 0, false, world.getInstanceId());
-						world.deviceSpawnedMobCount++;
-						mob.setSeeThroughSilentMove(true);
-						mob.setRunning();
-						mob.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, MOVE_TO_TIAT);
+						final Npc npc1 = addSpawn(22543, ONETR[i][0], ONETR[i][1], ONETR[i][2], 16285, false, 0, false, world.getInstanceId());
+						npc1.setRandomWalking(false);
+						world._mags.add(npc1);
+						
+						final Npc npc2 = addSpawn(22541, TWOTR[i][0], TWOTR[i][1], TWOTR[i][2], 16285, false, 0, false, world.getInstanceId());
+						npc2.setRandomWalking(false);
 					}
+					for (int i = 0; i < 6; i++)
+					{
+						final Npc npc3 = addSpawn(FRETR[i][0], FRETR[i][1], FRETR[i][2], FRETR[i][3], 16285, false, 0, false, world.getInstanceId());
+						npc3.setRandomWalking(false);
+						
+						final Npc npc4 = addSpawn(22536, FORTR[i][0], FORTR[i][1], FORTR[i][2], 16285, false, 0, false, world.getInstanceId());
+						npc4.setRandomWalking(false);
+						
+						final Npc npc5 = addSpawn(22537, FIVETR[i][0], FIVETR[i][1], FIVETR[i][2], 16285, false, 0, false, world.getInstanceId());
+						npc5.setRandomWalking(false);
+					}
+					spawn(world, FORT_PORTALS, false, true);
+					break;
+				}
+				case "KillTiatPart1":
+				{
+					playMovie(world, Movie.SC_BOSS_TIAT_ENDING_SUCCES);
+					InstanceManager.getInstance().getInstance(world.getInstanceId()).getNpcs().forEach(Npc::deleteMe);
+					break;
+				}
+				case "Spawn":
+				{
+					if (world.getStatus() <= 7)
+					{
+						final PlayerInstance target = world.getAllowed().stream().findAny().get();
+						if ((world.deviceSpawnedMobCount < MAX_DEVICE_SPAWNED_MOB_COUNT) && (target != null) && ((npc != null) && (target.getInstanceId() == npc.getInstanceId())) && !target.isDead())
+						{
+							final Attackable mob = (Attackable) addSpawn(SPAWN_MOB_IDS[Rnd.get(SPAWN_MOB_IDS.length)], npc.getSpawn().getX(), npc.getSpawn().getY(), npc.getSpawn().getZ(), npc.getSpawn().getHeading(), false, 0, false, world.getInstanceId());
+							world.deviceSpawnedMobCount++;
+							mob.setSeeThroughSilentMove(true);
+							mob.setRunning();
+							mob.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, MOVE_TO_TIAT);
+						}
+					}
+					break;
 				}
 			}
 		}

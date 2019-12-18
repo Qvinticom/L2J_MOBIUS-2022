@@ -984,7 +984,7 @@ public class PetInstance extends Summon
 			ps1.setInt(1, _controlObjectId);
 			ps1.execute();
 			
-			int buff_index = 0;
+			int buffIndex = 0;
 			
 			final List<Integer> storedSkills = new LinkedList<>();
 			
@@ -1027,7 +1027,7 @@ public class PetInstance extends Summon
 					ps2.setInt(2, skill.getId());
 					ps2.setInt(3, skill.getLevel());
 					ps2.setInt(4, info.getTime());
-					ps2.setInt(5, ++buff_index);
+					ps2.setInt(5, ++buffIndex);
 					ps2.addBatch();
 					
 					SummonEffectsTable.getInstance().addPetEffect(getControlObjectId(), skill, info.getTime());

@@ -72,7 +72,6 @@ public class LoginServer extends Thread
 			}
 			catch (IOException e)
 			{
-				continue;
 			}
 		}
 		while (true);

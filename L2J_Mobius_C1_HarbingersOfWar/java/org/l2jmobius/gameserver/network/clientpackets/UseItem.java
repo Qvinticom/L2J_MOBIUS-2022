@@ -32,7 +32,7 @@ import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 
 public class UseItem extends ClientBasePacket
 {
-	final static Logger _log = Logger.getLogger(UseItem.class.getName());
+	private static final Logger _log = Logger.getLogger(UseItem.class.getName());
 	
 	public UseItem(byte[] decrypt, ClientThread client)
 	{

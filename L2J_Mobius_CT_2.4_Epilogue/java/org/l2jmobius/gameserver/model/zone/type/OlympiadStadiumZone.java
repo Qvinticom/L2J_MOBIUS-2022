@@ -68,17 +68,14 @@ public class OlympiadStadiumZone extends ZoneType
 		if (character instanceof Playable)
 		{
 			final PlayerInstance player = character.getActingPlayer();
-			if (player != null)
+			// only participants, observers and GMs allowed
+			if ((player != null) && !player.isGM() && !player.isInOlympiadMode() && !player.inObserverMode())
 			{
-				// only participants, observers and GMs allowed
-				if (!player.isGM() && !player.isInOlympiadMode() && !player.inObserverMode())
+				if (character instanceof Summon)
 				{
-					if (character instanceof Summon)
-					{
-						((Summon) character).unSummon(player);
-					}
-					player.teleToLocation(TeleportWhereType.TOWN);
+					((Summon) character).unSummon(player);
 				}
+				player.teleToLocation(TeleportWhereType.TOWN);
 			}
 		}
 	}

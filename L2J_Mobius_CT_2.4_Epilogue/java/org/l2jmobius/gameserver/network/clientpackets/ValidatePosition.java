@@ -61,12 +61,9 @@ public class ValidatePosition implements IClientIncomingPacket
 		final int realY = player.getY();
 		int realZ = player.getZ();
 		
-		if ((_x == 0) && (_y == 0))
+		if ((_x == 0) && (_y == 0) && (realX != 0))
 		{
-			if (realX != 0)
-			{
-				return;
-			}
+			return;
 		}
 		
 		int dx;

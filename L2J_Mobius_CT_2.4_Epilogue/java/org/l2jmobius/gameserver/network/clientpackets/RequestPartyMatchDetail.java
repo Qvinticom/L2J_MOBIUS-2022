@@ -56,49 +56,49 @@ public class RequestPartyMatchDetail implements IClientIncomingPacket
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance _player = client.getPlayer();
-		if (_player == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		final PartyMatchRoom _room = PartyMatchRoomList.getInstance().getRoom(_roomid);
-		if (_room == null)
+		final PartyMatchRoom room = PartyMatchRoomList.getInstance().getRoom(_roomid);
+		if (room == null)
 		{
 			return;
 		}
 		
-		if ((_player.getLevel() >= _room.getMinLvl()) && (_player.getLevel() <= _room.getMaxLvl()))
+		if ((player.getLevel() >= room.getMinLvl()) && (player.getLevel() <= room.getMaxLvl()))
 		{
 			// Remove from waiting list
-			PartyMatchWaitingList.getInstance().removePlayer(_player);
+			PartyMatchWaitingList.getInstance().removePlayer(player);
 			
-			_player.setPartyRoom(_roomid);
+			player.setPartyRoom(_roomid);
 			
-			_player.sendPacket(new PartyMatchDetail(_player, _room));
-			_player.sendPacket(new ExPartyRoomMember(_player, _room, 0));
+			player.sendPacket(new PartyMatchDetail(room));
+			player.sendPacket(new ExPartyRoomMember(room, 0));
 			
-			for (PlayerInstance _member : _room.getPartyMembers())
+			for (PlayerInstance member : room.getPartyMembers())
 			{
-				if (_member == null)
+				if (member == null)
 				{
 					continue;
 				}
 				
-				_member.sendPacket(new ExManagePartyRoomMember(_player, _room, 0));
+				member.sendPacket(new ExManagePartyRoomMember(player, room, 0));
 				
 				final SystemMessage sm = new SystemMessage(SystemMessageId.C1_HAS_ENTERED_THE_PARTY_ROOM);
-				sm.addString(_player.getName());
-				_member.sendPacket(sm);
+				sm.addString(player.getName());
+				member.sendPacket(sm);
 			}
-			_room.addMember(_player);
+			room.addMember(player);
 			
 			// Info Broadcast
-			_player.broadcastUserInfo();
+			player.broadcastUserInfo();
 		}
 		else
 		{
-			_player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIREMENTS_TO_ENTER_THAT_PARTY_ROOM);
+			player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIREMENTS_TO_ENTER_THAT_PARTY_ROOM);
 		}
 	}
 }

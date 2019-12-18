@@ -31,7 +31,7 @@ public class WorldObject implements Serializable
 	private int _x;
 	private int _y;
 	private int _z;
-	protected Set<WorldObject> _knownObjects = ConcurrentHashMap.newKeySet();
+	protected final Set<WorldObject> _knownObjects = ConcurrentHashMap.newKeySet();
 	private final Set<PlayerInstance> _knownPlayers = ConcurrentHashMap.newKeySet();
 	
 	public int getObjectId()

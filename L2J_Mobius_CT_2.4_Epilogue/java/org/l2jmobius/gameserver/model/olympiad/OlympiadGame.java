@@ -139,7 +139,6 @@ class OlympiadGame
 		{
 			_aborted = true;
 			clearPlayers();
-			return;
 		}
 	}
 	
@@ -523,7 +522,7 @@ class OlympiadGame
 		
 		try
 		{
-			if ((_playerOne != null) && (_playerOne.getOlympiadGameId() != -1))
+			if (_playerOne.getOlympiadGameId() != -1)
 			{
 				playerOneHp = _playerOne.getCurrentHp();
 			}
@@ -536,7 +535,7 @@ class OlympiadGame
 		double playerTwoHp = 0;
 		try
 		{
-			if ((_playerTwo != null) && (_playerTwo.getOlympiadGameId() != -1))
+			if (_playerTwo.getOlympiadGameId() != -1)
 			{
 				playerTwoHp = _playerTwo.getCurrentHp();
 			}
@@ -546,12 +545,7 @@ class OlympiadGame
 			playerTwoHp = 0;
 		}
 		
-		if ((playerTwoHp <= 0) || (playerOneHp <= 0))
-		{
-			return true;
-		}
-		
-		return false;
+		return (playerTwoHp <= 0) || (playerOneHp <= 0);
 	}
 	
 	protected void validateWinner()
@@ -818,7 +812,7 @@ class OlympiadGame
 		String winner = "draw";
 		
 		// Calculate Fight time
-		long _fightTime = (System.currentTimeMillis() - _startTime);
+		long fightTime = (System.currentTimeMillis() - _startTime);
 		
 		if ((_playerOne == null) && (_playerTwo == null))
 		{
@@ -827,7 +821,7 @@ class OlympiadGame
 			_sm = new SystemMessage(SystemMessageId.THERE_IS_NO_VICTOR_THE_MATCH_ENDS_IN_A_TIE);
 			broadcastMessage(_sm, true);
 		}
-		else if ((_playerTwo == null) || (_playerTwo.isOnline() == false) || ((playerTwoHp == 0) && (playerOneHp != 0)) || ((_damageP1 > _damageP2) && (playerTwoHp != 0) && (playerOneHp != 0)))
+		else if ((_playerTwo == null) || !_playerTwo.isOnline() || ((playerTwoHp == 0) && (playerOneHp != 0)) || ((_damageP1 > _damageP2) && (playerTwoHp != 0) && (playerOneHp != 0)))
 		{
 			playerOneStat.set(POINTS, playerOnePoints + pointDiff);
 			playerTwoStat.set(POINTS, playerTwoPoints - pointDiff);
@@ -847,7 +841,7 @@ class OlympiadGame
 			try
 			{
 				// Save Fight Result
-				saveResults(_playerOneID, _playerTwoID, _playerOneClass, _playerTwoClass, 1, _startTime, _fightTime, (_type == CompetitionType.CLASSED ? 1 : 0));
+				saveResults(_playerOneID, _playerTwoID, _playerOneClass, _playerTwoClass, 1, _startTime, fightTime, (_type == CompetitionType.CLASSED ? 1 : 0));
 				
 				ItemInstance item = _playerOne.getInventory().addItem("Olympiad", Config.ALT_OLY_BATTLE_REWARD_ITEM, _gpreward, _playerOne, null);
 				InventoryUpdate iu = new InventoryUpdate();
@@ -864,9 +858,10 @@ class OlympiadGame
 			}
 			catch (Exception e)
 			{
+				// Ignore.
 			}
 		}
-		else if ((_playerOne == null) || (_playerOne.isOnline() == false) || ((playerOneHp == 0) && (playerTwoHp != 0)) || ((_damageP2 > _damageP1) && (playerOneHp != 0) && (playerTwoHp != 0)))
+		else if ((_playerOne == null) || !_playerOne.isOnline() || ((playerOneHp == 0) && (playerTwoHp != 0)) || ((_damageP2 > _damageP1) && (playerOneHp != 0) && (playerTwoHp != 0)))
 		{
 			playerTwoStat.set(POINTS, playerTwoPoints + pointDiff);
 			playerOneStat.set(POINTS, playerOnePoints - pointDiff);
@@ -886,7 +881,7 @@ class OlympiadGame
 			try
 			{
 				// Save Fight Result
-				saveResults(_playerOneID, _playerTwoID, _playerOneClass, _playerTwoClass, 2, _startTime, _fightTime, (_type == CompetitionType.CLASSED ? 1 : 0));
+				saveResults(_playerOneID, _playerTwoID, _playerOneClass, _playerTwoClass, 2, _startTime, fightTime, (_type == CompetitionType.CLASSED ? 1 : 0));
 				
 				ItemInstance item = _playerTwo.getInventory().addItem("Olympiad", Config.ALT_OLY_BATTLE_REWARD_ITEM, _gpreward, _playerTwo, null);
 				InventoryUpdate iu = new InventoryUpdate();
@@ -903,12 +898,13 @@ class OlympiadGame
 			}
 			catch (Exception e)
 			{
+				// Ignore.
 			}
 		}
 		else
 		{
 			// Save Fight Result
-			saveResults(_playerOneID, _playerTwoID, _playerOneClass, _playerTwoClass, 0, _startTime, _fightTime, (_type == CompetitionType.CLASSED ? 1 : 0));
+			saveResults(_playerOneID, _playerTwoID, _playerOneClass, _playerTwoClass, 0, _startTime, fightTime, (_type == CompetitionType.CLASSED ? 1 : 0));
 			
 			_sm = new SystemMessage(SystemMessageId.THERE_IS_NO_VICTOR_THE_MATCH_ENDS_IN_A_TIE);
 			broadcastMessage(_sm, true);
@@ -974,8 +970,9 @@ class OlympiadGame
 			{
 				Thread.sleep(step * 1000);
 			}
-			catch (InterruptedException e)
+			catch (Exception e)
 			{
+				// Ignore.
 			}
 		}
 	}
@@ -1026,8 +1023,7 @@ class OlympiadGame
 	
 	protected String getTitle()
 	{
-		final String msg = _playerOneName + " / " + _playerTwoName;
-		return msg;
+		return _playerOneName + " / " + _playerTwoName;
 	}
 	
 	protected PlayerInstance[] getPlayers()
@@ -1092,19 +1088,19 @@ class OlympiadGame
 		}
 	}
 	
-	protected void saveResults(int _playerOne, int _playerTwo, int _playerOneClass, int _playerTwoClass, int _winner, long _startTime, long _fightTime, int _classed)
+	protected void saveResults(int playerOne, int playerTwo, int playerOneClass, int playerTwoClass, int winner, long startTime, long fightTime, int classed)
 	{
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement("INSERT INTO olympiad_fights (charOneId, charTwoId, charOneClass, charTwoClass, winner, start, time, classed) values(?,?,?,?,?,?,?,?)"))
 		{
-			statement.setInt(1, _playerOne);
-			statement.setInt(2, _playerTwo);
-			statement.setInt(3, _playerOneClass);
-			statement.setInt(4, _playerTwoClass);
-			statement.setInt(5, _winner);
-			statement.setLong(6, _startTime);
-			statement.setLong(7, _fightTime);
-			statement.setInt(8, _classed);
+			statement.setInt(1, playerOne);
+			statement.setInt(2, playerTwo);
+			statement.setInt(3, playerOneClass);
+			statement.setInt(4, playerTwoClass);
+			statement.setInt(5, winner);
+			statement.setLong(6, startTime);
+			statement.setLong(7, fightTime);
+			statement.setInt(8, classed);
 			statement.execute();
 		}
 		catch (SQLException e)
@@ -1146,9 +1142,9 @@ class OlympiadGameTask implements Runnable
 	
 	protected boolean checkBattleStatus()
 	{
-		boolean _pOneCrash = ((_game._playerOne == null) || _game._playerOneDisconnected);
-		boolean _pTwoCrash = ((_game._playerTwo == null) || _game._playerTwoDisconnected);
-		if (_pOneCrash || _pTwoCrash || _game._aborted)
+		boolean pOneCrash = ((_game._playerOne == null) || _game._playerOneDisconnected);
+		boolean pTwoCrash = ((_game._playerTwo == null) || _game._playerTwoDisconnected);
+		if (pOneCrash || pTwoCrash || _game._aborted)
 		{
 			return false;
 		}
@@ -1317,8 +1313,9 @@ class OlympiadGameTask implements Runnable
 		{
 			Thread.sleep(5000);
 		}
-		catch (InterruptedException e)
+		catch (Exception e)
 		{
+			// Ignore.
 		}
 		
 		synchronized (this)
@@ -1353,8 +1350,9 @@ class OlympiadGameTask implements Runnable
 			{
 				Thread.sleep(step * 1000);
 			}
-			catch (InterruptedException e)
+			catch (Exception e)
 			{
+				// Ignore.
 			}
 		}
 		
@@ -1412,8 +1410,9 @@ class OlympiadGameTask implements Runnable
 					break;
 				}
 			}
-			catch (InterruptedException e)
+			catch (Exception e)
 			{
+				// Ignore.
 			}
 		}
 		

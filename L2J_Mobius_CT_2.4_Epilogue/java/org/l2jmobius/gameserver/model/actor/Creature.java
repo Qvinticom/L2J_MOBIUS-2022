@@ -181,7 +181,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 {
 	public static final Logger LOGGER = Logger.getLogger(Creature.class.getName());
 	
-	private volatile Set<Creature> _attackByList;
+	private Set<Creature> _attackByList;
 	private volatile boolean _isCastingNow = false;
 	private volatile boolean _isCastingSimultaneouslyNow = false;
 	private Skill _lastSkillCast;
@@ -235,9 +235,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	
 	private boolean _lethalable = true;
 	
-	private volatile Map<Integer, OptionsSkillHolder> _triggerSkills;
+	private Map<Integer, OptionsSkillHolder> _triggerSkills;
 	
-	private volatile Map<Integer, InvulSkillHolder> _invulAgainst;
+	private Map<Integer, InvulSkillHolder> _invulAgainst;
 	/** Creatures effect list. */
 	private final EffectList _effectList = new EffectList(this);
 	/** The creature that summons this character. */
@@ -1025,6 +1025,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 						hitted = doAttackHitSimple(attack, target, timeToHit);
 						break;
 					}
+					// Fallthrough.
 				}
 				case DUAL:
 				case DUALFIST:
@@ -1084,13 +1085,10 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 							target.setCurrentCp(0);
 						}
 					}
-					else if (player.isHero())
+					// If a cursed weapon is hit by a Hero, CP is reduced to 0
+					else if (player.isHero() && target.isPlayer() && target.getActingPlayer().isCursedWeaponEquipped())
 					{
-						// If a cursed weapon is hit by a Hero, CP is reduced to 0
-						if (target.isPlayer() && target.getActingPlayer().isCursedWeaponEquipped())
-						{
-							target.setCurrentCp(0);
-						}
+						target.setCurrentCp(0);
 					}
 				}
 			}
@@ -1583,6 +1581,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			case COMMAND_CHANNEL:
 			{
 				doit = true;
+				// Fallthrough.
 			}
 			default:
 			{
@@ -1663,29 +1662,26 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		}
 		
 		// TODO: Unhardcode using event listeners!
-		if (skill.hasEffectType(EffectType.RESURRECTION))
+		if (skill.hasEffectType(EffectType.RESURRECTION) && (isResurrectionBlocked() || target.isResurrectionBlocked()))
 		{
-			if (isResurrectionBlocked() || target.isResurrectionBlocked())
+			sendPacket(SystemMessageId.REJECT_RESURRECTION); // Reject resurrection
+			target.sendPacket(SystemMessageId.REJECT_RESURRECTION); // Reject resurrection
+			
+			if (simultaneously)
 			{
-				sendPacket(SystemMessageId.REJECT_RESURRECTION); // Reject resurrection
-				target.sendPacket(SystemMessageId.REJECT_RESURRECTION); // Reject resurrection
-				
-				if (simultaneously)
-				{
-					setIsCastingSimultaneouslyNow(false);
-				}
-				else
-				{
-					setIsCastingNow(false);
-				}
-				
-				if (isPlayer())
-				{
-					getAI().setIntention(AI_INTENTION_ACTIVE);
-					sendPacket(ActionFailed.STATIC_PACKET);
-				}
-				return;
+				setIsCastingSimultaneouslyNow(false);
 			}
+			else
+			{
+				setIsCastingNow(false);
+			}
+			
+			if (isPlayer())
+			{
+				getAI().setIntention(AI_INTENTION_ACTIVE);
+				sendPacket(ActionFailed.STATIC_PACKET);
+			}
+			return;
 		}
 		
 		// Get the Identifier of the skill
@@ -1808,14 +1804,11 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		
 		if (isPlayable())
 		{
-			if (skill.getItemConsumeId() > 0)
+			if ((skill.getItemConsumeId() > 0) && !destroyItemByItemId("Consume", skill.getItemConsumeId(), skill.getItemConsumeCount(), null, true))
 			{
-				if (!destroyItemByItemId("Consume", skill.getItemConsumeId(), skill.getItemConsumeCount(), null, true))
-				{
-					getActingPlayer().sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
-					abortCast();
-					return;
-				}
+				getActingPlayer().sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
+				abortCast();
+				return;
 			}
 			
 			// reduce talisman mana on skill use
@@ -3279,12 +3272,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		}
 		
 		// if this is a player instance, then untransform, also set the transform_id column equal to 0 if not cursed.
-		if (isPlayer())
+		if (isPlayer() && (getActingPlayer().getTransformation() != null))
 		{
-			if (getActingPlayer().getTransformation() != null)
-			{
-				getActingPlayer().untransform();
-			}
+			getActingPlayer().untransform();
 		}
 		
 		if (!isPlayer())
@@ -4689,29 +4679,22 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		// Send message about damage/crit or miss
 		sendDamageMessage(target, damage, false, crit, miss);
 		
-		// Check Raidboss attack
-		// Character will be petrified if attacking a raid that's more
-		// than 8 levels lower
-		if (target.isRaid() && target.giveRaidCurse() && !Config.RAID_DISABLE_CURSE)
+		// Check Raidboss attack Creature will be petrified if attacking a raid that's more than 8 levels lower
+		if (target.isRaid() && target.giveRaidCurse() && !Config.RAID_DISABLE_CURSE && (getLevel() > (target.getLevel() + 8)))
 		{
-			if (getLevel() > (target.getLevel() + 8))
+			final Skill skill = CommonSkill.RAID_CURSE2.getSkill();
+			if (skill != null)
 			{
-				final Skill skill = CommonSkill.RAID_CURSE2.getSkill();
-				
-				if (skill != null)
-				{
-					abortAttack();
-					abortCast();
-					getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-					skill.applyEffects(target, this);
-				}
-				else
-				{
-					LOGGER.warning("Skill 4515 at level 1 is missing in DP.");
-				}
-				
-				damage = 0; // prevents messing up drop calculation
+				abortAttack();
+				abortCast();
+				getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+				skill.applyEffects(target, this);
 			}
+			else
+			{
+				LOGGER.warning("Skill 4515 at level 1 is missing in DP.");
+			}
+			damage = 0; // prevents messing up drop calculation
 		}
 		
 		// If Creature target is a PlayerInstance, send a system message
@@ -4825,12 +4808,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			{
 				for (OptionsSkillHolder holder : _triggerSkills.values())
 				{
-					if ((!crit && (holder.getSkillType() == OptionsSkillType.ATTACK)) || ((holder.getSkillType() == OptionsSkillType.CRITICAL) && crit))
+					if (((!crit && (holder.getSkillType() == OptionsSkillType.ATTACK)) || ((holder.getSkillType() == OptionsSkillType.CRITICAL) && crit)) && (Rnd.get(100) < holder.getChance()))
 					{
-						if (Rnd.get(100) < holder.getChance())
-						{
-							makeTriggerCast(holder.getSkill(), target);
-						}
+						makeTriggerCast(holder.getSkill(), target);
 					}
 				}
 			}
@@ -4981,12 +4961,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 			return false;
 		}
 		
-		if (TerritoryWarManager.PLAYER_WITH_WARD_CAN_BE_KILLED_IN_PEACEZONE && TerritoryWarManager.getInstance().isTWInProgress())
+		if (TerritoryWarManager.PLAYER_WITH_WARD_CAN_BE_KILLED_IN_PEACEZONE && TerritoryWarManager.getInstance().isTWInProgress() && target.isPlayer() && target.getActingPlayer().isCombatFlagEquipped())
 		{
-			if (target.isPlayer() && target.getActingPlayer().isCombatFlagEquipped())
-			{
-				return false;
-			}
+			return false;
 		}
 		
 		if (Config.ALT_GAME_KARMA_PLAYER_CAN_BE_KILLED_IN_PEACEZONE)
@@ -5131,19 +5108,13 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		if (oldSkill != null)
 		{
 			// Stop casting if this skill is used right now
-			if ((_lastSkillCast != null) && _isCastingNow)
+			if ((_lastSkillCast != null) && _isCastingNow && (oldSkill.getId() == _lastSkillCast.getId()))
 			{
-				if (oldSkill.getId() == _lastSkillCast.getId())
-				{
-					abortCast();
-				}
+				abortCast();
 			}
-			if ((_lastSimultaneousSkillCast != null) && _isCastingSimultaneouslyNow)
+			if ((_lastSimultaneousSkillCast != null) && _isCastingSimultaneouslyNow && (oldSkill.getId() == _lastSimultaneousSkillCast.getId()))
 			{
-				if (oldSkill.getId() == _lastSimultaneousSkillCast.getId())
-				{
-					abortCast();
-				}
+				abortCast();
 			}
 			
 			// Stop effects.
@@ -5452,13 +5423,10 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 				}
 				
 				// Consume Souls if necessary
-				if (skill.getMaxSoulConsumeCount() > 0)
+				if ((skill.getMaxSoulConsumeCount() > 0) && !getActingPlayer().decreaseSouls(skill.getMaxSoulConsumeCount()))
 				{
-					if (!getActingPlayer().decreaseSouls(skill.getMaxSoulConsumeCount(), skill))
-					{
-						abortCast();
-						return;
-					}
+					abortCast();
+					return;
 				}
 			}
 			
@@ -5626,12 +5594,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 				}
 				
 				// Check if over-hit is possible
-				if (skill.isOverhit())
+				if (skill.isOverhit() && target.isAttackable())
 				{
-					if (target.isAttackable())
-					{
-						((Attackable) target).overhitEnabled(true);
-					}
+					((Attackable) target).overhitEnabled(true);
 				}
 				
 				// Static skills not trigger any chance skills
@@ -5647,12 +5612,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 					{
 						for (OptionsSkillHolder holder : _triggerSkills.values())
 						{
-							if ((skill.isMagic() && (holder.getSkillType() == OptionsSkillType.MAGIC)) || (skill.isPhysical() && (holder.getSkillType() == OptionsSkillType.ATTACK)))
+							if (((skill.isMagic() && (holder.getSkillType() == OptionsSkillType.MAGIC)) || (skill.isPhysical() && (holder.getSkillType() == OptionsSkillType.ATTACK))) && (Rnd.get(100) < holder.getChance()))
 							{
-								if (Rnd.get(100) < holder.getChance())
-								{
-									makeTriggerCast(holder.getSkill(), target);
-								}
+								makeTriggerCast(holder.getSkill(), target);
 							}
 						}
 					}
@@ -5755,26 +5717,20 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 						
 						int skillEffectPoint = skill.getEffectPoint();
 						
-						if (player.hasSummon())
+						if (player.hasSummon() && (targets.length == 1) && CommonUtil.contains(targets, player.getSummon()))
 						{
-							if ((targets.length == 1) && CommonUtil.contains(targets, player.getSummon()))
-							{
-								skillEffectPoint = 0;
-							}
+							skillEffectPoint = 0;
 						}
 						
-						if (skillEffectPoint > 0)
+						if ((skillEffectPoint > 0) && attackable.hasAI() && (attackable.getAI().getIntention() == AI_INTENTION_ATTACK))
 						{
-							if (attackable.hasAI() && (attackable.getAI().getIntention() == AI_INTENTION_ATTACK))
+							WorldObject npcTarget = attackable.getTarget();
+							for (WorldObject skillTarget : targets)
 							{
-								WorldObject npcTarget = attackable.getTarget();
-								for (WorldObject skillTarget : targets)
+								if ((npcTarget == skillTarget) || (npcMob == skillTarget))
 								{
-									if ((npcTarget == skillTarget) || (npcMob == skillTarget))
-									{
-										Creature originalCaster = isSummon() ? this : player;
-										attackable.addDamageHate(originalCaster, 0, (skillEffectPoint * 150) / (attackable.getLevel() + 7));
-									}
+									Creature originalCaster = isSummon() ? this : player;
+									attackable.addDamageHate(originalCaster, 0, (skillEffectPoint * 150) / (attackable.getLevel() + 7));
 								}
 							}
 						}

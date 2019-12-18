@@ -52,7 +52,7 @@ public class CommunityBoardManager
 		final PlayerInstance activeChar = client.getActiveChar();
 		if (command.startsWith("bbs_"))
 		{
-			final StringBuffer htmlCode = new StringBuffer("<html imgsrc=\"sek.cbui353\"><body><br><table border=0><tr><td FIXWIDTH=15></td><td align=center>Community Board<img src=\"sek.cbui355\" width=610 height=1></td></tr><tr><td FIXWIDTH=15></td><td>");
+			final StringBuilder htmlCode = new StringBuilder("<html imgsrc=\"sek.cbui353\"><body><br><table border=0><tr><td FIXWIDTH=15></td><td align=center>Community Board<img src=\"sek.cbui355\" width=610 height=1></td></tr><tr><td FIXWIDTH=15></td><td>");
 			if (command.equals("bbs_default"))
 			{
 				final Collection<PlayerInstance> players = World.getInstance().getAllPlayers();
@@ -122,7 +122,7 @@ public class CommunityBoardManager
 				htmlCode.append("<tr><td><br></td></tr>");
 				for (ClanMember member : clan.getMembers())
 				{
-					if (member.getName() == clan.getLeaderName())
+					if (member.getName().equals(clan.getLeaderName()))
 					{
 						continue;
 					}

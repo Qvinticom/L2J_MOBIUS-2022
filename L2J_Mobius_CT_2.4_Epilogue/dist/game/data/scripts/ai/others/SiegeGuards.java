@@ -129,13 +129,10 @@ public class SiegeGuards extends AbstractNpcAI
 							{
 								final Summon summon = nearby.isSummon() ? (Summon) nearby : null;
 								final PlayerInstance pl = summon == null ? (PlayerInstance) nearby : summon.getOwner();
-								if (((pl.getSiegeState() != 2) || pl.isRegisteredOnThisSiegeField(guard.getScriptValue())) && ((pl.getSiegeState() != 0) || (guard.getAI().getIntention() != CtrlIntention.AI_INTENTION_IDLE)))
+								if (((pl.getSiegeState() != 2) || pl.isRegisteredOnThisSiegeField(guard.getScriptValue())) && ((pl.getSiegeState() != 0) || (guard.getAI().getIntention() != CtrlIntention.AI_INTENTION_IDLE)) && (!pl.isInvisible() && !pl.isInvul()))
 								{
-									if (!pl.isInvisible() && !pl.isInvul()) // skip invisible players
-									{
-										addAttackDesire(guard, pl);
-										break; // no need to search more
-									}
+									addAttackDesire(guard, pl);
+									break; // no need to search more
 								}
 							}
 						}

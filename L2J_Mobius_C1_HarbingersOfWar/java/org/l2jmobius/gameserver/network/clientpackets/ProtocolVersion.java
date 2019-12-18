@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.network.serverpackets.KeyPacket;
 
 public class ProtocolVersion extends ClientBasePacket
 {
-	final static Logger _log = Logger.getLogger(ProtocolVersion.class.getName());
+	private static final Logger _log = Logger.getLogger(ProtocolVersion.class.getName());
 	
 	public ProtocolVersion(byte[] rawPacket, ClientThread client) throws IOException
 	{

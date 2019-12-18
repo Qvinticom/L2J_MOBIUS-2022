@@ -55,7 +55,7 @@ public class SendPrivateStoreBuyBuyList extends ClientBasePacket
 		{
 			buyer.getTradeList().BuySellItems(buyer, buyerlist, seller, sellerlist);
 			buyer.getTradeList().updateBuyList(buyer, buyerlist);
-			if (buyer.getBuyList().size() == 0)
+			if (buyer.getBuyList().isEmpty())
 			{
 				buyer.setPrivateStoreType(0);
 				buyer.sendPacket(new ChangeWaitType(buyer, 1));

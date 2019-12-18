@@ -369,7 +369,7 @@ public class Q00255_Tutorial extends Quest
 		// Client Event
 		else if (event.startsWith("CE"))
 		{
-			final int event_id = Integer.valueOf(event.substring(2));
+			final int event_id = Integer.parseInt(event.substring(2));
 			if ((event_id == 1) && (player.getLevel() < 6))
 			{
 				qs.playTutorialVoice("tutorial_voice_004");
@@ -598,7 +598,7 @@ public class Q00255_Tutorial extends Quest
 					{
 						if (classId == Integer.valueOf(element[0]))
 						{
-							html = element[1];
+							// html = element[1];
 							x = Integer.valueOf(element[2]);
 							y = Integer.valueOf(element[3]);
 							z = Integer.valueOf(element[4]);

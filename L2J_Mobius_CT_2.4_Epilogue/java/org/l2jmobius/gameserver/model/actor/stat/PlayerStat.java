@@ -58,7 +58,7 @@ public class PlayerStat extends PlayableStat
 	private final AtomicInteger _talismanSlots = new AtomicInteger();
 	private boolean _cloakSlot = false;
 	
-	public static final int VITALITY_LEVELS[] =
+	public static final int[] VITALITY_LEVELS =
 	{
 		240,
 		2000,

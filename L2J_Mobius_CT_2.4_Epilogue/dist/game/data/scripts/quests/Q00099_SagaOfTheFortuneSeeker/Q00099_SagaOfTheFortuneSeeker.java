@@ -44,7 +44,7 @@ public class Q00099_SagaOfTheFortuneSeeker extends AbstractSagaQuest
 			31657,
 			31600
 		};
-		Items = new int[]
+		_items = new int[]
 		{
 			7080,
 			7608,
@@ -59,27 +59,27 @@ public class Q00099_SagaOfTheFortuneSeeker extends AbstractSagaQuest
 			7109,
 			0
 		};
-		Mob = new int[]
+		_mob = new int[]
 		{
 			27259,
 			27248,
 			27309
 		};
-		classid = new int[]
+		_classId = new int[]
 		{
 			117
 		};
-		prevclass = new int[]
+		_prevClass = new int[]
 		{
 			0x37
 		};
-		npcSpawnLocations = new Location[]
+		_npcSpawnLocations = new Location[]
 		{
 			new Location(191046, -40640, -3042),
 			new Location(46066, -36396, -1685),
 			new Location(46087, -36372, -1685)
 		};
-		Text = new String[]
+		_text = new String[]
 		{
 			"PLAYERNAME! Pursued to here! However, I jumped out of the Banshouren boundaries! You look at the giant as the sign of power!",
 			"... Oh ... good! So it was ... let's begin!",

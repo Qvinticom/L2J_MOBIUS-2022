@@ -186,9 +186,9 @@ public class ItemTable
 	
 	private void fixEtcItems(HashMap<Integer, Item> items)
 	{
-		for (int key : items.keySet())
+		for (Item i : items.values())
 		{
-			final EtcItem item = (EtcItem) items.get(key);
+			final EtcItem item = (EtcItem) i;
 			if ((item.getWeight() == 0) && (item.getEtcItemType() != EtcItem.TYPE_MONEY) && !item.getName().startsWith("world_map") && !item.getName().startsWith("crystal_"))
 			{
 				item.setType2(Item.TYPE2_QUEST);

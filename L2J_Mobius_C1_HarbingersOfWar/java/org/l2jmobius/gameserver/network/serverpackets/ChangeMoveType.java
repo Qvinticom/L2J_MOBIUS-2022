@@ -21,8 +21,8 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 
 public class ChangeMoveType extends ServerBasePacket
 {
-	public static int WALK = 0;
-	public static int RUN = 1;
+	public static final int WALK = 0;
+	public static final int RUN = 1;
 	
 	private final Creature _cha;
 	private final int _moveType;

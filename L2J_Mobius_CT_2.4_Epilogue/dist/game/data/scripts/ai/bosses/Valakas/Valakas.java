@@ -85,7 +85,7 @@ public class Valakas extends AbstractNpcAI
 	};
 	
 	// Locations
-	private static final Location TELEPORT_CUBE_LOCATIONS[] =
+	private static final Location[] TELEPORT_CUBE_LOCATIONS =
 	{
 		new Location(214880, -116144, -1644),
 		new Location(213696, -116592, -1644),

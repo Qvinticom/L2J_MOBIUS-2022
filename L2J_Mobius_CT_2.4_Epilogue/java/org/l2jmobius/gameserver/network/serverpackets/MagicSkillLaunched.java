@@ -52,7 +52,7 @@ public class MagicSkillLaunched implements IClientOutgoingPacket
 	
 	public MagicSkillLaunched(Creature creature, int skillId, int skillLevel)
 	{
-		this(creature, skillId, skillId, creature);
+		this(creature, skillId, skillLevel, creature);
 	}
 	
 	@Override

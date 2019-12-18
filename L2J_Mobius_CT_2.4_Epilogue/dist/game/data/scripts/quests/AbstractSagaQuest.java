@@ -45,15 +45,15 @@ import org.l2jmobius.gameserver.network.serverpackets.NpcSay;
 public abstract class AbstractSagaQuest extends Quest
 {
 	protected int[] _npc;
-	protected int[] Items;
-	protected int[] Mob;
-	protected int[] classid;
-	protected int[] prevclass;
-	protected Location[] npcSpawnLocations;
-	protected String[] Text;
+	protected int[] _items;
+	protected int[] _mob;
+	protected int[] _classId;
+	protected int[] _prevClass;
+	protected Location[] _npcSpawnLocations;
+	protected String[] _text;
 	private static final Map<Npc, Integer> SPAWN_LIST = new HashMap<>();
 	// @formatter:off
-	private static int[][] QuestClass =
+	private static final int[][] QUEST_CLASSES =
 	{
 		{ 0x7f }, { 0x80, 0x81 }, { 0x82 }, { 0x05 }, { 0x14 }, { 0x15 },
 		{ 0x02 }, { 0x03 }, { 0x2e }, { 0x30 }, { 0x33 }, { 0x34 }, { 0x08 },
@@ -62,6 +62,14 @@ public abstract class AbstractSagaQuest extends Quest
 		{ 0x0d }, { 0x06 }, { 0x22 }, { 0x21 }, { 0x2b }, { 0x37 }, { 0x39 }
 	};
 	// @formatter:on
+	private static final int[] ARCHON_HALISHA_NORM =
+	{
+		18212,
+		18214,
+		18215,
+		18216,
+		18218
+	};
 	
 	public AbstractSagaQuest(int questId)
 	{
@@ -77,13 +85,13 @@ public abstract class AbstractSagaQuest extends Quest
 			{
 				for (int q = 0; q < 2; q++)
 				{
-					if (player.getClassId().getId() == QuestClass[1][q])
+					if (player.getClassId().getId() == QUEST_CLASSES[1][q])
 					{
 						return st;
 					}
 				}
 			}
-			else if (player.getClassId().getId() == QuestClass[getId() - 67][0])
+			else if (player.getClassId().getId() == QUEST_CLASSES[getId() - 67][0])
 			{
 				return st;
 			}
@@ -110,22 +118,22 @@ public abstract class AbstractSagaQuest extends Quest
 	{
 		if (player.getClassId().getId() == 0x81)
 		{
-			return classid[1];
+			return _classId[1];
 		}
-		return classid[0];
+		return _classId[0];
 	}
 	
 	private int getPrevClass(PlayerInstance player)
 	{
 		if (player.getClassId().getId() == 0x81)
 		{
-			if (prevclass.length == 1)
+			if (_prevClass.length == 1)
 			{
 				return -1;
 			}
-			return prevclass[1];
+			return _prevClass[1];
 		}
-		return prevclass[0];
+		return _prevClass[0];
 	}
 	
 	private void giveHalishaMark(QuestState st2)
@@ -133,23 +141,23 @@ public abstract class AbstractSagaQuest extends Quest
 		if (st2.getInt("spawned") == 0)
 		{
 			final PlayerInstance player = st2.getPlayer();
-			if (getQuestItemsCount(player, Items[3]) >= 700)
+			if (getQuestItemsCount(player, _items[3]) >= 700)
 			{
-				takeItems(player, Items[3], 20);
+				takeItems(player, _items[3], 20);
 				final int xx = st2.getPlayer().getX();
 				final int yy = st2.getPlayer().getY();
 				final int zz = st2.getPlayer().getZ();
-				final Npc Archon = addSpawn(Mob[1], xx, yy, zz, -1);
-				addSpawn(st2, Archon);
+				final Npc archon = addSpawn(_mob[1], xx, yy, zz, -1);
+				addSpawn(st2, archon);
 				st2.set("spawned", "1");
-				startQuestTimer("Archon Hellisha has despawned", 600000, Archon, player);
-				autoChat(Archon, Text[13].replace("PLAYERNAME", st2.getPlayer().getName()));
-				((Attackable) Archon).addDamageHate(st2.getPlayer(), 0, 99999);
-				Archon.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, st2.getPlayer(), null);
+				startQuestTimer("Archon Hellisha has despawned", 600000, archon, player);
+				autoChat(archon, _text[13].replace("PLAYERNAME", st2.getPlayer().getName()));
+				((Attackable) archon).addDamageHate(st2.getPlayer(), 0, 99999);
+				archon.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, st2.getPlayer(), null);
 			}
 			else
 			{
-				giveItems(player, Items[3], getRandom(1, 4));
+				giveItems(player, _items[3], getRandom(1, 4));
 			}
 		}
 	}
@@ -175,7 +183,7 @@ public abstract class AbstractSagaQuest extends Quest
 				case "accept":
 				{
 					st.startQuest();
-					giveItems(player, Items[10], 1);
+					giveItems(player, _items[10], 1);
 					htmltext = "0-03.htm";
 					break;
 				}
@@ -199,13 +207,13 @@ public abstract class AbstractSagaQuest extends Quest
 				{
 					if (player.getLevel() < 76)
 					{
-						takeItems(player, Items[10], -1);
+						takeItems(player, _items[10], -1);
 						st.setCond(20, true);
 						htmltext = "0-08.htm";
 					}
 					else
 					{
-						takeItems(player, Items[10], -1);
+						takeItems(player, _items[10], -1);
 						addExpAndSp(player, 2299404, 0);
 						giveAdena(player, 5000000, true);
 						giveItems(player, 6622, 1);
@@ -232,12 +240,12 @@ public abstract class AbstractSagaQuest extends Quest
 				case "1-4":
 				{
 					st.setCond(4);
-					takeItems(player, Items[0], 1);
-					if (Items[11] != 0)
+					takeItems(player, _items[0], 1);
+					if (_items[11] != 0)
 					{
-						takeItems(player, Items[11], 1);
+						takeItems(player, _items[11], 1);
 					}
-					giveItems(player, Items[1], 1);
+					giveItems(player, _items[1], 1);
 					htmltext = "1-06.htm";
 					break;
 				}
@@ -250,8 +258,8 @@ public abstract class AbstractSagaQuest extends Quest
 				case "2-2":
 				{
 					st.setCond(5);
-					takeItems(player, Items[1], 1);
-					giveItems(player, Items[4], 1);
+					takeItems(player, _items[1], 1);
+					giveItems(player, _items[4], 1);
 					htmltext = "2-06.htm";
 					break;
 				}
@@ -275,8 +283,8 @@ public abstract class AbstractSagaQuest extends Quest
 				case "3-8":
 				{
 					st.setCond(13);
-					takeItems(player, Items[2], 1);
-					giveItems(player, Items[7], 1);
+					takeItems(player, _items[2], 1);
+					giveItems(player, _items[7], 1);
 					htmltext = "3-08.htm";
 					break;
 				}
@@ -287,25 +295,25 @@ public abstract class AbstractSagaQuest extends Quest
 				}
 				case "4-2":
 				{
-					giveItems(player, Items[9], 1);
+					giveItems(player, _items[9], 1);
 					st.setCond(18, true);
 					htmltext = "4-011.htm";
 					break;
 				}
 				case "4-3":
 				{
-					giveItems(player, Items[9], 1);
+					giveItems(player, _items[9], 1);
 					st.setCond(18, true);
-					autoChat(npc, Text[13].replace("PLAYERNAME", player.getName()));
+					autoChat(npc, _text[13].replace("PLAYERNAME", player.getName()));
 					st.set("Quest0", "0");
 					cancelQuestTimer("Mob_2 has despawned", npc, player);
-					DeleteSpawn(st, npc);
+					DeleteSpawn(npc);
 					return null;
 				}
 				case "5-1":
 				{
 					st.setCond(6, true);
-					takeItems(player, Items[4], 1);
+					takeItems(player, _items[4], 1);
 					cast(npc, player, 4546, 1);
 					htmltext = "5-02.htm";
 					break;
@@ -314,7 +322,7 @@ public abstract class AbstractSagaQuest extends Quest
 				{
 					st.setCond(8, true);
 					st.set("spawned", "0");
-					takeItems(player, Items[5], 1);
+					takeItems(player, _items[5], 1);
 					cast(npc, player, 4546, 1);
 					htmltext = "6-03.htm";
 					break;
@@ -327,11 +335,11 @@ public abstract class AbstractSagaQuest extends Quest
 					}
 					else if (st.getInt("spawned") == 0)
 					{
-						final Npc Mob_1 = addSpawn(Mob[0], npcSpawnLocations[0], false, 0);
+						final Npc mob1 = addSpawn(_mob[0], _npcSpawnLocations[0], false, 0);
 						st.set("spawned", "1");
-						startQuestTimer("Mob_1 Timer 1", 500, Mob_1, player);
-						startQuestTimer("Mob_1 has despawned", 300000, Mob_1, player);
-						addSpawn(st, Mob_1);
+						startQuestTimer("Mob_1 Timer 1", 500, mob1, player);
+						startQuestTimer("Mob_1 has despawned", 300000, mob1, player);
+						addSpawn(st, mob1);
 						htmltext = "7-02.htm";
 					}
 					else
@@ -343,7 +351,7 @@ public abstract class AbstractSagaQuest extends Quest
 				case "7-2":
 				{
 					st.setCond(10, true);
-					takeItems(player, Items[6], 1);
+					takeItems(player, _items[6], 1);
 					cast(npc, player, 4546, 1);
 					htmltext = "7-06.htm";
 					break;
@@ -351,7 +359,7 @@ public abstract class AbstractSagaQuest extends Quest
 				case "8-1":
 				{
 					st.setCond(14, true);
-					takeItems(player, Items[7], 1);
+					takeItems(player, _items[7], 1);
 					cast(npc, player, 4546, 1);
 					htmltext = "8-02.htm";
 					break;
@@ -361,7 +369,7 @@ public abstract class AbstractSagaQuest extends Quest
 					st.setCond(17, true);
 					st.set("Quest0", "0");
 					st.set("Tab", "0");
-					takeItems(player, Items[8], 1);
+					takeItems(player, _items[8], 1);
 					cast(npc, player, 4546, 1);
 					htmltext = "9-03.htm";
 					break;
@@ -370,17 +378,17 @@ public abstract class AbstractSagaQuest extends Quest
 				{
 					if (st.getInt("Quest0") == 0)
 					{
-						final Npc Mob_3 = addSpawn(Mob[2], npcSpawnLocations[1], false, 0);
-						final Npc Mob_2 = addSpawn(_npc[4], npcSpawnLocations[2], false, 0);
-						addSpawn(st, Mob_3);
-						addSpawn(st, Mob_2);
-						st.set("Mob_2", String.valueOf(Mob_2.getObjectId()));
+						final Npc mob3 = addSpawn(_mob[2], _npcSpawnLocations[1], false, 0);
+						final Npc mob2 = addSpawn(_npc[4], _npcSpawnLocations[2], false, 0);
+						addSpawn(st, mob3);
+						addSpawn(st, mob2);
+						st.set("Mob_2", String.valueOf(mob2.getObjectId()));
 						st.set("Quest0", "1");
 						st.set("Quest1", "45");
-						startQuestTimer("Mob_3 Timer 1", 500, Mob_3, player, true);
-						startQuestTimer("Mob_3 has despawned", 59000, Mob_3, player);
-						startQuestTimer("Mob_2 Timer 1", 500, Mob_2, player);
-						startQuestTimer("Mob_2 has despawned", 60000, Mob_2, player);
+						startQuestTimer("Mob_3 Timer 1", 500, mob3, player, true);
+						startQuestTimer("Mob_3 has despawned", 59000, mob3, player);
+						startQuestTimer("Mob_2 Timer 1", 500, mob2, player);
+						startQuestTimer("Mob_2 has despawned", 60000, mob2, player);
 						htmltext = "10-02.htm";
 					}
 					else if (st.getInt("Quest1") == 45)
@@ -396,7 +404,7 @@ public abstract class AbstractSagaQuest extends Quest
 				case "10-2":
 				{
 					st.setCond(19, true);
-					takeItems(player, Items[9], 1);
+					takeItems(player, _items[9], 1);
 					cast(npc, player, 4546, 1);
 					htmltext = "10-06.htm";
 					break;
@@ -409,46 +417,46 @@ public abstract class AbstractSagaQuest extends Quest
 				}
 				case "Mob_1 Timer 1":
 				{
-					autoChat(npc, Text[0].replace("PLAYERNAME", player.getName()));
+					autoChat(npc, _text[0].replace("PLAYERNAME", player.getName()));
 					return null;
 				}
 				case "Mob_1 has despawned":
 				{
-					autoChat(npc, Text[1].replace("PLAYERNAME", player.getName()));
+					autoChat(npc, _text[1].replace("PLAYERNAME", player.getName()));
 					st.set("spawned", "0");
-					DeleteSpawn(st, npc);
+					DeleteSpawn(npc);
 					return null;
 				}
 				case "Archon Hellisha has despawned":
 				{
-					autoChat(npc, Text[6].replace("PLAYERNAME", player.getName()));
+					autoChat(npc, _text[6].replace("PLAYERNAME", player.getName()));
 					st.set("spawned", "0");
-					DeleteSpawn(st, npc);
+					DeleteSpawn(npc);
 					return null;
 				}
 				case "Mob_3 Timer 1":
 				{
-					final Npc Mob_2 = FindSpawn(player, (Npc) World.getInstance().findObject(st.getInt("Mob_2")));
-					if (World.getInstance().getVisibleObjects(npc, Npc.class).contains(Mob_2))
+					final Npc mob2 = FindSpawn(player, (Npc) World.getInstance().findObject(st.getInt("Mob_2")));
+					if (World.getInstance().getVisibleObjects(npc, Npc.class).contains(mob2))
 					{
-						((Attackable) npc).addDamageHate(Mob_2, 0, 99999);
-						npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, Mob_2, null);
-						Mob_2.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, npc, null);
-						autoChat(npc, Text[14].replace("PLAYERNAME", player.getName()));
+						((Attackable) npc).addDamageHate(mob2, 0, 99999);
+						npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, mob2, null);
+						mob2.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, npc, null);
+						autoChat(npc, _text[14].replace("PLAYERNAME", player.getName()));
 						cancelQuestTimer("Mob_3 Timer 1", npc, player);
 					}
 					return null;
 				}
 				case "Mob_3 has despawned":
 				{
-					autoChat(npc, Text[15].replace("PLAYERNAME", player.getName()));
+					autoChat(npc, _text[15].replace("PLAYERNAME", player.getName()));
 					st.set("Quest0", "2");
-					DeleteSpawn(st, npc);
+					DeleteSpawn(npc);
 					return null;
 				}
 				case "Mob_2 Timer 1":
 				{
-					autoChat(npc, Text[7].replace("PLAYERNAME", player.getName()));
+					autoChat(npc, _text[7].replace("PLAYERNAME", player.getName()));
 					startQuestTimer("Mob_2 Timer 2", 1500, npc, player);
 					if (st.getInt("Quest1") == 45)
 					{
@@ -458,7 +466,7 @@ public abstract class AbstractSagaQuest extends Quest
 				}
 				case "Mob_2 Timer 2":
 				{
-					autoChat(npc, Text[8].replace("PLAYERNAME", player.getName()));
+					autoChat(npc, _text[8].replace("PLAYERNAME", player.getName()));
 					startQuestTimer("Mob_2 Timer 3", 10000, npc, player);
 					return null;
 				}
@@ -469,11 +477,11 @@ public abstract class AbstractSagaQuest extends Quest
 						startQuestTimer("Mob_2 Timer 3", 13000, npc, player);
 						if (getRandomBoolean())
 						{
-							autoChat(npc, Text[9].replace("PLAYERNAME", player.getName()));
+							autoChat(npc, _text[9].replace("PLAYERNAME", player.getName()));
 						}
 						else
 						{
-							autoChat(npc, Text[10].replace("PLAYERNAME", player.getName()));
+							autoChat(npc, _text[10].replace("PLAYERNAME", player.getName()));
 						}
 					}
 					return null;
@@ -487,13 +495,13 @@ public abstract class AbstractSagaQuest extends Quest
 						// TODO this IF will never be true
 						if (st.getInt("Quest0") == 1)
 						{
-							autoChat(npc, Text[11].replace("PLAYERNAME", player.getName()));
+							autoChat(npc, _text[11].replace("PLAYERNAME", player.getName()));
 						}
 						else
 						{
-							autoChat(npc, Text[12].replace("PLAYERNAME", player.getName()));
+							autoChat(npc, _text[12].replace("PLAYERNAME", player.getName()));
 						}
-						DeleteSpawn(st, npc);
+						DeleteSpawn(npc);
 					}
 					else
 					{
@@ -515,34 +523,31 @@ public abstract class AbstractSagaQuest extends Quest
 			final int cond = st2.getCond();
 			final QuestState st = getQuestState(player, false);
 			final int npcId = npc.getId();
-			if ((npcId == Mob[2]) && (st == st2) && (cond == 17))
+			if ((npcId == _mob[2]) && (st == st2) && (cond == 17))
 			{
 				int quest0 = st.getInt("Quest0") + 1;
 				if (quest0 == 1)
 				{
-					autoChat(npc, Text[16].replace("PLAYERNAME", player.getName()));
+					autoChat(npc, _text[16].replace("PLAYERNAME", player.getName()));
 				}
 				
 				if (quest0 > 15)
 				{
 					quest0 = 1;
-					autoChat(npc, Text[17].replace("PLAYERNAME", player.getName()));
+					autoChat(npc, _text[17].replace("PLAYERNAME", player.getName()));
 					cancelQuestTimer("Mob_3 has despawned", npc, st2.getPlayer());
 					st.set("Tab", "1");
-					DeleteSpawn(st, npc);
+					DeleteSpawn(npc);
 				}
 				
 				st.set("Quest0", Integer.toString(quest0));
 			}
-			else if ((npcId == Mob[1]) && (cond == 15))
+			else if ((npcId == _mob[1]) && (cond == 15) && ((st != st2) || player.isInParty()))
 			{
-				if ((st != st2) || ((st == st2) && player.isInParty()))
-				{
-					autoChat(npc, Text[5].replace("PLAYERNAME", player.getName()));
-					cancelQuestTimer("Archon Hellisha has despawned", npc, st2.getPlayer());
-					st2.set("spawned", "0");
-					DeleteSpawn(st2, npc);
-				}
+				autoChat(npc, _text[5].replace("PLAYERNAME", player.getName()));
+				cancelQuestTimer("Archon Hellisha has despawned", npc, st2.getPlayer());
+				st2.set("spawned", "0");
+				DeleteSpawn(npc);
 			}
 		}
 		return super.onAttack(npc, player, damage, isSummon);
@@ -554,66 +559,63 @@ public abstract class AbstractSagaQuest extends Quest
 		String htmltext = "";
 		final QuestState st = getQuestState(player, false);
 		final int npcId = npc.getId();
-		if (st != null)
+		if ((st != null) && (npcId == _npc[4]))
 		{
-			if (npcId == _npc[4])
+			final int cond = st.getCond();
+			if (cond == 17)
 			{
-				final int cond = st.getCond();
-				if (cond == 17)
+				final QuestState st2 = findRightState(npc);
+				if (st2 != null)
 				{
-					final QuestState st2 = findRightState(npc);
-					if (st2 != null)
+					player.setLastQuestNpcObject(npc.getObjectId());
+					final int tab = st.getInt("Tab");
+					final int quest0 = st.getInt("Quest0");
+					
+					if (st == st2)
 					{
-						player.setLastQuestNpcObject(npc.getObjectId());
-						final int tab = st.getInt("Tab");
-						final int quest0 = st.getInt("Quest0");
-						
-						if (st == st2)
-						{
-							if (tab == 1)
-							{
-								if (quest0 == 0)
-								{
-									htmltext = "4-04.htm";
-								}
-								else if (quest0 == 1)
-								{
-									htmltext = "4-06.htm";
-								}
-							}
-							else if (quest0 == 0)
-							{
-								htmltext = "4-01.htm";
-							}
-							else if (quest0 == 1)
-							{
-								htmltext = "4-03.htm";
-							}
-						}
-						else if (tab == 1)
+						if (tab == 1)
 						{
 							if (quest0 == 0)
 							{
-								htmltext = "4-05.htm";
+								htmltext = "4-04.htm";
 							}
 							else if (quest0 == 1)
 							{
-								htmltext = "4-07.htm";
+								htmltext = "4-06.htm";
 							}
 						}
 						else if (quest0 == 0)
 						{
-							htmltext = "4-02.htm";
+							htmltext = "4-01.htm";
+						}
+						else if (quest0 == 1)
+						{
+							htmltext = "4-03.htm";
 						}
 					}
-				}
-				else if (cond == 18)
-				{
-					htmltext = "4-08.htm";
+					else if (tab == 1)
+					{
+						if (quest0 == 0)
+						{
+							htmltext = "4-05.htm";
+						}
+						else if (quest0 == 1)
+						{
+							htmltext = "4-07.htm";
+						}
+					}
+					else if (quest0 == 0)
+					{
+						htmltext = "4-02.htm";
+					}
 				}
 			}
+			else if (cond == 18)
+			{
+				htmltext = "4-08.htm";
+			}
 		}
-		if (htmltext == "")
+		if (htmltext.equals(""))
 		{
 			npc.showChatWindow(player);
 		}
@@ -636,15 +638,12 @@ public abstract class AbstractSagaQuest extends Quest
 					for (PlayerInstance player1 : party.getMembers())
 					{
 						final QuestState st1 = findQuest(player1);
-						if ((st1 != null) && player1.isInsideRadius2D(player, Config.ALT_PARTY_RANGE))
+						if ((st1 != null) && st1.isCond(15) && player1.isInsideRadius2D(player, Config.ALT_PARTY_RANGE))
 						{
-							if (st1.isCond(15))
-							{
-								partyQuestMembers.add(st1);
-							}
+							partyQuestMembers.add(st1);
 						}
 					}
-					if (partyQuestMembers.size() > 0)
+					if (!partyQuestMembers.isEmpty())
 					{
 						final QuestState st2 = partyQuestMembers.get(getRandom(partyQuestMembers.size()));
 						giveHalishaMark(st2);
@@ -653,41 +652,27 @@ public abstract class AbstractSagaQuest extends Quest
 				else
 				{
 					final QuestState st1 = findQuest(player);
-					if (st1 != null)
+					if ((st1 != null) && st1.isCond(15))
 					{
-						if (st1.isCond(15))
-						{
-							giveHalishaMark(st1);
-						}
+						giveHalishaMark(st1);
 					}
 				}
 				return super.onKill(npc, player, isSummon);
 			}
 		}
 		
-		final int[] Archon_Hellisha_Norm =
-		{
-			18212,
-			18214,
-			18215,
-			18216,
-			18218
-		};
-		for (int element : Archon_Hellisha_Norm)
+		for (int element : ARCHON_HALISHA_NORM)
 		{
 			if (npcId == element)
 			{
 				final QuestState st1 = findQuest(player);
-				if (st1 != null)
+				if ((st1 != null) && st1.isCond(15))
 				{
-					if (st1.isCond(15))
-					{
-						// This is just a guess....not really sure what it actually says, if anything
-						autoChat(npc, Text[4].replace("PLAYERNAME", st1.getPlayer().getName()));
-						giveItems(player, Items[8], 1);
-						takeItems(player, Items[3], -1);
-						st1.setCond(16, true);
-					}
+					// This is just a guess....not really sure what it actually says, if anything
+					autoChat(npc, _text[4].replace("PLAYERNAME", st1.getPlayer().getName()));
+					giveItems(player, _items[8], 1);
+					takeItems(player, _items[3], -1);
+					st1.setCond(16, true);
 				}
 				return super.onKill(npc, player, isSummon);
 			}
@@ -707,74 +692,71 @@ public abstract class AbstractSagaQuest extends Quest
 					}
 					else
 					{
-						giveItems(player, Items[5], 1);
+						giveItems(player, _items[5], 1);
 						st.setCond(7, true);
 					}
 				}
 				return super.onKill(npc, player, isSummon);
 			}
 		}
-		if ((st != null) && (npcId != Mob[2]))
+		if ((st != null) && (npcId != _mob[2]))
 		{
 			final QuestState st2 = findRightState(npc);
 			if (st2 != null)
 			{
 				final int cond = st.getCond();
-				if ((npcId == Mob[0]) && (cond == 8))
+				if ((npcId == _mob[0]) && (cond == 8))
 				{
-					if (!player.isInParty())
+					if (!player.isInParty() && (st == st2))
 					{
-						if (st == st2)
-						{
-							autoChat(npc, Text[12].replace("PLAYERNAME", player.getName()));
-							giveItems(player, Items[6], 1);
-							st.setCond(9, true);
-						}
+						autoChat(npc, _text[12].replace("PLAYERNAME", player.getName()));
+						giveItems(player, _items[6], 1);
+						st.setCond(9, true);
 					}
 					cancelQuestTimer("Mob_1 has despawned", npc, st2.getPlayer());
 					st2.set("spawned", "0");
-					DeleteSpawn(st2, npc);
+					DeleteSpawn(npc);
 				}
-				else if ((npcId == Mob[1]) && (cond == 15))
+				else if ((npcId == _mob[1]) && (cond == 15))
 				{
 					if (!player.isInParty())
 					{
 						if (st == st2)
 						{
-							autoChat(npc, Text[4].replace("PLAYERNAME", player.getName()));
-							giveItems(player, Items[8], 1);
-							takeItems(player, Items[3], -1);
+							autoChat(npc, _text[4].replace("PLAYERNAME", player.getName()));
+							giveItems(player, _items[8], 1);
+							takeItems(player, _items[3], -1);
 							st.setCond(16, true);
 						}
 						else
 						{
-							autoChat(npc, Text[5].replace("PLAYERNAME", player.getName()));
+							autoChat(npc, _text[5].replace("PLAYERNAME", player.getName()));
 						}
 					}
 					cancelQuestTimer("Archon Hellisha has despawned", npc, st2.getPlayer());
 					st2.set("spawned", "0");
-					DeleteSpawn(st2, npc);
+					DeleteSpawn(npc);
 				}
 			}
 		}
-		else if (npcId == Mob[0])
+		else if (npcId == _mob[0])
 		{
 			st = findRightState(npc);
 			if (st != null)
 			{
 				cancelQuestTimer("Mob_1 has despawned", npc, st.getPlayer());
 				st.set("spawned", "0");
-				DeleteSpawn(st, npc);
+				DeleteSpawn(npc);
 			}
 		}
-		else if (npcId == Mob[1])
+		else if (npcId == _mob[1])
 		{
 			st = findRightState(npc);
 			if (st != null)
 			{
 				cancelQuestTimer("Archon Hellisha has despawned", npc, st.getPlayer());
 				st.set("spawned", "0");
-				DeleteSpawn(st, npc);
+				DeleteSpawn(npc);
 			}
 		}
 		return super.onKill(npc, player, isSummon);
@@ -785,25 +767,25 @@ public abstract class AbstractSagaQuest extends Quest
 	{
 		if (SPAWN_LIST.containsKey(npc) && (SPAWN_LIST.get(npc) != player.getObjectId()))
 		{
-			final PlayerInstance quest_player = (PlayerInstance) World.getInstance().findObject(SPAWN_LIST.get(npc));
-			if (quest_player == null)
+			final PlayerInstance questPlayer = (PlayerInstance) World.getInstance().findObject(SPAWN_LIST.get(npc));
+			if (questPlayer == null)
 			{
 				return null;
 			}
 			
 			for (WorldObject obj : targets)
 			{
-				if ((obj == quest_player) || (obj == npc))
+				if ((obj == questPlayer) || (obj == npc))
 				{
 					final QuestState st2 = findRightState(npc);
 					if (st2 == null)
 					{
 						return null;
 					}
-					autoChat(npc, Text[5].replace("PLAYERNAME", player.getName()));
+					autoChat(npc, _text[5].replace("PLAYERNAME", player.getName()));
 					cancelQuestTimer("Archon Hellisha has despawned", npc, st2.getPlayer());
 					st2.set("spawned", "0");
-					DeleteSpawn(st2, npc);
+					DeleteSpawn(npc);
 				}
 			}
 		}
@@ -858,9 +840,9 @@ public abstract class AbstractSagaQuest extends Quest
 				}
 				case 3:
 				{
-					if ((npcId == _npc[1]) && hasQuestItems(player, Items[0]))
+					if ((npcId == _npc[1]) && hasQuestItems(player, _items[0]))
 					{
-						if ((Items[11] == 0) || hasQuestItems(player, Items[11]))
+						if ((_items[11] == 0) || hasQuestItems(player, _items[11]))
 						{
 							htmltext = "1-03.htm";
 						}
@@ -952,7 +934,7 @@ public abstract class AbstractSagaQuest extends Quest
 				{
 					if (npcId == _npc[3])
 					{
-						if (hasQuestItems(player, Items[2]))
+						if (hasQuestItems(player, _items[2]))
 						{
 							htmltext = "3-05.htm";
 						}
@@ -1078,31 +1060,23 @@ public abstract class AbstractSagaQuest extends Quest
 	public void registerNPCs()
 	{
 		addStartNpc(_npc[0]);
-		addAttackId(Mob[2], Mob[1]);
-		addSkillSeeId(Mob[1]);
+		addAttackId(_mob[2], _mob[1]);
+		addSkillSeeId(_mob[1]);
 		addFirstTalkId(_npc[4]);
 		addTalkId(_npc);
-		addKillId(Mob);
-		final int[] questItemIds = Items.clone();
+		addKillId(_mob);
+		final int[] questItemIds = _items.clone();
 		questItemIds[0] = 0;
 		questItemIds[2] = 0; // remove Ice Crystal and Divine Stone of Wisdom
 		registerQuestItems(questItemIds);
-		for (int Archon_Minion = 21646; Archon_Minion < 21652; Archon_Minion++)
+		for (int archonMinion = 21646; archonMinion < 21652; archonMinion++)
 		{
-			addKillId(Archon_Minion);
+			addKillId(archonMinion);
 		}
-		final int[] Archon_Hellisha_Norm =
+		addKillId(ARCHON_HALISHA_NORM);
+		for (int guardianAngel = 27214; guardianAngel < 27217; guardianAngel++)
 		{
-			18212,
-			18214,
-			18215,
-			18216,
-			18218
-		};
-		addKillId(Archon_Hellisha_Norm);
-		for (int Guardian_Angel = 27214; Guardian_Angel < 27217; Guardian_Angel++)
-		{
-			addKillId(Guardian_Angel);
+			addKillId(guardianAngel);
 		}
 	}
 	
@@ -1122,7 +1096,7 @@ public abstract class AbstractSagaQuest extends Quest
 		target.broadcastPacket(new MagicSkillUse(npc, npc, skillId, level, 6000, 1));
 	}
 	
-	private void DeleteSpawn(QuestState st, Npc npc)
+	private void DeleteSpawn(Npc npc)
 	{
 		if (SPAWN_LIST.containsKey(npc))
 		{

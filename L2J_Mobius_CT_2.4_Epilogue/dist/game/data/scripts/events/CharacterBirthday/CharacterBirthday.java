@@ -37,10 +37,9 @@ import ai.AbstractNpcAI;
 
 public class CharacterBirthday extends AbstractNpcAI
 {
+	// Npcs
 	private static final int ALEGRIA = 32600;
-	private static boolean is_spawned = false;
-	
-	private final static int[] GK =
+	private static final int[] GATEKEEPERS =
 	{
 		30006,
 		30059,
@@ -62,13 +61,15 @@ public class CharacterBirthday extends AbstractNpcAI
 		31964,
 		32163
 	};
+	// Misc
+	private static boolean HAS_SPAWNED = false;
 	
 	private CharacterBirthday()
 	{
 		addStartNpc(ALEGRIA);
 		addFirstTalkId(ALEGRIA);
 		addTalkId(ALEGRIA);
-		for (int id : GK)
+		for (int id : GATEKEEPERS)
 		{
 			addStartNpc(id);
 			addTalkId(id);
@@ -85,7 +86,7 @@ public class CharacterBirthday extends AbstractNpcAI
 		if (event.equalsIgnoreCase("despawn_npc"))
 		{
 			npc.doDie(player);
-			is_spawned = false;
+			HAS_SPAWNED = false;
 			htmltext = null;
 		}
 		if (event.equalsIgnoreCase("receive_reward"))
@@ -93,8 +94,8 @@ public class CharacterBirthday extends AbstractNpcAI
 			Calendar now = Calendar.getInstance();
 			now.setTimeInMillis(System.currentTimeMillis());
 			// Check if already received reward
-			String NextBirthday = st.get("Birthday");
-			if ((NextBirthday != null) && (Integer.valueOf(NextBirthday) > now.get(Calendar.YEAR)))
+			String nextBirthday = st.get("Birthday");
+			if ((nextBirthday != null) && (Integer.valueOf(nextBirthday) > now.get(Calendar.YEAR)))
 			{
 				htmltext = "32600-already.htm";
 			}
@@ -115,7 +116,7 @@ public class CharacterBirthday extends AbstractNpcAI
 				
 				// Despawn npc
 				npc.doDie(player);
-				is_spawned = false;
+				HAS_SPAWNED = false;
 				
 				// Update for next year
 				st.set("Birthday", String.valueOf(now.get(Calendar.YEAR) + 1));
@@ -129,7 +130,7 @@ public class CharacterBirthday extends AbstractNpcAI
 	@Override
 	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		if (is_spawned)
+		if (HAS_SPAWNED)
 		{
 			return null;
 		}
@@ -142,7 +143,7 @@ public class CharacterBirthday extends AbstractNpcAI
 			Npc spawned = addSpawn(32600, player.getX() + 10, player.getY() + 10, player.getZ() + 10, 0, false, 0, true);
 			st.setState(State.STARTED);
 			startQuestTimer("despawn_npc", 60000, spawned, null);
-			is_spawned = true;
+			HAS_SPAWNED = true;
 		}
 		else
 		{

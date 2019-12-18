@@ -38,21 +38,20 @@ public class CharNameTable
 	
 	private CharNameTable()
 	{
-		final File _accountsFolder = new File("data/accounts");
-		_accountsFolder.mkdirs();
+		final File accountsFolder = new File("data/accounts");
+		accountsFolder.mkdirs();
 		_charNames = new ArrayList<>();
-		final File[] accounts = _accountsFolder.listFiles();
+		final File[] accounts = accountsFolder.listFiles();
 		for (File account : accounts)
 		{
 			try
 			{
-				final File _charFolder = new File("data/accounts/" + account.getName());
-				final File[] chars = _charFolder.listFiles((FilenameFilter) (dir, name) -> name.endsWith("_char.csv"));
+				final File charFolder = new File("data/accounts/" + account.getName());
+				final File[] chars = charFolder.listFiles((FilenameFilter) (dir, name) -> name.endsWith("_char.csv"));
 				for (File c : chars)
 				{
 					_charNames.add(c.getName().replaceAll("_char.csv", "").toLowerCase());
 				}
-				continue;
 			}
 			catch (NullPointerException e)
 			{

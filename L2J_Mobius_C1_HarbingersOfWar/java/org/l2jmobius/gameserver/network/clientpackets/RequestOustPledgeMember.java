@@ -31,7 +31,7 @@ import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 
 public class RequestOustPledgeMember extends ClientBasePacket
 {
-	final static Logger _log = Logger.getLogger(RequestOustPledgeMember.class.getName());
+	private static final Logger _log = Logger.getLogger(RequestOustPledgeMember.class.getName());
 	
 	public RequestOustPledgeMember(byte[] rawPacket, ClientThread client)
 	{

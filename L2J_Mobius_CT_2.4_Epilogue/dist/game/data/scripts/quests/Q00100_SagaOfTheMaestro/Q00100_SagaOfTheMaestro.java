@@ -44,7 +44,7 @@ public class Q00100_SagaOfTheMaestro extends AbstractSagaQuest
 			31656,
 			31597
 		};
-		Items = new int[]
+		_items = new int[]
 		{
 			7080,
 			7607,
@@ -59,27 +59,27 @@ public class Q00100_SagaOfTheMaestro extends AbstractSagaQuest
 			7108,
 			0
 		};
-		Mob = new int[]
+		_mob = new int[]
 		{
 			27260,
 			27249,
 			27308
 		};
-		classid = new int[]
+		_classId = new int[]
 		{
 			118
 		};
-		prevclass = new int[]
+		_prevClass = new int[]
 		{
 			0x39
 		};
-		npcSpawnLocations = new Location[]
+		_npcSpawnLocations = new Location[]
 		{
 			new Location(164650, -74121, -2871),
 			new Location(47429, -56923, -2383),
 			new Location(47391, -56929, -2370)
 		};
-		Text = new String[]
+		_text = new String[]
 		{
 			"PLAYERNAME! Pursued to here! However, I jumped out of the Banshouren boundaries! You look at the giant as the sign of power!",
 			"... Oh ... good! So it was ... let's begin!",

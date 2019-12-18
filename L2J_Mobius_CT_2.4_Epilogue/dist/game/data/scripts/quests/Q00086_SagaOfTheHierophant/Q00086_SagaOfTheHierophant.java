@@ -44,7 +44,7 @@ public class Q00086_SagaOfTheHierophant extends AbstractSagaQuest
 			31659,
 			31280
 		};
-		Items = new int[]
+		_items = new int[]
 		{
 			7080,
 			7523,
@@ -59,27 +59,27 @@ public class Q00086_SagaOfTheHierophant extends AbstractSagaQuest
 			7089,
 			0
 		};
-		Mob = new int[]
+		_mob = new int[]
 		{
 			27269,
 			27235,
 			27275
 		};
-		classid = new int[]
+		_classId = new int[]
 		{
 			98
 		};
-		prevclass = new int[]
+		_prevClass = new int[]
 		{
 			0x11
 		};
-		npcSpawnLocations = new Location[]
+		_npcSpawnLocations = new Location[]
 		{
 			new Location(161719, -92823, -1893),
 			new Location(124355, 82155, -2803),
 			new Location(124376, 82127, -2796)
 		};
-		Text = new String[]
+		_text = new String[]
 		{
 			"PLAYERNAME! Pursued to here! However, I jumped out of the Banshouren boundaries! You look at the giant as the sign of power!",
 			"... Oh ... good! So it was ... let's begin!",

@@ -121,9 +121,9 @@ public class CharSelectInfo extends ServerBasePacket
 	
 	public CharSelectInfoPackage[] loadCharacterSelectInfoFromDisk()
 	{
-		final File _charFolder = new File("data/accounts", _loginName);
-		_charFolder.mkdirs();
-		final File[] chars = _charFolder.listFiles((FilenameFilter) (dir, name) -> name.endsWith("_char.csv"));
+		final File charFolder = new File("data/accounts", _loginName);
+		charFolder.mkdirs();
+		final File[] chars = charFolder.listFiles((FilenameFilter) (dir, name) -> name.endsWith("_char.csv"));
 		_charNameList = new String[chars.length];
 		final CharSelectInfoPackage[] characters = new CharSelectInfoPackage[chars.length];
 		for (int i = 0; i < chars.length; ++i)
@@ -132,12 +132,10 @@ public class CharSelectInfo extends ServerBasePacket
 			restoreChar(chars[i]);
 			if (_charInfopackage != null)
 			{
-				restoreInventory(new File(_charFolder, _charInfopackage.getName() + "_items.csv"));
+				restoreInventory(new File(charFolder, _charInfopackage.getName() + "_items.csv"));
 				characters[i] = _charInfopackage;
 				_charNameList[i] = _charInfopackage.getName();
-				continue;
 			}
-			// _log.warning("could not restore " + chars[i]);
 		}
 		return characters;
 	}

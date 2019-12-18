@@ -40,7 +40,7 @@ public class ExShowSentPostList implements IClientOutgoingPacket
 	{
 		OutgoingPackets.EX_SHOW_SENT_POST_LIST.writeId(packet);
 		packet.writeD((int) (System.currentTimeMillis() / 1000));
-		if ((_outbox != null) && (_outbox.size() > 0))
+		if ((_outbox != null) && !_outbox.isEmpty())
 		{
 			packet.writeD(_outbox.size());
 			for (Message msg : _outbox)

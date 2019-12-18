@@ -57,28 +57,19 @@ public class Remnants extends AbstractNpcAI
 	@Override
 	public String onSkillSee(Npc npc, PlayerInstance caster, Skill skill, WorldObject[] targets, boolean isSummon)
 	{
-		if (skill.getId() == SKILL_HOLY_WATER)
+		if ((skill.getId() == SKILL_HOLY_WATER) && !npc.isDead() && (targets.length > 0) && (targets[0] == npc) && (npc.getCurrentHp() < (npc.getMaxHp() * 0.02)))
 		{
-			if (!npc.isDead())
+			npc.doDie(caster);
+			//@formatter:off
+			/*if (npc.getNpcId() == DEREK)
 			{
-				if ((targets.length > 0) && (targets[0] == npc))
-				{
-					if (npc.getCurrentHp() < (npc.getMaxHp() * 0.02)) // Lower, than 2%
-					{
-						npc.doDie(caster);
-						//@formatter:off
-						/*if (npc.getNpcId() == DEREK)
-						{
-							caster.sendMessage(MSG_DEREK);
-						}
-						else
-						{
-							caster.sendMessage(MSG);
-						}*/
-						//@formatter:on
-					}
-				}
+				caster.sendMessage(MSG_DEREK);
 			}
+			else
+			{
+				caster.sendMessage(MSG);
+			}*/
+			//@formatter:on
 		}
 		return super.onSkillSee(npc, caster, skill, targets, isSummon);
 	}

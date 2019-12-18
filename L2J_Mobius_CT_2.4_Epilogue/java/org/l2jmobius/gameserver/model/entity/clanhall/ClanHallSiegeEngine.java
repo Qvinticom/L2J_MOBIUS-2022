@@ -146,7 +146,7 @@ public abstract class ClanHallSiegeEngine extends Quest implements Siegable
 	{
 		if (_guards != null)
 		{
-			_guards.forEach(guard -> guard.startRespawn());
+			_guards.forEach(Spawn::startRespawn);
 			return;
 		}
 		

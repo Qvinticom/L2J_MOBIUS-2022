@@ -169,7 +169,7 @@ public class Location implements IPositionable
 	@Override
 	public boolean equals(Object obj)
 	{
-		if ((obj == null) || !(obj instanceof Location))
+		if (!(obj instanceof Location))
 		{
 			return false;
 		}

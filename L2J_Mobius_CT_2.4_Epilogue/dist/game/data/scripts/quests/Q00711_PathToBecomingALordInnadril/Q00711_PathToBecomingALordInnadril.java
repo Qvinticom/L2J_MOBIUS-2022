@@ -70,47 +70,54 @@ public final class Q00711_PathToBecomingALordInnadril extends Quest
 		final QuestState qs = player.getQuestState(getName());
 		final Castle castle = CastleManager.getInstance().getCastleById(INNADRIL_CASTLE);
 		final PlayerInstance castleOwner = castle.getOwner().getLeader().getPlayerInstance();
-		if (event.equals("35316-03.html"))
+		switch (event)
 		{
-			qs.startQuest();
-		}
-		else if (event.equals("35316-05.html"))
-		{
-			qs.setCond(2);
-		}
-		else if (event.equals("35316-08.html"))
-		{
-			if (isLordAvailable(2, qs))
+			case "35316-03.html":
 			{
-				castleOwner.getQuestState(getName()).set("confidant", String.valueOf(qs.getPlayer().getObjectId()));
-				castleOwner.getQuestState(getName()).setCond(3);
-				qs.setState(State.STARTED);
+				qs.startQuest();
+				break;
 			}
-			else
+			case "35316-05.html":
 			{
-				htmltext = "35316-07a.html";
+				qs.setCond(2);
+				break;
 			}
-			
-		}
-		else if (event.equals("30969-03.html"))
-		{
-			if (isLordAvailable(3, qs))
+			case "35316-08.html":
 			{
-				castleOwner.getQuestState(getName()).setCond(4);
+				if (isLordAvailable(2, qs))
+				{
+					castleOwner.getQuestState(getName()).set("confidant", String.valueOf(qs.getPlayer().getObjectId()));
+					castleOwner.getQuestState(getName()).setCond(3);
+					qs.setState(State.STARTED);
+				}
+				else
+				{
+					htmltext = "35316-07a.html";
+				}
+				break;
 			}
-			else
+			case "30969-03.html":
 			{
-				htmltext = "30969-00a.html";
+				if (isLordAvailable(3, qs))
+				{
+					castleOwner.getQuestState(getName()).setCond(4);
+				}
+				else
+				{
+					htmltext = "30969-00a.html";
+				}
+				break;
 			}
-		}
-		else if (event.equals("35316-12.html"))
-		{
-			if (castleOwner != null)
+			case "35316-12.html":
 			{
-				final NpcSay packet = new NpcSay(npc.getObjectId(), ChatType.NPC_SHOUT, npc.getId(), NpcStringId.S1_HAS_BECOME_THE_LORD_OF_THE_TOWN_OF_INNADRIL_MAY_THERE_BE_GLORY_IN_THE_TERRITORY_OF_INNADRIL);
-				packet.addStringParameter(player.getName());
-				npc.broadcastPacket(packet);
-				qs.exitQuest(true, true);
+				if (castleOwner != null)
+				{
+					final NpcSay packet = new NpcSay(npc.getObjectId(), ChatType.NPC_SHOUT, npc.getId(), NpcStringId.S1_HAS_BECOME_THE_LORD_OF_THE_TOWN_OF_INNADRIL_MAY_THERE_BE_GLORY_IN_THE_TERRITORY_OF_INNADRIL);
+					packet.addStringParameter(player.getName());
+					npc.broadcastPacket(packet);
+					qs.exitQuest(true, true);
+				}
+				break;
 			}
 		}
 		return htmltext;
@@ -267,13 +274,6 @@ public final class Q00711_PathToBecomingALordInnadril extends Quest
 		final Castle castle = CastleManager.getInstance().getCastleById(INNADRIL_CASTLE);
 		final Clan owner = castle.getOwner();
 		final PlayerInstance castleOwner = castle.getOwner().getLeader().getPlayerInstance();
-		if (owner != null)
-		{
-			if ((castleOwner != null) && (castleOwner != qs.getPlayer()) && (owner == qs.getPlayer().getClan()) && (castleOwner.getQuestState(getName()) != null) && (castleOwner.getQuestState(getName()).isCond(cond)))
-			{
-				return true;
-			}
-		}
-		return false;
+		return (owner != null) && (castleOwner != null) && (castleOwner != qs.getPlayer()) && (owner == qs.getPlayer().getClan()) && (castleOwner.getQuestState(getName()) != null) && (castleOwner.getQuestState(getName()).isCond(cond));
 	}
 }

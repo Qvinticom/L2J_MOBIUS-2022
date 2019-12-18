@@ -186,7 +186,7 @@ public class RequestBypassToServer implements IClientIncomingPacket
 			}
 			else if (_command.startsWith("_match"))
 			{
-				final String params = _command.substring(_command.indexOf("?") + 1);
+				final String params = _command.substring(_command.indexOf('?') + 1);
 				final StringTokenizer st = new StringTokenizer(params, "&");
 				final int heroclass = Integer.parseInt(st.nextToken().split("=")[1]);
 				final int heropage = Integer.parseInt(st.nextToken().split("=")[1]);
@@ -198,7 +198,7 @@ public class RequestBypassToServer implements IClientIncomingPacket
 			}
 			else if (_command.startsWith("_diary"))
 			{
-				final String params = _command.substring(_command.indexOf("?") + 1);
+				final String params = _command.substring(_command.indexOf('?') + 1);
 				final StringTokenizer st = new StringTokenizer(params, "&");
 				final int heroclass = Integer.parseInt(st.nextToken().split("=")[1]);
 				final int heropage = Integer.parseInt(st.nextToken().split("=")[1]);
@@ -217,7 +217,7 @@ public class RequestBypassToServer implements IClientIncomingPacket
 				final Npc lastNpc = player.getLastFolkNPC();
 				if (Config.ALLOW_MANOR && (lastNpc != null) && lastNpc.canInteract(player))
 				{
-					final String[] split = _command.substring(_command.indexOf("?") + 1).split("&");
+					final String[] split = _command.substring(_command.indexOf('?') + 1).split("&");
 					final int ask = Integer.parseInt(split[0].split("=")[1]);
 					final int state = Integer.parseInt(split[1].split("=")[1]);
 					final boolean time = split[2].split("=")[1].equals("1");

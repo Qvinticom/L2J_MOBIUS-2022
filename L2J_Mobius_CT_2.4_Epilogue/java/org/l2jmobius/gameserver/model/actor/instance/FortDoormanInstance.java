@@ -86,14 +86,7 @@ public class FortDoormanInstance extends DoormanInstance
 	@Override
 	protected final boolean isOwnerClan(PlayerInstance player)
 	{
-		if ((player.getClan() != null) && (getFort() != null) && (getFort().getOwnerClan() != null))
-		{
-			if (player.getClanId() == getFort().getOwnerClan().getId())
-			{
-				return true;
-			}
-		}
-		return false;
+		return (player.getClan() != null) && (getFort() != null) && (getFort().getOwnerClan() != null) && (player.getClanId() == getFort().getOwnerClan().getId());
 	}
 	
 	@Override

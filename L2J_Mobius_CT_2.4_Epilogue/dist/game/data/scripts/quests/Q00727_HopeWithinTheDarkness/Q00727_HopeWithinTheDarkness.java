@@ -78,16 +78,16 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 		
 		public long getReEnterTime()
 		{
-			long _reEnterTime = 0;
+			long reEnterTime = 0;
 			if (GlobalVariablesManager.getInstance().hasVariable("CastlePailaka " + _wardenId))
 			{
-				_reEnterTime = GlobalVariablesManager.getInstance().getLong("CastlePailaka " + _wardenId);
+				reEnterTime = GlobalVariablesManager.getInstance().getLong("CastlePailaka " + _wardenId);
 			}
 			else
 			{
 				GlobalVariablesManager.getInstance().set("CastlePailaka " + _wardenId, 0);
 			}
-			return _reEnterTime;
+			return reEnterTime;
 		}
 		
 		public void setReEnterTime(long time)
@@ -160,7 +160,8 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 	private static final long WAVE_SPAWN_DELAY = 480000; // Spawn next wave's bosses (8 min)
 	private static final long PRIVATE_SPAWN_DELAY = 180000; // Spawn monsters (3 min after boss had been spawned)
 	private static final Location PLAYER_SPAWN_POINT = new Location(48163, -12195, -9140);
-	private final Map<Integer, CastleDungeon> CASTLE_DUNGEONS = new HashMap<>();
+	private static final Map<Integer, CastleDungeon> CASTLE_DUNGEONS = new HashMap<>();
+	static
 	{
 		CASTLE_DUNGEONS.put(36403, new CastleDungeon(80, 36403));
 		CASTLE_DUNGEONS.put(36404, new CastleDungeon(81, 36404));
@@ -329,7 +330,7 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 		if ((npc.getId() >= NPC_KNIGHT) && (npc.getId() <= NPC_WARRIOR))
 		{
 			final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(player);
-			if ((tmpworld != null) && (tmpworld instanceof CAUWorld))
+			if (tmpworld instanceof CAUWorld)
 			{
 				final CAUWorld world = (CAUWorld) tmpworld;
 				
@@ -672,26 +673,25 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 		{
 			try
 			{
-				final Instance _instance = InstanceManager.getInstance().getInstance(_world.getInstanceId());
-				
+				final Instance instance = InstanceManager.getInstance().getInstance(_world.getInstanceId());
 				if (_world.getStatus() == 0)
 				{
-					_instance.spawnGroup("victims");
-					_instance.spawnGroup("bosses_1");
+					instance.spawnGroup("victims");
+					instance.spawnGroup("bosses_1");
 					
 					ThreadPool.schedule(new spawnNpcs(_world), WAVE_SPAWN_DELAY);
 					ThreadPool.schedule(new spawnPrivates(_world), PRIVATE_SPAWN_DELAY);
 				}
 				else if (_world.getStatus() == 1)
 				{
-					_instance.spawnGroup("bosses_2");
+					instance.spawnGroup("bosses_2");
 					
 					ThreadPool.schedule(new spawnNpcs(_world), WAVE_SPAWN_DELAY);
 					ThreadPool.schedule(new spawnPrivates(_world), PRIVATE_SPAWN_DELAY);
 				}
 				else if (_world.getStatus() == 2)
 				{
-					_instance.spawnGroup("bosses_3");
+					instance.spawnGroup("bosses_3");
 					
 					ThreadPool.schedule(new spawnPrivates(_world), PRIVATE_SPAWN_DELAY);
 				}
@@ -718,21 +718,20 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 		{
 			try
 			{
-				final Instance _instance = InstanceManager.getInstance().getInstance(_world.getInstanceId());
-				
+				final Instance instance = InstanceManager.getInstance().getInstance(_world.getInstanceId());
 				if (_world.getStatus() == 0)
 				{
-					_instance.spawnGroup("monsters_first_wave");
+					instance.spawnGroup("monsters_first_wave");
 					
 					_world.underAttack = true;
 				}
 				else if (_world.getStatus() == 1)
 				{
-					_instance.spawnGroup("monsters_second_wave");
+					instance.spawnGroup("monsters_second_wave");
 				}
 				else if (_world.getStatus() == 2)
 				{
-					_instance.spawnGroup("monsters_third_wave");
+					instance.spawnGroup("monsters_third_wave");
 				}
 				
 				_world.setStatus(_world.getStatus() + 1);

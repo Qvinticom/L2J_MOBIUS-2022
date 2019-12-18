@@ -60,10 +60,6 @@ public class HeartInfinityDefence extends AbstractNpcAI
 		protected ScheduledFuture<?> finishTask = null;
 		protected ScheduledFuture<?> timerTask = null;
 		protected ScheduledFuture<?> wagonSpawnTask = null;
-		
-		public HIDWorld()
-		{
-		}
 	}
 	
 	private static final String qn = "HeartInfinityDefence";
@@ -406,16 +402,13 @@ public class HeartInfinityDefence extends AbstractNpcAI
 			
 			ThreadPool.schedule(() ->
 			{
-				if (!conquestEnded)
+				if (!conquestEnded && !world.deadTumors.isEmpty())
 				{
-					if (!world.deadTumors.isEmpty())
+					for (Npc npc : world.deadTumors)
 					{
-						for (Npc npc : world.deadTumors)
+						if (npc != null)
 						{
-							if (npc != null)
-							{
-								spawnCoffin(npc, world);
-							}
+							spawnCoffin(npc, world);
 						}
 					}
 				}
@@ -563,13 +556,10 @@ public class HeartInfinityDefence extends AbstractNpcAI
 		}
 		
 		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc);
-		if (tmpworld instanceof HIDWorld)
+		if ((tmpworld instanceof HIDWorld) && (npc.getId() == SOULWAGON))
 		{
-			if (npc.getId() == SOULWAGON)
-			{
-				// ((MonsterInstance) npc).setPassive(true);
-				((MonsterInstance) npc).getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-			}
+			// ((MonsterInstance) npc).setPassive(true);
+			((MonsterInstance) npc).getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		}
 		return super.onSpawn(npc);
 	}

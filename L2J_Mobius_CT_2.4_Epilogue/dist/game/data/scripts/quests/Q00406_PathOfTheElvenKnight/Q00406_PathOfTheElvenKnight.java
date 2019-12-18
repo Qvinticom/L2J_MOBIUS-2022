@@ -147,19 +147,16 @@ public class Q00406_PathOfTheElvenKnight extends Quest
 			check = hasQuestItems(killer, requiredItemId);
 		}
 		
-		if ((qs != null) && qs.isStarted() && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, false))
+		if ((qs != null) && qs.isStarted() && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, false) && check && (getQuestItemsCount(killer, reward.getId()) < 20) && (getRandom(100) < reward.getChance()))
 		{
-			if (check && (getQuestItemsCount(killer, reward.getId()) < 20) && (getRandom(100) < reward.getChance()))
+			giveItems(killer, reward);
+			if (getQuestItemsCount(killer, reward.getId()) == 20)
 			{
-				giveItems(killer, reward);
-				if (getQuestItemsCount(killer, reward.getId()) == 20)
-				{
-					qs.setCond(cond, true);
-				}
-				else
-				{
-					playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-				}
+				qs.setCond(cond, true);
+			}
+			else
+			{
+				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 		}
 		return super.onKill(npc, killer, isSummon);

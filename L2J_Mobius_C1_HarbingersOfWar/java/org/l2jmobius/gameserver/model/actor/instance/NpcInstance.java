@@ -19,6 +19,7 @@ package org.l2jmobius.gameserver.model.actor.instance;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.nio.charset.StandardCharsets;
 import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Logger;
 
@@ -58,6 +59,9 @@ public class NpcInstance extends Creature
 		_npcTemplate = template;
 		setCollisionHeight(template.getHeight());
 		setCollisionRadius(template.getRadius());
+		// TODO: Datapack support for name and title.
+		// setName(template.getName());
+		// setTitle(template.getTitle());
 	}
 	
 	public boolean isAggressive()
@@ -171,7 +175,7 @@ public class NpcInstance extends Creature
 		if (client.getAccessLevel() >= 100)
 		{
 			final NpcHtmlMessage html = new NpcHtmlMessage(1);
-			final StringBuffer html1 = new StringBuffer("<html><body><table border=0>");
+			final StringBuilder html1 = new StringBuilder("<html><body><table border=0>");
 			html1.append("<tr><td>Current Target:</td></tr>");
 			html1.append("<tr><td><br></td></tr>");
 			html1.append("<tr><td>Object ID: " + getObjectId() + "</td></tr>");
@@ -219,7 +223,7 @@ public class NpcInstance extends Creature
 	
 	public void insertObjectIdAndShowChatWindow(PlayerInstance player, String content)
 	{
-		content = content.replaceAll("%objectId%", String.valueOf(getObjectId()));
+		content = content.replace("%objectId%", String.valueOf(getObjectId()));
 		final NpcHtmlMessage npcReply = new NpcHtmlMessage(5);
 		npcReply.setHtml(content);
 		player.sendPacket(npcReply);
@@ -265,7 +269,7 @@ public class NpcInstance extends Creature
 				FileInputStream fis = new FileInputStream(file);
 				final byte[] raw = new byte[fis.available()];
 				fis.read(raw);
-				final String content = new String(raw, "UTF-8");
+				final String content = new String(raw, StandardCharsets.UTF_8);
 				insertObjectIdAndShowChatWindow(player, content);
 				fis.close();
 			}
@@ -314,8 +318,7 @@ public class NpcInstance extends Creature
 		super.reduceCurrentHp(i, attacker);
 		if (isDead())
 		{
-			final NpcInstance NpcInstance = this;
-			synchronized (NpcInstance)
+			synchronized (this)
 			{
 				if ((_decayTask == null) || _decayTask.isCancelled() || _decayTask.isDone())
 				{

@@ -96,15 +96,12 @@ public class Q00065_CertifiedSoulBreaker extends Quest
 		{
 			final Npc npc0 = npc.getVariables().getObject("npc0", Npc.class);
 			final PlayerInstance c0 = npc.getVariables().getObject("player0", PlayerInstance.class);
-			if (npc0 != null)
+			if ((npc0 != null) && npc0.getVariables().getBoolean("SPAWNED"))
 			{
-				if (npc0.getVariables().getBoolean("SPAWNED"))
+				npc0.getVariables().set("SPAWNED", false);
+				if (c0 != null)
 				{
-					npc0.getVariables().set("SPAWNED", false);
-					if (c0 != null)
-					{
-						npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.S1_I_WILL_BE_BACK_SOON_STAY_THERE_AND_DON_T_YOU_DARE_WANDER_OFF).addStringParameter(c0.getAppearance().getVisibleName()));
-					}
+					npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.S1_I_WILL_BE_BACK_SOON_STAY_THERE_AND_DON_T_YOU_DARE_WANDER_OFF).addStringParameter(c0.getAppearance().getVisibleName()));
 				}
 			}
 			npc.deleteMe();
@@ -304,13 +301,10 @@ public class Q00065_CertifiedSoulBreaker extends Quest
 			{
 				case WYRM:
 				{
-					if (qs.isMemoState(22))
+					if (qs.isMemoState(22) && giveItemRandomly(killer, npc, WYRM_HEART, 1, 10, 0.20, true))
 					{
-						if (giveItemRandomly(killer, npc, WYRM_HEART, 1, 10, 0.20, true))
-						{
-							qs.setMemoState(23);
-							qs.setCond(16, true);
-						}
+						qs.setMemoState(23);
+						qs.setCond(16, true);
 					}
 					break;
 				}
@@ -320,26 +314,20 @@ public class Q00065_CertifiedSoulBreaker extends Quest
 					final Npc npc0 = npc.getVariables().getObject("npc0", Npc.class);
 					if (killer == c0)
 					{
-						if (c0 != null)
+						if ((c0 != null) && qs.isMemoState(12))
 						{
-							if (qs.isMemoState(12))
-							{
-								final Npc katenar = addSpawn(KATENAR, killer.getX() + 20, killer.getY() + 20, killer.getZ(), 0, false, 0);
-								katenar.getVariables().set("player0", killer);
-								katenar.getVariables().set("npc0", npc);
-								qs.setMemoState(13);
-								npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.GRR_I_VE_BEEN_HIT));
-							}
+							final Npc katenar = addSpawn(KATENAR, killer.getX() + 20, killer.getY() + 20, killer.getZ(), 0, false, 0);
+							katenar.getVariables().set("player0", killer);
+							katenar.getVariables().set("npc0", npc);
+							qs.setMemoState(13);
+							npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.GRR_I_VE_BEEN_HIT));
 						}
 					}
 					else
 					{
-						if (npc0 != null)
+						if ((npc0 != null) && npc0.getVariables().getBoolean("SPAWNED"))
 						{
-							if (npc0.getVariables().getBoolean("SPAWNED"))
-							{
-								npc0.getVariables().set("SPAWNED", false);
-							}
+							npc0.getVariables().set("SPAWNED", false);
 						}
 						npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.GRR_WHO_ARE_YOU_AND_WHY_HAVE_YOU_STOPPED_ME));
 					}
@@ -592,7 +580,7 @@ public class Q00065_CertifiedSoulBreaker extends Quest
 					if (memoState == 1)
 					{
 						htmltext = getHtm(player, "32138-01.html");
-						htmltext = htmltext.replaceAll("%name1%", player.getName());
+						htmltext = htmltext.replace("%name1%", player.getName());
 					}
 					else if (memoState == 2)
 					{

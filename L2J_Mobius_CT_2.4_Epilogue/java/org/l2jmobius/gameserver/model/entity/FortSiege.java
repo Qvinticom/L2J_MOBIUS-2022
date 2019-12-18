@@ -1118,9 +1118,9 @@ public class FortSiege implements Siegable
 		}
 	}
 	
-	private void spawnFlag(int Id)
+	private void spawnFlag(int id)
 	{
-		for (CombatFlag cf : FortSiegeManager.getInstance().getFlagList(Id))
+		for (CombatFlag cf : FortSiegeManager.getInstance().getFlagList(id))
 		{
 			cf.spawnMe();
 		}

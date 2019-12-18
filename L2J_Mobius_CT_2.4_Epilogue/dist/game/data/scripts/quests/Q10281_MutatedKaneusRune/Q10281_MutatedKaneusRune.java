@@ -84,7 +84,6 @@ public class Q10281_MutatedKaneusRune extends Quest
 			return null;
 		}
 		
-		final int npcId = npc.getId();
 		if (killer.getParty() != null)
 		{
 			final List<PlayerInstance> partyMembers = new ArrayList<>();
@@ -99,12 +98,12 @@ public class Q10281_MutatedKaneusRune extends Quest
 			
 			if (!partyMembers.isEmpty())
 			{
-				rewardItem(npcId, getRandomEntry(partyMembers));
+				rewardItem(getRandomEntry(partyMembers));
 			}
 		}
 		else if (qs.isStarted() && !hasQuestItems(killer, TISSUE_WA))
 		{
-			rewardItem(npcId, killer);
+			rewardItem(killer);
 		}
 		return null;
 	}
@@ -164,11 +163,7 @@ public class Q10281_MutatedKaneusRune extends Quest
 		return htmltext;
 	}
 	
-	/**
-	 * @param npcId the ID of the killed monster
-	 * @param player
-	 */
-	private final void rewardItem(int npcId, PlayerInstance player)
+	private final void rewardItem(PlayerInstance player)
 	{
 		giveItems(player, TISSUE_WA, 1);
 		playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);

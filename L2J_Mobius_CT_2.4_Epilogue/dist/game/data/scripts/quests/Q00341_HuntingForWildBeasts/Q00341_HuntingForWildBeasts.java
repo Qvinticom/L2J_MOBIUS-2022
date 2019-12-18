@@ -64,7 +64,7 @@ public class Q00341_HuntingForWildBeasts extends Quest
 	{
 		final QuestState qs = getQuestState(player, false);
 		String htmltext = null;
-		if(qs != null)
+		if (qs != null)
 		{
 			switch (event)
 			{
@@ -122,19 +122,16 @@ public class Q00341_HuntingForWildBeasts extends Quest
 		if ((qs != null) && qs.isCond(1))
 		{
 			long skins = getQuestItemsCount(player, BEAR_SKIN);
-			if (skins < REQUIRED_COUNT)
+			if ((skins < REQUIRED_COUNT) && (getRandom(100) < MONSTERS.get(npc.getId())))
 			{
-				if (getRandom(100) < MONSTERS.get(npc.getId()))
+				giveItems(player, BEAR_SKIN, 1);
+				if ((++skins) < REQUIRED_COUNT)
 				{
-					giveItems(player, BEAR_SKIN, 1);
-					if ((++skins) < REQUIRED_COUNT)
-					{
-						playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-					}
-					else
-					{
-						qs.setCond(2, true);
-					}
+					playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+				}
+				else
+				{
+					qs.setCond(2, true);
 				}
 			}
 		}

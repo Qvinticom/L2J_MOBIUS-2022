@@ -319,11 +319,7 @@ public class TerritoryWarManager implements Siegable
 	
 	public void removeClan(int castleId, Clan clan)
 	{
-		if (clan == null)
-		{
-			return;
-		}
-		else if ((_registeredClans.get(castleId) != null) && _registeredClans.get(castleId).contains(clan))
+		if ((clan != null) && (_registeredClans.get(castleId) != null) && _registeredClans.get(castleId).contains(clan))
 		{
 			_registeredClans.get(castleId).remove(clan);
 			changeRegistration(castleId, clan.getId(), true);
@@ -332,11 +328,7 @@ public class TerritoryWarManager implements Siegable
 	
 	public void removeMerc(int castleId, PlayerInstance player)
 	{
-		if (player == null)
-		{
-			return;
-		}
-		else if ((_registeredMercenaries.get(castleId) != null) && _registeredMercenaries.get(castleId).contains(player.getObjectId()))
+		if ((player != null) && (_registeredMercenaries.get(castleId) != null) && _registeredMercenaries.get(castleId).contains(player.getObjectId()))
 		{
 			_registeredMercenaries.get(castleId).remove(_registeredMercenaries.get(castleId).indexOf(player.getObjectId()));
 			changeRegistration(castleId, player.getObjectId(), true);
@@ -575,7 +567,7 @@ public class TerritoryWarManager implements Siegable
 				if (isKilled)
 				{
 					final SystemMessage sm = new SystemMessage(SystemMessageId.THE_CHARACTER_THAT_ACQUIRED_S1_S_WARD_HAS_BEEN_KILLED);
-					sm.addString(twWard.getNpc().getName().replaceAll(" Ward", ""));
+					sm.addString(twWard.getNpc().getName().replace(" Ward", ""));
 					announceToParticipants(sm, 0, 0);
 				}
 			}
@@ -1386,10 +1378,6 @@ public class TerritoryWarManager implements Siegable
 	
 	private class closeTerritoryChannelTask implements Runnable
 	{
-		public closeTerritoryChannelTask()
-		{
-		}
-		
 		@Override
 		public void run()
 		{
@@ -1456,11 +1444,11 @@ public class TerritoryWarManager implements Siegable
 		private final int _type;
 		private Npc _npc;
 		
-		public TerritoryNPCSpawn(int castle_id, Location loc, int npc_id, int type, Npc npc)
+		public TerritoryNPCSpawn(int castleId, Location loc, int npcId, int type, Npc npc)
 		{
-			_castleId = castle_id;
+			_castleId = castleId;
 			_location = loc;
-			_npcId = npc_id;
+			_npcId = npcId;
 			_type = type;
 			_npc = npc;
 		}
@@ -1784,7 +1772,6 @@ public class TerritoryWarManager implements Siegable
 	@Override
 	public void updateSiege()
 	{
-		
 	}
 	
 	public static TerritoryWarManager getInstance()

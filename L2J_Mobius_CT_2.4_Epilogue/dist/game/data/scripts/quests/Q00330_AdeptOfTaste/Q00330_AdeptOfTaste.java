@@ -123,31 +123,25 @@ public class Q00330_AdeptOfTaste extends Quest
 			}
 			case "30062-05.html":
 			{
-				if (hasQuestItems(player, SONIAS_BOTANY_BOOK) && ((getQuestItemsCount(player, RED_MANDRAGORA_ROOT) + getQuestItemsCount(player, WHITE_MANDRAGORA_ROOT)) >= 40))
+				if (hasQuestItems(player, SONIAS_BOTANY_BOOK) && ((getQuestItemsCount(player, RED_MANDRAGORA_ROOT) + getQuestItemsCount(player, WHITE_MANDRAGORA_ROOT)) >= 40) && (getQuestItemsCount(player, WHITE_MANDRAGORA_ROOT) < 40))
 				{
-					if (getQuestItemsCount(player, WHITE_MANDRAGORA_ROOT) < 40)
-					{
-						takeItems(player, SONIAS_BOTANY_BOOK, 1);
-						takeItems(player, RED_MANDRAGORA_ROOT, -1);
-						takeItems(player, WHITE_MANDRAGORA_ROOT, -1);
-						giveItems(player, RED_MANDRAGORA_SAP, 1);
-						htmltext = event;
-					}
+					takeItems(player, SONIAS_BOTANY_BOOK, 1);
+					takeItems(player, RED_MANDRAGORA_ROOT, -1);
+					takeItems(player, WHITE_MANDRAGORA_ROOT, -1);
+					giveItems(player, RED_MANDRAGORA_SAP, 1);
+					htmltext = event;
 				}
 				break;
 			}
 			case "30067-05.html":
 			{
-				if (hasQuestItems(player, GLYVKAS_BOTANY_BOOK) && ((getQuestItemsCount(player, GREEN_MARSH_MOSS) + getQuestItemsCount(player, BROWN_MARSH_MOSS)) >= 20))
+				if (hasQuestItems(player, GLYVKAS_BOTANY_BOOK) && ((getQuestItemsCount(player, GREEN_MARSH_MOSS) + getQuestItemsCount(player, BROWN_MARSH_MOSS)) >= 20) && (getQuestItemsCount(player, BROWN_MARSH_MOSS) < 20))
 				{
-					if (getQuestItemsCount(player, BROWN_MARSH_MOSS) < 20)
-					{
-						takeItems(player, GLYVKAS_BOTANY_BOOK, 1);
-						takeItems(player, GREEN_MARSH_MOSS, -1);
-						takeItems(player, BROWN_MARSH_MOSS, -1);
-						giveItems(player, GREEN_MOSS_BUNDLE, 1);
-						htmltext = event;
-					}
+					takeItems(player, GLYVKAS_BOTANY_BOOK, 1);
+					takeItems(player, GREEN_MARSH_MOSS, -1);
+					takeItems(player, BROWN_MARSH_MOSS, -1);
+					giveItems(player, GREEN_MOSS_BUNDLE, 1);
+					htmltext = event;
 				}
 				break;
 			}
@@ -190,19 +184,16 @@ public class Q00330_AdeptOfTaste extends Quest
 			{
 				case HOBGOBLIN:
 				{
-					if ((getQuestItemsCount(killer, RED_MANDRAGORA_SAP) + getQuestItemsCount(killer, WHITE_MANDRAGORA_SAP) + getQuestItemsCount(killer, HONEY) + getQuestItemsCount(killer, GOLDEN_HONEY) + getQuestItemsCount(killer, DIONIAN_POTATO) + getQuestItemsCount(killer, GREEN_MOSS_BUNDLE) + getQuestItemsCount(killer, BROWN_MOSS_BUNDLE) + getQuestItemsCount(killer, MONSTER_EYE_MEAT)) < 5)
+					if (((getQuestItemsCount(killer, RED_MANDRAGORA_SAP) + getQuestItemsCount(killer, WHITE_MANDRAGORA_SAP) + getQuestItemsCount(killer, HONEY) + getQuestItemsCount(killer, GOLDEN_HONEY) + getQuestItemsCount(killer, DIONIAN_POTATO) + getQuestItemsCount(killer, GREEN_MOSS_BUNDLE) + getQuestItemsCount(killer, BROWN_MOSS_BUNDLE) + getQuestItemsCount(killer, MONSTER_EYE_MEAT)) < 5) && hasQuestItems(killer, INGREDIENT_LIST, PANOS_CONTRACT) && (getQuestItemsCount(killer, HOBGOBLIN_AMULET) < 30))
 					{
-						if (hasQuestItems(killer, INGREDIENT_LIST, PANOS_CONTRACT) && (getQuestItemsCount(killer, HOBGOBLIN_AMULET) < 30))
+						giveItems(killer, HOBGOBLIN_AMULET, 1);
+						if (getQuestItemsCount(killer, HOBGOBLIN_AMULET) == 30)
 						{
-							giveItems(killer, HOBGOBLIN_AMULET, 1);
-							if (getQuestItemsCount(killer, HOBGOBLIN_AMULET) == 30)
-							{
-								playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-							}
-							else
-							{
-								playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-							}
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;
@@ -210,39 +201,36 @@ public class Q00330_AdeptOfTaste extends Quest
 				case MANDRAGORA_SPROUT1:
 				case MANDRAGORA_SPROUT2:
 				{
-					if ((getQuestItemsCount(killer, RED_MANDRAGORA_SAP) + getQuestItemsCount(killer, WHITE_MANDRAGORA_SAP) + getQuestItemsCount(killer, HONEY) + getQuestItemsCount(killer, GOLDEN_HONEY) + getQuestItemsCount(killer, DIONIAN_POTATO) + getQuestItemsCount(killer, GREEN_MOSS_BUNDLE) + getQuestItemsCount(killer, BROWN_MOSS_BUNDLE) + getQuestItemsCount(killer, MONSTER_EYE_MEAT)) < 5)
+					if (((getQuestItemsCount(killer, RED_MANDRAGORA_SAP) + getQuestItemsCount(killer, WHITE_MANDRAGORA_SAP) + getQuestItemsCount(killer, HONEY) + getQuestItemsCount(killer, GOLDEN_HONEY) + getQuestItemsCount(killer, DIONIAN_POTATO) + getQuestItemsCount(killer, GREEN_MOSS_BUNDLE) + getQuestItemsCount(killer, BROWN_MOSS_BUNDLE) + getQuestItemsCount(killer, MONSTER_EYE_MEAT)) < 5) && hasQuestItems(killer, INGREDIENT_LIST, SONIAS_BOTANY_BOOK) && !hasAtLeastOneQuestItem(killer, RED_MANDRAGORA_SAP, WHITE_MANDRAGORA_SAP))
 					{
-						if (hasQuestItems(killer, INGREDIENT_LIST, SONIAS_BOTANY_BOOK) && !hasAtLeastOneQuestItem(killer, RED_MANDRAGORA_SAP, WHITE_MANDRAGORA_SAP))
+						final int i0 = getRandom(100);
+						if (i0 < 70)
 						{
-							final int i0 = getRandom(100);
-							if (i0 < 70)
+							if (getQuestItemsCount(killer, RED_MANDRAGORA_ROOT) < 40)
 							{
-								if (getQuestItemsCount(killer, RED_MANDRAGORA_ROOT) < 40)
+								giveItems(killer, RED_MANDRAGORA_ROOT, 1);
+								if (getQuestItemsCount(killer, RED_MANDRAGORA_ROOT) == 40)
 								{
-									giveItems(killer, RED_MANDRAGORA_ROOT, 1);
-									if (getQuestItemsCount(killer, RED_MANDRAGORA_ROOT) == 40)
-									{
-										playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-									}
-									else
-									{
-										playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-									}
+									playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+								}
+								else
+								{
+									playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 								}
 							}
-							else if (i0 < 77)
+						}
+						else if (i0 < 77)
+						{
+							if (getQuestItemsCount(killer, WHITE_MANDRAGORA_ROOT) < 40)
 							{
-								if (getQuestItemsCount(killer, WHITE_MANDRAGORA_ROOT) < 40)
+								giveItems(killer, WHITE_MANDRAGORA_ROOT, 1);
+								if (getQuestItemsCount(killer, WHITE_MANDRAGORA_ROOT) == 40)
 								{
-									giveItems(killer, WHITE_MANDRAGORA_ROOT, 1);
-									if (getQuestItemsCount(killer, WHITE_MANDRAGORA_ROOT) == 40)
-									{
-										playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-									}
-									else
-									{
-										playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-									}
+									playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+								}
+								else
+								{
+									playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 								}
 							}
 						}
@@ -251,39 +239,36 @@ public class Q00330_AdeptOfTaste extends Quest
 				}
 				case MANDRAGORA_SAPLING:
 				{
-					if ((getQuestItemsCount(killer, RED_MANDRAGORA_SAP) + getQuestItemsCount(killer, WHITE_MANDRAGORA_SAP) + getQuestItemsCount(killer, HONEY) + getQuestItemsCount(killer, GOLDEN_HONEY) + getQuestItemsCount(killer, DIONIAN_POTATO) + getQuestItemsCount(killer, GREEN_MOSS_BUNDLE) + getQuestItemsCount(killer, BROWN_MOSS_BUNDLE) + getQuestItemsCount(killer, MONSTER_EYE_MEAT)) < 5)
+					if (((getQuestItemsCount(killer, RED_MANDRAGORA_SAP) + getQuestItemsCount(killer, WHITE_MANDRAGORA_SAP) + getQuestItemsCount(killer, HONEY) + getQuestItemsCount(killer, GOLDEN_HONEY) + getQuestItemsCount(killer, DIONIAN_POTATO) + getQuestItemsCount(killer, GREEN_MOSS_BUNDLE) + getQuestItemsCount(killer, BROWN_MOSS_BUNDLE) + getQuestItemsCount(killer, MONSTER_EYE_MEAT)) < 5) && hasQuestItems(killer, INGREDIENT_LIST, SONIAS_BOTANY_BOOK) && !hasAtLeastOneQuestItem(killer, RED_MANDRAGORA_SAP, WHITE_MANDRAGORA_SAP))
 					{
-						if (hasQuestItems(killer, INGREDIENT_LIST, SONIAS_BOTANY_BOOK) && !hasAtLeastOneQuestItem(killer, RED_MANDRAGORA_SAP, WHITE_MANDRAGORA_SAP))
+						final int i0 = getRandom(100);
+						if (i0 < 77)
 						{
-							final int i0 = getRandom(100);
-							if (i0 < 77)
+							if (getQuestItemsCount(killer, RED_MANDRAGORA_ROOT) < 40)
 							{
-								if (getQuestItemsCount(killer, RED_MANDRAGORA_ROOT) < 40)
+								giveItems(killer, RED_MANDRAGORA_ROOT, 1);
+								if (getQuestItemsCount(killer, RED_MANDRAGORA_ROOT) == 40)
 								{
-									giveItems(killer, RED_MANDRAGORA_ROOT, 1);
-									if (getQuestItemsCount(killer, RED_MANDRAGORA_ROOT) == 40)
-									{
-										playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-									}
-									else
-									{
-										playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-									}
+									playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+								}
+								else
+								{
+									playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 								}
 							}
-							else if (i0 < 85)
+						}
+						else if (i0 < 85)
+						{
+							if (getQuestItemsCount(killer, WHITE_MANDRAGORA_ROOT) < 40)
 							{
-								if (getQuestItemsCount(killer, WHITE_MANDRAGORA_ROOT) < 40)
+								giveItems(killer, WHITE_MANDRAGORA_ROOT, 1);
+								if (getQuestItemsCount(killer, WHITE_MANDRAGORA_ROOT) == 40)
 								{
-									giveItems(killer, WHITE_MANDRAGORA_ROOT, 1);
-									if (getQuestItemsCount(killer, WHITE_MANDRAGORA_ROOT) == 40)
-									{
-										playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-									}
-									else
-									{
-										playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-									}
+									playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+								}
+								else
+								{
+									playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 								}
 							}
 						}
@@ -292,39 +277,36 @@ public class Q00330_AdeptOfTaste extends Quest
 				}
 				case MANDRAGORA_BLOSSOM:
 				{
-					if ((getQuestItemsCount(killer, RED_MANDRAGORA_SAP) + getQuestItemsCount(killer, WHITE_MANDRAGORA_SAP) + getQuestItemsCount(killer, HONEY) + getQuestItemsCount(killer, GOLDEN_HONEY) + getQuestItemsCount(killer, DIONIAN_POTATO) + getQuestItemsCount(killer, GREEN_MOSS_BUNDLE) + getQuestItemsCount(killer, BROWN_MOSS_BUNDLE) + getQuestItemsCount(killer, MONSTER_EYE_MEAT)) < 5)
+					if (((getQuestItemsCount(killer, RED_MANDRAGORA_SAP) + getQuestItemsCount(killer, WHITE_MANDRAGORA_SAP) + getQuestItemsCount(killer, HONEY) + getQuestItemsCount(killer, GOLDEN_HONEY) + getQuestItemsCount(killer, DIONIAN_POTATO) + getQuestItemsCount(killer, GREEN_MOSS_BUNDLE) + getQuestItemsCount(killer, BROWN_MOSS_BUNDLE) + getQuestItemsCount(killer, MONSTER_EYE_MEAT)) < 5) && hasQuestItems(killer, INGREDIENT_LIST, SONIAS_BOTANY_BOOK) && !hasAtLeastOneQuestItem(killer, RED_MANDRAGORA_SAP, WHITE_MANDRAGORA_SAP))
 					{
-						if (hasQuestItems(killer, INGREDIENT_LIST, SONIAS_BOTANY_BOOK) && !hasAtLeastOneQuestItem(killer, RED_MANDRAGORA_SAP, WHITE_MANDRAGORA_SAP))
+						final int i0 = getRandom(100);
+						if (i0 < 87)
 						{
-							final int i0 = getRandom(100);
-							if (i0 < 87)
+							if (getQuestItemsCount(killer, RED_MANDRAGORA_ROOT) < 40)
 							{
-								if (getQuestItemsCount(killer, RED_MANDRAGORA_ROOT) < 40)
+								giveItems(killer, RED_MANDRAGORA_ROOT, 1);
+								if (getQuestItemsCount(killer, RED_MANDRAGORA_ROOT) == 40)
 								{
-									giveItems(killer, RED_MANDRAGORA_ROOT, 1);
-									if (getQuestItemsCount(killer, RED_MANDRAGORA_ROOT) == 40)
-									{
-										playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-									}
-									else
-									{
-										playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-									}
+									playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+								}
+								else
+								{
+									playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 								}
 							}
-							else if (i0 < 96)
+						}
+						else if (i0 < 96)
+						{
+							if (getQuestItemsCount(killer, WHITE_MANDRAGORA_ROOT) < 40)
 							{
-								if (getQuestItemsCount(killer, WHITE_MANDRAGORA_ROOT) < 40)
+								giveItems(killer, WHITE_MANDRAGORA_ROOT, 1);
+								if (getQuestItemsCount(killer, WHITE_MANDRAGORA_ROOT) == 40)
 								{
-									giveItems(killer, WHITE_MANDRAGORA_ROOT, 1);
-									if (getQuestItemsCount(killer, WHITE_MANDRAGORA_ROOT) == 40)
-									{
-										playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-									}
-									else
-									{
-										playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-									}
+									playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+								}
+								else
+								{
+									playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 								}
 							}
 						}
@@ -333,39 +315,36 @@ public class Q00330_AdeptOfTaste extends Quest
 				}
 				case BLOODY_BEE:
 				{
-					if ((getQuestItemsCount(killer, RED_MANDRAGORA_SAP) + getQuestItemsCount(killer, WHITE_MANDRAGORA_SAP) + getQuestItemsCount(killer, HONEY) + getQuestItemsCount(killer, GOLDEN_HONEY) + getQuestItemsCount(killer, DIONIAN_POTATO) + getQuestItemsCount(killer, GREEN_MOSS_BUNDLE) + getQuestItemsCount(killer, BROWN_MOSS_BUNDLE) + getQuestItemsCount(killer, MONSTER_EYE_MEAT)) < 5)
+					if (((getQuestItemsCount(killer, RED_MANDRAGORA_SAP) + getQuestItemsCount(killer, WHITE_MANDRAGORA_SAP) + getQuestItemsCount(killer, HONEY) + getQuestItemsCount(killer, GOLDEN_HONEY) + getQuestItemsCount(killer, DIONIAN_POTATO) + getQuestItemsCount(killer, GREEN_MOSS_BUNDLE) + getQuestItemsCount(killer, BROWN_MOSS_BUNDLE) + getQuestItemsCount(killer, MONSTER_EYE_MEAT)) < 5) && hasQuestItems(killer, INGREDIENT_LIST, JACOBS_INSECT_BOOK))
 					{
-						if (hasQuestItems(killer, INGREDIENT_LIST, JACOBS_INSECT_BOOK))
+						final int i0 = getRandom(100);
+						if (i0 < 80)
 						{
-							final int i0 = getRandom(100);
-							if (i0 < 80)
+							if (getQuestItemsCount(killer, NECTAR) < 20)
 							{
-								if (getQuestItemsCount(killer, NECTAR) < 20)
+								giveItems(killer, NECTAR, 1);
+								if (getQuestItemsCount(killer, NECTAR) == 20)
 								{
-									giveItems(killer, NECTAR, 1);
-									if (getQuestItemsCount(killer, NECTAR) == 20)
-									{
-										playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-									}
-									else
-									{
-										playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-									}
+									playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+								}
+								else
+								{
+									playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 								}
 							}
-							else if (i0 < 95)
+						}
+						else if (i0 < 95)
+						{
+							if (getQuestItemsCount(killer, ROYAL_JELLY) < 10)
 							{
-								if (getQuestItemsCount(killer, ROYAL_JELLY) < 10)
+								giveItems(killer, ROYAL_JELLY, 1);
+								if (getQuestItemsCount(killer, ROYAL_JELLY) == 10)
 								{
-									giveItems(killer, ROYAL_JELLY, 1);
-									if (getQuestItemsCount(killer, ROYAL_JELLY) == 10)
-									{
-										playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-									}
-									else
-									{
-										playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-									}
+									playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+								}
+								else
+								{
+									playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 								}
 							}
 						}
@@ -374,39 +353,36 @@ public class Q00330_AdeptOfTaste extends Quest
 				}
 				case GRAY_ANT:
 				{
-					if ((getQuestItemsCount(killer, RED_MANDRAGORA_SAP) + getQuestItemsCount(killer, WHITE_MANDRAGORA_SAP) + getQuestItemsCount(killer, HONEY) + getQuestItemsCount(killer, GOLDEN_HONEY) + getQuestItemsCount(killer, DIONIAN_POTATO) + getQuestItemsCount(killer, GREEN_MOSS_BUNDLE) + getQuestItemsCount(killer, BROWN_MOSS_BUNDLE) + getQuestItemsCount(killer, MONSTER_EYE_MEAT)) < 5)
+					if (((getQuestItemsCount(killer, RED_MANDRAGORA_SAP) + getQuestItemsCount(killer, WHITE_MANDRAGORA_SAP) + getQuestItemsCount(killer, HONEY) + getQuestItemsCount(killer, GOLDEN_HONEY) + getQuestItemsCount(killer, DIONIAN_POTATO) + getQuestItemsCount(killer, GREEN_MOSS_BUNDLE) + getQuestItemsCount(killer, BROWN_MOSS_BUNDLE) + getQuestItemsCount(killer, MONSTER_EYE_MEAT)) < 5) && hasQuestItems(killer, INGREDIENT_LIST, GLYVKAS_BOTANY_BOOK))
 					{
-						if (hasQuestItems(killer, INGREDIENT_LIST, GLYVKAS_BOTANY_BOOK))
+						final int i0 = getRandom(100);
+						if (i0 < 87)
 						{
-							final int i0 = getRandom(100);
-							if (i0 < 87)
+							if (getQuestItemsCount(killer, GREEN_MARSH_MOSS) < 20)
 							{
-								if (getQuestItemsCount(killer, GREEN_MARSH_MOSS) < 20)
+								giveItems(killer, GREEN_MARSH_MOSS, 1);
+								if (getQuestItemsCount(killer, GREEN_MARSH_MOSS) == 20)
 								{
-									giveItems(killer, GREEN_MARSH_MOSS, 1);
-									if (getQuestItemsCount(killer, GREEN_MARSH_MOSS) == 20)
-									{
-										playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-									}
-									else
-									{
-										playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-									}
+									playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+								}
+								else
+								{
+									playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 								}
 							}
-							else if (i0 < 96)
+						}
+						else if (i0 < 96)
+						{
+							if (getQuestItemsCount(killer, BROWN_MARSH_MOSS) < 20)
 							{
-								if (getQuestItemsCount(killer, BROWN_MARSH_MOSS) < 20)
+								giveItems(killer, BROWN_MARSH_MOSS, 1);
+								if (getQuestItemsCount(killer, BROWN_MARSH_MOSS) == 20)
 								{
-									giveItems(killer, BROWN_MARSH_MOSS, 1);
-									if (getQuestItemsCount(killer, BROWN_MARSH_MOSS) == 20)
-									{
-										playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-									}
-									else
-									{
-										playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-									}
+									playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+								}
+								else
+								{
+									playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 								}
 							}
 						}
@@ -415,39 +391,36 @@ public class Q00330_AdeptOfTaste extends Quest
 				}
 				case GIANT_CRIMSON_ANT:
 				{
-					if ((getQuestItemsCount(killer, RED_MANDRAGORA_SAP) + getQuestItemsCount(killer, WHITE_MANDRAGORA_SAP) + getQuestItemsCount(killer, HONEY) + getQuestItemsCount(killer, GOLDEN_HONEY) + getQuestItemsCount(killer, DIONIAN_POTATO) + getQuestItemsCount(killer, GREEN_MOSS_BUNDLE) + getQuestItemsCount(killer, BROWN_MOSS_BUNDLE) + getQuestItemsCount(killer, MONSTER_EYE_MEAT)) < 5)
+					if (((getQuestItemsCount(killer, RED_MANDRAGORA_SAP) + getQuestItemsCount(killer, WHITE_MANDRAGORA_SAP) + getQuestItemsCount(killer, HONEY) + getQuestItemsCount(killer, GOLDEN_HONEY) + getQuestItemsCount(killer, DIONIAN_POTATO) + getQuestItemsCount(killer, GREEN_MOSS_BUNDLE) + getQuestItemsCount(killer, BROWN_MOSS_BUNDLE) + getQuestItemsCount(killer, MONSTER_EYE_MEAT)) < 5) && hasQuestItems(killer, INGREDIENT_LIST, GLYVKAS_BOTANY_BOOK))
 					{
-						if (hasQuestItems(killer, INGREDIENT_LIST, GLYVKAS_BOTANY_BOOK))
+						final int i0 = getRandom(100);
+						if (i0 < 90)
 						{
-							final int i0 = getRandom(100);
-							if (i0 < 90)
+							if (getQuestItemsCount(killer, GREEN_MARSH_MOSS) < 20)
 							{
-								if (getQuestItemsCount(killer, GREEN_MARSH_MOSS) < 20)
+								giveItems(killer, GREEN_MARSH_MOSS, 1);
+								if (getQuestItemsCount(killer, GREEN_MARSH_MOSS) == 20)
 								{
-									giveItems(killer, GREEN_MARSH_MOSS, 1);
-									if (getQuestItemsCount(killer, GREEN_MARSH_MOSS) == 20)
-									{
-										playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-									}
-									else
-									{
-										playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-									}
+									playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+								}
+								else
+								{
+									playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 								}
 							}
-							else
+						}
+						else
+						{
+							if (getQuestItemsCount(killer, BROWN_MARSH_MOSS) < 20)
 							{
-								if (getQuestItemsCount(killer, BROWN_MARSH_MOSS) < 20)
+								giveItems(killer, BROWN_MARSH_MOSS, 1);
+								if (getQuestItemsCount(killer, BROWN_MARSH_MOSS) == 20)
 								{
-									giveItems(killer, BROWN_MARSH_MOSS, 1);
-									if (getQuestItemsCount(killer, BROWN_MARSH_MOSS) == 20)
-									{
-										playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-									}
-									else
-									{
-										playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-									}
+									playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+								}
+								else
+								{
+									playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 								}
 							}
 						}
@@ -456,39 +429,36 @@ public class Q00330_AdeptOfTaste extends Quest
 				}
 				case STINGER_WASP:
 				{
-					if ((getQuestItemsCount(killer, RED_MANDRAGORA_SAP) + getQuestItemsCount(killer, WHITE_MANDRAGORA_SAP) + getQuestItemsCount(killer, HONEY) + getQuestItemsCount(killer, GOLDEN_HONEY) + getQuestItemsCount(killer, DIONIAN_POTATO) + getQuestItemsCount(killer, GREEN_MOSS_BUNDLE) + getQuestItemsCount(killer, BROWN_MOSS_BUNDLE) + getQuestItemsCount(killer, MONSTER_EYE_MEAT)) < 5)
+					if (((getQuestItemsCount(killer, RED_MANDRAGORA_SAP) + getQuestItemsCount(killer, WHITE_MANDRAGORA_SAP) + getQuestItemsCount(killer, HONEY) + getQuestItemsCount(killer, GOLDEN_HONEY) + getQuestItemsCount(killer, DIONIAN_POTATO) + getQuestItemsCount(killer, GREEN_MOSS_BUNDLE) + getQuestItemsCount(killer, BROWN_MOSS_BUNDLE) + getQuestItemsCount(killer, MONSTER_EYE_MEAT)) < 5) && hasQuestItems(killer, INGREDIENT_LIST, JACOBS_INSECT_BOOK))
 					{
-						if (hasQuestItems(killer, INGREDIENT_LIST, JACOBS_INSECT_BOOK))
+						final int i0 = getRandom(100);
+						if (i0 < 92)
 						{
-							final int i0 = getRandom(100);
-							if (i0 < 92)
+							if (getQuestItemsCount(killer, NECTAR) < 20)
 							{
-								if (getQuestItemsCount(killer, NECTAR) < 20)
+								giveItems(killer, NECTAR, 1);
+								if (getQuestItemsCount(killer, NECTAR) == 20)
 								{
-									giveItems(killer, NECTAR, 1);
-									if (getQuestItemsCount(killer, NECTAR) == 20)
-									{
-										playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-									}
-									else
-									{
-										playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-									}
+									playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+								}
+								else
+								{
+									playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 								}
 							}
-							else
+						}
+						else
+						{
+							if (getQuestItemsCount(killer, ROYAL_JELLY) < 10)
 							{
-								if (getQuestItemsCount(killer, ROYAL_JELLY) < 10)
+								giveItems(killer, ROYAL_JELLY, 1);
+								if (getQuestItemsCount(killer, ROYAL_JELLY) == 10)
 								{
-									giveItems(killer, ROYAL_JELLY, 1);
-									if (getQuestItemsCount(killer, ROYAL_JELLY) == 10)
-									{
-										playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-									}
-									else
-									{
-										playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-									}
+									playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+								}
+								else
+								{
+									playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 								}
 							}
 						}
@@ -497,80 +467,74 @@ public class Q00330_AdeptOfTaste extends Quest
 				}
 				case MONSTER_EYE_SEARCHER:
 				{
-					if ((getQuestItemsCount(killer, RED_MANDRAGORA_SAP) + getQuestItemsCount(killer, WHITE_MANDRAGORA_SAP) + getQuestItemsCount(killer, HONEY) + getQuestItemsCount(killer, GOLDEN_HONEY) + getQuestItemsCount(killer, DIONIAN_POTATO) + getQuestItemsCount(killer, GREEN_MOSS_BUNDLE) + getQuestItemsCount(killer, BROWN_MOSS_BUNDLE) + getQuestItemsCount(killer, MONSTER_EYE_MEAT)) < 5)
+					if (((getQuestItemsCount(killer, RED_MANDRAGORA_SAP) + getQuestItemsCount(killer, WHITE_MANDRAGORA_SAP) + getQuestItemsCount(killer, HONEY) + getQuestItemsCount(killer, GOLDEN_HONEY) + getQuestItemsCount(killer, DIONIAN_POTATO) + getQuestItemsCount(killer, GREEN_MOSS_BUNDLE) + getQuestItemsCount(killer, BROWN_MOSS_BUNDLE) + getQuestItemsCount(killer, MONSTER_EYE_MEAT)) < 5) && hasQuestItems(killer, INGREDIENT_LIST, ROLLANTS_CREATURE_BOOK) && (getQuestItemsCount(killer, BODY_OF_MONSTER_EYE) < 30))
 					{
-						if (hasQuestItems(killer, INGREDIENT_LIST, ROLLANTS_CREATURE_BOOK) && (getQuestItemsCount(killer, BODY_OF_MONSTER_EYE) < 30))
+						final int i0 = getRandom(100);
+						if (i0 < 77)
 						{
-							final int i0 = getRandom(100);
-							if (i0 < 77)
+							if (getQuestItemsCount(killer, BODY_OF_MONSTER_EYE) == 29)
 							{
-								if (getQuestItemsCount(killer, BODY_OF_MONSTER_EYE) == 29)
-								{
-									giveItems(killer, BODY_OF_MONSTER_EYE, 1);
-									playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-								}
-								else
-								{
-									giveItems(killer, BODY_OF_MONSTER_EYE, 2);
-									playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-								}
+								giveItems(killer, BODY_OF_MONSTER_EYE, 1);
+								playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 							}
-							else if (i0 < 97)
+							else
 							{
-								if (getQuestItemsCount(killer, BROWN_MARSH_MOSS) == 28)
-								{
-									giveItems(killer, BODY_OF_MONSTER_EYE, 2);
-									playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-								}
-								else if (getQuestItemsCount(killer, BROWN_MARSH_MOSS) == 29)
-								{
-									giveItems(killer, BODY_OF_MONSTER_EYE, 1);
-									playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-								}
-								else
-								{
-									giveItems(killer, BODY_OF_MONSTER_EYE, 3);
-									playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-								}
-								
+								giveItems(killer, BODY_OF_MONSTER_EYE, 2);
+								playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 							}
+						}
+						else if (i0 < 97)
+						{
+							if (getQuestItemsCount(killer, BROWN_MARSH_MOSS) == 28)
+							{
+								giveItems(killer, BODY_OF_MONSTER_EYE, 2);
+								playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+							}
+							else if (getQuestItemsCount(killer, BROWN_MARSH_MOSS) == 29)
+							{
+								giveItems(killer, BODY_OF_MONSTER_EYE, 1);
+								playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+							}
+							else
+							{
+								giveItems(killer, BODY_OF_MONSTER_EYE, 3);
+								playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+							}
+							
 						}
 					}
 					break;
 				}
 				case MONSTER_EYE_GAZER:
 				{
-					if ((getQuestItemsCount(killer, RED_MANDRAGORA_SAP) + getQuestItemsCount(killer, WHITE_MANDRAGORA_SAP) + getQuestItemsCount(killer, HONEY) + getQuestItemsCount(killer, GOLDEN_HONEY) + getQuestItemsCount(killer, DIONIAN_POTATO) + getQuestItemsCount(killer, GREEN_MOSS_BUNDLE) + getQuestItemsCount(killer, BROWN_MOSS_BUNDLE) + getQuestItemsCount(killer, MONSTER_EYE_MEAT)) < 5)
+					if (((getQuestItemsCount(killer, RED_MANDRAGORA_SAP) + getQuestItemsCount(killer, WHITE_MANDRAGORA_SAP) + getQuestItemsCount(killer, HONEY) + getQuestItemsCount(killer, GOLDEN_HONEY) + getQuestItemsCount(killer, DIONIAN_POTATO) + getQuestItemsCount(killer, GREEN_MOSS_BUNDLE) + getQuestItemsCount(killer, BROWN_MOSS_BUNDLE) + getQuestItemsCount(killer, MONSTER_EYE_MEAT)) < 5) && hasQuestItems(killer, INGREDIENT_LIST, ROLLANTS_CREATURE_BOOK) && (getQuestItemsCount(killer, BODY_OF_MONSTER_EYE) < 30))
 					{
-						if (hasQuestItems(killer, INGREDIENT_LIST, ROLLANTS_CREATURE_BOOK) && (getQuestItemsCount(killer, BODY_OF_MONSTER_EYE) < 30))
+						final int i0 = getRandom(10);
+						if (i0 < 7)
 						{
-							final int i0 = getRandom(10);
-							if (i0 < 7)
+							giveItems(killer, BODY_OF_MONSTER_EYE, 1);
+							if (getQuestItemsCount(killer, BODY_OF_MONSTER_EYE) == 30)
 							{
-								giveItems(killer, BODY_OF_MONSTER_EYE, 1);
-								if (getQuestItemsCount(killer, BODY_OF_MONSTER_EYE) == 30)
-								{
-									playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-								}
-								else
-								{
-									playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-								}
+								playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 							}
 							else
 							{
-								if (getQuestItemsCount(killer, BROWN_MARSH_MOSS) == 29)
-								{
-									giveItems(killer, BODY_OF_MONSTER_EYE, 1);
-									playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-								}
-								else
-								{
-									giveItems(killer, BODY_OF_MONSTER_EYE, 2);
-									playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-								}
-								
+								playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 							}
+						}
+						else
+						{
+							if (getQuestItemsCount(killer, BROWN_MARSH_MOSS) == 29)
+							{
+								giveItems(killer, BODY_OF_MONSTER_EYE, 1);
+								playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+							}
+							else
+							{
+								giveItems(killer, BODY_OF_MONSTER_EYE, 2);
+								playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+							}
+							
 						}
 					}
 					break;

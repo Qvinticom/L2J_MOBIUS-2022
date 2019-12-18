@@ -24,6 +24,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.LineNumberReader;
+import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Base64;
@@ -99,10 +100,10 @@ public class AccountManager
 	
 	private static void printAccInfo(String fin) throws FileNotFoundException, IOException
 	{
-		final File _test = new File(fin);
-		if (!_test.exists())
+		final File test = new File(fin);
+		if (!test.exists())
 		{
-			_test.createNewFile();
+			test.createNewFile();
 		}
 		final FileInputStream in = new FileInputStream(fin);
 		@SuppressWarnings("resource")
@@ -121,15 +122,15 @@ public class AccountManager
 	
 	private static void updateAccounts(String fin, String fout) throws FileNotFoundException, IOException, NoSuchAlgorithmException
 	{
-		final File _test = new File(fin);
-		if (!_test.exists())
+		final File test = new File(fin);
+		if (!test.exists())
 		{
-			_test.createNewFile();
+			test.createNewFile();
 		}
 		final FileInputStream in = new FileInputStream(fin);
 		final FileWriter out = new FileWriter(fout);
 		final MessageDigest md = MessageDigest.getInstance("SHA");
-		byte[] newpass = _pass.getBytes("UTF-8");
+		byte[] newpass = _pass.getBytes(StandardCharsets.UTF_8);
 		newpass = md.digest(newpass);
 		try
 		{
@@ -159,7 +160,7 @@ public class AccountManager
 						System.out.println("Account for user " + _uname + " deleted");
 					}
 				}
-				if (line == "")
+				if (line.equals(""))
 				{
 					continue;
 				}
@@ -177,10 +178,10 @@ public class AccountManager
 			{
 				out.close();
 				in.close();
-				final File _fin = new File(fin);
-				final File _fout = new File(fout);
-				_fin.delete();
-				_fout.renameTo(_fin);
+				final File fileIn = new File(fin);
+				final File fileOut = new File(fout);
+				fileIn.delete();
+				fileOut.renameTo(fileIn);
 			}
 			catch (Exception e)
 			{
@@ -191,10 +192,10 @@ public class AccountManager
 		{
 			out.close();
 			in.close();
-			final File _fin = new File(fin);
-			final File _fout = new File(fout);
-			_fin.delete();
-			_fout.renameTo(_fin);
+			final File fileIn = new File(fin);
+			final File fileOut = new File(fout);
+			fileIn.delete();
+			fileOut.renameTo(fileIn);
 		}
 		catch (Exception e)
 		{

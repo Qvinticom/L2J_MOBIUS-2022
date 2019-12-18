@@ -58,15 +58,14 @@ public class RequestSetCastleSiegeTime implements IClientIncomingPacket
 			LOGGER.log(Level.WARNING, "[C]RequestSetCastleSiegeTime: activeChar: " + player + " castle: " + castle + " castleId: " + _castleId);
 			return;
 		}
+		
 		if ((castle.getOwnerId() > 0) && (castle.getOwnerId() != player.getClanId()))
 		{
 			LOGGER.log(Level.WARNING, "[C]RequestSetCastleSiegeTime: activeChar: " + player + " castle: " + castle + " castleId: " + _castleId + " is trying to change siege date of not his own castle!");
-			return;
 		}
 		else if (!player.isClanLeader())
 		{
 			LOGGER.log(Level.WARNING, "[C]RequestSetCastleSiegeTime: activeChar: " + player + " castle: " + castle + " castleId: " + _castleId + " is trying to change siege date but is not clan leader!");
-			return;
 		}
 		else if (!castle.getIsTimeRegistrationOver())
 		{

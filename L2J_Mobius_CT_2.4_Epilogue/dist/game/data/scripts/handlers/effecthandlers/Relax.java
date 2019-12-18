@@ -59,31 +59,22 @@ public class Relax extends AbstractEffect
 			return false;
 		}
 		
-		if (info.getEffected().isPlayer())
+		if (info.getEffected().isPlayer() && !info.getEffected().getActingPlayer().isSitting())
 		{
-			if (!info.getEffected().getActingPlayer().isSitting())
-			{
-				return false;
-			}
+			return false;
 		}
 		
-		if ((info.getEffected().getCurrentHp() + 1) > info.getEffected().getMaxRecoverableHp())
+		if (((info.getEffected().getCurrentHp() + 1) > info.getEffected().getMaxRecoverableHp()) && info.getSkill().isToggle())
 		{
-			if (info.getSkill().isToggle())
-			{
-				info.getEffected().sendPacket(SystemMessageId.THAT_SKILL_HAS_BEEN_DE_ACTIVATED_AS_HP_WAS_FULLY_RECOVERED);
-				return false;
-			}
+			info.getEffected().sendPacket(SystemMessageId.THAT_SKILL_HAS_BEEN_DE_ACTIVATED_AS_HP_WAS_FULLY_RECOVERED);
+			return false;
 		}
 		
 		final double manaDam = _power * getTicksMultiplier();
-		if (manaDam > info.getEffected().getCurrentMp())
+		if ((manaDam > info.getEffected().getCurrentMp()) && info.getSkill().isToggle())
 		{
-			if (info.getSkill().isToggle())
-			{
-				info.getEffected().sendPacket(SystemMessageId.YOUR_SKILL_WAS_DEACTIVATED_DUE_TO_LACK_OF_MP);
-				return false;
-			}
+			info.getEffected().sendPacket(SystemMessageId.YOUR_SKILL_WAS_DEACTIVATED_DUE_TO_LACK_OF_MP);
+			return false;
 		}
 		
 		info.getEffected().reduceCurrentMp(manaDam);

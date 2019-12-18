@@ -32,8 +32,8 @@ public class DecoyInstance extends Decoy
 {
 	private int _totalLifeTime;
 	private int _timeRemaining;
-	private Future<?> _DecoyLifeTask;
-	private Future<?> _HateSpam;
+	private Future<?> _decoyLifeTask;
+	private Future<?> _hateSpam;
 	
 	/**
 	 * Creates a decoy.
@@ -48,8 +48,8 @@ public class DecoyInstance extends Decoy
 		_totalLifeTime = totalLifeTime;
 		_timeRemaining = _totalLifeTime;
 		final int skilllevel = getTemplate().getDisplayId() - 13070;
-		_DecoyLifeTask = ThreadPool.scheduleAtFixedRate(new DecoyLifetime(getOwner(), this), 1000, 1000);
-		_HateSpam = ThreadPool.scheduleAtFixedRate(new HateSpam(this, SkillData.getInstance().getSkill(5272, skilllevel)), 2000, 5000);
+		_decoyLifeTask = ThreadPool.scheduleAtFixedRate(new DecoyLifetime(getOwner(), this), 1000, 1000);
+		_hateSpam = ThreadPool.scheduleAtFixedRate(new HateSpam(this, SkillData.getInstance().getSkill(5272, skilllevel)), 2000, 5000);
 	}
 	
 	@Override
@@ -59,10 +59,10 @@ public class DecoyInstance extends Decoy
 		{
 			return false;
 		}
-		if (_HateSpam != null)
+		if (_hateSpam != null)
 		{
-			_HateSpam.cancel(true);
-			_HateSpam = null;
+			_hateSpam.cancel(true);
+			_hateSpam = null;
 		}
 		_totalLifeTime = 0;
 		DecayTaskManager.getInstance().add(this);
@@ -73,12 +73,12 @@ public class DecoyInstance extends Decoy
 	{
 		private final PlayerInstance _player;
 		
-		private final DecoyInstance _Decoy;
+		private final DecoyInstance _decoy;
 		
-		DecoyLifetime(PlayerInstance player, DecoyInstance Decoy)
+		DecoyLifetime(PlayerInstance player, DecoyInstance decoy)
 		{
 			_player = player;
-			_Decoy = Decoy;
+			_decoy = decoy;
 		}
 		
 		@Override
@@ -86,11 +86,11 @@ public class DecoyInstance extends Decoy
 		{
 			try
 			{
-				_Decoy.decTimeRemaining(1000);
-				final double newTimeRemaining = _Decoy.getTimeRemaining();
+				_decoy.decTimeRemaining(1000);
+				final double newTimeRemaining = _decoy.getTimeRemaining();
 				if (newTimeRemaining < 0)
 				{
-					_Decoy.unSummon(_player);
+					_decoy.unSummon(_player);
 				}
 			}
 			catch (Exception e)
@@ -105,10 +105,10 @@ public class DecoyInstance extends Decoy
 		private final DecoyInstance _player;
 		private final Skill _skill;
 		
-		HateSpam(DecoyInstance player, Skill Hate)
+		HateSpam(DecoyInstance player, Skill hate)
 		{
 			_player = player;
-			_skill = Hate;
+			_skill = hate;
 		}
 		
 		@Override
@@ -127,17 +127,17 @@ public class DecoyInstance extends Decoy
 	}
 	
 	@Override
-	public void unSummon(PlayerInstance owner)
+	public synchronized void unSummon(PlayerInstance owner)
 	{
-		if (_DecoyLifeTask != null)
+		if (_decoyLifeTask != null)
 		{
-			_DecoyLifeTask.cancel(true);
-			_DecoyLifeTask = null;
+			_decoyLifeTask.cancel(true);
+			_decoyLifeTask = null;
 		}
-		if (_HateSpam != null)
+		if (_hateSpam != null)
 		{
-			_HateSpam.cancel(true);
-			_HateSpam = null;
+			_hateSpam.cancel(true);
+			_hateSpam = null;
 		}
 		super.unSummon(owner);
 	}

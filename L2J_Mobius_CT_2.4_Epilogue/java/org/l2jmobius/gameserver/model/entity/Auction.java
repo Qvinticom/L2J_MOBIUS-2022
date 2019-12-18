@@ -69,7 +69,7 @@ public class Auction
 	
 	public static class Bidder
 	{
-		private final String _name; // TODO replace with objid
+		private final String _name; // TODO replace with objId
 		private final String _clanName;
 		private long _bid;
 		private final Calendar _timeBid;
@@ -117,10 +117,6 @@ public class Auction
 	/** Task Sheduler for endAuction */
 	public class AutoEndTask implements Runnable
 	{
-		public AutoEndTask()
-		{
-		}
-		
 		@Override
 		public void run()
 		{
@@ -146,16 +142,16 @@ public class Auction
 		startAutoTask();
 	}
 	
-	public Auction(int itemId, Clan Clan, long delay, long bid, String name)
+	public Auction(int itemId, Clan clan, long delay, long bid, String name)
 	{
 		_id = itemId;
 		_endDate = System.currentTimeMillis() + delay;
 		_itemId = itemId;
 		_itemName = name;
 		_itemType = "ClanHall";
-		_sellerId = Clan.getLeaderId();
-		_sellerName = Clan.getLeaderName();
-		_sellerClanName = Clan.getName();
+		_sellerId = clan.getLeaderId();
+		_sellerName = clan.getLeaderName();
+		_sellerClanName = clan.getName();
 		_startingBid = bid;
 	}
 	
@@ -461,11 +457,11 @@ public class Auction
 				returnItem(_sellerClanName, ClanHallManager.getInstance().getAuctionableHallById(_itemId).getLease(), false);
 			}
 			deleteAuctionFromDB();
-			final Clan Clan = ClanTable.getInstance().getClanByName(_bidders.get(_highestBidderId).getClanName());
+			final Clan clan = ClanTable.getInstance().getClanByName(_bidders.get(_highestBidderId).getClanName());
 			_bidders.remove(_highestBidderId);
-			Clan.setAuctionBiddedAt(0, true);
+			clan.setAuctionBiddedAt(0, true);
 			removeBids();
-			ClanHallManager.getInstance().setOwner(_itemId, Clan);
+			ClanHallManager.getInstance().setOwner(_itemId, clan);
 		}
 		else
 		{

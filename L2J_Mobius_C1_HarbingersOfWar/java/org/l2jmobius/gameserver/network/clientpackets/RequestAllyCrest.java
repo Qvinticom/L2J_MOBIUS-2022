@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.network.serverpackets.AllyCrest;
 
 public class RequestAllyCrest extends ClientBasePacket
 {
-	final static Logger _log = Logger.getLogger(RequestAllyCrest.class.getName());
+	private static final Logger _log = Logger.getLogger(RequestAllyCrest.class.getName());
 	
 	public RequestAllyCrest(byte[] rawPacket, ClientThread client) throws IOException
 	{

@@ -73,7 +73,7 @@ public class AdminCommandHandler implements IHandler<IAdminCommandHandler, Strin
 		String command = adminCommand;
 		if (adminCommand.contains(" "))
 		{
-			command = adminCommand.substring(0, adminCommand.indexOf(" "));
+			command = adminCommand.substring(0, adminCommand.indexOf(' '));
 		}
 		return _datatable.get(command);
 	}

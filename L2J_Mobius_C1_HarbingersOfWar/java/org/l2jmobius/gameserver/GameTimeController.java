@@ -66,7 +66,6 @@ public class GameTimeController extends Thread
 		}
 		catch (InterruptedException e1)
 		{
-			return;
 		}
 	}
 	

@@ -25,10 +25,6 @@ import java.util.logging.LogManager;
  */
 public class ServerLogManager extends LogManager
 {
-	public ServerLogManager()
-	{
-	}
-	
 	@Override
 	public void reset()
 	{

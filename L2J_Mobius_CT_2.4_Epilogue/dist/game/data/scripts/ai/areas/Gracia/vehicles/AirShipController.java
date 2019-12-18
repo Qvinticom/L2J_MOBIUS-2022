@@ -286,28 +286,25 @@ public abstract class AirShipController extends AbstractNpcAI
 	@Override
 	public String onEnterZone(Creature creature, ZoneType zone)
 	{
-		if (creature instanceof ControllableAirShipInstance)
+		if ((creature instanceof ControllableAirShipInstance) && (_dockedShip == null))
 		{
-			if (_dockedShip == null)
+			_dockedShip = (ControllableAirShipInstance) creature;
+			_dockedShip.setInDock(_dockZone);
+			_dockedShip.setOustLoc(_oustLoc);
+			
+			// Ship is not empty - display movie to passengers and dock
+			if (!_dockedShip.isEmpty())
 			{
-				_dockedShip = (ControllableAirShipInstance) creature;
-				_dockedShip.setInDock(_dockZone);
-				_dockedShip.setOustLoc(_oustLoc);
+				if (_movie != null)
+				{
+					playMovie(_dockedShip.getPassengers(), _movie);
+				}
 				
-				// Ship is not empty - display movie to passengers and dock
-				if (!_dockedShip.isEmpty())
-				{
-					if (_movie != null)
-					{
-						playMovie(_dockedShip.getPassengers(), _movie);
-					}
-					
-					ThreadPool.schedule(_decayTask, 1000);
-				}
-				else
-				{
-					_departSchedule = ThreadPool.schedule(_departTask, DEPART_INTERVAL);
-				}
+				ThreadPool.schedule(_decayTask, 1000);
+			}
+			else
+			{
+				_departSchedule = ThreadPool.schedule(_departTask, DEPART_INTERVAL);
 			}
 		}
 		return null;
@@ -316,20 +313,17 @@ public abstract class AirShipController extends AbstractNpcAI
 	@Override
 	public String onExitZone(Creature creature, ZoneType zone)
 	{
-		if (creature instanceof ControllableAirShipInstance)
+		if ((creature instanceof ControllableAirShipInstance) && creature.equals(_dockedShip))
 		{
-			if (creature.equals(_dockedShip))
+			if (_departSchedule != null)
 			{
-				if (_departSchedule != null)
-				{
-					_departSchedule.cancel(false);
-					_departSchedule = null;
-				}
-				
-				_dockedShip.setInDock(0);
-				_dockedShip = null;
-				_isBusy = false;
+				_departSchedule.cancel(false);
+				_departSchedule = null;
 			}
+			
+			_dockedShip.setInDock(0);
+			_dockedShip = null;
+			_isBusy = false;
 		}
 		return null;
 	}
@@ -368,14 +362,11 @@ public abstract class AirShipController extends AbstractNpcAI
 				}
 			}
 		}
-		if (_arrivalPath == null)
+		if ((_arrivalPath == null) && !ZoneManager.getInstance().getZoneById(_dockZone, ScriptZone.class).isInsideZone(_shipSpawnX, _shipSpawnY, _shipSpawnZ))
 		{
-			if (!ZoneManager.getInstance().getZoneById(_dockZone, ScriptZone.class).isInsideZone(_shipSpawnX, _shipSpawnY, _shipSpawnZ))
-			{
-				LOGGER.log(Level.WARNING, getName() + ": Arrival path is null and spawn point not in zone " + _dockZone + ", controller disabled");
-				_isBusy = true;
-				return;
-			}
+			LOGGER.log(Level.WARNING, getName() + ": Arrival path is null and spawn point not in zone " + _dockZone + ", controller disabled");
+			_isBusy = true;
+			return;
 		}
 		
 		if (_departPath != null)

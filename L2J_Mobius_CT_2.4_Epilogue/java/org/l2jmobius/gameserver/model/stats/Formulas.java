@@ -278,12 +278,9 @@ public class Formulas
 				if ((clanHallIndex > 0) && (clanHallIndex == posChIndex))
 				{
 					final ClanHall clansHall = ClanHallManager.getInstance().getClanHallById(clanHallIndex);
-					if (clansHall != null)
+					if ((clansHall != null) && (clansHall.getFunction(ClanHall.FUNC_RESTORE_HP) != null))
 					{
-						if (clansHall.getFunction(ClanHall.FUNC_RESTORE_HP) != null)
-						{
-							hpRegenMultiplier *= 1 + ((double) clansHall.getFunction(ClanHall.FUNC_RESTORE_HP).getLvl() / 100);
-						}
+						hpRegenMultiplier *= 1 + ((double) clansHall.getFunction(ClanHall.FUNC_RESTORE_HP).getLvl() / 100);
 					}
 				}
 			}
@@ -296,12 +293,9 @@ public class Formulas
 				if ((castleIndex > 0) && (castleIndex == posCastleIndex))
 				{
 					final Castle castle = CastleManager.getInstance().getCastleById(castleIndex);
-					if (castle != null)
+					if ((castle != null) && (castle.getFunction(Castle.FUNC_RESTORE_HP) != null))
 					{
-						if (castle.getFunction(Castle.FUNC_RESTORE_HP) != null)
-						{
-							hpRegenMultiplier *= 1 + ((double) castle.getFunction(Castle.FUNC_RESTORE_HP).getLvl() / 100);
-						}
+						hpRegenMultiplier *= 1 + ((double) castle.getFunction(Castle.FUNC_RESTORE_HP).getLvl() / 100);
 					}
 				}
 			}
@@ -314,12 +308,9 @@ public class Formulas
 				if ((fortIndex > 0) && (fortIndex == posFortIndex))
 				{
 					final Fort fort = FortManager.getInstance().getFortById(fortIndex);
-					if (fort != null)
+					if ((fort != null) && (fort.getFunction(Fort.FUNC_RESTORE_HP) != null))
 					{
-						if (fort.getFunction(Fort.FUNC_RESTORE_HP) != null)
-						{
-							hpRegenMultiplier *= 1 + ((double) fort.getFunction(Fort.FUNC_RESTORE_HP).getLvl() / 100);
-						}
+						hpRegenMultiplier *= 1 + ((double) fort.getFunction(Fort.FUNC_RESTORE_HP).getLvl() / 100);
 					}
 				}
 			}
@@ -394,12 +385,9 @@ public class Formulas
 				if ((clanHallIndex > 0) && (clanHallIndex == posChIndex))
 				{
 					final ClanHall clansHall = ClanHallManager.getInstance().getClanHallById(clanHallIndex);
-					if (clansHall != null)
+					if ((clansHall != null) && (clansHall.getFunction(ClanHall.FUNC_RESTORE_MP) != null))
 					{
-						if (clansHall.getFunction(ClanHall.FUNC_RESTORE_MP) != null)
-						{
-							mpRegenMultiplier *= 1 + ((double) clansHall.getFunction(ClanHall.FUNC_RESTORE_MP).getLvl() / 100);
-						}
+						mpRegenMultiplier *= 1 + ((double) clansHall.getFunction(ClanHall.FUNC_RESTORE_MP).getLvl() / 100);
 					}
 				}
 			}
@@ -412,12 +400,9 @@ public class Formulas
 				if ((castleIndex > 0) && (castleIndex == posCastleIndex))
 				{
 					final Castle castle = CastleManager.getInstance().getCastleById(castleIndex);
-					if (castle != null)
+					if ((castle != null) && (castle.getFunction(Castle.FUNC_RESTORE_MP) != null))
 					{
-						if (castle.getFunction(Castle.FUNC_RESTORE_MP) != null)
-						{
-							mpRegenMultiplier *= 1 + ((double) castle.getFunction(Castle.FUNC_RESTORE_MP).getLvl() / 100);
-						}
+						mpRegenMultiplier *= 1 + ((double) castle.getFunction(Castle.FUNC_RESTORE_MP).getLvl() / 100);
 					}
 				}
 			}
@@ -430,12 +415,9 @@ public class Formulas
 				if ((fortIndex > 0) && (fortIndex == posFortIndex))
 				{
 					final Fort fort = FortManager.getInstance().getFortById(fortIndex);
-					if (fort != null)
+					if ((fort != null) && (fort.getFunction(Fort.FUNC_RESTORE_MP) != null))
 					{
-						if (fort.getFunction(Fort.FUNC_RESTORE_MP) != null)
-						{
-							mpRegenMultiplier *= 1 + ((double) fort.getFunction(Fort.FUNC_RESTORE_MP).getLvl() / 100);
-						}
+						mpRegenMultiplier *= 1 + ((double) fort.getFunction(Fort.FUNC_RESTORE_MP).getLvl() / 100);
 					}
 				}
 			}
@@ -1050,7 +1032,7 @@ public class Formulas
 	 */
 	public static boolean calcCrit(Creature attacker, Creature target, Skill skill)
 	{
-		double rate = 0.d;
+		double rate;
 		if (skill != null)
 		{
 			rate = skill.getBaseCritRate() * 10 * BaseStats.STR.calcBonus(attacker);
@@ -1204,10 +1186,9 @@ public class Formulas
 		}
 		
 		byte shldSuccess = SHIELD_DEFENSE_FAILED;
-		// if attacker
 		// if attacker use bow and target wear shield, shield block rate is multiplied by 1.3 (30%)
-		final Weapon at_weapon = attacker.getActiveWeaponItem();
-		if ((at_weapon != null) && (at_weapon.getItemType() == WeaponType.BOW))
+		final Weapon atWeapon = attacker.getActiveWeaponItem();
+		if ((atWeapon != null) && (atWeapon.getItemType() == WeaponType.BOW))
 		{
 			shldRate *= 1.3;
 		}
@@ -1635,140 +1616,140 @@ public class Formulas
 	 */
 	public static double calcAttributeBonus(Creature attacker, Creature target, Skill skill)
 	{
-		int attack_attribute;
+		int attackAttribute;
 		if (skill != null)
 		{
 			if ((skill.getElement() == -1) || (attacker.getAttackElement() != skill.getElement()))
 			{
 				return 1;
 			}
-			attack_attribute = attacker.getAttackElementValue(attacker.getAttackElement()) + skill.getElementPower();
+			attackAttribute = attacker.getAttackElementValue(attacker.getAttackElement()) + skill.getElementPower();
 		}
 		else
 		{
-			attack_attribute = attacker.getAttackElementValue(attacker.getAttackElement());
-			if (attack_attribute == 0)
+			attackAttribute = attacker.getAttackElementValue(attacker.getAttackElement());
+			if (attackAttribute == 0)
 			{
 				return 1;
 			}
 		}
 		
-		int defence_attribute = target.getDefenseElementValue(attacker.getAttackElement());
+		int defenceAttribute = target.getDefenseElementValue(attacker.getAttackElement());
 		
-		if (attack_attribute <= defence_attribute)
+		if (attackAttribute <= defenceAttribute)
 		{
 			return 1;
 		}
 		
-		double attack_attribute_mod = 0;
-		double defence_attribute_mod = 0;
+		double attackAttributeMod = 0;
+		double defenceAttributeMod = 0;
 		
-		if (attack_attribute >= 450)
+		if (attackAttribute >= 450)
 		{
-			if (defence_attribute >= 450)
+			if (defenceAttribute >= 450)
 			{
-				attack_attribute_mod = 0.06909;
-				defence_attribute_mod = 0.078;
+				attackAttributeMod = 0.06909;
+				defenceAttributeMod = 0.078;
 			}
 			// On retail else if (attack_attribute >= 350), can be considered a typo
-			else if (defence_attribute >= 350)
+			else if (defenceAttribute >= 350)
 			{
-				attack_attribute_mod = 0.0887;
-				defence_attribute_mod = 0.1007;
+				attackAttributeMod = 0.0887;
+				defenceAttributeMod = 0.1007;
 			}
 			else
 			{
-				attack_attribute_mod = 0.129;
-				defence_attribute_mod = 0.1473;
+				attackAttributeMod = 0.129;
+				defenceAttributeMod = 0.1473;
 			}
 		}
-		else if (attack_attribute >= 300)
+		else if (attackAttribute >= 300)
 		{
-			if (defence_attribute >= 300)
+			if (defenceAttribute >= 300)
 			{
-				attack_attribute_mod = 0.0887;
-				defence_attribute_mod = 0.1007;
+				attackAttributeMod = 0.0887;
+				defenceAttributeMod = 0.1007;
 			}
-			else if (defence_attribute >= 150)
+			else if (defenceAttribute >= 150)
 			{
-				attack_attribute_mod = 0.129;
-				defence_attribute_mod = 0.1473;
+				attackAttributeMod = 0.129;
+				defenceAttributeMod = 0.1473;
 			}
 			else
 			{
-				attack_attribute_mod = 0.25;
-				defence_attribute_mod = 0.2894;
+				attackAttributeMod = 0.25;
+				defenceAttributeMod = 0.2894;
 			}
 		}
-		else if (attack_attribute >= 150)
+		else if (attackAttribute >= 150)
 		{
-			if (defence_attribute >= 150)
+			if (defenceAttribute >= 150)
 			{
-				attack_attribute_mod = 0.129;
-				defence_attribute_mod = 0.1473;
+				attackAttributeMod = 0.129;
+				defenceAttributeMod = 0.1473;
 			}
-			else if (defence_attribute >= 0)
+			else if (defenceAttribute >= 0)
 			{
-				attack_attribute_mod = 0.25;
-				defence_attribute_mod = 0.2894;
+				attackAttributeMod = 0.25;
+				defenceAttributeMod = 0.2894;
 			}
 			else
 			{
-				attack_attribute_mod = 0.4;
-				defence_attribute_mod = 0.55;
+				attackAttributeMod = 0.4;
+				defenceAttributeMod = 0.55;
 			}
 		}
-		else if (attack_attribute >= -99)
+		else if (attackAttribute >= -99)
 		{
-			if (defence_attribute >= 0)
+			if (defenceAttribute >= 0)
 			{
-				attack_attribute_mod = 0.25;
-				defence_attribute_mod = 0.2894;
+				attackAttributeMod = 0.25;
+				defenceAttributeMod = 0.2894;
 			}
 			else
 			{
-				attack_attribute_mod = 0.4;
-				defence_attribute_mod = 0.55;
+				attackAttributeMod = 0.4;
+				defenceAttributeMod = 0.55;
 			}
 		}
 		else
 		{
-			if (defence_attribute >= 450)
+			if (defenceAttribute >= 450)
 			{
-				attack_attribute_mod = 0.06909;
-				defence_attribute_mod = 0.078;
+				attackAttributeMod = 0.06909;
+				defenceAttributeMod = 0.078;
 			}
-			else if (defence_attribute >= 350)
+			else if (defenceAttribute >= 350)
 			{
-				attack_attribute_mod = 0.0887;
-				defence_attribute_mod = 0.1007;
+				attackAttributeMod = 0.0887;
+				defenceAttributeMod = 0.1007;
 			}
 			else
 			{
-				attack_attribute_mod = 0.129;
-				defence_attribute_mod = 0.1473;
+				attackAttributeMod = 0.129;
+				defenceAttributeMod = 0.1473;
 			}
 		}
 		
-		final int attribute_diff = attack_attribute - defence_attribute;
+		final int attributeDiff = attackAttribute - defenceAttribute;
 		double min;
 		double max;
-		if (attribute_diff >= 300)
+		if (attributeDiff >= 300)
 		{
 			max = 100.0;
 			min = -50;
 		}
-		else if (attribute_diff >= 150)
+		else if (attributeDiff >= 150)
 		{
 			max = 70.0;
 			min = -50;
 		}
-		else if (attribute_diff >= -150)
+		else if (attributeDiff >= -150)
 		{
 			max = 40.0;
 			min = -50;
 		}
-		else if (attribute_diff >= -300)
+		else if (attributeDiff >= -300)
 		{
 			max = 40.0;
 			min = -60;
@@ -1779,21 +1760,21 @@ public class Formulas
 			min = -80;
 		}
 		
-		attack_attribute += 100;
-		attack_attribute *= attack_attribute;
+		attackAttribute += 100;
+		attackAttribute *= attackAttribute;
 		
-		attack_attribute_mod *= (attack_attribute / 144.0);
+		attackAttributeMod *= (attackAttribute / 144.0);
 		
-		defence_attribute += 100;
-		defence_attribute *= defence_attribute;
+		defenceAttribute += 100;
+		defenceAttribute *= defenceAttribute;
 		
-		defence_attribute_mod *= (defence_attribute / 169.0);
+		defenceAttributeMod *= (defenceAttribute / 169.0);
 		
-		double attribute_mod_diff = attack_attribute_mod - defence_attribute_mod;
+		double attributeModDiff = attackAttributeMod - defenceAttributeMod;
 		
-		attribute_mod_diff = Util.constrain(attribute_mod_diff, min, max);
+		attributeModDiff = Util.constrain(attributeModDiff, min, max);
 		
-		double result = (attribute_mod_diff / 100.0) + 1;
+		double result = (attributeModDiff / 100.0) + 1;
 		
 		if (attacker.isPlayable() && target.isPlayable() && (result < 1.0))
 		{
@@ -1868,8 +1849,7 @@ public class Formulas
 		{
 			return 0;
 		}
-		final double damage = creature.calcStat(Stats.FALL, (fallHeight * creature.getMaxHp()) / 1000.0, null, null);
-		return damage;
+		return creature.calcStat(Stats.FALL, (fallHeight * creature.getMaxHp()) / 1000.0, null, null);
 	}
 	
 	public static boolean calcBlowSuccess(Creature creature, Creature target, Skill skill)

@@ -18,6 +18,7 @@
 package org.l2jmobius.gameserver.network.serverpackets;
 
 import java.io.ByteArrayOutputStream;
+import java.nio.charset.StandardCharsets;
 
 public abstract class ServerBasePacket
 {
@@ -61,7 +62,7 @@ public abstract class ServerBasePacket
 		{
 			if (text != null)
 			{
-				_bao.write(text.getBytes("UTF-16LE"));
+				_bao.write(text.getBytes(StandardCharsets.UTF_16LE));
 			}
 		}
 		catch (Exception e)

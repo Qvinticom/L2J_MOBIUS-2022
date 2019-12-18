@@ -63,22 +63,28 @@ public final class Q00713_PathToBecomingALordAden extends Quest
 			return "Castle has no lord.";
 		}
 		
-		if (event.equals("35274-02.html"))
+		switch (event)
 		{
-			qs.startQuest();
-		}
-		else if (event.equals("30857-03.html"))
-		{
-			qs.setCond(2);
-		}
-		else if (event.equals("35274-05.html"))
-		{
-			if (castle.getOwner().getLeader().getPlayerInstance() != null)
+			case "35274-02.html":
 			{
-				final NpcSay packet = new NpcSay(npc.getObjectId(), ChatType.NPC_SHOUT, npc.getId(), NpcStringId.S1_HAS_BECOME_THE_LORD_OF_THE_TOWN_OF_ADEN_MAY_THERE_BE_GLORY_IN_THE_TERRITORY_OF_ADEN);
-				packet.addStringParameter(player.getName());
-				npc.broadcastPacket(packet);
-				qs.exitQuest(true, true);
+				qs.startQuest();
+				break;
+			}
+			case "30857-03.html":
+			{
+				qs.setCond(2);
+				break;
+			}
+			case "35274-05.html":
+			{
+				if (castle.getOwner().getLeader().getPlayerInstance() != null)
+				{
+					final NpcSay packet = new NpcSay(npc.getObjectId(), ChatType.NPC_SHOUT, npc.getId(), NpcStringId.S1_HAS_BECOME_THE_LORD_OF_THE_TOWN_OF_ADEN_MAY_THERE_BE_GLORY_IN_THE_TERRITORY_OF_ADEN);
+					packet.addStringParameter(player.getName());
+					npc.broadcastPacket(packet);
+					qs.exitQuest(true, true);
+				}
+				break;
 			}
 		}
 		return event;

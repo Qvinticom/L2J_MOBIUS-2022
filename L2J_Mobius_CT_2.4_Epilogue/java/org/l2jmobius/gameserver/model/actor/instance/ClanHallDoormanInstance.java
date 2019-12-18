@@ -66,58 +66,55 @@ public class ClanHallDoormanInstance extends DoormanInstance
 	@Override
 	public void onBypassFeedback(PlayerInstance player, String command)
 	{
-		if (_hasEvolve && command.startsWith("evolve"))
+		if (_hasEvolve && command.startsWith("evolve") && isOwnerClan(player))
 		{
-			if (isOwnerClan(player))
+			final StringTokenizer st = new StringTokenizer(command, " ");
+			if (st.countTokens() < 2)
 			{
-				final StringTokenizer st = new StringTokenizer(command, " ");
-				if (st.countTokens() < 2)
-				{
-					return;
-				}
-				
-				st.nextToken();
-				boolean ok = false;
-				switch (Integer.parseInt(st.nextToken()))
-				{
-					case 1:
-					{
-						ok = Evolve.doEvolve(player, this, 9882, 10307, 55);
-						break;
-					}
-					case 2:
-					{
-						ok = Evolve.doEvolve(player, this, 4422, 10308, 55);
-						break;
-					}
-					case 3:
-					{
-						ok = Evolve.doEvolve(player, this, 4423, 10309, 55);
-						break;
-					}
-					case 4:
-					{
-						ok = Evolve.doEvolve(player, this, 4424, 10310, 55);
-						break;
-					}
-					case 5:
-					{
-						ok = Evolve.doEvolve(player, this, 10426, 10611, 70);
-						break;
-					}
-				}
-				final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-				if (ok)
-				{
-					html.setFile(player, "data/html/clanHallDoorman/evolve-ok.htm");
-				}
-				else
-				{
-					html.setFile(player, "data/html/clanHallDoorman/evolve-no.htm");
-				}
-				player.sendPacket(html);
 				return;
 			}
+			
+			st.nextToken();
+			boolean ok = false;
+			switch (Integer.parseInt(st.nextToken()))
+			{
+				case 1:
+				{
+					ok = Evolve.doEvolve(player, this, 9882, 10307, 55);
+					break;
+				}
+				case 2:
+				{
+					ok = Evolve.doEvolve(player, this, 4422, 10308, 55);
+					break;
+				}
+				case 3:
+				{
+					ok = Evolve.doEvolve(player, this, 4423, 10309, 55);
+					break;
+				}
+				case 4:
+				{
+					ok = Evolve.doEvolve(player, this, 4424, 10310, 55);
+					break;
+				}
+				case 5:
+				{
+					ok = Evolve.doEvolve(player, this, 10426, 10611, 70);
+					break;
+				}
+			}
+			final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
+			if (ok)
+			{
+				html.setFile(player, "data/html/clanHallDoorman/evolve-ok.htm");
+			}
+			else
+			{
+				html.setFile(player, "data/html/clanHallDoorman/evolve-no.htm");
+			}
+			player.sendPacket(html);
+			return;
 		}
 		super.onBypassFeedback(player, command);
 	}
@@ -212,13 +209,6 @@ public class ClanHallDoormanInstance extends DoormanInstance
 	@Override
 	protected final boolean isOwnerClan(PlayerInstance player)
 	{
-		if ((player.getClan() != null) && (getClanHall() != null))
-		{
-			if (player.getClanId() == getClanHall().getOwnerId())
-			{
-				return true;
-			}
-		}
-		return false;
+		return (player.getClan() != null) && (getClanHall() != null) && (player.getClanId() == getClanHall().getOwnerId());
 	}
 }

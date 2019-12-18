@@ -100,11 +100,6 @@ public class Augmentation
 		}
 	}
 	
-	public int getAttributes()
-	{
-		return _effectsId;
-	}
-	
 	/**
 	 * Get the augmentation "id" used in serverpackets.
 	 * @return augmentationId

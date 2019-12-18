@@ -56,8 +56,7 @@ public class Topzone extends VoteSystem
 			String line;
 			while ((line = br.readLine()) != null)
 			{
-				int votes = Integer.valueOf(line);
-				return votes;
+				return Integer.valueOf(line);
 			}
 			
 			br.close();
@@ -65,7 +64,6 @@ public class Topzone extends VoteSystem
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
 			LOGGER.warning("VoteSystem: Error while getting server vote count from " + getSiteName() + ".");
 		}
 		

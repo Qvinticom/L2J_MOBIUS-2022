@@ -391,7 +391,7 @@ public class VillageMasterInstance extends NpcInstance
 					}
 				}
 			}
-			catch (Exception NumberFormatException)
+			catch (Exception nfe)
 			{
 				LOGGER.warning(VillageMasterInstance.class.getName() + ": Wrong numeric values for command " + command);
 			}
@@ -558,19 +558,15 @@ public class VillageMasterInstance extends NpcInstance
 						allowAddition = false;
 					}
 					
-					if (allowAddition)
+					if (allowAddition && !player.getSubClasses().isEmpty())
 					{
-						if (!player.getSubClasses().isEmpty())
+						for (Iterator<SubClass> subList = iterSubClasses(player); subList.hasNext();)
 						{
-							for (Iterator<SubClass> subList = iterSubClasses(player); subList.hasNext();)
+							final SubClass subClass = subList.next();
+							if (subClass.getLevel() < 75)
 							{
-								final SubClass subClass = subList.next();
-								
-								if (subClass.getLevel() < 75)
-								{
-									allowAddition = false;
-									break;
-								}
+								allowAddition = false;
+								break;
 							}
 						}
 					}
@@ -993,12 +989,12 @@ public class VillageMasterInstance extends NpcInstance
 		return found;
 	}
 	
-	protected boolean checkVillageMasterRace(ClassId pclass)
+	protected boolean checkVillageMasterRace(ClassId pClass)
 	{
 		return true;
 	}
 	
-	protected boolean checkVillageMasterTeachType(ClassId pclass)
+	protected boolean checkVillageMasterTeachType(ClassId pClass)
 	{
 		return true;
 	}

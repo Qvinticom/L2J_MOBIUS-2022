@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.data.xml.impl.ExperienceData;
  */
 public class SubClass
 {
-	private static final byte _maxLevel = Config.MAX_SUBCLASS_LEVEL < ExperienceData.getInstance().getMaxLevel() ? Config.MAX_SUBCLASS_LEVEL : (byte) (ExperienceData.getInstance().getMaxLevel() - 1);
+	private static final byte MAX_LEVEL = Config.MAX_SUBCLASS_LEVEL < ExperienceData.getInstance().getMaxLevel() ? Config.MAX_SUBCLASS_LEVEL : (byte) (ExperienceData.getInstance().getMaxLevel() - 1);
 	
 	private ClassId _class;
 	private long _exp = ExperienceData.getInstance().getExpForLevel(Config.BASE_SUBCLASS_LEVEL);
@@ -97,9 +97,9 @@ public class SubClass
 	
 	public void setExp(long expValue)
 	{
-		if (expValue > (ExperienceData.getInstance().getExpForLevel(_maxLevel + 1) - 1))
+		if (expValue > (ExperienceData.getInstance().getExpForLevel(MAX_LEVEL + 1) - 1))
 		{
-			expValue = ExperienceData.getInstance().getExpForLevel(_maxLevel + 1) - 1;
+			expValue = ExperienceData.getInstance().getExpForLevel(MAX_LEVEL + 1) - 1;
 		}
 		
 		_exp = expValue;
@@ -117,9 +117,9 @@ public class SubClass
 	
 	public void setLevel(byte levelValue)
 	{
-		if (levelValue > _maxLevel)
+		if (levelValue > MAX_LEVEL)
 		{
-			levelValue = _maxLevel;
+			levelValue = MAX_LEVEL;
 		}
 		else if (levelValue < Config.BASE_SUBCLASS_LEVEL)
 		{
@@ -131,7 +131,7 @@ public class SubClass
 	
 	public void incLevel()
 	{
-		if (_level == _maxLevel)
+		if (_level == MAX_LEVEL)
 		{
 			return;
 		}

@@ -313,13 +313,10 @@ public class Q00216_TrialOfTheGuildsman extends Quest
 			case MANDRAGORA_SPROUT2:
 			{
 				final QuestState qs = getQuestState(killer, false);
-				if ((qs != null) && qs.isStarted() && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, true))
+				if ((qs != null) && qs.isStarted() && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, true) && hasQuestItems(killer, VALKONS_RECOMMENDATION) && !hasQuestItems(killer, MANDRAGORA_BERRY))
 				{
-					if (hasQuestItems(killer, VALKONS_RECOMMENDATION) && !hasQuestItems(killer, MANDRAGORA_BERRY))
-					{
-						giveItems(killer, MANDRAGORA_BERRY, 1);
-						qs.setCond(4, true);
-					}
+					giveItems(killer, MANDRAGORA_BERRY, 1);
+					qs.setCond(4, true);
 				}
 				break;
 			}

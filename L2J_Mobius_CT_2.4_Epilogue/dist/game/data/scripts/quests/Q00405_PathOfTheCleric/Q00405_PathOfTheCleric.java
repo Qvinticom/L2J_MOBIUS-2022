@@ -119,13 +119,10 @@ public class Q00405_PathOfTheCleric extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		if ((qs != null) && qs.isStarted() && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, true))
+		if ((qs != null) && qs.isStarted() && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, true) && hasQuestItems(killer, NECKLACE_OF_MOTHER) && !hasQuestItems(killer, PENDANT_OF_MOTHER))
 		{
-			if (hasQuestItems(killer, NECKLACE_OF_MOTHER) && !hasQuestItems(killer, PENDANT_OF_MOTHER))
-			{
-				giveItems(killer, PENDANT_OF_MOTHER, 1);
-				playSound(qs.getPlayer(), QuestSound.ITEMSOUND_QUEST_MIDDLE);
-			}
+			giveItems(killer, PENDANT_OF_MOTHER, 1);
+			playSound(qs.getPlayer(), QuestSound.ITEMSOUND_QUEST_MIDDLE);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}

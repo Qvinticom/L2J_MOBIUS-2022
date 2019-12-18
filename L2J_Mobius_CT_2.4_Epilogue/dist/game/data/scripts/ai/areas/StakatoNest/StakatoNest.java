@@ -89,25 +89,21 @@ public class StakatoNest extends AbstractNpcAI
 	@Override
 	public String onAttack(Npc npc, PlayerInstance attacker, int damage, boolean isSummon)
 	{
-		final MonsterInstance mob = (MonsterInstance) npc;
-		
-		if ((mob.getId() == STAKATO_LEADER) && (getRandom(1000) < 100) && (mob.getCurrentHp() < (mob.getMaxHp() * 0.3)))
+		if ((npc.getId() == STAKATO_LEADER) && (getRandom(1000) < 100) && (npc.getCurrentHp() < (npc.getMaxHp() * 0.3)))
 		{
-			final MonsterInstance _follower = checkMinion(npc);
-			
-			if (_follower != null)
+			final MonsterInstance follower = checkMinion(npc);
+			if (follower != null)
 			{
-				final double _hp = _follower.getCurrentHp();
-				
-				if (_hp > (_follower.getMaxHp() * 0.3))
+				final double hp = follower.getCurrentHp();
+				if (hp > (follower.getMaxHp() * 0.3))
 				{
-					mob.abortAttack();
-					mob.abortCast();
-					mob.setHeading(Util.calculateHeadingFrom(mob, _follower));
-					mob.doCast(SkillData.getInstance().getSkill(4484, 1));
-					mob.setCurrentHp(mob.getCurrentHp() + _hp);
-					_follower.doDie(_follower);
-					_follower.deleteMe();
+					npc.abortAttack();
+					npc.abortCast();
+					npc.setHeading(Util.calculateHeadingFrom(npc, follower));
+					npc.doCast(SkillData.getInstance().getSkill(4484, 1));
+					npc.setCurrentHp(npc.getCurrentHp() + hp);
+					follower.doDie(follower);
+					follower.deleteMe();
 				}
 			}
 		}

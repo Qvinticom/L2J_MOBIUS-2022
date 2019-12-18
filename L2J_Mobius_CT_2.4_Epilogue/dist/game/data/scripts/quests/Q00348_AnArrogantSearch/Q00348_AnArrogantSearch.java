@@ -386,32 +386,29 @@ public class Q00348_AnArrogantSearch extends Quest
 			case PLATINUM_TRIBE_SHAMAN:
 			{
 				final QuestState qs = getRandomPartyMemberState(attacker, -1, 3, npc);
-				if ((qs != null) && npc.isInsideRadius3D(attacker, Config.ALT_PARTY_RANGE))
+				if ((qs != null) && npc.isInsideRadius3D(attacker, Config.ALT_PARTY_RANGE) && ((qs.getMemoStateEx(0) == 12) || (qs.getMemoStateEx(0) == 13)) && hasQuestItems(qs.getPlayer(), WHITE_FABRIC_1))
 				{
-					if (((qs.getMemoStateEx(0) == 12) || (qs.getMemoStateEx(0) == 13)) && hasQuestItems(qs.getPlayer(), WHITE_FABRIC_1))
+					if (qs.getMemoStateEx(0) == 12)
 					{
-						if (qs.getMemoStateEx(0) == 12)
+						qs.setMemoStateEx(1, qs.getMemoStateEx(1) + 60);
+						if ((qs.getMemoStateEx(1) + 60) > 80000)
 						{
-							qs.setMemoStateEx(1, qs.getMemoStateEx(1) + 60);
-							if ((qs.getMemoStateEx(1) + 60) > 80000)
-							{
-								giveItems(qs.getPlayer(), BLOODED_FABRIC, 1);
-								takeItems(qs.getPlayer(), WHITE_FABRIC_1, 1);
-								qs.exitQuest(true, true);
-							}
+							giveItems(qs.getPlayer(), BLOODED_FABRIC, 1);
+							takeItems(qs.getPlayer(), WHITE_FABRIC_1, 1);
+							qs.exitQuest(true, true);
 						}
-						
-						if (qs.getMemoStateEx(0) == 13)
+					}
+					
+					if (qs.getMemoStateEx(0) == 13)
+					{
+						qs.setMemoStateEx(1, qs.getMemoStateEx(1) + 60);
+						if ((qs.getMemoStateEx(1) + 60) > 100000)
 						{
-							qs.setMemoStateEx(1, qs.getMemoStateEx(1) + 60);
-							if ((qs.getMemoStateEx(1) + 60) > 100000)
-							{
-								giveItems(qs.getPlayer(), BLOODED_FABRIC, 1);
-								takeItems(qs.getPlayer(), WHITE_FABRIC_1, 1);
-								qs.setMemoState(14); // Custom line
-								qs.setMemoStateEx(0, 14);
-								playSound(qs.getPlayer(), QuestSound.ITEMSOUND_QUEST_MIDDLE);
-							}
+							giveItems(qs.getPlayer(), BLOODED_FABRIC, 1);
+							takeItems(qs.getPlayer(), WHITE_FABRIC_1, 1);
+							qs.setMemoState(14); // Custom line
+							qs.setMemoStateEx(0, 14);
+							playSound(qs.getPlayer(), QuestSound.ITEMSOUND_QUEST_MIDDLE);
 						}
 					}
 				}
@@ -420,32 +417,29 @@ public class Q00348_AnArrogantSearch extends Quest
 			case PLATINUM_TRIBE_OVERLORD:
 			{
 				final QuestState qs = getRandomPartyMemberState(attacker, -1, 3, npc);
-				if ((qs != null) && npc.isInsideRadius3D(attacker, Config.ALT_PARTY_RANGE))
+				if ((qs != null) && npc.isInsideRadius3D(attacker, Config.ALT_PARTY_RANGE) && ((qs.getMemoStateEx(0) == 12) || (qs.getMemoStateEx(0) == 13)) && hasQuestItems(qs.getPlayer(), WHITE_FABRIC_1))
 				{
-					if (((qs.getMemoStateEx(0) == 12) || (qs.getMemoStateEx(0) == 13)) && hasQuestItems(qs.getPlayer(), WHITE_FABRIC_1))
+					if (qs.getMemoStateEx(0) == 12)
 					{
-						if (qs.getMemoStateEx(0) == 12)
+						qs.setMemoStateEx(1, qs.getMemoStateEx(1) + 70);
+						if ((qs.getMemoStateEx(1) + 70) > 80000)
 						{
-							qs.setMemoStateEx(1, qs.getMemoStateEx(1) + 70);
-							if ((qs.getMemoStateEx(1) + 70) > 80000)
-							{
-								giveItems(qs.getPlayer(), BLOODED_FABRIC, 1);
-								takeItems(qs.getPlayer(), WHITE_FABRIC_1, 1);
-								qs.exitQuest(true, true);
-							}
+							giveItems(qs.getPlayer(), BLOODED_FABRIC, 1);
+							takeItems(qs.getPlayer(), WHITE_FABRIC_1, 1);
+							qs.exitQuest(true, true);
 						}
-						
-						if (qs.getMemoStateEx(0) == 13)
+					}
+					
+					if (qs.getMemoStateEx(0) == 13)
+					{
+						qs.setMemoStateEx(1, qs.getMemoStateEx(1) + 70);
+						if ((qs.getMemoStateEx(1) + 70) > 100000)
 						{
-							qs.setMemoStateEx(1, qs.getMemoStateEx(1) + 70);
-							if ((qs.getMemoStateEx(1) + 70) > 100000)
-							{
-								giveItems(qs.getPlayer(), BLOODED_FABRIC, 1);
-								takeItems(qs.getPlayer(), WHITE_FABRIC_1, 1);
-								qs.setMemoState(14); // Custom line
-								qs.setMemoStateEx(0, 14);
-								playSound(qs.getPlayer(), QuestSound.ITEMSOUND_QUEST_MIDDLE);
-							}
+							giveItems(qs.getPlayer(), BLOODED_FABRIC, 1);
+							takeItems(qs.getPlayer(), WHITE_FABRIC_1, 1);
+							qs.setMemoState(14); // Custom line
+							qs.setMemoStateEx(0, 14);
+							playSound(qs.getPlayer(), QuestSound.ITEMSOUND_QUEST_MIDDLE);
 						}
 					}
 				}
@@ -465,39 +459,33 @@ public class Q00348_AnArrogantSearch extends Quest
 			{
 				case ARK_GUARDIAN_ELBEROTH:
 				{
-					if (npc.isInsideRadius3D(player, Config.ALT_PARTY_RANGE))
+					if (npc.isInsideRadius3D(player, Config.ALT_PARTY_RANGE) && (qs.getMemoStateEx(0) < 8) && (((qs.getMemoStateEx(1) % 1000) / 100) == 1) && !hasQuestItems(qs.getPlayer(), SECOND_KEY_OF_ARK) && !hasQuestItems(qs.getPlayer(), BOOK_OF_SAINT))
 					{
-						if ((qs.getMemoStateEx(0) < 8) && (((qs.getMemoStateEx(1) % 1000) / 100) == 1) && !hasQuestItems(qs.getPlayer(), SECOND_KEY_OF_ARK) && !hasQuestItems(qs.getPlayer(), BOOK_OF_SAINT))
+						qs.setMemoStateEx(1, qs.getMemoStateEx(1) + 100);
+						if ((qs.getMemoStateEx(1) % 10) != 0)
 						{
-							qs.setMemoStateEx(1, qs.getMemoStateEx(1) + 100);
-							if ((qs.getMemoStateEx(1) % 10) != 0)
-							{
-								qs.setCond(11);
-							}
-							
-							giveItems(qs.getPlayer(), SECOND_KEY_OF_ARK, 1);
-							playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-							npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), NpcStringId.YOU_FOOLS_WILL_GET_WHAT_S_COMING_TO_YOU));
+							qs.setCond(11);
 						}
+						
+						giveItems(qs.getPlayer(), SECOND_KEY_OF_ARK, 1);
+						playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+						npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), NpcStringId.YOU_FOOLS_WILL_GET_WHAT_S_COMING_TO_YOU));
 					}
 					break;
 				}
 				case ARK_GUARDIAN_SHADOWFANG:
 				{
-					if (npc.isInsideRadius3D(player, Config.ALT_PARTY_RANGE))
+					if (npc.isInsideRadius3D(player, Config.ALT_PARTY_RANGE) && (qs.getMemoStateEx(0) < 8) && (((qs.getMemoStateEx(1) % 10000) / 1000) == 1) && !hasQuestItems(qs.getPlayer(), THIRD_KEY_OF_ARK) && !hasQuestItems(qs.getPlayer(), BOUGH_OF_SAINT))
 					{
-						if ((qs.getMemoStateEx(0) < 8) && (((qs.getMemoStateEx(1) % 10000) / 1000) == 1) && !hasQuestItems(qs.getPlayer(), THIRD_KEY_OF_ARK) && !hasQuestItems(qs.getPlayer(), BOUGH_OF_SAINT))
+						qs.setMemoStateEx(1, qs.getMemoStateEx(1) + 1000);
+						if ((qs.getMemoStateEx(1) % 10) != 0)
 						{
-							qs.setMemoStateEx(1, qs.getMemoStateEx(1) + 1000);
-							if ((qs.getMemoStateEx(1) % 10) != 0)
-							{
-								qs.setCond(15);
-							}
-							
-							giveItems(qs.getPlayer(), THIRD_KEY_OF_ARK, 1);
-							playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-							npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), NpcStringId.YOU_GUYS_WOULDN_T_KNOW_THE_SEVEN_SEALS_ARE_ARRRGH));
+							qs.setCond(15);
 						}
+						
+						giveItems(qs.getPlayer(), THIRD_KEY_OF_ARK, 1);
+						playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+						npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), NpcStringId.YOU_GUYS_WOULDN_T_KNOW_THE_SEVEN_SEALS_ARE_ARRRGH));
 					}
 					break;
 				}

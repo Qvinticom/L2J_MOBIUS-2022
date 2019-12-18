@@ -51,7 +51,7 @@ public class SchemeBufferTable
 	private static final String DELETE_SCHEMES = "TRUNCATE TABLE buffer_schemes";
 	private static final String INSERT_SCHEME = "INSERT INTO buffer_schemes (object_id, scheme_name, skills) VALUES (?,?,?)";
 	
-	private final Map<Integer, Map<String, ArrayList<Integer>>> _schemesTable = new ConcurrentHashMap<>();
+	private final Map<Integer, Map<String, List<Integer>>> _schemesTable = new ConcurrentHashMap<>();
 	private final Map<Integer, BuffSkillHolder> _availableBuffs = new LinkedHashMap<>();
 	
 	public SchemeBufferTable()
@@ -146,9 +146,9 @@ public class SchemeBufferTable
 			// Save _schemesTable content.
 			try (PreparedStatement st = con.prepareStatement(INSERT_SCHEME))
 			{
-				for (Map.Entry<Integer, Map<String, ArrayList<Integer>>> player : _schemesTable.entrySet())
+				for (Map.Entry<Integer, Map<String, List<Integer>>> player : _schemesTable.entrySet())
 				{
-					for (Map.Entry<String, ArrayList<Integer>> scheme : player.getValue().entrySet())
+					for (Map.Entry<String, List<Integer>> scheme : player.getValue().entrySet())
 					{
 						// Build a String composed of skill ids seperated by a ",".
 						final StringBuilder sb = new StringBuilder();
@@ -178,7 +178,7 @@ public class SchemeBufferTable
 		}
 	}
 	
-	public void setScheme(int playerId, String schemeName, ArrayList<Integer> list)
+	public void setScheme(int playerId, String schemeName, List<Integer> list)
 	{
 		if (!_schemesTable.containsKey(playerId))
 		{
@@ -196,7 +196,7 @@ public class SchemeBufferTable
 	 * @param playerId : The player objectId to check.
 	 * @return the list of schemes for a given player.
 	 */
-	public Map<String, ArrayList<Integer>> getPlayerSchemes(int playerId)
+	public Map<String, List<Integer>> getPlayerSchemes(int playerId)
 	{
 		return _schemesTable.get(playerId);
 	}

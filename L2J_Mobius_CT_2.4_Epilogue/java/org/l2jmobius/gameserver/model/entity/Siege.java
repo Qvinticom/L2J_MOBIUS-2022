@@ -392,40 +392,33 @@ public class Siege implements Siegable
 				(getAttackerClans().size() == 1 // Only 1 attacker
 				))
 			{
-				final SiegeClan sc_newowner = getAttackerClan(getCastle().getOwnerId());
-				removeAttacker(sc_newowner);
-				addDefender(sc_newowner, SiegeClanType.OWNER);
+				final SiegeClan scNewOwner = getAttackerClan(getCastle().getOwnerId());
+				removeAttacker(scNewOwner);
+				addDefender(scNewOwner, SiegeClanType.OWNER);
 				endSiege();
 				return;
 			}
 			if (getCastle().getOwnerId() > 0)
 			{
 				final int allyId = ClanTable.getInstance().getClan(getCastle().getOwnerId()).getAllyId();
-				if (getDefenderClans().isEmpty()) // If defender doesn't exist (Pc vs Npc)
-				// and only an alliance attacks
+				// If defender doesn't exist (Pc vs Npc) and only an alliance attacks and the player's clan is in an alliance
+				if (getDefenderClans().isEmpty() && (allyId != 0))
 				{
-					// The player's clan is in an alliance
-					if (allyId != 0)
+					boolean allinsamealliance = true;
+					for (SiegeClan sc : getAttackerClans())
 					{
-						boolean allinsamealliance = true;
-						for (SiegeClan sc : getAttackerClans())
+						if ((sc != null) && (ClanTable.getInstance().getClan(sc.getClanId()).getAllyId() != allyId))
 						{
-							if (sc != null)
-							{
-								if (ClanTable.getInstance().getClan(sc.getClanId()).getAllyId() != allyId)
-								{
-									allinsamealliance = false;
-								}
-							}
+							allinsamealliance = false;
 						}
-						if (allinsamealliance)
-						{
-							final SiegeClan sc_newowner = getAttackerClan(getCastle().getOwnerId());
-							removeAttacker(sc_newowner);
-							addDefender(sc_newowner, SiegeClanType.OWNER);
-							endSiege();
-							return;
-						}
+					}
+					if (allinsamealliance)
+					{
+						final SiegeClan scNewOwner = getAttackerClan(getCastle().getOwnerId());
+						removeAttacker(scNewOwner);
+						addDefender(scNewOwner, SiegeClanType.OWNER);
+						endSiege();
+						return;
 					}
 				}
 				
@@ -438,9 +431,9 @@ public class Siege implements Siegable
 					}
 				}
 				
-				final SiegeClan sc_newowner = getAttackerClan(getCastle().getOwnerId());
-				removeAttacker(sc_newowner);
-				addDefender(sc_newowner, SiegeClanType.OWNER);
+				final SiegeClan scNewOwner = getAttackerClan(getCastle().getOwnerId());
+				removeAttacker(scNewOwner);
+				addDefender(scNewOwner, SiegeClanType.OWNER);
 				
 				// The player's clan is in an alliance
 				for (Clan clan : ClanTable.getInstance().getClanAllies(allyId))
@@ -848,9 +841,8 @@ public class Siege implements Siegable
 	
 	/**
 	 * Control Tower was killed
-	 * @param ct
 	 */
-	public void killedCT(Npc ct)
+	public void killedCT()
 	{
 		_controlTowerCount--;
 		if (_controlTowerCount < 0)

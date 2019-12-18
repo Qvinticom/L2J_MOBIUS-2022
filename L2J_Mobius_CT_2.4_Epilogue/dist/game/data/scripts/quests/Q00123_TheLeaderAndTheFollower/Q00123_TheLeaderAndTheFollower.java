@@ -228,29 +228,20 @@ public class Q00123_TheLeaderAndTheFollower extends Quest
 			{
 				case BRUIN_LIZARDMAN:
 				{
-					if (qs.isMemoState(1))
+					if (qs.isMemoState(1) && giveItemRandomly(killer, npc, BRUIN_LIZARDMAN_BLOOD, 1, 10, 7, true))
 					{
-						if (giveItemRandomly(killer, npc, BRUIN_LIZARDMAN_BLOOD, 1, 10, 7, true))
-						{
-							qs.setCond(2);
-						}
+						qs.setCond(2);
 					}
 					break;
 				}
 				case PICOT_ARANEID:
 				{
-					if (qs.isMemoState(4))
+					if (qs.isMemoState(4) && (killer.getSponsor() > 0))
 					{
-						if (killer.getSponsor() > 0)
+						final PlayerInstance c0 = World.getInstance().getPlayer(killer.getSponsor());
+						if ((c0 != null) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, c0, true) && giveItemRandomly(killer, npc, PICOT_ARANEIDS_LEG, 1, 8, 7, true))
 						{
-							final PlayerInstance c0 = World.getInstance().getPlayer(killer.getSponsor());
-							if ((c0 != null) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, c0, true))
-							{
-								if (giveItemRandomly(killer, npc, PICOT_ARANEIDS_LEG, 1, 8, 7, true))
-								{
-									qs.setCond(8);
-								}
-							}
+							qs.setCond(8);
 						}
 					}
 					break;

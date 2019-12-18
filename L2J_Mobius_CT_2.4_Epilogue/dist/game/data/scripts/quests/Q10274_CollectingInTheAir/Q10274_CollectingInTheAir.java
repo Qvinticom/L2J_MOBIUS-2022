@@ -42,7 +42,7 @@ public class Q10274_CollectingInTheAir extends Quest
 	private static final int BLUE = 13859;
 	private static final int GREEN = 13860;
 	// Monsters
-	private static final int MOBS[] =
+	private static final int[] MOBS =
 	{
 		18684, // Red Star Stone
 		18685, // Red Star Stone

@@ -162,8 +162,6 @@ public class CursedWeaponsManager
 		catch (Exception e)
 		{
 			LOGGER.log(Level.SEVERE, "Error parsing cursed weapons file.", e);
-			
-			return;
 		}
 	}
 	

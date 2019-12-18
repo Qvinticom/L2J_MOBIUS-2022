@@ -52,10 +52,7 @@ public class ThreadPool
 		INSTANT_POOL.prestartAllCoreThreads();
 		
 		// Launch purge task.
-		scheduleAtFixedRate(() ->
-		{
-			purge();
-		}, 60000, 60000);
+		scheduleAtFixedRate(ThreadPool::purge, 60000, 60000);
 		
 		LOGGER.info("ThreadPool: Initialized");
 		LOGGER.info("...scheduled pool executor with " + Config.SCHEDULED_THREAD_POOL_COUNT + " total threads.");
@@ -166,7 +163,7 @@ public class ThreadPool
 		}
 		catch (Throwable t)
 		{
-			t.printStackTrace();
+			LOGGER.info("ThreadPool: Problem at Shutting down. " + t.getMessage());
 		}
 	}
 }

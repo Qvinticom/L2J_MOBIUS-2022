@@ -38,7 +38,6 @@ public class TradeStart extends ServerBasePacket
 	{
 		writeC(0x2E);
 		writeD(_me.getTransactionRequester().getObjectId());
-		int count = _me.getInventory().getSize();
 		for (ItemInstance item : _me.getInventory().getItems())
 		{
 			if (item.isEquipped() || (item.getItem().getType2() == 3))
@@ -47,7 +46,7 @@ public class TradeStart extends ServerBasePacket
 			}
 			_tradelist.add(item);
 		}
-		count = _tradelist.size();
+		int count = _tradelist.size();
 		writeH(count);
 		for (int i = 0; i < count; ++i)
 		{

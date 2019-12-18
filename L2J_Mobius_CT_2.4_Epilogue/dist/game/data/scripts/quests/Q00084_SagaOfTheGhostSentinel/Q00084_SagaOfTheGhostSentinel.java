@@ -44,7 +44,7 @@ public class Q00084_SagaOfTheGhostSentinel extends AbstractSagaQuest
 			31659,
 			31641
 		};
-		Items = new int[]
+		_items = new int[]
 		{
 			7080,
 			7521,
@@ -59,27 +59,27 @@ public class Q00084_SagaOfTheGhostSentinel extends AbstractSagaQuest
 			7107,
 			0
 		};
-		Mob = new int[]
+		_mob = new int[]
 		{
 			27298,
 			27233,
 			27307
 		};
-		classid = new int[]
+		_classId = new int[]
 		{
 			109
 		};
-		prevclass = new int[]
+		_prevClass = new int[]
 		{
 			0x25
 		};
-		npcSpawnLocations = new Location[]
+		_npcSpawnLocations = new Location[]
 		{
 			new Location(161719, -92823, -1893),
 			new Location(124376, 82127, -2796),
 			new Location(124376, 82127, -2796)
 		};
-		Text = new String[]
+		_text = new String[]
 		{
 			"PLAYERNAME! Pursued to here! However, I jumped out of the Banshouren boundaries! You look at the giant as the sign of power!",
 			"... Oh ... good! So it was ... let's begin!",

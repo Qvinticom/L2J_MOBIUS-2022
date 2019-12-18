@@ -243,26 +243,23 @@ public class TarBeetleSpawn implements IXmlReader
 			}
 			catch (Exception e)
 			{
-				e.printStackTrace();
+				LOGGER.warning("Problem with TarBeetleSpawn: " + e.getMessage());
 			}
 		}
 		
 		public void refreshShots()
 		{
-			if (_spawn.size() > 0)
+			for (Npc npc : _spawn)
 			{
-				for (Npc npc : _spawn)
+				final int val = npc.getScriptValue();
+				if (val == 5)
 				{
-					final int val = npc.getScriptValue();
-					if (val == 5)
-					{
-						npc.deleteMe();
-						_spawn.remove(npc);
-					}
-					else
-					{
-						npc.setScriptValue(val + 1);
-					}
+					npc.deleteMe();
+					_spawn.remove(npc);
+				}
+				else
+				{
+					npc.setScriptValue(val + 1);
 				}
 			}
 		}

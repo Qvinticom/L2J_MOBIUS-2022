@@ -89,15 +89,12 @@ public class Q00236_SeedsOfChaos extends Quest
 		{
 			final PlayerInstance c0 = npc.getVariables().getObject("player0", PlayerInstance.class);
 			final Npc npc0 = npc.getVariables().getObject("npc0", Npc.class);
-			if (npc0 != null)
+			if ((npc0 != null) && npc0.getVariables().getBoolean("SPAWNED"))
 			{
-				if (npc0.getVariables().getBoolean("SPAWNED"))
+				npc0.getVariables().set("SPAWNED", false);
+				if (c0 != null)
 				{
-					npc0.getVariables().set("SPAWNED", false);
-					if (c0 != null)
-					{
-						npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.HMM_WHERE_DID_MY_FRIEND_GO));
-					}
+					npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.HMM_WHERE_DID_MY_FRIEND_GO));
 				}
 			}
 			npc.deleteMe();
@@ -106,13 +103,10 @@ public class Q00236_SeedsOfChaos extends Quest
 		else if ("HARKILGAMED_120".equals(event))
 		{
 			final Npc npc0 = npc.getVariables().getObject("npc0", Npc.class);
-			if (npc0 != null)
+			if ((npc0 != null) && npc0.getVariables().getBoolean("SPAWNED"))
 			{
-				if (npc0.getVariables().getBoolean("SPAWNED"))
-				{
-					npc0.getVariables().set("SPAWNED", false);
-					npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.GRAAAH_WE_RE_BEING_ATTACKED));
-				}
+				npc0.getVariables().set("SPAWNED", false);
+				npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.GRAAAH_WE_RE_BEING_ATTACKED));
 			}
 			npc.deleteMe();
 			return super.onAdvEvent(event, npc, player);
@@ -121,15 +115,12 @@ public class Q00236_SeedsOfChaos extends Quest
 		{
 			final PlayerInstance c0 = npc.getVariables().getObject("player0", PlayerInstance.class);
 			final Npc npc0 = npc.getVariables().getObject("npc0", Npc.class);
-			if (npc0 != null)
+			if ((npc0 != null) && npc0.getVariables().getBoolean("SPAWNED"))
 			{
-				if (npc0.getVariables().getBoolean("SPAWNED"))
+				npc0.getVariables().set("SPAWNED", false);
+				if (c0 != null)
 				{
-					npc0.getVariables().set("SPAWNED", false);
-					if (c0 != null)
-					{
-						npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.HMM_WHERE_DID_MY_FRIEND_GO));
-					}
+					npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.HMM_WHERE_DID_MY_FRIEND_GO));
 				}
 			}
 			npc.deleteMe();
@@ -139,15 +130,12 @@ public class Q00236_SeedsOfChaos extends Quest
 		{
 			final PlayerInstance c0 = npc.getVariables().getObject("player0", PlayerInstance.class);
 			final Npc npc0 = npc.getVariables().getObject("npc0", Npc.class);
-			if (npc0 != null)
+			if ((npc0 != null) && npc0.getVariables().getBoolean("SPAWNED"))
 			{
-				if (npc0.getVariables().getBoolean("SPAWNED"))
+				npc0.getVariables().set("SPAWNED", false);
+				if (c0 != null)
 				{
-					npc0.getVariables().set("SPAWNED", false);
-					if (c0 != null)
-					{
-						npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.HMM_WHERE_DID_MY_FRIEND_GO));
-					}
+					npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.HMM_WHERE_DID_MY_FRIEND_GO));
 				}
 			}
 			npc.deleteMe();
@@ -156,13 +144,10 @@ public class Q00236_SeedsOfChaos extends Quest
 		else if ("HARKILGAMED_A_120".equals(event))
 		{
 			final Npc npc0 = npc.getVariables().getObject("npc0", Npc.class);
-			if (npc0 != null)
+			if ((npc0 != null) && npc0.getVariables().getBoolean("SPAWNED"))
 			{
-				if (npc0.getVariables().getBoolean("SPAWNED"))
-				{
-					npc0.getVariables().set("SPAWNED", false);
-					npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.GRAAAH_WE_RE_BEING_ATTACKED));
-				}
+				npc0.getVariables().set("SPAWNED", false);
+				npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.GRAAAH_WE_RE_BEING_ATTACKED));
 			}
 			npc.deleteMe();
 			return super.onAdvEvent(event, npc, player);
@@ -673,13 +658,10 @@ public class Q00236_SeedsOfChaos extends Quest
 			{
 				case NEEDLE_STAKATO_DRONE:
 				{
-					if (qs.isMemoState(2) && !hasQuestItems(killer, BLACK_ECHO_CRYSTAL))
+					if (qs.isMemoState(2) && !hasQuestItems(killer, BLACK_ECHO_CRYSTAL) && (getRandom(100) < 20))
 					{
-						if (getRandom(100) < 20)
-						{
-							giveItems(killer, BLACK_ECHO_CRYSTAL, 1);
-							qs.setCond(3, true);
-						}
+						giveItems(killer, BLACK_ECHO_CRYSTAL, 1);
+						qs.setCond(3, true);
 					}
 					break;
 				}
@@ -693,20 +675,17 @@ public class Q00236_SeedsOfChaos extends Quest
 				case WAILINGOF_SPLENDOR:
 				case WAILINGOF_SPLENDOR_1:
 				{
-					if (qs.isMemoState(21) && (getQuestItemsCount(killer, SHINING_MEDALLION) < 62))
+					if (qs.isMemoState(21) && (getQuestItemsCount(killer, SHINING_MEDALLION) < 62) && (getRandom(100) < 70))
 					{
-						if (getRandom(100) < 70)
+						giveItems(killer, SHINING_MEDALLION, 1);
+						if (getQuestItemsCount(killer, SHINING_MEDALLION) == 62)
 						{
-							giveItems(killer, SHINING_MEDALLION, 1);
-							if (getQuestItemsCount(killer, SHINING_MEDALLION) == 62)
-							{
-								qs.setMemoState(22);
-								qs.setCond(13, true);
-							}
-							else
-							{
-								playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-							}
+							qs.setMemoState(22);
+							qs.setCond(13, true);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;
@@ -714,13 +693,10 @@ public class Q00236_SeedsOfChaos extends Quest
 				case VAMPIRE_WIZARD:
 				case VAMPIRE_WIZARD_A:
 				{
-					if (qs.isMemoState(7) && !hasQuestItems(killer, BLOOD_JEWEL))
+					if (qs.isMemoState(7) && !hasQuestItems(killer, BLOOD_JEWEL) && (getRandom(100) < 8))
 					{
-						if (getRandom(100) < 8)
-						{
-							giveItems(killer, BLOOD_JEWEL, 1);
-							qs.setCond(9, true);
-						}
+						giveItems(killer, BLOOD_JEWEL, 1);
+						qs.setCond(9, true);
 					}
 					break;
 				}

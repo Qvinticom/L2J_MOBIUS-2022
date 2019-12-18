@@ -517,12 +517,7 @@ public class DoorInstance extends Creature
 	private void notifyChildEvent(boolean open)
 	{
 		final byte openThis = open ? getTemplate().getMasterDoorOpen() : getTemplate().getMasterDoorClose();
-		
-		if (openThis == 0)
-		{
-			return;
-		}
-		else if (openThis == 1)
+		if (openThis == 1)
 		{
 			openMe();
 		}

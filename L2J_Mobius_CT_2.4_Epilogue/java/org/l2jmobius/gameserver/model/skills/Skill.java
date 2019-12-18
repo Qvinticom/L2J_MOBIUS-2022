@@ -1280,12 +1280,9 @@ public class Skill implements IIdentifiable
 							effect.onStart(info);
 						}
 					}
-					else if (addContinuousEffects)
+					else if (addContinuousEffects && effect.canStart(info))
 					{
-						if (effect.canStart(info))
-						{
-							info.addEffect(effect);
-						}
+						info.addEffect(effect);
 					}
 				}
 			}
@@ -1366,12 +1363,9 @@ public class Skill implements IIdentifiable
 			}
 			
 			// Support for buff sharing feature including healing herbs.
-			if (effected.isPlayer() && effected.hasServitor() && (_abnormalType != AbnormalType.TRANSFORM))
+			if (effected.isPlayer() && effected.hasServitor() && (_abnormalType != AbnormalType.TRANSFORM) && ((addContinuousEffects && isContinuous() && !_isDebuff) || _isRecoveryHerb))
 			{
-				if ((addContinuousEffects && isContinuous() && !_isDebuff) || _isRecoveryHerb)
-				{
-					applyEffects(effector, effected.getSummon(), _isRecoveryHerb, 0);
-				}
+				applyEffects(effector, effected.getSummon(), _isRecoveryHerb, 0);
 			}
 		}
 		

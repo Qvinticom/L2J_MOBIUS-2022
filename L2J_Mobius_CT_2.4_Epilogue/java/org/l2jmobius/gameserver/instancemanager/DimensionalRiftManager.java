@@ -112,9 +112,9 @@ public class DimensionalRiftManager
 		final int typeSize = _rooms.keySet().size();
 		int roomSize = 0;
 		
-		for (byte b : _rooms.keySet())
+		for (Map<Byte, DimensionalRiftRoom> room : _rooms.values())
 		{
-			roomSize += _rooms.get(b).keySet().size();
+			roomSize += room.keySet().size();
 		}
 		
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + typeSize + " room types with " + roomSize + " rooms.");
@@ -225,13 +225,13 @@ public class DimensionalRiftManager
 	
 	public void reload()
 	{
-		for (byte b : _rooms.keySet())
+		for (Map<Byte, DimensionalRiftRoom> room : _rooms.values())
 		{
-			for (byte i : _rooms.get(b).keySet())
+			for (DimensionalRiftRoom drr : room.values())
 			{
-				_rooms.get(b).get(i).getSpawns().clear();
+				drr.getSpawns().clear();
 			}
-			_rooms.get(b).clear();
+			room.clear();
 		}
 		_rooms.clear();
 		loadRooms();

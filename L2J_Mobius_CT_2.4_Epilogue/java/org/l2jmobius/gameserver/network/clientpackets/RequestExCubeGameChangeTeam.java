@@ -55,7 +55,7 @@ public class RequestExCubeGameChangeTeam implements IClientIncomingPacket
 			case 1:
 			{
 				// Change Player Team
-				HandysBlockCheckerManager.getInstance().changePlayerToTeam(player, _arena, _team);
+				HandysBlockCheckerManager.getInstance().changePlayerToTeam(player, _arena);
 				break;
 			}
 			case -1:

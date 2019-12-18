@@ -305,13 +305,13 @@ public class CubicInstance implements IIdentifiable
 			// Duel targeting
 			if (_owner.isInDuel())
 			{
-				final PlayerInstance PlayerA = DuelManager.getInstance().getDuel(_owner.getDuelId()).getPlayerA();
-				final PlayerInstance PlayerB = DuelManager.getInstance().getDuel(_owner.getDuelId()).getPlayerB();
+				final PlayerInstance playerA = DuelManager.getInstance().getDuel(_owner.getDuelId()).getPlayerA();
+				final PlayerInstance playerB = DuelManager.getInstance().getDuel(_owner.getDuelId()).getPlayerB();
 				
 				if (DuelManager.getInstance().getDuel(_owner.getDuelId()).isPartyDuel())
 				{
-					final Party partyA = PlayerA.getParty();
-					final Party partyB = PlayerB.getParty();
+					final Party partyA = playerA.getParty();
+					final Party partyB = playerB.getParty();
 					Party partyEnemy = null;
 					
 					if (partyA != null)
@@ -324,7 +324,7 @@ public class CubicInstance implements IIdentifiable
 							}
 							else
 							{
-								_target = PlayerB;
+								_target = playerB;
 							}
 						}
 						else
@@ -334,7 +334,7 @@ public class CubicInstance implements IIdentifiable
 					}
 					else
 					{
-						if (PlayerA == _owner)
+						if (playerA == _owner)
 						{
 							if (partyB != null)
 							{
@@ -342,20 +342,17 @@ public class CubicInstance implements IIdentifiable
 							}
 							else
 							{
-								_target = PlayerB;
+								_target = playerB;
 							}
 						}
 						else
 						{
-							_target = PlayerA;
+							_target = playerA;
 						}
 					}
-					if ((_target == PlayerA) || (_target == PlayerB))
+					if (((_target == playerA) || (_target == playerB)) && (_target == ownerTarget))
 					{
-						if (_target == ownerTarget)
-						{
-							return;
-						}
+						return;
 					}
 					if (partyEnemy != null)
 					{
@@ -366,14 +363,14 @@ public class CubicInstance implements IIdentifiable
 						return;
 					}
 				}
-				if ((PlayerA != _owner) && (ownerTarget == PlayerA))
+				if ((playerA != _owner) && (ownerTarget == playerA))
 				{
-					_target = PlayerA;
+					_target = playerA;
 					return;
 				}
-				if ((PlayerB != _owner) && (ownerTarget == PlayerB))
+				if ((playerB != _owner) && (ownerTarget == playerB))
 				{
-					_target = PlayerB;
+					_target = playerB;
 					return;
 				}
 				_target = null;
@@ -382,15 +379,12 @@ public class CubicInstance implements IIdentifiable
 			// Olympiad targeting
 			if (_owner.isInOlympiadMode())
 			{
-				if (_owner.isOlympiadStart())
+				if (_owner.isOlympiadStart() && ownerTarget.isPlayable())
 				{
-					if (ownerTarget.isPlayable())
+					final PlayerInstance targetPlayer = ownerTarget.getActingPlayer();
+					if ((targetPlayer != null) && (targetPlayer.getOlympiadGameId() == _owner.getOlympiadGameId()) && (targetPlayer.getOlympiadSide() != _owner.getOlympiadSide()))
 					{
-						final PlayerInstance targetPlayer = ownerTarget.getActingPlayer();
-						if ((targetPlayer != null) && (targetPlayer.getOlympiadGameId() == _owner.getOlympiadGameId()) && (targetPlayer.getOlympiadSide() != _owner.getOlympiadSide()))
-						{
-							_target = (Creature) ownerTarget;
-						}
+						_target = (Creature) ownerTarget;
 					}
 				}
 				return;
@@ -407,13 +401,10 @@ public class CubicInstance implements IIdentifiable
 						_target = (Creature) ownerTarget;
 						return;
 					}
-					if (_owner.hasSummon())
+					if (_owner.hasSummon() && attackable.isInAggroList(_owner.getSummon()) && !attackable.isDead())
 					{
-						if (attackable.isInAggroList(_owner.getSummon()) && !attackable.isDead())
-						{
-							_target = (Creature) ownerTarget;
-							return;
-						}
+						_target = (Creature) ownerTarget;
+						return;
 					}
 				}
 				
@@ -437,12 +428,9 @@ public class CubicInstance implements IIdentifiable
 							{
 								targetIt = false;
 							}
-							else if (_owner.getParty().getCommandChannel() != null)
+							else if ((_owner.getParty().getCommandChannel() != null) && _owner.getParty().getCommandChannel().getMembers().contains(enemy))
 							{
-								if (_owner.getParty().getCommandChannel().getMembers().contains(enemy))
-								{
-									targetIt = false;
-								}
+								targetIt = false;
 							}
 						}
 						if ((_owner.getClan() != null) && !_owner.isInsideZone(ZoneId.PVP))
@@ -451,12 +439,9 @@ public class CubicInstance implements IIdentifiable
 							{
 								targetIt = false;
 							}
-							if ((_owner.getAllyId() > 0) && (enemy.getAllyId() > 0))
+							if ((_owner.getAllyId() > 0) && (enemy.getAllyId() > 0) && (_owner.getAllyId() == enemy.getAllyId()))
 							{
-								if (_owner.getAllyId() == enemy.getAllyId())
-								{
-									targetIt = false;
-								}
+								targetIt = false;
 							}
 						}
 						if ((enemy.getPvpFlag() == 0) && !enemy.isInsideZone(ZoneId.PVP))
@@ -479,7 +464,6 @@ public class CubicInstance implements IIdentifiable
 						if (targetIt)
 						{
 							_target = enemy;
-							return;
 						}
 					}
 				}
@@ -623,33 +607,27 @@ public class CubicInstance implements IIdentifiable
 			
 			final byte shld = Formulas.calcShldUse(_owner, target, skill);
 			
-			if (skill.hasEffectType(EffectType.STUN, EffectType.PARALYZE, EffectType.ROOT))
+			if (skill.hasEffectType(EffectType.STUN, EffectType.PARALYZE, EffectType.ROOT) && Formulas.calcCubicSkillSuccess(this, target, skill, shld))
 			{
-				if (Formulas.calcCubicSkillSuccess(this, target, skill, shld))
+				// Apply effects
+				skill.applyEffects(_owner, target, false, false, true, 0);
+				
+				// If this is a bad skill notify the duel manager, so it can be removed after the duel (player & target must be in the same duel).
+				if (target.isPlayer() && target.getActingPlayer().isInDuel() && skill.isBad() && (_owner.getDuelId() == target.getActingPlayer().getDuelId()))
 				{
-					// Apply effects
-					skill.applyEffects(_owner, target, false, false, true, 0);
-					
-					// If this is a bad skill notify the duel manager, so it can be removed after the duel (player & target must be in the same duel).
-					if (target.isPlayer() && target.getActingPlayer().isInDuel() && skill.isBad() && (_owner.getDuelId() == target.getActingPlayer().getDuelId()))
-					{
-						DuelManager.getInstance().onBuff(target.getActingPlayer(), skill);
-					}
+					DuelManager.getInstance().onBuff(target.getActingPlayer(), skill);
 				}
 			}
 			
-			if (skill.hasEffectType(EffectType.AGGRESSION))
+			if (skill.hasEffectType(EffectType.AGGRESSION) && Formulas.calcCubicSkillSuccess(this, target, skill, shld))
 			{
-				if (Formulas.calcCubicSkillSuccess(this, target, skill, shld))
+				if (target.isAttackable())
 				{
-					if (target.isAttackable())
-					{
-						target.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, _owner, (int) ((150 * skill.getPower()) / (target.getLevel() + 7)));
-					}
-					
-					// Apply effects
-					skill.applyEffects(_owner, target, false, false, true, 0);
+					target.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, _owner, (int) ((150 * skill.getPower()) / (target.getLevel() + 7)));
 				}
+				
+				// Apply effects
+				skill.applyEffects(_owner, target, false, false, true, 0);
 			}
 		}
 	}
@@ -687,12 +665,9 @@ public class CubicInstance implements IIdentifiable
 		Party party = _owner.getParty();
 		
 		// if owner is in a duel but not in a party duel, then it is the same as he does not have a party
-		if (_owner.isInDuel())
+		if (_owner.isInDuel() && !DuelManager.getInstance().getDuel(_owner.getDuelId()).isPartyDuel())
 		{
-			if (!DuelManager.getInstance().getDuel(_owner.getDuelId()).isPartyDuel())
-			{
-				party = null;
-			}
+			party = null;
 		}
 		
 		if ((party != null) && !_owner.isInOlympiadMode())
@@ -701,22 +676,11 @@ public class CubicInstance implements IIdentifiable
 			// Get a list of Party Members
 			for (Creature partyMember : party.getMembers())
 			{
-				if (!partyMember.isDead())
+				// if party member not dead, check if he is in cast range of heal cubic and member is in cubic casting range, check if he need heal and if he have the lowest HP
+				if (!partyMember.isDead() && isInCubicRange(_owner, partyMember) && (partyMember.getCurrentHp() < partyMember.getMaxHp()) && (percentleft > (partyMember.getCurrentHp() / partyMember.getMaxHp())))
 				{
-					// if party member not dead, check if he is in cast range of heal cubic
-					if (isInCubicRange(_owner, partyMember))
-					{
-						// member is in cubic casting range, check if he need heal and if he have
-						// the lowest HP
-						if (partyMember.getCurrentHp() < partyMember.getMaxHp())
-						{
-							if (percentleft > (partyMember.getCurrentHp() / partyMember.getMaxHp()))
-							{
-								percentleft = (partyMember.getCurrentHp() / partyMember.getMaxHp());
-								target = partyMember;
-							}
-						}
-					}
+					percentleft = (partyMember.getCurrentHp() / partyMember.getMaxHp());
+					target = partyMember;
 				}
 				if (partyMember.getSummon() != null)
 				{
@@ -731,15 +695,11 @@ public class CubicInstance implements IIdentifiable
 						continue;
 					}
 					
-					// member's pet is in cubic casting range, check if he need heal and if he have
-					// the lowest HP
-					if (partyMember.getSummon().getCurrentHp() < partyMember.getSummon().getMaxHp())
+					// member's pet is in cubic casting range, check if he need heal and if he have the lowest HP
+					if ((partyMember.getSummon().getCurrentHp() < partyMember.getSummon().getMaxHp()) && (percentleft > (partyMember.getSummon().getCurrentHp() / partyMember.getSummon().getMaxHp())))
 					{
-						if (percentleft > (partyMember.getSummon().getCurrentHp() / partyMember.getSummon().getMaxHp()))
-						{
-							percentleft = (partyMember.getSummon().getCurrentHp() / partyMember.getSummon().getMaxHp());
-							target = partyMember.getSummon();
-						}
+						percentleft = (partyMember.getSummon().getCurrentHp() / partyMember.getSummon().getMaxHp());
+						target = partyMember.getSummon();
 					}
 				}
 			}
@@ -751,12 +711,9 @@ public class CubicInstance implements IIdentifiable
 				percentleft = (_owner.getCurrentHp() / _owner.getMaxHp());
 				target = _owner;
 			}
-			if (_owner.hasSummon())
+			if (_owner.hasSummon() && !_owner.getSummon().isDead() && (_owner.getSummon().getCurrentHp() < _owner.getSummon().getMaxHp()) && (percentleft > (_owner.getSummon().getCurrentHp() / _owner.getSummon().getMaxHp())) && isInCubicRange(_owner, _owner.getSummon()))
 			{
-				if (!_owner.getSummon().isDead() && (_owner.getSummon().getCurrentHp() < _owner.getSummon().getMaxHp()) && (percentleft > (_owner.getSummon().getCurrentHp() / _owner.getSummon().getMaxHp())) && isInCubicRange(_owner, _owner.getSummon()))
-				{
-					target = _owner.getSummon();
-				}
+				target = _owner.getSummon();
 			}
 		}
 		

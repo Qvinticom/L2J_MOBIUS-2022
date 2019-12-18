@@ -19,10 +19,10 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 public class CharCreateFail extends ServerBasePacket
 {
-	public static int REASON_CREATION_FAILED = 0;
-	public static int REASON_TOO_MANY_CHARACTERS = 1;
-	public static int REASON_NAME_ALREADY_EXISTS = 2;
-	public static int REASON_16_ENG_CHARS = 3;
+	public static final int REASON_CREATION_FAILED = 0;
+	public static final int REASON_TOO_MANY_CHARACTERS = 1;
+	public static final int REASON_NAME_ALREADY_EXISTS = 2;
+	public static final int REASON_16_ENG_CHARS = 3;
 	
 	private final int _error;
 	

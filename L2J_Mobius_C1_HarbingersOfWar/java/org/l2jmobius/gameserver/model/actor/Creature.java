@@ -407,7 +407,6 @@ public abstract class Creature extends WorldObject
 			try
 			{
 				player.sendPacket(su);
-				continue;
 			}
 			catch (Exception e1)
 			{
@@ -879,7 +878,6 @@ public abstract class Creature extends WorldObject
 		{
 			sendPacket(new ActionFailed());
 			onTargetReached();
-			return;
 		}
 	}
 	
@@ -1519,10 +1517,7 @@ public abstract class Creature extends WorldObject
 		setX(x);
 		setY(y);
 		setZ(z);
-		ThreadPool.schedule(() ->
-		{
-			World.getInstance().addVisibleObject(this);
-		}, 2000);
+		ThreadPool.schedule(() -> World.getInstance().addVisibleObject(this), 2000);
 	}
 	
 	@Override

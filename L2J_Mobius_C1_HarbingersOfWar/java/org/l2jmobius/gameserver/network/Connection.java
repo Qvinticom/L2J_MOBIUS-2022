@@ -124,7 +124,7 @@ public class Connection
 		int a;
 		int charpoint;
 		byte t1;
-		final StringBuffer result = new StringBuffer();
+		final StringBuilder result = new StringBuilder();
 		int counter = 0;
 		for (int i = 0; i < len; ++i)
 		{

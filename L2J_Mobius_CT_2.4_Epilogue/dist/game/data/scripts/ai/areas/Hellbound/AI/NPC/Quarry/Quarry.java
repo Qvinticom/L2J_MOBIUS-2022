@@ -164,23 +164,10 @@ public class Quarry extends AbstractNpcAI
 		if (creature.isAttackable())
 		{
 			final Attackable npc = (Attackable) creature;
-			if (npc.getId() == SLAVE)
+			if ((npc.getId() == SLAVE) && !npc.isDead() && !npc.isDecayed() && (npc.getAI().getIntention() == CtrlIntention.AI_INTENTION_FOLLOW) && (HellboundEngine.getInstance().getLevel() == 5))
 			{
-				if (!npc.isDead() && !npc.isDecayed() && (npc.getAI().getIntention() == CtrlIntention.AI_INTENTION_FOLLOW))
-				{
-					if (HellboundEngine.getInstance().getLevel() == 5)
-					{
-						startQuestTimer("DECAY", 1000, npc, null);
-						try
-						{
-							npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.THANK_YOU_FOR_THE_RESCUE_IT_S_A_SMALL_GIFT);
-						}
-						catch (Exception e)
-						{
-							//
-						}
-					}
-				}
+				startQuestTimer("DECAY", 1000, npc, null);
+				npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.THANK_YOU_FOR_THE_RESCUE_IT_S_A_SMALL_GIFT);
 			}
 		}
 		return super.onEnterZone(creature, zone);

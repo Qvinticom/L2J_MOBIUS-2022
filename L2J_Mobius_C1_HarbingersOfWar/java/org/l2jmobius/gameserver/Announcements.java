@@ -71,7 +71,7 @@ public class Announcements
 	{
 		for (int i = 0; i < _announcements.size(); ++i)
 		{
-			final CreatureSay cs = new CreatureSay(0, 10, activeChar.getName(), _announcements.get(i).toString());
+			final CreatureSay cs = new CreatureSay(0, 10, activeChar.getName(), _announcements.get(i));
 			activeChar.sendPacket(cs);
 		}
 	}
@@ -79,11 +79,11 @@ public class Announcements
 	public void listAnnouncements(PlayerInstance activeChar)
 	{
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
-		final StringBuffer replyMSG = new StringBuffer("<html><title>Announcements:</title>");
+		final StringBuilder replyMSG = new StringBuilder("<html><title>Announcements:</title>");
 		replyMSG.append("<body>");
 		for (int i = 0; i < _announcements.size(); ++i)
 		{
-			replyMSG.append(_announcements.get(i).toString());
+			replyMSG.append(_announcements.get(i));
 			replyMSG.append("<center><button value=\"Delete\" action=\"bypass -h admin_del_announcement " + i + "\" width=110 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></center>");
 		}
 		replyMSG.append("<br>");
@@ -149,7 +149,7 @@ public class Announcements
 			final FileWriter save = new FileWriter(new File("data/announcements.txt"));
 			for (int i = 0; i < _announcements.size(); ++i)
 			{
-				save.write(_announcements.get(i).toString());
+				save.write(_announcements.get(i));
 				save.write("\r\n");
 			}
 			save.close();

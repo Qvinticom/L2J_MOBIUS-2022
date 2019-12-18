@@ -111,24 +111,6 @@ public class Attackable extends NpcInstance
 	}
 	
 	@Override
-	public void setX(int x)
-	{
-		super.setX(x);
-	}
-	
-	@Override
-	public void setY(int y)
-	{
-		super.setY(y);
-	}
-	
-	@Override
-	public void setZ(int z)
-	{
-		super.setZ(z);
-	}
-	
-	@Override
 	public void removeKnownObject(WorldObject object)
 	{
 		super.removeKnownObject(object);
@@ -153,8 +135,8 @@ public class Attackable extends NpcInstance
 		}
 		else if (isDead())
 		{
-			final Attackable Attackable = this;
-			synchronized (Attackable)
+			final Attackable attackable = this;
+			synchronized (attackable)
 			{
 				if (!_killedAlready)
 				{
@@ -263,14 +245,7 @@ public class Attackable extends NpcInstance
 			newAggro += aggroValue.intValue();
 		}
 		_aggroList.put(attacker, newAggro);
-		if (_aggroList.size() == 1)
-		{
-			setTarget(attacker);
-		}
-		else
-		{
-			setTarget(attacker);
-		}
+		setTarget(attacker);
 	}
 	
 	public void doItemDrop()
@@ -298,12 +273,11 @@ public class Attackable extends NpcInstance
 				dropit.setZ(getZ() + 100);
 				dropit.setOnTheGround(true);
 				final DropItem dis = new DropItem(dropit, getObjectId());
-				for (Creature player : broadcastPacket(dis))
+				for (PlayerInstance player : broadcastPacket(dis))
 				{
-					((PlayerInstance) player).addKnownObjectWithoutCreate(dropit);
+					player.addKnownObjectWithoutCreate(dropit);
 				}
 				World.getInstance().addVisibleObject(dropit);
-				continue;
 			}
 		}
 	}
@@ -329,12 +303,6 @@ public class Attackable extends NpcInstance
 			_currentAIAttackTask.cancel(true);
 			_currentAIAttackTask = null;
 		}
-	}
-	
-	@Override
-	public void setCurrentHp(double currentHp)
-	{
-		super.setCurrentHp(currentHp);
 	}
 	
 	@Override
@@ -409,7 +377,7 @@ public class Attackable extends NpcInstance
 			{
 				for (PlayerInstance player : getKnownPlayers())
 				{
-					if (!getCondition2(player) || !(getDistance(player.getX(), player.getY()) <= (getCollisionRadius() + 200.0)))
+					if (!getCondition2(player) || (getDistance(player.getX(), player.getY()) > (getCollisionRadius() + 200.0)))
 					{
 						continue;
 					}

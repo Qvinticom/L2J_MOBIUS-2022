@@ -82,26 +82,33 @@ public final class Q00710_PathToBecomingALordGiran extends Quest
 			return "Castle has no lord.";
 		}
 		
-		if (event.equals("35184-03.html"))
+		switch (event)
 		{
-			qs.startQuest();
-		}
-		else if (event.equals("30511-03.html"))
-		{
-			qs.setCond(3);
-		}
-		else if (event.equals("30879-02.html"))
-		{
-			qs.setCond(4);
-		}
-		else if (event.equals("35184-07.html"))
-		{
-			if (castle.getOwner().getLeader().getPlayerInstance() != null)
+			case "35184-03.html":
 			{
-				final NpcSay packet = new NpcSay(npc.getObjectId(), ChatType.NPC_SHOUT, npc.getId(), NpcStringId.S1_HAS_BECOME_THE_LORD_OF_THE_TOWN_OF_GIRAN_MAY_THERE_BE_GLORY_IN_THE_TERRITORY_OF_GIRAN);
-				packet.addStringParameter(player.getName());
-				npc.broadcastPacket(packet);
-				qs.exitQuest(true, true);
+				qs.startQuest();
+				break;
+			}
+			case "30511-03.html":
+			{
+				qs.setCond(3);
+				break;
+			}
+			case "30879-02.html":
+			{
+				qs.setCond(4);
+				break;
+			}
+			case "35184-07.html":
+			{
+				if (castle.getOwner().getLeader().getPlayerInstance() != null)
+				{
+					final NpcSay packet = new NpcSay(npc.getObjectId(), ChatType.NPC_SHOUT, npc.getId(), NpcStringId.S1_HAS_BECOME_THE_LORD_OF_THE_TOWN_OF_GIRAN_MAY_THERE_BE_GLORY_IN_THE_TERRITORY_OF_GIRAN);
+					packet.addStringParameter(player.getName());
+					npc.broadcastPacket(packet);
+					qs.exitQuest(true, true);
+				}
+				break;
 			}
 		}
 		return event;

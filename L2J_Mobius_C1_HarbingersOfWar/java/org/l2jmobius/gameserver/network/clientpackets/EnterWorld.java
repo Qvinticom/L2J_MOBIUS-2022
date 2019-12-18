@@ -35,7 +35,7 @@ import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 
 public class EnterWorld extends ClientBasePacket
 {
-	final static Logger _log = Logger.getLogger(EnterWorld.class.getName());
+	private static final Logger _log = Logger.getLogger(EnterWorld.class.getName());
 	
 	public EnterWorld(byte[] decrypt, ClientThread client)
 	{

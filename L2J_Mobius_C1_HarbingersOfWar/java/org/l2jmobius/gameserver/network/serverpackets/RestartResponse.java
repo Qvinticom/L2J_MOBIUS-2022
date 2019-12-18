@@ -19,13 +19,13 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 public class RestartResponse extends ServerBasePacket
 {
-	private static final String _message = "ok merong~ khaha";
+	private static final String MESSAGE = "ok merong~ khaha";
 	
 	@Override
 	public void writeImpl()
 	{
 		writeC(0x74);
 		writeD(1);
-		writeS(_message);
+		writeS(MESSAGE);
 	}
 }

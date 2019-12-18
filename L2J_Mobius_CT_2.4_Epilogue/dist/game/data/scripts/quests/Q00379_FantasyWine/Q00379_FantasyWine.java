@@ -152,7 +152,7 @@ public class Q00379_FantasyWine extends Quest
 			{
 				htmltext = "30074-08.html";
 			}
-			else if (!hasLeafOfEucalyptus && hasStoneOfChill)
+			else if (!hasLeafOfEucalyptus)
 			{
 				htmltext = "30074-09.html";
 			}

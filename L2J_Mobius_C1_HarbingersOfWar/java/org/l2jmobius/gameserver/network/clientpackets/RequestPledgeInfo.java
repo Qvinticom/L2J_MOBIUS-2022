@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListAll;
 
 public class RequestPledgeInfo extends ClientBasePacket
 {
-	final static Logger _log = Logger.getLogger(RequestPledgeInfo.class.getName());
+	private static final Logger _log = Logger.getLogger(RequestPledgeInfo.class.getName());
 	
 	public RequestPledgeInfo(byte[] rawPacket, ClientThread client)
 	{

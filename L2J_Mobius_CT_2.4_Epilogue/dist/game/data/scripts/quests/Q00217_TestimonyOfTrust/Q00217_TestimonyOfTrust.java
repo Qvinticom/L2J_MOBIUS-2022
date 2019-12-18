@@ -534,17 +534,14 @@ public class Q00217_TestimonyOfTrust extends Quest
 				}
 				case HIGH_PRIEST_BIOTIN:
 				{
-					if (memoState == 19)
+					if ((memoState == 19) && hasQuestItems(player, RECOMMENDATION_OF_HOLLIN))
 					{
-						if (hasQuestItems(player, RECOMMENDATION_OF_HOLLIN))
-						{
-							giveAdena(player, 252212, true);
-							giveItems(player, MARK_OF_TRUST, 1);
-							addExpAndSp(player, 1390298, 92782);
-							qs.exitQuest(false, true);
-							player.sendPacket(new SocialAction(player.getObjectId(), 3));
-							htmltext = "30031-01.html";
-						}
+						giveAdena(player, 252212, true);
+						giveItems(player, MARK_OF_TRUST, 1);
+						addExpAndSp(player, 1390298, 92782);
+						qs.exitQuest(false, true);
+						player.sendPacket(new SocialAction(player.getObjectId(), 3));
+						htmltext = "30031-01.html";
 					}
 					break;
 				}

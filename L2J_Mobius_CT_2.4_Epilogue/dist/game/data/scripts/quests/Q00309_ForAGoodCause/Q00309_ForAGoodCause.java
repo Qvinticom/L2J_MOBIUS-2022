@@ -258,11 +258,10 @@ public class Q00309_ForAGoodCause extends Quest
 	@Override
 	public String onTalk(Npc npc, PlayerInstance talker)
 	{
+		String htmltext;
 		final QuestState qs = getQuestState(talker, true);
-		String htmltext = getNoQuestMsg(talker);
-		
-		final QuestState q308 = talker.getQuestState(Q00308_ReedFieldMaintenance.class.getSimpleName());
-		if ((q308 != null) && q308.isStarted())
+		final QuestState qs308 = talker.getQuestState(Q00308_ReedFieldMaintenance.class.getSimpleName());
+		if ((qs308 != null) && qs308.isStarted())
 		{
 			htmltext = "32647-17.html";
 		}

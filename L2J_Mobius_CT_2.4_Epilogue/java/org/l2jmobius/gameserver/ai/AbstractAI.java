@@ -523,7 +523,7 @@ public abstract class AbstractAI implements Ctrl
 	
 	protected abstract void onEvtArrivedRevalidate();
 	
-	protected abstract void onEvtArrivedBlocked(Location blocked_at_pos);
+	protected abstract void onEvtArrivedBlocked(Location location);
 	
 	protected abstract void onEvtForgetObject(WorldObject object);
 	

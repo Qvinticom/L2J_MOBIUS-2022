@@ -100,7 +100,6 @@ public class RequestEvaluate implements IClientIncomingPacket
 		sm = new SystemMessage(SystemMessageId.YOU_HAVE_BEEN_RECOMMENDED_BY_C1);
 		sm.addPcName(player);
 		target.sendPacket(sm);
-		sm = null;
 		
 		player.sendPacket(new UserInfo(player));
 		player.sendPacket(new ExBrExtraUserInfo(player));

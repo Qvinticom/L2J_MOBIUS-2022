@@ -34,7 +34,7 @@ public class Q00139_ShadowFoxPart1 extends Quest
 	// NPC
 	private static final int MIA = 30896;
 	// Monsters
-	private static final int MOBS[] =
+	private static final int[] MOBS =
 	{
 		20784, // Tasaba Lizardman
 		20785, // Tasaba Lizardman Shaman

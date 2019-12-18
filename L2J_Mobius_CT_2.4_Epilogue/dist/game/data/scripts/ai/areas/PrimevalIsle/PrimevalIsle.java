@@ -283,13 +283,10 @@ public class PrimevalIsle extends AbstractNpcAI
 							npc.doCast(physicalSpecial1.getSkill());
 						}
 					}
-					else if (getRandom(100) <= (probPhysicalSpecial2 * npc.getVariables().getInt("SKILL_MULTIPLER")))
+					else if ((getRandom(100) <= (probPhysicalSpecial2 * npc.getVariables().getInt("SKILL_MULTIPLER"))) && !npc.isSkillDisabled(physicalSpecial2.getSkill()))
 					{
-						if (!npc.isSkillDisabled(physicalSpecial2.getSkill()))
-						{
-							npc.setTarget(creature);
-							npc.doCast(physicalSpecial2.getSkill());
-						}
+						npc.setTarget(creature);
+						npc.doCast(physicalSpecial2.getSkill());
 					}
 				}
 			}
@@ -349,20 +346,14 @@ public class PrimevalIsle extends AbstractNpcAI
 						npc.doCast(SELFBUFF1.getSkill());
 					}
 				}
-				else if (npc.isScriptValue(1))
+				else if (npc.isScriptValue(1) && !npc.isSkillDisabled(SELFBUFF2.getSkill()))
 				{
-					if (!npc.isSkillDisabled(SELFBUFF2.getSkill()))
-					{
-						npc.doCast(SELFBUFF2.getSkill());
-					}
+					npc.doCast(SELFBUFF2.getSkill());
 				}
 			}
-			else if ((((npc.getCurrentHp() / npc.getMaxHp()) * 100) <= 60) && (npc.isScriptValue(3)))
+			else if ((((npc.getCurrentHp() / npc.getMaxHp()) * 100) <= 60) && (npc.isScriptValue(3)) && !npc.isSkillDisabled(SELFBUFF1.getSkill()))
 			{
-				if (!npc.isSkillDisabled(SELFBUFF1.getSkill()))
-				{
-					npc.doCast(SELFBUFF1.getSkill());
-				}
+				npc.doCast(SELFBUFF1.getSkill());
 			}
 			
 			if (Util.calculateDistance(npc, attacker, true, false) > 100)
@@ -431,21 +422,15 @@ public class PrimevalIsle extends AbstractNpcAI
 			
 			if (target != null)
 			{
-				if (getRandom(100) <= (probPhysicalSpecial1 * npc.getVariables().getInt("SKILL_MULTIPLER")))
+				if ((getRandom(100) <= (probPhysicalSpecial1 * npc.getVariables().getInt("SKILL_MULTIPLER"))) && !npc.isSkillDisabled(physicalSpecial1.getSkill()))
 				{
-					if (!npc.isSkillDisabled(physicalSpecial1.getSkill()))
-					{
-						npc.setTarget(target);
-						npc.doCast(physicalSpecial1.getSkill());
-					}
+					npc.setTarget(target);
+					npc.doCast(physicalSpecial1.getSkill());
 				}
-				if (getRandom(100) <= (probPhysicalSpecial2 * npc.getVariables().getInt("SKILL_MULTIPLER")))
+				if ((getRandom(100) <= (probPhysicalSpecial2 * npc.getVariables().getInt("SKILL_MULTIPLER"))) && !npc.isSkillDisabled(physicalSpecial2.getSkill()))
 				{
-					if (!npc.isSkillDisabled(physicalSpecial2.getSkill()))
-					{
-						npc.setTarget(target);
-						npc.doCast(physicalSpecial2.getSkill());
-					}
+					npc.setTarget(target);
+					npc.doCast(physicalSpecial2.getSkill());
 				}
 			}
 		}

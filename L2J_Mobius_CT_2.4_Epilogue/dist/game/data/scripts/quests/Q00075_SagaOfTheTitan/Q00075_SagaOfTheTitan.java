@@ -44,7 +44,7 @@ public class Q00075_SagaOfTheTitan extends AbstractSagaQuest
 			31658,
 			31290
 		};
-		Items = new int[]
+		_items = new int[]
 		{
 			7080,
 			7539,
@@ -59,27 +59,27 @@ public class Q00075_SagaOfTheTitan extends AbstractSagaQuest
 			7098,
 			0
 		};
-		Mob = new int[]
+		_mob = new int[]
 		{
 			27292,
 			27224,
 			27283
 		};
-		classid = new int[]
+		_classId = new int[]
 		{
 			113
 		};
-		prevclass = new int[]
+		_prevClass = new int[]
 		{
 			0x2e
 		};
-		npcSpawnLocations = new Location[]
+		_npcSpawnLocations = new Location[]
 		{
 			new Location(119518, -28658, -3811),
 			new Location(181215, 36676, -4812),
 			new Location(181227, 36703, -4816)
 		};
-		Text = new String[]
+		_text = new String[]
 		{
 			"PLAYERNAME! Pursued to here! However, I jumped out of the Banshouren boundaries! You look at the giant as the sign of power!",
 			"... Oh ... good! So it was ... let's begin!",

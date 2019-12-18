@@ -30,7 +30,7 @@ import org.l2jmobius.gameserver.network.serverpackets.StopMove;
 
 public class RequestActionUse extends ClientBasePacket
 {
-	final static Logger _log = Logger.getLogger(RequestActionUse.class.getName());
+	private static final Logger _log = Logger.getLogger(RequestActionUse.class.getName());
 	
 	public RequestActionUse(byte[] rawPacket, ClientThread client)
 	{

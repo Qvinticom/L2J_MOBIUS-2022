@@ -88,15 +88,15 @@ public class Reeling extends AbstractEffect
 		{
 			return;
 		}
-		int SS = 1;
+		int ss = 1;
 		int pen = 0;
 		if (creature.isChargedShot(ShotType.FISH_SOULSHOTS))
 		{
-			SS = 2;
+			ss = 2;
 		}
 		final FishingRod fishingRod = FishingRodsData.getInstance().getFishingRod(weaponItem.getId());
 		final double gradeBonus = fishingRod.getFishingRodLevel() * 0.1; // TODO: Check this formula (is guessed)
-		int dmg = (int) ((fishingRod.getFishingRodDamage() + player.calcStat(Stats.FISHING_EXPERTISE, 1, null, null) + _power) * gradeBonus * SS);
+		int dmg = (int) ((fishingRod.getFishingRodDamage() + player.calcStat(Stats.FISHING_EXPERTISE, 1, null, null) + _power) * gradeBonus * ss);
 		// Penalty 5% less damage dealt
 		if (player.getSkillLevel(1315) <= (info.getSkill().getLevel() - 2)) // 1315 - Fish Expertise
 		{
@@ -104,7 +104,7 @@ public class Reeling extends AbstractEffect
 			pen = (int) (dmg * 0.05);
 			dmg -= pen;
 		}
-		if (SS > 1)
+		if (ss > 1)
 		{
 			weaponInst.setChargedShot(ShotType.FISH_SOULSHOTS, false);
 		}

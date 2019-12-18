@@ -21,7 +21,7 @@ package org.l2jmobius.loginserver;
  */
 public class HackingException extends Exception
 {
-	String _ip;
+	private final String _ip;
 	private final int _connects;
 	
 	public HackingException(String ip, int connects)
@@ -30,9 +30,6 @@ public class HackingException extends Exception
 		_connects = connects;
 	}
 	
-	/**
-	 * @return
-	 */
 	public String getIP()
 	{
 		return _ip;

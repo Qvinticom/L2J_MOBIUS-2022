@@ -29,6 +29,7 @@ public class Npc
 	private double _radius;
 	private double _height;
 	private String _name;
+	private String _title;
 	private String _sex;
 	private int _level;
 	private int _attackRange;
@@ -250,6 +251,11 @@ public class Npc
 		_name = name;
 	}
 	
+	public void setTitle(String title)
+	{
+		_title = title;
+	}
+	
 	public void setType(String type)
 	{
 		_type = type;
@@ -273,6 +279,11 @@ public class Npc
 	public String getName()
 	{
 		return _name;
+	}
+	
+	public String getTitle()
+	{
+		return _title;
 	}
 	
 	public int getNpcId()

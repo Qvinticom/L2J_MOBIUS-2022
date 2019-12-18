@@ -59,26 +59,33 @@ public final class Q00715_PathToBecomingALordGoddard extends Quest
 			return "Castle has no lord.";
 		}
 		
-		if (event.equals("35363-03.html"))
+		switch (event)
 		{
-			qs.startQuest();
-		}
-		else if (event.equals("35363-04a.html"))
-		{
-			qs.setCond(3);
-		}
-		else if (event.equals("35363-04b.html"))
-		{
-			qs.setCond(2);
-		}
-		else if (event.equals("35363-08.html"))
-		{
-			if (castle.getOwner().getLeader().getPlayerInstance() != null)
+			case "35363-03.html":
 			{
-				final NpcSay packet = new NpcSay(npc.getObjectId(), ChatType.NPC_SHOUT, npc.getId(), NpcStringId.S1_HAS_BECOME_THE_LORD_OF_THE_TOWN_OF_GODDARD_MAY_THERE_BE_GLORY_IN_THE_TERRITORY_OF_GODDARD);
-				packet.addStringParameter(player.getName());
-				npc.broadcastPacket(packet);
-				qs.exitQuest(true, true);
+				qs.startQuest();
+				break;
+			}
+			case "35363-04a.html":
+			{
+				qs.setCond(3);
+				break;
+			}
+			case "35363-04b.html":
+			{
+				qs.setCond(2);
+				break;
+			}
+			case "35363-08.html":
+			{
+				if (castle.getOwner().getLeader().getPlayerInstance() != null)
+				{
+					final NpcSay packet = new NpcSay(npc.getObjectId(), ChatType.NPC_SHOUT, npc.getId(), NpcStringId.S1_HAS_BECOME_THE_LORD_OF_THE_TOWN_OF_GODDARD_MAY_THERE_BE_GLORY_IN_THE_TERRITORY_OF_GODDARD);
+					packet.addStringParameter(player.getName());
+					npc.broadcastPacket(packet);
+					qs.exitQuest(true, true);
+				}
+				break;
 			}
 		}
 		return event;

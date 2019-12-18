@@ -520,12 +520,9 @@ public class Q00343_UnderTheShadowOfTheIvoryTower extends Quest
 						playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 					}
 					
-					if (qs.getMemoStateEx(1) > 1)
+					if ((qs.getMemoStateEx(1) > 1) && (getRandom(100) <= 12))
 					{
-						if (getRandom(100) <= 12)
-						{
-							qs.setMemoStateEx(1, qs.getMemoStateEx(1) - 1);
-						}
+						qs.setMemoStateEx(1, qs.getMemoStateEx(1) - 1);
 					}
 					break;
 				}
@@ -537,12 +534,9 @@ public class Q00343_UnderTheShadowOfTheIvoryTower extends Quest
 						playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 					}
 					
-					if (qs.getMemoStateEx(1) > 1)
+					if ((qs.getMemoStateEx(1) > 1) && (getRandom(100) <= 12))
 					{
-						if (getRandom(100) <= 12)
-						{
-							qs.setMemoStateEx(1, qs.getMemoStateEx(1) - 1);
-						}
+						qs.setMemoStateEx(1, qs.getMemoStateEx(1) - 1);
 					}
 					break;
 				}
@@ -554,12 +548,9 @@ public class Q00343_UnderTheShadowOfTheIvoryTower extends Quest
 						playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 					}
 					
-					if (qs.getMemoStateEx(1) > 1)
+					if ((qs.getMemoStateEx(1) > 1) && (getRandom(100) <= 13))
 					{
-						if (getRandom(100) <= 13)
-						{
-							qs.setMemoStateEx(1, qs.getMemoStateEx(1) - 1);
-						}
+						qs.setMemoStateEx(1, qs.getMemoStateEx(1) - 1);
 					}
 					break;
 				}

@@ -43,7 +43,7 @@ public class FortuneTelling extends AbstractNpcAI
 	@Override
 	public String onTalk(Npc npc, PlayerInstance player)
 	{
-		String htmltext = getNoQuestMsg(player);
+		String htmltext;
 		if (player.getAdena() < COST)
 		{
 			htmltext = "lowadena.htm";

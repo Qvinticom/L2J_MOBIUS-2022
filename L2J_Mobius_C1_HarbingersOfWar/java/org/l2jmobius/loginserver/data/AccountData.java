@@ -24,9 +24,11 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.LineNumberReader;
 import java.net.InetAddress;
+import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.util.Base64;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.StringTokenizer;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
@@ -38,7 +40,6 @@ public class AccountData
 {
 	private static Logger _log = Logger.getLogger(AccountData.class.getName());
 	private static final String SHA = "SHA";
-	private static final String UTF_8 = "UTF-8";
 	private static final Map<String, byte[]> _logPass = new ConcurrentHashMap<>();
 	private static final Map<String, Integer> _accessLevels = new ConcurrentHashMap<>();
 	private static final Map<String, Integer> _hackProtection = new ConcurrentHashMap<>();
@@ -78,7 +79,7 @@ public class AccountData
 		try
 		{
 			final MessageDigest md = MessageDigest.getInstance(SHA);
-			final byte[] raw = password.getBytes(UTF_8);
+			final byte[] raw = password.getBytes(StandardCharsets.UTF_8);
 			final byte[] hash = md.digest(raw);
 			final byte[] expected = _logPass.get(user);
 			if (expected == null)
@@ -128,7 +129,7 @@ public class AccountData
 		return ok;
 	}
 	
-	private void readFromDisk(File loginFile) throws NumberFormatException, IOException
+	private void readFromDisk(File loginFile) throws IOException
 	{
 		_logPass.clear();
 		int i = 0;
@@ -165,11 +166,12 @@ public class AccountData
 		try
 		{
 			final FileWriter writer = new FileWriter(new File("data/accounts.txt"));
-			for (String name : _logPass.keySet())
+			for (Entry<String, byte[]> entry : _logPass.entrySet())
 			{
+				final String name = entry.getKey();
 				writer.write(name);
 				writer.write("\t");
-				writer.write(Base64.getEncoder().encodeToString(_logPass.get(name)));
+				writer.write(Base64.getEncoder().encodeToString(entry.getValue()));
 				writer.write("\t");
 				writer.write("" + _accessLevels.get(name));
 				writer.write("\r\n");

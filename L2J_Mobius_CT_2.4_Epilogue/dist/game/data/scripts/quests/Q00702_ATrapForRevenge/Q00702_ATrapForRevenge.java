@@ -194,6 +194,7 @@ public class Q00702_ATrapForRevenge extends Quest
 				giveAdena(player, getRandom(49917) + 125000, false);
 				if (i1 < 210)
 				{
+					// Do nothing.
 				}
 				else if (i1 < 340)
 				{
@@ -241,6 +242,7 @@ public class Q00702_ATrapForRevenge extends Quest
 				giveAdena(player, getRandom(49917) + 25000, false);
 				if (i1 < 210)
 				{
+					// Do nothing.
 				}
 				else if (i1 < 340)
 				{

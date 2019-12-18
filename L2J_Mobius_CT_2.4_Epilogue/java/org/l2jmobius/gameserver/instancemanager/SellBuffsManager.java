@@ -50,7 +50,7 @@ public class SellBuffsManager implements IXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(SellBuffsManager.class.getName());
 	private static final List<Integer> ALLOWED_BUFFS = new ArrayList<>();
-	private static final String htmlFolder = "data/html/mods/SellBuffs/";
+	private static final String HTML_FOLDER = "data/html/mods/SellBuffs/";
 	
 	protected SellBuffsManager()
 	{
@@ -86,20 +86,20 @@ public class SellBuffsManager implements IXmlReader
 	
 	public void sendSellMenu(PlayerInstance player)
 	{
-		final String html = HtmCache.getInstance().getHtm(player, htmlFolder + (player.isSellingBuffs() ? "BuffMenu_already.html" : "BuffMenu.html"));
+		final String html = HtmCache.getInstance().getHtm(player, HTML_FOLDER + (player.isSellingBuffs() ? "BuffMenu_already.html" : "BuffMenu.html"));
 		CommunityBoardHandler.separateAndSend(html, player);
 	}
 	
 	public void sendBuffChoiceMenu(PlayerInstance player, int index)
 	{
-		String html = HtmCache.getInstance().getHtm(player, htmlFolder + "BuffChoice.html");
+		String html = HtmCache.getInstance().getHtm(player, HTML_FOLDER + "BuffChoice.html");
 		html = html.replace("%list%", buildSkillMenu(player, index));
 		CommunityBoardHandler.separateAndSend(html, player);
 	}
 	
 	public void sendBuffEditMenu(PlayerInstance player)
 	{
-		String html = HtmCache.getInstance().getHtm(player, htmlFolder + "BuffChoice.html");
+		String html = HtmCache.getInstance().getHtm(player, HTML_FOLDER + "BuffChoice.html");
 		html = html.replace("%list%", buildEditMenu(player));
 		CommunityBoardHandler.separateAndSend(html, player);
 	}
@@ -111,8 +111,8 @@ public class SellBuffsManager implements IXmlReader
 			return;
 		}
 		
-		String html = HtmCache.getInstance().getHtm(player, htmlFolder + "BuffBuyMenu.html");
-		html = html.replace("%list%", buildBuffMenu(player, seller, index));
+		String html = HtmCache.getInstance().getHtm(player, HTML_FOLDER + "BuffBuyMenu.html");
+		html = html.replace("%list%", buildBuffMenu(seller, index));
 		CommunityBoardHandler.separateAndSend(html, player);
 	}
 	
@@ -137,7 +137,7 @@ public class SellBuffsManager implements IXmlReader
 		sendSellMenu(player);
 	}
 	
-	private String buildBuffMenu(PlayerInstance player, PlayerInstance seller, int index)
+	private String buildBuffMenu(PlayerInstance seller, int index)
 	{
 		final int ceiling = 10;
 		int nextIndex = -1;
@@ -156,12 +156,9 @@ public class SellBuffsManager implements IXmlReader
 			}
 		}
 		
-		if (count > 10)
+		if ((count > 10) && (count > (index + 10)))
 		{
-			if (count > (index + 10))
-			{
-				nextIndex = index + 10;
-			}
+			nextIndex = index + 10;
 		}
 		
 		if (index >= 10)
@@ -318,12 +315,9 @@ public class SellBuffsManager implements IXmlReader
 			}
 		}
 		
-		if (count > 10)
+		if ((count > 10) && (count > (index + 10)))
 		{
-			if (count > (index + 10))
-			{
-				nextIndex = index + 10;
-			}
+			nextIndex = index + 10;
 		}
 		
 		if (index >= 10)

@@ -341,9 +341,9 @@ public class CharSelectInfoPackage
 		return _augmentationId;
 	}
 	
-	public void setPkKills(int PkKills)
+	public void setPkKills(int pkKills)
 	{
-		_pkKills = PkKills;
+		_pkKills = pkKills;
 	}
 	
 	public int getPkKills()
@@ -351,9 +351,9 @@ public class CharSelectInfoPackage
 		return _pkKills;
 	}
 	
-	public void setPvPKills(int PvPKills)
+	public void setPvPKills(int pvpKills)
 	{
-		_pvpKills = PvPKills;
+		_pvpKills = pvpKills;
 	}
 	
 	public int getPvPKills()

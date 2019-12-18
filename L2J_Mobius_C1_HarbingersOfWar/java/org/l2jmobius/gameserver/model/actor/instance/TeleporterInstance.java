@@ -53,12 +53,6 @@ public class TeleporterInstance extends NpcInstance
 		return "data/html/teleporter/" + pom + ".htm";
 	}
 	
-	@Override
-	public void onAction(PlayerInstance player)
-	{
-		super.onAction(player);
-	}
-	
 	private void doTeleport(PlayerInstance player, int val)
 	{
 		final TeleportLocation list = TeleportLocationTable.getInstance().getTemplate(val);

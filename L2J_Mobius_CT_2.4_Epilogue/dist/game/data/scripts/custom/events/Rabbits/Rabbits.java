@@ -215,12 +215,9 @@ public class Rabbits extends Event
 				}
 			}
 		}
-		else if (skill.getId() == RABBIT_MAGIC_EYE.getSkillId())
+		else if ((skill.getId() == RABBIT_MAGIC_EYE.getSkillId()) && npc.isInvisible() && npc.isInsideRadius2D(caster, skill.getAffectRange()))
 		{
-			if (npc.isInvisible() && npc.isInsideRadius2D(caster, skill.getAffectRange()))
-			{
-				npc.setInvisible(false);
-			}
+			npc.setInvisible(false);
 		}
 		return super.onSkillSee(npc, caster, skill, targets, isSummon);
 	}

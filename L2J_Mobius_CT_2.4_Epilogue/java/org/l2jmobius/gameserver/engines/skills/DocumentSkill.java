@@ -1541,13 +1541,13 @@ public class DocumentSkill extends DocumentBase
 				LOGGER.log(Level.SEVERE, "Skill id=" + set.getInt("skill_id") + "level" + set.getInt("level"), e);
 			}
 		}
-		int _count = count;
+		int count2 = count;
 		for (int i = 0; i < _currentSkill.enchsets1.length; i++)
 		{
 			set = _currentSkill.enchsets1[i];
 			try
 			{
-				_currentSkill.currentSkills.add(_count + i, new Skill(set));
+				_currentSkill.currentSkills.add(count2 + i, new Skill(set));
 				count++;
 			}
 			catch (Exception e)
@@ -1555,13 +1555,13 @@ public class DocumentSkill extends DocumentBase
 				LOGGER.log(Level.SEVERE, "Skill id=" + set.getInt("skill_id") + "level" + set.getInt("level"), e);
 			}
 		}
-		_count = count;
+		count2 = count;
 		for (int i = 0; i < _currentSkill.enchsets2.length; i++)
 		{
 			set = _currentSkill.enchsets2[i];
 			try
 			{
-				_currentSkill.currentSkills.add(_count + i, new Skill(set));
+				_currentSkill.currentSkills.add(count2 + i, new Skill(set));
 				count++;
 			}
 			catch (Exception e)
@@ -1569,13 +1569,13 @@ public class DocumentSkill extends DocumentBase
 				LOGGER.log(Level.SEVERE, "Skill id=" + set.getInt("skill_id") + "level" + set.getInt("level"), e);
 			}
 		}
-		_count = count;
+		count2 = count;
 		for (int i = 0; i < _currentSkill.enchsets3.length; i++)
 		{
 			set = _currentSkill.enchsets3[i];
 			try
 			{
-				_currentSkill.currentSkills.add(_count + i, new Skill(set));
+				_currentSkill.currentSkills.add(count2 + i, new Skill(set));
 				count++;
 			}
 			catch (Exception e)
@@ -1583,13 +1583,13 @@ public class DocumentSkill extends DocumentBase
 				LOGGER.log(Level.SEVERE, "Skill id=" + set.getInt("skill_id") + "level" + set.getInt("level"), e);
 			}
 		}
-		_count = count;
+		count2 = count;
 		for (int i = 0; i < _currentSkill.enchsets4.length; i++)
 		{
 			set = _currentSkill.enchsets4[i];
 			try
 			{
-				_currentSkill.currentSkills.add(_count + i, new Skill(set));
+				_currentSkill.currentSkills.add(count2 + i, new Skill(set));
 				count++;
 			}
 			catch (Exception e)
@@ -1597,13 +1597,13 @@ public class DocumentSkill extends DocumentBase
 				LOGGER.log(Level.SEVERE, "Skill id=" + set.getInt("skill_id") + "level" + set.getInt("level"), e);
 			}
 		}
-		_count = count;
+		count2 = count;
 		for (int i = 0; i < _currentSkill.enchsets5.length; i++)
 		{
 			set = _currentSkill.enchsets5[i];
 			try
 			{
-				_currentSkill.currentSkills.add(_count + i, new Skill(set));
+				_currentSkill.currentSkills.add(count2 + i, new Skill(set));
 				count++;
 			}
 			catch (Exception e)
@@ -1611,13 +1611,13 @@ public class DocumentSkill extends DocumentBase
 				LOGGER.log(Level.SEVERE, "Skill id=" + set.getInt("skill_id") + "level" + set.getInt("level"), e);
 			}
 		}
-		_count = count;
+		count2 = count;
 		for (int i = 0; i < _currentSkill.enchsets6.length; i++)
 		{
 			set = _currentSkill.enchsets6[i];
 			try
 			{
-				_currentSkill.currentSkills.add(_count + i, new Skill(set));
+				_currentSkill.currentSkills.add(count2 + i, new Skill(set));
 				count++;
 			}
 			catch (Exception e)
@@ -1625,13 +1625,13 @@ public class DocumentSkill extends DocumentBase
 				LOGGER.log(Level.SEVERE, "Skill id=" + set.getInt("skill_id") + "level" + set.getInt("level"), e);
 			}
 		}
-		_count = count;
+		count2 = count;
 		for (int i = 0; i < _currentSkill.enchsets7.length; i++)
 		{
 			set = _currentSkill.enchsets7[i];
 			try
 			{
-				_currentSkill.currentSkills.add(_count + i, new Skill(set));
+				_currentSkill.currentSkills.add(count2 + i, new Skill(set));
 				count++;
 			}
 			catch (Exception e)
@@ -1639,13 +1639,13 @@ public class DocumentSkill extends DocumentBase
 				LOGGER.log(Level.SEVERE, "Skill id=" + set.getInt("skill_id") + "level" + set.getInt("level"), e);
 			}
 		}
-		_count = count;
+		count2 = count;
 		for (int i = 0; i < _currentSkill.enchsets8.length; i++)
 		{
 			set = _currentSkill.enchsets8[i];
 			try
 			{
-				_currentSkill.currentSkills.add(_count + i, new Skill(set));
+				_currentSkill.currentSkills.add(count2 + i, new Skill(set));
 				count++;
 			}
 			catch (Exception e)

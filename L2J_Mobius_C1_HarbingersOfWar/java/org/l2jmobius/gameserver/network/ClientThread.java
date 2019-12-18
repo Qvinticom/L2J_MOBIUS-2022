@@ -284,7 +284,7 @@ public class ClientThread extends Thread
 		}
 		else
 		{
-			_log.warning("could not restore " + chars[charslot]);
+			_log.warning("Could not restore " + chars[charslot]);
 		}
 		return character;
 	}

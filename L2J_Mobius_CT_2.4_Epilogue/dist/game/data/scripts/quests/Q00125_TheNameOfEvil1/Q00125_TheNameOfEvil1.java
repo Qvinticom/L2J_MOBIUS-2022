@@ -213,6 +213,7 @@ public class Q00125_TheNameOfEvil1 extends Quest
 				qs.unset("O");
 				qs.unset("O2");
 				qs.unset("N");
+				break;
 			}
 			case "32120-17.html":
 			{

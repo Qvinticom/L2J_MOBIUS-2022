@@ -85,23 +85,23 @@ public class TvTManager extends AbstractNpcAI implements IVoicedCommandHandler
 				else if ((playerLevel < Config.TVT_EVENT_MIN_LVL) || (playerLevel > Config.TVT_EVENT_MAX_LVL))
 				{
 					htmltext = getHtm(player, "Level.html");
-					htmltext = htmltext.replaceAll("%min%", String.valueOf(Config.TVT_EVENT_MIN_LVL));
-					htmltext = htmltext.replaceAll("%max%", String.valueOf(Config.TVT_EVENT_MAX_LVL));
+					htmltext = htmltext.replace("%min%", String.valueOf(Config.TVT_EVENT_MIN_LVL));
+					htmltext = htmltext.replace("%max%", String.valueOf(Config.TVT_EVENT_MAX_LVL));
 				}
 				else if ((team1Count == Config.TVT_EVENT_MAX_PLAYERS_IN_TEAMS) && (team2Count == Config.TVT_EVENT_MAX_PLAYERS_IN_TEAMS))
 				{
 					htmltext = getHtm(player, "TeamsFull.html");
-					htmltext = htmltext.replaceAll("%max%", String.valueOf(Config.TVT_EVENT_MAX_PLAYERS_IN_TEAMS));
+					htmltext = htmltext.replace("%max%", String.valueOf(Config.TVT_EVENT_MAX_PLAYERS_IN_TEAMS));
 				}
 				else if ((Config.TVT_EVENT_MAX_PARTICIPANTS_PER_IP > 0) && !AntiFeedManager.getInstance().tryAddPlayer(AntiFeedManager.TVT_ID, player, Config.TVT_EVENT_MAX_PARTICIPANTS_PER_IP))
 				{
 					htmltext = getHtm(player, "IPRestriction.html");
-					htmltext = htmltext.replaceAll("%max%", String.valueOf(AntiFeedManager.getInstance().getLimit(player, Config.TVT_EVENT_MAX_PARTICIPANTS_PER_IP)));
+					htmltext = htmltext.replace("%max%", String.valueOf(AntiFeedManager.getInstance().getLimit(player, Config.TVT_EVENT_MAX_PARTICIPANTS_PER_IP)));
 				}
 				else if (TvTEvent.needParticipationFee() && !TvTEvent.hasParticipationFee(player))
 				{
 					htmltext = getHtm(player, "ParticipationFee.html");
-					htmltext = htmltext.replaceAll("%fee%", TvTEvent.getParticipationFee());
+					htmltext = htmltext.replace("%fee%", TvTEvent.getParticipationFee());
 				}
 				else if (TvTEvent.addParticipant(player))
 				{
@@ -138,16 +138,16 @@ public class TvTManager extends AbstractNpcAI implements IVoicedCommandHandler
 			final boolean isParticipant = TvTEvent.isPlayerParticipant(player.getObjectId());
 			final int[] teamsPlayerCounts = TvTEvent.getTeamsPlayerCounts();
 			htmltext = getHtm(player, (!isParticipant ? "Participation.html" : "RemoveParticipation.html"));
-			htmltext = htmltext.replaceAll("%objectId%", String.valueOf(npc.getObjectId()));
-			htmltext = htmltext.replaceAll("%team1name%", Config.TVT_EVENT_TEAM_1_NAME);
-			htmltext = htmltext.replaceAll("%team1playercount%", String.valueOf(teamsPlayerCounts[0]));
-			htmltext = htmltext.replaceAll("%team2name%", Config.TVT_EVENT_TEAM_2_NAME);
-			htmltext = htmltext.replaceAll("%team2playercount%", String.valueOf(teamsPlayerCounts[1]));
-			htmltext = htmltext.replaceAll("%playercount%", String.valueOf(teamsPlayerCounts[0] + teamsPlayerCounts[1]));
+			htmltext = htmltext.replace("%objectId%", String.valueOf(npc.getObjectId()));
+			htmltext = htmltext.replace("%team1name%", Config.TVT_EVENT_TEAM_1_NAME);
+			htmltext = htmltext.replace("%team1playercount%", String.valueOf(teamsPlayerCounts[0]));
+			htmltext = htmltext.replace("%team2name%", Config.TVT_EVENT_TEAM_2_NAME);
+			htmltext = htmltext.replace("%team2playercount%", String.valueOf(teamsPlayerCounts[1]));
+			htmltext = htmltext.replace("%playercount%", String.valueOf(teamsPlayerCounts[0] + teamsPlayerCounts[1]));
 			
 			if (!isParticipant)
 			{
-				htmltext = htmltext.replaceAll("%fee%", TvTEvent.getParticipationFee());
+				htmltext = htmltext.replace("%fee%", TvTEvent.getParticipationFee());
 			}
 		}
 		else if (TvTEvent.isStarting() || TvTEvent.isStarted())
@@ -199,12 +199,12 @@ public class TvTManager extends AbstractNpcAI implements IVoicedCommandHandler
 		final int[] teamsPlayerCounts = TvTEvent.getTeamsPlayerCounts();
 		final int[] teamsPointsCounts = TvTEvent.getTeamsPoints();
 		String htmltext = getHtm(player, "Status.html");
-		htmltext = htmltext.replaceAll("%team1name%", Config.TVT_EVENT_TEAM_1_NAME);
-		htmltext = htmltext.replaceAll("%team1playercount%", String.valueOf(teamsPlayerCounts[0]));
-		htmltext = htmltext.replaceAll("%team1points%", String.valueOf(teamsPointsCounts[0]));
-		htmltext = htmltext.replaceAll("%team2name%", Config.TVT_EVENT_TEAM_2_NAME);
-		htmltext = htmltext.replaceAll("%team2playercount%", String.valueOf(teamsPlayerCounts[1]));
-		htmltext = htmltext.replaceAll("%team2points%", String.valueOf(teamsPointsCounts[1]));
+		htmltext = htmltext.replace("%team1name%", Config.TVT_EVENT_TEAM_1_NAME);
+		htmltext = htmltext.replace("%team1playercount%", String.valueOf(teamsPlayerCounts[0]));
+		htmltext = htmltext.replace("%team1points%", String.valueOf(teamsPointsCounts[0]));
+		htmltext = htmltext.replace("%team2name%", Config.TVT_EVENT_TEAM_2_NAME);
+		htmltext = htmltext.replace("%team2playercount%", String.valueOf(teamsPlayerCounts[1]));
+		htmltext = htmltext.replace("%team2points%", String.valueOf(teamsPointsCounts[1]));
 		return htmltext;
 	}
 	

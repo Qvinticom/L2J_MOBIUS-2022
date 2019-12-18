@@ -56,10 +56,6 @@ public class HallOfSufferingAttack extends AbstractNpcAI
 			0,
 			0
 		}; // 0: instance start, 1: finish time
-		
-		public HSAWorld()
-		{
-		}
 	}
 	
 	private static final int INSTANCEID = 115;
@@ -512,74 +508,72 @@ public class HallOfSufferingAttack extends AbstractNpcAI
 					runTwins(world);
 				}
 			}
-			else if ((world.getStatus() == 6) && ((npc.getId() == KLODEKUS) || (npc.getId() == KLANIKUS)))
+			else if (((world.getStatus() == 6) && ((npc.getId() == KLODEKUS) || (npc.getId() == KLANIKUS))) //
+				&& (world.klanikus.isDead() && world.klodekus.isDead()))
 			{
-				if (world.klanikus.isDead() && world.klodekus.isDead())
+				world.incStatus();
+				world.storeTime[1] = System.currentTimeMillis();
+				
+				final Long finishDiff = world.storeTime[1] - world.storeTime[0];
+				if (finishDiff < 1260000)
 				{
-					world.incStatus();
-					world.storeTime[1] = System.currentTimeMillis();
-					
-					final Long finishDiff = world.storeTime[1] - world.storeTime[0];
-					if (finishDiff < 1260000)
-					{
-						world.setParameter("tag", 13777);
-					}
-					else if (finishDiff < 1380000)
-					{
-						world.setParameter("tag", 13778);
-					}
-					else if (finishDiff < 1500000)
-					{
-						world.setParameter("tag", 13779);
-					}
-					else if (finishDiff < 1620000)
-					{
-						world.setParameter("tag", 13780);
-					}
-					else if (finishDiff < 1740000)
-					{
-						world.setParameter("tag", 13781);
-					}
-					else if (finishDiff < 1860000)
-					{
-						world.setParameter("tag", 13782);
-					}
-					else if (finishDiff < 1980000)
-					{
-						world.setParameter("tag", 13783);
-					}
-					else if (finishDiff < 2100000)
-					{
-						world.setParameter("tag", 13784);
-					}
-					else if (finishDiff < 2220000)
-					{
-						world.setParameter("tag", 13785);
-					}
-					else
-					{
-						world.setParameter("tag", 13786);
-					}
-					
-					world.klanikus = null;
-					world.klodekus = null;
-					cancelQuestTimers("ressurectTwin");
-					cancelQuestTimers("spawnBossGuards");
-					cancelQuestTimers("isTwinSeparated");
-					addSpawn(TEPIOS, TEPIOS_SPAWN[0], TEPIOS_SPAWN[1], TEPIOS_SPAWN[2], 0, false, 0, false, world.getInstanceId());
-					
-					for (PlayerInstance killer : world.getAllowed())
-					{
-						if (killer != null)
-						{
-							killer.sendPacket(new ExSendUIEvent(killer, true, true, 0, 0, ""));
-						}
-					}
-					
-					final Instance inst = InstanceManager.getInstance().getInstance(world.getInstanceId());
-					inst.setDuration(5 * 60000);
-					inst.setEmptyDestroyTime(0);
+					world.setParameter("tag", 13777);
 				}
+				else if (finishDiff < 1380000)
+				{
+					world.setParameter("tag", 13778);
+				}
+				else if (finishDiff < 1500000)
+				{
+					world.setParameter("tag", 13779);
+				}
+				else if (finishDiff < 1620000)
+				{
+					world.setParameter("tag", 13780);
+				}
+				else if (finishDiff < 1740000)
+				{
+					world.setParameter("tag", 13781);
+				}
+				else if (finishDiff < 1860000)
+				{
+					world.setParameter("tag", 13782);
+				}
+				else if (finishDiff < 1980000)
+				{
+					world.setParameter("tag", 13783);
+				}
+				else if (finishDiff < 2100000)
+				{
+					world.setParameter("tag", 13784);
+				}
+				else if (finishDiff < 2220000)
+				{
+					world.setParameter("tag", 13785);
+				}
+				else
+				{
+					world.setParameter("tag", 13786);
+				}
+				
+				world.klanikus = null;
+				world.klodekus = null;
+				cancelQuestTimers("ressurectTwin");
+				cancelQuestTimers("spawnBossGuards");
+				cancelQuestTimers("isTwinSeparated");
+				addSpawn(TEPIOS, TEPIOS_SPAWN[0], TEPIOS_SPAWN[1], TEPIOS_SPAWN[2], 0, false, 0, false, world.getInstanceId());
+				
+				for (PlayerInstance killer : world.getAllowed())
+				{
+					if (killer != null)
+					{
+						killer.sendPacket(new ExSendUIEvent(killer, true, true, 0, 0, ""));
+					}
+				}
+				
+				final Instance inst = InstanceManager.getInstance().getInstance(world.getInstanceId());
+				inst.setDuration(5 * 60000);
+				inst.setEmptyDestroyTime(0);
 			}
 		}
 		return "";

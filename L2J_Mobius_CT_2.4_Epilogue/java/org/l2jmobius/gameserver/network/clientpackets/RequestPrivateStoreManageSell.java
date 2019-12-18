@@ -48,7 +48,6 @@ public class RequestPrivateStoreManageSell implements IClientIncomingPacket
 		if (player.isAlikeDead() || player.isInOlympiadMode())
 		{
 			client.sendPacket(ActionFailed.STATIC_PACKET);
-			return;
 		}
 	}
 }

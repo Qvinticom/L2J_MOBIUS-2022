@@ -41,7 +41,7 @@ import org.l2jmobius.util.Locator;
  */
 public class SystemPanel extends JPanel
 {
-	static final long startTime = System.currentTimeMillis();
+	static final long START_TIME = System.currentTimeMillis();
 	
 	public SystemPanel()
 	{
@@ -98,6 +98,7 @@ public class SystemPanel extends JPanel
 		}
 		catch (Exception e)
 		{
+			// Handled above.
 		}
 		
 		// Initial update task.
@@ -118,7 +119,7 @@ public class SystemPanel extends JPanel
 			{
 				lblConnected.setText("Connected: " + World.getInstance().getAllPlayers().size());
 				lblMaxConnected.setText("Max connected: " + PlayerCountManager.getInstance().getMaxConnectedCount());
-				lblElapsedTime.setText("Elapsed: " + getDurationBreakdown(System.currentTimeMillis() - startTime));
+				lblElapsedTime.setText("Elapsed: " + getDurationBreakdown(System.currentTimeMillis() - START_TIME));
 			}
 		}, 1000, 1000);
 	}

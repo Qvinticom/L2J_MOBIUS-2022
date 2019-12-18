@@ -27,7 +27,7 @@ import org.l2jmobius.loginserver.LoginController;
 
 public class AuthLogin extends ClientBasePacket
 {
-	final static Logger _log = Logger.getLogger(AuthLogin.class.getName());
+	private static final Logger _log = Logger.getLogger(AuthLogin.class.getName());
 	
 	public AuthLogin(byte[] decrypt, ClientThread client) throws IOException
 	{

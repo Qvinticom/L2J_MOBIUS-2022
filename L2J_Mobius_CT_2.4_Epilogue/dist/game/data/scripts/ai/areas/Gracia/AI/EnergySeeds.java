@@ -20,6 +20,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
 
 import org.l2jmobius.Config;
@@ -510,11 +511,11 @@ public class EnergySeeds extends AbstractNpcAI
 	
 	public void stopAI(GraciaSeeds type)
 	{
-		for (Npc seed : _spawnedNpcs.keySet())
+		for (Entry<Npc, Integer> entry : _spawnedNpcs.entrySet())
 		{
-			if (type == SPAWNS.get(_spawnedNpcs.get(seed))._seedId)
+			if (type == SPAWNS.get(entry.getValue())._seedId)
 			{
-				seed.deleteMe();
+				entry.getKey().deleteMe();
 			}
 		}
 	}

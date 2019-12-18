@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.network.ClientThread;
 
 public class RequestMagicSkillUse extends ClientBasePacket
 {
-	final static Logger _log = Logger.getLogger(RequestMagicSkillUse.class.getName());
+	private static final Logger _log = Logger.getLogger(RequestMagicSkillUse.class.getName());
 	
 	public RequestMagicSkillUse(byte[] rawPacket, ClientThread client)
 	{

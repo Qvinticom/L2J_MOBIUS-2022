@@ -115,11 +115,10 @@ public class World
 	public void removeVisibleObject(WorldObject object)
 	{
 		_visibleObjects.remove(object.getObjectId());
-		for (Object element : object.getKnownObjects())
+		for (WorldObject wo : object.getKnownObjects())
 		{
-			final WorldObject temp1 = (WorldObject) element;
-			temp1.removeKnownObject(object);
-			object.removeKnownObject(temp1);
+			wo.removeKnownObject(object);
+			object.removeKnownObject(wo);
 		}
 		if (object instanceof PlayerInstance)
 		{

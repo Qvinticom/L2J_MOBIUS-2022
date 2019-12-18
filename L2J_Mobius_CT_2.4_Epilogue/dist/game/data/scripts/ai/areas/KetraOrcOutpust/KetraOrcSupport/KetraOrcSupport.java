@@ -235,7 +235,7 @@ public class KetraOrcSupport extends AbstractNpcAI
 		return htmltext;
 	}
 	
-	public static void main(String args[])
+	public static void main(String[] args)
 	{
 		new KetraOrcSupport();
 	}

@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class RequestJoinParty extends ClientBasePacket
 {
-	final static Logger _log = Logger.getLogger(RequestJoinParty.class.getName());
+	private static final Logger _log = Logger.getLogger(RequestJoinParty.class.getName());
 	
 	public RequestJoinParty(byte[] decrypt, ClientThread client)
 	{
@@ -119,10 +119,6 @@ public class RequestJoinParty extends ClientBasePacket
 				requestor.sendPacket(msg);
 				_log.warning(requestor.getName() + " already received a party invitation");
 			}
-		}
-		else if (target.getKnownPlayers().contains(requestor))
-		{
-			_log.warning(client.getActiveChar().getName() + " invited someone who doesn't know him.");
 		}
 	}
 }

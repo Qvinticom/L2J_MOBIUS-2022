@@ -21,6 +21,7 @@ import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.logging.Logger;
 
 import org.l2jmobius.commons.network.IOutgoingPacket;
@@ -151,10 +152,11 @@ public class ServerList implements IOutgoingPacket
 		if (_charsOnServers != null)
 		{
 			packet.writeC(_charsOnServers.size());
-			for (int servId : _charsOnServers.keySet())
+			for (Entry<Integer, Integer> entry : _charsOnServers.entrySet())
 			{
+				final int servId = entry.getKey();
 				packet.writeC(servId);
-				packet.writeC(_charsOnServers.get(servId));
+				packet.writeC(entry.getValue());
 				if ((_charsToDelete == null) || !_charsToDelete.containsKey(servId))
 				{
 					packet.writeC(0x00);

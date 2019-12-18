@@ -82,7 +82,7 @@ public abstract class Chamber extends AbstractInstance
 	// Misc
 	private static final String RETURN = Chamber.class.getSimpleName() + "_return";
 	
-	protected Chamber(String name, int instanceId, int entranceGKId, int roomGKFirstId, int roomGKLastId, int aenkinelId, int boxId)
+	protected Chamber(int instanceId, int entranceGKId, int roomGKFirstId, int roomGKLastId, int aenkinelId, int boxId)
 	{
 		INSTANCEID = instanceId;
 		ENTRANCE_GATEKEEPER = entranceGKId;
@@ -331,10 +331,10 @@ public abstract class Chamber extends AbstractInstance
 		}
 		final Instance inst = InstanceManager.getInstance().getInstance(player.getInstanceId());
 		final Location ret = inst.getExitLoc();
-		final String return_point = player.getVariables().getString(RETURN, null);
-		if (return_point != null)
+		final String returnPoint = player.getVariables().getString(RETURN, null);
+		if (returnPoint != null)
 		{
-			final String[] coords = return_point.split(";");
+			final String[] coords = returnPoint.split(";");
 			if (coords.length == 3)
 			{
 				try
@@ -346,6 +346,7 @@ public abstract class Chamber extends AbstractInstance
 				}
 				catch (Exception e)
 				{
+					// Not important.
 				}
 			}
 		}
@@ -366,58 +367,63 @@ public abstract class Chamber extends AbstractInstance
 		
 		if ((player != null) && (world != null) && (npc.getId() >= ROOM_GATEKEEPER_FIRST) && (npc.getId() <= ROOM_GATEKEEPER_LAST))
 		{
-			// Change room from dialog
-			if (event.equals("next_room"))
+			switch (event)
 			{
-				if (player.getParty() == null)
+				case "next_room":
 				{
-					htmltext = getHtm(player, "data/scripts/instances/ChambersOfDelusion/no_party.html");
-				}
-				else if (player.getParty().getLeaderObjectId() != player.getObjectId())
-				{
-					htmltext = getHtm(player, "data/scripts/instances/ChambersOfDelusion/no_leader.html");
-				}
-				else if (hasQuestItems(player, DELUSION_MARK))
-				{
-					takeItems(player, DELUSION_MARK, 1);
-					stopRoomChangeTask(world);
-					changeRoom(world);
-				}
-				else
-				{
-					htmltext = getHtm(player, "data/scripts/instances/ChambersOfDelusion/no_item.html");
-				}
-			}
-			else if (event.equals("go_out"))
-			{
-				if (player.getParty() == null)
-				{
-					htmltext = getHtm(player, "data/scripts/instances/ChambersOfDelusion/no_party.html");
-				}
-				else if (player.getParty().getLeaderObjectId() != player.getObjectId())
-				{
-					htmltext = getHtm(player, "data/scripts/instances/ChambersOfDelusion/no_leader.html");
-				}
-				else
-				{
-					final Instance inst = InstanceManager.getInstance().getInstance(world.getInstanceId());
-					
-					stopRoomChangeTask(world);
-					stopBanishTask(world);
-					
-					for (PlayerInstance partyMember : player.getParty().getMembers())
+					if (player.getParty() == null)
 					{
-						exitInstance(partyMember);
+						htmltext = getHtm(player, "data/scripts/instances/ChambersOfDelusion/no_party.html");
 					}
-					
-					inst.setEmptyDestroyTime(0);
+					else if (player.getParty().getLeaderObjectId() != player.getObjectId())
+					{
+						htmltext = getHtm(player, "data/scripts/instances/ChambersOfDelusion/no_leader.html");
+					}
+					else if (hasQuestItems(player, DELUSION_MARK))
+					{
+						takeItems(player, DELUSION_MARK, 1);
+						stopRoomChangeTask(world);
+						changeRoom(world);
+					}
+					else
+					{
+						htmltext = getHtm(player, "data/scripts/instances/ChambersOfDelusion/no_item.html");
+					}
+					break;
 				}
-			}
-			else if (event.equals("look_party"))
-			{
-				if ((player.getParty() != null) && (player.getParty() == world.getParameters().getObject("PartyInside", Party.class)))
+				case "go_out":
 				{
-					teleportPlayer(player, ROOM_ENTER_POINTS[world.getParameters().getInt("currentRoom", 0)], world.getInstanceId(), false);
+					if (player.getParty() == null)
+					{
+						htmltext = getHtm(player, "data/scripts/instances/ChambersOfDelusion/no_party.html");
+					}
+					else if (player.getParty().getLeaderObjectId() != player.getObjectId())
+					{
+						htmltext = getHtm(player, "data/scripts/instances/ChambersOfDelusion/no_leader.html");
+					}
+					else
+					{
+						final Instance inst = InstanceManager.getInstance().getInstance(world.getInstanceId());
+						
+						stopRoomChangeTask(world);
+						stopBanishTask(world);
+						
+						for (PlayerInstance partyMember : player.getParty().getMembers())
+						{
+							exitInstance(partyMember);
+						}
+						
+						inst.setEmptyDestroyTime(0);
+					}
+					break;
+				}
+				case "look_party":
+				{
+					if ((player.getParty() != null) && (player.getParty() == world.getParameters().getObject("PartyInside", Party.class)))
+					{
+						teleportPlayer(player, ROOM_ENTER_POINTS[world.getParameters().getInt("currentRoom", 0)], world.getInstanceId(), false);
+					}
+					break;
 				}
 			}
 		}
@@ -527,12 +533,9 @@ public abstract class Chamber extends AbstractInstance
 		final int npcId = npc.getId();
 		getQuestState(player, true);
 		
-		if (npcId == ENTRANCE_GATEKEEPER)
+		if ((npcId == ENTRANCE_GATEKEEPER) && checkConditions(player))
 		{
-			if (checkConditions(player))
-			{
-				enterInstance(player, INSTANCEID);
-			}
+			enterInstance(player, INSTANCEID);
 		}
 		return "";
 	}

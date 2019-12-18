@@ -167,12 +167,9 @@ public class Q00299_GatherIngredientsForPie extends Quest
 	public String onKill(Npc npc, PlayerInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getRandomPartyMemberState(killer, 1, 3, npc);
-		if ((qs != null) && (getRandom(1000) < MONSTERS_CHANCES.get(npc.getId())) && (getQuestItemsCount(killer, HONEY_POUCH) < 100))
+		if ((qs != null) && (getRandom(1000) < MONSTERS_CHANCES.get(npc.getId())) && (getQuestItemsCount(killer, HONEY_POUCH) < 100) && giveItemRandomly(killer, npc, HONEY_POUCH, 1, 2, 100, 1, true))
 		{
-			if (giveItemRandomly(killer, npc, HONEY_POUCH, 1, 2, 100, 1, true))
-			{
-				qs.setCond(2);
-			}
+			qs.setCond(2);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}

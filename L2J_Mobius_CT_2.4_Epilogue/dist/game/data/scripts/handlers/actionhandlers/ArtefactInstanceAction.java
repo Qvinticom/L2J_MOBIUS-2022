@@ -50,14 +50,10 @@ public class ArtefactInstanceAction implements IActionHandler
 		{
 			player.setTarget(target);
 		}
-		else if (interact)
+		else if (interact && !((Npc) target).canInteract(player)) // Calculate the distance between the PlayerInstance and the NpcInstance
 		{
-			// Calculate the distance between the PlayerInstance and the NpcInstance
-			if (!((Npc) target).canInteract(player))
-			{
-				// Notify the PlayerInstance AI with AI_INTENTION_INTERACT
-				player.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, target);
-			}
+			// Notify the PlayerInstance AI with AI_INTENTION_INTERACT
+			player.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, target);
 		}
 		return true;
 	}

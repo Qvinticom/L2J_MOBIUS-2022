@@ -29,9 +29,9 @@ public class AgitDecoInfo implements IClientOutgoingPacket
 {
 	private final AuctionableHall _clanHall;
 	
-	public AgitDecoInfo(AuctionableHall ClanHall)
+	public AgitDecoInfo(AuctionableHall clanHall)
 	{
-		_clanHall = ClanHall;
+		_clanHall = clanHall;
 	}
 	
 	//@formatter:off

@@ -44,7 +44,7 @@ public class Q00069_SagaOfTheTrickster extends AbstractSagaQuest
 			31659,
 			31283
 		};
-		Items = new int[]
+		_items = new int[]
 		{
 			7080,
 			9761,
@@ -59,27 +59,27 @@ public class Q00069_SagaOfTheTrickster extends AbstractSagaQuest
 			9718,
 			0
 		};
-		Mob = new int[]
+		_mob = new int[]
 		{
 			27333,
 			27334,
 			27335
 		};
-		classid = new int[]
+		_classId = new int[]
 		{
 			134
 		};
-		prevclass = new int[]
+		_prevClass = new int[]
 		{
 			0x82
 		};
-		npcSpawnLocations = new Location[]
+		_npcSpawnLocations = new Location[]
 		{
 			new Location(164014, -74733, -3093),
 			new Location(124355, 82155, -2803),
 			new Location(124376, 82127, -2796)
 		};
-		Text = new String[]
+		_text = new String[]
 		{
 			"PLAYERNAME! Pursued to here! However, I jumped out of the Banshouren boundaries! You look at the giant as the sign of power!",
 			"... Oh ... good! So it was ... let's begin!",

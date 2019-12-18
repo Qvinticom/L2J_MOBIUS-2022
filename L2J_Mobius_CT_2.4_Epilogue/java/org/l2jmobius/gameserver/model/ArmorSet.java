@@ -249,14 +249,14 @@ public class ArmorSet
 		return ((shieldItem != null) && _shield.contains(Integer.valueOf(shieldItem.getId())));
 	}
 	
-	public boolean containShield(int shield_id)
+	public boolean containShield(int shieldId)
 	{
 		if (_shield.isEmpty())
 		{
 			return false;
 		}
 		
-		return _shield.contains(Integer.valueOf(shield_id));
+		return _shield.contains(Integer.valueOf(shieldId));
 	}
 	
 	public List<SkillHolder> getShieldSkillId()

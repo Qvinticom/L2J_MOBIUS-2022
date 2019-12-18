@@ -450,7 +450,7 @@ public class Instance
 				}
 				catch (Exception e)
 				{
-					e.printStackTrace();
+					LOGGER.warning("Problem with Instance: " + e.toString());
 				}
 			}
 		}

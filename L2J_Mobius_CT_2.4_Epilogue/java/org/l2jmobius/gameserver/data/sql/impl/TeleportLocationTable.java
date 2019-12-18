@@ -73,7 +73,7 @@ public class TeleportLocationTable
 			return;
 		}
 		
-		int _cTeleCount = _teleports.size();
+		int cTeleCount = _teleports.size();
 		try (Connection con = DatabaseFactory.getConnection();
 			Statement s = con.createStatement();
 			ResultSet rs = s.executeQuery("SELECT id, loc_x, loc_y, loc_z, price, fornoble, itemId FROM custom_teleport"))
@@ -92,10 +92,10 @@ public class TeleportLocationTable
 				
 				_teleports.put(teleport.getTeleId(), teleport);
 			}
-			_cTeleCount = _teleports.size() - _cTeleCount;
-			if (_cTeleCount > 0)
+			cTeleCount = _teleports.size() - cTeleCount;
+			if (cTeleCount > 0)
 			{
-				LOGGER.info(getClass().getSimpleName() + ": Loaded " + _cTeleCount + " custom teleport location templates.");
+				LOGGER.info(getClass().getSimpleName() + ": Loaded " + cTeleCount + " custom teleport location templates.");
 			}
 		}
 		catch (Exception e)

@@ -40,7 +40,7 @@ public class ExShowReceivedPostList implements IClientOutgoingPacket
 	{
 		OutgoingPackets.EX_SHOW_RECEIVED_POST_LIST.writeId(packet);
 		packet.writeD((int) (System.currentTimeMillis() / 1000));
-		if ((_inbox != null) && (_inbox.size() > 0))
+		if ((_inbox != null) && !_inbox.isEmpty())
 		{
 			packet.writeD(_inbox.size());
 			for (Message msg : _inbox)

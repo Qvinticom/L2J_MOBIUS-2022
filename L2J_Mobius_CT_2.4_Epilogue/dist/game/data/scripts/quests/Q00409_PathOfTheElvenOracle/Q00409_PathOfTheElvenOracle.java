@@ -50,7 +50,7 @@ public class Q00409_PathOfTheElvenOracle extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 18;
 	// Quest Monster
-	private static final int lIZARDMAN_WARRIOR = 27032;
+	private static final int LIZARDMAN_WARRIOR = 27032;
 	private static final int LIZARDMAN_SCOUT = 27033;
 	private static final int LIZARDMAN_SOLDIER = 27034;
 	private static final int TAMIL = 27035;
@@ -60,8 +60,8 @@ public class Q00409_PathOfTheElvenOracle extends Quest
 		super(409);
 		addStartNpc(PRIEST_MANUEL);
 		addTalkId(PRIEST_MANUEL, ALLANA, PERRIN);
-		addKillId(TAMIL, lIZARDMAN_WARRIOR, LIZARDMAN_SCOUT, LIZARDMAN_SOLDIER);
-		addAttackId(TAMIL, lIZARDMAN_WARRIOR, LIZARDMAN_SCOUT, LIZARDMAN_SOLDIER);
+		addKillId(TAMIL, LIZARDMAN_WARRIOR, LIZARDMAN_SCOUT, LIZARDMAN_SOLDIER);
+		addAttackId(TAMIL, LIZARDMAN_WARRIOR, LIZARDMAN_SCOUT, LIZARDMAN_SOLDIER);
 		registerQuestItems(CRYSTAL_MEDALLION, SWINDLERS_MONEY, ALLANA_OF_DAIRY, LIZARD_CAPTAIN_ORDER, HALF_OF_DAIRY, TAMIL_NECKLACE);
 	}
 	
@@ -127,7 +127,7 @@ public class Q00409_PathOfTheElvenOracle extends Quest
 			case "replay_1":
 			{
 				qs.setMemoState(2);
-				addAttackDesire(addSpawn(lIZARDMAN_WARRIOR, npc, true, 0, false), player);
+				addAttackDesire(addSpawn(LIZARDMAN_WARRIOR, npc, true, 0, false), player);
 				addAttackDesire(addSpawn(LIZARDMAN_SCOUT, npc, true, 0, false), player);
 				addAttackDesire(addSpawn(LIZARDMAN_SOLDIER, npc, true, 0, false), player);
 				break;
@@ -165,7 +165,7 @@ public class Q00409_PathOfTheElvenOracle extends Quest
 				{
 					switch (npc.getId())
 					{
-						case lIZARDMAN_WARRIOR:
+						case LIZARDMAN_WARRIOR:
 						{
 							npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.THE_SACRED_FLAME_IS_OURS));
 							break;
@@ -212,7 +212,7 @@ public class Q00409_PathOfTheElvenOracle extends Quest
 		{
 			switch (npc.getId())
 			{
-				case lIZARDMAN_WARRIOR:
+				case LIZARDMAN_WARRIOR:
 				{
 					if (!hasQuestItems(killer, LIZARD_CAPTAIN_ORDER))
 					{

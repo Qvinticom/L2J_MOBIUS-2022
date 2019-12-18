@@ -547,13 +547,10 @@ public class Q00108_JumbleTumbleDiamondFuss extends Quest
 				}
 				case BLADE_BAT:
 				{
-					if (qs.isCond(11) && hasQuestItems(killer, BAT_DIAGRAM))
+					if (qs.isCond(11) && hasQuestItems(killer, BAT_DIAGRAM) && giveItemRandomly(killer, npc, STAR_DIAMOND, 1, 1, 0.2, true))
 					{
-						if (giveItemRandomly(killer, npc, STAR_DIAMOND, 1, 1, 0.2, true))
-						{
-							takeItems(killer, BAT_DIAGRAM, -1);
-							qs.setCond(12);
-						}
+						takeItems(killer, BAT_DIAGRAM, -1);
+						qs.setCond(12);
 					}
 					break;
 				}

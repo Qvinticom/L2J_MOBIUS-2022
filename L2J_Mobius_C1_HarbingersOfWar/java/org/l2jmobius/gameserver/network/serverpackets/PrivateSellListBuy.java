@@ -41,16 +41,15 @@ public class PrivateSellListBuy extends ServerBasePacket
 		writeD(_buyer.getAdena());
 		final TradeList list = new TradeList(0);
 		final List<TradeItem> buyList = _buyer.getBuyList();
-		int count = _buyer.getInventory().getSize();
 		for (ItemInstance item : _buyer.getInventory().getItems())
 		{
-			if (item.isEquipped() || (item.getItem().getType2() == 3) || ((item.getItem().getType2() == 4) && (item.getItem().getType1() == 4)) || ((item.getItem().getType2() == 1) && (item.getItem().getType1() == 1)) || item.isEquipped())
+			if (item.isEquipped() || (item.getItem().getType2() == 3) || ((item.getItem().getType2() == 4) && (item.getItem().getType1() == 4)) || ((item.getItem().getType2() == 1) && (item.getItem().getType1() == 1)))
 			{
 				continue;
 			}
 			list.addItem(item);
 		}
-		count = list.getItems().size();
+		int count = list.getItems().size();
 		writeD(count);
 		for (ItemInstance item : list.getItems())
 		{

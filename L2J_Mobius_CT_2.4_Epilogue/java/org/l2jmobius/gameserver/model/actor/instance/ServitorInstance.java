@@ -226,7 +226,7 @@ public class ServitorInstance extends Summon implements Runnable
 			ps.setInt(3, _referenceSkill);
 			ps.execute();
 			
-			int buff_index = 0;
+			int buffIndex = 0;
 			
 			final List<Integer> storedSkills = new LinkedList<>();
 			
@@ -273,7 +273,7 @@ public class ServitorInstance extends Summon implements Runnable
 						ps2.setInt(4, skill.getId());
 						ps2.setInt(5, skill.getLevel());
 						ps2.setInt(6, info.getTime());
-						ps2.setInt(7, ++buff_index);
+						ps2.setInt(7, ++buffIndex);
 						ps2.addBatch();
 						
 						SummonEffectsTable.getInstance().addServitorEffect(getOwner(), getReferenceSkill(), skill, info.getTime());

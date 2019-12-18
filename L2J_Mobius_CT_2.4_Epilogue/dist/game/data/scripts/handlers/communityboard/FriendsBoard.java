@@ -58,10 +58,6 @@ public class FriendsBoard implements IParseBoardHandler
 			
 			CommunityBoardHandler.separateAndSend(html, player);
 		}
-		else
-		{
-			
-		}
 		return true;
 	}
 }

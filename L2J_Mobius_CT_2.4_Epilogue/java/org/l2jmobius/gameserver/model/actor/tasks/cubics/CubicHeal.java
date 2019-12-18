@@ -65,14 +65,10 @@ public class CubicHeal implements Runnable
 			
 			_cubic.cubicTargetForHeal();
 			final Creature target = _cubic.getTarget();
-			if ((target != null) && !target.isDead())
+			if ((target != null) && !target.isDead() && ((target.getMaxHp() - target.getCurrentHp()) > skill.getPower()))
 			{
-				if ((target.getMaxHp() - target.getCurrentHp()) > skill.getPower())
-				{
-					skill.activateSkill(_cubic, target);
-					
-					_cubic.getOwner().broadcastPacket(new MagicSkillUse(_cubic.getOwner(), target, skill.getId(), skill.getLevel(), 0, 0));
-				}
+				skill.activateSkill(_cubic, target);
+				_cubic.getOwner().broadcastPacket(new MagicSkillUse(_cubic.getOwner(), target, skill.getId(), skill.getLevel(), 0, 0));
 			}
 		}
 		catch (Exception e)

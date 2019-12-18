@@ -207,13 +207,13 @@ public class AdminAnnouncements implements IAdminCommandHandler
 								announcementDelay = Long.toString(autoAnnounce.getDelay() / 1000);
 								announcementRepeat = Integer.toString(autoAnnounce.getRepeat());
 							}
-							content = content.replaceAll("%id%", announcementId);
-							content = content.replaceAll("%type%", announcementType);
-							content = content.replaceAll("%initial%", announcementInital);
-							content = content.replaceAll("%delay%", announcementDelay);
-							content = content.replaceAll("%repeat%", announcementRepeat);
-							content = content.replaceAll("%author%", announcementAuthor);
-							content = content.replaceAll("%content%", announcementContent);
+							content = content.replace("%id%", announcementId);
+							content = content.replace("%type%", announcementType);
+							content = content.replace("%initial%", announcementInital);
+							content = content.replace("%delay%", announcementDelay);
+							content = content.replace("%repeat%", announcementRepeat);
+							content = content.replace("%author%", announcementAuthor);
+							content = content.replace("%content%", announcementContent);
 							Util.sendCBHtml(activeChar, content);
 							break;
 						}
@@ -433,13 +433,13 @@ public class AdminAnnouncements implements IAdminCommandHandler
 								announcementDelay = Long.toString(autoAnnounce.getDelay() / 1000);
 								announcementRepeat = Integer.toString(autoAnnounce.getRepeat());
 							}
-							content = content.replaceAll("%id%", announcementId);
-							content = content.replaceAll("%type%", announcementType);
-							content = content.replaceAll("%initial%", announcementInital);
-							content = content.replaceAll("%delay%", announcementDelay);
-							content = content.replaceAll("%repeat%", announcementRepeat);
-							content = content.replaceAll("%author%", announcementAuthor);
-							content = content.replaceAll("%content%", announcementContent);
+							content = content.replace("%id%", announcementId);
+							content = content.replace("%type%", announcementType);
+							content = content.replace("%initial%", announcementInital);
+							content = content.replace("%delay%", announcementDelay);
+							content = content.replace("%repeat%", announcementRepeat);
+							content = content.replace("%author%", announcementAuthor);
+							content = content.replace("%content%", announcementContent);
 							Util.sendCBHtml(activeChar, content);
 							break;
 						}
@@ -493,8 +493,8 @@ public class AdminAnnouncements implements IAdminCommandHandler
 							sb.append("</tr>");
 							return sb.toString();
 						});
-						content = content.replaceAll("%pages%", result.getPagerTemplate().toString());
-						content = content.replaceAll("%announcements%", result.getBodyTemplate().toString());
+						content = content.replace("%pages%", result.getPagerTemplate().toString());
+						content = content.replace("%announcements%", result.getBodyTemplate().toString());
 						Util.sendCBHtml(activeChar, content);
 						break;
 					}

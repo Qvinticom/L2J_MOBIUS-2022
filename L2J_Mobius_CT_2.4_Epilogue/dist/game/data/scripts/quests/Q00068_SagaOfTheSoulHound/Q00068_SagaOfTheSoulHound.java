@@ -44,7 +44,7 @@ public class Q00068_SagaOfTheSoulHound extends AbstractSagaQuest
 			31657,
 			32241
 		};
-		Items = new int[]
+		_items = new int[]
 		{
 			7080,
 			9802,
@@ -59,29 +59,29 @@ public class Q00068_SagaOfTheSoulHound extends AbstractSagaQuest
 			9719,
 			0
 		};
-		Mob = new int[]
+		_mob = new int[]
 		{
 			27327,
 			27329,
 			27328
 		};
-		classid = new int[]
+		_classId = new int[]
 		{
 			132,
 			133
 		};
-		prevclass = new int[]
+		_prevClass = new int[]
 		{
 			0x80,
 			0x81
 		};
-		npcSpawnLocations = new Location[]
+		_npcSpawnLocations = new Location[]
 		{
 			new Location(161719, -92823, -1893),
 			new Location(46087, -36372, -1685),
 			new Location(46066, -36396, -1685)
 		};
-		Text = new String[]
+		_text = new String[]
 		{
 			"PLAYERNAME! Pursued to here! However, I jumped out of the Banshouren boundaries! You look at the giant as the sign of power!",
 			"... Oh ... good! So it was ... let's begin!",

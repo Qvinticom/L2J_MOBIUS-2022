@@ -363,8 +363,8 @@ public class Q00135_TempleExecutor extends Quest
 								giveItems(player, SONINS_CREDENTIALS, 1);
 								qs.set("Sonin", "1");
 								htmltext = "31773-04.html";
-								break;
 							}
+							break;
 						}
 						case 5:
 						{

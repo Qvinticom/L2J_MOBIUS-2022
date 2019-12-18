@@ -17,7 +17,6 @@
  */
 package org.l2jmobius.gameserver.network.clientpackets;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import org.l2jmobius.gameserver.IdFactory;
@@ -91,7 +90,7 @@ public class CharacterCreate extends ClientBasePacket
 		return result;
 	}
 	
-	private void initNewChar(ClientThread client, PlayerInstance newChar) throws FileNotFoundException, IOException
+	private void initNewChar(ClientThread client, PlayerInstance newChar) throws IOException
 	{
 		newChar.setObjectId(IdFactory.getInstance().getNextId());
 		World.getInstance().storeObject(newChar);

@@ -923,7 +923,7 @@ public class TullyWorkshop extends AbstractNpcAI
 		}
 		else if (npcId == AGENT)
 		{
-			if (event.equalsIgnoreCase("tele_to_7th_floor") && (allowAgentSpawn == false))
+			if (event.equalsIgnoreCase("tele_to_7th_floor") && !allowAgentSpawn)
 			{
 				htmltext = null;
 				final Party party = player.getParty();
@@ -969,7 +969,7 @@ public class TullyWorkshop extends AbstractNpcAI
 					}
 				}
 			}
-			else if (event.equalsIgnoreCase("buff") && (allowAgentSpawn_7th == false))
+			else if (event.equalsIgnoreCase("buff") && !allowAgentSpawn_7th)
 			{
 				htmltext = null;
 				final Party party = player.getParty();
@@ -1003,7 +1003,7 @@ public class TullyWorkshop extends AbstractNpcAI
 					startQuestTimer("despawn_agent_7", 60000, npc, null);
 				}
 			}
-			else if (event.equalsIgnoreCase("refuse") && (allowAgentSpawn_7th == false))
+			else if (event.equalsIgnoreCase("refuse") && !allowAgentSpawn_7th)
 			{
 				allowAgentSpawn_7th = true;
 				npc.deleteMe();
@@ -1124,22 +1124,16 @@ public class TullyWorkshop extends AbstractNpcAI
 			if ((actor != null) && !actor.isDead())
 			{
 				final double transferringHp = actor.getMaxHp() * 0.0001;
-				if ((getRandom(10000) > 1500) && (victim1 != null) && !victim1.isDead())
+				if ((getRandom(10000) > 1500) && (victim1 != null) && !victim1.isDead() && ((actor.getCurrentHp() - transferringHp) > 1))
 				{
-					if ((actor.getCurrentHp() - transferringHp) > 1)
-					{
-						actor.setCurrentHp(actor.getCurrentHp() - transferringHp);
-						victim1.setCurrentHp(victim1.getCurrentHp() + transferringHp);
-					}
+					actor.setCurrentHp(actor.getCurrentHp() - transferringHp);
+					victim1.setCurrentHp(victim1.getCurrentHp() + transferringHp);
 				}
 				
-				if ((getRandom(10000) > 3000) && (victim2 != null) && !victim2.isDead())
+				if ((getRandom(10000) > 3000) && (victim2 != null) && !victim2.isDead() && ((actor.getCurrentHp() - transferringHp) > 1))
 				{
-					if ((actor.getCurrentHp() - transferringHp) > 1)
-					{
-						actor.setCurrentHp(actor.getCurrentHp() - transferringHp);
-						victim2.setCurrentHp(victim2.getCurrentHp() + transferringHp);
-					}
+					actor.setCurrentHp(actor.getCurrentHp() - transferringHp);
+					victim2.setCurrentHp(victim2.getCurrentHp() + transferringHp);
 				}
 			}
 		}
@@ -1196,7 +1190,7 @@ public class TullyWorkshop extends AbstractNpcAI
 		
 		if ((npcId == TULLY) && npc.isInsideRadius2D(-12557, 273901, -9000, 1000))
 		{
-			for (int i[] : POST_MORTEM_SPAWNLIST)
+			for (int[] i : POST_MORTEM_SPAWNLIST)
 			{
 				final Npc spawnedNpc = addSpawn(i[0], i[1], i[2], i[3], i[4], false, i[5], false);
 				postMortemSpawn.add(spawnedNpc);
@@ -1209,19 +1203,16 @@ public class TullyWorkshop extends AbstractNpcAI
 			_countdown = ThreadPool.scheduleAtFixedRate(() ->
 			{
 				countdownTime -= 10000;
-				Npc _npc = null;
-				if ((postMortemSpawn != null) && (postMortemSpawn.size() > 0))
+				Npc npcSpawn = null;
+				if ((postMortemSpawn != null) && !postMortemSpawn.isEmpty())
 				{
-					_npc = postMortemSpawn.get(0);
+					npcSpawn = postMortemSpawn.get(0);
 				}
 				if (countdownTime > 60000)
 				{
-					if ((countdownTime % 60000) == 0)
+					if (((countdownTime % 60000) == 0) && (npcSpawn != null) && (npcSpawn.getId() == INGENIOUS_CONTRAPTION))
 					{
-						if ((_npc != null) && (_npc.getId() == INGENIOUS_CONTRAPTION))
-						{
-							_npc.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.S1_MINUTE_S_ARE_REMAINING, Integer.toString((countdownTime / 60000)));
-						}
+						npcSpawn.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.S1_MINUTE_S_ARE_REMAINING, Integer.toString((countdownTime / 60000)));
 					}
 				}
 				else if (countdownTime <= 0)
@@ -1252,9 +1243,9 @@ public class TullyWorkshop extends AbstractNpcAI
 				}
 				else
 				{
-					if ((_npc != null) && (_npc.getId() == INGENIOUS_CONTRAPTION))
+					if ((npcSpawn != null) && (npcSpawn.getId() == INGENIOUS_CONTRAPTION))
 					{
-						_npc.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.S1_SECOND_S_REMAINING, Integer.toString((countdownTime / 1000)));
+						npcSpawn.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.S1_SECOND_S_REMAINING, Integer.toString((countdownTime / 1000)));
 					}
 				}
 			}, 60000, 10000);
@@ -1268,7 +1259,7 @@ public class TullyWorkshop extends AbstractNpcAI
 				if (countdownTime > 180000)
 				{
 					countdownTime = Math.max(countdownTime - 180000, 60000);
-					if ((postMortemSpawn != null) && (postMortemSpawn.size() > 0) && (postMortemSpawn.get(0) != null) && (postMortemSpawn.get(0).getId() == INGENIOUS_CONTRAPTION))
+					if ((postMortemSpawn != null) && !postMortemSpawn.isEmpty() && (postMortemSpawn.get(0) != null) && (postMortemSpawn.get(0).getId() == INGENIOUS_CONTRAPTION))
 					{
 						postMortemSpawn.get(0).broadcastSay(ChatType.NPC_SHOUT, NpcStringId.ZZZZ_CITY_INTERFERENCE_ERROR_FORWARD_EFFECT_CREATED);
 					}
@@ -1280,7 +1271,7 @@ public class TullyWorkshop extends AbstractNpcAI
 				if ((countdownTime > 0) && (countdownTime <= 420000))
 				{
 					countdownTime += 180000;
-					if ((postMortemSpawn != null) && (postMortemSpawn.size() > 0) && (postMortemSpawn.get(0) != null) && (postMortemSpawn.get(0).getId() == INGENIOUS_CONTRAPTION))
+					if ((postMortemSpawn != null) && !postMortemSpawn.isEmpty() && (postMortemSpawn.get(0) != null) && (postMortemSpawn.get(0).getId() == INGENIOUS_CONTRAPTION))
 					{
 						postMortemSpawn.get(0).broadcastSay(ChatType.NPC_SHOUT, NpcStringId.ZZZZ_CITY_INTERFERENCE_ERROR_RECURRENCE_EFFECT_CREATED);
 					}

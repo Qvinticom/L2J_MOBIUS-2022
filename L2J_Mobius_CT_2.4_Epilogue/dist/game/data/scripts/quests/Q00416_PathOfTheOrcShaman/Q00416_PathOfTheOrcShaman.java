@@ -347,7 +347,7 @@ public class Q00416_PathOfTheOrcShaman extends Quest
 				{
 					final int random = getRandom(10);
 					final long itemCount = getQuestItemsCount(qs.getPlayer(), DURKA_PARASITE);
-					if ((((itemCount == 5) && (random < 1))) //
+					if (((itemCount == 5) && (random < 1)) //
 						|| ((itemCount == 6) && (random < 2)) //
 						|| ((itemCount == 7) && (random < 2)) //
 						|| (itemCount >= 8))

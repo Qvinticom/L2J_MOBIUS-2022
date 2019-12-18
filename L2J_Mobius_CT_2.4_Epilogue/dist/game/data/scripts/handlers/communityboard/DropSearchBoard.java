@@ -89,7 +89,8 @@ public class DropSearchBoard implements IParseBoardHandler
 	private final Map<Integer, List<CBDropHolder>> DROP_INDEX_CACHE = new HashMap<>();
 	
 	// nonsupport items
-	private final Set<Integer> BLOCK_ID = new HashSet<>();
+	private static final Set<Integer> BLOCK_ID = new HashSet<>();
+	static
 	{
 		BLOCK_ID.add(Inventory.ADENA_ID);
 	}

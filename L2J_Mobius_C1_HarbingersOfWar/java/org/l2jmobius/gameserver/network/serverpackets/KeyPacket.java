@@ -19,7 +19,7 @@ package org.l2jmobius.gameserver.network.serverpackets;
 
 public class KeyPacket extends ServerBasePacket
 {
-	final private byte[] _key;
+	private final byte[] _key;
 	
 	public KeyPacket(byte[] key)
 	{

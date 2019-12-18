@@ -24,10 +24,6 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  **/
 public class ExBirthdayPopup implements IClientOutgoingPacket
 {
-	public ExBirthdayPopup()
-	{
-	}
-	
 	@Override
 	public boolean write(PacketWriter packet)
 	{

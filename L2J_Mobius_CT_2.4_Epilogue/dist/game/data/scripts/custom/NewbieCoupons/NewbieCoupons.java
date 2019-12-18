@@ -154,7 +154,7 @@ public class NewbieCoupons extends AbstractNpcAI
 		return "30598.htm";
 	}
 	
-	public static void main(String args[])
+	public static void main(String[] args)
 	{
 		new NewbieCoupons();
 	}

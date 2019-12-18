@@ -308,6 +308,7 @@ public class AdminAdmin implements IAdminCommandHandler
 		}
 		catch (Exception e)
 		{
+			// Not important.
 		}
 		switch (mode)
 		{

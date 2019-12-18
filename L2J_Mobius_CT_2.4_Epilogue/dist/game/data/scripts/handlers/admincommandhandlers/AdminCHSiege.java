@@ -17,6 +17,7 @@
 package handlers.admincommandhandlers;
 
 import java.util.Calendar;
+import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
 import org.l2jmobius.gameserver.data.sql.impl.ClanTable;
@@ -36,6 +37,8 @@ import org.l2jmobius.gameserver.util.BuilderUtil;
  */
 public class AdminCHSiege implements IAdminCommandHandler
 {
+	private static final Logger LOGGER = Logger.getLogger(AdminCHSiege.class.getName());
+	
 	private static final String[] COMMANDS =
 	{
 		"admin_chsiege_siegablehall",
@@ -355,7 +358,7 @@ public class AdminCHSiege implements IAdminCommandHandler
 		}
 		catch (NumberFormatException e)
 		{
-			e.printStackTrace();
+			LOGGER.warning("Problem with AdminCHSiege: " + e.getMessage());
 		}
 		return val;
 	}

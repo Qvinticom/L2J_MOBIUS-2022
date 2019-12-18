@@ -52,17 +52,17 @@ public class AdminEvents implements IAdminCommandHandler
 			return false;
 		}
 		
-		String event_name = "";
-		String _event_bypass = "";
+		String eventName = "";
+		String eventBypass = "";
 		final StringTokenizer st = new StringTokenizer(command, " ");
 		st.nextToken();
 		if (st.hasMoreTokens())
 		{
-			event_name = st.nextToken();
+			eventName = st.nextToken();
 		}
 		if (st.hasMoreTokens())
 		{
-			_event_bypass = st.nextToken();
+			eventBypass = st.nextToken();
 		}
 		
 		if (command.contains("_menu"))
@@ -74,18 +74,18 @@ public class AdminEvents implements IAdminCommandHandler
 		{
 			try
 			{
-				if (event_name != null)
+				if (eventName != null)
 				{
-					final Event event = (Event) QuestManager.getInstance().getQuest(event_name);
+					final Event event = (Event) QuestManager.getInstance().getQuest(eventName);
 					if (event != null)
 					{
 						if (event.eventStart(activeChar))
 						{
-							BuilderUtil.sendSysMessage(activeChar, "Event " + event_name + " started.");
+							BuilderUtil.sendSysMessage(activeChar, "Event " + eventName + " started.");
 							return true;
 						}
 						
-						BuilderUtil.sendSysMessage(activeChar, "There is problem starting " + event_name + " event.");
+						BuilderUtil.sendSysMessage(activeChar, "There is problem starting " + eventName + " event.");
 						return true;
 					}
 				}
@@ -93,7 +93,6 @@ public class AdminEvents implements IAdminCommandHandler
 			catch (Exception e)
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Usage: //event_start <eventname>");
-				e.printStackTrace();
 				return false;
 			}
 		}
@@ -101,18 +100,18 @@ public class AdminEvents implements IAdminCommandHandler
 		{
 			try
 			{
-				if (event_name != null)
+				if (eventName != null)
 				{
-					final Event event = (Event) QuestManager.getInstance().getQuest(event_name);
+					final Event event = (Event) QuestManager.getInstance().getQuest(eventName);
 					if (event != null)
 					{
 						if (event.eventStop())
 						{
-							BuilderUtil.sendSysMessage(activeChar, "Event " + event_name + " stopped.");
+							BuilderUtil.sendSysMessage(activeChar, "Event " + eventName + " stopped.");
 							return true;
 						}
 						
-						BuilderUtil.sendSysMessage(activeChar, "There is problem with stoping " + event_name + " event.");
+						BuilderUtil.sendSysMessage(activeChar, "There is problem with stoping " + eventName + " event.");
 						return true;
 					}
 				}
@@ -120,7 +119,6 @@ public class AdminEvents implements IAdminCommandHandler
 			catch (Exception e)
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Usage: //event_start <eventname>");
-				e.printStackTrace();
 				return false;
 			}
 		}
@@ -128,19 +126,18 @@ public class AdminEvents implements IAdminCommandHandler
 		{
 			try
 			{
-				if (event_name != null)
+				if (eventName != null)
 				{
-					final Event event = (Event) QuestManager.getInstance().getQuest(event_name);
+					final Event event = (Event) QuestManager.getInstance().getQuest(eventName);
 					if (event != null)
 					{
-						event.eventBypass(activeChar, _event_bypass);
+						event.eventBypass(activeChar, eventBypass);
 					}
 				}
 			}
 			catch (Exception e)
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Usage: //event_bypass <eventname> <bypass>");
-				e.printStackTrace();
 				return false;
 			}
 		}

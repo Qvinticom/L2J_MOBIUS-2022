@@ -18,6 +18,7 @@ package org.l2jmobius.gameserver.data.xml.impl;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.EnumMap;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -44,7 +45,8 @@ import org.l2jmobius.gameserver.network.serverpackets.ShortCutRegister;
  */
 public class InitialShortcutData implements IXmlReader
 {
-	private final Map<ClassId, List<Shortcut>> _initialShortcutData = new HashMap<>();
+	private final Map<ClassId, List<Shortcut>> _initialShortcutData = new EnumMap<>(ClassId.class);
+	
 	private final List<Shortcut> _initialGlobalShortcutList = new ArrayList<>();
 	private final Map<Integer, Macro> _macroPresets = new HashMap<>();
 	

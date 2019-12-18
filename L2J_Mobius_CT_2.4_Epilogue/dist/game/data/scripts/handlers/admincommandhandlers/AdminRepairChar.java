@@ -83,7 +83,7 @@ public class AdminRepairChar implements IAdminCommandHandler
 			
 			if (objId == 0)
 			{
-				con.close();
+				// con.close();
 				return;
 			}
 			

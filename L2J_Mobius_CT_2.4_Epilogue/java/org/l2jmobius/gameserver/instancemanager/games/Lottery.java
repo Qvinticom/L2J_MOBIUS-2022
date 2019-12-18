@@ -409,7 +409,7 @@ public class Lottery
 	
 	public int[] decodeNumbers(int enchant, int type2)
 	{
-		final int res[] = new int[5];
+		final int[] res = new int[5];
 		int id = 0;
 		int nr = 1;
 		
@@ -447,7 +447,7 @@ public class Lottery
 	
 	public long[] checkTicket(int id, int enchant, int type2)
 	{
-		final long res[] =
+		final long[] res =
 		{
 			0,
 			0

@@ -46,7 +46,7 @@ public class Spawn
 	private int _respawnDelay;
 	private final Constructor<?> _constructor;
 	
-	public Spawn(Npc mobTemplate) throws SecurityException, ClassNotFoundException
+	public Spawn(Npc mobTemplate) throws ClassNotFoundException
 	{
 		_template = mobTemplate;
 		final String implementationName = _template.getType();
@@ -182,14 +182,7 @@ public class Spawn
 			};
 			mob = (NpcInstance) _constructor.newInstance(parameters);
 			mob.setObjectId(IdFactory.getInstance().getNextId());
-			if (mob instanceof MonsterInstance)
-			{
-				mob.setAutoAttackable(true);
-			}
-			else
-			{
-				mob.setAutoAttackable(false);
-			}
+			mob.setAutoAttackable(mob instanceof MonsterInstance);
 			if (getRandomx() > 0)
 			{
 				final int random1 = Rnd.get(getRandomx());

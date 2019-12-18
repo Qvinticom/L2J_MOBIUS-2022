@@ -35,13 +35,12 @@ public class RequestExitPartyMatchingWaitingRoom implements IClientIncomingPacke
 	@Override
 	public void run(GameClient client)
 	{
-		final PlayerInstance _player = client.getPlayer();
-		
-		if (_player == null)
+		final PlayerInstance player = client.getPlayer();
+		if (player == null)
 		{
 			return;
 		}
 		
-		PartyMatchWaitingList.getInstance().removePlayer(_player);
+		PartyMatchWaitingList.getInstance().removePlayer(player);
 	}
 }

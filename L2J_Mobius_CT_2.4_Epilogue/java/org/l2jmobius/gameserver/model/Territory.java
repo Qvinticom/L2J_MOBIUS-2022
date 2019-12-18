@@ -130,7 +130,7 @@ public class Territory
 	
 	public boolean isInside(int x, int y)
 	{
-		int intersect_count = 0;
+		int intersectCount = 0;
 		for (int i = 0; i < _points.size(); i++)
 		{
 			final Point p1 = _points.get(i > 0 ? i - 1 : _points.size() - 1);
@@ -138,11 +138,11 @@ public class Territory
 			
 			if (isIntersect(x, y, p1, p2))
 			{
-				intersect_count++;
+				intersectCount++;
 			}
 		}
 		
-		return (intersect_count % 2) == 1;
+		return (intersectCount % 2) == 1;
 	}
 	
 	public Location getRandomPoint()

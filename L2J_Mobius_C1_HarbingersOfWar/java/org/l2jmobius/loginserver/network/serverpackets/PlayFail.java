@@ -19,11 +19,11 @@ package org.l2jmobius.loginserver.network.serverpackets;
 
 public class PlayFail extends ServerBasePacket
 {
-	public static int REASON_TOO_MANY_PLAYERS = 15;
-	public static int REASON1 = 1;
-	public static int REASON2 = 2;
-	public static int REASON3 = 3;
-	public static int REASON4 = 4;
+	public static final int REASON_TOO_MANY_PLAYERS = 15;
+	public static final int REASON1 = 1;
+	public static final int REASON2 = 2;
+	public static final int REASON3 = 3;
+	public static final int REASON4 = 4;
 	
 	private final int _reason;
 	

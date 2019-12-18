@@ -197,6 +197,7 @@ public class FloodProtectorAction
 		}
 		catch (Exception e)
 		{
+			// Ignore.
 		}
 		
 		final ConnectionState state = (ConnectionState) _client.getConnectionState();

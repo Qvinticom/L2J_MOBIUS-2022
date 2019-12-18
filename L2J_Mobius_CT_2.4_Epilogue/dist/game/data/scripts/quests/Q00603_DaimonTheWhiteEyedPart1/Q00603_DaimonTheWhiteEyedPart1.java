@@ -42,7 +42,8 @@ public class Q00603_DaimonTheWhiteEyedPart1 extends Quest
 	private static final int SPIRIT_OF_DARKNESS = 7190;
 	private static final int BROKEN_CRYSTAL = 7191;
 	// Monsters
-	private final Map<Integer, Double> MONSTER_CHANCES = new HashMap<>();
+	private static final Map<Integer, Double> MONSTER_CHANCES = new HashMap<>();
+	static
 	{
 		MONSTER_CHANCES.put(21297, 0.5); // Canyon Bandersnatch Slave
 		MONSTER_CHANCES.put(21299, 0.519); // Buffalo Slave

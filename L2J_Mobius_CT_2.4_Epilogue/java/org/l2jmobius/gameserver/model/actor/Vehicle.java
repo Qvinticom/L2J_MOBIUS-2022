@@ -218,7 +218,7 @@ public abstract class Vehicle extends Creature
 	
 	public void oustPlayers()
 	{
-		_passengers.forEach(p -> oustPlayer(p));
+		_passengers.forEach(this::oustPlayer);
 		_passengers.clear();
 	}
 	
@@ -248,6 +248,7 @@ public abstract class Vehicle extends Creature
 		}
 		catch (Exception e)
 		{
+			// Ignore.
 		}
 	}
 	

@@ -252,10 +252,10 @@ public class SpawnTable implements IXmlReader
 	/**
 	 * Creates NPC spawn
 	 * @param spawnInfo StatsSet of spawn parameters
-	 * @param AIData Map of specific AI parameters for this spawn
+	 * @param aiData Map of specific AI parameters for this spawn
 	 * @return count NPC instances, spawned by this spawn
 	 */
-	private int addSpawn(StatsSet spawnInfo, Map<String, Integer> AIData)
+	private int addSpawn(StatsSet spawnInfo, Map<String, Integer> aiData)
 	{
 		Spawn spawnDat;
 		int ret = 0;
@@ -278,7 +278,7 @@ public class SpawnTable implements IXmlReader
 				spawnDat.setSpawnTerritory(ZoneManager.getInstance().getSpawnTerritory(territoryName));
 			}
 			// Register AI Data for this spawn
-			NpcPersonalAIData.getInstance().storeData(spawnDat, AIData);
+			NpcPersonalAIData.getInstance().storeData(spawnDat, aiData);
 			switch (spawnInfo.getInt("periodOfDay", 0))
 			{
 				case 0: // default

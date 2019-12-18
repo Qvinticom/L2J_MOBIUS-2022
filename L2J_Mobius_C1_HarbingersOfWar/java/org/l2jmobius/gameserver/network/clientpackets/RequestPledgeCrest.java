@@ -26,7 +26,7 @@ import org.l2jmobius.gameserver.network.serverpackets.PledgeCrest;
 
 public class RequestPledgeCrest extends ClientBasePacket
 {
-	final static Logger _log = Logger.getLogger(RequestPledgeCrest.class.getName());
+	private static final Logger _log = Logger.getLogger(RequestPledgeCrest.class.getName());
 	
 	public RequestPledgeCrest(byte[] rawPacket, ClientThread client) throws IOException
 	{

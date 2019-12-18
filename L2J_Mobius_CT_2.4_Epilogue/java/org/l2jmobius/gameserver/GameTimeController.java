@@ -169,15 +169,15 @@ public class GameTimeController extends Thread
 				{
 					Thread.sleep(sleepTime);
 				}
-				catch (InterruptedException e)
+				catch (Exception e)
 				{
+					// Ignore.
 				}
 			}
 			
 			if (isNight() != isNight)
 			{
 				isNight = !isNight;
-				
 				ThreadPool.execute(() -> DayNightSpawnManager.getInstance().notifyChangeMode());
 			}
 		}

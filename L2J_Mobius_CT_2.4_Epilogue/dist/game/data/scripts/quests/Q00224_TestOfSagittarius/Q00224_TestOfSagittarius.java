@@ -1,14 +1,12 @@
 /*
- * Copyright  (C) 2004-2015 L2J DataPack
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J DataPack.
- * 
- * L2J DataPack is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J DataPack is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -398,101 +396,120 @@ public class Q00224_TestOfSagittarius extends Quest
 				}
 				case PREFECT_VOKIAN:
 				{
-					if (memoState == 5)
+					switch (memoState)
 					{
-						if (hasQuestItems(player, HAMILS_2ND_LETTER))
+						case 5:
 						{
-							htmltext = "30514-01.html";
+							if (hasQuestItems(player, HAMILS_2ND_LETTER))
+							{
+								htmltext = "30514-01.html";
+							}
+							break;
 						}
-					}
-					else if (memoState == 6)
-					{
-						htmltext = "30514-03.html";
-					}
-					else if (memoState == 7)
-					{
-						if (hasQuestItems(player, TALISMAN_OF_SNAKE))
+						case 6:
 						{
-							takeItems(player, TALISMAN_OF_SNAKE, 1);
-							qs.setMemoState(8);
-							qs.setCond(8, true);
-							htmltext = "30514-04.html";
+							htmltext = "30514-03.html";
+							break;
 						}
-					}
-					else if (memoState == 8)
-					{
-						htmltext = "30514-05.html";
+						case 7:
+						{
+							if (hasQuestItems(player, TALISMAN_OF_SNAKE))
+							{
+								takeItems(player, TALISMAN_OF_SNAKE, 1);
+								qs.setMemoState(8);
+								qs.setCond(8, true);
+								htmltext = "30514-04.html";
+							}
+							break;
+						}
+						case 8:
+						{
+							htmltext = "30514-05.html";
+							break;
+						}
 					}
 					break;
 				}
 				case SAGITTARIUS_HAMIL:
 				{
-					if (memoState == 1)
+					switch (memoState)
 					{
-						if (hasQuestItems(player, BERNARDS_INTRODUCTION))
+						case 1:
 						{
-							htmltext = "30626-01.html";
+							if (hasQuestItems(player, BERNARDS_INTRODUCTION))
+							{
+								htmltext = "30626-01.html";
+							}
+							break;
 						}
-					}
-					else if (memoState == 2)
-					{
-						if (hasQuestItems(player, HAMILS_1ST_LETTER))
+						case 2:
 						{
-							htmltext = "30626-04.html";
+							if (hasQuestItems(player, HAMILS_1ST_LETTER))
+							{
+								htmltext = "30626-04.html";
+							}
+							break;
 						}
-					}
-					else if (memoState == 4)
-					{
-						if (getQuestItemsCount(player, HUNTERS_1ST_RUNE) == 10)
+						case 4:
 						{
-							htmltext = "30626-05.html";
+							if (getQuestItemsCount(player, HUNTERS_1ST_RUNE) == 10)
+							{
+								htmltext = "30626-05.html";
+							}
+							break;
 						}
-					}
-					else if (memoState == 5)
-					{
-						if (hasQuestItems(player, HAMILS_2ND_LETTER))
+						case 5:
 						{
-							htmltext = "30626-08.html";
+							if (hasQuestItems(player, HAMILS_2ND_LETTER))
+							{
+								htmltext = "30626-08.html";
+							}
+							break;
 						}
-					}
-					else if (memoState == 8)
-					{
-						giveItems(player, HAMILS_3RD_LETTER, 1);
-						takeItems(player, HUNTERS_2ND_RUNE, -1);
-						qs.setMemoState(9);
-						qs.setCond(9, true);
-						htmltext = "30626-09.html";
-					}
-					else if (memoState == 9)
-					{
-						if (hasQuestItems(player, HAMILS_3RD_LETTER))
+						case 8:
 						{
-							htmltext = "30626-10.html";
+							giveItems(player, HAMILS_3RD_LETTER, 1);
+							takeItems(player, HUNTERS_2ND_RUNE, -1);
+							qs.setMemoState(9);
+							qs.setCond(9, true);
+							htmltext = "30626-09.html";
+							break;
 						}
-					}
-					else if (memoState == 12)
-					{
-						if (hasQuestItems(player, CRESCENT_MOON_BOW))
+						case 9:
 						{
-							qs.setCond(13, true);
-							qs.setMemoState(13);
-							htmltext = "30626-11.html";
+							if (hasQuestItems(player, HAMILS_3RD_LETTER))
+							{
+								htmltext = "30626-10.html";
+							}
+							break;
 						}
-					}
-					else if (memoState == 13)
-					{
-						htmltext = "30626-12.html";
-					}
-					else if (memoState == 14)
-					{
-						if (hasQuestItems(player, TALISMAN_OF_KADESH))
+						case 12:
 						{
-							giveAdena(player, 161806, true);
-							giveItems(player, MARK_OF_SAGITTARIUS, 1);
-							addExpAndSp(player, 894888, 61408);
-							qs.exitQuest(false, true);
-							player.sendPacket(new SocialAction(player.getObjectId(), 3));
-							htmltext = "30626-13.html";
+							if (hasQuestItems(player, CRESCENT_MOON_BOW))
+							{
+								qs.setCond(13, true);
+								qs.setMemoState(13);
+								htmltext = "30626-11.html";
+							}
+							break;
+						}
+						case 13:
+						{
+							htmltext = "30626-12.html";
+							break;
+						}
+						case 14:
+						{
+							if (hasQuestItems(player, TALISMAN_OF_KADESH))
+							{
+								giveAdena(player, 161806, true);
+								giveItems(player, MARK_OF_SAGITTARIUS, 1);
+								addExpAndSp(player, 894888, 61408);
+								qs.exitQuest(false, true);
+								player.sendPacket(new SocialAction(player.getObjectId(), 3));
+								htmltext = "30626-13.html";
+							}
+							break;
 						}
 					}
 					break;
@@ -514,37 +531,44 @@ public class Q00224_TestOfSagittarius extends Quest
 				}
 				case MAGISTER_GAUEN:
 				{
-					if (memoState == 9)
+					switch (memoState)
 					{
-						if (hasQuestItems(player, HAMILS_3RD_LETTER))
+						case 9:
 						{
-							takeItems(player, HAMILS_3RD_LETTER, 1);
-							qs.setMemoState(10);
-							qs.setCond(10, true);
-							htmltext = "30717-01.html";
+							if (hasQuestItems(player, HAMILS_3RD_LETTER))
+							{
+								takeItems(player, HAMILS_3RD_LETTER, 1);
+								qs.setMemoState(10);
+								qs.setCond(10, true);
+								htmltext = "30717-01.html";
+							}
+							break;
 						}
-					}
-					else if (memoState == 10)
-					{
-						htmltext = "30717-03.html";
-					}
-					else if (memoState == 12)
-					{
-						htmltext = "30717-04.html";
-					}
-					else if (memoState == 11)
-					{
-						if (hasQuestItems(player, STAKATO_CHITIN, MITHRIL_CLIP, REINFORCED_BOWSTRING, MANASHENS_HORN))
+						case 10:
 						{
-							giveItems(player, WOODEN_ARROW, 10);
-							giveItems(player, CRESCENT_MOON_BOW, 1);
-							takeItems(player, MITHRIL_CLIP, 1);
-							takeItems(player, STAKATO_CHITIN, 1);
-							takeItems(player, REINFORCED_BOWSTRING, 1);
-							takeItems(player, MANASHENS_HORN, 1);
-							qs.setMemoState(12);
-							qs.setCond(12, true);
-							htmltext = "30717-02.html";
+							htmltext = "30717-03.html";
+							break;
+						}
+						case 12:
+						{
+							htmltext = "30717-04.html";
+							break;
+						}
+						case 11:
+						{
+							if (hasQuestItems(player, STAKATO_CHITIN, MITHRIL_CLIP, REINFORCED_BOWSTRING, MANASHENS_HORN))
+							{
+								giveItems(player, WOODEN_ARROW, 10);
+								giveItems(player, CRESCENT_MOON_BOW, 1);
+								takeItems(player, MITHRIL_CLIP, 1);
+								takeItems(player, STAKATO_CHITIN, 1);
+								takeItems(player, REINFORCED_BOWSTRING, 1);
+								takeItems(player, MANASHENS_HORN, 1);
+								qs.setMemoState(12);
+								qs.setCond(12, true);
+								htmltext = "30717-02.html";
+							}
+							break;
 						}
 					}
 					break;

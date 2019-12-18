@@ -231,29 +231,20 @@ public class Q00118_ToLeadAndBeLed extends Quest
 				case MAILLE_LIZARDMAN_SCOUT:
 				case MAILLE_LIZARDMAN_GUARD:
 				{
-					if (qs.isMemoState(1))
+					if (qs.isMemoState(1) && giveItemRandomly(killer, npc, BLOOD_OF_MAILLE_LIZARDMAN, 1, 10, 7, true))
 					{
-						if (giveItemRandomly(killer, npc, BLOOD_OF_MAILLE_LIZARDMAN, 1, 10, 7, true))
-						{
-							qs.setCond(2);
-						}
+						qs.setCond(2);
 					}
 					break;
 				}
 				case KING_OF_THE_ARANEID:
 				{
-					if (qs.isMemoState(4))
+					if (qs.isMemoState(4) && (killer.getSponsor() > 0))
 					{
-						if (killer.getSponsor() > 0)
+						final PlayerInstance c0 = World.getInstance().getPlayer(killer.getSponsor());
+						if ((c0 != null) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, c0, true) && giveItemRandomly(killer, npc, LEG_OF_KING_ARANEID, 1, 8, 7, true))
 						{
-							final PlayerInstance c0 = World.getInstance().getPlayer(killer.getSponsor());
-							if ((c0 != null) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, c0, true))
-							{
-								if (giveItemRandomly(killer, npc, LEG_OF_KING_ARANEID, 1, 8, 7, true))
-								{
-									qs.setCond(8);
-								}
-							}
+							qs.setCond(8);
 						}
 					}
 					break;

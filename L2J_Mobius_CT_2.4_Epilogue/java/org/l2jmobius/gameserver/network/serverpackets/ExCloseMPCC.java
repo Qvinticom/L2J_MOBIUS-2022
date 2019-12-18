@@ -25,10 +25,6 @@ import org.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExCloseMPCC implements IClientOutgoingPacket
 {
-	public ExCloseMPCC()
-	{
-	}
-	
 	@Override
 	public boolean write(PacketWriter packet)
 	{

@@ -28,7 +28,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class TradeRequest extends ClientBasePacket
 {
-	final static Logger _log = Logger.getLogger(TradeRequest.class.getName());
+	private static final Logger _log = Logger.getLogger(TradeRequest.class.getName());
 	
 	public TradeRequest(byte[] decrypt, ClientThread client)
 	{
@@ -37,7 +37,7 @@ public class TradeRequest extends ClientBasePacket
 		final PlayerInstance player = client.getActiveChar();
 		final World world = World.getInstance();
 		final WorldObject target = world.findObject(objectId);
-		if ((target == null) || !(target instanceof PlayerInstance) || (target.getObjectId() != objectId))
+		if (!(target instanceof PlayerInstance) || (target.getObjectId() != objectId))
 		{
 			player.sendPacket(new SystemMessage(SystemMessage.TARGET_IS_INCORRECT));
 			return;

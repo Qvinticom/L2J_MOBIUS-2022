@@ -37,19 +37,19 @@ public class RequestMakeMacro implements IClientIncomingPacket
 	@Override
 	public boolean read(GameClient client, PacketReader packet)
 	{
-		final int _id = packet.readD();
-		final String _name = packet.readS();
-		final String _desc = packet.readS();
-		final String _acronym = packet.readS();
-		final int _icon = packet.readC();
-		int _count = packet.readC();
-		if (_count > MAX_MACRO_LENGTH)
+		final int id = packet.readD();
+		final String name = packet.readS();
+		final String desc = packet.readS();
+		final String acronym = packet.readS();
+		final int icon = packet.readC();
+		int count = packet.readC();
+		if (count > MAX_MACRO_LENGTH)
 		{
-			_count = MAX_MACRO_LENGTH;
+			count = MAX_MACRO_LENGTH;
 		}
 		
-		final List<MacroCmd> commands = new ArrayList<>(_count);
-		for (int i = 0; i < _count; i++)
+		final List<MacroCmd> commands = new ArrayList<>(count);
+		for (int i = 0; i < count; i++)
 		{
 			final int entry = packet.readC();
 			final int type = packet.readC(); // 1 = skill, 3 = action, 4 = shortcut
@@ -59,7 +59,7 @@ public class RequestMakeMacro implements IClientIncomingPacket
 			_commandsLenght += command.length();
 			commands.add(new MacroCmd(entry, MacroType.values()[(type < 1) || (type > 6) ? 0 : type], d1, d2, command));
 		}
-		_macro = new Macro(_id, _icon, _name, _desc, _acronym, commands);
+		_macro = new Macro(id, icon, name, desc, acronym, commands);
 		return true;
 	}
 	

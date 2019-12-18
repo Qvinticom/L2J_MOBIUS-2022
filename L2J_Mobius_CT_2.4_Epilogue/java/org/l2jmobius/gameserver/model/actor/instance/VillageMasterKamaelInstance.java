@@ -75,13 +75,13 @@ public class VillageMasterKamaelInstance extends VillageMasterInstance
 	}
 	
 	@Override
-	protected final boolean checkVillageMasterRace(ClassId pclass)
+	protected final boolean checkVillageMasterRace(ClassId pClass)
 	{
-		if (pclass == null)
+		if (pClass == null)
 		{
 			return false;
 		}
 		
-		return pclass.getRace() == Race.KAMAEL;
+		return pClass.getRace() == Race.KAMAEL;
 	}
 }

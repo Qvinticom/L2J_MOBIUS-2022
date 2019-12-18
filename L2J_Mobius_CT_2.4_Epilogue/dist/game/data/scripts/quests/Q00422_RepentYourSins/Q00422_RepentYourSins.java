@@ -115,24 +115,21 @@ public class Q00422_RepentYourSins extends Quest
 			}
 			case "30981-11.html":
 			{
-				if ((qs.getMemoState() >= 9) && (qs.getMemoState() <= 12))
+				if ((qs.getMemoState() >= 9) && (qs.getMemoState() <= 12) && hasAtLeastOneQuestItem(player, MANACLES_OF_PENITENT, PENITENTS_MANACLES1))
 				{
-					if (hasAtLeastOneQuestItem(player, MANACLES_OF_PENITENT, PENITENTS_MANACLES1))
+					if (hasQuestItems(player, PENITENTS_MANACLES1))
 					{
-						if (hasQuestItems(player, PENITENTS_MANACLES1))
-						{
-							takeItems(player, PENITENTS_MANACLES1, 1);
-						}
-						
-						if (hasQuestItems(player, MANACLES_OF_PENITENT))
-						{
-							takeItems(player, MANACLES_OF_PENITENT, 1);
-						}
-						qs.setMemoStateEx(1, player.getLevel());
-						giveItems(player, PENITENTS_MANACLES, 1);
-						qs.setCond(16);
-						htmltext = event;
+						takeItems(player, PENITENTS_MANACLES1, 1);
 					}
+					
+					if (hasQuestItems(player, MANACLES_OF_PENITENT))
+					{
+						takeItems(player, MANACLES_OF_PENITENT, 1);
+					}
+					qs.setMemoStateEx(1, player.getLevel());
+					giveItems(player, PENITENTS_MANACLES, 1);
+					qs.setCond(16);
+					htmltext = event;
 				}
 				break;
 			}

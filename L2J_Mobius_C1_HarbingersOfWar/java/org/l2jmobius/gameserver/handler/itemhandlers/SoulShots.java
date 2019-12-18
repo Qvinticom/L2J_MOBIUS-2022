@@ -72,12 +72,12 @@ public class SoulShots implements IItemHandler
 		}
 		activeChar.setActiveSoulshotGrade(grade);
 		activeChar.sendPacket(new SystemMessage(SystemMessage.ENABLED_SOULSHOT));
-		final WorldObject OldTarget = activeChar.getTarget();
+		final WorldObject oldTarget = activeChar.getTarget();
 		activeChar.setTarget(activeChar);
-		final MagicSkillUser MSU = new MagicSkillUser(activeChar, 2039, 1, 0, 0);
-		activeChar.sendPacket(MSU);
-		activeChar.broadcastPacket(MSU);
-		activeChar.setTarget(OldTarget);
+		final MagicSkillUser msu = new MagicSkillUser(activeChar, 2039, 1, 0, 0);
+		activeChar.sendPacket(msu);
+		activeChar.broadcastPacket(msu);
+		activeChar.setTarget(oldTarget);
 		return soulShotConsumption;
 	}
 	

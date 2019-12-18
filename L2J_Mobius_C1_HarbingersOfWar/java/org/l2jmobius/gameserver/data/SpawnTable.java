@@ -87,7 +87,7 @@ public class SpawnTable
 		}
 	}
 	
-	private Spawn parseList(String line) throws SecurityException, ClassNotFoundException
+	private Spawn parseList(String line) throws ClassNotFoundException
 	{
 		final StringTokenizer st = new StringTokenizer(line, ";");
 		final int spawnId = Integer.parseInt(st.nextToken());
@@ -115,9 +115,9 @@ public class SpawnTable
 		return spawnDat;
 	}
 	
-	public Spawn getTemplate(int Id)
+	public Spawn getTemplate(int id)
 	{
-		return _spawntable.get(Id);
+		return _spawntable.get(id);
 	}
 	
 	public void addNewSpawn(Spawn spawn)

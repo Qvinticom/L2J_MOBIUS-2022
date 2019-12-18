@@ -541,7 +541,7 @@ public class Duel
 		}
 		
 		// restore player conditions
-		_playerConditions.values().forEach(c -> c.restoreCondition());
+		_playerConditions.values().forEach(PlayerCondition::restoreCondition);
 	}
 	
 	/**

@@ -221,25 +221,19 @@ public class Q00726_LightWithinTheDarkness extends Quest
 			for (PlayerInstance partymember : party.getMembers())
 			{
 				final QuestState qs = partymember.getQuestState(getName());
-				if (qs != null)
+				if ((qs != null) && qs.isCond(1) && (npc.getId() == KANADIS_GUIDE3) && !partymember.isDead() && partymember.isInsideRadius3D(npc, 1000))
 				{
-					if (qs.isCond(1) && (npc.getId() == KANADIS_GUIDE3))
+					if (qs.getInt("kanadis") == 0)
 					{
-						if (!partymember.isDead() && partymember.isInsideRadius3D(npc, 1000))
-						{
-							if (qs.getInt("kanadis") == 0)
-							{
-								qs.set("kanadis", "1");
-							}
-							else
-							{
-								qs.set("done", "1");
-								qs.setCond(2, true);
-								final Instance instanceObj = InstanceManager.getInstance().getInstance(world.getInstanceId());
-								instanceObj.setDuration(360000);
-								instanceObj.removeNpcs();
-							}
-						}
+						qs.set("kanadis", "1");
+					}
+					else
+					{
+						qs.set("done", "1");
+						qs.setCond(2, true);
+						final Instance instanceObj = InstanceManager.getInstance().getInstance(world.getInstanceId());
+						instanceObj.setDuration(360000);
+						instanceObj.removeNpcs();
 					}
 				}
 			}

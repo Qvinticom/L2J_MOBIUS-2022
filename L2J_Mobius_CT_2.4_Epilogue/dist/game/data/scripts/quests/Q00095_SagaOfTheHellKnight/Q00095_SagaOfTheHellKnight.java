@@ -44,7 +44,7 @@ public class Q00095_SagaOfTheHellKnight extends AbstractSagaQuest
 			31656,
 			31297
 		};
-		Items = new int[]
+		_items = new int[]
 		{
 			7080,
 			7532,
@@ -59,27 +59,27 @@ public class Q00095_SagaOfTheHellKnight extends AbstractSagaQuest
 			7086,
 			0
 		};
-		Mob = new int[]
+		_mob = new int[]
 		{
 			27258,
 			27244,
 			27263
 		};
-		classid = new int[]
+		_classId = new int[]
 		{
 			91
 		};
-		prevclass = new int[]
+		_prevClass = new int[]
 		{
 			0x06
 		};
-		npcSpawnLocations = new Location[]
+		_npcSpawnLocations = new Location[]
 		{
 			new Location(164650, -74121, -2871),
 			new Location(47391, -56929, -2370),
 			new Location(47429, -56923, -2383)
 		};
-		Text = new String[]
+		_text = new String[]
 		{
 			"PLAYERNAME! Pursued to here! However, I jumped out of the Banshouren boundaries! You look at the giant as the sign of power!",
 			"... Oh ... good! So it was ... let's begin!",

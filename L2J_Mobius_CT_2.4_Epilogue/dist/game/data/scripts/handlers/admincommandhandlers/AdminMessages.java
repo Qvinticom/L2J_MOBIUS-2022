@@ -101,7 +101,6 @@ public class AdminMessages implements IAdminCommandHandler
 				catch (Exception e)
 				{
 					BuilderUtil.sendSysMessage(activeChar, "Exception: " + e.getMessage());
-					continue;
 				}
 			}
 			activeChar.sendPacket(sm);

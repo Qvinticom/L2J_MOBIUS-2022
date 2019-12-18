@@ -30,7 +30,7 @@ public enum ConnectionState implements IConnectionState
 	ENTERING,
 	IN_GAME;
 	
-	public static ConnectionState[] ENTERING_AND_IN_GAME = new ConnectionState[]
+	public static final ConnectionState[] ENTERING_AND_IN_GAME = new ConnectionState[]
 	{
 		ConnectionState.ENTERING,
 		ConnectionState.IN_GAME

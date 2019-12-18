@@ -360,6 +360,7 @@ public class AdminBuffs implements IAdminCommandHandler
 		}
 		catch (Exception e)
 		{
+			// Checked bellow.
 		}
 		
 		if ((target != null) && (skillId > 0))
@@ -387,6 +388,7 @@ public class AdminBuffs implements IAdminCommandHandler
 		}
 		catch (Exception e)
 		{
+			// Checked bellow.
 		}
 		
 		if (target != null)

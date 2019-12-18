@@ -1095,13 +1095,13 @@ public class CastleChamberlain extends AbstractNpcAI
 			{
 				if (isOwner(player, npc) && player.hasClanPrivilege(ClanPrivilege.CS_USE_FUNCTIONS))
 				{
-					final CastleFunction HP = castle.getFunction(Castle.FUNC_RESTORE_HP);
-					final CastleFunction MP = castle.getFunction(Castle.FUNC_RESTORE_MP);
-					final CastleFunction XP = castle.getFunction(Castle.FUNC_RESTORE_EXP);
+					final CastleFunction hp = castle.getFunction(Castle.FUNC_RESTORE_HP);
+					final CastleFunction mp = castle.getFunction(Castle.FUNC_RESTORE_MP);
+					final CastleFunction xp = castle.getFunction(Castle.FUNC_RESTORE_EXP);
 					final NpcHtmlMessage html = getHtmlPacket(player, npc, "castledecofunction.html");
-					html.replace("%HPDepth%", (HP == null) ? "0" : Integer.toString(HP.getLvl()));
-					html.replace("%MPDepth%", (MP == null) ? "0" : Integer.toString(MP.getLvl()));
-					html.replace("%XPDepth%", (XP == null) ? "0" : Integer.toString(XP.getLvl()));
+					html.replace("%HPDepth%", (hp == null) ? "0" : Integer.toString(hp.getLvl()));
+					html.replace("%MPDepth%", (mp == null) ? "0" : Integer.toString(mp.getLvl()));
+					html.replace("%XPDepth%", (xp == null) ? "0" : Integer.toString(xp.getLvl()));
 					player.sendPacket(html);
 				}
 				else
@@ -1132,12 +1132,9 @@ public class CastleChamberlain extends AbstractNpcAI
 				{
 					final int locId = Integer.parseInt(st.nextToken());
 					final TeleportLocation list = TeleportLocationTable.getInstance().getTemplate(locId);
-					if (list != null)
+					if ((list != null) && takeItems(player, list.getItemId(), list.getPrice()))
 					{
-						if (takeItems(player, list.getItemId(), list.getPrice()))
-						{
-							player.teleToLocation(list.getLocX(), list.getLocY(), list.getLocZ());
-						}
+						player.teleToLocation(list.getLocX(), list.getLocY(), list.getLocZ());
 					}
 				}
 				else

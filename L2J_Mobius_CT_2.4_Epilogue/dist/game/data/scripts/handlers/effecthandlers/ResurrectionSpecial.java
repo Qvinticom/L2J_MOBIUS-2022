@@ -24,7 +24,6 @@ import org.l2jmobius.gameserver.model.effects.AbstractEffect;
 import org.l2jmobius.gameserver.model.effects.EffectFlag;
 import org.l2jmobius.gameserver.model.effects.EffectType;
 import org.l2jmobius.gameserver.model.skills.BuffInfo;
-import org.l2jmobius.gameserver.model.skills.Skill;
 
 /**
  * Resurrection Special effect implementation.
@@ -61,18 +60,15 @@ public class ResurrectionSpecial extends AbstractEffect
 			return;
 		}
 		final PlayerInstance caster = info.getEffector().getActingPlayer();
-		
-		final Skill skill = info.getSkill();
-		
 		if (info.getEffected().isPlayer())
 		{
-			info.getEffected().getActingPlayer().reviveRequest(caster, skill, false, _power);
+			info.getEffected().getActingPlayer().reviveRequest(caster, false, _power);
 			return;
 		}
 		if (info.getEffected().isPet())
 		{
 			final PetInstance pet = (PetInstance) info.getEffected();
-			info.getEffected().getActingPlayer().reviveRequest(pet.getActingPlayer(), skill, true, _power);
+			info.getEffected().getActingPlayer().reviveRequest(pet.getActingPlayer(), true, _power);
 		}
 	}
 }

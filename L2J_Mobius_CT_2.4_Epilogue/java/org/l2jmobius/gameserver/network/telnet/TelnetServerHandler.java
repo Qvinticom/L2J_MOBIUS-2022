@@ -120,7 +120,7 @@ public class TelnetServerHandler extends ChannelInboundHandlerAdapter
 			{
 				response = "Type 'help' to see all available commands." + Config.EOL;
 			}
-			else if (request.toLowerCase().equals("exit"))
+			else if (request.equalsIgnoreCase("exit"))
 			{
 				response = "Have a good day!" + Config.EOL;
 				close = true;

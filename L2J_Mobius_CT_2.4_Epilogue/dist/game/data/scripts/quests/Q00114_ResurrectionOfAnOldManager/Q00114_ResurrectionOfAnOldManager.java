@@ -237,7 +237,7 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 			}
 			case "32047-15b.html":
 			{
-				if ((golem == null) || ((golem != null) && golem.isDead()))
+				if ((golem == null) || golem.isDead())
 				{
 					golem = (Attackable) addSpawn(GUARDIAN, 96977, -110625, -3280, 0, false, 0);
 					golem.broadcastPacket(new NpcSay(golem.getObjectId(), ChatType.NPC_GENERAL, golem.getId(), NpcStringId.YOU_S1_YOU_ATTACKED_WENDY_PREPARE_TO_DIE).addStringParameter(player.getName()));

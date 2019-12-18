@@ -114,24 +114,24 @@ public class HeavyMedal extends LongTimeEvent
 	
 	public int checkLevel(PlayerInstance player)
 	{
-		int _lev = 0;
+		int level = 0;
 		if (hasQuestItems(player, 6402))
 		{
-			_lev = 4;
+			level = 4;
 		}
 		else if (hasQuestItems(player, 6401))
 		{
-			_lev = 3;
+			level = 3;
 		}
 		else if (hasQuestItems(player, 6400))
 		{
-			_lev = 2;
+			level = 2;
 		}
 		else if (hasQuestItems(player, 6399))
 		{
-			_lev = 1;
+			level = 1;
 		}
-		return _lev;
+		return level;
 	}
 	
 	public static void main(String[] args)

@@ -41,7 +41,8 @@ import org.l2jmobius.loginserver.network.serverpackets.ServerList;
 
 public class ClientThread extends Thread
 {
-	private final static Logger _log = Logger.getLogger(ClientThread.class.getName());
+	private static final Logger _log = Logger.getLogger(ClientThread.class.getName());
+	
 	private final InputStream _in;
 	private final OutputStream _out;
 	private final NewCrypt _crypt;
@@ -243,7 +244,7 @@ public class ClientThread extends Thread
 		int a;
 		int charpoint;
 		byte t1;
-		final StringBuffer result = new StringBuffer();
+		final StringBuilder result = new StringBuilder();
 		int counter = 0;
 		for (int i = 0; i < len; ++i)
 		{
@@ -305,7 +306,7 @@ public class ClientThread extends Thread
 	@SuppressWarnings("unused")
 	private String getTerminatedString(byte[] data, int offset)
 	{
-		final StringBuffer result = new StringBuffer();
+		final StringBuilder result = new StringBuilder();
 		for (int i = offset; (i < data.length) && (data[i] != 0); ++i)
 		{
 			result.append((char) data[i]);

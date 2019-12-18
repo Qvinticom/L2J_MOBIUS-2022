@@ -83,71 +83,82 @@ public final class Q00708_PathToBecomingALordGludio extends Quest
 		}
 		
 		final PlayerInstance castleOwner = castle.getOwner().getLeader().getPlayerInstance();
-		if (event.equals("35100-03.html"))
+		switch (event)
 		{
-			qs.startQuest();
-		}
-		else if (event.equals("35100-05.html"))
-		{
-			qs.setCond(2);
-		}
-		else if (event.equals("35100-08.html"))
-		{
-			if (isLordAvailable(2, qs))
+			case "35100-03.html":
 			{
-				castleOwner.getQuestState(getName()).set("confidant", String.valueOf(qs.getPlayer().getObjectId()));
-				castleOwner.getQuestState(getName()).setCond(3);
-				qs.setState(State.STARTED);
+				qs.startQuest();
+				break;
 			}
-			else
+			case "35100-05.html":
 			{
-				htmltext = "35100-05a.html";
+				qs.setCond(2);
+				break;
 			}
-		}
-		else if (event.equals("30298-03.html"))
-		{
-			if (isLordAvailable(3, qs))
+			case "35100-08.html":
 			{
-				castleOwner.getQuestState(getName()).setCond(4);
+				if (isLordAvailable(2, qs))
+				{
+					castleOwner.getQuestState(getName()).set("confidant", String.valueOf(qs.getPlayer().getObjectId()));
+					castleOwner.getQuestState(getName()).setCond(3);
+					qs.setState(State.STARTED);
+				}
+				else
+				{
+					htmltext = "35100-05a.html";
+				}
+				break;
 			}
-			else
+			case "30298-03.html":
 			{
-				htmltext = "30298-03a.html";
+				if (isLordAvailable(3, qs))
+				{
+					castleOwner.getQuestState(getName()).setCond(4);
+				}
+				else
+				{
+					htmltext = "30298-03a.html";
+				}
+				break;
 			}
-		}
-		else if (event.equals("30332-02.html"))
-		{
-			qs.setCond(6);
-		}
-		else if (event.equals("30332-05.html"))
-		{
-			takeItems(player, HEADLESS_KNIGHT_ARMOR, 1);
-			qs.setCond(8);
-			npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_SHOUT, npc.getId(), NpcStringId.LISTEN_YOU_VILLAGERS_OUR_LIEGE_WHO_WILL_SOON_BECOME_A_LORD_HAS_DEFEATED_THE_HEADLESS_KNIGHT_YOU_CAN_NOW_REST_EASY));
-		}
-		else if (event.equals("30298-05.html"))
-		{
-			if (isLordAvailable(8, qs))
+			case "30332-02.html":
 			{
-				takeItems(player, ANIMAL_SKIN, 100);
-				takeItems(player, VARNISH, 100);
-				takeItems(player, IRON_ORE, 100);
-				takeItems(player, COKES, 50);
-				castleOwner.getQuestState(getName()).setCond(9);
+				qs.setCond(6);
+				break;
 			}
-			else
+			case "30332-05.html":
 			{
-				htmltext = "30298-03a.html";
+				takeItems(player, HEADLESS_KNIGHT_ARMOR, 1);
+				qs.setCond(8);
+				npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_SHOUT, npc.getId(), NpcStringId.LISTEN_YOU_VILLAGERS_OUR_LIEGE_WHO_WILL_SOON_BECOME_A_LORD_HAS_DEFEATED_THE_HEADLESS_KNIGHT_YOU_CAN_NOW_REST_EASY));
+				break;
 			}
-		}
-		else if (event.equals("35100-12.html"))
-		{
-			if (castleOwner != null)
+			case "30298-05.html":
 			{
-				final NpcSay packet = new NpcSay(npc.getObjectId(), ChatType.NPC_SHOUT, npc.getId(), NpcStringId.S1_HAS_BECOME_LORD_OF_THE_TOWN_OF_GLUDIO_LONG_MAY_HE_REIGN);
-				packet.addStringParameter(player.getName());
-				npc.broadcastPacket(packet);
-				qs.exitQuest(true, true);
+				if (isLordAvailable(8, qs))
+				{
+					takeItems(player, ANIMAL_SKIN, 100);
+					takeItems(player, VARNISH, 100);
+					takeItems(player, IRON_ORE, 100);
+					takeItems(player, COKES, 50);
+					castleOwner.getQuestState(getName()).setCond(9);
+				}
+				else
+				{
+					htmltext = "30298-03a.html";
+				}
+				break;
+			}
+			case "35100-12.html":
+			{
+				if (castleOwner != null)
+				{
+					final NpcSay packet = new NpcSay(npc.getObjectId(), ChatType.NPC_SHOUT, npc.getId(), NpcStringId.S1_HAS_BECOME_LORD_OF_THE_TOWN_OF_GLUDIO_LONG_MAY_HE_REIGN);
+					packet.addStringParameter(player.getName());
+					npc.broadcastPacket(packet);
+					qs.exitQuest(true, true);
+				}
+				break;
 			}
 		}
 		return htmltext;
@@ -314,13 +325,6 @@ public final class Q00708_PathToBecomingALordGludio extends Quest
 		final Castle castle = CastleManager.getInstance().getCastleById(GLUDIO_CASTLE);
 		final Clan owner = castle.getOwner();
 		final PlayerInstance castleOwner = castle.getOwner().getLeader().getPlayerInstance();
-		if (owner != null)
-		{
-			if ((castleOwner != null) && (castleOwner != qs.getPlayer()) && (owner == qs.getPlayer().getClan()) && (castleOwner.getQuestState(getName()) != null) && castleOwner.getQuestState(getName()).isCond(cond))
-			{
-				return true;
-			}
-		}
-		return false;
+		return (owner != null) && (castleOwner != null) && (castleOwner != qs.getPlayer()) && (owner == qs.getPlayer().getClan()) && (castleOwner.getQuestState(getName()) != null) && castleOwner.getQuestState(getName()).isCond(cond);
 	}
 }

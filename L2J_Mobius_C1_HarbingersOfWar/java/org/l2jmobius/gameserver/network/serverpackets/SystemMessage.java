@@ -101,12 +101,12 @@ public class SystemMessage extends ServerBasePacket
 	public static final int ENABLED_SOULSHOT = 342;
 	public static final int S1_PURCHASED_S2 = 378;
 	public static final int S1_PURCHASED_S2_S3 = 379;
-	public static final int S1_PURCHASED_S3_S2_s = 380;
+	public static final int S1_PURCHASED_S3_S2_S = 380;
 	public static final int S1_DISARMED = 417;
 	public static final int WEIGHT_LIMIT_EXCEEDED = 422;
 	public static final int PURCHASED_S2_FROM_S1 = 559;
 	public static final int PURCHASED_S2_S3_FROM_S1 = 560;
-	public static final int PURCHASED_S3_S2_s_FROM_S1 = 561;
+	public static final int PURCHASED_S3_S2_S_FROM_S1 = 561;
 	public static final int S1_INVITED_YOU_TO_PARTY_FINDER_KEEPER = 572;
 	public static final int S1_INVITED_YOU_TO_PARTY_RANDOM = 573;
 	public static final int S1_S2 = 614;

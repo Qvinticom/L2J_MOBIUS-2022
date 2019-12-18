@@ -61,6 +61,7 @@ public class QuestLink implements IBypassHandler
 		}
 		catch (IndexOutOfBoundsException ioobe)
 		{
+			// Handled bellow.
 		}
 		if (quest.isEmpty())
 		{
@@ -68,7 +69,7 @@ public class QuestLink implements IBypassHandler
 		}
 		else
 		{
-			final int questNameEnd = quest.indexOf(" ");
+			final int questNameEnd = quest.indexOf(' ');
 			if (questNameEnd == -1)
 			{
 				showQuestWindow(player, (Npc) target, quest);
@@ -145,7 +146,7 @@ public class QuestLink implements IBypassHandler
 						final NSLocalisation nsl = ns.getLocalisation(player.getLang());
 						if (nsl != null)
 						{
-							localisation = nsl.getLocalisation(Collections.EMPTY_LIST);
+							localisation = nsl.getLocalisation(Collections.emptyList());
 						}
 					}
 				}
@@ -167,7 +168,7 @@ public class QuestLink implements IBypassHandler
 							final NSLocalisation nsl = ns.getLocalisation(player.getLang());
 							if (nsl != null)
 							{
-								localisation = "<a action=\"bypass -h Quest Q00118_ToLeadAndBeLed sponsor\">[" + nsl.getLocalisation(Collections.EMPTY_LIST) + " (Sponsor)]</a><br>";
+								localisation = "<a action=\"bypass -h Quest Q00118_ToLeadAndBeLed sponsor\">[" + nsl.getLocalisation(Collections.emptyList()) + " (Sponsor)]</a><br>";
 							}
 						}
 					}
@@ -185,7 +186,7 @@ public class QuestLink implements IBypassHandler
 							final NSLocalisation nsl = ns.getLocalisation(player.getLang());
 							if (nsl != null)
 							{
-								localisation = "<a action=\"bypass -h Quest Q00123_TheLeaderAndTheFollower sponsor\">[" + nsl.getLocalisation(Collections.EMPTY_LIST) + " (Sponsor)]</a><br>";
+								localisation = "<a action=\"bypass -h Quest Q00123_TheLeaderAndTheFollower sponsor\">[" + nsl.getLocalisation(Collections.emptyList()) + " (Sponsor)]</a><br>";
 							}
 						}
 					}
@@ -228,19 +229,12 @@ public class QuestLink implements IBypassHandler
 				return;
 			}
 			
-			if (qs == null)
+			if ((qs == null) && (q.getId() >= 1) && (q.getId() < 20000) && (player.getAllActiveQuests().size() > 25))
 			{
-				if ((q.getId() >= 1) && (q.getId() < 20000))
-				{
-					// Too many ongoing quests.
-					if (player.getAllActiveQuests().size() > 25)
-					{
-						final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
-						html.setFile(player, "data/html/fullquest.html");
-						player.sendPacket(html);
-						return;
-					}
-				}
+				final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
+				html.setFile(player, "data/html/fullquest.html");
+				player.sendPacket(html);
+				return;
 			}
 			
 			q.notifyTalk(npc, player);

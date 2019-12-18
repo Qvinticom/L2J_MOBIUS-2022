@@ -182,7 +182,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 {
 	public static final Logger LOGGER = Logger.getLogger(Creature.class.getName());
 	
-	private volatile Set<Creature> _attackByList;
+	private Set<Creature> _attackByList;
 	private volatile boolean _isCastingNow = false;
 	private volatile boolean _isCastingSimultaneouslyNow = false;
 	private Skill _lastSkillCast;
@@ -236,9 +236,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	
 	private boolean _lethalable = true;
 	
-	private volatile Map<Integer, OptionsSkillHolder> _triggerSkills;
+	private Map<Integer, OptionsSkillHolder> _triggerSkills;
 	
-	private volatile Map<Integer, InvulSkillHolder> _invulAgainst;
+	private Map<Integer, InvulSkillHolder> _invulAgainst;
 	/** Creatures effect list. */
 	private final EffectList _effectList = new EffectList(this);
 	/** The creature that summons this character. */
@@ -273,7 +273,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	/** Table of calculators containing all standard NPC calculator (ex : ACCURACY_COMBAT, EVASION_RATE) */
 	private static final Calculator[] NPC_STD_CALCULATOR = Formulas.getStdNPCCalculators();
 	
-	private volatile CreatureAI _ai = null;
+	private CreatureAI _ai = null;
 	
 	/** Future Skill Cast */
 	protected Future<?> _skillCast;

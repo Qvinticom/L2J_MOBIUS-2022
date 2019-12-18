@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class RequestBuyItem extends ClientBasePacket
 {
-	final static Logger _log = Logger.getLogger(RequestBuyItem.class.getName());
+	private static final Logger _log = Logger.getLogger(RequestBuyItem.class.getName());
 	
 	public RequestBuyItem(byte[] decrypt, ClientThread client)
 	{

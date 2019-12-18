@@ -38,7 +38,7 @@ public class ExGetBookMarkInfoPacket implements IClientOutgoingPacket
 	{
 		OutgoingPackets.EX_GET_BOOKMARK_INFO.writeId(packet);
 		packet.writeD(0x00); // Dummy
-		packet.writeD(_player.getBookmarkslot());
+		packet.writeD(_player.getBookmarkSlot());
 		packet.writeD(_player.getTeleportBookmarks().size());
 		
 		for (TeleportBookmark tpbm : _player.getTeleportBookmarks())

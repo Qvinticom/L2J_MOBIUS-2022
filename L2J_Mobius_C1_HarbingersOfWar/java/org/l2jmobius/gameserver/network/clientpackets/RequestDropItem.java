@@ -20,7 +20,6 @@ package org.l2jmobius.gameserver.network.clientpackets;
 import java.util.logging.Logger;
 
 import org.l2jmobius.gameserver.model.World;
-import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.instance.ItemInstance;
 import org.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import org.l2jmobius.gameserver.network.ClientThread;
@@ -31,7 +30,7 @@ import org.l2jmobius.gameserver.network.serverpackets.UserInfo;
 
 public class RequestDropItem extends ClientBasePacket
 {
-	final static Logger _log = Logger.getLogger(RequestDropItem.class.getName());
+	private static final Logger _log = Logger.getLogger(RequestDropItem.class.getName());
 	
 	public RequestDropItem(byte[] decrypt, ClientThread client)
 	{
@@ -87,9 +86,9 @@ public class RequestDropItem extends ClientBasePacket
 			final DropItem di = new DropItem(dropedItem, activeChar.getObjectId());
 			activeChar.sendPacket(di);
 			activeChar.addKnownObjectWithoutCreate(dropedItem);
-			for (Creature player : activeChar.broadcastPacket(di))
+			for (PlayerInstance player : activeChar.broadcastPacket(di))
 			{
-				((PlayerInstance) player).addKnownObjectWithoutCreate(dropedItem);
+				player.addKnownObjectWithoutCreate(dropedItem);
 			}
 			final InventoryUpdate iu = new InventoryUpdate();
 			if (oldCount == dropedItem.getCount())

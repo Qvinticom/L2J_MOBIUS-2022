@@ -42,26 +42,9 @@ public class PartyNotMe implements ITargetTypeHandler
 			final List<PlayerInstance> partyList = creature.getParty().getMembers();
 			for (PlayerInstance partyMember : partyList)
 			{
-				if ((partyMember == null) || partyMember.isDead())
-				{
-					continue;
-				}
-				else if (partyMember == creature)
-				{
-					continue;
-				}
-				else if (!Util.checkIfInRange(Config.ALT_PARTY_RANGE, creature, partyMember, true))
-				{
-					continue;
-				}
-				else if ((skill.getAffectRange() > 0) && !Util.checkIfInRange(skill.getAffectRange(), creature, partyMember, true))
-				{
-					continue;
-				}
-				else
+				if ((partyMember != null) && !partyMember.isDead() && (partyMember != creature) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, creature, partyMember, true) && ((skill.getAffectRange() <= 0) || Util.checkIfInRange(skill.getAffectRange(), creature, partyMember, true)))
 				{
 					targetList.add(partyMember);
-					
 					if ((partyMember.getSummon() != null) && !partyMember.getSummon().isDead())
 					{
 						targetList.add(partyMember.getSummon());

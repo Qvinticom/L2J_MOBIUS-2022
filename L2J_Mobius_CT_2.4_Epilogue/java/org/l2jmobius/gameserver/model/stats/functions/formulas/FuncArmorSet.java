@@ -16,7 +16,7 @@
  */
 package org.l2jmobius.gameserver.model.stats.functions.formulas;
 
-import java.util.HashMap;
+import java.util.EnumMap;
 import java.util.Map;
 
 import org.l2jmobius.gameserver.data.xml.impl.ArmorSetsData;
@@ -33,7 +33,7 @@ import org.l2jmobius.gameserver.model.stats.functions.AbstractFunction;
  */
 public class FuncArmorSet extends AbstractFunction
 {
-	private static final Map<Stats, FuncArmorSet> _fh_instance = new HashMap<>();
+	private static final Map<Stats, FuncArmorSet> _fh_instance = new EnumMap<>(Stats.class);
 	
 	public static AbstractFunction getInstance(Stats st)
 	{

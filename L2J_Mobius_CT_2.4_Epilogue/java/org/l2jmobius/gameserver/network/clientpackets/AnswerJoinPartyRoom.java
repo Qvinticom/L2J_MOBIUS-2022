@@ -85,8 +85,8 @@ public class AnswerJoinPartyRoom implements IClientIncomingPacket
 				
 				player.setPartyRoom(partner.getPartyRoom());
 				
-				player.sendPacket(new PartyMatchDetail(player, room));
-				player.sendPacket(new ExPartyRoomMember(player, room, 0));
+				player.sendPacket(new PartyMatchDetail(room));
+				player.sendPacket(new ExPartyRoomMember(room, 0));
 				
 				for (PlayerInstance member : room.getPartyMembers())
 				{

@@ -75,7 +75,7 @@ public class Q00178_IconicTrinity extends Quest
 			case "32256-13.html":
 			{
 				htmltext = getHtm(player, event);
-				htmltext = htmltext.replaceAll("%name1%", player.getName());
+				htmltext = htmltext.replace("%name1%", player.getName());
 				break;
 			}
 			case "32138-14.htm":
@@ -171,7 +171,7 @@ public class Q00178_IconicTrinity extends Quest
 					qs.setMemoState(4);
 					qs.setCond(2, true);
 					htmltext = getHtm(player, event);
-					htmltext = htmltext.replaceAll("%name1%", player.getName());
+					htmltext = htmltext.replace("%name1%", player.getName());
 				}
 				break;
 			}
@@ -247,7 +247,7 @@ public class Q00178_IconicTrinity extends Quest
 					qs.setMemoState(7);
 					qs.setCond(3, true);
 					htmltext = getHtm(player, event);
-					htmltext = htmltext.replaceAll("%name1%", player.getName());
+					htmltext = htmltext.replace("%name1%", player.getName());
 				}
 				break;
 			}
@@ -333,7 +333,7 @@ public class Q00178_IconicTrinity extends Quest
 					qs.setMemoState(10);
 					qs.setCond(4, true);
 					htmltext = getHtm(player, event);
-					htmltext = htmltext.replaceAll("%name1%", player.getName());
+					htmltext = htmltext.replace("%name1%", player.getName());
 				}
 				break;
 			}

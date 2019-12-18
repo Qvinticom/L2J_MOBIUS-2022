@@ -777,11 +777,11 @@ public class Baium extends AbstractNpcAI
 	
 	private PlayerInstance getRandomPlayer(Npc npc)
 	{
-		for (Creature creature : World.getInstance().getVisibleObjectsInRange(npc, PlayerInstance.class, 2000))
+		for (PlayerInstance player : World.getInstance().getVisibleObjectsInRange(npc, PlayerInstance.class, 2000))
 		{
-			if ((creature != null) && zone.isInsideZone(creature) && !creature.isDead())
+			if ((player != null) && zone.isInsideZone(player) && !player.isDead())
 			{
-				return (PlayerInstance) creature;
+				return player;
 			}
 		}
 		return null;

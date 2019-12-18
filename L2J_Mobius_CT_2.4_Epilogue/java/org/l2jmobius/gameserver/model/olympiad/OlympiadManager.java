@@ -79,7 +79,7 @@ class OlympiadManager implements Runnable
 			return;
 		}
 		
-		Map<Integer, OlympiadGameTask> _gamesQueue = new HashMap<>();
+		Map<Integer, OlympiadGameTask> gamesQueue = new HashMap<>();
 		while (Olympiad.getInstance().inCompPeriod())
 		{
 			if (Olympiad.getNobleCount() == 0)
@@ -95,7 +95,7 @@ class OlympiadManager implements Runnable
 				continue;
 			}
 			
-			int _gamesQueueSize = 0;
+			int gamesQueueSize = 0;
 			
 			// _compStarted = true;
 			List<Integer> readyClasses = Olympiad.hasEnoughRegisteredClassed();
@@ -118,7 +118,7 @@ class OlympiadManager implements Runnable
 								try
 								{
 									_olympiadInstances.put(i, new OlympiadGame(i, CompetitionType.NON_CLASSED, nextOpponents(Olympiad.getRegisteredNonClassBased())));
-									_gamesQueue.put(i, new OlympiadGameTask(_olympiadInstances.get(i)));
+									gamesQueue.put(i, new OlympiadGameTask(_olympiadInstances.get(i)));
 									STADIUMS[i].setStadiaBusy();
 								}
 								catch (Exception ex)
@@ -135,9 +135,9 @@ class OlympiadManager implements Runnable
 										}
 										_olympiadInstances.remove(i);
 									}
-									if (_gamesQueue.get(i) != null)
+									if (gamesQueue.get(i) != null)
 									{
-										_gamesQueue.remove(i);
+										gamesQueue.remove(i);
 									}
 									STADIUMS[i].setStadiaFree();
 									
@@ -150,7 +150,7 @@ class OlympiadManager implements Runnable
 								try
 								{
 									_olympiadInstances.put(i, new OlympiadGame(i, CompetitionType.CLASSED, nextOpponents(getRandomClassList(Olympiad.getRegisteredClassBased(), readyClasses))));
-									_gamesQueue.put(i, new OlympiadGameTask(_olympiadInstances.get(i)));
+									gamesQueue.put(i, new OlympiadGameTask(_olympiadInstances.get(i)));
 									STADIUMS[i].setStadiaBusy();
 								}
 								catch (Exception ex)
@@ -167,9 +167,9 @@ class OlympiadManager implements Runnable
 										}
 										_olympiadInstances.remove(i);
 									}
-									if (_gamesQueue.get(i) != null)
+									if (gamesQueue.get(i) != null)
 									{
-										_gamesQueue.remove(i);
+										gamesQueue.remove(i);
 									}
 									STADIUMS[i].setStadiaFree();
 									
@@ -185,7 +185,7 @@ class OlympiadManager implements Runnable
 								try
 								{
 									_olympiadInstances.put(i, new OlympiadGame(i, CompetitionType.CLASSED, nextOpponents(getRandomClassList(Olympiad.getRegisteredClassBased(), readyClasses))));
-									_gamesQueue.put(i, new OlympiadGameTask(_olympiadInstances.get(i)));
+									gamesQueue.put(i, new OlympiadGameTask(_olympiadInstances.get(i)));
 									STADIUMS[i].setStadiaBusy();
 								}
 								catch (Exception ex)
@@ -202,9 +202,9 @@ class OlympiadManager implements Runnable
 										}
 										_olympiadInstances.remove(i);
 									}
-									if (_gamesQueue.get(i) != null)
+									if (gamesQueue.get(i) != null)
 									{
-										_gamesQueue.remove(i);
+										gamesQueue.remove(i);
 									}
 									STADIUMS[i].setStadiaFree();
 									
@@ -217,7 +217,7 @@ class OlympiadManager implements Runnable
 								try
 								{
 									_olympiadInstances.put(i, new OlympiadGame(i, CompetitionType.NON_CLASSED, nextOpponents(Olympiad.getRegisteredNonClassBased())));
-									_gamesQueue.put(i, new OlympiadGameTask(_olympiadInstances.get(i)));
+									gamesQueue.put(i, new OlympiadGameTask(_olympiadInstances.get(i)));
 									STADIUMS[i].setStadiaBusy();
 								}
 								catch (Exception ex)
@@ -234,9 +234,9 @@ class OlympiadManager implements Runnable
 										}
 										_olympiadInstances.remove(i);
 									}
-									if (_gamesQueue.get(i) != null)
+									if (gamesQueue.get(i) != null)
 									{
-										_gamesQueue.remove(i);
+										gamesQueue.remove(i);
 									}
 									STADIUMS[i].setStadiaFree();
 									
@@ -248,12 +248,12 @@ class OlympiadManager implements Runnable
 					}
 					else
 					{
-						if ((_gamesQueue.get(i) == null) || _gamesQueue.get(i).isTerminated() || (_gamesQueue.get(i)._game == null))
+						if ((gamesQueue.get(i) == null) || gamesQueue.get(i).isTerminated() || (gamesQueue.get(i)._game == null))
 						{
 							try
 							{
 								_olympiadInstances.remove(i);
-								_gamesQueue.remove(i);
+								gamesQueue.remove(i);
 								STADIUMS[i].setStadiaFree();
 								i--;
 							}
@@ -270,14 +270,14 @@ class OlympiadManager implements Runnable
 				 */
 				
 				// Start games
-				_gamesQueueSize = _gamesQueue.size();
-				for (int i = 0; i < _gamesQueueSize; i++)
+				gamesQueueSize = gamesQueue.size();
+				for (int i = 0; i < gamesQueueSize; i++)
 				{
-					if ((_gamesQueue.get(i) != null) && !_gamesQueue.get(i).isTerminated() && !_gamesQueue.get(i).isStarted())
+					if ((gamesQueue.get(i) != null) && !gamesQueue.get(i).isTerminated() && !gamesQueue.get(i).isStarted())
 					{
 						// start new games
-						Thread T = new Thread(_gamesQueue.get(i));
-						T.start();
+						Thread thread = new Thread(gamesQueue.get(i));
+						thread.start();
 					}
 					
 					// Pause one second between games starting to reduce OlympiadManager shout spam.
@@ -315,22 +315,23 @@ class OlympiadManager implements Runnable
 			}
 			catch (InterruptedException e)
 			{
+				// Ignore.
 			}
 			
-			if (_gamesQueue.isEmpty())
+			if (gamesQueue.isEmpty())
 			{
 				allGamesTerminated = true;
 			}
 			else
 			{
-				for (OlympiadGameTask game : _gamesQueue.values())
+				for (OlympiadGameTask game : gamesQueue.values())
 				{
 					allGamesTerminated = allGamesTerminated || game.isTerminated();
 				}
 			}
 		}
 		// when all games terminated clear all
-		_gamesQueue.clear();
+		gamesQueue.clear();
 		_olympiadInstances.clear();
 		Olympiad.clearRegistered();
 		OlympiadGame._battleStarted = false;
@@ -423,13 +424,13 @@ class OlympiadManager implements Runnable
 		
 	}
 	
-	protected HashMap<Integer, String> getAllTitles()
+	protected Map<Integer, String> getAllTitles()
 	{
-		HashMap<Integer, String> titles = new HashMap<>();
+		Map<Integer, String> titles = new HashMap<>();
 		
 		for (OlympiadGame instance : _olympiadInstances.values())
 		{
-			if (instance._gamestarted != true)
+			if (!instance._gamestarted)
 			{
 				continue;
 			}

@@ -56,21 +56,21 @@ public class SkillList implements IBypassHandler
 				}
 				else
 				{
-					boolean own_class = false;
+					boolean ownClass = false;
 					
 					final List<ClassId> classesToTeach = ((NpcInstance) target).getClassesToTeach();
 					for (ClassId cid : classesToTeach)
 					{
 						if (cid.equalsOrChildOf(player.getClassId()))
 						{
-							own_class = true;
+							ownClass = true;
 							break;
 						}
 					}
 					
 					String text = "<html><body><center>Skill learning:</center><br>";
 					
-					if (!own_class)
+					if (!ownClass)
 					{
 						final String charType = player.getClassId().isMage() ? "fighter" : "mage";
 						text += "Skills of your class are the easiest to learn.<br>Skills of another class of your race are a little harder.<br>Skills for classes of another race are extremely difficult.<br>But the hardest of all to learn are the  " + charType + "skills!<br>";

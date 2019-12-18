@@ -27,7 +27,7 @@ import org.l2jmobius.gameserver.network.serverpackets.PetInventoryUpdate;
 
 public class RequestGetItemFromPet extends ClientBasePacket
 {
-	final static Logger _log = Logger.getLogger(RequestGetItemFromPet.class.getName());
+	private static final Logger _log = Logger.getLogger(RequestGetItemFromPet.class.getName());
 	
 	public RequestGetItemFromPet(byte[] decrypt, ClientThread client)
 	{

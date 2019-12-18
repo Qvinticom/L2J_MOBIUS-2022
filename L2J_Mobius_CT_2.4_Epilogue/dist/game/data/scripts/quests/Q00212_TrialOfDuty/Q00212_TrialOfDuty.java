@@ -194,14 +194,11 @@ public class Q00212_TrialOfDuty extends Quest
 			case STRAIN:
 			case GHOUL:
 			{
-				if (qs.isMemoState(5) && !hasQuestItems(killer, TALIANUSS_REPORT))
+				if (qs.isMemoState(5) && !hasQuestItems(killer, TALIANUSS_REPORT) && giveItemRandomly(killer, npc, REPORT_PIECE.getId(), 1, REPORT_PIECE.getCount(), 1, true))
 				{
-					if (giveItemRandomly(killer, npc, REPORT_PIECE.getId(), 1, REPORT_PIECE.getCount(), 1, true))
-					{
-						takeItem(killer, REPORT_PIECE);
-						giveItems(killer, TALIANUSS_REPORT, 1);
-						qs.setCond(6);
-					}
+					takeItem(killer, REPORT_PIECE);
+					giveItems(killer, TALIANUSS_REPORT, 1);
+					qs.setCond(6);
 				}
 				break;
 			}

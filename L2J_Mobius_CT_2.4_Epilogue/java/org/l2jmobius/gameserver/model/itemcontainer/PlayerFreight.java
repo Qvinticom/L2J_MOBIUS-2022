@@ -29,10 +29,10 @@ public class PlayerFreight extends ItemContainer
 	private final PlayerInstance _owner;
 	private final int _ownerId;
 	
-	public PlayerFreight(int object_id)
+	public PlayerFreight(int objectId)
 	{
 		_owner = null;
-		_ownerId = object_id;
+		_ownerId = objectId;
 		restore();
 	}
 	

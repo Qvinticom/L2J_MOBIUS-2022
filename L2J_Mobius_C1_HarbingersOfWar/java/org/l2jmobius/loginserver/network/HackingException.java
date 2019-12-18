@@ -19,7 +19,7 @@ package org.l2jmobius.loginserver.network;
 
 public class HackingException extends Exception
 {
-	String _ip;
+	private final String _ip;
 	
 	public HackingException(String ip)
 	{

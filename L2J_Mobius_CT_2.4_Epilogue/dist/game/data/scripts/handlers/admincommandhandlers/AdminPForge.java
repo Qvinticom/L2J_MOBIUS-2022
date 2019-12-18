@@ -89,12 +89,7 @@ public class AdminPForge implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
-				if (i > 0)
-				{
-					return true;
-				}
-				
-				return false;
+				return i > 0;
 			}
 			
 			if (opCodeLong < 0)
@@ -322,7 +317,6 @@ public class AdminPForge implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
-				e.printStackTrace();
 				showValuesUsage(activeChar);
 				return false;
 			}
@@ -613,7 +607,6 @@ public class AdminPForge implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
-				e.printStackTrace();
 				showSendUsage(activeChar, null, null);
 				return false;
 			}

@@ -205,12 +205,9 @@ public class RequestPreviewItem implements IClientIncomingPacket
 			}
 			else if (template instanceof Armor)
 			{
-				if (player.getRace().ordinal() == 5)
+				if ((player.getRace().ordinal() == 5) && ((template.getItemType() == ArmorType.HEAVY) || (template.getItemType() == ArmorType.MAGIC)))
 				{
-					if ((template.getItemType() == ArmorType.HEAVY) || (template.getItemType() == ArmorType.MAGIC))
-					{
-						continue;
-					}
+					continue;
 				}
 			}
 			

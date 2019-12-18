@@ -31,7 +31,7 @@ public class MonsterRace
 	private final Npc[] _monsters;
 	private int[][] _speeds;
 	private final int[] _first;
-
+	
 	private final int[] _second;
 	
 	protected MonsterRace()
@@ -57,7 +57,6 @@ public class MonsterRace
 					if (_monsters[j].getTemplate().getId() == (id + random))
 					{
 						random = Rnd.get(24);
-						continue;
 					}
 				}
 				break;

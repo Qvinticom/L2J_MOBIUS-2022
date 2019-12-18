@@ -50,7 +50,7 @@ public class DatabaseFactory
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			LOGGER.info("Database: Problem on initialize. " + e);
 		}
 	}
 	

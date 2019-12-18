@@ -43,7 +43,6 @@ public class Config
 	private static final String NPC_CONFIG_FILE = "./config/npc.ini";
 	
 	// Game
-	public static String _ip;
 	public static int SERVER_PORT;
 	public static String SERVER_HOST_NAME;
 	public static int CLIENT_PROTOCOL_VERSION;

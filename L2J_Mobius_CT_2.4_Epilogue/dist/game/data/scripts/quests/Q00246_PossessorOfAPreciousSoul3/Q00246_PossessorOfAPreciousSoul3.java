@@ -245,26 +245,20 @@ public class Q00246_PossessorOfAPreciousSoul3 extends Quest
 				for (PlayerInstance member : player.getParty().getMembers())
 				{
 					pst = member.getQuestState(getName());
-					if (pst != null)
+					if ((pst != null) && pst.isCond(4) && !hasQuestItems(member, RAIN_SONG))
 					{
-						if (pst.isCond(4) && !hasQuestItems(member, RAIN_SONG))
-						{
-							giveItems(member, RAIN_SONG, 1);
-							pst.setCond(5, true);
-						}
+						giveItems(member, RAIN_SONG, 1);
+						pst.setCond(5, true);
 					}
 				}
 			}
 			else
 			{
 				pst = player.getQuestState(getName());
-				if (pst != null)
+				if ((pst != null) && pst.isCond(4) && !hasQuestItems(player, RAIN_SONG))
 				{
-					if (pst.isCond(4) && !hasQuestItems(player, RAIN_SONG))
-					{
-						giveItems(player, RAIN_SONG, 1);
-						pst.setCond(5, true);
-					}
+					giveItems(player, RAIN_SONG, 1);
+					pst.setCond(5, true);
 				}
 			}
 		}

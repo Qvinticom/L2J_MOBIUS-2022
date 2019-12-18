@@ -84,36 +84,32 @@ public class Chimeras extends AbstractNpcAI
 	@Override
 	public String onSkillSee(Npc npc, PlayerInstance caster, Skill skill, WorldObject[] targets, boolean isSummon)
 	{
-		if ((skill.getId() == BOTTLE) && !npc.isDead())
+		if (((skill.getId() == BOTTLE) && !npc.isDead()) //
+			&& ((targets.length > 0) && (targets[0] == npc)) //
+			&& (npc.getCurrentHp() < (npc.getMaxHp() * 0.1)))
 		{
-			if ((targets.length > 0) && (targets[0] == npc))
+			if (HellboundEngine.getInstance().getLevel() == 7)
 			{
-				if (npc.getCurrentHp() < (npc.getMaxHp() * 0.1))
+				HellboundEngine.getInstance().updateTrust(3, true);
+			}
+			
+			npc.setIsDead(true);
+			if (npc.getId() == CELTUS)
+			{
+				npc.dropItem(caster, CONTAINED_LIFE_FORCE, CONTAINED_LIFE_FORCE_AMOUNT);
+			}
+			else
+			{
+				if (getRandom(100) < 80)
 				{
-					if (HellboundEngine.getInstance().getLevel() == 7)
-					{
-						HellboundEngine.getInstance().updateTrust(3, true);
-					}
-					
-					npc.setIsDead(true);
-					if (npc.getId() == CELTUS)
-					{
-						npc.dropItem(caster, CONTAINED_LIFE_FORCE, CONTAINED_LIFE_FORCE_AMOUNT);
-					}
-					else
-					{
-						if (getRandom(100) < 80)
-						{
-							npc.dropItem(caster, DIM_LIFE_FORCE, 1);
-						}
-						else if (getRandom(100) < 80)
-						{
-							npc.dropItem(caster, LIFE_FORCE, 1);
-						}
-					}
-					npc.onDecay();
+					npc.dropItem(caster, DIM_LIFE_FORCE, 1);
+				}
+				else if (getRandom(100) < 80)
+				{
+					npc.dropItem(caster, LIFE_FORCE, 1);
 				}
 			}
+			npc.onDecay();
 		}
 		return super.onSkillSee(npc, caster, skill, targets, isSummon);
 	}

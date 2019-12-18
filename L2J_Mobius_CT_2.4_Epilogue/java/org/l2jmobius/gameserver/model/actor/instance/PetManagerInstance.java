@@ -96,7 +96,6 @@ public class PetManagerInstance extends MerchantInstance
 					break;
 				}
 			}
-			return;
 		}
 		else if (command.startsWith("evolve"))
 		{
@@ -139,7 +138,6 @@ public class PetManagerInstance extends MerchantInstance
 				html.setFile(player, "data/html/petmanager/evolve_no.htm");
 				player.sendPacket(html);
 			}
-			return;
 		}
 		else if (command.startsWith("restore"))
 		{
@@ -181,7 +179,6 @@ public class PetManagerInstance extends MerchantInstance
 				html.setFile(player, "data/html/petmanager/restore_no.htm");
 				player.sendPacket(html);
 			}
-			return;
 		}
 		else
 		{

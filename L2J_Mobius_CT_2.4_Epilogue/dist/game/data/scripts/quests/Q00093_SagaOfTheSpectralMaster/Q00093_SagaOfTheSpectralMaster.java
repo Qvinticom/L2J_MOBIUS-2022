@@ -44,7 +44,7 @@ public class Q00093_SagaOfTheSpectralMaster extends AbstractSagaQuest
 			31656,
 			31613
 		};
-		Items = new int[]
+		_items = new int[]
 		{
 			7080,
 			7606,
@@ -59,27 +59,27 @@ public class Q00093_SagaOfTheSpectralMaster extends AbstractSagaQuest
 			7112,
 			0
 		};
-		Mob = new int[]
+		_mob = new int[]
 		{
 			27315,
 			27242,
 			27312
 		};
-		classid = new int[]
+		_classId = new int[]
 		{
 			111
 		};
-		prevclass = new int[]
+		_prevClass = new int[]
 		{
 			0x29
 		};
-		npcSpawnLocations = new Location[]
+		_npcSpawnLocations = new Location[]
 		{
 			new Location(164650, -74121, -2871),
 			new Location(47429, -56923, -2383),
 			new Location(47391, -56929, -2370)
 		};
-		Text = new String[]
+		_text = new String[]
 		{
 			"PLAYERNAME! Pursued to here! However, I jumped out of the Banshouren boundaries! You look at the giant as the sign of power!",
 			"... Oh ... good! So it was ... let's begin!",

@@ -98,7 +98,7 @@ public class SevenSigns
 	public static final int SEAL_STONE_GREEN_ID = 6361;
 	public static final int SEAL_STONE_RED_ID = 6362;
 	
-	public static final int[] SEAL_STONE_IDS =
+	protected static final int[] SEAL_STONE_IDS =
 	{
 		SEAL_STONE_BLUE_ID,
 		SEAL_STONE_GREEN_ID,
@@ -230,11 +230,7 @@ public class SevenSigns
 		}
 		
 		// because of previous "date" column usage, check only if it already contains usable data for us
-		if ((_lastSave.getTimeInMillis() > 7) && _lastSave.before(lastPeriodChange))
-		{
-			return true;
-		}
-		return false;
+		return (_lastSave.getTimeInMillis() > 7) && _lastSave.before(lastPeriodChange);
 	}
 	
 	/**
@@ -1728,16 +1724,10 @@ public class SevenSigns
 			return true;
 		}
 		// Golems cannot be summoned by Dusk when the Seal of Strife is controlled by the Dawn
-		if (isSealValidationPeriod())
+		if (isSealValidationPeriod() && (getSealOwner(SEAL_STRIFE) == CABAL_DAWN) && (getPlayerCabal(player.getObjectId()) == CABAL_DUSK))
 		{
-			if (getSealOwner(SEAL_STRIFE) == CABAL_DAWN)
-			{
-				if (getPlayerCabal(player.getObjectId()) == CABAL_DUSK)
-				{
-					player.sendPacket(SystemMessageId.DUE_TO_THE_AFFECTS_OF_THE_SEAL_OF_STRIFE_IT_IS_NOT_POSSIBLE_TO_SUMMON_AT_THIS_TIME);
-					return true;
-				}
-			}
+			player.sendPacket(SystemMessageId.DUE_TO_THE_AFFECTS_OF_THE_SEAL_OF_STRIFE_IT_IS_NOT_POSSIBLE_TO_SUMMON_AT_THIS_TIME);
+			return true;
 		}
 		
 		return false;

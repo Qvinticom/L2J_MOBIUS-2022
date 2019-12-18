@@ -120,9 +120,9 @@ public class Warpgate extends AbstractNpcAI
 			return true;
 		}
 		
-		final QuestState path_to_hellbound_st = player.getQuestState(Q00130_PathToHellbound.class.getSimpleName());
-		final QuestState thats_bloody_hot_st = player.getQuestState(Q00133_ThatsBloodyHot.class.getSimpleName());
+		final QuestState qs1 = player.getQuestState(Q00130_PathToHellbound.class.getSimpleName());
+		final QuestState qs2 = player.getQuestState(Q00133_ThatsBloodyHot.class.getSimpleName());
 		
-		return (((path_to_hellbound_st != null) && path_to_hellbound_st.isCompleted()) || ((thats_bloody_hot_st != null) && thats_bloody_hot_st.isCompleted()));
+		return (((qs1 != null) && qs1.isCompleted()) || ((qs2 != null) && qs2.isCompleted()));
 	}
 }

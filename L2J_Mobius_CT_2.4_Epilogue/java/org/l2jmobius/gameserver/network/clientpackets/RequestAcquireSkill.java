@@ -417,87 +417,84 @@ public class RequestAcquireSkill implements IClientIncomingPacket
 	 */
 	private boolean checkPlayerSkill(PlayerInstance player, Npc trainer, SkillLearn skillLearn)
 	{
-		if (skillLearn != null)
+		if ((skillLearn != null) && (skillLearn.getSkillId() == _id) && (skillLearn.getSkillLevel() == _level))
 		{
-			if ((skillLearn.getSkillId() == _id) && (skillLearn.getSkillLevel() == _level))
+			// Hack check.
+			if (skillLearn.getGetLevel() > player.getLevel())
 			{
-				// Hack check.
-				if (skillLearn.getGetLevel() > player.getLevel())
-				{
-					player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_SKILL_LEVEL_REQUIREMENTS);
-					Util.handleIllegalPlayerAction(player, "Player " + player.getName() + ", level " + player.getLevel() + " is requesting skill Id: " + _id + " level " + _level + " without having minimum required level, " + skillLearn.getGetLevel() + "!", IllegalActionPunishmentType.NONE);
-					return false;
-				}
-				
-				// First it checks that the skill require SP and the player has enough SP to learn it.
-				final int levelUpSp = skillLearn.getCalculatedLevelUpSp(player.getClassId(), player.getLearningClass());
-				if ((levelUpSp > 0) && (levelUpSp > player.getSp()))
-				{
-					player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SP_TO_LEARN_THIS_SKILL);
-					showSkillList(trainer, player);
-					return false;
-				}
-				
-				if (!Config.DIVINE_SP_BOOK_NEEDED && (_id == CommonSkill.DIVINE_INSPIRATION.getId()))
-				{
-					return true;
-				}
-				
-				// Check for required skills.
-				if (!skillLearn.getPreReqSkills().isEmpty())
-				{
-					for (SkillHolder skill : skillLearn.getPreReqSkills())
-					{
-						if (player.getSkillLevel(skill.getSkillId()) < skill.getSkillLevel())
-						{
-							if (skill.getSkillId() == CommonSkill.ONYX_BEAST_TRANSFORMATION.getId())
-							{
-								player.sendPacket(SystemMessageId.YOU_MUST_LEARN_THE_ONYX_BEAST_SKILL_BEFORE_YOU_CAN_ACQUIRE_FURTHER_SKILLS);
-							}
-							else
-							{
-								player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_THE_NECESSARY_MATERIALS_OR_PREREQUISITES_TO_LEARN_THIS_SKILL);
-							}
-							return false;
-						}
-					}
-				}
-				
-				// Check for required items.
-				if (!skillLearn.getRequiredItems().isEmpty())
-				{
-					// Then checks that the player has all the items
-					long reqItemCount = 0;
-					for (ItemHolder item : skillLearn.getRequiredItems())
-					{
-						reqItemCount = player.getInventory().getInventoryItemCount(item.getId(), -1);
-						if (reqItemCount < item.getCount())
-						{
-							// Player doesn't have required item.
-							player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_THE_NECESSARY_MATERIALS_OR_PREREQUISITES_TO_LEARN_THIS_SKILL);
-							showSkillList(trainer, player);
-							return false;
-						}
-					}
-					// If the player has all required items, they are consumed.
-					for (ItemHolder itemIdCount : skillLearn.getRequiredItems())
-					{
-						if (!player.destroyItemByItemId("SkillLearn", itemIdCount.getId(), itemIdCount.getCount(), trainer, true))
-						{
-							Util.handleIllegalPlayerAction(player, "Somehow player " + player.getName() + ", level " + player.getLevel() + " lose required item Id: " + itemIdCount.getId() + " to learn skill while learning skill Id: " + _id + " level " + _level + "!", IllegalActionPunishmentType.NONE);
-						}
-					}
-				}
-				// If the player has SP and all required items then consume SP.
-				if (levelUpSp > 0)
-				{
-					player.setSp(player.getSp() - levelUpSp);
-					final StatusUpdate su = new StatusUpdate(player);
-					su.addAttribute(StatusUpdate.SP, (int) player.getSp());
-					player.sendPacket(su);
-				}
+				player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_SKILL_LEVEL_REQUIREMENTS);
+				Util.handleIllegalPlayerAction(player, "Player " + player.getName() + ", level " + player.getLevel() + " is requesting skill Id: " + _id + " level " + _level + " without having minimum required level, " + skillLearn.getGetLevel() + "!", IllegalActionPunishmentType.NONE);
+				return false;
+			}
+			
+			// First it checks that the skill require SP and the player has enough SP to learn it.
+			final int levelUpSp = skillLearn.getCalculatedLevelUpSp(player.getClassId(), player.getLearningClass());
+			if ((levelUpSp > 0) && (levelUpSp > player.getSp()))
+			{
+				player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SP_TO_LEARN_THIS_SKILL);
+				showSkillList(trainer, player);
+				return false;
+			}
+			
+			if (!Config.DIVINE_SP_BOOK_NEEDED && (_id == CommonSkill.DIVINE_INSPIRATION.getId()))
+			{
 				return true;
 			}
+			
+			// Check for required skills.
+			if (!skillLearn.getPreReqSkills().isEmpty())
+			{
+				for (SkillHolder skill : skillLearn.getPreReqSkills())
+				{
+					if (player.getSkillLevel(skill.getSkillId()) < skill.getSkillLevel())
+					{
+						if (skill.getSkillId() == CommonSkill.ONYX_BEAST_TRANSFORMATION.getId())
+						{
+							player.sendPacket(SystemMessageId.YOU_MUST_LEARN_THE_ONYX_BEAST_SKILL_BEFORE_YOU_CAN_ACQUIRE_FURTHER_SKILLS);
+						}
+						else
+						{
+							player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_THE_NECESSARY_MATERIALS_OR_PREREQUISITES_TO_LEARN_THIS_SKILL);
+						}
+						return false;
+					}
+				}
+			}
+			
+			// Check for required items.
+			if (!skillLearn.getRequiredItems().isEmpty())
+			{
+				// Then checks that the player has all the items
+				long reqItemCount = 0;
+				for (ItemHolder item : skillLearn.getRequiredItems())
+				{
+					reqItemCount = player.getInventory().getInventoryItemCount(item.getId(), -1);
+					if (reqItemCount < item.getCount())
+					{
+						// Player doesn't have required item.
+						player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_THE_NECESSARY_MATERIALS_OR_PREREQUISITES_TO_LEARN_THIS_SKILL);
+						showSkillList(trainer, player);
+						return false;
+					}
+				}
+				// If the player has all required items, they are consumed.
+				for (ItemHolder itemIdCount : skillLearn.getRequiredItems())
+				{
+					if (!player.destroyItemByItemId("SkillLearn", itemIdCount.getId(), itemIdCount.getCount(), trainer, true))
+					{
+						Util.handleIllegalPlayerAction(player, "Somehow player " + player.getName() + ", level " + player.getLevel() + " lose required item Id: " + itemIdCount.getId() + " to learn skill while learning skill Id: " + _id + " level " + _level + "!", IllegalActionPunishmentType.NONE);
+					}
+				}
+			}
+			// If the player has SP and all required items then consume SP.
+			if (levelUpSp > 0)
+			{
+				player.setSp(player.getSp() - levelUpSp);
+				final StatusUpdate su = new StatusUpdate(player);
+				su.addAttribute(StatusUpdate.SP, (int) player.getSp());
+				player.sendPacket(su);
+			}
+			return true;
 		}
 		return false;
 	}

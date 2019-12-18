@@ -16,8 +16,8 @@
  */
 package org.l2jmobius.gameserver.model.actor.instance;
 
-import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.logging.Logger;
 
 import org.l2jmobius.Config;
@@ -250,7 +250,7 @@ public class OlympiadManagerInstance extends Npc
 			{
 				case 1:
 				{
-					HashMap<Integer, String> matches = Olympiad.getInstance().getMatchList();
+					Map<Integer, String> matches = Olympiad.getInstance().getMatchList();
 					reply.setFile(player, Olympiad.OLYMPIAD_HTML_PATH + "olympiad_observe1.htm");
 					
 					for (int i = 0; i < Olympiad.getStadiumCount(); i++)

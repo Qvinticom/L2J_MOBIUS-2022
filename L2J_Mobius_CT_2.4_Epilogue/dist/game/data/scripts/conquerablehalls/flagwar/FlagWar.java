@@ -131,8 +131,8 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 			{
 				final Clan clan = ClanTable.getInstance().getClan(_hall.getOwnerId());
 				String content = getHtm(player, "messenger_initial.htm");
-				content = content.replaceAll("%clanName%", (clan == null) ? "no owner" : clan.getName());
-				content = content.replaceAll("%objectId%", String.valueOf(npc.getObjectId()));
+				content = content.replace("%clanName%", (clan == null) ? "no owner" : clan.getName());
+				content = content.replace("%objectId%", String.valueOf(npc.getObjectId()));
 				html = content;
 			}
 			else
@@ -360,11 +360,11 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 		if (_hall.isInSiege())
 		{
 			final int npcId = npc.getId();
-			for (int keys : _data.keySet())
+			for (Entry<Integer, ClanData> entry : _data.entrySet())
 			{
-				if (_data.get(keys).npc == npcId)
+				if (entry.getValue().npc == npcId)
 				{
-					removeParticipant(keys, true);
+					removeParticipant(entry.getKey(), true);
 				}
 			}
 			
@@ -544,8 +544,7 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 			catch (Exception e)
 			{
 				endSiege();
-				LOGGER.warning(getName() + ": Problems in siege initialization!");
-				e.printStackTrace();
+				LOGGER.warning(getName() + ": Problems in siege initialization! " + e);
 			}
 		}
 	}
@@ -569,14 +568,7 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 		{
 			for (int clanId : _data.keySet())
 			{
-				if (_hall.getOwnerId() == clanId)
-				{
-					removeParticipant(clanId, false);
-				}
-				else
-				{
-					removeParticipant(clanId, true);
-				}
+				removeParticipant(clanId, _hall.getOwnerId() != clanId);
 			}
 		}
 		clearTables();
@@ -652,7 +644,6 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 		catch (Exception e)
 		{
 			LOGGER.warning(getName() + ": Couldnt make clan spawns: " + e.getMessage());
-			e.printStackTrace();
 		}
 	}
 	
@@ -790,7 +781,6 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 		catch (Exception e)
 		{
 			LOGGER.warning(getName() + ".loadAttackers()->" + e.getMessage());
-			e.printStackTrace();
 		}
 	}
 	
@@ -799,7 +789,6 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final ArrayList<Integer> listInstance = _data.get(clanId).players;
-			
 			if (listInstance == null)
 			{
 				LOGGER.warning(getName() + ": Tried to load unregistered clan with ID " + clanId);
@@ -820,7 +809,6 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 		catch (Exception e)
 		{
 			LOGGER.warning(getName() + ".loadAttackerMembers()->" + e.getMessage());
-			e.printStackTrace();
 		}
 	}
 	
@@ -839,7 +827,6 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 		catch (Exception e)
 		{
 			LOGGER.warning(getName() + ".saveClan()->" + e.getMessage());
-			e.printStackTrace();
 		}
 	}
 	
@@ -856,7 +843,6 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 		catch (Exception e)
 		{
 			LOGGER.warning(getName() + ".saveNpc()->" + e.getMessage());
-			e.printStackTrace();
 		}
 	}
 	
@@ -874,7 +860,6 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 		catch (Exception e)
 		{
 			LOGGER.warning(getName() + ".saveMember()->" + e.getMessage());
-			e.printStackTrace();
 		}
 	}
 	

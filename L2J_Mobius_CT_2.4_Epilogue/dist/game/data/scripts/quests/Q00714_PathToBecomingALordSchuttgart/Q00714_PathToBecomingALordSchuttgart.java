@@ -85,30 +85,38 @@ public final class Q00714_PathToBecomingALordSchuttgart extends Quest
 			return "Castle has no lord.";
 		}
 		
-		if (event.equals("35555-03.html"))
+		switch (event)
 		{
-			qs.startQuest();
-		}
-		else if (event.equals("35555-05.html"))
-		{
-			qs.setCond(2);
-		}
-		else if (event.equals("31961-03.html"))
-		{
-			qs.setCond(3);
-		}
-		else if (event.equals("31958-02.html"))
-		{
-			qs.setCond(5);
-		}
-		else if (event.equals("35555-08.html"))
-		{
-			if (castle.getOwner().getLeader().getPlayerInstance() != null)
+			case "35555-03.html":
 			{
-				final NpcSay packet = new NpcSay(npc.getObjectId(), ChatType.NPC_SHOUT, npc.getId(), NpcStringId.S1_HAS_BECOME_THE_LORD_OF_THE_TOWN_OF_SCHUTTGART_MAY_THERE_BE_GLORY_IN_THE_TERRITORY_OF_SCHUTTGART);
-				packet.addStringParameter(player.getName());
-				npc.broadcastPacket(packet);
-				qs.exitQuest(true, true);
+				qs.startQuest();
+				break;
+			}
+			case "35555-05.html":
+			{
+				qs.setCond(2);
+				break;
+			}
+			case "31961-03.html":
+			{
+				qs.setCond(3);
+				break;
+			}
+			case "31958-02.html":
+			{
+				qs.setCond(5);
+				break;
+			}
+			case "35555-08.html":
+			{
+				if (castle.getOwner().getLeader().getPlayerInstance() != null)
+				{
+					final NpcSay packet = new NpcSay(npc.getObjectId(), ChatType.NPC_SHOUT, npc.getId(), NpcStringId.S1_HAS_BECOME_THE_LORD_OF_THE_TOWN_OF_SCHUTTGART_MAY_THERE_BE_GLORY_IN_THE_TERRITORY_OF_SCHUTTGART);
+					packet.addStringParameter(player.getName());
+					npc.broadcastPacket(packet);
+					qs.exitQuest(true, true);
+				}
+				break;
 			}
 		}
 		return event;

@@ -44,7 +44,7 @@ public class Q00080_SagaOfTheWindRider extends AbstractSagaQuest
 			31659,
 			31616
 		};
-		Items = new int[]
+		_items = new int[]
 		{
 			7080,
 			7517,
@@ -59,27 +59,27 @@ public class Q00080_SagaOfTheWindRider extends AbstractSagaQuest
 			7103,
 			0
 		};
-		Mob = new int[]
+		_mob = new int[]
 		{
 			27300,
 			27229,
 			27303
 		};
-		classid = new int[]
+		_classId = new int[]
 		{
 			101
 		};
-		prevclass = new int[]
+		_prevClass = new int[]
 		{
 			0x17
 		};
-		npcSpawnLocations = new Location[]
+		_npcSpawnLocations = new Location[]
 		{
 			new Location(161719, -92823, -1893),
 			new Location(124314, 82155, -2803),
 			new Location(124355, 82155, -2803)
 		};
-		Text = new String[]
+		_text = new String[]
 		{
 			"PLAYERNAME! Pursued to here! However, I jumped out of the Banshouren boundaries! You look at the giant as the sign of power!",
 			"... Oh ... good! So it was ... let's begin!",

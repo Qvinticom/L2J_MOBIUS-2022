@@ -195,12 +195,12 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 		return new CharSelectInfoPackage[0];
 	}
 	
-	private static void loadCharacterSubclassInfo(CharSelectInfoPackage charInfopackage, int ObjectId, int activeClassId)
+	private static void loadCharacterSubclassInfo(CharSelectInfoPackage charInfopackage, int objectId, int activeClassId)
 	{
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement("SELECT exp, sp, level FROM character_subclasses WHERE charId=? AND class_id=? ORDER BY charId"))
 		{
-			statement.setInt(1, ObjectId);
+			statement.setInt(1, objectId);
 			statement.setInt(2, activeClassId);
 			try (ResultSet charList = statement.executeQuery())
 			{
@@ -225,19 +225,16 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 		
 		// See if the char must be deleted
 		final long deletetime = chardata.getLong("deletetime");
-		if (deletetime > 0)
+		if ((deletetime > 0) && (System.currentTimeMillis() > deletetime))
 		{
-			if (System.currentTimeMillis() > deletetime)
+			final Clan clan = ClanTable.getInstance().getClan(chardata.getInt("clanid"));
+			if (clan != null)
 			{
-				final Clan clan = ClanTable.getInstance().getClan(chardata.getInt("clanid"));
-				if (clan != null)
-				{
-					clan.removeClanMember(objectId, 0);
-				}
-				
-				GameClient.deleteCharByObjId(objectId);
-				return null;
+				clan.removeClanMember(objectId, 0);
 			}
+			
+			GameClient.deleteCharByObjId(objectId);
+			return null;
 		}
 		
 		final CharSelectInfoPackage charInfopackage = new CharSelectInfoPackage(objectId, name);

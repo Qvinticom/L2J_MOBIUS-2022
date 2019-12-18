@@ -36,16 +36,13 @@ public class FuncShare extends AbstractFunction
 	@Override
 	public double calc(Creature effector, Creature effected, Skill skill, double initVal)
 	{
-		if ((getApplayCond() == null) || getApplayCond().test(effector, effected, skill))
+		if (((getApplayCond() == null) || getApplayCond().test(effector, effected, skill)) && (effector != null) && effector.isServitor())
 		{
-			if ((effector != null) && effector.isServitor())
+			final Summon summon = (Summon) effector;
+			final PlayerInstance player = summon.getOwner();
+			if (player != null)
 			{
-				final Summon summon = (Summon) effector;
-				final PlayerInstance player = summon.getOwner();
-				if (player != null)
-				{
-					return initVal + (getBaseValue(getStat(), player) * getValue());
-				}
+				return initVal + (getBaseValue(getStat(), player) * getValue());
 			}
 		}
 		return initVal;

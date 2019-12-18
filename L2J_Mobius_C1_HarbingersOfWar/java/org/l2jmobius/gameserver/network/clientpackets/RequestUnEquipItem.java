@@ -50,7 +50,7 @@ public class RequestUnEquipItem extends ClientBasePacket
 		activeChar.setAttackStatus(false);
 		final CharInfo info = new CharInfo(activeChar);
 		activeChar.broadcastPacket(info);
-		if (unequiped.size() > 0)
+		if (!unequiped.isEmpty())
 		{
 			final SystemMessage sm = new SystemMessage(SystemMessage.S1_DISARMED);
 			sm.addItemName(unequiped.stream().findFirst().get().getItemId());

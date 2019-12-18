@@ -29,7 +29,7 @@ import org.l2jmobius.gameserver.network.ClientThread;
 
 public class RequestBypassToServer extends ClientBasePacket
 {
-	final static Logger _log = Logger.getLogger(RequestBypassToServer.class.getName());
+	private static final Logger _log = Logger.getLogger(RequestBypassToServer.class.getName());
 	
 	public RequestBypassToServer(byte[] decrypt, ClientThread client)
 	{

@@ -202,39 +202,33 @@ public class Q00171_ActsOfEvil extends Quest
 				}
 				case OL_MAHUM_CAPTAIN:
 				{
-					if (qs.isMemoState(10) && (getQuestItemsCount(killer, OL_MAHUM_CAPTAINS_HEAD) < 30))
+					if (qs.isMemoState(10) && (getQuestItemsCount(killer, OL_MAHUM_CAPTAINS_HEAD) < 30) && (getRandom(100) <= 49))
 					{
-						if (getRandom(100) <= 49)
+						giveItems(killer, OL_MAHUM_CAPTAINS_HEAD, 1);
+						if (getQuestItemsCount(killer, OL_MAHUM_CAPTAINS_HEAD) == 30)
 						{
-							giveItems(killer, OL_MAHUM_CAPTAINS_HEAD, 1);
-							if (getQuestItemsCount(killer, OL_MAHUM_CAPTAINS_HEAD) == 30)
-							{
-								playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-							}
-							else
-							{
-								playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-							}
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;
 				}
 				case OL_MAHUM_GENERAL:
 				{
-					if (qs.isMemoState(6))
+					if (qs.isMemoState(6) && (getRandom(100) <= 9))
 					{
-						if (getRandom(100) <= 9)
+						if (!hasQuestItems(killer, WEAPONS_TRADE_CONTRACT))
 						{
-							if (!hasQuestItems(killer, WEAPONS_TRADE_CONTRACT))
-							{
-								giveItems(killer, WEAPONS_TRADE_CONTRACT, 1);
-								playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-							}
-							if (!hasQuestItems(killer, ATTACK_DIRECTIVES))
-							{
-								giveItems(killer, ATTACK_DIRECTIVES, 1);
-								playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-							}
+							giveItems(killer, WEAPONS_TRADE_CONTRACT, 1);
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+						}
+						if (!hasQuestItems(killer, ATTACK_DIRECTIVES))
+						{
+							giveItems(killer, ATTACK_DIRECTIVES, 1);
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;
@@ -259,12 +253,9 @@ public class Q00171_ActsOfEvil extends Quest
 						{
 							addAttackDesire(addSpawn(OL_MAHUM_SUPPORT_TROOP, npc, true, 0, false), killer);
 						}
-						if (getQuestItemsCount(killer, BLADE_MOLD) >= 10)
+						if ((getQuestItemsCount(killer, BLADE_MOLD) >= 10) && (getRandom(100) <= 24))
 						{
-							if (getRandom(100) <= 24)
-							{
-								addAttackDesire(addSpawn(OL_MAHUM_SUPPORT_TROOP, npc, true, 0, false), killer);
-							}
+							addAttackDesire(addSpawn(OL_MAHUM_SUPPORT_TROOP, npc, true, 0, false), killer);
 						}
 					}
 					break;
@@ -289,12 +280,9 @@ public class Q00171_ActsOfEvil extends Quest
 						{
 							addAttackDesire(addSpawn(OL_MAHUM_SUPPORT_TROOP, npc, true, 0, false), killer);
 						}
-						if (getQuestItemsCount(killer, BLADE_MOLD) >= 10)
+						if ((getQuestItemsCount(killer, BLADE_MOLD) >= 10) && (getRandom(100) <= 24))
 						{
-							if (getRandom(100) <= 24)
-							{
-								addAttackDesire(addSpawn(OL_MAHUM_SUPPORT_TROOP, npc, true, 0, false), killer);
-							}
+							addAttackDesire(addSpawn(OL_MAHUM_SUPPORT_TROOP, npc, true, 0, false), killer);
 						}
 					}
 					break;
@@ -319,12 +307,9 @@ public class Q00171_ActsOfEvil extends Quest
 						{
 							addAttackDesire(addSpawn(OL_MAHUM_SUPPORT_TROOP, npc, true, 0, false), killer);
 						}
-						if (getQuestItemsCount(killer, BLADE_MOLD) >= 10)
+						if ((getQuestItemsCount(killer, BLADE_MOLD) >= 10) && (getRandom(100) <= 24))
 						{
-							if (getRandom(100) <= 24)
-							{
-								addAttackDesire(addSpawn(OL_MAHUM_SUPPORT_TROOP, npc, true, 0, false), killer);
-							}
+							addAttackDesire(addSpawn(OL_MAHUM_SUPPORT_TROOP, npc, true, 0, false), killer);
 						}
 					}
 					break;
@@ -349,12 +334,9 @@ public class Q00171_ActsOfEvil extends Quest
 						{
 							addAttackDesire(addSpawn(OL_MAHUM_SUPPORT_TROOP, npc, true, 0, false), killer);
 						}
-						if (getQuestItemsCount(killer, BLADE_MOLD) >= 10)
+						if ((getQuestItemsCount(killer, BLADE_MOLD) >= 10) && (getRandom(100) <= 24))
 						{
-							if (getRandom(100) <= 24)
-							{
-								addAttackDesire(addSpawn(OL_MAHUM_SUPPORT_TROOP, npc, true, 0, false), killer);
-							}
+							addAttackDesire(addSpawn(OL_MAHUM_SUPPORT_TROOP, npc, true, 0, false), killer);
 						}
 					}
 					break;

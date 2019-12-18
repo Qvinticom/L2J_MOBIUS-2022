@@ -156,13 +156,10 @@ public class Q00407_PathOfTheElvenScout extends Quest
 			
 			if (npc.getId() == OL_MAHUM_SENTRY)
 			{
-				if (qs.isCond(5) && (getRandom(10) < 6))
+				if (qs.isCond(5) && (getRandom(10) < 6) && hasQuestItems(qs.getPlayer(), MORETTIES_HERB, MORETTIS_LETTER) && !hasQuestItems(qs.getPlayer(), RUSTED_KEY))
 				{
-					if (hasQuestItems(qs.getPlayer(), MORETTIES_HERB, MORETTIS_LETTER) && !hasQuestItems(qs.getPlayer(), RUSTED_KEY))
-					{
-						giveItems(qs.getPlayer(), RUSTED_KEY, 1);
-						qs.setCond(6, true);
-					}
+					giveItems(qs.getPlayer(), RUSTED_KEY, 1);
+					qs.setCond(6, true);
 				}
 			}
 			else if (qs.isCond(2))

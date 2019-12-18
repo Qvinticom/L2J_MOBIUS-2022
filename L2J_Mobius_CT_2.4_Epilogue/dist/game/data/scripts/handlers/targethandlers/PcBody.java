@@ -75,22 +75,19 @@ public class PcBody implements ITargetTypeHandler
 			{
 				boolean condGood = true;
 				
-				if (skill.hasEffectType(EffectType.RESURRECTION))
+				if (skill.hasEffectType(EffectType.RESURRECTION) && (targetPlayer != null))
 				{
-					if (targetPlayer != null)
+					// check target is not in a active siege zone
+					if (targetPlayer.isInsideZone(ZoneId.SIEGE) && !targetPlayer.isInSiege())
 					{
-						// check target is not in a active siege zone
-						if (targetPlayer.isInsideZone(ZoneId.SIEGE) && !targetPlayer.isInSiege())
-						{
-							condGood = false;
-							creature.sendPacket(SystemMessageId.IT_IS_NOT_POSSIBLE_TO_RESURRECT_IN_BATTLEFIELDS_WHERE_A_SIEGE_WAR_IS_TAKING_PLACE);
-						}
-						
-						if (targetPlayer.isFestivalParticipant()) // Check to see if the current player target is in a festival.
-						{
-							condGood = false;
-							creature.sendMessage("You may not resurrect participants in a festival.");
-						}
+						condGood = false;
+						creature.sendPacket(SystemMessageId.IT_IS_NOT_POSSIBLE_TO_RESURRECT_IN_BATTLEFIELDS_WHERE_A_SIEGE_WAR_IS_TAKING_PLACE);
+					}
+					
+					if (targetPlayer.isFestivalParticipant()) // Check to see if the current player target is in a festival.
+					{
+						condGood = false;
+						creature.sendMessage("You may not resurrect participants in a festival.");
 					}
 				}
 				

@@ -118,7 +118,7 @@ public class RequestBuySeed implements IClientIncomingPacket
 		int slots = 0;
 		int totalWeight = 0;
 		
-		final Map<Integer, SeedProduction> _productInfo = new HashMap<>();
+		final Map<Integer, SeedProduction> productInfo = new HashMap<>();
 		for (ItemHolder ih : _items)
 		{
 			final SeedProduction sp = manor.getSeedProduct(_manorId, ih.getId(), false);
@@ -150,7 +150,7 @@ public class RequestBuySeed implements IClientIncomingPacket
 			{
 				slots++;
 			}
-			_productInfo.put(ih.getId(), sp);
+			productInfo.put(ih.getId(), sp);
 		}
 		
 		if (!player.getInventory().validateWeight(totalWeight))
@@ -172,7 +172,7 @@ public class RequestBuySeed implements IClientIncomingPacket
 		// Proceed the purchase
 		for (ItemHolder i : _items)
 		{
-			final SeedProduction sp = _productInfo.get(i.getId());
+			final SeedProduction sp = productInfo.get(i.getId());
 			final long price = sp.getPrice() * i.getCount();
 			
 			// Take Adena and decrease seed amount
@@ -198,7 +198,7 @@ public class RequestBuySeed implements IClientIncomingPacket
 			
 			if (Config.ALT_MANOR_SAVE_ALL_ACTIONS)
 			{
-				manor.updateCurrentProduction(_manorId, _productInfo.values());
+				manor.updateCurrentProduction(_manorId, productInfo.values());
 			}
 		}
 	}

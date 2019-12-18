@@ -29,8 +29,6 @@ import org.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class TerritoryWard
 {
-	// private static final Logger LOGGER = Logger.getLogger(CombatFlag.class.getName());
-	
 	protected PlayerInstance _player = null;
 	public int playerId = 0;
 	private ItemInstance _item = null;
@@ -44,11 +42,11 @@ public class TerritoryWard
 	
 	private final int _territoryId;
 	
-	public TerritoryWard(int territory_id, int x, int y, int z, int heading, int item_id, int castleId, Npc npc)
+	public TerritoryWard(int territoryId, int x, int y, int z, int heading, int itemId, int castleId, Npc npc)
 	{
-		_territoryId = territory_id;
+		_territoryId = territoryId;
 		_location = new Location(x, y, z, heading);
-		_itemId = item_id;
+		_itemId = itemId;
 		_ownerCastleId = castleId;
 		_npc = npc;
 	}

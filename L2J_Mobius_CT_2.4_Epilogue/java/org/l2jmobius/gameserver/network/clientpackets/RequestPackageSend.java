@@ -43,7 +43,7 @@ public class RequestPackageSend implements IClientIncomingPacket
 {
 	private static final int BATCH_LENGTH = 12; // length of the one item
 	
-	private ItemHolder _items[] = null;
+	private ItemHolder[] _items = null;
 	private int _objectId;
 	
 	@Override

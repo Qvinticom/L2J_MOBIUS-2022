@@ -126,13 +126,11 @@ public class RequestExEnchantSkillRouteChange implements IClientIncomingPacket
 		{
 			// only first lvl requires book
 			final ItemInstance spb = player.getInventory().getItemByItemId(reqItemId);
-			if (Config.ES_SP_BOOK_NEEDED)
+			// does not have spellbook
+			if (Config.ES_SP_BOOK_NEEDED && (spb == null))
 			{
-				if (spb == null)// Haven't spellbook
-				{
-					player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ALL_OF_THE_ITEMS_NEEDED_TO_ENCHANT_SKILL_ROUTE_CHANGE);
-					return;
-				}
+				player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ALL_OF_THE_ITEMS_NEEDED_TO_ENCHANT_SKILL_ROUTE_CHANGE);
+				return;
 			}
 			
 			if (player.getInventory().getAdena() < requireditems)

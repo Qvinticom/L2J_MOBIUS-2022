@@ -90,7 +90,7 @@ public abstract class AbstractResidence extends ListenersContainer implements IN
 	
 	public void giveResidentialSkills(PlayerInstance player)
 	{
-		if ((_residentialSkills != null) && !_residentialSkills.isEmpty())
+		if (!_residentialSkills.isEmpty())
 		{
 			for (SkillHolder sh : _residentialSkills)
 			{
@@ -101,7 +101,7 @@ public abstract class AbstractResidence extends ListenersContainer implements IN
 	
 	public void removeResidentialSkills(PlayerInstance player)
 	{
-		if ((_residentialSkills != null) && !_residentialSkills.isEmpty())
+		if (!_residentialSkills.isEmpty())
 		{
 			for (SkillHolder sh : _residentialSkills)
 			{

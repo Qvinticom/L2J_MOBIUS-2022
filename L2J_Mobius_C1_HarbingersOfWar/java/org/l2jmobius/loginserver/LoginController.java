@@ -47,12 +47,12 @@ public class LoginController
 		return _instance;
 	}
 	
-	public int assignSessionKeyToLogin(String account, int accessLevel, Socket _csocket)
+	public int assignSessionKeyToLogin(String account, int accessLevel, Socket cSocket)
 	{
 		int key = -1;
 		key = (int) System.currentTimeMillis() & 0xFFFFFF;
 		_logins.put(account, key);
-		_accountsInLoginServer.put(account, _csocket);
+		_accountsInLoginServer.put(account, cSocket);
 		_accessLevels.put(account, accessLevel);
 		return key;
 	}

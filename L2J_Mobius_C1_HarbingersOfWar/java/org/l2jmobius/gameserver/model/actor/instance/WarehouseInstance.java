@@ -36,12 +36,6 @@ public class WarehouseInstance extends NpcInstance
 	}
 	
 	@Override
-	public void onAction(PlayerInstance player)
-	{
-		super.onAction(player);
-	}
-	
-	@Override
 	public String getHtmlPath(int npcId, int val)
 	{
 		String pom = "";

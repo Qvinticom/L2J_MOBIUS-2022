@@ -450,39 +450,33 @@ public class Q00066_CertifiedArbalester extends Quest
 				}
 				case AMBER_BASILISK:
 				{
-					if (qs.isMemoState(8) && (getQuestItemsCount(killer, MANUSCRIPT_PAGE) < 30))
+					if (qs.isMemoState(8) && (getQuestItemsCount(killer, MANUSCRIPT_PAGE) < 30) && (getRandom(1000) < 980))
 					{
-						if (getRandom(1000) < 980)
+						if (getQuestItemsCount(killer, MANUSCRIPT_PAGE) >= 29)
 						{
-							if (getQuestItemsCount(killer, MANUSCRIPT_PAGE) >= 29)
-							{
-								qs.setCond(8, true);
-							}
-							else
-							{
-								playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-							}
-							giveItems(killer, MANUSCRIPT_PAGE, 1);
+							qs.setCond(8, true);
 						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+						}
+						giveItems(killer, MANUSCRIPT_PAGE, 1);
 					}
 					break;
 				}
 				case STRAIN:
 				{
-					if (qs.isMemoState(8) && (getQuestItemsCount(killer, MANUSCRIPT_PAGE) < 30))
+					if (qs.isMemoState(8) && (getQuestItemsCount(killer, MANUSCRIPT_PAGE) < 30) && (getRandom(1000) < 860))
 					{
-						if (getRandom(1000) < 860)
+						if (getQuestItemsCount(killer, MANUSCRIPT_PAGE) >= 29)
 						{
-							if (getQuestItemsCount(killer, MANUSCRIPT_PAGE) >= 29)
-							{
-								qs.setCond(8, true);
-							}
-							else
-							{
-								playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-							}
-							giveItems(killer, MANUSCRIPT_PAGE, 1);
+							qs.setCond(8, true);
 						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+						}
+						giveItems(killer, MANUSCRIPT_PAGE, 1);
 					}
 					break;
 				}
@@ -509,56 +503,50 @@ public class Q00066_CertifiedArbalester extends Quest
 				}
 				case GRANDIS:
 				{
-					if (qs.isMemoState(21) || (qs.isMemoState(22) && (getQuestItemsCount(killer, FRAGMENT_OF_ATTACK_ORDERS) < 10)))
+					if ((qs.isMemoState(21) || (qs.isMemoState(22) && (getQuestItemsCount(killer, FRAGMENT_OF_ATTACK_ORDERS) < 10))) && (getRandom(1000) < 780))
 					{
-						if (getRandom(1000) < 780)
+						if (qs.isMemoState(21) && !hasQuestItems(killer, FRAGMENT_OF_ATTACK_ORDERS))
 						{
-							if (qs.isMemoState(21) && !hasQuestItems(killer, FRAGMENT_OF_ATTACK_ORDERS))
-							{
-								qs.setMemoState(22);
-								qs.setCond(12, true);
-								giveItems(killer, FRAGMENT_OF_ATTACK_ORDERS, 1);
-							}
-							else if (qs.isMemoState(22) && (getQuestItemsCount(killer, FRAGMENT_OF_ATTACK_ORDERS) >= 9))
-							{
-								qs.setMemoState(23);
-								qs.setCond(13, true);
-								takeItems(killer, FRAGMENT_OF_ATTACK_ORDERS, -1);
-								giveItems(killer, GRANDIS_ATTACK_ORDERS, 1);
-							}
-							else
-							{
-								playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-								giveItems(killer, FRAGMENT_OF_ATTACK_ORDERS, 1);
-							}
+							qs.setMemoState(22);
+							qs.setCond(12, true);
+							giveItems(killer, FRAGMENT_OF_ATTACK_ORDERS, 1);
 						}
-						break;
+						else if (qs.isMemoState(22) && (getQuestItemsCount(killer, FRAGMENT_OF_ATTACK_ORDERS) >= 9))
+						{
+							qs.setMemoState(23);
+							qs.setCond(13, true);
+							takeItems(killer, FRAGMENT_OF_ATTACK_ORDERS, -1);
+							giveItems(killer, GRANDIS_ATTACK_ORDERS, 1);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+							giveItems(killer, FRAGMENT_OF_ATTACK_ORDERS, 1);
+						}
 					}
+					break;
 				}
 				case MANASHEN_GARGOYLE:
 				{
-					if (qs.isMemoState(25) || (qs.isMemoState(26) && (getQuestItemsCount(killer, MANASHENS_TALISMAN) < 10)))
+					if ((qs.isMemoState(25) || (qs.isMemoState(26) && (getQuestItemsCount(killer, MANASHENS_TALISMAN) < 10))) && (getRandom(1000) < 840))
 					{
-						if (getRandom(1000) < 840)
+						if (qs.isMemoState(25) && !hasQuestItems(killer, MANASHENS_TALISMAN))
 						{
-							if (qs.isMemoState(25) && !hasQuestItems(killer, MANASHENS_TALISMAN))
-							{
-								qs.setMemoState(26);
-								qs.setCond(15, true);
-							}
-							else if (qs.isMemoState(26) && (getQuestItemsCount(killer, MANASHENS_TALISMAN) >= 9))
-							{
-								qs.setMemoState(27);
-								qs.setCond(16, true);
-							}
-							else
-							{
-								playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-							}
-							giveItems(killer, MANASHENS_TALISMAN, 1);
+							qs.setMemoState(26);
+							qs.setCond(15, true);
 						}
-						break;
+						else if (qs.isMemoState(26) && (getQuestItemsCount(killer, MANASHENS_TALISMAN) >= 9))
+						{
+							qs.setMemoState(27);
+							qs.setCond(16, true);
+						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+						}
+						giveItems(killer, MANASHENS_TALISMAN, 1);
 					}
+					break;
 				}
 				case TIMAK_ORC:
 				case TIMAK_ORC_ARCHER:
@@ -601,39 +589,33 @@ public class Q00066_CertifiedArbalester extends Quest
 				}
 				case WATCHMAN_OF_THE_PLAINS:
 				{
-					if (qs.isMemoState(3) && (getQuestItemsCount(killer, ENMITY_CRYSTAL) < 30))
+					if (qs.isMemoState(3) && (getQuestItemsCount(killer, ENMITY_CRYSTAL) < 30) && (getRandom(1000) < 840))
 					{
-						if (getRandom(1000) < 840)
+						if (getQuestItemsCount(killer, ENMITY_CRYSTAL) >= 29)
 						{
-							if (getQuestItemsCount(killer, ENMITY_CRYSTAL) >= 29)
-							{
-								qs.setCond(4, true);
-							}
-							else
-							{
-								playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-							}
-							giveItems(killer, ENMITY_CRYSTAL, 1);
+							qs.setCond(4, true);
 						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+						}
+						giveItems(killer, ENMITY_CRYSTAL, 1);
 					}
 					break;
 				}
 				case ROUGHLY_HEWN_ROCK_GOLEM:
 				{
-					if (qs.isMemoState(3) && (getQuestItemsCount(killer, ENMITY_CRYSTAL) < 30))
+					if (qs.isMemoState(3) && (getQuestItemsCount(killer, ENMITY_CRYSTAL) < 30) && (getRandom(1000) < 860))
 					{
-						if (getRandom(1000) < 860)
+						if (getQuestItemsCount(killer, ENMITY_CRYSTAL) >= 29)
 						{
-							if (getQuestItemsCount(killer, ENMITY_CRYSTAL) >= 29)
-							{
-								qs.setCond(4, true);
-							}
-							else
-							{
-								playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-							}
-							giveItems(killer, ENMITY_CRYSTAL, 1);
+							qs.setCond(4, true);
 						}
+						else
+						{
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+						}
+						giveItems(killer, ENMITY_CRYSTAL, 1);
 					}
 					break;
 				}

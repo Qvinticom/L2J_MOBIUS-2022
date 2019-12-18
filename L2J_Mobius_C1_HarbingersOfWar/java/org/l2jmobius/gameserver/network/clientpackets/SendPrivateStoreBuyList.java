@@ -54,7 +54,7 @@ public class SendPrivateStoreBuyList extends ClientBasePacket
 		if ((buyer.getAdena() >= cost) && (count > 0) && (seller.getPrivateStoreType() == 1))
 		{
 			seller.getTradeList().BuySellItems(buyer, buyerlist, seller, sellerlist);
-			if (seller.getSellList().size() == 0)
+			if (seller.getSellList().isEmpty())
 			{
 				seller.setPrivateStoreType(0);
 				seller.sendPacket(new ChangeWaitType(seller, 1));

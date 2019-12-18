@@ -262,7 +262,7 @@ public abstract class AbstractNpcInfo implements IClientOutgoingPacket
 		
 		public TrapInfo(TrapInstance cha, Creature attacker)
 		{
-			super(cha, attacker == null ? false : attacker.canOverrideCond(PlayerCondOverride.SEE_ALL_PLAYERS));
+			super(cha, (attacker != null) && attacker.canOverrideCond(PlayerCondOverride.SEE_ALL_PLAYERS));
 			
 			_trap = cha;
 			_idTemplate = cha.getTemplate().getDisplayId();

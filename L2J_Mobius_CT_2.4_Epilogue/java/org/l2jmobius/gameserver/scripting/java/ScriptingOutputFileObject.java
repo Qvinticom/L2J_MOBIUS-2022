@@ -129,7 +129,7 @@ final class ScriptingOutputFileObject implements JavaFileObject
 	@Override
 	public boolean isNameCompatible(String simpleName, Kind kind)
 	{
-		return (kind == Kind.CLASS) && (_javaSimpleName == simpleName);
+		return (kind == Kind.CLASS) && (_javaSimpleName.contentEquals(simpleName));
 	}
 	
 	@Override

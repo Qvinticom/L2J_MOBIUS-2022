@@ -112,6 +112,7 @@ public class AdminSpawn implements IAdminCommandHandler
 				}
 				catch (Exception e)
 				{
+					// Not important.
 				}
 			}
 			else
@@ -133,6 +134,7 @@ public class AdminSpawn implements IAdminCommandHandler
 				}
 				catch (NoSuchElementException nsee)
 				{
+					// Handled above.
 				}
 				showMonsters(activeChar, level, from);
 			}
@@ -159,6 +161,7 @@ public class AdminSpawn implements IAdminCommandHandler
 				}
 				catch (NoSuchElementException nsee)
 				{
+					// Handled above.
 				}
 				showNpcs(activeChar, letter, from);
 			}
@@ -301,14 +304,7 @@ public class AdminSpawn implements IAdminCommandHandler
 				{
 					respawnTime = Integer.parseInt(st.nextToken());
 				}
-				if (cmd.equalsIgnoreCase("admin_spawn_once"))
-				{
-					spawnMonster(activeChar, id, respawnTime, mobCount, false);
-				}
-				else
-				{
-					spawnMonster(activeChar, id, respawnTime, mobCount, true);
-				}
+				spawnMonster(activeChar, id, respawnTime, mobCount, !cmd.equalsIgnoreCase("admin_spawn_once"));
 			}
 			catch (Exception e)
 			{ // Case of wrong or missing monster data
@@ -342,14 +338,7 @@ public class AdminSpawn implements IAdminCommandHandler
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Command format is //list_spawns <npcId|npc_name> [tele_index]");
 			}
-			if (command.startsWith("admin_list_positions"))
-			{
-				findNPCInstances(activeChar, npcId, teleportIndex, true);
-			}
-			else
-			{
-				findNPCInstances(activeChar, npcId, teleportIndex, false);
-			}
+			findNPCInstances(activeChar, npcId, teleportIndex, command.startsWith("admin_list_positions"));
 		}
 		else if (command.startsWith("admin_topspawncount") || command.startsWith("admin_top_spawn_count"))
 		{

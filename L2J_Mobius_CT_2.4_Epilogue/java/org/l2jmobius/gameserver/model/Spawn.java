@@ -94,12 +94,11 @@ public class Spawn extends Location implements IIdentifiable, INamable
 	 * <li>Create the generic constructor of NpcInstance managed by this Spawn</li>
 	 * </ul>
 	 * @param template The NpcTemplate to link to this Spawn
-	 * @throws SecurityException
 	 * @throws ClassNotFoundException
 	 * @throws NoSuchMethodException
 	 * @throws ClassCastException when template type is not subclass of Npc
 	 */
-	public Spawn(NpcTemplate template) throws SecurityException, ClassNotFoundException, NoSuchMethodException, ClassCastException
+	public Spawn(NpcTemplate template) throws ClassNotFoundException, NoSuchMethodException, ClassCastException
 	{
 		super(0, 0, -10000);
 		// Set the _template of the Spawn
@@ -119,9 +118,8 @@ public class Spawn extends Location implements IIdentifiable, INamable
 	 * @throws ClassCastException
 	 * @throws NoSuchMethodException
 	 * @throws ClassNotFoundException
-	 * @throws SecurityException
 	 */
-	public Spawn(int npcId) throws SecurityException, ClassNotFoundException, NoSuchMethodException, ClassCastException
+	public Spawn(int npcId) throws ClassNotFoundException, NoSuchMethodException, ClassCastException
 	{
 		this(NpcData.getInstance().getTemplate(npcId));
 	}
@@ -464,16 +462,10 @@ public class Spawn extends Location implements IIdentifiable, INamable
 			((Attackable) npc).setChampion(false);
 		}
 		
-		if (Config.CHAMPION_ENABLE)
+		// Set champion on next spawn
+		if (Config.CHAMPION_ENABLE && npc.isMonster() && !npc.isQuestMonster() && !_template.isUndying() && !npc.isRaid() && !npc.isRaidMinion() && (Config.CHAMPION_FREQUENCY > 0) && (npc.getLevel() >= Config.CHAMP_MIN_LVL) && (npc.getLevel() <= Config.CHAMP_MAX_LVL) && (Config.CHAMPION_ENABLE_IN_INSTANCES || (getInstanceId() == 0)) && (Rnd.get(100) < Config.CHAMPION_FREQUENCY))
 		{
-			// Set champion on next spawn
-			if (npc.isMonster() && !npc.isQuestMonster() && !_template.isUndying() && !npc.isRaid() && !npc.isRaidMinion() && (Config.CHAMPION_FREQUENCY > 0) && (npc.getLevel() >= Config.CHAMP_MIN_LVL) && (npc.getLevel() <= Config.CHAMP_MAX_LVL) && (Config.CHAMPION_ENABLE_IN_INSTANCES || (getInstanceId() == 0)))
-			{
-				if (Rnd.get(100) < Config.CHAMPION_FREQUENCY)
-				{
-					((Attackable) npc).setChampion(true);
-				}
-			}
+			((Attackable) npc).setChampion(true);
 		}
 		
 		return npc;

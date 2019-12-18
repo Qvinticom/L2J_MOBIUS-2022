@@ -563,7 +563,7 @@ public class SkillTreesData implements IXmlReader
 		// Get available skills
 		final PlayerSkillHolder holder = new PlayerSkillHolder(player);
 		List<SkillLearn> learnable = getAvailableSkills(player, classId, includeByFs, includeAutoGet, holder);
-		while (learnable.size() > 0)
+		while (!learnable.isEmpty())
 		{
 			for (SkillLearn s : learnable)
 			{
@@ -1067,12 +1067,9 @@ public class SkillTreesData implements IXmlReader
 		{
 			for (SkillLearn s : skillTree.values())
 			{
-				if (s.isLearnedByNpc() && (player.getLevel() < s.getGetLevel()))
+				if (s.isLearnedByNpc() && (player.getLevel() < s.getGetLevel()) && ((minLevel == 0) || (minLevel > s.getGetLevel())))
 				{
-					if ((minLevel == 0) || (minLevel > s.getGetLevel()))
-					{
-						minLevel = s.getGetLevel();
-					}
+					minLevel = s.getGetLevel();
 				}
 			}
 		}
@@ -1112,8 +1109,8 @@ public class SkillTreesData implements IXmlReader
 	{
 		if (skillLevel <= 0)
 		{
-			return _gameMasterSkillTree.values().stream().filter(s -> s.getSkillId() == skillId).findAny().isPresent() //
-				|| _gameMasterAuraSkillTree.values().stream().filter(s -> s.getSkillId() == skillId).findAny().isPresent();
+			return _gameMasterSkillTree.values().stream().anyMatch(s -> s.getSkillId() == skillId) //
+				|| _gameMasterAuraSkillTree.values().stream().anyMatch(s -> s.getSkillId() == skillId);
 		}
 		
 		final int hashCode = SkillData.getSkillHashCode(skillId, skillLevel);
@@ -1288,11 +1285,7 @@ public class SkillTreesData implements IXmlReader
 		}
 		
 		// Exclude Transfer Skills from this check.
-		if (getTransferSkill(skill.getId(), Math.min(skill.getLevel(), maxLvl), player.getClassId()) != null)
-		{
-			return true;
-		}
-		return false;
+		return getTransferSkill(skill.getId(), Math.min(skill.getLevel(), maxLvl), player.getClassId()) != null;
 	}
 	
 	/**
